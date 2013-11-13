@@ -75,7 +75,12 @@ import com.android.tv.settings.system.development.audio.AudioDebug;
 import com.android.tv.settings.system.development.audio.AudioMetrics;
 import com.android.tv.settings.system.development.audio.AudioReaderException;
 
+import java.net.NetworkInterface;
+import java.net.InetAddress;
+import java.net.SocketException;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -91,6 +96,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private static final String ENABLE_DEVELOPER = "development_settings_enable";
     private static final String ENABLE_ADB = "enable_adb";
     private static final String ENABLE_ADB_ROOT = "enable_adb_root";
+    private static final String ADB_TCPIP = "adb_over_network";
+    private static final String ADB_PORT_PROP = "service.adb.tcp.port";
     private static final String CLEAR_ADB_KEYS = "clear_adb_keys";
     private static final String ENABLE_TERMINAL = "enable_terminal";
     private static final String KEEP_SCREEN_ON = "keep_screen_on";
@@ -187,6 +194,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private SwitchPreference mEnableDeveloper;
     private SwitchPreference mEnableAdb;
+    private SwitchPreference mAdbOverNetwork;
     private Preference mClearAdbKeys;
     private SwitchPreference mEnableAdbRoot;
     private SwitchPreference mEnableTerminal;
@@ -326,6 +334,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
         mEnableAdb = findAndInitSwitchPref(ENABLE_ADB);
         mEnableAdbRoot = findAndInitSwitchPref(ENABLE_ADB_ROOT);
+        mAdbOverNetwork = findAndInitSwitchPref(ADB_TCPIP);
         mClearAdbKeys = findPreference(CLEAR_ADB_KEYS);
         if (!AdbProperties.secure().orElse(false)) {
             if (debugDebuggingCategory != null) {
@@ -682,6 +691,39 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         updateSimulateColorSpace();
         updateUSBAudioOptions();
         updateForceResizableOptions();
+        updateAdbOverNetwork();
+    }
+
+    private void updateAdbOverNetwork() {
+        int port = SystemProperties.getInt(ADB_PORT_PROP, -1);
+        boolean enabled = port > 0;
+
+        updateSwitchPreference(mAdbOverNetwork, enabled);
+
+        String hostAddress = null;
+
+        if (enabled) {
+            try {
+                List<NetworkInterface> interfaces = Collections.list(
+                        NetworkInterface.getNetworkInterfaces());
+                for (NetworkInterface intf : interfaces) {
+                    List<InetAddress> addrs = Collections.list(intf.getInetAddresses());
+                    for (InetAddress addr : addrs) {
+                        if (!addr.isLoopbackAddress() &&
+                            addr.getHostAddress().indexOf(':') < 0) {
+                            hostAddress = addr.getHostAddress();
+                            break;
+                        }
+                    }
+                }
+	    } catch (SocketException se) {};
+        }
+
+        if (hostAddress != null) {
+            mAdbOverNetwork.setSummary(hostAddress + ":" + String.valueOf(port));
+        } else {
+            mAdbOverNetwork.setSummary(R.string.adb_over_network_summary);
+        }
     }
 
     private void resetDangerousOptions() {
@@ -1581,6 +1623,9 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             }
         } else if (preference == mEnableAdbRoot) {
             mADBRootService.setEnabled(mEnableAdbRoot.isChecked());
+        } else if (preference == mAdbOverNetwork) {
+            SystemProperties.set(ADB_PORT_PROP, mAdbOverNetwork.isChecked() ? "5555" : "");
+            updateAdbOverNetwork();
         } else if (preference == mEnableTerminal) {
             final PackageManager pm = getActivity().getPackageManager();
             pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,
