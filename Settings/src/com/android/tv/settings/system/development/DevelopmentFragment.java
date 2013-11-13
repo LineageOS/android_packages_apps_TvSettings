@@ -74,7 +74,12 @@ import com.android.settingslib.development.SystemPropPoker;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
+import java.net.NetworkInterface;
+import java.net.InetAddress;
+import java.net.SocketException;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -88,6 +93,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private static final String ENABLE_DEVELOPER = "development_settings_enable";
     private static final String ENABLE_ADB = "enable_adb";
+    private static final String ADB_TCPIP = "adb_over_network";
     private static final String CLEAR_ADB_KEYS = "clear_adb_keys";
     private static final String ENABLE_TERMINAL = "enable_terminal";
     private static final String KEEP_SCREEN_ON = "keep_screen_on";
@@ -179,6 +185,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private SwitchPreference mEnableDeveloper;
     private SwitchPreference mEnableAdb;
+    private SwitchPreference mAdbOverNetwork;
     private Preference mClearAdbKeys;
     private SwitchPreference mEnableTerminal;
     private Preference mBugreport;
@@ -304,6 +311,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         final PreferenceGroup debugDebuggingCategory = (PreferenceGroup)
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
         mEnableAdb = findAndInitSwitchPref(ENABLE_ADB);
+        mAdbOverNetwork = findAndInitSwitchPref(ADB_TCPIP);
         mClearAdbKeys = findPreference(CLEAR_ADB_KEYS);
         if (!AdbProperties.secure().orElse(false)) {
             if (debugDebuggingCategory != null) {
@@ -664,6 +672,40 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         updateUSBAudioOptions();
         updateForceResizableOptions();
         updateRootAccessOptions();
+        updateAdbOverNetwork();
+    }
+
+    private void updateAdbOverNetwork() {
+        int port = LineageSettings.Secure.getInt(getActivity().getContentResolver(),
+                LineageSettings.Secure.ADB_PORT, 0);
+        boolean enabled = port > 0;
+
+        updateSwitchPreference(mAdbOverNetwork, enabled);
+
+        String hostAddress = null;
+
+        if (enabled) {
+            try {
+                List<NetworkInterface> interfaces = Collections.list(
+                        NetworkInterface.getNetworkInterfaces());
+                for (NetworkInterface intf : interfaces) {
+                    List<InetAddress> addrs = Collections.list(intf.getInetAddresses());
+                    for (InetAddress addr : addrs) {
+                        if (!addr.isLoopbackAddress() &&
+                            addr.getHostAddress().indexOf(':') < 0) {
+                            hostAddress = addr.getHostAddress();
+                            break;
+                        }
+                    }
+                }
+	    } catch (SocketException se) {};
+        }
+
+        if (hostAddress != null) {
+            mAdbOverNetwork.setSummary(hostAddress + ":" + String.valueOf(port));
+        } else {
+            mAdbOverNetwork.setSummary(R.string.adb_over_network_summary);
+        }
     }
 
     private void resetDangerousOptions() {
@@ -676,6 +718,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
         resetDebuggerOptions();
         resetRootAccessOptions();
+        resetAdbNotifyOptions();
         mLogpersistController.writeLogpersistOption(null, true);
         mLogdSizeController.writeLogdSizeOption(null);
         writeAnimationScaleOption(0, mWindowAnimationScale, null);
@@ -712,6 +755,11 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                     Settings.Secure.ADB_ENABLED, 1);
         }
         updateRootAccessOptions();
+    }
+
+    private void resetAdbNotifyOptions() {
+        LineageSettings.Secure.putInt(getActivity().getContentResolver(),
+                LineageSettings.Secure.ADB_NOTIFY, 1);
     }
 
     private void resetRootAccessOptions() {
@@ -1549,6 +1597,15 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 mVerifyAppsOverUsb.setEnabled(false);
                 mVerifyAppsOverUsb.setChecked(false);
             }
+        } else if (preference == mAdbOverNetwork) {
+            if (mAdbOverNetwork.isChecked()) {
+                LineageSettings.Secure.putInt(getActivity().getContentResolver(),
+                        LineageSettings.Secure.ADB_PORT, 5555);
+            } else {
+                LineageSettings.Secure.putInt(getActivity().getContentResolver(),
+                        LineageSettings.Secure.ADB_PORT, -1);
+            }
+            updateAdbOverNetwork();
         } else if (preference == mEnableTerminal) {
             final PackageManager pm = getActivity().getPackageManager();
             pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,
