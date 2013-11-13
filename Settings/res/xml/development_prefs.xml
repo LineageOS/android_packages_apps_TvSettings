@@ -93,6 +93,13 @@
             android:summary="@string/enable_adb_root_summary"
             android:dependency="enable_adb" />
 
+        <lineageos.preference.SystemSettingSwitchPreference
+            android:key="adb_over_network"
+            android:title="@string/adb_over_network"
+            android:summary="@string/adb_over_network_summary"
+            android:dependency="enable_adb"
+            settings:replacesKey="toggle_adb_wireless" />
+
         <Preference android:key="clear_adb_keys"
                     android:title="@string/clear_adb_keys"
                     android:fragment="com.android.tv.settings.system.development.AdbKeysDialog" />
