@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/setting_title"
+    android:layout_width="@dimen/main_panel_text_width_minus_padding"
+    android:layout_height="@dimen/main_panel_text_height"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:fontFamily="sans-serif-condensed"
+    android:gravity="right|center_vertical"
+    android:textAllCaps="true"
+    android:textColor="@color/text_focused_bright"
+    android:textSize="@dimen/setting_text_title_size" />

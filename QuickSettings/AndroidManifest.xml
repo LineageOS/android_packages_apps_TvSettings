@@ -1,0 +1,42 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.tv.quicksettings"
+    android:sharedUserId="android.uid.system" >
+
+    <uses-sdk android:minSdkVersion="L" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_quicksettings"
+        android:label="@string/quicksettings_label"
+        android:requiredForAllUsers="true"
+        android:theme="@style/Theme.QuickSettings" >
+        <activity
+            android:name="QuickSettings"
+            android:label="@string/quicksettings_label_launcher"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.QuickSettings" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.android.tv.QUICK_SETTINGS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter
+                android:icon="@mipmap/ic_launcher_quicksettings"
+                android:label="@string/quicksettings_label"
+                android:priority="0" >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LEANBACK_SETTINGS" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="SettingsDialog"
+            android:exported="false"
+            android:theme="@style/Theme.QuickSettings" />
+    </application>
+
+</manifest>
