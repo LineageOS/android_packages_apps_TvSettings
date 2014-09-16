@@ -73,7 +73,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     /**
      * Intent action of device name activity.
      */
-    private static final String SETTINGS_CAST_DEVICE_NAME_INTENT_ACTION =
+    private static final String SETTINGS_DEVICE_NAME_INTENT_ACTION =
         "android.settings.DEVICE_NAME";
 
     /**
@@ -189,7 +189,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 .key("name")
                 .title(getString(R.string.device_name))
                 .description(DeviceManager.getDeviceName(this))
-                .intent(new Intent(SETTINGS_CAST_DEVICE_NAME_INTENT_ACTION))
+                .intent(new Intent(SETTINGS_DEVICE_NAME_INTENT_ACTION))
                 .build());
         actions.add(new Action.Builder()
                 .key(KEY_LEGAL_INFO)
@@ -205,6 +205,12 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 .key("version")
                 .title(getString(R.string.about_version))
                 .description(Build.VERSION.RELEASE)
+                .enabled(false)
+                .build());
+        actions.add(new Action.Builder()
+                .key("serial")
+                .title(getString(R.string.about_serial))
+                .description(Build.SERIAL)
                 .enabled(false)
                 .build());
         actions.add(new Action.Builder()
