@@ -50,6 +50,7 @@ import com.android.tv.settings.connectivity.ConnectivityStatusIconUriGetter;
 import com.android.tv.settings.connectivity.ConnectivityStatusTextGetter;
 import com.android.tv.settings.connectivity.WifiNetworksActivity;
 import com.android.tv.settings.device.sound.SoundActivity;
+import com.android.tv.settings.users.RestrictedProfileActivity;
 import com.android.tv.settings.util.UriUtils;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -248,6 +249,10 @@ public class BrowseInfo extends BrowseInfoBase {
                         new PreferenceXmlReaderListener(headerId, currentRow)).read();
             }
         }
+    }
+
+    private boolean canAddAccount() {
+        return !RestrictedProfileActivity.isRestrictedProfileInEffect(mContext);
     }
 
     private class PreferenceXmlReaderListener implements XmlReaderListener {
@@ -492,7 +497,7 @@ public class BrowseInfo extends BrowseInfoBase {
             }
         }
 
-        if (mAllowMultipleAccounts || googleAccountCount == 0) {
+        if (canAddAccount() && (mAllowMultipleAccounts || googleAccountCount == 0)) {
             ComponentName componentName = new ComponentName("com.android.tv.settings",
                     "com.android.tv.settings.accounts.AddAccountWithTypeActivity");
             Intent i = new Intent().setComponent(componentName);

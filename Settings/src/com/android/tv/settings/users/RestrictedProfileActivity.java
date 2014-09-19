@@ -160,11 +160,15 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
      *         profile activity.
      */
     public static String getActionDescription(Context context) {
+        return context.getString(isRestrictedProfileInEffect(context) ? R.string.on : R.string.off);
+    }
+
+    public static boolean isRestrictedProfileInEffect(Context context) {
         UserManager userManager = (UserManager) context.getSystemService(Context.USER_SERVICE);
         UserInfo restrictedUserInfo = findRestrictedUser(userManager);
         boolean isOwner = UserHandle.myUserId() == UserHandle.USER_OWNER;
         boolean isRestrictedProfileOn = restrictedUserInfo != null && !isOwner;
-        return context.getString(isRestrictedProfileOn ? R.string.on : R.string.off);
+        return isRestrictedProfileOn;
     }
 
     static void switchUserNow(int userId) {
