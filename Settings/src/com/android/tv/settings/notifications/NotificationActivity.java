@@ -225,6 +225,20 @@ public class NotificationActivity extends DialogActivity
         info.cancel(mNoMan);
     }
 
+    private boolean shouldBeIgnored(StatusBarNotification sbn) {
+        // notification types that we want to ignore for TV
+        if (TextUtils.equals(sbn.getNotification().category,
+                Notification.CATEGORY_RECOMMENDATION)) {
+            return true;
+        }
+
+        if (TextUtils.equals(sbn.getNotification().category,
+                Notification.CATEGORY_TRANSPORT)) {
+            return true;
+        }
+        return false;
+    }
+
     private List<ActiveNotificationInfo> loadNotifications() {
         if (DEBUG) Log.v(TAG, "loadNotifications");
 
@@ -239,7 +253,7 @@ public class NotificationActivity extends DialogActivity
                     recentNotifications.length);
 
             for (StatusBarNotification sbn : recentNotifications) {
-                if (!isRecommendation(sbn)) {
+                if (!shouldBeIgnored(sbn)) {
                     final ActiveNotificationInfo info = new ActiveNotificationInfo(
                             this, sbn, mMaxNotificationCount, mMaxNotificationText);
                     if (info.getUserId() == UserHandle.USER_ALL ||
@@ -256,13 +270,8 @@ public class NotificationActivity extends DialogActivity
         return null;
     }
 
-    private boolean isRecommendation(StatusBarNotification sbn) {
-        return TextUtils.equals(sbn.getNotification().category,
-                Notification.CATEGORY_RECOMMENDATION);
-    }
-
     private void onNotificationPosted(final StatusBarNotification notification) {
-        if (!isRecommendation(notification)) {
+        if (!shouldBeIgnored(notification)) {
             runOnUiThread(new Runnable() {
 
                 @Override
@@ -290,7 +299,7 @@ public class NotificationActivity extends DialogActivity
     }
 
     private void onNotificationRemoved(final StatusBarNotification notification) {
-        if (!isRecommendation(notification)) {
+        if (!shouldBeIgnored(notification)) {
             runOnUiThread(new Runnable() {
 
                 @Override
