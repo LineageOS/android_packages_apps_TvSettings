@@ -340,26 +340,29 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
                     RestrictedProfileActivity.this, mRestrictedUserInfo.id, false);
             DialogFragment.add(getFragmentManager(), dialogFragment);
         } else if (ACTION_RESTRICTED_PROFILE_DELETE.equals(action.getKey())) {
-            ArrayList<Action> actions = new ArrayList<Action>();
-            actions.add(new Action.Builder()
-                    .key(ACTION_RESTRICTED_PROFILE_DELETE_CONFIRM)
-                    .title(getString(R.string.title_ok))
-                    .build());
-            actions.add(new Action.Builder()
-                    .key(ACTION_RESTRICTED_PROFILE_DELETE_CANCEL)
-                    .title(getString(R.string.title_cancel))
-                    .build());
-            DialogFragment dialogFragment = new DialogFragment.Builder()
-                    .title(getString(R.string.restricted_profile_delete_dialog_title))
-                    .iconResourceId(getIconResource())
-                    .iconBackgroundColor(getResources().getColor(R.color.icon_background))
-                    .actions(actions).build();
-            DialogFragment.add(getFragmentManager(), dialogFragment);
+            if (getFragmentManager().findFragmentByTag(PinDialogFragment.DIALOG_TAG) != null) {
+                return;
+            }
+            new RestrictedProfilePinDialogFragment(PinDialogFragment.PIN_DIALOG_TYPE_ENTER_PIN,
+                    new PinDialogFragment.ResultListener() {
+                        @Override
+                        public void done(boolean success) {
+                            if (success) {
+                                removeRestrictedUser();
+                                LockPatternUtils lpu = new LockPatternUtils(
+                                        RestrictedProfileActivity.this);
+                                lpu.clearLock(false);
+                            }
+                        }
+                    }, new LockPatternUtils(this), getLockSettings()).show(getFragmentManager(),
+                    PinDialogFragment.DIALOG_TAG);
         } else if (ACTION_RESTRICTED_PROFILE_DELETE_CONFIRM.equals(action.getKey())) {
+            // TODO remove once we confirm it's not needed
             removeRestrictedUser();
             LockPatternUtils lpu = new LockPatternUtils(this);
             lpu.clearLock(false);
         } else if (ACTION_RESTRICTED_PROFILE_DELETE_CANCEL.equals(action.getKey())) {
+            // TODO remove once we confirm it's not needed
             onBackPressed();
         } else if (ACTION_RESTRICTED_PROFILE_CREATE.equals(action.getKey())) {
             if (hasLockscreenSecurity(new LockPatternUtils(this))) {
@@ -390,13 +393,10 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
                         .key(ACTION_RESTRICTED_PROFILE_CONFIG)
                         .title(getString(R.string.restricted_profile_configure_title))
                         .build());
-                if (DEBUG) {
-                    actions.add(new Action.Builder()
-                            .key(ACTION_RESTRICTED_PROFILE_DELETE)
-                            .title(getString(R.string.restricted_profile_delete_title))
-                            .description(getString(R.string.restricted_profile_delete_description))
-                            .build());
-                }
+                actions.add(new Action.Builder()
+                        .key(ACTION_RESTRICTED_PROFILE_DELETE)
+                        .title(getString(R.string.restricted_profile_delete_title))
+                        .build());
             } else {
                 actions.add(new Action.Builder()
                         .key(ACTION_RESTRICTED_PROFILE_SWITCH_OUT)
