@@ -417,7 +417,6 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
         actions.add(new Action.Builder()
                 .key(ACTION_RESTRICTED_PROFILE_CHANGE_PASSWORD)
                 .title(getString(R.string.restricted_profile_change_password_title))
-                .description(getString(R.string.restricted_profile_change_password_description))
                 .build());
         actions.add(mConfigAppsAction);
         return actions;
