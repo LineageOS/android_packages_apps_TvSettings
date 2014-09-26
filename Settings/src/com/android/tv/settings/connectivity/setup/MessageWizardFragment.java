@@ -83,4 +83,13 @@ public class MessageWizardFragment extends Fragment {
 
         return view;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (AccessibilityHelper.forceFocusableViews(getActivity())) {
+            TextView titleView = (TextView) getView().findViewById(R.id.status_text);
+            titleView.requestFocus();
+        }
+    }
 }
