@@ -211,7 +211,8 @@ public class BrowseInfo extends BrowseInfoBase {
         synchronized (mGuard) {
             mHeaderItems.clear();
             mRows.clear();
-            new XmlReader(mContext, R.xml.main, "preference-headers", "header",
+            int settingsXml = isRestricted() ? R.xml.restricted_main : R.xml.main;
+            new XmlReader(mContext, settingsXml, "preference-headers", "header",
                     new HeaderXmlReaderListener()).read();
             updateAccessories(R.id.accessories);
         }
@@ -252,7 +253,11 @@ public class BrowseInfo extends BrowseInfoBase {
     }
 
     private boolean canAddAccount() {
-        return !RestrictedProfileActivity.isRestrictedProfileInEffect(mContext);
+        return !isRestricted();
+    }
+
+    private boolean isRestricted() {
+        return RestrictedProfileActivity.isRestrictedProfileInEffect(mContext);
     }
 
     private class PreferenceXmlReaderListener implements XmlReaderListener {
@@ -320,6 +325,10 @@ public class BrowseInfo extends BrowseInfoBase {
 
     void updateAccounts() {
         synchronized (mGuard) {
+            if (isRestricted()) {
+                // We don't display the accounts in restricted mode
+                return;
+            }
             ArrayObjectAdapter row = mRows.get(mAccountHeaderId);
             // Clear any account row cards that are not "Location" or "Security".
             String dontDelete[] = new String[2];
