@@ -17,13 +17,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center|left" >
+    android:gravity="left" >
 
     <TextView
         android:id="@+id/title_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/account_content_text_bottom_margin"
+        android:layout_height="@dimen/setup_title_height"
+        android:gravity="bottom"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title_text"
+        android:layout_marginTop="@dimen/account_content_text_top_margin"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </RelativeLayout>

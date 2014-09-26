@@ -16,25 +16,29 @@
 <!-- Use this layout for activities where you have a single text field and need
      an indeterminate progress indicator. You must find the ImageView, get the
      AnimationDrawable and then call start() on it for it to be shown. -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:gravity="center">
-    <ImageView
-        android:id="@+id/progress"
+    android:layout_width="match_parent">
+
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/indeterminate_bottom_padding"
-        android:src="@drawable/indeterminate_progress"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="@dimen/setup_activity_overscan_margin"
-        android:layout_centerVertical="true" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/progress"
-        android:layout_alignBottom="@id/progress"
-        android:layout_marginLeft="@dimen/setup_activity_overscan_margin"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/status_text" />
-</RelativeLayout>
+        android:layout_height="@dimen/setup_title_height"
+        android:layout_gravity="center_horizontal"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/status_text" />
+
+        <ImageView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/indeterminate_bottom_padding"
+            android:src="@drawable/indeterminate_progress" />
+
+    </LinearLayout>
+
+</FrameLayout>
