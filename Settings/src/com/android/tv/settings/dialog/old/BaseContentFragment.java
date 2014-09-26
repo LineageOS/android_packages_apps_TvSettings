@@ -50,43 +50,36 @@ public class BaseContentFragment {
     private static final String EXTRA_ICON_RESOURCE_ID = "iconResourceId";
     private static final String EXTRA_ICON_URI = "iconUri";
     private static final String EXTRA_ICON_BITMAP = "iconBitmap";
-    private static final String EXTRA_ICON_PADDING = "iconPadding";
     private static final String EXTRA_ICON_BACKGROUND = "iconBackground";
 
     public static Bundle buildArgs(String title) {
-        return buildArgs(title, null, null, 0, null, null, 0, Color.TRANSPARENT);
+        return buildArgs(title, null, null, 0, null, null, Color.TRANSPARENT);
     }
 
     public static Bundle buildArgs(String title, String breadcrumb, String description) {
-        return buildArgs(title, breadcrumb, description, 0, null, null, 0, Color.TRANSPARENT);
+        return buildArgs(title, breadcrumb, description, 0, null, null, Color.TRANSPARENT);
     }
 
     public static Bundle buildArgs(
             String title, String breadcrumb, String description, int iconResourceId,
             int backgroundColor) {
-        return buildArgs(title, breadcrumb, description, iconResourceId, null, null, 0,
+        return buildArgs(title, breadcrumb, description, iconResourceId, null, null,
                 backgroundColor);
     }
 
     public static Bundle buildArgs(String title, String breadcrumb, String description, Uri iconUri,
             int backgroundColor) {
-        return buildArgs(title, breadcrumb, description, 0, iconUri, null, 0, backgroundColor);
-    }
-
-    public static Bundle buildArgs(String title, String breadcrumb, String description, Uri iconUri,
-            int iconPadding, int backgroundColor) {
-        return buildArgs(title, breadcrumb, description, 0, iconUri, null, iconPadding,
-                backgroundColor);
+        return buildArgs(title, breadcrumb, description, 0, iconUri, null, backgroundColor);
     }
 
     public static Bundle buildArgs(String title, String breadcrumb, String description,
             Bitmap iconBitmap) {
-        return buildArgs(title, breadcrumb, description, 0, null, iconBitmap, 0, Color.TRANSPARENT);
+        return buildArgs(title, breadcrumb, description, 0, null, iconBitmap, Color.TRANSPARENT);
     }
 
     private static Bundle buildArgs(
             String title, String breadcrumb, String description, int iconResourceId,
-            Uri iconUri, Bitmap iconBitmap, int iconPaddingPx, int iconBackgroundColor) {
+            Uri iconUri, Bitmap iconBitmap, int iconBackgroundColor) {
         Bundle args = new Bundle();
         args.putString(EXTRA_TITLE, title);
         args.putString(EXTRA_BREADCRUMB, breadcrumb);
@@ -94,7 +87,6 @@ public class BaseContentFragment {
         args.putInt(EXTRA_ICON_RESOURCE_ID, iconResourceId);
         args.putParcelable(EXTRA_ICON_URI, iconUri);
         args.putParcelable(EXTRA_ICON_BITMAP, iconBitmap);
-        args.putInt(EXTRA_ICON_PADDING, iconPaddingPx);
         args.putInt(EXTRA_ICON_BACKGROUND, iconBackgroundColor);
         return args;
     }
@@ -109,7 +101,6 @@ public class BaseContentFragment {
     private Uri mIconUri;
     private Bitmap mIconBitmap;
     private int mIconBackgroundColor;
-    private int mIconPadding;
     private AccessibilityManager mAccessManager;
 
     public BaseContentFragment(LiteFragment fragment) {
@@ -139,9 +130,6 @@ public class BaseContentFragment {
         if (mIconBackgroundColor == Color.TRANSPARENT) {
             mIconBackgroundColor = state.getInt(EXTRA_ICON_BACKGROUND, Color.TRANSPARENT);
         }
-        if (mIconPadding == 0) {
-            mIconPadding = state.getInt(EXTRA_ICON_PADDING, 0);
-        }
     }
 
     public void onSaveInstanceState(Bundle outState) {
@@ -152,7 +140,6 @@ public class BaseContentFragment {
         outState.putParcelable(EXTRA_ICON_URI, mIconUri);
         outState.putParcelable(EXTRA_ICON_BITMAP, mIconBitmap);
         outState.putInt(EXTRA_ICON_BACKGROUND, mIconBackgroundColor);
-        outState.putInt(EXTRA_ICON_PADDING, mIconPadding);
     }
 
     /**
@@ -196,8 +183,6 @@ public class BaseContentFragment {
         if (iconBackground != Color.TRANSPARENT) {
             iconImageView.setBackgroundColor(iconBackground);
         }
-        int iconPadding = getIconPadding();
-        iconImageView.setPadding(iconPadding, iconPadding, iconPadding, iconPadding);
 
         if (iconResourceId != 0) {
             iconImageView.setImageResource(iconResourceId);
@@ -267,10 +252,6 @@ public class BaseContentFragment {
 
     public int getIconBackgroundColor() {
         return mIconBackgroundColor;
-    }
-
-    public int getIconPadding() {
-        return mIconPadding;
     }
 
     public RelativeLayout getRoot() {
@@ -402,20 +383,6 @@ public class BaseContentFragment {
                             mBitmapCallBack);
                 }
             }
-        }
-    }
-
-    /**
-     * set icon padding in pixel
-     */
-    public void setIconPadding(int paddingPx) {
-        mIconPadding = paddingPx;
-        if (mFragment.getView() == null) return;
-
-        final ImageView iconImageView = (ImageView) mFragment.getView()
-                .findViewById(R.id.icon);
-        if (iconImageView != null) {
-            iconImageView.setPadding(paddingPx, paddingPx, paddingPx, paddingPx);
         }
     }
 

@@ -50,33 +50,8 @@ public class MenuItemPresenter extends Presenter {
             mIconView = (ImageView) v.findViewById(R.id.icon);
             mTitleView = (TextView) v.findViewById(R.id.title);
             mDescriptionView = (TextView) v.findViewById(R.id.description);
-            setTitleTopMargin();
-            setDescriptionBottomMargin();
         }
 
-        private void setTitleTopMargin() {
-            FontMetricsInt fm = getFontMetricsInt(mTitleView, R.dimen.browse_item_title_font_size);
-            ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) mTitleView
-                    .getLayoutParams();
-            lp.topMargin = lp.topMargin + fm.ascent;
-            mTitleView.setLayoutParams(lp);
-        }
-
-        private void setDescriptionBottomMargin() {
-            FontMetricsInt fm = getFontMetricsInt(mDescriptionView,
-                    R.dimen.browse_item_description_font_size);
-            ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) mDescriptionView
-                    .getLayoutParams();
-            lp.bottomMargin = lp.bottomMargin - fm.descent;
-            mDescriptionView.setLayoutParams(lp);
-        }
-
-        private FontMetricsInt getFontMetricsInt(View v, int dimenResource) {
-            Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-            paint.setTextSize(v.getContext().getResources().getDimensionPixelSize(dimenResource));
-            paint.setTypeface(Typeface.SANS_SERIF);
-            return paint.getFontMetricsInt();
-        }
     }
 
     @Override
