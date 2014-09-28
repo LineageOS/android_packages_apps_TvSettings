@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,7 +12,8 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
+ -->
+
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_app_name" msgid="4243616485579754401">"Mga Setting"</string>
@@ -24,7 +25,7 @@
     <string name="cluster_name_edit_home" msgid="5444319291204663692">"I-edit ang Home"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Device"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Mga Kagustuhan"</string>
-    <string name="header_category_accessories" msgid="8215930947397660583">"Remote at Mga Accessory"</string>
+    <string name="header_category_accessories" msgid="823295909353025991">"Remote at mga accessory"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Personal"</string>
     <string name="add_account" msgid="4098060223200619258">"Magdagdag ng account"</string>
     <string name="account_header_sync" msgid="2679585471372319471">"I-sync"</string>
@@ -33,7 +34,7 @@
     <string name="account_sync" msgid="773808124331714965">"Pumili ng naka-sync na apps"</string>
     <string name="sync_now" msgid="8732244492880016471">"Mag-sync ngayon"</string>
     <string name="sync_cancel" msgid="5839264070098894371">"Kanselahin ang pag-sync"</string>
-    <string name="sync_in_progress" msgid="2442453795520317469">"Kasalukuyang nagaganap…"</string>
+    <string name="sync_in_progress" msgid="1330721038775646022">"Nagsi-sync..."</string>
     <string name="last_synced" msgid="6178494892357077274">"Huling na-sync <xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Naka-disable"</string>
     <string name="sync_is_failing" msgid="8229476000384257186">"Hindi gumagana nang maayos ang sync sa kasalukuyan. Magbabalik ito sa loob ng ilang sandali."</string>
@@ -77,14 +78,14 @@
     <string name="accessory_unpairing" msgid="7568241162181184667">"Inaalis sa pagkakapares ang device…"</string>
     <string name="accessory_connected" msgid="2156489304110030393">"Nakakonekta"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"Naghahanap ng mga accessory…"</string>
-    <string name="accessories_add_bluetooth_inst" msgid="2535673954708450462">"Upang magpares ng mga Bluetooth device, ilagay muna sa pairing mode ang mga ito"</string>
-    <string name="accessories_autopair_msg" msgid="8833716609631000657">"May natagpuang isang device… Awtomatikong ipapares sa loob ng <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundo."</string>
+    <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Bago mo ipares ang iyong mga Bluetooth device, tiyaking nasa pairing mode ang mga ito"</string>
+    <string name="accessories_autopair_msg" msgid="8618829246837821752">"May nakitang isang device at awtomatikong ipapares sa loob ng <xliff:g id="COUNTDOWN">%1$s</xliff:g> (na) segundo"</string>
     <string name="accessories_add_title_multiple" msgid="8455249961819802466">"Nakakita ng maraming device"</string>
-    <string name="accessories_add_multiple" msgid="2832440080860764547">"Upang magbago ng device, pindutin ang button ng pagpapares sa device na ito."</string>
-    <string name="accessories_add_multiple_select" msgid="5732550702405671224">"Upang magpares sa kasalukuyang napili, pindutin nang matagal ang button ng pagpapares sa device na ito sa loob ng 5 segundo."</string>
-    <string name="error_action_not_supported" msgid="8330232024027798319">"Hindi sinusuportahan ang pagkilos"</string>
+    <string name="accessories_add_multiple" msgid="3900633668371061399">"Upang pumili ng ibang device, pindutin ang button para sa pagpapares sa device na ito"</string>
+    <string name="accessories_add_multiple_select" msgid="3696794187001405647">"Upang ipares sa napiling device, pindutin nang matagal ang button sa pagpapares ng device na ito sa loob ng 5 segundo"</string>
+    <string name="error_action_not_supported" msgid="300552308104354666">"Hindi sinusuportahan ang pagkilos na ito"</string>
     <string name="bluetooth_pairing_request" msgid="4523088117471287665">"Kahilingan sa pagpapares ng bluetooth"</string>
-    <string name="bluetooth_confirm_passkey_msg" msgid="82948198856357263">"Upang makipagpares sa: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, Tiyaking ipinapakita nito ang passkey na ito: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
+    <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"Upang makipagpares sa: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, tiyaking ipinapakita nito ang passkey na: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8234127565393932499">"Mula sa: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Makipagpares sa device na ito?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="8951451728250058901">"Upang makipagpares sa: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Mag-type dito: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, pagkatapos ay pindutin ang Bumalik o Enter."</string>
     <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"Upang makipagpares sa: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;I-type ang kinakailangang PIN ng device::"</string>
@@ -102,6 +103,7 @@
     <string name="system_inputs" msgid="2413907183796651102">"Mga Input"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"Accessibility"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Mga pagpipilian ng developer"</string>
+    <string name="accessibility_none" msgid="3441648940134070004">"Wala"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Pag-update ng system"</string>
     <string name="about_preference" msgid="4131396784531360434">"Tungkol dito"</string>
     <string name="device_name" msgid="2670488158531273028">"Pangalan ng device"</string>
@@ -114,13 +116,14 @@
     <string name="about_license_activity_unavailable" msgid="8522566562321418498">"Hindi available ang data ng lisensya"</string>
     <string name="about_model" msgid="6625269442206323995">"Modelo"</string>
     <string name="about_version" msgid="1177287676732287266">"Bersyon"</string>
+    <string name="about_serial" msgid="2723560490027171187">"Serial number"</string>
     <string name="about_build" msgid="9148789767199785676">"Build"</string>
   <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="3138467012178582000">"<xliff:g id="STEP_COUNT">%1$d</xliff:g> hakbang na lang ang layo mo mula sa pagiging isang developer."</item>
-    <item quantity="other" msgid="4879488115799381997">"<xliff:g id="STEP_COUNT">%1$d</xliff:g> (na) hakbang na lang ang layo mo mula sa pagiging isang developer."</item>
+    <item quantity="one" msgid="5656331074727404150">"<xliff:g id="STEP_COUNT">%1$d</xliff:g> hakbang na lang ang layo mo mula sa pagiging isang developer"</item>
+    <item quantity="other" msgid="6907126743472136795">"<xliff:g id="STEP_COUNT">%1$d</xliff:g> (na) hakbang na lang ang layo mo mula sa pagiging isang developer"</item>
   </plurals>
     <string name="show_dev_on" msgid="8997172736024819952">"Isa ka nang developer!"</string>
-    <string name="show_dev_already" msgid="5996871005698178544">"Hindi na kailangan, isa ka nang developer."</string>
+    <string name="show_dev_already" msgid="7525967300421794483">"Hindi na kailangan, isa ka nang developer"</string>
     <string name="wifi_security_none" msgid="1241101191574932821">"Wala"</string>
     <string name="wifi_remembered" msgid="710973813096194477">"Na-save"</string>
     <string name="wifi_disabled_generic" msgid="5100439885010143290">"Hindi pinagana"</string>
@@ -187,7 +190,7 @@
     <string name="wifi_saving" msgid="1269061570772019215">"Sine-save ang configuration para sa <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_connect" msgid="8570424816865506077">"Kumonekta"</string>
     <string name="wifi_forget_network" msgid="7302755141573045803">"Kalimutan ang network"</string>
-    <string name="wifi_forget_network_description" msgid="768103056075126720">"Iki-clear nito ang anumang impormasyong ginamit sa pagkonekta sa network, pati ang anumang password."</string>
+    <string name="wifi_forget_network_description" msgid="3328285160018330334">"Kini-clear nito ang impormasyong ginamit upang kumonekta sa network, kasama ang na-save na password"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"OK"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"Baguhin"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"Huwag baguhin"</string>
@@ -201,27 +204,27 @@
     <string name="wifi_action_status_info" msgid="7664354971197839253">"Impormasyon ng status"</string>
     <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"Mga advanced na opsyon"</string>
     <string name="wifi_action_advanced_options_description" msgid="8615353318560146504">"<xliff:g id="PROXY_SETTINGS_SUMMARY">%1$s</xliff:g>, <xliff:g id="IP_SETTINGS_SUMMARY">%2$s</xliff:g>"</string>
-    <string name="wifi_ip_settings_invalid_ip_address" msgid="1192306565220905788">"Maglagay ng wastong IP address."</string>
-    <string name="wifi_ip_settings_invalid_gateway" msgid="2500972717119928862">"Maglagay ng wastong gateway address."</string>
-    <string name="wifi_ip_settings_invalid_dns" msgid="7814059423760396445">"Maglagay ng wastong DNS address."</string>
-    <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="3927463853940175731">"Maglagay ng network prefix length na mula 0-32."</string>
+    <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"Maglagay ng wastong IP address"</string>
+    <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Maglagay ng wastong gateway address"</string>
+    <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Maglagay ng wastong DNS address"</string>
+    <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Maglagay ng network prefix na may haba na 0 at 32"</string>
     <string name="wifi_ip_address_hint" msgid="1895267564692073689">"Maglagay ng wastong IP address.\nHalimbawa: 192.168.1.128"</string>
     <string name="wifi_dns1_hint" msgid="214345156394229347">"Maglagay ng wastong IP address o iwanan itong blangko.\nHalimbawa: 8.8.8.8"</string>
     <string name="wifi_dns2_hint" msgid="1075709328208368894">"Maglagay ng wastong IP address o iwanan itong blangko.\nHalimbawa: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="6271048323288085123">"Mag-type ng wastong ip address o iwanan itong blangko. \nHalimbawa: 192.168.1.1"</string>
+    <string name="wifi_gateway_hint" msgid="7687219682024189028">"Maglagay ng wastong address o iwanang walang laman.\nHalimbawa: 192.168.1.1"</string>
     <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"Maglagay ng wastong network prefix length.\nHalimbawa: 24"</string>
-    <string name="proxy_error_invalid_host" msgid="339200229350350805">"Di-wasto ang hostname."</string>
-    <string name="proxy_error_invalid_exclusion_list" msgid="8497818432776990002">"Di-wasto ang listahan ng pagbubukod. Maglagay ng listahang pinaghiwa-hiwalay ng kuwit ng mga ibinukod na domain."</string>
-    <string name="proxy_error_empty_port" msgid="3839212721851496807">"Hindi maaaring mawalan ng laman ang field ng port."</string>
-    <string name="proxy_error_empty_host_set_port" msgid="5283759432396206353">"Iwanang blangko ang field ng port kung walang laman ang field ng host."</string>
-    <string name="proxy_error_invalid_port" msgid="1469572103763641618">"Di-wasto ang port."</string>
-    <string name="proxy_warning_limited_support" msgid="7523045994115000147">"Ginagamit ng browser ang HTTP proxy ngunit hindi ito magagamit ng iba pang mga app."</string>
+    <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Hindi wasto ang Hostname"</string>
+    <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Hindi wasto ang pagbubukod na ito. Maglagay ng listahan ng mga ibinukod na domain na hinihiwalay ng mga kuwit."</string>
+    <string name="proxy_error_empty_port" msgid="6835658067776408062">"Hindi maaaring walang nakalagay sa field ng port"</string>
+    <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Kung walang nakalagay sa field ng host, iwanang walang nakalagay sa field ng port."</string>
+    <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Hindi wasto ang port"</string>
+    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Ang HTTP proxy ay ginagamit ng browser ngunit hindi ito maaaring gamitin ng ibang app"</string>
     <string name="proxy_port_hint" msgid="8532733797275927007">"Maglagay ng wastong port.\nHalimbawa: 8080"</string>
     <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"Maglagay ng listahang pinaghiwa-hiwalay ng kuwit ng mga ibinukod na domain o iwanan itong blangko.\nHalimbawa: example.com,mycomp.test.com,localhost"</string>
     <string name="proxy_hostname_hint" msgid="3719688422767210803">"Maglagay ng wastong hostname.\nHalimbawa: proxy.example.com"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Nakakonekta sa network"</string>
-    <string name="wifi_summary_title_not_connected" msgid="3218129043385115430">"Hindi nakakonekta sa network"</string>
-    <string name="wifi_summary_description_connected_to_wifi_network" msgid="8504362939403751819">"Nakakonekta sa <xliff:g id="SSID">%1$s</xliff:g>. Baguhin ito?"</string>
+    <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Hindi nakakonekta sa network"</string>
+    <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Nakakonekta na sa <xliff:g id="SSID">%1$s</xliff:g>. Kumonekta sa ibang network?"</string>
     <string name="wifi_summary_unknown_network" msgid="7903601448928422642">"di kilalang network"</string>
     <string name="connectivity_advanced_options" msgid="2858199826425132228">"Mga advanced na pagpipilian"</string>
     <string name="connectivity_advanced_options_description" msgid="370129113175689226">"<xliff:g id="SSID_0">%1$s</xliff:g>, <xliff:g id="SSID_1">%2$s</xliff:g>"</string>
@@ -242,7 +245,7 @@
     <string name="storage_calculating_size" msgid="2644732407412520565">"Kinakalkula…"</string>
     <string name="storage_apps_usage" msgid="4366049071039081219">"Apps"</string>
     <string name="storage_downloads_usage" msgid="6172975879962599380">"Mga Download"</string>
-    <string name="storage_dcim_usage" msgid="2870147488772243491">"Mga larawan, video"</string>
+    <string name="storage_dcim_usage" msgid="2977564696540645452">"Mga Larawan at video"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"Audio"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Misc."</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Naka-cache na data"</string>
@@ -250,12 +253,12 @@
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Subukang muli"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Hinahanap ang WPS router…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Pindutin ang button ng Wi-Fi Protected Setup sa iyong router.\nMaaaring \"WPS\" ang pangalan nito o maaaring naglalaman ng simbolo sa kaliwa."</string>
-    <string name="wifi_wps_onstart_pin" msgid="8533195659451401272">"Ilagay ang PIN na <xliff:g id="NUMBER">%1$s</xliff:g> sa iyong Wi-Fi router."</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="77550247967342253">"Pagkatapos mong ilagay ang PIN, maaaring umabot ng 2 minuto bago makumpleto ang setup"</string>
-    <string name="wifi_wps_in_progress" msgid="8935652744830501913">"Inilulunsad na ang WPS at maaaring umabot ng 2 minuto bago ito makumpleto"</string>
+    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Ilagay ang PIN na <xliff:g id="NUMBER">%1$s</xliff:g> sa iyong Wi-Fi router"</string>
+    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Pagkatapos mong ilagay ang PIN, maaaring magtagal ng 2 minuto ang pag-setup"</string>
+    <string name="wifi_wps_in_progress" msgid="7082889465182680949">"Kasalukuyang nagaganap ang WPS at matatapos ito sa loob ng 2 minuto"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Hindi mahanap ang Wi-Fi router"</string>
-    <string name="wifi_wps_failed_wep" msgid="3961872194395152861">"Hindi sinusuportahan ang setting ng seguridad ng Wi-Fi router na (WEP)"</string>
-    <string name="wifi_wps_failed_tkip" msgid="3878991610202713381">"Hindi sinusuportahan ang setting ng seguridad ng Wi-Fi router na (TKIP)"</string>
+    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Hindi sinusuportahan ang setting ng seguridad ng Wi-Fi router (WEP)"</string>
+    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Hindi sinusuportahan ang setting ng seguridad ng Wi-Fi router (TKIP)"</string>
     <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"May ibang nagagaganap na session ng WPS. Subukang muli sa loob ng ilang minuto."</string>
     <string name="system_date" msgid="2767108116769558081">"Petsa"</string>
     <string name="system_time" msgid="6726022312605226285">"Oras"</string>
@@ -269,10 +272,11 @@
     <string name="system_location" msgid="502463575930545806">"Lokasyon"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"Hayaan ang apps na humiling ng iyong pahintulot na gamitin ang impormasyon ng iyong lokasyon"</string>
     <string name="system_network_location" msgid="3095006393148731886">"Lokasyon ng Wi-Fi network"</string>
-    <string name="system_desc_network_location" msgid="4396966134287228295">"Ipagamit sa apps ang serbisyo sa lok. ng Google para mas mabilis matantya ang lokasyon mo. Kukunin, ipapadala sa Google ang anonymous na data ng lok."</string>
+    <string name="system_desc_network_location" msgid="3394374680078903193">"Payagan ang Google na tumulong sa pagtukoy ng lokasyon. Ibig sabihin magpadala ng anonymous na data ng lokasyon sa Google, kahit wala tumatakbong app."</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"Pahintulot sa lokasyon"</string>
     <string name="system_desc_network_location_confirm" msgid="3929125496258579850">"Payagan ang serbisyo sa lokasyon ng Google na mangolekta ng hindi nakakapagpakilalang data ng lokasyon. Maaaring iimbak sa iyong device ang ilang data. Maaaring maganap ang pangongolekta kahit walang tumatakbong apps."</string>
-    <string name="location_title" msgid="3653515723071653766">"Aking Lokasyon"</string>
+    <string name="location_title" msgid="7600163182794860262">"Aking lokasyon"</string>
+    <string name="header_category_system" msgid="3243287334177831637">"System"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"Mode"</string>
     <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Mga bagong hiling sa lokasyon"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"Walang apps na humiling ng lokasyon kamakailan"</string>
@@ -283,12 +287,12 @@
     <string name="location_services" msgid="5441085185119797200">"Mga serbisyo sa lokasyon"</string>
     <string name="on" msgid="6683600681314500652">"Naka-on"</string>
     <string name="off" msgid="5264189545064767245">"Naka-off"</string>
-    <string name="google_location_services_title" msgid="9047729790336450629">"Mga Serbisyo sa Lokasyon ng Google"</string>
-    <string name="third_party_location_services_title" msgid="5019665514391083771">"Mga Serbisyo sa Lokasyon ng 3rd party"</string>
-    <string name="location_reporting" msgid="781420550253249208">"Pag-uulat ng lokasyon"</string>
-    <string name="location_history" msgid="3348884501088109038">"Kasaysayan ng lokasyon"</string>
-    <string name="location_reporting_desc" msgid="9035898758757621426">"Ginagamit ng Google ang feature na ito sa mga produkto gaya ng Google Now at Google Maps. Kapag na-on ang Pag-uulat ng Lokasyon, magagawa ng anumang produkto ng Google na gumagamit ng feature na ito na iimbak at gamitin ang pinakabagong data ng lokasyon ng iyong device kaugnay ng iyong Google account."</string>
-    <string name="location_history_desc" msgid="279684222468516944">"Kapag naka-on ang Kasaysayan ng Lokasyon para sa account na ito, maaaring iimbak ng Google ang data ng lokasyon ng iyong device upang magamit ito ng iyong apps.\n\nHalimbawa, maaaring magbigay sa iyo ng mga direksyon ang Google Maps, at maaari kang sabihan ng Google Now tungkol sa trapiko sa pag-commute.\n\nMaaari mong i-off ang Kasaysayan ng Lokasyon anumang oras, ngunit hindi ito matatanggal kapag ginawa mo iyon. Upang tingnan at pamahalaan ang iyong Kasaysayan ng Lokasyon, bisitahin ang maps.google.com/locationhistory."</string>
+    <string name="google_location_services_title" msgid="3382840371861269146">"Mga serbisyo sa lokasyon ng Google"</string>
+    <string name="third_party_location_services_title" msgid="4089136801976399147">"3rd party na serbisyong panglokasyon"</string>
+    <string name="location_reporting" msgid="3054236612250063073">"Pag-uulat ng Lokasyon"</string>
+    <string name="location_history" msgid="2946680949724247804">"History ng Lokasyon"</string>
+    <string name="location_reporting_desc" msgid="6256424995139430823">"Ginagamit ng Google ang feature na ito sa mga produkto tulad ng Google Now at Google Maps. Nagbibigay-daan ang pag-o-on ng Pag-uulat ng Lokasyon sa anumang produkto ng Google na maimbak at magamit ang kamakailang data ng lokasyon ng iyong device kaugnay ng iyong Google Account."</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"Kapag naka-on ang History ng Lokasyon para sa account na ito, maiimbak ng Google ang data ng lokasyon ng iyong device upang magamit ng iyong mga app.\n\nHalimbawa, maaari kang bigyan ng Google Maps ng mga direksyon, at ipapaalam naman sa iyo ng Google Now ang tungkol sa trapiko sa pag-commute.\n\nMaaari mong i-off anumang oras ang History ng Lokasyon, ngunit hindi nito ito made-delete. Upang tingnan at pamahalaan ang iyong History ng Lokasyon, bisitahin ang maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"Tanggalin ang kasaysayan ng lokasyon"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"Tatanggalin nito ang lahat ng inimbak ng Kasaysayan ng Lokasyon mula sa device na ito para sa Google Account na ito. Hindi mo mababawi ang pagtatanggal na ito. Hindi na gagana ang ilang apps, kasama na ang Google Now."</string>
     <string name="system_services" msgid="7230571820151215779">"Mga Serbisyo"</string>
@@ -311,6 +315,9 @@
     <string name="captions_backgroundcolor" msgid="448518890988125453">"Kulay ng background"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Opacity ng background"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Ganito ang magiging hitsura ng mga caption"</string>
+    <string name="captions_textopacity" msgid="5536765490446288641">"Opacity ng text"</string>
+    <string name="captions_windowcolor" msgid="8986165172260903279">"Kulay ng window"</string>
+    <string name="captions_windowopacity" msgid="2784473496224936703">"Opacity ng window"</string>
     <string name="color_none" msgid="5281446963475996688">"Wala"</string>
     <string name="color_white" msgid="65537523012024751">"Puti"</string>
     <string name="color_gray" msgid="5637299846460438696">"Gray"</string>
@@ -344,8 +351,8 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"Manatiling gumagana"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"Pagsusuri ng HDCP"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"Pag-optimize ng HDMI"</string>
-    <string name="system_reboot_confirm" msgid="1118729697854304518">"Mag-reboot?"</string>
-    <string name="system_desc_reboot_confirm" msgid="7075062983850532013">"Kailangang mag-reboot upang mabago itong setting. Mag-reboot na?"</string>
+    <string name="system_reboot_confirm" msgid="534407910866199191">"Mag-restart na ngayon?"</string>
+    <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Upang i-update ang setting na ito, kailangang ma-restart ang iyong device"</string>
     <string name="system_never_check" msgid="6666520460705041617">"Huwag kailanman suriin"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Suriin lang para sa nilalamang DRM"</string>
     <string name="system_always_check" msgid="1866566828098009853">"Palaging suriin"</string>
@@ -357,8 +364,8 @@
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Hintayin ang debugger"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"I-verify ang apps sa pamamagitan ng USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Tingnan kung may nakakahamak na pagkilos ang apps na na-install sa pamamagitan ng ADB/ADT"</string>
-    <string name="system_wifi_verbose_logging" msgid="4128743764965639832">"WiFi Verbose Logging"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="687523002786276857">"I-enable ang WiFi Verbose Logging"</string>
+    <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Paglo-log ng Wi-Fi verbose"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"I-enable ang paglo-log ng Wi-Fi verbose"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"Ipakita ang mga pagpindot"</string>
     <string name="system_pointer_location" msgid="2673764026490179227">"Lokasyon ng pointer"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"Ipakita ang mga hangganan ng layout"</string>
@@ -380,7 +387,7 @@
     <string name="system_desc_backup_password" msgid="6454962099870874762">"Protektahan ang mga kumpletong backup ng desktop"</string>
     <string name="system_desc_stay_awake" msgid="229588006508356238">"I-disable ang pag-sleep"</string>
     <string name="system_desc_hdcp_checking" msgid="6879753401058891183">"Gamitin lang para sa nilalamang DRM"</string>
-    <string name="system_desc_hdmi_optimization" msgid="3975744990242079800">"I-optimize ang display para sa maximum na resolution o maximum na framerate. Nakakaapekto lang ito sa mga Ultra HD na display. Magre-reboot kapag binago ito."</string>
+    <string name="system_desc_hdmi_optimization" msgid="4400727262768931480">"I-optimize ang display para sa maximum na resolution o maximum na framerate. Naaapektuhan lang nito ang mga display na Ultra HD. Ang pagpapalit ng setting na ito ay magre-restart sa iyong device."</string>
     <string name="system_desc_bt_hci_log" msgid="4219265203570411773">"I-enable ang snoop na pag-log ng Bluetooth HCI"</string>
     <string name="system_desc_usb_debugging" msgid="5168830368191788731">"Pumasok sa debug mode kapag nakakonekta ang USB"</string>
     <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"Hinihintay ng na-debug na app na mailakip ang debugger bago gumana"</string>
@@ -405,9 +412,9 @@
     <string name="security_verify_apps_title" msgid="5787946958632254988">"I-verify ang apps"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Huwag payagan o magbigay ng babala bago ang pag-install ng apps na maaaring magdulot ng pinsala"</string>
   <string-array name="hdcp_checking_summaries">
-    <item msgid="3634335585713316220">"Huwag kailanman gumamit ng pagsusuri ng HDCP"</item>
-    <item msgid="3990330210575585825">"Gumamit lang ng pagsusuri ng HDCP para sa nilalamang DRM"</item>
-    <item msgid="5044593786669360821">"Palaging gumamit ng pagsusuri ng HDCP"</item>
+    <item msgid="28682351350387246">"Hindi Kailanman"</item>
+    <item msgid="5583820743908145007">"Para sa content na DRM"</item>
+    <item msgid="6148080515126921450">"Palagi"</item>
   </string-array>
     <string name="no_application" msgid="1746564297589309465">"Wala"</string>
   <string-array name="enable_opengl_traces_entries">
@@ -484,7 +491,7 @@
     <string name="noApplications" msgid="4197983402774959346">"Walang apps ang makapagsagawa ng pagkilos na ito."</string>
     <string name="noAppsGoBack" msgid="5663180241276177314">"Bumalik"</string>
     <string name="inputs_inputs" msgid="4249080110281833521">"Mga Input"</string>
-    <string name="inputs_header_cec" msgid="1519712728623090009">"CEC (CONSUMER ELECTRONIC CONTROL)"</string>
+    <string name="inputs_header_cec" msgid="3701104827756278489">"Consumer Electronic Control (CEC)"</string>
     <string name="inputs_cec_settings" msgid="8403155117662874704">"Mga control setting ng device"</string>
     <string name="inputs_blu_ray" msgid="3843526039402969407">"Blu-ray"</string>
     <string name="inputs_cable" msgid="9081641596942038538">"Cable"</string>
@@ -493,7 +500,7 @@
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Custom na pangalan"</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Nakatago"</string>
-    <string name="inputs_hide_desc" msgid="4858702354132985000">"Itinatago sa mga listahan ng pagpipilian ng input"</string>
+    <string name="inputs_hide_desc" msgid="8172670556559886526">"Hindi ipinapakita kapag nagpapalit ng mga input"</string>
     <string name="inputs_custom_title" msgid="374036983231176581">"Custom na pangalan:"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"Control sa HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Payagan ang TV na kontrolin ang mga HDMI device"</string>
@@ -516,8 +523,8 @@
     <string name="inputs_state_connected" msgid="2463661081264605403">"Nakakonekta"</string>
     <string name="inputs_state_connected_standby" msgid="2861557722523733817">"Standby"</string>
     <string name="inputs_state_disconnected" msgid="558532410057350104">"Hindi nakakonekta"</string>
-    <string name="user_add_profile_item_summary" msgid="1626445854782642505">"Maaari mong paghipitan ang pag-access sa mga app at content sa iyong account"</string>
-    <string name="user_new_profile_name" msgid="4694893893005517733">"Bagong profile"</string>
+    <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Higpitan ang pag-access sa mga app at ibang content sa iyong account"</string>
+    <string name="user_new_profile_name" msgid="336521054830056189">"Pinaghihigpitang Profile"</string>
     <string name="user_restrictions_title" msgid="8317193312532216351">"Access sa app at content"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Kinokontrol ng <xliff:g id="APP">%1$s</xliff:g>"</string>
     <string name="app_not_supported_in_limited" msgid="6818309827329010677">"Hindi sinusuportahan ang app na ito sa mga pinaghihigpitang profile"</string>
@@ -528,7 +535,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Pumasok sa pinaghihigpitang profile"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Lumabas sa pinaghihigpitang profile"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"I-delete ang pinaghihigpitang profile"</string>
-    <string name="restricted_profile_configure_title" msgid="8176543118179146633">"Mga setting ng pinaghihigpitang profile"</string>
+    <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Mga Setting"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Mga pinapayagang app"</string>
   <plurals name="restricted_profile_configure_apps_description">
     <item quantity="one" msgid="5114936540577834412">"1 app ang pinapayagan"</item>
@@ -539,10 +546,21 @@
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"I-customize ang mga paghihigpit"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="2509074621719456415">"Sandali lang"</string>
     <string name="restricted_profile_change_password_title" msgid="3507770139567629076">"Seguridad"</string>
-    <string name="restricted_profile_change_password_description" msgid="4521861641629550396">"Itakda ang PIN Code"</string>
+    <string name="restricted_profile_change_password_description" msgid="575630031118408368">"Itakda ang PIN code"</string>
     <string name="restricted_profile_set_password" msgid="3989154189940037175">"Magtakda ng bagong PIN code na gagamitin upang lumabas sa pinaghihigpitang profile"</string>
     <string name="restricted_profile_confirm_password" msgid="5749967525546068650">"Kumpirmahin ang PIN code na ginamit upang lumabas sa pinaghihigpitang profile"</string>
     <string name="restricted_profile_enter_password" msgid="5961473119032585585">"Ilagay ang PIN code upang lumabas sa pinaghihigpitang profile"</string>
     <string name="restricted_profile_delete_dialog_title" msgid="2998929625283492853">"Alisin ang pinaghihigpitang user?"</string>
     <string name="restriction_description" msgid="3104855945910233028">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
+    <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"Ilagay ang PIN upang mapanood ang channel na ito"</string>
+    <string name="pin_enter_unlock_program" msgid="52453773316071511">"Ilagay ang PIN upang mapanood ang programang ito"</string>
+    <string name="pin_enter_pin" msgid="821552376577935497">"Ilagay ang PIN"</string>
+    <string name="pin_enter_new_pin" msgid="4788218421265924211">"Magtakda ng bagong PIN"</string>
+    <string name="pin_enter_again" msgid="1510456697040826496">"Muling ilagay ang bagong PIN"</string>
+    <string name="pin_enter_old_pin" msgid="851029058127630869">"Ilagay ang lumang PIN"</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Inilagay mo ang maling PIN nang 5 beses.\nSubukang muli <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
+    <string name="pin_button_done" msgid="939191809977197451">"Tapos na"</string>
+    <string name="pin_button_cancel" msgid="5541414789309863965">"Kansela"</string>
+    <string name="pin_toast_wrong" msgid="4628358195224633248">"Maling PIN, subukang muli"</string>
+    <string name="pin_toast_not_match" msgid="5886041789737632996">"Subukang muli, hindi tumutugma ang PIN"</string>
 </resources>
