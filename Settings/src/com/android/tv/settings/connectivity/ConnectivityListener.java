@@ -197,6 +197,22 @@ public class ConnectivityListener {
         }
     }
 
+    /**
+     * Return whether Ethernet port is available.
+     */
+    public boolean isEthernetAvailable() {
+        if (mConnectivityManager.isNetworkSupported(ConnectivityManager.TYPE_ETHERNET)) {
+            // ConnectivityManager.isNetworkSupported() may return true for a device
+            // without Ethernet port because it can be enabled later with USB-Ethernet cable.
+            // Check whether hardware address exists.
+            NetworkInfo networkInfo =
+                    mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_ETHERNET);
+            return networkInfo != null && !TextUtils.isEmpty(networkInfo.getExtraInfo());
+        }
+
+        return false;
+    }
+
     public String getEthernetMacAddress() {
         NetworkInfo networkInfo = mConnectivityManager.getActiveNetworkInfo();
         if (networkInfo == null ||networkInfo.getType() != ConnectivityManager.TYPE_ETHERNET) {
