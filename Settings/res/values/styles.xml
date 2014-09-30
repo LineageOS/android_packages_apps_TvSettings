@@ -32,13 +32,23 @@
         <item name="android:fragmentCloseExitAnimation">@anim/settings_fragment_fade_out</item>
     </style>
 
-    <style name="Theme.Settings.Setup" parent="@style/Theme.Leanback">
-        <item name="android:windowBackground">@drawable/settings_background</item>
+    <!-- Default Settings theme -->
+    <style name="Theme.Settings" parent="@style/Theme.Leanback">
+        <item name="android:windowBackground">@color/settings_background</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowShowWallpaper">true</item>
         <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
     </style>
 
+    <!-- FormWizard version of Theme.Settings -->
+    <style name="Theme.Leanback.FormWizard.Solid" parent="@android:style/Theme.Leanback.FormWizard">
+        <item name="android:windowBackground">@color/settings_background</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
+    </style>
+
+    <!-- Transparent version of FormWizard, shown during Setup -->
     <style name="Theme.Leanback.FormWizard.Transparent" parent="@android:style/Theme.Leanback.FormWizard">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>

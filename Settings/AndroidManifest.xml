@@ -38,7 +38,7 @@
         android:icon="@drawable/ic_launcher_settings"
         android:label="@string/settings_app_name"
         android:banner="@drawable/ic_launcher_banner_settings"
-        android:theme="@style/Theme.Settings.Setup" >
+        android:theme="@style/Theme.Settings" >
 
         <activity
             android:name=".MainSettings"
@@ -81,23 +81,23 @@
             android:clearTaskOnLaunch="true"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true"
-            android:theme="@android:style/Theme.Leanback.FormWizard" />
+            android:theme="@style/Theme.Leanback.FormWizard.Solid" />
         <activity
             android:name=".connectivity.EditProxySettingsActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="keyboard|keyboardHidden|navigation"
-            android:theme="@android:style/Theme.Leanback.FormWizard" />
+            android:theme="@style/Theme.Leanback.FormWizard.Solid" />
         <activity
             android:name=".connectivity.EditIpSettingsActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="keyboard|keyboardHidden|navigation"
-            android:theme="@android:style/Theme.Leanback.FormWizard" />
+            android:theme="@style/Theme.Leanback.FormWizard.Solid" />
         <activity
             android:name=".connectivity.AddWifiNetworkActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true"
-            android:theme="@android:style/Theme.Leanback.FormWizard" />
+            android:theme="@style/Theme.Leanback.FormWizard.Solid" />
         <activity
             android:name=".connectivity.WifiNetworksActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
@@ -187,7 +187,7 @@
             android:name=".users.RestrictedProfileActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true"
-            android:theme="@android:style/Theme.Leanback.FormWizard" />
+            android:theme="@style/Theme.Leanback.FormWizard.Solid" />
         <activity-alias
             android:name=".users.RestrictedProfileActivityLauncherEntry"
             android:enabled="false"
@@ -289,7 +289,7 @@
             android:name=".system.BugReportActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true"
-            android:theme="@android:style/Theme.Leanback.FormWizard" >
+            android:theme="@style/Theme.Leanback.FormWizard.Solid" >
         </activity>
         <activity
             android:name=".system.DateTimeActivity"
@@ -470,7 +470,7 @@
         <activity
                 android:name=".name.DeviceNameSettingsActivity"
                 android:configChanges="keyboardHidden|navigation"
-                android:theme="@android:style/Theme.Leanback.FormWizard" >
+                android:theme="@style/Theme.Leanback.FormWizard.Solid" >
                 <intent-filter>
                     <action android:name="android.settings.DEVICE_NAME" />
                     <category android:name="android.intent.category.DEFAULT" />
