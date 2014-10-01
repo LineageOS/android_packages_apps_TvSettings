@@ -181,12 +181,8 @@ public class DateTimeActivity extends BaseSettingsActivity implements ActionAdap
         return formattedDates;
     }
 
-    private String getTimeFormat() {
-        return Settings.System.getString(getContentResolver(), Settings.System.TIME_12_24);
-    }
-
     private boolean isTimeFormat24h() {
-        return HOURS_24.equals(getTimeFormat());
+        return DateFormat.is24HourFormat(this);
     }
 
     private String getDateFormat() {
