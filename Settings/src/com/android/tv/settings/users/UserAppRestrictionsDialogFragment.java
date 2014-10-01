@@ -67,7 +67,6 @@ public class UserAppRestrictionsDialogFragment extends DialogFragment implements
     private static final String EXTRA_CONTENT_ICON_RESOURCE_ID = "iconResourceId";
     private static final String EXTRA_CONTENT_ICON_URI = "iconUri";
     private static final String EXTRA_CONTENT_ICON_BITMAP = "iconBitmap";
-    private static final String EXTRA_CONTENT_ICON_PADDING = "iconPadding";
     private static final String EXTRA_CONTENT_ICON_BACKGROUND = "iconBackground";
 
     private static final String EXTRA_PACKAGE_NAME = "packageName";

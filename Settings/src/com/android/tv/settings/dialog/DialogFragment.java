@@ -76,7 +76,6 @@ public class DialogFragment extends Fragment {
     private static final String EXTRA_CONTENT_ICON_RESOURCE_ID = "iconResourceId";
     private static final String EXTRA_CONTENT_ICON_URI = "iconUri";
     private static final String EXTRA_CONTENT_ICON_BITMAP = "iconBitmap";
-    private static final String EXTRA_CONTENT_ICON_PADDING = "iconPadding";
     private static final String EXTRA_CONTENT_ICON_BACKGROUND = "iconBackground";
     private static final String EXTRA_ACTION_NAME = "name";
     private static final String EXTRA_ACTION_ACTIONS = "actions";
@@ -104,7 +103,6 @@ public class DialogFragment extends Fragment {
         private Uri mIconUri;
         private Bitmap mIconBitmap;
         private int mIconBackgroundColor = Color.TRANSPARENT;
-        private int mIconPadding;
         private ArrayList<Action> mActions;
         private String mName;
         private int mSelectedIndex;
@@ -119,7 +117,6 @@ public class DialogFragment extends Fragment {
             args.putParcelable(EXTRA_CONTENT_ICON_URI, mIconUri);
             args.putParcelable(EXTRA_CONTENT_ICON_BITMAP, mIconBitmap);
             args.putInt(EXTRA_CONTENT_ICON_BACKGROUND, mIconBackgroundColor);
-            args.putInt(EXTRA_CONTENT_ICON_PADDING, mIconPadding);
             args.putParcelableArrayList(EXTRA_ACTION_ACTIONS, mActions);
             args.putString(EXTRA_ACTION_NAME, mName);
             args.putInt(EXTRA_ACTION_SELECTED_INDEX, mSelectedIndex);
@@ -162,11 +159,6 @@ public class DialogFragment extends Fragment {
             return this;
         }
 
-        public Builder iconPadding(int iconPadding) {
-            mIconPadding = iconPadding;
-            return this;
-        }
-
         public Builder actions(ArrayList<Action> actions) {
             mActions = actions;
             return this;
@@ -206,7 +198,6 @@ public class DialogFragment extends Fragment {
     private Uri mIconUri;
     private Bitmap mIconBitmap;
     private int mIconBackgroundColor = Color.TRANSPARENT;
-    private int mIconPadding;
     private ArrayList<Action> mActions;
     private String mName;
     private int mSelectedIndex = -1;
@@ -239,9 +230,6 @@ public class DialogFragment extends Fragment {
         }
         if (mIconBackgroundColor == Color.TRANSPARENT) {
             mIconBackgroundColor = state.getInt(EXTRA_CONTENT_ICON_BACKGROUND, Color.TRANSPARENT);
-        }
-        if (mIconPadding == 0) {
-            mIconPadding = state.getInt(EXTRA_CONTENT_ICON_PADDING, 0);
         }
         if (mActions == null) {
             mActions = state.getParcelableArrayList(EXTRA_ACTION_ACTIONS);
@@ -286,7 +274,6 @@ public class DialogFragment extends Fragment {
         outState.putParcelable(EXTRA_CONTENT_ICON_URI, mIconUri);
         outState.putParcelable(EXTRA_CONTENT_ICON_BITMAP, mIconBitmap);
         outState.putInt(EXTRA_CONTENT_ICON_BACKGROUND, mIconBackgroundColor);
-        outState.putInt(EXTRA_CONTENT_ICON_PADDING, mIconPadding);
         outState.putParcelableArrayList(EXTRA_ACTION_ACTIONS, mActions);
         outState.putInt(EXTRA_ACTION_SELECTED_INDEX,
                 (mListView != null) ? getSelectedItemPosition() : mSelectedIndex);
@@ -439,7 +426,6 @@ public class DialogFragment extends Fragment {
         if (mIconBackgroundColor != Color.TRANSPARENT) {
             iconImageView.setBackgroundColor(mIconBackgroundColor);
         }
-        iconImageView.setPadding(mIconPadding, mIconPadding, mIconPadding, mIconPadding);
 
         if (AccessibilityHelper.forceFocusableViews(getActivity())) {
             titleView.setFocusable(true);
