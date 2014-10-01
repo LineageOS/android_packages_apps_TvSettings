@@ -186,10 +186,6 @@ public class ContentFragment extends Fragment implements LiteFragment {
         mBase.setIcon(iconDrawable);
     }
 
-    public void setIconPadding(int padding) {
-        mBase.setIconPadding(padding);
-    }
-
     protected void setTextToExtra(View parent, int textViewResourceId, String extraLabel) {
         mBase.setTextToExtra(parent, textViewResourceId, extraLabel);
     }

@@ -74,7 +74,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
     private static final String EXTRA_CONTENT_ICON = "icon";
     private static final String EXTRA_CONTENT_ICON_URI = "iconUri";
     private static final String EXTRA_CONTENT_ICON_BITMAP = "iconBitmap";
-    private static final String EXTRA_CONTENT_ICON_PADDING = "iconPadding";
     private static final String EXTRA_CONTENT_ICON_BACKGROUND = "iconBackground";
     private static final String EXTRA_ACTION_NAME = "name";
     private static final String EXTRA_ACTION_LAYOUT = "layout";
@@ -108,7 +107,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
         private Uri mIconUri;
         private Bitmap mIconBitmap;
         private int mIconBackgroundColor = Color.TRANSPARENT;
-        private int mIconPadding;
         private Layout mLayout;
         private String mName;
 
@@ -123,7 +121,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
             args.putParcelable(EXTRA_CONTENT_ICON_URI, mIconUri);
             args.putParcelable(EXTRA_CONTENT_ICON_BITMAP, mIconBitmap);
             args.putInt(EXTRA_CONTENT_ICON_BACKGROUND, mIconBackgroundColor);
-            args.putInt(EXTRA_CONTENT_ICON_PADDING, mIconPadding);
             args.putParcelable(EXTRA_ACTION_LAYOUT, mLayout);
             mLayout.setRefreshViewListener(fragment);
             args.putString(EXTRA_ACTION_NAME, mName);
@@ -166,11 +163,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
             return this;
         }
 
-        public Builder iconPadding(int iconPadding) {
-            mIconPadding = iconPadding;
-            return this;
-        }
-
         public Builder layout(Layout layout) {
             mLayout = layout;
             return this;
@@ -204,7 +196,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
     private Uri mIconUri;
     private Bitmap mIconBitmap;
     private int mIconBackgroundColor = Color.TRANSPARENT;
-    private int mIconPadding;
     private Layout mLayout;
     private String mName;
     private int mSelectedIndex = -1;
@@ -261,7 +252,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
         mIconUri = state.getParcelable(EXTRA_CONTENT_ICON_URI);
         mIconBitmap = state.getParcelable(EXTRA_CONTENT_ICON_BITMAP);
         mIconBackgroundColor = state.getInt(EXTRA_CONTENT_ICON_BACKGROUND, Color.TRANSPARENT);
-        mIconPadding = state.getInt(EXTRA_CONTENT_ICON_PADDING, 0);
         mLayout = state.getParcelable(EXTRA_ACTION_LAYOUT);
         mName = state.getString(EXTRA_ACTION_NAME);
         mSelectedIndex = state.getInt(EXTRA_ACTION_SELECTED_INDEX, -1);
@@ -306,7 +296,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
         outState.putParcelable(EXTRA_CONTENT_ICON_URI, mIconUri);
         outState.putParcelable(EXTRA_CONTENT_ICON_BITMAP, mIconBitmap);
         outState.putInt(EXTRA_CONTENT_ICON_BACKGROUND, mIconBackgroundColor);
-        outState.putInt(EXTRA_CONTENT_ICON_PADDING, mIconPadding);
         outState.putParcelable(EXTRA_ACTION_LAYOUT, mLayout);
         outState.putInt(EXTRA_ACTION_SELECTED_INDEX,
                 (mListView != null) ? mListView.getSelectedPosition() : -1);
@@ -504,7 +493,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
         descriptionView.setText(mDescription);
         final ImageView iconImageView = (ImageView) content.findViewById(R.id.icon);
         iconImageView.setBackgroundColor(mIconBackgroundColor);
-        iconImageView.setPadding(mIconPadding, mIconPadding, mIconPadding, mIconPadding);
 
         // Force text fields to be focusable when accessibility is enabled.
         if (AccessibilityHelper.forceFocusableViews(getActivity())) {
