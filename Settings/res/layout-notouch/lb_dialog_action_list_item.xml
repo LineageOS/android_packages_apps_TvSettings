@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:alpha="@string/lb_dialog_list_item_unselected_text_alpha"
             android:ellipsize="marquee"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="sans-serif-condensed"
             android:maxLines="@integer/lb_dialog_action_title_min_lines"
             android:textColor="@color/lb_dialog_list_item_unselected_text_color"
             android:textSize="@dimen/lb_dialog_list_item_title_font_size" />
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:alpha="@string/lb_dialog_list_item_unselected_text_alpha"
             android:ellipsize="marquee"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="sans-serif-condensed"
             android:maxLines="@integer/lb_dialog_action_description_min_lines"
             android:textColor="@color/lb_dialog_list_item_unselected_text_color"
             android:textSize="@dimen/lb_dialog_list_item_description_font_size"
