@@ -44,15 +44,13 @@
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@id/icon"
             android:ellipsize="end"
-            android:fontFamily="sans-serif-condensed"
+            android:fontFamily="sans-serif-light"
             android:gravity="right"
             android:maxLines="2"
             android:paddingBottom="@dimen/lb_content_fragment_title_text_bottom_padding"
             android:paddingTop="@dimen/lb_content_fragment_title_text_top_padding"
-            android:textAllCaps="true"
             android:textColor="@color/lb_content_title_text_color"
-            android:textSize="@dimen/lb_content_fragment_title_text_size"
-            android:textStyle="bold" />
+            android:textSize="@dimen/lb_content_fragment_title_text_size"/>
 
         <TextView
             android:id="@+id/breadcrumb"
@@ -64,7 +62,6 @@
             android:ellipsize="end"
             android:fontFamily="sans-serif-condensed"
             android:singleLine="true"
-            android:textAllCaps="true"
             android:textColor="@color/lb_content_breadcrumb_text_color"
             android:textSize="@dimen/lb_content_fragment_breadcrumb_text_size" />
 
@@ -80,7 +77,8 @@
             android:gravity="right"
             android:maxLines="6"
             android:textColor="@color/lb_content_description_text_color"
-            android:textSize="@dimen/lb_content_fragment_description_text_size" />
+            android:textSize="@dimen/lb_content_fragment_description_text_size" 
+            android:lineSpacingExtra="3dp"/>
     </RelativeLayout>
 
 </FrameLayout>
