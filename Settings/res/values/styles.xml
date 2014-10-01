@@ -286,18 +286,15 @@
     <style name="Canvas.Text.Dialog.Content" />
 
     <style name="Canvas.Text.Dialog.Content.Title">
-        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:paddingBottom">@dimen/content_fragment_title_text_bottom_padding</item>
         <item name="android:paddingTop">@dimen/content_fragment_title_text_top_padding</item>
-        <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/content_title_text_color</item>
         <item name="android:textSize">@dimen/content_fragment_title_text_size</item>
-        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Canvas.Text.Dialog.Content.Breadcrumb">
         <item name="android:fontFamily">sans-serif-condensed</item>
-        <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/content_breadcrumb_text_color</item>
         <item name="android:textSize">@dimen/content_fragment_breadcrumb_text_size</item>
     </style>
@@ -307,6 +304,7 @@
         <item name="android:gravity">right</item>
         <item name="android:textColor">@color/content_description_text_color</item>
         <item name="android:textSize">@dimen/content_fragment_description_text_size</item>
+        <item name="android:lineSpacingExtra">3dp</item>
     </style>
 
     <style name="Canvas.Text.Dialog.List" />
@@ -318,14 +316,14 @@
     </style>
 
     <style name="Canvas.Text.Dialog.List.Title">
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:alpha">@dimen/list_item_unselected_text_alpha</item>
         <item name="android:textSize">@dimen/list_item_title_font_size</item>
         <item name="android:textColor">@color/list_item_unselected_text_color</item>
     </style>
 
     <style name="Canvas.Text.Dialog.List.Description">
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:alpha">@dimen/list_item_unselected_text_alpha</item>
         <item name="android:textSize">@dimen/list_item_description_font_size</item>
         <item name="android:textColor">@color/list_item_unselected_text_color</item>
