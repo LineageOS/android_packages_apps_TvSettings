@@ -16,7 +16,10 @@
 
 package com.android.tv.settings.device.display.daydream;
 
+// This setting controls when we will start dreaming
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
+// This setting controls when we'll turn the output off and go to sleep
+import static android.provider.Settings.Secure.SLEEP_TIMEOUT;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.old.Action;
@@ -38,23 +41,21 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-
 /**
  * Activity that allows the setting of daydreams.
  */
 public class DaydreamActivity extends DialogActivity implements ActionAdapter.Listener {
 
     enum ActionType {
-        SELECT, LIST_SLEEP, LIST_SCREEN_OFF, SET_SLEEP, SET_SCREEN_OFF, TEST;
+        SELECT, LIST_DREAM_TIMEOUT, LIST_SYSTEM_SLEEP_TIMEOUT, SET_DREAM_TIMEOUT, SET_SYSTEM_SLEEP_TIMEOUT, TEST;
     }
 
     /** If there is no setting in the provider, use this. */
     private static final int DREAM_SETTINGS_REQUEST = 1;
-    private static final long FALLBACK_SCREEN_TIMEOUT_VALUE = 1800000;
+    private static final int FALLBACK_SCREEN_TIMEOUT_VALUE = 1800000;
     private static final String EXTRA_LIST_VALUE = "list_value";
     private static final int CHECK_SET_ID = 1;
 
-    private static final String SLEEP_TIMEOUT_MS = "sleep_timeout_ms";
     private static final int DEFAULT_SLEEP_TIMEOUT_MS = 3 * 60 * 60 * 1000;
 
     private DreamBackend mDreamBackend;
@@ -103,17 +104,17 @@ public class DaydreamActivity extends DialogActivity implements ActionAdapter.Li
                 case SELECT:
                     onSelect();
                     break;
-                case LIST_SLEEP:
-                    onListSleep();
+                case LIST_DREAM_TIMEOUT:
+                    onListDreamTimeouts();
                     break;
-                case LIST_SCREEN_OFF:
-                    onListScreenOff();
+                case LIST_SYSTEM_SLEEP_TIMEOUT:
+                    onListSystemSleepTimeouts();
                     break;
-                case SET_SLEEP:
-                    onSetSleep(action);
+                case SET_DREAM_TIMEOUT:
+                    onSetDreamTimeout(action);
                     break;
-                case SET_SCREEN_OFF:
-                    onSetScreenOff(action);
+                case SET_SYSTEM_SLEEP_TIMEOUT:
+                    onSetSystemSleepTimeout(action);
                     break;
                 case TEST:
                     onTest();
@@ -130,37 +131,33 @@ public class DaydreamActivity extends DialogActivity implements ActionAdapter.Li
                 ActionFragment.newInstance(mDreamBackend.getDreamInfoActions()));
     }
 
-    private void onListSleep() {
+    private void onListDreamTimeouts() {
         setContentAndActionFragments(createSubMenuContentFragment(
                 getString(R.string.device_daydreams_sleep),
                 getString(R.string.device_daydreams_sleep_description)),
-                ActionFragment.newInstance(getListActions(ActionType.SET_SLEEP.name(),
+                ActionFragment.newInstance(getListActions(ActionType.SET_DREAM_TIMEOUT.name(),
                         R.array.sleep_timeout_values, R.array.sleep_timeout_entries,
-                        getSleepValue())));
+                        getDreamTimeoutValue())));
     }
 
-    private void onListScreenOff() {
+    private void onListSystemSleepTimeouts() {
         setContentAndActionFragments(createSubMenuContentFragment(
                 getString(R.string.device_daydreams_screen_off),
                 getString(R.string.device_daydreams_screen_off_description)),
-                ActionFragment.newInstance(getListActions(ActionType.SET_SCREEN_OFF.name(),
+                ActionFragment.newInstance(getListActions(ActionType.SET_SYSTEM_SLEEP_TIMEOUT.name(),
                         R.array.screen_off_timeout_values, R.array.screen_off_timeout_entries,
-                        getSleepTimeout(getApplicationContext()))));
+                        getSystemSleepTimeout())));
     }
 
-    private void onSetSleep(Action action) {
+    private void onSetDreamTimeout(Action action) {
         long sleepValue = action.getIntent().getLongExtra(EXTRA_LIST_VALUE, 0);
-        try {
-            Settings.System.putInt(getContentResolver(), SCREEN_OFF_TIMEOUT, (int) sleepValue);
-        } catch (NumberFormatException e) {
-            Log.e("DaydreamActivity", "could not persist screen timeout setting", e);
-        }
+        Settings.System.putInt(getContentResolver(), SCREEN_OFF_TIMEOUT, (int) sleepValue);
         goToMainScreen();
     }
 
-    private void onSetScreenOff(Action action) {
-        long screenOffValue = action.getIntent().getLongExtra(EXTRA_LIST_VALUE, 0);
-        setSleepTimeout(getApplicationContext(), (int) screenOffValue);
+    private void onSetSystemSleepTimeout(Action action) {
+        int screenOffValue = (int) action.getIntent().getLongExtra(EXTRA_LIST_VALUE, 0);
+        setSystemSleepTimeout(screenOffValue);
         goToMainScreen();
     }
 
@@ -179,23 +176,23 @@ public class DaydreamActivity extends DialogActivity implements ActionAdapter.Li
                 .title(getString(R.string.device_daydreams_select))
                 .description(mDreamBackend.getActiveDreamTitle()).build());
         actions.add(new Action.Builder()
-                .key(ActionType.LIST_SLEEP.name())
+                .key(ActionType.LIST_DREAM_TIMEOUT.name())
                 .title(getString(R.string.device_daydreams_sleep))
                 .description((getString(R.string.device_daydreams_sleep_summary,
                         getEntry(R.array.sleep_timeout_values, R.array.sleep_timeout_entries,
-                                getSleepValue()))))
+                                getDreamTimeoutValue()))))
                 .build());
 
         String[] screenOffEntries = getResources().getStringArray(
                 R.array.screen_off_timeout_entries);
-        int screenOffTimeout = getSleepTimeout(getApplicationContext());
+        int systemSleepTimeout = getSystemSleepTimeout();
         // Only add the summary text if the value is not "Never"
-        String screenOffDescription = screenOffTimeout > 0 ? getString(
-                R.string.device_daydreams_screen_off_summary,
+        String screenOffDescription = systemSleepTimeout > 0 ? getString(
+                R.string.device_daydreams_sleep_summary,
                 getEntry(R.array.screen_off_timeout_values, R.array.screen_off_timeout_entries,
-                        screenOffTimeout)) : screenOffEntries[screenOffEntries.length - 1];
+                        systemSleepTimeout)) : screenOffEntries[screenOffEntries.length - 1];
         actions.add(new Action.Builder()
-                .key(ActionType.LIST_SCREEN_OFF.name())
+                .key(ActionType.LIST_SYSTEM_SLEEP_TIMEOUT.name())
                 .title(getString(R.string.device_daydreams_screen_off))
                 .description(screenOffDescription)
                 .build());
@@ -239,15 +236,15 @@ public class DaydreamActivity extends DialogActivity implements ActionAdapter.Li
         return actions;
     }
 
-    private long getSleepValue() {
-        return Settings.System.getLong(getContentResolver(), SCREEN_OFF_TIMEOUT,
+    private int getDreamTimeoutValue() {
+        return Settings.System.getInt(getContentResolver(), SCREEN_OFF_TIMEOUT,
                 FALLBACK_SCREEN_TIMEOUT_VALUE);
     }
 
     private String getEntry(int valuesResId, int entriesResId, long value) {
         String[] sleepOptionValues = getResources().getStringArray(valuesResId);
         String[] sleepOptionEntries = getResources().getStringArray(entriesResId);
-        long sleepValue = getSleepValue();
+        long sleepValue = getDreamTimeoutValue();
         for (int index = 0; index < sleepOptionValues.length; ++index) {
             long loopValue = Long.parseLong(sleepOptionValues[index]);
             if (loopValue == value) {
@@ -257,15 +254,12 @@ public class DaydreamActivity extends DialogActivity implements ActionAdapter.Li
         return null;
     }
 
-    private static int getSleepTimeout(Context context) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        return preferences.getInt(SLEEP_TIMEOUT_MS, DEFAULT_SLEEP_TIMEOUT_MS);
+    private int getSystemSleepTimeout() {
+        return Settings.Secure.getInt(getContentResolver(), SLEEP_TIMEOUT,
+                DEFAULT_SLEEP_TIMEOUT_MS);
     }
 
-    public static void setSleepTimeout(Context context, int valueMs) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        preferences.edit()
-                .putInt(SLEEP_TIMEOUT_MS, valueMs)
-                .apply();
+    private void setSystemSleepTimeout(int valueMs) {
+        Settings.Secure.putInt(getContentResolver(), SLEEP_TIMEOUT, valueMs);
     }
 }
