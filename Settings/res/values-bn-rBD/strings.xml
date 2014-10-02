@@ -51,7 +51,7 @@
     <string name="connectivity_network" msgid="8321537111272398501">"নেটওয়ার্ক"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ইথারনেট"</string>
-    <string name="device_daydream" msgid="4933581408059561077">"দিবাস্বপ্ন"</string>
+    <string name="device_daydream" msgid="4933581408059561077">"স্ক্রিনসেভার"</string>
     <string name="device_display" msgid="101455384386372747">"প্রদর্শন"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"সিস্টেম ধ্বনিগুলি"</string>
     <string name="device_apps" msgid="9180435229638772838">"অ্যাপ্লিকেশানগুলি"</string>
@@ -202,7 +202,7 @@
     <string name="wifi_action_save" msgid="4673786410274206843">"সংরক্ষণ করুন"</string>
     <string name="wifi_action_static" msgid="1025855501453321749">"স্থির"</string>
     <string name="wifi_action_status_info" msgid="7664354971197839253">"স্থিতি তথ্য"</string>
-    <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"উন্নত বিকল্পগুলি"</string>
+    <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"উন্নত সেটিংগুলি"</string>
     <string name="wifi_action_advanced_options_description" msgid="8615353318560146504">"<xliff:g id="PROXY_SETTINGS_SUMMARY">%1$s</xliff:g>, <xliff:g id="IP_SETTINGS_SUMMARY">%2$s</xliff:g>"</string>
     <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"একটি বৈধ IP ঠিকানা লিখুন"</string>
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"একটি বৈধ গেটওয়ে ঠিকানা লিখুন"</string>
@@ -226,7 +226,7 @@
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"নেটওয়ার্কের সাথে সংযোগ স্থাপন করা হয়নি"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g> এর সাথে ইতিমধ্যেই সংযুক্ত৷ অন্য কোনো নেটওয়ার্কের সাথে সংযোগ স্থাপন করবেন?"</string>
     <string name="wifi_summary_unknown_network" msgid="7903601448928422642">"একটি অজানা নেটওয়ার্ক"</string>
-    <string name="connectivity_advanced_options" msgid="2858199826425132228">"উন্নত বিকল্পগুলি"</string>
+    <string name="connectivity_advanced_options" msgid="2858199826425132228">"উন্নত সেটিংগুলি"</string>
     <string name="connectivity_advanced_options_description" msgid="370129113175689226">"<xliff:g id="SSID_0">%1$s</xliff:g>, <xliff:g id="SSID_1">%2$s</xliff:g>"</string>
     <string name="title_ip_settings" msgid="6408399523925189065">"IP সেটিংস"</string>
     <string name="title_test_connection" msgid="1202798409060082670">"পরীক্ষামূলক সংযোগ"</string>
@@ -272,7 +272,7 @@
     <string name="system_location" msgid="502463575930545806">"অবস্থান"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"যে অ্যাপ্লিকেশানগুলি আপনার অবস্থানের তথ্য ব্যবহার করার অনুমতি চেয়েছে তাদেরকে অনুমতি দিন"</string>
     <string name="system_network_location" msgid="3095006393148731886">"Wi-Fi নেটওয়ার্কের অবস্থান"</string>
-    <string name="system_desc_network_location" msgid="3394374680078903193">"অ্যাপ্লিকেশানগুলিকে অবস্থান নির্ণয়ের কাজে সহায়তা করার জন্য Google কে অনুমতি দিন৷ এর অর্থ হল, যখন কোনো অ্যাপ্লিকেশান চলছে না সেই সময়েও Google এ অবস্থানের বেনামী ডেটা পাঠানো৷"</string>
+    <string name="system_desc_network_location" msgid="3394374680078903193">"অ্যাপ্লিকেশানগুলি যাতে অবস্থান নির্ণয় করার পারে তার জন্য Google কে সহায়তা করতে দিন। এর অর্থ হলো, যখন কোন অ্যাপ্লিকেশান চালাু থাকে না তখনও Google-এ যো কোনো অবস্থান তথ্য পাঠানো হবে।"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"অবস্থান সম্মতি"</string>
     <string name="system_desc_network_location_confirm" msgid="3929125496258579850">"Google এর অবস্থান পরিষেবাকে বেনামে অবস্থানের ডেটা সংগ্রহের অনুমতি দিন৷ আপনার ডিভাইসে কিছু ডেটা সংরক্ষণ করা হতে পারে৷ যখন কোনো অ্যাপ্লিকেশান চলে না তখনও সংগ্রহের কাজটি চলতে পারে৷"</string>
     <string name="location_title" msgid="7600163182794860262">"আমার অবস্থান"</string>
@@ -328,7 +328,7 @@
     <string name="color_cyan" msgid="796226330055745">"সবজে নীল"</string>
     <string name="color_yellow" msgid="1023390829879874964">"হলুদ"</string>
     <string name="color_magenta" msgid="6395786485839439122">"ম্যাজেন্টা"</string>
-    <string name="system_accessibility_status" msgid="4389074529913575327">"অবস্থা"</string>
+    <string name="system_accessibility_status" msgid="4389074529913575327">"স্থিতি"</string>
     <string name="system_accessibility_config" msgid="3216531917536720277">"কনফিগারেশন"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"<xliff:g id="SERVICE">%1$s</xliff:g> ব্যবহার করবেন?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"পাসওয়ার্ড ছাড়া আপনি অন্য যে পাঠ্য টাইপ করেন তার সবই <xliff:g id="SERVICE">%1$s</xliff:g> সংগ্রহ করতে পারে। ব্যক্তিগত তথ্য যেমন ক্রেডিট কার্ড নম্বর এর অন্তর্ভুক্ত।"</string>
@@ -541,12 +541,13 @@
     <item quantity="one" msgid="5114936540577834412">"১টি অ্যাপ্লিকেশান অনুমোদিত"</item>
     <item quantity="other" msgid="5242661864373721262">"%dটি অ্যাপ্লিকেশান অনুমোদিত"</item>
   </plurals>
-    <string name="restricted_profile_allowed" msgid="2903829140619950232">"অনুমোদিত"</string>
-    <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"অনুমোদিত নয়"</string>
+    <string name="restricted_profile_allowed" msgid="2903829140619950232">"অনুমতি আছে"</string>
+    <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"অনুমতি নেই"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"বিধিনিষেধগুলি কাস্টমাইজ করুন"</string>
-    <string name="restricted_profile_configure_apps_description_loading" msgid="2509074621719456415">"এক মুহূর্ত舰"</string>
-    <string name="restricted_profile_change_password_title" msgid="3507770139567629076">"নিরাপত্তা"</string>
-    <string name="restricted_profile_change_password_description" msgid="575630031118408368">"PIN কোড সেট করুন"</string>
+    <!-- no translation found for restricted_profile_configure_apps_description_loading (5269477581791409700) -->
+    <skip />
+    <!-- no translation found for restricted_profile_change_password_title (2848537651211816659) -->
+    <skip />
     <string name="restricted_profile_set_password" msgid="3989154189940037175">"বিধিনিষেধযুক্ত প্রোফাইল থেকে প্রস্থান করার জন্য নতুন PIN কোড সেট করুন"</string>
     <string name="restricted_profile_confirm_password" msgid="5749967525546068650">"বিধিনিষেধযুক্ত প্রোফাইল থেকে প্রস্থান করতে প্রদত্ত PIN কোড নিশ্চিত করুন"</string>
     <string name="restricted_profile_enter_password" msgid="5961473119032585585">"বিধিনিষেধযুক্ত প্রোফাইল থেকে প্রস্থান করার জন্য PIN কোড লিখুন"</string>
