@@ -11,7 +11,6 @@
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.BACKUP" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -363,26 +362,6 @@
             android:name=".system.InputsCustomLabelActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" />
-        <activity
-            android:name=".notifications.NotificationActivity"
-            android:configChanges="keyboard|keyboardHidden|navigation"
-            android:taskAffinity="com.android.settings.notifications"
-            android:exported="true"
-            android:immersive="true" >
-
-            <!-- Intent filter used to display this activity as a settings
-                 entry point in the LeanbackLauncher -->
-            <intent-filter
-                android:priority="1"
-                android:label="@string/launcher_notifications_app_name"
-                android:icon="@drawable/ic_notification_launcher_icon" >
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.android.tv.settings.notifications" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.LEANBACK_SETTINGS" />
-            </intent-filter>
-
-        </activity>
         <activity
             android:name=".accessories.BluetoothAccessoryActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
