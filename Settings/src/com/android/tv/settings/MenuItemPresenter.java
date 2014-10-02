@@ -19,6 +19,7 @@ package com.android.tv.settings;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Paint;
 import android.graphics.Paint.FontMetricsInt;
@@ -58,7 +59,7 @@ public class MenuItemPresenter extends Presenter {
     public ViewHolder onCreateViewHolder(ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) parent.getContext().getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
-        View v = inflater.inflate(R.layout.browse_item_blended_light, parent, false);
+        View v = inflater.inflate(R.layout.browse_item, parent, false);
         return new MenuItemViewHolder(v);
     }
 
@@ -73,11 +74,19 @@ public class MenuItemPresenter extends Presenter {
                     menuItem.getDescriptionGetter() == null ? null
                     : menuItem.getDescriptionGetter().getText());
 
-            if (!hasDescription) {
-                menuItemViewHolder.mTitleView.setMaxLines(2);
+            Resources res = menuItemViewHolder.mTitleView.getContext().getResources();
+            ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams)
+                    menuItemViewHolder.mTitleView.getLayoutParams();
+            if (hasDescription) {
+                lp.bottomMargin = (int) res.getDimension(R.dimen.browse_item_title_marginBottom);
+                menuItemViewHolder.mTitleView.setSingleLine(true);
+                menuItemViewHolder.mTitleView.setLines(1);
             } else {
-                menuItemViewHolder.mTitleView.setMaxLines(1);
+                lp.bottomMargin = (int) res.getDimension(R.dimen.browse_item_description_marginBottom);
+                menuItemViewHolder.mTitleView.setSingleLine(false);
+                menuItemViewHolder.mTitleView.setLines(2);
             }
+            menuItemViewHolder.mTitleView.setLayoutParams(lp);
 
             viewHolder.view.setOnClickListener(new View.OnClickListener() {
                 @Override
