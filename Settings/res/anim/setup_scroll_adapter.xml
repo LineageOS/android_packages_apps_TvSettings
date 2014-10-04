@@ -15,13 +15,13 @@
 -->
 <set xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <!-- Reduce opacity of unselected items to 10% -->
+    <!-- Reduce opacity of unselected items to 30% -->
     <objectAnimator
         android:duration="10"
         android:propertyName="alpha"
         android:startOffset="0"
         android:valueFrom="1"
-        android:valueTo="0.1"
+        android:valueTo="0.3"
         android:valueType="floatType" />
 
 </set>
