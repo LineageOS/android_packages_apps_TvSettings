@@ -68,16 +68,20 @@ public class AddAccountWithTypeActivity extends Activity {
         super.onCreate(savedInstanceState);
         String accountType = getIntent().getStringExtra(AccountManager.KEY_ACCOUNT_TYPE);
         if (accountType != null) {
-            mLaunchAccountTypePicker = false;
             startAddAccount(accountType);
         } else {
-            mLaunchAccountTypePicker = true;
             startAccountTypePicker();
         }
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (Activity.RESULT_CANCELED == resultCode) {
+            setResult(resultCode);
+            finish();
+            return;
+        }
+
         switch (requestCode) {
             case REQUEST_ADD_ACCOUNT:
                 if (resultCode == Activity.RESULT_OK) {
@@ -101,11 +105,13 @@ public class AddAccountWithTypeActivity extends Activity {
     }
 
     private void startAccountTypePicker() {
+        mLaunchAccountTypePicker = true;
         Intent i = new Intent(CHOOSE_ACCOUNT_TYPE_ACTION);
         startActivityForResult(i, REQUEST_CHOOSE_ACCOUNT_TYPE);
     }
 
     private void startAddAccount(String accountType) {
+        mLaunchAccountTypePicker = false;
         AccountManager.get(this).addAccount(
                 accountType,
                 null, /* authTokenType */
