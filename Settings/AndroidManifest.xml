@@ -286,12 +286,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".system.BugReportActivity"
-            android:configChanges="keyboard|keyboardHidden|navigation"
-            android:exported="true"
-            android:theme="@style/Theme.Leanback.FormWizard.Solid" >
-        </activity>
-        <activity
             android:name=".system.DateTimeActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" >

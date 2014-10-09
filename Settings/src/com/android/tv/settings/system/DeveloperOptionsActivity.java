@@ -107,9 +107,6 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                 mActions.add(ActionType.DEVELOPER_APPS.toAction(mResources));
                 break;
             case DEVELOPER_GENERAL:
-                if (BugReportActivity.isBugReportEnabled()) {
-                    mActions.add(ActionType.DEVELOPER_GENERAL_TAKE_BUG_REPORT.toAction(mResources));
-                }
                 mActions.add(ActionType.DEVELOPER_GENERAL_STAY_AWAKE.toAction(mResources,
                         mHelper.getGlobalIntSetting(Settings.Global.STAY_ON_WHILE_PLUGGED_IN)));
                 if (!"user".equals(Build.TYPE)) {
@@ -289,8 +286,6 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             case DEVELOPER_GENERAL:
                 setView(R.string.system_general, R.string.system_developer_options, 0, 0);
                 break;
-            case DEVELOPER_GENERAL_TAKE_BUG_REPORT:
-                break;
             case EMAIL_ADDRESS:
                 mContentFragment = EditTextFragment.newInstance(
                         mResources.getString(R.string.system_email_address));
@@ -443,11 +438,6 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
         final ActionBehavior behavior = actionKey.getBehavior();
         if (behavior == null) {
             Log.w(TAG, "Could not find behavior for " + action.getKey());
-            return;
-        }
-        if (type == ActionType.DEVELOPER_GENERAL_TAKE_BUG_REPORT) {
-            Intent intent = new Intent(this, BugReportActivity.class);
-            startActivity(intent);
             return;
         }
         switch (behavior) {

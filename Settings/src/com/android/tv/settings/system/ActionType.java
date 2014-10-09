@@ -75,7 +75,6 @@ enum ActionType {
     DEVELOPER_DRAWING(R.string.system_drawing),
     DEVELOPER_MONITORING(R.string.system_monitoring),
     DEVELOPER_APPS(R.string.system_apps),
-    DEVELOPER_GENERAL_TAKE_BUG_REPORT(R.string.system_take_bug_report),
     DEVELOPER_GENERAL_STAY_AWAKE(R.string.system_stay_awake,
             R.string.system_desc_stay_awake),
     DEVELOPER_GENERAL_HDCP_CHECKING(R.string.system_hdcp_checking,
