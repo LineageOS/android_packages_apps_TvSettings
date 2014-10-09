@@ -32,12 +32,15 @@ import com.android.tv.settings.name.DeviceManager;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Activity which shows the build / model / legal info / etc.
@@ -75,6 +78,13 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
      */
     private static final String SETTINGS_DEVICE_NAME_INTENT_ACTION =
         "android.settings.DEVICE_NAME";
+
+    /**
+     * Intent to launch ads activity.
+     */
+    private static final String SETTINGS_ADS_ACTIVITY_PACKAGE = "com.google.android.gms";
+    private static final String SETTINGS_ADS_ACTIVITY_ACTION =
+            "com.google.android.gms.settings.ADS_PRIVACY";
 
     /**
      * Number of clicks it takes to be a developer.
@@ -195,6 +205,21 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 .key(KEY_LEGAL_INFO)
                 .title(getString(R.string.about_legal_info))
                 .build());
+        Intent adsIntent = new Intent();
+        adsIntent.setPackage(SETTINGS_ADS_ACTIVITY_PACKAGE);
+        adsIntent.setAction(SETTINGS_ADS_ACTIVITY_ACTION);
+        adsIntent.addCategory(Intent.CATEGORY_DEFAULT);
+        List<ResolveInfo> resolveInfos = getPackageManager().queryIntentActivities(adsIntent,
+                PackageManager.MATCH_DEFAULT_ONLY);
+        if (!resolveInfos.isEmpty()) {
+            // Launch the phone ads id activity.
+            actions.add(new Action.Builder()
+                    .key("ads")
+                    .title(getString(R.string.about_ads))
+                    .intent(adsIntent)
+                    .enabled(true)
+                    .build());
+        }
         actions.add(new Action.Builder()
                 .key("model")
                 .title(getString(R.string.about_model))
