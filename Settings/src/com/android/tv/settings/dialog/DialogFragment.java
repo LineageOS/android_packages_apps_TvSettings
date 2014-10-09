@@ -189,6 +189,7 @@ public class DialogFragment extends Fragment {
     }
 
     private DialogActionAdapter mAdapter;
+    private SelectorAnimator mSelectorAnimator;
     private VerticalGridView mListView;
     private Action.Listener mListener;
     private String mTitle;
@@ -287,6 +288,8 @@ public class DialogFragment extends Fragment {
         if (!mEntryTransitionPerformed) {
             mEntryTransitionPerformed = true;
             performEntryTransition();
+        } else {
+            performSelectorTransition();
         }
     }
 
@@ -526,7 +529,8 @@ public class DialogFragment extends Fragment {
             mListView.setWindowAlignment(VerticalGridView.WINDOW_ALIGN_NO_EDGE);
             View selectorView = action.findViewById(R.id.selector);
             if (selectorView != null) {
-                mListView.setOnScrollListener(new SelectorAnimator(selectorView, mListView));
+                mSelectorAnimator = new SelectorAnimator(selectorView, mListView);
+                mListView.setOnScrollListener(mSelectorAnimator);
             }
         }
 
@@ -535,6 +539,7 @@ public class DialogFragment extends Fragment {
         mListView.setSelectedPosition(
                 (mSelectedIndex >= 0 && mSelectedIndex < mActions.size()) ? mSelectedIndex
                 : getFirstCheckedAction());
+
         action.setTag(R.id.list, mListView);
         action.setTag(R.id.selector, action.findViewById(R.id.selector));
     }
@@ -568,6 +573,38 @@ public class DialogFragment extends Fragment {
         alphaAnimator.start();
     }
 
+    private void runDelayedAnim(final Runnable runnable) {
+        final View dialogView = getView();
+        final View contentView = (View) dialogView.getTag(R.id.content_fragment);
+
+        contentView.getViewTreeObserver().addOnGlobalLayoutListener(
+                new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                    public void onGlobalLayout() {
+                        contentView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                        // if we buildLayer() at this time, the texture is
+                        // actually not created delay a little so we can make
+                        // sure all hardware layer is created before animation,
+                        // in that way we can avoid the jittering of start
+                        // animation
+                        contentView.postOnAnimationDelayed(runnable, ANIMATE_DELAY);
+                    }
+                });
+
+    }
+
+    private void performSelectorTransition() {
+        runDelayedAnim(new Runnable() {
+            @Override
+            public void run() {
+                // Fade in the selector.
+                if (mSelectorAnimator != null) {
+                    mSelectorAnimator.fadeIn();
+                }
+            }
+        });
+    }
+
     private void performEntryTransition() {
         final View dialogView = getView();
         final View contentView = (View) dialogView.getTag(R.id.content_fragment);
@@ -586,59 +623,46 @@ public class DialogFragment extends Fragment {
         dialogView.setBackground(bgDrawable);
         dialogView.setVisibility(View.INVISIBLE);
 
-        // We need to defer the remainder of the animation preparation until the
-        // first
-        // layout has occurred, as we don't yet know the final location of the
-        // icon.
-        contentView.getViewTreeObserver().addOnGlobalLayoutListener(
-                new ViewTreeObserver.OnGlobalLayoutListener() {
-                @Override
-                    public void onGlobalLayout() {
-                        contentView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                        // if we buildLayer() at this time, the texture is
-                        // actually not created delay a little so we can make
-                        // sure all hardware layer is created before animation,
-                        // in that way we can avoid the jittering of start
-                        // animation
-                        contentView.postOnAnimationDelayed(mEntryAnimationRunnable, ANIMATE_DELAY);
-                    }
+        runDelayedAnim(new Runnable() {
+            @Override
+            public void run() {
+                if (!isAdded()) {
+                    // We have been detached before this could run,
+                    // so just bail
+                    return;
+                }
 
-                    Runnable mEntryAnimationRunnable = new Runnable() {
-                            @Override
-                        public void run() {
-                            if (!isAdded()) {
-                                // We have been detached before this could run,
-                                // so just bail
-                                return;
-                            }
+                dialogView.setVisibility(View.VISIBLE);
 
-                            dialogView.setVisibility(View.VISIBLE);
+                // Fade in the activity background protection
+                ObjectAnimator oa = ObjectAnimator.ofInt(bgDrawable, "alpha", 255);
+                oa.setDuration(ANIMATE_IN_DURATION);
+                oa.setStartDelay(SECONDARY_ANIMATE_DELAY);
+                oa.setInterpolator(new DecelerateInterpolator(1.0f));
+                oa.start();
 
-                            // Fade in the activity background protection
-                            ObjectAnimator oa = ObjectAnimator.ofInt(bgDrawable, "alpha", 255);
-                            oa.setDuration(ANIMATE_IN_DURATION);
-                            oa.setStartDelay(SECONDARY_ANIMATE_DELAY);
-                            oa.setInterpolator(new DecelerateInterpolator(1.0f));
-                            oa.start();
+                // Fade in and slide in the ContentFragment
+                // TextViews from the left.
+                prepareAndAnimateView((View) contentView.getTag(R.id.title),
+                        -SLIDE_IN_DISTANCE, false);
+                prepareAndAnimateView((View) contentView.getTag(R.id.breadcrumb),
+                        -SLIDE_IN_DISTANCE, false);
+                prepareAndAnimateView((View) contentView.getTag(R.id.description),
+                        -SLIDE_IN_DISTANCE, false);
 
-                            // Fade in and slide in the ContentFragment
-                            // TextViews from the left.
-                            prepareAndAnimateView((View) contentView.getTag(R.id.title),
-                                    -SLIDE_IN_DISTANCE, false);
-                            prepareAndAnimateView((View) contentView.getTag(R.id.breadcrumb),
-                                    -SLIDE_IN_DISTANCE, false);
-                            prepareAndAnimateView((View) contentView.getTag(R.id.description),
-                                    -SLIDE_IN_DISTANCE, false);
+                // Fade in and slide in the ActionFragment from the
+                // right.
+                prepareAndAnimateView(actionContainerView,
+                        actionContainerView.getMeasuredWidth(), false);
+                prepareAndAnimateView((View) contentView.getTag(R.id.icon),
+                        -SLIDE_IN_DISTANCE, true);
 
-                            // Fade in and slide in the ActionFragment from the
-                            // right.
-                            prepareAndAnimateView(actionContainerView,
-                                    actionContainerView.getMeasuredWidth(), false);
-                            prepareAndAnimateView((View) contentView.getTag(R.id.icon),
-                                    -SLIDE_IN_DISTANCE, true);
-                        }
-                    };
-                });
+                // Fade in the selector.
+                if (mSelectorAnimator != null) {
+                    mSelectorAnimator.fadeIn();
+                }
+            }
+        });
     }
 
     private void prepareAndAnimateView(final View v, float initTransX,
@@ -733,45 +757,53 @@ public class DialogFragment extends Fragment {
         @Override
         public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
             if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                // The selector starts with a height of 0. In order to scale up
-                // from
-                // 0 we first need the set the height to 1 and scale form there.
-                int selectorHeight = mSelectorView.getHeight();
-                if (selectorHeight == 0) {
-                    LayoutParams lp = mSelectorView.getLayoutParams();
-                    lp.height = selectorHeight = mSelectorView.getContext().getResources()
-                            .getDimensionPixelSize(R.dimen.lb_action_fragment_selector_min_height);
-                    mSelectorView.setLayoutParams(lp);
-                }
-                View focusedChild = mParentView.getFocusedChild();
-                if (focusedChild != null) {
-                    float scaleY = (float) focusedChild.getHeight() / selectorHeight;
-                    ViewPropertyAnimator animation = mSelectorView.animate()
-                            .alpha(1f)
-                            .setListener(new Listener(false))
-                            .setDuration(mAnimationDuration)
-                            .setInterpolator(new DecelerateInterpolator(2f));
-                    if (mFadedOut) {
-                        // selector is completely faded out, so we can just
-                        // scale
-                        // before fading in.
-                        mSelectorView.setScaleY(scaleY);
-                    } else {
-                        // selector is not faded out, so we must animate the
-                        // scale
-                        // as we fade in.
-                        animation.scaleY(scaleY);
-                    }
-                    animation.start();
-                }
+                fadeIn();
             } else {
-                mSelectorView.animate()
-                        .alpha(0f)
-                        .setDuration(mAnimationDuration)
-                        .setInterpolator(new DecelerateInterpolator(2f))
-                        .setListener(new Listener(true))
-                        .start();
+                fadeOut();
             }
+        }
+
+        public void fadeIn() {
+            // The selector starts with a height of 0. In order to scale up
+            // from
+            // 0 we first need the set the height to 1 and scale form there.
+            int selectorHeight = mSelectorView.getHeight();
+            if (selectorHeight == 0) {
+                LayoutParams lp = mSelectorView.getLayoutParams();
+                lp.height = selectorHeight = mSelectorView.getContext().getResources()
+                        .getDimensionPixelSize(R.dimen.lb_action_fragment_selector_min_height);
+                mSelectorView.setLayoutParams(lp);
+            }
+            View focusedChild = mParentView.getFocusedChild();
+            if (focusedChild != null) {
+                float scaleY = (float) focusedChild.getHeight() / selectorHeight;
+                ViewPropertyAnimator animation = mSelectorView.animate()
+                        .alpha(1f)
+                        .setListener(new Listener(false))
+                        .setDuration(mAnimationDuration)
+                        .setInterpolator(new DecelerateInterpolator(2f));
+                if (mFadedOut) {
+                    // selector is completely faded out, so we can just
+                    // scale
+                    // before fading in.
+                    mSelectorView.setScaleY(scaleY);
+                } else {
+                    // selector is not faded out, so we must animate the
+                    // scale
+                    // as we fade in.
+                    animation.scaleY(scaleY);
+                }
+                animation.start();
+            }
+        }
+
+        public void fadeOut() {
+            mSelectorView.animate()
+            .alpha(0f)
+            .setDuration(mAnimationDuration)
+            .setInterpolator(new DecelerateInterpolator(2f))
+            .setListener(new Listener(true))
+            .start();
         }
 
         /**
