@@ -489,16 +489,10 @@ public class NetworkActivity extends SettingsLayoutActivity implements
 
     private final WifiListLayout mWifiAllListLayout = new WifiListLayout(false);
 
-    @Override
-    public Layout createLayout() {
-        return
-            new Layout()
-                .breadcrumb(getString(R.string.header_category_device))
-                .add(new Header.Builder(mRes)
-                        .icon(R.drawable.ic_settings_wifi_1)
-                        .title(R.string.connectivity_network)
-                        .description(mWifiConnectedDescription)
-                        .build()
+    private final LayoutGetter mNetworkLayoutGetter = new LayoutGetter() {
+        @Override
+        public Layout get() {
+            Layout layout = new Layout()
                     .add(new Header.Builder(mRes).title(R.string.connectivity_wifi)
                             .description(mWifiConnectedDescription).build()
                         .add(new Static.Builder(mRes)
@@ -514,21 +508,38 @@ public class NetworkActivity extends SettingsLayoutActivity implements
                                 .title(R.string.wifi_setting_header_other_options)
                                 .build())
                         .add(new Action.Builder(mRes,
-                                 new Intent(this, WpsConnectionActivity.class))
+                                 new Intent(NetworkActivity.this, WpsConnectionActivity.class))
                                 .title(R.string.wifi_setting_other_options_wps)
                                 .build())
                         .add(new Action.Builder(mRes,
-                                new Intent(this, AddWifiNetworkActivity.class))
+                                new Intent(NetworkActivity.this, AddWifiNetworkActivity.class))
                                 .title(R.string.wifi_setting_other_options_add_network)
-                                .build())
-                    )
+                                .build()));
+
+            if (mConnectivityListener.isEthernetAvailable()) {
+                layout
                     .add(new Header.Builder(mRes)
                             .title(R.string.connectivity_ethernet)
                             .description(mEthernetConnectedDescription)
                             .build()
-                        .add(mEthernetLayout)
-                     )
-                 );
+                        .add(mEthernetLayout));
+            }
+
+            return layout;
+        }
+    };
+
+    @Override
+    public Layout createLayout() {
+        return
+            new Layout()
+                .breadcrumb(getString(R.string.header_category_device))
+                .add(new Header.Builder(mRes)
+                        .icon(R.drawable.ic_settings_wifi_1)
+                        .title(R.string.connectivity_network)
+                        .description(mWifiConnectedDescription)
+                        .build()
+                    .add(mNetworkLayoutGetter));
     }
 
     @Override
