@@ -19,10 +19,7 @@
     <string name="settings_app_name" msgid="4243616485579754401">"设置"</string>
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"设置"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"网络"</string>
-    <string name="launcher_notifications_app_name" msgid="8986117081503790805">"通知"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"受限个人资料"</string>
-    <string name="cluster_name_notifications" msgid="5036741968214910312">"通知"</string>
-    <string name="cluster_name_edit_home" msgid="5444319291204663692">"修改主屏幕"</string>
     <string name="header_category_device" msgid="4855983928659541345">"设备"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"偏好设置"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"遥控器和配件"</string>
@@ -122,6 +119,8 @@
     <item quantity="one" msgid="5656331074727404150">"现在只需再执行<xliff:g id="STEP_COUNT">%1$d</xliff:g>步操作即可进入开发者模式"</item>
     <item quantity="other" msgid="6907126743472136795">"现在只需再执行<xliff:g id="STEP_COUNT">%1$d</xliff:g>步操作即可进入开发者模式"</item>
   </plurals>
+    <!-- no translation found for about_ads (3364786994943748337) -->
+    <skip />
     <string name="show_dev_on" msgid="8997172736024819952">"您现在已处于开发者模式！"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"您已处于开发者模式，无需再执行此操作"</string>
     <string name="wifi_security_none" msgid="1241101191574932821">"无"</string>
@@ -209,9 +208,9 @@
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"请输入有效的DNS地址"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"请输入长度介于0到32之间的网络前缀"</string>
     <string name="wifi_ip_address_hint" msgid="1895267564692073689">"请输入有效的IP地址。\n例如：192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"请输入有效的IP地址或将此处留空。\n例如：8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"请输入有效的IP地址或将此处留空。\n例如：8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"请输入有效的IP地址或将此处留空。\n例如：192.168.1.1"</string>
+    <string name="wifi_dns1_hint" msgid="214345156394229347">"请输入有效的IP地址或将其留空。\n例如：8.8.8.8"</string>
+    <string name="wifi_dns2_hint" msgid="1075709328208368894">"请输入有效的IP地址或将其留空。\n例如：8.8.4.4"</string>
+    <string name="wifi_gateway_hint" msgid="7687219682024189028">"请输入有效的IP地址或将其留空。\n例如：192.168.1.1"</string>
     <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"请输入有效的网络前缀长度值。\n例如：24"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"主机名无效"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"此排除列表心无效。请输入用英文逗号分隔的排除网域列表。"</string>
@@ -220,7 +219,7 @@
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"端口无效"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"浏览器会使用HTTP代理，但其他应用不一定使用"</string>
     <string name="proxy_port_hint" msgid="8532733797275927007">"请输入有效的端口。\n例如：8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"请输入排除网域列表（以英文逗号分隔）或将此处留空。\n例如：example.com,mycomp.test.com,localhost"</string>
+    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"请输入排除网域列表（以英文逗号分隔）或将其留空。\n例如：example.com,mycomp.test.com,localhost"</string>
     <string name="proxy_hostname_hint" msgid="3719688422767210803">"请输入有效的主机名。\n例如：proxy.example.com"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"已连接至网络"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"未连接到网络"</string>
@@ -544,10 +543,8 @@
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"允许"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"不允许"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"自定义限制"</string>
-    <!-- no translation found for restricted_profile_configure_apps_description_loading (5269477581791409700) -->
-    <skip />
-    <!-- no translation found for restricted_profile_change_password_title (2848537651211816659) -->
-    <skip />
+    <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"请稍候…"</string>
+    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"更改PIN码"</string>
     <string name="restricted_profile_set_password" msgid="3989154189940037175">"设置用于退出受限个人资料的新PIN码"</string>
     <string name="restricted_profile_confirm_password" msgid="5749967525546068650">"确认用于退出受限个人资料的PIN码"</string>
     <string name="restricted_profile_enter_password" msgid="5961473119032585585">"输入用于退出受限个人资料的PIN码"</string>

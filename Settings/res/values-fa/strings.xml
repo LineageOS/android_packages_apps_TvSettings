@@ -19,10 +19,7 @@
     <string name="settings_app_name" msgid="4243616485579754401">"تنظیمات"</string>
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"تنظیمات"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"شبکه"</string>
-    <string name="launcher_notifications_app_name" msgid="8986117081503790805">"اعلان‌ها"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"نمایه محدود شده"</string>
-    <string name="cluster_name_notifications" msgid="5036741968214910312">"اعلان‌ها"</string>
-    <string name="cluster_name_edit_home" msgid="5444319291204663692">"ویرایش صفحه اصلی"</string>
     <string name="header_category_device" msgid="4855983928659541345">"دستگاه"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"تنظیمات ترجیحی"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"کنترل از راه دور و لوازم جانبی"</string>
@@ -122,6 +119,8 @@
     <item quantity="one" msgid="5656331074727404150">"اکنون <xliff:g id="STEP_COUNT">%1$d</xliff:g> قدم تا برنامه‌نویس شدن فاصله دارید"</item>
     <item quantity="other" msgid="6907126743472136795">"اکنون <xliff:g id="STEP_COUNT">%1$d</xliff:g> قدم تا برنامه‌نویس شدن فاصله دارید"</item>
   </plurals>
+    <!-- no translation found for about_ads (3364786994943748337) -->
+    <skip />
     <string name="show_dev_on" msgid="8997172736024819952">"اکنون برنامه‌نویس هستید!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"نیازی نیست، شما در حال حاضر برنامه‌نویس هستید"</string>
     <string name="wifi_security_none" msgid="1241101191574932821">"هیچ"</string>
@@ -373,8 +372,8 @@
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"نمایش لایه سخت افزار"</string>
     <string name="system_show_gpu_overdraw" msgid="707861254106800199">"نمایش بازنویسی GPU"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"نمایش به‌روزرسانی سطح"</string>
-    <string name="system_window_animation_scale" msgid="3213952676672537856">"مقیاس انیمیشن پنجره"</string>
-    <string name="system_transition_animation_scale" msgid="2964817709721784757">"مقیاس انیمیشن انتقال"</string>
+    <string name="system_window_animation_scale" msgid="3213952676672537856">"مقیاس پویانمایی پنجره"</string>
+    <string name="system_transition_animation_scale" msgid="2964817709721784757">"مقیاس پویانمایی انتقالی"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"مقیاس طول مدت انیماتور"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"حالت شدید فعال شد"</string>
     <string name="system_show_cpu_usage" msgid="4797599582027671138">"نمایش میزان استفاده از CPU"</string>
@@ -424,31 +423,31 @@
     <item msgid="6650537879885155020">"فراخوانی پشته در glGetError"</item>
   </string-array>
   <string-array name="window_animation_scale_entries">
-    <item msgid="258143468897415016">"انیمیشن خاموش"</item>
-    <item msgid="5618283113978106483">"مقیاس انیمیشن ۵. برابر"</item>
-    <item msgid="397451685490290179">"مقیاس انیمیشن ۱ برابر"</item>
-    <item msgid="6331600473492644688">"مقیاس انیمیشن ۱.۵ برابر"</item>
-    <item msgid="7004952449777104295">"مقیاس انیمیشن ۲ برابر"</item>
-    <item msgid="1063528777234221038">"مقیاس انیمیشن ۵ برابر"</item>
-    <item msgid="6926378938392529339">"مقیاس انیمیشن ۱۰ برابر"</item>
+    <item msgid="258143468897415016">"پویانمایی خاموش"</item>
+    <item msgid="5618283113978106483">"مقیاس پویانمایی ۵. برابر"</item>
+    <item msgid="397451685490290179">"مقیاس پویانمایی ۱ برابر"</item>
+    <item msgid="6331600473492644688">"مقیاس پویانمایی ۱.۵ برابر"</item>
+    <item msgid="7004952449777104295">"مقیاس پویانمایی ۲ برابر"</item>
+    <item msgid="1063528777234221038">"مقیاس پویانمایی ۵ برابر"</item>
+    <item msgid="6926378938392529339">"مقیاس پویانمایی ۱۰ برابر"</item>
   </string-array>
   <string-array name="transition_animation_scale_entries">
-    <item msgid="5604755386232556553">"انیمیشن خاموش"</item>
-    <item msgid="5578331490208019526">"مقیاس انیمیشن ۵. برابر"</item>
-    <item msgid="5338802612080069593">"مقیاس انیمیشن ۱ برابر"</item>
-    <item msgid="1309704285131661878">"مقیاس انیمیشن ۱.۵ برابر"</item>
-    <item msgid="5654221040036850960">"مقیاس انیمیشن ۲ برابر"</item>
-    <item msgid="6092484055733043622">"مقیاس انیمیشن ۵ برابر"</item>
-    <item msgid="4049359393103906268">"مقیاس انیمیشن ۱۰ برابر"</item>
+    <item msgid="5604755386232556553">"پویانمایی خاموش"</item>
+    <item msgid="5578331490208019526">"مقیاس پویانمایی ۵. برابر"</item>
+    <item msgid="5338802612080069593">"مقیاس پویانمایی ۱ برابر"</item>
+    <item msgid="1309704285131661878">"مقیاس پویانمایی ۱.۵ برابر"</item>
+    <item msgid="5654221040036850960">"مقیاس پویانمایی ۲ برابر"</item>
+    <item msgid="6092484055733043622">"مقیاس پویانمایی ۵ برابر"</item>
+    <item msgid="4049359393103906268">"مقیاس پویانمایی ۱۰ برابر"</item>
   </string-array>
   <string-array name="animator_duration_scale_entries">
-    <item msgid="6966595852691619795">"انیمیشن خاموش"</item>
-    <item msgid="1302400121783768928">"مقیاس انیمیشن ۵. برابر"</item>
-    <item msgid="9088460595137551270">"مقیاس انیمیشن ۱ برابر"</item>
-    <item msgid="5640745580399155880">"مقیاس انیمیشن ۱.۵ برابر"</item>
-    <item msgid="3320199023884342141">"مقیاس انیمیشن ۲ برابر"</item>
-    <item msgid="5620232666163371843">"مقیاس انیمیشن ۵ برابر"</item>
-    <item msgid="8580701701183364590">"مقیاس انیمیشن ۱۰ برابر"</item>
+    <item msgid="6966595852691619795">"پویانمایی خاموش"</item>
+    <item msgid="1302400121783768928">"مقیاس پویانمایی ۵. برابر"</item>
+    <item msgid="9088460595137551270">"مقیاس پویانمایی ۱ برابر"</item>
+    <item msgid="5640745580399155880">"مقیاس پویانمایی ۱.۵ برابر"</item>
+    <item msgid="3320199023884342141">"مقیاس پویانمایی ۲ برابر"</item>
+    <item msgid="5620232666163371843">"مقیاس پویانمایی ۵ برابر"</item>
+    <item msgid="8580701701183364590">"مقیاس پویانمایی ۱۰ برابر"</item>
   </string-array>
   <string-array name="track_frame_time_entries">
     <item msgid="3161533682947406047">"خاموش"</item>
@@ -544,10 +543,8 @@
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"مجاز شد"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"مجاز نیست"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"سفارشی کردن محدودیت‌ها"</string>
-    <!-- no translation found for restricted_profile_configure_apps_description_loading (5269477581791409700) -->
-    <skip />
-    <!-- no translation found for restricted_profile_change_password_title (2848537651211816659) -->
-    <skip />
+    <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"یک لحظه..."</string>
+    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"تغییر پین"</string>
     <string name="restricted_profile_set_password" msgid="3989154189940037175">"کد پین جدید استفاده شده برای خروج از نمایه محدود شده را تنظیم کنید"</string>
     <string name="restricted_profile_confirm_password" msgid="5749967525546068650">"کد پین استفاده شده برای خروج از نمایه محدود شده را تأیید کنید"</string>
     <string name="restricted_profile_enter_password" msgid="5961473119032585585">"کد پین را وارد کنید تا از نمایه محدود شده خارج شوید"</string>
