@@ -535,7 +535,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
             new Layout()
                 .breadcrumb(getString(R.string.header_category_device))
                 .add(new Header.Builder(mRes)
-                        .icon(R.drawable.ic_settings_wifi_1)
+                        .icon(R.drawable.ic_settings_wifi_4)
                         .title(R.string.connectivity_network)
                         .description(mWifiConnectedDescription)
                         .build()
