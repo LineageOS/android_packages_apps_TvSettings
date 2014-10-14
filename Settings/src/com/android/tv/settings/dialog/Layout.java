@@ -149,6 +149,13 @@ public class Layout implements Parcelable {
             return null;
         }
 
+        public int getContentIconRes() {
+            if (mNode instanceof Header) {
+                return ((Header) mNode).mContentIconRes;
+            }
+            return 0;
+        }
+
         public LayoutRow(LayoutTreeNode node) {
             mNode = node;
             mViewType = VIEW_TYPE_ACTION;
@@ -342,6 +349,7 @@ public class Layout implements Parcelable {
         private Appearence mAppearence = new Appearence();
         private int mSelectedIndex = 0;
         private String mDetailedDescription;
+        private int mContentIconRes = 0;
 
         public static class Builder {
             private Resources mRes;
@@ -358,6 +366,11 @@ public class Layout implements Parcelable {
 
             public Builder icon(DrawableGetter drawableGetter) {
                 mHeader.mAppearence.mIconGetter = drawableGetter;
+                return this;
+            }
+
+            public Builder contentIconRes(int resId) {
+                mHeader.mContentIconRes = resId;
                 return this;
             }
 
