@@ -19,10 +19,7 @@
     <string name="settings_app_name" msgid="4243616485579754401">"הגדרות"</string>
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"הגדרות"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"רשת"</string>
-    <string name="launcher_notifications_app_name" msgid="8986117081503790805">"התראות"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"פרופיל מוגבל"</string>
-    <string name="cluster_name_notifications" msgid="5036741968214910312">"התראות"</string>
-    <string name="cluster_name_edit_home" msgid="5444319291204663692">"עריכת דף הבית"</string>
     <string name="header_category_device" msgid="4855983928659541345">"מכשיר"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"העדפות"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"שלט רחוק ועזרים"</string>
@@ -122,6 +119,8 @@
     <item quantity="one" msgid="5656331074727404150">"אתה כעת במרחק של צעד <xliff:g id="STEP_COUNT">%1$d</xliff:g> מלהפוך למפתח"</item>
     <item quantity="other" msgid="6907126743472136795">"אתה כעת במרחק של <xliff:g id="STEP_COUNT">%1$d</xliff:g> צעדים מלהפוך למפתח"</item>
   </plurals>
+    <!-- no translation found for about_ads (3364786994943748337) -->
+    <skip />
     <string name="show_dev_on" msgid="8997172736024819952">"אתה כעת מפתח!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"אין צורך - אתה כבר מפתח"</string>
     <string name="wifi_security_none" msgid="1241101191574932821">"ללא"</string>
@@ -357,7 +356,7 @@
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"בדוק אם יש תוכן DRM בלבד"</string>
     <string name="system_always_check" msgid="1866566828098009853">"בדוק תמיד"</string>
     <string name="system_bt_hci_log" msgid="2425757846046504431">"רישום HCI של Bluetooth"</string>
-    <string name="system_email_address" msgid="8669468986250302378">"כתובת דוא\"ל"</string>
+    <string name="system_email_address" msgid="8669468986250302378">"כתובת אימייל"</string>
     <string name="system_usb_debugging" msgid="3777895294421924323">"ניקוי באגים ב-USB"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"אפשר מיקומים מדומים"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"בחר אפליקציה לתיקון באגים"</string>
@@ -383,7 +382,7 @@
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"אל תשמור פעילויות"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"מגבלה של תהליך ברקע"</string>
     <string name="system_show_all_anrs" msgid="3601183436857424712">"הצג את כל פריטי ה-ANR"</string>
-    <string name="system_desc_take_bug_report" msgid="1627218971851223147">"שלח דוח לכתובת דוא\"ל"</string>
+    <string name="system_desc_take_bug_report" msgid="1627218971851223147">"שלח דוח לכתובת אימייל"</string>
     <string name="system_desc_backup_password" msgid="6454962099870874762">"הגן על גיבויים מלאים של שולחן העבודה"</string>
     <string name="system_desc_stay_awake" msgid="229588006508356238">"השבת מעבר למצב שינה"</string>
     <string name="system_desc_hdcp_checking" msgid="6879753401058891183">"השתמש עבור תוכן DRM בלבד"</string>
@@ -544,10 +543,8 @@
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"מותרת"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"אסורה"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"התאם אישית את ההגבלות"</string>
-    <!-- no translation found for restricted_profile_configure_apps_description_loading (5269477581791409700) -->
-    <skip />
-    <!-- no translation found for restricted_profile_change_password_title (2848537651211816659) -->
-    <skip />
+    <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"המתן מספר רגעים…"</string>
+    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"שנה את מספר ה-PIN"</string>
     <string name="restricted_profile_set_password" msgid="3989154189940037175">"הגדר קוד PIN חדש ליציאה מהפרופיל המוגבל"</string>
     <string name="restricted_profile_confirm_password" msgid="5749967525546068650">"אשר את קוד ה-PIN המשמש ליציאה מפרופיל מוגבל"</string>
     <string name="restricted_profile_enter_password" msgid="5961473119032585585">"הזן קוד PIN כדי לצאת מפרופיל מוגבל"</string>

@@ -19,10 +19,7 @@
     <string name="settings_app_name" msgid="4243616485579754401">"Настройки"</string>
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"Настройки"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"Сеть"</string>
-    <string name="launcher_notifications_app_name" msgid="8986117081503790805">"Уведомления"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Профиль с ограниченным доступом"</string>
-    <string name="cluster_name_notifications" msgid="5036741968214910312">"Уведомления"</string>
-    <string name="cluster_name_edit_home" msgid="5444319291204663692">"Настроить главный экран"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Устройство"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Настройки"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Пульт и аксессуары"</string>
@@ -122,6 +119,8 @@
     <item quantity="one" msgid="5656331074727404150">"Почти все готово! Осталось несколько шагов (<xliff:g id="STEP_COUNT">%1$d</xliff:g>)"</item>
     <item quantity="other" msgid="6907126743472136795">"Почти все готово! Осталось несколько шагов (<xliff:g id="STEP_COUNT">%1$d</xliff:g>)"</item>
   </plurals>
+    <!-- no translation found for about_ads (3364786994943748337) -->
+    <skip />
     <string name="show_dev_on" msgid="8997172736024819952">"Вы стали разработчиком!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"У вас уже есть статус разработчика"</string>
     <string name="wifi_security_none" msgid="1241101191574932821">"Вручную"</string>
@@ -248,7 +247,7 @@
     <string name="storage_dcim_usage" msgid="2977564696540645452">"Фото и видео"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"Аудио"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Прочее"</string>
-    <string name="storage_media_cache_usage" msgid="5906737163212649904">"Данные кэша"</string>
+    <string name="storage_media_cache_usage" msgid="5906737163212649904">"Данные кеша"</string>
     <string name="wifi_wps_cancel_scan" msgid="3562470978552920877">"Отмена"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Повторить"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Поиск маршрутизатора WPS…"</string>
@@ -544,10 +543,8 @@
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Разрешено"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Запрещено"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Установить ограничения"</string>
-    <!-- no translation found for restricted_profile_configure_apps_description_loading (5269477581791409700) -->
-    <skip />
-    <!-- no translation found for restricted_profile_change_password_title (2848537651211816659) -->
-    <skip />
+    <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"Подождите…"</string>
+    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"Изменить PIN-код"</string>
     <string name="restricted_profile_set_password" msgid="3989154189940037175">"Введите новый PIN-код"</string>
     <string name="restricted_profile_confirm_password" msgid="5749967525546068650">"Подтвердите PIN-код"</string>
     <string name="restricted_profile_enter_password" msgid="5961473119032585585">"Чтобы выйти из профиля, введите PIN-код"</string>
