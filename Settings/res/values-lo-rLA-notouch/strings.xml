@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -47,7 +46,8 @@
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"ການ Daydream ຈະ​ເລີ່ມຫຼັງ​ຈາກ​ໄລ​ຍະ​ເວ​ລາ​ນີ້​​ທີ່ບໍ່​ມີ​ການ​ນຳ​ໃຊ້. ຫາກບໍ່​ມີ​ການ​ເລືອກ daydream ໃດ​ເລີຍ, ໜ້າ​ຈ​ໍ​ກໍ​ຈະ​ມອດ​ລົງ​ຊື່ໆ."</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"ຫຼັງ​ຈາກ <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ທີ່ບໍ່​ມີ​ການ​ນຳ​ໃຊ້"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"​ປິດ​ໜ້າ​ຈໍ​ຕອນ​ໃດ"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"ໜ້າ​ຈໍ​ຈະ​ປິດຫຼັງ​ຈາກ​ຈຳ​ນວນ​ຄັ້ງ​ທີ່ daydream ເລີ່ມ."</string>
+    <!-- no translation found for device_daydreams_screen_off_description (7699124270812914310) -->
+    <skip />
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ຫຼັງ​ຈາກ Daydream"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"ບໍ່​ມີ​ບັນ​ຊີ​ໃດ​ໃນ​ປັດ​ຈຸ​ບັນ​ທີ່​ຈັດ​ເກັບ​ຂໍ້​ມູນ​ສຳ​ຮອງ​ໄວ້"</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +63,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"ບໍ່ມີ"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"ຫ້າມລົບກວນ"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"​ເມື່ອ​ເປີດ​ນຳ​ໃຊ້​ແລ້ວ, ການ​ແຈ້ງ​ເຕືອນ​ຕ່າງໆ​ຈະ​ປາ​ກົດ​ຢູ່​ໃນ​ການ​ຕັ້ງ​ຄ່າ​ເທົ່າ​ນັ້ນ"</string>
-    <string name="select_title" msgid="7198726136224025927">"ເລືອກ​ຊື່​ສຳ​ລັບ​ ADT-1 ຂອງ​ທ່ານ"</string>
-    <string name="select_description" msgid="5793523265011441398">"ຊື່​ຈະ​ຊ່ວຍ​ລະ​ບຸ ADT-1 ຂອງ​ທ່ານ​ເມື່ອ​ມີ​ການ​ເຂົ້າ​ເຖິງ​ຈາກ​ອຸ​ປະ​ກອນ​ອື່ນໆ ເຊັ່ນ: ໂທ​ລະ​ສັບ, ແທັບ​ເລັດ ຫຼື​ຄອມ​ພິວ​ເຕີ​ຂອງ​ທ່ານ."</string>
+    <string name="select_title" msgid="2657901623249723536">"ເລືອກຊື່ສຳລັບ ^1 ຂອງທ່ານ"</string>
+    <string name="select_description" msgid="4080602542483519716">"ຊື່ທີ່ຈະ​ຊ່ວຍ​ລະບຸ ^1 ຂອງ​ທ່ານ​ໃນ​ເວລາ​ທີ່ເຂົ້າ​ນຳໃຊ້​ມັນຈາກ​ອຸປະກອນ​ອື່ນໆ​ ເຊັ່ນ: ໂທລະສັບ, ແທັບເລັດ ຫຼື ຄອມພິວ​ເຕີຂອງ​ທ່ານ."</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"​ຫ້ອງ​​ຮັບ​ແຂກ"</item>
     <item msgid="7887185726776968055">"​ຫ້ອງ​ເບິ່ງ​ໜັງ​ຟັງ​ເພງ"</item>
@@ -75,8 +75,8 @@
     <item msgid="682313511953895794">"​ຫ້ອງ​ຄົວ"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"ລະ​ບຸ​ຊື່​ທີ່​ກຳ​ນົດ​ເອງ…"</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"ຕັ້ງ​ຊື່ ADT-1 ແລ້ວ"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"\"^1\" ແມ່ນ​ຊື່​ຂອງ ADT-1 ນີ້. ທ່ານ​ຕ້ອງ​ການ​ຈະ​ປ່ຽນ​ບໍ່?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"^1 ຖືກຕັ້ງຊື່ແລ້ວ"</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"\"^1\" ແມ່ນຊື່​ຂອງ ^2 ນີ້. ທ່ານ​ຕ້ອງການ​ປ່ຽນ​ແປງ​ມັນບໍ?"</string>
     <string name="change_setting" msgid="199354038426145612">"ປ່ຽນ"</string>
     <string name="keep_settings" msgid="549230720820096102">"ບໍ່ຕ້ອງປ່ຽນ"</string>
     <string name="menu_help" msgid="2164687828212723531">"​ຊ່ວຍ​ເຫຼືອ"</string>

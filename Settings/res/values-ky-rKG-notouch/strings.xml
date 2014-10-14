@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -47,7 +46,8 @@
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"Сенек мезгили белгиленген убакытка чейин созулгандан кийин, Кыял чабыттары иштей баштайт. Эгер Кыял чабыттары тандалган эмес болсо, дисплей жөн гана өчүп калат."</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"Сенек мезгил <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> чейин созулгандан кийин"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"Көшүй турган убакыт"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"Кыял чабыттары иштеп баштагандан кийин ушунча убакыт өткөндө экран өчөт."</string>
+    <!-- no translation found for device_daydreams_screen_off_description (7699124270812914310) -->
+    <skip />
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> уктагандан кийин"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"Дайындардын камдык көчүрмөсүн сактап жаткан каттоо эсеби жок"</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +63,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"Эч бири"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"Тынчымды алба"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"Иштетилгенде, эскертмелер Жөндөөлөрдө гана көрүнөт."</string>
-    <string name="select_title" msgid="7198726136224025927">"ADT-1 үчүн ат тандаңыз"</string>
-    <string name="select_description" msgid="5793523265011441398">"Телефон, планшет же компьютер сыяктуу башка түзмөктөрдөн киргенде, бул аталыш аркылуу ADT-1\'ди тааный аласыз."</string>
+    <string name="select_title" msgid="2657901623249723536">"^1 үчүн ат тандаңыз"</string>
+    <string name="select_description" msgid="4080602542483519716">"Телефон, планшет же компьютер сыяктуу башка түзмөктөрдөн киргенде, бул аталыш аркылуу ^1\'ди тааный аласыз."</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"Конок үй"</item>
     <item msgid="7887185726776968055">"Медиа бөлмөсү"</item>
@@ -75,8 +75,8 @@
     <item msgid="682313511953895794">"Ашкана"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"Өзгөчө аталышты киргизиңиз…"</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"ADT-1\'ге ат берилди"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"\"^1\" – ADT-1 аталышы. Муну өзгөрткүңүз келеби?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"Бул ^1 аталды"</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"\"^1\" бул ^2 аты. Аны өзгөртөсүзбү?"</string>
     <string name="change_setting" msgid="199354038426145612">"Өзгөртүү"</string>
     <string name="keep_settings" msgid="549230720820096102">"Өзгөртүлбөсүн"</string>
     <string name="menu_help" msgid="2164687828212723531">"Жардам"</string>
