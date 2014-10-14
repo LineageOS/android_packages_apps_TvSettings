@@ -472,6 +472,11 @@ public class Layout implements Parcelable {
                 return this;
             }
 
+             public Builder icon(int resId) {
+                 mAction.mAppearence.mIcon = mRes.getDrawable(resId);
+                 return this;
+             }
+
             public Builder description(String description) {
                 mAction.mAppearence.mDescriptionGetter = new LiteralStringGetter(description);
                 return this;
