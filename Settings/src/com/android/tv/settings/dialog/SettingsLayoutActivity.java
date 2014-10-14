@@ -39,7 +39,7 @@ import java.util.ArrayList;
  * Activity to present settings menus and options.
  */
 public abstract class SettingsLayoutActivity extends Activity implements
-        SettingsLayoutFragment.Listener {
+        SettingsLayoutFragment.Listener, SettingsLayoutAdapter.OnFocusListener {
 
     private SettingsLayoutFragment mSettingsLayoutFragment;
     private Layout mLayout;
@@ -69,6 +69,10 @@ public abstract class SettingsLayoutActivity extends Activity implements
     public abstract Layout createLayout();
 
     @Override
+    public void onActionFocused(Layout.LayoutRow item) {
+    }
+
+    @Override
     public void onActionClicked(Action action) {
     }
 
@@ -81,5 +85,9 @@ public abstract class SettingsLayoutActivity extends Activity implements
      */
     protected boolean isLayoutRtl() {
         return mSettingsLayoutFragment.getView().isLayoutRtl();
+    }
+
+    protected void setIcon(int resId) {
+        mSettingsLayoutFragment.setIcon(resId);
     }
 }

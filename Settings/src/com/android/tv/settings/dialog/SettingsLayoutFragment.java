@@ -331,7 +331,18 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
 
         mAdapter.setLayoutRows(mLayout.getLayoutRows());
         mAdapter.notifyDataSetChanged();
+        mAdapter.setFocusListenerEnabled(false);
         mListView.setSelectedPositionSmooth(mLayout.getSelectedIndex());
+        mAdapter.setFocusListenerEnabled(true);
+    }
+
+    public void setIcon(int resId) {
+        View dialogView = getView();
+        View contentView = (View) dialogView.getTag(R.id.content_fragment);
+        ImageView iconView = (ImageView) contentView.findViewById(R.id.icon);
+        if (iconView != null) {
+            iconView.setImageResource(resId);
+        }
     }
 
     /**
