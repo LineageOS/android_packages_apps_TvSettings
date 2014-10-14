@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -47,7 +46,8 @@
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"Daydream viene avviato dopo il periodo di inattività selezionato. Se Daydream non è selezionato, il display si spegne."</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"Dopo <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> di inattività"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"Quando avviare la modalità di sospensione"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"Lo schermo si disattiva dopo il periodo di inattività selezionato in seguito all\'avvio di Daydream."</string>
+    <!-- no translation found for device_daydreams_screen_off_description (7699124270812914310) -->
+    <skip />
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> dopo l\'avvio di Daydream"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"Al momento nessun account contiene dati di backup"</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +63,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"Nessuna"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"Non disturbare"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"Se abilitate, puoi vedere le nuove notifiche solo in Impostazioni"</string>
-    <string name="select_title" msgid="7198726136224025927">"Scegli un nome per il tuo ADT-1"</string>
-    <string name="select_description" msgid="5793523265011441398">"Se specifichi un nome sarà più semplice identificare il tuo ADT-1 quando vi accederai da altri dispositivi quali telefoni, tablet o computer."</string>
+    <string name="select_title" msgid="2657901623249723536">"Scegli un nome per il tuo dispositivo ^1"</string>
+    <string name="select_description" msgid="4080602542483519716">"Se specifichi un nome sarà più semplice identificare il tuo dispositivo ^1 quando vi accederai da altri dispositivi quali telefoni, tablet o computer."</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"Salotto"</item>
     <item msgid="7887185726776968055">"Sala multimediale"</item>
@@ -75,8 +75,8 @@
     <item msgid="682313511953895794">"Cucina"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"Inserisci nome personalizzato…"</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"Il ADT-1 ha un nome"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"\"^1\" è il nome di questo ADT-1. Vuoi cambiarlo?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"Questo dispositivo ^1 ha un nome"</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"\"^1\" è il nome di questo dispositivo ^2. Vuoi cambiarlo?"</string>
     <string name="change_setting" msgid="199354038426145612">"Cambia"</string>
     <string name="keep_settings" msgid="549230720820096102">"Non cambiare"</string>
     <string name="menu_help" msgid="2164687828212723531">"Guida"</string>

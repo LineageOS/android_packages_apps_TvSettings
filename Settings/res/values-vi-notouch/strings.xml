@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -47,7 +46,8 @@
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"Chế độ ngủ bắt đầu sau khoảng thời gian không hoạt động này. Nếu không chọn chế độ ngủ, màn hình sẽ tắt."</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"Sau <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> không hoạt động"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"Thời điểm ngủ"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"Màn hình sẽ tắt trong khoảng thời gian này sau khi quá trình ngủ bắt đầu."</string>
+    <!-- no translation found for device_daydreams_screen_off_description (7699124270812914310) -->
+    <skip />
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> sau khi ngủ"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"Hiện không có tài khoản nào đang lưu trữ dữ liệu được sao lưu"</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +63,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"Không có"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"Không làm phiền"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"Khi bật, thông báo mới chỉ có trong Cài đặt"</string>
-    <string name="select_title" msgid="7198726136224025927">"Chọn tên cho ADT-1 của bạn"</string>
-    <string name="select_description" msgid="5793523265011441398">"Tên giúp nhận dạng ADT-1 của bạn khi truy cập ADT-1 từ các thiết bị khác như điện thoại, máy tính bảng hoặc máy tính của bạn."</string>
+    <string name="select_title" msgid="2657901623249723536">"Chọn tên cho ^1 của bạn"</string>
+    <string name="select_description" msgid="4080602542483519716">"Tên giúp nhận dạng ^1 của bạn khi truy cập ^1 từ các thiết bị khác như điện thoại, máy tính bảng hoặc máy tính của bạn."</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"Phòng khách"</item>
     <item msgid="7887185726776968055">"Phòng truyền thông"</item>
@@ -75,8 +75,8 @@
     <item msgid="682313511953895794">"Bếp"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"Nhập tên tùy chỉnh…"</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"ADT-1 là tên gọi"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"\"^1\" là tên của ADT-1 này. Bạn có muốn đổi tên này không?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"Đã đặt tên ^1 này"</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"\"^1\" là tên của ^2 này. Bạn có muốn đổi tên này không?"</string>
     <string name="change_setting" msgid="199354038426145612">"Thay đổi"</string>
     <string name="keep_settings" msgid="549230720820096102">"Không thay đổi"</string>
     <string name="menu_help" msgid="2164687828212723531">"Trợ giúp"</string>

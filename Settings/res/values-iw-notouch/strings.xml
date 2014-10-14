@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -47,7 +46,8 @@
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"מצב ׳חלום בהקיץ׳ מתחיל לאחר תקופת חוסר הפעילות הזו. אם לא נבחר ׳חלום בהקיץ׳, המסך כבה."</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"לאחר <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> של חוסר פעילות"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"מתי לעבור למצב שינה"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"המסך כבה בחלוף הזמן הזה מרגע הפעלת חלום בהקיץ."</string>
+    <!-- no translation found for device_daydreams_screen_off_description (7699124270812914310) -->
+    <skip />
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> לאחר מעבר לחלום בהקיץ"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"אף חשבון אינו מאחסן כרגע נתונים מגובים"</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +63,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"אין"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"נא לא להפריע"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"כשהתכונה פועלת, הודעות חדשות יופיעו רק ב\'הגדרות\'"</string>
-    <string name="select_title" msgid="7198726136224025927">"בחר שם עבור התקן ה-ADT-1 שלך"</string>
-    <string name="select_description" msgid="5793523265011441398">"הזנת שם תעזור לך לזהות את התקן ה-ADT-1 שלך בעת גישה אליו ממכשירים אחרים, כמו הטלפון, הטאבלט או המחשב."</string>
+    <string name="select_title" msgid="2657901623249723536">"בחר שם עבור ה-^1 שלך"</string>
+    <string name="select_description" msgid="4080602542483519716">"מתן שם יעזור בזיהוי ה-^1 שלך בעת גישה אליו ממכשירים אחרים, כמו טלפון, טאבלט או מחשב."</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"סלון"</item>
     <item msgid="7887185726776968055">"חדר מדיה"</item>
@@ -75,8 +75,8 @@
     <item msgid="682313511953895794">"מטבח"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"הזן שם בהתאמה אישית…"</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"להתקן ה-ADT-1 יש שם"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"\"^1\" הוא השם של התקן ה-ADT-1 הזה. האם ברצונך לשנות אותו?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"ל-^1 הזה יש שם"</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"\"^1\" הוא השם של ה-^2 הזה. האם ברצונך לשנות זאת?"</string>
     <string name="change_setting" msgid="199354038426145612">"שנה"</string>
     <string name="keep_settings" msgid="549230720820096102">"אל תשנה"</string>
     <string name="menu_help" msgid="2164687828212723531">"עזרה"</string>
