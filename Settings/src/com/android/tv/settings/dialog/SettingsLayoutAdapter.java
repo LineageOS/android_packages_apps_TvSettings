@@ -85,6 +85,7 @@ class SettingsLayoutAdapter extends RecyclerView.Adapter {
     private ArrayList<Layout.LayoutRow> mLayoutRows;
     private Listener mListener;
     private boolean mNoAnimateMode = false;
+    private boolean mFocusListenerEnabled = true;
 
     private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
@@ -109,6 +110,10 @@ class SettingsLayoutAdapter extends RecyclerView.Adapter {
 
     public void setNoAnimateMode() {
         mNoAnimateMode = true;
+    }
+
+    public void setFocusListenerEnabled(boolean enabled) {
+        mFocusListenerEnabled = enabled;
     }
 
     @Override
@@ -372,7 +377,7 @@ class SettingsLayoutAdapter extends RecyclerView.Adapter {
                     changeFocus(v, true /* hasFocus */, false /* shouldAnimate */);
                 } else {
                     changeFocus(v, true /* hasFocus */, true /* shouldAnimate */);
-                    if (mOnFocusListener != null) {
+                    if (mOnFocusListener != null && mFocusListenerEnabled) {
                         // We still call onActionFocused so that listeners can clear state if they
                         // want.
                         mOnFocusListener.onActionFocused(
