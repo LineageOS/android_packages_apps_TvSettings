@@ -42,7 +42,6 @@ import com.android.tv.settings.dialog.Layout.Status;
 import com.android.tv.settings.dialog.Layout.Static;
 import com.android.tv.settings.dialog.Layout.StringGetter;
 import com.android.tv.settings.dialog.Layout.LayoutGetter;
-
 import com.android.tv.settings.R;
 
 import java.util.ArrayList;
@@ -56,7 +55,7 @@ import java.util.List;
 public class NetworkActivity extends SettingsLayoutActivity implements
         ConnectivityListener.Listener {
 
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = false;
     private static final String TAG = "NetworkActivity";
     private static final int REQUEST_CODE_ADVANCED_OPTIONS = 1;
     private static final int WIFI_REFRESH_INTERVAL_CAP_MILLIS = 15 * 1000;
@@ -494,6 +493,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         public Layout get() {
             Layout layout = new Layout()
                     .add(new Header.Builder(mRes).title(R.string.connectivity_wifi)
+                            .contentIconRes(R.drawable.ic_settings_wifi_4)
                             .description(mWifiConnectedDescription).build()
                         .add(new Static.Builder(mRes)
                                 .title(R.string.wifi_setting_available_networks)
@@ -520,6 +520,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
                 layout
                     .add(new Header.Builder(mRes)
                             .title(R.string.connectivity_ethernet)
+                            .contentIconRes(R.drawable.ic_settings_ethernet)
                             .description(mEthernetConnectedDescription)
                             .build()
                         .add(mEthernetLayout));
@@ -548,6 +549,14 @@ public class NetworkActivity extends SettingsLayoutActivity implements
             //TODO make sure view reflects model deltas
         } else {
             super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
+    @Override
+    public void onActionFocused(Layout.LayoutRow item) {
+        int resId = item.getContentIconRes();
+        if (resId != 0) {
+            setIcon(resId);
         }
     }
 
