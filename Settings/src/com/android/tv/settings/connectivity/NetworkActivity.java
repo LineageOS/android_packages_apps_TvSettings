@@ -82,16 +82,14 @@ public class NetworkActivity extends SettingsLayoutActivity implements
     public void onConnectivityChange(Intent intent) {
         mEthernetConnectedDescription.refreshView();
         mWifiConnectedDescription.refreshView();
+
+        mWifiShortListLayout.onWifiListInvalidated();
+        mWifiAllListLayout.onWifiListInvalidated();
     }
 
     @Override
     public void onResume() {
-        if (mWifiShortListLayout != null) {
-            mWifiShortListLayout.onWifiListInvalidated();
-        }
-        if (mWifiAllListLayout != null) {
-            mWifiAllListLayout.onWifiListInvalidated();
-        }
+        onConnectivityChange(null);
         super.onResume();
     }
 
@@ -330,10 +328,11 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         }
     };
 
-    private void addWifiConnectedHeader(Layout layout, String SSID) {
+    private void addWifiConnectedHeader(Layout layout, String SSID, int iconResId) {
         layout
             .add(new Header.Builder(mRes)
                     .title(SSID)
+                    .icon(iconResId)
                     .description(R.string.connected).build()
                 .add(new Header.Builder(mRes)
                         .title(R.string.wifi_action_status_info).build()
@@ -455,22 +454,14 @@ public class NetworkActivity extends SettingsLayoutActivity implements
                             WifiConnectionActivity.createIntent(mContext, network, security);
                         int signalLevel = WifiManager.calculateSignalLevel(
                                 network.level, NUMBER_SIGNAL_LEVELS);
-                        //TODO implement signal dependent list icon.
-                        /*
-                        int imageResourceId = getNetworkIconResourceId(network, signalLevel);
-                        if (WifiConfigHelper.areSameNetwork(mWifiManager, network,
-                                currentConnection)) {
-                            networkDescription = getString(R.string.connected);
-                            signalLevel = WifiManager.calculateSignalLevel(
-                                    currentConnection.getRssi(), NUMBER_SIGNAL_LEVELS);
-                            imageResourceId = getCurrentNetworkIconResourceId(network, signalLevel);
-                        } */
+                        int imageResourceId = getNetworkIconRes(security.isOpen(), signalLevel);
 
                         if (isConnected) {
-                            addWifiConnectedHeader(layout, network.SSID);
+                            addWifiConnectedHeader(layout, network.SSID, imageResourceId);
                         } else {
                             layout.add(new Action.Builder(mRes, intent)
                                     .title(network.SSID)
+                                    .icon(imageResourceId)
                                     .description(networkDescription).build());
                         }
                     }
@@ -601,5 +592,43 @@ public class NetworkActivity extends SettingsLayoutActivity implements
                 break;
             }
         }
+    }
+
+    private int getNetworkIconRes(boolean isOpen, int signalLevel) {
+        int resourceId = R.drawable.ic_settings_wifi_not_connected;
+
+        if (isOpen) {
+            switch (signalLevel) {
+                case 0:
+                    resourceId = R.drawable.ic_settings_wifi_1;
+                    break;
+                case 1:
+                    resourceId = R.drawable.ic_settings_wifi_2;
+                    break;
+                case 2:
+                    resourceId = R.drawable.ic_settings_wifi_3;
+                    break;
+                case 3:
+                    resourceId = R.drawable.ic_settings_wifi_4;
+                    break;
+            }
+        } else {
+            switch (signalLevel) {
+                case 0:
+                    resourceId = R.drawable.ic_settings_wifi_secure_1;
+                    break;
+                case 1:
+                    resourceId = R.drawable.ic_settings_wifi_secure_2;
+                    break;
+                case 2:
+                    resourceId = R.drawable.ic_settings_wifi_secure_3;
+                    break;
+                case 3:
+                    resourceId = R.drawable.ic_settings_wifi_secure_4;
+                    break;
+            }
+        }
+
+        return resourceId;
     }
 }
