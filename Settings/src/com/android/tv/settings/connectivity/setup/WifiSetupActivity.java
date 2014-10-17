@@ -35,7 +35,6 @@ import com.android.tv.settings.form.FormPage;
 import com.android.tv.settings.form.FormPageResultListener;
 
 import android.animation.Animator;
-import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -52,9 +51,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
-import android.util.Log;
 import android.util.Pair;
-import android.util.TypedValue;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -264,8 +261,6 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
                         break;
                 }
                 break;
-            case CONNECT_FAILED:
-                // fall through
             case CONNECT_TIMEOUT:
                 mAdvancedWifiOptionsFlow = new AdvancedWifiOptionsFlow(this, this, true, null);
                 // fall through
@@ -279,6 +274,8 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
                     addPage(WifiFormPageType.CHOOSE_NETWORK);
                 }
                 break;
+            case CONNECT_FAILED:
+                // fall through
             case CONNECT_AUTHENTICATION_FAILURE:
                 if (choiceChosen(formPage, R.string.wifi_action_try_again)) {
                     addPageBasedOnNetworkChoice(mChooseNetworkPage);
