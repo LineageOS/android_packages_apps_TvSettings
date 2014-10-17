@@ -17,16 +17,13 @@
 package com.android.tv.settings.about;
 
 import com.android.tv.settings.R;
-
 import com.android.tv.settings.PreferenceUtils;
-
 import com.android.tv.settings.dialog.old.Action;
 import com.android.tv.settings.dialog.old.ActionAdapter;
 import com.android.tv.settings.dialog.old.ActionFragment;
 import com.android.tv.settings.dialog.old.ContentFragment;
 import com.android.tv.settings.dialog.old.DialogActivity;
 import com.android.tv.settings.dialog.old.TosWebViewFragment;
-
 import com.android.tv.settings.name.DeviceManager;
 
 import android.app.Fragment;
@@ -80,6 +77,12 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
         "android.settings.DEVICE_NAME";
 
     /**
+     * Intent action of system update activity
+     */
+    private static final String SETTINGS_UPDATE_SYSTEM =
+            "android.settings.SYSTEM_UPDATE_SETTINGS";
+
+    /**
      * Intent to launch ads activity.
      */
     private static final String SETTINGS_ADS_ACTIVITY_PACKAGE = "com.google.android.gms";
@@ -111,7 +114,6 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     public void onResume() {
         super.onResume();
         mDeveloperClickCount = 0;
-        setActionFragment(ActionFragment.newInstance(getActions(), mSelectedIndex), false);
     }
 
     @Override
@@ -163,13 +165,11 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
 
     private ArrayList<Action> getLegalActions() {
         ArrayList<Action> actions = new ArrayList<Action>();
-        Intent licensesIntent = new Intent(SETTINGS_LEGAL_LICENSE_INTENT_ACTION);
         actions.add(new Action.Builder()
                 .key(KEY_LEGAL_INFO_OPEN_SOURCE_LICENSES)
-                .intent(licensesIntent)
+                .intent(new Intent(SETTINGS_LEGAL_LICENSE_INTENT_ACTION))
                 .title(getString(R.string.about_legal_license))
                 .build());
-
         actions.add(new Action.Builder()
                 .key(TERMS_OF_SERVICE)
                 .title(getString(R.string.about_terms_of_service))
@@ -193,7 +193,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
         actions.add(new Action.Builder()
                 .key("update")
                 .title(getString(R.string.about_system_update))
-                .intent(new Intent("android.settings.SYSTEM_UPDATE_SETTINGS"))
+                .intent(new Intent(SETTINGS_UPDATE_SYSTEM))
                 .build());
         actions.add(new Action.Builder()
                 .key("name")
