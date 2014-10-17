@@ -31,11 +31,13 @@ import com.android.tv.settings.name.DeviceManager;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.text.TextUtils;
 import android.widget.Toast;
 
@@ -67,6 +69,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private static final String ADDITIONAL_TERMS = "additional_terms";
 
     private static final String KEY_BUILD = "build";
+    private static final String KEY_VERSION = "version";
 
     /**
      * Intent action of SettingsLicenseActivity.
@@ -87,6 +90,12 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
             "com.google.android.gms.settings.ADS_PRIVACY";
 
     /**
+     * Intent component to launch PlatLogo Easter egg.
+     */
+    private static final ComponentName mPlatLogoActivity = new ComponentName("android",
+            "com.android.internal.app.PlatLogoActivity");
+
+    /**
      * Number of clicks it takes to be a developer.
      */
     private static final int NUM_DEVELOPER_CLICKS = 7;
@@ -95,6 +104,8 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private PreferenceUtils mPreferenceUtils;
     private Toast mToast;
     private int mSelectedIndex;
+    private long[] mHits = new long[3];
+    private int mHitsIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -139,6 +150,14 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 if (mDeveloperClickCount > 3) {
                     showToast(getString(R.string.show_dev_already));
                 }
+            }
+        } else if (TextUtils.equals(key, KEY_VERSION)) {
+            mHits[mHitsIndex] = SystemClock.uptimeMillis();
+            mHitsIndex = (mHitsIndex + 1) % mHits.length;
+            if (mHits[mHitsIndex] >= SystemClock.uptimeMillis() - 500) {
+                Intent intent = new Intent();
+                intent.setComponent(mPlatLogoActivity);
+                startActivity(intent);
             }
         } else if (TextUtils.equals(key, TERMS_OF_SERVICE)) {
             displayFragment(TosWebViewFragment.
@@ -227,10 +246,10 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 .enabled(false)
                 .build());
         actions.add(new Action.Builder()
-                .key("version")
+                .key(KEY_VERSION)
                 .title(getString(R.string.about_version))
                 .description(Build.VERSION.RELEASE)
-                .enabled(false)
+                .enabled(true)
                 .build());
         actions.add(new Action.Builder()
                 .key("serial")
