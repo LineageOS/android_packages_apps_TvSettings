@@ -69,10 +69,11 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
     private static final int MSG_NETWORK_REFRESH = 1;
     private static final int NETWORK_REFRESH_TIMEOUT = 5000;
     private static final String EXTRA_SHOW_SUMMARY = "extra_show_summary";
+    private static final String EXTRA_SHOW_SKIP_NETWORK = "extra_show_skip_network";
     // If you change this constant, make sure to change the constant in setup wizard
     private static final int RESULT_NETWORK_SKIPPED = 3;
 
-    private boolean mFirstRun;
+    private boolean mShowSkipNetwork;
     private AdvancedWifiOptionsFlow mAdvancedWifiOptionsFlow;
     private WifiManager mWifiManager;
     private WifiConfiguration mConfiguration;
@@ -114,6 +115,8 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
         };
 
         boolean showSummary = getIntent().getBooleanExtra(EXTRA_SHOW_SUMMARY, false);
+
+        mShowSkipNetwork = getIntent().getBooleanExtra(EXTRA_SHOW_SKIP_NETWORK, false);
 
         if (showSummary) {
             addSummaryPage();
@@ -428,6 +431,12 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
             listItems.add(new SelectFromListWizardFragment.ListItem(result));
         }
         Collections.sort(listItems, new SelectFromListWizardFragment.ListItemComparator());
+
+        if (mShowSkipNetwork) {
+            listItems.add(new SelectFromListWizardFragment.ListItem(
+                   getString(R.string.skip_network).toUpperCase(), 0));
+        }
+
         return listItems;
     }
 
