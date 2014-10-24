@@ -40,9 +40,9 @@ import android.util.TypedValue;
 import android.util.Xml;
 
 import com.android.internal.util.XmlUtils;
-
 import com.android.tv.settings.accessories.AccessoryUtils;
 import com.android.tv.settings.accessories.BluetoothAccessoryActivity;
+import com.android.tv.settings.accessories.BluetoothConnectionsManager;
 import com.android.tv.settings.accounts.AccountImageUriGetter;
 import com.android.tv.settings.accounts.AccountSettingsActivity;
 import com.android.tv.settings.accounts.AuthenticatorHelper;
@@ -57,7 +57,6 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -170,7 +169,6 @@ public class BrowseInfo extends BrowseInfoBase {
     private int mNextItemId;
     private int mAccountHeaderId;
     private final BluetoothAdapter mBtAdapter;
-    private final Set<BluetoothDevice> mConnectedDevices;
     private final Object mGuard = new Object();
     private final boolean mAllowMultipleAccounts;
     private MenuItem mWifiItem = null;
@@ -193,7 +191,6 @@ public class BrowseInfo extends BrowseInfoBase {
         mAuthenticatorHelper.updateAuthDescriptions(context);
         mAuthenticatorHelper.onAccountsUpdated(context, null);
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
-        mConnectedDevices = new HashSet<BluetoothDevice>();
         mNextItemId = 0;
         mAllowMultipleAccounts =
                 context.getResources().getBoolean(R.bool.multiple_accounts_enabled);
@@ -366,24 +363,6 @@ public class BrowseInfo extends BrowseInfoBase {
         mHandler.post(refreshWifiCardRunnable);
     }
 
-    void bluetoothDeviceConnected(BluetoothDevice device) {
-        synchronized (mConnectedDevices) {
-            mConnectedDevices.add(device);
-        }
-    }
-
-    void bluetoothDeviceDisconnected(BluetoothDevice device) {
-        synchronized (mConnectedDevices) {
-            mConnectedDevices.remove(device);
-        }
-    }
-
-    boolean isDeviceConnected(BluetoothDevice device) {
-        synchronized (mConnectedDevices) {
-            return mConnectedDevices.contains(device);
-        }
-    }
-
     private boolean isInputSettingNeeded() {
         TvInputManager manager = (TvInputManager) mContext.getSystemService(
                 Context.TV_INPUT_SERVICE);
@@ -530,6 +509,9 @@ public class BrowseInfo extends BrowseInfoBase {
                 Log.d(TAG, "List of Bonded BT Devices:");
             }
 
+            Set<String> connectedBluetoothAddresses =
+                    BluetoothConnectionsManager.getConnectedSet(mContext);
+
             for (BluetoothDevice device : bondedDevices) {
                 if (DEBUG) {
                     Log.d(TAG, "   Device name: " + device.getName() + " , Class: " +
@@ -541,8 +523,8 @@ public class BrowseInfo extends BrowseInfoBase {
                         device.getName(), resourceId);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
 
-                String desc = isDeviceConnected(device) ? mContext.getString(
-                        R.string.accessory_connected)
+                String desc = connectedBluetoothAddresses.contains(device.getAddress())
+                        ? mContext.getString(R.string.accessory_connected)
                         : null;
 
                 row.add(new MenuItem.Builder().id(mNextItemId++).title(device.getName())
