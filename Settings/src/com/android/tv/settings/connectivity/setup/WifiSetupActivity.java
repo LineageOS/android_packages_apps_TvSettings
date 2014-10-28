@@ -70,10 +70,12 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
     private static final int NETWORK_REFRESH_TIMEOUT = 5000;
     private static final String EXTRA_SHOW_SUMMARY = "extra_show_summary";
     private static final String EXTRA_SHOW_SKIP_NETWORK = "extra_show_skip_network";
+    private static final String EXTRA_SHOW_WPS_AT_TOP = "extra_show_wps_at_top";
     // If you change this constant, make sure to change the constant in setup wizard
     private static final int RESULT_NETWORK_SKIPPED = 3;
 
     private boolean mShowSkipNetwork;
+    private boolean mShowWpsAtTop;
     private AdvancedWifiOptionsFlow mAdvancedWifiOptionsFlow;
     private WifiManager mWifiManager;
     private WifiConfiguration mConfiguration;
@@ -115,8 +117,8 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
         };
 
         boolean showSummary = getIntent().getBooleanExtra(EXTRA_SHOW_SUMMARY, false);
-
         mShowSkipNetwork = getIntent().getBooleanExtra(EXTRA_SHOW_SKIP_NETWORK, false);
+        mShowWpsAtTop = getIntent().getBooleanExtra(EXTRA_SHOW_WPS_AT_TOP, false);
 
         if (showSummary) {
             addSummaryPage();
@@ -431,6 +433,14 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
             listItems.add(new SelectFromListWizardFragment.ListItem(result));
         }
         Collections.sort(listItems, new SelectFromListWizardFragment.ListItemComparator());
+
+        SelectFromListWizardFragment.ListItem wpsItem = new SelectFromListWizardFragment.ListItem(
+                getString(R.string.wps_network).toUpperCase(), R.drawable.ic_wps);
+        if (mShowWpsAtTop) {
+            listItems.add(0, wpsItem);
+        } else {
+            listItems.add(wpsItem);
+        }
 
         if (mShowSkipNetwork) {
             listItems.add(new SelectFromListWizardFragment.ListItem(
