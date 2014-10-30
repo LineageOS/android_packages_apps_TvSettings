@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -47,7 +46,7 @@
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"L\'écran de veille interactif s\'active après cette période d\'inactivité. Si aucun écran de veille n\'est sélectionné, l\'écran s\'éteint."</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"Après <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> d\'inactivité"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"Activer l\'écran de veille interactif"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"Délai après lequel l\'écran s\'éteint, une fois l\'écran de veille interactif activé."</string>
+    <string name="device_daydreams_screen_off_description" msgid="7699124270812914310">"L\'écran s\'éteint après cette période d\'inactivité."</string>
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> après l\'activation de l\'écran de veille interactif"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"Actuellement, aucun compte n\'enregistre de données de sauvegarde"</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +62,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"Aucune"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"Ne pas déranger"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"Si activé, nouv. notif. affichées uniq. dans Paramètres"</string>
-    <string name="select_title" msgid="7198726136224025927">"Choisissez un nom pour votre ADT-1"</string>
-    <string name="select_description" msgid="5793523265011441398">"Un nom permettra d\'identifier votre ADT-1 lors de l\'accès à partir d\'autres appareils, comme votre téléphone, une tablette ou un ordinateur."</string>
+    <string name="select_title" msgid="2657901623249723536">"Sélectionner un nom pour votre ^1"</string>
+    <string name="select_description" msgid="4080602542483519716">"Donner un nom à votre ^1 vous permettra de l\'identifier plus facilement lorsque vous y accéderez à partir d\'autres appareils, tels que votre téléphone, votre tablette ou votre ordinateur."</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"Salon"</item>
     <item msgid="7887185726776968055">"Salle multimédia"</item>
@@ -75,8 +74,8 @@
     <item msgid="682313511953895794">"Cuisine"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"Entrer un nom personnalisé..."</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"L\'ADT-1 est nommé"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"Le nom de cet ADT-1 est « ^1 ». Souhaitez-vous le modifier?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"Cet appareil ^1 est nommé"</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"« ^1 » est le nom de cet appareil ^2. Souhaitez-vous le modifier?"</string>
     <string name="change_setting" msgid="199354038426145612">"Modifier"</string>
     <string name="keep_settings" msgid="549230720820096102">"Ne pas modifier"</string>
     <string name="menu_help" msgid="2164687828212723531">"Aide"</string>

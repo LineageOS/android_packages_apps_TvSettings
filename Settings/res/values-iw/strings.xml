@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,19 +12,17 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
+ -->
+
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_app_name" msgid="4243616485579754401">"הגדרות"</string>
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"הגדרות"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"רשת"</string>
-    <string name="launcher_notifications_app_name" msgid="8986117081503790805">"התראות"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"פרופיל מוגבל"</string>
-    <string name="cluster_name_notifications" msgid="5036741968214910312">"התראות"</string>
-    <string name="cluster_name_edit_home" msgid="5444319291204663692">"עריכת דף הבית"</string>
     <string name="header_category_device" msgid="4855983928659541345">"מכשיר"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"העדפות"</string>
-    <string name="header_category_accessories" msgid="8215930947397660583">"שלט רחוק ועזרים"</string>
+    <string name="header_category_accessories" msgid="823295909353025991">"שלט רחוק ועזרים"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"אישי"</string>
     <string name="add_account" msgid="4098060223200619258">"הוסף חשבון"</string>
     <string name="account_header_sync" msgid="2679585471372319471">"סנכרון"</string>
@@ -33,7 +31,7 @@
     <string name="account_sync" msgid="773808124331714965">"בחר אפליקציות מסונכרנות"</string>
     <string name="sync_now" msgid="8732244492880016471">"סנכרן עכשיו"</string>
     <string name="sync_cancel" msgid="5839264070098894371">"בטל סנכרון"</string>
-    <string name="sync_in_progress" msgid="2442453795520317469">"מתבצע…"</string>
+    <string name="sync_in_progress" msgid="1330721038775646022">"מסנכרן…"</string>
     <string name="last_synced" msgid="6178494892357077274">"סנכרון אחרון <xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"מושבת"</string>
     <string name="sync_is_failing" msgid="8229476000384257186">"הסנכרון לא עובד כרגע. הוא יחזור לפעילות בקרוב."</string>
@@ -77,14 +75,14 @@
     <string name="accessory_unpairing" msgid="7568241162181184667">"מבטל את התאמת המכשיר…"</string>
     <string name="accessory_connected" msgid="2156489304110030393">"מחובר"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"מחפש ציוד היקפי…"</string>
-    <string name="accessories_add_bluetooth_inst" msgid="2535673954708450462">"להתאמת מכשירי Bluetooth, ראשית העבר אותם למצב התאמה"</string>
-    <string name="accessories_autopair_msg" msgid="8833716609631000657">"נמצא מכשיר אחד… תתבצע התאמה אוטומטית בעוד <xliff:g id="COUNTDOWN">%1$s</xliff:g> שניות."</string>
+    <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"לפני התאמת מכשירי ה-Bluetooth, ודא שהם במצב התאמה"</string>
+    <string name="accessories_autopair_msg" msgid="8618829246837821752">"נמצא מכשיר והוא יותאם אוטומטית בעוד <xliff:g id="COUNTDOWN">%1$s</xliff:g> שניות"</string>
     <string name="accessories_add_title_multiple" msgid="8455249961819802466">"נמצאו מספר מכשירים"</string>
-    <string name="accessories_add_multiple" msgid="2832440080860764547">"כדי להחליף התקנים, לחץ על לחצן ההתאמה שבמכשיר."</string>
-    <string name="accessories_add_multiple_select" msgid="5732550702405671224">"כדי לבצע התאמה עם הבחירה הנוכחית, לחץ והחזק את לחצן ההתאמה שבמכשיר זה במשך 5 שניות."</string>
-    <string name="error_action_not_supported" msgid="8330232024027798319">"הפעולה אינה נתמכת"</string>
+    <string name="accessories_add_multiple" msgid="3900633668371061399">"כדי לבחור מכשיר אחר, לחץ על לחצן ההתאמה במכשיר הזה"</string>
+    <string name="accessories_add_multiple_select" msgid="3696794187001405647">"כדי להתאים עם המכשיר הנבחר, לחץ על לחצן ההתאמה של המכשיר הזה למשך 5 שניות"</string>
+    <string name="error_action_not_supported" msgid="300552308104354666">"הפעולה הזו אינה נתמכת"</string>
     <string name="bluetooth_pairing_request" msgid="4523088117471287665">"בקשת התאמה של Bluetooth"</string>
-    <string name="bluetooth_confirm_passkey_msg" msgid="82948198856357263">"כדי להתאים עם: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, ודא שמוצג המפתח הבא: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
+    <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"כדי להתאים עם: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, ודא שמוצג המפתח הבא: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8234127565393932499">"מ: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;האם להתאים עם המכשיר הזה?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="8951451728250058901">"כדי להתאים עם: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;הקלד בו: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, ואז הקש על Return או Enter."</string>
     <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"כדי להתאים עם: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;הקלד את מספר ה-PIN הנדרש של המכשיר:"</string>
@@ -102,6 +100,7 @@
     <string name="system_inputs" msgid="2413907183796651102">"כניסות קלט"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"נגישות"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"אפשרויות מפתח"</string>
+    <string name="accessibility_none" msgid="3441648940134070004">"ללא"</string>
     <string name="about_system_update" msgid="7282772247661356586">"עדכון מערכת"</string>
     <string name="about_preference" msgid="4131396784531360434">"מידע כללי"</string>
     <string name="device_name" msgid="2670488158531273028">"שם המכשיר"</string>
@@ -114,13 +113,15 @@
     <string name="about_license_activity_unavailable" msgid="8522566562321418498">"נתוני רישיון אינם זמינים"</string>
     <string name="about_model" msgid="6625269442206323995">"דגם"</string>
     <string name="about_version" msgid="1177287676732287266">"גרסה"</string>
+    <string name="about_serial" msgid="2723560490027171187">"מספר סידורי"</string>
     <string name="about_build" msgid="9148789767199785676">"גרסה"</string>
   <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="3138467012178582000">"אתה כעת במרחק של צעד <xliff:g id="STEP_COUNT">%1$d</xliff:g> מלהיות מפתח."</item>
-    <item quantity="other" msgid="4879488115799381997">"אתה כעת במרחק של <xliff:g id="STEP_COUNT">%1$d</xliff:g> צעדים מלהיות מפתח."</item>
+    <item quantity="one" msgid="5656331074727404150">"אתה כעת במרחק של צעד <xliff:g id="STEP_COUNT">%1$d</xliff:g> מלהפוך למפתח"</item>
+    <item quantity="other" msgid="6907126743472136795">"אתה כעת במרחק של <xliff:g id="STEP_COUNT">%1$d</xliff:g> צעדים מלהפוך למפתח"</item>
   </plurals>
+    <string name="about_ads" msgid="3364786994943748337">"מודעות"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"אתה כעת מפתח!"</string>
-    <string name="show_dev_already" msgid="5996871005698178544">"אין צורך, אתה כבר מפתח."</string>
+    <string name="show_dev_already" msgid="7525967300421794483">"אין צורך - אתה כבר מפתח"</string>
     <string name="wifi_security_none" msgid="1241101191574932821">"ללא"</string>
     <string name="wifi_remembered" msgid="710973813096194477">"נשמר"</string>
     <string name="wifi_disabled_generic" msgid="5100439885010143290">"מושבת"</string>
@@ -187,7 +188,7 @@
     <string name="wifi_saving" msgid="1269061570772019215">"שומר תצורה עבור <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_connect" msgid="8570424816865506077">"התחבר"</string>
     <string name="wifi_forget_network" msgid="7302755141573045803">"שכח רשת"</string>
-    <string name="wifi_forget_network_description" msgid="768103056075126720">"פעולה זו מנקה מידע המשמש להתחברות לרשת זו, כולל סיסמאות שמורות."</string>
+    <string name="wifi_forget_network_description" msgid="3328285160018330334">"פעולה זו מנקה מידע המשמש להתחבר אל הרשת הזו, כולל סיסמה שמורה"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"אישור"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"שנה"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"אל תשנה"</string>
@@ -201,27 +202,27 @@
     <string name="wifi_action_status_info" msgid="7664354971197839253">"פרטי סטטוס"</string>
     <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"אפשרויות מתקדמות"</string>
     <string name="wifi_action_advanced_options_description" msgid="8615353318560146504">"<xliff:g id="PROXY_SETTINGS_SUMMARY">%1$s</xliff:g>, <xliff:g id="IP_SETTINGS_SUMMARY">%2$s</xliff:g>"</string>
-    <string name="wifi_ip_settings_invalid_ip_address" msgid="1192306565220905788">"הזן כתובת IP חוקית."</string>
-    <string name="wifi_ip_settings_invalid_gateway" msgid="2500972717119928862">"הזן כתובת שער חוקית."</string>
-    <string name="wifi_ip_settings_invalid_dns" msgid="7814059423760396445">"הזן כתובת DNS חוקית."</string>
-    <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="3927463853940175731">"הזן קידומת רשת באורך של 0 עד 32 תווים."</string>
+    <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"הזן כתובת IP חוקית"</string>
+    <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"הזן כתובת שער חוקית"</string>
+    <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"הזן כתובת DNS חוקית"</string>
+    <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"הזן תחילית רשת באורך של 0 עד 32 תווים"</string>
     <string name="wifi_ip_address_hint" msgid="1895267564692073689">"הזן כתובת IP חוקית.\nלדוגמה: 192.168.1.128"</string>
     <string name="wifi_dns1_hint" msgid="214345156394229347">"הזן כתובת IP חוקית או השאר ריק.\nלדוגמה: 8.8.8.8"</string>
     <string name="wifi_dns2_hint" msgid="1075709328208368894">"הזן כתובת IP חוקית או השאר ריק.\nלדוגמה: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="6271048323288085123">"הקלד כתובת IP חוקית או השאר ריק.\nלדוגמה: 192.168.1.1"</string>
+    <string name="wifi_gateway_hint" msgid="7687219682024189028">"הזן כתובת IP חוקית או השאר ריק.\nלדוגמה: 192.168.1.1"</string>
     <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"הזן קידומת רשת באורך חוקי.\nלדוגמה: 24"</string>
-    <string name="proxy_error_invalid_host" msgid="339200229350350805">"שם המארח אינו חוקי."</string>
-    <string name="proxy_error_invalid_exclusion_list" msgid="8497818432776990002">"רשימת אי ההכללה אינה חוקית. הזן רשימה עם ערכים המופרדים באמצעות פסיקים של דומיינים שאינם נכללים."</string>
-    <string name="proxy_error_empty_port" msgid="3839212721851496807">"השדה \'יציאה\' לא יכול להיות ריק."</string>
-    <string name="proxy_error_empty_host_set_port" msgid="5283759432396206353">"אם השדה \'מארח\' ריק, השאר את השדה \'יציאה\' ריק."</string>
-    <string name="proxy_error_invalid_port" msgid="1469572103763641618">"מספר היציאה אינו חוקי."</string>
-    <string name="proxy_warning_limited_support" msgid="7523045994115000147">"שרת ה-Proxy של HTTP נמצא בשימוש הדפדפן, אך אפליקציות אחרות לא יכולות להשתמש בו."</string>
+    <string name="proxy_error_invalid_host" msgid="3660415920668138953">"שם המארח אינו חוקי"</string>
+    <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"רשימת אי-ההכללה הזו אינה חוקית. הזן רשימה המופרדת באמצעות פסיקים של דומיינים שאין לכלול."</string>
+    <string name="proxy_error_empty_port" msgid="6835658067776408062">"שדה היציאה לא יכול להיות ריק"</string>
+    <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"אם שדה המארח ריק, אל תזין דבר בשדה היציאה"</string>
+    <string name="proxy_error_invalid_port" msgid="1434922103959603993">"היציאה אינה חוקית"</string>
+    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"הדפדפן משתמש בשרת proxy מסוג HTTP, אך ייתכן שאפליקציות אחרות אינן משתמשות בו"</string>
     <string name="proxy_port_hint" msgid="8532733797275927007">"הזן מספר יציאה חוקי.\nלדוגמה: 8080"</string>
     <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"הזן רשימה עם ערכים המופרדים באמצעות פסיקים של דומיינים שאינם נכללים, או השאר ריק.\nלדוגמה: example.com,mycomp.test.com,localhost"</string>
     <string name="proxy_hostname_hint" msgid="3719688422767210803">"הזן שם מארח חוקי.\nלדוגמה: proxy.example.com"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"הרשת מחוברת"</string>
-    <string name="wifi_summary_title_not_connected" msgid="3218129043385115430">"הרשת אינה מחוברת"</string>
-    <string name="wifi_summary_description_connected_to_wifi_network" msgid="8504362939403751819">"מחובר ל-<xliff:g id="SSID">%1$s</xliff:g>. לשנות?"</string>
+    <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"הרשת לא מחוברת"</string>
+    <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"כבר מחובר אל <xliff:g id="SSID">%1$s</xliff:g>. האם להתחבר לרשת אחרת?"</string>
     <string name="wifi_summary_unknown_network" msgid="7903601448928422642">"רשת לא ידועה"</string>
     <string name="connectivity_advanced_options" msgid="2858199826425132228">"אפשרויות מתקדמות"</string>
     <string name="connectivity_advanced_options_description" msgid="370129113175689226">"<xliff:g id="SSID_0">%1$s</xliff:g>‏, <xliff:g id="SSID_1">%2$s</xliff:g>"</string>
@@ -242,7 +243,7 @@
     <string name="storage_calculating_size" msgid="2644732407412520565">"מחשב..."</string>
     <string name="storage_apps_usage" msgid="4366049071039081219">"אפליקציות"</string>
     <string name="storage_downloads_usage" msgid="6172975879962599380">"הורדות"</string>
-    <string name="storage_dcim_usage" msgid="2870147488772243491">"תמונות, סרטוני וידאו"</string>
+    <string name="storage_dcim_usage" msgid="2977564696540645452">"תמונות וסרטונים"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"אודיו"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"שונות"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"נתונים בקובץ שמור"</string>
@@ -250,12 +251,12 @@
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"נסה שוב"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"מחפש נתב WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"לחץ על הלחצן Wi-Fi Protected Setup בנתב שלך.\nייתכן שהוא ייקרא WPS או שיופיע בו הסמל שמימין."</string>
-    <string name="wifi_wps_onstart_pin" msgid="8533195659451401272">"הזן את קוד האימות <xliff:g id="NUMBER">%1$s</xliff:g> בנתב ה-Wi-Fi שלך."</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="77550247967342253">"לאחר הזנת קוד האימות, יידרשו עד שתי דקות להשלמת ההגדרה"</string>
-    <string name="wifi_wps_in_progress" msgid="8935652744830501913">"כבר מתבצעת הגדרת WPS, והשלמת הפעולה עשויה להימשך עד שתי דקות"</string>
+    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"הזן את קוד האימות <xliff:g id="NUMBER">%1$s</xliff:g> בנתב ה-Wi-Fi שלך"</string>
+    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"לאחר הזנת מספר ה-PIN, יידרשו עד שתי דקות להשלמת ההגדרה"</string>
+    <string name="wifi_wps_in_progress" msgid="7082889465182680949">"הגדרת WPS כבר מתבצעת, והשלמת הפעולה עשויה להימשך עד שתי דקות"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"לא ניתן למצוא נתב Wi-Fi"</string>
-    <string name="wifi_wps_failed_wep" msgid="3961872194395152861">"הגדרת האבטחה (WEP) של נתב ה-Wi-Fi‏ אינה נתמכת"</string>
-    <string name="wifi_wps_failed_tkip" msgid="3878991610202713381">"הגדרת האבטחה (TKIP) של נתב ה-Wi-Fi אינה נתמכת"</string>
+    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"הגדרת האבטחה של נתב ה-Wi-Fi ‏(WEP) אינה נתמכת."</string>
+    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"הגדרת האבטחה של נתב ה-Wi-Fi ‏(TKIP) אינה נתמכת."</string>
     <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"מתקיימת הפעלת WPS אחרת. נסה שוב בעוד מספר דקות."</string>
     <string name="system_date" msgid="2767108116769558081">"תאריך"</string>
     <string name="system_time" msgid="6726022312605226285">"זמן"</string>
@@ -269,10 +270,11 @@
     <string name="system_location" msgid="502463575930545806">"מיקום"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"אפשר לאפליקציות שביקשו את אישורך להשתמש בפרטי המיקום שלך"</string>
     <string name="system_network_location" msgid="3095006393148731886">"מיקום רשת Wi-Fi"</string>
-    <string name="system_desc_network_location" msgid="4396966134287228295">"אפשר לאפליקציות להשתמש בשירות המיקום של Google כדי להעריך את מיקומך מהר יותר. נתוני מיקום אנונימיים ייאספו ויישלחו אל Google."</string>
+    <string name="system_desc_network_location" msgid="3394374680078903193">"אפשר ל-Google לעזור לאפליקציות לקבוע מיקום. משמעות הדבר היא שליחה של נתוני מיקום אנונימיים ל-Google, גם כאשר אפליקציות אינן פועלות."</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"הסכמה לאישור מיקום"</string>
     <string name="system_desc_network_location_confirm" msgid="3929125496258579850">"אפשר לשירות המיקום של Google לאסוף נתוני מיקום אנונימיים. נתונים מסוימים עשויים להיות מאוחסנים במכשיר שלך. האיסוף עשוי להתבצע גם כשאין אפליקציות פועלות."</string>
-    <string name="location_title" msgid="3653515723071653766">"המיקום שלי"</string>
+    <string name="location_title" msgid="7600163182794860262">"המיקום שלי"</string>
+    <string name="header_category_system" msgid="3243287334177831637">"מערכת"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"מצב"</string>
     <string name="location_category_recent_location_requests" msgid="3437903422445812245">"בקשות של מיקומים אחרונים"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"אין אפליקציות שביקשו מיקום לאחרונה"</string>
@@ -283,12 +285,12 @@
     <string name="location_services" msgid="5441085185119797200">"שירותי מיקום"</string>
     <string name="on" msgid="6683600681314500652">"פועל"</string>
     <string name="off" msgid="5264189545064767245">"כבוי"</string>
-    <string name="google_location_services_title" msgid="9047729790336450629">"שירותי המיקום של Google"</string>
-    <string name="third_party_location_services_title" msgid="5019665514391083771">"שירותי מיקום של צד שלישי"</string>
-    <string name="location_reporting" msgid="781420550253249208">"דיווח מיקום"</string>
-    <string name="location_history" msgid="3348884501088109038">"היסטוריית מיקומים"</string>
-    <string name="location_reporting_desc" msgid="9035898758757621426">"Google משתמשת בתכונה הזו במוצרים כמו Google Now ומפות Google. הפעלת דיווח מיקום מאפשרת לכל מוצר של Google שמשתמש בתכונה הזו, לאחסן ולהשתמש בנתוני המיקום העדכניים ביותר במכשיר ביחס לחשבון Google שלך."</string>
-    <string name="location_history_desc" msgid="279684222468516944">"כשהיסטוריית המיקומים מופעלת בחשבון הזה, Google יכולה לאחסן את נתוני המיקומים של המכשיר לשימוש על ידי האפליקציות שלך.\n\nלדוגמה, מפות Google יכולה להציע לך מסלול ו-Google Now יכולה ליידע אותך על תנועה בנסיעה לעבודה.\n\nתוכל לכבות את היסטוריית המיקומים בכל עת, אך הפעולה הזו לא תמחק אותה. כדי לצפות בהיסטוריית המיקומים שלך ולנהל אותה, בקר בכתובת maps.google.com/locationhistory."</string>
+    <string name="google_location_services_title" msgid="3382840371861269146">"שירותי המיקום של Google"</string>
+    <string name="third_party_location_services_title" msgid="4089136801976399147">"שירותי מיקום של צד שלישי"</string>
+    <string name="location_reporting" msgid="3054236612250063073">"דיווח מיקום"</string>
+    <string name="location_history" msgid="2946680949724247804">"היסטוריית מיקומים"</string>
+    <string name="location_reporting_desc" msgid="6256424995139430823">"Google משתמשת בתכונה הזו במוצרים כמו Google Now ומפות Google. הפעלת דיווח המיקום מאפשרת לכל מוצרי Google המשתמשים בתכונה הזו לאחסן את נתוני המיקום העדכניים ביותר של המכשיר ולהשתמש בהם ביחס לחשבון Google שלך."</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"כשהיסטוריית המיקומים פועלת עבור החשבון הזה, Google יכולה לאחסן את נתוני המיקום של המכשיר שלך לשימוש על ידי אפליקציות אחרות.\n\nלדוגמה, מפות Google יכול לספק לך מסלול ו-Google Now יכול ליידע אותך על עומסי תנועה.\n\nניתן לכבות את היסטוריית המיקומים בכל עת, אך פעולה זו לא מוחקת אותה. כדי להציג ולנהל את היסטוריית המיקומים, בקר בכתובת maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"מחק היסטוריית מיקומים"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"הפעולה הזו תמחק את כל היסטוריית המיקומים השמורה במכשיר עבור חשבון Google הזה. לא תוכל לבטל את המחיקה הזו. חלק מהאפליקציות, כולל Google Now, יפסיקו לעבוד."</string>
     <string name="system_services" msgid="7230571820151215779">"שירותים"</string>
@@ -311,6 +313,9 @@
     <string name="captions_backgroundcolor" msgid="448518890988125453">"צבע רקע"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"שקיפות רקע"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"כתוביות יראו כך"</string>
+    <string name="captions_textopacity" msgid="5536765490446288641">"שקיפות טקסט"</string>
+    <string name="captions_windowcolor" msgid="8986165172260903279">"צבע חלון"</string>
+    <string name="captions_windowopacity" msgid="2784473496224936703">"שקיפות חלון"</string>
     <string name="color_none" msgid="5281446963475996688">"ללא"</string>
     <string name="color_white" msgid="65537523012024751">"לבן"</string>
     <string name="color_gray" msgid="5637299846460438696">"אפור"</string>
@@ -344,21 +349,21 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"הישאר ער"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"בדיקת HDCP"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"אופטימיזציית HDMI"</string>
-    <string name="system_reboot_confirm" msgid="1118729697854304518">"האם לאתחל?"</string>
-    <string name="system_desc_reboot_confirm" msgid="7075062983850532013">"שינוי ההגדרה הזו דורש אתחול. האם לבצע אתחול כעת?"</string>
+    <string name="system_reboot_confirm" msgid="534407910866199191">"האם לאתחל עכשיו?"</string>
+    <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"כדי לעדכן את ההגדרה הזו, יש לאתחל את המכשיר."</string>
     <string name="system_never_check" msgid="6666520460705041617">"אל תבדוק לעולם"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"בדוק אם יש תוכן DRM בלבד"</string>
     <string name="system_always_check" msgid="1866566828098009853">"בדוק תמיד"</string>
     <string name="system_bt_hci_log" msgid="2425757846046504431">"רישום HCI של Bluetooth"</string>
-    <string name="system_email_address" msgid="8669468986250302378">"כתובת דוא\"ל"</string>
+    <string name="system_email_address" msgid="8669468986250302378">"כתובת אימייל"</string>
     <string name="system_usb_debugging" msgid="3777895294421924323">"ניקוי באגים ב-USB"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"אפשר מיקומים מדומים"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"בחר אפליקציה לתיקון באגים"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"המתן למנקה באגים"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"אמת אפליקציות דרך USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"בדוק אפליקציות שהותקנו באמצעות ADB/ADT כדי לאתר התנהגות מזיקה"</string>
-    <string name="system_wifi_verbose_logging" msgid="4128743764965639832">"רישום מפורט של Wi-Fi"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="687523002786276857">"הפעל רישום מפורט של Wi-Fi"</string>
+    <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"רישום מפורט של Wi-Fi ביומן"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"הפעל רישום מפורט של Wi-Fi ביומן"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"הצגת נגיעות"</string>
     <string name="system_pointer_location" msgid="2673764026490179227">"מיקום מצביע"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"הצג את גבולות הפריסה"</string>
@@ -376,11 +381,11 @@
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"אל תשמור פעילויות"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"מגבלה של תהליך ברקע"</string>
     <string name="system_show_all_anrs" msgid="3601183436857424712">"הצג את כל פריטי ה-ANR"</string>
-    <string name="system_desc_take_bug_report" msgid="1627218971851223147">"שלח דוח לכתובת דוא\"ל"</string>
+    <string name="system_desc_take_bug_report" msgid="1627218971851223147">"שלח דוח לכתובת אימייל"</string>
     <string name="system_desc_backup_password" msgid="6454962099870874762">"הגן על גיבויים מלאים של שולחן העבודה"</string>
     <string name="system_desc_stay_awake" msgid="229588006508356238">"השבת מעבר למצב שינה"</string>
     <string name="system_desc_hdcp_checking" msgid="6879753401058891183">"השתמש עבור תוכן DRM בלבד"</string>
-    <string name="system_desc_hdmi_optimization" msgid="3975744990242079800">"בצע אופטימיזציה של המסך לשימוש ברזולוציה או בתדירות המקסימליות. הפעולה הזו משפיעה רק על מסכי אולטרה HD. שינוי ההגדרה הזו יגרום לאתחול."</string>
+    <string name="system_desc_hdmi_optimization" msgid="4400727262768931480">"בצע אופטימיזציה של המסך לרזולוציה מקסימלית או לקצב הפריימים המקסימלי. הגדרה זו משפיעה רק על מסכי Ultra HD. שינוי ההגדרה הזו יאתחל את המכשיר."</string>
     <string name="system_desc_bt_hci_log" msgid="4219265203570411773">"הפעל רישום Snoop עבור HCI של Bluetooth"</string>
     <string name="system_desc_usb_debugging" msgid="5168830368191788731">"מצב ניקוי באגים כאשר USB מחובר"</string>
     <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"אפליקציה שעברה ניקוי באגים ממתינה שמנקה הבאגים יצרף אותה לפני ההרצה"</string>
@@ -405,9 +410,9 @@
     <string name="security_verify_apps_title" msgid="5787946958632254988">"אמת אפליקציות"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"השבת או הזהר לפני התקנת אפליקציה שעשויה לגרום נזק"</string>
   <string-array name="hdcp_checking_summaries">
-    <item msgid="3634335585713316220">"לעולם אל תשתמש בבדיקת HDCP"</item>
-    <item msgid="3990330210575585825">"השתמש בבדיקת HDCP עבור תוכן DRM בלבד"</item>
-    <item msgid="5044593786669360821">"תמיד השתמש בבדיקת HDCP"</item>
+    <item msgid="28682351350387246">"אף פעם"</item>
+    <item msgid="5583820743908145007">"עבור תוכן DRM"</item>
+    <item msgid="6148080515126921450">"תמיד"</item>
   </string-array>
     <string name="no_application" msgid="1746564297589309465">"כלום"</string>
   <string-array name="enable_opengl_traces_entries">
@@ -484,7 +489,7 @@
     <string name="noApplications" msgid="4197983402774959346">"אין אפליקציות שיכולות לבצע את הפעולה הזו."</string>
     <string name="noAppsGoBack" msgid="5663180241276177314">"הקודם"</string>
     <string name="inputs_inputs" msgid="4249080110281833521">"כניסות קלט"</string>
-    <string name="inputs_header_cec" msgid="1519712728623090009">"CEC ‏(Consumer Electronic Control)"</string>
+    <string name="inputs_header_cec" msgid="3701104827756278489">"Consumer Electronic Control (CEC)‎"</string>
     <string name="inputs_cec_settings" msgid="8403155117662874704">"הגדרות שליטה במכשיר"</string>
     <string name="inputs_blu_ray" msgid="3843526039402969407">"Blu-ray"</string>
     <string name="inputs_cable" msgid="9081641596942038538">"כבלים"</string>
@@ -493,7 +498,7 @@
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"שם מותאם אישית"</string>
     <string name="inputs_hide" msgid="1575971556150395486">"מוסתר"</string>
-    <string name="inputs_hide_desc" msgid="4858702354132985000">"מסתיר מרשימות לבחירת קלט"</string>
+    <string name="inputs_hide_desc" msgid="8172670556559886526">"לא מוצג בעת מעבר בין מקורות קלט"</string>
     <string name="inputs_custom_title" msgid="374036983231176581">"שם מותאם אישית:"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"שליטת HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"אפשר לטלוויזיה לשלוט במכשירי HDMI"</string>
@@ -516,8 +521,8 @@
     <string name="inputs_state_connected" msgid="2463661081264605403">"מחובר"</string>
     <string name="inputs_state_connected_standby" msgid="2861557722523733817">"המתנה"</string>
     <string name="inputs_state_disconnected" msgid="558532410057350104">"מנותק"</string>
-    <string name="user_add_profile_item_summary" msgid="1626445854782642505">"ניתן להגביל את הגישה לאפליקציות ולתוכן מהחשבון שלך"</string>
-    <string name="user_new_profile_name" msgid="4694893893005517733">"פרופיל חדש"</string>
+    <string name="user_add_profile_item_summary" msgid="2946168478936086933">"הגבל גישה אל אפליקציות ותוכן אחר בחשבון שלך"</string>
+    <string name="user_new_profile_name" msgid="336521054830056189">"פרופיל מוגבל"</string>
     <string name="user_restrictions_title" msgid="8317193312532216351">"גישה לאפליקציות ולתוכן"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"בשליטת <xliff:g id="APP">%1$s</xliff:g>"</string>
     <string name="app_not_supported_in_limited" msgid="6818309827329010677">"אפליקציה זו אינה נתמכת בפרופילים מוגבלים"</string>
@@ -528,7 +533,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"היכנס אל הפרופיל המוגבל"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"צא מהפרופיל המוגבל"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"מחק פרופיל מוגבל"</string>
-    <string name="restricted_profile_configure_title" msgid="8176543118179146633">"הגדרות פרופיל מוגבל"</string>
+    <string name="restricted_profile_configure_title" msgid="4684188123147519620">"הגדרות"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"אפליקציות מותרות"</string>
   <plurals name="restricted_profile_configure_apps_description">
     <item quantity="one" msgid="5114936540577834412">"אפליקציה אחת מותרת"</item>
@@ -537,12 +542,22 @@
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"מותרת"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"אסורה"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"התאם אישית את ההגבלות"</string>
-    <string name="restricted_profile_configure_apps_description_loading" msgid="2509074621719456415">"עוד רגע"</string>
-    <string name="restricted_profile_change_password_title" msgid="3507770139567629076">"אבטחה"</string>
-    <string name="restricted_profile_change_password_description" msgid="4521861641629550396">"קוד PIN הוגדר"</string>
+    <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"המתן מספר רגעים…"</string>
+    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"שנה את מספר ה-PIN"</string>
     <string name="restricted_profile_set_password" msgid="3989154189940037175">"הגדר קוד PIN חדש ליציאה מהפרופיל המוגבל"</string>
     <string name="restricted_profile_confirm_password" msgid="5749967525546068650">"אשר את קוד ה-PIN המשמש ליציאה מפרופיל מוגבל"</string>
     <string name="restricted_profile_enter_password" msgid="5961473119032585585">"הזן קוד PIN כדי לצאת מפרופיל מוגבל"</string>
     <string name="restricted_profile_delete_dialog_title" msgid="2998929625283492853">"האם להסיר את המשתמש המוגבל?"</string>
     <string name="restriction_description" msgid="3104855945910233028">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
+    <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"הזן מספר PIN לצפייה בערוץ הזה"</string>
+    <string name="pin_enter_unlock_program" msgid="52453773316071511">"הזן מספר PIN לצפייה בתכנית הזו"</string>
+    <string name="pin_enter_pin" msgid="821552376577935497">"הזן מספר PIN"</string>
+    <string name="pin_enter_new_pin" msgid="4788218421265924211">"הגדר מספר PIN חדש"</string>
+    <string name="pin_enter_again" msgid="1510456697040826496">"הזן שוב את מספר ה-PIN החדש"</string>
+    <string name="pin_enter_old_pin" msgid="851029058127630869">"הזן מספר PIN ישן"</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"הזנת מספר PIN שגוי 5 פעמים.\nנסה שוב <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
+    <string name="pin_button_done" msgid="939191809977197451">"בוצע"</string>
+    <string name="pin_button_cancel" msgid="5541414789309863965">"בטל"</string>
+    <string name="pin_toast_wrong" msgid="4628358195224633248">"מספר ה-PIN שגוי. נסה שוב"</string>
+    <string name="pin_toast_not_match" msgid="5886041789737632996">"נסה שוב. מספר ה-PIN אינו תואם"</string>
 </resources>

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -47,7 +46,7 @@
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"ការ​ស្រមើស្រមៃ​ចាប់ផ្ដើម​បន្ទាប់​ពី​ភាព​អសកម្ម​មួយ​រយៈ​នេះ។ ប្រសិនបើ​ មិន​ជ្រើស​ការ​ស្រមើស្រមៃ​ណា​មួយ​ទេ ការ​បង្ហាញ​នឹង​បិទ។"</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"បន្ទាប់​​ពី​ភាព​អសកម្ម​នៃ <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"នៅ​ពេល​ដេក"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"អេក្រង់​បាន​បិទ​ក្នុង​រយៈពេល​នេះ​បន្ទាប់​ពី​​ការ​ស្រមើ​ស្រមៃ​ចាប់ផ្ដើម។"</string>
+    <string name="device_daydreams_screen_off_description" msgid="7699124270812914310">"​បិទ​អេក្រង់​បន្ទាប់ពី​រយៈ​ពេល​អសកម្ម​នេះ។"</string>
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> បន្ទាប់​ពី​សុបិន"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"បច្ចុប្បន្ន​ គ្មាន​គណនី​រក្សាទុក​ទិន្នន័យ​បម្រុង​ទុក​ទេ"</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +62,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"គ្មាន"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"កុំ​រំខាន"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"នៅ​ពេល​បាន​បើក​ដំណើរការ ការ​ជូន​ដំណឹង​ថ្មី​នឹង​​បង្ហាញ​តែ​នៅ​ក្នុង​ការ​កំណត់​ប៉ុណ្ណោះ"</string>
-    <string name="select_title" msgid="7198726136224025927">"ជ្រើស​ឈ្មោះ​សម្រាប់ ADT-1 របស់​អ្នក"</string>
-    <string name="select_description" msgid="5793523265011441398">"ឈ្មោះ​នឹង​ជួយ​កំណត់​សម្គាល់ ADT-1 របស់​អ្នក នៅ​ពេល​ចូល​ប្រើ​វា​ពី​ឧបករណ៍​ផ្សេង​ដូចជា​ទូរស័ព្ទ កុំព្យូទ័រ​បន្ទះ ឬ​កុំព្យូទ័រ​របស់​អ្នក។"</string>
+    <string name="select_title" msgid="2657901623249723536">"ជ្រើស​ឈ្មោះ​សម្រាប់ ^1 របស់​អ្នក"</string>
+    <string name="select_description" msgid="4080602542483519716">"ឈ្មោះ​នឹង​ជួយ​កំណត់​អត្ត​សញ្ញាណ​របស់​អ្នក ^1 ពេល​ចូល​ដំណើរការ​វា​ពី​ឧបករណ៍​ផ្សេង​ដូច​ជា​ទូរសព្ទ, កុំព្យូទ័រ​បន្ទះ ឬ​កុំព្យូទ័រ​របស់​អ្នក។"</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"បន្ទប់​ទទួល​ភ្ញៀវ"</item>
     <item msgid="7887185726776968055">"បន្ទប់​​ព័ត៌មាន"</item>
@@ -75,8 +74,8 @@
     <item msgid="682313511953895794">"ផ្ទះបាយ"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"បញ្ចូល​ឈ្មោះ​​តាម​បំណង ..."</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"ADT​-1 ត្រូវ​បាន​ដាក់​ឈ្មោះ"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"\"^1\" គឺ​ជា​ឈ្មោះ​នៃ ADT-1 នេះ។ តើ​អ្នក​ចង់​ប្ដូរ​នេះ​ឬ?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"^1 នេះ​ត្រូវ​បាន​ដាក់ឈ្មោះ"</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"\"^1\" គឺ​ជា​ឈ្មោះ​របស់ ^2 នេះ។ តើ​អ្នក​ចង់​ប្ដូរ​វា?"</string>
     <string name="change_setting" msgid="199354038426145612">"ផ្លាស់ប្ដូរ"</string>
     <string name="keep_settings" msgid="549230720820096102">"កុំ​ផ្លាស់ប្ដូរ"</string>
     <string name="menu_help" msgid="2164687828212723531">"ជំនួយ"</string>

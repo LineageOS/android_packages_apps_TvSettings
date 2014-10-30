@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -41,13 +40,13 @@
     <string name="settings_on" msgid="1295064657786011878">"இயக்கு"</string>
     <string name="settings_off" msgid="4439170658516725721">"முடக்கு"</string>
     <string name="device_daydreams_none" msgid="5310233518671772034">"ஏதுமில்லை"</string>
-    <string name="device_daydreams_select" msgid="1754678562660674925">"முழுநேர இயக்கம்"</string>
+    <string name="device_daydreams_select" msgid="1754678562660674925">"பகல்கனா"</string>
     <string name="device_daydreams_test" msgid="7442554912076991502">"இப்போது தொடங்கு"</string>
     <string name="device_daydreams_sleep" msgid="5263432145910468025">"முழுநேர இயக்கத்தில் இருக்கும்போது"</string>
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"செயல்படா நேரத்திற்குப் பின், முழுநேர இயக்கம் தொடங்கும். முழுநேர இயக்கம் எதுவும் தேர்ந்தெடுக்கப்படவில்லை எனில், திரை முடக்கப்படும்."</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"செயல்படாத <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> க்குப் பின்"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"உறக்கத்திற்குச் செல்லவேண்டிய நேரம்"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"முழுநேர இயக்கம் இயங்கிய பிறகு இந்தக் கால அளவில் திரை முடக்கப்படும்."</string>
+    <string name="device_daydreams_screen_off_description" msgid="7699124270812914310">"இவ்வளவு நேரம் செயல்படாமல் இருந்தால் திரை அணைந்துபோகும்."</string>
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> க்குப் பின் முழுநேர இயக்கம்"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"தற்போது எந்தக் கணக்கும் காப்புப்பிரதி எடுத்தத் தரவைச் சேமிப்பதில்லை"</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +62,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"ஏதுமில்லை"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"தொந்தரவு செய்ய வேண்டாம்"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"இயக்கப்படும் போது, அமைப்புகளில் புதிய அறிவிப்புகள் மட்டுமே தோன்றும்"</string>
-    <string name="select_title" msgid="7198726136224025927">"ADT-1 க்காகப் பெயரைத் தேர்த்தெடுக்கவும்"</string>
-    <string name="select_description" msgid="5793523265011441398">"ADT-1 ஐ உங்கள் மொபைல், டேப்லெட் அல்லது கணினியிலிருந்து அணுகும் போது, அதைப் பெயர் மூலம் அடையாளப்படுத்தலாம்."</string>
+    <string name="select_title" msgid="2657901623249723536">"^1க்குப் பெயரைத் தேர்வுசெய்யவும்"</string>
+    <string name="select_description" msgid="4080602542483519716">"மொபைல், டேப்லெட் அல்லது கணினி போன்ற பிற சாதனங்களிலிருந்து ^1ஐ அணுகும் போது, அதைக் கண்டறிய பெயர் உதவியாக இருக்கும்."</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"ஓய்வறை"</item>
     <item msgid="7887185726776968055">"மீடியா அறை"</item>
@@ -75,8 +74,8 @@
     <item msgid="682313511953895794">"சமையலறை"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"தனிப்பயன் பெயரை உள்ளிடுக…"</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"ADT-1 பெயரிடப்பட்டது"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"இந்த ADT-1 இன் பெயர் \"^1\". அதை மாற்ற விரும்புகிறீர்களா?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"^1க்குப் பெயரிடப்பட்டது"</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"^2 இன் பெயர் \"^1\". இதை மாற்ற விரும்புகிறீர்களா?"</string>
     <string name="change_setting" msgid="199354038426145612">"மாற்று"</string>
     <string name="keep_settings" msgid="549230720820096102">"மாற்ற வேண்டாம்"</string>
     <string name="menu_help" msgid="2164687828212723531">"உதவி"</string>

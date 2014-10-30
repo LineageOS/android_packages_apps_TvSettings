@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -37,7 +36,7 @@
     <string name="device_apps_app_management_notifications" msgid="7069935222112158478">"အကြောင်းကြားချက်များ"</string>
     <string name="device_apps_app_management_permissions" msgid="5758303833496289673">"ခွင့်ပြုချက်များ"</string>
     <string name="settings_ok" msgid="5501301223475616254">"အိုကေ"</string>
-    <string name="settings_cancel" msgid="1649053173330804917">"ပယ်ဖျက်ရန်"</string>
+    <string name="settings_cancel" msgid="1649053173330804917">"ထားတော့"</string>
     <string name="settings_on" msgid="1295064657786011878">"ဖွင့်ရန်"</string>
     <string name="settings_off" msgid="4439170658516725721">"မရှိ"</string>
     <string name="device_daydreams_none" msgid="5310233518671772034">"မရှိ"</string>
@@ -47,7 +46,7 @@
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"ဒီမလှုပ်ရှားမှု ကာလ နောက်မှာ နေ့ခင်းအိပ်မက်မှု စတင်သည်။ နေ့ခင်းအိပ်မက်ကို ရွေးမထားလျှင်၊ ပြကွက်ကို ပိတ်လိုက်မည်။"</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"မလှုပ်ရှားမှု <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> နောက်မှာ"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"နားရန် အချိန်"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"နေ့ခင်း အိပ်မက် စတင်ပြီး နောက် ဒီလောက် အချိန်ကြာလျှင် မျက်နှာပြင်သည် ပိတ်သွားမည်။"</string>
+    <string name="device_daydreams_screen_off_description" msgid="7699124270812914310">"မလှုပ်ရှားမှု ဒီကာလ နောက်မှာ မျက်နှာပြင် ပိတ်သွားမည်။"</string>
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> အိပ်မက် နောက်မှာ"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"မည်သည့်အကောင့်မှ ဘက်အာပ် ဒေတာကို လောလောဆယ်မှာ သိုလှောင်ခြင်း မပြုလုပ်ပါ။"</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +62,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"မရှိ"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"မနှောက်ယှက်ပါနှင့်"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"ဖွင့်ထားလျှင်၊ အကြောင်းကြားချက်များသည် ဆက်တင်များ ထဲမှာသာ ပေါ်လာကြမည်"</string>
-    <string name="select_title" msgid="7198726136224025927">"သင်၏ ADT-1 အတွက် အမည် တစ်ခု ရွေးရန်"</string>
-    <string name="select_description" msgid="5793523265011441398">"သင်၏ ဖုန်း၊ တက်ဘ က်၊ သို့မဟုတ် ကွန်ပျူတာလို အခြား ကိရိယာများဖြင့် ရယူသုံးရာတွင် သင်၏  ADT-1ကို ဖေါ်ပြပေးရန် အမည် တစ်ခုကို အသုံးပြုမည်။"</string>
+    <string name="select_title" msgid="2657901623249723536">"သင်၏ ^1 အတွက် အမည်ကို ရွေးပါ"</string>
+    <string name="select_description" msgid="4080602542483519716">"အမည် ရှိခြင်းက သင်၏ ^1 ကို သင်၏ ဖုန်း၊ တက်ဘလက်၊ သို့မဟုတ် ကွန်ပျူတာလို အခြား ကိရိယာများမှ သုံးမှုကို ပြသပေးမည်။."</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"ဧည့်ခန်း"</item>
     <item msgid="7887185726776968055">"မီဒီယာ အခန်း"</item>
@@ -75,8 +74,8 @@
     <item msgid="682313511953895794">"မီးဖိုချောင်"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"စိတ်ကြိုက် အမည်ကို ရိုက်ထည့်ရန်…"</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"ADT-1 ကို အမည်ပေးထား"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"\"^၁\" မှာ ဒီ ADT-1၏ အမည်ပါ။  သင်သည် အဲဒါကို ပြောင်းလိုပါသလား?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"ဒီ ^1 ကို အမည်ပေးထားပြီ"</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"\"^1\" မှာ ဒီ^2 ၏ အမည် ဖြစ်သည်။ သင် အဲဒါကို ပြောင်းလဲချင်ပါသလား?"</string>
     <string name="change_setting" msgid="199354038426145612">"ပြောင်းရန်"</string>
     <string name="keep_settings" msgid="549230720820096102">"မပြောင်းလဲပါနှင့်"</string>
     <string name="menu_help" msgid="2164687828212723531">"အကူအညီ"</string>
