@@ -70,6 +70,8 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
         super.onCreate(savedInstanceState);
         mPackageName = getIntent().getStringExtra(EXTRA_PACKAGE_NAME_KEY);
         mApplicationsState = ApplicationsState.getInstance(getApplication());
+        mSession = mApplicationsState.newSession(this);
+        mSession.resume();
         mAppInfo = new AppInfo(this, mApplicationsState.getEntry(mPackageName));
         mOpenManager = new OpenManager(this, mAppInfo);
         mForceStopManager = new ForceStopManager(this, mAppInfo);
@@ -79,8 +81,6 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
         mDefaultClearer = new DefaultClearer(this, mAppInfo);
         mCacheClearer = new CacheClearer(this, mAppInfo);
         mActionFragment = ActionFragment.newInstance(getActions());
-        mSession = mApplicationsState.newSession(this);
-        mSession.resume();
 
         setContentAndActionFragments(ContentFragment.newInstance(mAppInfo.getName(),
                 getString(R.string.device_apps),
