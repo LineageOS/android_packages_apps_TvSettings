@@ -80,11 +80,6 @@ public class WifiNetworksBrowseInfo extends BrowseInfoBase {
         mRows.put(SECOND_HEADER_ID, new ArrayObjectAdapter());
     }
 
-    @Override
-    public void refreshContent() {
-        init();
-    }
-
     public void onShutdown() {
         stopScanning();
         mIdToSsidMap.clear();

@@ -160,7 +160,7 @@ public class BrowseInfo extends BrowseInfoBase {
 
     private static final String PREF_KEY_ADD_ACCOUNT = "add_account";
     private static final String PREF_KEY_ADD_ACCESSORY = "add_accessory";
-    private static final String PREF_KEY_WIFI = "wifi";
+    private static final String PREF_KEY_WIFI = "network";
     private static final String PREF_KEY_DEVELOPER = "developer";
     private static final String PREF_KEY_INPUTS = "inputs";
 
@@ -179,12 +179,6 @@ public class BrowseInfo extends BrowseInfoBase {
     private boolean mDeveloperEnabled;
     private boolean mInputSettingNeeded;
 
-    private final Runnable refreshWifiCardRunnable = new Runnable() {
-        public void run() {
-            refreshWifiCard();
-        }
-    };
-
     BrowseInfo(Context context) {
         mContext = context;
         mAuthenticatorHelper = new AuthenticatorHelper();
@@ -197,11 +191,6 @@ public class BrowseInfo extends BrowseInfoBase {
         mPreferenceUtils = new PreferenceUtils(context);
         mDeveloperEnabled = mPreferenceUtils.isDeveloperEnabled();
         mInputSettingNeeded = isInputSettingNeeded();
-    }
-
-    @Override
-    public void refreshContent() {
-        init();
     }
 
     void init() {
@@ -307,15 +296,6 @@ public class BrowseInfo extends BrowseInfoBase {
         }
     }
 
-    private void refreshWifiCard() {
-        if (mWifiItem != null) {
-            int index = mWifiRow.indexOf(mWifiItem);
-            if (index >= 0) {
-                mWifiRow.notifyArrayItemRangeChanged(index, 1);
-            }
-        }
-    }
-
     void rebuildInfo() {
         init();
     }
@@ -359,8 +339,17 @@ public class BrowseInfo extends BrowseInfoBase {
         }
     }
 
-    public void updateWifi() {
-        mHandler.post(refreshWifiCardRunnable);
+    public void updateWifi(final boolean isEthernetAvailable) {
+        if (mWifiItem != null) {
+            int index = mWifiRow.indexOf(mWifiItem);
+            if (index >= 0) {
+                mWifiItem = new MenuItem.Builder().from(mWifiItem)
+                        .title(mContext.getString(isEthernetAvailable
+                                    ? R.string.connectivity_network : R.string.connectivity_wifi))
+                        .build();
+                mWifiRow.replace(index, mWifiItem);
+            }
+        }
     }
 
     private boolean isInputSettingNeeded() {

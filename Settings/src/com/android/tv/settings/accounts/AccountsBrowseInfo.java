@@ -64,11 +64,6 @@ public class AccountsBrowseInfo extends BrowseInfoBase {
         updateMenuItems(mAccountName);
     }
 
-    @Override
-    public void refreshContent() {
-        loadCacheItems();
-    }
-
     private void addBrowseHeader(int id, String title) {
         mHeaderItems.add(new HeaderItem(id, title, null));
     }
