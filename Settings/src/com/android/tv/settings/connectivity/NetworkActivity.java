@@ -328,6 +328,32 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         }
     };
 
+    LayoutGetter mWifiLayout = new LayoutGetter() {
+        public Layout get() {
+            return new Layout()
+                .add(new Static.Builder(mRes)
+                        .title(R.string.wifi_setting_available_networks)
+                        .build())
+                .add(mWifiShortListLayout)
+                .add(new Header.Builder(mRes)
+                        .title(R.string.wifi_setting_see_all)
+                        .build()
+                    .add(mWifiAllListLayout)
+                )
+                .add(new Static.Builder(mRes)
+                        .title(R.string.wifi_setting_header_other_options)
+                        .build())
+                .add(new Action.Builder(mRes,
+                         new Intent(NetworkActivity.this, WpsConnectionActivity.class))
+                        .title(R.string.wifi_setting_other_options_wps)
+                        .build())
+                .add(new Action.Builder(mRes,
+                        new Intent(NetworkActivity.this, AddWifiNetworkActivity.class))
+                        .title(R.string.wifi_setting_other_options_add_network)
+                        .build());
+        }
+    };
+
     private void addWifiConnectedHeader(Layout layout, String SSID, int iconResId) {
         layout
             .add(new Header.Builder(mRes)
@@ -479,59 +505,41 @@ public class NetworkActivity extends SettingsLayoutActivity implements
 
     private final WifiListLayout mWifiAllListLayout = new WifiListLayout(false);
 
-    private final LayoutGetter mNetworkLayoutGetter = new LayoutGetter() {
-        @Override
-        public Layout get() {
-            Layout layout = new Layout()
-                    .add(new Header.Builder(mRes).title(R.string.connectivity_wifi)
-                            .contentIconRes(R.drawable.ic_settings_wifi_4)
-                            .description(mWifiConnectedDescription).build()
-                        .add(new Static.Builder(mRes)
-                                .title(R.string.wifi_setting_available_networks)
-                                .build())
-                        .add(mWifiShortListLayout)
-                        .add(new Header.Builder(mRes)
-                                .title(R.string.wifi_setting_see_all)
-                                .build()
-                            .add(mWifiAllListLayout)
-                        )
-                        .add(new Static.Builder(mRes)
-                                .title(R.string.wifi_setting_header_other_options)
-                                .build())
-                        .add(new Action.Builder(mRes,
-                                 new Intent(NetworkActivity.this, WpsConnectionActivity.class))
-                                .title(R.string.wifi_setting_other_options_wps)
-                                .build())
-                        .add(new Action.Builder(mRes,
-                                new Intent(NetworkActivity.this, AddWifiNetworkActivity.class))
-                                .title(R.string.wifi_setting_other_options_add_network)
-                                .build()));
-
-            if (mConnectivityListener.isEthernetAvailable()) {
-                layout
-                    .add(new Header.Builder(mRes)
-                            .title(R.string.connectivity_ethernet)
-                            .contentIconRes(R.drawable.ic_settings_ethernet)
-                            .description(mEthernetConnectedDescription)
-                            .build()
-                        .add(mEthernetLayout));
-            }
-
-            return layout;
-        }
-    };
-
     @Override
     public Layout createLayout() {
-        return
-            new Layout()
+        // Note: This only updates the layout the activity is loaded,
+        //       not if the user plugs/unplugs in an adapter.
+        if (mConnectivityListener.isEthernetAvailable()) {
+            return new Layout()
                 .breadcrumb(getString(R.string.header_category_device))
                 .add(new Header.Builder(mRes)
                         .icon(R.drawable.ic_settings_wifi_4)
                         .title(R.string.connectivity_network)
                         .description(mWifiConnectedDescription)
                         .build()
-                    .add(mNetworkLayoutGetter));
+                    .add(new Header.Builder(mRes)
+                            .title(R.string.connectivity_wifi)
+                            .contentIconRes(R.drawable.ic_settings_wifi_4)
+                            .description(mWifiConnectedDescription)
+                            .build()
+                        .add(mWifiLayout))
+                    .add(new Header.Builder(mRes)
+                            .title(R.string.connectivity_ethernet)
+                            .contentIconRes(R.drawable.ic_settings_ethernet)
+                            .description(mEthernetConnectedDescription)
+                            .build()
+                        .add(mEthernetLayout)));
+        } else {
+            // Only Wifi is available.
+            return new Layout()
+                .breadcrumb(getString(R.string.header_category_device))
+                .add(new Header.Builder(mRes)
+                        .icon(R.drawable.ic_settings_wifi_4)
+                        .title(R.string.connectivity_wifi)
+                        .description(mWifiConnectedDescription)
+                        .build()
+                    .add(mWifiLayout));
+        }
     }
 
     @Override

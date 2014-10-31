@@ -77,6 +77,10 @@ public class MainSettings extends MenuActivity implements OnAccountsUpdateListen
         sInstance = this;
         updateAccessories();
         mBrowseInfo.checkForDeveloperOptionUpdate();
+
+        // Update network item forcefully here
+        // because mBrowseInfo doesn't have information regarding Ethernet availability.
+        mBrowseInfo.updateWifi(mConnectivityListener.isEthernetAvailable());
     }
 
     @Override
@@ -100,7 +104,7 @@ public class MainSettings extends MenuActivity implements OnAccountsUpdateListen
 
     @Override
     public void onConnectivityChange(Intent intent) {
-        mBrowseInfo.updateWifi();
+        mBrowseInfo.updateWifi(mConnectivityListener.isEthernetAvailable());
     }
 
     @Override
