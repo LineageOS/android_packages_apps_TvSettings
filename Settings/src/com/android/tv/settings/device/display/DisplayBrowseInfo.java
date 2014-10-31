@@ -45,11 +45,6 @@ public class DisplayBrowseInfo extends BrowseInfoBase {
         mRows.put(HEADER_ID, mRow);
     }
 
-    @Override
-    public void refreshContent() {
-        init();
-    }
-
     void init() {
         mRow.clear();
 

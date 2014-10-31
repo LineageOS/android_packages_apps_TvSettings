@@ -69,13 +69,6 @@ public class AppsBrowseInfo extends BrowseInfoBase implements ApplicationsState.
     }
 
     @Override
-    public void refreshContent() {
-        mHeaderItems.clear();
-        loadBrowseHeaders();
-        updateAppList();
-    }
-
-    @Override
     public void onRunningStateChanged(boolean running) {
     }
 
