@@ -53,44 +53,67 @@ import java.util.List;
  * Activity to manage network settings.
  */
 public class NetworkActivity extends SettingsLayoutActivity implements
-        ConnectivityListener.Listener {
+        ConnectivityListener.Listener, ConnectivityListener.WifiNetworkListener {
 
     private static final boolean DEBUG = false;
     private static final String TAG = "NetworkActivity";
     private static final int REQUEST_CODE_ADVANCED_OPTIONS = 1;
-    private static final int WIFI_REFRESH_INTERVAL_CAP_MILLIS = 15 * 1000;
+    private static final int WIFI_SCAN_INTERVAL_CAP_MILLIS = 10 * 1000;
+    private static final int WIFI_UI_REFRESH_INTERVAL_CAP_MILLIS = 15 * 1000;
 
     private ConnectivityListener mConnectivityListener;
     private Resources mRes;
     private Handler mHandler = new Handler();
+    private final Runnable mRefreshWifiAccessPoints = new Runnable() {
+        @Override
+        public void run() {
+            mConnectivityListener.scanWifiAccessPoints(NetworkActivity.this);
+            mHandler.removeCallbacks(mRefreshWifiAccessPoints);
+            mHandler.postDelayed(mRefreshWifiAccessPoints, WIFI_SCAN_INTERVAL_CAP_MILLIS);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         mRes = getResources();
         mConnectivityListener = new ConnectivityListener(this, this);
-        mConnectivityListener.start();
         super.onCreate(savedInstanceState);
     }
 
     @Override
-    protected void onDestroy(){
-        super.onDestroy();
-        mConnectivityListener.stop();
+    public void onResume() {
+        mConnectivityListener.start();
+        mHandler.removeCallbacks(mRefreshWifiAccessPoints);
+        mHandler.post(mRefreshWifiAccessPoints);
+        onConnectivityChange(null);
+        super.onResume();
     }
 
+    @Override
+    protected void onPause() {
+        mHandler.removeCallbacks(mRefreshWifiAccessPoints);
+        mConnectivityListener.stop();
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy(){
+        mConnectivityListener = null;
+        super.onDestroy();
+    }
+
+    // ConnectivityListener.Listener overrides.
     @Override
     public void onConnectivityChange(Intent intent) {
         mEthernetConnectedDescription.refreshView();
         mWifiConnectedDescription.refreshView();
-
-        mWifiShortListLayout.onWifiListInvalidated();
-        mWifiAllListLayout.onWifiListInvalidated();
+        onWifiListChanged();
     }
 
     @Override
-    public void onResume() {
-        onConnectivityChange(null);
-        super.onResume();
+    public void onWifiListChanged() {
+        mWifiShortListLayout.onWifiListChanged();
+        mWifiAllListLayout.onWifiListChanged();
     }
 
     StringGetter mEthernetConnectedDescription = new StringGetter() {
@@ -222,46 +245,6 @@ public class NetworkActivity extends SettingsLayoutActivity implements
 
     private final Context mContext = this;
 
-    private int getCurrentNetworkIconResourceId(
-            ScanResult scanResult, int signalLevel) {
-        int resourceId = 0;
-        if (scanResult != null) {
-            WifiSecurity security = WifiSecurity.getSecurity(scanResult);
-            if (security.isOpen()) {
-                switch (signalLevel) {
-                    case 0:
-                        resourceId = R.drawable.ic_settings_wifi_active_1;
-                        break;
-                    case 1:
-                        resourceId = R.drawable.ic_settings_wifi_active_2;
-                        break;
-                    case 2:
-                        resourceId = R.drawable.ic_settings_wifi_active_3;
-                        break;
-                    case 3:
-                        resourceId = R.drawable.ic_settings_wifi_active_4;
-                        break;
-                }
-            } else {
-                switch (signalLevel) {
-                    case 0:
-                        resourceId = R.drawable.ic_settings_wifi_secure_active_1;
-                        break;
-                    case 1:
-                        resourceId = R.drawable.ic_settings_wifi_secure_active_2;
-                        break;
-                    case 2:
-                        resourceId = R.drawable.ic_settings_wifi_secure_active_3;
-                        break;
-                    case 3:
-                        resourceId = R.drawable.ic_settings_wifi_secure_active_4;
-                        break;
-                }
-            }
-        }
-        return resourceId;
-    }
-
     private String getSignalStrength() {
         String[] signalLevels = mRes.getStringArray(R.array.wifi_signal_strength);
         int strength = mConnectivityListener.getWifiSignalStrength(signalLevels.length);
@@ -378,8 +361,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
             );
     }
 
-    private class WifiListLayout extends LayoutGetter implements
-            ConnectivityListener.WifiNetworkListener {
+    private class WifiListLayout extends LayoutGetter {
         private final boolean mTop3EntriesOnly;
         private String mSelectedTitle;
         private long mLastWifiRefresh = 0;
@@ -401,24 +383,20 @@ public class NetworkActivity extends SettingsLayoutActivity implements
 
         @Override
         public Layout get() {
-            mConnectivityListener.startScanningWifi(this);
             mLastWifiRefresh = SystemClock.elapsedRealtime();
             mHandler.removeCallbacks(mRefreshViewRunnable);
             return initAvailableWifiNetworks(mTop3EntriesOnly, mSelectedTitle).
                     setSelectedByTitle(mSelectedTitle);
         }
 
-        @Override
-        public void onMovedOffScreen() {
-            mHandler.removeCallbacks(mRefreshViewRunnable);
-            mConnectivityListener.stopScanningWifi(this);
-        }
-
-        @Override
+        /**
+         * Wifi network list has changed and an eventual refresh of the UI is required.
+         * Rate limit the UI refresh to once per WIFI_UI_REFRESH_INTERVAL_CAP_MILLIS.
+         */
         public void onWifiListChanged() {
             long now = SystemClock.elapsedRealtime();
             long millisToNextRefreshView =
-                    WIFI_REFRESH_INTERVAL_CAP_MILLIS - now + mLastWifiRefresh;
+                    WIFI_UI_REFRESH_INTERVAL_CAP_MILLIS - now + mLastWifiRefresh;
             mHandler.removeCallbacks(mRefreshViewRunnable);
             mHandler.postDelayed(mRefreshViewRunnable, millisToNextRefreshView);
         }
@@ -428,8 +406,8 @@ public class NetworkActivity extends SettingsLayoutActivity implements
          * networks is required.
          */
         public void onWifiListInvalidated() {
-            mLastWifiRefresh = 0;
-            onWifiListChanged();
+            mHandler.removeCallbacks(mRefreshViewRunnable);
+            mHandler.post(mRefreshViewRunnable);
         }
 
         /**
