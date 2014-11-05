@@ -30,6 +30,7 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
@@ -42,6 +43,7 @@ import com.android.tv.settings.dialog.Layout.Status;
 import com.android.tv.settings.dialog.Layout.Static;
 import com.android.tv.settings.dialog.Layout.StringGetter;
 import com.android.tv.settings.dialog.Layout.LayoutGetter;
+import com.android.tv.settings.dialog.Layout.SelectionGroup;
 import com.android.tv.settings.R;
 
 import java.util.ArrayList;
@@ -61,9 +63,19 @@ public class NetworkActivity extends SettingsLayoutActivity implements
     private static final int WIFI_SCAN_INTERVAL_CAP_MILLIS = 10 * 1000;
     private static final int WIFI_UI_REFRESH_INTERVAL_CAP_MILLIS = 15 * 1000;
 
+    private static final int NUMBER_SIGNAL_LEVELS = 4;
+    private static final int ACTION_WIFI_FORGET_NETWORK = 1;
+    private static final int ACTION_WIFI_PROXY_SETTINGS = 4;
+    private static final int ACTION_WIFI_IP_SETTINGS = 5;
+    private static final int ACTION_ETHERNET_PROXY_SETTINGS = 6;
+    private static final int ACTION_ETHERNET_IP_SETTINGS = 7;
+    private static final int ACTION_SCAN_WIFI_ON = 8;
+    private static final int ACTION_SCAN_WIFI_OFF = 9;
+
     private ConnectivityListener mConnectivityListener;
     private Resources mRes;
     private Handler mHandler = new Handler();
+
     private final Runnable mRefreshWifiAccessPoints = new Runnable() {
         @Override
         public void run() {
@@ -73,10 +85,33 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         }
     };
 
+    private Runnable mSetScanAlways = new Runnable () {
+        @Override
+        public void run() {
+            int setting = mAlwaysScanWifi.getId() == ACTION_SCAN_WIFI_ON ? 1 : 0;
+            Settings.Global.putInt(getContentResolver(),
+                        Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, setting);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         mRes = getResources();
         mConnectivityListener = new ConnectivityListener(this, this);
+        mConnectivityListener.start();
+
+        mAlwaysScanWifi = new SelectionGroup(getResources(), new int[][] {
+            { R.string.on, ACTION_SCAN_WIFI_ON },
+            { R.string.off, ACTION_SCAN_WIFI_OFF } });
+        int scanAlwaysAvailable = 0;
+        try {
+            scanAlwaysAvailable = Settings.Global.getInt(getContentResolver(),
+                    Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE);
+        } catch (Settings.SettingNotFoundException e) {
+        }
+        mAlwaysScanWifi.setSelected(scanAlwaysAvailable == 1 ? ACTION_SCAN_WIFI_ON :
+                ACTION_SCAN_WIFI_OFF);
+
         super.onCreate(savedInstanceState);
     }
 
@@ -236,13 +271,6 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         }
     };
 
-    private static final int NUMBER_SIGNAL_LEVELS = 4;
-    private static final int ACTION_WIFI_FORGET_NETWORK = 1;
-    private static final int ACTION_WIFI_PROXY_SETTINGS = 4;
-    private static final int ACTION_WIFI_IP_SETTINGS = 5;
-    private static final int ACTION_ETHERNET_PROXY_SETTINGS = 6;
-    private static final int ACTION_ETHERNET_IP_SETTINGS = 7;
-
     private final Context mContext = this;
 
     private String getSignalStrength() {
@@ -311,6 +339,8 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         }
     };
 
+    private SelectionGroup mAlwaysScanWifi;
+
     LayoutGetter mWifiLayout = new LayoutGetter() {
         public Layout get() {
             return new Layout()
@@ -333,7 +363,14 @@ public class NetworkActivity extends SettingsLayoutActivity implements
                 .add(new Action.Builder(mRes,
                         new Intent(NetworkActivity.this, AddWifiNetworkActivity.class))
                         .title(R.string.wifi_setting_other_options_add_network)
-                        .build());
+                        .build())
+                .add(new Header.Builder(mRes)
+                        .title(R.string.wifi_setting_always_scan)
+                        .description(mAlwaysScanWifi)
+                        .detailedDescription(R.string.wifi_setting_always_scan_context)
+                        .build()
+                    .add(mAlwaysScanWifi)
+                );
         }
     };
 
@@ -577,6 +614,10 @@ public class NetworkActivity extends SettingsLayoutActivity implements
                         REQUEST_CODE_ADVANCED_OPTIONS);
                 break;
             }
+            case ACTION_SCAN_WIFI_ON:
+            case ACTION_SCAN_WIFI_OFF:
+                mHandler.post(mSetScanAlways);
+                break;
         }
     }
 

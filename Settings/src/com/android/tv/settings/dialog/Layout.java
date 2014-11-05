@@ -76,6 +76,7 @@ public class Layout implements Parcelable {
         private int mViewType;
         private boolean mChecked = false;
         private Drawable mIcon = null;
+        private int mSelectionIndex;
 
         public Node getNode() {
             return mNode;
@@ -127,6 +128,22 @@ public class Layout implements Parcelable {
 
         public int getViewType() {
             return mViewType;
+        }
+
+        public boolean isRadio() {
+            return mNode instanceof SelectionGroup;
+        }
+
+        public int getRadioId() {
+            return ((SelectionGroup) mNode).getId(mSelectionIndex);
+        }
+
+        public boolean setRadioSelectedIndex() {
+            if (((SelectionGroup) mNode).setSelectedIndex(mSelectionIndex)) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
         public boolean isGoBack() {
@@ -184,6 +201,15 @@ public class Layout implements Parcelable {
                 mIcon = a.getIcon();
                 mChecked = a.isChecked();
             }
+        }
+
+        public LayoutRow(final SelectionGroup selectionGroup, int selectedIndex) {
+            mNode = selectionGroup;
+            mViewType = VIEW_TYPE_ACTION;
+            mSelectionIndex = selectedIndex;
+            mTitle = selectionGroup.getTitle(selectedIndex);
+            mChecked = selectionGroup.getChecked(selectedIndex);
+            mEnabled = true;
         }
     }
 
@@ -293,6 +319,93 @@ public class Layout implements Parcelable {
         }
     }
 
+    /**
+     * A list of "select one of" radio style buttons.
+     */
+    public static class SelectionGroup extends LayoutTreeNode {
+
+        String mTitle[];
+        int mId[];
+        int mSelectedIndex;
+
+        public SelectionGroup(Resources res, int param[][]) {
+            mSelectedIndex = -1;
+            mTitle = new String[param.length];
+            mId = new int[param.length];
+            for (int i = 0; i < param.length; ++i) {
+                mTitle[i] = res.getString(param[i][0]);
+                mId[i] = param[i][1];
+            }
+        }
+
+        @Override
+        public String getTitle() {
+            if (mSelectedIndex >= 0 && mSelectedIndex < mTitle.length) {
+                return mTitle[mSelectedIndex];
+            } else {
+                return "";
+            }
+        }
+
+        public String getTitle(int index) {
+            return mTitle[index];
+        }
+
+        public boolean getChecked(int index) {
+            return mSelectedIndex == index;
+        }
+
+        public int size() {
+            return mTitle.length;
+        }
+
+        public void setSelected(int id) {
+            mSelectedIndex = -1;
+            for (int index = 0, dim = mId.length; index < dim; ++index) {
+                if (mId[index] == id) {
+                    mSelectedIndex = index;
+                    break;
+                }
+            }
+        }
+
+        public boolean setSelectedIndex(int selectedIndex) {
+            if (mSelectedIndex != selectedIndex && selectedIndex < mId.length) {
+                mSelectedIndex = selectedIndex;
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public int getId(int index) {
+            return mId[index];
+        }
+
+        public int getId() {
+            return mId[mSelectedIndex];
+        }
+    };
+
+    /**
+     * Implementation of "StringGetter" that returns a string describing the currently selected
+     * item in a SelectionGroup.
+     */
+    public static class SelectionGroupStringGetter extends StringGetter {
+
+        private SelectionGroup mSelectionGroup;
+
+        @Override
+        public String get() {
+            return mSelectionGroup.getTitle();
+        }
+
+        public SelectionGroupStringGetter(SelectionGroup selectionGroup) {
+            mSelectionGroup = selectionGroup;
+        }
+
+    };
+
     private static class Appearence {
         private Drawable mIcon;
         private DrawableGetter mIconGetter;
@@ -377,6 +490,12 @@ public class Layout implements Parcelable {
                 return this;
             }
 
+            public Builder description(SelectionGroup selectionGroup) {
+                mHeader.mAppearence.mDescriptionGetter = new SelectionGroupStringGetter(
+                        selectionGroup);
+                return this;
+            }
+
             public Builder title(String title) {
                 mHeader.mAppearence.mTitle = title;
                 return this;
@@ -439,7 +558,7 @@ public class Layout implements Parcelable {
         private Bundle mActionData;
         private boolean mDefaultSelection = false;
 
-        private Action(int id) {
+        public Action(int id) {
             mActionId = id;
         }
 
@@ -834,6 +953,11 @@ public class Layout implements Parcelable {
                     mNavigationCursor.mSelectedIndex = mLayoutRows.size() + initialIndex;
                 }
                 addNodeListToLayoutRows(layout.mChildren);
+            } else if (node instanceof SelectionGroup) {
+                SelectionGroup sg = (SelectionGroup) node;
+                for (int i = 0; i < sg.size(); ++i) {
+                    mLayoutRows.add(new LayoutRow(sg, i));
+                }
             } else {
                 if (node instanceof Action && ((Action) node).mDefaultSelection) {
                     mNavigationCursor.mSelectedIndex = mLayoutRows.size();

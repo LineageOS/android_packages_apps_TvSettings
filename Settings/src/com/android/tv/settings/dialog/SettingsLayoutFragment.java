@@ -376,6 +376,16 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
     void onRowViewClicked(Layout.LayoutRow layoutRow) {
         if (layoutRow.isGoBack()) {
             onBackPressed();
+        } else if (layoutRow.isRadio()) {
+            if (layoutRow.setRadioSelectedIndex()) {
+                // SelectionGroup selection has changed, notify client.
+                Listener actionListener = (Listener) getActivity();
+                if (actionListener != null) {
+                    // Create a temporary Action to return the id.
+                    actionListener.onActionClicked(new Layout.Action(layoutRow.getRadioId()));
+                }
+            }
+            onBackPressed();
         } else {
             Layout.Action action = layoutRow.getUserAction();
             if (action != null) {
