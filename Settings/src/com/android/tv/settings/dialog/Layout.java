@@ -249,6 +249,8 @@ public class Layout implements Parcelable {
     }
 
     public abstract static class LayoutGetter extends LayoutTreeNode {
+        // Layout manages this listener; removing it when this node is not visible and setting it
+        // when it is.  Users are expected to set the listener with Layout.setRefreshViewListener.
         private LayoutNodeRefreshListener mListener;
 
         public void setListener(LayoutNodeRefreshListener listener) {
@@ -257,7 +259,6 @@ public class Layout implements Parcelable {
 
         public void notVisible() {
             mListener = null;
-            onMovedOffScreen();
         }
 
         public abstract Layout get();
@@ -268,14 +269,6 @@ public class Layout implements Parcelable {
             } else {
                 return null;
             }
-        }
-
-        /**
-         * Notification to client that the list containting the contents of this getter is no longer
-         * visible and background tasks to update the getter contents should be stopped until the
-         * next "get()" call.
-         */
-        public void onMovedOffScreen() {
         }
 
         /**
