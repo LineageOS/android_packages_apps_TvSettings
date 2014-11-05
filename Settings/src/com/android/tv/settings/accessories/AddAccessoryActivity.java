@@ -304,7 +304,6 @@ public class AddAccessoryActivity extends DialogActivity
     }
 
     @Override
-
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK || keyCode == KeyEvent.KEYCODE_HOME) {
             if (mPairingBluetooth && !mDone) {
@@ -631,7 +630,7 @@ public class AddAccessoryActivity extends DialogActivity
                 String state = "?";
                 switch (status) {
                     case InputPairer.STATUS_NONE:
-                        state = "InputPairer.STATUS_NONEi";
+                        state = "InputPairer.STATUS_NONE";
                         break;
                     case InputPairer.STATUS_SCANNING:
                         state = "InputPairer.STATUS_SCANNING";
@@ -715,6 +714,9 @@ public class AddAccessoryActivity extends DialogActivity
                 case InputPairer.STATUS_ERROR:
                     mPairingSuccess = false;
                     setPairingBluetooth(false);
+                    if (mNoInputMode) {
+                        clearDeviceList();
+                    }
                     break;
             }
 
@@ -722,6 +724,11 @@ public class AddAccessoryActivity extends DialogActivity
             mCurrentTargetStatus = getMessageForStatus(status);
             mMsgHandler.sendEmptyMessage(MSG_UPDATE_VIEW);
         }
+    }
+
+    private void clearDeviceList() {
+        mBtDevices.clear();
+        mBtPairer.clearDeviceList();
     }
 
     private void stopActivity() {
