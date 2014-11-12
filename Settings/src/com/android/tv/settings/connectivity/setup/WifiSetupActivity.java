@@ -455,7 +455,7 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
             mConfiguration.hiddenSSID = true;
             addPage(WifiFormPageType.ENTER_SSID);
         } else if (choiceChosen(chooseNetworkPage, R.string.wps_network)) {
-            addPage(WifiFormPageType.WPS, WpsConnectionActivity.createIntent(this, 1)
+            addPage(WifiFormPageType.WPS, new Intent(this, WpsConnectionActivity.class)
                     .putExtras(getIntent().getExtras()));
         } else {
             ScanResult scanResult = getListItem(chooseNetworkPage).getScanResult();
