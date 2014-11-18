@@ -62,7 +62,7 @@ public class ConnectivityListener {
     private final Listener mListener;
     private final IntentFilter mFilter;
     private final BroadcastReceiver mReceiver;
-    private boolean mIsRegistered;
+    private boolean mStarted;
 
     private final ConnectivityManager mConnectivityManager;
     private final WifiManager mWifiManager;
@@ -131,22 +131,22 @@ public class ConnectivityListener {
     }
 
     public void start() {
-        if (!mIsRegistered) {
-            boolean hasChanged = updateConnectivityStatus();
+        if (!mStarted) {
+            mStarted = true;
+            updateConnectivityStatus();
             mContext.registerReceiver(mReceiver, mFilter);
-            mIsRegistered = true;
+            mContext.registerReceiver(mWifiReceiver, new IntentFilter(
+                    WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         }
-        mContext.registerReceiver(mWifiReceiver, new IntentFilter(
-                WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
     }
 
     public void stop() {
-        if (mIsRegistered) {
+        if (mStarted) {
+            mStarted = false;
             mContext.unregisterReceiver(mReceiver);
-            mIsRegistered = false;
+            mContext.unregisterReceiver(mWifiReceiver);
+            mWifiListener = null;
         }
-        mContext.unregisterReceiver(mWifiReceiver);
-        mWifiListener = null;
     }
 
     /**
