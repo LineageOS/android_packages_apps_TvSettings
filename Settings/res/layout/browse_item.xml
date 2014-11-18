@@ -32,7 +32,7 @@
         android:scaleType="fitCenter"
         tools:ignore="ContentDescription" />
 
-    <TextView
+    <com.android.tv.settings.widget.ResizingTextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
