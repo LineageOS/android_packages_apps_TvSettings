@@ -581,8 +581,6 @@
     <string name="system_time">Time</string>
     <!-- Title for Set Date in System Settings Date Time [CHAR LIMIT=50] -->
     <string name="system_set_date">Set date</string>
-    <!-- Title for Set date format in System Settings Date Time [CHAR LIMIT=50] -->
-    <string name="system_choose_date_format">Choose date format</string>
     <!-- Title for Set Time in System Settings Date Time [CHAR LIMIT=50] -->
     <string name="system_set_time">Set time</string>
     <!-- Title for Set Time Zone in System Settings Date Time [CHAR LIMIT=50] -->
@@ -861,14 +859,6 @@
     <!-- Description for profile GPU rendering in System Settings Developer options [CHAR LIMIT=100] -->
     <string name="system_desc_profile_gpu_rendering">Measure rendering time in adb shell dumpsys gfxinfo</string>
 
-    <!-- There is a setting to control the format of dates displayed throughout the system.  This is in the Date & Time Settings screen.  These will be adjusted to use punctuation appropriate to the user's locale. -->
-    <string-array name="date_format_values" translatable="false">
-        <!-- The blank item means to use whatever the locale calls for. -->
-        <item></item>
-        <item>MM-dd-yyyy</item>
-        <item>dd-MM-yyyy</item>
-        <item>yyyy-MM-dd</item>
-    </string-array>
     <!-- The option in the date-format picker for using the normal format
          called for by the user's locale. -->
     <string name="normal_date_format">Regional (<xliff:g id="date" example="12-31-2009">%s</xliff:g>)</string>
