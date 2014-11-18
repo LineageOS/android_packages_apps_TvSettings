@@ -77,6 +77,9 @@ public class NetworkActivity extends SettingsLayoutActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         mRes = getResources();
         mConnectivityListener = new ConnectivityListener(this, this);
+        // The ConectivityListenter must be started before calling "super.OnCreate(.)" to ensure
+        // that connectivity status is available before the layout is constructed.
+        mConnectivityListener.start();
         super.onCreate(savedInstanceState);
     }
 
@@ -451,11 +454,6 @@ public class NetworkActivity extends SettingsLayoutActivity implements
                 for (ScanResult network : displayList) {
                     if (network != null) {
                         WifiSecurity security = WifiSecurity.getSecurity(network);
-
-                        String networkDescription =
-                            security.isOpen() ? "" : security.getName(mContext);
-                        Intent intent =
-                            WifiConnectionActivity.createIntent(mContext, network, security);
                         int signalLevel = WifiManager.calculateSignalLevel(
                                 network.level, NUMBER_SIGNAL_LEVELS);
                         int imageResourceId = getNetworkIconRes(security.isOpen(), signalLevel);
@@ -463,6 +461,10 @@ public class NetworkActivity extends SettingsLayoutActivity implements
                         if (isConnected) {
                             addWifiConnectedHeader(layout, network.SSID, imageResourceId);
                         } else {
+                            Intent intent =
+                                WifiConnectionActivity.createIntent(mContext, network, security);
+                            String networkDescription =
+                                security.isOpen() ? "" : security.getName(mContext);
                             layout.add(new Action.Builder(mRes, intent)
                                     .title(network.SSID)
                                     .icon(imageResourceId)
