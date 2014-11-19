@@ -43,7 +43,6 @@ import android.os.Parcelable;
 import android.support.v17.leanback.R;
 import android.support.v17.leanback.widget.VerticalGridView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,7 +66,7 @@ import com.android.tv.settings.util.AccessibilityHelper;
  */
 public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNodeRefreshListener {
 
-    private static final String TAG_LEAN_BACK_DIALOG_FRAGMENT = "leanBackSettingsLayoutFragment";
+    public static final String TAG_LEAN_BACK_DIALOG_FRAGMENT = "leanBackSettingsLayoutFragment";
     private static final String EXTRA_CONTENT_TITLE = "title";
     private static final String EXTRA_CONTENT_BREADCRUMB = "breadcrumb";
     private static final String EXTRA_CONTENT_DESCRIPTION = "description";
@@ -76,7 +75,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
     private static final String EXTRA_CONTENT_ICON_BITMAP = "iconBitmap";
     private static final String EXTRA_CONTENT_ICON_BACKGROUND = "iconBackground";
     private static final String EXTRA_ACTION_NAME = "name";
-    private static final String EXTRA_ACTION_LAYOUT = "layout";
     private static final String EXTRA_ACTION_SELECTED_INDEX = "selectedIndex";
     private static final String EXTRA_ENTRY_TRANSITION_PERFORMED = "entryTransitionPerformed";
     private static final int ANIMATION_FRAGMENT_ENTER = 1;
@@ -107,7 +105,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
         private Uri mIconUri;
         private Bitmap mIconBitmap;
         private int mIconBackgroundColor = Color.TRANSPARENT;
-        private Layout mLayout;
         private String mName;
 
         public SettingsLayoutFragment build() {
@@ -121,8 +118,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
             args.putParcelable(EXTRA_CONTENT_ICON_URI, mIconUri);
             args.putParcelable(EXTRA_CONTENT_ICON_BITMAP, mIconBitmap);
             args.putInt(EXTRA_CONTENT_ICON_BACKGROUND, mIconBackgroundColor);
-            args.putParcelable(EXTRA_ACTION_LAYOUT, mLayout);
-            mLayout.setRefreshViewListener(fragment);
             args.putString(EXTRA_ACTION_NAME, mName);
             fragment.setArguments(args);
             return fragment;
@@ -160,11 +155,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
 
         public Builder iconBackgroundColor(int iconBackgroundColor) {
             mIconBackgroundColor = iconBackgroundColor;
-            return this;
-        }
-
-        public Builder layout(Layout layout) {
-            mLayout = layout;
             return this;
         }
 
@@ -242,7 +232,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        android.util.Log.v("SettingsLayoutFragment", "onCreate");
         super.onCreate(savedInstanceState);
         Bundle state = (savedInstanceState != null) ? savedInstanceState : getArguments();
         mTitle = state.getString(EXTRA_CONTENT_TITLE);
@@ -252,7 +241,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
         mIconUri = state.getParcelable(EXTRA_CONTENT_ICON_URI);
         mIconBitmap = state.getParcelable(EXTRA_CONTENT_ICON_BITMAP);
         mIconBackgroundColor = state.getInt(EXTRA_CONTENT_ICON_BACKGROUND, Color.TRANSPARENT);
-        mLayout = state.getParcelable(EXTRA_ACTION_LAYOUT);
         mName = state.getString(EXTRA_ACTION_NAME);
         mSelectedIndex = state.getInt(EXTRA_ACTION_SELECTED_INDEX, -1);
         mEntryTransitionPerformed = state.getBoolean(EXTRA_ENTRY_TRANSITION_PERFORMED, false);
@@ -296,7 +284,6 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
         outState.putParcelable(EXTRA_CONTENT_ICON_URI, mIconUri);
         outState.putParcelable(EXTRA_CONTENT_ICON_BITMAP, mIconBitmap);
         outState.putInt(EXTRA_CONTENT_ICON_BACKGROUND, mIconBackgroundColor);
-        outState.putParcelable(EXTRA_ACTION_LAYOUT, mLayout);
         outState.putInt(EXTRA_ACTION_SELECTED_INDEX,
                 (mListView != null) ? mListView.getSelectedPosition() : -1);
         outState.putString(EXTRA_ACTION_NAME, mName);
@@ -310,6 +297,11 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
             mEntryTransitionPerformed = true;
             performEntryTransition();
         }
+    }
+
+    public void setLayout(Layout layout) {
+        mLayout = layout;
+        mLayout.setRefreshViewListener(this);
     }
 
     // TODO refactor to get this call as the result of a callback from the Layout.
