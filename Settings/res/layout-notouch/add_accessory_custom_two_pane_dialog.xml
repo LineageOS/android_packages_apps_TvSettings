@@ -30,8 +30,8 @@
         <FrameLayout android:id="@+id/content_fragment"
             android:layout_width="576dp"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/action_fragment"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/action_fragment"
             />
     </RelativeLayout>
 </FrameLayout>
