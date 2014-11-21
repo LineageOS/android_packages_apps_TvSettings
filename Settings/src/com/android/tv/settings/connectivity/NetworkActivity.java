@@ -32,7 +32,6 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings;
 import android.text.TextUtils;
-import android.util.Log;
 import android.util.Pair;
 
 import com.android.tv.settings.dialog.SettingsLayoutActivity;
@@ -57,8 +56,6 @@ import java.util.List;
 public class NetworkActivity extends SettingsLayoutActivity implements
         ConnectivityListener.Listener, ConnectivityListener.WifiNetworkListener {
 
-    private static final boolean DEBUG = false;
-    private static final String TAG = "NetworkActivity";
     private static final int REQUEST_CODE_ADVANCED_OPTIONS = 1;
     private static final int WIFI_SCAN_INTERVAL_CAP_MILLIS = 10 * 1000;
     private static final int WIFI_UI_REFRESH_INTERVAL_CAP_MILLIS = 15 * 1000;
