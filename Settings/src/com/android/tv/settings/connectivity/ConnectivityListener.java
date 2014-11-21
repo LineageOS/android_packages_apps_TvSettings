@@ -77,6 +77,12 @@ public class ConnectivityListener {
             }
         }
     };
+    private final EthernetManager.Listener mEthernetListener = new EthernetManager.Listener() {
+        @Override
+        public void onAvailabilityChanged(boolean isAvailable) {
+            mListener.onConnectivityChange(null);
+        }
+    };
 
     public static class ConnectivityStatus {
         public static final int NETWORK_NONE = 1;
@@ -130,6 +136,10 @@ public class ConnectivityListener {
         };
     }
 
+    /**
+     * Starts {@link ConnectivityListener}.
+     * This should be called only from main thread.
+     */
     public void start() {
         if (!mStarted) {
             mStarted = true;
@@ -137,15 +147,21 @@ public class ConnectivityListener {
             mContext.registerReceiver(mReceiver, mFilter);
             mContext.registerReceiver(mWifiReceiver, new IntentFilter(
                     WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
+            mEthernetManager.addListener(mEthernetListener);
         }
     }
 
+    /**
+     * Stops {@link ConnectivityListener}.
+     * This should be called only from main thread.
+     */
     public void stop() {
         if (mStarted) {
             mStarted = false;
             mContext.unregisterReceiver(mReceiver);
             mContext.unregisterReceiver(mWifiReceiver);
             mWifiListener = null;
+            mEthernetManager.removeListener(mEthernetListener);
         }
     }
 
@@ -191,12 +207,7 @@ public class ConnectivityListener {
      */
     public boolean isEthernetAvailable() {
         if (mConnectivityManager.isNetworkSupported(ConnectivityManager.TYPE_ETHERNET)) {
-            // ConnectivityManager.isNetworkSupported() may return true for a device
-            // without Ethernet port because it can be enabled later with USB-Ethernet cable.
-            // Check whether hardware address exists.
-            NetworkInfo networkInfo =
-                    mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_ETHERNET);
-            return networkInfo != null && !TextUtils.isEmpty(networkInfo.getExtraInfo());
+            return mEthernetManager.isAvailable();
         }
 
         return false;
