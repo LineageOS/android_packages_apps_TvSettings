@@ -23,8 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginRight="16dip"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="16dip"
         android:text="@string/about_legal_license"
         style="@style/Canvas.Text.Dialog.Content.Title"
         />
@@ -33,7 +33,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/license_title"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         />
 </RelativeLayout>
