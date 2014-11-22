@@ -89,6 +89,7 @@ public class AddAccessoryActivity extends DialogActivity
     private static final int KEY_DOWN_TIME = 150;
     private static final int TIME_TO_START_AUTOPAIR_COUNT = 5000;
     private static final int BLINK_START = 1000;
+    private static final int EXIT_TIMEOUT_MILLIS = 90 * 1000;
 
     private ActionFragment mActionFragment;
     private ArrayList<Action> mActions;
@@ -201,6 +202,15 @@ public class AddAccessoryActivity extends DialogActivity
         }
     };
 
+    private final Handler mAutoExitHandler = new Handler();
+
+    private final Runnable mAutoExitRunnable = new Runnable() {
+        @Override
+        public void run() {
+            stopActivity();
+        }
+    };
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         setLayoutProperties(R.layout.add_accessory_custom_two_pane_dialog, R.id.content_fragment,
@@ -285,6 +295,23 @@ public class AddAccessoryActivity extends DialogActivity
         }
 
         mPairingInBackground = false;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (DEBUG) Log.d(TAG, "stopping auto-exit timer");
+        mAutoExitHandler.removeCallbacks(mAutoExitRunnable);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mNoInputMode) {
+            // Start timer count down for exiting activity.
+            if (DEBUG) Log.d(TAG, "starting auto-exit timer");
+            mAutoExitHandler.postDelayed(mAutoExitRunnable, EXIT_TIMEOUT_MILLIS);
+        }
     }
 
     @Override
@@ -459,19 +486,28 @@ public class AddAccessoryActivity extends DialogActivity
             }
 
             if (mNoInputMode) {
+                if (DEBUG) Log.d(TAG, "stopping auto-exit timer");
+                mAutoExitHandler.removeCallbacks(mAutoExitRunnable);
                 if (mActions.size() == 1 && prevNumDevices == 0) {
                     // first device added, start counter for autopair
                     mMsgHandler.sendEmptyMessageDelayed(MSG_START_AUTOPAIR_COUNTDOWN,
                             TIME_TO_START_AUTOPAIR_COUNT);
-                } else if (mActions.size() > 1) {
-                    // More than one device found, cancel auto pair
-                    cancelPairingCountdown();
+                } else {
 
-                    if (!mShowingMultiFragment && !mFragmentTransactionPending) {
-                        if (mActionsAnimationDone) {
-                            switchToMultipleDevicesFragment();
-                        } else {
-                            mFragmentTransactionPending = true;
+                    // Start timer count down for exiting activity.
+                    if (DEBUG) Log.d(TAG, "starting auto-exit timer");
+                    mAutoExitHandler.postDelayed(mAutoExitRunnable, EXIT_TIMEOUT_MILLIS);
+
+                    if (mActions.size() > 1) {
+                        // More than one device found, cancel auto pair
+                        cancelPairingCountdown();
+
+                        if (!mShowingMultiFragment && !mFragmentTransactionPending) {
+                            if (mActionsAnimationDone) {
+                                switchToMultipleDevicesFragment();
+                            } else {
+                                mFragmentTransactionPending = true;
+                            }
                         }
                     }
                }
