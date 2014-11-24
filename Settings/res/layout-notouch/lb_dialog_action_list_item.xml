@@ -54,23 +54,23 @@
         android:layout_weight="1"
         android:orientation="vertical" >
 
-        <TextView
+        <com.android.tv.settings.widget.ResizingTextView
             android:id="@+id/action_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="@string/lb_dialog_list_item_unselected_text_alpha"
-            android:ellipsize="marquee"
+            android:ellipsize="end"
             android:fontFamily="sans-serif-condensed"
             android:maxLines="@integer/lb_dialog_action_title_min_lines"
             android:textColor="@color/lb_dialog_list_item_unselected_text_color"
             android:textSize="@dimen/lb_dialog_list_item_title_font_size" />
 
-        <TextView
+        <com.android.tv.settings.widget.ResizingTextView
             android:id="@+id/action_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="@string/lb_dialog_list_item_unselected_text_alpha"
-            android:ellipsize="marquee"
+            android:ellipsize="end"
             android:fontFamily="sans-serif-condensed"
             android:maxLines="@integer/lb_dialog_action_description_min_lines"
             android:textColor="@color/lb_dialog_list_item_unselected_text_color"
