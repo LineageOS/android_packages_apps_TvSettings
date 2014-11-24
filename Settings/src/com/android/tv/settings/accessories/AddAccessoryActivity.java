@@ -36,6 +36,7 @@ import android.os.ServiceManager;
 import android.os.SystemClock;
 import android.service.dreams.DreamService;
 import android.service.dreams.IDreamManager;
+import android.support.v4.view.ViewCompat;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -267,8 +268,10 @@ public class AddAccessoryActivity extends DialogActivity
                                 mContentView = findViewById(R.id.content_fragment);
                                 if (mActionView != null) {
                                     mViewOffset = mActionView.getMeasuredWidth();
-                                    mActionView.setTranslationX(mViewOffset);
-                                    mContentView.setTranslationX(mViewOffset / 2);
+                                    int offset = (ViewCompat.getLayoutDirection(mActionView) ==
+                                            View.LAYOUT_DIRECTION_RTL) ? -mViewOffset : mViewOffset;
+                                    mActionView.setTranslationX(offset);
+                                    mContentView.setTranslationX(offset / 2);
                                 }
                                 mAutoPairText = (TextView) findViewById(R.id.autopair_message);
                                 if (mAutoPairText != null) {
