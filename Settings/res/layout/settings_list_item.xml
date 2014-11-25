@@ -76,21 +76,21 @@
         android:layout_toEndOf="@id/action_icon"
         android:orientation="vertical" >
 
-        <TextView
+        <com.android.tv.settings.widget.ResizingTextView
             android:id="@+id/action_title"
             style="@style/Canvas.Text.Dialog.List.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="@integer/action_title_min_lines"
-            android:ellipsize="marquee" />
+            android:ellipsize="end" />
 
-        <TextView
+        <com.android.tv.settings.widget.ResizingTextView
             android:id="@+id/action_description"
             style="@style/Canvas.Text.Dialog.List.Description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="@integer/action_description_min_lines"
-            android:ellipsize="marquee" />
+            android:ellipsize="end" />
     </LinearLayout>
 
 </RelativeLayout>
