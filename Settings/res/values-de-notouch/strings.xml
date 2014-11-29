@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -27,6 +26,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="221435219644064243">"Das Beenden der App zu erzwingen kann zu unerwünschtem Verhalten führen."</string>
     <string name="device_apps_app_management_uninstall" msgid="6054050725055974790">"Deinstallieren"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="3542570994262234511">"Möchten Sie diese App deinstallieren?"</string>
+    <string name="device_apps_app_management_disable" msgid="1461984395121717076">"Deaktivieren"</string>
+    <string name="device_apps_app_management_disable_desc" msgid="1362228583828208991">"Möchten Sie diese App deaktivieren?"</string>
+    <string name="device_apps_app_management_enable" msgid="8794752872502256633">"Aktivieren"</string>
+    <string name="device_apps_app_management_enable_desc" msgid="6449017972628203288">"Möchten Sie diese App aktivieren?"</string>
     <string name="device_apps_app_management_clear_data" msgid="8288695583331012586">"Daten löschen"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="2197842469669426232">"Sämtliche Daten dieser App werden unwiderruflich gelöscht."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="376666756087041021">"Dazu gehören alle Dateien, Einstellungen, Konten, Datenbanken usw."</string>
@@ -47,7 +50,7 @@
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"Daydream startet nach dieser Dauer der Inaktivität. Wurde Daydream nicht ausgewählt, wird das Display ausgeschaltet."</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"Nach <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ohne Aktivität"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"Ruhemodus aktivieren"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"Das Display wird nach diesem Zeitraum nach dem Start von Daydream deaktiviert."</string>
+    <string name="device_daydreams_screen_off_description" msgid="7699124270812914310">"Nach diesem Zeitraum der Inaktivität wird der Bildschirm ausgeschaltet."</string>
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> nach dem Start von Daydream"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"Momentan werden in keinem Konto gesicherte Daten gespeichert."</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +66,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"Keine"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"Bitte nicht stören"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"Wenn an, erscheinen neue Benachrichtigungen nur in Einstellungen"</string>
-    <string name="select_title" msgid="7198726136224025927">"Namen für Ihr ADT-1 wählen"</string>
-    <string name="select_description" msgid="5793523265011441398">"Durch einen Namen kann Ihr ADT-1 leichter identifiziert werden, wenn von anderen Geräten wie Ihrem Telefon, Tablet oder Computer darauf zugegriffen wird."</string>
+    <string name="select_title" msgid="2657901623249723536">"Namen für ^1 auswählen"</string>
+    <string name="select_description" msgid="4080602542483519716">"Anhand des Namens erkennen Sie Ihren ^1 leichter wieder, wenn Sie mit anderen Geräten darauf zugreifen, zum Beispiel mit Ihrem Telefon, Tablet oder Computer."</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"Wohnzimmer"</item>
     <item msgid="7887185726776968055">"Heimkino"</item>
@@ -75,8 +78,8 @@
     <item msgid="682313511953895794">"Küche"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"Benutzerdefinierten Namen eingeben…"</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"Das ADT-1 wurde benannt"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"\"^1\" ist der Name dieses ADT-1. Möchten Sie ihn ändern?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"Der ^1 hat den Namen"</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"Der Name dieses ^2s ist \"^1\". Möchten Sie den Namen ändern?"</string>
     <string name="change_setting" msgid="199354038426145612">"Ändern"</string>
     <string name="keep_settings" msgid="549230720820096102">"Nicht ändern"</string>
     <string name="menu_help" msgid="2164687828212723531">"Hilfe"</string>

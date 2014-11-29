@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -27,9 +26,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="221435219644064243">"강제로 앱을 종료하면 예기치 않은 오류가 발생할 수 있습니다."</string>
     <string name="device_apps_app_management_uninstall" msgid="6054050725055974790">"제거"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="3542570994262234511">"이 앱을 제거하시겠습니까?"</string>
+    <string name="device_apps_app_management_disable" msgid="1461984395121717076">"사용 중지"</string>
+    <string name="device_apps_app_management_disable_desc" msgid="1362228583828208991">"이 앱을 사용 중지하시겠습니까?"</string>
+    <string name="device_apps_app_management_enable" msgid="8794752872502256633">"사용"</string>
+    <string name="device_apps_app_management_enable_desc" msgid="6449017972628203288">"이 앱을 사용 설정하시겠습니까?"</string>
     <string name="device_apps_app_management_clear_data" msgid="8288695583331012586">"데이터 삭제"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="2197842469669426232">"이 앱의 모든 데이터가 완전히 삭제됩니다."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="376666756087041021">"여기에는 모든 파일, 설정, 계정, 데이터베이스 등이 포함됩니다."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="376666756087041021">"모든 파일, 설정, 계정, 데이터베이스 등이 포함됩니다."</string>
     <string name="device_apps_app_management_clear_default" msgid="6654723680469212060">"기본값 지우기"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="6233682647156684225">"일부 작업에서 이 앱을 실행하도록 설정"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="6312021202504995474">"기본값이 설정되지 않음"</string>
@@ -47,7 +50,7 @@
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"지정한 시간 동안 비활성 상태가 지속되면 화면 보호기가 실행됩니다. 화면 보호기를 선택하지 않은 경우에는 디스플레이가 꺼집니다."</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> 이상 활동이 없을 때"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"절전 모드 전환 시점"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"화면 보호기 시작 후 지정한 시간이 지나면 화면이 꺼집니다."</string>
+    <string name="device_daydreams_screen_off_description" msgid="7699124270812914310">"비활동 상태 후에 화면이 꺼집니다."</string>
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"화면 보호기 시작 후 <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"현재 백업한 데이터를 저장 중인 계정이 없습니다."</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +66,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"없음"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"알림 일시중지"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"사용하도록 설정하면 새 알림이 설정에만 표시됩니다."</string>
-    <string name="select_title" msgid="7198726136224025927">"ADT-1 이름 선택"</string>
-    <string name="select_description" msgid="5793523265011441398">"이름이 있으면 휴대전화, 태블릿, 컴퓨터와 같은 다른 기기에서 ADT-1에 액세스하려 할 때 쉽게 알아볼 수 있습니다."</string>
+    <string name="select_title" msgid="2657901623249723536">"^1의 이름 선택"</string>
+    <string name="select_description" msgid="4080602542483519716">"이름을 지정하면 휴대전화, 태블릿, 컴퓨터 등의 다른 기기에서 ^1에 액세스할 때 쉽게 찾을 수 있습니다."</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"거실"</item>
     <item msgid="7887185726776968055">"미디어룸"</item>
@@ -75,8 +78,8 @@
     <item msgid="682313511953895794">"주방"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"맞춤 이름 입력..."</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"ADT-1의 이름이 지정됨"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"이 ADT-1의 이름은 \'^1\'입니다. 변경하시겠습니까?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"이 ^1에 이름을 붙였습니다."</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"이 ^2의 이름은 \'^1\'입니다. 이름을 변경하시겠습니까?"</string>
     <string name="change_setting" msgid="199354038426145612">"변경"</string>
     <string name="keep_settings" msgid="549230720820096102">"변경 안함"</string>
     <string name="menu_help" msgid="2164687828212723531">"도움말"</string>

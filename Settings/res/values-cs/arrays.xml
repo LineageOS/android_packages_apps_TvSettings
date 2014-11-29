@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,7 +12,8 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
+ -->
+
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string-array name="wifi_status">
@@ -20,7 +21,7 @@
     <item msgid="5210943529756743284">"Vyhledávání…"</item>
     <item msgid="7895190850044173217">"Připojování…"</item>
     <item msgid="7589307602609991992">"Ověřování…"</item>
-    <item msgid="7439429469102224627">"Načítání adresy IP…"</item>
+    <item msgid="7439429469102224627">"Načítání IP adresy…"</item>
     <item msgid="7079865889809010740">"Připojeno"</item>
     <item msgid="8018480471737227053">"Pozastaveno"</item>
     <item msgid="9110004131358099530">"Odpojování…"</item>
@@ -34,7 +35,7 @@
     <item msgid="4703591207522320165">"Vyhledávání…"</item>
     <item msgid="7351421574703844779">"Připojování k síti <xliff:g id="NETWORK_NAME">%1$s</xliff:g>…"</item>
     <item msgid="874502389678205660">"Ověřování v síti <xliff:g id="NETWORK_NAME">%1$s</xliff:g>…"</item>
-    <item msgid="7964187733783647040">"Získávání adresy IP ze sítě <xliff:g id="NETWORK_NAME">%1$s</xliff:g>…"</item>
+    <item msgid="7964187733783647040">"Získávání IP adresy ze sítě <xliff:g id="NETWORK_NAME">%1$s</xliff:g>…"</item>
     <item msgid="4990222034464002805">"Připojeno k síti <xliff:g id="NETWORK_NAME">%1$s</xliff:g>"</item>
     <item msgid="5347651564202902346">"Pozastaveno"</item>
     <item msgid="4812777464932254477">"Odpojování od sítě <xliff:g id="NETWORK_NAME">%1$s</xliff:g>…"</item>
@@ -71,8 +72,12 @@
     <item msgid="4410581208185456276">"Výchozí"</item>
     <item msgid="9033306684422202101">"Bezpatkové"</item>
     <item msgid="1864985245839120339">"Bezpatkové zúžené"</item>
-    <item msgid="9088939749376906370">"Patkové"</item>
-    <item msgid="1629858197049980698">"Neproporcionální"</item>
+    <item msgid="2707402752636362906">"Bezpatkové neproporcionální"</item>
+    <item msgid="4549910217342216388">"Patkové"</item>
+    <item msgid="4764344884232052861">"Patkové neproporcionální"</item>
+    <item msgid="8561996903323025702">"Neformální"</item>
+    <item msgid="8403638572764467550">"Kurzíva"</item>
+    <item msgid="5560655268137500927">"Kapitálky"</item>
   </string-array>
   <string-array name="captioning_font_size_selector_titles">
     <item msgid="4304493614734189861">"Velmi malé"</item>
@@ -85,6 +90,8 @@
     <item msgid="5333047169042840730">"Žádný"</item>
     <item msgid="7663488423233018922">"Obrys"</item>
     <item msgid="7891048730741670843">"Stín"</item>
+    <item msgid="6613725572146700438">"Zvýšené"</item>
+    <item msgid="1007736533206905292">"Snížené"</item>
   </string-array>
   <string-array name="captioning_opacity_selector_titles">
     <item msgid="7311196539184412021">"25 %"</item>
