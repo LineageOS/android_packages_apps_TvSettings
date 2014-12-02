@@ -202,12 +202,14 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
     private final Runnable mRefreshViewRunnable = new Runnable() {
         @Override
         public void run() {
-            mLayout.setSelectedIndex(mListView.getSelectedPosition());
-            mLayout.reloadLayoutRows();
-            mAdapter.setLayoutRows(mLayout.getLayoutRows());
-            mAdapter.setNoAnimateMode();
-            mAdapter.notifyDataSetChanged();
-            mListView.setSelectedPositionSmooth(mLayout.getSelectedIndex());
+            if (isResumed()) {
+                mLayout.setSelectedIndex(mListView.getSelectedPosition());
+                mLayout.reloadLayoutRows();
+                mAdapter.setLayoutRows(mLayout.getLayoutRows());
+                mAdapter.setNoAnimateMode();
+                mAdapter.notifyDataSetChanged();
+                mListView.setSelectedPositionSmooth(mLayout.getSelectedIndex());
+            }
         }
     };
 
