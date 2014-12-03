@@ -707,22 +707,22 @@ public class DialogFragment extends Fragment {
 
     private Animator createSlideOutToStartAnimator(View v) {
         boolean isRtl = ViewCompat.getLayoutDirection(v) == View.LAYOUT_DIRECTION_RTL;
-        return createTranslateAlphaAnimator(v, 0, isRtl ? -200f : 200f, 1f, 0);
+        return createTranslateAlphaAnimator(v, 0, isRtl ? 200f : -200f, 1f, 0);
     }
 
     private Animator createSlideInFromEndAnimator(View v) {
         boolean isRtl = ViewCompat.getLayoutDirection(v) == View.LAYOUT_DIRECTION_RTL;
-        return createTranslateAlphaAnimator(v, isRtl ? 200f : -200f, 0, 0, 1f);
+        return createTranslateAlphaAnimator(v, isRtl ? -200f : 200f, 0, 0, 1f);
     }
 
     private Animator createSlideInFromStartAnimator(View v) {
         boolean isRtl = ViewCompat.getLayoutDirection(v) == View.LAYOUT_DIRECTION_RTL;
-        return createTranslateAlphaAnimator(v, isRtl ? -200f : 200f, 0, 0, 1f);
+        return createTranslateAlphaAnimator(v, isRtl ? 200f : -200f, 0, 0, 1f);
     }
 
     private Animator createSlideOutToEndAnimator(View v) {
         boolean isRtl = ViewCompat.getLayoutDirection(v) == View.LAYOUT_DIRECTION_RTL;
-        return createTranslateAlphaAnimator(v, 0, isRtl ? 200f : -200f, 1f, 0);
+        return createTranslateAlphaAnimator(v, 0, isRtl ? -200f : 200f, 1f, 0);
     }
 
     private Animator createFadeOutAnimator(View v) {
