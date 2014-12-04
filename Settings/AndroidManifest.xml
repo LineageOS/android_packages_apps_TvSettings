@@ -6,8 +6,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="19" />
+        android:minSdkVersion="21"
+        android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -238,10 +238,6 @@
         </activity>
         <activity
             android:name=".device.display.widi.WifiDisplayActivity"
-            android:configChanges="keyboard|keyboardHidden|navigation"
-            android:exported="true" />
-        <activity
-            android:name=".device.display.wallpaper.WallpaperActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" />
         <activity
