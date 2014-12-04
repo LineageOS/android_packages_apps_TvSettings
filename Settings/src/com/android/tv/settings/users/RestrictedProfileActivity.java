@@ -50,7 +50,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.android.internal.widget.ILockSettings;
 import com.android.internal.widget.LockPatternUtils;
-import com.android.tv.dialog.PinDialogFragment;
+import com.android.tv.settings.dialog.PinDialogFragment;
 
 import java.util.ArrayList;
 import java.util.Collections;
