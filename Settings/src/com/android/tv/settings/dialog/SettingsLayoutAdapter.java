@@ -20,16 +20,13 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.database.DataSetObserver;
-import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.v17.leanback.R;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.text.TextUtils;
@@ -46,7 +43,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.tv.settings.dialog.Layout;
+import com.android.tv.settings.R;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
@@ -294,8 +291,6 @@ class SettingsLayoutAdapter extends RecyclerView.Adapter {
         }
 
         private boolean setIndicator(final ImageView indicatorView, Layout.LayoutRow action) {
-
-            Context context = indicatorView.getContext();
             Drawable indicator = action.getIcon();
             if (indicator != null) {
                 indicatorView.setImageDrawable(indicator);

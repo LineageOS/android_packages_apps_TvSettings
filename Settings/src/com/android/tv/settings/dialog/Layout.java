@@ -385,7 +385,7 @@ public class Layout implements Parcelable {
         public int getId() {
             return mId[mSelectedIndex];
         }
-    };
+    }
 
     /**
      * Implementation of "StringGetter" that returns a string describing the currently selected
@@ -404,7 +404,7 @@ public class Layout implements Parcelable {
             mSelectionGroup = selectionGroup;
         }
 
-    };
+    }
 
     private static class Appearence {
         private Drawable mIcon;

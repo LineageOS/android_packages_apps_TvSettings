@@ -16,31 +16,24 @@
 
 package com.android.tv.settings.users;
 
-import com.android.tv.settings.R;
-import com.android.tv.settings.dialog.DialogFragment;
-import com.android.tv.settings.dialog.DialogFragment.Action;
-import com.android.tv.settings.users.AppRestrictionsManager.Listener;
-
-import android.app.Activity;
-import android.app.Fragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.RestrictionEntry;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageManager;
 import android.content.pm.PackageManager;
-import android.content.pm.UserInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.Log;
+
+import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.DialogFragment;
+import com.android.tv.settings.dialog.DialogFragment.Action;
 
 import java.util.ArrayList;
 import java.util.HashMap;

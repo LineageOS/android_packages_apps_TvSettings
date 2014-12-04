@@ -22,14 +22,9 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.TimeInterpolator;
-import android.animation.ValueAnimator;
-import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -38,29 +33,23 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.support.v17.leanback.R;
 import android.support.v17.leanback.widget.VerticalGridView;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.view.ViewPropertyAnimator;
 import android.view.ViewTreeObserver;
-import android.view.ViewGroup.LayoutParams;
 import android.view.animation.DecelerateInterpolator;
-import android.view.animation.Interpolator;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.android.tv.settings.dialog.Layout;
+import com.android.tv.settings.R;
 import com.android.tv.settings.util.AccessibilityHelper;
+
+import java.util.ArrayList;
 
 /**
  * Displays content on the left and actions on the right.
@@ -92,7 +81,7 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
 
     public interface Listener {
         void onActionClicked(Layout.Action action);
-    };
+    }
 
     /**
      * Builds a SettingsLayoutFragment object.
@@ -669,7 +658,7 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
                             oa.start();
 
                             boolean isRtl = ViewCompat.getLayoutDirection(contentView) ==
-                                    View.LAYOUT_DIRECTION_RTL;
+                                    ViewCompat.LAYOUT_DIRECTION_RTL;
                             int startDist = isRtl ? mSlideInDistance : -mSlideInDistance;
                             int endDist = isRtl ? -actionContainerView.getMeasuredWidth() :
                                     actionContainerView.getMeasuredWidth();
@@ -726,28 +715,28 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
     }
 
     private Animator createSlideOutToStartAnimator(View v) {
-        boolean isRtl = ViewCompat.getLayoutDirection(v) == View.LAYOUT_DIRECTION_RTL;
+        boolean isRtl = ViewCompat.getLayoutDirection(v) == ViewCompat.LAYOUT_DIRECTION_RTL;
         float toX = isRtl ? SLIDE_OUT_ANIMATOR_RIGHT : -SLIDE_OUT_ANIMATOR_RIGHT;
         return createTranslateAlphaAnimator(v, SLIDE_OUT_ANIMATOR_LEFT, toX,
                 SLIDE_OUT_ANIMATOR_END_ALPHA, SLIDE_OUT_ANIMATOR_START_ALPHA);
     }
 
     private Animator createSlideInFromEndAnimator(View v) {
-        boolean isRtl = ViewCompat.getLayoutDirection(v) == View.LAYOUT_DIRECTION_RTL;
+        boolean isRtl = ViewCompat.getLayoutDirection(v) == ViewCompat.LAYOUT_DIRECTION_RTL;
         float fromX = isRtl ? -SLIDE_OUT_ANIMATOR_RIGHT : SLIDE_OUT_ANIMATOR_RIGHT;
         return createTranslateAlphaAnimator(v, fromX, SLIDE_OUT_ANIMATOR_LEFT,
                 SLIDE_OUT_ANIMATOR_START_ALPHA, SLIDE_OUT_ANIMATOR_END_ALPHA);
     }
 
     private Animator createSlideInFromStartAnimator(View v) {
-        boolean isRtl = ViewCompat.getLayoutDirection(v) == View.LAYOUT_DIRECTION_RTL;
+        boolean isRtl = ViewCompat.getLayoutDirection(v) == ViewCompat.LAYOUT_DIRECTION_RTL;
         float fromX = isRtl ? SLIDE_OUT_ANIMATOR_RIGHT : -SLIDE_OUT_ANIMATOR_RIGHT;
         return createTranslateAlphaAnimator(v, fromX, SLIDE_OUT_ANIMATOR_LEFT,
                 SLIDE_OUT_ANIMATOR_START_ALPHA, SLIDE_OUT_ANIMATOR_END_ALPHA);
     }
 
     private Animator createSlideOutToEndAnimator(View v) {
-        boolean isRtl = ViewCompat.getLayoutDirection(v) == View.LAYOUT_DIRECTION_RTL;
+        boolean isRtl = ViewCompat.getLayoutDirection(v) == ViewCompat.LAYOUT_DIRECTION_RTL;
         float toX = isRtl ? -SLIDE_OUT_ANIMATOR_RIGHT : SLIDE_OUT_ANIMATOR_RIGHT;
         return createTranslateAlphaAnimator(v, SLIDE_OUT_ANIMATOR_LEFT, toX,
                 SLIDE_OUT_ANIMATOR_END_ALPHA, SLIDE_OUT_ANIMATOR_START_ALPHA);

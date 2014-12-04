@@ -16,24 +16,18 @@
 
 package com.android.tv.settings.users;
 
-import com.android.tv.settings.R;
-import com.android.tv.settings.dialog.DialogFragment;
-import com.android.tv.settings.dialog.DialogFragment.Action;
-
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
-import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageManager;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageItemInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.RemoteException;
@@ -42,6 +36,7 @@ import android.util.Log;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 
+import com.android.tv.settings.dialog.DialogFragment.Action;
 import com.android.tv.settings.util.UriUtils;
 
 import java.util.ArrayList;

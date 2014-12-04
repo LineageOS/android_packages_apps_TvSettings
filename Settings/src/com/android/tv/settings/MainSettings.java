@@ -19,16 +19,10 @@ package com.android.tv.settings;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.OnAccountsUpdateListener;
-import android.graphics.drawable.Drawable;
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
-import com.android.tv.settings.accessories.BluetoothConnectionsManager;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 
 import java.util.Locale;

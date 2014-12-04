@@ -18,22 +18,10 @@ package com.android.tv.settings.dialog;
 
 import android.app.Activity;
 import android.app.FragmentManager;
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
-
-import com.android.tv.settings.dialog.SettingsLayoutFragment;
-import com.android.tv.settings.dialog.Layout;
-import com.android.tv.settings.dialog.Layout.Action;
-import com.android.tv.settings.dialog.Layout.LayoutRow;
 
 import com.android.tv.settings.R;
-
-import java.util.ArrayList;
+import com.android.tv.settings.dialog.Layout.Action;
 
 /**
  * Activity to present settings menus and options.

@@ -16,19 +16,12 @@
 
 package com.android.tv.settings.users;
 
-import com.android.tv.settings.R;
-import com.android.tv.settings.dialog.DialogFragment;
-import com.android.tv.settings.dialog.DialogFragment.Action;
-
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.ActivityManagerNative;
-import android.app.Fragment;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.pm.IPackageManager;
 import android.content.pm.UserInfo;
 import android.graphics.Bitmap;
@@ -37,7 +30,6 @@ import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.UserHandle;
@@ -45,19 +37,16 @@ import android.os.UserManager;
 import android.preference.PreferenceManager;
 import android.provider.Settings.Secure;
 import android.util.Log;
-import android.view.inputmethod.InputMethodInfo;
-import android.view.inputmethod.InputMethodManager;
 
 import com.android.internal.widget.ILockSettings;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.DialogFragment;
+import com.android.tv.settings.dialog.DialogFragment.Action;
 import com.android.tv.settings.dialog.PinDialogFragment;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 /**
  * Activity that allows the configuration of a user's restricted profile.
