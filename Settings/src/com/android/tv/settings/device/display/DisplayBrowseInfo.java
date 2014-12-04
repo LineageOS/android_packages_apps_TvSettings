@@ -41,7 +41,7 @@ public class DisplayBrowseInfo extends BrowseInfoBase {
     DisplayBrowseInfo(Context context) {
         mContext = context;
         mNextItemId = 0;
-        mHeaderItems.add(new HeaderItem(HEADER_ID, mContext.getString(R.string.device_display), null));
+        mHeaderItems.add(new HeaderItem(HEADER_ID, mContext.getString(R.string.device_display)));
         mRows.put(HEADER_ID, mRow);
     }
 

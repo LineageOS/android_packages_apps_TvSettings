@@ -65,7 +65,7 @@ public class AccountsBrowseInfo extends BrowseInfoBase {
     }
 
     private void addBrowseHeader(int id, String title) {
-        mHeaderItems.add(new HeaderItem(id, title, null));
+        mHeaderItems.add(new HeaderItem(id, title));
     }
 
     private void updateMenuItems(String accountName) {

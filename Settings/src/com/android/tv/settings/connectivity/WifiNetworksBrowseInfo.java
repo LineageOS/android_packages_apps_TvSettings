@@ -106,7 +106,7 @@ public class WifiNetworksBrowseInfo extends BrowseInfoBase {
     }
 
     private void addBrowseHeader(int id, String name) {
-        mHeaderItems.add(new HeaderItem(id, name, null));
+        mHeaderItems.add(new HeaderItem(id, name));
     }
 
     private void initAvailableNetworksBrowseItems(ArrayObjectAdapter row) {
