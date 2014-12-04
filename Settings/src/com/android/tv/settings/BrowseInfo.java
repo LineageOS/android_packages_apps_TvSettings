@@ -228,7 +228,7 @@ public class BrowseInfo extends BrowseInfoBase {
             sa = context.getResources().obtainAttributes(attrs, R.styleable.CanvasSettings);
             int preferenceRes = sa.getResourceId(R.styleable.CanvasSettings_preference, 0);
             sa.recycle();
-            mHeaderItems.add(new HeaderItem(headerId, title, null));
+            mHeaderItems.add(new HeaderItem(headerId, title));
             final ArrayObjectAdapter currentRow = new ArrayObjectAdapter();
             mRows.put(headerId, currentRow);
             if (headerId != R.id.accessories) {
