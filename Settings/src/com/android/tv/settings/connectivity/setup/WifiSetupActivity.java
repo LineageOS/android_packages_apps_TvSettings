@@ -435,7 +435,7 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
         Collections.sort(listItems, new SelectFromListWizardFragment.ListItemComparator());
 
         SelectFromListWizardFragment.ListItem wpsItem = new SelectFromListWizardFragment.ListItem(
-                getString(R.string.wps_network).toUpperCase(), R.drawable.ic_wps);
+                getString(R.string.wps_network).toUpperCase(), R.drawable.ic_setup_wps);
         if (mShowWpsAtTop) {
             listItems.add(0, wpsItem);
         } else {
