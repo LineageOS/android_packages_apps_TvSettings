@@ -23,19 +23,21 @@ import com.android.tv.settings.dialog.old.ActionAdapter;
 import com.android.tv.settings.dialog.old.ActionFragment;
 import com.android.tv.settings.dialog.old.ContentFragment;
 import com.android.tv.settings.dialog.old.DialogActivity;
-import com.android.tv.settings.dialog.old.TosWebViewFragment;
 import com.android.tv.settings.name.DeviceManager;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -47,43 +49,34 @@ import java.util.List;
 public class AboutActivity extends DialogActivity implements ActionAdapter.Listener,
         ActionAdapter.OnFocusListener {
 
+    private static final String TAG = "AboutActivity";
+
     /**
-     * Action key for legal actions container.
+     * Action keys for switching over in onActionClicked.
      */
     private static final String KEY_LEGAL_INFO = "about_legal_info";
-
-    /**
-     * Action key for legal open source license action.
-     */
-    private static final String KEY_LEGAL_INFO_OPEN_SOURCE_LICENSES =
-            "about_legal_info_open_source_licenses";
-
-    /**
-     * Action keys for legal terms.
-     */
-    private static final String TERMS_OF_SERVICE = "terms_of_service";
-    private static final String PRIVACY_POLICY = "privacy_policy";
-    private static final String ADDITIONAL_TERMS = "additional_terms";
-
     private static final String KEY_BUILD = "build";
     private static final String KEY_VERSION = "version";
 
     /**
-     * Intent action of SettingsLicenseActivity.
+     * Intent action of SettingsLicenseActivity (for displaying open source licenses.)
      */
     private static final String SETTINGS_LEGAL_LICENSE_INTENT_ACTION = "android.settings.LICENSE";
 
     /**
-     * Intent action of device name activity.
+     * Intent action of SettingsTosActivity (for displaying terms of service.)
      */
-    private static final String SETTINGS_DEVICE_NAME_INTENT_ACTION =
-        "android.settings.DEVICE_NAME";
+    private static final String SETTINGS_LEGAL_TERMS_OF_SERVICE = "android.settings.TERMS";
 
     /**
-     * Intent action of system update activity
+     * Intent action of device name activity.
      */
-    private static final String SETTINGS_UPDATE_SYSTEM =
-            "android.settings.SYSTEM_UPDATE_SETTINGS";
+    private static final String SETTINGS_DEVICE_NAME_INTENT_ACTION = "android.settings.DEVICE_NAME";
+
+    /**
+     * Intent action of system update activity.
+     */
+    private static final String SETTINGS_UPDATE_SYSTEM = "android.settings.SYSTEM_UPDATE_SETTINGS";
 
     /**
      * Intent to launch ads activity.
@@ -161,14 +154,6 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 intent.setComponent(mPlatLogoActivity);
                 startActivity(intent);
             }
-        } else if (TextUtils.equals(key, TERMS_OF_SERVICE)) {
-            displayFragment(TosWebViewFragment.
-                newInstance(TosWebViewFragment.SHOW_TERMS_OF_SERVICE));
-        } else if (TextUtils.equals(key, PRIVACY_POLICY)) {
-            displayFragment(TosWebViewFragment.newInstance(TosWebViewFragment.SHOW_PRIVACY_POLICY));
-        } else if (TextUtils.equals(key, ADDITIONAL_TERMS)) {
-            displayFragment(
-                TosWebViewFragment.newInstance (TosWebViewFragment.SHOW_ADDITIONAL_TERMS));
         } else if (TextUtils.equals(key, KEY_LEGAL_INFO)) {
             ArrayList<Action> actions = getLegalActions();
             setContentAndActionFragments(ContentFragment.newInstance(
@@ -177,7 +162,13 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
         } else {
             Intent intent = action.getIntent();
             if (intent != null) {
-                startActivity(intent);
+                try {
+                    startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    Log.e(TAG, "intent for (" + action.getTitle() + ") not found:", e);
+                }
+            } else {
+                Log.e(TAG, "null intent for: " + action.getTitle());
             }
         }
     }
@@ -185,23 +176,12 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private ArrayList<Action> getLegalActions() {
         ArrayList<Action> actions = new ArrayList<Action>();
         actions.add(new Action.Builder()
-                .key(KEY_LEGAL_INFO_OPEN_SOURCE_LICENSES)
-                .intent(new Intent(SETTINGS_LEGAL_LICENSE_INTENT_ACTION))
+                .intent(systemIntent(SETTINGS_LEGAL_LICENSE_INTENT_ACTION))
                 .title(getString(R.string.about_legal_license))
                 .build());
         actions.add(new Action.Builder()
-                .key(TERMS_OF_SERVICE)
+                .intent(systemIntent(SETTINGS_LEGAL_TERMS_OF_SERVICE))
                 .title(getString(R.string.about_terms_of_service))
-                .build());
-
-        actions.add(new Action.Builder()
-                .key(PRIVACY_POLICY)
-                .title(getString(R.string.about_privacy_policy))
-                .build());
-
-        actions.add(new Action.Builder()
-                .key(ADDITIONAL_TERMS)
-                .title(getString(R.string.about_additional_terms))
                 .build());
 
         return actions;
@@ -212,7 +192,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
         actions.add(new Action.Builder()
                 .key("update")
                 .title(getString(R.string.about_system_update))
-                .intent(new Intent(SETTINGS_UPDATE_SYSTEM))
+                .intent(systemIntent(SETTINGS_UPDATE_SYSTEM))
                 .build());
         actions.add(new Action.Builder()
                 .key("name")
@@ -279,7 +259,25 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
         if (mToast != null) {
             mToast.cancel();
         }
-        mToast = Toast.makeText(this,  toastString, Toast.LENGTH_SHORT);
+        mToast = Toast.makeText(this, toastString, Toast.LENGTH_SHORT);
         mToast.show();
+    }
+
+    // Returns an Intent for the given action if a system app can handle it, otherwise null.
+    private Intent systemIntent(String action) {
+        final Intent intent = new Intent(action);
+
+        // Limit the intent to an activity that is in the system image.
+        final PackageManager pm = getPackageManager();
+        final List<ResolveInfo> activities = pm.queryIntentActivities(intent, 0);
+        for (ResolveInfo info : activities) {
+            if ((info.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0) {
+                if (info.activityInfo.isEnabled()) {
+                    intent.setPackage(info.activityInfo.packageName);
+                    return intent;
+                }
+            }
+        }
+        return null;  // No system image package found.
     }
 }
