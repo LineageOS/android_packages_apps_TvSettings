@@ -146,6 +146,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         mWifiConnectedDescription.refreshView();
         refreshEnableWifiSelection();
         onWifiListChanged();
+        mWifiLayout.refreshView();
     }
 
     private void refreshEnableWifiSelection() {
@@ -352,37 +353,44 @@ public class NetworkActivity extends SettingsLayoutActivity implements
 
     LayoutGetter mWifiLayout = new LayoutGetter() {
         public Layout get() {
-            return new Layout()
+            final Layout layout = new Layout()
                     .add(new Header.Builder(mRes)
                             .title(R.string.wifi_setting_enable_wifi)
                             .description(mEnableWifi)
                             .build()
-                            .add(mEnableWifi))
-                    .add(new Static.Builder(mRes)
-                            .title(R.string.wifi_setting_available_networks)
-                            .build())
-                    .add(mWifiShortListLayout)
-                    .add(new Header.Builder(mRes)
-                            .title(R.string.wifi_setting_see_all)
-                            .build()
-                            .add(mWifiAllListLayout))
-                    .add(new Static.Builder(mRes)
-                            .title(R.string.wifi_setting_header_other_options)
-                            .build())
-                    .add(new Action.Builder(mRes,
-                            new Intent(NetworkActivity.this, WpsConnectionActivity.class))
-                            .title(R.string.wifi_setting_other_options_wps)
-                            .build())
-                    .add(new Action.Builder(mRes,
-                            new Intent(NetworkActivity.this, AddWifiNetworkActivity.class))
-                            .title(R.string.wifi_setting_other_options_add_network)
-                            .build())
-                    .add(new Header.Builder(mRes)
-                            .title(R.string.wifi_setting_always_scan)
-                            .description(mAlwaysScanWifi)
-                            .detailedDescription(R.string.wifi_setting_always_scan_context)
-                            .build()
-                            .add(mAlwaysScanWifi));
+                            .add(mEnableWifi));
+            if (mConnectivityListener.isWifiEnabled()) {
+                layout
+                        .add(new Static.Builder(mRes)
+                                .title(R.string.wifi_setting_available_networks)
+                                .build())
+                        .add(mWifiShortListLayout)
+                        .add(new Header.Builder(mRes)
+                                .title(R.string.wifi_setting_see_all)
+                                .build()
+                                .add(mWifiAllListLayout))
+                        .add(new Static.Builder(mRes)
+                                .title(R.string.wifi_setting_header_other_options)
+                                .build())
+                        .add(new Action.Builder(mRes,
+                                new Intent(NetworkActivity.this,
+                                        WpsConnectionActivity.class))
+                                .title(R.string.wifi_setting_other_options_wps)
+                                .build())
+                        .add(new Action.Builder(mRes,
+                                new Intent(NetworkActivity.this,
+                                        AddWifiNetworkActivity.class))
+                                .title(R.string.wifi_setting_other_options_add_network)
+                                .build())
+                        .add(new Header.Builder(mRes)
+                                .title(R.string.wifi_setting_always_scan)
+                                .description(mAlwaysScanWifi)
+                                .detailedDescription(
+                                        R.string.wifi_setting_always_scan_context)
+                                .build()
+                                .add(mAlwaysScanWifi));
+            }
+            return layout;
         }
     };
 
