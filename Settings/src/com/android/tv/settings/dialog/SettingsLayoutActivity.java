@@ -19,6 +19,7 @@ package com.android.tv.settings.dialog;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.os.Bundle;
+import android.view.View;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.Layout.Action;
@@ -76,7 +77,7 @@ public abstract class SettingsLayoutActivity extends Activity implements
      * Return true if the display view is rendered right to left.
      */
     protected boolean isLayoutRtl() {
-        return mSettingsLayoutFragment.getView().isLayoutRtl();
+        return mSettingsLayoutFragment.getView().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL;
     }
 
     protected void setIcon(int resId) {
