@@ -16,38 +16,33 @@
 
 package com.android.tv.settings.connectivity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.net.IpConfiguration;
 import android.net.IpConfiguration.IpAssignment;
 import android.net.IpConfiguration.ProxySettings;
-import android.net.wifi.WifiConfiguration;
 import android.net.wifi.ScanResult;
-import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings;
 import android.text.TextUtils;
-import android.util.Pair;
 
-import com.android.tv.settings.dialog.SettingsLayoutActivity;
+import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.Layout;
-import com.android.tv.settings.dialog.Layout.Header;
 import com.android.tv.settings.dialog.Layout.Action;
-import com.android.tv.settings.dialog.Layout.Status;
-import com.android.tv.settings.dialog.Layout.Static;
-import com.android.tv.settings.dialog.Layout.StringGetter;
+import com.android.tv.settings.dialog.Layout.Header;
 import com.android.tv.settings.dialog.Layout.LayoutGetter;
 import com.android.tv.settings.dialog.Layout.SelectionGroup;
-import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.Layout.Static;
+import com.android.tv.settings.dialog.Layout.Status;
+import com.android.tv.settings.dialog.Layout.StringGetter;
+import com.android.tv.settings.dialog.SettingsLayoutActivity;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -68,6 +63,8 @@ public class NetworkActivity extends SettingsLayoutActivity implements
     private static final int ACTION_ETHERNET_IP_SETTINGS = 7;
     private static final int ACTION_SCAN_WIFI_ON = 8;
     private static final int ACTION_SCAN_WIFI_OFF = 9;
+    private static final int ACTION_WIFI_ENABLE_ON = 10;
+    private static final int ACTION_WIFI_ENABLE_OFF = 11;
 
     private ConnectivityListener mConnectivityListener;
     private Resources mRes;
@@ -108,6 +105,12 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         mAlwaysScanWifi.setSelected(scanAlwaysAvailable == 1 ? ACTION_SCAN_WIFI_ON :
                 ACTION_SCAN_WIFI_OFF);
 
+        mEnableWifi = new SelectionGroup(mRes, new int[][] {
+                { R.string.on, ACTION_WIFI_ENABLE_ON },
+                { R.string.off, ACTION_WIFI_ENABLE_OFF } });
+        mEnableWifi.setSelected(mConnectivityListener.isWifiEnabled() ? ACTION_WIFI_ENABLE_ON :
+                ACTION_WIFI_ENABLE_OFF);
+        refreshEnableWifiSelection();
         // The ConectivityListenter must be started before calling "super.OnCreate(.)" to ensure
         // that connectivity status is available before the layout is constructed.
         mConnectivityListener.start();
@@ -141,7 +144,13 @@ public class NetworkActivity extends SettingsLayoutActivity implements
     public void onConnectivityChange(Intent intent) {
         mEthernetConnectedDescription.refreshView();
         mWifiConnectedDescription.refreshView();
+        refreshEnableWifiSelection();
         onWifiListChanged();
+    }
+
+    private void refreshEnableWifiSelection() {
+        mEnableWifi.setSelected(mConnectivityListener.isWifiEnabled() ? ACTION_WIFI_ENABLE_ON :
+                ACTION_WIFI_ENABLE_OFF);
     }
 
     @Override
@@ -339,37 +348,41 @@ public class NetworkActivity extends SettingsLayoutActivity implements
     };
 
     private SelectionGroup mAlwaysScanWifi;
+    private SelectionGroup mEnableWifi;
 
     LayoutGetter mWifiLayout = new LayoutGetter() {
         public Layout get() {
             return new Layout()
-                .add(new Static.Builder(mRes)
-                        .title(R.string.wifi_setting_available_networks)
-                        .build())
-                .add(mWifiShortListLayout)
-                .add(new Header.Builder(mRes)
-                        .title(R.string.wifi_setting_see_all)
-                        .build()
-                    .add(mWifiAllListLayout)
-                )
-                .add(new Static.Builder(mRes)
-                        .title(R.string.wifi_setting_header_other_options)
-                        .build())
-                .add(new Action.Builder(mRes,
-                         new Intent(NetworkActivity.this, WpsConnectionActivity.class))
-                        .title(R.string.wifi_setting_other_options_wps)
-                        .build())
-                .add(new Action.Builder(mRes,
-                        new Intent(NetworkActivity.this, AddWifiNetworkActivity.class))
-                        .title(R.string.wifi_setting_other_options_add_network)
-                        .build())
-                .add(new Header.Builder(mRes)
-                        .title(R.string.wifi_setting_always_scan)
-                        .description(mAlwaysScanWifi)
-                        .detailedDescription(R.string.wifi_setting_always_scan_context)
-                        .build()
-                    .add(mAlwaysScanWifi)
-                );
+                    .add(new Header.Builder(mRes)
+                            .title(R.string.wifi_setting_enable_wifi)
+                            .description(mEnableWifi)
+                            .build()
+                            .add(mEnableWifi))
+                    .add(new Static.Builder(mRes)
+                            .title(R.string.wifi_setting_available_networks)
+                            .build())
+                    .add(mWifiShortListLayout)
+                    .add(new Header.Builder(mRes)
+                            .title(R.string.wifi_setting_see_all)
+                            .build()
+                            .add(mWifiAllListLayout))
+                    .add(new Static.Builder(mRes)
+                            .title(R.string.wifi_setting_header_other_options)
+                            .build())
+                    .add(new Action.Builder(mRes,
+                            new Intent(NetworkActivity.this, WpsConnectionActivity.class))
+                            .title(R.string.wifi_setting_other_options_wps)
+                            .build())
+                    .add(new Action.Builder(mRes,
+                            new Intent(NetworkActivity.this, AddWifiNetworkActivity.class))
+                            .title(R.string.wifi_setting_other_options_add_network)
+                            .build())
+                    .add(new Header.Builder(mRes)
+                            .title(R.string.wifi_setting_always_scan)
+                            .description(mAlwaysScanWifi)
+                            .detailedDescription(R.string.wifi_setting_always_scan_context)
+                            .build()
+                            .add(mAlwaysScanWifi));
         }
     };
 
@@ -512,7 +525,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
             }
             return layout;
         }
-    };
+    }
 
     private final WifiListLayout mWifiShortListLayout = new WifiListLayout(true);
 
@@ -615,6 +628,12 @@ public class NetworkActivity extends SettingsLayoutActivity implements
             case ACTION_SCAN_WIFI_ON:
             case ACTION_SCAN_WIFI_OFF:
                 mHandler.post(mSetScanAlways);
+                break;
+            case ACTION_WIFI_ENABLE_ON:
+                mConnectivityListener.setWifiEnabled(true);
+                break;
+            case ACTION_WIFI_ENABLE_OFF:
+                mConnectivityListener.setWifiEnabled(false);
                 break;
         }
     }
