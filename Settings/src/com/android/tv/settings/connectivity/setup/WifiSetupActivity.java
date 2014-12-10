@@ -205,6 +205,7 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
                 break;
             case CHOOSE_NETWORK:
                 if (choiceChosen(formPage, R.string.skip_network)) {
+                    WifiConfigHelper.forgetWifiNetwork(this);
                     setResult(RESULT_NETWORK_SKIPPED);
                 } else {
                     mHandler.removeMessages(MSG_NETWORK_REFRESH);
