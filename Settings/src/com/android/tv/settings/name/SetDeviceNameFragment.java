@@ -131,7 +131,7 @@ public class SetDeviceNameFragment extends Fragment implements AdapterView.OnIte
                 if (convertView == null) {
                     LayoutInflater helium = (LayoutInflater) getActivity().getSystemService(
                             Context.LAYOUT_INFLATER_SERVICE);
-                    convertView = helium.inflate(R.layout.setup_list_item, null);
+                    convertView = helium.inflate(R.layout.setup_list_item, parent, false);
 
                     // our image view is always going to be the same, so set that here
                     ImageView plusIcon = new ImageView(getActivity());
