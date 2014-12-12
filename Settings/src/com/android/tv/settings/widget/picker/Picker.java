@@ -36,9 +36,9 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 
+import com.android.tv.settings.R;
 import com.android.tv.settings.widget.ScrollAdapterView;
 import com.android.tv.settings.widget.ScrollArrayAdapter;
-import com.android.tv.settings.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -57,13 +57,10 @@ public class Picker extends Fragment {
     }
 
     private Context mContext;
-    private String mSeparator;
-    private ViewGroup mRootView;
-    private ViewGroup mPickerView;
     private List<ScrollAdapterView> mColumnViews;
     private ResultListener mResultListener;
     private ChangeTextColorOnFocus mColumnChangeListener;
-    private ArrayList<PickerColumn> mColumns = new ArrayList<PickerColumn>();
+    private ArrayList<PickerColumn> mColumns = new ArrayList<>();
 
     private float mUnfocusedAlpha;
     private float mFocusedAlpha;
@@ -108,7 +105,7 @@ public class Picker extends Fragment {
      * supply the separator string
      */
     protected String getSeparator() {
-        return mSeparator;
+        return null;
     }
 
     /**
@@ -190,33 +187,33 @@ public class Picker extends Fragment {
             return null;
         }
 
-        mRootView = (ViewGroup) inflater.inflate(getRootLayoutId(), null);
-        mPickerView = (ViewGroup) mRootView.findViewById(getPickerId());
-        mColumnViews = new ArrayList<ScrollAdapterView>();
-        mResult = new ArrayList<String>();
+        final ViewGroup rootView =
+                (ViewGroup) inflater.inflate(getRootLayoutId(), container, false);
+        final ViewGroup pickerView = (ViewGroup) rootView.findViewById(getPickerId());
+        mColumnViews = new ArrayList<>();
+        mResult = new ArrayList<>();
 
         int totalCol = mColumns.size();
         for (int i = 0; i < totalCol; i++) {
-            final int colIndex = i;
             final String[] col = mColumns.get(i).getItems();
             mResult.add(col[0]);
             final ScrollAdapterView columnView = (ScrollAdapterView) inflater.inflate(
-                    R.layout.picker_column, mPickerView, false);
+                    R.layout.picker_column, pickerView, false);
             LayoutParams lp = columnView.getLayoutParams();
             lp.height = getPickerColumnHeightPixels();
             columnView.setLayoutParams(lp);
             mColumnViews.add(columnView);
-            columnView.setTag(Integer.valueOf(colIndex));
+            columnView.setTag(i);
 
             // add view to root
-            mPickerView.addView(columnView);
+            pickerView.addView(columnView);
 
             // add a separator if not the last element
             if (i != totalCol - 1 && getSeparator() != null) {
                 TextView separator = (TextView) inflater.inflate(
-                        getPickerSeparatorLayoutId(), mPickerView, false);
+                        getPickerSeparatorLayoutId(), pickerView, false);
                 separator.setText(getSeparator());
-                mPickerView.addView(separator);
+                pickerView.addView(separator);
             }
         }
         initAdapters();
@@ -225,16 +222,15 @@ public class Picker extends Fragment {
         mClicked = false;
         mKeyDown = false;
 
-        return mRootView;
+        return rootView;
     }
 
     private void initAdapters() {
         final int totalCol = mColumns.size();
         for (int i = 0; i < totalCol; i++) {
-            final int colIndex = i;
             ScrollAdapterView columnView = mColumnViews.get(i);
             final String[] col = mColumns.get(i).getItems();
-            setAdapter(columnView, col, colIndex);
+            setAdapter(columnView, col, i);
             columnView.setOnFocusChangeListener(mColumnChangeListener);
             columnView.setOnItemSelectedListener(mColumnChangeListener);
             columnView.setOnItemClickListener(mOnClickListener);
@@ -274,7 +270,7 @@ public class Picker extends Fragment {
     }
 
     private void setAdapter(ScrollAdapterView columnView, final String[] col, final int colIndex) {
-        List<String> arrayList = new ArrayList<String>(Arrays.asList(col));
+        List<String> arrayList = new ArrayList<>(Arrays.asList(col));
         PickerScrollArrayAdapter pickerScrollArrayAdapter = (getPickerItemTextViewId() == 0) ?
                 new PickerScrollArrayAdapter(mContext, getPickerItemLayoutId(), arrayList, colIndex)
                 : new PickerScrollArrayAdapter(mContext, getPickerItemLayoutId(),
@@ -312,8 +308,7 @@ public class Picker extends Fragment {
     }
 
     private void updateAllColumnsForClick(boolean keyUp) {
-        ArrayList<Animator> animList = null;
-        animList = new ArrayList<Animator>();
+        ArrayList<Animator> animList = new ArrayList<>();
         View item;
 
         for (int j = 0; j < mColumnViews.size(); j++) {
@@ -325,22 +320,22 @@ public class Picker extends Fragment {
                     if (selected == i) {
                         // set alpha for main item (selected) in the column
                         if (keyUp) {
-                            setOrAnimateAlpha(item, true, mFocusedAlpha, mUnfocusedAlpha, animList,
-                                    mAccelerateInterpolator);
+                            setOrAnimateAlphaInternal(item, true, mFocusedAlpha, mUnfocusedAlpha,
+                                    animList, mAccelerateInterpolator);
                         } else {
-                            setOrAnimateAlpha(item, true, mUnfocusedAlpha, -1, animList,
+                            setOrAnimateAlphaInternal(item, true, mUnfocusedAlpha, -1, animList,
                                     mDecelerateInterpolator);
                         }
                     } else if (!keyUp) {
                         // hide all non selected items on key down
-                        setOrAnimateAlpha(item, true, mInvisibleColumnAlpha, -1, animList,
+                        setOrAnimateAlphaInternal(item, true, mInvisibleColumnAlpha, -1, animList,
                                 mDecelerateInterpolator);
                     }
                 }
             }
         }
 
-        if (animList != null && animList.size() > 0) {
+        if (!animList.isEmpty()) {
             AnimatorSet animSet = new AnimatorSet();
             animSet.playTogether(animList);
 
@@ -371,7 +366,7 @@ public class Picker extends Fragment {
         ArrayList<Animator> localAnimList = animList;
         if (animateAlpha && localAnimList == null) {
             // no global animation list, create a local one for the current set
-            localAnimList = new ArrayList<Animator>();
+            localAnimList = new ArrayList<>();
         }
 
         for (int i = 0; i < column.getAdapter().getCount(); i++) {
@@ -380,7 +375,7 @@ public class Picker extends Fragment {
                 setOrAnimateAlpha(item, (selected == i), focused, animateAlpha, localAnimList);
             }
         }
-        if (animateAlpha && animList == null && localAnimList != null && localAnimList.size() > 0) {
+        if (animateAlpha && animList == null && !localAnimList.isEmpty()) {
             // No global animation list, so play these start the current set of animations now
             AnimatorSet animSet = new AnimatorSet();
             animSet.playTogether(localAnimList);
@@ -393,26 +388,26 @@ public class Picker extends Fragment {
         if (selected) {
             // set alpha for main item (selected) in the column
             if ((focused && !mKeyDown) || mClicked) {
-                setOrAnimateAlpha(view, animate, mFocusedAlpha, -1, animList,
+                setOrAnimateAlphaInternal(view, animate, mFocusedAlpha, -1, animList,
                         mDecelerateInterpolator);
             } else {
-                setOrAnimateAlpha(view, animate, mUnfocusedAlpha, -1, animList,
+                setOrAnimateAlphaInternal(view, animate, mUnfocusedAlpha, -1, animList,
                         mDecelerateInterpolator);
             }
         } else {
             // set alpha for remaining items in the column
             if (focused && !mClicked && !mKeyDown) {
-                setOrAnimateAlpha(view, animate, mVisibleColumnAlpha, -1, animList,
+                setOrAnimateAlphaInternal(view, animate, mVisibleColumnAlpha, -1, animList,
                         mDecelerateInterpolator);
             } else {
-                setOrAnimateAlpha(view, animate, mInvisibleColumnAlpha, -1, animList,
+                setOrAnimateAlphaInternal(view, animate, mInvisibleColumnAlpha, -1, animList,
                         mDecelerateInterpolator);
             }
         }
     }
 
-    private void setOrAnimateAlpha(View view, boolean animate, float destAlpha, float startAlpha,
-            ArrayList<Animator> animList, Interpolator interpolator) {
+    private void setOrAnimateAlphaInternal(View view, boolean animate, float destAlpha,
+            float startAlpha, ArrayList<Animator> animList, Interpolator interpolator) {
         view.clearAnimation();
         if (!animate) {
             view.setAlpha(destAlpha);
@@ -479,7 +474,7 @@ public class Picker extends Fragment {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             View view = super.getView(position, convertView, parent);
-            view.setTag(Integer.valueOf(mColIndex));
+            view.setTag(mColIndex);
             setOrAnimateAlpha(view,
                     (mColumnViews.get(mColIndex).getSelectedItemPosition() == position), false,
                     false, null);
