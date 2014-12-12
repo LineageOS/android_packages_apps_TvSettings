@@ -26,9 +26,6 @@ import java.text.DateFormatSymbols;
  * Picker related constants
  */
 public class PickerConstant {
-    private static PickerConstant sInst;
-    private static Object sInstLock = new Object();
-
     public final String[] months;
     public final String[] days31;
     public final String[] days30;
@@ -42,7 +39,6 @@ public class PickerConstant {
     public final String timeSeparator;
 
     private PickerConstant(Resources resources) {
-        // TODO re-init months and ampm if the locale changes
         months = new DateFormatSymbols().getShortMonths();
         days28 = createStringIntArrays(28, false, 2);
         days29 = createStringIntArrays(29, false, 2);
@@ -72,11 +68,6 @@ public class PickerConstant {
     }
 
     static public PickerConstant getInstance(Resources resources) {
-        synchronized (sInstLock) {
-            if (sInst == null) {
-                sInst = new PickerConstant(resources);
-            }
-        }
-        return sInst;
+        return new PickerConstant(resources);
     }
 }
