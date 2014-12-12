@@ -33,6 +33,8 @@ public class TimePicker extends Picker {
 
     private static final int HOURS_IN_HALF_DAY = 12;
 
+    private PickerConstants.Time mConstant;
+
     private boolean mIs24hFormat = false;
     private boolean mPendingTime = false;
     private int mInitHour;
@@ -58,6 +60,8 @@ public class TimePicker extends Picker {
         boolean useCurrent = getArguments().getBoolean(EXTRA_DEFAULT_TO_CURRENT, false);
 
         super.onCreate(savedInstanceState);
+
+        mConstant = PickerConstants.getTimeInstance(getResources());
 
         if (useCurrent) {
             mPendingTime = true;
