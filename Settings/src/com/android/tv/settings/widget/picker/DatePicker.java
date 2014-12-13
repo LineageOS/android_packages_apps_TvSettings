@@ -18,12 +18,12 @@ package com.android.tv.settings.widget.picker;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import android.widget.TextView;
 
 public class DatePicker extends Picker {
 
@@ -33,6 +33,9 @@ public class DatePicker extends Picker {
     private static final String EXTRA_FORMAT = "date_format";
     private static final int DEFAULT_YEAR_RANGE = 24;
     private static final int DEFAULT_START_YEAR = Calendar.getInstance().get(Calendar.YEAR);
+
+    private PickerConstants.Date mConstant;
+
     private String[] mYears;
     private int mStartYear;
     private int mYearRange;
@@ -112,6 +115,8 @@ public class DatePicker extends Picker {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mConstant = PickerConstants.getDateInstance(getResources());
+
         mStartYear = getArguments().getInt(EXTRA_START_YEAR, DEFAULT_START_YEAR);
         mYearRange = getArguments().getInt(EXTRA_YEAR_RANGE, DEFAULT_YEAR_RANGE);
         boolean startOnToday = getArguments().getBoolean(EXTRA_DEFAULT_TO_CURRENT, false);

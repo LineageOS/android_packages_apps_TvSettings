@@ -64,7 +64,6 @@ public class Picker extends Fragment {
     private ResultListener mResultListener;
     private ChangeTextColorOnFocus mColumnChangeListener;
     private ArrayList<PickerColumn> mColumns = new ArrayList<PickerColumn>();
-    protected PickerConstant mConstant;
 
     private float mUnfocusedAlpha;
     private float mFocusedAlpha;
@@ -168,7 +167,6 @@ public class Picker extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
-        mConstant = PickerConstant.getInstance(mContext.getResources());
 
         mFocusedAlpha = getFloat(R.dimen.list_item_selected_title_text_alpha);
         mUnfocusedAlpha = getFloat(R.dimen.list_item_unselected_text_alpha);

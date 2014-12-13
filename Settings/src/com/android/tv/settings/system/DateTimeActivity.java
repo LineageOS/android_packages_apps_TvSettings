@@ -28,7 +28,7 @@ import com.android.tv.settings.dialog.old.ContentFragment;
 import com.android.tv.settings.widget.picker.DatePicker;
 import com.android.tv.settings.widget.picker.TimePicker;
 import com.android.tv.settings.widget.picker.Picker;
-import com.android.tv.settings.widget.picker.PickerConstant;
+import com.android.tv.settings.widget.picker.PickerConstants;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -396,7 +396,7 @@ public class DateTimeActivity extends BaseSettingsActivity implements ActionAdap
                         int day = Integer.parseInt(result.get(dIndex));
                         int year = Integer.parseInt(result.get(yIndex));
                         int monthInt = 0;
-                        String[] months = PickerConstant.getInstance(mResources).months;
+                        String[] months = PickerConstants.getDateInstance(mResources).months;
                         int totalMonths = months.length;
                         for (int i = 0; i < totalMonths; i++) {
                             if (months[i].equals(month)) {
