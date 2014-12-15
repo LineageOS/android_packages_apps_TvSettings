@@ -18,6 +18,7 @@ package com.android.tv.settings.dialog;
 
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -43,6 +44,8 @@ import com.android.tv.settings.R;
 public abstract class PinDialogFragment extends SafeDismissDialogFragment {
     private static final String TAG = "PinDialogFragment";
     private static boolean DEBUG = false;
+
+    protected static final String ARG_TYPE = "type";
 
     /**
      * PIN code dialog for unlock channel
@@ -75,7 +78,7 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
     private static final int DISABLE_PIN_DURATION_MILLIS = 60 * 1000; // 1 minute
 
     public interface ResultListener {
-        void done(boolean success);
+        void pinFragmentDone(boolean success);
     }
 
     public static final String DIALOG_TAG = PinDialogFragment.class.getName();
@@ -84,7 +87,6 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
             R.id.first, R.id.second, R.id.third, R.id.fourth };
 
     private int mType;
-    private final ResultListener mListener;
     private int mRetCode;
 
     private TextView mWrongPinView;
@@ -102,10 +104,16 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
     public abstract boolean isPinCorrect(String pin);
     public abstract boolean isPinSet();
 
-    public PinDialogFragment(int type, ResultListener listener) {
-        mType = type;
-        mListener = listener;
+    public PinDialogFragment() {
         mRetCode = PIN_DIALOG_RESULT_FAIL;
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        if (!(activity instanceof ResultListener)) {
+            throw new IllegalStateException("Activity must be an instance of ResultListener");
+        }
     }
 
     @Override
@@ -113,6 +121,11 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
         super.onCreate(savedInstanceState);
         setStyle(STYLE_NO_TITLE, 0);
         mDisablePinUntil = getPinDisabledUntil();
+        final Bundle args = getArguments();
+        if (!args.containsKey(ARG_TYPE)) {
+            throw new IllegalStateException("Fragment arguments must specify type");
+        }
+        mType = getArguments().getInt(ARG_TYPE);
     }
 
     @Override
@@ -210,8 +223,9 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
     public void onDismiss(DialogInterface dialog) {
         super.onDismiss(dialog);
         if (DEBUG) Log.d(TAG, "onDismiss: mRetCode=" + mRetCode);
-        if (mListener != null) {
-            mListener.done(mRetCode == PIN_DIALOG_RESULT_SUCCESS);
+        final ResultListener listener = (ResultListener) getActivity();
+        if (listener != null) {
+            listener.pinFragmentDone(mRetCode == PIN_DIALOG_RESULT_SUCCESS);
         }
     }
 

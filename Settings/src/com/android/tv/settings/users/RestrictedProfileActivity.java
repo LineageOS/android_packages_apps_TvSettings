@@ -20,7 +20,6 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.ActivityManagerNative;
-import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.content.pm.IPackageManager;
 import android.content.pm.UserInfo;
@@ -34,7 +33,6 @@ import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.preference.PreferenceManager;
 import android.provider.Settings.Secure;
 import android.util.Log;
 
@@ -46,144 +44,56 @@ import com.android.tv.settings.dialog.DialogFragment.Action;
 import com.android.tv.settings.dialog.PinDialogFragment;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Activity that allows the configuration of a user's restricted profile.
  */
 public class RestrictedProfileActivity extends Activity implements Action.Listener,
-        AppLoadingTask.Listener {
+        AppLoadingTask.Listener, RestrictedProfilePinDialogFragment.Callback {
 
-    public static class RestrictedProfilePinDialogFragment extends PinDialogFragment {
-
-        private static final String PREF_DISABLE_PIN_UNTIL =
-                "RestrictedProfileActivity$RestrictedProfilePinDialogFragment.disable_pin_until";
-
-        /**
-         * Returns the time until we should disable the PIN dialog (because the user input wrong
-         * PINs repeatedly).
-         */
-        public static final long getDisablePinUntil(Context context) {
-            return PreferenceManager.getDefaultSharedPreferences(context).getLong(
-                    PREF_DISABLE_PIN_UNTIL, 0);
-        }
-
-        /**
-         * Saves the time until we should disable the PIN dialog (because the user input wrong PINs
-         * repeatedly).
-         */
-        public static final void setDisablePinUntil(Context context, long timeMillis) {
-            PreferenceManager.getDefaultSharedPreferences(context).edit().putLong(
-                    PREF_DISABLE_PIN_UNTIL, timeMillis).apply();
-        }
-
-        private final LockPatternUtils mLpu;
-        private final ILockSettings mILockSettings;
-
-        public RestrictedProfilePinDialogFragment(int type, ResultListener listener,
-                LockPatternUtils lpu, ILockSettings iLockSettings) {
-            super(type, listener);
-            mLpu = lpu;
-            mILockSettings = iLockSettings;
-        }
-
-        @Override
-        public long getPinDisabledUntil() {
-            return getDisablePinUntil(getActivity());
-        }
-
-        @Override
-        public void setPinDisabledUntil(long retryDisableTimeout) {
-            setDisablePinUntil(getActivity(), retryDisableTimeout);
-        }
-
-        @Override
-        public void setPin(String pin) {
-            mLpu.saveLockPassword(pin, DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
-        }
-
-        @Override
-        public boolean isPinCorrect(String pin) {
-            try {
-                if (mILockSettings.checkPassword(pin, UserHandle.USER_OWNER)) {
-                    return true;
-                }
-            } catch (RemoteException re) {
-                // Do nothing
-            }
-            return false;
-        }
-
-        @Override
-        public boolean isPinSet() {
-            return UserHandle.myUserId() != UserHandle.USER_OWNER || hasLockscreenSecurity(mLpu);
-        }
-    }
-
-    private static final boolean DEBUG = false;
     private static final String TAG = "RestrictedProfile";
 
-    private static final String
-            ACTION_RESTRICTED_PROFILE_SETUP_LOCKSCREEN = "restricted_setup_locakscreen";
+    private static final String ACTION_RESTRICTED_PROFILE_SETUP_LOCKSCREEN =
+            "restricted_setup_locakscreen";
     private static final String ACTION_RESTRICTED_PROFILE_CREATE = "restricted_profile_create";
-    private static final String
-            ACTION_RESTRICTED_PROFILE_SWITCH_TO = "restricted_profile_switch_to";
-    private static final String
-            ACTION_RESTRICTED_PROFILE_SWITCH_OUT = "restricted_profile_switch_out";
+    private static final String ACTION_RESTRICTED_PROFILE_SWITCH_TO =
+            "restricted_profile_switch_to";
+    private static final String  ACTION_RESTRICTED_PROFILE_SWITCH_OUT =
+            "restricted_profile_switch_out";
     private static final String ACTION_RESTRICTED_PROFILE_CONFIG = "restricted_profile_config";
-    private static final String ACTION_RESTRICTED_PROFILE_CONFIG_APPS = "restricted_profile_config_apps";
-    private static final String ACTION_RESTRICTED_PROFILE_CHANGE_PASSWORD = "restricted_profile_change_password";
+    private static final String ACTION_RESTRICTED_PROFILE_CONFIG_APPS =
+            "restricted_profile_config_apps";
+    private static final String ACTION_RESTRICTED_PROFILE_CHANGE_PASSWORD =
+            "restricted_profile_change_password";
     private static final String ACTION_RESTRICTED_PROFILE_DELETE = "restricted_profile_delete";
     private static final String
             ACTION_RESTRICTED_PROFILE_DELETE_CONFIRM = "restricted_profile_delete_confirm";
     private static final String
             ACTION_RESTRICTED_PROFILE_DELETE_CANCEL = "restricted_profile_delete_cancel";
 
-    /**
-     * The description string that should be used for an action that launches the restricted profile
-     * activity.
-     *
-     * @param context used to get the appropriate string.
-     * @return the description string that should be used for an action that launches the restricted
-     *         profile activity.
-     */
-    public static String getActionDescription(Context context) {
-        return context.getString(isRestrictedProfileInEffect(context) ? R.string.on : R.string.off);
-    }
+    private static final String STATE_PIN_MODE = "RestrictedProfileActivity.pinMode";
 
-    public static boolean isRestrictedProfileInEffect(Context context) {
-        UserManager userManager = (UserManager) context.getSystemService(Context.USER_SERVICE);
-        UserInfo restrictedUserInfo = findRestrictedUser(userManager);
-        boolean isOwner = UserHandle.myUserId() == UserHandle.USER_OWNER;
-        boolean isRestrictedProfileOn = restrictedUserInfo != null && !isOwner;
-        return isRestrictedProfileOn;
-    }
+    private static final int PIN_MODE_NONE = 0;
+    private static final int PIN_MODE_CHOOSE_LOCKSCREEN = 1;
+    private static final int PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT = 2;
+    private static final int PIN_MODE_RESTRICTED_PROFILE_CHANGE_PASSWORD = 3;
+    private static final int PIN_MODE_RESTRICTED_PROFILE_DELETE = 4;
 
-    static void switchUserNow(int userId) {
-        try {
-            ActivityManagerNative.getDefault().switchUser(userId);
-        } catch (RemoteException re) {
-            Log.e(TAG, "Caught exception while switching user! " + re);
-        }
-    }
+    private UserManager mUserManager;
+    private UserInfo mRestrictedUserInfo;
+    private DialogFragment mMainMenuDialogFragment;
+    private ILockSettings mLockSettingsService;
+    private Handler mHandler;
+    private IPackageManager mIPm;
+    private AppLoadingTask mAppLoadingTask;
+    private Action mConfigAppsAction;
+    private DialogFragment mConfigDialogFragment;
 
-    static int getIconResource() {
-        return R.drawable.ic_settings_restricted_profile;
-    }
+    private int mPinMode;
 
-    static UserInfo findRestrictedUser(UserManager userManager) {
-        for (UserInfo userInfo : userManager.getUsers()) {
-            if (userInfo.isRestricted()) {
-                return userInfo;
-            }
-        }
-        return null;
-    }
-
-    private final HashMap<String, Boolean> mSelectedPackages = new HashMap<String, Boolean>();
     private final boolean mIsOwner = UserHandle.myUserId() == UserHandle.USER_OWNER;
-    private final AsyncTask<Void, Void, UserInfo>
-            mAddUserAsyncTask = new AsyncTask<Void, Void, UserInfo>() {
+    private final AsyncTask<Void, Void, UserInfo> mAddUserAsyncTask =
+            new AsyncTask<Void, Void, UserInfo>() {
         @Override
         protected UserInfo doInBackground(Void... params) {
             UserInfo restrictedUserInfo = mUserManager.createUser(
@@ -229,16 +139,6 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
         }
     };
 
-    private UserManager mUserManager;
-    private UserInfo mRestrictedUserInfo;
-    private DialogFragment mMainMenuDialogFragment;
-    private ILockSettings mLockSettingsService;
-    private Handler mHandler;
-    private IPackageManager mIPm;
-    private AppLoadingTask mAppLoadingTask;
-    private Action mConfigAppsAction;
-    private DialogFragment mConfigDialogFragment;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -254,6 +154,9 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
                 .iconBackgroundColor(getResources().getColor(R.color.icon_background))
                 .actions(getMainMenuActions()).build();
         DialogFragment.add(getFragmentManager(), mMainMenuDialogFragment);
+        if (savedInstanceState != null) {
+            mPinMode = savedInstanceState.getInt(STATE_PIN_MODE, PIN_MODE_NONE);
+        }
     }
 
     @Override
@@ -264,6 +167,12 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
             mAppLoadingTask = new AppLoadingTask(this, mRestrictedUserInfo.id, false, mIPm, this);
             mAppLoadingTask.execute((Void[]) null);
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(STATE_PIN_MODE, mPinMode);
     }
 
     @Override
@@ -293,29 +202,18 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
             if (getFragmentManager().findFragmentByTag(PinDialogFragment.DIALOG_TAG) != null) {
                 return;
             }
-            new RestrictedProfilePinDialogFragment(PinDialogFragment.PIN_DIALOG_TYPE_ENTER_PIN,
-                    new PinDialogFragment.ResultListener() {
-                        @Override
-                        public void done(boolean success) {
-                            if (success) {
-                                switchUserNow(UserHandle.USER_OWNER);
-                                finish();
-                            }
-                        }
-                    }, new LockPatternUtils(this), getLockSettings()).show(getFragmentManager(),
-                    PinDialogFragment.DIALOG_TAG);
+            mPinMode = PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT;
+            RestrictedProfilePinDialogFragment
+                    .newInstance(PinDialogFragment.PIN_DIALOG_TYPE_ENTER_PIN)
+                    .show(getFragmentManager(), PinDialogFragment.DIALOG_TAG);
         } else if (ACTION_RESTRICTED_PROFILE_CHANGE_PASSWORD.equals(action.getKey())) {
             if (getFragmentManager().findFragmentByTag(PinDialogFragment.DIALOG_TAG) != null) {
                 return;
             }
-            new RestrictedProfilePinDialogFragment(PinDialogFragment.PIN_DIALOG_TYPE_NEW_PIN,
-                    new PinDialogFragment.ResultListener() {
-                        @Override
-                        public void done(boolean success) {
-                            // do nothing
-                        }
-                    }, new LockPatternUtils(this), getLockSettings()).show(getFragmentManager(),
-                    PinDialogFragment.DIALOG_TAG);
+            mPinMode = PIN_MODE_RESTRICTED_PROFILE_CHANGE_PASSWORD;
+            RestrictedProfilePinDialogFragment
+                    .newInstance(PinDialogFragment.PIN_DIALOG_TYPE_NEW_PIN)
+                    .show(getFragmentManager(), PinDialogFragment.DIALOG_TAG);
         } else if (ACTION_RESTRICTED_PROFILE_CONFIG.equals(action.getKey())) {
             mConfigDialogFragment = new DialogFragment.Builder()
                     .title(getString(R.string.restricted_profile_configure_title))
@@ -331,19 +229,10 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
             if (getFragmentManager().findFragmentByTag(PinDialogFragment.DIALOG_TAG) != null) {
                 return;
             }
-            new RestrictedProfilePinDialogFragment(PinDialogFragment.PIN_DIALOG_TYPE_ENTER_PIN,
-                    new PinDialogFragment.ResultListener() {
-                        @Override
-                        public void done(boolean success) {
-                            if (success) {
-                                removeRestrictedUser();
-                                LockPatternUtils lpu = new LockPatternUtils(
-                                        RestrictedProfileActivity.this);
-                                lpu.clearLock(false);
-                            }
-                        }
-                    }, new LockPatternUtils(this), getLockSettings()).show(getFragmentManager(),
-                    PinDialogFragment.DIALOG_TAG);
+            mPinMode = PIN_MODE_RESTRICTED_PROFILE_DELETE;
+            RestrictedProfilePinDialogFragment
+                    .newInstance(PinDialogFragment.PIN_DIALOG_TYPE_ENTER_PIN)
+                    .show(getFragmentManager(), PinDialogFragment.DIALOG_TAG);
         } else if (ACTION_RESTRICTED_PROFILE_DELETE_CONFIRM.equals(action.getKey())) {
             // TODO remove once we confirm it's not needed
             removeRestrictedUser();
@@ -358,6 +247,94 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
             } else {
                 launchChooseLockscreen();
             }
+        }
+    }
+
+    /**
+     * The description string that should be used for an action that launches the restricted profile
+     * activity.
+     *
+     * @param context used to get the appropriate string.
+     * @return the description string that should be used for an action that launches the restricted
+     *         profile activity.
+     */
+    public static String getActionDescription(Context context) {
+        return context.getString(isRestrictedProfileInEffect(context) ? R.string.on : R.string.off);
+    }
+
+    public static boolean isRestrictedProfileInEffect(Context context) {
+        UserManager userManager = (UserManager) context.getSystemService(Context.USER_SERVICE);
+        UserInfo restrictedUserInfo = findRestrictedUser(userManager);
+        boolean isOwner = UserHandle.myUserId() == UserHandle.USER_OWNER;
+        boolean isRestrictedProfileOn = restrictedUserInfo != null && !isOwner;
+        return isRestrictedProfileOn;
+    }
+
+    static void switchUserNow(int userId) {
+        try {
+            ActivityManagerNative.getDefault().switchUser(userId);
+        } catch (RemoteException re) {
+            Log.e(TAG, "Caught exception while switching user! " + re);
+        }
+    }
+
+    static int getIconResource() {
+        return R.drawable.ic_settings_restricted_profile;
+    }
+
+    static UserInfo findRestrictedUser(UserManager userManager) {
+        for (UserInfo userInfo : userManager.getUsers()) {
+            if (userInfo.isRestricted()) {
+                return userInfo;
+            }
+        }
+        return null;
+    }
+
+    // RestrictedProfilePinDialogFragment.Callback methods
+    @Override
+    public void saveLockPassword(String pin, int quality) {
+        new LockPatternUtils(this).saveLockPassword(pin, quality);
+    }
+
+    @Override
+    public boolean checkPassword(String password, int userId) {
+        try {
+            return getLockSettings().checkPassword(password, userId);
+        } catch (final RemoteException e) {
+            // ignore
+        }
+        return false;
+    }
+
+    @Override
+    public boolean hasLockscreenSecurity() {
+        return RestrictedProfileActivity.hasLockscreenSecurity(new LockPatternUtils(this));
+    }
+
+    @Override
+    public void pinFragmentDone(boolean success) {
+        switch (mPinMode) {
+            case PIN_MODE_CHOOSE_LOCKSCREEN:
+                if (success) {
+                    addRestrictedUser();
+                }
+                break;
+            case PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT:
+                if (success) {
+                    switchUserNow(UserHandle.USER_OWNER);
+                    finish();
+                }
+                break;
+            case PIN_MODE_RESTRICTED_PROFILE_CHANGE_PASSWORD:
+                // do nothing
+                break;
+            case PIN_MODE_RESTRICTED_PROFILE_DELETE:
+                if (success) {
+                    removeRestrictedUser();
+                    new LockPatternUtils(this).clearLock(false);
+                }
+                break;
         }
     }
 
@@ -429,16 +406,9 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
         if (getFragmentManager().findFragmentByTag(PinDialogFragment.DIALOG_TAG) != null) {
             return;
         }
-        new RestrictedProfilePinDialogFragment(PinDialogFragment.PIN_DIALOG_TYPE_NEW_PIN,
-                new PinDialogFragment.ResultListener() {
-                    @Override
-                    public void done(boolean success) {
-                        if (success) {
-                            addRestrictedUser();
-                        }
-                    }
-                }, new LockPatternUtils(this), getLockSettings()).show(getFragmentManager(),
-                PinDialogFragment.DIALOG_TAG);
+        mPinMode = PIN_MODE_CHOOSE_LOCKSCREEN;
+        RestrictedProfilePinDialogFragment.newInstance(PinDialogFragment.PIN_DIALOG_TYPE_NEW_PIN)
+                .show(getFragmentManager(), PinDialogFragment.DIALOG_TAG);
     }
 
     private void removeRestrictedUser() {
