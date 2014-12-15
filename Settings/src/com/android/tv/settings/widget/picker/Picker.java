@@ -473,10 +473,11 @@ public class Picker extends Fragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            View view = super.getView(position, convertView, parent);
+            final View view = super.getView(position, convertView, parent);
             view.setTag(mColIndex);
+            final ScrollAdapterView columnView = mColumnViews.get(mColIndex);
             setOrAnimateAlpha(view,
-                    (mColumnViews.get(mColIndex).getSelectedItemPosition() == position), false,
+                    (columnView.getSelectedItemPosition() == position), columnView.hasFocus(),
                     false, null);
             return view;
         }
