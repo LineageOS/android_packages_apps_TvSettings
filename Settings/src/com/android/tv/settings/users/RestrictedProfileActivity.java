@@ -264,25 +264,23 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
 
     public static boolean isRestrictedProfileInEffect(Context context) {
         UserManager userManager = (UserManager) context.getSystemService(Context.USER_SERVICE);
-        UserInfo restrictedUserInfo = findRestrictedUser(userManager);
-        boolean isOwner = UserHandle.myUserId() == UserHandle.USER_OWNER;
-        boolean isRestrictedProfileOn = restrictedUserInfo != null && !isOwner;
-        return isRestrictedProfileOn;
+        UserInfo userInfo = userManager.getUserInfo(UserHandle.myUserId());
+        return userInfo.isRestricted();
     }
 
-    static void switchUserNow(int userId) {
+    /* package */ static void switchUserNow(int userId) {
         try {
             ActivityManagerNative.getDefault().switchUser(userId);
         } catch (RemoteException re) {
-            Log.e(TAG, "Caught exception while switching user! " + re);
+            Log.e(TAG, "Caught exception while switching user! ", re);
         }
     }
 
-    static int getIconResource() {
+    /* package */ static int getIconResource() {
         return R.drawable.ic_settings_restricted_profile;
     }
 
-    static UserInfo findRestrictedUser(UserManager userManager) {
+    /* package */ static UserInfo findRestrictedUser(UserManager userManager) {
         for (UserInfo userInfo : userManager.getUsers()) {
             if (userInfo.isRestricted()) {
                 return userInfo;
@@ -347,7 +345,7 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
     }
 
     private ArrayList<Action> getMainMenuActions() {
-        ArrayList<Action> actions = new ArrayList<Action>();
+        ArrayList<Action> actions = new ArrayList<>();
         if (mRestrictedUserInfo != null) {
             if (mIsOwner) {
                 actions.add(new Action.Builder()
@@ -378,7 +376,7 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
     }
 
     private ArrayList<Action> getConfigActions() {
-        ArrayList<Action> actions = new ArrayList<Action>();
+        ArrayList<Action> actions = new ArrayList<>();
         actions.add(new Action.Builder()
                 .key(ACTION_RESTRICTED_PROFILE_CHANGE_PASSWORD)
                 .title(getString(R.string.restricted_profile_change_password_title))
@@ -426,7 +424,7 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
     }
 
     private Bitmap createBitmapFromDrawable(int resId) {
-        Drawable icon = getResources().getDrawable(resId);
+        Drawable icon = getDrawable(resId);
         icon.setBounds(0, 0, icon.getIntrinsicWidth(), icon.getIntrinsicHeight());
         Bitmap bitmap = Bitmap.createBitmap(icon.getIntrinsicWidth(), icon.getIntrinsicHeight(),
                 Bitmap.Config.ARGB_8888);
