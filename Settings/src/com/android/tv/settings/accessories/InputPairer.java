@@ -348,7 +348,6 @@ public class InputPairer {
         // which might seem odd from a client perspective
         setStatus(STATUS_SCANNING);
 
-        BluetoothScanner.stopListening(mBtListener);
         BluetoothScanner.startListening(mContext, mBtListener, new InputDeviceCriteria());
     }
 
@@ -363,6 +362,14 @@ public class InputPairer {
     public void cancelPairing() {
         mAutoMode = false;
         doCancel();
+    }
+
+
+    /**
+     * Switch to manual pairing mode.
+     */
+    public void disableAutoPairing() {
+        mAutoMode = false;
     }
 
     /**
@@ -444,8 +451,7 @@ public class InputPairer {
                     "previous request first");
         }
 
-        mHandler.removeMessages(MSG_PAIR);
-        mHandler.removeMessages(MSG_START);
+        mHandler.removeCallbacksAndMessages(null);
 
         mNextStageTimestamp = SystemClock.elapsedRealtime() +
                 (mAutoMode ? DELAY_AUTO_PAIRING : DELAY_MANUAL_PAIRING);
@@ -524,8 +530,7 @@ public class InputPairer {
         BluetoothScanner.stopListening(mBtListener);
         BluetoothScanner.stopNow();
 
-        // remove any callbacks
-        mHandler.removeMessages(MSG_PAIR);
+        mHandler.removeCallbacksAndMessages(null);
 
         // remove bond, if existing
         unpairDevice(mTarget);

@@ -613,8 +613,7 @@ public class AddAccessoryActivity extends DialogActivity
         mBtPairer = new InputPairer(this, this);
         mBtPairer.start();
 
-        // Disable auto-pairing
-        mBtPairer.cancelPairing();
+        mBtPairer.disableAutoPairing();
 
         mPairingSuccess = false;
         statusChanged();
