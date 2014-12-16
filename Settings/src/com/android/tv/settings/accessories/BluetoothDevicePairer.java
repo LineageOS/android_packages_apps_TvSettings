@@ -17,13 +17,17 @@
 package com.android.tv.settings.accessories;
 
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothInputDevice;
 import android.bluetooth.BluetoothProfile;
+import android.bluetooth.IBluetoothA2dp;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.hardware.input.InputManager;
 import android.os.Handler;
 import android.os.Message;
@@ -32,15 +36,17 @@ import android.util.Log;
 import android.view.InputDevice;
 
 import com.android.tv.settings.util.bluetooth.BluetoothScanner;
+import com.android.tv.settings.util.bluetooth.BluetoothDeviceCriteria;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
- * Monitors available Bluetooth input devices and manages process of pairing
+ * Monitors available Bluetooth devices and manages process of pairing
  * and connecting to the device.
  */
-public class InputPairer {
+public class BluetoothDevicePairer {
 
     /**
      * This class operates in two modes, automatic and manual.
@@ -78,7 +84,7 @@ public class InputPairer {
      * connecting, but it is {@link #DELAY_MANUAL_PAIRING}.
      */
 
-    public static final String TAG = "aah.InputPairer";
+    public static final String TAG = "aah.BluetoothDevicePairer";
     public static final int STATUS_ERROR = -1;
     public static final int STATUS_NONE = 0;
     public static final int STATUS_SCANNING = 1;
@@ -99,9 +105,21 @@ public class InputPairer {
 
     public interface EventListener {
         /**
-         * The status of the {@link InputPairer} changed.
+         * The status of the {@link BluetoothDevicePairer} changed.
          */
         public void statusChanged();
+    }
+
+    public interface BluetoothConnector {
+        public void openConnection(BluetoothAdapter adapter);
+    }
+
+    public interface OpenConnectionCallback {
+        /**
+         * Call back when BT device connection is completed.
+         */
+        public void succeeded();
+        public void failed();
     }
 
     /**
@@ -228,62 +246,19 @@ public class InputPairer {
         }
     };
 
-    private final BluetoothProfile.ServiceListener mServiceConnection =
-            new BluetoothProfile.ServiceListener() {
-
-        @Override
-        public void onServiceDisconnected(int profile) {
-            // TODO handle unexpected disconnection
-            Log.w(TAG, "Service disconected, perhaps unexpectedly");
-        }
-
-        @Override
-        public void onServiceConnected(int profile, BluetoothProfile proxy) {
-            if (DEBUG) {
-                Log.d(TAG, "Connection made to bluetooth proxy.");
-            }
-            mInputProxy = (BluetoothInputDevice) proxy;
-            if (mTarget != null) {
-                registerInputMethodMonitor();
-                if (DEBUG) {
-                    Log.d(TAG, "Connecting to target: " + mTarget.getAddress());
-                }
-                // TODO need to start a timer, otherwise if the connection fails we might be
-                // stuck here forever
-                mInputProxy.connect(mTarget);
-
-                // must set PRIORITY_AUTO_CONNECT or auto-connection will not
-                // occur, however this setting does not appear to be sticky
-                // across a reboot
-                mInputProxy.setPriority(mTarget, BluetoothProfile.PRIORITY_AUTO_CONNECT);
-            }
-        }
-    };
-
-    private final InputManager.InputDeviceListener mInputListener =
-            new InputManager.InputDeviceListener() {
-        @Override
-        public void onInputDeviceRemoved(int deviceId) {
-            // ignored
-        }
-
-        @Override
-        public void onInputDeviceChanged(int deviceId) {
-            // ignored
-        }
-
-        @Override
-        public void onInputDeviceAdded(int deviceId) {
-           if (hasValidInputDevice(mContext, new int[] {deviceId})) {
-               onInputAdded();
-           }
-        }
-    };
-
     private final Runnable mStartRunnable = new Runnable() {
         @Override
         public void run() {
             start();
+        }
+    };
+
+    private final OpenConnectionCallback mOpenConnectionCallback = new OpenConnectionCallback() {
+        public void succeeded() {
+            setStatus(STATUS_NONE);
+        }
+        public void failed() {
+            setStatus(STATUS_ERROR);
         }
     };
 
@@ -300,16 +275,20 @@ public class InputPairer {
     private final ArrayList<BluetoothDevice> mVisibleDevices = new ArrayList<>();
     private BluetoothDevice mTarget;
     private final Handler mHandler;
-    private BluetoothInputDevice mInputProxy;
     private long mNextStageTimestamp = -1;
     private boolean mLinkReceiverRegistered = false;
+    private final ArrayList<BluetoothDeviceCriteria> mBluetoothDeviceCriteria = new
+        ArrayList<BluetoothDeviceCriteria>();
 
     /**
      * Should be instantiated on a thread with a Looper, perhaps the main thread!
      */
-    public InputPairer(Context context, EventListener listener) {
+    public BluetoothDevicePairer(Context context, EventListener listener) {
         mContext = context.getApplicationContext();
         mListener = listener;
+
+        addBluetoothDeviceCriteria();
+
         mHandler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
@@ -325,6 +304,23 @@ public class InputPairer {
                 }
             }
         };
+    }
+
+    private void addBluetoothDeviceCriteria() {
+        // Input is supported by all devices.
+        mBluetoothDeviceCriteria.add(new InputDeviceCriteria());
+
+        // Add Bluetooth a2dp on if the service is running and the
+        // setting profile_supported_a2dp is set to true.
+        Intent intent = new Intent(IBluetoothA2dp.class.getName());
+        ComponentName comp = intent.resolveSystemService(mContext.getPackageManager(), 0);
+        if (comp != null) {
+            int enabledState = mContext.getPackageManager().getComponentEnabledSetting(comp);
+            if (enabledState != PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
+                Log.d(TAG, "Adding A2dp device criteria for pairing");
+                mBluetoothDeviceCriteria.add(new A2dpDeviceCriteria());
+            }
+        }
     }
 
     /**
@@ -346,7 +342,7 @@ public class InputPairer {
         // which might seem odd from a client perspective
         setStatus(STATUS_SCANNING);
 
-        BluetoothScanner.startListening(mContext, mBtListener, new InputDeviceCriteria());
+        BluetoothScanner.startListening(mContext, mBtListener, mBluetoothDeviceCriteria);
     }
 
     public void clearDeviceList() {
@@ -567,19 +563,19 @@ public class InputPairer {
     }
 
     private void openConnection() {
-        setStatus(STATUS_CONNECTING);
-
         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
-
-        // connect to the Bluetooth service, then registerInputListener
-        adapter.getProfileProxy(mContext, mServiceConnection, BluetoothProfile.INPUT_DEVICE);
-    }
-
-    private void onInputAdded() {
-        unregisterInputMethodMonitor();
-        BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
-        adapter.closeProfileProxy(BluetoothProfile.INPUT_DEVICE, mInputProxy);
-        setStatus(STATUS_NONE);
+        BluetoothConnector btConnector = getBluetoothConnector();
+        if (btConnector != null) {
+            setStatus(STATUS_CONNECTING);
+            btConnector.openConnection(adapter);
+        } else {
+            Log.w(TAG, "There was an error getting the BluetoothConnector.");
+            setStatus(STATUS_ERROR);
+            if (mLinkReceiverRegistered) {
+                unregisterLinkStatusReceiver();
+            }
+            unpairDevice(mTarget);
+        }
     }
 
     private void onBondFailed() {
@@ -592,23 +588,6 @@ public class InputPairer {
         // TODO do we need to check Bluetooth for the device and possible delete it?
         mNextStageTimestamp = SystemClock.elapsedRealtime() + DELAY_RETRY;
         mHandler.sendEmptyMessageDelayed(MSG_START, DELAY_RETRY);
-    }
-
-    private void registerInputMethodMonitor() {
-        InputManager inputManager = (InputManager) mContext.getSystemService(Context.INPUT_SERVICE);
-        inputManager.registerInputDeviceListener(mInputListener, mHandler);
-
-        // TO DO: The line below is a workaround for an issue in InputManager.
-        // The manager doesn't actually registers itself with the InputService
-        // unless we query it for input devices. We should remove this once
-        // the problem is fixed in InputManager.
-        // Reference bug in Frameworks: b/10415556
-        int[] inputDevices = inputManager.getInputDeviceIds();
-    }
-
-    private void unregisterInputMethodMonitor() {
-        InputManager inputManager = (InputManager) mContext.getSystemService(Context.INPUT_SERVICE);
-        inputManager.unregisterInputDeviceListener(mInputListener);
     }
 
     private void registerLinkStatusReceiver() {
@@ -648,5 +627,20 @@ public class InputPairer {
             }
         }
         return false;
+    }
+
+    private BluetoothConnector getBluetoothConnector() {
+        int majorDeviceClass = mTarget.getBluetoothClass().getMajorDeviceClass();
+        switch (majorDeviceClass) {
+            case BluetoothClass.Device.Major.PERIPHERAL:
+                return new BluetoothInputDeviceConnector(
+                    mContext, mTarget, mHandler, mOpenConnectionCallback);
+            case BluetoothClass.Device.Major.AUDIO_VIDEO:
+                return new BluetoothA2dpConnector(mContext, mTarget, mOpenConnectionCallback);
+            default:
+                Log.d(TAG, "Unhandle device class: " + majorDeviceClass);
+                break;
+        }
+        return null;
     }
 }

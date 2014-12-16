@@ -17,33 +17,28 @@
 package com.android.tv.settings.accessories;
 
 import android.bluetooth.BluetoothClass;
+import android.util.Log;
 
 import com.android.tv.settings.util.bluetooth.BluetoothDeviceCriteria;
 
-public class InputDeviceCriteria extends BluetoothDeviceCriteria {
+public class A2dpDeviceCriteria extends BluetoothDeviceCriteria {
 
-    public static final int MINOR_DEVICE_CLASS_POINTING =
-            Integer.parseInt("0000010000000", 2);
-    public static final int MINOR_DEVICE_CLASS_JOYSTICK =
-            Integer.parseInt("0000000000100", 2);
-    public static final int MINOR_DEVICE_CLASS_GAMEPAD =
-            Integer.parseInt("0000000001000", 2);
-    public static final int MINOR_DEVICE_CLASS_KEYBOARD =
-            Integer.parseInt("0000001000000", 2);
-    public static final int MINOR_DEVICE_CLASS_REMOTE =
-            Integer.parseInt("0000000001100", 2);
+    public static final String TAG = "aah.A2dpDeviceCriteria";
 
     @Override
     public boolean isMatchingMajorDeviceClass(int majorDeviceClass) {
-        return majorDeviceClass == BluetoothClass.Device.Major.PERIPHERAL;
+        return majorDeviceClass == BluetoothClass.Device.Major.AUDIO_VIDEO;
     }
 
     @Override
     public boolean isMatchingDeviceClass(int majorMinorClass) {
-        int acceptableDevicesMask = MINOR_DEVICE_CLASS_POINTING | MINOR_DEVICE_CLASS_JOYSTICK |
-                MINOR_DEVICE_CLASS_GAMEPAD | MINOR_DEVICE_CLASS_KEYBOARD |
-                MINOR_DEVICE_CLASS_REMOTE;
-
-        return (acceptableDevicesMask & majorMinorClass) != 0;
+        Log.d(TAG, "isMatchingDeviceClass : " + majorMinorClass);
+        return (majorMinorClass == BluetoothClass.Device.AUDIO_VIDEO_UNCATEGORIZED ||
+                majorMinorClass == BluetoothClass.Device.AUDIO_VIDEO_WEARABLE_HEADSET ||
+                majorMinorClass == BluetoothClass.Device.AUDIO_VIDEO_HEADPHONES ||
+                majorMinorClass == BluetoothClass.Device.AUDIO_VIDEO_LOUDSPEAKER ||
+                majorMinorClass == BluetoothClass.Device.AUDIO_VIDEO_PORTABLE_AUDIO ||
+                majorMinorClass == BluetoothClass.Device.AUDIO_VIDEO_HIFI_AUDIO
+               );
     }
 }
