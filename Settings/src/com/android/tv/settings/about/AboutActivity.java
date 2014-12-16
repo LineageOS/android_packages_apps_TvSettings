@@ -16,17 +16,7 @@
 
 package com.android.tv.settings.about;
 
-import com.android.tv.settings.R;
-import com.android.tv.settings.PreferenceUtils;
-import com.android.tv.settings.dialog.old.Action;
-import com.android.tv.settings.dialog.old.ActionAdapter;
-import com.android.tv.settings.dialog.old.ActionFragment;
-import com.android.tv.settings.dialog.old.ContentFragment;
-import com.android.tv.settings.dialog.old.DialogActivity;
-import com.android.tv.settings.name.DeviceManager;
-
 import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -40,14 +30,22 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.android.tv.settings.PreferenceUtils;
+import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.old.Action;
+import com.android.tv.settings.dialog.old.ActionAdapter;
+import com.android.tv.settings.dialog.old.ActionFragment;
+import com.android.tv.settings.dialog.old.ContentFragment;
+import com.android.tv.settings.dialog.old.DialogActivity;
+import com.android.tv.settings.name.DeviceManager;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Activity which shows the build / model / legal info / etc.
  */
-public class AboutActivity extends DialogActivity implements ActionAdapter.Listener,
-        ActionAdapter.OnFocusListener {
+public class AboutActivity extends DialogActivity implements ActionAdapter.Listener {
 
     private static final String TAG = "AboutActivity";
 
@@ -99,7 +97,6 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private int mDeveloperClickCount;
     private PreferenceUtils mPreferenceUtils;
     private Toast mToast;
-    private int mSelectedIndex;
     private long[] mHits = new long[3];
     private int mHitsIndex;
 
@@ -107,22 +104,23 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPreferenceUtils = new PreferenceUtils(this);
-        setContentAndActionFragments(ContentFragment.newInstance(
-                        getString(R.string.about_preference), null, null, R.drawable.ic_settings_about,
-                        getResources().getColor(R.color.icon_background)),
-                ActionFragment.newInstance(getActions()));
-        mSelectedIndex = 0;
+
+        if (savedInstanceState == null) {
+            final Fragment contentFragment = ContentFragment.newInstance(
+                    getString(R.string.about_preference), null, null,
+                    R.drawable.ic_settings_about,
+                    getResources().getColor(R.color.icon_background));
+
+            final Fragment actionFragment = ActionFragment.newInstance(getActions());
+
+            setContentAndActionFragments(contentFragment, actionFragment);
+        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
         mDeveloperClickCount = 0;
-    }
-
-    @Override
-    public void onActionFocused(Action action) {
-        mSelectedIndex = getActions().indexOf(action);
     }
 
     @Override
@@ -174,7 +172,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     }
 
     private ArrayList<Action> getLegalActions() {
-        ArrayList<Action> actions = new ArrayList<Action>();
+        ArrayList<Action> actions = new ArrayList<>();
         actions.add(new Action.Builder()
                 .intent(systemIntent(SETTINGS_LEGAL_LICENSE_INTENT_ACTION))
                 .title(getString(R.string.about_legal_license))
@@ -188,7 +186,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     }
 
     private ArrayList<Action> getActions() {
-        ArrayList<Action> actions = new ArrayList<Action>();
+        ArrayList<Action> actions = new ArrayList<>();
         actions.add(new Action.Builder()
                 .key("update")
                 .title(getString(R.string.about_system_update))
@@ -244,15 +242,6 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 .enabled(true)
                 .build());
         return actions;
-    }
-
-    private void displayFragment(Fragment fragment) {
-        getFragmentManager()
-            .beginTransaction()
-            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-            .replace(android.R.id.content, fragment)
-            .addToBackStack(null)
-            .commit();
     }
 
     private void showToast(String toastString) {
