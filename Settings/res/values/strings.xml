@@ -146,6 +146,8 @@
     <string name="accessory_rename">Rename</string>
     <!-- Preference for unpairing a Bluetooth accessory[CHAR LIMIT=50] -->
     <string name="accessory_unpair">Unpair</string>
+    <!-- Preference for displaying battery level percentage. % symbol if used must be escaped as %% [CHAR LIMIT=150] -->
+    <string name="accessory_battery">Battery <xliff:g id="percentage">%1$d</xliff:g>%%</string>
     <!-- Description shown while we are waiting for a device unpair operation to finish[CHAR LIMIT=50] -->
     <string name="accessory_unpairing">Unpairing device&#8230;</string>
     <!-- Description for Connected accessory[CHAR LIMIT=50] -->

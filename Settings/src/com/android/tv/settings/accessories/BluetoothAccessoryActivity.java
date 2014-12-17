@@ -16,17 +16,12 @@
 
 package com.android.tv.settings.accessories;
 
-import static android.provider.Settings.Secure.TTS_DEFAULT_RATE;
-
-import com.android.tv.settings.ActionBehavior;
-import com.android.tv.settings.ActionKey;
-import com.android.tv.settings.BaseSettingsActivity;
-import com.android.tv.settings.R;
-import com.android.tv.settings.dialog.old.Action;
-import com.android.tv.settings.dialog.old.ActionAdapter;
-
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothGatt;
+import android.bluetooth.BluetoothGattCallback;
+import android.bluetooth.BluetoothGattCharacteristic;
+import android.bluetooth.BluetoothGattService;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -35,7 +30,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+
+import com.android.tv.settings.ActionBehavior;
+import com.android.tv.settings.ActionKey;
+import com.android.tv.settings.BaseSettingsActivity;
+import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.old.Action;
+import com.android.tv.settings.dialog.old.ActionAdapter;
+
 import java.util.Set;
+import java.util.UUID;
 
 public class BluetoothAccessoryActivity extends BaseSettingsActivity
         implements ActionAdapter.Listener {
@@ -48,14 +52,21 @@ public class BluetoothAccessoryActivity extends BaseSettingsActivity
 
     private static final int UNPAIR_TIMEOUT = 5000;
 
-    private static final String TAG = "aah.BluetoothAccessoryActivity";
+    private static final UUID GATT_BATTERY_SERVICE_UUID =
+            UUID.fromString("0000180f-0000-1000-8000-00805f9b34fb");
+    private static final UUID GATT_BATTERY_LEVEL_CHARACTERISTIC_UUID =
+            UUID.fromString("00002a19-0000-1000-8000-00805f9b34fb");
+
+    private static final String TAG = "BTAccSett";
     private static final boolean DEBUG = false;
 
     private BluetoothDevice mDevice;
+    private BluetoothGatt mDeviceGatt;
     protected String mDeviceAddress;
     protected String mDeviceName;
     protected int mDeviceImgId;
     protected boolean mDone;
+    private int mBatteryLevel = -1;
 
     public static Intent getIntent(Context context, String deviceAddress,
             String deviceName, int iconId) {
@@ -124,6 +135,75 @@ public class BluetoothAccessoryActivity extends BaseSettingsActivity
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        if (mDevice != null &&
+                (mDevice.getType() == BluetoothDevice.DEVICE_TYPE_LE ||
+                mDevice.getType() == BluetoothDevice.DEVICE_TYPE_DUAL)) {
+            // Only LE devices support GATT
+            mDeviceGatt = mDevice.connectGatt(this, true, new GattBatteryCallbacks());
+        }
+    }
+
+    private class GattBatteryCallbacks extends BluetoothGattCallback {
+        @Override
+        public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
+            if (DEBUG) {
+                Log.d(TAG, "Connection status:" + status + " state:" + newState);
+            }
+            if (status == BluetoothGatt.GATT_SUCCESS && newState == BluetoothGatt.STATE_CONNECTED) {
+                gatt.discoverServices();
+            }
+        }
+
+        @Override
+        public void onServicesDiscovered(BluetoothGatt gatt, int status) {
+            if (status != BluetoothGatt.GATT_SUCCESS) {
+                if (DEBUG) {
+                    Log.e(TAG, "Service discovery failure on " + gatt);
+                }
+                return;
+            }
+
+            final BluetoothGattService battService = gatt.getService(GATT_BATTERY_SERVICE_UUID);
+            if (battService == null) {
+                if (DEBUG) {
+                    Log.d(TAG, "No battery service");
+                }
+                return;
+            }
+
+            final BluetoothGattCharacteristic battLevel =
+                    battService.getCharacteristic(GATT_BATTERY_LEVEL_CHARACTERISTIC_UUID);
+            if (battLevel == null) {
+                if (DEBUG) {
+                    Log.d(TAG, "No battery level");
+                }
+                return;
+            }
+
+            gatt.readCharacteristic(battLevel);
+        }
+
+        @Override
+        public void onCharacteristicRead(BluetoothGatt gatt,
+                BluetoothGattCharacteristic characteristic, int status) {
+            if (status != BluetoothGatt.GATT_SUCCESS) {
+                if (DEBUG) {
+                    Log.e(TAG, "Read characteristic failure on " + gatt + " " + characteristic);
+                }
+                return;
+            }
+
+            if (GATT_BATTERY_LEVEL_CHARACTERISTIC_UUID.equals(characteristic.getUuid())) {
+                mBatteryLevel =
+                        characteristic.getIntValue(BluetoothGattCharacteristic.FORMAT_UINT8, 0);
+                updateView();
+            }
+        }
+    }
+
+    @Override
     public void onResume() {
         // Set a broadcast receiver to let us know when the device has been removed
         IntentFilter adapterIntentFilter = new IntentFilter();
@@ -139,6 +219,14 @@ public class BluetoothAccessoryActivity extends BaseSettingsActivity
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        if (mDeviceGatt != null) {
+            mDeviceGatt.close();
+        }
+    }
+
+    @Override
     public void onActionClicked(Action action) {
         if (mDone) {
             return;
@@ -146,7 +234,7 @@ public class BluetoothAccessoryActivity extends BaseSettingsActivity
         /*
          * For regular states
          */
-        ActionKey<ActionType, ActionBehavior> actionKey = new ActionKey<ActionType, ActionBehavior>(
+        ActionKey<ActionType, ActionBehavior> actionKey = new ActionKey<>(
                 ActionType.class, ActionBehavior.class, action.getKey());
         final ActionType type = actionKey.getType();
         if (type != null) {
@@ -186,6 +274,12 @@ public class BluetoothAccessoryActivity extends BaseSettingsActivity
                 // Disabled for now, until the name input screen is implemented
                 // mActions.add(ActionType.BLUETOOTH_DEVICE_RENAME.toAction(mResources));
                 mActions.add(ActionType.BLUETOOTH_DEVICE_UNPAIR.toAction(mResources));
+                if (mBatteryLevel != -1) {
+                    mActions.add(new Action.Builder()
+                            .title(getString(R.string.accessory_battery, mBatteryLevel))
+                            .infoOnly(true)
+                            .build());
+                }
                 break;
             case BLUETOOTH_DEVICE_UNPAIR:
                 mActions.add(ActionType.OK.toAction(mResources));
