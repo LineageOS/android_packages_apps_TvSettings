@@ -85,8 +85,8 @@ public class DreamInfoAction extends Action {
 
     protected DreamInfoAction(ResolveInfo resolveInfo, boolean checked, String title,
             ComponentName dreamComponentName, ComponentName settingsComponentName) {
-        super(null, title, null, null, 0, checked, false, settingsComponentName != null, false,
-                null, CHECK_SET_ID);
+        super(null, title, null, null, 0, null, checked, false, settingsComponentName != null,
+                false, null, CHECK_SET_ID, true);
         mResolveInfo = resolveInfo;
         mDreamComponentName = dreamComponentName;
         mSettingsComponentName = settingsComponentName;
