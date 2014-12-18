@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.util;
 
-import com.android.tv.settings.R;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
@@ -29,22 +28,18 @@ import android.os.SystemProperties;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
-import android.view.IWindowManager;
-import android.view.View;
 
-import java.util.ArrayList;
+import com.android.tv.settings.R;
 
 public class SettingsHelper {
 
     private static final String TAG = "SettingsHelper";
     private static final boolean DEBUG = false;
 
-    private Context mContext;
-    private ContentResolver mContentResolver;
-    private Resources mResources;
+    private final ContentResolver mContentResolver;
+    private final Resources mResources;
 
     public SettingsHelper(Context context) {
-        mContext = context;
         mContentResolver = context.getContentResolver();
         mResources = context.getResources();
     }

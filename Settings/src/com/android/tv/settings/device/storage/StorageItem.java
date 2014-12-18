@@ -16,14 +16,10 @@
 
 package com.android.tv.settings.device.storage;
 
+import android.content.res.Resources;
+
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.old.Action;
-
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.shapes.RectShape;
 
 public enum StorageItem {
     AVAILABLE(R.string.storage_available, R.color.storage_avail,

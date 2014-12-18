@@ -70,7 +70,7 @@ public class StorageMeasurement {
             DEFAULT_CONTAINER_PACKAGE, "com.android.defcontainer.DefaultContainerService");
 
     /** Media types to measure on external storage. */
-    private static final Set<String> sMeasureMediaTypes = new HashSet<String>(10);
+    private static final Set<String> sMeasureMediaTypes = new HashSet<>(10);
     static {
         sMeasureMediaTypes.add(Environment.DIRECTORY_DCIM);
         sMeasureMediaTypes.add(Environment.DIRECTORY_MOVIES);
@@ -84,8 +84,7 @@ public class StorageMeasurement {
         sMeasureMediaTypes.add(Environment.DIRECTORY_ANDROID);
     }
 
-    private static HashMap<StorageVolume, StorageMeasurement> sInstances =
-            new HashMap<StorageVolume, StorageMeasurement>();
+    private static final HashMap<StorageVolume, StorageMeasurement> sInstances = new HashMap<>();
 
     /**
      * Obtain shared instance of {@link StorageMeasurement} for given physical
@@ -135,7 +134,7 @@ public class StorageMeasurement {
          * When measuring a physical {@link StorageVolume}, this reflects media
          * on that volume.
          */
-        public HashMap<String, Long> mediaSize = new HashMap<String, Long>();
+        public final HashMap<String, Long> mediaSize = new HashMap<>();
 
         /**
          * Misc external disk usage for the current user, unaccounted in
@@ -147,7 +146,7 @@ public class StorageMeasurement {
          * Total disk usage for users, which is only meaningful for emulated
          * internal storage. Key is {@link UserHandle}.
          */
-        public SparseLongArray usersSize = new SparseLongArray();
+        public final SparseLongArray usersSize = new SparseLongArray();
     }
 
     public interface MeasurementReceiver {
@@ -173,7 +172,7 @@ public class StorageMeasurement {
     private StorageMeasurement(Context context, StorageVolume volume) {
         mVolume = volume;
         mIsInternal = volume == null;
-        mIsPrimary = volume != null ? volume.isPrimary() : false;
+        mIsPrimary = volume != null && volume.isPrimary();
 
         // Start the thread that will measure the disk usage.
         final HandlerThread handlerThread = new HandlerThread("MemoryMeasurement");
@@ -183,7 +182,7 @@ public class StorageMeasurement {
 
     public void setReceiver(MeasurementReceiver receiver) {
         if (mReceiver == null || mReceiver.get() == null) {
-            mReceiver = new WeakReference<MeasurementReceiver>(receiver);
+            mReceiver = new WeakReference<>(receiver);
         }
     }
 
@@ -293,7 +292,7 @@ public class StorageMeasurement {
         public static final int MSG_COMPLETED = 4;
         public static final int MSG_INVALIDATE = 5;
 
-        private Object mLock = new Object();
+        private final Object mLock = new Object();
 
         private IMediaContainerService mDefaultContainer;
 
@@ -322,7 +321,7 @@ public class StorageMeasurement {
 
         public MeasurementHandler(Context context, Looper looper) {
             super(looper);
-            mContext = new WeakReference<Context>(context);
+            mContext = new WeakReference<>(context);
         }
 
         @Override
@@ -477,7 +476,7 @@ public class StorageMeasurement {
     }
 
     private long measureMisc(IMediaContainerService imcs, File dir) {
-        mFileInfoForMisc = new ArrayList<FileInfo>();
+        mFileInfoForMisc = new ArrayList<>();
 
         final File[] files = dir.listFiles();
         if (files == null) return 0;

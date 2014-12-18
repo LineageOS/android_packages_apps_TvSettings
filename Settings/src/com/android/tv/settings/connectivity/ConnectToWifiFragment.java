@@ -16,13 +16,7 @@
 
 package com.android.tv.settings.connectivity;
 
-import com.android.tv.settings.connectivity.ConnectivityListener;
-import com.android.tv.settings.connectivity.SaveWifiConfigurationFragment.Listener;
-import com.android.tv.settings.connectivity.setup.MessageWizardFragment;
-import com.android.tv.settings.form.FormPage;
-
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -38,7 +32,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import java.util.List;
+import com.android.tv.settings.connectivity.setup.MessageWizardFragment;
 
 /**
  * Connects to the wifi network specified by the given configuration.

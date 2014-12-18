@@ -1,15 +1,14 @@
 package com.android.tv.settings.widget;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.text.Layout;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.TextView;
 
-import java.text.BreakIterator;
-
 import com.android.tv.settings.R;
+
+import java.text.BreakIterator;
 
 /**
  * <p>A {@link android.widget.TextView} that changes the font size depending on the text width.</p>

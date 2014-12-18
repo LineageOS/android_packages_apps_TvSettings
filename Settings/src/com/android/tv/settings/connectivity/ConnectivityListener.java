@@ -115,7 +115,7 @@ public class ConnectivityListener {
         }
     }
 
-    private ConnectivityStatus mConnectivityStatus = new ConnectivityStatus();
+    private final ConnectivityStatus mConnectivityStatus = new ConnectivityStatus();
 
     public ConnectivityListener(Context context, Listener listener) {
         mContext = context;

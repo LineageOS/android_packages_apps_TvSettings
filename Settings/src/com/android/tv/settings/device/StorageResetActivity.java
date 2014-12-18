@@ -22,28 +22,21 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
-import android.os.Message;
 import android.text.format.Formatter;
 
+import com.android.tv.settings.R;
+import com.android.tv.settings.device.storage.PercentageBarChart;
 import com.android.tv.settings.device.storage.StorageItem;
 import com.android.tv.settings.device.storage.StorageMeasurement;
 import com.android.tv.settings.device.storage.StorageMeasurement.MeasurementDetails;
 import com.android.tv.settings.device.storage.StorageMeasurement.MeasurementReceiver;
-import com.android.tv.settings.device.storage.PercentageBarChart;
-import com.android.tv.settings.device.privacy.PrivacyActivity;
-
-import com.android.tv.settings.dialog.SettingsLayoutActivity;
 import com.android.tv.settings.dialog.Layout;
-import com.android.tv.settings.dialog.Layout.Header;
 import com.android.tv.settings.dialog.Layout.Action;
-import com.android.tv.settings.dialog.Layout.Status;
-import com.android.tv.settings.dialog.Layout.Static;
-import com.android.tv.settings.dialog.Layout.StringGetter;
-import com.android.tv.settings.dialog.Layout.LayoutGetter;
 import com.android.tv.settings.dialog.Layout.DrawableGetter;
-
-import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.Layout.Header;
+import com.android.tv.settings.dialog.Layout.Status;
+import com.android.tv.settings.dialog.Layout.StringGetter;
+import com.android.tv.settings.dialog.SettingsLayoutActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -99,7 +92,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
             mSize = size;
             refreshView();
         }
-    };
+    }
 
     private class StorageDrawableGetter extends DrawableGetter {
         Drawable mDrawable = null;
@@ -120,11 +113,10 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                 getPixelSize(R.dimen.content_fragment_icon_width), isLayoutRtl());
             refreshView();
         }
-    };
+    }
 
     private Resources mRes;
     private StorageMeasurement mMeasure;
-    private boolean mResumed = false;
     private final SizeStringGetter mAppsSize = new SizeStringGetter();
     private final SizeStringGetter mDcimSize = new SizeStringGetter();
     private final SizeStringGetter mMusicSize = new SizeStringGetter();
@@ -145,7 +137,6 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        mResumed = true;
         mMeasure.setReceiver(mReceiver);
         mMeasure.invalidate();
         mMeasure.measure();
@@ -154,7 +145,6 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     @Override
     protected void onPause() {
         mMeasure.cleanUp();
-        mResumed = false;
         super.onPause();
     }
 
@@ -270,7 +260,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     private void updateApproximate(long totalSize, long availSize) {
 
         final long usedSize = totalSize - availSize;
-        ArrayList<PercentageBarChart.Entry> entries = new ArrayList<PercentageBarChart.Entry>();
+        ArrayList<PercentageBarChart.Entry> entries = new ArrayList<>();
         entries.add(new PercentageBarChart.Entry(
                 0, usedSize / (float) totalSize, android.graphics.Color.GRAY));
 
@@ -299,7 +289,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
 
         final long downloadsSize = totalValues(details.mediaSize, Environment.DIRECTORY_DOWNLOADS);
 
-        ArrayList<PercentageBarChart.Entry> entries = new ArrayList<PercentageBarChart.Entry>();
+        ArrayList<PercentageBarChart.Entry> entries = new ArrayList<>();
 
         addEntry(entries, StorageItem.APPS, details.appsSize, details.totalSize);
         addEntry(entries, StorageItem.PICTURES_VIDEO, dcimSize, details.totalSize);

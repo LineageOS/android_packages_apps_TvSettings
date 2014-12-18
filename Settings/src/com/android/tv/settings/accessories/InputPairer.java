@@ -32,7 +32,6 @@ import android.util.Log;
 import android.view.InputDevice;
 
 import com.android.tv.settings.util.bluetooth.BluetoothScanner;
-import com.android.tv.settings.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -132,7 +131,7 @@ public class InputPairer {
         "gpio-keypad", "cec_keyboard", "Virtual", "athome_remote"
     };
 
-    private BluetoothScanner.Listener mBtListener = new BluetoothScanner.Listener() {
+    private final BluetoothScanner.Listener mBtListener = new BluetoothScanner.Listener() {
         @Override
         public void onDeviceAdded(BluetoothScanner.Device device) {
             if (DEBUG) {
@@ -196,11 +195,10 @@ public class InputPairer {
         return hasValidInputDevice(context, inputDevices);
     }
 
-    private BroadcastReceiver mLinkStatusReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mLinkStatusReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(
-                    BluetoothDevice.EXTRA_DEVICE);
+            BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
             if (DEBUG) {
                 Log.d(TAG, "There was a link status change for: " + device.getAddress());
             }
@@ -230,7 +228,7 @@ public class InputPairer {
         }
     };
 
-    private BluetoothProfile.ServiceListener mServiceConnection =
+    private final BluetoothProfile.ServiceListener mServiceConnection =
             new BluetoothProfile.ServiceListener() {
 
         @Override
@@ -262,7 +260,7 @@ public class InputPairer {
         }
     };
 
-    private InputManager.InputDeviceListener mInputListener =
+    private final InputManager.InputDeviceListener mInputListener =
             new InputManager.InputDeviceListener() {
         @Override
         public void onInputDeviceRemoved(int deviceId) {
@@ -282,14 +280,14 @@ public class InputPairer {
         }
     };
 
-    private Runnable mStartRunnable = new Runnable() {
+    private final Runnable mStartRunnable = new Runnable() {
         @Override
         public void run() {
             start();
         }
     };
 
-    private Context mContext;
+    private final Context mContext;
     private EventListener mListener;
     private int mStatus = STATUS_NONE;
     /**
@@ -299,9 +297,9 @@ public class InputPairer {
      * will now no longer automatically start pairing.
      */
     private boolean mAutoMode = true;
-    private ArrayList<BluetoothDevice> mVisibleDevices = new ArrayList<BluetoothDevice>();
+    private final ArrayList<BluetoothDevice> mVisibleDevices = new ArrayList<>();
     private BluetoothDevice mTarget;
-    private Handler mHandler;
+    private final Handler mHandler;
     private BluetoothInputDevice mInputProxy;
     private long mNextStageTimestamp = -1;
     private boolean mLinkReceiverRegistered = false;
@@ -425,7 +423,7 @@ public class InputPairer {
     }
 
     public List<BluetoothDevice> getAvailableDevices() {
-        ArrayList<BluetoothDevice> copy = new ArrayList<BluetoothDevice>(mVisibleDevices.size());
+        ArrayList<BluetoothDevice> copy = new ArrayList<>(mVisibleDevices.size());
         copy.addAll(mVisibleDevices);
         return copy;
     }

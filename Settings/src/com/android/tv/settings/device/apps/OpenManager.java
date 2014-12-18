@@ -26,7 +26,7 @@ import android.content.pm.PackageManager;
 class OpenManager {
 
     private final Context mContext;
-    private AppInfo mAppInfo;
+    private final AppInfo mAppInfo;
     private Intent mLaunchIntent;
 
     OpenManager(Context context, AppInfo appInfo) {

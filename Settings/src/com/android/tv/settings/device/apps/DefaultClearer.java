@@ -16,19 +16,17 @@
 
 package com.android.tv.settings.device.apps;
 
-import com.android.tv.settings.R;
-
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.IPackageDataObserver;
 import android.content.pm.PackageManager;
 import android.hardware.usb.IUsbManager;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.UserHandle;
+
+import com.android.tv.settings.R;
 
 import java.util.ArrayList;
 import java.util.List;

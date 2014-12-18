@@ -23,9 +23,9 @@ import android.util.Log;
 import android.util.LruCache;
 import android.widget.ImageView;
 
+import com.android.tv.settings.R;
 import com.android.tv.settings.util.AccountImageChangeObserver;
 import com.android.tv.settings.util.UriUtils;
-import com.android.tv.settings.R;
 
 import java.lang.ref.SoftReference;
 import java.util.concurrent.Executor;
@@ -60,11 +60,11 @@ public class BitmapDownloader {
         /**
          * cached bitmap
          */
-        Bitmap mBitmap;
+        final Bitmap mBitmap;
         /**
          * indicate if the bitmap is scaled down from original source (never scale up)
          */
-        boolean mScaled;
+        final boolean mScaled;
 
         public BitmapItem(Bitmap bitmap, boolean scaled) {
             mBitmap = bitmap;
@@ -72,7 +72,7 @@ public class BitmapDownloader {
         }
     }
 
-    private LruCache<String, BitmapItem> mMemoryCache;
+    private final LruCache<String, BitmapItem> mMemoryCache;
 
     private static BitmapDownloader sBitmapDownloader;
 
@@ -95,7 +95,7 @@ public class BitmapDownloader {
     /**
      * get the singleton BitmapDownloader for the application
      */
-    public final static BitmapDownloader getInstance(Context context) {
+    public static BitmapDownloader getInstance(Context context) {
         if (sBitmapDownloader == null) {
             synchronized(sBitmapDownloaderLock) {
                 if (sBitmapDownloader == null) {
@@ -180,7 +180,7 @@ public class BitmapDownloader {
                     return bitmap;
                 }
             };
-            imageView.setTag(R.id.imageDownloadTask, new SoftReference<BitmapWorkerTask>(task));
+            imageView.setTag(R.id.imageDownloadTask, new SoftReference<>(task));
             task.execute(options);
         }
     }
@@ -216,7 +216,7 @@ public class BitmapDownloader {
                 callback.onBitmapRetrieved(bitmap);
             }
         };
-        callback.mTask = new SoftReference<BitmapWorkerTask>(task);
+        callback.mTask = new SoftReference<>(task);
         task.executeOnExecutor(BITMAP_DOWNLOADER_THREAD_POOL_EXECUTOR, options);
     }
 

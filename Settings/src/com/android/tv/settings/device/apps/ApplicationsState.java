@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.device.apps;
 
-import android.app.Application;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -24,9 +23,8 @@ import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageStatsObserver;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageStats;
 import android.content.pm.PackageManager.NameNotFoundException;
-import android.graphics.drawable.Drawable;
+import android.content.pm.PackageStats;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -39,12 +37,9 @@ import android.text.format.Formatter;
 import android.util.Log;
 
 import java.io.File;
-import java.text.Collator;
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;

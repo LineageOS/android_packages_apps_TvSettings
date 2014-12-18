@@ -16,14 +16,14 @@
 
 package com.android.tv.settings.device.apps;
 
-import com.android.tv.settings.R;
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AppSecurityPermissions;
+
+import com.android.tv.settings.R;
 
 /**
  * Fragment that shows the app permissions.
@@ -45,7 +45,8 @@ public class PermissionsFragment extends Fragment {
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View content = inflater.inflate(R.layout.device_apps_app_management_permissions, null);
+        View content = inflater.inflate(R.layout.device_apps_app_management_permissions, container,
+                false);
 
         AppSecurityPermissions asp = new AppSecurityPermissions(getActivity(), getPackageName());
         if (asp.getPermissionCount() > 0 && content instanceof ViewGroup) {

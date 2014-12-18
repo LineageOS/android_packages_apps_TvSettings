@@ -16,49 +16,44 @@
 
 package com.android.tv.settings.system;
 
-import com.android.internal.view.RotationPolicy;
-import com.android.tv.settings.ActionBehavior;
-import com.android.tv.settings.BaseSettingsActivity;
-
-import static android.provider.Settings.Secure.TTS_DEFAULT_RATE;
-import static android.provider.Settings.Secure.TTS_DEFAULT_SYNTH;
-import com.android.tv.settings.ActionKey;
-import com.android.tv.settings.R;
-import com.android.tv.settings.system.DeveloperOptionsActivity.MyApplicationInfo;
-import com.android.tv.settings.util.SettingsHelper;
-import com.android.tv.settings.dialog.old.Action;
-import com.android.tv.settings.dialog.old.ActionAdapter;
-import com.android.tv.settings.dialog.old.ContentFragment;
-import com.android.tv.settings.util.SettingsHelper;
-
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
-import android.view.accessibility.AccessibilityManager;
-import android.widget.TextView;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.content.pm.ServiceInfo;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.speech.tts.TextToSpeech;
-import android.text.TextUtils.SimpleStringSplitter;
-import android.speech.tts.TtsEngines;
-import android.util.Log;
-import android.util.Pair;
 import android.speech.tts.TextToSpeech.EngineInfo;
+import android.speech.tts.TtsEngines;
 import android.speech.tts.UtteranceProgressListener;
 import android.text.TextUtils;
+import android.text.TextUtils.SimpleStringSplitter;
+import android.util.Log;
+import android.util.Pair;
+import android.view.accessibility.AccessibilityManager;
+
+import com.android.tv.settings.ActionBehavior;
+import com.android.tv.settings.ActionKey;
+import com.android.tv.settings.BaseSettingsActivity;
+import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.old.Action;
+import com.android.tv.settings.dialog.old.ActionAdapter;
+import com.android.tv.settings.util.SettingsHelper;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Locale;
 import java.util.Set;
+
+import static android.provider.Settings.Secure.TTS_DEFAULT_RATE;
+import static android.provider.Settings.Secure.TTS_DEFAULT_SYNTH;
 
 public class AccessibilityActivity extends BaseSettingsActivity implements ActionAdapter.Listener {
 

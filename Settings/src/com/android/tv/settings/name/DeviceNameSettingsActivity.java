@@ -27,11 +27,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.TextInputWizardFragment;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Activity that displays Device Name settings
@@ -45,7 +45,7 @@ public class DeviceNameSettingsActivity extends Activity implements AdapterView.
     public static final String EXTRA_SETUP_MODE = "in_setup_mode";
     private static final String INITIAL_STATE = "initial";
 
-    private ArrayList<String> mOptions = new ArrayList<>(2);
+    private final ArrayList<String> mOptions = new ArrayList<>(2);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

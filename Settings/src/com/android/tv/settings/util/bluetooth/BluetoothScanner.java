@@ -16,8 +16,6 @@
 
 package com.android.tv.settings.util.bluetooth;
 
-import java.util.ArrayList;
-
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -26,6 +24,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Handler;
 import android.util.Log;
+
+import java.util.ArrayList;
 
 /**
  * Listens for unconfigured or problematic devices to show up on
@@ -88,34 +88,6 @@ public class BluetoothScanner {
 
         public boolean hasConfigurationType() {
             return configurationType != 0;
-        }
-
-        public boolean needsPlaceSetup() {
-            if (!hasConfigurationType() ||
-                    (configurationType & PairingUtils.TASK_SETUP_PLACE) ==
-                    PairingUtils.TASK_SETUP_PLACE) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        /**
-         * Note this is not 100% conclusive. There was a brief period when a device
-         * may require network setup, but not specify it. With these devices we can get
-         * more confidence if we check if the device appears in a list of devices
-         * belonging to a Place. If so we can assume this device requires only
-         * network setup.
-         * @return
-         */
-        public boolean needsNetworkSetup() {
-            if (hasConfigurationType() &&
-                    (configurationType & PairingUtils.TASK_SETUP_NETWORK) ==
-                    PairingUtils.TASK_SETUP_NETWORK) {
-                return true;
-            } else {
-                return false;
-            }
         }
     }
 
@@ -187,13 +159,13 @@ public class BluetoothScanner {
     }
 
     private static class ClientRecord {
-        public Listener listener;
-        public ArrayList<Device> devices;
-        public BluetoothDeviceCriteria matcher;
+        public final Listener listener;
+        public final ArrayList<Device> devices;
+        public final BluetoothDeviceCriteria matcher;
 
         public ClientRecord(Listener listener, BluetoothDeviceCriteria matcher) {
             this.listener = listener;
-            devices = new ArrayList<Device>();
+            devices = new ArrayList<>();
             this.matcher = matcher;
         }
     }
@@ -201,13 +173,13 @@ public class BluetoothScanner {
     private static class Receiver extends BroadcastReceiver {
         private final Handler mHandler = new Handler();
         // TODO mListenerLock should probably now protect mClients
-        private final ArrayList<ClientRecord> mClients = new ArrayList<ClientRecord>();
-        private final ArrayList<Device> mPresentDevices = new ArrayList<Device>();
-        private Context mContext;
-        private BluetoothAdapter mBtAdapter;
+        private final ArrayList<ClientRecord> mClients = new ArrayList<>();
+        private final ArrayList<Device> mPresentDevices = new ArrayList<>();
+        private final Context mContext;
+        private final BluetoothAdapter mBtAdapter;
         private static boolean mKeepScanning;
         private boolean mRegistered = false;
-        private Object mListenerLock = new Object();
+        private final Object mListenerLock = new Object();
 
         public Receiver(Context context) {
             mContext = context;
@@ -273,7 +245,7 @@ public class BluetoothScanner {
         }
 
         public void stopListening(Listener listener) {
-            int size = 0;
+            final int size;
             synchronized (mListenerLock) {
                 for (int ptr = mClients.size() - 1; ptr > -1; ptr--) {
                     ClientRecord client = mClients.get(ptr);
@@ -303,7 +275,7 @@ public class BluetoothScanner {
         }
 
         public void stopNow() {
-            int size = 0;
+            final int size;
             synchronized (mListenerLock) {
                 size = mClients.size();
             }

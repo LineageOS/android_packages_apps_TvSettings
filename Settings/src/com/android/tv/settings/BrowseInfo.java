@@ -27,13 +27,9 @@ import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
 import android.media.tv.TvInputInfo;
 import android.media.tv.TvInputManager;
-import android.os.Bundle;
-import android.os.Handler;
 import android.preference.PreferenceActivity;
 import android.support.v17.leanback.widget.ArrayObjectAdapter;
 import android.support.v17.leanback.widget.HeaderItem;
-import android.support.v17.leanback.widget.ObjectAdapter;
-import android.support.v17.leanback.widget.ListRow;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
@@ -130,8 +126,6 @@ public class BrowseInfo extends BrowseInfoBase {
                             + "> tag; found" + nodeName + " at " + parser.getPositionDescription());
                 }
 
-                Bundle curBundle = null;
-
                 final int outerDepth = parser.getDepth();
                 while ((type = parser.next()) != XmlPullParser.END_DOCUMENT
                         && (type != XmlPullParser.END_TAG || parser.getDepth() > outerDepth)) {
@@ -173,11 +167,10 @@ public class BrowseInfo extends BrowseInfoBase {
     private final boolean mAllowMultipleAccounts;
     private MenuItem mWifiItem = null;
     private ArrayObjectAdapter mWifiRow = null;
-    private final Handler mHandler = new Handler();
 
-    private PreferenceUtils mPreferenceUtils;
+    private final PreferenceUtils mPreferenceUtils;
     private boolean mDeveloperEnabled;
-    private boolean mInputSettingNeeded;
+    private final boolean mInputSettingNeeded;
 
     BrowseInfo(Context context) {
         mContext = context;

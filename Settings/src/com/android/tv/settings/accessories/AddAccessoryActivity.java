@@ -16,12 +16,6 @@
 
 package com.android.tv.settings.accessories;
 
-import com.android.tv.settings.R;
-import com.android.tv.settings.dialog.old.Action;
-import com.android.tv.settings.dialog.old.ActionAdapter;
-import com.android.tv.settings.dialog.old.ActionFragment;
-import com.android.tv.settings.dialog.old.DialogActivity;
-
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.bluetooth.BluetoothDevice;
@@ -46,6 +40,12 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.old.Action;
+import com.android.tv.settings.dialog.old.ActionAdapter;
+import com.android.tv.settings.dialog.old.ActionFragment;
+import com.android.tv.settings.dialog.old.DialogActivity;
 
 import java.util.ArrayList;
 
@@ -122,7 +122,6 @@ public class AddAccessoryActivity extends DialogActivity
     private final Object mLock = new Object();
 
     private FragmentManager mFragmentManager;
-    private FragmentTransaction mFragmentTransaction;
 
     private IDreamManager mDreamManager;
     private boolean mHwKeyDown;
@@ -132,7 +131,7 @@ public class AddAccessoryActivity extends DialogActivity
     private boolean mFragmentTransactionPending;
 
     // Internal message handler
-    private Handler mMsgHandler = new Handler() {
+    private final Handler mMsgHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
@@ -224,9 +223,9 @@ public class AddAccessoryActivity extends DialogActivity
 
         mFragmentManager = getFragmentManager();
 
-        mBtDevices = new ArrayList<BluetoothDevice>();
+        mBtDevices = new ArrayList<>();
 
-        mActions = new ArrayList<Action>();
+        mActions = new ArrayList<>();
 
         mNoInputMode = getIntent().getBooleanExtra(INTENT_EXTRA_NO_INPUT_MODE, false);
         mHwKeyDown = false;
@@ -279,7 +278,8 @@ public class AddAccessoryActivity extends DialogActivity
                                 if (mActionView != null) {
                                     mViewOffset = mActionView.getMeasuredWidth();
                                     int offset = (ViewCompat.getLayoutDirection(mActionView) ==
-                                            View.LAYOUT_DIRECTION_RTL) ? -mViewOffset : mViewOffset;
+                                            ViewCompat.LAYOUT_DIRECTION_RTL) ?
+                                            -mViewOffset : mViewOffset;
                                     mActionView.setTranslationX(offset);
                                     mContentView.setTranslationX(offset / 2);
                                 }
@@ -628,7 +628,7 @@ public class AddAccessoryActivity extends DialogActivity
     }
 
     private String getMessageForStatus(int status) {
-        int msgId = 0;
+        final int msgId;
         String msg;
 
         switch (status) {

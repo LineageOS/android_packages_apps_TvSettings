@@ -77,7 +77,7 @@ public class Picker extends Fragment {
      */
     private List<String> mResult;
 
-    private OnItemClickListener mOnClickListener = new OnItemClickListener() {
+    private final OnItemClickListener mOnClickListener = new OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             if (mKeyDown) {

@@ -97,7 +97,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private int mDeveloperClickCount;
     private PreferenceUtils mPreferenceUtils;
     private Toast mToast;
-    private long[] mHits = new long[3];
+    private final long[] mHits = new long[3];
     private int mHitsIndex;
 
     @Override

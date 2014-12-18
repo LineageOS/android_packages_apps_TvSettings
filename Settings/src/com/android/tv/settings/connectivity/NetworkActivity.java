@@ -68,7 +68,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
 
     private ConnectivityListener mConnectivityListener;
     private Resources mRes;
-    private Handler mHandler = new Handler();
+    private final Handler mHandler = new Handler();
 
     private final Runnable mRefreshWifiAccessPoints = new Runnable() {
         @Override
@@ -79,7 +79,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         }
     };
 
-    private Runnable mSetScanAlways = new Runnable () {
+    private final Runnable mSetScanAlways = new Runnable () {
         @Override
         public void run() {
             int setting = mAlwaysScanWifi.getId() == ACTION_SCAN_WIFI_ON ? 1 : 0;
@@ -160,7 +160,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         mWifiAllListLayout.onWifiListChanged();
     }
 
-    StringGetter mEthernetConnectedDescription = new StringGetter() {
+    final StringGetter mEthernetConnectedDescription = new StringGetter() {
         private boolean lastIsEthernetConnected;
         @Override
         public String get() {
@@ -178,7 +178,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         }
     };
 
-    StringGetter mWifiConnectedDescription = new StringGetter() {
+    final StringGetter mWifiConnectedDescription = new StringGetter() {
         private boolean lastIsWifiConnected;
         @Override
         public String get() {
@@ -195,7 +195,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         }
     };
 
-    StringGetter mEthernetIPAddress = new StringGetter() {
+    final StringGetter mEthernetIPAddress = new StringGetter() {
         public String get() {
             ConnectivityListener.ConnectivityStatus status =
                     mConnectivityListener.getConnectivityStatus();
@@ -207,13 +207,13 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         }
     };
 
-    StringGetter mEthernetMacAddress = new StringGetter() {
+    final StringGetter mEthernetMacAddress = new StringGetter() {
         public String get() {
             return mConnectivityListener.getEthernetMacAddress();
         }
     };
 
-    LayoutGetter mEthernetAdvancedLayout = new LayoutGetter() {
+    final LayoutGetter mEthernetAdvancedLayout = new LayoutGetter() {
         public Layout get() {
             Layout layout = new Layout();
             // Do not check Ethernet's availability here
@@ -245,7 +245,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         }
     };
 
-    LayoutGetter mEthernetLayout = new LayoutGetter() {
+    final LayoutGetter mEthernetLayout = new LayoutGetter() {
         public Layout get() {
             boolean ethernetConnected =
                     mConnectivityListener.getConnectivityStatus().isEthernetConnected();
@@ -288,7 +288,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         return signalLevels[strength];
     }
 
-    LayoutGetter mWifiInfoLayout = new LayoutGetter() {
+    final LayoutGetter mWifiInfoLayout = new LayoutGetter() {
         public Layout get() {
             Layout layout = new Layout();
             ConnectivityListener.ConnectivityStatus status =
@@ -318,7 +318,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         }
     };
 
-    LayoutGetter mWifiAdvancedLayout = new LayoutGetter() {
+    final LayoutGetter mWifiAdvancedLayout = new LayoutGetter() {
         public Layout get() {
             Layout layout = new Layout();
             WifiConfiguration wifiConfiguration = mConnectivityListener.getWifiConfiguration();
@@ -351,7 +351,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
     private SelectionGroup mAlwaysScanWifi;
     private SelectionGroup mEnableWifi;
 
-    LayoutGetter mWifiLayout = new LayoutGetter() {
+    final LayoutGetter mWifiLayout = new LayoutGetter() {
         public Layout get() {
             final Layout layout = new Layout()
                     .add(new Header.Builder(mRes)
@@ -486,7 +486,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
                 // Generate a new list with size less than "maxItems" that ensures "mustHave" is
                 // included.
                 boolean haveMustHave = false;
-                List<ScanResult> displayList = new ArrayList<ScanResult>();
+                List<ScanResult> displayList = new ArrayList<>();
                 for (ScanResult scanResult : networks) {
                     if (!haveMustHave && TextUtils.equals(scanResult.SSID, mustHave)) {
                         haveMustHave = true;

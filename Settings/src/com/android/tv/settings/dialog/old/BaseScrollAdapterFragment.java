@@ -144,7 +144,7 @@ public class BaseScrollAdapterFragment implements OnScrollListener {
      * is in the process of animating.
      */
     private class Listener implements Animator.AnimatorListener {
-        private boolean mFadingOut;
+        private final boolean mFadingOut;
         private boolean mCanceled;
 
         public Listener(boolean fadingOut) {

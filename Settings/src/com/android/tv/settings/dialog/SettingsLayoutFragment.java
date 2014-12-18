@@ -186,7 +186,7 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
     private int mSecondaryAnimateDelay;
     private int mSlideInStagger;
     private int mSlideInDistance;
-    private Handler refreshViewHandler = new Handler();
+    private final Handler refreshViewHandler = new Handler();
 
     private final Runnable mRefreshViewRunnable = new Runnable() {
         @Override
@@ -330,7 +330,7 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
     }
 
     /**
-     * Notification that a part of the model antecedent to the visibile view has changed.
+     * Notification that a part of the model antecedent to the visible view has changed.
      */
     @Override
     public void onRefreshView() {
@@ -418,7 +418,7 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
         View listView = (View) actionView.getTag(R.id.list);
         View selectorView = (View) actionView.getTag(R.id.selector);
 
-        ArrayList<Animator> animators = new ArrayList<Animator>();
+        ArrayList<Animator> animators = new ArrayList<>();
 
         switch (nextAnim) {
             case ANIMATION_FRAGMENT_ENTER:
@@ -640,7 +640,7 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
                         contentView.postOnAnimationDelayed(mEntryAnimationRunnable, mAnimateDelay);
                     }
 
-                    Runnable mEntryAnimationRunnable = new Runnable() {
+                    final Runnable mEntryAnimationRunnable = new Runnable() {
                             @Override
                         public void run() {
                             if (!isAdded()) {

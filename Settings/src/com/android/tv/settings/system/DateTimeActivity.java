@@ -16,22 +16,6 @@
 
 package com.android.tv.settings.system;
 
-import com.android.tv.settings.ActionBehavior;
-import com.android.tv.settings.ActionKey;
-import com.android.tv.settings.BaseSettingsActivity;
-import com.android.tv.settings.R;
-import com.android.tv.settings.util.SettingsHelper;
-import com.android.tv.settings.dialog.old.Action;
-import com.android.tv.settings.dialog.old.ActionAdapter;
-import com.android.tv.settings.dialog.old.ActionFragment;
-import com.android.tv.settings.dialog.old.ContentFragment;
-import com.android.tv.settings.widget.picker.DatePicker;
-import com.android.tv.settings.widget.picker.TimePicker;
-import com.android.tv.settings.widget.picker.Picker;
-import com.android.tv.settings.widget.picker.PickerConstants;
-
-import org.xmlpull.v1.XmlPullParserException;
-
 import android.app.AlarmManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -43,6 +27,22 @@ import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.text.format.DateFormat;
 import android.util.Log;
+
+import com.android.tv.settings.ActionBehavior;
+import com.android.tv.settings.ActionKey;
+import com.android.tv.settings.BaseSettingsActivity;
+import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.old.Action;
+import com.android.tv.settings.dialog.old.ActionAdapter;
+import com.android.tv.settings.dialog.old.ActionFragment;
+import com.android.tv.settings.dialog.old.ContentFragment;
+import com.android.tv.settings.util.SettingsHelper;
+import com.android.tv.settings.widget.picker.DatePicker;
+import com.android.tv.settings.widget.picker.Picker;
+import com.android.tv.settings.widget.picker.PickerConstants;
+import com.android.tv.settings.widget.picker.TimePicker;
+
+import org.xmlpull.v1.XmlPullParserException;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -85,7 +85,7 @@ public class DateTimeActivity extends BaseSettingsActivity implements ActionAdap
      */
     private boolean mOnResumeUpdateView = false;
 
-    private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (mIsResumed) {
@@ -219,8 +219,8 @@ public class DateTimeActivity extends BaseSettingsActivity implements ActionAdap
         /*
          * For other preferences
          */
-        ActionKey<ActionType, ActionBehavior> actionKey = new ActionKey<ActionType, ActionBehavior>(
-                ActionType.class, ActionBehavior.class, key);
+        ActionKey<ActionType, ActionBehavior> actionKey =
+                new ActionKey<>(ActionType.class, ActionBehavior.class, key);
         final ActionType type = actionKey.getType();
         final ActionBehavior behavior = actionKey.getBehavior();
         if (type == null || behavior == null) {
@@ -511,9 +511,9 @@ public class DateTimeActivity extends BaseSettingsActivity implements ActionAdap
      * file.
      */
     private class TimeZoneInfo implements Comparable<TimeZoneInfo> {
-        public String tzId;
-        public String tzName;
-        public long tzOffset;
+        public final String tzId;
+        public final String tzName;
+        public final long tzOffset;
 
         public TimeZoneInfo(String id, String name, long offset) {
             tzId = id;
@@ -538,7 +538,7 @@ public class DateTimeActivity extends BaseSettingsActivity implements ActionAdap
 
         ArrayList<TimeZoneInfo> timeZones = getTimeZones(context);
 
-        mTimeZoneActions = new ArrayList<Action>();
+        mTimeZoneActions = new ArrayList<>();
 
         // Sort the Time Zones list in ascending offset order
         Collections.sort(timeZones);
@@ -560,7 +560,7 @@ public class DateTimeActivity extends BaseSettingsActivity implements ActionAdap
      * objects.
      */
     private ArrayList<TimeZoneInfo> getTimeZones(Context context) {
-        ArrayList<TimeZoneInfo> timeZones = new ArrayList<TimeZoneInfo>();
+        ArrayList<TimeZoneInfo> timeZones = new ArrayList<>();
         final long date = Calendar.getInstance().getTimeInMillis();
         try {
             XmlResourceParser xrp = context.getResources().getXml(R.xml.timezones);

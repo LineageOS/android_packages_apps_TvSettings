@@ -16,30 +16,27 @@
 
 package com.android.tv.settings.system;
 
-import com.android.tv.settings.R;
-
-import com.android.tv.settings.ActionBehavior;
-import com.android.tv.settings.ActionKey;
-import com.android.tv.settings.BaseSettingsActivity;
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import com.android.tv.settings.util.SettingsHelper;
-import com.android.tv.settings.dialog.old.Action;
-import com.android.tv.settings.dialog.old.ActionAdapter;
-import com.android.tv.settings.device.apps.AppManagementActivity;
-
 import android.app.AppOpsManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.provider.Settings;
 import android.util.Log;
+
+import com.android.tv.settings.ActionBehavior;
+import com.android.tv.settings.ActionKey;
+import com.android.tv.settings.BaseSettingsActivity;
+import com.android.tv.settings.R;
+import com.android.tv.settings.device.apps.AppManagementActivity;
+import com.android.tv.settings.dialog.old.Action;
+import com.android.tv.settings.dialog.old.ActionAdapter;
+import com.android.tv.settings.util.SettingsHelper;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**

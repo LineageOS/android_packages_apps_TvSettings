@@ -16,24 +16,16 @@
 
 package com.android.tv.settings.device.storage;
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.text.format.Formatter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
+import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.old.BaseContentFragment;
 import com.android.tv.settings.dialog.old.ContentFragment;
-import com.android.tv.settings.R;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Fragment that shows storage info.

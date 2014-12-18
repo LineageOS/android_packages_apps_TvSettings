@@ -16,13 +16,6 @@
 
 package com.android.tv.settings.accessories;
 
-import android.view.WindowManager;
-import com.android.tv.settings.R;
-import com.android.tv.settings.dialog.old.Action;
-import com.android.tv.settings.dialog.old.ActionAdapter;
-import com.android.tv.settings.dialog.old.ActionFragment;
-import com.android.tv.settings.dialog.old.DialogActivity;
-
 import android.app.Fragment;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -31,21 +24,24 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.text.Html;
 import android.text.InputFilter;
-import android.text.InputType;
 import android.text.InputFilter.LengthFilter;
+import android.text.InputType;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.old.Action;
+import com.android.tv.settings.dialog.old.ActionFragment;
+import com.android.tv.settings.dialog.old.DialogActivity;
 import com.android.tv.settings.util.AccessibilityHelper;
 
 import java.util.ArrayList;
@@ -75,7 +71,7 @@ public class BluetoothPairingDialog extends DialogActivity {
     private ArrayList<Action> mActions;
 
     private RelativeLayout mTopLayout;
-    protected ColorDrawable mBgDrawable = new ColorDrawable();
+    protected final ColorDrawable mBgDrawable = new ColorDrawable();
     private TextView mTitleText;
     private TextView mInstructionText;
     private EditText mTextInput;

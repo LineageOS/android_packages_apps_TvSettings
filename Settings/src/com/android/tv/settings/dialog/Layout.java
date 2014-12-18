@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.dialog;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -58,9 +57,9 @@ public class Layout implements Parcelable {
     }
 
     private abstract static class LayoutTreeBranch extends LayoutTreeNode {
-        ArrayList<LayoutTreeNode> mChildren;
+        final ArrayList<LayoutTreeNode> mChildren;
         LayoutTreeBranch() {
-            mChildren = new ArrayList<LayoutTreeNode>();
+            mChildren = new ArrayList<>();
         }
     }
 
@@ -71,8 +70,8 @@ public class Layout implements Parcelable {
 
         private String mTitle;
         private StringGetter mDescription;
-        private LayoutTreeNode mNode;
-        private boolean mEnabled;
+        private final LayoutTreeNode mNode;
+        private final boolean mEnabled;
         private int mViewType;
         private boolean mChecked = false;
         private Drawable mIcon = null;
@@ -176,9 +175,9 @@ public class Layout implements Parcelable {
         public LayoutRow(LayoutTreeNode node) {
             mNode = node;
             mViewType = VIEW_TYPE_ACTION;
-            Appearence a;
+            Appearance a;
             if (node instanceof Header) {
-                a = ((Header) node).mAppearence;
+                a = ((Header) node).mAppearance;
                 mEnabled = true;
             } else if (node instanceof Action) {
                 a = ((Action) node).mAppearence;
@@ -324,8 +323,8 @@ public class Layout implements Parcelable {
      */
     public static class SelectionGroup extends LayoutTreeNode {
 
-        String mTitle[];
-        int mId[];
+        final String mTitle[];
+        final int mId[];
         int mSelectedIndex;
 
         public SelectionGroup(Resources res, int param[][]) {
@@ -393,7 +392,7 @@ public class Layout implements Parcelable {
      */
     public static class SelectionGroupStringGetter extends StringGetter {
 
-        private SelectionGroup mSelectionGroup;
+        private final SelectionGroup mSelectionGroup;
 
         @Override
         public String get() {
@@ -406,7 +405,7 @@ public class Layout implements Parcelable {
 
     }
 
-    private static class Appearence {
+    private static class Appearance {
         private Drawable mIcon;
         private DrawableGetter mIconGetter;
         private String mTitle;
@@ -452,26 +451,26 @@ public class Layout implements Parcelable {
      * Header is a container for a sub-menu of "LayoutTreeNode" items.
      */
     public static class Header extends LayoutTreeBranch {
-        private Appearence mAppearence = new Appearence();
+        private final Appearance mAppearance = new Appearance();
         private int mSelectedIndex = 0;
         private String mDetailedDescription;
         private int mContentIconRes = 0;
 
         public static class Builder {
-            private Resources mRes;
-            private Header mHeader = new Header();
+            private final Resources mRes;
+            private final Header mHeader = new Header();
 
             public Builder(Resources res) {
                 mRes = res;
             }
 
             public Builder icon(int resId) {
-                mHeader.mAppearence.mIcon = mRes.getDrawable(resId);
+                mHeader.mAppearance.mIcon = mRes.getDrawable(resId);
                 return this;
             }
 
             public Builder icon(DrawableGetter drawableGetter) {
-                mHeader.mAppearence.mIconGetter = drawableGetter;
+                mHeader.mAppearance.mIconGetter = drawableGetter;
                 return this;
             }
 
@@ -481,33 +480,33 @@ public class Layout implements Parcelable {
             }
 
             public Builder title(int resId) {
-                mHeader.mAppearence.mTitle = mRes.getString(resId);
+                mHeader.mAppearance.mTitle = mRes.getString(resId);
                 return this;
             }
 
             public Builder description(int resId) {
-                mHeader.mAppearence.mDescriptionGetter = new ResourceStringGetter(mRes, resId);
+                mHeader.mAppearance.mDescriptionGetter = new ResourceStringGetter(mRes, resId);
                 return this;
             }
 
             public Builder description(SelectionGroup selectionGroup) {
-                mHeader.mAppearence.mDescriptionGetter = new SelectionGroupStringGetter(
+                mHeader.mAppearance.mDescriptionGetter = new SelectionGroupStringGetter(
                         selectionGroup);
                 return this;
             }
 
             public Builder title(String title) {
-                mHeader.mAppearence.mTitle = title;
+                mHeader.mAppearance.mTitle = title;
                 return this;
             }
 
             public Builder description(String description) {
-                mHeader.mAppearence.mDescriptionGetter = new LiteralStringGetter(description);
+                mHeader.mAppearance.mDescriptionGetter = new LiteralStringGetter(description);
                 return this;
             }
 
             public Builder description(StringGetter description) {
-                mHeader.mAppearence.mDescriptionGetter = description;
+                mHeader.mAppearance.mDescriptionGetter = description;
                 return this;
             }
 
@@ -528,7 +527,7 @@ public class Layout implements Parcelable {
 
         @Override
         public String getTitle() {
-            return mAppearence.getTitle();
+            return mAppearance.getTitle();
         }
 
         public Header add(LayoutTreeNode node) {
@@ -542,7 +541,7 @@ public class Layout implements Parcelable {
         }
 
         void Log(int level) {
-            Log.d("Layout", indent(level) + "Header  " + mAppearence);
+            Log.d("Layout", indent(level) + "Header  " + mAppearance);
             for (LayoutTreeNode i : mChildren)
                 i.Log(level + 1);
         }
@@ -552,9 +551,9 @@ public class Layout implements Parcelable {
         public static final int ACTION_NONE = -1;
         public static final int ACTION_INTENT = -2;
         public static final int ACTION_BACK = -3;
-        private int mActionId;
+        private final int mActionId;
         private Intent mIntent;
-        private Appearence mAppearence = new Appearence();
+        private final Appearance mAppearence = new Appearance();
         private Bundle mActionData;
         private boolean mDefaultSelection = false;
 
@@ -568,8 +567,8 @@ public class Layout implements Parcelable {
         }
 
         public static class Builder {
-            private Resources mRes;
-            private Action mAction;
+            private final Resources mRes;
+            private final Action mAction;
 
             public Builder(Resources res, int id) {
                 mRes = res;
@@ -653,11 +652,11 @@ public class Layout implements Parcelable {
     }
 
     public static class Status extends LayoutTreeNode {
-        private Appearence mAppearence = new Appearence();
+        private final Appearance mAppearence = new Appearance();
 
         public static class Builder {
-            private Resources mRes;
-            private Status mStatus = new Status();
+            private final Resources mRes;
+            private final Status mStatus = new Status();
 
             public Builder(Resources res) {
                 mRes = res;
@@ -713,8 +712,8 @@ public class Layout implements Parcelable {
         private String mTitle;
 
         public static class Builder {
-            private Resources mRes;
-            private Static mStatic = new Static();
+            private final Resources mRes;
+            private final Static mStatic = new Static();
 
             public Builder(Resources res) {
                 mRes = res;
@@ -756,9 +755,9 @@ public class Layout implements Parcelable {
      * to carry forward a selection.
      */
     private int mInitialItemIndex = -1;
-    private final ArrayList<LayoutRow> mLayoutRows = new ArrayList<LayoutRow>();
-    private final ArrayList<LayoutGetter> mVisibleLayoutGetters = new ArrayList<LayoutGetter>();
-    private final ArrayList<LayoutTreeNode> mChildren = new ArrayList<LayoutTreeNode>();
+    private final ArrayList<LayoutRow> mLayoutRows = new ArrayList<>();
+    private final ArrayList<LayoutGetter> mVisibleLayoutGetters = new ArrayList<>();
+    private final ArrayList<LayoutTreeNode> mChildren = new ArrayList<>();
     private String mTopLevelBreadcrumb = "";
     private LayoutNodeRefreshListener mListener;
 
@@ -779,7 +778,7 @@ public class Layout implements Parcelable {
           return mTopLevelBreadcrumb;
       } else {
           // Showing a header down the hierarchy, breadcrumb is title of item above.
-          return ((Header) (mNavigationCursor.mParent)).mAppearence.mTitle;
+          return ((Header) (mNavigationCursor.mParent)).mAppearance.mTitle;
       }
     }
 
@@ -790,12 +789,9 @@ public class Layout implements Parcelable {
      */
     public boolean goBack() {
         if (mNavigationCursor.mParent != null) {
-            Header u = (Header) mNavigationCursor.mParent;
-            if (u != null) {
-                mNavigationCursor = u;
-                updateLayoutRows();
-                return true;
-            }
+            mNavigationCursor = (Header) mNavigationCursor.mParent;
+            updateLayoutRows();
+            return true;
         }
         return false;
     }
@@ -830,11 +826,11 @@ public class Layout implements Parcelable {
     };
 
     String getTitle() {
-        return mNavigationCursor.mAppearence.mTitle;
+        return mNavigationCursor.mAppearance.mTitle;
     }
 
     Drawable getIcon() {
-        return mNavigationCursor.mAppearence.getIcon();
+        return mNavigationCursor.mAppearance.getIcon();
     }
 
     String getDescription() {
@@ -844,7 +840,7 @@ public class Layout implements Parcelable {
     public void goToTitle(String title) {
         while (mNavigationCursor.mParent != null) {
             mNavigationCursor = (Header) (mNavigationCursor.mParent);
-            if (TextUtils.equals(mNavigationCursor.mAppearence.mTitle, title)) {
+            if (TextUtils.equals(mNavigationCursor.mAppearance.mTitle, title)) {
                 break;
             }
         }

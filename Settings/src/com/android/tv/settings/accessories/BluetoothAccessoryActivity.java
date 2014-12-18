@@ -94,7 +94,7 @@ public class BluetoothAccessoryActivity extends BaseSettingsActivity
     };
 
     // Internal message handler
-    private Handler mMsgHandler = new Handler() {
+    private final Handler mMsgHandler = new Handler() {
             @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {

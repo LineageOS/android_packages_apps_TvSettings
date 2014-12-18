@@ -80,7 +80,6 @@ public class DialogFragment extends Fragment {
     private static final int ANIMATE_IN_DURATION = 250;
     private static final int ANIMATE_DELAY = 550;
     private static final int SECONDARY_ANIMATE_DELAY = 120;
-    private static final int SLIDE_IN_STAGGER = 100;
     private static final int SLIDE_IN_DISTANCE = 120;
     private static final int ANIMATION_FRAGMENT_ENTER = 1;
     private static final int ANIMATION_FRAGMENT_EXIT = 2;
@@ -302,7 +301,7 @@ public class DialogFragment extends Fragment {
         View listView = (View) actionView.getTag(R.id.list);
         View selectorView = (View) actionView.getTag(R.id.selector);
 
-        ArrayList<Animator> animators = new ArrayList<Animator>();
+        ArrayList<Animator> animators = new ArrayList<>();
 
         switch (nextAnim) {
             case ANIMATION_FRAGMENT_ENTER:
@@ -820,7 +819,7 @@ public class DialogFragment extends Fragment {
          * is in the process of animating.
          */
         private class Listener implements Animator.AnimatorListener {
-            private boolean mFadingOut;
+            private final boolean mFadingOut;
             private boolean mCanceled;
 
             public Listener(boolean fadingOut) {

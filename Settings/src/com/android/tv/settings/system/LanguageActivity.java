@@ -16,14 +16,6 @@
 
 package com.android.tv.settings.system;
 
-import com.android.tv.settings.R;
-import com.android.tv.settings.dialog.old.Action;
-import com.android.tv.settings.dialog.old.ActionAdapter;
-import com.android.tv.settings.dialog.old.ActionFragment;
-import com.android.tv.settings.dialog.old.ContentFragment;
-import com.android.tv.settings.dialog.old.DialogActivity;
-import com.android.internal.app.LocalePicker;
-
 import android.app.ActivityManagerNative;
 import android.app.Fragment;
 import android.content.Context;
@@ -34,8 +26,15 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.widget.ArrayAdapter;
+
+import com.android.internal.app.LocalePicker;
+import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.old.Action;
+import com.android.tv.settings.dialog.old.ActionAdapter;
+import com.android.tv.settings.dialog.old.ActionFragment;
+import com.android.tv.settings.dialog.old.ContentFragment;
+import com.android.tv.settings.dialog.old.DialogActivity;
 
 import java.util.ArrayList;
 import java.util.Comparator;

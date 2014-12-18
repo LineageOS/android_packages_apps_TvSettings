@@ -18,8 +18,6 @@ package com.android.tv.settings.device.apps;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.graphics.drawable.Drawable;
 import android.text.format.Formatter;
 
 /**

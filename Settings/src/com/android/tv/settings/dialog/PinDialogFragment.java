@@ -43,7 +43,7 @@ import com.android.tv.settings.R;
 
 public abstract class PinDialogFragment extends SafeDismissDialogFragment {
     private static final String TAG = "PinDialogFragment";
-    private static boolean DEBUG = false;
+    private static final boolean DEBUG = false;
 
     protected static final String ARG_TYPE = "type";
 
@@ -330,7 +330,7 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
         private int mMaxValue;
         private int mCurrentValue;
         private int mNextValue;
-        private int mNumberViewHeight;
+        private final int mNumberViewHeight;
         private PinDialogFragment mDialog;
         private PinNumberPicker mNextNumberPicker;
         private boolean mCancelAnimation;

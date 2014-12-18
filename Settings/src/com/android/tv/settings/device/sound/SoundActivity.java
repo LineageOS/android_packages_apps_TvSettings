@@ -20,14 +20,12 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.media.AudioManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+
+import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.DialogFragment;
 import com.android.tv.settings.dialog.DialogFragment.Action;
-
-import com.android.tv.settings.BrowseInfo;
-import com.android.tv.settings.R;
 
 import java.util.ArrayList;
 

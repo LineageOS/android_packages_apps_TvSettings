@@ -16,19 +16,7 @@
 
 package com.android.tv.settings.system;
 
-import com.android.tv.settings.ActionBehavior;
-import com.android.tv.settings.ActionKey;
-import com.android.tv.settings.BaseSettingsActivity;
-import com.android.tv.settings.R;
-import com.android.tv.settings.util.SettingsHelper;
-import com.android.tv.settings.dialog.old.Action;
-import com.android.tv.settings.dialog.old.ActionAdapter;
-import com.android.tv.settings.dialog.old.ActionFragment;
-import com.android.tv.settings.dialog.old.ContentFragment;
-import com.android.tv.settings.dialog.old.EditTextFragment;
-
 import android.app.ActivityManagerNative;
-import android.app.ActivityThread;
 import android.bluetooth.BluetoothAdapter;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -51,10 +39,16 @@ import android.view.HardwareRenderer;
 import android.view.IWindowManager;
 import android.view.View;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import com.android.tv.settings.ActionBehavior;
+import com.android.tv.settings.ActionKey;
+import com.android.tv.settings.BaseSettingsActivity;
+import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.old.Action;
+import com.android.tv.settings.dialog.old.ActionAdapter;
+import com.android.tv.settings.dialog.old.ActionFragment;
+import com.android.tv.settings.dialog.old.EditTextFragment;
+import com.android.tv.settings.util.SettingsHelper;
+
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Collections;

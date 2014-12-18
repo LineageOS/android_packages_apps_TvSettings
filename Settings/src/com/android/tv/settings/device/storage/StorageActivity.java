@@ -16,25 +16,19 @@
 
 package com.android.tv.settings.device.storage;
 
+import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
+import android.text.format.Formatter;
+
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.storage.StorageMeasurement.MeasurementDetails;
 import com.android.tv.settings.device.storage.StorageMeasurement.MeasurementReceiver;
 import com.android.tv.settings.dialog.old.Action;
 import com.android.tv.settings.dialog.old.ActionAdapter;
 import com.android.tv.settings.dialog.old.ActionFragment;
-import com.android.tv.settings.dialog.old.ContentFragment;
 import com.android.tv.settings.dialog.old.DialogActivity;
-
-import android.app.Activity;
-import android.content.res.TypedArray;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.os.Environment;
-import android.os.Handler;
-import android.os.Message;
-import android.text.format.Formatter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -22,7 +22,6 @@ import android.app.admin.DevicePolicyManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.UserHandle;
 
@@ -32,7 +31,7 @@ import android.os.UserHandle;
 class ForceStopManager {
 
     private final Context mContext;
-    private AppInfo mAppInfo;
+    private final AppInfo mAppInfo;
     private boolean mShowForceStop;
 
     ForceStopManager(Context context, AppInfo appInfo) {
