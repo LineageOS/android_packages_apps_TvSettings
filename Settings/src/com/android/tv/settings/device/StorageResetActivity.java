@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.device;
 
+import android.annotation.ColorRes;
 import android.app.ActivityManager;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -26,7 +27,6 @@ import android.text.format.Formatter;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.storage.PercentageBarChart;
-import com.android.tv.settings.device.storage.StorageItem;
 import com.android.tv.settings.device.storage.StorageMeasurement;
 import com.android.tv.settings.device.storage.StorageMeasurement.MeasurementDetails;
 import com.android.tv.settings.device.storage.StorageMeasurement.MeasurementReceiver;
@@ -100,22 +100,22 @@ public class StorageResetActivity extends SettingsLayoutActivity {
         @Override
         public Drawable get() {
             if (mDrawable == null) {
-                return mRes.getDrawable(R.drawable.ic_settings_storage);
+                return getDrawable(R.drawable.ic_settings_storage);
             } else {
                 return mDrawable;
             }
         }
 
         void setDrawable(ArrayList<PercentageBarChart.Entry> entries) {
-            mDrawable = new PercentageBarChart(entries, mRes.getColor(R.color.storage_avail),
-                getPixelSize(R.dimen.storage_bar_min_tick_width),
-                getPixelSize(R.dimen.content_fragment_icon_width),
-                getPixelSize(R.dimen.content_fragment_icon_width), isLayoutRtl());
+            mDrawable = new PercentageBarChart(entries,
+                    getResources().getColor(R.color.storage_avail),
+                    getPixelSize(R.dimen.storage_bar_min_tick_width),
+                    getPixelSize(R.dimen.content_fragment_icon_width),
+                    getPixelSize(R.dimen.content_fragment_icon_width), isLayoutRtl());
             refreshView();
         }
     }
 
-    private Resources mRes;
     private StorageMeasurement mMeasure;
     private final SizeStringGetter mAppsSize = new SizeStringGetter();
     private final SizeStringGetter mDcimSize = new SizeStringGetter();
@@ -129,7 +129,6 @@ public class StorageResetActivity extends SettingsLayoutActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        mRes = getResources();
         super.onCreate(savedInstanceState);
         mMeasure = StorageMeasurement.getInstance(this, null);
     }
@@ -150,73 +149,80 @@ public class StorageResetActivity extends SettingsLayoutActivity {
 
     @Override
     public Layout createLayout() {
-        return
-            new Layout().breadcrumb(getString(R.string.header_category_device))
-                .add(new Header.Builder(mRes)
+        return new Layout().breadcrumb(getString(R.string.header_category_device))
+                .add(new Header.Builder(getResources())
                         .icon(mStorageDrawable)
                         .title(R.string.device_storage_reset)
                         .build()
-                    .add(new Header.Builder(mRes)
-                            .title(R.string.storage_title)
-                            .description(mStorageDescription)
-                            .build()
-                        .add(new Status.Builder(mRes)
-                            .title(R.string.storage_apps_usage)
-                            .icon(R.drawable.storage_indicator_apps)
-                            .description(mAppsSize)
-                            .build())
-                        .add(new Status.Builder(mRes)
-                            .title(R.string.storage_dcim_usage)
-                            .icon(R.drawable.storage_indicator_dcim)
-                            .description(mDcimSize)
-                            .build())
-                        .add(new Status.Builder(mRes)
-                            .title(R.string.storage_music_usage)
-                            .icon(R.drawable.storage_indicator_music)
-                            .description(mMusicSize)
-                            .build())
-                        .add(new Status.Builder(mRes)
-                            .title(R.string.storage_downloads_usage)
-                            .icon(R.drawable.storage_indicator_downloads)
-                            .description(mDownloadsSize)
-                            .build())
-                        .add(new Status.Builder(mRes)
-                            .title(R.string.storage_media_cache_usage)
-                            .icon(R.drawable.storage_indicator_cache)
-                            .description(mCacheSize)
-                            .build())
-                        .add(new Status.Builder(mRes)
-                            .title(R.string.storage_media_misc_usage)
-                            .icon(R.drawable.storage_indicator_misc)
-                            .description(mMiscSize)
-                            .build())
-                        .add(new Status.Builder(mRes)
-                            .title(R.string.storage_available)
-                            .icon(R.drawable.storage_indicator_available)
-                            .description(mAvailSize)
-                            .build())
-                    )
-                    .add(new Header.Builder(mRes)
-                            .title(R.string.device_reset)
-                            .build()
-                        .add(new Header.Builder(mRes)
-                                .title(R.string.device_reset)
+                        .add(createStorageHeaders())
+                        .add(createResetHeaders())
+                );
+    }
+
+    private Header createStorageHeaders() {
+        final Resources res = getResources();
+        return new Header.Builder(res)
+                .title(R.string.storage_title)
+                .description(mStorageDescription)
+                .build()
+                .add(new Status.Builder(res)
+                        .title(R.string.storage_apps_usage)
+                        .icon(R.drawable.storage_indicator_apps)
+                        .description(mAppsSize)
+                        .build())
+                .add(new Status.Builder(res)
+                        .title(R.string.storage_dcim_usage)
+                        .icon(R.drawable.storage_indicator_dcim)
+                        .description(mDcimSize)
+                        .build())
+                .add(new Status.Builder(res)
+                        .title(R.string.storage_music_usage)
+                        .icon(R.drawable.storage_indicator_music)
+                        .description(mMusicSize)
+                        .build())
+                .add(new Status.Builder(res)
+                        .title(R.string.storage_downloads_usage)
+                        .icon(R.drawable.storage_indicator_downloads)
+                        .description(mDownloadsSize)
+                        .build())
+                .add(new Status.Builder(res)
+                        .title(R.string.storage_media_cache_usage)
+                        .icon(R.drawable.storage_indicator_cache)
+                        .description(mCacheSize)
+                        .build())
+                .add(new Status.Builder(res)
+                        .title(R.string.storage_media_misc_usage)
+                        .icon(R.drawable.storage_indicator_misc)
+                        .description(mMiscSize)
+                        .build())
+                .add(new Status.Builder(res)
+                        .title(R.string.storage_available)
+                        .icon(R.drawable.storage_indicator_available)
+                        .description(mAvailSize)
+                        .build());
+    }
+
+    private Header createResetHeaders() {
+        final Resources res = getResources();
+        return new Header.Builder(res)
+                .title(R.string.device_reset)
+                .build()
+                .add(new Header.Builder(res)
+                        .title(R.string.device_reset)
+                        .build()
+                        .add(new Action.Builder(res, ACTION_RESET_DEVICE)
+                                .title(R.string.confirm_factory_reset_device)
                                 .build()
-                            .add(new Action.Builder(mRes, ACTION_RESET_DEVICE)
-                                    .title(R.string.confirm_factory_reset_device)
-                                    .build()
-                            )
-                            .add(new Action.Builder(mRes, Action.ACTION_BACK)
+                        )
+                        .add(new Action.Builder(res, Action.ACTION_BACK)
                                 .title(R.string.title_cancel)
                                 .defaultSelection()
                                 .build())
-                        )
-                        .add(new Action.Builder(mRes, Action.ACTION_BACK)
-                            .title(R.string.title_cancel)
-                            .defaultSelection()
-                            .build())
-                    )
-                );
+                )
+                .add(new Action.Builder(res, Action.ACTION_BACK)
+                        .title(R.string.title_cancel)
+                        .defaultSelection()
+                        .build());
     }
 
     @Override
@@ -249,7 +255,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     }
 
     private int getPixelSize(int resource) {
-        return mRes.getDimensionPixelSize(resource);
+        return getResources().getDimensionPixelSize(resource);
     }
 
     void updateStorageDescription(long totalSize, ArrayList<PercentageBarChart.Entry> entries) {
@@ -269,12 +275,11 @@ public class StorageResetActivity extends SettingsLayoutActivity {
         updateStorageDescription(totalSize, entries);
     }
 
-    private void addEntry(List<PercentageBarChart.Entry> entries, StorageItem storageItem,
-            long size, long totalSize) {
-        if (size > 0) {
-            entries.add(new PercentageBarChart.Entry(
-                    storageItem.ordinal(), size / (float) totalSize,
-                    storageItem.getColor(getResources())));
+    private void addEntry(List<PercentageBarChart.Entry> entries, int order, @ColorRes int color,
+            float percent) {
+        final Resources res = getResources();
+        if (percent > 0) {
+            entries.add(new PercentageBarChart.Entry(order, percent, res.getColor(color)));
         }
     }
 
@@ -291,12 +296,14 @@ public class StorageResetActivity extends SettingsLayoutActivity {
 
         ArrayList<PercentageBarChart.Entry> entries = new ArrayList<>();
 
-        addEntry(entries, StorageItem.APPS, details.appsSize, details.totalSize);
-        addEntry(entries, StorageItem.PICTURES_VIDEO, dcimSize, details.totalSize);
-        addEntry(entries, StorageItem.AUDIO, musicSize, details.totalSize);
-        addEntry(entries, StorageItem.DOWNLOADS, downloadsSize, details.totalSize);
-        addEntry(entries, StorageItem.CACHED_DATA, details.cacheSize, details.totalSize);
-        addEntry(entries, StorageItem.MISC, details.miscSize, details.totalSize);
+        final float divisor = details.totalSize;
+        int order = 0;
+        addEntry(entries, ++order, R.color.storage_apps_usage, details.appsSize / divisor);
+        addEntry(entries, ++order, R.color.storage_dcim, dcimSize / divisor);
+        addEntry(entries, ++order, R.color.storage_music, musicSize / divisor);
+        addEntry(entries, ++order, R.color.storage_downloads, downloadsSize / divisor);
+        addEntry(entries, ++order, R.color.storage_cache, details.cacheSize / divisor);
+        addEntry(entries, ++order, R.color.storage_misc, details.miscSize / divisor);
 
         Collections.sort(entries);
 
