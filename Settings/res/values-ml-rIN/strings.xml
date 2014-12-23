@@ -27,7 +27,6 @@
     <string name="add_account" msgid="4098060223200619258">"അക്കൗണ്ട് ചേർക്കുക"</string>
     <string name="account_header_sync" msgid="2679585471372319471">"സമന്വയിപ്പിക്കുക"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"അക്കൗണ്ട് നീക്കംചെയ്യുക"</string>
-    <string name="search_title" msgid="5474988613144349415">"തിരയുക"</string>
     <string name="account_sync" msgid="773808124331714965">"സമന്വയിപ്പിച്ച അപ്ലിക്കേഷനുകൾ തിരഞ്ഞെടുക്കുക"</string>
     <string name="sync_now" msgid="8732244492880016471">"ഇപ്പോൾ സമന്വയിപ്പിക്കുക"</string>
     <string name="sync_cancel" msgid="5839264070098894371">"സമന്വയം റദ്ദാക്കുക"</string>
@@ -37,14 +36,6 @@
     <string name="sync_is_failing" msgid="8229476000384257186">"സമന്വയിപ്പിക്കൽ ഇപ്പോൾ പ്രവർത്തിക്കുന്നില്ല. ഇത് ഉടൻ ശരിയാകും."</string>
     <string name="account_remove" msgid="4313580520737295272">"അക്കൗണ്ട് നീക്കംചെയ്യുക"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"അക്കൗണ്ട് നീക്കം ചെയ്യാനാവില്ല"</string>
-  <string-array name="account_detail_settings">
-    <item msgid="2736778804563540468">"പേര്"</item>
-    <item msgid="6466271488216028049">"ഫോട്ടോ"</item>
-    <item msgid="5763918836533170723">"സുരക്ഷ"</item>
-    <item msgid="5219275476980441834">"Google Wallet"</item>
-    <item msgid="5333563881963545303">"വാങ്ങൽ ചരിത്രം"</item>
-    <item msgid="6174147587962184914">"അക്കൗണ്ട് നീക്കംചെയ്യുക"</item>
-  </string-array>
     <string name="connectivity_network" msgid="8321537111272398501">"നെറ്റ്‌വർക്ക്"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ഇതർനെറ്റ്"</string>
@@ -63,8 +54,6 @@
     <string name="apps_downloaded" msgid="4222190849854323480">"ഡൗൺലോഡുചെയ്ത അപ്ലിക്കേഷനുകൾ"</string>
     <string name="apps_system" msgid="2499191125802829425">"സിസ്‌റ്റം അപ്ലിക്കേഷനുകൾ"</string>
     <string name="apps_running" msgid="6430310491739956228">"പ്രവർത്തിക്കുന്ന അപ്ലിക്കേഷനുകൾ"</string>
-    <string name="accessories_remote" msgid="2188138914890229082">"വിദൂര നിയന്ത്രണം"</string>
-    <string name="accessories_camera" msgid="503302832375993697">"ക്യാമറ"</string>
     <string name="accessories_add" msgid="1347802656349218830">"ചേർക്കൂ"</string>
     <string name="accessories_wifi_display" msgid="1107690327150126038">"Wi-Fi ഡിസ്‌പ്ലേ"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"ജോടിയാക്കുന്നു…"</string>
@@ -75,6 +64,7 @@
     <string name="accessory_options" msgid="4799658564005710297">"ആക്‌സസ്സറി"</string>
     <string name="accessory_rename" msgid="3250766501262581206">"പേരുമാറ്റുക"</string>
     <string name="accessory_unpair" msgid="8242725516604465355">"ജോടിയാക്കിയത് മാറ്റുക"</string>
+    <string name="accessory_battery" msgid="7021788232835772126">"ബാറ്ററി <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
     <string name="accessory_unpairing" msgid="7568241162181184667">"ഉപകരണം ജോടിയാക്കിയത് മാറ്റുന്നു…"</string>
     <string name="accessory_connected" msgid="2156489304110030393">"കണക്‌റ്റുചെയ്‌തു"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"ആക്‌‌സ്സസറികൾക്ക് തിരയുന്നു…"</string>
@@ -108,7 +98,6 @@
     <string name="about_preference" msgid="4131396784531360434">"ആമുഖം"</string>
     <string name="device_name" msgid="2670488158531273028">"ഉപകരണത്തിന്റെ പേര്"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"നിയമ വിവരം"</string>
-    <string name="about_warranty" msgid="5736003473060436384">"വാറന്റി"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"ഓപ്പൺ സോഴ്‌സ് ലൈസൻസുകൾ"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google ലീഗൽ"</string>
     <string name="about_license_activity_unavailable" msgid="8522566562321418498">"ലൈസൻസ് ഡാറ്റ ലഭ്യമല്ല"</string>
@@ -123,16 +112,6 @@
     <string name="about_ads" msgid="3364786994943748337">"പരസ്യങ്ങൾ"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"നിങ്ങൾ ഇപ്പോൾ ഒരു ഡവലപ്പറാണ്!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"ആവശ്യമില്ല, നിങ്ങൾ ഇതിനകം ഒരു ഡവലപ്പറാണ്"</string>
-    <string name="wifi_security_none" msgid="1241101191574932821">"ഒന്നുമില്ല"</string>
-    <string name="wifi_remembered" msgid="710973813096194477">"സംരക്ഷിച്ചു"</string>
-    <string name="wifi_disabled_generic" msgid="5100439885010143290">"പ്രവർത്തനരഹിതമാക്കി"</string>
-    <string name="wifi_disabled_network_failure" msgid="7558613087615078317">"മോശം ഇന്റർനെറ്റ് കണക്ഷൻ ഒഴിവാക്കി"</string>
-    <string name="wifi_disabled_password_failure" msgid="1318626812163574372">"പ്രാമാണീകരണ പ്രശ്‌നം"</string>
-    <string name="wifi_not_in_range" msgid="342867509887486418">"പരിധിയിലില്ല"</string>
-    <string name="wifi_wps_available_first_item" msgid="2505782834128907733">"WPS ലഭ്യമാണ്"</string>
-    <string name="wifi_wps_available_second_item" msgid="375469856423243587">" (WPS ലഭ്യമാണ്)"</string>
-    <string name="wifi_secured_first_item" msgid="9147292132572887175">"<xliff:g id="WIFI_SECURITY_SHORT">%1$s</xliff:g> ഉപയോഗിച്ച് സുരക്ഷിതമാക്കിയത്"</string>
-    <string name="wifi_secured_second_item" msgid="4204734116810783051">", <xliff:g id="WIFI_SECURITY_SHORT">%1$s</xliff:g> ഉപയോഗിച്ച് സുരക്ഷിതമാക്കിയത്"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"മോശം"</item>
     <item msgid="5986166866411161790">"തൃപ്തികരം"</item>
@@ -152,10 +131,7 @@
     <string name="wifi_setting_available_networks" msgid="1244646604369133314">"ലഭ്യമായ നെറ്റ്‌വർക്കുകൾ"</string>
     <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"WPS വഴി കണ‌ക്‌റ്റുചെയ്യുക"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"പുതിയ നെറ്റ്‌വർക്ക് ചേർക്കുക"</string>
-    <string name="add_network" msgid="2074883912462075625">"നെറ്റ്‌വർക്ക് ചേർക്കുക"</string>
-    <string name="network_ssid" msgid="7653487431810593891">"നെറ്റ്‌വർക്ക് SSID"</string>
     <string name="security_type" msgid="524443802004143058">"സുരക്ഷാ തരം"</string>
-    <string name="password" msgid="1322790875762726719">"പാസ്‌വേഡ്"</string>
     <string name="wps_network" msgid="1052148085426051873">"WPS വഴി കണ‌ക്‌റ്റുചെയ്യുക"</string>
     <string name="other_network" msgid="3539704463099544488">"മറ്റ് നെറ്റ്‌വർക്ക്…"</string>
     <string name="skip_network" msgid="6380260543776712357">"ഒഴിവാക്കുക"</string>
@@ -198,11 +174,9 @@
     <string name="wifi_action_proxy_none" msgid="4457231399674182650">"ഒന്നുമില്ല"</string>
     <string name="wifi_action_proxy_manual" msgid="8402002777441261064">"സ്വമേധയാലുള്ളത്"</string>
     <string name="wifi_action_dhcp" msgid="6338911832360962268">"DHCP"</string>
-    <string name="wifi_action_save" msgid="4673786410274206843">"സംരക്ഷിക്കുക"</string>
     <string name="wifi_action_static" msgid="1025855501453321749">"സ്‌റ്റാറ്റിക്ക്"</string>
     <string name="wifi_action_status_info" msgid="7664354971197839253">"നില വിവരം"</string>
     <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"വിപുലമായ ഓപ്ഷനുകൾ"</string>
-    <string name="wifi_action_advanced_options_description" msgid="8615353318560146504">"<xliff:g id="PROXY_SETTINGS_SUMMARY">%1$s</xliff:g>, <xliff:g id="IP_SETTINGS_SUMMARY">%2$s</xliff:g>"</string>
     <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"സാധുതയുള്ള ഒരു IP വിലാസം നൽകുക"</string>
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"സാധുവായ ഗേറ്റ്‌വേ വിലാസം നൽകുക"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"സധുവായ DNS വിലാസം നൽകുക"</string>
@@ -225,19 +199,8 @@
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"നെറ്റ്‌വർക്ക് കണക്‌റ്റുചെയ്‌തിട്ടില്ല"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g> എന്നതിലേക്ക് ഇതിനകം കണക്‌റ്റുചെയ്തിരിക്കുന്നു. മറ്റൊരു നെറ്റ്‌വർക്കിലേക്ക് കണക്‌റ്റുചെയ്യണോ?"</string>
     <string name="wifi_summary_unknown_network" msgid="7903601448928422642">"ഒരു അജ്ഞാത നെറ്റ്‌വർക്ക്"</string>
-    <string name="connectivity_advanced_options" msgid="2858199826425132228">"വിപുലമായ ഓപ്ഷനുകൾ"</string>
-    <string name="connectivity_advanced_options_description" msgid="370129113175689226">"<xliff:g id="SSID_0">%1$s</xliff:g>, <xliff:g id="SSID_1">%2$s</xliff:g>"</string>
-    <string name="title_ip_settings" msgid="6408399523925189065">"IP ക്രമീകരണങ്ങൾ"</string>
-    <string name="title_test_connection" msgid="1202798409060082670">"കണക്ഷൻ പരിശോധിക്കുക"</string>
-    <string name="dhcp" msgid="5536822848499568335">"DHCP"</string>
-    <string name="title_static" msgid="6690544371649264526">"സ്‌റ്റാറ്റിക്ക്"</string>
-    <string name="gateway" msgid="2467496590891949814">"ഗേറ്റ്‌വേ"</string>
-    <string name="title_network_prefix_length" msgid="3222416880787889272">"നെറ്റ്‌വർക്ക് പ്രിഫിക്‌സ് ദൈർഘ്യം"</string>
-    <string name="title_dns_1" msgid="1513875539231931892">"DNS 1"</string>
-    <string name="title_dns_2" msgid="7805767982172685879">"DNS 2"</string>
     <string name="title_ok" msgid="1021329453788761592">"ശരി"</string>
     <string name="title_cancel" msgid="4846143417666038604">"റദ്ദാക്കുക"</string>
-    <string name="rename_device" msgid="8221482127562510757">"ഉപകരണത്തിന്റെ പേരുമാറ്റുക"</string>
     <string name="storage_title" msgid="2132026108559493394">"സംഭരണം"</string>
     <string name="storage_available" msgid="1241005580092138871">"ലഭ്യമാണ്"</string>
     <string name="storage_size" msgid="8958530823208352781">"ആകെയിടം: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
@@ -248,13 +211,11 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"ഓഡിയോ"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"പലവക"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"കാഷെ ചെയ്‌ത ഡാറ്റ"</string>
-    <string name="wifi_wps_cancel_scan" msgid="3562470978552920877">"റദ്ദാക്കുക"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"വീണ്ടും ശ്രമിക്കുക"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS റൂട്ടറിനായി തിരയുന്നു…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"നിങ്ങളുടെ റൂട്ടറിലെ Wi-Fi പരിരക്ഷിത സജ്ജീകരണ ബട്ടൺ അമർത്തുക.\nഇത് \"WPS\" എന്നറിയപ്പെടാനോ ഇടതുഭാഗത്ത് ചിഹ്നമുണ്ടായിരിക്കാനോ ഇടയുണ്ട്."</string>
     <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"നിങ്ങളുടെ Wi-Fi റൂട്ടറിൽ പിൻ <xliff:g id="NUMBER">%1$s</xliff:g> നൽകുക"</string>
     <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"നിങ്ങൾ പിൻ നൽകിയതിനു ശേഷം, സജ്ജീകരണം പൂർത്തിയാകാൻ 2 മിനിറ്റ് വരെ എടുക്കും"</string>
-    <string name="wifi_wps_in_progress" msgid="7082889465182680949">"WPS ഇതിനകം പുരോഗതിയിലാണ്, അത് പൂർത്തിയാകാൻ 2 മിനിറ്റ് വരെ സമയം എടുക്കും"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Wi-Fi റൂട്ടർ കണ്ടെത്താനായില്ല"</string>
     <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Wi-Fi റൂട്ടർ സുരക്ഷാ ക്രമീകരണം (WEP) പിന്തുണയ്ക്കുന്നില്ല"</string>
     <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Wi-Fi റൂട്ടർ സുരക്ഷാ ക്രമീകരണം (TKIP) പിന്തുണയ്ക്കുന്നില്ല"</string>
@@ -269,12 +230,7 @@
     <string name="desc_auto_date_time" msgid="6997571927680580633">"നെറ്റ്‌വർക്ക് നൽകുന്ന സമയം ഉപയോഗിക്കുക"</string>
     <string name="system_location" msgid="502463575930545806">"ലൊക്കേഷൻ"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"നിങ്ങളുടെ അനുമതി ആവശ്യപ്പെട്ട അപ്ലിക്കേഷനുകളെ ലൊക്കേഷൻ വിവരങ്ങൾ ഉപയോഗിക്കാൻ അനുവദിക്കുക"</string>
-    <string name="system_network_location" msgid="3095006393148731886">"Wi-Fi നെറ്റ്‌വർക്ക് ലൊക്കേഷൻ"</string>
-    <string name="system_desc_network_location" msgid="3394374680078903193">"ലൊക്കേഷൻ നിർണ്ണയിക്കുന്നതിന് അപ്ലിക്കേഷനുകളെ സഹായിക്കാൻ Google-നെ അനുവദിക്കുക. അപ്ലിക്കേഷനുകളൊന്നും പ്രവർത്തിക്കാത്തപ്പോൾ പോലും Google-ലേക്ക് അജ്ഞാത ലൊക്കേഷൻ ഡാറ്റ അയയ്‌ക്കുമെന്നാണ് ഇത് അർത്ഥമാക്കുന്നത്."</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"ലൊക്കേഷൻ അനുവാദം"</string>
-    <string name="system_desc_network_location_confirm" msgid="3929125496258579850">"അജ്ഞാത ലൊക്കേഷൻ ഡാറ്റ ശേഖരിക്കുന്നതിന് Google-ന്റെ ലൊക്കേഷൻ സേവനത്തെ അനുവദിക്കുക. നിങ്ങളുടെ ഉപകരണത്തിൽ ചില ഡാറ്റ സംഭരിക്കാനിടയുണ്ട്. അപ്ലിക്കേഷനുകളൊന്നും പ്രവർത്തിക്കാത്തപ്പോൾ പോലും ശേഖരണം സംഭവിക്കാം."</string>
-    <string name="location_title" msgid="7600163182794860262">"എന്റെ ലൊക്കേഷൻ"</string>
-    <string name="header_category_system" msgid="3243287334177831637">"സിസ്റ്റം"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"മോഡ്"</string>
     <string name="location_category_recent_location_requests" msgid="3437903422445812245">"അടുത്തിടെയുള്ള ലൊക്കേഷൻ അഭ്യർത്ഥനകൾ"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"അപ്ലിക്കേഷനുകളൊന്നും അടുത്തിടെ ലൊക്കേഷൻ അഭ്യർത്ഥിച്ചില്ല"</string>
@@ -316,9 +272,7 @@
     <string name="captions_textopacity" msgid="5536765490446288641">"വാചക അതാര്യത"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"വിൻഡോ നിറം"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"വിൻഡോ അതാര്യത"</string>
-    <string name="color_none" msgid="5281446963475996688">"ഒന്നുമില്ല"</string>
     <string name="color_white" msgid="65537523012024751">"വെളുപ്പ്"</string>
-    <string name="color_gray" msgid="5637299846460438696">"ചാരനിറം"</string>
     <string name="color_black" msgid="8804213372565106403">"കറുപ്പ്"</string>
     <string name="color_red" msgid="5630553203246525989">"ചുവപ്പ്"</string>
     <string name="color_green" msgid="3745551274773976763">"പച്ച"</string>
@@ -344,8 +298,6 @@
     <string name="system_drawing" msgid="6573389872154957039">"ഡ്രോയിംഗ്"</string>
     <string name="system_monitoring" msgid="8424072546138094053">"മോണിറ്ററിംഗ്"</string>
     <string name="system_apps" msgid="6293850468968494924">"അപ്ലിക്കേഷനുകൾ"</string>
-    <string name="system_take_bug_report" msgid="3550575498907672342">"ബഗ് റിപ്പോർട്ട് എടുക്കുക"</string>
-    <string name="system_backup_password" msgid="6622796686823406402">"ബാക്കപ്പ് പാസ്‌വേഡ്"</string>
     <string name="system_stay_awake" msgid="1212296404230848490">"സജീവമായി തുടരുക"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP പരിശോധന"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI അനുരൂപമാക്കൽ"</string>
@@ -381,8 +333,6 @@
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"പ്രവർത്തനങ്ങൾ സൂക്ഷിക്കരുത്"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"പശ്ചാത്തല പ്രോസ‌സ്സ് പരിധി"</string>
     <string name="system_show_all_anrs" msgid="3601183436857424712">"എല്ലാ ANR-കളും കാണിക്കുക"</string>
-    <string name="system_desc_take_bug_report" msgid="1627218971851223147">"ഇമെയിൽ വിലാസത്തിലേക്ക് റിപ്പോർട്ട് അയയ്‌ക്കുക"</string>
-    <string name="system_desc_backup_password" msgid="6454962099870874762">"മുഴുവൻ ഡെസ്‌ക്‌ടോപ്പ് ബാക്കപ്പുകളും പരിരക്ഷിക്കുക"</string>
     <string name="system_desc_stay_awake" msgid="229588006508356238">"സുഷുപ്‌തിയിലാകുന്നത് പ്രവർത്തനരഹിതമാക്കുക"</string>
     <string name="system_desc_hdcp_checking" msgid="6879753401058891183">"DRM ഉള്ളടക്കത്തിനുമാത്രമായി ഉപയോഗിക്കുക"</string>
     <string name="system_desc_hdmi_optimization" msgid="4400727262768931480">"പരമാവധി മിഴിവിനായോ ഫ്രെയിം റേറ്റിനായോ ഡിസ്പ്ലേ അനുരൂപമാക്കുക. അൾട്രാ HD ഡിസ്പ്ലേകൾക്ക് മാത്രമേ ഇത് ബാധകമാകൂ. ഈ ക്രമീകരണങ്ങൾ മാറ്റുന്നത് നിങ്ങളുടെ ഉപകരണം പുനരാരംഭിക്കാനിടയാക്കും."</string>
@@ -397,7 +347,6 @@
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"പ്രധാന ത്രെഡിൽ അപ്ലിക്കേഷനുകൾ ദൈർഘ്യമേറിയ പ്രവർത്തനങ്ങൾ നടത്തുമ്പോൾ സ്‌ക്രീൻ ഫ്ലാഷ് ചെയ്യുക"</string>
     <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"സ്ക്രീൻ ഓവർലേ നിലവിലെ CPU ഉപയോഗം ദൃശ്യമാക്കുന്നു"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"adb ഷെൽ dumpsys gfxinfo-ലെ റെൻഡർ ചെയ്യുന്ന സമയം അളക്കുക"</string>
-    <string name="normal_date_format" msgid="4118071594685269322">"പ്രാദേശികം (<xliff:g id="DATE">%s</xliff:g>)"</string>
     <string name="action_on_title" msgid="6852389884236870765">"ഓണാക്കുക"</string>
     <string name="action_off_title" msgid="3157728958166559966">"ഓഫാക്കുക"</string>
     <string name="action_on_description" msgid="4559342592998850852">"ഓണാണ്"</string>
@@ -468,9 +417,6 @@
     <item msgid="786682416218616624">"വേഗത്തിൽ"</item>
     <item msgid="1708844147149066133">"വേഗതയേറിയത്"</item>
   </string-array>
-    <string name="choose_account_type_title" msgid="34004552592079689">"അക്കൗണ്ട് തരം തിരഞ്ഞെടുക്കുക"</string>
-    <string name="choose_account_title" msgid="6672090823838639972">"അക്കൗണ്ട് തിരഞ്ഞെടുക്കുക"</string>
-    <string name="add_account_button_label" msgid="7950769159839284068">"പുതിയ അക്കൗണ്ട് ചേർക്കുക"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"നിലവിലെ കീബോർഡ്"</string>
     <string name="title_configure" msgid="6929522003149212388">"കോൺഫിഗർ ചെയ്യുക"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"ക്കീബോർഡ് ഓപ്ഷനുകൾ"</string>
@@ -479,9 +425,6 @@
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"പേരുമാറ്റുക"</string>
     <string name="accessories_wifi_display_enable" msgid="4779506305656453262">"Wi-Fi ഡിസ്‌പ്ലേ"</string>
     <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"പിൻ ആവശ്യമാണ്"</string>
-    <string name="accessories_remote_list_title" msgid="3115459158860792046">"റിമോട്ട് വിവരം: <xliff:g id="SERIALNUMBER">%1$s</xliff:g>"</string>
-    <string name="system_collecting_bug_report" msgid="5923988155158351543">"ബഗ്‌ റിപ്പോർട്ട് ശേഖരിക്കുന്നു!\nറിപ്പോർട്ട് തയ്യാറായിക്കഴിഞ്ഞാൽ ഞങ്ങൾ നിങ്ങളോട് കൂടുതൽ വിവരങ്ങൾ ആവശ്യപ്പെടും."</string>
-    <string name="system_collecting_bug_report_error" msgid="1396108342854067722">"ബഗ് റിപ്പോർട്ട് ശേഖരിക്കാനായില്ല!\nപിന്നീട് വീണ്ടും ശ്രമിക്കുക."</string>
     <string name="whichApplication" msgid="8382179653567099571">"പൂർണ്ണമായ പ്രവർത്തനം ഉപയോഗിക്കുന്നു"</string>
     <string name="alwaysUseQuestion" msgid="7128459989232213727">"ഈ പ്രവർത്തനത്തിന് എപ്പോഴും ഈ ഓപ്ഷൻ ഉപയോഗിക്കണോ?"</string>
     <string name="alwaysUseOption" msgid="1057645533268907906">"എപ്പോഴും ഉപയോഗിക്കുക"</string>
@@ -518,18 +461,13 @@
     <item quantity="one" msgid="4711426139459946065">"കണക്റ്റുചെയ്‌തിട്ടില്ലാത്ത ഇൻപുട്ട്"</item>
     <item quantity="other" msgid="4526893384805247472">"കണക്റ്റുചെയ്‌തിട്ടില്ലാത്ത ഇൻപുട്ടുകൾ"</item>
   </plurals>
-    <string name="inputs_state_connected" msgid="2463661081264605403">"കണക്‌റ്റുചെയ്‌തു"</string>
-    <string name="inputs_state_connected_standby" msgid="2861557722523733817">"സ്റ്റാൻഡ്ബൈ"</string>
-    <string name="inputs_state_disconnected" msgid="558532410057350104">"വിച്ഛേദിച്ചു"</string>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"നിങ്ങളുടെ അക്കൗണ്ടിലെ അപ്ലിക്കേഷനിലേക്കും മറ്റ് ഉള്ളടക്കത്തിലേക്കുമുള്ള ആക്‌സസ്സ് നിയന്ത്രിക്കുക"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"നിയന്ത്രിത പ്രൊഫൈൽ"</string>
-    <string name="user_restrictions_title" msgid="8317193312532216351">"അപ്ലിക്കേഷൻ &amp; ഉള്ളടക്ക ആക്‌സസ്സ്"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g> നിയന്ത്രിക്കുന്നത്"</string>
     <string name="app_not_supported_in_limited" msgid="6818309827329010677">"നിയന്ത്രിത പ്രൊഫൈലുകളിൽ ഈ അപ്ലിക്കേഷനെ പിന്തുണയ്‌ക്കില്ല"</string>
     <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"ഈ അപ്ലിക്കേഷന് നിങ്ങളുടെ അക്കൗണ്ടുകൾ ആക്‌സസ്സുചെയ്യാനാകും"</string>
     <string name="restriction_location_enable_title" msgid="2575116135395354938">"ലൊക്കേഷൻ"</string>
     <string name="restriction_location_enable_summary" msgid="4195349388342385870">"നിങ്ങളുടെ ലൊക്കേഷൻ വിവരം ഉപയോഗിക്കാൻ അപ്ലിക്കേഷനുകളെ അനുവദിക്കുക"</string>
-    <string name="restricted_profile_create" msgid="7081117593480952518">"നിയന്ത്രിത പ്രൊഫൈൽ സൃഷ്‌ടിക്കുക"</string>
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"നിയന്ത്രിത പ്രൊഫൈലിലേക്ക് കടക്കുക"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"നിയന്ത്രിത പ്രൊഫൈലിൽ നിന്ന് പുറത്തുകടക്കുക"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"നിയന്ത്രിത പ്രൊഫൈൽ ഇല്ലാതാക്കുക"</string>
@@ -544,10 +482,6 @@
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"നിയന്ത്രണങ്ങൾ ഇഷ്‌ടാനുസൃതമാക്കുക"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"ഒരു നിമിഷം…"</string>
     <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"പിൻ മാറ്റുക"</string>
-    <string name="restricted_profile_set_password" msgid="3989154189940037175">"നിയന്ത്രിത പ്രൊഫൈലിൽ നിന്ന് പുറത്തുകടക്കാൻ ഉപയോഗിച്ച പുതിയ പിൻ കോഡ് സജ്ജീകരിക്കുക"</string>
-    <string name="restricted_profile_confirm_password" msgid="5749967525546068650">"നിയന്ത്രിത പ്രൊഫൈലിൽ നിന്ന് പുറത്തുകടക്കാൻ ഉപയോഗിച്ച പിൻ കോഡ് സ്ഥിരീകരിക്കുക"</string>
-    <string name="restricted_profile_enter_password" msgid="5961473119032585585">"നിയന്ത്രിത പ്രൊഫൈലിൽ നിന്ന് പുറത്തുകടക്കാൻ പിൻ കോഡ് നൽകുക"</string>
-    <string name="restricted_profile_delete_dialog_title" msgid="2998929625283492853">"നിയന്ത്രിത പ്രൊഫൈൽ നീക്കംചെയ്യണോ?"</string>
     <string name="restriction_description" msgid="3104855945910233028">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
     <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"ഈ ചാനൽ കാണാൻ പിൻ നൽകുക"</string>
     <string name="pin_enter_unlock_program" msgid="52453773316071511">"ഈ പ്രോഗ്രാം കാണാൻ പിൻ നൽകുക"</string>
@@ -556,8 +490,75 @@
     <string name="pin_enter_again" msgid="1510456697040826496">"പുതിയ പിൻ വീണ്ടും നൽകുക"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"പഴയ പിൻ നൽകുക"</string>
     <string name="pin_enter_wrong" msgid="5653864140710683928">"നിങ്ങൾ 5 തവണ തെറ്റായ പിൻ നൽകി.\nവീണ്ടും ശ്രമിക്കുക <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
-    <string name="pin_button_done" msgid="939191809977197451">"പൂർത്തിയാക്കി"</string>
-    <string name="pin_button_cancel" msgid="5541414789309863965">"റദ്ദാക്കുക"</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"പിൻ തെറ്റാണ്, വീണ്ടും ശ്രമിക്കുക"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"പിൻ പൊരുത്തപ്പെടുന്നില്ല, വീണ്ടും ശ്രമിക്കുക"</string>
+    <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> എന്നതിനുള്ള പാസ്‌വേഡ് നൽകുക"</string>
+    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"^1 എന്നതിൽ ചേരുന്നു"</string>
+    <string name="wifi_setup_connection_success" msgid="1848188618100224976">"കണക്‌റ്റുചെയ്‌തു!"</string>
+    <string name="wifi_setup_save_success" msgid="1741842127458417612">"സംരക്ഷിച്ചു!"</string>
+    <string name="device_apps_app_management_version" msgid="1004679024556315208">"പതിപ്പ് <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
+    <string name="device_apps_app_management_open" msgid="8009823973422120839">"തുറക്കുക"</string>
+    <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"നിർബന്ധമായി നിർത്തുക"</string>
+    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"നിങ്ങൾ ഒരു അപ്ലിക്കേഷൻ നിർബന്ധിതമായി നിർത്തുകയാണെങ്കിൽ, അത് ശരിയായി പ്രവർത്തിക്കാനിടയില്ല."</string>
+    <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"അൺഇൻസ്റ്റാളുചെയ്യുക"</string>
+    <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"ഈ അപ്ലിക്കേഷൻ അൺഇൻസ്റ്റാളുചെയ്യണോ?"</string>
+    <string name="device_apps_app_management_disable" msgid="6136528600052941589">"പ്രവർത്തനരഹിതമാക്കുക"</string>
+    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"നിങ്ങൾക്ക് ഈ അപ്ലിക്കേഷൻ പ്രവർത്തനരഹിതമാക്കണോ?"</string>
+    <string name="device_apps_app_management_enable" msgid="3246823119203444608">"പ്രവർത്തനക്ഷമമാക്കുക"</string>
+    <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"നിങ്ങൾക്ക് ഈ അപ്ലിക്കേഷൻ പ്രവർത്തനക്ഷമമാക്കണോ?"</string>
+    <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"വിവരം മായ്‌ക്കുക"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"ഈ അപ്ലിക്കേഷന്റെ എല്ലാ വിവരവും ശാശ്വതമായി ഇല്ലാതാക്കും."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"ഫയലുകൾ, ക്രമീകരണം, അക്കൗണ്ടുകൾ, ഡാറ്റാബേസുകൾ തുടങ്ങിയവയെല്ലാം ഇതിൽ ഉൾപ്പെടും."</string>
+    <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"സ്ഥിരമായവ മായ്‌ക്കുക"</string>
+    <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"ചില പ്രവർത്തനങ്ങൾക്കായി ഈ അപ്ലിക്കേഷൻ സമാരംഭിക്കുന്നത് സജ്ജമാക്കുക"</string>
+    <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"സ്ഥിരമായവയൊന്നും സജ്ജീകരിച്ചിട്ടില്ല"</string>
+    <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"കാഷെ മായ്‌ക്കുക"</string>
+    <string name="device_apps_app_management_notifications" msgid="7291960671957440729">"അറിയിപ്പുകൾ"</string>
+    <string name="device_apps_app_management_permissions" msgid="1829808830974726081">"അനുമതികൾ"</string>
+    <string name="settings_ok" msgid="3321630456511355983">"ശരി"</string>
+    <string name="settings_cancel" msgid="304280412158061225">"റദ്ദാക്കുക"</string>
+    <string name="settings_on" msgid="6892236264945435013">"ഓൺ"</string>
+    <string name="settings_off" msgid="449272161738237637">"ഓഫ്"</string>
+    <string name="device_daydreams_none" msgid="7364189761517824834">"ഒന്നുമില്ല"</string>
+    <string name="device_daydreams_select" msgid="3691552535056569158">"ഡേഡ്രീം"</string>
+    <string name="device_daydreams_test" msgid="9038920213402659591">"ഇപ്പോൾ ആരംഭിക്കുക"</string>
+    <string name="device_daydreams_sleep" msgid="8766795993034660366">"ഡേഡ്രീമിലാകുന്നത് എപ്പോൾ"</string>
+    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"ഈ നിഷ്‌ക്രിയത്വ കാലയളവിനുശേഷം ഡേഡ്രീമിംഗ് ആരംഭിക്കുന്നു. ഡേഡ്രീമൊന്നും തിരഞ്ഞെടുത്തില്ലെങ്കിൽ, ഡിസ്‌പ്‌ലേ ഓഫാകുന്നതാണ്."</string>
+    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> നിഷ്‌ക്രിയത്വത്തിന് ശേഷം"</string>
+    <string name="device_daydreams_screen_off" msgid="5002473979169042970">"സുഷുപ്‌തിയിലാകുന്നത് എപ്പോൾ"</string>
+    <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"ഈ നിഷ്‌ക്രിയ കാലയളവിന് ശേഷം സ്‌ക്രീൻ ഓഫാകുന്നു."</string>
+    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"ഡ്രീമിംഗിന് ശേഷം <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> കഴിഞ്ഞ്"</string>
+    <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"നിലവിൽ അക്കൗണ്ടുകളൊന്നും ബാക്കപ്പ് ചെയ്ത ഡാറ്റ സംഭരിക്കുന്നില്ല"</string>
+    <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
+    <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Google സെർവറുകളിൽ നിങ്ങളുടെ Wi‑Fi പാസ്‌വേഡുകൾ, ബുക്ക്‌മാർക്കുകൾ, മറ്റ് ക്രമീകരണങ്ങൾ, അപ്ലിക്കേഷൻ ഡാറ്റ എന്നിവ ബാക്കപ്പുചെയ്യുന്നത് അവസാനിപ്പിച്ച് അതിലെ എല്ലാ പകർപ്പുകളും മായ്‌ക്കണോ?"</string>
+    <string name="privacy_backup_data" msgid="1796662583830120812">"എന്റെ വിവരം ബാക്കപ്പുചെയ്യുക"</string>
+    <string name="privacy_backup_account" msgid="9059939814827165020">"ബാക്കപ്പ് അക്കൗണ്ട്"</string>
+    <string name="privacy_automatic_restore" msgid="1409885318093199628">"സ്വയം പുനഃസ്ഥാപിക്കുക"</string>
+    <string name="factory_reset_device" msgid="7422459553658815011">"ഉപകരണം പുനഃസജ്ജീകരിക്കുക"</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"Google അക്കൗണ്ട്, സിസ്‌റ്റത്തിന്റെയും അപ്ലിക്കേഷന്റെയും വിവരവും ക്രമീകരണവും, ഡൗൺലോഡുചെയ്‌ത അപ്ലിക്കേഷനുകൾ എന്നിവയുൾപ്പെടെ, നിങ്ങളുടെ ഉപകരണത്തിന്റെ ആന്തരിക സംഭരണത്തിൽ നിന്നുള്ള എല്ലാ വിവരവും മായ്‌ക്കും"</string>
+    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"നിങ്ങളുടെ എല്ലാ വ്യക്തിഗത വിവരങ്ങളും ഡൗൺലോഡുചെയ്‌ത അപ്ലിക്കേഷനുകളും മായ്ക്കണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാനാവില്ല!"</string>
+    <string name="confirm_factory_reset_device" msgid="8923287482399582268">"എല്ലാം മായ്ക്കുക"</string>
+    <string name="dismiss_all_notifications" msgid="9098572552161726564">"എല്ലാം നിരസിക്കുക"</string>
+    <string name="no_notifications" msgid="8386627968671837666">"ഒന്നുമില്ല"</string>
+    <string name="do_not_disturb_title" msgid="3209080708876656745">"ശല്ല്യപ്പെടുത്തരുത്"</string>
+    <string name="do_not_disturb_desc" msgid="6878276904682143830">"പ്രവർത്തനക്ഷമമാകുമ്പോൾ, ക്രമീകരണത്തിൽ മാത്രമെ പുതിയ അറിയിപ്പുകൾ ദൃശ്യമാകൂ"</string>
+    <string name="select_title" msgid="3905067953686121845">"നിങ്ങളുടെ ^1 ഉപകരണത്തിന് ഒരു പേര് തിരഞ്ഞെടുക്കുക"</string>
+    <string name="select_description" msgid="4070142015460337658">"നിങ്ങളുടെ ഫോണോ ടാബ്‌ലെറ്റോ കമ്പ്യൂട്ടറോ പോലുള്ള മറ്റ് ഉപകരണങ്ങളിൽ നിന്ന് ^1 ആക്‌സസ്സുചെയ്യുമ്പോൾ അത് തിരിച്ചറിയാൻ ഒരു പേര് സഹായിക്കും."</string>
+  <string-array name="rooms">
+    <item msgid="7085399612393981553">"സ്വീകരണമുറി"</item>
+    <item msgid="3722089849939477581">"മീഡിയ റൂം"</item>
+    <item msgid="6108590585438763574">"ഫാമിലി റൂം"</item>
+    <item msgid="2581035245390468625">"ഡൈനിംഗ് റൂം"</item>
+    <item msgid="3127487827308695324">"ഡെൻ"</item>
+    <item msgid="6172018430592195063">"കിടപ്പുമുറി"</item>
+    <item msgid="8120010459866284578">"അടുക്കള"</item>
+  </string-array>
+    <string name="custom_room" msgid="8991561978321502549">"ഇ‌ഷ്‌ടാനുസൃത പേര് നൽകുക..."</string>
+    <string name="settings_status_title" msgid="3890412726442124167">"ഈ ^1 ഉപകരണത്തിന് പേര് നൽകി"</string>
+    <string name="settings_status_description" msgid="3600745966132434139">"ഈ ^2 ഉപകരണത്തിന്റെ പേര് \"^1\" ആണ്. ഇത് മാറ്റണോ?"</string>
+    <string name="change_setting" msgid="2047402388786162246">"മാറ്റുക"</string>
+    <string name="keep_settings" msgid="6798327196645732517">"മാറ്റരുത്"</string>
+    <string name="menu_help" msgid="3733746757586039379">"സഹായം"</string>
+    <string name="setup_failure_title" msgid="5453071802904644658">"ഒരു പിശക് സംഭവിച്ചു"</string>
+    <string name="setup_failure_button_retry" msgid="323660735384062824">"വീണ്ടും ശ്രമിക്കുക"</string>
 </resources>

@@ -27,7 +27,6 @@
     <string name="add_account" msgid="4098060223200619258">"新增帳戶"</string>
     <string name="account_header_sync" msgid="2679585471372319471">"同步處理"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"移除帳戶"</string>
-    <string name="search_title" msgid="5474988613144349415">"搜尋"</string>
     <string name="account_sync" msgid="773808124331714965">"選擇同步完成的應用程式"</string>
     <string name="sync_now" msgid="8732244492880016471">"立即同步處理"</string>
     <string name="sync_cancel" msgid="5839264070098894371">"取消同步處理"</string>
@@ -37,14 +36,6 @@
     <string name="sync_is_failing" msgid="8229476000384257186">"同步功能目前無法運作，不過很快就會恢復正常。"</string>
     <string name="account_remove" msgid="4313580520737295272">"移除帳戶"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"無法移除帳戶"</string>
-  <string-array name="account_detail_settings">
-    <item msgid="2736778804563540468">"名稱"</item>
-    <item msgid="6466271488216028049">"相片"</item>
-    <item msgid="5763918836533170723">"安全性"</item>
-    <item msgid="5219275476980441834">"Google 電子錢包"</item>
-    <item msgid="5333563881963545303">"購買紀錄"</item>
-    <item msgid="6174147587962184914">"移除帳戶"</item>
-  </string-array>
     <string name="connectivity_network" msgid="8321537111272398501">"網路"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"乙太網路"</string>
@@ -63,8 +54,6 @@
     <string name="apps_downloaded" msgid="4222190849854323480">"已下載的應用程式"</string>
     <string name="apps_system" msgid="2499191125802829425">"系統應用程式"</string>
     <string name="apps_running" msgid="6430310491739956228">"執行中的應用程式"</string>
-    <string name="accessories_remote" msgid="2188138914890229082">"遙控器"</string>
-    <string name="accessories_camera" msgid="503302832375993697">"相機"</string>
     <string name="accessories_add" msgid="1347802656349218830">"新增配件"</string>
     <string name="accessories_wifi_display" msgid="1107690327150126038">"Wi-Fi 顯示"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"配對中…"</string>
@@ -75,6 +64,7 @@
     <string name="accessory_options" msgid="4799658564005710297">"配件"</string>
     <string name="accessory_rename" msgid="3250766501262581206">"重新命名"</string>
     <string name="accessory_unpair" msgid="8242725516604465355">"解除配對"</string>
+    <string name="accessory_battery" msgid="7021788232835772126">"電池電量 <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
     <string name="accessory_unpairing" msgid="7568241162181184667">"正在解除配對裝置…"</string>
     <string name="accessory_connected" msgid="2156489304110030393">"已連線"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"搜尋配件…"</string>
@@ -108,7 +98,6 @@
     <string name="about_preference" msgid="4131396784531360434">"關於"</string>
     <string name="device_name" msgid="2670488158531273028">"裝置名稱"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"法律資訊"</string>
-    <string name="about_warranty" msgid="5736003473060436384">"保固"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"開放原始碼授權"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google 法律條款"</string>
     <string name="about_license_activity_unavailable" msgid="8522566562321418498">"無法提供授權資料"</string>
@@ -123,16 +112,6 @@
     <string name="about_ads" msgid="3364786994943748337">"廣告"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"您現在已成為開發人員！"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"不需要了，您已經是開發人員"</string>
-    <string name="wifi_security_none" msgid="1241101191574932821">"無"</string>
-    <string name="wifi_remembered" msgid="710973813096194477">"已儲存"</string>
-    <string name="wifi_disabled_generic" msgid="5100439885010143290">"已停用"</string>
-    <string name="wifi_disabled_network_failure" msgid="7558613087615078317">"已避開狀況不穩定的網際網路連線"</string>
-    <string name="wifi_disabled_password_failure" msgid="1318626812163574372">"驗證問題"</string>
-    <string name="wifi_not_in_range" msgid="342867509887486418">"不在有效範圍內"</string>
-    <string name="wifi_wps_available_first_item" msgid="2505782834128907733">"可使用 WPS"</string>
-    <string name="wifi_wps_available_second_item" msgid="375469856423243587">" (可使用 WPS)"</string>
-    <string name="wifi_secured_first_item" msgid="9147292132572887175">"透過 <xliff:g id="WIFI_SECURITY_SHORT">%1$s</xliff:g> 加密保護"</string>
-    <string name="wifi_secured_second_item" msgid="4204734116810783051">"，透過 <xliff:g id="WIFI_SECURITY_SHORT">%1$s</xliff:g> 加密保護"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"劣"</item>
     <item msgid="5986166866411161790">"可"</item>
@@ -152,10 +131,7 @@
     <string name="wifi_setting_available_networks" msgid="1244646604369133314">"可用的網路"</string>
     <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"透過 WPS 連線"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"新增網路"</string>
-    <string name="add_network" msgid="2074883912462075625">"新增網路"</string>
-    <string name="network_ssid" msgid="7653487431810593891">"網路 SSID"</string>
     <string name="security_type" msgid="524443802004143058">"安全性類型"</string>
-    <string name="password" msgid="1322790875762726719">"密碼"</string>
     <string name="wps_network" msgid="1052148085426051873">"透過 WPS 連線"</string>
     <string name="other_network" msgid="3539704463099544488">"其他網路…"</string>
     <string name="skip_network" msgid="6380260543776712357">"略過"</string>
@@ -198,11 +174,9 @@
     <string name="wifi_action_proxy_none" msgid="4457231399674182650">"無"</string>
     <string name="wifi_action_proxy_manual" msgid="8402002777441261064">"手動"</string>
     <string name="wifi_action_dhcp" msgid="6338911832360962268">"DHCP"</string>
-    <string name="wifi_action_save" msgid="4673786410274206843">"儲存"</string>
     <string name="wifi_action_static" msgid="1025855501453321749">"靜態"</string>
     <string name="wifi_action_status_info" msgid="7664354971197839253">"狀態資訊"</string>
     <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"進階選項"</string>
-    <string name="wifi_action_advanced_options_description" msgid="8615353318560146504">"<xliff:g id="PROXY_SETTINGS_SUMMARY">%1$s</xliff:g>；<xliff:g id="IP_SETTINGS_SUMMARY">%2$s</xliff:g>"</string>
     <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"請輸入有效的 IP 位址"</string>
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"請輸入有效的閘道位址"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"請輸入有效的 DNS 位址"</string>
@@ -225,19 +199,8 @@
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"未連上網路"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"已連上 <xliff:g id="SSID">%1$s</xliff:g>。要連線至其他網路嗎？"</string>
     <string name="wifi_summary_unknown_network" msgid="7903601448928422642">"未知的網路"</string>
-    <string name="connectivity_advanced_options" msgid="2858199826425132228">"進階選項"</string>
-    <string name="connectivity_advanced_options_description" msgid="370129113175689226">"<xliff:g id="SSID_0">%1$s</xliff:g>，<xliff:g id="SSID_1">%2$s</xliff:g>"</string>
-    <string name="title_ip_settings" msgid="6408399523925189065">"IP 設定"</string>
-    <string name="title_test_connection" msgid="1202798409060082670">"測試連線"</string>
-    <string name="dhcp" msgid="5536822848499568335">"DHCP"</string>
-    <string name="title_static" msgid="6690544371649264526">"靜態"</string>
-    <string name="gateway" msgid="2467496590891949814">"閘道"</string>
-    <string name="title_network_prefix_length" msgid="3222416880787889272">"網路前置字元長度"</string>
-    <string name="title_dns_1" msgid="1513875539231931892">"DNS 1"</string>
-    <string name="title_dns_2" msgid="7805767982172685879">"DNS 2"</string>
     <string name="title_ok" msgid="1021329453788761592">"確定"</string>
     <string name="title_cancel" msgid="4846143417666038604">"取消"</string>
-    <string name="rename_device" msgid="8221482127562510757">"重新命名裝置"</string>
     <string name="storage_title" msgid="2132026108559493394">"儲存空間"</string>
     <string name="storage_available" msgid="1241005580092138871">"可用空間"</string>
     <string name="storage_size" msgid="8958530823208352781">"總空間：<xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
@@ -248,13 +211,11 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"音訊"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"其他"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"快取資料"</string>
-    <string name="wifi_wps_cancel_scan" msgid="3562470978552920877">"取消"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"重試"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"正在搜尋 WPS 路由器…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"按下路由器上的 Wi-Fi 保護設定按鈕。\n該按鈕可能標示為「WPS」或左側標有這個符號。"</string>
     <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"輸入 Wi-Fi 路由器上的 PIN <xliff:g id="NUMBER">%1$s</xliff:g>"</string>
     <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"輸入 PIN 後，設定程序最多需要 2 分鐘才能完成"</string>
-    <string name="wifi_wps_in_progress" msgid="7082889465182680949">"WPS 設定程式已開始執行，最多可能需要 2 分鐘才能完成"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"找不到 Wi-Fi 路由器"</string>
     <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"不支援 Wi-Fi 路由器安全性設定 (WEP)"</string>
     <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"不支援 Wi-Fi 路由器安全性設定 (TKIP)"</string>
@@ -269,12 +230,7 @@
     <string name="desc_auto_date_time" msgid="6997571927680580633">"使用網路提供的時間"</string>
     <string name="system_location" msgid="502463575930545806">"位置"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"允許獲得您許可的應用程式使用您的位置資訊"</string>
-    <string name="system_network_location" msgid="3095006393148731886">"WiFi 網路位置"</string>
-    <string name="system_desc_network_location" msgid="3394374680078903193">"讓 Google 協助應用程式判定位置。這需要將匿名位置資料傳送給 Google (不論應用程式是否正在執行中)。"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"同意記錄位置資訊"</string>
-    <string name="system_desc_network_location_confirm" msgid="3929125496258579850">"允許 Google 的定位服務收集匿名位置資料，有些資料可能儲存在您的裝置中。即使裝置並未執行任何應用程式，我們仍會收集這些匿名資料。"</string>
-    <string name="location_title" msgid="7600163182794860262">"我的位置"</string>
-    <string name="header_category_system" msgid="3243287334177831637">"系統"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"模式"</string>
     <string name="location_category_recent_location_requests" msgid="3437903422445812245">"最近的定位要求"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"最近沒有應用程式要求定位資訊"</string>
@@ -316,9 +272,7 @@
     <string name="captions_textopacity" msgid="5536765490446288641">"文字半透明度"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"視窗顏色"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"視窗半透明度"</string>
-    <string name="color_none" msgid="5281446963475996688">"無"</string>
     <string name="color_white" msgid="65537523012024751">"白色"</string>
-    <string name="color_gray" msgid="5637299846460438696">"灰色"</string>
     <string name="color_black" msgid="8804213372565106403">"黑色"</string>
     <string name="color_red" msgid="5630553203246525989">"紅色"</string>
     <string name="color_green" msgid="3745551274773976763">"綠色"</string>
@@ -344,8 +298,6 @@
     <string name="system_drawing" msgid="6573389872154957039">"繪圖"</string>
     <string name="system_monitoring" msgid="8424072546138094053">"監控"</string>
     <string name="system_apps" msgid="6293850468968494924">"應用程式"</string>
-    <string name="system_take_bug_report" msgid="3550575498907672342">"取得錯誤報告"</string>
-    <string name="system_backup_password" msgid="6622796686823406402">"備份密碼"</string>
     <string name="system_stay_awake" msgid="1212296404230848490">"保持啟用"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP 檢查"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI 最佳化"</string>
@@ -381,8 +333,6 @@
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"不要保留活動"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"背景處理程序限制"</string>
     <string name="system_show_all_anrs" msgid="3601183436857424712">"顯示所有無回應程式"</string>
-    <string name="system_desc_take_bug_report" msgid="1627218971851223147">"將報告傳送至電子郵件地址"</string>
-    <string name="system_desc_backup_password" msgid="6454962099870874762">"保護桌面完整備份"</string>
     <string name="system_desc_stay_awake" msgid="229588006508356238">"停用休眠功能"</string>
     <string name="system_desc_hdcp_checking" msgid="6879753401058891183">"僅用於 DRM 內容"</string>
     <string name="system_desc_hdmi_optimization" msgid="4400727262768931480">"對顯示設定進行最佳化處理，以達到最高解析度或最高畫面播放速率。這只會影響 Ultra HD 高畫質顯示設定。變更這項設定後，裝置將會重新啟動。"</string>
@@ -397,7 +347,6 @@
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"當應用程式在主執行緒中進行長時間作業時，讓螢幕閃爍"</string>
     <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"在螢幕上方顯示目前的 CPU 使用量"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"測量「adb shell dumpsys gfxinfo」指令中的轉譯時間"</string>
-    <string name="normal_date_format" msgid="4118071594685269322">"本地 (<xliff:g id="DATE">%s</xliff:g>)"</string>
     <string name="action_on_title" msgid="6852389884236870765">"開啟"</string>
     <string name="action_off_title" msgid="3157728958166559966">"關閉"</string>
     <string name="action_on_description" msgid="4559342592998850852">"開啟"</string>
@@ -468,9 +417,6 @@
     <item msgid="786682416218616624">"快"</item>
     <item msgid="1708844147149066133">"非常快"</item>
   </string-array>
-    <string name="choose_account_type_title" msgid="34004552592079689">"選擇帳戶類型"</string>
-    <string name="choose_account_title" msgid="6672090823838639972">"選擇帳戶"</string>
-    <string name="add_account_button_label" msgid="7950769159839284068">"新增帳戶"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"目前的鍵盤"</string>
     <string name="title_configure" msgid="6929522003149212388">"設定"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"鍵盤選項"</string>
@@ -479,9 +425,6 @@
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"重新命名"</string>
     <string name="accessories_wifi_display_enable" msgid="4779506305656453262">"WiFi 顯示"</string>
     <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"必須輸入 PIN"</string>
-    <string name="accessories_remote_list_title" msgid="3115459158860792046">"遙控器資訊：<xliff:g id="SERIALNUMBER">%1$s</xliff:g>"</string>
-    <string name="system_collecting_bug_report" msgid="5923988155158351543">"正在收集錯誤報告！\n報告準備就緒後，我們會請您提供更多資訊。"</string>
-    <string name="system_collecting_bug_report_error" msgid="1396108342854067722">"無法收集錯誤報告！\n請稍後再試。"</string>
     <string name="whichApplication" msgid="8382179653567099571">"選擇要使用的應用程式"</string>
     <string name="alwaysUseQuestion" msgid="7128459989232213727">"一律使用這個應用程式執行這項操作？"</string>
     <string name="alwaysUseOption" msgid="1057645533268907906">"一律使用"</string>
@@ -518,18 +461,13 @@
     <item quantity="one" msgid="4711426139459946065">"未連線的輸入裝置"</item>
     <item quantity="other" msgid="4526893384805247472">"未連線的輸入裝置"</item>
   </plurals>
-    <string name="inputs_state_connected" msgid="2463661081264605403">"已連接"</string>
-    <string name="inputs_state_connected_standby" msgid="2861557722523733817">"待命"</string>
-    <string name="inputs_state_disconnected" msgid="558532410057350104">"未連接"</string>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"限制他人存取您帳戶中的應用程式和其他內容"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"設有限制的個人資料"</string>
-    <string name="user_restrictions_title" msgid="8317193312532216351">"應用程式和內容存取權"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"受到 <xliff:g id="APP">%1$s</xliff:g> 控制"</string>
     <string name="app_not_supported_in_limited" msgid="6818309827329010677">"設有限制的個人資料無法使用這個應用程式"</string>
     <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"這個應用程式可存取您的帳戶"</string>
     <string name="restriction_location_enable_title" msgid="2575116135395354938">"位置"</string>
     <string name="restriction_location_enable_summary" msgid="4195349388342385870">"允許應用程式使用您的位置資訊"</string>
-    <string name="restricted_profile_create" msgid="7081117593480952518">"建立受限使用者"</string>
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"進入設有限制的個人資料"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"離開設有限制的個人資料"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"刪除設有限制的個人資料"</string>
@@ -544,10 +482,6 @@
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"自訂限制"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"請稍候…"</string>
     <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"變更 PIN"</string>
-    <string name="restricted_profile_set_password" msgid="3989154189940037175">"設定要離開設有限制的個人資料時需使用的新 PIN 碼"</string>
-    <string name="restricted_profile_confirm_password" msgid="5749967525546068650">"確認要離開設有限制的個人資料時需使用的 PIN 碼"</string>
-    <string name="restricted_profile_enter_password" msgid="5961473119032585585">"如要離開設有限制的個人資料，請輸入 PIN 碼"</string>
-    <string name="restricted_profile_delete_dialog_title" msgid="2998929625283492853">"移除受限使用者？"</string>
     <string name="restriction_description" msgid="3104855945910233028">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
     <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"輸入 PIN 即可觀看這個頻道"</string>
     <string name="pin_enter_unlock_program" msgid="52453773316071511">"輸入 PIN 即可觀看這個節目"</string>
@@ -556,8 +490,75 @@
     <string name="pin_enter_again" msgid="1510456697040826496">"重新輸入新 PIN"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"輸入舊 PIN"</string>
     <string name="pin_enter_wrong" msgid="5653864140710683928">"您已輸入 5 次錯誤的 PIN。\n請於 <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>再試一次。"</string>
-    <string name="pin_button_done" msgid="939191809977197451">"完成"</string>
-    <string name="pin_button_cancel" msgid="5541414789309863965">"取消"</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN 錯誤，請再試一次"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN 不符，請再試一次"</string>
+    <string name="wifi_setup_input_password" msgid="1596168874369038536">"輸入 <xliff:g id="SSID">%1$s</xliff:g> 的密碼"</string>
+    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"正在加入 ^1"</string>
+    <string name="wifi_setup_connection_success" msgid="1848188618100224976">"連線成功！"</string>
+    <string name="wifi_setup_save_success" msgid="1741842127458417612">"儲存成功！"</string>
+    <string name="device_apps_app_management_version" msgid="1004679024556315208">"版本 <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
+    <string name="device_apps_app_management_open" msgid="8009823973422120839">"開啟"</string>
+    <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"強制停止"</string>
+    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"如果您強制停止應用程式，應用程式可能無法正常運作。"</string>
+    <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"解除安裝"</string>
+    <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"您要解除安裝這個應用程式嗎？"</string>
+    <string name="device_apps_app_management_disable" msgid="6136528600052941589">"停用"</string>
+    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"您要停用這個應用程式嗎？"</string>
+    <string name="device_apps_app_management_enable" msgid="3246823119203444608">"啟用"</string>
+    <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"您要啟用這個應用程式嗎？"</string>
+    <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"清除資料"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"這個應用程式的資料將會全部遭到永久刪除。"</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"包括所有檔案、設定、帳戶、資料庫等。"</string>
+    <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"清除預設值"</string>
+    <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"設定執行某些操作時啟動這個應用程式"</string>
+    <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"未設定預設值"</string>
+    <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"清除快取"</string>
+    <string name="device_apps_app_management_notifications" msgid="7291960671957440729">"通知"</string>
+    <string name="device_apps_app_management_permissions" msgid="1829808830974726081">"權限"</string>
+    <string name="settings_ok" msgid="3321630456511355983">"確定"</string>
+    <string name="settings_cancel" msgid="304280412158061225">"取消"</string>
+    <string name="settings_on" msgid="6892236264945435013">"開啟"</string>
+    <string name="settings_off" msgid="449272161738237637">"關閉"</string>
+    <string name="device_daydreams_none" msgid="7364189761517824834">"無"</string>
+    <string name="device_daydreams_select" msgid="3691552535056569158">"休眠模式"</string>
+    <string name="device_daydreams_test" msgid="9038920213402659591">"立即開啟"</string>
+    <string name="device_daydreams_sleep" msgid="8766795993034660366">"休眠模式開啟時間"</string>
+    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"經過這段閒置時間後，裝置會進入休眠狀態。如果未選取休眠模式，螢幕將自動關閉。"</string>
+    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"閒置 <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>後"</string>
+    <string name="device_daydreams_screen_off" msgid="5002473979169042970">"休眠時機"</string>
+    <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"閒置超過這段時間後關閉螢幕。"</string>
+    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"休眠後多久關閉螢幕：<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"目前沒有帳戶正在儲存備份資料"</string>
+    <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
+    <string name="backup_erase_dialog_message" msgid="2608496013975068701">"停止備份您的 Wi-Fi 密碼、書籤、其他設定和應用程式資料，並清除 Google 伺服器上的所有複本嗎？"</string>
+    <string name="privacy_backup_data" msgid="1796662583830120812">"備份我的資料"</string>
+    <string name="privacy_backup_account" msgid="9059939814827165020">"備份帳戶"</string>
+    <string name="privacy_automatic_restore" msgid="1409885318093199628">"自動還原"</string>
+    <string name="factory_reset_device" msgid="7422459553658815011">"重設裝置"</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"這會將所有資料從裝置的內部儲存空間中清除，您的 Google 帳戶、系統和應用程式資料與設定，以及已下載的應用程式，都將被移除"</string>
+    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"確定要清除所有個人資訊和已下載的應用程式嗎？您無法復原這項操作！"</string>
+    <string name="confirm_factory_reset_device" msgid="8923287482399582268">"全部清除"</string>
+    <string name="dismiss_all_notifications" msgid="9098572552161726564">"全部關閉"</string>
+    <string name="no_notifications" msgid="8386627968671837666">"無"</string>
+    <string name="do_not_disturb_title" msgid="3209080708876656745">"不得干擾"</string>
+    <string name="do_not_disturb_desc" msgid="6878276904682143830">"啟用之後，新通知只會顯示在「設定」中"</string>
+    <string name="select_title" msgid="3905067953686121845">"為您的 ^1 選擇名稱"</string>
+    <string name="select_description" msgid="4070142015460337658">"當您從其他裝置 (例如手機、平板電腦或電腦) 存取 ^1 時，可藉由名稱快速找到這個裝置。"</string>
+  <string-array name="rooms">
+    <item msgid="7085399612393981553">"客廳"</item>
+    <item msgid="3722089849939477581">"視聽室"</item>
+    <item msgid="6108590585438763574">"起居室"</item>
+    <item msgid="2581035245390468625">"飯廳"</item>
+    <item msgid="3127487827308695324">"小房間"</item>
+    <item msgid="6172018430592195063">"臥室"</item>
+    <item msgid="8120010459866284578">"廚房"</item>
+  </string-array>
+    <string name="custom_room" msgid="8991561978321502549">"輸入自訂名稱…"</string>
+    <string name="settings_status_title" msgid="3890412726442124167">"這個 ^1 已有名稱"</string>
+    <string name="settings_status_description" msgid="3600745966132434139">"這個 ^2 的名稱是「^1」。您要變更嗎？"</string>
+    <string name="change_setting" msgid="2047402388786162246">"變更"</string>
+    <string name="keep_settings" msgid="6798327196645732517">"不要變更"</string>
+    <string name="menu_help" msgid="3733746757586039379">"說明"</string>
+    <string name="setup_failure_title" msgid="5453071802904644658">"發生錯誤"</string>
+    <string name="setup_failure_button_retry" msgid="323660735384062824">"重試"</string>
 </resources>
