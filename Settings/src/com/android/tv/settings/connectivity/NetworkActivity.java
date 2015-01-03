@@ -86,6 +86,10 @@ public class NetworkActivity extends SettingsLayoutActivity implements
         mHandler.removeCallbacks(mRefreshWifiAccessPoints);
         mHandler.post(mRefreshWifiAccessPoints);
         onConnectivityChange(null);
+
+        // TODO(lanechr): It's an anti-pattern that we have to notify Layout here; see b/18889239.
+        mWifiAdvancedLayout.refreshView();
+
         super.onResume();
     }
 
