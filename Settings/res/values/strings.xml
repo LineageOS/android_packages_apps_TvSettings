@@ -1081,8 +1081,6 @@
 
     <!-- Message displayed to prompt the user to input the network password, ^1 will be replaced with the name of the network and should be a possive form related to password [CHAR LIMIT=NONE] -->
     <string name="wifi_setup_input_password">Enter password for <xliff:g id="ssid">%1$s</xliff:g></string>
-    <!-- Message displayed while waiting for network assocation, the template will be filled in with the name of the network [CHAR LIMIT=20] -->
-    <string name="wifi_setup_waiting_for_join">Joining ^1</string>
     <!-- Message displayed when the selected Wi-Fi network has been connected to [CHAR LIMIT=40] -->
     <string name="wifi_setup_connection_success">Connected successfully!</string>
     <!-- Message displayed when the Wi-Fi network's configuration has been saved [CHAR LIMIT=40] -->
@@ -1150,8 +1148,6 @@
     <string name="device_daydreams_screen_off">When to sleep</string>
     <!-- Daydream description for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=NONE] -->
     <string name="device_daydreams_screen_off_description">Screen turns off after this period of inactivity.</string>
-    <!-- Daydream summary for displaying the time before the device's screen goes off after dreaming -->
-    <string name="device_daydreams_screen_off_summary"><xliff:g id="sleep_description">%1$s</xliff:g> after dreaming</string>
     <!-- Default summary text of the "Configure backup account" setting [CHAR LIMIT=80] -->
     <string name="backup_configure_account_default_summary">No account is currently storing backed up data</string>
     <!-- Dialog title for confirmation to erase backup data from server -->
@@ -1172,14 +1168,6 @@
     <string name="confirm_factory_reset_description">Erase all your personal information and downloaded apps? You can\'t reverse this action!</string>
     <!-- Factory reset screen, button on screen after user selects Reset phone button -->
     <string name="confirm_factory_reset_device">Erase everything</string>
-    <!-- Label for list item that dismisses all notifications [CHAR LIMIT=40] -->
-    <string name="dismiss_all_notifications">Dismiss all</string>
-    <!-- Label for list item that indicates no notifications exist [CHAR LIMIT=40] -->
-    <string name="no_notifications">None</string>
-    <!-- Label for list item for toggling the "Do Not Disturb" setting ON/OFF [CHAR LIMIT=40] -->
-    <string name="do_not_disturb_title">Do not disturb</string>
-    <!-- Description for the screen to toggle the "Do Not Disturb" setting ON/OFF [CHAR LIMIT=NONE] -->
-    <string name="do_not_disturb_desc">When enabled, new notiﬁcations will only appear in Settings</string>
 
 
     <!-- Title for screen where user selects a name for their device [CHAR LIMIT=NONE] -->
@@ -1213,11 +1201,5 @@
     <string name="change_setting">Change</string>
     <!-- The 'no' or  'keep the same' equivalent in a yes/no choice circumstance [CHAR LIMIT=30]-->
     <string name="keep_settings">Don\'t change</string>
-    <!-- Menu item text to go to help page. -->
-    <string name="menu_help">Help</string>
-    <!-- Screen title displayed when a setup failure occurs [CHAR LIMIT=40] -->
-    <string name="setup_failure_title">An error occurred</string>
-    <!-- Label for a button to retry setting up [CHAR LIMIT=25]-->
-    <string name="setup_failure_button_retry">Retry</string>
 
 </resources>
