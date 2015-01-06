@@ -32,7 +32,8 @@ public class DatePicker extends Picker {
     private static final String EXTRA_DEFAULT_TO_CURRENT = "default_to_current";
     private static final String EXTRA_FORMAT = "date_format";
     private static final int DEFAULT_YEAR_RANGE = 24;
-    private static final int DEFAULT_START_YEAR = Calendar.getInstance().get(Calendar.YEAR);
+    private static final int DEFAULT_START_YEAR = Calendar.getInstance().get(Calendar.YEAR)
+            - DEFAULT_YEAR_RANGE / 2;
 
     private PickerConstants.Date mConstant;
 
