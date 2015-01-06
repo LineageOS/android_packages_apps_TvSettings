@@ -29,12 +29,14 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.Log;
@@ -57,6 +59,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private static final String KEY_LEGAL_INFO = "about_legal_info";
     private static final String KEY_BUILD = "build";
     private static final String KEY_VERSION = "version";
+    private static final String KEY_REBOOT = "reboot";
 
     /**
      * Intent action of SettingsLicenseActivity (for displaying open source licenses.)
@@ -159,6 +162,9 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
             setContentAndActionFragments(ContentFragment.newInstance(
                     getString(R.string.about_legal_info), null, null),
                     ActionFragment.newInstance(actions));
+        } else if (TextUtils.equals(key, KEY_REBOOT)) {
+            PowerManager pm = (PowerManager)getSystemService(Context.POWER_SERVICE);
+            pm.reboot(null);
         } else {
             Intent intent = action.getIntent();
             if (intent != null) {
@@ -199,6 +205,10 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 .title(getString(R.string.device_name))
                 .description(DeviceManager.getDeviceName(this))
                 .intent(new Intent(SETTINGS_DEVICE_NAME_INTENT_ACTION))
+                .build());
+        actions.add(new Action.Builder()
+                .key(KEY_REBOOT)
+                .title(getString(R.string.restart_button_label))
                 .build());
         actions.add(new Action.Builder()
                 .key(KEY_LEGAL_INFO)
