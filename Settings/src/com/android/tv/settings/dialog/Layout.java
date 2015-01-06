@@ -27,6 +27,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A data class which represents a settings layout within an
@@ -138,11 +139,7 @@ public class Layout implements Parcelable {
         }
 
         public boolean setRadioSelectedIndex() {
-            if (((SelectionGroup) mNode).setSelectedIndex(mSelectionIndex)) {
-                return true;
-            } else {
-                return false;
-            }
+            return ((SelectionGroup) mNode).setSelectedIndex(mSelectionIndex);
         }
 
         public boolean isGoBack() {
@@ -180,10 +177,10 @@ public class Layout implements Parcelable {
                 a = ((Header) node).mAppearance;
                 mEnabled = true;
             } else if (node instanceof Action) {
-                a = ((Action) node).mAppearence;
+                a = ((Action) node).mAppearance;
                 mEnabled = true;
             } else if (node instanceof Status) {
-                a = ((Status) node).mAppearence;
+                a = ((Status) node).mAppearance;
                 mEnabled = true;
             } else {
                 a = null;
@@ -208,6 +205,7 @@ public class Layout implements Parcelable {
             mSelectionIndex = selectedIndex;
             mTitle = selectionGroup.getTitle(selectedIndex);
             mChecked = selectionGroup.getChecked(selectedIndex);
+            mDescription = selectionGroup.getDescription(selectedIndex);
             mEnabled = true;
         }
     }
@@ -322,19 +320,75 @@ public class Layout implements Parcelable {
      * A list of "select one of" radio style buttons.
      */
     public static class SelectionGroup extends LayoutTreeNode {
-
         final String mTitle[];
+        final StringGetter mDescription[];
         final int mId[];
         int mSelectedIndex;
+
+        public static final class Builder {
+            private static class Item {
+                public final String title;
+                public final StringGetter description;
+                public final int id;
+
+                public Item(String title, String description, int id) {
+                    this.title = title;
+                    if (TextUtils.isEmpty(description)) {
+                        this.description = null;
+                    } else {
+                        this.description = new LiteralStringGetter(description);
+                    }
+                    this.id = id;
+                }
+            }
+
+            private final List<Item> mItems;
+
+            public Builder() {
+                mItems = new ArrayList<>();
+            }
+
+            public Builder(int count) {
+                mItems = new ArrayList<>(count);
+            }
+
+            public Builder add(String title, String description, int id) {
+                mItems.add(new Item(title, description, id));
+                return this;
+            }
+
+            public SelectionGroup build() {
+                final int size = mItems.size();
+                final String[] titles = new String[size];
+                final StringGetter[] descriptions = new StringGetter[size];
+                final int[] ids = new int[size];
+                int i = 0;
+                for (final Item item : mItems) {
+                    titles[i] = item.title;
+                    descriptions[1] = item.description;
+                    ids[i] = item.id;
+                    i++;
+                }
+                return new SelectionGroup(titles, descriptions, ids);
+            }
+        }
 
         public SelectionGroup(Resources res, int param[][]) {
             mSelectedIndex = -1;
             mTitle = new String[param.length];
+            mDescription = new StringGetter[param.length];
             mId = new int[param.length];
             for (int i = 0; i < param.length; ++i) {
                 mTitle[i] = res.getString(param[i][0]);
                 mId[i] = param[i][1];
             }
+        }
+
+        public SelectionGroup(String[] titles, StringGetter[] descriptions, int[] ids) {
+            mSelectedIndex = -1;
+            mTitle = titles;
+            mDescription = descriptions;
+            mId = ids;
         }
 
         @Override
@@ -348,6 +402,10 @@ public class Layout implements Parcelable {
 
         public String getTitle(int index) {
             return mTitle[index];
+        }
+
+        public StringGetter getDescription(int index) {
+            return mDescription[index];
         }
 
         public boolean getChecked(int index) {
@@ -552,13 +610,14 @@ public class Layout implements Parcelable {
         public static final int ACTION_INTENT = -2;
         public static final int ACTION_BACK = -3;
         private final int mActionId;
-        private Intent mIntent;
-        private final Appearance mAppearence = new Appearance();
+        private final Intent mIntent;
+        private final Appearance mAppearance = new Appearance();
         private Bundle mActionData;
         private boolean mDefaultSelection = false;
 
         public Action(int id) {
             mActionId = id;
+            mIntent = null;
         }
 
         private Action(Intent intent) {
@@ -581,33 +640,38 @@ public class Layout implements Parcelable {
             }
 
             public Builder title(int resId) {
-                mAction.mAppearence.mTitle = mRes.getString(resId);
+                mAction.mAppearance.mTitle = mRes.getString(resId);
                 return this;
             }
 
             public Builder description(int resId) {
-                mAction.mAppearence.mDescriptionGetter = new LiteralStringGetter(mRes.getString(
+                mAction.mAppearance.mDescriptionGetter = new LiteralStringGetter(mRes.getString(
                         resId));
                 return this;
             }
 
             public Builder title(String title) {
-                mAction.mAppearence.mTitle = title;
+                mAction.mAppearance.mTitle = title;
                 return this;
             }
 
              public Builder icon(int resId) {
-                 mAction.mAppearence.mIcon = mRes.getDrawable(resId);
+                 mAction.mAppearance.mIcon = mRes.getDrawable(resId);
                  return this;
              }
 
             public Builder description(String description) {
-                mAction.mAppearence.mDescriptionGetter = new LiteralStringGetter(description);
+                mAction.mAppearance.mDescriptionGetter = new LiteralStringGetter(description);
+                return this;
+            }
+
+            public Builder description(StringGetter description) {
+                mAction.mAppearance.mDescriptionGetter = description;
                 return this;
             }
 
             public Builder checked(boolean checked) {
-                mAction.mAppearence.mChecked = checked;
+                mAction.mAppearance.mChecked = checked;
                 return this;
             }
 
@@ -630,7 +694,7 @@ public class Layout implements Parcelable {
         }
 
         void Log(int level) {
-            Log.d("Layout", indent(level) + "Action  #" + mActionId + "  " + mAppearence);
+            Log.d("Layout", indent(level) + "Action  #" + mActionId + "  " + mAppearance);
         }
 
         public int getId() {
@@ -643,7 +707,7 @@ public class Layout implements Parcelable {
 
         @Override
         public String getTitle() {
-            return mAppearence.getTitle();
+            return mAppearance.getTitle();
         }
 
         public Bundle getData() {
@@ -652,7 +716,7 @@ public class Layout implements Parcelable {
     }
 
     public static class Status extends LayoutTreeNode {
-        private final Appearance mAppearence = new Appearance();
+        private final Appearance mAppearance = new Appearance();
 
         public static class Builder {
             private final Resources mRes;
@@ -663,33 +727,33 @@ public class Layout implements Parcelable {
             }
 
             public Builder icon(int resId) {
-                mStatus.mAppearence.mIcon = mRes.getDrawable(resId);
+                mStatus.mAppearance.mIcon = mRes.getDrawable(resId);
                 return this;
             }
 
             public Builder title(int resId) {
-                mStatus.mAppearence.mTitle = mRes.getString(resId);
+                mStatus.mAppearance.mTitle = mRes.getString(resId);
                 return this;
             }
 
             public Builder description(int resId) {
-                mStatus.mAppearence.mDescriptionGetter = new LiteralStringGetter(mRes.getString(
+                mStatus.mAppearance.mDescriptionGetter = new LiteralStringGetter(mRes.getString(
                         resId));
                 return this;
             }
 
             public Builder title(String title) {
-                mStatus.mAppearence.mTitle = title;
+                mStatus.mAppearance.mTitle = title;
                 return this;
             }
 
             public Builder description(String description) {
-                mStatus.mAppearence.mDescriptionGetter = new LiteralStringGetter(description);
+                mStatus.mAppearance.mDescriptionGetter = new LiteralStringGetter(description);
                 return this;
             }
 
             public Builder description(StringGetter description) {
-                mStatus.mAppearence.mDescriptionGetter = description;
+                mStatus.mAppearance.mDescriptionGetter = description;
                 return this;
             }
 
@@ -700,11 +764,11 @@ public class Layout implements Parcelable {
 
         @Override
         public String getTitle() {
-            return mAppearence.getTitle();
+            return mAppearance.getTitle();
         }
 
         void Log(int level) {
-            Log.d("Layout", indent(level) + "Status  " + mAppearence);
+            Log.d("Layout", indent(level) + "Status  " + mAppearance);
         }
     }
 

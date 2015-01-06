@@ -290,6 +290,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".system.SetDateTimeActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:exported="false" />
+        <activity
             android:name=".system.LocationActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" >
