@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"Mise à jour du système"</string>
     <string name="about_preference" msgid="4131396784531360434">"À propos"</string>
     <string name="device_name" msgid="2670488158531273028">"Nom de l\'appareil"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"Informations légales"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Licences Open Source"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Informations légales Google"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Le code d\'accès est incorrect. Veuillez réessayer."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Le code d\'accès est incorrect. Veuillez réessayer."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Saisissez le mot de passe associé au réseau <xliff:g id="SSID">%1$s</xliff:g>."</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"Connexion à ^1…"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"Vous êtes bien connecté."</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"La configuration a bien été enregistrée."</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"version <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Après <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> d\'inactivité"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Passer en mode veille"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"L\'écran s\'éteint après une période d\'inactivité de la durée indiquée."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> après l\'activation de l\'écran de veille interactif"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Aucun compte n\'enregistre de données de sauvegarde pour le moment."</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Ne plus sauvegarder vos mots de passe Wi-Fi, vos favoris, les données relatives aux applications et d\'autres paramètres, et supprimer toutes les copies enregistrées sur les serveurs Google ?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Toutes les données de votre mémoire de stockage interne seront effacées, y compris les paramètres et les données de votre compte Google, de votre système et de vos applications, ainsi que les applications que vous aviez téléchargées."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Effacer toutes vos informations personnelles et les applications téléchargées ? Cette action est irréversible."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Tout effacer"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"Tout ignorer"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"Aucune"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"Ne pas déranger"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"Si cette option est activée, les nouvelles notifications ne sont affichées que dans \"Paramètres\"."</string>
     <string name="select_title" msgid="3905067953686121845">"Sélectionner un nom pour votre ^1"</string>
     <string name="select_description" msgid="4070142015460337658">"Donner un nom à votre ^1 vous permettra de l\'identifier plus facilement lorsque vous y accéderez à partir d\'autres appareils, tels que votre téléphone, votre tablette ou votre ordinateur."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" est le nom de cet appareil (^2). Souhaitez-vous le modifier ?"</string>
     <string name="change_setting" msgid="2047402388786162246">"Modifier"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Ne pas modifier"</string>
-    <string name="menu_help" msgid="3733746757586039379">"Aide"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"Une erreur s\'est produite"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"Réessayer"</string>
 </resources>

@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"Обновление системы"</string>
     <string name="about_preference" msgid="4131396784531360434">"Об устройстве"</string>
     <string name="device_name" msgid="2670488158531273028">"Название устройства"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"Юридическая информация"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Лицензии открытого ПО"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Правовая информация Google"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Неверный PIN-код. Повторите попытку."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN-коды не совпадают. Повторите попытку."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Укажите пароль для сети <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"^1 – подключение..."</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"Подключение выполнено"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"Настройки сохранены"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"версия <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"После <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> бездействия"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Когда отключать экран"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Экран отключится, если будет неактивен в течение этого периода"</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"Через <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> после включения заставки"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Нет аккаунтов c резервными копиями данных"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Отключить резервное копирование закладок, паролей сетей Wi-Fi, а также других настроек и данных приложений? Все копии на серверах Google будут удалены."</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Из памяти устройства будет удалена вся информация, включая данные вашего аккаунта Google и приложений, а также настройки, системные данные и загруженные программы."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Удалить всю личную информацию и загруженные приложения без возможности восстановления?"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Удалить всё"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"Закрыть все"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"Нет"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"Не беспокоить"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"Уведомления будут видны в Настройках"</string>
     <string name="select_title" msgid="3905067953686121845">"Укажите название для устройства ^1"</string>
     <string name="select_description" msgid="4070142015460337658">"Укажите название для устройства ^1, чтобы вам было удобнее подключаться к нему со смартфона, планшетного ПК или компьютера."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" – это название устройства ^2. Изменить его?"</string>
     <string name="change_setting" msgid="2047402388786162246">"Изменить"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Не изменять"</string>
-    <string name="menu_help" msgid="3733746757586039379">"Справка"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"Произошла ошибка"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"Повторить"</string>
 </resources>

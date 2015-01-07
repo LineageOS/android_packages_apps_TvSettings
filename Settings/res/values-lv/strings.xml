@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"Sistēmas atjauninājums"</string>
     <string name="about_preference" msgid="4131396784531360434">"Par"</string>
     <string name="device_name" msgid="2670488158531273028">"Ierīces nosaukums"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"Juridiskā informācija"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Atklātā pirmkoda licences"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google juridiskā informācija"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Nepareizs PIN kods. Mēģiniet vēlreiz."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Neatbilstošs PIN kods. Mēģiniet vēlreiz."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Ievadiet tīkla <xliff:g id="SSID">%1$s</xliff:g> paroli."</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"Notiek pievienošana tīklam ^1..."</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"Savienojums ir izveidots!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"Konfigurācija ir saglabāta!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"versija <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Pēc šāda neaktivitātes posma: <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Kad ieslēgt miega režīmu"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Ja šajā laika posmā ierīce nav bijusi aktīva, ekrāns tiek izslēgts."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> pēc ekrānsaudzētāja aktivizēšanās"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Pašlaik nevienā kontā netiek uzglabāti dublēti dati."</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Vai pārtraukt jūsu Wi-Fi paroļu, grāmatzīmju, citu iestatījumu un lietotņu datu dublēšanu un dzēst visas kopijas Google serveros?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"No jūsu ierīces iekšējās atmiņas tiks dzēsti visi dati, tostarp jūsu Google konta, sistēmas un lietotņu dati un iestatījumi, kā arī lejupielādētās lietotnes."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Vai dzēst visu jūsu personas informāciju un lejupielādētās lietotnes? Šo darbību nevar atsaukt."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Dzēst visu"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"Nerādīt nevienu"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"Nav"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"Netraucēt"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"Ja šis iestatījums būs iespējots, jauni paziņojumi tiks rādīti tikai sadaļā “Iestatījumi”."</string>
     <string name="select_title" msgid="3905067953686121845">"Nosaukuma izvēlēšanās ierīcei ^1"</string>
     <string name="select_description" msgid="4070142015460337658">"Nosaukums palīdzēs atpazīt ierīci ^1, kad piekļūsiet tai no citām ierīcēm, piemēram, no tālruņa, planšetdatora vai galddatora."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"Šīs ierīces (^2) nosaukums ir “^1”. Vai vēlaties to mainīt?"</string>
     <string name="change_setting" msgid="2047402388786162246">"Mainīt"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Nemainīt"</string>
-    <string name="menu_help" msgid="3733746757586039379">"Palīdzība"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"Radās kļūda"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"Mēģināt vēlreiz"</string>
 </resources>

@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"सिस्टम अद्यतन"</string>
     <string name="about_preference" msgid="4131396784531360434">"विषयी"</string>
     <string name="device_name" msgid="2670488158531273028">"डिव्हाइस नाव"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"कायदेशीर माहिती"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"मुक्त स्त्रोत परवाने"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google कायदेशीर"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"चुकीचा पिन, पुन्हा प्रयत्न करा"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"पुन्हा प्रयत्न करा, पिन जुळत नाही"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> साठी संकेतशब्द प्रविष्‍ट करा"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"^1 सामील होत आहे"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"यशस्वीरित्या कनेक्ट केले!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"यशस्वीरित्या जतन केले!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"आवृत्ती <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"निष्क्रियतेच्या <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> नंतर"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"निष्क्रिय केव्हा करावे"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"निष्क्रियतेच्या या कालावधीनंतर स्क्रीन बंद होते."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"ड्रीमिंग नंतर <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"कोणतेही खाते सध्‍या बॅकअप घेतलेला डेटा संचयित करीत नाही"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"आपले Wi-Fi संकेतशब्द, बुकमार्क, अन्य सेटिंग्ज आणि अॅप डेटा चा बॅक अप घेणे बंद करायचे आणि Google सर्व्हरवरील सर्व प्रती मिटवायच्या?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"हे आपल्‍या डिव्‍हाइसच्‍या अंतर्गत संचयनावरील सर्व डेटा याच्या समावेशासह मिटवेल: आपले Google खाते, सिस्‍टीम आणि अ‍ॅप डेटा आणि सेटिंग्‍ज, आणि डाउनलोड केलेले अ‍ॅप्‍स"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"आपली सर्व वैयक्तिक माहिती आणि डाउनलोड केलेले अ‍ॅप्स मिटयावचे? आपण ही क्रिया उलट करू शकत नाही!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"प्रत्येकगोष्ट मिटवा"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"सर्व डिसमिस करा"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"कोणतेही नाही"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"व्यत्यय आणू नका"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"सक्षम केलेले असताना, नवीन सूचना केवळ सेटिंग्ज मध्ये दिसतील"</string>
     <string name="select_title" msgid="3905067953686121845">"आपल्या ^1 साठी एक नाव निवडा"</string>
     <string name="select_description" msgid="4070142015460337658">"एखाद्या नावावर आपल्या फोनवरून, टॅब्लेट किंवा संगणक यासारख्या अन्य डिव्हाइसेसवरून प्रवेश करताना ते आपले ^1 ओळखण्यात मदत करेल."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" हे या ^2 चे नाव आहे. आपण हे बदलू इच्छिता?"</string>
     <string name="change_setting" msgid="2047402388786162246">"बदला"</string>
     <string name="keep_settings" msgid="6798327196645732517">"बदलू नका"</string>
-    <string name="menu_help" msgid="3733746757586039379">"मदत"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"एक त्रुटी आली"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"पुन्हा प्रयत्न करा"</string>
 </resources>

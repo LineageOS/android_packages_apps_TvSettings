@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"Aggiornamento di sistema"</string>
     <string name="about_preference" msgid="4131396784531360434">"Informazioni"</string>
     <string name="device_name" msgid="2670488158531273028">"Nome dispositivo"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"Informazioni legali"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Licenze open source"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Note legali Google"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN errato. Riprova"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Riprova, il PIN non corrisponde"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Inserisci la password di <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"Associazione a ^1"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"Connesso correttamente."</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"Salvataggio riuscito."</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"versione <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Dopo <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> di inattività"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Quando avviare la modalità di sospensione"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Lo schermo si spegne dopo questo periodo di inattività."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> dopo l\'avvio di Daydream"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Al momento nessun account contiene dati di backup"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Interrompere il backup delle password Wi-Fi, dei segnalibri, di altre impostazioni e dei dati delle applicazioni e cancellare tutte le copie sui server di Google?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Questa operazione comporta l\'eliminazione di tutti i dati dalla memoria interna del dispositivo, tra cui: il tuo account Google, dati e impostazioni del sistema e delle app, nonché le app scaricate."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Cancellare tutte le informazioni personali e le app scaricate? Questa azione è irreversibile."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Cancella tutto"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"Ignora tutto"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"Nessuna"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"Non disturbare"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"Se viene attivata, le nuove notifiche vengono visualizzate solo in Impostazioni"</string>
     <string name="select_title" msgid="3905067953686121845">"Scegli un nome per il tuo dispositivo ^1"</string>
     <string name="select_description" msgid="4070142015460337658">"Se specifichi un nome sarà più semplice identificare il tuo dispositivo ^1 quando vi accederai da altri dispositivi quali telefoni, tablet o computer."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" è il nome di questo dispositivo ^2. Vuoi cambiarlo?"</string>
     <string name="change_setting" msgid="2047402388786162246">"Cambia"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Non cambiare"</string>
-    <string name="menu_help" msgid="3733746757586039379">"Guida"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"Si è verificato un errore"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"Riprova"</string>
 </resources>

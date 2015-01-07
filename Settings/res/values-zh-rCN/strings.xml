@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"系统更新"</string>
     <string name="about_preference" msgid="4131396784531360434">"关于"</string>
     <string name="device_name" msgid="2670488158531273028">"设备名称"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"法律信息"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"开放源代码许可"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google 法律信息"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN码错误，请重试"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN码不匹配，请重试"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"输入“<xliff:g id="SSID">%1$s</xliff:g>”的密码"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"正在连接“^1”"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"已成功连接！"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"保存成功！"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"版本 <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"闲置 <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>后"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"何时休眠"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"如果在这段时间内无任何操作，屏幕将会自动关闭。"</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"休眠 <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>后"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"目前没有存储备份数据的帐户"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"要停止备份您的 WLAN 密码、书签、其他设置以及应用数据，并清除 Google 服务器上的所有副本吗？"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"此操作将会从您的设备的内部存储空间中清除所有数据，包括您的 Google 帐户、系统数据、应用数据、相关设置，以及已下载的应用"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"要清除所有个人信息和已下载的应用吗？请注意，此操作无法撤消！"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"全部清除"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"全部关闭"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"无"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"勿扰"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"启用后，新通知将只显示在“设置”中"</string>
     <string name="select_title" msgid="3905067953686121845">"为您的^1选择名称"</string>
     <string name="select_description" msgid="4070142015460337658">"为您的^1选一个名字，这样从其他设备（如手机、平板电脑或计算机）访问这台设备时，就更容易找到它。"</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"此^2的名称为“^1”，要更改此名称吗？"</string>
     <string name="change_setting" msgid="2047402388786162246">"更改"</string>
     <string name="keep_settings" msgid="6798327196645732517">"不要更改"</string>
-    <string name="menu_help" msgid="3733746757586039379">"帮助"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"出现错误"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"重试"</string>
 </resources>

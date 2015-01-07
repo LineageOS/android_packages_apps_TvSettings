@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"Ažuriranje sustava"</string>
     <string name="about_preference" msgid="4131396784531360434">"O usluzi"</string>
     <string name="device_name" msgid="2670488158531273028">"Naziv uređaja"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"Pravne informacije"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Licence otvorenog koda"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Googleove pravne informacije"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Pogrešan PIN, pokušajte ponovno"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Pokušaj ponovo, PIN se ne podudara"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Unesite zaporku za <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"Pridruživanje mreži ^1"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"Uspješno povezano!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"Uspješno spremljeno!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"verzija <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Nakon <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> neaktivnosti"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Prelazak u mirovanje"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Zaslon se isključuje nakon tog razdoblja neaktivnosti."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> nakon sanjarenja"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Nijedan račun trenutačno ne pohranjuje sigurnosne kopije podataka"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Želite li zaustaviti sigurnosno kopiranje Wi-Fi zaporki, oznaka, drugih postavki i podataka aplikacije te izbrisati sve kopije na Googleovim poslužiteljima?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Izbrisat će se svi podaci iz interne pohrane uređaja, uključujući: vaš Google račun, podatke i postavke sustava i aplikacija te preuzete aplikacije"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Želite li izbrisati sve osobne podatke i preuzete aplikacije? Tu radnju ne možete poništiti!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Izbriši sve"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"Odbaci sve"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"Ništa"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"Ne ometaj"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"Kad je omogućeno, nove se obavijesti prikazuju samo u Postavkama"</string>
     <string name="select_title" msgid="3905067953686121845">"Odaberite naziv za svoj uređaj ^1"</string>
     <string name="select_description" msgid="4070142015460337658">"Uz naziv ćete lakše prepoznati uređaj ^1 kada mu budete pristupali s drugih uređaja, na primjer, s telefona, tableta ili računala."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"Uređaj ^2 ima naziv \"^1\". Želite li ga promijeniti?"</string>
     <string name="change_setting" msgid="2047402388786162246">"Promijeni"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Nemoj promijeniti"</string>
-    <string name="menu_help" msgid="3733746757586039379">"Pomoć"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"Dogodila se pogreška"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"Pokušaj ponovo"</string>
 </resources>

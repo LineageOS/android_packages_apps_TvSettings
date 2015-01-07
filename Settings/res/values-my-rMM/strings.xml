@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"စနစ် မွမ်းမံမှု"</string>
     <string name="about_preference" msgid="4131396784531360434">"အကြောင်း"</string>
     <string name="device_name" msgid="2670488158531273028">"ကိရိယာ အမည်"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"ဥပဒေဆိုင်ရာ အချက်အလက်များ"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"အခမဲ့ ရင်းမြစ် လိုင်စင်များ"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google၏ ဥပဒေရေးရာ"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN မှားနေ၏၊ ထပ် စမ်းပါ"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN မှာ မတိုက်ဆိုင်ပါ၊ ထပ်ပြီး စမ်းပါ။"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g>အတွက် သင်၏ စကားဝှက်ကို ထည့်သွင်းရန်"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"ချိတ်တွဲနေ ^1"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"အောင်မြင်စွာ ချိတ်ဆက်ပြီး!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"အောင်မြင်စွာ သိမ်းဆည်းပြီး!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"ဗားရှင်း <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"လှုပ်ရှားမှုမရှိခြင်း၏ <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ပြီးနောက်"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"နားရန် အချိန်"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"မလှုပ်ရှားမှု ဒီကာလ နောက်မှာ မျက်နှာပြင် ပိတ်သွားမည်။"</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> အိပ်မက် နောက်မှာ"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"မည်သည့်အကောင့်မှ ဒေတာအရံသင့်သိမ်းဆည်းခြင်းကို လောလောဆယ်မှာ သိုလှောင်ခြင်း မပြုလုပ်ပါ။"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"သင်၏ ကြိုးမဲ့ စကားဝှက်များ၊ စာညှပ်များ၊ အခြား ဆက်တင်များ၊ နှင့် app ဒေတာအရံသင့်သိမ်းဆည်းမှု ရပ်စဲလိုက်ကာ Google ဆာဗာများ၏ ကော်ပီ အားလုံးကို ဖျက်ပစ်လိုပါသလား။"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"ဒီလုပ်ရပ်က သင့် ကိရိယာ ထဲက ဒေတာများ အားလုံးကို ဖျက်ပစ်မှာ ဖြစ်ပြီး၊ ပါဝင်ကြမည်မှာ: သင်၏ Google အကောင့်၊ စနစ် နှင့် app ဒေတာ နှင့် ဆက်တင်များ၊ ပြီးတော့ ဒေါင်းလုဒ် လုပ်ပြီး appများ။"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"သင့် ကိုယ်ပိုင် အချက်အလက်များ နှင့် ဒေါင်းလုဒ် ပြုလုပ်ထားသည့် appများ အားလုံးကို ဖျက်မလား? ဒီ လုပ်ဆောင်ချက်ကို သင်သည် ပြန်ပြောင်း၍ မရနိုင်ပါ!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"အရာတိုင်းကို ဖျက်ပစ်ရန်"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"အားလုံးကို ပယ်ရန်"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"မရှိ"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"မနှောင့်ယှက်ပါနှင့်"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"ဖွင့်ထားချိန်တွင်၊ သတိပေးချက်အသစ်များသည် ဆက်တင်များအတွင်း၌သာ ပေါ်လိမ့်မည်"</string>
     <string name="select_title" msgid="3905067953686121845">"သင်၏ ^1 အတွက် အမည်ကို ရွေးပါ"</string>
     <string name="select_description" msgid="4070142015460337658">"အမည် ရှိခြင်းက သင်၏ ^1 ကို သင်၏ ဖုန်း၊ တက်ဘလက်၊ သို့မဟုတ် ကွန်ပျူတာလို အခြား ကိရိယာများမှ သုံးမှုကို ပြသပေးမည်။"</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" မှာ ဒီ^2 ၏ အမည် ဖြစ်သည်။ သင် အဲဒါကို ပြောင်းလဲချင်ပါသလား?"</string>
     <string name="change_setting" msgid="2047402388786162246">"ပြောင်းလဲရန်"</string>
     <string name="keep_settings" msgid="6798327196645732517">"မပြောင်းလဲပါနှင့်"</string>
-    <string name="menu_help" msgid="3733746757586039379">"အကူအညီ"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"အမှား တစ်ခု ကြုံခဲ့"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"ထပ်စမ်းရန်"</string>
 </resources>

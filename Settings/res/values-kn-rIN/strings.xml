@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"ಸಿಸ್ಟಂ ನವೀಕರಣ"</string>
     <string name="about_preference" msgid="4131396784531360434">"ಕುರಿತು"</string>
     <string name="device_name" msgid="2670488158531273028">"ಸಾಧನದ ಹೆಸರು"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"ಕಾನೂನು ಮಾಹಿತಿ"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"ಮುಕ್ತ ಮೂಲ ಪರವಾನಗಿಗಳು"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google ಕಾನೂನು"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"ತಪ್ಪಾದ PIN, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ, PIN ಹೊಂದಾಣಿಕೆಯಾಗುವುದಿಲ್ಲ"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> ಗೆ ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿ"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"^1 ಸೇರಲಾಗುತ್ತಿದೆ"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"ಯಶಸ್ವಿಯಾಗಿ ಸಂಪರ್ಕಗೊಂಡಿದೆ!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"ಯಶಸ್ವಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"ಆವೃತ್ತಿ <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"ನಿಷ್ಕ್ರಿಯತೆಯ <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ಬಳಿಕ"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"ಯಾವಾಗ ಮಲಗುವುದು"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"ನಿಷ್ಕ್ರಿಯತೆಯ ಈ ಅವಧಿಯ ನಂತರ ಪರದೆಯು ಆಫ್‌ ಆಗುತ್ತದೆ."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ಕನಸಿನ ಬಳಿಕ"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"ಪ್ರಸ್ತುತ ಯಾವುದೇ ಖಾತೆಯು ಬ್ಯಾಕಪ್ ಮಾಡಲಾದ ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸುತ್ತಿಲ್ಲ"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"ನಿಮ್ಮ ವೈ-ಫೈ ಪಾಸ್‌ವರ್ಡ್‌ಗಳು, ಬುಕ್‌ಮಾರ್ಕ್‌ಗಳು, ಇತರ ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್ ಡೇಟಾವನ್ನು ಬ್ಯಾಕಪ್ ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸುವುದೇ ಹಾಗೂ Google ಸರ್ವರ್‌ಗಳಲ್ಲಿನ ಎಲ್ಲಾ ನಕಲುಗಳನ್ನು ಅಳಿಸುವುದೇ?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"ಇದು ನಿಮ್ಮ ಸಾಧನದ ಆಂತರಿಕ ಸಂಗ್ರಹಣೆಯಿಂದ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸುತ್ತದೆ, ಇವುಗಳೂ ಸೇರಿದಂತೆ: ನಿಮ್ಮ Google ಖಾತೆ, ಸಿಸ್ಟಂ ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್ ಡೇಟಾ ಹಾಗೂ ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಡೌನ್‌ಲೋಡ್ ಆಗಿರುವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"ನಿಮ್ಮ ಎಲ್ಲಾ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಮತ್ತು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅಳಿಸುವುದೇ? ನಿಮಗೆ ಈ ಕ್ರಮವನ್ನು ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ಎಲ್ಲವನ್ನೂ ಅಳಿಸು"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"ಎಲ್ಲವನ್ನು ವಜಾಗೊಳಿಸು"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"ಯಾವುದೂ ಇಲ್ಲ"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"ಅಡಚಣೆ ಮಾಡಬೇಡ"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ, ಹೊಸ ಅಧಿಸೂಚನೆಗಳು ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಮಾತ್ರ ಗೋಚರಿಸುತ್ತವೆ"</string>
     <string name="select_title" msgid="3905067953686121845">"ನಿಮ್ಮ ^1 ಗೆ ಹೆಸರನ್ನು ಆರಿಸಿ"</string>
     <string name="select_description" msgid="4070142015460337658">"ನಿಮ್ಮ ಫೋನ್, ಟ್ಯಾಬ್ಲೆಟ್, ಅಥವಾ ಕಂಪ್ಯೂಟರ್‌ನಂತಹ ಬೇರೆ ಸಾಧನಗಳ ಮೂಲಕ ಬಳಸುವಾಗ ನಿಮ್ಮ ^1 ಅನ್ನು ಗುರುತಿಸಲು ಹೆಸರು ಸಹಾಯ ಮಾಡುತ್ತದೆ."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" ಈ ^2 ನ ಹೆಸರಾಗಿದೆ. ನೀವು ಇದನ್ನು ಬದಲಾಯಿಸಲು ಬಯಸುವಿರಾ?"</string>
     <string name="change_setting" msgid="2047402388786162246">"ಬದಲಿಸು"</string>
     <string name="keep_settings" msgid="6798327196645732517">"ಬದಲಾಯಿಸಬೇಡಿ"</string>
-    <string name="menu_help" msgid="3733746757586039379">"ಸಹಾಯ"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"ದೋಷ ಸಂಭವಿಸಿದೆ"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"ಮರುಪ್ರಯತ್ನಿಸು"</string>
 </resources>

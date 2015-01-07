@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"עדכון מערכת"</string>
     <string name="about_preference" msgid="4131396784531360434">"מידע כללי"</string>
     <string name="device_name" msgid="2670488158531273028">"שם המכשיר"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"מידע משפטי"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"רישיונות לקוד פתוח"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"הודעות משפטיות של Google"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"מספר ה-PIN שגוי. נסה שוב"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"נסה שוב. מספר ה-PIN אינו תואם"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"הזן סיסמה עבור <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"מצטרף אל ^1"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"החיבור נוצר."</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"נשמר בהצלחה."</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"גרסה <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"לאחר חוסר פעילות במשך <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"מתי לעבור למצב שינה"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"המסך ייכבה לאחר חוסר פעילות במשך פרק הזמן הזה."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> לאחר מעבר לחלום בהקיץ"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"אין חשבון המאחסן כעת נתונים מגובים"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"האם להפסיק את הגיבוי של סיסמאות ה-Wi-Fi, הסימניות, נתוני האפליקציות והגדרות אחרות ולמחוק את כל העותקים משרתי Google?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"הפעולה הזו תמחק את כל הנתונים מהאחסון הפנימי במכשיר שלך, כולל: חשבון Google שלך, אפליקציות שהורדת, נתונים והגדרות של המערכת ושל אפליקציות."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"האם למחוק את כל המידע האישי שלך ואת האפליקציות שהורדת? לא ניתן לבטל את הפעולה!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"מחק הכל"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"סגור הכל"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"ללא"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"אין להפריע"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"כשהתכונה פועלת, הודעות חדשות יופיעו רק ב\'הגדרות\'"</string>
     <string name="select_title" msgid="3905067953686121845">"בחר שם עבור ה-^1 שלך"</string>
     <string name="select_description" msgid="4070142015460337658">"מתן שם יעזור בזיהוי ה-^1 שלך בעת גישה אליו ממכשירים אחרים, כמו טלפון, טאבלט או מחשב."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" הוא השם של ה-^2 הזה. האם ברצונך לשנות זאת?"</string>
     <string name="change_setting" msgid="2047402388786162246">"שנה"</string>
     <string name="keep_settings" msgid="6798327196645732517">"אל תשנה"</string>
-    <string name="menu_help" msgid="3733746757586039379">"עזרה"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"אירעה שגיאה"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"נסה שוב"</string>
 </resources>

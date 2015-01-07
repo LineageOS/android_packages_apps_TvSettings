@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"Ενημέρωση συστήματος"</string>
     <string name="about_preference" msgid="4131396784531360434">"Πληροφορίες"</string>
     <string name="device_name" msgid="2670488158531273028">"Όνομα συσκευής"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"Νομικές πληροφορίες"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Άδειες λογισμικού ανοικτού κώδικα"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Νομικές πληροφορίες Google"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Λάθος PIN, δοκιμάστε ξανά"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Δοκιμάστε ξανά, δεν υπάρχει αντιστοιχία PIN"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Κωδικός πρόσβασης για <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"Σύνδεση σε ^ 1"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"Συνδέθηκε επιτυχώς!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"Επιτυχής αποθήκευση!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"έκδοση <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Μετά από <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> αδράνειας"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Ρύθμιση αναστολής λειτουργίας"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Η οθόνη απενεργοποιείται μετά από αυτήν την περίοδο αδράνειας."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> μετά την ενεργοποίηση της λειτουργίας daydream."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Κανένας λογαριασμός δεν αποθηκεύει προς το παρόν δεδομένα αντιγράφων ασφαλείας"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Θέλετε να διακοπεί η δημιουργία αντιγράφων ασφαλείας για τους κωδικούς πρόσβασης Wi-Fi, τους σελιδοδείκτες, τις άλλες ρυθμίσεις και τα δεδομένα εφαρμογών, καθώς και να διαγραφούν όλα τα αντίτυπα από τους διακομιστές της Google;"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Με τον τρόπο αυτό θα διαγραφούν όλα τα δεδομένα από τον εσωτερικό χώρο αποθήκευσης της συσκευής σας, συμπεριλαμβανομένου του λογαριασμού σας Google, του συστήματος και των δεδομένων εφαρμογών και ρυθμίσεων, καθώς επίσης και των ληφθέντων εφαρμογών"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Να διαγραφούν όλα τα προσωπικά σας στοιχεία και οι ληφθείσες εφαρμογές; Δεν είναι δυνατή η αναίρεση αυτής της ενέργειας!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Διαγραφή όλων"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"Παράβλεψη όλων"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"Κανένα"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"Να μην ενοχλούμαι"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"Οι νέες ειδοποιήσεις θα εμφανίζονται μόνο στις Ρυθμίσεις"</string>
     <string name="select_title" msgid="3905067953686121845">"Επιλέξτε όνομα για τη συσκευή ^1"</string>
     <string name="select_description" msgid="4070142015460337658">"Το όνομα θα σας βοηθήσει να ξεχωρίζετε τη συσκευή ^1 όταν αποκτάτε πρόσβαση σε αυτήν από άλλες συσκευές όπως είναι το τηλέφωνο, το tablet ή ο υπολογιστής σας."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"Το όνομα της συσκευής ^2 είναι \"^1\". Θέλετε να το αλλάξετε;"</string>
     <string name="change_setting" msgid="2047402388786162246">"Αλλαγή"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Να μη γίνει αλλαγή"</string>
-    <string name="menu_help" msgid="3733746757586039379">"Βοήθεια"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"Παρουσιάστηκε σφάλμα."</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"Επανάληψη"</string>
 </resources>

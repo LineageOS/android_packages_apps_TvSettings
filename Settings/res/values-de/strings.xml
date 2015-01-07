@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"System aktualisieren"</string>
     <string name="about_preference" msgid="4131396784531360434">"Info"</string>
     <string name="device_name" msgid="2670488158531273028">"Gerätename"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"Rechtliche Hinweise"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Open-Source-Lizenzen"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Rechtliche Hinweise"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Falsche PIN. Bitte versuchen Sie es erneut."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Die PIN stimmt nicht. Bitte versuchen Sie es erneut."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Passwort für <xliff:g id="SSID">%1$s</xliff:g> eingeben"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"Verbinden mit ^1"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"Verbindung hergestellt!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"Gespeichert!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"Version <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Nach <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ohne Aktivität"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Aktivierung des Ruhemodus"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Nach diesem Zeitraum der Inaktivität wird der Bildschirm ausgeschaltet."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> nach dem Start von Daydream"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Momentan werden in keinem Konto gesicherte Daten gespeichert."</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Sicherung Ihrer WLAN-Passwörter, Lesezeichen, anderer Einstellungen und App-Daten beenden und alle Kopien auf Google-Servern löschen?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Hiermit werden alle Daten, einschließlich Ihres Google-Kontos, Ihrer System- und App-Daten und -Einstellungen sowie Ihrer heruntergeladenen Apps, aus dem internen Speicher Ihres Geräts gelöscht."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Alle personenbezogenen Daten und heruntergeladenen Apps löschen? Dieser Vorgang kann nicht rückgängig gemacht werden."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Alles löschen"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"Alle schließen"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"Keine"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"Nicht stören"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"Bei Aktivierung erscheinen neue Benachrichtigungen nur in Einstellungen."</string>
     <string name="select_title" msgid="3905067953686121845">"Namen für ^1 auswählen"</string>
     <string name="select_description" msgid="4070142015460337658">"Anhand des Namens erkennen Sie Ihren ^1 leichter wieder, wenn Sie mit anderen Geräten darauf zugreifen, zum Beispiel mit Ihrem Telefon, Tablet oder Computer."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"Der Name dieses ^2s ist \"^1\". Möchten Sie den Namen ändern?"</string>
     <string name="change_setting" msgid="2047402388786162246">"Ändern"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Nicht ändern"</string>
-    <string name="menu_help" msgid="3733746757586039379">"Hilfe"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"Ein Fehler ist aufgetreten."</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"Wiederholen"</string>
 </resources>

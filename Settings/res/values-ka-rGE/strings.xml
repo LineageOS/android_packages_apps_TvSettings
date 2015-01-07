@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"სისტემის განახლება"</string>
     <string name="about_preference" msgid="4131396784531360434">"შესახებ"</string>
     <string name="device_name" msgid="2670488158531273028">"მოწყობილობის სახელი"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"იურიდიული ინფორმაცია"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"ღია კოდის ლიცენზიები"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google-ის სამართლებრივი ინფორმაცია"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN არასწორია, ისევ სცადეთ"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"სცადეთ ისევ, PIN არ შეესაბამება"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"შეიყვანეთ <xliff:g id="SSID">%1$s</xliff:g>-ის პაროლისათვის"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"ჩართვა ქსელში ^1..."</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"დაკავშირებულია წარმატებით!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"წარმატებით შეინახა!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"ვერსია <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"უმოქმედობის <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> შემდეგ"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"ძილის დრო"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"ეკრანი გამოირთვება ამ უმოქმედობის პერიოდის შემდეგ."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> Daydream-ის შემდეგ"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"ამჟამად მონაცემებს არ ინახავს არცერთი ანგარიში"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"შეწყდეს თქვენი Wi-Fi პაროლების, სანიშნეების, სხვა პარამეტრების და აპების მონაცემების დამარქაფება და წაიშალოს ყველა ასლი Google-ის სერვერებზე?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"ეს წაშლის თქვენი მოწყობილობის შიდა შენახვის სრულ მონაცემს, მათ შორის: თქვენს Google ანგარიშს, სისტემისა და აპლიკაციის მონაცემებს, პარამეტრებს, და ჩამოტვირთულ აპლიკაციებს."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"გსურთ, ყველა თქვენი პირადი ინფორმაციისა და ჩამოტვირთული აპების წაშლა? ამ ქმედების უკან დაბრუნება შეუძლებელია."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ყველაფრის წაშლა"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"ყველას უგულებელყოფა"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"არცერთი"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"არ შემაწუხოთ"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"როცა ჩართულია, ახალი შეტყობინებები მხოლოდ პარამეტრებში გამოჩნდება"</string>
     <string name="select_title" msgid="3905067953686121845">"აირჩიეთ სახელი თქვენი ^1-თვის"</string>
     <string name="select_description" msgid="4070142015460337658">"სახელი დაგეხმარებათ თქვენი ^1 იდენტიფიკაციაში სხვა მოწყობილობებიდან წვდომისას, როგორიცაა თქვენი ტელეფონი, ტაბლეტი ან კომპიუტერი."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"ამ ^2-ს სახელი არის „^1“. გსურთ, შეიცვალოს?"</string>
     <string name="change_setting" msgid="2047402388786162246">"შეცვლა"</string>
     <string name="keep_settings" msgid="6798327196645732517">"არ შეიცვალოს"</string>
-    <string name="menu_help" msgid="3733746757586039379">"დახმარება"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"წარმოიშვა შეცდომა"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"განმეორებითი მცდელობა"</string>
 </resources>

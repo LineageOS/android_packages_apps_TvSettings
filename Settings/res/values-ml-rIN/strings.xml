@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"സിസ്റ്റം അപ്ഡേറ്റ്"</string>
     <string name="about_preference" msgid="4131396784531360434">"ആമുഖം"</string>
     <string name="device_name" msgid="2670488158531273028">"ഉപകരണത്തിന്റെ പേര്"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"നിയമ വിവരം"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"ഓപ്പൺ സോഴ്‌സ് ലൈസൻസുകൾ"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google ലീഗൽ"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"പിൻ തെറ്റാണ്, വീണ്ടും ശ്രമിക്കുക"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"പിൻ പൊരുത്തപ്പെടുന്നില്ല, വീണ്ടും ശ്രമിക്കുക"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> എന്നതിനുള്ള പാസ്‌വേഡ് നൽകുക"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"^1 എന്നതിൽ ചേരുന്നു"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"കണക്‌റ്റുചെയ്‌തു!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"സംരക്ഷിച്ചു!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"പതിപ്പ് <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> നിഷ്‌ക്രിയത്വത്തിന് ശേഷം"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"സുഷുപ്‌തിയിലാകുന്നത് എപ്പോൾ"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"ഈ നിഷ്‌ക്രിയ കാലയളവിന് ശേഷം സ്‌ക്രീൻ ഓഫാകുന്നു."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"ഡ്രീമിംഗിന് ശേഷം <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> കഴിഞ്ഞ്"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"നിലവിൽ അക്കൗണ്ടുകളൊന്നും ബാക്കപ്പ് ചെയ്ത ഡാറ്റ സംഭരിക്കുന്നില്ല"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Google സെർവറുകളിൽ നിങ്ങളുടെ Wi‑Fi പാസ്‌വേഡുകൾ, ബുക്ക്‌മാർക്കുകൾ, മറ്റ് ക്രമീകരണങ്ങൾ, അപ്ലിക്കേഷൻ ഡാറ്റ എന്നിവ ബാക്കപ്പുചെയ്യുന്നത് അവസാനിപ്പിച്ച് അതിലെ എല്ലാ പകർപ്പുകളും മായ്‌ക്കണോ?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Google അക്കൗണ്ട്, സിസ്‌റ്റത്തിന്റെയും അപ്ലിക്കേഷന്റെയും വിവരവും ക്രമീകരണവും, ഡൗൺലോഡുചെയ്‌ത അപ്ലിക്കേഷനുകൾ എന്നിവയുൾപ്പെടെ, നിങ്ങളുടെ ഉപകരണത്തിന്റെ ആന്തരിക സംഭരണത്തിൽ നിന്നുള്ള എല്ലാ വിവരവും മായ്‌ക്കും"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"നിങ്ങളുടെ എല്ലാ വ്യക്തിഗത വിവരങ്ങളും ഡൗൺലോഡുചെയ്‌ത അപ്ലിക്കേഷനുകളും മായ്ക്കണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാനാവില്ല!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"എല്ലാം മായ്ക്കുക"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"എല്ലാം നിരസിക്കുക"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"ഒന്നുമില്ല"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"ശല്ല്യപ്പെടുത്തരുത്"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"പ്രവർത്തനക്ഷമമാകുമ്പോൾ, ക്രമീകരണത്തിൽ മാത്രമെ പുതിയ അറിയിപ്പുകൾ ദൃശ്യമാകൂ"</string>
     <string name="select_title" msgid="3905067953686121845">"നിങ്ങളുടെ ^1 ഉപകരണത്തിന് ഒരു പേര് തിരഞ്ഞെടുക്കുക"</string>
     <string name="select_description" msgid="4070142015460337658">"നിങ്ങളുടെ ഫോണോ ടാബ്‌ലെറ്റോ കമ്പ്യൂട്ടറോ പോലുള്ള മറ്റ് ഉപകരണങ്ങളിൽ നിന്ന് ^1 ആക്‌സസ്സുചെയ്യുമ്പോൾ അത് തിരിച്ചറിയാൻ ഒരു പേര് സഹായിക്കും."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"ഈ ^2 ഉപകരണത്തിന്റെ പേര് \"^1\" ആണ്. ഇത് മാറ്റണോ?"</string>
     <string name="change_setting" msgid="2047402388786162246">"മാറ്റുക"</string>
     <string name="keep_settings" msgid="6798327196645732517">"മാറ്റരുത്"</string>
-    <string name="menu_help" msgid="3733746757586039379">"സഹായം"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"ഒരു പിശക് സംഭവിച്ചു"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"വീണ്ടും ശ്രമിക്കുക"</string>
 </resources>

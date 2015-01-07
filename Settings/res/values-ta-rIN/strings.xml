@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"முறைமை புதுப்பிப்பு"</string>
     <string name="about_preference" msgid="4131396784531360434">"அறிமுகம்"</string>
     <string name="device_name" msgid="2670488158531273028">"சாதனத்தின் பெயர்"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"சட்டத் தகவல்"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"ஓப்பன் சோர்ஸ் உரிமங்கள்"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google சட்டம்"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"தவறான PIN, மீண்டும் முயலவும்"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"மீண்டும் முயலவும், PIN பொருந்தவில்லை"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g>க்கான கடவுச்சொல்லை உள்ளிடுக"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"^1ஐச் சேர்க்கிறது"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"இணைப்பதில் வெற்றி!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"வெற்றிகரமாகச் சேமிக்கப்பட்டது!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"பதிப்பு <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"செயல்படாத <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>க்குப் பின்"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"உறக்கத்திற்குச் செல்லவேண்டிய நேரம்"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"செயல்படாமல் இருந்தால் திரை முடக்கப்படும்."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"முழுநேர இயக்கத்திற்குப் பின் <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"தற்போது எந்தக் கணக்கிலும் காப்புப்பிரதி எடுத்த தரவு சேமிக்கப்படவில்லை"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"உங்கள் வைஃபை கடவுச்சொற்கள், புத்தகக்குறிகள், பிற அமைப்புகள் மற்றும் பயன்பாட்டுத் தரவைக் காப்புப்பிரதியெடுப்பதை நிறுத்தி Google சேவையகங்களில் உள்ள எல்லா நகல்களையும் அழிக்கவா?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"உங்கள் Google கணக்கு, முறைமை மற்றும் பயன்பாட்டின் தரவு, அமைப்புகள், மேலும் இறக்கிய பயன்பாடுகள் உள்ளிட்ட சாதனத்தின் அகச் சேமிப்பகத்தில் உள்ள எல்லா தரவையும் இது அழிக்கும்"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"எல்லா தனிப்பட்ட தகவலையும், இறக்கப்பட்ட பயன்பாடுகளையும் அழிக்கவா? இந்தச் செயலை மீட்டமைக்க முடியாது!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"எல்லாம் அழி"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"எல்லாவற்றையும் விலக்கு"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"ஏதுமில்லை"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"தொந்தரவு செய்ய வேண்டாம்"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"இயக்கப்பட்டிருக்கும்போது, அமைப்புகளில் புதிய அறிவிப்புகள் மட்டுமே தோன்றும்"</string>
     <string name="select_title" msgid="3905067953686121845">"^1க்குப் பெயரைத் தேர்வுசெய்யவும்"</string>
     <string name="select_description" msgid="4070142015460337658">"மொபைல், டேப்லெட் அல்லது கணினி போன்ற பிற சாதனங்களிலிருந்து ^1ஐ அணுகும் போது, அதைக் கண்டறிய பெயர் உதவியாக இருக்கும்."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"^2 இன் பெயர் \"^1\". இதை மாற்ற விரும்புகிறீர்களா?"</string>
     <string name="change_setting" msgid="2047402388786162246">"மாற்று"</string>
     <string name="keep_settings" msgid="6798327196645732517">"மாற்றாதே"</string>
-    <string name="menu_help" msgid="3733746757586039379">"உதவி"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"பிழை ஏற்பட்டது"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"மீண்டும் முயலவும்"</string>
 </resources>

@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"সিস্টেম আপডেট"</string>
     <string name="about_preference" msgid="4131396784531360434">"সম্পর্কে"</string>
     <string name="device_name" msgid="2670488158531273028">"ডিভাইস নাম"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"আইনি তথ্য"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"মুক্ত উৎস লাইসেন্সগুলি"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google আইনি"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"ভুল PIN, আবার চেষ্টা করুন"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN মেলেনি, আবার চেষ্টা করুন"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> এর জন্য পাসওয়ার্ড দিন"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"^1 যোগদান করছে"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"সফলভাবে সংযুক্ত হয়েছে!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"সফলভাবে সংরক্ষিত হয়েছে!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"সংস্করণ <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> সময় নিষ্ক্রিয়তার পরে"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"কখন ঘুমাতে যাবে"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"এই সময়সীমা পর্যন্ত নিষ্ক্রিয় অবস্থায় থাকলে স্ক্রীন বন্ধ হয়ে যাবে৷"</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"দিবাস্বপ্নের পরে <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"বর্তমানে কোনো অ্যাকাউন্টই ব্যাক আপ করা ডেটা সংরক্ষণ করছে না"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"আপনার Wi-Fi পাসওয়ার্ড, বুকমার্ক, অন্যান্য সেটিংস, এবং অ্যাপ্লিকেশান ডেটা ব্যাক আপ করা বন্ধ করে Google সার্ভারে থাকা সব অনুলিপি মুছে ফেলবেন?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"এটি আপনার ডিভাইসের অভ্যন্তরীণ সঞ্চয়স্থান থেকে সব ডেটা মুছে ফেলবে। আপনার Google অ্যাকাউন্ট, সিস্টেম ও অ্যাপ্লিকেশানের ডেটা ও সেটিংস এবং ডাউনলোড করা অ্যাপ্লিকেশান এসব ডেটার অন্তর্ভুক্ত।"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"আপনার সমস্ত ব্যক্তিগত ডেটা এবং ডাউনলোড করা অ্যাপ্লিকেশান মুছে দিতে চান? আপনি পদক্ষেপটি আর বাতিল করতে পারবেন না!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"সবকিছু মুছে দিন"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"সবগুলি খারিজ করুন"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"কিছুই নয়"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"বিরক্ত করবেন না"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"সক্ষম করা হলে, নতুন বিজ্ঞপ্তিগুলি শুধুমাত্র সেটিংসে দেখা যাবে"</string>
     <string name="select_title" msgid="3905067953686121845">"আপনার ^1 এর জন্য একটি নাম চয়ন করুন"</string>
     <string name="select_description" msgid="4070142015460337658">"আপনার ফোন, ট্যাবলেট বা কম্পিউটারের মতো অন্য কোনো ডিভাইস থেকে যখন ^1 এ অ্যাক্সেস করবেন তখন এর নাম এটিকে সনাক্ত করতে সহায়তা করব্৷"</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"এই ^2 এর নাম \"^1\"৷ আপনি কি এর পরিবর্তন করতে চান?"</string>
     <string name="change_setting" msgid="2047402388786162246">"পরিবর্তন করুন"</string>
     <string name="keep_settings" msgid="6798327196645732517">"পরিবর্তন করবেন না"</string>
-    <string name="menu_help" msgid="3733746757586039379">"সহায়তা"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"একটি ত্রুটি ঘটেছে"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"পুনরায় চেষ্টা করুন"</string>
 </resources>

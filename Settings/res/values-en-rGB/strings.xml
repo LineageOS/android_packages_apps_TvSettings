@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"System update"</string>
     <string name="about_preference" msgid="4131396784531360434">"About"</string>
     <string name="device_name" msgid="2670488158531273028">"Device name"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"Legal information"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Open-source licences"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google legal"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Wrong PIN, try again"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Try again, PIN doesn\'t match"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Enter password for <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"Joining ^1"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"Connected successfully!"</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"Saved successfully!"</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"version <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"After <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> of inactivity"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"When to sleep"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Screen turns off after this period of inactivity."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> after dreaming"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"No account is currently storing backed-up data"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Stop backing up your Wi-Fi passwords, bookmarks, other settings and app data, and erase all copies on Google servers?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"This will erase all data from your device\'s internal storage, including: your Google account, system and app data and settings and downloaded apps"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Erase all your personal information and downloaded apps? You can\'t reverse this action!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Erase everything"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"Dismiss all"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"None"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"Do not disturb"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"When enabled, new notiﬁcations will only appear in Settings"</string>
     <string name="select_title" msgid="3905067953686121845">"Choose a name for your ^1"</string>
     <string name="select_description" msgid="4070142015460337658">"A name will help identify your ^1 when accessing it from other devices like your phone, tablet or computer."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" is the name of this ^2. Would you like to change this?"</string>
     <string name="change_setting" msgid="2047402388786162246">"Change"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Don\'t change"</string>
-    <string name="menu_help" msgid="3733746757586039379">"Help"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"An error occurred"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"Retry"</string>
 </resources>

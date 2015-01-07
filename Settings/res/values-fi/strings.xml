@@ -97,6 +97,8 @@
     <string name="about_system_update" msgid="7282772247661356586">"Järjestelmäpäivitys"</string>
     <string name="about_preference" msgid="4131396784531360434">"Tietoja"</string>
     <string name="device_name" msgid="2670488158531273028">"Laitteen nimi"</string>
+    <!-- no translation found for restart_button_label (8153112858638352970) -->
+    <skip />
     <string name="about_legal_info" msgid="8511870741437307531">"Oikeudelliset tiedot"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Avoimen lähdekoodin käyttöluvat"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Googlen lakiasiat"</string>
@@ -493,7 +495,6 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Väärä PIN-koodi, yritä uudelleen"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN-koodit ovat erilaiset, yritä uudelleen"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Anna verkon <xliff:g id="SSID">%1$s</xliff:g> salasana"</string>
-    <string name="wifi_setup_waiting_for_join" msgid="2949867573700046171">"Liitytään: ^1"</string>
     <string name="wifi_setup_connection_success" msgid="1848188618100224976">"Yhteys muodostettu."</string>
     <string name="wifi_setup_save_success" msgid="1741842127458417612">"Tallentaminen onnistui."</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"Versio <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -527,7 +528,6 @@
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Kun laite on käyttämättä <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Virransäästötilaan siirtyminen"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Näyttö sammuu tämän ajan kuluttua, jos laitetta ei käytetä."</string>
-    <string name="device_daydreams_screen_off_summary" msgid="1112900929403867274">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> Unelmat-tilan käynnistymisen jälkeen"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Millään tilillä ei ole tällä hetkellä varmuuskopiota"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Haluatko lopettaa Wi-Fi-salasanojen, kirjanmerkkien, muiden asetuksien ja sovellustietojen varmuuskopioinnin ja poistaa kaikki kopiot Googlen palvelimilta?"</string>
@@ -538,10 +538,6 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Toiminto poistaa kaikki tiedot laitteesi sisäisestä tallennustilasta. Poistettavia tietoja ovat muun muassa Google-tilisi, järjestelmän ja sovelluksien tiedot ja asetukset sekä ladatut sovellukset."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Haluatko poistaa kaikki henkilökohtaiset tietosi ja lataamasi sovellukset? Toimintoa ei voi peruuttaa!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Poista kaikki"</string>
-    <string name="dismiss_all_notifications" msgid="9098572552161726564">"Hylkää kaikki"</string>
-    <string name="no_notifications" msgid="8386627968671837666">"Ei mitään"</string>
-    <string name="do_not_disturb_title" msgid="3209080708876656745">"Älä häiritse"</string>
-    <string name="do_not_disturb_desc" msgid="6878276904682143830">"Tässä tilassa uudet ilmoitukset näytetään vain Asetuksissa"</string>
     <string name="select_title" msgid="3905067953686121845">"Nimeä ^1"</string>
     <string name="select_description" msgid="4070142015460337658">"Nimi auttaa sinua tunnistamaan laitteen ^1, kun haluat käyttää sitä muulla laitteella, kuten puhelimella, tabletilla tai tietokoneella."</string>
   <string-array name="rooms">
@@ -558,7 +554,4 @@
     <string name="settings_status_description" msgid="3600745966132434139">"Laitteen ^2 nimi on ^1. Haluatko vaihtaa sen?"</string>
     <string name="change_setting" msgid="2047402388786162246">"Vaihda"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Älä vaihda"</string>
-    <string name="menu_help" msgid="3733746757586039379">"Ohje"</string>
-    <string name="setup_failure_title" msgid="5453071802904644658">"Tapahtui virhe"</string>
-    <string name="setup_failure_button_retry" msgid="323660735384062824">"Yritä uudelleen"</string>
 </resources>
