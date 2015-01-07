@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.about;
 
-import android.app.Fragment;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
@@ -24,40 +23,35 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.SystemClock;
-import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.android.tv.settings.PreferenceUtils;
 import com.android.tv.settings.R;
-import com.android.tv.settings.dialog.old.Action;
-import com.android.tv.settings.dialog.old.ActionAdapter;
-import com.android.tv.settings.dialog.old.ActionFragment;
-import com.android.tv.settings.dialog.old.ContentFragment;
-import com.android.tv.settings.dialog.old.DialogActivity;
+import com.android.tv.settings.dialog.Layout;
+import com.android.tv.settings.dialog.SettingsLayoutActivity;
 import com.android.tv.settings.name.DeviceManager;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Activity which shows the build / model / legal info / etc.
  */
-public class AboutActivity extends DialogActivity implements ActionAdapter.Listener {
+public class AboutActivity extends SettingsLayoutActivity {
 
     private static final String TAG = "AboutActivity";
 
     /**
      * Action keys for switching over in onActionClicked.
      */
-    private static final String KEY_LEGAL_INFO = "about_legal_info";
-    private static final String KEY_BUILD = "build";
-    private static final String KEY_VERSION = "version";
-    private static final String KEY_REBOOT = "reboot";
+    private static final int KEY_BUILD = 0;
+    private static final int KEY_VERSION = 1;
+    private static final int KEY_REBOOT = 2;
 
     /**
      * Intent action of SettingsLicenseActivity (for displaying open source licenses.)
@@ -107,17 +101,6 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPreferenceUtils = new PreferenceUtils(this);
-
-        if (savedInstanceState == null) {
-            final Fragment contentFragment = ContentFragment.newInstance(
-                    getString(R.string.about_preference), null, null,
-                    R.drawable.ic_settings_about,
-                    getResources().getColor(R.color.icon_background));
-
-            final Fragment actionFragment = ActionFragment.newInstance(getActions());
-
-            setContentAndActionFragments(contentFragment, actionFragment);
-        }
     }
 
     @Override
@@ -127,9 +110,9 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     }
 
     @Override
-    public void onActionClicked(Action action) {
-        final String key = action.getKey();
-        if (TextUtils.equals(key, KEY_BUILD)) {
+    public void onActionClicked(Layout.Action action) {
+        final int key = action.getId();
+        if (key == KEY_BUILD) {
             mDeveloperClickCount++;
             if (!mPreferenceUtils.isDeveloperEnabled()) {
                 int numLeft = NUM_DEVELOPER_CLICKS - mDeveloperClickCount;
@@ -147,7 +130,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                     showToast(getString(R.string.show_dev_already));
                 }
             }
-        } else if (TextUtils.equals(key, KEY_VERSION)) {
+        } else if (key == KEY_VERSION) {
             mHits[mHitsIndex] = SystemClock.uptimeMillis();
             mHitsIndex = (mHitsIndex + 1) % mHits.length;
             if (mHits[mHitsIndex] >= SystemClock.uptimeMillis() - 500) {
@@ -155,12 +138,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 intent.setComponent(mPlatLogoActivity);
                 startActivity(intent);
             }
-        } else if (TextUtils.equals(key, KEY_LEGAL_INFO)) {
-            ArrayList<Action> actions = getLegalActions();
-            setContentAndActionFragments(ContentFragment.newInstance(
-                    getString(R.string.about_legal_info), null, null),
-                    ActionFragment.newInstance(actions));
-        } else if (TextUtils.equals(key, KEY_REBOOT)) {
+        } else if (key == KEY_REBOOT) {
             PowerManager pm = (PowerManager)getSystemService(Context.POWER_SERVICE);
             pm.reboot(null);
         } else {
@@ -177,81 +155,66 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
         }
     }
 
-    private ArrayList<Action> getLegalActions() {
-        ArrayList<Action> actions = new ArrayList<>();
-        actions.add(new Action.Builder()
-                .intent(systemIntent(SETTINGS_LEGAL_LICENSE_INTENT_ACTION))
-                .title(getString(R.string.about_legal_license))
-                .build());
-        actions.add(new Action.Builder()
-                .intent(systemIntent(SETTINGS_LEGAL_TERMS_OF_SERVICE))
-                .title(getString(R.string.about_terms_of_service))
-                .build());
+    @Override
+    public Layout createLayout() {
+        final Resources res = getResources();
 
-        return actions;
-    }
+        final Layout.Header header = new Layout.Header.Builder(res)
+                .icon(R.drawable.ic_settings_about)
+                .title(R.string.about_preference)
+                .build();
 
-    private ArrayList<Action> getActions() {
-        ArrayList<Action> actions = new ArrayList<>();
-        actions.add(new Action.Builder()
-                .key("update")
-                .title(getString(R.string.about_system_update))
-                .intent(systemIntent(SETTINGS_UPDATE_SYSTEM))
+        header.add(new Layout.Action.Builder(res, systemIntent(SETTINGS_UPDATE_SYSTEM))
+                .title(R.string.about_system_update)
                 .build());
-        actions.add(new Action.Builder()
-                .key("name")
-                .title(getString(R.string.device_name))
+        header.add(new Layout.Action.Builder(res,
+                new Intent(SETTINGS_DEVICE_NAME_INTENT_ACTION))
+                .title(R.string.device_name)
                 .description(DeviceManager.getDeviceName(this))
-                .intent(new Intent(SETTINGS_DEVICE_NAME_INTENT_ACTION))
                 .build());
-        actions.add(new Action.Builder()
-                .key(KEY_REBOOT)
-                .title(getString(R.string.restart_button_label))
+        header.add(new Layout.Action.Builder(res, KEY_REBOOT)
+                .title(R.string.restart_button_label)
                 .build());
-        actions.add(new Action.Builder()
-                .key(KEY_LEGAL_INFO)
-                .title(getString(R.string.about_legal_info))
-                .build());
-        Intent adsIntent = new Intent();
+        header.add(new Layout.Header.Builder(res)
+                .title(R.string.about_legal_info)
+                .build()
+                .add(new Layout.Action.Builder(res,
+                        systemIntent(SETTINGS_LEGAL_LICENSE_INTENT_ACTION))
+                        .title(R.string.about_legal_license)
+                        .build())
+                .add(new Layout.Action.Builder(res, systemIntent(SETTINGS_LEGAL_TERMS_OF_SERVICE))
+                        .title(R.string.about_terms_of_service)
+                        .build()));
+
+        final Intent adsIntent = new Intent();
         adsIntent.setPackage(SETTINGS_ADS_ACTIVITY_PACKAGE);
         adsIntent.setAction(SETTINGS_ADS_ACTIVITY_ACTION);
         adsIntent.addCategory(Intent.CATEGORY_DEFAULT);
-        List<ResolveInfo> resolveInfos = getPackageManager().queryIntentActivities(adsIntent,
+        final List<ResolveInfo> resolveInfos = getPackageManager().queryIntentActivities(adsIntent,
                 PackageManager.MATCH_DEFAULT_ONLY);
         if (!resolveInfos.isEmpty()) {
-            // Launch the phone ads id activity.
-            actions.add(new Action.Builder()
-                    .key("ads")
-                    .title(getString(R.string.about_ads))
-                    .intent(adsIntent)
-                    .enabled(true)
+            header.add(new Layout.Action.Builder(res, adsIntent)
+                    .title(R.string.about_ads)
                     .build());
         }
-        actions.add(new Action.Builder()
-                .key("model")
-                .title(getString(R.string.about_model))
+
+        header.add(new Layout.Status.Builder(res)
+                .title(R.string.about_model)
                 .description(Build.MODEL)
-                .enabled(false)
                 .build());
-        actions.add(new Action.Builder()
-                .key(KEY_VERSION)
-                .title(getString(R.string.about_version))
+        header.add(new Layout.Action.Builder(res, KEY_VERSION)
+                .title(R.string.about_version)
                 .description(Build.VERSION.RELEASE)
-                .enabled(true)
                 .build());
-        actions.add(new Action.Builder()
-                .key("serial")
-                .title(getString(R.string.about_serial))
+        header.add(new Layout.Status.Builder(res)
+                .title(R.string.about_serial)
                 .description(Build.SERIAL)
-                .enabled(false)
                 .build());
-        actions.add(new Action.Builder()
-                .key(KEY_BUILD)
-                .title(getString(R.string.about_build))
+        header.add(new Layout.Action.Builder(res, KEY_BUILD)
+                .title(R.string.about_build)
                 .description(Build.DISPLAY)
-                .enabled(true)
                 .build());
-        return actions;
+        return new Layout().breadcrumb(getString(R.string.header_category_device)).add(header);
     }
 
     private void showToast(String toastString) {
