@@ -30,16 +30,10 @@ public class PickerConstants {
     public static class Date {
         public final String[] months;
         public final String[] days31;
-        public final String[] days30;
-        public final String[] days29;
-        public final String[] days28;
         public final String dateSeparator;
 
         private Date(Resources resources) {
             months = new DateFormatSymbols().getShortMonths();
-            days28 = createStringIntArrays(28, false, 2);
-            days29 = createStringIntArrays(29, false, 2);
-            days30 = createStringIntArrays(30, false, 2);
             days31 = createStringIntArrays(31, false, 2);
             dateSeparator = resources.getString(R.string.date_separator);
         }
