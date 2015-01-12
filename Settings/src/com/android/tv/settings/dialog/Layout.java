@@ -53,8 +53,12 @@ public class Layout implements Parcelable {
     private abstract static class LayoutTreeNode implements Node {
         LayoutTreeBranch mParent;
 
-        void Log(int level) {
+        /* package */ boolean isEnabled() {
+            return false;
         }
+
+        /* package */ abstract Appearance getAppearance();
+        /* package */ abstract void Log(int level);
     }
 
     private abstract static class LayoutTreeBranch extends LayoutTreeNode {
@@ -73,7 +77,7 @@ public class Layout implements Parcelable {
         private StringGetter mDescription;
         private final LayoutTreeNode mNode;
         private final boolean mEnabled;
-        private int mViewType;
+        private final int mViewType;
         private boolean mChecked = false;
         private Drawable mIcon = null;
         private int mSelectionIndex;
@@ -171,26 +175,14 @@ public class Layout implements Parcelable {
 
         public LayoutRow(LayoutTreeNode node) {
             mNode = node;
-            mViewType = VIEW_TYPE_ACTION;
-            Appearance a;
-            if (node instanceof Header) {
-                a = ((Header) node).mAppearance;
-                mEnabled = true;
-            } else if (node instanceof Action) {
-                a = ((Action) node).mAppearance;
-                mEnabled = true;
-            } else if (node instanceof Status) {
-                a = ((Status) node).mAppearance;
-                mEnabled = true;
+            if (node instanceof Static) {
+                mViewType = VIEW_TYPE_STATIC;
+                mTitle = ((Static) node).mTitle;
             } else {
-                a = null;
-                mEnabled = false;
-                if (node instanceof Static) {
-                    mViewType = VIEW_TYPE_STATIC;
-                    Static s = (Static) node;
-                    mTitle = s.mTitle;
-                }
+                mViewType = VIEW_TYPE_ACTION;
             }
+            mEnabled = node.isEnabled();
+            final Appearance a = node.getAppearance();
             if (a != null) {
                 mTitle = a.getTitle();
                 mDescription = a.mDescriptionGetter;
@@ -309,7 +301,13 @@ public class Layout implements Parcelable {
             return null;
         }
 
-        void Log(int level) {
+        @Override
+        /* package */ Appearance getAppearance() {
+            return null;
+        }
+
+        @Override
+        /* package */ void Log(int level) {
             Log.d("Layout", indent(level) + "LayoutGetter");
             Layout l = get();
             l.Log(level + 1);
@@ -398,6 +396,16 @@ public class Layout implements Parcelable {
             } else {
                 return "";
             }
+        }
+
+        @Override
+        /* package */ Appearance getAppearance() {
+            return null;
+        }
+
+        @Override
+        /* package */ void Log(int level) {
+            Log.d("Layout", indent(level) + "SelectionGroup  '" + getTitle() + "'");
         }
 
         public String getTitle(int index) {
@@ -513,6 +521,7 @@ public class Layout implements Parcelable {
         private int mSelectedIndex = 0;
         private String mDetailedDescription;
         private int mContentIconRes = 0;
+        private boolean mEnabled = true;
 
         public static class Builder {
             private final Resources mRes;
@@ -578,6 +587,11 @@ public class Layout implements Parcelable {
                 return this;
             }
 
+            public Builder enabled(boolean enabled) {
+                mHeader.mEnabled = enabled;
+                return this;
+            }
+
             public Header build() {
                 return mHeader;
             }
@@ -598,7 +612,18 @@ public class Layout implements Parcelable {
             return mDetailedDescription;
         }
 
-        void Log(int level) {
+        @Override
+        /* package */ boolean isEnabled() {
+            return mEnabled;
+        }
+
+        @Override
+        /* package */ Appearance getAppearance() {
+            return mAppearance;
+        }
+
+        @Override
+        /* package */ void Log(int level) {
             Log.d("Layout", indent(level) + "Header  " + mAppearance);
             for (LayoutTreeNode i : mChildren)
                 i.Log(level + 1);
@@ -614,6 +639,7 @@ public class Layout implements Parcelable {
         private final Appearance mAppearance = new Appearance();
         private Bundle mActionData;
         private boolean mDefaultSelection = false;
+        private boolean mEnabled = true;
 
         public Action(int id) {
             mActionId = id;
@@ -688,12 +714,28 @@ public class Layout implements Parcelable {
                 return this;
             }
 
+            public Builder enabled(boolean enabled) {
+                mAction.mEnabled = enabled;
+                return this;
+            }
+
             public Action build() {
                 return mAction;
             }
         }
 
-        void Log(int level) {
+        @Override
+        /* package */ boolean isEnabled() {
+            return mEnabled;
+        }
+
+        @Override
+        /* package */ Appearance getAppearance() {
+            return mAppearance;
+        }
+
+        @Override
+        /* package */ void Log(int level) {
             Log.d("Layout", indent(level) + "Action  #" + mActionId + "  " + mAppearance);
         }
 
@@ -767,7 +809,18 @@ public class Layout implements Parcelable {
             return mAppearance.getTitle();
         }
 
-        void Log(int level) {
+        @Override
+        /* package */ boolean isEnabled() {
+            return true;
+        }
+
+        @Override
+        /* package */ Appearance getAppearance() {
+            return mAppearance;
+        }
+
+        @Override
+        /* package */ void Log(int level) {
             Log.d("Layout", indent(level) + "Status  " + mAppearance);
         }
     }
@@ -803,7 +856,13 @@ public class Layout implements Parcelable {
             return mTitle;
         }
 
-        void Log(int level) {
+        @Override
+        /* package */ Appearance getAppearance() {
+            return null;
+        }
+
+        @Override
+        /* package */ void Log(int level) {
             Log.d("Layout", indent(level) + "Static  '" + mTitle + "'");
         }
     }
@@ -1037,10 +1096,10 @@ public class Layout implements Parcelable {
     }
 
     private static String indent(int level) {
-        String s = new String();
+        StringBuilder s = new StringBuilder();
         for (int i = 0; i < level; ++i) {
-            s += "  ";
+            s.append("  ");
         }
-        return s;
+        return s.toString();
     }
 }

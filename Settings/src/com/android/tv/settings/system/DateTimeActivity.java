@@ -113,6 +113,39 @@ public class DateTimeActivity extends SettingsLayoutActivity {
         }
     };
 
+    private final Layout.LayoutGetter mSetDateLayoutGetter = new Layout.LayoutGetter() {
+        @Override
+        public Layout get() {
+            final Resources res = getResources();
+            return new Layout()
+                    .add(new Layout.Header.Builder(res)
+                            .title(R.string.system_date)
+                            .description(mDateStringGetter)
+                            .enabled(!getAutoState(Settings.Global.AUTO_TIME))
+                            .build()
+                            .add(new Layout.Action.Builder(res,
+                                    SetDateTimeActivity.getSetDateIntent(DateTimeActivity.this))
+                                    .title(R.string.system_set_date)
+                                    .description(mDateStringGetter)
+                                    .build()));
+        }
+    };
+
+    private final Layout.LayoutGetter mSetTimeLayoutGetter = new Layout.LayoutGetter() {
+        @Override
+        public Layout get() {
+            final Resources res = getResources();
+            return new Layout()
+                    .add(new Layout.Action.Builder(res,
+                            SetDateTimeActivity.getSetTimeIntent(DateTimeActivity.this))
+                            .title(R.string.system_set_time)
+                            .description(mTimeStringGetter)
+                            .enabled(!getAutoState(Settings.Global.AUTO_TIME))
+                            .build());
+
+        }
+    };
+
     private Layout.SelectionGroup mAutoDateTimeSelector;
     private Layout.SelectionGroup mTimezoneSelector;
     private Layout.SelectionGroup mTimeFormatSelector;
@@ -204,24 +237,12 @@ public class DateTimeActivity extends SettingsLayoutActivity {
                                 .description(mAutoDateTimeSelector)
                                 .build()
                                 .add(mAutoDateTimeSelector))
-                        .add(new Layout.Header.Builder(res)
-                                .title(R.string.system_date)
-                                .description(mDateStringGetter)
-                                .build()
-                                .add(new Layout.Action.Builder(res,
-                                        SetDateTimeActivity.getSetDateIntent(this))
-                                        .title(R.string.system_set_date)
-                                        .description(mDateStringGetter)
-                                        .build()))
+                        .add(mSetDateLayoutGetter)
                         .add(new Layout.Header.Builder(res)
                                 .title(R.string.system_time)
                                 .description(mTimeStringGetter)
                                 .build()
-                                .add(new Layout.Action.Builder(res,
-                                        SetDateTimeActivity.getSetTimeIntent(this))
-                                        .title(R.string.system_set_time)
-                                        .description(mTimeStringGetter)
-                                        .build())
+                                .add(mSetTimeLayoutGetter)
                                 .add(new Layout.Header.Builder(res)
                                         .title(R.string.system_set_time_zone)
                                         .description(mTimezoneStringGetter)
@@ -287,9 +308,13 @@ public class DateTimeActivity extends SettingsLayoutActivity {
                 break;
             case ACTION_AUTO_TIME_ON:
                 setAutoDateTime(true);
+                mSetDateLayoutGetter.refreshView();
+                mSetTimeLayoutGetter.refreshView();
                 break;
             case ACTION_AUTO_TIME_OFF:
                 setAutoDateTime(false);
+                mSetDateLayoutGetter.refreshView();
+                mSetTimeLayoutGetter.refreshView();
                 break;
             case ACTION_24HOUR_FORMAT_ON:
                 setTime24Hour(true);
