@@ -98,9 +98,9 @@ public class DateTimeActivity extends SettingsLayoutActivity {
             TimeZone tz = now.getTimeZone();
 
             Date date = new Date();
-            // TODO: this isn't very i18n friendly b/18905558
-            return formatOffset(tz.getOffset(date.getTime())) + ", " +
-                    tz.getDisplayName(tz.inDaylightTime(date), TimeZone.LONG);
+            return getString(R.string.desc_set_time_zone,
+                    formatOffset(tz.getOffset(date.getTime())),
+                    tz.getDisplayName(tz.inDaylightTime(date), TimeZone.LONG));
         }
     };
 
@@ -108,7 +108,7 @@ public class DateTimeActivity extends SettingsLayoutActivity {
         @Override
         public String get() {
             String status = mHelper.getStatusStringFromBoolean(isTimeFormat24h());
-            return String.format("%s (%s)", status,
+            return getString(R.string.desc_set_time_format, status,
                     DateFormat.getTimeFormat(DateTimeActivity.this).format(mDummyDate.getTime()));
         }
     };

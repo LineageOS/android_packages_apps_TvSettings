@@ -474,12 +474,17 @@
     <string name="system_set_time">Set time</string>
     <!-- Title for Set Time Zone in System Settings Date Time [CHAR LIMIT=50] -->
     <string name="system_set_time_zone">Set time zone</string>
+    <!-- Format string for displaying the current time zone, eg "GMT-08:00, Pacific Standard Time" [CHAR LIMIT=10] -->
+    <string name="desc_set_time_zone"><xliff:g id="offset" example="GMT-08:00">%1$s</xliff:g>, <xliff:g id="name" example="Pacific Standard Time">%2$s</xliff:g></string>
     <!-- Title for Set time format in System Settings Date Time [CHAR LIMIT=50] -->
     <string name="system_set_time_format">Use 24-hour format</string>
+    <!-- Format string for displaying the current time format (12/24 hour) [CHAR LIMIT=10] -->
+    <string name="desc_set_time_format"><xliff:g id="state" example="Off">%1$s</xliff:g> (<xliff:g id="sample" example="3:14 PM">%2$s</xliff:g>)</string>
     <!-- Title for automatic date & time [CHAR LIMIT = 80] -->
     <string name="system_auto_date_time">Automatic date &amp; time</string>
     <!-- Description for using automatic date & time in date time settings [CHAR LIMIT=100] -->
     <string name="desc_auto_date_time">Use network-provided time</string>
+
     <!-- Title for Location in System Settings [CHAR LIMIT=50] -->
     <string name="system_location">Location</string>
     <!-- Description for Location in System Settings [CHAR LIMIT=NONE] -->
