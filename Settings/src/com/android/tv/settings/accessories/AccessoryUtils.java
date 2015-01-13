@@ -16,16 +16,16 @@
 
 package com.android.tv.settings.accessories;
 
+import android.annotation.DrawableRes;
+import android.bluetooth.BluetoothDevice;
+
 import com.android.tv.settings.R;
 
-import android.bluetooth.BluetoothDevice;
-import com.android.tv.settings.accessories.InputDeviceCriteria;
-
 /*
- * Provide utiltilties for Remote & Accessories.
+ * Provide utilities for Remote & Accessories.
  */
 public class AccessoryUtils {
-    public static int getImageIdForDevice(BluetoothDevice dev) {
+    public static @DrawableRes int getImageIdForDevice(BluetoothDevice dev) {
         int devClass = dev.getBluetoothClass().getDeviceClass();
 
         if ((devClass & InputDeviceCriteria.MINOR_DEVICE_CLASS_POINTING) != 0) {
