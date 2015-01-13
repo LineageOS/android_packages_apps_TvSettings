@@ -45,19 +45,6 @@ public class SettingsHelper {
     }
 
     /**
-     * Returns a human readable Status description of the setting's value.
-     */
-    public String getSecureStatusIntSetting(String setting) {
-        try {
-            return getStatusStringFromInt(Settings.Secure.getInt(mContentResolver, setting));
-        } catch (SettingNotFoundException e) {
-            Log.d(TAG, "setting: " + setting + " not found");
-            // TODO: show error message
-        }
-        return null;
-    }
-
-    /**
      * Returns a string representation of the Integer setting's value.
      */
     public String getSecureIntSetting(String setting, String def) {
@@ -86,48 +73,20 @@ public class SettingsHelper {
         Settings.Secure.putInt(mContentResolver, setting, settingValue);
     }
 
-    /**
-     * Returns a human readable description of the setting's value.
-     */
-    public String getSystemIntSetting(String setting) {
-        try {
-            return getStatusStringFromInt(Settings.System.getInt(mContentResolver, setting));
-        } catch (SettingNotFoundException e) {
-            Log.d(TAG, "setting: " + setting + " not found");
-            // TODO: show error message
-        }
-        return null;
-    }
-
-    public boolean getSystemIntSettingToBoolean(String setting) {
-        try {
-            return Settings.System.getInt(mContentResolver, setting) == 1;
-        } catch (SettingNotFoundException e) {
-            return false;
-        }
-    }
-
-    public void setSystemIntSetting(String setting, boolean value) {
-        int settingValue = value ? 1 : 0;
-        Settings.System.putInt(mContentResolver, setting, settingValue);
-    }
-
-    public void setSystemProperties(String setting, String value) {
+    public static void setSystemProperties(String setting, String value) {
         SystemProperties.set(setting, value);
         pokeSystemProperties();
     }
 
-    public String getSystemProperties(String setting) {
+    public static void setSystemProperties(String setting, boolean value) {
+        setSystemProperties(setting, Boolean.toString(value));
+    }
+
+    public static String getSystemProperties(String setting) {
         return SystemProperties.get(setting);
     }
 
-    /**
-     * Returns a human readable description of the setting's value.
-     */
-    public String getSystemBooleanProperties(String setting) {
-        return getStatusStringFromBoolean(SystemProperties.getBoolean(setting, false));
-    }
-    private void pokeSystemProperties() {
+    private static void pokeSystemProperties() {
         (new SystemPropPoker()).execute();
     }
 
@@ -147,6 +106,9 @@ public class SettingsHelper {
                     try {
                         obj.transact(IBinder.SYSPROPS_TRANSACTION, data, null, 0);
                     } catch (RemoteException e) {
+                        if (DEBUG) {
+                            Log.d(TAG, "SystemPropPoker", e);
+                        }
                     } catch (Exception e) {
                         Log.i(TAG, "Somone wrote a bad service '" + service
                                 + "' that doesn't like to be poked: " + e);
@@ -156,17 +118,6 @@ public class SettingsHelper {
             }
             return null;
         }
-    }
-
-    public String getGlobalIntSetting(String setting) {
-        try {
-            return getStatusStringFromInt(Settings.Global.getInt(mContentResolver, setting));
-        } catch (SettingNotFoundException e) {
-            Log.d(TAG, "setting: " + setting + " not found");
-            // TODO: show error message
-        }
-        // Default to OFF if not found.
-        return mResources.getString(R.string.action_off_description);
     }
 
     public int getGlobalIntSettingToInt(String setting) {
@@ -179,23 +130,8 @@ public class SettingsHelper {
         return 0;
     }
 
-    public boolean getGlobalIntSettingAsBoolean(String setting) {
-        return Settings.Global.getInt(mContentResolver, setting, 0) != 0;
-    }
-
-    public void setGlobalIntSetting(String setting, boolean value) {
-        int settingValue = value ? 1 : 0;
-        Settings.Global.putInt(mContentResolver, setting, settingValue);
-    }
-
     public String getStatusStringFromBoolean(boolean status) {
         int descResId = status ? R.string.action_on_description : R.string.action_off_description;
-        return mResources.getString(descResId);
-    }
-
-    public String getStatusStringFromInt(int status) {
-        int descResId = status > 0 ? R.string.action_on_description :
-                R.string.action_off_description;
         return mResources.getString(descResId);
     }
 
@@ -207,10 +143,8 @@ public class SettingsHelper {
      *         R.string.action_on_description; false otherwise.
      */
     public boolean getStatusFromString(String status) {
-        if (status == null) {
-            return false;
-        }
-        return status.equalsIgnoreCase(mResources.getString(R.string.action_on_description));
+        return status != null &&
+                status.equalsIgnoreCase(mResources.getString(R.string.action_on_description));
     }
 
 }

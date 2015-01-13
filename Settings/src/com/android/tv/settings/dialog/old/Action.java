@@ -189,28 +189,6 @@ public class Action implements Parcelable {
 
     /**
      * Returns a list of {@link Action} with the specified keys and titles
-     * matched up.
-     * <p>
-     * The key and title arrays must be of equal length.
-     */
-    public static ArrayList<Action> createActionsFromArrays(
-            String[] keys, String[] titles, String checkedItemKey) {
-        return createActionsFromArrays(keys, titles, DEFAULT_CHECK_SET_ID, checkedItemKey);
-    }
-
-    /**
-     * Returns a list of {@link Action} with the specified keys and titles
-     * matched up and a given check set ID so that they are related.
-     * <p>
-     * The key and title arrays must be of equal length.
-     */
-    public static ArrayList<Action> createActionsFromArrays(String[] keys, String[] titles,
-            int checkSetId) {
-        return createActionsFromArrays(keys, titles, checkSetId, null);
-    }
-
-    /**
-     * Returns a list of {@link Action} with the specified keys and titles
      * matched up and a given check set ID so that they are related.
      * <p>
      * The key and title arrays must be of equal length.
@@ -261,16 +239,8 @@ public class Action implements Parcelable {
         return mChecked;
     }
 
-    public int getDrawableResource() {
-        return mDrawableResource;
-    }
-
     public Uri getIconUri() {
         return mIconUri;
-    }
-
-    public String getResourcePackageName() {
-        return mResourcePackageName;
     }
 
     /**

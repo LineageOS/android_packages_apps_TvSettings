@@ -757,41 +757,40 @@
     <!-- Description for action to warn before installing of applications that may cause harm [CHAR LIMIT=NONE]-->
     <string name="security_verify_apps_desc">Disallow or warn before installation of apps that may cause harm</string>
 
-    <!-- Values for HDCP checking preference. -->
-    <string-array name="hdcp_checking_values" translatable="false" >
-        <item>never</item>
-        <item>drm-only</item>
-        <item>always</item>
-    </string-array>
+    <!-- Summary for HDCP checking preference. [CHAR LIMIT=100]-->
+    <string name="system_hdcp_checking_never">Never</string>
+    <!-- Summary for HDCP checking preference. [CHAR LIMIT=100]-->
+    <string name="system_hdcp_checking_drm">For DRM content</string>
+    <!-- Summary for HDCP checking preference. [CHAR LIMIT=100]-->
+    <string name="system_hdcp_checking_always">Always</string>
 
-    <!-- Summaries for HDCP checking preference. [CHAR LIMIT=100]-->
-    <string-array name="hdcp_checking_summaries" >
-        <item>Never</item>
-        <item>For DRM content</item>
-        <item>Always</item>
-    </string-array>
+    <!-- Title for HDMI optimization preference value [CHAR LIMIT=60] -->
+    <string name="system_hdmi_optimization_best_resolution">Best resolution</string>
+    <!-- Title for HDMI optimization preference value [CHAR LIMIT=60] -->
+    <string name="system_hdmi_optimization_best_framerate">Best framerate</string>
 
-    <!-- UI debug setting: label for app picker to select no applicatiojn [CHAR LIMIT=50] -->
+    <!-- Title for debug overdraw preference. [CHAR LIMIT=35] -->
+    <string name="system_hw_overdraw_off">Off</string>
+    <!-- Title for debug overdraw preference. [CHAR LIMIT=35] -->
+    <string name="system_hw_overdraw_areas">Show overdraw areas</string>
+    <!-- Title for debug overdraw preference. [CHAR LIMIT=35] -->
+    <string name="system_hw_overdraw_counter">Show overdraw counter</string>
+
+
+    <!-- UI debug setting: label for app picker to select no application [CHAR LIMIT=50] -->
     <string name="no_application">Nothing</string>
 
-    <!-- Titles for OpenGL traces preference. [CHAR LIMIT=35] -->
-    <string-array name="enable_opengl_traces_entries">
-        <item>None</item>
-        <item>Logcat</item>
-        <item>Systrace (Graphics)</item>
-        <item>Call stack on glGetError</item>
-    </string-array>
-
-    <!-- Values for OpenGL traces preference. -->
-    <string-array name="enable_opengl_traces_values" translatable="false" >
-        <item>0</item>
-        <item>1</item>
-        <item>systrace</item>
-        <item>error</item>
-    </string-array>
+    <!-- Title for OpenGL traces preference. [CHAR LIMIT=35] -->
+    <string name="enable_opengl_traces_none">None</string>
+    <!-- Title for OpenGL traces preference. Do not translate "Logcat" [CHAR LIMIT=35] -->
+    <string name="enable_opengl_traces_logcat">Logcat</string>
+    <!-- Title for OpenGL traces preference. Do not translate "Systrace" [CHAR LIMIT=35] -->
+    <string name="enable_opengl_traces_systrace">Systrace (Graphics)</string>
+    <!-- Title for OpenGL traces preference. "Call stack" is a developer term. Do not translate "glGetError" [CHAR LIMIT=35] -->
+    <string name="enable_opengl_traces_error">Call stack on glGetError</string>
 
     <!-- Titles for window animation scale preference. [CHAR LIMIT=35] -->
-    <string-array name="window_animation_scale_entries">
+    <string-array name="animation_scale_entries">
         <item>Animation off</item>
         <item>Animation scale .5x</item>
         <item>Animation scale 1x</item>
@@ -802,7 +801,7 @@
     </string-array>
 
     <!-- Values for window animation scale preference. -->
-    <string-array name="window_animation_scale_values" translatable="false" >
+    <string-array name="animation_scale_values" translatable="false" >
         <item>0</item>
         <item>.5</item>
         <item>1</item>
@@ -812,83 +811,26 @@
         <item>10</item>
     </string-array>
 
-    <!-- Titles for transition animation scale preference. [CHAR LIMIT=35] -->
-    <string-array name="transition_animation_scale_entries">
-        <item>Animation off</item>
-        <item>Animation scale .5x</item>
-        <item>Animation scale 1x</item>
-        <item>Animation scale 1.5x</item>
-        <item>Animation scale 2x</item>
-        <item>Animation scale 5x</item>
-        <item>Animation scale 10x</item>
-    </string-array>
+    <!-- Title for frame time tracking preference. [CHAR LIMIT=35] -->
+    <string name="track_frame_time_off">Off</string>
+    <!-- Title for frame time tracking preference. [CHAR LIMIT=35] -->
+    <string name="track_frame_time_bars">On screen as bars</string>
+    <!-- Title for frame time tracking preference. Do not translate "adb shell dumpsys gfxinfo" [CHAR LIMIT=35] -->
+    <string name="track_frame_time_gfxinfo">In adb shell dumpsys gfxinfo</string>
 
-    <!-- Values for transition animation scale preference. -->
-    <string-array name="transition_animation_scale_values" translatable="false" >
-        <item>0</item>
-        <item>.5</item>
-        <item>1</item>
-        <item>1.5</item>
-        <item>2</item>
-        <item>5</item>
-        <item>10</item>
-    </string-array>
+    <!-- Title for app process limit preference. [CHAR LIMIT=35] -->
+    <string name="app_process_limit_standard">Standard limit</string>
+    <!-- Title for app process limit preference. [CHAR LIMIT=35] -->
+    <string name="app_process_limit_zero">No background processes</string>
+    <!-- Title for app process limit preference. [CHAR LIMIT=35] -->
+    <string name="app_process_limit_one">At most 1 process</string>
+    <!-- Title for app process limit preference. [CHAR LIMIT=35] -->
+    <string name="app_process_limit_two">At most 2 processes</string>
+    <!-- Title for app process limit preference. [CHAR LIMIT=35] -->
+    <string name="app_process_limit_three">At most 3 processes</string>
+    <!-- Title for app process limit preference. [CHAR LIMIT=35] -->
+    <string name="app_process_limit_four">At most 4 processes</string>
 
-    <!-- Titles for animator duration scale preference. [CHAR LIMIT=35] -->
-    <string-array name="animator_duration_scale_entries">
-        <item>Animation off</item>
-        <item>Animation scale .5x</item>
-        <item>Animation scale 1x</item>
-        <item>Animation scale 1.5x</item>
-        <item>Animation scale 2x</item>
-        <item>Animation scale 5x</item>
-        <item>Animation scale 10x</item>
-    </string-array>
-
-    <!-- Values for animator duration scale preference. -->
-    <string-array name="animator_duration_scale_values" translatable="false" >
-        <item>0</item>
-        <item>.5</item>
-        <item>1</item>
-        <item>1.5</item>
-        <item>2</item>
-        <item>5</item>
-        <item>10</item>
-    </string-array>
-
-    <!-- Titles for frame time tracking preference. [CHAR LIMIT=35] -->
-    <string-array name="track_frame_time_entries">
-        <item>Off</item>
-        <item>On screen as bars</item>
-        <item>In adb shell dumpsys gfxinfo</item>
-    </string-array>
-
-    <!-- Values for frame time tracking preference. -->
-    <string-array name="track_frame_time_values" translatable="false" >
-        <item>false</item>
-        <item>visual_bars</item>
-        <item>true</item>
-    </string-array>
-
-    <!-- Titles for app process limit preference. [CHAR LIMIT=35] -->
-    <string-array name="app_process_limit_entries">
-        <item>Standard limit</item>
-        <item>No background processes</item>
-        <item>At most 1 process</item>
-        <item>At most 2 processes</item>
-        <item>At most 3 processes</item>
-        <item>At most 4 processes</item>
-    </string-array>
-
-    <!-- Values for app process limit preference. -->
-    <string-array name="app_process_limit_values" translatable="false" >
-        <item>-1</item>
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-    </string-array>
     <!--  Description for the preference screen to enable the global gesture that turns on accessibility. [CHAR LIMIT=none] -->
 
     <!-- Do not translate. -->

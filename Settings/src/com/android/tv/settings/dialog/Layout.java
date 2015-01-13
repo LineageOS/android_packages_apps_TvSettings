@@ -341,6 +341,8 @@ public class Layout implements Parcelable {
             }
 
             private final List<Item> mItems;
+            private boolean mSetInitialId = false;
+            private int mInitialId;
 
             public Builder() {
                 mItems = new ArrayList<>();
@@ -352,6 +354,12 @@ public class Layout implements Parcelable {
 
             public Builder add(String title, String description, int id) {
                 mItems.add(new Item(title, description, id));
+                return this;
+            }
+
+            public Builder select(int id) {
+                mSetInitialId = true;
+                mInitialId = id;
                 return this;
             }
 
@@ -367,7 +375,11 @@ public class Layout implements Parcelable {
                     ids[i] = item.id;
                     i++;
                 }
-                return new SelectionGroup(titles, descriptions, ids);
+                final SelectionGroup selectionGroup = new SelectionGroup(titles, descriptions, ids);
+                if (mSetInitialId) {
+                    selectionGroup.setSelected(mInitialId);
+                }
+                return selectionGroup;
             }
         }
 
@@ -605,6 +617,14 @@ public class Layout implements Parcelable {
         public Header add(LayoutTreeNode node) {
             node.mParent = this;
             mChildren.add(node);
+            return this;
+        }
+
+        public Header setSelectionGroup(SelectionGroup selectionGroup) {
+            selectionGroup.mParent = this;
+            mChildren.add(selectionGroup);
+            mAppearance.mDescriptionGetter = new SelectionGroupStringGetter(
+                    selectionGroup);
             return this;
         }
 
