@@ -910,6 +910,9 @@ public class Layout implements Parcelable {
 
     public void setRefreshViewListener(LayoutNodeRefreshListener listener) {
         mListener = listener;
+        for (final LayoutGetter getter : mVisibleLayoutGetters) {
+            getter.setListener(listener);
+        }
     }
 
     /**
