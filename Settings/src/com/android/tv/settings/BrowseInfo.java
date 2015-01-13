@@ -166,7 +166,9 @@ public class BrowseInfo extends BrowseInfoBase {
     private final Object mGuard = new Object();
     private final boolean mAllowMultipleAccounts;
     private MenuItem mWifiItem = null;
+    private MenuItem mDeveloperOptionItem = null;
     private ArrayObjectAdapter mWifiRow = null;
+    private ArrayObjectAdapter mDeveloperRow = null;
 
     private final PreferenceUtils mPreferenceUtils;
     private boolean mDeveloperEnabled;
@@ -201,7 +203,10 @@ public class BrowseInfo extends BrowseInfoBase {
         final boolean developerEnabled = mPreferenceUtils.isDeveloperEnabled();
         if (developerEnabled != mDeveloperEnabled) {
             mDeveloperEnabled = developerEnabled;
-            init();
+            if (mDeveloperOptionItem != null) {
+                mDeveloperRow.add (mDeveloperOptionItem);
+                mDeveloperOptionItem = null;
+            }
         }
     }
 
@@ -266,8 +271,7 @@ public class BrowseInfo extends BrowseInfoBase {
             if (PREF_KEY_ADD_ACCOUNT.equals(key)) {
                 mAccountHeaderId = mHeaderId;
                 addAccounts(mRow);
-            } else if ((!key.equals(PREF_KEY_DEVELOPER) || mDeveloperEnabled)
-                    && (!key.equals(PREF_KEY_INPUTS) || mInputSettingNeeded)) {
+            } else if (!key.equals(PREF_KEY_INPUTS) || mInputSettingNeeded) {
                 MenuItem.TextGetter descriptionGetter = getDescriptionTextGetterFromKey(key);
                 MenuItem.UriGetter uriGetter = getIconUriGetterFromKey(key);
                 MenuItem.Builder builder = new MenuItem.Builder().id(mNextItemId++).title(title)
@@ -278,12 +282,16 @@ public class BrowseInfo extends BrowseInfoBase {
                 } else {
                     builder.imageUriGetter(uriGetter);
                 }
+                final MenuItem item = builder.build();
                 if (key.equals(PREF_KEY_WIFI)) {
-                    mWifiItem = builder.build();
+                    mWifiItem = item;
                     mRow.add(mWifiItem);
                     mWifiRow = mRow;
+                } else if (! key.equals(PREF_KEY_DEVELOPER) || mDeveloperEnabled) {
+                    mRow.add(item);
                 } else {
-                    mRow.add(builder.build());
+                    mDeveloperRow = mRow;
+                    mDeveloperOptionItem = item;
                 }
             }
         }
