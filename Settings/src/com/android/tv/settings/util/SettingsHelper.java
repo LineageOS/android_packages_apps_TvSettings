@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.util;
 
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.AsyncTask;
@@ -25,8 +24,6 @@ import android.os.Parcel;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.SystemProperties;
-import android.provider.Settings;
-import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 
 import com.android.tv.settings.R;
@@ -36,41 +33,10 @@ public class SettingsHelper {
     private static final String TAG = "SettingsHelper";
     private static final boolean DEBUG = false;
 
-    private final ContentResolver mContentResolver;
     private final Resources mResources;
 
     public SettingsHelper(Context context) {
-        mContentResolver = context.getContentResolver();
         mResources = context.getResources();
-    }
-
-    /**
-     * Returns a string representation of the Integer setting's value.
-     */
-    public String getSecureIntSetting(String setting, String def) {
-        return Integer.toString(
-                Settings.Secure.getInt(mContentResolver, setting, Integer.parseInt(def)));
-    }
-
-    /**
-     * Returns the int as a boolean, for use in determining "on|off".
-     */
-    public boolean getSecureIntValueSettingToBoolean(String setting) {
-        try {
-            return Settings.Secure.getInt(mContentResolver, setting) == 1;
-        } catch (SettingNotFoundException e) {
-            return false;
-        }
-    }
-
-    public void setSecureIntSetting(String setting, boolean value) {
-        int settingValue = value ? 1 : 0;
-        Settings.Secure.putInt(mContentResolver, setting, settingValue);
-    }
-
-    public void setSecureIntValueSetting(String setting, Object value) {
-        int settingValue = Integer.parseInt((String) value);
-        Settings.Secure.putInt(mContentResolver, setting, settingValue);
     }
 
     public static void setSystemProperties(String setting, String value) {
@@ -120,31 +86,8 @@ public class SettingsHelper {
         }
     }
 
-    public int getGlobalIntSettingToInt(String setting) {
-        try {
-            return Settings.Global.getInt(mContentResolver, setting);
-        } catch (SettingNotFoundException e) {
-            Log.d(TAG, "setting: " + setting + " not found");
-            // TODO: show error message
-        }
-        return 0;
-    }
-
     public String getStatusStringFromBoolean(boolean status) {
         int descResId = status ? R.string.action_on_description : R.string.action_off_description;
         return mResources.getString(descResId);
     }
-
-    /**
-     * Translates a status string into a boolean value.
-     *
-     * @param status Status string ("ON"/"OFF")
-     * @return true if the provided status string equals the localized
-     *         R.string.action_on_description; false otherwise.
-     */
-    public boolean getStatusFromString(String status) {
-        return status != null &&
-                status.equalsIgnoreCase(mResources.getString(R.string.action_on_description));
-    }
-
 }

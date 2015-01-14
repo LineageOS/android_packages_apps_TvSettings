@@ -856,24 +856,16 @@
 
     <!-- TTS settings -->
 
-    <!-- Default speech rate choices [CHAR LIMIT=30] -->
-    <string-array name="tts_rate_entries">
-        <item>Very slow</item>
-        <item>Slow</item>
-        <item>Normal</item>
-        <item>Fast</item>
-        <item>Very fast</item>
-    </string-array>
-    <!-- Text to speech rate values [DO NOT TRANSLATE] -->
-    <string-array name="tts_rate_values">
-        <item>60</item>
-        <item>80</item>
-        <item>100</item>
-        <item>150</item>
-        <item>200</item>
-    </string-array>
-    <!-- Default Text to Speach rate. Should match value for "Normal" in the above array. [DO NOT TRANSLATE] -->
-    <string name="tts_rate_default_value">100</string>
+    <!-- Text-to-speech speech rate choice [CHAR LIMIT=30] -->
+    <string name="tts_rate_very_slow">Very slow</string>
+    <!-- Text-to-speech speech rate choice [CHAR LIMIT=30] -->
+    <string name="tts_rate_slow">Slow</string>
+    <!-- Text-to-speech speech rate choice [CHAR LIMIT=30] -->
+    <string name="tts_rate_normal">Normal</string>
+    <!-- Text-to-speech speech rate choice [CHAR LIMIT=30] -->
+    <string name="tts_rate_fast">Fast</string>
+    <!-- Text-to-speech speech rate choice [CHAR LIMIT=30] -->
+    <string name="tts_rate_very_fast">Very fast</string>
 
     <!-- Keyboard Settings -->
     <!-- Title for Current Keyboard [CHAR LIMIT=80] -->

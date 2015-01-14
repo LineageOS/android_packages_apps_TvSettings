@@ -259,6 +259,7 @@ class SettingsLayoutAdapter extends RecyclerView.Adapter {
 
             mTitle.setText(layoutRow.getTitle());
             mCheckmarkView.setVisibility(layoutRow.isChecked() ? View.VISIBLE : View.INVISIBLE);
+            layoutRow.getChecked().setListener(this);
 
             ViewGroup.LayoutParams contentLp = mContent.getLayoutParams();
             if (setIndicator(mIndicatorView, layoutRow)) {

@@ -78,7 +78,7 @@ public class Layout implements Parcelable {
         private final LayoutTreeNode mNode;
         private final boolean mEnabled;
         private final int mViewType;
-        private boolean mChecked = false;
+        private BooleanGetter mChecked = FALSE_GETTER;
         private Drawable mIcon = null;
         private int mSelectionIndex;
 
@@ -99,11 +99,15 @@ public class Layout implements Parcelable {
         }
 
         public boolean isChecked() {
+            return mChecked.get();
+        }
+
+        public BooleanGetter getChecked() {
             return mChecked;
         }
 
         public void setChecked(boolean v) {
-            mChecked = v;
+            mChecked = v ? TRUE_GETTER : FALSE_GETTER;
         }
 
         public boolean infoOnly() {
@@ -187,7 +191,7 @@ public class Layout implements Parcelable {
                 mTitle = a.getTitle();
                 mDescription = a.mDescriptionGetter;
                 mIcon = a.getIcon();
-                mChecked = a.isChecked();
+                mChecked = a.getChecked();
             }
         }
 
@@ -196,11 +200,88 @@ public class Layout implements Parcelable {
             mViewType = VIEW_TYPE_ACTION;
             mSelectionIndex = selectedIndex;
             mTitle = selectionGroup.getTitle(selectedIndex);
-            mChecked = selectionGroup.getChecked(selectedIndex);
+            mChecked = selectionGroup.getChecked(selectedIndex) ? TRUE_GETTER : FALSE_GETTER;
             mDescription = selectionGroup.getDescription(selectedIndex);
             mEnabled = true;
         }
     }
+
+    /**
+     * Getter object for boolean values, mostly used for checked state on headers/actions/etc.
+     * This is a slightly simpler alternative to using a LayoutGetter to make sure the checked state
+     * is always up to date.
+     */
+    public abstract static class BooleanGetter {
+        private ContentNodeRefreshListener mListener;
+
+        public void setListener(ContentNodeRefreshListener listener) {
+            mListener = listener;
+        }
+
+        public abstract boolean get();
+
+        /**
+         * Notification from client that antecedent data has changed and the string should be
+         * redisplayed.
+         */
+        public void refreshView() {
+            if (mListener != null) {
+                mListener.onRefreshView();
+            }
+        }
+    }
+
+    /**
+     * Basic mutable implementation of BooleanGetter. Call {@link MutableBooleanGetter#set(boolean)}
+     * to modify the state and automatically refresh the view.
+     */
+    public final static class MutableBooleanGetter extends BooleanGetter {
+        private boolean mState;
+
+        public MutableBooleanGetter() {
+            mState = false;
+        }
+
+        public MutableBooleanGetter(boolean state) {
+            mState = state;
+        }
+
+        @Override
+        public boolean get() {
+            return mState;
+        }
+
+        /**
+         * Set the boolean value for this object. Automatically calls {@link #refreshView()}
+         * @param newState State to set
+         */
+        public void set(boolean newState) {
+            mState = newState;
+            refreshView();
+        }
+    }
+
+    private final static class LiteralBooleanGetter extends BooleanGetter {
+        private final boolean mState;
+
+        public LiteralBooleanGetter(boolean state) {
+            mState = state;
+        }
+
+        @Override
+        public boolean get() {
+            return mState;
+        }
+
+        @Override
+        public void setListener(ContentNodeRefreshListener listener) {}
+
+        @Override
+        public void refreshView() {}
+    }
+
+    private static final BooleanGetter TRUE_GETTER = new LiteralBooleanGetter(true);
+    private static final BooleanGetter FALSE_GETTER = new LiteralBooleanGetter(false);
 
     public abstract static class DrawableGetter {
         public abstract Drawable get();
@@ -371,7 +452,7 @@ public class Layout implements Parcelable {
                 int i = 0;
                 for (final Item item : mItems) {
                     titles[i] = item.title;
-                    descriptions[1] = item.description;
+                    descriptions[i] = item.description;
                     ids[i] = item.id;
                     i++;
                 }
@@ -488,7 +569,7 @@ public class Layout implements Parcelable {
         private DrawableGetter mIconGetter;
         private String mTitle;
         private StringGetter mDescriptionGetter;
-        private boolean mChecked = false;
+        private BooleanGetter mChecked = FALSE_GETTER;
 
         public String toString() {
             StringBuilder stringBuilder = new StringBuilder()
@@ -503,7 +584,7 @@ public class Layout implements Parcelable {
             }
             stringBuilder
                 .append(" : '")
-                .append(mChecked)
+                .append(mChecked.get())
                 .append("'");
             return stringBuilder.toString();
         }
@@ -520,8 +601,16 @@ public class Layout implements Parcelable {
             }
         }
 
-        public boolean isChecked() {
+        public BooleanGetter getChecked() {
             return mChecked;
+        }
+
+        public void setChecked(boolean checked) {
+            mChecked = checked ? TRUE_GETTER : FALSE_GETTER;
+        }
+
+        public void setChecked(BooleanGetter getter) {
+            mChecked = getter;
         }
     }
 
@@ -717,7 +806,12 @@ public class Layout implements Parcelable {
             }
 
             public Builder checked(boolean checked) {
-                mAction.mAppearance.mChecked = checked;
+                mAction.mAppearance.setChecked(checked);
+                return this;
+            }
+
+            public Builder checked(BooleanGetter getter) {
+                mAction.mAppearance.setChecked(getter);
                 return this;
             }
 
