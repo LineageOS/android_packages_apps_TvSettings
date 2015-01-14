@@ -226,7 +226,11 @@
     <string name="system_set_date" msgid="2437586307768561116">"मिति सेट गर्नुहोस्"</string>
     <string name="system_set_time" msgid="4661804115501057452">"समय सेट गर्नुहोस्"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"समयक्षेत्र मिलाउनुहोस्"</string>
+    <!-- no translation found for desc_set_time_zone (2948629174438460709) -->
+    <skip />
     <string name="system_set_time_format" msgid="4447882066895090612">"२४-घण्टे ढाँचा प्रयोग गर्नुहोस्"</string>
+    <!-- no translation found for desc_set_time_format (3131006238681763219) -->
+    <skip />
     <string name="system_auto_date_time" msgid="3629668599205033272">"स्वचालित मिति र समय"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"सञ्जालद्वारा उपलब्ध गराइएको समय प्रयोग गर्नुहोस्"</string>
     <string name="system_location" msgid="502463575930545806">"स्थान"</string>
@@ -359,58 +363,48 @@
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"तपाईंको उपकरण र व्यक्तिगत डेटा अज्ञात स्रोतको अनुप्रयोगहरूद्वारा आक्रमण गर्न बढि असुरक्षित छन्। तपाईंको उपकरणमा वा यी अनुप्रयोगहरू प्रयोगबाट डेटा हराउन परिणाम वा कुनै पनि नोक्सानीका लागि तपाईं आफैं जिम्मेदार हुनुहुन्छ भन्ने कुरामा सहमत हुनुहुन्छ।"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"अनुप्रयोगहरू रुजु गर्नुहोस्"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"हानी गर्न सक्ने अनुप्रयोगहरूका स्थापना गर्नुअघि चेतावनी दिनुहोस् वा अनुमति नै नदिनुहोस्"</string>
-  <string-array name="hdcp_checking_summaries">
-    <item msgid="28682351350387246">"कहिले पनि होइन"</item>
-    <item msgid="5583820743908145007">"DRM सामग्रीको लागि"</item>
-    <item msgid="6148080515126921450">"सधैँ"</item>
-  </string-array>
+    <!-- no translation found for system_hdcp_checking_never (1758043078676276985) -->
+    <skip />
+    <!-- no translation found for system_hdcp_checking_drm (8563220452241389905) -->
+    <skip />
+    <!-- no translation found for system_hdcp_checking_always (7264575337360957746) -->
+    <skip />
+    <!-- no translation found for system_hdmi_optimization_best_resolution (2612694859060466938) -->
+    <skip />
+    <!-- no translation found for system_hdmi_optimization_best_framerate (67514549356802383) -->
+    <skip />
+    <!-- no translation found for system_hw_overdraw_off (8790815645038325739) -->
+    <skip />
+    <!-- no translation found for system_hw_overdraw_areas (5227122594087360124) -->
+    <skip />
+    <!-- no translation found for system_hw_overdraw_counter (3042271307724657436) -->
+    <skip />
     <string name="no_application" msgid="1746564297589309465">"केही पनि होइन"</string>
-  <string-array name="enable_opengl_traces_entries">
-    <item msgid="7803412455089800607">"कुनै पनि होइन"</item>
-    <item msgid="1284340221135955876">"लगक्याट"</item>
-    <item msgid="5054298948370382226">"सिस्ट्रेस (ग्राफिक्स)"</item>
-    <item msgid="6650537879885155020">"glGetError मा स्ट्याक कल गर्नुहोस्"</item>
-  </string-array>
-  <string-array name="window_animation_scale_entries">
-    <item msgid="258143468897415016">"सजीविकरण बन्द"</item>
-    <item msgid="5618283113978106483">"सजीविकरण मापन .5x"</item>
-    <item msgid="397451685490290179">"सजीविकरण मापन 1x"</item>
-    <item msgid="6331600473492644688">"सजीविकरण मापन 1.5x"</item>
-    <item msgid="7004952449777104295">"सजीविकरण मापन 2x"</item>
-    <item msgid="1063528777234221038">"सजीविकरण मापन 5x"</item>
-    <item msgid="6926378938392529339">"सजीविकरण मापन 10x"</item>
-  </string-array>
-  <string-array name="transition_animation_scale_entries">
-    <item msgid="5604755386232556553">"सजीविकरण बन्द"</item>
-    <item msgid="5578331490208019526">"सजीविकरण मापन .5x"</item>
-    <item msgid="5338802612080069593">"सजीविकरण मापन 1x"</item>
-    <item msgid="1309704285131661878">"सजीविकरण मापन 1.5x"</item>
-    <item msgid="5654221040036850960">"सजीविकरण मापन 2x"</item>
-    <item msgid="6092484055733043622">"सजीविकरण मापन 5x"</item>
-    <item msgid="4049359393103906268">"सजीविकरण मापन 10x"</item>
-  </string-array>
-  <string-array name="animator_duration_scale_entries">
-    <item msgid="6966595852691619795">"सजीविकरण बन्द"</item>
-    <item msgid="1302400121783768928">"सजीविकरण मापन .5x"</item>
-    <item msgid="9088460595137551270">"सजीविकरण मापन 1x"</item>
-    <item msgid="5640745580399155880">"सजीविकरण मापन 1.5x"</item>
-    <item msgid="3320199023884342141">"सजीविकरण मापन 2x"</item>
-    <item msgid="5620232666163371843">"सजीविकरण मापन 5x"</item>
-    <item msgid="8580701701183364590">"सजीविकरण मापन 10x"</item>
-  </string-array>
-  <string-array name="track_frame_time_entries">
-    <item msgid="3161533682947406047">"बन्द गर्नुहोस्"</item>
-    <item msgid="6446688182396957172">"स्क्रिनमा बारको रूपमा"</item>
-    <item msgid="9080500692341488612">"In adb shell dumpsys gfxinfo"</item>
-  </string-array>
-  <string-array name="app_process_limit_entries">
-    <item msgid="9052853079905663082">"मानक सीमा"</item>
-    <item msgid="6534728802931195545">"कुनै पृष्ठभूमि प्रक्रियाहरू छैनन्"</item>
-    <item msgid="290172167371846384">"बढीमा १ प्रक्रिया"</item>
-    <item msgid="4818593824413771192">"बढीमा २ प्रक्रियाहरू"</item>
-    <item msgid="8337569181800165433">"बढीमा ३ प्रक्रियाहरू"</item>
-    <item msgid="8261219565766202947">"बढीमा ४ प्रक्रियाहरू"</item>
-  </string-array>
+    <!-- no translation found for enable_opengl_traces_none (6074804146602749420) -->
+    <skip />
+    <!-- no translation found for animation_scale_entries:0 (7477134110460336436) -->
+    <!-- no translation found for animation_scale_entries:1 (8327257151534006014) -->
+    <!-- no translation found for animation_scale_entries:2 (2105786719544636780) -->
+    <!-- no translation found for animation_scale_entries:3 (5290554136790336403) -->
+    <!-- no translation found for animation_scale_entries:4 (1232929590838082483) -->
+    <!-- no translation found for animation_scale_entries:5 (1889239009419613796) -->
+    <!-- no translation found for animation_scale_entries:6 (7268894934484547297) -->
+    <!-- no translation found for track_frame_time_off (5050360262132715904) -->
+    <skip />
+    <!-- no translation found for track_frame_time_bars (4470692840177888414) -->
+    <skip />
+    <!-- no translation found for app_process_limit_standard (8878199798843299844) -->
+    <skip />
+    <!-- no translation found for app_process_limit_zero (2667197109226789876) -->
+    <skip />
+    <!-- no translation found for app_process_limit_one (6417937037944753355) -->
+    <skip />
+    <!-- no translation found for app_process_limit_two (1067649339026655778) -->
+    <skip />
+    <!-- no translation found for app_process_limit_three (7234034351975161398) -->
+    <skip />
+    <!-- no translation found for app_process_limit_four (8907156918309381955) -->
+    <skip />
   <string-array name="tts_rate_entries">
     <item msgid="6425501867101281228">"निकै बिस्तारो"</item>
     <item msgid="3458529225374884970">"ढिलो"</item>

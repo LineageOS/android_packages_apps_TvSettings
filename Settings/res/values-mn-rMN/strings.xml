@@ -226,7 +226,11 @@
     <string name="system_set_date" msgid="2437586307768561116">"Огноо тохируулах"</string>
     <string name="system_set_time" msgid="4661804115501057452">"Цаг тохируулах"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"Цагийн бүсийн тохиргоо"</string>
+    <!-- no translation found for desc_set_time_zone (2948629174438460709) -->
+    <skip />
     <string name="system_set_time_format" msgid="4447882066895090612">"24 цагийн формат ашиглах"</string>
+    <!-- no translation found for desc_set_time_format (3131006238681763219) -->
+    <skip />
     <string name="system_auto_date_time" msgid="3629668599205033272">"Автомат огноо &amp; цаг"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"Сүлжээний цагийг ашиглах"</string>
     <string name="system_location" msgid="502463575930545806">"Байршил"</string>
@@ -359,58 +363,48 @@
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Таны төхөөрөмж болон хувийн мэдээлэл нь үл мэдэгдэх эх сурвалж бүхий програмын довтолгоонд эмзэг байдаг. Та эдгээр програмыг ашигласнаар үүсж болон аливаа мэдээллий алдагдал болон таны төхөөрөмжид учир ч болох гэмтэл доголдлын хариуцлагыг та өөрөө бүрэн хариуцана гэдгийг хүлээн зөвшөөрч байна."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Апп-уудыг тулгах"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Хор учруулж болзошгүй апп-уудыг суулгахын өмнө үл зөвшөөрөх буюу анхааруулах"</string>
-  <string-array name="hdcp_checking_summaries">
-    <item msgid="28682351350387246">"Хэзээ ч үгүй"</item>
-    <item msgid="5583820743908145007">"DRM контент"</item>
-    <item msgid="6148080515126921450">"Байнга"</item>
-  </string-array>
+    <!-- no translation found for system_hdcp_checking_never (1758043078676276985) -->
+    <skip />
+    <!-- no translation found for system_hdcp_checking_drm (8563220452241389905) -->
+    <skip />
+    <!-- no translation found for system_hdcp_checking_always (7264575337360957746) -->
+    <skip />
+    <!-- no translation found for system_hdmi_optimization_best_resolution (2612694859060466938) -->
+    <skip />
+    <!-- no translation found for system_hdmi_optimization_best_framerate (67514549356802383) -->
+    <skip />
+    <!-- no translation found for system_hw_overdraw_off (8790815645038325739) -->
+    <skip />
+    <!-- no translation found for system_hw_overdraw_areas (5227122594087360124) -->
+    <skip />
+    <!-- no translation found for system_hw_overdraw_counter (3042271307724657436) -->
+    <skip />
     <string name="no_application" msgid="1746564297589309465">"Юуг ч биш"</string>
-  <string-array name="enable_opengl_traces_entries">
-    <item msgid="7803412455089800607">"Хоосон"</item>
-    <item msgid="1284340221135955876">"Logcat"</item>
-    <item msgid="5054298948370382226">"Systrace (График)"</item>
-    <item msgid="6650537879885155020">"Стекийг glGetError дээр дуудах"</item>
-  </string-array>
-  <string-array name="window_animation_scale_entries">
-    <item msgid="258143468897415016">"Дүрс амилуулалт идэвхгүй"</item>
-    <item msgid="5618283113978106483">"Дүрс амилуулах далайц .5x"</item>
-    <item msgid="397451685490290179">"Дүрс амилуулах далайц 1x"</item>
-    <item msgid="6331600473492644688">"Дүрс амилуулах далайц 1.5x"</item>
-    <item msgid="7004952449777104295">"Дүрс амилуулалтын далайц 2x"</item>
-    <item msgid="1063528777234221038">"Дүрс амилуулалтын далайц 5x"</item>
-    <item msgid="6926378938392529339">"Дүрс амилуулалтын далайц 10x"</item>
-  </string-array>
-  <string-array name="transition_animation_scale_entries">
-    <item msgid="5604755386232556553">"Дүрс амилуулалт идэвхгүй"</item>
-    <item msgid="5578331490208019526">"Дүрс амилуулах далайц .5x"</item>
-    <item msgid="5338802612080069593">"Дүрс амилуулах далайц 1x"</item>
-    <item msgid="1309704285131661878">"Дүрс амилуулах далайц 1.5x"</item>
-    <item msgid="5654221040036850960">"Дүрс амилуулалтын далайц 2x"</item>
-    <item msgid="6092484055733043622">"Дүрс амилуулалтын далайц 5x"</item>
-    <item msgid="4049359393103906268">"Дүрс амилуулалтын далайц 10x"</item>
-  </string-array>
-  <string-array name="animator_duration_scale_entries">
-    <item msgid="6966595852691619795">"Дүрс амилуулалт идэвхгүй"</item>
-    <item msgid="1302400121783768928">"Дүрс амилуулах далайц .5x"</item>
-    <item msgid="9088460595137551270">"Дүрс амилуулах далайц 1x"</item>
-    <item msgid="5640745580399155880">"Дүрс амилуулах далайц 1.5x"</item>
-    <item msgid="3320199023884342141">"Дүрс амилуулалтын далайц 2x"</item>
-    <item msgid="5620232666163371843">"Дүрс амилуулалтын далайц 5x"</item>
-    <item msgid="8580701701183364590">"Дүрс амилуулалтын далайц 10x"</item>
-  </string-array>
-  <string-array name="track_frame_time_entries">
-    <item msgid="3161533682947406047">"Идэвхгүй"</item>
-    <item msgid="6446688182396957172">"Дэлгэц дээр савхаар"</item>
-    <item msgid="9080500692341488612">"adb шел доторх dumpsys gfxinfo"</item>
-  </string-array>
-  <string-array name="app_process_limit_entries">
-    <item msgid="9052853079905663082">"Стандарт хязгаар"</item>
-    <item msgid="6534728802931195545">"Далд процесс байхгүй"</item>
-    <item msgid="290172167371846384">"Хамгийн ихдээ 1 процесс"</item>
-    <item msgid="4818593824413771192">"Хамгийн ихдээ 2 процесс"</item>
-    <item msgid="8337569181800165433">"Хамгийн ихдээ 3 процесс"</item>
-    <item msgid="8261219565766202947">"Хамгийн ихдээ 4 процесс"</item>
-  </string-array>
+    <!-- no translation found for enable_opengl_traces_none (6074804146602749420) -->
+    <skip />
+    <!-- no translation found for animation_scale_entries:0 (7477134110460336436) -->
+    <!-- no translation found for animation_scale_entries:1 (8327257151534006014) -->
+    <!-- no translation found for animation_scale_entries:2 (2105786719544636780) -->
+    <!-- no translation found for animation_scale_entries:3 (5290554136790336403) -->
+    <!-- no translation found for animation_scale_entries:4 (1232929590838082483) -->
+    <!-- no translation found for animation_scale_entries:5 (1889239009419613796) -->
+    <!-- no translation found for animation_scale_entries:6 (7268894934484547297) -->
+    <!-- no translation found for track_frame_time_off (5050360262132715904) -->
+    <skip />
+    <!-- no translation found for track_frame_time_bars (4470692840177888414) -->
+    <skip />
+    <!-- no translation found for app_process_limit_standard (8878199798843299844) -->
+    <skip />
+    <!-- no translation found for app_process_limit_zero (2667197109226789876) -->
+    <skip />
+    <!-- no translation found for app_process_limit_one (6417937037944753355) -->
+    <skip />
+    <!-- no translation found for app_process_limit_two (1067649339026655778) -->
+    <skip />
+    <!-- no translation found for app_process_limit_three (7234034351975161398) -->
+    <skip />
+    <!-- no translation found for app_process_limit_four (8907156918309381955) -->
+    <skip />
   <string-array name="tts_rate_entries">
     <item msgid="6425501867101281228">"Маш удаан"</item>
     <item msgid="3458529225374884970">"Удаан"</item>

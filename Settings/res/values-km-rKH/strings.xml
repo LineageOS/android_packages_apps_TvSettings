@@ -226,7 +226,11 @@
     <string name="system_set_date" msgid="2437586307768561116">"កំណត់​កាលបរិច្ឆេទ"</string>
     <string name="system_set_time" msgid="4661804115501057452">"កំណត់​ពេលវេលា"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"កំណត់​តំបន់​ពេលវេលា"</string>
+    <!-- no translation found for desc_set_time_zone (2948629174438460709) -->
+    <skip />
     <string name="system_set_time_format" msgid="4447882066895090612">"ប្រើ​ទ្រង់ទ្រាយ ២៤ ម៉ោង"</string>
+    <!-- no translation found for desc_set_time_format (3131006238681763219) -->
+    <skip />
     <string name="system_auto_date_time" msgid="3629668599205033272">"កាលបរិច្ឆេទ &amp; ពេលវេលា​ស្វ័យ​ប្រវត្តិ"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"ប្រើ​ពេលវេលា​បាន​ផ្ដល់​ដោយ​បណ្ដាញ"</string>
     <string name="system_location" msgid="502463575930545806">"ទីតាំង"</string>
@@ -359,58 +363,48 @@
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"ឧបករណ៍ និង​ទិន្នន័យ​ផ្ទាល់ខ្លួន​របស់​អ្នក​គឺ​ងាយ​នឹង​ទទួល​រង​​ការ​វាយ​ប្រហារ​ដោយ​កម្មវិធី​ពី​ប្រភព​ដែល​មិន​ស្គាល់។ អ្នក​យល់ព្រម​​ថា អ្នក​​​ទទួល​ខុសត្រូវ​តែ​ម្នាក់​ឯង​សម្រាប់​ការ​ខូចខាត​ណា​មួយ​ចំពោះ​ឧបករណ៍​របស់​អ្នក ឬ​​ការ​បាត់បង់​ទិន្នន័យ​ដែល​​ជា​លទ្ធផល​ពី​ការ​ប្រើប្រាស់​កម្មវិធី​ទាំងនេះ។"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"ផ្ទៀងផ្ទាត់​កម្មវិធី"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"មិន​អនុញ្ញាត ឬ​ព្រមាន​មុន​ដំឡើង​កម្មវិធី​ដែល​អាច​​បង្ក​គ្រោះ​ថ្នាក់"</string>
-  <string-array name="hdcp_checking_summaries">
-    <item msgid="28682351350387246">"កុំ"</item>
-    <item msgid="5583820743908145007">"សម្រាប់​មាតិកា DRM"</item>
-    <item msgid="6148080515126921450">"ជានិច្ច"</item>
-  </string-array>
+    <!-- no translation found for system_hdcp_checking_never (1758043078676276985) -->
+    <skip />
+    <!-- no translation found for system_hdcp_checking_drm (8563220452241389905) -->
+    <skip />
+    <!-- no translation found for system_hdcp_checking_always (7264575337360957746) -->
+    <skip />
+    <!-- no translation found for system_hdmi_optimization_best_resolution (2612694859060466938) -->
+    <skip />
+    <!-- no translation found for system_hdmi_optimization_best_framerate (67514549356802383) -->
+    <skip />
+    <!-- no translation found for system_hw_overdraw_off (8790815645038325739) -->
+    <skip />
+    <!-- no translation found for system_hw_overdraw_areas (5227122594087360124) -->
+    <skip />
+    <!-- no translation found for system_hw_overdraw_counter (3042271307724657436) -->
+    <skip />
     <string name="no_application" msgid="1746564297589309465">"គ្មាន​អ្វី​សោះ"</string>
-  <string-array name="enable_opengl_traces_entries">
-    <item msgid="7803412455089800607">"គ្មាន"</item>
-    <item msgid="1284340221135955876">"Logcat"</item>
-    <item msgid="5054298948370382226">"ដាន​ប្រព័ន្ធ (ក្រាហ្វិក)"</item>
-    <item msgid="6650537879885155020">"ការ​ហៅ​ច្រើន​នៅ​លើ glGetError"</item>
-  </string-array>
-  <string-array name="window_animation_scale_entries">
-    <item msgid="258143468897415016">"បិទ​ចលនា"</item>
-    <item msgid="5618283113978106483">"មាត្រដ្ឋាន​ចលនា .5x"</item>
-    <item msgid="397451685490290179">"មាត្រដ្ឋាន​ចលនា 1x"</item>
-    <item msgid="6331600473492644688">"មាត្រដ្ឋាន​ចលនា 1.5x"</item>
-    <item msgid="7004952449777104295">"មាត្រដ្ឋាន​ចលនា 2x"</item>
-    <item msgid="1063528777234221038">"មាត្រដ្ឋាន​ចលនា 5x"</item>
-    <item msgid="6926378938392529339">"មាត្រដ្ឋាន​ចលនា 10x"</item>
-  </string-array>
-  <string-array name="transition_animation_scale_entries">
-    <item msgid="5604755386232556553">"បិទ​ចលនា"</item>
-    <item msgid="5578331490208019526">"មាត្រដ្ឋាន​ចលនា .5x"</item>
-    <item msgid="5338802612080069593">"មាត្រដ្ឋាន​ចលនា 1x"</item>
-    <item msgid="1309704285131661878">"មាត្រដ្ឋាន​ចលនា 1.5x"</item>
-    <item msgid="5654221040036850960">"មាត្រដ្ឋាន​ចលនា 2x"</item>
-    <item msgid="6092484055733043622">"មាត្រដ្ឋាន​ចលនា 5x"</item>
-    <item msgid="4049359393103906268">"មាត្រដ្ឋាន​ចលនា 10x"</item>
-  </string-array>
-  <string-array name="animator_duration_scale_entries">
-    <item msgid="6966595852691619795">"បិទ​ចលនា"</item>
-    <item msgid="1302400121783768928">"មាត្រដ្ឋាន​ចលនា .5x"</item>
-    <item msgid="9088460595137551270">"មាត្រដ្ឋាន​ចលនា 1x"</item>
-    <item msgid="5640745580399155880">"មាត្រដ្ឋាន​ចលនា 1.5x"</item>
-    <item msgid="3320199023884342141">"មាត្រដ្ឋាន​ចលនា 2x"</item>
-    <item msgid="5620232666163371843">"មាត្រដ្ឋាន​ចលនា 5x"</item>
-    <item msgid="8580701701183364590">"មាត្រដ្ឋាន​ចលនា 10x"</item>
-  </string-array>
-  <string-array name="track_frame_time_entries">
-    <item msgid="3161533682947406047">"បិទ"</item>
-    <item msgid="6446688182396957172">"នៅ​លើ​អេក្រង់​​ដូចជា​​របារ"</item>
-    <item msgid="9080500692341488612">"នៅ​ក្នុង adb shell dumpsys gfxinfo"</item>
-  </string-array>
-  <string-array name="app_process_limit_entries">
-    <item msgid="9052853079905663082">"ដែន​កំណត់​ស្តង់ដារ"</item>
-    <item msgid="6534728802931195545">"គ្មាន​ដំណើរការ​​ក្នុង​ផ្ទៃ​ខាង​ក្រោយ"</item>
-    <item msgid="290172167371846384">"ដំណើរ​ការ​ច្រើន​បំផុត ១"</item>
-    <item msgid="4818593824413771192">"ដំណើរការ​ច្រើន​បំផុត​ ២"</item>
-    <item msgid="8337569181800165433">"ដំណើរ​ការ​ច្រើន​បំផុត ៣"</item>
-    <item msgid="8261219565766202947">"ដំណើរការ​ច្រើន​បំផុត ៤"</item>
-  </string-array>
+    <!-- no translation found for enable_opengl_traces_none (6074804146602749420) -->
+    <skip />
+    <!-- no translation found for animation_scale_entries:0 (7477134110460336436) -->
+    <!-- no translation found for animation_scale_entries:1 (8327257151534006014) -->
+    <!-- no translation found for animation_scale_entries:2 (2105786719544636780) -->
+    <!-- no translation found for animation_scale_entries:3 (5290554136790336403) -->
+    <!-- no translation found for animation_scale_entries:4 (1232929590838082483) -->
+    <!-- no translation found for animation_scale_entries:5 (1889239009419613796) -->
+    <!-- no translation found for animation_scale_entries:6 (7268894934484547297) -->
+    <!-- no translation found for track_frame_time_off (5050360262132715904) -->
+    <skip />
+    <!-- no translation found for track_frame_time_bars (4470692840177888414) -->
+    <skip />
+    <!-- no translation found for app_process_limit_standard (8878199798843299844) -->
+    <skip />
+    <!-- no translation found for app_process_limit_zero (2667197109226789876) -->
+    <skip />
+    <!-- no translation found for app_process_limit_one (6417937037944753355) -->
+    <skip />
+    <!-- no translation found for app_process_limit_two (1067649339026655778) -->
+    <skip />
+    <!-- no translation found for app_process_limit_three (7234034351975161398) -->
+    <skip />
+    <!-- no translation found for app_process_limit_four (8907156918309381955) -->
+    <skip />
   <string-array name="tts_rate_entries">
     <item msgid="6425501867101281228">"យឺត​ណាស់"</item>
     <item msgid="3458529225374884970">"យឺត"</item>
