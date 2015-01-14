@@ -237,7 +237,7 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
             // TODO remove once we confirm it's not needed
             removeRestrictedUser();
             LockPatternUtils lpu = new LockPatternUtils(this);
-            lpu.clearLock(false);
+            lpu.clearLock();
         } else if (ACTION_RESTRICTED_PROFILE_DELETE_CANCEL.equals(action.getKey())) {
             // TODO remove once we confirm it's not needed
             onBackPressed();
@@ -330,7 +330,7 @@ public class RestrictedProfileActivity extends Activity implements Action.Listen
             case PIN_MODE_RESTRICTED_PROFILE_DELETE:
                 if (success) {
                     removeRestrictedUser();
-                    new LockPatternUtils(this).clearLock(false);
+                    new LockPatternUtils(this).clearLock();
                 }
                 break;
         }
