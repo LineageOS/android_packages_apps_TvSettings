@@ -226,11 +226,9 @@
     <string name="system_set_date" msgid="2437586307768561116">"তারিখ সেট করুন"</string>
     <string name="system_set_time" msgid="4661804115501057452">"সময় সেট করুন"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"সময় অঞ্চল সেট করুন"</string>
-    <!-- no translation found for desc_set_time_zone (2948629174438460709) -->
-    <skip />
+    <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"২৪ ঘন্টার ফর্ম্যাট ব্যবহার করুন"</string>
-    <!-- no translation found for desc_set_time_format (3131006238681763219) -->
-    <skip />
+    <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"স্বয়ংক্রিয় তারিখ ও সময়"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"নেটওয়ার্ক প্রদত্ত সময় ব্যবহার করুন"</string>
     <string name="system_location" msgid="502463575930545806">"অবস্থান"</string>
@@ -363,48 +361,33 @@
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"আপনার ডিভাইস এবং ব্যক্তিগত তথ্য অজানা উৎসের অ্যাপ্লিকেশান দ্বারা আক্রান্ত হওয়ার সম্ভাবনা বেশি। এই অ্যাপ্লিকেশানগুলির ব্যবহার থেকে আপনার ডিভাইসের কোনো ক্ষতি বা ডেটার যে কোনো বিনষ্টির জন্য একমাত্র আপনিই যে দায়ী থাকবেন তাতে আপনি সম্মতি জানাচ্ছেন।"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"অ্যাপ্লিকেশানগুলি যাচাই করুন"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"যে সব অ্যাপ্লিকেশানগুলি ক্ষতি করতে পারে সেগুলি ইনস্টল করার আগে সতর্ক করুন বা সেগুলিকে অনুমতি দেবেন না"</string>
-    <!-- no translation found for system_hdcp_checking_never (1758043078676276985) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_drm (8563220452241389905) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_always (7264575337360957746) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_resolution (2612694859060466938) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_framerate (67514549356802383) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_off (8790815645038325739) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_areas (5227122594087360124) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_counter (3042271307724657436) -->
-    <skip />
+    <string name="system_hdcp_checking_never" msgid="1758043078676276985">"কখনো নয়"</string>
+    <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"DRM সামগ্রীর জন্য"</string>
+    <string name="system_hdcp_checking_always" msgid="7264575337360957746">"সবসময়"</string>
+    <string name="system_hdmi_optimization_best_resolution" msgid="2612694859060466938">"সেরা রেজোলিউশন"</string>
+    <string name="system_hdmi_optimization_best_framerate" msgid="67514549356802383">"সেরা ফ্রেমরেট"</string>
+    <string name="system_hw_overdraw_off" msgid="8790815645038325739">"বন্ধ"</string>
+    <string name="system_hw_overdraw_areas" msgid="5227122594087360124">"ওভারড্র এলাকা দেখান"</string>
+    <string name="system_hw_overdraw_counter" msgid="3042271307724657436">"ওভারড্র কাউন্টার দেখান"</string>
     <string name="no_application" msgid="1746564297589309465">"কিছুই না"</string>
-    <!-- no translation found for enable_opengl_traces_none (6074804146602749420) -->
-    <skip />
-    <!-- no translation found for animation_scale_entries:0 (7477134110460336436) -->
-    <!-- no translation found for animation_scale_entries:1 (8327257151534006014) -->
-    <!-- no translation found for animation_scale_entries:2 (2105786719544636780) -->
-    <!-- no translation found for animation_scale_entries:3 (5290554136790336403) -->
-    <!-- no translation found for animation_scale_entries:4 (1232929590838082483) -->
-    <!-- no translation found for animation_scale_entries:5 (1889239009419613796) -->
-    <!-- no translation found for animation_scale_entries:6 (7268894934484547297) -->
-    <!-- no translation found for track_frame_time_off (5050360262132715904) -->
-    <skip />
-    <!-- no translation found for track_frame_time_bars (4470692840177888414) -->
-    <skip />
-    <!-- no translation found for app_process_limit_standard (8878199798843299844) -->
-    <skip />
-    <!-- no translation found for app_process_limit_zero (2667197109226789876) -->
-    <skip />
-    <!-- no translation found for app_process_limit_one (6417937037944753355) -->
-    <skip />
-    <!-- no translation found for app_process_limit_two (1067649339026655778) -->
-    <skip />
-    <!-- no translation found for app_process_limit_three (7234034351975161398) -->
-    <skip />
-    <!-- no translation found for app_process_limit_four (8907156918309381955) -->
-    <skip />
+    <string name="enable_opengl_traces_none" msgid="6074804146602749420">"কিছুই নয়"</string>
+  <string-array name="animation_scale_entries">
+    <item msgid="7477134110460336436">"অ্যানিমেশন বন্ধ করুন"</item>
+    <item msgid="8327257151534006014">"অ্যানিমেশন স্কেল .৫x"</item>
+    <item msgid="2105786719544636780">"অ্যানিমেশন স্কেল ১x"</item>
+    <item msgid="5290554136790336403">"অ্যানিমেশন স্কেল ১.৫x"</item>
+    <item msgid="1232929590838082483">"অ্যানিমেশন স্কেল ২x"</item>
+    <item msgid="1889239009419613796">"অ্যানিমেশন স্কেল ৫x"</item>
+    <item msgid="7268894934484547297">"অ্যানিমেশন স্কেল ১০x"</item>
+  </string-array>
+    <string name="track_frame_time_off" msgid="5050360262132715904">"বন্ধ"</string>
+    <string name="track_frame_time_bars" msgid="4470692840177888414">"দণ হিসাবে স্ক্রীনে"</string>
+    <string name="app_process_limit_standard" msgid="8878199798843299844">"মানক সীমা"</string>
+    <string name="app_process_limit_zero" msgid="2667197109226789876">"কোনো পটভূমি প্রক্রিয়া নেই"</string>
+    <string name="app_process_limit_one" msgid="6417937037944753355">"১টি প্রক্রিয়ার বেশি নয়"</string>
+    <string name="app_process_limit_two" msgid="1067649339026655778">"২টি প্রক্রিয়ার বেশি নয়"</string>
+    <string name="app_process_limit_three" msgid="7234034351975161398">"৩টি প্রক্রিয়ার বেশি নয়"</string>
+    <string name="app_process_limit_four" msgid="8907156918309381955">"৪টি প্রক্রিয়ার বেশি নয়"</string>
   <string-array name="tts_rate_entries">
     <item msgid="6425501867101281228">"খুব ধীরে"</item>
     <item msgid="3458529225374884970">"ধীরে"</item>

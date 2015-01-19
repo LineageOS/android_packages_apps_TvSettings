@@ -226,11 +226,9 @@
     <string name="system_set_date" msgid="2437586307768561116">"Weka tarehe"</string>
     <string name="system_set_time" msgid="4661804115501057452">"Weka saa"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"Weka saa za eneo"</string>
-    <!-- no translation found for desc_set_time_zone (2948629174438460709) -->
-    <skip />
+    <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"Tumia mpangilio wa saa 24"</string>
-    <!-- no translation found for desc_set_time_format (3131006238681763219) -->
-    <skip />
+    <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"Saa na tarehe otomatiki"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"Tumia muda unaotolewa na mtandao"</string>
     <string name="system_location" msgid="502463575930545806">"Eneo"</string>
@@ -363,48 +361,33 @@
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Kifaa chako na data ya binafsi ipo hatarini zaidi kushambuliwa na programu kutoka vyanzo visivyojulikana. Unakubali kuwa utawajibika kikamilifu kwa uharibifu wowote utakaotokea kwa kifaa chako au upotevu wa data unaoweza kutokea kutokana na kutumia programu hizi."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Thibitisha programu"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Usiruhusu au onya kabla ya kusakinisha programu ambayo inaweza kusababisha madhara"</string>
-    <!-- no translation found for system_hdcp_checking_never (1758043078676276985) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_drm (8563220452241389905) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_always (7264575337360957746) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_resolution (2612694859060466938) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_framerate (67514549356802383) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_off (8790815645038325739) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_areas (5227122594087360124) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_counter (3042271307724657436) -->
-    <skip />
+    <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Haijawahi"</string>
+    <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"Kwa maudhui ya DRM"</string>
+    <string name="system_hdcp_checking_always" msgid="7264575337360957746">"Kila wakati"</string>
+    <string name="system_hdmi_optimization_best_resolution" msgid="2612694859060466938">"Ubora wa juu"</string>
+    <string name="system_hdmi_optimization_best_framerate" msgid="67514549356802383">"Makadirio bora ya fremu"</string>
+    <string name="system_hw_overdraw_off" msgid="8790815645038325739">"Zima"</string>
+    <string name="system_hw_overdraw_areas" msgid="5227122594087360124">"Onyesha maeneo yaliyoondolewa"</string>
+    <string name="system_hw_overdraw_counter" msgid="3042271307724657436">"Onyesha kihesabu kilichoondolewa"</string>
     <string name="no_application" msgid="1746564297589309465">"Hakuna chochote"</string>
-    <!-- no translation found for enable_opengl_traces_none (6074804146602749420) -->
-    <skip />
-    <!-- no translation found for animation_scale_entries:0 (7477134110460336436) -->
-    <!-- no translation found for animation_scale_entries:1 (8327257151534006014) -->
-    <!-- no translation found for animation_scale_entries:2 (2105786719544636780) -->
-    <!-- no translation found for animation_scale_entries:3 (5290554136790336403) -->
-    <!-- no translation found for animation_scale_entries:4 (1232929590838082483) -->
-    <!-- no translation found for animation_scale_entries:5 (1889239009419613796) -->
-    <!-- no translation found for animation_scale_entries:6 (7268894934484547297) -->
-    <!-- no translation found for track_frame_time_off (5050360262132715904) -->
-    <skip />
-    <!-- no translation found for track_frame_time_bars (4470692840177888414) -->
-    <skip />
-    <!-- no translation found for app_process_limit_standard (8878199798843299844) -->
-    <skip />
-    <!-- no translation found for app_process_limit_zero (2667197109226789876) -->
-    <skip />
-    <!-- no translation found for app_process_limit_one (6417937037944753355) -->
-    <skip />
-    <!-- no translation found for app_process_limit_two (1067649339026655778) -->
-    <skip />
-    <!-- no translation found for app_process_limit_three (7234034351975161398) -->
-    <skip />
-    <!-- no translation found for app_process_limit_four (8907156918309381955) -->
-    <skip />
+    <string name="enable_opengl_traces_none" msgid="6074804146602749420">"Hamna"</string>
+  <string-array name="animation_scale_entries">
+    <item msgid="7477134110460336436">"Uhuishaji umezimwa"</item>
+    <item msgid="8327257151534006014">"Mizani ya uhuishaji .5x"</item>
+    <item msgid="2105786719544636780">"Mizani ya uhuishaji 1x"</item>
+    <item msgid="5290554136790336403">"Mizani ya uhuishaji 1.5x"</item>
+    <item msgid="1232929590838082483">"Mizani ya uhuishaji 2x"</item>
+    <item msgid="1889239009419613796">"Mizani ya uhuishaji 5x"</item>
+    <item msgid="7268894934484547297">"Mizani ya uhuishaji 10x"</item>
+  </string-array>
+    <string name="track_frame_time_off" msgid="5050360262132715904">"Zima"</string>
+    <string name="track_frame_time_bars" msgid="4470692840177888414">"Kwenye skrini kama pau"</string>
+    <string name="app_process_limit_standard" msgid="8878199798843299844">"Kiwango wastani"</string>
+    <string name="app_process_limit_zero" msgid="2667197109226789876">"Hakuna michakato ya chini kwa chini"</string>
+    <string name="app_process_limit_one" msgid="6417937037944753355">"Angalau mchakato 1"</string>
+    <string name="app_process_limit_two" msgid="1067649339026655778">"Angalau michakato 2"</string>
+    <string name="app_process_limit_three" msgid="7234034351975161398">"Angalau michakato 3"</string>
+    <string name="app_process_limit_four" msgid="8907156918309381955">"Angalau michakato 4"</string>
   <string-array name="tts_rate_entries">
     <item msgid="6425501867101281228">"Polepole sana"</item>
     <item msgid="3458529225374884970">"Polepole"</item>

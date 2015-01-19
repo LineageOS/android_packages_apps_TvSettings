@@ -226,11 +226,9 @@
     <string name="system_set_date" msgid="2437586307768561116">"날짜 설정"</string>
     <string name="system_set_time" msgid="4661804115501057452">"시간 설정"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"시간대 설정"</string>
-    <!-- no translation found for desc_set_time_zone (2948629174438460709) -->
-    <skip />
+    <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"24시간 형식 사용"</string>
-    <!-- no translation found for desc_set_time_format (3131006238681763219) -->
-    <skip />
+    <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g>(<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"날짜/시간 자동설정"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"네트워크에서 제공하는 시간 정보를 사용합니다."</string>
     <string name="system_location" msgid="502463575930545806">"위치"</string>
@@ -363,48 +361,33 @@
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"기기 및 개인 정보는 출처를 알 수 없는 앱의 공격에 더욱 취약합니다. 이러한 앱을 사용하여 발생할 수 있는 기기 손상이나 데이터 손실에 대해 사용자가 단독으로 책임이 있음을 동의합니다."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"앱 확인"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"유해할 수 있는 앱은 설치를 허용하지 않거나 설치 전에 경고를 표시합니다."</string>
-    <!-- no translation found for system_hdcp_checking_never (1758043078676276985) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_drm (8563220452241389905) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_always (7264575337360957746) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_resolution (2612694859060466938) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_framerate (67514549356802383) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_off (8790815645038325739) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_areas (5227122594087360124) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_counter (3042271307724657436) -->
-    <skip />
+    <string name="system_hdcp_checking_never" msgid="1758043078676276985">"안함"</string>
+    <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"DRM 콘텐츠용"</string>
+    <string name="system_hdcp_checking_always" msgid="7264575337360957746">"항상"</string>
+    <string name="system_hdmi_optimization_best_resolution" msgid="2612694859060466938">"최고의 해상도"</string>
+    <string name="system_hdmi_optimization_best_framerate" msgid="67514549356802383">"최고의 프레임 속도"</string>
+    <string name="system_hw_overdraw_off" msgid="8790815645038325739">"사용 안함"</string>
+    <string name="system_hw_overdraw_areas" msgid="5227122594087360124">"오버드로 영역 표시"</string>
+    <string name="system_hw_overdraw_counter" msgid="3042271307724657436">"오버드로 카운터 표시"</string>
     <string name="no_application" msgid="1746564297589309465">"없음"</string>
-    <!-- no translation found for enable_opengl_traces_none (6074804146602749420) -->
-    <skip />
-    <!-- no translation found for animation_scale_entries:0 (7477134110460336436) -->
-    <!-- no translation found for animation_scale_entries:1 (8327257151534006014) -->
-    <!-- no translation found for animation_scale_entries:2 (2105786719544636780) -->
-    <!-- no translation found for animation_scale_entries:3 (5290554136790336403) -->
-    <!-- no translation found for animation_scale_entries:4 (1232929590838082483) -->
-    <!-- no translation found for animation_scale_entries:5 (1889239009419613796) -->
-    <!-- no translation found for animation_scale_entries:6 (7268894934484547297) -->
-    <!-- no translation found for track_frame_time_off (5050360262132715904) -->
-    <skip />
-    <!-- no translation found for track_frame_time_bars (4470692840177888414) -->
-    <skip />
-    <!-- no translation found for app_process_limit_standard (8878199798843299844) -->
-    <skip />
-    <!-- no translation found for app_process_limit_zero (2667197109226789876) -->
-    <skip />
-    <!-- no translation found for app_process_limit_one (6417937037944753355) -->
-    <skip />
-    <!-- no translation found for app_process_limit_two (1067649339026655778) -->
-    <skip />
-    <!-- no translation found for app_process_limit_three (7234034351975161398) -->
-    <skip />
-    <!-- no translation found for app_process_limit_four (8907156918309381955) -->
-    <skip />
+    <string name="enable_opengl_traces_none" msgid="6074804146602749420">"사용 안함"</string>
+  <string-array name="animation_scale_entries">
+    <item msgid="7477134110460336436">"애니메이션 사용 안함"</item>
+    <item msgid="8327257151534006014">"애니메이션 배율 .5x"</item>
+    <item msgid="2105786719544636780">"애니메이션 배율 1x"</item>
+    <item msgid="5290554136790336403">"애니메이션 배율 1.5x"</item>
+    <item msgid="1232929590838082483">"애니메이션 배율 2x"</item>
+    <item msgid="1889239009419613796">"애니메이션 배율 5x"</item>
+    <item msgid="7268894934484547297">"애니메이션 배율 10x"</item>
+  </string-array>
+    <string name="track_frame_time_off" msgid="5050360262132715904">"사용 안함"</string>
+    <string name="track_frame_time_bars" msgid="4470692840177888414">"화면에 막대로 표시"</string>
+    <string name="app_process_limit_standard" msgid="8878199798843299844">"표준 제한"</string>
+    <string name="app_process_limit_zero" msgid="2667197109226789876">"백그라운드 프로세스 없음"</string>
+    <string name="app_process_limit_one" msgid="6417937037944753355">"최대 1개 프로세스"</string>
+    <string name="app_process_limit_two" msgid="1067649339026655778">"최대 2개 프로세스"</string>
+    <string name="app_process_limit_three" msgid="7234034351975161398">"최대 3개 프로세스"</string>
+    <string name="app_process_limit_four" msgid="8907156918309381955">"최대 4개 프로세스"</string>
   <string-array name="tts_rate_entries">
     <item msgid="6425501867101281228">"매우 느림"</item>
     <item msgid="3458529225374884970">"느림"</item>

@@ -226,11 +226,9 @@
     <string name="system_set_date" msgid="2437586307768561116">"ตั้งวันที่"</string>
     <string name="system_set_time" msgid="4661804115501057452">"ตั้งเวลา"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"ตั้งค่าเขตเวลา"</string>
-    <!-- no translation found for desc_set_time_zone (2948629174438460709) -->
-    <skip />
+    <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"ใช้รูปแบบ 24 ชั่วโมง"</string>
-    <!-- no translation found for desc_set_time_format (3131006238681763219) -->
-    <skip />
+    <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"วันที่และเวลาอัตโนมัติ"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"ใช้เวลาที่ระบุโดยเครือข่าย"</string>
     <string name="system_location" msgid="502463575930545806">"ตำแหน่ง"</string>
@@ -363,48 +361,33 @@
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"อุปกรณ์และข้อมูลส่วนบุคคลของคุณมีความเสี่ยงยิ่งขึ้นที่จะถูกโจมตีจากแอปที่ไม่รู้จักแหล่งที่มา คุณยอมรับว่าคุณจะเป็นผู้รับผิดชอบแต่เพียงผู้เดียวต่อความเสียหายใดๆ ที่เกิดกับอุปกรณ์หรือหรือการสูญเสียข้อมูลที่เป็นผลจากการใช้แอปเหล่านี้"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"ยืนยันแอป"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"ไม่อนุญาตหรือแจ้งเตือนก่อนที่จะติดตั้งแอปที่อาจก่อให้เกิดอันตราย"</string>
-    <!-- no translation found for system_hdcp_checking_never (1758043078676276985) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_drm (8563220452241389905) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_always (7264575337360957746) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_resolution (2612694859060466938) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_framerate (67514549356802383) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_off (8790815645038325739) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_areas (5227122594087360124) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_counter (3042271307724657436) -->
-    <skip />
+    <string name="system_hdcp_checking_never" msgid="1758043078676276985">"ไม่เคยใช้"</string>
+    <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"สำหรับเนื้อหา DRM"</string>
+    <string name="system_hdcp_checking_always" msgid="7264575337360957746">"ทุกครั้ง"</string>
+    <string name="system_hdmi_optimization_best_resolution" msgid="2612694859060466938">"ความละเอียดที่ดีที่สุด"</string>
+    <string name="system_hdmi_optimization_best_framerate" msgid="67514549356802383">"อัตราเฟรมที่ดีที่สุด"</string>
+    <string name="system_hw_overdraw_off" msgid="8790815645038325739">"ปิด"</string>
+    <string name="system_hw_overdraw_areas" msgid="5227122594087360124">"แสดงพื้นที่การวาดทับ"</string>
+    <string name="system_hw_overdraw_counter" msgid="3042271307724657436">"แสดงตัวนับการวาดทับ"</string>
     <string name="no_application" msgid="1746564297589309465">"ไม่มี"</string>
-    <!-- no translation found for enable_opengl_traces_none (6074804146602749420) -->
-    <skip />
-    <!-- no translation found for animation_scale_entries:0 (7477134110460336436) -->
-    <!-- no translation found for animation_scale_entries:1 (8327257151534006014) -->
-    <!-- no translation found for animation_scale_entries:2 (2105786719544636780) -->
-    <!-- no translation found for animation_scale_entries:3 (5290554136790336403) -->
-    <!-- no translation found for animation_scale_entries:4 (1232929590838082483) -->
-    <!-- no translation found for animation_scale_entries:5 (1889239009419613796) -->
-    <!-- no translation found for animation_scale_entries:6 (7268894934484547297) -->
-    <!-- no translation found for track_frame_time_off (5050360262132715904) -->
-    <skip />
-    <!-- no translation found for track_frame_time_bars (4470692840177888414) -->
-    <skip />
-    <!-- no translation found for app_process_limit_standard (8878199798843299844) -->
-    <skip />
-    <!-- no translation found for app_process_limit_zero (2667197109226789876) -->
-    <skip />
-    <!-- no translation found for app_process_limit_one (6417937037944753355) -->
-    <skip />
-    <!-- no translation found for app_process_limit_two (1067649339026655778) -->
-    <skip />
-    <!-- no translation found for app_process_limit_three (7234034351975161398) -->
-    <skip />
-    <!-- no translation found for app_process_limit_four (8907156918309381955) -->
-    <skip />
+    <string name="enable_opengl_traces_none" msgid="6074804146602749420">"ไม่มี"</string>
+  <string-array name="animation_scale_entries">
+    <item msgid="7477134110460336436">"ปิดภาพเคลื่อนไหว"</item>
+    <item msgid="8327257151534006014">"ภาพเคลื่อนไหวขนาด .5 เท่า"</item>
+    <item msgid="2105786719544636780">"ภาพเคลื่อนไหวขนาด 1 เท่า"</item>
+    <item msgid="5290554136790336403">"ภาพเคลื่อนไหวขนาด 1.5 เท่า"</item>
+    <item msgid="1232929590838082483">"ภาพเคลื่อนไหวขนาด 2 เท่า"</item>
+    <item msgid="1889239009419613796">"ภาพเคลื่อนไหวขนาด 5 เท่า"</item>
+    <item msgid="7268894934484547297">"ภาพเคลื่อนไหวขนาด 10 เท่า"</item>
+  </string-array>
+    <string name="track_frame_time_off" msgid="5050360262132715904">"ปิด"</string>
+    <string name="track_frame_time_bars" msgid="4470692840177888414">"เป็นแถบบนหน้าจอ"</string>
+    <string name="app_process_limit_standard" msgid="8878199798843299844">"ขีดจำกัดมาตรฐาน"</string>
+    <string name="app_process_limit_zero" msgid="2667197109226789876">"ไม่มีกระบวนการพื้นหลัง"</string>
+    <string name="app_process_limit_one" msgid="6417937037944753355">"มากที่สุด 1 กระบวนการ"</string>
+    <string name="app_process_limit_two" msgid="1067649339026655778">"มากที่สุด 2 กระบวนการ"</string>
+    <string name="app_process_limit_three" msgid="7234034351975161398">"มากที่สุด 3 กระบวนการ"</string>
+    <string name="app_process_limit_four" msgid="8907156918309381955">"มากที่สุด 4 กระบวนการ"</string>
   <string-array name="tts_rate_entries">
     <item msgid="6425501867101281228">"ช้ามาก"</item>
     <item msgid="3458529225374884970">"ช้า"</item>

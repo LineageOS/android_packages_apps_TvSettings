@@ -226,11 +226,9 @@
     <string name="system_set_date" msgid="2437586307768561116">"Postavljanje datuma"</string>
     <string name="system_set_time" msgid="4661804115501057452">"Postavljanje vremena"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"Postavljanje vremenske zone"</string>
-    <!-- no translation found for desc_set_time_zone (2948629174438460709) -->
-    <skip />
+    <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"Upotreba 24-satnog formata"</string>
-    <!-- no translation found for desc_set_time_format (3131006238681763219) -->
-    <skip />
+    <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"Automatski datum i vrijeme"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"Upotrijebi vrijeme mreže"</string>
     <string name="system_location" msgid="502463575930545806">"Lokacija"</string>
@@ -363,48 +361,33 @@
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Vaš uređaj i osobni podaci izloženiji su napadima aplikacija iz nepoznatih izvora. Prihvaćate isključivu odgovornost za svu štetu nastalu na uređaju ili gubitak podataka uzrokovan upotrebom tih aplikacija."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Potvrđivanje aplikacija"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Onemogući ili upozori prije instalacije aplikacija koje mogu uzrokovati štetu"</string>
-    <!-- no translation found for system_hdcp_checking_never (1758043078676276985) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_drm (8563220452241389905) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_always (7264575337360957746) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_resolution (2612694859060466938) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_framerate (67514549356802383) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_off (8790815645038325739) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_areas (5227122594087360124) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_counter (3042271307724657436) -->
-    <skip />
+    <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Nikada"</string>
+    <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"Za DRM sadržaj"</string>
+    <string name="system_hdcp_checking_always" msgid="7264575337360957746">"Uvijek"</string>
+    <string name="system_hdmi_optimization_best_resolution" msgid="2612694859060466938">"Najbolja rezolucija"</string>
+    <string name="system_hdmi_optimization_best_framerate" msgid="67514549356802383">"Najveći broj sličica u sekundi"</string>
+    <string name="system_hw_overdraw_off" msgid="8790815645038325739">"Isključeno"</string>
+    <string name="system_hw_overdraw_areas" msgid="5227122594087360124">"Pokaži područja slojnih iscrtavanja"</string>
+    <string name="system_hw_overdraw_counter" msgid="3042271307724657436">"Pokaži brojač slojnih iscrtavanja"</string>
     <string name="no_application" msgid="1746564297589309465">"Ništa"</string>
-    <!-- no translation found for enable_opengl_traces_none (6074804146602749420) -->
-    <skip />
-    <!-- no translation found for animation_scale_entries:0 (7477134110460336436) -->
-    <!-- no translation found for animation_scale_entries:1 (8327257151534006014) -->
-    <!-- no translation found for animation_scale_entries:2 (2105786719544636780) -->
-    <!-- no translation found for animation_scale_entries:3 (5290554136790336403) -->
-    <!-- no translation found for animation_scale_entries:4 (1232929590838082483) -->
-    <!-- no translation found for animation_scale_entries:5 (1889239009419613796) -->
-    <!-- no translation found for animation_scale_entries:6 (7268894934484547297) -->
-    <!-- no translation found for track_frame_time_off (5050360262132715904) -->
-    <skip />
-    <!-- no translation found for track_frame_time_bars (4470692840177888414) -->
-    <skip />
-    <!-- no translation found for app_process_limit_standard (8878199798843299844) -->
-    <skip />
-    <!-- no translation found for app_process_limit_zero (2667197109226789876) -->
-    <skip />
-    <!-- no translation found for app_process_limit_one (6417937037944753355) -->
-    <skip />
-    <!-- no translation found for app_process_limit_two (1067649339026655778) -->
-    <skip />
-    <!-- no translation found for app_process_limit_three (7234034351975161398) -->
-    <skip />
-    <!-- no translation found for app_process_limit_four (8907156918309381955) -->
-    <skip />
+    <string name="enable_opengl_traces_none" msgid="6074804146602749420">"Ništa"</string>
+  <string-array name="animation_scale_entries">
+    <item msgid="7477134110460336436">"Animacija isključena"</item>
+    <item msgid="8327257151534006014">"Brzina animacija 0,5 x"</item>
+    <item msgid="2105786719544636780">"Brzina animacija 1 x"</item>
+    <item msgid="5290554136790336403">"Brzina animacija 1,5 x"</item>
+    <item msgid="1232929590838082483">"Brzina animacija 2 x"</item>
+    <item msgid="1889239009419613796">"Brzina animacija 5 x"</item>
+    <item msgid="7268894934484547297">"Brzina animacija 10 x"</item>
+  </string-array>
+    <string name="track_frame_time_off" msgid="5050360262132715904">"Isključeno"</string>
+    <string name="track_frame_time_bars" msgid="4470692840177888414">"Na zaslonu u obliku traka"</string>
+    <string name="app_process_limit_standard" msgid="8878199798843299844">"Standardno ograničenje"</string>
+    <string name="app_process_limit_zero" msgid="2667197109226789876">"Nema pozadinskih procesa"</string>
+    <string name="app_process_limit_one" msgid="6417937037944753355">"Najviše 1 proces"</string>
+    <string name="app_process_limit_two" msgid="1067649339026655778">"Najviše 2 procesa"</string>
+    <string name="app_process_limit_three" msgid="7234034351975161398">"Najviše 3 procesa"</string>
+    <string name="app_process_limit_four" msgid="8907156918309381955">"Najviše 4 procesa"</string>
   <string-array name="tts_rate_entries">
     <item msgid="6425501867101281228">"Jako sporo"</item>
     <item msgid="3458529225374884970">"Sporo"</item>
