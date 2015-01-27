@@ -107,6 +107,11 @@
     <!-- Preference which sets the device's display calibration. [CHAR LIMIT=50] -->
     <string name="device_calibration">Calibration</string>
 
+        <!-- Title of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
+    <string name="device_storage_clear_cache_title">Clear cached data?</string>
+    <!-- Message of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
+    <string name="device_storage_clear_cache_message">This will clear cached data for all apps.</string>
+
     <!-- Browse Header for downloaded apps under device settings. [CHAR LIMIT=50] -->
     <string name="apps_downloaded">Downloaded apps</string>
     <!-- Browse Header for all apps under device settings. [CHAR LIMIT=50] -->
