@@ -18,7 +18,14 @@ package com.android.tv.settings.device;
 
 import android.annotation.ColorRes;
 import android.app.ActivityManager;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -27,6 +34,7 @@ import android.text.format.Formatter;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.storage.PercentageBarChart;
+import com.android.tv.settings.device.apps.AppsActivity;
 import com.android.tv.settings.device.storage.StorageMeasurement;
 import com.android.tv.settings.device.storage.StorageMeasurement.MeasurementDetails;
 import com.android.tv.settings.device.storage.StorageMeasurement.MeasurementReceiver;
@@ -53,6 +61,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     private static final long INVALID_SIZE = -1;
     private static final int ACTION_RESET_DEVICE = 1;
     private static final int ACTION_CANCEL = 2;
+    private static final int ACTION_CLEAR_CACHE = 3;
 
     /**
      * Support for shutdown-after-reset. If our launch intent has a true value for
@@ -161,11 +170,12 @@ public class StorageResetActivity extends SettingsLayoutActivity {
 
     private Header createStorageHeaders() {
         final Resources res = getResources();
+        final Intent appsIntent = new Intent(this, AppsActivity.class);
         return new Header.Builder(res)
                 .title(R.string.storage_title)
                 .description(mStorageDescription)
                 .build()
-                .add(new Status.Builder(res)
+                .add(new Action.Builder(res, appsIntent)
                         .title(R.string.storage_apps_usage)
                         .icon(R.drawable.storage_indicator_apps)
                         .description(mAppsSize)
@@ -185,7 +195,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                         .icon(R.drawable.storage_indicator_downloads)
                         .description(mDownloadsSize)
                         .build())
-                .add(new Status.Builder(res)
+                .add(new Action.Builder(res, ACTION_CLEAR_CACHE)
                         .title(R.string.storage_media_cache_usage)
                         .icon(R.drawable.storage_indicator_cache)
                         .description(mCacheSize)
@@ -240,6 +250,15 @@ public class StorageResetActivity extends SettingsLayoutActivity {
             case ACTION_CANCEL:
                 goBackToTitle(getString(R.string.device_storage_reset));
                 break;
+            case ACTION_CLEAR_CACHE:
+                final DialogFragment fragment = ConfirmClearCacheFragment.newInstance();
+                fragment.show(getFragmentManager(), null);
+                break;
+            default:
+                final Intent intent = action.getIntent();
+                if (intent != null) {
+                    startActivity(intent);
+                }
         }
     }
 
@@ -326,4 +345,37 @@ public class StorageResetActivity extends SettingsLayoutActivity {
         return (size == INVALID_SIZE) ? getString(R.string.storage_calculating_size)
                 : Formatter.formatShortFileSize(this, size);
     }
+
+    /**
+     * Dialog to request user confirmation before clearing all cache data.
+     */
+    public static class ConfirmClearCacheFragment extends DialogFragment {
+        public static ConfirmClearCacheFragment newInstance() {
+            return new ConfirmClearCacheFragment();
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            final Context context = getActivity();
+
+            final AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setTitle(R.string.device_storage_clear_cache_title);
+            builder.setMessage(getString(R.string.device_storage_clear_cache_message));
+
+            builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    final PackageManager pm = context.getPackageManager();
+                    final List<PackageInfo> infos = pm.getInstalledPackages(0);
+                    for (PackageInfo info : infos) {
+                        pm.deleteApplicationCacheFiles(info.packageName, null);
+                    }
+                }
+            });
+            builder.setNegativeButton(android.R.string.cancel, null);
+
+            return builder.create();
+        }
+    }
+
 }

@@ -716,6 +716,11 @@ public class Layout implements Parcelable {
                 return this;
             }
 
+            public Builder description(StringGetter description) {
+                mAction.mAppearence.mDescriptionGetter = description;
+                return this;
+            }
+
             public Builder checked(boolean checked) {
                 mAction.mAppearance.mChecked = checked;
                 return this;
