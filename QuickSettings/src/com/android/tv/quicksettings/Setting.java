@@ -13,8 +13,6 @@
  */
 package com.android.tv.quicksettings;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -33,7 +31,7 @@ public class Setting implements Parcelable {
     private int mSettingType;
 
     private int mMaxValue;
-    private List<String> mStringChoices = new ArrayList<String>();
+    private List<String> mStringChoices = new ArrayList<>();
 
     public Setting() {
     }

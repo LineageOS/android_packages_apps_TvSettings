@@ -15,24 +15,16 @@ package com.android.tv.quicksettings;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v17.leanback.widget.VerticalGridView;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.TextView;
-
-import com.android.tv.quicksettings.SettingsDialog;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class QuickSettings extends Activity {
 
@@ -51,7 +43,7 @@ public class QuickSettings extends Activity {
         super.onCreate(savedInstanceState);
 
         WindowManager.LayoutParams lp = getWindow().getAttributes();
-        lp.gravity = Gravity.RIGHT;
+        lp.gravity = Gravity.END;
         getWindow().setAttributes(lp);
 
         setContentView(R.layout.side_quicksettings);
@@ -140,7 +132,7 @@ public class QuickSettings extends Activity {
     }
 
     private ArrayList<Setting> getSettings() {
-        ArrayList<Setting> settings = new ArrayList<Setting>();
+        ArrayList<Setting> settings = new ArrayList<>();
 
         String[] presetSettingChoices = getResources().getStringArray(
                 R.array.setting_preset_choices);

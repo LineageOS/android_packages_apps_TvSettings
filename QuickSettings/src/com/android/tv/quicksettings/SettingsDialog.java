@@ -13,23 +13,17 @@
  */
 package com.android.tv.quicksettings;
 
+import android.support.annotation.NonNull;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v17.leanback.widget.OnChildSelectedListener;
 import android.support.v17.leanback.widget.VerticalGridView;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.ScaleAnimation;
 import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -38,7 +32,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class SettingsDialog extends Activity {
 
@@ -56,7 +49,7 @@ public class SettingsDialog extends Activity {
     private SeekBar mSeekBar;
     private TextView mSettingValue;
     private DialogAdapter mAdapter;
-    private SettingSelectedListener mSettingSelectedListener = new SettingSelectedListener();
+    private final SettingSelectedListener mSettingSelectedListener = new SettingSelectedListener();
     private Setting mFocusedSetting;
     private ArrayList<Setting> mSettings;
 
@@ -163,7 +156,7 @@ public class SettingsDialog extends Activity {
     }
 
     @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event) {
+    public boolean onKeyUp(int keyCode, @NonNull KeyEvent event) {
         if (mFocusedSetting == null) {
             return super.onKeyUp(keyCode, event);
         }
