@@ -14,29 +14,20 @@
 package com.android.tv.quicksettings;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v17.leanback.widget.VerticalGridView;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 
-import java.util.ArrayList;
-
 public class QuickSettings extends Activity {
 
     private static final String TAG = "QuickSettings";
-    private static final int REQUEST_CODE_SET_SETTINGS = 1;
     static final int PRESET_SETTING_INDEX = 0;
     static final int INTEGER_SETTING_START_INDEX = 1;
 
     private int mSlidOutTranslationX;
     private View mRootView;
-    private ArrayList<Setting> mSettings;
-    private PanelAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,53 +46,11 @@ public class QuickSettings extends Activity {
         mRootView = getWindow().getDecorView().findViewById(android.R.id.content);
         mRootView.setTranslationX(mSlidOutTranslationX);
 
-        final VerticalGridView panelList = (VerticalGridView) findViewById(R.id.side_panel_list);
-
-        mSettings = getSettings();
-        mAdapter = new PanelAdapter(mSettings, new SettingClickedListener() {
-            @Override
-            public void onSettingClicked(Setting s) {
-                Log.d(TAG, "Clicked Setting " + s.getTitle());
-                if (s.getType() != Setting.TYPE_UNKNOWN) {
-                    Intent intent = new Intent(QuickSettings.this, SettingsDialog.class);
-                    intent.putExtra(SettingsDialog.EXTRA_START_POS,
-                            panelList.getSelectedPosition());
-                    intent.putExtra(SettingsDialog.EXTRA_SETTINGS, mSettings);
-                    startActivityForResult(intent, REQUEST_CODE_SET_SETTINGS);
-                } else {
-                    new AlertDialog.Builder(QuickSettings.this).setPositiveButton(
-                            android.R.string.ok, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // User clicked OK button
-                                    String[] presetSettingChoices = getResources().getStringArray(
-                                            R.array.setting_preset_choices);
-                                    mSettings.get(PRESET_SETTING_INDEX).setValue(
-                                            presetSettingChoices[getResources().getInteger(
-                                                    R.integer.standard_setting_index)]);
-                                    int[] newSettingValues = getResources().getIntArray(
-                                            R.array.standard_setting_values);
-                                    for (int i = 0; i < newSettingValues.length; i++) {
-                                        mSettings.get(i + INTEGER_SETTING_START_INDEX).setValue(
-                                                newSettingValues[i]);
-                                    }
-                                    mAdapter.notifyDataSetChanged();
-                                }
-                            }).setNegativeButton(android.R.string.cancel,
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // User cancelled the dialog - do nothing
-                                }
-                            }).setTitle(R.string.reset_dialog_message).create().show();
-
-                }
-            }
-        });
-
-        panelList.setAdapter(mAdapter);
-        panelList.setSelectedPosition(0);
-        panelList.requestFocus();
+        if (savedInstanceState == null) {
+            final Fragment f = new QuickSettingsFragment();
+            getFragmentManager().beginTransaction().add(R.id.side_panel_list, f).commit();
+            getFragmentManager().executePendingTransactions();
+        }
     }
 
     @Override
@@ -118,35 +67,4 @@ public class QuickSettings extends Activity {
         super.onPause();
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_CODE_SET_SETTINGS) {
-            if (resultCode == RESULT_OK) {
-                mSettings = data.getParcelableArrayListExtra(
-                        SettingsDialog.RESULT_EXTRA_NEW_SETTINGS_VALUES);
-                mAdapter.setSettings(mSettings);
-            }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-    }
-
-    private ArrayList<Setting> getSettings() {
-        ArrayList<Setting> settings = new ArrayList<>();
-
-        String[] presetSettingChoices = getResources().getStringArray(
-                R.array.setting_preset_choices);
-        settings.add(new Setting(getString(R.string.setting_preset_name),
-                presetSettingChoices[getResources().getInteger(R.integer.standard_setting_index)]));
-        String[] settingNames = getResources().getStringArray(R.array.setting_names);
-        int[] standardSettingValues = getResources().getIntArray(R.array.standard_setting_values);
-        int[] maxSettingValues = getResources().getIntArray(R.array.setting_max_values);
-        for (int i = 0; i < settingNames.length; i++) {
-            settings.add(
-                    new Setting(settingNames[i], standardSettingValues[i], maxSettingValues[i]));
-        }
-        settings.add(new Setting(getString(R.string.setting_reset_defaults_name)));
-
-        return settings;
-    }
 }
