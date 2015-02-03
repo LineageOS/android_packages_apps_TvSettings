@@ -43,6 +43,7 @@ public abstract class SettingsLayoutActivity extends Activity implements
         if (mSettingsLayoutFragment == null) {
             mSettingsLayoutFragment = new SettingsLayoutFragment.Builder()
                     .title(layout.getTitle())
+                    .description(layout.getDescription())
                     .breadcrumb(layout.getBreadcrumb())
                     .icon(layout.getIcon())
                     .iconBackgroundColor(getResources().getColor(R.color.icon_background))
