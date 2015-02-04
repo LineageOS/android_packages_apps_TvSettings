@@ -81,9 +81,14 @@ public class SettingsDialog extends Activity {
 
         mSettings = getSettings();
 
-        int pivotX = getResources().getDimensionPixelSize(
-                R.dimen.main_panel_text_width_minus_padding);
-        int pivotY = getResources().getDimensionPixelSize(R.dimen.main_panel_text_height_half);
+        final int pivotX;
+        if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+            pivotX = getResources().getDimensionPixelSize(R.dimen.slider_horizontal_padding);
+        } else {
+            pivotX = getResources().getDimensionPixelSize(
+                    R.dimen.main_panel_text_width_minus_padding);
+        }
+        final int pivotY = getResources().getDimensionPixelSize(R.dimen.main_panel_text_height_half);
 
         mAdapter = new DialogAdapter(mSettings, pivotX, pivotY, new SettingClickedListener() {
             @Override

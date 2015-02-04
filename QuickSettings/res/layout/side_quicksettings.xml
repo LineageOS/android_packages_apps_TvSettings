@@ -15,37 +15,42 @@
      limitations under the License.
 -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main_frame"
-    android:orientation="vertical"
-    android:elevation="@dimen/panel_z"
-    android:background="@color/side_panel_background"
-    android:layout_gravity="end"
-    android:layout_width="@dimen/panel_width"
-    android:layout_height="match_parent">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/side_panel_title_padding_top"
-        android:paddingStart="@dimen/side_panel_title_padding_start"
-        android:paddingEnd="@dimen/side_panel_title_padding_end"
-        android:background="@color/side_panel_title_background">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:id="@+id/main_frame"
+        android:orientation="vertical"
+        android:elevation="@dimen/panel_z"
+        android:background="@color/side_panel_background"
+        android:layout_width="@dimen/panel_width"
+        android:layout_height="match_parent">
 
         <TextView android:id="@+id/side_panel_title"
             android:layout_width="match_parent"
             android:layout_height="@dimen/side_panel_title_text_height"
+            android:background="@color/side_panel_title_background"
+            android:fontFamily="sans-serif-condensed"
             android:gravity="center_vertical"
+            android:paddingTop="@dimen/side_panel_title_padding_top"
+            android:paddingStart="@dimen/side_panel_title_padding_start"
+            android:paddingEnd="@dimen/side_panel_title_padding_end"
+            android:singleLine="true"
+            android:text="@string/main_label"
             android:textSize="@dimen/side_panel_title_text_size"
             android:textColor="@color/menu_default_text_color"
-            android:singleLine="true"
-            android:fontFamily="sans-serif-condensed"
-            android:text="@string/main_label" />
-    </FrameLayout>
+            />
 
-    <FrameLayout
-        android:id="@+id/side_panel_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        <FrameLayout
+            android:id="@+id/side_panel_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
 </LinearLayout>

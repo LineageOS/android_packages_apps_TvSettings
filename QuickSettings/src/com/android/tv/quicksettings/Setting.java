@@ -15,9 +15,6 @@ package com.android.tv.quicksettings;
 
 import android.content.SharedPreferences;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Setting {
 
     static final int TYPE_UNKNOWN = 0;
