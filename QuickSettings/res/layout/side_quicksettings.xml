@@ -16,7 +16,6 @@
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:lb="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_frame"
     android:orientation="vertical"
     android:elevation="@dimen/panel_z"
@@ -44,16 +43,9 @@
             android:text="@string/main_label" />
     </FrameLayout>
 
-    <android.support.v17.leanback.widget.VerticalGridView
+    <FrameLayout
         android:id="@+id/side_panel_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipChildren="false"
-        android:clipToPadding="false"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:paddingTop="@dimen/side_panel_list_padding_top"
-        android:paddingBottom="@dimen/side_panel_list_padding_bottom"
-        lb:verticalMargin="0dp" />
-
+        />
 </LinearLayout>

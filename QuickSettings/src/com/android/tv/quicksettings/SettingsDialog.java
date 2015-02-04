@@ -13,6 +13,8 @@
  */
 package com.android.tv.quicksettings;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -39,9 +41,6 @@ public class SettingsDialog extends Activity {
     private static final boolean DEBUG = true;
 
     static final String EXTRA_START_POS = "com.android.tv.quicksettings.START_POS";
-    static final String EXTRA_SETTINGS = "com.android.tv.quicksettings.SETTINGS";
-    static final String
-            RESULT_EXTRA_NEW_SETTINGS_VALUES = "com.android.tv.quicksettings.NEW_SETTINGS_VALUES";
     private static final int SETTING_INT_VALUE_MIN = 0;
     private static final int SETTING_INT_VALUE_STEP = 10;
 
@@ -52,10 +51,16 @@ public class SettingsDialog extends Activity {
     private final SettingSelectedListener mSettingSelectedListener = new SettingSelectedListener();
     private Setting mFocusedSetting;
     private ArrayList<Setting> mSettings;
+    private SharedPreferences mSharedPreferences;
+
+    private PresetSettingsListener mPresetSettingsListener;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mPresetSettingsListener = new PresetSettingsListener(this);
 
         WindowManager.LayoutParams lp = getWindow().getAttributes();
         lp.height = WindowManager.LayoutParams.MATCH_PARENT;
@@ -74,7 +79,8 @@ public class SettingsDialog extends Activity {
         mPanelList.setWindowAlignment(VerticalGridView.WINDOW_ALIGN_NO_EDGE);
         mPanelList.setOnChildSelectedListener(mSettingSelectedListener);
 
-        mSettings = getIntent().getParcelableArrayListExtra(EXTRA_SETTINGS);
+        mSettings = getSettings();
+
         int pivotX = getResources().getDimensionPixelSize(
                 R.dimen.main_panel_text_width_minus_padding);
         int pivotY = getResources().getDimensionPixelSize(R.dimen.main_panel_text_height_half);
@@ -83,8 +89,6 @@ public class SettingsDialog extends Activity {
             @Override
             public void onSettingClicked(Setting s) {
                 if (s.getType() != Setting.TYPE_UNKNOWN) {
-                    setResult(RESULT_OK, new Intent().putExtra(RESULT_EXTRA_NEW_SETTINGS_VALUES,
-                            mSettings));
                     finish();
                 } else {
                     new AlertDialog.Builder(SettingsDialog.this).setPositiveButton(
@@ -97,13 +101,6 @@ public class SettingsDialog extends Activity {
                                     mSettings.get(QuickSettings.PRESET_SETTING_INDEX).setValue(
                                             presetSettingChoices[getResources().getInteger(
                                                     R.integer.standard_setting_index)]);
-                                    int[] newSettingValues = getResources().getIntArray(
-                                            R.array.standard_setting_values);
-                                    for (int i = 0; i < newSettingValues.length; i++) {
-                                        mSettings.get(i + QuickSettings.INTEGER_SETTING_START_INDEX)
-                                                .setValue(
-                                                        newSettingValues[i]);
-                                    }
                                 }
                             }).setNegativeButton(android.R.string.cancel,
                             new DialogInterface.OnClickListener() {
@@ -117,7 +114,7 @@ public class SettingsDialog extends Activity {
         });
 
         mPanelList.setAdapter(mAdapter);
-        mPanelList.setSelectedPosition(startPos);
+        mPanelList.setSelectedPosition(startPos + 1);
         mPanelList.requestFocus();
 
         mSeekBar = (SeekBar) findViewById(R.id.main_slider);
@@ -125,12 +122,40 @@ public class SettingsDialog extends Activity {
         mSettingValue = (TextView) findViewById(R.id.setting_value);
     }
 
-    private class SettingSelectedListener implements OnChildSelectedListener {
-        private static final float ALPHA_UNSELECTED = 0.3f;
-        private static final float ALPHA_SELECTED = 1.0f;
-        private static final float SCALE_UNSELECTED = 1.0f;
-        private static final float SCALE_SELECTED = 1.3f;
+    @Override
+    protected void onResume() {
+        super.onResume();
 
+        mSharedPreferences.registerOnSharedPreferenceChangeListener(mPresetSettingsListener);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        mSharedPreferences.unregisterOnSharedPreferenceChangeListener(mPresetSettingsListener);
+    }
+
+    private ArrayList<Setting> getSettings() {
+        ArrayList<Setting> settings = new ArrayList<>();
+
+        settings.add(new Setting(mSharedPreferences, "preset",
+                getString(R.string.setting_preset_name)));
+
+        String[] settingNames = getResources().getStringArray(R.array.setting_names);
+        String[] settingKeys = getResources().getStringArray(R.array.setting_keys);
+        int[] maxSettingValues = getResources().getIntArray(R.array.setting_max_values);
+        for (int i = 0; i < settingNames.length; i++) {
+            settings.add(
+                    new Setting(mSharedPreferences, settingKeys[i], settingNames[i],
+                            maxSettingValues[i]));
+        }
+        settings.add(new Setting(getString(R.string.setting_reset_defaults_name)));
+
+        return settings;
+    }
+
+    private class SettingSelectedListener implements OnChildSelectedListener {
         @Override
         public void onChildSelected(ViewGroup parent, View view, int position, long id) {
             mFocusedSetting = mSettings.get(position);
