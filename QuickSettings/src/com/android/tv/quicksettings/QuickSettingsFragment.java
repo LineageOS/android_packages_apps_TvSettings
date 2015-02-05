@@ -99,12 +99,6 @@ public class QuickSettingsFragment extends PreferenceFragment implements
         sharedPreferences.unregisterOnSharedPreferenceChangeListener(mPresetSettingsListener);
     }
 
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-            @NonNull Preference preference) {
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
-    }
-
     private void updateDescriptions(SharedPreferences sharedPreferences) {
         final Resources res = getResources();
         mPresetPref.setSummary(mPresetPref.getEntry());

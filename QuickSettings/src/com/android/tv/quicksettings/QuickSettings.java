@@ -16,9 +16,7 @@ package com.android.tv.quicksettings;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
-import android.view.WindowManager;
 
 public class QuickSettings extends Activity {
 
@@ -33,17 +31,15 @@ public class QuickSettings extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        WindowManager.LayoutParams lp = getWindow().getAttributes();
-        lp.gravity = Gravity.END;
-        getWindow().setAttributes(lp);
-
         setContentView(R.layout.side_quicksettings);
-        getWindow().setLayout(WindowManager.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.MATCH_PARENT);
 
-        mSlidOutTranslationX = getResources().getDimensionPixelSize(R.dimen.panel_width);
+        if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+            mSlidOutTranslationX = -getResources().getDimensionPixelSize(R.dimen.panel_width);
+        } else {
+            mSlidOutTranslationX = getResources().getDimensionPixelSize(R.dimen.panel_width);
+        }
 
-        mRootView = getWindow().getDecorView().findViewById(android.R.id.content);
+        mRootView = getWindow().getDecorView().findViewById(R.id.main_frame);
         mRootView.setTranslationX(mSlidOutTranslationX);
 
         if (savedInstanceState == null) {
