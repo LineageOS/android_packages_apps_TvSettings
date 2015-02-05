@@ -25,30 +25,6 @@ import android.content.res.Resources;
 
 enum ActionType {
     /*
-     * General
-     */
-    AGREE(R.string.agree),
-    DISAGREE(R.string.disagree),
-    OK(R.string.title_ok),
-    CANCEL(R.string.title_cancel),
-    ON(R.string.on),
-    OFF(R.string.off),
-    /*
-     * Location
-     */
-    LOCATION_OVERVIEW(R.string.system_location),
-    LOCATION_STATUS(R.string.location_status),
-    LOCATION_MODE(R.string.location_mode_title),
-    LOCATION_RECENT_REQUESTS(R.string.location_category_recent_location_requests),
-    LOCATION_NO_RECENT_REQUESTS(R.string.location_no_recent_apps),
-    LOCATION_SERVICES(R.string.location_services),
-    LOCATION_SERVICES_GOOGLE(R.string.google_location_services_title),
-    LOCATION_SERVICES_GOOGLE_SETTINGS(R.string.google_location_services_title),
-    LOCATION_SERVICES_GOOGLE_REPORTING(R.string.location_reporting,
-            R.string.location_reporting_desc),
-    LOCATION_SERVICES_GOOGLE_HISTORY(R.string.location_history, R.string.location_history_desc),
-
-    /*
      * Keyboard
      */
     KEYBOARD_OVERVIEW(R.string.system_keyboard),
@@ -65,25 +41,6 @@ enum ActionType {
                     R.string.security_unknown_sources_confirm_desc),
     SECURITY_VERIFY_APPS(R.string.security_verify_apps_title,
              R.string.security_verify_apps_desc),
-
-    /*
-     * Accessibility
-     */
-    ACCESSIBILITY_OVERVIEW(R.string.system_accessibility),
-    ACCESSIBILITY_SERVICES(R.string.system_services),
-    ACCESSIBILITY_SERVICES_SETTINGS(R.string.accessibility_service_settings),
-    ACCESSIBILITY_SERVICES_STATUS(R.string.system_accessibility_status),
-    ACCESSIBILITY_SERVICES_CONFIRM_ON(R.string.system_accessibility_status),
-    ACCESSIBILITY_SERVICES_CONFIRM_OFF(R.string.system_accessibility_status),
-    ACCESSIBILITY_SERVICE_CONFIG(R.string.system_accessibility_config),
-    ACCESSIBILITY_CAPTIONS(R.string.accessibility_captions),
-    ACCESSIBILITY_SPEAK_PASSWORDS(R.string.system_speak_passwords),
-    ACCESSIBILITY_TTS_OUTPUT(R.string.system_accessibility_tts_output),
-    ACCESSIBILITY_PREFERRED_ENGINE(R.string.system_preferred_engine),
-    ACCESSIBILITY_LANGUAGE(R.string.system_language),
-    ACCESSIBILITY_SPEECH_RATE(R.string.system_speech_rate),
-    ACCESSIBILITY_PLAY_SAMPLE(R.string.system_play_sample),
-    ACCESSIBILITY_INSTALL_VOICE_DATA(R.string.system_install_voice_data),
 
     CAPTIONS_OVERVIEW(R.string.accessibility_captions,
                       R.string.accessibility_captions_description),
