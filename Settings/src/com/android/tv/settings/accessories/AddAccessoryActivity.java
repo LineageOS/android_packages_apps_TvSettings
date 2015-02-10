@@ -36,6 +36,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -218,6 +219,7 @@ public class AddAccessoryActivity extends DialogActivity
 
         super.onCreate(savedInstanceState);
 
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         mDreamManager = IDreamManager.Stub.asInterface(ServiceManager.checkService(
                 DreamService.DREAM_SERVICE));
 
