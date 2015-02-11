@@ -387,7 +387,7 @@ public class UserAppRestrictionsDialogFragment extends DialogFragment implements
                         Log.d(TAG, "Installing " + packageName);
                     }
                 }
-                if (info != null && (info.flags & ApplicationInfo.FLAG_HIDDEN) != 0
+                if (info != null && (info.privateFlags & ApplicationInfo.PRIVATE_FLAG_HIDDEN) != 0
                         && (info.flags & ApplicationInfo.FLAG_INSTALLED) != 0) {
                     disableActionForPackage = true;
                     ipm.setApplicationHiddenSettingAsUser(packageName, false, userId);
