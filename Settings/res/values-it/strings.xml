@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"Versione"</string>
     <string name="about_serial" msgid="2723560490027171187">"Numero di serie"</string>
     <string name="about_build" msgid="9148789767199785676">"Build"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Ti manca soltanto <xliff:g id="STEP_COUNT">%1$d</xliff:g> passaggio per diventare sviluppatore"</item>
-    <item quantity="other" msgid="6907126743472136795">"Ti mancano soltanto <xliff:g id="STEP_COUNT">%1$d</xliff:g> passaggi per diventare sviluppatore"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">Ora ti mancano <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> passaggi per diventare uno sviluppatore</item>
+      <item quantity="one">Ora ti manca <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> passaggio per diventare uno sviluppatore</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Annunci"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Ora sei uno sviluppatore."</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Non serve, sei già uno sviluppatore"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Scollega dispositivi HDMI dalla TV"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Alimentaz. automat. TV attiva"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Collega la TV al dispositivo HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"INGRESSO COLLEGATO"</item>
-    <item quantity="other" msgid="280747600882155182">"INGRESSI COLLEGATI"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"INGRESSO IN STANDBY"</item>
-    <item quantity="other" msgid="1673538341842385592">"INGRESSI IN STANDBY"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"INGRESSO NON COLLEGATO"</item>
-    <item quantity="other" msgid="4526893384805247472">"INGRESSI NON COLLEGATI"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">INGRESSI COLLEGATI</item>
+      <item quantity="one">INGRESSO COLLEGATO</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">INGRESSI IN STANDBY</item>
+      <item quantity="one">INGRESSO IN STANDBY</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">INGRESSI NON COLLEGATI</item>
+      <item quantity="one">INGRESSO NON COLLEGATO</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Limita l\'accesso ad app e altri contenuti nel tuo account"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Profilo con limitazioni"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Controllata da <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Elimina profilo con limitazioni"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Impostazioni"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"App consentite"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 app consentita"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d app consentite"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d app consentite</item>
+      <item quantity="one">1 app consentita</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Consentito"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Non consentito"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Personalizza limitazioni"</string>

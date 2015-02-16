@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"نسخه"</string>
     <string name="about_serial" msgid="2723560490027171187">"شماره سریال"</string>
     <string name="about_build" msgid="9148789767199785676">"ساخت"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"اکنون <xliff:g id="STEP_COUNT">%1$d</xliff:g> قدم تا برنامه‌نویس شدن فاصله دارید"</item>
-    <item quantity="other" msgid="6907126743472136795">"اکنون <xliff:g id="STEP_COUNT">%1$d</xliff:g> قدم تا برنامه‌نویس شدن فاصله دارید"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one">اکنون <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> قدم تا برنامه‌نویس شدن فاصله دارید</item>
+      <item quantity="other">اکنون <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> قدم تا برنامه‌نویس شدن فاصله دارید</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"آگهی‌ها"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"اکنون برنامه‌نویس هستید!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"نیازی نیست، شما در حال حاضر برنامه‌نویس هستید"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"خاموش کردن دستگاه‌های HDMI با تلویزیون"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"روشن شدن خودکار تلویزیون"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"روشن کردن تلویزیون با دستگاه HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"ورودی متصل"</item>
-    <item quantity="other" msgid="280747600882155182">"ورودی‌های متصل"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"ورودی آماده‌به‌کار"</item>
-    <item quantity="other" msgid="1673538341842385592">"ورودی‌های آماده‌به‌کار"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"ورودی‌های غیرمتصل"</item>
-    <item quantity="other" msgid="4526893384805247472">"ورودی‌های غیرمتصل"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">ورودی متصل</item>
+      <item quantity="other">ورودی‌های متصل</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">ورودی آماده‌به‌کار</item>
+      <item quantity="other">ورودی‌های آماده‌به‌کار</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">ورودی غیرمتصل</item>
+      <item quantity="other">ورودی‌های غیرمتصل</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"دسترسی به برنامه‌ها و سایر محتوای موجود در حسابتان را محدود کنید"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"نمایه محدود شده"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"کنترل شده توسط <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"حذف نمایه محدود"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"تنظیمات"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"برنامه‌های مجاز شده"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"۱ برنامه مجاز شد"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d برنامه مجاز شدند"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">‏%d برنامه مجاز شد</item>
+      <item quantity="other">‏%d برنامه مجاز شدند</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"مجاز شد"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"مجاز نیست"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"سفارشی کردن محدودیت‌ها"</string>

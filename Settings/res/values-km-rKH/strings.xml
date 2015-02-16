@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"កំណែ"</string>
     <string name="about_serial" msgid="2723560490027171187">"លេខ​សៀរៀល"</string>
     <string name="about_build" msgid="9148789767199785676">"បង្កើត"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"ឥឡូវ​អ្នក​ស្ថិតនៅ <xliff:g id="STEP_COUNT">%1$d</xliff:g> ជំហាន​ពី​ការ​ក្លាយ​ជា​អ្នក​អភិវឌ្ឍ"</item>
-    <item quantity="other" msgid="6907126743472136795">"ឥឡូវ​អ្នក​ស្ថិត​នៅ​ <xliff:g id="STEP_COUNT">%1$d</xliff:g> ជំហាន​ពី​ការ​ជា​អ្នក​អភិវឌ្ឍ"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">ឥឡូវនេះអ្នកនៅសល់ <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ជំហានទៀតដើម្បីក្លាយជាអ្នកអភិវឌ្ឍន៍</item>
+      <item quantity="one">ឥឡូវនេះអ្នកនៅសល់ <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> ជំហានទៀតដើម្បីក្លាយជាអ្នកអភិវឌ្ឍន៍</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"ផ្សាយ​ពាណិជ្ជកម្ម"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"អ្នក​ជា​អ្នក​អភិវឌ្ឍ​ឥឡូវ​នេះ!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"មិន​ចាំបាច់ អ្នក​ជា​អ្នក​អភិវឌ្ឍ​រួចហើយ"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"បិទ​ឧបករណ៍ HDMI ជា​មួយ​ទូរទស្សន៍"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"​ទូរទស្សន៍​បើក​​ស្វ័យ​ប្រវត្តិ"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"បើក​ទូរទស្សន៍​ជា​មួយ​ឧបករណ៍ HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"ការ​បញ្ចូល​បាន​ភ្ជាប់"</item>
-    <item quantity="other" msgid="280747600882155182">"ការ​បញ្ចូល​បាន​ភ្ជាប់"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"ការ​បញ្ចូល​រង់ចាំ"</item>
-    <item quantity="other" msgid="1673538341842385592">"ការ​បញ្ចូល​រង់ចាំ"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"ការ​បញ្ចូល​មិន​បាន​ភ្ជាប់"</item>
-    <item quantity="other" msgid="4526893384805247472">"ការ​បញ្ចូល​មិន​បាន​ភ្ជាប់"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">បានភ្ជាប់បញ្ចូល</item>
+      <item quantity="one">បានភ្ជាប់បញ្ចូល</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">បញ្ចូលរង់ចាំ</item>
+      <item quantity="one">បញ្ចូលរង់ចាំ</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">មិនបានភ្ជាប់បញ្ចូល</item>
+      <item quantity="one">មិនបានភ្ជាប់បញ្ចូល</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"ដាក់​​​កម្រិត​ការ​ចូល​ប្រើ​កម្មវិធី និង​មាតិកា​ផ្សេងទៀត​ក្នុង​គណនី​របស់​អ្នក"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"ប្រវត្តិរូប​​ដែល​​ដាក់កម្រិត"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"គ្រប់គ្រង​ដោយ <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"លុប​ប្រវត្តិរូប​ដែល​បាន​ដាក់​កម្រិត"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"ការកំណត់"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"កម្មវិធី​ដែល​អនុញ្ញាត"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"បាន​អនុញ្ញាត​កម្មវិធី 1"</item>
-    <item quantity="other" msgid="5242661864373721262">"បាន​អនុញ្ញាត​កម្មវិធី %d"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">បានអនុញ្ញាតកម្មវិធី %d</item>
+      <item quantity="one">បានអនុញ្ញាតកម្មវិធី 1</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"អនុញ្ញាត"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"មិន​បាន​អនុញ្ញាត"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"ប្ដូរ​ការ​ដាក់​កម្រិត​តាម​តម្រូវ​ការ"</string>

@@ -108,10 +108,12 @@
     <string name="about_version" msgid="1177287676732287266">"Versija"</string>
     <string name="about_serial" msgid="2723560490027171187">"Serijos numeris"</string>
     <string name="about_build" msgid="9148789767199785676">"Versija"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Kad taptumėte kūrėju, tereikia atlikti tiek veiksmų: <xliff:g id="STEP_COUNT">%1$d</xliff:g>"</item>
-    <item quantity="other" msgid="6907126743472136795">"Kad taptumėte kūrėju, tereikia atlikti tiek veiksmų: <xliff:g id="STEP_COUNT">%1$d</xliff:g>"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one">Kad taptumėte kūrėju, dabar tereikia atlikti <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> veiksmą</item>
+      <item quantity="few">Kad taptumėte kūrėju, dabar tereikia atlikti <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> veiksmus</item>
+      <item quantity="many">Kad taptumėte kūrėju, dabar tereikia atlikti <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> veiksmo</item>
+      <item quantity="other">Kad taptumėte kūrėju, dabar tereikia atlikti <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> veiksmų</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Skelbimai"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Dabar esate kūrėjas!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Nebesistenkite, jūs jau esate kūrėjas."</string>
@@ -427,18 +429,24 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Išjungti HDMI įrenginius kartu su TV"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Automatinis TV įjungimas"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Įjungti TV kartu su HDMI įrenginiu"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"PRIJUNGTAS ĮVESTIES ĮRENGINYS"</item>
-    <item quantity="other" msgid="280747600882155182">"PRIJUNGTI ĮVESTIES ĮRENGINIAI"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"BUDĖJIMO REŽ. ĮVESTIES ĮRENG."</item>
-    <item quantity="other" msgid="1673538341842385592">"BUDĖJIMO REŽ. ĮVESTIES ĮRENG."</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"ĮVESTIES ĮRENGINYS ATJUNGTAS"</item>
-    <item quantity="other" msgid="4526893384805247472">"ĮVESTIES ĮRENGINIAI ATJUNGTI"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">PRIJUNGTI ĮVESTIES ĮRENGINIAI</item>
+      <item quantity="few">PRIJUNGTI ĮVESTIES ĮRENGINIAI</item>
+      <item quantity="many">PRIJUNGTI ĮVESTIES ĮRENGINIAI</item>
+      <item quantity="other">PRIJUNGTI ĮVESTIES ĮRENGINIAI</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">BUDĖJIMO REŽ. ĮVESTIES ĮRENG.</item>
+      <item quantity="few">BUDĖJIMO REŽ. ĮVESTIES ĮRENG.</item>
+      <item quantity="many">BUDĖJIMO REŽ. ĮVESTIES ĮRENG.</item>
+      <item quantity="other">BUDĖJIMO REŽ. ĮVESTIES ĮRENG.</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">ĮVESTIES ĮRENG. NEPRIJUNGTI</item>
+      <item quantity="few">ĮVESTIES ĮRENG. NEPRIJUNGTI</item>
+      <item quantity="many">ĮVESTIES ĮRENG. NEPRIJUNGTI</item>
+      <item quantity="other">ĮVESTIES ĮRENG. NEPRIJUNGTI</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Ribokite prieigą prie programų ir kito paskyros turinio"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Ribotas profilis"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Valdo „<xliff:g id="APP">%1$s</xliff:g>“"</string>
@@ -451,10 +459,12 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Ištrinti ribotą profilį"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Nustatymai"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Leidžiamos programos"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"Leidžiama programų: 1"</item>
-    <item quantity="other" msgid="5242661864373721262">"Leidžiama programų: %d"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">Leidžiama %d programa</item>
+      <item quantity="few">Leidžiamos %d programos</item>
+      <item quantity="many">Leidžiama %d programos</item>
+      <item quantity="other">Leidžiama %d programų</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Leidžiama"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Neleidžiama"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Tinkinti apribojimus"</string>

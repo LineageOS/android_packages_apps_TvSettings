@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"সংস্করণ"</string>
     <string name="about_serial" msgid="2723560490027171187">"ক্রমিক সংখ্যা"</string>
     <string name="about_build" msgid="9148789767199785676">"বিল্ড"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"এখন আর <xliff:g id="STEP_COUNT">%1$d</xliff:g>টি পদক্ষেপ পরেই আপনি একজন বিকাশকারী হিসাবে চিহ্নিত হবেন"</item>
-    <item quantity="other" msgid="6907126743472136795">"এখন আর <xliff:g id="STEP_COUNT">%1$d</xliff:g>টি পদক্ষেপ পরেই আপনি একজন বিকাশকারী হিসাবে চিহ্নিত হবেন"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one">এখন আর <xliff:g id="STEP_COUNT_1">%1$d</xliff:g>টি পদক্ষেপ পরেই আপনি একজন বিকাশকারী হিসাবে চিহ্নিত হবেন</item>
+      <item quantity="other">এখন আর <xliff:g id="STEP_COUNT_1">%1$d</xliff:g>টি পদক্ষেপ পরেই আপনি একজন বিকাশকারী হিসাবে চিহ্নিত হবেন</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"বিজ্ঞাপনগুলি"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"আপনি এখন একজন বিকাশকারী!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"কোনো প্রয়োজন নেই, আপনি ইতিমধ্যেই একজন বিকাশকারী হিসাবে চিহ্নিত হয়েছেন"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"টিভির সঙ্গে HDMI ডিভাইসগুলির পাওয়ার বন্ধ করুন"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"টিভির পাওয়ার স্বতঃচালু করা"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI ডিভাইসের মাধ্যমে টিভির পাওয়ার চালু করুন"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"সংযুক্ত ইনপুট"</item>
-    <item quantity="other" msgid="280747600882155182">"সংযুক্ত ইনপুটগুলি"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"অপেক্ষারত ইনপুট"</item>
-    <item quantity="other" msgid="1673538341842385592">"অপেক্ষারত ইনপুটগুলি"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"সংযুক্ত না থাকা ইনপুট"</item>
-    <item quantity="other" msgid="4526893384805247472">"সংযুক্ত না থাকা ইনপুটগুলি"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">সংযুক্ত ইনপুটগুলি</item>
+      <item quantity="other">সংযুক্ত ইনপুটগুলি</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">অপেক্ষারত ইনপুটগুলি</item>
+      <item quantity="other">অপেক্ষারত ইনপুটগুলি</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">সংযুক্ত না থাকা ইনপুটগুলি</item>
+      <item quantity="other">সংযুক্ত না থাকা ইনপুটগুলি</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"আপনার অ্যাকাউন্টের মধ্যে অ্যাপ্লিকেশান এবং অন্যান্য সামগ্রীর অ্যাক্সেস সীমাবদ্ধ করুন"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"বিধিনিষেধযুক্ত প্রোফাইল"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g>-এর দ্বারা নিয়ন্ত্রিত"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"বিধিনিষেধযুক্ত প্রোফাইল মুছুন"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"সেটিংস"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"অনুমোদিত অ্যাপ্লিকেশানগুলি"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"১টি অ্যাপ্লিকেশান অনুমোদিত"</item>
-    <item quantity="other" msgid="5242661864373721262">"%dটি অ্যাপ্লিকেশান অনুমোদিত"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">%dটি অ্যাপ্লিকেশান অনুমোদিত</item>
+      <item quantity="other">%dটি অ্যাপ্লিকেশান অনুমোদিত</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"অনুমতি আছে"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"অনুমতি নেই"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"বিধিনিষেধগুলি কাস্টমাইজ করুন"</string>

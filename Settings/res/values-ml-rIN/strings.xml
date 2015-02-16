@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"പതിപ്പ്"</string>
     <string name="about_serial" msgid="2723560490027171187">"സീരിയല്‍ നമ്പര്‍"</string>
     <string name="about_build" msgid="9148789767199785676">"ബിൽഡ്"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"ഒരു ഡവലപ്പറായിത്തീരുന്നതിന് നിങ്ങൾ <xliff:g id="STEP_COUNT">%1$d</xliff:g> ചുവട് മാത്രം അകലെയാണ്"</item>
-    <item quantity="other" msgid="6907126743472136795">"ഒരു ഡവലപ്പറായിത്തീരുന്നതിന് നിങ്ങൾ <xliff:g id="STEP_COUNT">%1$d</xliff:g> ചുവടുകൾ മാത്രം അകലെയാണ്"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">നിങ്ങൾ ഇപ്പോൾ ഒരു ഡവലപ്പറാകുന്നതിൽ നിന്നും <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ചുവട് മാത്രം അകലെയാണ്</item>
+      <item quantity="one">നിങ്ങൾ ഇപ്പോൾ ഒരു ഡവലപ്പറാകുന്നതിൽ നിന്നും <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> ചുവട് മാത്രം അകലെയാണ്</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"പരസ്യങ്ങൾ"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"നിങ്ങൾ ഇപ്പോൾ ഒരു ഡവലപ്പറാണ്!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"ആവശ്യമില്ല, നിങ്ങൾ ഇതിനകം ഒരു ഡവലപ്പറാണ്"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"ടിവിയ്‌ക്കൊപ്പമുള്ള HDMI ഉപകരണങ്ങളുടെ പവർ ഓഫ് ചെയ്യുക"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"ടിവി യാന്ത്രിക പവർ ഓൺ"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI ഉപകരണം ഉപയോഗിച്ച് ടിവി ഓൺ ചെയ്യുക"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"കണക്റ്റുചെയ്‌തിരിക്കുന്ന ഇൻപുട്ട്"</item>
-    <item quantity="other" msgid="280747600882155182">"കണക്റ്റുചെയ്‌തിരിക്കുന്ന ഇൻപുട്ടുകൾ"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"സ്റ്റാൻഡ്ബൈ ഇൻപുട്ട്"</item>
-    <item quantity="other" msgid="1673538341842385592">"സ്റ്റാൻഡ്ബൈ ഇൻപുട്ടുകൾ"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"കണക്റ്റുചെയ്‌തിട്ടില്ലാത്ത ഇൻപുട്ട്"</item>
-    <item quantity="other" msgid="4526893384805247472">"കണക്റ്റുചെയ്‌തിട്ടില്ലാത്ത ഇൻപുട്ടുകൾ"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">കണക്‌റ്റുചെയ്‌ത ഇൻപുട്ടുകൾ</item>
+      <item quantity="one">കണക്‌റ്റുചെയ്‌ത ഇൻപുട്ട്</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">സ്‌റ്റാൻഡ്‌ബൈ ഇൻപുട്ടുകൾ</item>
+      <item quantity="one">സ്‌റ്റാൻഡ്‌ബൈ ഇൻപുട്ട്</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">കണക്‌റ്റുചെയ്‌തിട്ടില്ലാത്ത ഇൻപുട്ടുകൾ</item>
+      <item quantity="one">കണക്‌റ്റുചെയ്‌തിട്ടില്ലാത്ത ഇൻപുട്ട്</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"നിങ്ങളുടെ അക്കൗണ്ടിലെ അപ്ലിക്കേഷനിലേക്കും മറ്റ് ഉള്ളടക്കത്തിലേക്കുമുള്ള ആക്‌സസ്സ് നിയന്ത്രിക്കുക"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"നിയന്ത്രിത പ്രൊഫൈൽ"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g> നിയന്ത്രിക്കുന്നത്"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"നിയന്ത്രിത പ്രൊഫൈൽ ഇല്ലാതാക്കുക"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"ക്രമീകരണം"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"അനുവദിച്ച അപ്ലിക്കേഷനുകൾ"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"ഒരു അപ്ലിക്കേഷൻ അനുവദിച്ചു"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d അപ്ലിക്കേഷനുകൾ അനുവദിച്ചു"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d അപ്ലിക്കേഷനുകൾ അനുവദിച്ചു</item>
+      <item quantity="one">ഒരു അപ്ലിക്കേഷൻ അനുവദിച്ചു</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"അനുവദനീയം"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"അനുവദിച്ചിട്ടില്ല"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"നിയന്ത്രണങ്ങൾ ഇഷ്‌ടാനുസൃതമാക്കുക"</string>

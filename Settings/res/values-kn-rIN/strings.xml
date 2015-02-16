@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"ಆವೃತ್ತಿ"</string>
     <string name="about_serial" msgid="2723560490027171187">"ಕ್ರಮ ಸಂಖ್ಯೆ"</string>
     <string name="about_build" msgid="9148789767199785676">"ನಿರ್ಮಾಣ"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"ನೀವು ಈಗ ಡೆವಲಪರ್ ಆಗಲು <xliff:g id="STEP_COUNT">%1$d</xliff:g> ಹೆಜ್ಜೆಗಳಷ್ಟು ದೂರವಿರುವಿರಿ"</item>
-    <item quantity="other" msgid="6907126743472136795">"ನೀವು ಈಗ ಡೆವಲಪರ್ ಆಗಲು <xliff:g id="STEP_COUNT">%1$d</xliff:g> ಹೆಜ್ಜೆಗಳಷ್ಟು ದೂರವಿರುವಿರಿ"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one">ನೀವು ಈಗ ಡೆವಲಪರ್ ಆಗಲು <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ಹೆಜ್ಜೆಗಳಷ್ಟು ದೂರವಿರುವಿರಿ</item>
+      <item quantity="other">ನೀವು ಈಗ ಡೆವಲಪರ್ ಆಗಲು <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ಹೆಜ್ಜೆಗಳಷ್ಟು ದೂರವಿರುವಿರಿ</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"ಜಾಹೀರಾತುಗಳು"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"ಇದೀಗ ನೀವು ಡೆವಲಪರ್‌!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"ಅಗತ್ಯವಿಲ್ಲ, ನೀವು ಈಗಾಗಲೇ ಡೆವಲಪರ್ ಆಗಿರುವಿರಿ"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"TV ಜೊತೆ HDMI ಸಾಧನಗಳ ಪವರ್ ಆಫ್ ಮಾಡಿ"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"TV ಸ್ವಯಂ ಪವರ್ ಆನ್"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI ಸಾಧನದೊಂದಿಗೆ TV ಪವರ್ ಆನ್ ಮಾಡಿ"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"ಸಂಪರ್ಕಪಡಿಸಿರುವ ಇನ್‌ಪುಟ್"</item>
-    <item quantity="other" msgid="280747600882155182">"ಸಂಪರ್ಕಪಡಿಸಿರುವ ಇನ್‌ಪುಟ್‌ಗಳು"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"ಸ್ಟ್ಯಾಂಡ್‌ಬೈ ಇನ್‌ಪುಟ್"</item>
-    <item quantity="other" msgid="1673538341842385592">"ಸ್ಟ್ಯಾಂಡ್‌ಬೈ ಇನ್‌ಪುಟ್‌ಗಳು"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"ಸಂಪರ್ಕಪಡಿಸದಿರುವ ಇನ್‌ಪುಟ್"</item>
-    <item quantity="other" msgid="4526893384805247472">"ಸಂಪರ್ಕಪಡಿಸದಿರುವ ಇನ್‌ಪುಟ್‌ಗಳು"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">ಸಂಪರ್ಕಪಡಿಸಿರುವ ಇನ್‌ಪುಟ್‌ಗಳು</item>
+      <item quantity="other">ಸಂಪರ್ಕಪಡಿಸಿರುವ ಇನ್‌ಪುಟ್‌ಗಳು</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">ಸ್ಟ್ಯಾಂಡ್‌ಬೈ ಇನ್‌ಪುಟ್‌ಗಳು</item>
+      <item quantity="other">ಸ್ಟ್ಯಾಂಡ್‌ಬೈ ಇನ್‌ಪುಟ್‌ಗಳು</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">ಸಂಪರ್ಕಪಡಿಸದಿರುವ ಇನ್‌ಪುಟ್‌ಗಳು</item>
+      <item quantity="other">ಸಂಪರ್ಕಪಡಿಸದಿರುವ ಇನ್‌ಪುಟ್‌ಗಳು</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"ನಿಮ್ಮ ಖಾತೆಯಲ್ಲಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಇತರ ವಿಷಯಕ್ಕೆ ಪ್ರವೇಶವನ್ನು ನಿರ್ಬಂಧಿಸಿ"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"ನಿರ್ಬಂಧಿಸಿದ ಪ್ರೊಫೈಲ್"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g> ಮೂಲಕ ನಿಯಂತ್ರಿಸಲಾಗುತ್ತದೆ"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"ನಿರ್ಬಂಧಿತ ಪ್ರೊಫೈಲ್ ಅಳಿಸಿ"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"ಅನುಮತಿಸಲಾದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 ಅಪ್ಲಿಕೇಶನ್ ಅನುಮತಿಸಲಾಗಿದೆ"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅನುಮತಿಸಲಾಗಿದೆ"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">%d ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅನುಮತಿಸಲಾಗಿದೆ</item>
+      <item quantity="other">%d ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅನುಮತಿಸಲಾಗಿದೆ</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"ಅನುಮತಿಸಲಾಗಿದೆ"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"ನಿರ್ಬಂಧಗಳನ್ನು ವೈಯಕ್ತೀಕರಿಸಿ"</string>

@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"பதிப்பு"</string>
     <string name="about_serial" msgid="2723560490027171187">"வரிசை எண்"</string>
     <string name="about_build" msgid="9148789767199785676">"பதிப்பு"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"டெவலப்பராவதற்கு இப்போது <xliff:g id="STEP_COUNT">%1$d</xliff:g> படியே உள்ளது"</item>
-    <item quantity="other" msgid="6907126743472136795">"டெவலப்பராவதற்கு இப்போது <xliff:g id="STEP_COUNT">%1$d</xliff:g> படிகளே உள்ளன"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">டெவலப்பராவதற்கு இப்போது <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> படிகள் உள்ளன</item>
+      <item quantity="one">டெவலப்பராவதற்கு இப்போது <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> படியே உள்ளது</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"விளம்பரங்கள்"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"இப்போது டெவெலப்பராகிவிட்டீர்கள்!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"தேவையில்லை, ஏற்கனவே டெவலப்பராகி விட்டீர்கள்"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"டிவி மூலம் HDMI சாதனங்களை முடக்குகிறது"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"டிவியைத் தானாக இயக்கு"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI சாதனம் மூலம் டிவியை இயக்குகிறது"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"இணைத்த உள்ளீடு"</item>
-    <item quantity="other" msgid="280747600882155182">"இணைத்த உள்ளீடுகள்"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"செயலற்ற நிலை உள்ளீடு"</item>
-    <item quantity="other" msgid="1673538341842385592">"செயலற்ற நிலை உள்ளீடுகள்"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"துண்டித்த உள்ளீடு"</item>
-    <item quantity="other" msgid="4526893384805247472">"துண்டித்த உள்ளீடுகள்"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">இணைத்த உள்ளீடுகள்</item>
+      <item quantity="one">இணைத்த உள்ளீடு</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">செயலற்ற நிலை உள்ளீடுகள்</item>
+      <item quantity="one">செயலற்ற நிலை உள்ளீடு</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">துண்டித்த உள்ளீடுகள்</item>
+      <item quantity="one">துண்டித்த உள்ளீடு</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"உங்கள் கணக்கில் உள்ள பயன்பாடுகள் மற்றும் மற்ற உள்ளடக்கத்தின் அணுகலை வரையறுக்கவும்"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"வரம்பிட்ட சுயவிவரம்"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g> ஆல் கட்டுப்படுத்தப்படுகிறது"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"கட்டுப்படுத்தப்பட்ட சுயவிவரத்தை நீக்கு"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"அமைப்புகள்"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"அனுமதிக்கப்பட்ட பயன்பாடுகள்"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 பயன்பாடு அனுமதிக்கப்படும்"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d பயன்பாடுகள் அனுமதிக்கப்படும்"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d பயன்பாடுகள் அனுமதிக்கப்படும்</item>
+      <item quantity="one">1 பயன்பாடு அனுமதிக்கப்படும்</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"அனுமதிக்கப்படும்"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"அனுமதிக்கப்படாது"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"கட்டுப்பாடுகளைத் தனிப்பயனாக்கவும்"</string>

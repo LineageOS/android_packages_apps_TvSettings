@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"Верзија"</string>
     <string name="about_serial" msgid="2723560490027171187">"Сериски број"</string>
     <string name="about_build" msgid="9148789767199785676">"Изградена"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Сега сте <xliff:g id="STEP_COUNT">%1$d</xliff:g> чекор оддалечени од тоа да станете програмер"</item>
-    <item quantity="other" msgid="6907126743472136795">"Сега сте <xliff:g id="STEP_COUNT">%1$d</xliff:g> чекори оддалечени од тоа да станете програмер"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one">Сега сте на <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> чекор од станување програмер</item>
+      <item quantity="other">Сега сте на <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> чекори од станување програмер</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Реклами"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Сега сте програмер!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Нема потреба, веќе сте програмер"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Исклучете ги уредите за HDMI со телевизорот"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Автоматско вклучување ТВ"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Вклучете го телевизорот со уредот за HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"ПОВРЗАН ВЛЕЗ"</item>
-    <item quantity="other" msgid="280747600882155182">"ПОВРЗАНИ ВЛЕЗОВИ"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"ВЛЕЗ ЗА РЕЖИМ ПОДГОТВЕНОСТ"</item>
-    <item quantity="other" msgid="1673538341842385592">"ВЛЕЗОВИ ЗА РЕЖИМ ПОДГОТВЕНОСТ"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"НЕМА ПОВРЗАН ВЛЕЗ"</item>
-    <item quantity="other" msgid="4526893384805247472">"НЕМА ПОВРЗАНИ ВЛЕЗОВИ"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">ПОВРЗАН ВЛЕЗ</item>
+      <item quantity="other">ПОВРЗАНИ ВЛЕЗА</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">ВЛЕЗ ЗА ПОДГОТВЕНОСТ</item>
+      <item quantity="other">ВЛЕЗА ЗА ПОДГОТВЕНОСТ</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">НЕПОВРЗАН ВЛЕЗ</item>
+      <item quantity="other">НЕПОВРЗАНИ ВЛЕЗА</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Ограничете го пристапот до апликациите и другата содржина во вашата сметка"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Ограничен профил"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Контролирани од <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Избриши го ограничениот профил"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Поставки"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Дозволени апликации"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"Дозволена е 1 апликација"</item>
-    <item quantity="other" msgid="5242661864373721262">"Дозволени се %d апликации"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">Дозволена е %d апликација</item>
+      <item quantity="other">Дозволени се %d апликации</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Дозволено"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Не е дозволено"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Прилагоди ограничувања"</string>

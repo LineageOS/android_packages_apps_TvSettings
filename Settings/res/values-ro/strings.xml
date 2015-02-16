@@ -108,10 +108,11 @@
     <string name="about_version" msgid="1177287676732287266">"Versiune"</string>
     <string name="about_serial" msgid="2723560490027171187">"Număr de serie"</string>
     <string name="about_build" msgid="9148789767199785676">"Versiunea"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Mai aveți de parcurs <xliff:g id="STEP_COUNT">%1$d</xliff:g> pas pentru a deveni dezvoltator"</item>
-    <item quantity="other" msgid="6907126743472136795">"Mai aveți de parcurs <xliff:g id="STEP_COUNT">%1$d</xliff:g> pași pentru a deveni dezvoltator"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="few">Mai aveți <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> pași pentru a deveni dezvoltator</item>
+      <item quantity="other">Mai aveți <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> de pași pentru a deveni dezvoltator</item>
+      <item quantity="one">Mai aveți <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> pas pentru a deveni dezvoltator</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Anunțuri"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Ați devenit dezvoltator!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Nu mai este nevoie, sunteți deja dezvoltator."</string>
@@ -427,18 +428,21 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Închideți dispozitivele HDMI cu televizorul"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Deschidere automată TV"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Deschideți televizorul cu dispozitivul HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"INTRARE CONECTATĂ"</item>
-    <item quantity="other" msgid="280747600882155182">"INTRĂRI CONECTATE"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"INTRARE ÎN STANDBY"</item>
-    <item quantity="other" msgid="1673538341842385592">"INTRĂRI ÎN STANDBY"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"INTRARE NECONECTATĂ"</item>
-    <item quantity="other" msgid="4526893384805247472">"INTRĂRI NECONECTATE"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="few">INTRĂRI CONECTATE</item>
+      <item quantity="other">INTRĂRI CONECTATE</item>
+      <item quantity="one">INTRARE CONECTATĂ</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="few">INTRĂRI ÎN STANDBY</item>
+      <item quantity="other">INTRĂRI ÎN STANDBY</item>
+      <item quantity="one">INTRARE ÎN STANDBY</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="few">INTRĂRI NECONECTATE</item>
+      <item quantity="other">INTRĂRI NECONECTATE</item>
+      <item quantity="one">INTRARE NECONECTATĂ</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Restricționați accesul la aplicații și la alte tipuri de conținut din contul dvs."</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Profil cu permisiuni limitate"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Controlate de <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +455,11 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Ștergeți profilul restricționat"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Setări"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Aplicații permise"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"O aplicație permisă"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d (de) aplicații permise"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="few">%d aplicații permise</item>
+      <item quantity="other">%d de aplicații permise</item>
+      <item quantity="one">O aplicație permisă</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Permis"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Nepermis"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Personalizați restricții"</string>

@@ -108,10 +108,11 @@
     <string name="about_version" msgid="1177287676732287266">"Verzija"</string>
     <string name="about_serial" msgid="2723560490027171187">"Serijski broj"</string>
     <string name="about_build" msgid="9148789767199785676">"Međuverzija"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Još <xliff:g id="STEP_COUNT">%1$d</xliff:g> korak i postat ćete razvojni programer"</item>
-    <item quantity="other" msgid="6907126743472136795">"Još <xliff:g id="STEP_COUNT">%1$d</xliff:g> koraka i postat ćete razvojni programer"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one">Još <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> korak i postat ćete razvojni programer</item>
+      <item quantity="few">Još <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> koraka i postat ćete razvojni programer</item>
+      <item quantity="other">Još <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> koraka i postat ćete razvojni programer</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Oglasi"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Sad ste razvojni programer!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Nema potrebe, već ste razvojni programer"</string>
@@ -366,7 +367,7 @@
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Nikada"</string>
     <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"Za DRM sadržaj"</string>
     <string name="system_hdcp_checking_always" msgid="7264575337360957746">"Uvijek"</string>
-    <string name="system_hdmi_optimization_best_resolution" msgid="2612694859060466938">"Najbolja rezolucija"</string>
+    <string name="system_hdmi_optimization_best_resolution" msgid="2612694859060466938">"Najbolja razlučivost"</string>
     <string name="system_hdmi_optimization_best_framerate" msgid="67514549356802383">"Najveći broj sličica u sekundi"</string>
     <string name="system_hw_overdraw_off" msgid="8790815645038325739">"Isključeno"</string>
     <string name="system_hw_overdraw_areas" msgid="5227122594087360124">"Pokaži područja slojnih iscrtavanja"</string>
@@ -427,18 +428,21 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Isključivanje HDMI uređaja s televizorom"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Automatski uključi televizor"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Uključivanje televizora s HDMI uređajem"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"POVEZAN ULAZ"</item>
-    <item quantity="other" msgid="280747600882155182">"POVEZANI ULAZI"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"ULAZ NA ČEKANJU"</item>
-    <item quantity="other" msgid="1673538341842385592">"ULAZI NA ČEKANJU"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"NEPOVEZAN ULAZ"</item>
-    <item quantity="other" msgid="4526893384805247472">"NEPOVEZANI ULAZI"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">POVEZAN ULAZ</item>
+      <item quantity="few">POVEZANA ULAZA</item>
+      <item quantity="other">POVEZANIH ULAZA</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">ULAZ NA ČEKANJU</item>
+      <item quantity="few">ULAZA NA ČEKANJU</item>
+      <item quantity="other">ULAZA NA ČEKANJU</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">NEPOVEZAN ULAZ</item>
+      <item quantity="few">NEPOVEZANA ULAZA</item>
+      <item quantity="other">NEPOVEZANIH ULAZA</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Ograničavanje pristupa aplikacijama i ostalom sadržaju na vašem računu"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Ograničeni profil"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Kontrolira aplikacija <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +455,11 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Brisanje ograničenog profila"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Postavke"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Dopuštene aplikacije"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"Dopuštena je jedna aplikacija"</item>
-    <item quantity="other" msgid="5242661864373721262">"Dopušteno je više aplikacija (%d)"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">Dopuštena je %d aplikacija</item>
+      <item quantity="few">Dopuštene su %d aplikacije</item>
+      <item quantity="other">Dopušteno je %d aplikacija</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Dopušteno"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Nije dopušteno"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Prilagodi ograničenja"</string>

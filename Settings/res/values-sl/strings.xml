@@ -108,10 +108,12 @@
     <string name="about_version" msgid="1177287676732287266">"Različica"</string>
     <string name="about_serial" msgid="2723560490027171187">"Serijska številka"</string>
     <string name="about_build" msgid="9148789767199785676">"Delovna različica"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"<xliff:g id="STEP_COUNT">%1$d</xliff:g> korak vas loči od tega, da postanete razvijalec"</item>
-    <item quantity="other" msgid="6907126743472136795">"Toliko korakov vas loči od tega, da postanete razvijalec: <xliff:g id="STEP_COUNT">%1$d</xliff:g>"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> korak vas loči od tega, da postanete razvijalec</item>
+      <item quantity="two"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> koraka vas ločita od tega, da postanete razvijalec</item>
+      <item quantity="few"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> koraki vas ločijo od tega, da postanete razvijalec</item>
+      <item quantity="other"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> korakov vas loči od tega, da postanete razvijalec</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Oglasi"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Zdaj ste razvijalec."</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Ni treba, ste že razvijalec"</string>
@@ -427,18 +429,24 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Izklop naprav HDMI prek televizorja"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Samodejni vklop televizorja"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Vklop televizorja z napravo HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"POVEZANI VHOD"</item>
-    <item quantity="other" msgid="280747600882155182">"POVEZANI VHODI"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"VHOD V PRIPRAVLJENOSTI"</item>
-    <item quantity="other" msgid="1673538341842385592">"VHODI V PRIPRAVLJENOSTI"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"NEPOVEZANI VHOD"</item>
-    <item quantity="other" msgid="4526893384805247472">"NEPOVEZANI VHODI"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">POVEZANI VHODI</item>
+      <item quantity="two">POVEZANI VHODI</item>
+      <item quantity="few">POVEZANI VHODI</item>
+      <item quantity="other">POVEZANI VHODI</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">VHODI V PRIPRAVLJENOSTI</item>
+      <item quantity="two">VHODI V PRIPRAVLJENOSTI</item>
+      <item quantity="few">VHODI V PRIPRAVLJENOSTI</item>
+      <item quantity="other">VHODI V PRIPRAVLJENOSTI</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">NEPOVEZANI VHODI</item>
+      <item quantity="two">NEPOVEZANI VHODI</item>
+      <item quantity="few">NEPOVEZANI VHODI</item>
+      <item quantity="other">NEPOVEZANI VHODI</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Omejitev dostopa do aplikacij in druge vsebine v računu"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Omejen profil"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Pod nadzorom aplikacije <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +459,12 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Izbris omejenega profila"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Nastavitve"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Dovoljene aplikacije"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"Ena dovoljena aplikacija"</item>
-    <item quantity="other" msgid="5242661864373721262">"Št. dovoljenih aplikacij: %d"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">%d dovoljena aplikacija</item>
+      <item quantity="two">%d dovoljeni aplikaciji</item>
+      <item quantity="few">%d dovoljene aplikacije</item>
+      <item quantity="other">%d dovoljenih aplikacij</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Dovoljeno"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Ni dovoljeno"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Prilagoditev omejitev"</string>

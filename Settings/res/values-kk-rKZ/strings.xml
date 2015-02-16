@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"Нұсқа"</string>
     <string name="about_serial" msgid="2723560490027171187">"Сериялық нөмірі"</string>
     <string name="about_build" msgid="9148789767199785676">"Жинақ"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Қазір әзірлеуші болуыңызға <xliff:g id="STEP_COUNT">%1$d</xliff:g> қадам қалды"</item>
-    <item quantity="other" msgid="6907126743472136795">"Қазір әзірлеуші болуыңызға <xliff:g id="STEP_COUNT">%1$d</xliff:g> қадам қалды"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">Қазір әзірлеуші болуыңызға <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> қадам қалды</item>
+      <item quantity="one">Қазір әзірлеуші болуыңызға <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> қадам қалды</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Құлақтандырулар"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Енді сіз әзірлеушісіз!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Қажет емес, сіз әлдеқашан әзірлеушісіз"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"HDMI құрылғыларының қуатын теледидармен өшіру"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Теледидар қуатын авто өшіру"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Теледидар қуатын HDMI құрылғысымен қосу"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"ҚОСЫЛҒАН КІРІС"</item>
-    <item quantity="other" msgid="280747600882155182">"ҚОСЫЛҒАН КІРІСТЕР"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"КҮТУ РЕЖИМІНДЕГІ КІРІС"</item>
-    <item quantity="other" msgid="1673538341842385592">"КҮТУ РЕЖИМІНДЕГІ КІРІСТЕР"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"ҚОСЫЛМАҒАН КІРІС"</item>
-    <item quantity="other" msgid="4526893384805247472">"ҚОСЫЛМАҒАН КІРІСТЕР"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">ҚОСЫЛҒАН КІРІСТЕР</item>
+      <item quantity="one">ҚОСЫЛҒАН КІРІС</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">КҮТУ РЕЖИМІНДЕГІ КІРІСТЕР</item>
+      <item quantity="one">КҮТУ РЕЖИМІНДЕГІ КІРІС</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">ҚОСЫЛМАҒАН КІРІСТЕР</item>
+      <item quantity="one">ҚОСЫЛМАҒАН КІРІС</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Есептік жазбаңыздағы қолданбаларға және басқа мазмұнға қатынасты шектеу"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Шектелген профиль"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g> басқарады"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Шектелген профильді жою"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Параметрлер"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Рұқсат етілген қолданбалар"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 қолданбаға рұқсат етілген"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d қолданбаға рұқсат етілген"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d қолданбаға рұқсат етілген</item>
+      <item quantity="one">1 қолданбаға рұқсат етілген</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Рұқсат етілген"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Рұқсат етілмеген"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Шектеулерді теңшеу"</string>

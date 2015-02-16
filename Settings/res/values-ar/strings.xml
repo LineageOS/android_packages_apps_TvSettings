@@ -108,10 +108,14 @@
     <string name="about_version" msgid="1177287676732287266">"الإصدار"</string>
     <string name="about_serial" msgid="2723560490027171187">"الرقم المسلسل"</string>
     <string name="about_build" msgid="9148789767199785676">"الإصدار"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"لا يفصلك الآن عن الوصول إلى مرحلة مطوري البرامج سوى خطوة واحدة (<xliff:g id="STEP_COUNT">%1$d</xliff:g>)"</item>
-    <item quantity="other" msgid="6907126743472136795">"لا يفصلك الآن عن الوصول إلى مرحلة مطوري البرامج سوى <xliff:g id="STEP_COUNT">%1$d</xliff:g> من الخطوات"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="zero">You are now <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steps away from being a developer</item>
+      <item quantity="two">لا يفصلك الآن عن الوصول إلى مرحلة مطوري البرامج سوى خطوتين (<xliff:g id="STEP_COUNT_1">%1$d</xliff:g>)</item>
+      <item quantity="few">لا يفصلك الآن عن الوصول إلى مرحلة مطوري البرامج سوى <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> خطوات</item>
+      <item quantity="many">لا يفصلك الآن عن الوصول إلى مرحلة مطوري البرامج سوى <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> خطوة</item>
+      <item quantity="other">لا يفصلك الآن عن مرحلة مطوري البرامج سوى <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> من الخطوات</item>
+      <item quantity="one">لا يفصلك الآن عن الوصول إلى مرحلة مطوري البرامج سوى <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> خطوة</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"الإعلانات"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"لقد أصبحت الآن مطور برامج!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"لست بحاجة إلى إجراء ذلك، أنت مطوّر برامج فعلاً"</string>
@@ -427,18 +431,30 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"إيقاف تشغيل أجهزة HDMI باستخدام التلفزيون"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"تشغيل التلفزيون تلقائيًا"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"تشغيل التلفزيون باستخدام جهاز HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"الإدخال المتصل"</item>
-    <item quantity="other" msgid="280747600882155182">"الإدخالات المتصلة"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"إدخال وضع الاستعداد"</item>
-    <item quantity="other" msgid="1673538341842385592">"إدخالات وضع الاستعداد"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"الإدخال غير المتصل"</item>
-    <item quantity="other" msgid="4526893384805247472">"الإدخالات غير المتصلة"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="zero">CONNECTED INPUTS</item>
+      <item quantity="two">الإدخالان المتصلان</item>
+      <item quantity="few">الإدخالات المتصلة</item>
+      <item quantity="many">الإدخالات المتصلة</item>
+      <item quantity="other">الإدخالات المتصلة</item>
+      <item quantity="one">الإدخال المتصل</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="zero">STANDBY INPUTS</item>
+      <item quantity="two">الإدخالان لوضع الاستعداد</item>
+      <item quantity="few">إدخالات وضع الاستعداد</item>
+      <item quantity="many">إدخالات وضع الاستعداد</item>
+      <item quantity="other">إدخالات وضع الاستعداد</item>
+      <item quantity="one">إدخال وضع الاستعداد</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="zero">NOT CONNECTED INPUTS</item>
+      <item quantity="two">الإدخالان غير المتصلين</item>
+      <item quantity="few">الإدخالات غير المتصلة</item>
+      <item quantity="many">الإدخالات غير المتصلة</item>
+      <item quantity="other">الإدخالات غير المتصلة</item>
+      <item quantity="one">الإدخال غير المتصل</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"تقييد الدخول إلى التطبيقات والمحتوى الآخر في حسابك"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"ملف شخصي مقيّد"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"تخضع لتحكم <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +467,14 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"حذف الملف الشخصي المقيّد"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"الإعدادات"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"التطبيقات المسموح بها"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"تم السماح بتطبيق واحد"</item>
-    <item quantity="other" msgid="5242661864373721262">"تم السماح بـ %d من التطبيقات"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="zero">لم يتم السماح بأي تطبيقات</item>
+      <item quantity="two">تم السماح بتطبيقين (%d)</item>
+      <item quantity="few">تم السماح بـ %d تطبيقات</item>
+      <item quantity="many">تم السماح بـ %d تطبيقًا</item>
+      <item quantity="other">تم السماح بـ %d من التطبيقات</item>
+      <item quantity="one">تم السماح بتطبيق واحد</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"مسموح بها"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"غير مسموح بها"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"تخصيص القيود"</string>

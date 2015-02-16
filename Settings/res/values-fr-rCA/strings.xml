@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"Version"</string>
     <string name="about_serial" msgid="2723560490027171187">"Numéro de série"</string>
     <string name="about_build" msgid="9148789767199785676">"Version"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Plus qu\'<xliff:g id="STEP_COUNT">%1$d</xliff:g> étape pour devenir un développeur"</item>
-    <item quantity="other" msgid="6907126743472136795">"Plus que <xliff:g id="STEP_COUNT">%1$d</xliff:g> étapes pour devenir un développeur"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one">Plus que <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> étape pour devenir un développeur</item>
+      <item quantity="other">Plus que <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> étapes pour devenir un développeur</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Annonces"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Vous êtes maintenant un développeur!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Inutile, vous êtes déjà développeur."</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Éteindre les appareils HDMI avec le téléviseur"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Allumer autom. le téléviseur"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Allumer le téléviseur avec l\'appareil HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"ENTRÉE CONNECTÉE"</item>
-    <item quantity="other" msgid="280747600882155182">"ENTRÉES CONNECTÉES"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"ENTRÉE EN VEILLE"</item>
-    <item quantity="other" msgid="1673538341842385592">"ENTRÉES EN VEILLE"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"ENTRÉE NON CONNECTÉE"</item>
-    <item quantity="other" msgid="4526893384805247472">"ENTRÉES NON CONNECTÉES"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">ENTRÉE CONNECTÉE</item>
+      <item quantity="other">ENTRÉES CONNECTÉES</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">ENTRÉE EN VEILLE</item>
+      <item quantity="other">ENTRÉES EN VEILLE</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">ENTRÉE NON CONNECTÉE</item>
+      <item quantity="other">ENTRÉES NON CONNECTÉES</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Limiter l\'accès aux applications et autres contenus de votre compte"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Profil restreint"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Dépend de <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Supprimer le profil restreint"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Paramètres"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Applications autorisées"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 application autorisée"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d applications autorisées"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">%d application autorisée</item>
+      <item quantity="other">%d applications autorisées</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Autorisée"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Non autorisé"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Personnaliser les restrictions"</string>
@@ -471,7 +471,7 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Le NIP est incorrect. Veuillez réessayer."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Le NIP est incorrect. Veuillez réessayer."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Entrez le mot de passe associé au réseau <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_connection_success" msgid="6262755735033937164">"Vous êtes bien connecté"</string>
+    <string name="wifi_setup_connection_success" msgid="6262755735033937164">"Vous êtes bien connecté."</string>
     <string name="wifi_setup_save_success" msgid="4829154865874318015">"L\'enregistrement a bien été effectué."</string>
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"Version : <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Disponible"</string>

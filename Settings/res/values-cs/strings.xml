@@ -108,10 +108,12 @@
     <string name="about_version" msgid="1177287676732287266">"Verze"</string>
     <string name="about_serial" msgid="2723560490027171187">"Sériové číslo"</string>
     <string name="about_build" msgid="9148789767199785676">"Sestavení"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Ještě <xliff:g id="STEP_COUNT">%1$d</xliff:g> krok a bude z vás vývojář."</item>
-    <item quantity="other" msgid="6907126743472136795">"Po dokončení dalších <xliff:g id="STEP_COUNT">%1$d</xliff:g> kroků z vás bude vývojář."</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="few">Ještě <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroky a budou z vás vývojáři</item>
+      <item quantity="many">Ještě <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroku a budou z vás vývojáři</item>
+      <item quantity="other">Ještě <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroků a budou z vás vývojáři</item>
+      <item quantity="one">Ještě <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> krok a budou z vás vývojáři</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Reklamy"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Voilà! Stal se z vás vývojář."</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Není potřeba, již jste vývojář."</string>
@@ -427,18 +429,24 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Vypnutí zařízení HDMI společně s televizí"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Automatické zapínání televize"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Zapnutí televize společně se zařízením HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"PŘIPOJENÝ VSTUP"</item>
-    <item quantity="other" msgid="280747600882155182">"PŘIPOJENÉ VSTUPY"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"VSTUP V ÚSPORNÉM REŽIMU"</item>
-    <item quantity="other" msgid="1673538341842385592">"VSTUPY V ÚSPORNÉM REŽIMU"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"NEPŘIPOJENÝ VSTUP"</item>
-    <item quantity="other" msgid="4526893384805247472">"NEPŘIPOJENÉ VSTUPY"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="few">PŘIPOJENÉ VSTUPY</item>
+      <item quantity="many">PŘIPOJENÉ VSTUPY</item>
+      <item quantity="other">PŘIPOJENÉ VSTUPY</item>
+      <item quantity="one">PŘIPOJENÝ VSTUP</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="few">VSTUPY V ÚSPORNÉM REŽIMU</item>
+      <item quantity="many">VSTUPY V ÚSPORNÉM REŽIMU</item>
+      <item quantity="other">VSTUPY V ÚSPORNÉM REŽIMU</item>
+      <item quantity="one">VSTUP V ÚSPORNÉM REŽIMU</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="few">NEPŘIPOJENÉ VSTUPY</item>
+      <item quantity="many">NEPŘIPOJENÉ VSTUPY</item>
+      <item quantity="other">NEPŘIPOJENÉ VSTUPY</item>
+      <item quantity="one">NEPŘIPOJENÝ VSTUP</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Omezení přístupu k aplikacím a dalšímu obsahu v účtu"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Omezený profil"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Řízeno aplikací <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +459,12 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Smazat omezený profil"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Nastavení"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Povolené aplikace"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 povolená aplikace"</item>
-    <item quantity="other" msgid="5242661864373721262">"Povolené aplikace: %d"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="few">%d povolené aplikace</item>
+      <item quantity="many">%d povolené aplikace</item>
+      <item quantity="other">%d povolených aplikací</item>
+      <item quantity="one">1 povolená aplikace</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Povoleno"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Nepovoleno"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Přizpůsobit omezení"</string>

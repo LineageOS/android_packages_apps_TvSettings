@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"เวอร์ชัน"</string>
     <string name="about_serial" msgid="2723560490027171187">"หมายเลขซีเรียล"</string>
     <string name="about_build" msgid="9148789767199785676">"บิวด์"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"อีก <xliff:g id="STEP_COUNT">%1$d</xliff:g> ขั้นตอน คุณก็จะได้เป็นนักพัฒนาซอฟต์แวร์แล้ว"</item>
-    <item quantity="other" msgid="6907126743472136795">"อีก <xliff:g id="STEP_COUNT">%1$d</xliff:g> ขั้นตอน คุณก็จะได้เป็นนักพัฒนาซอฟต์แวร์แล้ว"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">อีก <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ขั้นตอน คุณก็จะได้เป็นนักพัฒนาซอฟต์แวร์แล้ว</item>
+      <item quantity="one">อีก <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> ขั้นตอน คุณก็จะได้เป็นนักพัฒนาซอฟต์แวร์แล้ว</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"โฆษณา"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"ตอนนี้คุณเป็นนักพัฒนาซอฟต์แวร์แล้ว!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"ไม่จำเป็น คุณเป็นนักพัฒนาซอฟต์แวร์อยู่แล้ว"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"ปิดอุปกรณ์ HDMI ด้วยทีวี"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"เปิดทีวีอัตโนมัติ"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"เปิดทีวีด้วยอุปกรณ์ HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"อินพุตที่เชื่อมต่อ"</item>
-    <item quantity="other" msgid="280747600882155182">"อินพุตที่เชื่อมต่อ"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"อินพุตสแตนด์บาย"</item>
-    <item quantity="other" msgid="1673538341842385592">"อินพุตสแตนด์บาย"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"อินพุตที่ไม่ได้เชื่อมต่อ"</item>
-    <item quantity="other" msgid="4526893384805247472">"อินพุตที่ไม่ได้เชื่อมต่อ"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">อินพุตที่เชื่อมต่อ</item>
+      <item quantity="one">อินพุตที่เชื่อมต่อ</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">อินพุตสแตนด์บาย</item>
+      <item quantity="one">อินพุตสแตนด์บาย</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">อินพุตที่ไม่ได้เชื่อมต่อ</item>
+      <item quantity="one">อินพุตที่ไม่ได้เชื่อมต่อ</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"จำกัดการเข้าถึงแอปและเนื้อหาอื่นในบัญชีของคุณ"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"โปรไฟล์ที่ถูกจำกัด"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"ควบคุมโดย <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"ลบโปรไฟล์ที่ถูกจำกัด"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"การตั้งค่า"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"แอปที่ได้รับอนุญาต"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"อนุญาต 1 แอป"</item>
-    <item quantity="other" msgid="5242661864373721262">"อนุญาต %d แอป"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">อนุญาต %d แอป</item>
+      <item quantity="one">อนุญาต 1 แอป</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"ได้รับอนุญาต"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"ไม่อนุญาต"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"กำหนดค่าข้อจำกัด"</string>

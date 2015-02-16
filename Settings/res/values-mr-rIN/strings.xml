@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"आवृत्ती"</string>
     <string name="about_serial" msgid="2723560490027171187">"अनुक्रमांक"</string>
     <string name="about_build" msgid="9148789767199785676">"बिल्ड"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"आपण विकसक होण्यापासून आता <xliff:g id="STEP_COUNT">%1$d</xliff:g> चरण दूर आहात"</item>
-    <item quantity="other" msgid="6907126743472136795">"आपण विकसक होण्यापासून आता <xliff:g id="STEP_COUNT">%1$d</xliff:g> चरणे दूर आहात"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one">आपण अाता विकासक होण्यापासून <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> चरण दूर आहात</item>
+      <item quantity="other">आपण विकासक होण्यापासून<xliff:g id="STEP_COUNT_1">%1$d</xliff:g> चरणे दूर आहात</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"जाहिराती"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"आता आपण एक विकासक आहात!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"आवश्यकता नाही, आपण आधीपासूनच एक विकसक आहात"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"टीव्ही सह HDMI डिव्हाइसेस बंद"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"TV स्वयं चालू"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI डिव्हाइससह टीव्ही चालू"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"कनेक्‍ट केलेले इनपुट"</item>
-    <item quantity="other" msgid="280747600882155182">"कनेक्‍ट केलेले इनपुट"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"स्टँडबाय इनपुट"</item>
-    <item quantity="other" msgid="1673538341842385592">"स्टँडबाय इनपुट"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"कनेक्‍ट न केलेले इनपुट"</item>
-    <item quantity="other" msgid="4526893384805247472">"कनेक्‍ट न केलेले इनपुट"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">कनेक्‍ट केलेले इनपुट</item>
+      <item quantity="other">कनेक्‍ट केलेले इनपुट</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">स्टँडबाय इनपुट</item>
+      <item quantity="other">स्टँडबाय इनपुट</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">कनेक्‍ट न केलेले इनपुट</item>
+      <item quantity="other">कनेक्‍ट न केलेले इनपुट</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"आपल्या खात्यामधील अ‍ॅप्स आणि इतर सामग्रीवर प्रवेश प्रतिबंधित करा"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"प्रतिबंधित प्रोफाईल"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g> द्वारे नियंत्रित"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"प्रतिबंधित प्रोफाईल हटवा"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"सेटिंग्ज"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"अनुमती दिलेले अ‍ॅप्स"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 अॅपला अनुमती दिली"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d अॅप्सना अनुमती दिली"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">%d अ‍ॅपला अनुमती आहे</item>
+      <item quantity="other">%d अ‍ॅप्सना अनुमती आहे</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"अनुमती दिली"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"अनुमती नाही"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"निर्बंध सानुकूल करा"</string>

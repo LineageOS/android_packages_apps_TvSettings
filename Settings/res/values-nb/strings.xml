@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"Versjon"</string>
     <string name="about_serial" msgid="2723560490027171187">"Serienummer"</string>
     <string name="about_build" msgid="9148789767199785676">"Delversjon"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Du er nå <xliff:g id="STEP_COUNT">%1$d</xliff:g> skritt fra å være en utvikler"</item>
-    <item quantity="other" msgid="6907126743472136795">"Du er nå <xliff:g id="STEP_COUNT">%1$d</xliff:g> skritt fra å være en utvikler"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">Du er nå <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> trinn fra å bli utvikler</item>
+      <item quantity="one">Du er nå <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> trinn fra å bli utvikler</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Annonser"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Nå er du utvikler!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Det er ikke nødvendig, du er allerede en utvikler"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Slå av HDMI-enheter med TV-en"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Automatisk påslåing av TV"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Slå på TV-en med HDMI-enheter"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"TILKOBLET INNGANG"</item>
-    <item quantity="other" msgid="280747600882155182">"TILKOBLEDE INNGANGER"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"STANDBYINNGANG"</item>
-    <item quantity="other" msgid="1673538341842385592">"STANDBYINNGANGER"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"IKKE-TILKOBLET INNGANG"</item>
-    <item quantity="other" msgid="4526893384805247472">"IKKE-TILKOBLEDE INNGANGER"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">TILKOBLEDE INNGANGER</item>
+      <item quantity="one">TILKOBLET INNGANG</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">STANDBYINNGANGER</item>
+      <item quantity="one">STANDBYINNGANG</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">IKKE-TILKOBLEDE INNGANGER</item>
+      <item quantity="one">IKKE-TILKOBLET INNGANG</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Begrens tilgangen til apper og annet innhold i kontoen din"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Begrenset profil"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Kontrollert av <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Slett den begrensede profilen"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Innstillinger"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Tillatte apper"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 app er tillatt"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d apper er tillatt"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d apper tillatt</item>
+      <item quantity="one">1 app tillatt</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Tillatt"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Ikke tillatt"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Tilpass begrensninger"</string>

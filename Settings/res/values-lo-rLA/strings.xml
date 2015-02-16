@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"ເວີຊັນ"</string>
     <string name="about_serial" msgid="2723560490027171187">"ໝາຍເລກຊີຣຽວ"</string>
     <string name="about_build" msgid="9148789767199785676">"​ການ​ສ້າງ"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"ຕອນ​ນີ້ທ່ານ​ຫ່າງ​ຈາກ​ການເປັນ​ນັກພັດ​ທະນາ​ພຽງ <xliff:g id="STEP_COUNT">%1$d</xliff:g> ຂັ້ນຕອນ"</item>
-    <item quantity="other" msgid="6907126743472136795">"ຕອນ​ນີ້ທ່ານ​ຫ່າງ​ຈາກ​ການເປັນ​ນັກພັດ​ທະນາ​ພຽງ <xliff:g id="STEP_COUNT">%1$d</xliff:g> ຂັ້ນຕອນ"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">ປະ​ຈຸ​ບັນ​ທ່ານ​ຢູ່​ໄກ​ຈາກ​ການ​ເປັນ​ຜູ້​ພັດ​ທະ​ນາ <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ບາດ​ກ້າວ</item>
+      <item quantity="one">ປະ​ຈຸ​ບັນ​ທ່ານ​ຢູ່​ໄກ​ຈາກ​ການ​ເປັນ​ຜູ້​ພັດ​ທະ​ນາ <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> ບາດ​ກ້າວ</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"ໂຄສະນາ"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"ຕອນ​ນີ້​ທ່ານ​ເປັນ​ນັກ​ພັດທະນາ​ແລ້ວ!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"ບໍ່ຈຳເປັນ, ທ່ານເປັນ​ນັກພັດ​ທະນາ​ຢູ່ແລ້ວ"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"ປິດ​ອຸ​ປະ​ກອນ HDMI ກັບ​ໂທ​ລະ​ພາບ"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"​ເປີດ​ໂທ​ລະ​ພາບ​ອັດ​ຕະ​ໂນ​ມັດ"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"ເປີດ​ໂທ​ລະ​ພາບ​ກັບ​ອຸ​ປະ​ກອນ HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"ອິນພຸດ​ທີ່​ເຊື່ອມ​ຕໍ່​ແລ້ວ"</item>
-    <item quantity="other" msgid="280747600882155182">"ອິນພຸດ​ທີ່​ເຊື່ອມ​ຕໍ່​ແລ້ວ"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"ອິນພຸດ​ສະແຕນບາຍ"</item>
-    <item quantity="other" msgid="1673538341842385592">"ອິນພຸດ​ສະແຕນບາຍ"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"ອິນພຸດ​ທີ່​ຍັງ​ບໍ່​ໄດ້​ເຊື່ອມ​ຕໍ່"</item>
-    <item quantity="other" msgid="4526893384805247472">"ອິນພຸດ​ທີ່​ຍັງ​ບໍ່​ໄດ້​ເຊື່ອມ​ຕໍ່"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">ການ​ປ້ອນ​ເຂົ້າ​ເຊື່ອ​ມ​ຕໍ່​ແລ້ວ</item>
+      <item quantity="one">ການ​ປ້ອນ​ເຂົ້າ​ເຊື່ອ​ມ​ຕໍ່​ແລ້ວ</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">ການ​ປ້ອນ​ເຂົ້າ​ທີ່​ກຽມ​ພ້ອມ​ຢູ່</item>
+      <item quantity="one">ການ​ປ້ອນ​ເຂົ້າ​ທີ່​ກຽມ​ພ້ອມ​ຢູ່</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">ການ​ປ້ອນ​ເຂົ້າ​ທີ່​ບໍ່​ໄດ້ເຊື່ອ​ມ​ຕໍ່</item>
+      <item quantity="one">ການ​ປ້ອນ​ເຂົ້າ​ທີ່​ບໍ່​ໄດ້ເຊື່ອ​ມ​ຕໍ່</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"​ຈຳ​ກັດ​ການ​ເຂົ້າ​ເຖິງ​ແອັບຯ ແລະ ເນື້ອ​ຫາ​ຕ່າງໆ​ໃນ​ບັນ​ຊີ​ຂອງ​ທ່ານ"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"ໂປຣໄຟລ໌​ຈຳກັດ"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"​ຄວບ​ຄຸມ​ໂດຍ <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"ລຶບ​ໂປຣໄຟລ໌​ທີ່​ຖືກ​ຈຳກັດ"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"ການ​ຕັ້ງ​ຄ່າ"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"ແອັບຯ​ທີ່​ອະນຸຍາດ"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"ອະນຸຍາດ 1 ແອັບຯ"</item>
-    <item quantity="other" msgid="5242661864373721262">"ອະນຸຍາດ %d ແອັບຯ"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d ແອັບ​ຯ​ໄດ້​ຮັບ​ອະ​ນຸ​ຍາດ</item>
+      <item quantity="one">1 ແອັບ​ໄດ້​ຮັບ​ອະ​ນຸ​ຍາດ</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"ອະນຸຍາດແລ້ວ"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"ບໍ່​ອະນຸຍາດ"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"ປັບແຕ່ງ​ການ​ຈຳກັດ"</string>

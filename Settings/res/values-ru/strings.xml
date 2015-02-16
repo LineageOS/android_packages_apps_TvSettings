@@ -108,10 +108,12 @@
     <string name="about_version" msgid="1177287676732287266">"Версия"</string>
     <string name="about_serial" msgid="2723560490027171187">"Серийный номер"</string>
     <string name="about_build" msgid="9148789767199785676">"Сборка"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Почти все готово! Осталось несколько шагов (<xliff:g id="STEP_COUNT">%1$d</xliff:g>)"</item>
-    <item quantity="other" msgid="6907126743472136795">"Почти все готово! Осталось несколько шагов (<xliff:g id="STEP_COUNT">%1$d</xliff:g>)"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one">Почти готово! Остался <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> шаг.</item>
+      <item quantity="few">Почти готово! Осталось <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> шага.</item>
+      <item quantity="many">Почти готово! Осталось <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> шагов.</item>
+      <item quantity="other">Почти готово! Осталось <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> шага.</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Реклама"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Вы стали разработчиком!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"У вас уже есть статус разработчика"</string>
@@ -427,18 +429,24 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Отключать HDMI-устройства вместе с телевизором"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Автомат. включать телевизор"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Автом. включать телевизор с HDMI-устройством"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"ПОДКЛЮЧЕННЫЙ ВХОД"</item>
-    <item quantity="other" msgid="280747600882155182">"ПОДКЛЮЧЕННЫЕ ВХОДЫ"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"РЕЗЕРВНЫЙ ВХОД"</item>
-    <item quantity="other" msgid="1673538341842385592">"РЕЗЕРВНЫЕ ВХОДЫ"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"ОТКЛЮЧЕННЫЙ ВХОД"</item>
-    <item quantity="other" msgid="4526893384805247472">"ОТКЛЮЧЕННЫЕ ВХОДЫ"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">ПОДКЛЮЧЕННЫЕ УСТРОЙСТВА</item>
+      <item quantity="few">ПОДКЛЮЧЕННЫЕ УСТРОЙСТВА</item>
+      <item quantity="many">ПОДКЛЮЧЕННЫЕ УСТРОЙСТВА</item>
+      <item quantity="other">ПОДКЛЮЧЕННЫЕ УСТРОЙСТВА</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">УСТРОЙСТВА В РЕЖИМЕ ОЖИДАНИЯ</item>
+      <item quantity="few">УСТРОЙСТВА В РЕЖИМЕ ОЖИДАНИЯ</item>
+      <item quantity="many">УСТРОЙСТВА В РЕЖИМЕ ОЖИДАНИЯ</item>
+      <item quantity="other">УСТРОЙСТВА В РЕЖИМЕ ОЖИДАНИЯ</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">ОТКЛЮЧЕННЫЕ УСТРОЙСТВА</item>
+      <item quantity="few">ОТКЛЮЧЕННЫЕ УСТРОЙСТВА</item>
+      <item quantity="many">ОТКЛЮЧЕННЫЕ УСТРОЙСТВА</item>
+      <item quantity="other">ОТКЛЮЧЕННЫЕ УСТРОЙСТВА</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Ограничить доступ к приложениям и другому контенту в аккаунте"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Профиль с ограничен. доступом"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Под управлением приложения \"<xliff:g id="APP">%1$s</xliff:g>\""</string>
@@ -451,10 +459,12 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Удалить профиль"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Настройки"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Разрешенные приложения"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"Разрешено 1 приложение"</item>
-    <item quantity="other" msgid="5242661864373721262">"Разрешено приложений: %d"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">Разрешено %d приложение</item>
+      <item quantity="few">Разрешены %d приложения</item>
+      <item quantity="many">Разрешено %d приложений</item>
+      <item quantity="other">Разрешены %d приложения</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Разрешено"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Запрещено"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Установить ограничения"</string>

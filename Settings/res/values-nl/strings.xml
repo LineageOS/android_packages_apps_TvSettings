@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"Versie"</string>
     <string name="about_serial" msgid="2723560490027171187">"Serienummer"</string>
     <string name="about_build" msgid="9148789767199785676">"Build"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"U moet nog <xliff:g id="STEP_COUNT">%1$d</xliff:g> stap uitvoeren om ontwikkelaar te worden"</item>
-    <item quantity="other" msgid="6907126743472136795">"U moet nog <xliff:g id="STEP_COUNT">%1$d</xliff:g> stappen uitvoeren om ontwikkelaar te worden"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">U moet nog <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> stappen uitvoeren om ontwikkelaar te worden</item>
+      <item quantity="one">U moet nog <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> stap uitvoeren om ontwikkelaar te worden</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Advertenties"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"U bent nu ontwikkelaar!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Niet nodig, u bent al een ontwikkelaar"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"HDMI-apparaten samen uitzetten met de tv"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Tv automatisch aan"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"De tv aanzetten samen met het HDMI-apparaat"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"AANGESLOTEN INGANG"</item>
-    <item quantity="other" msgid="280747600882155182">"AANGESLOTEN INGANGEN"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"STAND-BY-INGANG"</item>
-    <item quantity="other" msgid="1673538341842385592">"STAND-BY-INGANGEN"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"NIET-AANGESLOTEN INGANG"</item>
-    <item quantity="other" msgid="4526893384805247472">"NIET-AANGESLOTEN INGANGEN"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">AANGESLOTEN INGANGEN</item>
+      <item quantity="one">AANGESLOTEN INGANG</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">STAND-BY-INGANGEN</item>
+      <item quantity="one">STAND-BY-INGANG</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">NIET-AANGESLOTEN INGANGEN</item>
+      <item quantity="one">NIET-AANGESLOTEN INGANG</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Toegang tot apps en andere inhoud in uw account beperken"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Beperkt profiel"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Beheerd door <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Beperkt profiel verwijderen"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Instellingen"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Apps die zijn toegestaan"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 app toegestaan"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d apps toegestaan"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d apps toegestaan</item>
+      <item quantity="one">1 app toegestaan</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Toegestaan"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Niet toegestaan"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Beperkingen aanpassen"</string>

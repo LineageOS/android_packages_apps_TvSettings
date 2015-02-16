@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"ვერსია"</string>
     <string name="about_serial" msgid="2723560490027171187">"სერიული ნომერი"</string>
     <string name="about_build" msgid="9148789767199785676">"ანაწყობი"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"თქვენ ახლა <xliff:g id="STEP_COUNT">%1$d</xliff:g> ნაბიჯი გაშორებთ, რომ გახდეთ დეველოპერი"</item>
-    <item quantity="other" msgid="6907126743472136795">"თქვენ ახლა <xliff:g id="STEP_COUNT">%1$d</xliff:g> ნაბიჯი გაშორებთ, რომ გახდეთ დეველოპერი"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">თქვენ ახლა <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ნაბიჯი გაშორებთ, რომ გახდეთ დეველოპერი</item>
+      <item quantity="one">თქვენ ახლა <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> ნაბიჯი გაშორებთ, რომ გახდეთ დეველოპერი</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"რეკლამები"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"ახლა დეველოპერი ხართ!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"არ არის საჭირო, თქვენ უკვე დეველოპერი ხართ"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"HDMI მოწყობილობების გამორთვა ტელევიზორით"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"ტელევიზორის ავტომატური ჩართვა"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"ტელევიზორის ჩართვა HDMI მოწყობილობით"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"დაკავშირებული შეყვანა"</item>
-    <item quantity="other" msgid="280747600882155182">"დაკავშირებული შეყვანები"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"ლოდინის რეჟიმში მყოფი შეყვანა"</item>
-    <item quantity="other" msgid="1673538341842385592">"ლოდინის რეჟიმში მყოფი შეყვანები"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"დაუკავშირებელი შეყვანა"</item>
-    <item quantity="other" msgid="4526893384805247472">"დაუკავშირებელი შეყვანები"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">დაკავშირებული შეყვანა</item>
+      <item quantity="one">დაკავშირებული შეყვანა</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">ლოდინის რეჟიმში შეყვანა</item>
+      <item quantity="one">ლოდინის რეჟიმში შეყვანა</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">არ არის დაკავშირებული შეყვანა</item>
+      <item quantity="one">არ არის დაკავშირებული შეყვანა</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"თქვენს ანგარიშში აპებსა და სხვა კონტენტზე წვდომის შეზღუდვა"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"შეზღუდული პროფილი"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"იმართება <xliff:g id="APP">%1$s</xliff:g>-ის მიერ"</string>
@@ -451,10 +451,8 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"შეზღუდული პროფილის წაშლა"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"პარამეტრები"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"დაშვებული აპები"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"დაშვებულია 1 აპი"</item>
-    <item quantity="other" msgid="5242661864373721262">"დაშვებულია %d აპი"</item>
-  </plurals>
+    <!-- String.format failed for translation -->
+    <!-- no translation found for restricted_profile_configure_apps_description (1138147479259808487) -->
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"დაშვებული"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"არ არის ნებადართული"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"შეზღუდვების მორგება"</string>

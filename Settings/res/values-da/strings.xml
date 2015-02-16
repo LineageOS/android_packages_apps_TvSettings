@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"Version"</string>
     <string name="about_serial" msgid="2723560490027171187">"Serienummer"</string>
     <string name="about_build" msgid="9148789767199785676">"Build"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Du er nu <xliff:g id="STEP_COUNT">%1$d</xliff:g> skridt fra at være udvikler"</item>
-    <item quantity="other" msgid="6907126743472136795">"Du er nu <xliff:g id="STEP_COUNT">%1$d</xliff:g> skridt fra at være udvikler"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one">Du er nu <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> skridt fra at være udvikler</item>
+      <item quantity="other">Du er nu <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> skridt fra at være udvikler</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Annoncer"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Nu er du udvikler."</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Det behøver du ikke. Du er allerede udvikler."</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Sluk HDMI-enheder med tv\'et"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Tænd tv automatisk"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Tænd tv\'et med HDMI-enhed"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"INPUTENHED ER TILSLUTTET"</item>
-    <item quantity="other" msgid="280747600882155182">"INPUTENHEDER ER TILSLUTTET"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"AFVENTER INDPUTENHED"</item>
-    <item quantity="other" msgid="1673538341842385592">"AFVENTER INPUTENHEDER"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"INPUTENHED ER iKKE TILSLUTTET"</item>
-    <item quantity="other" msgid="4526893384805247472">"INPUTENHEDER ER IKKE TILSLUTTET"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">INPUTENHEDERNE ER TILSLUTTET</item>
+      <item quantity="other">INPUTENHEDERNE ER TILSLUTTET</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">AFVENTER INPUTENHEDER</item>
+      <item quantity="other">AFVENTER INPUTENHEDER</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">INPUTENHEDER IKKE TILSLUTTET</item>
+      <item quantity="other">INPUTENHEDER IKKE TILSLUTTET</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Begræns adgangen til apps og andet indhold på din konto"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Begrænset profil"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Kontrolleret af <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Slet begrænset profil"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Indstillinger"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Tilladte apps"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"Én app er tilladt"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d apps er tilladt"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">%d apps er tilladt</item>
+      <item quantity="other">%d apps er tilladt</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Tilladt"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Ikke tilladt"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Tilpas begrænsninger"</string>

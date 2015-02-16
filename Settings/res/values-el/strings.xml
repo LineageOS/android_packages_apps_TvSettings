@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"Έκδοση"</string>
     <string name="about_serial" msgid="2723560490027171187">"Σειριακός αριθμός"</string>
     <string name="about_build" msgid="9148789767199785676">"Έκδοση"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Απομένει <xliff:g id="STEP_COUNT">%1$d</xliff:g>, βήμα για να γίνετε προγραμματιστής"</item>
-    <item quantity="other" msgid="6907126743472136795">"Απομένουν <xliff:g id="STEP_COUNT">%1$d</xliff:g> βήματα, για να γίνετε προγραμματιστής"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">Απομένουν <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> βήματα για να γίνετε προγραμματιστής</item>
+      <item quantity="one">Απομένει <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> βήμα για να γίνετε προγραμματιστής</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Διαφημίσεις"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Είστε πλέον προγραμματιστής!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Δεν χρειάζεται, είστε ήδη προγραμματιστής"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Απενεργοποιήστε τις συσκευές HDMI με την τηλεόραση"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Αυτόματη ενεργοπ. τηλεόρασης"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Ενεργοποιήστε την τηλεόραση με τη συσκευή HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"ΣΥΝΔΕΔΕΜΕΝΗ ΕΙΣΟΔΟΣ"</item>
-    <item quantity="other" msgid="280747600882155182">"ΣΥΝΔΕΔΕΜΕΝΕΣ ΕΙΣΟΔΟΙ"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"ΕΙΣΟΔΟΣ ΣΕ ΑΝΑΜΟΝΗ"</item>
-    <item quantity="other" msgid="1673538341842385592">"ΕΙΣΟΔΟΙ ΣΕ ΑΝΑΜΟΝΗ"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"ΚΑΜΙΑ ΣΥΝΔΕΔΕΜΕΝΗ ΕΙΣΟΔΟΣ"</item>
-    <item quantity="other" msgid="4526893384805247472">"ΚΑΜΙΑ ΣΥΝΔΕΔΕΜΕΝΗ ΕΙΣΟΔΟΣ"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">ΣΥΝΔΕΔΕΜΕΝΕΣ ΕΙΣΟΔΟΙ</item>
+      <item quantity="one">ΣΥΝΔΕΔΕΜΕΝΗ ΕΙΣΟΔΟΣ</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">ΕΙΣΟΔΟΙ ΣΕ ΑΝΑΜΟΝΗ</item>
+      <item quantity="one">ΕΙΣΟΔΟΣ ΣΕ ΑΝΑΜΟΝΗ</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">ΚΑΜΙΑ ΣΥΝΔΕΔΕΜΕΝΗ ΕΙΣΟΔΟΣ</item>
+      <item quantity="one">ΚΑΜΙΑ ΣΥΝΔΕΔΕΜΕΝΗ ΕΙΣΟΔΟΣ</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Περιορίστε την πρόσβαση σε εφαρμογές και άλλο περιεχόμενο στο λογαριασμό σας"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Περιορισμένο προφίλ"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Ελέγχονται από την εφαρμογή <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Διαγραφή περιορισμένου προφίλ"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Ρυθμίσεις"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Επιτρεπόμενες εφαρμογές"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 επιτρεπόμενη εφαρμογή"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d επιτρεπόμενες εφαρμογές"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d επιτρεπόμενες εφαρμογές</item>
+      <item quantity="one">1 επιτρεπόμενη εφαρμογή</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Επιτρέπεται"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Δεν επιτρέπεται"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Προσαρμογή περιορισμών"</string>

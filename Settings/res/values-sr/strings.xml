@@ -108,10 +108,11 @@
     <string name="about_version" msgid="1177287676732287266">"Верзија"</string>
     <string name="about_serial" msgid="2723560490027171187">"Серијски број"</string>
     <string name="about_build" msgid="9148789767199785676">"Верзија"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Још само <xliff:g id="STEP_COUNT">%1$d</xliff:g> корак и постаћете програмер"</item>
-    <item quantity="other" msgid="6907126743472136795">"Још само <xliff:g id="STEP_COUNT">%1$d</xliff:g> корака и постаћете програмер"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="one">Још само <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> корак и постаћете програмер</item>
+      <item quantity="few">Још само <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> корака и постаћете програмер</item>
+      <item quantity="other">Још само <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> корака и постаћете програмер</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Огласи"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Постали сте програмер!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Нема потребе, већ сте програмер"</string>
@@ -427,18 +428,21 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Искључивање HDMI уређаја помоћу ТВ-а"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Аутоматски укључи ТВ"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Укључи ТВ помоћу HDMI уређаја"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"ПОВЕЗАНИ УЛАЗ"</item>
-    <item quantity="other" msgid="280747600882155182">"ПОВЕЗАНИ УЛАЗИ"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"УЛАЗ У РЕЖИМУ ПРИПРАВНОСТИ"</item>
-    <item quantity="other" msgid="1673538341842385592">"УЛАЗИ У РЕЖИМУ ПРИПРАВНОСТИ"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"НЕПОВЕЗАНИ УЛАЗ"</item>
-    <item quantity="other" msgid="4526893384805247472">"НЕПОВЕЗАНИ УЛАЗИ"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="one">ПОВЕЗАНИ УЛАЗИ</item>
+      <item quantity="few">ПОВЕЗАНИ УЛАЗИ</item>
+      <item quantity="other">ПОВЕЗАНИ УЛАЗИ</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="one">УЛАЗИ У РЕЖИМУ ПРИПРАВНОСТИ</item>
+      <item quantity="few">УЛАЗИ У РЕЖИМУ ПРИПРАВНОСТИ</item>
+      <item quantity="other">УЛАЗИ У РЕЖИМУ ПРИПРАВНОСТИ</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="one">НЕПОВЕЗАНИ УЛАЗИ</item>
+      <item quantity="few">НЕПОВЕЗАНИ УЛАЗИ</item>
+      <item quantity="other">НЕПОВЕЗАНИ УЛАЗИ</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Ограничите приступ апликацијама и другом садржају на налогу"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Ограничени профил"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Контролише <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +455,11 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Избриши ограничени профил"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Подешавања"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Дозвољене апликације"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"Дозвољена је 1 апликација"</item>
-    <item quantity="other" msgid="5242661864373721262">"Дозвољених апликација: %d"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="one">Дозвољена је %d апликација</item>
+      <item quantity="few">Дозвољене су %d апликације</item>
+      <item quantity="other">Дозвољено је %d апликација</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Дозвољено"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Није дозвољено"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Прилагоди ограничења"</string>

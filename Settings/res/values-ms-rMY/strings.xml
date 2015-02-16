@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"Versi"</string>
     <string name="about_serial" msgid="2723560490027171187">"Nombor siri"</string>
     <string name="about_build" msgid="9148789767199785676">"Binaan"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"Kini tinggal <xliff:g id="STEP_COUNT">%1$d</xliff:g> langkah lagi sebelum anda menjadi pembangun"</item>
-    <item quantity="other" msgid="6907126743472136795">"Kini tinggal <xliff:g id="STEP_COUNT">%1$d</xliff:g> langkah lagi sebelum anda menjadi pembangun"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">Kini tinggal <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> langkah lagi sebelum anda menjadi pembangun</item>
+      <item quantity="one">Kini tinggal <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> langkah lagi sebelum anda menjadi pembangun</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Iklan"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Sekarang, anda seorang pembangun!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Tidak perlu, anda sememangnya seorang pembangun"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Matikan peranti HDMI dengan TV"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Autohidup TV"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Hidupkan TV dengan peranti HDMI"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"INPUT YANG DISAMBUNGKAN"</item>
-    <item quantity="other" msgid="280747600882155182">"INPUT YANG DISAMBUNGKAN"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"INPUT TUNGGU SEDIA"</item>
-    <item quantity="other" msgid="1673538341842385592">"INPUT TUNGGU SEDIA"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"INPUT YANG TIDAK DISAMBUNGKAN"</item>
-    <item quantity="other" msgid="4526893384805247472">"INPUT YANG TIDAK DISAMBUNGKAN"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">INPUT YANG DISAMBUNGKAN</item>
+      <item quantity="one">INPUT YANG DISAMBUNGKAN</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">INPUT TUNGGU SEDIA</item>
+      <item quantity="one">INPUT TUNGGU SEDIA</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">INPUT YANG TIDAK DISAMBUNGKAN</item>
+      <item quantity="one">INPUT YANG TIDAK DISAMBUNGKAN</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Hadkan akses kepada apl dan kandungan lain dalam akaun anda"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Profil Terhad"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Dikawal oleh <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Padamkan profil terhad"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Tetapan"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Apl yang dibenarkan"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 apl dibenarkan"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d apl dibenarkan"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d apl dibenarkan</item>
+      <item quantity="one">1 apl dibenarkan</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Dibenarkan"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Tidak dibenarkan"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Sesuaikan sekatan"</string>

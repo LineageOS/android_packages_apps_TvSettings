@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"버전"</string>
     <string name="about_serial" msgid="2723560490027171187">"일련번호"</string>
     <string name="about_build" msgid="9148789767199785676">"빌드"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"개발자가 되기까지 <xliff:g id="STEP_COUNT">%1$d</xliff:g>단계 남았습니다."</item>
-    <item quantity="other" msgid="6907126743472136795">"개발자가 되기까지 <xliff:g id="STEP_COUNT">%1$d</xliff:g>단계 남았습니다."</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">개발자가 되기까지 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g>단계 남았습니다.</item>
+      <item quantity="one">개발자가 되기까지 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g>단계 남았습니다.</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"광고"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"개발자가 되셨습니다."</string>
     <string name="show_dev_already" msgid="7525967300421794483">"이미 개발자입니다."</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"TV로 HDMI 기기 종료"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"TV 자동 켜기"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI 기기로 TV 전원 켜기"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"연결된 입력"</item>
-    <item quantity="other" msgid="280747600882155182">"연결된 입력"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"대기 입력"</item>
-    <item quantity="other" msgid="1673538341842385592">"대기 입력"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"연결되지 않은 입력"</item>
-    <item quantity="other" msgid="4526893384805247472">"연결되지 않은 입력"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">연결된 입력</item>
+      <item quantity="one">연결된 입력</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">대기 입력</item>
+      <item quantity="one">대기 입력</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">연결되지 않은 입력</item>
+      <item quantity="one">연결되지 않은 입력</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"내 계정의 앱 및 기타 콘텐츠에 대한 액세스 제한"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"제한된 프로필"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g>에 의해 제어됨"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"제한된 프로필 삭제"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"설정"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"허용된 앱"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1개 앱 허용됨"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d개 앱 허용됨"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d개 앱 허용됨</item>
+      <item quantity="one">1개 앱 허용됨</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"허용됨"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"허용되지 않음"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"제한 맞춤설정"</string>

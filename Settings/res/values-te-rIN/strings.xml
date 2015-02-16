@@ -108,10 +108,10 @@
     <string name="about_version" msgid="1177287676732287266">"సంస్కరణ"</string>
     <string name="about_serial" msgid="2723560490027171187">"క్రమ సంఖ్య"</string>
     <string name="about_build" msgid="9148789767199785676">"నిర్మాణం"</string>
-  <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5656331074727404150">"మీరు ఇప్పుడు డెవలపర్‌గా కావడానికి <xliff:g id="STEP_COUNT">%1$d</xliff:g> దశ మాత్రమే మిగిలి ఉంది"</item>
-    <item quantity="other" msgid="6907126743472136795">"మీరు ఇప్పుడు డెవలపర్‌గా కావడానికి <xliff:g id="STEP_COUNT">%1$d</xliff:g> దశలు మాత్రమే మిగిలి ఉన్నాయి"</item>
-  </plurals>
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">మీరు ఇప్పుడు డెవలపర్‌గా కావడానికి <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> దశలు మాత్రమే మిగిలి ఉన్నాయి</item>
+      <item quantity="one">మీరు ఇప్పుడు డెవలపర్‌గా కావడానికి <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> దశ మాత్రమే మిగిలి ఉంది</item>
+    </plurals>
     <string name="about_ads" msgid="3364786994943748337">"ప్రకటనలు"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"మీరు ఇప్పుడు డెవలపర్!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"అవసరం లేదు, మీరు ఇప్పటికే డెవలపర్"</string>
@@ -427,18 +427,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"టీవీతో ఉన్న HDMI పరికరాల పవర్‌ను ఆఫ్ చేస్తుంది"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"టీవీ ఆటో పవర్ ఆన్"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI పరికరంతో టీవీ పవర్‌ను ఆన్ చేస్తుంది"</string>
-  <plurals name="inputs_header_connected_input">
-    <item quantity="one" msgid="5569334300062609355">"కనెక్ట్ చేయబడిన ఇన్‌పుట్"</item>
-    <item quantity="other" msgid="280747600882155182">"కనెక్ట్ చేయబడిన ఇన్‌పుట్‌లు"</item>
-  </plurals>
-  <plurals name="inputs_header_standby_input">
-    <item quantity="one" msgid="737206065869471978">"స్టాండ్‌బై ఇన్‌పుట్"</item>
-    <item quantity="other" msgid="1673538341842385592">"స్టాండ్‌బై ఇన్‌పుట్‌లు"</item>
-  </plurals>
-  <plurals name="inputs_header_disconnected_input">
-    <item quantity="one" msgid="4711426139459946065">"కనెక్ట్ చేయబడని ఇన్‌పుట్"</item>
-    <item quantity="other" msgid="4526893384805247472">"కనెక్ట్ చేయబడని ఇన్‌పుట్‌లు"</item>
-  </plurals>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">కనెక్ట్ చేసిన ఇన్‌పుట్‌లు</item>
+      <item quantity="one">కనెక్ట్ చేసిన ఇన్‌పుట్</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">స్టాండ్‌బై ఇన్‌పుట్‌లు</item>
+      <item quantity="one">స్టాండ్‌బై ఇన్‌పుట్</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">కనెక్ట్ చేయని ఇన్‌పుట్‌లు</item>
+      <item quantity="one">కనెక్ట్ చేయని ఇన్‌పుట్</item>
+    </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"మీ ఖాతాలోని అనువర్తనాలు మరియు ఇతర కంటెంట్‌కి ప్రాప్యతను నియంత్రించండి"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"నియంత్రిత ప్రొఫైల్"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g> ద్వారా నియంత్రించబడింది"</string>
@@ -451,10 +451,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"పరిమిత ప్రొఫైల్‌ను తొలగించు"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"సెట్టింగ్‌లు"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"అనుమతించిన అనువర్తనాలు"</string>
-  <plurals name="restricted_profile_configure_apps_description">
-    <item quantity="one" msgid="5114936540577834412">"1 అనువర్తనం అనుమతించబడింది"</item>
-    <item quantity="other" msgid="5242661864373721262">"%d అనువర్తనాలు అనుమతించబడ్డాయి"</item>
-  </plurals>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d అనువర్తనాలు అనుమతించబడ్డాయి</item>
+      <item quantity="one">1 అనువర్తనం అనుమతించబడింది</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"అనుమతించబడింది"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"అనుమతించబడలేదు"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"పరిమితులను అనుకూలీకరించు"</string>
