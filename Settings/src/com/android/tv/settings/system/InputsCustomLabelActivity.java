@@ -46,8 +46,6 @@ public class InputsCustomLabelActivity extends Activity
         setTheme(ThemeHelper.getThemeResource(getIntent()));
         setContentView(R.layout.setup_auth_activity);
 
-        findViewById(R.id.progress_bar).setVisibility(View.GONE);
-
         Intent intent = getIntent();
         mId = intent.getStringExtra(KEY_ID);
         displayTextInputFragment(
