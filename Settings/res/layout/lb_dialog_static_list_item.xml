@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="@string/lb_dialog_list_item_unselected_text_alpha"
-            android:ellipsize="marquee"
+            android:ellipsize="end"
             android:fontFamily="sans-serif-light"
             android:maxLines="@integer/lb_dialog_action_title_min_lines"
             android:textColor="@color/lb_dialog_list_item_unselected_text_color"
