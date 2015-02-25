@@ -17,6 +17,7 @@
 package com.android.tv.settings.users;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import android.os.UserHandle;
 import android.preference.PreferenceManager;
 
 import com.android.tv.settings.dialog.PinDialogFragment;
+import com.android.tv.settings.dialog.PinDialogFragment.ResultListener;
 
 public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
 
@@ -42,14 +44,6 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
         b.putInt(PinDialogFragment.ARG_TYPE, type);
         fragment.setArguments(b);
         return fragment;
-    }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        if (!(activity instanceof Callback)) {
-            throw new IllegalStateException("Activity must be an instance of Callback");
-        }
     }
 
     /**
@@ -82,7 +76,17 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
 
     @Override
     public void setPin(String pin) {
-        final Callback callback = (Callback) getActivity();
+        Callback callback = null;
+
+        Fragment f = getTargetFragment();
+        if (f instanceof Callback) {
+            callback = (Callback) f;
+        }
+
+        if (callback == null && getActivity() instanceof Callback) {
+            callback = (Callback) getActivity();
+        }
+
         if (callback != null) {
             callback.saveLockPassword(pin, DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         }
@@ -90,7 +94,17 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
 
     @Override
     public boolean isPinCorrect(String pin) {
-        final Callback callback = (Callback) getActivity();
+        Callback callback = null;
+
+        Fragment f = getTargetFragment();
+        if (f instanceof Callback) {
+            callback = (Callback) f;
+        }
+
+        if (callback == null && getActivity() instanceof Callback) {
+            callback = (Callback) getActivity();
+        }
+
         if (callback != null) {
             return callback.checkPassword(pin, UserHandle.USER_OWNER);
         }
@@ -99,7 +113,17 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
 
     @Override
     public boolean isPinSet() {
-        final Callback callback = (Callback) getActivity();
+        Callback callback = null;
+
+        Fragment f = getTargetFragment();
+        if (f instanceof Callback) {
+            callback = (Callback) f;
+        }
+
+        if (callback == null && getActivity() instanceof Callback) {
+            callback = (Callback) getActivity();
+        }
+
         if (callback != null) {
             return UserHandle.myUserId() != UserHandle.USER_OWNER ||
                     callback.hasLockscreenSecurity();

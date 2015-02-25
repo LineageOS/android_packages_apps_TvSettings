@@ -59,11 +59,11 @@ public class UserSwitchListenerService extends Service {
                             + bootUserId);
                 }
                 if (UserHandle.myUserId() != bootUserId) {
-                    RestrictedProfileActivity.switchUserNow(bootUserId);
+                    RestrictedProfileDialogFragment.switchUserNow(bootUserId);
                 }
             }
 
-            updateLaunchPoint(context, null != RestrictedProfileActivity.findRestrictedUser(
+            updateLaunchPoint(context, null != RestrictedProfileDialogFragment.findRestrictedUser(
                     (UserManager) context.getSystemService(Context.USER_SERVICE)));
         }
     }

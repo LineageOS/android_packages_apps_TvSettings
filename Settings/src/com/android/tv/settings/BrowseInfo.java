@@ -56,7 +56,7 @@ import com.android.tv.settings.connectivity.ConnectivityStatusIconUriGetter;
 import com.android.tv.settings.connectivity.ConnectivityStatusTextGetter;
 import com.android.tv.settings.connectivity.WifiNetworksActivity;
 import com.android.tv.settings.device.sound.SoundActivity;
-import com.android.tv.settings.users.RestrictedProfileActivity;
+import com.android.tv.settings.users.RestrictedProfileDialogFragment;
 import com.android.tv.settings.util.UriUtils;
 import com.android.tv.settings.util.AccountImageHelper;
 
@@ -246,7 +246,7 @@ public class BrowseInfo extends BrowseInfoBase {
     }
 
     private boolean isRestricted() {
-        return RestrictedProfileActivity.isRestrictedProfileInEffect(mContext);
+        return RestrictedProfileDialogFragment.isRestrictedProfileInEffect(mContext);
     }
 
     private class PreferenceXmlReaderListener implements XmlReaderListener {

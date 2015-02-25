@@ -20,6 +20,7 @@ import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
@@ -106,14 +107,6 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
 
     public PinDialogFragment() {
         mRetCode = PIN_DIALOG_RESULT_FAIL;
-    }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        if (!(activity instanceof ResultListener)) {
-            throw new IllegalStateException("Activity must be an instance of ResultListener");
-        }
     }
 
     @Override
@@ -223,9 +216,14 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
     public void onDismiss(DialogInterface dialog) {
         super.onDismiss(dialog);
         if (DEBUG) Log.d(TAG, "onDismiss: mRetCode=" + mRetCode);
-        final ResultListener listener = (ResultListener) getActivity();
-        if (listener != null) {
-            listener.pinFragmentDone(mRetCode == PIN_DIALOG_RESULT_SUCCESS);
+
+        boolean result = mRetCode == PIN_DIALOG_RESULT_SUCCESS;
+        Fragment f = getTargetFragment();
+        if (f instanceof ResultListener) {
+            ((ResultListener) f).pinFragmentDone(result);
+        } else if (getActivity() instanceof ResultListener) {
+            final ResultListener listener = (ResultListener) getActivity();
+            listener.pinFragmentDone(result);
         }
     }
 
