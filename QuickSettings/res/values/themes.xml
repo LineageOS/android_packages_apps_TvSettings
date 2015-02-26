@@ -18,7 +18,7 @@
 <resources>
 
     <!-- Based on Theme.Material.Dialog.NoFrame -->
-    <style name="Theme.QuickSettings" parent="android:Theme.Material">
+    <style name="Theme.QuickSettings" parent="Theme.Leanback">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowNoTitle">true</item>
@@ -43,7 +43,7 @@
         <item name="android:listPreferredItemPaddingStart">16dip</item>
         <item name="android:listPreferredItemPaddingEnd">16dip</item>
 
-        <item name="@*android:preferencePanelStyle">@*android:style/PreferencePanel.Dialog</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14</item>
     </style>
 
     <style name="Theme.QuickSettings.Floating">

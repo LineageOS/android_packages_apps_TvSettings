@@ -37,6 +37,9 @@ import java.util.Arrays;
 
 public class SettingsDialog extends Activity {
 
+    private static final int PRESET_SETTING_INDEX = 0;
+    private static final int INTEGER_SETTING_START_INDEX = 1;
+
     private static final String TAG = "SettingsDialog";
     private static final boolean DEBUG = true;
 
@@ -101,10 +104,10 @@ public class SettingsDialog extends Activity {
                                 @Override
                                 public void onClick(DialogInterface dialog, int id) {
                                     // User clicked OK button
-                                    String[] presetSettingChoices = getResources().getStringArray(
-                                            R.array.setting_preset_choices);
-                                    mSettings.get(QuickSettings.PRESET_SETTING_INDEX).setValue(
-                                            presetSettingChoices[getResources().getInteger(
+                                    String[] presetSettingValues = getResources().getStringArray(
+                                            R.array.setting_preset_values);
+                                    mSettings.get(PRESET_SETTING_INDEX).setValue(
+                                            presetSettingValues[getResources().getInteger(
                                                     R.integer.standard_setting_index)]);
                                 }
                             }).setNegativeButton(android.R.string.cancel,
@@ -222,8 +225,8 @@ public class SettingsDialog extends Activity {
         mSeekBar.setProgress(mFocusedSetting.getIntValue());
         mSettingValue.setText(Integer.toString(mFocusedSetting.getIntValue()));
         String[] presetSettingChoices = getResources().getStringArray(
-                R.array.setting_preset_choices);
-        mSettings.get(QuickSettings.PRESET_SETTING_INDEX).setValue(
+                R.array.setting_preset_values);
+        mSettings.get(PRESET_SETTING_INDEX).setValue(
                 presetSettingChoices[getResources().getInteger(R.integer.custom_setting_index)]);
     }
 
@@ -234,8 +237,9 @@ public class SettingsDialog extends Activity {
 
         String[] presetSettingChoices = getResources().getStringArray(
                 R.array.setting_preset_choices);
+        String[] presetSettingValues = getResources().getStringArray(R.array.setting_preset_values);
 
-        int currentIndex = Arrays.asList(presetSettingChoices).indexOf(
+        int currentIndex = Arrays.asList(presetSettingValues).indexOf(
                 mFocusedSetting.getStringValue());
         switch (keyCode) {
             case KeyEvent.KEYCODE_DPAD_RIGHT:
@@ -247,9 +251,9 @@ public class SettingsDialog extends Activity {
             default:
                 return super.onKeyUp(keyCode, event);
         }
-        int newIndex = (currentIndex + presetSettingChoices.length) % presetSettingChoices.length;
-        mFocusedSetting.setValue(presetSettingChoices[newIndex]);
-        mSettingValue.setText(mFocusedSetting.getStringValue());
+        int newIndex = (currentIndex + presetSettingValues.length) % presetSettingValues.length;
+        mFocusedSetting.setValue(presetSettingValues[newIndex]);
+        mSettingValue.setText(presetSettingChoices[newIndex]);
         int[] newSettingValues = null;
         if (newIndex == getResources().getInteger(R.integer.standard_setting_index)) {
             newSettingValues = getResources().getIntArray(R.array.standard_setting_values);
@@ -262,7 +266,7 @@ public class SettingsDialog extends Activity {
         }
         if (newSettingValues != null) {
             for (int i = 0; i < newSettingValues.length; i++) {
-                mSettings.get(i + QuickSettings.INTEGER_SETTING_START_INDEX).setValue(
+                mSettings.get(i + INTEGER_SETTING_START_INDEX).setValue(
                         newSettingValues[i]);
             }
         }

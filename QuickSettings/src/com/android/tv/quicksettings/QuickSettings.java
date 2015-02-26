@@ -16,51 +16,56 @@ package com.android.tv.quicksettings;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v14.preference.PreferenceFragment;
+import android.support.v17.preference.LeanbackPreferenceFragment;
+import android.support.v17.preference.LeanbackSettingsFragment;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
 
 public class QuickSettings extends Activity {
 
     private static final String TAG = "QuickSettings";
-    static final int PRESET_SETTING_INDEX = 0;
-    static final int INTEGER_SETTING_START_INDEX = 1;
-
-    private int mSlidOutTranslationX;
-    private View mRootView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.side_quicksettings);
-
-        if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
-            mSlidOutTranslationX = -getResources().getDimensionPixelSize(R.dimen.panel_width);
-        } else {
-            mSlidOutTranslationX = getResources().getDimensionPixelSize(R.dimen.panel_width);
-        }
-
-        mRootView = getWindow().getDecorView().findViewById(R.id.main_frame);
-        mRootView.setTranslationX(mSlidOutTranslationX);
-
         if (savedInstanceState == null) {
             final Fragment f = new QuickSettingsFragment();
-            getFragmentManager().beginTransaction().add(R.id.side_panel_list, f).commit();
+            getFragmentManager().beginTransaction().add(android.R.id.content, f).commit();
             getFragmentManager().executePendingTransactions();
         }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mRootView.animate().cancel();
-        mRootView.animate().translationX(0).start();
+    public static class QuickSettingsFragment extends LeanbackSettingsFragment {
+
+        @Override
+        public void onPreferenceStartInitialScreen() {
+            final Fragment f = new QuickSettingsPreferenceFragment();
+            startPreferenceFragment(f, null);
+        }
+
+        @Override
+        public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
+            return false;
+        }
+
+        @Override
+        public boolean onPreferenceStartScreen(PreferenceFragment caller, PreferenceScreen pref) {
+            final Fragment f = new SubSettingsFragment();
+            final Bundle b = new Bundle(1);
+            b.putString(PreferenceFragment.ARG_PREFERENCE_ROOT, pref.getKey());
+            f.setArguments(b);
+            startPreferenceFragment(f, null);
+            return true;
+        }
     }
 
-    @Override
-    protected void onPause() {
-        mRootView.animate().cancel();
-        mRootView.animate().translationX(mSlidOutTranslationX).start();
-        super.onPause();
+    public static class SubSettingsFragment extends LeanbackPreferenceFragment {
+        @Override
+        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+            setPreferencesFromResource(R.xml.quick_settings, rootKey);
+        }
     }
 
 }

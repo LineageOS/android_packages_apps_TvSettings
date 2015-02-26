@@ -22,16 +22,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceScreen;
-import android.support.annotation.NonNull;
+import android.support.v17.preference.LeanbackPreferenceFragment;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class QuickSettingsFragment extends PreferenceFragment implements
+public class QuickSettingsPreferenceFragment extends LeanbackPreferenceFragment implements
         SharedPreferences.OnSharedPreferenceChangeListener, Preference.OnPreferenceClickListener {
 
     private ListPreference mPresetPref;
@@ -49,8 +47,11 @@ public class QuickSettingsFragment extends PreferenceFragment implements
         super.onCreate(savedInstanceState);
 
         mPresetSettingsListener = new PresetSettingsListener(getActivity());
+    }
 
-        addPreferencesFromResource(R.xml.quick_settings);
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String key) {
+        setPreferencesFromResource(R.xml.quick_settings, key);
 
         mPresetPref = (ListPreference) findPreference("preset");
         mPresetPref.setOnPreferenceClickListener(this);
@@ -75,7 +76,6 @@ public class QuickSettingsFragment extends PreferenceFragment implements
 
         final Preference resetPreference = findPreference("reset");
         resetPreference.setOnPreferenceClickListener(this);
-
     }
 
     @Override
@@ -172,5 +172,10 @@ public class QuickSettingsFragment extends PreferenceFragment implements
                 return true;
         }
         return false;
+    }
+
+    @Override
+    public void onDisplayPreferenceDialog(Preference preference) {
+        // Do nothing
     }
 }
