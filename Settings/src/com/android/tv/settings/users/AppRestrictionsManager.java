@@ -199,7 +199,7 @@ class AppRestrictionsManager implements Action.Listener {
                 mCurrentDialogFragment = new DialogFragment.Builder()
                         .title(entry.getTitle())
                         .description(entry.getDescription())
-                        .iconResourceId(RestrictedProfileActivity.getIconResource())
+                        .iconResourceId(RestrictedProfileDialogFragment.getIconResource())
                         .iconBackgroundColor(
                                 mFragment.getActivity().getResources()
                                         .getColor(R.color.icon_background))
