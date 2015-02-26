@@ -278,8 +278,10 @@ public class UserAppRestrictionsDialogFragment extends DialogFragment implements
             DialogFragment.add(getFragmentManager(), dialogFragment);
         } else if (ACTION_ALLOW.equals(action.getKey())) {
             setEnabled(packageName, true);
+            getFragmentManager().popBackStack();
         } else if (ACTION_DISALLOW.equals(action.getKey())) {
             setEnabled(packageName, false);
+            getFragmentManager().popBackStack();
         } else if (mAppRestrictionsManager != null) {
             mAppRestrictionsManager.onActionClicked(action);
         }
