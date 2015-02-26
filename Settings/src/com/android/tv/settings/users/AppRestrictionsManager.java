@@ -250,6 +250,7 @@ class AppRestrictionsManager implements Action.Listener {
                 // If there's a valid result, persist it to the user manager.
                 mUserManager.setApplicationRestrictions(mPackageName, bundle, mUserHandle);
             }
+            loadRestrictionActions();
         }
     }
 
