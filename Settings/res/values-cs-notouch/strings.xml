@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
- 
+ -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -27,6 +26,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="221435219644064243">"Vynucené zastavení může způsobit nepředvídatelné chování aplikace."</string>
     <string name="device_apps_app_management_uninstall" msgid="6054050725055974790">"Odinstalovat"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="3542570994262234511">"Chcete tuto aplikaci odinstalovat?"</string>
+    <string name="device_apps_app_management_disable" msgid="1461984395121717076">"Vypnout"</string>
+    <string name="device_apps_app_management_disable_desc" msgid="1362228583828208991">"Opravdu tuto aplikaci chcete vypnout?"</string>
+    <string name="device_apps_app_management_enable" msgid="8794752872502256633">"Zapnout"</string>
+    <string name="device_apps_app_management_enable_desc" msgid="6449017972628203288">"Chcete tuto aplikaci zapnout?"</string>
     <string name="device_apps_app_management_clear_data" msgid="8288695583331012586">"Vymazat data"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="2197842469669426232">"Všechna data této aplikace budou trvale vymazána."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="376666756087041021">"Vymazány budou všechny soubory, nastavení, účty, databáze apod."</string>
@@ -47,7 +50,7 @@
     <string name="device_daydreams_sleep_description" msgid="8438730889852772376">"Spořič obrazovky se spustí po této době nečinnosti. Pokud není vybrán žádný spořič obrazovky, displej se vypne."</string>
     <string name="device_daydreams_sleep_summary" msgid="4442691086777437088">"Po nečinnosti trvající <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_daydreams_screen_off" msgid="1846621864054404830">"Kdy spát"</string>
-    <string name="device_daydreams_screen_off_description" msgid="2714283422741910116">"Po uplynutí této doby od aktivace spořiče obrazovky se vypne displej."</string>
+    <string name="device_daydreams_screen_off_description" msgid="7699124270812914310">"Po této době neaktivity se vypne obrazovka."</string>
     <string name="device_daydreams_screen_off_summary" msgid="6350806465141059041">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> po aktivaci spořiče obrazovky"</string>
     <string name="backup_configure_account_default_summary" msgid="2013649183664358673">"Záložní data nejsou momentálně ukládána do žádného účtu."</string>
     <string name="backup_erase_dialog_title" msgid="8900389956460363471"></string>
@@ -63,8 +66,8 @@
     <string name="no_notifications" msgid="3241328952121767751">"Žádné"</string>
     <string name="do_not_disturb_title" msgid="1050245577355301376">"Nerušit"</string>
     <string name="do_not_disturb_desc" msgid="3186041965642361597">"Oznámení se zobrazují pouze v nastavení"</string>
-    <string name="select_title" msgid="7198726136224025927">"Pojmenování zařízení ADT-1"</string>
-    <string name="select_description" msgid="5793523265011441398">"Název vám pomůže rozpoznat zařízení ADT-1, až k němu budete přistupovat z jiných zařízení, například z telefonu, tabletu nebo počítače."</string>
+    <string name="select_title" msgid="2657901623249723536">"Zvolte název zařízení ^1"</string>
+    <string name="select_description" msgid="4080602542483519716">"Název pomůže vaše zařízení ^1 identifikovat, když do něj budete přistupovat z jiných zařízení, například z telefonu, tabletu nebo počítače."</string>
   <string-array name="rooms">
     <item msgid="2748008285322003570">"Obývací pokoj"</item>
     <item msgid="7887185726776968055">"Multimediální místnost"</item>
@@ -75,8 +78,8 @@
     <item msgid="682313511953895794">"Kuchyně"</item>
   </string-array>
     <string name="custom_room" msgid="5972936200641815527">"Zadejte vlastní název…"</string>
-    <string name="settings_status_title" msgid="3614035378662654635">"Zařízení ADT-1 je pojmenováno"</string>
-    <string name="settings_status_description" msgid="3927440914529717379">"Toto zařízení ADT-1 má název „^1“. Chcete jej změnit?"</string>
+    <string name="settings_status_title" msgid="3280459921834269206">"Toto zařízení ^1 již má název"</string>
+    <string name="settings_status_description" msgid="4892610880616296037">"Název tohoto zařízení ^2 je ^1. Chcete jej změnit?"</string>
     <string name="change_setting" msgid="199354038426145612">"Změnit"</string>
     <string name="keep_settings" msgid="549230720820096102">"Neměnit"</string>
     <string name="menu_help" msgid="2164687828212723531">"Nápověda"</string>

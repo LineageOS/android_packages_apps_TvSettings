@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="settings_app_name" msgid="4243616485579754401">"Sozlamalar"</string>
+    <string name="launcher_settings_app_name" msgid="5782771766725939392">"Sozlamalar"</string>
+    <string name="launcher_network_app_name" msgid="5107150533945388559">"Tarmoq"</string>
+    <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Cheklangan profil"</string>
+    <string name="header_category_device" msgid="4855983928659541345">"Qurilma"</string>
+    <string name="header_category_preferences" msgid="175105555164713972">"Shaxsiy sozlamalar"</string>
+    <string name="header_category_accessories" msgid="823295909353025991">"Masofadan boshqarish pulti &amp; aksessuarlar"</string>
+    <string name="header_category_personal" msgid="8893959635328775096">"Shaxsiy"</string>
+    <string name="add_account" msgid="4098060223200619258">"Yangi hisob qo‘shish"</string>
+    <string name="account_header_sync" msgid="2679585471372319471">"Sinxronlash"</string>
+    <string name="account_header_remove_account" msgid="3288957118207682685">"Hisobni o‘chirish"</string>
+    <string name="search_title" msgid="5474988613144349415">"Qidirish"</string>
+    <string name="account_sync" msgid="773808124331714965">"Sinxronlashtirilgan ilovalarni tanlash"</string>
+    <string name="sync_now" msgid="8732244492880016471">"Hozir sinx"</string>
+    <string name="sync_cancel" msgid="5839264070098894371">"Sinxronlashni bekor qilish"</string>
+    <string name="sync_in_progress" msgid="1330721038775646022">"Sinxronlanmoqda…"</string>
+    <string name="last_synced" msgid="6178494892357077274">"So‘nggi martda <xliff:g id="TIME">%1s</xliff:g> da sinxronlashtirilgan"</string>
+    <string name="sync_disabled" msgid="3089360175872892781">"O‘chirilgan"</string>
+    <string name="sync_is_failing" msgid="8229476000384257186">"Sinxronlashtirish ishlamayapti. U tezda qaytadi."</string>
+    <string name="account_remove" msgid="4313580520737295272">"Hisobni o‘chirish"</string>
+    <string name="account_remove_failed" msgid="980654375770693544">"Hisobni o\'chirib bo\'lmaydi"</string>
+  <string-array name="account_detail_settings">
+    <item msgid="2736778804563540468">"Nomi"</item>
+    <item msgid="6466271488216028049">"Rasm"</item>
+    <item msgid="5763918836533170723">"Xavfsizlik"</item>
+    <item msgid="5219275476980441834">"Google Hamyon"</item>
+    <item msgid="5333563881963545303">"Xaridlar tarixi"</item>
+    <item msgid="6174147587962184914">"Hisobni olib tashlash"</item>
+  </string-array>
+    <string name="connectivity_network" msgid="8321537111272398501">"Tarmoq"</string>
+    <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
+    <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
+    <string name="device_daydream" msgid="4933581408059561077">"Uyqu rejimi"</string>
+    <string name="device_display" msgid="101455384386372747">"Ekran"</string>
+    <string name="device_sound_effects" msgid="7793281745920228622">"Tizim tovushlari"</string>
+    <string name="device_apps" msgid="9180435229638772838">"Ilovalar"</string>
+    <string name="device_storage_reset" msgid="1425978936501134425">"Xotirani &amp; qayta o‘tnatish"</string>
+    <string name="device_storage" msgid="5536683600091277826">"Xotira ombori"</string>
+    <string name="device_backup_restore" msgid="5627523987587511884">"Zaxiralash va qayta tiklash"</string>
+    <string name="device_reset" msgid="2827002349560023125">"Zavod sozlamalarini tiklash"</string>
+    <string name="device_calibration" msgid="8632962533376605191">"Kalibrlash"</string>
+    <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Keshlangan ma’lumotlar tozalansinmi?"</string>
+    <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Barcha ilovalarning keshlangan ma’l. tozalanadi."</string>
+    <string name="apps_downloaded" msgid="4222190849854323480">"Yuklab olingan ilovalar"</string>
+    <string name="apps_system" msgid="2499191125802829425">"Tizim ilovalari"</string>
+    <string name="apps_running" msgid="6430310491739956228">"Ishlayotgan ilovalar"</string>
+    <string name="accessories_remote" msgid="2188138914890229082">"Masofa-y bosh-v"</string>
+    <string name="accessories_camera" msgid="503302832375993697">"Kamera"</string>
+    <string name="accessories_add" msgid="1347802656349218830">"Aksessuarni qo‘shish"</string>
+    <string name="accessories_wifi_display" msgid="1107690327150126038">"Wi-Fi Ekran"</string>
+    <string name="accessory_state_pairing" msgid="7501989679637780963">"Ulanmoqda…"</string>
+    <string name="accessory_state_connecting" msgid="8777884957977608529">"Ulanmoqda…"</string>
+    <string name="accessory_state_error" msgid="4529815543328841909">"Ulanib bo‘lmadi"</string>
+    <string name="accessory_state_canceled" msgid="4419328837733619447">"Bekor qilindi"</string>
+    <string name="accessory_state_paired" msgid="1959238931866401476">"Ulandi"</string>
+    <string name="accessory_options" msgid="4799658564005710297">"Aksessuar"</string>
+    <string name="accessory_rename" msgid="3250766501262581206">"Qayta nomlash"</string>
+    <string name="accessory_unpair" msgid="8242725516604465355">"Biriktirmani to‘xtatish"</string>
+    <string name="accessory_unpairing" msgid="7568241162181184667">"Qurilma bilan aloqa uzilmoqda…"</string>
+    <string name="accessory_connected" msgid="2156489304110030393">"Ulangan"</string>
+    <string name="accessories_add_title" msgid="6940361421891873321">"Aksessuarlar qidirilmoqda…"</string>
+    <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Bluetooth qurilmalaringizni bir-biriga ulashdan avval ularning ulanish rejimida ekanligiga ishonch hosil qiling"</string>
+    <string name="accessories_autopair_msg" msgid="8618829246837821752">"Qurilma topildi va <xliff:g id="COUNTDOWN">%1$s</xliff:g> soniyada avtomatik ravishda birlashtiriladi"</string>
+    <string name="accessories_add_title_multiple" msgid="8455249961819802466">"Bir nechta qurilma topildi"</string>
+    <string name="accessories_add_multiple" msgid="3900633668371061399">"Boshqa qurilmani tanlash uchun ushbu qurilmadagi ulanish tugmasini bosing"</string>
+    <string name="accessories_add_multiple_select" msgid="3696794187001405647">"Tanlangan qurilma bilan birlashtirish uchun bu qurilmaning birlashtirish tugmasini 5 soniyacha bosib turing"</string>
+    <string name="error_action_not_supported" msgid="300552308104354666">"Bu harakat qo‘llab-quvvatlanmaydi"</string>
+    <string name="bluetooth_pairing_request" msgid="4523088117471287665">"Bluetooth orqali ulanish so‘rovi"</string>
+    <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"Quyidagi bilan birlashtirish uchun: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, uning bu tugmani ko‘rsatayotganligiga ishonch hosil qiling: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
+    <string name="bluetooth_incoming_pairing_msg" msgid="8234127565393932499">"Quyidagidan: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Bu qurilma bilan birlashtirilsinmi?"</string>
+    <string name="bluetooth_display_passkey_pin_msg" msgid="8951451728250058901">"Quyidagi bilan birlashtirish uchun: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Unda tering: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, keyin Return yoki Enter tugmasini bosing."</string>
+    <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"Quyidagi bilan birlashtirish uchun: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Qurilmaning talab qilingan PIN kodini kiriting:"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="7980787196089653577">"Quyidagi bilan ulanish: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Qurilmaning talab qilingan kalitini kiriting:"</string>
+    <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Odatda 0000 yoki 1234"</string>
+    <string name="bluetooth_pair" msgid="7836818609620478122">"Biriktirish"</string>
+    <string name="bluetooth_cancel" msgid="4152153558528588479">"Bekor qilish"</string>
+    <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
+    <string name="system_date_time" msgid="8898457978560618950">"Sana va vaqt"</string>
+    <string name="system_language" msgid="2337138146114609247">"Til"</string>
+    <string name="system_keyboard" msgid="7680159735294672514">"Klaviatura"</string>
+    <string name="system_search" msgid="2837264654143247611">"Qidirish"</string>
+    <string name="system_security" msgid="8230080273993484407">"Xavfsizlik va cheklanishlar"</string>
+    <string name="system_speech" msgid="8128688499687306982">"Nutq"</string>
+    <string name="system_inputs" msgid="2413907183796651102">"Kirishlar"</string>
+    <string name="system_accessibility" msgid="6215431399759498005">"Maxsus imkoniyatlar"</string>
+    <string name="system_developer_options" msgid="3237985523474863638">"Dasturchi sozlamalari"</string>
+    <string name="accessibility_none" msgid="3441648940134070004">"Hech biri"</string>
+    <string name="about_system_update" msgid="7282772247661356586">"Tizim yangilanishi"</string>
+    <string name="about_preference" msgid="4131396784531360434">"Ma’lumot"</string>
+    <string name="device_name" msgid="2670488158531273028">"Qurilma nomi"</string>
+    <string name="restart_button_label" msgid="8153112858638352970">"Qayta boshlash"</string>
+    <string name="about_legal_info" msgid="8511870741437307531">"Huquqiy ma’lumotlar"</string>
+    <string name="about_warranty" msgid="5736003473060436384">"Kafolat"</string>
+    <string name="about_legal_license" msgid="7867205982113209033">"Ochiq kodli dasturiy ta’minot litsenziyalari"</string>
+    <string name="about_terms_of_service" msgid="7743088207977334874">"Google huquqiy masalalari"</string>
+    <string name="about_license_activity_unavailable" msgid="8522566562321418498">"Litsenziya ma\'lumotlari mavjud emas"</string>
+    <string name="about_model" msgid="6625269442206323995">"Modeli"</string>
+    <string name="about_version" msgid="1177287676732287266">"Versiyasi"</string>
+    <string name="about_serial" msgid="2723560490027171187">"Seriya raqami"</string>
+    <string name="about_build" msgid="9148789767199785676">"Qurish"</string>
+  <plurals name="show_dev_countdown">
+    <item quantity="one" msgid="5656331074727404150">"Dasturchi sifatida ro‘yxatdan o‘tishni yakunlashga <xliff:g id="STEP_COUNT">%1$d</xliff:g> qadam qoldi"</item>
+    <item quantity="other" msgid="6907126743472136795">"Dasturchi bo‘lishingizga bor-yo‘g‘i <xliff:g id="STEP_COUNT">%1$d</xliff:g> qadam qoldi"</item>
+  </plurals>
+    <string name="about_ads" msgid="3364786994943748337">"Reklamalar"</string>
+    <string name="show_dev_on" msgid="8997172736024819952">"Siz endi dasturchisiz!"</string>
+    <string name="show_dev_already" msgid="7525967300421794483">"Bunga ehtiyoj yo‘q. Siz allaqachon dasturchisiz"</string>
+    <string name="wifi_security_none" msgid="1241101191574932821">"Hech biri"</string>
+    <string name="wifi_remembered" msgid="710973813096194477">"Saqlandi"</string>
+    <string name="wifi_disabled_generic" msgid="5100439885010143290">"O‘chirilgan"</string>
+    <string name="wifi_disabled_network_failure" msgid="7558613087615078317">"Juda past internet tezlikdan saqlanildi"</string>
+    <string name="wifi_disabled_password_failure" msgid="1318626812163574372">"Tasdiqlash bilan bog‘liq muammo"</string>
+    <string name="wifi_not_in_range" msgid="342867509887486418">"Aloqada emas"</string>
+    <string name="wifi_wps_available_first_item" msgid="2505782834128907733">"WPS mavjud"</string>
+    <string name="wifi_wps_available_second_item" msgid="375469856423243587">" (WPS mavjud)"</string>
+    <string name="wifi_secured_first_item" msgid="9147292132572887175">"<xliff:g id="WIFI_SECURITY_SHORT">%1$s</xliff:g> bilan himoyalangan"</string>
+    <string name="wifi_secured_second_item" msgid="4204734116810783051">", <xliff:g id="WIFI_SECURITY_SHORT">%1$s</xliff:g> bilan himoyalangan"</string>
+  <string-array name="wifi_signal_strength">
+    <item msgid="6926038943588801452">"Juda past"</item>
+    <item msgid="5986166866411161790">"Past"</item>
+    <item msgid="7541004325985469896">"Yaxshi"</item>
+    <item msgid="1546771355788926692">"A’lo"</item>
+  </string-array>
+    <string name="title_mac_address" msgid="3428401680168668544">"MAC manzil"</string>
+    <string name="title_signal_strength" msgid="205478650262078041">"Signal darajasi"</string>
+    <string name="title_ip_address" msgid="4533523100923004711">"IP manzili"</string>
+    <string name="title_ssid" msgid="4858945903642469730">"Wi-Fi tarmog\'ingiz nomini kiriting"</string>
+    <string name="title_internet_connection" msgid="8710084774588697646">"Internetga ulanish"</string>
+    <string name="connected" msgid="7563100162902079938">"Ulangan"</string>
+    <string name="not_connected" msgid="6858480380326923017">"Ulanmagan"</string>
+    <string name="wifi_setting_header_available_networks" msgid="6244107218643835636">"Wi-Fi"</string>
+    <string name="wifi_setting_header_other_options" msgid="1530334691232749342">"BOSHQA VARIANTLAR"</string>
+    <string name="wifi_setting_see_all" msgid="3217814666041974878">"Barchasini ko‘rish"</string>
+    <string name="wifi_setting_available_networks" msgid="1244646604369133314">"Mavjud tarmoqlar"</string>
+    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"WPS orqali ulanish"</string>
+    <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"Yangi tarmoqni qo‘shish"</string>
+    <string name="add_network" msgid="2074883912462075625">"Tarmoq qo‘shish"</string>
+    <string name="network_ssid" msgid="7653487431810593891">"Tarmoq SSID"</string>
+    <string name="security_type" msgid="524443802004143058">"Xavfsizlik turi"</string>
+    <string name="password" msgid="1322790875762726719">"Parol"</string>
+    <string name="wps_network" msgid="1052148085426051873">"WPS orqali ulanish"</string>
+    <string name="other_network" msgid="3539704463099544488">"Boshqa tarmoqlar…"</string>
+    <string name="skip_network" msgid="6380260543776712357">"Yopish"</string>
+    <string name="wifi_security_type_none" msgid="6622722325237471927">"Hech biri"</string>
+    <string name="wifi_security_type_wep" msgid="3836879161029325671">"WEP"</string>
+    <string name="wifi_security_type_wpa" msgid="4948411057925876780">"WPA/WPA2 PSK"</string>
+    <string name="wifi_security_type_eap" msgid="1106303698253987745">"802.1x EAP"</string>
+    <string name="title_wifi_no_networks_available" msgid="7127675763248224969">"Tekshirilmoqda…"</string>
+    <string name="title_wifi_could_not_save" msgid="708638317882707069">"<xliff:g id="SSID">%1$s</xliff:g> uchun konfiguratsiyani saqlab bo\'lmadi"</string>
+    <string name="title_wifi_could_not_connect" msgid="9080004548419447580">"<xliff:g id="SSID">%1$s</xliff:g> ga ulanib bo‘lmadi"</string>
+    <string name="title_wifi_could_not_connect_timeout" msgid="5158184646985406394">"<xliff:g id="SSID">%1$s</xliff:g> ni topib bo‘lmadi"</string>
+    <string name="title_wifi_could_not_connect_authentication_failure" msgid="4836595650380723944">"Wi-Fi paroli haqiqiy emas"</string>
+    <string name="title_wifi_could_not_connect_ap_reject" msgid="328274688839033015">"Wi-Fi tarmog\'i ulanishni qabul qilmadi"</string>
+    <string name="title_wifi_advanced_options" msgid="5389467736846644832">"<xliff:g id="SSID">%1$s</xliff:g> Proksi va IP sozlanmalar sozlansinmi?"</string>
+    <string name="title_wifi_proxy_settings" msgid="7728120764469991303">"Proksi sozlamalari"</string>
+    <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"Proksi host nomi:"</string>
+    <string name="title_wifi_proxy_port" msgid="9194893429116021337">"Proxy porti:"</string>
+    <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"Proksini chetlab o‘tish sozlamalari:"</string>
+    <string name="title_wifi_ip_settings" msgid="1176973848286865602">"IP sozlamalari"</string>
+    <string name="title_wifi_ip_address" msgid="1176502993805009566">"IP manzili:"</string>
+    <string name="title_wifi_gateway" msgid="7210935277165358134">"Shlyuz:"</string>
+    <string name="title_wifi_network_prefix_length" msgid="4821632382990582038">"Tarmoq prefiksi uzunligi:"</string>
+    <string name="title_wifi_dns1" msgid="8202712852864206601">"DNS 1:"</string>
+    <string name="title_wifi_dns2" msgid="2673986973918499478">"DNS 2:"</string>
+    <string name="title_wifi_proxy_settings_invalid" msgid="7380479044141040849">"Proksi sozlanmalari noto‘g‘ri"</string>
+    <string name="title_wifi_ip_settings_invalid" msgid="7228948551397955678">"IP sozlanmalari xato"</string>
+    <string name="title_wifi_known_network" msgid="819998498700202436">"<xliff:g id="SSID">%1$s</xliff:g> saqlangan tarmoq"</string>
+    <string name="wifi_action_try_again" msgid="3308643222864163092">"Qayta urinish"</string>
+    <string name="wifi_action_view_available_networks" msgid="560074338908947419">"Mavjud tarmoqlarni ko‘rish"</string>
+    <string name="wifi_connecting" msgid="1299861268647323455">"<xliff:g id="SSID">%1$s</xliff:g> ga ulanayapti"</string>
+    <string name="wifi_saving" msgid="1269061570772019215">"<xliff:g id="SSID">%1$s</xliff:g> uchun konfiguratsiya saqlanmoqda"</string>
+    <string name="wifi_connect" msgid="8570424816865506077">"Ulanish"</string>
+    <string name="wifi_forget_network" msgid="7302755141573045803">"Tarmoqni unutish"</string>
+    <string name="wifi_forget_network_description" msgid="3328285160018330334">"Bu ushbu tarmoqqa ulanish uchun foydalanilgan ma\'lumotlarni, jumladan saqlangan parolni o\'chiradi"</string>
+    <string name="wifi_action_ok" msgid="5932500664228395779">"OK"</string>
+    <string name="wifi_action_change_network" msgid="5196215981075986148">"O‘zgartirish"</string>
+    <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"O‘zgartirilmasin"</string>
+    <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"OK"</string>
+    <string name="wifi_action_advanced_no" msgid="8165601242122651326">"Yo\'q (tavsiya qilingan)"</string>
+    <string name="wifi_action_proxy_none" msgid="4457231399674182650">"Hech biri"</string>
+    <string name="wifi_action_proxy_manual" msgid="8402002777441261064">"Qo‘llanma"</string>
+    <string name="wifi_action_dhcp" msgid="6338911832360962268">"DHCP"</string>
+    <string name="wifi_action_save" msgid="4673786410274206843">"Saqlash"</string>
+    <string name="wifi_action_static" msgid="1025855501453321749">"Statik"</string>
+    <string name="wifi_action_status_info" msgid="7664354971197839253">"Holat ma\'lumotlari"</string>
+    <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"Kengaytirilgan sozlamalar"</string>
+    <string name="wifi_action_advanced_options_description" msgid="8615353318560146504">"<xliff:g id="PROXY_SETTINGS_SUMMARY">%1$s</xliff:g>, <xliff:g id="IP_SETTINGS_SUMMARY">%2$s</xliff:g>"</string>
+    <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"Haqiqiy IP manzilni kiriting"</string>
+    <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Haqiqiy shlyuz manzilini kiriting"</string>
+    <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Haqiqiy DNS manzilni kiriting"</string>
+    <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"0 dan 32 gacha bo\'l. tarm. prefiksi uzun. kiriting"</string>
+    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"Haqiqiy IP-manzilni kiriting.\nMasalan: 192.168.1.128"</string>
+    <string name="wifi_dns1_hint" msgid="214345156394229347">"Haqiqiy IP manzilni kiriting yoki bo‘sh qoldiring.\nMasalan: 8.8.8.8"</string>
+    <string name="wifi_dns2_hint" msgid="1075709328208368894">"Haqiqiy IP manzilni kiriting yoki bo‘sh qoldiring.\nMasalan: 8.8.4.4"</string>
+    <string name="wifi_gateway_hint" msgid="7687219682024189028">"Haqiqiy IP manzilni kiriting yoki bo‘sh qoldiring.\nMasalan: 192.168.1.1"</string>
+    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"Haqiqiy tarmoq prefiksi uzunligini kiriting.\nMasalan: 24"</string>
+    <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Xost nomi noto‘g‘ri"</string>
+    <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Bu istisno qilish ro‘yxati haqiqiy emas. Istisno qilingan domenlarning vergul bilan ajratilgan ro‘yxatini kiriting."</string>
+    <string name="proxy_error_empty_port" msgid="6835658067776408062">"Port maydoni bo\'sh bo\'lishi mumkin emas"</string>
+    <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Xost maydoni bo‘sh bo‘lsa, port maydoni bo‘sh qoldiring"</string>
+    <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Port noto‘g‘ri"</string>
+    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP proksi brauzer tom. foydalaniladi, biroq undan boshqa ilovalar tom. foydalanilmasligi mumkin"</string>
+    <string name="proxy_port_hint" msgid="8532733797275927007">"Haqiqiy bo‘lgan portni kiriting.\nMasalan: 8080"</string>
+    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"Istisno qilingan domenlarning vergul bilan ajratilgan ro\'yxatini kiriting yoki bo\'sh qoldiring.\nMasalan: example.com,mycomp.test.com,localhost"</string>
+    <string name="proxy_hostname_hint" msgid="3719688422767210803">"Haqiqiy bo\'lgan xost nomini kiriting.\nMasalan: proxy.example.com"</string>
+    <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Tarmoq ulandi"</string>
+    <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Tarmoq ulanmadi"</string>
+    <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Allaqachon <xliff:g id="SSID">%1$s</xliff:g> ga ulangan. Boshqa tarmoqqa ulansinmi?"</string>
+    <string name="wifi_summary_unknown_network" msgid="7903601448928422642">"noma’lum tarmoq"</string>
+    <string name="connectivity_advanced_options" msgid="2858199826425132228">"Kengaytirilgan sozlamalar"</string>
+    <string name="connectivity_advanced_options_description" msgid="370129113175689226">"<xliff:g id="SSID_0">%1$s</xliff:g>, <xliff:g id="SSID_1">%2$s</xliff:g>"</string>
+    <string name="title_ip_settings" msgid="6408399523925189065">"IP sozlamalari"</string>
+    <string name="title_test_connection" msgid="1202798409060082670">"Sinov ulanishi"</string>
+    <string name="dhcp" msgid="5536822848499568335">"DHCP"</string>
+    <string name="title_static" msgid="6690544371649264526">"Statik"</string>
+    <string name="gateway" msgid="2467496590891949814">"Darvoza"</string>
+    <string name="title_network_prefix_length" msgid="3222416880787889272">"Tarmoq raqamlar sig‘imi"</string>
+    <string name="title_dns_1" msgid="1513875539231931892">"DNS 1"</string>
+    <string name="title_dns_2" msgid="7805767982172685879">"DNS"</string>
+    <string name="title_ok" msgid="1021329453788761592">"OK"</string>
+    <string name="title_cancel" msgid="4846143417666038604">"Bekor qilish"</string>
+    <string name="rename_device" msgid="8221482127562510757">"Qurilmaning nomini o‘zgartirish"</string>
+    <string name="storage_title" msgid="2132026108559493394">"Xotira ombori"</string>
+    <string name="storage_available" msgid="1241005580092138871">"Mavjud"</string>
+    <string name="storage_size" msgid="8958530823208352781">"Jami joy: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
+    <string name="storage_calculating_size" msgid="2644732407412520565">"Hisoblanmoqda…"</string>
+    <string name="storage_apps_usage" msgid="4366049071039081219">"Ilovalar"</string>
+    <string name="storage_downloads_usage" msgid="6172975879962599380">"Yuklab olishlar"</string>
+    <string name="storage_dcim_usage" msgid="2977564696540645452">"Fotolar va videolar"</string>
+    <string name="storage_music_usage" msgid="3509327591741514083">"Audio"</string>
+    <string name="storage_media_misc_usage" msgid="6066868724030127457">"Boshqa."</string>
+    <string name="storage_media_cache_usage" msgid="5906737163212649904">"Keshlangan ma‘lumot"</string>
+    <string name="wifi_wps_cancel_scan" msgid="3562470978552920877">"Bekor qilish"</string>
+    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Qayta urinish"</string>
+    <string name="wifi_wps_title" msgid="1872305810119408482">"WPS marshrutizator qidirilmoqda…"</string>
+    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Marshrutizatoringizda Wi-Fi Himoyalangan o\'rnatish tugmasini bosing.\nU “WPS” deb atalishi yoki chap tomonda belgiga ega bo\'lishi mumkin."</string>
+    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"PIN <xliff:g id="NUMBER">%1$s</xliff:g> ni Wi-Fi marshrutizatoringizga kiriting"</string>
+    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"PIN ni kiritganingizdan keyin o‘rnatish 2 daqiqacha vaqt olishi mumkin"</string>
+    <string name="wifi_wps_in_progress" msgid="7082889465182680949">"WPS allaqachon bajarilmoqda va u taxminan 2 daqiqada yakunlanadi"</string>
+    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Wi-Fi marshrutizatorini topib bo‘lmadi"</string>
+    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Wi-Fi marshrutizatori xavsizlik parametri (WEP) qo‘llab-quvvatlanmaydi"</string>
+    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Wi-Fi marshrutizatori xavfsizlik parametri (TKIP) qo\'llab-quvvatlanmaydi"</string>
+    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"Boshqa WPS seansi borayapti. Becha daqiqadan keyin qaytadan urining."</string>
+    <string name="system_date" msgid="2767108116769558081">"Sana"</string>
+    <string name="system_time" msgid="6726022312605226285">"Vaqt"</string>
+    <string name="system_set_date" msgid="2437586307768561116">"Sana o‘rnatish"</string>
+    <string name="system_set_time" msgid="4661804115501057452">"Vaqt o‘rnatish"</string>
+    <string name="system_set_time_zone" msgid="8239601932757697259">"Vaqt mintaqasini o\'rnatish"</string>
+    <string name="system_set_time_format" msgid="4447882066895090612">"24-soat formatidan foydalanish"</string>
+    <string name="system_auto_date_time" msgid="3629668599205033272">"Avtomatik sana va vaqt"</string>
+    <string name="desc_auto_date_time" msgid="6997571927680580633">"Tarmoq bergan vaqt‘dan foydalanish"</string>
+    <string name="system_location" msgid="502463575930545806">"Joylashuv ma’lumoti"</string>
+    <string name="system_desc_location" msgid="4243551425631207495">"Sizdan ruxsat so‘ragan ilovalarga joylashuvingiz ma‘lumotidan foydalanishga ruxsat beradi"</string>
+    <string name="system_network_location" msgid="3095006393148731886">"Wi-Fi tarmoq joylashuvi"</string>
+    <string name="system_desc_network_location" msgid="3394374680078903193">"Google ilovalarga joyl. aniqlashda yord. ber.ga rux. bering. Bu hech qan. il. ishlam. bo‘lsa ham joyl. ma’l. maxfiy tarzda Google’ga yub. anglatadi."</string>
+    <string name="system_network_location_confirm" msgid="8435144328428634060">"Joylashuv rozili"</string>
+    <string name="system_desc_network_location_confirm" msgid="3929125496258579850">"Google joylashuvni aniqlash xizmatiga anonim manzil ma’lumotlarini yig‘ishga ruxsat berish. Ba’zi ma’lumotlar sizning qurilmangizda joylashgan bo‘lishi mumkin. Yig‘ish hech qaysi dastur ishlamayotgan vaqtda ham amalga oshirilishi mumkin."</string>
+    <string name="location_title" msgid="7600163182794860262">"Mening joylashuvim"</string>
+    <string name="header_category_system" msgid="3243287334177831637">"Tizim"</string>
+    <string name="location_mode_title" msgid="6573195849329396150">"Rejim"</string>
+    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Yaqindagi joylashuv so‘rovlari"</string>
+    <string name="location_no_recent_apps" msgid="4218851908476344030">"Hech qanday ilova yaqin vaqtda joylashuv ma‘lumotini so‘ramadi"</string>
+    <string name="location_high_battery_use" msgid="576143332793626088">"Yuqori batareya sarfi"</string>
+    <string name="location_low_battery_use" msgid="5756040390248358148">"Kam bateraya sarfi"</string>
+    <string name="location_mode_wifi_description" msgid="2778774510654527264">"Joyni hisoblash uchun Wi‑Fi dan foydalanish"</string>
+    <string name="location_status" msgid="3456414279428237558">"Joylashuv holati"</string>
+    <string name="location_services" msgid="5441085185119797200">"Joylashuv xizmatlari"</string>
+    <string name="on" msgid="6683600681314500652">"Yoqilgan"</string>
+    <string name="off" msgid="5264189545064767245">"O‘chirilgan"</string>
+    <string name="google_location_services_title" msgid="3382840371861269146">"Google joylashuv xizmatlari"</string>
+    <string name="third_party_location_services_title" msgid="4089136801976399147">"Boshqa tomonning joylashuv xizmatlari"</string>
+    <string name="location_reporting" msgid="3054236612250063073">"Joylashuv hisoboti"</string>
+    <string name="location_history" msgid="2946680949724247804">"Joylashuvlar tarixi"</string>
+    <string name="location_reporting_desc" msgid="6256424995139430823">"Google bu xususiyatdan Google Hozir va Google Xaritalar kabi mahsulotlarda foydalanadi. Joylashuv hisobotini yoq. bu xususiyatdan foyd. har qanday Google mahsulotiga qurilmangizning eng so\'nggi joylashuv ma\'lumotlarini saqlash va Google hisobingiz bilan bog\'liq ravishda foydalanishga imk. beradi."</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"Bu hisob uchun Joylashuvlar tarixi yoqilganda Google qurilmangiz joylashuv ma\'lumotlarini ilovalaringiz tomonidan foydalanilishi uchun saqlashi mumkin.\n\nMasalan, Google Xaritalar yo\'nalishlar berishi va Google Hozir ko\'cha trafigi to\'g\'risida xabardor qilishi mumkin.\n\nSiz Joylashuvlar tarixini istalgan vaqtda o\'chirib qo\'yishingiz mumkin, biroq shundan qilish uni yo\'q qilmaydi. Joylashuvlar tarixningizni ko\'rish va boshqarish uchun maps.google.com/locationhistory saytiga tashrif buyuring."</string>
+    <string name="delete_location_history_title" msgid="5804802702252280549">"Joylashuvlar tarixini o‘chirish"</string>
+    <string name="delete_location_history_desc" msgid="4142806827237093397">"Bu ushbu Google hisobi uchun bu qurilmadan saqlangan barcha Joylashuvlar tarixini o‘chiradi. o‘chirish natijasini bekor qilib bo‘lmaydi. Ayrim ilovalar, jumladan Google Now ishlashdan to‘xtaydi."</string>
+    <string name="system_services" msgid="7230571820151215779">"Xizmatlar"</string>
+    <string name="accessibility_service_settings" msgid="322888335240595695">"Xizmat sozlanmalari"</string>
+    <string name="accessibility_captions" msgid="6133896463407851079">"Sarlavhalar"</string>
+    <string name="accessibility_captions_description" msgid="4290317621720499628">"Yopiq sarlavhalar matni uchun sozlanmalar video ustiga qo‘yilgan"</string>
+    <string name="captions_display" msgid="735692527287125548">"Ekran"</string>
+    <string name="captions_display_on" msgid="1989009878719500520">"Yoqilgan"</string>
+    <string name="captions_display_off" msgid="496953007835201523">"O‘chirilgan"</string>
+    <string name="display_options" msgid="5504549024985225774">"Ko‘rsatish sozlamalari"</string>
+    <string name="captions_configure" msgid="5537548915977371014">"Sozlash"</string>
+    <string name="captions_lanaguage" msgid="3291057448460880449">"Til"</string>
+    <string name="captions_textsize" msgid="4828195509546070971">"Matn o‘lchami"</string>
+    <string name="captions_captionstyle" msgid="7423638523487868230">"Sarlavha uslubi"</string>
+    <string name="captions_customoptions" msgid="2699780648112330911">"Buyurtmali tanlamalar"</string>
+    <string name="captions_fontfamily" msgid="6840670778173003604">"Shriftlar oilasi"</string>
+    <string name="captions_textcolor" msgid="3233568269335050287">"Matn rangi"</string>
+    <string name="captions_edgetype" msgid="841331274533086103">"Qirra turi"</string>
+    <string name="captions_edgecolor" msgid="845125757332620884">"Qirra rangi"</string>
+    <string name="captions_backgroundcolor" msgid="448518890988125453">"Orqa fon rangi"</string>
+    <string name="captions_backgroundopacity" msgid="2643722493273126220">"Fon yarim tiniqligi"</string>
+    <string name="captioning_preview_text" msgid="72080729155950127">"Sarlavlahar quyidagicha ko‘rinadi"</string>
+    <string name="captions_textopacity" msgid="5536765490446288641">"Matn yarim tiniqligi"</string>
+    <string name="captions_windowcolor" msgid="8986165172260903279">"Oyna rangi"</string>
+    <string name="captions_windowopacity" msgid="2784473496224936703">"Oyna shaffofligi"</string>
+    <string name="color_none" msgid="5281446963475996688">"Hech biri"</string>
+    <string name="color_white" msgid="65537523012024751">"Oq"</string>
+    <string name="color_gray" msgid="5637299846460438696">"Kulrang"</string>
+    <string name="color_black" msgid="8804213372565106403">"Qora"</string>
+    <string name="color_red" msgid="5630553203246525989">"Qizil"</string>
+    <string name="color_green" msgid="3745551274773976763">"Yashil"</string>
+    <string name="color_blue" msgid="6761708560115194175">"Havorang"</string>
+    <string name="color_cyan" msgid="796226330055745">"Moviy"</string>
+    <string name="color_yellow" msgid="1023390829879874964">"Sariq"</string>
+    <string name="color_magenta" msgid="6395786485839439122">"Pushtirang"</string>
+    <string name="system_accessibility_status" msgid="4389074529913575327">"Holat"</string>
+    <string name="system_accessibility_config" msgid="3216531917536720277">"Konfiguratsiya"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"<xliff:g id="SERVICE">%1$s</xliff:g>dan foydalanilsinmi?"</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"<xliff:g id="SERVICE">%1$s</xliff:g> parollardan boshqa siz kiritadgina barcha matnni to‘plashi mumkin. Bu kredit karta raqamlari kabi shaxsiy ma’lumotlarni o‘z ichiga oladi."</string>
+    <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"<xliff:g id="SERVICE">%1$s</xliff:g> ishi to‘xtatilsinmi?"</string>
+    <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"OK ni tanlash <xliff:g id="SERVICE">%1$s</xliff:g> ni to‘xtatadi."</string>
+    <string name="system_accessibility_tts_output" msgid="8905477795536714590">"Matndan nutqqa"</string>
+    <string name="system_speak_passwords" msgid="5264650214879185873">"Parollarni og‘zaki aytish"</string>
+    <string name="system_preferred_engine" msgid="8258210139854655567">"Tanlama mexaniz"</string>
+    <string name="system_speech_rate" msgid="8099856582088545576">"Nutq tezligi"</string>
+    <string name="system_play_sample" msgid="7187293932891811148">"Namunani o‘ynatish"</string>
+    <string name="system_install_voice_data" msgid="8920883886563714355">"Ovoz ma\'lumotlarini o‘rnatish"</string>
+    <string name="system_general" msgid="3535958631591158282">"Umumiy"</string>
+    <string name="system_debugging" msgid="7204447785851191331">"Nosozliklar tuzatilmoqda"</string>
+    <string name="system_input" msgid="6164987320529039626">"Kiritish"</string>
+    <string name="system_drawing" msgid="6573389872154957039">"Chizma"</string>
+    <string name="system_monitoring" msgid="8424072546138094053">"Kuzatish"</string>
+    <string name="system_apps" msgid="6293850468968494924">"Ilovalar"</string>
+    <string name="system_take_bug_report" msgid="3550575498907672342">"Xatoliklar hisobotini olish"</string>
+    <string name="system_backup_password" msgid="6622796686823406402">"Zahiraviy nusxalash paroli"</string>
+    <string name="system_stay_awake" msgid="1212296404230848490">"Uyg‘oq qolish"</string>
+    <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP tekshiruvi"</string>
+    <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI-ni optimallashtirish"</string>
+    <string name="system_reboot_confirm" msgid="534407910866199191">"Hozir qaytadan yoqilsinmi?"</string>
+    <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Bu sozlanmani yangilash uchun qurilma qaytadan ishga tushirilishi kerak"</string>
+    <string name="system_never_check" msgid="6666520460705041617">"Hech qachon tekshirilmasin"</string>
+    <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Faqat DRM kontent tekshirilsin"</string>
+    <string name="system_always_check" msgid="1866566828098009853">"Doim tekshirilsin"</string>
+    <string name="system_bt_hci_log" msgid="2425757846046504431">"Bluetooth HCI-ga kirish"</string>
+    <string name="system_email_address" msgid="8669468986250302378">"E-pochta manzili"</string>
+    <string name="system_usb_debugging" msgid="3777895294421924323">"USB nosozliklarini tuzatish"</string>
+    <string name="system_allow_mock_locations" msgid="3635672039775772910">"Joylashuv emulyatsiyasiga ruxsat berish"</string>
+    <string name="system_select_debug_app" msgid="8592021815119618485">"Nosozliklarni tuzatuvchi ilovani tanlash"</string>
+    <string name="system_wait_for_debugger" msgid="4007354935701089555">"Nosozliklarni tuzatuvchi dasturni kutish"</string>
+    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB orqali ilovalarni tasdiqlash"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"ADB/ADT orqali o‘rnatilgan ilovalarni zararli xususiyatlarga tekshiring"</string>
+    <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi verbose-ga kirish"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Wi-Fi jurnalidagi batafsil ma’lumot"</string>
+    <string name="system_show_touches" msgid="2179121368437801757">"Sensor nuqtalarini ko‘rsatish"</string>
+    <string name="system_pointer_location" msgid="2673764026490179227">"Kursor joylashuvi"</string>
+    <string name="system_show_layout_bounds" msgid="645732439882291943">"Joylashuv chegaralarini ko‘rsatish"</string>
+    <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"GPU ko‘rinishi uchun yangilanishlarni ko‘rsatish"</string>
+    <string name="system_show_hardware_layer" msgid="7301942527058509453">"Apparat qatlamini ko\'rsatish"</string>
+    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"GPU kattalashtirishini ko‘rsatish"</string>
+    <string name="system_show_surface_updates" msgid="8878834675712192327">"Sirt ko‘rinishi yangilanishlarini ko‘rsatish"</string>
+    <string name="system_window_animation_scale" msgid="3213952676672537856">"Oyna animatsiyasi o‘lchovi"</string>
+    <string name="system_transition_animation_scale" msgid="2964817709721784757">"Almashinish animatsiyasi o‘lchovi"</string>
+    <string name="system_animator_duration_scale" msgid="7413512458963984521">"Animatorning davomiylik o‘lchami"</string>
+    <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Cheklovchi rejim yoqilgan"</string>
+    <string name="system_show_cpu_usage" msgid="4797599582027671138">"CPU sarfini ko‘rsatish"</string>
+    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"GPU vizuallashtirishining profil vaqtij"</string>
+    <string name="system_enable_traces" msgid="4038210655699986482">"Izlarni yoqish"</string>
+    <string name="system_dont_keep_activities" msgid="7906911077198718958">"Faoliyatlar saqlanilmasin"</string>
+    <string name="system_background_process_limit" msgid="7921766877363771436">"Fondagi jarayon cheklovi"</string>
+    <string name="system_show_all_anrs" msgid="3601183436857424712">"Barcha ANRlar"</string>
+    <string name="system_desc_take_bug_report" msgid="1627218971851223147">"Elektron pochta manziliga hisobot yuborish"</string>
+    <string name="system_desc_backup_password" msgid="6454962099870874762">"To‘liq zahiraviy nusxalarga to‘la ish stolini himoya qilish"</string>
+    <string name="system_desc_stay_awake" msgid="229588006508356238">"Uyquni o‘chirib qo‘yish"</string>
+    <string name="system_desc_hdcp_checking" msgid="6879753401058891183">"Faqat DRM kontentidan foydalanish"</string>
+    <string name="system_desc_hdmi_optimization" msgid="4400727262768931480">"Displeyni maksimal tasvir aniqligi yoki maksimal kadrlar soni uchun optimallashtiring. Bu faqat Ultra HD displeylarga ta\'sir ko\'rsatadi. Bu parametrni o\'zg. qurilmangizni qaytadan ishga tushiradi."</string>
+    <string name="system_desc_bt_hci_log" msgid="4219265203570411773">"Bluetooth HCI tekshiruviga kirishni yoqish"</string>
+    <string name="system_desc_usb_debugging" msgid="5168830368191788731">"USB ulangandagi xatoliklarni tuzatish rejimi"</string>
+    <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"Nosozliklari tuzatilgan ilova ishni boshlashdan oldin nosozliklarni tuzatuvchi dasturning ulanishini kutmoqda"</string>
+    <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"O‘rnatma chegaralari, maydonlari va hokazoni ko‘rsatish."</string>
+    <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"Oynalar ichidagi ko‘rinishlarni GPU bilan chizganda miltillatish"</string>
+    <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"Apparat darajalari yangilanganidan so‘ng yashil rangda miltillatish"</string>
+    <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Eng yaxshidan eng yomonga: ko\'k, yashil, och qizil, qizil"</string>
+    <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Yangilangandan so‘ng to‘liq oyna sirtlarini miltillatish"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Ilovalar asosiy oqimda uzoq operatsiyalar bajarib qolsa, ekranni pirpiratish"</string>
+    <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"CPU sarfi ko‘rsatmasini ekranga joylash"</string>
+    <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"adb shell dumpsys gfxinfo dagi o‘lchovni yetkazib berish vaqti"</string>
+    <string name="normal_date_format" msgid="4118071594685269322">"Mahalliy sana (<xliff:g id="DATE">%s</xliff:g>)"</string>
+    <string name="action_on_title" msgid="6852389884236870765">"Yoqilgan"</string>
+    <string name="action_off_title" msgid="3157728958166559966">"O‘chirilgan"</string>
+    <string name="action_on_description" msgid="4559342592998850852">"Yoqilgan"</string>
+    <string name="action_off_description" msgid="4364261457368041502">"O‘chirilgan"</string>
+    <string name="agree" msgid="1235622082275451350">"Roziman"</string>
+    <string name="disagree" msgid="9170636026862400981">"Noroziman"</string>
+    <string name="security_unknown_sources_title" msgid="769762478057744545">"Noma’lum manbalar"</string>
+    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Ilovalarni Play Store xizmatidan o‘zga manbalardan o‘rnatishga ruxsat berish"</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Qurilmangiz va shaxsiy ma\'lumotlaringiz noma\'lum manbalardan keluvchi ilovalar tomonidan hujumga ko\'proq darajada duchordir. Siz ushbu ilovalardan foydalanish natijasida qurilmangizga yetkaziladigan har qanday shikast yoki ma\'lumotlarning yo\'qotilishi uchun yolg\'iz o\'zingiz javobgar ekanligingizga rozi bo\'lasiz."</string>
+    <string name="security_verify_apps_title" msgid="5787946958632254988">"Ilovalarni tekshirish"</string>
+    <string name="security_verify_apps_desc" msgid="1456317893117818733">"Zarar yetkazishi mumkin bo‘lgan ilovalarni o‘rnatishga ruxsat berilmasin yoki o‘rnatishdan oldin ogohlantiril"</string>
+  <string-array name="hdcp_checking_summaries">
+    <item msgid="28682351350387246">"Hech qachon"</item>
+    <item msgid="5583820743908145007">"DRM kontent uchun"</item>
+    <item msgid="6148080515126921450">"Har doim"</item>
+  </string-array>
+    <string name="no_application" msgid="1746564297589309465">"Hech biri"</string>
+  <string-array name="enable_opengl_traces_entries">
+    <item msgid="7803412455089800607">"Hech biri"</item>
+    <item msgid="1284340221135955876">"Jurnal darajasi"</item>
+    <item msgid="5054298948370382226">"Systrace (Grafika)"</item>
+    <item msgid="6650537879885155020">"glGetError qo‘ng‘iroqlar ro‘yxati"</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item msgid="258143468897415016">"Animatsiya o‘chiq"</item>
+    <item msgid="5618283113978106483">"Animatsiya o‘lchovi .5x"</item>
+    <item msgid="397451685490290179">"Animatsiya o‘lchovi 1x"</item>
+    <item msgid="6331600473492644688">"Animatsiya o‘lchovi 1.5x"</item>
+    <item msgid="7004952449777104295">"Animatsiya o‘lchovi 2x"</item>
+    <item msgid="1063528777234221038">"Animatsiya o‘lchovi 5x"</item>
+    <item msgid="6926378938392529339">"Animatsiya o‘lchovi 10x"</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item msgid="5604755386232556553">"Animatsiya o‘chiq"</item>
+    <item msgid="5578331490208019526">"Animatsiya o‘lchovi .5x"</item>
+    <item msgid="5338802612080069593">"Animatsiya o‘lchovi 1x"</item>
+    <item msgid="1309704285131661878">"Animatsiya o‘lchovi 1.5x"</item>
+    <item msgid="5654221040036850960">"Animatsiya o‘lchovi 2x"</item>
+    <item msgid="6092484055733043622">"Animatsiya o‘lchovi 5x"</item>
+    <item msgid="4049359393103906268">"Animatsiya o‘lchovi 10x"</item>
+  </string-array>
+  <string-array name="animator_duration_scale_entries">
+    <item msgid="6966595852691619795">"Animatsiya o‘chiq"</item>
+    <item msgid="1302400121783768928">"Animatsiya o‘lchovi .5x"</item>
+    <item msgid="9088460595137551270">"Animatsiya o‘lchovi 1x"</item>
+    <item msgid="5640745580399155880">"Animatsiya o‘lchovi 1.5x"</item>
+    <item msgid="3320199023884342141">"Animatsiya o‘lchovi 2x"</item>
+    <item msgid="5620232666163371843">"Animatsiya o‘lchovi 5x"</item>
+    <item msgid="8580701701183364590">"Animatsiya o‘lchovi 10x"</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item msgid="3161533682947406047">"O‘chirilgan"</item>
+    <item msgid="6446688182396957172">"Ekranda bo‘laklar tarzida"</item>
+    <item msgid="9080500692341488612">"adb shell dumpsys gfxinfo ichida"</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item msgid="9052853079905663082">"Standard cheklov"</item>
+    <item msgid="6534728802931195545">"Fon jarayonlari mavjud emas"</item>
+    <item msgid="290172167371846384">"Ko‘pi bilan 1 ta jarayon"</item>
+    <item msgid="4818593824413771192">"Ko‘pi bilan 2 jarayonda"</item>
+    <item msgid="8337569181800165433">"Ko‘pi bilan 3 ta jarayon"</item>
+    <item msgid="8261219565766202947">"Ko‘pi bilan 4 ta jarayon"</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item msgid="6425501867101281228">"Juda sekin"</item>
+    <item msgid="3458529225374884970">"Sekin"</item>
+    <item msgid="4131204219571166311">"O‘rtacha"</item>
+    <item msgid="786682416218616624">"Tez"</item>
+    <item msgid="1708844147149066133">"Juda tez"</item>
+  </string-array>
+    <string name="choose_account_type_title" msgid="34004552592079689">"Hisob turini tanlash"</string>
+    <string name="choose_account_title" msgid="6672090823838639972">"Hisobni tanlash"</string>
+    <string name="add_account_button_label" msgid="7950769159839284068">"Yangi hisob qo‘shish"</string>
+    <string name="title_current_keyboard" msgid="4259032357469819835">"Joriy klaviatura"</string>
+    <string name="title_configure" msgid="6929522003149212388">"Sozlash"</string>
+    <string name="desc_configure_keyboard" msgid="7187242843867404657">"Klaviatura variantlari"</string>
+    <string name="computing_size" msgid="2955133568424704042">"Hisoblanmoqda…"</string>
+    <string name="title_select_wifi_network" msgid="1038871400014761952">"Wi-Fi tarmog\'ingizni tanlang"</string>
+    <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Qayta nomlash"</string>
+    <string name="accessories_wifi_display_enable" msgid="4779506305656453262">"Wi-Fi Ekran"</string>
+    <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"PIN kodni kiritish zarur"</string>
+    <string name="accessories_remote_list_title" msgid="3115459158860792046">"Masof. boshqarish pulti ma\'lumotlari: <xliff:g id="SERIALNUMBER">%1$s</xliff:g>"</string>
+    <string name="system_collecting_bug_report" msgid="5923988155158351543">"Xatoliklar hisoboti to\'planayapti!\nHisobot tayyor bo\'l. bilan sizdan ko\'proq ma\'lumotlar so\'raymiz."</string>
+    <string name="system_collecting_bug_report_error" msgid="1396108342854067722">"Xatoliklar hisobotini to‘plab bo‘lmadi!\nKeyinroq qaytadan urining."</string>
+    <string name="whichApplication" msgid="8382179653567099571">"Ushbudan foydalanib amalni tugatish"</string>
+    <string name="alwaysUseQuestion" msgid="7128459989232213727">"Bu hisob uch. doimo shu opsiyadan foydalanasizmi?"</string>
+    <string name="alwaysUseOption" msgid="1057645533268907906">"Har doim foydalanish"</string>
+    <string name="justOnceOption" msgid="6051458702672920102">"Faqat bir marta"</string>
+    <string name="noApplications" msgid="4197983402774959346">"Hech qaysi ilova ushbu amalni bajara olmaydi."</string>
+    <string name="noAppsGoBack" msgid="5663180241276177314">"Orqaga"</string>
+    <string name="inputs_inputs" msgid="4249080110281833521">"Kirishlar"</string>
+    <string name="inputs_header_cec" msgid="3701104827756278489">"Consumer Electronic Control (CEC)"</string>
+    <string name="inputs_cec_settings" msgid="8403155117662874704">"Qurilmani boshqarish sozlanmalari"</string>
+    <string name="inputs_blu_ray" msgid="3843526039402969407">"Blu-ray"</string>
+    <string name="inputs_cable" msgid="9081641596942038538">"Kabel"</string>
+    <string name="inputs_dvd" msgid="602486238850738828">"DVD"</string>
+    <string name="inputs_game" msgid="1114086481110094757">"O‘yin konsoli"</string>
+    <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
+    <string name="inputs_custom_name" msgid="5584925321693432362">"Tanlanuvchi nom"</string>
+    <string name="inputs_hide" msgid="1575971556150395486">"Yashirin"</string>
+    <string name="inputs_hide_desc" msgid="8172670556559886526">"Kirishlarni almashtirganda ko\'rsatilmaydi"</string>
+    <string name="inputs_custom_title" msgid="374036983231176581">"Tanlanuvchi nom:"</string>
+    <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI boshqaruvi"</string>
+    <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"TV ga HDMI qurilmalarini boshqarishga ruxs. berish"</string>
+    <string name="inputs_device_auto_off" msgid="7510049770946999285">"Qurilmani avtomatik o‘chirish"</string>
+    <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"TV bilan HDMI qurilmalarini o\'chiring"</string>
+    <string name="inputs_tv_auto_on" msgid="2627932269256793797">"TV ni avtomatik yoqish"</string>
+    <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI qurilma bilan TV ni yoqish"</string>
+  <plurals name="inputs_header_connected_input">
+    <item quantity="one" msgid="5569334300062609355">"ULANGAN KIRISH"</item>
+    <item quantity="other" msgid="280747600882155182">"ULANGAN KIRISHLAR"</item>
+  </plurals>
+  <plurals name="inputs_header_standby_input">
+    <item quantity="one" msgid="737206065869471978">"KUTISH REJIMI KIRISHI"</item>
+    <item quantity="other" msgid="1673538341842385592">"KUTISH REJIMIDAGI KIRISHLAR"</item>
+  </plurals>
+  <plurals name="inputs_header_disconnected_input">
+    <item quantity="one" msgid="4711426139459946065">"ULANMAGAN KIRISH"</item>
+    <item quantity="other" msgid="4526893384805247472">"ULANMAGAN KIRISHLAR"</item>
+  </plurals>
+    <string name="inputs_state_connected" msgid="2463661081264605403">"Ulangan"</string>
+    <string name="inputs_state_connected_standby" msgid="2861557722523733817">"Kutish rejimi"</string>
+    <string name="inputs_state_disconnected" msgid="558532410057350104">"Aloqa uzildi"</string>
+    <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Hisobingizdagi ilovalar va boshqa kontentga kirishni cheklang"</string>
+    <string name="user_new_profile_name" msgid="336521054830056189">"Cheklangan profil"</string>
+    <string name="user_restrictions_title" msgid="8317193312532216351">"Ilovalar va kontentga kirish"</string>
+    <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g> bilan boshqariladi"</string>
+    <string name="app_not_supported_in_limited" msgid="6818309827329010677">"Ushbu ilova checklangan profillarda qo‘llab-quvvatlanmaydi"</string>
+    <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"Bu ilova hisobinglarizga kira oladi"</string>
+    <string name="restriction_location_enable_title" msgid="2575116135395354938">"Joylashuv ma’lumoti"</string>
+    <string name="restriction_location_enable_summary" msgid="4195349388342385870">"Ilovalarga joylashuvingiz ma‘lumotidan foydalanishga ruxsat berish"</string>
+    <string name="restricted_profile_create" msgid="7081117593480952518">"Cheklangan foydalanuvchini yaratish"</string>
+    <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Cheklangan profilni kiriting"</string>
+    <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Cheklangan profildan chiqish"</string>
+    <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Cheklangan profilni o‘chirish"</string>
+    <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Sozlamalar"</string>
+    <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Ruxsat berilgan ilovalar"</string>
+  <plurals name="restricted_profile_configure_apps_description">
+    <item quantity="one" msgid="5114936540577834412">"1 ta ilovaga ruxsat berildi"</item>
+    <item quantity="other" msgid="5242661864373721262">"%d ta ilovaga ruxsat beriladi"</item>
+  </plurals>
+    <string name="restricted_profile_allowed" msgid="2903829140619950232">"Ruxsat berilgan"</string>
+    <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Ruxsat berilmagan"</string>
+    <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Cheklanishlarni sozlash"</string>
+    <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"Bir lahza…"</string>
+    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"PIN kodni o‘zgartiring"</string>
+    <string name="restricted_profile_set_password" msgid="3989154189940037175">"Cheklangan profildan chiqish uchun foydalaniladigan yangi PIN kodni o‘rnating"</string>
+    <string name="restricted_profile_confirm_password" msgid="5749967525546068650">"Cheklangan profildan chiqish uchun foydalaniladigan PIN kodni tasdiqlang"</string>
+    <string name="restricted_profile_enter_password" msgid="5961473119032585585">"Cheklangan profildan chiqish uchun PIN kodni kiriting"</string>
+    <string name="restricted_profile_delete_dialog_title" msgid="2998929625283492853">"Cheklangan foydalanuvchi olib tashlansinmi?"</string>
+    <string name="restriction_description" msgid="3104855945910233028">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
+    <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"Bu kanalni ko‘rish uchun PIN kodni kiriting"</string>
+    <string name="pin_enter_unlock_program" msgid="52453773316071511">"Bu dasturni ko‘rish uchun PIN kodni kiriting"</string>
+    <string name="pin_enter_pin" msgid="821552376577935497">"PIN kodni kiriting"</string>
+    <string name="pin_enter_new_pin" msgid="4788218421265924211">"Yangi PIN kodni o‘rnatish"</string>
+    <string name="pin_enter_again" msgid="1510456697040826496">"Yangi PIN ni qaytadan kiritish"</string>
+    <string name="pin_enter_old_pin" msgid="851029058127630869">"Eski PIN ni kiritish"</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Siz PIN kodni 5 marta noto‘g‘ri kiritdingiz.\nSizda yana <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g> ta urinish qoldi."</string>
+    <string name="pin_button_done" msgid="939191809977197451">"Tayyor"</string>
+    <string name="pin_button_cancel" msgid="5541414789309863965">"Bekor qilish"</string>
+    <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN kod noto‘g‘ri, qaytadan urining"</string>
+    <string name="pin_toast_not_match" msgid="5886041789737632996">"Qaytadan urining, PIN kod noto‘g‘ri"</string>
+</resources>
