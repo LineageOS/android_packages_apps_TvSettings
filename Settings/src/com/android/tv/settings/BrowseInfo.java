@@ -482,8 +482,6 @@ public class BrowseInfo extends BrowseInfoBase {
                 continue;
             }
 
-            allowableAccountTypes.add(authDesc.type);
-
             // Main title text comes from the authenticator description (e.g. "Google").
             String authTitle = null;
             try {
@@ -492,10 +490,20 @@ public class BrowseInfo extends BrowseInfoBase {
                     authTitle = null;  // Handled later when we add the row.
                 }
             } catch (NotFoundException e) {
-                Log.e(TAG, "Authenticator description with bad label id", e);
+                if (DEBUG) Log.e(TAG, "Authenticator description with bad label id", e);
+            }
+
+            // There exist some authenticators which aren't intended to be user-facing.
+            // If the authenticator doesn't have a title or an icon, don't present it to
+            // the user as an option.
+            if (authTitle != null || authDesc.iconId != 0) {
+                allowableAccountTypes.add(authDesc.type);
             }
 
             Account[] accounts = am.getAccountsByType(authDesc.type);
+            if (accounts == null || accounts.length == 0) {
+                continue;  // No point in continuing; there aren't any accounts to show.
+            }
 
             // Icon URI to be displayed for each account is based on the type of authenticator.
             String imageUri = null;
@@ -503,11 +511,15 @@ public class BrowseInfo extends BrowseInfoBase {
                 googleAccountCount = accounts.length;
                 imageUri = googleAccountIconUri(mContext);
             } else {
-                imageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" +
-                        authDesc.packageName + '/' +
-                        resources.getResourceTypeName(authDesc.iconId) + '/' +
-                        resources.getResourceEntryName(authDesc.iconId))
-                        .toString();
+                try {
+                    imageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" +
+                            authDesc.packageName + '/' +
+                            resources.getResourceTypeName(authDesc.iconId) + '/' +
+                            resources.getResourceEntryName(authDesc.iconId))
+                            .toString();
+                } catch (NotFoundException e) {
+                    if (DEBUG) Log.e(TAG, "Authenticator has bad resource ids", e);
+                }
             }
 
             // Display an entry for each installed account we have.
