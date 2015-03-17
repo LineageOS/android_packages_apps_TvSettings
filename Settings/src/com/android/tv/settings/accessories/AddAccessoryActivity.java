@@ -55,7 +55,7 @@ import java.util.ArrayList;
  */
 public class AddAccessoryActivity extends DialogActivity
         implements ActionAdapter.Listener,
-        InputPairer.EventListener {
+        BluetoothDevicePairer.EventListener {
 
     private static final boolean DEBUG = false;
     private static final String TAG = "aah.AddAccessoryActivity";
@@ -98,8 +98,8 @@ public class AddAccessoryActivity extends DialogActivity
     private AddAccessoryContentFragment mContentFragment;
 
     // members related to Bluetooth pairing
-    private InputPairer mBtPairer;
-    private int mPreviousStatus = InputPairer.STATUS_NONE;
+    private BluetoothDevicePairer mBtPairer;
+    private int mPreviousStatus = BluetoothDevicePairer.STATUS_NONE;
     private boolean mPairingSuccess = false;
     private boolean mPairingBluetooth = false;
     private ArrayList<BluetoothDevice> mBtDevices;
@@ -565,7 +565,7 @@ public class AddAccessoryActivity extends DialogActivity
 
     private void btDeviceClicked(String clickedAddress) {
         if (mBtPairer != null && !mBtPairer.isInProgress()) {
-            if (mBtPairer.getStatus() == InputPairer.STATUS_WAITING_TO_PAIR &&
+            if (mBtPairer.getStatus() == BluetoothDevicePairer.STATUS_WAITING_TO_PAIR &&
                     mBtPairer.getTargetDevice() != null) {
                 cancelBtPairing();
             } else {
@@ -612,7 +612,7 @@ public class AddAccessoryActivity extends DialogActivity
 
     private void startBluetoothPairer() {
         stopBluetoothPairer();
-        mBtPairer = new InputPairer(this, this);
+        mBtPairer = new BluetoothDevicePairer(this, this);
         mBtPairer.start();
 
         mBtPairer.disableAutoPairing();
@@ -634,14 +634,14 @@ public class AddAccessoryActivity extends DialogActivity
         String msg;
 
         switch (status) {
-            case InputPairer.STATUS_WAITING_TO_PAIR:
-            case InputPairer.STATUS_PAIRING:
+            case BluetoothDevicePairer.STATUS_WAITING_TO_PAIR:
+            case BluetoothDevicePairer.STATUS_PAIRING:
                 msgId = R.string.accessory_state_pairing;
                 break;
-            case InputPairer.STATUS_CONNECTING:
+            case BluetoothDevicePairer.STATUS_CONNECTING:
                 msgId = R.string.accessory_state_connecting;
                 break;
-            case InputPairer.STATUS_ERROR:
+            case BluetoothDevicePairer.STATUS_ERROR:
                 msgId = R.string.accessory_state_error;
                 break;
             default:
@@ -669,23 +669,23 @@ public class AddAccessoryActivity extends DialogActivity
             if (DEBUG) {
                 String state = "?";
                 switch (status) {
-                    case InputPairer.STATUS_NONE:
-                        state = "InputPairer.STATUS_NONE";
+                    case BluetoothDevicePairer.STATUS_NONE:
+                        state = "BluetoothDevicePairer.STATUS_NONE";
                         break;
-                    case InputPairer.STATUS_SCANNING:
-                        state = "InputPairer.STATUS_SCANNING";
+                    case BluetoothDevicePairer.STATUS_SCANNING:
+                        state = "BluetoothDevicePairer.STATUS_SCANNING";
                         break;
-                    case InputPairer.STATUS_WAITING_TO_PAIR:
-                        state = "InputPairer.STATUS_WAITING_TO_PAIR";
+                    case BluetoothDevicePairer.STATUS_WAITING_TO_PAIR:
+                        state = "BluetoothDevicePairer.STATUS_WAITING_TO_PAIR";
                         break;
-                    case InputPairer.STATUS_PAIRING:
-                        state = "InputPairer.STATUS_PAIRING";
+                    case BluetoothDevicePairer.STATUS_PAIRING:
+                        state = "BluetoothDevicePairer.STATUS_PAIRING";
                         break;
-                    case InputPairer.STATUS_CONNECTING:
-                        state = "InputPairer.STATUS_CONNECTING";
+                    case BluetoothDevicePairer.STATUS_CONNECTING:
+                        state = "BluetoothDevicePairer.STATUS_CONNECTING";
                         break;
-                    case InputPairer.STATUS_ERROR:
-                        state = "InputPairer.STATUS_ERROR";
+                    case BluetoothDevicePairer.STATUS_ERROR:
+                        state = "BluetoothDevicePairer.STATUS_ERROR";
                         break;
                 }
                 long time = mBtPairer.getNextStageTime() - SystemClock.elapsedRealtime();
@@ -701,11 +701,11 @@ public class AddAccessoryActivity extends DialogActivity
             cancelTimeout();
 
             switch (status) {
-                case InputPairer.STATUS_NONE:
+                case BluetoothDevicePairer.STATUS_NONE:
                     // if we just connected to something or just tried to connect
                     // to something, restart scanning just in case the user wants
                     // to pair another device.
-                    if (oldStatus == InputPairer.STATUS_CONNECTING) {
+                    if (oldStatus == BluetoothDevicePairer.STATUS_CONNECTING) {
                         if (mPairingSuccess) {
                             // Pairing complete
                             mCurrentTargetStatus = getString(R.string.accessory_state_paired);
@@ -732,26 +732,26 @@ public class AddAccessoryActivity extends DialogActivity
 
                         // if this looks like a successful connection run, reflect
                         // this in the UI, otherwise use the default message
-                        if (!mPairingSuccess && InputPairer.hasValidInputDevice(this)) {
+                        if (!mPairingSuccess && BluetoothDevicePairer.hasValidInputDevice(this)) {
                             mPairingSuccess = true;
                         }
                     }
                     break;
-                case InputPairer.STATUS_SCANNING:
+                case BluetoothDevicePairer.STATUS_SCANNING:
                     mPairingSuccess = false;
                     break;
-                case InputPairer.STATUS_WAITING_TO_PAIR:
+                case BluetoothDevicePairer.STATUS_WAITING_TO_PAIR:
                     break;
-                case InputPairer.STATUS_PAIRING:
+                case BluetoothDevicePairer.STATUS_PAIRING:
                     // reset the pairing success value since this is now a new
                     // pairing run
                     mPairingSuccess = true;
                     setTimeout(PAIR_OPERATION_TIMEOUT);
                     break;
-                case InputPairer.STATUS_CONNECTING:
+                case BluetoothDevicePairer.STATUS_CONNECTING:
                     setTimeout(CONNECT_OPERATION_TIMEOUT);
                     break;
-                case InputPairer.STATUS_ERROR:
+                case BluetoothDevicePairer.STATUS_ERROR:
                     mPairingSuccess = false;
                     setPairingBluetooth(false);
                     if (mNoInputMode) {

@@ -26,6 +26,7 @@ import android.os.Handler;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Listens for unconfigured or problematic devices to show up on
@@ -113,7 +114,7 @@ public class BluetoothScanner {
      * cached before this call returns.
      */
     public static void startListening(Context context, Listener listener,
-            BluetoothDeviceCriteria criteria) {
+            List<BluetoothDeviceCriteria> criteria) {
         if (sReceiver == null) {
             sReceiver = new Receiver(context.getApplicationContext());
         }
@@ -161,12 +162,12 @@ public class BluetoothScanner {
     private static class ClientRecord {
         public final Listener listener;
         public final ArrayList<Device> devices;
-        public final BluetoothDeviceCriteria matcher;
+        public final List<BluetoothDeviceCriteria> matchers;
 
-        public ClientRecord(Listener listener, BluetoothDeviceCriteria matcher) {
+        public ClientRecord(Listener listener, List<BluetoothDeviceCriteria> matchers) {
             this.listener = listener;
             devices = new ArrayList<>();
-            this.matcher = matcher;
+            this.matchers = matchers;
         }
     }
 
@@ -190,15 +191,15 @@ public class BluetoothScanner {
 
         /**
          * @param listener
-         * @param matcher Pattern matcher to determine whether this listener
+         * @param matchers Pattern matchers to determine whether this listener
          * will be notified about changes in status of a discovered device. Note
          * that the matcher is only run against the device when the device is
          * first discovered, not each time it appears in scan results. Device
          * properties are assumed to be stable.
          */
-        public void startListening(Listener listener, BluetoothDeviceCriteria matcher) {
+        public void startListening(Listener listener, List<BluetoothDeviceCriteria> matchers) {
             int size = 0;
-            ClientRecord newClient = new ClientRecord(listener, matcher);
+            ClientRecord newClient = new ClientRecord(listener, matchers);
             synchronized (mListenerLock) {
                 for (int ptr = mClients.size() - 1; ptr > -1; ptr--) {
                     if (mClients.get(ptr).listener == listener) {
@@ -228,9 +229,12 @@ public class BluetoothScanner {
             final int N = mPresentDevices.size();
             for (int i=0; i<N; i++) {
                 Device target = mPresentDevices.get(i);
-                if (newClient.matcher.isMatchingDevice(target.btDevice)) {
-                    newClient.devices.add(target);
-                    newClient.listener.onDeviceAdded(target);
+                for (BluetoothDeviceCriteria matcher : newClient.matchers) {
+                    if (matcher.isMatchingDevice(target.btDevice)) {
+                        newClient.devices.add(target);
+                        newClient.listener.onDeviceAdded(target);
+                        break;
+                    }
                 }
             }
 
@@ -398,11 +402,11 @@ public class BluetoothScanner {
                     device.consecutiveMisses = -1;
 
                     device.setNameString(name);
-                        // Save it
-                        mPresentDevices.add(device);
+                    // Save it
+                    mPresentDevices.add(device);
 
-                        // Tell the listeners
-                        sendDeviceAdded(device);
+                    // Tell the listeners
+                    sendDeviceAdded(device);
                 } else {
                     if (DEBUG) {
                         Log.d(TAG, "Device is an existing device.");
@@ -481,9 +485,12 @@ public class BluetoothScanner {
             synchronized (mListenerLock) {
                 for (int ptr = mClients.size() - 1; ptr > -1; ptr--) {
                     ClientRecord client = mClients.get(ptr);
-                    if (client.matcher.isMatchingDevice(device.btDevice)) {
-                        client.devices.add(device);
-                        client.listener.onDeviceAdded(device);
+                    for (BluetoothDeviceCriteria matcher : client.matchers) {
+                        if (matcher.isMatchingDevice(device.btDevice)) {
+                            client.devices.add(device);
+                            client.listener.onDeviceAdded(device);
+                            break;
+                        }
                     }
                 }
             }
