@@ -17,16 +17,12 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_app_name" msgid="4243616485579754401">"Settings"</string>
-    <!-- no translation found for launcher_settings_app_name (5782771766725939392) -->
-    <skip />
-    <!-- no translation found for launcher_network_app_name (5107150533945388559) -->
-    <skip />
-    <!-- no translation found for launcher_restricted_profile_app_name (671448012575234643) -->
-    <skip />
+    <string name="launcher_settings_app_name" msgid="5782771766725939392">"Settings"</string>
+    <string name="launcher_network_app_name" msgid="5107150533945388559">"Network"</string>
+    <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Restricted profile"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Device"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Preferences"</string>
-    <!-- no translation found for header_category_accessories (823295909353025991) -->
-    <skip />
+    <string name="header_category_accessories" msgid="823295909353025991">"Remote &amp; accessories"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Personal"</string>
     <string name="add_account" msgid="4098060223200619258">"Add account"</string>
     <string name="account_header_sync" msgid="2679585471372319471">"Sync"</string>
@@ -34,23 +30,18 @@
     <string name="account_sync" msgid="773808124331714965">"Choose synced apps"</string>
     <string name="sync_now" msgid="8732244492880016471">"Sync now"</string>
     <string name="sync_cancel" msgid="5839264070098894371">"Cancel sync"</string>
-    <!-- no translation found for sync_in_progress (1330721038775646022) -->
-    <skip />
+    <string name="sync_in_progress" msgid="1330721038775646022">"Syncing…"</string>
     <string name="last_synced" msgid="6178494892357077274">"Last synced <xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Disabled"</string>
     <string name="sync_is_failing" msgid="8229476000384257186">"Sync isn\'t working right now. It will be back shortly."</string>
     <string name="account_remove" msgid="4313580520737295272">"Remove account"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Can\'t remove account"</string>
-    <!-- no translation found for connectivity_network (8321537111272398501) -->
-    <skip />
+    <string name="connectivity_network" msgid="8321537111272398501">"Network"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
-    <!-- no translation found for wifi_setting_always_scan (8883713018717323351) -->
-    <skip />
-    <!-- no translation found for wifi_setting_always_scan_context (5588180043357910712) -->
-    <skip />
-    <!-- no translation found for wifi_setting_enable_wifi (9214100840401870408) -->
-    <skip />
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Scanning always available"</string>
+    <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"Let Google\'s location service and other apps scan for networks, even when Wi-Fi is off"</string>
+    <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Daydream"</string>
     <string name="device_display" msgid="101455384386372747">"Display"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"System sounds"</string>
@@ -60,10 +51,8 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"Backup &amp; restore"</string>
     <string name="device_reset" msgid="2827002349560023125">"Factory data reset"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Calibration"</string>
-    <!-- no translation found for device_storage_clear_cache_title (3365635664766067643) -->
-    <skip />
-    <!-- no translation found for device_storage_clear_cache_message (6495570470005696210) -->
-    <skip />
+    <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Clear cached data?"</string>
+    <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"This will clear cached data for all apps."</string>
     <string name="apps_downloaded" msgid="4222190849854323480">"Downloaded apps"</string>
     <string name="apps_system" msgid="2499191125802829425">"System app"</string>
     <string name="apps_running" msgid="6430310491739956228">"Running apps"</string>
@@ -77,25 +66,18 @@
     <string name="accessory_options" msgid="4799658564005710297">"Accessory"</string>
     <string name="accessory_rename" msgid="3250766501262581206">"Rename"</string>
     <string name="accessory_unpair" msgid="8242725516604465355">"Unpair"</string>
-    <!-- no translation found for accessory_battery (7021788232835772126) -->
-    <skip />
+    <string name="accessory_battery" msgid="7021788232835772126">"Battery <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
     <string name="accessory_unpairing" msgid="7568241162181184667">"Unpairing device…"</string>
     <string name="accessory_connected" msgid="2156489304110030393">"Connected"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"Searching for accessories…"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (5892952745770640383) -->
-    <skip />
-    <!-- no translation found for accessories_autopair_msg (8618829246837821752) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Before pairing your Bluetooth devices, make sure that they\'re in pairing mode"</string>
+    <string name="accessories_autopair_msg" msgid="8618829246837821752">"A device was found and will automatically pair in <xliff:g id="COUNTDOWN">%1$s</xliff:g> seconds"</string>
     <string name="accessories_add_title_multiple" msgid="8455249961819802466">"Multiple devices found"</string>
-    <!-- no translation found for accessories_add_multiple (3900633668371061399) -->
-    <skip />
-    <!-- no translation found for accessories_add_multiple_select (3696794187001405647) -->
-    <skip />
-    <!-- no translation found for error_action_not_supported (300552308104354666) -->
-    <skip />
+    <string name="accessories_add_multiple" msgid="3900633668371061399">"To choose a different device, press the pairing button on this device"</string>
+    <string name="accessories_add_multiple_select" msgid="3696794187001405647">"To pair with the selected device, press &amp; hold this device’s pairing button for 5 seconds"</string>
+    <string name="error_action_not_supported" msgid="300552308104354666">"This action isn\'t supported"</string>
     <string name="bluetooth_pairing_request" msgid="4523088117471287665">"Bluetooth pairing request"</string>
-    <!-- no translation found for bluetooth_confirm_passkey_msg (7031117992819855434) -->
-    <skip />
+    <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"To pair with: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, make sure it\'s showing this passkey: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8234127565393932499">"From: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Pair with this device?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="8951451728250058901">"To pair with: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Type on it: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, then press Return or Enter."</string>
     <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"To pair with: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Type the device\'s required PIN:"</string>
@@ -107,39 +89,33 @@
     <string name="system_date_time" msgid="8898457978560618950">"Date &amp; time"</string>
     <string name="system_language" msgid="2337138146114609247">"Language"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"Keyboard"</string>
-    <!-- no translation found for system_home (2858989138172296012) -->
-    <skip />
+    <string name="system_home" msgid="2858989138172296012">"Home screen"</string>
     <string name="system_search" msgid="2837264654143247611">"Search"</string>
-    <!-- no translation found for system_security (8230080273993484407) -->
-    <skip />
+    <string name="system_security" msgid="8230080273993484407">"Security &amp; restrictions"</string>
     <string name="system_speech" msgid="8128688499687306982">"Speech"</string>
-    <!-- no translation found for system_inputs (2413907183796651102) -->
-    <skip />
+    <string name="system_inputs" msgid="2413907183796651102">"Inputs"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"Accessibility"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Developer options"</string>
-    <!-- no translation found for accessibility_none (3441648940134070004) -->
-    <skip />
+    <string name="accessibility_none" msgid="3441648940134070004">"None"</string>
     <string name="about_system_update" msgid="7282772247661356586">"System update"</string>
     <string name="about_preference" msgid="4131396784531360434">"About"</string>
     <string name="device_name" msgid="2670488158531273028">"Device name"</string>
-    <!-- no translation found for restart_button_label (8153112858638352970) -->
-    <skip />
+    <string name="restart_button_label" msgid="8153112858638352970">"Restart"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Legal information"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Open-source licences"</string>
-    <!-- no translation found for about_terms_of_service (7743088207977334874) -->
-    <skip />
+    <string name="about_terms_of_service" msgid="7743088207977334874">"Google legal"</string>
     <string name="about_license_activity_unavailable" msgid="8522566562321418498">"Licence data is unavailable"</string>
     <string name="about_model" msgid="6625269442206323995">"Model"</string>
     <string name="about_version" msgid="1177287676732287266">"Version"</string>
-    <!-- no translation found for about_serial (2723560490027171187) -->
-    <skip />
+    <string name="about_serial" msgid="2723560490027171187">"Serial number"</string>
     <string name="about_build" msgid="9148789767199785676">"Build"</string>
-    <!-- no translation found for show_dev_countdown (5361765297521871966) -->
-    <!-- no translation found for about_ads (3364786994943748337) -->
-    <skip />
+    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
+      <item quantity="other">You are now <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steps away from being a developer</item>
+      <item quantity="one">You are now <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> step away from being a developer</item>
+    </plurals>
+    <string name="about_ads" msgid="3364786994943748337">"Ads"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"You are now a developer!"</string>
-    <!-- no translation found for show_dev_already (7525967300421794483) -->
-    <skip />
+    <string name="show_dev_already" msgid="7525967300421794483">"No need, you are already a developer"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Poor"</item>
     <item msgid="5986166866411161790">"Fair"</item>
@@ -154,20 +130,15 @@
     <string name="connected" msgid="7563100162902079938">"Connected"</string>
     <string name="not_connected" msgid="6858480380326923017">"Not connected"</string>
     <string name="wifi_setting_header_available_networks" msgid="6244107218643835636">"Wi-Fi"</string>
-    <!-- no translation found for wifi_setting_header_other_options (1530334691232749342) -->
-    <skip />
-    <!-- no translation found for wifi_setting_see_all (3217814666041974878) -->
-    <skip />
-    <!-- no translation found for wifi_setting_available_networks (1244646604369133314) -->
-    <skip />
+    <string name="wifi_setting_header_other_options" msgid="1530334691232749342">"OTHER OPTIONS"</string>
+    <string name="wifi_setting_see_all" msgid="3217814666041974878">"See all"</string>
+    <string name="wifi_setting_available_networks" msgid="1244646604369133314">"AVAILABLE NETWORKS"</string>
     <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"Connect via WPS"</string>
-    <!-- no translation found for wifi_setting_other_options_add_network (2791106243851894788) -->
-    <skip />
+    <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"Add new network"</string>
     <string name="security_type" msgid="524443802004143058">"Type of security"</string>
     <string name="wps_network" msgid="1052148085426051873">"Connect via WPS"</string>
     <string name="other_network" msgid="3539704463099544488">"Other network…"</string>
-    <!-- no translation found for skip_network (6380260543776712357) -->
-    <skip />
+    <string name="skip_network" msgid="6380260543776712357">"Skip"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"None"</string>
     <string name="wifi_security_type_wep" msgid="3836879161029325671">"WEP"</string>
     <string name="wifi_security_type_wpa" msgid="4948411057925876780">"WPA/WPA2 PSK"</string>
@@ -198,54 +169,39 @@
     <string name="wifi_saving" msgid="1269061570772019215">"Saving configuration for <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_connect" msgid="8570424816865506077">"Connect"</string>
     <string name="wifi_forget_network" msgid="7302755141573045803">"Forget network"</string>
-    <!-- no translation found for wifi_forget_network_description (3328285160018330334) -->
-    <skip />
+    <string name="wifi_forget_network_description" msgid="3328285160018330334">"This clears information used to connect to this network, including a saved password"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"OK"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"Change"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"Don\'t change"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"OK"</string>
-    <!-- no translation found for wifi_action_advanced_no (8165601242122651326) -->
-    <skip />
+    <string name="wifi_action_advanced_no" msgid="8165601242122651326">"No (recommended)"</string>
     <string name="wifi_action_proxy_none" msgid="4457231399674182650">"None"</string>
     <string name="wifi_action_proxy_manual" msgid="8402002777441261064">"Manual"</string>
     <string name="wifi_action_dhcp" msgid="6338911832360962268">"DHCP"</string>
     <string name="wifi_action_static" msgid="1025855501453321749">"Static"</string>
     <string name="wifi_action_status_info" msgid="7664354971197839253">"Status info"</string>
     <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"Advanced options"</string>
-    <!-- no translation found for wifi_ip_settings_invalid_ip_address (5228247770505105107) -->
-    <skip />
-    <!-- no translation found for wifi_ip_settings_invalid_gateway (3292444764474145026) -->
-    <skip />
-    <!-- no translation found for wifi_ip_settings_invalid_dns (6172189835428184828) -->
-    <skip />
-    <!-- no translation found for wifi_ip_settings_invalid_network_prefix_length (6209978918929182270) -->
-    <skip />
+    <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"Enter a valid IP address"</string>
+    <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Enter a valid gateway address"</string>
+    <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Enter a valid DNS address"</string>
+    <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Enter a network prefix length between 0 and 32"</string>
     <string name="wifi_ip_address_hint" msgid="1895267564692073689">"Enter a valid IP address.\nExample: 192.168.1.128"</string>
     <string name="wifi_dns1_hint" msgid="214345156394229347">"Enter a valid IP address or leave empty.\nExample: 8.8.8.8"</string>
     <string name="wifi_dns2_hint" msgid="1075709328208368894">"Enter a valid IP address or leave empty.\nExample: 8.8.4.4"</string>
-    <!-- no translation found for wifi_gateway_hint (7687219682024189028) -->
-    <skip />
+    <string name="wifi_gateway_hint" msgid="7687219682024189028">"Enter a valid IP address or leave empty.\nExample: 192.168.1.1"</string>
     <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"Enter a valid network prefix length.\nExample: 24"</string>
-    <!-- no translation found for proxy_error_invalid_host (3660415920668138953) -->
-    <skip />
-    <!-- no translation found for proxy_error_invalid_exclusion_list (4921547051724987804) -->
-    <skip />
-    <!-- no translation found for proxy_error_empty_port (6835658067776408062) -->
-    <skip />
-    <!-- no translation found for proxy_error_empty_host_set_port (4428793978424303244) -->
-    <skip />
-    <!-- no translation found for proxy_error_invalid_port (1434922103959603993) -->
-    <skip />
-    <!-- no translation found for proxy_warning_limited_support (6160239282535986523) -->
-    <skip />
+    <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Hostname isn\'t valid"</string>
+    <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"This exclusion list isn\'t valid. Enter a comma-separated list of excluded domains."</string>
+    <string name="proxy_error_empty_port" msgid="6835658067776408062">"Port field can\'t be empty"</string>
+    <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"If the host field is empty, leave the port field empty"</string>
+    <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Port isn\'t valid"</string>
+    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP proxy is used by the browser but may not be used by other apps"</string>
     <string name="proxy_port_hint" msgid="8532733797275927007">"Enter a valid port.\nExample: 8080"</string>
     <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"Enter a comma-separated list of excluded domains or leave blank.\nExample: example.com,mycomp.test.com,localhost"</string>
     <string name="proxy_hostname_hint" msgid="3719688422767210803">"Enter a valid hostname.\nExample: proxy.example.com"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Network connected"</string>
-    <!-- no translation found for wifi_summary_title_not_connected (3799548944869386251) -->
-    <skip />
-    <!-- no translation found for wifi_summary_description_connected_to_wifi_network (7583498018733069053) -->
-    <skip />
+    <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Network isn\'t connected"</string>
+    <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Already connected to <xliff:g id="SSID">%1$s</xliff:g>. Connect to a different network?"</string>
     <string name="wifi_summary_unknown_network" msgid="7903601448928422642">"an unknown network"</string>
     <string name="title_ok" msgid="1021329453788761592">"OK"</string>
     <string name="title_cancel" msgid="4846143417666038604">"Cancel"</string>
@@ -255,34 +211,27 @@
     <string name="storage_calculating_size" msgid="2644732407412520565">"Calculating…"</string>
     <string name="storage_apps_usage" msgid="4366049071039081219">"Apps"</string>
     <string name="storage_downloads_usage" msgid="6172975879962599380">"Downloads"</string>
-    <!-- no translation found for storage_dcim_usage (2977564696540645452) -->
-    <skip />
+    <string name="storage_dcim_usage" msgid="2977564696540645452">"Photos &amp; videos"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"Audio"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Misc."</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Cached data"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Retry"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Searching for WPS router…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Press the Wi-Fi Protected Setup button on your router.\nIt may be called \"WPS\" or contain the symbol to the left."</string>
-    <!-- no translation found for wifi_wps_onstart_pin (594985182235834825) -->
-    <skip />
-    <!-- no translation found for wifi_wps_onstart_pin_description (4206001352944024353) -->
-    <skip />
+    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Enter PIN <xliff:g id="NUMBER">%1$s</xliff:g> on your Wi-Fi router"</string>
+    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"After you\'ve entered the PIN, setup can take up to 2 minutes to finish"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Couldn\'t find Wi-Fi router"</string>
-    <!-- no translation found for wifi_wps_failed_wep (9158670824165143348) -->
-    <skip />
-    <!-- no translation found for wifi_wps_failed_tkip (1712545345594227319) -->
-    <skip />
+    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Wi-Fi router security setting (WEP) isn\'t supported"</string>
+    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Wi-Fi router security setting (TKIP) isn\'t supported"</string>
     <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"Another WPS session is in progress. Try again in a few minutes."</string>
     <string name="system_date" msgid="2767108116769558081">"Date"</string>
     <string name="system_time" msgid="6726022312605226285">"Time"</string>
     <string name="system_set_date" msgid="2437586307768561116">"Set date"</string>
     <string name="system_set_time" msgid="4661804115501057452">"Set time"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"Set time zone"</string>
-    <!-- no translation found for desc_set_time_zone (2948629174438460709) -->
-    <skip />
+    <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"Use 24-hour format"</string>
-    <!-- no translation found for desc_set_time_format (3131006238681763219) -->
-    <skip />
+    <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"Automatic date &amp; time"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"Use network-provided time"</string>
     <string name="system_location" msgid="502463575930545806">"Location"</string>
@@ -298,18 +247,12 @@
     <string name="location_services" msgid="5441085185119797200">"Location services"</string>
     <string name="on" msgid="6683600681314500652">"On"</string>
     <string name="off" msgid="5264189545064767245">"Off"</string>
-    <!-- no translation found for google_location_services_title (3382840371861269146) -->
-    <skip />
-    <!-- no translation found for third_party_location_services_title (4089136801976399147) -->
-    <skip />
-    <!-- no translation found for location_reporting (3054236612250063073) -->
-    <skip />
-    <!-- no translation found for location_history (2946680949724247804) -->
-    <skip />
-    <!-- no translation found for location_reporting_desc (6256424995139430823) -->
-    <skip />
-    <!-- no translation found for location_history_desc (3861249867748294369) -->
-    <skip />
+    <string name="google_location_services_title" msgid="3382840371861269146">"Google location services"</string>
+    <string name="third_party_location_services_title" msgid="4089136801976399147">"3rd-party location services"</string>
+    <string name="location_reporting" msgid="3054236612250063073">"Location Reporting"</string>
+    <string name="location_history" msgid="2946680949724247804">"Location History"</string>
+    <string name="location_reporting_desc" msgid="6256424995139430823">"Google uses this feature in products like Google Now and Google Maps. Turning on Location Reporting lets any Google product that uses this feature store and use your device\'s most recent location data in connection with your Google Account."</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"When Location History is turned on for this account, Google can store your device\'s location data for use by your apps.\n\nFor example, Google Maps can give you directions, and Google Now can inform you about commute traffic.\n\nYou can turn off Location History at any time, but doing so doesn\'t delete it. To view and manage your Location History, visit maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"Delete location history"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"This will delete all Location History has stored from this device for this Google Account. You can\'t undo this deletion. Some apps, including Google Now, will stop working."</string>
     <string name="system_services" msgid="7230571820151215779">"Services"</string>
@@ -317,10 +260,8 @@
     <string name="accessibility_captions" msgid="6133896463407851079">"Captions"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Settings for closed captioning text overlay on video"</string>
     <string name="captions_display" msgid="735692527287125548">"Display"</string>
-    <!-- no translation found for captions_display_on (1989009878719500520) -->
-    <skip />
-    <!-- no translation found for captions_display_off (496953007835201523) -->
-    <skip />
+    <string name="captions_display_on" msgid="1989009878719500520">"On"</string>
+    <string name="captions_display_off" msgid="496953007835201523">"Off"</string>
     <string name="display_options" msgid="5504549024985225774">"Display options"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Configure"</string>
     <string name="captions_lanaguage" msgid="3291057448460880449">"Language"</string>
@@ -334,12 +275,9 @@
     <string name="captions_backgroundcolor" msgid="448518890988125453">"Background colour"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Background opacity"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Captions will look like this"</string>
-    <!-- no translation found for captions_textopacity (5536765490446288641) -->
-    <skip />
-    <!-- no translation found for captions_windowcolor (8986165172260903279) -->
-    <skip />
-    <!-- no translation found for captions_windowopacity (2784473496224936703) -->
-    <skip />
+    <string name="captions_textopacity" msgid="5536765490446288641">"Text opacity"</string>
+    <string name="captions_windowcolor" msgid="8986165172260903279">"Window colour"</string>
+    <string name="captions_windowopacity" msgid="2784473496224936703">"Window opacity"</string>
     <string name="color_white" msgid="65537523012024751">"White"</string>
     <string name="color_black" msgid="8804213372565106403">"Black"</string>
     <string name="color_red" msgid="5630553203246525989">"Red"</string>
@@ -369,10 +307,8 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"Stay awake"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP checking"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI optimisation"</string>
-    <!-- no translation found for system_reboot_confirm (534407910866199191) -->
-    <skip />
-    <!-- no translation found for system_desc_reboot_confirm (1367498732529710136) -->
-    <skip />
+    <string name="system_reboot_confirm" msgid="534407910866199191">"Restart now?"</string>
+    <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"To update this setting, your device needs to be restarted"</string>
     <string name="system_never_check" msgid="6666520460705041617">"Never check"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Check for DRM content only"</string>
     <string name="system_always_check" msgid="1866566828098009853">"Always check"</string>
@@ -384,10 +320,8 @@
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Wait for debugger"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Verify apps over USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Check apps installed via ADB/ADT for harmful behaviour"</string>
-    <!-- no translation found for system_wifi_verbose_logging (3474525355071613242) -->
-    <skip />
-    <!-- no translation found for system_desc_wifi_verbose_logging (1559904751873455868) -->
-    <skip />
+    <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi verbose logging"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Enable Wi-Fi verbose logging"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"Show touches"</string>
     <string name="system_pointer_location" msgid="2673764026490179227">"Pointer location"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"Show layout bounds"</string>
@@ -407,8 +341,7 @@
     <string name="system_show_all_anrs" msgid="3601183436857424712">"Show all ANRs"</string>
     <string name="system_desc_stay_awake" msgid="229588006508356238">"Disable sleep"</string>
     <string name="system_desc_hdcp_checking" msgid="6879753401058891183">"Use for DRM content only"</string>
-    <!-- no translation found for system_desc_hdmi_optimization (4400727262768931480) -->
-    <skip />
+    <string name="system_desc_hdmi_optimization" msgid="4400727262768931480">"Optimise display for maximum resolution or maximum framerate. This only affects Ultra HD displays. Changing this setting will restart your device."</string>
     <string name="system_desc_bt_hci_log" msgid="4219265203570411773">"Enable Bluetooth HCI snoop logging"</string>
     <string name="system_desc_usb_debugging" msgid="5168830368191788731">"Debug mode when USB connected"</string>
     <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"Debugged application waits for debugger to attach before executing"</string>
@@ -431,58 +364,38 @@
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Your device and personal data are more vulnerable to attack by apps from unknown sources. You agree that you are solely responsible for any damage to your device or loss of data that may result from using these apps."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Verify apps"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Disallow or warn before installation of apps that may cause harm"</string>
-    <!-- no translation found for system_hdcp_checking_never (1758043078676276985) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_drm (8563220452241389905) -->
-    <skip />
-    <!-- no translation found for system_hdcp_checking_always (7264575337360957746) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_resolution (2612694859060466938) -->
-    <skip />
-    <!-- no translation found for system_hdmi_optimization_best_framerate (67514549356802383) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_off (8790815645038325739) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_areas (5227122594087360124) -->
-    <skip />
-    <!-- no translation found for system_hw_overdraw_counter (3042271307724657436) -->
-    <skip />
+    <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Never"</string>
+    <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"For DRM content"</string>
+    <string name="system_hdcp_checking_always" msgid="7264575337360957746">"Always"</string>
+    <string name="system_hdmi_optimization_best_resolution" msgid="2612694859060466938">"Best resolution"</string>
+    <string name="system_hdmi_optimization_best_framerate" msgid="67514549356802383">"Best frame rate"</string>
+    <string name="system_hw_overdraw_off" msgid="8790815645038325739">"Off"</string>
+    <string name="system_hw_overdraw_areas" msgid="5227122594087360124">"Show overdraw areas"</string>
+    <string name="system_hw_overdraw_counter" msgid="3042271307724657436">"Show overdraw counter"</string>
     <string name="no_application" msgid="1746564297589309465">"Nothing"</string>
-    <!-- no translation found for enable_opengl_traces_none (6074804146602749420) -->
-    <skip />
-    <!-- no translation found for animation_scale_entries:0 (7477134110460336436) -->
-    <!-- no translation found for animation_scale_entries:1 (8327257151534006014) -->
-    <!-- no translation found for animation_scale_entries:2 (2105786719544636780) -->
-    <!-- no translation found for animation_scale_entries:3 (5290554136790336403) -->
-    <!-- no translation found for animation_scale_entries:4 (1232929590838082483) -->
-    <!-- no translation found for animation_scale_entries:5 (1889239009419613796) -->
-    <!-- no translation found for animation_scale_entries:6 (7268894934484547297) -->
-    <!-- no translation found for track_frame_time_off (5050360262132715904) -->
-    <skip />
-    <!-- no translation found for track_frame_time_bars (4470692840177888414) -->
-    <skip />
-    <!-- no translation found for app_process_limit_standard (8878199798843299844) -->
-    <skip />
-    <!-- no translation found for app_process_limit_zero (2667197109226789876) -->
-    <skip />
-    <!-- no translation found for app_process_limit_one (6417937037944753355) -->
-    <skip />
-    <!-- no translation found for app_process_limit_two (1067649339026655778) -->
-    <skip />
-    <!-- no translation found for app_process_limit_three (7234034351975161398) -->
-    <skip />
-    <!-- no translation found for app_process_limit_four (8907156918309381955) -->
-    <skip />
-    <!-- no translation found for tts_rate_very_slow (3572500793504698102) -->
-    <skip />
-    <!-- no translation found for tts_rate_slow (4826007209157112605) -->
-    <skip />
-    <!-- no translation found for tts_rate_normal (362011908545519639) -->
-    <skip />
-    <!-- no translation found for tts_rate_fast (3792863158623953072) -->
-    <skip />
-    <!-- no translation found for tts_rate_very_fast (5876670536911919074) -->
-    <skip />
+    <string name="enable_opengl_traces_none" msgid="6074804146602749420">"None"</string>
+  <string-array name="animation_scale_entries">
+    <item msgid="7477134110460336436">"Animation off"</item>
+    <item msgid="8327257151534006014">"Animation scale .5x"</item>
+    <item msgid="2105786719544636780">"Animation scale 1x"</item>
+    <item msgid="5290554136790336403">"Animation scale 1.5x"</item>
+    <item msgid="1232929590838082483">"Animation scale 2x"</item>
+    <item msgid="1889239009419613796">"Animation scale 5x"</item>
+    <item msgid="7268894934484547297">"Animation scale 10x"</item>
+  </string-array>
+    <string name="track_frame_time_off" msgid="5050360262132715904">"Off"</string>
+    <string name="track_frame_time_bars" msgid="4470692840177888414">"On screen as bars"</string>
+    <string name="app_process_limit_standard" msgid="8878199798843299844">"Standard limit"</string>
+    <string name="app_process_limit_zero" msgid="2667197109226789876">"No background processes"</string>
+    <string name="app_process_limit_one" msgid="6417937037944753355">"At most, 1 process"</string>
+    <string name="app_process_limit_two" msgid="1067649339026655778">"At most, 2 processes"</string>
+    <string name="app_process_limit_three" msgid="7234034351975161398">"At most, 3 processes"</string>
+    <string name="app_process_limit_four" msgid="8907156918309381955">"At most, 4 processes"</string>
+    <string name="tts_rate_very_slow" msgid="3572500793504698102">"Very slow"</string>
+    <string name="tts_rate_slow" msgid="4826007209157112605">"Slow"</string>
+    <string name="tts_rate_normal" msgid="362011908545519639">"Normal"</string>
+    <string name="tts_rate_fast" msgid="3792863158623953072">"Fast"</string>
+    <string name="tts_rate_very_fast" msgid="5876670536911919074">"Very fast"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"Current keyboard"</string>
     <string name="title_configure" msgid="6929522003149212388">"Configure"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"Keyboard options"</string>
@@ -497,206 +410,125 @@
     <string name="justOnceOption" msgid="6051458702672920102">"Just once"</string>
     <string name="noApplications" msgid="4197983402774959346">"No apps can perform this action."</string>
     <string name="noAppsGoBack" msgid="5663180241276177314">"Back"</string>
-    <!-- no translation found for inputs_inputs (4249080110281833521) -->
-    <skip />
-    <!-- no translation found for inputs_header_cec (3701104827756278489) -->
-    <skip />
-    <!-- no translation found for inputs_cec_settings (8403155117662874704) -->
-    <skip />
-    <!-- no translation found for inputs_blu_ray (3843526039402969407) -->
-    <skip />
-    <!-- no translation found for inputs_cable (9081641596942038538) -->
-    <skip />
-    <!-- no translation found for inputs_dvd (602486238850738828) -->
-    <skip />
-    <!-- no translation found for inputs_game (1114086481110094757) -->
-    <skip />
-    <!-- no translation found for inputs_aux (5704676433978730340) -->
-    <skip />
-    <!-- no translation found for inputs_custom_name (5584925321693432362) -->
-    <skip />
-    <!-- no translation found for inputs_hide (1575971556150395486) -->
-    <skip />
-    <!-- no translation found for inputs_hide_desc (8172670556559886526) -->
-    <skip />
-    <!-- no translation found for inputs_custom_title (374036983231176581) -->
-    <skip />
-    <!-- no translation found for inputs_hdmi_control (2462240356665628563) -->
-    <skip />
-    <!-- no translation found for inputs_hdmi_control_desc (2300590479729796132) -->
-    <skip />
-    <!-- no translation found for inputs_device_auto_off (7510049770946999285) -->
-    <skip />
-    <!-- no translation found for inputs_device_auto_off_desc (2679638131351116942) -->
-    <skip />
-    <!-- no translation found for inputs_tv_auto_on (2627932269256793797) -->
-    <skip />
-    <!-- no translation found for inputs_tv_auto_on_desc (7658625130577708249) -->
-    <skip />
-    <!-- no translation found for inputs_header_connected_input (4694899943180976672) -->
-    <!-- no translation found for inputs_header_standby_input (1903575597797993135) -->
-    <!-- no translation found for inputs_header_disconnected_input (2979766871256996256) -->
-    <!-- no translation found for user_add_profile_item_summary (2946168478936086933) -->
-    <skip />
-    <!-- no translation found for user_new_profile_name (336521054830056189) -->
-    <skip />
-    <!-- no translation found for user_restrictions_controlled_by (2107349341393761750) -->
-    <skip />
-    <!-- no translation found for app_not_supported_in_limited (6818309827329010677) -->
-    <skip />
-    <!-- no translation found for app_sees_restricted_accounts (1967195038085624916) -->
-    <skip />
-    <!-- no translation found for restriction_location_enable_title (2575116135395354938) -->
-    <skip />
-    <!-- no translation found for restriction_location_enable_summary (4195349388342385870) -->
-    <skip />
-    <!-- no translation found for restricted_profile_switch_to (1926433350907032138) -->
-    <skip />
-    <!-- no translation found for restricted_profile_switch_out (1893784095623209495) -->
-    <skip />
-    <!-- no translation found for restricted_profile_delete_title (3445944923018324707) -->
-    <skip />
-    <!-- no translation found for restricted_profile_configure_title (4684188123147519620) -->
-    <skip />
-    <!-- no translation found for restricted_profile_configure_apps_title (11507255932348492) -->
-    <skip />
-    <!-- no translation found for restricted_profile_configure_apps_description (1138147479259808487) -->
-    <!-- no translation found for restricted_profile_allowed (2903829140619950232) -->
-    <skip />
-    <!-- no translation found for restricted_profile_not_allowed (1622620680118897330) -->
-    <skip />
-    <!-- no translation found for restricted_profile_customize_restrictions (8418415019078825537) -->
-    <skip />
-    <!-- no translation found for restricted_profile_configure_apps_description_loading (5269477581791409700) -->
-    <skip />
-    <!-- no translation found for restricted_profile_change_password_title (2848537651211816659) -->
-    <skip />
-    <!-- no translation found for restriction_description (3104855945910233028) -->
-    <skip />
-    <!-- no translation found for pin_enter_unlock_channel (5980400420298506069) -->
-    <skip />
-    <!-- no translation found for pin_enter_unlock_program (52453773316071511) -->
-    <skip />
-    <!-- no translation found for pin_enter_pin (821552376577935497) -->
-    <skip />
-    <!-- no translation found for pin_enter_new_pin (4788218421265924211) -->
-    <skip />
-    <!-- no translation found for pin_enter_again (1510456697040826496) -->
-    <skip />
-    <!-- no translation found for pin_enter_old_pin (851029058127630869) -->
-    <skip />
-    <!-- no translation found for pin_enter_wrong (5653864140710683928) -->
-    <skip />
-    <!-- no translation found for pin_toast_wrong (4628358195224633248) -->
-    <skip />
-    <!-- no translation found for pin_toast_not_match (5886041789737632996) -->
-    <skip />
-    <!-- no translation found for wifi_setup_input_password (1596168874369038536) -->
-    <skip />
-    <!-- no translation found for wifi_setup_connection_success (6262755735033937164) -->
-    <skip />
-    <!-- no translation found for wifi_setup_save_success (4829154865874318015) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_version (1004679024556315208) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_open (8009823973422120839) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_force_stop (9195433885986760867) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_force_stop_desc (3616902338964109665) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_uninstall (531427430753359746) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_uninstall_desc (1104982472633576960) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_disable (6136528600052941589) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_disable_desc (1295507373252301108) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_enable (3246823119203444608) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_enable_desc (7490219375247065314) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_clear_data (4439114679323274127) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_clear_data_desc (5312754223024135016) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_clear_data_what (6010791116393405500) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_clear_default (1861082768599452304) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_clear_default_set (4191720055364731307) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_clear_default_none (196932966641339141) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_clear_cache (5392413180421013865) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_notifications (7291960671957440729) -->
-    <skip />
-    <!-- no translation found for device_apps_app_management_permissions (1829808830974726081) -->
-    <skip />
-    <!-- no translation found for settings_ok (3321630456511355983) -->
-    <skip />
-    <!-- no translation found for settings_cancel (304280412158061225) -->
-    <skip />
-    <!-- no translation found for settings_on (6892236264945435013) -->
-    <skip />
-    <!-- no translation found for settings_off (449272161738237637) -->
-    <skip />
-    <!-- no translation found for device_daydreams_none (7364189761517824834) -->
-    <skip />
-    <!-- no translation found for device_daydreams_select (3691552535056569158) -->
-    <skip />
-    <!-- no translation found for device_daydreams_test (9038920213402659591) -->
-    <skip />
-    <!-- no translation found for device_daydreams_sleep (8766795993034660366) -->
-    <skip />
-    <!-- no translation found for device_daydreams_sleep_description (5269460120567642259) -->
-    <skip />
-    <!-- no translation found for device_daydreams_sleep_summary (7361113408939289262) -->
-    <skip />
-    <!-- no translation found for device_daydreams_screen_off (5002473979169042970) -->
-    <skip />
-    <!-- no translation found for device_daydreams_screen_off_description (4181262365345306243) -->
-    <skip />
-    <!-- no translation found for backup_configure_account_default_summary (5619226302157702967) -->
-    <skip />
+    <string name="inputs_inputs" msgid="4249080110281833521">"Inputs"</string>
+    <string name="inputs_header_cec" msgid="3701104827756278489">"Consumer Electronic Control (CEC)"</string>
+    <string name="inputs_cec_settings" msgid="8403155117662874704">"Device control settings"</string>
+    <string name="inputs_blu_ray" msgid="3843526039402969407">"Blu-ray"</string>
+    <string name="inputs_cable" msgid="9081641596942038538">"Cable"</string>
+    <string name="inputs_dvd" msgid="602486238850738828">"DVD"</string>
+    <string name="inputs_game" msgid="1114086481110094757">"Game console"</string>
+    <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
+    <string name="inputs_custom_name" msgid="5584925321693432362">"Custom name"</string>
+    <string name="inputs_hide" msgid="1575971556150395486">"Hidden"</string>
+    <string name="inputs_hide_desc" msgid="8172670556559886526">"Not shown when switching inputs"</string>
+    <string name="inputs_custom_title" msgid="374036983231176581">"Custom name:"</string>
+    <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI control"</string>
+    <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Allow the TV to control HDMI devices"</string>
+    <string name="inputs_device_auto_off" msgid="7510049770946999285">"Device auto power off"</string>
+    <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Power off HDMI devices with the TV"</string>
+    <string name="inputs_tv_auto_on" msgid="2627932269256793797">"TV auto power on"</string>
+    <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Power on the TV with HDMI device"</string>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+      <item quantity="other">CONNECTED INPUTS</item>
+      <item quantity="one">CONNECTED INPUT</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+      <item quantity="other">STANDBY INPUTS</item>
+      <item quantity="one">STANDBY INPUT</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+      <item quantity="other">NOT CONNECTED INPUTS</item>
+      <item quantity="one">NOT CONNECTED INPUT</item>
+    </plurals>
+    <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Restrict access to apps and other content in your account"</string>
+    <string name="user_new_profile_name" msgid="336521054830056189">"Restricted profile"</string>
+    <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Controlled by <xliff:g id="APP">%1$s</xliff:g>"</string>
+    <string name="app_not_supported_in_limited" msgid="6818309827329010677">"This app is not supported in restricted profiles"</string>
+    <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"This app can access your accounts"</string>
+    <string name="restriction_location_enable_title" msgid="2575116135395354938">"Location"</string>
+    <string name="restriction_location_enable_summary" msgid="4195349388342385870">"Let apps use your location information"</string>
+    <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Enter restricted profile"</string>
+    <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Exit restricted profile"</string>
+    <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Delete restricted profile"</string>
+    <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Settings"</string>
+    <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Allowed apps"</string>
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
+      <item quantity="other">%d apps allowed</item>
+      <item quantity="one">1 app allowed</item>
+    </plurals>
+    <string name="restricted_profile_allowed" msgid="2903829140619950232">"Allowed"</string>
+    <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Not allowed"</string>
+    <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Customise restrictions"</string>
+    <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"One moment…"</string>
+    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"Change pin"</string>
+    <string name="restriction_description" msgid="3104855945910233028">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
+    <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"Enter PIN to watch this channel"</string>
+    <string name="pin_enter_unlock_program" msgid="52453773316071511">"Enter PIN to watch this programme"</string>
+    <string name="pin_enter_pin" msgid="821552376577935497">"Enter PIN"</string>
+    <string name="pin_enter_new_pin" msgid="4788218421265924211">"Set a new PIN"</string>
+    <string name="pin_enter_again" msgid="1510456697040826496">"Re-enter new PIN"</string>
+    <string name="pin_enter_old_pin" msgid="851029058127630869">"Enter old PIN"</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"You entered the wrong PIN 5 times.\nTry again <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
+    <string name="pin_toast_wrong" msgid="4628358195224633248">"Wrong PIN, try again"</string>
+    <string name="pin_toast_not_match" msgid="5886041789737632996">"Try again, PIN doesn\'t match"</string>
+    <string name="wifi_setup_input_password" msgid="1596168874369038536">"Enter password for <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="wifi_setup_connection_success" msgid="6262755735033937164">"Connected successfully."</string>
+    <string name="wifi_setup_save_success" msgid="4829154865874318015">"Saved successfully."</string>
+    <string name="device_apps_app_management_version" msgid="1004679024556315208">"version <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
+    <string name="device_apps_app_management_open" msgid="8009823973422120839">"Open"</string>
+    <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Force stop"</string>
+    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"If you force stop an app, it may misbehave."</string>
+    <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Uninstall"</string>
+    <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Do you want to uninstall this app?"</string>
+    <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Disable"</string>
+    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Do you want to disable this app?"</string>
+    <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Enable"</string>
+    <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Do you want to enable this app?"</string>
+    <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Clear data"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"All this app’s data will be deleted permanently."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"This includes all files, settings, accounts, databases etc."</string>
+    <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Clear defaults"</string>
+    <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Set to launch this app for some actions"</string>
+    <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"No defaults set"</string>
+    <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"Clear cache"</string>
+    <string name="device_apps_app_management_notifications" msgid="7291960671957440729">"Notifications"</string>
+    <string name="device_apps_app_management_permissions" msgid="1829808830974726081">"Permission"</string>
+    <string name="settings_ok" msgid="3321630456511355983">"OK"</string>
+    <string name="settings_cancel" msgid="304280412158061225">"Cancel"</string>
+    <string name="settings_on" msgid="6892236264945435013">"On"</string>
+    <string name="settings_off" msgid="449272161738237637">"Off"</string>
+    <string name="device_daydreams_none" msgid="7364189761517824834">"None"</string>
+    <string name="device_daydreams_select" msgid="3691552535056569158">"Daydream"</string>
+    <string name="device_daydreams_test" msgid="9038920213402659591">"Start now"</string>
+    <string name="device_daydreams_sleep" msgid="8766795993034660366">"When to daydream"</string>
+    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"Daydreaming begins after this period of inactivity. If no daydream is selected, the display turns off."</string>
+    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"After <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> of inactivity"</string>
+    <string name="device_daydreams_screen_off" msgid="5002473979169042970">"When to sleep"</string>
+    <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Screen turns off after this period of inactivity."</string>
+    <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"No account is currently storing backed-up data"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
-    <!-- no translation found for backup_erase_dialog_message (2608496013975068701) -->
-    <skip />
-    <!-- no translation found for privacy_backup_data (1796662583830120812) -->
-    <skip />
-    <!-- no translation found for privacy_backup_account (9059939814827165020) -->
-    <skip />
-    <!-- no translation found for privacy_automatic_restore (1409885318093199628) -->
-    <skip />
-    <!-- no translation found for factory_reset_device (7422459553658815011) -->
-    <skip />
-    <!-- no translation found for factory_reset_description (5381170999141355891) -->
-    <skip />
-    <!-- no translation found for confirm_factory_reset_description (1049842658625287303) -->
-    <skip />
-    <!-- no translation found for confirm_factory_reset_device (8923287482399582268) -->
-    <skip />
-    <!-- no translation found for select_title (3905067953686121845) -->
-    <skip />
-    <!-- no translation found for select_description (4070142015460337658) -->
-    <skip />
-    <!-- no translation found for rooms:0 (7085399612393981553) -->
-    <!-- no translation found for rooms:1 (3722089849939477581) -->
-    <!-- no translation found for rooms:2 (6108590585438763574) -->
-    <!-- no translation found for rooms:3 (2581035245390468625) -->
-    <!-- no translation found for rooms:4 (3127487827308695324) -->
-    <!-- no translation found for rooms:5 (6172018430592195063) -->
-    <!-- no translation found for rooms:6 (8120010459866284578) -->
-    <!-- no translation found for custom_room (8991561978321502549) -->
-    <skip />
-    <!-- no translation found for settings_status_title (3890412726442124167) -->
-    <skip />
-    <!-- no translation found for settings_status_description (3600745966132434139) -->
-    <skip />
-    <!-- no translation found for change_setting (2047402388786162246) -->
-    <skip />
-    <!-- no translation found for keep_settings (6798327196645732517) -->
-    <skip />
+    <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Stop backing up your Wi-Fi passwords, bookmarks, other settings and app data, and erase all copies on Google servers?"</string>
+    <string name="privacy_backup_data" msgid="1796662583830120812">"Back up my data"</string>
+    <string name="privacy_backup_account" msgid="9059939814827165020">"Backup account"</string>
+    <string name="privacy_automatic_restore" msgid="1409885318093199628">"Automatic restore"</string>
+    <string name="factory_reset_device" msgid="7422459553658815011">"Reset device"</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"This will erase all data from your device\'s internal storage, including: your Google account, system and app data and settings and downloaded apps"</string>
+    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Erase all your personal information and downloaded apps? You can\'t reverse this action!"</string>
+    <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Erase everything"</string>
+    <string name="select_title" msgid="3905067953686121845">"Choose a name for your ^1"</string>
+    <string name="select_description" msgid="4070142015460337658">"A name will help identify your ^1 when accessing it from other devices like your phone, tablet or computer."</string>
+  <string-array name="rooms">
+    <item msgid="7085399612393981553">"Living Room"</item>
+    <item msgid="3722089849939477581">"Media Room"</item>
+    <item msgid="6108590585438763574">"Family Room"</item>
+    <item msgid="2581035245390468625">"Dining Room"</item>
+    <item msgid="3127487827308695324">"Den"</item>
+    <item msgid="6172018430592195063">"Bedroom"</item>
+    <item msgid="8120010459866284578">"Kitchen"</item>
+  </string-array>
+    <string name="custom_room" msgid="8991561978321502549">"Enter Customised Name…"</string>
+    <string name="settings_status_title" msgid="3890412726442124167">"This ^1 is named"</string>
+    <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" is the name of this ^2. Would you like to change this?"</string>
+    <string name="change_setting" msgid="2047402388786162246">"Change"</string>
+    <string name="keep_settings" msgid="6798327196645732517">"Don\'t change"</string>
 </resources>
