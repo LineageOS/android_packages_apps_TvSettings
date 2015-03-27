@@ -26,8 +26,10 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.content.res.Resources.NotFoundException;
 import android.content.res.TypedArray;
@@ -175,6 +177,7 @@ public class BrowseInfo extends BrowseInfoBase {
     private static final String PREF_KEY_WIFI = "network";
     private static final String PREF_KEY_DEVELOPER = "developer";
     private static final String PREF_KEY_INPUTS = "inputs";
+    private static final String PREF_KEY_HOME = "home";
 
     private final Context mContext;
     private final AuthenticatorHelper mAuthenticatorHelper;
@@ -278,6 +281,17 @@ public class BrowseInfo extends BrowseInfoBase {
             if (PREF_KEY_ADD_ACCOUNT.equals(key)) {
                 mAccountHeaderId = mHeaderId;
                 addAccounts(mRow);
+            } else if (PREF_KEY_HOME.equals(key)) {
+                // Only show home screen setting if there's a system app to handle the intent.
+                Intent recIntent = getIntent(parser, attrs, mHeaderId);
+                if (systemIntentIsHandled(recIntent)) {
+                    mRow.add(new MenuItem.Builder()
+                            .id(mNextItemId++)
+                            .title(title)
+                            .imageResourceId(mContext, iconRes)
+                            .intent(recIntent)
+                            .build());
+                }
             } else if ((!key.equals(PREF_KEY_DEVELOPER) || mDeveloperEnabled)
                     && (!key.equals(PREF_KEY_INPUTS) || mInputSettingNeeded)) {
                 MenuItem.TextGetter descriptionGetter = getDescriptionTextGetterFromKey(key);
@@ -571,5 +585,25 @@ public class BrowseInfo extends BrowseInfoBase {
         iconResource.resourceName = context.getResources().getResourceName(
                 R.drawable.ic_settings_google_account);
         return UriUtils.getShortcutIconResourceUri(iconResource).toString();
+    }
+
+    private boolean systemIntentIsHandled(Intent intent) {
+        if (mContext == null || intent == null) {
+            return false;
+        }
+
+        PackageManager pm = mContext.getPackageManager();
+        if (pm == null) {
+            return false;
+        }
+
+        for (ResolveInfo info : pm.queryIntentActivities(intent, 0)) {
+            if (info.activityInfo != null && info.activityInfo.enabled &&
+                (info.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) ==
+                        ApplicationInfo.FLAG_SYSTEM) {
+                return true;
+            }
+        }
+        return false;
     }
 }
