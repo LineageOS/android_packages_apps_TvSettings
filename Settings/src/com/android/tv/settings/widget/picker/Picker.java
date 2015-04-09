@@ -187,7 +187,7 @@ public abstract class Picker extends Fragment {
         mColumns.set(index, pickerColumn);
         adapter.setItems(Arrays.asList(pickerColumn.getItems()));
 
-        gridView.getHandler().post(new Runnable() {
+        gridView.post(new Runnable() {
             @Override
             public void run() {
                 updateColumn(gridView, false, null);
