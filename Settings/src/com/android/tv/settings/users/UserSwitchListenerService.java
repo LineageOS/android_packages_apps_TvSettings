@@ -112,6 +112,11 @@ public class UserSwitchListenerService extends Service {
                             }
                             setBootUser(UserSwitchListenerService.this, newUserId);
                         }
+
+                        @Override
+                        public void onForegroundProfileSwitch(int profileId)
+                            throws RemoteException {
+                        }
                     });
         } catch (RemoteException e) {
         }
