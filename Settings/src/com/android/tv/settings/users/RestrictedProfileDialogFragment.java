@@ -305,7 +305,7 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
     // RestrictedProfilePinDialogFragment.Callback methods
     @Override
     public void saveLockPassword(String pin, int quality) {
-        new LockPatternUtils(getActivity()).saveLockPassword(pin, quality);
+        new LockPatternUtils(getActivity()).saveLockPassword(pin, null, quality);
     }
 
     @Override
