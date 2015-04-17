@@ -83,6 +83,8 @@ public class AboutFragment extends SettingsPreferenceFragment {
     private static final String KEY_DEVICE_NAME = "device_name";
     private static final String KEY_TUTORIALS = "tutorials";
     private static final String KEY_RESET = "reset";
+    private static final String KEY_ROM_VERSION = "rom_version";
+    private static final String PROPERTY_ROM_VERSION = "ro.lineage.display.version";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -143,6 +145,8 @@ public class AboutFragment extends SettingsPreferenceFragment {
         findPreference(KEY_DEVICE_MODEL).setSummary(Build.MODEL + DeviceInfoUtils.getMsvSuffix());
         findPreference(KEY_EQUIPMENT_ID)
                 .setSummary(getSystemPropertySummary(PROPERTY_EQUIPMENT_ID));
+        findPreference(KEY_ROM_VERSION)
+                .setSummary(getSystemPropertySummary(PROPERTY_ROM_VERSION));
 
         final Preference buildNumberPref = findPreference(KEY_BUILD_NUMBER);
         buildNumberPref.setSummary(Build.DISPLAY);
