@@ -11,6 +11,7 @@ LOCAL_SRC_FILES := \
 
 LOCAL_RESOURCE_DIR := \
     frameworks/support/v17/leanback/res \
+    frameworks/support/v7/recyclerview/res \
     $(LOCAL_PATH)/res
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
@@ -18,7 +19,8 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v7-recyclerview \
     android-support-v17-leanback
 
-LOCAL_AAPT_FLAGS += --auto-add-overlay --extra-packages android.support.v17.leanback
+LOCAL_AAPT_FLAGS += --auto-add-overlay \
+    --extra-packages android.support.v17.leanback:android.support.v7.recyclerview
 
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
