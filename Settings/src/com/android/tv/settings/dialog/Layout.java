@@ -790,10 +790,15 @@ public class Layout implements Parcelable {
                 return this;
             }
 
-             public Builder icon(int resId) {
-                 mAction.mAppearance.mIcon = mRes.getDrawable(resId);
-                 return this;
-             }
+            public Builder icon(int resId) {
+                mAction.mAppearance.mIcon = mRes.getDrawable(resId);
+                return this;
+            }
+
+            public Builder icon(Drawable drawable) {
+                mAction.mAppearance.mIcon = drawable;
+                return this;
+            }
 
             public Builder description(String description) {
                 mAction.mAppearance.mDescriptionGetter = new LiteralStringGetter(description);
