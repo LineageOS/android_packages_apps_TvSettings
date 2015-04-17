@@ -38,6 +38,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.SystemClock;
+import android.os.SystemProperties;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
@@ -87,6 +88,13 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private static final String SETTINGS_ADS_ACTIVITY_PACKAGE = "com.google.android.gms";
     private static final String SETTINGS_ADS_ACTIVITY_ACTION =
             "com.google.android.gms.settings.ADS_PRIVACY";
+
+    /**
+     * Get the CyanogenMod version.
+     */
+    public static String getDisplayVersion() {
+        return SystemProperties.get("ro.cm.display.version");
+    }
 
     /**
      * Intent component to launch PlatLogo Easter egg.
@@ -233,6 +241,12 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 .key("model")
                 .title(getString(R.string.about_model))
                 .description(Build.MODEL)
+                .enabled(false)
+                .build());
+        actions.add(new Action.Builder()
+                .key("mod_version")
+                .title(getString(R.string.about_mod_version))
+                .description(getDisplayVersion())
                 .enabled(false)
                 .build());
         actions.add(new Action.Builder()
