@@ -89,9 +89,12 @@ public class AboutActivity extends SettingsLayoutActivity {
     private static final String SETTINGS_DEVICE_NAME_INTENT_ACTION = "android.settings.DEVICE_NAME";
 
     /**
-     * Intent action of system update activity.
+     * Intent action of CyanogenMod updater activity.
      */
-    private static final String SETTINGS_UPDATE_SYSTEM = "android.settings.SYSTEM_UPDATE_SETTINGS";
+    private static final ComponentName mCmupdaterActivity =
+            new ComponentName("com.cyanogenmod.updater",
+                    "com.cyanogenmod.updater.UpdatesSettingsTv");
+    private static final String SETTINGS_CM_UPDATER_ACTION = "android.intent.action.MAIN";
 
     /**
      * Intent to launch ads activity.
@@ -272,8 +275,13 @@ public class AboutActivity extends SettingsLayoutActivity {
                 .title(R.string.about_preference)
                 .build();
 
-        header.add(new Layout.Action.Builder(res, systemIntent(SETTINGS_UPDATE_SYSTEM))
-                .title(R.string.about_system_update)
+        final Intent cmupdaterIntent = new Intent();
+        cmupdaterIntent.setComponent(mCmupdaterActivity);
+        cmupdaterIntent.setAction(SETTINGS_CM_UPDATER_ACTION);
+        cmupdaterIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+
+        header.add(new Layout.Action.Builder(res, cmupdaterIntent)
+                .title(R.string.about_cmupdate_settings_title)
                 .build());
         header.add(mDeviceNameLayoutGetter);
         header.add(new Layout.Action.Builder(res, KEY_REBOOT)
