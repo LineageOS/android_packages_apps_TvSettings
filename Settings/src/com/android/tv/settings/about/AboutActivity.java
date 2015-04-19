@@ -78,9 +78,11 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private static final String SETTINGS_DEVICE_NAME_INTENT_ACTION = "android.settings.DEVICE_NAME";
 
     /**
-     * Intent action of system update activity.
+     * Intent action of CyanogenMod updater activity.
      */
-    private static final String SETTINGS_UPDATE_SYSTEM = "android.settings.SYSTEM_UPDATE_SETTINGS";
+    private static final ComponentName mCmupdaterActivity =
+            new ComponentName("com.cyanogenmod.updater", "com.cyanogenmod.updater.UpdatesSettings");
+    private static final String SETTINGS_CM_UPDATER_ACTION = "android.intent.action.MAIN";
 
     /**
      * Intent to launch ads activity.
@@ -203,10 +205,15 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
 
     private ArrayList<Action> getActions() {
         ArrayList<Action> actions = new ArrayList<Action>();
+        Intent cmupdaterIntent = new Intent();
+        cmupdaterIntent.setComponent(mCmupdaterActivity);
+        cmupdaterIntent.setAction(SETTINGS_CM_UPDATER_ACTION);
+        cmupdaterIntent.addCategory(Intent.CATEGORY_LAUNCHER);
         actions.add(new Action.Builder()
-                .key("update")
-                .title(getString(R.string.about_system_update))
-                .intent(systemIntent(SETTINGS_UPDATE_SYSTEM))
+                .key("cmupdate")
+                .title(getString(R.string.about_cmupdate_settings_title))
+                .intent(cmupdaterIntent)
+                .enabled(true)
                 .build());
         actions.add(new Action.Builder()
                 .key("name")
