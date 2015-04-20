@@ -126,7 +126,6 @@ public class ConnectivityListener {
         mListener = listener;
         mFilter = new IntentFilter();
         mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-        mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION_IMMEDIATE);
         mFilter.addAction(ConnectivityManager.INET_CONDITION_ACTION);
         mFilter.addAction(WifiManager.RSSI_CHANGED_ACTION);
         mReceiver = new BroadcastReceiver() {
