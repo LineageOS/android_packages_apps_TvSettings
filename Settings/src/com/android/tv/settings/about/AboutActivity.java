@@ -37,6 +37,7 @@ import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.os.SELinux;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.text.TextUtils;
@@ -69,6 +70,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private static final String KEY_MOD_VERSION = "mod_version";
     private static final String FILENAME_PROC_VERSION = "/proc/version";
     private static final String LOG_TAG = "AboutSettings";
+    private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
 
     /**
      * Intent action of SettingsLicenseActivity (for displaying open source licenses.)
@@ -170,6 +172,19 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
         return m.group(1) + "\n" +                 // 3.0.31-g6fb96c9
             m.group(2) + " " + m.group(3) + "\n" + // x@y.com #1
             m.group(4);                            // Thu Jun 28 11:02:39 PDT 2012
+    }
+
+    /**
+     * Get the SELinux status.
+     */
+    public String getSelinuxStatus() {
+        String status = getString(R.string.selinux_status_enforcing);
+        if (!SELinux.isSELinuxEnabled()) {
+            status = getString(R.string.selinux_status_disabled);
+        } else if (!SELinux.isSELinuxEnforced()) {
+            status = getString(R.string.selinux_status_permissive);
+        }
+        return status;
     }
 
     /**
@@ -366,6 +381,13 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 .description(Build.DISPLAY)
                 .enabled(true)
                 .build());
+        if (!SystemProperties.get(PROPERTY_SELINUX_STATUS).equals("")) {
+            actions.add(new Action.Builder()
+                    .key("selinux_status")
+                    .title(getString(R.string.about_selinux_status))
+                    .description(getSelinuxStatus())
+                    .build());
+        }
         return actions;
     }
 
