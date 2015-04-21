@@ -17,6 +17,7 @@
 package com.android.tv.settings.device.apps;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
 import android.content.res.Resources;
 import android.support.v17.leanback.widget.ArrayObjectAdapter;
@@ -41,6 +42,7 @@ public class AppsBrowseInfo extends BrowseInfoBase implements ApplicationsState.
     private static final int DOWNLOADED_ID = 0;
     private static final int SYSTEM_ID = 1;
     private static final int RUNNING_ID = 2;
+    private static final int PERMISSIONS_ID = 3;
 
     private final Context mContext;
     private final HashMap<String, Integer> mAppItemIdList;
@@ -57,8 +59,7 @@ public class AppsBrowseInfo extends BrowseInfoBase implements ApplicationsState.
 
     AppsBrowseInfo(Context context) {
         mContext = context;
-        mAppItemIdList = new HashMap<String, Integer>();
-        Resources resources = context.getResources();
+        mAppItemIdList = new HashMap<>();
         mApplicationsState = ApplicationsState.getInstance(context.getApplicationContext());
         mSession = mApplicationsState.newSession(this);
         mNextItemId = 0;
@@ -66,6 +67,15 @@ public class AppsBrowseInfo extends BrowseInfoBase implements ApplicationsState.
         mRows.put(DOWNLOADED_ID, new ArrayObjectAdapter());
         mRows.put(RUNNING_ID, new ArrayObjectAdapter());
         updateAppList();
+        final ArrayObjectAdapter permissionsAdapter = new ArrayObjectAdapter();
+        // TODO: different icon
+        final MenuItem permissionsItem = new MenuItem.Builder()
+                .title(mContext.getString(R.string.device_apps_permissions))
+                .imageResourceId(mContext, R.drawable.ic_settings_security)
+                .intent(new Intent(context, PermissionsActivity.class))
+                .build();
+        permissionsAdapter.add(permissionsItem);
+        mRows.put(PERMISSIONS_ID, permissionsAdapter);
     }
 
     @Override
@@ -143,9 +153,12 @@ public class AppsBrowseInfo extends BrowseInfoBase implements ApplicationsState.
     }
 
     private void loadBrowseHeaders() {
-        mHeaderItems.add(new HeaderItem(DOWNLOADED_ID, mContext.getString(R.string.apps_downloaded)));
+        mHeaderItems.add(new HeaderItem(DOWNLOADED_ID,
+                mContext.getString(R.string.apps_downloaded)));
         mHeaderItems.add(new HeaderItem(SYSTEM_ID, mContext.getString(R.string.apps_system)));
         mHeaderItems.add(new HeaderItem(RUNNING_ID, mContext.getString(R.string.apps_running)));
+        mHeaderItems.add(new HeaderItem(PERMISSIONS_ID,
+                mContext.getString(R.string.apps_permissions)));
     }
 
     void init() {

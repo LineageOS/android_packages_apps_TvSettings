@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.device.apps;
 
+import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -233,8 +234,7 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
                 onOpen();
                 break;
             case PERMISSIONS:
-                setContentAndActionFragments(createContentFragment(actionType, action),
-                        PermissionsFragment.newInstance(mPackageName));
+                startManagePermissionsActivity();
                 break;
             case NOTIFICATIONS:
                 setContentAndActionFragments(createContentFragment(actionType,
@@ -247,6 +247,17 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
                 setContentAndActionFragments(createContentFragment(actionType, action),
                         ActionFragment.newInstance(actionType.toActions(getResources())));
                 break;
+        }
+    }
+
+    private void startManagePermissionsActivity() {
+        // start new activity to manage app permissions
+        Intent intent = new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS);
+        intent.putExtra(Intent.EXTRA_PACKAGE_NAME, mPackageName);
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            Log.w(TAG, "No app can handle android.intent.action.MANAGE_APP_PERMISSIONS");
         }
     }
 

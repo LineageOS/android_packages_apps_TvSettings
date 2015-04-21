@@ -477,6 +477,9 @@
                   <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
+
+        <activity android:name=".device.apps.PermissionsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
