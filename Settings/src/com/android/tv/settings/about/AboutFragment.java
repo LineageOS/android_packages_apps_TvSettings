@@ -83,6 +83,8 @@ public class AboutFragment extends SettingsPreferenceFragment implements
     private static final String KEY_TUTORIALS = "tutorials";
     private static final String KEY_ROM_VERSION = "rom_version";
     private static final String PROPERTY_ROM_VERSION = "ro.lineage.display.version";
+    private static final String KEY_BUILD_DATE = "build_date";
+    private static final String PROPERTY_BUILD_DATE = "ro.build.date";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -141,6 +143,8 @@ public class AboutFragment extends SettingsPreferenceFragment implements
                 .setSummary(getSystemPropertySummary(PROPERTY_EQUIPMENT_ID));
         findPreference(KEY_ROM_VERSION)
                 .setSummary(getSystemPropertySummary(PROPERTY_ROM_VERSION));
+        findPreference(KEY_BUILD_DATE)
+                .setSummary(getSystemPropertySummary(PROPERTY_BUILD_DATE));
 
         final Preference buildNumberPref = findPreference(KEY_BUILD_NUMBER);
         buildNumberPref.setSummary(Build.DISPLAY);
