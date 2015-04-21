@@ -148,16 +148,16 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 int numLeft = NUM_DEVELOPER_CLICKS - mDeveloperClickCount;
                 if (numLeft < 3 && numLeft > 0) {
                     showToast(getResources().getQuantityString(
-                            R.plurals.show_dev_countdown, numLeft, numLeft));
+                            R.plurals.show_dev_countdown_cm, numLeft, numLeft));
                 }
                 if (numLeft == 0) {
                     mPreferenceUtils.setDeveloperEnabled(true);
-                    showToast(getString(R.string.show_dev_on));
+                    showToast(getString(R.string.show_dev_on_cm));
                     mDeveloperClickCount = 0;
                 }
             } else {
                 if (mDeveloperClickCount > 3) {
-                    showToast(getString(R.string.show_dev_already));
+                    showToast(getString(R.string.show_dev_already_cm));
                 }
             }
         } else if (TextUtils.equals(key, KEY_VERSION)) {
