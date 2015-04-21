@@ -355,7 +355,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
                         if (mDevHitToast != null) {
                             mDevHitToast.cancel();
                         }
-                        mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_on,
+                        mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_on_cm,
                                 Toast.LENGTH_LONG);
                         mDevHitToast.show();
                         // This is good time to index the Developer Options
@@ -368,7 +368,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
                             mDevHitToast.cancel();
                         }
                         MessageFormat msgFormat = new MessageFormat(
-                                getResources().getString(R.string.show_dev_countdown),
+                                getResources().getString(R.string.show_dev_countdown_cm),
                                 Locale.getDefault());
                         Map<String, Object> arguments = new HashMap<>();
                         arguments.put("count", mDevHitCountdown);
@@ -380,7 +380,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
                     if (mDevHitToast != null) {
                         mDevHitToast.cancel();
                     }
-                    mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_already,
+                    mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_already_cm,
                             Toast.LENGTH_LONG);
                     mDevHitToast.show();
                 }
