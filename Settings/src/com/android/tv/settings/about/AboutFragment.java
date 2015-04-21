@@ -292,7 +292,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
                         if (mDevHitToast != null) {
                             mDevHitToast.cancel();
                         }
-                        mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_on,
+                        mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_on_cm,
                                 Toast.LENGTH_LONG);
                         mDevHitToast.show();
                         // This is good time to index the Developer Options
@@ -311,7 +311,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
                         }
                         mDevHitToast = Toast
                                 .makeText(getActivity(), getResources().getQuantityString(
-                                        R.plurals.show_dev_countdown, mDevHitCountdown,
+                                        R.plurals.show_dev_countdown_cm, mDevHitCountdown,
                                         mDevHitCountdown),
                                         Toast.LENGTH_SHORT);
                         mDevHitToast.show();
@@ -325,7 +325,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
                     if (mDevHitToast != null) {
                         mDevHitToast.cancel();
                     }
-                    mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_already,
+                    mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_already_cm,
                             Toast.LENGTH_LONG);
                     mDevHitToast.show();
                     mMetricsFeatureProvider.action(
