@@ -28,6 +28,7 @@ import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.os.SELinux;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.support.annotation.NonNull;
@@ -72,6 +73,7 @@ public class AboutActivity extends SettingsLayoutActivity {
     private static final int KEY_REBOOT = 2;
     private static final String FILENAME_PROC_VERSION = "/proc/version";
     private static final String LOG_TAG = "AboutSettings";
+    private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
 
     /**
      * Intent action of SettingsLicenseActivity (for displaying open source licenses.)
@@ -174,6 +176,19 @@ public class AboutActivity extends SettingsLayoutActivity {
         return m.group(1) + "\n" +                 // 3.0.31-g6fb96c9
             m.group(2) + " " + m.group(3) + "\n" + // x@y.com #1
             m.group(4);                            // Thu Jun 28 11:02:39 PDT 2012
+    }
+
+    /**
+     * Get the SELinux status.
+     */
+    public String getSelinuxStatus() {
+        String status = getString(R.string.selinux_status_enforcing);
+        if (!SELinux.isSELinuxEnabled()) {
+            status = getString(R.string.selinux_status_disabled);
+        } else if (!SELinux.isSELinuxEnforced()) {
+            status = getString(R.string.selinux_status_permissive);
+        }
+        return status;
     }
 
     /**
@@ -355,6 +370,12 @@ public class AboutActivity extends SettingsLayoutActivity {
                 .title(R.string.about_build)
                 .description(Build.DISPLAY)
                 .build());
+        if (!SystemProperties.get(PROPERTY_SELINUX_STATUS).equals("")) {
+            header.add(new Layout.Status.Builder(res)
+                    .title(getString(R.string.about_selinux_status))
+                    .description(getSelinuxStatus())
+                    .build());
+        }
         return new Layout().breadcrumb(getString(R.string.header_category_device)).add(header);
     }
 
