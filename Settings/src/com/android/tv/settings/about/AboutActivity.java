@@ -46,11 +46,16 @@ import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.SettingsLayoutActivity;
 import com.android.tv.settings.name.DeviceManager;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Activity which shows the build / model / legal info / etc.
@@ -65,6 +70,8 @@ public class AboutActivity extends SettingsLayoutActivity {
     private static final int KEY_BUILD = 0;
     private static final int KEY_VERSION = 1;
     private static final int KEY_REBOOT = 2;
+    private static final String FILENAME_PROC_VERSION = "/proc/version";
+    private static final String LOG_TAG = "AboutSettings";
 
     /**
      * Intent action of SettingsLicenseActivity (for displaying open source licenses.)
@@ -105,6 +112,65 @@ public class AboutActivity extends SettingsLayoutActivity {
      */
     public static String getBuildDate() {
         return SystemProperties.get("ro.build.date");
+    }
+
+    /**
+     * Reads a line from the specified file.
+     * @param filename the file to read from
+     * @return the first line, if any.
+     * @throws IOException if the file couldn't be read
+     */
+    private static String readLine(String filename) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(filename), 256);
+        try {
+            return reader.readLine();
+        } finally {
+            reader.close();
+        }
+    }
+
+    /**
+     * Get the kernel version.
+     */
+    public static String getFormattedKernelVersion() {
+        try {
+            return formatKernelVersion(readLine(FILENAME_PROC_VERSION));
+
+        } catch (IOException e) {
+            Log.e(LOG_TAG,
+                "IO Exception when getting kernel version for Device Info screen",
+                e);
+
+            return "Unavailable";
+        }
+    }
+
+    public static String formatKernelVersion(String rawKernelVersion) {
+        // Example (see tests for more):
+        // Linux version 3.0.31-g6fb96c9 (android-build@xxx.xxx.xxx.xxx.com) \
+        //     (gcc version 4.6.x-xxx 20120106 (prerelease) (GCC) ) #1 SMP PREEMPT \
+        //     Thu Jun 28 11:02:39 PDT 2012
+
+        final String PROC_VERSION_REGEX =
+            "Linux version (\\S+) " + /* group 1: "3.0.31-g6fb96c9" */
+            "\\((\\S+?)\\) " +        /* group 2: "x@y.com" (kernel builder) */
+            "(?:\\(gcc.+? \\)) " +    /* ignore: GCC version information */
+            "(#\\d+) " +              /* group 3: "#1" */
+            "(?:.*?)?" +              /* ignore: optional SMP, PREEMPT, and any CONFIG_FLAGS */
+            "((Sun|Mon|Tue|Wed|Thu|Fri|Sat).+)"; /* group 4: "Thu Jun 28 11:02:39 PDT 2012" */
+
+        Matcher m = Pattern.compile(PROC_VERSION_REGEX).matcher(rawKernelVersion);
+        if (!m.matches()) {
+            Log.e(LOG_TAG, "Regex did not match on /proc/version: " + rawKernelVersion);
+            return "Unavailable";
+        } else if (m.groupCount() < 4) {
+            Log.e(LOG_TAG, "Regex match on /proc/version only returned " + m.groupCount()
+                    + " groups");
+            return "Unavailable";
+        }
+        return m.group(1) + "\n" +                 // 3.0.31-g6fb96c9
+            m.group(2) + " " + m.group(3) + "\n" + // x@y.com #1
+            m.group(4);                            // Thu Jun 28 11:02:39 PDT 2012
     }
 
     /**
@@ -268,6 +334,10 @@ public class AboutActivity extends SettingsLayoutActivity {
         header.add(new Layout.Status.Builder(res)
                 .title(R.string.about_serial)
                 .description(Build.SERIAL)
+                .build());
+        header.add(new Layout.Status.Builder(res)
+                .title(getString(R.string.about_kernel_version))
+                .description(getFormattedKernelVersion())
                 .build());
         header.add(new Layout.Status.Builder(res)
                 .title(getString(R.string.about_build_date))
