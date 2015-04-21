@@ -61,6 +61,7 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private static final String KEY_BUILD = "build";
     private static final String KEY_VERSION = "version";
     private static final String KEY_REBOOT = "reboot";
+    private static final String KEY_MOD_VERSION = "mod_version";
 
     /**
      * Intent action of SettingsLicenseActivity (for displaying open source licenses.)
@@ -167,6 +168,15 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 intent.setComponent(mPlatLogoActivity);
                 startActivity(intent);
             }
+        } else if (TextUtils.equals(key, KEY_MOD_VERSION)) {
+            mHits[mHitsIndex] = SystemClock.uptimeMillis();
+            mHitsIndex = (mHitsIndex + 1) % mHits.length;
+            if (mHits[mHitsIndex] >= SystemClock.uptimeMillis() - 500) {
+                Intent intent = new Intent();
+                intent.putExtra("is_cm", true);
+                intent.setComponent(mPlatLogoActivity);
+                startActivity(intent);
+            }
         } else if (TextUtils.equals(key, KEY_LEGAL_INFO)) {
             ArrayList<Action> actions = getLegalActions();
             setContentAndActionFragments(ContentFragment.newInstance(
@@ -251,10 +261,10 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 .enabled(false)
                 .build());
         actions.add(new Action.Builder()
-                .key("mod_version")
+                .key(KEY_MOD_VERSION)
                 .title(getString(R.string.about_mod_version))
                 .description(getDisplayVersion())
-                .enabled(false)
+                .enabled(true)
                 .build());
         actions.add(new Action.Builder()
                 .key(KEY_VERSION)
