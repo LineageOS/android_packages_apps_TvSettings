@@ -78,6 +78,7 @@ public class AboutActivity extends SettingsLayoutActivity {
     private static final int KEY_BUILD = 0;
     private static final int KEY_VERSION = 1;
     private static final int KEY_REBOOT = 2;
+    private static final int KEY_MOD_VERSION = 3;
     private static final String FILENAME_PROC_VERSION = "/proc/version";
     private static final String LOG_TAG = "AboutSettings";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
@@ -250,6 +251,15 @@ public class AboutActivity extends SettingsLayoutActivity {
                     showToast(getString(R.string.show_dev_already_cm));
                 }
             }
+        } else if (key == KEY_MOD_VERSION) {
+            mHits[mHitsIndex] = SystemClock.uptimeMillis();
+            mHitsIndex = (mHitsIndex + 1) % mHits.length;
+            if (mHits[mHitsIndex] >= SystemClock.uptimeMillis() - 500) {
+                Intent intent = new Intent();
+                intent.putExtra("is_cm", true);
+                intent.setComponent(mPlatLogoActivity);
+                startActivity(intent);
+            }
         } else if (key == KEY_VERSION) {
             mHits[mHitsIndex] = SystemClock.uptimeMillis();
             mHitsIndex = (mHitsIndex + 1) % mHits.length;
@@ -354,7 +364,7 @@ public class AboutActivity extends SettingsLayoutActivity {
                     .build());
         }
 
-        header.add(new Layout.Status.Builder(res)
+        header.add(new Layout.Status.Builder(res, KEY_MOD_VERSION)
                 .title(R.string.about_mod_version)
                 .description(getDisplayVersion())
                 .build());
