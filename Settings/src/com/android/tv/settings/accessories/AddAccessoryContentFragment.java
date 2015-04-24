@@ -34,6 +34,8 @@ public class AddAccessoryContentFragment extends Fragment {
     public View mView;
     private boolean mMultiple;
 
+    public AddAccessoryContentFragment() {}
+
     public static AddAccessoryContentFragment newInstance(boolean multiple) {
         AddAccessoryContentFragment fragment = new AddAccessoryContentFragment(multiple);
         return fragment;
