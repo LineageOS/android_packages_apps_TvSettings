@@ -33,6 +33,8 @@ public class AddAccessoryContentFragment extends Fragment {
 
     private static final String ARG_MULTIPLE = "multiple";
 
+    public AddAccessoryContentFragment() {}
+
     public static AddAccessoryContentFragment newInstance(boolean multiple) {
         AddAccessoryContentFragment fragment = new AddAccessoryContentFragment();
         final Bundle args = new Bundle(1);
