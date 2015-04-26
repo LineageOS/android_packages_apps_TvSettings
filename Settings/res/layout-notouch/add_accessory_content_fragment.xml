@@ -62,7 +62,8 @@
         android:layout_marginEnd="60dp"
         android:maxLines="2"
         android:ellipsize="end"
-        android:text="@string/accessories_add_bluetooth_inst" />
+        android:textStyle="bold"
+        android:text="@string/accessories_add_bluetooth_inst_cm" />
 
     <TextView
         android:id="@+id/autopair_message"
