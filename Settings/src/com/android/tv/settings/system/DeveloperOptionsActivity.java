@@ -67,6 +67,10 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
 
     private static final String HDMI_OPTIMIZATION_PROPERTY = "persist.sys.hdmi.resolution";
 
+    private static final String ADB_ROOT_PROPERTY = "service.adb.root";
+    private static final String ROOT_ACCESS_PROPERTY = "persist.sys.root_access";
+    private static String setting = SystemProperties.get(ROOT_ACCESS_PROPERTY, "0");
+
     private static final int ACTION_BASE_MASK = -1 << 20;
 
     // General actions
@@ -150,6 +154,13 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     private static final int ACTION_ALL_ANRS_ON = ACTION_APPS_BASE + 8;
     private static final int ACTION_ALL_ANRS_OFF = ACTION_APPS_BASE + 9;
 
+    // CM Actions
+    private static final int ACTION_CM_BASE = 11 << 20;
+    private static final int ACTION_ROOT_ACCESS_NONE = ACTION_CM_BASE;
+    private static final int ACTION_ROOT_ACCESS_APPS = ACTION_CM_BASE + 1;
+    private static final int ACTION_ROOT_ACCESS_ADB = ACTION_CM_BASE + 2;
+    private static final int ACTION_ROOT_ACCESS_ALL = ACTION_CM_BASE + 3;
+
     private IWindowManager mWindowManager;
     private WifiManager mWifiManager;
 
@@ -192,6 +203,7 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                         .build()
                         .add(getGeneralHeader())
                         .add(getDebuggingHeader())
+                        .add(getCmHeader())
                         .add(getInputHeader())
                         .add(getDrawingHeader())
                         .add(getMonitoringHeader())
@@ -575,6 +587,33 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                                 .build()));
     }
 
+    private Layout.Header getCmHeader() {
+        final Resources res = getResources();
+
+        final Layout.Header header = new Layout.Header.Builder(res)
+                .title(R.string.system_cm)
+                .build();
+
+                if (!"user".equals(Build.TYPE)) {
+                    header.add(new Layout.Header.Builder(res)
+                            .title(R.string.root_access)
+                            .detailedDescription(R.string.root_access_warning_title)
+                            .build()
+                            .setSelectionGroup(new Layout.SelectionGroup.Builder(4)
+                                    .add(getString(R.string.root_access_none), null,
+                                            ACTION_ROOT_ACCESS_NONE)
+                                   .add(getString(R.string.root_access_apps), null,
+                                            ACTION_ROOT_ACCESS_APPS)
+                                    .add(getString(R.string.root_access_adb), null,
+                                            ACTION_ROOT_ACCESS_ADB)
+                                    .add(getString(R.string.root_access_all), null,
+                                            ACTION_ROOT_ACCESS_ALL)
+                                    .select(getRootAccessId())
+                                    .build()));
+                }
+        return header;
+    }
+
     @Override
     public void onActionClicked(Layout.Action action) {
         switch (action.getId() & ACTION_BASE_MASK) {
@@ -607,6 +646,9 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                 break;
             case ACTION_APPS_BASE:
                 onAppsActionClicked(action);
+                break;
+            case ACTION_CM_BASE:
+                onCmActionClicked(action);
                 break;
         }
     }
@@ -741,6 +783,18 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
         }
     }
 
+    private void onCmActionClicked(Layout.Action action) {
+        final int id = action.getId();
+        switch (id) {
+            case ACTION_ROOT_ACCESS_NONE:
+            case ACTION_ROOT_ACCESS_APPS:
+            case ACTION_ROOT_ACCESS_ADB:
+            case ACTION_ROOT_ACCESS_ALL:
+                setRootAccessByAction(id);
+                break;
+        }
+    }
+
     private void onWindowAnimationScaleActionClicked(Layout.Action action) {
         setAnimationScale(INDEX_WINDOW_ANIMATION_SCALE, action.getId() & ~ACTION_BASE_MASK);
     }
@@ -804,6 +858,18 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                 break;
             case ACTION_ALL_ANRS_OFF:
                 setAllAnrs(false);
+                break;
+        }
+    }
+
+    private void onRootAccessActionClicked(Layout.Action action) {
+        final int id = action.getId();
+        switch (id) {
+            case ACTION_ROOT_ACCESS_NONE:
+            case ACTION_ROOT_ACCESS_APPS:
+            case ACTION_ROOT_ACCESS_ADB:
+            case ACTION_ROOT_ACCESS_ALL:
+                setRootAccessByAction(id);
                 break;
         }
     }
@@ -1297,6 +1363,67 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
 
     private void setAllAnrs(boolean value) {
         setSecureSettingBoolean(Settings.Secure.ANR_SHOW_BACKGROUND, value);
+    }
+
+    private int getRootAccessId() {
+        switch (SystemProperties.get(ROOT_ACCESS_PROPERTY, "0")) {
+            case "1":
+                return ACTION_ROOT_ACCESS_APPS;
+            case "2":
+                return ACTION_ROOT_ACCESS_ADB;
+            case "3":
+                return ACTION_ROOT_ACCESS_ALL;
+            case "0":
+            default:
+                return ACTION_ROOT_ACCESS_NONE;
+        }
+    }
+
+    private void setRootAccessByAction(int action) {
+        switch (action) {
+            case ACTION_ROOT_ACCESS_APPS:
+                setting = "1";
+                SettingsHelper.setSystemProperties(ROOT_ACCESS_PROPERTY, "1");
+                SettingsHelper.setSystemProperties(ADB_ROOT_PROPERTY, "0");
+                setGlobalSettingBoolean(Settings.Global.ADB_ENABLED, false);
+                setGlobalSettingBoolean(Settings.Global.ADB_ENABLED, true);
+                break;
+            case ACTION_ROOT_ACCESS_ADB:
+                setting = "2";
+                rootAccessWarning();
+                break;
+            case ACTION_ROOT_ACCESS_ALL:
+                setting = "3";
+                rootAccessWarning();
+                break;
+            case ACTION_ROOT_ACCESS_NONE:
+                setting = "0";
+                SettingsHelper.setSystemProperties(ROOT_ACCESS_PROPERTY, "0");
+                SettingsHelper.setSystemProperties(ADB_ROOT_PROPERTY, "0");
+                setGlobalSettingBoolean(Settings.Global.ADB_ENABLED, false);
+                setGlobalSettingBoolean(Settings.Global.ADB_ENABLED, true);
+                break;
+        }
+    }
+
+    private void rootAccessWarning() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.root_access_warning_title)
+                .setMessage(R.string.root_access_warning_message)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // We are OK to enable root acess, trigger it
+                 SettingsHelper.setSystemProperties(ROOT_ACCESS_PROPERTY, setting);
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Enabling root access canceled, go back
+                    }
+                })
+                .show();
     }
 
     private void tryReboot() {
