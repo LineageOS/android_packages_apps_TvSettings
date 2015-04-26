@@ -76,6 +76,8 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
 
     private static final String HDMI_OPTIMIZATION_PROPERTY = "persist.sys.hdmi.resolution";
 
+    private static final String ROOT_ACCESS_PROPERTY = "persist.sys.root_access";
+
     private static SettingsHelper mHelper;
     private ContentResolver mContentResolver;
     private IWindowManager mWindowManager;
@@ -101,6 +103,7 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             case DEVELOPER_OVERVIEW:
                 mActions.add(ActionType.DEVELOPER_GENERAL.toAction(mResources));
                 mActions.add(ActionType.DEVELOPER_DEBUGGING.toAction(mResources));
+                mActions.add(ActionType.DEVELOPER_CM.toAction(mResources));
                 mActions.add(ActionType.DEVELOPER_INPUT.toAction(mResources));
                 mActions.add(ActionType.DEVELOPER_DRAWING.toAction(mResources));
                 mActions.add(ActionType.DEVELOPER_MONITORING.toAction(mResources));
@@ -141,6 +144,20 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                 mActions.add(
                         ActionType.DEVELOPER_DEBUGGING_WIFI_VERBOSE_LOGGING.toAction(mResources,
                                 mWifiManager.getVerboseLoggingLevel() > 0 ? "On" : "Off"));
+                break;
+            case DEVELOPER_CM:
+                if (!"user".equals(Build.TYPE)) {
+                    mActions.add(ActionType.DEVELOPER_CM_ALLOW_ROOT_ACCESS.toAction(mResources,
+                            getRootAccessStatus(mHelper.getSystemProperties(
+                                    ROOT_ACCESS_PROPERTY))));
+                }
+                break;
+            case DEVELOPER_CM_ALLOW_ROOT_ACCESS:
+                mActions = Action.createActionsFromArrays(
+                        mResources.getStringArray(R.array.root_access_values),
+                        mResources.getStringArray(R.array.root_access_entries),
+                        0 /* non zero check set ID */,
+                        mHelper.getSystemProperties(ROOT_ACCESS_PROPERTY));
                 break;
             case DEVELOPER_INPUT:
                 mActions.add(ActionType.DEVELOPER_INPUT_SHOW_TOUCHES.toAction(
@@ -295,6 +312,12 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             case DEVELOPER_DEBUGGING:
                 setView(R.string.system_debugging, R.string.system_developer_options, 0, 0);
                 break;
+            case DEVELOPER_CM:
+                setView(R.string.system_cm, R.string.system_developer_options, 0, 0);
+                break;
+            case DEVELOPER_CM_ALLOW_ROOT_ACCESS:
+                setView(R.string.root_access, R.string.system_cm, 0, 0);
+                break;
             case DEVELOPER_INPUT:
                 setView(R.string.system_input, R.string.system_developer_options, 0, 0);
                 break;
@@ -371,6 +394,10 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
          */
         final String key = action.getKey();
         switch ((ActionType) mState) {
+            case DEVELOPER_CM_ALLOW_ROOT_ACCESS:
+                mHelper.setSystemProperties(ROOT_ACCESS_PROPERTY, key);
+                goBack();
+                return;
             case DEVELOPER_DEBUGGING_SELECT_DEBUG_APP:
                 setDebugApp(key);
                 goBack();
@@ -804,6 +831,24 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
     @Override
     protected Object getInitialState() {
         return ActionType.DEVELOPER_OVERVIEW;
+    }
+
+    /**
+     * Gets the root access status based on string value.
+     */
+    private String getRootAccessStatus(String value) {
+        // Defaults to none. Needs to match with R.array.root_access_values
+        // This matches phone DevelopmentSettings.
+        int index = 0;
+        String[] keys = getResources().getStringArray(R.array.root_access_values);
+        String[] summaries = getResources().getStringArray(R.array.root_access_entries);
+        for (int keyIndex = 0; keyIndex < keys.length; ++keyIndex) {
+            if (keys[keyIndex].equals(value)) {
+                index = keyIndex;
+                break;
+            }
+        }
+        return summaries[index];
     }
 
     /**
