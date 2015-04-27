@@ -91,7 +91,8 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
      * Intent action of CyanogenMod updater activity.
      */
     private static final ComponentName mCmupdaterActivity =
-            new ComponentName("com.cyanogenmod.updater", "com.cyanogenmod.updater.UpdatesSettings");
+            new ComponentName("com.cyanogenmod.updater",
+                    "com.cyanogenmod.updater.UpdatesSettingsTv");
     private static final String SETTINGS_CM_UPDATER_ACTION = "android.intent.action.MAIN";
 
     /**
