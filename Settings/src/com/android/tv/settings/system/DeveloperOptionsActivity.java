@@ -78,6 +78,8 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
 
     private static final String HDMI_OPTIMIZATION_PROPERTY = "persist.sys.hdmi.resolution";
 
+    private static String key;
+    private static final String ADB_ROOT_PROPERTY = "service.adb.root";
     private static final String ROOT_ACCESS_PROPERTY = "persist.sys.root_access";
     private static final String UPDATE_RECOVERY_PROPERTY = "persist.sys.recovery_update";
 
@@ -406,11 +408,16 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
         /*
          * For list preferences
          */
-        final String key = action.getKey();
+        key = action.getKey();
         switch ((ActionType) mState) {
             case DEVELOPER_CM_ALLOW_ROOT_ACCESS:
-                mHelper.setSystemProperties(ROOT_ACCESS_PROPERTY, key);
-                goBack();
+                String oldRootAccessValue = mHelper.getSystemProperties(ROOT_ACCESS_PROPERTY);
+                if ("0".equals(oldRootAccessValue) && !"0".equals(key)) {
+                    rootAccessWarning();
+                } else {
+                    writeRootAccessOptions();
+                    goBack();
+                }
                 return;
             case DEVELOPER_CM_UPDATE_RECOVERY:
                if (key.equals("true")) {
@@ -872,10 +879,42 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
         return summaries[index];
     }
 
+    private void writeRootAccessOptions() {
+        String oldValue = mHelper.getSystemProperties(ROOT_ACCESS_PROPERTY);
+        mHelper.setSystemProperties(ROOT_ACCESS_PROPERTY, key);
+        if (Integer.valueOf(key) < 2 && !oldValue.equals(key)
+                && "1".equals(mHelper.getSystemProperties(ADB_ROOT_PROPERTY))) {
+            SystemProperties.set(ADB_ROOT_PROPERTY, "0");
+            mHelper.setSecureIntValueSetting(Settings.Secure.ADB_ENABLED, 0);
+            mHelper.setSecureIntValueSetting(Settings.Secure.ADB_ENABLED, 1);
+        }
+    }
+
+    private void rootAccessWarning() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.root_access_warning_title)
+                .setMessage(R.string.root_access_warning_message)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // We are OK to enable root acess, trigger it
+                        writeRootAccessOptions();
+                        goBack();
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Enabling root access canceled, go back
+                        goBack();
+                    }
+                })
+                .show();
+    }
+
     /**
      * Gets the update CM recovery status based on system property.
      */
-
     private String getUpdateCmRecoveryValue() {
         String value = SystemProperties.get(UPDATE_RECOVERY_PROPERTY);
         if (value == null) {
