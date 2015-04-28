@@ -29,9 +29,11 @@ import com.android.tv.settings.dialog.old.EditTextFragment;
 
 import android.app.ActivityManagerNative;
 import android.app.ActivityThread;
+import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.wifi.WifiManager;
@@ -77,6 +79,7 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
     private static final String HDMI_OPTIMIZATION_PROPERTY = "persist.sys.hdmi.resolution";
 
     private static final String ROOT_ACCESS_PROPERTY = "persist.sys.root_access";
+    private static final String UPDATE_RECOVERY_PROPERTY = "persist.sys.recovery_update";
 
     private static SettingsHelper mHelper;
     private ContentResolver mContentResolver;
@@ -151,6 +154,8 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                             getRootAccessStatus(mHelper.getSystemProperties(
                                     ROOT_ACCESS_PROPERTY))));
                 }
+                mActions.add(ActionType.DEVELOPER_CM_UPDATE_RECOVERY.toAction(mResources,
+                        getUpdateCmRecoveryLabel()));
                 break;
             case DEVELOPER_CM_ALLOW_ROOT_ACCESS:
                 mActions = Action.createActionsFromArrays(
@@ -158,6 +163,12 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                         mResources.getStringArray(R.array.root_access_entries),
                         0 /* non zero check set ID */,
                         mHelper.getSystemProperties(ROOT_ACCESS_PROPERTY));
+                break;
+            case DEVELOPER_CM_UPDATE_RECOVERY:
+                mActions = Action.createActionsFromArrays(
+                        mResources.getStringArray(R.array.update_cm_recovery_values),
+                        mResources.getStringArray(R.array.update_cm_recovery_entries), 1,
+                        getUpdateCmRecoveryValue());
                 break;
             case DEVELOPER_INPUT:
                 mActions.add(ActionType.DEVELOPER_INPUT_SHOW_TOUCHES.toAction(
@@ -318,6 +329,9 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             case DEVELOPER_CM_ALLOW_ROOT_ACCESS:
                 setView(R.string.root_access, R.string.system_cm, 0, 0);
                 break;
+            case DEVELOPER_CM_UPDATE_RECOVERY:
+                setView(R.string.update_recovery_title, R.string.system_cm, 0, 0);
+                break;
             case DEVELOPER_INPUT:
                 setView(R.string.system_input, R.string.system_developer_options, 0, 0);
                 break;
@@ -397,6 +411,13 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             case DEVELOPER_CM_ALLOW_ROOT_ACCESS:
                 mHelper.setSystemProperties(ROOT_ACCESS_PROPERTY, key);
                 goBack();
+                return;
+            case DEVELOPER_CM_UPDATE_RECOVERY:
+               if (key.equals("true")) {
+                    updateCmRecoveryOnWarning();
+                } else {
+                    updateCmRecoveryOffWarning();
+                }
                 return;
             case DEVELOPER_DEBUGGING_SELECT_DEBUG_APP:
                 setDebugApp(key);
@@ -849,6 +870,77 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             }
         }
         return summaries[index];
+    }
+
+    /**
+     * Gets the update CM recovery status based on system property.
+     */
+
+    private String getUpdateCmRecoveryValue() {
+        String value = SystemProperties.get(UPDATE_RECOVERY_PROPERTY);
+        if (value == null) {
+            value = "false"; // default value.
+        }
+        return value;
+    }
+
+    private String getUpdateCmRecoveryLabel() {
+        // This is a little ugly, but this shouldn't be called much.
+        ArrayList<Action> actions = Action.createActionsFromArrays(
+                mResources.getStringArray(R.array.update_cm_recovery_values),
+                mResources.getStringArray(R.array.update_cm_recovery_entries), 1,
+                getUpdateCmRecoveryValue());
+
+        for (Action action : actions) {
+            if (action.isChecked()) {
+                return action.getTitle();
+            }
+        }
+        return actions.get(0).getTitle();
+    }
+
+    private void updateCmRecoveryOnWarning() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.update_recovery_title)
+                .setMessage(R.string.update_recovery_on_warning)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // We are OK to turn recovery update on, trigger it
+                        mHelper.setSystemProperties(UPDATE_RECOVERY_PROPERTY, "true");
+                        goBack();
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Updating recovery canceled, go back
+                        goBack();
+                    }
+                })
+                .show();
+    }
+
+    private void updateCmRecoveryOffWarning() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.update_recovery_title)
+                .setMessage(R.string.update_recovery_off_warning)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // We are OK to turn recovery update off, trigger it
+                        mHelper.setSystemProperties(UPDATE_RECOVERY_PROPERTY, "false");
+                        goBack();
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Not updating recovery canceled, go back
+                        goBack();
+                    }
+                })
+                .show();
     }
 
     /**
