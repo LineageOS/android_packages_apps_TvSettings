@@ -32,6 +32,13 @@ enum ActionType {
     KEYBOARD_OVERVIEW_CONFIGURE(R.string.title_configure, R.string.desc_configure_keyboard),
 
     /*
+     * Home
+     */
+    HOME_OVERVIEW(R.string.system_home),
+    HOME_RESET_DEFAULT(R.string.system_reset_default_home),
+    HOME_SETTINGS(R.string.system_home_settings),
+
+    /*
      * Display
      */
     DISPLAY_OVERVIEW(R.string.system_display),
