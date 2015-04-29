@@ -29,6 +29,9 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.PackageInfo;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.net.NetworkUtils;
+import android.net.wifi.IWifiManager;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -171,6 +174,8 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     private static final int ACTION_ENABLE_TERMINAL_OFF = ACTION_CM_BASE + 5;
     private static final int ACTION_ADVANCED_REBOOT_ON = ACTION_CM_BASE + 6;
     private static final int ACTION_ADVANCED_REBOOT_OFF = ACTION_CM_BASE + 7;
+    private static final int ACTION_ADB_OVER_NETWORK_ON = ACTION_CM_BASE + 8;
+    private static final int ACTION_ADB_OVER_NETWORK_OFF = ACTION_CM_BASE + 9;
 
     private IWindowManager mWindowManager;
     private WifiManager mWifiManager;
@@ -607,7 +612,17 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
         final Layout.Header header = new Layout.Header.Builder(res)
                 .title(R.string.system_cm)
                 .build();
-
+                if (getGlobalSettingBoolean(Settings.Global.ADB_ENABLED) == true) {
+                    header.add(new Layout.Header.Builder(res)
+                            .title(R.string.adb_over_network)
+                            .detailedDescription(R.string.adb_over_network_summary)
+                            .build()
+                            .setSelectionGroup(new Layout.SelectionGroup.Builder(2)
+                                    .add(onTitle, null, ACTION_ADB_OVER_NETWORK_ON)
+                                    .add(offTitle, null, ACTION_ADB_OVER_NETWORK_OFF)
+                                    .select(getAdbOverNetworkId())
+                                    .build()));
+                }
                 header.add(new Layout.Header.Builder(res)
                         .title(R.string.advanced_reboot_title)
                         .detailedDescription(R.string.advanced_reboot_summary)
@@ -904,6 +919,10 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                 break;
             case ACTION_ADVANCED_REBOOT_OFF:
                 setAdvancedReboot(false);
+                break;
+            case ACTION_ADB_OVER_NETWORK_ON:
+            case ACTION_ADB_OVER_NETWORK_OFF:
+                setAdbOverNetwork(id);
                 break;
         }
     }
@@ -1502,6 +1521,87 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
 
     public static boolean isPackageInstalled(Context context, String pkg) {
         return isPackageInstalled(context, pkg, true);
+    }
+
+    /**
+     * Adb over TCP/IP.
+     */
+    private void updateAdbOverNetwork() {
+        int port = CMSettings.Secure.getInt(getContentResolver(), CMSettings.Secure.ADB_PORT,  0);
+
+        WifiInfo wifiInfo = null;
+
+        if (port > 0) {
+            IWifiManager wifiManager = IWifiManager.Stub.asInterface(
+                    ServiceManager.getService(Context.WIFI_SERVICE));
+            try {
+                wifiInfo = wifiManager.getConnectionInfo();
+            } catch (RemoteException e) {
+                Log.e(TAG, "wifiManager, getConnectionInfo()", e);
+            }
+        }
+
+        if (wifiInfo != null) {
+            String hostAddress = NetworkUtils.intToInetAddress(
+                    wifiInfo.getIpAddress()).getHostAddress();
+            String summary = getString(R.string.adb_over_network_info) +hostAddress + ":" + String.valueOf(port);
+            Log.i(TAG, "Adb Over Network is: " + summary);
+            new AlertDialog.Builder(this)
+                    .setTitle(R.string.adb_over_network)
+                    .setMessage(summary)
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // Just need to display the adb over tcp/ip connect info
+                        }
+                    })
+                    .show();
+        }
+    }
+
+    private void adbNetworkWarning() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.adb_over_network)
+                .setMessage(R.string.adb_over_network_warning)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // We are OK to enable adb over network, trigger it
+                        CMSettings.Secure.putInt(getContentResolver(),
+                                CMSettings.Secure.ADB_PORT, 5555);
+                        updateAdbOverNetwork();
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Enabling adb over network canceled
+                    }
+                })
+                .show();
+    }
+
+    private int getAdbOverNetworkId() {
+		int value = CMSettings.Secure.getInt(getContentResolver(),
+                CMSettings.Secure.ADB_PORT,  0);
+        switch (value) {
+            case 5555:
+                return ACTION_ADB_OVER_NETWORK_ON;
+            case -1:
+            default:
+                return ACTION_ADB_OVER_NETWORK_OFF;
+        }
+    }
+
+    private void setAdbOverNetwork(int action) {
+        switch (action) {
+            case ACTION_ADB_OVER_NETWORK_ON:
+                adbNetworkWarning();
+                break;
+            case ACTION_ADB_OVER_NETWORK_OFF:
+                CMSettings.Secure.putInt(getContentResolver(), CMSettings.Secure.ADB_PORT, -1);
+                break;
+        }
     }
 
     private void tryReboot() {
