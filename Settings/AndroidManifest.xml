@@ -303,6 +303,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".system.HomeActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".system.LocationActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" >
