@@ -250,7 +250,7 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
             // TODO remove once we confirm it's not needed
             removeRestrictedUser();
             LockPatternUtils lpu = new LockPatternUtils(getActivity());
-            lpu.clearLock();
+            lpu.clearLock(UserHandle.myUserId());
         } else if (ACTION_RESTRICTED_PROFILE_DELETE_CANCEL.equals(action.getKey())) {
             // TODO remove once we confirm it's not needed
             getActivity().onBackPressed();
@@ -305,7 +305,8 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
     // RestrictedProfilePinDialogFragment.Callback methods
     @Override
     public void saveLockPassword(String pin, int quality) {
-        new LockPatternUtils(getActivity()).saveLockPassword(pin, null, quality);
+        new LockPatternUtils(getActivity()).saveLockPassword(pin, null, quality,
+                UserHandle.myUserId());
     }
 
     @Override
@@ -344,7 +345,7 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
             case PIN_MODE_RESTRICTED_PROFILE_DELETE:
                 if (success) {
                     removeRestrictedUser();
-                    new LockPatternUtils(getActivity()).clearLock();
+                    new LockPatternUtils(getActivity()).clearLock(UserHandle.myUserId());
                 }
                 break;
         }
@@ -411,7 +412,8 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
     }
 
     private static boolean hasLockscreenSecurity(LockPatternUtils lpu) {
-        return lpu.isLockPasswordEnabled() || lpu.isLockPatternEnabled();
+        return lpu.isLockPasswordEnabled(UserHandle.myUserId())
+                || lpu.isLockPatternEnabled(UserHandle.myUserId());
     }
 
     private void launchChooseLockscreen() {
