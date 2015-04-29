@@ -36,6 +36,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
+import android.net.NetworkUtils;
+import android.net.wifi.IWifiManager;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -158,6 +161,8 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                 }
                 mActions.add(ActionType.DEVELOPER_CM_UPDATE_RECOVERY.toAction(mResources,
                         getUpdateCmRecoveryLabel()));
+                mActions.add(ActionType.DEVELOPER_CM_ADB_OVER_NETWORK.toAction(mResources,
+                        updateAdbOverNetwork()));
                 break;
             case DEVELOPER_CM_ALLOW_ROOT_ACCESS:
                 mActions = Action.createActionsFromArrays(
@@ -171,6 +176,10 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                         mResources.getStringArray(R.array.update_cm_recovery_values),
                         mResources.getStringArray(R.array.update_cm_recovery_entries), 1,
                         getUpdateCmRecoveryValue());
+                break;
+            case DEVELOPER_CM_ADB_OVER_NETWORK:
+                mActions.add(ActionType.DEVELOPER_CM_ADB_OVER_NETWORK.toAction(mResources,
+                        updateAdbOverNetwork()));
                 break;
             case DEVELOPER_INPUT:
                 mActions.add(ActionType.DEVELOPER_INPUT_SHOW_TOUCHES.toAction(
@@ -334,6 +343,9 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             case DEVELOPER_CM_UPDATE_RECOVERY:
                 setView(R.string.update_recovery_title, R.string.system_cm, 0, 0);
                 break;
+            case DEVELOPER_CM_ADB_OVER_NETWORK:
+                setView(R.string.adb_over_network, R.string.system_cm, 0, 0);
+                break;
             case DEVELOPER_INPUT:
                 setView(R.string.system_input, R.string.system_developer_options, 0, 0);
                 break;
@@ -424,6 +436,16 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                     updateCmRecoveryOnWarning();
                 } else {
                     updateCmRecoveryOffWarning();
+                }
+                return;
+            case DEVELOPER_CM_ADB_OVER_NETWORK:
+                String adbNetworkValue = mHelper.getSecureIntSetting(Settings.Secure.ADB_PORT, "0");
+                if (!"5555".equals(adbNetworkValue)) {
+                    adbNetworkWarning();
+                } else {
+                    mHelper.setSecureIntValueSetting(Settings.Secure.ADB_PORT, "-1");
+                    updateAdbOverNetwork();
+                    goBack();
                 }
                 return;
             case DEVELOPER_DEBUGGING_SELECT_DEBUG_APP:
@@ -976,6 +998,55 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // Not updating recovery canceled, go back
+                        goBack();
+                    }
+                })
+                .show();
+    }
+
+    /**
+     * Adb over TCP/IP.
+     */
+    private String updateAdbOverNetwork() {
+        String port = mHelper.getSecureIntSetting(Settings.Secure.ADB_PORT, "0");
+        String summary = getString(R.string.adb_over_network_summary);
+
+        WifiInfo wifiInfo = null;
+
+        if (Integer.valueOf(port) > 0) {
+            IWifiManager wifiManager = IWifiManager.Stub.asInterface(
+                    ServiceManager.getService(Context.WIFI_SERVICE));
+            try {
+                wifiInfo = wifiManager.getConnectionInfo();
+            } catch (RemoteException e) {
+                Log.e(TAG, "wifiManager, getConnectionInfo()", e);
+            }
+        }
+
+        if (wifiInfo != null) {
+            String hostAddress = NetworkUtils.intToInetAddress(
+                    wifiInfo.getIpAddress()).getHostAddress();
+            summary = hostAddress + ":" + port;
+        }
+        return summary;
+    }
+
+    private void adbNetworkWarning() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.adb_over_network)
+                .setMessage(R.string.adb_over_network_warning)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // We are OK to enable adb over network, trigger it
+                        mHelper.setSecureIntValueSetting(Settings.Secure.ADB_PORT, "5555");
+                        goBack();
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Enabling adb orver network canceled, go back
                         goBack();
                     }
                 })
