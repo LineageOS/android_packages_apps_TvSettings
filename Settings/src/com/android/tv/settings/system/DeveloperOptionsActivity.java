@@ -24,6 +24,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.PackageInfo;
+import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.net.wifi.WifiManager;
 import android.os.Build;
@@ -70,6 +74,7 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     private static final String ADB_ROOT_PROPERTY = "service.adb.root";
     private static final String ROOT_ACCESS_PROPERTY = "persist.sys.root_access";
     private static String setting = SystemProperties.get(ROOT_ACCESS_PROPERTY, "0");
+    private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
 
     private static final int ACTION_BASE_MASK = -1 << 20;
 
@@ -160,6 +165,8 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     private static final int ACTION_ROOT_ACCESS_APPS = ACTION_CM_BASE + 1;
     private static final int ACTION_ROOT_ACCESS_ADB = ACTION_CM_BASE + 2;
     private static final int ACTION_ROOT_ACCESS_ALL = ACTION_CM_BASE + 3;
+    private static final int ACTION_ENABLE_TERMINAL_ON = ACTION_CM_BASE + 4;
+    private static final int ACTION_ENABLE_TERMINAL_OFF = ACTION_CM_BASE + 5;
 
     private IWindowManager mWindowManager;
     private WifiManager mWifiManager;
@@ -590,6 +597,9 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     private Layout.Header getCmHeader() {
         final Resources res = getResources();
 
+        final String onTitle = getString(R.string.action_on_description);
+        final String offTitle = getString(R.string.action_off_description);
+
         final Layout.Header header = new Layout.Header.Builder(res)
                 .title(R.string.system_cm)
                 .build();
@@ -610,6 +620,17 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                                             ACTION_ROOT_ACCESS_ALL)
                                     .select(getRootAccessId())
                                     .build()));
+                }
+                if (isPackageInstalled(this, TERMINAL_APP_PACKAGE)) {
+                header.add(new Layout.Header.Builder(res)
+                        .title(R.string.enable_terminal_title)
+                        .detailedDescription(R.string.enable_terminal_summary)
+                        .build()
+                        .setSelectionGroup(new Layout.SelectionGroup.Builder(2)
+                                .add(onTitle, null, ACTION_ENABLE_TERMINAL_ON)
+                                .add(offTitle, null, ACTION_ENABLE_TERMINAL_OFF)
+                                .select(getEnableTerminalId())
+                                .build()));
                 }
         return header;
     }
@@ -858,6 +879,12 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
             case ACTION_ROOT_ACCESS_ADB:
             case ACTION_ROOT_ACCESS_ALL:
                 setRootAccessByAction(id);
+                break;
+            case ACTION_ENABLE_TERMINAL_ON:
+                setEnableTerminal(true);
+                break;
+            case ACTION_ENABLE_TERMINAL_OFF:
+                setEnableTerminal(false);
                 break;
         }
     }
@@ -1412,6 +1439,42 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                     }
                 })
                 .show();
+    }
+
+    /**
+     * Enable Terminal app.
+     */
+    private int getEnableTerminalId() {
+		final PackageManager pm = this.getPackageManager();
+        return pm.getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
+                == PackageManager.COMPONENT_ENABLED_STATE_ENABLED ?
+                ACTION_ENABLE_TERMINAL_ON : ACTION_ENABLE_TERMINAL_OFF;
+    }
+
+    private void setEnableTerminal(boolean value) {
+        final PackageManager pm = this.getPackageManager();
+            pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,
+                    value ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                            : PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, 0);
+    }
+
+    public static boolean isPackageInstalled(Context context, String pkg, boolean ignoreState) {
+        if (pkg != null) {
+            try {
+                PackageInfo pi = context.getPackageManager().getPackageInfo(pkg, 0);
+                if (!pi.applicationInfo.enabled && !ignoreState) {
+                    return false;
+                }
+            } catch (NameNotFoundException e) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean isPackageInstalled(Context context, String pkg) {
+        return isPackageInstalled(context, pkg, true);
     }
 
     private void tryReboot() {
