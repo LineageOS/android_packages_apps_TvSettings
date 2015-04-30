@@ -75,6 +75,8 @@ enum ActionType {
     DEVELOPER_CM_UPDATE_RECOVERY(R.string.update_recovery_title,
             R.string.update_recovery_off_summary),
     DEVELOPER_CM_ADB_OVER_NETWORK(R.string.adb_over_network, R.string.adb_over_network_summary),
+    DEVELOPER_CM_ENABLE_TERMINAL(R.string.enable_terminal_title,
+            R.string.enable_terminal_summary),
     DEVELOPER_INPUT(R.string.system_input),
     DEVELOPER_DRAWING(R.string.system_drawing),
     DEVELOPER_MONITORING(R.string.system_monitoring),

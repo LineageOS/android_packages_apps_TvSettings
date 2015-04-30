@@ -36,6 +36,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.PackageInfo;
+import android.content.pm.ResolveInfo;
 import android.net.NetworkUtils;
 import android.net.wifi.IWifiManager;
 import android.net.wifi.WifiInfo;
@@ -85,6 +89,7 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
     private static final String ADB_ROOT_PROPERTY = "service.adb.root";
     private static final String ROOT_ACCESS_PROPERTY = "persist.sys.root_access";
     private static final String UPDATE_RECOVERY_PROPERTY = "persist.sys.recovery_update";
+    private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
 
     private static SettingsHelper mHelper;
     private ContentResolver mContentResolver;
@@ -163,6 +168,10 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                         getUpdateCmRecoveryLabel()));
                 mActions.add(ActionType.DEVELOPER_CM_ADB_OVER_NETWORK.toAction(mResources,
                         updateAdbOverNetwork()));
+                if (isPackageInstalled(this, TERMINAL_APP_PACKAGE)) {
+                    mActions.add(ActionType.DEVELOPER_CM_ENABLE_TERMINAL.toAction(mResources,
+                    getEnableTerminalValue()));
+                }
                 break;
             case DEVELOPER_CM_ALLOW_ROOT_ACCESS:
                 mActions = Action.createActionsFromArrays(
@@ -180,6 +189,12 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             case DEVELOPER_CM_ADB_OVER_NETWORK:
                 mActions.add(ActionType.DEVELOPER_CM_ADB_OVER_NETWORK.toAction(mResources,
                         updateAdbOverNetworkSummary()));
+                break;
+            case DEVELOPER_CM_ENABLE_TERMINAL:
+                mActions = Action.createActionsFromArrays(
+                        mResources.getStringArray(R.array.enable_terminal_values),
+                        mResources.getStringArray(R.array.enable_terminal_entries), 1,
+                        getEnableTerminalValue());
                 break;
             case DEVELOPER_INPUT:
                 mActions.add(ActionType.DEVELOPER_INPUT_SHOW_TOUCHES.toAction(
@@ -346,6 +361,9 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             case DEVELOPER_CM_ADB_OVER_NETWORK:
                 setView(R.string.adb_over_network, R.string.system_cm, 0, 0);
                 break;
+            case DEVELOPER_CM_ENABLE_TERMINAL:
+                setView(R.string.enable_terminal_title, R.string.system_cm, 0, 0);
+                break;
             case DEVELOPER_INPUT:
                 setView(R.string.system_input, R.string.system_developer_options, 0, 0);
                 break;
@@ -447,6 +465,10 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                     updateAdbOverNetwork();
                     goBack();
                 }
+                return;
+            case DEVELOPER_CM_ENABLE_TERMINAL:
+                enableTerminal();
+                goBack();
                 return;
             case DEVELOPER_DEBUGGING_SELECT_DEBUG_APP:
                 setDebugApp(key);
@@ -1061,6 +1083,66 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                     }
                 })
                 .show();
+    }
+
+    /**
+     * Enable Terminal app.
+     */
+    private void enableTerminal() {
+        final PackageManager pm = this.getPackageManager();
+        if (pm.getApplicationEnabledSetting(TERMINAL_APP_PACKAGE) ==
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
+            pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED, 0);
+        } else {
+            pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED, 0);
+        }
+        return;
+    }
+
+    private String getEnableTerminalValue() {
+        final PackageManager pm = this.getPackageManager();
+        String value = getString(R.string.enable_terminal_on);
+        if (pm.getApplicationEnabledSetting(TERMINAL_APP_PACKAGE) ==
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
+            value = getString(R.string.enable_terminal_off);
+        }
+        return value;
+    }
+
+    private String enableTerminalSummary() {
+        // This is a little ugly, but this shouldn't be called much.
+        ArrayList<Action> actions = Action.createActionsFromArrays(
+                mResources.getStringArray(R.array.enable_terminal_values),
+                mResources.getStringArray(R.array.enable_terminal_entries), 1,
+                getEnableTerminalValue());
+
+        for (Action action : actions) {
+            if (action.isChecked()) {
+                return action.getTitle();
+            }
+        }
+        return actions.get(0).getTitle();
+    }
+
+    public static boolean isPackageInstalled(Context context, String pkg, boolean ignoreState) {
+        if (pkg != null) {
+            try {
+                PackageInfo pi = context.getPackageManager().getPackageInfo(pkg, 0);
+                if (!pi.applicationInfo.enabled && !ignoreState) {
+                    return false;
+                }
+            } catch (NameNotFoundException e) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean isPackageInstalled(Context context, String pkg) {
+        return isPackageInstalled(context, pkg, true);
     }
 
     /**
