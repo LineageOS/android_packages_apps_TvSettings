@@ -174,6 +174,10 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                     mActions.add(ActionType.DEVELOPER_CM_ENABLE_TERMINAL.toAction(mResources,
                     getEnableTerminalValue()));
                 }
+                mActions.add(ActionType.DEVELOPER_CM_ADVANCED_REBOOT.toAction(mResources,
+                        mHelper.getStatusStringFromBoolean(
+                                mHelper.getSecureIntValueSettingToBoolean(
+                                        Settings.Secure.ADVANCED_REBOOT))));
                 break;
             case DEVELOPER_CM_ALLOW_ROOT_ACCESS:
                 mActions = Action.createActionsFromArrays(
@@ -215,6 +219,7 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             case DEVELOPER_DEBUGGING_WIFI_VERBOSE_LOGGING:
             case DEVELOPER_DEBUGGING_ALLOW_MOCK_LOCATIONS:
             case DEVELOPER_DEBUGGING_WAIT_FOR_DEBUGGER:
+            case DEVELOPER_CM_ADVANCED_REBOOT:
             case DEVELOPER_INPUT_SHOW_TOUCHES:
             case DEVELOPER_INPUT_POINTER_LOCATION:
             case DEVELOPER_DRAWING_SHOW_GPU_VIEW_UPDATES:
@@ -377,6 +382,7 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             case DEVELOPER_DEBUGGING_WIFI_VERBOSE_LOGGING:
             case DEVELOPER_DEBUGGING_ALLOW_MOCK_LOCATIONS:
             case DEVELOPER_DEBUGGING_WAIT_FOR_DEBUGGER:
+            case DEVELOPER_CM_ADVANCED_REBOOT:
             case DEVELOPER_INPUT_SHOW_TOUCHES:
             case DEVELOPER_INPUT_POINTER_LOCATION:
             case DEVELOPER_DRAWING_SHOW_GPU_VIEW_UPDATES:
@@ -566,6 +572,8 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                 BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
                 adapter.configHciSnoopLog(enable);
                 break;
+            case DEVELOPER_CM_ADVANCED_REBOOT:
+                mHelper.setSecureIntSetting(Settings.Secure.ADVANCED_REBOOT, enable);
             case DEVELOPER_DEBUGGING_USB_DEBUGGING:
                 mHelper.setGlobalIntSetting(Settings.Global.ADB_ENABLED, enable);
                 break;
@@ -636,6 +644,8 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                     1;
             case DEVELOPER_GENERAL_BT_HCI_LOG:
                 return mHelper.getSecureIntValueSettingToBoolean(Settings.Secure.BLUETOOTH_HCI_LOG);
+            case DEVELOPER_CM_ADVANCED_REBOOT:
+                return mHelper.getSecureIntValueSettingToBoolean(Settings.Secure.ADVANCED_REBOOT);
             case DEVELOPER_DEBUGGING_USB_DEBUGGING:
                 return mHelper.getGlobalIntSettingToInt(Settings.Global.ADB_ENABLED) == 1;
             case DEVELOPER_DEBUGGING_ALLOW_MOCK_LOCATIONS:
