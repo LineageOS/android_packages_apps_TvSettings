@@ -451,6 +451,38 @@
     <string name="storage_media_misc_usage">Misc.</string>
     <!-- Storage settings title. Displayed as a title when showing the total usage of all cached data on device. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
     <string name="storage_media_cache_usage">Cached data</string>
+    <!-- Storage settings eject action [CHAR LIMIT=50] -->
+    <string name="storage_eject">Eject</string>
+    <!-- Storage settings erase and format action [CHAR LIMIT=50] -->
+    <string name="storage_format">Erase &amp; format</string>
+    <!-- Storage settings format for internal storage action [CHAR LIMIT=50] -->
+    <string name="storage_format_for_private">Format as device storage</string>
+
+    <!-- Toast informing that storage mount operation was successful. [CHAR LIMIT=64]-->
+    <string name="storage_mount_success"><xliff:g id="name" example="SD card">%1$s</xliff:g> is mounted</string>
+    <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=64]-->
+    <string name="storage_mount_failure">Couldn\'t mount <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
+
+    <!-- Toast informing that storage unmount operation was successful. [CHAR LIMIT=64]-->
+    <string name="storage_unmount_success"><xliff:g id="name" example="SD card">%1$s</xliff:g> is safely ejected</string>
+    <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=64]-->
+    <string name="storage_unmount_failure">Couldn\'t safely eject <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
+
+    <!-- Toast informing that storage format operation was successful. [CHAR LIMIT=64]-->
+    <string name="storage_format_success"><xliff:g id="name" example="SD card">%1$s</xliff:g> is formatted</string>
+    <!-- Toast informing that storage format operation failed. [CHAR LIMIT=64]-->
+    <string name="storage_format_failure">Couldn\'t format <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
+
+    <!-- Title for wizard screen for formatting storage as internal [CHAR LIMIT=64] -->
+    <string name="storage_wizard_format_internal_title">Format as internal storage</string>
+    <!-- Description for wizard screen for formatting storage as internal [CHAR LIMIT=NONE] -->
+    <string name="storage_wizard_format_internal_description">This requires the USB drive to be formatted to make it secure. After securely formatting, this drive will only work with this device. Formatting erases all data currently stored on the drive. To avoid losing the data, consider backing it up.</string>
+
+    <!-- Format action for wizard screen for formatting storage [CHAR LIMIT=50] -->
+    <string name="storage_wizard_format_action">Format</string>
+
+    <!-- Learn more action title [CHAR_LIMIT=50] -->
+    <string name="learn_more_action">Learn more</string>
 
     <!-- Action to retry WPS scanning [CHAR LIMIT=50] -->
     <string name="wifi_wps_retry_scan">Retry</string>
