@@ -34,6 +34,7 @@ import android.os.storage.StorageEventListener;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.text.format.Formatter;
+import android.util.ArrayMap;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -50,10 +51,10 @@ import com.android.tv.settings.dialog.Layout.Status;
 import com.android.tv.settings.dialog.Layout.StringGetter;
 import com.android.tv.settings.dialog.SettingsLayoutActivity;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Activity to view storage consumption and factory reset device.
@@ -93,7 +94,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
 
     private StorageManager mStorageManager;
 
-    private final List<StorageLayoutGetter> mStorageLayoutGetters = new ArrayList<>();
+    private final Map<String, StorageLayoutGetter> mStorageLayoutGetters = new ArrayMap<>();
 
     private final StorageEventListener mStorageListener = new StorageEventListener() {
         @Override
@@ -102,6 +103,10 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                 case VolumeInfo.TYPE_PRIVATE:
                 case VolumeInfo.TYPE_PUBLIC:
                     mStorageHeadersGetter.refreshView();
+                    StorageLayoutGetter getter = mStorageLayoutGetters.get(vol.getId());
+                    if (getter != null) {
+                        getter.onVolumeUpdated();
+                    }
                     break;
                 default:
                     break;
@@ -120,7 +125,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     protected void onResume() {
         super.onResume();
         mStorageManager.registerListener(mStorageListener);
-        for (StorageLayoutGetter getter : mStorageLayoutGetters) {
+        for (StorageLayoutGetter getter : mStorageLayoutGetters.values()) {
             getter.startListening();
         }
     }
@@ -128,7 +133,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     @Override
     protected void onPause() {
         mStorageManager.unregisterListener(mStorageListener);
-        for (StorageLayoutGetter getter : mStorageLayoutGetters) {
+        for (StorageLayoutGetter getter : mStorageLayoutGetters.values()) {
             getter.stopListening();
         }
         super.onPause();
@@ -156,25 +161,21 @@ public class StorageResetActivity extends SettingsLayoutActivity {
             final List<VolumeInfo> volumes = mStorageManager.getVolumes();
             Collections.sort(volumes, VolumeInfo.getDescriptionComparator());
 
-            if (isResumed()) {
-                for (StorageLayoutGetter getter : mStorageLayoutGetters) {
-                    getter.stopListening();
-                }
-            }
-            mStorageLayoutGetters.clear();
-
-
             for (VolumeInfo vol : volumes) {
                 if (vol.getType() != VolumeInfo.TYPE_PRIVATE
                         && vol.getType() != VolumeInfo.TYPE_PUBLIC) {
                     continue;
                 }
-                final StorageLayoutGetter getter = new StorageLayoutGetter(vol);
-                mStorageLayoutGetters.add(getter);
-                layout.add(getter);
-                if (isResumed()) {
-                    getter.startListening();
+                final String volId = vol.getId();
+                StorageLayoutGetter getter = mStorageLayoutGetters.get(volId);
+                if (getter == null) {
+                    getter = new StorageLayoutGetter(vol);
+                    mStorageLayoutGetters.put(volId, getter);
+                    if (isResumed()) {
+                        getter.startListening();
+                    }
                 }
+                layout.add(getter);
             }
             return layout;
         }
@@ -182,8 +183,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
 
     private class StorageLayoutGetter extends Layout.LayoutGetter {
 
-        private final VolumeInfo mVolume;
-        private final VolumeInfo mSharedVolume;
+        private final String mVolumeId;
         private final String mVolumeDescription;
 
         private StorageMeasurement mMeasure;
@@ -208,9 +208,8 @@ public class StorageResetActivity extends SettingsLayoutActivity {
         };
 
         public StorageLayoutGetter(VolumeInfo volume) {
-            mVolume = volume;
-            mSharedVolume = mStorageManager.findEmulatedForPrivate(mVolume);
-            mVolumeDescription = mStorageManager.getBestVolumeDescription(mVolume);
+            mVolumeId = volume.getId();
+            mVolumeDescription = mStorageManager.getBestVolumeDescription(volume);
         }
 
         @Override
@@ -222,10 +221,17 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                     .build();
 
             final Bundle data = new Bundle(1);
-            data.putString(VolumeInfo.EXTRA_VOLUME_ID, mVolume.getId());
+            data.putString(VolumeInfo.EXTRA_VOLUME_ID, mVolumeId);
 
-            if (mVolume.getType() == VolumeInfo.TYPE_PRIVATE) {
-                if (!VolumeInfo.ID_PRIVATE_INTERNAL.equals(mVolume.getId())) {
+            final VolumeInfo volume = mStorageManager.findVolumeById(mVolumeId);
+
+            if (volume == null) {
+                    header
+                            .add(new Status.Builder(res)
+                                    .title(R.string.storage_not_connected)
+                                    .build());
+            } else if (volume.getType() == VolumeInfo.TYPE_PRIVATE) {
+                if (!VolumeInfo.ID_PRIVATE_INTERNAL.equals(mVolumeId)) {
                     header
                             .add(new Action.Builder(res, ACTION_EJECT)
                                     .title(R.string.storage_eject)
@@ -274,7 +280,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                                 .description(mAvailSize)
                                 .build());
             } else {
-                if (mVolume.getState() == VolumeInfo.STATE_UNMOUNTED) {
+                if (volume.getState() == VolumeInfo.STATE_UNMOUNTED) {
                     header
                             .add(new Status.Builder(res)
                                     .title(getString(R.string.storage_unmount_success,
@@ -305,14 +311,27 @@ public class StorageResetActivity extends SettingsLayoutActivity {
             return new Layout().add(header);
         }
 
+        public void onVolumeUpdated() {
+            stopListening();
+            startListening();
+            refreshView();
+        }
+
         public void startListening() {
-            mMeasure = new StorageMeasurement(StorageResetActivity.this, mVolume, mSharedVolume);
-            mMeasure.setReceiver(mReceiver);
-            mMeasure.forceMeasure();
+            final VolumeInfo volume = mStorageManager.findVolumeById(mVolumeId);
+            if (volume != null && volume.isMountedReadable()) {
+                final VolumeInfo sharedVolume = mStorageManager.findEmulatedForPrivate(volume);
+                mMeasure = new StorageMeasurement(StorageResetActivity.this, volume,
+                        sharedVolume);
+                mMeasure.setReceiver(mReceiver);
+                mMeasure.forceMeasure();
+            }
         }
 
         public void stopListening() {
-            mMeasure.onDestroy();
+            if (mMeasure != null) {
+                mMeasure.onDestroy();
+            }
         }
 
         private void updateDetails(MeasurementDetails details) {
