@@ -51,6 +51,7 @@ import com.android.tv.settings.dialog.Layout.Status;
 import com.android.tv.settings.dialog.Layout.StringGetter;
 import com.android.tv.settings.dialog.SettingsLayoutActivity;
 
+import java.io.File;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -95,6 +96,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     private StorageManager mStorageManager;
 
     private final Map<String, StorageLayoutGetter> mStorageLayoutGetters = new ArrayMap<>();
+    private final Map<String, SizeStringGetter> mStorageDescriptionGetters = new ArrayMap<>();
 
     private final StorageEventListener mStorageListener = new StorageEventListener() {
         @Override
@@ -154,6 +156,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     private final Layout.LayoutGetter mStorageHeadersGetter = new Layout.LayoutGetter() {
         @Override
         public Layout get() {
+            final Resources res = getResources();
             final Layout layout = new Layout();
             if (mStorageManager == null) {
                 return layout;
@@ -167,15 +170,29 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                     continue;
                 }
                 final String volId = vol.getId();
-                StorageLayoutGetter getter = mStorageLayoutGetters.get(volId);
-                if (getter == null) {
-                    getter = new StorageLayoutGetter(vol);
-                    mStorageLayoutGetters.put(volId, getter);
+                StorageLayoutGetter storageGetter = mStorageLayoutGetters.get(volId);
+                if (storageGetter == null) {
+                    storageGetter = new StorageLayoutGetter(vol);
+                    mStorageLayoutGetters.put(volId, storageGetter);
                     if (isResumed()) {
-                        getter.startListening();
+                        storageGetter.startListening();
                     }
                 }
-                layout.add(getter);
+                SizeStringGetter sizeGetter = mStorageDescriptionGetters.get(volId);
+                if (sizeGetter == null) {
+                    sizeGetter = new SizeStringGetter();
+                    mStorageDescriptionGetters.put(volId, sizeGetter);
+                }
+                final File path = vol.getPath();
+                if (path != null) {
+                    // TODO: something more dynamic here
+                    sizeGetter.setSize(path.getTotalSpace());
+                }
+                final Header header = new Header.Builder(res)
+                        .title(mStorageManager.getBestVolumeDescription(vol))
+                        .description(sizeGetter)
+                        .build().add(storageGetter);
+                layout.add(header);
             }
             return layout;
         }
@@ -194,7 +211,6 @@ public class StorageResetActivity extends SettingsLayoutActivity {
         private final SizeStringGetter mCacheSize = new SizeStringGetter();
         private final SizeStringGetter mMiscSize = new SizeStringGetter();
         private final SizeStringGetter mAvailSize = new SizeStringGetter();
-        private final SizeStringGetter mStorageDescription = new SizeStringGetter();
 
         private final MeasurementReceiver mReceiver = new MeasurementReceiver() {
 
@@ -215,10 +231,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
         @Override
         public Layout get() {
             final Resources res = getResources();
-            final Header header = new Header.Builder(res)
-                    .title(mVolumeDescription)
-                    .description(mStorageDescription)
-                    .build();
+            final Layout layout = new Layout();
 
             final Bundle data = new Bundle(1);
             data.putString(VolumeInfo.EXTRA_VOLUME_ID, mVolumeId);
@@ -226,13 +239,13 @@ public class StorageResetActivity extends SettingsLayoutActivity {
             final VolumeInfo volume = mStorageManager.findVolumeById(mVolumeId);
 
             if (volume == null) {
-                    header
-                            .add(new Status.Builder(res)
-                                    .title(R.string.storage_not_connected)
-                                    .build());
+                layout
+                        .add(new Status.Builder(res)
+                                .title(R.string.storage_not_connected)
+                                .build());
             } else if (volume.getType() == VolumeInfo.TYPE_PRIVATE) {
                 if (!VolumeInfo.ID_PRIVATE_INTERNAL.equals(mVolumeId)) {
-                    header
+                    layout
                             .add(new Action.Builder(res, ACTION_EJECT)
                                     .title(R.string.storage_eject)
                                     .data(data)
@@ -242,7 +255,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                                     .data(data)
                                     .build());
                 }
-                header
+                layout
                         .add(new Action.Builder(res,
                                 new Intent(StorageResetActivity.this, AppsActivity.class))
                                 .title(R.string.storage_apps_usage)
@@ -281,13 +294,13 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                                 .build());
             } else {
                 if (volume.getState() == VolumeInfo.STATE_UNMOUNTED) {
-                    header
+                    layout
                             .add(new Status.Builder(res)
                                     .title(getString(R.string.storage_unmount_success,
                                             mVolumeDescription))
                                     .build());
                 } else {
-                    header
+                    layout
                             .add(new Action.Builder(res, ACTION_EJECT)
                                     .title(R.string.storage_eject)
                                     .data(data)
@@ -308,7 +321,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                                     .build());
                 }
             }
-            return new Layout().add(header);
+            return layout;
         }
 
         public void onVolumeUpdated() {
@@ -351,7 +364,6 @@ public class StorageResetActivity extends SettingsLayoutActivity {
             mDownloadsSize.setSize(downloadsSize);
             mCacheSize.setSize(details.cacheSize);
             mMiscSize.setSize(details.miscSize);
-            mStorageDescription.setSize(details.totalSize);
         }
     }
 
