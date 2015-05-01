@@ -142,6 +142,10 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
             case DEVELOPER_DEBUGGING:
                 mActions.add(ActionType.DEVELOPER_DEBUGGING_USB_DEBUGGING.toAction(
                         mResources, mHelper.getGlobalIntSetting(Settings.Global.ADB_ENABLED)));
+                if (mHelper.getGlobalIntSettingToInt(Settings.Global.ADB_ENABLED) == 1) {
+                    mActions.add(ActionType.DEVELOPER_CM_ADB_OVER_NETWORK.toAction(mResources,
+                            updateAdbOverNetwork()));
+                }
                 mActions.add(ActionType.DEVELOPER_DEBUGGING_ALLOW_MOCK_LOCATIONS.toAction(
                         mResources,
                         mHelper.getSecureStatusIntSetting(Settings.Secure.ALLOW_MOCK_LOCATION)));
@@ -166,8 +170,6 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                 }
                 mActions.add(ActionType.DEVELOPER_CM_UPDATE_RECOVERY.toAction(mResources,
                         getUpdateCmRecoveryLabel()));
-                mActions.add(ActionType.DEVELOPER_CM_ADB_OVER_NETWORK.toAction(mResources,
-                        updateAdbOverNetwork()));
                 if (isPackageInstalled(this, TERMINAL_APP_PACKAGE)) {
                     mActions.add(ActionType.DEVELOPER_CM_ENABLE_TERMINAL.toAction(mResources,
                     getEnableTerminalValue()));
@@ -359,7 +361,7 @@ public class DeveloperOptionsActivity extends BaseSettingsActivity
                 setView(R.string.update_recovery_title, R.string.system_cm, 0, 0);
                 break;
             case DEVELOPER_CM_ADB_OVER_NETWORK:
-                setView(R.string.adb_over_network, R.string.system_cm, 0, 0);
+                setView(R.string.adb_over_network, R.string.system_debugging, 0, 0);
                 break;
             case DEVELOPER_CM_ENABLE_TERMINAL:
                 setView(R.string.enable_terminal_title, R.string.system_cm, 0, 0);
