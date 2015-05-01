@@ -20,24 +20,29 @@ import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.storage.StorageEventListener;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.text.format.Formatter;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.android.settingslib.deviceinfo.StorageMeasurement;
 import com.android.settingslib.deviceinfo.StorageMeasurement.MeasurementDetails;
 import com.android.settingslib.deviceinfo.StorageMeasurement.MeasurementReceiver;
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.apps.AppsActivity;
+import com.android.tv.settings.device.storage.FormatAsInternalStepFragment;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.Layout.Action;
 import com.android.tv.settings.dialog.Layout.Header;
@@ -60,6 +65,9 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     private static final int ACTION_RESET_DEVICE = 1;
     private static final int ACTION_CANCEL = 2;
     private static final int ACTION_CLEAR_CACHE = 3;
+    private static final int ACTION_EJECT = 4;
+    private static final int ACTION_ERASE_PRIVATE = 5;
+    private static final int ACTION_ERASE_PUBLIC = 6;
 
     /**
      * Support for shutdown-after-reset. If our launch intent has a true value for
@@ -176,6 +184,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
 
         private final VolumeInfo mVolume;
         private final VolumeInfo mSharedVolume;
+        private final String mVolumeDescription;
 
         private StorageMeasurement mMeasure;
         private final SizeStringGetter mAppsSize = new SizeStringGetter();
@@ -201,20 +210,35 @@ public class StorageResetActivity extends SettingsLayoutActivity {
         public StorageLayoutGetter(VolumeInfo volume) {
             mVolume = volume;
             mSharedVolume = mStorageManager.findEmulatedForPrivate(mVolume);
+            mVolumeDescription = mStorageManager.getBestVolumeDescription(mVolume);
         }
 
         @Override
         public Layout get() {
-            final Layout layout = new Layout();
             final Resources res = getResources();
-            final Intent appsIntent = new Intent(StorageResetActivity.this, AppsActivity.class);
             final Header header = new Header.Builder(res)
-                    .title(mStorageManager.getBestVolumeDescription(mVolume))
+                    .title(mVolumeDescription)
                     .description(mStorageDescription)
                     .build();
+
+            final Bundle data = new Bundle(1);
+            data.putString(VolumeInfo.EXTRA_VOLUME_ID, mVolume.getId());
+
             if (mVolume.getType() == VolumeInfo.TYPE_PRIVATE) {
+                if (!VolumeInfo.ID_PRIVATE_INTERNAL.equals(mVolume.getId())) {
+                    header
+                            .add(new Action.Builder(res, ACTION_EJECT)
+                                    .title(R.string.storage_eject)
+                                    .data(data)
+                                    .build())
+                            .add(new Action.Builder(res, ACTION_ERASE_PRIVATE)
+                                    .title(R.string.storage_format)
+                                    .data(data)
+                                    .build());
+                }
                 header
-                        .add(new Action.Builder(res, appsIntent)
+                        .add(new Action.Builder(res,
+                                new Intent(StorageResetActivity.this, AppsActivity.class))
                                 .title(R.string.storage_apps_usage)
                                 .icon(R.drawable.storage_indicator_apps)
                                 .description(mAppsSize)
@@ -250,20 +274,35 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                                 .description(mAvailSize)
                                 .build());
             } else {
-                header
-                        .add(new Status.Builder(res)
-                                .title(R.string.storage_media_misc_usage)
-                                .icon(R.drawable.storage_indicator_misc)
-                                .description(mMiscSize)
-                                .build())
-                        .add(new Status.Builder(res)
-                                .title(R.string.storage_available)
-                                .icon(R.drawable.storage_indicator_available)
-                                .description(mAvailSize)
-                                .build());
+                if (mVolume.getState() == VolumeInfo.STATE_UNMOUNTED) {
+                    header
+                            .add(new Status.Builder(res)
+                                    .title(getString(R.string.storage_unmount_success,
+                                            mVolumeDescription))
+                                    .build());
+                } else {
+                    header
+                            .add(new Action.Builder(res, ACTION_EJECT)
+                                    .title(R.string.storage_eject)
+                                    .data(data)
+                                    .build())
+                            .add(new Action.Builder(res, ACTION_ERASE_PUBLIC)
+                                    .title(R.string.storage_format_for_private)
+                                    .data(data)
+                                    .build())
+                            .add(new Status.Builder(res)
+                                    .title(R.string.storage_media_misc_usage)
+                                    .icon(R.drawable.storage_indicator_misc)
+                                    .description(mMiscSize)
+                                    .build())
+                            .add(new Status.Builder(res)
+                                    .title(R.string.storage_available)
+                                    .icon(R.drawable.storage_indicator_available)
+                                    .description(mAvailSize)
+                                    .build());
+                }
             }
-            layout.add(header);
-            return layout;
+            return new Layout().add(header);
         }
 
         public void startListening() {
@@ -339,6 +378,22 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                 final DialogFragment fragment = ConfirmClearCacheFragment.newInstance();
                 fragment.show(getFragmentManager(), null);
                 break;
+            case ACTION_EJECT:
+                new UnmountTask(this, mStorageManager.findVolumeById(
+                        action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID)))
+                        .execute();
+                break;
+            case ACTION_ERASE_PUBLIC:
+                final Fragment f =
+                        FormatAsInternalStepFragment.newInstance(mStorageManager.findVolumeById(
+                                action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID)));
+                getFragmentManager().beginTransaction()
+                        .replace(android.R.id.content, f)
+                        .addToBackStack(null)
+                        .commit();
+                break;
+            case ACTION_ERASE_PRIVATE:
+                break;
             default:
                 final Intent intent = action.getIntent();
                 if (intent != null) {
@@ -391,6 +446,114 @@ public class StorageResetActivity extends SettingsLayoutActivity {
             builder.setNegativeButton(android.R.string.cancel, null);
 
             return builder.create();
+        }
+    }
+
+    public static class MountTask extends AsyncTask<Void, Void, Exception> {
+        private final Context mContext;
+        private final StorageManager mStorageManager;
+        private final String mVolumeId;
+        private final String mDescription;
+
+        public MountTask(Context context, VolumeInfo volume) {
+            mContext = context.getApplicationContext();
+            mStorageManager = mContext.getSystemService(StorageManager.class);
+            mVolumeId = volume.getId();
+            mDescription = mStorageManager.getBestVolumeDescription(volume);
+        }
+
+        @Override
+        protected Exception doInBackground(Void... params) {
+            try {
+                mStorageManager.mount(mVolumeId);
+                return null;
+            } catch (Exception e) {
+                return e;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(Exception e) {
+            if (e == null) {
+                Toast.makeText(mContext, mContext.getString(R.string.storage_mount_success,
+                        mDescription), Toast.LENGTH_SHORT).show();
+            } else {
+                Log.e(TAG, "Failed to mount " + mVolumeId, e);
+                Toast.makeText(mContext, mContext.getString(R.string.storage_mount_failure,
+                        mDescription), Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    public static class UnmountTask extends AsyncTask<Void, Void, Exception> {
+        private final Context mContext;
+        private final StorageManager mStorageManager;
+        private final String mVolumeId;
+        private final String mDescription;
+
+        public UnmountTask(Context context, VolumeInfo volume) {
+            mContext = context.getApplicationContext();
+            mStorageManager = mContext.getSystemService(StorageManager.class);
+            mVolumeId = volume.getId();
+            mDescription = mStorageManager.getBestVolumeDescription(volume);
+        }
+
+        @Override
+        protected Exception doInBackground(Void... params) {
+            try {
+                mStorageManager.unmount(mVolumeId);
+                return null;
+            } catch (Exception e) {
+                return e;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(Exception e) {
+            if (e == null) {
+                Toast.makeText(mContext, mContext.getString(R.string.storage_unmount_success,
+                        mDescription), Toast.LENGTH_SHORT).show();
+            } else {
+                Log.e(TAG, "Failed to unmount " + mVolumeId, e);
+                Toast.makeText(mContext, mContext.getString(R.string.storage_unmount_failure,
+                        mDescription), Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    public static class FormatAsPrivateTask extends AsyncTask<Void, Void, Exception> {
+        private final Context mContext;
+        private final StorageManager mStorageManager;
+        private final String mDiskId;
+        private final String mDescription;
+
+        public FormatAsPrivateTask(Context context, VolumeInfo volume) {
+            mContext = context.getApplicationContext();
+            mStorageManager = mContext.getSystemService(StorageManager.class);
+            mDiskId = volume.getDiskId();
+            mDescription = mStorageManager.getBestVolumeDescription(volume);
+        }
+
+        @Override
+        protected Exception doInBackground(Void... params) {
+            try {
+                mStorageManager.partitionPrivate(mDiskId);
+                return null;
+            } catch (Exception e) {
+                return e;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(Exception e) {
+            if (e == null) {
+                Toast.makeText(mContext, mContext.getString(R.string.storage_format_success,
+                        mDescription), Toast.LENGTH_SHORT).show();
+            } else {
+                Log.e(TAG, "Failed to format " + mDiskId, e);
+                Toast.makeText(mContext, mContext.getString(R.string.storage_format_failure,
+                        mDescription), Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
