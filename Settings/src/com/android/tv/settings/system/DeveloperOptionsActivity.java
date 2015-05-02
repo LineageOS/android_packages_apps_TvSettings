@@ -167,6 +167,8 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     private static final int ACTION_ROOT_ACCESS_ALL = ACTION_CM_BASE + 3;
     private static final int ACTION_ENABLE_TERMINAL_ON = ACTION_CM_BASE + 4;
     private static final int ACTION_ENABLE_TERMINAL_OFF = ACTION_CM_BASE + 5;
+    private static final int ACTION_ADVANCED_REBOOT_ON = ACTION_CM_BASE + 6;
+    private static final int ACTION_ADVANCED_REBOOT_OFF = ACTION_CM_BASE + 7;
 
     private IWindowManager mWindowManager;
     private WifiManager mWifiManager;
@@ -604,6 +606,15 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                 .title(R.string.system_cm)
                 .build();
 
+                header.add(new Layout.Header.Builder(res)
+                        .title(R.string.advanced_reboot_title)
+                        .detailedDescription(R.string.advanced_reboot_summary)
+                        .build()
+                        .setSelectionGroup(new Layout.SelectionGroup.Builder(2)
+                                .add(onTitle, null, ACTION_ADVANCED_REBOOT_ON)
+                                .add(offTitle, null, ACTION_ADVANCED_REBOOT_OFF)
+                                .select(getAdvancedRebootId())
+                                .build()));
                 if (isPackageInstalled(this, TERMINAL_APP_PACKAGE)) {
                     header.add(new Layout.Header.Builder(res)
                             .title(R.string.enable_terminal_title)
@@ -885,6 +896,12 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                 break;
             case ACTION_ENABLE_TERMINAL_OFF:
                 setEnableTerminal(false);
+                break;
+            case ACTION_ADVANCED_REBOOT_ON:
+                setAdvancedReboot(true);
+                break;
+            case ACTION_ADVANCED_REBOOT_OFF:
+                setAdvancedReboot(false);
                 break;
         }
     }
@@ -1489,5 +1506,14 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                     }
                 })
                 .setNegativeButton(R.string.settings_cancel, null).show();
+    }
+
+    private int getAdvancedRebootId() {
+        return getSecureSettingBoolean(Settings.Secure.ADVANCED_REBOOT) ?
+                ACTION_ADVANCED_REBOOT_ON : ACTION_ADVANCED_REBOOT_OFF;
+    }
+
+    private void setAdvancedReboot(boolean value) {
+        setSecureSettingBoolean(Settings.Secure.ADVANCED_REBOOT, value);
     }
 }
