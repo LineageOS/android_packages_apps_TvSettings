@@ -25,10 +25,15 @@ import com.android.tv.settings.dialog.old.ContentFragment;
 import com.android.tv.settings.dialog.old.DialogActivity;
 import com.android.tv.settings.name.DeviceManager;
 
+import android.app.ActivityManagerNative;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.app.IActivityManager;
 import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.ComponentName;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -37,11 +42,15 @@ import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.os.RemoteException;
 import android.os.SELinux;
+import android.os.ServiceManager;
 import android.os.SystemClock;
 import android.os.SystemProperties;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -71,6 +80,9 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private static final String FILENAME_PROC_VERSION = "/proc/version";
     private static final String LOG_TAG = "AboutSettings";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
+    private static final String KEY_ADVANCED_REBOOT = "advanced_reboot";
+    private static final String SOFT_REBOOT = "soft_reboot";
+    private static String mRebootReason;
 
     /**
      * Intent action of SettingsLicenseActivity (for displaying open source licenses.)
@@ -189,6 +201,63 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     }
 
     /**
+     * Build the advanced reboot menu.
+     */
+    private void advancedRebootMenu() {
+        AlertDialog.Builder advancedReboot = new AlertDialog.Builder(
+                this, android.R.style.Theme_Material_Dialog);
+        advancedReboot.setTitle(R.string.advanced_reboot_title);
+        advancedReboot.setItems(com.android.internal.R.array.shutdown_reboot_options,
+           new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                boolean softReboot = false;
+                int selected = ((AlertDialog)dialog).getListView().getCheckedItemPosition();
+                String actions[] = getResources().getStringArray(
+                                com.android.internal.R.array.shutdown_reboot_actions);
+                if (selected >= 0 && selected < actions.length) {
+                            mRebootReason = actions[selected];
+                    if (actions[selected].equals(SOFT_REBOOT)) {
+                        doSoftReboot();
+                        return;
+                    } else {
+                        doReboot();
+                    }
+                } else {
+                    mRebootReason = null;
+                    doReboot();
+                }
+            }
+        });
+        advancedReboot.show();
+    }
+
+    private boolean isAdvancedRebootPossible() {
+        boolean advancedRebootEnabled = Settings.Secure.getInt(this.getContentResolver(),
+                Settings.Secure.ADVANCED_REBOOT, 0) != 0;
+
+        return advancedRebootEnabled;
+    }
+
+
+    private void doReboot() {
+            PowerManager pm = (PowerManager)getSystemService(Context.POWER_SERVICE);
+            pm.reboot(mRebootReason);
+    }
+
+    private static void doSoftReboot() {
+        try {
+            final IActivityManager am =
+                  ActivityManagerNative.asInterface(ServiceManager.checkService("activity"));
+            if (am != null) {
+                am.restart();
+            }
+        } catch (RemoteException e) {
+            Log.e(TAG, "failure trying to perform soft reboot", e);
+        }
+    }
+
+    /**
      * Intent component to launch PlatLogo Easter egg.
      */
     private static final ComponentName mPlatLogoActivity = new ComponentName("android",
@@ -274,6 +343,8 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
         } else if (TextUtils.equals(key, KEY_REBOOT)) {
             PowerManager pm = (PowerManager)getSystemService(Context.POWER_SERVICE);
             pm.reboot(null);
+        } else if (TextUtils.equals(key, KEY_ADVANCED_REBOOT)) {
+            advancedRebootMenu();
         } else {
             Intent intent = action.getIntent();
             if (intent != null) {
@@ -320,10 +391,17 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 .description(DeviceManager.getDeviceName(this))
                 .intent(new Intent(SETTINGS_DEVICE_NAME_INTENT_ACTION))
                 .build());
-        actions.add(new Action.Builder()
-                .key(KEY_REBOOT)
-                .title(getString(R.string.restart_button_label))
-                .build());
+        if (!isAdvancedRebootPossible()) {
+            actions.add(new Action.Builder()
+                    .key(KEY_REBOOT)
+                    .title(getString(R.string.restart_button_label))
+                    .build());
+        } else {
+            actions.add(new Action.Builder()
+                    .key(KEY_ADVANCED_REBOOT)
+                    .title(getString(R.string.advanced_reboot_title))
+                    .build());
+        }
         actions.add(new Action.Builder()
                 .key(KEY_LEGAL_INFO)
                 .title(getString(R.string.about_legal_info))
