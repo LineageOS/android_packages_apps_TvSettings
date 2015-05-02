@@ -75,4 +75,17 @@
     <string name="reset_launcher_title">Reset default home screen</string>
     <string name="reset_launcher_description">By resetting the default home screen, you will be able to choose an alternate home screen (i.e Trebuchet).\n\nWould you like to reset the default home screen?</string>
     <string name="reset_launcher_tip">Press the home button to bring up the home screen selection dialog.</string>
+
+    <!-- Advanced reboot options -->
+    <string name="advanced_reboot_title">Advanced reboot</string>
+    <string name="advanced_reboot_summary">Include options in the about menu for rebooting into recovery, bootloader or performing a soft reboot</string>
+
+    <!-- Reboot menu -->
+    <!-- Button to reboot the device into recovery, within the Reboot Options dialog -->
+    <string name="reboot_recovery_button_label">Recovery</string>
+    <!-- Button to reboot the device into bootloader, within the Reboot Options dialog -->
+    <string name="reboot_bootloader_button_label">Bootloader</string>
+    <string name="reboot_bootloader_reason">bootloader</string>
+    <!-- Button to soft reboot the device, within the Reboot Options dialog -->
+    <string name="reboot_soft_button_label">Soft reboot</string>
 </resources>
