@@ -32,6 +32,12 @@ enum ActionType {
     KEYBOARD_OVERVIEW_CONFIGURE(R.string.title_configure, R.string.desc_configure_keyboard),
 
     /*
+     * Display
+     */
+    DISPLAY_OVERVIEW(R.string.system_display),
+    DISPLAY_OVERSCAN(R.string.system_display_overscan, R.string.system_display_overscan_description),
+
+    /*
      * Security
      */
     SECURITY_OVERVIEW(R.string.system_security),
