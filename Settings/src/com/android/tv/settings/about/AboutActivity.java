@@ -210,9 +210,8 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
         advancedReboot.setItems(com.android.internal.R.array.shutdown_reboot_options,
            new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
+            public void onClick(DialogInterface dialog, int selected) {
                 boolean softReboot = false;
-                int selected = ((AlertDialog)dialog).getListView().getCheckedItemPosition();
                 String actions[] = getResources().getStringArray(
                                 com.android.internal.R.array.shutdown_reboot_actions);
                 if (selected >= 0 && selected < actions.length) {
