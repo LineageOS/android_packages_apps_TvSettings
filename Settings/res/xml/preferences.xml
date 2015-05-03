@@ -48,6 +48,14 @@
             android:targetPackage="com.android.tv.settings" />
     </Preference>
     <Preference
+        android:icon="@drawable/ic_settings_display"
+        android:key="home"
+        android:title="@string/system_display" >
+        <intent
+            android:targetClass="com.android.tv.settings.system.DisplayActivity"
+            android:targetPackage="com.android.tv.settings" />
+    </Preference>
+    <Preference
         android:icon="@drawable/ic_settings_search"
         android:key="search"
         android:title="@string/system_search" >

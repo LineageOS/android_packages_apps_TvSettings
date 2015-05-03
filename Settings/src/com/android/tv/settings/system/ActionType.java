@@ -130,12 +130,20 @@ enum ActionType {
     DEVELOPER_APPS_DONT_KEEP_ACTIVITIES(R.string.system_dont_keep_activities),
     DEVELOPER_APPS_BACKGROUND_PROCESS_LIMIT(R.string.system_background_process_limit),
     DEVELOPER_APPS_SHOW_ALL_ANRS(R.string.system_show_all_anrs),
+
     /*
      * Home
      */
     HOME_OVERVIEW(R.string.system_home),
     HOME_RESET_DEFAULT(R.string.system_reset_default_home),
     HOME_SETTINGS(R.string.system_home_settings),
+
+    /*
+     * Display
+     */
+    DISPLAY_OVERVIEW(R.string.system_display),
+    DISPLAY_OVERSCAN(R.string.system_display_overscan, R.string.system_display_overscan_description),
+
     /*
      * Keyboard
      */
