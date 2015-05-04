@@ -29,7 +29,7 @@ import com.android.tv.settings.device.StorageResetActivity;
 
 import java.util.List;
 
-public class FormatAsInternalStepFragment extends GuidedStepFragment {
+public class FormatAsPrivateStepFragment extends GuidedStepFragment {
 
     private static final int ACTION_ID_CANCEL = 0;
     private static final int ACTION_ID_FORMAT = 1;
@@ -37,8 +37,8 @@ public class FormatAsInternalStepFragment extends GuidedStepFragment {
 
     private StorageManager mStorageManager;
 
-    public static FormatAsInternalStepFragment newInstance(VolumeInfo volumeInfo) {
-        final FormatAsInternalStepFragment fragment = new FormatAsInternalStepFragment();
+    public static FormatAsPrivateStepFragment newInstance(VolumeInfo volumeInfo) {
+        final FormatAsPrivateStepFragment fragment = new FormatAsPrivateStepFragment();
         final Bundle b = new Bundle(1);
         b.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeInfo.getId());
         fragment.setArguments(b);
@@ -55,8 +55,8 @@ public class FormatAsInternalStepFragment extends GuidedStepFragment {
     @Override
     public @NonNull GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
         return new GuidanceStylist.Guidance(
-                getString(R.string.storage_wizard_format_internal_title),
-                getString(R.string.storage_wizard_format_internal_description), "",
+                getString(R.string.storage_wizard_format_as_private_title),
+                getString(R.string.storage_wizard_format__as_private_description), "",
                 getActivity().getDrawable(R.drawable.ic_settings_storage));
     }
 
