@@ -44,7 +44,8 @@ import com.android.settingslib.deviceinfo.StorageMeasurement.MeasurementReceiver
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.apps.AppsActivity;
 import com.android.tv.settings.device.storage.EjectInternalStepFragment;
-import com.android.tv.settings.device.storage.FormatAsInternalStepFragment;
+import com.android.tv.settings.device.storage.FormatAsPublicStepFragment;
+import com.android.tv.settings.device.storage.FormatAsPrivateStepFragment;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.Layout.Action;
 import com.android.tv.settings.dialog.Layout.Header;
@@ -427,8 +428,10 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                 break;
             }
             case ACTION_ERASE_PUBLIC: {
+                // When we erase a public volume, we're intending to use it as a private volume,
+                // so launch the format-as-private wizard.
                 final Fragment f =
-                        FormatAsInternalStepFragment.newInstance(mStorageManager.findVolumeById(
+                        FormatAsPrivateStepFragment.newInstance(mStorageManager.findVolumeById(
                                 action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID)));
                 getFragmentManager().beginTransaction()
                         .replace(android.R.id.content, f)
@@ -436,7 +439,17 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                         .commit();
                 break;
             }
-            case ACTION_ERASE_PRIVATE:
+            case ACTION_ERASE_PRIVATE: {
+                // When we erase a private volume, we're intending to use it as a public volume,
+                // so launch the format-as-public wizard.
+                final Fragment f =
+                        FormatAsPublicStepFragment.newInstance(mStorageManager.findVolumeById(
+                                action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID)));
+                getFragmentManager().beginTransaction()
+                        .replace(android.R.id.content, f)
+                        .addToBackStack(null)
+                        .commit();
+            }
                 break;
             default:
                 final Intent intent = action.getIntent();
@@ -582,6 +595,42 @@ public class StorageResetActivity extends SettingsLayoutActivity {
         protected Exception doInBackground(Void... params) {
             try {
                 mStorageManager.partitionPrivate(mDiskId);
+                return null;
+            } catch (Exception e) {
+                return e;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(Exception e) {
+            if (e == null) {
+                Toast.makeText(mContext, mContext.getString(R.string.storage_format_success,
+                        mDescription), Toast.LENGTH_SHORT).show();
+            } else {
+                Log.e(TAG, "Failed to format " + mDiskId, e);
+                Toast.makeText(mContext, mContext.getString(R.string.storage_format_failure,
+                        mDescription), Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    public static class FormatAsPublicTask extends AsyncTask<Void, Void, Exception> {
+        private final Context mContext;
+        private final StorageManager mStorageManager;
+        private final String mDiskId;
+        private final String mDescription;
+
+        public FormatAsPublicTask(Context context, VolumeInfo volume) {
+            mContext = context.getApplicationContext();
+            mStorageManager = mContext.getSystemService(StorageManager.class);
+            mDiskId = volume.getDiskId();
+            mDescription = mStorageManager.getBestVolumeDescription(volume);
+        }
+
+        @Override
+        protected Exception doInBackground(Void... params) {
+            try {
+                mStorageManager.partitionPublic(mDiskId);
                 return null;
             } catch (Exception e) {
                 return e;
