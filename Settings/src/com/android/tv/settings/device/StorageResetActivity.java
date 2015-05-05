@@ -43,6 +43,7 @@ import com.android.settingslib.deviceinfo.StorageMeasurement.MeasurementDetails;
 import com.android.settingslib.deviceinfo.StorageMeasurement.MeasurementReceiver;
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.apps.AppsActivity;
+import com.android.tv.settings.device.storage.EjectInternalStepFragment;
 import com.android.tv.settings.device.storage.FormatAsInternalStepFragment;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.Layout.Action;
@@ -67,9 +68,10 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     private static final int ACTION_RESET_DEVICE = 1;
     private static final int ACTION_CANCEL = 2;
     private static final int ACTION_CLEAR_CACHE = 3;
-    private static final int ACTION_EJECT = 4;
-    private static final int ACTION_ERASE_PRIVATE = 5;
-    private static final int ACTION_ERASE_PUBLIC = 6;
+    private static final int ACTION_EJECT_PRIVATE = 4;
+    private static final int ACTION_EJECT_PUBLIC = 5;
+    private static final int ACTION_ERASE_PRIVATE = 6;
+    private static final int ACTION_ERASE_PUBLIC = 7;
 
     /**
      * Support for shutdown-after-reset. If our launch intent has a true value for
@@ -246,7 +248,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
             } else if (volume.getType() == VolumeInfo.TYPE_PRIVATE) {
                 if (!VolumeInfo.ID_PRIVATE_INTERNAL.equals(mVolumeId)) {
                     layout
-                            .add(new Action.Builder(res, ACTION_EJECT)
+                            .add(new Action.Builder(res, ACTION_EJECT_PRIVATE)
                                     .title(R.string.storage_eject)
                                     .data(data)
                                     .build())
@@ -301,7 +303,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                                     .build());
                 } else {
                     layout
-                            .add(new Action.Builder(res, ACTION_EJECT)
+                            .add(new Action.Builder(res, ACTION_EJECT_PUBLIC)
                                     .title(R.string.storage_eject)
                                     .data(data)
                                     .build())
@@ -409,12 +411,22 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                 final DialogFragment fragment = ConfirmClearCacheFragment.newInstance();
                 fragment.show(getFragmentManager(), null);
                 break;
-            case ACTION_EJECT:
+            case ACTION_EJECT_PUBLIC:
                 new UnmountTask(this, mStorageManager.findVolumeById(
                         action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID)))
                         .execute();
                 break;
-            case ACTION_ERASE_PUBLIC:
+            case ACTION_EJECT_PRIVATE: {
+                final Fragment f =
+                        EjectInternalStepFragment.newInstance(mStorageManager.findVolumeById(
+                                action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID)));
+                getFragmentManager().beginTransaction()
+                        .replace(android.R.id.content, f)
+                        .addToBackStack(null)
+                        .commit();
+                break;
+            }
+            case ACTION_ERASE_PUBLIC: {
                 final Fragment f =
                         FormatAsInternalStepFragment.newInstance(mStorageManager.findVolumeById(
                                 action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID)));
@@ -423,6 +435,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
                         .addToBackStack(null)
                         .commit();
                 break;
+            }
             case ACTION_ERASE_PRIVATE:
                 break;
             default:
