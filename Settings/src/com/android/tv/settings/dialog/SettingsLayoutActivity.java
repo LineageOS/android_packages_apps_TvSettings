@@ -55,7 +55,7 @@ public abstract class SettingsLayoutActivity extends Activity implements
 
     @Override
     public void onBackPressed() {
-        if (! mSettingsLayoutFragment.onBackPressed()) {
+        if (!mSettingsLayoutFragment.isVisible() || !mSettingsLayoutFragment.onBackPressed()) {
             super.onBackPressed();
         }
     }
@@ -72,13 +72,6 @@ public abstract class SettingsLayoutActivity extends Activity implements
 
     protected void goBackToTitle (String title) {
         mSettingsLayoutFragment.goBackToTitle (title);
-    }
-
-    /**
-     * Return true if the display view is rendered right to left.
-     */
-    protected boolean isLayoutRtl() {
-        return mSettingsLayoutFragment.getView().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL;
     }
 
     protected void setIcon(int resId) {
