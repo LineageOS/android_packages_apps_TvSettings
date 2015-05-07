@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.device.storage;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
@@ -82,7 +83,13 @@ public class FormatAsPublicStepFragment extends GuidedStepFragment {
         if (id == ACTION_ID_CANCEL) {
             getFragmentManager().popBackStack();
         } else if (id == ACTION_ID_BACKUP) {
-            // TODO
+            final VolumeInfo volumeInfo = mStorageManager.findVolumeById(
+                    getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
+            final Fragment f = BackupAppsStepFragment.newInstance(volumeInfo);
+            getFragmentManager().beginTransaction()
+                    .replace(android.R.id.content, f)
+                    .addToBackStack(null)
+                    .commit();
         } else if (id == ACTION_ID_FORMAT) {
             final VolumeInfo volumeInfo = mStorageManager.findVolumeById(
                     getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
