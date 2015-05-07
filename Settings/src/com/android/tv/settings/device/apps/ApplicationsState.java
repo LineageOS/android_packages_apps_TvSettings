@@ -307,7 +307,7 @@ public class ApplicationsState {
     private static final Object sLock = new Object();
     private static ApplicationsState sInstance;
 
-    static ApplicationsState getInstance(Context app) {
+    public static ApplicationsState getInstance(Context app) {
         synchronized (sLock) {
             if (sInstance == null) {
                 sInstance = new ApplicationsState(app);
@@ -462,7 +462,7 @@ public class ApplicationsState {
         }
     }
 
-    AppEntry getEntry(String packageName) {
+    public AppEntry getEntry(String packageName) {
         if (DEBUG_LOCKING) Log.v(TAG, "getEntry about to acquire lock...");
         synchronized (mEntriesMap) {
             AppEntry entry = mEntriesMap.get(packageName);
