@@ -494,11 +494,16 @@
     <string name="storage_wizard_back_up_apps_title">Apps stored in <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
     <!-- Back up apps title [CHAR LIMIT=50] -->
     <string name="storage_wizard_back_up_apps_and_data_title">Apps and data stored in <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
+    <!-- Back up apps storage available description [CHAR_LIMIT=50] -->
+    <string name="storage_wizard_back_up_apps_space_available"><xliff:g id="size" example="1.23GB">%1$s</xliff:g> available</string>
 
     <!-- Title for wizard screen for ejecting internal storage [CHAR LIMIT=64] -->
     <string name="storage_wizard_eject_internal_title">Eject internal storage</string>
     <!-- Description for wizard screen for ejecting internal storage [CHAR LIMIT=NONE] -->
     <string name="storage_wizard_eject_internal_description">Apps on this device storage will stop working when it\'s ejected. This USB drive is formatted to work on this device only. It won\'t work on any others.</string>
+
+    <!-- Title for wizard screen for moving apps [CHAR_LIMIT=50] -->
+    <string name="storage_wizard_move_app_title">Storage used</string>
 
     <!-- Learn more action title [CHAR_LIMIT=50] -->
     <string name="learn_more_action">Learn more</string>
@@ -1105,6 +1110,10 @@
     <string name="device_apps_app_management_enable">Enable</string>
     <!-- Application management description for enabling the application [CHAR LIMIT=NONE] -->
     <string name="device_apps_app_management_enable_desc">Do you want to enable this app?</string>
+    <!-- Application management choice for displaying the application's size [CHAR LIMIT=40] -->
+    <string name="device_apps_app_management_storage_used">Storage used</string>
+    <!-- Application management description for displaying the applicantion's size [CHAR_LIMIT=NONE] -->
+    <string name="device_apps_app_management_storage_used_desc"><xliff:g id="size" example="30.2MB">%1$s</xliff:g> used in <xliff:g id="volume" example="internal storage">%2$s</xliff:g></string>
     <!-- Application management choice for clearing the application's data [CHAR LIMIT=40] -->
     <string name="device_apps_app_management_clear_data">Clear data</string>
     <!-- Application management description for clearing the application's data [CHAR LIMIT=NONE] -->
