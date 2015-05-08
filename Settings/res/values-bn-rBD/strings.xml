@@ -215,32 +215,29 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"অডিও"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"বিবিধ"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"ক্যাশে করা ডেটা"</string>
-    <!-- no translation found for storage_eject (113476702798691558) -->
+    <string name="storage_eject" msgid="113476702798691558">"সরি দিন"</string>
+    <string name="storage_format" msgid="3759273736493279595">"মুছুন এবং ফর্ম্যাট করুন"</string>
+    <string name="storage_format_for_private" msgid="7095270113028182032">"ডিভাইসের সঞ্চয়স্থান হিসেবে ফর্ম্যাট করুন"</string>
+    <string name="storage_not_connected" msgid="6378589497819596096">"সংযুক্ত নয়"</string>
+    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> মাউন্ট করা হয়েছে"</string>
+    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> মাউন্ট করা যায়নি"</string>
+    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g>নিরাপদে সরিয়ে দেওয়া হয়েছে"</string>
+    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> নিরাপদে সরানো যায়নি"</string>
+    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> ফর্ম্যাট করা হয়েছে"</string>
+    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> ফর্ম্যাট করা যায়নি"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"অভ্যন্তরীণ সঞ্চয়স্থান হিসাবে ফর্ম্যাট করুন"</string>
+    <string name="storage_wizard_format__as_private_description" msgid="580737200012210857">"এটিকে নিরাপদ করার জন্য USB ড্রাইভ ফর্ম্যাট করার প্রযোজন হবে৷ নিরাপদে ফর্ম্যাট করার পরে এই ড্রাইভটি শুধুমাত্র এই ডিভাইসটির মধ্যে কাজ করবে৷ ফর্ম্যাট করা হলে এই ডিভাইসে বর্তমানে সঞ্চিত সমস্ত ডেটা মুছে যাবে৷ ডেটা হারানো এড়াতে, এটির ব্যাক আপ নেওয়ার বিষয়ে বিবেচনা করুন৷"</string>
+    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"মুছুন এবং ফর্ম্যাট করুন"</string>
+    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"ফর্ম্যাট করার পরে, এই USB ড্রাইভটিকে অন্য ডিভাইসগুলিতে ব্যবহার করতে পারবেন৷ সমস্ত ডেটা মুছে ফেলা হবে৷ অন্য অভ্যন্তরীণ সঞ্চয়স্থানে অ্যাপ্লিকেশানগুলি সরানোর দ্বারা প্রথমে ব্যাক আপ নেওয়ার কথা বিবেচনা করুন৷"</string>
+    <string name="storage_wizard_format_action" msgid="3986485572528374905">"ফর্ম্যাট করুন"</string>
+    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"অ্যাপ্লিকেশানগুলির ব্যাক আপ নিন"</string>
+    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
     <skip />
-    <!-- no translation found for storage_format (3759273736493279595) -->
+    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
     <skip />
-    <!-- no translation found for storage_format_for_private (7095270113028182032) -->
-    <skip />
-    <!-- no translation found for storage_mount_success (4624254886950093443) -->
-    <skip />
-    <!-- no translation found for storage_mount_failure (2469026716895846633) -->
-    <skip />
-    <!-- no translation found for storage_unmount_success (7921627277443856151) -->
-    <skip />
-    <!-- no translation found for storage_unmount_failure (6322048355281833871) -->
-    <skip />
-    <!-- no translation found for storage_format_success (6252068844653804319) -->
-    <skip />
-    <!-- no translation found for storage_format_failure (7336977074523932399) -->
-    <skip />
-    <!-- no translation found for storage_wizard_format_internal_title (4280017112266967342) -->
-    <skip />
-    <!-- no translation found for storage_wizard_format_internal_description (2400656278398674742) -->
-    <skip />
-    <!-- no translation found for storage_wizard_format_action (3986485572528374905) -->
-    <skip />
-    <!-- no translation found for learn_more_action (7015991954404958779) -->
-    <skip />
+    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"অভ্যন্তরীণ সঞ্চয়স্থান সরিয়ে দিন"</string>
+    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"এই ডিভাইসটিকে সরিয়ে দেওয়া হলে এটির সঞ্চয়স্থানে রাখা অ্যাপ্লিকেশানগুলি কাজ করা বন্ধ করবে৷ শুধুমাত্র এই ডিভাইসে কাজ করার জন্য এই USB ড্রাইভটিকে ফর্ম্যাট করা হয়েছে৷ অন্যান্য কোন জায়গায় এটি কাজ করবে না৷"</string>
+    <string name="learn_more_action" msgid="7015991954404958779">"আরো জানুন"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"পুনরায় চেষ্টা করুন"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS রাউটার অনুসন্ধান করছে..."</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"আপনার রাউটারে \'Wi-Fi সুরক্ষিত সেটআপ\' বোতামটি টিপুন।\nএকে \"WPS\" নামে উল্লেখ করা থাকতে পারে অথবা বাঁদিকে তার প্রতীক থাকতে পারে।"</string>
