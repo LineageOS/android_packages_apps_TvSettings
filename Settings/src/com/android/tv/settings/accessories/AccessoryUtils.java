@@ -17,6 +17,7 @@
 package com.android.tv.settings.accessories;
 
 import android.annotation.DrawableRes;
+import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 
 import com.android.tv.settings.R;
@@ -28,7 +29,14 @@ public class AccessoryUtils {
     public static @DrawableRes int getImageIdForDevice(BluetoothDevice dev) {
         int devClass = dev.getBluetoothClass().getDeviceClass();
 
-        if ((devClass & InputDeviceCriteria.MINOR_DEVICE_CLASS_POINTING) != 0) {
+        if (devClass == BluetoothClass.Device.AUDIO_VIDEO_WEARABLE_HEADSET) {
+            return R.drawable.ic_settings_headset;
+        } else if (devClass == BluetoothClass.Device.AUDIO_VIDEO_HEADPHONES ||
+                devClass == BluetoothClass.Device.AUDIO_VIDEO_LOUDSPEAKER ||
+                devClass == BluetoothClass.Device.AUDIO_VIDEO_PORTABLE_AUDIO ||
+                devClass == BluetoothClass.Device.AUDIO_VIDEO_HIFI_AUDIO) {
+            return R.drawable.ic_settings_headphones;
+        } else if ((devClass & InputDeviceCriteria.MINOR_DEVICE_CLASS_POINTING) != 0) {
             return R.drawable.ic_settings_mouse;
         } else if ((devClass & InputDeviceCriteria.MINOR_DEVICE_CLASS_JOYSTICK) != 0) {
             return R.drawable.ic_settings_gamepad;
