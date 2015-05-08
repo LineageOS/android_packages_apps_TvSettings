@@ -215,32 +215,29 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"ಆಡಿಯೋ"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"ಇತರೆ."</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"ಸಂಗ್ರಹಿಸಿದ ಡೇಟಾ"</string>
-    <!-- no translation found for storage_eject (113476702798691558) -->
+    <string name="storage_eject" msgid="113476702798691558">"ಎಜೆಕ್ಟ್ ಮಾಡು"</string>
+    <string name="storage_format" msgid="3759273736493279595">"ಅಳಿಸು &amp; ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡು"</string>
+    <string name="storage_format_for_private" msgid="7095270113028182032">"ಸಾಧನ ಸಂಗ್ರಹಣೆಯಂತೆ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡು"</string>
+    <string name="storage_not_connected" msgid="6378589497819596096">"ಸಂಪರ್ಕಗೊಂಡಿಲ್ಲ"</string>
+    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> ಅಳವಡಿಸಲಾಗಿದೆ"</string>
+    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> ಅಳವಡಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"</string>
+    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> ಸುರಕ್ಷಿತವಾಗಿ ತೆಗೆದುಹಾಕಲಾಗಿದೆ"</string>
+    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> ಸುರಕ್ಷಿತವಾಗಿ ತೆಗೆದುಹಾಕಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"</string>
+    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲಾಗಿದೆ"</string>
+    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"ಆಂತರಿಕ ಸಂಗ್ರಹಣೆಯಂತೆ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಿ"</string>
+    <string name="storage_wizard_format__as_private_description" msgid="580737200012210857">"ಇದನ್ನು ಸುರಕ್ಷಿತಗೊಳಿಸಲು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳುವುದಕ್ಕಾಗಿ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲು ಇದಕ್ಕೆ USB ಡ್ರೈವ್‌ನ ಅಗತ್ಯವಿರುತ್ತದೆ. ಸುರಕ್ಷಿತವಾಗಿ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಿದ ನಂತರ, ಈ ಡ್ರೈವ್ ಈ ಸಾಧನದ ಜೊತೆಗೆ ಮಾತ್ರ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ. ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡುವುದರಿಂದಾಗಿ ಪ್ರಸ್ತುತವಾಗಿ ಡ್ರೈವ್‌ನಲ್ಲಿ ಸಂಗ್ರಹವಾಗಿರುವ ಎಲ್ಲ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ. ಡೇಟಾ ಕಳೆದುಕೊಳ್ಳುವುದನ್ನು ತಪ್ಪಿಸಲು, ಅದನ್ನು ಬ್ಯಾಕಪ್ ಮಾಡಲು ಪರಿಗಣಿಸಿ."</string>
+    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"ಅಳಿಸು &amp; ಫಾರ್ಮ್ಯಾಟ್‌ ಮಾಡು"</string>
+    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಿದ ನಂತರ, ನೀವು ಇತರ ಸಾಧನಗಳಲ್ಲಿ ಈ USB ಡ್ರೈವ್‌ ಬಳಸಬಹುದು. ಎಲ್ಲಾ ಡೇಟಾ ಅಳಿಸಲಾಗುತ್ತದೆ. ಇತರ ಆಂತರಿಕ ಸಂಗ್ರಹಣೆಗೆ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸರಿಸುವ ಮೂಲಕ ಬ್ಯಾಕಪ್‌ ಮಾಡುವಿಕೆಯನ್ನು ಮೊದಲು ಪರಿಗಣಿಸಲಾಗುತ್ತದೆ."</string>
+    <string name="storage_wizard_format_action" msgid="3986485572528374905">"ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡು"</string>
+    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಬ್ಯಾಕಪ್‌ ಮಾಡಿ"</string>
+    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
     <skip />
-    <!-- no translation found for storage_format (3759273736493279595) -->
+    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
     <skip />
-    <!-- no translation found for storage_format_for_private (7095270113028182032) -->
-    <skip />
-    <!-- no translation found for storage_mount_success (4624254886950093443) -->
-    <skip />
-    <!-- no translation found for storage_mount_failure (2469026716895846633) -->
-    <skip />
-    <!-- no translation found for storage_unmount_success (7921627277443856151) -->
-    <skip />
-    <!-- no translation found for storage_unmount_failure (6322048355281833871) -->
-    <skip />
-    <!-- no translation found for storage_format_success (6252068844653804319) -->
-    <skip />
-    <!-- no translation found for storage_format_failure (7336977074523932399) -->
-    <skip />
-    <!-- no translation found for storage_wizard_format_internal_title (4280017112266967342) -->
-    <skip />
-    <!-- no translation found for storage_wizard_format_internal_description (2400656278398674742) -->
-    <skip />
-    <!-- no translation found for storage_wizard_format_action (3986485572528374905) -->
-    <skip />
-    <!-- no translation found for learn_more_action (7015991954404958779) -->
-    <skip />
+    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"ಆಂತರಿಕ ಸಂಗ್ರಹಣೆಯನ್ನು ಎಜೆಕ್ಟ್ ಮಾಡಿ"</string>
+    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"ಇದನ್ನು ಎಜೆಕ್ಟ್ ಮಾಡಿದಾಗ ಈ ಸಾಧನದಲ್ಲಿನ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತವೆ. ಈ ಸಾಧನದಲ್ಲಿ ಮಾತ್ರ ಕಾರ್ಯನಿರ್ವಹಿಸಲು ಈ USB ಯನ್ನು ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲಾಗಿದೆ. ಇದು ಯಾವುದೇ ಇತರ ಸಾಧನಗಳಲ್ಲಿ ಕೆಲಸ ಮಾಡುವುದಿಲ್ಲ."</string>
+    <string name="learn_more_action" msgid="7015991954404958779">"ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"ಮರುಪ್ರಯತ್ನಿಸು"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS ರೂಟರ್‌ಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ..."</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"ನಿಮ್ಮ ರೂಟರ್‌ನಲ್ಲಿ Wi‑Fi ಸಂರಕ್ಷಿತ ಸೆಟಪ್ ಬಟನ್‌ ಒತ್ತಿರಿ.\nಇದನ್ನು \"WPS\" ಎಂದು ಕರೆಯಬಹುದು ಇಲ್ಲವೇ ಎಡಕ್ಕೆ ಸಂಕೇತವನ್ನು ಒಳಗೊಂಡಿರಬಹುದು."</string>

@@ -215,32 +215,29 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"အသံ"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"အထွေထွေ"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"ကက်ရှလုပ်ထား ဒေတာ"</string>
-    <!-- no translation found for storage_eject (113476702798691558) -->
+    <string name="storage_eject" msgid="113476702798691558">"ထုတ်မည်"</string>
+    <string name="storage_format" msgid="3759273736493279595">"ပယ်ဖျက်ရန် &amp; amp; ဖောမတ်ချရန်"</string>
+    <string name="storage_format_for_private" msgid="7095270113028182032">"စက်ကိရိယာသိုလှောင်မှုအဖြစ် ဖောမတ်ချပါ"</string>
+    <string name="storage_not_connected" msgid="6378589497819596096">"ချိတ်ဆက် မထား"</string>
+    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> ကိုတပ်ဆင်ထားသည်"</string>
+    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> ကိုတပ်ဆင်၍မရပါ"</string>
+    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> ကိုလုံခြုံစွာ ထုတ်လိုက်ပြီ"</string>
+    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> ကိုလုံခြုံစွာ မထုတ်နိုင်ပါ"</string>
+    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> အားဖောမတ်ချပြီးပြီဖြစ်သည်"</string>
+    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> အားဖောမတ်မလုပ်နိုင်ပါ"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"အတွင်းသိုလှောင်မှုအဖြစ် ဖောမတ်ချရန်"</string>
+    <string name="storage_wizard_format__as_private_description" msgid="580737200012210857">"လုံခြုံစေရန်အတွက် USB drive ကိုဖောမတ်ချရန်လိုအပ်ပါသည်။လုံခြုံစွာဖောမတ်ချပြီးတဲ့အခါဤ drive ကိုဤစက်ပစ္စည်းနှင့်တွဲသုံးနိုင်ပါလိမ့်မည်။ ဖောမတ်ချခြင်းသည် drive မှာလက်ရှိ‌သိုလှောင်ထားသောအချက်အလက်ကိုပျက်စီးဆုံးရှုံးစေပါသည်။အချက်အလက်ပျက်စီးဆုံးရှုံးခြင်းမှရှောင်ရှားရန်အရံကူးယူထားပါ။"</string>
+    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"ဖျက်မည် &amp; ပုံစံချမည်"</string>
+    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"ပုံစံချပြီးနောက်၊ ဤ USB ဒရိုက်ကို အခြားစက်ပစ္စည်းများတွင် အသုံးပြုနိုင်ပါမည်။ ဒေတာများအားလုံး ဖျက်လိုက်ပါပြီ။ အပ်ဖ်များကို အခြားအတွင်းသိုလှောင်မှုသို့ ဦးစွာအရံကူးယူထားရန် စဉ်းစားပါ။"</string>
+    <string name="storage_wizard_format_action" msgid="3986485572528374905">"ဖောမတ်ချရန်"</string>
+    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"အပ်ဖ်များ အရံကူးထားမည်"</string>
+    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
     <skip />
-    <!-- no translation found for storage_format (3759273736493279595) -->
+    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
     <skip />
-    <!-- no translation found for storage_format_for_private (7095270113028182032) -->
-    <skip />
-    <!-- no translation found for storage_mount_success (4624254886950093443) -->
-    <skip />
-    <!-- no translation found for storage_mount_failure (2469026716895846633) -->
-    <skip />
-    <!-- no translation found for storage_unmount_success (7921627277443856151) -->
-    <skip />
-    <!-- no translation found for storage_unmount_failure (6322048355281833871) -->
-    <skip />
-    <!-- no translation found for storage_format_success (6252068844653804319) -->
-    <skip />
-    <!-- no translation found for storage_format_failure (7336977074523932399) -->
-    <skip />
-    <!-- no translation found for storage_wizard_format_internal_title (4280017112266967342) -->
-    <skip />
-    <!-- no translation found for storage_wizard_format_internal_description (2400656278398674742) -->
-    <skip />
-    <!-- no translation found for storage_wizard_format_action (3986485572528374905) -->
-    <skip />
-    <!-- no translation found for learn_more_action (7015991954404958779) -->
-    <skip />
+    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"အတွင်းသိုလှောင်မှုကို ထုတ်မည်"</string>
+    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"ဤစက်ပစ္စည်းသတိုလှောင်မှုရှိ အပ်များသည် ၎င်းကိုထုတ်လိုက်လျှင် အလုပ်လုပ်တော့မည်မဟုတ်ပါ။ ဤ USB ဒရိုက်သည် ဤစက်ပစ္စည်းပပေါ်တွင် အလုပ်လုပ်ရန်အတွက်သာ ပုံစံချထားခြင်းဖြစ်သည်။ ၎င်းသည် အခြားများတွင် အလုပ်လုပ်မည်မဟုတ်ပါ။"</string>
+    <string name="learn_more_action" msgid="7015991954404958779">"ပိုမိုလေ့လာရန်"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"ထပ်စမ်း"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS ရူးတားကို ရှာနေ…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"သင်၏ ရောက်တာ ပေါ်က ကြိုးမဲ့ ကာကွယ်မှု စဖွင့်သတ်မှတ်ရေး ခလုတ်ကို နှိပ်ပါ။ \n၎င်းကို \"WPS\" ဆိုပြီး ခေါ်ဝေါ်နိုင်သည် သို့မဟုတ် ဘယ်ဘက်ရှိ သင်္ကေတ ပါရှိနိုင်သည်။"</string>
