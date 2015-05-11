@@ -47,6 +47,8 @@ enum ActionType {
             ActionBehavior.CANCEL },
             R.string.device_apps_app_management_enable,
             R.string.device_apps_app_management_enable_desc),
+    STORAGE_USED(new ActionBehavior[] { ActionBehavior.INIT },
+            R.string.device_apps_app_management_storage_used),
     CLEAR_DATA(new ActionBehavior[] { ActionBehavior.INIT, ActionBehavior.OK,
             ActionBehavior.CANCEL },
             R.string.device_apps_app_management_clear_data,
