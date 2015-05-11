@@ -114,9 +114,11 @@ public class LanguageActivity extends DialogActivity implements ActionAdapter.Li
             } else {
                 // neither side is the US, sort based on display language name
                 // then country name
-                int langEquiv = lhs.getDisplayLanguage(lhs).compareTo(rhs.getDisplayLanguage(rhs));
+                int langEquiv = lhs.getDisplayLanguage(lhs)
+                        .compareToIgnoreCase(rhs.getDisplayLanguage(rhs));
                 if (langEquiv == 0) {
-                    return lhs.getDisplayCountry(lhs).compareTo(rhs.getDisplayCountry(rhs));
+                    return lhs.getDisplayCountry(lhs)
+                            .compareToIgnoreCase(rhs.getDisplayCountry(rhs));
                 } else {
                     return langEquiv;
                 }
