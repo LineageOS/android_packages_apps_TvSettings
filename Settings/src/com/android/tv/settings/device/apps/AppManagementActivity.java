@@ -21,15 +21,19 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.storage.StorageManager;
+import android.os.storage.VolumeInfo;
 import android.util.Log;
 
 import com.android.tv.settings.ActionBehavior;
 import com.android.tv.settings.ActionKey;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsConstant;
+import com.android.tv.settings.device.storage.MoveAppStepFragment;
 import com.android.tv.settings.dialog.old.Action;
 import com.android.tv.settings.dialog.old.ActionAdapter;
 import com.android.tv.settings.dialog.old.ActionFragment;
@@ -55,6 +59,8 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
     private static final int REQUEST_UNINSTALL = 1;
     private static final int REQUEST_MANAGE_SPACE = 2;
 
+    private PackageManager mPackageManager;
+    private StorageManager mStorageManager;
     private String mPackageName;
     private ApplicationsState mApplicationsState;
     private ApplicationsState.Session mSession;
@@ -71,6 +77,8 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mPackageManager = getPackageManager();
+        mStorageManager = getSystemService(StorageManager.class);
         mPackageName = getIntent().getStringExtra(EXTRA_PACKAGE_NAME_KEY);
         mApplicationsState = ApplicationsState.getInstance(getApplication());
         mSession = mApplicationsState.newSession(this);
@@ -89,7 +97,7 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
                 getString(R.string.device_apps),
                 getString(R.string.device_apps_app_management_version, mAppInfo.getVersion()),
                 Uri.parse(AppsBrowseInfo.getAppIconUri(this, mAppInfo)),
-                getResources().getColor(R.color.icon_background)), mActionFragment);
+                getColor(R.color.icon_background)), mActionFragment);
     }
 
     public static Intent getLaunchIntent(String packageName) {
@@ -115,7 +123,7 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
 
         DisableChanger(AppManagementActivity activity, ApplicationInfo info, int state) {
             mPm = activity.getPackageManager();
-            mActivity = new WeakReference<AppManagementActivity>(activity);
+            mActivity = new WeakReference<>(activity);
             mInfo = info;
             mState = state;
         }
@@ -137,7 +145,7 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
 
     @Override
     public void onActionClicked(Action action) {
-        ActionKey<ActionType, ActionBehavior> actionKey = new ActionKey<ActionType, ActionBehavior>(
+        ActionKey<ActionType, ActionBehavior> actionKey = new ActionKey<>(
                 ActionType.class, ActionBehavior.class, action.getKey());
         ActionType actionType = actionKey.getType();
 
@@ -243,6 +251,16 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
                         (mNotificationSetter.areNotificationsOn()) ? ActionBehavior.ON
                                 : ActionBehavior.OFF)));
                 break;
+            case STORAGE_USED:
+                getFragmentManager().beginTransaction()
+                        .addToBackStack(null)
+                        .hide(getDialogFragment())
+                        .hide(getContentFragment())
+                        .hide(getActionFragment())
+                        .add(android.R.id.content,
+                                MoveAppStepFragment.newInstance(mPackageName, mAppInfo.getName()))
+                        .commit();
+                break;
             default:
                 setContentAndActionFragments(createContentFragment(actionType, action),
                         ActionFragment.newInstance(actionType.toActions(getResources())));
@@ -276,7 +294,7 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
         }
         return ContentFragment.newInstance(action.getTitle(), mAppInfo.getName(), descriptionToUse,
                 Uri.parse(AppsBrowseInfo.getAppIconUri(this, mAppInfo)),
-                getResources().getColor(R.color.icon_background));
+                getColor(R.color.icon_background));
     }
 
     private void onOk(ActionType actionType) {
@@ -396,38 +414,46 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
     }
 
     private ArrayList<Action> getActions() {
-        ArrayList<Action> actions = new ArrayList<Action>();
+        ArrayList<Action> actions = new ArrayList<>();
 
+        final Resources res = getResources();
         if (mOpenManager.canOpen()) {
-            actions.add(ActionType.OPEN.toInitAction(getResources()));
+            actions.add(ActionType.OPEN.toInitAction(res));
         }
         if (mForceStopManager.canForceStop()) {
-            actions.add(ActionType.FORCE_STOP.toInitAction(getResources()));
+            actions.add(ActionType.FORCE_STOP.toInitAction(res));
         }
         if (mUninstallManager.canUninstall()) {
-            actions.add(ActionType.UNINSTALL.toInitAction(getResources()));
+            actions.add(ActionType.UNINSTALL.toInitAction(res));
         } else {
             // App is on system partition.
             if (mUninstallManager.canDisable()) {
                 if (mUninstallManager.isEnabled()) {
-                    actions.add(ActionType.DISABLE.toInitAction(getResources()));
+                    actions.add(ActionType.DISABLE.toInitAction(res));
                 } else {
-                    actions.add(ActionType.ENABLE.toInitAction(getResources()));
+                    actions.add(ActionType.ENABLE.toInitAction(res));
                 }
             }
         }
-        actions.add(
-                ActionType.CLEAR_DATA.toInitAction(getResources(), mDataClearer.getDataSize(this)));
-        actions.add(ActionType.CLEAR_CACHE.toInitAction(
-                getResources(), mCacheClearer.getCacheSize(this)));
-        actions.add(ActionType.CLEAR_DEFAULTS.toInitAction(
-                getResources(), mDefaultClearer.getDescription(this)));
-        actions.add(ActionType.NOTIFICATIONS.toInitAction(getResources(),
+        actions.add(ActionType.STORAGE_USED.toInitAction(res, getStorageDescription()));
+        actions.add( ActionType.CLEAR_DATA.toInitAction(res, mDataClearer.getDataSize(this)));
+        actions.add(ActionType.CLEAR_CACHE.toInitAction(res, mCacheClearer.getCacheSize(this)));
+        actions.add(ActionType.CLEAR_DEFAULTS.toInitAction(res,
+                mDefaultClearer.getDescription(this)));
+        actions.add(ActionType.NOTIFICATIONS.toInitAction(res,
                 getString((mNotificationSetter.areNotificationsOn()) ? R.string.settings_on
                         : R.string.settings_off)));
-        actions.add(ActionType.PERMISSIONS.toInitAction(getResources()));
+        actions.add(ActionType.PERMISSIONS.toInitAction(res));
 
         return actions;
+    }
+
+    private String getStorageDescription() {
+        final ApplicationInfo applicationInfo = mAppInfo.getApplicationInfo();
+        final VolumeInfo volumeInfo = mPackageManager.getPackageCurrentVolume(applicationInfo);
+        final String volumeDesc = mStorageManager.getBestVolumeDescription(volumeInfo);
+        return getString(R.string.device_apps_app_management_storage_used_desc, mAppInfo.getSize(),
+                volumeDesc);
     }
 
     private void updateActions() {

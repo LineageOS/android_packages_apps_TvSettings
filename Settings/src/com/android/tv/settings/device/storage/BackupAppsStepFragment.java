@@ -49,8 +49,12 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
     private PackageManager mPackageManager;
     private StorageManager mStorageManager;
 
+    private String mVolumeId;
+
     private IconLoaderTask mIconLoaderTask;
     private final Map<String, Drawable> mIconMap = new ArrayMap<>();
+
+    private final List<ApplicationInfo> mInfos = new ArrayList<>();
 
     public static BackupAppsStepFragment newInstance(VolumeInfo volumeInfo) {
         final BackupAppsStepFragment fragment = new BackupAppsStepFragment();
@@ -65,6 +69,8 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
         // Need mPackageManager before onCreateActions, which is called from super.onCreate
         mPackageManager = getActivity().getPackageManager();
         mStorageManager = getActivity().getSystemService(StorageManager.class);
+
+        mVolumeId = getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID);
 
         mApplicationsState = ApplicationsState.getInstance(getActivity().getApplication());
         mSession = mApplicationsState.newSession(this);
@@ -87,8 +93,7 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
     @Override
     public @NonNull GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
         final String title;
-        final VolumeInfo volumeInfo = mStorageManager.findVolumeById(
-                getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
+        final VolumeInfo volumeInfo = mStorageManager.findVolumeById(mVolumeId);
         final String volumeDesc = mStorageManager.getBestVolumeDescription(volumeInfo);
         final String primaryStorageVolumeId =
                 mPackageManager.getPrimaryStorageCurrentVolume().getId();
@@ -116,18 +121,25 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
         final List<GuidedAction> actions = new ArrayList<>(infos.size());
         for (final ApplicationInfo info : infos) {
             final ApplicationsState.AppEntry entry = mApplicationsState.getEntry(info.packageName);
-            // TODO: only show apps on this drive
-            if (entry == null) {
+            final VolumeInfo installedVolume = mPackageManager.getPackageCurrentVolume(info);
+
+            if (entry == null || installedVolume == null ||
+                    !TextUtils.equals(installedVolume.getId(), mVolumeId)) {
                 continue;
             }
+            final int index = usedInfos.size();
             usedInfos.add(info);
             final AppInfo appInfo = new AppInfo(getActivity(), entry);
             actions.add(new GuidedAction.Builder()
                     .title(appInfo.getName())
                     .description(appInfo.getSize())
                     .icon(mIconMap.get(info.packageName))
+                    .id(index)
                     .build());
         }
+        mInfos.clear();
+        mInfos.addAll(usedInfos);
+
         if (refreshIcons) {
             if (mIconLoaderTask != null) {
                 mIconLoaderTask.cancel(true);
@@ -144,7 +156,17 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
 
     @Override
     public void onGuidedActionClicked(GuidedAction action) {
-        super.onGuidedActionClicked(action);
+        final int actionId = (int) action.getId();
+        final ApplicationInfo info = mInfos.get(actionId);
+        final AppInfo appInfo = new AppInfo(getActivity(), mApplicationsState.getEntry(
+                info.packageName));
+
+        final MoveAppStepFragment fragment = MoveAppStepFragment.newInstance(info.packageName,
+                appInfo.getName());
+        getFragmentManager().beginTransaction()
+                .addToBackStack(null)
+                .replace(android.R.id.content, fragment)
+                .commit();
     }
 
     @Override
