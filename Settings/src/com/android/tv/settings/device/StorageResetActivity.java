@@ -21,15 +21,18 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.storage.StorageEventListener;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
@@ -46,6 +49,8 @@ import com.android.tv.settings.device.apps.AppsActivity;
 import com.android.tv.settings.device.storage.EjectInternalStepFragment;
 import com.android.tv.settings.device.storage.FormatAsPublicStepFragment;
 import com.android.tv.settings.device.storage.FormatAsPrivateStepFragment;
+import com.android.tv.settings.device.storage.MoveAppProgressFragment;
+import com.android.tv.settings.device.storage.MoveAppStepFragment;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.Layout.Action;
 import com.android.tv.settings.dialog.Layout.Header;
@@ -62,7 +67,8 @@ import java.util.Map;
 /**
  * Activity to view storage consumption and factory reset device.
  */
-public class StorageResetActivity extends SettingsLayoutActivity {
+public class StorageResetActivity extends SettingsLayoutActivity
+        implements MoveAppStepFragment.Callback {
 
     private static final String TAG = "StorageResetActivity";
     private static final long INVALID_SIZE = -1;
@@ -82,6 +88,8 @@ public class StorageResetActivity extends SettingsLayoutActivity {
      */
     private static final String SHUTDOWN_INTENT_EXTRA = "shutdown";
 
+    private static final String PROGRESS_DIALOG_BACKSTACK_TAG = "progressDialog";
+
     private class SizeStringGetter extends StringGetter {
         private long mSize = INVALID_SIZE;
 
@@ -97,6 +105,7 @@ public class StorageResetActivity extends SettingsLayoutActivity {
     }
 
     private StorageManager mStorageManager;
+    private PackageManager mPackageManager;
 
     private final Map<String, StorageLayoutGetter> mStorageLayoutGetters = new ArrayMap<>();
     private final Map<String, SizeStringGetter> mStorageDescriptionGetters = new ArrayMap<>();
@@ -119,11 +128,42 @@ public class StorageResetActivity extends SettingsLayoutActivity {
         }
     };
 
+    private int mAppMoveId;
+    private final PackageManager.MoveCallback mMoveCallback = new PackageManager.MoveCallback() {
+        @Override
+        public void onStatusChanged(int moveId, int status, long estMillis) {
+            if (moveId != mAppMoveId || !PackageManager.isMoveStatusFinished(status)) {
+                return;
+            }
+
+            getFragmentManager().popBackStack(PROGRESS_DIALOG_BACKSTACK_TAG,
+                    FragmentManager.POP_BACK_STACK_INCLUSIVE);
+
+            // TODO: refresh ui
+
+            if (status != PackageManager.MOVE_SUCCEEDED) {
+                Log.d(TAG, "Move failure status: " + status);
+                Toast.makeText(StorageResetActivity.this,
+                        MoveAppProgressFragment.moveStatusToMessage(StorageResetActivity.this,
+                                status),
+                        Toast.LENGTH_LONG).show();
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mPackageManager = getPackageManager();
+        mPackageManager.registerMoveCallback(mMoveCallback, new Handler());
         mStorageManager = getSystemService(StorageManager.class);
         mStorageHeadersGetter.refreshView();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPackageManager.unregisterMoveCallback(mMoveCallback);
     }
 
     @Override
@@ -650,4 +690,24 @@ public class StorageResetActivity extends SettingsLayoutActivity {
         }
     }
 
+    @Override
+    public void onRequestMovePackageToVolume(String packageName, VolumeInfo destination) {
+        mAppMoveId = mPackageManager.movePackage(packageName, destination);
+        final ApplicationInfo applicationInfo;
+        try {
+            applicationInfo = mPackageManager
+                    .getApplicationInfo(packageName, 0);
+        } catch (final PackageManager.NameNotFoundException e) {
+            throw new IllegalStateException(e);
+        }
+
+        final MoveAppProgressFragment fragment = MoveAppProgressFragment
+                .newInstance(mPackageManager.getApplicationLabel(applicationInfo));
+
+        getFragmentManager().beginTransaction()
+                .addToBackStack(PROGRESS_DIALOG_BACKSTACK_TAG)
+                .replace(android.R.id.content, fragment)
+                .commit();
+
+    }
 }

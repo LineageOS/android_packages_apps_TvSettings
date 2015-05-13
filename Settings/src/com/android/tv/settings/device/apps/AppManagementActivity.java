@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.device.apps;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -25,14 +27,17 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.tv.settings.ActionBehavior;
 import com.android.tv.settings.ActionKey;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsConstant;
+import com.android.tv.settings.device.storage.MoveAppProgressFragment;
 import com.android.tv.settings.device.storage.MoveAppStepFragment;
 import com.android.tv.settings.dialog.old.Action;
 import com.android.tv.settings.dialog.old.ActionAdapter;
@@ -48,12 +53,16 @@ import java.util.ArrayList;
  */
 public class AppManagementActivity extends DialogActivity implements ActionAdapter.Listener,
         ApplicationsState.Callbacks, DataClearer.Listener, CacheClearer.Listener,
-        DefaultClearer.Listener {
+        DefaultClearer.Listener, MoveAppStepFragment.Callback {
 
     private static final String TAG = "AppManagementActivity";
 
     private static final String EXTRA_PACKAGE_NAME_KEY = SettingsConstant.PACKAGE
             + ".device.apps.PACKAGE_NAME";
+
+    private static final String DIALOG_BACKSTACK_TAG = "storageUsed";
+
+    private static final String SAVE_STATE_MOVE_ID = "AppManagementActivity.moveId";
 
     // Result code identifiers
     private static final int REQUEST_UNINSTALL = 1;
@@ -74,6 +83,30 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
     private CacheClearer mCacheClearer;
     private ActionFragment mActionFragment;
 
+    private int mAppMoveId;
+    private final PackageManager.MoveCallback mMoveCallback = new PackageManager.MoveCallback() {
+        @Override
+        public void onStatusChanged(int moveId, int status, long estMillis) {
+            if (moveId != mAppMoveId || !PackageManager.isMoveStatusFinished(status)) {
+                return;
+            }
+
+            getFragmentManager().popBackStack(DIALOG_BACKSTACK_TAG,
+                    FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            // TODO: this isn't quite enough to refresh the UI
+            mApplicationsState.invalidatePackage(mPackageName);
+            updateActions();
+
+            if (status != PackageManager.MOVE_SUCCEEDED) {
+                Log.d(TAG, "Move failure status: " + status);
+                Toast.makeText(AppManagementActivity.this,
+                        MoveAppProgressFragment.moveStatusToMessage(AppManagementActivity.this,
+                                status),
+                        Toast.LENGTH_LONG).show();
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,11 +126,22 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
         mCacheClearer = new CacheClearer(this, mAppInfo);
         mActionFragment = ActionFragment.newInstance(getActions());
 
+        mAppMoveId = savedInstanceState != null ?
+                savedInstanceState.getInt(SAVE_STATE_MOVE_ID) : -1;
+
         setContentAndActionFragments(ContentFragment.newInstance(mAppInfo.getName(),
                 getString(R.string.device_apps),
                 getString(R.string.device_apps_app_management_version, mAppInfo.getVersion()),
                 Uri.parse(AppsBrowseInfo.getAppIconUri(this, mAppInfo)),
                 getColor(R.color.icon_background)), mActionFragment);
+
+        mPackageManager.registerMoveCallback(mMoveCallback, new Handler());
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPackageManager.unregisterMoveCallback(mMoveCallback);
     }
 
     public static Intent getLaunchIntent(String packageName) {
@@ -252,14 +296,8 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
                                 : ActionBehavior.OFF)));
                 break;
             case STORAGE_USED:
-                getFragmentManager().beginTransaction()
-                        .addToBackStack(null)
-                        .hide(getDialogFragment())
-                        .hide(getContentFragment())
-                        .hide(getActionFragment())
-                        .add(android.R.id.content,
-                                MoveAppStepFragment.newInstance(mPackageName, mAppInfo.getName()))
-                        .commit();
+                startDialogFragment(MoveAppStepFragment.newInstance(mPackageName,
+                        mAppInfo.getName()));
                 break;
             default:
                 setContentAndActionFragments(createContentFragment(actionType, action),
@@ -458,5 +496,27 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
 
     private void updateActions() {
         ((ActionAdapter) mActionFragment.getAdapter()).setActions(getActions());
+    }
+
+    @Override
+    public void onRequestMovePackageToVolume(String packageName, VolumeInfo destination) {
+        // Kick off the move
+        mAppMoveId = mPackageManager.movePackage(packageName, destination);
+        // Show the progress dialog
+        startDialogFragment(MoveAppProgressFragment.newInstance(mAppInfo.getName()));
+    }
+
+    private void startDialogFragment(Fragment fragment) {
+        // Get rid of any previous wizard screen(s)
+        getFragmentManager().popBackStack(DIALOG_BACKSTACK_TAG,
+                FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        // Replace it with the progress screen
+        getFragmentManager().beginTransaction()
+                .addToBackStack(DIALOG_BACKSTACK_TAG)
+                .hide(getDialogFragment())
+                .hide(getContentFragment())
+                .hide(getActionFragment())
+                .add(android.R.id.content, fragment)
+                .commit();
     }
 }
