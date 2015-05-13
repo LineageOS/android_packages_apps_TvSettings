@@ -49,6 +49,10 @@ public class MoveAppStepFragment extends GuidedStepFragment {
     private String mPackageDesc;
     private List<VolumeInfo> mCandidateVolumes;
 
+    public interface Callback {
+        void onRequestMovePackageToVolume(String packageName, VolumeInfo destination);
+    }
+
     public static MoveAppStepFragment newInstance(String packageName, String packageDesc) {
         final MoveAppStepFragment fragment = new MoveAppStepFragment();
         final Bundle b = new Bundle(2);
@@ -122,9 +126,9 @@ public class MoveAppStepFragment extends GuidedStepFragment {
 
     @Override
     public void onGuidedActionClicked(GuidedAction action) {
-        mPackageManager.movePackage(mPackageName, mCandidateVolumes.get((int)action.getId()));
-        // TODO: better callback
-        getActivity().onBackPressed();
+        final Callback callback = (Callback) getActivity();
+        callback.onRequestMovePackageToVolume(mPackageName,
+                mCandidateVolumes.get((int)action.getId()));
     }
 
 }
