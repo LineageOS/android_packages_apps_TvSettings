@@ -36,6 +36,7 @@ import android.os.Handler;
 import android.os.storage.StorageEventListener;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
+import android.support.annotation.NonNull;
 import android.text.format.Formatter;
 import android.util.ArrayMap;
 import android.util.Log;
@@ -89,6 +90,8 @@ public class StorageResetActivity extends SettingsLayoutActivity
     private static final String SHUTDOWN_INTENT_EXTRA = "shutdown";
 
     private static final String PROGRESS_DIALOG_BACKSTACK_TAG = "progressDialog";
+
+    private static final String SAVE_STATE_MOVE_ID = "StorageResetActivity.moveId";
 
     private class SizeStringGetter extends StringGetter {
         private long mSize = INVALID_SIZE;
@@ -154,16 +157,21 @@ public class StorageResetActivity extends SettingsLayoutActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mAppMoveId = savedInstanceState != null ?
+                savedInstanceState.getInt(SAVE_STATE_MOVE_ID) : -1;
+
         mPackageManager = getPackageManager();
         mPackageManager.registerMoveCallback(mMoveCallback, new Handler());
+
         mStorageManager = getSystemService(StorageManager.class);
         mStorageHeadersGetter.refreshView();
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mPackageManager.unregisterMoveCallback(mMoveCallback);
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(SAVE_STATE_MOVE_ID, mAppMoveId);
     }
 
     @Override
@@ -182,6 +190,12 @@ public class StorageResetActivity extends SettingsLayoutActivity
             getter.stopListening();
         }
         super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPackageManager.unregisterMoveCallback(mMoveCallback);
     }
 
     @Override
