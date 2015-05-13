@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Després de la formatació, podràs utilitzar aquesta unitat USB en altres dispositius. S\'esborraran totes les dades. Potser primer hauries de crear la còpia de seguretat movent les aplicacions a un altre emmagatzematge intern."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formata"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Crea una còpia de seguretat de les aplicacions"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aplicacions emmagatzemades a <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Aplicacions i dades emmagatzemades a <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Disponible: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Expulsar l\'emmagatzematge intern"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Les aplicacions que hi hagi a l\'emmagatzematge d\'aquest dispositiu deixaran de funcionar quan s\'hagi expulsat. Aquesta unitat USB es formata per funcionar només en aquest dispositiu. No funcionarà en altres dispositius."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Emmagatzematge utilitzat"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Més informació"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Torna-ho a provar"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"S\'està cercant l\'encaminador WPS…"</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Vols desactivar l\'aplicació?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Activa"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Vols activar l\'aplicació?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Emmagatzematge utilitzat"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> en ús a <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Esborra les dades"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Totes les dades d\'aquesta aplicació se suprimiran permanentment."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Això inclou tots els fitxers, els paràmetres, els comptes, les bases de dades, etc."</string>

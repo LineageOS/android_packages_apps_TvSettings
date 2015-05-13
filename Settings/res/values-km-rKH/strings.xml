@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"បន្ទាប់ពីសម្អាតហើយ អ្នកអាចប្រើឧបករណ៍ផ្ទុក USB នេះនៅក្នុងឧបករណ៍ផ្សេងទៀត។ ទិន្នន័យទាំងអស់នឹងត្រូវបានលុបចោល។ សូមពិចារណាលើការបម្រុងទុកជាមុនសិនដោយផ្លាស់ទីកម្មវិធីទៅឧបករណ៍ផ្ទុកខាងក្នុងផ្សេងទៀត។"</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"សម្អាត"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"បម្រុងទុកកម្មវិធី"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"កម្មវិធីបានផ្ទុកនៅក្នុង <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"កម្មវិធី និងទិន្នន័យបានផ្ទុកនៅក្នុង <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"មាន <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"ច្រានចេញឧបករណ៍ផ្ទុកខាងក្នុង"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"កម្មវិធីនៅលើការផ្ទុករបស់ឧបករណ៍នេះនឹងឈប់ដំណើរការនៅពេលវាត្រូវច្រានចេញ។ ឧបករណ៍ផ្ទុក USB មួយនេះត្រូវបានសម្អាតដើម្បីដំណើរការតែលើឧបករណ៍នេះប៉ុណ្ណោះ។ វានឹងមិនដំណើរការលើឧបករណ៍ផ្សេងទៀតទេ។"</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"ឧបករណ៍ផ្ទុកដែលបានប្រើ"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"ស្វែងយល់បន្ថែម"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"ព្យាយាម​ម្ដងទៀត"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"កំពុង​ស្វែងរក​រ៉ោទ័រ WPS ..."</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"តើអ្នកចង់បិទដំណើរការកម្មវិធីនេះទេ?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"បើកដំណើរការ"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"តើអ្នកចង់បើកដំណើរការកម្មវិធីនេះទេ?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"ឧបករណ៍ផ្ទុកដែលបានប្រើ"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"បានប្រើអស់<xliff:g id="SIZE">%1$s</xliff:g> នៅក្នុង <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"សម្អាត​ទិន្នន័យ"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"ទិន្នន័យរបស់កម្មវិធីនេះទាំងអស់នឹងត្រូវបានលុបជាអចិន្រ្តៃយ៍។"</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"វារួមបញ្ចូលទាំងឯកសារ ការកំណត់ គណនី និងមូលដ្ឋានទិន្នន័យទាំងអស់។"</string>

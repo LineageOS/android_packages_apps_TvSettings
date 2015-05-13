@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Na formatteren kunt u deze USB-drive gebruiken in andere apparaten. Alle gegevens worden gewist. U kunt eerst een back-up maken door apps te verplaatsen naar een ander intern geheugen."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formatteren"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Back-up van apps maken"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Apps opgeslagen op <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Apps en gegevens opgeslagen op <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> beschikbaar"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Intern geheugen uitwerpen"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Apps op dit opslagmedium werken niet meer wanneer het wordt uitgeworpen. Deze USB-drive is geformatteerd voor gebruik in dit apparaat en werkt niet in andere apparaten."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Gebruikte opslag"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Meer informatie"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Opnieuw"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Zoeken naar WPS-router…"</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Wilt u deze app uitschakelen?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Inschakelen"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Wilt u deze app inschakelen?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Gebruikte opslag"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> gebruikt in <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Gegevens wissen"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Alle gegevens van deze app worden permanent verwijderd."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Dit geldt voor alle bestanden, instellingen, accounts, databases, enzovoort."</string>

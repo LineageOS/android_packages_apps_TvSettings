@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಿದ ನಂತರ, ನೀವು ಇತರ ಸಾಧನಗಳಲ್ಲಿ ಈ USB ಡ್ರೈವ್‌ ಬಳಸಬಹುದು. ಎಲ್ಲಾ ಡೇಟಾ ಅಳಿಸಲಾಗುತ್ತದೆ. ಇತರ ಆಂತರಿಕ ಸಂಗ್ರಹಣೆಗೆ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸರಿಸುವ ಮೂಲಕ ಬ್ಯಾಕಪ್‌ ಮಾಡುವಿಕೆಯನ್ನು ಮೊದಲು ಪರಿಗಣಿಸಲಾಗುತ್ತದೆ."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡು"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಬ್ಯಾಕಪ್‌ ಮಾಡಿ"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> ರಲ್ಲಿ ಸಂಗ್ರಹವಾಗಿರುವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> ನಲ್ಲಿ ಸಂಗ್ರಹವಾಗಿರುವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಡೇಟಾ"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> ಲಭ್ಯವಿದೆ"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"ಆಂತರಿಕ ಸಂಗ್ರಹಣೆಯನ್ನು ಎಜೆಕ್ಟ್ ಮಾಡಿ"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"ಇದನ್ನು ಎಜೆಕ್ಟ್ ಮಾಡಿದಾಗ ಈ ಸಾಧನದಲ್ಲಿನ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತವೆ. ಈ ಸಾಧನದಲ್ಲಿ ಮಾತ್ರ ಕಾರ್ಯನಿರ್ವಹಿಸಲು ಈ USB ಯನ್ನು ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲಾಗಿದೆ. ಇದು ಯಾವುದೇ ಇತರ ಸಾಧನಗಳಲ್ಲಿ ಕೆಲಸ ಮಾಡುವುದಿಲ್ಲ."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"ಬಳಸಲಾದ ಸಂಗ್ರಹಣೆ"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"ಮರುಪ್ರಯತ್ನಿಸು"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS ರೂಟರ್‌ಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ..."</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"ನೀವು ಈ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲು ಬಯಸುವಿರಾ?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"ಸಕ್ರಿಯಗೊಳಿಸು"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"ನೀವು ಈ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಬಯಸುವಿರಾ?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"ಬಳಸಲಾದ ಸಂಗ್ರಹಣೆ"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> ನಲ್ಲಿ <xliff:g id="SIZE">%1$s</xliff:g> ಬಳಸಲಾಗಿದೆ"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"ಡೇಟಾ ತೆರವುಗೊಳಿಸಿ"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"ಈ ಅಪ್ಲಿಕೇಶನ್‌ನ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"ಇದು ಎಲ್ಲ ಫೈಲ್‌ಗಳು, ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಖಾತೆಗಳು, ಡೇಟಾಬೇಸ್‌ಗಳು, ಮುಂತಾದವುಗಳನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ."</string>

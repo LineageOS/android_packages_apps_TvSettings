@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Nach der Formatierung können Sie dieses USB-Speichergerät in anderen Geräten verwenden. Alle Daten werden gelöscht. Sie sollten zunächst eine Sicherung vornehmen, indem Sie Apps auf ein anderes internes Speichergerät verschieben."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formatieren"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Apps sichern"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Apps auf <xliff:g id="NAME">%1$s</xliff:g> gespeichert"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Apps und Daten auf <xliff:g id="NAME">%1$s</xliff:g> gespeichert"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> verfügbar"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Internes Speichergerät auswerfen"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Apps auf diesem Speichergerät funktionieren nach dem Auswerfen nicht mehr. Dieses USB-Speichergerät ist nur für dieses Gerät formatiert und kann nicht mit anderen Geräten verwendet werden."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Genutzter Speicherplatz"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Weitere Informationen"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Wiederholen"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS-Router suchen..."</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Möchten Sie diese App deaktivieren?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Aktivieren"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Möchten Sie diese App aktivieren?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Genutzter Speicherplatz"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g>: <xliff:g id="SIZE">%1$s</xliff:g> belegt"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Daten löschen"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Sämtliche Daten dieser App werden unwiderruflich gelöscht."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Dazu gehören alle Dateien, Einstellungen, Konten, Datenbanken usw."</string>

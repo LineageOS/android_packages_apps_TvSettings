@@ -232,12 +232,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"После форматирања можете да користите овај USB диск на другим уређајима. Сви подаци ће бити обрисани. Размислите о томе да прво направите резервну копију тако што ћете преместити апликације у неку другу интерну меморију."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Формат"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Направи резервне копије апликација"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Избаците интерну меморију"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Апликације у меморији овог уређаја ће престати да функционишу када је избаците. Овај USB диск је форматиран тако да функционише само на овом уређају. Неће функционисати ни на једном другом уређају."</string>
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Апликације које се чувају на уређају <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Апликације и подаци који се чувају на уређају <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Доступно је <xliff:g id="SIZE">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Извадите интерну меморију"</string>
+    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Апликације у меморији овог уређаја ће престати да функционишу када га извадите. Овај USB диск је форматиран тако да функционише само на овом уређају. Неће функционисати ни на једном другом уређају."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Складишни простор у употреби"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Сазнајте више"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Покушај поново"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Претрага WPS рутера…"</string>
@@ -512,6 +512,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Желите ли да онемогућите ову апликацију?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Омогући"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Желите ли да омогућите ову апликацију?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Складишни простор у употреби"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Користи се <xliff:g id="SIZE">%1$s</xliff:g> <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Обриши податке"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Сви подаци ове апликације биће трајно избрисани."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"То обухвата све датотеке, подешавања, налоге, базе података итд."</string>
