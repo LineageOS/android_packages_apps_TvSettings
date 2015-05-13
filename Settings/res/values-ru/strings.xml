@@ -227,18 +227,18 @@
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Не удалось безопасно извлечь <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"Отформатировано: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Ошибка форматирования <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Формат устройства как внутренней памяти"</string>
-    <string name="storage_wizard_format__as_private_description" msgid="580737200012210857">"Чтобы защитить данные, USB-накопитель надо отформатировать. После этого он будет работать только с текущим устройством. При форматировании удалятся все данные на накопителе. Чтобы не потерять информацию, предварительно скопируйте ее в другое место."</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Форматирование в качестве внутренней памяти"</string>
+    <string name="storage_wizard_format__as_private_description" msgid="580737200012210857">"Чтобы защитить данные, USB-накопитель надо отформатировать. После этого он будет работать только с текущим устройством. При форматировании будут удалены все данные на накопителе. Чтобы не потерять информацию, предварительно скопируйте ее в другое место."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Очистка и форматирование"</string>
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"После форматирования вы сможете использовать USB-накопитель с другими устройствами. Все данные будут удалены. Чтобы не потерять приложения, сохраните их на другом устройстве внутренней памяти."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Форматировать"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Сохранить приложения"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Хранилище приложений: <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Хранилище приложений и данных: <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Доступно <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Извлечение внутренней памяти"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Когда вы извлечете USB-накопитель, приложения перестанут работать. После форматирования его можно будет использовать только с этим устройством."</string>
+    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Когда вы извлечете USB-накопитель, приложения перестанут работать. Он отформатирован для работы только с этим устройством, и не будет работать с другими."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Занимаемая память"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Подробнее…"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Повторить"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Поиск маршрутизатора WPS…"</string>
@@ -517,6 +517,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Отключить это приложение?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Включить"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Включить это приложение?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Занимает памяти"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> (<xliff:g id="VOLUME">%2$s</xliff:g>)"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Удалить данные"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Все данные этого приложения будут удалены без возможности восстановления."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Это касается файлов, настроек, аккаунтов, баз данных и т. д."</string>

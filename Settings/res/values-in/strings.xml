@@ -218,7 +218,7 @@
     <string name="storage_eject" msgid="113476702798691558">"Keluarkan"</string>
     <string name="storage_format" msgid="3759273736493279595">"Hapus &amp; format"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Format sebagai perangkat penyimpanan"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Tidak tersambung"</string>
+    <string name="storage_not_connected" msgid="6378589497819596096">"Tidak terhubung"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> telah dipasang"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"Tidak dapat memasang <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> dikeluarkan dengan aman"</string>
@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Setelah memformat drive USB, Anda dapat menggunakannya di perangkat lain. Semua data akan dihapus. Pertimbangkan membuat cadangan data dengan memindahkan aplikasi ke penyimpanan internal lain."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Format"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Cadangkan aplikasi"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aplikasi yang disimpan di <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Aplikasi dan data yang disimpan di <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Tersedia <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Keluarkan penyimpanan internal"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Aplikasi di penyimpanan perangkat ini akan berhenti berfungsi jika penyimpanan perangkat dikeluarkan. Drive USB diformat agar berfungsi hanya pada perangkat ini. Drive USB tidak akan berfungsi di perangkat lain."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Penyimpanan yang terpakai"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Pelajari lebih lanjut"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Coba lagi"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Menelusuri router WPS…"</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Ingin menonaktifkan aplikasi ini?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Aktifkan"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Ingin mengaktifkan aplikasi ini?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Penyimpanan yang terpakai"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> digunakan di <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Hapus data"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Semua data aplikasi ini akan dihapus secara permanen."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Termasuk semua file, setelan, akun, basis data, dsb."</string>

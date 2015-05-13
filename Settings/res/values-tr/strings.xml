@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Biçimlendirildikten sonra bu USB sürücüsünü başka cihazlarda kullanabilirsiniz. Tüm veriler silinecektir. Öncelikle uygulamaları başka bir dahili depolamaya taşıyarak yedeklemenizi öneririz."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Biçimlendir"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Uygulamaları yedekleyin"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> içinde depolanan uygulamalar"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> içinde depolanan uygulamalar ve veriler"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> kullanılabilir"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Dahili depolamayı çıkarın"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Cihaz çıkarıldığında, bu cihazın depolama alanındaki uygulamaların çalışması duracaktır. Bu USB sürücüsü, yalnızca bu cihazda çalışacak şekilde biçimlendirildi. Başka cihazlarda çalışmayacaktır."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Kullanılan depolama alanı"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Daha fazla bilgi edinin"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Tekrar dene"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS yönlendirici aranıyor…"</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Bu uygulamayı devre dışı bırakmak istiyor musunuz?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Etkinleştir"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Bu uygulamayı etkinleştirmek istiyor musunuz?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Kullanılan depolama alanı"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> biriminde <xliff:g id="SIZE">%1$s</xliff:g> kullanıldı"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Verileri temizle"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Bu uygulamanın tüm verileri kalıcı olarak silinecektir."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Buna tüm dosyalar, ayarlar, hesaplar, veritabanları vb. dahildir."</string>

@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Después de formatear esta unidad USB, puedes utilizarla en otros dispositivos. Se borrarán todos los datos, por lo que te recomendamos que muevas las aplicaciones a otro almacenamiento interno para hacer una copia de seguridad."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formatear"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Hacer copia de seguridad de aplicaciones"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aplicaciones almacenadas en <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Aplicaciones y datos almacenados en <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Disponible: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Expulsar almacenamiento interno"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Las aplicaciones instaladas en el almacenamiento de este dispositivo se detendrán cuando se extraiga. Esta unidad USB se ha formateado para que solo funcione en este dispositivo."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Almacenamiento utilizado"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Más información"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Reintentar"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Buscando router WPS…"</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"¿Quieres inhabilitar esta aplicación?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Habilitar"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"¿Quieres habilitar esta aplicación?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Almacenamiento utilizado"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> utilizados en <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Borrar datos"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Todos los datos de esta aplicación se eliminarán de forma permanente."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Se incluyen todos los archivos, opciones de configuración, cuentas, bases de datos, etc."</string>

@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"ഫോർമാറ്റുചെയ്‌തതിനുശേഷം, മറ്റ് ഉപകരണങ്ങളിൽ നിങ്ങൾക്ക് ഈ USB ഡ്രൈവ് ഉപയോഗിക്കാനാവും. എല്ലാ വിവരവും മായ്‌ക്കും. മറ്റ് ആന്തരിക സംഭരണത്തിലേക്ക് ആപ്പ്‌സ് നീക്കിക്കൊണ്ട് ആദ്യം ബാക്കപ്പുചെയ്യുന്നത് പരിഗണിക്കുക."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"ഫോർമാറ്റുചെയ്യുക"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"ആപ്പ്‌സ് ബാക്കപ്പുചെയ്യുക"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിൽ സംഭരിച്ചിരിക്കുന്ന ആപ്പ്‌സ്"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിൽ സംഭരിച്ചിരിക്കുന്ന ആപ്പ്‌സും ഡാറ്റയും"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> ലഭ്യമാണ്"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"ആന്തരിക സംഭരണം ഒഴിവാക്കുക"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"ഈ ഉപകരണത്തിലെ ആപ്പ്‌സ് ഒഴിവാക്കുമ്പോൾ, ഈ ഉപകരണ സംഭരണം പ്രവർത്തിക്കുന്നത് നിർത്തും. ഈ ഉപകരണത്തിൽ മാത്രം പ്രവർത്തിക്കുന്നതിന് ഈ USB ഡ്രൈവ് ഫോർമാറ്റുചെയ്‌തു. അത് മറ്റൊന്നിലും പ്രവർത്തിക്കില്ല."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"ഉപയോഗിച്ച സംഭരണം"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"കൂടുതലറിയുക"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"വീണ്ടും ശ്രമിക്കുക"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS റൂട്ടറിനായി തിരയുന്നു…"</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"നിങ്ങൾക്ക് ഈ അപ്ലിക്കേഷൻ പ്രവർത്തനരഹിതമാക്കണോ?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"പ്രവർത്തനക്ഷമമാക്കുക"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"നിങ്ങൾക്ക് ഈ അപ്ലിക്കേഷൻ പ്രവർത്തനക്ഷമമാക്കണോ?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"ഉപയോഗിച്ച സംഭരണം"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> എന്നതിൽ <xliff:g id="SIZE">%1$s</xliff:g> ഉപയോഗിച്ചു"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"വിവരം മായ്‌ക്കുക"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"ഈ അപ്ലിക്കേഷന്റെ എല്ലാ വിവരവും ശാശ്വതമായി ഇല്ലാതാക്കും."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"ഫയലുകൾ, ക്രമീകരണം, അക്കൗണ്ടുകൾ, ഡാറ്റാബേസുകൾ തുടങ്ങിയവയെല്ലാം ഇതിൽ ഉൾപ്പെടും."</string>

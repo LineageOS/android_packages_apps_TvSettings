@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"フォーマット後、このUSBドライブは他の端末で使用できるようになります。データはすべて消去されます。まず、アプリを他の内部ストレージに移動してバックアップすることを検討してください。"</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"フォーマット"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"アプリをバックアップ"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g>に保存されているアプリ"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g>に保存されているアプリとデータ"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"空き容量: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"内部ストレージの取り出し"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"この端末のストレージを取り出すと、保存されているアプリは使用できなくなります。このUSBドライブは、この端末用にフォーマットされており、他の端末では使用できません。"</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"使用されているストレージ"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"詳細"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"再試行"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPSルーターを探しています…"</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"このアプリを無効にしますか？"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"有効にする"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"このアプリを有効にしますか？"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"使用されているストレージ"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"使用中の容量: <xliff:g id="SIZE">%1$s</xliff:g>（<xliff:g id="VOLUME">%2$s</xliff:g>）"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"データを消去"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"このアプリのすべてのデータが完全に削除されます。"</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"すべてのファイル、設定、アカウント、データベースなどが対象となります。"</string>

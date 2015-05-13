@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"ຫຼັງ​ຈາກ​ການ​ຟໍ​ແມັດ, ທ່ານ​ສາ​ມາດ​ໃຊ້ USB ດ​ຣ້າຍ​ນີ້​ຢູ່​ໃນ​ອຸ​ປະ​ກອນ​ອື່ນ​ໄດ້. ທຸກ​ຂໍ້​ມູນ​ຈະ​ຖືກ​ລຶບ. ໃຫ້​ຄິດ​ສຳ​ຮອງ​ໄວ້​ກ່ອນ ໂດຍ​ການ​ຍ້າຍ​ແອັບ​ໄປ​ຫາ​ບ່ອນ​ຈັດ​ເກັບ​ພາຍ​ໃນ​ອັນ​ອື່ນ."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"ຟໍແມັດ"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"ສຳ​ຮອງ​ແອັບ"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"ແອັບ​ເກັບ​ໄວ້​ຢູ່​ໃນ <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"ແອັບ ແລະ​ຂໍ້​ມູນ​ເກັບ​ໄວ້​ຢູ່​ໃນ <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"ໃຊ້​ໄດ້​ອີກ <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"ຖອດບ່ອນຈັດເກັບພາຍໃນ​ອອກ"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"ແອັບ​ຢູ່​ໃນ​ບ່ອນ​ຈັດ​ເກັບ​ຂໍ້​ມູນອຸ​ປະ​ກອນ​ນີ້ຈະ​ຢຸດ​ເຮັດ​ວຽກ ເມື່ອ​ມັນ​ຖືກ​ດີດ​ອອກ. USB ດ​ຣ້າຍນີ້​ຖືກ​ຟໍ​ແມັດ ເພື່ອ​ໃຫ້​ເຮັດ​ວຽກ​ຢູ່​ໃນ​ອຸ​ປະ​ກອນ​ນີ້​ເທົ່າ​ນັ້ນ. ມັນ​ຈະ​ບໍ່​ເຮັດ​ວຽກ​ຢູ່​ໃນ​ອຸ​ປະ​ກອນ​ອື່ນ."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"ບ່ອນ​ຈັດ​ເກັບ​ຂໍ້​ມູນ​ໃຊ້​ແລ້ວ"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"ຮຽນຮູ້ເພີ່ມ​ເຕີມ"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"ລອງໃໝ່"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"ກຳ​ລັງ​ຊອກ​ຫາເຣົາ​ເຕີ WPS…"</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"ທ່ານ​ຕ້ອງ​ການ​ປິດ​ໃຊ້​ງານ​ແອັບ​ຯນີ້​ບໍ?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"ເປີດໃຊ້ງານ"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"ທ່ານ​ຕ້ອງ​ການ​ເປີດ​ໃຊ້​ງານ​ແອັບ​ຯນີ້​ບໍ?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"ບ່ອນ​ຈັດ​ເກັບ​ຂໍ້​ມູນ​ໃຊ້​ແລ້ວ"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> ໃຊ້​ແລ້ວ​ຢູ່​ໃນ <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"ລຶບຂໍ້ມູນ"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"ຂໍ້​ມູນ​ທັງ​ໝົດ​ຂອງ​ແອັບຯ​ນີ້​ຈະ​ຖືກ​ລຶບ​ຖາ​ວອນ."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"ອັນ​ນີ້​ລວມ​ມີ​ໄຟ​ລ໌​, ການ​ຕັ້ງ​ຄ່າ, ບັນ​ຊີ, ຖານ​ຂໍ້​ມູນ​ທັງ​ໝົດ, ອື່ນໆ."</string>

@@ -233,12 +233,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Po naformátovaní budete môcť tento disk USB používať aj v iných zariadeniach. Všetky údaje budú vymazané. Odporúčame ich najskôr zálohovať tak, že ich presuniete do iného interného úložiska."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formátovať"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Zálohovať aplikácie"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aplikácie uložené v úložisku <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Aplikácie a údaje uložené v úložisku <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"K dispozícii <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Odpojenie interného úložiska"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Po odpojení tohto pamäťového zariadenia prestanú fungovať všetky aplikácie, ktorú sú v ňom uložené. Tento disk USB je naformátovaný tak, aby fungoval iba v tomto zariadení. V iných zariadeniach fungovať nebude."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Využité úložisko"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Ďalšie informácie"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Skúsiť znova"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Prebieha vyhľadávanie smerovača s funkciou WPS…"</string>
@@ -517,6 +517,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Chcete vypnúť túto aplikáciu?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Zapnúť"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Chcete zapnúť túto aplikáciu?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Využité úložisko"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Využité miesto v úložisku <xliff:g id="VOLUME">%2$s</xliff:g>: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Vymazať údaje"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Všetky údaje tejto aplikácie sa natrvalo odstránia."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Zahŕňa to všetky súbory, nastavenia, účty, databázy atď."</string>

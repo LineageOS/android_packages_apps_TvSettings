@@ -226,17 +226,17 @@
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> пішімделді"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> пішімдеу мүмкін болмады"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Ішкі жад ретінде пішімдеу"</string>
-    <string name="storage_wizard_format__as_private_description" msgid="580737200012210857">"Қауіпсіз ету үшін USB дискіні пішімдеу қажет. Одан кейін бұл диск тек осы құрылғыда жұмыс істейтін болады. Пішімдеу кезінде дискіде сақталып тұрған барлық деректер өшеді. Деректерді жоғалтпау үшін сақтық көшірмесін жасап алыңыз."</string>
+    <string name="storage_wizard_format__as_private_description" msgid="580737200012210857">"Қауіпсіздік үшін USB дискіні пішімдеу қажет. Одан кейін бұл диск тек осы құрылғыда жұмыс істейтін болады. Пішімдеу кезінде дискіде сақталып тұрған барлық деректер өшеді. Деректерді жоғалтпау үшін сақтық көшірмесін жасап алыңыз."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Өшіру және пішімдеу"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Пішімдеуден кейін осы USB дискіні басқа құрылғыларда пайдалануға болады. Барлық деректер жойылады. Басқа ішкі жадқа бағдарламаларды жылжыту арқылы, алдымен, сақтық көшірмесін жасап алыңыз."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Пішімдегеннен кейін осы USB дискіні басқа құрылғыларда пайдалануға болады. Барлық деректер жойылады. Алдымен қолданбаларды басқа ішкі жадқа көшіру арқылы олардың сақтық көшірмесін жасап алыңыз."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Пішімдеу"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Бағдарламалардың резервтік көшірмесін жасау"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Қолданбалардың резервтік көшірмесін жасау"</string>
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> ішінде сақталған қолданбалар"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> ішінде сақталған қолданбалар мен деректер"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"қолжетімді <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Ішкі жадты шығарып алу"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Осы құрылғы жадындағы бағдарламалар шығарып алынған кезде оның жұмысы тоқтайды. Бұл USB диск тек осы құрылғыда жұмыс істеуге пішімделген. Ол кез келген басқа құрылғыда жұмыс істемейді."</string>
+    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Шығарып алынған кезде, осы құрылғы жадындағы қолданбалардың жұмысы тоқтайды. Бұл USB диск тек осы құрылғыда жұмыс істеуге пішімделген. Ол басқа құрылғыларда жұмыс істемейді."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Пайдаланылған жад"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Қосымша мәліметтер"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Қайталау"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS маршрутизаторы ізделуде…"</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Осы қолданбаны өшіру керек пе?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Қосу"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Осы қолданбаны қосу керек пе?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Пайдаланылған жад"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> деңгейінде пайдаланылатын <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Деректерді тазалау"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Осы қолданбаның барлық деректері біржола жойылады."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Бұл барлық файлдарды, параметрлерді, есептік жазбаларды, дерекқорларды, т.б. қамтиды."</string>

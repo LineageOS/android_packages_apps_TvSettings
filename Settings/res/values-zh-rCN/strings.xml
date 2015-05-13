@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"格式化此 U 盘之后，您就可以在其他设备上使用它了。格式化操作会将所有数据清空，因此建议您先将应用移动到其他内部存储设备上进行备份。"</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"格式化"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"备份应用"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g>中存储的应用"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g>中存储的应用和数据"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"可用存储空间：<xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"弹出内部存储设备"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"此内部存储设备弹出后，其中的应用将会停止运行。此 U 盘已格式化为只能在这台设备上使用，因此在任何其他设备上将无法使用。"</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"已使用的存储空间"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"了解详情"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"重试"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"正在搜索WPS路由器…"</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"要停用此应用吗？"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"启用"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"要启用此应用吗？"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"已使用的存储空间"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g>已使用 <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"清除数据"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"此应用的所有数据都将被永久删除。"</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"这包括所有文件、设置、帐户、数据库等。"</string>

@@ -231,12 +231,12 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Sau khi định dạng, bạn có thể sử dụng ổ đĩa USB này ở thiết bị khác. Tất cả dữ liệu sẽ bị xóa. Hãy cân nhắc sao lưu trước bằng cách di chuyển ứng dụng sang bộ nhớ trong khác."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Định dạng"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Sao lưu ứng dụng"</string>
-    <!-- no translation found for storage_wizard_back_up_apps_title (452805102278225533) -->
-    <skip />
-    <!-- no translation found for storage_wizard_back_up_apps_and_data_title (1738767666148200795) -->
-    <skip />
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Ứng dụng được lưu trữ trong <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Ứng dụng và dữ liệu được lưu trữ trong <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Còn <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Tháo bộ nhớ trong"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Các ứng dụng trong bộ nhớ của thiết bị này sẽ ngừng hoạt động khi tháo bộ nhớ ra. Ổ đĩa USB này được định dạng để chỉ hoạt động trên thiết bị này. Ổ đĩa này sẽ không hoạt động trên bất kỳ thiết bị nào khác."</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Bộ nhớ đã sử dụng"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Tìm hiểu thêm"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Thử lại"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Đang tìm kiếm bộ định tuyến WPS…"</string>
@@ -507,6 +507,8 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Bạn có muốn tắt ứng dụng này không?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Bật"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Bạn có muốn bật ứng dụng này không?"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Bộ nhớ đã sử dụng"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Đã sử dụng <xliff:g id="SIZE">%1$s</xliff:g> trong <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Xóa dữ liệu"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Tất cả dữ liệu của ứng dụng này sẽ bị xóa vĩnh viễn."</string>
     <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Các dữ liệu bị xóa bao gồm tất cả các tệp, cài đặt, tài khoản, cơ sở dữ liệu, v.v."</string>
