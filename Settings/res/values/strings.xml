@@ -505,6 +505,18 @@
     <!-- Title for wizard screen for moving apps [CHAR_LIMIT=50] -->
     <string name="storage_wizard_move_app_title">Storage used</string>
 
+    <!-- Title for wizard progress screen for moving apps [CHAR_LIMIT=50] -->
+    <string name="storage_wizard_move_app_progress_title">Moving <xliff:g id="name" example="YouTube">%1$s</xliff:g>&#8230;</string>
+    <!-- Description for wizard progress screen for moving apps [CHAR_LIMIT=50] -->
+    <string name="storage_wizard_move_app_progress_description">"Don't remove the drive during the move.\nThe <xliff:g id="appname" example="YouTube">%1$s</xliff:g> app on this device won't be available until the move is complete.</string>
+
+    <!-- Manage applications, text for move error messages -->
+    <string name="insufficient_storage">Not enough storage space.</string>
+    <string name="does_not_exist">App doesn\u2019t exist.</string>
+    <string name="app_forward_locked">App is copy-protected.</string>
+    <string name="invalid_location">Install location isn\u2019t valid.</string>
+    <string name="system_package">System updates can\u2019t be installed on external media.</string>
+
     <!-- Learn more action title [CHAR_LIMIT=50] -->
     <string name="learn_more_action">Learn more</string>
 
