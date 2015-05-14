@@ -139,6 +139,12 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
     }
 
     @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt(SAVE_STATE_MOVE_ID, mAppMoveId);
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         mPackageManager.unregisterMoveCallback(mMoveCallback);
