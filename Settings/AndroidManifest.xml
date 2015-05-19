@@ -40,7 +40,8 @@
         android:label="@string/settings_app_name"
         android:banner="@drawable/ic_launcher_banner_settings"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Settings" >
+        android:theme="@style/Theme.Settings"
+        android:usesCleartextTraffic="true">
 
         <activity
             android:name=".MainSettings"
