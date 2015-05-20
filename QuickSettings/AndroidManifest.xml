@@ -33,7 +33,8 @@
         android:label="@string/quicksettings_label"
         android:requiredForAllUsers="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.QuickSettings" >
+        android:theme="@style/Theme.QuickSettings"
+        android:usesCleartextTraffic="false" >
         <activity
             android:name="QuickSettings"
             android:label="@string/quicksettings_label_launcher"
