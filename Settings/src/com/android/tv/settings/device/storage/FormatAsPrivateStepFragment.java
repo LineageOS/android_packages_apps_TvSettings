@@ -25,7 +25,6 @@ import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.device.StorageResetActivity;
 
 import java.util.List;
 
@@ -36,6 +35,11 @@ public class FormatAsPrivateStepFragment extends GuidedStepFragment {
     private static final int ACTION_ID_LEARN_MORE = 2;
 
     private StorageManager mStorageManager;
+
+    public interface Callback {
+        void onRequestFormatAsPrivate(VolumeInfo volumeInfo);
+        void onCancelFormatDialog();
+    }
 
     public static FormatAsPrivateStepFragment newInstance(VolumeInfo volumeInfo) {
         final FormatAsPrivateStepFragment fragment = new FormatAsPrivateStepFragment();
@@ -56,7 +60,7 @@ public class FormatAsPrivateStepFragment extends GuidedStepFragment {
     public @NonNull GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
         return new GuidanceStylist.Guidance(
                 getString(R.string.storage_wizard_format_as_private_title),
-                getString(R.string.storage_wizard_format__as_private_description), "",
+                getString(R.string.storage_wizard_format_as_private_description), "",
                 getActivity().getDrawable(R.drawable.ic_settings_storage));
     }
 
@@ -81,12 +85,13 @@ public class FormatAsPrivateStepFragment extends GuidedStepFragment {
         final long id = action.getId();
 
         if (id == ACTION_ID_CANCEL) {
-            getFragmentManager().popBackStack();
+            final Callback callback = (Callback) getActivity();
+            callback.onCancelFormatDialog();
         } else if (id == ACTION_ID_FORMAT) {
             final VolumeInfo volumeInfo = mStorageManager.findVolumeById(
                     getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
-            new StorageResetActivity.FormatAsPrivateTask(getActivity(), volumeInfo).execute();
-            getFragmentManager().popBackStack();
+            final Callback callback = (Callback) getActivity();
+            callback.onRequestFormatAsPrivate(volumeInfo);
         } else if (id == ACTION_ID_LEARN_MORE) {
             // todo
         }
