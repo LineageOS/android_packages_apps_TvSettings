@@ -478,12 +478,23 @@
     <!-- Title for wizard screen for formatting storage as internal [CHAR LIMIT=64] -->
     <string name="storage_wizard_format_as_private_title">Format as internal storage</string>
     <!-- Description for wizard screen for formatting storage as internal [CHAR LIMIT=NONE] -->
-    <string name="storage_wizard_format__as_private_description">This requires the USB drive to be formatted to make it secure. After securely formatting, this drive will only work with this device. Formatting erases all data currently stored on the drive. To avoid losing the data, consider backing it up.</string>
+    <string name="storage_wizard_format_as_private_description">This requires the USB drive to be formatted to make it secure. After securely formatting, this drive will only work with this device. Formatting erases all data currently stored on the drive. To avoid losing the data, consider backing it up.</string>
 
     <!-- Title for wizard screen for formatting storage as internal [CHAR LIMIT=64] -->
     <string name="storage_wizard_format_as_public_title">Erase &amp; Format</string>
     <!-- Description for wizard screen for formatting storage as internal [CHAR LIMIT=NONE] -->
     <string name="storage_wizard_format_as_public_description">After formatting, you can use this USB drive in other devices. All data will be erased. Consider backing up first by moving apps to other internal storage.</string>
+
+    <!-- Title for wizard progress screen for formatting drive [CHAR_LIMIT=50] -->
+    <string name="storage_wizard_format_progress_title">Formatting USB Drive&#8230;</string>
+    <!-- Description for wizard progress screen for formatting drive [CHAR_LIMIT=NONE] -->
+    <string name="storage_wizard_format_progress_description">This may take a moment. Please don\'t remove the drive.</string>
+
+    <!-- Title for warning dialog for slow drives [CHAR_LIMIT=64] -->
+    <string name="storage_wizard_format_slow_title">This drive appears to be slow.</string>
+
+    <!-- Summary for warning dialog for slow drives [CHAR_LIMIT=NONE] -->
+    <string name="storage_wizard_format_slow_summary">You can continue, but apps moved to this location may stutter and data transfers may take a long time. Consider using a faster drive for better performance.</string>
 
     <!-- Format action for wizard screen for formatting storage [CHAR LIMIT=50] -->
     <string name="storage_wizard_format_action">Format</string>
@@ -507,7 +518,7 @@
 
     <!-- Title for wizard progress screen for moving apps [CHAR_LIMIT=50] -->
     <string name="storage_wizard_move_app_progress_title">Moving <xliff:g id="name" example="YouTube">%1$s</xliff:g>&#8230;</string>
-    <!-- Description for wizard progress screen for moving apps [CHAR_LIMIT=50] -->
+    <!-- Description for wizard progress screen for moving apps [CHAR_LIMIT=NONE] -->
     <string name="storage_wizard_move_app_progress_description">"Don't remove the drive during the move.\nThe <xliff:g id="appname" example="YouTube">%1$s</xliff:g> app on this device won't be available until the move is complete.</string>
 
     <!-- Manage applications, text for move error messages -->
