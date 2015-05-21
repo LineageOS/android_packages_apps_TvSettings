@@ -237,20 +237,13 @@
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"退出內部儲存空間"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"當您將這個儲存裝置退出時，其中的應用程式將停止運作。這個 USB 隨身碟經過格式化，僅能在這台裝置上運作，無法與其他裝置通用。"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"已使用的儲存空間"</string>
-    <!-- no translation found for storage_wizard_move_app_progress_title (7807062446517628864) -->
-    <skip />
-    <!-- no translation found for storage_wizard_move_app_progress_description (3693104566187904724) -->
-    <skip />
-    <!-- no translation found for insufficient_storage (5670157010939153746) -->
-    <skip />
-    <!-- no translation found for does_not_exist (4553235698171937217) -->
-    <skip />
-    <!-- no translation found for app_forward_locked (6078781450044847966) -->
-    <skip />
-    <!-- no translation found for invalid_location (5269044848535157307) -->
-    <skip />
-    <!-- no translation found for system_package (9200255718634512790) -->
-    <skip />
+    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"正在移動「<xliff:g id="NAME">%1$s</xliff:g>」…"</string>
+    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"請勿在執行移動作業時移除硬碟。\n移動作業完成後，這台裝置上的「<xliff:g id="APPNAME">%1$s</xliff:g>」應用程式才可供使用。"</string>
+    <string name="insufficient_storage" msgid="5670157010939153746">"儲存空間不足。"</string>
+    <string name="does_not_exist" msgid="4553235698171937217">"應用程式不存在。"</string>
+    <string name="app_forward_locked" msgid="6078781450044847966">"禁止複製應用程式。"</string>
+    <string name="invalid_location" msgid="5269044848535157307">"安裝位置無效。"</string>
+    <string name="system_package" msgid="9200255718634512790">"無法在外部媒體上安裝系統更新。"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"瞭解詳情"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"重試"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"正在搜尋 WPS 路由器…"</string>
