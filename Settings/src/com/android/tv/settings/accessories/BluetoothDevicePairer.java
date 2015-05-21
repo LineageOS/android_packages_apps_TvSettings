@@ -521,7 +521,7 @@ public class BluetoothDevicePairer {
         }
 
         // stop scanning, just in case we are
-        BluetoothScanner.stopListening(mBtListener);
+        final boolean wasListening = BluetoothScanner.stopListening(mBtListener);
         BluetoothScanner.stopNow();
 
         mHandler.removeCallbacksAndMessages(null);
@@ -534,7 +534,9 @@ public class BluetoothDevicePairer {
         setStatus(STATUS_NONE);
 
         // resume scanning
-        start();
+        if (wasListening) {
+            start();
+        }
     }
 
     /**
