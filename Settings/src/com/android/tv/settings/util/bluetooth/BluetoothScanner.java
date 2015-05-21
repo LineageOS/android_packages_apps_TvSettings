@@ -127,11 +127,12 @@ public class BluetoothScanner {
      * leaves the scan running for 20 seconds to keep the cache warm just
      * in case it's needed again.
      */
-    public static void stopListening(Listener listener) {
+    public static boolean stopListening(Listener listener) {
         Log.d(TAG, "stopListening sReceiver=" + sReceiver);
         if (sReceiver != null) {
-            sReceiver.stopListening(listener);
+            return sReceiver.stopListening(listener);
         }
+        return false;
     }
 
     /**
@@ -248,13 +249,15 @@ public class BluetoothScanner {
             scanNow();
         }
 
-        public void stopListening(Listener listener) {
+        public boolean stopListening(Listener listener) {
             final int size;
+            boolean stopped = false;
             synchronized (mListenerLock) {
                 for (int ptr = mClients.size() - 1; ptr > -1; ptr--) {
                     ClientRecord client = mClients.get(ptr);
                     if (client.listener == listener) {
                         mClients.remove(ptr);
+                        stopped = true;
                         break;
                     }
                 }
@@ -264,6 +267,7 @@ public class BluetoothScanner {
                 mHandler.removeCallbacks(mStopTask);
                 mHandler.postDelayed(mStopTask, 20 * 1000 /* ms */);
             }
+            return stopped;
         }
 
         public void scanNow() {
