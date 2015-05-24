@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="about_cmupdate_settings_title">CyanogenMod-Updates</string>
   <string name="about_mod_version">CyanogenMod-Version</string>
   <plurals name="show_dev_countdown_cm">
     <item quantity="one">Sie sind <xliff:g id="step_count">%1$d</xliff:g> Schritt vom Aktivieren der Entwickler-Einstellungen entfernt.</item>
@@ -44,13 +45,14 @@
   <string name="adb_over_network">ADB über Netzwerk</string>
   <string name="adb_over_network_summary">TCP/IP-Debugging über Netzwerkschnittstellen (WLAN, USB-Netzwerke) aktivieren. Diese Einstellung wird beim Neustart zurückgesetzt</string>
   <string name="adb_over_network_disable_summary">Berühren, um TCP/IP-Debugging über Netzwerkschnittstellen (WLAN, USB-Netzwerke) zu deaktivieren.</string>
-  <string name="adb_over_network_warning">WARNUNG: Wenn ADB übers Netzwerk aktiviert ist, kann auf Ihr Gerät von jedem verbundenen Netzwerk zugegriffen werden!\n\nDiese Funktion sollte nur verwendet werden, wenn Sie sich in einem vertrauenswürdigen Netzwerk befinden.\n\nMöchten Sie diese Funktion trotzdem aktivieren?</string>
+  <string name="adb_over_network_warning">WARNUNG: Wenn ADB über Netzwerk aktiviert ist, kann auf Ihr Gerät von jedem verbundenen Netzwerk zugegriffen werden!\n\nDiese Funktion sollte nur verwendet werden, wenn Sie sich in einem vertrauenswürdigen Netzwerk befinden.\n\nMöchten Sie diese Funktion trotzdem aktivieren?</string>
   <string name="enable_terminal_title">Lokales Terminal</string>
   <string name="enable_terminal_summary">Terminal-App aktivieren</string>
   <string name="disable_terminal_summary">Terminal-App deaktivieren</string>
   <string name="enable_terminal_on">Aktiviert</string>
   <string name="enable_terminal_off">Deaktiviert</string>
   <string name="advanced_reboot_title">Erweiterter Neustart</string>
+  <string name="advanced_reboot_summary">Optionen für einen Neustart in das Recovery-System, den Bootloader oder einen schnellen Neustart im \"Über\"-Menü anzeigen</string>
   <string name="reboot_reboot">Neu starten</string>
   <string name="reboot_recovery">Recovery</string>
   <string name="reboot_bootloader">Bootloader</string>
