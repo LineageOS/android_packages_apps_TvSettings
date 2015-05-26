@@ -57,9 +57,6 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
 
     private static final String TAG = "AppManagementActivity";
 
-    private static final String EXTRA_PACKAGE_NAME_KEY = SettingsConstant.PACKAGE
-            + ".device.apps.PACKAGE_NAME";
-
     private static final String DIALOG_BACKSTACK_TAG = "storageUsed";
 
     private static final String SAVE_STATE_MOVE_ID = "AppManagementActivity.moveId";
@@ -112,7 +109,13 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
         super.onCreate(savedInstanceState);
         mPackageManager = getPackageManager();
         mStorageManager = getSystemService(StorageManager.class);
-        mPackageName = getIntent().getStringExtra(EXTRA_PACKAGE_NAME_KEY);
+        final Uri uri = getIntent().getData();
+        if (uri == null) {
+            Log.e(TAG, "No app to inspect (missing data uri in intent)");
+            finish();
+            return;
+        }
+        mPackageName = uri.getSchemeSpecificPart();
         mApplicationsState = ApplicationsState.getInstance(getApplication());
         mSession = mApplicationsState.newSession(this);
         mSession.resume();
@@ -154,7 +157,7 @@ public class AppManagementActivity extends DialogActivity implements ActionAdapt
         Intent i = new Intent();
         i.setComponent(new ComponentName(SettingsConstant.PACKAGE,
                 SettingsConstant.PACKAGE + ".device.apps.AppManagementActivity"));
-        i.putExtra(AppManagementActivity.EXTRA_PACKAGE_NAME_KEY, packageName);
+        i.setData(Uri.parse("package:" + packageName));
         return i;
     }
 
