@@ -305,12 +305,6 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" >
             <intent-filter>
-                <action android:name="com.google.android.gsf.GOOGLE_LOCATION_SETTINGS" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
-            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.LOCATION_SOURCE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
