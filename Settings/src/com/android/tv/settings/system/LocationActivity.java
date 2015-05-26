@@ -79,6 +79,7 @@ public class LocationActivity extends SettingsLayoutActivity {
                         .add(new Layout.Status.Builder(res)
                                 .title(R.string.location_status)
                                 .description(R.string.location_mode_wifi_description)
+                                .enabled(false)
                                 .build())
                         .add(getRecentRequestHeader());
             } else {
