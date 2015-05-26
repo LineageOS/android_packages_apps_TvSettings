@@ -878,6 +878,7 @@ public class Layout implements Parcelable {
 
     public static class Status extends LayoutTreeNode {
         private final Appearance mAppearance = new Appearance();
+        private boolean mEnabled = true;
 
         public static class Builder {
             private final Resources mRes;
@@ -918,6 +919,11 @@ public class Layout implements Parcelable {
                 return this;
             }
 
+            public Builder enabled(boolean enabled) {
+                mStatus.mEnabled = enabled;
+                return this;
+            }
+
             public Status build() {
                 return mStatus;
             }
@@ -930,7 +936,7 @@ public class Layout implements Parcelable {
 
         @Override
         /* package */ boolean isEnabled() {
-            return true;
+            return mEnabled;
         }
 
         @Override
