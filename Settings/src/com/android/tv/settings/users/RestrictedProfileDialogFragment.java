@@ -39,6 +39,7 @@ import android.util.Log;
 
 import com.android.internal.widget.ILockSettings;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.LockPatternUtils.RequestThrottledException;
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.DialogFragment;
 import com.android.tv.settings.dialog.DialogFragment.Action;
@@ -314,6 +315,8 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
         try {
             return getLockSettings().checkPassword(password, userId);
         } catch (final RemoteException e) {
+            // ignore
+        } catch (final RequestThrottledException ex) {
             // ignore
         }
         return false;
