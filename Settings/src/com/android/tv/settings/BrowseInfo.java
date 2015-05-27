@@ -50,7 +50,6 @@ import com.android.internal.util.XmlUtils;
 import com.android.tv.settings.accessories.AccessoryUtils;
 import com.android.tv.settings.accessories.BluetoothAccessoryActivity;
 import com.android.tv.settings.accessories.BluetoothConnectionsManager;
-import com.android.tv.settings.accounts.AccountImageUriGetter;
 import com.android.tv.settings.accounts.AccountSettingsActivity;
 import com.android.tv.settings.accounts.AddAccountWithTypeActivity;
 import com.android.tv.settings.accounts.AuthenticatorHelper;
@@ -60,7 +59,6 @@ import com.android.tv.settings.connectivity.WifiNetworksActivity;
 import com.android.tv.settings.device.sound.SoundActivity;
 import com.android.tv.settings.users.RestrictedProfileDialogFragment;
 import com.android.tv.settings.util.UriUtils;
-import com.android.tv.settings.util.AccountImageHelper;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -74,12 +72,8 @@ import java.util.Set;
  */
 public class BrowseInfo extends BrowseInfoBase {
 
-    private static final String TAG = "CanvasSettings.BrowseInfo";
+    private static final String TAG = "TvSettings.BrowseInfo";
     private static final boolean DEBUG = false;
-
-    public static final String EXTRA_ACCESSORY_ADDRESS = "accessory_address";
-    public static final String EXTRA_ACCESSORY_NAME = "accessory_name";
-    public static final String EXTRA_ACCESSORY_ICON_ID = "accessory_icon_res";
 
     private static final String ACCOUNT_TYPE_GOOGLE = "com.google";
 
@@ -155,9 +149,7 @@ public class BrowseInfo extends BrowseInfoBase {
                     }
                 }
 
-            } catch (XmlPullParserException e) {
-                throw new RuntimeException("Error parsing headers", e);
-            } catch (IOException e) {
+            } catch (XmlPullParserException|IOException e) {
                 throw new RuntimeException("Error parsing headers", e);
             } finally {
                 if (parser != null)
@@ -167,11 +159,11 @@ public class BrowseInfo extends BrowseInfoBase {
     }
 
     private static final String PREF_KEY_ADD_ACCOUNT = "add_account";
-    private static final String PREF_KEY_ADD_ACCESSORY = "add_accessory";
     private static final String PREF_KEY_WIFI = "network";
     private static final String PREF_KEY_DEVELOPER = "developer";
     private static final String PREF_KEY_INPUTS = "inputs";
     private static final String PREF_KEY_HOME = "home";
+    private static final String PREF_KEY_CAST = "cast";
 
     private final Context mContext;
     private final AuthenticatorHelper mAuthenticatorHelper;
@@ -281,7 +273,7 @@ public class BrowseInfo extends BrowseInfoBase {
                 addAccounts(mRow);
             } else if (PREF_KEY_HOME.equals(key)) {
                 // Only show home screen setting if there's a system app to handle the intent.
-                Intent recIntent = getIntent(parser, attrs, mHeaderId);
+                Intent recIntent = getIntent(parser, attrs);
                 if (systemIntentIsHandled(recIntent)) {
                     mRow.add(new MenuItem.Builder()
                             .id(mNextItemId++)
@@ -290,12 +282,22 @@ public class BrowseInfo extends BrowseInfoBase {
                             .intent(recIntent)
                             .build());
                 }
-            } else if (!key.equals(PREF_KEY_INPUTS) || mInputSettingNeeded) {
+            } else if (PREF_KEY_CAST.equals(key)) {
+                Intent i = getIntent(parser, attrs);
+                if (systemIntentIsHandled(i)) {
+                    mRow.add(new MenuItem.Builder()
+                            .id(mNextItemId++)
+                            .title(title)
+                            .imageResourceId(mContext, iconRes)
+                            .intent(i)
+                            .build());
+                }
+            } else if (!PREF_KEY_INPUTS.equals(key) || mInputSettingNeeded) {
                 MenuItem.TextGetter descriptionGetter = getDescriptionTextGetterFromKey(key);
                 MenuItem.UriGetter uriGetter = getIconUriGetterFromKey(key);
                 MenuItem.Builder builder = new MenuItem.Builder().id(mNextItemId++).title(title)
                         .descriptionGetter(descriptionGetter)
-                        .intent(getIntent(parser, attrs, mHeaderId));
+                        .intent(getIntent(parser, attrs));
                 if(uriGetter == null) {
                     builder.imageResourceId(mContext, iconRes);
                 } else {
@@ -395,14 +397,14 @@ public class BrowseInfo extends BrowseInfoBase {
         ComponentName componentName = new ComponentName("com.android.tv.settings",
                 "com.android.tv.settings.accessories.AddAccessoryActivity");
         Intent i = new Intent().setComponent(componentName);
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
         row.add(new MenuItem.Builder().id(mNextItemId++)
                 .title(mContext.getString(R.string.accessories_add))
                 .imageResourceId(mContext, R.drawable.ic_settings_bluetooth)
                 .intent(i).build());
     }
 
-    private Intent getIntent(XmlResourceParser parser, AttributeSet attrs, int headerId)
+    private Intent getIntent(XmlResourceParser parser, AttributeSet attrs)
             throws org.xmlpull.v1.XmlPullParserException, IOException {
         Intent intent = null;
         if (parser.next() == XmlPullParser.START_TAG && "intent".equals(parser.getName())) {
@@ -424,7 +426,9 @@ public class BrowseInfo extends BrowseInfoBase {
 
             XmlUtils.skipCurrentTag(parser);
         }
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        if (intent != null) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
+        }
         return intent;
     }
 
@@ -474,7 +478,7 @@ public class BrowseInfo extends BrowseInfoBase {
         int googleAccountCount = 0;
 
         for (AuthenticatorDescription authDesc : authTypes) {
-            Resources resources = null;
+            final Resources resources;
             try {
                 resources = pm.getResourcesForApplication(authDesc.packageName);
             } catch (NameNotFoundException e) {
@@ -526,7 +530,7 @@ public class BrowseInfo extends BrowseInfoBase {
             for (final Account account : accounts) {
                 Intent i = new Intent(mContext, AccountSettingsActivity.class)
                         .putExtra(AccountSettingsActivity.EXTRA_ACCOUNT, account.name);
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
                 row.add(new MenuItem.Builder().id(mNextItemId++)
                         .title(authTitle != null ? authTitle : account.name)
                         .imageUri(imageUri)
@@ -548,7 +552,7 @@ public class BrowseInfo extends BrowseInfoBase {
             if (!allowableAccountTypes.isEmpty()) {
                 Intent i = new Intent().setComponent(new ComponentName("com.android.tv.settings",
                         "com.android.tv.settings.accounts.AddAccountWithTypeActivity"));
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
                 i.putExtra(AddAccountWithTypeActivity.EXTRA_ALLOWABLE_ACCOUNT_TYPES_STRING_ARRAY,
                         allowableAccountTypes.toArray(new String[allowableAccountTypes.size()]));
 
@@ -579,7 +583,7 @@ public class BrowseInfo extends BrowseInfoBase {
                 int resourceId = AccessoryUtils.getImageIdForDevice(device);
                 Intent i = BluetoothAccessoryActivity.getIntent(mContext, device.getAddress(),
                         device.getName(), resourceId);
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
 
                 String desc = connectedBluetoothAddresses.contains(device.getAddress())
                         ? mContext.getString(R.string.accessory_connected)
