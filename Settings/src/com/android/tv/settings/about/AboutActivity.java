@@ -107,6 +107,7 @@ public class AboutActivity extends SettingsLayoutActivity {
     public void onResume() {
         super.onResume();
         mDeveloperClickCount = 0;
+        mDeviceNameLayoutGetter.refreshView();
     }
 
     @Override
@@ -155,6 +156,17 @@ public class AboutActivity extends SettingsLayoutActivity {
         }
     }
 
+    private final Layout.LayoutGetter mDeviceNameLayoutGetter = new Layout.LayoutGetter() {
+        @Override
+        public Layout get() {
+            return new Layout().add(new Layout.Action.Builder(getResources(),
+                    new Intent(SETTINGS_DEVICE_NAME_INTENT_ACTION))
+                    .title(R.string.device_name)
+                    .description(DeviceManager.getDeviceName(AboutActivity.this))
+                    .build());
+        }
+    };
+
     @Override
     public Layout createLayout() {
         final Resources res = getResources();
@@ -167,11 +179,7 @@ public class AboutActivity extends SettingsLayoutActivity {
         header.add(new Layout.Action.Builder(res, systemIntent(SETTINGS_UPDATE_SYSTEM))
                 .title(R.string.about_system_update)
                 .build());
-        header.add(new Layout.Action.Builder(res,
-                new Intent(SETTINGS_DEVICE_NAME_INTENT_ACTION))
-                .title(R.string.device_name)
-                .description(DeviceManager.getDeviceName(this))
-                .build());
+        header.add(mDeviceNameLayoutGetter);
         header.add(new Layout.Action.Builder(res, KEY_REBOOT)
                 .title(R.string.restart_button_label)
                 .build());
