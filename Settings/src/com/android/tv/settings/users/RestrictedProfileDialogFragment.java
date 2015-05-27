@@ -39,7 +39,7 @@ import android.util.Log;
 
 import com.android.internal.widget.ILockSettings;
 import com.android.internal.widget.LockPatternUtils;
-import com.android.internal.widget.LockPatternUtils.RequestThrottledException;
+import com.android.internal.widget.VerifyCredentialResponse;
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.DialogFragment;
 import com.android.tv.settings.dialog.DialogFragment.Action;
@@ -313,10 +313,9 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
     @Override
     public boolean checkPassword(String password, int userId) {
         try {
-            return getLockSettings().checkPassword(password, userId);
+            return getLockSettings().checkPassword(password, userId).getResponseCode()
+                == VerifyCredentialResponse.RESPONSE_OK;
         } catch (final RemoteException e) {
-            // ignore
-        } catch (final RequestThrottledException ex) {
             // ignore
         }
         return false;
