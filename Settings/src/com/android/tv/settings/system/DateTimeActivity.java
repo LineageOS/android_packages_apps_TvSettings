@@ -16,42 +16,37 @@
 
 package com.android.tv.settings.system;
 
-import android.annotation.NonNull;
 import android.app.AlarmManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
-import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.text.format.DateFormat;
-import android.util.Log;
 
+import com.android.settingslib.datetime.ZoneGetter;
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.SettingsLayoutActivity;
 import com.android.tv.settings.util.SettingsHelper;
 
-import org.xmlpull.v1.XmlPullParserException;
-
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 import java.util.TimeZone;
 
 public class DateTimeActivity extends SettingsLayoutActivity {
 
     private static final String TAG = "DateTimeActivity";
-    private static final boolean DEBUG = false;
 
     private static final String HOURS_12 = "12";
     private static final String HOURS_24 = "24";
-
-    private static final String XMLTAG_TIMEZONE = "timezone";
 
     private static final int ACTION_AUTO_TIME_ON = 0;
     private static final int ACTION_AUTO_TIME_OFF = 1;
@@ -150,7 +145,7 @@ public class DateTimeActivity extends SettingsLayoutActivity {
     private Layout.SelectionGroup mTimezoneSelector;
     private Layout.SelectionGroup mTimeFormatSelector;
 
-    private ArrayList<TimeZoneInfo> mTimeZones;
+    private List<HashMap<String, Object>> mTimeZones;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -167,9 +162,10 @@ public class DateTimeActivity extends SettingsLayoutActivity {
                 ACTION_AUTO_TIME_ON : ACTION_AUTO_TIME_OFF);
 
         // Time zone
-        mTimeZones = getTimeZones(this);
+        final ZoneGetter zoneGetter = new ZoneGetter();
+        mTimeZones = zoneGetter.getZones(this);
         // Sort the Time Zones list in ascending offset order
-        Collections.sort(mTimeZones);
+        Collections.sort(mTimeZones, new MyComparator(ZoneGetter.KEY_OFFSET));
         final TimeZone currentTz = TimeZone.getDefault();
 
         final Layout.SelectionGroup.Builder tzBuilder =
@@ -177,11 +173,12 @@ public class DateTimeActivity extends SettingsLayoutActivity {
 
         int i = ACTION_SET_TIMEZONE_BASE;
         int currentTzActionId = -1;
-        for (final TimeZoneInfo tz : mTimeZones) {
-            if (currentTz.getID().equals(tz.tzId)) {
+        for (final HashMap<String, Object> tz : mTimeZones) {
+            if (currentTz.getID().equals(tz.get(ZoneGetter.KEY_ID))) {
                 currentTzActionId = i;
             }
-            tzBuilder.add(tz.tzName, formatOffset(tz.tzOffset), i);
+            tzBuilder.add((String) tz.get(ZoneGetter.KEY_DISPLAYNAME),
+                    formatOffset((Integer) tz.get(ZoneGetter.KEY_OFFSET)), i);
             i++;
         }
 
@@ -324,7 +321,8 @@ public class DateTimeActivity extends SettingsLayoutActivity {
                 break;
             default:
                 if ((actionId & ACTION_SET_TIMEZONE_BASE) != 0) {
-                    setTimeZone(mTimeZones.get(actionId - ACTION_SET_TIMEZONE_BASE).tzId);
+                    setTimeZone((String) mTimeZones.get(actionId - ACTION_SET_TIMEZONE_BASE)
+                            .get(ZoneGetter.KEY_ID));
                 }
                 break;
         }
@@ -359,75 +357,6 @@ public class DateTimeActivity extends SettingsLayoutActivity {
         return sb.toString();
     }
 
-    /**
-     * Helper class to hold the time zone data parsed from the Time Zones XML
-     * file.
-     */
-    private class TimeZoneInfo implements Comparable<TimeZoneInfo> {
-        public final String tzId;
-        public final String tzName;
-        public final long tzOffset;
-
-        public TimeZoneInfo(String id, String name, long offset) {
-            tzId = id;
-            tzName = name;
-            tzOffset = offset;
-        }
-
-        @Override
-        public int compareTo(@NonNull TimeZoneInfo another) {
-            return (int) (tzOffset - another.tzOffset);
-        }
-    }
-
-    /**
-     * Parses the XML time zone information into an array of TimeZoneInfo
-     * objects.
-     */
-    private ArrayList<TimeZoneInfo> getTimeZones(Context context) {
-        ArrayList<TimeZoneInfo> timeZones = new ArrayList<>();
-        final long date = Calendar.getInstance().getTimeInMillis();
-        try {
-            XmlResourceParser xrp = context.getResources().getXml(R.xml.timezones);
-            while (xrp.next() != XmlResourceParser.START_TAG)
-                continue;
-            xrp.next();
-            while (xrp.getEventType() != XmlResourceParser.END_TAG) {
-                while (xrp.getEventType() != XmlResourceParser.START_TAG &&
-                        xrp.getEventType() != XmlResourceParser.END_DOCUMENT) {
-                    xrp.next();
-                }
-
-                if (xrp.getEventType() == XmlResourceParser.END_DOCUMENT) {
-                    break;
-                }
-
-                if (xrp.getName().equals(XMLTAG_TIMEZONE)) {
-                    String id = xrp.getAttributeValue(0);
-                    String displayName = xrp.nextText();
-                    TimeZone tz = TimeZone.getTimeZone(id);
-                    long offset;
-                    if (tz != null) {
-                        offset = tz.getOffset(date);
-                        timeZones.add(new TimeZoneInfo(id, displayName, offset));
-                    } else {
-                        continue;
-                    }
-                }
-                while (xrp.getEventType() != XmlResourceParser.END_TAG) {
-                    xrp.next();
-                }
-                xrp.next();
-            }
-            xrp.close();
-        } catch (XmlPullParserException xppe) {
-            Log.e(TAG, "Ill-formatted timezones.xml file");
-        } catch (java.io.IOException ioe) {
-            Log.e(TAG, "Unable to read timezones.xml file");
-        }
-        return timeZones;
-    }
-
     private void setTimeZone(String tzId) {
         // Update the system timezone value
         final AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
@@ -435,4 +364,38 @@ public class DateTimeActivity extends SettingsLayoutActivity {
 
         setSampleDate();
     }
+
+    private static class MyComparator implements Comparator<HashMap<?, ?>> {
+        private String mSortingKey;
+
+        public MyComparator(String sortingKey) {
+            mSortingKey = sortingKey;
+        }
+
+        public void setSortingKey(String sortingKey) {
+            mSortingKey = sortingKey;
+        }
+
+        public int compare(HashMap<?, ?> map1, HashMap<?, ?> map2) {
+            Object value1 = map1.get(mSortingKey);
+            Object value2 = map2.get(mSortingKey);
+
+            /*
+             * This should never happen, but just in-case, put non-comparable
+             * items at the end.
+             */
+            if (!isComparable(value1)) {
+                return isComparable(value2) ? 1 : 0;
+            } else if (!isComparable(value2)) {
+                return -1;
+            }
+
+            return ((Comparable) value1).compareTo(value2);
+        }
+
+        private boolean isComparable(Object value) {
+            return (value != null) && (value instanceof Comparable);
+        }
+    }
+
 }
