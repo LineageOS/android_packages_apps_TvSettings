@@ -51,8 +51,8 @@ import com.android.settingslib.deviceinfo.StorageMeasurement.MeasurementReceiver
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.apps.AppsActivity;
 import com.android.tv.settings.device.storage.EjectInternalStepFragment;
-import com.android.tv.settings.device.storage.FormatAsPublicStepFragment;
 import com.android.tv.settings.device.storage.FormatAsPrivateStepFragment;
+import com.android.tv.settings.device.storage.FormatAsPublicStepFragment;
 import com.android.tv.settings.device.storage.FormattingProgressFragment;
 import com.android.tv.settings.device.storage.MoveAppProgressFragment;
 import com.android.tv.settings.device.storage.MoveAppStepFragment;
@@ -60,12 +60,14 @@ import com.android.tv.settings.device.storage.SlowDriveStepFragment;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.Layout.Action;
 import com.android.tv.settings.dialog.Layout.Header;
+import com.android.tv.settings.dialog.Layout.Static;
 import com.android.tv.settings.dialog.Layout.Status;
 import com.android.tv.settings.dialog.Layout.StringGetter;
 import com.android.tv.settings.dialog.SettingsLayoutActivity;
 import com.android.tv.settings.util.SettingsAsyncTaskLoader;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -236,6 +238,9 @@ public class StorageResetActivity extends SettingsLayoutActivity
                         .title(R.string.device_storage_reset)
                         .build()
                         .add(mStorageHeadersGetter)
+                        .add(new Static.Builder(getResources())
+                                .title(R.string.storage_reset_section)
+                                .build())
                         .add(createResetHeaders())
                 );
     }
@@ -251,37 +256,61 @@ public class StorageResetActivity extends SettingsLayoutActivity
             final List<VolumeInfo> volumes = mStorageManager.getVolumes();
             Collections.sort(volumes, VolumeInfo.getDescriptionComparator());
 
-            for (VolumeInfo vol : volumes) {
-                if (vol.getType() != VolumeInfo.TYPE_PRIVATE
-                        && vol.getType() != VolumeInfo.TYPE_PUBLIC) {
-                    continue;
+            final List<VolumeInfo> privateVolumes = new ArrayList<>(volumes.size());
+            final List<VolumeInfo> publicVolumes = new ArrayList<>(volumes.size());
+
+            for (final VolumeInfo vol : volumes) {
+                if (vol.getType() == VolumeInfo.TYPE_PRIVATE) {
+                    privateVolumes.add(vol);
+                } else if (vol.getType() == VolumeInfo.TYPE_PUBLIC) {
+                    publicVolumes.add(vol);
+                } else {
+                    Log.d(TAG, "Skipping volume " + vol.toString());
                 }
-                final String volId = vol.getId();
-                StorageLayoutGetter storageGetter = mStorageLayoutGetters.get(volId);
-                if (storageGetter == null) {
-                    storageGetter = new StorageLayoutGetter(vol);
-                    mStorageLayoutGetters.put(volId, storageGetter);
-                    if (isResumed()) {
-                        storageGetter.startListening();
-                    }
-                }
-                SizeStringGetter sizeGetter = mStorageDescriptionGetters.get(volId);
-                if (sizeGetter == null) {
-                    sizeGetter = new SizeStringGetter();
-                    mStorageDescriptionGetters.put(volId, sizeGetter);
-                }
-                final File path = vol.getPath();
-                if (path != null) {
-                    // TODO: something more dynamic here
-                    sizeGetter.setSize(path.getTotalSpace());
-                }
-                final Header header = new Header.Builder(res)
-                        .title(mStorageManager.getBestVolumeDescription(vol))
-                        .description(sizeGetter)
-                        .build().add(storageGetter);
-                layout.add(header);
+            }
+            if (privateVolumes.size() > 0) {
+                layout.add(new Static.Builder(res)
+                        .title(R.string.storage_device_storage_section)
+                        .build());
+            }
+            for (final VolumeInfo vol : privateVolumes) {
+                layout.add(getVolumeHeader(res, vol));
+            }
+            if (publicVolumes.size() > 0) {
+                layout.add(new Static.Builder(res)
+                        .title(R.string.storage_removable_storage_section)
+                        .build());
+            }
+            for (final VolumeInfo vol : publicVolumes) {
+                layout.add(getVolumeHeader(res, vol));
             }
             return layout;
+        }
+
+        private Header getVolumeHeader(Resources res, VolumeInfo vol) {
+            final String volId = vol.getId();
+            StorageLayoutGetter storageGetter = mStorageLayoutGetters.get(volId);
+            if (storageGetter == null) {
+                storageGetter = new StorageLayoutGetter(vol);
+                mStorageLayoutGetters.put(volId, storageGetter);
+                if (isResumed()) {
+                    storageGetter.startListening();
+                }
+            }
+            SizeStringGetter sizeGetter = mStorageDescriptionGetters.get(volId);
+            if (sizeGetter == null) {
+                sizeGetter = new SizeStringGetter();
+                mStorageDescriptionGetters.put(volId, sizeGetter);
+            }
+            final File path = vol.getPath();
+            if (path != null) {
+                // TODO: something more dynamic here
+                sizeGetter.setSize(path.getTotalSpace());
+            }
+            return new Header.Builder(res)
+                    .title(mStorageManager.getBestVolumeDescription(vol))
+                    .description(sizeGetter)
+                    .build().add(storageGetter);
         }
     };
 
