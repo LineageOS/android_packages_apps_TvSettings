@@ -1100,7 +1100,7 @@
     <!-- Title of PIN dialog when an user is about to change older PIN. [CHAR LIMIT=50] -->
     <string name="pin_enter_old_pin">Enter old PIN</string>
     <!-- Message shown in the dialog when the user entered the wrong. [CHAR LIMIT=128] -->
-    <string name="pin_enter_wrong">You entered the wrong PIN 5 times.\nTry again <xliff:g id="relative_time_span" example="in 60 seconds">%1$s</xliff:g>.</string>
+    <string name="pin_enter_wrong_seconds">You entered the wrong PIN 5 times.\nTry again in <xliff:g id="relative_time_span" example="60">%1$d</xliff:g> seconds.</string>
     <!-- Toast message when an user entered wrong PIN. [CHAR LIMIT=128] -->
     <string name="pin_toast_wrong">Wrong PIN, try again</string>
     <!-- Toast message when an user couldn't pass the PIN confirmation. [CHAR LIMIT=128] -->
