@@ -18,7 +18,6 @@ package com.android.tv.settings.dialog;
 
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
-import android.app.Activity;
 import android.app.Dialog;
 import android.app.Fragment;
 import android.content.Context;
@@ -27,7 +26,6 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
-import android.text.format.DateUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
@@ -192,7 +190,8 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
             return;
         }
 
-        boolean enabled = (mDisablePinUntil - System.currentTimeMillis()) / 1000 < 1;
+        final long secondsLeft = (mDisablePinUntil - System.currentTimeMillis()) / 1000;
+        final boolean enabled = secondsLeft < 1;
         if (enabled) {
             mWrongPinView.setVisibility(View.INVISIBLE);
             mEnterPinView.setVisibility(View.VISIBLE);
@@ -200,9 +199,8 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
         } else {
             mEnterPinView.setVisibility(View.INVISIBLE);
             mWrongPinView.setVisibility(View.VISIBLE);
-            mWrongPinView.setText(getResources().getString(R.string.pin_enter_wrong,
-                    DateUtils.getRelativeTimeSpanString(mDisablePinUntil,
-                            System.currentTimeMillis(), DateUtils.SECOND_IN_MILLIS)));
+            mWrongPinView.setText(getResources().getString(R.string.pin_enter_wrong_seconds,
+                    secondsLeft));
             mHandler.postDelayed(mUpdateEnterPinRunnable, 1000);
         }
     }
