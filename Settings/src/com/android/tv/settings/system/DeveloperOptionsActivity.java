@@ -56,7 +56,7 @@ import java.util.List;
 
 public class DeveloperOptionsActivity extends SettingsLayoutActivity {
 
-    private static final String TAG = "DeveloperOptionsActivity";
+    private static final String TAG = "DeveloperOptions";
     private static final boolean DEBUG = false;
 
     private static final int INDEX_WINDOW_ANIMATION_SCALE = 0;
@@ -774,6 +774,7 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
             case ACTION_OPENGL_TRACES_SYSTRACE:
             case ACTION_OPENGL_TRACES_ERROR:
                 setOpenglTracesByAction(id);
+                break;
         }
     }
 
@@ -793,6 +794,7 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
             case ACTION_APP_PROCESS_LIMIT_THREE:
             case ACTION_APP_PROCESS_LIMIT_FOUR:
                 setAppProcessLimitByAction(id);
+                break;
             case ACTION_ALL_ANRS_ON:
                 setAllAnrs(true);
                 break;
@@ -961,10 +963,13 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
         switch (action) {
             case ACTION_HDCP_DRM:
                 SettingsHelper.setSystemProperties(HDCP_CHECKING_PROPERTY, "drm-only");
+                break;
             case ACTION_HDCP_ALWAYS:
                 SettingsHelper.setSystemProperties(HDCP_CHECKING_PROPERTY, "always");
+                break;
             case ACTION_HDCP_NEVER:
                 SettingsHelper.setSystemProperties(HDCP_CHECKING_PROPERTY, "never");
+                break;
         }
     }
 
@@ -982,9 +987,11 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
         switch (action) {
             case ACTION_HDMI_OPT_BEST_FRAME:
                 SettingsHelper.setSystemProperties(HDMI_OPTIMIZATION_PROPERTY, "1080p");
+                break;
             case ACTION_HDMI_OPT_BEST_RES:
             default:
                 SettingsHelper.setSystemProperties(HDMI_OPTIMIZATION_PROPERTY, "Max");
+                break;
         }
     }
 
@@ -1097,12 +1104,15 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
             case ACTION_GPU_OVERDRAW_AREAS:
                 SettingsHelper.setSystemProperties(HardwareRenderer.DEBUG_OVERDRAW_PROPERTY,
                         "show");
+                break;
             case ACTION_GPU_OVERDRAW_COUNTER:
                 SettingsHelper.setSystemProperties(HardwareRenderer.DEBUG_OVERDRAW_PROPERTY,
                         "count");
+                break;
             case ACTION_GPU_OVERDRAW_OFF:
                 SettingsHelper.setSystemProperties(HardwareRenderer.DEBUG_OVERDRAW_PROPERTY,
                         "false");
+                break;
 
         }
     }
@@ -1174,10 +1184,13 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
             case ACTION_FRAME_TIME_BARS:
                 SettingsHelper.setSystemProperties(HardwareRenderer.PROFILE_PROPERTY,
                         "visual_bars");
+                break;
             case ACTION_FRAME_TIME_GFXINFO:
                 SettingsHelper.setSystemProperties(HardwareRenderer.PROFILE_PROPERTY, "true");
+                break;
             case ACTION_FRAME_TIME_OFF:
                 SettingsHelper.setSystemProperties(HardwareRenderer.PROFILE_PROPERTY, "false");
+                break;
         }
     }
 
@@ -1199,12 +1212,16 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
         switch (action) {
             case ACTION_OPENGL_TRACES_LOGCAT:
                 SettingsHelper.setSystemProperties(OPENGL_TRACES_PROPERTY, "1");
+                break;
             case ACTION_OPENGL_TRACES_SYSTRACE:
                 SettingsHelper.setSystemProperties(OPENGL_TRACES_PROPERTY, "systrace");
+                break;
             case ACTION_OPENGL_TRACES_ERROR:
                 SettingsHelper.setSystemProperties(OPENGL_TRACES_PROPERTY, "error");
+                break;
             case ACTION_OPENGL_TRACES_NONE:
                 SettingsHelper.setSystemProperties(OPENGL_TRACES_PROPERTY, "0");
+                break;
         }
     }
 
@@ -1245,16 +1262,22 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
         switch (action) {
             case ACTION_APP_PROCESS_LIMIT_ZERO:
                 setAppProcessLimit(0);
+                break;
             case ACTION_APP_PROCESS_LIMIT_ONE:
                 setAppProcessLimit(1);
+                break;
             case ACTION_APP_PROCESS_LIMIT_TWO:
                 setAppProcessLimit(2);
+                break;
             case ACTION_APP_PROCESS_LIMIT_THREE:
                 setAppProcessLimit(3);
+                break;
             case ACTION_APP_PROCESS_LIMIT_FOUR:
                 setAppProcessLimit(4);
+                break;
             case ACTION_APP_PROCESS_LIMIT_STANDARD:
                 setAppProcessLimit(-1);
+                break;
         }
     }
 
