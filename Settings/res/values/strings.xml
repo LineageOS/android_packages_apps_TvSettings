@@ -460,6 +460,13 @@
     <!-- Description for a storage volume which is not currently connected to the device -->
     <string name="storage_not_connected">Not connected</string>
 
+    <!-- Header title for device storage [CHAR_LIMIT=50] -->
+    <string name="storage_device_storage_section">Device storage</string>
+    <!-- Header title for removable storage [CHAR_LIMIT=50] -->
+    <string name="storage_removable_storage_section">Removable storage</string>
+    <!-- Header title for device reset [CHAR_LIMIT=50] -->
+    <string name="storage_reset_section">Reset</string>
+
     <!-- Toast informing that storage mount operation was successful. [CHAR LIMIT=64]-->
     <string name="storage_mount_success"><xliff:g id="name" example="SD card">%1$s</xliff:g> is mounted</string>
     <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=64]-->
