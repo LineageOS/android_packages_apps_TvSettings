@@ -79,10 +79,11 @@ public class SetDateTimeActivity extends DialogActivity {
         @Override
         public void onCommitResult(List<String> result) {
             boolean is24hFormat = isTimeFormat24h(SetDateTimeActivity.this);
-            int hour = Integer.parseInt(result.get(0));
-            int minute = Integer.parseInt(result.get(1));
+            final TimePicker.ColumnOrder columnOrder = new TimePicker.ColumnOrder(is24hFormat);
+            int hour = Integer.parseInt(result.get(columnOrder.hours));
+            int minute = Integer.parseInt(result.get(columnOrder.minutes));
             if (!is24hFormat) {
-                String ampm = result.get(2);
+                String ampm = result.get(columnOrder.amPm);
                 if (ampm.equals(getResources().getStringArray(R.array.ampm)[1])) {
                     // PM case, valid hours: 12-23
                     hour = (hour % HOURS_IN_HALF_DAY) + HOURS_IN_HALF_DAY;
@@ -130,13 +131,13 @@ public class SetDateTimeActivity extends DialogActivity {
             if (TYPE_DATE.equals(pickerType)) {
                 contentFragment = ContentFragment.newInstance(getString(R.string.system_set_date),
                         getString(R.string.system_date), null, R.drawable.ic_settings_datetime,
-                        getResources().getColor(R.color.icon_background));
+                        getColor(R.color.icon_background));
                 actionFragment = DatePicker
                         .newInstance(new String(DateFormat.getDateFormatOrder(this)));
             } else {
                 contentFragment = ContentFragment.newInstance(getString(R.string.system_set_time),
                         getString(R.string.system_time), null, R.drawable.ic_settings_datetime,
-                        getResources().getColor(R.color.icon_background));
+                        getColor(R.color.icon_background));
                 actionFragment = TimePicker.newInstance(isTimeFormat24h(this), true);
             }
 
