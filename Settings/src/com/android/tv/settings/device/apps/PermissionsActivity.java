@@ -19,6 +19,9 @@ package com.android.tv.settings.device.apps;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -88,11 +91,15 @@ public class PermissionsActivity extends SettingsLayoutActivity
                 if (group.possibleApps.size() == 0) {
                     continue;
                 }
+                final Drawable tintedIcon = group.icon.mutate();
+                tintedIcon.setColorFilter(
+                        new PorterDuffColorFilter(getColor(R.color.permissions_color_overlay),
+                        PorterDuff.Mode.SRC_ATOP));
                 final Intent intent = new Intent(Intent.ACTION_MANAGE_PERMISSION_APPS)
                         .putExtra(Intent.EXTRA_PERMISSION_NAME, group.name);
                 layout.add(new Layout.Action.Builder(res, intent)
                         .title(group.label)
-                        .icon(group.icon)
+                        .icon(tintedIcon)
                         .description(getString(R.string.app_permissions_group_summary,
                                 group.grantedApps.size(), group.possibleApps.size()))
                         .build());
