@@ -316,7 +316,7 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
         mAdapter.setLayoutRows(mLayout.getLayoutRows());
         mAdapter.notifyDataSetChanged();
         mAdapter.setFocusListenerEnabled(false);
-        mListView.setSelectedPositionSmooth(mLayout.getSelectedIndex());
+        mListView.setSelectedPosition(mLayout.getSelectedIndex());
         mAdapter.setFocusListenerEnabled(true);
     }
 
