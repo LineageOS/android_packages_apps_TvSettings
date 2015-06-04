@@ -233,7 +233,7 @@ public class FormPageDisplayer
             final boolean emptyAllowed) {
         Fragment fragment = PasswordInputWizardFragment.newInstance(
                 getTitle(formPageInfo, titleArgument),
-                getDescription(formPageInfo, descriptionArgument), formPageInfo.getInputType(),
+                getDescription(formPageInfo, descriptionArgument),
                 lastPage == null ? null : lastPage.getDataSummary());
         displayFragment(fragment, forward);
 
