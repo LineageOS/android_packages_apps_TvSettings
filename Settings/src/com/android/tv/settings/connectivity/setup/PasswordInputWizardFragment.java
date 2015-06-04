@@ -135,20 +135,17 @@ public class PasswordInputWizardFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                boolean hidePassword = textObsufactionToggle.isChecked();
-                if (hidePassword) {
-                    mTextInput.setTransformationMethod(new PasswordTransformationMethod());
-                } else {
-                    mTextInput.setTransformationMethod(null);
-                }
+                mTextInput.setInputType(InputType.TYPE_CLASS_TEXT |
+                        (textObsufactionToggle.isChecked() ?
+                                InputType.TYPE_TEXT_VARIATION_PASSWORD :
+                                InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD));
             }
         });
 
-        if (textObsufactionToggle.isChecked()) {
-            mTextInput.setTransformationMethod(new PasswordTransformationMethod());
-        }
-        mTextInput.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS |
-            InputType.TYPE_CLASS_TEXT);
+        mTextInput.setInputType(InputType.TYPE_CLASS_TEXT |
+                (textObsufactionToggle.isChecked() ?
+                        InputType.TYPE_TEXT_VARIATION_PASSWORD :
+                        InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD));
 
         if (prefill != null) {
             mTextInput.setText(prefill);
