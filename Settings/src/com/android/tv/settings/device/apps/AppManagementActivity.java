@@ -73,10 +73,12 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
     private static final int ACTION_UNINSTALL = 9;
     private static final int ACTION_DISABLE = 10;
     private static final int ACTION_ENABLE = 11;
+    private static final int ACTION_UNINSTALL_UPDATES = 12;
 
     // Result code identifiers
     private static final int REQUEST_UNINSTALL = 1;
     private static final int REQUEST_MANAGE_SPACE = 2;
+    private static final int REQUEST_UNINSTALL_UPDATES = 3;
 
     private PackageManager mPackageManager;
     private StorageManager mStorageManager;
@@ -243,6 +245,8 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
             case ACTION_ENABLE:
                 onEnableOk();
                 break;
+            case ACTION_UNINSTALL_UPDATES:
+                onUninstallUpdatesOk();
 
             case Layout.Action.ACTION_INTENT:
                 final Intent intent = action.getIntent();
@@ -272,6 +276,9 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
                 break;
             case REQUEST_MANAGE_SPACE:
                 mDataClearer.onActivityResult(resultCode);
+                break;
+            case REQUEST_UNINSTALL_UPDATES:
+                mUninstallLayoutGetter.refreshView();
                 break;
         }
     }
@@ -355,6 +362,12 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
                 PackageManager.COMPONENT_ENABLED_STATE_DEFAULT).execute();
         mUninstallLayoutGetter.refreshView();
         onBackPressed();
+    }
+
+    private void onUninstallUpdatesOk() {
+        mUninstallManager.uninstallUpdates(REQUEST_UNINSTALL_UPDATES);
+        onBackPressed();
+        mUninstallLayoutGetter.refreshView();
     }
 
     private void onNotificationsOn() {
@@ -562,6 +575,20 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
                                 .defaultSelection()
                                 .build()));
             } else {
+                if (mUninstallManager.canUninstallUpdates()) {
+                    layout.add(new Layout.Header.Builder(res)
+                            .title(R.string.device_apps_app_management_uninstall_updates)
+                            .detailedDescription(
+                                    R.string.device_apps_app_management_uninstall_updates_desc)
+                            .build()
+                            .add(new Layout.Action.Builder(res, ACTION_UNINSTALL_UPDATES)
+                                    .title(android.R.string.ok)
+                                    .build())
+                            .add(new Layout.Action.Builder(res, Layout.Action.ACTION_BACK)
+                                    .title(android.R.string.cancel)
+                                    .defaultSelection()
+                                    .build()));
+                }
                 if (mUninstallManager.canDisable()) {
                     if (mUninstallManager.isEnabled()) {
                         layout.add(new Layout.Header.Builder(res)
