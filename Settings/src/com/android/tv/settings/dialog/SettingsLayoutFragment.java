@@ -288,6 +288,14 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
         if (!mEntryTransitionPerformed) {
             mEntryTransitionPerformed = true;
             performEntryTransition();
+        } else {
+            final View dialogView = getView();
+            final View contentView = (View) dialogView.getTag(R.id.content_fragment);
+
+            int bgColor = contentView.getContext().getColor(R.color.lb_dialog_activity_background);
+            final ColorDrawable bgDrawable = new ColorDrawable();
+            bgDrawable.setColor(bgColor);
+            dialogView.setBackground(bgDrawable);
         }
     }
 
@@ -617,8 +625,7 @@ public class SettingsLayoutFragment extends Fragment implements Layout.LayoutNod
         // Fade out the old activity.
         getActivity().overridePendingTransition(0, R.anim.lb_dialog_fade_out);
 
-        int bgColor = contentView.getContext().getResources()
-                .getColor(R.color.lb_dialog_activity_background);
+        int bgColor = contentView.getContext().getColor(R.color.lb_dialog_activity_background);
         final ColorDrawable bgDrawable = new ColorDrawable();
         bgDrawable.setColor(bgColor);
         bgDrawable.setAlpha(0);
