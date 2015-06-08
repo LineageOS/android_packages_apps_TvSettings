@@ -51,8 +51,8 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"Zaxiralash va qayta tiklash"</string>
     <string name="device_reset" msgid="2827002349560023125">"Zavod sozlamalarini tiklash"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrlash"</string>
-    <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Keshlangan ma’lumotlar tozalansinmi?"</string>
-    <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Barcha ilovalarning keshlangan ma’l. tozalanadi."</string>
+    <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Kesh tozalansinmi?"</string>
+    <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Barcha ilovalarning keshi o‘chirib tashlanadi."</string>
     <string name="apps_downloaded" msgid="4222190849854323480">"Yuklab olingan ilovalar"</string>
     <string name="apps_system" msgid="2499191125802829425">"Tizim ilovalari"</string>
     <string name="apps_running" msgid="6430310491739956228">"Ishlayotgan ilovalar"</string>
@@ -151,12 +151,12 @@
     <string name="title_wifi_could_not_connect_ap_reject" msgid="328274688839033015">"Wi-Fi tarmog\'i ulanishni qabul qilmadi"</string>
     <string name="title_wifi_advanced_options" msgid="5389467736846644832">"<xliff:g id="SSID">%1$s</xliff:g> Proksi va IP sozlanmalar sozlansinmi?"</string>
     <string name="title_wifi_proxy_settings" msgid="7728120764469991303">"Proksi sozlamalari"</string>
-    <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"Proksi host nomi:"</string>
-    <string name="title_wifi_proxy_port" msgid="9194893429116021337">"Proxy porti:"</string>
+    <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"Proksi-server host nomi:"</string>
+    <string name="title_wifi_proxy_port" msgid="9194893429116021337">"Proksi-server porti:"</string>
     <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"Proksini chetlab o‘tish sozlamalari:"</string>
     <string name="title_wifi_ip_settings" msgid="1176973848286865602">"IP sozlamalari"</string>
     <string name="title_wifi_ip_address" msgid="1176502993805009566">"IP manzili:"</string>
-    <string name="title_wifi_gateway" msgid="7210935277165358134">"Shlyuz:"</string>
+    <string name="title_wifi_gateway" msgid="7210935277165358134">"Darvoza:"</string>
     <string name="title_wifi_network_prefix_length" msgid="4821632382990582038">"Tarmoq prefiksi uzunligi:"</string>
     <string name="title_wifi_dns1" msgid="8202712852864206601">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="2673986973918499478">"DNS 2:"</string>
@@ -168,7 +168,7 @@
     <string name="wifi_connecting" msgid="1299861268647323455">"<xliff:g id="SSID">%1$s</xliff:g> ga ulanayapti"</string>
     <string name="wifi_saving" msgid="1269061570772019215">"<xliff:g id="SSID">%1$s</xliff:g> uchun konfiguratsiya saqlanmoqda"</string>
     <string name="wifi_connect" msgid="8570424816865506077">"Ulanish"</string>
-    <string name="wifi_forget_network" msgid="7302755141573045803">"Tarmoqni unutish"</string>
+    <string name="wifi_forget_network" msgid="7302755141573045803">"Tarmoqni o‘chirish"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"Bu ushbu tarmoqqa ulanish uchun foydalanilgan ma\'lumotlarni, jumladan saqlangan parolni o\'chiradi"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"OK"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"O‘zgartirish"</string>
@@ -180,7 +180,7 @@
     <string name="wifi_action_dhcp" msgid="6338911832360962268">"DHCP"</string>
     <string name="wifi_action_static" msgid="1025855501453321749">"Statik"</string>
     <string name="wifi_action_status_info" msgid="7664354971197839253">"Holat ma\'lumotlari"</string>
-    <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"Kengaytirilgan sozlamalar"</string>
+    <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"Qo‘shimcha sozlamalar"</string>
     <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"Haqiqiy IP manzilni kiriting"</string>
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Haqiqiy shlyuz manzilini kiriting"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Haqiqiy DNS manzilni kiriting"</string>
@@ -214,17 +214,14 @@
     <string name="storage_dcim_usage" msgid="2977564696540645452">"Fotolar va videolar"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"Audio"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Boshqa."</string>
-    <string name="storage_media_cache_usage" msgid="5906737163212649904">"Keshlangan ma‘lumot"</string>
+    <string name="storage_media_cache_usage" msgid="5906737163212649904">"Kesh ma’lumotlari"</string>
     <string name="storage_eject" msgid="113476702798691558">"Chiqarish"</string>
     <string name="storage_format" msgid="3759273736493279595">"Tozalash va formatlash"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Qurilma xotirasi sifatida formatlash"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Ulanmagan"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Xotira qurilmasi"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Tashqi xotira"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Sozlamalarni tiklash"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> ulandi"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> ulanmadi"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> qurilmasi xavfsiz chiqarib olindi"</string>
@@ -270,7 +267,7 @@
     <string name="system_set_time" msgid="4661804115501057452">"Vaqt o‘rnatish"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"Vaqt mintaqasini o\'rnatish"</string>
     <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
-    <string name="system_set_time_format" msgid="4447882066895090612">"24-soat formatidan foydalanish"</string>
+    <string name="system_set_time_format" msgid="4447882066895090612">"24 soatlik format"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"Avtomatik sana va vaqt"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"Tarmoq bergan vaqt‘dan foydalanish"</string>
@@ -278,10 +275,10 @@
     <string name="system_desc_location" msgid="4243551425631207495">"Sizdan ruxsat so‘ragan ilovalarga joylashuvingiz ma‘lumotidan foydalanishga ruxsat beradi"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"Joylashuv rozili"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"Rejim"</string>
-    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Yaqindagi joylashuv so‘rovlari"</string>
+    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"So‘nggi joylashuv so‘rovlari"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"Hech qanday ilova yaqin vaqtda joylashuv ma‘lumotini so‘ramadi"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"Yuqori batareya sarfi"</string>
-    <string name="location_low_battery_use" msgid="5756040390248358148">"Kam bateraya sarfi"</string>
+    <string name="location_low_battery_use" msgid="5756040390248358148">"Batareya sarfi kam"</string>
     <string name="location_mode_wifi_description" msgid="2778774510654527264">"Joyni hisoblash uchun Wi‑Fi dan foydalanish"</string>
     <string name="location_status" msgid="3456414279428237558">"Joylashuv holati"</string>
     <string name="location_services" msgid="5441085185119797200">"Joylashuv xizmatlari"</string>
@@ -293,7 +290,7 @@
     <string name="location_history" msgid="2946680949724247804">"Joylashuvlar tarixi"</string>
     <string name="location_reporting_desc" msgid="6256424995139430823">"Google bu xususiyatdan Google Hozir va Google Xaritalar kabi mahsulotlarda foydalanadi. Joylashuv hisobotini yoq. bu xususiyatdan foyd. har qanday Google mahsulotiga qurilmangizning eng so\'nggi joylashuv ma\'lumotlarini saqlash va Google hisobingiz bilan bog\'liq ravishda foydalanishga imk. beradi."</string>
     <string name="location_history_desc" msgid="3861249867748294369">"Bu hisob uchun Joylashuvlar tarixi yoqilganda Google qurilmangiz joylashuv ma\'lumotlarini ilovalaringiz tomonidan foydalanilishi uchun saqlashi mumkin.\n\nMasalan, Google Xaritalar yo\'nalishlar berishi va Google Hozir ko\'cha trafigi to\'g\'risida xabardor qilishi mumkin.\n\nSiz Joylashuvlar tarixini istalgan vaqtda o\'chirib qo\'yishingiz mumkin, biroq shundan qilish uni yo\'q qilmaydi. Joylashuvlar tarixningizni ko\'rish va boshqarish uchun maps.google.com/locationhistory saytiga tashrif buyuring."</string>
-    <string name="delete_location_history_title" msgid="5804802702252280549">"Joylashuvlar tarixini o‘chirish"</string>
+    <string name="delete_location_history_title" msgid="5804802702252280549">"Joylashuv tarixini o‘chirish"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"Bu ushbu Google hisobi uchun bu qurilmadan saqlangan barcha Joylashuvlar tarixini o‘chiradi. o‘chirish natijasini bekor qilib bo‘lmaydi. Ayrim ilovalar, jumladan Google Now ishlashdan to‘xtaydi."</string>
     <string name="system_services" msgid="7230571820151215779">"Xizmatlar"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"Xizmat sozlanmalari"</string>
@@ -371,7 +368,7 @@
     <string name="system_show_surface_updates" msgid="8878834675712192327">"Sirt ko‘rinishi yangilanishlarini ko‘rsatish"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"Oyna animatsiyasi o‘lchovi"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Almashinish animatsiyasi o‘lchovi"</string>
-    <string name="system_animator_duration_scale" msgid="7413512458963984521">"Animatorning davomiylik o‘lchami"</string>
+    <string name="system_animator_duration_scale" msgid="7413512458963984521">"Animatsiya tezligi"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Cheklovchi rejim yoqilgan"</string>
     <string name="system_show_cpu_usage" msgid="4797599582027671138">"CPU sarfini ko‘rsatish"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"GPU vizuallashtirishining profil vaqtij"</string>
@@ -398,7 +395,7 @@
     <string name="action_on_description" msgid="4559342592998850852">"Yoqilgan"</string>
     <string name="action_off_description" msgid="4364261457368041502">"O‘chirilgan"</string>
     <string name="agree" msgid="1235622082275451350">"Roziman"</string>
-    <string name="disagree" msgid="9170636026862400981">"Noroziman"</string>
+    <string name="disagree" msgid="9170636026862400981">"Rozi emasman"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Noma’lum manbalar"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Ilovalarni Play Store xizmatidan o‘zga manbalardan o‘rnatishga ruxsat berish"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Qurilmangiz va shaxsiy ma\'lumotlaringiz noma\'lum manbalardan keluvchi ilovalar tomonidan hujumga ko\'proq darajada duchordir. Siz ushbu ilovalardan foydalanish natijasida qurilmangizga yetkaziladigan har qanday shikast yoki ma\'lumotlarning yo\'qotilishi uchun yolg\'iz o\'zingiz javobgar ekanligingizga rozi bo\'lasiz."</string>
@@ -520,6 +517,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Agar ilovani majburiy to‘xtatsangiz, g‘alati ishlashi mumkin."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"O‘chirish"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Bu ilovani o‘chirib tashlamoqchimisiz?"</string>
+    <!-- no translation found for device_apps_app_management_uninstall_updates (5151008748970915803) -->
+    <skip />
+    <!-- no translation found for device_apps_app_management_uninstall_updates_desc (9165160845303755321) -->
+    <skip />
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"O‘chirib qo‘yish"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Bu ilovani o‘chirib qo‘ymoqchimsiz?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Yoqish"</string>
@@ -527,8 +528,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Band xotira"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> da <xliff:g id="SIZE">%1$s</xliff:g> band"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Malumotlarni tozalash"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Bu ilovaning barcha ma’lumotlari butunlay o‘chiriladi."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Bu barcha fayllar, sozlanmalar, hisoblar, ma’lumotlar bazalari kabilarni o‘z ichiga oladi."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Bu ilovaning barcha ma’lumotlari butunlay o’chirib tashlanadi.\nBunga barcha fayllar, sozlamalar, hisoblar, ma’lumotlar bazalari va h.k. kiradi."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Standartlarni tozalash"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Ba’zi amallar uchun ochish"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Birlamchi sozlamalar o‘rnatilmagan"</string>

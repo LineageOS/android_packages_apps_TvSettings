@@ -219,12 +219,9 @@
     <string name="storage_format" msgid="3759273736493279595">"پاک کردن و قالب‌بندی"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"قالب‌بندی به عنوان فضای ذخیره‌سازی دستگاه"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"متصل نیست"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"حافظه دستگاه"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"حافظه جداشدنی"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"بازنشانی"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> جاگذاری شد"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> جاگذاری نشد"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> به طور ایمن خارج شد"</string>
@@ -257,8 +254,8 @@
     <string name="learn_more_action" msgid="7015991954404958779">"بیشتر بدانید"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"سعی مجدد"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"در حال جستجو برای مسیریاب WPS..."</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"دکمه تنظیم Wi-Fi Protected را در مسیریابتان فشار دهید.\nاین دکمه ممکن است «WPS» نامیده شود یا دارای نمادی در سمت چپ باشد."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"پین <xliff:g id="NUMBER">%1$s</xliff:g> را در روتر Wi-Fi خودتان وارد کنید"</string>
+    <string name="wifi_wps_instructions" msgid="3618110962669110034">"دکمه تنظیم Wi-Fi Protected را در رهیابتان فشار دهید.\nاین دکمه ممکن است WPS نامیده شود یا نماد آن در سمت راست باشد."</string>
+    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"پین <xliff:g id="NUMBER">%1$s</xliff:g> را در رهیاب Wi-Fi خود وارد کنید"</string>
     <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"بعد از آنکه پین را وارد کردید، ممکن است تا ۲ دقیقه طول بکشد تا راه‌اندازی به پایان برسد"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"روتر Wi-Fi یافت نشد"</string>
     <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"تنظیم امنیتی روتر Wi-Fi (‏WEP) پشتیبانی نمی‌شود"</string>
@@ -520,6 +517,8 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"توقف اجباری یک برنامه، ممکن است باعث عملکرد نادرست آن شود."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"حذف نصب"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"می‌خواهید این برنامه را حذف نصب کنید؟"</string>
+    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"حذف نصب به‌روزرسانی‌ها"</string>
+    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"همه به‌روزرسانی‌های این برنامه سیستم Android حذف نصب می‌شوند."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"غیرفعال‌ کردن"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"می‌خواهید این برنامه را غیرفعال کنید؟"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"فعال کردن"</string>
@@ -527,8 +526,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"فضای ذخیره‌سازی استفاده شده"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> از <xliff:g id="VOLUME">%2$s</xliff:g> را استفاده کرده است"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"پاک کردن داده‌ها"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"تمام داده‌های این برنامه برای همیشه حذف می‌شود."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"این شامل همه فایل‌ها، تنظیمات، حساب‌ها، پایگاه داده‌، و غیره می‌شود"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"همه داده‌های این برنامه به صورت دائمی حذف می‌شود.\nاین شامل تمام فایل‌ها، تنظیمات، حساب‌ها، پایگاه‌های داده و دیگر موارد می‌شود."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"پاک کردن پیش‌فرض‌ها"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"راه‌اندازی این برنامه برای برخی اقدامات"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"هیچ پیش‌فرضی تنظیم نشده است"</string>

@@ -153,7 +153,7 @@
     <string name="title_wifi_proxy_settings" msgid="7728120764469991303">"ప్రాక్సీ సెట్టింగ్‌లు"</string>
     <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"ప్రాక్సీ హోస్ట్‌ పేరు:"</string>
     <string name="title_wifi_proxy_port" msgid="9194893429116021337">"ప్రాక్సీ పోర్ట్:"</string>
-    <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"దీని కోసం బైపాస్ ప్రాక్సీ:"</string>
+    <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"దీని కోసం ప్రాక్సీని విస్మరించు:"</string>
     <string name="title_wifi_ip_settings" msgid="1176973848286865602">"IP సెట్టింగ్‌లు"</string>
     <string name="title_wifi_ip_address" msgid="1176502993805009566">"IP చిరునామా:"</string>
     <string name="title_wifi_gateway" msgid="7210935277165358134">"గేట్‌వే:"</string>
@@ -219,12 +219,9 @@
     <string name="storage_format" msgid="3759273736493279595">"డేటా తొలగించి, ఫార్మాట్ చేయి"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"పరికర నిల్వగా ఫార్మాట్ చేయి"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"కనెక్ట్ చేయబడలేదు"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"పరికర నిల్వ"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"తీసివేయదగిన నిల్వ"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"రీసెట్ చేయండి"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> మౌంట్ చేయబడింది"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g>ని మౌంట్ చేయలేకపోయింది"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> సురక్షితంగా తొలగించబడింది"</string>
@@ -520,6 +517,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"మీరు అనువర్తనాన్ని నిర్బంధంగా ఆపివేస్తే, అది సరిగ్గా పని చేయకపోవచ్చు."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"అన్ఇన్‌స్టాల్ చేయి"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"మీరు ఈ అనువర్తనాన్ని అన్ఇన్‌స్టాల్ చేయాలనుకుంటున్నారా?"</string>
+    <!-- no translation found for device_apps_app_management_uninstall_updates (5151008748970915803) -->
+    <skip />
+    <!-- no translation found for device_apps_app_management_uninstall_updates_desc (9165160845303755321) -->
+    <skip />
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"నిలిపివేయి"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"మీరు ఈ అనువర్తనాన్ని నిలిపివేయాలనుకుంటున్నారా?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"ప్రారంభించు"</string>
@@ -527,8 +528,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"వినియోగించిన నిల్వ"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g>లో <xliff:g id="SIZE">%1$s</xliff:g> ఉపయోగించబడింది"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"డేటాను తీసివేయి"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"ఈ అనువర్తనం డేటా మొత్తం శాశ్వతంగా తొలగించబడుతుంది."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"ఇందులో అన్ని ఫైల్‌లు, సెట్టింగ్‌లు, ఖాతాలు, డేటాబేస్‌లు మొదలైనవి ఉన్నాయి."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"ఈ అనువర్తనం డేటా మొత్తం శాశ్వతంగా తొలగించబడుతుంది.\nఇందులోని అన్ని ఫైల్‌లు, సెట్టింగ్‌లు, ఖాతాలు, డేటాబేస్‌లు మొదలైనవి"</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"డిఫాల్ట్‌లను తీసివేయి"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"కొన్ని చర్యలకు ఈ అనువ. ప్రారం. సెట్ చేయ."</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"డిఫాల్ట్‌లు ఏవీ సెట్ చేయలేదు"</string>

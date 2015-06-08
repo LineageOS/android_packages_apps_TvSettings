@@ -219,12 +219,9 @@
     <string name="storage_format" msgid="3759273736493279595">"مٹائیں اور فارمیٹ کریں"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"آلہ کے اسٹوریج کے بطور فارمیٹ کریں"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"غیر منسلک"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"آلہ کا اسٹوریج"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"قابل ہٹاؤ اسٹوریج"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"دوبارہ ترتیب دیں"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> کو ماؤنٹ کر دیا گیا"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> کو ماؤنٹ نہیں کیا جا سکا"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> کو محفوظ طریقے سے خارج کر دیا گیا"</string>
@@ -371,7 +368,7 @@
     <string name="system_show_surface_updates" msgid="8878834675712192327">"سطح کے اپ ڈیٹس دکھائیں"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"ونڈو اینیمیشن اسکیل"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"منتقلی اینیمیشن اسکیل"</string>
-    <string name="system_animator_duration_scale" msgid="7413512458963984521">"اینیمیٹر دورانیہ کا پیمانہ"</string>
+    <string name="system_animator_duration_scale" msgid="7413512458963984521">"اینیمیٹر دورانیے کا اسکیل"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"سخت وضع فعال ہے"</string>
     <string name="system_show_cpu_usage" msgid="4797599582027671138">"CPU استعمال دکھائیں"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"پروفائل GPU رینڈرنگ"</string>
@@ -520,6 +517,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"اگر آپ کسی ایپ کو زبردستی روک دیتے ہیں تو یہ غلط برتاؤ کر سکتی ہے۔"</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"اَن انسٹال کریں"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"کیا آپ یہ ایپ اَن انسٹال کرنا چاہتے ہیں؟"</string>
+    <!-- no translation found for device_apps_app_management_uninstall_updates (5151008748970915803) -->
+    <skip />
+    <!-- no translation found for device_apps_app_management_uninstall_updates_desc (9165160845303755321) -->
+    <skip />
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"غیر فعال کریں"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"کیا آپ اس ایپ کو غیر فعال کرنا چاہتے ہیں؟"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"فعال کریں"</string>
@@ -527,8 +528,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"استعمال کردہ اسٹوریج"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> میں <xliff:g id="SIZE">%1$s</xliff:g> استعمال کیا گیا"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"ڈیٹا صاف کریں"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"اس ایپ کا سبھی ڈیٹا مستقل طور پر حذف کر دیا جائے گا۔"</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"اس میں تمام فائلیں، ترتیبات، اکاؤنٹس، ڈیٹابیسز وغیرہ شامل ہیں۔"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"اس ایپ کے تمام ڈیٹا کو مستقل طور پر حذف کر دیا جائے گا۔\nاس میں تمام فائلیں، ترتیبات، اکاؤنٹس، ڈیٹا بیسس وغیرہ شامل ہیں۔"</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"ڈیفالٹس صاف کریں"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"کچھ کارروائیوں کیلئے یہ ایپ شروع کرنے کیلئے سیٹ کریں"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"کوئی ڈیفالٹس سیٹ نہیں ہیں"</string>

@@ -219,12 +219,9 @@
     <string name="storage_format" msgid="3759273736493279595">"Hapus &amp; format"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Format sebagai perangkat penyimpanan"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Tidak terhubung"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Penyimpanan perangkat"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Penyimpanan yang dapat dicopot"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Setel ulang"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> telah dipasang"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"Tidak dapat memasang <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> dikeluarkan dengan aman"</string>
@@ -350,7 +347,7 @@
     <string name="system_reboot_confirm" msgid="534407910866199191">"Mulai ulang sekarang?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Untuk memperbarui setelan ini, perangkat Anda perlu dimulai ulang"</string>
     <string name="system_never_check" msgid="6666520460705041617">"Jangan periksa"</string>
-    <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Memeriksa konten DRM saja"</string>
+    <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Hanya periksa konten DRM"</string>
     <string name="system_always_check" msgid="1866566828098009853">"Selalu periksa"</string>
     <string name="system_bt_hci_log" msgid="2425757846046504431">"Pencatatan log HCI Bluetooth"</string>
     <string name="system_email_address" msgid="8669468986250302378">"Alamat email"</string>
@@ -520,6 +517,8 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Jika Anda menghentikan aplikasi secara paksa, mungkin fungsinya akan terganggu."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Copot pemasangan"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Ingin mencopot pemasangan aplikasi ini?"</string>
+    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Copot pemasangan pembaruan"</string>
+    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Semua pembaruan untuk aplikasi sistem Android ini akan dicopot pemasangannya."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Nonaktifkan"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Ingin menonaktifkan aplikasi ini?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Aktifkan"</string>
@@ -527,8 +526,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Penyimpanan yang terpakai"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> digunakan di <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Hapus data"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Semua data aplikasi ini akan dihapus secara permanen."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Termasuk semua file, setelan, akun, basis data, dsb."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Semua data aplikasi ini akan dihapus secara permanen. \nData yang dihapus mencakup semua file, setelan, akun, basis data, dll."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Hapus default"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Luncurkan apl untuk beberapa tindakan"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Tidak ada default yang disetel"</string>

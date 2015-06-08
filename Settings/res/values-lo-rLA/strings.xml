@@ -219,12 +219,9 @@
     <string name="storage_format" msgid="3759273736493279595">"ລຶບ ແລະ​ຟໍ​ແມັດ"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"ຟໍ​ແມັດ​ເປັນ​ບ່ອນ​ຈັດ​ເກັບ​ຂໍ້​ມູນ​ອຸ​ປະ​ກອນ"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"ບໍ່ໄດ້ເຊື່ອມຕໍ່"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"ບ່ອນຈັດເກັບຂໍ້ມູນອຸປະກອນ"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"ໜ່ວຍຈັດເກັບຂໍ້ມູນທີ່ຖອດອອກໄດ້"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"ຕັ້ງຄ່າຄືນໃໝ່"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> ຖືກ​ເອົາ​ຕໍ່​ໃສ່​ແລ້ວ"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"ບໍ່​ສາ​ມາດ​ຕໍ່​ໃສ່ <xliff:g id="NAME">%1$s</xliff:g> ໄດ້"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> ຖືກ​ເອົາ​ອອກ​ໄປ​ຢ່າງ​ປອດ​ໄພ​ແລ້ວ"</string>
@@ -520,6 +517,8 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"ຖ້າ​ທ່ານ​ບັ"</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"ຖອນ​ການ​ຕິດ​ຕັ້ງ"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"ທ່ານຕ້ອງການຖອນການຕິດຕັ້ງແອັບຯນີ້ບໍ່?"</string>
+    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"ຖອນການຕິດຕັ້ງອັບເດດ"</string>
+    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"ການອັບເດດທັງໝົດທີ່ມີຂອງແອັບຯລະບົບ Android ນີ້ຈະຖືກຖອນການຕິດຕັ້ງ."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"ປິດໃຊ້​ງານ"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"ທ່ານ​ຕ້ອງ​ການ​ປິດ​ໃຊ້​ງານ​ແອັບ​ຯນີ້​ບໍ?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"ເປີດໃຊ້ງານ"</string>
@@ -527,8 +526,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"ບ່ອນ​ຈັດ​ເກັບ​ຂໍ້​ມູນ​ໃຊ້​ແລ້ວ"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> ໃຊ້​ແລ້ວ​ຢູ່​ໃນ <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"ລຶບຂໍ້ມູນ"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"ຂໍ້​ມູນ​ທັງ​ໝົດ​ຂອງ​ແອັບຯ​ນີ້​ຈະ​ຖືກ​ລຶບ​ຖາ​ວອນ."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"ອັນ​ນີ້​ລວມ​ມີ​ໄຟ​ລ໌​, ການ​ຕັ້ງ​ຄ່າ, ບັນ​ຊີ, ຖານ​ຂໍ້​ມູນ​ທັງ​ໝົດ, ອື່ນໆ."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"ຂໍ້ມູນທັງໝົດຂອງແອັບຯນີ້ຈະຖືກລຶບອອກຖາວອນ.\nອັນ​ນີ້​ລວມເຖິງໄຟລ໌, ການຕັ້ງຄ່າ, ບັນຊີ, ຖານຂໍ້ມູນ ແລະອື່ນໆທັງໝົດນຳ."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"ລຶບຄ່າ​ເລີ່ມ​ຕົ້ນ"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"ຕັ້ງ​ເພື່ອ​ເປີດ​ໃຊ້​ແອັບຯ​ນີ້​ສຳ​ລັບ​ການ​ດຳ​ເນີນ​ການ​ບາງ​ອັນ"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"ບໍ່​ໄດ້​ຕັ້ງ​ຄ່າ​ເລີ່ມ​ຕົ້ນ"</string>

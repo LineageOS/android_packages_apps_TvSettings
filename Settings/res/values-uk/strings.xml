@@ -221,12 +221,9 @@
     <string name="storage_format" msgid="3759273736493279595">"Очистити й відформатувати"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Відформатувати як пам’ять пристрою"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Не підключено"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Пам’ять пристрою"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Знімний носій"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Скидання"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"Носій <xliff:g id="NAME">%1$s</xliff:g> підключено"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"Не вдалося підключити носій <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"Носій <xliff:g id="NAME">%1$s</xliff:g> безпечно вийнято"</string>
@@ -378,7 +375,7 @@
     <string name="system_show_cpu_usage" msgid="4797599582027671138">"Показувати використання ЦП"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Запис часу роботи GPU"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Увімкнути трасування"</string>
-    <string name="system_dont_keep_activities" msgid="7906911077198718958">"Не зберігати діяльність"</string>
+    <string name="system_dont_keep_activities" msgid="7906911077198718958">"Не зберігати дії"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"Обмеження фонових процесів"</string>
     <string name="system_show_all_anrs" msgid="3601183436857424712">"Показувати всі вікна ANR"</string>
     <string name="system_desc_stay_awake" msgid="229588006508356238">"Вимкнути режим сну"</string>
@@ -530,6 +527,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Якщо примусово припинити роботу додатка, він може працювати неналежним чином."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Видалити"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Видалити цей додаток?"</string>
+    <!-- no translation found for device_apps_app_management_uninstall_updates (5151008748970915803) -->
+    <skip />
+    <!-- no translation found for device_apps_app_management_uninstall_updates_desc (9165160845303755321) -->
+    <skip />
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Вимкнути"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Вимкнути додаток?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Увімкнути"</string>
@@ -537,8 +538,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Використовується пам’яті"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Використовується <xliff:g id="SIZE">%1$s</xliff:g> у томі <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Видалити дані"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Усі дані цього додатка буде видалено назавжди."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Буде видалено всі файли, налаштування, облікові записи, бази даних тощо."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Усі дані цього додатка буде видалено назавжди.\nЦе стосується всіх файлів, налаштувань, облікових записів, баз даних тощо."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Очистити дії за умовчанням"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Вибрати запуск додатка для певних дій"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Не вибрано дій за умовчанням"</string>

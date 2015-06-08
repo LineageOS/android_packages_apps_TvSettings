@@ -39,7 +39,7 @@
     <string name="connectivity_network" msgid="8321537111272398501">"Netzwerk"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"WLAN"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Scannen immer verfügbar"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Erkennungsfunktion immer verfügbar"</string>
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"Der Standortdienst von Google und andere Apps sollen auch bei deaktiviertem WLAN nach Netzwerken suchen."</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"WLAN"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Daydream"</string>
@@ -219,12 +219,9 @@
     <string name="storage_format" msgid="3759273736493279595">"Löschen &amp; formatieren"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Als Gerätespeicher formatieren"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Nicht verbunden"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Gerätespeicher"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Wechselmedien"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Zurücksetzen"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> wurde bereitgestellt."</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> konnte nicht bereitgestellt werden."</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> wurde sicher ausgeworfen."</string>
@@ -520,6 +517,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Das Beenden der App zu erzwingen, kann zu unerwünschtem Verhalten führen."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Deinstallieren"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Möchten Sie diese App deinstallieren?"</string>
+    <!-- no translation found for device_apps_app_management_uninstall_updates (5151008748970915803) -->
+    <skip />
+    <!-- no translation found for device_apps_app_management_uninstall_updates_desc (9165160845303755321) -->
+    <skip />
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Deaktivieren"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Möchten Sie diese App deaktivieren?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Aktivieren"</string>
@@ -527,8 +528,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Genutzter Speicherplatz"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g>: <xliff:g id="SIZE">%1$s</xliff:g> belegt"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Daten löschen"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Sämtliche Daten dieser App werden unwiderruflich gelöscht."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Dazu gehören alle Dateien, Einstellungen, Konten, Datenbanken usw."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Alle Daten dieser App werden endgültig gelöscht.\nDazu zählen alle Dateien, Einstellungen, Konten, Datenbanken."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Standardeinstellungen löschen"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Bei einigen Aktionen startet diese App."</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Keine Standardeinstellungen festgelegt"</string>

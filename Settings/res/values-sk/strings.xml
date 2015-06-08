@@ -221,12 +221,9 @@
     <string name="storage_format" msgid="3759273736493279595">"Vymazať a naformátovať"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Naformátovať ako úložisko zariadenia"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Nepripojené"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Úložisko zariadenia"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Vymeniteľné úložisko"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Resetovanie"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> je pripojené"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> sa nepodarilo pripojiť"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> bolo bezpečne odpojené"</string>
@@ -330,12 +327,12 @@
     <string name="color_magenta" msgid="6395786485839439122">"Purpurová"</string>
     <string name="system_accessibility_status" msgid="4389074529913575327">"Stav"</string>
     <string name="system_accessibility_config" msgid="3216531917536720277">"Konfigurácia"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Použiť službu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Používať službu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"Služba <xliff:g id="SERVICE">%1$s</xliff:g> zaznamenáva všetok text, ktorý napíšete, okrem hesiel. To zahŕňa osobné údaje, ako sú čísla kreditných kariet."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"Zastaviť službu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Výberom možnosti OK zastavíte službu <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="8905477795536714590">"Prevod textu na reč"</string>
-    <string name="system_speak_passwords" msgid="5264650214879185873">"Hovorené heslá"</string>
+    <string name="system_speak_passwords" msgid="5264650214879185873">"Vyslovovať heslá"</string>
     <string name="system_preferred_engine" msgid="8258210139854655567">"Preferovaný nástroj"</string>
     <string name="system_speech_rate" msgid="8099856582088545576">"Rýchlosť reči"</string>
     <string name="system_play_sample" msgid="7187293932891811148">"Prehrať ukážku"</string>
@@ -530,6 +527,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Ak vynútite zastavenie aplikácie, môže sa správať zvláštne."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Odinštalovať"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Chcete túto aplikáciu odinštalovať?"</string>
+    <!-- no translation found for device_apps_app_management_uninstall_updates (5151008748970915803) -->
+    <skip />
+    <!-- no translation found for device_apps_app_management_uninstall_updates_desc (9165160845303755321) -->
+    <skip />
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Vypnúť"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Chcete vypnúť túto aplikáciu?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Zapnúť"</string>
@@ -537,8 +538,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Využité úložisko"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Využité miesto v úložisku <xliff:g id="VOLUME">%2$s</xliff:g>: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Vymazať údaje"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Všetky údaje tejto aplikácie sa natrvalo odstránia."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Zahŕňa to všetky súbory, nastavenia, účty, databázy atď."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Všetky údaje tejto aplikácie budú natrvalo odstránené.\nTýka sa to všetkých súborov, nastavení, účtov, databáz atď."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Vymazať predvolené nastavenia"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Nastaviť túto apl. pre niektoré akcie"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Nie sú nastavené predvolené nastavenia"</string>

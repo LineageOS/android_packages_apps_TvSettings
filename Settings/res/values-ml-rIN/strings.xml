@@ -49,7 +49,7 @@
     <string name="device_storage_reset" msgid="1425978936501134425">"സംഭരണവും പുനഃസജ്ജീകരണവും"</string>
     <string name="device_storage" msgid="5536683600091277826">"സംഭരണം"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"ബാക്കപ്പുചെയ്യലും പുനഃസ്ഥാപിക്കലും"</string>
-    <string name="device_reset" msgid="2827002349560023125">"ഫാക്‌ടറി ഡാറ്റ പുനഃസജ്ജീകരണം"</string>
+    <string name="device_reset" msgid="2827002349560023125">"ഫാക്‌ടറിഡാറ്റ റീസെറ്റ്"</string>
     <string name="device_calibration" msgid="8632962533376605191">"കാലിബ്രേഷൻ"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"കാഷെ ചെയ്‌ത ഡാറ്റ മായ്‌ക്കണോ?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"ഇത് എല്ലാ അപ്ലിക്കേഷനുകൾക്കുമായി കാഷെ ചെയ്ത ഡാറ്റ മായ്‌ക്കും."</string>
@@ -219,12 +219,9 @@
     <string name="storage_format" msgid="3759273736493279595">"മായ്‌ക്കുക, ഫോർമാറ്റുചെയ്യുക"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"ഉപകരണ സംഭരണമായി ഫോർമാറ്റുചെയ്യുക"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"കണ‌ക്റ്റുചെയ്‌തിട്ടില്ല"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"ഉപകരണ സംഭരണം"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"നീക്കംചെയ്യാനാവുന്ന സംഭരണം"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"റീസെറ്റുചെയ്യുക"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിനെ മൗണ്ടുചെയ്‌തു"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> മൗണ്ടുചെയ്യാനായില്ല"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിനെ സുരക്ഷിതമായി ഒഴിവാക്കി"</string>
@@ -358,7 +355,7 @@
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"വ്യാജ ലൊക്കേഷനുകൾ അനുവദിക്കുക"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"ഡീബഗ് അപ്ലിക്കേഷൻ തിരഞ്ഞെടുക്കുക"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"ഡീബഗ്ഗറിനായി കാത്തിരിക്കുക"</string>
-    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB മുഖേന അപ്ലിക്കേഷനുകൾ പരിശോധിച്ചുറപ്പിക്കുക"</string>
+    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB വഴി ആപ്സുകൾ പരിശോധിച്ചുറപ്പിക്കൂ"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"ADB/ADT വഴി ദോഷകരമായ പ്രവർത്തനരീതിയുള്ള അപ്ലിക്കേഷനുകൾ ഇൻസ്റ്റാളുചെയ്‌തിട്ടുണ്ടോയെന്ന് പരിശോധിക്കുക"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi വെർബോസ് ലോഗിംഗ്"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Wi-Fi വെർബോസ് ലോഗിംഗ് പ്രവർത്തനക്ഷമമാക്കുക"</string>
@@ -520,6 +517,8 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"നിങ്ങൾ ഒരു അപ്ലിക്കേഷൻ നിർബന്ധിതമായി നിർത്തുകയാണെങ്കിൽ, അത് ശരിയായി പ്രവർത്തിക്കാനിടയില്ല."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"അൺഇൻസ്റ്റാളുചെയ്യുക"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"ഈ അപ്ലിക്കേഷൻ അൺഇൻസ്റ്റാളുചെയ്യണോ?"</string>
+    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"അപ്ഡേറ്റുകൾ അൺഇൻസ്റ്റാളുചെയ്യുക"</string>
+    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"ഈ Android സി‌സ്റ്റം ആപ്പിലേക്കുള്ള എല്ലാ അപ്‌ഡേറ്റുകളെയും അൺഇൻസ്റ്റാൾ ചെയ്യും."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"പ്രവർത്തനരഹിതമാക്കുക"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"നിങ്ങൾക്ക് ഈ അപ്ലിക്കേഷൻ പ്രവർത്തനരഹിതമാക്കണോ?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"പ്രവർത്തനക്ഷമമാക്കുക"</string>
@@ -527,8 +526,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"ഉപയോഗിച്ച സംഭരണം"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> എന്നതിൽ <xliff:g id="SIZE">%1$s</xliff:g> ഉപയോഗിച്ചു"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"വിവരം മായ്‌ക്കുക"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"ഈ അപ്ലിക്കേഷന്റെ എല്ലാ വിവരവും ശാശ്വതമായി ഇല്ലാതാക്കും."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"ഫയലുകൾ, ക്രമീകരണം, അക്കൗണ്ടുകൾ, ഡാറ്റാബേസുകൾ തുടങ്ങിയവയെല്ലാം ഇതിൽ ഉൾപ്പെടും."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"ഈ ആപ്പിന്റെ എല്ലാ വിവരവും ശാശ്വതമായി ഇല്ലാതാക്കും.\nഇതിൽ എല്ലാ ഫയലുകളും ക്രമീകരണവും അക്കൗണ്ടുകളും ഡാറ്റാബേസും ഉൾപ്പെടുന്നു."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"സ്ഥിരമായവ മായ്‌ക്കുക"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"ചില പ്രവർത്തനങ്ങൾക്കായി ഈ അപ്ലിക്കേഷൻ സമാരംഭിക്കുന്നത് സജ്ജമാക്കുക"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"സ്ഥിരമായവയൊന്നും സജ്ജീകരിച്ചിട്ടില്ല"</string>
@@ -542,7 +540,7 @@
     <string name="device_daydreams_none" msgid="7364189761517824834">"ഒന്നുമില്ല"</string>
     <string name="device_daydreams_select" msgid="3691552535056569158">"ഡേഡ്രീം"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"ഇപ്പോൾ ആരംഭിക്കുക"</string>
-    <string name="device_daydreams_sleep" msgid="8766795993034660366">"ഡേഡ്രീമിലാകുന്നത് എപ്പോൾ"</string>
+    <string name="device_daydreams_sleep" msgid="8766795993034660366">"എപ്പോൾ ഡേഡ്രീമിലാകണം"</string>
     <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"ഈ നിഷ്‌ക്രിയത്വ കാലയളവിനുശേഷം ഡേഡ്രീമിംഗ് ആരംഭിക്കുന്നു. ഡേഡ്രീമൊന്നും തിരഞ്ഞെടുത്തില്ലെങ്കിൽ, ഡിസ്‌പ്‌ലേ ഓഫാകുന്നതാണ്."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> നിഷ്‌ക്രിയത്വത്തിന് ശേഷം"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"സുഷുപ്‌തിയിലാകുന്നത് എപ്പോൾ"</string>
@@ -574,6 +572,6 @@
     <string name="change_setting" msgid="2047402388786162246">"മാറ്റുക"</string>
     <string name="keep_settings" msgid="6798327196645732517">"മാറ്റരുത്"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"അനുമതികൾ"</string>
-    <string name="device_apps_permissions" msgid="2966387603529725982">"അപ്ലിക്കേഷൻ അനുമതികൾ"</string>
+    <string name="device_apps_permissions" msgid="2966387603529725982">"ആപ്പ് അനുമതികൾ"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> / <xliff:g id="COUNT_1">%d</xliff:g>  അപ്ലിക്കേഷനുകൾ അനുവദനീയം"</string>
 </resources>
