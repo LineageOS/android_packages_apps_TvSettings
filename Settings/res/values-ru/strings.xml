@@ -221,12 +221,9 @@
     <string name="storage_format" msgid="3759273736493279595">"Очистить и форматировать"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Форматировать как память устройства"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Нет подключения"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Память устройства"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Съемный накопитель"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Сброс настроек"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"Подключено: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"Ошибка подключения: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"Безопасно извлечено: <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -373,7 +370,7 @@
     <string name="system_show_surface_updates" msgid="8878834675712192327">"Показывать обновления поверхности"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"Окно: масштаб"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Переход: масштаб"</string>
-    <string name="system_animator_duration_scale" msgid="7413512458963984521">"Скорость анимации"</string>
+    <string name="system_animator_duration_scale" msgid="7413512458963984521">"Длительность анимации"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Включен строгий режим"</string>
     <string name="system_show_cpu_usage" msgid="4797599582027671138">"Показывать загрузку ЦП"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Запись времени работы графического процессора"</string>
@@ -530,6 +527,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Принудительная остановка приложения может привести к ошибкам."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Удалить"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Удалить приложение?"</string>
+    <!-- no translation found for device_apps_app_management_uninstall_updates (5151008748970915803) -->
+    <skip />
+    <!-- no translation found for device_apps_app_management_uninstall_updates_desc (9165160845303755321) -->
+    <skip />
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Отключить"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Отключить это приложение?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Включить"</string>
@@ -537,8 +538,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Размер в памяти"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> (<xliff:g id="VOLUME">%2$s</xliff:g>)"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Удалить данные"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Все данные этого приложения будут удалены без возможности восстановления."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Это касается файлов, настроек, аккаунтов, баз данных и т. д."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Все данные приложения будут удалены.\nВы не сможете восстановить файлы, настройки, аккаунты, базы данных и т. д."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Удалить настройки по умолчанию"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Открывать при некоторых действиях"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Настройки по умолчанию не установлены"</string>

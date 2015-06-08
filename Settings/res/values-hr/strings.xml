@@ -52,7 +52,7 @@
     <string name="device_reset" msgid="2827002349560023125">"Vraćanje na tvorničko stanje"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibracija"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Želite li izbrisati podatke iz predmemorije?"</string>
-    <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Obrisat ćete predmem. podatke za sve aplikacije."</string>
+    <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Obrisat ćete predmemorirane podatke svih aplikacija."</string>
     <string name="apps_downloaded" msgid="4222190849854323480">"Preuzete aplikacije"</string>
     <string name="apps_system" msgid="2499191125802829425">"Aplikacije sustava"</string>
     <string name="apps_running" msgid="6430310491739956228">"Pokrenute aplikacije"</string>
@@ -220,12 +220,9 @@
     <string name="storage_format" msgid="3759273736493279595">"Izbriši i formatiraj"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatiraj kao pohranu uređaja"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Nije povezano"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Pohrana na uređaju"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Prijenosna pohrana"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Vraćanje na zadano"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"Učitano: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"Učitavanje nije uspjelo: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"Sigurno izbacivanje uspjelo: <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -355,9 +352,9 @@
     <string name="system_always_check" msgid="1866566828098009853">"Uvijek provjeri"</string>
     <string name="system_bt_hci_log" msgid="2425757846046504431">"Izrada Bluetooth HCI zapisnika"</string>
     <string name="system_email_address" msgid="8669468986250302378">"E-adresa"</string>
-    <string name="system_usb_debugging" msgid="3777895294421924323">"Uklanjanje pogreške na USB-u"</string>
+    <string name="system_usb_debugging" msgid="3777895294421924323">"Uklanjanje pogrešaka putem USB-a"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"Dopusti probne lokacije"</string>
-    <string name="system_select_debug_app" msgid="8592021815119618485">"Odaberite aplikaciju za uklanjanje pogrešaka"</string>
+    <string name="system_select_debug_app" msgid="8592021815119618485">"Aplikacija za uklanjanje pogrešaka"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Čekanje na program za uklanjanje pogrešaka"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Potvrdi aplikacije putem USB-a"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Provjerite uzrokuju li aplikacije instalirane putem ADB-a/ADT-a poteškoće"</string>
@@ -390,7 +387,7 @@
     <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"Bljeskanje prikaza u prozorima pri crtanju GPU-om"</string>
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"Hardverski slojevi bljeskaju zeleno pri ažuriranju"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Najbolje – najgore: plavo zeleno sv. crveno crveno"</string>
-    <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Bljeskanje cijele površine prozora pri ažuriranju"</string>
+    <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Neka cijela površina prozora bljesne pri ažuriranju."</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Bljeskanje tijekom dugih operacija na glavnom nizu"</string>
     <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"Preklapajući sloj prikazuje trenutačnu upotrebu procesora"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Mjeri vrijeme prikaza u adb shell dumpsys gfxinfo"</string>
@@ -525,6 +522,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Ako prisilno zaustavite aplikaciju, možda će se ponašati nepredviđeno."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Deinstaliraj"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Želite li deinstalirati tu aplikaciju?"</string>
+    <!-- no translation found for device_apps_app_management_uninstall_updates (5151008748970915803) -->
+    <skip />
+    <!-- no translation found for device_apps_app_management_uninstall_updates_desc (9165160845303755321) -->
+    <skip />
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Onemogući"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Želite li onemogućiti tu aplikaciju?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Omogući"</string>
@@ -532,8 +533,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Upotrijebljena pohrana"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> iskorišteno: <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Izbriši podatke"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Svi podaci te aplikacije trajno će se izbrisati."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"To uključuje sve datoteke, postavke, račune, baze podataka itd."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Svi podaci aplikacije izbrisat će se trajno.\nTo uključuje sve datoteke, postavke, račune, baze podataka itd."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Izbriši zadane radnje"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Aplikacija se pokreće za neke radnje"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Nema zadanih radnji"</string>

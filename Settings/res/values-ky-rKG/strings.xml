@@ -219,12 +219,9 @@
     <string name="storage_format" msgid="3759273736493279595">"Өчүрүү жана форматтоо"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Түзмөктүн сактагычы катары форматтоо"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Туташкан жок"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Түзмөктүн сактагычы"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Ташыма сактагыч"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Кайра коюу"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> туташты"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> туташпай койду"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> коопсуз чыгарылды"</string>
@@ -508,7 +505,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Жаңы PIN коюңуз"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Жаңы PIN\"ди кайра киргизиңиз"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Эски PIN\"ди киргизиңиз"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Сиз 5 жолу туура эмес PIN киргиздиңиз.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> секунддан кийин кайрадан аракет кылып көрүңүз."</string>
+    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"PIN кодду 5 жолу туура эмес киргиздиңиз.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> секунддан кийин кайра аракет кылып көрүңүз."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Туура эмес PIN, дагы бир жолу аракет кылыңыз"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN дал келбей жатат, дагы бир жолу аракет кылыңыз"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> сырсөзүн киргизиңиз"</string>
@@ -520,6 +517,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Эгер колдонмону күч менен токтотсоңуз, ал туура эмес иштеп калышы мүмкүн."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Орнотуудан чыгаруу"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Бул колдонмону орнотуудан чыгарасызбы?"</string>
+    <!-- no translation found for device_apps_app_management_uninstall_updates (5151008748970915803) -->
+    <skip />
+    <!-- no translation found for device_apps_app_management_uninstall_updates_desc (9165160845303755321) -->
+    <skip />
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Өчүрүү"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Бул колдонмону өчүргүңүз келеби?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Иштетүү"</string>
@@ -527,8 +528,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Колдонулган эстутум"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> ичинен <xliff:g id="SIZE">%1$s</xliff:g> колдонулат"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Дайындарды тазалоо"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Бул колдонмонун бардык дайындары биротоло өчүрүлөт."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Алардын катарына файлдар, жөндөөлөр, каттоо эсептери, дайындар базалары ж.б. кирет."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Бул колдонмонун бардык дайындары биротоло өчүрүлөт.\nАнын ичинде бардык файлдар, жөндөөлөр, каттоо эсептери, берилиштер кору ж.б."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Демейки жөндөөлөрдү тазалап салуу"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Бул колдонмо айрым аракеттер үчүн ишке киргизилет деп коюлган"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Демейки жөндөөлөр коюлган жок"</string>

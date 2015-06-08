@@ -219,12 +219,9 @@
     <string name="storage_format" msgid="3759273736493279595">"Tyhjennä ja alusta"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Alusta laitteen tallennustilana"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Ei yhdistetty"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Laitteen tallennustila"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Siirrettävä tallennustila"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Tyhjennä"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> on otettu käyttöön."</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"Käyttöönotto epäonnistui: <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> on poistettu turvallisesti."</string>
@@ -328,9 +325,9 @@
     <string name="color_magenta" msgid="6395786485839439122">"Magenta"</string>
     <string name="system_accessibility_status" msgid="4389074529913575327">"Tila"</string>
     <string name="system_accessibility_config" msgid="3216531917536720277">"Määritykset"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Otetaanko palvelu <xliff:g id="SERVICE">%1$s</xliff:g> käyttöön?"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Otetaanko <xliff:g id="SERVICE">%1$s</xliff:g> käyttöön?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"<xliff:g id="SERVICE">%1$s</xliff:g> voi kerätä kaiken kirjoittamasi tekstin paitsi salasanat. Palvelu voi kerätä myös henkilökohtaisia ​​tietoja, kuten luottokorttien numeroita."</string>
-    <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"Pysäytetäänkö palvelu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"Pysäytetäänkö <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Valinta OK pysäyttää palvelun <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="8905477795536714590">"Tekstistä puheeksi"</string>
     <string name="system_speak_passwords" msgid="5264650214879185873">"Puhu salasanat"</string>
@@ -416,12 +413,12 @@
     <string name="enable_opengl_traces_none" msgid="6074804146602749420">"Ei mitään"</string>
   <string-array name="animation_scale_entries">
     <item msgid="7477134110460336436">"Animaatio pois käytöstä"</item>
-    <item msgid="8327257151534006014">"Animaation mittakaava 0,5-kertainen"</item>
-    <item msgid="2105786719544636780">"Animaation mittakaava 1-kertainen"</item>
-    <item msgid="5290554136790336403">"Animaation mittakaava 1,5-kertainen"</item>
-    <item msgid="1232929590838082483">"Animaation mittakaava 2-kertainen"</item>
-    <item msgid="1889239009419613796">"Animaation mittakaava 5-kertainen"</item>
-    <item msgid="7268894934484547297">"Animaation mittakaava 10-kertainen"</item>
+    <item msgid="8327257151534006014">"Animaatioasteikko 0,5-kertainen"</item>
+    <item msgid="2105786719544636780">"Animaatioasteikko 1-kertainen"</item>
+    <item msgid="5290554136790336403">"Animaatioasteikko 1,5-kertainen"</item>
+    <item msgid="1232929590838082483">"Animaatioasteikko 2-kertainen"</item>
+    <item msgid="1889239009419613796">"Animaatioasteikko 5-kertainen"</item>
+    <item msgid="7268894934484547297">"Animaatioasteikko 10-kertainen"</item>
   </string-array>
     <string name="track_frame_time_off" msgid="5050360262132715904">"Ei käytössä"</string>
     <string name="track_frame_time_bars" msgid="4470692840177888414">"Ruudulla palkkeina"</string>
@@ -520,6 +517,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Jos pakotat sovelluksen lopettamaan toimintansa, se alkaa ehkä toimia virheellisesti."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Poista"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Haluatko poistaa tämän sovelluksen?"</string>
+    <!-- no translation found for device_apps_app_management_uninstall_updates (5151008748970915803) -->
+    <skip />
+    <!-- no translation found for device_apps_app_management_uninstall_updates_desc (9165160845303755321) -->
+    <skip />
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Poista käytöstä"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Haluatko poistaa tämän sovelluksen käytöstä?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Ota käyttöön"</string>
@@ -527,8 +528,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Käytetty tallennustila"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> käytössä kohteessa <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Tyhjennä tiedot"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Kaikki sovelluksen tiedot poistetaan pysyvästi."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Tämä sisältää kaikki tiedostot, asetukset, tilit, tietokannat jne."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Kaikki tämän sovelluksen tiedot poistetaan pysyvästi.\n Tähän sisältyvät kaikki tiedostot, asetukset, tilit, tietokannat jne."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Tyhjennä oletukset"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Käsittele tapahtumia tällä sovelluksella"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Oletuksia ei ole asetettu"</string>
@@ -543,7 +543,7 @@
     <string name="device_daydreams_select" msgid="3691552535056569158">"Lepotila"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Aloita nyt"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"Lepotilaan siirtyminen"</string>
-    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"Unelmointi alkaa, kun laite on ollut tietyn aikaa käyttämättä. Jos unelmaa ei ole valittuna, näyttö sammuu."</string>
+    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"Lepotila käynnistyy, kun laite on ollut tietyn aikaa käyttämättä. Jos lepotilaa ei ole valittuna, näyttö sammuu."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Kun laite on käyttämättä <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Virransäästötilaan siirtyminen"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Näyttö sammuu tämän ajan kuluttua, jos laitetta ei käytetä."</string>

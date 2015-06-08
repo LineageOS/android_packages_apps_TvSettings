@@ -221,12 +221,9 @@
     <string name="storage_format" msgid="3759273736493279595">"Izbris in formatiranje"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatiranje kot prenosna shramba"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Ni povezave"</string>
-    <!-- no translation found for storage_device_storage_section (7797805634316822741) -->
-    <skip />
-    <!-- no translation found for storage_removable_storage_section (3264955106565590076) -->
-    <skip />
-    <!-- no translation found for storage_reset_section (7324235036547192861) -->
-    <skip />
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Shramba naprave"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Izmenljiva shramba"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Ponastavitev"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"Vpeto: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"Tega ni bilo mogoče vpeti: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"To je varno izvrženo: <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -530,6 +527,10 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Če boste aplikacijo prisilno ustavili, morda ne bo pravilno delovala."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Odstrani"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Ali želite odstraniti to aplikacijo?"</string>
+    <!-- no translation found for device_apps_app_management_uninstall_updates (5151008748970915803) -->
+    <skip />
+    <!-- no translation found for device_apps_app_management_uninstall_updates_desc (9165160845303755321) -->
+    <skip />
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Onemogoči"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Želite onemogočiti to aplikacijo?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Omogoči"</string>
@@ -537,8 +538,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Uporabljena shramba"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Uporabljeno: <xliff:g id="SIZE">%1$s</xliff:g> – <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Počisti podatke"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Vsi podatki te aplikacije bodo trajno izbrisani."</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"To vključuje vse datoteke, nastavitve, račune, zbirke podatkov ipd."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Vsi podatki te aplikacije bodo trajno izbrisani.\nTo vključuje vse datoteke, nastavitve, račune, podatkovne zbirke ipd."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Izbris privzetih nastavitev"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Zagon te aplikacije za nekatera dejanja"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Ni privzetih nastavitev"</string>
@@ -554,7 +554,7 @@
     <string name="device_daydreams_test" msgid="9038920213402659591">"Začni zdaj"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"Kdaj sanjariti"</string>
     <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"Sanjarjenje se začne po tem obdobju nedejavnosti. Če sanjarjenje ni izbrano, se zaslon izklopi."</string>
-    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Po <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> nedejavnosti"</string>
+    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Po toliko nedejavnosti <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Čas za preklop v stanje pripravljenosti"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Po tem obdobju nedejavnosti se zaslon izklopi."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Trenutno niso v nobenem računu shranjeni varnostno kopirani podatki"</string>
