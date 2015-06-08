@@ -18,71 +18,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:focusable="true"
-    android:minHeight="@dimen/lb_dialog_list_item_min_height"
-    android:paddingBottom="@dimen/lb_dialog_list_item_vertical_padding"
-    android:paddingStart="@dimen/lb_dialog_list_item_start_padding"
-    android:paddingEnd="@dimen/lb_dialog_list_item_end_padding"
-    android:paddingTop="@dimen/lb_dialog_list_item_vertical_padding" >
+    android:focusable="false"
+    android:minHeight="@dimen/lb_dialog_list_item_min_height_small"
+    android:orientation="vertical" >
 
-    <ImageView
-        android:id="@+id/action_checkmark"
-        android:layout_width="@dimen/lb_dialog_list_item_checkmark_diameter"
-        android:layout_height="@dimen/lb_dialog_list_item_checkmark_diameter"
-        android:layout_gravity="center"
-        android:layout_marginEnd="@dimen/lb_dialog_list_item_delimiter_padding"
-        android:scaleType="center"
-        android:src="@drawable/lb_dialog_list_item_checkmark"
-        android:visibility="invisible"
-        tools:ignore="ContentDescription" />
+    <View
+        android:id="@+id/static_hairline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lb_dialog_list_item_divider_color"/>
 
-    <ImageView
-        android:id="@+id/action_icon"
-        android:layout_width="@dimen/lb_dialog_list_item_icon_width"
-        android:layout_height="@dimen/lb_dialog_list_item_icon_height"
-        android:layout_gravity="center"
-        android:layout_marginEnd="@dimen/lb_dialog_list_item_delimiter_padding"
-        android:scaleType="fitCenter"
-        android:visibility="gone"
-        tools:ignore="ContentDescription" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-    <LinearLayout
-        android:id="@+id/action_content"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/action_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="start|center_vertical"
-        android:layout_weight="1"
-        android:orientation="vertical" >
+        android:layout_marginStart="@dimen/lb_dialog_list_item_full_start_padding"
+        android:layout_marginEnd="@dimen/lb_dialog_list_item_full_end_padding"
+        android:alpha="@string/lb_dialog_list_item_unselected_text_alpha"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="@integer/lb_dialog_action_title_min_lines"
+        android:textColor="@color/lb_dialog_list_item_unselected_text_color"
+        android:textSize="@dimen/lb_dialog_list_item_description_font_size" />
 
-        <TextView
-            android:id="@+id/action_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:alpha="@string/lb_dialog_list_item_unselected_text_alpha"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-light"
-            android:maxLines="@integer/lb_dialog_action_title_min_lines"
-            android:textColor="@color/lb_dialog_list_item_unselected_text_color"
-            android:textSize="@dimen/lb_dialog_list_item_description_font_size" />
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="6dp"
-            android:alpha="@string/lb_dialog_list_item_unselected_text_alpha"
-            android:background="@color/lb_dialog_list_item_unselected_text_color"/>
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/action_next_chevron"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="@dimen/lb_dialog_list_item_delimiter_padding"
-        android:scaleType="fitCenter"
-        android:src="@drawable/lb_ic_list_chevron"
-        android:visibility="gone"
-        tools:ignore="ContentDescription" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>
