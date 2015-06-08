@@ -30,12 +30,14 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsConstant;
 import com.android.tv.settings.device.storage.MoveAppProgressFragment;
@@ -44,6 +46,7 @@ import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.SettingsLayoutActivity;
 
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 
 /**
  * Activity that manages an app.
@@ -105,7 +108,8 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
             getFragmentManager().popBackStack(DIALOG_BACKSTACK_TAG,
                     FragmentManager.POP_BACK_STACK_INCLUSIVE);
             // TODO: this isn't quite enough to refresh the UI
-            mApplicationsState.invalidatePackage(mPackageName);
+            final int userId = UserHandle.getUserId(mAppInfo.getUid());
+            mApplicationsState.invalidatePackage(mPackageName, userId);
             mStorageDescriptionGetter.refreshView();
 
             if (status != PackageManager.MOVE_SUCCEEDED) {
@@ -131,7 +135,8 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
         mPackageName = uri.getSchemeSpecificPart();
         mApplicationsState = ApplicationsState.getInstance(getApplication());
         mSession = mApplicationsState.newSession(this);
-        mAppInfo = new AppInfo(this, mApplicationsState.getEntry(mPackageName));
+        final int userId = UserHandle.myUserId();
+        mAppInfo = new AppInfo(this, mApplicationsState.getEntry(mPackageName, userId));
         mOpenManager = new OpenManager(this, mAppInfo);
         mForceStopManager = new ForceStopManager(this, mAppInfo);
         mUninstallManager = new UninstallManager(this, mAppInfo);
@@ -270,7 +275,8 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
         switch (requestCode) {
             case REQUEST_UNINSTALL:
                 if (resultCode == RESULT_OK) {
-                    mApplicationsState.removePackage(mPackageName);
+                    final int userId =  UserHandle.getUserId(mAppInfo.getUid());
+                    mApplicationsState.removePackage(mPackageName, userId);
                     finish();
                 }
                 break;
@@ -288,11 +294,19 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
     }
 
     @Override
-    public void onPackageListChanged() {
+    public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> apps) {
     }
 
     @Override
-    public void onRebuildComplete() {
+    public void onLauncherInfoChanged() {
+    }
+
+    @Override
+    public void onLoadEntriesCompleted() {
+    }
+
+    @Override
+    public void onPackageListChanged() {
     }
 
     @Override
@@ -312,7 +326,8 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
     @Override
     public void dataCleared(boolean succeeded) {
         if (succeeded) {
-            mApplicationsState.requestSize(mPackageName);
+            final int userId =  UserHandle.getUserId(mAppInfo.getUid());
+            mApplicationsState.requestSize(mPackageName, userId);
         } else {
             Log.w(TAG, "Failed to clear data!");
             mDataDescriptionGetter.refreshView();
@@ -327,7 +342,8 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
     @Override
     public void cacheCleared(boolean succeeded) {
         if (succeeded) {
-            mApplicationsState.requestSize(mPackageName);
+            final int userId =  UserHandle.getUserId(mAppInfo.getUid());
+            mApplicationsState.requestSize(mPackageName, userId);
         } else {
             Log.w(TAG, "Failed to clear cache!");
             mCacheDescriptionGetter.refreshView();
