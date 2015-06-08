@@ -1221,6 +1221,14 @@ public class Layout implements Parcelable {
         }
         mVisibleLayoutGetters.clear();
         addNodeListToLayoutRows(mNavigationCursor.mChildren);
+
+        // Skip past any unselectable items
+        final int rowCount = mLayoutRows.size();
+        while (mNavigationCursor.mSelectedIndex < rowCount &&
+                mLayoutRows.get(mNavigationCursor.mSelectedIndex).mViewType
+                == LayoutRow.VIEW_TYPE_STATIC) {
+            mNavigationCursor.mSelectedIndex++;
+        }
     }
 
     private static String indent(int level) {
