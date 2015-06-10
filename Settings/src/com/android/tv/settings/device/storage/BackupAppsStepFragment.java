@@ -21,6 +21,7 @@ import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
@@ -32,7 +33,7 @@ import android.util.ArrayMap;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.apps.AppInfo;
-import com.android.tv.settings.device.apps.ApplicationsState;
+import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -120,7 +121,8 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
 
         final List<GuidedAction> actions = new ArrayList<>(infos.size());
         for (final ApplicationInfo info : infos) {
-            final ApplicationsState.AppEntry entry = mApplicationsState.getEntry(info.packageName);
+            final ApplicationsState.AppEntry entry =
+                    mApplicationsState.getEntry(info.packageName,  UserHandle.getUserId(info.uid));
             final VolumeInfo installedVolume = mPackageManager.getPackageCurrentVolume(info);
 
             if (entry == null || installedVolume == null ||
@@ -159,7 +161,7 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
         final int actionId = (int) action.getId();
         final ApplicationInfo info = mInfos.get(actionId);
         final AppInfo appInfo = new AppInfo(getActivity(), mApplicationsState.getEntry(
-                info.packageName));
+                info.packageName,  UserHandle.getUserId(info.uid)));
 
         final MoveAppStepFragment fragment = MoveAppStepFragment.newInstance(info.packageName,
                 appInfo.getName());
@@ -178,8 +180,18 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
     }
 
     @Override
-    public void onRebuildComplete() {
-        updateActions();
+    public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> apps) {
+
+    }
+
+    @Override
+    public void onLauncherInfoChanged() {
+
+    }
+
+    @Override
+    public void onLoadEntriesCompleted() {
+
     }
 
     @Override

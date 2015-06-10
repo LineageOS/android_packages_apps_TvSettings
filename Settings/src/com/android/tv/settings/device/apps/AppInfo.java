@@ -20,6 +20,8 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.text.format.Formatter;
 
+import com.android.settingslib.applications.ApplicationsState;
+
 /**
  * Contains all the info necessary to manage an application.
  */
