@@ -37,8 +37,8 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.TimeZone;
 
 public class DateTimeActivity extends SettingsLayoutActivity {
@@ -145,7 +145,7 @@ public class DateTimeActivity extends SettingsLayoutActivity {
     private Layout.SelectionGroup mTimezoneSelector;
     private Layout.SelectionGroup mTimeFormatSelector;
 
-    private List<HashMap<String, Object>> mTimeZones;
+    private List<Map<String, Object>> mTimeZones;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -162,8 +162,7 @@ public class DateTimeActivity extends SettingsLayoutActivity {
                 ACTION_AUTO_TIME_ON : ACTION_AUTO_TIME_OFF);
 
         // Time zone
-        final ZoneGetter zoneGetter = new ZoneGetter();
-        mTimeZones = zoneGetter.getZones(this);
+        mTimeZones = ZoneGetter.getZonesList(this);
         // Sort the Time Zones list in ascending offset order
         Collections.sort(mTimeZones, new MyComparator(ZoneGetter.KEY_OFFSET));
         final TimeZone currentTz = TimeZone.getDefault();
@@ -173,7 +172,7 @@ public class DateTimeActivity extends SettingsLayoutActivity {
 
         int i = ACTION_SET_TIMEZONE_BASE;
         int currentTzActionId = -1;
-        for (final HashMap<String, Object> tz : mTimeZones) {
+        for (final Map<String, Object> tz : mTimeZones) {
             if (currentTz.getID().equals(tz.get(ZoneGetter.KEY_ID))) {
                 currentTzActionId = i;
             }
@@ -365,7 +364,7 @@ public class DateTimeActivity extends SettingsLayoutActivity {
         setSampleDate();
     }
 
-    private static class MyComparator implements Comparator<HashMap<?, ?>> {
+    private static class MyComparator implements Comparator<Map<?, ?>> {
         private String mSortingKey;
 
         public MyComparator(String sortingKey) {
@@ -376,7 +375,7 @@ public class DateTimeActivity extends SettingsLayoutActivity {
             mSortingKey = sortingKey;
         }
 
-        public int compare(HashMap<?, ?> map1, HashMap<?, ?> map2) {
+        public int compare(Map<?, ?> map1, Map<?, ?> map2) {
             Object value1 = map1.get(mSortingKey);
             Object value2 = map2.get(mSortingKey);
 
