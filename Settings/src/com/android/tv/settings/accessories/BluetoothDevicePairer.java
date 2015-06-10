@@ -279,6 +279,7 @@ public class BluetoothDevicePairer {
     private boolean mLinkReceiverRegistered = false;
     private final ArrayList<BluetoothDeviceCriteria> mBluetoothDeviceCriteria = new
         ArrayList<BluetoothDeviceCriteria>();
+    private InputDeviceCriteria mInputDeviceCriteria;
 
     /**
      * Should be instantiated on a thread with a Looper, perhaps the main thread!
@@ -308,7 +309,8 @@ public class BluetoothDevicePairer {
 
     private void addBluetoothDeviceCriteria() {
         // Input is supported by all devices.
-        mBluetoothDeviceCriteria.add(new InputDeviceCriteria());
+        mInputDeviceCriteria = new InputDeviceCriteria();
+        mBluetoothDeviceCriteria.add(mInputDeviceCriteria);
 
         // Add Bluetooth a2dp on if the service is running and the
         // setting profile_supported_a2dp is set to true.
@@ -494,8 +496,9 @@ public class BluetoothDevicePairer {
 
     private void updatePairingState() {
         if (mAutoMode) {
-            if (isReadyToAutoPair()) {
-                mTarget = mVisibleDevices.get(0);
+            BluetoothDevice candidate = getAutoPairDevice();
+            if (null != candidate) {
+                mTarget = candidate;
                 startPairing(mTarget, DELAY_AUTO_PAIRING, false);
             } else {
                 doCancel();
@@ -507,10 +510,24 @@ public class BluetoothDevicePairer {
      * @return {@code true} If there is only one visible input device.
      */
     private boolean isReadyToAutoPair() {
-        // we imagine that the conditions under which we decide to pair or
-        // not may one day become more complicated, which is why this length
-        // check is wrapped in a method call.
-        return mVisibleDevices.size() == 1;
+        BluetoothDevice device = getAutoPairDevice();
+        return null != device;
+    }
+
+    /**
+     * @return returns the only visible input device if there is only one
+     */
+    private BluetoothDevice getAutoPairDevice() {
+        List<BluetoothDevice> inputDevices = new ArrayList<>();
+        for (BluetoothDevice device : mVisibleDevices) {
+            if (mInputDeviceCriteria.isInputDevice(device.getBluetoothClass())) {
+                inputDevices.add(device);
+            }
+        }
+        if (inputDevices.size() == 1) {
+            return inputDevices.get(0);
+        }
+        return null;
     }
 
     private void doCancel() {
