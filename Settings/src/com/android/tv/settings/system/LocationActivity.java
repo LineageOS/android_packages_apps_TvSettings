@@ -45,8 +45,8 @@ public class LocationActivity extends SettingsLayoutActivity {
 
     private static final int RECENT_TIME_INTERVAL_MILLIS = 15 * 60 * 1000;
 
-    private final Layout.LayoutGetter mLocationOptionsLayoutGetter =
-            new LocationOptionsLayoutGetter();
+    private final Layout.LayoutGetter mRecentRequestsLayoutGetter =
+            new RecentRequestsLayoutGetter();
 
     @Override
     public Layout createLayout() {
@@ -61,26 +61,21 @@ public class LocationActivity extends SettingsLayoutActivity {
                                 .title(R.string.location_status)
                                 .build()
                                 .setSelectionGroup(new Layout.SelectionGroup.Builder(2)
-                                        .add(getString(R.string.on), null, ACTION_LOCATION_ON)
+                                        .add(getString(R.string.location_mode_wifi_description),
+                                                null, ACTION_LOCATION_ON)
                                         .add(getString(R.string.off), null, ACTION_LOCATION_OFF)
                                         .select(isLocationEnabled() ?
                                                 ACTION_LOCATION_ON : ACTION_LOCATION_OFF)
                                         .build()))
-                        .add(mLocationOptionsLayoutGetter));
+                        .add(mRecentRequestsLayoutGetter));
     }
 
-    private class LocationOptionsLayoutGetter extends Layout.LayoutGetter {
+    private class RecentRequestsLayoutGetter extends Layout.LayoutGetter {
 
         @Override
         public Layout get() {
             if (isLocationEnabled()) {
-                final Resources res = getResources();
                 return new Layout()
-                        .add(new Layout.Status.Builder(res)
-                                .title(R.string.location_status)
-                                .description(R.string.location_mode_wifi_description)
-                                .enabled(false)
-                                .build())
                         .add(getRecentRequestHeader());
             } else {
                 return new Layout();
