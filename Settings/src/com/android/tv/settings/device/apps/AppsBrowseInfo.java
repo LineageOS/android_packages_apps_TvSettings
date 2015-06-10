@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.device.apps;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
@@ -24,6 +25,7 @@ import android.support.v17.leanback.widget.ArrayObjectAdapter;
 import android.support.v17.leanback.widget.HeaderItem;
 import android.util.Log;
 
+import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.BrowseInfoBase;
 import com.android.tv.settings.MenuItem;
 import com.android.tv.settings.R;
@@ -57,10 +59,10 @@ public class AppsBrowseInfo extends BrowseInfoBase implements ApplicationsState.
         }
     }
 
-    AppsBrowseInfo(Context context) {
+    AppsBrowseInfo(Activity context) {
         mContext = context;
         mAppItemIdList = new HashMap<>();
-        mApplicationsState = ApplicationsState.getInstance(context.getApplicationContext());
+        mApplicationsState = ApplicationsState.getInstance(context.getApplication());
         mSession = mApplicationsState.newSession(this);
         mNextItemId = 0;
         mRows.put(SYSTEM_ID, new ArrayObjectAdapter());
@@ -83,6 +85,14 @@ public class AppsBrowseInfo extends BrowseInfoBase implements ApplicationsState.
     }
 
     @Override
+    public void onLauncherInfoChanged() {
+    }
+
+    @Override
+    public void onLoadEntriesCompleted() {
+    }
+
+    @Override
     public void onPackageListChanged() {
         updateAppList();
     }
@@ -101,52 +111,50 @@ public class AppsBrowseInfo extends BrowseInfoBase implements ApplicationsState.
     }
 
     @Override
-    public void onRebuildComplete() {
+    public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> apps) {
     }
 
     private void updateAppList() {
-        synchronized (mApplicationsState.mEntriesMap) {
-            ArrayList<ApplicationsState.AppEntry> appEntries = mApplicationsState.mAppEntries;
-            if (appEntries != null) {
-                ArrayList<AppInfo> appInfos = new ArrayList<AppInfo>(appEntries.size());
-                for (int i = 0, size = appEntries.size(); i < size; i++) {
-                    appInfos.add(new AppInfo(mContext, appEntries.get(i)));
+        ArrayList<ApplicationsState.AppEntry> appEntries = mSession.getAllApps();
+        if (appEntries != null) {
+            ArrayList<AppInfo> appInfos = new ArrayList<AppInfo>(appEntries.size());
+            for (int i = 0, size = appEntries.size(); i < size; i++) {
+                appInfos.add(new AppInfo(mContext, appEntries.get(i)));
+            }
+
+            Collections.sort(appInfos, new AppInfoComparator());
+
+            ArrayObjectAdapter systemRow = mRows.get(SYSTEM_ID);
+            ArrayObjectAdapter downloadedRow = mRows.get(DOWNLOADED_ID);
+            ArrayObjectAdapter runningRow = mRows.get(RUNNING_ID);
+            systemRow.clear();
+            downloadedRow.clear();
+            runningRow.clear();
+            for (int i = 0, size = appInfos.size(); i < size; i++) {
+                AppInfo info = appInfos.get(i);
+                String packageName = info.getPackageName();
+                Integer itemId = mAppItemIdList.get(packageName);
+                if (itemId == null) {
+                    itemId = mNextItemId++;
+                    mAppItemIdList.put(packageName, itemId);
                 }
 
-                Collections.sort(appInfos, new AppInfoComparator());
+                MenuItem menuItem = new MenuItem.Builder()
+                        .id(itemId)
+                        .title(info.getName())
+                        .description(info.getSize())
+                        .imageUri(getAppIconUri(mContext, info))
+                        .intent(AppManagementActivity.getLaunchIntent(info.getPackageName()))
+                        .build();
 
-                ArrayObjectAdapter systemRow = mRows.get(SYSTEM_ID);
-                ArrayObjectAdapter downloadedRow = mRows.get(DOWNLOADED_ID);
-                ArrayObjectAdapter runningRow = mRows.get(RUNNING_ID);
-                systemRow.clear();
-                downloadedRow.clear();
-                runningRow.clear();
-                for (int i = 0, size = appInfos.size(); i < size; i++) {
-                    AppInfo info = appInfos.get(i);
-                    String packageName = info.getPackageName();
-                    Integer itemId = mAppItemIdList.get(packageName);
-                    if (itemId == null) {
-                        itemId = mNextItemId++;
-                        mAppItemIdList.put(packageName, itemId);
-                    }
+                if (info.isSystemApp()) {
+                    systemRow.add(menuItem);
+                } else {
+                    downloadedRow.add(menuItem);
+                }
 
-                    MenuItem menuItem = new MenuItem.Builder()
-                            .id(itemId)
-                            .title(info.getName())
-                            .description(info.getSize())
-                            .imageUri(getAppIconUri(mContext, info))
-                            .intent(AppManagementActivity.getLaunchIntent(info.getPackageName()))
-                            .build();
-
-                    if (info.isSystemApp()) {
-                        systemRow.add(menuItem);
-                    } else {
-                        downloadedRow.add(menuItem);
-                    }
-
-                    if (!info.isStopped()) {
-                        runningRow.add(menuItem);
-                    }
+                if (!info.isStopped()) {
+                    runningRow.add(menuItem);
                 }
             }
         }
