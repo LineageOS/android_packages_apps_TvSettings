@@ -25,6 +25,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.UserHandle;
 
+import com.android.settingslib.applications.ApplicationsState;
+
 /**
  * Handles force stopping an application.
  */
@@ -48,8 +50,9 @@ class ForceStopManager {
     void forceStop(ApplicationsState state) {
         ActivityManager am = (ActivityManager) mContext.getSystemService(Context.ACTIVITY_SERVICE);
         am.forceStopPackage(mAppInfo.getPackageName());
-        state.invalidatePackage(mAppInfo.getPackageName());
-        ApplicationsState.AppEntry newEnt = state.getEntry(mAppInfo.getPackageName());
+        final int userId = UserHandle.getUserId(mAppInfo.getUid());
+        state.invalidatePackage(mAppInfo.getPackageName(), userId);
+        ApplicationsState.AppEntry newEnt = state.getEntry(mAppInfo.getPackageName(), userId);
         if (newEnt != null) {
             mAppInfo.setEntry(newEnt);
         }
