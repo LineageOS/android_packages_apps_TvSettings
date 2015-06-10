@@ -46,4 +46,9 @@ public class InputDeviceCriteria extends BluetoothDeviceCriteria {
 
         return (acceptableDevicesMask & majorMinorClass) != 0;
     }
+
+    public boolean isInputDevice(BluetoothClass bluetoothClass) {
+        return isMatchingMajorDeviceClass(bluetoothClass.getMajorDeviceClass()) &&
+                isMatchingDeviceClass(bluetoothClass.getDeviceClass());
+    }
 }
