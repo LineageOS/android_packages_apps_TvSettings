@@ -51,6 +51,7 @@ import com.android.settingslib.deviceinfo.StorageMeasurement.MeasurementReceiver
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.apps.AppsActivity;
 import com.android.tv.settings.device.storage.EjectInternalStepFragment;
+import com.android.tv.settings.device.storage.ForgetPrivateStepFragment;
 import com.android.tv.settings.device.storage.FormatAsPrivateStepFragment;
 import com.android.tv.settings.device.storage.FormatAsPublicStepFragment;
 import com.android.tv.settings.device.storage.FormattingProgressFragment;
@@ -77,7 +78,8 @@ import java.util.Map;
  * Activity to view storage consumption and factory reset device.
  */
 public class StorageResetActivity extends SettingsLayoutActivity
-        implements MoveAppStepFragment.Callback, FormatAsPrivateStepFragment.Callback {
+        implements MoveAppStepFragment.Callback, FormatAsPrivateStepFragment.Callback,
+        ForgetPrivateStepFragment.Callback {
 
     private static final String TAG = "StorageResetActivity";
     private static final long INVALID_SIZE = -1;
@@ -88,6 +90,7 @@ public class StorageResetActivity extends SettingsLayoutActivity
     private static final int ACTION_EJECT_PUBLIC = 5;
     private static final int ACTION_ERASE_PRIVATE = 6;
     private static final int ACTION_ERASE_PUBLIC = 7;
+    private static final int ACTION_FORGET = 8;
 
     /**
      * Support for shutdown-after-reset. If our launch intent has a true value for
@@ -99,6 +102,7 @@ public class StorageResetActivity extends SettingsLayoutActivity
 
     private static final String MOVE_PROGRESS_DIALOG_BACKSTACK_TAG = "moveProgressDialog";
     private static final String FORMAT_DIALOG_BACKSTACK_TAG = "formatDialog";
+    private static final String FORGET_DIALOG_BACKSTACK_TAG = "forgetDialog";
 
     private static final String SAVE_STATE_MOVE_ID = "StorageResetActivity.moveId";
     private static final String SAVE_STATE_FORMAT_PRIVATE_DISK_ID =
@@ -347,9 +351,6 @@ public class StorageResetActivity extends SettingsLayoutActivity
             final Resources res = getResources();
             final Layout layout = new Layout();
 
-            final Bundle data = new Bundle(1);
-            data.putString(VolumeInfo.EXTRA_VOLUME_ID, mVolumeId);
-
             final VolumeInfo volume = mStorageManager.findVolumeById(mVolumeId);
 
             if (volume == null) {
@@ -358,69 +359,17 @@ public class StorageResetActivity extends SettingsLayoutActivity
                                 .title(R.string.storage_not_connected)
                                 .build());
             } else if (volume.getType() == VolumeInfo.TYPE_PRIVATE) {
-                final String volumeUuid = volume.getFsUuid();
-                final String volumeDescription = mStorageManager.getBestVolumeDescription(volume);
-
-                if (!VolumeInfo.ID_PRIVATE_INTERNAL.equals(mVolumeId)) {
-                    layout
-                            .add(new Action.Builder(res, ACTION_EJECT_PRIVATE)
-                                    .title(R.string.storage_eject)
-                                    .data(data)
-                                    .build())
-                            .add(new Action.Builder(res, ACTION_ERASE_PRIVATE)
-                                    .title(R.string.storage_format)
-                                    .data(data)
-                                    .build());
-                }
-                layout
-                        .add(new Action.Builder(res,
-                                new Intent(StorageResetActivity.this, AppsActivity.class)
-                                        .putExtra(AppsActivity.EXTRA_VOLUME_UUID, volumeUuid)
-                                        .putExtra(AppsActivity.EXTRA_VOLUME_NAME,
-                                                volumeDescription))
-                                .title(R.string.storage_apps_usage)
-                                .icon(R.drawable.storage_indicator_apps)
-                                .description(mAppsSize)
-                                .build())
-                        .add(new Status.Builder(res)
-                                .title(R.string.storage_dcim_usage)
-                                .icon(R.drawable.storage_indicator_dcim)
-                                .description(mDcimSize)
-                                .build())
-                        .add(new Status.Builder(res)
-                                .title(R.string.storage_music_usage)
-                                .icon(R.drawable.storage_indicator_music)
-                                .description(mMusicSize)
-                                .build())
-                        .add(new Status.Builder(res)
-                                .title(R.string.storage_downloads_usage)
-                                .icon(R.drawable.storage_indicator_downloads)
-                                .description(mDownloadsSize)
-                                .build())
-                        .add(new Action.Builder(res, ACTION_CLEAR_CACHE)
-                                .title(R.string.storage_media_cache_usage)
-                                .icon(R.drawable.storage_indicator_cache)
-                                .description(mCacheSize)
-                                .build())
-                        .add(new Status.Builder(res)
-                                .title(R.string.storage_media_misc_usage)
-                                .icon(R.drawable.storage_indicator_misc)
-                                .description(mMiscSize)
-                                .build())
-                        .add(new Status.Builder(res)
-                                .title(R.string.storage_available)
-                                .icon(R.drawable.storage_indicator_available)
-                                .description(mAvailSize)
-                                .build());
-            } else {
-                final String volumeDescription = mStorageManager.getBestVolumeDescription(volume);
                 if (volume.getState() == VolumeInfo.STATE_UNMOUNTED) {
-                    layout
-                            .add(new Status.Builder(res)
-                                    .title(getString(R.string.storage_unmount_success,
-                                            volumeDescription))
-                                    .build());
+                    addPrivateMissingHeaders(layout, volume);
                 } else {
+                    addPrivateStorageHeaders(layout, volume);
+                }
+            } else {
+                if (volume.getState() == VolumeInfo.STATE_UNMOUNTED) {
+                    addPublicUnmountedHeaders(layout, volume);
+                } else {
+                    final Bundle data = new Bundle(1);
+                    data.putString(VolumeInfo.EXTRA_VOLUME_ID, mVolumeId);
                     layout
                             .add(new Action.Builder(res, ACTION_EJECT_PUBLIC)
                                     .title(R.string.storage_eject)
@@ -443,6 +392,96 @@ public class StorageResetActivity extends SettingsLayoutActivity
                 }
             }
             return layout;
+        }
+
+        private void addPublicUnmountedHeaders(Layout layout, VolumeInfo volume) {
+            final Resources res = getResources();
+            final String volumeDescription = mStorageManager.getBestVolumeDescription(volume);
+
+            layout
+                    .add(new Status.Builder(res)
+                            .title(getString(R.string.storage_unmount_success,
+                                    volumeDescription))
+                            .enabled(false)
+                            .build());
+        }
+
+        private void addPrivateMissingHeaders(Layout layout, VolumeInfo volume) {
+            final Resources res = getResources();
+            final Bundle data = new Bundle(1);
+            data.putString(VolumeInfo.EXTRA_VOLUME_ID, mVolumeId);
+            final String volumeDescription = mStorageManager.getBestVolumeDescription(volume);
+
+            layout
+                    .add(new Layout.WallOfText.Builder(res)
+                            .title(getString(R.string.storage_forget_wall_of_text,
+                                    volumeDescription))
+                            .build())
+                    .add(new Action.Builder(res, ACTION_FORGET)
+                            .title(getString(R.string.storage_forget))
+                            .data(data)
+                            .build());
+        }
+
+        private void addPrivateStorageHeaders(Layout layout, VolumeInfo volume) {
+            final Resources res = getResources();
+            final Bundle data = new Bundle(1);
+            data.putString(VolumeInfo.EXTRA_VOLUME_ID, mVolumeId);
+
+            final String volumeUuid = volume.getFsUuid();
+            final String volumeDescription = mStorageManager.getBestVolumeDescription(volume);
+
+            if (!VolumeInfo.ID_PRIVATE_INTERNAL.equals(mVolumeId)) {
+                layout
+                        .add(new Action.Builder(res, ACTION_EJECT_PRIVATE)
+                                .title(R.string.storage_eject)
+                                .data(data)
+                                .build())
+                        .add(new Action.Builder(res, ACTION_ERASE_PRIVATE)
+                                .title(R.string.storage_format)
+                                .data(data)
+                                .build());
+            }
+            layout
+                    .add(new Action.Builder(res,
+                            new Intent(StorageResetActivity.this, AppsActivity.class)
+                                    .putExtra(AppsActivity.EXTRA_VOLUME_UUID, volumeUuid)
+                                    .putExtra(AppsActivity.EXTRA_VOLUME_NAME,
+                                            volumeDescription))
+                            .title(R.string.storage_apps_usage)
+                            .icon(R.drawable.storage_indicator_apps)
+                            .description(mAppsSize)
+                            .build())
+                    .add(new Status.Builder(res)
+                            .title(R.string.storage_dcim_usage)
+                            .icon(R.drawable.storage_indicator_dcim)
+                            .description(mDcimSize)
+                            .build())
+                    .add(new Status.Builder(res)
+                            .title(R.string.storage_music_usage)
+                            .icon(R.drawable.storage_indicator_music)
+                            .description(mMusicSize)
+                            .build())
+                    .add(new Status.Builder(res)
+                            .title(R.string.storage_downloads_usage)
+                            .icon(R.drawable.storage_indicator_downloads)
+                            .description(mDownloadsSize)
+                            .build())
+                    .add(new Action.Builder(res, ACTION_CLEAR_CACHE)
+                            .title(R.string.storage_media_cache_usage)
+                            .icon(R.drawable.storage_indicator_cache)
+                            .description(mCacheSize)
+                            .build())
+                    .add(new Status.Builder(res)
+                            .title(R.string.storage_media_misc_usage)
+                            .icon(R.drawable.storage_indicator_misc)
+                            .description(mMiscSize)
+                            .build())
+                    .add(new Status.Builder(res)
+                            .title(R.string.storage_available)
+                            .icon(R.drawable.storage_indicator_available)
+                            .description(mAvailSize)
+                            .build());
         }
 
         public void onVolumeUpdated() {
@@ -568,6 +607,15 @@ public class StorageResetActivity extends SettingsLayoutActivity
                         .addToBackStack(FORMAT_DIALOG_BACKSTACK_TAG)
                         .commit();
             }
+                break;
+            case ACTION_FORGET:
+                final Fragment f =
+                        ForgetPrivateStepFragment.newInstance(mStorageManager.findVolumeById(
+                                action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID)));
+                getFragmentManager().beginTransaction()
+                        .replace(android.R.id.content, f)
+                        .addToBackStack(FORGET_DIALOG_BACKSTACK_TAG)
+                        .commit();
                 break;
             default:
                 final Intent intent = action.getIntent();
@@ -912,6 +960,21 @@ public class StorageResetActivity extends SettingsLayoutActivity
     @Override
     public void onCancelFormatDialog() {
         getFragmentManager().popBackStack(FORMAT_DIALOG_BACKSTACK_TAG,
+                FragmentManager.POP_BACK_STACK_INCLUSIVE);
+    }
+
+    @Override
+    public void onRequestForget(VolumeInfo volumeInfo) {
+        if (volumeInfo != null) {
+            mStorageManager.forgetVolume(volumeInfo.getFsUuid());
+        }
+        getFragmentManager().popBackStack(FORGET_DIALOG_BACKSTACK_TAG,
+                FragmentManager.POP_BACK_STACK_INCLUSIVE);
+    }
+
+    @Override
+    public void onCancelForgetDialog() {
+        getFragmentManager().popBackStack(FORGET_DIALOG_BACKSTACK_TAG,
                 FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
 }

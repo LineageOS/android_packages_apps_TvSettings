@@ -65,7 +65,7 @@ class SettingsLayoutAdapter extends RecyclerView.Adapter {
         /**
          * Called when the user clicks on an action.
          */
-        public void onRowClicked(Layout.LayoutRow item);
+        void onRowClicked(Layout.LayoutRow item);
     }
 
     public interface OnFocusListener {
@@ -73,7 +73,7 @@ class SettingsLayoutAdapter extends RecyclerView.Adapter {
         /**
          * Called when the user focuses on an action.
          */
-        public void onActionFocused(Layout.LayoutRow item);
+        void onActionFocused(Layout.LayoutRow item);
     }
 
     private final ActionOnKeyPressAnimator mActionOnKeyPressAnimator;
@@ -124,7 +124,7 @@ class SettingsLayoutAdapter extends RecyclerView.Adapter {
             mInflater = (LayoutInflater) parent.getContext().getSystemService(
                     Context.LAYOUT_INFLATER_SERVICE);
         }
-        View v = null;
+        final View v;
         switch (viewType) {
             case Layout.LayoutRow.VIEW_TYPE_ACTION:
                 v = mInflater.inflate(R.layout.lb_dialog_action_list_item, parent, false);
@@ -132,6 +132,11 @@ class SettingsLayoutAdapter extends RecyclerView.Adapter {
             case Layout.LayoutRow.VIEW_TYPE_STATIC:
                 v = mInflater.inflate(R.layout.lb_dialog_static_list_item, parent, false);
                 break;
+            case Layout.LayoutRow.VIEW_TYPE_WALLOFTEXT:
+                v = mInflater.inflate(R.layout.lb_dialog_walloftext_list_item, parent, false);
+                break;
+            default:
+                throw new IllegalStateException("View type not found: " + viewType);
         }
         v.setTag(R.layout.lb_dialog_action_list_item, parent);
         LayoutRowViewHolder viewHolder = new LayoutRowViewHolder(v, mActionOnKeyPressAnimator,
@@ -281,21 +286,6 @@ class SettingsLayoutAdapter extends RecyclerView.Adapter {
 
             if (mChevronView != null) {
                 mChevronView.setVisibility(layoutRow.hasNext() ? View.VISIBLE : View.INVISIBLE);
-            }
-
-            final Resources res = itemView.getContext().getResources();
-            if (layoutRow.hasMultilineDescription()) {
-                mTitle.setMaxLines(res.getInteger(R.integer.lb_dialog_action_title_max_lines));
-                if (mViewType == Layout.LayoutRow.VIEW_TYPE_ACTION) {
-                    mDescription.setMaxHeight(
-                            getDescriptionMaxHeight(itemView.getContext(), mTitle));
-                }
-            } else {
-                mTitle.setMaxLines(res.getInteger(R.integer.lb_dialog_action_title_min_lines));
-                if (mViewType == Layout.LayoutRow.VIEW_TYPE_ACTION) {
-                    mDescription.setMaxLines(
-                            res.getInteger(R.integer.lb_dialog_action_description_min_lines));
-                }
             }
 
             mActionOnFocusAnimator.unFocus(itemView);

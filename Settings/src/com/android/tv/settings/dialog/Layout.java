@@ -72,6 +72,7 @@ public class Layout implements Parcelable {
         public static final int NO_CHECK_SET = 0;
         public static final int VIEW_TYPE_ACTION = 0;
         public static final int VIEW_TYPE_STATIC = 1;
+        public static final int VIEW_TYPE_WALLOFTEXT = 2;
 
         private String mTitle;
         private StringGetter mDescription;
@@ -119,10 +120,6 @@ public class Layout implements Parcelable {
         }
 
         public boolean hasNext() {
-            return false;
-        }
-
-        public boolean hasMultilineDescription() {
             return false;
         }
 
@@ -182,6 +179,9 @@ public class Layout implements Parcelable {
             if (node instanceof Static) {
                 mViewType = VIEW_TYPE_STATIC;
                 mTitle = ((Static) node).mTitle;
+            } else if (node instanceof WallOfText) {
+                mViewType = VIEW_TYPE_WALLOFTEXT;
+                mTitle = ((WallOfText) node).mTitle;
             } else {
                 mViewType = VIEW_TYPE_ACTION;
             }
@@ -992,6 +992,48 @@ public class Layout implements Parcelable {
         }
     }
 
+    public static class WallOfText extends LayoutTreeNode {
+        private String mTitle;
+
+        public static class Builder {
+            private final Resources mRes;
+            private final WallOfText mWallOfText = new WallOfText();
+
+            public Builder(Resources res) {
+                mRes = res;
+            }
+
+            public Builder title(int resId) {
+                mWallOfText.mTitle = mRes.getString(resId);
+                return this;
+            }
+
+            public Builder title(String title) {
+                mWallOfText.mTitle = title;
+                return this;
+            }
+
+            public WallOfText build() {
+                return mWallOfText;
+            }
+        }
+
+        @Override
+        public String getTitle() {
+            return mTitle;
+        }
+
+        @Override
+        /* package */ Appearance getAppearance() {
+            return null;
+        }
+
+        @Override
+        /* package */ void Log(int level) {
+            Log.d("Layout", indent(level) + "Static  '" + mTitle + "'");
+        }
+    }
+
     /**
      * Pointer to currently visible item.
      */
@@ -1224,9 +1266,11 @@ public class Layout implements Parcelable {
 
         // Skip past any unselectable items
         final int rowCount = mLayoutRows.size();
-        while (mNavigationCursor.mSelectedIndex < rowCount &&
+        while (mNavigationCursor.mSelectedIndex < rowCount - 1 && ((
                 mLayoutRows.get(mNavigationCursor.mSelectedIndex).mViewType
-                == LayoutRow.VIEW_TYPE_STATIC) {
+                        == LayoutRow.VIEW_TYPE_STATIC) ||
+                (mLayoutRows.get(mNavigationCursor.mSelectedIndex).mViewType
+                        == LayoutRow.VIEW_TYPE_WALLOFTEXT))) {
             mNavigationCursor.mSelectedIndex++;
         }
     }
