@@ -17,7 +17,6 @@
 package com.android.tv.settings.device.storage;
 
 import android.os.Bundle;
-import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
@@ -25,29 +24,24 @@ import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.device.StorageResetActivity;
 
 import java.util.List;
 
-public class EjectInternalStepFragment extends GuidedStepFragment {
+public class UnmountInternalStepFragment extends GuidedStepFragment {
+
     private static final int ACTION_ID_CANCEL = 0;
-    private static final int ACTION_ID_EJECT = 1;
+    private static final int ACTION_ID_UNMOUNT = 1;
 
-    private StorageManager mStorageManager;
+    public interface Callback {
+        void onRequestUnmount(String volumeId);
+    }
 
-    public static EjectInternalStepFragment newInstance(VolumeInfo volumeInfo) {
-        final EjectInternalStepFragment fragment = new EjectInternalStepFragment();
+    public static UnmountInternalStepFragment newInstance(VolumeInfo volumeInfo) {
+        final UnmountInternalStepFragment fragment = new UnmountInternalStepFragment();
         final Bundle b = new Bundle(1);
         b.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeInfo.getId());
         fragment.setArguments(b);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        mStorageManager = getActivity().getSystemService(StorageManager.class);
     }
 
     @Override
@@ -65,7 +59,7 @@ public class EjectInternalStepFragment extends GuidedStepFragment {
                 .title(getString(android.R.string.cancel))
                 .build());
         actions.add(new GuidedAction.Builder()
-                .id(ACTION_ID_EJECT)
+                .id(ACTION_ID_UNMOUNT)
                 .title(getString(R.string.storage_eject))
                 .build());
     }
@@ -76,11 +70,9 @@ public class EjectInternalStepFragment extends GuidedStepFragment {
 
         if (id == ACTION_ID_CANCEL) {
             getFragmentManager().popBackStack();
-        } else if (id == ACTION_ID_EJECT) {
-            final VolumeInfo volumeInfo = mStorageManager.findVolumeById(
+        } else if (id == ACTION_ID_UNMOUNT) {
+            ((Callback) getActivity()).onRequestUnmount(
                     getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
-            new StorageResetActivity.UnmountTask(getActivity(), volumeInfo).execute();
-            getFragmentManager().popBackStack();
         }
     }
 }
