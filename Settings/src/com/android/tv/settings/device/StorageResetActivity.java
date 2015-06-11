@@ -317,7 +317,6 @@ public class StorageResetActivity extends SettingsLayoutActivity
     private class StorageLayoutGetter extends Layout.LayoutGetter {
 
         private final String mVolumeId;
-        private final String mVolumeDescription;
 
         private StorageMeasurement mMeasure;
         private final SizeStringGetter mAppsSize = new SizeStringGetter();
@@ -341,7 +340,6 @@ public class StorageResetActivity extends SettingsLayoutActivity
 
         public StorageLayoutGetter(VolumeInfo volume) {
             mVolumeId = volume.getId();
-            mVolumeDescription = mStorageManager.getBestVolumeDescription(volume);
         }
 
         @Override
@@ -360,6 +358,9 @@ public class StorageResetActivity extends SettingsLayoutActivity
                                 .title(R.string.storage_not_connected)
                                 .build());
             } else if (volume.getType() == VolumeInfo.TYPE_PRIVATE) {
+                final String volumeUuid = volume.getFsUuid();
+                final String volumeDescription = mStorageManager.getBestVolumeDescription(volume);
+
                 if (!VolumeInfo.ID_PRIVATE_INTERNAL.equals(mVolumeId)) {
                     layout
                             .add(new Action.Builder(res, ACTION_EJECT_PRIVATE)
@@ -373,7 +374,10 @@ public class StorageResetActivity extends SettingsLayoutActivity
                 }
                 layout
                         .add(new Action.Builder(res,
-                                new Intent(StorageResetActivity.this, AppsActivity.class))
+                                new Intent(StorageResetActivity.this, AppsActivity.class)
+                                        .putExtra(AppsActivity.EXTRA_VOLUME_UUID, volumeUuid)
+                                        .putExtra(AppsActivity.EXTRA_VOLUME_NAME,
+                                                volumeDescription))
                                 .title(R.string.storage_apps_usage)
                                 .icon(R.drawable.storage_indicator_apps)
                                 .description(mAppsSize)
@@ -409,11 +413,12 @@ public class StorageResetActivity extends SettingsLayoutActivity
                                 .description(mAvailSize)
                                 .build());
             } else {
+                final String volumeDescription = mStorageManager.getBestVolumeDescription(volume);
                 if (volume.getState() == VolumeInfo.STATE_UNMOUNTED) {
                     layout
                             .add(new Status.Builder(res)
                                     .title(getString(R.string.storage_unmount_success,
-                                            mVolumeDescription))
+                                            volumeDescription))
                                     .build());
                 } else {
                     layout
