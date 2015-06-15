@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"මැකීම සහ ෆෝමැට්"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"උපාංගය ආචයනයක් ලෙස ෆෝමැට් කිරීම"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"සම්බන්ධ වී නොමැත"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"මෙම අභ්‍යන්තර ගබඩාව අමතක කරන්න"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"මෙම ධාවකයේ අඩංගු යෙදුම් හෝ දත්ත භාවිත කිරීමට, එය නැවත සම්බන්ධ කරන්න. විකල්පමය වශයෙන්, ධාවකය ලබා ගත නොහැකි නම් ඔබට මෙම ගබඩාව අමතක කිරීමට තේරීමට හැකිය.\n\nඔබ අමතක කිරීමට තේරුවහොත්, උපාංගයෙහි අඩංගු සියලු දත්ත සදහටම අහිමි වනු ඇත.\n\nඔබට පසුව යෙදුම් යළි ස්ථාපනය කිරීමට හැකි නමුත්, මෙම උපාංගයෙහි ගබඩා කර ඇති දත්ත අහිමි වනු ඇත."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"උපාංග ගබඩාව"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"ඉවත් කළ හැකි ගබඩාව"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"යළි පිහිටුවන්න"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> සවි කිරීමට නොහැකි විය"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> ආරක්ෂිතව ගලවන ලදි"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> ආරක්ෂිතව ගැලවීමට නොහැකි විය"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"ඉවත් කිරීමට ධාවකය සොයා ගැනීමට නොහැකි විය"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> ෆෝමැට් කරන ලදි"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> ෆෝමැට් කිරීමට නොහැකි විය"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"අභ්‍යන්තර ගබඩාව ලෙස ෆෝමැට් කරන්න"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> ලබා ගත හැකිය"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"අභ්‍යන්තර ගබඩාව පිටතට ගන්න"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"උපාංග ගබඩාව පිටතට ගත් විට එය ක්‍රියා කිරීම නතර වනු ඇත. මෙම USB ධාවකය මෙම උපාංගය මත පමණක් ක්‍රියා කිරීමට ෆෝමැට් කර ඇත. එය වෙනත් ඒවා මත ක්‍රියා නොකරනු ඇත."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> ඉවතට ගනිමින්…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"භාවිත කරන ලද ගබඩාව"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> ගෙන යමින්…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"ගෙන යාම අතරතුර ධාවකය ඉවත් කරන්න එපා.\nගෙන යාම සම්පූර්ණ වන තුරු මෙම උපාංගයේ <xliff:g id="APPNAME">%1$s</xliff:g> යෙදුම ලබාගත නොහැකි වනු ඇත."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"අභ්‍යන්තර ගබඩාව අමතක කරන්නද?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'අමතක කරන්න\' සමගින් මෙම ධාවකයේ ගබඩා කර ඇති ඔබේ දත්ත සියල්ල සදහටම අහිමි වනු ඇත. ඔබ ඉදිරියට කර ගෙන යාමට කැමතිද?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"අමතක කරන්න"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"අවශ්‍ය තරම් ආචයන ඉඩ නොමැත."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"යෙදුම නොපවතී."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"යෙදුම පිටපත්-ආරක්ෂණය කර ඇත."</string>

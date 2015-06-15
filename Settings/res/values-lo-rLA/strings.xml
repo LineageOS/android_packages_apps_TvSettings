@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"ລຶບ ແລະ​ຟໍ​ແມັດ"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"ຟໍ​ແມັດ​ເປັນ​ບ່ອນ​ຈັດ​ເກັບ​ຂໍ້​ມູນ​ອຸ​ປະ​ກອນ"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"ບໍ່ໄດ້ເຊື່ອມຕໍ່"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"ລືມບ່ອນເກັບຂໍ້ມູນພາຍໃນເຄື່ອງນີ້"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"ເພື່ອໃຊ້ແອັບ ຫຼືຂໍ້ມູນທີ່ດຣາຍນີ້ມີ, ໃຫ້ສຽບມັນເຂົ້າໃໝ່. ອີກວິທີໜຶ່ງ, ທ່ານສາມາດເລືອກລືມບ່ອນເກັບຂໍ້ມູນນີ້ ຖ້າດຣາຍບໍ່ມີໃຫ້ໃຊ້ງານ.\n\nຖ້າທ່ານເລືອກ ລືມ, ທຸກຂໍ້ມູນທີ່ດຣາຍປະກອບມີຈະເສຍໄປຕະຫຼອດການ.\n\nທ່ານສາມາດຕິດຕັ້ງແອັບຄືນໃໝ່ໃນພາຍຫຼັງ, ແຕ່ຂໍ້ມູນທີ່ເກັບໄວ້ເທິງດຣາຍນີ້ຈະເສຍໄປ."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"ບ່ອນຈັດເກັບຂໍ້ມູນອຸປະກອນ"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"ໜ່ວຍຈັດເກັບຂໍ້ມູນທີ່ຖອດອອກໄດ້"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"ຕັ້ງຄ່າຄືນໃໝ່"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"ບໍ່​ສາ​ມາດ​ຕໍ່​ໃສ່ <xliff:g id="NAME">%1$s</xliff:g> ໄດ້"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> ຖືກ​ເອົາ​ອອກ​ໄປ​ຢ່າງ​ປອດ​ໄພ​ແລ້ວ"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"ບໍ່​ສາ​ມາດ​ເອົາ <xliff:g id="NAME">%1$s</xliff:g> ອອກ​ໄດ້​ຢ່າງ​ປອດ​ໄພ"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"ບໍ່ສາມາດຊອກພົບດຣາຍເພື່ອເອົາອອກ"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> ຖືກ​ຟໍ​ແມັດ​ແລ້ວ"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"ບໍ່​ສາ​ມາດ​ຟໍ​ແມັດ <xliff:g id="NAME">%1$s</xliff:g> ໄດ້"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"ຟໍ​ແມັດ​ເປັນ​ບ່ອນ​ຈັດ​ເກັບຂໍ້​ມູນ​ພາຍ​ໃນເຄື່ອງ"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"ໃຊ້​ໄດ້​ອີກ <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"ຖອດບ່ອນຈັດເກັບພາຍໃນ​ອອກ"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"ແອັບ​ຢູ່​ໃນ​ບ່ອນ​ຈັດ​ເກັບ​ຂໍ້​ມູນອຸ​ປະ​ກອນ​ນີ້ຈະ​ຢຸດ​ເຮັດ​ວຽກ ເມື່ອ​ມັນ​ຖືກ​ດີດ​ອອກ. USB ດ​ຣ້າຍນີ້​ຖືກ​ຟໍ​ແມັດ ເພື່ອ​ໃຫ້​ເຮັດ​ວຽກ​ຢູ່​ໃນ​ອຸ​ປະ​ກອນ​ນີ້​ເທົ່າ​ນັ້ນ. ມັນ​ຈະ​ບໍ່​ເຮັດ​ວຽກ​ຢູ່​ໃນ​ອຸ​ປະ​ກອນ​ອື່ນ."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"ກຳລັງເອົາອອກ <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"ບ່ອນ​ຈັດ​ເກັບ​ຂໍ້​ມູນ​ໃຊ້​ແລ້ວ"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"ກຳ​ລັງ​ຍ້າຍ <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"ຢ່າ​ເອົາ​ດ​ຣ້າຍ​ອອກ​ໄປ​ໃນ​ລະ​ຫວ່າງ​ການ​ຍ້າຍ.\nແອັບ <xliff:g id="APPNAME">%1$s</xliff:g> ຢູ່​ໃນ​ອຸ​ປະ​ກອນ​ນີ້​ຈະ​ບໍ່​ມີ​ໃຫ້​ຈົນ​ກ່​ວາ​ການ​ຍ້າຍ​ສຳ​ເລັດ."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"ລືມບ່ອນເກັບຂໍ້ມູນພາຍໃນເຄື່ອງ?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"ທຸກຂໍ້ມູນຂອງທ່ານທີ່ເກັບໄວ້ໃນດຣາຍນີ້ຈະເສຍໄປຕະຫຼອດການ ດ້ວຍ \'ລືມ\'. ທ່ານຕ້ອງການດຳເນີນຕໍ່ບໍ?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"ລືມ"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"ພື້ນທີ່ຈັດເກັບຂໍ້ມູນບໍ່ພຽງພໍ."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"ບໍ່ມີແອັບຯ."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"ແອັບຯຖືກປ້ອງກັນການສຳເນົາ."</string>

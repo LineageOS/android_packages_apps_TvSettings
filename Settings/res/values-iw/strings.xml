@@ -221,6 +221,8 @@
     <string name="storage_format" msgid="3759273736493279595">"מחק ופרמט"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"פרמט כאחסון המכשיר"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"לא מחובר"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"שכח את האחסון הפנימי הזה"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"כדי להשתמש באפליקציות או בנתונים בכונן הזה, הכנס אותו שוב. לחלופין, תוכל לבחור לשכוח את האחסון הזה אם הכונן אינו זמין. \n\nאם תבחר באפשרות \'שכח\', כל הנתונים שבכונן יאבדו לצמיתות. \n\nתוכל להתקין מחדש את האפליקציות מאוחר יותר, אך הנתונים שהיו מאוחסנים בכונן הזה יאבדו."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"אחסון במכשיר"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"אחסון נשלף"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"איפוס"</string>
@@ -228,6 +230,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"לא ניתן היה לטעון את <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> הוצא בבטחה"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"לא ניתן היה להוציא את <xliff:g id="NAME">%1$s</xliff:g> בבטחה"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"לא ניתן היה למצוא כונן להוצאה"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"הפרמוט של <xliff:g id="NAME">%1$s</xliff:g> בוצע"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"לא ניתן היה לפרמט את <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"פרמוט כאחסון פנימי"</string>
@@ -245,9 +248,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> זמינים"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"הוצא אחסון פנימי"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"אפליקציות באחסון המכשיר הזה יפסיקו לפעול אם תוציא אותו. כונן ה-USB הזה הוגדר באמצעות פרמוט לפעול במכשיר הזה בלבד. הוא לא יפעל במכשירים אחרים."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"מוציא את <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"שטח אחסון בשימוש"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"מעביר את <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"אל תסיר את הכונן בהעברה.\n<xliff:g id="APPNAME">%1$s</xliff:g> לא יהיה זמין לפני ההשלמה."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"האם לשכוח את האחסון הפנימי?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"כל הנתונים המאוחסנים בכונן הזה יאבדו לצמיתות אם תבחר באפשרות \'שכח\'. האם ברצונך להמשיך?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"שכח"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"אין מספיק שטח אחסון."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"האפליקציה לא קיימת."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"האפליקציה מוגנת בפני העתקה."</string>

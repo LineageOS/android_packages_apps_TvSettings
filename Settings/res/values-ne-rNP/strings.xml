@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"मेट्नुहोस् र फर्म्याट गर्नुहोस्"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"यन्त्र भण्डारणको रूपमा फर्म्याट गर्नुहोस्"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"जडित छैन"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"यो आन्तरिक भण्डारण बिर्सनुहोस्"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"यस ड्राइभमा भएका अनुप्रयोगहरू वा डेटा प्रयोग गर्न पुन: हाल्नुहोस्। अन्यथा, ड्राइभ नभए यस भण्डारणलाई बिर्सनको लागि रोज्नुहोस्।\n\nयदि बिर्सनको लागि रोज्नुहुन्छ भने यस ड्राइमा भएका सबै डेटा सधैंका लागि नष्ट हुनेछन्।\n\n पछि तपाईँ अनुप्रयोगहरू हाले पनि ड्राइभको भण्डारण भएका डेटा भेटाउनु सक्नुहुने छैन।"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"यन्त्र भण्डारण"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"हटाउन योग्य भण्डारण"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"रिसेट गर्नुहोस्"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> माउन्ट गर्न सकेन"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तरिकाले निकालिएको छ"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तरिकाले निकाल्न सकिएन"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"बाहिर निकाल्न कुनै ड्राइभ भेटिएन"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> फर्म्याट गरियो"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> फर्म्याट गर्न सकिएन"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"आन्तरिक भण्डारणको रुपमा फर्म्याट गर्नुहोस्"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> उपलब्ध"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"आन्तरिक भण्डारण निकाल्नुहोस्"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"यस यन्त्र भण्डारणका अनुप्रयोगहरूले यसलाई निकालेपछि काम गर्न छोड्छ। यो USB ड्राइभ यो यन्त्रमा काम गर्नको लागि फर्म्याट गरियो। यसले अन्य कुनैमा काम गर्दैन।"</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"निकाल्दै <xliff:g id="NAME">%1$s</xliff:g> ..."</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"प्रयोग भएको भण्डारण"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> सार्दै"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"सारिएको बेलामा ड्राइभ नहटाउनुहोस्। \n सार्ने काम नसकिएसम्म यस यन्त्रमा <xliff:g id="APPNAME">%1$s</xliff:g> अनुप्रयोग उपलब्ध हुने छैन।"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"आन्तरिक भण्डारण बिर्सनुभयो?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"यस ड्राइमा भएका सबै डेटा \'बिर्सनु\' को साथ सधैंका लागि नष्ट हुनेछन्। के तपाईँ अगाडि बढ्न चाहनुहुन्छ?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"बिर्सनुहोस्"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"पर्याप्त भण्डारण ठाउँ छैन।"</string>
     <string name="does_not_exist" msgid="4553235698171937217">"अनुप्रयोग अवस्थित छैन"</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"अनुप्रयोग प्रतिलिपि-सुरक्षित छ।"</string>

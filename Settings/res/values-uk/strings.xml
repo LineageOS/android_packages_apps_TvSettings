@@ -221,6 +221,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Очистити й відформатувати"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Відформатувати як пам’ять пристрою"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Не підключено"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Забути цю внутрішню пам’ять"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Щоб отримати доступ до додатків і даних на цьому носії, вийміть його та вставте знову. Ви можете вибрати опцію \"Забути\", якщо носій недоступний.\n\nТоді всі дані на носії буде втрачено назавжди.\n\nВи зможете повторно встановити додатки, але не відновите їх дані."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Пам’ять пристрою"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Знімний носій"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Скидання"</string>
@@ -228,6 +230,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Не вдалося підключити носій <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"Носій <xliff:g id="NAME">%1$s</xliff:g> безпечно вийнято"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Не вдалося безпечно вийняти носій <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Не знайдено підключений носій"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"Носій <xliff:g id="NAME">%1$s</xliff:g> відформатовано"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Не вдалося відформатувати носій <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Відформатувати як внутрішню пам’ять"</string>
@@ -245,9 +248,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Доступно <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Вийняти внутрішню пам’ять"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Коли ви виймете носій USB, збережені на ньому додатки перестануть працювати. Носій відформатовано для роботи лише на цьому пристрої. Він не працюватиме на інших пристроях."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> відключається…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Використовується пам’яті"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Переміщення додатка <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Не виймайте диск під час переміщення.\nДодаток <xliff:g id="APPNAME">%1$s</xliff:g> не з’явиться на цьому пристрої, доки не завершиться переміщення."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Забути внутрішню пам’ять?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Якщо вибрати опцію \"Забути\", усі дані на носії буде втрачено назавжди. Продовжити?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Забути"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Недостатньо пам’яті."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Додаток не існує."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Додаток захищений від копіювання."</string>

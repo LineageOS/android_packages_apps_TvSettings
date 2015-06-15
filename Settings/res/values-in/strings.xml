@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Hapus &amp; format"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Format sebagai perangkat penyimpanan"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Tidak terhubung"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Lupakan penyimpanan internal ini"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Untuk menggunakan aplikasi atau data dalam drive ini, colokkan kembali drive tersebut. Selain itu, Anda dapat memilih untuk melupakan penyimpanan ini jika drive tidak tersedia.\n\nJika Anda memilih Lupakan, semua data di dalam drive akan hilang selamanya.\n\nAnda dapat memasang aplikasi lagi nanti, namun data yang tersimpan dalam drive ini akan hilang."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Penyimpanan perangkat"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Penyimpanan yang dapat dicopot"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Setel ulang"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Tidak dapat memasang <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> dikeluarkan dengan aman"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Tidak dapat mengeluarkan <xliff:g id="NAME">%1$s</xliff:g> dengan aman"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Tidak menemukan drive untuk dikeluarkan"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> telah diformat"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Tidak dapat memformat <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Format sebagai penyimpanan internal"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Tersedia <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Keluarkan penyimpanan internal"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Aplikasi di penyimpanan perangkat ini akan berhenti berfungsi jika penyimpanan perangkat dikeluarkan. Drive USB diformat agar berfungsi hanya pada perangkat ini. Drive USB tidak akan berfungsi di perangkat lain."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Mengeluarkan <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Penyimpanan yang terpakai"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Memindahkan <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Jangan mencopot drive selama pemindahan.\nAplikasi <xliff:g id="APPNAME">%1$s</xliff:g> pada perangkat ini tidak akan tersedia hingga pemindahan selesai."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Lupakan penyimpanan internal?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Semua data yang tersimpan dalam drive ini akan hilang selamanya jika Anda memilih \'Lupakan\'. Ingin melanjutkan?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Lupakan"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Ruang penyimpanan tidak cukup."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Aplikasi tidak ada."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Aplikasi dilindungi hak cipta."</string>

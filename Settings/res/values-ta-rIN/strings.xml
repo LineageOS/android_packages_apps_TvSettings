@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"அழி &amp; மீட்டமை"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"சாதனச் சேமிப்பகமாக மீட்டமை"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"இணைக்கப்படவில்லை"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"இந்த அகச் சேமிப்பகத்தை அகற்று"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"இந்த டிரைவில் உள்ள பயன்பாடுகள் அல்லது தரவைப் பயன்படுத்த, அதை மீண்டும் செருகவும். டிரைவ் இல்லை எனில், இந்தச் சேமிப்பகத்தை அகற்றிவிடவும்.\n\nஅகற்றுவதைத் தேர்ந்தெடுத்தால், டிரைவில் உள்ள எல்லா தரவையும் இழப்பீர்கள்.\n\nபயன்பாடுகளை மீண்டும் நிறுவிக்கொள்ளலாம், எனினும் இந்தச் சாதனத்தில் உள்ள அவற்றின் தரவு மீண்டும் கிடைக்காது."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"சாதனச் சேமிப்பகம்"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"அகற்றப்படக்கூடிய சேமிப்பகம்"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"மீட்டமை"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g>ஐப் பொருத்த முடியவில்லை"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> பாதுகாப்பாக வெளியேற்றப்பட்டது"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g>ஐப் பாதுகாப்பாக வெளியேற்ற முடியவில்லை"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"வெளியேற்ற, டிரைவ் ஏதுமில்லை"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> மீட்டமைக்கப்பட்டது"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g>ஐ மீட்டமைக்க முடியவில்லை"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"அகச் சேமிப்பகமாக மீட்டமை"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> உள்ளது"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"அகச் சேமிப்பகத்தை வெளியேற்று"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"வெளியேற்றப்பட்டதும், இந்தச் சாதன சேமிப்பகத்தில் உள்ள பயன்பாடுகள் வேலை செய்யாது. இந்தச் சாதனத்தில் மட்டும் இயங்குமாறு USB டிரைவ் மீட்டமைக்கப்பட்டது. இது வேறு சாதனங்களில் வேலை செய்யாது."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g>ஐ வெளியேற்றுகிறது…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"பயன்படுத்திய சேமிப்பிடம்"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g>ஐ நகர்த்துகிறது…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"நகர்த்தும் போது இயக்ககத்தை அகற்ற வேண்டாம்.\nநகர்த்தி முடிக்கும் வரை இந்தச் சாதனத்தில் உள்ள <xliff:g id="APPNAME">%1$s</xliff:g> பயன்பாட்டைப் பயன்படுத்த முடியாது."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"அகச் சேமிப்பகத்தை அகற்றவா?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'அகற்று\' என்பதைத் தேர்வுசெய்தால், இந்த டிரைவில் சேமித்திருக்கும் எல்லா தரவையும் இழப்பீர்கள். தொடர விரும்புகிறீர்களா?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"அகற்று"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"போதுமான சேமிப்பிடம் இல்லை."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"பயன்பாடு இல்லை."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"பயன்பாட்டை நகலெடுக்க முடியாது."</string>

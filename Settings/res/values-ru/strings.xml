@@ -221,6 +221,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Очистить и форматировать"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Форматировать как память устройства"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Нет подключения"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Удалить данные из внутренней памяти"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Подключите диск заново, чтобы получить доступ к приложениям и другим данным на нем. Если это невозможно и диск недоступен, выберите \"Удалить данные\".\n\nПосле этого все данные, хранившиеся на диске, будут утеряны.\n\nВы сможете скачать приложения снова, однако их данные восстановить не удастся."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Память устройства"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Съемный накопитель"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Сброс настроек"</string>
@@ -228,6 +230,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Ошибка подключения: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"Безопасно извлечено: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Не удалось безопасно извлечь устройство: <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Диск не обнаружен"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"Отформатировано: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Ошибка форматирования: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Форматирование в качестве внутренней памяти"</string>
@@ -245,9 +248,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Доступно <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Извлечение внутренней памяти"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Когда вы извлечете USB-накопитель, приложения перестанут работать. Он отформатирован для работы только с этим устройством, и не будет работать с другими."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g>: извлечение…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Размер в памяти"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Перенос приложения \"<xliff:g id="NAME">%1$s</xliff:g>\""</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Не извлекайте диск во время переноса.\nПока он не завершится, приложение \"<xliff:g id="APPNAME">%1$s</xliff:g>\" будет недоступно на этом устройстве."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Удалить данные?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Все данные на диске будут утеряны. Продолжить?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Удалить"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Недостаточно места."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Приложение не установлено."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Приложение защищено от копирования."</string>

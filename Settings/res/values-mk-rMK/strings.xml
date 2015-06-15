@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Избриши и форматирај"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Форматирај како меморија на уред"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Не е поврзано"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Заборави ја внатрешнава меморија"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"За да ги користите апликациите или податоците што ги содржи дисков, повторно приклучете го. Покрај тоа, може да изберете да се заборави меморијава ако дискот не е достапен.\n\nАко изберете Заборави, засекогаш ќе ги изгубите податоците што ги содржи дискот.\n\nПодоцна може повторно да ги инсталирате апликациите, но податоците складирани на дискот ќе се изгубат."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Меморија на уредот"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Пренослива меморија"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Ресетирај"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Не може да се монтира <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> е безбедно извадено"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Не може безбедно да се извади <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Не можеше да се пронајде дискот за исфрлање"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> е форматирано"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Не може да се форматира <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Форматирај како внатрешна меморија"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> достапно"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Извади внатрешна меморија"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Апликациите од меморијата на овој уред ќе престанат да работат штом истата се извади. УСБ-дискот е форматиран да работи само на овој уред. Нема да работи на ниеден друг."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Се исфрла <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Искористена меморија"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Се преместува <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Не отстранувајте го дискот за време на преместувањето.\nАпликацијата <xliff:g id="APPNAME">%1$s</xliff:g> на уредов нема да биде достапна додека преместувањето не заврши."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Заборави ја внатрешната меморија?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Со „Заборави“, засекогаш ќе ги изгубите сите податоци складирани на дисков. Дали би сакале да продолжите?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Заборави"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Нема доволно меморија."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Апликацијата не постои."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Апликацијата е заштитена од копирање."</string>

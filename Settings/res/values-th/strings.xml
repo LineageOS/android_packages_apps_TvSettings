@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"ลบและฟอร์แมต"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"ฟอร์แมตเป็นที่จัดเก็บข้อมูล"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"ไม่ได้เชื่อมต่อ"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"ไม่จำที่จัดเก็บข้อมูลภายในนี้"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"หากต้องการใช้แอปหรือข้อมูลที่อยู่ในไดรฟ์นี้ ให้เสียบไดรฟ์ใหม่ หรือคุณสามารถเลือกไม่จำที่เก็บข้อมูลนี้หากไดรฟ์ไม่พร้อมใช้งาน\n\nหากคุณเลือกไม่จำ ข้อมูลทั้งหมดในไดรฟ์จะสูญหายอย่างถาวร\n\nคุณสามารถติดตั้งแอปอีกครั้งในภายหลัง แต่ข้อมูลที่จัดเก็บไว้ในไดรฟ์นี้จะสูญหาย"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"ที่เก็บข้อมูลอุปกรณ์"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"ที่เก็บข้อมูลแบบถอดได้"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"รีเซ็ต"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"ไม่สามารถต่อเชื่อม <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"นำ <xliff:g id="NAME">%1$s</xliff:g> ออกได้อย่างปลอดภัยแล้ว"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"ไม่สามารถนำ <xliff:g id="NAME">%1$s</xliff:g> ออกได้อย่างปลอดภัย"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"ไม่พบไดรฟ์ที่จะดีดออก"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"ฟอร์แมต <xliff:g id="NAME">%1$s</xliff:g> แล้ว"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"ไม่สามารถฟอร์แมต <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"ฟอร์แมตเป็นที่จัดเก็บข้อมูลภายใน"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"เหลือพื้นที่ว่าง <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"ดีดที่จัดเก็บข้อมูลภายในออก"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"แอปในที่จัดเก็บข้อมูลของอุปกรณ์นี้จะหยุดทำงานเมื่อดีดออก ไดรฟ์ USB จะได้รับการฟอร์แมตให้ทำงานบนอุปกรณ์นี้เท่านั้น โดยจะไม่ทำงานบนอุปกรณ์อื่นๆ"</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"กำลังดีด <xliff:g id="NAME">%1$s</xliff:g> ออก…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"ที่จัดเก็บข้อมูลที่ใช้ไป"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"กำลังย้าย <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"ห้ามนำไดรฟ์ออกขณะย้าย\nแอป <xliff:g id="APPNAME">%1$s</xliff:g> บนอุปกรณ์นี้จะใช้ไม่ได้จนกว่าจะย้ายเสร็จ"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"ไม่จำที่จัดเก็บข้อมูลภายในใช่ไหม"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"ข้อมูลที่จัดเก็บในไดรฟ์นี้ทั้งหมดจะสูญหายอย่างถาวรเมื่อเลือก \"ไม่จำ\" คุณต้องการดำเนินการต่อไหม"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"ไม่จำ"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"พื้นที่จัดเก็บข้อมูลไม่เพียงพอ"</string>
     <string name="does_not_exist" msgid="4553235698171937217">"ไม่มีแอปนี้"</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"แอปมีการป้องกันการคัดลอก"</string>
