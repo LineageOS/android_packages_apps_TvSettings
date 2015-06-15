@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Resetta e formatta"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatta memoria dispositivo"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Non connesso"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Elimina questa memoria interna"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Per poter utilizzare le app o i dati memorizzati in questa unità, ricollegala. In alternativa, puoi eliminare l\'unità di archiviazione se non è disponibile.\n\nSe selezioni Elimina, tutti i dati memorizzati nell\'unità saranno persi per sempre.\n\nPotrai reinstallare le app in un secondo momento, ma i relativi dati memorizzati nell\'unità andranno persi."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Memoria dispositivo"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Dispositivo di archiviazione rimovibile"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Reimpostazione"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Impossibile montare <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"Rimozione <xliff:g id="NAME">%1$s</xliff:g> eseguita in modo sicuro"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Impossibile rimuovere in modo sicuro <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Impossibile trovare l\'unità da espellere"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"Formattazione <xliff:g id="NAME">%1$s</xliff:g> eseguita"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Impossibile formattare <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatta memoria interna"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Spazio disponibile: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Rimuovi memoria interna"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Le app presenti in questa memoria del dispositivo non funzioneranno più in seguito alla rimozione della memoria. Questa unità USB è supportata soltanto su questo dispositivo, pertanto non funzionerà su altri dispositivi."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Espulsione della <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Spazio di archiviazione utilizzato"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Spostamento di <xliff:g id="NAME">%1$s</xliff:g> in corso…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Non rimuovere l\'unità durante lo spostamento.\nL\'app <xliff:g id="APPNAME">%1$s</xliff:g> su questo dispositivo sarà disponibile soltanto al termine dello spostamento."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Eliminare la memoria interna?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Se selezioni \"Elimina\", tutti i dati memorizzati nell\'unità saranno persi per sempre. Vuoi continuare?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Elimina"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Spazio di archiviazione insufficiente."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"L\'app non esiste."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"L\'app è protetta dalla copia."</string>
@@ -281,7 +288,7 @@
     <string name="location_low_battery_use" msgid="5756040390248358148">"Basso utilizzo della batteria"</string>
     <string name="location_mode_wifi_description" msgid="2778774510654527264">"Utilizza Wi-Fi per stimare la posizione"</string>
     <string name="location_status" msgid="3456414279428237558">"Stato posizione"</string>
-    <string name="location_services" msgid="5441085185119797200">"Servizi di localizzazione"</string>
+    <string name="location_services" msgid="5441085185119797200">"Servizi di geolocalizzazione"</string>
     <string name="on" msgid="6683600681314500652">"Attivo"</string>
     <string name="off" msgid="5264189545064767245">"Non attivo"</string>
     <string name="google_location_services_title" msgid="3382840371861269146">"Servizi di localizzazione di Google"</string>

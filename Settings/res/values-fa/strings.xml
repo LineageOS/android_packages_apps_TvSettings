@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"پاک کردن و قالب‌بندی"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"قالب‌بندی به عنوان فضای ذخیره‌سازی دستگاه"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"متصل نیست"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"این حافظه داخلی فراموش شود"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"برای استفاده از برنامه‌ها یا داده‌هایی که در این درایو موجود است، آن را دوباره جاگذاری کنید. همچنین، اگر درایو در دسترس نیست، می‌توانید فراموش کردن این دستگاه ذخیره‌سازی را انتخاب کنید.\n\nاگر فراموش کردن را انتخاب کنید، همه داده‌هایی که در این درایو وجود دارد، برای همیشه از دست می‌رود.\n\nمی‌توانید بعداً برنامه‌ها را دوباره نصب کنید، اما داده‌های ذخیره شده در این درایو از بین می‌رود."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"حافظه دستگاه"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"حافظه جداشدنی"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"بازنشانی"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> جاگذاری نشد"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> به طور ایمن خارج شد"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> به طور ایمن خارج نشد"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"درایو برای بیرون راندن پیدا نشد"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> قالب‌بندی شد"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> قالب‌بندی نشد"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"قالب‌بندی به عنوان حافظه داخلی"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> در دسترس"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"خارج کردن حافظه داخلی"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"در صورت خارج کردن دستگاه‌ ذخیره‌سازی، برنامه‌های موجود در آن دیگر کار نمی‌کنند. این درایو USB تنها برای کار کردن در این دستگاه قالب‌بندی شده است. در دستگاه دیگری کار نمی‌کند."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"درحال بیرون راندن <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"فضای ذخیره‌سازی استفاده شده"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"در حال انتقال <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"در طول انتقال، درایو را جدا نکنید.\nتا زمانی که انتقال به پایان نرسد، برنامه <xliff:g id="APPNAME">%1$s</xliff:g> در این دستگاه در دسترس نیست."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"حافظه داخلی فراموش شود؟"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"با انتخاب «فراموش شود» همه داده‌هایتان که در این درایو ذخیره شده برای همیشه از دست می‌رود. می‌خواهید ادامه دهید؟"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"فراموش شود"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"فضای ذخیره‌سازی کافی نیست."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"برنامه وجود ندارد."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"برنامه در برابر کپی‌برداری محافظت شده است."</string>
@@ -383,7 +390,7 @@
     <string name="system_desc_usb_debugging" msgid="5168830368191788731">"با اتصال USB، حالت رفع‌اشکال فعال شود"</string>
     <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"برنامه اشکال‌زدایی شده منتظر پیوست شدن اشکال‌زدا قبل از اجرا است"</string>
     <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"نمایش محدوده کلیپ، حاشیه‌ها، غیره"</string>
-    <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"هنگام طراحی با ‏GPU،‏ نماها در داخل پنجره‌ها درخشان شوند"</string>
+    <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"در طراحی با GPU، نماها در داخل پنجره‌ها فلش شوند"</string>
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"وقتی لایه‌های سخت‌افزاری به‌روزرسانی‌ می‌شوند، به رنگ سبز درخشان شوند"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"از بهترین تا بدترین: آبی، سبز، قرمز روشن، قرمز"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"هنگام به‌روزرسانی سطوح پنجره همه درخشان شوند"</string>
@@ -433,7 +440,7 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"عادی"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"سریع"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"بسیار سریع"</string>
-    <string name="title_current_keyboard" msgid="4259032357469819835">"صفحه‌کلید فعلی"</string>
+    <string name="title_current_keyboard" msgid="4259032357469819835">"صفحه‌کلید کنونی"</string>
     <string name="title_configure" msgid="6929522003149212388">"پیکربندی"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"گزینه‌های صفحه کلید"</string>
     <string name="computing_size" msgid="2955133568424704042">"‫در حال محاسبه..."</string>

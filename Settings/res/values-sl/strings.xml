@@ -221,6 +221,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Izbris in formatiranje"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatiranje kot prenosna shramba"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Ni povezave"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Pozabi to notranjo shrambo"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Če želite uporabiti aplikacije ali podatke na tem pogonu, ga znova priključite. Če pogon ni na voljo, lahko izberete, da se ta shramba pozabi.\n\nČe uporabite možnost »Pozabi«, bodo za vedno izgubljeni vsi podatki, shranjeni na tem pogonu.\n\nAplikacije lahko pozneje znova namestite, podatki, shranjeni na pogonu, pa bodo izgubljeni."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Shramba naprave"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Izmenljiva shramba"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Ponastavitev"</string>
@@ -228,6 +230,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Tega ni bilo mogoče vpeti: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"To je varno izvrženo: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Tega ni bilo mogoče varno izvreči: <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Pogona za izvrženje ni bilo mogoče najti"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"To je formatirano: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Tega ni bilo mogoče formatirati: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatiranje kot notranja shramba"</string>
@@ -245,9 +248,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> na voljo"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Izvrženje notranje shrambe"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Aplikacije v tej shrambi naprave bodo prenehale delovati, ko jo izvržete. Ta pogon USB je formatiran tako, da deluje samo s to napravo. Z drugimi ne bo deloval."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Izvrženje pogona <xliff:g id="NAME">%1$s</xliff:g> …"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Uporabljena shramba"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Premikanje aplikacije <xliff:g id="NAME">%1$s</xliff:g> …"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Pogona med premikanjem ne odstranite.\nAplikacija <xliff:g id="APPNAME">%1$s</xliff:g> v tej napravi ne bo na voljo, dokler premik ne bo dokončan."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Želite pozabiti notranjo shrambo?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Če uporabite možnost »Pozabi«, bodo za vedno izgubljeni vsi podatki, shranjeni na tem pogonu. Ali želite nadaljevati?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Pozabi"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Ni dovolj prostora za shranjevanje."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Aplikacija ne obstaja."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Aplikacija je zaščitena pred kopiranjem."</string>

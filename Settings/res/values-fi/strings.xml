@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Tyhjennä ja alusta"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Alusta laitteen tallennustilana"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Ei yhdistetty"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Unohda tämä sisäinen tallennustila"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Liitä asema uudelleen, jos haluat käyttää sen sisältämiä sovelluksia tai tietoja. Voit myös unohtaa tämän tallennustilan, jos asema ei ole käytettävissä.\n\nJos valitset Unohda, kaikki aseman tiedot poistetaan pysyvästi.\n\nVoit asentaa sovellukset myöhemmin uudelleen, mutta asemaan tallennetut tiedot katoavat."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Laitteen tallennustila"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Siirrettävä tallennustila"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Tyhjennä"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Käyttöönotto epäonnistui: <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> on poistettu turvallisesti."</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Turvallinen poistaminen epäonnistui: <xliff:g id="NAME">%1$s</xliff:g>."</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Poistettavaa asemaa ei löytynyt."</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> on alustettu."</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Alustaminen epäonnistui: <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Alusta sisäisenä tallennustilana"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> vapaana"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Poista sisäinen tallennustila"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Tämän laitteen tallennustila lakkaa toimimasta, kun se poistetaan. Tämä USB-asema on alustettu niin, että se toimii vain tässä laitteessa, ei muissa."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Poistetaan <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Käytetty tallennustila"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Siirretään <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Jätä asema paikalleen siirron ajaksi.\nTämän laitteen <xliff:g id="APPNAME">%1$s</xliff:g>-sovellus ei ole käytettävissä, ennen kuin siirto on valmis."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Unohdetaanko sisäinen tallennustila?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Jos valitset Unohda, kaikki asemaan tallennetut tiedot poistetaan pysyvästi. Haluatko jatkaa?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Unohda"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Ei tarpeeksi säilytystilaa."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Sovellusta ei ole olemassa."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Sovellus on kopiosuojattu."</string>

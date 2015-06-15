@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Өчүрүү жана форматтоо"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Түзмөктүн сактагычы катары форматтоо"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Туташкан жок"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Бул ички сактагычты унутуу"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Бул дискте камтылган колдонмолор же дайындарды колдонуу үчүн, аны кайра сайыңыз. Же түзмөк жеткиликтүү эмес болсо, бул сактагычты унутууну тандасаңыз болот.\n\nЭгер Унутууну тандасаңыз, дискте камтылган бардык дайындар биротоло жоголот.\n\nКолдонмолорду кийинчерээк кайра орнотсоңуз болот, бирок бул дискте сакталган дайындар жоголот."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Түзмөктүн сактагычы"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Ташыма сактагыч"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Кайра коюу"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> туташпай койду"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> коопсуз чыгарылды"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> коопсуз чыгарылбай койду"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Чыгаруу үчүн диск табылбай койду"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> форматталды"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> форматталбай койду"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Ички сактагыч катары форматтоо"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> бош орун бар"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Ички сактагычты чыгаруу"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Бул сактагыч чыгарылганда, андагы колдонмолор иштебей калат. USB картасы ушул түзмөктө гана иштегидей болуп форматталган. Ал башка эч бир түзмөктө иштебейт."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> чыгарылууда…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Колдонулган эстутум"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> жылдырылууда…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Жылдырп жаткнд түзмктү чыгарбңз.\nЖылдырлп бүтмйнчө бул түзмктгү <xliff:g id="APPNAME">%1$s</xliff:g> колдонм иштебйт."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Ички сактагыч унутулсунбу?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'Унутуу\' менен бул дискте сакталган бардык дайындарыңыз биротоло жоголот. Уланткыңыз келеби?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Унутуу"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Сактагычта орун жетишсиз."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Мындай колдонмо жок."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Колдонмо көчүрүүдөн корголгон."</string>
@@ -518,7 +525,7 @@
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Орнотуудан чыгаруу"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Бул колдонмону орнотуудан чыгарасызбы?"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Жаңыртууларды чыгарып салуу"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Бул Android системиндеги колдонмолордун баардык жаңыртуулары жок кылынат."</string>
+    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Android тутумундагы ушул колдонмонун бардык жаңыртуулары чыгарылып салынат."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Өчүрүү"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Бул колдонмону өчүргүңүз келеби?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Иштетүү"</string>
@@ -526,7 +533,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Колдонулган эстутум"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> ичинен <xliff:g id="SIZE">%1$s</xliff:g> колдонулат"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Дайындарды тазалоо"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Бул колдонмонун бардык дайындары биротоло өчүрүлөт.\nАнын ичинде бардык файлдар, жөндөөлөр, каттоо эсептери, берилиштер кору ж.б."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Бул колдонмонун файлдар, жөндөөлөр, каттоо эсептери, дайындар базасы \nсыяктуу бардык дайындары биротоло жок болот."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Демейки жөндөөлөрдү тазалап салуу"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Бул колдонмо айрым аракеттер үчүн ишке киргизилет деп коюлган"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Демейки жөндөөлөр коюлган жок"</string>

@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Borrar y formatear"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatear como almacenamiento del dispositivo"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Sin conexión"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Borrar este almacenamiento interno"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Para utilizar las aplicaciones o los datos incluidos en esta unidad, tienes que volver a conectarla. También puedes borrar el almacenamiento si la unidad no está disponible.\n\nSi decides borrarlo, todos los datos incluidos en la unidad se perderán para siempre.\n\nPuedes volver a instalar las aplicaciones más tarde, pero los datos almacenados en esta unidad se perderán."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Almacenamiento del dispositivo"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Almacenamiento extraíble"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Restablecer"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Error al activar <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> se ha expulsado de forma segura"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"No se ha podido expulsar <xliff:g id="NAME">%1$s</xliff:g> de forma segura"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"No se ha podido encontrar la unidad para expulsarla"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> se ha formateado"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Error al formatear <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatear como almacenamiento interno"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Disponible: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Expulsar almacenamiento interno"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Las aplicaciones instaladas en el almacenamiento de este dispositivo se detendrán cuando se extraiga. Esta unidad USB se ha formateado para que solo funcione en este dispositivo."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Expulsando <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Almacenamiento utilizado"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Moviendo <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"No extraigas unidad durante migración.\nAplicación <xliff:g id="APPNAME">%1$s</xliff:g> del dispositivo no disponible hasta fin."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"¿Borrar almacenamiento interno?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Si eliges Borrar, todos los datos almacenados en esta unidad se perderán para siempre. ¿Quieres continuar?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Borrar"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"No hay suficiente espacio de almacenamiento."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"La aplicación no existe."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"La aplicación está protegida contra copias."</string>

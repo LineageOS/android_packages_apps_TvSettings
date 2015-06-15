@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Өшіру және пішімдеу"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Құрылғы жады ретінде пішімдеу"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Қосылмаған"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Осы ішкі жадты ұмыту"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Осы дискіде бар қолданбаларды немесе деректерді пайдалану үшін, оны қайта жалғаңыз. Не болмаса диск қолжетімді болмаса, осы жадты ұмытуды таңдай аласыз. \n\n\"Ұмыту\" опциясын таңдасаңыз, дискідегі барлық деректер мүлдем жоғалады. \n\nҚолданбаларды кейінірек қайта орнатуға болады, бірақ осы дискіде сақталған деректер жоғалады."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Құрылғы жады"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Алынбалы жад"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Қалпына келтіру"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> орнату мүмкін болмады"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> қауіпсіз шығарылды"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> қауіпсіз шығару мүмкін болмады"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Шығарып алынатын диск табылмады"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> пішімделді"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> пішімдеу мүмкін болмады"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Ішкі жад ретінде пішімдеу"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"қолжетімді <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Ішкі жадты шығарып алу"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Шығарып алынған кезде, осы құрылғы жадындағы қолданбалардың жұмысы тоқтайды. Бұл USB диск тек осы құрылғыда жұмыс істеуге пішімделген. Ол басқа құрылғыларда жұмыс істемейді."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> шығарылуда…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Пайдаланылған жад"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> жылжытылуда…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Жылжыту кезінде дискіні шығармаңыз.\nЖылж. аяқ-ша осы құр. <xliff:g id="APPNAME">%1$s</xliff:g> қолд. қол жетімді болмайды."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Ішкі жадты ұмыттыңыз ба?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\"Ұмыту\" опциясын таңдасаңыз, бұл дискіде сақталған барлық деректер мүлдем жоғалады. Жалғастырғыңыз келе ме?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Ұмыту"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Жадта орын жеткіліксіз."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Қолданба жоқ."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Қолданба көшірмеден қорғалған"</string>

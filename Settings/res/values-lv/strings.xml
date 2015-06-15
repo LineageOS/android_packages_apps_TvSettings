@@ -220,6 +220,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Dzēst un formatēt"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatēt kā ierīces krātuvi"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Nav savienojuma"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Noņemt šo iekšējo atmiņu"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Lai izmantotu šajā dzinī esošās lietotnes un datus, pievienojiet to atkārtoti. Varat arī noņemt šo krātuvi, ja dzinis nav pieejams.\n\nJa izvēlēsieties opciju Noņemt, visi dzinī esošie dati tiks neatgriezeniski zaudēti.\n\nVēlāk varēsiet atkārtoti instalēt lietotnes, taču to dati, kas saglabāti šajā dzinī, vairs nebūs pieejami."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Ierīces atmiņa"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Noņemama atmiņas ierīce"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Atiestatīšana"</string>
@@ -227,6 +229,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Nevarēja pievienot: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> tika droši noņemta"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Nevarēja droši noņemt: <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Nevarēja atrast noņemamo dzini."</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> ir formatēta"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Nevarēja formatēt: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Krātuves kā iekšējās atmiņas formatēšana"</string>
@@ -244,9 +247,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Pieejamais apjoms: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Iekšējās krātuves izņemšana"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Kad izņemsiet šo ierīces krātuvi, tajā glabātās lietotnes vairs nedarbosies. Šis USB disks ir formatēts tā, lai darbotos tikai šajā ierīcē, un tas nedarbosies citās ierīcēs."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g>: notiek atvienošana…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Krātuvē izmantotā vieta"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Notiek lietotnes <xliff:g id="NAME">%1$s</xliff:g> pārvietošana…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Neizņemiet disku pārvietošanas laikā.\nKamēr tā nebūs pabeigta, lietotne <xliff:g id="APPNAME">%1$s</xliff:g> šajā ierīcē nebūs pieejama."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Vai noņemt iekšējo atmiņu?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Izvēloties opciju Aizmirst, visi šajā dzinī saglabātie dati vairs nebūs pieejami. Vai turpināt?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Noņemt"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Atmiņā nepietiek vietas."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Lietotne nepastāv."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Lietotne ir aizsargāta pret kopēšanu."</string>

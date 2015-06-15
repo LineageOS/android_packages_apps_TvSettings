@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Aftengja og forsníða"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Forsníða sem geymslu tækis"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Ekki tengt"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Gleyma þessari innbyggðu geymslu"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Til að nota forrit eða gögn á þessu drifi skaltu setja það aftur í. Að öðrum kosti geturðu valið að gleyma þessari geymslu ef drifið er ekki tiltækt.\n\nEf þú velur að gleyma henni glatast öll gögn á drifinu að eilífu.\n\nÞú getur sett forritin upp aftur síðar en gögnin sem eru vistuð á drifinu glatast."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Geymsla tækis"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Tengd geymsla"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Endurstilla"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Ekki var hægt að tengja <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> var aftengt á öruggan hátt"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Ekki var hægt að aftengja <xliff:g id="NAME">%1$s</xliff:g> á öruggan hátt"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Ekkert drif fannst til að aftengja"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> var forsniðið"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Ekki var hægt að forsníða <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Forsníða sem innbyggða geymslu"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> laus"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Aftengja innbyggða geymslu"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Forritin á þessum geymslumiðli hætta að virka þegar hann er aftengdur. USB-drifið er forsniðið þannig að það virkar eingöngu með þessu tæki. Það mun ekki virka með öðrum tækjum."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Aftengir <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Notað pláss"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Flytur <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Ekki fjarlægja drifið meðan á flutningnum stendur.\n<xliff:g id="APPNAME">%1$s</xliff:g> forritið í þessu tæki verður ekki aðgengilegt fyrr en að flutningi loknum."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Gleyma innbyggðri geymslu?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Öll gögn sem eru vistuð á drifinu glatast að eilífu ef þú velur „Gleyma“. Viltu halda áfram?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Gleyma"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Ekki nægilegt geymslurými."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Forritið er ekki til."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Forritið er afritunarvarið."</string>

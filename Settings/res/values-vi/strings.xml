@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Xóa và định dạng"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Định dạng làm bộ nhớ thiết bị"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Chưa kết nối"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Bỏ qua bộ nhớ trong này"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Để sử dụng các ứng dụng hoặc dữ liệu có trong ổ này, hãy cắm lại ổ. Hoặc, bạn có thể chọn bỏ qua bộ nhớ này nếu ổ không khả dụng.\n\nNếu bạn chọn Bỏ qua, tất cả dữ liệu có trong ổ sẽ bị mất vĩnh viễn.\n\nBạn có thể cài đặt lại các ứng dụng sau đó nhưng dữ liệu được lưu trữ trên ổ này sẽ bị mất."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Bộ nhớ của thiết bị"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Bộ nhớ di động"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Đặt lại"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Không thể gắn <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> đã được tháo an toàn"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Không thể tháo an toàn <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Không thể tìm thấy ổ để tháo"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> đã được định dạng"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Không thể định dạng <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Định dạng làm bộ nhớ trong"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Còn <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Tháo bộ nhớ trong"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Các ứng dụng trong bộ nhớ của thiết bị này sẽ ngừng hoạt động khi tháo bộ nhớ ra. Ổ đĩa USB này được định dạng để chỉ hoạt động trên thiết bị này. Ổ đĩa này sẽ không hoạt động trên bất kỳ thiết bị nào khác."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Đang tháo <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Bộ nhớ đã sử dụng"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Đang di chuyển <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Không tháo ổ khi di chuyển.\nỨng dụng <xliff:g id="APPNAME">%1$s</xliff:g> trên thiết bị này sẽ không khả dụng cho tới khi hoàn tất di chuyển."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Bỏ qua bộ nhớ trong?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Với tùy chọn \'Bỏ qua\', tất cả dữ liệu của bạn được lưu trữ trong ổ này sẽ bị mất vĩnh viễn. Bạn có muốn tiếp tục không?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Bỏ qua"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Không đủ dung lượng lưu trữ."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Ứng dụng không tồn tại."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Ứng dụng được bảo vệ bản sao."</string>

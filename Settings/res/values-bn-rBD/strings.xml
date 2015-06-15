@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"মুছুন এবং ফর্ম্যাট করুন"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"ডিভাইসের সঞ্চয়স্থান হিসেবে ফর্ম্যাট করুন"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"সংযুক্ত নয়"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"এই অভ্যন্তরীণ সঞ্চয়স্থানটি ভুলে যান"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"এই ড্রাইভের মধ্যে থাকা অ্যাপ্লিকেশান বা ডেটা ব্যবহার করার জন্য, এটিকে পুনরায় ঢোকান। অনুরূপভাবে, ড্রাইভ উপলব্ধ না থাকলে আপনি এই সঞ্চয়স্থান মনে নেই বেছে নিতে পারেন।\n\nআপনি যদি মনে নেই বাছেন, তবে ড্রাইভের মধ্যে থাকা সমস্ত ডেটা চিরতরে হারিয়ে যাবে।\n\nআপনি পরে অ্যাপ্লিকেশানটিকে পুনরায় ইনস্টল করতে পারেন, তবে এই ড্রাইভটিতে যে ডেটা সঞ্চিত আছে তা হারিয়ে যাবে।"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"ডিভাইসের সঞ্চয়স্থান"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"অপসারণযোগ্য সঞ্চয়স্থান"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"পুনরায় সেট করুন"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> মাউন্ট করা যায়নি"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g>নিরাপদে সরিয়ে দেওয়া হয়েছে"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> নিরাপদে সরানো যায়নি"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"সরিরে ফেলার জন্য ড্রাইভটি খুঁজে পাওয়া যায়নি"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> ফর্ম্যাট করা হয়েছে"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> ফর্ম্যাট করা যায়নি"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"অভ্যন্তরীণ সঞ্চয়স্থান হিসাবে ফর্ম্যাট করুন"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> উপলব্ধ"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"অভ্যন্তরীণ সঞ্চয়স্থান সরিয়ে দিন"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"এই ডিভাইসটিকে সরিয়ে দেওয়া হলে এটির সঞ্চয়স্থানে রাখা অ্যাপ্লিকেশানগুলি কাজ করা বন্ধ করবে৷ শুধুমাত্র এই ডিভাইসে কাজ করার জন্য এই USB ড্রাইভটিকে ফর্ম্যাট করা হয়েছে৷ অন্যান্য কোন জায়গায় এটি কাজ করবে না৷"</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> সরিয়ে ফেলা হচ্ছে…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"ব্যবহৃত সঞ্চয়স্থানের পরিমান"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> সরানো হচ্ছে…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"সরানোর সময় ড্রাইভটি অপসারণ করবেন না৷\nএই ডিভাইসে থাকা <xliff:g id="APPNAME">%1$s</xliff:g> অ্যাপ্লিকেশানটি সরানো সম্পূর্ণ না হওয়া পর্যন্ত উপলব্ধ নাও হতে পারে৷"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"অভ্যন্তরীণ সঞ্চয়স্থান ভুলতে চান?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'ভুলে যান\' এর সঙ্গে এই ড্রাইভে সঞ্চিত আপনার সমস্ত ডেটা চিরতরে হারিয়ে যাবে। আপনি কি এগিয়ে যেতে চান?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"ভুলে যান"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"পর্যাপ্ত সঞ্চয়স্থান নেই।"</string>
     <string name="does_not_exist" msgid="4553235698171937217">"অ্যাপ্লিকেশানটি বিদ্যমান নেই।"</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"অ্যাপ্লিকেশানটি প্রতিলিপি-সুরক্ষিত৷"</string>

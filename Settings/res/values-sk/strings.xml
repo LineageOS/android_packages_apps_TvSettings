@@ -221,6 +221,8 @@
     <string name="storage_format" msgid="3759273736493279595">"Vymazať a naformátovať"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Naformátovať ako úložisko zariadenia"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Nepripojené"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Odstrániť toto interné úložisko"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Ak chcete použiť aplikácie a údaje na tejto jednotke, znova ju pripojte. Okrem toho môžete toto úložisko odstrániť, ak jednotka nie je k dispozícii.\n\nAk vyberiete možnosť Odstrániť, všetky údaje v príslušnej jednotke budú odstránené.\n\nAplikáciu môžete znova nainštalovať neskôr, ale údaje uložené na tejto jednotke budú odstránené."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Úložisko zariadenia"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Vymeniteľné úložisko"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Resetovanie"</string>
@@ -228,6 +230,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> sa nepodarilo pripojiť"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> bolo bezpečne odpojené"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> sa nepodarilo bezpečne odpojiť"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Nenašla sa jednotka na odpojenie"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> je naformátované"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> sa nepodarilo naformátovať"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formátovanie média na interné úložisko"</string>
@@ -245,9 +248,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"K dispozícii <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Odpojenie interného úložiska"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Po odpojení tohto pamäťového zariadenia prestanú fungovať všetky aplikácie, ktorú sú v ňom uložené. Tento disk USB je naformátovaný tak, aby fungoval iba v tomto zariadení. V iných zariadeniach fungovať nebude."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Odpája sa úložisko <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Využité úložisko"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Presúva sa aplikácia <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Úložisko počas presunu neodoberajte.\nAplikácia <xliff:g id="APPNAME">%1$s</xliff:g> bude v tomto zariadení k dispozícii až po dokončení presunu."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Odstrániť interné úložisko?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Po stlačení možnosti Odstrániť budú všetky údaje uložené na tejto jednotke navždy odstránené. Chcete pokračovať?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Odstrániť"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"V úložisku nie je dostatok miesta"</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Aplikácia neexistuje"</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Aplikácia je chránená proti kopírovaniu"</string>

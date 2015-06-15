@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"삭제 및 포맷"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"기기 저장소로 포맷"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"연결되지 않음"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"이 내부 저장소 저장 안함"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"이 드라이브에 포함된 앱 또는 데이터를 사용하려면 드라이브를 다시 삽입하세요. 또는 드라이브를 사용할 수 없는 경우 저장소를 저장하지 않을 수도 있습니다.\n\n저장하지 않는 경우 드라이브에 포함된 모든 데이터가 완전히 삭제됩니다.\n\n나중에 앱을 다시 설치할 수는 있으나 드라이브에 저장된 데이터가 모두 사라집니다."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"기기 저장용량"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"이동식 저장소"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"재설정"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g>을(를) 마운트하지 못했습니다."</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g>이(가) 안전하게 제거되었습니다."</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g>을(를) 안전하게 제거하지 못했습니다."</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"제거할 드라이브를 찾을 수 없습니다."</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g>이(가) 포맷되었습니다."</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g>을(를) 포맷하지 못했습니다."</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"내부 저장소로 포맷"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> 사용 가능"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"내부 저장소 제거"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"기기의 저장소를 제거하면 저장소에 있는 앱 작동이 중단됩니다. 이 USB 드라이브를 포맷하면 이 기기에서만 작동하며 다른 기기에서는 작동하지 않습니다."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> 제거 중..."</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"사용된 저장용량"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> 이동 중..."</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"이동 중에 드라이브를 삭제하지 마세요.\n이동이 완료될 때까지 이 기기에서 <xliff:g id="APPNAME">%1$s</xliff:g> 앱을 사용할 수 없습니다."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"내부 저장소를 저장하지 않으시겠습니까?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'저장 안함\'을 선택하면 이 드라이브에 저장된 모든 데이터가 삭제됩니다. 계속하시겠습니까?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"저장 안함"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"저장공간이 충분하지 않습니다."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"앱이 없습니다."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"복제 방지된 앱입니다."</string>

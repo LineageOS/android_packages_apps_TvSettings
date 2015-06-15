@@ -219,6 +219,8 @@
     <string name="storage_format" msgid="3759273736493279595">"മായ്‌ക്കുക, ഫോർമാറ്റുചെയ്യുക"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"ഉപകരണ സംഭരണമായി ഫോർമാറ്റുചെയ്യുക"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"കണ‌ക്റ്റുചെയ്‌തിട്ടില്ല"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"ഈ ആന്തരിക സംഭരണം മറക്കുക"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"ഈ ഡ്രൈവിൽ അടങ്ങിയിരിക്കുന്ന ആപ്സ്, ഫോട്ടോകൾ, വിവരങ്ങൾ എന്നിവ ഉപയോഗിക്കാൻ, വീണ്ടുമത് പ്ലഗിൻ ചെയ്താൽ മതി. ഇതരമാർഗ്ഗമെന്ന നിലയിൽ, ഉപകരണം ലഭ്യമല്ലെങ്കിൽ, നിങ്ങൾക്ക് ഈ ഉപകരണം മറക്കാൻ തിരഞ്ഞെടുക്കാം.\n\nനിങ്ങൾ മറക്കുക എന്ന ഓപ്ഷൻ തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ, ഉപകരണത്തിൽ അടങ്ങിയിരിക്കുന്ന എല്ലാ വിവരവും ശാശ്വതമായി നഷ്‌ടപ്പെടും.\n\nനിങ്ങൾക്ക് പിന്നീട് ആപ്സ് വീണ്ടും ഇൻസ്റ്റാൾ ചെയ്യാനാകും, എന്നാൽ ഈ ഉപകരണത്തിൽ സംഭരിച്ചിരിക്കുന്ന വിവരങ്ങൾ നഷ്‌ടമാകും."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"ഉപകരണ സംഭരണം"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"നീക്കംചെയ്യാനാവുന്ന സംഭരണം"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"റീസെറ്റുചെയ്യുക"</string>
@@ -226,6 +228,7 @@
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> മൗണ്ടുചെയ്യാനായില്ല"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിനെ സുരക്ഷിതമായി ഒഴിവാക്കി"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിനെ സുരക്ഷിതമായി ഒഴിവാക്കാനായില്ല"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"ഇജക്റ്റുചെയ്യാനുള്ള ഡ്രൈവ് കണ്ടെത്താൻ കഴിഞ്ഞില്ല"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിനെ ഫോർമാറ്റുചെയ്‌തു"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> ഫോർമാറ്റുചെയ്യാനായില്ല"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"ആന്തരിക സംഭരണമായി ഫോർമാറ്റുചെയ്യൂ"</string>
@@ -243,9 +246,13 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> ലഭ്യമാണ്"</string>
     <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"ആന്തരിക സംഭരണം ഒഴിവാക്കുക"</string>
     <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"ഈ ഉപകരണത്തിലെ ആപ്പ്‌സ് ഒഴിവാക്കുമ്പോൾ, ഈ ഉപകരണ സംഭരണം പ്രവർത്തിക്കുന്നത് നിർത്തും. ഈ ഉപകരണത്തിൽ മാത്രം പ്രവർത്തിക്കുന്നതിന് ഈ USB ഡ്രൈവ് ഫോർമാറ്റുചെയ്‌തു. അത് മറ്റൊന്നിലും പ്രവർത്തിക്കില്ല."</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> ഇജക്റ്റുചെയ്യുന്നു…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"ഉപയോഗിച്ച സംഭരണം"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിനെ നീക്കുന്നു…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"നീക്കുന്നതിനിടെ ഡ്രൈവ് നീക്കംചെയ്യരുത്.\nനീക്കൽ പൂർത്തിയാകും വരെ ഇതിൽ <xliff:g id="APPNAME">%1$s</xliff:g> ആപ്പ് ലഭ്യമാകില്ല."</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"ആന്തരിക സംഭരണം മറക്കണോ?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'മറക്കുക\' തിരഞ്ഞെടുത്താൽ ഈ ഡ്രൈവിൽ സംഭരിച്ചിട്ടുള്ള എല്ലാ വിവരങ്ങളും ഇഷ്ടപ്പെടും. തുടരാൻ ആഗ്രഹിക്കുന്നുണ്ടോ?"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"മറക്കുക"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"ആവശ്യമായ സംഭരണ ഇടമില്ല."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"ആപ്പ് നിലവിലില്ല."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"പകർത്തുന്നതിൽ നിന്ന് ആപ്പിനെ പരിരക്ഷിച്ചിരിക്കുന്നു."</string>
