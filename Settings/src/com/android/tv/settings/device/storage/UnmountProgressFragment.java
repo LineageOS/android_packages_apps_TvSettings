@@ -39,6 +39,7 @@ public class UnmountProgressFragment extends ProgressDialogFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         final CharSequence description = getArguments().getCharSequence(ARG_DESCRIPTION);
+        // TODO: fix this string name
         setTitle(getActivity().getString(R.string.sotrage_wizard_eject_progress_title,
                 description));
     }
