@@ -61,7 +61,11 @@ public class NewStorageActivity extends Activity {
 
         private static final int ACTION_BROWSE = 1;
         private static final int ACTION_ADOPT = 2;
-        private static final int ACTION_EJECT = 3;
+        private static final int ACTION_UNMOUNT = 3;
+
+        private String mVolumeId;
+        private String mDiskId;
+        private String mDescription;
 
         public static NewStorageFragment newInstance(String volumeId, String diskId) {
             final Bundle b = new Bundle(1);
@@ -73,24 +77,29 @@ public class NewStorageActivity extends Activity {
         }
 
         @Override
-        public @NonNull GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
+        public void onCreate(Bundle savedInstanceState) {
             StorageManager storageManager = getActivity().getSystemService(StorageManager.class);
-            final String volumeId = getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID);
-            final String diskId = getArguments().getString(DiskInfo.EXTRA_DISK_ID);
-            if (TextUtils.isEmpty(volumeId) && TextUtils.isEmpty(diskId)) {
+            mVolumeId = getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID);
+            mDiskId = getArguments().getString(DiskInfo.EXTRA_DISK_ID);
+            if (TextUtils.isEmpty(mVolumeId) && TextUtils.isEmpty(mDiskId)) {
                 throw new IllegalStateException(
                         "NewStorageActivity launched without specifying new storage");
             }
-            final String description;
-            if (!TextUtils.isEmpty(volumeId)) {
-                final VolumeInfo info = storageManager.findVolumeById(volumeId);
-                description = storageManager.getBestVolumeDescription(info);
+            if (!TextUtils.isEmpty(mVolumeId)) {
+                final VolumeInfo info = storageManager.findVolumeById(mVolumeId);
+                mDescription = storageManager.getBestVolumeDescription(info);
             } else {
-                final DiskInfo info = storageManager.findDiskById(diskId);
-                description = info.getDescription();
+                final DiskInfo info = storageManager.findDiskById(mDiskId);
+                mDescription = info.getDescription();
             }
+
+            super.onCreate(savedInstanceState);
+        }
+
+        @Override
+        public @NonNull GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
             return new GuidanceStylist.Guidance(getString(R.string.storage_new_title),
-                    description, null,
+                    mDescription, null,
                     getActivity().getDrawable(R.drawable.ic_settings_storage));
         }
 
@@ -107,12 +116,21 @@ public class NewStorageActivity extends Activity {
                     .build());
             actions.add(new GuidedAction.Builder()
                     .title(getString(R.string.storage_new_action_eject))
-                    .id(ACTION_EJECT)
+                    .id(ACTION_UNMOUNT)
                     .build());
         }
 
         @Override
         public void onGuidedActionClicked(GuidedAction action) {
+            switch ((int) action.getId()) {
+                case ACTION_UNMOUNT:
+                    // If we've mounted a volume, eject it. Otherwise just treat eject as cancel
+                    if (!TextUtils.isEmpty(mVolumeId)) {
+                        startActivity(
+                                UnmountActivity.getIntent(getActivity(), mVolumeId, mDescription));
+                    }
+                    getActivity().finish();
+            }
         }
     }
 

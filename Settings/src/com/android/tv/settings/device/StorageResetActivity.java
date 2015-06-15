@@ -57,8 +57,7 @@ import com.android.tv.settings.device.storage.FormattingProgressFragment;
 import com.android.tv.settings.device.storage.MoveAppProgressFragment;
 import com.android.tv.settings.device.storage.MoveAppStepFragment;
 import com.android.tv.settings.device.storage.SlowDriveStepFragment;
-import com.android.tv.settings.device.storage.UnmountInternalStepFragment;
-import com.android.tv.settings.device.storage.UnmountProgressFragment;
+import com.android.tv.settings.device.storage.UnmountActivity;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.Layout.Action;
 import com.android.tv.settings.dialog.Layout.Header;
@@ -80,7 +79,7 @@ import java.util.Map;
  */
 public class StorageResetActivity extends SettingsLayoutActivity
         implements MoveAppStepFragment.Callback, FormatAsPrivateStepFragment.Callback,
-        ForgetPrivateStepFragment.Callback, UnmountInternalStepFragment.Callback {
+        ForgetPrivateStepFragment.Callback {
 
     private static final String TAG = "StorageResetActivity";
     private static final long INVALID_SIZE = -1;
@@ -104,17 +103,12 @@ public class StorageResetActivity extends SettingsLayoutActivity
     private static final String MOVE_PROGRESS_DIALOG_BACKSTACK_TAG = "moveProgressDialog";
     private static final String FORMAT_DIALOG_BACKSTACK_TAG = "formatDialog";
     private static final String FORGET_DIALOG_BACKSTACK_TAG = "forgetDialog";
-    private static final String UNMOUNT_DIALOG_BACKSTACK_TAG = "unmountDialog";
 
     private static final String SAVE_STATE_MOVE_ID = "StorageResetActivity.moveId";
     private static final String SAVE_STATE_FORMAT_PRIVATE_DISK_ID =
             "StorageResetActivity.formatPrivateDiskId";
     private static final String SAVE_STATE_FORMAT_PRIVATE_DISK_DESC =
             "StorageResetActivity.formatPrivateDiskDesc";
-    private static final String SAVE_STATE_UNMOUNT_VOLUME_ID =
-            "StorageResetActivity.unmountVolumeId";
-    private static final String SAVE_STATE_UNMOUNT_VOLUME_DESC =
-            "StorageResetActivity.unmountVolumeId";
 
     private class SizeStringGetter extends StringGetter {
         private long mSize = INVALID_SIZE;
@@ -181,12 +175,7 @@ public class StorageResetActivity extends SettingsLayoutActivity
     private String mFormatAsPrivateDiskId;
     private String mFormatAsPrivateVolumeDesc;
 
-    // Non-null means we're in the process of unmounting this volume
-    private String mUnmountVolumeId;
-    private String mUnmountVolumeDesc;
-
     private static final int LOADER_FORMAT_AS_PRIVATE = 0;
-    private static final int LOADER_UNMOUNT = 1;
 
     private final Handler mHandler = new Handler();
 
@@ -210,10 +199,6 @@ public class StorageResetActivity extends SettingsLayoutActivity
                     savedInstanceState.getString(SAVE_STATE_FORMAT_PRIVATE_DISK_DESC);
 
             kickFormatAsPrivateLoader();
-
-            mUnmountVolumeId = savedInstanceState.getString(SAVE_STATE_UNMOUNT_VOLUME_ID);
-            mUnmountVolumeDesc = savedInstanceState.getString(SAVE_STATE_UNMOUNT_VOLUME_DESC);
-            kickUnmountLoader();
         }
     }
 
@@ -223,8 +208,6 @@ public class StorageResetActivity extends SettingsLayoutActivity
         outState.putInt(SAVE_STATE_MOVE_ID, mAppMoveId);
         outState.putString(SAVE_STATE_FORMAT_PRIVATE_DISK_ID, mFormatAsPrivateDiskId);
         outState.putString(SAVE_STATE_FORMAT_PRIVATE_DISK_DESC, mFormatAsPrivateVolumeDesc);
-        outState.putString(SAVE_STATE_UNMOUNT_VOLUME_ID, mUnmountVolumeId);
-        outState.putString(SAVE_STATE_UNMOUNT_VOLUME_DESC, mUnmountVolumeDesc);
     }
 
     @Override
@@ -587,18 +570,13 @@ public class StorageResetActivity extends SettingsLayoutActivity
                 fragment.show(getFragmentManager(), null);
                 break;
             case ACTION_EJECT_PUBLIC:
+                onBackPressed();
                 onRequestUnmount(action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID));
                 break;
-            case ACTION_EJECT_PRIVATE: {
-                final Fragment f =
-                        UnmountInternalStepFragment.newInstance(mStorageManager.findVolumeById(
-                                action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID)));
-                getFragmentManager().beginTransaction()
-                        .replace(android.R.id.content, f)
-                        .addToBackStack(UNMOUNT_DIALOG_BACKSTACK_TAG)
-                        .commit();
+            case ACTION_EJECT_PRIVATE:
+                onBackPressed();
+                onRequestUnmount(action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID));
                 break;
-            }
             case ACTION_ERASE_PUBLIC: {
                 // When we erase a public volume, we're intending to use it as a private volume,
                 // so launch the format-as-private wizard.
@@ -656,8 +634,6 @@ public class StorageResetActivity extends SettingsLayoutActivity
     }
 
     public void onRequestUnmount(String volumeId) {
-        getFragmentManager().popBackStack(UNMOUNT_DIALOG_BACKSTACK_TAG,
-                FragmentManager.POP_BACK_STACK_INCLUSIVE);
         final VolumeInfo volumeInfo = mStorageManager.findVolumeById(volumeId);
         if (volumeInfo == null) {
             Toast.makeText(this, getString(R.string.storage_unmount_failure_cant_find),
@@ -665,21 +641,8 @@ public class StorageResetActivity extends SettingsLayoutActivity
             return;
         }
         final String description = mStorageManager.getBestVolumeDescription(volumeInfo);
-        final Fragment fragment = UnmountProgressFragment.newInstance(description);
-        getFragmentManager().beginTransaction()
-                .addToBackStack(UNMOUNT_DIALOG_BACKSTACK_TAG)
-                .replace(android.R.id.content, fragment)
-                .commit();
-        mUnmountVolumeId = volumeId;
-        mUnmountVolumeDesc = description;
-        kickUnmountLoader();
-    }
-
-    private void kickUnmountLoader() {
-        if (!TextUtils.isEmpty(mUnmountVolumeId)) {
-            getLoaderManager().initLoader(LOADER_UNMOUNT, null,
-                    new UnmountLoaderCallback(mUnmountVolumeId, mUnmountVolumeDesc));
-        }
+        final Intent intent = UnmountActivity.getIntent(this, volumeId, description);
+        startActivity(intent);
     }
 
     /**
@@ -748,90 +711,6 @@ public class StorageResetActivity extends SettingsLayoutActivity
                         mDescription), Toast.LENGTH_SHORT).show();
             }
         }
-    }
-
-    private static class UnmountTaskLoader extends SettingsAsyncTaskLoader<Boolean> {
-
-        private final StorageManager mStorageManager;
-        private final String mVolumeId;
-
-        public UnmountTaskLoader(Context context, String volumeId) {
-            super(context);
-            mStorageManager = context.getSystemService(StorageManager.class);
-            mVolumeId = volumeId;
-        }
-
-        @Override
-        protected void onDiscardResult(Boolean result) {}
-
-        @Override
-        public Boolean loadInBackground() {
-            try {
-                final long minTime = System.currentTimeMillis() + 3000;
-
-                mStorageManager.unmount(mVolumeId);
-
-                long waitTime = minTime - System.currentTimeMillis();
-                while (waitTime > 0) {
-                    Thread.sleep(waitTime);
-                    waitTime = minTime - System.currentTimeMillis();
-                }
-                return true;
-            } catch (Exception e) {
-                Log.d(TAG, "Could not unmount", e);
-                return false;
-            }
-        }
-    }
-
-    private class UnmountLoaderCallback implements LoaderManager.LoaderCallbacks<Boolean> {
-
-        private final String mVolumeId;
-        private final String mVolumeDescription;
-
-        public UnmountLoaderCallback(String volumeId, String volumeDescription) {
-            mVolumeId = volumeId;
-            mVolumeDescription = volumeDescription;
-        }
-
-        @Override
-        public Loader<Boolean> onCreateLoader(int id, Bundle args) {
-            return new UnmountTaskLoader(StorageResetActivity.this, mVolumeId);
-        }
-
-        @Override
-        public void onLoadFinished(Loader<Boolean> loader, final Boolean success) {
-            if (success == null) {
-                // No results yet, wait for something interesting to come in.
-                return;
-            }
-            mHandler.post(new Runnable() {
-                @Override
-                public void run() {
-                    if (isResumed() && TextUtils.equals(mUnmountVolumeId, mVolumeId)) {
-                        if (success) {
-                            Toast.makeText(StorageResetActivity.this,
-                                    getString(R.string.storage_unmount_success, mVolumeDescription),
-                                    Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(StorageResetActivity.this,
-                                    getString(R.string.storage_unmount_failure, mVolumeDescription),
-                                    Toast.LENGTH_SHORT).show();
-                        }
-
-                        getFragmentManager().popBackStack(UNMOUNT_DIALOG_BACKSTACK_TAG,
-                                FragmentManager.POP_BACK_STACK_INCLUSIVE);
-
-                        mUnmountVolumeId = null;
-                        mUnmountVolumeDesc = null;
-                        getLoaderManager().destroyLoader(LOADER_UNMOUNT);
-                    }
-                }
-            });
-        }
-
-        @Override
-        public void onLoaderReset(Loader<Boolean> loader) {}
     }
 
     private static class FormatAsPrivateTaskLoader
