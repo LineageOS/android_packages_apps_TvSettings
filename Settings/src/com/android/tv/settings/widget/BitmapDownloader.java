@@ -17,6 +17,7 @@
 package com.android.tv.settings.widget;
 
 import android.app.ActivityManager;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.Log;
@@ -30,6 +31,7 @@ import com.android.tv.settings.util.UriUtils;
 import java.lang.ref.SoftReference;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+import java.util.Map;
 
 /**
  * Downloader class which loads a resource URI into an image view.
@@ -339,5 +341,15 @@ public class BitmapDownloader {
             }
         }
         return null;
+    }
+
+    public void invalidateCachedResources() {
+        Map<String, BitmapItem> snapshot = mMemoryCache.snapshot();
+        for (String uri: snapshot.keySet()) {
+            Log.d(TAG, "remove cached image: " + uri);
+            if (uri.startsWith(ContentResolver.SCHEME_ANDROID_RESOURCE)) {
+                mMemoryCache.remove(uri);
+            }
+        }
     }
 }

@@ -89,8 +89,8 @@ public class SoundActivity extends Activity implements Action.Listener {
     }
 
     public static int getIconResource(ContentResolver contentResolver) {
-        return getSoundEffectsEnabled(contentResolver) ? R.drawable.ic_settings_sound_on
-                : R.drawable.ic_settings_sound_off;
+        return getSoundEffectsEnabled(contentResolver) ? R.drawable.settings_sound_on_icon
+                : R.drawable.settings_sound_off_icon;
     }
 
     private void setSoundEffectsEnabled(int value) {
