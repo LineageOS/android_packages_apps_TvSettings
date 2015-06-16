@@ -71,6 +71,7 @@ public class MainSettings extends MenuActivity implements OnAccountsUpdateListen
         sInstance = this;
         updateAccessories();
         mBrowseInfo.checkForDeveloperOptionUpdate();
+        mBrowseInfo.updateSounds();
 
         // Update network item forcefully here
         // because mBrowseInfo doesn't have information regarding Ethernet availability.

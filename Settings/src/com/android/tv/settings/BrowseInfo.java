@@ -172,8 +172,10 @@ public class BrowseInfo extends BrowseInfoBase {
     private final BluetoothAdapter mBtAdapter;
     private final Object mGuard = new Object();
     private MenuItem mWifiItem = null;
+    private MenuItem mSoundsItem = null;
     private MenuItem mDeveloperOptionItem = null;
     private ArrayObjectAdapter mWifiRow = null;
+    private ArrayObjectAdapter mSoundsRow = null;
     private ArrayObjectAdapter mDeveloperRow = null;
 
     private final PreferenceUtils mPreferenceUtils;
@@ -305,14 +307,18 @@ public class BrowseInfo extends BrowseInfoBase {
                 }
                 final MenuItem item = builder.build();
                 if (key.equals(PREF_KEY_WIFI)) {
+                    mWifiRow = mRow;
                     mWifiItem = item;
                     mRow.add(mWifiItem);
-                    mWifiRow = mRow;
-                } else if (! key.equals(PREF_KEY_DEVELOPER) || mDeveloperEnabled) {
-                    mRow.add(item);
-                } else {
+                } else if (key.equals(SoundActivity.getPreferenceKey())) {
+                    mSoundsRow = mRow;
+                    mSoundsItem = item;
+                    mRow.add(mSoundsItem);
+                } else if (key.equals(PREF_KEY_DEVELOPER) && !mDeveloperEnabled) {
                     mDeveloperRow = mRow;
                     mDeveloperOptionItem = item;
+                } else {
+                    mRow.add(item);
                 }
             }
         }
@@ -370,6 +376,15 @@ public class BrowseInfo extends BrowseInfoBase {
                                     ? R.string.connectivity_network : R.string.connectivity_wifi))
                         .build();
                 mWifiRow.replace(index, mWifiItem);
+            }
+        }
+    }
+
+    public void updateSounds() {
+        if (mSoundsItem != null) {
+            int index = mSoundsRow.indexOf(mSoundsItem);
+            if (index >= 0) {
+                mSoundsRow.notifyArrayItemRangeChanged(index, 1);
             }
         }
     }
