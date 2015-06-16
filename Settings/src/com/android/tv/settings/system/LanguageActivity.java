@@ -35,6 +35,7 @@ import com.android.tv.settings.dialog.old.ActionAdapter;
 import com.android.tv.settings.dialog.old.ActionFragment;
 import com.android.tv.settings.dialog.old.ContentFragment;
 import com.android.tv.settings.dialog.old.DialogActivity;
+import com.android.tv.settings.widget.BitmapDownloader;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -150,6 +151,9 @@ public class LanguageActivity extends DialogActivity implements ActionAdapter.Li
             int i = Integer.parseInt(s);
             setLanguagePreference(i);
             setWifiCountryCode();
+            // Locale change can mean new icons for RTL languages, so invalidate
+            // any cached images from resources.
+            BitmapDownloader.getInstance(this).invalidateCachedResources();
             finish();
         }
     }
