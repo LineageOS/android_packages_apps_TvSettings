@@ -70,7 +70,7 @@ public class StorageResetActivity extends SettingsLayoutActivity
         implements  ForgetPrivateStepFragment.Callback {
 
     private static final String TAG = "StorageResetActivity";
-    private static final long INVALID_SIZE = -1;
+    private static final long SIZE_CALCULATING = -1;
     private static final int ACTION_RESET_DEVICE = 1;
     private static final int ACTION_CANCEL = 2;
     private static final int ACTION_CLEAR_CACHE = 3;
@@ -91,7 +91,7 @@ public class StorageResetActivity extends SettingsLayoutActivity
     private static final String FORGET_DIALOG_BACKSTACK_TAG = "forgetDialog";
 
     private class SizeStringGetter extends StringGetter {
-        private long mSize = INVALID_SIZE;
+        private long mSize = SIZE_CALCULATING;
 
         @Override
         public String get() {
@@ -107,7 +107,6 @@ public class StorageResetActivity extends SettingsLayoutActivity
     private StorageManager mStorageManager;
 
     private final Map<String, StorageLayoutGetter> mStorageLayoutGetters = new ArrayMap<>();
-    private final Map<String, SizeStringGetter> mStorageDescriptionGetters = new ArrayMap<>();
 
     private final StorageEventListener mStorageListener = new StorageEventListener() {
         @Override
@@ -131,7 +130,6 @@ public class StorageResetActivity extends SettingsLayoutActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
         mStorageManager = getSystemService(StorageManager.class);
         mStorageHeadersGetter.refreshView();
@@ -223,20 +221,20 @@ public class StorageResetActivity extends SettingsLayoutActivity
                     storageGetter.startListening();
                 }
             }
-            SizeStringGetter sizeGetter = mStorageDescriptionGetters.get(volId);
-            if (sizeGetter == null) {
-                sizeGetter = new SizeStringGetter();
-                mStorageDescriptionGetters.put(volId, sizeGetter);
-            }
-            final File path = vol.getPath();
-            if (path != null) {
-                // TODO: something more dynamic here
-                sizeGetter.setSize(path.getTotalSpace());
-            }
             return new Header.Builder(res)
                     .title(mStorageManager.getBestVolumeDescription(vol))
-                    .description(sizeGetter)
+                    .description(getSize(vol))
                     .build().add(storageGetter);
+        }
+
+        private String getSize(VolumeInfo vol) {
+            final File path = vol.getPath();
+            if (vol.isMountedReadable() && path != null) {
+                return String.format(getString(R.string.storage_size),
+                        formatSize(path.getTotalSpace()));
+            } else {
+                return null;
+            }
         }
     };
 
@@ -545,7 +543,7 @@ public class StorageResetActivity extends SettingsLayoutActivity
     }
 
     private String formatSize(long size) {
-        return (size == INVALID_SIZE) ? getString(R.string.storage_calculating_size)
+        return (size == SIZE_CALCULATING) ? getString(R.string.storage_calculating_size)
                 : Formatter.formatShortFileSize(this, size);
     }
 
