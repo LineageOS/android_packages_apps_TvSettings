@@ -1266,8 +1266,9 @@ public class Layout implements Parcelable {
 
         // Skip past any unselectable items
         final int rowCount = mLayoutRows.size();
-        while (mNavigationCursor.mSelectedIndex < rowCount - 1 && ((
-                mLayoutRows.get(mNavigationCursor.mSelectedIndex).mViewType
+        while (mNavigationCursor.mSelectedIndex < rowCount - 1 &&
+                mNavigationCursor.mSelectedIndex >= 0 &&
+                ((mLayoutRows.get(mNavigationCursor.mSelectedIndex).mViewType
                         == LayoutRow.VIEW_TYPE_STATIC) ||
                 (mLayoutRows.get(mNavigationCursor.mSelectedIndex).mViewType
                         == LayoutRow.VIEW_TYPE_WALLOFTEXT))) {
