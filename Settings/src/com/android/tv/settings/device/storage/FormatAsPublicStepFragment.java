@@ -18,15 +18,16 @@ package com.android.tv.settings.device.storage;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.os.storage.DiskInfo;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
+import android.text.TextUtils;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.device.StorageResetActivity;
 
 import java.util.List;
 
@@ -35,21 +36,36 @@ public class FormatAsPublicStepFragment extends GuidedStepFragment {
     private static final int ACTION_ID_BACKUP = 1;
     private static final int ACTION_ID_FORMAT = 2;
 
-    private StorageManager mStorageManager;
+    private String mVolumeId;
+    private String mDiskId;
 
-    public static FormatAsPublicStepFragment newInstance(VolumeInfo volumeInfo) {
+    public interface Callback {
+        void onRequestFormatAsPublic(String diskId, String volumeId);
+        void onCancelFormatDialog();
+    }
+
+    public static FormatAsPublicStepFragment newInstance(String diskId) {
         final FormatAsPublicStepFragment fragment = new FormatAsPublicStepFragment();
         final Bundle b = new Bundle(1);
-        b.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeInfo.getId());
+        b.putString(DiskInfo.EXTRA_DISK_ID, diskId);
         fragment.setArguments(b);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        mDiskId = getArguments().getString(DiskInfo.EXTRA_DISK_ID);
+        final StorageManager storageManager = getActivity().getSystemService(StorageManager.class);
+        final List<VolumeInfo> volumes = storageManager.getVolumes();
+        for (final VolumeInfo volume : volumes) {
+            if ((volume.getType() == VolumeInfo.TYPE_PRIVATE ||
+                    volume.getType() == VolumeInfo.TYPE_PUBLIC) &&
+                    TextUtils.equals(volume.getDiskId(), mDiskId)) {
+                mVolumeId = volume.getId();
+                break;
+            }
+        }
         super.onCreate(savedInstanceState);
-
-        mStorageManager = getActivity().getSystemService(StorageManager.class);
     }
 
     @Override
@@ -66,10 +82,12 @@ public class FormatAsPublicStepFragment extends GuidedStepFragment {
                 .id(ACTION_ID_CANCEL)
                 .title(getString(android.R.string.cancel))
                 .build());
-        actions.add(new GuidedAction.Builder()
-                .id(ACTION_ID_BACKUP)
-                .title(getString(R.string.storage_wizard_backup_apps_action))
-                .build());
+        if (!TextUtils.isEmpty(mVolumeId)) {
+            actions.add(new GuidedAction.Builder()
+                    .id(ACTION_ID_BACKUP)
+                    .title(getString(R.string.storage_wizard_backup_apps_action))
+                    .build());
+        }
         actions.add(new GuidedAction.Builder()
                 .id(ACTION_ID_FORMAT)
                 .title(getString(R.string.storage_wizard_format_action))
@@ -81,20 +99,15 @@ public class FormatAsPublicStepFragment extends GuidedStepFragment {
         final long id = action.getId();
 
         if (id == ACTION_ID_CANCEL) {
-            getFragmentManager().popBackStack();
+            ((Callback) getActivity()).onCancelFormatDialog();
         } else if (id == ACTION_ID_BACKUP) {
-            final VolumeInfo volumeInfo = mStorageManager.findVolumeById(
-                    getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
-            final Fragment f = BackupAppsStepFragment.newInstance(volumeInfo);
+            final Fragment f = BackupAppsStepFragment.newInstance(mVolumeId);
             getFragmentManager().beginTransaction()
                     .replace(android.R.id.content, f)
                     .addToBackStack(null)
                     .commit();
         } else if (id == ACTION_ID_FORMAT) {
-            final VolumeInfo volumeInfo = mStorageManager.findVolumeById(
-                    getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
-            new StorageResetActivity.FormatAsPublicTask(getActivity(), volumeInfo).execute();
-            getFragmentManager().popBackStack();
+            ((Callback) getActivity()).onRequestFormatAsPublic(mDiskId, mVolumeId);
         }
     }
 }

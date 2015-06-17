@@ -31,9 +31,9 @@ import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 
+import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.apps.AppInfo;
-import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,10 +57,10 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
 
     private final List<ApplicationInfo> mInfos = new ArrayList<>();
 
-    public static BackupAppsStepFragment newInstance(VolumeInfo volumeInfo) {
+    public static BackupAppsStepFragment newInstance(String volumeId) {
         final BackupAppsStepFragment fragment = new BackupAppsStepFragment();
         final Bundle b = new Bundle(1);
-        b.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeInfo.getId());
+        b.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeId);
         fragment.setArguments(b);
         return fragment;
     }
