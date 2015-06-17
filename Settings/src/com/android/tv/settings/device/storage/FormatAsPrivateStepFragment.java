@@ -17,8 +17,7 @@
 package com.android.tv.settings.device.storage;
 
 import android.os.Bundle;
-import android.os.storage.StorageManager;
-import android.os.storage.VolumeInfo;
+import android.os.storage.DiskInfo;
 import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
@@ -34,26 +33,17 @@ public class FormatAsPrivateStepFragment extends GuidedStepFragment {
     private static final int ACTION_ID_FORMAT = 1;
     private static final int ACTION_ID_LEARN_MORE = 2;
 
-    private StorageManager mStorageManager;
-
     public interface Callback {
-        void onRequestFormatAsPrivate(VolumeInfo volumeInfo);
+        void onRequestFormatAsPrivate(String diskId);
         void onCancelFormatDialog();
     }
 
-    public static FormatAsPrivateStepFragment newInstance(VolumeInfo volumeInfo) {
+    public static FormatAsPrivateStepFragment newInstance(String diskId) {
         final FormatAsPrivateStepFragment fragment = new FormatAsPrivateStepFragment();
         final Bundle b = new Bundle(1);
-        b.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeInfo.getId());
+        b.putString(DiskInfo.EXTRA_DISK_ID, diskId);
         fragment.setArguments(b);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        mStorageManager = getActivity().getSystemService(StorageManager.class);
     }
 
     @Override
@@ -88,10 +78,8 @@ public class FormatAsPrivateStepFragment extends GuidedStepFragment {
             final Callback callback = (Callback) getActivity();
             callback.onCancelFormatDialog();
         } else if (id == ACTION_ID_FORMAT) {
-            final VolumeInfo volumeInfo = mStorageManager.findVolumeById(
-                    getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
             final Callback callback = (Callback) getActivity();
-            callback.onRequestFormatAsPrivate(volumeInfo);
+            callback.onRequestFormatAsPrivate(getArguments().getString(DiskInfo.EXTRA_DISK_ID));
         } else if (id == ACTION_ID_LEARN_MORE) {
             // todo
         }

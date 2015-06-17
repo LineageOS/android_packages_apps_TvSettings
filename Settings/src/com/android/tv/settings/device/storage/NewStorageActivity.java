@@ -34,6 +34,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.device.StorageResetActivity;
 
 import java.util.List;
 
@@ -123,14 +124,21 @@ public class NewStorageActivity extends Activity {
         @Override
         public void onGuidedActionClicked(GuidedAction action) {
             switch ((int) action.getId()) {
+                case ACTION_BROWSE:
+                    startActivity(new Intent(getActivity(), StorageResetActivity.class));
+                    break;
+                case ACTION_ADOPT:
+                    startActivity(FormatActivity.getFormatAsPrivateIntent(getActivity(), mDiskId));
+                    break;
                 case ACTION_UNMOUNT:
                     // If we've mounted a volume, eject it. Otherwise just treat eject as cancel
                     if (!TextUtils.isEmpty(mVolumeId)) {
                         startActivity(
                                 UnmountActivity.getIntent(getActivity(), mVolumeId, mDescription));
                     }
-                    getActivity().finish();
+                    break;
             }
+            getActivity().finish();
         }
     }
 
@@ -139,7 +147,6 @@ public class NewStorageActivity extends Activity {
         private StorageManager mStorageManager;
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.d(TAG, "Broadcasted!");
             mStorageManager = context.getSystemService(StorageManager.class);
 
             if (TextUtils.equals(intent.getAction(), VolumeInfo.ACTION_VOLUME_STATE_CHANGED)) {
@@ -181,7 +188,6 @@ public class NewStorageActivity extends Activity {
             final String volumeId = intent.getStringExtra(VolumeInfo.EXTRA_VOLUME_ID);
 
             final List<VolumeInfo> volumeInfos = mStorageManager.getVolumes();
-            boolean found = false;
             for (final VolumeInfo info : volumeInfos) {
                 if (!TextUtils.equals(info.getId(), volumeId)) {
                     continue;
@@ -200,6 +206,7 @@ public class NewStorageActivity extends Activity {
                     final Intent i = new Intent(context, NewStorageActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     i.putExtra(VolumeInfo.EXTRA_VOLUME_ID, volumeId);
+                    i.putExtra(DiskInfo.EXTRA_DISK_ID, disk.getId());
                     context.startActivity(i);
                     break;
                 }
