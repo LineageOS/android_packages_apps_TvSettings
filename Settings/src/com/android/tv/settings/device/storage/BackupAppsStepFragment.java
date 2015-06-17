@@ -21,7 +21,6 @@ import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
@@ -51,11 +50,12 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
     private StorageManager mStorageManager;
 
     private String mVolumeId;
+    private ApplicationsState.AppFilter mAppFilter;
 
     private IconLoaderTask mIconLoaderTask;
     private final Map<String, Drawable> mIconMap = new ArrayMap<>();
 
-    private final List<ApplicationInfo> mInfos = new ArrayList<>();
+    private final List<ApplicationsState.AppEntry> mEntries = new ArrayList<>();
 
     public static BackupAppsStepFragment newInstance(String volumeId) {
         final BackupAppsStepFragment fragment = new BackupAppsStepFragment();
@@ -72,6 +72,21 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
         mStorageManager = getActivity().getSystemService(StorageManager.class);
 
         mVolumeId = getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID);
+        final VolumeInfo info = mStorageManager.findVolumeById(mVolumeId);
+        if (info != null) {
+            mAppFilter = new ApplicationsState.VolumeFilter(info.getFsUuid());
+        } else {
+            // TODO: bail out somehow
+            mAppFilter = new ApplicationsState.AppFilter() {
+                @Override
+                public void init() {}
+
+                @Override
+                public boolean filterApp(ApplicationsState.AppEntry info) {
+                    return false;
+                }
+            };
+        }
 
         mApplicationsState = ApplicationsState.getInstance(getActivity().getApplication());
         mSession = mApplicationsState.newSession(this);
@@ -83,6 +98,7 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
     public void onResume() {
         super.onResume();
         mSession.resume();
+        updateActions();
     }
 
     @Override
@@ -112,25 +128,20 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
 
     @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
-        actions.addAll(getAppActions(true));
+        final List<ApplicationsState.AppEntry> entries = mSession.rebuild(mAppFilter,
+                ApplicationsState.ALPHA_COMPARATOR);
+        if (entries != null) {
+            actions.addAll(getAppActions(true, entries));
+        }
     }
 
-    private List<GuidedAction> getAppActions(boolean refreshIcons) {
-        final List<ApplicationInfo> infos = mPackageManager.getInstalledApplications(0);
-        final List<ApplicationInfo> usedInfos = new ArrayList<>(infos.size());
+    private List<GuidedAction> getAppActions(boolean refreshIcons,
+            List<ApplicationsState.AppEntry> entries) {
 
-        final List<GuidedAction> actions = new ArrayList<>(infos.size());
-        for (final ApplicationInfo info : infos) {
-            final ApplicationsState.AppEntry entry =
-                    mApplicationsState.getEntry(info.packageName,  UserHandle.getUserId(info.uid));
-            final VolumeInfo installedVolume = mPackageManager.getPackageCurrentVolume(info);
-
-            if (entry == null || installedVolume == null ||
-                    !TextUtils.equals(installedVolume.getId(), mVolumeId)) {
-                continue;
-            }
-            final int index = usedInfos.size();
-            usedInfos.add(info);
+        final List<GuidedAction> actions = new ArrayList<>(entries.size());
+        for (final ApplicationsState.AppEntry entry : entries) {
+            final int index = actions.size();
+            final ApplicationInfo info = entry.info;
             final AppInfo appInfo = new AppInfo(getActivity(), entry);
             actions.add(new GuidedAction.Builder()
                     .title(appInfo.getName())
@@ -139,31 +150,36 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
                     .id(index)
                     .build());
         }
-        mInfos.clear();
-        mInfos.addAll(usedInfos);
+        mEntries.clear();
+        mEntries.addAll(entries);
 
         if (refreshIcons) {
             if (mIconLoaderTask != null) {
                 mIconLoaderTask.cancel(true);
             }
-            mIconLoaderTask = new IconLoaderTask(usedInfos);
+            mIconLoaderTask = new IconLoaderTask(entries);
             mIconLoaderTask.execute();
         }
         return actions;
     }
 
     private void updateActions() {
-        setActions(getAppActions(true));
+        final List<ApplicationsState.AppEntry> entries = mSession.rebuild(mAppFilter,
+                ApplicationsState.ALPHA_COMPARATOR);
+        if (entries != null) {
+            setActions(getAppActions(true, entries));
+        } else {
+            setActions(getAppActions(true, mEntries));
+        }
     }
 
     @Override
     public void onGuidedActionClicked(GuidedAction action) {
         final int actionId = (int) action.getId();
-        final ApplicationInfo info = mInfos.get(actionId);
-        final AppInfo appInfo = new AppInfo(getActivity(), mApplicationsState.getEntry(
-                info.packageName,  UserHandle.getUserId(info.uid)));
+        final ApplicationsState.AppEntry entry = mEntries.get(actionId);
+        final AppInfo appInfo = new AppInfo(getActivity(), entry);
 
-        final MoveAppStepFragment fragment = MoveAppStepFragment.newInstance(info.packageName,
+        final MoveAppStepFragment fragment = MoveAppStepFragment.newInstance(entry.info.packageName,
                 appInfo.getName());
         getFragmentManager().beginTransaction()
                 .addToBackStack(null)
@@ -172,7 +188,9 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
     }
 
     @Override
-    public void onRunningStateChanged(boolean running) {}
+    public void onRunningStateChanged(boolean running) {
+        updateActions();
+    }
 
     @Override
     public void onPackageListChanged() {
@@ -181,17 +199,17 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
 
     @Override
     public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> apps) {
-
+        setActions(getAppActions(true, apps));
     }
 
     @Override
     public void onLauncherInfoChanged() {
-
+        updateActions();
     }
 
     @Override
     public void onLoadEntriesCompleted() {
-
+        updateActions();
     }
 
     @Override
@@ -210,18 +228,18 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
     }
 
     private class IconLoaderTask extends AsyncTask<Void, Void, Map<String, Drawable>> {
-        private final List<ApplicationInfo> mInfos;
+        private final List<ApplicationsState.AppEntry> mEntries;
 
-        public IconLoaderTask(List<ApplicationInfo> infos) {
-            mInfos = infos;
+        public IconLoaderTask(List<ApplicationsState.AppEntry> entries) {
+            mEntries = entries;
         }
 
         @Override
         protected Map<String, Drawable> doInBackground(Void... params) {
             // NB: Java doesn't like parameterized generics in varargs
-            final Map<String, Drawable> result = new ArrayMap<>(mInfos.size());
-            for (final ApplicationInfo info : mInfos) {
-                result.put(info.packageName, mPackageManager.getApplicationIcon(info));
+            final Map<String, Drawable> result = new ArrayMap<>(mEntries.size());
+            for (final ApplicationsState.AppEntry entry : mEntries) {
+                result.put(entry.info.packageName, mPackageManager.getApplicationIcon(entry.info));
             }
             return result;
         }
@@ -229,7 +247,7 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
         @Override
         protected void onPostExecute(Map<String, Drawable> stringDrawableMap) {
             mIconMap.putAll(stringDrawableMap);
-            setActions(getAppActions(false));
+            setActions(getAppActions(false, mEntries));
             mIconLoaderTask = null;
         }
     }
