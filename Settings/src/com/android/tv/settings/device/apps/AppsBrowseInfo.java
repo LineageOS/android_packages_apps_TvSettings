@@ -63,6 +63,8 @@ public class AppsBrowseInfo extends BrowseInfoBase {
     private final ApplicationsState.AppFilter mFilterRunning;
     private int mNextItemId;
 
+    private final String mVolumeUuid;
+
     private final Handler mHandler = new Handler();
     private final Map<ArrayObjectAdapter,
         ArrayList<ApplicationsState.AppEntry>> mUpdateMap = new ArrayMap<>(3);
@@ -81,6 +83,7 @@ public class AppsBrowseInfo extends BrowseInfoBase {
 
     AppsBrowseInfo(Activity context, String volumeUuid, String volumeDescription) {
         mContext = context;
+        mVolumeUuid = volumeUuid;
         mAppItemIdList = new HashMap<>();
         mApplicationsState = ApplicationsState.getInstance(context.getApplication());
         mRows.put(SYSTEM_ID, new ArrayObjectAdapter());
@@ -233,10 +236,13 @@ public class AppsBrowseInfo extends BrowseInfoBase {
     private void loadBrowseHeaders() {
         mHeaderItems.add(new HeaderItem(DOWNLOADED_ID,
                 mContext.getString(R.string.apps_downloaded)));
-        mHeaderItems.add(new HeaderItem(SYSTEM_ID, mContext.getString(R.string.apps_system)));
-        mHeaderItems.add(new HeaderItem(RUNNING_ID, mContext.getString(R.string.apps_running)));
-        mHeaderItems.add(new HeaderItem(PERMISSIONS_ID,
-                mContext.getString(R.string.apps_permissions)));
+        // Only show these rows if we're not browsing adopted storage
+        if (TextUtils.isEmpty(mVolumeUuid)) {
+            mHeaderItems.add(new HeaderItem(SYSTEM_ID, mContext.getString(R.string.apps_system)));
+            mHeaderItems.add(new HeaderItem(RUNNING_ID, mContext.getString(R.string.apps_running)));
+            mHeaderItems.add(new HeaderItem(PERMISSIONS_ID,
+                    mContext.getString(R.string.apps_permissions)));
+        }
     }
 
     void init() {
