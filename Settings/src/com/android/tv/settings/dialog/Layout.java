@@ -669,7 +669,8 @@ public class Layout implements Parcelable {
             }
 
             public Builder description(String description) {
-                mHeader.mAppearance.mDescriptionGetter = new LiteralStringGetter(description);
+                mHeader.mAppearance.mDescriptionGetter = description != null ?
+                        new LiteralStringGetter(description) : null;
                 return this;
             }
 
