@@ -61,8 +61,9 @@ public class NewStorageActivity extends Activity {
     public static class NewStorageFragment extends GuidedStepFragment {
 
         private static final int ACTION_BROWSE = 1;
-        private static final int ACTION_ADOPT = 2;
+        private static final int ACTION_FORMAT_AS_PRIVATE = 2;
         private static final int ACTION_UNMOUNT = 3;
+        private static final int ACTION_FORMAT_AS_PUBLIC = 4;
 
         private String mVolumeId;
         private String mDiskId;
@@ -107,13 +108,20 @@ public class NewStorageActivity extends Activity {
         @Override
         public void onCreateActions(@NonNull List<GuidedAction> actions,
                 Bundle savedInstanceState) {
-            actions.add(new GuidedAction.Builder()
-                    .title(getString(R.string.storage_new_action_browse))
-                    .id(ACTION_BROWSE)
-                    .build());
+            if (TextUtils.isEmpty(mVolumeId)) {
+                actions.add(new GuidedAction.Builder()
+                        .title(getString(R.string.storage_new_action_format_public))
+                        .id(ACTION_FORMAT_AS_PUBLIC)
+                        .build());
+            } else {
+                actions.add(new GuidedAction.Builder()
+                        .title(getString(R.string.storage_new_action_browse))
+                        .id(ACTION_BROWSE)
+                        .build());
+            }
             actions.add(new GuidedAction.Builder()
                     .title(getString(R.string.storage_new_action_adopt))
-                    .id(ACTION_ADOPT)
+                    .id(ACTION_FORMAT_AS_PRIVATE)
                     .build());
             actions.add(new GuidedAction.Builder()
                     .title(getString(R.string.storage_new_action_eject))
@@ -124,10 +132,13 @@ public class NewStorageActivity extends Activity {
         @Override
         public void onGuidedActionClicked(GuidedAction action) {
             switch ((int) action.getId()) {
+                case ACTION_FORMAT_AS_PUBLIC:
+                    startActivity(FormatActivity.getFormatAsPublicIntent(getActivity(), mDiskId));
+                    break;
                 case ACTION_BROWSE:
                     startActivity(new Intent(getActivity(), StorageResetActivity.class));
                     break;
-                case ACTION_ADOPT:
+                case ACTION_FORMAT_AS_PRIVATE:
                     startActivity(FormatActivity.getFormatAsPrivateIntent(getActivity(), mDiskId));
                     break;
                 case ACTION_UNMOUNT:
