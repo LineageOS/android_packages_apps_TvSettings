@@ -35,6 +35,7 @@ import android.os.storage.DiskInfo;
 import android.os.storage.StorageEventListener;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
+import android.text.TextUtils;
 import android.text.format.Formatter;
 import android.util.ArrayMap;
 import android.util.Log;
@@ -47,6 +48,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.device.apps.AppsActivity;
 import com.android.tv.settings.device.storage.ForgetPrivateStepFragment;
 import com.android.tv.settings.device.storage.FormatActivity;
+import com.android.tv.settings.device.storage.MigrateStorageActivity;
 import com.android.tv.settings.device.storage.UnmountActivity;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.Layout.Action;
@@ -354,6 +356,28 @@ public class StorageResetActivity extends SettingsLayoutActivity
 
             final String volumeUuid = volume.getFsUuid();
             final String volumeDescription = mStorageManager.getBestVolumeDescription(volume);
+
+            boolean showMigrate = false;
+            final VolumeInfo currentExternal = getPackageManager().getPrimaryStorageCurrentVolume();
+            if (!TextUtils.equals(currentExternal.getId(), mVolumeId)) {
+                final List<VolumeInfo> candidates =
+                        getPackageManager().getPrimaryStorageCandidateVolumes();
+                for (final VolumeInfo candidate : candidates) {
+                    if (TextUtils.equals(candidate.getId(), mVolumeId)) {
+                        showMigrate = true;
+                        break;
+                    }
+                }
+            }
+
+            if (showMigrate) {
+                layout
+                        .add(new Action.Builder(res, MigrateStorageActivity.getLaunchIntent(
+                                        StorageResetActivity.this, mVolumeId, true))
+                                .title(R.string.storage_migrate)
+                                .data(data)
+                                .build());
+            }
 
             if (!VolumeInfo.ID_PRIVATE_INTERNAL.equals(mVolumeId)) {
                 layout
