@@ -45,7 +45,7 @@ import java.util.Map;
 
 public class FormatActivity extends Activity
         implements MoveAppStepFragment.Callback, FormatAsPrivateStepFragment.Callback,
-        FormatAsPublicStepFragment.Callback {
+        FormatAsPublicStepFragment.Callback, SlowDriveStepFragment.Callback {
 
     private static final String TAG = "FormatActivity";
 
@@ -245,8 +245,10 @@ public class FormatActivity extends Activity
 
             final Exception e = (Exception) data.get(FormatAsPrivateTaskLoader.RESULT_EXCEPTION);
             if (e == null) {
-                Toast.makeText(FormatActivity.this, getString(R.string.storage_format_success,
-                        mDescription), Toast.LENGTH_SHORT).show();
+                if (isResumed()) {
+                    Toast.makeText(FormatActivity.this, getString(R.string.storage_format_success,
+                            mDescription), Toast.LENGTH_SHORT).show();
+                }
 
                 final Long internalBench =
                         (Long) data.get(FormatAsPrivateTaskLoader.RESULT_INTERNAL_BENCH);
@@ -267,9 +269,10 @@ public class FormatActivity extends Activity
                                             .replace(android.R.id.content,
                                                     SlowDriveStepFragment.newInstance())
                                             .commit();
+                                    return;
                                 }
                             }
-                            finish();
+                            launchMigrateStorageAndFinish(mDiskId);
                         }
                     }
                 });
@@ -285,6 +288,7 @@ public class FormatActivity extends Activity
         @Override
         public void onLoaderReset(Loader<Map<String, Object>> loader) {}
     }
+
     private static class FormatAsPublicTaskLoader
             extends SettingsAsyncTaskLoader<Map<String, Object>> {
 
@@ -406,6 +410,24 @@ public class FormatActivity extends Activity
         }
     }
 
+    private void launchMigrateStorageAndFinish(String diskId) {
+        final List<VolumeInfo> candidates =
+                mPackageManager.getPrimaryStorageCandidateVolumes();
+        VolumeInfo moveTarget = null;
+        for (final VolumeInfo candidate : candidates) {
+            if (TextUtils.equals(candidate.getDiskId(), diskId)) {
+                moveTarget = candidate;
+                break;
+            }
+        }
+
+        if (moveTarget != null) {
+            startActivity(MigrateStorageActivity.getLaunchIntent(this, moveTarget.getId(), true));
+        }
+
+        finish();
+    }
+
     @Override
     public void onRequestFormatAsPublic(String diskId, String volumeId) {
         final FormattingProgressFragment fragment = FormattingProgressFragment.newInstance();
@@ -441,4 +463,8 @@ public class FormatActivity extends Activity
         finish();
     }
 
+    @Override
+    public void onSlowDriveWarningComplete() {
+        launchMigrateStorageAndFinish(mFormatAsPrivateDiskId);
+    }
 }
