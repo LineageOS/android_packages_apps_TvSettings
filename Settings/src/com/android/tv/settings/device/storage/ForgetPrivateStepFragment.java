@@ -17,8 +17,7 @@
 package com.android.tv.settings.device.storage;
 
 import android.os.Bundle;
-import android.os.storage.StorageManager;
-import android.os.storage.VolumeInfo;
+import android.os.storage.VolumeRecord;
 import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
@@ -33,26 +32,17 @@ public class ForgetPrivateStepFragment extends GuidedStepFragment {
     private static final int ACTION_ID_CANCEL = 0;
     private static final int ACTION_ID_FORGET = 1;
 
-    private StorageManager mStorageManager;
-
     public interface Callback {
-        void onRequestForget(VolumeInfo volumeInfo);
+        void onRequestForget(String fsUuid);
         void onCancelForgetDialog();
     }
 
-    public static ForgetPrivateStepFragment newInstance(VolumeInfo volumeInfo) {
+    public static ForgetPrivateStepFragment newInstance(String fsUuid) {
         final ForgetPrivateStepFragment fragment = new ForgetPrivateStepFragment();
         final Bundle b = new Bundle(1);
-        b.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeInfo.getId());
+        b.putString(VolumeRecord.EXTRA_FS_UUID, fsUuid);
         fragment.setArguments(b);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        mStorageManager = getActivity().getSystemService(StorageManager.class);
     }
 
     @Override
@@ -83,10 +73,8 @@ public class ForgetPrivateStepFragment extends GuidedStepFragment {
             final Callback callback = (Callback) getActivity();
             callback.onCancelForgetDialog();
         } else if (id == ACTION_ID_FORGET) {
-            final VolumeInfo volumeInfo = mStorageManager.findVolumeById(
-                    getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
             final Callback callback = (Callback) getActivity();
-            callback.onRequestForget(volumeInfo);
+            callback.onRequestForget(getArguments().getString(VolumeRecord.EXTRA_FS_UUID));
         }
     }
 }
