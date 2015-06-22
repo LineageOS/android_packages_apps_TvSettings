@@ -35,6 +35,8 @@ import android.os.storage.DiskInfo;
 import android.os.storage.StorageEventListener;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
+import android.os.storage.VolumeRecord;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.text.format.Formatter;
 import android.util.ArrayMap;
@@ -49,6 +51,7 @@ import com.android.tv.settings.device.apps.AppsActivity;
 import com.android.tv.settings.device.storage.ForgetPrivateStepFragment;
 import com.android.tv.settings.device.storage.FormatActivity;
 import com.android.tv.settings.device.storage.MigrateStorageActivity;
+import com.android.tv.settings.device.storage.NewStorageActivity;
 import com.android.tv.settings.device.storage.UnmountActivity;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.Layout.Action;
@@ -109,6 +112,7 @@ public class StorageResetActivity extends SettingsLayoutActivity
     private StorageManager mStorageManager;
 
     private final Map<String, StorageLayoutGetter> mStorageLayoutGetters = new ArrayMap<>();
+    private final Map<String, StorageLayoutGetter> mMissingStorageLayoutGetters = new ArrayMap<>();
 
     private final StorageEventListener mStorageListener = new StorageEventListener() {
         @Override
@@ -117,7 +121,7 @@ public class StorageResetActivity extends SettingsLayoutActivity
                 case VolumeInfo.TYPE_PRIVATE:
                 case VolumeInfo.TYPE_PUBLIC:
                     mStorageHeadersGetter.refreshView();
-                    StorageLayoutGetter getter = mStorageLayoutGetters.get(vol.getId());
+                    StorageLayoutGetter getter = mStorageLayoutGetters.get(vol.getDiskId());
                     if (getter != null) {
                         getter.onVolumeUpdated();
                     }
@@ -185,6 +189,7 @@ public class StorageResetActivity extends SettingsLayoutActivity
             final List<VolumeInfo> privateVolumes = new ArrayList<>(volumes.size());
             final List<VolumeInfo> publicVolumes = new ArrayList<>(volumes.size());
 
+            // Find mounted volumes
             for (final VolumeInfo vol : volumes) {
                 if (vol.getType() == VolumeInfo.TYPE_PRIVATE) {
                     privateVolumes.add(vol);
@@ -194,31 +199,66 @@ public class StorageResetActivity extends SettingsLayoutActivity
                     Log.d(TAG, "Skipping volume " + vol.toString());
                 }
             }
-            if (privateVolumes.size() > 0) {
+
+            // Find missing private filesystems
+            final List<VolumeRecord> volumeRecords = mStorageManager.getVolumeRecords();
+            final List<String> privateMissingFsUuids = new ArrayList<>(volumeRecords.size());
+
+            for (final VolumeRecord record : volumeRecords) {
+                if (record.getType() == VolumeInfo.TYPE_PRIVATE
+                        && mStorageManager.findVolumeByUuid(record.getFsUuid()) == null) {
+                    privateMissingFsUuids.add(record.getFsUuid());
+                }
+            }
+
+            // Find unreadable disks
+            final List<DiskInfo> disks = mStorageManager.getDisks();
+            final List<String> unsupportedDiskIds = new ArrayList<>(disks.size());
+            for (final DiskInfo disk : disks) {
+                if (disk.volumeCount == 0 && disk.size > 0) {
+                    unsupportedDiskIds.add(disk.getId());
+                }
+            }
+
+            // Add device section if needed
+            if (privateVolumes.size() + privateMissingFsUuids.size() > 0) {
                 layout.add(new Static.Builder(res)
                         .title(R.string.storage_device_storage_section)
                         .build());
             }
+
+            // Add private headers
             for (final VolumeInfo vol : privateVolumes) {
                 layout.add(getVolumeHeader(res, vol));
             }
-            if (publicVolumes.size() > 0) {
+            for (final String fsUuid : privateMissingFsUuids) {
+                layout.add(getMissingVolumeHeader(res, fsUuid));
+            }
+
+            // Add removable section if needed
+            if (publicVolumes.size() + unsupportedDiskIds.size() > 0) {
                 layout.add(new Static.Builder(res)
                         .title(R.string.storage_removable_storage_section)
                         .build());
             }
+
+            // Add public headers
             for (final VolumeInfo vol : publicVolumes) {
                 layout.add(getVolumeHeader(res, vol));
+            }
+            for (final String diskId : unsupportedDiskIds) {
+                layout.add(getUnsupportedDiskAction(res, diskId));
             }
             return layout;
         }
 
         private Header getVolumeHeader(Resources res, VolumeInfo vol) {
-            final String volId = vol.getId();
-            StorageLayoutGetter storageGetter = mStorageLayoutGetters.get(volId);
+            final String diskId = vol.getDiskId();
+            final String fsUuid = vol.getFsUuid();
+            StorageLayoutGetter storageGetter = mStorageLayoutGetters.get(diskId);
             if (storageGetter == null) {
-                storageGetter = new StorageLayoutGetter(vol);
-                mStorageLayoutGetters.put(volId, storageGetter);
+                storageGetter = new StorageLayoutGetter(diskId, fsUuid);
+                mStorageLayoutGetters.put(diskId, storageGetter);
                 if (isResumed()) {
                     storageGetter.startListening();
                 }
@@ -227,6 +267,27 @@ public class StorageResetActivity extends SettingsLayoutActivity
                     .title(mStorageManager.getBestVolumeDescription(vol))
                     .description(getSize(vol))
                     .build().add(storageGetter);
+        }
+
+        private Header getMissingVolumeHeader(Resources res, String fsUuid) {
+            StorageLayoutGetter storageGetter = mMissingStorageLayoutGetters.get(fsUuid);
+            if (storageGetter == null) {
+                storageGetter = new StorageLayoutGetter(null, fsUuid);
+                mMissingStorageLayoutGetters.put(fsUuid, storageGetter);
+            }
+            final VolumeRecord volumeRecord = mStorageManager.findRecordByUuid(fsUuid);
+            return new Header.Builder(res)
+                    .title(volumeRecord.getNickname())
+                    .description(R.string.storage_not_connected)
+                    .build().add(storageGetter);
+        }
+
+        private Action getUnsupportedDiskAction(Resources res, String diskId) {
+            final DiskInfo info = mStorageManager.findDiskById(diskId);
+            return new Action.Builder(res,
+                    NewStorageActivity.getLaunchIntent(StorageResetActivity.this, null, diskId))
+                    .title(info.getDescription())
+                    .build();
         }
 
         private String getSize(VolumeInfo vol) {
@@ -242,8 +303,8 @@ public class StorageResetActivity extends SettingsLayoutActivity
 
     private class StorageLayoutGetter extends Layout.LayoutGetter {
 
-        private final String mVolumeId;
         private final String mDiskId;
+        private final String mFsUuid;
 
         private StorageMeasurement mMeasure;
         private final SizeStringGetter mAppsSize = new SizeStringGetter();
@@ -265,9 +326,9 @@ public class StorageResetActivity extends SettingsLayoutActivity
             }
         };
 
-        public StorageLayoutGetter(VolumeInfo volume) {
-            mVolumeId = volume.getId();
-            mDiskId = volume.getDiskId();
+        public StorageLayoutGetter(String diskId, String fsUuid) {
+            mDiskId = diskId;
+            mFsUuid = fsUuid;
         }
 
         @Override
@@ -275,16 +336,22 @@ public class StorageResetActivity extends SettingsLayoutActivity
             final Resources res = getResources();
             final Layout layout = new Layout();
 
-            final VolumeInfo volume = mStorageManager.findVolumeById(mVolumeId);
+            VolumeInfo volume = getVolumeInfo();
 
             if (volume == null) {
-                layout
-                        .add(new Status.Builder(res)
-                                .title(R.string.storage_not_connected)
-                                .build());
+                final VolumeRecord volumeRecord = !TextUtils.isEmpty(mFsUuid) ?
+                        mStorageManager.findRecordByUuid(mFsUuid) : null;
+                if (volumeRecord == null || volumeRecord.getType() == VolumeInfo.TYPE_PUBLIC) {
+                    layout
+                            .add(new Status.Builder(res)
+                                    .title(R.string.storage_not_connected)
+                                    .build());
+                } else {
+                    addPrivateMissingHeaders(layout, mFsUuid);
+                }
             } else if (volume.getType() == VolumeInfo.TYPE_PRIVATE) {
                 if (volume.getState() == VolumeInfo.STATE_UNMOUNTED) {
-                    addPrivateMissingHeaders(layout, volume);
+                    addPrivateMissingHeaders(layout, mFsUuid);
                 } else {
                     addPrivateStorageHeaders(layout, volume);
                 }
@@ -293,7 +360,7 @@ public class StorageResetActivity extends SettingsLayoutActivity
                     addPublicUnmountedHeaders(layout, volume);
                 } else {
                     final Bundle data = new Bundle(2);
-                    data.putString(VolumeInfo.EXTRA_VOLUME_ID, mVolumeId);
+                    data.putString(VolumeInfo.EXTRA_VOLUME_ID, volume.getId());
                     data.putString(DiskInfo.EXTRA_DISK_ID, mDiskId);
                     layout
                             .add(new Action.Builder(res, ACTION_EJECT_PUBLIC)
@@ -319,6 +386,31 @@ public class StorageResetActivity extends SettingsLayoutActivity
             return layout;
         }
 
+        private @Nullable VolumeInfo getVolumeInfo() {
+            if (TextUtils.isEmpty(mFsUuid) && TextUtils.isEmpty(mDiskId)) {
+                // Means private internal
+                return mStorageManager.findVolumeById(VolumeInfo.ID_PRIVATE_INTERNAL);
+            }
+
+            if (!TextUtils.isEmpty(mFsUuid)) {
+                final VolumeInfo volume = mStorageManager.findVolumeByUuid(mFsUuid);
+                if (volume != null) {
+                    return volume;
+                }
+            }
+
+            if (!TextUtils.isEmpty(mDiskId)) {
+                final List<VolumeInfo> volumes = mStorageManager.getVolumes();
+                for (final VolumeInfo v : volumes) {
+                    if (TextUtils.equals(v.getDiskId(), mDiskId)) {
+                        return v;
+                    }
+                }
+            }
+
+            return null;
+        }
+
         private void addPublicUnmountedHeaders(Layout layout, VolumeInfo volume) {
             final Resources res = getResources();
             final String volumeDescription = mStorageManager.getBestVolumeDescription(volume);
@@ -331,16 +423,16 @@ public class StorageResetActivity extends SettingsLayoutActivity
                             .build());
         }
 
-        private void addPrivateMissingHeaders(Layout layout, VolumeInfo volume) {
+        private void addPrivateMissingHeaders(Layout layout, String fsUuid) {
             final Resources res = getResources();
             final Bundle data = new Bundle(1);
-            data.putString(VolumeInfo.EXTRA_VOLUME_ID, mVolumeId);
-            final String volumeDescription = mStorageManager.getBestVolumeDescription(volume);
+            data.putString(VolumeRecord.EXTRA_FS_UUID, fsUuid);
+            final VolumeRecord volumeRecord = mStorageManager.findRecordByUuid(fsUuid);
 
             layout
                     .add(new Layout.WallOfText.Builder(res)
                             .title(getString(R.string.storage_forget_wall_of_text,
-                                    volumeDescription))
+                                    volumeRecord.getNickname()))
                             .build())
                     .add(new Action.Builder(res, ACTION_FORGET)
                             .title(getString(R.string.storage_forget))
@@ -351,7 +443,8 @@ public class StorageResetActivity extends SettingsLayoutActivity
         private void addPrivateStorageHeaders(Layout layout, VolumeInfo volume) {
             final Resources res = getResources();
             final Bundle data = new Bundle(2);
-            data.putString(VolumeInfo.EXTRA_VOLUME_ID, mVolumeId);
+            final String volumeId = volume.getId();
+            data.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeId);
             data.putString(DiskInfo.EXTRA_DISK_ID, mDiskId);
 
             final String volumeUuid = volume.getFsUuid();
@@ -359,11 +452,11 @@ public class StorageResetActivity extends SettingsLayoutActivity
 
             boolean showMigrate = false;
             final VolumeInfo currentExternal = getPackageManager().getPrimaryStorageCurrentVolume();
-            if (!TextUtils.equals(currentExternal.getId(), mVolumeId)) {
+            if (!TextUtils.equals(currentExternal.getId(), volumeId)) {
                 final List<VolumeInfo> candidates =
                         getPackageManager().getPrimaryStorageCandidateVolumes();
                 for (final VolumeInfo candidate : candidates) {
-                    if (TextUtils.equals(candidate.getId(), mVolumeId)) {
+                    if (TextUtils.equals(candidate.getId(), volumeId)) {
                         showMigrate = true;
                         break;
                     }
@@ -373,13 +466,13 @@ public class StorageResetActivity extends SettingsLayoutActivity
             if (showMigrate) {
                 layout
                         .add(new Action.Builder(res, MigrateStorageActivity.getLaunchIntent(
-                                        StorageResetActivity.this, mVolumeId, true))
+                                        StorageResetActivity.this, volumeId, true))
                                 .title(R.string.storage_migrate)
                                 .data(data)
                                 .build());
             }
 
-            if (!VolumeInfo.ID_PRIVATE_INTERNAL.equals(mVolumeId)) {
+            if (!VolumeInfo.ID_PRIVATE_INTERNAL.equals(volumeId)) {
                 layout
                         .add(new Action.Builder(res, ACTION_EJECT_PRIVATE)
                                 .title(R.string.storage_eject)
@@ -439,7 +532,8 @@ public class StorageResetActivity extends SettingsLayoutActivity
         }
 
         public void startListening() {
-            final VolumeInfo volume = mStorageManager.findVolumeById(mVolumeId);
+            VolumeInfo volume = getVolumeInfo();
+
             if (volume != null && volume.isMountedReadable()) {
                 final VolumeInfo sharedVolume = mStorageManager.findEmulatedForPrivate(volume);
                 mMeasure = new StorageMeasurement(StorageResetActivity.this, volume,
@@ -541,8 +635,8 @@ public class StorageResetActivity extends SettingsLayoutActivity
                 break;
             case ACTION_FORGET:
                 final Fragment f =
-                        ForgetPrivateStepFragment.newInstance(mStorageManager.findVolumeById(
-                                action.getData().getString(VolumeInfo.EXTRA_VOLUME_ID)));
+                        ForgetPrivateStepFragment.newInstance(
+                                action.getData().getString(VolumeRecord.EXTRA_FS_UUID));
                 getFragmentManager().beginTransaction()
                         .replace(android.R.id.content, f)
                         .addToBackStack(FORGET_DIALOG_BACKSTACK_TAG)
@@ -652,10 +746,8 @@ public class StorageResetActivity extends SettingsLayoutActivity
     }
 
     @Override
-    public void onRequestForget(VolumeInfo volumeInfo) {
-        if (volumeInfo != null) {
-            mStorageManager.forgetVolume(volumeInfo.getFsUuid());
-        }
+    public void onRequestForget(String fsUuid) {
+        mStorageManager.forgetVolume(fsUuid);
         getFragmentManager().popBackStack(FORGET_DIALOG_BACKSTACK_TAG,
                 FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }

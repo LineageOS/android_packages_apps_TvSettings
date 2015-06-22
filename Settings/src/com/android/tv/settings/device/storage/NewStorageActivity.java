@@ -42,6 +42,13 @@ public class NewStorageActivity extends Activity {
 
     private static final String TAG = "NewStorageActivity";
 
+    public static Intent getLaunchIntent(Context context, String volumeId, String diskId) {
+        final Intent i = new Intent(context, NewStorageActivity.class);
+        i.putExtra(VolumeInfo.EXTRA_VOLUME_ID, volumeId);
+        i.putExtra(DiskInfo.EXTRA_DISK_ID, diskId);
+        return i;
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -214,10 +221,9 @@ public class NewStorageActivity extends Activity {
                 }
                 final DiskInfo disk = info.getDisk();
                 if (disk.isAdoptable()) {
-                    final Intent i = new Intent(context, NewStorageActivity.class);
+                    final Intent i = NewStorageActivity.getLaunchIntent(context,
+                            volumeId, disk.getId());
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    i.putExtra(VolumeInfo.EXTRA_VOLUME_ID, volumeId);
-                    i.putExtra(DiskInfo.EXTRA_DISK_ID, disk.getId());
                     context.startActivity(i);
                     break;
                 }
