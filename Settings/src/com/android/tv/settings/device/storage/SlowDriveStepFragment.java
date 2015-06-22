@@ -28,6 +28,10 @@ import java.util.List;
 
 public class SlowDriveStepFragment extends GuidedStepFragment {
 
+    public interface Callback {
+        void onSlowDriveWarningComplete();
+    }
+
     public static SlowDriveStepFragment newInstance() {
         return new SlowDriveStepFragment();
     }
@@ -50,6 +54,6 @@ public class SlowDriveStepFragment extends GuidedStepFragment {
 
     @Override
     public void onGuidedActionClicked(GuidedAction action) {
-        getActivity().getFragmentManager().popBackStack();
+        ((Callback) getActivity()).onSlowDriveWarningComplete();
     }
 }

@@ -459,6 +459,8 @@
     <string name="storage_format_for_private">Format as device storage</string>
     <!-- Description for a storage volume which is not currently connected to the device -->
     <string name="storage_not_connected">Not connected</string>
+    <!-- Storage settings migrate primary storage action [CHAR_LIMIT=50] -->
+    <string name="storage_migrate">Migrate data</string>
 
     <!-- Storage settings forget action [CHAR_LIMIT=50] -->
     <string name="storage_forget">Forget this internal storage</string>
@@ -503,6 +505,25 @@
     <string name="storage_wizard_format_progress_title">Formatting USB Drive&#8230;</string>
     <!-- Description for wizard progress screen for formatting drive [CHAR_LIMIT=NONE] -->
     <string name="storage_wizard_format_progress_description">This may take a moment. Please don\'t remove the drive.</string>
+
+    <!-- Title for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=50] -->
+    <string name="storage_wizard_migrate_confirm_title">Move data to <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
+    <!-- Description for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=NONE] -->
+    <string name="storage_wizard_migrate_confirm_description">Move your photos, files and app data to <xliff:g id="name" example="SD card">%1$s</xliff:g>. This may take a few minutes. Some apps won\'t work correctly during the move.</string>
+    <!-- Positive action for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=50] -->
+    <string name="storage_wizard_migrate_confirm_action_move_now">Move now</string>
+    <!-- Negative action for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=50] -->
+    <string name="storage_wizard_migrate_confirm_action_move_later">Move later</string>
+
+    <!-- Success toast for migrating data [CHAR_LIMIT=100] -->
+    <string name="storage_wizard_migrate_toast_success">Migrated data to <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
+    <!-- Failure toast for migrating data [CHAR_LIMIT=100] -->
+    <string name="storage_wizard_migrate_toast_failure">Could not migrate data to <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
+
+    <!-- Title for wizard progress screen for migrating data to new drive [CHAR_LIMIT=50] -->
+    <string name="storage_wizard_migrate_progress_title">Moving data to <xliff:g id="name" example="SD card">%1$s</xliff:g>&#8230;</string>
+    <!-- Description for wizard progress screen for migrating data to new drive [CHAR_LIMIT=NONE] -->
+    <string name="storage_wizard_migrate_progress_description">This may take a moment. Please don\'t remove the drive.\nSome apps won\'t work correctly during the move.</string>
 
     <!-- Title for warning dialog for slow drives [CHAR_LIMIT=64] -->
     <string name="storage_wizard_format_slow_title">This drive appears to be slow.</string>
