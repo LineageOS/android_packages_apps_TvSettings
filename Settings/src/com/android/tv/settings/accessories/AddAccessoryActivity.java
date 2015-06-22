@@ -39,7 +39,6 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -111,7 +110,7 @@ public class AddAccessoryActivity extends DialogActivity
     private boolean mPairingInBackground = false;
 
     private boolean mActionsVisible = false;
-    private FrameLayout mTopLayout;
+    private ViewGroup mTopLayout;
     private View mActionView;
     private View mContentView;
     private boolean mShowingMultiFragment;
@@ -229,9 +228,6 @@ public class AddAccessoryActivity extends DialogActivity
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        setLayoutProperties(R.layout.add_accessory_custom_two_pane_dialog, R.id.content_fragment,
-                R.id.action_fragment);
-
         super.onCreate(savedInstanceState);
 
         mMsgHandler.setActivity(this);
@@ -274,7 +270,7 @@ public class AddAccessoryActivity extends DialogActivity
             if (mAnimateOnStart) {
                 mAnimateOnStart = false;
                 ViewGroup contentView = (ViewGroup) findViewById(android.R.id.content);
-                mTopLayout = (FrameLayout) contentView.getChildAt(0);
+                mTopLayout = (ViewGroup) contentView.getChildAt(0);
 
                 // Fade out the old activity, and fade in the new activity.
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
