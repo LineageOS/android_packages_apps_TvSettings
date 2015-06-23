@@ -479,9 +479,6 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".device.apps.PermissionsActivity"
-            android:exported="false" />
-
         <receiver android:name=".device.storage.NewStorageActivity$DiskReceiver">
             <intent-filter>
                 <action android:name="android.os.storage.action.DISK_SCANNED" />
