@@ -73,7 +73,7 @@ public class FormatAsPublicStepFragment extends GuidedStepFragment {
         return new GuidanceStylist.Guidance(
                 getString(R.string.storage_wizard_format_as_public_title),
                 getString(R.string.storage_wizard_format_as_public_description), "",
-                getActivity().getDrawable(R.drawable.ic_settings_storage));
+                getActivity().getDrawable(R.drawable.ic_settings_warning));
     }
 
     @Override
