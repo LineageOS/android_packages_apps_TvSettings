@@ -54,7 +54,7 @@
         android:layout_weight="1"
         android:orientation="vertical" >
 
-        <com.android.tv.settings.widget.ResizingTextView
+        <TextView
             android:id="@+id/action_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
             android:textColor="@color/lb_dialog_list_item_unselected_text_color"
             android:textSize="@dimen/lb_dialog_list_item_title_font_size" />
 
-        <com.android.tv.settings.widget.ResizingTextView
+        <TextView
             android:id="@+id/action_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
