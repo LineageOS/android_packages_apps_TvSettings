@@ -42,7 +42,7 @@ public class SlowDriveStepFragment extends GuidedStepFragment {
                 getString(R.string.storage_wizard_format_slow_title),
                 getString(R.string.storage_wizard_format_slow_summary),
                 null,
-                getActivity().getDrawable(R.drawable.ic_settings_storage));
+                getActivity().getDrawable(R.drawable.ic_settings_error));
     }
 
     @Override
