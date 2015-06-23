@@ -678,7 +678,11 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
         final int id = action.getId();
         for (MyApplicationInfo myInfo : mPackageInfoList) {
             if (myInfo.id == id) {
-                setDebugApp(myInfo.info.packageName);
+                if (myInfo.info != null) {
+                    setDebugApp(myInfo.info.packageName);
+                } else {
+                    setDebugApp(null);
+                }
                 return;
             }
         }
