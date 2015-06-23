@@ -31,7 +31,7 @@ public class FormatAsPrivateStepFragment extends GuidedStepFragment {
 
     private static final int ACTION_ID_CANCEL = 0;
     private static final int ACTION_ID_FORMAT = 1;
-    private static final int ACTION_ID_LEARN_MORE = 2;
+//    private static final int ACTION_ID_LEARN_MORE = 2;
 
     public interface Callback {
         void onRequestFormatAsPrivate(String diskId);
@@ -64,10 +64,11 @@ public class FormatAsPrivateStepFragment extends GuidedStepFragment {
                 .id(ACTION_ID_FORMAT)
                 .title(getString(R.string.storage_wizard_format_action))
                 .build());
-        actions.add(new GuidedAction.Builder()
+        // TODO: enable this when we have something useful to link to
+        /* actions.add(new GuidedAction.Builder()
                 .id(ACTION_ID_LEARN_MORE)
                 .title(getString(R.string.learn_more_action))
-                .build());
+                .build()); */
     }
 
     @Override
@@ -80,8 +81,8 @@ public class FormatAsPrivateStepFragment extends GuidedStepFragment {
         } else if (id == ACTION_ID_FORMAT) {
             final Callback callback = (Callback) getActivity();
             callback.onRequestFormatAsPrivate(getArguments().getString(DiskInfo.EXTRA_DISK_ID));
-        } else if (id == ACTION_ID_LEARN_MORE) {
+        } /* else if (id == ACTION_ID_LEARN_MORE) {
             // todo
-        }
+        } */
     }
 }
