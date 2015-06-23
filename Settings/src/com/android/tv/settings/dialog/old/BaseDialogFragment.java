@@ -31,7 +31,6 @@ import android.view.ViewTreeObserver;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.tv.settings.R;
@@ -105,7 +104,7 @@ public class BaseDialogFragment {
             final TextView description, final TextView breadcrumb) {
         // Pull out the root layout of the dialog and set the background drawable, to be
         // faded in during the transition.
-        final RelativeLayout twoPane = (RelativeLayout) contentView.getChildAt(0);
+        final ViewGroup twoPane = (ViewGroup) contentView.getChildAt(0);
         twoPane.setVisibility(View.INVISIBLE);
 
         // If the appropriate data is embedded in the intent and there is an icon specified
