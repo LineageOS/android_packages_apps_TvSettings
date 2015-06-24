@@ -1034,7 +1034,12 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     }
 
     private void setWaitForDebugger(boolean value) {
-        setGlobalSettingBoolean(Settings.Global.WAIT_FOR_DEBUGGER, value);
+        final String debugApp = getDebugApp();
+        try {
+            ActivityManagerNative.getDefault().setDebugApp(debugApp, value, true);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     private int getVerifyAppsActionId() {
