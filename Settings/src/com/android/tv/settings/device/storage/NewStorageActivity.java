@@ -42,26 +42,56 @@ public class NewStorageActivity extends Activity {
 
     private static final String TAG = "NewStorageActivity";
 
-    public static Intent getLaunchIntent(Context context, String volumeId, String diskId) {
+    private static final String ACTION_NEW_STORAGE =
+            "com.android.tv.settings.device.storage.NewStorageActivity.NEW_STORAGE";
+    private static final String ACTION_MISSING_STORAGE =
+            "com.android.tv.settings.device.storage.NewStorageActivity.MISSING_STORAGE";
+
+    public static Intent getNewStorageLaunchIntent(Context context, String volumeId,
+            String diskId) {
         final Intent i = new Intent(context, NewStorageActivity.class);
+        i.setAction(ACTION_NEW_STORAGE);
         i.putExtra(VolumeInfo.EXTRA_VOLUME_ID, volumeId);
         i.putExtra(DiskInfo.EXTRA_DISK_ID, diskId);
+        return i;
+    }
+
+    public static Intent getMissingStorageLaunchIntent(Context context, String fsUuid) {
+        final Intent i = new Intent(context, NewStorageActivity.class);
+        i.setAction(ACTION_MISSING_STORAGE);
+        i.putExtra(VolumeRecord.EXTRA_FS_UUID, fsUuid);
         return i;
     }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final String volumeId = getIntent().getStringExtra(VolumeInfo.EXTRA_VOLUME_ID);
-        final String diskId = getIntent().getStringExtra(DiskInfo.EXTRA_DISK_ID);
-        if (TextUtils.isEmpty(volumeId) && TextUtils.isEmpty(diskId)) {
-            throw new IllegalStateException(
-                    "NewStorageActivity launched without specifying new storage");
-        }
+
         if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, NewStorageFragment.newInstance(volumeId, diskId))
-                    .commit();
+            final String action = getIntent().getAction();
+
+            if (TextUtils.equals(action, ACTION_NEW_STORAGE)) {
+                final String volumeId = getIntent().getStringExtra(VolumeInfo.EXTRA_VOLUME_ID);
+                final String diskId = getIntent().getStringExtra(DiskInfo.EXTRA_DISK_ID);
+                if (TextUtils.isEmpty(volumeId) && TextUtils.isEmpty(diskId)) {
+                    throw new IllegalStateException(
+                            "NewStorageActivity launched without specifying new storage");
+                }
+
+                getFragmentManager().beginTransaction()
+                        .add(android.R.id.content, NewStorageFragment.newInstance(volumeId, diskId))
+                        .commit();
+            } else if (TextUtils.equals(action, ACTION_MISSING_STORAGE)) {
+                final String fsUuid = getIntent().getStringExtra(VolumeRecord.EXTRA_FS_UUID);
+                if (TextUtils.isEmpty(fsUuid)) {
+                    throw new IllegalStateException(
+                            "NewStorageActivity launched without specifying missing storage");
+                }
+
+                getFragmentManager().beginTransaction()
+                        .add(android.R.id.content, MissingStorageFragment.newInstance(fsUuid))
+                        .commit();
+            }
         }
     }
 
@@ -92,7 +122,7 @@ public class NewStorageActivity extends Activity {
             mDiskId = getArguments().getString(DiskInfo.EXTRA_DISK_ID);
             if (TextUtils.isEmpty(mVolumeId) && TextUtils.isEmpty(mDiskId)) {
                 throw new IllegalStateException(
-                        "NewStorageActivity launched without specifying new storage");
+                        "NewStorageFragment launched without specifying new storage");
             }
             if (!TextUtils.isEmpty(mVolumeId)) {
                 final VolumeInfo info = storageManager.findVolumeById(mVolumeId);
@@ -107,8 +137,10 @@ public class NewStorageActivity extends Activity {
 
         @Override
         public @NonNull GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            return new GuidanceStylist.Guidance(getString(R.string.storage_new_title),
-                    mDescription, null,
+            return new GuidanceStylist.Guidance(
+                    getString(R.string.storage_new_title),
+                    mDescription,
+                    null,
                     getActivity().getDrawable(R.drawable.ic_settings_storage));
         }
 
@@ -160,6 +192,60 @@ public class NewStorageActivity extends Activity {
         }
     }
 
+    public static class MissingStorageFragment extends GuidedStepFragment {
+
+        private static final int ACTION_OK = 0;
+
+        private String mFsUuid;
+        private String mDescription;
+
+        public static MissingStorageFragment newInstance(String fsUuid) {
+            final MissingStorageFragment fragment = new MissingStorageFragment();
+            final Bundle b = new Bundle(1);
+            b.putString(VolumeRecord.EXTRA_FS_UUID, fsUuid);
+            fragment.setArguments(b);
+            return fragment;
+        }
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            StorageManager storageManager = getActivity().getSystemService(StorageManager.class);
+            mFsUuid = getArguments().getString(VolumeRecord.EXTRA_FS_UUID);
+            if (TextUtils.isEmpty(mFsUuid)) {
+                throw new IllegalStateException(
+                        "MissingStorageFragment launched without specifying missing storage");
+            }
+            final VolumeRecord volumeRecord = storageManager.findRecordByUuid(mFsUuid);
+            mDescription = volumeRecord.getNickname();
+
+            super.onCreate(savedInstanceState);
+        }
+
+        @Override
+        public @NonNull GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
+            return new GuidanceStylist.Guidance(
+                    getString(R.string.storage_missing_title, mDescription),
+                    getString(R.string.storage_missing_description),
+                    null,
+                    getActivity().getDrawable(R.drawable.ic_settings_error));
+        }
+
+        @Override
+        public void onCreateActions(@NonNull List<GuidedAction> actions,
+                Bundle savedInstanceState) {
+            actions.add(new GuidedAction.Builder()
+                    .title(getString(android.R.string.ok))
+                    .id(ACTION_OK)
+                    .build());
+        }
+
+        @Override
+        public void onGuidedActionClicked(GuidedAction action) {
+            getActivity().finish();
+        }
+
+    }
+
     public static class DiskReceiver extends BroadcastReceiver {
 
         private StorageManager mStorageManager;
@@ -168,7 +254,14 @@ public class NewStorageActivity extends Activity {
             mStorageManager = context.getSystemService(StorageManager.class);
 
             if (TextUtils.equals(intent.getAction(), VolumeInfo.ACTION_VOLUME_STATE_CHANGED)) {
-                handleMount(context, intent);
+                final int state = intent.getIntExtra(VolumeInfo.EXTRA_VOLUME_STATE, -1);
+                if (state == VolumeInfo.STATE_MOUNTED ||
+                        state == VolumeInfo.STATE_MOUNTED_READ_ONLY) {
+                    handleMount(context, intent);
+                } else if (state == VolumeInfo.STATE_UNMOUNTED ||
+                        state == VolumeInfo.STATE_BAD_REMOVAL) {
+                    handleUnmount(context, intent);
+                }
             } else if (TextUtils.equals(intent.getAction(), DiskInfo.ACTION_DISK_SCANNED)) {
                 handleScan(context, intent);
             }
@@ -197,12 +290,6 @@ public class NewStorageActivity extends Activity {
         }
 
         private void handleMount(Context context, Intent intent) {
-            final int state = intent.getIntExtra(VolumeInfo.EXTRA_VOLUME_STATE, -1);
-
-            if (state != VolumeInfo.STATE_MOUNTED && state != VolumeInfo.STATE_MOUNTED_READ_ONLY) {
-                return;
-            }
-
             final String volumeId = intent.getStringExtra(VolumeInfo.EXTRA_VOLUME_ID);
 
             final List<VolumeInfo> volumeInfos = mStorageManager.getVolumes();
@@ -221,12 +308,27 @@ public class NewStorageActivity extends Activity {
                 }
                 final DiskInfo disk = info.getDisk();
                 if (disk.isAdoptable()) {
-                    final Intent i = NewStorageActivity.getLaunchIntent(context,
+                    final Intent i = NewStorageActivity.getNewStorageLaunchIntent(context,
                             volumeId, disk.getId());
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(i);
                     break;
                 }
+            }
+        }
+
+        private void handleUnmount(Context context, Intent intent) {
+            final String fsUuid = intent.getStringExtra(VolumeRecord.EXTRA_FS_UUID);
+            if (TextUtils.isEmpty(fsUuid)) {
+                Log.e(TAG, "Missing fsUuid, not launching activity.");
+                return;
+            }
+            final VolumeRecord volumeRecord = mStorageManager.findRecordByUuid(fsUuid);
+            Log.d(TAG, "Found ejected volume: " + volumeRecord + " for FSUUID: " + fsUuid);
+            if (volumeRecord.getType() == VolumeInfo.TYPE_PRIVATE) {
+                final Intent i = NewStorageActivity.getMissingStorageLaunchIntent(context, fsUuid);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(i);
             }
         }
     }
