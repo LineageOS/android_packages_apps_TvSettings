@@ -285,7 +285,8 @@ public class StorageResetActivity extends SettingsLayoutActivity
         private Action getUnsupportedDiskAction(Resources res, String diskId) {
             final DiskInfo info = mStorageManager.findDiskById(diskId);
             return new Action.Builder(res,
-                    NewStorageActivity.getLaunchIntent(StorageResetActivity.this, null, diskId))
+                    NewStorageActivity.getNewStorageLaunchIntent(StorageResetActivity.this, null,
+                            diskId))
                     .title(info.getDescription())
                     .build();
         }
