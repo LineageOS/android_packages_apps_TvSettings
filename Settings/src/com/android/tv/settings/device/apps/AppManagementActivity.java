@@ -34,6 +34,7 @@ import android.os.UserHandle;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -107,10 +108,8 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
 
             getFragmentManager().popBackStack(DIALOG_BACKSTACK_TAG,
                     FragmentManager.POP_BACK_STACK_INCLUSIVE);
-            // TODO: this isn't quite enough to refresh the UI
             final int userId = UserHandle.getUserId(mAppInfo.getUid());
             mApplicationsState.invalidatePackage(mPackageName, userId);
-            mStorageDescriptionGetter.refreshView();
 
             if (status != PackageManager.MOVE_SUCCEEDED) {
                 Log.d(TAG, "Move failure status: " + status);
@@ -303,10 +302,18 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
 
     @Override
     public void onLoadEntriesCompleted() {
+        mStorageDescriptionGetter.refreshView();
+        mDataDescriptionGetter.refreshView();
+        mCacheDescriptionGetter.refreshView();
     }
 
     @Override
     public void onPackageListChanged() {
+        final int userId = UserHandle.getUserId(mAppInfo.getUid());
+        mAppInfo.setEntry(mApplicationsState.getEntry(mPackageName, userId));
+        mStorageDescriptionGetter.refreshView();
+        mDataDescriptionGetter.refreshView();
+        mCacheDescriptionGetter.refreshView();
     }
 
     @Override
@@ -315,10 +322,14 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
 
     @Override
     public void onPackageSizeChanged(String packageName) {
+        mStorageDescriptionGetter.refreshView();
+        mDataDescriptionGetter.refreshView();
+        mCacheDescriptionGetter.refreshView();
     }
 
     @Override
     public void onAllSizesComputed() {
+        mStorageDescriptionGetter.refreshView();
         mDataDescriptionGetter.refreshView();
         mCacheDescriptionGetter.refreshView();
     }
@@ -645,8 +656,13 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
             final ApplicationInfo applicationInfo = mAppInfo.getApplicationInfo();
             final VolumeInfo volumeInfo = mPackageManager.getPackageCurrentVolume(applicationInfo);
             final String volumeDesc = mStorageManager.getBestVolumeDescription(volumeInfo);
-            return getString(R.string.device_apps_app_management_storage_used_desc, mAppInfo.getSize(),
-                    volumeDesc);
+            final String size = mAppInfo.getSize();
+            if (TextUtils.isEmpty(size)) {
+                return getString(R.string.storage_calculating_size);
+            } else {
+                return getString(R.string.device_apps_app_management_storage_used_desc,
+                        mAppInfo.getSize(), volumeDesc);
+            }
         }
     };
 
