@@ -153,7 +153,7 @@ public class AppsBrowseInfo extends BrowseInfoBase {
         final MenuItem permissionsItem = new MenuItem.Builder()
                 .title(mContext.getString(R.string.device_apps_permissions))
                 .imageResourceId(mContext, R.drawable.ic_settings_security)
-                .intent(new Intent(context, PermissionsActivity.class))
+                .intent(new Intent(Intent.ACTION_MANAGE_PERMISSIONS))
                 .build();
         permissionsAdapter.add(permissionsItem);
         mRows.put(PERMISSIONS_ID, permissionsAdapter);
