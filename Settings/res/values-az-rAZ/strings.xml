@@ -219,6 +219,7 @@
     <string name="storage_format" msgid="3759273736493279595">"Silin və format edin"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Cihaz yaddaşı kimi format edin"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Qoşulmayıb"</string>
+    <string name="storage_migrate" msgid="658894157418304023">"Datanı köçürün"</string>
     <string name="storage_forget" msgid="8541387048014779836">"Bu daxili yaddaşı unudun"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Disk daxilindəki tətbiq və ya datanı istifadə etmək üçün, onu yenidən daxil edin. Alternativ olaraq, əgər disk əlçatan deyilsə, bu yaddaşı unutmağı da seçə bilərsiniz.\n\nUnutmaq seçimini etsəniz, bu diskdəki bütün data həmişəlik silinəcək.\n\nTətbiqləri daha sonra yenidən quraşdıra bilərsiniz, amma diskdə saxlanılan data silinəcək."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Cihaz yaddaşı"</string>
@@ -237,6 +238,14 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Format edəndən sonra bu USB diski başqa cihazlarda istifadə edə bilərsiniz. Bütün data silinəcək. Əvvəlcə tətbiqləri başqa daxili yaddaşa köçürməklə yedəkləməyə cəhd edin."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB Disk format olunur..."</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Bu bir müddət çəkə bilər. Lütfən, diski çıxarmayın."</string>
+    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Datanı <xliff:g id="NAME">%1$s</xliff:g> yaddaşına köçürün"</string>
+    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Foto, fayl və tətbiq datalarınızı <xliff:g id="NAME">%1$s</xliff:g> yaddaşına köçürün. Bu bir neçə dəqiqə çəkə bilər. Bəzi tətbiqlər köçürülmə zamanı düzgün işləməyəcək."</string>
+    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"İndi daşıyın"</string>
+    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Sonra daşıyın"</string>
+    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Data <xliff:g id="NAME">%1$s</xliff:g> yaddaşına köçürüldü"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Data <xliff:g id="NAME">%1$s</xliff:g> yaddaşına köçürülmədi"</string>
+    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Data <xliff:g id="NAME">%1$s</xliff:g> yaddaşına köçürülür..."</string>
+    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Bu bir müddət çəkə bilər. Lütfən, diski çıxarmayın. \nBəzi tətbiqlər köçürülmə zamanı düzgün işləməyəcək."</string>
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Bu diskin sürəti zəifdir."</string>
     <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Davam edə bilərsiniz, amma bura köçürülən tətbiqlər zəifləyə bilər və data transferi çox vaxt çəkə bilər. Daha yaxşı performans üçün sürətli disk istifadə edin."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Format"</string>
@@ -255,8 +264,8 @@
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Unudun"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB drayv qoşuludur"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Gözdən keçirin"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Daxili yaddaş ehtiyatı kimi quraşdırın"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Daşınabilən yaddaş ehtiyatı kimi quraşdırın"</string>
+    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Daxili yaddaş ehtiyatı olaraq quraşdırın"</string>
+    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Daşınabilən yaddaş ehtiyatı olaraq quraşdırın"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Çıxarın"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Kifayət qədər yer yoxdur."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Tətbiq mövcud deyil."</string>

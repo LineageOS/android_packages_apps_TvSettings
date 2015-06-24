@@ -219,6 +219,7 @@
     <string name="storage_format" msgid="3759273736493279595">"ລຶບ ແລະ​ຟໍ​ແມັດ"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"ຟໍ​ແມັດ​ເປັນ​ບ່ອນ​ຈັດ​ເກັບ​ຂໍ້​ມູນ​ອຸ​ປະ​ກອນ"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"ບໍ່ໄດ້ເຊື່ອມຕໍ່"</string>
+    <string name="storage_migrate" msgid="658894157418304023">"ຍ້າຍ​ຂໍ້​ມູນ​ອອກ"</string>
     <string name="storage_forget" msgid="8541387048014779836">"ລືມບ່ອນເກັບຂໍ້ມູນພາຍໃນເຄື່ອງນີ້"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"ເພື່ອໃຊ້ແອັບ ຫຼືຂໍ້ມູນທີ່ດຣາຍນີ້ມີ, ໃຫ້ສຽບມັນເຂົ້າໃໝ່. ອີກວິທີໜຶ່ງ, ທ່ານສາມາດເລືອກລືມບ່ອນເກັບຂໍ້ມູນນີ້ ຖ້າດຣາຍບໍ່ມີໃຫ້ໃຊ້ງານ.\n\nຖ້າທ່ານເລືອກ ລືມ, ທຸກຂໍ້ມູນທີ່ດຣາຍປະກອບມີຈະເສຍໄປຕະຫຼອດການ.\n\nທ່ານສາມາດຕິດຕັ້ງແອັບຄືນໃໝ່ໃນພາຍຫຼັງ, ແຕ່ຂໍ້ມູນທີ່ເກັບໄວ້ເທິງດຣາຍນີ້ຈະເສຍໄປ."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"ບ່ອນຈັດເກັບຂໍ້ມູນອຸປະກອນ"</string>
@@ -237,6 +238,14 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"ຫຼັງ​ຈາກ​ການ​ຟໍ​ແມັດ, ທ່ານ​ສາ​ມາດ​ໃຊ້ USB ດ​ຣ້າຍ​ນີ້​ຢູ່​ໃນ​ອຸ​ປະ​ກອນ​ອື່ນ​ໄດ້. ທຸກ​ຂໍ້​ມູນ​ຈະ​ຖືກ​ລຶບ. ໃຫ້​ຄິດ​ສຳ​ຮອງ​ໄວ້​ກ່ອນ ໂດຍ​ການ​ຍ້າຍ​ແອັບ​ໄປ​ຫາ​ບ່ອນ​ຈັດ​ເກັບ​ພາຍ​ໃນ​ອັນ​ອື່ນ."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"ກຳ​ລັງ​ຟໍ​ແມັດ USB ດ​ຣ້າຍ…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"ອັນ​ນີ້​ອາດ​ຈະ​ໃຊ້​ເວ​ລາ​ຈັກ​ໜ້ອຍ. ກະ​ລຸ​ນາ​ຢ່າ​ເອົາ​ມັນ​ອອກ​ໄປ​ຈາກດ​ຣ້າຍ."</string>
+    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"ຍ້າຍ​ຂໍ້​ມູນ​ໄປ​ໃສ່ <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"ຍ້າຍ​ຮູບ, ໄຟ​ລ໌ ແລະ ຂໍ້​ມູນ​ແອັບ​ຂອງ​ທ່ານ​ໄປ​ໃສ່ <xliff:g id="NAME">%1$s</xliff:g>. ອັນ​ນີ້​ອາດ​ຈະ​ໃຊ້​ເວ​ລາ​ສອງ​ສາມ​ນາ​ທີ. ບາງ​ແອັບ​ຈະ​ບໍ່​ເຮັດ​ວຽກ​ຢ່າງ​ຖືກ​ຕ້ອງ​ໃນ​ຂະ​ນະ​ທີ່​ຍ້າຍ."</string>
+    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"ຍ້າຍ​ດຽວ​ນີ້"</string>
+    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"ຍ້າຍ​ພາຍ​ຫຼັງ"</string>
+    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"ຍ້າຍ​ຂໍ້​ມຸນ​ອອກ​ໄປ​ໃສ່ <xliff:g id="NAME">%1$s</xliff:g> ແລ້ວ"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"ບໍ່​ສາ​ມາດ​ຍ້າຍ​ຂໍ້​ມູນ​ອອກ​ໄປ​ໃສ່ <xliff:g id="NAME">%1$s</xliff:g> ໄດ້"</string>
+    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"ກຳ​ລັງ​ຍ້າຍ​ຂໍ້​ມູນ​ໄປ​ໃສ່ <xliff:g id="NAME">%1$s</xliff:g>…"</string>
+    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"ອັນ​ນີ້​ອາດ​ຈະ​ໃຊ້​ເວ​ລາ​ຈັກ​ໜ້ອຍ. ກະ​ລຸ​ນາ​ຢ່າ​ເອົາ​ມັນ​ອອກ​ໄປ​ຈາກດ​ຣ້າຍ.\nບາງ​ແອັບ​ຈະ​ບໍ່​ເຮັດ​ວຽກ​ຢ່າງ​ຖືກ​ຕ້ອງ​ໃນ​ຂະ​ນະ​ທີ່​ຍ້າຍ."</string>
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"ປະ​ກົດ​ວ່າ​ດ​ຣ້າຍ​ນີ້​ຊ້າ."</string>
     <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"ທ່ານ​ສາ​ມາດ​ສືບ​ຕໍ່​ໄດ້, ແຕ່​ແອັບ​ທີ່​ຖືກ​ຍ້າຍ​ໄປ​ຫາ​ທີ່​ຕັ້ງ​ນີ້​ແລ້ວ​ອາດ​ຈະ​ເປັນ​ກະ​ຕຸ​ກະ​ຕັກ ແລະ​ການ​ໂອນ​ຂໍ້​ມູ​ນ​ອາດ​ຈະ​ໃຊ້​ເວ​ລາ​ດົນ. ພິ​ຈາ​ລະ​ນາ​ໃຊ້ທີ່​ໄວ​ກ່​ວາ ເພື່ອ​ໃຫ້​ມີ​ການ​ປະ​ຕິ​ບັດ​ໄດ້​ໄວ​ກ່​ວາ."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"ຟໍແມັດ"</string>

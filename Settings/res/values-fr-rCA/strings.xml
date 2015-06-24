@@ -219,6 +219,7 @@
     <string name="storage_format" msgid="3759273736493279595">"Effacer et formater"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formater comme mémoire pour l\'appareil"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Non connecté"</string>
+    <string name="storage_migrate" msgid="658894157418304023">"Transférer les données"</string>
     <string name="storage_forget" msgid="8541387048014779836">"Supprimer cette mémoire de stockage interne"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Pour utiliser les applications ou les données de ce disque, insérez celui-ci de nouveau. Vous pouvez également le supprimer de la liste des mémoires de stockage s\'il n\'est pas disponible.\n\nSi vous le supprimez, toutes les données qu\'il contient seront définitivement effacées.\n\nVous pouvez réinstaller les applications plus tard, mais les données correspondantes enregistrées sur ce disque seront perdues."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Mémoire interne de l\'appareil"</string>
@@ -237,6 +238,14 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Après le formatage, vous pourrez utiliser cette clé USB avec d\'autres appareils. Toutes les données seront effacées. Nous vous conseillons de d\'abord sauvegarder son contenu en déplaçant les applications vers un autre dispositif de stockage interne."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formatage du lecteur USB en cours..."</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Cela peut prendre un moment. Ne retirez pas le lecteur."</string>
+    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Déplacer les données vers « <xliff:g id="NAME">%1$s</xliff:g> »"</string>
+    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Déplacer vos photos, vos fichiers et les données de vos applications vers la mémoire de stockage « <xliff:g id="NAME">%1$s</xliff:g> ». Cette opération peut durer quelques minutes et empêche certaines applications de fonctionner correctement pendant qu\'elle est en cours."</string>
+    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Déplacer maintenant"</string>
+    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Déplacer plus tard"</string>
+    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Données déplacées vers « <xliff:g id="NAME">%1$s</xliff:g> »"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Impossible de déplacer les données vers « <xliff:g id="NAME">%1$s</xliff:g> »"</string>
+    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Déplacement des données vers « <xliff:g id="NAME">%1$s</xliff:g> »..."</string>
+    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Cela peut prendre un moment. Ne retirez pas le lecteur.\nCette opération peut durer quelques minutes et empêche certaines applications de fonctionner correctement pendant qu\'elle est en cours."</string>
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Ce disque semble être lent."</string>
     <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Vous pouvez continuer, mais les applications déplacées vers cet emplacement risquent de se bloquer et les transferts de données pourront prendre du temps. Veuillez utiliser une clé plus rapide pour de meilleures performances."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formater"</string>
