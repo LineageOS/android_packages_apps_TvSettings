@@ -577,6 +577,11 @@
     <!-- Eject action for new storage activity [CHAR_LIMIT=50] -->
     <string name="storage_new_action_eject">Eject</string>
 
+    <!-- Title for missing storage activity shown when a drive is removed [CHAR_LIMIT=50] -->
+    <string name="storage_missing_title"><xliff:g id="name" example="SD Card">%1$s</xliff:g> removed</string>
+    <!-- Description for missing storage activity shown when a drive is removed [CHAR_LIMIT=NONE] -->
+    <string name="storage_missing_description">Some apps will be unavailable or not function correctly until the drive is reconnected.</string>
+
     <!-- Manage applications, text for move error messages -->
     <string name="insufficient_storage">Not enough storage space.</string>
     <string name="does_not_exist">App doesn\u2019t exist.</string>
