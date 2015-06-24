@@ -219,6 +219,7 @@
     <string name="storage_format" msgid="3759273736493279595">"清除和格式化"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"格式化為裝置儲存空間"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"未連線"</string>
+    <string name="storage_migrate" msgid="658894157418304023">"轉移資料"</string>
     <string name="storage_forget" msgid="8541387048014779836">"忘記此內部儲存空間"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"如需使用儲存在此硬碟內的應用程式或資料，請重新插入。如果無法使用硬碟，可選擇忘記此儲存空間。\n\n如果您選擇忘記儲存空間，硬碟上的所有資料將被永久刪除。\n\n您可以稍後重新安裝應用程式，但儲存在此硬碟的相關資料將被刪除。"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"儲存裝置"</string>
@@ -237,6 +238,14 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"格式化後，您可在其他裝置使用此 USB 硬碟。USB 硬碟的所有資料將被刪除，請先將應用程式備份至其他內部儲存空間。"</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"正在格式化 USB 驅動器…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"這個過程可能需時，請勿移除驅動器。"</string>
+    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"移動資料至<xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"將您的相片、檔案和應用程式資料移動至<xliff:g id="NAME">%1$s</xliff:g>。這個過程可能需時數分鐘，某些應用程式在資料移動過程中可能無法正常運作。"</string>
+    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"立即移動"</string>
+    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"稍後移動"</string>
+    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"轉移資料至<xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"無法轉移資料至<xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"正在移動資料至<xliff:g id="NAME">%1$s</xliff:g>…"</string>
+    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"這個過程可能需時，請勿移除驅動器。\n某些應用程式在資料移動過程中可能無法正常運作。"</string>
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"這驅動器好像有點緩慢。"</string>
     <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"您可以繼續，但轉移至此位置的應用程式可能會間斷，而資料傳輸亦可能需要較長時間。請考慮使用較高速的驅動器以提升效能。"</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"格式化"</string>

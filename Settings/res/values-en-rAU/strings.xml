@@ -219,6 +219,7 @@
     <string name="storage_format" msgid="3759273736493279595">"Erase &amp; format"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Format as device storage"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Not connected"</string>
+    <string name="storage_migrate" msgid="658894157418304023">"Migrate data"</string>
     <string name="storage_forget" msgid="8541387048014779836">"Forget this internal storage"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"To use the apps or data this drive contains, replug it in. Alternatively, you can choose to forget this storage if the drive isn\'t available.\n\nIf you choose Forget, all the data the drive contains will be lost forever.\n\nYou can reinstall the apps later, but the data stored on this drive will be lost."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Device storage"</string>
@@ -237,6 +238,14 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"After formatting, you can use this USB drive in other devices. All data will be deleted. Consider backing up first by moving apps to other internal storage."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formatting USB Drive…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"This may take a moment. Please don\'t remove the drive."</string>
+    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Move Data to <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Move your photos, files and app data to <xliff:g id="NAME">%1$s</xliff:g>. This may take a few minutes. Some apps won\'t work correctly during the move."</string>
+    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Move now"</string>
+    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Move later"</string>
+    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Migrated data to <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Could not migrate data to <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Moving Data to <xliff:g id="NAME">%1$s</xliff:g>…"</string>
+    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"This may take a moment. Please don\'t remove the drive.\nSome apps won\'t work correctly during the move."</string>
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"This drive appears to be slow."</string>
     <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"You can continue, but apps moved to this location may stutter and data transfers may take a long time. Consider using a faster drive for better performance."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Format"</string>

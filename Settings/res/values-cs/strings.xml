@@ -221,6 +221,7 @@
     <string name="storage_format" msgid="3759273736493279595">"Vymazat a naformátovat"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formátovat jako úložiště zařízení"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Nepřipojeno"</string>
+    <string name="storage_migrate" msgid="658894157418304023">"Migrovat data"</string>
     <string name="storage_forget" msgid="8541387048014779836">"Zapomenout toto interní úložiště"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Chcete-li používat aplikace a data na této jednotce, znovu ji zapojte. Pokud jednotka není k dispozici, můžete ji zapomenout.\n\nPokud zvolíte možnost Zapomenout, všechna data na jednotce budou navždy ztracena.\n\nAplikace můžete později znovu nainstalovat, avšak o data uložená na jednotce přijdete."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Úložiště zařízení"</string>
@@ -239,6 +240,14 @@
     <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Po naformátování tuto jednotku USB budete moci používat s jinými zařízeními. Veškerá data budou vymazána. Doporučujeme nejprve je zálohovat přesunutím aplikací do jiného interního úložiště."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formátování jednotky USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Tento proces může chvíli trvat. Jednotku neodpojujte."</string>
+    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Přesunout data do úložiště <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Fotky, soubory a data aplikací přesuňte do úložiště <xliff:g id="NAME">%1$s</xliff:g>. Může to trvat několik minut. Některé aplikace během přesunu nebudou fungovat správně."</string>
+    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Přesunout nyní"</string>
+    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Přesunout později"</string>
+    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Data byla migrována do úložiště <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Migrace dat do úložiště <xliff:g id="NAME">%1$s</xliff:g> se nezdařila"</string>
+    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Přesouvání dat do úložiště <xliff:g id="NAME">%1$s</xliff:g>…"</string>
+    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Tento proces může chvíli trvat. Jednotku neodpojujte.\nNěkteré aplikace během přesunu nebudou fungovat správně."</string>
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Tato jednotka je pravděpodobně pomalá."</string>
     <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Můžete pokračovat, ale aplikace přesunuté do tohoto umístění budou mít prodlevy a přenosy dat mohou trvat delší dobu. Zkuste použít rychlejší jednotku, která zajistí vyšší výkon."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formát"</string>
