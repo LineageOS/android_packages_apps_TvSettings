@@ -76,7 +76,7 @@ public class InputsActivity extends SettingsLayoutActivity {
         R.string.inputs_aux
     };
 
-    private static final LinkedHashMap<Integer, Integer> STATE_STRING_ID_MAP =
+    private static final Map<Integer, Integer> STATE_STRING_ID_MAP =
             new LinkedHashMap<Integer, Integer>() {{
                 put(TvInputManager.INPUT_STATE_CONNECTED,
                         R.plurals.inputs_header_connected_input);
@@ -304,7 +304,7 @@ public class InputsActivity extends SettingsLayoutActivity {
         }
 
         Layout layout = new Layout();
-        for (LinkedHashMap.Entry<Integer, Integer> state : STATE_STRING_ID_MAP.entrySet()) {
+        for (Map.Entry<Integer, Integer> state : STATE_STRING_ID_MAP.entrySet()) {
             ArrayList<Pair<String, TvInputInfo>> list = externalInputs.get(state.getKey());
             if (list != null && list.size() > 0) {
                 String header = mRes.getQuantityString(state.getValue(), list.size());
