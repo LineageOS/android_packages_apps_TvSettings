@@ -412,7 +412,6 @@ public class BrowseInfo extends BrowseInfoBase {
         ComponentName componentName = new ComponentName("com.android.tv.settings",
                 "com.android.tv.settings.accessories.AddAccessoryActivity");
         Intent i = new Intent().setComponent(componentName);
-        i.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
         row.add(new MenuItem.Builder().id(mNextItemId++)
                 .title(mContext.getString(R.string.accessories_add))
                 .imageResourceId(mContext, R.drawable.ic_settings_bluetooth)
@@ -440,9 +439,6 @@ public class BrowseInfo extends BrowseInfoBase {
             }
 
             XmlUtils.skipCurrentTag(parser);
-        }
-        if (intent != null) {
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
         }
         return intent;
     }
@@ -545,7 +541,6 @@ public class BrowseInfo extends BrowseInfoBase {
             for (final Account account : accounts) {
                 Intent i = new Intent(mContext, AccountSettingsActivity.class)
                         .putExtra(AccountSettingsActivity.EXTRA_ACCOUNT, account.name);
-                i.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
                 row.add(new MenuItem.Builder().id(mNextItemId++)
                         .title(authTitle != null ? authTitle : account.name)
                         .imageUri(imageUri)
@@ -567,7 +562,6 @@ public class BrowseInfo extends BrowseInfoBase {
             if (!allowableAccountTypes.isEmpty()) {
                 Intent i = new Intent().setComponent(new ComponentName("com.android.tv.settings",
                         "com.android.tv.settings.accounts.AddAccountWithTypeActivity"));
-                i.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
                 i.putExtra(AddAccountWithTypeActivity.EXTRA_ALLOWABLE_ACCOUNT_TYPES_STRING_ARRAY,
                         allowableAccountTypes.toArray(new String[allowableAccountTypes.size()]));
 
@@ -598,7 +592,6 @@ public class BrowseInfo extends BrowseInfoBase {
                 int resourceId = AccessoryUtils.getImageIdForDevice(device);
                 Intent i = BluetoothAccessoryActivity.getIntent(mContext, device.getAddress(),
                         device.getName(), resourceId);
-                i.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
 
                 String desc = connectedBluetoothAddresses.contains(device.getAddress())
                         ? mContext.getString(R.string.accessory_connected)
