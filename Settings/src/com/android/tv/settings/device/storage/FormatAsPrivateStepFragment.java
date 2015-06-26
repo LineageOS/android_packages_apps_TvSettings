@@ -19,7 +19,6 @@ package com.android.tv.settings.device.storage;
 import android.os.Bundle;
 import android.os.storage.DiskInfo;
 import android.support.annotation.NonNull;
-import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 
@@ -27,7 +26,7 @@ import com.android.tv.settings.R;
 
 import java.util.List;
 
-public class FormatAsPrivateStepFragment extends GuidedStepFragment {
+public class FormatAsPrivateStepFragment extends StorageGuidedStepFragment {
 
     private static final int ACTION_ID_CANCEL = 0;
     private static final int ACTION_ID_FORMAT = 1;

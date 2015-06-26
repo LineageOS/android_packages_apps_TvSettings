@@ -26,7 +26,6 @@ import android.os.Handler;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
-import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.view.View;
@@ -128,7 +127,7 @@ public class MigrateStorageActivity extends Activity {
         mMoveId = mPackageManager.movePrimaryStorage(mVolumeInfo);
     }
 
-    public static class MigrateConfirmationStepFragment extends GuidedStepFragment {
+    public static class MigrateConfirmationStepFragment extends StorageGuidedStepFragment {
         private static final String ARG_VOLUME_DESC = "volumeDesc";
 
         private static final int ACTION_CONFIRM = 1;
