@@ -310,6 +310,14 @@ public class FormatActivity extends Activity
         public Map<String, Object> loadInBackground() {
             final Map<String, Object> result = new ArrayMap<>(3);
             try {
+                final List<VolumeInfo> volumes = mStorageManager.getVolumes();
+                for (final VolumeInfo volume : volumes) {
+                    if (TextUtils.equals(mDiskId, volume.getDiskId()) &&
+                            volume.getType() == VolumeInfo.TYPE_PRIVATE) {
+                        mStorageManager.forgetVolume(volume.getFsUuid());
+                    }
+                }
+
                 mStorageManager.partitionPublic(mDiskId);
             } catch (Exception e) {
                 result.put(RESULT_EXCEPTION, e);
