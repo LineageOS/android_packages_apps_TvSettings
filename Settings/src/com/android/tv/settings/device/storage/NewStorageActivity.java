@@ -27,7 +27,6 @@ import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.os.storage.VolumeRecord;
 import android.support.annotation.NonNull;
-import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;
@@ -95,7 +94,7 @@ public class NewStorageActivity extends Activity {
         }
     }
 
-    public static class NewStorageFragment extends GuidedStepFragment {
+    public static class NewStorageFragment extends StorageGuidedStepFragment {
 
         private static final int ACTION_BROWSE = 1;
         private static final int ACTION_FORMAT_AS_PRIVATE = 2;
@@ -192,7 +191,7 @@ public class NewStorageActivity extends Activity {
         }
     }
 
-    public static class MissingStorageFragment extends GuidedStepFragment {
+    public static class MissingStorageFragment extends StorageGuidedStepFragment {
 
         private static final int ACTION_OK = 0;
 

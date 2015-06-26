@@ -23,7 +23,6 @@ import android.os.Bundle;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
-import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;
@@ -35,7 +34,7 @@ import com.android.tv.settings.R;
 import java.io.File;
 import java.util.List;
 
-public class MoveAppStepFragment extends GuidedStepFragment {
+public class MoveAppStepFragment extends StorageGuidedStepFragment {
 
     private static final String TAG = "MoveAppStepFragment";
 
