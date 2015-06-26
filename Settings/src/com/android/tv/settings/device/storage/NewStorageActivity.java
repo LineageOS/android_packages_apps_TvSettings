@@ -322,6 +322,9 @@ public class NewStorageActivity extends Activity {
                 return;
             }
             final VolumeRecord volumeRecord = mStorageManager.findRecordByUuid(fsUuid);
+            if (volumeRecord == null) {
+                return;
+            }
             Log.d(TAG, "Found ejected volume: " + volumeRecord + " for FSUUID: " + fsUuid);
             if (volumeRecord.getType() == VolumeInfo.TYPE_PRIVATE) {
                 final Intent i = NewStorageActivity.getMissingStorageLaunchIntent(context, fsUuid);
