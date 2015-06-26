@@ -282,9 +282,8 @@ public class NewStorageActivity extends Activity {
                 return;
             }
             // No usable volumes, prompt the user to erase the disk
-            final Intent i = new Intent(context, NewStorageActivity.class);
+            final Intent i = NewStorageActivity.getNewStorageLaunchIntent(context, null, diskId);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            i.putExtra(DiskInfo.EXTRA_DISK_ID, diskId);
             context.startActivity(i);
         }
 
