@@ -283,7 +283,7 @@ public class NewStorageActivity extends Activity {
             }
             // No usable volumes, prompt the user to erase the disk
             final Intent i = NewStorageActivity.getNewStorageLaunchIntent(context, null, diskId);
-            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            setPopupLaunchFlags(i);
             context.startActivity(i);
         }
 
@@ -308,7 +308,7 @@ public class NewStorageActivity extends Activity {
                 if (disk.isAdoptable()) {
                     final Intent i = NewStorageActivity.getNewStorageLaunchIntent(context,
                             volumeId, disk.getId());
-                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    setPopupLaunchFlags(i);
                     context.startActivity(i);
                     break;
                 }
@@ -328,9 +328,13 @@ public class NewStorageActivity extends Activity {
             Log.d(TAG, "Found ejected volume: " + volumeRecord + " for FSUUID: " + fsUuid);
             if (volumeRecord.getType() == VolumeInfo.TYPE_PRIVATE) {
                 final Intent i = NewStorageActivity.getMissingStorageLaunchIntent(context, fsUuid);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                setPopupLaunchFlags(i);
                 context.startActivity(i);
             }
+        }
+
+        private void setPopupLaunchFlags(Intent intent) {
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         }
     }
 
