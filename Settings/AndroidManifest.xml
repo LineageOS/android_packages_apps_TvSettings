@@ -487,7 +487,8 @@
         </receiver>
 
         <activity android:name=".device.storage.NewStorageActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity="" />
 
         <activity android:name=".device.storage.UnmountActivity"
             android:exported="false" />
