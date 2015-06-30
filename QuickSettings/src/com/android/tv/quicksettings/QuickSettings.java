@@ -42,7 +42,7 @@ public class QuickSettings extends Activity {
         @Override
         public void onPreferenceStartInitialScreen() {
             final Fragment f = new QuickSettingsPreferenceFragment();
-            startPreferenceFragment(f, null);
+            startPreferenceFragment(f);
         }
 
         @Override
@@ -56,7 +56,7 @@ public class QuickSettings extends Activity {
             final Bundle b = new Bundle(1);
             b.putString(PreferenceFragment.ARG_PREFERENCE_ROOT, pref.getKey());
             f.setArguments(b);
-            startPreferenceFragment(f, null);
+            startPreferenceFragment(f);
             return true;
         }
     }
