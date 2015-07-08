@@ -551,22 +551,26 @@ public class StorageResetActivity extends SettingsLayoutActivity
         }
 
         private void updateDetails(MeasurementDetails details) {
-            final long dcimSize = totalValues(details.mediaSize, Environment.DIRECTORY_DCIM,
+            final int currentUser = ActivityManager.getCurrentUser();
+            final long dcimSize = totalValues(details.mediaSize.get(currentUser),
+                    Environment.DIRECTORY_DCIM,
                     Environment.DIRECTORY_MOVIES, Environment.DIRECTORY_PICTURES);
 
-            final long musicSize = totalValues(details.mediaSize, Environment.DIRECTORY_MUSIC,
+            final long musicSize = totalValues(details.mediaSize.get(currentUser),
+                    Environment.DIRECTORY_MUSIC,
                     Environment.DIRECTORY_ALARMS, Environment.DIRECTORY_NOTIFICATIONS,
                     Environment.DIRECTORY_RINGTONES, Environment.DIRECTORY_PODCASTS);
 
-            final long downloadsSize = totalValues(details.mediaSize, Environment.DIRECTORY_DOWNLOADS);
+            final long downloadsSize = totalValues(details.mediaSize.get(currentUser),
+                    Environment.DIRECTORY_DOWNLOADS);
 
             mAvailSize.setSize(details.availSize);
-            mAppsSize.setSize(details.appsSize);
+            mAppsSize.setSize(details.appsSize.get(currentUser));
             mDcimSize.setSize(dcimSize);
             mMusicSize.setSize(musicSize);
             mDownloadsSize.setSize(downloadsSize);
             mCacheSize.setSize(details.cacheSize);
-            mMiscSize.setSize(details.miscSize);
+            mMiscSize.setSize(details.miscSize.get(currentUser));
         }
     }
 
@@ -653,10 +657,16 @@ public class StorageResetActivity extends SettingsLayoutActivity
 
     private static long totalValues(HashMap<String, Long> map, String... keys) {
         long total = 0;
-        for (String key : keys) {
-            if (map.containsKey(key)) {
-                total += map.get(key);
+        if (map != null) {
+            for (String key : keys) {
+                if (map.containsKey(key)) {
+                    total += map.get(key);
+                }
             }
+        } else {
+            throw new IllegalStateException(
+                    "MeasurementDetails mediaSize array does not have key for current user " +
+                    ActivityManager.getCurrentUser());
         }
         return total;
     }
