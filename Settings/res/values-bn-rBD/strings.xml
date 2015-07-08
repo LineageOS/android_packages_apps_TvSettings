@@ -80,7 +80,7 @@
     <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"যুক্ত করার জন্য: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, এটি এই পাসকী দেখাচ্ছে কিনা তা নিশ্চিত করুন: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8234127565393932499">"প্রেরক: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;এই ডিভাইসের সাথে যুক্ত করবেন?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="8951451728250058901">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt; এর সাথে যুক্ত করার জন্য এতে &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt; পাসকী লিখে Return বা Enter টিপুন।"</string>
-    <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt; এর সাথে যুক্ত করার জন্য &lt;br&gt;ডিভাইসের প্রয়োজনীয় PIN লিখুন:"</string>
+    <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt; এর সাথে যুক্ত করার জন্য &lt;br&gt;ডিভাইসের প্রয়োজনীয় পিন লিখুন:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="7980787196089653577">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt; এর সাথে যুক্ত হতে &lt;br&gt;ডিভাইসটির প্রয়োজনীয় পাসকী-টি লিখুন:"</string>
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"সাধারণত ০০০০ বা ১২৩৪"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"যুক্ত করুন"</string>
@@ -278,8 +278,8 @@
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"পুনরায় চেষ্টা করুন"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS রাউটার অনুসন্ধান করছে..."</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"আপনার রাউটারে \'Wi-Fi সুরক্ষিত সেটআপ\' বোতামটি টিপুন।\nএকে \"WPS\" নামে উল্লেখ করা থাকতে পারে অথবা বাঁদিকে তার প্রতীক থাকতে পারে।"</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"আপনার Wi-Fi রাউটারে PIN <xliff:g id="NUMBER">%1$s</xliff:g> লিখুন"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"আপনি PIN লেখার পর, সেটআপ সম্পূর্ণ হতে ২ মিনিট পর্যন্ত সময় লাগতে পারে"</string>
+    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"আপনার Wi-Fi রাউটারে পিন <xliff:g id="NUMBER">%1$s</xliff:g> লিখুন"</string>
+    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"আপনি পিন লেখার পর, সেটআপ সম্পূর্ণ হতে ২ মিনিট পর্যন্ত সময় লাগতে পারে"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Wi-Fi রাউটার খুঁজে পাওয়া যায়নি"</string>
     <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Wi-Fi রাউটার নিরাপত্তা সেটিংস (WEP) সমর্থিত নয়"</string>
     <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Wi-Fi রাউটার নিরাপত্তা সেটিংস (TKIP) সমর্থিত নয়"</string>
@@ -463,7 +463,7 @@
     <string name="title_select_wifi_network" msgid="1038871400014761952">"আপনার Wi-Fi নেটওয়ার্ক নির্বাচন করুন"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"পুনঃনামকরণ"</string>
     <string name="accessories_wifi_display_enable" msgid="4779506305656453262">"Wi-Fi প্রদর্শন"</string>
-    <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"PIN প্রয়োজন"</string>
+    <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"পিন প্রয়োজন"</string>
     <string name="whichApplication" msgid="8382179653567099571">"এটি ব্যবহার করে ক্রিয়াকলাপ সম্পূর্ণ করুন"</string>
     <string name="alwaysUseQuestion" msgid="7128459989232213727">"এই ক্রিয়ার জন্য সবসময় এই বিকল্পটি ব্যবহার করবেন?"</string>
     <string name="alwaysUseOption" msgid="1057645533268907906">"সবসময় ব্যবহার করুন"</string>
@@ -520,17 +520,17 @@
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"অনুমতি নেই"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"বিধিনিষেধগুলি কাস্টমাইজ করুন"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"একটু থামুন…"</string>
-    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"PIN পরিবর্তন করুন"</string>
+    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"পিন পরিবর্তন করুন"</string>
     <string name="restriction_description" msgid="3104855945910233028">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
-    <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"এই চ্যানেলটি দেখার জন্য PIN লিখুন"</string>
-    <string name="pin_enter_unlock_program" msgid="52453773316071511">"এই প্রোগ্রামটি দেখার জন্য PIN লিখুন"</string>
-    <string name="pin_enter_pin" msgid="821552376577935497">"PIN লিখুন"</string>
-    <string name="pin_enter_new_pin" msgid="4788218421265924211">"একটি নতুন PIN সেট করুন"</string>
-    <string name="pin_enter_again" msgid="1510456697040826496">"নতুন PIN আবার লিখুন"</string>
-    <string name="pin_enter_old_pin" msgid="851029058127630869">"পুরোনো PIN লিখুন"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"আপনি ৫ বার ভুল PIN লিখেছেন৷\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> সেকেন্ডের মধ্যে আবার চেষ্টা করুন৷"</string>
-    <string name="pin_toast_wrong" msgid="4628358195224633248">"ভুল PIN, আবার চেষ্টা করুন"</string>
-    <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN মেলেনি, আবার চেষ্টা করুন"</string>
+    <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"এই চ্যানেলটি দেখার জন্য পিন লিখুন"</string>
+    <string name="pin_enter_unlock_program" msgid="52453773316071511">"এই প্রোগ্রামটি দেখার জন্য পিন লিখুন"</string>
+    <string name="pin_enter_pin" msgid="821552376577935497">"পিন লিখুন"</string>
+    <string name="pin_enter_new_pin" msgid="4788218421265924211">"একটি নতুন পিন সেট করুন"</string>
+    <string name="pin_enter_again" msgid="1510456697040826496">"নতুন পিন আবার লিখুন"</string>
+    <string name="pin_enter_old_pin" msgid="851029058127630869">"পুরোনো পিন লিখুন"</string>
+    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"আপনি ৫ বার ভুল পিন লিখেছেন৷\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> সেকেন্ডের মধ্যে আবার চেষ্টা করুন৷"</string>
+    <string name="pin_toast_wrong" msgid="4628358195224633248">"ভুল পিন, আবার চেষ্টা করুন"</string>
+    <string name="pin_toast_not_match" msgid="5886041789737632996">"পিন মেলেনি, আবার চেষ্টা করুন"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> এর জন্য পাসওয়ার্ড দিন"</string>
     <string name="wifi_setup_connection_success" msgid="6262755735033937164">"সফলভাবে সংযুক্ত হয়েছে৷"</string>
     <string name="wifi_setup_save_success" msgid="4829154865874318015">"সফলভাবে সংরক্ষিত হয়েছে৷"</string>
