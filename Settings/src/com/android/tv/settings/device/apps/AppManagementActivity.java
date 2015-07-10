@@ -135,7 +135,13 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
         mApplicationsState = ApplicationsState.getInstance(getApplication());
         mSession = mApplicationsState.newSession(this);
         final int userId = UserHandle.myUserId();
-        mAppInfo = new AppInfo(this, mApplicationsState.getEntry(mPackageName, userId));
+        final ApplicationsState.AppEntry entry = mApplicationsState.getEntry(mPackageName, userId);
+        if (entry == null) {
+            Log.e(TAG, "Failed to load entry for package " + mPackageName);
+            finish();
+            return;
+        }
+        mAppInfo = new AppInfo(this, entry);
         mOpenManager = new OpenManager(this, mAppInfo);
         mForceStopManager = new ForceStopManager(this, mAppInfo);
         mUninstallManager = new UninstallManager(this, mAppInfo);
