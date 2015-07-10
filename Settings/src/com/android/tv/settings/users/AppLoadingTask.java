@@ -31,6 +31,7 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.RemoteException;
+import android.service.dreams.DreamService;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.inputmethod.InputMethodInfo;
@@ -222,6 +223,10 @@ class AppLoadingTask extends AsyncTask<Void, Void, List<AppLoadingTask.Selectabl
         // Add widgets
         Intent widgetIntent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
         addSystemApps(visibleApps, widgetIntent, defaultSystemImes, mUserId);
+
+        // Add daydreams
+        Intent daydreamIntent = new Intent(DreamService.SERVICE_INTERFACE);
+        addSystemApps(visibleApps, daydreamIntent, defaultSystemImes, mUserId);
 
         List<ApplicationInfo> installedApps = mPackageManager.getInstalledApplications(
                 PackageManager.GET_UNINSTALLED_PACKAGES);
