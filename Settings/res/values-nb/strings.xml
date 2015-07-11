@@ -168,7 +168,7 @@
     <string name="wifi_connecting" msgid="1299861268647323455">"Kobler til <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_saving" msgid="1269061570772019215">"Lagrer konfigurasjonen for <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_connect" msgid="8570424816865506077">"Koble til"</string>
-    <string name="wifi_forget_network" msgid="7302755141573045803">"Glem nettverk"</string>
+    <string name="wifi_forget_network" msgid="7302755141573045803">"Glem nettverket"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"Dette sletter informasjonen som brukes til å koble til dette nettverket, inkludert lagrede passord"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"OK"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"Bytt"</string>
@@ -222,7 +222,7 @@
     <string name="storage_migrate" msgid="658894157418304023">"Overfør data"</string>
     <string name="storage_forget" msgid="8541387048014779836">"Glem denne interne lagringen"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Plugg disken i på nytt for å bruke appene eller dataene den inneholder. Alternativt kan du velge å glemme denne lagringen hvis disken ikke er tilgjengelig.\n\nHvis du velger «glem», forsvinner alle dataene på disken for alltid.\n\nDu kan installere appene på nytt senere, men dataene som er lagret på disken, går tapt."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Lagringsenhet"</string>
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Lagring på enheten"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Flyttbar lagring"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Tilbakestill"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> er satt inn"</string>
@@ -370,18 +370,18 @@
     <string name="system_reboot_confirm" msgid="534407910866199191">"Vil du starte på nytt nå?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Hvis du oppdatere denne innstillingen, må enheten din startes på nytt"</string>
     <string name="system_never_check" msgid="6666520460705041617">"Kontrollér aldri"</string>
-    <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Se bare etter DRM-innhold"</string>
+    <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Kontrollér kun DRM-innhold"</string>
     <string name="system_always_check" msgid="1866566828098009853">"Kontrollér alltid"</string>
     <string name="system_bt_hci_log" msgid="2425757846046504431">"Bluetooth HCI-loggføring"</string>
     <string name="system_email_address" msgid="8669468986250302378">"E-postadresse"</string>
     <string name="system_usb_debugging" msgid="3777895294421924323">"USB-feilsøking"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"Tillat bruk av simulerte GPS-koordinater"</string>
-    <string name="system_select_debug_app" msgid="8592021815119618485">"Velg å feilsøke denne appen"</string>
+    <string name="system_select_debug_app" msgid="8592021815119618485">"Velg feilsøkingsapp"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Vent på feilsøkingsverktøyet"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Bekreft apper via USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Sjekk om det er skadelig atferd i apper som er installert via ADB/ADT"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Detaljert loggføring for Wi-Fi"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Aktivér detaljert loggføring for Wi-Fi"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Aktivér detaljert Wi-Fi-loggføring"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"Vis berøringer"</string>
     <string name="system_pointer_location" msgid="2673764026490179227">"Pekerplassering"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"Vis kantene i utformingen"</string>
@@ -407,10 +407,10 @@
     <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"Feilsøkt app venter til feilsøkingsverktøyet er lagt til før den kjører"</string>
     <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"Vis kanter, marger osv."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"Fremhev visninger i vinduer når de tegnes med GPU-en"</string>
-    <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"La maskinvarelag blinke i grønt når de oppdateres"</string>
+    <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"Maskinvarelag blinker grønt under oppdatering"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Fra best til verst: blå, grønn, lyserød, rød"</string>
-    <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Oppdater hele vinduet når noe oppdateres"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Oppdater skjerm ved lange appoperasjoner på hovedtråd"</string>
+    <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Fremhev hele vindusoverflater når de oppdateres"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Skjermblink ved lange apphandlinger på hovedtråd"</string>
     <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"Skjermoverlegg viser gjeldende CPU-bruk"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Mål gjengivelsestid i adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"På"</string>

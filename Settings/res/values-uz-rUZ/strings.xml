@@ -31,7 +31,7 @@
     <string name="sync_now" msgid="8732244492880016471">"Hozir sinx"</string>
     <string name="sync_cancel" msgid="5839264070098894371">"Sinxronlashni bekor qilish"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Sinxronlanmoqda…"</string>
-    <string name="last_synced" msgid="6178494892357077274">"So‘nggi martda <xliff:g id="TIME">%1s</xliff:g> da sinxronlashtirilgan"</string>
+    <string name="last_synced" msgid="6178494892357077274">"So‘nggi sinxronlanish: <xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"O‘chirilgan"</string>
     <string name="sync_is_failing" msgid="8229476000384257186">"Sinxronlashtirish ishlamayapti. U tezda qaytadi."</string>
     <string name="account_remove" msgid="4313580520737295272">"Hisobni o‘chirish"</string>
@@ -90,7 +90,7 @@
     <string name="system_language" msgid="2337138146114609247">"Til"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"Klaviatura"</string>
     <string name="system_home" msgid="2858989138172296012">"Bosh ekran"</string>
-    <string name="system_search" msgid="2837264654143247611">"Qidirish"</string>
+    <string name="system_search" msgid="2837264654143247611">"Qidiruv"</string>
     <string name="system_security" msgid="8230080273993484407">"Xavfsizlik va cheklanishlar"</string>
     <string name="system_speech" msgid="8128688499687306982">"Nutq"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Kirishlar"</string>
@@ -122,7 +122,7 @@
     <item msgid="7541004325985469896">"Yaxshi"</item>
     <item msgid="1546771355788926692">"A’lo"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3428401680168668544">"MAC manzil"</string>
+    <string name="title_mac_address" msgid="3428401680168668544">"MAC-manzil"</string>
     <string name="title_signal_strength" msgid="205478650262078041">"Signal darajasi"</string>
     <string name="title_ip_address" msgid="4533523100923004711">"IP manzili"</string>
     <string name="title_ssid" msgid="4858945903642469730">"Wi-Fi tarmog\'ingiz nomini kiriting"</string>
@@ -222,7 +222,7 @@
     <string name="storage_migrate" msgid="658894157418304023">"Ma\'lumotlarni ko‘chirib o‘tkazish"</string>
     <string name="storage_forget" msgid="8541387048014779836">"Ushbu ichki xotira esdan chiqarilsin"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Ushbu xotira qurilmasiga saqlangan ilova yoki ma’lumotlardan foydalanish uchun uni qayta kiriting. Shuningdek, agar bu qurilmadan foydalanib bo‘lmasa, uni tizim xotirasidan o‘chirib tashlasangiz mumkin.\n\nAgar o‘chirib tashlashni tanlasangiz, qurilmadagi barcha ma’lumotlar butunlay o‘chib ketadi.\n\nSiz ilovalarni keyinroq qayta o‘rnatishingiz mumkin, ammo ularning ushbu qurilmada joylashgan ma’lumotlari yo‘qoladi."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Xotira qurilmasi"</string>
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Qurilma xotirasi"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Tashqi xotira"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Sozlamalarni tiklash"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> ulandi"</string>
@@ -278,7 +278,7 @@
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Qayta urinish"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS marshrutizator qidirilmoqda…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Marshrutizatoringizda Wi-Fi Himoyalangan o\'rnatish tugmasini bosing.\nU “WPS” deb atalishi yoki chap tomonda belgiga ega bo\'lishi mumkin."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"PIN <xliff:g id="NUMBER">%1$s</xliff:g> ni Wi-Fi marshrutizatoringizga kiriting"</string>
+    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Wi-Fi routerdagi <xliff:g id="NUMBER">%1$s</xliff:g> PIN-kodini kiriting"</string>
     <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"PIN ni kiritganingizdan keyin o‘rnatish 2 daqiqacha vaqt olishi mumkin"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Wi-Fi marshrutizatorini topib bo‘lmadi"</string>
     <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Wi-Fi marshrutizatori xavsizlik parametri (WEP) qo‘llab-quvvatlanmaydi"</string>
@@ -529,8 +529,8 @@
     <string name="pin_enter_again" msgid="1510456697040826496">"Yangi PIN ni qaytadan kiritish"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Eski PIN ni kiritish"</string>
     <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Siz PIN kodni 5 marta noto‘g‘ri kiritdingiz.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> soniyadan so‘ng qayta urining."</string>
-    <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN kod noto‘g‘ri, qaytadan urining"</string>
-    <string name="pin_toast_not_match" msgid="5886041789737632996">"Qaytadan urining, PIN kod noto‘g‘ri"</string>
+    <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN-kod noto‘g‘ri, qaytadan urining"</string>
+    <string name="pin_toast_not_match" msgid="5886041789737632996">"Qaytadan urining, PIN-kod noto‘g‘ri"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> uchun parolni kiriting"</string>
     <string name="wifi_setup_connection_success" msgid="6262755735033937164">"Muvaffaqiyatli ulandi."</string>
     <string name="wifi_setup_save_success" msgid="4829154865874318015">"Muvaffaqiyatli tarzda saqlandi."</string>
