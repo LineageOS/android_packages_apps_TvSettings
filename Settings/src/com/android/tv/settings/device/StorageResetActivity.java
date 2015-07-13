@@ -664,7 +664,7 @@ public class StorageResetActivity extends SettingsLayoutActivity
                 }
             }
         } else {
-            throw new IllegalStateException(
+            Log.w(TAG,
                     "MeasurementDetails mediaSize array does not have key for current user " +
                     ActivityManager.getCurrentUser());
         }
