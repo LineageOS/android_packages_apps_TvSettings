@@ -18,10 +18,14 @@ package com.android.tv.settings.device.storage;
 
 import android.annotation.Nullable;
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.UserInfo;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.os.storage.DiskInfo;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
@@ -250,6 +254,16 @@ public class NewStorageActivity extends Activity {
         private StorageManager mStorageManager;
         @Override
         public void onReceive(Context context, Intent intent) {
+            final UserManager userManager =
+                    (UserManager) context.getSystemService(Context.USER_SERVICE);
+            final UserInfo userInfo = userManager.getUserInfo(UserHandle.myUserId());
+
+            if (userInfo.isRestricted() ||
+                    ActivityManager.getCurrentUser() != UserHandle.myUserId()) {
+                Log.d(TAG, "Ignoring storage notification: wrong user");
+                return;
+            }
+
             mStorageManager = context.getSystemService(StorageManager.class);
 
             if (TextUtils.equals(intent.getAction(), VolumeInfo.ACTION_VOLUME_STATE_CHANGED)) {
