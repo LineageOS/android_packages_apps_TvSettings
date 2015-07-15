@@ -30,6 +30,7 @@ import android.os.storage.DiskInfo;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.os.storage.VolumeRecord;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
@@ -261,6 +262,12 @@ public class NewStorageActivity extends Activity {
             if (userInfo.isRestricted() ||
                     ActivityManager.getCurrentUser() != UserHandle.myUserId()) {
                 Log.d(TAG, "Ignoring storage notification: wrong user");
+                return;
+            }
+
+            if (Settings.Secure.getInt(context.getContentResolver(),
+                    Settings.Secure.USER_SETUP_COMPLETE, 0) == 0) {
+                Log.d(TAG, "Ignoring storage notification: setup not complete");
                 return;
             }
 
