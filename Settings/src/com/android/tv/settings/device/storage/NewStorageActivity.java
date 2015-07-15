@@ -284,6 +284,9 @@ public class NewStorageActivity extends Activity {
                 }
             } else if (TextUtils.equals(intent.getAction(), DiskInfo.ACTION_DISK_SCANNED)) {
                 handleScan(context, intent);
+            } else if (TextUtils.equals(intent.getAction(),
+                    "com.google.android.tungsten.setupwraith.TV_SETTINGS_POST_SETUP")) {
+                handleSetupComplete(context);
             }
         }
 
@@ -351,6 +354,50 @@ public class NewStorageActivity extends Activity {
                 final Intent i = NewStorageActivity.getMissingStorageLaunchIntent(context, fsUuid);
                 setPopupLaunchFlags(i);
                 context.startActivity(i);
+            }
+        }
+
+        private void handleSetupComplete(Context context) {
+            Log.d(TAG, "Scanning for storage post-setup");
+
+            final List<DiskInfo> diskInfos = mStorageManager.getDisks();
+            for (DiskInfo diskInfo : diskInfos) {
+                Log.d(TAG, "Scanning disk: " + diskInfo);
+                if (diskInfo.size <= 0) {
+                    Log.d(TAG, "Disk ID " + diskInfo.id + " has no media");
+                    continue;
+                }
+                if (diskInfo.volumeCount != 0) {
+                    Log.d(TAG, "Disk ID " + diskInfo.id + " has usable volumes, deferring");
+                    continue;
+                }
+                // No usable volumes, prompt the user to erase the disk
+                final Intent i =
+                        NewStorageActivity.getNewStorageLaunchIntent(context, null, diskInfo.id);
+                setPopupLaunchFlags(i);
+                context.startActivity(i);
+                return;
+            }
+
+            final List<VolumeInfo> volumeInfos = mStorageManager.getVolumes();
+            for (final VolumeInfo info : volumeInfos) {
+                final String uuid = info.getFsUuid();
+                Log.d(TAG, "Scanning volume: " + info);
+                if (info.getType() != VolumeInfo.TYPE_PUBLIC || TextUtils.isEmpty(uuid)) {
+                    continue;
+                }
+                final VolumeRecord record = mStorageManager.findRecordByUuid(uuid);
+                if (record.isInited() || record.isSnoozed()) {
+                    continue;
+                }
+                final DiskInfo disk = info.getDisk();
+                if (disk.isAdoptable()) {
+                    final Intent i = NewStorageActivity.getNewStorageLaunchIntent(context,
+                            info.getId(), disk.getId());
+                    setPopupLaunchFlags(i);
+                    context.startActivity(i);
+                    return;
+                }
             }
         }
 
