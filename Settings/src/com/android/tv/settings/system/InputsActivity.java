@@ -207,7 +207,7 @@ public class InputsActivity extends SettingsLayoutActivity {
                             .add(new Action.Builder(mRes, action)
                                     .title(R.string.off)
                                     .data(off)
-                                    .checked(checked)
+                                    .checked(!checked)
                                     .build());
 
                 return layout;
