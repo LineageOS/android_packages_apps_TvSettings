@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.about;
 
+import android.app.Fragment;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
@@ -28,7 +29,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.SystemClock;
+import android.support.annotation.NonNull;
+import android.support.v17.leanback.app.GuidedStepFragment;
+import android.support.v17.leanback.widget.GuidanceStylist;
+import android.support.v17.leanback.widget.GuidedAction;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.android.tv.settings.PreferenceUtils;
@@ -140,8 +146,11 @@ public class AboutActivity extends SettingsLayoutActivity {
                 startActivity(intent);
             }
         } else if (key == KEY_REBOOT) {
-            PowerManager pm = (PowerManager)getSystemService(Context.POWER_SERVICE);
-            pm.reboot(null);
+            final Fragment f = new RebootConfirmFragment();
+            getFragmentManager().beginTransaction()
+                    .replace(android.R.id.content, f)
+                    .addToBackStack(null)
+                    .commit();
         } else {
             Intent intent = action.getIntent();
             if (intent != null) {
@@ -249,5 +258,49 @@ public class AboutActivity extends SettingsLayoutActivity {
             }
         }
         return null;  // No system image package found.
+    }
+
+    public static class RebootConfirmFragment extends GuidedStepFragment {
+
+        private static final int ACTION_RESTART = 1;
+
+        @Override
+        public void onViewCreated(View view, Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+            setSelectedActionPosition(1);
+        }
+
+        @Override
+        public @NonNull GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
+            return new GuidanceStylist.Guidance(
+                    getString(R.string.system_reboot_confirm),
+                    "",
+                    getString(R.string.about_preference),
+                    getActivity().getDrawable(R.drawable.ic_settings_warning)
+                    );
+        }
+
+        @Override
+        public void onCreateActions(@NonNull List<GuidedAction> actions,
+                Bundle savedInstanceState) {
+            actions.add(new GuidedAction.Builder()
+                    .title(getString(R.string.restart_button_label))
+                    .id(ACTION_RESTART)
+                    .build());
+            actions.add(new GuidedAction.Builder()
+                    .title(getString(android.R.string.cancel))
+                    .build());
+        }
+
+        @Override
+        public void onGuidedActionClicked(GuidedAction action) {
+            if (action.getId() == ACTION_RESTART) {
+                PowerManager pm =
+                        (PowerManager) getActivity().getSystemService(Context.POWER_SERVICE);
+                pm.reboot(null);
+            } else {
+                getFragmentManager().popBackStack();
+            }
+        }
     }
 }
