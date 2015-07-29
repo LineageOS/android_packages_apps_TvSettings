@@ -164,6 +164,7 @@ public class BrowseInfo extends BrowseInfoBase {
     private static final String PREF_KEY_INPUTS = "inputs";
     private static final String PREF_KEY_HOME = "home";
     private static final String PREF_KEY_CAST = "cast";
+    private static final String PREF_KEY_GOOGLESETTINGS = "googleSettings";
 
     private final Context mContext;
     private final AuthenticatorHelper mAuthenticatorHelper;
@@ -276,7 +277,7 @@ public class BrowseInfo extends BrowseInfoBase {
             } else if (PREF_KEY_HOME.equals(key)) {
                 // Only show home screen setting if there's a system app to handle the intent.
                 Intent recIntent = getIntent(parser, attrs);
-                if (systemIntentIsHandled(recIntent)) {
+                if (systemIntentIsHandled(recIntent) != null) {
                     mRow.add(new MenuItem.Builder()
                             .id(mNextItemId++)
                             .title(title)
@@ -286,13 +287,34 @@ public class BrowseInfo extends BrowseInfoBase {
                 }
             } else if (PREF_KEY_CAST.equals(key)) {
                 Intent i = getIntent(parser, attrs);
-                if (systemIntentIsHandled(i)) {
+                if (systemIntentIsHandled(i) != null) {
                     mRow.add(new MenuItem.Builder()
                             .id(mNextItemId++)
                             .title(title)
                             .imageResourceId(mContext, iconRes)
                             .intent(i)
                             .build());
+                }
+            } else if (PREF_KEY_GOOGLESETTINGS.equals(key)) {
+                Intent i = getIntent(parser, attrs);
+                final ResolveInfo info = systemIntentIsHandled(i);
+                if (info != null) {
+                    try {
+                        final PackageManager packageManager = context.getPackageManager();
+                        final String packageName = info.resolvePackageName != null ?
+                                info.resolvePackageName : info.activityInfo.packageName;
+                        final Resources targetResources =
+                                packageManager.getResourcesForApplication(packageName);
+                        final String targetTitle = info.loadLabel(packageManager).toString();
+                        mRow.add(new MenuItem.Builder()
+                                .id(mNextItemId++)
+                                .title(targetTitle)
+                                .imageResourceId(targetResources, info.iconResourceId)
+                                .intent(i)
+                                .build());
+                    } catch (Exception e) {
+                        Log.e(TAG, "Error adding google settings", e);
+                    }
                 }
             } else if (!PREF_KEY_INPUTS.equals(key) || mInputSettingNeeded) {
                 MenuItem.TextGetter descriptionGetter = getDescriptionTextGetterFromKey(key);
@@ -436,6 +458,9 @@ public class BrowseInfo extends BrowseInfoBase {
                 intent.setComponent(componentName);
             } else if (action != null) {
                 intent = new Intent(action);
+                if (targetPackage != null) {
+                    intent.setPackage(targetPackage);
+                }
             }
 
             XmlUtils.skipCurrentTag(parser);
@@ -612,23 +637,23 @@ public class BrowseInfo extends BrowseInfoBase {
         return UriUtils.getShortcutIconResourceUri(iconResource).toString();
     }
 
-    private boolean systemIntentIsHandled(Intent intent) {
+    private ResolveInfo systemIntentIsHandled(Intent intent) {
         if (mContext == null || intent == null) {
-            return false;
+            return null;
         }
 
         PackageManager pm = mContext.getPackageManager();
         if (pm == null) {
-            return false;
+            return null;
         }
 
         for (ResolveInfo info : pm.queryIntentActivities(intent, 0)) {
             if (info.activityInfo != null && info.activityInfo.enabled &&
                 (info.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) ==
                         ApplicationInfo.FLAG_SYSTEM) {
-                return true;
+                return info;
             }
         }
-        return false;
+        return null;
     }
 }
