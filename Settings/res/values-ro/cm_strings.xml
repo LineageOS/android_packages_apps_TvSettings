@@ -18,13 +18,21 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="about_cmupdate_settings_title">Actualizări CyanogenMod</string>
   <string name="about_mod_version">versiune CyanogenMod</string>
+  <plurals name="show_dev_countdown_cm">
+    <item quantity="one">Ești la <xliff:g id="step_count">%1$d</xliff:g> pas distanță de a activa opțiunile de dezvoltator.</item>
+    <item quantity="few">Ești la <xliff:g id="step_count">%1$d</xliff:g> pași distanță de a activa opțiunile de dezvoltator.</item>
+    <item quantity="other">Ești la <xliff:g id="step_count">%1$d</xliff:g> pași distanță de a activa opțiunile de dezvoltator.</item>
+  </plurals>
   <string name="show_dev_on_cm">Ați deblocat setările de dezvoltator!</string>
+  <string name="show_dev_already_cm">Nu este nevoie, deja ai deblocat setările de dezvoltator.</string>
   <string name="about_build_date">Dată compilare</string>
   <string name="about_kernel_version">Versiune nucleu</string>
   <string name="selinux_status_disabled">Dezactivat</string>
   <string name="selinux_status_permissive">Permisiv</string>
   <string name="root_access">Acces root</string>
+  <string name="root_access_warning_title">Permite acces la root?</string>
   <string name="root_access_none">Dezactivat</string>
+  <string name="root_access_apps">Doar aplicații</string>
   <string name="root_access_adb">Doar ADB</string>
   <string name="root_access_all">Aplicații și ADB</string>
   <string name="adb_over_network">ADB prin rețea</string>
@@ -34,5 +42,6 @@
   <string name="reboot_reboot">Repornire</string>
   <string name="reboot_recovery">Recuperare</string>
   <string name="reboot_bootloader">Bootloader</string>
+  <string name="reboot_soft">Repornirea sistemului</string>
   <string name="system_display">Afișare</string>
 </resources>
