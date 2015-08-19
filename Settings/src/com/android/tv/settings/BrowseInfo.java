@@ -55,7 +55,7 @@ import com.android.tv.settings.accounts.AddAccountWithTypeActivity;
 import com.android.tv.settings.accounts.AuthenticatorHelper;
 import com.android.tv.settings.connectivity.ConnectivityStatusIconUriGetter;
 import com.android.tv.settings.connectivity.ConnectivityStatusTextGetter;
-import com.android.tv.settings.connectivity.WifiNetworksActivity;
+import com.android.tv.settings.connectivity.NetworkActivity;
 import com.android.tv.settings.device.sound.SoundActivity;
 import com.android.tv.settings.users.RestrictedProfileDialogFragment;
 import com.android.tv.settings.util.UriUtils;
@@ -482,7 +482,7 @@ public class BrowseInfo extends BrowseInfoBase {
     }
 
     private MenuItem.TextGetter getDescriptionTextGetterFromKey(String key) {
-        if (WifiNetworksActivity.PREFERENCE_KEY.equals(key)) {
+        if (NetworkActivity.PREFERENCE_KEY.equals(key)) {
             return ConnectivityStatusTextGetter.createWifiStatusTextGetter(mContext);
         }
 
@@ -498,7 +498,7 @@ public class BrowseInfo extends BrowseInfoBase {
             return new SoundActivityImageUriGetter(mContext);
         }
 
-        if (WifiNetworksActivity.PREFERENCE_KEY.equals(key)) {
+        if (NetworkActivity.PREFERENCE_KEY.equals(key)) {
             return ConnectivityStatusIconUriGetter.createWifiStatusIconUriGetter(mContext);
         }
 

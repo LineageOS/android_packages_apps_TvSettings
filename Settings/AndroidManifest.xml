@@ -101,10 +101,6 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true"
             android:theme="@style/Theme.Leanback.FormWizard.Solid" />
-        <activity
-            android:name=".connectivity.WifiNetworksActivity"
-            android:configChanges="keyboard|keyboardHidden|navigation"
-            android:exported="true" />
         <!-- WpsConnectionActivity may be started from setup so theme
              is determined at runtime -->
         <activity

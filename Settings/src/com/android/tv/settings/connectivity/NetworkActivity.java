@@ -51,6 +51,8 @@ import java.util.List;
 public class NetworkActivity extends SettingsLayoutActivity implements
         ConnectivityListener.Listener, ConnectivityListener.WifiNetworkListener {
 
+    public static final String PREFERENCE_KEY = "wifi";
+
     private static final int REQUEST_CODE_ADVANCED_OPTIONS = 1;
     private static final int WIFI_SCAN_INTERVAL_CAP_MILLIS = 10 * 1000;
     private static final int WIFI_UI_REFRESH_INTERVAL_CAP_MILLIS = 15 * 1000;
