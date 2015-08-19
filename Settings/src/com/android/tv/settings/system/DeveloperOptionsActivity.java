@@ -895,10 +895,10 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     }
 
     private int getAnimationScaleValueIndex(int which) {
-        final String currentScale = Float.toString(getAnimationScaleValue(which));
+        final float currentScale = getAnimationScaleValue(which);
         final String[] scales = getResources().getStringArray(R.array.animation_scale_values);
         for (int i = 0; i < scales.length; i++) {
-            if (TextUtils.equals(currentScale, scales[i])) {
+            if (Math.abs(currentScale - Float.parseFloat(scales[i])) < 0.01) {
                 return i;
             }
         }
