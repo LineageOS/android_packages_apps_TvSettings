@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.system;
 
-import android.annotation.StringRes;
 import android.app.ActivityManagerNative;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
@@ -37,6 +36,7 @@ import android.os.ServiceManager;
 import android.os.StrictMode;
 import android.os.SystemProperties;
 import android.provider.Settings;
+import android.support.annotation.StringRes;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.HardwareRenderer;

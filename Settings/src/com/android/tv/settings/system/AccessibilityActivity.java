@@ -17,7 +17,6 @@
 package com.android.tv.settings.system;
 
 import android.accessibilityservice.AccessibilityServiceInfo;
-import android.annotation.NonNull;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -34,6 +33,7 @@ import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeech.EngineInfo;
 import android.speech.tts.TtsEngines;
 import android.speech.tts.UtteranceProgressListener;
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.text.TextUtils.SimpleStringSplitter;
 import android.util.ArrayMap;

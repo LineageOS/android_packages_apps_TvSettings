@@ -21,6 +21,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.Fragment;
 import android.app.backup.IBackupManager;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -37,7 +38,6 @@ import com.android.tv.settings.dialog.old.ActionAdapter;
 import com.android.tv.settings.dialog.old.ActionFragment;
 import com.android.tv.settings.dialog.old.ContentFragment;
 import com.android.tv.settings.dialog.old.DialogActivity;
-import com.android.tv.settings.util.IntentUtils;
 
 import java.util.ArrayList;
 
@@ -269,7 +269,11 @@ public class PrivacyActivity extends DialogActivity
             String transport = mBackupManager.getCurrentTransport();
             Intent configIntent = mBackupManager.getConfigurationIntent(transport);
             if (configIntent != null) {
-                IntentUtils.startActivity(this, configIntent);
+                try {
+                    startActivity(configIntent);
+                } catch (ActivityNotFoundException e) {
+                    // TODO: show toast here?
+                }
             }
         } catch (RemoteException e) {
             // ignore.

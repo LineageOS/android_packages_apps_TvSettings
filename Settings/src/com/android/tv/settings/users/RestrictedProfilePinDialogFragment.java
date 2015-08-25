@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.users;
 
-import android.app.Activity;
 import android.app.Fragment;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
@@ -25,7 +24,6 @@ import android.os.UserHandle;
 import android.preference.PreferenceManager;
 
 import com.android.tv.settings.dialog.PinDialogFragment;
-import com.android.tv.settings.dialog.PinDialogFragment.ResultListener;
 
 public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
 

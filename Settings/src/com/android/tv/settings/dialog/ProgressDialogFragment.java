@@ -16,12 +16,12 @@
 
 package com.android.tv.settings.dialog;
 
-import android.annotation.DrawableRes;
-import android.annotation.Nullable;
-import android.annotation.StringRes;
 import android.app.Fragment;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
+import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;

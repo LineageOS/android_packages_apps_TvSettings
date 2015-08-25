@@ -16,12 +16,12 @@
 
 package com.android.tv.settings.system;
 
-import android.annotation.Nullable;
 import android.app.AlarmManager;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.text.format.DateFormat;
 
 import com.android.tv.settings.R;

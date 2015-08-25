@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.device.storage;
 
-import android.annotation.Nullable;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
@@ -32,6 +31,7 @@ import android.os.storage.VolumeInfo;
 import android.os.storage.VolumeRecord;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;

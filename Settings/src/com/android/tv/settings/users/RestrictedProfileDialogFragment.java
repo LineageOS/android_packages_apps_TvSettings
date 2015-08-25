@@ -18,7 +18,6 @@ package com.android.tv.settings.users;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.app.Fragment;
 import android.content.Context;
