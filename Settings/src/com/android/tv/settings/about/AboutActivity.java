@@ -33,6 +33,8 @@ import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
+import android.text.TextUtils;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -43,7 +45,11 @@ import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.SettingsLayoutActivity;
 import com.android.tv.settings.name.DeviceManager;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Activity which shows the build / model / legal info / etc.
@@ -219,6 +225,23 @@ public class AboutActivity extends SettingsLayoutActivity {
                 .title(R.string.about_model)
                 .description(Build.MODEL)
                 .build());
+
+        String patch = Build.VERSION.SECURITY_PATCH;
+        if (!TextUtils.isEmpty(patch)) {
+            try {
+                SimpleDateFormat template = new SimpleDateFormat("yyyy-MM-dd");
+                Date patchDate = template.parse(patch);
+                String format = DateFormat.getBestDateTimePattern(Locale.getDefault(), "dMMMMyyyy");
+                patch = DateFormat.format(format, patchDate).toString();
+            } catch (ParseException e) {
+                // broken parse; fall through and use the raw string
+            }
+            header.add(new Layout.Status.Builder(res)
+                    .title(R.string.security_patch)
+                    .description(patch)
+                    .build());
+        }
+
         header.add(new Layout.Action.Builder(res, KEY_VERSION)
                 .title(R.string.about_version)
                 .description(Build.VERSION.RELEASE)
