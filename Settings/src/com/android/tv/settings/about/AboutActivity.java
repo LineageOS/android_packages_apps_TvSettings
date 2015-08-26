@@ -49,6 +49,7 @@ import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -56,8 +57,12 @@ import android.widget.Toast;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -437,6 +442,22 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
                 .description(Build.VERSION.RELEASE)
                 .enabled(true)
                 .build());
+        String patch = Build.VERSION.SECURITY_PATCH;
+        if (!TextUtils.isEmpty(patch)) {
+            try {
+                SimpleDateFormat template = new SimpleDateFormat("yyyy-MM-dd");
+                Date patchDate = template.parse(patch);
+                String format = DateFormat.getBestDateTimePattern(Locale.getDefault(), "dMMMMyyyy");
+                patch = DateFormat.format(format, patchDate).toString();
+            } catch (ParseException e) {
+                // broken parse; fall through and use the raw string
+            }
+            actions.add(new Action.Builder()
+                    .key("security_patch")
+                    .title(getString(R.string.security_patch))
+                    .description(patch)
+                    .build());
+        }
         actions.add(new Action.Builder()
                 .key("serial")
                 .title(getString(R.string.about_serial))
