@@ -29,8 +29,8 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.support.annotation.DrawableRes;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.android.tv.settings.R;
@@ -48,7 +48,6 @@ public class BluetoothAccessoryActivity extends SettingsLayoutActivity {
 
     private static final String SAVE_STATE_UNPAIRING = "BluetoothAccessoryActivity.unpairing";
 
-    private static final int MSG_UNPAIR_TIMEOUT = 1;
     private static final int UNPAIR_TIMEOUT = 5000;
 
     private static final UUID GATT_BATTERY_SERVICE_UUID =
@@ -90,7 +89,7 @@ public class BluetoothAccessoryActivity extends SettingsLayoutActivity {
             if (mUnpairing) {
                 if (mDevice.equals(device)) {
                     // Done removing device, finish the activity
-                    mMsgHandler.removeMessages(MSG_UNPAIR_TIMEOUT);
+                    mMsgHandler.removeCallbacks(mTimeoutRunnable);
                     finish();
                 }
             }
@@ -98,15 +97,12 @@ public class BluetoothAccessoryActivity extends SettingsLayoutActivity {
     };
 
     // Internal message handler
-    private final Handler mMsgHandler = new Handler() {
-            @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case MSG_UNPAIR_TIMEOUT:
-                    finish();
-                    break;
-                default:
-            }
+    private final Handler mMsgHandler = new Handler();
+
+    private final Runnable mTimeoutRunnable = new Runnable() {
+        @Override
+        public void run() {
+            finish();
         }
     };
 
@@ -226,7 +222,7 @@ public class BluetoothAccessoryActivity extends SettingsLayoutActivity {
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle savedInstanceState) {
+    protected void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putBoolean(SAVE_STATE_UNPAIRING, mUnpairing);
     }
@@ -308,7 +304,7 @@ public class BluetoothAccessoryActivity extends SettingsLayoutActivity {
                 mUnpairing = true;
                 // Set a timeout, just in case we don't receive the unpair notification we
                 // use to finish the activity
-                mMsgHandler.sendEmptyMessageDelayed(MSG_UNPAIR_TIMEOUT, UNPAIR_TIMEOUT);
+                mMsgHandler.postDelayed(mTimeoutRunnable, UNPAIR_TIMEOUT);
                 final boolean successful = mDevice.removeBond();
                 if (successful) {
                     if (DEBUG) {
