@@ -19,8 +19,6 @@ package com.android.tv.settings.accessories;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothInputDevice;
-import android.bluetooth.BluetoothProfile;
 import android.bluetooth.IBluetoothA2dp;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -35,11 +33,10 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.view.InputDevice;
 
-import com.android.tv.settings.util.bluetooth.BluetoothScanner;
 import com.android.tv.settings.util.bluetooth.BluetoothDeviceCriteria;
+import com.android.tv.settings.util.bluetooth.BluetoothScanner;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -84,7 +81,7 @@ public class BluetoothDevicePairer {
      * connecting, but it is {@link #DELAY_MANUAL_PAIRING}.
      */
 
-    public static final String TAG = "aah.BluetoothDevicePairer";
+    public static final String TAG = "BluetoothDevicePairer";
     public static final int STATUS_ERROR = -1;
     public static final int STATUS_NONE = 0;
     public static final int STATUS_SCANNING = 1;
@@ -107,19 +104,19 @@ public class BluetoothDevicePairer {
         /**
          * The status of the {@link BluetoothDevicePairer} changed.
          */
-        public void statusChanged();
+        void statusChanged();
     }
 
     public interface BluetoothConnector {
-        public void openConnection(BluetoothAdapter adapter);
+        void openConnection(BluetoothAdapter adapter);
     }
 
     public interface OpenConnectionCallback {
         /**
          * Call back when BT device connection is completed.
          */
-        public void succeeded();
-        public void failed();
+        void succeeded();
+        void failed();
     }
 
     /**
@@ -267,8 +264,7 @@ public class BluetoothDevicePairer {
     private int mStatus = STATUS_NONE;
     /**
      * Set to {@code false} when {@link #cancelPairing()} or
-     * {@link #startPairing(BluetoothDevice)} or
-     * {@link #startPairing(BluetoothDevice, int)} is called. This instance
+     * {@link #startPairing(BluetoothDevice)}. This instance
      * will now no longer automatically start pairing.
      */
     private boolean mAutoMode = true;
@@ -277,8 +273,7 @@ public class BluetoothDevicePairer {
     private final Handler mHandler;
     private long mNextStageTimestamp = -1;
     private boolean mLinkReceiverRegistered = false;
-    private final ArrayList<BluetoothDeviceCriteria> mBluetoothDeviceCriteria = new
-        ArrayList<BluetoothDeviceCriteria>();
+    private final ArrayList<BluetoothDeviceCriteria> mBluetoothDeviceCriteria = new ArrayList<>();
     private InputDeviceCriteria mInputDeviceCriteria;
 
     /**
@@ -381,19 +376,10 @@ public class BluetoothDevicePairer {
 
     /**
      * Start pairing and connection to the specified device.
-     * @param device
+     * @param device device
      */
     public void startPairing(BluetoothDevice device) {
-        startPairing(device, DELAY_MANUAL_PAIRING);
-    }
-
-    /**
-     * See {@link #startPairing(BluetoothDevice)}.
-     * @param delay The delay before pairing starts. In this window, cancel may
-     * be called.
-     */
-    public void startPairing(BluetoothDevice device, int delay) {
-        startPairing(device, delay, true);
+        startPairing(device, true);
     }
 
     /**
@@ -434,7 +420,7 @@ public class BluetoothDevicePairer {
         onDeviceLost(device);
     }
 
-    private void startPairing(BluetoothDevice device, int delay, boolean isManual) {
+    private void startPairing(BluetoothDevice device, boolean isManual) {
         // TODO check if we're already paired/bonded to this device
 
         // cancel auto-mode if applicable
@@ -499,19 +485,11 @@ public class BluetoothDevicePairer {
             BluetoothDevice candidate = getAutoPairDevice();
             if (null != candidate) {
                 mTarget = candidate;
-                startPairing(mTarget, DELAY_AUTO_PAIRING, false);
+                startPairing(mTarget, false);
             } else {
                 doCancel();
             }
         }
-    }
-
-    /**
-     * @return {@code true} If there is only one visible input device.
-     */
-    private boolean isReadyToAutoPair() {
-        BluetoothDevice device = getAutoPairDevice();
-        return null != device;
     }
 
     /**

@@ -25,11 +25,7 @@ import android.hardware.input.InputManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.RemoteException;
-import android.os.ServiceManager;
 import android.os.SystemClock;
-import android.service.dreams.DreamService;
-import android.service.dreams.IDreamManager;
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewCompat;
 import android.util.Log;
@@ -125,7 +121,6 @@ public class AddAccessoryActivity extends DialogActivity
 
     private FragmentManager mFragmentManager;
 
-    private IDreamManager mDreamManager;
     private boolean mHwKeyDown;
     private boolean mHwKeyDidSelect;
     private boolean mNoInputMode;
@@ -232,9 +227,8 @@ public class AddAccessoryActivity extends DialogActivity
 
         mMsgHandler.setActivity(this);
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        mDreamManager = IDreamManager.Stub.asInterface(ServiceManager.checkService(
-                DreamService.DREAM_SERVICE));
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON |
+                WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
 
         mFragmentManager = getFragmentManager();
 
@@ -362,15 +356,6 @@ public class AddAccessoryActivity extends DialogActivity
     public void onNewIntent(Intent intent) {
         if (ACTION_CONNECT_INPUT.equals(intent.getAction()) &&
                 (intent.getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) == 0) {
-            // We were the front most app and we got a new intent.
-            // If screen saver is going, stop it.
-            try {
-                if (mDreamManager != null && mDreamManager.isDreaming()) {
-                    mDreamManager.awaken();
-                }
-            } catch (RemoteException e) {
-                // Do nothing.
-            }
 
             KeyEvent event = intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT);
             if (event != null && event.getKeyCode() == KeyEvent.KEYCODE_PAIRING) {

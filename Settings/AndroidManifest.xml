@@ -356,7 +356,10 @@
             android:name=".accessories.AddAccessoryActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true"
-            android:launchMode="singleTop" >
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:persistableMode="persistNever">
             <intent-filter>
                 <action android:name="com.google.android.intent.action.CONNECT_INPUT" />
 
