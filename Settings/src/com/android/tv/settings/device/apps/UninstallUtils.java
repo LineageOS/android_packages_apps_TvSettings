@@ -16,8 +16,8 @@
 
 package com.android.tv.settings.device.apps;
 
-import android.app.Activity;
 import android.app.ActivityManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -34,23 +34,16 @@ import java.util.List;
 /**
  * Handles uninstalling of an application.
  */
-class UninstallManager {
+class UninstallUtils {
 
-    private final Activity mActivity;
-    private final AppInfo mAppInfo;
-    private static Signature[] sSystemSignature;
+    private static Signature sSystemSignature;
 
-    UninstallManager(Activity activity, AppInfo appInfo) {
-        mActivity = activity;
-        mAppInfo = appInfo;
+    static boolean canUninstall(AppInfo appInfo) {
+        return !appInfo.isUpdatedSystemApp() && !appInfo.isSystemApp();
     }
 
-    boolean canUninstall() {
-        return !mAppInfo.isUpdatedSystemApp() && !mAppInfo.isSystemApp();
-    }
-
-    boolean isEnabled() {
-        return mAppInfo.isEnabled();
+    static boolean isEnabled(AppInfo appInfo) {
+        return appInfo.isEnabled();
     }
 
     private static boolean signaturesMatch(PackageManager pm, String pkg1, String pkg2) {
@@ -68,13 +61,12 @@ class UninstallManager {
         return false;
     }
 
-    private HashSet<String> getHomePackages(PackageManager pm) {
-        HashSet<String> homePackages = new HashSet<String>();
+    private static HashSet<String> getHomePackages(PackageManager pm) {
+        HashSet<String> homePackages = new HashSet<>();
         // Get list of "home" apps and trace through any meta-data references
-        List<ResolveInfo> homeActivities = new ArrayList<ResolveInfo>();
+        List<ResolveInfo> homeActivities = new ArrayList<>();
         pm.getHomeActivities(homeActivities);
-        for (int i = 0; i < homeActivities.size(); i++) {
-            ResolveInfo ri = homeActivities.get(i);
+        for (ResolveInfo ri : homeActivities) {
             final String activityPkg = ri.activityInfo.packageName;
             homePackages.add(activityPkg);
             // Also make sure to include anything proxying for the home app
@@ -109,51 +101,52 @@ class UninstallManager {
      * Determine whether a package is a "system package", in which case certain things (like
      * disabling notifications or disabling the package altogether) should be disallowed.
      */
-    public static boolean isSystemPackage(PackageManager pm, PackageInfo pkg) {
+    private static boolean isSystemPackage(PackageManager pm, PackageInfo pkg) {
         if (sSystemSignature == null) {
-            sSystemSignature = new Signature[]{ getSystemSignature(pm) };
+            sSystemSignature = getSystemSignature(pm);
         }
-        return sSystemSignature[0] != null && sSystemSignature[0].equals(getFirstSignature(pkg));
+        return sSystemSignature != null && sSystemSignature.equals(getFirstSignature(pkg));
     }
 
-    boolean canDisable() {
-        final PackageManager pm = mActivity.getPackageManager();
+    static boolean canDisable(Context context, AppInfo appInfo) {
+        final PackageManager pm = context.getPackageManager();
         final HashSet<String> homePackages = getHomePackages(pm);
         PackageInfo packageInfo;
         try {
-            packageInfo = pm.getPackageInfo(mAppInfo.getPackageName(),
+            packageInfo = pm.getPackageInfo(appInfo.getPackageName(),
                     PackageManager.GET_DISABLED_COMPONENTS |
                     PackageManager.GET_UNINSTALLED_PACKAGES |
                     PackageManager.GET_SIGNATURES);
         } catch (NameNotFoundException e) {
             return false;
         }
-        return ! (homePackages.contains(mAppInfo.getPackageName()) ||
+        return ! (homePackages.contains(appInfo.getPackageName()) ||
                 isSystemPackage(pm, packageInfo));
     }
 
-    boolean canUninstallUpdates() {
-        return mAppInfo.isUpdatedSystemApp();
+    static boolean canUninstallUpdates(AppInfo appInfo) {
+        return appInfo.isUpdatedSystemApp();
     }
 
-    void uninstallUpdates(int requestId) {
-        if (canUninstallUpdates()) {
-            uninstallPackage(true, requestId);
+    static Intent getUninstallUpdatesIntent(AppInfo appInfo) {
+        if (canUninstallUpdates(appInfo)) {
+            return getUninstallIntentInternal(appInfo);
         }
+        return null;
     }
 
-    void uninstall(int requestId) {
-        if (canUninstall()) {
-            uninstallPackage(!mAppInfo.isInstalled(), requestId);
+    static Intent getUninstallIntent(AppInfo appInfo) {
+        if (canUninstall(appInfo)) {
+            return getUninstallIntentInternal(appInfo);
         }
+        return null;
     }
 
-    private void uninstallPackage(boolean allUsers, int requestId) {
-        Uri packageURI = Uri.parse("package:" + mAppInfo.getPackageName());
+    private static Intent getUninstallIntentInternal(AppInfo appInfo) {
+        Uri packageURI = Uri.parse("package:" + appInfo.getPackageName());
         Intent uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageURI);
-        uninstallIntent.putExtra(Intent.EXTRA_UNINSTALL_ALL_USERS, allUsers);
-        uninstallIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
+        uninstallIntent.putExtra(Intent.EXTRA_UNINSTALL_ALL_USERS, true);
         uninstallIntent.putExtra(Intent.EXTRA_KEY_CONFIRM, true);
-        mActivity.startActivityForResult(uninstallIntent, requestId);
+        return uninstallIntent;
     }
 }

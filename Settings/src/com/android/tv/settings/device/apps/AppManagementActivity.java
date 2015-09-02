@@ -92,7 +92,6 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
     private AppInfo mAppInfo;
     private OpenManager mOpenManager;
     private ForceStopManager mForceStopManager;
-    private UninstallManager mUninstallManager;
     private NotificationSetter mNotificationSetter;
     private DataClearer mDataClearer;
     private DefaultClearer mDefaultClearer;
@@ -144,7 +143,6 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
         mAppInfo = new AppInfo(this, entry);
         mOpenManager = new OpenManager(this, mAppInfo);
         mForceStopManager = new ForceStopManager(this, mAppInfo);
-        mUninstallManager = new UninstallManager(this, mAppInfo);
         mNotificationSetter = new NotificationSetter(mAppInfo);
         mDataClearer = new DataClearer(this, mAppInfo);
         mDefaultClearer = new DefaultClearer(this, mAppInfo);
@@ -379,7 +377,11 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
     }
 
     private void onUninstallOk() {
-        mUninstallManager.uninstall(REQUEST_UNINSTALL);
+        final Intent intent = UninstallUtils.getUninstallIntent(mAppInfo);
+        if (intent != null) {
+            intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
+            startActivityForResult(intent, REQUEST_UNINSTALL);
+        }
         mUninstallLayoutGetter.refreshView();
     }
 
@@ -398,7 +400,11 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
     }
 
     private void onUninstallUpdatesOk() {
-        mUninstallManager.uninstallUpdates(REQUEST_UNINSTALL_UPDATES);
+        final Intent intent = UninstallUtils.getUninstallUpdatesIntent(mAppInfo);
+        if (intent != null) {
+            intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
+            startActivityForResult(intent, REQUEST_UNINSTALL_UPDATES);
+        }
         onBackPressed();
         mUninstallLayoutGetter.refreshView();
     }
@@ -595,7 +601,7 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
         public Layout get() {
             final Layout layout = new Layout();
             final Resources res = getResources();
-            if (mUninstallManager.canUninstall()) {
+            if (UninstallUtils.canUninstall(mAppInfo)) {
                 layout.add(new Layout.Header.Builder(res)
                         .title(R.string.device_apps_app_management_uninstall)
                         .detailedDescription(R.string.device_apps_app_management_uninstall_desc)
@@ -608,7 +614,7 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
                                 .defaultSelection()
                                 .build()));
             } else {
-                if (mUninstallManager.canUninstallUpdates()) {
+                if (UninstallUtils.canUninstallUpdates(mAppInfo)) {
                     layout.add(new Layout.Header.Builder(res)
                             .title(R.string.device_apps_app_management_uninstall_updates)
                             .detailedDescription(
@@ -622,8 +628,8 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
                                     .defaultSelection()
                                     .build()));
                 }
-                if (mUninstallManager.canDisable()) {
-                    if (mUninstallManager.isEnabled()) {
+                if (UninstallUtils.canDisable(AppManagementActivity.this, mAppInfo)) {
+                    if (UninstallUtils.isEnabled(mAppInfo)) {
                         layout.add(new Layout.Header.Builder(res)
                                 .title(R.string.device_apps_app_management_disable)
                                 .detailedDescription(
