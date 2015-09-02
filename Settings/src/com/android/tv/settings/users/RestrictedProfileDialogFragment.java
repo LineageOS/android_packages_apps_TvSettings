@@ -97,9 +97,9 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
             new AsyncTask<Void, Void, UserInfo>() {
         @Override
         protected UserInfo doInBackground(Void... params) {
-            UserInfo restrictedUserInfo = mUserManager.createUser(
+            UserInfo restrictedUserInfo = mUserManager.createProfileForUser(
                     RestrictedProfileDialogFragment.this.getString(R.string.user_new_profile_name),
-                    UserInfo.FLAG_RESTRICTED);
+                    UserInfo.FLAG_RESTRICTED, UserHandle.myUserId());
             if (restrictedUserInfo == null) {
                 Log.wtf(TAG, "Got back a null user handle!");
                 return null;
