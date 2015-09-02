@@ -34,11 +34,7 @@ import java.util.ArrayList;
 public class WpsConnectionActivity extends DialogActivity
         implements SelectFromListWizardFragment.Listener, TimedMessageWizardFragment.Listener {
 
-    public static final String EXTRA_WPS_SETUP = "wps_setup";
-
     private static final String WPS_FRAGMENT_TAG = "wps_fragment_tag";
-    private static final String KEY_CANCEL = "cancel";
-    private static final String KEY_RETRY = "retry";
 
     private WifiManager mWifiManager;
     private boolean mWpsComplete;
@@ -90,7 +86,6 @@ public class WpsConnectionActivity extends DialogActivity
         setTheme(ThemeHelper.getThemeResource(getIntent()));
         setLayoutProperties(R.layout.setup_auth_activity, R.id.description, R.id.action);
         super.onCreate(savedInstanceState);
-        Bundle extras = getIntent().getExtras();
         mWifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
     }
 
@@ -147,8 +142,7 @@ public class WpsConnectionActivity extends DialogActivity
         SelectFromListWizardFragment.ListItem retryListItem =
                 new SelectFromListWizardFragment.ListItem(
                         getString(R.string.wifi_wps_retry_scan).toUpperCase(), 0);
-        ArrayList<SelectFromListWizardFragment.ListItem> listItems = new ArrayList<
-                SelectFromListWizardFragment.ListItem>();
+        ArrayList<SelectFromListWizardFragment.ListItem> listItems = new ArrayList<>();
         listItems.add(retryListItem);
         return SelectFromListWizardFragment.newInstance(errorMessage, null, listItems,
                 retryListItem);
