@@ -107,9 +107,6 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
             int userId = restrictedUserInfo.id;
             UserHandle user = new UserHandle(userId);
             mUserManager.setUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS, true, user);
-            Secure.putIntForUser(getActivity().getContentResolver(), Secure.LOCATION_MODE,
-                    Secure.LOCATION_MODE_OFF, userId);
-            mUserManager.setUserRestriction(UserManager.DISALLOW_SHARE_LOCATION, true, user);
             Bitmap bitmap = createBitmapFromDrawable(R.drawable.ic_avatar_default);
             mUserManager.setUserIcon(userId, bitmap);
             // Add shared accounts
