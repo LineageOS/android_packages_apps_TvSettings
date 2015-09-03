@@ -16,11 +16,9 @@
 
 package com.android.tv.settings.accessories;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.app.Fragment;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.hardware.input.InputManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -35,7 +33,6 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.tv.settings.R;
@@ -77,7 +74,6 @@ public class AddAccessoryActivity extends DialogActivity
     private static final int MSG_TRIGGER_SELECT_UP = 7;
     private static final int MSG_AUTOPAIR_TICK = 8;
     private static final int MSG_START_AUTOPAIR_COUNTDOWN = 9;
-    private static final int MSG_MULTIPAIR_BLINK = 10;
 
     private static final int CANCEL_MESSAGE_TIMEOUT = 3000;
     private static final int DONE_MESSAGE_TIMEOUT = 3000;
@@ -87,12 +83,10 @@ public class AddAccessoryActivity extends DialogActivity
     private static final int LONG_PRESS_DURATION = 3000;
     private static final int KEY_DOWN_TIME = 150;
     private static final int TIME_TO_START_AUTOPAIR_COUNT = 5000;
-    private static final int BLINK_START = 1000;
     private static final int EXIT_TIMEOUT_MILLIS = 90 * 1000;
 
     private ActionFragment mActionFragment;
     private ArrayList<Action> mActions;
-    private AddAccessoryContentFragment mContentFragment;
 
     // members related to Bluetooth pairing
     private BluetoothDevicePairer mBtPairer;
@@ -109,9 +103,7 @@ public class AddAccessoryActivity extends DialogActivity
     private ViewGroup mTopLayout;
     private View mActionView;
     private View mContentView;
-    private boolean mShowingMultiFragment;
     private TextView mAutoPairText;
-    private AnimationDrawable mAnimation;
     private int mViewOffset = 0;
     private static final int ANIMATE_IN_DELAY = 1500;
     private static long mStartTime;
@@ -119,13 +111,9 @@ public class AddAccessoryActivity extends DialogActivity
     private boolean mDone = false;
     private final Object mLock = new Object();
 
-    private FragmentManager mFragmentManager;
-
     private boolean mHwKeyDown;
     private boolean mHwKeyDidSelect;
     private boolean mNoInputMode;
-    private boolean mActionsAnimationDone;
-    private boolean mFragmentTransactionPending;
 
     // Internal message handler
     private final MessageHandler mMsgHandler = new MessageHandler();
@@ -196,16 +184,6 @@ public class AddAccessoryActivity extends DialogActivity
                         }
                     }
                     break;
-                case MSG_MULTIPAIR_BLINK:
-                    // Kick off the blinking animation
-                    ImageView backImage = (ImageView) activity.findViewById(R.id.back_panel_image);
-                    if (backImage != null) {
-                        activity.mAnimation = (AnimationDrawable) backImage.getDrawable();
-                        if (activity.mAnimation != null) {
-                            activity.mAnimation.start();
-                        }
-                    }
-                    break;
                 default:
                     super.handleMessage(msg);
             }
@@ -230,8 +208,6 @@ public class AddAccessoryActivity extends DialogActivity
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON |
                 WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
 
-        mFragmentManager = getFragmentManager();
-
         mBtDevices = new ArrayList<>();
 
         mActions = new ArrayList<>();
@@ -242,12 +218,8 @@ public class AddAccessoryActivity extends DialogActivity
         mActions.clear();
 
         mActionFragment = ActionFragment.newInstance(mActions);
-        mContentFragment = AddAccessoryContentFragment.newInstance(false);
-        setContentAndActionFragments(mContentFragment, mActionFragment);
-        mShowingMultiFragment = false;
-
-        mActionsAnimationDone = false;
-        mFragmentTransactionPending = false;
+        final Fragment contentFragment = AddAccessoryContentFragment.newInstance();
+        setContentAndActionFragments(contentFragment, mActionFragment);
     }
 
     @Override
@@ -380,15 +352,6 @@ public class AddAccessoryActivity extends DialogActivity
     }
 
     @Override
-    protected void onIntroAnimationFinished() {
-        mActionsAnimationDone = true;
-        if (mFragmentTransactionPending) {
-            mFragmentTransactionPending = false;
-            switchToMultipleDevicesFragment();
-        }
-    }
-
-    @Override
     public void onActionClicked(Action action) {
         cancelPairingCountdown();
         if (!mDone) {
@@ -513,14 +476,6 @@ public class AddAccessoryActivity extends DialogActivity
                     if (mActions.size() > 1) {
                         // More than one device found, cancel auto pair
                         cancelPairingCountdown();
-
-                        if (!mShowingMultiFragment && !mFragmentTransactionPending) {
-                            if (mActionsAnimationDone) {
-                                switchToMultipleDevicesFragment();
-                            } else {
-                                mFragmentTransactionPending = true;
-                            }
-                        }
                     }
                }
             }
@@ -534,18 +489,6 @@ public class AddAccessoryActivity extends DialogActivity
         if (mAutoPairText != null) {
             mAutoPairText.setVisibility(View.GONE);
         }
-    }
-
-    protected void switchToMultipleDevicesFragment() {
-        FragmentTransaction ft = mFragmentManager.beginTransaction();
-        mContentFragment = AddAccessoryContentFragment.newInstance(true);
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        ft.replace(R.id.content_fragment, mContentFragment);
-        ft.disallowAddToBackStack();
-
-        ft.commit();
-        mMsgHandler.sendEmptyMessageDelayed(MSG_MULTIPAIR_BLINK, BLINK_START);
-        mShowingMultiFragment = true;
     }
 
     private void setTimeout(int timeout) {
@@ -720,9 +663,6 @@ public class AddAccessoryActivity extends DialogActivity
                             mMsgHandler.sendEmptyMessageDelayed(MSG_PAIRING_COMPLETE,
                                     DONE_MESSAGE_TIMEOUT);
                             mDone = true;
-                            if (mAnimation != null) {
-                                mAnimation.setOneShot(true);
-                            }
 
                             // Done, return here and just wait for the message
                             // to close the activity
