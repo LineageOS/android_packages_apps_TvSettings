@@ -217,7 +217,7 @@ public class AddAccessoryActivity extends DialogActivity
     private final Runnable mAutoExitRunnable = new Runnable() {
         @Override
         public void run() {
-            stopActivity();
+            finish();
         }
     };
 
@@ -332,7 +332,9 @@ public class AddAccessoryActivity extends DialogActivity
             Log.d(TAG, "onStop()");
         }
         if (!mPairingBluetooth) {
-            stopActivity();
+            stopBluetoothPairer();
+            mMsgHandler.removeCallbacksAndMessages(null);
+            mAnimateOnStart = true;
         } else {
             // allow activity to remain in the background while we perform the
             // BT Secure pairing.
@@ -340,6 +342,13 @@ public class AddAccessoryActivity extends DialogActivity
         }
 
         super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopBluetoothPairer();
+        mMsgHandler.removeCallbacksAndMessages(null);
     }
 
     @Override
@@ -769,21 +778,9 @@ public class AddAccessoryActivity extends DialogActivity
         mBtPairer.clearDeviceList();
     }
 
-    private void stopActivity() {
-        stopBluetoothPairer();
-        mMsgHandler.removeCallbacksAndMessages(null);
-        mAnimateOnStart = true;
-
-        // Forcing this activity to finish in OnStop, to make sure it always gets created
-        // fresh, since it has different behavior depending on the intent that launched
-        // it (Settings vs HW button press).
-        Log.d(TAG, "Calling finish() on activity.onStop().");
-        finish();
-    }
-
     private void handlePairingTimeout() {
         if (mPairingInBackground) {
-            stopActivity();
+            finish();
         } else {
             // Either Pairing or Connecting timeout out.
             // Display error message and post delayed message to the scanning process.
