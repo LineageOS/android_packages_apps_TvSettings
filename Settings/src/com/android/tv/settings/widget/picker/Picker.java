@@ -252,6 +252,10 @@ public abstract class Picker extends Fragment {
                 });
             }
             animSet.start();
+        } else {
+            if (mClicked && mResultListener != null) {
+                mResultListener.onCommitResult(mResult);
+            }
         }
     }
 

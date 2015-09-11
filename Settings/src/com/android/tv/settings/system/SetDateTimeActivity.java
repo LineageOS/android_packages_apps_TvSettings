@@ -158,9 +158,7 @@ public class SetDateTimeActivity extends DialogActivity {
         c.set(Calendar.DAY_OF_MONTH, day);
         long when = c.getTimeInMillis();
 
-        if (when / 1000 < Integer.MAX_VALUE) {
-            ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).setTime(when);
-        }
+        ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).setTime(when);
     }
 
     public static void setTime(Context context, int hourOfDay, int minute) {
@@ -172,9 +170,7 @@ public class SetDateTimeActivity extends DialogActivity {
         c.set(Calendar.MILLISECOND, 0);
         long when = c.getTimeInMillis();
 
-        if (when / 1000 < Integer.MAX_VALUE) {
-            ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).setTime(when);
-        }
+        ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).setTime(when);
     }
 
     private static boolean isTimeFormat24h(Context context) {
