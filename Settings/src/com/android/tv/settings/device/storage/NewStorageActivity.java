@@ -36,6 +36,7 @@ import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.StorageResetActivity;
@@ -287,6 +288,9 @@ public class NewStorageActivity extends Activity {
             } else if (TextUtils.equals(intent.getAction(),
                     "com.google.android.tungsten.setupwraith.TV_SETTINGS_POST_SETUP")) {
                 handleSetupComplete(context);
+            } else if (TextUtils.equals(
+                    intent.getAction(), Intent.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE)) {
+                Toast.makeText(context, R.string.storage_mount_adopted, Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -297,6 +301,10 @@ public class NewStorageActivity extends Activity {
                 return;
             }
             final DiskInfo diskInfo = mStorageManager.findDiskById(diskId);
+            if (diskInfo == null) {
+                Log.e(TAG, "Disk ID " + diskId + " is no longer mounted");
+                return;
+            }
             if (diskInfo.size <= 0) {
                 Log.d(TAG, "Disk ID " + diskId + " has no media");
                 return;
@@ -345,7 +353,12 @@ public class NewStorageActivity extends Activity {
                 Log.e(TAG, "Missing fsUuid, not launching activity.");
                 return;
             }
-            final VolumeRecord volumeRecord = mStorageManager.findRecordByUuid(fsUuid);
+            VolumeRecord volumeRecord = null;
+            try {
+                volumeRecord = mStorageManager.findRecordByUuid(fsUuid);
+            } catch (Exception e) {
+                Log.e(TAG, "Error finding volume record", e);
+            }
             if (volumeRecord == null) {
                 return;
             }

@@ -469,6 +469,9 @@
     <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=64]-->
     <string name="storage_mount_failure">Couldn\'t mount <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
 
+    <!-- Toast shown when the user connects external storage that has been formatted for Android  [CHAR_LIMIT=50] -->
+    <string name="storage_mount_adopted">USB storage reconnected</string>
+
     <!-- Toast informing that storage unmount operation was successful. [CHAR LIMIT=64]-->
     <string name="storage_unmount_success"><xliff:g id="name" example="SD card">%1$s</xliff:g> is safely ejected</string>
     <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=64]-->
