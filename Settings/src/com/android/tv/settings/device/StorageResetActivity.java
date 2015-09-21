@@ -453,7 +453,9 @@ public class StorageResetActivity extends SettingsLayoutActivity
 
             boolean showMigrate = false;
             final VolumeInfo currentExternal = getPackageManager().getPrimaryStorageCurrentVolume();
-            if (!TextUtils.equals(currentExternal.getId(), volumeId)) {
+            // currentExternal will be null if the drive is not mounted. Don't offer the option to
+            // migrate if so.
+            if (currentExternal != null && !TextUtils.equals(currentExternal.getId(), volumeId)) {
                 final List<VolumeInfo> candidates =
                         getPackageManager().getPrimaryStorageCandidateVolumes();
                 for (final VolumeInfo candidate : candidates) {
