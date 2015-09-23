@@ -252,7 +252,8 @@
         <activity
             android:name=".device.privacy.PrivacyActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@android:style/Theme.NoDisplay" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.PRIVACY_SETTINGS" />
