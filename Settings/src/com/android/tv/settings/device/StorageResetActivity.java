@@ -86,6 +86,10 @@ public class StorageResetActivity extends SettingsLayoutActivity
     private static final int ACTION_FORGET = 8;
 
     /**
+     * Intent extra, when "true" will cause this activity to only show the factory data reset screen
+     */
+    public static final String RESET_INTENT_EXTRA = "reset";
+    /**
      * Support for shutdown-after-reset. If our launch intent has a true value for
      * the boolean extra under the following key, then include it in the intent we
      * use to trigger a factory reset. This will cause us to shut down instead of
@@ -132,7 +136,6 @@ public class StorageResetActivity extends SettingsLayoutActivity
         }
     };
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -162,17 +165,22 @@ public class StorageResetActivity extends SettingsLayoutActivity
 
     @Override
     public Layout createLayout() {
-        return new Layout().breadcrumb(getString(R.string.header_category_device))
-                .add(new Header.Builder(getResources())
-                        .icon(R.drawable.ic_settings_storage)
-                        .title(R.string.device_storage_reset)
-                        .build()
-                        .add(mStorageHeadersGetter)
-                        .add(new Static.Builder(getResources())
-                                .title(R.string.storage_reset_section)
-                                .build())
-                        .add(createResetHeaders())
-                );
+        final boolean resetOnly = getIntent().getBooleanExtra(RESET_INTENT_EXTRA, false);
+        if (resetOnly) {
+            return new Layout().add(createResetHeaders(true));
+        } else {
+            return new Layout().breadcrumb(getString(R.string.header_category_device))
+                    .add(new Header.Builder(getResources())
+                            .icon(R.drawable.ic_settings_storage)
+                            .title(R.string.device_storage_reset)
+                            .build()
+                            .add(mStorageHeadersGetter)
+                            .add(new Static.Builder(getResources())
+                                    .title(R.string.storage_reset_section)
+                                    .build())
+                            .add(createResetHeaders(false))
+                    );
+        }
     }
 
     private final Layout.LayoutGetter mStorageHeadersGetter = new Layout.LayoutGetter() {
@@ -576,13 +584,16 @@ public class StorageResetActivity extends SettingsLayoutActivity
         }
     }
 
-    private Header createResetHeaders() {
+    private Header createResetHeaders(boolean standalone) {
         final Resources res = getResources();
         return new Header.Builder(res)
                 .title(R.string.device_reset)
+                .icon(standalone ? R.drawable.ic_settings_backuprestore : 0)
+                .detailedDescription(R.string.factory_reset_description)
                 .build()
                 .add(new Header.Builder(res)
                         .title(R.string.device_reset)
+                        .detailedDescription(R.string.confirm_factory_reset_description)
                         .build()
                         .add(new Action.Builder(res, ACTION_RESET_DEVICE)
                                 .title(R.string.confirm_factory_reset_device)

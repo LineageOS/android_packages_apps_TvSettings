@@ -633,7 +633,9 @@ public class Layout implements Parcelable {
             }
 
             public Builder icon(int resId) {
-                mHeader.mAppearance.mIcon = mRes.getDrawable(resId);
+                if (resId != 0) {
+                    mHeader.mAppearance.mIcon = mRes.getDrawable(resId);
+                }
                 return this;
             }
 
