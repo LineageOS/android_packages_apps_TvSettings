@@ -70,9 +70,6 @@
     <string name="accessories_add_title" msgid="6940361421891873321">"正在搜索配件…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"在配对您的蓝牙设备之前，请确保它们处于配对模式"</string>
     <string name="accessories_autopair_msg" msgid="8618829246837821752">"发现了一部设备，将会在<xliff:g id="COUNTDOWN">%1$s</xliff:g>秒后自动配对"</string>
-    <string name="accessories_add_title_multiple" msgid="8455249961819802466">"找到多个设备"</string>
-    <string name="accessories_add_multiple" msgid="3900633668371061399">"要选择其他设备，请按此设备上的配对按钮"</string>
-    <string name="accessories_add_multiple_select" msgid="3696794187001405647">"要与所选设备配对，请按住此设备上的配对按钮5秒钟"</string>
     <string name="error_action_not_supported" msgid="300552308104354666">"此设备不支持执行此操作"</string>
     <string name="bluetooth_pairing_request" msgid="4523088117471287665">"蓝牙配对请求"</string>
     <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"要与名称为“&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;”的设备配对，请确保该设备上显示以下配对密钥：&lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
@@ -225,6 +222,7 @@
     <string name="storage_reset_section" msgid="7324235036547192861">"重置"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"已装载<xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"无法装载<xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_mount_adopted" msgid="3360994581083675640">"已重新连接 USB 存储设备"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"已安全弹出<xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"无法安全弹出<xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"找不到要弹出的硬盘"</string>
@@ -593,7 +591,7 @@
     <string name="change_setting" msgid="2047402388786162246">"更改"</string>
     <string name="keep_settings" msgid="6798327196645732517">"不要更改"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"权限"</string>
-    <string name="device_apps_permissions" msgid="2966387603529725982">"应用权限"</string>
+    <string name="device_apps_permissions" msgid="2966387603529725982">"应用所需权限"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"已授权 <xliff:g id="COUNT_0">%d</xliff:g> 个应用（共 <xliff:g id="COUNT_1">%d</xliff:g> 个）"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"蓝牙权限请求"</string>
     <string name="security_patch" msgid="2131617390189164481">"Android 安全补丁程序级别"</string>
