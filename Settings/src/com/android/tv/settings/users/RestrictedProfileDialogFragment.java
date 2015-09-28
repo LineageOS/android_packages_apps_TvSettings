@@ -110,13 +110,8 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
             Bitmap bitmap = createBitmapFromDrawable(R.drawable.ic_avatar_default);
             mUserManager.setUserIcon(userId, bitmap);
             // Add shared accounts
-            AccountManager am = AccountManager.get(getActivity());
-            Account[] accounts = am.getAccounts();
-            if (accounts != null) {
-                for (Account account : accounts) {
-                    am.addSharedAccount(account, user);
-                }
-            }
+            AccountManager.get(getActivity()).addSharedAccountsFromParentUser(
+                    UserHandle.of(UserHandle.myUserId()), user);
             return restrictedUserInfo;
         }
 
