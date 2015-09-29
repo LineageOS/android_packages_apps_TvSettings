@@ -109,10 +109,10 @@
     <string name="about_version" msgid="1177287676732287266">"Տարբերակը"</string>
     <string name="about_serial" msgid="2723560490027171187">"Սերիական համարը"</string>
     <string name="about_build" msgid="9148789767199785676">"Հավաքման տարբերակը"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
-      <item quantity="one">Մնաց <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> քայլ, և դուք մշակող եք</item>
-      <item quantity="other">Մնաց <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> քայլ, և դուք մշակող եք</item>
-    </plurals>
+  <plurals name="show_dev_countdown">
+    <item quantity="one" msgid="5656331074727404150">"Մնաց <xliff:g id="STEP_COUNT">%1$d</xliff:g> քայլ, և դուք ծրագրավորող եք"</item>
+    <item quantity="other" msgid="6907126743472136795">"Մնաց <xliff:g id="STEP_COUNT">%1$d</xliff:g> քայլ, և դուք ծրագրավորող եք"</item>
+  </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Գովազդ"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Դուք արդեն ծրագրավորո՛ղ եք:"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Կարիք չկա, դուք արդեն ծրագրավորող եք"</string>
@@ -215,6 +215,66 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Աուդիո"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Տարբեր"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Քեշի տվյալներ"</string>
+    <string name="storage_eject" msgid="113476702798691558">"Անջատել"</string>
+    <string name="storage_format" msgid="3759273736493279595">"Ջնջել և ձևաչափել"</string>
+    <string name="storage_format_for_private" msgid="7095270113028182032">"Ձևաչափել որպես սարքի պահեստ"</string>
+    <string name="storage_not_connected" msgid="6378589497819596096">"Կապակցված չէ"</string>
+    <string name="storage_migrate" msgid="658894157418304023">"Տեղափոխել տվյալները"</string>
+    <string name="storage_forget" msgid="8541387048014779836">"Մոռանալ այս ներքին հիշողությունը"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Այս սարքում պարունակվող հավելվածներն ու տվյալներն օգտագործելու համար կրկին միացրեք այն: Եթե սարքն այլևս հասանելի չէ, կարող եք փոխարենը մոռանալ այն:\n\nԵթե ընտրեք Մոռանալ տարբերակը, սարքում պարունակվող բոլոր տվյալներն ընդմիշտ չջնջվեն:\n\nԿարող եք ավելի ուշ կրկին տեղադրել հավելվածները, սակայն այս սարքում պահվող տվյալները չեն պահպանվի:"</string>
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Սարքի հիշողություն"</string>
+    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Շարժական կրիչ"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Վերակայում"</string>
+    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> կրիչը միացվեց"</string>
+    <string name="storage_mount_failure" msgid="2469026716895846633">"Չհաջողվեց միացնել <xliff:g id="NAME">%1$s</xliff:g> կրիչը"</string>
+    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> կրիչն անվնաս անջատվեց"</string>
+    <string name="storage_unmount_failure" msgid="6322048355281833871">"Չհաջողվեց անվնաս անջատել <xliff:g id="NAME">%1$s</xliff:g> կրիչը"</string>
+    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Չհաջողվեց գտնել սարքը"</string>
+    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> կրիչի ձևաչափումը հաջողվեց"</string>
+    <string name="storage_format_failure" msgid="7336977074523932399">"Չհաջողվեց ձևաչափել <xliff:g id="NAME">%1$s</xliff:g> կրիչը"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Ձևաչափել որպես ներքին հիշողություն"</string>
+    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"USB հիշասարքի անվտանգությունը ապահովելու համար այն պետք է ձևաչափել: Որից հետո այս հիշասարքը կաշխատի միայն այս սարքի հետ: Ձևաչափման արդյունքում հիշասարքում պահեստավորված բոլոր տվյալները կջնջվեն: Տվյալները չկորցնելու համար չմոռանաք պահուստավորել դրանք:"</string>
+    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Ջնջել և ձևաչափել"</string>
+    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Ձևաչափումից հետո այս USB հիշասարքը կարող եք օգտագործել այլ սարքերի վրա: Բոլոր տվյալները ջնջվելու են: Ուստի, նախ պահուստավորեք հավելվածները՝ տեղափոխելով այլ ներքին հիշողություն:"</string>
+    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB հիշասարքի ձևաչափում…"</string>
+    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Սա կարող է մեկ րոպե տևել: Չհեռացնեք հիշասարքը:"</string>
+    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Տեղափոխել տվյալները <xliff:g id="NAME">%1$s</xliff:g> սարք"</string>
+    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Տեղափոխեք ձեր լուսանկարները, ֆայլերը և հավելվածների տվյալները <xliff:g id="NAME">%1$s</xliff:g> սարք: Դա կարող է տևել մի քանի րոպե: Տեղափոխման ժամանակ որոշ հավելվածներ հնարավոր է սխալ աշխատեն:"</string>
+    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Տեղափոխել հիմա"</string>
+    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Տեղափոխել ավելի ուշ"</string>
+    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Տվյալները տեղափոխվեցին <xliff:g id="NAME">%1$s</xliff:g> սարք"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Չհաջողվեց տվյալները <xliff:g id="NAME">%1$s</xliff:g> սարք տեղափոխել"</string>
+    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Տվյալների տեղափոխում <xliff:g id="NAME">%1$s</xliff:g> սարք..."</string>
+    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Սա կարող է որոշ ժամանակ տևել: Չհեռացնեք հիշասարքը:\nՏեղափոխման ժամանակ որոշ հավելվածներ հնարավոր է սխալ աշխատեն:"</string>
+    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Այս հիշասարքը դանդաղ է աշխատում:"</string>
+    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Կարող եք շարունակել, բայց այստեղ տեղափոխված հավելվածների աշխատանքը կարող է դանդաղել, իսկ տվյալների փոխանցումը՝ երկար տևել: Առաջարկում ենք օգտագործել ավելի արագ հիշասարք:"</string>
+    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Ձևաչափել"</string>
+    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Հավելվածների պահուստավորում"</string>
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g>-ում պահված հավելվածներ"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g>-ում պահված հավելվածներ և տվյալներ"</string>
+    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Հասանելի՝ <xliff:g id="SIZE">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Անջատել ներքին հիշողությունը"</string>
+    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Այս սարքի պահեստում առկա հավելվածները չեն գործարկվի այն անջատելուց հետո: Ձևաչափումից հետո այս USB հիշասարքը կարող է աշխատել միայն այս սարքի վրա: Այն չի աշխատի այլ սարքերի վրա:"</string>
+    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> սարքն անջատվում է…"</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Օգտագործված հիշողությունը"</string>
+    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g>-ի տեղափոխում…"</string>
+    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Տեղափոխման ընթացքում չհեռացնեք սկավառակը:\n<xliff:g id="APPNAME">%1$s</xliff:g> հավելվածը հասանելի չի լինի մինչև տեղափոխումը չավարտվի:"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Մոռանա՞լ ներքին հիշողությունը:"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Եթե ընտրեք «Մոռանալ» տարբերակը, այս սարքում պարունակվող բոլոր տվյալներն ընդմիշտ չջնջվեն: Շարունակե՞լ:"</string>
+    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Մոռանալ"</string>
+    <string name="storage_new_title" msgid="3098495209500607438">"USB սարքավարը միացված է"</string>
+    <string name="storage_new_action_browse" msgid="9041125660441839453">"Դիտարկել"</string>
+    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Կարգավորել որպես ներքին հիշողություն"</string>
+    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Կարգավորել որպես շարժական կրիչ"</string>
+    <string name="storage_new_action_eject" msgid="4069294152676217949">"Անջատել"</string>
+    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> հիշասարքը հեռացվել է"</string>
+    <string name="storage_missing_description" msgid="8400374014342069781">"Մինչև հիշասարքի վերակապակցումը որոշ հավելվածներ կարող են անհասանելի լինել կամ չաշխատել ինչպես հարկն է:"</string>
+    <string name="insufficient_storage" msgid="5670157010939153746">"Բավարար տարածք չկա:"</string>
+    <string name="does_not_exist" msgid="4553235698171937217">"Հավելվածը առկա չէ:"</string>
+    <string name="app_forward_locked" msgid="6078781450044847966">"Հավելվածը պաշտպանված է պատճենումից:"</string>
+    <string name="invalid_location" msgid="5269044848535157307">"Տեղադրման տեղադրությունը սխալ է:"</string>
+    <string name="system_package" msgid="9200255718634512790">"Համակարգի թարմացումները հնարավոր չէ տեղադրել արտաքին կրիչի վրա:"</string>
+    <string name="learn_more_action" msgid="7015991954404958779">"Մանրամասն"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Կրկնել"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Որոնվում է WPS երթուղիչը…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Ձեր երթուղիչի վրա սեղմեք Wi‑Fi-ի անվտանգ կարգավորման կոճակը:\nԱյն կարող է կոչվել WPS կամ ունենալ ձախ կողմում նշված նշանը:"</string>
@@ -428,18 +488,18 @@
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Անջատել HDMI սարքերը հեռուստացույցի հետ"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Ավտոմատ միացնել հեռուստացույցը"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Միացնել հեռուստացույցը HDMI սարքի հետ"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="one">ԿԱՊԱԿՑՎԱԾ ՄՈՒՏՔ</item>
-      <item quantity="other">ԿԱՊԱԿՑՎԱԾ ՄՈՒՏՔ</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="one">ՊԱՀՈՒՍՏԱՅԻՆ ՄՈՒՏՔ</item>
-      <item quantity="other">ՊԱՀՈՒՍՏԱՅԻՆ ՄՈՒՏՔ</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="one">ՉԿԱՊԱԿՑՎԱԾ ՄՈՒՏՔ</item>
-      <item quantity="other">ՉԿԱՊԱԿՑՎԱԾ ՄՈՒՏՔ</item>
-    </plurals>
+  <plurals name="inputs_header_connected_input">
+    <item quantity="one" msgid="5569334300062609355">"ԿԱՊԱԿՑՎԱԾ ՄՈՒՏՔ"</item>
+    <item quantity="other" msgid="280747600882155182">"ԿԱՊԱԿՑՎԱԾ ՄՈՒՏՔԵՐ"</item>
+  </plurals>
+  <plurals name="inputs_header_standby_input">
+    <item quantity="one" msgid="737206065869471978">"ՊԱՀՈՒՍՏԱՅԻՆ ՄՈՒՏՔ"</item>
+    <item quantity="other" msgid="1673538341842385592">"ՊԱՀՈՒՍՏԱՅԻՆ ՄՈՒՏՔԵՐ"</item>
+  </plurals>
+  <plurals name="inputs_header_disconnected_input">
+    <item quantity="one" msgid="4711426139459946065">"ԿԱՊԱԿՑՎԱԾ ՄՈՒՏՔ ՉԿԱ"</item>
+    <item quantity="other" msgid="4526893384805247472">"ԿԱՊԱԿՑՎԱԾ ՄՈՒՏՔԵՐ ՉԿԱՆ"</item>
+  </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Սահմանափակել մուտքը ձեր հաշվի ծրագրերին և այլ բովանդակությանը"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Սահմանափակված պրոֆիլ"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Վերահսկվում է <xliff:g id="APP">%1$s</xliff:g>-ի կողմից"</string>
@@ -452,10 +512,10 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Ջնջել սահմանափակված պրոֆիլը"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Կարգավորումներ"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Թույլատրված ծրագրեր"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
-      <item quantity="one">%d հավելված է թույլատրվում</item>
-      <item quantity="other">%d հավելված է թույլատրվում</item>
-    </plurals>
+  <plurals name="restricted_profile_configure_apps_description">
+    <item quantity="one" msgid="5114936540577834412">"1 ծրագիր է թույլատրվում"</item>
+    <item quantity="other" msgid="5242661864373721262">"%d ծրագիր է թույլատրվում"</item>
+  </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Թույլատրված է"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Արգելված"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Հարմարացնել սահմանափակումները"</string>
@@ -468,7 +528,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Ստեղծեք նոր PIN"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Կրկին մուտքագրեք նոր PIN-ը"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Մուտքագրեք հին PIN-ը"</string>
-    <string name="pin_enter_wrong" msgid="5653864140710683928">"Դուք 5 անգամ սխալ PIN մուտքագրեցիք:\nՓորձեք կրկին <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>:"</string>
+    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"PIN կոդը 5 անգամ սխալ է մուտքագրվել:\nՓորձեք նորից <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> վայրկյանից:"</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN-ը սխալ է, կրկին փորձեք"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Փորձեք կրկին, PIN-ը չի համընկնում"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Մուտքագրեք <xliff:g id="SSID">%1$s</xliff:g>-ի գաղտնաբառը"</string>
@@ -480,13 +540,16 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Հավելվածը հարկադրաբար դադարեցնելու դեպքում նրա գործունեությունը կարող է խանգարվել:"</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Ապատեղադրել"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Ապատեղադրե՞լ այս ծրագիրը:"</string>
+    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Հեռացնել թարմացումները"</string>
+    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Այս Android հավելվածին վերաբերող բոլոր թարմացումները հեռացվելու են:"</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Անջատել"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Ցանկանո՞ւմ եք անջատել այս հավելվածը:"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Միացնել"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Ցանկանո՞ւմ եք միացնել այս հավելվածը:"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Օգտագործված հիշողությունը"</string>
+    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Օգտագործված է <xliff:g id="SIZE">%1$s</xliff:g> <xliff:g id="VOLUME">%2$s</xliff:g>-ում"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Մաքրել տվյալները"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Այս հավելվածի բոլոր տվյալները մշտապես կջնջվեն:"</string>
-    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Այդ թվում նաև բոլոր ֆայլերը, կարգավորումները, հաշիվները, տվյալների շտեմարանները և այլն:"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Այս հավելվածի բոլոր տվյալները մշտապես ջնջվելու են:\nՋնջվելու են նաև բոլոր ֆայլերը, կարգավորումները, հաշիվները, տվյալների շտեմարանները և այլն:"</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Մաքրել կանխադրված կարգավորումները"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Գործարկել այս հավելվածը որոշ գործողությունների համար"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Կանխադրված արժեքները սահմանված չեն"</string>
@@ -534,4 +597,5 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Թույլտվություններ"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Հավելվածների թույլտվությունները"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Թույլատրված է <xliff:g id="COUNT_0">%d</xliff:g> հավելվածի՝ <xliff:g id="COUNT_1">%d</xliff:g>-ից"</string>
+    <string name="security_patch" msgid="2131617390189164481">"Android-ի խոցելիության շտկման մակարդակը"</string>
 </resources>
