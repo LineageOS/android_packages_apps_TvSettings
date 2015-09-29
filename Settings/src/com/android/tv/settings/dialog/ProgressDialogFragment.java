@@ -36,7 +36,7 @@ public class ProgressDialogFragment extends Fragment {
 
     private ImageView mIconView;
     private TextView mTitleView;
-    private TextView mTitleEndView;
+    private TextView mExtraTextView;
     private TextView mSummaryView;
     private ProgressBar mProgressBar;
 
@@ -48,7 +48,7 @@ public class ProgressDialogFragment extends Fragment {
 
         mIconView = (ImageView) view.findViewById(android.R.id.icon);
         mTitleView = (TextView) view.findViewById(android.R.id.title);
-        mTitleEndView = (TextView) view.findViewById(R.id.title_end);
+        mExtraTextView = (TextView) view.findViewById(R.id.extra);
         mSummaryView = (TextView) view.findViewById(android.R.id.summary);
         mProgressBar = (ProgressBar) view.findViewById(android.R.id.progress);
 
@@ -73,21 +73,21 @@ public class ProgressDialogFragment extends Fragment {
         mTitleView.setText(title);
     }
 
-    public void setTitleEnd(@StringRes int resId) {
-        mTitleEndView.setText(resId);
+    public void setExtraText(@StringRes int resId) {
+        mExtraTextView.setText(resId);
     }
 
-    public void setTitleEnd(CharSequence title) {
-        mTitleEndView.setText(title);
-        mTitleEndView.setVisibility(TextUtils.isEmpty(title) ? View.GONE : View.VISIBLE);
+    public void setExtraText(CharSequence text) {
+        mExtraTextView.setText(text);
+        mExtraTextView.setVisibility(TextUtils.isEmpty(text) ? View.GONE : View.VISIBLE);
     }
 
     public void setSummary(@StringRes int resId) {
         mSummaryView.setText(resId);
     }
 
-    public void setSummary(CharSequence title) {
-        mSummaryView.setText(title);
+    public void setSummary(CharSequence summary) {
+        mSummaryView.setText(summary);
     }
 
     public void setIndeterminte(boolean indeterminte) {
