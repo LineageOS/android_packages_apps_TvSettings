@@ -39,6 +39,7 @@ public class ProgressDialogFragment extends Fragment {
     private TextView mExtraTextView;
     private TextView mSummaryView;
     private ProgressBar mProgressBar;
+    private int mWidth = -1;
 
     @Override
     public @Nullable View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -51,6 +52,12 @@ public class ProgressDialogFragment extends Fragment {
         mExtraTextView = (TextView) view.findViewById(R.id.extra);
         mSummaryView = (TextView) view.findViewById(android.R.id.summary);
         mProgressBar = (ProgressBar) view.findViewById(android.R.id.progress);
+
+        if (mWidth != -1) {
+            final ViewGroup.LayoutParams params = view.getLayoutParams();
+            params.width = mWidth;
+            view.setLayoutParams(params);
+        }
 
         return view;
     }
@@ -100,5 +107,16 @@ public class ProgressDialogFragment extends Fragment {
 
     public void setProgressMax(int max) {
         mProgressBar.setMax(max);
+    }
+
+    public void setContentWidth(int width) {
+        mWidth = width;
+        final View root = getView();
+        if (root == null) {
+            return;
+        }
+        final ViewGroup.LayoutParams params = root.getLayoutParams();
+        params.width = width;
+        root.setLayoutParams(params);
     }
 }

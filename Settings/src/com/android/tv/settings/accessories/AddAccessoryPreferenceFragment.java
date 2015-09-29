@@ -30,6 +30,8 @@ import android.util.SparseArray;
 
 import com.android.tv.settings.R;
 
+import java.util.List;
+
 public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragment {
 
     private SparseArray<Drawable> mResizedDrawables = new SparseArray<>();
@@ -40,19 +42,19 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        updateList();
+        final AddAccessoryActivity activity = (AddAccessoryActivity) getActivity();
+        updateList(activity.getBluetoothDevices(), activity.getCurrentTargetAddress(),
+                activity.getCurrentTargetStatus(), activity.getCancelledAddress());
     }
 
-    public void updateList() {
-        final AddAccessoryActivity activity = (AddAccessoryActivity) getActivity();
-        final String currentTargetAddress = activity.getCurrentTargetAddress();
-        final String currentTargetStatus = activity.getCurrentTargetStatus();
-        final String cancelledAddress = activity.getCancelledAddress();
+    public void updateList(List<BluetoothDevice> devices, String currentTargetAddress,
+            String currentTargetStatus, String cancelledAddress) {
 
-        final PreferenceScreen screen = getPreferenceManager().createPreferenceScreen(activity);
+        final PreferenceScreen screen =
+                getPreferenceManager().createPreferenceScreen(getActivity());
 
         // Add entries for the discovered Bluetooth devices
-        for (BluetoothDevice bt : activity.getBluetoothDevices()) {
+        for (BluetoothDevice bt : devices) {
             final Preference preference = new Preference(getPreferenceManager().getContext());
             if (currentTargetAddress.equalsIgnoreCase(bt.getAddress()) &&
                     !currentTargetStatus.isEmpty()) {

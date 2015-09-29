@@ -26,14 +26,18 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
+import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 
 import com.android.tv.settings.R;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Activity for detecting and adding (pairing) new bluetooth devices.
@@ -52,6 +56,8 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
             "AddAccessoryActivity.PREFERENCE_FRAGMENT";
     private static final String SAVED_STATE_CONTENT_FRAGMENT =
             "AddAccessoryActivity.CONTENT_FRAGMENT";
+    private static final String SAVED_STATE_BLUETOOTH_DEVICES =
+            "AddAccessoryActivity.BLUETOOTH_DEVICES";
 
     private static final String ADDRESS_NONE = "NONE";
 
@@ -81,19 +87,17 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
     private AddAccessoryContentFragment mContentFragment;
 
     // members related to Bluetooth pairing
-    private BluetoothDevicePairer mBtPairer;
+    private BluetoothDevicePairer mBluetoothPairer;
     private int mPreviousStatus = BluetoothDevicePairer.STATUS_NONE;
     private boolean mPairingSuccess = false;
     private boolean mPairingBluetooth = false;
-    private final ArrayList<BluetoothDevice> mBluetoothDevices = new ArrayList<>();
+    private List<BluetoothDevice> mBluetoothDevices;
     private String mCancelledAddress = ADDRESS_NONE;
     private String mCurrentTargetAddress = ADDRESS_NONE;
     private String mCurrentTargetStatus = "";
     private boolean mPairingInBackground = false;
 
-    private static long mStartTime;
     private boolean mDone = false;
-    private final Object mLock = new Object();
 
     private boolean mHwKeyDown;
     private boolean mHwKeyDidSelect;
@@ -131,9 +135,9 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
                     activity.handlePairingTimeout();
                     break;
                 case MSG_RESTART:
-                    if (activity.mBtPairer != null) {
-                        activity.mBtPairer.start();
-                        activity.mBtPairer.cancelPairing();
+                    if (activity.mBluetoothPairer != null) {
+                        activity.mBluetoothPairer.start();
+                        activity.mBluetoothPairer.cancelPairing();
                     }
                     break;
                 case MSG_TRIGGER_SELECT_DOWN:
@@ -194,6 +198,13 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
         mNoInputMode = getIntent().getBooleanExtra(INTENT_EXTRA_NO_INPUT_MODE, false);
         mHwKeyDown = false;
 
+        if (savedInstanceState == null) {
+            mBluetoothDevices = new ArrayList<>();
+        } else {
+            mBluetoothDevices =
+                    savedInstanceState.getParcelableArrayList(SAVED_STATE_BLUETOOTH_DEVICES);
+        }
+
         final FragmentManager fm = getFragmentManager();
         if (savedInstanceState == null) {
             mPreferenceFragment = AddAccessoryPreferenceFragment.newInstance();
@@ -210,6 +221,8 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
                     fm.getFragment(savedInstanceState,
                             SAVED_STATE_CONTENT_FRAGMENT);
         }
+
+        rearrangeViews();
     }
 
     @Override
@@ -219,6 +232,7 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
                 SAVED_STATE_PREFERENCE_FRAGMENT, mPreferenceFragment);
         getFragmentManager().putFragment(outState,
                 SAVED_STATE_CONTENT_FRAGMENT, mContentFragment);
+        outState.putParcelableList(SAVED_STATE_BLUETOOTH_DEVICES, mBluetoothDevices);
     }
 
     @Override
@@ -233,7 +247,6 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
         // the Secure Pairing activity.
         if (!mPairingInBackground) {
             startBluetoothPairer();
-            mStartTime = SystemClock.elapsedRealtime();
         }
 
         mPairingInBackground = false;
@@ -354,36 +367,53 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
     }
 
     protected void updateView() {
-        if (mPreferenceFragment == null || mStartTime == 0) {
+        if (mPreferenceFragment == null) {
             // view not yet ready, update will happen on first layout event
             return;
         }
 
-        synchronized (mLock) {
-            int prevNumDevices = mPreferenceFragment.getPreferenceScreen().getPreferenceCount();
+        int prevNumDevices = mPreferenceFragment.getPreferenceScreen().getPreferenceCount();
 
-            mPreferenceFragment.updateList();
+        mPreferenceFragment.updateList(mBluetoothDevices, mCurrentTargetAddress,
+                mCurrentTargetStatus, mCancelledAddress);
 
-            if (mNoInputMode) {
-                if (DEBUG) Log.d(TAG, "stopping auto-exit timer");
-                mAutoExitHandler.removeCallbacks(mAutoExitRunnable);
-                if (mBluetoothDevices.size() == 1 && prevNumDevices == 0) {
-                    // first device added, start counter for autopair
-                    mMsgHandler.sendEmptyMessageDelayed(MSG_START_AUTOPAIR_COUNTDOWN,
-                            TIME_TO_START_AUTOPAIR_COUNT);
-                } else {
+        if (mNoInputMode) {
+            if (DEBUG) Log.d(TAG, "stopping auto-exit timer");
+            mAutoExitHandler.removeCallbacks(mAutoExitRunnable);
+            if (mBluetoothDevices.size() == 1 && prevNumDevices == 0) {
+                // first device added, start counter for autopair
+                mMsgHandler.sendEmptyMessageDelayed(MSG_START_AUTOPAIR_COUNTDOWN,
+                        TIME_TO_START_AUTOPAIR_COUNT);
+            } else {
 
-                    // Start timer count down for exiting activity.
-                    if (DEBUG) Log.d(TAG, "starting auto-exit timer");
-                    mAutoExitHandler.postDelayed(mAutoExitRunnable, EXIT_TIMEOUT_MILLIS);
+                // Start timer count down for exiting activity.
+                if (DEBUG) Log.d(TAG, "starting auto-exit timer");
+                mAutoExitHandler.postDelayed(mAutoExitRunnable, EXIT_TIMEOUT_MILLIS);
 
-                    if (mBluetoothDevices.size() > 1) {
-                        // More than one device found, cancel auto pair
-                        cancelPairingCountdown();
-                    }
-               }
-            }
+                if (mBluetoothDevices.size() > 1) {
+                    // More than one device found, cancel auto pair
+                    cancelPairingCountdown();
+                }
+           }
         }
+
+        TransitionManager.beginDelayedTransition((ViewGroup) findViewById(R.id.content_frame));
+
+        rearrangeViews();
+    }
+
+    private void rearrangeViews() {
+        final boolean empty = mBluetoothDevices.isEmpty();
+
+        final View contentView = findViewById(R.id.content_fragment);
+        final ViewGroup.LayoutParams contentLayoutParams = contentView.getLayoutParams();
+        contentLayoutParams.width = empty ? ViewGroup.LayoutParams.MATCH_PARENT :
+                getResources().getDimensionPixelSize(R.dimen.lb_content_section_width);
+        contentView.setLayoutParams(contentLayoutParams);
+
+        mContentFragment.setContentWidth(empty
+                ? getResources().getDimensionPixelSize(R.dimen.progress_fragment_content_width)
+                : getResources().getDimensionPixelSize(R.dimen.bt_progress_width_narrow));
     }
 
     private void setPairingText(CharSequence text) {
@@ -415,9 +445,9 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
     }
 
     private void btDeviceClicked(String clickedAddress) {
-        if (mBtPairer != null && !mBtPairer.isInProgress()) {
-            if (mBtPairer.getStatus() == BluetoothDevicePairer.STATUS_WAITING_TO_PAIR &&
-                    mBtPairer.getTargetDevice() != null) {
+        if (mBluetoothPairer != null && !mBluetoothPairer.isInProgress()) {
+            if (mBluetoothPairer.getStatus() == BluetoothDevicePairer.STATUS_WAITING_TO_PAIR &&
+                    mBluetoothPairer.getTargetDevice() != null) {
                 cancelBtPairing();
             } else {
                 if (DEBUG) {
@@ -431,7 +461,7 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
                         }
                         mCancelledAddress = ADDRESS_NONE;
                         setPairingBluetooth(true);
-                        mBtPairer.startPairing(target);
+                        mBluetoothPairer.startPairing(target);
                         break;
                     }
                 }
@@ -441,13 +471,13 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
 
     private void cancelBtPairing() {
         // cancel current request to pair
-        if (mBtPairer != null) {
-            if (mBtPairer.getTargetDevice() != null) {
-                mCancelledAddress = mBtPairer.getTargetDevice().getAddress();
+        if (mBluetoothPairer != null) {
+            if (mBluetoothPairer.getTargetDevice() != null) {
+                mCancelledAddress = mBluetoothPairer.getTargetDevice().getAddress();
             } else {
                 mCancelledAddress = ADDRESS_NONE;
             }
-            mBtPairer.cancelPairing();
+            mBluetoothPairer.cancelPairing();
         }
         mPairingSuccess = false;
         setPairingBluetooth(false);
@@ -463,20 +493,20 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
 
     private void startBluetoothPairer() {
         stopBluetoothPairer();
-        mBtPairer = new BluetoothDevicePairer(this, this);
-        mBtPairer.start();
+        mBluetoothPairer = new BluetoothDevicePairer(this, this);
+        mBluetoothPairer.start();
 
-        mBtPairer.disableAutoPairing();
+        mBluetoothPairer.disableAutoPairing();
 
         mPairingSuccess = false;
         statusChanged();
     }
 
     private void stopBluetoothPairer() {
-        if (mBtPairer != null) {
-            mBtPairer.setListener(null);
-            mBtPairer.dispose();
-            mBtPairer = null;
+        if (mBluetoothPairer != null) {
+            mBluetoothPairer.setListener(null);
+            mBluetoothPairer.dispose();
+            mBluetoothPairer = null;
         }
     }
 
@@ -506,117 +536,115 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
 
     @Override
     public void statusChanged() {
-        synchronized (mLock) {
-            if (mBtPairer == null) return;
+        if (mBluetoothPairer == null) return;
 
-            int numDevices = mBtPairer.getAvailableDevices().size();
-            int status = mBtPairer.getStatus();
-            int oldStatus = mPreviousStatus;
-            mPreviousStatus = status;
+        int numDevices = mBluetoothPairer.getAvailableDevices().size();
+        int status = mBluetoothPairer.getStatus();
+        int oldStatus = mPreviousStatus;
+        mPreviousStatus = status;
 
-            String address = mBtPairer.getTargetDevice() == null ? ADDRESS_NONE :
-                    mBtPairer.getTargetDevice().getAddress();
+        String address = mBluetoothPairer.getTargetDevice() == null ? ADDRESS_NONE :
+                mBluetoothPairer.getTargetDevice().getAddress();
 
-            if (DEBUG) {
-                String state = "?";
-                switch (status) {
-                    case BluetoothDevicePairer.STATUS_NONE:
-                        state = "BluetoothDevicePairer.STATUS_NONE";
-                        break;
-                    case BluetoothDevicePairer.STATUS_SCANNING:
-                        state = "BluetoothDevicePairer.STATUS_SCANNING";
-                        break;
-                    case BluetoothDevicePairer.STATUS_WAITING_TO_PAIR:
-                        state = "BluetoothDevicePairer.STATUS_WAITING_TO_PAIR";
-                        break;
-                    case BluetoothDevicePairer.STATUS_PAIRING:
-                        state = "BluetoothDevicePairer.STATUS_PAIRING";
-                        break;
-                    case BluetoothDevicePairer.STATUS_CONNECTING:
-                        state = "BluetoothDevicePairer.STATUS_CONNECTING";
-                        break;
-                    case BluetoothDevicePairer.STATUS_ERROR:
-                        state = "BluetoothDevicePairer.STATUS_ERROR";
-                        break;
-                }
-                long time = mBtPairer.getNextStageTime() - SystemClock.elapsedRealtime();
-                Log.d(TAG, "Update received, number of devices:" + numDevices + " state: " +
-                        state + " target device: " + address + " time to next event: " + time);
-            }
-
-            mBluetoothDevices.clear();
-            for (BluetoothDevice device : mBtPairer.getAvailableDevices()) {
-                mBluetoothDevices.add(device);
-            }
-
-            cancelTimeout();
-
+        if (DEBUG) {
+            String state = "?";
             switch (status) {
                 case BluetoothDevicePairer.STATUS_NONE:
-                    // if we just connected to something or just tried to connect
-                    // to something, restart scanning just in case the user wants
-                    // to pair another device.
-                    if (oldStatus == BluetoothDevicePairer.STATUS_CONNECTING) {
-                        if (mPairingSuccess) {
-                            // Pairing complete
-                            mCurrentTargetStatus = getString(R.string.accessory_state_paired);
-                            mMsgHandler.sendEmptyMessage(MSG_UPDATE_VIEW);
-                            mMsgHandler.sendEmptyMessageDelayed(MSG_PAIRING_COMPLETE,
-                                    DONE_MESSAGE_TIMEOUT);
-                            mDone = true;
-
-                            // Done, return here and just wait for the message
-                            // to close the activity
-                            return;
-                        }
-                        if (DEBUG) {
-                            Log.d(TAG, "Invalidating and restarting.");
-                        }
-
-                        mBtPairer.invalidateDevice(mBtPairer.getTargetDevice());
-                        mBtPairer.start();
-                        mBtPairer.cancelPairing();
-                        setPairingBluetooth(false);
-
-                        // if this looks like a successful connection run, reflect
-                        // this in the UI, otherwise use the default message
-                        if (!mPairingSuccess && BluetoothDevicePairer.hasValidInputDevice(this)) {
-                            mPairingSuccess = true;
-                        }
-                    }
+                    state = "BluetoothDevicePairer.STATUS_NONE";
                     break;
                 case BluetoothDevicePairer.STATUS_SCANNING:
-                    mPairingSuccess = false;
+                    state = "BluetoothDevicePairer.STATUS_SCANNING";
                     break;
                 case BluetoothDevicePairer.STATUS_WAITING_TO_PAIR:
+                    state = "BluetoothDevicePairer.STATUS_WAITING_TO_PAIR";
                     break;
                 case BluetoothDevicePairer.STATUS_PAIRING:
-                    // reset the pairing success value since this is now a new
-                    // pairing run
-                    mPairingSuccess = true;
-                    setTimeout(PAIR_OPERATION_TIMEOUT);
+                    state = "BluetoothDevicePairer.STATUS_PAIRING";
                     break;
                 case BluetoothDevicePairer.STATUS_CONNECTING:
-                    setTimeout(CONNECT_OPERATION_TIMEOUT);
+                    state = "BluetoothDevicePairer.STATUS_CONNECTING";
                     break;
                 case BluetoothDevicePairer.STATUS_ERROR:
-                    mPairingSuccess = false;
-                    setPairingBluetooth(false);
-                    if (mNoInputMode) {
-                        clearDeviceList();
-                    }
+                    state = "BluetoothDevicePairer.STATUS_ERROR";
                     break;
             }
-
-            mCurrentTargetAddress = address;
-            mCurrentTargetStatus = getMessageForStatus(status);
-            mMsgHandler.sendEmptyMessage(MSG_UPDATE_VIEW);
+            long time = mBluetoothPairer.getNextStageTime() - SystemClock.elapsedRealtime();
+            Log.d(TAG, "Update received, number of devices:" + numDevices + " state: " +
+                    state + " target device: " + address + " time to next event: " + time);
         }
+
+        mBluetoothDevices.clear();
+        for (BluetoothDevice device : mBluetoothPairer.getAvailableDevices()) {
+            mBluetoothDevices.add(device);
+        }
+
+        cancelTimeout();
+
+        switch (status) {
+            case BluetoothDevicePairer.STATUS_NONE:
+                // if we just connected to something or just tried to connect
+                // to something, restart scanning just in case the user wants
+                // to pair another device.
+                if (oldStatus == BluetoothDevicePairer.STATUS_CONNECTING) {
+                    if (mPairingSuccess) {
+                        // Pairing complete
+                        mCurrentTargetStatus = getString(R.string.accessory_state_paired);
+                        mMsgHandler.sendEmptyMessage(MSG_UPDATE_VIEW);
+                        mMsgHandler.sendEmptyMessageDelayed(MSG_PAIRING_COMPLETE,
+                                DONE_MESSAGE_TIMEOUT);
+                        mDone = true;
+
+                        // Done, return here and just wait for the message
+                        // to close the activity
+                        return;
+                    }
+                    if (DEBUG) {
+                        Log.d(TAG, "Invalidating and restarting.");
+                    }
+
+                    mBluetoothPairer.invalidateDevice(mBluetoothPairer.getTargetDevice());
+                    mBluetoothPairer.start();
+                    mBluetoothPairer.cancelPairing();
+                    setPairingBluetooth(false);
+
+                    // if this looks like a successful connection run, reflect
+                    // this in the UI, otherwise use the default message
+                    if (!mPairingSuccess && BluetoothDevicePairer.hasValidInputDevice(this)) {
+                        mPairingSuccess = true;
+                    }
+                }
+                break;
+            case BluetoothDevicePairer.STATUS_SCANNING:
+                mPairingSuccess = false;
+                break;
+            case BluetoothDevicePairer.STATUS_WAITING_TO_PAIR:
+                break;
+            case BluetoothDevicePairer.STATUS_PAIRING:
+                // reset the pairing success value since this is now a new
+                // pairing run
+                mPairingSuccess = true;
+                setTimeout(PAIR_OPERATION_TIMEOUT);
+                break;
+            case BluetoothDevicePairer.STATUS_CONNECTING:
+                setTimeout(CONNECT_OPERATION_TIMEOUT);
+                break;
+            case BluetoothDevicePairer.STATUS_ERROR:
+                mPairingSuccess = false;
+                setPairingBluetooth(false);
+                if (mNoInputMode) {
+                    clearDeviceList();
+                }
+                break;
+        }
+
+        mCurrentTargetAddress = address;
+        mCurrentTargetStatus = getMessageForStatus(status);
+        mMsgHandler.sendEmptyMessage(MSG_UPDATE_VIEW);
     }
 
     private void clearDeviceList() {
         mBluetoothDevices.clear();
-        mBtPairer.clearDeviceList();
+        mBluetoothPairer.clearDeviceList();
     }
 
     private void handlePairingTimeout() {
@@ -626,8 +654,8 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
             // Either Pairing or Connecting timeout out.
             // Display error message and post delayed message to the scanning process.
             mPairingSuccess = false;
-            if (mBtPairer != null) {
-                mBtPairer.cancelPairing();
+            if (mBluetoothPairer != null) {
+                mBluetoothPairer.cancelPairing();
             }
             mCurrentTargetStatus = getString(R.string.accessory_state_error);
             mMsgHandler.sendEmptyMessage(MSG_UPDATE_VIEW);
@@ -635,7 +663,7 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
         }
     }
 
-    ArrayList<BluetoothDevice> getBluetoothDevices() {
+    List<BluetoothDevice> getBluetoothDevices() {
         return mBluetoothDevices;
     }
 
