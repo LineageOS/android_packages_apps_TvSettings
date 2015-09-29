@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.accessories;
 
+import android.annotation.Nullable;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -24,42 +25,24 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.dialog.ProgressDialogFragment;
 import com.android.tv.settings.util.AccessibilityHelper;
 
 /**
  * Custom Content Fragment for the Bluetooth settings activity.
  */
-public class AddAccessoryContentFragment extends Fragment {
+public class AddAccessoryContentFragment extends ProgressDialogFragment {
 
     public static AddAccessoryContentFragment newInstance() {
         return new AddAccessoryContentFragment();
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-
-        final View view =
-                inflater.inflate(R.layout.add_accessory_content_fragment, container, false);
-
-        // Enable focusability of text views if accessibility is enabled.
-        if (AccessibilityHelper.forceFocusableViews(getActivity())) {
-            TextView title = (TextView) view.findViewById(R.id.title);
-            if (title != null) {
-                title.setFocusable(true);
-                title.setFocusableInTouchMode(true);
-            }
-            TextView instructions = (TextView) view.findViewById(R.id.bluetooth_instructions);
-            if (instructions != null) {
-                instructions.setFocusable(true);
-                instructions.setFocusableInTouchMode(true);
-            }
-            TextView autopair = (TextView) view.findViewById(R.id.autopair_message);
-            if (autopair != null) {
-                autopair.setFocusable(true);
-                autopair.setFocusableInTouchMode(true);
-            }
-        }
-        return view;
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        setTitle(R.string.accessories_add_title);
+        //setIcon(R.drawable.ic_bluetooth_searching);
+        setIcon(R.drawable.ic_qs_bluetooth_off);
+        setSummary(R.string.accessories_add_bluetooth_inst);
     }
 }
