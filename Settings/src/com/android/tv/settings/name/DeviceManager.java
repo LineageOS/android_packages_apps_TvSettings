@@ -28,7 +28,8 @@ public class DeviceManager {
      * @return The device name.
      */
     public static String getDeviceName(Context context) {
-        return Settings.Global.getString(context.getContentResolver(), Settings.Global.DEVICE_NAME);
+        return CMSettings.Global.getString(context.getContentResolver(),
+                CMSettings.Global.DEVICE_NAME);
     }
 
     /**
@@ -41,7 +42,8 @@ public class DeviceManager {
      * @param name The new device name.
      */
     public static void setDeviceName(Context context, String name) {
-        Settings.Global.putString(context.getContentResolver(), Settings.Global.DEVICE_NAME, name);
+        CMSettings.Global.putString(context.getContentResolver(), CMSettings.Global.DEVICE_NAME,
+                name);
         BluetoothAdapter.getDefaultAdapter().setName(name);
     }
 }
