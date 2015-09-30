@@ -1,0 +1,298 @@
+/*
+ * Copyright (C) 2015 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License
+ */
+
+package com.android.tv.settings.device.apps;
+
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
+import android.support.v17.preference.LeanbackPreferenceFragment;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceGroup;
+import android.support.v7.preference.PreferenceScreen;
+import android.text.TextUtils;
+import android.util.ArrayMap;
+
+import com.android.settingslib.applications.ApplicationsState;
+import com.android.tv.settings.R;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+public class AppsFragment extends LeanbackPreferenceFragment {
+
+    private static final String TAG = "AppsFragment";
+
+    private ApplicationsState mApplicationsState;
+    private ApplicationsState.Session mSessionSystem;
+    private ApplicationsState.AppFilter mFilterSystem;
+    private ApplicationsState.Session mSessionDownloaded;
+    private ApplicationsState.AppFilter mFilterDownloaded;
+
+    private PreferenceGroup mSystemPreferenceGroup;
+    private PreferenceGroup mDownloadedPreferenceGroup;
+
+    private final Handler mHandler = new Handler();
+    private final Map<PreferenceGroup,
+            ArrayList<ApplicationsState.AppEntry>> mUpdateMap = new ArrayMap<>(3);
+    private long mRunAt = Long.MIN_VALUE;
+    private final Runnable mUpdateRunnable = new Runnable() {
+        @Override
+        public void run() {
+            for (final PreferenceGroup group : mUpdateMap.keySet()) {
+                final ArrayList<ApplicationsState.AppEntry> entries = mUpdateMap.get(group);
+                updateAppListInternal(group, entries);
+            }
+            mUpdateMap.clear();
+            mRunAt = 0;
+        }
+    };
+
+    public static AppsFragment newInstance(String volumeUuid, String volumeName) {
+        final Bundle b = new Bundle(2);
+        b.putString(AppsActivity.EXTRA_VOLUME_UUID, volumeUuid);
+        b.putString(AppsActivity.EXTRA_VOLUME_NAME, volumeName);
+        final AppsFragment f = new AppsFragment();
+        f.setArguments(b);
+        return f;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mApplicationsState = ApplicationsState.getInstance(getActivity().getApplication());
+
+        final String volumeUuid = getArguments().getString(AppsActivity.EXTRA_VOLUME_UUID);
+        final String volumeName = getArguments().getString(AppsActivity.EXTRA_VOLUME_NAME);
+
+        // The UUID of internal storage is null, so we check if there's a volume name to see if we
+        // should only be showing the apps on the internal storage or all apps.
+        if (!TextUtils.isEmpty(volumeUuid) || !TextUtils.isEmpty(volumeName)) {
+            ApplicationsState.AppFilter volumeFilter =
+                    new ApplicationsState.VolumeFilter(volumeUuid);
+
+            mFilterSystem =
+                    new ApplicationsState.CompoundFilter(FILTER_SYSTEM, volumeFilter);
+            mFilterDownloaded =
+                    new ApplicationsState.CompoundFilter(FILTER_DOWNLOADED, volumeFilter);
+        } else {
+            mFilterSystem = FILTER_SYSTEM;
+            mFilterDownloaded = FILTER_DOWNLOADED;
+        }
+
+        mSessionSystem = mApplicationsState.newSession(new RowUpdateCallbacks() {
+            @Override
+            protected void doRebuild() {
+                rebuildSystem();
+            }
+
+            @Override
+            public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> apps) {
+                updateAppList(mSystemPreferenceGroup, apps);
+            }
+        });
+        rebuildSystem();
+
+        mSessionDownloaded = mApplicationsState.newSession(new RowUpdateCallbacks() {
+            @Override
+            protected void doRebuild() {
+                rebuildDownloaded();
+            }
+
+            @Override
+            public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> apps) {
+                updateAppList(mDownloadedPreferenceGroup, apps);
+            }
+        });
+        rebuildDownloaded();
+
+    }
+
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        final Context context = getPreferenceManager().getContext();
+
+        final PreferenceScreen screen =
+                getPreferenceManager().createPreferenceScreen(context);
+        screen.setTitle(R.string.device_apps);
+        // TODO: show volume name somewhere?
+
+        final String volumeUuid = getArguments().getString(AppsActivity.EXTRA_VOLUME_UUID);
+
+        if (TextUtils.isEmpty(volumeUuid)) {
+            final Preference permissionsPreference = new Preference(context);
+            permissionsPreference.setKey("Permissions");
+            permissionsPreference.setTitle(R.string.device_apps_permissions);
+            permissionsPreference.setIntent(new Intent(Intent.ACTION_MANAGE_PERMISSIONS));
+            screen.addPreference(permissionsPreference);
+        }
+        mDownloadedPreferenceGroup = new PreferenceCategory(context);
+        mDownloadedPreferenceGroup.setKey("DownloadedPreferenceGroup");
+        mDownloadedPreferenceGroup.setTitle(R.string.apps_downloaded);
+        screen.addPreference(mDownloadedPreferenceGroup);
+
+        if (TextUtils.isEmpty(volumeUuid)) {
+            mSystemPreferenceGroup = new PreferenceCategory(context);
+            mSystemPreferenceGroup.setKey("SystemPreferenceGroup");
+            mSystemPreferenceGroup.setTitle(R.string.apps_system);
+            screen.addPreference(mSystemPreferenceGroup);
+        }
+
+        setPreferenceScreen(screen);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mSessionSystem.resume();
+        mSessionDownloaded.resume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mSessionSystem.pause();
+        mSessionDownloaded.pause();
+    }
+
+    private void rebuildSystem() {
+        ArrayList<ApplicationsState.AppEntry> apps =
+                mSessionSystem.rebuild(mFilterSystem, ApplicationsState.ALPHA_COMPARATOR);
+        if (apps != null) {
+            updateAppList(mSystemPreferenceGroup, apps);
+        }
+    }
+
+    private void rebuildDownloaded() {
+        ArrayList<ApplicationsState.AppEntry> apps =
+                mSessionDownloaded.rebuild(mFilterDownloaded, ApplicationsState.ALPHA_COMPARATOR);
+        if (apps != null) {
+            updateAppList(mDownloadedPreferenceGroup, apps);
+        }
+    }
+
+    private void updateAppList(PreferenceGroup group,
+            ArrayList<ApplicationsState.AppEntry> entries) {
+        mUpdateMap.put(group, entries);
+
+        // We can get spammed with updates, so coalesce them to reduce jank and flicker
+        if (mRunAt == Long.MIN_VALUE) {
+            // First run, no delay
+            mHandler.removeCallbacks(mUpdateRunnable);
+            mHandler.post(mUpdateRunnable);
+        } else {
+            if (mRunAt == 0) {
+                mRunAt = SystemClock.uptimeMillis() + 1000;
+            }
+            int delay = (int) (mRunAt - SystemClock.uptimeMillis());
+            delay = delay < 0 ? 0 : delay;
+
+            mHandler.removeCallbacks(mUpdateRunnable);
+            mHandler.postDelayed(mUpdateRunnable, delay);
+        }
+    }
+
+    private void updateAppListInternal(PreferenceGroup group,
+            ArrayList<ApplicationsState.AppEntry> entries) {
+        if (entries != null) {
+            group.removeAll();
+
+            for (final ApplicationsState.AppEntry entry : entries) {
+                group.addPreference(getPreferenceForApp(entry));
+            }
+        }
+    }
+
+    private Preference getPreferenceForApp(ApplicationsState.AppEntry entry) {
+        final AppInfo info = new AppInfo(getActivity(), entry);
+        final Preference preference = new Preference(getPreferenceManager().getContext());
+        preference.setKey(info.getPackageName());
+        preference.setTitle(info.getName());
+        preference.setSummary(info.getSize());
+        preference.setIntent(AppManagementActivity.getLaunchIntent(info.getPackageName()));
+        preference.setIcon(entry.icon);
+        return preference;
+    }
+
+    private abstract class RowUpdateCallbacks implements ApplicationsState.Callbacks {
+
+        protected abstract void doRebuild();
+
+        @Override
+        public void onRunningStateChanged(boolean running) {
+            doRebuild();
+        }
+
+        @Override
+        public void onPackageListChanged() {
+            doRebuild();
+        }
+
+        @Override
+        public void onPackageIconChanged() {
+            doRebuild();
+        }
+
+        @Override
+        public void onPackageSizeChanged(String packageName) {
+            doRebuild();
+        }
+
+        @Override
+        public void onAllSizesComputed() {
+            doRebuild();
+        }
+
+        @Override
+        public void onLauncherInfoChanged() {
+            doRebuild();
+        }
+
+        @Override
+        public void onLoadEntriesCompleted() {
+            doRebuild();
+        }
+    }
+
+    private static final ApplicationsState.AppFilter FILTER_SYSTEM =
+            new ApplicationsState.AppFilter() {
+
+                @Override
+                public void init() {}
+
+                @Override
+                public boolean filterApp(ApplicationsState.AppEntry info) {
+                    return (info.info.flags & ApplicationInfo.FLAG_SYSTEM) != 0;
+                }
+            };
+
+    private static final ApplicationsState.AppFilter FILTER_DOWNLOADED =
+            new ApplicationsState.AppFilter() {
+
+                @Override
+                public void init() {}
+
+                @Override
+                public boolean filterApp(ApplicationsState.AppEntry info) {
+                    return (info.info.flags & ApplicationInfo.FLAG_SYSTEM) == 0;
+                }
+            };
+
+}
