@@ -16,8 +16,6 @@
 
 package com.android.tv.settings.device.apps;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -29,20 +27,15 @@ import android.graphics.drawable.InsetDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.UserHandle;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsConstant;
-import com.android.tv.settings.device.storage.MoveAppProgressFragment;
-import com.android.tv.settings.device.storage.MoveAppStepFragment;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.SettingsLayoutActivity;
 
@@ -54,13 +47,9 @@ import java.util.ArrayList;
  */
 public class AppManagementActivity extends SettingsLayoutActivity implements
         ApplicationsState.Callbacks, DataClearer.Listener, CacheClearer.Listener,
-        DefaultClearer.Listener, MoveAppStepFragment.Callback {
+        DefaultClearer.Listener {
 
     private static final String TAG = "AppManagementActivity";
-
-    private static final String DIALOG_BACKSTACK_TAG = "storageUsed";
-
-    private static final String SAVE_STATE_MOVE_ID = "AppManagementActivity.moveId";
 
     // Action IDs
     private static final int ACTION_FORCE_STOP = 1;
@@ -97,29 +86,6 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
     private DefaultClearer mDefaultClearer;
     private CacheClearer mCacheClearer;
 
-    private int mAppMoveId;
-    private final PackageManager.MoveCallback mMoveCallback = new PackageManager.MoveCallback() {
-        @Override
-        public void onStatusChanged(int moveId, int status, long estMillis) {
-            if (moveId != mAppMoveId || !PackageManager.isMoveStatusFinished(status)) {
-                return;
-            }
-
-            getFragmentManager().popBackStack(DIALOG_BACKSTACK_TAG,
-                    FragmentManager.POP_BACK_STACK_INCLUSIVE);
-            final int userId = UserHandle.getUserId(mAppInfo.getUid());
-            mApplicationsState.invalidatePackage(mPackageName, userId);
-
-            if (status != PackageManager.MOVE_SUCCEEDED) {
-                Log.d(TAG, "Move failure status: " + status);
-                Toast.makeText(AppManagementActivity.this,
-                        MoveAppProgressFragment.moveStatusToMessage(AppManagementActivity.this,
-                                status),
-                        Toast.LENGTH_LONG).show();
-            }
-        }
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         mPackageManager = getPackageManager();
@@ -148,11 +114,6 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
         mDefaultClearer = new DefaultClearer(this, mAppInfo);
         mCacheClearer = new CacheClearer(this, mAppInfo);
 
-        mAppMoveId = savedInstanceState != null ?
-                savedInstanceState.getInt(SAVE_STATE_MOVE_ID) : -1;
-
-        mPackageManager.registerMoveCallback(mMoveCallback, new Handler());
-
         super.onCreate(savedInstanceState);
     }
 
@@ -166,18 +127,6 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
     protected void onPause() {
         super.onPause();
         mSession.pause();
-    }
-
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putInt(SAVE_STATE_MOVE_ID, mAppMoveId);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mPackageManager.unregisterMoveCallback(mMoveCallback);
     }
 
     public static Intent getLaunchIntent(String packageName) {
@@ -223,8 +172,8 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
                 onForceStopOk();
                 break;
             case ACTION_STORAGE_USED:
-                startDialogFragment(MoveAppStepFragment.newInstance(mPackageName,
-                        mAppInfo.getName()));
+                startActivity(MoveAppActivity.getLaunchIntent(this,
+                        mPackageName, mAppInfo.getName()));
                 break;
             case ACTION_CLEAR_DATA:
                 onClearDataOk();
@@ -698,23 +647,4 @@ public class AppManagementActivity extends SettingsLayoutActivity implements
             return mDefaultClearer.getDescription(AppManagementActivity.this);
         }
     };
-
-    @Override
-    public void onRequestMovePackageToVolume(String packageName, VolumeInfo destination) {
-        // Kick off the move
-        mAppMoveId = mPackageManager.movePackage(packageName, destination);
-        // Show the progress dialog
-        startDialogFragment(MoveAppProgressFragment.newInstance(mAppInfo.getName()));
-    }
-
-    private void startDialogFragment(Fragment fragment) {
-        // Get rid of any previous wizard screen(s)
-        getFragmentManager().popBackStack(DIALOG_BACKSTACK_TAG,
-                FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        // Replace it with the progress screen
-        getFragmentManager().beginTransaction()
-                .addToBackStack(DIALOG_BACKSTACK_TAG)
-                .replace(android.R.id.content, fragment)
-                .commit();
-    }
 }

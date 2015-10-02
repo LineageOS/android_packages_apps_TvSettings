@@ -484,6 +484,9 @@
         <activity android:name=".device.storage.MigrateStorageActivity"
             android:exported="false" />
 
+        <activity android:name=".device.apps.MoveAppActivity"
+            android:exported="false" />
+
         <activity android:name=".accessories.BluetoothRequestPermissionActivity"
             android:label="@string/bluetooth_permission_request"
             android:excludeFromRecents="true"

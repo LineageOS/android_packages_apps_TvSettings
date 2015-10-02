@@ -32,6 +32,7 @@ import android.util.ArrayMap;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.apps.AppInfo;
+import com.android.tv.settings.device.apps.MoveAppActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -178,12 +179,8 @@ public class BackupAppsStepFragment extends StorageGuidedStepFragment implements
         final ApplicationsState.AppEntry entry = mEntries.get(actionId);
         final AppInfo appInfo = new AppInfo(getActivity(), entry);
 
-        final MoveAppStepFragment fragment = MoveAppStepFragment.newInstance(entry.info.packageName,
-                appInfo.getName());
-        getFragmentManager().beginTransaction()
-                .addToBackStack(null)
-                .replace(android.R.id.content, fragment)
-                .commit();
+        startActivity(MoveAppActivity.getLaunchIntent(getActivity(), entry.info.packageName,
+                appInfo.getName()));
     }
 
     @Override

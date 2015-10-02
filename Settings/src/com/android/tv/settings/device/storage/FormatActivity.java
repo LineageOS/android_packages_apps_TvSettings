@@ -18,12 +18,10 @@ package com.android.tv.settings.device.storage;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.app.LoaderManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
-import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -44,7 +42,7 @@ import java.util.List;
 import java.util.Map;
 
 public class FormatActivity extends Activity
-        implements MoveAppStepFragment.Callback, FormatAsPrivateStepFragment.Callback,
+        implements FormatAsPrivateStepFragment.Callback,
         FormatAsPublicStepFragment.Callback, SlowDriveStepFragment.Callback {
 
     private static final String TAG = "FormatActivity";
@@ -54,9 +52,6 @@ public class FormatActivity extends Activity
     public static final String INTENT_ACTION_FORMAT_AS_PUBLIC =
             "com.android.tv.settings.device.storage.FormatActivity.formatAsPublic";
 
-    private static final String MOVE_PROGRESS_DIALOG_BACKSTACK_TAG = "moveProgressDialog";
-
-    private static final String SAVE_STATE_MOVE_ID = "StorageResetActivity.moveId";
     private static final String SAVE_STATE_FORMAT_PRIVATE_DISK_ID =
             "StorageResetActivity.formatPrivateDiskId";
     private static final String SAVE_STATE_FORMAT_DISK_DESC =
@@ -78,28 +73,6 @@ public class FormatActivity extends Activity
     private PackageManager mPackageManager;
     private StorageManager mStorageManager;
 
-    private int mAppMoveId = -1;
-    private final PackageManager.MoveCallback mMoveCallback = new PackageManager.MoveCallback() {
-        @Override
-        public void onStatusChanged(int moveId, int status, long estMillis) {
-            if (moveId != mAppMoveId || !PackageManager.isMoveStatusFinished(status)) {
-                return;
-            }
-
-            getFragmentManager().popBackStack(MOVE_PROGRESS_DIALOG_BACKSTACK_TAG,
-                    FragmentManager.POP_BACK_STACK_INCLUSIVE);
-
-            // TODO: refresh ui
-
-            if (status != PackageManager.MOVE_SUCCEEDED) {
-                Log.d(TAG, "Move failure status: " + status);
-                Toast.makeText(FormatActivity.this,
-                        MoveAppProgressFragment.moveStatusToMessage(FormatActivity.this, status),
-                        Toast.LENGTH_LONG).show();
-            }
-        }
-    };
-
     public static Intent getFormatAsPublicIntent(Context context, String diskId) {
         final Intent i = new Intent(context, FormatActivity.class);
         i.setAction(INTENT_ACTION_FORMAT_AS_PUBLIC);
@@ -119,12 +92,9 @@ public class FormatActivity extends Activity
         super.onCreate(savedInstanceState);
 
         mPackageManager = getPackageManager();
-        mPackageManager.registerMoveCallback(mMoveCallback, new Handler());
-
         mStorageManager = getSystemService(StorageManager.class);
 
         if (savedInstanceState != null) {
-            mAppMoveId = savedInstanceState.getInt(SAVE_STATE_MOVE_ID);
             mFormatAsPrivateDiskId =
                     savedInstanceState.getString(SAVE_STATE_FORMAT_PRIVATE_DISK_ID);
             mFormatAsPublicDiskId = savedInstanceState.getString(SAVE_STATE_FORMAT_PUBLIC_DISK_ID);
@@ -157,18 +127,10 @@ public class FormatActivity extends Activity
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt(SAVE_STATE_MOVE_ID, mAppMoveId);
         outState.putString(SAVE_STATE_FORMAT_PRIVATE_DISK_ID, mFormatAsPrivateDiskId);
         outState.putString(SAVE_STATE_FORMAT_PUBLIC_DISK_ID, mFormatAsPublicDiskId);
         outState.putString(SAVE_STATE_FORMAT_DISK_DESC, mFormatDiskDesc);
     }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mPackageManager.unregisterMoveCallback(mMoveCallback);
-    }
-
 
     private static class FormatAsPrivateTaskLoader
             extends SettingsAsyncTaskLoader<Map<String, Object>> {
@@ -363,27 +325,6 @@ public class FormatActivity extends Activity
 
         @Override
         public void onLoaderReset(Loader<Map<String, Object>> loader) {}
-    }
-
-    @Override
-    public void onRequestMovePackageToVolume(String packageName, VolumeInfo destination) {
-        mAppMoveId = mPackageManager.movePackage(packageName, destination);
-        final ApplicationInfo applicationInfo;
-        try {
-            applicationInfo = mPackageManager
-                    .getApplicationInfo(packageName, 0);
-        } catch (final PackageManager.NameNotFoundException e) {
-            throw new IllegalStateException(e);
-        }
-
-        final MoveAppProgressFragment fragment = MoveAppProgressFragment
-                .newInstance(mPackageManager.getApplicationLabel(applicationInfo));
-
-        getFragmentManager().beginTransaction()
-                .addToBackStack(MOVE_PROGRESS_DIALOG_BACKSTACK_TAG)
-                .replace(android.R.id.content, fragment)
-                .commit();
-
     }
 
     @Override
