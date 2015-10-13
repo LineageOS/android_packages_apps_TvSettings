@@ -151,9 +151,6 @@ public class LanguageActivity extends DialogActivity implements ActionAdapter.Li
             int i = Integer.parseInt(s);
             setLanguagePreference(i);
             setWifiCountryCode();
-            // Locale change can mean new icons for RTL languages, so invalidate
-            // any cached images from resources.
-            BitmapDownloader.getInstance(this).invalidateCachedResources();
             finish();
         }
     }
