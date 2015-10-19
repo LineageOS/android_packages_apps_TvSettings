@@ -19,13 +19,16 @@ package com.android.tv.settings.system.development;
 import android.Manifest;
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.AlertDialog;
 import android.app.AppOpsManager;
+import android.app.Dialog;
 import android.app.admin.DevicePolicyManager;
 import android.app.backup.IBackupManager;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
@@ -148,6 +151,9 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private static final String KEY_CONVERT_FBE = "convert_to_file_encryption";
 
+    private static final String ROOT_ACCESS_KEY = "root_access";
+    private static final String ROOT_ACCESS_PROPERTY = "persist.sys.root_access";
+
     private static final int RESULT_DEBUG_APP = 1000;
     private static final int RESULT_MOCK_LOCATION_APP = 1001;
 
@@ -218,6 +224,10 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private ListPreference mOpenGLTraces;
 
     private ListPreference mSimulateColorSpace;
+
+    private ListPreference mRootAccess;
+    private Object mSelectedRootValue;
+    private Dialog mRootDialog;
 
     private SwitchPreference mUSBAudio;
     private SwitchPreference mImmediatelyDestroyActivities;
@@ -427,6 +437,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             removePreference(KEY_COLOR_MODE);
             mColorModePreference = null;
         }
+
+        mRootAccess = (ListPreference) findPreference(ROOT_ACCESS_KEY);
+        mRootAccess.setOnPreferenceChangeListener(this);
+        if (!removeRootOptionsIfRequired()) {
+            mAllPrefs.add(mRootAccess);
+        }
     }
 
     private void removePreference(String key) {
@@ -458,6 +474,18 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mAllPrefs.add(pref);
         mResetSwitchPrefs.add(pref);
         return pref;
+    }
+
+    private boolean removeRootOptionsIfRequired() {
+        // user builds don't get root, and eng always gets root
+        if (!(Build.IS_DEBUGGABLE || "eng".equals(Build.TYPE))) {
+            if (mRootAccess != null) {
+                getPreferenceScreen().removePreference(mRootAccess);
+                return true;
+            }
+        }
+
+        return false;
     }
 
     @Override
@@ -635,6 +663,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         updateSimulateColorSpace();
         updateUSBAudioOptions();
         updateForceResizableOptions();
+        updateRootAccessOptions();
     }
 
     private void resetDangerousOptions() {
@@ -646,6 +675,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             }
         }
         resetDebuggerOptions();
+        resetRootAccessOptions();
         mLogpersistController.writeLogpersistOption(null, true);
         mLogdSizeController.writeLogdSizeOption(null);
         writeAnimationScaleOption(0, mWindowAnimationScale, null);
@@ -661,6 +691,47 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         updateAllOptions();
         SystemPropPoker.getInstance().unblockPokes();
         SystemPropPoker.getInstance().poke();
+    }
+
+   private void updateRootAccessOptions() {
+        String value = SystemProperties.get(ROOT_ACCESS_PROPERTY, "0");
+        mRootAccess.setValue(value);
+        mRootAccess.setSummary(getResources()
+                .getStringArray(R.array.root_access_entries)[Integer.valueOf(value)]);
+    }
+
+    public static boolean isRootForAppsEnabled() {
+        int value = SystemProperties.getInt(ROOT_ACCESS_PROPERTY, 0);
+        boolean daemonState =
+                SystemProperties.get("init.svc.su_daemon", "absent").equals("running");
+        return daemonState && (value == 1 || value == 3);
+    }
+
+    private void writeRootAccessOptions(Object newValue) {
+        String oldValue = SystemProperties.get(ROOT_ACCESS_PROPERTY, "0");
+        SystemProperties.set(ROOT_ACCESS_PROPERTY, newValue.toString());
+        if (Integer.valueOf(newValue.toString()) < 2 && !oldValue.equals(newValue)
+                && "1".equals(SystemProperties.get("service.adb.root", "0"))) {
+            SystemProperties.set("service.adb.root", "0");
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.ADB_ENABLED, 0);
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.ADB_ENABLED, 1);
+        }
+        updateRootAccessOptions();
+    }
+
+    private void resetRootAccessOptions() {
+        String oldValue = SystemProperties.get(ROOT_ACCESS_PROPERTY, "0");
+        SystemProperties.set(ROOT_ACCESS_PROPERTY, "0");
+        if (!oldValue.equals("0") && "1".equals(SystemProperties.get("service.adb.root", "0"))) {
+            SystemProperties.set("service.adb.root", "0");
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.ADB_ENABLED, 0);
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.ADB_ENABLED, 1);
+        }
+        updateRootAccessOptions();
     }
 
     private void updateBluetoothHciSnoopLogValues() {
@@ -1605,6 +1676,40 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             return true;
         } else if (preference == mBtHciSnoopLog) {
             writeBtHciSnoopLogOptions(newValue);
+        } else if (preference == mRootAccess) {
+            if ("0".equals(SystemProperties.get(ROOT_ACCESS_PROPERTY, "0"))
+                    && !"0".equals(newValue)) {
+                mSelectedRootValue = newValue;
+                if (mRootDialog != null) {
+                    updateRootAccessOptions();
+                    mRootDialog.dismiss();
+                    mRootDialog = null;
+                }
+                mRootDialog = new AlertDialog.Builder(getActivity())
+                        .setMessage(getResources().getString(R.string.root_access_warning_message))
+                        .setTitle(R.string.root_access_warning_title)
+                        .setPositiveButton(android.R.string.yes,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // We are OK to enable root acess, trigger it
+                                SystemProperties.set(ROOT_ACCESS_PROPERTY, newValue.toString());
+                                writeRootAccessOptions(newValue);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // Enabling root access canceled, go back
+                            }
+                        })
+                        .show();
+                mRootDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    public void onDismiss(DialogInterface dialog) {
+                        // Enabling root access canceled, go back
+                    }
+                });
+            } else {
+                writeRootAccessOptions(newValue);
+            }
             return true;
         }
         return false;
