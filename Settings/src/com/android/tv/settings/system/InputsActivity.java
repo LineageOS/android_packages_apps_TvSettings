@@ -95,8 +95,8 @@ public class InputsActivity extends SettingsLayoutActivity {
     public void onCreate(Bundle savedInstanceState) {
         mTvInputManager = (TvInputManager) getSystemService(Context.TV_INPUT_SERVICE);
         mRes = getResources();
-        mCustomLabels = TvInputSettings.getCustomLabels(this, UserHandle.USER_OWNER);
-        mHiddenIds = TvInputSettings.getHiddenTvInputIds(this, UserHandle.USER_OWNER);
+        mCustomLabels = TvInputSettings.getCustomLabels(this, UserHandle.USER_SYSTEM);
+        mHiddenIds = TvInputSettings.getHiddenTvInputIds(this, UserHandle.USER_SYSTEM);
         super.onCreate(savedInstanceState);
     }
 
@@ -383,7 +383,7 @@ public class InputsActivity extends SettingsLayoutActivity {
             }
         }
         if (changed) {
-            TvInputSettings.putHiddenTvInputs(this, mHiddenIds, UserHandle.USER_OWNER);
+            TvInputSettings.putHiddenTvInputs(this, mHiddenIds, UserHandle.USER_SYSTEM);
         }
     }
 
@@ -402,7 +402,7 @@ public class InputsActivity extends SettingsLayoutActivity {
             mCustomLabels.remove(inputId);
         }
 
-        TvInputSettings.putCustomLabels(this, mCustomLabels, UserHandle.USER_OWNER);
+        TvInputSettings.putCustomLabels(this, mCustomLabels, UserHandle.USER_SYSTEM);
         handleHide(inputId, false);
     }
 

@@ -47,9 +47,9 @@ public class UserSwitchListenerService extends Service {
         @Override
         public void onReceive(final Context context, Intent intent) {
 
-            boolean isOwner = UserHandle.myUserId() == UserHandle.USER_OWNER;
+            boolean isSystemUser = UserManager.get(context).isSystemUser();
 
-            if (isOwner) {
+            if (isSystemUser) {
                 context.startService(new Intent(context, UserSwitchListenerService.class));
                 int bootUserId = getBootUser(context);
                 if (DEBUG) {
@@ -92,7 +92,7 @@ public class UserSwitchListenerService extends Service {
     static int getBootUser(Context context) {
         SharedPreferences prefs = context.getSharedPreferences(SHARED_PREFERENCES_NAME,
                 Context.MODE_PRIVATE);
-        return prefs.getInt(ON_BOOT_USER_ID_PREFERENCE, UserHandle.USER_OWNER);
+        return prefs.getInt(ON_BOOT_USER_ID_PREFERENCE, UserHandle.USER_SYSTEM);
     }
 
     @Override

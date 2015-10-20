@@ -19,8 +19,10 @@ package com.android.tv.settings.users;
 import android.app.Fragment;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
+import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.os.UserManager;
 import android.preference.PreferenceManager;
 
 import com.android.tv.settings.dialog.PinDialogFragment;
@@ -104,7 +106,9 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
         }
 
         if (callback != null) {
-            return callback.checkPassword(pin, UserHandle.USER_OWNER);
+            UserInfo myUserInfo = UserManager.get(getActivity()).getUserInfo(UserHandle.myUserId());
+            return myUserInfo != null &&
+                    callback.checkPassword(pin, myUserInfo.restrictedProfileParentId);
         }
         return false;
     }
@@ -123,7 +127,8 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
         }
 
         if (callback != null) {
-            return UserHandle.myUserId() != UserHandle.USER_OWNER ||
+            UserInfo myUserInfo = UserManager.get(getActivity()).getUserInfo(UserHandle.myUserId());
+            return (myUserInfo != null && myUserInfo.isRestricted()) ||
                     callback.hasLockscreenSecurity();
         } else {
             throw new IllegalStateException("Can't call isPinSet when not attached");

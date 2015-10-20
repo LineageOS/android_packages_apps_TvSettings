@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.users;
 
-import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.ActivityManagerNative;
 import android.app.Fragment;
@@ -33,7 +32,6 @@ import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.provider.Settings.Secure;
 import android.util.Log;
 
 import com.android.internal.widget.ILockSettings;
@@ -92,7 +90,6 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
 
     private int mPinMode;
 
-    private final boolean mIsOwner = UserHandle.myUserId() == UserHandle.USER_OWNER;
     private final AsyncTask<Void, Void, UserInfo> mAddUserAsyncTask =
             new AsyncTask<Void, Void, UserInfo>() {
         @Override
@@ -123,7 +120,8 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
             mRestrictedUserInfo = result;
             UserSwitchListenerService.updateLaunchPoint(getActivity(), true);
             int userId = result.id;
-            if (result.isRestricted() && mIsOwner) {
+            if (result.isRestricted() &&
+                    result.restrictedProfileParentId == UserHandle.myUserId()) {
                 DialogFragment dialogFragment = UserAppRestrictionsDialogFragment.newInstance(
                         getActivity(), userId, true);
                 DialogFragment.add(getFragmentManager(), dialogFragment);
@@ -328,7 +326,14 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT:
                 if (success) {
-                    switchUserNow(UserHandle.USER_OWNER);
+                    UserInfo myUserInfo =
+                            UserManager.get(getActivity()).getUserInfo(UserHandle.myUserId());
+                    if (myUserInfo == null ||
+                            myUserInfo.restrictedProfileParentId == UserInfo.NO_PROFILE_GROUP_ID) {
+                        switchUserNow(UserHandle.USER_SYSTEM);
+                    } else {
+                        switchUserNow(myUserInfo.restrictedProfileParentId);
+                    }
                     getActivity().finish();
                 }
                 break;
@@ -355,7 +360,7 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
     private ArrayList<Action> getMainMenuActions() {
         ArrayList<Action> actions = new ArrayList<>();
         if (mRestrictedUserInfo != null) {
-            if (mIsOwner) {
+            if (mRestrictedUserInfo.restrictedProfileParentId == UserHandle.myUserId()) {
                 actions.add(new Action.Builder()
                         .key(ACTION_RESTRICTED_PROFILE_SWITCH_TO)
                         .title(getString(R.string.restricted_profile_switch_to))
