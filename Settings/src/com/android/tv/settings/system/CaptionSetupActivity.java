@@ -25,6 +25,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.accessibility.CaptioningManager;
 
+import com.android.internal.app.LocalePicker;
 import com.android.tv.settings.ActionBehavior;
 import com.android.tv.settings.ActionKey;
 import com.android.tv.settings.BaseSettingsActivity;
@@ -33,10 +34,9 @@ import com.android.tv.settings.dialog.old.Action;
 import com.android.tv.settings.dialog.old.ActionAdapter;
 import com.android.tv.settings.dialog.old.ActionFragment;
 
-import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Locale;
+import java.util.List;
 
 public class CaptionSetupActivity extends BaseSettingsActivity implements ActionAdapter.Listener,
                                   ActionAdapter.OnFocusListener {
@@ -160,13 +160,10 @@ public class CaptionSetupActivity extends BaseSettingsActivity implements Action
         // Load the RGB values of the colors.
         mColorRGBs = new int[len];
         for (int i = 0; i < len; ++i)
-            mColorRGBs[i] = mResources.getColor(mColorResIds[i]) & 0xffffff;
+            mColorRGBs[i] = getColor(mColorResIds[i]) & 0xffffff;
         // Initialize the color names that will be displayed to the user.
         String[] colorNames = mResources.getStringArray(R.array.captioning_color_selector_titles);
-        mColorNames = new String[len];
-        for (int i = 0; i < colorNames.length; ++i) {
-            mColorNames[i] = colorNames[i];
-        }
+        mColorNames = Arrays.copyOf(colorNames, len);
         for (int i = colorNames.length; i < len; ++i) {
             mColorNames[i] = String.format("#%06X", mColorRGBs[i]);
         }
@@ -572,7 +569,7 @@ public class CaptionSetupActivity extends BaseSettingsActivity implements Action
 
     private String getTextSizeName(String textSize) {
         for (int i = 0; i < mTextSizes.length; ++i) {
-            if (mTextSizes [i] == textSize) {
+            if (TextUtils.equals(mTextSizes[i], textSize)) {
                 return mTextSizeNames [i];
             }
         }
@@ -581,7 +578,7 @@ public class CaptionSetupActivity extends BaseSettingsActivity implements Action
 
     private String getStyleName(String style) {
         for (int i = 0; i < mStyles.length; ++i) {
-            if (mStyles [i] == style) {
+            if (TextUtils.equals(mStyles[i], style)) {
                 return mStyleNames [i];
             }
         }
@@ -722,17 +719,6 @@ public class CaptionSetupActivity extends BaseSettingsActivity implements Action
         return "";
     }
 
-    private static String getDisplayName(
-            Locale l, String[] specialLocaleCodes, String[] specialLocaleNames) {
-        String code = l.toString();
-        for (int i = 0; i < specialLocaleCodes.length; i++) {
-            if (specialLocaleCodes[i].equals(code)) {
-                return specialLocaleNames[i];
-            }
-        }
-        return l.getDisplayName(l);
-    }
-
     private String getFontFamilyName(String fontFamily) {
         int x = indexOf(mFontFamilies, fontFamily);
         if (x == -1) {
@@ -771,90 +757,18 @@ public class CaptionSetupActivity extends BaseSettingsActivity implements Action
         }
     }
 
-    private static class LocaleInfo implements Comparable<LocaleInfo> {
-        private static final Collator sCollator = Collator.getInstance();
-
-        public String label;
-        public final Locale locale;
-
-        public LocaleInfo(String label, Locale locale) {
-            this.label = label;
-            this.locale = locale;
-        }
-
-        @Override
-        public String toString() {
-            return label;
-        }
-
-        @Override
-        public int compareTo(LocaleInfo another) {
-            return sCollator.compare(this.label, another.label);
-        }
-    }
-
     private void getLanguages() {
-        final String[] systemLocales = Resources.getSystem().getAssets().getLocales();
-        Arrays.sort(systemLocales);
+        final List<LocalePicker.LocaleInfo> localeInfoList =
+                LocalePicker.getAllAssetLocales(this, false);
 
-        final Context context = getApplicationContext();
-        final Resources resources = context.getResources();
-        final String[] specialLocaleCodes = resources.getStringArray(
-                com.android.internal.R.array.special_locale_codes);
-        final String[] specialLocaleNames = resources.getStringArray(
-                com.android.internal.R.array.special_locale_names);
+        mLanguageLocales = new String[localeInfoList.size()];
+        mLanguageNames = new String[localeInfoList.size()];
 
-        int finalSize = 0;
-
-        final int origSize = systemLocales.length;
-        final LocaleInfo[] localeInfos = new LocaleInfo[origSize];
-        for (int i = 0; i < origSize; i++) {
-            final String localeStr = systemLocales[i];
-            final Locale locale = Locale.forLanguageTag(localeStr.replace('_', '-'));
-            // "und" means undefined.
-            if ("und".equals(locale.getLanguage()) || locale.getLanguage().isEmpty() ||
-                    locale.getCountry().isEmpty()) {
-                continue;
-            }
-
-            if (finalSize == 0) {
-                localeInfos[finalSize++] =
-                       new LocaleInfo(locale.getDisplayLanguage(locale), locale);
-            } else {
-                // check previous entry:
-                // same lang and a country -> upgrade to full name and
-                // insert ours with full name
-                // diff lang -> insert ours with lang-only name
-                final LocaleInfo previous = localeInfos[finalSize - 1];
-                if (previous.locale.getLanguage().equals(locale.getLanguage())
-                        && !previous.locale.getLanguage().equals("zz")) {
-                    previous.label = getDisplayName(
-                            localeInfos[finalSize - 1].locale, specialLocaleCodes,
-                            specialLocaleNames);
-                    localeInfos[finalSize++] = new LocaleInfo(getDisplayName(locale,
-                            specialLocaleCodes, specialLocaleNames), locale);
-                } else {
-                    final String displayName;
-                    if (localeStr.equals("zz_ZZ")) {
-                        displayName = "[Developer] Accented English";
-                    } else if (localeStr.equals("zz_ZY")) {
-                        displayName = "[Developer] Fake Bi-Directional";
-                    } else {
-                        displayName = locale.getDisplayLanguage(locale);
-                    }
-                    localeInfos[finalSize++] = new LocaleInfo(displayName, locale);
-                }
-            }
-        }
-
-        mLanguageLocales = new String [finalSize];
-        mLanguageNames = new String [finalSize];
-
-        Arrays.sort(localeInfos, 0, finalSize);
-        for (int i = 0; i < finalSize; i++) {
-            final LocaleInfo info = localeInfos[i];
-            mLanguageLocales[i] = info.locale.toString();
+        int i = 0;
+        for (final LocalePicker.LocaleInfo info : localeInfoList) {
+            mLanguageLocales[i] = info.getLocale().toString();
             mLanguageNames[i] = info.toString();
+            i++;
         }
     }
 }

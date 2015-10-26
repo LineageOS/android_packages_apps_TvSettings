@@ -141,8 +141,7 @@ public class CaptionPreviewFragment extends Fragment {
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if(DEBUG) Log.d(TAG, "onCreateView");
-        final View rootView = inflater.inflate(R.layout.captioning_preview, container, false);
-        return rootView;
+        return inflater.inflate(R.layout.captioning_preview, container, false);
     }
 
     @Override
@@ -156,16 +155,10 @@ public class CaptionPreviewFragment extends Fragment {
 
     static CharSequence getTextForLocale(Context context, Locale locale, int resId) {
         final Resources res = context.getResources();
-        final Configuration config = res.getConfiguration();
-        final Locale prevLocale = config.locale;
-        try {
-            config.locale = locale;
-            res.updateConfiguration(config, null);
-            return res.getText(resId);
-        } finally {
-            config.locale = prevLocale;
-            res.updateConfiguration(config, null);
-        }
+        final Configuration config = new Configuration(res.getConfiguration());
+        config.setLocale(locale);
+        final Context langContext = context.createConfigurationContext(config);
+        return langContext.getText(resId);
     }
 
     public void livePreviewLanguage(String language) {
