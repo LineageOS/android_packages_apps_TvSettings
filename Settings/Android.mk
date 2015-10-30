@@ -39,6 +39,7 @@ LOCAL_RESOURCE_DIR := \
     frameworks/support/v17/preference-leanback/res \
     frameworks/support/v7/appcompat/res \
     $(TOP)/frameworks/support/v7/recyclerview/res \
+    frameworks/base/packages/SettingsLib/res \
     $(LOCAL_PATH)/res
 
 LOCAL_AAPT_FLAGS := --auto-add-overlay \

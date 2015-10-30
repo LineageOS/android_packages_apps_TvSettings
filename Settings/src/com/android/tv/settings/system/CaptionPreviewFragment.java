@@ -16,28 +16,24 @@
 
 package com.android.tv.settings.system;
 
-import com.android.tv.settings.R;
-
-import android.app.Fragment;
 import android.app.Activity;
+import android.app.Fragment;
+import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
-
-import com.android.internal.widget.SubtitleView;
-
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.accessibility.CaptioningManager;
 import android.view.accessibility.CaptioningManager.CaptionStyle;
-import android.view.ViewGroup;
-import android.view.View;
-import android.view.LayoutInflater;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.content.res.Configuration;
-import android.graphics.Typeface;
-import android.util.Log;
+import com.android.internal.widget.SubtitleView;
+import com.android.settingslib.accessibility.AccessibilityUtils;
+import com.android.tv.settings.R;
 
 import java.util.Locale;
-import android.text.TextUtils;
 
 
 /**
@@ -153,14 +149,6 @@ public class CaptionPreviewFragment extends Fragment {
         refreshPreviewText();
     }
 
-    static CharSequence getTextForLocale(Context context, Locale locale, int resId) {
-        final Resources res = context.getResources();
-        final Configuration config = new Configuration(res.getConfiguration());
-        config.setLocale(locale);
-        final Context langContext = context.createConfigurationContext(config);
-        return langContext.getText(resId);
-    }
-
     public void livePreviewLanguage(String language) {
         mLocale = null;
         if (!TextUtils.isEmpty(language)) {
@@ -274,7 +262,7 @@ public class CaptionPreviewFragment extends Fragment {
                 mPreviewText.setStyle(mStyleId);
                 mPreviewText.setTextSize(mFontScale * mDefaultFontSize);
                 if (mLocale != null) {
-                    CharSequence localizedText = getTextForLocale(
+                    CharSequence localizedText = AccessibilityUtils.getTextForLocale(
                             activity, mLocale, R.string.captioning_preview_text);
                     mPreviewText.setText(localizedText);
                 } else {

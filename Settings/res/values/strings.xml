@@ -736,7 +736,7 @@
     <string name="color_magenta">Magenta</string>
 
     <!-- Title for accessibility service status [CHAR LIMIT=50] -->
-    <string name="system_accessibility_status">State</string>
+    <string name="system_accessibility_status">Enable</string>
     <!-- Title for accessibility service configuration [CHAR LIMIT=50] -->
     <string name="system_accessibility_config">Configuration</string>
     <!-- Title for confirmation screen when turning ON accessibility service[CHAR LIMIT=50] -->
@@ -749,6 +749,8 @@
     <string name="system_accessibility_service_off_confirm_desc">Selecting OK will stop <xliff:g id="service" example="TalkBack">%1$s</xliff:g>.</string>
     <!-- Title for text to speech output in accessibility settings [CHAR LIMIT=50] -->
     <string name="system_accessibility_tts_output">Text to speech</string>
+    <!-- Title for text to speech engine configuration in accessibility settings [CHAR LIMIT=50] -->
+    <string name="system_accessibility_tts_engine_config">Engine configuration</string>
     <!-- Title for Set Speak passwords in System Settings Accessibility [CHAR LIMIT=50] -->
     <string name="system_speak_passwords">Speak passwords</string>
     <!-- Title for Set Preferred engine in System Settings Accessibility [CHAR LIMIT=50] -->
@@ -974,22 +976,6 @@
     <string name="app_process_limit_four">At most 4 processes</string>
 
     <!--  Description for the preference screen to enable the global gesture that turns on accessibility. [CHAR LIMIT=none] -->
-
-    <!-- Do not translate. -->
-    <string-array name="tts_demo_strings" translatable="false">
-        <item>This is an example of speech synthesis in English.</item>
-        <item>Voici un échantillon de synthèse vocale en français.</item>
-        <item>Dies ist ein Beispiel für Sprachsynthese in Deutsch.</item>
-        <item>Questo è un esempio di sintesi vocale in italiano.</item>
-        <item>Este es un ejemplo de síntesis de voz en español.</item>
-    </string-array>
-    <string-array name="tts_demo_string_langs" translatable="false">
-        <item>eng</item>
-        <item>fra</item>
-        <item>deu</item>
-        <item>ita</item>
-        <item>spa</item>
-    </string-array>
 
     <!-- TTS settings -->
 
