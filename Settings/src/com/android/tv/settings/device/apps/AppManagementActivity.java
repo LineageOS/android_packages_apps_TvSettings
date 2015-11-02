@@ -22,12 +22,9 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v14.preference.PreferenceFragment;
-import android.support.v17.preference.LeanbackSettingsFragment;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
 import android.util.Log;
 
+import com.android.tv.settings.BaseSettingsFragment;
 import com.android.tv.settings.SettingsConstant;
 
 /**
@@ -63,7 +60,7 @@ public class AppManagementActivity extends Activity {
 
     }
 
-    public static class SettingsFragment extends LeanbackSettingsFragment {
+    public static class SettingsFragment extends BaseSettingsFragment {
         private static final String ARG_PACKAGE_NAME = "packageName";
 
         public static SettingsFragment newInstance(String packageName) {
@@ -81,20 +78,6 @@ public class AppManagementActivity extends Activity {
             final Fragment f = new AppManagementFragment();
             f.setArguments(b);
             startPreferenceFragment(f);
-        }
-
-        @Override
-        public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
-            final Fragment f =
-                    Fragment.instantiate(getActivity(), pref.getFragment(), pref.getExtras());
-            f.setTargetFragment(caller, 0);
-            startImmersiveFragment(f);
-            return true;
-        }
-
-        @Override
-        public boolean onPreferenceStartScreen(PreferenceFragment caller, PreferenceScreen pref) {
-            return false;
         }
     }
 }
