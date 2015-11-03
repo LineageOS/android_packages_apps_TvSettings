@@ -627,7 +627,7 @@ public class BrowseInfo extends BrowseInfoBase {
                 }
 
                 int resourceId = AccessoryUtils.getImageIdForDevice(device);
-                Intent i = BluetoothAccessoryActivity.getIntent(mContext, device.getAddress(),
+                Intent i = BluetoothAccessoryActivity.createIntent(mContext, device.getAddress(),
                         device.getName(), resourceId);
 
                 String desc = connectedBluetoothAddresses.contains(device.getAddress())
