@@ -33,7 +33,7 @@ import android.util.Log;
  */
 public class ConnectivityStatusIconUriGetter implements MenuItem.UriGetter {
 
-    private static final String TAG = "ConnectivityStatusIconUriGetter";
+    private static final String TAG = "ConnectivityStatusIcon";
     private static final boolean DEBUG = true;
 
     private final Context mContext;
