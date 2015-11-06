@@ -133,7 +133,13 @@ public class UnmountActivity extends Activity {
             try {
                 final long minTime = System.currentTimeMillis() + 3000;
 
-                mStorageManager.unmount(mVolumeId);
+                final VolumeInfo volumeInfo = mStorageManager.findVolumeById(mVolumeId);
+                if (volumeInfo != null && volumeInfo.isMountedReadable()) {
+                    Log.d(TAG, "Trying to unmount " + mVolumeId);
+                    mStorageManager.unmount(mVolumeId);
+                } else {
+                    Log.d(TAG, "Volume not found, skipping unmount");
+                }
 
                 long waitTime = minTime - System.currentTimeMillis();
                 while (waitTime > 0) {
