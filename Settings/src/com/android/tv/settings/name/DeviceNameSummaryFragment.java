@@ -42,7 +42,7 @@ import java.util.ArrayList;
  */
 public class DeviceNameSummaryFragment extends Fragment implements AdapterView.OnItemClickListener {
 
-    private static final String TAG = "DeviceNameSummaryFragment";
+    private static final String TAG = "DeviceNameSummaryFrag";
     private static final String ARG_DESCRIPTION = "text_desc";
     private static final String ARG_TITLE = "text_title";
     private static final String ARG_OPTION_LIST = "options_list";

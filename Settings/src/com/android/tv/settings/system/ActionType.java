@@ -24,24 +24,6 @@ import com.android.tv.settings.dialog.old.Action;
 import android.content.res.Resources;
 
 enum ActionType {
-    /*
-     * Keyboard
-     */
-    KEYBOARD_OVERVIEW(R.string.system_keyboard),
-    KEYBOARD_OVERVIEW_CURRENT_KEYBOARD(R.string.title_current_keyboard),
-    KEYBOARD_OVERVIEW_CONFIGURE(R.string.title_configure, R.string.desc_configure_keyboard),
-
-    /*
-     * Security
-     */
-    SECURITY_OVERVIEW(R.string.system_security),
-    SECURITY_UNKNOWN_SOURCES(R.string.security_unknown_sources_title,
-            R.string.security_unknown_sources_desc),
-    SECURITY_UNKNOWN_SOURCES_CONFIRM(R.string.security_unknown_sources_title,
-                    R.string.security_unknown_sources_confirm_desc),
-    SECURITY_VERIFY_APPS(R.string.security_verify_apps_title,
-             R.string.security_verify_apps_desc),
-
     CAPTIONS_OVERVIEW(R.string.accessibility_captions,
                       R.string.accessibility_captions_description),
     CAPTIONS_DISPLAY(R.string.captions_display),
