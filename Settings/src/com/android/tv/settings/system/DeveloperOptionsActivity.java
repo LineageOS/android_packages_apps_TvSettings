@@ -1371,10 +1371,10 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
         switch (action) {
             case ACTION_ROOT_ACCESS_APPS:
                 setting = "1";
-                SettingsHelper.setSystemProperties(ROOT_ACCESS_PROPERTY, "1");
                 SettingsHelper.setSystemProperties(ADB_ROOT_PROPERTY, "0");
                 setGlobalSettingBoolean(Settings.Global.ADB_ENABLED, false);
                 setGlobalSettingBoolean(Settings.Global.ADB_ENABLED, true);
+                rootAccessWarning();
                 break;
             case ACTION_ROOT_ACCESS_ADB:
                 setting = "2";
