@@ -91,6 +91,7 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         mSession.resume();
 
         mClearDefaultsPreference.refresh();
+        mEnableDisablePreference.refresh();
     }
 
     @Override
