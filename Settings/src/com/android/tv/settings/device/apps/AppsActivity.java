@@ -17,16 +17,9 @@
 package com.android.tv.settings.device.apps;
 
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v14.preference.PreferenceFragment;
-import android.support.v17.preference.LeanbackSettingsFragment;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
 
-import com.android.tv.settings.BrowseInfoFactory;
-import com.android.tv.settings.MenuActivity;
-import com.android.tv.settings.R;
+import com.android.tv.settings.BaseSettingsFragment;
 
 /**
  * Activity allowing the management of apps settings.
@@ -51,18 +44,18 @@ public class AppsActivity extends Activity {
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
                     .add(android.R.id.content,
-                            AppsSettingsFragment.newInstance(mVolumeUuid, mVolumeName))
+                            SettingsFragment.newInstance(mVolumeUuid, mVolumeName))
                     .commit();
         }
     }
 
-    public static class AppsSettingsFragment extends LeanbackSettingsFragment {
+    public static class SettingsFragment extends BaseSettingsFragment {
 
-        public static AppsSettingsFragment newInstance(String volumeUuid, String volumeName) {
+        public static SettingsFragment newInstance(String volumeUuid, String volumeName) {
             final Bundle b = new Bundle(2);
             b.putString(EXTRA_VOLUME_UUID, volumeUuid);
             b.putString(EXTRA_VOLUME_NAME, volumeName);
-            final AppsSettingsFragment f = new AppsSettingsFragment();
+            final SettingsFragment f = new SettingsFragment();
             f.setArguments(b);
             return f;
         }
@@ -72,16 +65,6 @@ public class AppsActivity extends Activity {
             final String volumeUuid = getArguments().getString(EXTRA_VOLUME_UUID);
             final String volumeName = getArguments().getString(EXTRA_VOLUME_NAME);
             startPreferenceFragment(AppsFragment.newInstance(volumeUuid, volumeName));
-        }
-
-        @Override
-        public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
-            return false;
-        }
-
-        @Override
-        public boolean onPreferenceStartScreen(PreferenceFragment caller, PreferenceScreen pref) {
-            return false;
         }
     }
 }

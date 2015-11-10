@@ -18,10 +18,8 @@ package com.android.tv.settings.system;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v14.preference.PreferenceFragment;
-import android.support.v17.preference.LeanbackSettingsFragment;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
+
+import com.android.tv.settings.BaseSettingsFragment;
 
 public class LanguageActivity extends Activity {
 
@@ -35,7 +33,7 @@ public class LanguageActivity extends Activity {
         }
     }
 
-    public static class SettingsFragment extends LeanbackSettingsFragment {
+    public static class SettingsFragment extends BaseSettingsFragment {
 
         public static SettingsFragment newInstance() {
             return new SettingsFragment();
@@ -46,16 +44,5 @@ public class LanguageActivity extends Activity {
             final LanguageFragment fragment = LanguageFragment.newInstance();
             startPreferenceFragment(fragment);
         }
-
-        @Override
-        public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
-            return false;
-        }
-
-        @Override
-        public boolean onPreferenceStartScreen(PreferenceFragment caller, PreferenceScreen pref) {
-            return false;
-        }
     }
-
 }
