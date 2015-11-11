@@ -180,7 +180,6 @@ public class BrowseInfo extends BrowseInfoBase {
     private ArrayObjectAdapter mSoundsRow = null;
     private ArrayObjectAdapter mDeveloperRow = null;
 
-    private final PreferenceUtils mPreferenceUtils;
     private boolean mDeveloperEnabled;
     private final boolean mInputSettingNeeded;
 
@@ -191,8 +190,7 @@ public class BrowseInfo extends BrowseInfoBase {
         mAuthenticatorHelper.onAccountsUpdated(context, null);
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
         mNextItemId = 0;
-        mPreferenceUtils = new PreferenceUtils(context);
-        mDeveloperEnabled = mPreferenceUtils.isDeveloperEnabled();
+        mDeveloperEnabled = PreferenceUtils.isDeveloperEnabled(context);
         mInputSettingNeeded = isInputSettingNeeded();
     }
 
@@ -208,7 +206,7 @@ public class BrowseInfo extends BrowseInfoBase {
     }
 
     void checkForDeveloperOptionUpdate() {
-        final boolean developerEnabled = mPreferenceUtils.isDeveloperEnabled();
+        final boolean developerEnabled = PreferenceUtils.isDeveloperEnabled(mContext);
         if (developerEnabled != mDeveloperEnabled) {
             mDeveloperEnabled = developerEnabled;
             if (mDeveloperOptionItem != null) {

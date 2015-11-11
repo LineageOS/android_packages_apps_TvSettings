@@ -235,6 +235,82 @@
     <string name="show_dev_on">You are now a developer!</string>
     <!-- Device Info screen. Okay we get it, stop pressing, you already have it on [CHAR LIMIT=NONE] -->
     <string name="show_dev_already">No need, you are already a developer</string>
+    <!-- Device Info screen. Used for a status item's value when the proper value is not known -->
+    <string name="device_info_default">Unknown</string>
+    <!-- About screen,  setting option name  [CHAR LIMIT=40] -->
+    <string name="selinux_status">SELinux status</string>
+    <!-- These statuses are displayed when a device was built with SE Android supoprt.
+    These are displayed by the settings app in the about section. -->
+    <string name="selinux_status_disabled">Disabled</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
+
+    <!-- A menu item in "About phone" that allows the user to update the phone with settings
+        from their cell phone carrier. The use of the string is similar to the string
+        "system_update_settings_list_item_title" in this project. [CHAR LIMIT=25] -->
+    <string name="additional_system_update_settings_list_item_title">Additional system updates</string>
+
+    <!-- About screen, title of the item to go into the device status screen -->
+    <string name="device_status">Status</string>
+    <!-- About screen, summary of the item that takes you to device status screen -->
+    <string name="device_status_summary">Network, serial numbers and other information</string>
+
+    <!-- About settings screen, setting option name to show Manual [CHAR LIMIT=25] -->
+    <string name="manual">Manual</string>
+    <!-- About settings screen, setting option name to show regulatory information [CHAR LIMIT=25] -->
+    <string name="regulatory_information">Regulatory information</string>
+    <!-- Feedback on the device [CHAR LIMIT=35] -->
+    <string name="device_feedback">Send feedback about this device</string>
+
+    <!-- Full package name of OEM preferred device feedback reporter. [DO NOT TRANSLATE] -->
+    <string name="oem_preferred_feedback_reporter" translatable="false" />
+
+    <!-- About screen, fcc equipment id label  [CHAR LIMIT=40] -->
+    <string name="fcc_equipment_id">Equipment ID</string>
+    <!-- About screen,  setting option name  [CHAR LIMIT=40] -->
+    <string name="baseband_version">Baseband version</string>
+    <!-- About screen,  setting option name  [CHAR LIMIT=40] -->
+    <string name="kernel_version">Kernel version</string>
+
+    <!-- Status screen -->
+    <!-- About phone, status item value if the actual value is not available. -->
+    <string name="status_unavailable">Unavailable</string>
+    <!-- About phone screen, phone status screen title -->
+    <string name="device_status_title">Status</string>
+    <!-- Phone info screen, section titles: -->
+    <string name="battery_status_title">Battery status</string>
+    <!-- Phone info screen, section titles: -->
+    <string name="battery_level_title">Battery level</string>
+    <!-- SIM status title  [CHAR LIMIT=40] -->
+    <string name="sim_status_title">SIM status</string>
+    <!-- Title for IMEI preference [CHAR LIMIT=30] -->
+    <string name="imei_information_title">IMEI information</string>
+    <!-- About phone, status item title.  The bluetooth adapter's hardware address-->
+    <string name="status_bt_address">Bluetooth address</string>
+    <!-- About phone, status item title.  How long the device has been running since its last reboot. -->
+    <string name="status_up_time">Up time</string>
+    <!-- About phone, status item title. WI-MAX MAC address -->
+    <string name="status_wimax_mac_address">4G MAC address</string>
+
+    <!-- Legal screen -->
+    <!-- About phone settings screen, setting option name to go to dialog that shows legal info -->
+    <string name="legal_information">Legal information</string>
+    <!-- Note: this may be replaced by a more-specific title of the activity that will get launched --> <skip />
+    <!-- About phone settings screen, setting option name to see copyright-related info -->
+    <string name="copyright_title">Copyright</string>
+    <!-- Note: this may be replaced by a more-specific title of the activity that will get launched --> <skip />
+    <!-- About phone settings screen, setting option name to see licensing info -->
+    <string name="license_title">License</string>
+    <!-- Note: this may be replaced by a more-specific title of the activity that will get launched --> <skip />
+    <!-- About phone settings screen, setting option name to see terms and conditions -->
+    <string name="terms_title">Terms and conditions</string>
+    <!-- Note: this may be replaced by a more-specific title of the activity that will get launched --> <skip />
+    <!-- About phone settings screen, setting option name to see licensing info for WebView component. [CHAR LIMIT=35] -->
+    <string name="webview_license_title">System WebView License</string>
+    <!-- About phone settings screen, setting option name to see wallpapers attributions -->
+    <string name="wallpaper_attributions">Wallpapers</string>
+    <!-- About phone settings screen, setting option name to see wallpapers attributions values -->
+    <string name="wallpaper_attributions_values">Satellite imagery providers:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky</string>
 
     <!-- Wifi -->
     <skip />
