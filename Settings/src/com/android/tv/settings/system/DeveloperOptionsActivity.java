@@ -604,6 +604,17 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                 .title(R.string.system_cm)
                 .build();
 
+                if (isPackageInstalled(this, TERMINAL_APP_PACKAGE)) {
+                    header.add(new Layout.Header.Builder(res)
+                            .title(R.string.enable_terminal_title)
+                            .detailedDescription(R.string.enable_terminal_summary)
+                            .build()
+                            .setSelectionGroup(new Layout.SelectionGroup.Builder(2)
+                                    .add(onTitle, null, ACTION_ENABLE_TERMINAL_ON)
+                                    .add(offTitle, null, ACTION_ENABLE_TERMINAL_OFF)
+                                    .select(getEnableTerminalId())
+                                    .build()));
+                }
                 if (!"user".equals(Build.TYPE)) {
                     header.add(new Layout.Header.Builder(res)
                             .title(R.string.root_access)
@@ -620,17 +631,6 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
                                             ACTION_ROOT_ACCESS_ALL)
                                     .select(getRootAccessId())
                                     .build()));
-                }
-                if (isPackageInstalled(this, TERMINAL_APP_PACKAGE)) {
-                header.add(new Layout.Header.Builder(res)
-                        .title(R.string.enable_terminal_title)
-                        .detailedDescription(R.string.enable_terminal_summary)
-                        .build()
-                        .setSelectionGroup(new Layout.SelectionGroup.Builder(2)
-                                .add(onTitle, null, ACTION_ENABLE_TERMINAL_ON)
-                                .add(offTitle, null, ACTION_ENABLE_TERMINAL_OFF)
-                                .select(getEnableTerminalId())
-                                .build()));
                 }
         return header;
     }
