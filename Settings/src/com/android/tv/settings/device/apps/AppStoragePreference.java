@@ -26,6 +26,8 @@ import android.text.TextUtils;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 
+import java.util.List;
+
 public class AppStoragePreference extends AppActionPreference {
     private final PackageManager mPackageManager;
     private final StorageManager mStorageManager;
@@ -38,13 +40,18 @@ public class AppStoragePreference extends AppActionPreference {
     }
 
     public void refresh() {
-        setIntent(MoveAppActivity
-                .getLaunchIntent(getContext(), mEntry.info.packageName, getAppName()));
+        final ApplicationInfo applicationInfo = mEntry.info;
+        final VolumeInfo volumeInfo = mPackageManager.getPackageCurrentVolume(applicationInfo);
+        final List<VolumeInfo> candidates =
+                mPackageManager.getPackageCandidateVolumes(applicationInfo);
+        if (candidates.size() > 1 ||
+                (candidates.size() == 1 && !candidates.contains(volumeInfo))) {
+            setIntent(MoveAppActivity
+                    .getLaunchIntent(getContext(), mEntry.info.packageName, getAppName()));
+        }
 
         setTitle(R.string.device_apps_app_management_storage_used);
 
-        final ApplicationInfo applicationInfo = mEntry.info;
-        final VolumeInfo volumeInfo = mPackageManager.getPackageCurrentVolume(applicationInfo);
         final String volumeDesc = mStorageManager.getBestVolumeDescription(volumeInfo);
         final String size = mEntry.sizeStr;
         if (TextUtils.isEmpty(size)) {
