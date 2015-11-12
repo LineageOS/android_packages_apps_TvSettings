@@ -52,6 +52,8 @@ import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.SettingsLayoutActivity;
 import com.android.tv.settings.util.SettingsHelper;
 
+import cyanogenmod.providers.CMSettings;
+
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -1040,6 +1042,14 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
         Settings.Secure.putInt(getContentResolver(), setting, value ? 1 : 0);
     }
 
+    private boolean getSecureCMSettingBoolean(String setting) {
+        return CMSettings.Secure.getInt(getContentResolver(), setting, 0) != 0;
+    }
+
+    private void setSecureCMSettingBoolean(String setting, boolean value) {
+        CMSettings.Secure.putInt(getContentResolver(), setting, value ? 1 : 0);
+    }
+
     private int getStayAwakeActionId() {
         return getGlobalSettingBoolean(Settings.Global.STAY_ON_WHILE_PLUGGED_IN) ?
                 ACTION_STAY_AWAKE_ON : ACTION_STAY_AWAKE_OFF;
@@ -1509,11 +1519,11 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     }
 
     private int getAdvancedRebootId() {
-        return getSecureSettingBoolean(Settings.Secure.ADVANCED_REBOOT) ?
+        return getSecureCMSettingBoolean(CMSettings.Secure.ADVANCED_REBOOT) ?
                 ACTION_ADVANCED_REBOOT_ON : ACTION_ADVANCED_REBOOT_OFF;
     }
 
     private void setAdvancedReboot(boolean value) {
-        setSecureSettingBoolean(Settings.Secure.ADVANCED_REBOOT, value);
+        setSecureCMSettingBoolean(CMSettings.Secure.ADVANCED_REBOOT, value);
     }
 }

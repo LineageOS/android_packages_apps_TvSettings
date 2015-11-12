@@ -36,7 +36,6 @@ import android.os.SELinux;
 import android.os.ServiceManager;
 import android.os.SystemClock;
 import android.os.SystemProperties;
-import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
@@ -52,6 +51,8 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.SettingsLayoutActivity;
 import com.android.tv.settings.name.DeviceManager;
+
+import cyanogenmod.providers.CMSettings;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -413,8 +414,8 @@ public class AboutActivity extends SettingsLayoutActivity {
     }
 
     private boolean isAdvancedRebootPossible() {
-        boolean advancedRebootEnabled = Settings.Secure.getInt(this.getContentResolver(),
-                Settings.Secure.ADVANCED_REBOOT, 0) != 0;
+        boolean advancedRebootEnabled = CMSettings.Secure.getInt(this.getContentResolver(),
+                CMSettings.Secure.ADVANCED_REBOOT, 0) != 0;
 
         return advancedRebootEnabled;
     }
