@@ -104,6 +104,7 @@ public class DaydreamFragment extends LeanbackPreferenceFragment
         // TODO: use a custom fragment here to add icon and other chrome
         final ListPreference activeDreamPref = new ListPreference(themedContext);
         activeDreamPref.setTitle(R.string.device_daydreams_select);
+        activeDreamPref.setDialogTitle(R.string.device_daydreams_select);
         activeDreamPref.setSummary("%s");
         activeDreamPref.setKey(KEY_ACTIVE_DREAM);
         activeDreamPref.setPersistent(false);
@@ -116,6 +117,7 @@ public class DaydreamFragment extends LeanbackPreferenceFragment
         dreamTimePref.setKey(KEY_DREAM_TIME);
         dreamTimePref.setPersistent(false);
         dreamTimePref.setTitle(R.string.device_daydreams_sleep);
+        dreamTimePref.setDialogTitle(R.string.device_daydreams_sleep);
         dreamTimePref.setSummary("%s");
         dreamTimePref.setEntries(R.array.sleep_timeout_entries);
         dreamTimePref.setEntryValues(R.array.sleep_timeout_values);
@@ -127,6 +129,7 @@ public class DaydreamFragment extends LeanbackPreferenceFragment
         sleepTimePref.setKey(KEY_SLEEP_TIME);
         sleepTimePref.setPersistent(false);
         sleepTimePref.setTitle(R.string.device_daydreams_screen_off);
+        sleepTimePref.setDialogTitle(R.string.device_daydreams_screen_off);
         sleepTimePref.setSummary("%s");
         sleepTimePref.setEntries(R.array.screen_off_timeout_entries);
         sleepTimePref.setEntryValues(R.array.screen_off_timeout_values);

@@ -84,6 +84,7 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
         mLocationMode.setKey(KEY_LOCATION_MODE);
         mLocationMode.setPersistent(false);
         mLocationMode.setTitle(R.string.location_status);
+        mLocationMode.setDialogTitle(R.string.location_status);
         mLocationMode.setSummary("%s");
         mLocationMode.setEntries(new CharSequence[] {
                 getString(R.string.location_mode_wifi_description),

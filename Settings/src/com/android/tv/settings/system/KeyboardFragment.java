@@ -90,6 +90,7 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
         final ListPreference currentKeyboard = new ListPreference(preferenceContext);
         currentKeyboard.setPersistent(false);
         currentKeyboard.setTitle(R.string.title_current_keyboard);
+        currentKeyboard.setDialogTitle(R.string.title_current_keyboard);
         currentKeyboard.setSummary("%s");
         currentKeyboard.setKey(KEY_CURRENT_KEYBOARD);
         currentKeyboard.setEntries(entries.toArray(new CharSequence[entries.size()]));
