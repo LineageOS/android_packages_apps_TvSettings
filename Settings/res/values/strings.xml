@@ -1260,9 +1260,9 @@
 
 
     <!-- Title for screen where user selects a name for their device [CHAR LIMIT=NONE] -->
-    <string name="select_title">Choose a name for your ^1</string>
+    <string name="select_device_name_title">Choose a name for your <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g></string>
     <!-- Description for screen where user selects a name for their device [CHAR LIMIT=NONE] -->
-    <string name="select_description">A name will help identify your ^1 when accessing it from other devices like your phone, tablet, or computer.</string>
+    <string name="select_device_name_description">A name will help identify your <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g> when accessing it from other devices like your phone, tablet, or computer.</string>
     <!-- Rooms where a user's device might be placed [CHAR LIMIT=40] -->
     <string-array name="rooms">
         <!-- [CHAR LIMIT=40] -->
@@ -1283,9 +1283,9 @@
     <!-- String displayed for option where user will type in a room name rather than selecting from the list of defaults [CHAR LIMIT=40] -->
     <string name="custom_room">Enter Custom Name&#8230;</string>
     <!-- Title of settings summary/status screen [CHAR LIMIT=100] -->
-    <string name="settings_status_title">This ^1 is named</string>
+    <string name="device_rename_title">Rename this <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g></string>
     <!-- Description on summary/status screen that tells you what the name of your device is [CHAR LIMIT=NONE] -->
-    <string name="settings_status_description">\"^1\" is the name of this ^2. Would you like to change this?</string>
+    <string name="device_rename_description">This <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g> is currently named \"<xliff:g id="devicename" example="Living Room Player">%2$s</xliff:g>\"</string>
     <!-- The 'yes' or 'edit' equivalent in a yes/no choice circumstance [CHAR LIMIT=30] -->
     <string name="change_setting">Change</string>
     <!-- The 'no' or  'keep the same' equivalent in a yes/no choice circumstance [CHAR LIMIT=30]-->

@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.name;
 
-import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -28,45 +27,34 @@ import com.android.tv.settings.R;
 
 import java.util.List;
 
-public class DeviceNameSummaryFragment extends GuidedStepFragment {
+public class DeviceNameSetCustomFragment extends GuidedStepFragment {
 
-    public static DeviceNameSummaryFragment newInstance() {
-        return new DeviceNameSummaryFragment();
+    public static DeviceNameSetCustomFragment newInstance() {
+        return new DeviceNameSetCustomFragment();
     }
 
     @NonNull
     @Override
     public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
         return new GuidanceStylist.Guidance(
-                getString(R.string.device_rename_title, Build.MODEL),
-                getString(R.string.device_rename_description, Build.MODEL,
-                        DeviceManager.getDeviceName(getActivity())),
+                getString(R.string.select_device_name_title, Build.MODEL),
+                getString(R.string.select_device_name_description, Build.MODEL),
                 null,
                 null);
     }
 
     @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
-        final Activity activity = getActivity();
         actions.add(new GuidedAction.Builder()
-                .constructContinue(activity)
-                .title(getString(R.string.change_setting))
-                .build());
-        actions.add(new GuidedAction.Builder()
-                .constructCancel(activity)
-                .title(getString(R.string.keep_settings))
+                .title(DeviceManager.getDeviceName(getActivity()))
+                .editable(true)
                 .build());
     }
 
     @Override
-    public void onGuidedActionClicked(GuidedAction action) {
-        final long actionId = action.getId();
-        if (actionId == GuidedAction.ACTION_ID_CONTINUE) {
-            GuidedStepFragment.add(getFragmentManager(), DeviceNameSetFragment.newInstance());
-        } else if (actionId == GuidedAction.ACTION_ID_CANCEL) {
-            getActivity().finish();
-        } else {
-            throw new IllegalStateException("Unknown action");
-        }
+    public long onGuidedActionEditedAndProceed(GuidedAction action) {
+        DeviceManager.setDeviceName(getActivity(), action.getTitle().toString());
+        getActivity().finish();
+        return super.onGuidedActionEditedAndProceed(action);
     }
 }
