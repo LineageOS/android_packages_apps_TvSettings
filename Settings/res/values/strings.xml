@@ -42,28 +42,30 @@
     <skip />
     <!-- Preference which adds an account [CHAR LIMIT=50] -->
     <string name="add_account">Add account</string>
-    <!-- Header for sync [CHAR LIMIT=50] -->
-    <string name="account_header_sync">Sync</string>
     <!-- Header for remove account [CHAR LIMIT=50] -->
     <string name="account_header_remove_account">Remove account</string>
     <!-- Sync item label: control sync settings [CHAR LIMIT=100] -->
     <string name="account_sync">Choose synced apps</string>
     <!-- Label for action to sync now [CHAR LIMIT=50] -->
     <string name="sync_now">Sync now</string>
-    <!-- Label for action saying that we are syncing now [CHAR LIMIT=50] -->
-    <string name="sync_cancel">Cancel sync</string>
     <!-- Sync status: in progress [CHAR LIMIT=50]-->
     <string name="sync_in_progress">Syncing\u2026</string>
     <!-- Sync status: last synced [CHAR LIMIT=50]-->
     <string name="last_synced">Last synced <xliff:g id="time">%1s</xliff:g></string>
     <!-- Sync status: disabled [CHAR LIMIT=50] -->
     <string name="sync_disabled">Disabled</string>
-    <!-- Sync description if sync is failing [CHAR LIMIT=NONE] -->
-    <string name="sync_is_failing">Sync isn\'t working right now. It will be back shortly.</string>
     <!-- Remove account item label: remove the account [CHAR LIMIT=30] -->
     <string name="account_remove">Remove account</string>
     <!-- Message posted if removing the account fails. [CHAR LIMIT=NONE] -->
     <string name="account_remove_failed">Can\'t remove account</string>
+    <!-- Formatter in AccountSyncSettings for each application we wish to synchronize, e.g. "Sync Calendar" -->
+    <string name="sync_item_title"><xliff:g id="authority" example="Calendar">%s</xliff:g></string>
+    <!-- Data synchronization settings screen, summary of a sync provider (for example, Gmail) when autosync is off and the user wants to do a one-time sync. -->
+    <string name="sync_one_time_sync">Touch to sync now<xliff:g id="last_sync_time">\n%1$s</xliff:g></string>
+    <!-- Image description for the sync failed icon. -->
+    <string name="sync_failed">Sync failed</string>
+    <!-- Animation description for the sync active icon. -->
+    <string name="sync_active">Sync active</string>
 
     <!-- Connectivity preferences -->
     <skip />

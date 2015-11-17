@@ -108,11 +108,7 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" />
         <activity
-            android:name=".accounts.AccountSettingsActivity"
-            android:configChanges="keyboard|keyboardHidden|navigation"
-            android:exported="true" />
-        <activity
-            android:name=".accounts.AccountSyncSettings"
+            android:name=".accounts.AccountSyncActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" >
             <intent-filter>

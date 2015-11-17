@@ -37,6 +37,7 @@ import android.content.res.XmlResourceParser;
 import android.media.tv.TvInputInfo;
 import android.media.tv.TvInputManager;
 import android.net.Uri;
+import android.os.UserHandle;
 import android.preference.PreferenceActivity;
 import android.support.v17.leanback.widget.ArrayObjectAdapter;
 import android.support.v17.leanback.widget.HeaderItem;
@@ -47,12 +48,12 @@ import android.util.TypedValue;
 import android.util.Xml;
 
 import com.android.internal.util.XmlUtils;
+import com.android.settingslib.accounts.AuthenticatorHelper;
 import com.android.tv.settings.accessories.AccessoryUtils;
 import com.android.tv.settings.accessories.BluetoothAccessoryActivity;
 import com.android.tv.settings.accessories.BluetoothConnectionsManager;
-import com.android.tv.settings.accounts.AccountSettingsActivity;
+import com.android.tv.settings.accounts.AccountSyncActivity;
 import com.android.tv.settings.accounts.AddAccountWithTypeActivity;
-import com.android.tv.settings.accounts.AuthenticatorHelper;
 import com.android.tv.settings.connectivity.ConnectivityStatusIconUriGetter;
 import com.android.tv.settings.connectivity.ConnectivityStatusTextGetter;
 import com.android.tv.settings.connectivity.NetworkActivity;
@@ -186,9 +187,15 @@ public class BrowseInfo extends BrowseInfoBase {
 
     BrowseInfo(Context context) {
         mContext = context;
-        mAuthenticatorHelper = new AuthenticatorHelper();
+        mAuthenticatorHelper = new AuthenticatorHelper(context,
+                new UserHandle(UserHandle.myUserId()),
+                new AuthenticatorHelper.OnAccountsUpdateListener() {
+                    @Override
+                    public void onAccountsUpdate(UserHandle userHandle) {
+                        updateAccounts();
+                    }
+                });
         mAuthenticatorHelper.updateAuthDescriptions(context);
-        mAuthenticatorHelper.onAccountsUpdated(context, null);
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
         mNextItemId = 0;
         mPreferenceUtils = new PreferenceUtils(context);
@@ -576,8 +583,8 @@ public class BrowseInfo extends BrowseInfoBase {
 
             // Display an entry for each installed account we have.
             for (final Account account : accounts) {
-                Intent i = new Intent(mContext, AccountSettingsActivity.class)
-                        .putExtra(AccountSettingsActivity.EXTRA_ACCOUNT, account.name);
+                Intent i = new Intent(mContext, AccountSyncActivity.class)
+                        .putExtra(AccountSyncActivity.EXTRA_ACCOUNT, account.name);
                 row.add(new MenuItem.Builder().id(mNextItemId++)
                         .title(authTitle != null ? authTitle : account.name)
                         .imageUri(imageUri)
