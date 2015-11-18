@@ -110,13 +110,7 @@
         <activity
             android:name=".accounts.AccountSettingsActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.settings.ADD_ACCOUNT_SETTINGS" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".accounts.AccountSyncSettings"
             android:configChanges="keyboard|keyboardHidden|navigation"
@@ -133,7 +127,13 @@
             android:configChanges="keyboard|keyboardHidden|navigation" />
         <activity
             android:name=".accounts.AddAccountWithTypeActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.settings.ADD_ACCOUNT_SETTINGS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".device.apps.AppsActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
