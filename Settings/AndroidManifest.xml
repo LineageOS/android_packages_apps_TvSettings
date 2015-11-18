@@ -447,8 +447,7 @@
         </activity>
         <activity
                 android:name=".name.DeviceNameSettingsActivity"
-                android:configChanges="keyboardHidden|navigation"
-                android:theme="@style/Theme.Leanback.FormWizard.Solid" >
+                android:configChanges="keyboardHidden|navigation" >
                 <intent-filter>
                     <action android:name="android.settings.DEVICE_NAME" />
                     <category android:name="android.intent.category.DEFAULT" />
