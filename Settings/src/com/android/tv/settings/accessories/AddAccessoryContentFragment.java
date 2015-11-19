@@ -17,16 +17,11 @@
 package com.android.tv.settings.accessories;
 
 import android.annotation.Nullable;
-import android.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.ProgressDialogFragment;
-import com.android.tv.settings.util.AccessibilityHelper;
 
 /**
  * Custom Content Fragment for the Bluetooth settings activity.
@@ -41,8 +36,7 @@ public class AddAccessoryContentFragment extends ProgressDialogFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setTitle(R.string.accessories_add_title);
-        //setIcon(R.drawable.ic_bluetooth_searching);
-        setIcon(R.drawable.ic_qs_bluetooth_off);
+        setIcon(R.drawable.ic_bluetooth_searching_white_128);
         setSummary(R.string.accessories_add_bluetooth_inst);
     }
 }

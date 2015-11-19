@@ -47,11 +47,6 @@ public class ConnectivityStatusIconUriGetter implements MenuItem.UriGetter {
                 R.drawable.ic_settings_wifi_4);
     }
 
-    public ConnectivityStatusIconUriGetter(Context context) {
-        this(context, R.drawable.ic_settings_ethernet_active,
-                R.drawable.ic_settings_connection_status);
-    }
-
     public ConnectivityStatusIconUriGetter(Context context, int ethernetDrawableResourceId,
             int disconnectedDrawableResourceId) {
         mContext = context;
