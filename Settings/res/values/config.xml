@@ -18,4 +18,15 @@
     <integer name="settings_fade_out_duration">350</integer>
     <integer name="action_title_max_lines">3</integer>
     <integer name="dialog_animation_duration">150</integer>
+
+    <string name="additional_system_update" translatable="false" />
+    <string name="additional_system_update_menu" translatable="false" />
+
+    <!-- Display additional System Update menu if true -->
+    <bool name="config_additional_system_update_setting_enable">false</bool>
+    <!-- Whether to show a preference item for the manual in About phone -->
+    <bool name="config_show_manual">false</bool>
+    <!-- Whether to show a preference item for regulatory information in About phone -->
+    <bool name="config_show_regulatory_info">false</bool>
+
 </resources>
