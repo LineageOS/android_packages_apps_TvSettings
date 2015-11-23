@@ -112,6 +112,36 @@
     <string name="about_ads" msgid="3364786994943748337">"Annoncer"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Nu er du udvikler."</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Det behøver du ikke. Du er allerede udvikler."</string>
+    <string name="device_info_default" msgid="4519181343309136050">"Ukendt"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"SELinux-status"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"Deaktiveret"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"Eftergivende"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"Håndhæver"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"Flere systemopdateringer"</string>
+    <string name="device_status" msgid="4379924151946190768">"Status"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"Netværk, serienumre og andre oplysninger"</string>
+    <string name="manual" msgid="4957388668881541669">"Brugervejledning"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"Oplysninger om lovgivning"</string>
+    <string name="device_feedback" msgid="209146642122579479">"Send feedback om denne enhed"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"Udstyrs-id"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"Basebandversion"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"Kernesystem"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"Ikke tilgængelig"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"Status"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"Batteristatus"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"Batteriniveau"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"SIM-status"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"IMEI-oplysninger"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"Bluetooth-adresse"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"Oppetid"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"4G MAC-adresse"</string>
+    <string name="legal_information" msgid="2346024659831852038">"Juridiske oplysninger"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"Ophavsret"</string>
+    <string name="license_title" msgid="4482927105870812604">"Licens"</string>
+    <string name="terms_title" msgid="8480859222932736291">"Vilkår og betingelser"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"System WebView-licens"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"Baggrunde"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Leverandører af satellitbilleder:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Dårlig"</item>
     <item msgid="5986166866411161790">"Rimelig"</item>
@@ -576,8 +606,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Dette medfører sletning af alle data fra enhedens interne lager, herunder din Google-konto, data og indstillinger for system og apps samt downloadede apps"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Vil du slette alle dine personlige oplysninger og downloadede apps? Denne handling kan ikke fortrydes."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Slet alt"</string>
-    <string name="select_title" msgid="3905067953686121845">"Vælg et navn til din ^1"</string>
-    <string name="select_description" msgid="4070142015460337658">"Et navn kan hjælpe dig med at identificere din ^1, når du skal have adgang til den fra andre enheder, f.eks. din telefon, tablet eller computer."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Vælg et navn til din <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"Et navn kan hjælpe dig med at identificere din <xliff:g id="DEVICEMODEL">%1$s</xliff:g>, når du skal have adgang til den fra andre enheder, f.eks. din telefon, tablet eller computer."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Stue"</item>
     <item msgid="3722089849939477581">"Spillerum"</item>
@@ -588,8 +618,8 @@
     <item msgid="8120010459866284578">"Køkken"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Angiv et tilpasset navn…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"Denne ^1 er navngivet"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" er navnet på denne ^2. Vil du ændre navnet?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"Omdøb denne <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Denne <xliff:g id="DEVICEMODEL">%1$s</xliff:g> har i øjeblikket navnet \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"Skift"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Skift ikke ejer"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Tilladelser"</string>

@@ -113,6 +113,36 @@
     <string name="about_ads" msgid="3364786994943748337">"Anunțuri"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Ați devenit dezvoltator!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Nu mai este nevoie, sunteți deja dezvoltator."</string>
+    <string name="device_info_default" msgid="4519181343309136050">"Necunoscută"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"Stare SELinux"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"Dezactivat"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"Permisiv"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"Se aplică"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"Actualizări de sistem suplimentare"</string>
+    <string name="device_status" msgid="4379924151946190768">"Stare"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"Rețea, numere de serie și alte informații"</string>
+    <string name="manual" msgid="4957388668881541669">"Manual"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"Informații reglementare"</string>
+    <string name="device_feedback" msgid="209146642122579479">"Trimiteți feedback despre dispozitiv"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"ID echipament"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"Versiunea benzii de bază"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"Versiune nucleu"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"Indisponibilă"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"Stare"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"Starea bateriei"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"Nivelul bateriei"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"Starea cardului SIM"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"Informații despre IMEI"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"Adresă Bluetooth"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"Durată de funcționare"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"Adresă MAC 4G"</string>
+    <string name="legal_information" msgid="2346024659831852038">"Informații de ordin juridic"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"Drepturi de autor"</string>
+    <string name="license_title" msgid="4482927105870812604">"Licență"</string>
+    <string name="terms_title" msgid="8480859222932736291">"Termeni și condiții"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"Licență de sistem pentru WebView"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"Imagini de fundal"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Furnizorii de imagini din satelit:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Slab"</item>
     <item msgid="5986166866411161790">"Acceptabil"</item>
@@ -581,8 +611,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Această acțiune va șterge toate datele din stocarea internă a dispozitivului, inclusiv setările și datele din Contul Google, din sistem și din aplicații, precum și aplicațiile descărcate"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Ștergeți toate informațiile personale și aplicațiile descărcate? Nu puteți anula această acțiune!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Ștergeți tot"</string>
-    <string name="select_title" msgid="3905067953686121845">"Alegeți un nume pentru dispozitivul ^1"</string>
-    <string name="select_description" msgid="4070142015460337658">"Cu ajutorul numelui, ^1 va fi identificat mai ușor când îl accesați de pe alte dispozitive, cum ar fi telefonul, tableta sau computerul."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Alegeți un nume pentru <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"Cu ajutorul numelui, <xliff:g id="DEVICEMODEL">%1$s</xliff:g> va fi identificat mai ușor când îl accesați de pe alte dispozitive, cum ar fi telefonul, tableta sau computerul dvs."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Cameră de zi"</item>
     <item msgid="3722089849939477581">"Cameră media"</item>
@@ -593,8 +623,8 @@
     <item msgid="8120010459866284578">"Bucătărie"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Introduceți un nume personalizat..."</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"Acest dispozitiv ^1 are nume"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"„^1” este numele acestui dispozitiv ^2. Doriți să-l schimbați?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"Redenumiți acest <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Acest <xliff:g id="DEVICEMODEL">%1$s</xliff:g> este momentan denumit „<xliff:g id="DEVICENAME">%2$s</xliff:g>”"</string>
     <string name="change_setting" msgid="2047402388786162246">"Modificați"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Nu modificați"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Permisiuni"</string>

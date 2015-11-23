@@ -112,6 +112,36 @@
     <string name="about_ads" msgid="3364786994943748337">"ማስታወቂያዎች"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"አሁን ገንቢ ሆነዋል!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"አያስፈልግም፣ እርስዎ አስቀድመው ገንቢ ሆነዋል"</string>
+    <string name="device_info_default" msgid="4519181343309136050">"ያልታወቀ"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"የSELinux ሁኔታ"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"ተሰናክሏል"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"ፈቃጅ"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"በማስፈጸም ላይ"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"ተጨማሪ የስርዓት ዝማኔዎች"</string>
+    <string name="device_status" msgid="4379924151946190768">"ሁኔታ"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"አውታረ መረብ፣ ተከታታይ ቁጥሮች እና ሌላ መረጃ"</string>
+    <string name="manual" msgid="4957388668881541669">"መመሪያ"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"የደንብ ክትትል መረጃ"</string>
+    <string name="device_feedback" msgid="209146642122579479">"ስለዚህ መሣሪያ ግብረመልስ ላክ"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"የመሣሪያ መታወቂያ"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"የቤዝባንድ ሥሪት"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"የከርነል ሥሪት"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"አይገኝም"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"ሁኔታ"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"የባትሪ ሁኔታ"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"የባትሪ ደረጃ"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"የሲም ሁኔታ"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"የIMEI መረጃ"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"የብሉቱዝ አድራሻ"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"የቆየበት ሰዓት"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"የ4G MAC አድራሻ"</string>
+    <string name="legal_information" msgid="2346024659831852038">"ሕጋዊ መረጃ"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"የቅጂ መብት"</string>
+    <string name="license_title" msgid="4482927105870812604">"ፈቃድ"</string>
+    <string name="terms_title" msgid="8480859222932736291">"ውሎች እና ደንቦች"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"የስርዓት WebView ፍቃድ"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"የግድግዳ ወረቀቶች"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"የሳተላይት ምስል አቅራቢዎች፦ \n©2014 CNES / Astrium፣ DigitalGlobe፣ Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"ደካማ"</item>
     <item msgid="5986166866411161790">"ደህና"</item>
@@ -576,8 +606,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"ይሄ ሁሉንም ውሂብ ከመሣሪያዎ ውስጣዊ ማከማቻ የሚሰርዝ ነው፣ እነኚህንም ጨምሮ፦ የእርስዎ Google መለያ፣ የስርዓት እና የመተግበሪያ ውሂብ እና ቅንብሮች፣ እና የወረዱ መተግበሪያዎች።"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"ሁሉም የግል መረጃዎ እና የወረዱ መተግበሪያዎችዎ ይሰረዙ? ይህን እርምጃ መቀልበስ አይችሉም!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ሁሉንም አጥፋ"</string>
-    <string name="select_title" msgid="3905067953686121845">"ለእርስዎ ^1 አንድ ስም ይምረጡ"</string>
-    <string name="select_description" msgid="4070142015460337658">"ስም መኖሩ የእርስዎን ^1 እንደ የእርስዎ ስልክ፣ ጡባዊ ወይም ኮምፒውተር ካሉ ሌሎች መሣሪያዎች ሆነው ሲደርሱበት እንዲለዩት ያግዘዎታል።"</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"ለእርስዎ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ስም ይምረጡ"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"የእርስዎን <xliff:g id="DEVICEMODEL">%1$s</xliff:g> እንደ የእርስዎ ስልክ፣ ጡባዊ ወይም ኮምፒውተር ካሉ ሌሎች መሣሪያዎች ሲደርሱበት ስም እንዲለየው ያግዛል።"</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"ሳሎን"</item>
     <item msgid="3722089849939477581">"የሚዲያ ክፍል"</item>
@@ -588,8 +618,8 @@
     <item msgid="8120010459866284578">"ወጥ ቤት"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"ብጁ ስም ያስገቡ…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"ይህ ^1 ተሰይሟል"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"«^1» የዚህ ^2 ስም ነው። ይህን ለመቀየር ይፈልጋሉ?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"ይህን <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ዳግም ይሰይሙት"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"ይህ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> በአሁኑ ጊዜ «<xliff:g id="DEVICENAME">%2$s</xliff:g>» ተብሏል"</string>
     <string name="change_setting" msgid="2047402388786162246">"ቀይር"</string>
     <string name="keep_settings" msgid="6798327196645732517">"አትቀይር"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"ፍቃዶች"</string>

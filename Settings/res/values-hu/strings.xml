@@ -112,6 +112,36 @@
     <string name="about_ads" msgid="3364786994943748337">"Hirdetések"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Ön mostantól fejlesztő!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Nem szükséges, hiszen Ön már fejlesztő"</string>
+    <string name="device_info_default" msgid="4519181343309136050">"Ismeretlen"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"SELinux állapota"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"Kikapcsolva"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"Engedélyezve"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"Kényszerítve"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"Rendszerfrissítések"</string>
+    <string name="device_status" msgid="4379924151946190768">"Állapot"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"Hálózat, sorozatszámok és egyéb adatok"</string>
+    <string name="manual" msgid="4957388668881541669">"Útmutató"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"Szabályozási információk"</string>
+    <string name="device_feedback" msgid="209146642122579479">"Visszajelzés küldése az eszközről"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"Eszközazonosító"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"Alapsáv verziója"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"Kernel verziója"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"Nem áll rendelkezésre"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"Állapot"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"Akkumulátor állapota"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"Akkumulátorszint"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"SIM-kártya állapota"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"IMEI-információ"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"Bluetooth-cím"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"Futásidő"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"4G MAC-cím"</string>
+    <string name="legal_information" msgid="2346024659831852038">"Jogi információk"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"Szerzői jog"</string>
+    <string name="license_title" msgid="4482927105870812604">"Licenc"</string>
+    <string name="terms_title" msgid="8480859222932736291">"Általános Szerződési Feltételek"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"WebView-rendszerlicenc"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"Háttérképek"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"A műholdképek szolgáltatói:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Gyenge"</item>
     <item msgid="5986166866411161790">"Közepes"</item>
@@ -576,8 +606,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Ezzel töröl minden adatot az eszköz belső tárhelyéről, beleértve a következőket: az Ön Google-fiókját, rendszer- és alkalmazásadatokat és -beállításokat, illetve a letöltött alkalmazásokat"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Törli az összes személyes információt és letöltött alkalmazást? A műveletet nem lehet visszavonni!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Minden adat törlése"</string>
-    <string name="select_title" msgid="3905067953686121845">"Válasszon egy nevet ^1 eszközének."</string>
-    <string name="select_description" msgid="4070142015460337658">"^1 eszközét egy név fogja azonosítani olyankor, amikor másik eszközökről, például telefonjáról, táblagépéről vagy számítógépéről éri el azt."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Válasszon nevet <xliff:g id="DEVICEMODEL">%1$s</xliff:g> eszközének"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"Egy névvel könnyebben beazonosíthatja <xliff:g id="DEVICEMODEL">%1$s</xliff:g> eszközét, amikor más készülékről – például telefonról, táblagépről vagy számítógépről – próbálja elérni azt."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Nappali"</item>
     <item msgid="3722089849939477581">"Médiaszoba"</item>
@@ -588,8 +618,8 @@
     <item msgid="8120010459866284578">"Konyha"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Adjon meg egy egyéni nevet…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"A(z) ^1 neve:"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"A(z) ^2 neve „^1”. Szeretné módosítani?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"A(z) <xliff:g id="DEVICEMODEL">%1$s</xliff:g> átnevezése"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"A(z) <xliff:g id="DEVICEMODEL">%1$s</xliff:g> jelenlegi neve: <xliff:g id="DEVICENAME">%2$s</xliff:g>"</string>
     <string name="change_setting" msgid="2047402388786162246">"Módosítás"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Módosítás mellőzése"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Engedélyek"</string>

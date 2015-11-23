@@ -113,6 +113,36 @@
     <string name="about_ads" msgid="3364786994943748337">"Огласи"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Постали сте програмер!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Нема потребе, већ сте програмер"</string>
+    <string name="device_info_default" msgid="4519181343309136050">"Није познато"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"SELinux статус"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"Онемогућено"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"Благи"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"Строги"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"Додатна ажурирања система"</string>
+    <string name="device_status" msgid="4379924151946190768">"Статус"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"Мрежа, серијски бројеви и друге информације"</string>
+    <string name="manual" msgid="4957388668881541669">"Упутство"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"Регулативне информације"</string>
+    <string name="device_feedback" msgid="209146642122579479">"Шаљи повратне информације о уређају"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"ИД опреме"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"Верзија основног пропусног опсега"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"Верзија језгра"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"Недоступно"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"Статус"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"Статус батерије"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"Ниво батерије"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"Статус SIM картице"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"Информације за IMEI"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"Bluetooth адреса"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"Време рада"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"4G MAC адреса"</string>
+    <string name="legal_information" msgid="2346024659831852038">"Правне информације"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"Ауторска права"</string>
+    <string name="license_title" msgid="4482927105870812604">"Лиценца"</string>
+    <string name="terms_title" msgid="8480859222932736291">"Услови и одредбе"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"Лиценца за системски WebView"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"Позадине"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Добављачи сателитских слика:\n©2014. CNES/Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Слабо"</item>
     <item msgid="5986166866411161790">"Задовољавајуће"</item>
@@ -581,8 +611,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Овим ће бити избрисани сви подаци из интерне меморије уређаја, укључујући Google налог, податке и подешавања система и апликација, као и преузете апликације"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Желите ли да избришете све личне податке и преузете апликације? Не можете да опозовете ову радњу!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Избриши све"</string>
-    <string name="select_title" msgid="3905067953686121845">"Изаберите назив за ^1"</string>
-    <string name="select_description" msgid="4070142015460337658">"Назив ће вам помоћи да препознате ^1 уређај када му приступате са других уређаја, попут телефона, таблета или рачунара."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Изаберите назив за <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"Назив ће вам помоћи да препознате <xliff:g id="DEVICEMODEL">%1$s</xliff:g> када му приступате са других уређаја, попут телефона, таблета или рачунара."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Дневна соба"</item>
     <item msgid="3722089849939477581">"Соба за забаву"</item>
@@ -593,8 +623,8 @@
     <item msgid="8120010459866284578">"Кухиња"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Унесите прилагођен назив..."</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"Овом ^1 уређају је дат назив"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"„^1“ је назив овог ^2 уређаја. Желите ли да га промените?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"Преименујте <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> тренутно има назив „<xliff:g id="DEVICENAME">%2$s</xliff:g>“"</string>
     <string name="change_setting" msgid="2047402388786162246">"Промени"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Не мењај"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Дозволе"</string>

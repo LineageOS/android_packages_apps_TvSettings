@@ -112,6 +112,36 @@
     <string name="about_ads" msgid="3364786994943748337">"Quảng cáo"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Hiện bạn đã là nhà phát triển!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Không cần, bạn đã là nhà phát triển"</string>
+    <string name="device_info_default" msgid="4519181343309136050">"Không xác định"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"Trạng thái SELinux"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"Đã tắt"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"Cho phép"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"Thực thi"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"Cập nhật hệ thống bổ sung"</string>
+    <string name="device_status" msgid="4379924151946190768">"Trạng thái"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"Mạng, số sê-ri và thông tin khác"</string>
+    <string name="manual" msgid="4957388668881541669">"Thủ công"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"Thông tin về quy định"</string>
+    <string name="device_feedback" msgid="209146642122579479">"Gửi phản hồi về thiết bị này"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"ID trang bị"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"Phiên bản dải tần cơ sở"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"Phiên bản Kernel"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"Không có sẵn"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"Trạng thái"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"Tình trạng pin"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"Mức pin"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"Trạng thái SIM"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"Thông tin IMEI"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"Địa chỉ Bluetooth"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"Thời gian hoạt động"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"Địa chỉ MAC 4G"</string>
+    <string name="legal_information" msgid="2346024659831852038">"Thông tin pháp lý"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"Bản quyền"</string>
+    <string name="license_title" msgid="4482927105870812604">"Giấy phép"</string>
+    <string name="terms_title" msgid="8480859222932736291">"Điều khoản và điều kiện"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"Giấy phép WebView hệ thống"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"Hình nền"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Nhà cung cấp hình ảnh vệ tinh:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Kém"</item>
     <item msgid="5986166866411161790">"Khá tốt"</item>
@@ -576,8 +606,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Tác vụ này sẽ xóa tất cả dữ liệu khỏi bộ nhớ trong của thiết bị, bao gồm: tài khoản Google, cài đặt và dữ liệu hệ thống cũng như ứng dụng, ứng dụng đã tải xuống"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Xóa tất cả thông tin cá nhân và ứng dụng đã tải xuống của bạn? Bạn không thể hoàn nguyên tác vụ này!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Xóa mọi thứ"</string>
-    <string name="select_title" msgid="3905067953686121845">"Chọn tên cho ^1 của bạn"</string>
-    <string name="select_description" msgid="4070142015460337658">"Tên giúp nhận dạng ^1 của bạn khi truy cập ^1 từ các thiết bị khác như điện thoại, máy tính bảng hoặc máy tính của bạn."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Chọn tên cho <xliff:g id="DEVICEMODEL">%1$s</xliff:g> của bạn"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"Tên sẽ giúp xác định <xliff:g id="DEVICEMODEL">%1$s</xliff:g> của bạn khi truy cập thiết bị từ các thiết bị khác như điện thoại, máy tính bảng hoặc máy tính."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Phòng khách"</item>
     <item msgid="3722089849939477581">"Phòng truyền thông"</item>
@@ -588,8 +618,8 @@
     <item msgid="8120010459866284578">"Bếp"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Nhập tên tùy chỉnh…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"Đã đặt tên ^1 này"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" là tên của ^2 này. Bạn có muốn đổi tên này không?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"Đổi tên <xliff:g id="DEVICEMODEL">%1$s</xliff:g> này"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> này hiện đang có tên là \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"Thay đổi"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Không thay đổi"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Quyền"</string>

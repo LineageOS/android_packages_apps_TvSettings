@@ -114,6 +114,36 @@
     <string name="about_ads" msgid="3364786994943748337">"Реклама"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Тепер ви розробник!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Немає потреби, ви вже розробник"</string>
+    <string name="device_info_default" msgid="4519181343309136050">"Невідомо"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"Статус SELinux"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"Вимкнено"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"Непримусовий"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"Примусовий"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"Додаткові оновлення системи"</string>
+    <string name="device_status" msgid="4379924151946190768">"Статус"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"Мережа, серійні номери й інша інформація"</string>
+    <string name="manual" msgid="4957388668881541669">"Посібник"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"Нормативна інформація"</string>
+    <string name="device_feedback" msgid="209146642122579479">"Надіслати відгук про цей пристрій"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"Ідентифікатор обладнання"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"Версія каналу зв’язку"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"Версія ядра"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"Немає"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"Статус"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"Стан акумулятора"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"Рівень заряду акумулятора"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"Статус SIM-карти"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"Інформація про IMEI"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"Адреса Bluetooth"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"Тривалість роботи"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"MAC-адреса 4G"</string>
+    <string name="legal_information" msgid="2346024659831852038">"Правова інформація"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"Авторські права"</string>
+    <string name="license_title" msgid="4482927105870812604">"Ліцензія"</string>
+    <string name="terms_title" msgid="8480859222932736291">"Загальні положення та умови"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"Ліцензія компонента WebView"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"Фонові малюнки"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Постачальники супутникових зображень:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Слабкий"</item>
     <item msgid="5986166866411161790">"Нормальний"</item>
@@ -586,8 +616,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Усі дані з внутрішньої пам’яті вашого пристрою буде стерто, зокрема дані облікового запису Google, дані й налаштування системи та додатків, завантажені додатки"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Стерти всю особисту інформацію та завантажені додатки? Цю дію не можна скасувати!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Стерти все"</string>
-    <string name="select_title" msgid="3905067953686121845">"Виберіть назву для ^1"</string>
-    <string name="select_description" msgid="4070142015460337658">"Назва допоможе ідентифікувати ^1, коли ви під’єднуватимете до нього інші пристрої (наприклад, телефон, планшет чи комп’ютер)."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Виберіть назву пристрою <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"Назвіть пристрій <xliff:g id="DEVICEMODEL">%1$s</xliff:g>, щоб легко знаходити його з інших пристроїв, як-от із телефона, планшета чи комп’ютера."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Вітальня"</item>
     <item msgid="3722089849939477581">"Домашній кінотеатр"</item>
@@ -598,8 +628,8 @@
     <item msgid="8120010459866284578">"Кухня"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Ввести свою назву…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"^1 уже названо"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" – назва цього пристрою ^2. Змінити?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"Перейменувати пристрій <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Назва пристрою <xliff:g id="DEVICEMODEL">%1$s</xliff:g>: \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"Змінити"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Не змінювати"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Дозволи"</string>

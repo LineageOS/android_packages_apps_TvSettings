@@ -112,6 +112,36 @@
     <string name="about_ads" msgid="3364786994943748337">"Annunci"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Ora sei uno sviluppatore."</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Non serve, sei già uno sviluppatore"</string>
+    <string name="device_info_default" msgid="4519181343309136050">"Sconosciuto"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"Stato di SELinux"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"Disattivata"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"Permissiva"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"Restrittiva"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"Ulteriori aggiornamenti di sistema"</string>
+    <string name="device_status" msgid="4379924151946190768">"Stato"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"Rete, numeri di serie e altre informazioni"</string>
+    <string name="manual" msgid="4957388668881541669">"Manuale"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"Normative"</string>
+    <string name="device_feedback" msgid="209146642122579479">"Invia feedback sul dispositivo"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"ID strumentazione"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"Versione banda di base"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"Versione kernel"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"Non disponibili"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"Stato"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"Stato della batteria"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"Livello della batteria"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"Stato SIM"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"Dati IMEI"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"Indirizzo Bluetooth"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"Tempo di attività"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"Indirizzo MAC 4G"</string>
+    <string name="legal_information" msgid="2346024659831852038">"Informazioni legali"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"Copyright"</string>
+    <string name="license_title" msgid="4482927105870812604">"Licenza"</string>
+    <string name="terms_title" msgid="8480859222932736291">"Termini e condizioni"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"Licenza di sistema per WebView"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"Sfondi"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Fornitori di immagini satellitari:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Scadente"</item>
     <item msgid="5986166866411161790">"Discreta"</item>
@@ -576,8 +606,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Questa operazione comporta l\'eliminazione di tutti i dati dalla memoria interna del dispositivo, tra cui: il tuo account Google, dati e impostazioni del sistema e delle app, nonché le app scaricate."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Cancellare tutte le informazioni personali e le app scaricate? Questa azione è irreversibile."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Cancella tutto"</string>
-    <string name="select_title" msgid="3905067953686121845">"Scegli un nome per il tuo dispositivo ^1"</string>
-    <string name="select_description" msgid="4070142015460337658">"Se specifichi un nome sarà più semplice identificare il tuo dispositivo ^1 quando vi accederai da altri dispositivi quali telefoni, tablet o computer."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Scegli un nome per il tuo dispositivo <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"Se specifichi un nome, sarà più semplice identificare il tuo dispositivo <xliff:g id="DEVICEMODEL">%1$s</xliff:g> quando vi accederai da altri dispositivi quali telefoni, tablet o computer."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Soggiorno"</item>
     <item msgid="3722089849939477581">"Sala multimediale"</item>
@@ -588,8 +618,8 @@
     <item msgid="8120010459866284578">"Cucina"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Inserisci nome personalizzato…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"Questo dispositivo ^1 ha un nome"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" è il nome di questo dispositivo ^2. Vuoi cambiarlo?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"Modifica il nome di questo dispositivo <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Il nome attuale di questo dispositivo <xliff:g id="DEVICEMODEL">%1$s</xliff:g> è \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"Cambia"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Non cambiare"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Autorizzazioni"</string>

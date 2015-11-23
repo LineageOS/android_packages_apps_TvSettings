@@ -112,6 +112,36 @@
     <string name="about_ads" msgid="3364786994943748337">"Iklan"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Sekarang Anda adalah seorang pengembang!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Tidak perlu, Anda sudah menjadi pengembang"</string>
+    <string name="device_info_default" msgid="4519181343309136050">"Tidak diketahui"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"status SELinux"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"Nonaktif"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"Tidak Wajib"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"Wajib"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"Pembaruan sistem tambahan"</string>
+    <string name="device_status" msgid="4379924151946190768">"Status"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"Jaringan, nomor seri, dan informasi lainnya"</string>
+    <string name="manual" msgid="4957388668881541669">"Manual"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"Informasi peraturan"</string>
+    <string name="device_feedback" msgid="209146642122579479">"Kirim masukan tentang perangkat ini"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"ID Peralatan"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"Versi pita basis"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"Versi kernel"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"Tidak tersedia"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"Status"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"Status baterai"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"Tingkat baterai"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"Status SIM"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"Informasi IMEI"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"Alamat bluetooth"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"Waktu aktif"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"Alamat MAC 4G"</string>
+    <string name="legal_information" msgid="2346024659831852038">"Informasi hukum"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"Hak cipta"</string>
+    <string name="license_title" msgid="4482927105870812604">"Lisensi"</string>
+    <string name="terms_title" msgid="8480859222932736291">"Persyaratan dan ketentuan"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"Lisensi WebView Sistem"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"Wallpaper"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Penyedia citra satelit:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Buruk"</item>
     <item msgid="5986166866411161790">"Cukup"</item>
@@ -576,8 +606,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Tindakan ini akan menghapus semua data dari penyimpanan internal perangkat, termasuk akun Google, setelan serta data aplikasi dan sistem, dan aplikasi yang diunduh"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Hapus semua informasi pribadi dan aplikasi yang diunduh? Anda tidak dapat mengurungkan tindakan ini!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Hapus semua"</string>
-    <string name="select_title" msgid="3905067953686121845">"Pilih nama untuk ^1 Anda"</string>
-    <string name="select_description" msgid="4070142015460337658">"Nama akan membantu mengidentifikasi ^1 Anda saat diakses dari perangkat lain seperti ponsel, tablet, atau komputer."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Pilih nama untuk <xliff:g id="DEVICEMODEL">%1$s</xliff:g> Anda"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"Nama akan membantu mengidentifikasi <xliff:g id="DEVICEMODEL">%1$s</xliff:g> Anda saat mengaksesnya dari perangkat lain, misalnya ponsel, tablet, atau komputer Anda."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Ruang Tamu"</item>
     <item msgid="3722089849939477581">"Ruang Hiburan"</item>
@@ -588,8 +618,8 @@
     <item msgid="8120010459866284578">"Dapur"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Masukkan Nama Khusus…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"Nama ^1 ini adalah"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" adalah nama ^2 ini. Ingin mengubahnya?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"Ganti nama <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ini"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Saat ini, <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ini diberi nama \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"Ubah"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Jangan ubah"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Izin"</string>

@@ -112,6 +112,36 @@
     <string name="about_ads" msgid="3364786994943748337">"Anuncis"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Ara ja ets desenvolupador."</string>
     <string name="show_dev_already" msgid="7525967300421794483">"No cal, ja ets desenvolupador"</string>
+    <string name="device_info_default" msgid="4519181343309136050">"Desconegut"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"Estat de SELinux"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"Desactivat"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"Permissiu"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"En aplicació"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"Actualitzac. addicionals"</string>
+    <string name="device_status" msgid="4379924151946190768">"Estat"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"Xarxa, números de sèrie i altres dades"</string>
+    <string name="manual" msgid="4957388668881541669">"Manual"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"Informació de regulació"</string>
+    <string name="device_feedback" msgid="209146642122579479">"Envia suggeriments sobre dispositiu"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"Identificador de l\'equip"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"Versió de banda base"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"Versió del kernel"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"No disponible"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"Estat"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"Estat de la bateria"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"Nivell de la bateria"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"Estat de la targeta SIM"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"Informació sobre l\'IMEI"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"Adreça de Bluetooth"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"Temps actiu"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"Adreça MAC 4G"</string>
+    <string name="legal_information" msgid="2346024659831852038">"Informació legal"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"Drets d\'autor"</string>
+    <string name="license_title" msgid="4482927105870812604">"Llicència"</string>
+    <string name="terms_title" msgid="8480859222932736291">"Termes i condicions"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"Llicència de WebView del sistema"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"Fons de pantalla"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Proveïdors d\'imatges per satèl·lit:BREAK\n©2014 CNES/Astrium, DigitalGlobe i Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Feble"</item>
     <item msgid="5986166866411161790">"Normal"</item>
@@ -576,8 +606,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Aquesta acció esborrarà totes les dades de l\'emmagatzematge intern del dispositiu, com ara el compte de Google, les dades i la configuració del sistema i de les aplicacions, i les aplicacions baixades."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Vols esborrar tota la informació personal i les aplicacions baixades? Aquesta acció no es pot desfer."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Esborra-ho tot"</string>
-    <string name="select_title" msgid="3905067953686121845">"Assignació d\'un nom al dispositiu ^1"</string>
-    <string name="select_description" msgid="4070142015460337658">"El nom et permetrà identificar el dispositiu ^1 més fàcilment quan hi accedeixis des d\'altres dispositius com ara el telèfon, la tauleta o l\'ordinador."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Tria un nom per al teu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"El nom et permetrà identificar el teu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> més fàcilment quan hi accedeixis des d\'altres dispositius, com ara el telèfon, la tauleta o l\'ordinador."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Sala d\'estar"</item>
     <item msgid="3722089849939477581">"Sala multimèdia"</item>
@@ -588,8 +618,8 @@
     <item msgid="8120010459866284578">"Cuina"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Escriu un nom personalitzat..."</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"^1 té nom"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" és el nom d\'aquest dispositiu ^2. Vols canviar-ho?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"Canvia el nom d\'aquest <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Actualment, aquest <xliff:g id="DEVICEMODEL">%1$s</xliff:g> s\'anomena <xliff:g id="DEVICENAME">%2$s</xliff:g>"</string>
     <string name="change_setting" msgid="2047402388786162246">"Canvia"</string>
     <string name="keep_settings" msgid="6798327196645732517">"No canviïs"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Permisos"</string>

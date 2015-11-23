@@ -112,6 +112,66 @@
     <string name="about_ads" msgid="3364786994943748337">"广告"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"您现在已处于开发者模式！"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"您已处于开发者模式，无需再执行此操作"</string>
+    <!-- no translation found for device_info_default (4519181343309136050) -->
+    <skip />
+    <!-- no translation found for selinux_status (8000422283341040360) -->
+    <skip />
+    <!-- no translation found for selinux_status_disabled (4925733135520787807) -->
+    <skip />
+    <!-- no translation found for selinux_status_permissive (4806219236988993826) -->
+    <skip />
+    <!-- no translation found for selinux_status_enforcing (8839484208185347776) -->
+    <skip />
+    <!-- no translation found for additional_system_update_settings_list_item_title (6285273598178967613) -->
+    <skip />
+    <!-- no translation found for device_status (4379924151946190768) -->
+    <skip />
+    <!-- no translation found for device_status_summary (180586140242936323) -->
+    <skip />
+    <!-- no translation found for manual (4957388668881541669) -->
+    <skip />
+    <!-- no translation found for regulatory_information (5448865708097003189) -->
+    <skip />
+    <!-- no translation found for device_feedback (209146642122579479) -->
+    <skip />
+    <!-- no translation found for fcc_equipment_id (8295142996591094301) -->
+    <skip />
+    <!-- no translation found for baseband_version (2229081246529676107) -->
+    <skip />
+    <!-- no translation found for kernel_version (2418845475938044903) -->
+    <skip />
+    <!-- no translation found for status_unavailable (831018565485085059) -->
+    <skip />
+    <!-- no translation found for device_status_title (1629253652287243543) -->
+    <skip />
+    <!-- no translation found for battery_status_title (2557264957661087826) -->
+    <skip />
+    <!-- no translation found for battery_level_title (100046129713781009) -->
+    <skip />
+    <!-- no translation found for sim_status_title (498929467188844611) -->
+    <skip />
+    <!-- no translation found for imei_information_title (5208860549282877136) -->
+    <skip />
+    <!-- no translation found for status_bt_address (1571721865060122393) -->
+    <skip />
+    <!-- no translation found for status_up_time (1674116490191446110) -->
+    <skip />
+    <!-- no translation found for status_wimax_mac_address (1102907383444152052) -->
+    <skip />
+    <!-- no translation found for legal_information (2346024659831852038) -->
+    <skip />
+    <!-- no translation found for copyright_title (5564228453228549353) -->
+    <skip />
+    <!-- no translation found for license_title (4482927105870812604) -->
+    <skip />
+    <!-- no translation found for terms_title (8480859222932736291) -->
+    <skip />
+    <!-- no translation found for webview_license_title (8843666223583780825) -->
+    <skip />
+    <!-- no translation found for wallpaper_attributions (8622098625739634898) -->
+    <skip />
+    <!-- no translation found for wallpaper_attributions_values (1565931506291182879) -->
+    <skip />
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"弱"</item>
     <item msgid="5986166866411161790">"一般"</item>
@@ -576,8 +636,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"此操作将会从您的设备的内部存储空间中清除所有数据，包括您的 Google 帐户、系统数据、应用数据、相关设置，以及已下载的应用"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"要清除所有个人信息和已下载的应用吗？请注意，此操作无法撤消！"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"全部清除"</string>
-    <string name="select_title" msgid="3905067953686121845">"为您的^1选择名称"</string>
-    <string name="select_description" msgid="4070142015460337658">"为您的^1选一个名字，这样从其他设备（如手机、平板电脑或计算机）访问这台设备时，就更容易找到它。"</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"为您的 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 选择一个名称"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"当您通过其他设备（例如您的手机、平板电脑或计算机）访问 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 时，可通过此名称快速找到该设备。"</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"客厅"</item>
     <item msgid="3722089849939477581">"视听室"</item>
@@ -588,8 +648,8 @@
     <item msgid="8120010459866284578">"厨房"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"输入自定义名称…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"此^1已命名"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"此^2的名称为“^1”，要更改此名称吗？"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"重命名此 <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"此 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 目前的名称为“<xliff:g id="DEVICENAME">%2$s</xliff:g>”"</string>
     <string name="change_setting" msgid="2047402388786162246">"更改"</string>
     <string name="keep_settings" msgid="6798327196645732517">"不要更改"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"权限"</string>

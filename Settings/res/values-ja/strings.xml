@@ -112,6 +112,36 @@
     <string name="about_ads" msgid="3364786994943748337">"広告"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"開発者向けオプションが有効になりました"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"開発者向けオプションが既に有効です"</string>
+    <string name="device_info_default" msgid="4519181343309136050">"不明"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"SELinux のステータス"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"無効"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"制約なし"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"適用"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"その他のシステム アップデート"</string>
+    <string name="device_status" msgid="4379924151946190768">"ステータス"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"ネットワーク、シリアル番号などの情報"</string>
+    <string name="manual" msgid="4957388668881541669">"マニュアル"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"規制情報"</string>
+    <string name="device_feedback" msgid="209146642122579479">"この端末についてフィードバックを送信"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"装置 ID"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"ベースバンド バージョン"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"カーネル バージョン"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"使用不可"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"ステータス"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"充電状況"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"電池残量"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"SIM のステータス"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"IMEI 情報"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"Bluetooth アドレス"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"稼働時間"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"4G MAC アドレス"</string>
+    <string name="legal_information" msgid="2346024659831852038">"法的情報"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"著作権"</string>
+    <string name="license_title" msgid="4482927105870812604">"ライセンス"</string>
+    <string name="terms_title" msgid="8480859222932736291">"利用規約"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"システムの WebView ライセンス"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"壁紙"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"航空写真の提供:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"弱"</item>
     <item msgid="5986166866411161790">"中"</item>
@@ -576,8 +606,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"これにより、お使いの端末の内部ストレージから、Googleアカウント、システムとアプリのデータと設定、ダウンロードしたアプリなどすべてのデータが消去されます"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"個人情報とダウンロードしたアプリをすべて消去しますか？この操作を元に戻すことはできません。"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"すべて消去"</string>
-    <string name="select_title" msgid="3905067953686121845">"あなた^1の名前を選択"</string>
-    <string name="select_description" msgid="4070142015460337658">"名前は、携帯電話、タブレット、パソコンなど、他のデバイスからアクセスする際に、あなたの^1の識別に役立ちます。"</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> の名前の選択"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"名前は、スマートフォン、タブレット、パソコンなど、他のデバイスからアクセスする際に、あなたの <xliff:g id="DEVICEMODEL">%1$s</xliff:g> の識別に役立ちます。"</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"リビングルーム"</item>
     <item msgid="3722089849939477581">"メディアルーム"</item>
@@ -588,8 +618,8 @@
     <item msgid="8120010459866284578">"キッチン"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"カスタム名の入力…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"この^1の名前を設定済み"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"「^1」はこの^2の名前です。この名前を変更しますか？"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"この <xliff:g id="DEVICEMODEL">%1$s</xliff:g> の名前を変更"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"現在、この <xliff:g id="DEVICEMODEL">%1$s</xliff:g> の名前は「<xliff:g id="DEVICENAME">%2$s</xliff:g>」です"</string>
     <string name="change_setting" msgid="2047402388786162246">"変更する"</string>
     <string name="keep_settings" msgid="6798327196645732517">"変更しない"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"権限"</string>

@@ -112,6 +112,66 @@
     <string name="about_ads" msgid="3364786994943748337">"광고"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"개발자가 되셨습니다."</string>
     <string name="show_dev_already" msgid="7525967300421794483">"이미 개발자입니다."</string>
+    <!-- no translation found for device_info_default (4519181343309136050) -->
+    <skip />
+    <!-- no translation found for selinux_status (8000422283341040360) -->
+    <skip />
+    <!-- no translation found for selinux_status_disabled (4925733135520787807) -->
+    <skip />
+    <!-- no translation found for selinux_status_permissive (4806219236988993826) -->
+    <skip />
+    <!-- no translation found for selinux_status_enforcing (8839484208185347776) -->
+    <skip />
+    <!-- no translation found for additional_system_update_settings_list_item_title (6285273598178967613) -->
+    <skip />
+    <!-- no translation found for device_status (4379924151946190768) -->
+    <skip />
+    <!-- no translation found for device_status_summary (180586140242936323) -->
+    <skip />
+    <!-- no translation found for manual (4957388668881541669) -->
+    <skip />
+    <!-- no translation found for regulatory_information (5448865708097003189) -->
+    <skip />
+    <!-- no translation found for device_feedback (209146642122579479) -->
+    <skip />
+    <!-- no translation found for fcc_equipment_id (8295142996591094301) -->
+    <skip />
+    <!-- no translation found for baseband_version (2229081246529676107) -->
+    <skip />
+    <!-- no translation found for kernel_version (2418845475938044903) -->
+    <skip />
+    <!-- no translation found for status_unavailable (831018565485085059) -->
+    <skip />
+    <!-- no translation found for device_status_title (1629253652287243543) -->
+    <skip />
+    <!-- no translation found for battery_status_title (2557264957661087826) -->
+    <skip />
+    <!-- no translation found for battery_level_title (100046129713781009) -->
+    <skip />
+    <!-- no translation found for sim_status_title (498929467188844611) -->
+    <skip />
+    <!-- no translation found for imei_information_title (5208860549282877136) -->
+    <skip />
+    <!-- no translation found for status_bt_address (1571721865060122393) -->
+    <skip />
+    <!-- no translation found for status_up_time (1674116490191446110) -->
+    <skip />
+    <!-- no translation found for status_wimax_mac_address (1102907383444152052) -->
+    <skip />
+    <!-- no translation found for legal_information (2346024659831852038) -->
+    <skip />
+    <!-- no translation found for copyright_title (5564228453228549353) -->
+    <skip />
+    <!-- no translation found for license_title (4482927105870812604) -->
+    <skip />
+    <!-- no translation found for terms_title (8480859222932736291) -->
+    <skip />
+    <!-- no translation found for webview_license_title (8843666223583780825) -->
+    <skip />
+    <!-- no translation found for wallpaper_attributions (8622098625739634898) -->
+    <skip />
+    <!-- no translation found for wallpaper_attributions_values (1565931506291182879) -->
+    <skip />
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"나쁨"</item>
     <item msgid="5986166866411161790">"양호"</item>
@@ -576,8 +636,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Google 계정, 시스템이나 앱의 데이터 및 설정, 다운로드한 앱 등 기기 내부 저장소에 있는 데이터가 모두 삭제됩니다."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"개인정보와 다운로드한 앱을 모두 삭제하시겠습니까? 이 작업은 취소할 수 없습니다."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"모두 지우기"</string>
-    <string name="select_title" msgid="3905067953686121845">"^1의 이름 선택"</string>
-    <string name="select_description" msgid="4070142015460337658">"이름이 있으면 휴대전화나 태블릿, 컴퓨터 등 다른 기기에서 액세스할 때 ^1을(를) 식별하는 데 도움이 됩니다."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g>에 사용할 이름 선택"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"이름이 있으면 스마트폰, 태블릿, 컴퓨터 등 다른 기기에서 액세스할 때 <xliff:g id="DEVICEMODEL">%1$s</xliff:g>을(를) 식별하는 데 도움이 됩니다."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"거실"</item>
     <item msgid="3722089849939477581">"미디어룸"</item>
@@ -588,8 +648,8 @@
     <item msgid="8120010459866284578">"주방"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"맞춤 이름 입력..."</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"이 ^1에 이름을 붙였습니다."</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"이 ^2의 이름은 \'^1\'입니다. 이름을 변경하시겠습니까?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"이 <xliff:g id="DEVICEMODEL">%1$s</xliff:g>의 이름 바꾸기"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"이 <xliff:g id="DEVICEMODEL">%1$s</xliff:g>의 이름은 현재 \'<xliff:g id="DEVICENAME">%2$s</xliff:g>\'입니다."</string>
     <string name="change_setting" msgid="2047402388786162246">"변경"</string>
     <string name="keep_settings" msgid="6798327196645732517">"변경 안함"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"권한"</string>

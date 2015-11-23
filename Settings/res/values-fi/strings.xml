@@ -112,6 +112,36 @@
     <string name="about_ads" msgid="3364786994943748337">"Mainokset"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Olet nyt kehittäjä!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Selvä, olet jo kehittäjä"</string>
+    <string name="device_info_default" msgid="4519181343309136050">"Tuntematon"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"SELinux-tila"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"Ei käytössä"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"Salliva"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"Täytäntöönpano"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"Järjestelmän lisäpäivitykset"</string>
+    <string name="device_status" msgid="4379924151946190768">"Tila"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"Verkko, sarjanumerot ja muut tiedot"</string>
+    <string name="manual" msgid="4957388668881541669">"Käyttöopas"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"Säädöstenmukaisuustiedot"</string>
+    <string name="device_feedback" msgid="209146642122579479">"Lähetä palautetta tästä laitteesta"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"Varustetunnus"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"Baseband-versio"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"Kernel-versio"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"Ei saatavilla"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"Tila"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"Akun tila"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"Akun varaustaso"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"SIM-kortin tila"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"IMEI-koodin tiedot"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"Bluetooth-osoite"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"Käynnissäoloaika"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"4G MAC -osoite"</string>
+    <string name="legal_information" msgid="2346024659831852038">"Oikeudelliset tiedot"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"Tekijänoikeudet"</string>
+    <string name="license_title" msgid="4482927105870812604">"Käyttölupa"</string>
+    <string name="terms_title" msgid="8480859222932736291">"Käyttöehdot"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"WebView-järjestelmälisenssi"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"Taustakuvat"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Satelliittikuvat:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Huono"</item>
     <item msgid="5986166866411161790">"Kohtalainen"</item>
@@ -576,8 +606,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Toiminto poistaa kaikki tiedot laitteesi sisäisestä tallennustilasta. Poistettavia tietoja ovat muun muassa Google-tilisi, järjestelmän ja sovelluksien tiedot ja asetukset sekä ladatut sovellukset."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Haluatko poistaa kaikki henkilökohtaiset tietosi ja lataamasi sovellukset? Toimintoa ei voi peruuttaa!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Poista kaikki"</string>
-    <string name="select_title" msgid="3905067953686121845">"Nimeä ^1"</string>
-    <string name="select_description" msgid="4070142015460337658">"Nimi auttaa sinua tunnistamaan laitteen ^1, kun haluat käyttää sitä muulla laitteella, kuten puhelimella, tabletilla tai tietokoneella."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Anna nimi laitteelle <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"Nimi auttaa sinua tunnistamaan laitteen <xliff:g id="DEVICEMODEL">%1$s</xliff:g>, kun haluat käyttää sitä muulla laitteella, kuten puhelimella, tabletilla tai tietokoneella."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Olohuone"</item>
     <item msgid="3722089849939477581">"Mediahuone"</item>
@@ -588,8 +618,8 @@
     <item msgid="8120010459866284578">"Keittiö"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Anna muokattu nimi…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"^1 nimettiin"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"Laitteen ^2 nimi on ^1. Haluatko vaihtaa sen?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"Anna uusi nimi laitteelle <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Laitteen <xliff:g id="DEVICEMODEL">%1$s</xliff:g> nimi on tällä hetkellä <xliff:g id="DEVICENAME">%2$s</xliff:g>."</string>
     <string name="change_setting" msgid="2047402388786162246">"Vaihda"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Älä vaihda"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Käyttöoikeudet"</string>

@@ -114,6 +114,36 @@
     <string name="about_ads" msgid="3364786994943748337">"מודעות"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"אתה כעת מפתח!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"אין צורך - אתה כבר מפתח"</string>
+    <string name="device_info_default" msgid="4519181343309136050">"לא ידוע"</string>
+    <string name="selinux_status" msgid="8000422283341040360">"סטטוס SELinux"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"מושבת"</string>
+    <string name="selinux_status_permissive" msgid="4806219236988993826">"מתירני"</string>
+    <string name="selinux_status_enforcing" msgid="8839484208185347776">"אכיפה"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"עדכוני מערכת נוספים"</string>
+    <string name="device_status" msgid="4379924151946190768">"סטטוס"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"רשת, מספרים סידוריים ומידע נוסף"</string>
+    <string name="manual" msgid="4957388668881541669">"ידני"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"מידע על תקנות"</string>
+    <string name="device_feedback" msgid="209146642122579479">"שלח משוב על המכשיר הזה"</string>
+    <string name="fcc_equipment_id" msgid="8295142996591094301">"מזהה ציוד"</string>
+    <string name="baseband_version" msgid="2229081246529676107">"גרסת פס בסיס"</string>
+    <string name="kernel_version" msgid="2418845475938044903">"גרסת ליבה"</string>
+    <string name="status_unavailable" msgid="831018565485085059">"לא זמין"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"סטטוס"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"מצב סוללה"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"טעינת סוללה:"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"סטטוס SIM"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"פרטי IMEI"</string>
+    <string name="status_bt_address" msgid="1571721865060122393">"כתובת Bluetooth"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"זמן פעולה"</string>
+    <string name="status_wimax_mac_address" msgid="1102907383444152052">"כתובת ‎4G MAC"</string>
+    <string name="legal_information" msgid="2346024659831852038">"מידע משפטי"</string>
+    <string name="copyright_title" msgid="5564228453228549353">"זכויות יוצרים"</string>
+    <string name="license_title" msgid="4482927105870812604">"רישיון"</string>
+    <string name="terms_title" msgid="8480859222932736291">"תנאים והגבלות"</string>
+    <string name="webview_license_title" msgid="8843666223583780825">"רישיון של מערכת WebView"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"טפטים"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"ספקים של צילומי לוויין:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"חלש"</item>
     <item msgid="5986166866411161790">"סביר"</item>
@@ -586,8 +616,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"הפעולה הזו תמחק את כל הנתונים מהאחסון הפנימי במכשיר שלך, כולל: חשבון Google שלך, אפליקציות שהורדת, נתונים והגדרות של המערכת ושל אפליקציות."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"האם למחוק את כל המידע האישי שלך ואת האפליקציות שהורדת? לא ניתן לבטל את הפעולה!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"מחק הכל"</string>
-    <string name="select_title" msgid="3905067953686121845">"בחר שם עבור ה-^1 שלך"</string>
-    <string name="select_description" msgid="4070142015460337658">"מתן שם יעזור בזיהוי ה-^1 שלך בעת גישה אליו ממכשירים אחרים, כמו טלפון, טאבלט או מחשב."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"בחר שם עבור ה-<xliff:g id="DEVICEMODEL">%1$s</xliff:g> שלך"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"שם יסייע בזיהוי ה-<xliff:g id="DEVICEMODEL">%1$s</xliff:g> שלך כאשר תיגש אליו ממכשירים אחרים, כמו הטלפון, הטאבלט או המחשב."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"סלון"</item>
     <item msgid="3722089849939477581">"חדר מדיה"</item>
@@ -598,8 +628,8 @@
     <item msgid="8120010459866284578">"מטבח"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"הזן שם בהתאמה אישית…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"ל-^1 הזה יש שם"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" הוא השם של ה-^2 הזה. האם ברצונך לשנות זאת?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"שנה שם ל-<xliff:g id="DEVICEMODEL">%1$s</xliff:g> הזה"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> הזה נקרא כעת \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"שנה"</string>
     <string name="keep_settings" msgid="6798327196645732517">"אל תשנה"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"אישורים"</string>

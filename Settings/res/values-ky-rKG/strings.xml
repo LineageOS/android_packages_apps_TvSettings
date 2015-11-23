@@ -112,6 +112,66 @@
     <string name="about_ads" msgid="3364786994943748337">"Жарнамалар"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Эми иштеп чыгуучу болдуңуз!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Кажети жок, буга чейин эле өндүрүүчү болгонсуз"</string>
+    <!-- no translation found for device_info_default (4519181343309136050) -->
+    <skip />
+    <!-- no translation found for selinux_status (8000422283341040360) -->
+    <skip />
+    <!-- no translation found for selinux_status_disabled (4925733135520787807) -->
+    <skip />
+    <!-- no translation found for selinux_status_permissive (4806219236988993826) -->
+    <skip />
+    <!-- no translation found for selinux_status_enforcing (8839484208185347776) -->
+    <skip />
+    <!-- no translation found for additional_system_update_settings_list_item_title (6285273598178967613) -->
+    <skip />
+    <!-- no translation found for device_status (4379924151946190768) -->
+    <skip />
+    <!-- no translation found for device_status_summary (180586140242936323) -->
+    <skip />
+    <!-- no translation found for manual (4957388668881541669) -->
+    <skip />
+    <!-- no translation found for regulatory_information (5448865708097003189) -->
+    <skip />
+    <!-- no translation found for device_feedback (209146642122579479) -->
+    <skip />
+    <!-- no translation found for fcc_equipment_id (8295142996591094301) -->
+    <skip />
+    <!-- no translation found for baseband_version (2229081246529676107) -->
+    <skip />
+    <!-- no translation found for kernel_version (2418845475938044903) -->
+    <skip />
+    <!-- no translation found for status_unavailable (831018565485085059) -->
+    <skip />
+    <!-- no translation found for device_status_title (1629253652287243543) -->
+    <skip />
+    <!-- no translation found for battery_status_title (2557264957661087826) -->
+    <skip />
+    <!-- no translation found for battery_level_title (100046129713781009) -->
+    <skip />
+    <!-- no translation found for sim_status_title (498929467188844611) -->
+    <skip />
+    <!-- no translation found for imei_information_title (5208860549282877136) -->
+    <skip />
+    <!-- no translation found for status_bt_address (1571721865060122393) -->
+    <skip />
+    <!-- no translation found for status_up_time (1674116490191446110) -->
+    <skip />
+    <!-- no translation found for status_wimax_mac_address (1102907383444152052) -->
+    <skip />
+    <!-- no translation found for legal_information (2346024659831852038) -->
+    <skip />
+    <!-- no translation found for copyright_title (5564228453228549353) -->
+    <skip />
+    <!-- no translation found for license_title (4482927105870812604) -->
+    <skip />
+    <!-- no translation found for terms_title (8480859222932736291) -->
+    <skip />
+    <!-- no translation found for webview_license_title (8843666223583780825) -->
+    <skip />
+    <!-- no translation found for wallpaper_attributions (8622098625739634898) -->
+    <skip />
+    <!-- no translation found for wallpaper_attributions_values (1565931506291182879) -->
+    <skip />
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Начар"</item>
     <item msgid="5986166866411161790">"Орто"</item>
@@ -576,8 +636,8 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Ушуну менен, түзмөгүңүздүн ички сактагычындагы дайындардын баары, ошондой эле Google каттоо эсебиңиз, тутум жана колдонмо дайындары менен жөндөөлөрү жана жүктөлүп алынган колдонмолор өчүрүлөт."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Жеке маалыматтыңыз жана жүктөлүп алынган колдонмолоруңуздун бардыгы өчүрүлсүнбү? Бул аракетти артка кайтара албайсыз!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Баарын өчүрүү"</string>
-    <string name="select_title" msgid="3905067953686121845">"^1 үчүн ат тандаңыз"</string>
-    <string name="select_description" msgid="4070142015460337658">"Телефон, планшет же компьютер сыяктуу башка түзмөктөрдөн киргенде, бул аталыш аркылуу ^1\'ди тааный аласыз."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> үчүн ат тандаңыз"</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"Телефон, планшет же компьютер сыяктуу башка түзмөктөрдөн киргенде, бул аталыш аркылуу <xliff:g id="DEVICEMODEL">%1$s</xliff:g> тааный аласыз."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Конок үй"</item>
     <item msgid="3722089849939477581">"Медиа бөлмөсү"</item>
@@ -588,8 +648,8 @@
     <item msgid="8120010459866284578">"Ашкана"</item>
   </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Өзгөчө аталышты киргизиңиз…"</string>
-    <string name="settings_status_title" msgid="3890412726442124167">"Бул ^1 аталды"</string>
-    <string name="settings_status_description" msgid="3600745966132434139">"\"^1\" бул ^2 аты. Аны өзгөртөсүзбү?"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> аталышын өзгөртүү"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Бул <xliff:g id="DEVICEMODEL">%1$s</xliff:g> учурда \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" деп аталып турат"</string>
     <string name="change_setting" msgid="2047402388786162246">"Өзгөртүү"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Өзгөртүлбөсүн"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Уруксаттар"</string>
