@@ -702,8 +702,28 @@
     <string name="desc_set_time_format"><xliff:g id="state" example="Off">%1$s</xliff:g> (<xliff:g id="sample" example="3:14 PM">%2$s</xliff:g>)</string>
     <!-- Title for automatic date & time [CHAR LIMIT = 80] -->
     <string name="system_auto_date_time">Automatic date &amp; time</string>
-    <!-- Description for using automatic date & time in date time settings [CHAR LIMIT=100] -->
-    <string name="desc_auto_date_time">Use network-provided time</string>
+    <!-- Options for automatic date & time [CHAR LIMIT=100] -->
+    <string-array name="auto_date_time_entries">
+        <item>Use network-provided time</item>
+        <item>Off</item>
+    </string-array>
+    <!-- Values for automatic date & time [DO NOT TRANSLATE] -->
+    <string-array name="auto_date_time_entry_values" translatable="false">
+        <item>network</item>
+        <item>off</item>
+    </string-array>
+    <!-- Options for automatic date & time [CHAR LIMIT=100] -->
+    <string-array name="auto_date_time_ts_entries">
+        <item>Use network-provided time</item>
+        <item>Use transport stream-provided time</item>
+        <item>Off</item>
+    </string-array>
+    <!-- Values for automatic date & time [DO NOT TRANSLATE] -->
+    <string-array name="auto_date_time_ts_entry_values" translatable="false">
+        <item>network</item>
+        <item>transport_stream</item>
+        <item>off</item>
+    </string-array>
 
     <!-- Title for Location in System Settings [CHAR LIMIT=50] -->
     <string name="system_location">Location</string>
