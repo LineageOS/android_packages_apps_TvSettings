@@ -148,4 +148,8 @@
         <item name="android:visibility">gone</item>
     </style>
 
+    <style name="SyncSwitchPreference" parent="LeanbackPreference">
+        <item name="android:widgetLayout">@layout/preference_widget_sync_toggle</item>
+    </style>
+
 </resources>
