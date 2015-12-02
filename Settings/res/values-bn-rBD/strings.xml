@@ -25,17 +25,20 @@
     <string name="header_category_accessories" msgid="823295909353025991">"রিমোট ও আনুষঙ্গিক উপকরণগুলি"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"ব্যক্তিগত"</string>
     <string name="add_account" msgid="4098060223200619258">"অ্যাকাউন্ট জুড়ুন"</string>
-    <string name="account_header_sync" msgid="2679585471372319471">"সমন্বয় করুন"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"অ্যাকাউন্ট সরান"</string>
     <string name="account_sync" msgid="773808124331714965">"সমন্বয় করা অ্যাপ্লিকেশান চয়ন করুন"</string>
     <string name="sync_now" msgid="8732244492880016471">"এখনই সিঙ্ক করুন"</string>
-    <string name="sync_cancel" msgid="5839264070098894371">"সমন্বয় বাতিল করুন"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"সিঙ্ক হচ্ছে..."</string>
     <string name="last_synced" msgid="6178494892357077274">"শেষ বার সমন্বয় হয়েছে <xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"অক্ষমিত"</string>
-    <string name="sync_is_failing" msgid="8229476000384257186">"সিঙ্ক এই মুহূর্তে কাজ করছে না। এটি খুব শীঘ্রই ফিরে আসবে।"</string>
     <string name="account_remove" msgid="4313580520737295272">"অ্যাকাউন্ট সরান"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"অ্যাকাউন্ট সরানো যাচ্ছে না"</string>
+    <!-- no translation found for sync_item_title (2716687595867726981) -->
+    <skip />
+    <string name="sync_one_time_sync" msgid="4948432419012834219">"এখনই সিঙ্ক করতে স্পর্শ করুন<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_failed" msgid="5514824149810480551">"সিঙ্ক করা ব্যর্থ হয়েছে"</string>
+    <string name="sync_active" msgid="6891115263481154378">"সিঙ্ক করা সক্রিয় রয়েছে"</string>
     <string name="connectivity_network" msgid="8321537111272398501">"নেটওয়ার্ক"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ইথারনেট"</string>
@@ -320,7 +323,15 @@
     <string name="system_set_time_format" msgid="4447882066895090612">"২৪ ঘন্টার ফর্ম্যাট ব্যবহার করুন"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"স্বয়ংক্রিয় তারিখ ও সময়"</string>
-    <string name="desc_auto_date_time" msgid="6997571927680580633">"নেটওয়ার্ক প্রদত্ত সময় ব্যবহার করুন"</string>
+  <string-array name="auto_date_time_entries">
+    <item msgid="4590792581242018007">"নেটওয়ার্ক প্রদত্ত সময় ব্যবহার করুন"</item>
+    <item msgid="3807025813081244357">"বন্ধ করুন"</item>
+  </string-array>
+  <string-array name="auto_date_time_ts_entries">
+    <item msgid="8463479794795616025">"নেটওয়ার্ক প্রদত্ত সময় ব্যবহার করুন"</item>
+    <item msgid="2475903014233987786">"ট্রান্সপোর্ট স্ট্রীমের প্রদেয় সময় ব্যবহার করুন"</item>
+    <item msgid="150957081326946463">"বন্ধ করুন"</item>
+  </string-array>
     <string name="system_location" msgid="502463575930545806">"অবস্থান"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"যে অ্যাপ্লিকেশানগুলি আপনার অবস্থানের তথ্য ব্যবহার করার অনুমতি চেয়েছে তাদেরকে অনুমতি দিন"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"অবস্থান সম্মতি"</string>

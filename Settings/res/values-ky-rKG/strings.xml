@@ -25,17 +25,20 @@
     <string name="header_category_accessories" msgid="823295909353025991">"Алыскы &amp; кошумча жабдыктар"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Жеке"</string>
     <string name="add_account" msgid="4098060223200619258">"Каттоо эсебин кошуу"</string>
-    <string name="account_header_sync" msgid="2679585471372319471">"Шайкештештирүү"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Каттоо эсебин алып салуу"</string>
     <string name="account_sync" msgid="773808124331714965">"Шайкештештирилген колдонмолорду тандоо"</string>
     <string name="sync_now" msgid="8732244492880016471">"Азыр шайкештештирилсин"</string>
-    <string name="sync_cancel" msgid="5839264070098894371">"Шайкештештирүүнү жокко чыгаруу"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Шайкештештирилүүдө…"</string>
     <string name="last_synced" msgid="6178494892357077274">"Акыркы жолу шайкештештирилген: <xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Өчүрүлгөн"</string>
-    <string name="sync_is_failing" msgid="8229476000384257186">"Учурда шайкештештирилбей жатат. Бир аздан кийин кайтып келет."</string>
     <string name="account_remove" msgid="4313580520737295272">"Каттоо эсебин алып салуу"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Каттоо эсеби өчүрүлбөй жатат"</string>
+    <!-- no translation found for sync_item_title (2716687595867726981) -->
+    <skip />
+    <string name="sync_one_time_sync" msgid="4948432419012834219">"Азыр шайкештирүү үчүн тийип коюуңуз<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_failed" msgid="5514824149810480551">"Шайкештирилбей калды"</string>
+    <string name="sync_active" msgid="6891115263481154378">"Шайкештирүү жигердүү"</string>
     <string name="connectivity_network" msgid="8321537111272398501">"Тармак"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi‑Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
@@ -320,7 +323,15 @@
     <string name="system_set_time_format" msgid="4447882066895090612">"24 сааттык форматты колдонуу"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"Автоматтык күн жана убакыт"</string>
-    <string name="desc_auto_date_time" msgid="6997571927680580633">"Тармактын убакытын колдонуу"</string>
+  <string-array name="auto_date_time_entries">
+    <item msgid="4590792581242018007">"Тармактан алынган убакытты колдонуу"</item>
+    <item msgid="3807025813081244357">"Өчүк"</item>
+  </string-array>
+  <string-array name="auto_date_time_ts_entries">
+    <item msgid="8463479794795616025">"Тармактан алынган убакытты колдонуу"</item>
+    <item msgid="2475903014233987786">"Транспорт агымдар убакытын колдонуу"</item>
+    <item msgid="150957081326946463">"Өчүк"</item>
+  </string-array>
     <string name="system_location" msgid="502463575930545806">"Жайгашкан жер"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"Жергиликтүү маалыматты колдонуу мүмкүнчүлүгүн сураган колдонмолорго уруксат берүү"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"Жайгашкан жерди аныктоого уруксат берүү"</string>

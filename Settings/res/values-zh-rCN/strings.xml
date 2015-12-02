@@ -25,17 +25,20 @@
     <string name="header_category_accessories" msgid="823295909353025991">"遥控器和配件"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"个人"</string>
     <string name="add_account" msgid="4098060223200619258">"添加帐户"</string>
-    <string name="account_header_sync" msgid="2679585471372319471">"同步"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"移除帐户"</string>
     <string name="account_sync" msgid="773808124331714965">"选择要同步的应用"</string>
     <string name="sync_now" msgid="8732244492880016471">"立即同步"</string>
-    <string name="sync_cancel" msgid="5839264070098894371">"取消同步"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"正在同步…"</string>
     <string name="last_synced" msgid="6178494892357077274">"上次同步时间：<xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"已关闭"</string>
-    <string name="sync_is_failing" msgid="8229476000384257186">"同步功能暂时无法使用，不过很快就会恢复正常。"</string>
     <string name="account_remove" msgid="4313580520737295272">"移除帐户"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"无法移除帐户"</string>
+    <!-- no translation found for sync_item_title (2716687595867726981) -->
+    <skip />
+    <string name="sync_one_time_sync" msgid="4948432419012834219">"触摸即可立即同步（上次同步时间：<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>）"</string>
+    <string name="sync_failed" msgid="5514824149810480551">"同步失败"</string>
+    <string name="sync_active" msgid="6891115263481154378">"正在同步"</string>
     <string name="connectivity_network" msgid="8321537111272398501">"网络"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"WLAN"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"有线网络"</string>
@@ -320,7 +323,15 @@
     <string name="system_set_time_format" msgid="4447882066895090612">"使用 24 小时制"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g>（<xliff:g id="SAMPLE">%2$s</xliff:g>）"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"自动确定日期和时间"</string>
-    <string name="desc_auto_date_time" msgid="6997571927680580633">"使用网络提供的时间"</string>
+  <string-array name="auto_date_time_entries">
+    <item msgid="4590792581242018007">"使用网络提供的时间"</item>
+    <item msgid="3807025813081244357">"关闭"</item>
+  </string-array>
+  <string-array name="auto_date_time_ts_entries">
+    <item msgid="8463479794795616025">"使用网络提供的时间"</item>
+    <item msgid="2475903014233987786">"使用传输流提供的时间"</item>
+    <item msgid="150957081326946463">"关闭"</item>
+  </string-array>
     <string name="system_location" msgid="502463575930545806">"位置信息"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"允许获得您许可的应用使用您的位置信息"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"同意记录位置信息"</string>
@@ -623,7 +634,7 @@
     <string name="change_setting" msgid="2047402388786162246">"更改"</string>
     <string name="keep_settings" msgid="6798327196645732517">"不要更改"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"权限"</string>
-    <string name="device_apps_permissions" msgid="2966387603529725982">"应用所需权限"</string>
+    <string name="device_apps_permissions" msgid="2966387603529725982">"应用访问授权"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"已授权 <xliff:g id="COUNT_0">%d</xliff:g> 个应用（共 <xliff:g id="COUNT_1">%d</xliff:g> 个）"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"蓝牙权限请求"</string>
     <string name="security_patch" msgid="2131617390189164481">"Android 安全补丁程序级别"</string>

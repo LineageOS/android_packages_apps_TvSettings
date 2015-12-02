@@ -25,17 +25,20 @@
     <string name="header_category_accessories" msgid="823295909353025991">"ពី​ចម្ងាយ &amp; ឧបករណ៍"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"ផ្ទាល់ខ្លួន"</string>
     <string name="add_account" msgid="4098060223200619258">"បន្ថែម​គណនី"</string>
-    <string name="account_header_sync" msgid="2679585471372319471">"ធ្វើ​សម​កាល​កម្ម"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"លុប​គណនី​​​ចេញ"</string>
     <string name="account_sync" msgid="773808124331714965">"ជ្រើស​រើស​កម្មវិធី​​​ដែល​បាន​ធ្វើ​សម​កាល​កម្ម"</string>
     <string name="sync_now" msgid="8732244492880016471">"ធ្វើ​សម្មកាលកម្ម​ឥឡូវ"</string>
-    <string name="sync_cancel" msgid="5839264070098894371">"បោះបង់​ការ​ធ្វើ​សម​កាល​កម្ម"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"កំពុង​ធ្វើ​សមកាលកម្ម…"</string>
     <string name="last_synced" msgid="6178494892357077274">"ធ្វើ​សម​កាល​កម្ម​ចុង​ក្រោយ <xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"បាន​បិទ​ដំណើរការ"</string>
-    <string name="sync_is_failing" msgid="8229476000384257186">"សកម្មកាលកម្ម​មិន​ដំណើរការ​​ទេ​ពេល​នេះ។ វា​នឹង​មាន​វិញ​ពេល​ឆាប់ៗ។"</string>
     <string name="account_remove" msgid="4313580520737295272">"លុប​គណនី​​​ចេញ"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"មិន​អាច​​លុប​គណនី​បាន"</string>
+    <!-- no translation found for sync_item_title (2716687595867726981) -->
+    <skip />
+    <string name="sync_one_time_sync" msgid="4948432419012834219">"ប៉ះដើម្បីធ្វើសមកាលកម្មឥឡូវនេះ <xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_failed" msgid="5514824149810480551">"បានបរាជ័យក្នុងការធ្វើសមកាលកម្ម"</string>
+    <string name="sync_active" msgid="6891115263481154378">"ការធ្វើសមកាលកម្មសកម្ម"</string>
     <string name="connectivity_network" msgid="8321537111272398501">"បណ្ដាញ"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"វ៉ាយហ្វាយ"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"អ៊ីសឺរណិត"</string>
@@ -320,7 +323,15 @@
     <string name="system_set_time_format" msgid="4447882066895090612">"ប្រើ​ទ្រង់ទ្រាយ ២៤ ម៉ោង"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"កាលបរិច្ឆេទ &amp; ពេលវេលា​ស្វ័យ​ប្រវត្តិ"</string>
-    <string name="desc_auto_date_time" msgid="6997571927680580633">"ប្រើ​ពេលវេលា​បាន​ផ្ដល់​ដោយ​បណ្ដាញ"</string>
+  <string-array name="auto_date_time_entries">
+    <item msgid="4590792581242018007">"ប្រើពេលវេលាដែលផ្ដល់ដោយបណ្ដាញ"</item>
+    <item msgid="3807025813081244357">"បិទ"</item>
+  </string-array>
+  <string-array name="auto_date_time_ts_entries">
+    <item msgid="8463479794795616025">"ប្រើពេលវេលាដែលផ្ដល់ដោយបណ្ដាញ"</item>
+    <item msgid="2475903014233987786">"ប្រើពេលវេលាដែលផ្ដល់ដោយការបញ្ជូនការស្ទ្រីម"</item>
+    <item msgid="150957081326946463">"បិទ"</item>
+  </string-array>
     <string name="system_location" msgid="502463575930545806">"ទីតាំង"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"អនុញ្ញាត​​កម្មវិធី​​​ដែល​សួរ​រក​សិទ្ធិ​​របស់​អ្នក​ ប្រើ​ព័ត៌មាន​​ទីតាំង​របស់​អ្នក"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"ព្រមព្រៀង​តាម​ទីតាំង"</string>
