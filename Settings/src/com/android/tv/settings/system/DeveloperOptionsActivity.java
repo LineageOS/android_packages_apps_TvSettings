@@ -39,7 +39,7 @@ import android.provider.Settings;
 import android.support.annotation.StringRes;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.HardwareRenderer;
+import android.view.ThreadedRenderer;
 import android.view.IWindowManager;
 import android.view.View;
 
@@ -1088,16 +1088,16 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     }
 
     private int getGpuViewUpdatesActionId() {
-        return SystemProperties.getBoolean(HardwareRenderer.DEBUG_DIRTY_REGIONS_PROPERTY, false) ?
+        return SystemProperties.getBoolean(ThreadedRenderer.DEBUG_DIRTY_REGIONS_PROPERTY, false) ?
                 ACTION_GPU_VIEW_UPDATES_ON : ACTION_GPU_VIEW_UPDATES_OFF;
     }
 
     private void setGpuViewUpdates(boolean value) {
-        SettingsHelper.setSystemProperties(HardwareRenderer.DEBUG_DIRTY_REGIONS_PROPERTY, value);
+        SettingsHelper.setSystemProperties(ThreadedRenderer.DEBUG_DIRTY_REGIONS_PROPERTY, value);
     }
 
     private int getGpuOverdrawActionId() {
-        switch (SystemProperties.get(HardwareRenderer.DEBUG_OVERDRAW_PROPERTY, "false")) {
+        switch (SystemProperties.get(ThreadedRenderer.DEBUG_OVERDRAW_PROPERTY, "false")) {
             case "show":
                 return ACTION_GPU_OVERDRAW_AREAS;
             case "count":
@@ -1111,15 +1111,15 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     private void setGpuOverdrawByAction(int action) {
         switch (action) {
             case ACTION_GPU_OVERDRAW_AREAS:
-                SettingsHelper.setSystemProperties(HardwareRenderer.DEBUG_OVERDRAW_PROPERTY,
+                SettingsHelper.setSystemProperties(ThreadedRenderer.DEBUG_OVERDRAW_PROPERTY,
                         "show");
                 break;
             case ACTION_GPU_OVERDRAW_COUNTER:
-                SettingsHelper.setSystemProperties(HardwareRenderer.DEBUG_OVERDRAW_PROPERTY,
+                SettingsHelper.setSystemProperties(ThreadedRenderer.DEBUG_OVERDRAW_PROPERTY,
                         "count");
                 break;
             case ACTION_GPU_OVERDRAW_OFF:
-                SettingsHelper.setSystemProperties(HardwareRenderer.DEBUG_OVERDRAW_PROPERTY,
+                SettingsHelper.setSystemProperties(ThreadedRenderer.DEBUG_OVERDRAW_PROPERTY,
                         "false");
                 break;
 
@@ -1128,12 +1128,12 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
 
     private int getHardwareLayerActionId() {
         return SystemProperties.getBoolean(
-                HardwareRenderer.DEBUG_SHOW_LAYERS_UPDATES_PROPERTY, false) ?
+                ThreadedRenderer.DEBUG_SHOW_LAYERS_UPDATES_PROPERTY, false) ?
                 ACTION_HARDWARE_LAYER_ON : ACTION_HARDWARE_LAYER_OFF;
     }
 
     private void setHardwareLayer(boolean value) {
-        SettingsHelper.setSystemProperties(HardwareRenderer.DEBUG_SHOW_LAYERS_UPDATES_PROPERTY,
+        SettingsHelper.setSystemProperties(ThreadedRenderer.DEBUG_SHOW_LAYERS_UPDATES_PROPERTY,
                 value);
     }
 
@@ -1177,7 +1177,7 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     }
 
     private int getFrameTimeActionId() {
-        switch (SystemProperties.get(HardwareRenderer.PROFILE_PROPERTY, "false")) {
+        switch (SystemProperties.get(ThreadedRenderer.PROFILE_PROPERTY, "false")) {
             case "visual_bars":
                 return ACTION_FRAME_TIME_BARS;
             case "true":
@@ -1191,14 +1191,14 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
     private void setFrameTimeByAction(int action) {
         switch (action) {
             case ACTION_FRAME_TIME_BARS:
-                SettingsHelper.setSystemProperties(HardwareRenderer.PROFILE_PROPERTY,
+                SettingsHelper.setSystemProperties(ThreadedRenderer.PROFILE_PROPERTY,
                         "visual_bars");
                 break;
             case ACTION_FRAME_TIME_GFXINFO:
-                SettingsHelper.setSystemProperties(HardwareRenderer.PROFILE_PROPERTY, "true");
+                SettingsHelper.setSystemProperties(ThreadedRenderer.PROFILE_PROPERTY, "true");
                 break;
             case ACTION_FRAME_TIME_OFF:
-                SettingsHelper.setSystemProperties(HardwareRenderer.PROFILE_PROPERTY, "false");
+                SettingsHelper.setSystemProperties(ThreadedRenderer.PROFILE_PROPERTY, "false");
                 break;
         }
     }
