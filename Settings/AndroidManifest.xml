@@ -299,7 +299,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".system.DeveloperOptionsActivity"
+            android:name=".system.development.DevelopmentActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" >
             <intent-filter>
@@ -310,6 +310,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".system.development.AppPicker"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:exported="false" />
         <activity
             android:name=".system.KeyboardActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
