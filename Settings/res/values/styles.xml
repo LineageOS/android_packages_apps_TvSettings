@@ -41,6 +41,11 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Leanback</item>
     </style>
 
+    <style name="Theme.Settings.Transparent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
     <!-- FormWizard version of Theme.Settings -->
     <style name="Theme.Leanback.FormWizard.Solid" parent="@android:style/Theme.Leanback.FormWizard">
         <item name="android:windowBackground">@color/settings_background</item>

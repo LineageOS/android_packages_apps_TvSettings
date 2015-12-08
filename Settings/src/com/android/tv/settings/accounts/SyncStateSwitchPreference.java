@@ -69,7 +69,7 @@ public class SyncStateSwitchPreference extends SwitchPreference {
         final boolean failedVisible = mFailed && !activeVisible;
         syncFailedView.setVisibility(failedVisible ? View.VISIBLE : View.GONE);
 
-        View switchView = view.findViewById(R.id.switchWidget);
+        View switchView = view.findViewById(R.id.switch_widget_container);
         if (mOneTimeSyncMode) {
             switchView.setVisibility(View.GONE);
 
