@@ -173,7 +173,7 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
         if (mDeviceGatt != null) {
             mDeviceGatt.close();
         }
-
+        getActivity().unregisterReceiver(mBroadcastReceiver);
     }
 
     @Override

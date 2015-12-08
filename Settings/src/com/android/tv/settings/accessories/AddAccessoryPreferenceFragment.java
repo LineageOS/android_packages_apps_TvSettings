@@ -17,6 +17,7 @@
 package com.android.tv.settings.accessories;
 
 import android.bluetooth.BluetoothDevice;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
@@ -49,13 +50,19 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
 
     public void updateList(List<BluetoothDevice> devices, String currentTargetAddress,
             String currentTargetStatus, String cancelledAddress) {
+        final Context themedContext = getPreferenceManager().getContext();
 
-        final PreferenceScreen screen =
-                getPreferenceManager().createPreferenceScreen(getActivity());
+        PreferenceScreen screen = getPreferenceScreen();
+        if (screen == null) {
+            screen = getPreferenceManager().createPreferenceScreen(themedContext);
+            setPreferenceScreen(screen);
+        } else {
+            screen.removeAll();
+        }
 
         // Add entries for the discovered Bluetooth devices
         for (BluetoothDevice bt : devices) {
-            final Preference preference = new Preference(getPreferenceManager().getContext());
+            final Preference preference = new Preference(themedContext);
             if (currentTargetAddress.equalsIgnoreCase(bt.getAddress()) &&
                     !currentTargetStatus.isEmpty()) {
                 preference.setSummary(currentTargetStatus);
@@ -69,8 +76,6 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
             preference.setIcon(getDeviceDrawable(bt));
             screen.addPreference(preference);
         }
-
-        setPreferenceScreen(screen);
     }
 
     private Drawable getDeviceDrawable(BluetoothDevice device) {
