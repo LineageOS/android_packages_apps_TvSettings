@@ -226,7 +226,8 @@ public class AppsFragment extends LeanbackPreferenceFragment {
         preference.setKey(info.getPackageName());
         preference.setTitle(info.getName());
         preference.setSummary(info.getSize());
-        preference.setIntent(AppManagementActivity.getLaunchIntent(info.getPackageName()));
+        preference.setFragment(AppManagementFragment.class.getName());
+        AppManagementFragment.prepareArgs(preference.getExtras(), info.getPackageName());
         preference.setIcon(entry.icon);
         return preference;
     }
