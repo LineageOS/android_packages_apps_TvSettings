@@ -84,7 +84,7 @@
         android:key="developer"
         android:title="@string/system_developer_options" >
         <intent
-            android:targetClass="com.android.tv.settings.system.DeveloperOptionsActivity"
+            android:targetClass="com.android.tv.settings.system.development.DevelopmentActivity"
             android:targetPackage="com.android.tv.settings" />
     </Preference>
 </PreferenceScreen>
