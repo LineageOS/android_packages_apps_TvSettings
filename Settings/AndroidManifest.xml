@@ -220,6 +220,7 @@
         </activity-alias>
         <activity
             android:name=".device.sound.SoundActivity"
+            android:theme="@style/Theme.Settings.Transparent"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" >
             <intent-filter>
@@ -307,6 +308,7 @@
         </activity>
         <activity
             android:name=".system.development.DevelopmentActivity"
+            android:theme="@style/Theme.Settings.Transparent"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" >
             <intent-filter>
