@@ -100,12 +100,17 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
     public static BluetoothAccessoryFragment newInstance(String deviceAddress, String deviceName,
             int deviceImgId) {
         final Bundle b = new Bundle(3);
-        b.putString(ARG_ACCESSORY_ADDRESS, deviceAddress);
-        b.putString(ARG_ACCESSORY_NAME, deviceName);
-        b.putInt(ARG_ACCESSORY_ICON_ID, deviceImgId);
+        prepareArgs(b, deviceAddress, deviceName, deviceImgId);
         final BluetoothAccessoryFragment f = new BluetoothAccessoryFragment();
         f.setArguments(b);
         return f;
+    }
+
+    public static void prepareArgs(Bundle b, String deviceAddress, String deviceName,
+            int deviceImgId) {
+        b.putString(ARG_ACCESSORY_ADDRESS, deviceAddress);
+        b.putString(ARG_ACCESSORY_NAME, deviceName);
+        b.putInt(ARG_ACCESSORY_ICON_ID, deviceImgId);
     }
 
     @Override

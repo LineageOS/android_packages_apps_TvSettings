@@ -76,10 +76,14 @@ public class AccountSyncFragment extends LeanbackPreferenceFragment implements
 
     public static AccountSyncFragment newInstance(Account account) {
         final Bundle b = new Bundle(1);
-        b.putParcelable(ARG_ACCOUNT, account);
+        prepareArgs(b, account);
         final AccountSyncFragment f = new AccountSyncFragment();
         f.setArguments(b);
         return f;
+    }
+
+    public static void prepareArgs(Bundle b, Account account) {
+        b.putParcelable(ARG_ACCOUNT, account);
     }
 
     @Override

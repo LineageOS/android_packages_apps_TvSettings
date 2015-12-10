@@ -45,6 +45,7 @@
 
         <activity
             android:name=".MainSettings"
+            android:theme="@style/Theme.Settings.Transparent"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:label="@string/settings_app_name" >
             <intent-filter>

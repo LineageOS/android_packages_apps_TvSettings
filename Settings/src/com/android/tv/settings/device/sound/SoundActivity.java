@@ -17,18 +17,14 @@
 package com.android.tv.settings.device.sound;
 
 import android.app.Activity;
-import android.content.ContentResolver;
 import android.os.Bundle;
 
 import com.android.tv.settings.BaseSettingsFragment;
-import com.android.tv.settings.R;
 
 /**
  * Activity that allows the enabling and disabling of sound effects.
  */
 public class SoundActivity extends Activity {
-
-    private static final String PREFERENCE_KEY = "sound_effects";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,15 +34,6 @@ public class SoundActivity extends Activity {
                     .add(android.R.id.content, SettingsFragment.newInstance())
                     .commit();
         }
-    }
-
-    public static String getPreferenceKey() {
-        return PREFERENCE_KEY;
-    }
-
-    public static int getIconResource(ContentResolver contentResolver) {
-        return SoundFragment.getSoundEffectsEnabled(contentResolver)
-                ? R.drawable.settings_sound_on_icon : R.drawable.settings_sound_off_icon;
     }
 
     public static class SettingsFragment extends BaseSettingsFragment {

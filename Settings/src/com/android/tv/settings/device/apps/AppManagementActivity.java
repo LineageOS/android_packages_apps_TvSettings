@@ -18,14 +18,11 @@ package com.android.tv.settings.device.apps;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.ComponentName;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.android.tv.settings.BaseSettingsFragment;
-import com.android.tv.settings.SettingsConstant;
 
 /**
  * Activity that manages an app.
@@ -33,14 +30,6 @@ import com.android.tv.settings.SettingsConstant;
 public class AppManagementActivity extends Activity {
 
     private static final String TAG = "AppManagementActivity";
-
-    public static Intent getLaunchIntent(String packageName) {
-        Intent i = new Intent();
-        i.setComponent(new ComponentName(SettingsConstant.PACKAGE,
-                SettingsConstant.PACKAGE + ".device.apps.AppManagementActivity"));
-        i.setData(Uri.parse("package:" + packageName));
-        return i;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
