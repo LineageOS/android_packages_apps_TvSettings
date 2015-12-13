@@ -364,7 +364,7 @@ public class AboutActivity extends SettingsLayoutActivity {
                     .build());
         }
 
-        header.add(new Layout.Status.Builder(res, KEY_MOD_VERSION)
+        header.add(new Layout.Action.Builder(res, KEY_MOD_VERSION)
                 .title(R.string.about_mod_version)
                 .description(getDisplayVersion())
                 .build());
