@@ -72,7 +72,7 @@ public class SoundFragment extends LeanbackPreferenceFragment {
         return getSoundEffectsEnabled(getActivity().getContentResolver());
     }
 
-    static boolean getSoundEffectsEnabled(ContentResolver contentResolver) {
+    public static boolean getSoundEffectsEnabled(ContentResolver contentResolver) {
         return Settings.System.getInt(contentResolver, Settings.System.SOUND_EFFECTS_ENABLED, 1)
                 != 0;
     }
