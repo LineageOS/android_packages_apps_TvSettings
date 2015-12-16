@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.system.development;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Keep;
 import android.support.annotation.NonNull;
@@ -46,8 +47,11 @@ public class EnableDevelopmentDialog extends GuidedStepFragment {
 
     @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
-        actions.add(new GuidedAction.Builder().constructYes(getContext()).build());
-        actions.add(new GuidedAction.Builder().constructNo(getContext()).build());
+        final Context context = getActivity();
+        actions.add(new GuidedAction.Builder(context)
+                .clickAction(GuidedAction.ACTION_ID_YES).build());
+        actions.add(new GuidedAction.Builder(context)
+                .clickAction(GuidedAction.ACTION_ID_NO).build());
     }
 
     @Override

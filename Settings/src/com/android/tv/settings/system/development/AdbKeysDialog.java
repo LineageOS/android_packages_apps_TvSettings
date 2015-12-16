@@ -49,8 +49,11 @@ public class AdbKeysDialog extends GuidedStepFragment {
 
     @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
-        actions.add(new GuidedAction.Builder().constructOK(getContext()).build());
-        actions.add(new GuidedAction.Builder().constructCancel(getContext()).build());
+        final Context context = getContext();
+        actions.add(new GuidedAction.Builder(context)
+                .clickAction(GuidedAction.ACTION_ID_OK).build());
+        actions.add(new GuidedAction.Builder(context)
+                .clickAction(GuidedAction.ACTION_ID_CANCEL).build());
     }
 
     @Override

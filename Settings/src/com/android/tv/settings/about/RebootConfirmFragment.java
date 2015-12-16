@@ -54,10 +54,12 @@ public class RebootConfirmFragment extends GuidedStepFragment {
     public void onCreateActions(@NonNull List<GuidedAction> actions,
             Bundle savedInstanceState) {
         final Context context = getActivity();
-        actions.add(new GuidedAction.Builder().constructOK(context)
-                .title(getString(R.string.restart_button_label))
+        actions.add(new GuidedAction.Builder(context)
+                .id(GuidedAction.ACTION_ID_OK)
+                .title(R.string.restart_button_label)
                 .build());
-        actions.add(new GuidedAction.Builder().constructCancel(context)
+        actions.add(new GuidedAction.Builder(context)
+                .clickAction(GuidedAction.ACTION_ID_CANCEL)
                 .build());
     }
 
