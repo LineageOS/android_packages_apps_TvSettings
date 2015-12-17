@@ -17,6 +17,7 @@
 package com.android.tv.settings.name;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -47,14 +48,14 @@ public class DeviceNameSummaryFragment extends GuidedStepFragment {
 
     @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
-        final Activity activity = getActivity();
-        actions.add(new GuidedAction.Builder()
-                .constructContinue(activity)
-                .title(getString(R.string.change_setting))
+        final Context context = getActivity();
+        actions.add(new GuidedAction.Builder(context)
+                .id(GuidedAction.ACTION_ID_CONTINUE)
+                .title(R.string.change_setting)
                 .build());
-        actions.add(new GuidedAction.Builder()
-                .constructCancel(activity)
-                .title(getString(R.string.keep_settings))
+        actions.add(new GuidedAction.Builder(context)
+                .id(GuidedAction.ACTION_ID_CANCEL)
+                .title(R.string.keep_settings)
                 .build());
     }
 

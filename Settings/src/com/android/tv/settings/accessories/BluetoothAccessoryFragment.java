@@ -339,8 +339,10 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
         public void onCreateActions(@NonNull List<GuidedAction> actions,
                 Bundle savedInstanceState) {
             final Context context = getContext();
-            actions.add(new GuidedAction.Builder().constructOK(context).build());
-            actions.add(new GuidedAction.Builder().constructCancel(context).build());
+            actions.add(new GuidedAction.Builder(context)
+                    .clickAction(GuidedAction.ACTION_ID_OK).build());
+            actions.add(new GuidedAction.Builder(context)
+                    .clickAction(GuidedAction.ACTION_ID_CANCEL).build());
         }
 
         @Override
