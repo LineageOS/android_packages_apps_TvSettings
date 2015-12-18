@@ -17,8 +17,10 @@
 package com.android.tv.settings.device.storage;
 
 import android.os.Bundle;
+import android.os.storage.StorageManager;
 import android.os.storage.VolumeRecord;
 import android.support.annotation.NonNull;
+import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 
@@ -26,22 +28,12 @@ import com.android.tv.settings.R;
 
 import java.util.List;
 
-public class ForgetPrivateStepFragment extends StorageGuidedStepFragment {
+public class ForgetPrivateConfirmFragment extends GuidedStepFragment {
 
-    private static final int ACTION_ID_CANCEL = 0;
     private static final int ACTION_ID_FORGET = 1;
 
-    public interface Callback {
-        void onRequestForget(String fsUuid);
-        void onCancelForgetDialog();
-    }
-
-    public static ForgetPrivateStepFragment newInstance(String fsUuid) {
-        final ForgetPrivateStepFragment fragment = new ForgetPrivateStepFragment();
-        final Bundle b = new Bundle(1);
+    public static void prepareArgs(Bundle b, String fsUuid) {
         b.putString(VolumeRecord.EXTRA_FS_UUID, fsUuid);
-        fragment.setArguments(b);
-        return fragment;
     }
 
     @Override
@@ -54,11 +46,10 @@ public class ForgetPrivateStepFragment extends StorageGuidedStepFragment {
 
     @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
-        actions.add(new GuidedAction.Builder()
-                .id(ACTION_ID_CANCEL)
-                .title(getString(android.R.string.cancel))
+        actions.add(new GuidedAction.Builder(getContext())
+                .clickAction(GuidedAction.ACTION_ID_CANCEL)
                 .build());
-        actions.add(new GuidedAction.Builder()
+        actions.add(new GuidedAction.Builder(getContext())
                 .id(ACTION_ID_FORGET)
                 .title(getString(R.string.storage_wizard_forget_action))
                 .build());
@@ -68,12 +59,12 @@ public class ForgetPrivateStepFragment extends StorageGuidedStepFragment {
     public void onGuidedActionClicked(GuidedAction action) {
         final long id = action.getId();
 
-        if (id == ACTION_ID_CANCEL) {
-            final Callback callback = (Callback) getActivity();
-            callback.onCancelForgetDialog();
+        if (id == GuidedAction.ACTION_ID_CANCEL) {
+            getFragmentManager().popBackStack();
         } else if (id == ACTION_ID_FORGET) {
-            final Callback callback = (Callback) getActivity();
-            callback.onRequestForget(getArguments().getString(VolumeRecord.EXTRA_FS_UUID));
+            getContext().getSystemService(StorageManager.class)
+                    .forgetVolume(getArguments().getString(VolumeRecord.EXTRA_FS_UUID));
+            getFragmentManager().popBackStack();
         }
     }
 }

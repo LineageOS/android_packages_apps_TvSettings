@@ -161,6 +161,7 @@
         </activity>
         <activity
             android:name=".device.StorageResetActivity"
+            android:theme="@style/Theme.Settings.Transparent"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true">
             <intent-filter android:priority="1">
@@ -174,6 +175,9 @@
                 <action android:name="android.intent.action.MANAGE_PACKAGE_STORAGE" />
             </intent-filter>
         </activity>
+        <activity android:name=".device.storage.ResetActivity"
+            android:theme="@style/Theme.Settings.Transparent"
+            android:configChanges="keyboard|keyboardHidden|navigation" />
         <activity
             android:name=".connectivity.NetworkActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"

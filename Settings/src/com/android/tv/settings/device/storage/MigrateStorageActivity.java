@@ -26,6 +26,7 @@ import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.view.View;
@@ -127,7 +128,7 @@ public class MigrateStorageActivity extends Activity {
         mMoveId = mPackageManager.movePrimaryStorage(mVolumeInfo);
     }
 
-    public static class MigrateConfirmationStepFragment extends StorageGuidedStepFragment {
+    public static class MigrateConfirmationStepFragment extends GuidedStepFragment {
         private static final String ARG_VOLUME_DESC = "volumeDesc";
 
         private static final int ACTION_CONFIRM = 1;
@@ -155,13 +156,13 @@ public class MigrateStorageActivity extends Activity {
         @Override
         public void onCreateActions(@NonNull List<GuidedAction> actions,
                 Bundle savedInstanceState) {
-            actions.add(new GuidedAction.Builder()
+            actions.add(new GuidedAction.Builder(getContext())
                     .id(ACTION_CONFIRM)
-                    .title(getString(R.string.storage_wizard_migrate_confirm_action_move_now))
+                    .title(R.string.storage_wizard_migrate_confirm_action_move_now)
                     .build());
-            actions.add(new GuidedAction.Builder()
+            actions.add(new GuidedAction.Builder(getContext())
                     .id(ACTION_LATER)
-                    .title(getString(R.string.storage_wizard_migrate_confirm_action_move_later))
+                    .title(R.string.storage_wizard_migrate_confirm_action_move_later)
                     .build());
         }
 

@@ -28,6 +28,7 @@ import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;
@@ -207,9 +208,8 @@ public class UnmountActivity extends Activity {
         public void onLoaderReset(Loader<Boolean> loader) {}
     }
 
-    public static class UnmountInternalStepFragment extends StorageGuidedStepFragment {
+    public static class UnmountInternalStepFragment extends GuidedStepFragment {
 
-        private static final int ACTION_ID_CANCEL = 0;
         private static final int ACTION_ID_UNMOUNT = 1;
 
         public static UnmountInternalStepFragment newInstance(String volumeId) {
@@ -231,11 +231,10 @@ public class UnmountActivity extends Activity {
 
         @Override
         public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
-            actions.add(new GuidedAction.Builder()
-                    .id(ACTION_ID_CANCEL)
-                    .title(getString(android.R.string.cancel))
+            actions.add(new GuidedAction.Builder(getContext())
+                    .clickAction(GuidedAction.ACTION_ID_CANCEL)
                     .build());
-            actions.add(new GuidedAction.Builder()
+            actions.add(new GuidedAction.Builder(getContext())
                     .id(ACTION_ID_UNMOUNT)
                     .title(getString(R.string.storage_eject))
                     .build());
@@ -245,7 +244,7 @@ public class UnmountActivity extends Activity {
         public void onGuidedActionClicked(GuidedAction action) {
             final long id = action.getId();
 
-            if (id == ACTION_ID_CANCEL) {
+            if (id == GuidedAction.ACTION_ID_CANCEL) {
                 getFragmentManager().popBackStack();
             } else if (id == ACTION_ID_UNMOUNT) {
                 ((UnmountActivity) getActivity()).onRequestUnmount();

@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
+import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;
@@ -38,10 +39,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class BackupAppsStepFragment extends StorageGuidedStepFragment implements
+public class BackupAppsStepFragment extends GuidedStepFragment implements
         ApplicationsState.Callbacks {
-
-    private static final String TAG = "BackupAppsStepFragment";
 
     private ApplicationsState mApplicationsState;
     private ApplicationsState.Session mSession;
@@ -143,7 +142,7 @@ public class BackupAppsStepFragment extends StorageGuidedStepFragment implements
             final int index = actions.size();
             final ApplicationInfo info = entry.info;
             final AppInfo appInfo = new AppInfo(getActivity(), entry);
-            actions.add(new GuidedAction.Builder()
+            actions.add(new GuidedAction.Builder(getContext())
                     .title(appInfo.getName())
                     .description(appInfo.getSize())
                     .icon(mIconMap.get(info.packageName))
