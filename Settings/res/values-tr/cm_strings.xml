@@ -20,11 +20,11 @@
   <string name="about_mod_version">CyanogenMod sürümü</string>
   <string name="security_patch">Android güvenlik yaması seviyesi</string>
   <plurals name="show_dev_countdown_cm">
-    <item quantity="one">Geliştirici ayarlarının etkinleştirilmesi için <xliff:g id="step_count">%1$d</xliff:g> adım kaldı.</item>
-    <item quantity="other">Geliştirici ayarlarının etkinleştirilmesi için <xliff:g id="step_count">%1$d</xliff:g> adım kaldı.</item>
+    <item quantity="one">Geliştirme ayarlarının etkinleştirilmesi için <xliff:g id="step_count">%1$d</xliff:g> adımınız kaldı.</item>
+    <item quantity="other">Geliştirme ayarlarının etkinleştirilmesi için <xliff:g id="step_count">%1$d</xliff:g> adımınız kaldı.</item>
   </plurals>
-  <string name="show_dev_on_cm">Geliştirici ayarlarını etkinleştirdiniz!</string>
-  <string name="show_dev_already_cm">Siz zaten geliştirici ayarlarını etkinleştirdiniz.</string>
+  <string name="show_dev_on_cm">Geliştirme ayarlarını etkinleştirdiniz!</string>
+  <string name="show_dev_already_cm">Gerek yok, zaten geliştirme ayarlarını etkinleştirdiniz.</string>
   <string name="about_build_date">İnşa tarihi</string>
   <string name="about_kernel_version">Çekirdek sürümü</string>
   <string name="about_selinux_status">SELinux durumu</string>
@@ -42,16 +42,16 @@
   <string name="update_recovery_title">Cyanogen kurtarma modu</string>
   <string name="update_recovery_on_summary">Sistem güncellemeleri ile güncelle</string>
   <string name="update_recovery_off_summary">Sistem güncellemeleri ile güncelleme</string>
-  <string name="update_recovery_on_warning">DİKKAT: Bu özellik etkinken, yüklü kurtarma modunuz mevcut İS sürümündeki mod ile değiştirilecektir. \n\nKurtarma modunuz sistem güncellemeleri ile birlikte güncellenecektir, böylelikle gelecek sürümler ile uyumluluk sağlanacaktır.\n\nBu özelliği etkinleştirmek ister misiniz?</string>
-  <string name="update_recovery_off_warning">UYARI: Bu özellik devre dışı bırakıldığında, yüklü kurtarma modunuz İS güncellemeleri ile güncellenmeyecektir.\n\nGelecek İS güncellemeleri eskimiş ya da özel kurtarma sürümleri ile yüklenemeyebilir.\n\nBu özelliği gerçekten devre dışı bırakmak istiyor musunuz?</string>
+  <string name="update_recovery_on_warning">DİKKAT: Bu özellik etkinken, yüklü kurtarma modunuz mevcut OS sürümündeki mod ile değiştirilecektir. \n\nKurtarma modunuz sistem güncellemeleri ile birlikte güncellenecektir böylelikle gelecek sürümler ile uyumluluk sağlanacaktır.\n\nBu özelliği etkinleştirmek ister misiniz?</string>
+  <string name="update_recovery_off_warning">UYARI: Bu özellik devre dışı bırakıldığında, yüklü kurtarma modunuz OS güncellemeleri ile güncellenmeyecektir.\n\nGelecek OS güncellemeleri eskimiş ya da özel kurtarma sürümleri ile yüklenemeyebilir.\n\nBu özelliği gerçekten devre dışı bırakmak istiyor musunuz?</string>
   <string name="adb_over_network">Ağ üzerinden ADB</string>
   <string name="adb_over_network_summary">Ağ arayüzleri (Wi\u2011Fi, USB ağları) üzerinde TCP/IP hata ayıklamayı etkinleştir. Bu ayar yeniden başlatılmada sıfırlanır</string>
-  <string name="adb_over_network_disable_summary">Wi\u2011Fi, USB ağları üzerinden TCP/IP hata ayıklamalarını devre dışı bırakmak için tıklayın.</string>
+  <string name="adb_over_network_disable_summary">Ağ arayüzleri üzerinden TCP/IP hata ayıklamalarını devre dışı bırakmak için tıklayın (Wi\u2011Fi, USB networks).</string>
   <string name="adb_over_network_warning">UYARI: Ağ üzerinden ADB etkinken, TV\'niz tüm bağlantılı ağlar üzerinde yetkisiz erişimlere açıktır!\n\nBu özelliği sadece güvenli ağlar üzerindeyken kullanın.\n\nGerçekten bu işlevi kullanmak istiyor musunuz?</string>
   <string name="system_reset_default_home">Varsayılan ana ekrana sıfırla</string>
   <string name="system_home_settings">Ana ekran ayarları</string>
   <string name="reset_launcher_title">Varsayılan ana ekrana sıfırla</string>
-  <string name="reset_launcher_description">Varsayılan ana ekrana sıfırlayarak, alternatif bir ana ekran (örn. Trebuchet) seçebileceksiniz. \n\nVarsayılan ana ekrana sıfırlamak istiyor musunuz?</string>
+  <string name="reset_launcher_description">Varsayılan ana ekranı sıfırlayarak, alternatif bir ana ekran (örn. Trebuchet) seçebileceksiniz. \n\nVarsayılan ana ekranı sıfırlamak istiyor musunuz?</string>
   <string name="reset_launcher_tip">Ana ekran seçim ekranını getirmek için ana ekran tuşuna basın.</string>
   <string name="enable_terminal_title">Yerel terminal</string>
   <string name="enable_terminal_summary">Terminal uygulamasını etkinleştir</string>
