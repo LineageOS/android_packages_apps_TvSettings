@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.device.storage;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
@@ -26,23 +28,17 @@ import com.android.tv.settings.R;
 
 import java.util.List;
 
-public class SlowDriveStepFragment extends GuidedStepFragment {
+public class ConfirmClearCacheFragment extends GuidedStepFragment {
 
-    public interface Callback {
-        void onSlowDriveWarningComplete();
-    }
-
-    public static SlowDriveStepFragment newInstance() {
-        return new SlowDriveStepFragment();
-    }
-
+    @NonNull
     @Override
-    public @NonNull GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
+    public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
         return new GuidanceStylist.Guidance(
-                getString(R.string.storage_wizard_format_slow_title),
-                getString(R.string.storage_wizard_format_slow_summary),
+                getString(R.string.device_storage_clear_cache_title),
+                getString(R.string.device_storage_clear_cache_message),
                 null,
-                getActivity().getDrawable(R.drawable.ic_settings_error));
+                getContext().getDrawable(R.drawable.ic_settings_backuprestore)
+        );
     }
 
     @Override
@@ -50,10 +46,23 @@ public class SlowDriveStepFragment extends GuidedStepFragment {
         actions.add(new GuidedAction.Builder(getContext())
                 .clickAction(GuidedAction.ACTION_ID_OK)
                 .build());
+        actions.add(new GuidedAction.Builder(getContext())
+                .clickAction(GuidedAction.ACTION_ID_CANCEL)
+                .build());
     }
 
     @Override
     public void onGuidedActionClicked(GuidedAction action) {
-        ((Callback) getActivity()).onSlowDriveWarningComplete();
+        if (action.getId() == GuidedAction.ACTION_ID_OK) {
+            super.onGuidedActionClicked(action);
+            final PackageManager pm = getContext().getPackageManager();
+            final List<PackageInfo> infos = pm.getInstalledPackages(0);
+            for (PackageInfo info : infos) {
+                pm.deleteApplicationCacheFiles(info.packageName, null);
+            }
+            getFragmentManager().popBackStack();
+        } else {
+            getFragmentManager().popBackStack();
+        }
     }
 }

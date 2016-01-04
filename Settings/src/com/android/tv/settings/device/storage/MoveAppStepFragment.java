@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
+import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;
@@ -34,7 +35,7 @@ import com.android.tv.settings.R;
 import java.io.File;
 import java.util.List;
 
-public class MoveAppStepFragment extends StorageGuidedStepFragment {
+public class MoveAppStepFragment extends GuidedStepFragment {
 
     private static final String TAG = "MoveAppStepFragment";
 
@@ -112,7 +113,7 @@ public class MoveAppStepFragment extends StorageGuidedStepFragment {
             }
             final File path = candidate.getPath();
             final String avail = Formatter.formatFileSize(getActivity(), path.getFreeSpace());
-            actions.add(new GuidedAction.Builder()
+            actions.add(new GuidedAction.Builder(getContext())
                     .title(mStorageManager.getBestVolumeDescription(candidate))
                     .description(
                             getString(R.string.storage_wizard_back_up_apps_space_available, avail))

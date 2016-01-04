@@ -32,6 +32,7 @@ import android.os.storage.VolumeRecord;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;
@@ -100,7 +101,7 @@ public class NewStorageActivity extends Activity {
         }
     }
 
-    public static class NewStorageFragment extends StorageGuidedStepFragment {
+    public static class NewStorageFragment extends GuidedStepFragment {
 
         private static final int ACTION_BROWSE = 1;
         private static final int ACTION_FORMAT_AS_PRIVATE = 2;
@@ -153,22 +154,22 @@ public class NewStorageActivity extends Activity {
         public void onCreateActions(@NonNull List<GuidedAction> actions,
                 Bundle savedInstanceState) {
             if (TextUtils.isEmpty(mVolumeId)) {
-                actions.add(new GuidedAction.Builder()
-                        .title(getString(R.string.storage_new_action_format_public))
+                actions.add(new GuidedAction.Builder(getContext())
+                        .title(R.string.storage_new_action_format_public)
                         .id(ACTION_FORMAT_AS_PUBLIC)
                         .build());
             } else {
-                actions.add(new GuidedAction.Builder()
-                        .title(getString(R.string.storage_new_action_browse))
+                actions.add(new GuidedAction.Builder(getContext())
+                        .title(R.string.storage_new_action_browse)
                         .id(ACTION_BROWSE)
                         .build());
             }
-            actions.add(new GuidedAction.Builder()
-                    .title(getString(R.string.storage_new_action_adopt))
+            actions.add(new GuidedAction.Builder(getContext())
+                    .title(R.string.storage_new_action_adopt)
                     .id(ACTION_FORMAT_AS_PRIVATE)
                     .build());
-            actions.add(new GuidedAction.Builder()
-                    .title(getString(R.string.storage_new_action_eject))
+            actions.add(new GuidedAction.Builder(getContext())
+                    .title(R.string.storage_new_action_eject)
                     .id(ACTION_UNMOUNT)
                     .build());
         }
@@ -197,9 +198,7 @@ public class NewStorageActivity extends Activity {
         }
     }
 
-    public static class MissingStorageFragment extends StorageGuidedStepFragment {
-
-        private static final int ACTION_OK = 0;
+    public static class MissingStorageFragment extends GuidedStepFragment {
 
         private String mFsUuid;
         private String mDescription;
@@ -238,9 +237,8 @@ public class NewStorageActivity extends Activity {
         @Override
         public void onCreateActions(@NonNull List<GuidedAction> actions,
                 Bundle savedInstanceState) {
-            actions.add(new GuidedAction.Builder()
-                    .title(getString(android.R.string.ok))
-                    .id(ACTION_OK)
+            actions.add(new GuidedAction.Builder(getContext())
+                    .clickAction(GuidedAction.ACTION_ID_OK)
                     .build());
         }
 

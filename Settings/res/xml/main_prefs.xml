@@ -52,11 +52,8 @@
         <Preference
             android:icon="@drawable/ic_settings_storage"
             android:key="storagereset"
-            android:title="@string/device_storage_reset" >
-            <intent
-                android:targetClass="com.android.tv.settings.device.StorageResetActivity"
-                android:targetPackage="com.android.tv.settings" />
-        </Preference>
+            android:title="@string/device_storage_reset"
+            android:fragment="com.android.tv.settings.device.StorageResetFragment" />
         <Preference
             android:icon="@drawable/ic_settings_about"
             android:key="about_device"

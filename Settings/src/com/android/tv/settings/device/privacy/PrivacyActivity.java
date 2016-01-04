@@ -21,7 +21,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.android.tv.settings.device.StorageResetActivity;
+import com.android.tv.settings.device.storage.ResetActivity;
 
 /**
  * Activity that allows enabling and disabling of backup and restore functions.
@@ -32,8 +32,7 @@ public class PrivacyActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final Intent intent = new Intent(this, StorageResetActivity.class);
-        intent.putExtra(StorageResetActivity.RESET_INTENT_EXTRA, true);
+        final Intent intent = new Intent(this, ResetActivity.class);
         startActivity(intent);
         finish();
     }

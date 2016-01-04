@@ -29,6 +29,7 @@ import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
 import android.text.TextUtils;
 import android.util.ArrayMap;
+import android.util.Log;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
@@ -65,10 +66,14 @@ public class AppsFragment extends LeanbackPreferenceFragment {
         }
     };
 
-    public static AppsFragment newInstance(String volumeUuid, String volumeName) {
-        final Bundle b = new Bundle(2);
+    public static void prepareArgs(Bundle b, String volumeUuid, String volumeName) {
         b.putString(AppsActivity.EXTRA_VOLUME_UUID, volumeUuid);
         b.putString(AppsActivity.EXTRA_VOLUME_NAME, volumeName);
+    }
+
+    public static AppsFragment newInstance(String volumeUuid, String volumeName) {
+        final Bundle b = new Bundle(2);
+        prepareArgs(b, volumeUuid, volumeName);
         final AppsFragment f = new AppsFragment();
         f.setArguments(b);
         return f;
@@ -190,6 +195,10 @@ public class AppsFragment extends LeanbackPreferenceFragment {
 
     private void updateAppList(PreferenceGroup group,
             ArrayList<ApplicationsState.AppEntry> entries) {
+        if (group == null) {
+            Log.d(TAG, "Not updating list for null group");
+            return;
+        }
         mUpdateMap.put(group, entries);
 
         // We can get spammed with updates, so coalesce them to reduce jank and flicker
