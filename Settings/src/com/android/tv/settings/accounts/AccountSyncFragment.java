@@ -117,6 +117,11 @@ public class AccountSyncFragment extends LeanbackPreferenceFragment implements
         onSyncStateUpdated();
         mAuthenticatorHelper.listenToAccountUpdates();
         mAuthenticatorHelper.updateAuthDescriptions(getActivity());
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
         onAccountsUpdate(mUserHandle);
     }
 
@@ -252,6 +257,9 @@ public class AccountSyncFragment extends LeanbackPreferenceFragment implements
 
     @Override
     public void onAccountsUpdate(UserHandle userHandle) {
+        if (!isResumed()) {
+            return;
+        }
         if (!accountExists(mAccount)) {
             // The account was deleted
             if (!getFragmentManager().popBackStackImmediate()) {
