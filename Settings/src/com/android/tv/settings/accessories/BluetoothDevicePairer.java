@@ -243,12 +243,7 @@ public class BluetoothDevicePairer {
         }
     };
 
-    private final Runnable mStartRunnable = new Runnable() {
-        @Override
-        public void run() {
-            start();
-        }
-    };
+    private BroadcastReceiver mBluetoothStateReceiver;
 
     private final OpenConnectionCallback mOpenConnectionCallback = new OpenConnectionCallback() {
         public void succeeded() {
@@ -325,13 +320,33 @@ public class BluetoothDevicePairer {
      * criteria is met.
      */
     public void start() {
-        // TODO instead of this, register a broadcast receiver to listen to
-        // Bluetooth state
-        if (!BluetoothAdapter.getDefaultAdapter().isEnabled()) {
+        final BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (!bluetoothAdapter.isEnabled()) {
             Log.d(TAG, "Bluetooth not enabled, delaying startup.");
-            mHandler.removeCallbacks(mStartRunnable);
-            mHandler.postDelayed(mStartRunnable, 1000);
+            if (mBluetoothStateReceiver == null) {
+                mBluetoothStateReceiver = new BroadcastReceiver() {
+                    @Override
+                    public void onReceive(Context context, Intent intent) {
+                        if (intent.getIntExtra(BluetoothAdapter.EXTRA_STATE,
+                                BluetoothAdapter.STATE_OFF) == BluetoothAdapter.STATE_ON) {
+                            Log.d(TAG, "Bluetooth now enabled, starting.");
+                            start();
+                        } else {
+                            Log.d(TAG, "Bluetooth not yet started, got broadcast: " + intent);
+                        }
+                    }
+                };
+                mContext.registerReceiver(mBluetoothStateReceiver,
+                        new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
+            }
+
+            bluetoothAdapter.enable();
             return;
+        } else {
+            if (mBluetoothStateReceiver != null) {
+                mContext.unregisterReceiver(mBluetoothStateReceiver);
+                mBluetoothStateReceiver = null;
+            }
         }
 
         // set status to scanning before we start listening since
@@ -370,6 +385,9 @@ public class BluetoothDevicePairer {
         mHandler.removeCallbacksAndMessages(null);
         if (mLinkReceiverRegistered) {
             unregisterLinkStatusReceiver();
+        }
+        if (mBluetoothStateReceiver != null) {
+            mContext.unregisterReceiver(mBluetoothStateReceiver);
         }
         stopScanning();
     }
