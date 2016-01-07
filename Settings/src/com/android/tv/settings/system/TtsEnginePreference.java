@@ -61,7 +61,7 @@ public class TtsEnginePreference extends Preference {
     public void onBindViewHolder(PreferenceViewHolder viewHolder) {
         super.onBindViewHolder(viewHolder);
 
-        final RadioButton rb = (RadioButton) viewHolder.findViewById(R.id.checkbox);
+        final RadioButton rb = (RadioButton) viewHolder.findViewById(android.R.id.checkbox);
 
         boolean isChecked = getKey().equals(mSharedState.getCurrentKey());
         if (isChecked) {
