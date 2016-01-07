@@ -24,6 +24,7 @@ import android.content.pm.ServiceInfo;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.v14.preference.SwitchPreference;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
@@ -43,6 +44,9 @@ import java.util.List;
 import java.util.Set;
 
 public class AccessibilityFragment extends LeanbackPreferenceFragment {
+    private static final String TOGGLE_HIGH_TEXT_CONTRAST_PREFERENCE =
+            "toggle_high_text_contrast_preference";
+
     private PreferenceGroup mServicesPref;
 
     public static AccessibilityFragment newInstance() {
@@ -70,6 +74,16 @@ public class AccessibilityFragment extends LeanbackPreferenceFragment {
                 new ComponentName(getActivity(), CaptionSetupActivity.class)));
         screen.addPreference(captionsPreference);
 
+        final SwitchPreference highContrastPreference = new SwitchPreference(themedContext);
+        highContrastPreference.setKey(TOGGLE_HIGH_TEXT_CONTRAST_PREFERENCE);
+        highContrastPreference.setPersistent(false);
+        highContrastPreference.setTitle(
+                R.string.accessibility_toggle_high_text_contrast_preference_title);
+        highContrastPreference.setSummary(R.string.experimental_preference);
+        highContrastPreference.setChecked(Settings.Secure.getInt(getContext().getContentResolver(),
+                Settings.Secure.ACCESSIBILITY_HIGH_TEXT_CONTRAST_ENABLED, 0) == 1);
+        screen.addPreference(highContrastPreference);
+
         mServicesPref = new PreferenceCategory(themedContext);
         mServicesPref.setTitle(R.string.system_services);
         screen.addPreference(mServicesPref);
@@ -81,6 +95,18 @@ public class AccessibilityFragment extends LeanbackPreferenceFragment {
         screen.addPreference(ttsPref);
 
         setPreferenceScreen(screen);
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (TextUtils.equals(preference.getKey(), TOGGLE_HIGH_TEXT_CONTRAST_PREFERENCE)) {
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.ACCESSIBILITY_HIGH_TEXT_CONTRAST_ENABLED,
+                    (((SwitchPreference) preference).isChecked() ? 1 : 0));
+            return true;
+        } else {
+            return super.onPreferenceTreeClick(preference);
+        }
     }
 
     private void refreshServices(PreferenceGroup group) {
