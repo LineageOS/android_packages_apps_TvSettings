@@ -1742,12 +1742,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
     static class SystemPropPoker extends AsyncTask<Void, Void, Void> {
         @Override
         protected Void doInBackground(Void... params) {
-            String[] services;
-            try {
-                services = ServiceManager.listServices();
-            } catch (RemoteException e) {
-                return null;
-            }
+            String[] services = ServiceManager.listServices();
             for (String service : services) {
                 IBinder obj = ServiceManager.checkService(service);
                 if (obj != null) {
