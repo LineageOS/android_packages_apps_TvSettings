@@ -73,6 +73,8 @@ public class MainFragment extends LeanbackPreferenceFragment {
     private static final String KEY_GOOGLE_SETTINGS = "googleSettings";
     private static final String KEY_HOME_SETTINGS = "home";
     private static final String KEY_CAST_SETTINGS = "cast";
+    private static final String KEY_SPEECH_SETTINGS = "speech";
+    private static final String KEY_SEARCH_SETTINGS = "search";
 
     private static final String ACCOUNT_TYPE_GOOGLE = "com.google";
 
@@ -179,6 +181,8 @@ public class MainFragment extends LeanbackPreferenceFragment {
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_USAGE));
+        hideIfIntentUnhandled(findPreference(KEY_SPEECH_SETTINGS));
+        hideIfIntentUnhandled(findPreference(KEY_SEARCH_SETTINGS));
     }
 
     @Override
