@@ -25,7 +25,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,9 +47,6 @@ import java.util.Comparator;
  * Displays a UI for selecting a wifi network from a list in the "wizard" style.
  */
 public class SelectFromListWizardFragment extends Fragment {
-
-    private static final String TAG = "SelectFromListWizardFragment";
-    private static final boolean DEBUG = false;
 
     public static class ListItemComparator implements Comparator<ListItem> {
         @Override
@@ -95,7 +91,8 @@ public class SelectFromListWizardFragment extends Fragment {
 
         public ListItem(ScanResult scanResult) {
             mName = scanResult.SSID;
-            mIconResource = WifiSecurity.isOpen(scanResult) ? R.drawable.setup_wifi_signal_open
+            mIconResource = WifiSecurity.NONE == WifiSecurity.getSecurity(scanResult)
+                    ? R.drawable.setup_wifi_signal_open
                     : R.drawable.setup_wifi_signal_lock;
             mIconLevel = WifiManager.calculateSignalLevel(scanResult.level, 4);
             mHasIconLevel = true;
@@ -131,8 +128,7 @@ public class SelectFromListWizardFragment extends Fragment {
 
             @Override
             public ListItem createFromParcel(Parcel source) {
-                ScanResult scanResult = (ScanResult) source.readParcelable(
-                        ScanResult.class.getClassLoader());
+                ScanResult scanResult = source.readParcelable(ScanResult.class.getClassLoader());
                 if (scanResult == null) {
                     return new ListItem(source.readString(), source.readInt());
                 } else {
@@ -212,13 +208,6 @@ public class SelectFromListWizardFragment extends Fragment {
         if (lastSelection != null) {
             for (int i = 0, size = listElements.size(); i < size; i++) {
                 if (lastSelection.equals(listElements.get(i))) {
-                    if (DEBUG) {
-                        Log.d(TAG, "Found " + lastSelection.getName() + " with ssid "
-                                + (mLastSelected.getScanResult() == null ? null
-                                        : mLastSelected.getScanResult().SSID)
-                                + " and bssid " + (mLastSelected.getScanResult() == null ? null
-                                        : mLastSelected.getScanResult().BSSID));
-                    }
                     mScrollAdapterView.setSelection(i);
                     break;
                 }
@@ -317,13 +306,6 @@ public class SelectFromListWizardFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 mLastSelected = mListItems.get(position);
-                if (DEBUG) {
-                    Log.d(TAG, "Scrolled to " + mLastSelected.getName() + " with ssid "
-                            + (mLastSelected.getScanResult() == null ? null
-                                    : mLastSelected.getScanResult().SSID) + " and bssid "
-                            + (mLastSelected.getScanResult() == null ? null
-                                    : mLastSelected.getScanResult().BSSID));
-                }
                 Activity a = getActivity();
                 if (a instanceof Listener) {
                     ((Listener) a).onListFocusChanged(mLastSelected);

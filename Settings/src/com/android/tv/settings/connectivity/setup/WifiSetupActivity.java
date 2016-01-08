@@ -410,18 +410,17 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
     }
 
     private ArrayList<ListItem> getNetworks() {
-        ArrayList<SelectFromListWizardFragment.ListItem> listItems = new ArrayList<
-                SelectFromListWizardFragment.ListItem>();
+        ArrayList<SelectFromListWizardFragment.ListItem> listItems = new ArrayList<>();
         final List<ScanResult> results = mWifiManager.getScanResults();
-        final HashMap<Pair<String, WifiSecurity>, ScanResult> consolidatedScanResults = new HashMap<
-                Pair<String, WifiSecurity>, ScanResult>();
+        final HashMap<Pair<String, WifiSecurity>, ScanResult> consolidatedScanResults =
+                new HashMap<>();
         for (ScanResult result : results) {
             if (TextUtils.isEmpty(result.SSID)) {
                 continue;
             }
 
-            Pair<String, WifiSecurity> key = new Pair<String, WifiSecurity>(
-                    result.SSID, WifiSecurity.getSecurity(result));
+            Pair<String, WifiSecurity> key =
+                    new Pair<>(result.SSID, WifiSecurity.getSecurity(result));
             ScanResult existing = consolidatedScanResults.get(key);
             if (existing == null || existing.level < result.level) {
                 consolidatedScanResults.put(key, result);
@@ -457,7 +456,8 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
                     .putExtras(getIntent().getExtras()));
         } else {
             ScanResult scanResult = getListItem(chooseNetworkPage).getScanResult();
-            mConfiguration = WifiConfigHelper.getConfigurationForNetwork(this, scanResult);
+            mConfiguration = WifiConfigHelper.getConfiguration(this, scanResult.SSID,
+                    WifiSecurity.getSecurity(scanResult));
             mWifiSecurity = WifiSecurity.getSecurity(scanResult);
 
             if (WifiConfigHelper.isNetworkSaved(mConfiguration)) {

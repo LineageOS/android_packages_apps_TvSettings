@@ -117,7 +117,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
         mConnectivityListener = new ConnectivityListener(getContext(),
                 new ConnectivityListener.Listener() {
                     @Override
-                    public void onConnectivityChange(Intent intent) {
+                    public void onConnectivityChange() {
                         updateWifi();
                     }
                 });

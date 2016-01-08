@@ -232,7 +232,7 @@ public class ConnectToWifiFragment extends MessageWizardFragment
     }
 
     @Override
-    public void onConnectivityChange(Intent intent) {
+    public void onConnectivityChange() {
         if (DEBUG) Log.d(TAG, "Connectivity changed");
         if (isNetworkConnected()) {
             mConnected = true;
