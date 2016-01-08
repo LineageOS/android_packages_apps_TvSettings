@@ -22,7 +22,6 @@ import android.content.res.Resources;
 import android.net.IpConfiguration;
 import android.net.IpConfiguration.IpAssignment;
 import android.net.IpConfiguration.ProxySettings;
-import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -31,6 +30,7 @@ import android.os.SystemClock;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.Layout;
 import com.android.tv.settings.dialog.Layout.Action;
@@ -51,10 +51,7 @@ import java.util.List;
 public class NetworkActivity extends SettingsLayoutActivity implements
         ConnectivityListener.Listener, ConnectivityListener.WifiNetworkListener {
 
-    public static final String PREFERENCE_KEY = "wifi";
-
     private static final int REQUEST_CODE_ADVANCED_OPTIONS = 1;
-    private static final int WIFI_SCAN_INTERVAL_CAP_MILLIS = 10 * 1000;
     private static final int WIFI_UI_REFRESH_INTERVAL_CAP_MILLIS = 15 * 1000;
 
     private static final int NUMBER_SIGNAL_LEVELS = 4;
@@ -72,15 +69,6 @@ public class NetworkActivity extends SettingsLayoutActivity implements
     private Resources mRes;
     private final Handler mHandler = new Handler();
 
-    private final Runnable mRefreshWifiAccessPoints = new Runnable() {
-        @Override
-        public void run() {
-            mConnectivityListener.scanWifiAccessPoints(NetworkActivity.this);
-            mHandler.removeCallbacks(mRefreshWifiAccessPoints);
-            mHandler.postDelayed(mRefreshWifiAccessPoints, WIFI_SCAN_INTERVAL_CAP_MILLIS);
-        }
-    };
-
     private final Runnable mSetScanAlways = new Runnable () {
         @Override
         public void run() {
@@ -94,6 +82,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         mRes = getResources();
         mConnectivityListener = new ConnectivityListener(this, this);
+        mConnectivityListener.setWifiListener(this);
 
         mAlwaysScanWifi = new SelectionGroup(getResources(), new int[][] {
             { R.string.on, ACTION_SCAN_WIFI_ON },
@@ -103,6 +92,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
             scanAlwaysAvailable = Settings.Global.getInt(getContentResolver(),
                     Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE);
         } catch (Settings.SettingNotFoundException e) {
+            // Ignore
         }
         mAlwaysScanWifi.setSelected(scanAlwaysAvailable == 1 ? ACTION_SCAN_WIFI_ON :
                 ACTION_SCAN_WIFI_OFF);
@@ -122,9 +112,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
     @Override
     public void onResume() {
         mConnectivityListener.start();
-        mHandler.removeCallbacks(mRefreshWifiAccessPoints);
-        mHandler.post(mRefreshWifiAccessPoints);
-        onConnectivityChange(null);
+        onConnectivityChange();
 
         // TODO(lanechr): It's an anti-pattern that we have to notify Layout here; see b/18889239.
         mWifiAdvancedLayout.refreshView();
@@ -134,7 +122,6 @@ public class NetworkActivity extends SettingsLayoutActivity implements
 
     @Override
     protected void onPause() {
-        mHandler.removeCallbacks(mRefreshWifiAccessPoints);
         mConnectivityListener.stop();
         super.onPause();
     }
@@ -147,7 +134,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
 
     // ConnectivityListener.Listener overrides.
     @Override
-    public void onConnectivityChange(Intent intent) {
+    public void onConnectivityChange() {
         mEthernetConnectedDescription.refreshView();
         mWifiConnectedDescription.refreshView();
         refreshEnableWifiSelection();
@@ -484,7 +471,7 @@ public class NetworkActivity extends SettingsLayoutActivity implements
          *                        be excluded by virtue of inadequate signal strength.
          */
         private Layout initAvailableWifiNetworks(boolean top3EntriesOnly, String mustHave) {
-            List<ScanResult> networks = mConnectivityListener.getAvailableNetworks();
+            List<AccessPoint> networks = mConnectivityListener.getAvailableNetworks();
             Layout layout = new Layout();
             if (networks.size() > 0) {
                 int maxItems = top3EntriesOnly ? 3 : Integer.MAX_VALUE;
@@ -492,16 +479,16 @@ public class NetworkActivity extends SettingsLayoutActivity implements
                 // Generate a new list with size less than "maxItems" that ensures "mustHave" is
                 // included.
                 boolean haveMustHave = false;
-                List<ScanResult> displayList = new ArrayList<>();
-                for (ScanResult scanResult : networks) {
-                    if (!haveMustHave && TextUtils.equals(scanResult.SSID, mustHave)) {
+                List<AccessPoint> displayList = new ArrayList<>();
+                for (AccessPoint accessPoint : networks) {
+                    if (!haveMustHave && TextUtils.equals(accessPoint.getSsid(), mustHave)) {
                         haveMustHave = true;
                         if (displayList.size() == maxItems) {
                             displayList.remove(maxItems-1);
                         }
-                        displayList.add(scanResult);
+                        displayList.add(accessPoint);
                     } else if (displayList.size() < maxItems) {
-                        displayList.add(scanResult);
+                        displayList.add(accessPoint);
                     }
                     if (haveMustHave && displayList.size() == maxItems) {
                         break;
@@ -511,22 +498,22 @@ public class NetworkActivity extends SettingsLayoutActivity implements
                 // If a network is connected, it will be the first on the list.
                 boolean isConnected =
                     mConnectivityListener.getConnectivityStatus().isWifiConnected();
-                for (ScanResult network : displayList) {
+                for (AccessPoint network : displayList) {
                     if (network != null) {
                         WifiSecurity security = WifiSecurity.getSecurity(network);
                         int signalLevel = WifiManager.calculateSignalLevel(
-                                network.level, NUMBER_SIGNAL_LEVELS);
+                                network.getRssi(), NUMBER_SIGNAL_LEVELS);
                         int imageResourceId = getNetworkIconRes(security.isOpen(), signalLevel);
 
                         if (isConnected) {
-                            addWifiConnectedHeader(layout, network.SSID, imageResourceId);
+                            addWifiConnectedHeader(layout, network.getSsidStr(), imageResourceId);
                         } else {
                             Intent intent =
                                 WifiConnectionActivity.createIntent(mContext, network, security);
                             String networkDescription =
                                 security.isOpen() ? "" : security.getName(mContext);
                             layout.add(new Action.Builder(mRes, intent)
-                                    .title(network.SSID)
+                                    .title(network.getSsidStr())
                                     .icon(imageResourceId)
                                     .description(networkDescription).build());
                         }
