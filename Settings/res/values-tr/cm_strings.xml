@@ -18,8 +18,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="about_cmupdate_settings_title">CyanogenMod güncellemeleri</string>
   <string name="about_mod_version">CyanogenMod sürümü</string>
-  <string name="show_dev_on_cm">Geliştirici ayarlarını etkinleştirdiniz!</string>
-  <string name="show_dev_already_cm">Siz zaten geliştirici ayarlarını etkinleştirdiniz.</string>
+  <plurals name="show_dev_countdown_cm">
+    <item quantity="one">Geliştirici ayarlarının etkinleştirilmesine <xliff:g id="step_count">%1$d</xliff:g> adım uzaktasınız.</item>
+    <item quantity="other">Geliştirici ayarlarının etkinleştirilmesine <xliff:g id="step_count">%1$d</xliff:g> adım uzaktasınız.</item>
+  </plurals>
+  <string name="show_dev_on_cm">Geliştirme ayarlarını etkinleştirdiniz!</string>
+  <string name="show_dev_already_cm">Gerek yok, zaten geliştirme ayarlarını etkinleştirdiniz.</string>
   <string name="about_build_date">İnşa tarihi</string>
   <string name="about_kernel_version">Çekirdek sürümü</string>
   <string name="about_selinux_status">SELinux durumu</string>
@@ -35,13 +39,14 @@
   <string name="root_access_adb">Sadece ADB</string>
   <string name="root_access_all">Uygulamalar ve ADB</string>
   <string name="enable_terminal_title">Yerel terminal</string>
+  <string name="enable_terminal_summary">Yerel kabuk erişimi sunan uçbirim uygulamasını etkinleştirin</string>
   <string name="system_display">Görünüm</string>
   <string name="system_display_overscan">Ekranı uydur</string>
   <string name="system_display_overscan_description">Görüntünün ekran boyutunuza uyması için ayarlar.</string>
   <string name="system_reset_default_home">Varsayılan ana ekrana sıfırla</string>
   <string name="system_home_settings">Ana ekran ayarları</string>
   <string name="reset_launcher_title">Varsayılan ana ekrana sıfırla</string>
-  <string name="reset_launcher_description">Varsayılan ana ekrana sıfırlayarak, alternatif bir ana ekran (örn. Trebuchet) seçebileceksiniz. \n\nVarsayılan ana ekrana sıfırlamak istiyor musunuz?</string>
+  <string name="reset_launcher_description">Varsayılan ana ekranı sıfırlayarak, alternatif bir ana ekran (örn. Trebuchet) seçebileceksiniz. \n\nVarsayılan ana ekranı sıfırlamak istiyor musunuz?</string>
   <string name="reset_launcher_tip">Ana ekran seçim ekranını getirmek için ana ekran tuşuna basın.</string>
   <string name="advanced_reboot_title">Gelişmiş yeniden başlatma</string>
   <string name="advanced_reboot_summary">Yeniden başlat menüsüne, kurtarma, ön yükleme moduna geçmeyi ya da yazılımsal yeniden başlatma seçeneğini ekler</string>
