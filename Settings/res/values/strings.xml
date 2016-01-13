@@ -1220,6 +1220,8 @@
     <string name="restricted_profile_change_password_title" >Change pin</string>
     <!-- Description for action to configure an application's restriction [CHAR LIMIT=200] -->
     <string name="restriction_description" ><xliff:g id="description">%1$s</xliff:g>\n<xliff:g id="value">%2$s</xliff:g></string>
+    <!-- Summary for a case when app entries that are controlled by another entry and app can access user accounts [CHAR LIMIT=none] -->
+    <string name="app_sees_restricted_accounts_and_controlled_by">This app can access your accounts. Controlled by <xliff:g id="app">%1$s</xliff:g></string>
 
     <!-- PIN UX -->
     <eat-comment />

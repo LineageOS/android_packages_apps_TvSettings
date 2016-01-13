@@ -200,6 +200,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".users.AppRestrictionsActivity"
+            android:theme="@style/Theme.Settings.Transparent"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:exported="false" />
+        <activity
             android:name=".users.RestrictedProfileActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true"
