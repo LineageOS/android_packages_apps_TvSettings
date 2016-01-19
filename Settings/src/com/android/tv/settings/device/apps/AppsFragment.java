@@ -22,6 +22,7 @@ import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
+import android.support.annotation.NonNull;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
@@ -29,6 +30,7 @@ import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
 import android.text.TextUtils;
 import android.util.ArrayMap;
+import android.util.ArraySet;
 import android.util.Log;
 
 import com.android.settingslib.applications.ApplicationsState;
@@ -36,6 +38,7 @@ import com.android.tv.settings.R;
 
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Set;
 
 public class AppsFragment extends LeanbackPreferenceFragment {
 
@@ -221,22 +224,42 @@ public class AppsFragment extends LeanbackPreferenceFragment {
     private void updateAppListInternal(PreferenceGroup group,
             ArrayList<ApplicationsState.AppEntry> entries) {
         if (entries != null) {
-            group.removeAll();
-
+            final Set<String> touched = new ArraySet<>(entries.size());
             for (final ApplicationsState.AppEntry entry : entries) {
-                group.addPreference(getPreferenceForApp(entry));
+                final String packageName = entry.info.packageName;
+                Preference recycle = group.findPreference(packageName);
+                if (recycle == null) {
+                    recycle = new Preference(getPreferenceManager().getContext());
+                }
+                final Preference newPref = bindPreference(recycle, entry);
+                group.addPreference(newPref);
+                touched.add(packageName);
+            }
+            for (int i = 0; i < group.getPreferenceCount();) {
+                final Preference pref = group.getPreference(i);
+                if (touched.contains(pref.getKey())) {
+                    i++;
+                } else {
+                    group.removePreference(pref);
+                }
             }
         }
     }
 
-    private Preference getPreferenceForApp(ApplicationsState.AppEntry entry) {
-        final AppInfo info = new AppInfo(getActivity(), entry);
-        final Preference preference = new Preference(getPreferenceManager().getContext());
-        preference.setKey(info.getPackageName());
-        preference.setTitle(info.getName());
-        preference.setSummary(info.getSize());
+    /**
+     * Creates or updates a preference according to an {@link ApplicationsState.AppEntry} object
+     * @param preference If non-null, updates this preference object, otherwise creates a new one
+     * @param entry Info to populate preference
+     * @return Updated preference entry
+     */
+    private Preference bindPreference(@NonNull Preference preference,
+            ApplicationsState.AppEntry entry) {
+        preference.setKey(entry.info.packageName);
+        entry.ensureLabel(getContext());
+        preference.setTitle(entry.label);
+        preference.setSummary(entry.sizeStr);
         preference.setFragment(AppManagementFragment.class.getName());
-        AppManagementFragment.prepareArgs(preference.getExtras(), info.getPackageName());
+        AppManagementFragment.prepareArgs(preference.getExtras(), entry.info.packageName);
         preference.setIcon(entry.icon);
         return preference;
     }
