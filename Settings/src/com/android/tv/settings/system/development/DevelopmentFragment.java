@@ -1177,8 +1177,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
     private void updateForceResizableOptions() {
         updateSwitchPreference(mForceResizable,
                 Settings.Global.getInt(mContentResolver,
-                Settings.Global.DEVELOPMENT_FORCE_RESIZABLE_ACTIVITIES,
-                Build.IS_DEBUGGABLE ? 1 : 0) != 0);
+                Settings.Global.DEVELOPMENT_FORCE_RESIZABLE_ACTIVITIES, 0) != 0);
     }
 
     private void writeForceResizableOptions() {
