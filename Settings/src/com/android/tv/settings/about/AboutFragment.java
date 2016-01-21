@@ -16,8 +16,10 @@
 
 package com.android.tv.settings.about;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,6 +31,7 @@ import android.os.UserManager;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v17.preference.LeanbackPreferenceFragment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.telephony.CarrierConfigManager;
@@ -72,6 +75,13 @@ public class AboutFragment extends LeanbackPreferenceFragment {
 
     private UserManager mUm;
 
+    private final BroadcastReceiver mDeviceNameReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            refreshDeviceName();
+        }
+    };
+
     public static AboutFragment newInstance() {
         return new AboutFragment();
     }
@@ -88,8 +98,8 @@ public class AboutFragment extends LeanbackPreferenceFragment {
         setPreferencesFromResource(R.xml.device_info_settings, null);
         final PreferenceScreen screen = getPreferenceScreen();
 
+        refreshDeviceName();
         final Preference deviceNamePref = findPreference(KEY_DEVICE_NAME);
-        deviceNamePref.setSummary(DeviceManager.getDeviceName(getActivity()));
         PreferenceUtils.resolveSystemActivityOrRemove(getActivity(), screen, deviceNamePref, 0);
 
         final Preference firmwareVersionPref = findPreference(KEY_FIRMWARE_VERSION);
@@ -178,6 +188,15 @@ public class AboutFragment extends LeanbackPreferenceFragment {
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        refreshDeviceName();
+
+        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mDeviceNameReceiver,
+                new IntentFilter(DeviceManager.ACTION_DEVICE_NAME_UPDATE));
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
         final boolean developerEnabled = Settings.Global.getInt(getActivity().getContentResolver(),
@@ -185,6 +204,19 @@ public class AboutFragment extends LeanbackPreferenceFragment {
                 android.os.Build.TYPE.equals("eng") ? 1 : 0) == 1;
         mDevHitCountdown = developerEnabled ? -1 : TAPS_TO_BE_A_DEVELOPER;
         mDevHitToast = null;
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mDeviceNameReceiver);
+    }
+
+    private void refreshDeviceName() {
+        final Preference deviceNamePref = findPreference(KEY_DEVICE_NAME);
+        if (deviceNamePref != null) {
+            deviceNamePref.setSummary(DeviceManager.getDeviceName(getActivity()));
+        }
     }
 
     @Override
