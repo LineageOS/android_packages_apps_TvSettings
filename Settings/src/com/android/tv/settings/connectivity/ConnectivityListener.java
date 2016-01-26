@@ -25,6 +25,7 @@ import android.net.EthernetManager;
 import android.net.IpConfiguration;
 import android.net.LinkAddress;
 import android.net.LinkProperties;
+import android.net.Network;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiConfiguration.KeyMgmt;
@@ -35,8 +36,6 @@ import android.text.TextUtils;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.settingslib.wifi.WifiTracker;
 
-import java.net.Inet4Address;
-import java.net.InetAddress;
 import java.util.List;
 
 /**
@@ -182,28 +181,42 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
                 && mEthernetManager.isAvailable();
     }
 
-    public String getEthernetMacAddress() {
-        NetworkInfo networkInfo = mConnectivityManager.getActiveNetworkInfo();
-        if (networkInfo == null ||networkInfo.getType() != ConnectivityManager.TYPE_ETHERNET) {
-            return "";
-        } else {
-            return networkInfo.getExtraInfo();
+    private Network getFirstEthernet() {
+        final Network[] networks = mConnectivityManager.getAllNetworks();
+        for (final Network network : networks) {
+            NetworkInfo networkInfo = mConnectivityManager.getNetworkInfo(network);
+            if (networkInfo != null && networkInfo.getType() == ConnectivityManager.TYPE_ETHERNET) {
+                return network;
+            }
         }
+        return null;
+    }
+
+    public String getEthernetMacAddress() {
+        final Network network = getFirstEthernet();
+        return network != null ? mConnectivityManager.getNetworkInfo(network).getExtraInfo() : null;
     }
 
     public String getEthernetIpAddress() {
-        LinkProperties linkProperties =
-                mConnectivityManager.getLinkProperties(ConnectivityManager.TYPE_ETHERNET);
-
-        for (LinkAddress linkAddress: linkProperties.getAllLinkAddresses()) {
-            InetAddress address = linkAddress.getAddress();
-            if (address instanceof Inet4Address) {
-                return address.getHostAddress();
-            }
+        final Network network = getFirstEthernet();
+        if (network == null) {
+            return null;
         }
-
-        // IPv6 address will not be shown like WifiInfo internally does.
-        return "";
+        final StringBuilder sb = new StringBuilder();
+        boolean gotAddress = false;
+        final LinkProperties linkProperties = mConnectivityManager.getLinkProperties(network);
+        for (LinkAddress linkAddress : linkProperties.getLinkAddresses()) {
+            if (gotAddress) {
+                sb.append("\n");
+            }
+            sb.append(linkAddress.getAddress().getHostAddress());
+            gotAddress = true;
+        }
+        if (gotAddress) {
+            return sb.toString();
+        } else {
+            return null;
+        }
     }
 
     public int getWifiSignalStrength(int maxLevel) {

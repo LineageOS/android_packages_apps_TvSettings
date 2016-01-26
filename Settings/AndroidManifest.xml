@@ -178,8 +178,8 @@
         <activity android:name=".device.storage.ResetActivity"
             android:theme="@style/Theme.Settings.Transparent"
             android:configChanges="keyboard|keyboardHidden|navigation" />
-        <activity
-            android:name=".connectivity.NetworkActivity"
+        <activity android:name=".connectivity.NetworkActivity"
+            android:theme="@style/Theme.Settings.Transparent"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:exported="true" >
 
