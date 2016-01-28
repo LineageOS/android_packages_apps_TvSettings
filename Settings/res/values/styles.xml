@@ -14,6 +14,7 @@
      limitations under the License.
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <attr name="wifi_signal_color" format="reference" />
 
     <style name="SettingsStyle.TextAppearanceMedium" parent="@android:style/TextAppearance.Holo.Medium">
         <item name="android:textSize">14sp</item>
@@ -39,6 +40,8 @@
         <item name="android:windowShowWallpaper">true</item>
         <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Leanback</item>
+        <item name="wifi_signal">@drawable/wifi_signal</item>
+        <item name="wifi_signal_color">?android:attr/colorAccent</item>
     </style>
 
     <style name="Theme.Settings.Transparent">

@@ -43,6 +43,19 @@ public class WifiConnectionActivity extends WifiMultiPagedFormActivity
                 .putExtra(EXTRA_WIFI_SECURITY_NAME, security.name());
     }
 
+    public static Intent createIntent(Context context, AccessPoint result) {
+        final WifiSecurity security = WifiSecurity.getSecurity(result);
+        return createIntent(context, result, security);
+    }
+
+    public static Intent createIntent(Context context, WifiConfiguration configuration) {
+        final WifiSecurity security = WifiSecurity.getSecurity(configuration);
+        final String ssid = configuration.getPrintableSsid();
+        return new Intent(context, WifiConnectionActivity.class)
+                .putExtra(EXTRA_WIFI_SSID, ssid)
+                .putExtra(EXTRA_WIFI_SECURITY_NAME, security.name());
+    }
+
     private AdvancedWifiOptionsFlow mAdvancedWifiOptionsFlow;
     private WifiConfiguration mConfiguration;
     private WifiSecurity mWifiSecurity;
