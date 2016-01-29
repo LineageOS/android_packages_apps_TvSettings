@@ -20,7 +20,7 @@ import android.accounts.AccountManager;
 import android.app.ActivityManagerNative;
 import android.app.Fragment;
 import android.content.Context;
-import android.content.pm.IPackageManager;
+import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -48,7 +48,7 @@ import java.util.ArrayList;
  * Activity that allows the configuration of a user's restricted profile.
  */
 public class RestrictedProfileDialogFragment extends Fragment implements Action.Listener,
-        AppLoadingTask.Listener, RestrictedProfilePinDialogFragment.Callback {
+        RestrictedProfilePinDialogFragment.Callback {
 
     private static final String TAG = "RestrictedProfile";
 
@@ -83,8 +83,6 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
     private DialogFragment mMainMenuDialogFragment;
     private ILockSettings mLockSettingsService;
     private Handler mHandler;
-    private IPackageManager mIPm;
-    private AppLoadingTask mAppLoadingTask;
     private Action mConfigAppsAction;
     private DialogFragment mConfigDialogFragment;
 
@@ -122,9 +120,9 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
             int userId = result.id;
             if (result.isRestricted() &&
                     result.restrictedProfileParentId == UserHandle.myUserId()) {
-                DialogFragment dialogFragment = UserAppRestrictionsDialogFragment.newInstance(
-                        getActivity(), userId, true);
-                DialogFragment.add(getFragmentManager(), dialogFragment);
+                startActivity(new Intent(getContext(), AppRestrictionsActivity.class)
+                        .putExtra(AppRestrictionsFragment.EXTRA_USER_ID, userId)
+                        .putExtra(AppRestrictionsFragment.EXTRA_NEW_USER, true));
                 mMainMenuDialogFragment.setActions(getMainMenuActions());
             }
         }
@@ -134,7 +132,6 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mHandler = new Handler();
-        mIPm = IPackageManager.Stub.asInterface(ServiceManager.getService("package"));
         mUserManager = (UserManager) getActivity().getSystemService(Context.USER_SERVICE);
         mRestrictedUserInfo = findRestrictedUser(mUserManager);
         mConfigAppsAction = createConfigAppsAction(-1);
@@ -154,11 +151,12 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
     @Override
     public void onResume() {
         super.onResume();
-        if (mRestrictedUserInfo != null && (mAppLoadingTask == null
-                || mAppLoadingTask.getStatus() == AsyncTask.Status.FINISHED)) {
-            mAppLoadingTask = new AppLoadingTask(getActivity(), mRestrictedUserInfo.id, false, mIPm,
-                    this);
-            mAppLoadingTask.execute((Void[]) null);
+        if (mRestrictedUserInfo != null) {
+            // TODO: not actually -1, all this code will be going away shortly
+            mConfigAppsAction = createConfigAppsAction(-1);
+            if (mConfigDialogFragment != null) {
+                mConfigDialogFragment.setActions(getConfigActions());
+            }
         }
     }
 
@@ -166,24 +164,6 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(STATE_PIN_MODE, mPinMode);
-    }
-
-    @Override
-    public void onPackageEnableChanged(String packageName, boolean enabled) {
-    }
-
-    @Override
-    public void onActionsLoaded(ArrayList<Action> actions) {
-        int allowedApps = 0;
-        for(Action action : actions) {
-            if(action.isChecked()) {
-                allowedApps++;
-            }
-        }
-        mConfigAppsAction = createConfigAppsAction(allowedApps);
-        if (mConfigDialogFragment != null) {
-            mConfigDialogFragment.setActions(getConfigActions());
-        }
     }
 
     @Override
@@ -222,9 +202,8 @@ public class RestrictedProfileDialogFragment extends Fragment implements Action.
             mConfigDialogFragment.setListener(this);
             DialogFragment.add(getFragmentManager(), mConfigDialogFragment);
         } else if (ACTION_RESTRICTED_PROFILE_CONFIG_APPS.equals(action.getKey())) {
-            DialogFragment dialogFragment = UserAppRestrictionsDialogFragment.newInstance(
-                    getActivity(), mRestrictedUserInfo.id, false);
-            DialogFragment.add(getFragmentManager(), dialogFragment);
+            startActivity(new Intent(getContext(), AppRestrictionsActivity.class)
+                    .putExtra(AppRestrictionsFragment.EXTRA_USER_ID, mRestrictedUserInfo.id));
         } else if (ACTION_RESTRICTED_PROFILE_DELETE.equals(action.getKey())) {
             if (getFragmentManager().findFragmentByTag(PinDialogFragment.DIALOG_TAG) != null) {
                 return;
