@@ -218,8 +218,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
         final ArrayList<String> allowableAccountTypes = new ArrayList<>(authTypes.length);
         final Context themedContext = getPreferenceManager().getContext();
 
-        int googleAccountCount = 0;
-
         for (AuthenticatorDescription authDesc : authTypes) {
             final Context targetContext;
             try {
@@ -258,7 +256,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
             // Icon URI to be displayed for each account is based on the type of authenticator.
             Drawable authImage = null;
             if (ACCOUNT_TYPE_GOOGLE.equals(authDesc.type)) {
-                googleAccountCount = accounts.length;
                 authImage = getActivity().getDrawable(R.drawable.ic_settings_google_account);
             } else {
                 try {
@@ -284,20 +281,16 @@ public class MainFragment extends LeanbackPreferenceFragment {
         // Never allow restricted profile to add accounts.
         final Preference addAccountPref = findPreference(KEY_ADD_ACCOUNT);
         if (addAccountPref != null) {
+            addAccountPref.setOrder(Integer.MAX_VALUE);
             if (isRestricted()) {
                 addAccountPref.setVisible(false);
             } else {
-                // If there's already a Google account installed, disallow installing a second one.
-                if (googleAccountCount > 0) {
-                    allowableAccountTypes.remove(ACCOUNT_TYPE_GOOGLE);
-                }
-
-                // If there are available account types, add the "add account" button.
                 Intent i = new Intent().setComponent(new ComponentName("com.android.tv.settings",
                         "com.android.tv.settings.accounts.AddAccountWithTypeActivity"));
                 i.putExtra(AddAccountWithTypeActivity.EXTRA_ALLOWABLE_ACCOUNT_TYPES_STRING_ARRAY,
                         allowableAccountTypes.toArray(new String[allowableAccountTypes.size()]));
 
+                // If there are available account types, show the "add account" button.
                 addAccountPref.setVisible(!allowableAccountTypes.isEmpty());
                 addAccountPref.setIntent(i);
             }
