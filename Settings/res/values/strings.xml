@@ -525,7 +525,7 @@
     <string name="storage_eject">Eject</string>
     <!-- Storage settings erase and format action [CHAR LIMIT=50] -->
     <string name="storage_format">Erase &amp; format</string>
-    <!-- Storage settings format for internal storage action [CHAR LIMIT=50] -->
+    <!-- Storage settings format for device storage action [CHAR LIMIT=50] -->
     <string name="storage_format_for_private">Format as device storage</string>
     <!-- Description for a storage volume which is not currently connected to the device -->
     <string name="storage_not_connected">Not connected</string>
@@ -533,7 +533,7 @@
     <string name="storage_migrate">Migrate data</string>
 
     <!-- Storage settings forget action [CHAR_LIMIT=50] -->
-    <string name="storage_forget">Forget this internal storage</string>
+    <string name="storage_forget">Forget this device storage</string>
     <!-- Storage settings forget description [CHAR_LIMIT=NONE] -->
     <string name="storage_forget_wall_of_text">To use the apps or data this drive contains, replug it in. Alternatively, you can choose to forget this storage if the drive isn\'t available.\n\nIf you choose Forget, all the data the drive contains will be lost forever.\n\nYou can reinstall the apps later, but the data stored on this drive will be lost.</string>
 
@@ -564,15 +564,15 @@
     <!-- Toast informing that storage format operation failed. [CHAR LIMIT=64]-->
     <string name="storage_format_failure">Couldn\'t format <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
 
-    <!-- Title for wizard screen for formatting storage as internal [CHAR LIMIT=64] -->
-    <string name="storage_wizard_format_as_private_title">Format as internal storage</string>
-    <!-- Description for wizard screen for formatting storage as internal [CHAR LIMIT=NONE] -->
+    <!-- Title for wizard screen for formatting storage as device [CHAR LIMIT=64] -->
+    <string name="storage_wizard_format_as_private_title">Format as device storage</string>
+    <!-- Description for wizard screen for formatting storage as device [CHAR LIMIT=NONE] -->
     <string name="storage_wizard_format_as_private_description">This requires the USB drive to be formatted to make it secure. After securely formatting, this drive will only work with this device. Formatting erases all data currently stored on the drive. To avoid losing the data, consider backing it up.</string>
 
-    <!-- Title for wizard screen for formatting storage as internal [CHAR LIMIT=64] -->
+    <!-- Title for wizard screen for formatting storage as device [CHAR LIMIT=64] -->
     <string name="storage_wizard_format_as_public_title">Erase &amp; Format</string>
-    <!-- Description for wizard screen for formatting storage as internal [CHAR LIMIT=NONE] -->
-    <string name="storage_wizard_format_as_public_description">After formatting, you can use this USB drive in other devices. All data will be erased. Consider backing up first by moving apps to other internal storage.</string>
+    <!-- Description for wizard screen for formatting storage as device [CHAR LIMIT=NONE] -->
+    <string name="storage_wizard_format_as_public_description">After formatting, you can use this USB drive in other devices. All data will be erased. Consider backing up first by moving apps to other device storage.</string>
 
     <!-- Title for wizard progress screen for formatting drive [CHAR_LIMIT=50] -->
     <string name="storage_wizard_format_progress_title">Formatting USB Drive&#8230;</string>
@@ -616,10 +616,10 @@
     <!-- Back up apps storage available description [CHAR_LIMIT=50] -->
     <string name="storage_wizard_back_up_apps_space_available"><xliff:g id="size" example="1.23GB">%1$s</xliff:g> available</string>
 
-    <!-- Title for wizard screen for ejecting internal storage [CHAR LIMIT=64] -->
-    <string name="storage_wizard_eject_internal_title">Eject internal storage</string>
-    <!-- Description for wizard screen for ejecting internal storage [CHAR LIMIT=NONE] -->
-    <string name="storage_wizard_eject_internal_description">Apps on this device storage will stop working when it\'s ejected. This USB drive is formatted to work on this device only. It won\'t work on any others.</string>
+    <!-- Title for wizard screen for ejecting device storage [CHAR LIMIT=64] -->
+    <string name="storage_wizard_eject_private_title">Eject device storage</string>
+    <!-- Description for wizard screen for ejecting device storage [CHAR LIMIT=NONE] -->
+    <string name="storage_wizard_eject_private_description">Apps on this device storage will stop working when it\'s ejected. This USB drive is formatted to work on this device only. It won\'t work on any others.</string>
 
     <!-- Title for wizard progress screen for ejecting a drive [CHAR_LIMIT=64] -->
     <string name="sotrage_wizard_eject_progress_title">Ejecting <xliff:g id="name" example="SD Card">%1$s</xliff:g>&#8230;</string>
@@ -633,7 +633,7 @@
     <string name="storage_wizard_move_app_progress_description">"Don't remove the drive during the move.\nThe <xliff:g id="appname" example="YouTube">%1$s</xliff:g> app on this device won't be available until the move is complete.</string>
 
     <!-- Title for wizard screen for forgetting private storage [CHAR_LIMIT=50] -->
-    <string name="storage_wizard_forget_confirm_title">Forget internal storage?</string>
+    <string name="storage_wizard_forget_confirm_title">Forget device storage?</string>
     <!-- Description for wizard screen for forgetting private storage [CHAR_LIMIT=NONE] -->
     <string name="storage_wizard_forget_confirm_description">All your data stored in this drive will be lost forever with \'Forget\'. Would you like to proceed?</string>
     <!-- Action for wizard screen for forgetting private storage [CHAR_LIMIT=50] -->
@@ -644,7 +644,7 @@
     <!-- Browse action for new storage activity [CHAR_LIMIT=50] -->
     <string name="storage_new_action_browse">Browse</string>
     <!-- Adopt action for new storage activity [CHAR_LIMIT=50] -->
-    <string name="storage_new_action_adopt">Set up as internal storage</string>
+    <string name="storage_new_action_adopt">Set up as device storage</string>
     <!-- Format as removable action for new storage activity [CHAR_LIMIT=50] -->
     <string name="storage_new_action_format_public">Set up as removable storage</string>
     <!-- Eject action for new storage activity [CHAR_LIMIT=50] -->

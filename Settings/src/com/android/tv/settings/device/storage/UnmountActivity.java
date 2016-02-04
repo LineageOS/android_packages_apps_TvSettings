@@ -82,7 +82,7 @@ public class UnmountActivity extends Activity {
             }
 
             if (volumeInfo.getType() == VolumeInfo.TYPE_PRIVATE) {
-                final Fragment fragment = UnmountInternalStepFragment.newInstance(mUnmountVolumeId);
+                final Fragment fragment = UnmountPrivateStepFragment.newInstance(mUnmountVolumeId);
                 getFragmentManager().beginTransaction()
                         .replace(android.R.id.content, fragment)
                         .commit();
@@ -208,12 +208,12 @@ public class UnmountActivity extends Activity {
         public void onLoaderReset(Loader<Boolean> loader) {}
     }
 
-    public static class UnmountInternalStepFragment extends GuidedStepFragment {
+    public static class UnmountPrivateStepFragment extends GuidedStepFragment {
 
         private static final int ACTION_ID_UNMOUNT = 1;
 
-        public static UnmountInternalStepFragment newInstance(String volumeId) {
-            final UnmountInternalStepFragment fragment = new UnmountInternalStepFragment();
+        public static UnmountPrivateStepFragment newInstance(String volumeId) {
+            final UnmountPrivateStepFragment fragment = new UnmountPrivateStepFragment();
             final Bundle b = new Bundle(1);
             b.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeId);
             fragment.setArguments(b);
@@ -224,8 +224,8 @@ public class UnmountActivity extends Activity {
         public @NonNull
         GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
             return new GuidanceStylist.Guidance(
-                    getString(R.string.storage_wizard_eject_internal_title),
-                    getString(R.string.storage_wizard_eject_internal_description), "",
+                    getString(R.string.storage_wizard_eject_private_title),
+                    getString(R.string.storage_wizard_eject_private_description), "",
                     getActivity().getDrawable(R.drawable.ic_settings_storage));
         }
 
