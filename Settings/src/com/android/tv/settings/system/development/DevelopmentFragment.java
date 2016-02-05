@@ -1198,7 +1198,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
                 Settings.Global.DEVELOPMENT_FORCE_RTL, value ? 1 : 0);
         SystemProperties.set(Settings.Global.DEVELOPMENT_FORCE_RTL, value ? "1" : "0");
         LocalePicker.updateLocale(
-                getActivity().getResources().getConfiguration().getLocales().getPrimary());
+                getActivity().getResources().getConfiguration().getLocales().get(0));
     }
 
     private void updateWifiDisplayCertificationOptions() {

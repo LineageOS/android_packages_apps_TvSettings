@@ -70,7 +70,7 @@ public class LanguageFragment extends LeanbackPreferenceFragment {
         Locale currentLocale = null;
         try {
             currentLocale = ActivityManagerNative.getDefault().getConfiguration()
-                    .getLocales().getPrimary();
+                    .getLocales().get(0);
         } catch (RemoteException e) {
             Log.e(TAG, "Could not retrieve locale", e);
         }
