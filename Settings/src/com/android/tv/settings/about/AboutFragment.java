@@ -108,7 +108,7 @@ public class AboutFragment extends LeanbackPreferenceFragment {
 
         final Preference securityPatchPref = findPreference(KEY_SECURITY_PATCH);
         final String patch = DeviceInfoUtils.getSecurityPatch();
-        if (TextUtils.isEmpty(patch)) {
+        if (!TextUtils.isEmpty(patch)) {
             securityPatchPref.setSummary(patch);
         } else {
             removePreference(securityPatchPref);
