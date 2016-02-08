@@ -50,7 +50,7 @@ import com.android.tv.settings.accounts.AccountSyncFragment;
 import com.android.tv.settings.accounts.AddAccountWithTypeActivity;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.device.sound.SoundFragment;
-import com.android.tv.settings.users.RestrictedProfileDialogFragment;
+import com.android.tv.settings.system.SecurityFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -200,7 +200,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
     }
 
     private boolean isRestricted() {
-        return RestrictedProfileDialogFragment.isRestrictedProfileInEffect(getContext());
+        return SecurityFragment.isRestrictedProfileInEffect(getContext());
     }
 
     private void updateAccounts() {

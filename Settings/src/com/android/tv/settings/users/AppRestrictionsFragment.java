@@ -39,6 +39,7 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.support.annotation.NonNull;
 import android.support.v14.preference.MultiSelectListPreference;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v17.preference.LeanbackPreferenceFragment;
@@ -223,14 +224,14 @@ public class AppRestrictionsFragment extends LeanbackPreferenceFragment implemen
         }
     }
 
-    public static AppRestrictionsFragment newInstance() {
-        return new AppRestrictionsFragment();
+    public static void prepareArgs(@NonNull Bundle bundle, int userId, boolean newUser) {
+        bundle.putInt(EXTRA_USER_ID, userId);
+        bundle.putBoolean(EXTRA_NEW_USER, newUser);
     }
 
     public static AppRestrictionsFragment newInstance(int userId, boolean newUser) {
-        Bundle args = new Bundle();
-        args.putInt(EXTRA_USER_ID, userId);
-        args.putBoolean(EXTRA_NEW_USER, newUser);
+        final Bundle args = new Bundle(2);
+        prepareArgs(args, userId, newUser);
         AppRestrictionsFragment fragment = new AppRestrictionsFragment();
         fragment.setArguments(args);
         return fragment;

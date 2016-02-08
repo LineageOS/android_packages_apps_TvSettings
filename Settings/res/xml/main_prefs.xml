@@ -143,11 +143,8 @@
         <Preference
             android:icon="@drawable/ic_settings_security"
             android:key="security"
-            android:title="@string/system_security" >
-            <intent
-                android:targetClass="com.android.tv.settings.system.SecurityActivity"
-                android:targetPackage="com.android.tv.settings" />
-        </Preference>
+            android:title="@string/system_security"
+            android:fragment="com.android.tv.settings.system.SecurityFragment" />
         <Preference
             android:icon="@drawable/ic_settings_diagnostic"
             android:key="usageAndDiag"
