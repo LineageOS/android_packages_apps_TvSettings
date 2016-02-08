@@ -38,7 +38,7 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
     private static final String PREF_DISABLE_PIN_UNTIL =
             "RestrictedProfileActivity$RestrictedProfilePinDialogFragment.disable_pin_until";
 
-    public static RestrictedProfilePinDialogFragment newInstance(int type) {
+    public static RestrictedProfilePinDialogFragment newInstance(@PinDialogType int type) {
         RestrictedProfilePinDialogFragment fragment = new RestrictedProfilePinDialogFragment();
         final Bundle b = new Bundle(1);
         b.putInt(PinDialogFragment.ARG_TYPE, type);

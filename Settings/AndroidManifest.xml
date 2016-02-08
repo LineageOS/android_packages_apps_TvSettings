@@ -200,20 +200,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".users.AppRestrictionsActivity"
+            android:name=".system.SecurityActivity"
             android:theme="@style/Theme.Settings.Transparent"
             android:configChanges="keyboard|keyboardHidden|navigation"
-            android:exported="false" />
-        <activity
-            android:name=".users.RestrictedProfileActivity"
-            android:configChanges="keyboard|keyboardHidden|navigation"
-            android:exported="true"
-            android:theme="@style/Theme.Leanback.FormWizard.Solid" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.settings.SECURITY_SETTINGS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity-alias
             android:name=".users.RestrictedProfileActivityLauncherEntry"
             android:enabled="false"
             android:exported="true"
-            android:targetActivity=".users.RestrictedProfileActivity" >
+            android:targetActivity=".system.SecurityActivity" >
 
             <!--
                  Intent filter used to display this activity as a settings
@@ -352,16 +353,6 @@
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.settings.LOCALE_SETTINGS" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".system.SecurityActivity"
-            android:configChanges="keyboard|keyboardHidden|navigation"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.settings.SECURITY_SETTINGS" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
