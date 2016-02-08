@@ -106,9 +106,13 @@ public class LanguageFragment extends LeanbackPreferenceFragment {
         if (preference instanceof RadioPreference) {
             final RadioPreference radioPreference = (RadioPreference) preference;
             radioPreference.clearOtherRadioPreferences(getPreferenceScreen());
-            mNewLocale = mLocaleInfoMap.get(radioPreference.getKey()).getLocale();
-            mDelayHandler.removeCallbacks(mSetLanguageRunnable);
-            mDelayHandler.postDelayed(mSetLanguageRunnable, LANGUAGE_SET_DELAY_MS);
+            if (radioPreference.isChecked()) {
+                mNewLocale = mLocaleInfoMap.get(radioPreference.getKey()).getLocale();
+                mDelayHandler.removeCallbacks(mSetLanguageRunnable);
+                mDelayHandler.postDelayed(mSetLanguageRunnable, LANGUAGE_SET_DELAY_MS);
+            } else {
+                radioPreference.setChecked(true);
+            }
         }
         return super.onPreferenceTreeClick(preference);
     }
