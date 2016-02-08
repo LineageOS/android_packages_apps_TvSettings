@@ -249,7 +249,7 @@
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formázás eszköztárhelyként"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Nincs csatlakozva"</string>
     <string name="storage_migrate" msgid="658894157418304023">"Adatok áttelepítése"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Belső tárhely elfelejtése"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"Eszköztárhely elfelejtése"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"A meghajtón tárolt alkalmazások vagy adatok használatához csatlakoztassa azt ismét az eszközhöz. Azonban ha a meghajtó már nem érhető el, a tárhely elfelejtése mellett is dönthet.\n\nHa az „Elfelejt” lehetőséget választja, akkor a meghajtón tárolt összes adat örökre elvész.\n\nAz alkalmazásokat később újratelepítheti, de a meghajtón lévő adatok megsemmisülnek."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Az eszköz tárhelye"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Cserélhető tárhely"</string>
@@ -262,10 +262,10 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Nincs kiadható meghajtó"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"A(z) <xliff:g id="NAME">%1$s</xliff:g> formázása megtörtént"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"A(z) <xliff:g id="NAME">%1$s</xliff:g> formázása sikertelen"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formázás belső tárhelyként"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Formázás eszköztárhelyként"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Ez megköveteli az USB-tárhely biztonságos formázását. A tárhely formázása után ez a meghajtó csak ezzel az eszközzel fog működni. A formázással törlődik a tárhelyen jelenleg megtalálható összes adat. Az adatvesztés elkerülése érdekében fontolja meg biztonsági mentés végrehajtását."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Törlés és formázás"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"A formázást követően más eszközökkel is használhatja majd ezt az USB-tárhelyet. Minden adat törlődni fog. Fontolja meg biztonsági mentés készítését az alkalmazások másik belső tárhelyre való áthelyezésével."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"A formázást követően más eszközökkel is használhatja majd ezt az USB-tárhelyet. Minden adat törlődni fog. Fontolja meg előbb egy biztonsági mentés készítését az alkalmazások másik eszköztárhelyre való áthelyezésével."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB-meghajtó formázása…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Ez eltarthat egy kis ideig. Kérjük, ne távolítsa el a meghajtót."</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Adatok áthelyezése ide: <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -283,18 +283,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"A következő helyen tárolt alkalmazások: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"A következő helyen tárolt alkalmazások és adatok: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> áll rendelkezésre"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Belső tárhely eltávolítása"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Ha eltávolítja ezt az eszköztárhelyet, a rajta lévő alkalmazások működésképtelenné válnak. Ez az USB-tárhely úgy van formázva, hogy csak ezen az eszközön működjön, más eszközökön ne."</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Eszköztárhely eltávolítása"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Ha eltávolítja ezt az eszköztárhelyet, a rajta lévő alkalmazások működésképtelenné válnak. Ez az USB-tárhely úgy van formázva, hogy csak ezen az eszközön működjön, más eszközökön ne."</string>
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"A(z) <xliff:g id="NAME">%1$s</xliff:g> kiadása…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Felhasznált tárhely"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"A(z) <xliff:g id="NAME">%1$s</xliff:g> áthelyezése…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Az áthelyezés végrehajtása során ne távolítsa el a tárhelyet az eszközből.\nAz eszközön lévő <xliff:g id="APPNAME">%1$s</xliff:g> alkalmazás a művelet befejeződéséig nem lesz elérhető."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Szeretné, hogy a rendszer elfelejtse ezt a belső tárhelyet?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Felejtse el a rendszer az eszköztárhelyet?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Ha az „Elfelejt” lehetőséget választja, a meghajtón tárolt összes adat elvész. Biztosan folytatja?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Elfelejt"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB-meghajtó csatlakoztatva"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Böngészés"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Beállítás belső tárhelyként"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Beállítás eszköztárhelyként"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Beállítás eltávolítható tárhelyként"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Kiadás"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> eltávolítva."</string>
