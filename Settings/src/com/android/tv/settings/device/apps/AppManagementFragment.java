@@ -24,6 +24,7 @@ import android.content.pm.IPackageDataObserver;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.UserHandle;
 import android.support.annotation.NonNull;
 import android.support.v17.preference.LeanbackPreferenceFragment;
@@ -61,6 +62,8 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
     private ClearCachePreference mClearCachePreference;
     private ClearDefaultsPreference mClearDefaultsPreference;
     private NotificationsPreference mNotificationsPreference;
+
+    private final Handler mHandler = new Handler();
 
     public static void prepareArgs(@NonNull Bundle args, String packageName) {
         args.putString(ARG_PACKAGE_NAME, packageName);
@@ -225,12 +228,17 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
                     mEntry.info.packageName, new IPackageDataObserver.Stub() {
                         public void onRemoveCompleted(
                                 final String packageName, final boolean succeeded) {
-                            mClearDataPreference.setClearingData(false);
-                            if (succeeded) {
-                                dataCleared(true);
-                            } else {
-                                dataCleared(false);
-                            }
+                            mHandler.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    mClearDataPreference.setClearingData(false);
+                                    if (succeeded) {
+                                        dataCleared(true);
+                                    } else {
+                                        dataCleared(false);
+                                    }
+                                }
+                            });
                         }
                     });
             if (!success) {
@@ -257,8 +265,13 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
                 new IPackageDataObserver.Stub() {
                     public void onRemoveCompleted(final String packageName,
                             final boolean succeeded) {
-                        mClearCachePreference.setClearingCache(false);
-                        cacheCleared(succeeded);
+                        mHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                mClearCachePreference.setClearingCache(false);
+                                cacheCleared(succeeded);
+                            }
+                        });
                     }
                 });
         mClearCachePreference.refresh();
