@@ -152,6 +152,10 @@
             <intent
                 android:action="com.google.android.gsf.notouch.USAGE_AND_DIAGNOSTICS_SETTING" />
         </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="accounts"
+        android:title="@string/accounts_category_title">
         <Preference
             android:icon="@drawable/ic_settings_add"
             android:key="add_account"
