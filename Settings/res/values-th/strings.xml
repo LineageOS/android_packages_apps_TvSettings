@@ -249,7 +249,8 @@
     <string name="storage_format_for_private" msgid="7095270113028182032">"ฟอร์แมตเป็นที่จัดเก็บข้อมูล"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"ไม่ได้เชื่อมต่อ"</string>
     <string name="storage_migrate" msgid="658894157418304023">"ย้ายข้อมูล"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"ไม่จำที่จัดเก็บข้อมูลภายในนี้"</string>
+    <!-- no translation found for storage_forget (8731986045697320463) -->
+    <skip />
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"หากต้องการใช้แอปหรือข้อมูลที่อยู่ในไดรฟ์นี้ ให้เสียบไดรฟ์ใหม่ หรือคุณสามารถเลือกไม่จำที่เก็บข้อมูลนี้หากไดรฟ์ไม่พร้อมใช้งาน\n\nหากคุณเลือกไม่จำ ข้อมูลทั้งหมดในไดรฟ์จะสูญหายอย่างถาวร\n\nคุณสามารถติดตั้งแอปอีกครั้งในภายหลัง แต่ข้อมูลที่จัดเก็บไว้ในไดรฟ์นี้จะสูญหาย"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"ที่เก็บข้อมูลอุปกรณ์"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"ที่เก็บข้อมูลแบบถอดได้"</string>
@@ -262,10 +263,12 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"ไม่พบไดรฟ์ที่จะดีดออก"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"ฟอร์แมต <xliff:g id="NAME">%1$s</xliff:g> แล้ว"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"ไม่สามารถฟอร์แมต <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"ฟอร์แมตเป็นที่จัดเก็บข้อมูลภายใน"</string>
+    <!-- no translation found for storage_wizard_format_as_private_title (1887035626526247913) -->
+    <skip />
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"การดำเนินการนี้จำเป็นต้องฟอร์แมตไดรฟ์ USB เพื่อให้มีความปลอดภัย หลังการฟอร์แมตอย่างปลอดภัย ไดรฟ์นี้จะทำงานบนอุปกรณ์นี้เท่านั้น การฟอร์แมตจะลบข้อมูลทั้งหมดที่จัดเก็บไว้ในไดรฟ์ในปัจจุบัน ขอแนะนำให้คุณสำรองข้อมูลเพื่อหลีกเลี่ยงการสูญหายของข้อมูล"</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"ลบและฟอร์แมต"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"หลังจากฟอร์แมต คุณสามารถใช้ไดรฟ์ USB นี้ในอุปกรณ์อื่นๆ ระบบจะลบข้อมูลทั้งหมดออก โปรดพิจารณาสำรองข้อมูลก่อนโดยย้ายแอปไปยังที่จัดเก็บข้อมูลภายในอื่นๆ"</string>
+    <!-- no translation found for storage_wizard_format_as_public_description (184405877453834449) -->
+    <skip />
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"กำลังฟอร์แมตไดรฟ์ USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"การดำเนินการนี้อาจใช้เวลาสักครู่ โปรดอย่านำไดรฟ์ออก"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"ย้ายข้อมูลไปที่ <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -283,18 +286,22 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"แอปที่เก็บไว้ใน<xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"แอปและข้อมูลที่เก็บไว้ใน<xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"เหลือพื้นที่ว่าง <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"ดีดที่จัดเก็บข้อมูลภายในออก"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"แอปในที่จัดเก็บข้อมูลของอุปกรณ์นี้จะหยุดทำงานเมื่อดีดออก ไดรฟ์ USB จะได้รับการฟอร์แมตให้ทำงานบนอุปกรณ์นี้เท่านั้น โดยจะไม่ทำงานบนอุปกรณ์อื่นๆ"</string>
+    <!-- no translation found for storage_wizard_eject_private_title (2844023177159233031) -->
+    <skip />
+    <!-- no translation found for storage_wizard_eject_private_description (8966427719795472538) -->
+    <skip />
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"กำลังดีด <xliff:g id="NAME">%1$s</xliff:g> ออก…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"ที่จัดเก็บข้อมูลที่ใช้ไป"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"กำลังย้าย <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"ห้ามนำไดรฟ์ออกขณะย้าย\nแอป <xliff:g id="APPNAME">%1$s</xliff:g> บนอุปกรณ์นี้จะใช้ไม่ได้จนกว่าจะย้ายเสร็จ"</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"ไม่จำที่จัดเก็บข้อมูลภายในใช่ไหม"</string>
+    <!-- no translation found for storage_wizard_forget_confirm_title (4321200084208420221) -->
+    <skip />
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"ข้อมูลที่จัดเก็บในไดรฟ์นี้ทั้งหมดจะสูญหายอย่างถาวรเมื่อเลือก \"ไม่จำ\" คุณต้องการดำเนินการต่อไหม"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"ไม่จำ"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"เชื่อมต่อไดรฟ์ USB แล้ว"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"เรียกดู"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"ตั้งค่าเป็นที่จัดเก็บข้อมูลภายใน"</string>
+    <!-- no translation found for storage_new_action_adopt (880224317112988974) -->
+    <skip />
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"ตั้งค่าเป็นที่จัดเก็บข้อมูลแบบถอดออกได้"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"นำอุปกรณ์ออก"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"นำ <xliff:g id="NAME">%1$s</xliff:g> ออกแล้ว"</string>

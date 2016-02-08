@@ -249,7 +249,7 @@
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatteren als apparaatopslag"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Geen verbinding"</string>
     <string name="storage_migrate" msgid="658894157418304023">"Gegevens overzetten"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Dit interne geheugen vergeten"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"Dit opslagmedium vergeten"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Als je de apps of gegevens op deze drive wilt gebruiken, sluit je deze weer aan. Je kunt er ook voor kiezen dit opslagapparaat te vergeten als de drive niet beschikbaar is.\n\nAls je \'Vergeten\' kiest, gaan alle gegevens op de drive definitief verloren.\n\nJe kunt de apps later opnieuw installeren, maar de op de drive opgeslagen gegevens gaan verloren."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Apparaatopslag"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Verwijderbare opslag"</string>
@@ -262,10 +262,10 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Kan drive niet vinden om uit te werpen"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> is geformatteerd"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Kan <xliff:g id="NAME">%1$s</xliff:g> niet formatteren"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatteren als intern geheugen"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Formatteren als opslagmedium"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"De USB-drive moet worden geformatteerd om deze te beveiligen. Na het formatteren werkt deze drive alleen met dit apparaat. Wanneer je formatteert, worden alle gegevens gewist die momenteel op de drive zijn opgeslagen. Als je wilt voorkomen dat je gegevens kwijtraakt, kun je eerst een back-up maken."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Wissen en formatteren"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Na formatteren kun je deze USB-drive gebruiken in andere apparaten. Alle gegevens worden gewist. Je kunt eerst een back-up maken door apps te verplaatsen naar een ander intern geheugen."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Na formatteren kun je deze USB-drive gebruiken in andere apparaten. Alle gegevens worden gewist. Je kunt eerst een back-up maken door apps te verplaatsen naar een ander opslagmedium."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB-drive formatteren…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Dit kan even duren. Verwijder de drive niet."</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Gegevens verplaatsen naar <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -283,18 +283,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Apps opgeslagen op <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Apps en gegevens opgeslagen op <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> beschikbaar"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Intern geheugen uitwerpen"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Apps op dit opslagmedium werken niet meer wanneer het wordt uitgeworpen. Deze USB-drive is geformatteerd voor gebruik in dit apparaat en werkt niet in andere apparaten."</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Opslagmedium uitwerpen"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Apps op dit opslagmedium werken niet meer wanneer het wordt uitgeworpen. Deze USB-drive is geformatteerd voor gebruik in dit apparaat en werkt niet in andere apparaten."</string>
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> uitwerpen…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Gebruikte opslag"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> verplaatsen…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Verwijder de schijf niet tijdens het verplaatsen.\nDe app <xliff:g id="APPNAME">%1$s</xliff:g> op dit apparaat is pas weer beschikbaar zodra het verplaatsen is voltooid."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Intern geheugen vergeten?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Opslagmedium vergeten?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Als je \'Vergeten\' kiest, gaan alle gegevens op deze drive definitief verloren. Wil je doorgaan?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Vergeten"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB-drive aangesloten"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Browsen"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Instellen als intern geheugen"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Instellen als opslagmedium"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Instellen als verwisselbare opslag"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Uitwerpen"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> is verwijderd"</string>

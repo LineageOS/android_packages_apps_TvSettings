@@ -249,7 +249,7 @@
     <string name="storage_format_for_private" msgid="7095270113028182032">"قالب‌بندی به عنوان فضای ذخیره‌سازی دستگاه"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"متصل نیست"</string>
     <string name="storage_migrate" msgid="658894157418304023">"انتقال داده‌ها"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"این حافظه داخلی فراموش شود"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"این دستگاه ذخیره‌سازی فراموش شود"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"برای استفاده از برنامه‌ها یا داده‌هایی که در این درایو موجود است، آن را دوباره جاگذاری کنید. همچنین، اگر درایو در دسترس نیست، می‌توانید فراموش کردن این دستگاه ذخیره‌سازی را انتخاب کنید.\n\nاگر فراموش کردن را انتخاب کنید، همه داده‌هایی که در این درایو وجود دارد، برای همیشه از دست می‌رود.\n\nمی‌توانید بعداً برنامه‌ها را دوباره نصب کنید، اما داده‌های ذخیره شده در این درایو از بین می‌رود."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"حافظه دستگاه"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"حافظه جداشدنی"</string>
@@ -262,10 +262,10 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"درایو برای بیرون راندن پیدا نشد"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> قالب‌بندی شد"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> قالب‌بندی نشد"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"قالب‌بندی به عنوان حافظه داخلی"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"قالب‌بندی به‌عنوان دستگاه ذخیره‌سازی"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"این دستگاه قالب‌بندی درایو USB را برای ایمن کردن آن الزامی می‌کند. بعد از قالب‌بندی ایمن، این درایو فقط در این دستگاه کار می‌کند. با قالب‌بندی، همه داده‌هایی که درحال‌حاضر در این درایو ذخیره شده است، پاک می‌شود. برای از دست ندادن داده، سعی کنید آنها را پشتیبان‌گیری کنید."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"پاک کردن و قالب‌بندی"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"پس از قالب‌بندی، می‌توانید از این درایو USB در سایر دستگاه‌ها استفاده کنید. همه داده‌ها پاک می‌شوند. با انتقال برنامه‌ها به حافظه داخلی دیگری، ابتدا پشتیبان‌گیری کنید."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"پس از قالب‌بندی، می‌توانید از این درایو USB در سایر دستگاه‌ها استفاده کنید. همه داده‌ها پاک می‌شوند. قبل از قالب‌بندی، با انتقال برنامه‌ها به دستگاه ذخیره‌سازی دیگری، از آنها پشتیبان بگیرید."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"در حال قالب‌بندی درایو USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"ممکن است چند دقیقه طول بکشد. لطفاً درایو را جدا نکنید."</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"انتقال داده‌ها به <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -283,18 +283,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"برنامه‌ها در <xliff:g id="NAME">%1$s</xliff:g> ذخیره شدند"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"برنامه‌ها و اطلاعات در <xliff:g id="NAME">%1$s</xliff:g> ذخیره شدند"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> در دسترس"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"خارج کردن حافظه داخلی"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"در صورت خارج کردن دستگاه‌ ذخیره‌سازی، برنامه‌های موجود در آن دیگر کار نمی‌کنند. این درایو USB تنها برای کار کردن در این دستگاه قالب‌بندی شده است. در دستگاه دیگری کار نمی‌کند."</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"خارج کردن دستگاه ذخیره‌سازی"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"در صورت خارج کردن دستگاه‌ ذخیره‌سازی، برنامه‌های موجود در آن دیگر کار نمی‌کنند. این درایو USB تنها برای کار کردن در این دستگاه قالب‌بندی شده است. در دستگاه دیگری کار نمی‌کند."</string>
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"درحال بیرون راندن <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"فضای ذخیره‌سازی استفاده شده"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"در حال انتقال <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"در طول انتقال، درایو را جدا نکنید.\nتا زمانی که انتقال به پایان نرسد، برنامه <xliff:g id="APPNAME">%1$s</xliff:g> در این دستگاه در دسترس نیست."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"حافظه داخلی فراموش شود؟"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"دستگاه ذخیره‌سازی فراموش شود؟"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"با انتخاب «فراموش شود» همه داده‌هایتان که در این درایو ذخیره شده برای همیشه از دست می‌رود. می‌خواهید ادامه دهید؟"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"فراموش شود"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"درایو USB متصل شد"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"مرور"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"راه‌اندازی یک حافظه داخلی"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"راه‌اندازی به‌عنوان دستگاه ذخیره‌سازی"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"راه‌اندازی یک حافظه جداشدنی"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"خارج کردن"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> خارج شد"</string>

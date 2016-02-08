@@ -249,7 +249,7 @@
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formateatu memoria-unitate gisa"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Konektatu gabe"</string>
     <string name="storage_migrate" msgid="658894157418304023">"Migratu datuak"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Ahaztu barneko memoria"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"Ahaztu gailuaren memoria hau"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Unitate honetako aplikazioak edo datuak erabili ahal izateko, konekta ezazu berriro. Bestela, gailua erabilgarri ez badago, memoria ahaztea aukera dezakezu.\n\n\"Ahaztu\" aukeratzen baduzu, betiko galduko dira unitatean dauden datu guztiak.\n\nGeroago instala ditzakezu berriro aplikazioak, baina galdu egingo dira unitatean gordeta dauden datuak."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Gailuaren memoria"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Memoria aldagarria"</string>
@@ -262,10 +262,10 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Ezin izan da aurkitu kanporatu beharreko unitatea"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"Formateatu da <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Ezin izan da formateatu <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formateatu barneko memoria gisa"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Formateatu memoria-unitate gisa"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Segurua izan dadin, formateatu egin behar da USB unitatea. Formateatu ondoren, unitateak gailu honekin bakarrik funtzionatuko du. Formateatzean, unitateko eduki guztia ezabatzen da. Daturik galdu nahi ez baduzu, egin haien babeskopia."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Ezabatu eduki guztia eta formateatu"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Formateatu ondoren, USB unitate hau beste gailu batzuetan erabili ahal izango duzu. Datu guztiak ezabatu egingo dira; hortaz, lehendabizi, datuen babeskopia egitea gomendatzen dugu. Horretarako, aplikazioak beste barneko memoria batera eraman ditzakezu."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Formateatu ondoren, beste gailu batzuetan erabili ahal izango duzu USB unitate hau. Datu guztiak ezabatu egingo dira; hortaz, lehendabizi, datuen babeskopia egitea gomendatzen dugu. Horretarako, aplikazioak gailuaren beste memoria batera eraman ditzakezu."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB unitatea formateatzen…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Unetxo bat beharko dugu. Ez kendu unitatea."</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Eraman datuak <xliff:g id="NAME">%1$s</xliff:g> unitatera"</string>
@@ -283,18 +283,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Hemen gordetako aplikazioak: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Hemen gordetako aplikazioak eta datuak: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> erabilgarri"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Kanporatu barneko memoria"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Gailu honetako aplikazioek funtzionatzeari utziko diote gailua kanporatzen denean. USB unitate hau gailu honetan soilik funtzionatzeko formateatuta dago; ez du beste inon funtzionatuko."</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Kanporatu gailuaren memoria"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Gailu honetako aplikazioek funtzionatzeari utziko diote memoria kanporatzen denean. USB unitate hau gailu honetan soilik funtzionatzeko dago formateatuta; ez du beste inon funtzionatuko."</string>
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> kanporatzen ari da…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Erabilitako memoria"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> mugitzen…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Ez kendu unitatea aplikazioak mugitu bitartean.\nGailu honetako <xliff:g id="APPNAME">%1$s</xliff:g> ez da erabilgarri egongo hona mugitu arte."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Barneko memoria ahaztea nahi duzu?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Gailuaren memoria ahaztea nahi duzu?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\"Ahaztu\" aukeratzen baduzu, betiko galduko dira unitatean gordetako datu guztiak. Jarraitu nahi duzu?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Ahaztu"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB unitatea konektatu da"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Arakatu"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Konfiguratu barneko memoria gisa"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Konfiguratu gailuaren memoria gisa"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Konfiguratu memoria aldagarri gisa"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Atera"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"Kendu egin da <xliff:g id="NAME">%1$s</xliff:g>"</string>

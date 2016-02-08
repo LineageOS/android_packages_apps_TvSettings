@@ -249,7 +249,7 @@
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatér lagerplads på enheden"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Ikke tilsluttet"</string>
     <string name="storage_migrate" msgid="658894157418304023">"Flyt data"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Glem denne interne lagerplads"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"Glem dette interne lager"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Hvis du vil bruge de apps eller data, der er på dette drev, skal du indsætte det igen.\n\nHvis du vælger Glem, mister du alle de data, der er på drevet, permanent.\n\nDu kan installere appene igen på et senere tidspunkt, men de data, der er gemt på drevet, vil gå tabt."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Lagerplads på enheden"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Flytbart lager"</string>
@@ -262,10 +262,10 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Der er ingen drev, der kan skubbes ud"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> blev formateret"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> kunne ikke formateres"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatér som internt lager"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Formatér som internt lager"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Dette kræver, at USB-drevet sikres ved hjælp af formatering. Efter formateringen fungerer dette drev kun på denne enhed. Ved formatering slettes alle data, der i øjeblikket er gemt på drevet. Du bør overveje at tage en sikkerhedskopi for at undgå at miste dine data."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Slet og formatér"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Når du har formateret USB-drevet, kan du bruge det i andre enheder. Alle data bliver slettet. Du bør overveje at sikkerhedskopiere appen først ved at flytte den til et andet internt lager."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Når du har formateret USB-drevet, kan du bruge det i andre enheder. Alle data slettes. Du bør overveje at sikkerhedskopiere først ved at flytte dine apps til et andet internt lager."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formaterer USB-drev…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Dette kan tage lidt tid. Undgå at fjerne drevet."</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Flyt data til <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -283,18 +283,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Apps, der er gemt på <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Apps og data, der er gemt på <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> ledig lagerplads"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Skub det interne lager ud"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Apps på denne lagerenhed fungerer ikke længere, når du skubber enheden ud. Dette USB-drev er formateret til kun at fungere på denne enhed og ikke på nogen andre."</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Skub det interne lager ud"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Apps på dette interne lager fungerer ikke længere, når du skubber enheden ud. Dette USB-drev er formateret til kun at fungere på denne enhed og ikke på nogen andre."</string>
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Skubber <xliff:g id="NAME">%1$s</xliff:g> ud…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Brugt lagerplads"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Flytter <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Fjern ikke drevet under flytningen.\nAppen <xliff:g id="APPNAME">%1$s</xliff:g> på denne enhed er først tilgængelig, når flytningen er gennemført."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Vil du glemme den interne lagerplads?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Vil du gemme det interne lager?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Alle dine data, der er gemt på dette drev, slettes permanent, hvis du vælger \"Glem\". Vil du fortsætte?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Glem"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB-drevet er tilsluttet"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Gennemse"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Konfigurer som intern lagerplads"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Konfigurer et internt lager"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Konfigurer som flytbar lagerplads"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Skub ud"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> blev fjernet"</string>

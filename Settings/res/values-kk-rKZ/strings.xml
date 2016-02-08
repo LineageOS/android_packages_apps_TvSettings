@@ -160,8 +160,8 @@
     <string name="not_connected" msgid="6858480380326923017">"Қосылмаған"</string>
     <string name="wifi_setting_header_other_options" msgid="3638677601577777216">"Басқа опциялар"</string>
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"Барлығын көру"</string>
-    <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"Сирек көру"</string>
-    <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Қол жетімді желілер"</string>
+    <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"Азайту"</string>
+    <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Қолжетімді желілер"</string>
     <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"WPS арқылы қосылу"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"Жаңа желі қосу"</string>
     <string name="security_type" msgid="524443802004143058">"Қауіпсіздік түрі"</string>
@@ -249,7 +249,8 @@
     <string name="storage_format_for_private" msgid="7095270113028182032">"Құрылғы жады ретінде пішімдеу"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Қосылмаған"</string>
     <string name="storage_migrate" msgid="658894157418304023">"Деректерді тасымалдау"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Осы ішкі жадты ұмыту"</string>
+    <!-- no translation found for storage_forget (8731986045697320463) -->
+    <skip />
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Осы дискіде бар қолданбаларды немесе деректерді пайдалану үшін, оны қайта жалғаңыз. Не болмаса диск қолжетімді болмаса, осы жадты ұмытуды таңдай аласыз. \n\n\"Ұмыту\" опциясын таңдасаңыз, дискідегі барлық деректер мүлдем жоғалады. \n\nҚолданбаларды кейінірек қайта орнатуға болады, бірақ осы дискіде сақталған деректер жоғалады."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Құрылғы жады"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Алынбалы жад"</string>
@@ -262,10 +263,12 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Шығарып алынатын диск табылмады"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> пішімделді"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> пішімдеу мүмкін болмады"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Ішкі жад ретінде пішімдеу"</string>
+    <!-- no translation found for storage_wizard_format_as_private_title (1887035626526247913) -->
+    <skip />
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Қауіпсіздік үшін USB дискіні пішімдеу қажет. Одан кейін бұл диск тек осы құрылғыда жұмыс істейтін болады. Пішімдеу кезінде дискіде сақталып тұрған барлық деректер өшеді. Деректерді жоғалтпау үшін сақтық көшірмесін жасап алыңыз."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Өшіру және пішімдеу"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Пішімдегеннен кейін осы USB дискіні басқа құрылғыларда пайдалануға болады. Барлық деректер жойылады. Алдымен қолданбаларды басқа ішкі жадқа көшіру арқылы олардың сақтық көшірмесін жасап алыңыз."</string>
+    <!-- no translation found for storage_wizard_format_as_public_description (184405877453834449) -->
+    <skip />
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB дискі пішімделуде…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Бұған көп уақыт кетпейді. Дискіні алмаңыз."</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Деректерді <xliff:g id="NAME">%1$s</xliff:g> құрылғысына тасымалдау"</string>
@@ -283,18 +286,22 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> ішінде сақталған қолданбалар"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> ішінде сақталған қолданбалар мен деректер"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"қолжетімді <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Ішкі жадты шығарып алу"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Шығарып алынған кезде, осы құрылғы жадындағы қолданбалардың жұмысы тоқтайды. Бұл USB диск тек осы құрылғыда жұмыс істеуге пішімделген. Ол басқа құрылғыларда жұмыс істемейді."</string>
+    <!-- no translation found for storage_wizard_eject_private_title (2844023177159233031) -->
+    <skip />
+    <!-- no translation found for storage_wizard_eject_private_description (8966427719795472538) -->
+    <skip />
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> шығарылуда…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Пайдаланылған жад"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> жылжытылуда…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Жылжыту кезінде дискіні шығармаңыз.\nЖылж. аяқ-ша осы құр. <xliff:g id="APPNAME">%1$s</xliff:g> қолд. қол жетімді болмайды."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Ішкі жадты ұмыттыңыз ба?"</string>
+    <!-- no translation found for storage_wizard_forget_confirm_title (4321200084208420221) -->
+    <skip />
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\"Ұмыту\" опциясын таңдасаңыз, бұл дискіде сақталған барлық деректер мүлдем жоғалады. Жалғастырғыңыз келе ме?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Ұмыту"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB жетегі қосылған"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Шолу"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Ішкі жад ретінде орнату"</string>
+    <!-- no translation found for storage_new_action_adopt (880224317112988974) -->
+    <skip />
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Алынбалы жад ретінде орнату"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Шығару"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> жойылған"</string>
