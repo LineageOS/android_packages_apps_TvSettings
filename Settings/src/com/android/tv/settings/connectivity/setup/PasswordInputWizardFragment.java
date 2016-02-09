@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -65,11 +66,13 @@ public class PasswordInputWizardFragment extends Fragment {
         return fragment;
     }
 
+    private Handler mHandler;
     private EditText mTextInput;
     private CheckBox mTextObsufactionToggle;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle icicle) {
+        mHandler = new Handler();
         final View view = inflater.inflate(R.layout.account_content_area, container, false);
 
         final ViewGroup descriptionArea = (ViewGroup) view.findViewById(R.id.description);
@@ -138,6 +141,34 @@ public class PasswordInputWizardFragment extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mTextInput == null) return;
+
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                Activity a = getActivity();
+                if (a != null) {
+                    InputMethodManager inputMethodManager =
+                            (InputMethodManager) a.getSystemService(Context.INPUT_METHOD_SERVICE);
+                    inputMethodManager.showSoftInput(mTextInput, 0);
+                    mTextInput.requestFocus();
+                }
+            }
+        });
+    }
+
+    @Override
+    public void onPause() {
+        if (mTextInput == null) return;
+        InputMethodManager imm =
+                (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(mTextInput.getWindowToken(), 0);
+        super.onPause();
     }
 
     public void updatePasswordInputObfuscation() {
