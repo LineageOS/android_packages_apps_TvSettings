@@ -35,8 +35,8 @@
     <string name="account_remove_failed" msgid="980654375770693544">"Није могуће уклонити налог"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"Додирните да бисте синхронизовали одмах<xliff:g id="LAST_SYNC_TIME">
-%1$s</xliff:g>"</string>
+    <!-- no translation found for sync_one_time_sync (3575080833667908804) -->
+    <skip />
     <string name="sync_failed" msgid="5514824149810480551">"Синхронизација није успела"</string>
     <string name="sync_active" msgid="6891115263481154378">"Синхронизација је активна"</string>
     <string name="connectivity_network" msgid="8321537111272398501">"Мрежа"</string>
@@ -250,8 +250,7 @@
     <string name="storage_format_for_private" msgid="7095270113028182032">"Форматирај као меморијски уређај"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Није повезано"</string>
     <string name="storage_migrate" msgid="658894157418304023">"Пренеси податке"</string>
-    <!-- no translation found for storage_forget (8731986045697320463) -->
-    <skip />
+    <string name="storage_forget" msgid="8731986045697320463">"Заборави меморију овог уређаја"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Да бисте користили апликације или податке које овај диск садржи, уметните га поново. Као друго решење, можете да изаберете да заборавите ову меморију ако диск није доступан.\n\nАко изаберете Заборави, сви подаци које диск садржи ће заувек бити изгубљени.\n\nМожете поново да инсталирате апликације касније, али подаци ускладиштени на овом диску ће бити изгубљени."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Меморија уређаја"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Преносива меморија"</string>
@@ -264,12 +263,10 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Нисмо успели да пронађемо диск за избацивање"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"Уређај <xliff:g id="NAME">%1$s</xliff:g> је форматиран"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Форматирање није успело: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <!-- no translation found for storage_wizard_format_as_private_title (1887035626526247913) -->
-    <skip />
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Форматирајте као меморију уређаја"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"За ово је потребно да се USB диск форматира да би био безбедан. После безбедног форматирања овај диск ће функционисати само на овом уређају. Форматирањем се бришу сви подаци који су тренутно ускладиштени на диску. Да не бисте изгубили податке, размислите о томе да направите њихову резервну копију."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Обришите и форматирајте"</string>
-    <!-- no translation found for storage_wizard_format_as_public_description (184405877453834449) -->
-    <skip />
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"После форматирања можете да користите овај USB диск на другим уређајима. Сви подаци ће бити обрисани. Размислите о томе да прво направите резервну копију тако што ћете преместити апликације у неку другу меморију уређаја."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB диск се форматира…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Ово може мало да потраје. Не уклањајте диск."</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Пренесите податке на уређај <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -287,22 +284,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Апликације које се чувају на уређају <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Апликације и подаци који се чувају на уређају <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Доступно је <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <!-- no translation found for storage_wizard_eject_private_title (2844023177159233031) -->
-    <skip />
-    <!-- no translation found for storage_wizard_eject_private_description (8966427719795472538) -->
-    <skip />
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Избаците меморију уређаја"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Апликације у меморији овог уређаја ће престати да функционишу када га извадите. Овај USB диск је форматиран тако да функционише само на овом уређају. Неће функционисати ни на једном другом уређају."</string>
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> се избацује…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Складишни простор у употреби"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Премешта се <xliff:g id="NAME">%1$s</xliff:g>..."</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Не вадите диск током премештања.\nАпликација <xliff:g id="APPNAME">%1$s</xliff:g> на овом уређају неће бити доступна док не завршите премештање."</string>
-    <!-- no translation found for storage_wizard_forget_confirm_title (4321200084208420221) -->
-    <skip />
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Желите ли да заборавите меморију уређаја?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Сви подаци ускладиштени на овом диску ће бити заувек изгубљени ако изаберете „Заборави“. Желите ли да наставите?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Заборави"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB диск је прикључен"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Прегледај"</string>
-    <!-- no translation found for storage_new_action_adopt (880224317112988974) -->
-    <skip />
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Подеси као меморију уређаја"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Подеси као преносиву меморију"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Избаци"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"Диск <xliff:g id="NAME">%1$s</xliff:g> је уклоњен"</string>
@@ -469,6 +462,7 @@
     <string name="disagree" msgid="9170636026862400981">"Не прихватам"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Непознати извори"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Дозвољава инсталацију апликација из извора који нису Google Play продавница"</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Дозволите непознате изворе"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Уређај и лични подаци су подложнији нападу апликација из непознатих извора. Прихватате да сте искључиво одговорни за било какву штету на уређају или губитак података који могу да настану услед коришћења тих апликација."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Верификовање апликација"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Забрањује инсталирање апликација које могу да буду штетне или упозорава пре инсталирања"</string>
@@ -561,6 +555,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Уђи у ограничени профил"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Изађи из ограниченог профила"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Избриши ограничени профил"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"Направите профил са ограниченим приступом"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Подешавања"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Дозвољене апликације"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">

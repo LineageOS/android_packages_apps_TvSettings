@@ -35,8 +35,8 @@
     <string name="account_remove_failed" msgid="980654375770693544">"Есептік жазбаны жою мүмкін емес"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"Қазір синхрондау үшін<xliff:g id="LAST_SYNC_TIME">
-%1$s</xliff:g> түртіңіз"</string>
+    <!-- no translation found for sync_one_time_sync (3575080833667908804) -->
+    <skip />
     <string name="sync_failed" msgid="5514824149810480551">"Синхрондалмады"</string>
     <string name="sync_active" msgid="6891115263481154378">"Синхрондау қосылған"</string>
     <string name="connectivity_network" msgid="8321537111272398501">"Желі"</string>
@@ -249,8 +249,7 @@
     <string name="storage_format_for_private" msgid="7095270113028182032">"Құрылғы жады ретінде пішімдеу"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Қосылмаған"</string>
     <string name="storage_migrate" msgid="658894157418304023">"Деректерді тасымалдау"</string>
-    <!-- no translation found for storage_forget (8731986045697320463) -->
-    <skip />
+    <string name="storage_forget" msgid="8731986045697320463">"Осы құрылғының жадын ұмыту"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Осы дискіде бар қолданбаларды немесе деректерді пайдалану үшін, оны қайта жалғаңыз. Не болмаса диск қолжетімді болмаса, осы жадты ұмытуды таңдай аласыз. \n\n\"Ұмыту\" опциясын таңдасаңыз, дискідегі барлық деректер мүлдем жоғалады. \n\nҚолданбаларды кейінірек қайта орнатуға болады, бірақ осы дискіде сақталған деректер жоғалады."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Құрылғы жады"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Алынбалы жад"</string>
@@ -263,12 +262,10 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Шығарып алынатын диск табылмады"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> пішімделді"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> пішімдеу мүмкін болмады"</string>
-    <!-- no translation found for storage_wizard_format_as_private_title (1887035626526247913) -->
-    <skip />
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Құрылғы жады ретінде пішімдеу"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Қауіпсіздік үшін USB дискіні пішімдеу қажет. Одан кейін бұл диск тек осы құрылғыда жұмыс істейтін болады. Пішімдеу кезінде дискіде сақталып тұрған барлық деректер өшеді. Деректерді жоғалтпау үшін сақтық көшірмесін жасап алыңыз."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Өшіру және пішімдеу"</string>
-    <!-- no translation found for storage_wizard_format_as_public_description (184405877453834449) -->
-    <skip />
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Пішімдеуден кейін осы USB дискін басқа құрылғыларда пайдалануға болады. Барлық деректер жойылады. Алдымен бағдарламаларды басқа ішкі жадқа көшіру арқылы олардың сақтық көшірмесін жасап алыңыз."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB дискі пішімделуде…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Бұған көп уақыт кетпейді. Дискіні алмаңыз."</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Деректерді <xliff:g id="NAME">%1$s</xliff:g> құрылғысына тасымалдау"</string>
@@ -286,22 +283,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> ішінде сақталған қолданбалар"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> ішінде сақталған қолданбалар мен деректер"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"қолжетімді <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <!-- no translation found for storage_wizard_eject_private_title (2844023177159233031) -->
-    <skip />
-    <!-- no translation found for storage_wizard_eject_private_description (8966427719795472538) -->
-    <skip />
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Құрылғының жадын шығару"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Шығарып алынған кезде, осы құрылғы жадындағы қолданбалардың жұмысы тоқтайды. Бұл USB диск тек осы құрылғыда жұмыс істеуге пішімделген. Ол басқа құрылғыларда жұмыс істемейді."</string>
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> шығарылуда…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Пайдаланылған жад"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> жылжытылуда…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Жылжыту кезінде дискіні шығармаңыз.\nЖылж. аяқ-ша осы құр. <xliff:g id="APPNAME">%1$s</xliff:g> қолд. қол жетімді болмайды."</string>
-    <!-- no translation found for storage_wizard_forget_confirm_title (4321200084208420221) -->
-    <skip />
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Құрылғы жадын ұмыту керек пе?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\"Ұмыту\" опциясын таңдасаңыз, бұл дискіде сақталған барлық деректер мүлдем жоғалады. Жалғастырғыңыз келе ме?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Ұмыту"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB жетегі қосылған"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Шолу"</string>
-    <!-- no translation found for storage_new_action_adopt (880224317112988974) -->
-    <skip />
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Құрылғы жады ретінде орнату"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Алынбалы жад ретінде орнату"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Шығару"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> жойылған"</string>
@@ -468,6 +461,7 @@
     <string name="disagree" msgid="9170636026862400981">"Келіспеу"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Белгісіз көздер"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Қолданбаларды Play Store дүкенінен басқа көздерден орнатуға рұқсат ету"</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Белгісіз дереккөздерге рұқсат беру"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Құрылғыңызға және жеке деректеріңізге белгісіз көздерден алынған қолданбалар шабуылдау ықтималдығы көбірек. Сіз осындай қолданбаларды пайдаланудан болуы мүмкін кез келген құрылғының зақымдалуына немесе деректердің жоғалуына тек өзіңіз жауапты болуға келісесіз."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Қолданбаларды растау"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Зиян келтіруі мүмкін қолданбаларды орнатуға тыйым салу немесе орнатар алдында ескерту"</string>
@@ -557,6 +551,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Шектелген профильге кіру"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Шектелген профильден шығу"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Шектелген профильді жою"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"Шектеулі профиль жасау"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Параметрлер"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Рұқсат етілген қолданбалар"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">

@@ -35,8 +35,8 @@
     <string name="account_remove_failed" msgid="980654375770693544">"アカウントを削除できません"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"タップして今すぐ同期 <xliff:g id="LAST_SYNC_TIME">
-%1$s</xliff:g>"</string>
+    <!-- no translation found for sync_one_time_sync (3575080833667908804) -->
+    <skip />
     <string name="sync_failed" msgid="5514824149810480551">"同期失敗"</string>
     <string name="sync_active" msgid="6891115263481154378">"同期有効"</string>
     <string name="connectivity_network" msgid="8321537111272398501">"ネットワーク"</string>
@@ -249,8 +249,7 @@
     <string name="storage_format_for_private" msgid="7095270113028182032">"デバイスストレージとしてフォーマット"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"未接続"</string>
     <string name="storage_migrate" msgid="658894157418304023">"データを移行"</string>
-    <!-- no translation found for storage_forget (8731986045697320463) -->
-    <skip />
+    <string name="storage_forget" msgid="8731986045697320463">"この端末ストレージを切断"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"このドライブに保存されているアプリやデータを使用するには、接続し直してください。ドライブが使用できない場合は、切断することもできます。\n\n切断した場合、このドライブに保存されているすべてのデータは完全に失われます。\n\nアプリは後で再インストールできますが、このドライブに保存されているデータは失われます。"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"端末のストレージ"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"リムーバブルストレージ"</string>
@@ -263,12 +262,10 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"取り外すドライブが見つかりませんでした"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g>をフォーマットしました"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g>をフォーマットできませんでした"</string>
-    <!-- no translation found for storage_wizard_format_as_private_title (1887035626526247913) -->
-    <skip />
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"端末ストレージとしてフォーマット"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"セキュリティを確保するには、USBドライブをフォーマットする必要があります。フォーマット後、このドライブはこの端末でのみ使用できるようになります。フォーマットすると、このドライブに保存されているデータがすべて消去されます。データの消失を防ぐため、バックアップを検討してください。"</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"消去してフォーマット"</string>
-    <!-- no translation found for storage_wizard_format_as_public_description (184405877453834449) -->
-    <skip />
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"フォーマット後、この USB ドライブは他の端末で使用できるようになります。データはすべて消去されます。まず、アプリを他の端末ストレージに移動してバックアップすることを検討してください。"</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USBドライブをフォーマットしています…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"この処理には時間がかかる場合があります。ドライブを取り外さないでください。"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"<xliff:g id="NAME">%1$s</xliff:g>へのデータの移動"</string>
@@ -286,22 +283,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g>に保存されているアプリ"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g>に保存されているアプリとデータ"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"空き容量: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <!-- no translation found for storage_wizard_eject_private_title (2844023177159233031) -->
-    <skip />
-    <!-- no translation found for storage_wizard_eject_private_description (8966427719795472538) -->
-    <skip />
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"端末ストレージの取り外し"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"この端末ストレージを取り外すと、保存されているアプリは使用できなくなります。この USB ドライブは、この端末用にフォーマットされており、他の端末では使用できません。"</string>
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g>を取り外し中…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"使用されているストレージ"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g>を移動しています…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"移動中はドライブを取り外さないでください。\nこの端末の<xliff:g id="APPNAME">%1$s</xliff:g>アプリは移動が完了するまで使用できません。"</string>
-    <!-- no translation found for storage_wizard_forget_confirm_title (4321200084208420221) -->
-    <skip />
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"端末ストレージを切断しますか？"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"切断すると、このドライブに保存されているすべてのデータは完全に失われます。続行しますか？"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"切断"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USBドライブが接続されました"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"ブラウズ"</string>
-    <!-- no translation found for storage_new_action_adopt (880224317112988974) -->
-    <skip />
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"端末ストレージとして設定"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"リムーバルストレージとしてセットアップ"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"取り外し"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g>は取り外されています"</string>
@@ -468,6 +461,7 @@
     <string name="disagree" msgid="9170636026862400981">"同意しない"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"提供元不明のアプリ"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"提供元がPlayストアではないアプリのインストールを許可する"</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"提供元不明のアプリの許可"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"提供元不明のアプリから携帯端末や個人データが攻撃を受ける可能性が高くなります。 このようなアプリの使用により生じる可能性がある携帯端末への損害やデータの損失について、 ユーザーご自身が単独で責任を負うことに同意するものとします。"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"アプリの確認"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"損害をもたらす可能性があるアプリのインストールを 禁止またはインストール前に警告する"</string>
@@ -557,6 +551,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"制限付きプロファイルを入力"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"制限付きプロファイルを終了"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"制限付きプロファイルを削除"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"制限付きプロファイルの作成"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"設定"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"許可されたアプリ"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">

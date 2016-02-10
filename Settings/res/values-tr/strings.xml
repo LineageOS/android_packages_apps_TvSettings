@@ -35,8 +35,8 @@
     <string name="account_remove_failed" msgid="980654375770693544">"Hesap kaldırılamadı"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"Şimdi senkronize etmek için dokunun<xliff:g id="LAST_SYNC_TIME">
-%1$s</xliff:g>"</string>
+    <!-- no translation found for sync_one_time_sync (3575080833667908804) -->
+    <skip />
     <string name="sync_failed" msgid="5514824149810480551">"Senkronizasyon başarısız oldu"</string>
     <string name="sync_active" msgid="6891115263481154378">"Senkronizasyon etkin"</string>
     <string name="connectivity_network" msgid="8321537111272398501">"Ağ"</string>
@@ -249,8 +249,7 @@
     <string name="storage_format_for_private" msgid="7095270113028182032">"Cihaz depolaması olarak biçimlendir"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Bağlı değil"</string>
     <string name="storage_migrate" msgid="658894157418304023">"Verileri taşı"</string>
-    <!-- no translation found for storage_forget (8731986045697320463) -->
-    <skip />
+    <string name="storage_forget" msgid="8731986045697320463">"Bu depolama cihazını unut"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Bu sürücünün içerdiği uygulamaları veya verileri kullanmak için sürücüyü tekrar yerleştirin. Sürücü kullanılamıyorsa ayrıca bu depolama birimini unutmayı seçebilirsiniz.\n\nUnutmayı seçerseniz cihazdaki tüm veriler kalıcı olarak kaybolur.\n\nUygulamaları daha sonra yeniden yükleyebilirsiniz, ancak bu cihazda depolanmış olan veriler kaybolur."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Cihaz depolama alanı"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Çıkarılabilir depolama alanı"</string>
@@ -263,12 +262,10 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Çıkarılacak sürücü bulunamadı"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> biçimlendirildi"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> biçimlendirilemedi"</string>
-    <!-- no translation found for storage_wizard_format_as_private_title (1887035626526247913) -->
-    <skip />
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Depolama cihazı olarak biçimlendir"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Bu işlem, USB sürücüsünün güvenli hale getirilmesi için biçimlendirilmesini gerektiriyor. Güvenli bir şekilde biçimlendirildikten sonra bu sürücü yalnızca bu cihazla kullanılabilecektir. Biçimlendirme işlemi, sürücüde mevcut olarak depolanmış tüm verileri siler. Veri kaybı yaşamamak için sürücüdeki verileri yedeklemenizi öneririz."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Sil ve Biçimlendir"</string>
-    <!-- no translation found for storage_wizard_format_as_public_description (184405877453834449) -->
-    <skip />
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Biçimlendirildikten sonra bu USB sürücüsünü başka cihazlarda kullanabilirsiniz. Tüm veriler silinecektir. Öncelikle uygulamaları başka bir depolama cihazına taşıyarak yedeklemenizi öneririz."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB Sürücüsü Biçimlendiriliyor…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Bu işlem biraz zaman alabilir. Lütfen sürücünüzü kaldırmayın."</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Verileri <xliff:g id="NAME">%1$s</xliff:g> sürücüsüne taşıyın"</string>
@@ -286,22 +283,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> içinde depolanan uygulamalar"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> içinde depolanan uygulamalar ve veriler"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> kullanılabilir"</string>
-    <!-- no translation found for storage_wizard_eject_private_title (2844023177159233031) -->
-    <skip />
-    <!-- no translation found for storage_wizard_eject_private_description (8966427719795472538) -->
-    <skip />
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Depolama cihazını çıkar"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Cihaz çıkarıldığında, bu cihazın depolama alanındaki uygulamaların çalışması duracaktır. Bu USB sürücüsü, yalnızca bu cihazda çalışacak şekilde biçimlendirildi. Başka cihazlarda çalışmayacaktır."</string>
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> çıkarılıyor…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Kullanılan depolama alanı"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> taşınıyor…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Taşıma işlemi sırasında sürücüyü çıkarmayın.\nBu cihazdaki <xliff:g id="APPNAME">%1$s</xliff:g> uygulaması, taşıma işlemi tamamlanana kadar kullanılamayacak."</string>
-    <!-- no translation found for storage_wizard_forget_confirm_title (4321200084208420221) -->
-    <skip />
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Depolama cihazı unutulsun mu?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\"Unut\" seçeneği kullanıldığında bu sürücüde depolanmış tüm verileriniz kalıcı olarak kaybolacaktır. Devam etmek istiyor musunuz?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Unut"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB sürücüsü bağlandı"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Göz at"</string>
-    <!-- no translation found for storage_new_action_adopt (880224317112988974) -->
-    <skip />
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Depolama cihazı olarak kur"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Kaldırılabilir depolama olarak kur"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Çıkar"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> kaldırıldı"</string>
@@ -468,6 +461,7 @@
     <string name="disagree" msgid="9170636026862400981">"Kabul etmiyorum"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Bilinmeyen kaynaklar"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Google Play Store dışındaki kaynaklardan uygulama yüklemeye izin ver"</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Bilinmeyen kaynaklara izin verin"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Cihazınız ve kişisel verileriniz, bilinmeyen kaynaklardan gelen uygulamaların saldırılarına karşı daha savunmasızdır. Bu uygulamaları kullanmanız sonucunda cihazınızın başına gelebilecek her tür hasardan ve veri kaybından yalnızca kendinizin sorumlu olduğunu kabul edersiniz."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Uygulamaları doğrula"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Zararlı olabilecek uygulamaların yüklenmesine izin verme veya uyar"</string>
@@ -557,6 +551,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Kısıtlanmış profile gir"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Kısıtlanmış profilden çık"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Kısıtlanmış profili sil"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"Kısıtlanmış profil oluştur"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Ayarlar"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"İzin verilen uygulamalar"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
