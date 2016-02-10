@@ -40,6 +40,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.text.TextUtils;
+import android.util.ArraySet;
 import android.util.Log;
 
 import com.android.settingslib.accounts.AuthenticatorHelper;
@@ -53,7 +54,6 @@ import com.android.tv.settings.device.sound.SoundFragment;
 import com.android.tv.settings.system.SecurityFragment;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 public class MainFragment extends LeanbackPreferenceFragment {
@@ -75,8 +75,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
     private static final String KEY_CAST_SETTINGS = "cast";
     private static final String KEY_SPEECH_SETTINGS = "speech";
     private static final String KEY_SEARCH_SETTINGS = "search";
-
-    private static final String ACCOUNT_TYPE_GOOGLE = "com.google";
+    private static final String KEY_ACCOUNTS_CATEGORY = "accounts";
 
     private AuthenticatorHelper mAuthenticatorHelper;
     private BluetoothAdapter mBtAdapter;
@@ -85,9 +84,8 @@ public class MainFragment extends LeanbackPreferenceFragment {
     private boolean mInputSettingNeeded;
 
     private Preference mDeveloperPref;
-    private List<Preference> mAccountPrefs = new ArrayList<>(4);
-    private PreferenceGroup mPersonalGroup;
     private PreferenceGroup mAccessoriesGroup;
+    private PreferenceGroup mAccountsGroup;
     private Preference mAddAccessory;
     private Preference mNetworkPref;
     private Preference mSoundsPref;
@@ -143,15 +141,10 @@ public class MainFragment extends LeanbackPreferenceFragment {
         }
         mDeveloperPref = findPreference(KEY_DEVELOPER);
         mAccessoriesGroup = (PreferenceGroup) findPreference(KEY_ACCESSORIES);
-        mPersonalGroup = (PreferenceGroup) findPreference(KEY_PERSONAL);
         mAddAccessory = findPreference(KEY_ADD_ACCESSORY);
         mNetworkPref = findPreference(KEY_NETWORK);
         mSoundsPref = findPreference(KEY_SOUNDS);
-
-        mAccountPrefs.add(findPreference(KEY_LOCATION));
-        mAccountPrefs.add(findPreference(KEY_SECURITY));
-        mAccountPrefs.add(findPreference(KEY_USAGE));
-        mAccountPrefs.add(findPreference(KEY_ADD_ACCOUNT));
+        mAccountsGroup = (PreferenceGroup) findPreference(KEY_ACCOUNTS_CATEGORY);
 
         final Preference inputPref = findPreference(KEY_INPUTS);
         if (inputPref != null) {
@@ -204,14 +197,11 @@ public class MainFragment extends LeanbackPreferenceFragment {
     }
 
     private void updateAccounts() {
-        if (mPersonalGroup == null) {
+        if (mAccountsGroup == null) {
             return;
         }
 
-        mPersonalGroup.removeAll();
-        for (final Preference reAdd : mAccountPrefs) {
-            mPersonalGroup.addPreference(reAdd);
-        }
+        final Set<String> touchedAccounts = new ArraySet<>(mAccountsGroup.getPreferenceCount());
 
         final AccountManager am = AccountManager.get(getContext());
         final AuthenticatorDescription[] authTypes = am.getAuthenticatorTypes();
@@ -255,26 +245,39 @@ public class MainFragment extends LeanbackPreferenceFragment {
 
             // Icon URI to be displayed for each account is based on the type of authenticator.
             Drawable authImage = null;
-            if (ACCOUNT_TYPE_GOOGLE.equals(authDesc.type)) {
-                authImage = getActivity().getDrawable(R.drawable.ic_settings_google_account);
-            } else {
-                try {
-                    authImage = targetContext.getDrawable(authDesc.iconId);
-                } catch (Resources.NotFoundException e) {
-                    Log.e(TAG, "Authenticator has bad resources", e);
-                }
+            try {
+                authImage = targetContext.getDrawable(authDesc.iconId);
+            } catch (Resources.NotFoundException e) {
+                Log.e(TAG, "Authenticator has bad resources", e);
             }
 
             // Display an entry for each installed account we have.
             for (final Account account : accounts) {
-                final Preference preference = new Preference(themedContext);
+                final String key = "account_pref:" + account.type + ":" + account.name;
+                Preference preference = findPreference(key);
+                if (preference == null) {
+                    preference = new Preference(themedContext);
+                }
                 preference.setTitle(authTitle != null ? authTitle : account.name);
                 preference.setIcon(authImage);
                 preference.setSummary(authTitle != null ? account.name : null);
                 preference.setFragment(AccountSyncFragment.class.getName());
                 AccountSyncFragment.prepareArgs(preference.getExtras(), account);
 
-                mPersonalGroup.addPreference(preference);
+                touchedAccounts.add(key);
+                preference.setKey(key);
+
+                mAccountsGroup.addPreference(preference);
+            }
+        }
+
+        for (int i = 0; i < mAccountsGroup.getPreferenceCount();) {
+            final Preference preference = mAccountsGroup.getPreference(i);
+            final String key = preference.getKey();
+            if (touchedAccounts.contains(key) || TextUtils.equals(KEY_ADD_ACCOUNT, key)) {
+                i++;
+            } else {
+                mAccountsGroup.removePreference(preference);
             }
         }
 
