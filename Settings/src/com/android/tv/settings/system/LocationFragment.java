@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.provider.Settings;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.ListPreference;
@@ -95,6 +96,9 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
                 LOCATION_MODE_OFF
         });
         mLocationMode.setOnPreferenceChangeListener(this);
+
+        final UserManager um = UserManager.get(getContext());
+        mLocationMode.setEnabled(!um.hasUserRestriction(UserManager.DISALLOW_SHARE_LOCATION));
 
         final PreferenceCategory recentRequests = new PreferenceCategory(themedContext);
         screen.addPreference(recentRequests);

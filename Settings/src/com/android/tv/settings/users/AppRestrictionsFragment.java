@@ -68,7 +68,6 @@ import java.util.StringTokenizer;
 
 public class AppRestrictionsFragment extends LeanbackPreferenceFragment implements
         Preference.OnPreferenceChangeListener,
-        Preference.OnPreferenceClickListener,
         AppRestrictionsHelper.OnDisableUiForPackageListener {
 
     private static final String TAG = AppRestrictionsFragment.class.getSimpleName();
@@ -387,6 +386,7 @@ public class AppRestrictionsFragment extends LeanbackPreferenceFragment implemen
             return;
         }
         mAppList.removeAll();
+        addLocationAppRestrictionsPreference();
         Intent restrictionsIntent = new Intent(Intent.ACTION_GET_RESTRICTION_ENTRIES);
         final List<ResolveInfo> receivers = pm.queryBroadcastReceivers(restrictionsIntent, 0);
         for (AppRestrictionsHelper.SelectableAppInfo app : mHelper.getVisibleApps()) {
@@ -397,7 +397,6 @@ public class AppRestrictionsFragment extends LeanbackPreferenceFragment implemen
                     new AppRestrictionsPreference(getPreferenceManager().getContext());
             final boolean hasSettings = resolveInfoListHasPackage(receivers, packageName);
             if (isSettingsApp) {
-                // addLocationAppRestrictionsPreference(app, p);
                 // Settings app should be available to restricted user
                 mHelper.setPackageSelected(packageName, true);
                 continue;
@@ -422,7 +421,6 @@ public class AppRestrictionsFragment extends LeanbackPreferenceFragment implemen
             p.setKey(getKeyForPackage(packageName));
             p.setPersistent(false);
             p.setOnPreferenceChangeListener(this);
-            p.setOnPreferenceClickListener(this);
             p.setSummary(getPackageSummary(pi, app));
             if (pi.requiredForAllUsers || isPlatformSigned(pi)) {
                 p.setChecked(true);
@@ -475,9 +473,10 @@ public class AppRestrictionsFragment extends LeanbackPreferenceFragment implemen
         return pi.requiredAccountType != null && pi.restrictedAccountType == null;
     }
 
-    private void addLocationAppRestrictionsPreference(AppRestrictionsHelper.SelectableAppInfo app,
-            AppRestrictionsPreference p) {
-        String packageName = app.packageName;
+    private void addLocationAppRestrictionsPreference() {
+        AppRestrictionsPreference p =
+                new AppRestrictionsPreference(getPreferenceManager().getContext());
+        String packageName = getContext().getPackageName();
         p.setIcon(R.drawable.ic_settings_location);
         p.setKey(getKeyForPackage(packageName));
         ArrayList<RestrictionEntry> restrictions = RestrictionUtils.getRestrictions(
@@ -488,7 +487,6 @@ public class AppRestrictionsFragment extends LeanbackPreferenceFragment implemen
         p.setSummary(locationRestriction.getDescription());
         p.setChecked(locationRestriction.getSelectedState());
         p.setPersistent(false);
-        p.setOnPreferenceClickListener(this);
         p.setOrder(MAX_APP_RESTRICTIONS);
         mAppList.addPreference(p);
     }
@@ -581,25 +579,6 @@ public class AppRestrictionsFragment extends LeanbackPreferenceFragment implemen
         } else {
             return super.onPreferenceTreeClick(preference);
         }
-    }
-
-    // TODO: why this?
-    @Override
-    public boolean onPreferenceClick(Preference preference) {
-        if (preference.getKey().startsWith(PKG_PREFIX)) {
-            AppRestrictionsPreference arp = (AppRestrictionsPreference) preference;
-            if (!arp.isImmutable()) {
-                final String packageName = getPackageFromKey(arp.getKey());
-                final boolean newEnabledState = !arp.isChecked();
-                arp.setChecked(newEnabledState);
-                mHelper.setPackageSelected(packageName, newEnabledState);
-                updateAllEntries(arp.getKey(), newEnabledState);
-                mAppListChanged = true;
-                mHelper.applyUserAppState(packageName, newEnabledState, this);
-            }
-            return true;
-        }
-        return false;
     }
 
     @Override
