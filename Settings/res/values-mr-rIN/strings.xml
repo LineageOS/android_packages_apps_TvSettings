@@ -24,6 +24,7 @@
     <string name="header_category_preferences" msgid="175105555164713972">"प्राधान्ये"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"दूरस्थ आणि उपसाधने"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"वैयक्तिक"</string>
+    <string name="accounts_category_title" msgid="7591072907146317425">"खाती"</string>
     <string name="add_account" msgid="4098060223200619258">"खाते जोडा"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"खाते काढा"</string>
     <string name="account_sync" msgid="773808124331714965">"संकालित केलेले अ‍ॅप्‍स निवडा"</string>
@@ -35,8 +36,8 @@
     <string name="account_remove_failed" msgid="980654375770693544">"खाते काढू शकत नाही"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <!-- no translation found for sync_one_time_sync (3575080833667908804) -->
-    <skip />
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"आता संकालन करा<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"संकालन अयशस्वी"</string>
     <string name="sync_active" msgid="6891115263481154378">"संकालन सक्रिय"</string>
     <string name="connectivity_network" msgid="8321537111272398501">"नेटवर्क"</string>
@@ -262,10 +263,10 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"बाहेर काढण्‍यासाठी ड्राइव्ह सापडली नाही"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> स्वरूपित झाले"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> स्वरूपित करणे शक्य झाले नाही"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"डिव्हाइस संचय म्हणून फॉर्मेट करा"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"डिव्हाइस संचय म्हणून फॉरमॅट करा"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"हे सुरक्षित करण्यासाठी यास USB ड्राइव्ह फॉर्मेट करणे आवश्यक आहे. सुरक्षितपणे फॉर्मेट केल्यानंतर, हा ड्राइव्ह केवळ या डिव्हाइससह कार्य करेल. फॉर्मेट करण्यामुळे ड्राइव्हवर सध्या संचयित केलेला सर्व डेटा मिटविला जातो. डेटा गमावणे टाळण्यासाठी, त्याचा बॅकअप घेण्याचा विचार करा."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"मिटवा आणि फॉर्मेट करा"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"फॉर्मेट केल्यानंतर, आपण हा USB ड्राइव्ह अन्य डिव्हाइसेसमध्ये वापरू शकता. सर्व डेटा मिटविला जाईल. अन्य डिव्हाइस संचयावर अ‍ॅप्स हलवून प्रथम बॅकअप घेण्याचा विचार करा."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"फॉरमॅट केल्यानंतर, आपण हा USB ड्राइव्ह अन्य डिव्हाइसेसमध्ये वापरू शकता. सर्व डेटा मिटविला जाईल. अन्य डिव्हाइस संचयावर अ‍ॅप्स हलवून प्रथम बॅकअप घेण्याचा विचार करा."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB ड्राइव्ह फॉर्मेट करत आहे…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"यास एक क्षण लागू शकतो. कृपया ड्राइव्ह काढू नका."</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"डेटा <xliff:g id="NAME">%1$s</xliff:g> वर हलवा"</string>
@@ -284,7 +285,7 @@
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> मध्ये संचयित केलेले अॅप्स आणि डेटा"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> उपलब्ध"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"डिव्हाइस संचय बाहेर काढा"</string>
-    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"हे डिव्हाइस बाहेर काढल्यानंतर त्यामधील संचयावरील अ‍ॅप्स कार्य करणे थांबवतील. हा USB ड्राइव्ह केवळ या डिव्हाइसवर कार्य करण्यासाठी फॉर्मेट केला आहे. तो अन्य कोणत्याही डिव्हाइसवर कार्य करणार नाही."</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"हा डिव्हाइस संचय बाहेर काढल्यानंतर त्यावरील अ‍ॅप्स कार्य करणे थांबवतील. हा USB ड्राइव्ह केवळ या डिव्हाइसवर कार्य करण्यासाठी फॉरमॅट केला आहे. तो अन्य कोणत्याही डिव्हाइसवर कार्य करणार नाही."</string>
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> बाहेर काढत आहे…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"वापरलेले संचयन"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> हलवित आहे…"</string>

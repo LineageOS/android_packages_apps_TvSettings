@@ -24,6 +24,7 @@
     <string name="header_category_preferences" msgid="175105555164713972">"Hobespenak"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Urruneko kontrolagailua eta osagarriak"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Pertsonala"</string>
+    <string name="accounts_category_title" msgid="7591072907146317425">"Kontuak"</string>
     <string name="add_account" msgid="4098060223200619258">"Gehitu kontua"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Kendu kontua"</string>
     <string name="account_sync" msgid="773808124331714965">"Aukeratu sinkronizatutako aplikazioak"</string>
@@ -35,8 +36,8 @@
     <string name="account_remove_failed" msgid="980654375770693544">"Ezin da kendu kontua"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <!-- no translation found for sync_one_time_sync (3575080833667908804) -->
-    <skip />
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"Sinkronizatu<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Ezin izan da sinkronizatu"</string>
     <string name="sync_active" msgid="6891115263481154378">"Sinkronizatzen ari da"</string>
     <string name="connectivity_network" msgid="8321537111272398501">"Sarea"</string>
@@ -262,7 +263,7 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Ezin izan da aurkitu kanporatu beharreko unitatea"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"Formateatu da <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Ezin izan da formateatu <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Formateatu memoria-unitate gisa"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Formateatu gailuaren memoria gisa"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Segurua izan dadin, formateatu egin behar da USB unitatea. Formateatu ondoren, unitateak gailu honekin bakarrik funtzionatuko du. Formateatzean, unitateko eduki guztia ezabatzen da. Daturik galdu nahi ez baduzu, egin haien babeskopia."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Ezabatu eduki guztia eta formateatu"</string>
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Formateatu ondoren, beste gailu batzuetan erabili ahal izango duzu USB unitate hau. Datu guztiak ezabatu egingo dira; hortaz, lehendabizi, datuen babeskopia egitea gomendatzen dugu. Horretarako, aplikazioak gailuaren beste memoria batera eraman ditzakezu."</string>
