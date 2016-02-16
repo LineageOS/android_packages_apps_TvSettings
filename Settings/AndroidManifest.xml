@@ -453,22 +453,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".resolver.ResolverActivity"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="singleTop" />
-        <activity
-            android:name=".resolver.ChooserActivity"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="singleTop" >
-            <intent-filter android:priority="1" >
-                <action android:name="android.intent.action.CHOOSER" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
                 android:name=".name.DeviceNameSettingsActivity"
                 android:configChanges="keyboardHidden|navigation" >
                 <intent-filter>
