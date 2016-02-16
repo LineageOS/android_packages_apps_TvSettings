@@ -103,11 +103,8 @@
         <Preference
             android:icon="@drawable/ic_settings_inputs"
             android:key="inputs"
-            android:title="@string/system_inputs" >
-            <intent
-                android:targetClass="com.android.tv.settings.system.InputsActivity"
-                android:targetPackage="com.android.tv.settings" />
-        </Preference>
+            android:title="@string/system_inputs"
+            android:fragment="com.android.tv.settings.system.InputsFragment" />
         <Preference
             android:icon="@drawable/ic_settings_accessibility"
             android:key="accessibility"
