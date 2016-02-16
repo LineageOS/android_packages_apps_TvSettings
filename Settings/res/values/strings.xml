@@ -1149,12 +1149,14 @@
     <string name="inputs_aux">Aux</string>
     <!-- Title of using customized name for a TV input [CHAR LIMIT=30] -->
     <string name="inputs_custom_name">Custom name</string>
+    <!-- Description for action of setting a custom name for a TV input [CHAR LIMIT=200] -->
+    <string name="inputs_custom_name_description_fmt">Enter a name for the <xliff:g id="input" example="HDMI">%1$s</xliff:g> input.</string>
     <!-- Title of option to hide. It will describe current state of the inputs instead of the action [CHAR LIMIT=30] -->
     <string name="inputs_hide">Hidden</string>
-    <!-- Description of option to hide [CHAR LIMIT=100] -->
-    <string name="inputs_hide_desc">Not shown when switching inputs</string>
-    <!-- Title format of entering custom label activity [CHAR LIMIT=30] -->
-    <string name="inputs_custom_title">Custom name:</string>
+    <!-- Title of option to show this input while switching.[CHAR LIMIT=50] -->
+    <string name="inputs_show">Show this input</string>
+    <!-- Header for input name options [CHAR LIMIT=50] -->
+    <string name="input_header_names">Name</string>
     <!-- Option to enable HDMI control [CHAR LIMIT=30] -->
     <string name="inputs_hdmi_control">HDMI control</string>
     <!-- Description of HDMI control option [CHAR LIMIT=50] -->
@@ -1169,18 +1171,18 @@
     <string name="inputs_tv_auto_on_desc">Power on the TV with HDMI device</string>
     <!-- Header for connected TV input(s) [CHAR LIMIT=30] -->
     <plurals name="inputs_header_connected_input">
-        <item quantity="one">CONNECTED INPUT</item>
-        <item quantity="other">CONNECTED INPUTS</item>
+        <item quantity="one">Connected Input</item>
+        <item quantity="other">Connected Inputs</item>
     </plurals>
     <!-- Header for standby TV input(s) [CHAR LIMIT=30] -->
     <plurals name="inputs_header_standby_input">
-        <item quantity="one">STANDBY INPUT</item>
-        <item quantity="other">STANDBY INPUTS</item>
+        <item quantity="one">Standby Input</item>
+        <item quantity="other">Standby Inputs</item>
     </plurals>
     <!-- Header for disconnected TV input(s) [CHAR LIMIT=30] -->
     <plurals name="inputs_header_disconnected_input">
-        <item quantity="one">NOT CONNECTED INPUT</item>
-        <item quantity="other">NOT CONNECTED INPUTS</item>
+        <item quantity="one">Not Connected Input</item>
+        <item quantity="other">Not Connected Inputs</item>
     </plurals>
 
     <!-- Summary for add restricted profile entry in the choice dialog [CHAR LIMIT=none] -->

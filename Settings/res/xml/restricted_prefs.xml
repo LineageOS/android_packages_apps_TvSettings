@@ -66,15 +66,15 @@
     <PreferenceCategory
         android:key="personal"
         android:title="@string/header_category_personal">
-    <Preference
-        android:icon="@drawable/ic_settings_location"
-        android:key="location"
-        android:title="@string/system_location"
-        android:fragment="com.android.tv.settings.system.LocationFragment" />
-    <Preference
-        android:icon="@drawable/ic_settings_security"
-        android:key="security"
-        android:title="@string/system_security"
-        android:fragment="com.android.tv.settings.system.SecurityFragment" />
+        <Preference
+            android:icon="@drawable/ic_settings_location"
+            android:key="location"
+            android:title="@string/system_location"
+            android:fragment="com.android.tv.settings.system.LocationFragment" />
+        <Preference
+            android:icon="@drawable/ic_settings_security"
+            android:key="security"
+            android:title="@string/system_security"
+            android:fragment="com.android.tv.settings.system.SecurityFragment" />
     </PreferenceCategory>
 </PreferenceScreen>

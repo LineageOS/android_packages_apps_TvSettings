@@ -23,16 +23,14 @@ import android.os.Handler;
 import android.os.RemoteException;
 import android.provider.Settings;
 import android.support.v17.preference.LeanbackPreferenceFragment;
-import android.support.v7.preference.CheckBoxPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
-import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.Log;
 
 import com.android.internal.app.LocalePicker;
 import com.android.tv.settings.R;
+import com.android.tv.settings.RadioPreference;
 
 import java.util.List;
 import java.util.Locale;
@@ -115,40 +113,5 @@ public class LanguageFragment extends LeanbackPreferenceFragment {
             }
         }
         return super.onPreferenceTreeClick(preference);
-    }
-
-    private static class RadioPreference extends CheckBoxPreference {
-        private String mRadioGroup;
-
-        public RadioPreference(Context context) {
-            super(context);
-            setWidgetLayoutResource(R.layout.radio_preference_widget);
-        }
-
-        public String getRadioGroup() {
-            return mRadioGroup;
-        }
-
-        public void setRadioGroup(String radioGroup) {
-            mRadioGroup = radioGroup;
-        }
-
-        public void clearOtherRadioPreferences(PreferenceGroup preferenceGroup) {
-            final int count = preferenceGroup.getPreferenceCount();
-            for (int i = 0; i < count; i++) {
-                final Preference p = preferenceGroup.getPreference(i);
-                if (!(p instanceof RadioPreference)) {
-                    continue;
-                }
-                final RadioPreference radioPreference = (RadioPreference) p;
-                if (!TextUtils.equals(getRadioGroup(), radioPreference.getRadioGroup())) {
-                    continue;
-                }
-                if (TextUtils.equals(getKey(), radioPreference.getKey())) {
-                    continue;
-                }
-                radioPreference.setChecked(false);
-            }
-        }
     }
 }
