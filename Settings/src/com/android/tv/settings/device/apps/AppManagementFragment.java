@@ -82,7 +82,7 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         if (mEntry == null) {
             // This is unlikely to happen
             Log.d(TAG, "App not found, trying to bail out");
-            getActivity().onBackPressed();
+            navigateBack();
         }
 
         super.onCreate(savedInstanceState);
@@ -111,7 +111,7 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
                 if (resultCode == Activity.RESULT_OK) {
                     final int userId =  UserHandle.getUserId(mEntry.info.uid);
                     mApplicationsState.removePackage(mPackageName, userId);
-                    getActivity().onBackPressed();
+                    navigateBack();
                 }
                 break;
             case REQUEST_MANAGE_SPACE:
@@ -126,6 +126,12 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
             case REQUEST_UNINSTALL_UPDATES:
                 mUninstallPreference.refresh();
                 break;
+        }
+    }
+
+    private void navigateBack() {
+        if (!getFragmentManager().popBackStackImmediate()) {
+            getActivity().onBackPressed();
         }
     }
 
