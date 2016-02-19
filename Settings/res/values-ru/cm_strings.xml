@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="about_cmupdate_settings_title">Обновления системы</string>
+  <string name="about_cmupdate_settings_title">Обновления CyanogenMod</string>
   <string name="about_mod_version">Версия CyanogenMod</string>
   <string name="security_patch">Обновление системы безопасности</string>
   <plurals name="show_dev_countdown_cm">
@@ -34,21 +34,21 @@
   <string name="selinux_status_enforcing">Принудительный</string>
   <string name="accessories_add_bluetooth_inst_cm">Для начала использования CyanogenMod убедитесь, что Bluetooth-устройство находится в режиме сопряжения. На Nexus Remote это делается одновременным нажатием кнопок «Назад» и «Домой».</string>
   <string name="root_access">Режим суперпользователя</string>
-  <string name="root_access_warning_title">Разрешить использование Суперпользователя?</string>
+  <string name="root_access_warning_title">Разрешить использование суперпользователя?</string>
   <string name="root_access_warning_message">Использование приложениями прав суперпользователя может быть крайне опасным и ставит под угрозу безопасность вашего устройства!</string>
   <string name="root_access_none">Выключен</string>
   <string name="root_access_apps">Только для приложений</string>
   <string name="root_access_adb">Только для ADB</string>
   <string name="root_access_all">Для приложений и ADB</string>
   <string name="update_recovery_title">Режим восстановления Cyanogen</string>
-  <string name="update_recovery_on_summary">Перезаписывать раздел Recovery при установке обновлений</string>
+  <string name="update_recovery_on_summary">Перезаписывать при обновлении системы</string>
   <string name="update_recovery_off_summary">Не перезаписывать при обновлении системы</string>
-  <string name="update_recovery_on_warning">Когда эта функция включена, установленная прошивка режима восстановления будет перезаписана той, которая соответствует текущей версии ОС.\n\nРежим восстановления будет обновляться вместе с обновлениями системы, обеспечивая совместимость с будущими версиями.\n\nВключить использование этой функции?</string>
-  <string name="update_recovery_off_warning">Когда эта функция отключена, прошивка режима восстановления всегда будет оставаться неизменной.\n\nНекоторые обновления ОС могут не устанавливаться при использовании устаревших или пользовательских версий раздела Recovery.\n\nОтключить использование этой функции?</string>
+  <string name="update_recovery_on_warning">ПРИМЕЧАНИЕ. При включении этой функции установленная прошивка режима восстановления перезапишется в соответствии с текущей версией ОС.\n\nРежим восстановления будет обновляться вместе с обновлениями системы, обеспечивая совместимость с будущими версиями.\n\nВключить использование этой функции?</string>
+  <string name="update_recovery_off_warning">ВНИМАНИЕ! При отключении этой функции прошивка режима восстановления будет оставаться неизменной.\n\nНекоторые обновления ОС могут не устанавливаться при использовании устаревших или пользовательских версий прошивки.\n\nОтключить использование этой функции?</string>
   <string name="adb_over_network">Отладка по сети</string>
-  <string name="adb_over_network_summary">Включить режим отладки через сетевые интерфейсы (Wi\u2011Fi и USB-сети). Отладка отключается при перезагрузке устройства.</string>
+  <string name="adb_over_network_summary">Включить режим отладки через сетевые интерфейсы (Wi\u2011Fi и USB-сети). Отладка отключается при перезагрузке устройства</string>
   <string name="adb_over_network_disable_summary">Выберите, чтобы отключить отладку через сетевые интерфейсы (Wi\u2011Fi и USB-сети).</string>
-  <string name="adb_over_network_warning">ВНИМАНИЕ: когда включена отладка по сети, устройство открыто для неконтролируемого доступа из всех подключенных сетей!\n\nИспользуйте эту функцию только тогда, когда вы подключены к доверенным сетям.\n\nВы действительно хотите включить эту функцию?</string>
+  <string name="adb_over_network_warning">ВНИМАНИЕ: когда включена отладка по сети, устройство открыто для неконтролируемого доступа из всех подключенных сетей!\n\nИспользуйте эту функцию только при подключении к доверенным сетям.\n\nДействительно включить эту функцию?</string>
   <string name="system_reset_default_home">Сброс домашнего экрана</string>
   <string name="system_home_settings">Домашний экран</string>
   <string name="reset_launcher_title">Сброс домашнего экрана</string>
