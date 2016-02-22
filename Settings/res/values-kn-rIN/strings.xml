@@ -305,6 +305,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"ಅಪ್ಲಿಕೇಶನ್ ನಕಲು-ರಕ್ಷಿತವಾಗಿದೆ."</string>
     <string name="invalid_location" msgid="5269044848535157307">"ಸ್ಥಾಪನೆ ಸ್ಥಾನವು ಮಾನ್ಯವಾಗಿಲ್ಲ."</string>
     <string name="system_package" msgid="9200255718634512790">"ಸಿಸ್ಟಂ ನವೀಕರಣಗಳನ್ನು ಬಾಹ್ಯ ಮಾಧ್ಯಮದಲ್ಲಿ ಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"ಸಾಧನ ನಿರ್ವಾಹಕವನ್ನು ಬಾಹ್ಯ ಮಾಧ್ಯಮದಲ್ಲಿ ಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"ಮರುಪ್ರಯತ್ನಿಸು"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS ರೂಟರ್‌ಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ..."</string>
@@ -364,7 +365,8 @@
     <string name="captions_display_off" msgid="496953007835201523">"ಆಫ್"</string>
     <string name="display_options" msgid="5504549024985225774">"ಪ್ರದರ್ಶನ ಆಯ್ಕೆಗಳು"</string>
     <string name="captions_configure" msgid="5537548915977371014">"ಕಾನ್ಫಿಗರ್ ಮಾಡು"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"ಭಾಷೆ"</string>
+    <!-- no translation found for captions_language (2835554055388996343) -->
+    <skip />
     <string name="captions_textsize" msgid="4828195509546070971">"ಪಠ್ಯದ ಗಾತ್ರ"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"ಶೀರ್ಷಿಕೆಯ ಶೈಲಿ"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"ಕಸ್ಟಮ್‌ ಆಯ್ಕೆಗಳು"</string>
@@ -376,8 +378,20 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"ಹಿನ್ನೆಲೆ ಅಪಾರದರ್ಶಕತೆ"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"ಶೀರ್ಷಿಕೆಯು ಈ ರೀತಿಯಾಗಿ ಕಂಡುಬರುತ್ತದೆ"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"ಪಠ್ಯ ಅಪಾರದರ್ಶಕತೆ"</string>
+    <!-- no translation found for captions_windowshow (5716898740522196707) -->
+    <skip />
     <string name="captions_windowcolor" msgid="8986165172260903279">"ವಿಂಡೋ ಬಣ್ಣ"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"ವಿಂಡೋ ಅಪಾರದರ್ಶಕತೆ"</string>
+    <!-- no translation found for captions_style_0 (2068865433439146533) -->
+    <skip />
+    <!-- no translation found for captions_style_1 (8878565905353923498) -->
+    <skip />
+    <!-- no translation found for captions_style_2 (1486695984924671199) -->
+    <skip />
+    <!-- no translation found for captions_style_3 (3217829874170162074) -->
+    <skip />
+    <!-- no translation found for captions_style_custom (3645114505000714364) -->
+    <skip />
     <string name="color_white" msgid="65537523012024751">"ಬಿಳಿ"</string>
     <string name="color_black" msgid="8804213372565106403">"ಕಪ್ಪು"</string>
     <string name="color_red" msgid="5630553203246525989">"ಕೆಂಪು"</string>
@@ -521,24 +535,25 @@
     <string name="inputs_game" msgid="1114086481110094757">"ಗೇಮ್ ಕನ್ಸೋಲ್"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"ಆಕ್ಸ್"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"ಕಸ್ಟಮ್ ಹೆಸರು"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"<xliff:g id="INPUT">%1$s</xliff:g> ಇನ್‌ಪುಟ್‌ಗೆ ಹೆಸರನ್ನು ನಮೂದಿಸಿ."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"ಮರೆಮಾಡಲಾಗಿದೆ"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"ಇನ್‌ಪುಟ್‌ಗಳನ್ನು ಬದಲಾಯಿಸುವಾಗ ತೋರಿಸಲಾಗುವುದಿಲ್ಲ"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"ಕಸ್ಟಮ್‌ ಹೆಸರು:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"ಈ ಇನ್‌ಪುಟ್ ತೋರಿಸು"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"ಹೆಸರು"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI ನಿಯಂತ್ರಣ"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"HDMI ಸಾಧನಗಳನ್ನು ನಿಯಂತ್ರಿಸಲು TV ಯನ್ನು ಅನುಮತಿಸಿ"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"ಸಾಧನ ಸ್ವಯಂ ಪವರ್ ಆಫ್"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"TV ಜೊತೆ HDMI ಸಾಧನಗಳ ಪವರ್ ಆಫ್ ಮಾಡಿ"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"TV ಸ್ವಯಂ ಪವರ್ ಆನ್"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI ಸಾಧನದೊಂದಿಗೆ TV ಪವರ್ ಆನ್ ಮಾಡಿ"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
       <item quantity="one">ಸಂಪರ್ಕಪಡಿಸಿರುವ ಇನ್‌ಪುಟ್‌ಗಳು</item>
       <item quantity="other">ಸಂಪರ್ಕಪಡಿಸಿರುವ ಇನ್‌ಪುಟ್‌ಗಳು</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
       <item quantity="one">ಸ್ಟ್ಯಾಂಡ್‌ಬೈ ಇನ್‌ಪುಟ್‌ಗಳು</item>
       <item quantity="other">ಸ್ಟ್ಯಾಂಡ್‌ಬೈ ಇನ್‌ಪುಟ್‌ಗಳು</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
       <item quantity="one">ಸಂಪರ್ಕಪಡಿಸದಿರುವ ಇನ್‌ಪುಟ್‌ಗಳು</item>
       <item quantity="other">ಸಂಪರ್ಕಪಡಿಸದಿರುವ ಇನ್‌ಪುಟ್‌ಗಳು</item>
     </plurals>

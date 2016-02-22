@@ -309,6 +309,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"التطبيق محمي ضد النسخ."</string>
     <string name="invalid_location" msgid="5269044848535157307">"موقع التثبيت غير صالح."</string>
     <string name="system_package" msgid="9200255718634512790">"لا يمكن تثبيت تحديثات النظام على وسائط خارجية."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"لا يمكن تثبيت مشرف الجهاز على وسائط خارجية."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"مزيد من المعلومات"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"إعادة المحاولة"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"جارٍ البحث عن جهاز توجيه WPS…"</string>
@@ -368,7 +369,8 @@
     <string name="captions_display_off" msgid="496953007835201523">"إيقاف"</string>
     <string name="display_options" msgid="5504549024985225774">"خيارات العرض"</string>
     <string name="captions_configure" msgid="5537548915977371014">"تهيئة"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"اللغة"</string>
+    <!-- no translation found for captions_language (2835554055388996343) -->
+    <skip />
     <string name="captions_textsize" msgid="4828195509546070971">"حجم النص"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"نمط التسمية التوضيحية"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"خيارات مخصصة"</string>
@@ -380,8 +382,20 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"تعتيم الخلفية"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"ستبدو التسميات التوضيحية بالشكل التالي"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"تعتيم النص"</string>
+    <!-- no translation found for captions_windowshow (5716898740522196707) -->
+    <skip />
     <string name="captions_windowcolor" msgid="8986165172260903279">"لون النافذة"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"تعتيم النافذة"</string>
+    <!-- no translation found for captions_style_0 (2068865433439146533) -->
+    <skip />
+    <!-- no translation found for captions_style_1 (8878565905353923498) -->
+    <skip />
+    <!-- no translation found for captions_style_2 (1486695984924671199) -->
+    <skip />
+    <!-- no translation found for captions_style_3 (3217829874170162074) -->
+    <skip />
+    <!-- no translation found for captions_style_custom (3645114505000714364) -->
+    <skip />
     <string name="color_white" msgid="65537523012024751">"أبيض"</string>
     <string name="color_black" msgid="8804213372565106403">"أسود"</string>
     <string name="color_red" msgid="5630553203246525989">"أحمر"</string>
@@ -525,33 +539,34 @@
     <string name="inputs_game" msgid="1114086481110094757">"وحدة تحكم الألعاب"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"الاسم المخصص"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"أدخل اسمًا لإدخال <xliff:g id="INPUT">%1$s</xliff:g>."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"مخفية"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"عدم العرض عند تبديل الإدخالات"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"الاسم المخصص:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"إظهار هذا الإدخال"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"الاسم"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"التحكم في HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"السماح لجهاز التلفزيون بالتحكم في أجهزة HDMI"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"إيقاف الجهاز تلقائيًا"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"إيقاف تشغيل أجهزة HDMI باستخدام التلفزيون"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"تشغيل التلفزيون تلقائيًا"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"تشغيل التلفزيون باستخدام جهاز HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="zero">CONNECTED INPUTS</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="zero">Connected Inputs</item>
       <item quantity="two">الإدخالان المتصلان</item>
       <item quantity="few">الإدخالات المتصلة</item>
       <item quantity="many">الإدخالات المتصلة</item>
       <item quantity="other">الإدخالات المتصلة</item>
       <item quantity="one">الإدخال المتصل</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="zero">STANDBY INPUTS</item>
-      <item quantity="two">الإدخالان لوضع الاستعداد</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="zero">Standby Inputs</item>
+      <item quantity="two">إدخالا وضع الاستعداد</item>
       <item quantity="few">إدخالات وضع الاستعداد</item>
       <item quantity="many">إدخالات وضع الاستعداد</item>
       <item quantity="other">إدخالات وضع الاستعداد</item>
       <item quantity="one">إدخال وضع الاستعداد</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="zero">NOT CONNECTED INPUTS</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="zero">Not Connected Inputs</item>
       <item quantity="two">الإدخالان غير المتصلين</item>
       <item quantity="few">الإدخالات غير المتصلة</item>
       <item quantity="many">الإدخالات غير المتصلة</item>

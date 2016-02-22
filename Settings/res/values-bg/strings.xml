@@ -305,6 +305,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"Приложението е защитено срещу копиране."</string>
     <string name="invalid_location" msgid="5269044848535157307">"Мястото за инсталиране не е валидно."</string>
     <string name="system_package" msgid="9200255718634512790">"Системните актуализации не могат да се инсталират на външен носител."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Администраторът на устройството не може да се инсталира на външен носител."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Научете повече"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Нов опит"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Маршрутизаторът за WPS се търси…"</string>
@@ -364,7 +365,8 @@
     <string name="captions_display_off" msgid="496953007835201523">"Изключено"</string>
     <string name="display_options" msgid="5504549024985225774">"Опции за показване"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Конфигуриране"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Език"</string>
+    <!-- no translation found for captions_language (2835554055388996343) -->
+    <skip />
     <string name="captions_textsize" msgid="4828195509546070971">"Размер на текста"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Стил на надписите"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Персонализирани опции"</string>
@@ -376,8 +378,20 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Плътност на фона"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Надписите ще изглеждат така"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Плътност на текста"</string>
+    <!-- no translation found for captions_windowshow (5716898740522196707) -->
+    <skip />
     <string name="captions_windowcolor" msgid="8986165172260903279">"Цвят на прозореца"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Плътност на прозореца"</string>
+    <!-- no translation found for captions_style_0 (2068865433439146533) -->
+    <skip />
+    <!-- no translation found for captions_style_1 (8878565905353923498) -->
+    <skip />
+    <!-- no translation found for captions_style_2 (1486695984924671199) -->
+    <skip />
+    <!-- no translation found for captions_style_3 (3217829874170162074) -->
+    <skip />
+    <!-- no translation found for captions_style_custom (3645114505000714364) -->
+    <skip />
     <string name="color_white" msgid="65537523012024751">"Бял"</string>
     <string name="color_black" msgid="8804213372565106403">"Черен"</string>
     <string name="color_red" msgid="5630553203246525989">"Червен"</string>
@@ -521,26 +535,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"Игрова конзола"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Персонализирано име"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Въведете име за <xliff:g id="INPUT">%1$s</xliff:g> входа."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Скрито"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Не се показва при превключване на входовете"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Персонализирано име:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Показване на този вход"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Име"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"Контролиране на HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Разрешете на телевизора да контролира HDMI у-вата"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Автоматично изключв. на у-вата"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Изключване на HDMI устройствата чрез телевизора"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Автоматично вкл. на телевизора"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Включване на телевизора чрез HDMI устройство"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="other">СВЪРЗАНИ ВХОДА</item>
-      <item quantity="one">СВЪРЗАН ВХОД</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="other">Свързани входа</item>
+      <item quantity="one">Свързан вход</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="other">ВХОДА В РЕЖИМ НА ГОТОВНОСТ</item>
-      <item quantity="one">ВХОД В РЕЖИМ НА ГОТОВНОСТ</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="other">Входа в режим на готовност</item>
+      <item quantity="one">Вход в режим на готовност</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="other">НЕСВЪРЗАНИ ВХОДА</item>
-      <item quantity="one">НЕСВЪРЗАН ВХОД</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="other">Свободни входа</item>
+      <item quantity="one">Свободен вход</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Ограничаване на достъпа до приложенията и другото съдържание в профила ви"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Потр. профил с огран. функц."</string>

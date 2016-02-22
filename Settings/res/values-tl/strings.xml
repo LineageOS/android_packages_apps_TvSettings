@@ -305,6 +305,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"Pinoprotektahan sa pagkopya ang app."</string>
     <string name="invalid_location" msgid="5269044848535157307">"Hindi wasto ang lokasyon ng pag-install."</string>
     <string name="system_package" msgid="9200255718634512790">"Hindi ma-install ang mga pag-update sa system sa external media."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Hindi ma-install ang Administrator ng Device sa external na media."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Matuto nang higit pa"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Subukang muli"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Hinahanap ang WPS router…"</string>
@@ -364,7 +365,8 @@
     <string name="captions_display_off" msgid="496953007835201523">"Naka-off"</string>
     <string name="display_options" msgid="5504549024985225774">"Mga opsyon sa pagpapakita"</string>
     <string name="captions_configure" msgid="5537548915977371014">"I-configure"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Wika"</string>
+    <!-- no translation found for captions_language (2835554055388996343) -->
+    <skip />
     <string name="captions_textsize" msgid="4828195509546070971">"Laki ng text"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Istilo ng caption"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Mga custom na opsyon"</string>
@@ -376,8 +378,20 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Opacity ng background"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Ganito ang magiging hitsura ng mga caption"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Opacity ng text"</string>
+    <!-- no translation found for captions_windowshow (5716898740522196707) -->
+    <skip />
     <string name="captions_windowcolor" msgid="8986165172260903279">"Kulay ng window"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Opacity ng window"</string>
+    <!-- no translation found for captions_style_0 (2068865433439146533) -->
+    <skip />
+    <!-- no translation found for captions_style_1 (8878565905353923498) -->
+    <skip />
+    <!-- no translation found for captions_style_2 (1486695984924671199) -->
+    <skip />
+    <!-- no translation found for captions_style_3 (3217829874170162074) -->
+    <skip />
+    <!-- no translation found for captions_style_custom (3645114505000714364) -->
+    <skip />
     <string name="color_white" msgid="65537523012024751">"Puti"</string>
     <string name="color_black" msgid="8804213372565106403">"Itim"</string>
     <string name="color_red" msgid="5630553203246525989">"Pula"</string>
@@ -521,26 +535,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"Game console"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Custom na pangalan"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Maglagay ng pangalan para sa <xliff:g id="INPUT">%1$s</xliff:g> input."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Nakatago"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Hindi ipinapakita kapag nagpapalit ng mga input"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Custom na pangalan:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Ipakita ang input na ito"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Pangalan"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"Control sa HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Payagan ang TV na kontrolin ang mga HDMI device"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"I-auto power off ang device"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"I-off ang mga HDMI device na nakakabit sa TV"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"I-auto power on ang TV"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"I-on ang TV na may HDMI device"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="one">MGA NAKAKONEKTANG INPUT</item>
-      <item quantity="other">MGA NAKAKONEKTANG INPUT</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="one">Mga Nakakonektang Input</item>
+      <item quantity="other">Mga Nakakonektang Input</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="one">MGA NAKA-STANDBY NA INPUT</item>
-      <item quantity="other">MGA NAKA-STANDBY NA INPUT</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="one">Mga Naka-standby na Input</item>
+      <item quantity="other">Mga Naka-standby na Input</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="one">MGA HINDI NAKAKONEKTANG INPUT</item>
-      <item quantity="other">MGA HINDI NAKAKONEKTANG INPUT</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="one">Mga Hindi Nakakonektang Input</item>
+      <item quantity="other">Mga Hindi Nakakonektang Input</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Higpitan ang pag-access sa mga app at ibang content sa iyong account"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Pinaghihigpitang Profile"</string>

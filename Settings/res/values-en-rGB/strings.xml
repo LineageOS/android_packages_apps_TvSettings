@@ -122,7 +122,7 @@
     <string name="selinux_status_permissive" msgid="4806219236988993826">"Permissive"</string>
     <string name="selinux_status_enforcing" msgid="8839484208185347776">"Enforcing"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"Additional system updates"</string>
-    <string name="device_status" msgid="4379924151946190768">"STATUS"</string>
+    <string name="device_status" msgid="4379924151946190768">"Status"</string>
     <string name="device_status_summary" msgid="180586140242936323">"Network, serial numbers and other information"</string>
     <string name="manual" msgid="4957388668881541669">"Manual"</string>
     <string name="regulatory_information" msgid="5448865708097003189">"Regulatory information"</string>
@@ -131,7 +131,7 @@
     <string name="baseband_version" msgid="2229081246529676107">"Baseband version"</string>
     <string name="kernel_version" msgid="2418845475938044903">"Kernel version"</string>
     <string name="status_unavailable" msgid="831018565485085059">"Unavailable"</string>
-    <string name="device_status_title" msgid="1629253652287243543">"STATUS"</string>
+    <string name="device_status_title" msgid="1629253652287243543">"Status"</string>
     <string name="battery_status_title" msgid="2557264957661087826">"Battery status"</string>
     <string name="battery_level_title" msgid="100046129713781009">"Battery level"</string>
     <string name="sim_status_title" msgid="498929467188844611">"SIM status"</string>
@@ -305,6 +305,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"App is copy-protected."</string>
     <string name="invalid_location" msgid="5269044848535157307">"Install location isn\'t valid."</string>
     <string name="system_package" msgid="9200255718634512790">"System updates cannot be installed on external media."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Device Administrator can’t be installed on external media."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Find out more"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Retry"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Searching for WPS router…"</string>
@@ -364,7 +365,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"Off"</string>
     <string name="display_options" msgid="5504549024985225774">"Display options"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Configure"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Language"</string>
+    <string name="captions_language" msgid="2835554055388996343">"Language"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Text size"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Caption style"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Customised options"</string>
@@ -376,8 +377,14 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Background opacity"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Captions will look like this"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Text opacity"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"Show window"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Window colour"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Window opacity"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"White on black"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"Black on white"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"Yellow on black"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"Yellow on blue"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"Customised"</string>
     <string name="color_white" msgid="65537523012024751">"White"</string>
     <string name="color_black" msgid="8804213372565106403">"Black"</string>
     <string name="color_red" msgid="5630553203246525989">"Red"</string>
@@ -521,26 +528,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"Game console"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Custom name"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Enter a name for the <xliff:g id="INPUT">%1$s</xliff:g> input."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Hidden"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Not shown when switching inputs"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Custom name:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Show this input"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Named"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI control"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Allow the TV to control HDMI devices"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Device auto power off"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Power off HDMI devices with the TV"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"TV auto power on"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Power on the TV with HDMI device"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="other">CONNECTED INPUTS</item>
-      <item quantity="one">CONNECTED INPUT</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="other">Connected Inputs</item>
+      <item quantity="one">Connected Input</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="other">STANDBY INPUTS</item>
-      <item quantity="one">STANDBY INPUT</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="other">Standby Inputs</item>
+      <item quantity="one">Standby Input</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="other">NOT CONNECTED INPUTS</item>
-      <item quantity="one">NOT CONNECTED INPUT</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="other">Unconnected Inputs</item>
+      <item quantity="one">Unconnected Input</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Restrict access to apps and other content in your account"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Restricted profile"</string>

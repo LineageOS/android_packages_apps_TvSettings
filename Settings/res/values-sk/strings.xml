@@ -307,6 +307,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"Aplikácia je chránená proti kopírovaniu"</string>
     <string name="invalid_location" msgid="5269044848535157307">"Umiestnenie inštalácie nie je platné"</string>
     <string name="system_package" msgid="9200255718634512790">"Aktualizácie systému sa nepodarilo nainštalovať na externé médiá"</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Správcu zariadenia nie je možné nainštalovať na externé médiá."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Ďalšie informácie"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Skúsiť znova"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Prebieha vyhľadávanie smerovača s funkciou WPS…"</string>
@@ -366,7 +367,8 @@
     <string name="captions_display_off" msgid="496953007835201523">"Vypnuté"</string>
     <string name="display_options" msgid="5504549024985225774">"Možnosti zobrazenia"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Konfigurovať"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Jazyk"</string>
+    <!-- no translation found for captions_language (2835554055388996343) -->
+    <skip />
     <string name="captions_textsize" msgid="4828195509546070971">"Veľkosť textu"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Štýl titulkov"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Vlastné možnosti"</string>
@@ -378,8 +380,20 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Nepriehľadnosť pozadia"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Titulky budú vyzerať takto"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Nepriehľadnosť textu"</string>
+    <!-- no translation found for captions_windowshow (5716898740522196707) -->
+    <skip />
     <string name="captions_windowcolor" msgid="8986165172260903279">"Farba okna"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Nepriehľadnosť okna"</string>
+    <!-- no translation found for captions_style_0 (2068865433439146533) -->
+    <skip />
+    <!-- no translation found for captions_style_1 (8878565905353923498) -->
+    <skip />
+    <!-- no translation found for captions_style_2 (1486695984924671199) -->
+    <skip />
+    <!-- no translation found for captions_style_3 (3217829874170162074) -->
+    <skip />
+    <!-- no translation found for captions_style_custom (3645114505000714364) -->
+    <skip />
     <string name="color_white" msgid="65537523012024751">"Biela"</string>
     <string name="color_black" msgid="8804213372565106403">"Čierna"</string>
     <string name="color_red" msgid="5630553203246525989">"Červená"</string>
@@ -523,32 +537,33 @@
     <string name="inputs_game" msgid="1114086481110094757">"Herná konzola"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Vlastný názov"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Zadajte názov vstupu <xliff:g id="INPUT">%1$s</xliff:g>."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Skrytý"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Nezobrazovať pri prepínaní vstupov"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Vlastný názov:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Zobraziť tento vstup"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Názov"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"Ovládanie HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Povoliť televízoru ovládať zariadenia HDMI"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Auto. vypnutie zariadenia"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Vypnúť zariadenia HDMI s televízorom"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Auto. zapnutie televízora"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Zapnúť televízor so zariadením HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="few">PRIPOJENÉ VSTUPY</item>
-      <item quantity="many">PRIPOJENÉ VSTUPY</item>
-      <item quantity="other">PRIPOJENÉ VSTUPY</item>
-      <item quantity="one">PRIPOJENÝ VSTUP</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="few">Pripojené vstupy</item>
+      <item quantity="many">Pripojené vstupy</item>
+      <item quantity="other">Pripojené vstupy</item>
+      <item quantity="one">Pripojený vstup</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="few">VSTUPY V ÚSPORNOM REŽIME</item>
-      <item quantity="many">VSTUPY V ÚSPORNOM REŽIME</item>
-      <item quantity="other">VSTUPY V ÚSPORNOM REŽIME</item>
-      <item quantity="one">VSTUP V ÚSPORNOM REŽIME</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="few">Vstupy v úspornom režime</item>
+      <item quantity="many">Vstupy v úspornom režime</item>
+      <item quantity="other">Vstupy v úspornom režime</item>
+      <item quantity="one">Vstup v úspornom režime</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="few">NEPRIPOJENÉ VSTUPY</item>
-      <item quantity="many">NEPRIPOJENÉ VSTUPY</item>
-      <item quantity="other">NEPRIPOJENÉ VSTUPY</item>
-      <item quantity="one">NEPRIPOJENÝ VSTUP</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="few">Nepripojené vstupy</item>
+      <item quantity="many">Nepripojené vstupy</item>
+      <item quantity="other">Nepripojené vstupy</item>
+      <item quantity="one">Nepripojený vstup</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Obmedziť prístup k aplikáciám a ďalšiemu obsahu vášho účtu"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Obmedzený profil"</string>
