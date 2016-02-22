@@ -20,13 +20,13 @@ import android.app.INotificationManager;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.os.RemoteException;
-import android.support.v7.preference.CheckBoxPreference;
+import android.support.v14.preference.SwitchPreference;
 import android.util.Log;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 
-public class NotificationsPreference extends CheckBoxPreference {
+public class NotificationsPreference extends SwitchPreference {
     private static final String TAG = "NotificationsPreference";
 
     private final INotificationManager mNotificationManager;
