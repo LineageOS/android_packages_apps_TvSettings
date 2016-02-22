@@ -88,6 +88,7 @@ public class LanguageFragment extends LeanbackPreferenceFragment {
             radioPreference.setPersistent(false);
             radioPreference.setTitle(localeInfo.getLabel());
             radioPreference.setRadioGroup(LANGUAGE_RADIO_GROUP);
+            radioPreference.setLayoutResource(R.layout.preference_reversed_widget);
 
             if (localeInfo.getLocale().equals(currentLocale)) {
                 radioPreference.setChecked(true);
