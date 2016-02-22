@@ -305,6 +305,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"برنامه در برابر کپی‌برداری محافظت شده است."</string>
     <string name="invalid_location" msgid="5269044848535157307">"محل نصب معتبر نیست."</string>
     <string name="system_package" msgid="9200255718634512790">"به‌روز‌رسانی‌های سیستم بر روی رسانه‌های خارجی نصب نمی‌شود."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"نمی‌توان «سرپرست دستگاه» را در رسانه خارجی نصب کرد."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"بیشتر بدانید"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"سعی مجدد"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"در حال جستجو برای مسیریاب WPS..."</string>
@@ -364,7 +365,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"خاموش"</string>
     <string name="display_options" msgid="5504549024985225774">"گزینه‌های نمایش"</string>
     <string name="captions_configure" msgid="5537548915977371014">"پیکربندی"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"زبان"</string>
+    <string name="captions_language" msgid="2835554055388996343">"زبان"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"اندازه نوشتار"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"سبک زیرنویس"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"گزینه‌های سفارشی"</string>
@@ -376,8 +377,14 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"ماتی پس‌زمینه"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"زیرنویس‌ها مانند این دیده خواهند شد"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"میزان ماتی متن"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"نمایش پنجره"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"رنگ پنجره"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"ماتی پنجره"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"سفید روی سیاه"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"سیاه روی سفید"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"زرد روی سیاه"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"زرد روی آبی"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"سفارشی"</string>
     <string name="color_white" msgid="65537523012024751">"سفید"</string>
     <string name="color_black" msgid="8804213372565106403">"سياه"</string>
     <string name="color_red" msgid="5630553203246525989">"قرمز"</string>
@@ -521,25 +528,26 @@
     <string name="inputs_game" msgid="1114086481110094757">"کنسول بازی"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"نام سفارشی"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"نامی برای ورودی <xliff:g id="INPUT">%1$s</xliff:g> وارد کنید."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"پنهان"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"هنگام تعویض ورودی‌ها نشان داده نشود"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"نام سفارشی:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"نمایش این ورودی"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"نام"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"کنترل HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"امکان دادن به تلویزیون برای کنترل دستگاه‌های HDMI"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"خاموش شدن خودکار دستگاه"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"خاموش کردن دستگاه‌های HDMI با تلویزیون"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"روشن شدن خودکار تلویزیون"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"روشن کردن تلویزیون با دستگاه HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="one">ورودی متصل</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="one">ورودی‌های متصل</item>
       <item quantity="other">ورودی‌های متصل</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="one">ورودی آماده‌به‌کار</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="one">ورودی‌های آماده‌به‌کار</item>
       <item quantity="other">ورودی‌های آماده‌به‌کار</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="one">ورودی غیرمتصل</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="one">ورودی‌های غیرمتصل</item>
       <item quantity="other">ورودی‌های غیرمتصل</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"دسترسی به برنامه‌ها و سایر محتوای موجود در حسابتان را محدود کنید"</string>

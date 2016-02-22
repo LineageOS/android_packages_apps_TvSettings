@@ -305,6 +305,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"යෙදුම පිටපත්-ආරක්ෂණය කර ඇත."</string>
     <string name="invalid_location" msgid="5269044848535157307">"ස්ථාපන ස්ථානය වලංගු නොවේ."</string>
     <string name="system_package" msgid="9200255718634512790">"බාහිර මාධ්‍යවල පද්ධති යාවත්කාලීනයන් ස්ථාපනය කළ නොහැක."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"බාහිර මාධ්‍යවල උපාංග පරිපාලක ස්ථාපනය කළ නොහැකිය."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"තව දැනගන්න"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"නැවත උත්සාහ කරන්න"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS මාර්ගකාරකයන් සඳහාසොයමින්…"</string>
@@ -364,7 +365,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"අක්‍රිය කරන්න"</string>
     <string name="display_options" msgid="5504549024985225774">"විකල්ප පෙන්වන්න"</string>
     <string name="captions_configure" msgid="5537548915977371014">"වින්‍යාස කිරීම"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"භාෂාව"</string>
+    <string name="captions_language" msgid="2835554055388996343">"භාෂාව"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"පෙළ ප්‍රමාණය"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"සිරස්තල මෝස්තරය"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"අභිරුචි විකල්ප"</string>
@@ -376,8 +377,14 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"පසුබිම් පාරාන්ධතාව"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"සිරස්තල මෙවැනි ආකාරයට පෙනේ"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"පෙළ පාරාන්ධතාව"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"කවුළුව පෙන්වන්න"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"කවුළු වර්ණය"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"කවුළු පාරාන්ධතාව"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"කළු මත සුදු"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"සුදු මත කළු"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"කළු මත කහ"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"නිල් මත කහ"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"අභිරුචි"</string>
     <string name="color_white" msgid="65537523012024751">"සුදු"</string>
     <string name="color_black" msgid="8804213372565106403">"කළු"</string>
     <string name="color_red" msgid="5630553203246525989">"රතු"</string>
@@ -521,24 +528,25 @@
     <string name="inputs_game" msgid="1114086481110094757">"ක්‍රීඩා කොන්සෝලය"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"පාරිභෝගිකයාගේ නම"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"<xliff:g id="INPUT">%1$s</xliff:g> ආදානය සඳහා නමක් ඇතුළු කරන්න."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"සැඟවුණු"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"අදාහන මාරුවන විට පෙන්වන්න එපා"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"පාරිභෝගිකයාගේ නම"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"මෙම ආදානය පෙන්වන්න"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"නම‍"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI පාලකය"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"HDMI උපාංග පාලනය කිරීමට රූපවාහිනීයට ඉඩ දෙන්න"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"උපාංගය ස්වයංක්‍රීයව බලය අක්‍රිය වීම"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"රූපවාහිනීය සමඟ HDMI උපාංග වල බලය අක්‍රිය කර ඇත"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"රූපවාහිනීයේ ස්වයංක්‍රීය බලය සක්‍රිය"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI උපාංගය සමඟ රූපවාහිනීයේ බලය සක්‍රිය කරන්න"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
       <item quantity="one">සම්බන්ධිත ආදාන</item>
       <item quantity="other">සම්බන්ධිත ආදාන</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
       <item quantity="one">සූදානම්ව ඇති ආදාන</item>
       <item quantity="other">සූදානම්ව ඇති ආදාන</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
       <item quantity="one">සම්බන්ධිත නැති ආදාන</item>
       <item quantity="other">සම්බන්ධිත නැති ආදාන</item>
     </plurals>

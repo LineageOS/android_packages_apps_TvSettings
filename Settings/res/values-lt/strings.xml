@@ -307,6 +307,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"Programa apsaugota nuo kopijavimo."</string>
     <string name="invalid_location" msgid="5269044848535157307">"Diegimo vieta netinkama."</string>
     <string name="system_package" msgid="9200255718634512790">"Sistemos naujinių negalima įdiegti išorinėje laikmenoje."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Įrenginio administratoriaus programos negalima įdiegti išorinėje laikmenoje."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Sužinokite daugiau"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Bandyti dar kartą"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Ieškoma WPS maršruto parinktuvo…"</string>
@@ -366,7 +367,8 @@
     <string name="captions_display_off" msgid="496953007835201523">"Išjungti"</string>
     <string name="display_options" msgid="5504549024985225774">"Pateikties parinktys"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Konfigūruoti"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Kalba"</string>
+    <!-- no translation found for captions_language (2835554055388996343) -->
+    <skip />
     <string name="captions_textsize" msgid="4828195509546070971">"Teksto dydis"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Subtitrų stilius"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Tinkintos parinktys"</string>
@@ -378,8 +380,20 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Fono nepermatomumas"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Subtitrai atrodys taip"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Teksto nepermatomumas"</string>
+    <!-- no translation found for captions_windowshow (5716898740522196707) -->
+    <skip />
     <string name="captions_windowcolor" msgid="8986165172260903279">"Lango spalva"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Lango nepermatomumas"</string>
+    <!-- no translation found for captions_style_0 (2068865433439146533) -->
+    <skip />
+    <!-- no translation found for captions_style_1 (8878565905353923498) -->
+    <skip />
+    <!-- no translation found for captions_style_2 (1486695984924671199) -->
+    <skip />
+    <!-- no translation found for captions_style_3 (3217829874170162074) -->
+    <skip />
+    <!-- no translation found for captions_style_custom (3645114505000714364) -->
+    <skip />
     <string name="color_white" msgid="65537523012024751">"Balta"</string>
     <string name="color_black" msgid="8804213372565106403">"Juoda"</string>
     <string name="color_red" msgid="5630553203246525989">"Raudona"</string>
@@ -523,32 +537,33 @@
     <string name="inputs_game" msgid="1114086481110094757">"Žaidimų pultas"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Papildomas"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Tinkintas pavadinimas"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Įveskite <xliff:g id="INPUT">%1$s</xliff:g> įvesties pavadinimą."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Paslėpta"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Nerodoma pakeitus įvestį"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Tinkintas pavadinimas:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Rodyti šią įvestį"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Pavadinimas"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI valdymas"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Leisti TV valdyti HDMI įrenginius"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Autom. įrenginio išjungimas"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Išjungti HDMI įrenginius kartu su TV"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Automatinis TV įjungimas"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Įjungti TV kartu su HDMI įrenginiu"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="one">PRIJUNGTI ĮVESTIES ĮRENGINIAI</item>
-      <item quantity="few">PRIJUNGTI ĮVESTIES ĮRENGINIAI</item>
-      <item quantity="many">PRIJUNGTI ĮVESTIES ĮRENGINIAI</item>
-      <item quantity="other">PRIJUNGTI ĮVESTIES ĮRENGINIAI</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="one">Prijungtos įvestys</item>
+      <item quantity="few">Prijungtos įvestys</item>
+      <item quantity="many">Prijungtos įvestys</item>
+      <item quantity="other">Prijungtos įvestys</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="one">BUDĖJIMO REŽ. ĮVESTIES ĮRENG.</item>
-      <item quantity="few">BUDĖJIMO REŽ. ĮVESTIES ĮRENG.</item>
-      <item quantity="many">BUDĖJIMO REŽ. ĮVESTIES ĮRENG.</item>
-      <item quantity="other">BUDĖJIMO REŽ. ĮVESTIES ĮRENG.</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="one">Budėjimo režimo įvestys</item>
+      <item quantity="few">Budėjimo režimo įvestys</item>
+      <item quantity="many">Budėjimo režimo įvestys</item>
+      <item quantity="other">Budėjimo režimo įvestys</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="one">ĮVESTIES ĮRENG. NEPRIJUNGTI</item>
-      <item quantity="few">ĮVESTIES ĮRENG. NEPRIJUNGTI</item>
-      <item quantity="many">ĮVESTIES ĮRENG. NEPRIJUNGTI</item>
-      <item quantity="other">ĮVESTIES ĮRENG. NEPRIJUNGTI</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="one">Neprijungtos įvestys</item>
+      <item quantity="few">Neprijungtos įvestys</item>
+      <item quantity="many">Neprijungtos įvestys</item>
+      <item quantity="other">Neprijungtos įvestys</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Ribokite prieigą prie programų ir kito paskyros turinio"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Ribotas profilis"</string>

@@ -36,7 +36,7 @@
     <string name="account_remove_failed" msgid="980654375770693544">"खाता हटाउन सक्दैन"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="3575080833667908804">"अहिले सिङ्क गर्नुहोस् <xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"अहिले सिंक गर्नुहोस् <xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"असफल सिंक"</string>
     <string name="sync_active" msgid="6891115263481154378">"सक्रिय सिंक"</string>
@@ -305,6 +305,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"अनुप्रयोग प्रतिलिपि-सुरक्षित छ।"</string>
     <string name="invalid_location" msgid="5269044848535157307">"स्थापना स्थान मान्य छैन।"</string>
     <string name="system_package" msgid="9200255718634512790">"प्रणाली अद्यावधिकहरू बाह्य मिडियामा स्थापित गर्न सकिँदैन।"</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"यन्त्र प्रशासक बाह्य मिडियामा स्थापित गर्न सकिँदैन"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"थप सिक्नुहोस्"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"पुनःप्रयास गर्नुहोस्"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS राउटर खोज्दै..."</string>
@@ -364,7 +365,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"बन्द गर्नुहोस्"</string>
     <string name="display_options" msgid="5504549024985225774">"विकल्पहरू प्रदर्शन गर्नुहोस्"</string>
     <string name="captions_configure" msgid="5537548915977371014">"कन्फिगर गर्नुहोस्"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"भाषा"</string>
+    <string name="captions_language" msgid="2835554055388996343">"भाषा"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"पाठ आकार"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"क्याप्सन शैली"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"अनुकूलन विकल्प"</string>
@@ -376,8 +377,14 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"पृष्ठभूमि अपारदर्शकता"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"क्याप्सन यस्तो देखिने छ"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"पाठ अपारदर्शिता"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"विन्डो देखाउनुहोस्"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"सञ्झ्याल रङ"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"सञ्झ्याल अस्पष्टता"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"कालोमा सेतो"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"सेतोमा कालो"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"कालोमा पहेँलो"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"नीलोमा पहेँलो"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"अनुकूलन"</string>
     <string name="color_white" msgid="65537523012024751">"सेतो"</string>
     <string name="color_black" msgid="8804213372565106403">"कालो"</string>
     <string name="color_red" msgid="5630553203246525989">"रातो"</string>
@@ -521,24 +528,25 @@
     <string name="inputs_game" msgid="1114086481110094757">"खेल कन्सोल"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"अनुकूल नाम"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"<xliff:g id="INPUT">%1$s</xliff:g> इनपुटका लागि नाम प्रविष्ट गर्नुहोस् ।"</string>
     <string name="inputs_hide" msgid="1575971556150395486">"लुकेको"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"इनपुट स्विच गर्दा देखाइएको छैन"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"अनुकुल नामः"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"यो इनपुट देखाउनुहोस्"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"नाम"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI नियन्त्रण"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"HDMI उपकरणहरू नियन्त्रण गर्न टिभीलाई अनुमति दिनुहोस्"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"उपकरण स्वतः पावर बन्द"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"टिभीसँग HDMI उपकरणहरू पावर बन्द गर्नुहोस्"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"टिभी ओटो पावर खुला"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI उपकरणसँग टिभी पावर खोल्नुहोस्"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
       <item quantity="other">जडान गरिएका इनपुटहरू</item>
       <item quantity="one">जडान गरिएको इनपुट</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
       <item quantity="other">स्यान्डबाइ इनपुटहरू</item>
-      <item quantity="one">स्ट्यान्डबाइ इनपुट</item>
+      <item quantity="one">स्यान्डबाइ इनपुट</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
       <item quantity="other">जडान नगरिएका इनपुटहरू</item>
       <item quantity="one">जडान नगरिएको इनपुट</item>
     </plurals>
@@ -552,7 +560,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"प्रतिबन्धित प्रोफाइल प्रविष्ट गर्नुहोस्"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"प्रतिबन्धित प्रोफाइलबाट निस्कनुहोस्"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"प्रतिबन्धित प्रोफाइल मेट्नुहोस्"</string>
-    <string name="restricted_profile_create_title" msgid="1392190365829029390">"प्रतिबन्धित प्रोफाइल सिर्जना गर्नुहोस्"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"सीमित प्रोफाइल सिर्जना गर्नुहोस्"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"सेटिङहरू"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"अनुमति दिएका अनुप्रयोगहरू"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">

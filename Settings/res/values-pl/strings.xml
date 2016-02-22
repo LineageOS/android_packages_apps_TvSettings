@@ -307,6 +307,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"Aplikacja jest zabezpieczona przed kopiowaniem."</string>
     <string name="invalid_location" msgid="5269044848535157307">"Lokalizacja instalacji jest nieprawidłowa."</string>
     <string name="system_package" msgid="9200255718634512790">"Aktualizacji systemu nie można instalować na nośniku zewnętrznym."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Administratora urządzenia nie można przenieść na nośnik zewnętrzny."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Więcej informacji"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Ponów próbę"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Szukam routera WPS…"</string>
@@ -366,7 +367,8 @@
     <string name="captions_display_off" msgid="496953007835201523">"Wyłączone"</string>
     <string name="display_options" msgid="5504549024985225774">"Opcje wyświetlania"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Konfiguracja"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Język"</string>
+    <!-- no translation found for captions_language (2835554055388996343) -->
+    <skip />
     <string name="captions_textsize" msgid="4828195509546070971">"Rozmiar tekstu"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Styl napisów"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Opcje niestandardowe"</string>
@@ -378,8 +380,20 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Przezroczystość tła"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Tak będą wyglądać napisy"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Przezroczystość tekstu"</string>
+    <!-- no translation found for captions_windowshow (5716898740522196707) -->
+    <skip />
     <string name="captions_windowcolor" msgid="8986165172260903279">"Kolor okna"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Przezroczystość okna"</string>
+    <!-- no translation found for captions_style_0 (2068865433439146533) -->
+    <skip />
+    <!-- no translation found for captions_style_1 (8878565905353923498) -->
+    <skip />
+    <!-- no translation found for captions_style_2 (1486695984924671199) -->
+    <skip />
+    <!-- no translation found for captions_style_3 (3217829874170162074) -->
+    <skip />
+    <!-- no translation found for captions_style_custom (3645114505000714364) -->
+    <skip />
     <string name="color_white" msgid="65537523012024751">"Biały"</string>
     <string name="color_black" msgid="8804213372565106403">"Czarny"</string>
     <string name="color_red" msgid="5630553203246525989">"Czerwony"</string>
@@ -523,32 +537,33 @@
     <string name="inputs_game" msgid="1114086481110094757">"Konsola do gier"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Dodatkowe"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Własna nazwa"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Wpisz nazwę dla wejścia <xliff:g id="INPUT">%1$s</xliff:g>."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Ukryj"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Niepokazywane podczas przełączania urządzeń wejściowych"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Własna nazwa:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Pokaż to wejście"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Nazwa"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"Sterowanie HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Pozwala telewizorowi sterować urządzeniami HDMI"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Automat. wyłączanie urządzenia"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Wyłączanie urządzeń HDMI za pomocą TV"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Autom. wyłączanie TV włączone"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Włączanie TV za pomocą urządzenia HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="few">PODŁĄCZONE WEJŚCIA</item>
-      <item quantity="many">PODŁĄCZONE WEJŚCIA</item>
-      <item quantity="other">PODŁĄCZONE WEJŚCIA</item>
-      <item quantity="one">PODŁĄCZONE WEJŚCIE</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="few">Podłączone wejścia</item>
+      <item quantity="many">Podłączone wejścia</item>
+      <item quantity="other">Podłączone wejścia</item>
+      <item quantity="one">Podłączone wejście</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="few">WEJŚCIA ZAPASOWE</item>
-      <item quantity="many">WEJŚCIA ZAPASOWE</item>
-      <item quantity="other">WEJŚCIA ZAPASOWE</item>
-      <item quantity="one">WEJŚCIE ZAPASOWE</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="few">Wejścia zapasowe</item>
+      <item quantity="many">Wejścia zapasowe</item>
+      <item quantity="other">Wejścia zapasowe</item>
+      <item quantity="one">Wejście zapasowe</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="few">NIEPODŁĄCZONE WEJŚCIA</item>
-      <item quantity="many">NIEPODŁĄCZONE WEJŚCIA</item>
-      <item quantity="other">NIEPODŁĄCZONE WEJŚCIA</item>
-      <item quantity="one">NIEPODŁĄCZONE WEJŚCIE</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="few">Niepodłączone wejścia</item>
+      <item quantity="many">Niepodłączone wejścia</item>
+      <item quantity="other">Niepodłączone wejścia</item>
+      <item quantity="one">Niepodłączone wejście</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Ogranicz dostęp do aplikacji i innych treści na swoim koncie"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Profil ograniczony"</string>

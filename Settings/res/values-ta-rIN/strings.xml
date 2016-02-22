@@ -305,6 +305,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"பயன்பாட்டை நகலெடுக்க முடியாது."</string>
     <string name="invalid_location" msgid="5269044848535157307">"நிறுவும் இடம் சரியானதல்ல."</string>
     <string name="system_package" msgid="9200255718634512790">"வெளிப்புற மீடியாவில் முறைமை புதுப்பிப்புகளை நிறுவ முடியாது."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"சாதன நிர்வாகியை வெளிப்புற மீடியாவில் நிறுவ முடியாது."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"மேலும் அறிக"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"மீண்டும் முயலவும்"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS ரூட்டரைத் தேடுகிறது…"</string>
@@ -364,7 +365,8 @@
     <string name="captions_display_off" msgid="496953007835201523">"முடக்கு"</string>
     <string name="display_options" msgid="5504549024985225774">"திரை விருப்பங்கள்"</string>
     <string name="captions_configure" msgid="5537548915977371014">"உள்ளமை"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"மொழி"</string>
+    <!-- no translation found for captions_language (2835554055388996343) -->
+    <skip />
     <string name="captions_textsize" msgid="4828195509546070971">"உரையின் அளவு"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"தலைப்பின் நடை"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"தனிப்பயன் விருப்பங்கள்"</string>
@@ -376,8 +378,20 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"பின்னணி ஒளிபுகாத்தன்மை"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"தலைப்புகள் இப்படி இருக்கும்"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"உரை ஒளிபுகாத்தன்மை"</string>
+    <!-- no translation found for captions_windowshow (5716898740522196707) -->
+    <skip />
     <string name="captions_windowcolor" msgid="8986165172260903279">"சாளரத்தின் வண்ணம்"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"சாளர ஒளிபுகாத்தன்மை"</string>
+    <!-- no translation found for captions_style_0 (2068865433439146533) -->
+    <skip />
+    <!-- no translation found for captions_style_1 (8878565905353923498) -->
+    <skip />
+    <!-- no translation found for captions_style_2 (1486695984924671199) -->
+    <skip />
+    <!-- no translation found for captions_style_3 (3217829874170162074) -->
+    <skip />
+    <!-- no translation found for captions_style_custom (3645114505000714364) -->
+    <skip />
     <string name="color_white" msgid="65537523012024751">"வெள்ளை"</string>
     <string name="color_black" msgid="8804213372565106403">"கருப்பு"</string>
     <string name="color_red" msgid="5630553203246525989">"சிவப்பு"</string>
@@ -521,26 +535,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"கேம் கன்சோல்"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"ஆக்ஸ்"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"தனிப்பயன் பெயர்"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"<xliff:g id="INPUT">%1$s</xliff:g> உள்ளீட்டிற்குப் பெயரை உள்ளிடவும்."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"மறைக்கப்பட்டவை"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"உள்ளீடுகளை மாற்றும் போது காட்டப்படாது"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"தனிப்பயன் பெயர்:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"இந்த உள்ளீட்டைக் காட்டு"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"பெயர்"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI கட்டுப்பாடு"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"HDMI சாதனங்களை கட்டுப்படுத்த டிவியை அனுமதிக்கிறது"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"சாதன ஆற்றலைத் தானாக முடக்கு"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"டிவி மூலம் HDMI சாதனங்களை முடக்குகிறது"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"டிவியைத் தானாக இயக்கு"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI சாதனம் மூலம் டிவியை இயக்குகிறது"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
       <item quantity="other">இணைத்த உள்ளீடுகள்</item>
       <item quantity="one">இணைத்த உள்ளீடு</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="other">செயலற்ற நிலை உள்ளீடுகள்</item>
-      <item quantity="one">செயலற்ற நிலை உள்ளீடு</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="other">காத்திருப்பு நிலை உள்ளீடுகள்</item>
+      <item quantity="one">காத்திருப்பு நிலை உள்ளீடு</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="other">துண்டித்த உள்ளீடுகள்</item>
-      <item quantity="one">துண்டித்த உள்ளீடு</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="other">இணைக்காத உள்ளீடுகள்</item>
+      <item quantity="one">இணைக்காத உள்ளீடு</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"உங்கள் கணக்கில் உள்ள பயன்பாடுகள் மற்றும் மற்ற உள்ளடக்கத்தின் அணுகலை வரையறுக்கவும்"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"கட்டுப்படுத்தப்பட்ட சுயவிவரம்"</string>
@@ -552,7 +567,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"கட்டுப்படுத்தப்பட்ட சுயவிவரத்தில் நுழைக"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"கட்டுப்படுத்தப்பட்ட சுயவிவரத்தை விட்டு வெளியேறு"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"கட்டுப்படுத்தப்பட்ட சுயவிவரத்தை நீக்கு"</string>
-    <string name="restricted_profile_create_title" msgid="1392190365829029390">"வரையறுக்கப்பட்ட சுயவிவரத்தை உருவாக்கு"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"கட்டுப்படுத்தப்பட்ட சுயவிவரத்தை உருவாக்கு"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"அமைப்புகள்"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"அனுமதிக்கப்பட்ட பயன்பாடுகள்"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">

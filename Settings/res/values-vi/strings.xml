@@ -305,6 +305,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"Ứng dụng được bảo vệ bản sao."</string>
     <string name="invalid_location" msgid="5269044848535157307">"Vị trí cài đặt không hợp lệ."</string>
     <string name="system_package" msgid="9200255718634512790">"Không thể cài đặt bản cập nhật hệ thống trên phương tiện bên ngoài."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Không thể cài đặt Quản trị viên thiết bị trên phương tiện bên ngoài."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Tìm hiểu thêm"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Thử lại"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Đang tìm kiếm bộ định tuyến WPS…"</string>
@@ -364,7 +365,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"Tắt"</string>
     <string name="display_options" msgid="5504549024985225774">"Tùy chọn hiển thị"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Định cấu hình"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Ngôn ngữ"</string>
+    <string name="captions_language" msgid="2835554055388996343">"Ngôn ngữ"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Kích thước văn bản"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Kiểu phụ đề"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Tùy chọn tùy chỉnh"</string>
@@ -376,8 +377,14 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Độ mờ của nền"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Phụ đề sẽ trông như thế này"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Độ mờ văn bản"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"Hiển thị cửa sổ"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Màu cửa sổ"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Độ mờ cửa sổ"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"Chữ trắng trên nền đen"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"Chữ đen trên nền trắng"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"Chữ vàng trên nền đen"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"Chữ vàng trên nền xanh lam"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"Tùy chỉnh"</string>
     <string name="color_white" msgid="65537523012024751">"Trắng"</string>
     <string name="color_black" msgid="8804213372565106403">"Đen"</string>
     <string name="color_red" msgid="5630553203246525989">"Đỏ"</string>
@@ -521,26 +528,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"Bảng điều khiển trò chơi"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Tên tùy chỉnh"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Nhập tên cho đầu vào <xliff:g id="INPUT">%1$s</xliff:g>."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Bị ẩn"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Không hiển thị khi chuyển đổi thiết bị vào"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Tên tùy chỉnh:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Hiển thị đầu vào này"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Tên"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"Điều khiển HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Cho phép TV điều khiển thiết bị HDMI"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Tự động tắt nguồn thiết bị"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Tắt nguồn thiết bị HDMI với TV"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Tự động bật nguồn TV"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Bật nguồn TV với thiết bị HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="other">ĐẦU VÀO ĐÃ KẾT NỐI</item>
-      <item quantity="one">ĐẦU VÀO ĐÃ KẾT NỐI</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="other">Đầu vào đã kết nối</item>
+      <item quantity="one">Đầu vào đã kết nối</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="other">ĐẦU VÀO DỰ PHÒNG</item>
-      <item quantity="one">ĐẦU VÀO DỰ PHÒNG</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="other">Đầu vào dự phòng</item>
+      <item quantity="one">Đầu vào dự phòng</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="other">ĐẦU VÀO CHƯA KẾT NỐI</item>
-      <item quantity="one">ĐẦU VÀO CHƯA KẾT NỐI</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="other">Đầu vào chưa kết nối</item>
+      <item quantity="one">Đầu vào chưa kết nối</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Hạn chế quyền truy cập vào ứng dụng và nội dung khác trong tài khoản của bạn"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Hồ sơ bị hạn chế"</string>

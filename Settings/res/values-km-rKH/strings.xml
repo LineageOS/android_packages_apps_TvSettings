@@ -305,6 +305,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"កម្មវិធីត្រូវបានរក្សាសិទ្ធិ។"</string>
     <string name="invalid_location" msgid="5269044848535157307">"ទីតាំងដំឡើងមិនត្រឹមត្រូវ។"</string>
     <string name="system_package" msgid="9200255718634512790">"មិនអាចដំឡើងបច្ចុប្បន្នភាពប្រព័ន្ធលើមេឌៀខាងក្រៅបានទេ។"</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"អ្នកគ្រប់គ្រងឧបករណ៍មិនអាចដំឡើងលើមេឌៀផ្នែកខាងក្រៅបានទេ។"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"ស្វែងយល់បន្ថែម"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"ព្យាយាម​ម្ដងទៀត"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"កំពុង​ស្វែងរក​រ៉ោទ័រ WPS ..."</string>
@@ -364,7 +365,8 @@
     <string name="captions_display_off" msgid="496953007835201523">"បិទ"</string>
     <string name="display_options" msgid="5504549024985225774">"ជម្រើស​បង្ហាញ"</string>
     <string name="captions_configure" msgid="5537548915977371014">"កំណត់​រចនាសម្ព័ន្ធ"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"ភាសា"</string>
+    <!-- no translation found for captions_language (2835554055388996343) -->
+    <skip />
     <string name="captions_textsize" msgid="4828195509546070971">"ទំហំ​អត្ថបទ"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"រចនាប័ទ្ម​ចំណងជើង"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"ជម្រើស​តាម​តម្រូវ​ការ"</string>
@@ -376,8 +378,20 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"ភាព​ស្រអាប់​ផ្ទៃ​ខាងក្រោយ"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"ចំណងជើង​នឹង​​មាន​រូបរាង​ដូច​នេះ"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"ភាព​ស្រអាប់​របស់​អត្ថបទ"</string>
+    <!-- no translation found for captions_windowshow (5716898740522196707) -->
+    <skip />
     <string name="captions_windowcolor" msgid="8986165172260903279">"ពណ៌​បង្អួច"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"ភាព​ស្រអាប់​របស់​បង្អួច"</string>
+    <!-- no translation found for captions_style_0 (2068865433439146533) -->
+    <skip />
+    <!-- no translation found for captions_style_1 (8878565905353923498) -->
+    <skip />
+    <!-- no translation found for captions_style_2 (1486695984924671199) -->
+    <skip />
+    <!-- no translation found for captions_style_3 (3217829874170162074) -->
+    <skip />
+    <!-- no translation found for captions_style_custom (3645114505000714364) -->
+    <skip />
     <string name="color_white" msgid="65537523012024751">"ស"</string>
     <string name="color_black" msgid="8804213372565106403">"ខ្មៅ"</string>
     <string name="color_red" msgid="5630553203246525989">"ក្រហម"</string>
@@ -521,26 +535,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"ហ្គេម​​កុងសូល"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"ឈ្មោះ​អតិថិជន"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"បញ្ចូលឈ្មោះសម្រាប់ធាតុបញ្ចូល <xliff:g id="INPUT">%1$s</xliff:g> ។"</string>
     <string name="inputs_hide" msgid="1575971556150395486">"បាន​លាក់"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"មិន​បាន​បង្ហាញ​ពេល​ប្ដូរ​ការ​បញ្ចូល"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"ឈ្មោះ​អតិថិជន"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"បង្ហាញធាតុបញ្ចូលនេះ"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"ឈ្មោះ"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"ពិនិត្យ​ HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"ឲ្យ​ទូរទស្សន៍​ពិនិត្យ​ឧបករណ៍ HDMI"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"ឧបករណ៍​បិទ​​ដោយ​ស្វ័យ​ប្រវត្តិ"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"បិទ​ឧបករណ៍ HDMI ជា​មួយ​ទូរទស្សន៍"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"​ទូរទស្សន៍​បើក​​ស្វ័យ​ប្រវត្តិ"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"បើក​ទូរទស្សន៍​ជា​មួយ​ឧបករណ៍ HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="other">បានភ្ជាប់បញ្ចូល</item>
-      <item quantity="one">បានភ្ជាប់បញ្ចូល</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="other"> ធាតុបញ្ចូលត្រូវបានភ្ជាប់</item>
+      <item quantity="one"> ធាតុបញ្ចូលត្រូវបានភ្ជាប់</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="other">បញ្ចូលរង់ចាំ</item>
-      <item quantity="one">បញ្ចូលរង់ចាំ</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="other"> ធាតុបញ្ចូលដែលមានការផ្អាក</item>
+      <item quantity="one"> ធាតុបញ្ចូលដែលមានការផ្អាក</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="other">មិនបានភ្ជាប់បញ្ចូល</item>
-      <item quantity="one">មិនបានភ្ជាប់បញ្ចូល</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="other"> ធាតុបញ្ចូលមិនត្រូវបានភ្ជាប់</item>
+      <item quantity="one"> ធាតុបញ្ចូលមិនត្រូវបានភ្ជាប់</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"ដាក់​​​កម្រិត​ការ​ចូល​ប្រើ​កម្មវិធី និង​មាតិកា​ផ្សេងទៀត​ក្នុង​គណនី​របស់​អ្នក"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"ប្រវត្តិរូប​​ដែល​​ដាក់កម្រិត"</string>

@@ -305,6 +305,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"應用程式受保護，不可複製。"</string>
     <string name="invalid_location" msgid="5269044848535157307">"安裝位置無效。"</string>
     <string name="system_package" msgid="9200255718634512790">"無法在外部媒體上安裝系統更新。"</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"無法在外部媒體上安裝「裝置管理員」。"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"瞭解詳情"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"重試"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"正在搜尋 WPS 路由器…"</string>
@@ -364,7 +365,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"關閉"</string>
     <string name="display_options" msgid="5504549024985225774">"顯示選項"</string>
     <string name="captions_configure" msgid="5537548915977371014">"設定"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"語言"</string>
+    <string name="captions_language" msgid="2835554055388996343">"語言"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"文字大小"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"字幕樣式"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"自訂選項"</string>
@@ -376,8 +377,14 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"背景透明度"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"字幕將會是這樣："</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"文字透明度"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"顯示視窗"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"視窗顏色"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"視窗透明度"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"黑底白字"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"白底黑字"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"黑底黃字"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"藍底黃字"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"自訂"</string>
     <string name="color_white" msgid="65537523012024751">"白色"</string>
     <string name="color_black" msgid="8804213372565106403">"黑色"</string>
     <string name="color_red" msgid="5630553203246525989">"紅色"</string>
@@ -521,26 +528,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"遊戲主機"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"自訂名稱"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"為此 <xliff:g id="INPUT">%1$s</xliff:g> 輸入裝置輸入名稱。"</string>
     <string name="inputs_hide" msgid="1575971556150395486">"已隱藏"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"切換輸入裝置時不顯示"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"自訂名稱："</string>
+    <string name="inputs_show" msgid="5069718540369447778">"顯示此輸入裝置"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"名稱"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI 控制項"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"允許電視控制 HDMI 裝置"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"自動關閉裝置電源"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"透過電視關閉 HDMI 裝置電源"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"自動開啟電視電源"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"透過 HDMI 裝置開啟電視電源"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="other">已連線的輸入裝置</item>
-      <item quantity="one">已連線的輸入裝置</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="other">已連接的輸入裝置</item>
+      <item quantity="one">已連接的輸入裝置</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
       <item quantity="other">待機輸入裝置</item>
       <item quantity="one">待機輸入裝置</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="other">未連線的輸入裝置</item>
-      <item quantity="one">未連線的輸入裝置</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="other">未連接的輸入裝置</item>
+      <item quantity="one">未連接的輸入裝置</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"限制透過您的帳戶存取應用程式和其他內容"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"限制存取的個人檔案"</string>
