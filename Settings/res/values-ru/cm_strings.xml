@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="about_cmupdate_settings_title">Обновления системы</string>
+  <string name="about_cmupdate_settings_title">Обновления CyanogenMod</string>
   <string name="about_mod_version">Версия CyanogenMod</string>
   <plurals name="show_dev_countdown_cm">
     <item quantity="one">Остался <xliff:g id="step_count">%1$d</xliff:g> шаг для включения настроек для разработчиков.</item>
@@ -33,7 +33,7 @@
   <string name="selinux_status_enforcing">Принудительный</string>
   <string name="accessories_add_bluetooth_inst_cm">Для начала использования CyanogenMod убедитесь, что Bluetooth-устройство находится в режиме сопряжения. На Nexus Remote это делается одновременным нажатием кнопок «Назад» и «Домой».</string>
   <string name="root_access">Режим суперпользователя</string>
-  <string name="root_access_warning_title">Разрешить использование Суперпользователя?</string>
+  <string name="root_access_warning_title">Разрешить использование суперпользователя?</string>
   <string name="root_access_warning_message">Использование приложениями прав суперпользователя может быть крайне опасным и ставит под угрозу безопасность вашего устройства!</string>
   <string name="root_access_none">Выключен</string>
   <string name="root_access_apps">Только для приложений</string>
@@ -55,6 +55,6 @@
   <string name="reboot_bootloader_button_label">Загрузчик</string>
   <string name="reboot_soft_button_label">Перезапуск интерфейса</string>
   <string name="adb_over_network">Отладка по сети</string>
-  <string name="adb_over_network_summary">Включить режим отладки через сетевые интерфейсы (Wi\u2011Fi и USB-сети). Отладка отключается при перезагрузке устройства.</string>
-  <string name="adb_over_network_warning">ВНИМАНИЕ: когда включена отладка по сети, устройство открыто для неконтролируемого доступа из всех подключенных сетей!\n\nИспользуйте эту функцию только тогда, когда вы подключены к доверенным сетям.\n\nВы действительно хотите включить эту функцию?</string>
+  <string name="adb_over_network_summary">Включить режим отладки через сетевые интерфейсы (Wi\u2011Fi и USB-сети). Отладка отключается при перезагрузке устройства</string>
+  <string name="adb_over_network_warning">ВНИМАНИЕ: когда включена отладка по сети, устройство открыто для неконтролируемого доступа из всех подключенных сетей!\n\nИспользуйте эту функцию только при подключении к доверенным сетям.\n\nДействительно включить эту функцию?</string>
 </resources>
