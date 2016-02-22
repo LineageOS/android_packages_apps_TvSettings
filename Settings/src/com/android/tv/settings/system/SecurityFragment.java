@@ -40,6 +40,7 @@ import android.support.annotation.IntDef;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v17.preference.LeanbackSettingsFragment;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.TwoStatePreference;
 import android.text.TextUtils;
 import android.util.Log;
@@ -65,6 +66,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
 
     private static final String KEY_UNKNOWN_SOURCES = "unknown_sources";
     private static final String KEY_VERIFY_APPS = "verify_apps";
+    private static final String KEY_RESTRICTED_PROFILE_GROUP = "restricted_profile_group";
     private static final String KEY_RESTRICTED_PROFILE_ENTER = "restricted_profile_enter";
     private static final String KEY_RESTRICTED_PROFILE_EXIT = "restricted_profile_exit";
     private static final String KEY_RESTRICTED_PROFILE_APPS = "restricted_profile_apps";
@@ -87,6 +89,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
 
     private TwoStatePreference mUnknownSourcesPref;
     private TwoStatePreference mVerifyAppsPref;
+    private PreferenceGroup mRestrictedProfileGroup;
     private Preference mRestrictedProfileEnterPref;
     private Preference mRestrictedProfileExitPref;
     private Preference mRestrictedProfileAppsPref;
@@ -125,6 +128,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
 
         mUnknownSourcesPref = (TwoStatePreference) findPreference(KEY_UNKNOWN_SOURCES);
         mVerifyAppsPref = (TwoStatePreference) findPreference(KEY_VERIFY_APPS);
+        mRestrictedProfileGroup = (PreferenceGroup) findPreference(KEY_RESTRICTED_PROFILE_GROUP);
         mRestrictedProfileEnterPref = findPreference(KEY_RESTRICTED_PROFILE_ENTER);
         mRestrictedProfileExitPref = findPreference(KEY_RESTRICTED_PROFILE_EXIT);
         mRestrictedProfileAppsPref = findPreference(KEY_RESTRICTED_PROFILE_APPS);
@@ -139,6 +143,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             mUnknownSourcesPref.setVisible(false);
             mVerifyAppsPref.setVisible(false);
 
+            mRestrictedProfileGroup.setVisible(true);
             mRestrictedProfileEnterPref.setVisible(false);
             mRestrictedProfileExitPref.setVisible(true);
             mRestrictedProfileAppsPref.setVisible(false);
@@ -150,6 +155,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             mUnknownSourcesPref.setVisible(true);
             mVerifyAppsPref.setVisible(shouldShowVerifierSetting());
 
+            mRestrictedProfileGroup.setVisible(true);
             mRestrictedProfileEnterPref.setVisible(true);
             mRestrictedProfileExitPref.setVisible(false);
             mRestrictedProfileAppsPref.setVisible(true);
@@ -159,16 +165,29 @@ public class SecurityFragment extends LeanbackPreferenceFragment
 
             AppRestrictionsFragment.prepareArgs(mRestrictedProfileAppsPref.getExtras(),
                     mRestrictedUserInfo.id, false);
-        } else {
+        } else if (UserManager.supportsMultipleUsers()) {
             // Not in restricted profile, and it doesn't exist
             mUnknownSourcesPref.setVisible(true);
             mVerifyAppsPref.setVisible(shouldShowVerifierSetting());
 
+            mRestrictedProfileGroup.setVisible(true);
             mRestrictedProfileEnterPref.setVisible(false);
             mRestrictedProfileExitPref.setVisible(false);
             mRestrictedProfileAppsPref.setVisible(false);
             mRestrictedProfilePinPref.setVisible(false);
             mRestrictedProfileCreatePref.setVisible(true);
+            mRestrictedProfileDeletePref.setVisible(false);
+        } else {
+            // Not in restricted profile, and can't create one either
+            mUnknownSourcesPref.setVisible(true);
+            mVerifyAppsPref.setVisible(shouldShowVerifierSetting());
+
+            mRestrictedProfileGroup.setVisible(false);
+            mRestrictedProfileEnterPref.setVisible(false);
+            mRestrictedProfileExitPref.setVisible(false);
+            mRestrictedProfileAppsPref.setVisible(false);
+            mRestrictedProfilePinPref.setVisible(false);
+            mRestrictedProfileCreatePref.setVisible(false);
             mRestrictedProfileDeletePref.setVisible(false);
         }
 
