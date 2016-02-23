@@ -70,13 +70,6 @@
         <!-- TODO: implement this -->
         <!--android:fragment="com.android.settings.applications.RunningServices" />-->
 
-    <ListPreference
-        android:key="night_mode"
-        android:title="@string/night_mode_title"
-        android:summary="@string/night_mode_summary"
-        android:entries="@array/night_mode_entries"
-        android:entryValues="@array/night_mode_values" />
-
     <PreferenceScreen
         android:key="convert_to_file_encryption"
         android:title="@string/convert_to_file_encryption"
