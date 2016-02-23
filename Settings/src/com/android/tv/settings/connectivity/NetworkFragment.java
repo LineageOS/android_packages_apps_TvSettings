@@ -19,6 +19,8 @@ package com.android.tv.settings.connectivity;
 import android.content.Context;
 import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
@@ -49,6 +51,8 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
     private static final String KEY_ETHERNET_PROXY = "ethernet_proxy";
     private static final String KEY_ETHERNET_DHCP = "ethernet_dhcp";
 
+    private static final int INITIAL_UPDATE_DELAY = 500;
+
     private ConnectivityListener mConnectivityListener;
     private AccessPointPreference.UserBadgeCache mUserBadgeCache;
 
@@ -62,6 +66,16 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
     private Preference mEthernetStatusPref;
     private Preference mEthernetProxyPref;
     private Preference mEthernetDhcpPref;
+
+    private final Handler mHandler = new Handler();
+    private long mNoWifiUpdateBeforeMillis;
+    private Runnable mInitialUpdateWifiListRunnable = new Runnable() {
+        @Override
+        public void run() {
+            mNoWifiUpdateBeforeMillis = 0;
+            updateWifiList();
+        }
+    };
 
     public static NetworkFragment newInstance() {
         return new NetworkFragment();
@@ -80,6 +94,7 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
         super.onStart();
         mConnectivityListener.start();
         mConnectivityListener.setWifiListener(this);
+        mNoWifiUpdateBeforeMillis = SystemClock.elapsedRealtime() + INITIAL_UPDATE_DELAY;
         updateWifiList();
     }
 
@@ -126,7 +141,6 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
         switch (preference.getKey()) {
             case KEY_WIFI_ENABLE:
                 mConnectivityListener.setWifiEnabled(mEnableWifiPref.isChecked());
-                updateWifiList();
                 return true;
             case KEY_WIFI_COLLAPSE:
                 final boolean collapse = !mWifiNetworksCategory.isCollapsed();
@@ -184,6 +198,14 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
 
     private void updateWifiList() {
         if (!isAdded()) {
+            return;
+        }
+
+        final long now = SystemClock.elapsedRealtime();
+        if (mNoWifiUpdateBeforeMillis > now) {
+            mHandler.removeCallbacks(mInitialUpdateWifiListRunnable);
+            mHandler.postDelayed(mInitialUpdateWifiListRunnable,
+                    mNoWifiUpdateBeforeMillis - now);
             return;
         }
 
