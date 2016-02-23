@@ -110,8 +110,6 @@ public class AccessibilityFragment extends LeanbackPreferenceFragment {
     }
 
     private void refreshServices(PreferenceGroup group) {
-        group.removeAll();
-
         final List<AccessibilityServiceInfo> installedServiceInfos = AccessibilityManager
                 .getInstance(getActivity()).getInstalledAccessibilityServiceList();
         final Set<ComponentName> enabledServices =
@@ -131,7 +129,12 @@ public class AccessibilityFragment extends LeanbackPreferenceFragment {
             final String title = accInfo.getResolveInfo()
                     .loadLabel(getActivity().getPackageManager()).toString();
 
-            final Preference servicePref = new Preference(group.getContext());
+            final String key = "ServicePref:" + componentName.flattenToString();
+            Preference servicePref = findPreference(key);
+            if (servicePref == null) {
+                servicePref = new Preference(group.getContext());
+                servicePref.setKey(key);
+            }
             servicePref.setTitle(title);
             servicePref.setSummary(serviceEnabled ? R.string.settings_on : R.string.settings_off);
             servicePref.setFragment(AccessibilityServiceFragment.class.getName());
