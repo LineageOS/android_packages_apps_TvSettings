@@ -21,7 +21,6 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManagerNative;
 import android.app.AppOpsManager;
-import android.app.UiModeManager;
 import android.app.admin.DevicePolicyManager;
 import android.app.backup.IBackupManager;
 import android.bluetooth.BluetoothAdapter;
@@ -152,7 +151,6 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
 
     private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
 
-    private static final String KEY_NIGHT_MODE = "night_mode";
     private static final String KEY_CONVERT_FBE = "convert_to_file_encryption";
 
     private static final int RESULT_DEBUG_APP = 1000;
@@ -234,8 +232,6 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
     private ListPreference mAppProcessLimit;
 
     private SwitchPreference mShowAllANRs;
-
-    private ListPreference mNightModePreference;
 
     private ColorModePreference mColorModePreference;
 
@@ -424,12 +420,6 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
             removePreference(KEY_CONVERT_FBE);
         }
 */
-
-        mNightModePreference = addListPreference(KEY_NIGHT_MODE);
-        final UiModeManager uiManager = (UiModeManager) getActivity().getSystemService(
-                Context.UI_MODE_SERVICE);
-        final int currentNightMode = uiManager.getNightMode();
-        mNightModePreference.setValue(String.valueOf(currentNightMode));
 
         mColorModePreference = (ColorModePreference) findPreference(KEY_COLOR_MODE);
         mColorModePreference.updateCurrentAndSupported();
@@ -1709,17 +1699,6 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
         } else if (preference == mSimulateColorSpace) {
             writeSimulateColorSpace(newValue);
             return true;
-        } else if (preference == mNightModePreference) {
-            try {
-                final int value = Integer.parseInt((String) newValue);
-                final UiModeManager uiManager = (UiModeManager) getActivity().getSystemService(
-                        Context.UI_MODE_SERVICE);
-                uiManager.setNightMode(value);
-                return true;
-            } catch (NumberFormatException e) {
-                Log.e(TAG, "could not persist night mode setting", e);
-                return false;
-            }
         }
         return false;
     }
