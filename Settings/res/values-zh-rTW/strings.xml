@@ -51,7 +51,6 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"系統音效"</string>
     <string name="device_apps" msgid="9180435229638772838">"應用程式"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"儲存空間與重設"</string>
-    <string name="device_storage" msgid="5536683600091277826">"儲存空間"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"備份與還原"</string>
     <string name="device_reset" msgid="2827002349560023125">"恢復原廠設定"</string>
     <string name="device_calibration" msgid="8632962533376605191">"校正"</string>
@@ -249,7 +248,7 @@
     <string name="storage_format" msgid="3759273736493279595">"清除並格式化"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"進行格式化，設為裝置儲存空間"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"尚未連線"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"遷移資料"</string>
+    <string name="storage_migrate" msgid="1304058078948715456">"將資料遷移到這個儲存空間"</string>
     <string name="storage_forget" msgid="8731986045697320463">"移除這個裝置儲存空間"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"如要使用這個隨身碟中的應用程式或資料，請重新插入。如果隨身碟無法使用，您也可以清除這個儲存空間。\n\n假使您選擇 [清除]，隨身碟中的所有資料將遭到永久刪除，無法復原。\n\n雖然您稍後可以重新安裝應用程式，但這個隨身碟中儲存的資料會全數遺失。"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"裝置儲存空間"</string>
@@ -528,7 +527,7 @@
     <string name="inputs_game" msgid="1114086481110094757">"遊戲主機"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"自訂名稱"</string>
-    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"輸入 <xliff:g id="INPUT">%1$s</xliff:g> 輸入裝置的名稱。"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"為 <xliff:g id="INPUT">%1$s</xliff:g> 輸入裝置設定名稱。"</string>
     <string name="inputs_hide" msgid="1575971556150395486">"隱藏"</string>
     <string name="inputs_show" msgid="5069718540369447778">"顯示這個輸入裝置"</string>
     <string name="input_header_names" msgid="6958427658951236078">"名稱"</string>
@@ -543,8 +542,8 @@
       <item quantity="one">已連接的輸入裝置</item>
     </plurals>
     <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
-      <item quantity="other">待命的輸入裝置</item>
-      <item quantity="one">待命的輸入裝置</item>
+      <item quantity="other">待命中的輸入裝置</item>
+      <item quantity="one">待命中的輸入裝置</item>
     </plurals>
     <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
       <item quantity="other">未連接的輸入裝置</item>

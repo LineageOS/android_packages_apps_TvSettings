@@ -51,7 +51,6 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Zvukovi sustava"</string>
     <string name="device_apps" msgid="9180435229638772838">"Aplikacije"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Pohrana i poništavanje"</string>
-    <string name="device_storage" msgid="5536683600091277826">"Pohrana"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Sigurnosna kopija i vraćanje"</string>
     <string name="device_reset" msgid="2827002349560023125">"Vraćanje na tvorničko stanje"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibracija"</string>
@@ -250,7 +249,7 @@
     <string name="storage_format" msgid="3759273736493279595">"Izbriši i formatiraj"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatiraj kao pohranu uređaja"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Nije povezano"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Premjesti podatke"</string>
+    <string name="storage_migrate" msgid="1304058078948715456">"Premjesti podatke u ovu pohranu"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Zaboravi ovu pohranu uređaja"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Da biste upotrebljavali aplikacije ili podatke na ovom disku, uključite ga ponovo. Možete i zaboraviti tu pohranu ako disk nije dostupan.\n\nAko odaberete Zaboravi, zauvijek će se izgubiti svi podaci s diska.\n\nKasnije možete ponovo instalirati aplikacije, ali njihovi podaci pohranjeni na tom disku bit će izgubljeni."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Pohrana na uređaju"</string>
@@ -366,8 +365,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"Isključeno"</string>
     <string name="display_options" msgid="5504549024985225774">"Opcije prikaza"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Konfiguriranje"</string>
-    <!-- no translation found for captions_language (2835554055388996343) -->
-    <skip />
+    <string name="captions_language" msgid="2835554055388996343">"Jezik"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Veličina teksta"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Stil titlova"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Prilagođene opcije"</string>
@@ -379,20 +377,14 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Zasjenjenost pozadine"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Titlovi će izgledati ovako"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Neprozirnost teksta"</string>
-    <!-- no translation found for captions_windowshow (5716898740522196707) -->
-    <skip />
+    <string name="captions_windowshow" msgid="5716898740522196707">"Prikaži prozor"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Boja prozora"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Neprozirnost prozora"</string>
-    <!-- no translation found for captions_style_0 (2068865433439146533) -->
-    <skip />
-    <!-- no translation found for captions_style_1 (8878565905353923498) -->
-    <skip />
-    <!-- no translation found for captions_style_2 (1486695984924671199) -->
-    <skip />
-    <!-- no translation found for captions_style_3 (3217829874170162074) -->
-    <skip />
-    <!-- no translation found for captions_style_custom (3645114505000714364) -->
-    <skip />
+    <string name="captions_style_0" msgid="2068865433439146533">"Bijelo na crnom"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"Crno na bijelom"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"Žuto na crnom"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"Žuto na plavom"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"Prilagođeno"</string>
     <string name="color_white" msgid="65537523012024751">"Bijela"</string>
     <string name="color_black" msgid="8804213372565106403">"Crna"</string>
     <string name="color_red" msgid="5630553203246525989">"Crvena"</string>
@@ -548,18 +540,18 @@
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Uključivanje televizora s HDMI uređajem"</string>
     <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
       <item quantity="one">Povezan ulaz</item>
-      <item quantity="few">Povezana ulaza</item>
-      <item quantity="other">Povezanih ulaza</item>
+      <item quantity="few">Povezani ulazi</item>
+      <item quantity="other">Povezani ulazi</item>
     </plurals>
     <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
       <item quantity="one">Ulaz na čekanju</item>
-      <item quantity="few">Ulaza na čekanju</item>
-      <item quantity="other">Ulaza na čekanju</item>
+      <item quantity="few">Ulazi na čekanju</item>
+      <item quantity="other">Ulazi na čekanju</item>
     </plurals>
     <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
       <item quantity="one">Nepovezan ulaz</item>
-      <item quantity="few">Nepovezana ulaza</item>
-      <item quantity="other">Nepovezanih ulaza</item>
+      <item quantity="few">Nepovezani ulazi</item>
+      <item quantity="other">Nepovezani ulazi</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Ograničavanje pristupa aplikacijama i ostalom sadržaju na vašem računu"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Ograničeni profil"</string>
