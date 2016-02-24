@@ -311,22 +311,31 @@ public class MainFragment extends LeanbackPreferenceFragment {
             return;
         }
 
-        mAccessoriesGroup.removeAll();
-
         final Set<BluetoothDevice> bondedDevices = mBtAdapter.getBondedDevices();
         final Set<String> connectedBluetoothAddresses =
                 BluetoothConnectionsManager.getConnectedSet(getContext());
         final Context themedContext = getPreferenceManager().getContext();
+
+        final Set<String> touchedKeys = new ArraySet<>(bondedDevices.size() + 1);
+        if (mAddAccessory != null) {
+            touchedKeys.add(mAddAccessory.getKey());
+        }
 
         for (final BluetoothDevice device : bondedDevices) {
             final String desc = connectedBluetoothAddresses.contains(device.getAddress())
                     ? getString(R.string.accessory_connected)
                     : null;
 
-            final int deviceImgId = AccessoryUtils.getImageIdForDevice(device);
-            final Preference preference = new Preference(themedContext);
+            final String key = "BluetoothDevice:" + device.getAddress();
+            touchedKeys.add(key);
+            Preference preference = mAccessoriesGroup.findPreference(key);
+            if (preference == null) {
+                preference = new Preference(themedContext);
+                preference.setKey(key);
+            }
             preference.setTitle(device.getName());
             preference.setSummary(desc);
+            final int deviceImgId = AccessoryUtils.getImageIdForDevice(device);
             preference.setIcon(deviceImgId);
             preference.setFragment(BluetoothAccessoryFragment.class.getName());
             BluetoothAccessoryFragment.prepareArgs(
@@ -336,8 +345,14 @@ public class MainFragment extends LeanbackPreferenceFragment {
                     deviceImgId);
             mAccessoriesGroup.addPreference(preference);
         }
-        if (mAddAccessory != null) {
-            mAccessoriesGroup.addPreference(mAddAccessory);
+
+        for (int i = 0; i < mAccessoriesGroup.getPreferenceCount();) {
+            final Preference preference = mAccessoriesGroup.getPreference(i);
+            if (touchedKeys.contains(preference.getKey())) {
+                i++;
+            } else {
+                mAccessoriesGroup.removePreference(preference);
+            }
         }
     }
 
