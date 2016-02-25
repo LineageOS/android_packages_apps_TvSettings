@@ -95,7 +95,9 @@ public class StorageFragment extends LeanbackPreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-        if (!mVolumeInfo.isMountedReadable()) {
+        mVolumeInfo = mStorageManager.findVolumeById(
+                getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
+        if (mVolumeInfo == null || !mVolumeInfo.isMountedReadable()) {
             getFragmentManager().popBackStack();
         } else {
             refresh();
