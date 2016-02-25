@@ -156,9 +156,9 @@ public class StorageResetFragment extends LeanbackPreferenceFragment {
             touchedDeviceKeys.add(key);
             VolPreference volPreference = (VolPreference) deviceCategory.findPreference(key);
             if (volPreference == null) {
-                volPreference = new VolPreference(themedContext, mStorageManager,
-                        volumeInfo);
+                volPreference = new VolPreference(themedContext, volumeInfo);
             }
+            volPreference.refresh(themedContext, mStorageManager, volumeInfo);
             deviceCategory.addPreference(volPreference);
         }
 
@@ -194,8 +194,9 @@ public class StorageResetFragment extends LeanbackPreferenceFragment {
             touchedRemovableKeys.add(key);
             VolPreference volPreference = (VolPreference) removableCategory.findPreference(key);
             if (volPreference == null) {
-                volPreference = new VolPreference(themedContext, mStorageManager, volumeInfo);
+                volPreference = new VolPreference(themedContext, volumeInfo);
             }
+            volPreference.refresh(themedContext, mStorageManager, volumeInfo);
             removableCategory.addPreference(volPreference);
         }
         for (final DiskInfo diskInfo : unsupportedDisks) {
@@ -221,10 +222,13 @@ public class StorageResetFragment extends LeanbackPreferenceFragment {
 
 
     private static class VolPreference extends Preference {
-        public VolPreference(Context context, StorageManager storageManager,
-                VolumeInfo volumeInfo) {
+        public VolPreference(Context context, VolumeInfo volumeInfo) {
             super(context);
             setKey(makeKey(volumeInfo));
+        }
+
+        private void refresh(Context context, StorageManager storageManager,
+                VolumeInfo volumeInfo) {
             final String description = storageManager
                     .getBestVolumeDescription(volumeInfo);
             setTitle(description);
