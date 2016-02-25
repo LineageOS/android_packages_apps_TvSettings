@@ -579,7 +579,8 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
                 if (i != CURRENT_NUMBER_VIEW_INDEX) {
                     mNumberViews[i].setText("");
                 } else if (mCurrentValue >= mMinValue && mCurrentValue <= mMaxValue) {
-                    mNumberViews[i].setText(String.valueOf(mCurrentValue));
+                    // Bullet
+                    mNumberViews[i].setText("\u2022");
                 }
             }
         }
