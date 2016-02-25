@@ -194,7 +194,7 @@ public class StorageResetFragment extends LeanbackPreferenceFragment {
             touchedRemovableKeys.add(key);
             VolPreference volPreference = (VolPreference) removableCategory.findPreference(key);
             if (volPreference == null) {
-                new VolPreference(themedContext, mStorageManager, volumeInfo);
+                volPreference = new VolPreference(themedContext, mStorageManager, volumeInfo);
             }
             removableCategory.addPreference(volPreference);
         }
