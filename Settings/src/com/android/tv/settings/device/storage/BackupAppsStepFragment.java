@@ -42,6 +42,10 @@ import java.util.Map;
 public class BackupAppsStepFragment extends GuidedStepFragment implements
         ApplicationsState.Callbacks {
 
+    private static final int ACTION_NO_APPS = 0;
+    private static final int ACTION_MIGRATE_DATA = 1;
+    private static final int ACTION_BACKUP_APP_BASE = 100;
+
     private ApplicationsState mApplicationsState;
     private ApplicationsState.Session mSession;
 
@@ -75,7 +79,9 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
         if (info != null) {
             mAppFilter = new ApplicationsState.VolumeFilter(info.getFsUuid());
         } else {
-            // TODO: bail out somehow
+            if (!getFragmentManager().popBackStackImmediate()) {
+                getActivity().finish();
+            }
             mAppFilter = new ApplicationsState.AppFilter() {
                 @Override
                 public void init() {}
@@ -137,16 +143,40 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
     private List<GuidedAction> getAppActions(boolean refreshIcons,
             List<ApplicationsState.AppEntry> entries) {
 
-        final List<GuidedAction> actions = new ArrayList<>(entries.size());
+        final List<GuidedAction> actions = new ArrayList<>(entries.size() + 1);
+
+        boolean showMigrate = false;
+        final VolumeInfo currentExternal = mPackageManager.getPrimaryStorageCurrentVolume();
+        // currentExternal will be null if the drive is not mounted. Don't offer the option to
+        // migrate if so.
+        if (currentExternal != null
+                && TextUtils.equals(currentExternal.getId(), mVolumeId)) {
+            final List<VolumeInfo> candidates =
+                    mPackageManager.getPrimaryStorageCandidateVolumes();
+            for (final VolumeInfo candidate : candidates) {
+                if (!TextUtils.equals(candidate.getId(), mVolumeId)) {
+                    showMigrate = true;
+                    break;
+                }
+            }
+        }
+
+        if (showMigrate) {
+            actions.add(new GuidedAction.Builder(getContext())
+                    .id(ACTION_MIGRATE_DATA)
+                    .title(R.string.storage_migrate_away)
+                    .build());
+        }
+
+        int index = ACTION_BACKUP_APP_BASE;
         for (final ApplicationsState.AppEntry entry : entries) {
-            final int index = actions.size();
             final ApplicationInfo info = entry.info;
             final AppInfo appInfo = new AppInfo(getActivity(), entry);
             actions.add(new GuidedAction.Builder(getContext())
                     .title(appInfo.getName())
                     .description(appInfo.getSize())
                     .icon(mIconMap.get(info.packageName))
-                    .id(index)
+                    .id(index++)
                     .build());
         }
         mEntries.clear();
@@ -158,6 +188,13 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
             }
             mIconLoaderTask = new IconLoaderTask(entries);
             mIconLoaderTask.execute();
+        }
+
+        if (actions.size() == 0) {
+            actions.add(new GuidedAction.Builder(getContext())
+                    .id(ACTION_NO_APPS)
+                    .title(R.string.storage_no_apps)
+                    .build());
         }
         return actions;
     }
@@ -175,11 +212,23 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
     @Override
     public void onGuidedActionClicked(GuidedAction action) {
         final int actionId = (int) action.getId();
-        final ApplicationsState.AppEntry entry = mEntries.get(actionId);
-        final AppInfo appInfo = new AppInfo(getActivity(), entry);
+        if (actionId == ACTION_MIGRATE_DATA) {
+            startActivity(MigrateStorageActivity.getLaunchIntent(getActivity(), mVolumeId, false));
+        } else if (actionId == ACTION_NO_APPS) {
+            if (!getFragmentManager().popBackStackImmediate()) {
+                getActivity().finish();
+            }
+        } else if (actionId >= ACTION_BACKUP_APP_BASE
+                && actionId < mEntries.size() + ACTION_BACKUP_APP_BASE) {
+            final ApplicationsState.AppEntry entry =
+                    mEntries.get(actionId - ACTION_BACKUP_APP_BASE);
+            final AppInfo appInfo = new AppInfo(getActivity(), entry);
 
-        startActivity(MoveAppActivity.getLaunchIntent(getActivity(), entry.info.packageName,
-                appInfo.getName()));
+            startActivity(MoveAppActivity.getLaunchIntent(getActivity(), entry.info.packageName,
+                    appInfo.getName()));
+        } else {
+            throw new IllegalArgumentException("Unknown action " + action);
+        }
     }
 
     @Override
