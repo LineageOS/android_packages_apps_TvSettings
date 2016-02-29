@@ -286,9 +286,6 @@ public class NewStorageActivity extends Activity {
             } else if (TextUtils.equals(intent.getAction(),
                     "com.google.android.tungsten.setupwraith.TV_SETTINGS_POST_SETUP")) {
                 handleSetupComplete(context);
-            } else if (TextUtils.equals(
-                    intent.getAction(), Intent.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE)) {
-                Toast.makeText(context, R.string.storage_mount_adopted, Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -327,6 +324,12 @@ public class NewStorageActivity extends Activity {
                 }
                 final String uuid = info.getFsUuid();
                 Log.d(TAG, "Scanning volume: " + info);
+                if (info.getType() == VolumeInfo.TYPE_PRIVATE
+                        && !TextUtils.equals(volumeId, VolumeInfo.ID_PRIVATE_INTERNAL)) {
+                    Toast.makeText(context, R.string.storage_mount_adopted, Toast.LENGTH_SHORT)
+                            .show();
+                    return;
+                }
                 if (info.getType() != VolumeInfo.TYPE_PUBLIC || TextUtils.isEmpty(uuid)) {
                     continue;
                 }
