@@ -164,9 +164,11 @@ public class StorageFragment extends LeanbackPreferenceFragment {
         if (isPrivate) {
             mErasePref.setIntent(
                     FormatActivity.getFormatAsPublicIntent(getContext(), mVolumeInfo.getDiskId()));
+            mErasePref.setTitle(R.string.storage_format_as_public);
         } else {
             mErasePref.setIntent(
                     FormatActivity.getFormatAsPrivateIntent(getContext(), mVolumeInfo.getDiskId()));
+            mErasePref.setTitle(R.string.storage_format_as_private);
         }
 
         mAppsUsagePref.setVisible(isPrivate);
