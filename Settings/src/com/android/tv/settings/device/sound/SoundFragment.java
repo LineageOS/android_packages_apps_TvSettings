@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v17.preference.LeanbackPreferenceFragment;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.TwoStatePreference;
@@ -30,8 +31,16 @@ import android.text.TextUtils;
 
 import com.android.tv.settings.R;
 
-public class SoundFragment extends LeanbackPreferenceFragment {
+public class SoundFragment extends LeanbackPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
+
     private static final String KEY_SOUND_EFFECTS = "sound_effects";
+    private static final String KEY_SURROUND_PASSTHROUGH = "surround_passthrough";
+
+    private static final String VAL_SURROUND_SOUND_AUTO = "auto";
+    private static final String VAL_SURROUND_SOUND_ALWAYS = "always";
+    private static final String VAL_SURROUND_SOUND_NEVER = "never";
+
     private AudioManager mAudioManager;
 
     public static SoundFragment newInstance() {
@@ -46,17 +55,15 @@ public class SoundFragment extends LeanbackPreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        final Context themedContext = getPreferenceManager().getContext();
-        final PreferenceScreen screen =
-                getPreferenceManager().createPreferenceScreen(themedContext);
-        screen.setTitle(R.string.device_sound_effects);
-        setPreferenceScreen(screen);
+        setPreferencesFromResource(R.xml.sound, null);
 
-        final SwitchPreference soundPref = new SwitchPreference(themedContext);
-        soundPref.setKey(KEY_SOUND_EFFECTS);
-        soundPref.setTitle(R.string.device_sound_effects);
+        final TwoStatePreference soundPref = (TwoStatePreference) findPreference(KEY_SOUND_EFFECTS);
         soundPref.setChecked(getSoundEffectsEnabled());
-        screen.addPreference(soundPref);
+
+        final ListPreference surroundPref =
+                (ListPreference) findPreference(KEY_SURROUND_PASSTHROUGH);
+        surroundPref.setValue(getSurroundPassthroughSetting());
+        surroundPref.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -66,6 +73,28 @@ public class SoundFragment extends LeanbackPreferenceFragment {
             setSoundEffectsEnabled(soundPref.isChecked());
         }
         return super.onPreferenceTreeClick(preference);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (TextUtils.equals(preference.getKey(), KEY_SURROUND_PASSTHROUGH)) {
+            final String selection = (String) newValue;
+            switch (selection) {
+                case VAL_SURROUND_SOUND_AUTO:
+                    setSurroundPassthroughSetting(Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO);
+                    break;
+                case VAL_SURROUND_SOUND_ALWAYS:
+                    setSurroundPassthroughSetting(Settings.Global.ENCODED_SURROUND_OUTPUT_ALWAYS);
+                    break;
+                case VAL_SURROUND_SOUND_NEVER:
+                    setSurroundPassthroughSetting(Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER);
+                    break;
+                default:
+                    throw new IllegalArgumentException("Unknown surround sound pref value");
+            }
+            return true;
+        }
+        return true;
     }
 
     private boolean getSoundEffectsEnabled() {
@@ -87,4 +116,24 @@ public class SoundFragment extends LeanbackPreferenceFragment {
                 Settings.System.SOUND_EFFECTS_ENABLED, enabled ? 1 : 0);
     }
 
+    private void setSurroundPassthroughSetting(int newVal) {
+        Settings.Global.putInt(getContext().getContentResolver(),
+                Settings.Global.ENCODED_SURROUND_OUTPUT, newVal);
+    }
+
+    private String getSurroundPassthroughSetting() {
+        final int value = Settings.Global.getInt(getContext().getContentResolver(),
+                Settings.Global.ENCODED_SURROUND_OUTPUT,
+                Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO);
+
+        switch (value) {
+            case Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO:
+            default:
+                return VAL_SURROUND_SOUND_AUTO;
+            case Settings.Global.ENCODED_SURROUND_OUTPUT_ALWAYS:
+                return VAL_SURROUND_SOUND_ALWAYS;
+            case Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER:
+                return VAL_SURROUND_SOUND_NEVER;
+        }
+    }
 }
