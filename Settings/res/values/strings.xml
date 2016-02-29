@@ -531,6 +531,10 @@
     <string name="storage_not_connected">Not connected</string>
     <!-- Storage settings migrate primary storage action [CHAR_LIMIT=50] -->
     <string name="storage_migrate">Migrate data to this storage</string>
+    <!-- Storage settings migrate primary storage action [CHAR_LIMIT=50] -->
+    <string name="storage_migrate_away">Migrate data to different storage</string>
+    <!-- Storage settings backup apps empty action [CHAR LIMIT=50] -->
+    <string name="storage_no_apps">No apps to back up</string>
 
     <!-- Storage settings forget action [CHAR_LIMIT=50] -->
     <string name="storage_forget">Forget this device storage</string>
@@ -579,6 +583,8 @@
     <!-- Description for wizard progress screen for formatting drive [CHAR_LIMIT=NONE] -->
     <string name="storage_wizard_format_progress_description">This may take a moment. Please don\'t remove the drive.</string>
 
+    <!-- Title for wizard selection screen for migrating data to new drive [CHAR LIMIT=50] -->
+    <string name="storage_wizard_migrate_choose_title">Choose storage to migrate data to</string>
     <!-- Title for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=50] -->
     <string name="storage_wizard_migrate_confirm_title">Move data to <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
     <!-- Description for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=NONE] -->
