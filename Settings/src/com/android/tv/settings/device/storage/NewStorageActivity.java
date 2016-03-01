@@ -21,6 +21,7 @@ import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -203,6 +204,15 @@ public class NewStorageActivity extends Activity {
         private String mFsUuid;
         private String mDescription;
 
+        private final BroadcastReceiver mDiskReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (TextUtils.equals(intent.getAction(), VolumeInfo.ACTION_VOLUME_STATE_CHANGED)) {
+                    checkForRemount();
+                }
+            }
+        };
+
         public static MissingStorageFragment newInstance(String fsUuid) {
             final MissingStorageFragment fragment = new MissingStorageFragment();
             final Bundle b = new Bundle(1);
@@ -223,6 +233,20 @@ public class NewStorageActivity extends Activity {
             mDescription = volumeRecord.getNickname();
 
             super.onCreate(savedInstanceState);
+        }
+
+        @Override
+        public void onStart() {
+            super.onStart();
+            getContext().registerReceiver(mDiskReceiver,
+                    new IntentFilter(VolumeInfo.ACTION_VOLUME_STATE_CHANGED));
+            checkForRemount();
+        }
+
+        @Override
+        public void onStop() {
+            super.onStop();
+            getContext().unregisterReceiver(mDiskReceiver);
         }
 
         @Override
@@ -247,6 +271,23 @@ public class NewStorageActivity extends Activity {
             getActivity().finish();
         }
 
+        private void checkForRemount() {
+            if (!isAdded()) {
+                return;
+            }
+
+            final List<VolumeInfo> volumeInfos =
+                    getContext().getSystemService(StorageManager.class).getVolumes();
+
+            for (final VolumeInfo info : volumeInfos) {
+                if (!TextUtils.equals(info.getFsUuid(), mFsUuid)) {
+                    continue;
+                }
+                if (info.isMountedReadable()) {
+                    getActivity().finish();
+                }
+            }
+        }
     }
 
     public static class DiskReceiver extends BroadcastReceiver {
