@@ -18,10 +18,10 @@ package com.android.tv.settings.device.storage;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.app.LoaderManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.Loader;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.storage.StorageManager;
@@ -31,14 +31,13 @@ import android.support.annotation.Nullable;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
+import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.ProgressDialogFragment;
-import com.android.tv.settings.util.SettingsAsyncTaskLoader;
 
 import java.util.List;
 
@@ -48,14 +47,11 @@ public class UnmountActivity extends Activity {
 
     public static final String EXTRA_VOLUME_DESC = "UnmountActivity.volumeDesc";
 
-    private static final int LOADER_UNMOUNT = 0;
-
     private String mUnmountVolumeId;
     private String mUnmountVolumeDesc;
-    // True if we're waiting for an unmount loader to complete
-    private boolean mUnmounting;
 
     private final Handler mHandler = new Handler();
+    private final BroadcastReceiver mUnmountReceiver = new UnmountReceiver();
 
     public static Intent getIntent(Context context, String volumeId, String volumeDesc) {
         final Intent i = new Intent(context, UnmountActivity.class);
@@ -70,6 +66,9 @@ public class UnmountActivity extends Activity {
 
         mUnmountVolumeId = getIntent().getStringExtra(VolumeInfo.EXTRA_VOLUME_ID);
         mUnmountVolumeDesc = getIntent().getStringExtra(EXTRA_VOLUME_DESC);
+
+        LocalBroadcastManager.getInstance(this).registerReceiver(mUnmountReceiver,
+                new IntentFilter(SettingsStorageService.ACTION_UNMOUNT));
 
         if (savedInstanceState == null) {
             final StorageManager storageManager = getSystemService(StorageManager.class);
@@ -93,119 +92,60 @@ public class UnmountActivity extends Activity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mUnmountReceiver);
+    }
+
     public void onRequestUnmount() {
-        mUnmounting = true;
         final Fragment fragment = UnmountProgressFragment.newInstance(mUnmountVolumeDesc);
         getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
                 .commit();
-        kickUnmountLoader();
+        // Post this so that it will presumably run after onResume, if we're calling from onCreate()
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                SettingsStorageService.unmount(UnmountActivity.this, mUnmountVolumeId);
+            }
+        });
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        kickUnmountLoader();
-    }
+        final VolumeInfo volumeInfo =
+                getSystemService(StorageManager.class).findVolumeById(mUnmountVolumeId);
 
-    private void kickUnmountLoader() {
-        if (mUnmounting) {
-            getLoaderManager().initLoader(LOADER_UNMOUNT, null,
-                    new UnmountLoaderCallback(mUnmountVolumeId, mUnmountVolumeDesc));
+        if (volumeInfo == null) {
+            // Unmounted already, just bail
+            finish();
         }
     }
 
-    private static class UnmountTaskLoader extends SettingsAsyncTaskLoader<Boolean> {
-
-        private final StorageManager mStorageManager;
-        private final String mVolumeId;
-
-        public UnmountTaskLoader(Context context, String volumeId) {
-            super(context);
-            mStorageManager = context.getSystemService(StorageManager.class);
-            mVolumeId = volumeId;
-        }
+    private class UnmountReceiver extends BroadcastReceiver {
 
         @Override
-        protected void onDiscardResult(Boolean result) {}
-
-        @Override
-        public Boolean loadInBackground() {
-            try {
-                final long minTime = System.currentTimeMillis() + 3000;
-
-                final VolumeInfo volumeInfo = mStorageManager.findVolumeById(mVolumeId);
-                if (volumeInfo != null && volumeInfo.isMountedReadable()) {
-                    Log.d(TAG, "Trying to unmount " + mVolumeId);
-                    mStorageManager.unmount(mVolumeId);
+        public void onReceive(Context context, Intent intent) {
+            if (TextUtils.equals(intent.getAction(), SettingsStorageService.ACTION_UNMOUNT)
+                    && TextUtils.equals(intent.getStringExtra(VolumeInfo.EXTRA_VOLUME_ID),
+                    mUnmountVolumeId)) {
+                final Boolean success =
+                        intent.getBooleanExtra(SettingsStorageService.EXTRA_SUCCESS, false);
+                if (success) {
+                    Toast.makeText(UnmountActivity.this,
+                            getString(R.string.storage_unmount_success, mUnmountVolumeDesc),
+                            Toast.LENGTH_SHORT).show();
                 } else {
-                    Log.d(TAG, "Volume not found, skipping unmount");
+                    Toast.makeText(UnmountActivity.this,
+                            getString(R.string.storage_unmount_failure, mUnmountVolumeDesc),
+                            Toast.LENGTH_SHORT).show();
                 }
-
-                long waitTime = minTime - System.currentTimeMillis();
-                while (waitTime > 0) {
-                    try {
-                        Thread.sleep(waitTime);
-                    } catch (InterruptedException e) {
-                        // Ignore
-                    }
-                    waitTime = minTime - System.currentTimeMillis();
-                }
-                return true;
-            } catch (Exception e) {
-                Log.d(TAG, "Could not unmount", e);
-                return false;
+                finish();
             }
         }
-    }
-
-    private class UnmountLoaderCallback implements LoaderManager.LoaderCallbacks<Boolean> {
-
-        private final String mVolumeId;
-        private final String mVolumeDescription;
-
-        public UnmountLoaderCallback(String volumeId, String volumeDescription) {
-            mVolumeId = volumeId;
-            mVolumeDescription = volumeDescription;
-        }
-
-        @Override
-        public Loader<Boolean> onCreateLoader(int id, Bundle args) {
-            return new UnmountTaskLoader(UnmountActivity.this, mVolumeId);
-        }
-
-        @Override
-        public void onLoadFinished(Loader<Boolean> loader, final Boolean success) {
-            if (success == null) {
-                // No results yet, wait for something interesting to come in.
-                return;
-            }
-            mHandler.post(new Runnable() {
-                @Override
-                public void run() {
-                    if (isResumed() && TextUtils.equals(mUnmountVolumeId, mVolumeId)) {
-                        if (success) {
-                            Toast.makeText(UnmountActivity.this,
-                                    getString(R.string.storage_unmount_success, mVolumeDescription),
-                                    Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(UnmountActivity.this,
-                                    getString(R.string.storage_unmount_failure, mVolumeDescription),
-                                    Toast.LENGTH_SHORT).show();
-                        }
-
-                        mUnmountVolumeId = null;
-                        mUnmountVolumeDesc = null;
-                        getLoaderManager().destroyLoader(LOADER_UNMOUNT);
-
-                        finish();
-                    }
-                }
-            });
-        }
-
-        @Override
-        public void onLoaderReset(Loader<Boolean> loader) {}
     }
 
     public static class UnmountPrivateStepFragment extends GuidedStepFragment {
@@ -268,8 +208,7 @@ public class UnmountActivity extends Activity {
         public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
             final CharSequence description = getArguments().getCharSequence(ARG_DESCRIPTION);
-            // TODO: fix this string name
-            setTitle(getActivity().getString(R.string.sotrage_wizard_eject_progress_title,
+            setTitle(getActivity().getString(R.string.storage_wizard_eject_progress_title,
                     description));
         }
     }

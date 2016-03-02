@@ -472,6 +472,9 @@
             </intent-filter>
         </receiver>
 
+        <service android:name=".device.storage.SettingsStorageService$Impl"
+            android:exported="false" />
+
         <activity android:name=".device.storage.NewStorageActivity"
             android:exported="false"
             android:taskAffinity="" />
