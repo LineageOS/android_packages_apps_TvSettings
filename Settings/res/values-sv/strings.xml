@@ -48,6 +48,8 @@
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Dagdrömmar"</string>
     <string name="device_display" msgid="101455384386372747">"Visning"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Ljud"</string>
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Vidarebefordran av surroundljud"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Systemljud"</string>
     <string name="device_apps" msgid="9180435229638772838">"Appar"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Lagring och återställning"</string>
@@ -246,9 +248,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Cachelagrade data"</string>
     <string name="storage_eject" msgid="113476702798691558">"Mata ut"</string>
     <string name="storage_format" msgid="3759273736493279595">"Radera och formatera"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Radera och formatera som enhetslagring"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Radera och formatera som flyttbar lagringsenhet"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatera som enhetslagring"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Inte ansluten"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Migrera data till den här lagringsenheten"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Migrera data till annat lagringsutrymme"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Inga appar att säkerhetskopiera"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Glöm den här lagringsenheten"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Om du vill använda appar eller data på enheten kopplar du in den igen. Om enheten inte är tillgänglig kan du istället ange att lagringsenheten ska glömmas bort.\n\nOm du väljer att den ska glömmas bort raderas all data på enheten och den kan inte återskapas.\n\nDu kan installera apparna igen senare men den data som fanns på enheten har raderats permanent."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Lagring på enhet"</string>
@@ -268,6 +274,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Efter formateringen kan du använda det här USB-minnet på andra enheter. All data raderas. Säkerhetskopiera din data först genom att flytta apparna till en annan enhet."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formaterar USB-minnet ..."</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Det här kan ta en stund. Ta inte bort enheten."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Välj lagringsutrymme som data ska migreras till"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Flytta data till <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Flytta foton, filer och appdata till <xliff:g id="NAME">%1$s</xliff:g>. Detta kan ta några minuter. Vissa appar fungerar inte under flytten."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Flytta nu"</string>

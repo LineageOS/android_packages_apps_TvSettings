@@ -48,6 +48,8 @@
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Ekrānsaudzētājs"</string>
     <string name="device_display" msgid="101455384386372747">"Displejs"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Skaņa"</string>
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Ieskaujošās skaņas tālāknodošana"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sistēmas signāli"</string>
     <string name="device_apps" msgid="9180435229638772838">"Lietotnes"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Krātuve un atiestatīšana"</string>
@@ -247,9 +249,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Kešatmiņā ievietotie dati"</string>
     <string name="storage_eject" msgid="113476702798691558">"Noņemt"</string>
     <string name="storage_format" msgid="3759273736493279595">"Dzēst un formatēt"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Dzēst un formatēt kā ierīces krātuvi"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Dzēst un formatēt kā noņemamu krātuvi"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatēt kā ierīces krātuvi"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Nav savienojuma"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Migrēt datus uz šo krātuvi"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Migrēt datus uz citu krātuvi"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Nav lietotņu, ko dublēt"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Aizmirst šo ierīces krātuvi"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Lai izmantotu šajā dzinī esošās lietotnes un datus, pievienojiet to atkārtoti. Varat arī noņemt šo krātuvi, ja dzinis nav pieejams.\n\nJa izvēlēsieties opciju Noņemt, visi dzinī esošie dati tiks neatgriezeniski zaudēti.\n\nVēlāk varēsiet atkārtoti instalēt lietotnes, taču to dati, kas saglabāti šajā dzinī, vairs nebūs pieejami."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Ierīces atmiņa"</string>
@@ -269,6 +275,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Pēc formatēšanas varēsiet izmantot šo USB disku citās ierīcēs. Visi dati tiks izdzēsti. Ieteicams vispirms dublēt datus, pārvietojot lietotnes uz citu ierīces krātuvi."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Notiek USB diska formatēšana…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Tas var ilgt kādu brīdi. Lūdzu, neatvienojiet disku."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Izvēlieties krātuvi, uz kuru migrēt datus"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Datu pārvietošana uz: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Pārvietojiet savus fotoattēlus, failus un lietotņu datus uz: <xliff:g id="NAME">%1$s</xliff:g>. Tas var aizņemt dažas minūtes. Pārvietošanas laikā dažas lietotnes nedarbosies pareizi."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Pārvietot tūlīt"</string>
@@ -367,7 +374,7 @@
     <string name="captions_configure" msgid="5537548915977371014">"Konfigurēšana"</string>
     <string name="captions_language" msgid="2835554055388996343">"Valoda"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Teksta lielums"</string>
-    <string name="captions_captionstyle" msgid="7423638523487868230">"Paraksta stils"</string>
+    <string name="captions_captionstyle" msgid="7423638523487868230">"Subtitru stils"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Pielāgotas opcijas"</string>
     <string name="captions_fontfamily" msgid="6840670778173003604">"Fontu saime"</string>
     <string name="captions_textcolor" msgid="3233568269335050287">"Teksta krāsa"</string>
@@ -375,7 +382,7 @@
     <string name="captions_edgecolor" msgid="845125757332620884">"Malu krāsa"</string>
     <string name="captions_backgroundcolor" msgid="448518890988125453">"Fona krāsa"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Fona necaurredzamība"</string>
-    <string name="captioning_preview_text" msgid="72080729155950127">"Paraksti izskatīsies šādi:"</string>
+    <string name="captioning_preview_text" msgid="72080729155950127">"Subtitri izskatīsies šādi:"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Teksta necaurredzamība"</string>
     <string name="captions_windowshow" msgid="5716898740522196707">"Rādīt logā"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Loga krāsa"</string>

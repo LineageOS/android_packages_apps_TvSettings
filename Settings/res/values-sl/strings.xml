@@ -48,6 +48,8 @@
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Sanjarjenje"</string>
     <string name="device_display" msgid="101455384386372747">"Zaslon"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Zvok"</string>
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Prepustnost za prostorski zvok"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Zvoki sistema"</string>
     <string name="device_apps" msgid="9180435229638772838">"Aplikacije"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Shramba in ponastavitev"</string>
@@ -248,9 +250,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Predpomnjeni podatki"</string>
     <string name="storage_eject" msgid="113476702798691558">"Izvrženje"</string>
     <string name="storage_format" msgid="3759273736493279595">"Izbris in formatiranje"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Izbris in formatiranje kot shramba naprave"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Izbris in formatiranje kot izmenljiva shramba"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatiranje kot prenosna shramba"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Ni povezave"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Selitev podatkov v to shrambo"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Selitev podatkov v drugo shrambo"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Ni aplikacij za varnostno kopiranje"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Pozabi to shrambo naprave"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Če želite uporabiti aplikacije ali podatke na tem pogonu, ga znova priključite. Če pogon ni na voljo, lahko izberete, da se ta shramba pozabi.\n\nČe uporabite možnost »Pozabi«, bodo za vedno izgubljeni vsi podatki, shranjeni na tem pogonu.\n\nAplikacije lahko pozneje znova namestite, podatki, shranjeni na pogonu, pa bodo izgubljeni."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Shramba naprave"</string>
@@ -270,6 +276,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Po formatiranju lahko uporabljate ta pogon USB z drugimi napravami. Vsi podatki bodo izbrisani. Priporočamo, da prej varnostno kopirate aplikacije, tako da jih premaknete v drugo shrambo naprave."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formatiranje pogona USB …"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"To lahko traja kak trenutek. Ne odstranite pogona."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Izbira shrambe za selitev podatkov vanjo"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Premik podatkov v pogon <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Premaknite fotografije, datoteke in podatke aplikacij v pogon <xliff:g id="NAME">%1$s</xliff:g>. To lahko traja nekaj minut. Nekatere aplikacije med premikanjem ne bodo delovale pravilno."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Premik zdaj"</string>
