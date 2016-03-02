@@ -18,28 +18,25 @@ package com.android.tv.settings.device.storage;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.app.LoaderManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.Loader;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.storage.DiskInfo;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
-import android.util.ArrayMap;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.util.SettingsAsyncTaskLoader;
 
 import java.util.List;
-import java.util.Map;
 
 public class FormatActivity extends Activity
         implements FormatAsPrivateStepFragment.Callback,
@@ -66,10 +63,7 @@ public class FormatActivity extends Activity
 
     private String mFormatDiskDesc;
 
-    private static final int LOADER_FORMAT_AS_PRIVATE = 0;
-    private static final int LOADER_FORMAT_AS_PUBLIC = 1;
-
-    private final Handler mHandler = new Handler();
+    private final BroadcastReceiver mFormatReceiver = new FormatReceiver();
     private PackageManager mPackageManager;
     private StorageManager mStorageManager;
 
@@ -93,6 +87,11 @@ public class FormatActivity extends Activity
 
         mPackageManager = getPackageManager();
         mStorageManager = getSystemService(StorageManager.class);
+
+        final IntentFilter filter = new IntentFilter();
+        filter.addAction(SettingsStorageService.ACTION_FORMAT_AS_PRIVATE);
+        filter.addAction(SettingsStorageService.ACTION_FORMAT_AS_PUBLIC);
+        LocalBroadcastManager.getInstance(this).registerReceiver(mFormatReceiver, filter);
 
         if (savedInstanceState != null) {
             mFormatAsPrivateDiskId =
@@ -119,9 +118,31 @@ public class FormatActivity extends Activity
     @Override
     protected void onResume() {
         super.onResume();
+        if (!TextUtils.isEmpty(mFormatAsPrivateDiskId)) {
+            final VolumeInfo volumeInfo = findVolume(mFormatAsPrivateDiskId);
+            if (volumeInfo != null && volumeInfo.getType() == VolumeInfo.TYPE_PRIVATE) {
+                // Formatting must have completed while we were paused
+                // We've lost the benchmark data, so just assume the drive is fast enough
+                handleFormatAsPrivateComplete(-1, -1);
+            }
+        }
+    }
 
-        kickFormatAsPrivateLoader();
-        kickFormatAsPublicLoader();
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mFormatReceiver);
+    }
+
+    private VolumeInfo findVolume(String diskId) {
+        final List<VolumeInfo> vols = mStorageManager.getVolumes();
+        for (final VolumeInfo vol : vols) {
+            if (TextUtils.equals(diskId, vol.getDiskId())
+                    && (vol.getType() == VolumeInfo.TYPE_PRIVATE)) {
+                return vol;
+            }
+        }
+        return null;
     }
 
     @Override
@@ -132,199 +153,73 @@ public class FormatActivity extends Activity
         outState.putString(SAVE_STATE_FORMAT_DISK_DESC, mFormatDiskDesc);
     }
 
-    private static class FormatAsPrivateTaskLoader
-            extends SettingsAsyncTaskLoader<Map<String, Object>> {
+    private void handleFormatAsPrivateComplete(float privateBench, float internalBench) {
+        if (Math.abs(-1 - privateBench) < 0.1) {
+            final float frac = privateBench / internalBench;
+            Log.d(TAG, "New volume is " + frac + "x the speed of internal");
 
-        public static final String RESULT_EXCEPTION = "exception";
-        public static final String RESULT_INTERNAL_BENCH = "internalBench";
-        public static final String RESULT_PRIVATE_BENCH = "privateBench";
-
-        private final StorageManager mStorageManager;
-        private final String mDiskId;
-
-        public FormatAsPrivateTaskLoader(Context context, String diskId) {
-            super(context);
-            mStorageManager = getContext().getSystemService(StorageManager.class);
-            mDiskId = diskId;
-        }
-
-        @Override
-        protected void onDiscardResult(Map<String, Object> result) {}
-
-        @Override
-        public Map<String, Object> loadInBackground() {
-            final Map<String, Object> result = new ArrayMap<>(3);
-            try {
-                mStorageManager.partitionPrivate(mDiskId);
-                final Long internalBench = mStorageManager.benchmark(null);
-                result.put(RESULT_INTERNAL_BENCH, internalBench);
-
-                final VolumeInfo privateVol = findVolume();
-                if (privateVol != null) {
-                    final Long externalBench = mStorageManager.benchmark(privateVol.getId());
-                    result.put(RESULT_PRIVATE_BENCH, externalBench);
-                }
-            } catch (Exception e) {
-                result.put(RESULT_EXCEPTION, e);
-            }
-            return result;
-        }
-
-        private VolumeInfo findVolume() {
-            final List<VolumeInfo> vols = mStorageManager.getVolumes();
-            for (final VolumeInfo vol : vols) {
-                if (TextUtils.equals(mDiskId, vol.getDiskId())
-                        && (vol.getType() == VolumeInfo.TYPE_PRIVATE)) {
-                    return vol;
-                }
-            }
-            return null;
-        }
-    }
-
-    private class FormatAsPrivateLoaderCallback
-            implements LoaderManager.LoaderCallbacks<Map<String, Object>> {
-
-        private final String mDiskId;
-        private final String mDescription;
-
-        public FormatAsPrivateLoaderCallback(String diskId, String description) {
-            mDiskId = diskId;
-            mDescription = description;
-        }
-
-        @Override
-        public Loader<Map<String, Object>> onCreateLoader(int id, Bundle args) {
-            return new FormatAsPrivateTaskLoader(FormatActivity.this, mDiskId);
-        }
-
-        @Override
-        public void onLoadFinished(Loader<Map<String, Object>> loader, Map<String, Object> data) {
-            if (data == null) {
-                // No results yet, wait for something interesting to come in.
+            // TODO: better threshold
+            if (privateBench > 2000000000) {
+                getFragmentManager().beginTransaction()
+                        .replace(android.R.id.content,
+                                SlowDriveStepFragment.newInstance())
+                        .commit();
                 return;
             }
+        }
+        launchMigrateStorageAndFinish(mFormatAsPrivateDiskId);
+    }
 
-            final Exception e = (Exception) data.get(FormatAsPrivateTaskLoader.RESULT_EXCEPTION);
-            if (e == null) {
-                if (isResumed()) {
-                    Toast.makeText(FormatActivity.this, getString(R.string.storage_format_success,
-                            mDescription), Toast.LENGTH_SHORT).show();
-                }
+    private class FormatReceiver extends BroadcastReceiver {
 
-                final Long internalBench =
-                        (Long) data.get(FormatAsPrivateTaskLoader.RESULT_INTERNAL_BENCH);
-                final Long privateBench =
-                        (Long) data.get(FormatAsPrivateTaskLoader.RESULT_PRIVATE_BENCH);
-
-                mHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (TextUtils.equals(intent.getAction(),
+                    SettingsStorageService.ACTION_FORMAT_AS_PRIVATE)
+                    && !TextUtils.isEmpty(mFormatAsPrivateDiskId)) {
+                final String diskId = intent.getStringExtra(DiskInfo.EXTRA_DISK_ID);
+                if (TextUtils.equals(mFormatAsPrivateDiskId, diskId)) {
+                    final boolean success =
+                            intent.getBooleanExtra(SettingsStorageService.EXTRA_SUCCESS, false);
+                    if (success) {
                         if (isResumed()) {
-                            if (internalBench != null && privateBench != null) {
-                                final float frac = (float) privateBench / (float) internalBench;
-                                Log.d(TAG, "New volume is " + frac + "x the speed of internal");
-
-                                // TODO: better threshold
-                                if (privateBench > 2000000000) {
-                                    getFragmentManager().beginTransaction()
-                                            .replace(android.R.id.content,
-                                                    SlowDriveStepFragment.newInstance())
-                                            .commit();
-                                    return;
-                                }
-                            }
-                            launchMigrateStorageAndFinish(mDiskId);
+                            final float privateBench = intent.getFloatExtra(
+                                    SettingsStorageService.EXTRA_PRIVATE_BENCH, -1);
+                            final float internalBench = intent.getFloatExtra(
+                                    SettingsStorageService.EXTRA_INTERNAL_BENCH, -1);
+                            handleFormatAsPrivateComplete(privateBench, internalBench);
                         }
-                    }
-                });
 
-            } else {
-                Log.e(TAG, "Failed to format " + mDiskId, e);
-                Toast.makeText(FormatActivity.this, getString(R.string.storage_format_failure,
-                        mDescription), Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        }
-
-        @Override
-        public void onLoaderReset(Loader<Map<String, Object>> loader) {}
-    }
-
-    private static class FormatAsPublicTaskLoader
-            extends SettingsAsyncTaskLoader<Map<String, Object>> {
-
-        public static final String RESULT_EXCEPTION = "exception";
-
-        private final StorageManager mStorageManager;
-        private final String mDiskId;
-
-        public FormatAsPublicTaskLoader(Context context, String diskId) {
-            super(context);
-            mStorageManager = getContext().getSystemService(StorageManager.class);
-            mDiskId = diskId;
-        }
-
-        @Override
-        protected void onDiscardResult(Map<String, Object> result) {}
-
-        @Override
-        public Map<String, Object> loadInBackground() {
-            final Map<String, Object> result = new ArrayMap<>(3);
-            try {
-                final List<VolumeInfo> volumes = mStorageManager.getVolumes();
-                for (final VolumeInfo volume : volumes) {
-                    if (TextUtils.equals(mDiskId, volume.getDiskId()) &&
-                            volume.getType() == VolumeInfo.TYPE_PRIVATE) {
-                        mStorageManager.forgetVolume(volume.getFsUuid());
+                        Toast.makeText(FormatActivity.this, getString(
+                                R.string.storage_format_success, mFormatDiskDesc),
+                                Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(FormatActivity.this,
+                                getString(R.string.storage_format_failure, mFormatDiskDesc),
+                                Toast.LENGTH_SHORT).show();
+                        finish();
                     }
                 }
-
-                mStorageManager.partitionPublic(mDiskId);
-            } catch (Exception e) {
-                result.put(RESULT_EXCEPTION, e);
+            } else if (TextUtils.equals(intent.getAction(),
+                    SettingsStorageService.ACTION_FORMAT_AS_PUBLIC)
+                    && !TextUtils.isEmpty(mFormatAsPublicDiskId)) {
+                final String diskId = intent.getStringExtra(DiskInfo.EXTRA_DISK_ID);
+                if (TextUtils.equals(mFormatAsPublicDiskId, diskId)) {
+                    final boolean success =
+                            intent.getBooleanExtra(SettingsStorageService.EXTRA_SUCCESS, false);
+                    if (success) {
+                        Toast.makeText(FormatActivity.this,
+                                getString(R.string.storage_format_success,
+                                        mFormatDiskDesc), Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(FormatActivity.this,
+                                getString(R.string.storage_format_failure,
+                                        mFormatDiskDesc), Toast.LENGTH_SHORT).show();
+                    }
+                    finish();
+                }
             }
-            return result;
         }
-    }
-
-    private class FormatAsPublicLoaderCallback
-            implements LoaderManager.LoaderCallbacks<Map<String, Object>> {
-
-        private final String mDiskId;
-        private final String mDescription;
-
-        public FormatAsPublicLoaderCallback(String diskId, String description) {
-            mDiskId = diskId;
-            mDescription = description;
-        }
-
-        @Override
-        public Loader<Map<String, Object>> onCreateLoader(int id, Bundle args) {
-            return new FormatAsPublicTaskLoader(FormatActivity.this, mDiskId);
-        }
-
-        @Override
-        public void onLoadFinished(Loader<Map<String, Object>> loader, Map<String, Object> data) {
-            if (data == null) {
-                // No results yet, wait for something interesting to come in.
-                return;
-            }
-
-            final Exception e = (Exception) data.get(FormatAsPublicTaskLoader.RESULT_EXCEPTION);
-            if (e == null) {
-                Toast.makeText(FormatActivity.this, getString(R.string.storage_format_success,
-                        mDescription), Toast.LENGTH_SHORT).show();
-            } else {
-                Log.e(TAG, "Failed to format " + mDiskId, e);
-                Toast.makeText(FormatActivity.this, getString(R.string.storage_format_failure,
-                        mDescription), Toast.LENGTH_SHORT).show();
-            }
-            finish();
-        }
-
-        @Override
-        public void onLoaderReset(Loader<Map<String, Object>> loader) {}
     }
 
     @Override
@@ -349,14 +244,7 @@ public class FormatActivity extends Activity
                 mFormatDiskDesc = info.getDescription();
             }
         }
-        kickFormatAsPrivateLoader();
-    }
-
-    private void kickFormatAsPrivateLoader() {
-        if (!TextUtils.isEmpty(mFormatAsPrivateDiskId)) {
-            getLoaderManager().initLoader(LOADER_FORMAT_AS_PRIVATE, null,
-                    new FormatAsPrivateLoaderCallback(mFormatAsPrivateDiskId, mFormatDiskDesc));
-        }
+        SettingsStorageService.formatAsPrivate(this, diskId);
     }
 
     private void launchMigrateStorageAndFinish(String diskId) {
@@ -397,14 +285,7 @@ public class FormatActivity extends Activity
                 mFormatDiskDesc = info.getDescription();
             }
         }
-        kickFormatAsPublicLoader();
-    }
-
-    private void kickFormatAsPublicLoader() {
-        if (!TextUtils.isEmpty(mFormatAsPublicDiskId)) {
-            getLoaderManager().initLoader(LOADER_FORMAT_AS_PUBLIC, null,
-                    new FormatAsPublicLoaderCallback(mFormatAsPublicDiskId, mFormatDiskDesc));
-        }
+        SettingsStorageService.formatAsPublic(this, diskId);
     }
 
     @Override
