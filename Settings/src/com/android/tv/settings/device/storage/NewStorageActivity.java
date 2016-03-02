@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.storage.DiskInfo;
+import android.os.storage.StorageEventListener;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.os.storage.VolumeRecord;
@@ -113,6 +114,18 @@ public class NewStorageActivity extends Activity {
         private String mDiskId;
         private String mDescription;
 
+        private final StorageEventListener mStorageEventListener = new StorageEventListener() {
+            @Override
+            public void onDiskDestroyed(DiskInfo disk) {
+                checkForUnmount();
+            }
+
+            @Override
+            public void onVolumeStateChanged(VolumeInfo vol, int oldState, int newState) {
+                checkForUnmount();
+            }
+        };
+
         public static NewStorageFragment newInstance(String volumeId, String diskId) {
             final Bundle b = new Bundle(1);
             b.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeId);
@@ -140,6 +153,21 @@ public class NewStorageActivity extends Activity {
             }
 
             super.onCreate(savedInstanceState);
+        }
+
+        @Override
+        public void onStart() {
+            super.onStart();
+            checkForUnmount();
+            getActivity().getSystemService(StorageManager.class)
+                    .registerListener(mStorageEventListener);
+        }
+
+        @Override
+        public void onStop() {
+            super.onStop();
+            getActivity().getSystemService(StorageManager.class)
+                    .unregisterListener(mStorageEventListener);
         }
 
         @Override
@@ -196,6 +224,42 @@ public class NewStorageActivity extends Activity {
                     break;
             }
             getActivity().finish();
+        }
+
+        private void checkForUnmount() {
+            if (!isAdded()) {
+                return;
+            }
+
+            final StorageManager storageManager =
+                    getContext().getSystemService(StorageManager.class);
+
+            if (!TextUtils.isEmpty(mDiskId)) {
+                // If the disk disappears, assume we're done
+                final List<DiskInfo> diskInfos = storageManager.getDisks();
+                boolean found = false;
+                for (DiskInfo diskInfo : diskInfos) {
+                    if (TextUtils.equals(diskInfo.getId(), mDiskId)) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found) {
+                    getActivity().finish();
+                }
+            } else if (!TextUtils.isEmpty(mVolumeId)) {
+                final List<VolumeInfo> volumeInfos = storageManager.getVolumes();
+                boolean found = false;
+                for (VolumeInfo volumeInfo : volumeInfos) {
+                    if (TextUtils.equals(volumeInfo.getId(), mVolumeId)) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found) {
+                    getActivity().finish();
+                }
+            }
         }
     }
 
