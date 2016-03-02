@@ -48,6 +48,8 @@
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Écran de veille interactif"</string>
     <string name="device_display" msgid="101455384386372747">"Affichage"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Son"</string>
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Conversion en son surround"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Son système"</string>
     <string name="device_apps" msgid="9180435229638772838">"Applications"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Stockage et réinitialisation"</string>
@@ -246,9 +248,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Données mises en cache"</string>
     <string name="storage_eject" msgid="113476702798691558">"Éjecter"</string>
     <string name="storage_format" msgid="3759273736493279595">"Effacer et formater"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Effacer et formater comme espace stockage appareil"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Effacer et formater comme mémoire stockage amovible"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formater comme mémoire de stockage de l\'appareil"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Non connecté"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Transférer les données vers cet espace de stockage"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Transférer données vers autre espace de stockage"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Aucune application à sauvegarder"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Supprimer cet espace de stockage de l\'appareil"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Pour utiliser les applications ou les données de ce disque, insérez celui-ci de nouveau. Vous pouvez également le supprimer de la liste des mémoires de stockage s\'il n\'est pas disponible.\n\nSi vous le supprimez, toutes les données qu\'il contient seront définitivement effacées.\n\nVous pouvez réinstaller les applications plus tard, mais les données correspondantes enregistrées sur ce disque seront perdues."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Mémoire de stockage de l\'appareil"</string>
@@ -268,6 +274,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Après le formatage, vous pourrez utiliser cette clé USB sur d\'autres appareils. Toutes les données seront effacées. Pensez donc à les sauvegarder auparavant, en déplaçant les applications vers un autre espace de stockage de l\'appareil."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formatage de la clé USB en cours"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Le formatage devrait durer quelques instants. Veuillez ne pas retirer la clé."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Choisir espace de stockage où transférer données"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Déplacer les données vers la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\""</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Déplacer vos photos, vos fichiers et les données de vos applications vers la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\". Cette opération peut durer quelques minutes et empêche certaines applications de fonctionner correctement pendant qu\'elle est en cours."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Déplacer les données maintenant"</string>

@@ -48,6 +48,8 @@
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Sanjarenje"</string>
     <string name="device_display" msgid="101455384386372747">"Prikaz"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Zvuk"</string>
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Propuštanje zvuka poput zvuka zvučnog sistema"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sistemski zvuci"</string>
     <string name="device_apps" msgid="9180435229638772838">"Aplikacije"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Skladištenje i resetovanje"</string>
@@ -235,7 +237,7 @@
     <string name="wifi_summary_unknown_network" msgid="7903601448928422642">"nepoznatom mrežom"</string>
     <string name="title_ok" msgid="1021329453788761592">"Potvrdi"</string>
     <string name="title_cancel" msgid="4846143417666038604">"Otkaži"</string>
-    <string name="storage_title" msgid="2132026108559493394">"Skladišni prostor"</string>
+    <string name="storage_title" msgid="2132026108559493394">"Memorijski prostor"</string>
     <string name="storage_available" msgid="1241005580092138871">"Dostupno"</string>
     <string name="storage_size" msgid="8958530823208352781">"Ukupan prostor: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
     <string name="storage_calculating_size" msgid="2644732407412520565">"Proračunavanje..."</string>
@@ -247,9 +249,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Keširani podaci"</string>
     <string name="storage_eject" msgid="113476702798691558">"Izbaci"</string>
     <string name="storage_format" msgid="3759273736493279595">"Obriši i formatiraj"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Obriši i formatiraj kao memoriju uređaja"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Obriši i formatiraj kao prenosivu memoriju"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatiraj kao memorijski uređaj"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Nije povezano"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Prenesi podatke u ovaj memorijski prostor"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Prenesite podatke u neki drugi memorijski prostor"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Nema aplikacija za pravljenje rezervnih kopija"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Zaboravi memoriju ovog uređaja"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Da biste koristili aplikacije ili podatke koje ovaj disk sadrži, umetnite ga ponovo. Kao drugo rešenje, možete da izaberete da zaboravite ovu memoriju ako disk nije dostupan.\n\nAko izaberete Zaboravi, svi podaci koje disk sadrži će zauvek biti izgubljeni.\n\nMožete ponovo da instalirate aplikacije kasnije, ali podaci uskladišteni na ovom disku će biti izgubljeni."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Memorija uređaja"</string>
@@ -269,6 +275,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Posle formatiranja možete da koristite ovaj USB disk na drugim uređajima. Svi podaci će biti obrisani. Razmislite o tome da prvo napravite rezervnu kopiju tako što ćete premestiti aplikacije u neku drugu memoriju uređaja."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB disk se formatira…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Ovo može malo da potraje. Ne uklanjajte disk."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Izaberite memorijski prostor za prenos podataka"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Prenesite podatke na uređaj <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Prenesite slike, datoteke i podatke aplikacija na uređaj <xliff:g id="NAME">%1$s</xliff:g>. To može da potraje nekoliko minuta. Neke aplikacije neće funkcionisati ispravno tokom prenosa."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Prenesi odmah"</string>
@@ -287,7 +294,7 @@
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Izbacite memoriju uređaja"</string>
     <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Aplikacije u memoriji ovog uređaja će prestati da funkcionišu kada ga izvadite. Ovaj USB disk je formatiran tako da funkcioniše samo na ovom uređaju. Neće funkcionisati ni na jednom drugom uređaju."</string>
     <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> se izbacuje…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Skladišni prostor u upotrebi"</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Memorijski prostor u upotrebi"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Premešta se <xliff:g id="NAME">%1$s</xliff:g>..."</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Ne vadite disk tokom premeštanja.\nAplikacija <xliff:g id="APPNAME">%1$s</xliff:g> na ovom uređaju neće biti dostupna dok ne završite premeštanje."</string>
     <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Želite li da zaboravite memoriju uređaja?"</string>
@@ -300,7 +307,7 @@
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Izbaci"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"Disk <xliff:g id="NAME">%1$s</xliff:g> je uklonjen"</string>
     <string name="storage_missing_description" msgid="8400374014342069781">"Neke aplikacije neće biti dostupne ili neće funkcionisati kako treba dok se disk ne poveže ponovo."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Nema dovoljno skladišnog prostora."</string>
+    <string name="insufficient_storage" msgid="5670157010939153746">"Nema dovoljno memorijskog prostora."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"Aplikacija ne postoji."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"Aplikacija je zaštićena od kopiranja."</string>
     <string name="invalid_location" msgid="5269044848535157307">"Lokacija za instaliranje nije važeća."</string>
@@ -602,7 +609,7 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Želite li da onemogućite ovu aplikaciju?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Omogući"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Želite li da omogućite ovu aplikaciju?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Skladišni prostor u upotrebi"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Memorijski prostor u upotrebi"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Koristi se <xliff:g id="SIZE">%1$s</xliff:g> <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Obriši podatke"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Svi podaci ove aplikacije biće trajno izbrisani.\nTo obuhvata sve datoteke, podešavanja, naloge, baze podataka itd."</string>

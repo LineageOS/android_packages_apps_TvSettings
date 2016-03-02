@@ -48,6 +48,8 @@
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Daydream"</string>
     <string name="device_display" msgid="101455384386372747">"Exibição"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Som"</string>
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Passagem do sistema surround"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sons do sistema"</string>
     <string name="device_apps" msgid="9180435229638772838">"Apps"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Armazenamento e redefinição"</string>
@@ -246,9 +248,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Dados em cache"</string>
     <string name="storage_eject" msgid="113476702798691558">"Ejetar"</string>
     <string name="storage_format" msgid="3759273736493279595">"Limpar e formatar"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Limpar e formatar como dispos. de armazenamento"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Limpar e formatar como armazenamento removível"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatar como armazenamento do dispositivo"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Não conectado"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Migrar dados para este armazenamento"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Migrar dados para um armazenamento diferente"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Nenhum app para backup"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Ignorar o armazenamento deste dispositivo"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Para usar os apps ou dados que este drive contém, conecte-o novamente. Você também pode optar por ignorar esse armazenamento se o drive não estiver disponível. \n\nSe você optar por ignorá-lo, todos os dados do drive serão perdidos para sempre.\n\nÉ possível reinstalar os apps mais tarde, mas os dados armazenados neste drive serão perdidos."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Armazenamento do dispositivo"</string>
@@ -268,6 +274,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Após a formatação, é possível usar esse drive USB em outros dispositivos. Todos os dados serão limpos. É aconselhável fazer backup primeiro movendo apps para outro armazenamento do dispositivo."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formatando drive USB..."</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Isso pode demorar um pouco. Não remova o drive."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Escolher armazenamento para o qual migrar os dados"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Mover dados para <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Mova fotos, arquivos e dados de apps para <xliff:g id="NAME">%1$s</xliff:g>. Isso pode demorar alguns minutos. Alguns apps não funcionarão corretamente durante a migração."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Mover agora"</string>

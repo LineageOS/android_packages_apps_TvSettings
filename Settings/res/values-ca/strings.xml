@@ -48,6 +48,8 @@
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Estalvi de pantalla"</string>
     <string name="device_display" msgid="101455384386372747">"Pantalla"</string>
+    <string name="device_sound" msgid="9214182566287657481">"So"</string>
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Connexió de so envoltant"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sons del sistema"</string>
     <string name="device_apps" msgid="9180435229638772838">"Aplicacions"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Emmagatzematge i restabliment"</string>
@@ -246,9 +248,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Dades emmagatzemades a la memòria cau"</string>
     <string name="storage_eject" msgid="113476702798691558">"Expulsa"</string>
     <string name="storage_format" msgid="3759273736493279595">"Esborra i formata"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Esborra i formata com a emmagatzematge de dispositiu"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Esborra i formata com a emmagatzematge extraïble"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formata com a emmagatzematge del dispositiu"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"No connectat"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Migra les dades a aquest emmagatzematge"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Migra les dades a un altre emmagatzematge"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Cap aplicació per incloure a la còpia de seguretat"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Esborra l\'emmagatzematge del dispositiu"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Per utilitzar les aplicacions o les dades que conté aquesta unitat, torna a inserir-la. Si la unitat no està disponible, també pots indicar que no vols que es recordi aquest emmagatzematge.\n\nSi tries l\'opció No recordis, totes les dades que contingui aquesta unitat es perdran definitivament.\n\nPodràs tornar a instal·lar les aplicacions més endavant, però no podràs recuperar les dades que tenies emmagatzemades a la unitat."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Emmagatzematge del dispositiu"</string>
@@ -268,6 +274,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Després de la formatació, podràs utilitzar aquesta unitat USB en altres dispositius. S\'esborraran totes les dades, de manera que et recomanem que primer creïs una còpia de seguretat movent les aplicacions a un altre emmagatzematge del dispositiu."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"S\'està formatant el dispositiu USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Aquesta acció tardarà una mica. No extreguis el dispositiu."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Tria l\'emmagatzematge al qual vulguis migrar dades"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Mou les dades a <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Mou les fotos, els fitxers i les dades d\'aplicacions a <xliff:g id="NAME">%1$s</xliff:g>. Aquesta acció pot tardar uns quants minuts. Algunes aplicacions no funcionaran correctament durant el procés."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Mou ara"</string>
