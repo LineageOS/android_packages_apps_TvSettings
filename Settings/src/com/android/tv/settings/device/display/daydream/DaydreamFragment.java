@@ -23,12 +23,14 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.annotation.Keep;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
+import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.util.ArrayMap;
+import android.util.AttributeSet;
 import android.util.Log;
 
 import com.android.settingslib.dream.DreamBackend;
@@ -96,55 +98,22 @@ public class DaydreamFragment extends LeanbackPreferenceFragment
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        final Context themedContext = getPreferenceManager().getContext();
-        final PreferenceScreen screen =
-                getPreferenceManager().createPreferenceScreen(themedContext);
-        screen.setTitle(R.string.device_daydream);
+        setPreferencesFromResource(R.xml.daydream, null);
 
-        // TODO: use a custom fragment here to add icon and other chrome
-        final ListPreference activeDreamPref = new ListPreference(themedContext);
-        activeDreamPref.setTitle(R.string.device_daydreams_select);
-        activeDreamPref.setDialogTitle(R.string.device_daydreams_select);
-        activeDreamPref.setSummary("%s");
-        activeDreamPref.setKey(KEY_ACTIVE_DREAM);
-        activeDreamPref.setPersistent(false);
-
+        final ListPreference activeDreamPref = (ListPreference) findPreference(KEY_ACTIVE_DREAM);
         refreshActiveDreamPref(activeDreamPref);
         activeDreamPref.setOnPreferenceChangeListener(this);
-        screen.addPreference(activeDreamPref);
 
-        final ListPreference dreamTimePref = new ListPreference(themedContext);
-        dreamTimePref.setKey(KEY_DREAM_TIME);
-        dreamTimePref.setPersistent(false);
-        dreamTimePref.setTitle(R.string.device_daydreams_sleep);
-        dreamTimePref.setDialogTitle(R.string.device_daydreams_sleep);
-        dreamTimePref.setSummary("%s");
-        dreamTimePref.setEntries(R.array.sleep_timeout_entries);
-        dreamTimePref.setEntryValues(R.array.sleep_timeout_values);
+        final ListPreference dreamTimePref = (ListPreference) findPreference(KEY_DREAM_TIME);
         dreamTimePref.setValue(Integer.toString(getDreamTime()));
         dreamTimePref.setOnPreferenceChangeListener(this);
-        screen.addPreference(dreamTimePref);
 
-        final ListPreference sleepTimePref = new ListPreference(themedContext);
-        sleepTimePref.setKey(KEY_SLEEP_TIME);
-        sleepTimePref.setPersistent(false);
-        sleepTimePref.setTitle(R.string.device_daydreams_screen_off);
-        sleepTimePref.setDialogTitle(R.string.device_daydreams_screen_off);
-        sleepTimePref.setSummary("%s");
-        sleepTimePref.setEntries(R.array.screen_off_timeout_entries);
-        sleepTimePref.setEntryValues(R.array.screen_off_timeout_values);
+        final ListPreference sleepTimePref = (ListPreference) findPreference(KEY_SLEEP_TIME);
         sleepTimePref.setValue(Integer.toString(getSleepTime()));
         sleepTimePref.setOnPreferenceChangeListener(this);
-        screen.addPreference(sleepTimePref);
 
-        final Preference dreamNowPref = new Preference(themedContext);
-        dreamNowPref.setKey(KEY_DREAM_NOW);
-        dreamNowPref.setPersistent(false);
-        dreamNowPref.setTitle(R.string.device_daydreams_test);
+        final Preference dreamNowPref = findPreference(KEY_DREAM_NOW);
         dreamNowPref.setEnabled(mBackend.isEnabled());
-        screen.addPreference(dreamNowPref);
-
-        setPreferenceScreen(screen);
     }
 
     private void refreshActiveDreamPref(ListPreference activeDreamPref) {
@@ -273,4 +242,5 @@ public class DaydreamFragment extends LeanbackPreferenceFragment
             refreshFromBackend();
         }
     }
+
 }
