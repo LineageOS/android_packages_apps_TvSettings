@@ -296,7 +296,7 @@ public class SelectFromListWizardFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> pare, View view, int position, long id) {
                 Activity a = getActivity();
-                if (a instanceof Listener) {
+                if (a instanceof Listener && isResumed()) {
                     ((Listener) a).onListSelectionComplete(mListItems.get(position));
                 }
             }
