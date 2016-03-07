@@ -49,8 +49,7 @@
     <string name="device_daydream" msgid="4933581408059561077">"Hafif uyku"</string>
     <string name="device_display" msgid="101455384386372747">"Görünüm"</string>
     <string name="device_sound" msgid="9214182566287657481">"Ses"</string>
-    <!-- no translation found for device_surround_passthrough (6217669717055522227) -->
-    <skip />
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Surround ses geçişi"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sistem sesleri"</string>
     <string name="device_apps" msgid="9180435229638772838">"Uygulamalar"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Depolama ve sıfırlama"</string>
@@ -249,17 +248,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Önbelleğe alınan veriler"</string>
     <string name="storage_eject" msgid="113476702798691558">"Çıkar"</string>
     <string name="storage_format" msgid="3759273736493279595">"Sil ve biçimlendir"</string>
-    <!-- no translation found for storage_format_as_private (4169495230765116075) -->
-    <skip />
-    <!-- no translation found for storage_format_as_public (8568317076021814054) -->
-    <skip />
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Sil ve cihaz depolama alanı olarak biçimlendir"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Sil ve kaldırılabilir depolama olarak biçimlendir"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Cihaz depolaması olarak biçimlendir"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Bağlı değil"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Verileri bu depolama alanına taşı"</string>
-    <!-- no translation found for storage_migrate_away (3410590501311323877) -->
-    <skip />
-    <!-- no translation found for storage_no_apps (579118619398668670) -->
-    <skip />
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Verileri farklı bir depolama alanına taşı"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Yedeklenecek uygulama yok"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Bu depolama cihazını unut"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Bu sürücünün içerdiği uygulamaları veya verileri kullanmak için sürücüyü tekrar yerleştirin. Sürücü kullanılamıyorsa ayrıca bu depolama birimini unutmayı seçebilirsiniz.\n\nUnutmayı seçerseniz cihazdaki tüm veriler kalıcı olarak kaybolur.\n\nUygulamaları daha sonra yeniden yükleyebilirsiniz, ancak bu cihazda depolanmış olan veriler kaybolur."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Cihaz depolama alanı"</string>
@@ -279,8 +274,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Biçimlendirildikten sonra bu USB sürücüsünü başka cihazlarda kullanabilirsiniz. Tüm veriler silinecektir. Öncelikle uygulamaları başka bir depolama cihazına taşıyarak yedeklemenizi öneririz."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB Sürücüsü Biçimlendiriliyor…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Bu işlem biraz zaman alabilir. Lütfen sürücünüzü kaldırmayın."</string>
-    <!-- no translation found for storage_wizard_migrate_choose_title (4247584708563925746) -->
-    <skip />
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Verilerin taşınacağı depolama alanını seçin"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Verileri <xliff:g id="NAME">%1$s</xliff:g> sürücüsüne taşıyın"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Fotoğraflarınızı, dosyalarınızı ve uygulama verilerinizi <xliff:g id="NAME">%1$s</xliff:g> sürücüsüne taşıyın. Bu işlem birkaç dakika sürebilir. Taşıma işlemi sırasında bazı uygulamalar doğru şekilde çalışmayacaktır."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Şimdi taşı"</string>
@@ -298,7 +292,7 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> kullanılabilir"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Depolama cihazını çıkar"</string>
     <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Cihaz çıkarıldığında, bu cihazın depolama alanındaki uygulamaların çalışması duracaktır. Bu USB sürücüsü, yalnızca bu cihazda çalışacak şekilde biçimlendirildi. Başka cihazlarda çalışmayacaktır."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> çıkarılıyor…"</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"<xliff:g id="NAME">%1$s</xliff:g> çıkarılıyor…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Kullanılan depolama alanı"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> taşınıyor…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Taşıma işlemi sırasında sürücüyü çıkarmayın.\nBu cihazdaki <xliff:g id="APPNAME">%1$s</xliff:g> uygulaması, taşıma işlemi tamamlanana kadar kullanılamayacak."</string>
@@ -624,7 +618,8 @@
     <string name="settings_cancel" msgid="304280412158061225">"İptal"</string>
     <string name="settings_on" msgid="6892236264945435013">"Açık"</string>
     <string name="settings_off" msgid="449272161738237637">"Kapalı"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"Yok"</string>
+    <!-- no translation found for device_daydreams_none (2767107052779579259) -->
+    <skip />
     <string name="device_daydreams_select" msgid="3691552535056569158">"Hafif uyku"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Şimdi başlat"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"Hafif uykuya geçilecek zaman"</string>

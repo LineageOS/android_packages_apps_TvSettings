@@ -48,10 +48,8 @@
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Daydream"</string>
     <string name="device_display" msgid="101455384386372747">"Дэлгэц"</string>
-    <!-- no translation found for device_sound (9214182566287657481) -->
-    <skip />
-    <!-- no translation found for device_surround_passthrough (6217669717055522227) -->
-    <skip />
+    <string name="device_sound" msgid="9214182566287657481">"Дуу"</string>
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Өндөр чанартай дуу дамжуулагч"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Системийн дуу"</string>
     <string name="device_apps" msgid="9180435229638772838">"Апп"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Сан &amp; дахин тохируулах"</string>
@@ -250,17 +248,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Кеш хийгдсэн өгөгдөл"</string>
     <string name="storage_eject" msgid="113476702798691558">"Салгах"</string>
     <string name="storage_format" msgid="3759273736493279595">"Арилгах &amp; форматлах"</string>
-    <!-- no translation found for storage_format_as_private (4169495230765116075) -->
-    <skip />
-    <!-- no translation found for storage_format_as_public (8568317076021814054) -->
-    <skip />
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Устгаад, төхөөрөмжийн сан болгож хэлбэршүүлэх"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Устгаад, зөөврийн сан болгож хэлбэршүүлэх"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Төхөөрөмжийн санах ойг форматлах"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Холбогдоогүй"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Өгөгдлийг энэ санах ойд шилжүүлэх"</string>
-    <!-- no translation found for storage_migrate_away (3410590501311323877) -->
-    <skip />
-    <!-- no translation found for storage_no_apps (579118619398668670) -->
-    <skip />
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Өгөгдлийг өөр санд шилжүүлэх"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Нөөцлөх апп байхгүй"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Энэ төхөөрөмжийн хадгалах санг хэрэгсэхгүй болгох"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Энэ драйв дахь апп болон өгөгдлийг ашиглахын тулд дахин залгана уу. Драйв ажиллахгүй байх тохиолдолд та энэхүү санаг ойг мартах сонголтыг хийж болно.\n\nХэрвээ та мартах сонголт хийвэл драйв дээрх бүх өгөгдөл устах болно.\n\nТа апп-ийг дахин суулгаж болох хэдий ч энэ драйв дээр хадгалсан өгөгдөл устах болно."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Төхөөрөмжийн санах ой"</string>
@@ -280,8 +274,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Хэлбэршүүлсний дараа та энэ USB драйвыг бусад төхөөрөмжид ашиглах боломжтой бөгөөд бүх өгөгдөл устах болно. Юун түрүүнд апп-аа бусад дотоод санах ой руу шилжүүлж, нөөцлөнө үү."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB Драйвыг хэлбэршүүлж байна…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Хэдэн хором хүлээж болох юм. Драйвыг хөдөлгөхгүй байна уу."</string>
-    <!-- no translation found for storage_wizard_migrate_choose_title (4247584708563925746) -->
-    <skip />
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Өгөгдөл шилжүүлэх санг сонгох"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Өгөгдлийг <xliff:g id="NAME">%1$s</xliff:g> руу шилжүүлэх"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Зураг, файл болон апп-ийн өгөгдлөө <xliff:g id="NAME">%1$s</xliff:g> руу зөөж болно. Зөөвөрлөх явцад бага зэргийн хугацаа шаардлагатай бөгөөд зарим апп хэвийн ажиллахгүй байж болно."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Одоо зөөх"</string>
@@ -299,7 +292,7 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> сул байна"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Төхөөрөмжийн хадгалах санг салгах"</string>
     <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Төхөөрөмжийг салгах үед төхөөрөмжийн хадгалах санд хадгалсан апп-ууд ажиллахаа болино. Энэ USB драйвыг зөвхөн энэ төхөөрөмжид ажиллахаар болгож хэлбэршүүлсэн бөгөөд өөр төхөөрөмжид ажиллахгүй."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g>-ыг салгаж байна..."</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"<xliff:g id="NAME">%1$s</xliff:g>-г салгаж байна…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Санах ойг ашигласан"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g>-ыг зөөж байна…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Зөөвөрлөх явцад драйвыг салгаж болохгүй. Энэ төхөөрөмж дээрх\n<xliff:g id="APPNAME">%1$s</xliff:g>апп  зөөвөрлөж дуусах хүртэл ажиллахгүй."</string>
@@ -625,7 +618,8 @@
     <string name="settings_cancel" msgid="304280412158061225">"Цуцлах"</string>
     <string name="settings_on" msgid="6892236264945435013">"Идэвхтэй"</string>
     <string name="settings_off" msgid="449272161738237637">"Идэвхгүй"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"Байхгүй"</string>
+    <!-- no translation found for device_daydreams_none (2767107052779579259) -->
+    <skip />
     <string name="device_daydreams_select" msgid="3691552535056569158">"Дэлгэц амраагч"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Одоо эхлэх"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"Хэзээ дэлгэцийг амраах вэ"</string>

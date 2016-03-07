@@ -49,8 +49,7 @@
     <string name="device_daydream" msgid="4933581408059561077">"เดย์ดรีม"</string>
     <string name="device_display" msgid="101455384386372747">"จอแสดงผล"</string>
     <string name="device_sound" msgid="9214182566287657481">"เสียง"</string>
-    <!-- no translation found for device_surround_passthrough (6217669717055522227) -->
-    <skip />
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"การส่งผ่านเสียงเซอร์ราวด์"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"เสียงระบบ"</string>
     <string name="device_apps" msgid="9180435229638772838">"แอป"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"ที่เก็บข้อมูลและการรีเซ็ต"</string>
@@ -249,17 +248,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"ข้อมูลในแคช"</string>
     <string name="storage_eject" msgid="113476702798691558">"นำอุปกรณ์ออก"</string>
     <string name="storage_format" msgid="3759273736493279595">"ลบและฟอร์แมต"</string>
-    <!-- no translation found for storage_format_as_private (4169495230765116075) -->
-    <skip />
-    <!-- no translation found for storage_format_as_public (8568317076021814054) -->
-    <skip />
+    <string name="storage_format_as_private" msgid="4169495230765116075">"ลบและฟอร์แมตเป็นพื้นที่เก็บข้อมูลของอุปกรณ์"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"ลบและฟอร์แมตเป็นพื้นที่เก็บข้อมูลแบบถอดออกได้"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"ฟอร์แมตเป็นที่จัดเก็บข้อมูล"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"ไม่ได้เชื่อมต่อ"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"ย้ายข้อมูลไปยังพื้นที่เก็บข้อมูลนี้"</string>
-    <!-- no translation found for storage_migrate_away (3410590501311323877) -->
-    <skip />
-    <!-- no translation found for storage_no_apps (579118619398668670) -->
-    <skip />
+    <string name="storage_migrate_away" msgid="3410590501311323877">"ย้ายข้อมูลไปยังพื้นที่เก็บข้อมูลอื่น"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"ไม่มีแอปที่จะสำรองข้อมูล"</string>
     <string name="storage_forget" msgid="8731986045697320463">"ลืมพื้นที่เก็บข้อมูลของอุปกรณ์นี้"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"หากต้องการใช้แอปหรือข้อมูลที่อยู่ในไดรฟ์นี้ ให้เสียบไดรฟ์ใหม่ หรือคุณสามารถเลือกไม่จำที่เก็บข้อมูลนี้หากไดรฟ์ไม่พร้อมใช้งาน\n\nหากคุณเลือกไม่จำ ข้อมูลทั้งหมดในไดรฟ์จะสูญหายอย่างถาวร\n\nคุณสามารถติดตั้งแอปอีกครั้งในภายหลัง แต่ข้อมูลที่จัดเก็บไว้ในไดรฟ์นี้จะสูญหาย"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"ที่เก็บข้อมูลอุปกรณ์"</string>
@@ -279,8 +274,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"หลังจากฟอร์แมต คุณสามารถใช้ไดรฟ์ USB นี้ในอุปกรณ์อื่นๆ ระบบจะลบข้อมูลทั้งหมดออก โปรดพิจารณาสำรองข้อมูลก่อนโดยย้ายแอปไปยังพื้นที่เก็บข้อมูลของอุปกรณ์อื่น"</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"กำลังฟอร์แมตไดรฟ์ USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"การดำเนินการนี้อาจใช้เวลาสักครู่ โปรดอย่านำไดรฟ์ออก"</string>
-    <!-- no translation found for storage_wizard_migrate_choose_title (4247584708563925746) -->
-    <skip />
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"เลือกพื้นที่เก็บข้อมูลที่จะย้ายข้อมูลไป"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"ย้ายข้อมูลไปที่ <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"ย้ายรูปภาพ ไฟล์ และข้อมูลแอปไปที่ <xliff:g id="NAME">%1$s</xliff:g> การย้ายอาจใช้เวลาสักครู่ แอปบางแอปจะทำงานไม่ถูกต้องขณะย้าย"</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"ย้ายเลย"</string>
@@ -298,7 +292,7 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"เหลือพื้นที่ว่าง <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"ดีดพื้นที่เก็บข้อมูลของอุปกรณ์ออก"</string>
     <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"แอปในพื้นที่เก็บข้อมูลของอุปกรณ์นี้จะหยุดทำงานเมื่อดีดออก ไดรฟ์ USB จะได้รับการฟอร์แมตให้ทำงานบนอุปกรณ์นี้เท่านั้น โดยจะไม่ทำงานบนอุปกรณ์อื่นๆ"</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"กำลังดีด <xliff:g id="NAME">%1$s</xliff:g> ออก…"</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"กำลังดีด <xliff:g id="NAME">%1$s</xliff:g> ออก…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"ที่จัดเก็บข้อมูลที่ใช้ไป"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"กำลังย้าย <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"ห้ามนำไดรฟ์ออกขณะย้าย\nแอป <xliff:g id="APPNAME">%1$s</xliff:g> บนอุปกรณ์นี้จะใช้ไม่ได้จนกว่าจะย้ายเสร็จ"</string>
@@ -624,7 +618,8 @@
     <string name="settings_cancel" msgid="304280412158061225">"ยกเลิก"</string>
     <string name="settings_on" msgid="6892236264945435013">"เปิด"</string>
     <string name="settings_off" msgid="449272161738237637">"ปิด"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"ไม่มี"</string>
+    <!-- no translation found for device_daydreams_none (2767107052779579259) -->
+    <skip />
     <string name="device_daydreams_select" msgid="3691552535056569158">"เดย์ดรีม"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"เริ่มเลย"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"เดย์ดรีมเมื่อใด"</string>

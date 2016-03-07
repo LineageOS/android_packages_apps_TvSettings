@@ -49,8 +49,7 @@
     <string name="device_daydream" msgid="4933581408059561077">"スクリーンセーバー"</string>
     <string name="device_display" msgid="101455384386372747">"ディスプレイ"</string>
     <string name="device_sound" msgid="9214182566287657481">"サウンド"</string>
-    <!-- no translation found for device_surround_passthrough (6217669717055522227) -->
-    <skip />
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"サラウンド サウンド パススルー"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"システム音"</string>
     <string name="device_apps" msgid="9180435229638772838">"アプリ"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"ストレージとリセット"</string>
@@ -249,17 +248,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"キャッシュデータ"</string>
     <string name="storage_eject" msgid="113476702798691558">"取り外し"</string>
     <string name="storage_format" msgid="3759273736493279595">"消去してフォーマット"</string>
-    <!-- no translation found for storage_format_as_private (4169495230765116075) -->
-    <skip />
-    <!-- no translation found for storage_format_as_public (8568317076021814054) -->
-    <skip />
+    <string name="storage_format_as_private" msgid="4169495230765116075">"データを消去して端末ストレージとしてフォーマット"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"データを消去してリムーバブル ストレージとしてフォーマット"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"デバイスストレージとしてフォーマット"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"未接続"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"このストレージにデータを移行"</string>
-    <!-- no translation found for storage_migrate_away (3410590501311323877) -->
-    <skip />
-    <!-- no translation found for storage_no_apps (579118619398668670) -->
-    <skip />
+    <string name="storage_migrate_away" msgid="3410590501311323877">"別のストレージにデータを移行"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"アプリをバックアップしない"</string>
     <string name="storage_forget" msgid="8731986045697320463">"この端末ストレージを切断"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"このドライブに保存されているアプリやデータを使用するには、接続し直してください。ドライブが使用できない場合は、切断することもできます。\n\n切断した場合、このドライブに保存されているすべてのデータは完全に失われます。\n\nアプリは後で再インストールできますが、このドライブに保存されているデータは失われます。"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"端末のストレージ"</string>
@@ -279,8 +274,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"フォーマット後、この USB ドライブは他の端末で使用できるようになります。データはすべて消去されます。まず、アプリを他の端末ストレージに移動してバックアップすることを検討してください。"</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USBドライブをフォーマットしています…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"この処理には時間がかかる場合があります。ドライブを取り外さないでください。"</string>
-    <!-- no translation found for storage_wizard_migrate_choose_title (4247584708563925746) -->
-    <skip />
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"データの移行先のストレージを選択"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"<xliff:g id="NAME">%1$s</xliff:g>へのデータの移動"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"写真、ファイル、アプリデータを<xliff:g id="NAME">%1$s</xliff:g>に移動します。移動には数分かかることがあります。移動中は一部のアプリが使用できなくなります。"</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"今すぐ移動"</string>
@@ -298,7 +292,7 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"空き容量: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"端末ストレージの取り外し"</string>
     <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"この端末ストレージを取り外すと、保存されているアプリは使用できなくなります。この USB ドライブは、この端末用にフォーマットされており、他の端末では使用できません。"</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g>を取り外し中…"</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"<xliff:g id="NAME">%1$s</xliff:g>を取り外しています…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"使用されているストレージ"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g>を移動しています…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"移動中はドライブを取り外さないでください。\nこの端末の<xliff:g id="APPNAME">%1$s</xliff:g>アプリは移動が完了するまで使用できません。"</string>
@@ -624,7 +618,8 @@
     <string name="settings_cancel" msgid="304280412158061225">"キャンセル"</string>
     <string name="settings_on" msgid="6892236264945435013">"ON"</string>
     <string name="settings_off" msgid="449272161738237637">"OFF"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"なし"</string>
+    <!-- no translation found for device_daydreams_none (2767107052779579259) -->
+    <skip />
     <string name="device_daydreams_select" msgid="3691552535056569158">"スクリーンセーバー"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"今すぐ開始"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"スクリーンセーバー開始のタイミング"</string>
