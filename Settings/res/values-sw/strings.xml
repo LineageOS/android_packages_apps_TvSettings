@@ -49,7 +49,7 @@
     <string name="device_daydream" msgid="4933581408059561077">"Pazia ya Kuvutia"</string>
     <string name="device_display" msgid="101455384386372747">"Onyesha"</string>
     <string name="device_sound" msgid="9214182566287657481">"Sauti"</string>
-    <string name="device_surround_passthrough" msgid="6217669717055522227">"Kipengele cha kupitisha sauti ya mzunguko"</string>
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Kipengele cha kudumisha ubora wa sauti ya mzunguko"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sauti za mfumo"</string>
     <string name="device_apps" msgid="9180435229638772838">"Programu"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Kuhifadhi na kuweka upya"</string>
@@ -248,8 +248,8 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Data iliyoakibishwa"</string>
     <string name="storage_eject" msgid="113476702798691558">"Ondoa"</string>
     <string name="storage_format" msgid="3759273736493279595">"Futa na uumbize"</string>
-    <string name="storage_format_as_private" msgid="4169495230765116075">"Futa data yote na uweke kama hifadhi ya kifaa"</string>
-    <string name="storage_format_as_public" msgid="8568317076021814054">"Futa data yote na uweke kama hifadhi inayoweza kuondolewa"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Futa data yote na uweke iwe hifadhi ya kifaa"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Futa data yote na uweke iweke hifadhi inayoweza kuondolewa"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Tayarisha hifadhi ili itumike kama hifadhi ya kifaa"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Hujaunganishwa"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Hamishia data kwenye hifadhi hii"</string>
@@ -292,7 +292,7 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> inapatikana"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Ondoa hifadhi ya kifaa"</string>
     <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Programu zilizo kwenye kifaa hiki cha kuhifadhi zitaacha kutumika wakati kitakapoondolewa. Hifadhi hii ya USB imeumbizwa ili itumike kwenye kifaa hiki pekee. Haiwezi kutumika kwenye vifaa vingine."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Inaondoa <xliff:g id="NAME">%1$s</xliff:g>..."</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"Inaondoa <xliff:g id="NAME">%1$s</xliff:g>..."</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Hifadhi iliyotumika"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Inahamisha <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Usiondoe hifadhi wakati wa kuhamisha.\nProgramu ya <xliff:g id="APPNAME">%1$s</xliff:g> kwenye kifaa hiki haitapatikana hadi ukamilishe kuhamisha."</string>
@@ -366,11 +366,11 @@
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Maandishi yenye utofautishaji bora"</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Manukuu"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Mipangilio ya kugaga maandishi ya manukuu kwenye video"</string>
-    <string name="captions_display" msgid="735692527287125548">"Onyesho"</string>
+    <string name="captions_display" msgid="735692527287125548">"Kuonyeshwa"</string>
     <string name="captions_display_on" msgid="1989009878719500520">"Yamewashwa"</string>
     <string name="captions_display_off" msgid="496953007835201523">"Yamezimwa"</string>
     <string name="display_options" msgid="5504549024985225774">"Onyesha chaguo"</string>
-    <string name="captions_configure" msgid="5537548915977371014">"Sanidi"</string>
+    <string name="captions_configure" msgid="5537548915977371014">"Mipangilio"</string>
     <string name="captions_language" msgid="2835554055388996343">"Lugha"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Ukubwa wa maandishi"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Mtindo wa manukuu"</string>
@@ -618,7 +618,8 @@
     <string name="settings_cancel" msgid="304280412158061225">"Ghairi"</string>
     <string name="settings_on" msgid="6892236264945435013">"Washa"</string>
     <string name="settings_off" msgid="449272161738237637">"Zima"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"Hakuna"</string>
+    <!-- no translation found for device_daydreams_none (2767107052779579259) -->
+    <skip />
     <string name="device_daydreams_select" msgid="3691552535056569158">"Pazia ya Kuvutia"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Anza sasa"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"Wakati wa kuonyesha pazia ya kuvutia"</string>

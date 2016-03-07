@@ -49,8 +49,7 @@
     <string name="device_daydream" msgid="4933581408059561077">"互动屏保"</string>
     <string name="device_display" msgid="101455384386372747">"显示"</string>
     <string name="device_sound" msgid="9214182566287657481">"声音"</string>
-    <!-- no translation found for device_surround_passthrough (6217669717055522227) -->
-    <skip />
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"环绕声直通输出"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"系统声音"</string>
     <string name="device_apps" msgid="9180435229638772838">"应用"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"存储空间和恢复出厂设置"</string>
@@ -249,17 +248,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"缓存数据"</string>
     <string name="storage_eject" msgid="113476702798691558">"弹出"</string>
     <string name="storage_format" msgid="3759273736493279595">"清空并格式化"</string>
-    <!-- no translation found for storage_format_as_private (4169495230765116075) -->
-    <skip />
-    <!-- no translation found for storage_format_as_public (8568317076021814054) -->
-    <skip />
+    <string name="storage_format_as_private" msgid="4169495230765116075">"清空数据并格式化为内部存储设备"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"清空数据并格式化为移动存储设备"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"格式化为内部存储设备"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"未连接"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"将数据迁移到此存储设备"</string>
-    <!-- no translation found for storage_migrate_away (3410590501311323877) -->
-    <skip />
-    <!-- no translation found for storage_no_apps (579118619398668670) -->
-    <skip />
+    <string name="storage_migrate_away" msgid="3410590501311323877">"将数据迁移到其他存储设备"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"没有要备份的应用"</string>
     <string name="storage_forget" msgid="8731986045697320463">"取消保存此内部存储设备"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"要使用此硬盘中包含的应用或数据，请将其重新插入。如果该硬盘无法使用，您可以选择取消保存此存储设备。\n\n如果您选择“取消保存”，那么该硬盘中包含的所有数据将永久丢失。\n\n虽然您以后可以重新安装这些应用，但存储在此硬盘上的这些应用数据将会丢失。"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"内部存储设备"</string>
@@ -279,8 +274,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"格式化后，您就可以在其他设备上使用此 U 盘了。系统会将所有数据清空，因此建议您先将应用备份到其他内部存储设备上。"</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"正在格式化 U 盘…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"此过程可能需要一些时间，请勿移除此 U 盘。"</string>
-    <!-- no translation found for storage_wizard_migrate_choose_title (4247584708563925746) -->
-    <skip />
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"选择迁移数据的目标存储设备"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"将数据移动到<xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"将您的照片、文件和应用数据移动到<xliff:g id="NAME">%1$s</xliff:g>上。该操作可能需要几分钟的时间。在移动过程中，某些应用将无法正常运行。"</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"立即移动"</string>
@@ -298,7 +292,7 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"可用存储空间：<xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"弹出内部存储设备"</string>
     <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"此内部存储设备弹出后，其中的应用将会停止运行。此 U 盘经过格式化后只能在这台设备上使用，无法在任何其他设备上使用。"</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"正在弹出<xliff:g id="NAME">%1$s</xliff:g>…"</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"正在弹出<xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"已使用的存储空间"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"正在移动<xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"请勿在移动过程中移除该云端硬盘。在移动操作完成前，您将无法使用此设备上的\n<xliff:g id="APPNAME">%1$s</xliff:g>应用。"</string>
@@ -624,7 +618,8 @@
     <string name="settings_cancel" msgid="304280412158061225">"取消"</string>
     <string name="settings_on" msgid="6892236264945435013">"开启"</string>
     <string name="settings_off" msgid="449272161738237637">"关闭"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"无"</string>
+    <!-- no translation found for device_daydreams_none (2767107052779579259) -->
+    <skip />
     <string name="device_daydreams_select" msgid="3691552535056569158">"互动屏保"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"立即启动"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"何时启动互动屏保"</string>

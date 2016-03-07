@@ -49,8 +49,7 @@
     <string name="device_daydream" msgid="4933581408059561077">"Daydream"</string>
     <string name="device_display" msgid="101455384386372747">"Display"</string>
     <string name="device_sound" msgid="9214182566287657481">"Tunog"</string>
-    <!-- no translation found for device_surround_passthrough (6217669717055522227) -->
-    <skip />
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Surround sound passthrough"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Mga tunog ng system"</string>
     <string name="device_apps" msgid="9180435229638772838">"Apps"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Storage at pag-reset"</string>
@@ -249,17 +248,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Naka-cache na data"</string>
     <string name="storage_eject" msgid="113476702798691558">"I-eject"</string>
     <string name="storage_format" msgid="3759273736493279595">"Burahin at i-format"</string>
-    <!-- no translation found for storage_format_as_private (4169495230765116075) -->
-    <skip />
-    <!-- no translation found for storage_format_as_public (8568317076021814054) -->
-    <skip />
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Burahin at i-format bilang storage ng device"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Burahin at i-format bilang naaalis na storage"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"I-format bilang storage ng device"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Hindi nakakonekta"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Ilipat ang data sa storage na ito"</string>
-    <!-- no translation found for storage_migrate_away (3410590501311323877) -->
-    <skip />
-    <!-- no translation found for storage_no_apps (579118619398668670) -->
-    <skip />
+    <string name="storage_migrate_away" msgid="3410590501311323877">"I-migrate ang data sa ibang storage"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Walang mga iba-back up na app"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Kalimutan ang storage ng device na ito"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Upang magamit ang mga app o data na nilalaman ng drive na ito, i-plug muli ito. Kung hindi naman, maaari mong piliing kalimutan ang storage na ito kung hindi available ang drive.\n\nKung pipiliin mong Kalimutan ito, mawawala nang tuluyan ang lahat ng data na nilalaman ng drive.\n\nMaaari mong i-install muli ang mga app sa ibang pagkakataon, ngunit mawawala ang data na nakaimbak sa drive na ito."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Storage ng device"</string>
@@ -279,8 +274,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Pagkatapos ma-format, maaari mo nang gamitin ang USB drive na ito sa iba pang mga device. Mabubura ang lahat ng data. Isaalang-alang muna ang pagba-back up sa pamamagitan ng paglilipat ng mga app sa iba pang storage ng device."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Fino-format ang USB Drive…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Maaari itong magtagal. Mangyaring huwag alisin ang drive."</string>
-    <!-- no translation found for storage_wizard_migrate_choose_title (4247584708563925746) -->
-    <skip />
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Piliin ang storage kung saan ima-migrate ang data"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Ilipat ang data sa <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Ilipat ang data ng iyong mga larawan, file at app sa <xliff:g id="NAME">%1$s</xliff:g>. Maaari itong magtagal nang ilang minuto. Maaaring hindi gumana nang maayos ang ilang app sa panahon ng paglipat."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Ilipat ngayon"</string>
@@ -298,7 +292,7 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> ang available"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"I-eject ang storage ng device"</string>
     <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Hihinto sa paggana ang mga app sa storage ng device na ito kapag na-eject ito. Ang USB drive na ito ay naka-format upang gumana sa device na ito lang. Hindi ito gagana sa anumang iba pang mga device."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Ine-eject ang <xliff:g id="NAME">%1$s</xliff:g>…"</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"Ine-eject ang <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Ginamit na storage"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Inililipat ang <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Huwag alisin ang drive sa panahon ng paglipat.\nAng <xliff:g id="APPNAME">%1$s</xliff:g> app sa device na ito ay hindi magiging available hanggang sa makumpleto ang paglipat."</string>
@@ -624,7 +618,8 @@
     <string name="settings_cancel" msgid="304280412158061225">"Kanselahin"</string>
     <string name="settings_on" msgid="6892236264945435013">"Naka-on"</string>
     <string name="settings_off" msgid="449272161738237637">"Naka-off"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"Wala"</string>
+    <!-- no translation found for device_daydreams_none (2767107052779579259) -->
+    <skip />
     <string name="device_daydreams_select" msgid="3691552535056569158">"Daydream"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Magsimula ngayon"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"Kailan magde-daydream"</string>

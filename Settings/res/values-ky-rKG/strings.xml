@@ -48,10 +48,8 @@
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi‑Fi"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Кыял чабыттары"</string>
     <string name="device_display" msgid="101455384386372747">"Көрсөтүү"</string>
-    <!-- no translation found for device_sound (9214182566287657481) -->
-    <skip />
-    <!-- no translation found for device_surround_passthrough (6217669717055522227) -->
-    <skip />
+    <string name="device_sound" msgid="9214182566287657481">"Үн"</string>
+    <string name="device_surround_passthrough" msgid="6217669717055522227">"Айланадагы үндөрдү угузбай өткөрүү"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Тутум добуштары"</string>
     <string name="device_apps" msgid="9180435229638772838">"Колдонмолор"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Сактагычты &amp; баштапкы абалга кайтаруу"</string>
@@ -250,17 +248,13 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Кештелген дайындар"</string>
     <string name="storage_eject" msgid="113476702798691558">"Чыгаруу"</string>
     <string name="storage_format" msgid="3759273736493279595">"Өчүрүү жана форматтоо"</string>
-    <!-- no translation found for storage_format_as_private (4169495230765116075) -->
-    <skip />
-    <!-- no translation found for storage_format_as_public (8568317076021814054) -->
-    <skip />
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Түзмөктүн сактагычы катары тазалоо жана форматтоо"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Ташыма сактагыч катары тазалоо жана форматтоо"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Түзмөктүн сактагычы катары форматтоо"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Туташкан жок"</string>
     <string name="storage_migrate" msgid="1304058078948715456">"Дайындарды ушул сактагычка көчүрүү"</string>
-    <!-- no translation found for storage_migrate_away (3410590501311323877) -->
-    <skip />
-    <!-- no translation found for storage_no_apps (579118619398668670) -->
-    <skip />
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Дайындарды башка сактагычка көчүрүү"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Камдык көчүрмөсүн сактай турган колдонмолор жок"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Бул түзмөктүн сактагычы унутулсун"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Бул дискте камтылган колдонмолор же дайындарды колдонуу үчүн, аны кайра сайыңыз. Же түзмөк жеткиликтүү эмес болсо, бул сактагычты унутууну тандасаңыз болот.\n\nЭгер Унутууну тандасаңыз, дискте камтылган бардык дайындар биротоло жоголот.\n\nКолдонмолорду кийинчерээк кайра орнотсоңуз болот, бирок бул дискте сакталган дайындар жоголот."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Түзмөктүн сактагычы"</string>
@@ -280,8 +274,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Бул USB картасы форматталгандан кийин, аны башка түзмөктөрдө колдоно берсеңиз болот. Бардык дайындар жок боло тургандыктан, алгач, колдонмолорду башка түзмөктүн сактагычына жылдырып, камдык көчүрмөлөрүн сактап коюңуз."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB диск форматталууда…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Бул бир аз убакыт талап кылынышы мүмкүн. Дискти чыгарбай туруңуз."</string>
-    <!-- no translation found for storage_wizard_migrate_choose_title (4247584708563925746) -->
-    <skip />
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Дайындарды көчүрө турган сактагычты тандаңыз"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Дайындарды <xliff:g id="NAME">%1$s</xliff:g> ичине жылдыруу"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Сүрөттөрүңүз, файлдарыңыз жана колдонмо дайындарын <xliff:g id="NAME">%1$s</xliff:g> ичине жылдырыңыз. Ал бир нече мүнөт созулушу мүмкүн. Жылдыруу учурунда айрым колдонмолор туура иштебей калат."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Азыр жылдыруу"</string>
@@ -299,7 +292,7 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> бош орун бар"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Түзмөктүн сактагычын чыгаруу"</string>
     <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Бул сактагыч чыгарылганда, андагы колдонмолор иштебей калат. USB картасы ушул түзмөктө гана иштегидей болуп форматталган. Ал башка эч бир түзмөктө иштебейт."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> чыгарылууда…"</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"<xliff:g id="NAME">%1$s</xliff:g> чыгарылууда…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Колдонулган эстутум"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> жылдырылууда…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Жылдырп жаткнд түзмктү чыгарбңз.\nЖылдырлп бүтмйнчө бул түзмктгү <xliff:g id="APPNAME">%1$s</xliff:g> колдонм иштебйт."</string>
@@ -625,7 +618,8 @@
     <string name="settings_cancel" msgid="304280412158061225">"Жокко чыгаруу"</string>
     <string name="settings_on" msgid="6892236264945435013">"Күйүк"</string>
     <string name="settings_off" msgid="449272161738237637">"Өчүк"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"Эч бири"</string>
+    <!-- no translation found for device_daydreams_none (2767107052779579259) -->
+    <skip />
     <string name="device_daydreams_select" msgid="3691552535056569158">"Кыял чабыттары"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Азыр баштоо"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"Кыял чабыттарына өтө турган убакыт"</string>
