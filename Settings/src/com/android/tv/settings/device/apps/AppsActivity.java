@@ -16,37 +16,31 @@
 
 package com.android.tv.settings.device.apps;
 
-import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
 
 import com.android.tv.settings.BaseSettingsFragment;
+import com.android.tv.settings.TvSettingsActivity;
 
 /**
  * Activity allowing the management of apps settings.
  */
-public class AppsActivity extends Activity {
+public class AppsActivity extends TvSettingsActivity {
 
     // Used for storage only.
     public static final String EXTRA_VOLUME_UUID = "volumeUuid";
     public static final String EXTRA_VOLUME_NAME = "volumeName";
 
-    private String mVolumeUuid;
-    private String mVolumeName; // TODO: surface this to the user somewhere
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected Fragment createSettingsFragment() {
         final Bundle args = getIntent().getExtras();
+        String volumeUuid = null;
+        String volumeName = null;
         if (args != null && args.containsKey(EXTRA_VOLUME_UUID)) {
-            mVolumeUuid = args.getString(EXTRA_VOLUME_UUID);
-            mVolumeName = args.getString(EXTRA_VOLUME_NAME);
+            volumeUuid = args.getString(EXTRA_VOLUME_UUID);
+            volumeName = args.getString(EXTRA_VOLUME_NAME);
         }
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content,
-                            SettingsFragment.newInstance(mVolumeUuid, mVolumeName))
-                    .commit();
-        }
+        return SettingsFragment.newInstance(volumeUuid, volumeName);
     }
 
     public static class SettingsFragment extends BaseSettingsFragment {

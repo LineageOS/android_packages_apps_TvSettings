@@ -16,24 +16,19 @@
 
 package com.android.tv.settings.device.sound;
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.app.Fragment;
 
 import com.android.tv.settings.BaseSettingsFragment;
+import com.android.tv.settings.TvSettingsActivity;
 
 /**
  * Activity that allows the enabling and disabling of sound effects.
  */
-public class SoundActivity extends Activity {
+public class SoundActivity extends TvSettingsActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, SettingsFragment.newInstance())
-                    .commit();
-        }
+    protected Fragment createSettingsFragment() {
+        return SettingsFragment.newInstance();
     }
 
     public static class SettingsFragment extends BaseSettingsFragment {

@@ -16,37 +16,31 @@
 
 package com.android.tv.settings.device.apps;
 
-import android.app.Activity;
 import android.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.android.tv.settings.BaseSettingsFragment;
+import com.android.tv.settings.TvSettingsActivity;
 
 /**
  * Activity that manages an app.
  */
-public class AppManagementActivity extends Activity {
+public class AppManagementActivity extends TvSettingsActivity {
 
     private static final String TAG = "AppManagementActivity";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            final Uri uri = getIntent().getData();
-            if (uri == null) {
-                Log.wtf(TAG, "No app to inspect (missing data uri in intent)");
-                finish();
-                return;
-            }
-            final String packageName = uri.getSchemeSpecificPart();
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, SettingsFragment.newInstance(packageName))
-                    .commit();
+    protected Fragment createSettingsFragment() {
+        final Uri uri = getIntent().getData();
+        if (uri == null) {
+            Log.wtf(TAG, "No app to inspect (missing data uri in intent)");
+            finish();
+            return null;
         }
-
+        final String packageName = uri.getSchemeSpecificPart();
+        return SettingsFragment.newInstance(packageName);
     }
 
     public static class SettingsFragment extends BaseSettingsFragment {

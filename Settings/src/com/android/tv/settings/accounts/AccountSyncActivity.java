@@ -18,39 +18,35 @@ package com.android.tv.settings.accounts;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.annotation.Nullable;
-import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
 import android.text.TextUtils;
 
 import com.android.tv.settings.BaseSettingsFragment;
+import com.android.tv.settings.TvSettingsActivity;
 
 /**
  * Displays the sync settings for a given account.
  */
-public class AccountSyncActivity extends Activity {
+public class AccountSyncActivity extends TvSettingsActivity {
 
     public static final String EXTRA_ACCOUNT = "account_name";
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            String accountName = getIntent().getStringExtra(EXTRA_ACCOUNT);
-            Account account = null;
-            if (!TextUtils.isEmpty(accountName)) {
-                // Search for the account.
-                for (Account candidateAccount : AccountManager.get(this).getAccounts()) {
-                    if (candidateAccount.name.equals(accountName)) {
-                        account = candidateAccount;
-                        break;
-                    }
+    protected Fragment createSettingsFragment() {
+        String accountName = getIntent().getStringExtra(EXTRA_ACCOUNT);
+        Account account = null;
+        if (!TextUtils.isEmpty(accountName)) {
+            // Search for the account.
+            for (Account candidateAccount : AccountManager.get(this).getAccounts()) {
+                if (candidateAccount.name.equals(accountName)) {
+                    account = candidateAccount;
+                    break;
                 }
             }
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, SettingsFragment.newInstance(account))
-                    .commit();
         }
+
+        return SettingsFragment.newInstance(account);
     }
 
     public static class SettingsFragment extends BaseSettingsFragment {
