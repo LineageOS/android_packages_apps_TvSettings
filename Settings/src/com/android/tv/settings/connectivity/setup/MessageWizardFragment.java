@@ -52,7 +52,7 @@ public class MessageWizardFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle icicle) {
-        final View view = inflater.inflate(R.layout.setup_activity_progress, container, false);
+        final View view = inflater.inflate(R.layout.setup_message, container, false);
 
         final ImageView progressView = (ImageView) view.findViewById(R.id.progress);
         final TextView titleView = (TextView) view.findViewById(R.id.status_text);

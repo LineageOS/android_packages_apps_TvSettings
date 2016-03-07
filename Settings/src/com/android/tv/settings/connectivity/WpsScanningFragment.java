@@ -16,27 +16,26 @@
 
 package com.android.tv.settings.connectivity;
 
-import android.support.annotation.Nullable;
+import android.app.Fragment;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.dialog.ProgressDialogFragment;
 
 /**
  * Displays a UI for showing that WPS is active
  */
-public class WpsScanningFragment extends ProgressDialogFragment {
+public class WpsScanningFragment extends Fragment {
 
     public static WpsScanningFragment newInstance() {
         return new WpsScanningFragment();
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        setTitle(R.string.wifi_wps_title);
-        setSummary(R.string.wifi_wps_instructions);
-        setIcon(R.drawable.ic_wps);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.setup_progress, container, false);
     }
 }

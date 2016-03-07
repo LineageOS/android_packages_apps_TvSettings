@@ -141,7 +141,7 @@ public class WpsConnectionActivity extends DialogActivity
     private Fragment createErrorFragment(String errorMessage) {
         SelectFromListWizardFragment.ListItem retryListItem =
                 new SelectFromListWizardFragment.ListItem(
-                        getString(R.string.wifi_wps_retry_scan).toUpperCase(), 0);
+                        getString(R.string.wifi_wps_retry_scan), 0);
         ArrayList<SelectFromListWizardFragment.ListItem> listItems = new ArrayList<>();
         listItems.add(retryListItem);
         return SelectFromListWizardFragment.newInstance(errorMessage, null, listItems,
