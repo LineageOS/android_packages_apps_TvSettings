@@ -150,7 +150,11 @@ public abstract class WifiMultiPagedFormActivity extends MultiPagedForm
                 wifiConfiguration.wepKeys[0] = '"' + password + '"';
             }
         } else {
-            wifiConfiguration.preSharedKey = '"' + password + '"';
+            if (password.matches("[0-9A-Fa-f]{64}")) {
+                wifiConfiguration.preSharedKey = password;
+            } else {
+                wifiConfiguration.preSharedKey = '"' + password + '"';
+            }
         }
     }
 
