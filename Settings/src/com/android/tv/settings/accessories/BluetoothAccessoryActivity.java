@@ -16,34 +16,21 @@
 
 package com.android.tv.settings.accessories;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
 
 import com.android.tv.settings.BaseSettingsFragment;
 import com.android.tv.settings.R;
+import com.android.tv.settings.TvSettingsActivity;
 
-public class BluetoothAccessoryActivity extends Activity {
+public class BluetoothAccessoryActivity extends TvSettingsActivity {
 
     public static final String EXTRA_ACCESSORY_ADDRESS = "accessory_address";
     public static final String EXTRA_ACCESSORY_NAME = "accessory_name";
     public static final String EXTRA_ACCESSORY_ICON_ID = "accessory_icon_res";
 
-    public static Intent createIntent(Context context, String deviceAddress,
-            String deviceName, @DrawableRes int iconId) {
-        Intent i = new Intent(context, BluetoothAccessoryActivity.class);
-        i.putExtra(EXTRA_ACCESSORY_ADDRESS, deviceAddress);
-        i.putExtra(EXTRA_ACCESSORY_NAME, deviceName);
-        i.putExtra(EXTRA_ACCESSORY_ICON_ID, iconId);
-        return i;
-    }
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+    protected Fragment createSettingsFragment() {
         String deviceAddress = null;
         String deviceName;
         int deviceImgId;
@@ -57,12 +44,7 @@ public class BluetoothAccessoryActivity extends Activity {
             deviceImgId = R.drawable.ic_qs_bluetooth_not_connected;
         }
 
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content,
-                            SettingsFragment.newInstance(deviceAddress, deviceName, deviceImgId))
-                    .commit();
-        }
+        return SettingsFragment.newInstance(deviceAddress, deviceName, deviceImgId);
     }
 
     public static class SettingsFragment extends BaseSettingsFragment {

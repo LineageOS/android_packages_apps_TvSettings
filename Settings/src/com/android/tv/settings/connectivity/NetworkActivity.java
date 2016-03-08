@@ -16,20 +16,16 @@
 
 package com.android.tv.settings.connectivity;
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.app.Fragment;
 
 import com.android.tv.settings.BaseSettingsFragment;
+import com.android.tv.settings.TvSettingsActivity;
 
-public class NetworkActivity extends Activity {
+public class NetworkActivity extends TvSettingsActivity {
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, SettingsFragment.newInstance())
-                    .commit();
-        }
+    protected Fragment createSettingsFragment() {
+        return SettingsFragment.newInstance();
     }
 
     public static class SettingsFragment extends BaseSettingsFragment {
