@@ -16,24 +16,19 @@
 
 package com.android.tv.settings.device;
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.app.Fragment;
 
 import com.android.tv.settings.BaseSettingsFragment;
+import com.android.tv.settings.TvSettingsActivity;
 
 /**
  * Activity to view storage consumption and factory reset device.
  */
-public class StorageResetActivity extends Activity {
+public class StorageResetActivity extends TvSettingsActivity {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, SettingsFragment.newInstance())
-                    .commit();
-        }
+    protected Fragment createSettingsFragment() {
+        return SettingsFragment.newInstance();
     }
 
     public static class SettingsFragment extends BaseSettingsFragment {

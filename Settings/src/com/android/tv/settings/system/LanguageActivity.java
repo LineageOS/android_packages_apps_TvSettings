@@ -16,21 +16,16 @@
 
 package com.android.tv.settings.system;
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.app.Fragment;
 
 import com.android.tv.settings.BaseSettingsFragment;
+import com.android.tv.settings.TvSettingsActivity;
 
-public class LanguageActivity extends Activity {
+public class LanguageActivity extends TvSettingsActivity {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, SettingsFragment.newInstance())
-                    .commit();
-        }
+    protected Fragment createSettingsFragment() {
+        return SettingsFragment.newInstance();
     }
 
     public static class SettingsFragment extends BaseSettingsFragment {

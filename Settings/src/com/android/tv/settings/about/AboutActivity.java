@@ -16,25 +16,19 @@
 
 package com.android.tv.settings.about;
 
-import android.annotation.Nullable;
-import android.app.Activity;
-import android.os.Bundle;
+import android.app.Fragment;
 
 import com.android.tv.settings.BaseSettingsFragment;
+import com.android.tv.settings.TvSettingsActivity;
 
 /**
  * Activity which shows the build / model / legal info / etc.
  */
-public class AboutActivity extends Activity {
+public class AboutActivity extends TvSettingsActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, SettingsFragment.newInstance())
-                    .commit();
-        }
+    protected Fragment createSettingsFragment() {
+        return SettingsFragment.newInstance();
     }
 
     public static class SettingsFragment extends BaseSettingsFragment {
