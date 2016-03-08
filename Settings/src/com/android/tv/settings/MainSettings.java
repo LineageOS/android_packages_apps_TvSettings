@@ -16,22 +16,16 @@
 
 package com.android.tv.settings;
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.app.Fragment;
 
 /**
  * Main settings which loads up the top level headers.
  */
-public class MainSettings extends Activity {
+public class MainSettings extends TvSettingsActivity {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, SettingsFragment.newInstance())
-                    .commit();
-        }
+    protected Fragment createSettingsFragment() {
+        return SettingsFragment.newInstance();
     }
 
     public static class SettingsFragment extends BaseSettingsFragment {
