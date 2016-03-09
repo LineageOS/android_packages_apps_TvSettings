@@ -16,10 +16,13 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- no translation found for sleep_timeout_entries:1 (6561800022721381078) -->
-    <!-- no translation found for sleep_timeout_entries:2 (7718735533503035428) -->
-    <!-- no translation found for sleep_timeout_entries:3 (8784595382489738498) -->
-    <!-- no translation found for sleep_timeout_entries:4 (1529312035777735084) -->
+  <string-array name="sleep_timeout_entries">
+    <item msgid="1213527366819650274">"5 minutos"</item>
+    <item msgid="6561800022721381078">"15 minutos"</item>
+    <item msgid="7718735533503035428">"30 minutos"</item>
+    <item msgid="8784595382489738498">"1 hora"</item>
+    <item msgid="1529312035777735084">"2 horas"</item>
+  </string-array>
   <string-array name="screen_off_timeout_entries">
     <item msgid="8244337465472020927">"30 minutos"</item>
     <item msgid="1001586019759702505">"1 hora"</item>
@@ -41,7 +44,7 @@
   </string-array>
   <string-array name="captioning_font_size_selector_titles">
     <item msgid="4304493614734189861">"Muy pequeño"</item>
-    <item msgid="1694402928400844023">"Pequeña"</item>
+    <item msgid="1694402928400844023">"Pequeño"</item>
     <item msgid="1235495470844109970">"Normal"</item>
     <item msgid="481223375568095790">"Grande"</item>
     <item msgid="8614563351231073075">"Muy grande"</item>

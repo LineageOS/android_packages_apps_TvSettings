@@ -16,10 +16,13 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- no translation found for sleep_timeout_entries:1 (6561800022721381078) -->
-    <!-- no translation found for sleep_timeout_entries:2 (7718735533503035428) -->
-    <!-- no translation found for sleep_timeout_entries:3 (8784595382489738498) -->
-    <!-- no translation found for sleep_timeout_entries:4 (1529312035777735084) -->
+  <string-array name="sleep_timeout_entries">
+    <item msgid="1213527366819650274">"5 minuuttia"</item>
+    <item msgid="6561800022721381078">"15 minuuttia"</item>
+    <item msgid="7718735533503035428">"30 minuuttia"</item>
+    <item msgid="8784595382489738498">"1 tunti"</item>
+    <item msgid="1529312035777735084">"2 tuntia"</item>
+  </string-array>
   <string-array name="screen_off_timeout_entries">
     <item msgid="8244337465472020927">"30 minuuttia"</item>
     <item msgid="1001586019759702505">"1 tunti"</item>
