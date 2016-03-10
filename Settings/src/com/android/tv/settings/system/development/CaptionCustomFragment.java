@@ -37,6 +37,7 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragment implements
     private static final String KEY_TEXT_OPACITY = "text_opacity";
     private static final String KEY_EDGE_TYPE = "edge_type";
     private static final String KEY_EDGE_COLOR = "edge_color";
+    private static final String KEY_BACKGROUND_SHOW = "background_show";
     private static final String KEY_BACKGROUND_COLOR = "background_color";
     private static final String KEY_BACKGROUND_OPACITY = "background_opacity";
     private static final String KEY_WINDOW_SHOW = "window_show";
@@ -48,6 +49,7 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragment implements
     private ListPreference mTextOpacityPref;
     private ListPreference mEdgeTypePref;
     private ListPreference mEdgeColorPref;
+    private TwoStatePreference mBackgroundShowPref;
     private ListPreference mBackgroundColorPref;
     private ListPreference mBackgroundOpacityPref;
     private TwoStatePreference mWindowShowPref;
@@ -100,6 +102,8 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragment implements
         mEdgeColorPref.setEntryValues(colorValues);
         mEdgeColorPref.setOnPreferenceChangeListener(this);
 
+        mBackgroundShowPref = (TwoStatePreference) findPreference(KEY_BACKGROUND_SHOW);
+
         mBackgroundColorPref = (ListPreference) findPreference(KEY_BACKGROUND_COLOR);
         mBackgroundColorPref.setEntries(colorNames);
         mBackgroundColorPref.setEntryValues(colorValues);
@@ -126,6 +130,9 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragment implements
             return super.onPreferenceTreeClick(preference);
         }
         switch (key) {
+            case KEY_BACKGROUND_SHOW:
+                setCaptionsBackgroundVisible(((TwoStatePreference) preference).isChecked());
+                return true;
             case KEY_WINDOW_SHOW:
                 setCaptionsWindowVisible(((TwoStatePreference) preference).isChecked());
                 return true;
@@ -179,6 +186,7 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragment implements
         mTextOpacityPref.setValue(getCaptionsTextOpacity());
         mEdgeTypePref.setValue(getCaptionsEdgeType());
         mEdgeColorPref.setValue(getCaptionsEdgeColor());
+        mBackgroundShowPref.setChecked(isCaptionsBackgroundVisible());
         mBackgroundColorPref.setValue(getCaptionsBackgroundColor());
         mBackgroundOpacityPref.setValue(getCaptionsBackgroundOpacity());
         mWindowShowPref.setChecked(isCaptionsWindowVisible());
@@ -248,6 +256,21 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragment implements
         Settings.Secure.putInt(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_CAPTIONING_EDGE_COLOR,
                 0xff000000 | (int) Long.parseLong(edgeColor, 16));
+    }
+
+    private boolean isCaptionsBackgroundVisible() {
+        return (Settings.Secure.getInt(getContext().getContentResolver(),
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, 0) & 0xff000000) != 0;
+    }
+
+    private void setCaptionsBackgroundVisible(boolean visible) {
+        Settings.Secure.putInt(getContext().getContentResolver(),
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR,
+                visible ? 0xff000000 : 0);
+        if (!visible) {
+            mBackgroundColorPref.setValue(Integer.toHexString(0));
+            mBackgroundOpacityPref.setValue(opacityToString(0));
+        }
     }
 
     private String getCaptionsBackgroundColor() {
