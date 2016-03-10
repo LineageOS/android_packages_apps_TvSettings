@@ -51,14 +51,20 @@
         android:title="@string/captions_edgecolor"
         android:summary="%s" />
     <!-- Entries set in code -->
+    <SwitchPreference
+        android:key="background_show"
+        android:persistent="false"
+        android:title="@string/captions_backgroundshow" />
     <ListPreference
         android:key="background_color"
         android:persistent="false"
+        android:dependency="background_show"
         android:title="@string/captions_backgroundcolor"
         android:summary="%s" />
     <ListPreference
         android:key="background_opacity"
         android:persistent="false"
+        android:dependency="background_show"
         android:title="@string/captions_backgroundopacity"
         android:summary="%s"
         android:entries="@array/captioning_opacity_selector_titles"
