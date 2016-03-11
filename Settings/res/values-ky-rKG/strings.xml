@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Өзгөчө мүмкүнчүлүктөр"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Иштеп чыгуучунун параметрлери"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Эч бири"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Колдонуу жана мүчүлүштүктөрдү аныктоо"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Тутум жаңыртуусу"</string>
     <string name="about_preference" msgid="4131396784531360434">"Жөнүндө"</string>
     <string name="device_name" msgid="2670488158531273028">"Түзмөктүн аталышы"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Аудио"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Башк."</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Кештелген дайындар"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Чыгаруу"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Өчүрүү жана форматтоо"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Түзмөктүн сактагычы катары форматтоо"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Туташкан жок"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Дайындарды ооштуруу"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Бул ички сактагычты унутуу"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Бул дискте камтылган колдонмолор же дайындарды колдонуу үчүн, аны кайра сайыңыз. Же түзмөк жеткиликтүү эмес болсо, бул сактагычты унутууну тандасаңыз болот.\n\nЭгер Унутууну тандасаңыз, дискте камтылган бардык дайындар биротоло жоголот.\n\nКолдонмолорду кийинчерээк кайра орнотсоңуз болот, бирок бул дискте сакталган дайындар жоголот."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Түзмөктүн сактагычы"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Ташыма сактагыч"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Кайра коюу"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> туташты"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> туташпай койду"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> коопсуз чыгарылды"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> коопсуз чыгарылбай койду"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Чыгарыла турган диск табылбай койду"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> форматталды"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> форматталбай койду"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Ички сактагыч катары форматтоо"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Дайындарыңыздын коопсуздугун камсыз кылуу үчүн, USB картасын форматтоо керек. Форматталгандан кийин, карта ушул түзмөктө гана иштейт. Картада сакталган дайындардын баары өчүрүлө тургандыктан, алардын камдык көчүрмөлөрүн сактап коюңуз."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Өчүрүү жана форматтоо"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Бул USB картасы форматталгандан кийин, аны башка түзмөктөрдө колдоно берсеңиз болот. Бардык дайындар жок боло тургандыктан, алгач, колдонмолорду ички сактагычка жылдырып, камдык көчүрмөлөрүн сактап коюңуз."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB диск форматталууда…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Бул бир аз убакыт талап кылынышы мүмкүн. Дискти чыгарбай туруңуз."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Дайындарды <xliff:g id="NAME">%1$s</xliff:g> ичине жылдыруу"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Сүрөттөрүңүз, файлдарыңыз жана колдонмо дайындарын <xliff:g id="NAME">%1$s</xliff:g> ичине жылдырыңыз. Ал бир нече мүнөт созулушу мүмкүн. Жылдыруу учурунда айрым колдонмолор туура иштебей калат."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Азыр жылдыруу"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Кийинчерээк жылдыруу"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Дайындар <xliff:g id="NAME">%1$s</xliff:g> ичине ооштурулду"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Дайындар <xliff:g id="NAME">%1$s</xliff:g> ичине ооштурулбай койду"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Дайындар <xliff:g id="NAME">%1$s</xliff:g> ичине жылдырылууда…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Бул бир аз убакытты талап кылышы мүмкүн. Дискти чыгарбай туруңуз.\nЖылдыруу учурунда айрым колдонмолор туура иштебей калат."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Бул диск өтө жай иштейт окшойт."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Уланта берсеңиз болот, бул жерге жылдырылган колдонмолор бири-бирине шыкалып калгандыктан, дайындарды өткөрүү үчүн көбүрөөк убакыт талап кылынат. Жакшыраак иштеш үчүн, тезирээк иштеген дискти колдонуп көрүңүз."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Форматтоо"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Камдык көчүрмө колдонмолору"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> ичинде сакталган колдонмолор"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> ичинде сакталган колдонмолор жана дайындар"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> бош орун бар"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Ички сактагычты чыгаруу"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Бул сактагыч чыгарылганда, андагы колдонмолор иштебей калат. USB картасы ушул түзмөктө гана иштегидей болуп форматталган. Ал башка эч бир түзмөктө иштебейт."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> чыгарылууда…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Колдонулган эстутум"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> жылдырылууда…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Жылдырп жаткнд түзмктү чыгарбңз.\nЖылдырлп бүтмйнчө бул түзмктгү <xliff:g id="APPNAME">%1$s</xliff:g> колдонм иштебйт."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Ички сактагыч унутулсунбу?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'Унутуу\' баскычы басылганда, бул дискте сакталган бардык дайындарыңыз биротоло жоголот. Уланткыңыз келеби?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Унутуу"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB диск туташты"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Серептөө"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Ички сактагыч катары жөндөө"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Ташыма сактагыч катары жөндөө"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Чыгаруу"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> алынып салынды"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Диск кайра туташтырылмайынча, айрым колдонмолор жеткиликсиз болуп же жакшы иштебей калышы мүмкүн."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Сактагычта орун жетишсиз."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Мындай колдонмо жок."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Колдонмо көчүрүүдөн корголгон."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Орнотула турган жер жараксыз."</string>
-    <string name="system_package" msgid="9200255718634512790">"Тутумдун жаңыртуулары тышкы сактагычка орнотулбайт."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Көбүрөөк билүү"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Дагы аракет кылуу"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS роутери изделүүдө…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Роутериңиздеги Wi‑Fi Корголгон орнотуу баскычын басыңыз.\nАл \"WPS\" деп аталышы мүмкүн же солго деген белгини камтышы мүмкүн."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Жаңы PIN коюңуз"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Жаңы PIN\"ди кайра киргизиңиз"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Эски PIN\"ди киргизиңиз"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"PIN кодду 5 жолу туура эмес киргиздиңиз.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> секунддан кийин кайра аракет кылып көрүңүз."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"5 жолу туура эмес PIN киргиздиңиз.\nКайра аракеттениңиз <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Туура эмес PIN, дагы бир жолу аракет кылыңыз"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN дал келбей жатат, дагы бир жолу аракет кылыңыз"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> сырсөзүн киргизиңиз"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Эгер колдонмону күч менен токтотсоңуз, ал туура эмес иштеп калышы мүмкүн."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Орнотуудан чыгаруу"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Бул колдонмону орнотуудан чыгарасызбы?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Жаңыртууларды чыгарып салуу"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Android тутумундагы ушул колдонмонун бардык жаңыртуулары чыгарылып салынат."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Өчүрүү"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Бул колдонмону өчүргүңүз келеби?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Иштетүү"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Бул колдонмону иштеткиңиз келеби?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Колдонулган эстутум"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> ичинен <xliff:g id="SIZE">%1$s</xliff:g> колдонулат"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Дайындарды тазалоо"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Бул колдонмонун файлдар, жөндөөлөр, каттоо эсептери, дайындар базасы \nсыяктуу бардык дайындары биротоло жок болот."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Бул колдонмонун бардык дайындары биротоло өчүрүлөт."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Алардын катарына файлдар, жөндөөлөр, каттоо эсептери, дайындар базалары ж.б. кирет."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Демейки жөндөөлөрдү тазалап салуу"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Бул колдонмо айрым аракеттер үчүн ишке киргизилет деп коюлган"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Демейки жөндөөлөр коюлган жок"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Уруксаттар"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Колдонмо уруксаттары"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%d</xliff:g> ичинен <xliff:g id="COUNT_0">%d</xliff:g> колдонмого уруксат бар"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android коопсуздугун жаңыртуу деңгээли"</string>
 </resources>

@@ -39,7 +39,7 @@
     <string name="connectivity_network" msgid="8321537111272398501">"Netzwerk"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"WLAN"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Erkennungsfunktion immer verfügbar"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Scannen immer verfügbar"</string>
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"Der Standortdienst von Google und andere Apps sollen auch bei deaktiviertem WLAN nach Netzwerken suchen."</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"WLAN"</string>
     <string name="device_daydream" msgid="4933581408059561077">"Daydream"</string>
@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Bedienungshilfen"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Entwickleroptionen"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Keine"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Nutzung &amp; Diagnose"</string>
     <string name="about_system_update" msgid="7282772247661356586">"System aktualisieren"</string>
     <string name="about_preference" msgid="4131396784531360434">"Info"</string>
     <string name="device_name" msgid="2670488158531273028">"Gerätename"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Audio"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Sonstiges"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Daten im Cache"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Auswerfen"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Löschen &amp; formatieren"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Als Gerätespeicher formatieren"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Nicht verbunden"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Daten migrieren"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Internen Speicher entfernen"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Schließen Sie das Speichergerät erneut an, um die darauf gespeicherten Apps oder Daten zu verwenden. Falls das Speichergerät nicht verfügbar ist, können Sie es auch entfernen.\n\nWenn Sie \"Entfernen\" wählen, gehen alle darauf befindlichen Daten endgültig verloren.\n\nSie können die Apps später erneut installieren, die Daten auf diesem Speichergerät gehen jedoch verloren."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Gerätespeicher"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Wechselmedien"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Zurücksetzen"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> wurde bereitgestellt."</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> konnte nicht bereitgestellt werden."</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> wurde sicher ausgeworfen."</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> konnte nicht sicher ausgeworfen werden."</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Es wurde kein Speichergerät zum Auswerfen gefunden."</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> wurde formatiert."</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> konnte nicht formatiert werden."</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Als internen Speicher formatieren"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Um die Sicherheit zu gewährleisten, muss das USB-Speichergerät zunächst formatiert werden. Danach ist dieses Speichergerät ausschließlich für dieses Gerät sicher formatiert und funktioniert nicht mit anderen Geräten. Durch die Formatierung werden alle derzeit auf dem Speichergerät gespeicherten Daten gelöscht. Um den Verlust von Daten zu verhindern, sichern Sie sie vor der Formatierung."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Löschen &amp; formatieren"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Nach der Formatierung können Sie dieses USB-Speichergerät in anderen Geräten verwenden. Alle Daten werden gelöscht. Sie sollten zunächst eine Sicherung vornehmen, indem Sie Apps auf ein anderes internes Speichergerät verschieben."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB-Speichergerät wird formatiert…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Dies kann einen Moment dauern. Bitte entfernen Sie das Speichergerät nicht."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Daten auf <xliff:g id="NAME">%1$s</xliff:g> verschieben"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Verschieben Sie Ihre Fotos, Dateien und App-Daten auf die <xliff:g id="NAME">%1$s</xliff:g>. Dies kann einige Minuten dauern. Einige Apps funktionieren während des Vorgangs nicht ordnungsgemäß."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Jetzt verschieben"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Später verschieben"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Daten zu <xliff:g id="NAME">%1$s</xliff:g> migriert"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Die Daten konnten nicht zur <xliff:g id="NAME">%1$s</xliff:g> migriert werden."</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Daten werden auf <xliff:g id="NAME">%1$s</xliff:g> verschoben…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Dies kann einen Moment dauern. Bitte entfernen Sie das Speichergerät nicht.\nEinige Apps funktionieren während des Vorgangs nicht ordnungsgemäß."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Dieses Speichergerät scheint langsam zu sein."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Sie können fortfahren, aber hierher verschobene Apps bleiben eventuell hängen und Datenübertragungen können lange dauern. Für eine bessere Leistung sollten Sie ein schnelleres Speichergerät nutzen."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formatieren"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Apps sichern"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Apps auf <xliff:g id="NAME">%1$s</xliff:g> gespeichert"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Apps und Daten auf <xliff:g id="NAME">%1$s</xliff:g> gespeichert"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> verfügbar"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Internes Speichergerät auswerfen"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Apps auf diesem Speichergerät funktionieren nach dem Auswerfen nicht mehr. Dieses USB-Speichergerät ist nur für dieses Gerät formatiert und kann nicht mit anderen Geräten verwendet werden."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> wird ausgeworfen…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Genutzter Speicherplatz"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> wird verschoben…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Entfernen Sie das Speichergerät während des Vorgangs nicht.\nDie App <xliff:g id="APPNAME">%1$s</xliff:g> auf diesem Gerät ist erst wieder verfügbar, nachdem sie vollständig verschoben wurde."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Internen Speicher entfernen?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Durch Auswählen von \"Entfernen\" gehen alle auf diesem Speichergerät gespeicherten Daten endgültig verloren. Möchten Sie fortfahren?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Entfernen"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB-Laufwerk verbunden"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Suchen"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Als internen Speicher festlegen"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Als Wechselmedium festlegen"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Auswerfen"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> entfernt"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Einige Apps stehen möglicherweise erst wieder zur Verfügung oder funktionieren erst wieder ordnungsgemäß, wenn das Speichergerät wieder angeschlossen wird."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Nicht genügend Speicherplatz"</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"App ist nicht vorhanden."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Die App ist kopiergeschützt."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Installationspfad ist nicht gültig."</string>
-    <string name="system_package" msgid="9200255718634512790">"Systemupdates können nicht auf externen Datenträgern installiert werden."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Weitere Informationen"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Wiederholen"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS-Router suchen..."</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Wählen Sie die Schaltfläche \"Wi-Fi Protected Setup\" auf Ihrem Router aus.\nEventuell lautet sie auch \"WPS\" oder ist durch das Symbol links gekennzeichnet."</string>
@@ -379,7 +318,7 @@
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"Simulierte Standorte zulassen"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"Debugging-App auswählen"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Auf Debugger warten"</string>
-    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Apps über USB überprüfen"</string>
+    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Apps über USB bestätigen"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Überprüft installierte Apps über ADB/ADT auf schädliches Verhalten"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Ausführliche WLAN-Protokolle"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Ausführliche WLAN-Protokolle aktivieren"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Neue PIN festlegen"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Neue PIN erneut eingeben"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Alte PIN eingeben"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Sie haben fünfmal die falsche PIN eingegeben.\nVersuchen Sie es in <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> Sekunden erneut."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Sie haben fünfmal die falsche PIN eingegeben.\nVersuchen Sie es <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g> erneut."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Falsche PIN. Bitte versuchen Sie es erneut."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Die PIN stimmt nicht. Bitte versuchen Sie es erneut."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Passwort für <xliff:g id="SSID">%1$s</xliff:g> eingeben"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Das Beenden der App zu erzwingen, kann zu unerwünschtem Verhalten führen."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Deinstallieren"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Möchten Sie diese App deinstallieren?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Updates deinstallieren"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Alle Updates für diese Android-System-App werden deinstalliert."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Deaktivieren"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Möchten Sie diese App deaktivieren?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Aktivieren"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Möchten Sie diese App aktivieren?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Genutzter Speicherplatz"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g>: <xliff:g id="SIZE">%1$s</xliff:g> belegt"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Daten löschen"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Alle Daten dieser App werden endgültig gelöscht.\nDazu zählen alle Dateien, Einstellungen, Konten, Datenbanken."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Sämtliche Daten dieser App werden unwiderruflich gelöscht."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Dazu gehören alle Dateien, Einstellungen, Konten, Datenbanken usw."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Standardeinstellungen löschen"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Bei einigen Aktionen startet diese App."</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Keine Standardeinstellungen festgelegt"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Berechtigungen"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"App-Berechtigungen"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> von <xliff:g id="COUNT_1">%d</xliff:g> Apps sind berechtigt."</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android-Sicherheitspatch-Ebene"</string>
 </resources>

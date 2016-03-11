@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Tillgänglighet"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Utvecklaralternativ"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Inga"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Användning och diagnostik"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Systemuppdatering"</string>
     <string name="about_preference" msgid="4131396784531360434">"Om"</string>
     <string name="device_name" msgid="2670488158531273028">"Enhetens namn"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Ljud"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Övrigt"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Cachelagrade data"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Mata ut"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Radera och formatera"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Formatera som enhetslagring"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Inte ansluten"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Migrera data"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Glöm det här internminnet"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Om du vill använda appar eller data på enheten kopplar du in den igen. Om enheten inte är tillgänglig kan du istället ange att lagringsenheten ska glömmas bort.\n\nOm du väljer att den ska glömmas bort raderas all data på enheten och den kan inte återskapas.\n\nDu kan installera apparna igen senare men den data som fanns på enheten har raderats permanent."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Lagring på enhet"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Flyttbara lagringsenheter"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Återställ"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> har monterats"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Det gick inte att montera <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> har matats ut på ett säkert sätt"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Det gick inte att mata ut <xliff:g id="NAME">%1$s</xliff:g> på ett säkert sätt"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Hittade ingen enhet att mata ut"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> har formaterats"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Det gick inte att formatera <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatera som internminne"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"USB-minnet måste formateras för att det ska vara säkert. När lagringsenheten har formaterats på ett säkert sätt fungerar den bara med den här enheten. Vid formateringen raderas all data som finns lagrad på enheten. Säkerhetskopiera uppgifterna så att du inte förlorar dem."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Radera och formatera"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Efter formateringen kan du använda det här USB-minnet på andra enheter. All data raderas. Säkerhetskopiera din data först genom att flytta apparna till ett annat internminne."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formaterar USB-minnet ..."</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Det här kan ta en stund. Ta inte bort enheten."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Flytta data till <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Flytta foton, filer och appdata till <xliff:g id="NAME">%1$s</xliff:g>. Detta kan ta några minuter. Vissa appar fungerar inte under flytten."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Flytta nu"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Flytta senare"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Data migrerades till <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Det gick inte att migrera data till <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Data flyttas till <xliff:g id="NAME">%1$s</xliff:g> …"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Det här kan ta en stund. Ta inte bort enheten.\nVissa appar fungerar inte under flytten."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Enheten verkar vara långsam."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Du kan fortsätta, men appar som har flyttats till den här platsen kan vara ryckiga och dataöverföring kan ta lång tid. Överväg att använda ett snabbare minne för bättre prestanda."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formatera"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Säkerhetskopiera appar"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Appar som lagras i <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Appar och data som lagras i <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> tillgängligt"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Mata ut internminnet"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Apparna som lagras i enhetens minne slutar att fungera när minnet matas ut. USB-minnet har formaterats för att endast fungera på den här enheten. Det fungerar inte på andra enheter."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> matas ut …"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Lagringsutrymme som används"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Flyttar <xliff:g id="NAME">%1$s</xliff:g> …"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Ta inte bort enheten under flytten.\nAppen <xliff:g id="APPNAME">%1$s</xliff:g> kan inte användas på enheten förrän flytten är genomförd."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Vill du att det här internminnet ska glömmas bort?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"All data som du har lagrat på den här enheten kommer att raderas permanent om du trycker på Glöm, Vill du fortsätta?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Glöm"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Ett USB-minne har anslutits"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Bläddra"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Konfigurera som intern lagringsenhet"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Konfigurera som extern lagringsenhet"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Mata ut"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> har tagits bort"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"En del appar fungerar dåligt eller är inte tillgängliga alls tills du ansluter enheten igen."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Det finns inte tillräckligt med lagringsutrymme."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Appen finns inte."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Appen är kopieringsskyddad."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Installationsplatsen är inte giltig."</string>
-    <string name="system_package" msgid="9200255718634512790">"Det går inte att installera systemuppdateringar på externa media."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Läs mer"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Försök igen"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Söker efter WPS-router ..."</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Tryck på knappen för skyddad Wi-Fi-konfiguration på routern.\nDen kan kallas WPS (Wi-Fi Protected Setup) eller vara märkt med symbolen till höger."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Ange en ny pinkod"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Ange ny pinkod igen"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Ange den tidigare pinkoden"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Du har angett fel pinkod fem gånger.\nFörsök igen om <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> sekunder."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Du har angett fel pinkod fem gånger.\nFörsök igen <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Fel pinkod. Försök igen"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Försök igen. Pinkoden stämmer inte"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Ange lösenordet för <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Om du tvingar appen att avslutas kanske den inte fungerar som den ska."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Avinstallera"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Vill du avinstallera appen?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Avinstallera uppdateringar"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Alla uppdateringar för Android-systemappen kommer att avinstalleras."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Inaktivera"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Vill du inaktivera appen?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Aktivera"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Vill du aktivera appen?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Lagringsutrymme som används"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> används i <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Rensa data"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Appens samtliga data tas bort permanent.\nDet inkluderar alla filer, inställningar, konton, databaser och så vidare."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Alla appens data kommer att tas bort permanent."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Det gäller alla filer, inställningar, konton, databaser osv."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Rensa standardåtgärder"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Starta den här appen för vissa åtgärder"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Inga standardåtgärder har angetts"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Behörigheter"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Appens behörigheter"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> av <xliff:g id="COUNT_1">%d</xliff:g> appar tillåts"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Nivå av säkerhetskorrigering för Android"</string>
 </resources>

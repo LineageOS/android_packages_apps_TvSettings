@@ -31,7 +31,7 @@
     <string name="sync_now" msgid="8732244492880016471">"Synchronizovať"</string>
     <string name="sync_cancel" msgid="5839264070098894371">"Zrušiť synchronizáciu"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Synchronizuje sa..."</string>
-    <string name="last_synced" msgid="6178494892357077274">"Posledná synchronizácia <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"Posledná synchronizácia: <xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Zakázané"</string>
     <string name="sync_is_failing" msgid="8229476000384257186">"Synchronizácia momentálne nefunguje. Bude obnovená čoskoro."</string>
     <string name="account_remove" msgid="4313580520737295272">"Odstrániť účet"</string>
@@ -49,7 +49,7 @@
     <string name="device_storage_reset" msgid="1425978936501134425">"Úložisko a obnovenie"</string>
     <string name="device_storage" msgid="5536683600091277826">"Úložisko"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Zálohovanie a obnovenie"</string>
-    <string name="device_reset" msgid="2827002349560023125">"Obnovenie výrobných nastavení"</string>
+    <string name="device_reset" msgid="2827002349560023125">"Obnovenie továrenských nastavení"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrácia"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Vymazať údaje vo vyrovnávacej pamäti?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Vymažú sa údaje v pamäti pre všetky aplikácie"</string>
@@ -97,13 +97,12 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Zjednodušenie ovládania"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Možnosti pre vývojárov"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Žiadna"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Využitie a diagnostika"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Aktualizácia systému"</string>
     <string name="about_preference" msgid="4131396784531360434">"Informácie"</string>
     <string name="device_name" msgid="2670488158531273028">"Názov zariadenia"</string>
     <string name="restart_button_label" msgid="8153112858638352970">"Reštartovať"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Právne informácie"</string>
-    <string name="about_legal_license" msgid="7867205982113209033">"Licencie open source"</string>
+    <string name="about_legal_license" msgid="7867205982113209033">"Otvorený zdroj – licencie"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Právne informácie spoločnosti Google"</string>
     <string name="about_license_activity_unavailable" msgid="8522566562321418498">"Údaje licencie nie sú dostupné"</string>
     <string name="about_model" msgid="6625269442206323995">"Model"</string>
@@ -213,71 +212,11 @@
     <string name="storage_size" msgid="8958530823208352781">"Celková pamäť: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
     <string name="storage_calculating_size" msgid="2644732407412520565">"Prebieha výpočet…"</string>
     <string name="storage_apps_usage" msgid="4366049071039081219">"Aplikácie"</string>
-    <string name="storage_downloads_usage" msgid="6172975879962599380">"Stiahnuté"</string>
+    <string name="storage_downloads_usage" msgid="6172975879962599380">"Stiahnuté súbory"</string>
     <string name="storage_dcim_usage" msgid="2977564696540645452">"Fotografie a videá"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"Zvuk"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Rôzne"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Údaje uložené vo vyrovnávacej pamäti"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Odpojiť"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Vymazať a naformátovať"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Naformátovať ako úložisko zariadenia"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Nepripojené"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Migrovať údaje"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Odstrániť toto interné úložisko"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Ak chcete použiť aplikácie a údaje na tejto jednotke, znova ju pripojte. Okrem toho môžete toto úložisko odstrániť, ak jednotka nie je k dispozícii.\n\nAk vyberiete možnosť Odstrániť, všetky údaje v príslušnej jednotke budú odstránené.\n\nAplikáciu môžete znova nainštalovať neskôr, ale údaje uložené na tejto jednotke budú odstránené."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Úložisko zariadenia"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Vymeniteľné úložisko"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Resetovanie"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> je pripojené"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> sa nepodarilo pripojiť"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> bolo bezpečne odpojené"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> sa nepodarilo bezpečne odpojiť"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Nenašla sa jednotka na odpojenie"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> je naformátované"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> sa nepodarilo naformátovať"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formátovanie média na interné úložisko"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Disk USB je preto potrebné zabezpečiť pomocou formátovania. Po bezpečnom naformátovaní bude tento disk fungovať iba v tomto zariadení. Formátovaním vymažete všetky údaje uložené na disku. Ak chcete zabrániť strate údajov, odporúčame ich zálohovať."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Vymazanie a formátovanie"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Po naformátovaní budete môcť tento disk USB používať aj v iných zariadeniach. Všetky údaje budú vymazané. Odporúčame ich najskôr zálohovať tak, že ich presuniete do iného interného úložiska."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Prebieha formátovanie disku USB..."</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Môže to chvíľu trvať. Disk neodoberajte."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Presunutie údajov do úložiska <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Presuňte svoje fotky, súbory a údaje aplikácií do úložiska <xliff:g id="NAME">%1$s</xliff:g>. Môže to trvať niekoľko minút. Počas presunu nebudú niektoré aplikácie správne fungovať."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Presunúť"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Presunúť neskôr"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Údaje boli migrované do úložiska <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Údaje nie je možné migrovať do úložiska <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Presúvajú sa údaje do úložiska <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Môže to chvíľu trvať. Disk neodpájajte.\nPočas presunu nebudú niektoré aplikácie správne fungovať."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Zdá sa, že tento disk je pomalý"</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Môžete síce pokračovať, ale aplikácie prenesené do tohto umiestnenia sa môžu zasekávať a prenosy údajov môžu trvať dlho. Zvážte použitie rýchlejšieho disku s lepšou výkonnosťou."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formátovať"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Zálohovať aplikácie"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aplikácie uložené v úložisku <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Aplikácie a údaje uložené v úložisku <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"K dispozícii <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Odpojenie interného úložiska"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Po odpojení tohto pamäťového zariadenia prestanú fungovať všetky aplikácie, ktorú sú v ňom uložené. Tento disk USB je naformátovaný tak, aby fungoval iba v tomto zariadení. V iných zariadeniach fungovať nebude."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Odpája sa úložisko <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Využité úložisko"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Presúva sa aplikácia <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Úložisko počas presunu neodoberajte.\nAplikácia <xliff:g id="APPNAME">%1$s</xliff:g> bude v tomto zariadení k dispozícii až po dokončení presunu."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Odstrániť interné úložisko?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Po stlačení možnosti Odstrániť budú všetky údaje uložené na tejto jednotke navždy odstránené. Chcete pokračovať?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Odstrániť"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Disk USB je pripojený"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Prehliadať"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Nastaviť ako interné úložisko"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Nastaviť ako prenosné úložisko"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Odpojiť"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"Úložisko <xliff:g id="NAME">%1$s</xliff:g> bolo odstránené"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Dokým jednotka nebude znova pripojená, niektoré aplikácie nebudú dostupné alebo nebudú fungovať správne."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"V úložisku nie je dostatok miesta"</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Aplikácia neexistuje"</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Aplikácia je chránená proti kopírovaniu"</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Umiestnenie inštalácie nie je platné"</string>
-    <string name="system_package" msgid="9200255718634512790">"Aktualizácie systému sa nepodarilo nainštalovať na externé médiá"</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Ďalšie informácie"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Skúsiť znova"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Prebieha vyhľadávanie smerovača s funkciou WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Stlačte na svojom smerovači tlačidlo Chránené nastavenie Wi-Fi.\nMôže byť označené písmenami WPS alebo symbolom uvedeným vľavo."</string>
@@ -351,16 +290,16 @@
     <string name="color_magenta" msgid="6395786485839439122">"Purpurová"</string>
     <string name="system_accessibility_status" msgid="4389074529913575327">"Stav"</string>
     <string name="system_accessibility_config" msgid="3216531917536720277">"Konfigurácia"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Používať službu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Použiť službu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"Služba <xliff:g id="SERVICE">%1$s</xliff:g> zaznamenáva všetok text, ktorý napíšete, okrem hesiel. To zahŕňa osobné údaje, ako sú čísla kreditných kariet."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"Zastaviť službu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Výberom možnosti OK zastavíte službu <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="8905477795536714590">"Prevod textu na reč"</string>
-    <string name="system_speak_passwords" msgid="5264650214879185873">"Vyslovovať heslá"</string>
+    <string name="system_speak_passwords" msgid="5264650214879185873">"Hovorené heslá"</string>
     <string name="system_preferred_engine" msgid="8258210139854655567">"Preferovaný nástroj"</string>
     <string name="system_speech_rate" msgid="8099856582088545576">"Rýchlosť reči"</string>
     <string name="system_play_sample" msgid="7187293932891811148">"Prehrať ukážku"</string>
-    <string name="system_install_voice_data" msgid="8920883886563714355">"Nainštalovať hlasové dáta"</string>
+    <string name="system_install_voice_data" msgid="8920883886563714355">"Nainštalovať hlasové údaje"</string>
     <string name="system_general" msgid="3535958631591158282">"Všeobecné"</string>
     <string name="system_debugging" msgid="7204447785851191331">"Ladenie"</string>
     <string name="system_input" msgid="6164987320529039626">"Vstup"</string>
@@ -539,7 +478,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Nastavenie nového kódu PIN"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Opätovné zadanie nového kódu PIN"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Zadanie pôvodného kódu PIN"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Zadali ste päťkrát nesprávny kód PIN.\nSkúste to znova o <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> s."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Zadali ste nesprávny kód PIN po piaty raz.\nSkúste to znova o <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Nesprávny kód PIN. Skúste to znova."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Kód PIN nesúhlasí. Skúste to znova."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Zadajte heslo pre sieť <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -551,16 +490,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Ak vynútite zastavenie aplikácie, môže sa správať zvláštne."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Odinštalovať"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Chcete túto aplikáciu odinštalovať?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Odinštalovať aktualizácie"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Všetky aktualizácie tejto aplikácie systému Android budú odinštalované."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Vypnúť"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Chcete vypnúť túto aplikáciu?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Zapnúť"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Chcete zapnúť túto aplikáciu?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Využité úložisko"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Využité miesto v úložisku <xliff:g id="VOLUME">%2$s</xliff:g>: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Vymazať údaje"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Všetky údaje tejto aplikácie budú natrvalo odstránené.\nTýka sa to všetkých súborov, nastavení, účtov, databáz atď."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Všetky údaje tejto aplikácie sa natrvalo odstránia."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Zahŕňa to všetky súbory, nastavenia, účty, databázy atď."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Vymazať predvolené nastavenia"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Nastaviť túto apl. pre niektoré akcie"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Nie sú nastavené predvolené nastavenia"</string>
@@ -608,5 +544,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Povolenia"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Povolenia aplikácie"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Povolené aplikácie: <xliff:g id="COUNT_0">%d</xliff:g> z <xliff:g id="COUNT_1">%d</xliff:g>"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Úroveň opráv zabezpečenia systému Android"</string>
 </resources>

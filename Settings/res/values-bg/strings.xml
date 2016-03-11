@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Достъпност"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Опции на програмиста"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Няма"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Употреба и диагностика"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Системна актуализация"</string>
     <string name="about_preference" msgid="4131396784531360434">"Информация"</string>
     <string name="device_name" msgid="2670488158531273028">"Име на устройството"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Аудиофайлове"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Разни"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Кеширани данни"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Изваждане"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Изтриване на данните и форматиране"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Форматиране като хранилище на устройството"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Няма връзка"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Прехвърляне на данните"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Забравяне на това вътрешно хранилище"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"За да използвате приложенията или данните в тази памет, я включете отново. Друга възможност е да забравите хранилището, ако то не е налице.\n\nВ случай че изберете „Забравяне“, всички данни в паметта ще бъдат заличени завинаги.\n\nПо-късно можете да инсталирате отново приложенията, но съхраняваните в тази памет данни ще бъдат заличени."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Хранилище на устройството"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Сменяемо хранилище"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Нулиране"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g>: Свързването бе успешно"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g>: Не можа да се свърже"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g>: Безопасното изваждане бе успешно"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g>: Не можа да се извади безопасно"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Не бе намерена памет за изваждане"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g>: Форматирането бе успешно"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g>: Не можа да се форматира"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Форматиране като вътрешно хранилище"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Необходимо е да форматирате USB хранилището, за да го защитите. След като процесът завърши, то ще работи само на това устройство. При форматирането се изтриват всички данни, които понастоящем се съхраняват в USB паметта. За да не ги загубите, е добре да създадете резервно копие."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Изтриване на данните и форматиране"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"След като форматирате тази USB памет, ще можете да я използвате на други устройства. Всички данни ще бъдат изтрити. Добре е първо да създадете резервно копие, като преместите приложенията в друго вътрешно хранилище."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB хранилището се форматира…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Това може да отнеме малко време. Моля, не изваждайте USB хранилището."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Преместване на данните в хранилището (<xliff:g id="NAME">%1$s</xliff:g>)"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Преместете своите снимки, файлове и данни за приложения в хранилището (<xliff:g id="NAME">%1$s</xliff:g>). Процесът може да отнеме няколко минути. През това време някои приложения няма да работят правилно."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Преместване сега"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Преместване по-късно"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Данните са прехвърлени в хранилището (<xliff:g id="NAME">%1$s</xliff:g>)"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Данните не можаха да се прехвърлят в хранилището (<xliff:g id="NAME">%1$s</xliff:g>)"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Данните се преместват в хранилището (<xliff:g id="NAME">%1$s</xliff:g>)…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Това може да отнеме известно време. Моля, не изваждайте хранилището.\nНякои приложения няма да работят правилно по време на преместването."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Изглежда, че това USB хранилище е бавно."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Можете да продължите, но преместените в това местоположение приложения може да не работят гладко, а прехвърлянето на данни – да отнема дълго време. За по-добра ефективност използвайте по-бързо USB хранилище."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Форматиране"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Създаване на резервно копие на приложенията"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Приложения, съхранени в/ъв <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Приложения и данни, съхранени в/ъв <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Налице: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Изваждане на вътрешното хранилище"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Приложенията в това вътрешно хранилище ще спрат да работят, след като го извадите. USB паметта е форматирана да функционира само на това устройство и няма да работи другаде."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Хранилището (<xliff:g id="NAME">%1$s</xliff:g>) се изважда…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Използвано хранилище"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> се премества…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Не премахвайте паметта по време на преместването.\n<xliff:g id="APPNAME">%1$s</xliff:g> няма да е налице на у-вото, докато процесът не завърши."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Да се забрави ли вътрешното хранилище?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"С избирането на „Забравяне“ всички съхранявани в тази памет данни ще бъдат заличени завинаги. Искате ли да продължите?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Забравяне"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB хранилището е свързано"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Преглед"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Настройване като вътрешно хранилище"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Настройване като сменяемо хранилище"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Изваждане"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"Премахнахте хранилището (<xliff:g id="NAME">%1$s</xliff:g>)"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Някои приложения няма да са налице или няма да работят правилно, докато хранилището не бъде свързано отново."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Няма достатъчно място в хранилището."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Приложението не съществува."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Приложението е защитено срещу копиране."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Мястото за инсталиране не е валидно."</string>
-    <string name="system_package" msgid="9200255718634512790">"Системните актуализации не могат да се инсталират на външен носител."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Научете повече"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Нов опит"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Маршрутизаторът за WPS се търси…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Натиснете бутона за Wi-Fi Protected Setup на маршрутизатора си.\nТой може да е с името „WPS“ или да съдържа символа вляво."</string>
@@ -295,7 +234,7 @@
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"Автоматични дата и час"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"Използване на часа, предоставен от мрежата"</string>
-    <string name="system_location" msgid="502463575930545806">"Местоположение"</string>
+    <string name="system_location" msgid="502463575930545806">"Местополож."</string>
     <string name="system_desc_location" msgid="4243551425631207495">"Приложенията, които са поискали от вас разрешение, да използват информацията за местоположението ви"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"Съгласие за местоположението"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"Режим"</string>
@@ -461,7 +400,7 @@
     <string name="title_configure" msgid="6929522003149212388">"Конфигуриране"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"Опции за клавиатурата"</string>
     <string name="computing_size" msgid="2955133568424704042">"Изчислява се…"</string>
-    <string name="title_select_wifi_network" msgid="1038871400014761952">"Изберете Wi-Fi мрежа"</string>
+    <string name="title_select_wifi_network" msgid="1038871400014761952">"Изберете своята Wi-Fi мрежа"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Преименуване"</string>
     <string name="accessories_wifi_display_enable" msgid="4779506305656453262">"Дисплей през Wi-Fi"</string>
     <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"Изисква се ПИН код"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Задайте нов ПИН код"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Въведете пак новия ПИН код"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Въведете стария ПИН код"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Въведохте грешен ПИН код 5 пъти.\nОпитайте отново след <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> секунди."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Въведохте грешен ПИН код 5 пъти.\nОпитайте отново <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Грешен ПИН код. Опитайте отново"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Опитайте отново, ПИН кодът не съвпада"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Въведете паролата за <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Ако принудително спрете приложение, то може да не функционира правилно."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Деинсталиране"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Искате ли да деинсталирате това приложение?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Деинсталиране на актуализациите"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Всички актуализации на това системно приложение на Android ще бъдат деинсталирани."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Деактивиране"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Искате ли да деактивирате това приложение?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Активиране"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Искате ли да активирате това приложение?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Използвано хранилище"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"От <xliff:g id="VOLUME">%2$s</xliff:g> се използва/т <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Изчистване на данните"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Всички данни на това приложение ще се изтрият за постоянно.\nВключително файлове, настройки, профили, бази от данни и др."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Всички данни на това приложение ще бъдат изтрити за постоянно."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Това включва всички файлове, настройки, профили, бази от данни и др."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Изчистване на стандартните действия"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Задайте прил. да се старт. за някои действия"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Не са зададени стандартни действия"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Разрешения"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Прилож.: Разрешения"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> от <xliff:g id="COUNT_1">%d</xliff:g> приложения имат разрешение"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Ниво на корекцията на сигурността под Android"</string>
 </resources>

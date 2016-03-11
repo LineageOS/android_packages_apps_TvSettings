@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Доступність"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Параметри розробника"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Немає"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Використання та діагностика"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Оновлення системи"</string>
     <string name="about_preference" msgid="4131396784531360434">"Інфо"</string>
     <string name="device_name" msgid="2670488158531273028">"Назва пристрою"</string>
@@ -218,66 +217,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Аудіо"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Інше"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Кешовані дані"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Вийняти"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Очистити й відформатувати"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Відформатувати як пам’ять пристрою"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Не підключено"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Перемістити дані"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Забути цю внутрішню пам’ять"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Щоб отримати доступ до додатків і даних на цьому носії, вийміть його та вставте знову. Ви можете вибрати опцію \"Забути\", якщо носій недоступний.\n\nТоді всі дані на носії буде втрачено назавжди.\n\nВи зможете повторно встановити додатки, але не відновите їх дані."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Пам’ять пристрою"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Знімний носій"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Скидання"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"Носій <xliff:g id="NAME">%1$s</xliff:g> підключено"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Не вдалося підключити носій <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"Носій <xliff:g id="NAME">%1$s</xliff:g> безпечно вийнято"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Не вдалося безпечно вийняти носій <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Не знайдено підключений носій"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"Носій <xliff:g id="NAME">%1$s</xliff:g> відформатовано"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Не вдалося відформатувати носій <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Відформатувати як внутрішню пам’ять"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Щоб носій USB був безпечним, потрібно його відформатувати. Коли ви це зробите, носій працюватиме лише на цьому пристрої. Під час форматування носія буде стерто всі збережені на ньому дані. Щоб не втратити дані, створіть їх резервну копію."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Очистити й відформатувати"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Коли ви відформатуєте носій USB, він працюватиме на інших пристроях. Усі дані на носії буде стерто. Перш ніж форматувати носій, скопіюйте додатки в іншу внутрішню пам’ять."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Форматування носія USB…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Це може зайняти деякий час. Не виймайте носій."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Переміщення даних на носій (<xliff:g id="NAME">%1$s</xliff:g>)"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Фотографії, файли та дані додатків буде переміщено на носій (<xliff:g id="NAME">%1$s</xliff:g>). Це може зайняти декілька хвилин. Під час переміщення деякі додатки працюватимуть неналежним чином."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Перемістити"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Перемістити пізніше"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Дані переміщено на носій (<xliff:g id="NAME">%1$s</xliff:g>)"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Не вдалося перемістити дані на носій (<xliff:g id="NAME">%1$s</xliff:g>)"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Переміщення даних на носій (<xliff:g id="NAME">%1$s</xliff:g>)…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Це може зайняти певний час. Не виймайте носій.\n Під час переміщення деякі додатки працюватимуть неналежним чином."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Схоже, цей носій надто повільний."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Ви можете продовжити, але в переміщених додатках виникатимуть збої, а перенесення даних займе багато часу. Щоб підвищити продуктивність, вставте швидший носій."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Форматувати"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Створити резервну копію додатків"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Додатки на пристрої <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Додатки та дані на пристрої <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Доступно <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Вийняти внутрішню пам’ять"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Коли ви виймете носій USB, збережені на ньому додатки перестануть працювати. Носій відформатовано для роботи лише на цьому пристрої. Він не працюватиме на інших пристроях."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> відключається…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Використовується пам’яті"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Переміщення додатка <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Не виймайте диск під час переміщення.\nДодаток <xliff:g id="APPNAME">%1$s</xliff:g> не з’явиться на цьому пристрої, доки не завершиться переміщення."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Забути внутрішню пам’ять?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Якщо вибрати опцію \"Забути\", усі дані на носії буде втрачено назавжди. Продовжити?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Забути"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Носій USB підключено"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Переглянути"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Налаштувати як внутрішню пам’ять"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Налаштувати як змінний носій"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Вийняти"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"Користувача <xliff:g id="NAME">%1$s</xliff:g> видалено"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Деякі додатки будуть недоступні або працюватимуть неналежним чином, поки носій пам’яті відключено."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Недостатньо пам’яті."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Додаток не існує."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Додаток захищений від копіювання."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Місце встановлення недійсне."</string>
-    <string name="system_package" msgid="9200255718634512790">"Оновлення системи не можна встановити на зовнішньому носії."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Докладніше"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Повторити"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Пошук маршрутизатора WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Натисніть кнопку \"Налаштування захищеної мережі Wi-Fi\" на маршрутизаторі.\nВона може називатися \"WPS\" або містити символ ліворуч."</string>
@@ -399,7 +338,7 @@
     <string name="system_show_cpu_usage" msgid="4797599582027671138">"Показувати використання ЦП"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Запис часу роботи GPU"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Увімкнути трасування"</string>
-    <string name="system_dont_keep_activities" msgid="7906911077198718958">"Не зберігати дії"</string>
+    <string name="system_dont_keep_activities" msgid="7906911077198718958">"Не зберігати діяльність"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"Обмеження фонових процесів"</string>
     <string name="system_show_all_anrs" msgid="3601183436857424712">"Показувати всі вікна ANR"</string>
     <string name="system_desc_stay_awake" msgid="229588006508356238">"Вимкнути режим сну"</string>
@@ -539,7 +478,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Введіть новий PIN-код"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Ще раз введіть новий PIN-код"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Введіть старий PIN-код"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Ви 5 разів неправильно ввели PIN-код.\nПовторіть спробу через <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> с."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Ви 5 разів неправильно ввели PIN-код.\nСпробуйте через <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Неправильний PIN-код, повторіть спробу"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN-коди не збігаються. Повторіть спробу"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Введіть пароль для мережі <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -551,16 +490,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Якщо примусово припинити роботу додатка, він може працювати неналежним чином."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Видалити"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Видалити цей додаток?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Видалити оновлення"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Усі оновлення цього системного додатка Android буде видалено."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Вимкнути"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Вимкнути додаток?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Увімкнути"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Увімкнути додаток?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Використовується пам’яті"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Використовується <xliff:g id="SIZE">%1$s</xliff:g> у томі <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Видалити дані"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Усі дані цього додатка буде видалено назавжди.\nЦе стосується всіх файлів, налаштувань, облікових записів, баз даних тощо."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Усі дані цього додатка буде видалено назавжди."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Буде видалено всі файли, налаштування, облікові записи, бази даних тощо."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Очистити дії за умовчанням"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Вибрати запуск додатка для певних дій"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Не вибрано дій за умовчанням"</string>
@@ -608,5 +544,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Дозволи"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Дозволи додатків"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Дозволено додатків: <xliff:g id="COUNT_0">%d</xliff:g> з <xliff:g id="COUNT_1">%d</xliff:g>"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Рівень виправлень системи безпеки Android"</string>
 </resources>

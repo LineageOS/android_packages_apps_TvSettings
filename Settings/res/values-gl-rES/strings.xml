@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Accesibilidade"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Opcións de programador"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Ningunha"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Uso e diagnóstico"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Actualización do sistema"</string>
     <string name="about_preference" msgid="4131396784531360434">"Acerca de"</string>
     <string name="device_name" msgid="2670488158531273028">"Nome do dispositivo"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Audio"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Varios"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Datos da caché"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Expulsar"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Borrar e formatar"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Formatar como almacenamento do dispositivo"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Sen conectar"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Migrar datos"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Esquecer este almacenamento interno"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Para usar as aplicacións ou datos que contén esta unidade, volve conectala. Tamén podes optar por borrar este almacenamento se a unidade non está dispoñible.\n\nSe decides borralo, todos os datos que contén a unidade perderanse para sempre.\n\nPodes volver instalar as aplicacións máis tarde, pero perderanse os datos almacenados neste dispositivo."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Almacenamento do dispositivo"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Almacenamento extraíble"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Restablecer"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"Inseriuse <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Non se puido inserir <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"Expulsouse <xliff:g id="NAME">%1$s</xliff:g> de forma segura"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Non se puido expulsar <xliff:g id="NAME">%1$s</xliff:g> de forma segura"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Non se puido atopar a unidade para expulsala"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"Formatouse <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Non se puido formatar <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatar como almacenamento interno"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Esta acción esixe que se formate a unidade USB para que estea protexida. Despois de formatala de forma segura, esta unidade só funcionará neste dispositivo. Ao formatar borraranse todos os datos almacenados actualmente na unidade. Para evitar perder os datos, considera a posibilidade de facer unha copia de seguranza."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Borrar e formatar"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Despois de formatar, podes usar esta unidade USB noutros dispositivos. Borraranse todos os datos. Considera a posibilidade de facer primeiro unha copia de seguranza movendo as aplicacións a outro almacenamento interno."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formatando unidade USB…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Esta acción pode tardar uns minutos. Non extraias a unidade."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Migrar datos a <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Migra as túas fotos, os ficheiros e os datos das aplicacións a <xliff:g id="NAME">%1$s</xliff:g>. Esta acción pode tardar uns minutos. Algunhas aplicacións non funcionarán correctamente durante a migración."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Migrar agora"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Migrar máis tarde"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Migráronse os datos a <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Non se puideron migrar os datos a <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Migrando datos a <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Esta acción pode tardar uns minutos. Non retires a unidade.\nAlgunhas aplicacións non funcionarán correctamente durante a migración"</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Parece que esta unidade é lenta."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Podes continuar, pero é posible que se interrompan as aplicacións que se migraron a esta localización e que as transferencias de datos tarden moito tempo. Considera a posibilidade de utilizar unha unidade máis rápida para conseguir un mellor rendemento."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formatar"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Realizar copia de seguranza das aplicacións"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aplicacións almacenadas na <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Aplicacións e datos almacenados na <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Dispoñible: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Expulsar almacenamento interno"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"As aplicacións da unidade de almacenamento deste dispositivo deixarán de funcionar en canto se expulse. A unidade USB está formatada para funcionar soamente neste dispositivo. Non funcionará noutros."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Expulsando <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Almacenamento utilizado"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Migrando <xliff:g id="NAME">%1$s</xliff:g>..."</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Non extraias a unidade durante a migración.\nA aplicación <xliff:g id="APPNAME">%1$s</xliff:g> deste dispositivo non estará dispoñible ata que finalice a migración."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Borrar almacenamento interno?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Se seleccionas Borrar, perderanse os datos almacenados neste dispositivo para sempre. Queres continuar?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Borrar"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Unidade USB conectada"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Navegar"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Configurar como almacenamento interno"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Configurar como almacenamento extraíble"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Expulsar"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"Retirouse <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Algunhas aplicacións non estarán dispoñibles ou non funcionarán correctamente ata que se volva conectar a unidade."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Non hai espazo de almacenamento suficiente."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"A aplicación non existe."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"A aplicación está protexida contra copias."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"A localización de instalación non é válida."</string>
-    <string name="system_package" msgid="9200255718634512790">"Non se poden instalar actualizacións do sistema en soportes externos."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Máis información"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Tentar de novo"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Buscando router WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Preme o botón Configuración protexida da wifi no router.\nÉ posible que se chame WPS ou que inclúa o símbolo que aparece á esquerda."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Establece un novo PIN"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Volve introducir o novo PIN"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Introduce o PIN antigo"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Introduciches un PIN incorrecto cinco veces.\nTéntao de novo en <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> segundos."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Introduciches un PIN incorrecto 5 veces.\nTéntao de novo <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN erróneo. Téntao de novo."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Téntao de novo. O PIN non coincide."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Introduce un contrasinal para <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Se forzas a parada dunha aplicación, é posible que non funcione correctamente."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Desinstalar"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Queres desinstalar esta aplicación?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Desinstalar actualizacións"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Desinstalaranse todas as actualizacións desta aplicación do sistema Android."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Desactivar"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Queres desactivar esta aplicación?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Activar"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Queres activar esta aplicación?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Almacenamento utilizado"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Uso de <xliff:g id="SIZE">%1$s</xliff:g> no <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Borrar datos"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Eliminaranse todos os datos desta aplicación de forma permanente.\nIsto inclúe todos os ficheiros, as opcións de configuración, as contas, as bases de datos, etc."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Eliminaranse todos os datos desta aplicación de forma permanente."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Isto inclúe todos os ficheiros, configuracións, contas, bases de datos, etc."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Borrar valores predeterminados"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Definir que se abre para certas accións"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Valores predeterminados sen definir"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Permisos"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Permisos aplicacións"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> de <xliff:g id="COUNT_1">%d</xliff:g> aplicacións con permiso"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Nivel de parche de seguranza de Android"</string>
 </resources>

@@ -19,7 +19,7 @@
     <string name="settings_app_name" msgid="4243616485579754401">"設定"</string>
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"設定"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"ネットワーク"</string>
-    <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"制限付きプロファイル"</string>
+    <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"制限付きプロフィール"</string>
     <string name="header_category_device" msgid="4855983928659541345">"端末"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"設定"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"リモートとアクセサリ"</string>
@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"ユーザー補助"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"開発者向けオプション"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"なし"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"使用状況と診断"</string>
     <string name="about_system_update" msgid="7282772247661356586">"システムアップデート"</string>
     <string name="about_preference" msgid="4131396784531360434">"端末情報"</string>
     <string name="device_name" msgid="2670488158531273028">"端末名"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"音声（音楽、ポッドキャストなど）"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"その他"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"キャッシュデータ"</string>
-    <string name="storage_eject" msgid="113476702798691558">"取り外し"</string>
-    <string name="storage_format" msgid="3759273736493279595">"消去してフォーマット"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"デバイスストレージとしてフォーマット"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"未接続"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"データを移行"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"この内部ストレージを切断"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"このドライブに保存されているアプリやデータを使用するには、接続し直してください。ドライブが使用できない場合は、切断することもできます。\n\n切断した場合、このドライブに保存されているすべてのデータは完全に失われます。\n\nアプリは後で再インストールできますが、このドライブに保存されているデータは失われます。"</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"端末のストレージ"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"リムーバブルストレージ"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"リセット"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g>をマウントしました"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g>をマウントできませんでした"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g>を安全に取り出しました"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g>を安全に取り出せませんでした"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"取り外すドライブが見つかりませんでした"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g>をフォーマットしました"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g>をフォーマットできませんでした"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"内部ストレージとしてフォーマット"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"セキュリティを確保するには、USBドライブをフォーマットする必要があります。フォーマット後、このドライブはこの端末でのみ使用できるようになります。フォーマットすると、このドライブに保存されているデータがすべて消去されます。データの消失を防ぐため、バックアップを検討してください。"</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"消去してフォーマット"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"フォーマット後、このUSBドライブは他の端末で使用できるようになります。データはすべて消去されます。まず、アプリを他の内部ストレージに移動してバックアップすることを検討してください。"</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USBドライブをフォーマットしています…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"この処理には時間がかかる場合があります。ドライブを取り外さないでください。"</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"<xliff:g id="NAME">%1$s</xliff:g>へのデータの移動"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"写真、ファイル、アプリデータを<xliff:g id="NAME">%1$s</xliff:g>に移動します。移動には数分かかることがあります。移動中は一部のアプリが使用できなくなります。"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"今すぐ移動"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"後で移動"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"<xliff:g id="NAME">%1$s</xliff:g>にデータを移行しました"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"<xliff:g id="NAME">%1$s</xliff:g>にデータを移行できませんでした"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"<xliff:g id="NAME">%1$s</xliff:g>にデータを移動しています…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"移動には時間がかかることがあります。ドライブを取り外さないでください。\n移動中は一部のアプリが使用できなくなります。"</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"このドライブは速度が遅いようです。"</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"続行することはできますが、この場所に移動したアプリはスムーズに動作しないおそれがあります。また、データの転送に時間がかかる可能性があります。快適にご利用いただくには、高速ドライブの使用をご検討ください。"</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"フォーマット"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"アプリをバックアップ"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g>に保存されているアプリ"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g>に保存されているアプリとデータ"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"空き容量: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"内部ストレージの取り出し"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"この端末のストレージを取り出すと、保存されているアプリは使用できなくなります。このUSBドライブは、この端末用にフォーマットされており、他の端末では使用できません。"</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g>を取り外し中…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"使用されているストレージ"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g>を移動しています…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"移動中はドライブを取り外さないでください。\nこの端末の<xliff:g id="APPNAME">%1$s</xliff:g>アプリは移動が完了するまで使用できません。"</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"内部ストレージを切断しますか？"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"切断すると、このドライブに保存されているすべてのデータは完全に失われます。続行しますか？"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"切断"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USBドライブが接続されました"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"ブラウズ"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"内部ストレージとしてセットアップ"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"リムーバルストレージとしてセットアップ"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"取り外し"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g>は取り外されています"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"ドライブを再接続するまで、一部のアプリは使用できないか、正しく機能しません。"</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"十分な空き容量がありません。"</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"アプリが存在しません。"</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"このアプリはコピー防止機能付きです。"</string>
-    <string name="invalid_location" msgid="5269044848535157307">"インストール先が無効です。"</string>
-    <string name="system_package" msgid="9200255718634512790">"システムアップデートは外部メディアにはインストールできません。"</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"詳細"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"再試行"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPSルーターを探しています…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"ルーターのWi-Fi保護設定ボタンを押します。\nボタンには[WPS]または左に示すような記号が表示されている場合があります。"</string>
@@ -395,7 +334,7 @@
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Animator再生時間スケール"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"厳格モードを有効にする"</string>
     <string name="system_show_cpu_usage" msgid="4797599582027671138">"CPU使用状況の表示"</string>
-    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"GPUレンダリングのプロファイル"</string>
+    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"GPUレンダリングのプロフィール"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"トレースを有効にする"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"アクティビティを保持しない"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"バックグラウンドプロセスの上限"</string>
@@ -502,15 +441,15 @@
       <item quantity="one">未接続の入力</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"あなたのアカウントでアプリやその他のコンテンツへのアクセスを制限します"</string>
-    <string name="user_new_profile_name" msgid="336521054830056189">"制限付きプロファイル"</string>
+    <string name="user_new_profile_name" msgid="336521054830056189">"制限付きプロフィール"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g>によって制御"</string>
-    <string name="app_not_supported_in_limited" msgid="6818309827329010677">"このアプリは制限付きプロファイルではサポートされていません"</string>
+    <string name="app_not_supported_in_limited" msgid="6818309827329010677">"このアプリは制限付きプロフィールではサポートされていません"</string>
     <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"このアプリはアカウントにアクセスする場合があります"</string>
     <string name="restriction_location_enable_title" msgid="2575116135395354938">"位置情報"</string>
     <string name="restriction_location_enable_summary" msgid="4195349388342385870">"アプリに位置情報の使用を許可する"</string>
-    <string name="restricted_profile_switch_to" msgid="1926433350907032138">"制限付きプロファイルを入力"</string>
-    <string name="restricted_profile_switch_out" msgid="1893784095623209495">"制限付きプロファイルを終了"</string>
-    <string name="restricted_profile_delete_title" msgid="3445944923018324707">"制限付きプロファイルを削除"</string>
+    <string name="restricted_profile_switch_to" msgid="1926433350907032138">"制限付きプロフィールを入力"</string>
+    <string name="restricted_profile_switch_out" msgid="1893784095623209495">"制限付きプロフィールを終了"</string>
+    <string name="restricted_profile_delete_title" msgid="3445944923018324707">"制限付きプロフィールを削除"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"設定"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"許可されたアプリ"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"新しいPINの設定"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"新しいPINの再入力"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"以前のPINの入力"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"PINの入力を5回間違えました。\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g>秒後にもう一度お試しください。"</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"PINの入力を5回間違えました。\nもう一度お試しください<xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>。"</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PINが間違っています。もう一度お試しください。"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"もう一度お試しください。PINが一致しません。"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g>のパスワードを入力してください"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"アプリを強制停止すると、アプリが正常に機能しないことがあります。"</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"アンインストール"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"このアプリをアンインストールしますか？"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"アップデートのアンインストール"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"このAndroidシステムアプリへのすべてのアップデートはアンインストールされます。"</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"無効にする"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"このアプリを無効にしますか？"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"有効にする"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"このアプリを有効にしますか？"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"使用されているストレージ"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"使用中の容量: <xliff:g id="SIZE">%1$s</xliff:g>（<xliff:g id="VOLUME">%2$s</xliff:g>）"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"データを消去"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"このアプリのすべてのデータ（ファイル、設定、アカウント、\nデータベースを含む）が完全に削除されます。"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"このアプリのすべてのデータが完全に削除されます。"</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"すべてのファイル、設定、アカウント、データベースなどが対象となります。"</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"デフォルトを消去"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"特定の操作でこのアプリを使用するよう設定"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"デフォルトは設定されていません"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"権限"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"アプリの権限"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g>/<xliff:g id="COUNT_1">%d</xliff:g>個のアプリを許可"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Androidセキュリティパッチレベル"</string>
 </resources>

@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"접근성"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"개발자 옵션"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"없음"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"사용 및 진단"</string>
     <string name="about_system_update" msgid="7282772247661356586">"시스템 업데이트"</string>
     <string name="about_preference" msgid="4131396784531360434">"정보"</string>
     <string name="device_name" msgid="2670488158531273028">"기기 이름"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"오디오"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"기타"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"캐시된 데이터"</string>
-    <string name="storage_eject" msgid="113476702798691558">"제거"</string>
-    <string name="storage_format" msgid="3759273736493279595">"삭제 및 포맷"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"기기 저장소로 포맷"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"연결되지 않음"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"데이터 이전"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"이 내부 저장소 저장 안함"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"이 드라이브에 포함된 앱 또는 데이터를 사용하려면 드라이브를 다시 삽입하세요. 또는 드라이브를 사용할 수 없는 경우 저장소를 저장하지 않을 수도 있습니다.\n\n저장하지 않는 경우 드라이브에 포함된 모든 데이터가 완전히 삭제됩니다.\n\n나중에 앱을 다시 설치할 수는 있으나 드라이브에 저장된 데이터가 모두 사라집니다."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"기기 저장용량"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"이동식 저장소"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"재설정"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g>이(가) 마운트되었습니다."</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g>을(를) 마운트하지 못했습니다."</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g>이(가) 안전하게 제거되었습니다."</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g>을(를) 안전하게 제거하지 못했습니다."</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"제거할 드라이브를 찾을 수 없습니다."</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g>이(가) 포맷되었습니다."</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g>을(를) 포맷하지 못했습니다."</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"내부 저장소로 포맷"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"보안을 유지하려면 USB 드라이브를 포맷해야 합니다. 안전하게 포맷된 후 이 드라이브는 이 기기에서만 작동합니다. 포맷하면 드라이브에 저장되어 있는 모든 데이터가 삭제됩니다. 데이터가 손실되지 않도록 하려면 백업하는 것이 좋습니다."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"삭제 및 포맷"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"포맷 후에는 이 USB 드라이브를 다른 기기에서 사용할 수 있습니다. 모든 데이터가 삭제되므로 먼저 다른 내부 저장소로 앱을 이동하여 백업하는 것이 좋습니다."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB 드라이브 포맷 중…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"시간이 조금 걸릴 수 있습니다. 드라이브를 제거하지 마세요."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"데이터를 <xliff:g id="NAME">%1$s</xliff:g>(으)로 이동"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"사진, 파일, 앱 데이터를 <xliff:g id="NAME">%1$s</xliff:g>(으)로 이동합니다. 몇 분 정도 소요될 수 있으며 이동 중에 일부 앱이 제대로 작동하지 않을 수 있습니다."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"지금 이동"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"나중에 이동"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"데이터를 <xliff:g id="NAME">%1$s</xliff:g>(으)로 이전했습니다."</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"데이터를 <xliff:g id="NAME">%1$s</xliff:g>(으)로 이전하지 못했습니다."</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"데이터를 <xliff:g id="NAME">%1$s</xliff:g>(으)로 이동 중…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"시간이 조금 걸릴 수 있습니다. 드라이브를 삭제하지 마세요.\n이동 중에는 일부 앱이 제대로 작동하지 않을 수 있습니다."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"이 드라이브의 속도가 느립니다."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"계속 진행할 수 있으나 이 위치로 이동된 앱이 자주 멈추면서 데이터 전송이 오래 걸릴 수 있습니다. 성능을 향상하려면 더 빠른 드라이브를 사용해 보세요."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"포맷"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"앱 백업"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g>에 저장된 앱"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g>에 저장된 앱 및 데이터"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> 사용 가능"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"내부 저장소 제거"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"기기의 저장소를 제거하면 저장소에 있는 앱 작동이 중단됩니다. 이 USB 드라이브를 포맷하면 이 기기에서만 작동하며 다른 기기에서는 작동하지 않습니다."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> 제거 중..."</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"사용된 저장용량"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> 이동 중..."</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"이동 중에 드라이브를 삭제하지 마세요.\n이동이 완료될 때까지 이 기기에서 <xliff:g id="APPNAME">%1$s</xliff:g> 앱을 사용할 수 없습니다."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"내부 저장소를 저장하지 않으시겠습니까?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'저장 안함\'을 선택하면 이 드라이브에 저장된 모든 데이터가 삭제됩니다. 계속하시겠습니까?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"저장 안함"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB 드라이브 연결됨"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"탐색"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"내부 저장소로 설정"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"이동식 저장소로 설정"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"제거"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> 삭제됨"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"드라이브가 다시 연결될 때까지 일부 앱이 사용 불가능하거나 제대로 작동하지 않습니다."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"저장공간이 충분하지 않습니다."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"앱이 없습니다."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"복제 방지된 앱입니다."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"설치 위치가 잘못되었습니다."</string>
-    <string name="system_package" msgid="9200255718634512790">"외부 장치에 시스템 업데이트를 설치할 수 없습니다."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"자세히 알아보기"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"다시 시도"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS 라우터 검색 중…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"라우터에서 WPS(Wi-Fi Protected Setup) 버튼을 누르세요.\n\'WPS\'라고 되어 있거나 왼쪽의 기호가 표시되어 있을 수 있습니다."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"새 PIN 설정"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"새 PIN 다시 입력"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"기존 PIN 입력"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"PIN 입력이 5회 잘못되었습니다.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g>초 후에 다시 시도하세요."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"PIN 입력이 5회 잘못되었습니다.\n다시 시도하세요<xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN이 잘못되었습니다. 다시 시도해 주세요."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"다시 시도해 주세요. PIN이 일치하지 않습니다."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> 비밀번호 입력"</string>
@@ -541,17 +480,14 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"강제로 앱을 종료하면 예기치 않은 오류가 발생할 수 있습니다."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"제거"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"이 앱을 제거하시겠습니까?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"업데이트 제거"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"이 Android 시스템 앱에 대한 모든 업데이트가 제거됩니다."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"사용 중지"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"이 앱을 사용 중지하시겠습니까?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"사용"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"이 앱을 사용 설정하시겠습니까?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"사용된 저장용량"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g>에서 <xliff:g id="SIZE">%1$s</xliff:g> 사용"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"데이터 삭제"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"이 앱의 모든 데이터가 완전히 삭제됩니다.\n여기에는 모든 파일, 설정, 계정, 데이터베이스 등이 포함됩니다."</string>
-    <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"기본값 지우기"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"이 앱의 모든 데이터가 완전히 삭제됩니다."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"여기에는 모든 파일, 설정, 계정, 데이터베이스 등이 포함됩니다."</string>
+    <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"기본 작업 지우기"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"작업에 대해 이 앱을 실행하도록 설정하세요."</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"기본값이 설정되지 않음"</string>
     <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"캐시 삭제"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"권한"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"앱 권한"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"앱 <xliff:g id="COUNT_1">%d</xliff:g>개 중 <xliff:g id="COUNT_0">%d</xliff:g>개가 허용됨"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android 보안 패치 수준"</string>
 </resources>

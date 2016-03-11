@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"पहुँच"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"विकासकर्ता विकल्पहरू"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"कुनै पनि होइन"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"उपयोग र निदान"</string>
     <string name="about_system_update" msgid="7282772247661356586">"प्रणाली अद्यावधिक"</string>
     <string name="about_preference" msgid="4131396784531360434">"बारेमा"</string>
     <string name="device_name" msgid="2670488158531273028">"उपकरण नाम"</string>
@@ -115,7 +114,7 @@
       <item quantity="one">तपाईँ अहिले एउटा विकासकर्ता हुनबाट <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> कदम टाढा हुनुहुन्छ</item>
     </plurals>
     <string name="about_ads" msgid="3364786994943748337">"विज्ञापनहरू"</string>
-    <string name="show_dev_on" msgid="8997172736024819952">"तपाईँ अब एउटा विकासकर्ता हुनुहुन्छ!"</string>
+    <string name="show_dev_on" msgid="8997172736024819952">"तपाईं अब एउटा विकासकर्ता हुनुहुन्छ!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"आवश्यकता छैन, तपाईँ पहिल्यै एउटा विकासकर्ता हुनुहुन्छ"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"कमजोर"</item>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"अडियो"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"विविध"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"क्यास गरेको डेटा"</string>
-    <string name="storage_eject" msgid="113476702798691558">"निकाल्नुहोस्"</string>
-    <string name="storage_format" msgid="3759273736493279595">"मेट्नुहोस् र फर्म्याट गर्नुहोस्"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"यन्त्र भण्डारणको रूपमा फर्म्याट गर्नुहोस्"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"जडित छैन"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"डेटा प्रवास गर्नुहोस्"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"यो आन्तरिक भण्डारण बिर्सनुहोस्"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"यस ड्राइभमा भएका अनुप्रयोगहरू वा डेटा प्रयोग गर्न पुन: हाल्नुहोस्। अन्यथा, ड्राइभ नभए यस भण्डारणलाई बिर्सनको लागि रोज्नुहोस्।\n\nयदि बिर्सनको लागि रोज्नुहुन्छ भने यस ड्राइमा भएका सबै डेटा सधैंका लागि नष्ट हुनेछन्।\n\n पछि तपाईँ अनुप्रयोगहरू हाले पनि ड्राइभको भण्डारण भएका डेटा भेटाउनु सक्नुहुने छैन।"</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"यन्त्र भण्डारण"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"हटाउन योग्य भण्डारण"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"रिसेट गर्नुहोस्"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> माउन्ट गरियो"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> माउन्ट गर्न सकेन"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तरिकाले निकालिएको छ"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तरिकाले निकाल्न सकिएन"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"बाहिर निकाल्न कुनै ड्राइभ भेटिएन"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> फर्म्याट गरियो"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> फर्म्याट गर्न सकिएन"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"आन्तरिक भण्डारणको रुपमा फर्म्याट गर्नुहोस्"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"यो यसलाई सुरक्षित बनाउन USB ड्राइभ फर्म्याट गर्न आवश्यक छ। सुरक्षित तरिकाले फर्म्याट गरेपछि मात्र यो ड्राइभले यस यन्त्रसँग काम गर्छ। फर्म्याट गर्दा ड्राइभमा हाल भण्डारण गरिएका सबै डेटा मेटाउँछ। डेटा हराउनेबाट जोगिन, यसलाई ब्याक अप गर्ने विचार गर्नुहोस्।"</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"मेट्नुहोस् र फर्म्याट गर्नुहोस्"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"फर्म्याट गरेपछि, तपाईँ यो USB ड्राइभ अन्य यन्त्रहरूमा प्रयोग गर्न सक्नुहुन्छ। सबै डेटा मेटिनेछन्। पहिला अनुप्रयोगहरू अन्य भण्डारणमा सारेर ब्याक अप गर्ने विचार गर्नुहोस्।"</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB ड्राइभ फर्म्याट गरिँदै..."</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"यसलाई एक क्षण लाग्न सक्छ। कृपया ड्राइभ नहटाउनुहोस्।"</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"डेटा <xliff:g id="NAME">%1$s</xliff:g> मा सार्नुहोस्"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"तपाईँको तस्बिरहरू, फाइलहरू र अनुप्रयोग डेटा <xliff:g id="NAME">%1$s</xliff:g> मा सार्नुहोस्। यसलाई केही मिनेट लाग्‍न सक्छ। केही अनुप्रयोगहरू स्थानान्तरण गर्ने समयमा ठीक सँग काम नगर्न सक्छ।"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"अब सार्नुहोस्"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"पछि सार्नुहोस्"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"डेटा <xliff:g id="NAME">%1$s</xliff:g> मा प्रवास गरियो"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"डेटा <xliff:g id="NAME">%1$s</xliff:g> मा प्रवास गर्न सकिएन"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"डेटा <xliff:g id="NAME">%1$s</xliff:g> मा सार्दै..."</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"यसलाई एक क्षण लाग्‍न सक्छ। कृपया ड्राइभ नहटाउनुहोस्।\nकेही अनुप्रयोगहरू स्थानान्तरण गर्ने समयमा ठीक सँग काम नगर्न सक्छ।"</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"यो ड्राइभ सुस्त देखिन्छ।"</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"तपाईँ जारी राख्न सक्नुहुन्छ, तर यस स्थानमा सारिएका अनुप्रयोगहरू अड्किन सक्छ र डेटा स्थानान्तरणले लामो समय लिन सक्छ। राम्रो कार्यसम्पादनको लागि थप छिटो ड्राइभको प्रयोग गर्ने विचार गर्नुहोस्।"</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"फर्म्याट गर्नुहोस्"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"अनुप्रयोगहरू ब्याक अप गर्नुहोस्"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"अनुप्रयोगहरु <xliff:g id="NAME">%1$s</xliff:g> मा भण्डारण गरियो"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"अनुप्रयोगहरु र डेटा <xliff:g id="NAME">%1$s</xliff:g> मा भण्डारण गरियो"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> उपलब्ध"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"आन्तरिक भण्डारण निकाल्नुहोस्"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"यस यन्त्र भण्डारणका अनुप्रयोगहरूले यसलाई निकालेपछि काम गर्न छोड्छ। यो USB ड्राइभ यो यन्त्रमा काम गर्नको लागि फर्म्याट गरियो। यसले अन्य कुनैमा काम गर्दैन।"</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"निकाल्दै <xliff:g id="NAME">%1$s</xliff:g> ..."</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"प्रयोग भएको भण्डारण"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> सार्दै"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"सारिएको बेलामा ड्राइभ नहटाउनुहोस्। \n सार्ने काम नसकिएसम्म यस यन्त्रमा <xliff:g id="APPNAME">%1$s</xliff:g> अनुप्रयोग उपलब्ध हुने छैन।"</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"आन्तरिक भण्डारण बिर्सनुभयो?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"यस ड्राइमा भएका सबै डेटा \'बिर्सनु\' को साथ सधैंका लागि नष्ट हुनेछन्। के तपाईँ अगाडि बढ्न चाहनुहुन्छ?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"बिर्सनुहोस्"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB ड्राइभ जडान गरियो"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"ब्राउज गर्नुहोस्"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"आन्तरिक भण्डारणका रूपमा सेट अप गर्नुहोस्"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"हटाउन सकिने भण्डारणका रूपमा सेट अप गर्नुहोस्"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"निकाल्नुहोस्"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> हटाइयो"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"ड्राइभ पुनः जडान नभएसम्म केही अनुप्रयोगहरू अनुपलब्ध हुने वा सही ढङ्गले काम नगर्न सक्छन्।"</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"पर्याप्त भण्डारण ठाउँ छैन।"</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"अनुप्रयोग अवस्थित छैन"</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"अनुप्रयोग प्रतिलिपि-सुरक्षित छ।"</string>
-    <string name="invalid_location" msgid="5269044848535157307">"स्थापना स्थान मान्य छैन।"</string>
-    <string name="system_package" msgid="9200255718634512790">"प्रणाली अद्यावधिकहरू बाह्य मिडियामा स्थापित गर्न सकिँदैन।"</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"थप सिक्नुहोस्"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"पुनःप्रयास गर्नुहोस्"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS राउटर खोज्दै..."</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"तपाईंको राउटरमा Wi-Fi सुरक्षित सेटअप बटनमा थिच्नुहोस्। \n यसले \"WPS\" कल गर्न सक्दछ वा बायाँ प्रतीक समावेश गर्न सक्दछ।"</string>
@@ -315,7 +254,7 @@
     <string name="location_reporting_desc" msgid="6256424995139430823">"Google ले उत्पादनहरूमा यो सुविधा प्रयोग गर्दछ जस्तै Google Now र Google Maps । स्थान रिपोर्टिङ खोल्दै यो सुविधा स्टोर प्रयोग गर्ने तपाईंको  Google  खाता सन्दर्भमा आफ्नो उपकरणको सबै भन्दा भर्खरैको स्थान डेटा प्रयोग गर्ने कुनै पनि Google उत्पादनले दिन्छ।"</string>
     <string name="location_history_desc" msgid="3861249867748294369">"स्थान इतिहास यो खाताको लागि बन्द हुँदा Google ले तपाईंको अनुप्रयोगहरूद्वारा प्रयोगको लागि तपाईँको उपकरणको स्थान डेटा भण्डारण गर्न सक्छ। \n\n उदाहरणका लागि, Google Maps ले तपाईँलाई निर्देशन दिन सक्छ, र Google Now ले तपाईँलाई कम्युट ट्राफिकको बारेमा सूचित गर्न सक्छ। \n\n तपाईँ कुनै पनि समयमा स्थान इतिहास बन्द गर्न सक्नुहुन्छ, तर यसले कार्य गर्दछ त्यसैले यसलाई मेट्नु हुँदैन।आफ्नो स्थान इतिहास हेर्न र  व्यवस्थित गर्न, maps.google.com/locationhistory को भ्रमण गर्नुहोस्।"</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"स्थान इतिहास मेटाउनुहोस्"</string>
-    <string name="delete_location_history_desc" msgid="4142806827237093397">"यसले यो Google खाताको लागि स्टोर भएको सबै स्थान इतिहास यो उपकरणबाट मेटाउने छ। तपाईँ यो मेटाउने प्रकृया पूर्ववत गर्न सक्नुहुन्न। Google Now सहित केही अनुप्रयोगहरूले, कार्य गर्न बन्द गर्ने छ।"</string>
+    <string name="delete_location_history_desc" msgid="4142806827237093397">"यसले यो Google खाताको लागि स्टोर भएको सबै स्थान इतिहास यो उपकरणबाट मेटाउने छ। तपाईं यो मेटाउने प्रकृया पूर्ववत गर्न सक्नुहुन्न। Google Now सहित केही अनुप्रयोगहरूले, कार्य गर्न बन्द गर्ने छ।"</string>
     <string name="system_services" msgid="7230571820151215779">"सेवाहरू"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"सेवा सेटिङ्हरू"</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"क्याप्सन"</string>
@@ -421,8 +360,8 @@
     <string name="agree" msgid="1235622082275451350">"सहमत"</string>
     <string name="disagree" msgid="9170636026862400981">"असहमत"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"अज्ञात स्रोतहरू"</string>
-    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Play स्टोर भन्दा अन्य स्रोतहरूबाट अनुप्रयोगहरूको स्थापनालाई अनुमति दिनुहोस्"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"तपाईँको उपकरण र व्यक्तिगत डेटा अज्ञात स्रोतको अनुप्रयोगहरूद्वारा आक्रमण गर्न बढि असुरक्षित छन्। तपाईँको उपकरणमा वा यी अनुप्रयोगहरू प्रयोगबाट डेटा हराउन परिणाम वा कुनै पनि नोक्सानीका लागि तपाईँ आफैं जिम्मेदार हुनुहुन्छ भन्ने कुरामा सहमत हुनुहुन्छ।"</string>
+    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Play Store भन्दा अन्य स्रोतहरूबाट अनुप्रयोगहरूको स्थापनालाई अनुमति दिनुहोस्"</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"तपाईंको उपकरण र व्यक्तिगत डेटा अज्ञात स्रोतको अनुप्रयोगहरूद्वारा आक्रमण गर्न बढि असुरक्षित छन्। तपाईंको उपकरणमा वा यी अनुप्रयोगहरू प्रयोगबाट डेटा हराउन परिणाम वा कुनै पनि नोक्सानीका लागि तपाईं आफैं जिम्मेदार हुनुहुन्छ भन्ने कुरामा सहमत हुनुहुन्छ।"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"अनुप्रयोगहरू रुजु गर्नुहोस्"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"हानी गर्न सक्ने अनुप्रयोगहरूका स्थापना गर्नुअघि चेतावनी दिनुहोस् वा अनुमति नै नदिनुहोस्"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"कहिले पनि होइन"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"नयाँ PIN सेट गर्नुहोस्"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"नयाँ PIN पुन: प्रविष्ट गर्नुहोस्"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"पुरानो PIN प्रविष्ट गर्नुहोस्"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"तपाईँले गलत PIN ५ पटक प्रविष्टि गर्नुभयो।\n <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> सेकेन्डमा पुनः प्रयास गर्नुहोस्।"</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"तपाईंले गलत पिन ५ पटक प्रविष्ट गर्नुभयो। \n पुनः प्रयास गर्नुहोस् <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g> ।"</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"गलत पिन, पुनः प्रयास गर्नुहोस्"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"पुनः प्रयास गर्नुहोस्, PIN मेल खाँदैन"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> को लागि पासवर्ड प्रविष्ट गर्नुहोस्"</string>
@@ -540,17 +479,14 @@
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"दबाब रोक्नुहोस्"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"तपाईंले अनुप्रयोग बन्द गर्न बल गर्नुभयो भने, यसले चाहेअनुसार काम नगर्न सक्छ।"</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"स्थापना हटाउनुहोस्"</string>
-    <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"तपाईँ यो अनुप्रयोग स्थापना रद्द गर्न चाहनुहुन्छ?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"अद्यावधिकहरूको स्थापना रद्द गर्नुहोस्"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"यस Android प्रणाली अनुप्रयोगमा भएका सम्पूर्ण अद्यावधिकहरूको स्थापना हटाइनेछ।"</string>
+    <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"तपाईं यो अनुप्रयोग स्थापना रद्द गर्न चाहनुहुन्छ?"</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"अक्षम गर्नुहोस्"</string>
-    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"तपाईँ यो अनुप्रयोग अक्षम गर्न चाहनुहुन्छ?"</string>
+    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"तपाईं यो अनुप्रयोग अक्षम गर्न चाहनुहुन्छ?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"सक्षम गर्नुहोस्"</string>
-    <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"तपाईँ यो अनुप्रयोग सक्षम गर्न चाहनुहुन्छ?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"प्रयोग भएको भण्डारण"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> मा प्रयोग <xliff:g id="SIZE">%1$s</xliff:g>"</string>
+    <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"तपाईं यो अनुप्रयोग सक्षम गर्न चाहनुहुन्छ?"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"डाटा खाली गर्नुहोस्"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"यी सबै अनुप्रयोग डेटा पुर्न रूपमा मेटाइने छ। \nजसमा सबै फाइलहरू, सेटिङहरू, खाताहरू, डेटाबेस आदि पर्दछन्।"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"यो अनुप्रयोगको सबै डेटा स्थायी रूपमा मेटिने छन्।"</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"यसमा सबै फाइलहरू, सेटिङहरू, खाताहरू, डाटाबेसहरू समावेश हुन्छन्।"</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"पूर्वनिर्धारितहरू मेटाउनुहोस्"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"केही कारवाहीका लागि यो अनुप्रयोग सुरु गर्न सेट भयो"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"कुनै पनि पूर्वनिर्धारितहरू सेट छैनन्"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"अनुमतिहरू"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"अनुप्रयोग अनुमतिहरू"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%d</xliff:g> को <xliff:g id="COUNT_0">%d</xliff:g> अनुप्रयोगहरूलाई अनुमति छ"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android सुरक्षा प्याच चरण"</string>
 </resources>

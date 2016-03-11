@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Erabilerraztasuna"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Garatzaileen aukerak"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Bat ere ez"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Erabilera eta diagnostikoak"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Sistemaren eguneratzea"</string>
     <string name="about_preference" msgid="4131396784531360434">"Honi buruz"</string>
     <string name="device_name" msgid="2670488158531273028">"Gailuaren izena"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Audioa"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Askotarikoak"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Cachean gordetako datuak"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Atera"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Ezabatu eduki guztia eta formateatu"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Formateatu memoria-unitate gisa"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Konektatu gabe"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Migratu datuak"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Ahaztu barneko memoria"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Unitate honetako aplikazioak edo datuak erabili ahal izateko, konekta ezazu berriro. Bestela, gailua erabilgarri ez badago, memoria ahaztea aukera dezakezu.\n\n\"Ahaztu\" aukeratzen baduzu, betiko galduko dira unitatean dauden datu guztiak.\n\nGeroago instala ditzakezu berriro aplikazioak, baina galdu egingo dira unitatean gordeta dauden datuak."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Gailuaren memoria"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Memoria aldagarria"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Berrezarri"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"Muntatu da <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Ezin izan da muntatu <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"Modu seguruan atera da <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Ezin izan da atera modu seguruan <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Ezin izan da aurkitu kanporatu beharreko unitatea"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"Formateatu da <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Ezin izan da formateatu <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formateatu barneko memoria gisa"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Segurua izan dadin, formateatu egin behar da USB unitatea. Formateatu ondoren, unitateak gailu honekin bakarrik funtzionatuko du. Formateatzean, unitateko eduki guztia ezabatzen da. Daturik galdu nahi ez baduzu, egin haien babeskopia."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Ezabatu eduki guztia eta formateatu"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Formateatu ondoren, USB unitate hau beste gailu batzuetan erabili ahal izango duzu. Datu guztiak ezabatu egingo dira; hortaz, lehendabizi, datuen babeskopia egitea gomendatzen dugu. Horretarako, aplikazioak beste barneko memoria batera eraman ditzakezu."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB unitatea formateatzen…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Unetxo bat beharko dugu. Ez kendu unitatea."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Eraman datuak <xliff:g id="NAME">%1$s</xliff:g> unitatera"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Eraman argazkiak, fitxategiak eta aplikazio-datuak <xliff:g id="NAME">%1$s</xliff:g> unitatera. Minutu batzuk beharko dira. Eraman bitartean, aplikazio batzuek ez dute behar bezala funtzionatuko."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Mugitu orain"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Mugitu geroago"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Migratu dira datuak <xliff:g id="NAME">%1$s</xliff:g> unitatera"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Ezin izan dira migratu datuak <xliff:g id="NAME">%1$s</xliff:g> unitatera"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Datuak <xliff:g id="NAME">%1$s</xliff:g> unitatera eramaten…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Unetxo bat beharko dugu. Ez kendu unitatea.\nEraman bitartean, aplikazio batzuek ez dute behar bezala funtzionatuko."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Unitate honek oso mantsoa dirudi."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Aurrera egin dezakezu, baina kokapen honetara eramandako aplikazioak eten egin daitezke eta datuak transferitzeko denbora gehiago behar izan daiteke. Unitate bizkorragoa erabil dezakezu errendimendu hobea lortzeko."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formateatu"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Egin aplikazioen babeskopiak"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Hemen gordetako aplikazioak: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Hemen gordetako aplikazioak eta datuak: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> erabilgarri"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Kanporatu barneko memoria"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Gailu honetako aplikazioek funtzionatzeari utziko diote gailua kanporatzen denean. USB unitate hau gailu honetan soilik funtzionatzeko formateatuta dago; ez du beste inon funtzionatuko."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> kanporatzen ari da…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Erabilitako memoria"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> mugitzen…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Ez kendu unitatea aplikazioak mugitu bitartean.\nGailu honetako <xliff:g id="APPNAME">%1$s</xliff:g> ez da erabilgarri egongo hona mugitu arte."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Barneko memoria ahaztea nahi duzu?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\"Ahaztu\" aukeratzen baduzu, betiko galduko dira unitatean gordetako datu guztiak. Jarraitu nahi duzu?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Ahaztu"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB unitatea konektatu da"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Arakatu"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Konfiguratu barneko memoria gisa"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Konfiguratu memoria aldagarri gisa"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Atera"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"Kendu egin da <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Aplikazio batzuk ez dira erabilgarri egongo edo behar bezala ibiliko unitatea berriro konektatu arte."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Ez dago behar adina memoria."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Aplikazioa ez dago."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Aplikazioak kopien aurkako babesa du."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Instalatzeko kokapena ez da baliozkoa."</string>
-    <string name="system_package" msgid="9200255718634512790">"Sistemaren eguneratzeak ezin dira kanpoko euskarri batean instalatu."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Lortu informazio gehiago"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Saiatu berriro"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS bideratzailea bilatzen…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Sakatu Wi-Fi konfigurazio babestuaren botoia bideratzailean.\nBaliteke \"WPS\" izena edo ezkerreko ikurra izatea."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Aldatu PIN kodea"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Idatzi PIN kodea berriro"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Idatzi lehengo PIN kodea"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Bost aldiz idatzi duzu oker PIN kodea.\nSaiatu berriro <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> segundo barru."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"PIN kodea oker idatzi duzu bost aldiz.\nSaiatu berriro <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g> barru."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN kodea ez da zuzena. Saiatu berriro."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN kodeak ez datoz bat. Saiatu berriro."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Idatzi <xliff:g id="SSID">%1$s</xliff:g> pasahitza"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Aplikazio bat gelditzera behartzen baduzu, behar bezala funtzionatzeari utz diezaioke."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Desinstalatu"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Aplikazioa desinstalatu nahi duzu?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Desinstalatu eguneratzeak"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Desinstalatu egingo dira Android sistemaren aplikazioari egindako eguneratzeak."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Desgaitu"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Aplikazioa desgaitu nahi duzu?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Gaitu"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Aplikazioa gaitu nahi duzu?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Erabilitako memoria"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> erabiltzen ditu (<xliff:g id="VOLUME">%2$s</xliff:g>)"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Garbitu datuak"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Aplikazioaren datu horiek guztiak betiko ezabatuko dira.\nHorien artean daude fitxategiak, ezarpenak, kontuak, datu-baseak, etab."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Aplikazioaren datu guztiak betiko ezabatuko dira;"</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Besteak beste, fitxategi, ezarpen, kontu eta datu-base guztiak."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Garbitu lehenespenak"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Zehaztu aplikazioa noiz abiarazi"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Ez da ezarri balio lehenetsirik"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Baimenak"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Aplikazio-baimenak"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g>/<xliff:g id="COUNT_1">%d</xliff:g> aplikazio baimenduta"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android segurtasunaren adabaki-maila"</string>
 </resources>

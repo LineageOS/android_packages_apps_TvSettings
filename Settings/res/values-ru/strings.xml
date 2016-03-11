@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Специальные возможности"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Для разработчиков"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Нет"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Статистика и диагностика"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Обновление системы"</string>
     <string name="about_preference" msgid="4131396784531360434">"Об устройстве"</string>
     <string name="device_name" msgid="2670488158531273028">"Название устройства"</string>
@@ -218,66 +217,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Аудио"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Прочее"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Данные кеша"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Извлечь"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Очистить и форматировать"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Форматировать как память устройства"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Нет подключения"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Перенести данные"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Удалить данные из внутренней памяти"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Подключите диск заново, чтобы получить доступ к приложениям и другим данным на нем. Если это невозможно и диск недоступен, выберите \"Удалить данные\".\n\nПосле этого все данные, хранившиеся на диске, будут утеряны.\n\nВы сможете скачать приложения снова, однако их данные восстановить не удастся."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Память устройства"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Съемный накопитель"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Сброс настроек"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"Подключено: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Ошибка подключения: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"Безопасно извлечено: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Не удалось безопасно извлечь устройство: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Диск не обнаружен"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"Отформатировано: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Ошибка форматирования: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Форматирование в качестве внутренней памяти"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Чтобы защитить данные, USB-накопитель надо отформатировать. После этого он будет работать только с текущим устройством. При форматировании будут удалены все данные на накопителе. Чтобы не потерять информацию, предварительно скопируйте ее в другое место."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Очистка и форматирование"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"После форматирования вы сможете использовать USB-накопитель с другими устройствами. Все данные будут удалены. Чтобы не потерять приложения, сохраните их на другом устройстве внутренней памяти."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Форматирование USB-накопителя…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Возможно, вам придется подождать. Не отключайте накопитель."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Перенос данных на карту \"<xliff:g id="NAME">%1$s</xliff:g>\""</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Вы можете перенести фотографии, файлы и данные приложений на карту \"<xliff:g id="NAME">%1$s</xliff:g>\". На это уйдет всего несколько минут. Возможно, некоторые приложения будут работать некорректно во время переноса."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Перенести сейчас"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Перенести позже"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Данные перенесены на карту \"<xliff:g id="NAME">%1$s</xliff:g>\""</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Не удалось перенести данные на карту \"<xliff:g id="NAME">%1$s</xliff:g>\""</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Перенос данных на карту \"<xliff:g id="NAME">%1$s</xliff:g>\"…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"На это уйдет всего несколько минут. Не извлекайте карту во время переноса данных.\nВозможно, некоторые приложения будут работать некорректно."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"USB-накопитель работает медленно"</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Если вы продолжите, в перемещенных приложениях могут происходить сбои, а обмен данными может занимать много времени. Чтобы повысить производительность, используйте более быстрый накопитель."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Форматировать"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Сохранить приложения"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Хранилище приложений: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Хранилище приложений и данных: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Доступно <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Извлечение внутренней памяти"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Когда вы извлечете USB-накопитель, приложения перестанут работать. Он отформатирован для работы только с этим устройством, и не будет работать с другими."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g>: извлечение…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Размер в памяти"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Перенос приложения \"<xliff:g id="NAME">%1$s</xliff:g>\""</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Не извлекайте диск во время переноса.\nПока он не завершится, приложение \"<xliff:g id="APPNAME">%1$s</xliff:g>\" будет недоступно на этом устройстве."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Удалить данные?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Все данные на диске будут утеряны. Продолжить?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Удалить"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB-накопитель подключен"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Поиск"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Настроить как внутреннюю память"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Настроить как съемный накопитель"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Извлечь"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"Устройство \"<xliff:g id="NAME">%1$s</xliff:g>\" извлечено"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Пока вы снова не подключите диск, некоторые приложения могут быть недоступны либо работать с ошибками."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Недостаточно места."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Приложение не установлено."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Приложение защищено от копирования."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Недопустимое место установки."</string>
-    <string name="system_package" msgid="9200255718634512790">"Системные обновления нельзя установить на внешнем носителе."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Подробнее…"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Повторить"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Поиск маршрутизатора WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Нажмите кнопку безопасной настройки Wi-Fi на маршрутизаторе.\nОна может называться WPS или содержать символ, указанный слева."</string>
@@ -394,7 +333,7 @@
     <string name="system_show_surface_updates" msgid="8878834675712192327">"Показывать обновления поверхности"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"Окно: масштаб"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Переход: масштаб"</string>
-    <string name="system_animator_duration_scale" msgid="7413512458963984521">"Длительность анимации"</string>
+    <string name="system_animator_duration_scale" msgid="7413512458963984521">"Скорость анимации"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Включен строгий режим"</string>
     <string name="system_show_cpu_usage" msgid="4797599582027671138">"Показывать загрузку ЦП"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Запись времени работы графического процессора"</string>
@@ -539,7 +478,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Задайте новый PIN-код"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Повторно введите новый PIN-код"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Введите прежний PIN-код"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Вы ввели неправильный PIN-код 5 раз.\nПовторите попытку через <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> сек."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Вы ввели неверный PIN-код 5 раз.\nПовторите попытку <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Неверный PIN-код. Повторите попытку."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN-коды не совпадают. Повторите попытку."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Укажите пароль для сети <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -551,16 +490,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Принудительная остановка приложения может привести к ошибкам."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Удалить"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Удалить приложение?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Удалить обновления"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Все обновления для этого приложения будут удалены."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Отключить"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Отключить это приложение?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Включить"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Включить это приложение?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Размер в памяти"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> (<xliff:g id="VOLUME">%2$s</xliff:g>)"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Удалить данные"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Все данные приложения будут удалены.\nВы не сможете восстановить файлы, настройки, аккаунты, базы данных и т. д."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Все данные этого приложения будут удалены без возможности восстановления."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Это касается файлов, настроек, аккаунтов, баз данных и т. д."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Удалить настройки по умолчанию"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Открывать при некоторых действиях"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Настройки по умолчанию не установлены"</string>
@@ -606,7 +542,6 @@
     <string name="change_setting" msgid="2047402388786162246">"Изменить"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Не изменять"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Разрешения"</string>
-    <string name="device_apps_permissions" msgid="2966387603529725982">"Разрешения приложений"</string>
+    <string name="device_apps_permissions" msgid="2966387603529725982">"Разрешения для приложений"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Приложения с разрешением: <xliff:g id="COUNT_0">%d</xliff:g> из <xliff:g id="COUNT_1">%d</xliff:g>"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Обновление системы безопасности"</string>
 </resources>

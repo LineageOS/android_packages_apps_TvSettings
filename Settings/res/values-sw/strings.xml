@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Ufikiaji"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Chaguo za wasanidi programu"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Hakuna"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Matumizi &amp; Uchunguzi"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Sasisho la mfumo"</string>
     <string name="about_preference" msgid="4131396784531360434">"Kuhusu"</string>
     <string name="device_name" msgid="2670488158531273028">"Jina la kifaa"</string>
@@ -131,7 +130,7 @@
     <string name="connected" msgid="7563100162902079938">"Umeunganishwa"</string>
     <string name="not_connected" msgid="6858480380326923017">"Hujaunganishwa"</string>
     <string name="wifi_setting_header_available_networks" msgid="6244107218643835636">"Wi-Fi"</string>
-    <string name="wifi_setting_header_other_options" msgid="1530334691232749342">"CHAGUO ZINGINE"</string>
+    <string name="wifi_setting_header_other_options" msgid="1530334691232749342">"CHAGUO NYINGINE"</string>
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"Angalia zote"</string>
     <string name="wifi_setting_available_networks" msgid="1244646604369133314">"MITANDAO INAYOPATIKANA"</string>
     <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"Unganisha kupitia WPS"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Sauti"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Mengineyo"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Data iliyoakibishwa"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Ondoa"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Futa na uumbize"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Tayarisha hifadhi ili itumike kama hifadhi ya kifaa"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Hujaunganishwa"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Hamisha data"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Sahau hifadhi hii ya mfumo"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Ili utumie programu au data iliyo katika hifadhi hii, ichomeke tena. Ama, unaweza kuchagua kusahau nafasi hii ya hifadhi ikiwa hifadhi haipatikani. \n\nUkiamua kusahau, data yote iliyo kwenye hifadhi itapotea kabisa.\n\nUnaweza kusakinisha programu upya baadaye, lakini data iliyohifadhiwa kwenye hifadhi hii itapotea."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Hifadhi ya kifaa"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Hifadhi unayoweza kuondoa"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Weka upya"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> imepachikwa"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Haikuweza kupachika <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> imeondolewa kwa usalama"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Haikuweza kuondoa kwa usalama <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Haikuweza kupata hifadhi ya kuondoa"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> imeumbizwa"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Haikuweza kuumbiza <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Tayarisha hifadhi ili itumike kama hifadhi ya ndani"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Hii inahitaji hifadhi ya USB kuumbizwa ili iwe salama. Baada ya kuumbiza kwa usalama, hifadhi hii itatumika kwenye kifaa hiki pekee. Kuumbiza hufuta data yote iliyo kwenye hifadhi. Ili usipoteze data, unaweza kuhifadhi nakala."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Futa na Uumbize"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Baada ya kuumbiza, unaweza kutumia hifadhi hii ya USB katika vifaa vingine. Data yote itafutwa. Zingatia kuhifadhi nakala kwanza kwa kuhamisha programu hadi kwenye hifadhi nyingine ya ndani."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Inaumbiza Hifadhi ya USB…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Hii inaweza kuchukua dakika kadhaa. Tafadhali usiondoe hifadhi."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Hamishia data kwenye <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Hamishia picha zako, faili na data ya programu kwenye <xliff:g id="NAME">%1$s</xliff:g>. Hatua hii inaweza kuchukua dakika kadhaa. Baadhi ya programu hazitafanya kazi vizuri wakati wa kuhamisha."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Hamisha sasa"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Hamisha baadaye"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Ilihamishia data kwenye <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Haikuweza kuhamishia data kwenye <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Data inahamishiwa kwenye <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Hatua hii inaweza kuchukua muda. Tafadhali usiondoe hifadhi. \nBaadhi ya programu hazitafanya kazi vizuri wakati wa kuhamisha."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Hifadhi hii inaonekana kufanya kazi polepole."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Unaweza kuendelea, lakini programu zinazohamishwa hadi mahali hapa zinaweza kukwama na uhamishaji wa data unaweza kuchukua muda mrefu. Zingatia kutumia hifadhi ya haraka ili upate utendaji bora."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Umbizo"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Hifadhi nakala za programu"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Programu zimehifadhiwa katika <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Programu na data zimehifadhiwa katika <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> inapatikana"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Ondoa hifadhi ya ndani"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Programu zilizo kwenye kifaa hiki cha kuhifadhi zitaacha kutumika wakati kimeondolewa. Hifadhi hii ya USB imeumbizwa ili itumike kwenye kifaa hiki pekee. Haiwezi kutumika kwenye vifaa vingine."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Inaondoa <xliff:g id="NAME">%1$s</xliff:g>..."</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Hifadhi iliyotumika"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Inahamisha <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Usiondoe hifadhi wakati wa kuhamisha.\nProgramu ya <xliff:g id="APPNAME">%1$s</xliff:g> kwenye kifaa hiki haitapatikana hadi ukamilishe kuhamisha."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Je, ungependa kusahau hifadhi ya mfumo?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Data yako yote iliyohifadhiwa katika hifadhi hii itapotea kabisa ukichagua \'Sahau\'. Je, ungependa kuendelea?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Sahau"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Hifadhi ya USB imeunganishwa"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Vinjari"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Sanidi kama hifadhi ya mfumo"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Sanidi kama hifadhi inayoweza kuondolewa"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Ondoa"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> imeondolewa."</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Baadhi ya programu hazitapatikana au hazitafanya kazi vizuri hadi hifadhi iunganishwe."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Nafasi ya hifadhi haitoshi."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Programu haipo."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Programu imelindwa isinakiliwe."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Eneo la kusakinisha si sahihi."</string>
-    <string name="system_package" msgid="9200255718634512790">"Masasisho ya mfumo hayawezi kusakinisha kwenye hifadhi ya nje."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Pata maelezo zaidi"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Jaribu tena"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Inatafuta ruta ya WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Bonyeza kitufe cha Wi-Fi Protected Setup kwenye ruta yako.\nInaweza kuwa inaitwa \"WPS\" au iwe na alama upande wa kushoto."</string>
@@ -379,7 +318,7 @@
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"Ruhusu maeneo ya majaribio"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"Chagua programu ya utatuaji"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Subiri kitatuaji"</string>
-    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Thibitisha programu kupitia USB"</string>
+    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Thibitisha programu iliyo juu ya USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Kagua iwapo programu zilizosakinishwa kupitia ADB/ADT zina tabia ya kudhuru"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Uwekaji kumbukumbu za WiFi kutumia sauti"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Washa uwekaji kumbukumbu za WiFi kutumia sauti"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Sanidi PIN mpya"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Weka tena PIN mpya"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Weka PIN ya zamani"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Umeweka PIN isiyo sahihi mara. \n Jaribu tena baada ya sekunde <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g>."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Umeweka PIN isiyo sahihi mara 5.\nJaribu tena <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN si sahihi, jaribu tena"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Jaribu tena, PIN hailingani"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Weka nenosiri la <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Ukilazimisha programu kuzima, inaweza kutofanya vizuri."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Ondoa"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Unataka kuondoa programu hii?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Sanidua masasisho"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Masasisho yote ya programu hii ya mfumo wa Android yataondolewa."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Zima"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Unataka kuzima programu hii?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Washa"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Unataka kuwasha programu hii?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Hifadhi iliyotumika"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> imetumika katika <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Futa data"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Data yote ya programu hii itafutwa kabisa.\nHii inajumuisha faili, mipangilio, akaunti, hifadhidata zote na mengineyo."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Data yote ya programu hii itafutwa kabisa."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Hii ni pamoja na faili zote, mipangilio, akaunti, hifadhidata, nk."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Futa machaguo-msingi"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Imewekwa ifungue programu hii kwa vitendo fulani"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Hakuna chaguo-msingi zilizowekwa"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Ruhusa"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Ruhusa za programu"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Inaruhusu programu <xliff:g id="COUNT_0">%d</xliff:g> kati ya <xliff:g id="COUNT_1">%d</xliff:g>"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Kiwango cha kuzuia athari za usalama kwenye Android"</string>
 </resources>

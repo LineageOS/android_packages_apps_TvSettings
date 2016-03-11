@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Арнайы мүмкіндіктер"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Әзірлеуші опциялары"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Ешқандай"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Пайдалану және диагностика"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Жүйе жаңартуы"</string>
     <string name="about_preference" msgid="4131396784531360434">"Туралы"</string>
     <string name="device_name" msgid="2670488158531273028">"Құрылғы атауы"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Aудио"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Өзге"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Кэштелген деректер"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Шығару"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Өшіру және пішімдеу"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Құрылғы жады ретінде пішімдеу"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Қосылмаған"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Деректерді тасымалдау"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Осы ішкі жадты ұмыту"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Осы дискіде бар қолданбаларды немесе деректерді пайдалану үшін, оны қайта жалғаңыз. Не болмаса диск қолжетімді болмаса, осы жадты ұмытуды таңдай аласыз. \n\n\"Ұмыту\" опциясын таңдасаңыз, дискідегі барлық деректер мүлдем жоғалады. \n\nҚолданбаларды кейінірек қайта орнатуға болады, бірақ осы дискіде сақталған деректер жоғалады."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Құрылғы жады"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Алынбалы жад"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Қалпына келтіру"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> орнатылды"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> орнату мүмкін болмады"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> қауіпсіз шығарылды"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> қауіпсіз шығару мүмкін болмады"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Шығарып алынатын диск табылмады"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> пішімделді"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> пішімдеу мүмкін болмады"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Ішкі жад ретінде пішімдеу"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Қауіпсіздік үшін USB дискіні пішімдеу қажет. Одан кейін бұл диск тек осы құрылғыда жұмыс істейтін болады. Пішімдеу кезінде дискіде сақталып тұрған барлық деректер өшеді. Деректерді жоғалтпау үшін сақтық көшірмесін жасап алыңыз."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Өшіру және пішімдеу"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Пішімдегеннен кейін осы USB дискіні басқа құрылғыларда пайдалануға болады. Барлық деректер жойылады. Алдымен қолданбаларды басқа ішкі жадқа көшіру арқылы олардың сақтық көшірмесін жасап алыңыз."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB дискі пішімделуде…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Бұған көп уақыт кетпейді. Дискіні алмаңыз."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Деректерді <xliff:g id="NAME">%1$s</xliff:g> құрылғысына тасымалдау"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Фотосуреттерді, файлдарды және қолданба деректерін <xliff:g id="NAME">%1$s</xliff:g> құрылғысына тасымалдаңыз. Бұл бірнеше минутты алуы мүмкін. Кейбір қолданбалар тасымалдау кезінде дұрыс жұмыс істемейді."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Қазір тасымалдау"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Кейінірек тасымалдау"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"<xliff:g id="NAME">%1$s</xliff:g> құрылғысына тасымалданған деректер"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Деректерді <xliff:g id="NAME">%1$s</xliff:g> құрылғысына тасымалдау мүмкін болмады"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Деректер <xliff:g id="NAME">%1$s</xliff:g> құрылғысына тасымалдануда…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Бұған көп уақыт кетпейді. Дискіні алмаңыз.\nКейбір қолданбалар тасымалдау барысында дұрыс жұмыс істемейді."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Бұл диск баяу жұмыс істейді екен."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Жалғастыруға болады, бірақ осы орынға жылжытылған қолданбалар тоқтап-тоқтап жұмыс істеп, деректер ұзақ уақыт тасымалдануы мүмкін. Өнімділікті жақсарту үшін жылдамырақ дискіні пайдаланғаныңыз жөн."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Пішімдеу"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Қолданбалардың резервтік көшірмесін жасау"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> ішінде сақталған қолданбалар"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> ішінде сақталған қолданбалар мен деректер"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"қолжетімді <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Ішкі жадты шығарып алу"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Шығарып алынған кезде, осы құрылғы жадындағы қолданбалардың жұмысы тоқтайды. Бұл USB диск тек осы құрылғыда жұмыс істеуге пішімделген. Ол басқа құрылғыларда жұмыс істемейді."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> шығарылуда…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Пайдаланылған жад"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> жылжытылуда…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Жылжыту кезінде дискіні шығармаңыз.\nЖылж. аяқ-ша осы құр. <xliff:g id="APPNAME">%1$s</xliff:g> қолд. қол жетімді болмайды."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Ішкі жадты ұмыттыңыз ба?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\"Ұмыту\" опциясын таңдасаңыз, бұл дискіде сақталған барлық деректер мүлдем жоғалады. Жалғастырғыңыз келе ме?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Ұмыту"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB жетегі қосылған"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Шолу"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Ішкі жад ретінде орнату"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Алынбалы жад ретінде орнату"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Шығару"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> жойылған"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Кейбір қолданбалар жетек қайта жалғанбайынша қол жетімсіз болады немесе дұрыс жұмыс істемейді."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Жадта орын жеткіліксіз."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Қолданба жоқ."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Қолданба көшірмеден қорғалған"</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Аймақ орнату жарамсыз."</string>
-    <string name="system_package" msgid="9200255718634512790">"Жүйе жаңартуларын сыртқы медиаға орнату мүмкін емес."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Қосымша мәліметтер"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Қайталау"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS маршрутизаторы ізделуде…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Маршрутизаторда Wi-Fi Protected Setup түймесін басыңыз.\nОл «WPS» деп аталуы немесе сол жағында таңба болуы мүмкін."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Жаңа PIN кодын орнатыңыз"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Жаңа PIN кодын қайта енгізіңіз"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Ескі PIN кодын енгізіңіз"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Сіз қате PIN кодын 5 рет енгіздіңіз.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> секунд ішінде әрекетті қайталаңыз."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Қате PIN кодын 5 рет енгіздіңіз.\nӘрекетті қайталаңыз <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Қате PIN коды, әрекетті қайталаңыз"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Әрекетті қайталаңыз, PIN кодтары сәйкес емес"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> құпия сөзін енгізіңіз"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Егер қолданбаны мәжбүрлеп тоқтатсаңыз, күтпеген әрекет көрсетуі мүмкін."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Жою"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Бұл қолданбаны жоюды қалайсыз ба?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Жаңартуларды жою"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Осы Android жүйесіндегі барлық жаңартулар жойылады."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Өшіру"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Осы қолданбаны өшіру керек пе?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Қосу"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Осы қолданбаны қосу керек пе?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Пайдаланылған жад"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> деңгейінде пайдаланылатын <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Деректерді тазалау"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Осы қолданбаның барлық деректері біржола жойылды.\nОның ішінде барлық файлдар, параметрлер, есептік жазбалар, дерекқорлар, т.б. бар."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Осы қолданбаның барлық деректері біржола жойылады."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Бұл барлық файлдарды, параметрлерді, есептік жазбаларды, дерекқорларды, т.б. қамтиды."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Әдепкі параметрлерді тазалау"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Кейбір әрекеттер үшін осы қолданбаны іске қосу үшін орнатыңыз"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Әдепкі параметрлер орнатылмаған"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Рұқсаттар"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Қолданба рұқсаттары"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%d</xliff:g> ішінен <xliff:g id="COUNT_0">%d</xliff:g> қолданбаға рұқсат етілген"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android қауіпсіздік түзетуінің деңгейі"</string>
 </resources>

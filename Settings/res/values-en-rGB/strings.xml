@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Accessibility"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Developer options"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"None"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Usage &amp; Diagnostics"</string>
     <string name="about_system_update" msgid="7282772247661356586">"System update"</string>
     <string name="about_preference" msgid="4131396784531360434">"About"</string>
     <string name="device_name" msgid="2670488158531273028">"Device name"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Audio"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Misc."</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Cached data"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Eject"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Erase &amp; format"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Format as device storage"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Not connected"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Migrate data"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Forget this internal storage"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"To use the apps or data this drive contains, replug it in. Alternatively, you can choose to forget this storage if the drive isn\'t available.\n\nIf you choose Forget, all the data the drive contains will be lost forever.\n\nYou can reinstall the apps later, but the data stored on this drive will be lost."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Device storage"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Removable storage"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"reset"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> is mounted"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Couldn\'t mount <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> is safely ejected"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Couldn\'t safely eject <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Could\'t find drive to eject"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> is formatted"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Couldn\'t format <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Format as internal storage"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"This requires the USB drive to be formatted to make it secure. After securely formatting, this drive will only work with this device. Formatting deletes all data currently stored on the drive. To avoid losing the data, consider backing it up."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Delete &amp; Format"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"After formatting, you can use this USB drive in other devices. All data will be deleted. Consider backing up first by moving apps to other internal storage."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formatting USB Drive…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"This may take a moment. Please don\'t remove the drive."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Move Data to <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Move your photos, files and app data to <xliff:g id="NAME">%1$s</xliff:g>. This may take a few minutes. Some apps won\'t work correctly during the move."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Move now"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Move later"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Migrated data to <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Could not migrate data to <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Moving Data to <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"This may take a moment. Please don\'t remove the drive.\nSome apps won\'t work correctly during the move."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"This drive appears to be slow."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"You can continue, but apps moved to this location may stutter and data transfers may take a long time. Consider using a faster drive for better performance."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Format"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Back up apps"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Apps stored in <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Apps and data stored in <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> available"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Eject internal storage"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Apps on this device storage will stop working when it\'s ejected. This USB drive is formatted to work on this device only. It won\'t work on any others."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Ejecting <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Storage used"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Moving <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Don\'t remove the drive during the move.\nThe <xliff:g id="APPNAME">%1$s</xliff:g> app on this device wont be available until the move is complete."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Forget internal storage?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"All your data stored in this drive will be lost forever with \'Forget\'. Would you like to proceed?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Forget"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB drive connected"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Browse"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Set up as internal storage"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Set up as removable storage"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Eject"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> removed"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Some apps will be unavailable or will not function correctly until the drive is reconnected."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Not enough storage space."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"App doesn\'t exist."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"App is copy-protected."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Install location isn\'t valid."</string>
-    <string name="system_package" msgid="9200255718634512790">"System updates cannot be installed on external media."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Find out more"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Retry"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Searching for WPS router…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Press the Wi-Fi Protected Setup button on your router.\nIt may be called \"WPS\" or contain the symbol to the left."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Set a new PIN"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Re-enter new PIN"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Enter old PIN"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"You entered the wrong PIN 5 times.\nTry again in <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> seconds."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"You entered the wrong PIN 5 times.\nTry again <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Wrong PIN, try again"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Try again, PIN doesn\'t match"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Enter password for <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"If you force stop an app, it may misbehave."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Uninstall"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Do you want to uninstall this app?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Uninstall updates"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"All updates to this Android system app will be uninstalled."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Disable"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Do you want to disable this app?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Enable"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Do you want to enable this app?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Storage used"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> used in <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Clear data"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"All this app’s data will be deleted permanently.\nThis includes all files, settings, accounts, databases, etc."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"All this app’s data will be deleted permanently."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"This includes all files, settings, accounts, databases etc."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Clear defaults"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Set to launch this app for some actions"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"No defaults set"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Permission"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"App permissions"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> of <xliff:g id="COUNT_1">%d</xliff:g> apps allowed"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android security patch level"</string>
 </resources>

@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"无障碍"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"开发者选项"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"无"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"使用情况和诊断信息"</string>
     <string name="about_system_update" msgid="7282772247661356586">"系统更新"</string>
     <string name="about_preference" msgid="4131396784531360434">"关于"</string>
     <string name="device_name" msgid="2670488158531273028">"设备名称"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"音频"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"其他"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"缓存数据"</string>
-    <string name="storage_eject" msgid="113476702798691558">"弹出"</string>
-    <string name="storage_format" msgid="3759273736493279595">"清空并格式化"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"格式化为内部存储设备"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"未连接"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"迁移数据"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"取消保存此内部存储设备"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"要使用此硬盘中包含的应用或数据，请将其重新插入。如果该硬盘无法使用，您可以选择取消保存此存储设备。\n\n如果您选择“取消保存”，那么该硬盘中包含的所有数据将永久丢失。\n\n虽然您以后可以重新安装这些应用，但存储在此硬盘上的这些应用数据将会丢失。"</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"内部存储设备"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"移动存储设备"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"重置"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"已装载<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"无法装载<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"已安全弹出<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"无法安全弹出<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"找不到要弹出的硬盘"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"已将<xliff:g id="NAME">%1$s</xliff:g>格式化"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"无法将<xliff:g id="NAME">%1$s</xliff:g>格式化"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"格式化为内部存储设备"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"U 盘必须进行格式化，以确保安全。安全地进行格式化之后，此 U 盘将只能在这台设备上使用。格式化操作会清空当前存储在此 U 盘上的所有数据。为避免丢失数据，建议您先将数据备份。"</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"清空并格式化"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"格式化此 U 盘之后，您就可以在其他设备上使用它了。格式化操作会将所有数据清空，因此建议您先将应用移动到其他内部存储设备上进行备份。"</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"正在格式化 U 盘…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"此过程可能需要一些时间，请勿移除此 U 盘。"</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"将数据移动到<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"将您的照片、文件和应用数据移动到<xliff:g id="NAME">%1$s</xliff:g>上。该操作可能需要几分钟的时间。在移动过程中，某些应用将无法正常运行。"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"立即移动"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"稍后移动"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"已将数据迁移到<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"无法将数据迁移到<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"正在将数据移动到<xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"该操作可能需要一些时间。请勿移除该 U 盘。\n在移动过程中，某些应用将无法正常运行。"</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"此 U 盘似乎运行缓慢。"</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"您可以继续使用，但应用移动到此处后可能无法流畅运行，而且数据传输可能会花费很长时间。建议您使用运行速度更快的 U 盘来提升性能。"</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"格式化"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"备份应用"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g>中存储的应用"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g>中存储的应用和数据"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"可用存储空间：<xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"弹出内部存储设备"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"此内部存储设备弹出后，其中的应用将会停止运行。此 U 盘已格式化为只能在这台设备上使用，因此在任何其他设备上将无法使用。"</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"正在弹出<xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"已使用的存储空间"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"正在移动<xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"请勿在移动过程中移除该云端硬盘。在移动操作完成前，您将无法使用此设备上的\n<xliff:g id="APPNAME">%1$s</xliff:g>应用。"</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"要取消保存内部存储设备吗？"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"选择“取消保存”后，此硬盘上存储的所有数据将永久丢失，要继续吗？"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"取消保存"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"U 盘已连接"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"浏览"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"设置为内部存储设备"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"设置为移动存储设备"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"弹出"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g>已被移除"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"在重新连接硬盘前，某些应用将不可用或无法正常运行。"</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"存储空间不足。"</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"应用不存在。"</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"应用受版权保护。"</string>
-    <string name="invalid_location" msgid="5269044848535157307">"安装位置无效。"</string>
-    <string name="system_package" msgid="9200255718634512790">"无法在外部介质上安装系统更新。"</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"了解详情"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"重试"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"正在搜索WPS路由器…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"请按下您路由器上的WLAN保护设置按钮，\n它可能会标有“WPS”字样或左侧这个符号。"</string>
@@ -291,7 +230,7 @@
     <string name="system_set_time" msgid="4661804115501057452">"设置时间"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"设置时区"</string>
     <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>（<xliff:g id="NAME">%2$s</xliff:g>）"</string>
-    <string name="system_set_time_format" msgid="4447882066895090612">"使用 24 小时制"</string>
+    <string name="system_set_time_format" msgid="4447882066895090612">"使用24小时格式"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g>（<xliff:g id="SAMPLE">%2$s</xliff:g>）"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"自动确定日期和时间"</string>
     <string name="desc_auto_date_time" msgid="6997571927680580633">"使用网络提供的时间"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"设置新的PIN码"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"重新输入新的PIN码"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"输入原来的PIN码"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"您已连续 5 次输错 PIN 码。\n请在 <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> 秒后重试。"</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"您已连续5次输错PIN码。\n请<xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>重试。"</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN码错误，请重试"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN码不匹配，请重试"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"输入“<xliff:g id="SSID">%1$s</xliff:g>”的密码"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"强行停止某个应用可能会导致其出现异常。"</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"卸载"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"要卸载此应用吗？"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"卸载更新"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"系统将会卸载此 Android 系统应用的所有相关更新。"</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"停用"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"要停用此应用吗？"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"启用"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"要启用此应用吗？"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"已使用的存储空间"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g>已使用 <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"清除数据"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"系统会永久删除此应用的所有数据。\n删除的内容包括所有文件、设置、帐户、数据库等。"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"此应用的所有数据都将被永久删除。"</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"这包括所有文件、设置、帐户、数据库等。"</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"清除默认操作"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"使用此应用处理某些操作"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"没有默认操作"</string>
@@ -596,7 +532,6 @@
     <string name="change_setting" msgid="2047402388786162246">"更改"</string>
     <string name="keep_settings" msgid="6798327196645732517">"不要更改"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"权限"</string>
-    <string name="device_apps_permissions" msgid="2966387603529725982">"应用所需权限"</string>
+    <string name="device_apps_permissions" msgid="2966387603529725982">"应用权限"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"已授权 <xliff:g id="COUNT_0">%d</xliff:g> 个应用（共 <xliff:g id="COUNT_1">%d</xliff:g> 个）"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android 安全补丁程序级别"</string>
 </resources>

@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Dostopnost"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Možnosti za razvijalce"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Brez"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Uporaba in diagnostika"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Sistemska posodobitev"</string>
     <string name="about_preference" msgid="4131396784531360434">"Vizitka"</string>
     <string name="device_name" msgid="2670488158531273028">"Ime naprave"</string>
@@ -218,66 +217,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Zvok"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Razno"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Predpomnjeni podatki"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Izvrženje"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Izbris in formatiranje"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Formatiranje kot prenosna shramba"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Ni povezave"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Selitev podatkov"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Pozabi to notranjo shrambo"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Če želite uporabiti aplikacije ali podatke na tem pogonu, ga znova priključite. Če pogon ni na voljo, lahko izberete, da se ta shramba pozabi.\n\nČe uporabite možnost »Pozabi«, bodo za vedno izgubljeni vsi podatki, shranjeni na tem pogonu.\n\nAplikacije lahko pozneje znova namestite, podatki, shranjeni na pogonu, pa bodo izgubljeni."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Shramba naprave"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Izmenljiva shramba"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Ponastavitev"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"Vpeto: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Tega ni bilo mogoče vpeti: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"To je varno izvrženo: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Tega ni bilo mogoče varno izvreči: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Pogona za izvrženje ni bilo mogoče najti"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"To je formatirano: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Tega ni bilo mogoče formatirati: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatiranje kot notranja shramba"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Če želite, da bo pogon USB varen, ga morate formatirati. Po varnem formatiranju bo ta pogon deloval samo s to napravo. S formatiranjem se izbrišejo vsi podatki, ki so trenutno shranjeni na pogonu USB. Če se želite izogniti izgubi podatkov, priporočamo, da jih varnostno kopirate."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Izbris in formatiranje"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Po formatiranju lahko uporabljate ta pogon USB z drugimi napravami. Vsi podatki bodo izbrisani. Priporočamo, da prej varnostno kopirate aplikacije, tako da jih premaknete v drugo notranjo shrambo."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formatiranje pogona USB …"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"To lahko traja kak trenutek. Ne odstranite pogona."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Premik podatkov v pogon <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Premaknite fotografije, datoteke in podatke aplikacij v pogon <xliff:g id="NAME">%1$s</xliff:g>. To lahko traja nekaj minut. Nekatere aplikacije med premikanjem ne bodo delovale pravilno."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Premik zdaj"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Premik pozneje"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Podatki so bili preseljeni v pogon <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Podatkov ni bilo mogoče premakniti v pogon <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Premikanje podatkov v pogon <xliff:g id="NAME">%1$s</xliff:g> …"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"To lahko traja kak trenutek. Ne odstranite pogona.\nNekatere aplikacije med premikanjem ne bodo delovale pravilno."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Videti je, da je ta pogon počasen."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Lahko nadaljujete, vendar se bodo aplikacije, premaknjene na to lokacijo, morda zatikale, prenos podatkov pa bo dolgotrajen. Razmislite o uporabi hitrejšega pogona, če želite boljše delovanje."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formatiranje"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Varnostno kopiranje aplikacij"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aplikacije, shranjene v shrambi <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Aplikacije in podatki, shranjeni v shrambi <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> na voljo"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Izvrženje notranje shrambe"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Aplikacije v tej shrambi naprave bodo prenehale delovati, ko jo izvržete. Ta pogon USB je formatiran tako, da deluje samo s to napravo. Z drugimi ne bo deloval."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Izvrženje pogona <xliff:g id="NAME">%1$s</xliff:g> …"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Uporabljena shramba"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Premikanje aplikacije <xliff:g id="NAME">%1$s</xliff:g> …"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Pogona med premikanjem ne odstranite.\nAplikacija <xliff:g id="APPNAME">%1$s</xliff:g> v tej napravi ne bo na voljo, dokler premik ne bo dokončan."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Želite pozabiti notranjo shrambo?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Če uporabite možnost »Pozabi«, bodo za vedno izgubljeni vsi podatki, shranjeni na tem pogonu. Ali želite nadaljevati?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Pozabi"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Pogon USB je povezan"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Brskanje"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Nastavitev kot notranja shramba"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Nastavitev kot izmenljiva shramba"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Izvrženje"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"Pogon <xliff:g id="NAME">%1$s</xliff:g> je odstranjen."</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Nekatere aplikacije ne bodo na voljo ali ne bodo pravilno delovale, dokler ne bo povezava s pogonom znova vzpostavljena."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Ni dovolj prostora za shranjevanje."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Aplikacija ne obstaja."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Aplikacija je zaščitena pred kopiranjem."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Mesto namestitve ni veljavno."</string>
-    <string name="system_package" msgid="9200255718634512790">"Sistemskih posodobitev ni mogoče namestiti na zunanji medij."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Več o tem"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Vnovični poskus"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Iskanje usmerjevalnika WPS …"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Pritisnite gumb »Wi‑Fi Protected Setup« na usmerjevalniku.\nMorda se imenuje »WPS« ali ima oznako, prikazano na levi."</string>
@@ -397,7 +336,7 @@
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Lestvica trajanja animacije"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Strog način je omogočen"</string>
     <string name="system_show_cpu_usage" msgid="4797599582027671138">"Prikaži uporabo CPE-ja"</string>
-    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Upodobitev profilov z GPE-jem"</string>
+    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Upodobitev profilov z GPU-jem"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Omogoči sledi"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"Ne obdrži dejavnosti"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"Omejitev postopkov v ozadju"</string>
@@ -539,7 +478,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Nastavitev nove kode PIN"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Vnovični vnos nove kode PIN"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Vnos stare kode PIN"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Petkrat ste vnesli napačno kodo PIN.\nPoskusite znova čez <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> s."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Petkrat ste vnesli napačno kodo PIN.\nPoskusite znova <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Napačna koda PIN, poskusite znova"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Poskusite znova. Koda PIN se ne ujema."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Vnesite geslo za <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -551,16 +490,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Če boste aplikacijo prisilno ustavili, morda ne bo pravilno delovala."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Odstrani"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Ali želite odstraniti to aplikacijo?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Odstrani posodobitve"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Vse posodobitve te aplikacije sistema Android bodo odstranjene."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Onemogoči"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Želite onemogočiti to aplikacijo?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Omogoči"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Želite omogočiti to aplikacijo?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Uporabljena shramba"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Uporabljeno: <xliff:g id="SIZE">%1$s</xliff:g> – <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Počisti podatke"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Vsi podatki te aplikacije bodo trajno izbrisani.\nTo vključuje vse datoteke, nastavitve, račune, podatkovne zbirke ipd."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Vsi podatki te aplikacije bodo trajno izbrisani."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"To vključuje vse datoteke, nastavitve, račune, zbirke podatkov ipd."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Izbris privzetih nastavitev"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Zagon te aplikacije za nekatera dejanja"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Ni privzetih nastavitev"</string>
@@ -576,7 +512,7 @@
     <string name="device_daydreams_test" msgid="9038920213402659591">"Začni zdaj"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"Kdaj sanjariti"</string>
     <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"Sanjarjenje se začne po tem obdobju nedejavnosti. Če sanjarjenje ni izbrano, se zaslon izklopi."</string>
-    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Po toliko nedejavnosti <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Po <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> nedejavnosti"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Čas za preklop v stanje pripravljenosti"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Po tem obdobju nedejavnosti se zaslon izklopi."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Trenutno niso v nobenem računu shranjeni varnostno kopirani podatki"</string>
@@ -607,6 +543,5 @@
     <string name="keep_settings" msgid="6798327196645732517">"Ne spremeni"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Dovoljenja"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Dovoljenja za aplik."</string>
-    <string name="app_permissions_group_summary" msgid="7906834786705287901">"Dovoljene aplikacije: <xliff:g id="COUNT_0">%d</xliff:g> od <xliff:g id="COUNT_1">%d</xliff:g>"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Raven popravkov za varnost v Androidu"</string>
+    <string name="app_permissions_group_summary" msgid="7906834786705287901">"Dovoljenih je bilo toliko aplikacij: <xliff:g id="COUNT_0">%d</xliff:g> od <xliff:g id="COUNT_1">%d</xliff:g>"</string>
 </resources>

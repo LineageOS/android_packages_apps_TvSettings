@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Hjælpefunktioner"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Valgmuligheder for udviklere"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Ingen"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Forbrug og diagnostik"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Systemopdatering"</string>
     <string name="about_preference" msgid="4131396784531360434">"Om"</string>
     <string name="device_name" msgid="2670488158531273028">"Enhedens navn"</string>
@@ -147,7 +146,7 @@
     <string name="title_wifi_no_networks_available" msgid="7127675763248224969">"Søger…"</string>
     <string name="title_wifi_could_not_save" msgid="708638317882707069">"Konfigurationen for <xliff:g id="SSID">%1$s</xliff:g> kunne ikke gemmes"</string>
     <string name="title_wifi_could_not_connect" msgid="9080004548419447580">"Der kunne ikke oprettes forbindelse til <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="title_wifi_could_not_connect_timeout" msgid="5158184646985406394">"<xliff:g id="SSID">%1$s</xliff:g> blev ikke fundet"</string>
+    <string name="title_wifi_could_not_connect_timeout" msgid="5158184646985406394">"<xliff:g id="SSID">%1$s</xliff:g> kunne ikke findes"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="4836595650380723944">"Wi-Fi-adgangskoden er ikke gyldig"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="328274688839033015">"Wi-Fi-netværket accepterede ikke forbindelsen"</string>
     <string name="title_wifi_advanced_options" msgid="5389467736846644832">"Vil du konfigurere proxy- og IP-indstillingerne for <xliff:g id="SSID">%1$s</xliff:g>?"</string>
@@ -216,72 +215,12 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Lyd"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Diverse"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Cachelagrede data"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Skub ud"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Slet og formatér"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Formatér lagerplads på enheden"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Ikke tilsluttet"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Flyt data"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Glem denne interne lagerplads"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Hvis du vil bruge de apps eller data, der er på dette drev, skal du indsætte det igen.\n\nHvis du vælger Glem, mister du alle de data, der er på drevet, permanent.\n\nDu kan installere appene igen på et senere tidspunkt, men de data, der er gemt på drevet, vil gå tabt."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Lagerplads på enheden"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Flytbart lager"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Nulstil"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> blev tilsluttet"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> kunne ikke tilsluttes"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> blev skubbet sikkert ud"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> kunne ikke skubbes sikkert ud"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Der er ingen drev, der kan skubbes ud"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> blev formateret"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> kunne ikke formateres"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatér som internt lager"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Dette kræver, at USB-drevet sikres ved hjælp af formatering. Efter formateringen fungerer dette drev kun på denne enhed. Ved formatering slettes alle data, der i øjeblikket er gemt på drevet. Du bør overveje at tage en sikkerhedskopi for at undgå at miste dine data."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Slet og formatér"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Når du har formateret USB-drevet, kan du bruge det i andre enheder. Alle data bliver slettet. Du bør overveje at sikkerhedskopiere appen først ved at flytte den til et andet internt lager."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formaterer USB-drev…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Dette kan tage lidt tid. Undgå at fjerne drevet."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Flyt data til <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Flyt dine billeder, filer og appdata til <xliff:g id="NAME">%1$s</xliff:g>. Dette kan tage et par minutter. Nogle apps vil ikke fungere korrekt under flytningen."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Flyt nu"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Flyt senere"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Dataene blev migreret til <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Dataene kunne ikke migreres til <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Flytter data til <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Dette kan tage et øjeblik. Du må ikke fjerne drevet.\nNogle apps virker ikke korrekt under flytningen."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Dette drev ser ud til at være langsomt."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Du kan sagtens fortsætte, men apps, der er flyttet til denne placering, vil muligvis hakke, og dataoverførsler kan tage længere tid. Du kan også skifte til et hurtigere drev for at få en bedre ydeevne."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formatér"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Sikkerhedskopiér apps"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Apps, der er gemt på <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Apps og data, der er gemt på <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> ledig lagerplads"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Skub det interne lager ud"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Apps på denne lagerenhed fungerer ikke længere, når du skubber enheden ud. Dette USB-drev er formateret til kun at fungere på denne enhed og ikke på nogen andre."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Skubber <xliff:g id="NAME">%1$s</xliff:g> ud…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Brugt lagerplads"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Flytter <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Fjern ikke drevet under flytningen.\nAppen <xliff:g id="APPNAME">%1$s</xliff:g> på denne enhed er først tilgængelig, når flytningen er gennemført."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Vil du glemme den interne lagerplads?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Alle dine data, der er gemt på dette drev, slettes permanent, hvis du vælger \"Glem\". Vil du fortsætte?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Glem"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB-drevet er tilsluttet"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Gennemse"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Konfigurer som intern lagerplads"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Konfigurer som flytbar lagerplads"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Skub ud"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> blev fjernet"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Visse apps vil ikke være tilgængelige eller fungere korrekt, før drevet er tilsluttet igen."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Der er ikke nok lagerplads."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Appen findes ikke."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Appen er kopibeskyttet."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Installationsplaceringen er ikke gyldig."</string>
-    <string name="system_package" msgid="9200255718634512790">"Systemopdateringer kan ikke installeres på eksterne medier."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Få flere oplysninger"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Prøv igen"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Søger efter WPS-router…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Tryk på knappen for Wi-Fi Protected Setup på din router.\nDen kaldes muligvis \"WPS\" eller indeholder symbolet til venstre."</string>
+    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Tryk på knappen for Wi-Fi-beskyttet konfiguration på din router.\nDen kaldes muligvis \"WPS\" eller indeholder symbolet til venstre."</string>
     <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Indtast pinkoden <xliff:g id="NUMBER">%1$s</xliff:g> på din Wi-Fi-router."</string>
     <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Når pinkoden er indtastet, kan det tage op til to minutter at fuldføre konfigurationen."</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Wi-Fi-routeren blev ikke fundet"</string>
+    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Wi-Fi-routeren kunne ikke findes"</string>
     <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Sikkerhedsindstillingen for Wi-Fi-routeren (WEP) understøttes ikke"</string>
     <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Sikkerhedsindstillingen for Wi-Fi-routeren (TKIP) understøttes ikke"</string>
     <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"Der er en anden igangværende WPS-session. Prøv igen om et par minutter."</string>
@@ -388,7 +327,7 @@
     <string name="system_show_layout_bounds" msgid="645732439882291943">"Vis layoutgrænser"</string>
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"Vis opdateringer af GPU-visning"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"Vis hardwarelag"</string>
-    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"Vis GPU-overlap"</string>
+    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"Vis GPU-overbelastning"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"Vis overfladeopdateringer"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"Animationsskala for vindue"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Overgangsanimationsskala"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Angiv en ny pinkode"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Indtast ny pinkode igen"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Indtast den gamle pinkode"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Du har indtastet en forkert pinkode fem gange.\nPrøv igen om <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> sekunder."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Du har indtastet pinkoden forkert fem gange.\nPrøv igen <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Forkert pinkode. Prøv igen"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Prøv igen. Pinkoden var forkert"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Angiv adgangskoden til <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Hvis du tvinger en app til at standse, kan det medføre, at den ikke fungerer korrekt."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Afinstaller"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Vil du afinstallere denne app?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Afinstaller opdateringer"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Alle opdateringer til dette Android-system afinstalleres."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Deaktiver"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Vil du deaktivere denne app?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Aktivér"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Vil du aktivere denne app?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Brugt lagerplads"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> brugt i <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Ryd data"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Alle data i denne app slettes permanent.\nDet omfatter alle filer, indstillinger, konti, databaser osv."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Alle denne apps data vil blive slettet permanent."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Dette omfatter alle filer, indstillinger, konti, databaser osv."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Ryd standarder"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Åbn denne app ved visse handlinger"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Der er ikke angivet nogen standarder"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Tilladelser"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Apptilladelser"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> ud af <xliff:g id="COUNT_1">%d</xliff:g> apps har tilladelse"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Niveau for sikkerhedsrettelse på Android"</string>
 </resources>

@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"ప్రాప్యత సామర్థ్యం"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"డెవలపర్ ఎంపికలు"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ఏదీ లేదు"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"వినియోగం &amp; విశ్లేషణలు"</string>
     <string name="about_system_update" msgid="7282772247661356586">"సిస్టమ్ నవీకరణ"</string>
     <string name="about_preference" msgid="4131396784531360434">"పరిచయం"</string>
     <string name="device_name" msgid="2670488158531273028">"పరికరం పేరు"</string>
@@ -154,7 +153,7 @@
     <string name="title_wifi_proxy_settings" msgid="7728120764469991303">"ప్రాక్సీ సెట్టింగ్‌లు"</string>
     <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"ప్రాక్సీ హోస్ట్‌ పేరు:"</string>
     <string name="title_wifi_proxy_port" msgid="9194893429116021337">"ప్రాక్సీ పోర్ట్:"</string>
-    <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"దీని కోసం ప్రాక్సీని విస్మరించు:"</string>
+    <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"దీని కోసం బైపాస్ ప్రాక్సీ:"</string>
     <string name="title_wifi_ip_settings" msgid="1176973848286865602">"IP సెట్టింగ్‌లు"</string>
     <string name="title_wifi_ip_address" msgid="1176502993805009566">"IP చిరునామా:"</string>
     <string name="title_wifi_gateway" msgid="7210935277165358134">"గేట్‌వే:"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"ఆడియో"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"నానావిధమైనవి"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"కాష్ చేసిన డేటా"</string>
-    <string name="storage_eject" msgid="113476702798691558">"తొలగించు"</string>
-    <string name="storage_format" msgid="3759273736493279595">"డేటా తొలగించి, ఫార్మాట్ చేయి"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"పరికర నిల్వగా ఫార్మాట్ చేయి"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"కనెక్ట్ చేయబడలేదు"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"డేటాను తరలించు"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"ఈ అంతర్గత నిల్వను విస్మరించు"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"ఈ డ్రైవ్ కలిగి ఉన్న అనువర్తనాలు లేదా డేటాను ఉపయోగించడానికి, దాన్ని మళ్లీ చొప్పించండి. డ్రైవ్ అందుబాటులో లేకపోతే ప్రత్యామ్నాయంగా మీరు ఈ నిల్వను విస్మరించేలా ఎంచుకోవచ్చు.\n\nమీరు విస్మరించాలని ఎంచుకుంటే, డ్రైవ్‌లో ఉన్న మొత్తం డేటాను శాశ్వతంగా కోల్పోతారు.\n\nమీరు తర్వాత అనువర్తనాలను మళ్లీ ఇన్‌స్టాల్ చేయవచ్చు, కానీ ఈ డ్రైవ్‌లో నిల్వ చేసిన వాటి డేటాను కోల్పోతారు."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"పరికర నిల్వ"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"తీసివేయదగిన నిల్వ"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"రీసెట్ చేయండి"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> మౌంట్ చేయబడింది"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g>ని మౌంట్ చేయలేకపోయింది"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> సురక్షితంగా తొలగించబడింది"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g>ని సురక్షితంగా తొలగించలేకపోయింది"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"తొలగించడానికి డ్రైవ్‌ను కనుగొనడం సాధ్యపడలేదు"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> ఫార్మాట్ చేయబడింది"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g>ని ఫార్మాట్ చేయలేకపోయింది"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"అంతర్గత నిల్వగా ఫార్మాట్ చేయండి"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"ఇందుకోసం USB డ్రైవ్‌ని సురక్షితంగా ఉంచడానికి దాన్ని ఫార్మాట్ చేయడం అవసరం. సురక్షితంగా ఫార్మాట్ చేసిన తర్వాత, ఈ డ్రైవ్ ఈ పరికరంతో మాత్రమే పని చేస్తుంది. ఫార్మాట్ చేస్తే ప్రస్తుతం డ్రైవ్‌లో నిల్వ చేయబడిన మొత్తం డేటా తొలగించబడుతుంది. డేటాను కోల్పోకుండా నివారించడం కోసం దాన్ని బ్యాకప్ చేయడానికి చూడండి."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"తొలగించండి &amp; ఫార్మాట్ చేయండి"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"ఫార్మాట్ చేసిన తర్వాత, మీరు ఈ USB డ్రైవ్‌ను ఇతర పరికరాల్లో ఉపయోగించవచ్చు. మొత్తం డేటా తొలగించబడుతుంది. ముందుగా అనువర్తనాలను మరో అంతర్గత నిల్వకు తరలించడం ద్వారా బ్యాకప్ చేయడానికి చూడండి."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB డ్రైవ్‌ను ఫార్మాట్ చేస్తోంది…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"దీనికి కొంత సమయం పట్టవచ్చు. దయచేసి డ్రైవ్‌ను తీసివేయవద్దు."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"<xliff:g id="NAME">%1$s</xliff:g>కి డేటాను తరలించండి"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"మీ ఫోటోలు, ఫైల్‌లు మరియు అనువర్తన డేటాను <xliff:g id="NAME">%1$s</xliff:g>కి తరలించండి. దీనికి కొన్ని నిమిషాలు పట్టవచ్చు. తరలింపు సమయంలో కొన్ని అనువర్తనాలు సరిగ్గా పని చేయవు."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"ఇప్పుడే తరలించు"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"తర్వాత తరలించు"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"<xliff:g id="NAME">%1$s</xliff:g>కి డేటా తరలించబడింది"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"<xliff:g id="NAME">%1$s</xliff:g>కి డేటాను తరలించడం సాధ్యపడలేదు"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"<xliff:g id="NAME">%1$s</xliff:g>కి డేటాను తరలిస్తోంది…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"దీనికి కొంత సమయం పట్టవచ్చు. దయచేసి డ్రైవ్‌ను తీసివేయవద్దు.\nతరలింపు సమయంలో కొన్ని అనువర్తనాలు సరిగ్గా పని చేయవు."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"ఈ డ్రైవ్ నెమ్మదిగా ఉన్నట్లు కనిపిస్తోంది."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"మీరు కొనసాగవచ్చు, కానీ ఈ స్థానానికి తరలించిన అనువర్తనాలు మధ్యమధ్యలో ఆటంకాలతో అంత బాగా పని చేయకపోవచ్చు మరియు డేటా బదిలీలకు ఎక్కువ సమయం పట్టవచ్చు. మెరుగైన పనితీరు కోసం వేగవంతమైన డ్రైవ్‌ని ఉపయోగించడం పరిశీలించండి."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"ఫార్మాట్ చేయి"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"అనువర్తనాలను బ్యాకప్ చేయి"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g>లో నిల్వ చేసిన అనువర్తనాలు"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g>లో నిల్వ చేసిన అనువర్తనాలు మరియు డేటా"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> అందుబాటులో ఉంది"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"అంతర్గత నిల్వను తొలగించండి"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"ఈ పరికర నిల్వను తొలగించినప్పుడు ఇందులోని అనువర్తనాలు పని చేయకుండా ఆగిపోతాయి. ఈ USB డ్రైవ్ ఈ పరికరంలో మాత్రమే పని చేసేలా ఫార్మాట్ చేయబడింది. ఇది ఇక వేటిలోనూ పని చేయదు."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g>ని తొలగిస్తోంది…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"వినియోగించిన నిల్వ"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g>ని తరలిస్తోంది…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"తరలించే సమయంలో డ్రైవ్‌ని తీసివేయవద్దు.\nతరలించడం పూర్తయ్యే వరకు ఈ పరికరంలోని <xliff:g id="APPNAME">%1$s</xliff:g> అనువర్తనం అందుబాటులో ఉండదు."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"అంతర్గత నిల్వను విస్మరించాలా?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'విస్మరించు\' ఎంచుకుంటే ఈ డ్రైవ్‌లో నిల్వ చేసిన మీ మొత్తం డేటాను శాశ్వతంగా కోల్పోతారు. మీరు కొనసాగించాలనుకుంటున్నారా?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"విస్మరించు"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB డ్రైవ్ కనెక్ట్ చేయబడింది"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"బ్రౌజ్ చేయండి"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"అంతర్గత నిల్వగా సెటప్ చేయి"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"తీసివేయదగిన నిల్వగా సెటప్ చేయి"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"తొలగించు"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> తీసివేయబడింది"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"డ్రైవ్‌ను మళ్లీ కనెక్ట్ చేసే వరకు కొన్ని అనువర్తనాలు అందుబాటులో ఉండవు లేదా సరిగ్గా పని చేయవు."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"తగినంత నిల్వ స్థలం లేదు."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"అనువర్తనం ఉనికిలో లేదు."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"అనువర్తనం కాపీ-రక్షితమైనది."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"ఇన్‌స్టాల్ స్థానం చెల్లదు."</string>
-    <string name="system_package" msgid="9200255718634512790">"సిస్టమ్ నవీకరణలను బాహ్య మీడియాలో ఇన్‌స్టాల్ చేయడం సాధ్యపడదు."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"మరింత తెలుసుకోండి"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"మళ్లీ ప్రయత్నించండి"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS రూటర్ కోసం శోధిస్తోంది…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"మీ రూటర్‌లో Wi-Fi సురక్షిత సెటప్ బటన్‌ను నొక్కండి.\nఇది \"WPS\" అని పిలవబడవచ్చు లేదా ఎడమవైపు గుర్తును కలిగి ఉంటుంది."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"కొత్త పిన్‌ని సెట్ చేయండి"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"కొత్త పిన్‌ని మళ్లీ నమోదు చేయండి"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"పాత పిన్‌ని నమోదు చేయండి"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"మీరు 5 సార్లు తప్పు PIN నమోదు చేసారు.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> సెకన్లలో మళ్లీ ప్రయత్నించండి."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"మీరు 5 సార్లు తప్పు పిన్‌ని నమోదు చేశారు.\nమళ్లీ ప్రయత్నించండి <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"తప్పు పిన్, మళ్లీ ప్రయత్నించండి"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"మళ్లీ ప్రయత్నించండి, పిన్ సరిపోలలేదు"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> కోసం పాస్‌వర్డ్‌ను నమోదు చేయండి"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"మీరు అనువర్తనాన్ని నిర్బంధంగా ఆపివేస్తే, అది సరిగ్గా పని చేయకపోవచ్చు."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"అన్ఇన్‌స్టాల్ చేయి"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"మీరు ఈ అనువర్తనాన్ని అన్ఇన్‌స్టాల్ చేయాలనుకుంటున్నారా?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"నవీకరణలను అన్‌ఇన్‌స్టాల్ చేయండి"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"ఈ Android సిస్టమ్ అనువర్తనానికి సంబంధించిన అన్ని నవీకరణలు అన్‌ఇన్‌స్టాల్ చేయబడతాయి."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"నిలిపివేయి"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"మీరు ఈ అనువర్తనాన్ని నిలిపివేయాలనుకుంటున్నారా?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"ప్రారంభించు"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"మీరు ఈ అనువర్తనాన్ని ప్రారంభించాలనుకుంటున్నారా?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"వినియోగించిన నిల్వ"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g>లో <xliff:g id="SIZE">%1$s</xliff:g> ఉపయోగించబడింది"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"డేటాను తీసివేయి"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"ఈ అనువర్తనం డేటా మొత్తం శాశ్వతంగా తొలగించబడుతుంది.\nఇందులోని అన్ని ఫైల్‌లు, సెట్టింగ్‌లు, ఖాతాలు, డేటాబేస్‌లు మొదలైనవి"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"ఈ అనువర్తనం డేటా మొత్తం శాశ్వతంగా తొలగించబడుతుంది."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"ఇందులో అన్ని ఫైల్‌లు, సెట్టింగ్‌లు, ఖాతాలు, డేటాబేస్‌లు మొదలైనవి ఉన్నాయి."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"డిఫాల్ట్‌లను తీసివేయి"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"కొన్ని చర్యలకు ఈ అనువ. ప్రారం. సెట్ చేయ."</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"డిఫాల్ట్‌లు ఏవీ సెట్ చేయలేదు"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"అనుమతులు"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"అనువర్తన అనుమతులు"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%d</xliff:g>లో <xliff:g id="COUNT_0">%d</xliff:g> అనువర్తనాలు అనుమతించబడ్డాయి"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android భద్రతా అతికింపు స్థాయి"</string>
 </resources>

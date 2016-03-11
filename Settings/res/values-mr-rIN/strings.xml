@@ -43,7 +43,7 @@
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"वाय-फाय बंद असताना देखील, Google च्या स्थान सेवेस आणि इतर अॅप्सना नेटवर्कसाठी स्कॅन करु द्या"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"वाय-फाय"</string>
     <string name="device_daydream" msgid="4933581408059561077">"डेड्रीम"</string>
-    <string name="device_display" msgid="101455384386372747">"प्रदर्शन"</string>
+    <string name="device_display" msgid="101455384386372747">"प्रदर्शन करा"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"सिस्टीम ध्वनी"</string>
     <string name="device_apps" msgid="9180435229638772838">"अॅप्स"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"संचयन आणि रीसेट"</string>
@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"प्रवेशयोग्यता"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"विकासक पर्याय"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"कोणतेही नाही"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"वापर आणि निदान"</string>
     <string name="about_system_update" msgid="7282772247661356586">"सिस्टम अद्यतन"</string>
     <string name="about_preference" msgid="4131396784531360434">"विषयी"</string>
     <string name="device_name" msgid="2670488158531273028">"डिव्हाइस नाव"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"ऑडिओ"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"संकीर्ण"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"कॅश केलेला डेटा"</string>
-    <string name="storage_eject" msgid="113476702798691558">"बाहेर काढा"</string>
-    <string name="storage_format" msgid="3759273736493279595">"मिटवा आणि फॉर्मेट करा"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"डिव्हाइस संचयन म्हणून स्वरूपित करा"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"कनेक्ट केलेले नाही"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"डेटा स्थलांतरित करा"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"हे अंतर्गत संचयन विसरा"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"या ड्राइव्ह मध्‍ये असलेले अ‍ॅप्स किंवा डेटा वापरण्‍यासाठी, त्यास त्यामध्‍ये पुन्हा प्लग करा. वैकल्पिकपणे, ड्राइव्ह उपलब्ध नसल्यास आपण हे संचयन विसरणे निवडू शकता.\n\nआपण विसरा निवडल्‍यास, ड्राइव्हमध्‍ये असलेला सर्व डेटा कायमचा गमावला जाईल.\n\nआपण अ‍ॅप्‍स नंतर पुन्हा स्थापित करू शकता परंतु या ड्राइव्हवर संचयित केलेला डेटा गमावला जाईल."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"डिव्‍हाइस संचयन"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"काढण्‍यायोग्य संचयन"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"रीसेट करा"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> माउंट केले"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> माउंट करणे शक्य झाले नाही"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षितपणे बाहेर काढले आहे"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षितपणे बाहेर काढणे शक्य झाले नाही"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"बाहेर काढण्‍यासाठी ड्राइव्ह सापडली नाही"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> स्वरूपित झाले"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> स्वरूपित करणे शक्य झाले नाही"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"अंतर्गत संचयन म्हणून फॉर्मेट करा"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"हे सुरक्षित करण्यासाठी यास USB ड्राइव्ह फॉर्मेट करणे आवश्यक आहे. सुरक्षितपणे फॉर्मेट केल्यानंतर, हा ड्राइव्ह केवळ या डिव्हाइससह कार्य करेल. फॉर्मेट करण्यामुळे ड्राइव्हवर सध्या संचयित केलेला सर्व डेटा मिटविला जातो. डेटा गमावणे टाळण्यासाठी, त्याचा बॅकअप घेण्याचा विचार करा."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"मिटवा आणि फॉर्मेट करा"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"फॉर्मेट केल्यानंतर, आपण हा USB ड्राइव्ह अन्य डिव्‍हाइसेसमध्‍ये वापरू शकता. सर्व डेटा मिटविला जाईल. अन्य अंतर्गत संचयनावर अ‍ॅप्स हलवून प्रथम बॅकअप घेण्‍याचा विचार करा."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB ड्राइव्ह फॉर्मेट करत आहे…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"यास एक क्षण लागू शकतो. कृपया ड्राइव्ह काढू नका."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"डेटा <xliff:g id="NAME">%1$s</xliff:g> वर हलवा"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"आपले फोटो, फायली आणि अ‍ॅप डेटा <xliff:g id="NAME">%1$s</xliff:g> वर हलवा. यास काही मिनिटे लागू शकतात. हलविण्‍यादरम्यान काही अ‍ॅप्स योग्यरित्या कार्य करणार नाहीत."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"आता हलवा"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"नंतर हलवा"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"डेटा <xliff:g id="NAME">%1$s</xliff:g> वर स्थलांतरित केला"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"डेटा <xliff:g id="NAME">%1$s</xliff:g> वर स्थलांतरित करणे शक्य झाले नाही"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"डेटा <xliff:g id="NAME">%1$s</xliff:g> वर हलवित आहोत…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"यास क्षणभर लागू शकतो. कृपया ड्राइव्ह काढू नका.\nहलविण्‍यादरम्यान काही अ‍ॅप्स योग्यरित्या कार्य करणार नाहीत."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"हा ड्राइव्ह धीमा झाल्यासारखे दिसते आहे."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"आपण सुरु ठेवू शकता, परंतु या स्थानावर हलविलेल्या अॅप्समध्ये अडथळा येऊ शकतो आणि डेटा स्थानांतरणास बराच वेळ लागू शकतो. अधिक चांगल्या कार्यप्रदर्शनासाठी आणखी जलद ड्राइव्ह वापरण्याचा विचार करा."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"फॉर्मेट करा"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"बॅकअप अ‍ॅप्‍स"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> मध्ये संचयित केलेले अॅप्स"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> मध्ये संचयित केलेले अॅप्स आणि डेटा"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> उपलब्ध"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"अंतर्गत संचयन बाहेर काढा"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"बाहेर काढल्‍यानंतर या डिव्‍हाइस संचयनावरील अ‍ॅप्स कार्य करणे थांबवतील. हा USB ड्राइव्ह केवळ या डिव्‍हाइसवर कार्य करण्यासाठी फॉर्मेट केला आहे. तो अन्य कोणत्याही डिव्‍हाइसवर कार्य करणार नाही."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> बाहेर काढत आहे…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"वापरलेले संचयन"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> हलवित आहे…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"हलविण्यादरम्यान ड्राइव्ह काढू नका.\nहलविणे पूर्ण होईपर्यंत या डिव्हाइसवरील <xliff:g id="APPNAME">%1$s</xliff:g> अॅप उपलब्ध नसेल."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"अंतर्गत संचयन विेसरायचे?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"या ड्राइव्हमध्‍ये संचयित केलेला आपला सर्व डेटा \'विसरा\' सह कायमचा गमावला जाईल. आपण पुढे सुरु ठेवू इच्छिता?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"विसरा"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB ड्राइव्ह कनेक्‍ट केला"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"ब्राउझ करा"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"अंतर्गत संचयन म्हणून सेट करा"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"काढण्‍यायोग्य संचयन म्हणून सेट करा"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"बाहेर काढा"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> काढला"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"ड्राइव्ह पुन्हा कनेक्ट करेपर्यंत काही अ‍ॅप्‍स अनुपलब्ध असतील किंवा योग्यरित्या कार्य करणार नाहीत."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"पुरेसे संचयन स्थान नाही."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"अॅप अस्तित्वात नाही."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"अॅप कॉपी-संरक्षित आहे."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"स्थापना स्थान वैध नाही."</string>
-    <string name="system_package" msgid="9200255718634512790">"बाह्य मीडियावर सिस्टम अद्यतने स्थापित केली जाऊ शकत नाहीत."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"अधिक जाणून घ्या"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"पुन्हा प्रयत्न करा"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS राउटरकरिता शोधत आहे..."</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"आपल्या राउटरवरील वाय-फाय संरक्षित सेटअप बटण दाबा.\nत्यास \"WPS\" म्हणून संबोधले जाऊ शकते किंवा डावीकडे चिन्ह असू शकते."</string>
@@ -320,7 +259,7 @@
     <string name="accessibility_service_settings" msgid="322888335240595695">"सेवा सेटिंग्ज"</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"मथळे"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"व्हिडिओवर उपशीर्षक मजकूर आच्छादनासाठी सेटिंग्ज"</string>
-    <string name="captions_display" msgid="735692527287125548">"प्रदर्शन"</string>
+    <string name="captions_display" msgid="735692527287125548">"प्रदर्शित करा"</string>
     <string name="captions_display_on" msgid="1989009878719500520">"चालू"</string>
     <string name="captions_display_off" msgid="496953007835201523">"बंद"</string>
     <string name="display_options" msgid="5504549024985225774">"पर्याय प्रदर्शित करा"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"नवीन पिन सेट करा"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"नवीन पिन पुन्हा प्रविष्‍ट करा"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"जुना पिन प्रविष्‍ट करा"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"आपण चुकीचा पिन 5 वेळा प्रविष्‍ट केला.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> सेकंदांनी पुन्हा प्रयत्न करा."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"आपण चुकीचा पिन 5 वेळा प्रविष्‍ट केला. \nपुन्हा प्रयत्न करा<xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"चुकीचा पिन, पुन्हा प्रयत्न करा"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"पुन्हा प्रयत्न करा, पिन जुळत नाही"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> साठी संकेतशब्द प्रविष्‍ट करा"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"आपण अ‍ॅपला सक्तीेने थांबविल्‍यास, ते कदाचित गैरवर्तन असू शकते."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"विस्थापित करा"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"आपण हा अॅप विस्थापित करू इच्छिता?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"अद्यतने विस्थापित करा"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"या Android सिस्टम अॅप वरील सर्व अद्यतने विस्थापित केली जातील."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"अक्षम करा"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"आपण हा अॅप अक्षम करू इच्छिता?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"सक्षम करा"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"आपण हा अॅप सक्षम करू इच्छिता?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"वापरलेले संचयन"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> मध्ये <xliff:g id="SIZE">%1$s</xliff:g> वापरले"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"डेटा साफ करा"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"या अॅप चा सर्व डेटा कायमचा हटविला जाईल.\nयात सर्व फायली, सेटिंग्ज, खाती, डेटाबेस इ. समाविष्ट होते."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"या अॅप चा सर्व डेटा कायमचा हटविला जाईल."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"यात सर्व फायली, सेटिंग्ज, खाती, डटाबेस, इ. समाविष्ट होते"</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"डीफॉल्ट साफ करा"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"काही क्रियांसाठी हा अॅप लाँच करण्यासाठी सेट करा"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"कोणताही डीफॉल्ट सेट केलेला नाही."</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"परवानग्या"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"अॅप परवानग्या"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%d</xliff:g> पैकी <xliff:g id="COUNT_0">%d</xliff:g> अ‍ॅप्सना अनुमती आहे"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android सुरक्षितता पॅच दर्जा"</string>
 </resources>

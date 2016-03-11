@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"அணுகல்தன்மை"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"டெவெலப்பர் விருப்பங்கள்"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ஏதுமில்லை"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"உபயோகம் &amp; பிழை ஆய்வுகள்"</string>
     <string name="about_system_update" msgid="7282772247661356586">"முறைமை புதுப்பிப்பு"</string>
     <string name="about_preference" msgid="4131396784531360434">"அறிமுகம்"</string>
     <string name="device_name" msgid="2670488158531273028">"சாதனத்தின் பெயர்"</string>
@@ -131,7 +130,7 @@
     <string name="connected" msgid="7563100162902079938">"இணைக்கப்பட்டது"</string>
     <string name="not_connected" msgid="6858480380326923017">"இணைக்கப்படவில்லை"</string>
     <string name="wifi_setting_header_available_networks" msgid="6244107218643835636">"வைஃபை"</string>
-    <string name="wifi_setting_header_other_options" msgid="1530334691232749342">"பிற வசதிகள்"</string>
+    <string name="wifi_setting_header_other_options" msgid="1530334691232749342">"பிற விருப்பங்கள்"</string>
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"எல்லாம் காட்டு"</string>
     <string name="wifi_setting_available_networks" msgid="1244646604369133314">"கிடைக்கும் நெட்வொர்க்குகள்"</string>
     <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"WPS மூலம் இணை"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"ஆடியோ"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"மற்றவை"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"தற்காலிகத் தரவு"</string>
-    <string name="storage_eject" msgid="113476702798691558">"வெளியேற்று"</string>
-    <string name="storage_format" msgid="3759273736493279595">"அழி &amp; மீட்டமை"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"சாதனச் சேமிப்பகமாக மீட்டமை"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"இணைக்கப்படவில்லை"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"தரவை நகர்த்து"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"இந்த அகச் சேமிப்பகத்தை அகற்று"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"இந்த டிரைவில் உள்ள பயன்பாடுகள் அல்லது தரவைப் பயன்படுத்த, அதை மீண்டும் செருகவும். டிரைவ் இல்லை எனில், இந்தச் சேமிப்பகத்தை அகற்றிவிடவும்.\n\nஅகற்றுவதைத் தேர்ந்தெடுத்தால், டிரைவில் உள்ள எல்லா தரவையும் இழப்பீர்கள்.\n\nபயன்பாடுகளை மீண்டும் நிறுவிக்கொள்ளலாம், எனினும் இந்தச் சாதனத்தில் உள்ள அவற்றின் தரவு மீண்டும் கிடைக்காது."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"சாதனச் சேமிப்பகம்"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"அகற்றப்படக்கூடிய சேமிப்பகம்"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"மீட்டமை"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> பொருத்தப்பட்டது"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g>ஐப் பொருத்த முடியவில்லை"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> பாதுகாப்பாக வெளியேற்றப்பட்டது"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g>ஐப் பாதுகாப்பாக வெளியேற்ற முடியவில்லை"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"வெளியேற்ற, டிரைவ் ஏதுமில்லை"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> மீட்டமைக்கப்பட்டது"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g>ஐ மீட்டமைக்க முடியவில்லை"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"அகச் சேமிப்பகமாக மீட்டமை"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"இதைப் பாதுகாப்பானதாக்க, USB டிரைவை மீட்டமைக்க வேண்டும். பாதுகாப்பாக மீட்டமைத்த பிறகு, இந்தச் சாதனத்தில் மட்டுமே டிரைவ் வேலைசெய்யும். மீட்டமைவு, டிரைவில் தற்போது சேமிக்கப்பட்டுள்ள எல்லா தரவையும் அழிக்கும். தரவு இழப்பைத் தவிர்க்க, காப்புப் பிரதி எடுக்கவும்."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"அழி &amp; மீட்டமை"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"மீட்டமைத்த பிறகு, பிற சாதனங்களில் இந்த USB டிரைவைப் பயன்படுத்தலாம். எல்லா தரவு அழிக்கப்படும் என்பதால், பிற அகச் சேமிப்பகத்திற்கு பயன்பாடுகளை நகர்த்துவதன் மூலம் முதலில் எல்லாவற்றையும் காப்புப் பிரதி எடுக்கவும்."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB டிரைவை மீட்டமைக்கிறது…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"இதற்குச் சிறிது நேரம் ஆகலாம். டிரைவை அகற்ற வேண்டாம்."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"தரவை <xliff:g id="NAME">%1$s</xliff:g>க்கு நகர்த்தவும்"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"படங்கள், கோப்புகள் மற்றும் பயன்பாட்டுத் தரவு ஆகியவற்றை <xliff:g id="NAME">%1$s</xliff:g>க்கு நகர்த்தும். இதற்குச் சில நிமிடங்கள் ஆகலாம். நகர்த்தும் போது சில பயன்பாடுகள் சரியாகச் செயல்படாது."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"இப்போதே நகர்த்து"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"பிறகு நகர்த்து"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"தரவு <xliff:g id="NAME">%1$s</xliff:g>க்கு நகர்த்தப்பட்டது"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"தரவை <xliff:g id="NAME">%1$s</xliff:g>க்கு நகர்த்த முடியவில்லை"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"தரவை <xliff:g id="NAME">%1$s</xliff:g>க்கு நகர்த்துகிறது…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"இதற்குச் சிறிது நேரம் ஆகலாம். டிரைவை அகற்ற வேண்டாம்.\nநகர்த்தும் போது சில பயன்பாடுகள் சரியாகச் செயல்படாது."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"இந்த டிரைவின் வேகம் குறைவாக உள்ளது."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"நீங்கள் தொடரலாம், இந்த இடத்தில் பயன்பாடுகளை நகர்த்துவதற்கு இடையூறு ஏற்படலாம் மற்றும் தரவைப் பரிமாற்றுவதற்கு அதிக நேரம் எடுக்கலாம். சிறந்த செயல்திறனுக்கு, வேகமான டிரைவைப் பயன்படுத்தவும்."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"மீட்டமை"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"பயன்பாடுகளைக் காப்புப் பிரதியெடு"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> இல் சேமித்த பயன்பாடுகள்"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> இல் சேமித்த பயன்பாடுகளும் தரவும்"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> உள்ளது"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"அகச் சேமிப்பகத்தை வெளியேற்று"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"வெளியேற்றப்பட்டதும், இந்தச் சாதன சேமிப்பகத்தில் உள்ள பயன்பாடுகள் வேலை செய்யாது. இந்தச் சாதனத்தில் மட்டும் இயங்குமாறு USB டிரைவ் மீட்டமைக்கப்பட்டது. இது வேறு சாதனங்களில் வேலை செய்யாது."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g>ஐ வெளியேற்றுகிறது…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"பயன்படுத்திய சேமிப்பிடம்"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g>ஐ நகர்த்துகிறது…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"நகர்த்தும் போது இயக்ககத்தை அகற்ற வேண்டாம்.\nநகர்த்தி முடிக்கும் வரை இந்தச் சாதனத்தில் உள்ள <xliff:g id="APPNAME">%1$s</xliff:g> பயன்பாட்டைப் பயன்படுத்த முடியாது."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"அகச் சேமிப்பகத்தை அகற்றவா?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'அகற்று\' என்பதைத் தேர்வுசெய்தால், இந்த டிரைவில் சேமித்திருக்கும் எல்லா தரவையும் இழப்பீர்கள். தொடர விரும்புகிறீர்களா?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"அகற்று"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB டிரைவ் இணைக்கப்பட்டது"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"உலாவு"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"அகச் சேமிப்பகமாக அமை"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"அகற்றக்கூடிய சேமிப்பகமாக அமை"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"வெளியேற்று"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> அகற்றப்பட்டது"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"டிரைவை மீண்டும் இணைக்கும் வரை சில பயன்பாடுகள் கிடைக்காது அல்லது சரியாகச் செயல்படாது."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"போதுமான சேமிப்பிடம் இல்லை."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"பயன்பாடு இல்லை."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"பயன்பாட்டை நகலெடுக்க முடியாது."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"நிறுவும் இடம் சரியானதல்ல."</string>
-    <string name="system_package" msgid="9200255718634512790">"வெளிப்புற மீடியாவில் முறைமை புதுப்பிப்புகளை நிறுவ முடியாது."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"மேலும் அறிக"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"மீண்டும் முயலவும்"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS ரூட்டரைத் தேடுகிறது…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"உங்கள் ரூட்டரில் வைஃபைப் பாதுகாப்பு அமைவு பட்டனை அழுத்தவும்.\nஇது \"WPS\" என அழைக்கப்படும் அல்லது இடப்புறத்தில் இந்தக் குறியீடு இருக்கும்:"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"புதிய PINஐ அமைக்கவும்"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"புதிய PINஐ மீண்டும் உள்ளிடவும்"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"பழைய PINஐ உள்ளிடவும்"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"பின்னை 5 முறை தவறாக உள்ளிட்டுள்ளீர்கள்.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> வினாடிகள் கழித்து முயற்சிக்கவும்."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"5 முறை தவறாக PINஐ உள்ளிட்டுள்ளீர்கள்.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>, மீண்டும் முயலவும்."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"தவறான PIN, மீண்டும் முயலவும்"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"மீண்டும் முயலவும், PIN பொருந்தவில்லை"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g>க்கான கடவுச்சொல்லை உள்ளிடுக"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"பயன்பாட்டை உடனே நிறுத்தினால், தவறாகச் செயல்படலாம்."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"நிறுவல் நீக்கு"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"பயன்பாட்டை நிறுவல் நீக்கவா?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"புதுப்பிப்புகளை நிறுவல் நீக்கு"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"இந்த Android அமைப்பின் பயன்பாட்டிற்கான எல்லா புதுப்பிப்புகளும் நிறுவல் நீக்கப்படும்."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"முடக்கு"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"பயன்பாட்டை முடக்க விரும்புகிறீர்களா?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"இயக்கு"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"பயன்பாட்டை இயக்க விரும்புகிறீர்களா?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"பயன்படுத்திய சேமிப்பிடம்"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> இல் <xliff:g id="SIZE">%1$s</xliff:g> பயன்படுத்தப்பட்டது"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"தரவை அழி"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"பயன்பாட்டின் எல்லா தரவும் நிரந்தரமாக நீக்கப்படும்.\nஇதில் எல்லா கோப்புகளும் அமைப்புகளும் கணக்குகளும் தரவுத்தளங்களும் மேலும் பலவும் அடங்கும்."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"பயன்பாட்டின் எல்லா தரவும் நிரந்தரமாக நீக்கப்படும்."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"இதில் எல்லா கோப்புகளும், அமைப்புகளும், கணக்குகளும், தரவுத்தளங்களும், மேலும் பலவும் அடங்கும்."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"இயல்புநிலைகளை அழி"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"சிலவற்றிற்கு பயன்பாட்டை தொடங்க, அமைக்கவும்"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"இயல்புநிலைகள் அமைக்கப்படவில்லை"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"அனுமதிகள்"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"பயன்பாட்டு அனுமதிகள்"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"அனுமதிக்கப்படும் பயன்பாடுகள்: <xliff:g id="COUNT_0">%d</xliff:g> / <xliff:g id="COUNT_1">%d</xliff:g>"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android பாதுகாப்பின் இணைப்புநிரல் நிலை"</string>
 </resources>

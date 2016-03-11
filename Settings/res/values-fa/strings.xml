@@ -71,7 +71,7 @@
     <string name="accessory_connected" msgid="2156489304110030393">"متصل"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"در حال جستجوی لوازم جانبی…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"قبل از مرتبط کردن دستگاه‌های بلوتوث خودتان، اطمینان حاصل کنید در حالت مرتبط‌سازی هستند"</string>
-    <string name="accessories_autopair_msg" msgid="8618829246837821752">"دستگاهی یافت شد و به‌طور خودکار بعد از <xliff:g id="COUNTDOWN">%1$s</xliff:g> ثانیه مرتبط می‌شود"</string>
+    <string name="accessories_autopair_msg" msgid="8618829246837821752">"دستگاهی یافت شد و به طور خودکار بعد از <xliff:g id="COUNTDOWN">%1$s</xliff:g> ثانیه مرتبط می‌شود"</string>
     <string name="accessories_add_title_multiple" msgid="8455249961819802466">"چند دستگاه یافت شد"</string>
     <string name="accessories_add_multiple" msgid="3900633668371061399">"برای انتخاب دستگاهی دیگر، دکمه مرتبط‌سازی را در این دستگاه فشار دهید"</string>
     <string name="accessories_add_multiple_select" msgid="3696794187001405647">"برای مرتبط کردن با دستگاه انتخاب شده، دکمه مرتبط‌سازی را در این دستگاه فشار دهید و به مدت ۵ ثانیه نگه دارید"</string>
@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"قابلیت دسترسی"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"گزینه‌های برنامه‌نویسان"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"هیچ‌‌کدام"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"میزان استفاده و عیب‌یابی"</string>
     <string name="about_system_update" msgid="7282772247661356586">"به‌روزرسانی سیستم"</string>
     <string name="about_preference" msgid="4131396784531360434">"درباره"</string>
     <string name="device_name" msgid="2670488158531273028">"نام دستگاه"</string>
@@ -175,7 +174,7 @@
     <string name="wifi_action_change_network" msgid="5196215981075986148">"تغییر داده شود"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"تغییر داده نشود"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"تأیید"</string>
-    <string name="wifi_action_advanced_no" msgid="8165601242122651326">"نه (توصیه می‌شود)"</string>
+    <string name="wifi_action_advanced_no" msgid="8165601242122651326">"خیر (توصیه می‌شود)"</string>
     <string name="wifi_action_proxy_none" msgid="4457231399674182650">"هیچ‌کدام"</string>
     <string name="wifi_action_proxy_manual" msgid="8402002777441261064">"دستی"</string>
     <string name="wifi_action_dhcp" msgid="6338911832360962268">"DHCP"</string>
@@ -216,70 +215,10 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"صدا"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"متفرقه"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"داده‌های موجود در حافظه پنهان"</string>
-    <string name="storage_eject" msgid="113476702798691558">"خارج کردن"</string>
-    <string name="storage_format" msgid="3759273736493279595">"پاک کردن و قالب‌بندی"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"قالب‌بندی به عنوان فضای ذخیره‌سازی دستگاه"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"متصل نیست"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"انتقال داده‌ها"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"این حافظه داخلی فراموش شود"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"برای استفاده از برنامه‌ها یا داده‌هایی که در این درایو موجود است، آن را دوباره جاگذاری کنید. همچنین، اگر درایو در دسترس نیست، می‌توانید فراموش کردن این دستگاه ذخیره‌سازی را انتخاب کنید.\n\nاگر فراموش کردن را انتخاب کنید، همه داده‌هایی که در این درایو وجود دارد، برای همیشه از دست می‌رود.\n\nمی‌توانید بعداً برنامه‌ها را دوباره نصب کنید، اما داده‌های ذخیره شده در این درایو از بین می‌رود."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"حافظه دستگاه"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"حافظه جداشدنی"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"بازنشانی"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> جاگذاری شد"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> جاگذاری نشد"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> به‌طور ایمن خارج شد"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> به‌طور ایمن خارج نشد"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"درایو برای بیرون راندن پیدا نشد"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> قالب‌بندی شد"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> قالب‌بندی نشد"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"قالب‌بندی به عنوان حافظه داخلی"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"این دستگاه قالب‌بندی درایو USB را برای ایمن کردن آن الزامی می‌کند. بعد از قالب‌بندی ایمن، این درایو فقط در این دستگاه کار می‌کند. با قالب‌بندی، همه داده‌هایی که درحال‌حاضر در این درایو ذخیره شده است، پاک می‌شود. برای از دست ندادن داده، سعی کنید آنها را پشتیبان‌گیری کنید."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"پاک کردن و قالب‌بندی"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"پس از قالب‌بندی، می‌توانید از این درایو USB در سایر دستگاه‌ها استفاده کنید. همه داده‌ها پاک می‌شوند. با انتقال برنامه‌ها به حافظه داخلی دیگری، ابتدا پشتیبان‌گیری کنید."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"در حال قالب‌بندی درایو USB…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"ممکن است چند دقیقه طول بکشد. لطفاً درایو را جدا نکنید."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"انتقال داده‌ها به <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"عکس‌ها، فایل‌ها و داده‌های برنامه‌تان را به <xliff:g id="NAME">%1$s</xliff:g> منتقل کنید. ممکن است این کار چند دقیقه طول بکشد. در طول انتقال، بعضی از برنامه‌ها درست کار نمی‌کنند."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"انتقال در این لحظه"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"انتقال در زمانی دیگر"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"داده‌ها به <xliff:g id="NAME">%1$s</xliff:g> منتقل شدند"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"داده‌ها به <xliff:g id="NAME">%1$s</xliff:g> منتقل نشدند"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"در حال انتقال داده‌ها به <xliff:g id="NAME">%1$s</xliff:g>..."</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"ممکن است این کار کمی طول بکشد. لطفاً درایو را جدا نکنید.\nدر طول انتقال، بعضی از برنامه‌ها درست کار نمی‌کنند."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"به نظر می‌رسد این درایو کند است."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"می‌توانید ادامه دهید، اما برنامه‌هایی که به این مکان انتقال داده می‌شوند ممکن است وقفه داشته باشند و احتمال دارد انتقال داده‌ها مدت زیادی طول بکشد. برای عملکرد بهتر، استفاده از یک درایو سریع‌تر را در نظر بگیرید."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"قالب‌بندی"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"پشتیبان‌گیری از برنامه‌ها"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"برنامه‌ها در <xliff:g id="NAME">%1$s</xliff:g> ذخیره شدند"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"برنامه‌ها و اطلاعات در <xliff:g id="NAME">%1$s</xliff:g> ذخیره شدند"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> در دسترس"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"خارج کردن حافظه داخلی"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"در صورت خارج کردن دستگاه‌ ذخیره‌سازی، برنامه‌های موجود در آن دیگر کار نمی‌کنند. این درایو USB تنها برای کار کردن در این دستگاه قالب‌بندی شده است. در دستگاه دیگری کار نمی‌کند."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"درحال بیرون راندن <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"فضای ذخیره‌سازی استفاده شده"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"در حال انتقال <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"در طول انتقال، درایو را جدا نکنید.\nتا زمانی که انتقال به پایان نرسد، برنامه <xliff:g id="APPNAME">%1$s</xliff:g> در این دستگاه در دسترس نیست."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"حافظه داخلی فراموش شود؟"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"با انتخاب «فراموش شود» همه داده‌هایتان که در این درایو ذخیره شده برای همیشه از دست می‌رود. می‌خواهید ادامه دهید؟"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"فراموش شود"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"درایو USB متصل شد"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"مرور"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"راه‌اندازی یک حافظه داخلی"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"راه‌اندازی یک حافظه جداشدنی"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"خارج کردن"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> خارج شد"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"تا وقتی درایو دوباره متصل نشود، بعضی از برنامه‌ها دردسترس نیستند یا درست عمل نمی‌کنند."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"فضای ذخیره‌سازی کافی نیست."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"برنامه وجود ندارد."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"برنامه در برابر کپی‌برداری محافظت شده است."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"محل نصب معتبر نیست."</string>
-    <string name="system_package" msgid="9200255718634512790">"به‌روز‌رسانی‌های سیستم بر روی رسانه‌های خارجی نصب نمی‌شود."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"بیشتر بدانید"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"سعی مجدد"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"در حال جستجو برای مسیریاب WPS..."</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"دکمه راه‌اندازی حفاظت‌شده Wi‑Fi را در رهیابتان فشار دهید.\nاین دکمه ممکن است WPS نامیده شود یا نماد آن در سمت راست باشد."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"پین <xliff:g id="NUMBER">%1$s</xliff:g> را در رهیاب Wi-Fi خود وارد کنید"</string>
+    <string name="wifi_wps_instructions" msgid="3618110962669110034">"دکمه تنظیم Wi-Fi Protected را در مسیریابتان فشار دهید.\nاین دکمه ممکن است «WPS» نامیده شود یا دارای نمادی در سمت چپ باشد."</string>
+    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"پین <xliff:g id="NUMBER">%1$s</xliff:g> را در روتر Wi-Fi خودتان وارد کنید"</string>
     <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"بعد از آنکه پین را وارد کردید، ممکن است تا ۲ دقیقه طول بکشد تا راه‌اندازی به پایان برسد"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"روتر Wi-Fi یافت نشد"</string>
     <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"تنظیم امنیتی روتر Wi-Fi (‏WEP) پشتیبانی نمی‌شود"</string>
@@ -312,7 +251,7 @@
     <string name="third_party_location_services_title" msgid="4089136801976399147">"سرویس‌های مبتنی بر مکان شخص ثالث"</string>
     <string name="location_reporting" msgid="3054236612250063073">"گزارش‌دهی موقعیت مکانی"</string>
     <string name="location_history" msgid="2946680949724247804">"سابقه موقعیت مکانی"</string>
-    <string name="location_reporting_desc" msgid="6256424995139430823">"Google از این قابلیت در محصولاتی مانند Google Now و Google Maps استفاده می‌کند. روشن کردن گزارش‌گیری موقعیت مکانی به محصولات Google اجازه می‌دهد از این قابلیت برای ذخیره و استفاده از جدیدترین داده‌های مکانی دستگاه شما در ارتباط با حساب Google شما استفاده کنند."</string>
+    <string name="location_reporting_desc" msgid="6256424995139430823">"Google از این قابلیت در محصولاتی مانند Google Now و Google Maps استفاده می‌کند. روشن کردن گزارش‌گیری موقعیت مکانی به محصولات Google اجازه می‌دهد از این قابلیت برای ذخیره و استفاده از جدیدترین اطلاعات مکان دستگاه شما در ارتباط با حساب Google شما استفاده کنند."</string>
     <string name="location_history_desc" msgid="3861249867748294369">"هنگامی که سابقه موقعیت مکانی برای این حساب روشن است، Google می‌تواند داده‌های مکان دستگاهتان را ذخیره کند تا برنامه‌هایتان از آنها استفاده کنند.\n\nبه‌عنوان مثال، Google Maps می‌تواند مسیرها را به شما نشان دهد و Google Now می‌تواند شما را از ترافیک رفت و آمد مطلع سازد.\n\nمی‌توانید در هر زمان سابقه موقعیت مکانی را خاموش کنید، اما انجام این کار سابقه را حذف نمی‌کند. برای مشاهده و مدیریت سابقه موقعیت مکانی خود، از maps.google.com/locationhistory بازدید کنید."</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"حذف سابقه موقعیت مکانی"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"این کار همه سابقه موقعیت مکانی که از این دستگاه برای این حساب Google ذخیره شده است را حذف خواهد کرد. نمی‌توانید این حذف را واگردانید و برخی از برنامه‌ها از جمله Google Now از کار خواهند ایستاد."</string>
@@ -395,7 +334,7 @@
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"مقیاس طول مدت انیماتور"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"حالت شدید فعال شد"</string>
     <string name="system_show_cpu_usage" msgid="4797599582027671138">"نمایش میزان استفاده از CPU"</string>
-    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"پردازش GPU نمایه"</string>
+    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"اجرای GPU نمایه"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"فعال کردن ردیابی"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"فعالیت‌ها را ادامه ندهید"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"محدودیت پردازش در پس‌زمینه"</string>
@@ -407,13 +346,13 @@
     <string name="system_desc_usb_debugging" msgid="5168830368191788731">"با اتصال USB، حالت رفع‌اشکال فعال شود"</string>
     <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"برنامه اشکال‌زدایی شده منتظر پیوست شدن اشکال‌زدا قبل از اجرا است"</string>
     <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"نمایش محدوده کلیپ، حاشیه‌ها، غیره"</string>
-    <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"در طراحی با GPU، نماها در داخل پنجره‌ها فلش شوند"</string>
+    <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"هنگام طراحی با ‏GPU،‏ نماها در داخل پنجره‌ها درخشان شوند"</string>
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"وقتی لایه‌های سخت‌افزاری به‌روزرسانی‌ می‌شوند، به رنگ سبز درخشان شوند"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"از بهترین تا بدترین: آبی، سبز، قرمز روشن، قرمز"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"هنگام به‌روزرسانی سطوح پنجره همه درخشان شوند"</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"چشمک زدن صفحه هنگام انجام عملیات طولانی توسط برنامه‌ها در رشته اصلی"</string>
     <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"هم‌پوشانی صفحه استفاده کنونی از CPU را نمایش می‌دهد"</string>
-    <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"اندازه‌گیری زمان پردازش در adb shell dumpsys gfxinfo"</string>
+    <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"اندازه‌گیری زمان اجرا در adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"فعال"</string>
     <string name="action_off_title" msgid="3157728958166559966">"خاموش"</string>
     <string name="action_on_description" msgid="4559342592998850852">"فعال"</string>
@@ -457,7 +396,7 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"عادی"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"سریع"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"بسیار سریع"</string>
-    <string name="title_current_keyboard" msgid="4259032357469819835">"صفحه‌کلید کنونی"</string>
+    <string name="title_current_keyboard" msgid="4259032357469819835">"صفحه‌کلید فعلی"</string>
     <string name="title_configure" msgid="6929522003149212388">"پیکربندی"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"گزینه‌های صفحه کلید"</string>
     <string name="computing_size" msgid="2955133568424704042">"‫در حال محاسبه..."</string>
@@ -469,7 +408,7 @@
     <string name="alwaysUseQuestion" msgid="7128459989232213727">"همیشه از این گزینه برای این عملکرد استفاده شود؟"</string>
     <string name="alwaysUseOption" msgid="1057645533268907906">"همیشه استفاده از"</string>
     <string name="justOnceOption" msgid="6051458702672920102">"فقط این بار"</string>
-    <string name="noApplications" msgid="4197983402774959346">"هیچ برنامه‌ای نمی‌‎تواند این عملکرد را انجام دهد."</string>
+    <string name="noApplications" msgid="4197983402774959346">"هیچ برنامه‌ای نمی‎تواند این عملکرد را انجام دهد."</string>
     <string name="noAppsGoBack" msgid="5663180241276177314">"برگشت"</string>
     <string name="inputs_inputs" msgid="4249080110281833521">"ورودی‌ها"</string>
     <string name="inputs_header_cec" msgid="3701104827756278489">"کنترل الکترونیکی مصرف کننده (CEC)"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"پین جدیدی تنظیم کنید"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"پین جدید را دوباره وارد کنید"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"پین قدیمی را وارد کنید"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"کد پین را ۵ بار اشتباه وارد کردید.\nبعد از <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> ثانیه دوباره امتحان کنید."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"پین را ۵ بار اشتباه وارد کردید.\nدوباره امتحان کنید <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"پین اشتباه است، دوباره امتحان کنید"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"دوباره امتحان کنید، پین مطابقت ندارد"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"‫گذرواژه‌ای برای <xliff:g id="SSID">%1$s</xliff:g> وارد کنید"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"توقف اجباری یک برنامه، ممکن است باعث عملکرد نادرست آن شود."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"حذف نصب"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"می‌خواهید این برنامه را حذف نصب کنید؟"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"حذف نصب به‌روزرسانی‌ها"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"همه به‌روزرسانی‌های این برنامه سیستم Android حذف نصب می‌شوند."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"غیرفعال‌ کردن"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"می‌خواهید این برنامه را غیرفعال کنید؟"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"فعال کردن"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"می‌خواهید این برنامه را فعال کنید؟"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"فضای ذخیره‌سازی استفاده شده"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> از <xliff:g id="VOLUME">%2$s</xliff:g> را استفاده کرده است"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"پاک کردن داده‌ها"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"همه داده‌های این برنامه به صورت دائمی حذف می‌شود.\nاین شامل تمام فایل‌ها، تنظیمات، حساب‌ها، پایگاه‌های داده و دیگر موارد می‌شود."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"تمام داده‌های این برنامه برای همیشه حذف می‌شود."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"این شامل همه فایل‌ها، تنظیمات، حساب‌ها، پایگاه داده‌، و غیره می‌شود"</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"پاک کردن پیش‌فرض‌ها"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"راه‌اندازی این برنامه برای برخی اقدامات"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"هیچ پیش‌فرضی تنظیم نشده است"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"مجوزها"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"مجوزهای برنامه"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> از <xliff:g id="COUNT_1">%d</xliff:g> برنامه‌های مجاز"</string>
-    <string name="security_patch" msgid="2131617390189164481">"سطح وصله امنیتی Android"</string>
 </resources>

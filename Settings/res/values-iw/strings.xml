@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"נגישות"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"אפשרויות מפתח"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ללא"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"שימוש ואבחון"</string>
     <string name="about_system_update" msgid="7282772247661356586">"עדכון מערכת"</string>
     <string name="about_preference" msgid="4131396784531360434">"מידע כללי"</string>
     <string name="device_name" msgid="2670488158531273028">"שם המכשיר"</string>
@@ -218,66 +217,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"אודיו"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"שונות"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"נתונים בקובץ שמור"</string>
-    <string name="storage_eject" msgid="113476702798691558">"הוצא"</string>
-    <string name="storage_format" msgid="3759273736493279595">"מחק ופרמט"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"פרמט כאחסון המכשיר"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"לא מחובר"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"העבר נתונים"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"שכח את האחסון הפנימי הזה"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"כדי להשתמש באפליקציות או בנתונים בכונן הזה, הכנס אותו שוב. לחלופין, תוכל לבחור לשכוח את האחסון הזה אם הכונן אינו זמין. \n\nאם תבחר באפשרות \'שכח\', כל הנתונים שבכונן יאבדו לצמיתות. \n\nתוכל להתקין מחדש את האפליקציות מאוחר יותר, אך הנתונים שהיו מאוחסנים בכונן הזה יאבדו."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"אחסון במכשיר"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"אחסון נשלף"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"איפוס"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"הטעינה של <xliff:g id="NAME">%1$s</xliff:g> בוצעה"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"לא ניתן היה לטעון את <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> הוצא בבטחה"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"לא ניתן היה להוציא את <xliff:g id="NAME">%1$s</xliff:g> בבטחה"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"לא ניתן היה למצוא כונן להוצאה"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"הפרמוט של <xliff:g id="NAME">%1$s</xliff:g> בוצע"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"לא ניתן היה לפרמט את <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"פרמוט כאחסון פנימי"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"יש לפרמט את כונן ה-USB כדי להשתמש בו בבטחה כאחסון פנימי. לאחר הפרמוט המאובטח, הכונן הזה יפעל רק עם המכשיר הזה. פרמוט מוחק את כל הנתונים המאוחסנים בכונן. יש לגבות את הנתונים כדי לא לאבד אותם."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"מחק ופרמט"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"לאחר הפרמוט, תוכל להשתמש בכונן ה-USB הזה במכשירים אחרים. כל הנתונים יימחקו. מומלץ ראשית לבצע גיבוי על ידי העברת אפליקציות אל אחסון פנימי אחר."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"מפרמט כונן USB…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"הפעולה עשויה לארוך כמה רגעים. אל תסיר את הכונן."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"העברת נתונים אל <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"העבר את התמונות, הקבצים ונתוני אפליקציות אל <xliff:g id="NAME">%1$s</xliff:g>. הפעולה עשויה לארוך מספר דקות. אפליקציות מסוימות לא יפעלו כראוי בזמן ההעברה."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"העבר עכשיו"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"העבר במועד מאוחר יותר"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"הנתונים הועברו אל <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"לא ניתן היה להעביר נתונים אל <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"מעביר נתונים אל <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"הפעולה עשויה לארוך כמה רגעים. אל תסיר את הכונן.\nאפליקציות מסוימות לא יפעלו כראוי בזמן ההעברה."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"נראה שהכונן הזה פועל באיטיות."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"תוכל להמשיך, אבל אפליקציות שהועברו אל המיקום הזה עשויות לפעול באופן מקוטע והעברות הנתונים עשויות לארוך זמן רב. מומלץ להשתמש בכונן מהיר יותר לשיפור הביצועים."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"פרמוט"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"גבה אפליקציות"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"אפליקציות המאוחסנות ב-<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"אפליקציות ונתונים המאוחסנים ב-<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> זמינים"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"הוצא אחסון פנימי"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"אפליקציות באחסון המכשיר הזה יפסיקו לפעול אם תוציא אותו. כונן ה-USB הזה הוגדר באמצעות פרמוט לפעול במכשיר הזה בלבד. הוא לא יפעל במכשירים אחרים."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"מוציא את <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"שטח אחסון בשימוש"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"מעביר את <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"אל תסיר את הכונן בהעברה.\n<xliff:g id="APPNAME">%1$s</xliff:g> לא יהיה זמין לפני ההשלמה."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"האם לשכוח את האחסון הפנימי?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"כל הנתונים המאוחסנים בכונן הזה יאבדו לצמיתות אם תבחר באפשרות \'שכח\'. האם ברצונך להמשיך?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"שכח"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"חובר כעת התקן USB"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"דפדף"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"הגדר כאחסון פנימי"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"הגדר כאחסון נשלף"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"הוצא"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> הוסר."</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"חלק מהאפליקציות לא יהיו זמינות או שלא יתפקדו כראוי עד שהכונן יחובר מחדש."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"אין מספיק שטח אחסון."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"האפליקציה לא קיימת."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"האפליקציה מוגנת בפני העתקה."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"מיקום ההתקנה אינו חוקי."</string>
-    <string name="system_package" msgid="9200255718634512790">"לא ניתן להתקין עדכוני מערכת במדיה חיצונית."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"למידע נוסף"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"נסה שוב"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"מחפש נתב WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"לחץ על הלחצן Wi-Fi Protected Setup בנתב שלך.\nייתכן שהוא ייקרא WPS או שיופיע בו הסמל שמימין."</string>
@@ -362,7 +301,7 @@
     <string name="system_play_sample" msgid="7187293932891811148">"השמע קטע לדוגמה"</string>
     <string name="system_install_voice_data" msgid="8920883886563714355">"התקן נתוני קול"</string>
     <string name="system_general" msgid="3535958631591158282">"כללי"</string>
-    <string name="system_debugging" msgid="7204447785851191331">"ניפוי באגים"</string>
+    <string name="system_debugging" msgid="7204447785851191331">"ניקוי באגים"</string>
     <string name="system_input" msgid="6164987320529039626">"קלט"</string>
     <string name="system_drawing" msgid="6573389872154957039">"ציור"</string>
     <string name="system_monitoring" msgid="8424072546138094053">"מעקב"</string>
@@ -377,7 +316,7 @@
     <string name="system_always_check" msgid="1866566828098009853">"בדוק תמיד"</string>
     <string name="system_bt_hci_log" msgid="2425757846046504431">"רישום HCI של Bluetooth"</string>
     <string name="system_email_address" msgid="8669468986250302378">"כתובת אימייל"</string>
-    <string name="system_usb_debugging" msgid="3777895294421924323">"ניפוי באגים ב-USB"</string>
+    <string name="system_usb_debugging" msgid="3777895294421924323">"ניקוי באגים ב-USB"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"אפשר מיקומים מדומים"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"בחר אפליקציה לתיקון באגים"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"המתן למנקה באגים"</string>
@@ -406,8 +345,8 @@
     <string name="system_desc_hdcp_checking" msgid="6879753401058891183">"השתמש עבור תוכן DRM בלבד"</string>
     <string name="system_desc_hdmi_optimization" msgid="4400727262768931480">"בצע אופטימיזציה של המסך לרזולוציה מקסימלית או לקצב הפריימים המקסימלי. הגדרה זו משפיעה רק על מסכי Ultra HD. שינוי ההגדרה הזו יאתחל את המכשיר."</string>
     <string name="system_desc_bt_hci_log" msgid="4219265203570411773">"הפעל רישום Snoop עבור HCI של Bluetooth"</string>
-    <string name="system_desc_usb_debugging" msgid="5168830368191788731">"מצב ניפוי באגים כאשר USB מחובר"</string>
-    <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"אפליקציה שעברה ניפוי באגים ממתינה שמנקה הבאגים יצרף אותה לפני ההרצה"</string>
+    <string name="system_desc_usb_debugging" msgid="5168830368191788731">"מצב ניקוי באגים כאשר USB מחובר"</string>
+    <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"אפליקציה שעברה ניקוי באגים ממתינה שמנקה הבאגים יצרף אותה לפני ההרצה"</string>
     <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"הצג גבולות קליפ, שוליים וכו\'"</string>
     <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"הצג הבהוב של תצוגות בתוך חלונות בעת ציור באמצעות ה-GPU"</string>
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"הצג הבהוב ירוק לשכבות חומרה כשהן מתעדכנות"</string>
@@ -539,7 +478,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"הגדר מספר PIN חדש"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"הזן שוב את מספר ה-PIN החדש"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"הזן מספר PIN ישן"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"הזנת PIN שגוי 5 פעמים.\nנסה שוב בעוד <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> שניות."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"הזנת מספר PIN שגוי 5 פעמים.\nנסה שוב <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"מספר ה-PIN שגוי. נסה שוב"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"נסה שוב. מספר ה-PIN אינו תואם"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"הזן סיסמה עבור <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -551,16 +490,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"אם תאלץ עצירה של אפליקציה, ייתכן שהיא לא תפעל כהלכה."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"הסר התקנה"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"האם אתה רוצה להסיר את ההתקנה של האפליקציה הזו?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"הסר התקנה של עדכונים"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"כל העדכונים לאפליקציית מערכת Android הזו יוסרו."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"השבת"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"האם ברצונך להשבית את האפליקציה הזו?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"הפעל"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"האם ברצונך להפעיל את האפליקציה הזו?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"שטח אחסון בשימוש"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> בשימוש ב-<xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"נקה נתונים"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"כל נתוני האפליקציה הזו יימחקו לצמיתות.\nנתונים אלה כוללים את כל הקבצים, ההגדרות, החשבונות, מסדי הנתונים וכו\'."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"כל הנתונים של האפליקציה הזו יימחקו לצמיתות."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"הפעולה הזו כוללת את כל הקבצים, ההגדרות, החשבונות, מסדי הנתונים וכו\'."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"נקה ברירות מחדל"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"הגדר הפעלה של האפליקציה לפעולות מסוימות"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"לא הוגדרו ברירות מחדל"</string>
@@ -608,5 +544,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"אישורים"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"הרשאות לאפליקציות"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> מתוך <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות קיבלו הרשאה"</string>
-    <string name="security_patch" msgid="2131617390189164481">"רמה תיקון האבטחה ב-Android"</string>
 </resources>

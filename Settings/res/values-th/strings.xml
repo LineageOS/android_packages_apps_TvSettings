@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"การเข้าถึง"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"ตัวเลือกสำหรับนักพัฒนา"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ไม่มี"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"การใช้และการวินิจฉัย"</string>
     <string name="about_system_update" msgid="7282772247661356586">"การอัปเดตระบบ"</string>
     <string name="about_preference" msgid="4131396784531360434">"เกี่ยวกับ"</string>
     <string name="device_name" msgid="2670488158531273028">"ชื่ออุปกรณ์"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"เสียง"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"เบ็ดเตล็ด"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"ข้อมูลในแคช"</string>
-    <string name="storage_eject" msgid="113476702798691558">"นำอุปกรณ์ออก"</string>
-    <string name="storage_format" msgid="3759273736493279595">"ลบและฟอร์แมต"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"ฟอร์แมตเป็นที่จัดเก็บข้อมูล"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"ไม่ได้เชื่อมต่อ"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"ย้ายข้อมูล"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"ไม่จำที่จัดเก็บข้อมูลภายในนี้"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"หากต้องการใช้แอปหรือข้อมูลที่อยู่ในไดรฟ์นี้ ให้เสียบไดรฟ์ใหม่ หรือคุณสามารถเลือกไม่จำที่เก็บข้อมูลนี้หากไดรฟ์ไม่พร้อมใช้งาน\n\nหากคุณเลือกไม่จำ ข้อมูลทั้งหมดในไดรฟ์จะสูญหายอย่างถาวร\n\nคุณสามารถติดตั้งแอปอีกครั้งในภายหลัง แต่ข้อมูลที่จัดเก็บไว้ในไดรฟ์นี้จะสูญหาย"</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"ที่เก็บข้อมูลอุปกรณ์"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"ที่เก็บข้อมูลแบบถอดได้"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"รีเซ็ต"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"ต่อเชื่อม <xliff:g id="NAME">%1$s</xliff:g> แล้ว"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"ไม่สามารถต่อเชื่อม <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"นำ <xliff:g id="NAME">%1$s</xliff:g> ออกได้อย่างปลอดภัยแล้ว"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"ไม่สามารถนำ <xliff:g id="NAME">%1$s</xliff:g> ออกได้อย่างปลอดภัย"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"ไม่พบไดรฟ์ที่จะดีดออก"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"ฟอร์แมต <xliff:g id="NAME">%1$s</xliff:g> แล้ว"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"ไม่สามารถฟอร์แมต <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"ฟอร์แมตเป็นที่จัดเก็บข้อมูลภายใน"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"การดำเนินการนี้จำเป็นต้องฟอร์แมตไดรฟ์ USB เพื่อให้มีความปลอดภัย หลังการฟอร์แมตอย่างปลอดภัย ไดรฟ์นี้จะทำงานบนอุปกรณ์นี้เท่านั้น การฟอร์แมตจะลบข้อมูลทั้งหมดที่จัดเก็บไว้ในไดรฟ์ในปัจจุบัน ขอแนะนำให้คุณสำรองข้อมูลเพื่อหลีกเลี่ยงการสูญหายของข้อมูล"</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"ลบและฟอร์แมต"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"หลังจากฟอร์แมต คุณสามารถใช้ไดรฟ์ USB นี้ในอุปกรณ์อื่นๆ ระบบจะลบข้อมูลทั้งหมดออก โปรดพิจารณาสำรองข้อมูลก่อนโดยย้ายแอปไปยังที่จัดเก็บข้อมูลภายในอื่นๆ"</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"กำลังฟอร์แมตไดรฟ์ USB…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"การดำเนินการนี้อาจใช้เวลาสักครู่ โปรดอย่านำไดรฟ์ออก"</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"ย้ายข้อมูลไปที่ <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"ย้ายรูปภาพ ไฟล์ และข้อมูลแอปไปที่ <xliff:g id="NAME">%1$s</xliff:g> การย้ายอาจใช้เวลาสักครู่ แอปบางแอปจะทำงานไม่ถูกต้องขณะย้าย"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"ย้ายเลย"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"ย้ายในภายหลัง"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"ย้ายข้อมูลไปที่ <xliff:g id="NAME">%1$s</xliff:g> แล้ว"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"ไม่สามารถย้ายข้อมูลไปที่ <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"กำลังย้ายข้อมูลไปที่ <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"การดำเนินการนี้อาจใช้เวลาสักครู่ โปรดอย่านำไดรฟ์ออก\nแอปบางแอปจะทำงานไม่ถูกต้องขณะย้าย"</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"ดูเหมือนว่าไดรฟ์นี้ทำงานช้า"</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"คุณสามารถดำเนินการต่อ แต่แอปที่ย้ายไปยังตำแหน่งนี้อาจทำงานไม่สม่ำเสมอและการโอนข้อมูลอาจใช้เวลานาน โปรดพิจารณาการใช้ไดรฟ์ที่เร็วขึ้นเพื่อเพิ่มประสิทธิภาพ"</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"ฟอร์แมต"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"สำรองข้อมูลแอป"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"แอปที่เก็บไว้ใน<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"แอปและข้อมูลที่เก็บไว้ใน<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"เหลือพื้นที่ว่าง <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"ดีดที่จัดเก็บข้อมูลภายในออก"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"แอปในที่จัดเก็บข้อมูลของอุปกรณ์นี้จะหยุดทำงานเมื่อดีดออก ไดรฟ์ USB จะได้รับการฟอร์แมตให้ทำงานบนอุปกรณ์นี้เท่านั้น โดยจะไม่ทำงานบนอุปกรณ์อื่นๆ"</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"กำลังดีด <xliff:g id="NAME">%1$s</xliff:g> ออก…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"ที่จัดเก็บข้อมูลที่ใช้ไป"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"กำลังย้าย <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"ห้ามนำไดรฟ์ออกขณะย้าย\nแอป <xliff:g id="APPNAME">%1$s</xliff:g> บนอุปกรณ์นี้จะใช้ไม่ได้จนกว่าจะย้ายเสร็จ"</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"ไม่จำที่จัดเก็บข้อมูลภายในใช่ไหม"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"ข้อมูลที่จัดเก็บในไดรฟ์นี้ทั้งหมดจะสูญหายอย่างถาวรเมื่อเลือก \"ไม่จำ\" คุณต้องการดำเนินการต่อไหม"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"ไม่จำ"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"เชื่อมต่อไดรฟ์ USB แล้ว"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"เรียกดู"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"ตั้งค่าเป็นที่จัดเก็บข้อมูลภายใน"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"ตั้งค่าเป็นที่จัดเก็บข้อมูลแบบถอดออกได้"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"นำอุปกรณ์ออก"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"นำ <xliff:g id="NAME">%1$s</xliff:g> ออกแล้ว"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"แอปบางแอปจะไม่สามารถใช้ได้หรือทำงานไม่ถูกต้องจนกว่าจะมีการเชื่อมต่อไดรฟ์อีกครั้ง"</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"พื้นที่จัดเก็บข้อมูลไม่เพียงพอ"</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"ไม่มีแอปนี้"</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"แอปมีการป้องกันการคัดลอก"</string>
-    <string name="invalid_location" msgid="5269044848535157307">"ตำแหน่งที่ติดตั้งไม่ถูกต้อง"</string>
-    <string name="system_package" msgid="9200255718634512790">"ติดตั้งการอัปเดตระบบบนสื่อภายนอกไม่ได้"</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"เรียนรู้เพิ่มเติม"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"ลองอีกครั้ง"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"ค้นหาเราเตอร์ WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"กดปุ่มการตั้งค่าการป้องกัน Wi-Fi บนเราเตอร์\nปุ่มนี้อาจเขียนว่า \"WPS\" หรือมีสัญลักษณ์ทางด้านซ้าย"</string>
@@ -378,7 +317,7 @@
     <string name="system_usb_debugging" msgid="3777895294421924323">"การแก้ปัญหา USB"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"อนุญาตให้จำลองตำแหน่ง"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"เลือกแอปที่จะแก้ปัญหา"</string>
-    <string name="system_wait_for_debugger" msgid="4007354935701089555">"รอโปรแกรมแก้ไขข้อบกพร่อง"</string>
+    <string name="system_wait_for_debugger" msgid="4007354935701089555">"รอเครื่องมือแก้ไขข้อบกพร่อง"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"ยืนยันแอปผ่าน USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"ตรวจสอบแอปที่ติดตั้งผ่าน ADB/ADT เพื่อตรวจดูพฤติกรรมที่เป็นอันตราย"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"การบันทึกรายละเอียด Wi-Fi"</string>
@@ -437,7 +376,7 @@
     <string name="enable_opengl_traces_none" msgid="6074804146602749420">"ไม่มี"</string>
   <string-array name="animation_scale_entries">
     <item msgid="7477134110460336436">"ปิดภาพเคลื่อนไหว"</item>
-    <item msgid="8327257151534006014">"ภาพเคลื่อนไหวขนาด 0.5 เท่า"</item>
+    <item msgid="8327257151534006014">"ภาพเคลื่อนไหวขนาด .5 เท่า"</item>
     <item msgid="2105786719544636780">"ภาพเคลื่อนไหวขนาด 1 เท่า"</item>
     <item msgid="5290554136790336403">"ภาพเคลื่อนไหวขนาด 1.5 เท่า"</item>
     <item msgid="1232929590838082483">"ภาพเคลื่อนไหวขนาด 2 เท่า"</item>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"ตั้ง PIN ใหม่"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"ป้อน PIN ใหม่อีกครั้ง"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"ป้อน PIN เก่า"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"คุณป้อน PIN ผิด 5 ครั้งแล้ว\nลองอีกครั้งใน <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> วินาที"</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"คุณป้อน PIN ผิด 5 ครั้งแล้ว\nลองอีกครั้ง <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>"</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN ผิด ลองอีกครั้ง"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"ลองอีกครั้ง PIN ไม่ตรงกัน"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"ป้อนรหัสผ่านสำหรับ <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"หากคุณบังคับให้หยุดแอป การทำงานอาจผิดพลาดได้"</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"ถอนการติดตั้ง"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"คุณต้องการถอนการติดตั้งแอปนี้ไหม"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"ถอนการติดตั้งการอัปเดต"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"การอัปเดตทั้งหมดของแอประบบ Android นี้จะถูกถอนการติดตั้ง"</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"ปิดใช้"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"ต้องการปิดใช้แอปนี้ไหม"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"เปิดใช้"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"ต้องการเปิดใช้แอปนี้ไหม"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"ที่จัดเก็บข้อมูลที่ใช้ไป"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"ใช้ <xliff:g id="SIZE">%1$s</xliff:g> แล้วใน<xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"ล้างข้อมูล"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"ระบบจะลบข้อมูลของแอปนี้ทั้งหมดโดยถาวร\nซึ่งรวมถึงไฟล์ การตั้งค่า บัญชี และฐานข้อมูลทั้งหมด ฯลฯ"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"ข้อมูลทั้งหมดของแอปนี้จะถูกลบอย่างถาวร"</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"ข้อมูลดังกล่าวรวมถึงไฟล์ การตั้งค่า บัญชี ฐานข้อมูล เป็นต้น"</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"ล้างค่าเริ่มต้น"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"ตั้งค่าเพื่อเปิดแอปนี้ในการทำงานบางอย่าง"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"ไม่ได้ตั้งค่าเริ่มต้นไว้"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"สิทธิ์"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"สิทธิ์ของแอป"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"อนุญาต <xliff:g id="COUNT_0">%d</xliff:g> จาก <xliff:g id="COUNT_1">%d</xliff:g> แอปแล้ว"</string>
-    <string name="security_patch" msgid="2131617390189164481">"ระดับแพตช์ความปลอดภัยของ Android"</string>
 </resources>

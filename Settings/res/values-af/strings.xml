@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Toeganklikheid"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Ontwikkelaaropsies"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Geen"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Gebruik en diagnostiese inligting"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Stelselopdatering"</string>
     <string name="about_preference" msgid="4131396784531360434">"Meer oor"</string>
     <string name="device_name" msgid="2670488158531273028">"Toestelnaam"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Oudio"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Diverse"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Gekasseerde data"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Maak los"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Vee uit en formateer"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Formateer as toestelberging"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Nie gekoppel nie"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Skuif data"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Vergeet van hierdie interne berging"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Prop hierdie skyf weer in om die programme of data wat dit bevat, te gebruik. Andersins kan jy kies om van hierdie berging te vergeet as die skyf nie beskikbaar is nie.\n\nAs jy Vergeet kies, sal al die data wat die skyf bevat, vir altyd verloor word.\n\nJy kan die programme later herinstalleer, maar die data wat op hierdie skyf geberg is, sal verlore wees."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Toestelberging"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Verwyderbare berging"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Stel terug"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> is gemonteer"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Kon <xliff:g id="NAME">%1$s</xliff:g> nie monteer nie"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> is veilig losgemaak"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Kon <xliff:g id="NAME">%1$s</xliff:g> nie veilig losmaak nie"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Kon nie skyf vind om los te maak nie"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> is geformateer"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Kon <xliff:g id="NAME">%1$s</xliff:g> nie formateer nie"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formateer as interne berging"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Dit vereis dat die USB-skyf geformateer moet wees om dit veilig te maak. Nadat dit veilig geformateer is, sal hierdie skyf net saam met hierdie toestel werk. Formatering vee alle data uit wat tans op die skyf geberg is. Oorweeg dit om die data te rugsteun om te keer dat jy dit verloor."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Vee uit en formateer"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Ná formatering kan jy hierdie USB-skyf in ander toestelle gebruik. Alle data sal uitgevee word. Oorweeg dit om eers te rugsteun deur programme na ander interne berging te skuif."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formateer tans USB-skryf …"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Dit kan \'n rukkie duur. Moet asseblief nie die skyf verwyder nie."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Skuif data na <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Skuif jou foto\'s, lêers en programdata na <xliff:g id="NAME">%1$s</xliff:g>. Dit sal dalk \'n paar minute neem. Sommige programme sal tydens die skuif nie reg werk nie."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Skuif nou"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Skuif later"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Het data na <xliff:g id="NAME">%1$s</xliff:g> geskuif"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Kon nie data na <xliff:g id="NAME">%1$s</xliff:g> skuif nie"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Skuif tans data na <xliff:g id="NAME">%1$s</xliff:g> …"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Dit sal dalk \'n rukkie duur. Moet asseblief nie die skyf verwyder nie.\nSommige programme sal tydens die skuif nie reg werk nie."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Dit lyk asof hierdie skryf stadig is."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Jy kan voortgaan, maar programme wat na hierdie ligging geskuif is, sal dalk vashaak, en dataoordragte kan lank vat. Oorweeg dit om \'n vinniger skyf te gebruik vir beter werkverrigting."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formateer"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Rugsteun programme"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Programme geberg in <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Programme en data geberg in <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> beskikbaar"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Maak interne berging los"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Programme op hierdie toestelberging sal ophou werk wanneer dit losgemaak word. Hierdie USB-skyf is geformateer om net op hierdie toestel te werk. Dit sal nie op enige ander toestelle werk nie."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Maak <xliff:g id="NAME">%1$s</xliff:g> tans los …"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Berging gebruik"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Skuif tans <xliff:g id="NAME">%1$s</xliff:g> …"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Los skyf in tydens skuif.\n<xliff:g id="APPNAME">%1$s</xliff:g> eers na skuif beskikbaar"</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Vergeet interne berging?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Met \"Vergeet\" sal al jou data wat op hierdie skyf geberg is, vir altyd verlore wees. Wil jy voortgaan?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Vergeet"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB-skyf is gekoppel"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Blaai"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Stel as interne berging op"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Stel as verwyderbare berging op"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Maak los"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> is verwyder"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Sommige programme sal nie beskikbaar wees nie of nie behoorlik werk nie totdat die aandrywer weer gekoppel is."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Nie genoeg bergplek nie."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Program bestaan nie."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Program word beskerm teen kopiëring."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Installeerligging is nie geldig nie."</string>
-    <string name="system_package" msgid="9200255718634512790">"Stelselopdaterings kan nie op eksterne media geïnstalleer word nie."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Kom meer te wete"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Herprobeer"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Soek tans vir WPS-roeteerder …"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Druk die Wi-Fi-beskermde-opstellingknoppie op jou roeteerder.\nDit word moontlik \"WPS\" genoem of bevat die simbool aan die linkerkant."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Stel \'n nuwe PIN op"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Voer nuwe PIN weer in"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Voer ou PIN in"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Jy het 5 keer \'n verkeerde PIN ingevoer.\nProbeer oor <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> sekondes weer."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Jy het 5 keer die verkeerde PIN ingevoer.\nProbeer weer <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Verkeerde PIN; probeer weer"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Probeer weer. PIN stem nie ooreen nie"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Voer wagwoord vir <xliff:g id="SSID">%1$s</xliff:g> in"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"As jy \'n program dwing om te stop, kan dit dalk wangedra."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Deïnstalleer"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Wil jy hierdie program deïnstalleer?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Deïnstalleer opdaterings"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Alle opdaterings vir hierdie Android-stelselprogram sal gedeïnstalleer word."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Deaktiveer"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Wil jy hierdie program deaktiveer?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Aktiveer"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Wil jy hierdie program aktiveer?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Berging gebruik"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> gebruik in <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Vee data uit"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Al hierdie program se data sal permanent uitgevee word.\nDit sluit alle lêers, instellings, rekeninge, databasisse ensovoorts in."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Al hierdie program se data sal permanent uitgevee word."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Dit sluit alle lêers, instellings, rekeninge, databasisse, ens. in."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Maak verstekke skoon"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Gereed om hierdie program vir \'n paar handelinge te begin"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Geen verstekke gestel nie"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Toestemmings"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Programtoestemmings"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> van <xliff:g id="COUNT_1">%d</xliff:g> programme toegelaat"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android-sekuriteitregstelling-vlak"</string>
 </resources>

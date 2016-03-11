@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Kisegítő lehetőségek"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Fejlesztői beállítások"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Nincs"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Használat és diagnosztika"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Rendszerfrissítés"</string>
     <string name="about_preference" msgid="4131396784531360434">"Névjegy"</string>
     <string name="device_name" msgid="2670488158531273028">"Eszköz neve"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Hang"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Egyéb"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Gyorsítótárazott adatok"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Kiadás"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Törlés és formázás"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Formázás eszköztárhelyként"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Nincs csatlakozva"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Adatok áttelepítése"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Belső tárhely elfelejtése"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"A meghajtón tárolt alkalmazások vagy adatok használatához csatlakoztassa azt ismét az eszközhöz. Azonban ha a meghajtó már nem érhető el, a tárhely elfelejtése mellett is dönthet.\n\nHa az „Elfelejt” lehetőséget választja, akkor a meghajtón tárolt összes adat örökre elvész.\n\nAz alkalmazásokat később újratelepítheti, de a meghajtón lévő adatok megsemmisülnek."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Az eszköz tárhelye"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Cserélhető tárhely"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Visszaállítás"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"A(z) <xliff:g id="NAME">%1$s</xliff:g> csatlakoztatva"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"A(z) <xliff:g id="NAME">%1$s</xliff:g> csatlakoztatása sikertelen"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"A(z) <xliff:g id="NAME">%1$s</xliff:g> biztonságosan eltávolítva"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"A(z) <xliff:g id="NAME">%1$s</xliff:g> biztonságos eltávolítása sikertelen"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Nincs kiadható meghajtó"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"A(z) <xliff:g id="NAME">%1$s</xliff:g> formázása megtörtént"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"A(z) <xliff:g id="NAME">%1$s</xliff:g> formázása sikertelen"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formázás belső tárhelyként"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Ez megköveteli az USB-tárhely biztonságos formázását. A tárhely formázása után ez a meghajtó csak ezzel az eszközzel fog működni. A formázással törlődik a tárhelyen jelenleg megtalálható összes adat. Az adatvesztés elkerülése érdekében fontolja meg biztonsági mentés végrehajtását."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Törlés és formázás"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"A formázást követően más eszközökkel is használhatja majd ezt az USB-tárhelyet. Minden adat törlődni fog. Fontolja meg biztonsági mentés készítését az alkalmazások másik belső tárhelyre való áthelyezésével."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB-meghajtó formázása…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Ez eltarthat egy kis ideig. Kérjük, ne távolítsa el a meghajtót."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Adatok áthelyezése ide: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Fotók, fájlok és alkalmazásadatok áthelyezése ide: <xliff:g id="NAME">%1$s</xliff:g>. Ez eltarthat néhány percig. Egyes alkalmazások nem megfelelően fognak működni az áthelyezés ideje alatt."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Áthelyezés most"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Áthelyezés később"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Adatok áthelyezve ide: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Nem sikerült áthelyezni az adatokat ide: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Adatok áthelyezése ide: <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Ez eltarthat egy darabig. Kérjük, ne távolítsa el a meghajtót.\nEgyes alkalmazások nem megfelelően fognak működni az áthelyezés ideje alatt."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Úgy tűnik, hogy ez egy lassú meghajtó."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Folytathatja a folyamatot, de az erre a helyre áthelyezett alkalmazások akadozhatnak, az adatátviteli műveletek pedig hosszú ideig tarthatnak.Gyorsabb meghajtó használatával javulhat a teljesítmény."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formázás"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Alkalmazások biztonsági mentése"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"A következő helyen tárolt alkalmazások: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"A következő helyen tárolt alkalmazások és adatok: <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> áll rendelkezésre"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Belső tárhely eltávolítása"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Ha eltávolítja ezt az eszköztárhelyet, a rajta lévő alkalmazások működésképtelenné válnak. Ez az USB-tárhely úgy van formázva, hogy csak ezen az eszközön működjön, más eszközökön ne."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"A(z) <xliff:g id="NAME">%1$s</xliff:g> kiadása…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Felhasznált tárhely"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"A(z) <xliff:g id="NAME">%1$s</xliff:g> áthelyezése…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Az áthelyezés végrehajtása során ne távolítsa el a tárhelyet az eszközből.\nAz eszközön lévő <xliff:g id="APPNAME">%1$s</xliff:g> alkalmazás a művelet befejeződéséig nem lesz elérhető."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Szeretné, hogy a rendszer elfelejtse ezt a belső tárhelyet?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Ha az „Elfelejt” lehetőséget választja, a meghajtón tárolt összes adat elvész. Biztosan folytatja?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Elfelejt"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB-meghajtó csatlakoztatva"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Böngészés"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Beállítás belső tárhelyként"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Beállítás eltávolítható tárhelyként"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Kiadás"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> eltávolítva."</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"A meghajtó ismételt csatlakoztatásáig egyes alkalmazások nem lesznek elérhetők vagy nem megfelelően fognak működni."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Nincs elég tárhely."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Az alkalmazás nem létezik."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Az alkalmazás másolásvédett."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"A telepítés helye nem érvényes."</string>
-    <string name="system_package" msgid="9200255718634512790">"A rendszerfrissítéseket nem lehet külső eszközre telepíteni."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"További információ"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Újra"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS-router keresése…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Nyomja meg a Wi-Fi Protected Setup gombot a routeren.\nEnnek elnevezése lehet „WPS”, illetve jelölheti a bal oldalon látható szimbólum is."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Adja meg az új PIN kódot"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Írja be újra az új PIN kódot"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Adja meg a régi PIN kódot"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"5 alkalommal rosszul adta meg a PIN kódot.\nPróbálja újra <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> másodperc múlva."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"5 alkalommal rosszul adta meg a PIN kódot.\nPróbálja újra <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Helytelen PIN kód, próbálja újra"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"A PIN kód nem egyezik, próbálja újra"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Adja meg jelszót a következőhöz: <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Ha egy alkalmazást leállásra kényszerít, lehetséges, hogy az hibásan fog működni."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Eltávolítás"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Eltávolítja ezt az alkalmazást?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Frissítések eltávolítása"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Ennek az Android-rendszeralkalmazásnak minden frissítését eltávolítjuk."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Letiltás"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Letiltja az alkalmazást?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Engedélyezés"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Engedélyezi az alkalmazást?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Felhasznált tárhely"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g>: <xliff:g id="SIZE">%1$s</xliff:g> használatban"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Adatok törlése"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Az alkalmazás minden adata véglegesen törlődik.\nEz magában foglalja az összes fájlt, beállítást, fiókot, adatbázist stb."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Az alkalmazásadatok véglegesen törlődnek."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Ebbe beletartozik az összes fájl, beállítás, fiók, adatbázis stb."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Alapértelmezett értékek törlése"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Alkalmazás indítása adott műveleteknél"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Nincs beállítva alapértelmezett érték"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Engedélyek"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Alkalmazásengedélyek"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%d</xliff:g><xliff:g id="COUNT_0">%d</xliff:g> alkalmazás engedélyezve"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Androidos biztonsági hibajavító csomag szintje"</string>
 </resources>

@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Juurdepääsu seaded"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Arendaja valikud"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Puudub"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Kasutus ja diagnostika"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Süsteemivärskendus"</string>
     <string name="about_preference" msgid="4131396784531360434">"Teave"</string>
     <string name="device_name" msgid="2670488158531273028">"Seadme nimi"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Heli"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Muu"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Vahemälus olevad andmed"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Eemalda"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Kustuta ja vorminda"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Vorminda seadme salvestusruumina"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Ühendus puudub"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Andmete üleviimine"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Selle sisemise salvestusruumi unustamine"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Draivisolevate rakenduste või andmete kasutamiseks ühendage see uuesti. Kui draiv ei ole saadaval, võite ka lasta salvestusruumi unustada.\n\nKui valite käsu Unusta, lähevad kõik draivisolevad andmed jäädavalt kaotsi.\n\nVõite rakendused hiljem uuesti installida, kuid draivisolevad andmed lähevad kaotsi."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Seadme salvestusruum"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Irdmälu"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Lähtestamine"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"Üksus <xliff:g id="NAME">%1$s</xliff:g> ühendati"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Üksust <xliff:g id="NAME">%1$s</xliff:g> ei saanud ühendada"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"Üksus <xliff:g id="NAME">%1$s</xliff:g> eemaldati ohutult"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Üksust <xliff:g id="NAME">%1$s</xliff:g> ei saanud ohutult eemaldada"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Väljutatavat draivi ei leitud"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"Üksus <xliff:g id="NAME">%1$s</xliff:g> vormindati"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Üksust <xliff:g id="NAME">%1$s</xliff:g> ei saanud vormindada"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Vormindamine sisemise salvestusruumina"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"USB-mäluseadme turvaliseks muutmiseks tuleb see vormindada. Pärast turvalist vormindamist töötab mäluseade ainult selles seadmes. Vormindamisel kustutatakse kõik praegu mäluseadmele salvestatud andmed. Andmete kaotsimineku vältimiseks soovitame need varundada."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Kustutamine ja vormindamine"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Pärast vormindamist saate seda USB-mäluseadet kasutada teistes seadmetes. Kõik andmed kustutatakse. Kaaluge esmalt nende varundamist, teisaldades rakendused teise sisemisse salvestusruumi."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB-mäluseadme vormindamine …"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Selleks võib kuluda pisut aega. Ärge eemaldage mäluseadet."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Andmete teisaldamine seadmesse <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Teisaldage fotod, failid ja rakenduste andmed seadmesse <xliff:g id="NAME">%1$s</xliff:g>. Selleks kulub mõni minut. Teatud rakendused ei tööta teisaldamise ajal õigesti."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Teisalda kohe"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Teisalda hiljem"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Andmed viidi üle seadmesse <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Andmeid ei saanud teisaldada seadmesse <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Andmete teisaldamine seadmesse <xliff:g id="NAME">%1$s</xliff:g> …"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Selleks võib kuluda pisut aega. Ärge eemaldage draivi.\nTeatud rakendused ei tööta teisaldamise ajal õigesti."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Mäluseade näib olevat aeglane."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Võite jätkata, kuid sellesse asukohta teisaldatud rakendused võivad töötada katkendlikult ja andmete teisaldamiseks võib kuluda palju aega. Parema toimivuse huvides on soovitatav kasutada kiiremat mäluseadet."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Vorminda"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Rakenduste varundamine"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Rakendused on salvestatud üksuses <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Rakendused ja andmed on salvestatud üksuses <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Saadaval on <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Sisemise salvestusruumi eemaldamine"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Seadme eemaldamisel lõpetavad selle salvestusruumis olevad rakendused töö. See USB-mäluseade on vormindatud ainult selles seadmes töötamiseks. See ei tööta teistes seadmetes."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Üksuse <xliff:g id="NAME">%1$s</xliff:g> väljutamine …"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Kasutatud salvestusruum"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Rakenduse <xliff:g id="NAME">%1$s</xliff:g> teisaldamine …"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Ärge eemaldage ketast teisaldamise ajal.\nRakendus <xliff:g id="APPNAME">%1$s</xliff:g> pole seadmes saadaval enne, kui teisaldamine on lõpetatud."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Kas soovite sisemise salvestusruumi unustada?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Käsu „Unusta” valimisel lähevad kõik draivisolevad andmed jäädavalt kaotsi. Kas soovite jätkata?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Unusta"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB-ketas on ühendatud"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Sirvi"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Seadistamine sisemise salvestusruumina"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Seadistamine irdmäluna"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Eemalda"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> on eemaldatud"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Mõni rakendus ei pruugi olla saadaval või õigesti töötada, kuni ketas uuesti ühendatakse."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Salvestusruumi pole piisavalt."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Rakendust pole olemas."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Rakendus on kopeerimiskaitstud."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Installimise asukoht pole kehtiv."</string>
-    <string name="system_package" msgid="9200255718634512790">"Süsteemivärskendusi ei saa installida välisele kandjale."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Lisateave"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Proovi uuesti"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS-ruuteri otsimine …"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Vajutage ruuteril nuppu Wi-Fi Protected Setup.\nSelle nimi võib olla ka „WPS” või see võib sisaldada vasakul olevat sümbolit."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Uue PIN-koodi määramine"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Sisestage uus PIN-kood uuesti"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Sisestage vana PIN-kood"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Olete 5 korda sisestanud vale PIN-koodi.\nProovige uuesti <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> sekundi pärast."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Olete 5 korda sisestanud vale PIN-koodi.\nProovige uuesti <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Vale PIN-kood, proovige uuesti"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Proovige uuesti, PIN-kood pole õige"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Sisestage võrgu <xliff:g id="SSID">%1$s</xliff:g> parool"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Kui sundpeatate rakenduse, võib see valesti käituda."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Desinstalli"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Kas soovite selle rakenduse desinstallida?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Värskenduste desinstallimine"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Kõik selle Androidi süsteemirakenduse värskendused desinstallitakse."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Keela"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Kas soovite selle rakenduse keelata?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Luba"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Kas soovite selle rakenduse lubada?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Kasutatud salvestusruum"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Üksuses <xliff:g id="VOLUME">%2$s</xliff:g> on kasutatud <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Kustuta andmed"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Rakenduse kõik andmed kustutatakse jäädavalt.\nSee hõlmab kõiki faile, seadeid, kontosid, andmebaase jne."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Rakenduse andmed kustutatakse jäädavalt."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"See hõlmab kõiki faile, seadeid, kontosid, andmebaase jms."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Kustuta vaiketoimingud"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Rakenduse käivit. määram. toimingu puhul"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Ühtegi vaiketoimingut pole määratud"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Load"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Rakenduse load"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> <xliff:g id="COUNT_1">%d</xliff:g>-st rakendusest on lubatud"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Androidi turvapaiga tase"</string>
 </resources>

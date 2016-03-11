@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"協助工具"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"開發人員選項"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"無"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"使用情形與診斷資訊"</string>
     <string name="about_system_update" msgid="7282772247661356586">"系統更新"</string>
     <string name="about_preference" msgid="4131396784531360434">"關於"</string>
     <string name="device_name" msgid="2670488158531273028">"裝置名稱"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"音訊"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"其他"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"快取資料"</string>
-    <string name="storage_eject" msgid="113476702798691558">"退出"</string>
-    <string name="storage_format" msgid="3759273736493279595">"清除並格式化"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"進行格式化，設為裝置儲存空間"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"尚未連線"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"遷移資料"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"清除這個內部儲存空間"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"如要使用這個隨身碟中的應用程式或資料，請重新插入。如果隨身碟無法使用，您也可以清除這個儲存空間。\n\n假使您選擇 [清除]，隨身碟中的所有資料將遭到永久刪除，無法復原。\n\n雖然您稍後可以重新安裝應用程式，但這個隨身碟中儲存的資料會全數遺失。"</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"裝置儲存空間"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"外接儲存裝置"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"重設"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"已掛載「<xliff:g id="NAME">%1$s</xliff:g>」"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"無法掛載「<xliff:g id="NAME">%1$s</xliff:g>」"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"已安全退出「<xliff:g id="NAME">%1$s</xliff:g>」"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"無法安全退出「<xliff:g id="NAME">%1$s</xliff:g>」"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"找不到可退出的隨身碟"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"已將「<xliff:g id="NAME">%1$s</xliff:g>」格式化"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"無法將「<xliff:g id="NAME">%1$s</xliff:g>」格式化"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"進行格式化，設為內部儲存空間"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"USB 隨身碟必須經過格式化，確保安全無虞。格式化後，此裝置僅能在這台裝置上運作。格式化作業會清除目前儲存在隨身碟的所有資料。為避免資料遺失，建議您先進行備份。"</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"清除並格式化"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"格式化後，這個 USB 隨身碟即可用於其他裝置。儲存在隨身碟的所有資料將會被清除。建議您先將應用程式移到其他內部儲存空間進行備份。"</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"正在格式化 USB 隨身碟…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"這可能需要一些時間。請勿移除隨身碟。"</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"將資料移動到「<xliff:g id="NAME">%1$s</xliff:g>」"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"將相片、檔案和應用程式資料移動到「<xliff:g id="NAME">%1$s</xliff:g>」。移動作業需要幾分鐘的時間，部分應用程式在移動作業期間無法正常運作。"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"立即移動"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"稍後移動"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"已將資料遷移到「<xliff:g id="NAME">%1$s</xliff:g>」"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"無法將資料遷移到「<xliff:g id="NAME">%1$s</xliff:g>」"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"正在將資料移動到「<xliff:g id="NAME">%1$s</xliff:g>」…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"這可能需要一些時間。請勿移除隨身碟。\n部分應用程式在移動作業期間無法正常運作。"</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"這個隨身碟似乎很慢。"</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"您可以繼續使用，但應用程式移動到這個位置後可能無法流暢執行，資料移轉作業也會耗費大量時間。建議您改用速度更快的隨身碟來提升效能。"</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"格式化"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"備份應用程式"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"儲存在「<xliff:g id="NAME">%1$s</xliff:g>」的應用程式"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"儲存在「<xliff:g id="NAME">%1$s</xliff:g>」的應用程式和資料"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"可用空間：<xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"退出內部儲存空間"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"當您將這個儲存裝置退出時，其中的應用程式將停止運作。這個 USB 隨身碟經過格式化，僅能在這台裝置上運作，無法與其他裝置通用。"</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"正在退出「<xliff:g id="NAME">%1$s</xliff:g>」…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"已使用的儲存空間"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"正在移動「<xliff:g id="NAME">%1$s</xliff:g>」…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"請勿在執行移動作業時移除硬碟。\n移動作業完成後，這台裝置上的「<xliff:g id="APPNAME">%1$s</xliff:g>」應用程式才可供使用。"</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"要清除內部儲存空間嗎？"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"[清除] 功能會將儲存在這個隨身碟的所有資料永久刪除，您要繼續嗎？"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"清除"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"已連接 USB 隨身碟"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"瀏覽"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"設為內部儲存空間"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"設為外接儲存裝置"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"退出"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"已移除「<xliff:g id="NAME">%1$s</xliff:g>」"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"部分應用程式將無法使用或無法正常運作，直到重新連接隨身碟為止。"</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"儲存空間不足。"</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"應用程式不存在。"</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"禁止複製應用程式。"</string>
-    <string name="invalid_location" msgid="5269044848535157307">"安裝位置無效。"</string>
-    <string name="system_package" msgid="9200255718634512790">"無法在外部媒體上安裝系統更新。"</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"瞭解詳情"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"重試"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"正在搜尋 WPS 路由器…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"按下路由器上的 Wi-Fi 保護設定按鈕。\n該按鈕可能標示為「WPS」或左側標有這個符號。"</string>
@@ -388,7 +327,7 @@
     <string name="system_show_layout_bounds" msgid="645732439882291943">"顯示版面配置界限"</string>
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"顯示 GPU 畫面更新"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"顯示硬體層"</string>
-    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"顯示 GPU 重複繪圖"</string>
+    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"顯示 GPU 透支"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"顯示表層更新"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"視窗動畫比例"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"轉場動畫比例"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"設定新 PIN"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"重新輸入新 PIN"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"輸入舊 PIN"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"您已輸入 5 次錯誤的 PIN 碼。\n請於 <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> 秒後再試一次。"</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"您已輸入 5 次錯誤的 PIN。\n請於 <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>再試一次。"</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN 錯誤，請再試一次"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN 不符，請再試一次"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"輸入 <xliff:g id="SSID">%1$s</xliff:g> 的密碼"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"如果您強制停止應用程式，應用程式可能無法正常運作。"</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"解除安裝"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"您要解除安裝這個應用程式嗎？"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"解除安裝更新"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"這個 Android 系統應用程式的所有更新將會解除安裝。"</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"停用"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"您要停用這個應用程式嗎？"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"啟用"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"您要啟用這個應用程式嗎？"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"已使用的儲存空間"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"已使用 <xliff:g id="SIZE">%1$s</xliff:g> 的<xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"清除資料"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"這個應用程式的所有資料都將永遠遭到刪除，\n包含所有檔案、設定、帳戶、資料庫等。"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"這個應用程式的資料將全部遭到永久刪除。"</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"包括所有檔案、設定、帳戶、資料庫等。"</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"清除預設值"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"設定執行某些操作時啟動這個應用程式"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"未設定預設值"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"權限"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"應用程式權限"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"已授權 <xliff:g id="COUNT_0">%d</xliff:g> 個應用程式 (共 <xliff:g id="COUNT_1">%d</xliff:g> 個)"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android 安全性修補程式等級"</string>
 </resources>

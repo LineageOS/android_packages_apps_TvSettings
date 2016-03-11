@@ -58,7 +58,7 @@
     <string name="apps_running" msgid="6430310491739956228">"Aplicacions en funcionament"</string>
     <string name="accessories_add" msgid="1347802656349218830">"Afegeix un accessori"</string>
     <string name="accessories_wifi_display" msgid="1107690327150126038">"Pantalla Wi-Fi"</string>
-    <string name="accessory_state_pairing" msgid="7501989679637780963">"S\'està emparellant..."</string>
+    <string name="accessory_state_pairing" msgid="7501989679637780963">"S\'està sincronitzant..."</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"S\'està connectant…"</string>
     <string name="accessory_state_error" msgid="4529815543328841909">"No s\'ha pogut fer l\'emparellament."</string>
     <string name="accessory_state_canceled" msgid="4419328837733619447">"S\'ha cancel·lat"</string>
@@ -95,9 +95,8 @@
     <string name="system_speech" msgid="8128688499687306982">"Veu"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Entrades"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"Accessibilitat"</string>
-    <string name="system_developer_options" msgid="3237985523474863638">"Opcions per a desenvolupadors"</string>
+    <string name="system_developer_options" msgid="3237985523474863638">"Opcions del desenvolupador"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Cap"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Ús i diagnòstic"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Actualització del sistema"</string>
     <string name="about_preference" msgid="4131396784531360434">"Quant a"</string>
     <string name="device_name" msgid="2670488158531273028">"Nom del dispositiu"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Àudio"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Varis"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Dades emmagatzemades a la memòria cau"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Expulsa"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Esborra i formata"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Formata com a emmagatzematge del dispositiu"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"No connectat"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Migra les dades"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"No recordis aquest emmagatzematge intern"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Per utilitzar les aplicacions o les dades que conté aquesta unitat, torna a inserir-la. Si la unitat no està disponible, també pots indicar que no vols que es recordi aquest emmagatzematge.\n\nSi tries l\'opció No recordis, totes les dades que contingui aquesta unitat es perdran definitivament.\n\nPodràs tornar a instal·lar les aplicacions més endavant, però no podràs recuperar les dades que tenies emmagatzemades a la unitat."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Emmagatzematge del dispositiu"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Emmagatzematge extraïble"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Restablir"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"S\'ha activat <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"No s\'ha pogut activar <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"S\'ha expulsat <xliff:g id="NAME">%1$s</xliff:g> de manera segura"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"No s\'ha pogut expulsar <xliff:g id="NAME">%1$s</xliff:g> de manera segura"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"No s\'ha trobat cap unitat per expulsar"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"S\'ha formatat <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"No s\'ha pogut formatar <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatar com a emmagatzematge intern"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"La unitat USB s\'ha de formatar per seguretat. Un cop s\'hagi formatat, només funcionarà en aquest dispositiu. Durant la formatació, s\'esborraran totes les dades desades que hi ha desades a la unitat. Et recomanem que en facis una còpia de seguretat de les dades per no perdre-les."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Esborrar i formatar"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Després de la formatació, podràs utilitzar aquesta unitat USB en altres dispositius. S\'esborraran totes les dades. Potser primer hauries de crear la còpia de seguretat movent les aplicacions a un altre emmagatzematge intern."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"S\'està formatant el dispositiu USB…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Aquesta acció tardarà una mica. No extreguis el dispositiu."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Mou les dades a <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Mou les fotos, els fitxers i les dades d\'aplicacions a <xliff:g id="NAME">%1$s</xliff:g>. Aquesta acció pot tardar uns quants minuts. Algunes aplicacions no funcionaran correctament durant el procés."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Mou ara"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Mou més tard"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"S\'han migrat les dades a <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"No s\'han pogut migrar les dades a <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"S\'estan movent les dades a <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Aquesta acció pot tardar una mica. No retiris la unitat.\nAlgunes aplicacions no funcionaran correctament durant el procés."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Sembla que aquesta unitat és lenta."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Pots continuar, però les aplicacions que es desplacin a aquesta ubicació poden patir interrupcions i les transferències de dades poden tardar molt de temps. Et recomanem que facis servir una unitat més ràpida per obtenir un rendiment millor."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formata"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Crea una còpia de seguretat de les aplicacions"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aplicacions emmagatzemades a <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Aplicacions i dades emmagatzemades a <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Disponible: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Expulsar l\'emmagatzematge intern"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Les aplicacions que hi hagi a l\'emmagatzematge d\'aquest dispositiu deixaran de funcionar quan s\'hagi expulsat. Aquesta unitat USB es formata per funcionar només en aquest dispositiu. No funcionarà en altres dispositius."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"S\'està expulsant <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Emmagatzematge utilitzat"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"S\'està desplaçant <xliff:g id="NAME">%1$s</xliff:g>..."</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"No extreguis la unitat durant el desplaçament.\nL\'aplicació <xliff:g id="APPNAME">%1$s</xliff:g> no estarà disponible en aquest dispositiu fins que el desplaçament no hagi finalitzat."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Vols que l\'emmagatzematge intern no es recordi?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"En seleccionar No recordis, totes les dades emmagatzemades en aquesta unitat es perdran. Vols continuar?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"No recordis"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Unitat USB connectada"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Examina"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Configura com a emmagatzematge intern"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Configura com a emmagatzematge extraïble"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Expulsa"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"S\'ha suprimit <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Algunes aplicacions no estaran disponibles o no funcionaran correctament fins que no es torni a connectar la unitat."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"No hi ha prou espai d\'emmagatzematge."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"L\'aplicació no existeix."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"AOL està protegit contra còpies."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"La ubicació de la instal·lació no és vàlida."</string>
-    <string name="system_package" msgid="9200255718634512790">"No es poden instal·lar actualitzacions del sistema en suports externs."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Més informació"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Torna-ho a provar"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"S\'està cercant l\'encaminador WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Prem el botó Wi-Fi Protected Setup de l\'encaminador.\nÉs possible que s\'anomeni \"WPS\" o que contingui el símbol que es mostra a l\'esquerra."</string>
@@ -327,7 +266,7 @@
     <string name="captions_configure" msgid="5537548915977371014">"Configura"</string>
     <string name="captions_lanaguage" msgid="3291057448460880449">"Idioma"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Mida del text"</string>
-    <string name="captions_captionstyle" msgid="7423638523487868230">"Estil dels subtítols"</string>
+    <string name="captions_captionstyle" msgid="7423638523487868230">"Estil de subtítols"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Opcions personalitzades"</string>
     <string name="captions_fontfamily" msgid="6840670778173003604">"Tipus de lletra"</string>
     <string name="captions_textcolor" msgid="3233568269335050287">"Color del text"</string>
@@ -354,7 +293,7 @@
     <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"Vols aturar <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Si selecciones D\'acord, s\'aturarà <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="8905477795536714590">"Síntesi de veu"</string>
-    <string name="system_speak_passwords" msgid="5264650214879185873">"Pronuncia contrasenyes"</string>
+    <string name="system_speak_passwords" msgid="5264650214879185873">"Pronuncia les contrasenyes"</string>
     <string name="system_preferred_engine" msgid="8258210139854655567">"Motor preferit"</string>
     <string name="system_speech_rate" msgid="8099856582088545576">"Velocitat de la veu"</string>
     <string name="system_play_sample" msgid="7187293932891811148">"Reprodueix una mostra"</string>
@@ -445,7 +384,7 @@
     <item msgid="7268894934484547297">"Animació a escala 10x"</item>
   </string-array>
     <string name="track_frame_time_off" msgid="5050360262132715904">"Desactivada"</string>
-    <string name="track_frame_time_bars" msgid="4470692840177888414">"En pantalla en forma de barres"</string>
+    <string name="track_frame_time_bars" msgid="4470692840177888414">"A la pantalla com a barres"</string>
     <string name="app_process_limit_standard" msgid="8878199798843299844">"Límit estàndard"</string>
     <string name="app_process_limit_zero" msgid="2667197109226789876">"Cap procés de fons"</string>
     <string name="app_process_limit_one" msgid="6417937037944753355">"Com a màxim 1 procés"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Establir un PIN nou"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Tornar a introduir el PIN nou"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Introduir el PIN antic"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Has introduït un PIN incorrecte cinc vegades. \n Torna-ho a provar d\'aquí a <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> segons."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Has introduït un PIN incorrecte cinc vegades.\nTorna-ho a provar <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"El PIN no és correcte. Torna-ho a provar."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Torna-ho a provar. El PIN no coincideix."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Escriu la contrasenya de <xliff:g id="SSID">%1$s</xliff:g>."</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Si forces l\'aturada d\'una aplicació, és possible que no funcioni correctament."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Desinstal·la"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Vols desinstal·lar aquesta aplicació?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Desinstal·la les actualitzacions"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Es desinstal·laran totes les actualitzacions d\'aquesta aplicació del sistema Android."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Desactiva"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Vols desactivar l\'aplicació?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Activa"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Vols activar l\'aplicació?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Emmagatzematge utilitzat"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> en ús a <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Esborra les dades"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Se suprimiran totes les dades d\'aquesta aplicació de manera permanent.\nAixò inclou tots els fitxers, la configuració, els comptes, les bases de dades, etc."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Totes les dades d\'aquesta aplicació se suprimiran permanentment."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Això inclou tots els fitxers, els paràmetres, els comptes, les bases de dades, etc."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Esborra els valors predeterminats"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Definir que s\'obri per a algunes accions"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"No s\'ha definit cap valor predeterminat."</string>
@@ -566,13 +502,13 @@
     <string name="device_daydreams_test" msgid="9038920213402659591">"Activa ara"</string>
     <string name="device_daydreams_sleep" msgid="8766795993034660366">"Quan s\'activa l\'estalvi de pantalla"</string>
     <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"L\'estalvi de pantalla començarà una vegada transcorregut aquest període d\'inactivitat. Si no se selecciona cap estalvi de pantalla, la pantalla s\'apagarà."</string>
-    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> d\'inactivitat"</string>
+    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Després de <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> d\'inactivitat"</string>
     <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Quan entra en mode de repòs"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"La pantalla s\'apaga després d\'aquest període d\'inactivitat."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Actualment no hi ha cap compte que emmagatzemi dades de còpia de seguretat."</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"Vols deixar de crear còpies de seguretat de les contrasenyes de Wi-Fi, de les adreces d\'interès, d\'altres configuracions i dades d\'aplicacions i, a més, esborrar totes les còpies dels servidors de Google?"</string>
-    <string name="privacy_backup_data" msgid="1796662583830120812">"Copia les meves dades"</string>
+    <string name="privacy_backup_data" msgid="1796662583830120812">"Fes una còpia de seguretat de les dades"</string>
     <string name="privacy_backup_account" msgid="9059939814827165020">"Compte de còpia de seguretat"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Restauració automàtica"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"Restableix el dispositiu"</string>
@@ -596,7 +532,6 @@
     <string name="change_setting" msgid="2047402388786162246">"Canvia"</string>
     <string name="keep_settings" msgid="6798327196645732517">"No canviïs"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Permisos"</string>
-    <string name="device_apps_permissions" msgid="2966387603529725982">"Permisos d\'aplicacions"</string>
-    <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> de <xliff:g id="COUNT_1">%d</xliff:g> aplicacions permeses"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Nivell de pedaç de seguretat d\'Android"</string>
+    <string name="device_apps_permissions" msgid="2966387603529725982">"Permisos aplicació"</string>
+    <string name="app_permissions_group_summary" msgid="7906834786705287901">"S\'ha concedit permís a <xliff:g id="COUNT_0">%d</xliff:g> de <xliff:g id="COUNT_1">%d</xliff:g> aplicacions"</string>
 </resources>

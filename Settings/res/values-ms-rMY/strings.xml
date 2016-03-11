@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Kebolehaksesan"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Pilihan pemaju"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Tiada"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Penggunaan &amp; Diagnostik"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Kemas kini sistem"</string>
     <string name="about_preference" msgid="4131396784531360434">"Perihal"</string>
     <string name="device_name" msgid="2670488158531273028">"Nama peranti"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Audio"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Pelbagai"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Data cache"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Keluarkan"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Padam &amp; format"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Format sebagai storan peranti"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Tidak bersambung"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Pindahkan data"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Lupakan storan dalaman ini"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Untuk menggunakan apl atau data yang terkandung dalam pemacu ini, masukkannya semula. Sekiranya storan ini tidak tersedia, anda boleh memilih untuk melupakannya.\n\nJika anda memilih Lupa, semua data yang terkandung dalam pemacu itu akan hilang selama-lamanya.\n\nAnda boleh memasang semula apl kemudian, namun data yang disimpan pada pemacu ini akan hilang."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Storan peranti"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Storan boleh tanggal"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Tetapkan semula"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> dilekapkan"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Tidak dapat melekapkan <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> dikeluarkan dengan selamat"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Tidak dapat mengeluarkan <xliff:g id="NAME">%1$s</xliff:g> secara selamat"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Tidak menemui pemacu untuk dikeluarkan"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> sudah diformatkan"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Tidak dapat memformat <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatkan sebagai storan dalaman"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Proses ini memerlukan pemacu USB diformatkan supaya pemacu itu menjadi lebih selamat. Selepas memformatnya, pemacu ini hanya akan berfungsi dengan peranti ini. Pemformatan memadamkan semua data yang disimpan pada pemacu. Untuk mengelakkan kehilangan data, sila buat sandaran."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Padam &amp; Format"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Selepas pemformatan, anda boleh menggunakan pemacu USB ini pada peranti lain. Semua data akan dipadamkan. Sila buat sandaran dahulu dengan mengalihkan apl ke storan dalaman yang lain."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Memformat Pemacu USB…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Proses ini mungkin mengambil masa sedikit. Jangan keluarkan pemacu."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Alihkan data ke <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Alihkan foto, fail dan data apl anda ke <xliff:g id="NAME">%1$s</xliff:g>. Proses ini boleh mengambil masa beberapa minit. Sesetengah apl tidak akan berfungsi dengan betul semasa pengalihan ini."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Alihkan sekarang"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Alihkan kemudian"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Data dipindahkan ke <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Tidak dapat memindahkan data ke <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Mengalihkan data ke <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Proses ini mungkin mengambil masa seketika. Jangan keluarkan pemacu.\nSesetengah apl tidak akan berfungsi dengan betul semasa pengalihan ini."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Nampaknya, pemacu ini perlahan."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Anda boleh meneruskan tetapi apl yang dialihkan ke sini mungkin tersekat-sekat dan pemindahan data mungkin mengambil masa yang lama. Sila gunakan pemacu yang lebih pantas untuk mendapatkan prestasi yang lebih cekap."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Format"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Sandarkan apl"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Apl yang disimpan dalam <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Apl dan data yang disimpan dalam <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> tersedia"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Keluarkan storan dalaman"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Apl pada storan peranti ini akan berhenti berfungsi apabila storan itu dikeluarkan. Pemacu USB ini diformatkan supaya berfungsi pada peranti ini sahaja. Pemacu tersebut tidak akan berfungsi pada sebarang peranti lain."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Mengeluarkan <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Storan yang digunakan"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Memindahkan <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Jangan tanggalkan pemacu semasa pemindahan.\nApl <xliff:g id="APPNAME">%1$s</xliff:g> pada peranti ini tidak tersedia sehingga pemindahan selesai."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Lupakan storan dalaman?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Semua data yang disimpan dalam pemacu ini akan hilang selama-lamanya apabila anda memilih \'Lupa\'. Adakah anda mahu meneruskan?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Lupakan"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Pemacu USB disambungkan"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Semak imbas"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Sediakan sebagai storan dalaman"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Sediakan sebagai storan boleh alih"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Keluarkan"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> dialih keluar"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Sesetengah apl tidak akan tersedia atau tidak akan berfungsi dengan betul sehingga pemacu disambungkan semula."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Ruang storan tidak mencukupi."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Aplikasi tidak wujud."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Aplikasi dilindung salin."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Lokasi pemasangan tidak sah."</string>
-    <string name="system_package" msgid="9200255718634512790">"Kemas kini sistem tidak boleh dipasangkan pada media luaran."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Ketahui lebih lanjut"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Cuba semula"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Mencari penghala WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Tekan butang Persediaan Terlindung Wi-Fi pada penghala anda.\nNamanya mungkin \"WPS\" atau mengandungi simbol di sebelah kiri."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Tetapkan PIN baharu"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Masukkan semula PIN baharu"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Masukkan PIN lama"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Anda telah memasukkan PIN yang salah sebanyak 5 kali.\nCuba lagi dalam masa <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> saat."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Anda telah memasukkan PIN yang salah sebanyak 5 kali.\nCuba lagi <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN salah, cuba lagi"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Cuba lagi, PIN tidak sepadan"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Masukkan kata laluan untuk <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -538,19 +477,16 @@
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"versi <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Buka"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Henti paksa"</string>
-    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Jika anda menghentikan aplikasi secara paksa, mungkin fungsinya akan terganggu."</string>
+    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Jika anda menghentikan aplikasi secara paksa, aplikasi itu mungkin tidak berfungsi dengan betul."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Nyahpasang"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Adakah anda mahu menyahpasang apl ini?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Nyahpasang kemas kini"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Semua kemas kini pada apl sistem Android ini akan dinyahpasang."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Lumpuhkan"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Adakah anda ingin melumpuhkan apl ini?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Dayakan"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Adakah anda ingin mendayakan apl ini?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Storan yang digunakan"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> digunakan dalam <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Padam bersih data"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Semua data apl ini akan dipadamkan selama-lamanya.\nIni termasuk semua fail, tetapan, akaun, pangkalan data, dsb."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Semua data apl ini akan dipadamkan secara kekal."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Ini termasuklah semua fail, tetapan, akaun, pangkalan data, dsb."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Kosongkan lalai"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Tetapkan untuk melancarkan apl ini untuk beberapa tindakan"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Tiada lalai ditetapkan"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Kebenaran"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Kebenaran apl"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> daripada <xliff:g id="COUNT_1">%d</xliff:g> apl yang dibenarkan"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Tahap tampung keselamatan Android"</string>
 </resources>

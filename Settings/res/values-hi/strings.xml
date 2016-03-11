@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"सरल उपयोग"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"डेवलपर विकल्प"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"कोई नहीं"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"उपयोग और निदान"</string>
     <string name="about_system_update" msgid="7282772247661356586">"सिस्‍टम अपडेट"</string>
     <string name="about_preference" msgid="4131396784531360434">"संक्षिप्त विवरण"</string>
     <string name="device_name" msgid="2670488158531273028">"डिवाइस नाम"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"ऑडियो"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"विविध"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"संग्रहित डेटा"</string>
-    <string name="storage_eject" msgid="113476702798691558">"निकालें"</string>
-    <string name="storage_format" msgid="3759273736493279595">"मिटाएं और फ़ॉर्मेट करें"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"डिवाइस मेमोरी की तरह फ़ॉर्मेट करें"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"कनेक्ट नहीं है"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"डेटा माइग्रेट करें"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"इस आंतरिक मेमोरी को भूल जाएं"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"इस डिस्क में शामिल ऐप्स या डेटा का उपयोग करने के लिए, उसे पुनः प्लग करें. वैकल्‍पिक रूप से, डिवाइस के उपलब्‍ध नहीं होने पर आप इस मेमोरी को भूल जाना चुन सकते हैं.\n\nयदि आप भूल जाएं चुनते हैं, तो डिस्क में शामिल सभी डेटा हमेशा के लिए खो जाएगा.\n\nआप बाद में ऐप्स पुनः इंस्टॉल कर सकते हैं, लेकिन इस डिस्क पर संग्रहीत डेटा खो जाएगा."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"डिवाइस मेमोरी"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"निकाले जाने योग्‍य मेमोरी"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"रीसेट करें"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> को माउंट किया गया है"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> को माउंट नहीं किया जा सका"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> को सुरक्षित रूप से निकाला गया"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> को सुरक्षित रूप से नहीं निकाला जा सका"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"निकालने के लिए डिस्क नहीं ढूंढ सका"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> को फ़ॉर्मेट किया गया है"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> को फ़ॉर्मेट नहीं किया जा सका"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"आंतरिक मेमोरी की तरह फ़ॉर्मेट करें"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"इसके लिए USB डिस्क को सुरक्षित करने हेतु उसे फ़ॉर्मेट करना आवश्यक है. सफलतापूर्वक फ़ॉर्मेट करने के बाद, यह डिस्क केवल इसी डिवाइस के साथ काम करेगी. फ़ॉर्मेट करने से इस डिस्क में वर्तमान में संग्रहीत संपू्र्ण डेटा मिट जाता है. डेटा को खोने से बचाने के लिए, उसका बैकअप लेने पर विचार करें."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"मिटाएं और फ़ॉर्मेट करें"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"फ़ॉर्मेट करने के बाद, आप इस USB डिस्‍क का उपयोग अन्‍य डिवाइस में कर सकते हैं. सभी डेटा मिटा दिया जाएगा. सबसे पहले अन्‍य आंतरिक मेमोरी पर ऐप्‍स का बैक अप लेने पर विचार करें."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB डिस्‍क फ़ॉर्मेट हो रही है…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"इसमें कुछ समय लग सकता है. कृपया डिस्‍क को निकालें नहीं."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"डेटा को <xliff:g id="NAME">%1$s</xliff:g> में ले जाना"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"अपनी फ़ोटो, फ़ाइलें और ऐप डेटा को <xliff:g id="NAME">%1$s</xliff:g> में ले जाएं. इसमें कुछ मिनट लग सकते हैं. ले जाने के दौरान कुछ ऐप्स ठीक से काम नहीं करेंगे."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"अभी ले जाएं"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"बाद में ले जाएं"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"डेटा को <xliff:g id="NAME">%1$s</xliff:g> में माइग्रेट किया गया"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"डेटा को <xliff:g id="NAME">%1$s</xliff:g> में माइग्रेट नहीं किया जा सका"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"डेटा को <xliff:g id="NAME">%1$s</xliff:g> में ले जाया रहा है…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"इसमें कुछ समय लग सकता है. कृपया डिस्क ना निकालें.\nले जाने के दौरान कुछ ऐप्स ठीक से काम नहीं करेंगे."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"ऐसा लगता है कि यह डिस्‍क धीमी है."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"आप जारी रख सकते हैं, लेकिन इस स्थान पर लाए गए ऐप्स अटक सकते हैं और डेटा ट्रांसफर में अधिक समय लग सकता है. बेहतर प्रदर्शन के लिए अधिक तेज़ डिस्‍क का उपयोग करने पर विचार करें."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"फ़ॉर्मेट करें"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"ऐप्‍स का बैक अप लें"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> में संग्रहीत ऐप्स"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> में संग्रहीत ऐप्स और डेटा"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> उपलब्ध"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"आंतरिक मेमोरी निकालें"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"इस डिवाइस मेमोरी को निकालने से उस पर मौजूद ऐप्‍स काम करना बंद कर देंगे. इस USB डिस्‍क को केवल इसी डिवाइस पर काम करने के लिए फ़ॉर्मेट किया गया है. वह किसी अन्‍य डिवाइस पर काम नहीं करेगा."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> को निकाल रहा है…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"उपयोग की गई मेमोरी"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> को ले जाया जा रहा है…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"ले जाने के दौरान डिस्क को ना निकालें.\nइस डिवाइस में मौजूद <xliff:g id="APPNAME">%1$s</xliff:g> ऐप ले जाने का काम पूर्ण होने तक उपलब्ध नहीं रहेगा."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"आंतरिक मेमोरी को भूल जाएं?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'भूल जाएं\' के साथ इस डिस्क में संग्रहीत आपका सभी डेटा हमेशा के लिए खो जाएगा. क्या आप आगे बढ़ना चाहते हैं?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"भूल जाएं"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB डिस्क कनेक्ट है"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"ब्राउज़ करें"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"आंतरिक संग्रहण के रूप में सेट करें"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"निकालने योग्‍य संग्रहण के रूप में सेट करें"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"निकालें"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> निकाला गया"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"जब तक डिस्क को पुनः कनेक्ट नहीं किया जाता, तब तक कुछ ऐप्स अनुपलब्ध रहेंगे या ठीक से काम नहीं करेंगे."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"पर्याप्त मेमोरी स्‍थान नहीं है."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"ऐप्स मौजूद नहीं है."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"ऐप्स की प्रति नहीं बनाई जा सकती."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"इंस्‍टॉल स्‍थान मान्‍य नहीं है."</string>
-    <string name="system_package" msgid="9200255718634512790">"सिस्‍टम के बारे में नई जानकारी को बाहरी मीडिया पर इंस्टॉल नहीं किया जा सकता."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"और जानें"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"फिर से प्रयास करें"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS राउटर की खोज हो रही है…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"अपने राउटर पर वाई-फ़ाई  सुरक्षित सेटअप बटन दबाएं.\nइसे \"WPS\" भी कहा जा सकता है या इसमें बाईं ओर चिह्न हो सकता है."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"कोई नया पिन सेट करें"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"नया पिन फिर से डालें"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"पुराना पिन डालें"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"आपने 5 बार गलत पिन डाला है.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> सेकंड में पुन: प्रयास करें."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"आपने 5 बार गलत पिन डाला है.\n <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g> में पुन: प्रयास करें."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"गलत पिन, फिर से प्रयास करें"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"फिर से प्रयास करें, पिन का मिलान नहीं हुआ"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> के लिए पासवर्ड डालें"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"यदि आप किसी ऐप को बलपूर्वक रोकते हैं, तो वह गलत व्यवहार कर सकता है."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"अनइंस्टॉल करें"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"क्‍या आप इस ऐप को अनइंस्‍टॉल करना चाहते हैं?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"नई जानकारी अनइंस्‍टॉल करें"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"इस Android सिस्‍टम ऐप की सभी नई जानकारी अनइंस्‍टॉल कर दी जाएगी."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"अक्षम करें"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"क्या आप इस ऐप को अक्षम करना चाहते हैं?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"सक्षम करें"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"क्या आप इस ऐप को सक्षम करना चाहते हैं?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"उपयोग की गई मेमोरी"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> में <xliff:g id="SIZE">%1$s</xliff:g> का उपयोग किया गया"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"डेटा साफ़ करें"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"इस ऐप का सभी डेटा स्‍थायी रूप से हटा दिया जाएगा.\nइसमें सभी फ़ाइलें, सेटिंग, खाते, डेटाबेस आदि शामिल हैं."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"इस ऐप के सभी डेटा को स्थायी रूप से हटा दिया जाएगा."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"इसमें सभी फ़ाइलें, सेटिंग, खाते, डेटाबेस आदि शामिल हैं."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"डिफ़ॉल्ट साफ़ करें"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"कुछ कार्य हेतु यह ऐप लॉन्च के लिए सेट है"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"कोई डिफ़ॉल्ट सेट नहीं किया गया है"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"अनुमतियां"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"ऐप अनुमतियां"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%d</xliff:g> में से <xliff:g id="COUNT_0">%d</xliff:g> ऐप्‍स को अनुमति है"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android सुरक्षा पैच का स्‍तर"</string>
 </resources>

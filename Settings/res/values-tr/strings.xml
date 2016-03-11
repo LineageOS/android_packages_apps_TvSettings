@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Erişilebilirlik"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Geliştirici seçenekleri"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Yok"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Kullanım ve Teşhis"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Sistem güncellemesi"</string>
     <string name="about_preference" msgid="4131396784531360434">"Hakkında"</string>
     <string name="device_name" msgid="2670488158531273028">"Cihaz adı"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Ses"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Çeşitli"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Önbelleğe alınan veriler"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Çıkar"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Sil ve biçimlendir"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Cihaz depolaması olarak biçimlendir"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Bağlı değil"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Verileri taşı"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Bu dahili depolamayı unut"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Bu sürücünün içerdiği uygulamaları veya verileri kullanmak için sürücüyü tekrar yerleştirin. Sürücü kullanılamıyorsa ayrıca bu depolama birimini unutmayı seçebilirsiniz.\n\nUnutmayı seçerseniz cihazdaki tüm veriler kalıcı olarak kaybolur.\n\nUygulamaları daha sonra yeniden yükleyebilirsiniz, ancak bu cihazda depolanmış olan veriler kaybolur."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Cihaz depolama alanı"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Çıkarılabilir depolama alanı"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Sıfırlama"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> eklendi"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> eklenemedi"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> güvenli bir şekilde çıkarıldı"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> güvenli bir şekilde çıkarılamadı"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Çıkarılacak sürücü bulunamadı"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> biçimlendirildi"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> biçimlendirilemedi"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Dahili depolama olarak biçimlendir"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Bu işlem, USB sürücüsünün güvenli hale getirilmesi için biçimlendirilmesini gerektiriyor. Güvenli bir şekilde biçimlendirildikten sonra bu sürücü yalnızca bu cihazla kullanılabilecektir. Biçimlendirme işlemi, sürücüde mevcut olarak depolanmış tüm verileri siler. Veri kaybı yaşamamak için sürücüdeki verileri yedeklemenizi öneririz."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Sil ve Biçimlendir"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Biçimlendirildikten sonra bu USB sürücüsünü başka cihazlarda kullanabilirsiniz. Tüm veriler silinecektir. Öncelikle uygulamaları başka bir dahili depolamaya taşıyarak yedeklemenizi öneririz."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB Sürücüsü Biçimlendiriliyor…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Bu işlem biraz zaman alabilir. Lütfen sürücünüzü kaldırmayın."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Verileri <xliff:g id="NAME">%1$s</xliff:g> sürücüsüne taşıyın"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Fotoğraflarınızı, dosyalarınızı ve uygulama verilerinizi <xliff:g id="NAME">%1$s</xliff:g> sürücüsüne taşıyın. Bu işlem birkaç dakika sürebilir. Taşıma işlemi sırasında bazı uygulamalar doğru şekilde çalışmayacaktır."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Şimdi taşı"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Daha sonra taşı"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Veriler <xliff:g id="NAME">%1$s</xliff:g> sürücüsüne taşındı"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Veriler <xliff:g id="NAME">%1$s</xliff:g> sürücüsüne taşınamadı"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Veriler <xliff:g id="NAME">%1$s</xliff:g> sürücüsüne taşınıyor…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Bu işlem biraz zaman alabilir. Lütfen sürücünüzü kaldırmayın.\nTaşıma işlemi sırasında bazı uygulamalar doğru şekilde çalışmayacaktır."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Bu sürücünün yavaş olduğu anlaşılıyor."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Çalışmaya devam edebilirsiniz, ancak bu konuma taşınan uygulamalarda kısa süreli takılmalar olabilir ve veri aktarımları uzun sürebilir. Daha iyi performans için daha hızlı bir sürücü kullanmayı düşünün."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Biçimlendir"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Uygulamaları yedekleyin"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> içinde depolanan uygulamalar"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> içinde depolanan uygulamalar ve veriler"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> kullanılabilir"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Dahili depolamayı çıkarın"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Cihaz çıkarıldığında, bu cihazın depolama alanındaki uygulamaların çalışması duracaktır. Bu USB sürücüsü, yalnızca bu cihazda çalışacak şekilde biçimlendirildi. Başka cihazlarda çalışmayacaktır."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> çıkarılıyor…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Kullanılan depolama alanı"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> taşınıyor…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Taşıma işlemi sırasında sürücüyü çıkarmayın.\nBu cihazdaki <xliff:g id="APPNAME">%1$s</xliff:g> uygulaması, taşıma işlemi tamamlanana kadar kullanılamayacak."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Dahili depolama unutulsun mu?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\"Unut\" seçeneği kullanıldığında bu sürücüde depolanmış tüm verileriniz kalıcı olarak kaybolacaktır. Devam etmek istiyor musunuz?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Unut"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"USB sürücüsü bağlandı"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Göz at"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Dahili depolama olarak kur"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Kaldırılabilir depolama olarak kur"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Çıkar"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> kaldırıldı"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Sürücü yeniden bağlanana kadar bazı uygulamalar kullanılamayacak veya doğru şekilde çalışmayacaktır."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Yeterli depolama alanı yok."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Uygulama mevcut değil."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Uygulama, kopyalamaya karşı korumalı."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Yükleme konumu geçerli değil."</string>
-    <string name="system_package" msgid="9200255718634512790">"Sistem güncellemeleri, harici medyaya yüklenemez."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Daha fazla bilgi edinin"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Tekrar dene"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS yönlendirici aranıyor…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Yönlendiricinizdeki Kablosuz Korumalı Kurulum düğmesine basın.\nDüğmede \"WPS\" yazıyor veya soldaki simgeyi içeriyor olabilir."</string>
@@ -313,7 +252,7 @@
     <string name="location_reporting" msgid="3054236612250063073">"Konum Bildirme"</string>
     <string name="location_history" msgid="2946680949724247804">"Konum Geçmişi"</string>
     <string name="location_reporting_desc" msgid="6256424995139430823">"Google bu özelliği, Google Asistan ve Google Haritalar gibi ürünlerde kullanmaktadır. Konum Bildirme\'yi açmak bu özelliği kullanan tüm Google ürünlerinin cihazınızın son konum verilerini Google Hesabınızla bağlantılı olarak depolamasına ve kullanmasına olanak sağlar."</string>
-    <string name="location_history_desc" msgid="3861249867748294369">"Bu hesap için Konum Geçmişi açıldığında Google, uygulamalarınızın kullanması için cihazınızın konum verilerini depolayabilir.\n\nÖrneğin, Google Haritalar size yol tarifi sunabilir ve Google Asistan işe gidip gelme trafiği hakkında sizi bilgilendirebilir.\n\nKonum Geçmişi\'ni istediğiniz zaman kapatabilirsiniz, ancak bunu yaptığınızda, geçmişiniz silinmez. Konum Geçmişinizi görüntülemek ve yönetmek için maps.google.com/locationhistory adresini ziyaret edin."</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"Bu hesap için Konum Geçmişi açıldığında Google, uygulamalarınızın kullanması için cihazınızın konum verilerini depolayabilir.\n\nÖrneğin, Google Haritalar size yol tarifleri sunabilir ve Google Asistan işe gidip gelme trafiği hakkında sizi bilgilendirebilir.\n\nKonum Geçmişi\'ni istediğiniz zaman kapatabilirsiniz, ancak bunu yaptığınızda, geçmişiniz silinmez. Konum Geçmişinizi görüntülemek ve yönetmek için maps.google.com/locationhistory adresini ziyaret edin."</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"Konum Geçmişi\'ni sil"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"Bu işlem, ilgili Google Hesabı için bu cihazda depolanmış tüm Konum Geçmişi\'ni silecektir. Bu silme işlemini geri alamazsınız. Google Asistan gibi bazı uygulamalar çalışmayı durduracaktır."</string>
     <string name="system_services" msgid="7230571820151215779">"Hizmetler"</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Yeni PIN oluşturun"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Yeni PIN\'i tekrar girin"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Eski PIN\'i girin"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"PIN\'i 5 kez yanlış girdiniz.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> saniye içinde tekrar deneyin."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"PIN\'i 5 kez yanlış girdiniz.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g> tekrar deneyin."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Yanlış PIN, tekrar deneyin"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Tekrar deneyin, PIN eşleşmiyor"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> ağının şifresini girin"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Uygulamayı zorla durdurursanız hatalı davranabilir."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Yüklemeyi kaldır"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Bu uygulamanın yüklemesini kaldırmak istiyor musunuz?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Güncellemelerin yüklemesini kaldır"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Bu Android sistem uygulaması ile ilgili tüm güncellemelerin yüklemesi kaldırılacak."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Devre dışı bırak"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Bu uygulamayı devre dışı bırakmak istiyor musunuz?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Etkinleştir"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Bu uygulamayı etkinleştirmek istiyor musunuz?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Kullanılan depolama alanı"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> biriminde <xliff:g id="SIZE">%1$s</xliff:g> kullanıyor"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Verileri temizle"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Bu uygulamanın tüm verileri kalıcı olarak silinecek.\nBu veriler arasında tüm dosyalar, ayarlar, hesaplar, veritabanları vb. yer alıyor."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Bu uygulamanın tüm verileri kalıcı olarak silinecektir."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Buna tüm dosyalar, ayarlar, hesaplar, veritabanları vb. dahildir."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Varsayılanları temizle"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Bazı işlem. bu uyg başlat. için ayarla."</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Varsayılan ayarlanmadı"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"İzinler"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Uygulama izinleri"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%d</xliff:g> uygulamadan <xliff:g id="COUNT_0">%d</xliff:g> tanesine izin veriliyor"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android güvenlik yaması düzeyi"</string>
 </resources>

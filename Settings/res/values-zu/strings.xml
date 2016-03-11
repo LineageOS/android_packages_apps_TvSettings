@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Ukufinyeleleka"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Izinketho zonjiniyela"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Lutho"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Ukusetshenziswa nokuhlolwa"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Ukubuyekeza isistimu"</string>
     <string name="about_preference" msgid="4131396784531360434">"Mayelana"</string>
     <string name="device_name" msgid="2670488158531273028">"Igama ledivayisi"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Umsindo"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Okungaziwa"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Idatha yenqolobane"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Khipha"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Sula uphinde ufomethe"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Fometha njengesitoreji sedivayisi"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Akuxhunyiwe"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Thutha idatha"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Khohlwa lesi sitoreji sangaphakathi"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Ukuze usebenzise izinhlelo zokusebenza noma idatha ekule drayivu, ixhume kabusha. Ngokunye, ungakwazi ukukhetha ukukhohlwa lesi sitoreji uma idrayivu ingatholakali.\n\nUma ukhetha ukukhohlwa, yonke idatha equkethwe idrayivu izolahleka unaphakade.\n\nUngaka kabusha izinhlelo zokusebenza emuva kwesikhathi, kodwa idatha elondolozwe kule drayivu izolahleka."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Isitoreji sedivayisi"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Isitoreji esikhiphekayo"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Setha kabusha"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"I-<xliff:g id="NAME">%1$s</xliff:g> ikhweziwe"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Ayikwazanga ukukhweza i-<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"I-<xliff:g id="NAME">%1$s</xliff:g> ikhishwe ngokuphephile"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Ayikwazanga ukukhipha ngokuphephile i-<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Ayikwazanga ukuthola idrayivu engakhishwa"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"I-<xliff:g id="NAME">%1$s</xliff:g> ifomethiwe"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Ayikwazanga ukufometha i-<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Fometha njengesitoreji sangaphakathi"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Lokhu kudinga ukuthi idrayivu ye-USB ifomethwe ukuze yenziwe ivikeleke. Ngemuva kokufometha ngokuphephile, le drayivu izosebenza kuphela ngale divayisi. Ukufometha kususa yonke idatha okwamanje egcinwe kudrayivu. Ukuze ugweme ukulahlekelwa yidatha, cabanga ngokwenza isipele."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Sula uphinde ufomethe"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Ngemuva kokufometha, ungasebenzisa le drayivu ye-USB kwamanye amadivayisi. Yonke idatha izosulwa. Cabanga ngokwenza isipele kuqala ngokuhambisa izinhlelo zokusebenza kwesinye isitoreji sangaphakathi."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Ifomethi idrayivu ye-USB…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Lokhu kungathatha isikhashana. Sicela ungasusi idrayivu."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Hambisa idatha ku-<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Hambisa izithombe zakho, amafayela nedatha yohlelo lokusebenza ku-<xliff:g id="NAME">%1$s</xliff:g>. Lokhu kungathatha amaminithi ambalwa. Ezinye izinhlelo zokusebenza ngeke zisebenze ngokulungile ngesikhathi sokuhanjiswa."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Hambisa manje"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Hambisa ngemuva kwesikhathi"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Ihambise idatha ku-<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Ayikwazanga ukuhambisa idatha ku-<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Ihambisa idatha ku-<xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Lokhu kungathatha isikhathi. Sicela ungasusi idrayivu.\nEzinye izinhlelo zokusebenza ngeke zisebenze ngokulungile ngesikhathi sokuhanjiswa."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Le drayivu ibonakala ingasheshi."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Ungaqhubeka, kodwa izinhlelo zokusebenza eziyiswe kule ndawo singahle zingasheshi futhi ukudluliswa kwedatha kungathatha isikhathi eside. Naka ukusebenzisa idrayivu esheshayo ngokusebenza okungcono."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Ifomethi"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Yenza isipele izinhlelo zokusebenza"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Izinhlelo zokusebenza ezilondolozwe ku-<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Izinhlelo zokusebenza nedatha elondolozwe ku-<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> uyatholakala"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Khipha isitoreji sangaphakathi"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Izinhlelo zokusebenza kulesi sitoreji sale divayisi zizomisa ukusebenza uma ikhishwa. Le drayivu ye-USB ifomethwe ukuze isebenze kule divayisi kuphela. Ngeke ize isebenze kunoma yimaphi amanye."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Iyakhipha <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Isitoreji esisetshenzisiwe"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Ihambisa i-<xliff:g id="NAME">%1$s</xliff:g>..."</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Ungasusi idrayivu ngesikhathi sokuhambisa.\nUhlelo lokusebenza lwe-<xliff:g id="APPNAME">%1$s</xliff:g> kule divayisi ngeke luze lutholakale kuze kuqedwe ukuhambisa."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Khohlwa isitoreji sangaphakathi?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Yonke idatha yakho elondolozwe kule drayivu izolahleka unaphakade ngokuthi \'Khohlwa\'. Ungathanda ukuqhubeka?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Khohlwa"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Idrayivu ye-USB ixhunyiwe"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Dlulisa amehlo"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Setha isitoreji sangaphakathi"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Setha isitoreji esingasuseka"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Khipha"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> ususiwe"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Ezinye izinhlelo zokusebenza ngeke zitholakale noma ngeke zisebenze kahle idrayivu ize ixhunywe kabusha."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Ayikho indawo eyanele yokulondoloza."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Uhlelo lokusebenza alukho."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Uhlelo lokusebenza luvikelwe ekukopishweni."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Indawo yokufaka ayivumelekile."</string>
-    <string name="system_package" msgid="9200255718634512790">"Izibuyekezo zesistimu azikwazi ukufakwa kwimidiya yangaphandle."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Funda kabanzi"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Zama futhi"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Iseshela i-router ye-WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Cindezela inkinobho yokumisa okuvikelekile kwe-Wi-Fi ku-router yakho.\nIngabizwa nge-\"WPS\" noma iqukethe isimbuli ngakwesokunxele."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Setha i-PIN entsha"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Phinda ufake i-PIN entsha"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Faka i-PIN endala"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Ufake iphinikhodi engalungile izikhathi ezingu-5.\nZama futhi kumasekhondi angu-<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g>."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Ufake i-PIN engalungile izikhathi ezingu-5.\nZama futhi<xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"I-PIN engalungile, zama futhi"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Phinda uzame, i-PIN ayifani"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Faka iphasiwedi ye-<xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Uma uphoqelela ukuma kuhlelo lokusebenza, kungenzeka lingaziphathi kahle."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Khipha"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Ufuna ukukhipha lolu hlelo lokusebenza?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Khipha izibuyekezo"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Zonke izibuyekezo kulolu hlelo lokusebenza lwesistimu ye-Android zizokhishwa."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Khubaza"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Ufuna ukukhubaza lolu hlelo lokusebenza?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Nika amandla"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Ufuna ukunika amandla lolu hlelo lokusebenza?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Isitoreji esisetshenzisiwe"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> kusetshenziswe ku-<xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Sula idatha"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Yonke le datha yohlelo lokusebenza izozuswa unaphakade.\nLokhu kufaka phakathi wonke amafayela, izilungiselelo, ama-akhawunti, imininingo egciniwe, njll."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Yonke le datha yohlelo lokusebenza izosuswa unaphakade."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Lokhu kuhlanganisa wonke amafayela, izilungiselelo, ama-akhawunti, imininingo egciniwe, njll."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Sula okuzenzakalelayo"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Sethela ukuqalisa lolu hlelo lokusebenza ngezinye izenzo"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Akukho okuzenzakalelayo okusethiwe"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Izimvume"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Izimvume zohlelo lokusebenza"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> kuzinhlelo zokusebenza ezingu-<xliff:g id="COUNT_1">%d</xliff:g> ezivunyelwe"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Ileveli yokuvikeleka ye-Android"</string>
 </resources>

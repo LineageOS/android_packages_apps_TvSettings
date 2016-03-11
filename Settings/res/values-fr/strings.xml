@@ -80,7 +80,7 @@
     <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"Pour effectuer l\'association avec l\'appareil &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, assurez-vous qu\'il affiche la clé d\'accès suivante : &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8234127565393932499">"De : &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Associer l\'appareil avec cet appareil ?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="8951451728250058901">"Pour associer l\'appareil avec l\'appareil &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;, saisissez &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt; sur ce dernier, puis appuyez sur Retour ou Entrée."</string>
-    <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"Pour associer l\'appareil avec l\'appareil &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;saisissez le code obligatoire :"</string>
+    <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"Pour associer l\'appareil avec l\'appareil &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;saisissez le code PIN obligatoire :"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="7980787196089653577">"Pour associer l\'appareil avec l\'appareil &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;saisissez la clé d\'accès obligatoire :"</string>
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Habituellement 0000 ou 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"Associer"</string>
@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Accessibilité"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Options pour les développeurs"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Aucune"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Utilisation et diagnostics"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Mise à jour du système"</string>
     <string name="about_preference" msgid="4131396784531360434">"À propos"</string>
     <string name="device_name" msgid="2670488158531273028">"Nom de l\'appareil"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Audio"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Divers"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Données mises en cache"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Éjecter"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Effacer et formater"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Formater comme mémoire de stockage de l\'appareil"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Non connecté"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Transférer les données"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Supprimer cette mémoire de stockage interne"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Pour utiliser les applications ou les données de ce disque, insérez celui-ci de nouveau. Vous pouvez également le supprimer de la liste des mémoires de stockage s\'il n\'est pas disponible.\n\nSi vous le supprimez, toutes les données qu\'il contient seront définitivement effacées.\n\nVous pouvez réinstaller les applications plus tard, mais les données correspondantes enregistrées sur ce disque seront perdues."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Mémoire de stockage de l\'appareil"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Mémoire de stockage amovible"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Réinitialiser"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"La mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\" a bien été installée."</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Impossible d\'installer la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\"."</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"La mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\" a été éjectée de manière sécurisée."</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Impossible d\'éjecter la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\" de manière sécurisée."</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Impossible de trouver le disque à éjecter."</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"La mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\" a bien été formatée."</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Impossible de formater la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\"."</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formater comme mémoire de stockage interne"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Cette option nécessite de formater la clé USB pour qu\'elle soit sécurisée. Après le formatage, celle-ci ne fonctionnera que sur cet appareil. Le formatage entraîne la suppression de toutes les données enregistrées sur la clé. Pour ne pas risquer de perdre vos données, nous vous conseillons de les sauvegarder."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Effacer et formater"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Après le formatage, vous pourrez utiliser cette clé USB sur d\'autres appareils. Toutes les données seront effacées. Pensez à les sauvegarder auparavant en déplaçant les applications vers une autre mémoire de stockage interne."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formatage de la clé USB en cours"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Le formatage devrait durer quelques instants. Veuillez ne pas retirer la clé."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Déplacer les données vers la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\""</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Déplacer vos photos, vos fichiers et les données de vos applications vers la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\". Cette opération peut durer quelques minutes et empêche certaines applications de fonctionner correctement pendant qu\'elle est en cours."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Déplacer les données maintenant"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Déplacer les données plus tard"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Les données ont bien été transférées vers la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\"."</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Impossible de transférer les données vers la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\"."</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Déplacement données vers la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\"…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Cette opération peut durer quelques instants. Ne retirez pas le lecteur.\nCertaines applications ne fonctionneront pas correctement pendant le déplacement."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Cette clé semble être lente"</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Vous pouvez continuer, mais les applications déplacées vers cet emplacement risquent de se bloquer et les transferts de données pourront prendre du temps. Veuillez utiliser une clé plus rapide pour de meilleures performances."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formater"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Sauvegarder les applications"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Applications enregistrées dans : <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Applications et données enregistrées dans : <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> disponibles"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Éjecter la mémoire de stockage interne"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Les applications qui se trouvent sur la mémoire de stockage de l\'appareil cessent de fonctionner lorsque celle-ci est éjectée. Cette clé USB a été configurée pour ne fonctionner que sur cet appareil. Vous ne pouvez pas l\'utiliser sur d\'autres appareils."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Éjection du disque \"<xliff:g id="NAME">%1$s</xliff:g>\" en cours"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Espace de stockage utilisé"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Transfert de l\'application <xliff:g id="NAME">%1$s</xliff:g> en cours"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Ne retirez pas lecteur pendant transfert.\nL\'appli <xliff:g id="APPNAME">%1$s</xliff:g> ne sera pas dispo jusqu\'à fin opération."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Supprimer la mémoire de stockage interne ?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Si vous supprimez ce disque, toutes les données qu\'il contient seront définitivement perdues. Voulez-vous continuer ?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Supprimer"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Clé USB connectée"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Parcourir"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Configurer en tant que mémoire de stockage interne"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Configurer en tant que mémoire de stockage amovible"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Éjecter"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"Le lecteur \"<xliff:g id="NAME">%1$s</xliff:g>\" a été retiré"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Certaines applications ne seront pas disponibles ou ne fonctionneront pas correctement tant que le lecteur ne sera pas reconnecté."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Espace de stockage insuffisant."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"L\'application n\'existe pas."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"L\'application est protégée contre la copie."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"L\'emplacement d\'installation n\'est pas valide."</string>
-    <string name="system_package" msgid="9200255718634512790">"Les mises à jour du système ne peuvent pas être installées sur des supports externes."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"En savoir plus"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Réessayer"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Recherche du routeur WPS en cours…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Appuyez sur le bouton \"Configuration Wi-Fi protégée (WPS)\" du routeur.\nCelui-ci peut s\'appeler \"WPS\", ou le symbole peut être indiqué à gauche du bouton."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Définir un nouveau code d\'accès"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Saisir le nouveau code d\'accès"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Saisir l\'ancien code d\'accès"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Vous avez saisi un code d\'accès incorrect à cinq reprises.\nVeuillez réessayer dans <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> secondes."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Vous avez saisi un code d\'accès incorrect à cinq reprises.\nVeuillez réessayer <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Le code d\'accès est incorrect. Veuillez réessayer."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Le code d\'accès est incorrect. Veuillez réessayer."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Saisissez le mot de passe associé au réseau <xliff:g id="SSID">%1$s</xliff:g>."</string>
@@ -538,19 +477,16 @@
     <string name="device_apps_app_management_version" msgid="1004679024556315208">"version <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Ouvrir"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Forcer l\'arrêt"</string>
-    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Si vous forcez l\'arrêt d\'une application, celle-ci peut présenter des dysfonctionnements."</string>
+    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Si vous forcez l\'arrêt d\'une application, cela peut provoquer son dysfonctionnement."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Désinstaller"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Voulez-vous désinstaller cette application ?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Désinstaller les mises à jour"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Toutes les mises à jour de cette application système Android vont être désinstallées."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Désactiver"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Voulez-vous désactiver cette application ?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Activer"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Voulez-vous activer cette application ?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Espace de stockage utilisé"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Utilisation de la <xliff:g id="VOLUME">%2$s</xliff:g> : <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Effacer les données"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Toutes les données de cette application vont être définitivement supprimées,\ny compris tous les fichiers, les paramètres, les comptes, les bases de données, etc."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Toutes les données de cette application vont être supprimées définitivement."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Cela inclut l\'ensemble des fichiers, des paramètres, des comptes, des bases de données, etc."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Effacer les valeurs par défaut"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Lancer cette appli pour certaines actions"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Aucune valeur par défaut définie"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Autorisations"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Autorisations applis"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> applications autorisées sur <xliff:g id="COUNT_1">%d</xliff:g>"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Niveau du correctif de sécurité Android"</string>
 </resources>

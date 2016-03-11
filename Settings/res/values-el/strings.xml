@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Προσβα/τητα"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Επιλογές για προγραμματιστές"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Κανένα"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Χρήση και διαγνωστικά"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Ενημέρωση συστήματος"</string>
     <string name="about_preference" msgid="4131396784531360434">"Πληροφορίες"</string>
     <string name="device_name" msgid="2670488158531273028">"Όνομα συσκευής"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Ήχος"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Διάφορα"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Δεδομένα κρυφής μνήμης"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Εξαγωγή"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Διαγραφή και μορφοποίηση"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"Μορφοποίηση ως συσκευής αποθήκευσης"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Δεν συνδέθηκε"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Μετεγκατάσταση δεδομένων"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Κατάργηση απομνημόνευσης εσωτ. χώρου αποθήκευσης"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Για να χρησιμοποιήσετε τις εφαρμογές ή τα δεδομένα που περιέχει αυτός ο δίσκος, συνδέστε τον ξανά. Εναλλακτικά, μπορείτε να επιλέξετε να γίνει κατάργηση απομνημόνευσης αυτού του αποθηκευτικού μέσου, εάν ο δίσκος δεν είναι διαθέσιμος.\n\nΕάν επιλέξετε να γίνει κατάργηση απομνημόνευσης, όλα τα δεδομένα που περιέχει ο δίσκος θα χαθούν οριστικά.\n\nΜπορείτε να επανεγκαταστήσετε τις εφαρμογές αργότερα, αλλά τα δεδομένα τους που είναι αποθηκευμένα σε αυτόν το δίσκο θα χαθούν."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Αποθηκευτικός χώρος συσκευής"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Αφαιρούμενος αποθηκευτικός χώρος"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Επαναφορά"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"Προσαρτήθηκε <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Δεν ήταν δυνατή η προσάρτηση <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"Έγινε εξαγωγή του <xliff:g id="NAME">%1$s</xliff:g> με ασφάλεια"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Δεν ήταν δυνατή η εξαγωγή του <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Δεν ήταν δυνατή η εύρεση δίσκου για εξαγωγή"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"Η συσκευή <xliff:g id="NAME">%1$s</xliff:g> μορφοποιήθηκε"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Δεν ήταν δυνατή η μορφοποίηση <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Μορφοποίηση ως εσωτερικού .αποθηκευτικού χώρου"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Αυτό απαιτεί τη μορφοποίηση του δίσκου USB προκειμένου να είναι ασφαλής. Μετά την ασφαλή μορφοποίηση, αυτός ο δίσκος θα λειτουργεί μόνο σε αυτήν τη συσκευή. Η μορφοποίηση διαγράφει όλα τα δεδομένα που είναι αποθηκευμένα αυτήν τη στιγμή στο δίσκο. Για να αποφύγετε την απώλεια των δεδομένων σας, εξετάστε το ενδεχόμενο να δημιουργήσετε αντίγραφα ασφαλείας γι\' αυτά."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Διαγραφή και μορφοποίηση"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Μετά τη μορφοποίηση, μπορείτε να χρησιμοποιήσετε αυτήν τη μονάδα USB σε άλλες συσκευές. Όλα τα δεδομένα θα διαγραφούν. Εξετάστε πρώτα το ενδεχόμενο δημιουργίας αντιγράφων ασφαλείας μεταφέροντας τις εφαρμογές σε άλλες εσωτερικές μονάδες αποθήκευσης."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Μορφοποίηση δίσκου USB…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Αυτό μπορεί να διαρκέσει λίγη ώρα. Μην καταργήσετε το δίσκο."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Μετακίνηση δεδομένων σε <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Μετακίνηση των φωτογραφιών, των αρχείων και των δεδομένων εφαρμογών σε <xliff:g id="NAME">%1$s</xliff:g>. Αυτό ενδέχεται να διαρκέσει μερικά λεπτά. Ορισμένες εφαρμογές δεν θα λειτουργούν σωστά κατά τη μετακίνηση."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Μετακίνηση τώρα"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Μετακίνηση αργότερα"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Έγινε μετεγκατάσταση δεδομένων σε <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Δεν ήταν δυνατή η μετεγκατάσταση των δεδομένων σε <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Μετακίνηση δεδομένων σε <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Αυτό μπορεί να διαρκέσει λίγη ώρα. Μην καταργήσετε το δίσκο.\nΟρισμένες εφαρμογές δεν θα λειτουργούν σωστά κατά τη μετακίνηση."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Αυτός ο δίσκος φαίνεται να είναι αργός."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Μπορείτε να συνεχίσετε, αλλά οι εφαρμογές που έχουν μετακινηθεί σε αυτήν την τοποθεσία ενδέχεται να παρουσιάσουν δυσκολίες στη λειτουργία και οι μεταφορές δεδομένων ενδέχεται να καθυστερήσουν. Μπορείτε να χρησιμοποιήσετε έναν ταχύτερο δίσκο για καλύτερη απόδοση."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"Μορφοποίηση"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Δημιουργία αντιγράφων ασφαλείας εφαρμογών"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Εφαρμογές αποθηκευμένες σε <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Εφαρμογές και δεδομένα αποθηκευμένα σε <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> διαθέσιμα"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Αφαίρεση εσωτερικού χώρου αποθήκευσης"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Οι εφαρμογές που περιέχονται σε αυτήν τη συσκευή αποθήκευσης θα σταματήσουν να λειτουργούν μόλις αφαιρεθεί η συσκευή. Αυτή η μονάδα USB έχει μορφοποιηθεί έτσι ώστε να λειτουργεί μόνο σε αυτήν τη συσκευή. Δεν θα λειτουργεί σε άλλες συσκευές."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Εξαγωγή <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Αποθηκευτικός χώρος που χρησιμοποιείται"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Μετακίνηση <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Μην αφαιρέσετε το δίσκο κατά τη μετακίνηση.\nΜη διαθέσιμη εφαρμογή <xliff:g id="APPNAME">%1$s</xliff:g> στη συσκευή πριν ολοκληρωθεί η μετακίνηση."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Κατάργηση απομνημόνευσης εσωτ. χώρου αποθήκευσης;"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Όλα τα δεδομένα που είναι αποθηκεύονται σε αυτόν το δίσκο θα χαθούν οριστικά με την επιλογή \"Κατάργηση απομνημόνευσης\". Θέλετε να συνεχίσετε;"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Κατάργηση απομνημόνευσης"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Συνδέθηκε μονάδα USB"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Αναζήτηση"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Ρύθμιση ως εσωτερικού μέσου αποθήκευσης"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"Ρύθμιση ως αφαιρούμενου μέσου αποθήκευσης"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Εξαγωγή"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"Ο χρήστης <xliff:g id="NAME">%1$s</xliff:g> καταργήθηκε."</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Ορισμένες εφαρμογές δεν θα είναι διαθέσιμες ή δεν θα λειτουργούν σωστά έως ότου επανασυνδεθεί η μονάδα."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Δεν υπάρχει επαρκής αποθηκευτικός χώρος."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Η εφαρμογή δεν υπάρχει."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Η εφαρμογή διαθέτει προστασία αντιγραφής."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Η τοποθεσία εγκατάστασης δεν είναι έγκυρη."</string>
-    <string name="system_package" msgid="9200255718634512790">"Δεν είναι δυνατή η εγκατάσταση των ενημερώσεων σε εξωτερικά μέσα."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Μάθετε περισσότερα"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Επανάληψη"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Αναζήτηση για δρομολογητή WPS…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Πατήστε το κουμπί Ρύθμισης προστατευόμενου Wi-Fi στο δρομολογητή σας.\nΜπορεί να ονομάζεται \"WPS\" ή να περιέχει το σύμβολο στα αριστερά."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Ορίστε ένα νέο PIN"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Εισαγάγετε ξανά το νέο PIN"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Εισαγάγετε το προηγούμενο PIN"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Έχετε εισαγάγει λανθασμένα τον κωδικό PIN 5 φορές. \nΔοκιμάστε ξανά σε <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> δευτερόλεπτα."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Έχετε εισαγάγει λανθασμένα το PIN σας 5 φορές. \nΔοκιμάστε ξανά<xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Λάθος PIN, δοκιμάστε ξανά"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Δοκιμάστε ξανά, δεν υπάρχει αντιστοιχία PIN"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Κωδικός πρόσβασης για <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Αν επιβάλετε τη διακοπή μιας εφαρμογής, ενδέχεται να μη λειτουργήσει σωστά."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Κατάργηση εγκατάστασης"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Θέλετε να καταργήσετε την εγκατάσταση αυτής της εφαρμογής;"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Κατάργηση εγκατάστασης ενημερώσεων"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Θα καταργηθεί η εγκατάσταση όλων των ενημερώσεων σε αυτήν την εφαρμογή συστήματος Android."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Απενεργοποίηση"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Θέλετε να απενεργοποιήσετε αυτήν την εφαρμογή;"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Ενεργοποίηση"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Θέλετε να ενεργοποιήσετε αυτήν την εφαρμογή;"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Αποθηκευτικός χώρος που χρησιμοποιείται"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Χρησιμοποιούνται <xliff:g id="SIZE">%1$s</xliff:g> σε <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Διαγραφή δεδομένων"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Όλα τα δεδομένα της εφαρμογής θα διαγραφούν οριστικά. \nΑυτό περιλαμβάνει όλα τα αρχεία, τις ρυθμίσεις, τους λογαριασμούς, τις βάσεις δεδομένων κλπ."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Όλα τα δεδομένα αυτής της εφαρμογής θα διαγραφούν οριστικά."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Σε αυτά περιλαμβάνονται όλα τα αρχεία, οι ρυθμίσεις, οι λογαριασμοί, οι βάσεις δεδομένων, κ.λπ."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Διαγραφή προεπιλογών"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Εκκίνηση εφαρμογής για κάποιες ενέργειες"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Δεν ορίστηκαν προεπιλογές"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Άδειες"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Δικαιώματα εφαρμογών"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Επιτρέπονται <xliff:g id="COUNT_0">%d</xliff:g> από <xliff:g id="COUNT_1">%d</xliff:g> εφαρμογές"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Επίπεδο ενημέρωσης κώδικα ασφαλείας Android"</string>
 </resources>

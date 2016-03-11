@@ -97,7 +97,6 @@
     <string name="system_accessibility" msgid="6215431399759498005">"Accessibility"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Mga pagpipilian ng developer"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Wala"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"Paggamit at Mga Diagnostic"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Pag-update ng system"</string>
     <string name="about_preference" msgid="4131396784531360434">"Tungkol dito"</string>
     <string name="device_name" msgid="2670488158531273028">"Pangalan ng device"</string>
@@ -216,66 +215,6 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Audio"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Misc."</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Naka-cache na data"</string>
-    <string name="storage_eject" msgid="113476702798691558">"I-eject"</string>
-    <string name="storage_format" msgid="3759273736493279595">"Burahin at i-format"</string>
-    <string name="storage_format_for_private" msgid="7095270113028182032">"I-format bilang storage ng device"</string>
-    <string name="storage_not_connected" msgid="6378589497819596096">"Hindi nakakonekta"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Mag-migrate ng data"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Kalimutan ang internal storage na ito"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Upang magamit ang mga app o data na nilalaman ng drive na ito, i-plug muli ito. Kung hindi naman, maaari mong piliing kalimutan ang storage na ito kung hindi available ang drive.\n\nKung pipiliin mong Kalimutan ito, mawawala nang tuluyan ang lahat ng data na nilalaman ng drive.\n\nMaaari mong i-install muli ang mga app sa ibang pagkakataon, ngunit mawawala ang data na nakaimbak sa drive na ito."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Storage ng device"</string>
-    <string name="storage_removable_storage_section" msgid="3264955106565590076">"Naaalis na storage"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"I-reset"</string>
-    <string name="storage_mount_success" msgid="4624254886950093443">"Na-mount na ang <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_mount_failure" msgid="2469026716895846633">"Hindi ma-mount ang <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_success" msgid="7921627277443856151">"Hindi na-eject nang ligtas ang <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure" msgid="6322048355281833871">"Hindi na-eject nang ligtas ang <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Hindi makita ang drive na ie-eject"</string>
-    <string name="storage_format_success" msgid="6252068844653804319">"Na-format na ang <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_format_failure" msgid="7336977074523932399">"Hindi ma-format ang <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"I-format bilang internal storage"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Kinakailangan nito na naka-format ang USB drive upang gawin itong secure. Pagkatapos ng secure na pagfo-format, gagana lang ang drive na ito sa device na ito. Kung ifo-format, mabubura ang lahat ng data na kasalukuyang nakaimbak sa drive. Upang maiwasan ang pagkawala ng data, isaalang-alang ang pagba-back up nito."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Burahin at I-format"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Pagkatapos ma-format, maaari mo nang gamitin ang USB drive na ito sa iba pang mga device. Mabubura ang lahat ng data. Isaalang-alang muna ang pagba-back up bago ang paglilipat ng mga app sa iba pang internal storage."</string>
-    <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Fino-format ang USB Drive…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Maaari itong magtagal. Mangyaring huwag alisin ang drive."</string>
-    <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Ilipat ang data sa <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Ilipat ang data ng iyong mga larawan, file at app sa <xliff:g id="NAME">%1$s</xliff:g>. Maaari itong magtagal nang ilang minuto. Maaaring hindi gumana nang maayos ang ilang app sa panahon ng paglipat."</string>
-    <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Ilipat ngayon"</string>
-    <string name="storage_wizard_migrate_confirm_action_move_later" msgid="7838503647349016818">"Ilipat sa ibang pagkakataon"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="2634978204935628045">"Na-migrate ang data sa <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="6452532191705420237">"Hindi ma-migrate ang data sa <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Inililipat ang data sa <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Maaaring magtagal ito nang ilang sandali. Mangyaring huwag alisin ang drive.\nMaaaring hindi gumana nang maayos ang ilang app sa panahon ng paglipat."</string>
-    <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Mukhang mabagal ang drive na ito."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Maaari kang magpatuloy, ngunit maaaring maputol-putol ang mga app na inilipat sa lokasyong ito at maaaring magtagal ang mga paglilipat ng data. Isaalang-alang ang paggamit ng mas mabilis na drive para sa mas mahusay na pagganap."</string>
-    <string name="storage_wizard_format_action" msgid="3986485572528374905">"I-format"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"I-back up ang mga app"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Mga app na naka-imbak sa <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Mga app at data na naka-imbak sa <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> ang available"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"I-eject ang internal storage"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Hihinto sa paggana ang mga app sa storage ng device na ito kapag na-eject ito. Ang USB drive na ito ay naka-format upang gumana lang sa device na ito. Hindi ito gagana sa anumang iba pang mga device."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Ine-eject ang <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Ginamit na storage"</string>
-    <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Inililipat ang <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Huwag alisin ang drive sa panahon ng paglipat.\nAng <xliff:g id="APPNAME">%1$s</xliff:g> app sa device na ito ay hindi magiging available hanggang sa makumpleto ang paglipat."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Kalimutan ang internal storage?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Mawawala nang tuluyan ang lahat ng data na nakaimbak sa drive na ito gamit ang \'Kalimutan.\' Gusto mo bang magpatuloy?"</string>
-    <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Kalimutan"</string>
-    <string name="storage_new_title" msgid="3098495209500607438">"Nakakonekta ang USB drive"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Mag-browse"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"I-set up bilang internal na storage"</string>
-    <string name="storage_new_action_format_public" msgid="5604328981214071670">"I-set up bilang naaalis na storage"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"I-eject"</string>
-    <string name="storage_missing_title" msgid="2803464623922381858">"Inalis ang <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_missing_description" msgid="8400374014342069781">"Magiging hindi available ang ilang app o hindi gagana nang tama hanggang sa muling makonekta ang drive."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"Hindi sapat ang espasyo ng storage."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"Hindi umiiral ang app."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"Pinoprotektahan sa pagkopya ang app."</string>
-    <string name="invalid_location" msgid="5269044848535157307">"Hindi wasto ang lokasyon ng pag-install."</string>
-    <string name="system_package" msgid="9200255718634512790">"Hindi ma-install ang mga pag-update sa system sa external media."</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"Matuto nang higit pa"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Subukang muli"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Hinahanap ang WPS router…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Pindutin ang button ng Wi-Fi Protected Setup sa iyong router.\nMaaaring \"WPS\" ang pangalan nito o maaaring naglalaman ng simbolo sa kaliwa."</string>
@@ -529,7 +468,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Magtakda ng bagong PIN"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Muling ilagay ang bagong PIN"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Ilagay ang lumang PIN"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"5 beses kang naglagay ng maling PIN.\nSubukang muli pagkalipas ng <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> (na) segundo."</string>
+    <string name="pin_enter_wrong" msgid="5653864140710683928">"Inilagay mo ang maling PIN nang 5 beses.\nSubukang muli <xliff:g id="RELATIVE_TIME_SPAN">%1$s</xliff:g>."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Maling PIN, subukang muli"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Subukang muli, hindi tumutugma ang PIN"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Ilagay ang password para sa <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -541,16 +480,13 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Kung sapilitan mong ihihinto ang isang app, maaari itong magloko."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"I-uninstall"</string>
     <string name="device_apps_app_management_uninstall_desc" msgid="1104982472633576960">"Gusto mo bang i-uninstall ang app na ito?"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"I-uninstall ang mga update"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Ia-uninstall ang lahat ng update sa Android system app na ito."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"I-disable"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Gusto mo bang i-disable ang app na ito?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"I-enable"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Gusto mo bang i-enable ang app na ito?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Ginamit na storage"</string>
-    <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> ang nagamit sa <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"I-clear ang data"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Permanenteng made-delete ang lahat ng data ng app na ito.\nKabilang dito ang lahat ng file, setting, account, database, atbp."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="5312754223024135016">"Permanenteng made-delete ang lahat ng data ng app na ito."</string>
+    <string name="device_apps_app_management_clear_data_what" msgid="6010791116393405500">"Kasama dito ang lahat ng file, setting, account, database, atbp."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"I-clear ang mga default"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Itakdang buksan ang app para sa sa ilang pagkilos"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Walang nakatakdang default"</string>
@@ -598,5 +534,4 @@
     <string name="apps_permissions" msgid="1283592091618660965">"Mga Pahintulot"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Pahintulot sa app"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Pinapayagan ang <xliff:g id="COUNT_0">%d</xliff:g> sa <xliff:g id="COUNT_1">%d</xliff:g> (na) app"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Antas ng patch ng seguridad ng Android"</string>
 </resources>
