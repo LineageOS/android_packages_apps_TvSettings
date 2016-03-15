@@ -33,6 +33,18 @@ import java.util.List;
 @Keep
 public class RebootConfirmFragment extends GuidedStepFragment {
 
+    private static final String ARG_SAFE_MODE = "RebootConfirmFragment.safe_mode";
+
+    public static RebootConfirmFragment newInstance(boolean safeMode) {
+
+        Bundle args = new Bundle(1);
+        args.putBoolean(ARG_SAFE_MODE, safeMode);
+
+        RebootConfirmFragment fragment = new RebootConfirmFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -42,22 +54,38 @@ public class RebootConfirmFragment extends GuidedStepFragment {
     @Override
     public @NonNull
     GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-        return new GuidanceStylist.Guidance(
-                getString(R.string.system_reboot_confirm),
-                "",
-                getString(R.string.about_preference),
-                getActivity().getDrawable(R.drawable.ic_settings_warning)
-        );
+        if (getArguments().getBoolean(ARG_SAFE_MODE, false)) {
+            return new GuidanceStylist.Guidance(
+                    getString(R.string.reboot_safemode_confirm),
+                    getString(R.string.reboot_safemode_desc),
+                    getString(R.string.about_preference),
+                    getActivity().getDrawable(R.drawable.ic_settings_warning)
+            );
+        } else {
+            return new GuidanceStylist.Guidance(
+                    getString(R.string.system_reboot_confirm),
+                    null,
+                    getString(R.string.about_preference),
+                    getActivity().getDrawable(R.drawable.ic_settings_warning)
+            );
+        }
     }
 
     @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions,
             Bundle savedInstanceState) {
         final Context context = getActivity();
-        actions.add(new GuidedAction.Builder(context)
-                .id(GuidedAction.ACTION_ID_OK)
-                .title(R.string.restart_button_label)
-                .build());
+        if (getArguments().getBoolean(ARG_SAFE_MODE, false)) {
+            actions.add(new GuidedAction.Builder(context)
+                    .id(GuidedAction.ACTION_ID_OK)
+                    .title(R.string.reboot_safemode_action)
+                    .build());
+        } else {
+            actions.add(new GuidedAction.Builder(context)
+                    .id(GuidedAction.ACTION_ID_OK)
+                    .title(R.string.restart_button_label)
+                    .build());
+        }
         actions.add(new GuidedAction.Builder(context)
                 .clickAction(GuidedAction.ACTION_ID_CANCEL)
                 .build());
@@ -68,7 +96,11 @@ public class RebootConfirmFragment extends GuidedStepFragment {
         if (action.getId() == GuidedAction.ACTION_ID_OK) {
             PowerManager pm =
                     (PowerManager) getActivity().getSystemService(Context.POWER_SERVICE);
-            pm.reboot(null);
+            if (getArguments().getBoolean(ARG_SAFE_MODE, false)) {
+                pm.rebootSafeMode();
+            } else {
+                pm.reboot(null);
+            }
         } else {
             getFragmentManager().popBackStack();
         }

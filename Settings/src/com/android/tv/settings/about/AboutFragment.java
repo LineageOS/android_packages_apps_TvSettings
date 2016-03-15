@@ -31,6 +31,7 @@ import android.os.UserManager;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v17.preference.LeanbackPreferenceFragment;
+import android.support.v17.preference.LeanbackSettingsFragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
@@ -41,11 +42,13 @@ import android.widget.Toast;
 
 import com.android.internal.telephony.TelephonyProperties;
 import com.android.settingslib.DeviceInfoUtils;
+import com.android.tv.settings.LongClickPreference;
 import com.android.tv.settings.PreferenceUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.name.DeviceManager;
 
-public class AboutFragment extends LeanbackPreferenceFragment {
+public class AboutFragment extends LeanbackPreferenceFragment implements
+        LongClickPreference.OnLongClickListener {
     private static final String TAG = "AboutFragment";
 
     private static final String KEY_MANUAL = "manual";
@@ -66,6 +69,7 @@ public class AboutFragment extends LeanbackPreferenceFragment {
     private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
     private static final String KEY_SAFETY_LEGAL = "safetylegal";
     private static final String KEY_DEVICE_NAME = "device_name";
+    private static final String KEY_RESTART = "restart";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -113,6 +117,9 @@ public class AboutFragment extends LeanbackPreferenceFragment {
         } else {
             removePreference(securityPatchPref);
         }
+
+        final LongClickPreference restartPref = (LongClickPreference) findPreference(KEY_RESTART);
+        restartPref.setLongClickListener(this);
 
         findPreference(KEY_BASEBAND_VERSION).setSummary(
                 getSystemPropertySummary(TelephonyProperties.PROPERTY_BASEBAND_VERSION));
@@ -217,6 +224,20 @@ public class AboutFragment extends LeanbackPreferenceFragment {
         if (deviceNamePref != null) {
             deviceNamePref.setSummary(DeviceManager.getDeviceName(getActivity()));
         }
+    }
+
+    @Override
+    public boolean onPreferenceLongClick(Preference preference) {
+        if (TextUtils.equals(preference.getKey(), KEY_RESTART)) {
+            if (getCallbackFragment() instanceof LeanbackSettingsFragment) {
+                LeanbackSettingsFragment callback =
+                        (LeanbackSettingsFragment) getCallbackFragment();
+                callback.startImmersiveFragment(
+                        RebootConfirmFragment.newInstance(true /* safeMode */));
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
