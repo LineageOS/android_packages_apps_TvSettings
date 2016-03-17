@@ -208,6 +208,10 @@
   <!-- Preference which shows build version. [CHAR LIMIT=50] -->
   <string name="about_build">Build</string>
   <!-- Device Info screen. Countdown for user taps to enable development settings [CHAR LIMIT=NONE] -->
+  <plurals name="show_dev_countdown">
+    <item quantity="one">Du bass nach <xliff:g id="step_count">%1$d</xliff:g> Schrëtt dovun ewech en Entwéckler ze sinn</item>
+    <item quantity="other">Du bass nach <xliff:g id="step_count">%1$d</xliff:g> Schrëtter dovun ewech en Entwéckler ze sinn</item>
+  </plurals>
   <!-- Preference which shows ads settings. [CHAR LIMIT=50] -->
   <string name="about_ads">Reklammen</string>
   <!-- Device Info screen. Confirmation that developer settings are enabled [CHAR LIMIT=NONE] -->
@@ -894,8 +898,20 @@
   <!-- Description of TV auto power on [CHAR LIMIT=50] -->
   <string name="inputs_tv_auto_on_desc">Tëlee zesumme mamHDMI-Apparat uschalten</string>
   <!-- Header for connected TV input(s) [CHAR LIMIT=30] -->
+  <plurals name="inputs_header_connected_input">
+    <item quantity="one">VERBONNENEN AGANK</item>
+    <item quantity="other">VERBONNEN AGÄNG</item>
+  </plurals>
   <!-- Header for standby TV input(s) [CHAR LIMIT=30] -->
+  <plurals name="inputs_header_standby_input">
+    <item quantity="one">AGANK OP STANDBY</item>
+    <item quantity="other">AGÄNG OP STANDBY</item>
+  </plurals>
   <!-- Header for disconnected TV input(s) [CHAR LIMIT=30] -->
+  <plurals name="inputs_header_disconnected_input">
+    <item quantity="one">NET VERBONNENEN AGANK</item>
+    <item quantity="other">NET VERBONNEN AGÄNK</item>
+  </plurals>
   <!-- Summary for add restricted profile entry in the choice dialog [CHAR LIMIT=none] -->
   <string name="user_add_profile_item_summary">Zougrëff op Appen an aner Inhalter an dengem Kont aschränken</string>
   <!-- User details new restricted profile name [CHAR LIMIT=30] -->
@@ -921,6 +937,10 @@
   <!-- Title for action to configure apps for a restricted profile [CHAR LIMIT=100] -->
   <string name="restricted_profile_configure_apps_title">Erlaabt Appen</string>
   <!-- Description for action to configure apps for a restricted profile indicating number of allow apps will be ready in a moment [CHAR LIMIT=100] -->
+  <plurals name="restricted_profile_configure_apps_description">
+    <item quantity="one">1 App erlaabt</item>
+    <item quantity="other">%d Appen erlaabt</item>
+  </plurals>
   <!-- An action label indicating the package will be or is allowed [CHAR LIMIT=100] -->
   <string name="restricted_profile_allowed">Erlaabt</string>
   <!-- An action label indicating the package will be or is not allowed [CHAR LIMIT=100] -->
