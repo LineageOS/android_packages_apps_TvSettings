@@ -89,7 +89,7 @@ public abstract class WifiMultiPagedFormActivity extends MultiPagedForm
 
     @Override
     public boolean choiceChosen(FormPage formPage, int choiceResourceId) {
-        return getString(choiceResourceId).toUpperCase().equals(formPage.getDataSummary());
+        return getString(choiceResourceId).equals(formPage.getDataSummary());
     }
 
     @Override

@@ -70,6 +70,7 @@
         <activity
             android:name=".connectivity.setup.WifiSetupActivity"
             android:clearTaskOnLaunch="true"
+            android:theme="@style/Theme.Setup"
             android:configChanges="keyboard|keyboardHidden|navigation" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
