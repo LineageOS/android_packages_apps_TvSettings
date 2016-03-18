@@ -1435,4 +1435,13 @@
     <!-- Summary Title for saying that the preference is experimental and will evolve over time due to User feedback. [CHAR LIMIT=NONE] -->
     <string name="experimental_preference">(Experimental)</string>
 
+    <!-- Title of button to confirm rebooting into safe mode. [CHAR LIMIT=50] -->
+    <string name="reboot_safemode_action">Reboot to safe mode</string>
+
+    <!-- Shutdown Confirmation Dialog.  Message in the confirmation dialog
+         when the user asks to reboot into safe mode. [CHAR LIMIT=50] -->
+    <string name="reboot_safemode_confirm">Do you want to reboot into safe mode?</string>
+    <!-- Shutdown Confirmation Dialog. Detailed message in the confirmation dialog when the user asks to reboot into safe mode [CHAR LIMIT=NONE] -->
+    <string name="reboot_safemode_desc">This will disable all third party applications you have installed. They will be restored when you reboot again.</string>
+
 </resources>
