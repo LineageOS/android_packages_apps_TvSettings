@@ -37,7 +37,8 @@
         <intent android:action="android.settings.DEVICE_NAME" />
     </Preference>
 
-    <Preference android:key="restart"
+    <com.android.tv.settings.LongClickPreference
+        android:key="restart"
         android:title="@string/restart_button_label"
         android:fragment="com.android.tv.settings.about.RebootConfirmFragment" />
 
