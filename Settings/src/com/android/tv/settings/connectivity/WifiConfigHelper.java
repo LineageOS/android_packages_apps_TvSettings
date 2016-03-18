@@ -25,6 +25,7 @@ import android.net.wifi.WifiManager;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 
 import java.util.List;
@@ -63,7 +64,7 @@ public final class WifiConfigHelper {
     public static void setConfigSsid(WifiConfiguration config, String ssid) {
         // if this looks like a BSSID, don't quote it
         if (!Pattern.matches(REGEX_HEX_BSSID, ssid)) {
-            config.SSID = enquoteSsid(ssid);
+            config.SSID = AccessPoint.convertToQuotedString(ssid);
         } else {
             config.SSID = ssid;
         }
@@ -228,10 +229,6 @@ public final class WifiConfigHelper {
                 mWifiManager.forget(networkId, null);
             }
         }
-    }
-
-    private static String enquoteSsid(String ssid) {
-        return "\"".concat(ssid.replace("\"", "\\\"")).concat("\"");
     }
 
     /**
