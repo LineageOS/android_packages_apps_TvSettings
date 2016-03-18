@@ -429,19 +429,20 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
         for (ScanResult result : consolidatedScanResults.values()) {
             listItems.add(new SelectFromListWizardFragment.ListItem(result));
         }
-        Collections.sort(listItems, new SelectFromListWizardFragment.ListItemComparator());
 
-        SelectFromListWizardFragment.ListItem wpsItem = new SelectFromListWizardFragment.ListItem(
-                getString(R.string.wps_network).toUpperCase(), R.drawable.ic_setup_wps);
-        if (mShowWpsAtTop) {
-            listItems.add(0, wpsItem);
-        } else {
-            listItems.add(wpsItem);
-        }
+        int wpsPinnedPos = mShowWpsAtTop ? SelectFromListWizardFragment.PinnedListItem.FIRST
+                                         : SelectFromListWizardFragment.PinnedListItem.LAST;
+
+        SelectFromListWizardFragment.PinnedListItem wpsItem =
+                new SelectFromListWizardFragment.PinnedListItem(
+                        getString(R.string.wps_network), R.drawable.ic_setup_wps, wpsPinnedPos, 0);
+
+        listItems.add(wpsItem);
 
         if (mShowSkipNetwork) {
-            listItems.add(new SelectFromListWizardFragment.ListItem(
-                   getString(R.string.skip_network).toUpperCase(), 0));
+            listItems.add(new SelectFromListWizardFragment.PinnedListItem(
+                    getString(R.string.skip_network), R.drawable.ic_setup_wps,
+                    SelectFromListWizardFragment.PinnedListItem.LAST, 1));
         }
 
         return listItems;
