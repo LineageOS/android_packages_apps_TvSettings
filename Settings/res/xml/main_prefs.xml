@@ -26,6 +26,11 @@
             android:title="@string/connectivity_network"
             android:fragment="com.android.tv.settings.connectivity.NetworkFragment" />
         <Preference
+            android:icon="@drawable/ic_settings_inputs"
+            android:key="inputs"
+            android:title="@string/system_inputs"
+            android:fragment="com.android.tv.settings.system.InputsFragment" />
+        <Preference
             android:icon="@drawable/ic_settings_cast"
             android:key="cast"
             android:title="@string/system_cast" >
@@ -100,11 +105,6 @@
             android:title="@string/system_speech" >
             <intent android:action="com.google.android.katniss.setting.SPEECH" />
         </Preference>
-        <Preference
-            android:icon="@drawable/ic_settings_inputs"
-            android:key="inputs"
-            android:title="@string/system_inputs"
-            android:fragment="com.android.tv.settings.system.InputsFragment" />
         <Preference
             android:icon="@drawable/ic_settings_accessibility"
             android:key="accessibility"
