@@ -27,10 +27,10 @@
     </style>
 
     <style name="SettingsWindowAnimationStyle" parent="@android:style/Animation.Activity">
-        <item name="android:fragmentOpenEnterAnimation">@anim/settings_fragment_fade_in</item>
-        <item name="android:fragmentOpenExitAnimation">@anim/settings_fragment_fade_out</item>
-        <item name="android:fragmentCloseEnterAnimation">@anim/settings_fragment_fade_in</item>
-        <item name="android:fragmentCloseExitAnimation">@anim/settings_fragment_fade_out</item>
+        <item name="android:fragmentOpenEnterAnimation">@anim/setup_fragment_open_in</item>
+        <item name="android:fragmentOpenExitAnimation">@anim/setup_fragment_open_out</item>
+        <item name="android:fragmentCloseEnterAnimation">@anim/setup_fragment_close_in</item>
+        <item name="android:fragmentCloseExitAnimation">@anim/setup_fragment_close_out</item>
     </style>
 
     <!-- Default Settings theme -->
@@ -44,9 +44,14 @@
         <item name="wifi_signal_color">?android:attr/colorAccent</item>
     </style>
 
+    <style name="Theme.Setup" parent="@style/Theme.Settings">
+        <item name="wifi_signal_color">@color/list_item_icon</item>
+    </style>
+
     <style name="Theme.Settings.Transparent">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.8</item>
     </style>
@@ -64,6 +69,7 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
     </style>
 
     <style name="Theme.Settings.BluetoothPairing" parent="@style/SettingsStyle.TextAppearanceMedium">
@@ -160,6 +166,50 @@
 
     <style name="SyncSwitchPreference" parent="LeanbackPreference">
         <item name="android:widgetLayout">@layout/preference_widget_sync_toggle</item>
+    </style>
+
+    <style name="Setup" />
+
+    <style name="Setup.Description" />
+
+    <style name="Setup.Action" />
+
+    <style name="Setup.Description.Title">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="Setup.Description.Description">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/setup_description_text_size</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Setup.Action.ListItem">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/list_item</item>
+        <item name="android:textSize">@dimen/setup_list_item_text_size</item>
+    </style>
+
+    <style name="Setup.Action.TextInput">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/list_item</item>
+        <item name="android:textSize">@dimen/setup_list_item_text_size</item>
+    </style>
+
+    <style name="Setup.Action.TextInput">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:background">@drawable/setup_text_input_underline</item>
+        <item name="android:textCursorDrawable">@drawable/setup_text_input_cursor</item>
+        <item name="android:textColor">@color/setup_list_item_focused</item>
+        <item name="android:textSize">@dimen/setup_list_item_text_size</item>
+    </style>
+
+    <style name="Setup.ProgressTitle">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/activity_progress_text</item>
+        <item name="android:textSize">@dimen/activity_progress_title_text_size</item>
     </style>
 
 </resources>

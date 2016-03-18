@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<!-- Copyright (C) 2016 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,13 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<set xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <objectAnimator
-        android:duration="@integer/settings_fade_in_duration"
-        android:propertyName="alpha"
-        android:valueFrom="0.0"
-        android:valueTo="1.0"
-        android:valueType="floatType" />
-
-</set>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:inset="2dp">
+    <shape
+        android:tint="?attr/colorControlActivated"
+        android:shape="rectangle">
+        <size
+            android:height="1sp"
+            android:width="1sp" />
+        <solid android:color="@color/setup_list_item_focused" />
+    </shape>
+</inset>

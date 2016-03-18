@@ -32,7 +32,7 @@ import java.util.ArrayList;
 public enum WifiFormPageType implements FormPageDisplayer.FormPageInfo {
     CHOOSE_NETWORK(FormPageDisplayer.DISPLAY_TYPE_LIST_CHOICE, R.string.title_select_wifi_network,
             0, new int[] { R.string.other_network },
-            new int[] { R.drawable.ic_menu_add }),
+            new int[] { R.drawable.ic_add }),
     ENTER_SSID(FormPageDisplayer.DISPLAY_TYPE_TEXT_INPUT, R.string.title_ssid, 0,
             TextInputWizardFragment.INPUT_TYPE_NO_SUGGESTIONS),
     CHOOSE_SECURITY(FormPageDisplayer.DISPLAY_TYPE_LIST_CHOICE, R.string.security_type, 0,
@@ -173,11 +173,28 @@ public enum WifiFormPageType implements FormPageDisplayer.FormPageInfo {
         if (extraChoices != null) {
             choices.addAll(extraChoices);
         }
+
         if (mDefaultListItemTitles != null) {
+            // Find the largest priority of the items placed at the end of the list and place
+            // default items after.
+            int largestLastPriority = Integer.MIN_VALUE;
+            if (extraChoices != null) {
+                for (SelectFromListWizardFragment.ListItem item : extraChoices) {
+                    if (item.getPinnedPosition()
+                            == SelectFromListWizardFragment.PinnedListItem.LAST) {
+                        SelectFromListWizardFragment.PinnedListItem pinnedItem =
+                                (SelectFromListWizardFragment.PinnedListItem) item;
+                        largestLastPriority = java.lang.Math.max(
+                                largestLastPriority, pinnedItem.getPinnedPriority());
+                    }
+                }
+            }
+
             for (int i = 0; i < mDefaultListItemTitles.length; i++) {
-                choices.add(new SelectFromListWizardFragment.ListItem(
-                        context.getString(mDefaultListItemTitles[i]).toUpperCase(),
-                        mDefaultListItemIcons == null ? 0 : mDefaultListItemIcons[i]));
+                choices.add(new SelectFromListWizardFragment.PinnedListItem(
+                        context.getString(mDefaultListItemTitles[i]),
+                        mDefaultListItemIcons == null ? 0 : mDefaultListItemIcons[i],
+                        SelectFromListWizardFragment.PinnedListItem.LAST, i + largestLastPriority));
             }
         }
         return choices;
