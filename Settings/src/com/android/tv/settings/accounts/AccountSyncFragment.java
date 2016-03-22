@@ -67,7 +67,9 @@ public class AccountSyncFragment extends LeanbackPreferenceFragment implements
         public void onStatusChanged(int which) {
             mHandler.post(new Runnable() {
                 public void run() {
-                    onSyncStateUpdated();
+                    if (isResumed()) {
+                        onSyncStateUpdated();
+                    }
                 }
             });
         }
