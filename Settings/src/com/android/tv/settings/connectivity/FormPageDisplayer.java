@@ -68,6 +68,11 @@ public class FormPageDisplayer
         int getDisplayType();
 
         /**
+         * @return the default value for this input
+         */
+        int getDefaultPrefillResourceId();
+
+        /**
          * @return the set of choices for this form page.
          */
         ArrayList<SelectFromListWizardFragment.ListItem> getChoices(Context context,
@@ -206,10 +211,13 @@ public class FormPageDisplayer
             String descriptionArgument, final FormPage formPage,
             final FormPageResultListener listener, FormPage lastPage, boolean forward,
             final boolean emptyAllowed) {
+        final String prefill = lastPage != null && !TextUtils.isEmpty(lastPage.getDataSummary())
+                ? lastPage.getDataSummary() : getDefaultPrefill(formPageInfo);
         Fragment fragment = TextInputWizardFragment.newInstance(
                 getTitle(formPageInfo, titleArgument),
                 getDescription(formPageInfo, descriptionArgument),
-                formPageInfo.getInputType(), lastPage == null ? null : lastPage.getDataSummary());
+                formPageInfo.getInputType(),
+                prefill);
         displayFragment(fragment, forward);
 
         mTextInputWizardFragmentListener = new TextInputWizardFragment.Listener() {
@@ -268,5 +276,11 @@ public class FormPageDisplayer
         int descriptionResourceId = formPageInfo.getDescriptionResourceId();
         return (descriptionResourceId != 0) ? mContext.getString(descriptionResourceId, argument)
                 : null;
+    }
+
+    private String getDefaultPrefill(FormPageInfo formPageInfo) {
+        int defaultPrefillResourceId = formPageInfo.getDefaultPrefillResourceId();
+        return (defaultPrefillResourceId != 0)
+                ? mContext.getString(defaultPrefillResourceId) : null;
     }
 }

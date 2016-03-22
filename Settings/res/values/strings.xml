@@ -461,16 +461,16 @@
     <string name="wifi_ip_settings_invalid_dns">Enter a valid DNS address</string>
     <!-- Error message if the network prefix length is not valid [CHAR LIMIT=50]-->
     <string name="wifi_ip_settings_invalid_network_prefix_length">Enter a network prefix length between 0 and 32</string>
-    <!-- Hint text for the IP address -->
-    <string name="wifi_ip_address_hint">Enter a valid IP address.\nExample: 192.168.1.128</string>
-    <!-- Hint text for DNS -->
-    <string name="wifi_dns1_hint">Enter a valid IP address or leave empty.\nExample: 8.8.8.8</string>
-    <!-- Hint text for DNS -->
-    <string name="wifi_dns2_hint">Enter a valid IP address or leave empty.\nExample: 8.8.4.4</string>
-    <!-- Hint text for the gateway -->
-    <string name="wifi_gateway_hint">Enter a valid IP address or leave empty.\nExample: 192.168.1.1</string>
-    <!-- Hint text for network prefix length -->
-    <string name="wifi_network_prefix_length_hint">Enter a valid network prefix length.\nExample: 24</string>
+    <!-- Description text for the IP address -->
+    <string name="wifi_ip_address_description">Enter a valid IP address.\nExample: <xliff:g>192.168.1.128</xliff:g></string>
+    <!-- Description text for DNS -->
+    <string name="wifi_dns1_description">Enter a valid IP address or leave empty.\nExample: <xliff:g>8.8.8.8</xliff:g></string>
+    <!-- Description text for DNS -->
+    <string name="wifi_dns2_description">Enter a valid IP address or leave empty.\nExample: <xliff:g>8.8.4.4</xliff:g></string>
+    <!-- Description text for the gateway -->
+    <string name="wifi_gateway_description">Enter a valid IP address or leave empty.\nExample: <xliff:g>192.168.1.1</xliff:g></string>
+    <!-- Description text for network prefix length -->
+    <string name="wifi_network_prefix_length_description">Enter a valid network prefix length.\nExample: <xliff:g>24</xliff:g></string>
     <!-- HTTP proxy settings. The error if the hostname is not valid -->
     <string name="proxy_error_invalid_host">Hostname isn\'t valid</string>
     <!-- HTTP proxy settings. The error if the exclusion list is not valid -->
@@ -483,12 +483,12 @@
     <string name="proxy_error_invalid_port">Port isn\'t valid</string>
     <!-- HTTP proxy settings. Warning message about limited application support [CHAR LIMIT=100]-->
     <string name="proxy_warning_limited_support">HTTP proxy is used by the browser but may not be used by other apps</string>
-    <!-- HTTP proxy settings. The hint text field for port. -->
-    <string name="proxy_port_hint">Enter a valid port.\nExample: 8080</string>
-    <!-- HTTP proxy settings. The hint text for proxy exclusion list.-->
-    <string name="proxy_exclusionlist_hint">Enter a comma-separated list of excluded domains or leave blank.\nExample: example.com,mycomp.test.com,localhost</string>
-    <!-- HTTP proxy settings. The hint text field for the hostname. -->
-    <string name="proxy_hostname_hint">Enter a valid hostname.\nExample: proxy.example.com</string>
+    <!-- HTTP proxy settings. The description for proxy server port. -->
+    <string name="proxy_port_description">Enter a valid port.\nExample: <xliff:g>8080</xliff:g></string>
+    <!-- HTTP proxy settings. The description for proxy exclusion list.-->
+    <string name="proxy_exclusionlist_description">Enter a comma-separated list of excluded domains or leave blank.\nExample: <xliff:g>example.com,mycomp.test.com,localhost</xliff:g></string>
+    <!-- HTTP proxy settings. The description field for the hostname. -->
+    <string name="proxy_hostname_description">Enter a valid hostname.\nExample: <xliff:g>proxy.example.com</xliff:g></string>
 
     <!-- Title to show indicating the user is connected [CHAR LIMIT=100] -->
     <string name="wifi_summary_title_connected">Network connected</string>
