@@ -411,12 +411,12 @@ public class SecurityFragment extends LeanbackPreferenceFragment
     }
 
     private void removeRestrictedUser() {
+        final int restrictedUserHandle = mRestrictedUserInfo.id;
+        mRestrictedUserInfo = null;
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                mUserManager.removeUser(mRestrictedUserInfo.id);
-                // pop confirm dialog
-                mRestrictedUserInfo = null;
+                mUserManager.removeUser(restrictedUserHandle);
                 UserSwitchListenerService.updateLaunchPoint(getActivity(), false);
                 refresh();
             }
