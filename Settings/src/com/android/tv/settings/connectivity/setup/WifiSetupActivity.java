@@ -435,7 +435,7 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
 
         SelectFromListWizardFragment.PinnedListItem wpsItem =
                 new SelectFromListWizardFragment.PinnedListItem(
-                        getString(R.string.wps_network), R.drawable.ic_setup_wps, wpsPinnedPos, 0);
+                        getString(R.string.wps_network), R.drawable.setup_wps, wpsPinnedPos, 0);
 
         listItems.add(wpsItem);
 
