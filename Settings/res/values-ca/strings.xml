@@ -216,20 +216,28 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Introdueix una adreça de passarel·la vàlida."</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Introdueix una adreça DNS vàlida."</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Introdueix un prefix de xarxa entre 0 i 32."</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"Introdueix una adreça IP vàlida.\nExemple: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"Introdueix una adreça IP vàlida o deixa el camp en blanc.\nExemple: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"Introdueix una adreça IP vàlida o deixa el camp en blanc.\nExemple: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"Escriu una adreça IP vàlida o deixa el camp en blanc.\nExemple: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"Introdueix una longitud de prefix de xarxa vàlida.\nExemple: 24"</string>
+    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
+    <skip />
+    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
+    <skip />
+    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
+    <skip />
+    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
+    <skip />
+    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
+    <skip />
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"El nom d\'amfitrió no és vàlid."</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"La llista d\'exclusió no és vàlida. Introdueix una llista de dominis exclosos separats per comes."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"El camp de port no pot ser buit."</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Si el camp d\'amfitrió és buit, deixa el camp de port buit."</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"El port no és vàlid."</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"El navegador utilitza un servidor intermediari HTTP, però altres aplicacions poden no utilitzar-lo."</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"Introdueix un port vàlid.\nExemple: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"Introdueix una llista de dominis exclosos separats per comes o deixa el camp en blanc.\nExemple: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"Introdueix un nom d\'amfitrió vàlid.\nExemple: proxy.example.com"</string>
+    <!-- no translation found for proxy_port_description (6791098212244367568) -->
+    <skip />
+    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
+    <skip />
+    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
+    <skip />
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Xarxa connectada"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Xarxa no connectada"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Ja tens una connexió activa a <xliff:g id="SSID">%1$s</xliff:g>. Vols connectar-te a una altra xarxa?"</string>
@@ -591,10 +599,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"El PIN no és correcte. Torna-ho a provar."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Torna-ho a provar. El PIN no coincideix."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Escriu la contrasenya de <xliff:g id="SSID">%1$s</xliff:g>."</string>
-    <!-- no translation found for wifi_setup_connection_success (3846993789166071184) -->
-    <skip />
-    <!-- no translation found for wifi_setup_save_success (4785799603638549254) -->
-    <skip />
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"S\'ha connectat correctament"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"S\'ha desat correctament"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Versió <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Obre"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Força l\'aturada"</string>
@@ -662,10 +668,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Nivell de pedaç de seguretat d\'Android"</string>
     <string name="choose_application" msgid="5662960665577780353">"Tria una aplicació"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Experimental)"</string>
-    <!-- no translation found for reboot_safemode_action (8129550438717110406) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_confirm (3329475617645192086) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_desc (5031024337104679492) -->
-    <skip />
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"Reinicia en mode segur"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Vols reiniciar en mode segur?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"Es desactivaran les aplicacions de tercers que hagis instal·lat. Tot aquest contingut es restablirà quan tornis a reiniciar el dispositiu."</string>
 </resources>

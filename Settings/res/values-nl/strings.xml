@@ -216,20 +216,28 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Geef een geldig gateway-adres op"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Geef een geldig DNS-adres op"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Geef een netw.prefixleng. tussen 0 en 32 tekens op"</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"Geef een geldig IP-adres op.\nVoorbeeld: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"Geef een geldig IP-adres op of laat dit veld leeg.\nVoorbeeld: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"Geef een geldig IP-adres op of laat dit veld leeg.\nVoorbeeld: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"Geef een geldig IP-adres op of laat dit veld leeg.\nBijvoorbeeld: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"Geef een geldige netwerkprefixlengte op.\nVoorbeeld: 24"</string>
+    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
+    <skip />
+    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
+    <skip />
+    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
+    <skip />
+    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
+    <skip />
+    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
+    <skip />
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Hostnaam is niet geldig"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Deze uitsluitingslijst is niet geldig. Geef een door komma\'s gescheiden lijst met uitgesloten domeinen op."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Het veld \'Poort\' mag niet leeg blijven"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Als het veld \'Host\' leeg is, laat je het veld \'Poort\' leeg"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Poort is niet geldig"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP-proxy wordt gebruikt door de browser maar kan niet door andere apps worden gebruikt"</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"Geef een geldige poort op.\nVoorbeeld: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"Geef een door komma\'s gescheiden lijst met uitgesloten domeinen op of laat dit veld leeg.\nVoorbeeld: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"Geef een geldige hostnaam op.\nVoorbeeld: proxy.example.com"</string>
+    <!-- no translation found for proxy_port_description (6791098212244367568) -->
+    <skip />
+    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
+    <skip />
+    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
+    <skip />
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Netwerk verbonden"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Niet verbonden met netwerk"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Je bent reeds verbonden met <xliff:g id="SSID">%1$s</xliff:g>. Wil je verbinding maken met een ander netwerk?"</string>
@@ -591,10 +599,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Onjuiste pincode, probeer het opnieuw"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Probeer het opnieuw. De pincode komt niet overeen."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Wachtwoord opgeven voor <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <!-- no translation found for wifi_setup_connection_success (3846993789166071184) -->
-    <skip />
-    <!-- no translation found for wifi_setup_save_success (4785799603638549254) -->
-    <skip />
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Verbonden"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"Opgeslagen"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Versie <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Openen"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Gedwongen stoppen"</string>
@@ -662,10 +668,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Niveau van Android-beveiligingspatch"</string>
     <string name="choose_application" msgid="5662960665577780353">"App kiezen"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Experimenteel)"</string>
-    <!-- no translation found for reboot_safemode_action (8129550438717110406) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_confirm (3329475617645192086) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_desc (5031024337104679492) -->
-    <skip />
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"Opnieuw opstarten in veilige modus"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Wil je opnieuw opstarten in de veilige modus?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"Als je dit doet, worden alle geïnstalleerde apps van derden uitgeschakeld. Ze worden weer ingeschakeld als je nogmaals opnieuw opstart."</string>
 </resources>

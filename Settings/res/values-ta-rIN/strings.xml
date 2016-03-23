@@ -216,20 +216,28 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"சரியான கேட்வே முகவரியை உள்ளிடவும்"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"சரியான DNS முகவரியை உள்ளிடவும்"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"0 மற்றும் 32க்கு இடையிலான நெட்வொர்க் முன்னொட்டு நீளத்தை உள்ளிடவும்"</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"சரியான IP முகவரியை உள்ளிடவும்.\nஎடுத்துக்காட்டு: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"சரியான IP முகவரியை உள்ளிடவும் அல்லது வெறுமையாக விடவும்.\nஎடுத்துக்காட்டு: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"சரியான IP முகவரியை உள்ளிடவும் அல்லது வெறுமையாக விடவும்.\nஎடுத்துக்காட்டு: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"சரியான IP முகவரியை உள்ளிடவும் அல்லது வெறுமையாக விடவும்.\nஎடுத்துக்காட்டு: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"சரியான நெட்வொர்க் முன்னொட்டு நீளத்தை உள்ளிடவும்.\nஎடுத்துக்காட்டு: 24"</string>
+    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
+    <skip />
+    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
+    <skip />
+    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
+    <skip />
+    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
+    <skip />
+    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
+    <skip />
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"ஹோஸ்ட்பெயர் தவறானது"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"விலக்கப் பட்டியல் தவறானது. விலக்கப்பட்ட டொமைன்களின் காற்புள்ளியால் பிரிக்கப்பட்ட பட்டியலை உள்ளிடவும்."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"போர்ட் புலம் வெறுமையாக இருக்கக்கூடாது"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"ஹோஸ்ட் புலம் வெறுமையாக இருந்தால், போர்ட் புலத்தை வெறுமையாக விடவும்"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"போர்ட் தவறானது"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP ப்ராக்ஸியை உலாவி பயன்படுத்தும், ஆனால் பிற பயன்பாடுகளால் பயன்படுத்த முடியாமல் போகலாம்"</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"சரியான போர்ட்டை உள்ளிடவும்.\nஎடுத்துக்காட்டு: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"விலக்கப்பட்ட களங்களின் காற்புள்ளியால் பிரிக்கப்பட்ட பட்டியலை உள்ளிடவும் அல்லது காலியாக விடவும்.\nஎடுத்துக்காட்டு: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"சரியான ஹோஸ்ட்பெயரை உள்ளிடவும்.\nஎடுத்துக்காட்டு: proxy.example.com"</string>
+    <!-- no translation found for proxy_port_description (6791098212244367568) -->
+    <skip />
+    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
+    <skip />
+    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
+    <skip />
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"நெட்வொர்க் இணைக்கப்பட்டது"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"நெட்வொர்க் இணைக்கப்படவில்லை"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g> உடன் ஏற்கனவே இணைக்கப்பட்டுள்ளது. வேறொரு நெட்வொர்க்குடன் இணைக்கவா?"</string>
@@ -591,10 +599,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"தவறான PIN, மீண்டும் முயலவும்"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"மீண்டும் முயலவும், PIN பொருந்தவில்லை"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g>க்கான கடவுச்சொல்லை உள்ளிடுக"</string>
-    <!-- no translation found for wifi_setup_connection_success (3846993789166071184) -->
-    <skip />
-    <!-- no translation found for wifi_setup_save_success (4785799603638549254) -->
-    <skip />
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"இணைக்கப்பட்டது"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"சேமிக்கப்பட்டது"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"பதிப்பு <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"திறக்கும்"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"உடனே நிறுத்து"</string>
@@ -662,10 +668,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Android பாதுகாப்பின் இணைப்புநிரல் நிலை"</string>
     <string name="choose_application" msgid="5662960665577780353">"பயன்பாட்டைத் தேர்ந்தெடுக்கவும்"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(சோதனை முயற்சி)"</string>
-    <!-- no translation found for reboot_safemode_action (8129550438717110406) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_confirm (3329475617645192086) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_desc (5031024337104679492) -->
-    <skip />
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"பாதுகாப்புப் பயன்முறைக்கு மறுதொடக்கம் செய்"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"பாதுகாப்புப் பயன்முறைக்கு மறுதொடக்கம் செய்ய விரும்புகிறீர்களா?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"இவ்வாறு செய்வதால், நீங்கள் நிறுவிய எல்லா மூன்றாம் தரப்புப் பயன்பாடுகளும் முடக்கப்படும். மீண்டும் மறுதொடக்கம் செய்யும் போது, அவை மீட்டமைக்கப்படும்."</string>
 </resources>

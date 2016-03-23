@@ -216,20 +216,28 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"చెల్లుబాటు అయ్యే గేట్‌వే చిరునామాను నమోదు చేయండి"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"చెల్లుబాటు అయ్యే DNS చిరునామాను నమోదు చేయండి"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"నెట్. ఆది. పొడ. 0 మరియు 32 మధ్య ఉండేలా నమో. చేయం."</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"చెల్లుబాటు అయ్యే IP చిరునామాను నమోదు చేయండి.\nఉదాహరణ: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"చెల్లుబాటు అయ్యే IP చిరునామాను నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"చెల్లుబాటు అయ్యే IP చిరునామాను నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"చెల్లుబాటు అయ్యే IP చిరునామాను నమోదు చేయండి లేదా ఖాళీగా వదిలిపెట్టండి.\nఉదాహరణ: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"చెల్లుబాటు అయ్యే నెట్‌వర్క్ ఆదిప్రత్యయం పొడవును నమోదు చేయండి.\nఉదాహరణ: 24"</string>
+    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
+    <skip />
+    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
+    <skip />
+    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
+    <skip />
+    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
+    <skip />
+    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
+    <skip />
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"హోస్ట్ పేరు చెల్లదు"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"ఈ మినహాయింపు జాబితా చెల్లదు. కామాతో వేరు చేసిన మినహాయింపు డొమైన్‌ల జాబితాను నమోదు చేయండి."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"పోర్ట్ ఫీల్డ్ ఖాళీగా ఉండకూడదు"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"హోస్ట్ ఫీల్డ్ ఖాళీగా ఉంటే, పోర్ట్ ఫీల్డ్‌ని ఖాళీగా వదిలిపెట్టండి"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"పోర్ట్ చెల్లదు"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP ప్రాక్సీని బ్రౌజర్ ఉపయోగిస్తుంది కానీ ఇతర అనువర్తనాలు ఉపయోగించవు"</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"చెల్లుబాటు అయ్యే పోర్ట్‌ను నమోదు చేయండి.\nఉదాహరణ: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"మినహాయించిన డొమైన్‌లను కామాతో వేరు చేస్తూ జాబితా రూపంలో నమోదు చేయండి లేదా ఖాళీగా వదిలిపెట్టండి.\nఉదాహరణ: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"చెల్లుబాటు అయ్యే హోస్ట్‌పేరును నమోదు చేయండి.\nఉదాహరణ: proxy.example.com"</string>
+    <!-- no translation found for proxy_port_description (6791098212244367568) -->
+    <skip />
+    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
+    <skip />
+    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
+    <skip />
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"నెట్‌వర్క్ కనెక్ట్ చేయబడింది"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"నెట్‌వర్క్ కనెక్ట్ కాలేదు"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"ఇప్పటికే <xliff:g id="SSID">%1$s</xliff:g>కి కనెక్ట్ చేయబడింది. వేరొక నెట్‌వర్క్‌కి కనెక్ట్ చేయాలా?"</string>
@@ -591,10 +599,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"తప్పు పిన్, మళ్లీ ప్రయత్నించండి"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"మళ్లీ ప్రయత్నించండి, పిన్ సరిపోలలేదు"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> కోసం పాస్‌వర్డ్‌ను నమోదు చేయండి"</string>
-    <!-- no translation found for wifi_setup_connection_success (3846993789166071184) -->
-    <skip />
-    <!-- no translation found for wifi_setup_save_success (4785799603638549254) -->
-    <skip />
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"విజయవంతంగా కనెక్ట్ చేయబడింది"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"విజయవంతంగా సేవ్ చేయబడింది"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"సంస్కరణ <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"తెరువు"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"నిర్బంధ ఆపివేత"</string>
@@ -662,10 +668,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Android భద్రతా అతికింపు స్థాయి"</string>
     <string name="choose_application" msgid="5662960665577780353">"అనువర్తనాన్ని ఎంచుకోండి"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(ప్రయోగాత్మకం)"</string>
-    <!-- no translation found for reboot_safemode_action (8129550438717110406) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_confirm (3329475617645192086) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_desc (5031024337104679492) -->
-    <skip />
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"సురక్షిత మోడ్‌కు రీబూట్ చేయి"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"మీరు సురక్షిత మోడ్‌కు రీబూట్ చేయాలనుకుంటున్నారా?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"దీని వలన మీరు ఇన్‌స్టాల్ చేసిన అన్ని మూడవ పక్షం అనువర్తనాలు నిలిపివేయబడతాయి. మీరు మళ్లీ రీబూట్ చేసినప్పుడు అవి పునరుద్ధరించబడతాయి."</string>
 </resources>

@@ -216,20 +216,28 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"올바른 게이트웨이 주소를 입력하세요."</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"올바른 DNS 주소를 입력하세요."</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"0에서 32 사이의 네트워크 접두어 길이를 입력하세요."</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"올바른 IP 주소를 입력하세요.\n예: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"올바른 IP 주소를 입력하거나 비워두세요.\n예: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"올바른 IP 주소를 입력하거나 비워두세요.\n예: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"유효한 IP 주소를 입력하거나 비워두세요.\n예: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"올바른 네트워크 프리픽스 길이를 입력하세요.\n예: 24"</string>
+    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
+    <skip />
+    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
+    <skip />
+    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
+    <skip />
+    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
+    <skip />
+    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
+    <skip />
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"호스트 이름이 유효하지 않습니다."</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"이 제외 목록은 유효하지 않습니다. 제외된 도메인을 콤마로 구분한 목록을 입력하세요."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"포트 입력란은 비워 둘 수 없습니다."</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"호스트 입력란이 비어 있는 경우 포트 입력란을 비워두세요."</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"포트가 유효하지 않습니다."</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP 프록시가 브라우저에서는 사용되지만 다른 앱에서는 사용되지 않을 수 있습니다."</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"올바른 포트를 입력하세요.\n예: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"제외할 도메인을 쉼표로 구분하여 입력하거나 비워두세요.\n예: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"올바른 호스트 이름을 입력하세요.\n예: proxy.example.com"</string>
+    <!-- no translation found for proxy_port_description (6791098212244367568) -->
+    <skip />
+    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
+    <skip />
+    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
+    <skip />
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"네트워크에 연결됨"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"네트워크에 연결되지 않음"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"이미 <xliff:g id="SSID">%1$s</xliff:g>에 연결되어 있습니다. 다른 네트워크에 연결하시겠습니까?"</string>
@@ -591,10 +599,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN이 잘못되었습니다. 다시 시도해 주세요."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"다시 시도해 주세요. PIN이 일치하지 않습니다."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> 비밀번호 입력"</string>
-    <!-- no translation found for wifi_setup_connection_success (3846993789166071184) -->
-    <skip />
-    <!-- no translation found for wifi_setup_save_success (4785799603638549254) -->
-    <skip />
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"연결되었습니다."</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"저장되었습니다."</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"버전 <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"열기"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"강제 종료"</string>
@@ -662,10 +668,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Android 보안 패치 수준"</string>
     <string name="choose_application" msgid="5662960665577780353">"애플리케이션 선택"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(베타)"</string>
-    <!-- no translation found for reboot_safemode_action (8129550438717110406) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_confirm (3329475617645192086) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_desc (5031024337104679492) -->
-    <skip />
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"안전 모드로 재부팅"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"안전 모드로 재부팅하시겠습니까?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"그러면 설치한 모든 제3자 애플리케이션을 사용할 수 없게 됩니다. 재부팅을 반복하면 애플리케이션이 복원됩니다."</string>
 </resources>
