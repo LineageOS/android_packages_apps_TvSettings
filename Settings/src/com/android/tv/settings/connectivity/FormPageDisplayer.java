@@ -44,7 +44,10 @@ public class FormPageDisplayer
     public static final int DISPLAY_TYPE_TEXT_INPUT = 1;
     public static final int DISPLAY_TYPE_LIST_CHOICE = 2;
     public static final int DISPLAY_TYPE_LOADING = 3;
-    public static final int DISPLAY_TYPE_PASSWORD_INPUT = 4;
+    // Minimum 8 characters
+    public static final int DISPLAY_TYPE_PSK_INPUT = 4;
+
+    private static final int PSK_MIN_LENGTH = 8;
 
     public interface FormPageInfo {
         /**
@@ -150,10 +153,9 @@ public class FormPageDisplayer
                         currentFormPage, formPageResultListener, previousFormPage, forward,
                         emptyAllowed);
 
-            case DISPLAY_TYPE_PASSWORD_INPUT:
-                return displayPasswordInput(formPageInfo, titleArgument, descriptionArgument,
-                        currentFormPage, formPageResultListener, previousFormPage, forward,
-                        emptyAllowed);
+            case DISPLAY_TYPE_PSK_INPUT:
+                return displayPskInput(formPageInfo, titleArgument, descriptionArgument,
+                        currentFormPage, formPageResultListener, previousFormPage, forward);
 
             case DISPLAY_TYPE_LOADING:
                 return displayLoading(formPageInfo, titleArgument, showProgress, forward);
@@ -235,10 +237,9 @@ public class FormPageDisplayer
         return fragment;
     }
 
-    private Fragment displayPasswordInput(FormPageInfo formPageInfo, String titleArgument,
+    private Fragment displayPskInput(FormPageInfo formPageInfo, String titleArgument,
             String descriptionArgument, final FormPage formPage,
-            final FormPageResultListener listener, FormPage lastPage, boolean forward,
-            final boolean emptyAllowed) {
+            final FormPageResultListener listener, FormPage lastPage, boolean forward) {
         Fragment fragment = PasswordInputWizardFragment.newInstance(
                 getTitle(formPageInfo, titleArgument),
                 getDescription(formPageInfo, descriptionArgument),
@@ -248,7 +249,7 @@ public class FormPageDisplayer
         mPasswordInputWizardFragmentListener = new PasswordInputWizardFragment.Listener() {
             @Override
             public boolean onPasswordInputComplete(String text) {
-                if (!TextUtils.isEmpty(text) || emptyAllowed) {
+                if (!TextUtils.isEmpty(text) && text.length() >= PSK_MIN_LENGTH) {
                     Bundle result = new Bundle();
                     result.putString(FormPage.DATA_KEY_SUMMARY_STRING, text);
                     listener.onBundlePageResult(formPage, result);
