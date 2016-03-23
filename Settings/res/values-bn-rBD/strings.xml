@@ -216,20 +216,28 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"একটি বৈধ গেটওয়ে ঠিকানা লিখুন"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"একটি বৈধ DNS ঠিকানা লিখুন"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"নেটওয়ার্ক প্রিফিক্সের দৈর্ঘ্য ০ এবং ৩২ সংখ্যার মধ্যে হতে হবে"</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"একটি বৈধ IP ঠিকানা লিখুন।\nউদাহরণ: ১৯২.১৬৮.১.১২৮"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"একটি বৈধ IP ঠিকানা লিখুন অথবা ফাঁকা রেখে দিন।\nউদাহরণ: ৮.৮.৮.৮"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"একটি বৈধ IP ঠিকানা লিখুন অথবা ফাঁকা রেখে দিন।\nউদাহরণ: ৮.৮.৪.৪"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"একটি বৈধ IP ঠিকানা লিখুন অথবা ফাঁকা ছেড়ে দিন।\nউদাহরণ: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"একটি বৈধ নেটওয়ার্ক প্রিফিক্স দৈর্ঘ্য লিখুন।\nউদাহরণ: ২৪"</string>
+    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
+    <skip />
+    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
+    <skip />
+    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
+    <skip />
+    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
+    <skip />
+    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
+    <skip />
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"হোস্টনামটি বৈধ নয়"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"এই বাদ দেওয়ার তালিকাটি বৈধ নয়৷ বাদ দেওয়া ডোমেনগুলির একটি কমা দ্বারা আলাদা করা তালিকা প্রদান করুন৷"</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"পোর্ট ক্ষেত্রটিকে খালি রাখা যাবে না"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"যদি হোস্ট ক্ষেত্রটি খালি থাকে, তাহলে পোর্ট ক্ষেত্রটিকেও খালি ছেড়ে দিন"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"পোর্ট বৈধ নয়"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP প্রক্সি ব্রাউজারে ব্যবহৃত হয় কিন্তু অন্যান্য অ্যাপ্লিকেশানগুলি হয়তো এর ব্যবহার করে না"</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"একটি বৈধ পোর্ট লিখুন।\nউদাহরণ: ৮০৮০"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"বাদ দেওয়া ডোমেনগুলির কমা চিহ্ন দ্বারা বিভাজিত একটি তালিকা লিখুন অথবা ফাঁকা রাখুন।\nউদাহরণ: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"একটি বৈধ হোস্টনাম লিখুন।\nউদাহরণ: proxy.example.com"</string>
+    <!-- no translation found for proxy_port_description (6791098212244367568) -->
+    <skip />
+    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
+    <skip />
+    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
+    <skip />
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"নেটওয়ার্ক সংযুক্ত হয়েছে"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"নেটওয়ার্কের সাথে সংযোগ স্থাপন করা হয়নি"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g> এর সাথে ইতিমধ্যেই সংযুক্ত৷ অন্য কোনো নেটওয়ার্কের সাথে সংযোগ স্থাপন করবেন?"</string>
@@ -591,10 +599,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"ভুল পিন, আবার চেষ্টা করুন"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"পিন মেলেনি, আবার চেষ্টা করুন"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> এর জন্য পাসওয়ার্ড দিন"</string>
-    <!-- no translation found for wifi_setup_connection_success (3846993789166071184) -->
-    <skip />
-    <!-- no translation found for wifi_setup_save_success (4785799603638549254) -->
-    <skip />
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"সফলভাবে সংযুক্ত হয়েছে"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"সফলভাবে সংরক্ষণ করা হয়েছে"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"সংস্করণ <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"খুলুন"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"বলপূর্বক বন্ধ করুন"</string>
@@ -662,10 +668,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Android সুরক্ষার প্যাচ লেবেল"</string>
     <string name="choose_application" msgid="5662960665577780353">"অ্যাপ্লিকেশান চয়্ন করুন"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(পরীক্ষামূলক)"</string>
-    <!-- no translation found for reboot_safemode_action (8129550438717110406) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_confirm (3329475617645192086) -->
-    <skip />
-    <!-- no translation found for reboot_safemode_desc (5031024337104679492) -->
-    <skip />
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"নিরাপদ মোডে পুনরায় চালু করুন"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"আপনি কি নিরাপদ মোডে পুনরায় চালু করতে চান?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"এটি আপনার ইনস্টল করা সমস্ত তৃতীয় পক্ষের অ্যাপ্লিকেশানকে অক্ষম করবে৷ আপনি যখন পুনরায় চালু করবেন তখন সেগুলি পুনরুদ্ধার হবে৷"</string>
 </resources>
