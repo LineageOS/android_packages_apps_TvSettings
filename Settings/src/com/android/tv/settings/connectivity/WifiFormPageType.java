@@ -38,7 +38,7 @@ public enum WifiFormPageType implements FormPageDisplayer.FormPageInfo {
     CHOOSE_SECURITY(FormPageDisplayer.DISPLAY_TYPE_LIST_CHOICE, R.string.security_type, 0,
             new int[] { R.string.wifi_security_type_none, R.string.wifi_security_type_wep,
             R.string.wifi_security_type_wpa, R.string.wifi_security_type_eap }),
-    ENTER_PASSWORD(FormPageDisplayer.DISPLAY_TYPE_PASSWORD_INPUT,
+    ENTER_PASSWORD(FormPageDisplayer.DISPLAY_TYPE_PSK_INPUT,
             R.string.wifi_setup_input_password, 0, 0),
     CONNECT(FormPageDisplayer.DISPLAY_TYPE_LOADING, R.string.wifi_connecting, 0),
     CONNECT_FAILED(FormPageDisplayer.DISPLAY_TYPE_LIST_CHOICE,
