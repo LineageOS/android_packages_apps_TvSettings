@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_progress_top_margin"
         android:layout_gravity="center_horizontal"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:gravity="bottom">
 
         <TextView
@@ -32,12 +32,16 @@
             android:textAppearance="@style/Setup.ProgressTitle"
             android:id="@+id/status_text" />
 
-        <ImageView
+        <ProgressBar
+            style="@android:style/Widget.Material.Light.ProgressBar.Large"
             android:id="@+id/progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/indeterminate_bottom_padding"
-            android:src="@drawable/indeterminate_progress" />
+            android:layout_width="@dimen/setup_progress_spinner_size"
+            android:layout_height="@dimen/setup_progress_spinner_size"
+            android:indeterminate="true"
+            android:layout_marginTop="@dimen/setup_progress_spinner_margin_top"
+            android:layout_gravity="center"
+            android:indeterminateTintMode="src_in"
+            android:indeterminateTint="@color/setup_list_item_background_focused" />
 
     </LinearLayout>
 

@@ -22,7 +22,8 @@
     android:clipToPadding="false"
     android:clipChildren="false"
     android:focusable="true"
-    android:orientation="horizontal">
+    android:clickable="true"
+    android:stateListAnimator="@anim/list_item_pressed">
     <LinearLayout
         android:id="@+id/list_item_text_container"
         android:layout_width="match_parent"
