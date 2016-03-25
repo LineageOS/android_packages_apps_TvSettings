@@ -477,7 +477,7 @@ public class AppRestrictionsFragment extends LeanbackPreferenceFragment implemen
         AppRestrictionsPreference p =
                 new AppRestrictionsPreference(getPreferenceManager().getContext());
         String packageName = getContext().getPackageName();
-        p.setIcon(R.drawable.ic_settings_location);
+        p.setIcon(R.drawable.ic_location_on);
         p.setKey(getKeyForPackage(packageName));
         ArrayList<RestrictionEntry> restrictions = RestrictionUtils.getRestrictions(
                 getActivity(), mUser);

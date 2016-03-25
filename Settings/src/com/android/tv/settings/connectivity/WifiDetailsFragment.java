@@ -203,7 +203,7 @@ public class WifiDetailsFragment extends LeanbackPreferenceFragment
                     getString(R.string.wifi_forget_network),
                     getString(R.string.wifi_forget_network_description),
                     mAccessPoint.getSsidStr(),
-                    getContext().getDrawable(R.drawable.ic_settings_wifi_4));
+                    getContext().getDrawable(R.drawable.ic_wifi_signal_4_white_132dp));
         }
 
         @Override

@@ -21,7 +21,7 @@
         android:key="device"
         android:title="@string/header_category_device">
         <Preference
-            android:icon="@drawable/ic_settings_wifi_4"
+            android:icon="@drawable/ic_wifi_signal_4_white"
             android:key="network"
             android:title="@string/connectivity_network" >
             <intent
@@ -39,13 +39,13 @@
         android:key="preferences"
         android:title="@string/header_category_preferences">
         <Preference
-            android:icon="@drawable/ic_settings_texttospeach"
+            android:icon="@drawable/ic_mic"
             android:key="speech"
             android:title="@string/system_speech" >
             <intent android:action="com.google.android.katniss.setting.SPEECH" />
         </Preference>
         <Preference
-            android:icon="@drawable/ic_settings_accessibility"
+            android:icon="@drawable/ic_accessibility_new"
             android:key="accessibility"
             android:title="@string/system_accessibility"
             android:fragment="com.android.tv.settings.system.AccessibilityFragment" />
@@ -55,7 +55,7 @@
         android:key="accessories"
         android:title="@string/header_category_accessories">
         <Preference
-            android:icon="@drawable/ic_settings_bluetooth"
+            android:icon="@drawable/ic_bluetooth"
             android:key="add_accessory"
             android:title="@string/accessories_add">
             <intent
@@ -67,12 +67,12 @@
         android:key="personal"
         android:title="@string/header_category_personal">
         <Preference
-            android:icon="@drawable/ic_settings_location"
+            android:icon="@drawable/ic_location_on"
             android:key="location"
             android:title="@string/system_location"
             android:fragment="com.android.tv.settings.system.LocationFragment" />
         <Preference
-            android:icon="@drawable/ic_settings_security"
+            android:icon="@drawable/ic_lock"
             android:key="security"
             android:title="@string/system_security"
             android:fragment="com.android.tv.settings.system.SecurityFragment" />

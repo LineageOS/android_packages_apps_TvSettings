@@ -128,7 +128,7 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
                 title,
                 "",
                 "",
-                getActivity().getDrawable(R.drawable.ic_settings_storage));
+                getActivity().getDrawable(R.drawable.ic_storage_132dp));
     }
 
     @Override

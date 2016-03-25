@@ -41,7 +41,7 @@ public class ForgetPrivateConfirmFragment extends GuidedStepFragment {
         return new GuidanceStylist.Guidance(
                 getString(R.string.storage_wizard_forget_confirm_title),
                 getString(R.string.storage_wizard_forget_confirm_description), "",
-                getActivity().getDrawable(R.drawable.ic_settings_warning));
+                getActivity().getDrawable(R.drawable.ic_warning_132dp));
     }
 
     @Override

@@ -69,7 +69,7 @@ public class ResetActivity extends Activity {
                     getString(R.string.device_reset),
                     getString(R.string.factory_reset_description),
                     null,
-                    getContext().getDrawable(R.drawable.ic_settings_backuprestore));
+                    getContext().getDrawable(R.drawable.ic_settings_backup_restore_132dp));
         }
 
         @Override
@@ -114,7 +114,7 @@ public class ResetActivity extends Activity {
                     getString(R.string.device_reset),
                     getString(R.string.confirm_factory_reset_description),
                     null,
-                    getContext().getDrawable(R.drawable.ic_settings_backuprestore));
+                    getContext().getDrawable(R.drawable.ic_settings_backup_restore_132dp));
         }
 
         @Override

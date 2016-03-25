@@ -130,13 +130,13 @@ public class SetDateTimeActivity extends DialogActivity {
 
             if (TYPE_DATE.equals(pickerType)) {
                 contentFragment = ContentFragment.newInstance(getString(R.string.system_set_date),
-                        getString(R.string.system_date), null, R.drawable.ic_settings_datetime,
+                        getString(R.string.system_date), null, R.drawable.ic_access_time_132dp,
                         getColor(R.color.icon_background));
                 actionFragment = DatePicker
                         .newInstance(new String(DateFormat.getDateFormatOrder(this)));
             } else {
                 contentFragment = ContentFragment.newInstance(getString(R.string.system_set_time),
-                        getString(R.string.system_time), null, R.drawable.ic_settings_datetime,
+                        getString(R.string.system_time), null, R.drawable.ic_access_time_132dp,
                         getColor(R.color.icon_background));
                 actionFragment = TimePicker.newInstance(isTimeFormat24h(this), true);
             }
