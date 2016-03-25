@@ -122,7 +122,6 @@
     <dimen name="content_fragment_title_text_top_padding">2dp</dimen>
 
     <dimen name="edit_text_width_default">300dp</dimen>
-    <dimen name="indeterminate_bottom_padding">4dp</dimen>
 
     <dimen name="list_item_checkmark_diameter">8dp</dimen>
     <dimen name="list_item_delimiter_padding">4dp</dimen>
@@ -152,7 +151,6 @@
 
     <integer name="action_description_min_lines">2</integer>
     <integer name="action_title_min_lines">1</integer>
-    <integer name="indeterminate_frame_duration">30</integer>
 
     <item name="alpha_animiation_max_opacity" format="float" type="dimen">1.0</item>
     <item name="alpha_animiation_min_opacity" format="float" type="dimen">0.0</item>
@@ -200,6 +198,7 @@
     <dimen name="setup_list_item_padding">16dp</dimen>
     <dimen name="setup_list_item_container_shadow_padding">5dp</dimen>
     <dimen name="setup_list_item_text_size">14sp</dimen>
+    <integer name="setup_list_item_pressed_fade_duration">100</integer>
 
     <dimen name="setup_obfuscation_margin_start">9dp</dimen>
     <dimen name="setup_obfuscation_margin_top">8dp</dimen>
@@ -211,8 +210,7 @@
     <dimen name="activity_progress_title_text_size">36sp</dimen>
     <item name="activity_progress_title_line_spacing" format="float" type="dimen">1.04296</item>
 
-    <dimen name="progress_holder_margin">24dp</dimen>
-    <dimen name="progress_icon_margin_end">24dp</dimen>
-    <dimen name="progress_icon_max_size">80dp</dimen>
+    <dimen name="setup_progress_spinner_size">40dp</dimen>
+    <dimen name="setup_progress_spinner_margin_top">52dp</dimen>
 
 </resources>
