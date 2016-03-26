@@ -216,28 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"చెల్లుబాటు అయ్యే గేట్‌వే చిరునామాను నమోదు చేయండి"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"చెల్లుబాటు అయ్యే DNS చిరునామాను నమోదు చేయండి"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"నెట్. ఆది. పొడ. 0 మరియు 32 మధ్య ఉండేలా నమో. చేయం."</string>
-    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
-    <skip />
-    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
-    <skip />
-    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
-    <skip />
-    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
-    <skip />
-    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
-    <skip />
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"చెల్లుబాటు అయ్యే IP చిరునామాని నమోదు చేయండి.\nఉదాహరణ: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"చెల్లుబాటు అయ్యే IP చిరునామాని నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"చెల్లుబాటు అయ్యే IP చిరునామాని నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"చెల్లుబాటు అయ్యే IP చిరునామాని నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"చెల్లుబాటు అయ్యే నెట్‌వర్క్ ఆదిప్రత్యయ పొడవుని నమోదు చేయండి.\nఉదాహరణ: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"హోస్ట్ పేరు చెల్లదు"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"ఈ మినహాయింపు జాబితా చెల్లదు. కామాతో వేరు చేసిన మినహాయింపు డొమైన్‌ల జాబితాను నమోదు చేయండి."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"పోర్ట్ ఫీల్డ్ ఖాళీగా ఉండకూడదు"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"హోస్ట్ ఫీల్డ్ ఖాళీగా ఉంటే, పోర్ట్ ఫీల్డ్‌ని ఖాళీగా వదిలిపెట్టండి"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"పోర్ట్ చెల్లదు"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP ప్రాక్సీని బ్రౌజర్ ఉపయోగిస్తుంది కానీ ఇతర అనువర్తనాలు ఉపయోగించవు"</string>
-    <!-- no translation found for proxy_port_description (6791098212244367568) -->
-    <skip />
-    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
-    <skip />
-    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
-    <skip />
+    <string name="proxy_port_description" msgid="6791098212244367568">"చెల్లుబాటు అయ్యే పోర్ట్‌ను నమోదు చేయండి.\nఉదాహరణ: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"మినహాయించిన డొమైన్‌లను కామాతో వేరు చేస్తూ జాబితా రూపంలో నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"చెల్లుబాటు అయ్యే హోస్ట్ పేరుని నమోదు చేయండి.\nఉదాహరణ: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"నెట్‌వర్క్ కనెక్ట్ చేయబడింది"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"నెట్‌వర్క్ కనెక్ట్ కాలేదు"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"ఇప్పటికే <xliff:g id="SSID">%1$s</xliff:g>కి కనెక్ట్ చేయబడింది. వేరొక నెట్‌వర్క్‌కి కనెక్ట్ చేయాలా?"</string>
