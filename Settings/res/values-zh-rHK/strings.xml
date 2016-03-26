@@ -216,28 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"請輸入有效的閘道位址"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"請輸入有效的 DNS 位址"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"請輸入介乎 0 至 32 之間的網絡前置字元長度"</string>
-    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
-    <skip />
-    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
-    <skip />
-    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
-    <skip />
-    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
-    <skip />
-    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
-    <skip />
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"請輸入有效的 IP 位址。\n例子：<xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"請輸入有效的 IP 位址或留空欄位。\n例子：<xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"請輸入有效的 IP 位址或留空欄位。\n例子：<xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"請輸入有效的 IP 位址或留空欄位。\n例子：<xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"請輸入有效的網絡前置字元長度。\n例子：<xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"主機名稱無效"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"排除清單無效，請輸入要排除的網域清單 (以逗號分隔)。"</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"連接埠欄位不可留空"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"如果主機欄位沒有內容，請將連接埠欄位留空"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"連接埠無效"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"瀏覽器使用了 HTTP Proxy，但其他應用程式可能不支援 HTTP Proxy"</string>
-    <!-- no translation found for proxy_port_description (6791098212244367568) -->
-    <skip />
-    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
-    <skip />
-    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
-    <skip />
+    <string name="proxy_port_description" msgid="6791098212244367568">"請輸入有效的連接埠。\n例子：<xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"請輸入以半形逗號分隔的排除網域清單，或留空欄位。\n例子：<xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"請輸入有效的主機名稱。\n例子：<xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"已連接網絡"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"未連接網絡"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"已連接 <xliff:g id="SSID">%1$s</xliff:g>。要連接至其他網絡嗎？"</string>
