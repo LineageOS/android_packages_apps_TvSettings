@@ -216,28 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Մուտքագրեք վավեր անցախցի հասցե"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Մուտքագրեք վավեր DNS հասցե"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Մուտքագրեք ցանցի նախածանցի երկարությունը 0-ից 32-ի միջակայքում"</string>
-    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
-    <skip />
-    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
-    <skip />
-    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
-    <skip />
-    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
-    <skip />
-    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
-    <skip />
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"Մուտքագրեք վավեր IP հասցե:\nՕրինակ՝ <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"Մուտքագրեք վավեր IP հասցե կամ դատարկ թողեք դաշտը:\nՕրինակ՝ <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"Մուտքագրեք վավեր IP հասցե կամ դատարկ թողեք դաշտը:\nՕրինակ՝ <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"Մուտքագրեք վավեր IP հասցե կամ դատարկ թողեք դաշտը:\nՕրինակ՝ <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Մուտքագրեք ցանցի նախածանցի վավեր երկարությունը:\nՕրինակ՝ <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Հոսթի անվանումը վավեր չէ"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Բացառման ցանկն անվավեր է: Մուտքագրեք բացառված տիրույթների ցանկը` ստերակետով առանձնացված:"</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Միացքի դաշտը չի կարող դատարկ լինել"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Հոստի դաշտը դատարկ է, միացքի դաշտը դատարկ թողեք"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Միացքն անվավեր է"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP պրոքսին օգտագործվում է դիտարկիչի կողմից, բայց մյուս ծրագրերը հնարավոր է այն չօգտագործեն"</string>
-    <!-- no translation found for proxy_port_description (6791098212244367568) -->
-    <skip />
-    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
-    <skip />
-    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
-    <skip />
+    <string name="proxy_port_description" msgid="6791098212244367568">"Մուտքագրեք վավեր միացք:\nՕրինակ՝ <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Մուտքագրեք բացառված տիրույթների ցանկը՝ անջատելով դրանք ստորակետներով, կամ դատարկ թողեք դաշտը:\nՕրինակ՝ <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"Մուտքագրեք վավեր հանգույցի անուն:\nՕրինակ՝ <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Ցանցի հետ կապը հաստատված է"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Ցանցը միացված չէ"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Արդեն միացած է <xliff:g id="SSID">%1$s</xliff:g>-ին: Միանա՞լ մեկ այլ ցանցի:"</string>
@@ -670,5 +662,5 @@
     <string name="experimental_preference" msgid="1137673985823581797">"(Փորձնական)"</string>
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Վերագործարկել անվտանգ ռեժիմում"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Վերագործարկե՞լ անվտանգ ռեժիմում:"</string>
-    <string name="reboot_safemode_desc" msgid="5031024337104679492">"Արդյունքում ձեր կողմից տեղադրված բոլոր երրորդ կողմից հավելվածները կկասեցվեն: Դրանց աշխատանքը կվերականգնվի միայն սարքը վերագործարկելուց հետո:"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"Արդյունքում ձեր կողմից տեղադրված բոլոր երրորդ կողմից հավելվածները կանջատվեն: Դրանց աշխատանքը կվերականգնվի միայն սարքը վերագործարկելուց հետո:"</string>
 </resources>

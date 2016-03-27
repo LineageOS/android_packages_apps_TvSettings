@@ -217,28 +217,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Unesite važeću adresu mrežnog prolaza"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Unesite važeću adresu DNS servera"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Unesite dužinu prefiksa mreže od 0 do 32 znaka"</string>
-    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
-    <skip />
-    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
-    <skip />
-    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
-    <skip />
-    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
-    <skip />
-    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
-    <skip />
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"Unesite važeću IP adresu.\nPrimer: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"Unesite važeću IP adresu ili ostavite prazno.\nPrimer: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"Unesite važeću IP adresu ili ostavite prazno.\nPrimer: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"Unesite važeću IP adresu ili ostavite prazno.\nPrimer: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Unesite važeću dužinu prefiksa mreže.\nPrimer: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Ime hosta nije važeće"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Ova lista izuzimanja nije važeća. Unesite listu izuzetih domena razdvojenih zarezima."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Polje za port ne može da bude prazno"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Ako je polje za host prazno, ostavite polje za port prazno"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Port nije važeći"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Pregledač koristi HTTP proksi, ali druge aplikacije ne smeju da ga koriste"</string>
-    <!-- no translation found for proxy_port_description (6791098212244367568) -->
-    <skip />
-    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
-    <skip />
-    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
-    <skip />
+    <string name="proxy_port_description" msgid="6791098212244367568">"Unesite važeći port.\nPrimer: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Unesite listu izuzetih domena razdvojenih zarezima ili ostavite prazno.\nPrimer: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"Unesite važeće ime hosta.\nPrimer: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Povezani ste na mrežu"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Mreža nije povezana"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Već ste povezani sa mrežom <xliff:g id="SSID">%1$s</xliff:g>. Želite li da se povežete sa nekom drugom mrežom?"</string>

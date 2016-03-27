@@ -216,28 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"မှန်ကန်သည့် ဝင်ပေါက် လိပ်စာကို ထည့်သွင်းပါ"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"မှန်ကန်သည့် DNS လိပ်စာကို ထည့်သွင်းပါ။"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"၀ နှင့် ၃၂ အကြားရှိ ကွန်ရက် ရှေ့ဆက်ပုဒ် ထည့်ပါ။"</string>
-    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
-    <skip />
-    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
-    <skip />
-    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
-    <skip />
-    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
-    <skip />
-    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
-    <skip />
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"မှန်ကန်သည့် အိုင်ပီလိပ်စာကို ထည့်ပါ။\nဥပမာ −<xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"မှန်ကန်သည့် အိုင်ပီလိပ်စာကို ထည့်ပါ သို့မဟုတ် ဗလာချန်ထားပါ။\nဥပမာ − <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"မှန်ကန်သည့် အိုင်ပီလိပ်စာကို ထည့်ပါ သို့မဟုတ် ဗလာချန်ထားပါ။\nဥပမာ − <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"မှန်ကန်သည့် အိုင်ပီလိပ်စာကို ထည့်ပါ သို့မဟုတ် ဗလာချန်ထားပါ။\nဥပမာ − <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"မှန်ကန်သည့် ကွန်ရက်ရှေ့ဆက်ပုဒ် အရှည်ကိုထည့်ပါ။\nဥပမာ − <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"ဟို့စ်အမည် မမှန်ပါ"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"ဒီချန်လှပ် စာရင်း မမှန်ပါ။ ချန်လှပ်ထားသည့် ဒိုမိန်းများ၏ စာရင်းကို ကော်မာ ထည့်ပေးလျက် ခြားပေးရန် လိုသည်။"</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"ပို့တ် အကွက်ကို ဗလာ မဖြစ်နိုင်ပါ"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"ဟို့စ် အကွက် ဗလာဖြစ်နေလျှင်၊ ပို့တ် အကွက်ကို ဗလာ ချန်ထားပါ"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"ပို့တ် မမှန်ပါ"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP ပရော့က်စီကို ဘရောင်ဇာက သုံးသော်လည်း အခြား appများက သုံးချင်မှ သုံးကြမည်"</string>
-    <!-- no translation found for proxy_port_description (6791098212244367568) -->
-    <skip />
-    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
-    <skip />
-    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
-    <skip />
+    <string name="proxy_port_description" msgid="6791098212244367568">"မှန်ကန်သည့် ပေါ့တ်နံပါတ်ကို ထည့်ပါ\nဥပမာ − <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"ကော်မာခြားထားသည့် ပယ်ထားသောဒိုမိန်းစာရင်းကို ထည့်ပါ သို့မဟုတ် ဗလာချန်ထားပါ။\nဥပမာ − <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"မှန်ကန်သည့် လက်ခံစက်အမည်ကို ထည့်ပါ။\nဥပမာ − <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"ကွန်ရက် ချိတ်ဆက်ထား"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"ကွန်ရက်ကို မချိတ်ဆက်ရသေးပါ"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g>သို့ ချိတ်ဆက်ထားပြီးနေပြီ။ အခြား ကွန်ရက်သို့ ချိတ်ဆက်ရမလား?"</string>
@@ -670,5 +662,5 @@
     <string name="experimental_preference" msgid="1137673985823581797">"(စမ်းသပ်ရေး)"</string>
     <string name="reboot_safemode_action" msgid="8129550438717110406">"ဘေးကင်းလုံခြုံသည့်မုဒ်သို့ ပြန်စပါ"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"ဘေးကင်းလုံခြုံသည့်မုဒ်သို့ ပြန်စလိုပါသလား။"</string>
-    <string name="reboot_safemode_desc" msgid="5031024337104679492">"၎င်းသည် သင်ပြင်ပကုမ္ပဏီမှ ထည့်သွင်းထားသည့် အက်ပ်များကို ပိတ်လိုက်ပါမည်။ သင်စက်ကို ပြန်စသည့်အချိန်တွင် ၎င်းတို့ပြန်ဖွင့်လာပါလိမ့်မည်။"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"၎င်းသည် ပြင်ပကုမ္ပဏီမှ သင်ထည့်သွင်းထားသည့် အက်ပ်များကို ပိတ်လိုက်ပါမည်။ သင်စက်ကို ပြန်စသည့်အချိန်တွင် ၎င်းတို့ပြန်ပွင့်လာပါလိမ့်မည်။"</string>
 </resources>

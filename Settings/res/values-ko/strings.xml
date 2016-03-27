@@ -216,28 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"올바른 게이트웨이 주소를 입력하세요."</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"올바른 DNS 주소를 입력하세요."</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"0에서 32 사이의 네트워크 접두어 길이를 입력하세요."</string>
-    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
-    <skip />
-    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
-    <skip />
-    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
-    <skip />
-    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
-    <skip />
-    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
-    <skip />
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"유효한 IP 주소를 입력합니다.\n예: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"유효한 IP 주소를 입력하거나 비워둡니다.\n예: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"유효한 IP 주소를 입력하거나 비워둡니다.\n예: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"유효한 IP 주소를 입력하거나 비워둡니다.\n예: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"유효한 네트워크 접두어 길이를 입력합니다.\n예: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"호스트 이름이 유효하지 않습니다."</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"이 제외 목록은 유효하지 않습니다. 제외된 도메인을 콤마로 구분한 목록을 입력하세요."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"포트 입력란은 비워 둘 수 없습니다."</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"호스트 입력란이 비어 있는 경우 포트 입력란을 비워두세요."</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"포트가 유효하지 않습니다."</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP 프록시가 브라우저에서는 사용되지만 다른 앱에서는 사용되지 않을 수 있습니다."</string>
-    <!-- no translation found for proxy_port_description (6791098212244367568) -->
-    <skip />
-    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
-    <skip />
-    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
-    <skip />
+    <string name="proxy_port_description" msgid="6791098212244367568">"유효한 포트를 입력합니다.\n예: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"제외된 도메인의 쉼표로 구분된 목록을 입력하거나 비워둡니다.\n예: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"유효한 호스트 이름을 입력합니다.\n예: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"네트워크에 연결됨"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"네트워크에 연결되지 않음"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"이미 <xliff:g id="SSID">%1$s</xliff:g>에 연결되어 있습니다. 다른 네트워크에 연결하시겠습니까?"</string>
