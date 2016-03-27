@@ -216,28 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Introduce un enderezo de pasarela válido"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Introduce un enderezo DNS válido"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Introduce lonxitude prefixo rede de entre 0 e 32"</string>
-    <!-- no translation found for wifi_ip_address_description (6548838784556001283) -->
-    <skip />
-    <!-- no translation found for wifi_dns1_description (2463500547232077393) -->
-    <skip />
-    <!-- no translation found for wifi_dns2_description (8005473174044015359) -->
-    <skip />
-    <!-- no translation found for wifi_gateway_description (4773751224452216231) -->
-    <skip />
-    <!-- no translation found for wifi_network_prefix_length_description (4849589333293194414) -->
-    <skip />
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"Introduce un enderezo IP válido.\nExemplo: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"Introduce un enderezo IP válido ou deixa o campo baleiro.\nExemplo: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"Introduce un enderezo IP válido ou deixa o campo baleiro.\nExemplo: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"Introduce un enderezo IP válido ou deixa o campo baleiro.\nExemplo: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Introduce unha lonxitude de prefixo de rede válida.\nExemplo: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"O nome de host non é válido"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Esta lista de exclusión non é válida. Introduce unha lista separada por comas de dominios excluídos."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"O campo de porto non pode quedar baleiro"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Se o campo de host está baleiro, deixa o campo de porto baleiro"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"O porto non é válido"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"O navegador utiliza o proxy HTTP, pero é posible que outras aplicacións non o utilicen"</string>
-    <!-- no translation found for proxy_port_description (6791098212244367568) -->
-    <skip />
-    <!-- no translation found for proxy_exclusionlist_description (6020640103462473072) -->
-    <skip />
-    <!-- no translation found for proxy_hostname_description (5824391500254472447) -->
-    <skip />
+    <string name="proxy_port_description" msgid="6791098212244367568">"Introduce un porto válido.\nExemplo: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Introduce unha lista de dominios excluídos separados por comas ou deixa este campo en branco.\nExemplo: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"Introduce un nome de host válido.\nExemplo: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Rede conectada"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"A rede non está conectada"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Xa estás conectado a <xliff:g id="SSID">%1$s</xliff:g>. Queres conectarte a unha rede diferente?"</string>
