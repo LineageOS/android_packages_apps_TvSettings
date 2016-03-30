@@ -166,7 +166,7 @@ public class UnmountActivity extends Activity {
             return new GuidanceStylist.Guidance(
                     getString(R.string.storage_wizard_eject_private_title),
                     getString(R.string.storage_wizard_eject_private_description), "",
-                    getActivity().getDrawable(R.drawable.ic_settings_storage));
+                    getActivity().getDrawable(R.drawable.ic_storage_132dp));
         }
 
         @Override

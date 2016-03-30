@@ -87,7 +87,7 @@ public class AppPicker extends Activity {
                     getString(R.string.choose_application),
                     null,
                     null,
-                    getContext().getDrawable(R.drawable.ic_settings_apps));
+                    getContext().getDrawable(R.drawable.ic_adb_132dp));
         }
 
         @Override

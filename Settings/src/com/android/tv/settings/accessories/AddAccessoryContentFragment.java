@@ -36,7 +36,7 @@ public class AddAccessoryContentFragment extends ProgressDialogFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setTitle(R.string.accessories_add_title);
-        setIcon(R.drawable.ic_bluetooth_searching_white_128);
+        setIcon(R.drawable.ic_bluetooth_searching_128dp);
         setSummary(R.string.accessories_add_bluetooth_inst);
     }
 }

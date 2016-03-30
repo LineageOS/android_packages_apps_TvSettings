@@ -231,7 +231,7 @@ public class AccessibilityFragment extends LeanbackPreferenceFragment {
                             getString(R.string.system_accessibility_service_on_confirm_desc,
                                     label),
                             null,
-                            getActivity().getDrawable(R.drawable.ic_settings_accessibility)
+                            getActivity().getDrawable(R.drawable.ic_accessibility_new_132dp)
                     );
                 } else {
                     return new GuidanceStylist.Guidance(
@@ -240,7 +240,7 @@ public class AccessibilityFragment extends LeanbackPreferenceFragment {
                             getString(R.string.system_accessibility_service_off_confirm_desc,
                                     label),
                             null,
-                            getActivity().getDrawable(R.drawable.ic_settings_accessibility)
+                            getActivity().getDrawable(R.drawable.ic_accessibility_new_132dp)
                     );
                 }
             }

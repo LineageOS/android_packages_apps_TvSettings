@@ -37,7 +37,7 @@ public class ConfirmClearCacheFragment extends GuidedStepFragment {
                 getString(R.string.device_storage_clear_cache_title),
                 getString(R.string.device_storage_clear_cache_message),
                 null,
-                getContext().getDrawable(R.drawable.ic_settings_backuprestore)
+                getContext().getDrawable(R.drawable.ic_settings_backup_restore_132dp)
         );
     }
 

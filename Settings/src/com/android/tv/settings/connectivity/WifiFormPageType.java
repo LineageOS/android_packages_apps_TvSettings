@@ -32,7 +32,7 @@ import java.util.ArrayList;
 public enum WifiFormPageType implements FormPageDisplayer.FormPageInfo {
     CHOOSE_NETWORK(FormPageDisplayer.DISPLAY_TYPE_LIST_CHOICE, R.string.title_select_wifi_network,
             0, new int[] { R.string.other_network },
-            new int[] { R.drawable.ic_add }),
+            new int[] { R.drawable.ic_wifi_add}),
     ENTER_SSID(FormPageDisplayer.DISPLAY_TYPE_TEXT_INPUT, R.string.title_ssid, 0,
             TextInputWizardFragment.INPUT_TYPE_NO_SUGGESTIONS),
     CHOOSE_SECURITY(FormPageDisplayer.DISPLAY_TYPE_LIST_CHOICE, R.string.security_type, 0,

@@ -176,7 +176,7 @@ public class NewStorageActivity extends Activity {
                     getString(R.string.storage_new_title),
                     mDescription,
                     null,
-                    getActivity().getDrawable(R.drawable.ic_settings_storage));
+                    getActivity().getDrawable(R.drawable.ic_storage_132dp));
         }
 
         @Override
@@ -319,7 +319,7 @@ public class NewStorageActivity extends Activity {
                     getString(R.string.storage_missing_title, mDescription),
                     getString(R.string.storage_missing_description),
                     null,
-                    getActivity().getDrawable(R.drawable.ic_settings_error));
+                    getActivity().getDrawable(R.drawable.ic_error_132dp));
         }
 
         @Override
