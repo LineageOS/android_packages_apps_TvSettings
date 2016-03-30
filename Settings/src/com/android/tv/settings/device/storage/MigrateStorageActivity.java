@@ -176,7 +176,7 @@ public class MigrateStorageActivity extends Activity {
                     getString(R.string.storage_wizard_migrate_confirm_title, driveDesc),
                     getString(R.string.storage_wizard_migrate_confirm_description, driveDesc),
                     null,
-                    getActivity().getDrawable(R.drawable.ic_settings_storage));
+                    getActivity().getDrawable(R.drawable.ic_storage_132dp));
         }
 
         @Override
@@ -226,7 +226,7 @@ public class MigrateStorageActivity extends Activity {
                     getString(R.string.storage_wizard_migrate_choose_title),
                     null,
                     null,
-                    getActivity().getDrawable(R.drawable.ic_settings_storage));
+                    getActivity().getDrawable(R.drawable.ic_storage_132dp));
         }
 
         @Override

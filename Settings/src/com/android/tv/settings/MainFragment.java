@@ -371,7 +371,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
         }
 
         mSoundsPref.setIcon(SoundFragment.getSoundEffectsEnabled(getContext().getContentResolver())
-                ? R.drawable.settings_sound_on_icon : R.drawable.settings_sound_off_icon);
+                ? R.drawable.ic_volume_up : R.drawable.ic_volume_off);
     }
 
     private void updateWifi() {

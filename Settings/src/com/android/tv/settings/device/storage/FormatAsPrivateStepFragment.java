@@ -50,7 +50,7 @@ public class FormatAsPrivateStepFragment extends GuidedStepFragment {
         return new GuidanceStylist.Guidance(
                 getString(R.string.storage_wizard_format_as_private_title),
                 getString(R.string.storage_wizard_format_as_private_description), "",
-                getActivity().getDrawable(R.drawable.ic_settings_warning));
+                getActivity().getDrawable(R.drawable.ic_warning_132dp));
     }
 
     @Override
