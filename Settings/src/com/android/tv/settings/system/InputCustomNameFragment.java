@@ -56,7 +56,7 @@ public class InputCustomNameFragment extends GuidedStepFragment {
                 getString(R.string.inputs_custom_name_description_fmt,
                         getArguments().getCharSequence(ARG_DEFAULT_NAME)),
                 null,
-                getContext().getDrawable(R.drawable.ic_settings_inputs)
+                getContext().getDrawable(R.drawable.ic_input_132dp)
         );
     }
 

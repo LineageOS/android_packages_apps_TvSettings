@@ -103,7 +103,7 @@ public class RemoveAccountDialog extends Activity implements AccountManagerCallb
                     getString(R.string.account_remove),
                     null,
                     mAccountName,
-                    getActivity().getDrawable(R.drawable.ic_settings_remove));
+                    getActivity().getDrawable(R.drawable.ic_delete_132dp));
         }
 
         @Override

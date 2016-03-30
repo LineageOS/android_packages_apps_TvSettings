@@ -40,7 +40,7 @@ public class UnknownSourcesConfirmationFragment extends GuidedStepFragment {
                 getString(R.string.security_unknown_sources_confirm_title),
                 getString(R.string.security_unknown_sources_confirm_desc),
                 null,
-                getActivity().getDrawable(R.drawable.ic_settings_warning)
+                getActivity().getDrawable(R.drawable.ic_warning_132dp)
         );
     }
 
