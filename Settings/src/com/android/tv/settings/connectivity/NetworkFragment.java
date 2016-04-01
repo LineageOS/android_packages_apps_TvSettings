@@ -172,6 +172,10 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
         mWpsPref.setVisible(wifiEnabled);
         mAddPref.setVisible(wifiEnabled);
 
+        if (!wifiEnabled) {
+            updateWifiList();
+        }
+
         int scanAlwaysAvailable = 0;
         try {
             scanAlwaysAvailable = Settings.Global.getInt(getContext().getContentResolver(),
@@ -201,16 +205,17 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
             return;
         }
 
+        if (!mConnectivityListener.isWifiEnabled()) {
+            mWifiNetworksCategory.removeAll();
+            mNoWifiUpdateBeforeMillis = 0;
+            return;
+        }
+
         final long now = SystemClock.elapsedRealtime();
         if (mNoWifiUpdateBeforeMillis > now) {
             mHandler.removeCallbacks(mInitialUpdateWifiListRunnable);
             mHandler.postDelayed(mInitialUpdateWifiListRunnable,
                     mNoWifiUpdateBeforeMillis - now);
-            return;
-        }
-
-        if (!mConnectivityListener.isWifiEnabled()) {
-            mWifiNetworksCategory.removeAll();
             return;
         }
 
