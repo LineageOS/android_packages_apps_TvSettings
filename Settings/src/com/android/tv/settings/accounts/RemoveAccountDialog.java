@@ -48,9 +48,11 @@ public class RemoveAccountDialog extends Activity implements AccountManagerCallb
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        GuidedStepFragment.addAsRoot(this, RemoveAccountFragment.newInstance(
-                getIntent().getStringExtra(AccountSyncActivity.EXTRA_ACCOUNT)),
-                android.R.id.content);
+        if (savedInstanceState == null) {
+            GuidedStepFragment.addAsRoot(this, RemoveAccountFragment.newInstance(
+                    getIntent().getStringExtra(AccountSyncActivity.EXTRA_ACCOUNT)),
+                    android.R.id.content);
+        }
     }
 
     @Override
