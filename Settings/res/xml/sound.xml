@@ -26,9 +26,9 @@
     <ListPreference
         android:key="surround_passthrough"
         android:persistent="false"
-        android:entries="@array/surround_sound_passthrough_entries"
-        android:entryValues="@array/surround_sound_passthrough_entry_values"
-        android:title="@string/device_surround_passthrough"
+        android:entries="@array/surround_sound_entries"
+        android:entryValues="@array/surround_sound_entry_values"
+        android:title="@string/device_surround_sound"
         android:summary="%s" />
 
 </PreferenceScreen>
