@@ -151,6 +151,7 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         versionPreference.setSelectable(false);
         versionPreference.setTitle(getString(R.string.device_apps_app_management_version,
                 mEntry.getVersion(getActivity())));
+        versionPreference.setSummary(mPackageName);
         screen.addPreference(versionPreference);
 
         // Open
