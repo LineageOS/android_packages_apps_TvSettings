@@ -441,7 +441,7 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
 
         if (mShowSkipNetwork) {
             listItems.add(new SelectFromListWizardFragment.PinnedListItem(
-                    getString(R.string.skip_network), R.drawable.ic_setup_wps,
+                    getString(R.string.skip_network), R.drawable.ic_arrow_forward,
                     SelectFromListWizardFragment.PinnedListItem.LAST, 1));
         }
 
