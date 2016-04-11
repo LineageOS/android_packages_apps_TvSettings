@@ -33,6 +33,7 @@ import android.support.v7.widget.util.SortedListAdapterCallback;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver.OnPreDrawListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
@@ -294,7 +295,7 @@ public class SelectFromListWizardFragment extends Fragment {
 
                         @Override
                         public boolean areContentsTheSame(ListItem oldItem, ListItem newItem) {
-                            return oldItem.equals(newItem);
+                            return comparator.compare(oldItem, newItem) == 0;
                         }
 
                         @Override
@@ -381,6 +382,7 @@ public class SelectFromListWizardFragment extends Fragment {
     private static final String EXTRA_DESCRIPTION = "description";
     private static final String EXTRA_LIST_ELEMENTS = "list_elements";
     private static final String EXTRA_LAST_SELECTION = "last_selection";
+    private static final int SELECT_ITEM_DELAY = 100;
 
     public static SelectFromListWizardFragment newInstance(String title, String description,
             ArrayList<ListItem> listElements, ListItem lastSelection) {
@@ -398,6 +400,8 @@ public class SelectFromListWizardFragment extends Fragment {
     private View mMainView;
     private VerticalGridView mListView;
     private String mLastSelectedName;
+    private OnPreDrawListener mOnListPreDrawListener;
+    private Runnable mSelectItemRunnable;
 
     private void updateSelected(String lastSelectionName) {
         SortedList<ListItem> items = ((VerticalListAdapter) mListView.getAdapter()).getItems();
@@ -408,12 +412,41 @@ public class SelectFromListWizardFragment extends Fragment {
                 break;
             }
         }
+        mLastSelectedName = lastSelectionName;
     }
 
     public void update(List<ListItem> listElements) {
-        VerticalListAdapter adapter = (VerticalListAdapter) mListView.getAdapter();
-        adapter.updateItems(listElements);
-        updateSelected(mLastSelectedName);
+        // We want keep the highlight on the same selected item from before the update.  This is
+        // currently not possible (b/28120126).  So we post a runnable to run after the update
+        // completes.
+        if (mSelectItemRunnable != null) {
+            mHandler.removeCallbacks(mSelectItemRunnable);
+        }
+
+        final String lastSelected = mLastSelectedName;
+        mSelectItemRunnable = () -> {
+            updateSelected(lastSelected);
+            if (mOnListPreDrawListener != null) {
+                mListView.getViewTreeObserver().removeOnPreDrawListener(mOnListPreDrawListener);
+                mOnListPreDrawListener = null;
+            }
+            mSelectItemRunnable = null;
+        };
+
+        if (mOnListPreDrawListener != null) {
+            mListView.getViewTreeObserver().removeOnPreDrawListener(mOnListPreDrawListener);
+        }
+
+        mOnListPreDrawListener = () -> {
+            mHandler.removeCallbacks(mSelectItemRunnable);
+            // Pre-draw can be called multiple times per update.  We delay the runnable to select
+            // the item so that it will only run after the last pre-draw of this batch of update.
+            mHandler.postDelayed(mSelectItemRunnable, SELECT_ITEM_DELAY);
+            return true;
+        };
+
+        mListView.getViewTreeObserver().addOnPreDrawListener(mOnListPreDrawListener);
+        ((VerticalListAdapter) mListView.getAdapter()).updateItems(listElements);
     }
 
     @Override
@@ -493,6 +526,19 @@ public class SelectFromListWizardFragment extends Fragment {
             updateSelected(lastSelection.getName());
         }
         return mMainView;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (mSelectItemRunnable != null) {
+            mHandler.removeCallbacks(mSelectItemRunnable);
+            mSelectItemRunnable = null;
+        }
+        if (mOnListPreDrawListener != null) {
+            mListView.getViewTreeObserver().removeOnPreDrawListener(mOnListPreDrawListener);
+            mOnListPreDrawListener = null;
+        }
     }
 
     @Override
