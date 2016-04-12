@@ -200,8 +200,6 @@ public class WifiConnectionActivity extends WifiMultiPagedFormActivity
     private FormPage getPreviousPage(WifiFormPageType formPageType) {
         switch (formPageType) {
             case ENTER_PASSWORD:
-                if (mPasswordPage != null)
-                    mPasswordPage.clearData();
                 return mPasswordPage;
             default:
                 return (mAdvancedWifiOptionsFlow != null) ? mAdvancedWifiOptionsFlow
