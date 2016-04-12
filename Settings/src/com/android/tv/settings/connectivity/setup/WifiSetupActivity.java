@@ -118,7 +118,8 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
         mUserActivityListener = new FormPageDisplayer.UserActivityListener() {
             @Override
             public void onUserActivity() {
-                mNextNetworkRefreshTime = System.currentTimeMillis() + NETWORK_REFRESH_BUFFER_DURATION;
+                mNextNetworkRefreshTime =
+                        System.currentTimeMillis() + NETWORK_REFRESH_BUFFER_DURATION;
             }
         };
 
