@@ -79,6 +79,7 @@ public class LanguageFragment extends LeanbackPreferenceFragment {
         final List<LocalePicker.LocaleInfo> localeInfoList =
                 LocalePicker.getAllAssetLocales(themedContext, isInDeveloperMode);
 
+        Preference activePref = null;
         for (final LocalePicker.LocaleInfo localeInfo : localeInfoList) {
             final String languageTag = localeInfo.getLocale().toLanguageTag();
             mLocaleInfoMap.put(languageTag, localeInfo);
@@ -92,9 +93,14 @@ public class LanguageFragment extends LeanbackPreferenceFragment {
 
             if (localeInfo.getLocale().equals(currentLocale)) {
                 radioPreference.setChecked(true);
+                activePref = radioPreference;
             }
 
             screen.addPreference(radioPreference);
+        }
+
+        if (activePref != null && savedInstanceState == null) {
+            scrollToPreference(activePref);
         }
 
         setPreferenceScreen(screen);
