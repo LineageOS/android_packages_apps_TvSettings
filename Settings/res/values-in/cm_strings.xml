@@ -16,53 +16,80 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- CM Updater -->
   <string name="about_cmupdate_settings_title">Pembaruan CyanogenMod</string>
+  <!-- About screen, CyanogenMod version -->
   <string name="about_mod_version">Versi CyanogenMod</string>
+  <!-- About screen, status item label  [CHAR LIMIT=60] -->
+  <string name="security_patch">Tingkat keamanan patch Android</string>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <plurals name="show_dev_countdown_cm">
-    <item quantity="other">Anda hanya <xliff:g id="step_count">%1$d</xliff:g> langkah lagi untuk mengaktifkan opsi pengembang.</item>
+    <item quantity="other">Anda hanya<xliff:g id="step_count">%1$d</xliff:g> langkah lagi untuk mengaktifkan opsi pengembang.</item>
   </plurals>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
   <string name="show_dev_on_cm">Anda telah mengaktifkan opsi pengembang!</string>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
   <string name="show_dev_already_cm">Tidak perlu, Anda telah mengaktifkan mengaktifkan opsi pengembang.</string>
+  <!-- About screen, build date -->
   <string name="about_build_date">Tanggal pembuatan</string>
+  <!-- About screen, kernel version -->
   <string name="about_kernel_version">Versi kernel</string>
+  <!-- About screen, SELinux status -->
   <string name="about_selinux_status">Status SELinux</string>
+  <!-- These statuses are displayed when a device was built with SE Android supoprt.
+    These are displayed by the settings app in the about section. -->
   <string name="selinux_status_disabled">Dinonaktifkan</string>
   <string name="selinux_status_permissive">Permisif</string>
   <string name="selinux_status_enforcing">Memaksa</string>
-  <string name="accessories_add_bluetooth_inst_cm">Untuk mulai menggunakan CyanogenMod pastikan perangkat Bluetooth Anda sedang dalam modus berpasangan. Untuk Nexus Remote dapat dilakukan dengan menekan tombol kembali dan home secara bersamaan.</string>
-  <string name="root_access">Akses root</string>
-  <string name="root_access_warning_title">Izinkan akses root?</string>
-  <string name="root_access_warning_message">Mengizinkan aplikasi untuk meminta akses root sangat berbahaya dan dapat membahayakan keamanan sistem anda!</string>
+  <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
+  <string name="accessories_add_bluetooth_inst_cm">Untuk mulai menggunakan CyanogenMod pastikan perangkat Bluetooth Anda sedang dalam modus bersanding. Untuk Nexus Remote dapat dilakukan dengan menekan tombol kembali dan beranda secara serentak.</string>
+  <!-- Title for Set CM in System Settings Developer options [CHAR LIMIT=50] -->
+  <!-- Setting title for root access -->
+  <string name="root_access">Akses punca (root)</string>
+  <string name="root_access_warning_title">Izinkan akses punca (root)?</string>
+  <string name="root_access_warning_message">Mengizinkan aplikasi untuk meminta akses punca (root) sangat berbahaya dan dapat membahayakan keamanan sistem Anda!</string>
   <string name="root_access_none">Dinonaktifkan</string>
   <string name="root_access_apps">Aplikasi saja</string>
   <string name="root_access_adb">ADB saja</string>
   <string name="root_access_all">Aplikasi dan ADB</string>
-  <string name="update_recovery_title">Recovery Cyanogen</string>
+  <!-- Setting for updating Cyanogen recovery -->
+  <string name="update_recovery_title">Pemulihan Cyanogen</string>
   <string name="update_recovery_on_summary">Perbarui dengan pembaruan sistem</string>
   <string name="update_recovery_off_summary">Jangan perbarui dengan pembaruan sistem</string>
-  <string name="update_recovery_on_warning">PERHATIAN: Bila fitur ini diaktifkan, recovery Anda yang terpasang akan digantikan oleh salah satu yang disertakan dengan versi terbaru dari OS yang berjalan.\n\nRecovery Anda akan diperbarui bersama dengan upgrade sistem Anda, untuk membantu Anda untuk memastikan kompatibilitas dengan versi mendatang.\n\nApakah Anda ingin mengaktifkan fitur ini?</string>
-  <string name="update_recovery_off_warning">PERINGATAN: Bila fitur ini dinonaktifkan, recovery Anda yang terpasang tidak akan diperbarui dengan upgrade OS.\n\nUpdate mendatang OS mungkin tidak dapat di instal dengan versi recovery yang lama atau versi recovery kustom.\n\nApakah Anda benar-benar ingin menonaktifkan fitur ini?</string>
+  <string name="update_recovery_on_warning">PERHATIAN: Jika fitur ini diaktifkan, pemulihan yang terinstal akan digantikan oleh salah satu yang disertakan dengan versi terbaru dari OS yang berjalan.\n\nPemulihan akan diperbarui bersama dengan peningkatan sistem agar pemulihan tetap kompatibel dengan versi mendatang.\n\nApakah Anda ingin mengaktifkan fitur ini?</string>
+  <string name="update_recovery_off_warning">PERINGATAN: Jika fitur ini dinonaktifkan, pemulihan yang terinstal tidak akan diperbarui dengan peningkatan OS.\n\nPembaruan OS mendatang mungkin tidak dapat diinstal dengan versi pemulihan khusus atau versi pemulihan yang sudah usang.\n\nApakah Anda benar-benar ingin menonaktifkan fitur ini?</string>
+  <!-- Android debugging over WiFi -->
   <string name="adb_over_network">ADB melalui jaringan</string>
-  <string name="adb_over_network_summary">Aktifkan TCP/IP debug melalui antarmuka jaringan (Wi\u2011Fi, jaringan USB). Pengaturan ini direset pada saat dinyalakan ulang</string>
-  <string name="adb_over_network_disable_summary">Klik untuk menonaktifkan TCP/IP debugging melalui antarmuka jaringan (Wi\u2011Fi, jaringan USB).</string>
-  <string name="adb_over_network_warning">PERINGATAN: Ketika ADB melalui jaringan diaktifkan, ponsel Anda terbuka untuk intrusi pada semua jaringan yang terhubung!\n\nHanya gunakan fitur ini ketika Anda terhubung pada jaringan dipercaya\n\nApakah Anda benar-benar ingin mengaktifkan fungsi ini?</string>
-  <string name="system_reset_default_home">Me-reset layar awal ke semula</string>
-  <string name="system_home_settings">Pengaturan Home</string>
-  <string name="reset_launcher_title">Me-reset layar awal ke semula</string>
-  <string name="reset_launcher_description">Dengan mengatur ulang layar home, anda akan dapat memilih layar home alternatif (contohnya Trebuchet).\n\nApakah anda ingin mengatur ulang layar home?</string>
-  <string name="reset_launcher_tip">Tekan tombol home untuk memunculkan dialog pemilihan layar awal.</string>
+  <string name="adb_over_network_summary">Aktifkan perbaikan galat fungsi TCP/IP melalui antarmuka jaringan (Wi\u2011Fi, jaringan USB). Pengaturan ini diatur ulang pada saat dibut kembali</string>
+  <string name="adb_over_network_disable_summary">Klik untuk menonaktifkan perbaikan galat fungsi TCP/IP melalui antarmuka jaringan (Wi\u2011Fi, jaringan USB).</string>
+  <!-- Warning for Adb over Network -->
+  <string name="adb_over_network_warning">PERINGATAN: Ketika ADB melalui jaringan diaktifkan, TV Anda terbuka terhadap intrusi pada semua jaringan yang terhubung!\n\nHanya gunakan fitur ini ketika Anda terhubung pada jaringan tepercaya\n\nApakah Anda benar-benar ingin mengaktifkan fungsi ini?</string>
+  <!-- Home settings -->
+  <string name="system_reset_default_home">Atur ulang layar beranda baku</string>
+  <string name="system_home_settings">Pengaturan beranda</string>
+  <string name="reset_launcher_title">Atur ulang layar beranda baku</string>
+  <string name="reset_launcher_description">Dengan mengatur ulang layar beranda baku, Anda akan dapat memilih layar beranda alternatif (contohnya Trebuchet).\n\nApakah Anda ingin mengatur ulang layar beranda?</string>
+  <string name="reset_launcher_tip">Tekan tombol beranda untuk memunculkan dialog pemilihan layar beranda.</string>
+  <!-- Setting that enables the terminal app. [CHAR LIMIT=32] -->
   <string name="enable_terminal_title">Terminal lokal</string>
   <string name="enable_terminal_summary">Mengaktifkan aplikasi terminal</string>
-  <string name="disable_terminal_summary">Menonaktifkan aplikasi terminal</string>
+  <string name="disable_terminal_summary">Nonaktifkan aplikasi terminal</string>
   <string name="enable_terminal_on">Diaktifkan</string>
   <string name="enable_terminal_off">Dinonaktifkan</string>
-  <string name="advanced_reboot_title">Reboot lanjutan</string>
-  <string name="advanced_reboot_summary">Memasukkan pilihan di menu untuk reboot ke recovery, bootloader atau melakukan soft reboot</string>
-  <string name="reboot_reboot">Reboot</string>
-  <string name="reboot_recovery">Recovery</string>
-  <string name="reboot_bootloader">Bootloader</string>
-  <string name="reboot_soft">Soft reboot</string>
+  <!-- Advanced reboot options -->
+  <string name="advanced_reboot_title">But ulang lanjutan</string>
+  <string name="advanced_reboot_summary">Masukkan opsi di bagian menu Tentang untuk but ulang ke pemulihan, pengelola but, atau melakukan but ulang tanpa mati daya</string>
+  <!-- Reboot menu -->
+  <!-- Button to reboot the device, within the Reboot Options dialog -->
+  <string name="reboot_reboot">But ulang</string>
+  <!-- Button to reboot the device into recovery, within the Reboot Options dialog -->
+  <string name="reboot_recovery">Pemulihan</string>
+  <!-- Button to reboot the device into bootloader, within the Reboot Options dialog -->
+  <string name="reboot_bootloader">Pengelola but</string>
+  <!-- Button to soft reboot the device, within the Reboot Options dialog -->
+  <string name="reboot_soft">But ulang tanpa mati daya</string>
+  <!-- Display settings -->
   <string name="system_display">Tampilan</string>
   <string name="system_display_overscan">Overscan</string>
-  <string name="system_display_overscan_description">Kalibrasi layar untuk menyesuaikan ukuran layar anda.</string>
+  <string name="system_display_overscan_description">Kalibrasi layar untuk menyesuaikan ukuran layar Anda.</string>
 </resources>

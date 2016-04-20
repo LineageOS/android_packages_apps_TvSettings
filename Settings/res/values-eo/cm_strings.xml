@@ -16,21 +16,35 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- CM Updater -->
   <string name="about_cmupdate_settings_title">Ĝisdatigoj de CyanogenMod</string>
+  <!-- About screen, CyanogenMod version -->
   <string name="about_mod_version">Versio de CyanogenMod</string>
+  <!-- About screen, status item label  [CHAR LIMIT=60] -->
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <plurals name="show_dev_countdown_cm">
     <item quantity="one">Vi estas nun <xliff:g id="step_count">%1$d</xliff:g> paŝon antaŭ la aktivado de programadaj argordoj.</item>
     <item quantity="other">Vi estas nun <xliff:g id="step_count">%1$d</xliff:g> paŝojn antaŭ la aktivado de programadaj argordoj.</item>
   </plurals>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
   <string name="show_dev_on_cm">Vi ŝaltis la programadajn agordojn!</string>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
   <string name="show_dev_already_cm">Ne utilas, vi jam ŝaltis la programadajn agordojn.</string>
+  <!-- About screen, build date -->
   <string name="about_build_date">Konstrua dato</string>
+  <!-- About screen, kernel version -->
   <string name="about_kernel_version">Kerna versio</string>
+  <!-- About screen, SELinux status -->
   <string name="about_selinux_status">SELinux stato</string>
+  <!-- These statuses are displayed when a device was built with SE Android supoprt.
+    These are displayed by the settings app in the about section. -->
   <string name="selinux_status_disabled">Malŝaltita</string>
   <string name="selinux_status_permissive">Rajtiga</string>
   <string name="selinux_status_enforcing">Efikiga</string>
+  <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
   <string name="accessories_add_bluetooth_inst_cm">Por komenci uzi CyanogenMod, certiĝu ke via Bludenta aparato estas en pariga reĝimo. Por Nexus Remote, Premu Reen kaj Hejmo butonojn samtempe.</string>
+  <!-- Title for Set CM in System Settings Developer options [CHAR LIMIT=50] -->
+  <!-- Setting title for root access -->
   <string name="root_access">Radikuzanta reĝimo</string>
   <string name="root_access_warning_title">Ĉu permesi radikuzantajn permesojn?</string>
   <string name="root_access_warning_message">Permesi al la aplikaĵoj peti radikuzantan aliron estas tre danĝere kaj povus kompromiti la sekurecon de via sistemo!</string>
@@ -38,31 +52,43 @@
   <string name="root_access_apps">Nur aplikaĵoj</string>
   <string name="root_access_adb">Nur ADB</string>
   <string name="root_access_all">Aplikaĵoj kaj ADB</string>
+  <!-- Setting for updating Cyanogen recovery -->
   <string name="update_recovery_title">Cyanogen riparado</string>
   <string name="update_recovery_on_summary">Ĝisdatigi per sistemaj ĝisdatigoj</string>
   <string name="update_recovery_off_summary">Ne ĝisdatigi per sistemaj ĝisdatigoj</string>
   <string name="update_recovery_on_warning">RIMARKO: Kiam tiu funkcio estas ŝaltita, via riparado estos anstataŭigita per tiu de via aktuala mastruma sistemo.\n\nVia riparado estos ĝisdatigita samtempe kiel via mastruma sistemo por kongrui kun la venontaj versioj.\n\nĈu vi deziras ŝalti tiun funkcion ?</string>
   <string name="update_recovery_off_warning">ATENTO: Kiam tiu funkcio estas malŝaltita, via riparado NE estos ĝisdatigita samtempe kiel via mastruma sistemo.\n\nVenontaj mastrumaj sistemaj ĝisdatigoj eble ne instaleblos kun malnova versio de la riparado.\n\nĈu vi certas ke vi deziras malŝalti tiun funkcion ?</string>
+  <!-- Android debugging over WiFi -->
   <string name="adb_over_network">ADB per reto</string>
   <string name="adb_over_network_summary">Elibig TCP/IP sencimigadon per retaj interfacoj (Vifio, USB retoj). Tiu agordo estos nuligita post restartigo</string>
   <string name="adb_over_network_disable_summary">Klaku por malŝalti TCP/IP sencimigadon per retaj interfacoj (Vifio, USB retoj).</string>
+  <!-- Warning for Adb over Network -->
   <string name="adb_over_network_warning">ATENTIGO: Kiam reta ADB estas ŝaltita, via telefono estas malfermata por entrudiĝoj tra ĉiuj konektitaj retoj!\n\nUzu tiun funkcion nur kiam vi estas konektita al fidindaj retoj.\n\nĈu vi ja volas ŝalti tiun funkcion?</string>
+  <!-- Home settings -->
   <string name="system_reset_default_home">Rekomenci la defaŭltan hejman ekranon</string>
   <string name="system_home_settings">Agordoj de hejmo</string>
   <string name="reset_launcher_title">Rekomenci la defaŭltan hejman ekranon</string>
   <string name="reset_launcher_description">Rekomencigo de defaŭlta hejma ekrano ebligos vin elekti alternativan hejman ekranon (ekz. Trebuchet).\n\nĈu vi deziras rekomencigi vian defaŭltan hejman ekranon?</string>
   <string name="reset_launcher_tip">Premu la hejman butonon por aperigi la dialogujon por elekti hejman ekranon.</string>
+  <!-- Setting that enables the terminal app. [CHAR LIMIT=32] -->
   <string name="enable_terminal_title">Loka terminalo</string>
   <string name="enable_terminal_summary">Ebligi terminalan aplikaĵon</string>
   <string name="disable_terminal_summary">Malŝalti terminalan aplikaĵon</string>
   <string name="enable_terminal_on">Ŝaltita</string>
   <string name="enable_terminal_off">Malŝaltita</string>
+  <!-- Advanced reboot options -->
   <string name="advanced_reboot_title">Altnivela restartigo</string>
   <string name="advanced_reboot_summary">Aldoni opciojn en la Pri menuo por rekomencigi per riparada, praŝargila aŭ varma restartigo</string>
+  <!-- Reboot menu -->
+  <!-- Button to reboot the device, within the Reboot Options dialog -->
   <string name="reboot_reboot">Relanĉi</string>
+  <!-- Button to reboot the device into recovery, within the Reboot Options dialog -->
   <string name="reboot_recovery">Riparado</string>
+  <!-- Button to reboot the device into bootloader, within the Reboot Options dialog -->
   <string name="reboot_bootloader">Praŝargilo</string>
+  <!-- Button to soft reboot the device, within the Reboot Options dialog -->
   <string name="reboot_soft">Varma relanĉado</string>
+  <!-- Display settings -->
   <string name="system_display">Ekrano</string>
   <string name="system_display_overscan">Overscan</string>
   <string name="system_display_overscan_description">Kalibri ekranon por adapti al via aparato.</string>

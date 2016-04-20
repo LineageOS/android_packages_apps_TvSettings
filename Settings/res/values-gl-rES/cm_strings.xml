@@ -16,21 +16,47 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- CM Updater -->
   <string name="about_cmupdate_settings_title">Actualizacións de CyanogenMod</string>
+  <!-- About screen, CyanogenMod version -->
   <string name="about_mod_version">Versión de CyanogenMod</string>
+  <!-- About screen, status item label  [CHAR LIMIT=60] -->
   <string name="security_patch">Nivel de parche de seguridade de Android</string>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
   <string name="show_dev_on_cm">Activouse a configuración de desenvolvemento!</string>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
   <string name="show_dev_already_cm">Non fai falla, a configuración de desenvolvemento xa está activa.</string>
+  <!-- About screen, build date -->
+  <!-- About screen, kernel version -->
   <string name="about_kernel_version">Versión do kernel</string>
+  <!-- About screen, SELinux status -->
   <string name="about_selinux_status">Estado do SELinux</string>
+  <!-- These statuses are displayed when a device was built with SE Android supoprt.
+    These are displayed by the settings app in the about section. -->
   <string name="selinux_status_disabled">Desactivado</string>
   <string name="selinux_status_permissive">Permisivo</string>
+  <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
+  <!-- Title for Set CM in System Settings Developer options [CHAR LIMIT=50] -->
+  <!-- Setting title for root access -->
   <string name="root_access_none">Desactivado</string>
+  <!-- Setting for updating Cyanogen recovery -->
   <string name="update_recovery_off_summary">Non actualizar coas actualizacións de sistema</string>
+  <!-- Android debugging over WiFi -->
+  <!-- Warning for Adb over Network -->
+  <!-- Home settings -->
+  <!-- Setting that enables the terminal app. [CHAR LIMIT=32] -->
   <string name="enable_terminal_on">Activado</string>
   <string name="enable_terminal_off">Desactivado</string>
+  <!-- Advanced reboot options -->
   <string name="advanced_reboot_title">Reinicio avanzado</string>
+  <!-- Reboot menu -->
+  <!-- Button to reboot the device, within the Reboot Options dialog -->
   <string name="reboot_reboot">Reiniciar</string>
+  <!-- Button to reboot the device into recovery, within the Reboot Options dialog -->
   <string name="reboot_recovery">Recuperación</string>
+  <!-- Button to reboot the device into bootloader, within the Reboot Options dialog -->
+  <!-- Button to soft reboot the device, within the Reboot Options dialog -->
+  <!-- Display settings -->
   <string name="system_display">Pantalla</string>
 </resources>
