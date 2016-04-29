@@ -41,7 +41,9 @@
         android:banner="@drawable/ic_launcher_banner_settings"
         android:supportsRtl="true"
         android:theme="@style/Theme.Settings"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:defaultToDeviceProtectedStorage="true"
+        android:directBootAware="true">
 
         <activity
             android:name=".MainSettings"
@@ -542,6 +544,17 @@
             <intent-filter android:priority="1">
                 <action android:name="android.bluetooth.adapter.action.REQUEST_DISCOVERABLE" />
                 <action android:name="android.bluetooth.adapter.action.REQUEST_ENABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Triggered when user-selected home app isn't encryption aware -->
+        <activity android:name=".system.FallbackHome"
+                  android:excludeFromRecents="true"
+                  android:theme="@style/FallbackHome">
+            <intent-filter android:priority="-1000">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
