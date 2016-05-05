@@ -323,6 +323,8 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
         mDebugViewAttributes = findAndInitSwitchPref(DEBUG_VIEW_ATTRIBUTES);
         mForceAllowOnExternal = findAndInitSwitchPref(FORCE_ALLOW_ON_EXTERNAL_KEY);
         mPassword = (PreferenceScreen) findPreference(LOCAL_BACKUP_PASSWORD);
+        // We don't have a backup password activity on TV
+        mPassword.setVisible(false);
         mAllPrefs.add(mPassword);
 
         if (!mUm.isAdminUser()) {
