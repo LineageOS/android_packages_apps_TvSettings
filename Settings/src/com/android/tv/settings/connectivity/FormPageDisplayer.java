@@ -112,9 +112,9 @@ public class FormPageDisplayer
     }
 
     @Override
-    public boolean onPasswordInputComplete(String text) {
+    public boolean onPasswordInputComplete(String text, boolean obfuscate) {
         if (mPasswordInputWizardFragmentListener != null) {
-            return mPasswordInputWizardFragmentListener.onPasswordInputComplete(text);
+            return mPasswordInputWizardFragmentListener.onPasswordInputComplete(text, obfuscate);
         }
         return true;
     }
@@ -240,18 +240,26 @@ public class FormPageDisplayer
     private Fragment displayPskInput(FormPageInfo formPageInfo, String titleArgument,
             String descriptionArgument, final FormPage formPage,
             final FormPageResultListener listener, FormPage lastPage, boolean forward) {
-        Fragment fragment = PasswordInputWizardFragment.newInstance(
-                getTitle(formPageInfo, titleArgument),
-                getDescription(formPageInfo, descriptionArgument),
-                lastPage == null ? null : lastPage.getDataSummary());
+        boolean obfuscate = lastPage != null
+                ? TextUtils.equals(
+                          lastPage.getDataSecondary(), PasswordInputWizardFragment.OPTION_OBFUSCATE)
+                : false;
+        Fragment fragment =
+                PasswordInputWizardFragment.newInstance(getTitle(formPageInfo, titleArgument),
+                        getDescription(formPageInfo, descriptionArgument),
+                        lastPage == null ? null : lastPage.getDataSummary(), obfuscate);
         displayFragment(fragment, forward);
 
         mPasswordInputWizardFragmentListener = new PasswordInputWizardFragment.Listener() {
             @Override
-            public boolean onPasswordInputComplete(String text) {
+            public boolean onPasswordInputComplete(String text, boolean obfuscate) {
                 if (!TextUtils.isEmpty(text) && text.length() >= PSK_MIN_LENGTH) {
                     Bundle result = new Bundle();
                     result.putString(FormPage.DATA_KEY_SUMMARY_STRING, text);
+                    if (obfuscate) {
+                        result.putString(FormPage.DATA_KEY_SECONDARY_STRING,
+                                PasswordInputWizardFragment.OPTION_OBFUSCATE);
+                    }
                     listener.onBundlePageResult(formPage, result);
                     return true;
                 }
