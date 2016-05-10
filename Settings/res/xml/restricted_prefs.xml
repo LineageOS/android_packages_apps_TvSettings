@@ -23,11 +23,8 @@
         <Preference
             android:icon="@drawable/ic_wifi_signal_4_white"
             android:key="network"
-            android:title="@string/connectivity_network" >
-            <intent
-                android:targetClass="com.android.tv.settings.connectivity.NetworkActivity"
-                android:targetPackage="com.android.tv.settings" />
-        </Preference>
+            android:title="@string/connectivity_network"
+            android:fragment="com.android.tv.settings.connectivity.NetworkFragment" />
         <Preference
             android:icon="@drawable/ic_info_outline"
             android:key="about_device"
