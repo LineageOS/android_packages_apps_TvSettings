@@ -83,6 +83,7 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
             // This is unlikely to happen
             Log.d(TAG, "App not found, trying to bail out");
             navigateBack();
+            return;
         }
 
         super.onCreate(savedInstanceState);
@@ -137,6 +138,12 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        if (mEntry == null) {
+            // This is unlikely to happen
+            Log.d(TAG, "App not found, trying to bail out");
+            navigateBack();
+            return;
+        }
         final Context themedContext = getPreferenceManager().getContext();
         final PreferenceScreen screen =
                 getPreferenceManager().createPreferenceScreen(themedContext);
@@ -314,6 +321,12 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         public void onPackageListChanged() {
             final int userId = UserHandle.getUserId(mEntry.info.uid);
             mEntry = mApplicationsState.getEntry(mPackageName, userId);
+            if (mEntry == null) {
+                // This is unlikely to happen
+                Log.d(TAG, "App not found, trying to bail out");
+                navigateBack();
+                return;
+            }
             onCreatePreferences(null, null);
         }
 
