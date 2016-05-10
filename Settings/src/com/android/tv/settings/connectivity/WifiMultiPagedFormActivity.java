@@ -63,8 +63,8 @@ public abstract class WifiMultiPagedFormActivity extends MultiPagedForm
     }
 
     @Override
-    public boolean onPasswordInputComplete(String text) {
-        return mFormPageDisplayer.onPasswordInputComplete(text);
+    public boolean onPasswordInputComplete(String text, boolean obfuscate) {
+        return mFormPageDisplayer.onPasswordInputComplete(text, obfuscate);
     }
 
     @Override

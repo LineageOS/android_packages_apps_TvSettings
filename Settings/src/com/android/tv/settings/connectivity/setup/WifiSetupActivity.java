@@ -481,6 +481,15 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
                     .putExtras(getIntent().getExtras()));
         } else {
             ScanResult scanResult = getListItem(chooseNetworkPage).getScanResult();
+
+            // If we are entering password for an AP that is different from the previously saved AP,
+            // clear out the saved password.
+            if (mPasswordPage != null
+                    && (mConfiguration == null
+                               || !scanResult.SSID.equals(mConfiguration.getPrintableSsid()))) {
+                mPasswordPage.clearData();
+            }
+
             mConfiguration = WifiConfigHelper.getConfiguration(this, scanResult.SSID,
                     WifiSecurity.getSecurity(scanResult));
             mWifiSecurity = WifiSecurity.getSecurity(scanResult);
