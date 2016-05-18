@@ -101,7 +101,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
     private UserInfo mRestrictedUserInfo;
     private ILockSettings mLockSettingsService;
 
-    private CreateRestrictedProfileTask mCreateRestrictedProfileTask;
+    private static CreateRestrictedProfileTask sCreateRestrictedProfileTask;
 
     private final Handler mHandler = new Handler();
 
@@ -112,7 +112,6 @@ public class SecurityFragment extends LeanbackPreferenceFragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mUserManager = (UserManager) getContext().getSystemService(Context.USER_SERVICE);
-        mRestrictedUserInfo = findRestrictedUser(mUserManager);
         super.onCreate(savedInstanceState);
     }
 
@@ -150,7 +149,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             mRestrictedProfilePinPref.setVisible(false);
             mRestrictedProfileCreatePref.setVisible(false);
             mRestrictedProfileDeletePref.setVisible(false);
-        } else if (mRestrictedUserInfo != null) {
+        } else if (getRestrictedUser() != null) {
             // Not in restricted profile, but it exists
             mUnknownSourcesPref.setVisible(true);
             mVerifyAppsPref.setVisible(shouldShowVerifierSetting());
@@ -164,7 +163,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             mRestrictedProfileDeletePref.setVisible(true);
 
             AppRestrictionsFragment.prepareArgs(mRestrictedProfileAppsPref.getExtras(),
-                    mRestrictedUserInfo.id, false);
+                    getRestrictedUser().id, false);
         } else if (UserManager.supportsMultipleUsers()) {
             // Not in restricted profile, and it doesn't exist
             mUnknownSourcesPref.setVisible(true);
@@ -217,7 +216,12 @@ public class SecurityFragment extends LeanbackPreferenceFragment
                 setVerifyAppsEnabled(mVerifyAppsPref.isChecked());
                 return true;
             case KEY_RESTRICTED_PROFILE_ENTER:
-                switchUserNow(mRestrictedUserInfo.id);
+                final UserInfo restrictedUser = getRestrictedUser();
+                if (restrictedUser == null) {
+                    Log.e(TAG, "Tried to enter non-existent restricted user");
+                    return true;
+                }
+                switchUserNow(restrictedUser.id);
                 getActivity().finish();
                 return true;
             case KEY_RESTRICTED_PROFILE_EXIT:
@@ -395,6 +399,13 @@ public class SecurityFragment extends LeanbackPreferenceFragment
         return null;
     }
 
+    private UserInfo getRestrictedUser() {
+        if (mRestrictedUserInfo == null) {
+            mRestrictedUserInfo = findRestrictedUser(mUserManager);
+        }
+        return mRestrictedUserInfo;
+    }
+
     private static void switchUserNow(int userId) {
         try {
             ActivityManagerNative.getDefault().switchUser(userId);
@@ -404,14 +415,20 @@ public class SecurityFragment extends LeanbackPreferenceFragment
     }
 
     private void addRestrictedUser() {
-        if (mCreateRestrictedProfileTask == null) {
-            mCreateRestrictedProfileTask = new CreateRestrictedProfileTask();
-            mCreateRestrictedProfileTask.execute();
+        if (sCreateRestrictedProfileTask == null) {
+            sCreateRestrictedProfileTask = new CreateRestrictedProfileTask(getContext(),
+                    mUserManager);
+            sCreateRestrictedProfileTask.execute();
         }
     }
 
     private void removeRestrictedUser() {
-        final int restrictedUserHandle = mRestrictedUserInfo.id;
+        final UserInfo restrictedUser = getRestrictedUser();
+        if (restrictedUser == null) {
+            Log.w(TAG, "No restricted user to remove?");
+            return;
+        }
+        final int restrictedUserHandle = restrictedUser.id;
         mRestrictedUserInfo = null;
         mHandler.post(new Runnable() {
             @Override
@@ -435,10 +452,18 @@ public class SecurityFragment extends LeanbackPreferenceFragment
     }
 
     private class CreateRestrictedProfileTask extends AsyncTask<Void, Void, UserInfo> {
+        private final Context mContext;
+        private final UserManager mUserManager;
+
+        CreateRestrictedProfileTask(Context context, UserManager userManager) {
+            mContext = context;
+            mUserManager = userManager;
+        }
+
         @Override
         protected UserInfo doInBackground(Void... params) {
             UserInfo restrictedUserInfo = mUserManager.createProfileForUser(
-                    SecurityFragment.this.getString(R.string.user_new_profile_name),
+                    mContext.getString(R.string.user_new_profile_name),
                     UserInfo.FLAG_RESTRICTED, UserHandle.myUserId());
             if (restrictedUserInfo == null) {
                 Log.wtf(TAG, "Got back a null user handle!");
@@ -450,19 +475,18 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             Bitmap bitmap = createBitmapFromDrawable(R.drawable.ic_avatar_default);
             mUserManager.setUserIcon(userId, bitmap);
             // Add shared accounts
-            AccountManager.get(getActivity()).addSharedAccountsFromParentUser(
+            AccountManager.get(mContext).addSharedAccountsFromParentUser(
                     UserHandle.of(UserHandle.myUserId()), user);
             return restrictedUserInfo;
         }
 
         @Override
         protected void onPostExecute(UserInfo result) {
-            mCreateRestrictedProfileTask = null;
+            sCreateRestrictedProfileTask = null;
             if (result == null) {
                 return;
             }
-            mRestrictedUserInfo = result;
-            UserSwitchListenerService.updateLaunchPoint(getActivity(), true);
+            UserSwitchListenerService.updateLaunchPoint(mContext, true);
             int userId = result.id;
             if (result.isRestricted()
                     && isAdded()
@@ -481,7 +505,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
         }
 
         private Bitmap createBitmapFromDrawable(@DrawableRes int resId) {
-            Drawable icon = getContext().getDrawable(resId);
+            Drawable icon = mContext.getDrawable(resId);
             if (icon == null) {
                 throw new IllegalArgumentException("Drawable is missing!");
             }
