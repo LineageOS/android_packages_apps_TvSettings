@@ -154,12 +154,14 @@ public class AppsFragment extends LeanbackPreferenceFragment {
         mDownloadedPreferenceGroup = new PreferenceCategory(context);
         mDownloadedPreferenceGroup.setKey("DownloadedPreferenceGroup");
         mDownloadedPreferenceGroup.setTitle(R.string.apps_downloaded);
+        mDownloadedPreferenceGroup.setOrderingAsAdded(false);
         screen.addPreference(mDownloadedPreferenceGroup);
 
         if (TextUtils.isEmpty(volumeUuid)) {
             mSystemPreferenceGroup = new PreferenceCategory(context);
             mSystemPreferenceGroup.setKey("SystemPreferenceGroup");
             mSystemPreferenceGroup.setTitle(R.string.apps_system);
+            mSystemPreferenceGroup.setOrderingAsAdded(false);
             screen.addPreference(mSystemPreferenceGroup);
         }
 
