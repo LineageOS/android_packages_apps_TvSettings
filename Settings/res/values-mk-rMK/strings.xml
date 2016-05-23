@@ -80,7 +80,7 @@
     <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"За да се спари со: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, проверете дали ја прикажува оваа лозинка: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8234127565393932499">"Од: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Спари се со овој уред?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="8951451728250058901">"За да се спари со: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Внесете: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, а потоа притиснете Return или Enter."</string>
-    <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"За да се спари со: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Внесете го бараниот ПИН на уредот:"</string>
+    <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"За да се спари со: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Внесете го бараниот PIN на уредот:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="7980787196089653577">"За да се спари со: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Внесете ја бараната лозинка за уредот:"</string>
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Обично 0000 или 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"Спари"</string>
@@ -145,7 +145,7 @@
     <string name="license_title" msgid="4482927105870812604">"Лиценца"</string>
     <string name="terms_title" msgid="8480859222932736291">"Правила и услови"</string>
     <string name="webview_license_title" msgid="8843666223583780825">"Системска лиценца за WebView"</string>
-    <string name="wallpaper_attributions" msgid="8622098625739634898">"Тапети"</string>
+    <string name="wallpaper_attributions" msgid="8622098625739634898">"Позадини"</string>
     <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Даватели на сателитски снимки:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Слаба"</item>
@@ -316,8 +316,8 @@
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Обиди се повторно"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Се бара WPS рутер…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Притиснете го копчето Заштитено поставување на Wi-Fi на вашиот рутер.\nТоа може да се нарекува „WPS“ или да го содржи симболот од лево."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Внесете ПИН <xliff:g id="NUMBER">%1$s</xliff:g> на вашиот Wi-Fi рутер"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Откако ќе го внесете ПИН-бројот, поставувањето може да потрае и до две минути за да се заврши"</string>
+    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Внесете PIN <xliff:g id="NUMBER">%1$s</xliff:g> на вашиот Wi-Fi рутер"</string>
+    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Откако ќе го внесете PIN-бројот, поставувањето може да потрае и до две минути за да се заврши"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Не може да најде Wi-Fi рутер"</string>
     <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Поставката за безбедност (WEP) на Wi-Fi рутерот не е поддржана"</string>
     <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Поставката за безбедност (TKIP) на Wi-Fi рутерот не е поддржана"</string>
@@ -351,7 +351,7 @@
     <string name="location_mode_wifi_description" msgid="2778774510654527264">"Користи мрежи на Wi‑Fi за да утврдиш локација"</string>
     <string name="location_status" msgid="3456414279428237558">"Статус на локација"</string>
     <string name="location_services" msgid="5441085185119797200">"Услуги за локација"</string>
-    <string name="on" msgid="6683600681314500652">"Вклучи"</string>
+    <string name="on" msgid="6683600681314500652">"Вклучено"</string>
     <string name="off" msgid="5264189545064767245">"Исклучено"</string>
     <string name="google_location_services_title" msgid="3382840371861269146">"Услуги за локација на Google"</string>
     <string name="third_party_location_services_title" msgid="4089136801976399147">"Услуги за локација на трета страна"</string>
@@ -374,7 +374,7 @@
     <string name="captions_language" msgid="2835554055388996343">"Јазик"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Големина на текст"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Стил на титли"</string>
-    <string name="captions_customoptions" msgid="2699780648112330911">"Прилагодени опции"</string>
+    <string name="captions_customoptions" msgid="2699780648112330911">"Приспособени опции"</string>
     <string name="captions_fontfamily" msgid="6840670778173003604">"Фамилија на фонт"</string>
     <string name="captions_textcolor" msgid="3233568269335050287">"Боја на текст"</string>
     <string name="captions_edgetype" msgid="841331274533086103">"Тип на раб"</string>
@@ -470,7 +470,7 @@
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Мерка прикажување на време во adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"Вклучи"</string>
     <string name="action_off_title" msgid="3157728958166559966">"Исклучи"</string>
-    <string name="action_on_description" msgid="4559342592998850852">"Вклучи"</string>
+    <string name="action_on_description" msgid="4559342592998850852">"Вклучено"</string>
     <string name="action_off_description" msgid="4364261457368041502">"Исклучена"</string>
     <string name="agree" msgid="1235622082275451350">"Се согласувам"</string>
     <string name="disagree" msgid="9170636026862400981">"Не се согласувам"</string>
@@ -519,7 +519,7 @@
     <string name="title_select_wifi_network" msgid="1038871400014761952">"Изберете ја вашата Wi-Fi мрежа"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Преименувај"</string>
     <string name="accessories_wifi_display_enable" msgid="4779506305656453262">"Прикажи Wi-Fi"</string>
-    <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"Потребен е ПИН"</string>
+    <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"Потребен е PIN"</string>
     <string name="whichApplication" msgid="8382179653567099571">"Заврши дејство со"</string>
     <string name="alwaysUseQuestion" msgid="7128459989232213727">"Секогаш да се користи оваа опција за ова дејство?"</string>
     <string name="alwaysUseOption" msgid="1057645533268907906">"Секогаш користи"</string>
@@ -578,18 +578,18 @@
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Не е дозволено"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Приспособи ограничувања"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"Само момент…"</string>
-    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"Промени ПИН"</string>
+    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"Промени PIN"</string>
     <string name="restriction_description" msgid="3104855945910233028">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
     <string name="app_sees_restricted_accounts_and_controlled_by" msgid="6677671440081319908">"Оваа апликација може да пристапува до вашите сметки. Контролирано од <xliff:g id="APP">%1$s</xliff:g>"</string>
-    <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"Внесете ПИН за да го гледате овој канал"</string>
-    <string name="pin_enter_unlock_program" msgid="52453773316071511">"Внесете ПИН за да ја гледате оваа програма"</string>
-    <string name="pin_enter_pin" msgid="821552376577935497">"Внесете ПИН"</string>
-    <string name="pin_enter_new_pin" msgid="4788218421265924211">"Поставете нов ПИН"</string>
-    <string name="pin_enter_again" msgid="1510456697040826496">"Повторно внесете го новиот ПИН"</string>
-    <string name="pin_enter_old_pin" msgid="851029058127630869">"Внесете го стариот ПИН"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Внесовте погрешен ПИН 5 пати.\nОбидете се повторно по <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> секунди."</string>
-    <string name="pin_toast_wrong" msgid="4628358195224633248">"Погрешен ПИН, обидете се повторно"</string>
-    <string name="pin_toast_not_match" msgid="5886041789737632996">"Обидете се повторно, ПИН-кодот не се совпаѓа"</string>
+    <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"Внесете PIN за да го гледате овој канал"</string>
+    <string name="pin_enter_unlock_program" msgid="52453773316071511">"Внесете PIN за да ја гледате оваа програма"</string>
+    <string name="pin_enter_pin" msgid="821552376577935497">"Внесете PIN"</string>
+    <string name="pin_enter_new_pin" msgid="4788218421265924211">"Поставете нов PIN"</string>
+    <string name="pin_enter_again" msgid="1510456697040826496">"Повторно внесете го новиот PIN"</string>
+    <string name="pin_enter_old_pin" msgid="851029058127630869">"Внесете го стариот PIN"</string>
+    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Внесовте погрешен PIN 5 пати.\nОбидете се повторно по <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> секунди."</string>
+    <string name="pin_toast_wrong" msgid="4628358195224633248">"Погрешен PIN, обидете се повторно"</string>
+    <string name="pin_toast_not_match" msgid="5886041789737632996">"Обидете се повторно, PIN-кодот не се совпаѓа"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Внесете лозинка за <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Успешно поврзано"</string>
     <string name="wifi_setup_save_success" msgid="4785799603638549254">"Успешно зачувано"</string>
