@@ -64,6 +64,14 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
     private NotificationsPreference mNotificationsPreference;
 
     private final Handler mHandler = new Handler();
+    private Runnable mBailoutRunnable = new Runnable() {
+        @Override
+        public void run() {
+            if (isResumed() && !getFragmentManager().popBackStackImmediate()) {
+                getActivity().onBackPressed();
+            }
+        }
+    };
 
     public static void prepareArgs(@NonNull Bundle args, String packageName) {
         args.putString(ARG_PACKAGE_NAME, packageName);
@@ -77,14 +85,7 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         mPackageManager = activity.getPackageManager();
         mApplicationsState = ApplicationsState.getInstance(activity.getApplication());
         mSession = mApplicationsState.newSession(mCallbacks);
-        final int userId = UserHandle.myUserId();
-        mEntry = mApplicationsState.getEntry(mPackageName, userId);
-        if (mEntry == null) {
-            // This is unlikely to happen
-            Log.d(TAG, "App not found, trying to bail out");
-            navigateBack();
-            return;
-        }
+        mEntry = mApplicationsState.getEntry(mPackageName, UserHandle.myUserId());
 
         super.onCreate(savedInstanceState);
     }
@@ -94,19 +95,32 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         super.onResume();
         mSession.resume();
 
-        mClearDefaultsPreference.refresh();
-        mEnableDisablePreference.refresh();
+        if (mEntry == null) {
+            Log.w(TAG, "App not found, trying to bail out");
+            navigateBack();
+        }
+
+        if (mClearDefaultsPreference != null) {
+            mClearDefaultsPreference.refresh();
+        }
+        if (mEnableDisablePreference != null) {
+            mEnableDisablePreference.refresh();
+        }
     }
 
     @Override
     public void onPause() {
         super.onPause();
         mSession.pause();
+        mHandler.removeCallbacks(mBailoutRunnable);
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (mEntry == null) {
+            return;
+        }
         switch (requestCode) {
             case REQUEST_UNINSTALL:
                 if (resultCode == Activity.RESULT_OK) {
@@ -131,19 +145,13 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
     }
 
     private void navigateBack() {
-        if (!getFragmentManager().popBackStackImmediate()) {
-            getActivity().onBackPressed();
-        }
+        // need to post this to avoid recursing in the fragment manager.
+        mHandler.removeCallbacks(mBailoutRunnable);
+        mHandler.post(mBailoutRunnable);
     }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        if (mEntry == null) {
-            // This is unlikely to happen
-            Log.d(TAG, "App not found, trying to bail out");
-            navigateBack();
-            return;
-        }
         final Context themedContext = getPreferenceManager().getContext();
         final PreferenceScreen screen =
                 getPreferenceManager().createPreferenceScreen(themedContext);
@@ -217,11 +225,17 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
     }
 
     public String getAppName() {
+        if (mEntry == null) {
+            return null;
+        }
         mEntry.ensureLabel(getActivity());
         return mEntry.label;
     }
 
     public Drawable getAppIcon() {
+        if (mEntry == null) {
+            return null;
+        }
         mApplicationsState.ensureIcon(mEntry);
         return mEntry.icon;
     }
@@ -319,13 +333,13 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
 
         @Override
         public void onPackageListChanged() {
+            if (mEntry == null) {
+                return;
+            }
             final int userId = UserHandle.getUserId(mEntry.info.uid);
             mEntry = mApplicationsState.getEntry(mPackageName, userId);
             if (mEntry == null) {
-                // This is unlikely to happen
-                Log.d(TAG, "App not found, trying to bail out");
                 navigateBack();
-                return;
             }
             onCreatePreferences(null, null);
         }
