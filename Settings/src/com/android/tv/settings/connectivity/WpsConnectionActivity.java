@@ -38,10 +38,12 @@ public class WpsConnectionActivity extends DialogActivity
 
     private WifiManager mWifiManager;
     private boolean mWpsComplete;
+    private boolean mActive;
+
     private final WpsCallback mWpsCallback = new WpsCallback() {
         @Override
         public void onStarted(String pin) {
-            if (pin != null) {
+            if (pin != null && mActive) {
                 displayFragment(createEnterPinFragment(pin), true);
             }
         }
@@ -49,12 +51,22 @@ public class WpsConnectionActivity extends DialogActivity
         @Override
         public void onSucceeded() {
             mWpsComplete = true;
+
+            if (!mActive) {
+                return;
+            }
+
             displayFragment(createSuccessFragment(), true);
         }
 
         @Override
         public void onFailed(int reason) {
             mWpsComplete = true;
+
+            if (!mActive) {
+                return;
+            }
+
             String errorMessage;
             switch (reason) {
                 case WifiManager.WPS_OVERLAP_ERROR:
@@ -92,12 +104,17 @@ public class WpsConnectionActivity extends DialogActivity
     @Override
     protected void onStart() {
         super.onStart();
+        // Must be set before all other actions.
+        mActive = true;
+
         startWps();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        mActive = false;
+
         if (!mWpsComplete) {
             mWifiManager.cancelWps(null);
         }
