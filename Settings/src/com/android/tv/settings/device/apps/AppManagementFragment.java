@@ -328,7 +328,9 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
 
         @Override
         public void onRunningStateChanged(boolean running) {
-            mForceStopPreference.refresh();
+            if (mForceStopPreference != null) {
+                mForceStopPreference.refresh();
+            }
         }
 
         @Override
