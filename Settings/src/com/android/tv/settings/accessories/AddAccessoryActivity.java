@@ -120,7 +120,9 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
     private static final int GAMEPAD_MESSAGE_RESUME_PAIRING = 4;
     private final List<Message> mGamepadMessageQueue = new ArrayList<>();
     private Messenger mGamepadService;
-    private ServiceConnection mGamepadServiceConn = new ServiceConnection() {
+    private ServiceConnection mGamepadServiceConn;
+
+    private class GamepadServiceConnection implements ServiceConnection {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             Log.d(TAG, "Gamepad Service Connected");
@@ -234,6 +236,7 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
         intent.setPackage(GAMEPAD_PAIRING_PACKAGE);
         if (serviceIntentIsHandled(intent)) {
             // Don't auto-start the service. If it's not running we don't need to pause it.
+            mGamepadServiceConn = new GamepadServiceConnection();
             bindService(intent, mGamepadServiceConn, BIND_ADJUST_WITH_ACTIVITY);
         }
 
@@ -340,7 +343,10 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
     protected void onDestroy() {
         super.onDestroy();
         resumeGamepadPairingService();
-        unbindService(mGamepadServiceConn);
+        if (mGamepadServiceConn != null) {
+            unbindService(mGamepadServiceConn);
+            mGamepadServiceConn = null;
+        }
         stopBluetoothPairer();
         mMsgHandler.removeCallbacksAndMessages(null);
     }
