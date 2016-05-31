@@ -31,6 +31,7 @@ import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;
 import android.text.format.Formatter;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -39,8 +40,10 @@ import com.android.tv.settings.dialog.ProgressDialogFragment;
 
 import java.io.File;
 import java.util.List;
+import java.util.Objects;
 
 public class MigrateStorageActivity extends Activity {
+    private static final String TAG = "MigrateStorageActivity";
 
     private static final String EXTRA_MIGRATE_HERE =
             "com.android.tv.settings.device.storage.MigrateStorageActivity.MIGRATE_HERE";
@@ -61,13 +64,9 @@ public class MigrateStorageActivity extends Activity {
                 return;
             }
             if (status == PackageManager.MOVE_SUCCEEDED) {
-                Toast.makeText(MigrateStorageActivity.this,
-                        getString(R.string.storage_wizard_migrate_toast_success, mTargetVolumeDesc),
-                        Toast.LENGTH_SHORT).show();
+                showMigrationSuccessToast();
             } else {
-                Toast.makeText(MigrateStorageActivity.this,
-                        getString(R.string.storage_wizard_migrate_toast_failure, mTargetVolumeDesc),
-                        Toast.LENGTH_SHORT).show();
+                showMigrationFailureToast();
             }
             finish();
         }
@@ -134,24 +133,53 @@ public class MigrateStorageActivity extends Activity {
     }
 
     private void onConfirmProceed() {
-        getFragmentManager().beginTransaction()
-                .replace(android.R.id.content,
-                        MigrateProgressFragment.newInstance(mTargetVolumeDesc))
-                .commit();
-        getFragmentManager().executePendingTransactions();
-        mMoveId = mPackageManager.movePrimaryStorage(mTargetVolumeInfo);
+        startMigrationInternal();
     }
 
     private void onChoose(VolumeInfo volumeInfo) {
         mTargetVolumeInfo = volumeInfo;
         final StorageManager storageManager = getSystemService(StorageManager.class);
         mTargetVolumeDesc = storageManager.getBestVolumeDescription(mTargetVolumeInfo);
-        getFragmentManager().beginTransaction()
-                .replace(android.R.id.content,
-                        MigrateProgressFragment.newInstance(mTargetVolumeDesc))
-                .commit();
-        getFragmentManager().executePendingTransactions();
-        mMoveId = mPackageManager.movePrimaryStorage(mTargetVolumeInfo);
+        startMigrationInternal();
+    }
+
+    private void startMigrationInternal() {
+        try {
+            mMoveId = mPackageManager.movePrimaryStorage(mTargetVolumeInfo);
+            getFragmentManager().beginTransaction()
+                    .replace(android.R.id.content,
+                            MigrateProgressFragment.newInstance(mTargetVolumeDesc))
+                    .commitNow();
+        } catch (IllegalArgumentException e) {
+            // This will generally happen if there's a move already in progress or completed
+            StorageManager sm = (StorageManager) getSystemService(STORAGE_SERVICE);
+
+            if (Objects.equals(mTargetVolumeInfo.getFsUuid(),
+                    sm.getPrimaryStorageVolume().getUuid())) {
+                // The data is already on the target volume
+                showMigrationSuccessToast();
+            } else {
+                // The data is most likely in the process of being moved
+                Log.e(TAG, "Storage migration failure", e);
+                showMigrationFailureToast();
+            }
+            finish();
+        } catch (IllegalStateException e) {
+            showMigrationFailureToast();
+            finish();
+        }
+    }
+
+    private void showMigrationSuccessToast() {
+        Toast.makeText(MigrateStorageActivity.this,
+                getString(R.string.storage_wizard_migrate_toast_success, mTargetVolumeDesc),
+                Toast.LENGTH_SHORT).show();
+    }
+
+    private void showMigrationFailureToast() {
+        Toast.makeText(MigrateStorageActivity.this,
+                getString(R.string.storage_wizard_migrate_toast_failure, mTargetVolumeDesc),
+                Toast.LENGTH_SHORT).show();
     }
 
     public static class MigrateConfirmationStepFragment extends GuidedStepFragment {
