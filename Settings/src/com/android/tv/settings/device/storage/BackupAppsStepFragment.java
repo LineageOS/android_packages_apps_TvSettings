@@ -290,9 +290,12 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
 
         @Override
         protected void onPostExecute(Map<String, Drawable> stringDrawableMap) {
+            mIconLoaderTask = null;
+            if (!isAdded()) {
+                return;
+            }
             mIconMap.putAll(stringDrawableMap);
             setActions(getAppActions(false, mEntries));
-            mIconLoaderTask = null;
         }
     }
 
