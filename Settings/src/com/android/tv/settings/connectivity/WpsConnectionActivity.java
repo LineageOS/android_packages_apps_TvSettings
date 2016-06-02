@@ -99,6 +99,8 @@ public class WpsConnectionActivity extends DialogActivity
         setLayoutProperties(R.layout.setup_auth_activity, R.id.description, R.id.action);
         super.onCreate(savedInstanceState);
         mWifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+
+        overridePendingTransition(R.anim.wps_activity_open_in, R.anim.wps_activity_open_out);
     }
 
     @Override
