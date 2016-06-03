@@ -28,7 +28,7 @@
     <string name="add_account" msgid="4098060223200619258">"Hisob qo‘shish"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Hisobni olib tashlash"</string>
     <string name="account_sync" msgid="773808124331714965">"Sinxronlashtirilgan ilovalarni tanlash"</string>
-    <string name="sync_now" msgid="8732244492880016471">"Hozir sinx"</string>
+    <string name="sync_now" msgid="8732244492880016471">"Hozir sinxronlash"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Sinxronlanmoqda…"</string>
     <string name="last_synced" msgid="6178494892357077274">"Oxirgi sinxronizatsiya: <xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"O‘chiq"</string>
@@ -36,7 +36,7 @@
     <string name="account_remove_failed" msgid="980654375770693544">"Hisobni o\'chirib bo\'lmaydi"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="3575080833667908804">"Sinxronlash (<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"Hozir sinxronlash (<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>)"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Sinxronlab bo‘lmadi"</string>
     <string name="sync_active" msgid="6891115263481154378">"Sinxronlash faol"</string>
@@ -53,7 +53,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Tizim tovushlari"</string>
     <string name="device_apps" msgid="9180435229638772838">"Ilovalar"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Xotirani &amp; qayta o‘tnatish"</string>
-    <string name="device_backup_restore" msgid="5627523987587511884">"Zaxiralash va qayta tiklash"</string>
+    <string name="device_backup_restore" msgid="5627523987587511884">"Zaxira nusxa va qayta tiklash"</string>
     <string name="device_reset" msgid="2827002349560023125">"Zavod sozlamalarini tiklash"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrlash"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Kesh tozalansinmi?"</string>
@@ -103,7 +103,7 @@
     <string name="device_name" msgid="2670488158531273028">"Qurilma nomi"</string>
     <string name="restart_button_label" msgid="8153112858638352970">"Qayta boshlash"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Huquqiy ma’lumotlar"</string>
-    <string name="about_legal_license" msgid="7867205982113209033">"Ochiq kodli dasturiy ta’minot litsenziyalari"</string>
+    <string name="about_legal_license" msgid="7867205982113209033">"Ochiq kodli DT litsenziyalari"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google huquqiy masalalari"</string>
     <string name="about_license_activity_unavailable" msgid="8522566562321418498">"Litsenziya ma\'lumotlari mavjud emas"</string>
     <string name="about_model" msgid="6625269442206323995">"Modeli"</string>
@@ -211,7 +211,7 @@
     <string name="wifi_action_dhcp" msgid="6338911832360962268">"DHCP"</string>
     <string name="wifi_action_static" msgid="1025855501453321749">"Statik"</string>
     <string name="wifi_action_status_info" msgid="7664354971197839253">"Holat ma\'lumotlari"</string>
-    <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"Qo‘shimcha sozlamalar"</string>
+    <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"Kengaytirilgan sozlamalar"</string>
     <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"Haqiqiy IP manzilni kiriting"</string>
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Haqiqiy shlyuz manzilini kiriting"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Haqiqiy DNS manzilni kiriting"</string>
@@ -259,7 +259,7 @@
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Ushbu xotira qurilmasiga saqlangan ilova yoki ma’lumotlardan foydalanish uchun uni qayta kiriting. Shuningdek, agar bu qurilmadan foydalanib bo‘lmasa, uni tizim xotirasidan o‘chirib tashlasangiz mumkin.\n\nAgar o‘chirib tashlashni tanlasangiz, qurilmadagi barcha ma’lumotlar butunlay o‘chib ketadi.\n\nSiz ilovalarni keyinroq qayta o‘rnatishingiz mumkin, ammo ularning ushbu qurilmada joylashgan ma’lumotlari yo‘qoladi."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Qurilma xotirasi"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Tashqi xotira"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Sozlamalarni tiklash"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Asliga qaytarish"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> ulandi"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> ulanmadi"</string>
     <string name="storage_mount_adopted" msgid="3360994581083675640">"USB xotira qayta ulandi"</string>
@@ -344,13 +344,13 @@
     <string name="system_desc_location" msgid="4243551425631207495">"Sizdan ruxsat so‘ragan ilovalarga joylashuvingiz ma‘lumotidan foydalanishga ruxsat beradi"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"Joylashuv rozili"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"Rejim"</string>
-    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"So‘nggi joylashuv so‘rovlari"</string>
+    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"So‘nggi joylashuv axboroti so‘rovlari"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"Hech qanday ilova yaqin vaqtda joylashuv ma‘lumotini so‘ramadi"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"Yuqori batareya sarfi"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"Batareya sarfi kam"</string>
     <string name="location_mode_wifi_description" msgid="2778774510654527264">"Joyni hisoblash uchun Wi‑Fi dan foydalanish"</string>
     <string name="location_status" msgid="3456414279428237558">"Joylashuv holati"</string>
-    <string name="location_services" msgid="5441085185119797200">"Joylashuv xizmatlari"</string>
+    <string name="location_services" msgid="5441085185119797200">"Joylashuv axboroti xizmatlari"</string>
     <string name="on" msgid="6683600681314500652">"Yoniq"</string>
     <string name="off" msgid="5264189545064767245">"O‘chiq"</string>
     <string name="google_location_services_title" msgid="3382840371861269146">"Google joylashuv xizmatlari"</string>
@@ -369,7 +369,7 @@
     <string name="captions_display" msgid="735692527287125548">"Ekran"</string>
     <string name="captions_display_on" msgid="1989009878719500520">"Yoniq"</string>
     <string name="captions_display_off" msgid="496953007835201523">"O‘chiq"</string>
-    <string name="display_options" msgid="5504549024985225774">"Ko‘rsatish sozlamalari"</string>
+    <string name="display_options" msgid="5504549024985225774">"Namoyish parametrlari"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Sozlash"</string>
     <string name="captions_language" msgid="2835554055388996343">"Til"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Matn o‘lchami"</string>
@@ -621,7 +621,7 @@
     <string name="settings_off" msgid="449272161738237637">"O‘chiq"</string>
     <string name="device_daydreams_none" msgid="2767107052779579259">"Ekranni o‘chirib qo‘yish"</string>
     <string name="device_daydreams_select" msgid="2112338101206187695">"Ekran lavhasi"</string>
-    <string name="device_daydreams_test" msgid="9038920213402659591">"Boshlash"</string>
+    <string name="device_daydreams_test" msgid="9038920213402659591">"Hozir yoqish"</string>
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"Qachon yoqilsin"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Uyqu rejimi ushbu harakatsizlik davridan keyin boshlanadi. Agar uyqu rejimi tanlansa, ekran o‘chadi."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> harakatsizlikdan keyin"</string>
