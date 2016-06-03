@@ -44,8 +44,8 @@
     <string name="connectivity_wifi" msgid="489974791299647708">"ကြိုးမဲ့"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"အီသာနက်"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"စကင်န်လုပ်ခြင်း အမြဲတန်းရနိုင်ရန်"</string>
-    <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"ဝိုင်ဖိုင် ပိတ်ထားလျှင်ပင်၊ google၏ တည်နေရာဝန်ဆောင်မှုနှင့် အခြား app များအား ကွန်ယက်အတွက် စကင်န်ဖတ်ခွင့်ပြုရန်"</string>
-    <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"ဝိုင်ဖိုင်"</string>
+    <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"Wi-Fi  ပိတ်ထားလျှင်ပင်၊ google၏ တည်နေရာဝန်ဆောင်မှုနှင့် အခြား app များအား ကွန်ယက်အတွက် စကင်န်ဖတ်ခွင့်ပြုရန်"</string>
+    <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="device_daydream" msgid="3354366974209179614">"ဖန်သားပြင်အသုံးပြုမှု ချွေတာမှုစနစ်"</string>
     <string name="device_display" msgid="101455384386372747">"မြင်ကွင်း"</string>
     <string name="device_sound" msgid="9214182566287657481">"အသံ"</string>
@@ -65,7 +65,7 @@
     <string name="accessory_state_pairing" msgid="7501989679637780963">"တွဲချိတ်နေ…"</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"ချိတ်ဆက်နေ..."</string>
     <string name="accessory_state_error" msgid="4529815543328841909">"ချိတ်တွဲ မရနိုင်ခဲ့"</string>
-    <string name="accessory_state_canceled" msgid="4419328837733619447">"ဖျက်သိမ်းရန်"</string>
+    <string name="accessory_state_canceled" msgid="4419328837733619447">"မလုပ်တော့ပါ"</string>
     <string name="accessory_state_paired" msgid="1959238931866401476">"ချိတ်တွဲထား"</string>
     <string name="accessory_options" msgid="4799658564005710297">"အသုံးအဆောင်"</string>
     <string name="accessory_unpair" msgid="8242725516604465355">"တွဲချိတ်မှုဖြုတ်ရန်"</string>
@@ -84,7 +84,7 @@
     <string name="bluetooth_enter_passkey_msg" msgid="7980787196089653577">"ချိတ်တွဲရန်: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt; ကိရိယာ အတွက် လိုအပ်သည့် သော့တံကို ရိုက်ထည့်ပါ:"</string>
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"ပုံမှန်အားဖြင့် ၀၀၀၀ သို့မဟုတ် ၁၂၃၄"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"ချိတ်တွဲရန်"</string>
-    <string name="bluetooth_cancel" msgid="4152153558528588479">"ဖျက်သိမ်းရန်"</string>
+    <string name="bluetooth_cancel" msgid="4152153558528588479">"မလုပ်တော့ပါ"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"နေ့စွဲ&amp; အချိန်"</string>
     <string name="system_language" msgid="2337138146114609247">"ဘာသာစကား"</string>
@@ -124,7 +124,7 @@
     <string name="selinux_status_enforcing" msgid="8839484208185347776">"ဖိအားပေးရန်"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"ထပ်တိုးစနစ်အပ်ဒိတ်များ"</string>
     <string name="device_status" msgid="4379924151946190768">"အခြေအနေ"</string>
-    <string name="device_status_summary" msgid="180586140242936323">"ကွန်ယက်၊ အမှတ်စဉ်များနှင့် အခြားအချက်အလက်များ"</string>
+    <string name="device_status_summary" msgid="180586140242936323">"ကွန်ရက်၊ အမှတ်စဉ်များနှင့် အခြားအချက်အလက်များ"</string>
     <string name="manual" msgid="4957388668881541669">"ကိုယ်တိုင်"</string>
     <string name="regulatory_information" msgid="5448865708097003189">"စည်းကမ်း အချက်အလက်များ"</string>
     <string name="device_feedback" msgid="209146642122579479">"ဤစက်ပစ္စည်းအကြောင်း တုံ့ပြန်ချက်ကို ပို့ရန်"</string>
@@ -180,18 +180,18 @@
     <string name="title_wifi_could_not_connect_timeout" msgid="5158184646985406394">"<xliff:g id="SSID">%1$s</xliff:g>ကို ရှာမတွေ့ခဲ့"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="4836595650380723944">"ကြိုးမဲ့ စကားဝှက် မမှန်"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="328274688839033015">"ကြိုးမဲ့ ကွန်ရက်က ချိတ်ဆက်မှုကို လက်မခံခဲ့"</string>
-    <string name="title_wifi_advanced_options" msgid="5389467736846644832">"<xliff:g id="SSID">%1$s</xliff:g> ပရော့က်စီ နှင့် IP ဆက်တင်များကို စီစဉ်မလား?"</string>
-    <string name="title_wifi_proxy_settings" msgid="7728120764469991303">"ပရော့က်စီ ဆက်တင်များ"</string>
-    <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"ပရော့က်စီ ဟို့စ်အမည်:"</string>
-    <string name="title_wifi_proxy_port" msgid="9194893429116021337">"ပရော့က်စီ ပို့တ်:"</string>
-    <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"…အတွက် လမ်းလွဲရေး ပရော့က်စီ"</string>
+    <string name="title_wifi_advanced_options" msgid="5389467736846644832">"<xliff:g id="SSID">%1$s</xliff:g> ပရောက်စီ နှင့် IP ဆက်တင်များကို စီစဉ်မလား?"</string>
+    <string name="title_wifi_proxy_settings" msgid="7728120764469991303">"ပရောက်စီ ဆက်တင်များ"</string>
+    <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"ပရောက်စီ ဟို့စ်အမည်:"</string>
+    <string name="title_wifi_proxy_port" msgid="9194893429116021337">"ပရောက်စီ ပို့တ်:"</string>
+    <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"…အတွက် လမ်းလွဲရေး ပရောက်စီ"</string>
     <string name="title_wifi_ip_settings" msgid="1176973848286865602">"IP ဆက်တင်များ"</string>
     <string name="title_wifi_ip_address" msgid="1176502993805009566">"IP လိပ်စာ:"</string>
     <string name="title_wifi_gateway" msgid="7210935277165358134">"ဝင်ပေါက်"</string>
     <string name="title_wifi_network_prefix_length" msgid="4821632382990582038">"ကွန်ရက် ရှေ့ဆက်ပုဒ် အရှည်:"</string>
     <string name="title_wifi_dns1" msgid="8202712852864206601">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="2673986973918499478">"DNS 2:"</string>
-    <string name="title_wifi_proxy_settings_invalid" msgid="7380479044141040849">"ပရော့က်စီ ဆက်တင်များ မမှန်"</string>
+    <string name="title_wifi_proxy_settings_invalid" msgid="7380479044141040849">"ပရောက်စီ ဆက်တင်များ မမှန်"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7228948551397955678">"IP ဆက်တင်များ မမှန်"</string>
     <string name="title_wifi_known_network" msgid="819998498700202436">"<xliff:g id="SSID">%1$s</xliff:g> မှာ သိမ်းဆည်းထားသည့် ကွန်ရက်ပါ"</string>
     <string name="wifi_action_try_again" msgid="3308643222864163092">"ထပ် စမ်းပါ"</string>
@@ -235,7 +235,7 @@
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g>သို့ ချိတ်ဆက်ထားပြီးနေပြီ။ အခြား ကွန်ရက်သို့ ချိတ်ဆက်ရမလား?"</string>
     <string name="wifi_summary_unknown_network" msgid="7903601448928422642">"မသိရ ကွန်ရက်"</string>
     <string name="title_ok" msgid="1021329453788761592">"အိုကေ"</string>
-    <string name="title_cancel" msgid="4846143417666038604">"ဖျက်သိမ်းရန်"</string>
+    <string name="title_cancel" msgid="4846143417666038604">"မလုပ်တော့ပါ"</string>
     <string name="storage_title" msgid="2132026108559493394">"သိုလှောင်မှု"</string>
     <string name="storage_available" msgid="1241005580092138871">"ရနိုင်သော"</string>
     <string name="storage_size" msgid="8958530823208352781">"စုစုပေါင်း နေရာ: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
@@ -358,9 +358,9 @@
     <string name="location_reporting" msgid="3054236612250063073">"တည်နေရာကို အစီရင်ခံခြင်း"</string>
     <string name="location_history" msgid="2946680949724247804">"တည်နေရာ မှတ်တမ်း"</string>
     <string name="location_reporting_desc" msgid="6256424995139430823">"Google သည် ဒီအင်္ဂါရပ်ကို Google Now နှင့် Google မြေပုံများလို ထုတ်ကုန်များ ထဲမှာ အသုံးပြုပါသည်။ တည်နေရာ အစီရင်ခံမှုကို ဖွင့်ထားခြင်းက သင့် ကိရိယာ၏ နောက်ဆုံး တည်နေရာ ဒေတာကို Google အကောင့်နှင့် ဆက်နွှယ်လျက် အသုံးပြုခြင်း နှင့် သိုလှောင်ခြင်းကို ခွင့်ပြုသည်။"</string>
-    <string name="location_history_desc" msgid="3861249867748294369">"တည်နေရာ မှတ်တမ်းကို ဒီအကောင့် အတွက် ဖွင့်ထားလျှင်၊ Google သည် သင်၏ appများ သုံးနိုင်ဖို့ သင့်ကိရိယာ၏ တည်နေရာကို သိုလှောင်ပေးသည်။\n\nဥပမာ၊ Google မြေပုံများက သင့်အား လမ်းညွှန်းမှုများကို ပေးနိုင်သလို၊ Google Now က ယာဉ်ကူးပြောင်းမှု အကြောင်းကို အသိပေးနိုင်သည်။ \n\nသင်သည် တည်နေရာ မှတ်တမ်းကို အချိန်မရွေး ပိတ်ပစ်နိုင်သည်၊ သို့သော် ထိုသို့ လုပ်မှုက ၎င်းကို ဖျက်မည် မဟုတ်ပါ။ သင်၏ တည်နေရာ မှတ်တမ်းကို ကြည့်ရန် နှင့် စီမံကွပ်ကဲရန်၊ maps.google.com/locationhistory ကို ဝင်ကြည့်ပါ။"</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"တည်နေရာ မှတ်တမ်းကို ဒီအကောင့် အတွက် ဖွင့်ထားလျှင်၊ Google သည် သင်၏ အက်ပ်များ သုံးနိုင်ဖို့ သင့်ကိရိယာ၏ တည်နေရာကို သိုလှောင်ပေးသည်။\n\nဥပမာ၊ Google မြေပုံများက သင့်အား လမ်းညွှန်းမှုများကို ပေးနိုင်သလို၊ Google Now က ယာဉ်ကူးပြောင်းမှု အကြောင်းကို အသိပေးနိုင်သည်။ \n\nသင်သည် တည်နေရာ မှတ်တမ်းကို အချိန်မရွေး ပိတ်ပစ်နိုင်သည်၊ သို့သော် ထိုသို့ လုပ်မှုက ၎င်းကို ဖျက်မည် မဟုတ်ပါ။ သင်၏ တည်နေရာ မှတ်တမ်းကို ကြည့်ရန် နှင့် စီမံကွပ်ကဲရန်၊ maps.google.com/locationhistory ကို ဝင်ကြည့်ပါ။"</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"တည်နေရာ မှတ်တမ်း ဖျက်ရန်"</string>
-    <string name="delete_location_history_desc" msgid="4142806827237093397">"၎င်းက ဒီ Google အကောင့် အတွက် ဒီကိရိယာ ထံမှ သိုလှောင်ခဲ့သည့် တည်နေရာ မှတ်တမ်း အားလုံးကို ဖျက်ပစ်မည်။ သင်သည် ဒီဖျက်မှုကို ပြန်မပြင်နိုင်ပါ။ အချို့ appများ၊ Google ယခု အပါအဝင်၊ အလုပ်လုပ်မှု ရပ်တန့်ကြမည်။"</string>
+    <string name="delete_location_history_desc" msgid="4142806827237093397">"၎င်းက ဒီ Google အကောင့် အတွက် ဒီကိရိယာ ထံမှ သိုလှောင်ခဲ့သည့် တည်နေရာ မှတ်တမ်း အားလုံးကို ဖျက်ပစ်မည်။ သင်သည် ဒီဖျက်မှုကို ပြန်မပြင်နိုင်ပါ။ အချို့ အက်ပ်များ၊ Google ယခု အပါအဝင်၊ အလုပ်လုပ်မှု ရပ်တန့်ကြမည်။"</string>
     <string name="system_services" msgid="7230571820151215779">"ဝန်ဆောင်မှုများ"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"ဝန်ဆောင်မှု ဆက်တင်များ"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"ဖြူမဲခြားနားချက် မြင့် စာသား"</string>
@@ -433,7 +433,7 @@
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"ပုံစံတု တည်နေရာများကို ခွင့်ပြုရန်"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"ဒီဘာဂ် လုပ်ပေးမည့် appကို ရွေးရန်"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"ဒီဘာဂါးကို စောင့်ရန်"</string>
-    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB ထဲရှိ appများ စိစစ်ရန်"</string>
+    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB ထဲရှိ အက်ပ်များ စိစစ်ရန်"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"ADB/ADT မှတစ်ဆင့် တပ်ဆင်ခဲ့သည့် appများကို အန္တရာယ် အပြုအမူများ အတွက် စစ်ကြည့်ရန်"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"ကြိုးမဲ့ ပြည့်ပြည့်စုံစုံ မှတ်သားခြင်း"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"ကြိုးမဲ့  ပြည့်ပြည့်စုံစုံ မှတ်သားခြင်းကို ဖွင့်ရန်"</string>
@@ -475,9 +475,9 @@
     <string name="agree" msgid="1235622082275451350">"သဘောတူ"</string>
     <string name="disagree" msgid="9170636026862400981">"သဘောမတူ"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"မသိရသော ရင်းမြစ်များ"</string>
-    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"ပလေး စတိုး မဟုတ်သည့် အခြား အရင်းအမြစ်များမှ appများ တပ်ဆင်မှုကို ခွင့်ပြုရန်"</string>
+    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Play စတိုး မဟုတ်သည့် အခြား အရင်းအမြစ်များမှ အက်ပ်များ တပ်ဆင်မှုကို ခွင့်ပြုရန်"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"အမည်မသိအရင်းအမြစ်များကို ခွင့်ပြုပါ"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"သင်၏ ကိရိယာ နှင့် ကိုယ်ရေး ဒေတာများမှာ မသိရသည့် ရင်းမြစ်များထဲက appများ၏ တိုက်ခိုက်မှု​ကြောင့် ပိုပြီး ထိခိုက်ပျက်စီးမှာ စိုးရပါသည်။ ယင်း appများကို အသုံးပြုမှုကြောင့် သင့် ကိရိယာ ထိခိုက်ခံရမှာ သို့မဟုတ် ဒေတာ ဆုံးရှုံးခံရမှာ အတွက် သင်သည်သာ လုံးဝ တာဝန်ရှိတာကို သင် သဘောတူပါသည်။"</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"သင်၏ ကိရိယာ နှင့် ကိုယ်ရေး ဒေတာများမှာ မသိရသည့် ရင်းမြစ်များထဲက အက်ပ်များ၏ တိုက်ခိုက်မှု​ကြောင့် ပိုပြီး ထိခိုက်ပျက်စီးမှာ စိုးရပါသည်။ ယင်း အက်ပ်များကို အသုံးပြုမှုကြောင့် သင့် ကိရိယာ ထိခိုက်ခံရမှာ သို့မဟုတ် ဒေတာ ဆုံးရှုံးခံရမှာ အတွက် သင်သည်သာ လုံးဝ တာဝန်ရှိတာကို သင် သဘောတူပါသည်။"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"appများကို စိစစ်ရန်"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"အန္တရာယ် ဖြစ်စေနိုင်သော appများကို ခွင့်မပြုရန် သို့မဟုတ် မတပ်ဆင်မီ သတိပေးရန်"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"မည်သည့်အခါမှ"</string>
@@ -607,16 +607,16 @@
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"ဤ app အားသင်ဖွင့်လိုသလား?"</string>
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"အသုံးပြုပြီး သိုလှောင်ရုံ"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> ကို <xliff:g id="VOLUME">%2$s</xliff:g> တွင်သုံးခဲ့သည်"</string>
-    <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"ဒေတာကို ရှင်းလင်းရန်"</string>
+    <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"ဒေတာကို ဖယ်ရှားရန်"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"ဤအပ်ဖ်၏ ဒေတာများအားလုံး ထာဝရဖျက်ပစ်ပါမည်။ \n၎င်းတွင် ဖိုင်များအားလုံး၊ ဆက်တင်များ၊ အကောင့်များ၊ ဒေတာဘေ့စ်များ၊ စသည်တို့ပါဝင်သည်။"</string>
-    <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"ပုံသေများကို ရှင်းလင်းရန်"</string>
+    <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"ပုံသေများကို ဖယ်ရှားရန်"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"အချို့သော လုပ်ဆောင်မှုများအတွက် ဤ app ကိုဖွင့်ရန်သတ်မှတ်ပါ"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"ပုံသေများ သတ်မှတ် မထား"</string>
-    <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"ကက်ရှကို ရှင်းလင်းရန်"</string>
+    <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"ကက်ရှကို ဖယ်ရှားရန်"</string>
     <string name="device_apps_app_management_notifications" msgid="7291960671957440729">"အကြောင်းကြားချက်များ"</string>
     <string name="device_apps_app_management_permissions" msgid="1829808830974726081">"ခွင့်ပြုချက်များ"</string>
     <string name="settings_ok" msgid="3321630456511355983">"အိုကေ"</string>
-    <string name="settings_cancel" msgid="304280412158061225">"ဖျက်သိမ်းရန်"</string>
+    <string name="settings_cancel" msgid="304280412158061225">"မလုပ်တော့ပါ"</string>
     <string name="settings_on" msgid="6892236264945435013">"ဖွင့်ထား"</string>
     <string name="settings_off" msgid="449272161738237637">"ပိတ်ထား"</string>
     <string name="device_daydreams_none" msgid="2767107052779579259">"မျက်နှာပြင်ကို ပိတ်ပါ"</string>
@@ -634,8 +634,8 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"အရန်ထားသည့် အကောင့်"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"အလိုအလျောက် ပြန်လည်ဖေါ်ထုတ်ရန်"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"ကိရိယာကို ပြန်ညှိပါ"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"ဒီလုပ်ရပ်က သင့် ကိရိယာ ထဲက ဒေတာများ အားလုံးကို ဖျက်ပစ်မှာ ဖြစ်ပြီး၊ ပါဝင်ကြမည်မှာ: သင်၏ Google အကောင့်၊ စနစ် နှင့် app ဒေတာ နှင့် ဆက်တင်များ၊ ပြီးတော့ ဒေါင်းလုဒ် လုပ်ပြီး appများ။"</string>
-    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"သင့် ကိုယ်ပိုင် အချက်အလက်များ နှင့် ဒေါင်းလုဒ် ပြုလုပ်ထားသည့် appများ အားလုံးကို ဖျက်မလား? ဒီ လုပ်ဆောင်ချက်ကို သင်သည် ပြန်ပြောင်း၍ မရနိုင်ပါ!"</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"ဒီလုပ်ရပ်က သင့် ကိရိယာ ထဲက ဒေတာများ အားလုံးကို ဖျက်ပစ်မှာ ဖြစ်ပြီး၊ ပါဝင်ကြမည်မှာ: သင်၏ Google အကောင့်၊ စနစ် နှင့် app ဒေတာ နှင့် ဆက်တင်များ၊ ပြီးတော့ ဒေါင်းလုဒ် လုပ်ပြီး အက်ပ်များ။"</string>
+    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"သင့် ကိုယ်ပိုင် အချက်အလက်များ နှင့် ဒေါင်းလုဒ် ပြုလုပ်ထားသည့် အက်ပ်များ အားလုံးကို ဖျက်မလား? ဒီ လုပ်ဆောင်ချက်ကို သင်သည် ပြန်ပြောင်း၍ မရနိုင်ပါ!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"အရာတိုင်းကို ဖျက်ပစ်ရန်"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"သင့်<xliff:g id="DEVICEMODEL">%1$s</xliff:g>အတွက် အမည်ရွေးပါ"</string>
     <string name="select_device_name_description" msgid="2697127827643821315">"သင့်ဖုန်း၊ တပ်ဘလက်၊ သို့မဟုတ် ကွန်ပျူတာကဲ့သို့ အခြားစက်ပစ္စည်းများမှ အသုံးပြုသည့်အခါ အမည်သည် သင့်<xliff:g id="DEVICEMODEL">%1$s</xliff:g> ကိုဖော်ထုတ်နိုင်လိမ့်မည်။"</string>
