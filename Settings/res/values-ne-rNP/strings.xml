@@ -41,7 +41,7 @@
     <string name="sync_failed" msgid="5514824149810480551">"असफल सिंक"</string>
     <string name="sync_active" msgid="6891115263481154378">"सक्रिय सिंक"</string>
     <string name="connectivity_network" msgid="8321537111272398501">"नेटवर्क"</string>
-    <string name="connectivity_wifi" msgid="489974791299647708">"वाइफाइ"</string>
+    <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"इथरनेट"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"स्क्यानिङ सधै उपलब्ध छ"</string>
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"wi-Fi बन्द भएपनि नेटवर्कहरूको लागि google को स्थान सेवा र अन्य एप्स स्क्यान गर्नुहोस्"</string>
@@ -95,7 +95,7 @@
     <string name="system_speech" msgid="8128688499687306982">"वाणी"</string>
     <string name="system_inputs" msgid="2413907183796651102">"इनपुट"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"पहुँच"</string>
-    <string name="system_developer_options" msgid="3237985523474863638">"विकासकर्ता विकल्पहरू"</string>
+    <string name="system_developer_options" msgid="3237985523474863638">"विकासकर्ताका विकल्पहरू"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"कुनै पनि होइन"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"उपयोग र निदान"</string>
     <string name="about_system_update" msgid="7282772247661356586">"प्रणाली अद्यावधिक"</string>
@@ -207,7 +207,7 @@
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"ठीक छ"</string>
     <string name="wifi_action_advanced_no" msgid="8165601242122651326">"होइन (सिफारिश गरिएको)"</string>
     <string name="wifi_action_proxy_none" msgid="4457231399674182650">"कुनै पनि होइन"</string>
-    <string name="wifi_action_proxy_manual" msgid="8402002777441261064">"म्यानुएल"</string>
+    <string name="wifi_action_proxy_manual" msgid="8402002777441261064">"म्यानुअल"</string>
     <string name="wifi_action_dhcp" msgid="6338911832360962268">"DHCP"</string>
     <string name="wifi_action_static" msgid="1025855501453321749">"स्थिर"</string>
     <string name="wifi_action_status_info" msgid="7664354971197839253">"स्थिति जानकारी"</string>
@@ -256,7 +256,7 @@
     <string name="storage_migrate_away" msgid="3410590501311323877">"डेटालाई फरक भण्डारणमा माइग्रेट गर्नुहोस्"</string>
     <string name="storage_no_apps" msgid="579118619398668670">"ब्याकअप गर्नका लागि कुनै पनि अनुप्रयोगहरू छैनन्"</string>
     <string name="storage_forget" msgid="8731986045697320463">"यस यन्त्रको भण्डारणलाई बिर्सनुहोस्"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"यस ड्राइभमा भएका अनुप्रयोगहरू वा डेटा प्रयोग गर्न पुन: हाल्नुहोस्। अन्यथा, ड्राइभ नभए यस भण्डारणलाई बिर्सनको लागि रोज्नुहोस्।\n\nयदि बिर्सनको लागि रोज्नुहुन्छ भने यस ड्राइमा भएका सबै डेटा सधैंका लागि नष्ट हुनेछन्।\n\n पछि तपाईँ अनुप्रयोगहरू हाले पनि ड्राइभको भण्डारण भएका डेटा भेटाउनु सक्नुहुने छैन।"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"यस ड्राइभमा भएका अनुप्रयोगहरू वा डेटाको प्रयोग गर्न पुन: हाल्नुहोस्। अन्यथा, ड्राइभ नभए यस भण्डारणलाई बिर्सनको लागि रोज्नुहोस्।\n\nयदि बिर्सनको लागि रोज्नुहुन्छ भने यस ड्राइमा भएका सबै डेटा सधैंका लागि नष्ट हुनेछन्।\n\n पछि तपाईँ अनुप्रयोगहरू हाले पनि ड्राइभको भण्डारण भएका डेटा भेटाउनु सक्नुहुने छैन।"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"यन्त्र भण्डारण"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"हटाउन योग्य भण्डारण"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"रिसेट गर्नुहोस्"</string>
@@ -330,7 +330,7 @@
     <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"२४-घण्टे ढाँचा प्रयोग गर्नुहोस्"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
-    <string name="system_auto_date_time" msgid="3629668599205033272">"स्वचालित मिति र समय"</string>
+    <string name="system_auto_date_time" msgid="3629668599205033272">"स्वत: मिति र समय"</string>
   <string-array name="auto_date_time_entries">
     <item msgid="4590792581242018007">"नेटवर्कद्वारा उपलब्ध गराइएको समय प्रयोग गर्नुहोस्"</item>
     <item msgid="3807025813081244357">"निष्क्रिय"</item>
@@ -357,7 +357,7 @@
     <string name="third_party_location_services_title" msgid="4089136801976399147">"तेस्रो पक्ष स्थान सेवाहरू"</string>
     <string name="location_reporting" msgid="3054236612250063073">"स्थान रिपोर्ट गर्दै"</string>
     <string name="location_history" msgid="2946680949724247804">"स्थान इतिहास"</string>
-    <string name="location_reporting_desc" msgid="6256424995139430823">"Google ले उत्पादनहरूमा यो सुविधा प्रयोग गर्दछ जस्तै Google Now र Google Maps । स्थान रिपोर्टिङ खोल्दै यो सुविधा स्टोर प्रयोग गर्ने तपाईंको  Google  खाता सन्दर्भमा आफ्नो उपकरणको सबै भन्दा भर्खरैको स्थान डेटा प्रयोग गर्ने कुनै पनि Google उत्पादनले दिन्छ।"</string>
+    <string name="location_reporting_desc" msgid="6256424995139430823">"Google ले उत्पादनहरूमा यो सुविधा प्रयोग गर्दछ जस्तै Google Now र Google Maps । स्थान रिपोर्टिङ खोल्दै यो सुविधा स्टोर प्रयोग गर्ने तपाईंको  Google  खाता सन्दर्भमा आफ्नो उपकरणको सबै भन्दा भर्खरैको स्थान डेटाको प्रयोग गर्ने कुनै पनि Google उत्पादनले दिन्छ।"</string>
     <string name="location_history_desc" msgid="3861249867748294369">"स्थान इतिहास यो खाताको लागि बन्द हुँदा Google ले तपाईंको अनुप्रयोगहरूद्वारा प्रयोगको लागि तपाईँको उपकरणको स्थान डेटा भण्डारण गर्न सक्छ। \n\n उदाहरणका लागि, Google Maps ले तपाईँलाई निर्देशन दिन सक्छ, र Google Now ले तपाईँलाई कम्युट ट्राफिकको बारेमा सूचित गर्न सक्छ। \n\n तपाईँ कुनै पनि समयमा स्थान इतिहास बन्द गर्न सक्नुहुन्छ, तर यसले कार्य गर्दछ त्यसैले यसलाई मेट्नु हुँदैन।आफ्नो स्थान इतिहास हेर्न र  व्यवस्थित गर्न, maps.google.com/locationhistory को भ्रमण गर्नुहोस्।"</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"स्थान इतिहास मेटाउनुहोस्"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"यसले यो Google खाताको लागि स्टोर भएको सबै स्थान इतिहास यो उपकरणबाट मेटाउने छ। तपाईँ यो मेटाउने प्रकृया पूर्ववत गर्न सक्नुहुन्न। Google Now सहित केही अनुप्रयोगहरूले, कार्य गर्न बन्द गर्ने छ।"</string>
@@ -518,7 +518,7 @@
     <string name="computing_size" msgid="2955133568424704042">"कम्प्युटिङ ..."</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"तपाईँको Wi-Fi नेटवर्क चयन गर्नुहोस्"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"पुनःनामाकरण गर्नुहोस्"</string>
-    <string name="accessories_wifi_display_enable" msgid="4779506305656453262">"वाइफाइ प्रदर्शन"</string>
+    <string name="accessories_wifi_display_enable" msgid="4779506305656453262">"Wi-Fi प्रदर्शन"</string>
     <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"PIN आवश्यक"</string>
     <string name="whichApplication" msgid="8382179653567099571">"प्रयोग गरेर कारबाही पुरा गर्नुहोस्"</string>
     <string name="alwaysUseQuestion" msgid="7128459989232213727">"यो कार्यको लागि यो विकल्प संधैं प्रयोग गर्ने?"</string>
