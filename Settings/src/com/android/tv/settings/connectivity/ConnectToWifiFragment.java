@@ -234,6 +234,9 @@ public class ConnectToWifiFragment extends MessageWizardFragment
     @Override
     public void onConnectivityChange() {
         if (DEBUG) Log.d(TAG, "Connectivity changed");
+        if (!isResumed()) {
+            return;
+        }
         if (isNetworkConnected()) {
             mConnected = true;
             notifyListener(RESULT_SUCCESS);
