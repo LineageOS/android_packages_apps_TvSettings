@@ -43,6 +43,7 @@
   <!-- Preference which manages ethernet settings. [CHAR LIMIT=50] -->
   <!-- Title for always scan wifi. [CHAR LIMIT=50] -->
   <!-- Context help for always scan wifi. [CHAR LIMIT=200] -->
+  <string name="wifi_setting_always_scan_context">Dexa que\'l serviciu d\'allugamientu de Google y otres aplicaciones gueten redes, incluso tando\'l Wi-Fi apagáu</string>
   <!-- Title for enable wifi. [CHAR LIMIT=50] -->
   <!-- Device preferences -->
   <!-- Preference which changes daydream settings. [CHAR LIMIT=50] -->
@@ -71,6 +72,7 @@
   <!-- Preference for renaming a paired Bluetooth accessory[CHAR LIMIT=50] -->
   <!-- Preference for unpairing a Bluetooth accessory[CHAR LIMIT=50] -->
   <!-- Preference for displaying battery level percentage. % symbol if used must be escaped as %% [CHAR LIMIT=150] -->
+  <string name="accessory_battery">Batería <xliff:g id="percentage">%1$d</xliff:g>%%</string>
   <!-- Description shown while we are waiting for a device unpair operation to finish[CHAR LIMIT=50] -->
   <!-- Description for Connected accessory[CHAR LIMIT=50] -->
   <!-- Remote and Accessories -->
@@ -104,6 +106,7 @@
   <!-- Preference which manages developer options. [CHAR LIMIT=50] -->
   <!-- Label for no accessibility color or opacity [CHAR LIMIT=50] -->
   <!-- Preference which manages Diagnostic and Usage reporting -->
+  <string name="system_diagnostic">Usu y diagnósticos</string>
   <!-- About -->
   <!-- Preference which shows system update status. [CHAR LIMIT=50] -->
   <!-- Preference which shows about screen with legal info, model, etc. [CHAR LIMIT=50] -->
@@ -217,7 +220,9 @@
   <!-- Storage settings title. Displayed as a title when showing the total usage of misc files on the device. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
   <!-- Storage settings title. Displayed as a title when showing the total usage of all cached data on device. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
   <!-- Storage settings eject action [CHAR LIMIT=50] -->
+  <string name="storage_eject">Espulsar</string>
   <!-- Storage settings erase and format action [CHAR LIMIT=50] -->
+  <string name="storage_format">Desaniciar y formatiar</string>
   <!-- Storage settings format for internal storage action [CHAR LIMIT=50] -->
   <!-- Description for a storage volume which is not currently connected to the device -->
   <!-- Storage settings migrate primary storage action [CHAR_LIMIT=50] -->
@@ -225,53 +230,81 @@
   <!-- Storage settings forget description [CHAR_LIMIT=NONE] -->
   <!-- Header title for device storage [CHAR_LIMIT=50] -->
   <!-- Header title for removable storage [CHAR_LIMIT=50] -->
+  <string name="storage_removable_storage_section">Almacenamientu estrayible</string>
   <!-- Header title for device reset [CHAR_LIMIT=50] -->
   <!-- Toast informing that storage mount operation was successful. [CHAR LIMIT=64]-->
   <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=64]-->
+  <string name="storage_mount_failure">Nun pue montase <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
   <!-- Toast informing that storage unmount operation was successful. [CHAR LIMIT=64]-->
   <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=64]-->
   <!-- Toast informing that storage unmount operation failed because the volume couldn't be found. [CHAR LIMIT=64]-->
+  <string name="storage_unmount_failure_cant_find">Nun pudo alcontrase la unidá pa espulsar</string>
   <!-- Toast informing that storage format operation was successful. [CHAR LIMIT=64]-->
   <!-- Toast informing that storage format operation failed. [CHAR LIMIT=64]-->
+  <string name="storage_format_failure">Nun pudo formatiase <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
   <!-- Title for wizard screen for formatting storage as internal [CHAR LIMIT=64] -->
   <!-- Description for wizard screen for formatting storage as internal [CHAR LIMIT=NONE] -->
   <!-- Title for wizard screen for formatting storage as internal [CHAR LIMIT=64] -->
+  <string name="storage_wizard_format_as_public_title">Desaniciar y formatiar</string>
   <!-- Description for wizard screen for formatting storage as internal [CHAR LIMIT=NONE] -->
   <!-- Title for wizard progress screen for formatting drive [CHAR_LIMIT=50] -->
   <!-- Description for wizard progress screen for formatting drive [CHAR_LIMIT=NONE] -->
   <!-- Title for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=50] -->
   <!-- Description for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=NONE] -->
   <!-- Positive action for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=50] -->
+  <string name="storage_wizard_migrate_confirm_action_move_now">Mover agora</string>
   <!-- Negative action for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=50] -->
+  <string name="storage_wizard_migrate_confirm_action_move_later">Mover más sero</string>
   <!-- Success toast for migrating data [CHAR_LIMIT=100] -->
   <!-- Failure toast for migrating data [CHAR_LIMIT=100] -->
   <!-- Title for wizard progress screen for migrating data to new drive [CHAR_LIMIT=50] -->
   <!-- Description for wizard progress screen for migrating data to new drive [CHAR_LIMIT=NONE] -->
   <!-- Title for warning dialog for slow drives [CHAR_LIMIT=64] -->
+  <string name="storage_wizard_format_slow_title">Esta unidá paez ser lenta.</string>
   <!-- Summary for warning dialog for slow drives [CHAR_LIMIT=NONE] -->
   <!-- Format action for wizard screen for formatting storage [CHAR LIMIT=50] -->
+  <string name="storage_wizard_format_action">Formatiar</string>
   <!-- Back up apps action for wizard screen for formatting storage [CHAR LIMIT=50]-->
   <!-- Back up apps title [CHAR LIMIT=50] -->
+  <string name="storage_wizard_back_up_apps_title">Aplicaciones atroxaes en <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
   <!-- Back up apps title [CHAR LIMIT=50] -->
+  <string name="storage_wizard_back_up_apps_and_data_title">Aplicaciones y datos atroxaos en <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
   <!-- Back up apps storage available description [CHAR_LIMIT=50] -->
+  <string name="storage_wizard_back_up_apps_space_available"><xliff:g id="size" example="1.23GB">%1$s</xliff:g> disponibles</string>
   <!-- Title for wizard screen for ejecting internal storage [CHAR LIMIT=64] -->
   <!-- Description for wizard screen for ejecting internal storage [CHAR LIMIT=NONE] -->
   <!-- Title for wizard progress screen for ejecting a drive [CHAR_LIMIT=64] -->
+  <string name="sotrage_wizard_eject_progress_title">Espulsando <xliff:g id="name" example="SD Card">%1$s</xliff:g>&#8230;</string>
   <!-- Title for wizard screen for moving apps [CHAR_LIMIT=50] -->
+  <string name="storage_wizard_move_app_title">Almacenamientu usáu</string>
   <!-- Title for wizard progress screen for moving apps [CHAR_LIMIT=50] -->
+  <string name="storage_wizard_move_app_progress_title">Moviendo <xliff:g id="name" example="YouTube">%1$s</xliff:g>&#8230;</string>
   <!-- Description for wizard progress screen for moving apps [CHAR_LIMIT=NONE] -->
   <!-- Title for wizard screen for forgetting private storage [CHAR_LIMIT=50] -->
+  <string name="storage_wizard_forget_confirm_title">¿Escaecer almacenamientu internu?</string>
   <!-- Description for wizard screen for forgetting private storage [CHAR_LIMIT=NONE] -->
   <!-- Action for wizard screen for forgetting private storage [CHAR_LIMIT=50] -->
+  <string name="storage_wizard_forget_action">Escaecer</string>
   <!-- Title for new storage activity [CHAR_LIMIT=50] -->
   <!-- Browse action for new storage activity [CHAR_LIMIT=50] -->
+  <string name="storage_new_action_browse">Restolar</string>
   <!-- Adopt action for new storage activity [CHAR_LIMIT=50] -->
+  <string name="storage_new_action_adopt">Configurar como almacenamientu internu</string>
   <!-- Format as removable action for new storage activity [CHAR_LIMIT=50] -->
+  <string name="storage_new_action_format_public">Configurar como almacenamientu estrayible</string>
   <!-- Eject action for new storage activity [CHAR_LIMIT=50] -->
+  <string name="storage_new_action_eject">Espulsar</string>
   <!-- Title for missing storage activity shown when a drive is removed [CHAR_LIMIT=50] -->
   <!-- Description for missing storage activity shown when a drive is removed [CHAR_LIMIT=NONE] -->
+  <string name="storage_missing_description">Delles aplicaciones nun sedrán o furrularán correutamente fasta que se reconeute la unidá.</string>
   <!-- Manage applications, text for move error messages -->
+  <string name="insufficient_storage">Nun hai espaciu d\'almacenamientu abondo.</string>
+  <string name="does_not_exist">L\u2019aplicación nun esiste.</string>
+  <string name="app_forward_locked">L\u2019aplicación ta protexida escontra copies.</string>
+  <string name="invalid_location">L\u2019allugamientu d\u2019instalación nun ye válidu.</string>
+  <string name="system_package">Los anovamientos del sistema nun pue instalase en medios esternos.</string>
   <!-- Learn more action title [CHAR_LIMIT=50] -->
+  <string name="learn_more_action">Depriendi más</string>
   <!-- Action to retry WPS scanning [CHAR LIMIT=50] -->
   <!-- Message indicating we are scanning for WPS routers [CHAR LIMIT=150] -->
   <!-- Message describing how to turn on WPS on a router [CHAR LIMIT=150] -->
@@ -287,8 +320,10 @@
   <!-- Title for Set Time in System Settings Date Time [CHAR LIMIT=50] -->
   <!-- Title for Set Time Zone in System Settings Date Time [CHAR LIMIT=50] -->
   <!-- Format string for displaying the current time zone, eg "GMT-08:00, Pacific Standard Time" [CHAR LIMIT=10] -->
+  <string name="desc_set_time_zone"><xliff:g id="offset" example="GMT-08:00">%1$s</xliff:g>, <xliff:g id="name" example="Pacific Standard Time">%2$s</xliff:g></string>
   <!-- Title for Set time format in System Settings Date Time [CHAR LIMIT=50] -->
   <!-- Format string for displaying the current time format (12/24 hour) [CHAR LIMIT=10] -->
+  <string name="desc_set_time_format"><xliff:g id="state" example="Off">%1$s</xliff:g> (<xliff:g id="sample" example="3:14 PM">%2$s</xliff:g>)</string>
   <!-- Title for automatic date & time [CHAR LIMIT = 80] -->
   <!-- Description for using automatic date & time in date time settings [CHAR LIMIT=100] -->
   <!-- Title for Location in System Settings [CHAR LIMIT=50] -->
@@ -427,6 +462,7 @@
   <!-- Summary for HDCP checking preference. [CHAR LIMIT=100]-->
   <!-- Summary for HDCP checking preference. [CHAR LIMIT=100]-->
   <!-- Title for HDMI optimization preference value [CHAR LIMIT=60] -->
+  <string name="system_hdmi_optimization_best_resolution">La meyor resolución</string>
   <!-- Title for HDMI optimization preference value [CHAR LIMIT=60] -->
   <!-- Title for debug overdraw preference. [CHAR LIMIT=35] -->
   <!-- Title for debug overdraw preference. [CHAR LIMIT=35] -->
@@ -529,27 +565,46 @@
   <!-- Message displayed when the selected Wi-Fi network has been connected to [CHAR LIMIT=40] -->
   <!-- Message displayed when the Wi-Fi network's configuration has been saved [CHAR LIMIT=40] -->
   <!-- Application management application version label [CHAR LIMIT=NONE] -->
+  <string name="device_apps_app_management_version">verisión <xliff:g id="app_version">%1$s</xliff:g></string>
   <!-- Application management description for opening the application [CHAR LIMIT=NONE] -->
+  <string name="device_apps_app_management_open">Abrir</string>
   <!-- Application management choice for force stopping the application [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_force_stop">Forciar parada</string>
   <!-- Application management description for force stopping the application [CHAR LIMIT=NONE] -->
+  <string name="device_apps_app_management_force_stop_desc">Si forcies la parada d\'una aplicación, quiciabes nun furrule bien.</string>
   <!-- Application management choice for uninstalling the application [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_uninstall">Desinstalar</string>
   <!-- Application management description for uninstalling the application [CHAR LIMIT=NONE] -->
+  <string name="device_apps_app_management_uninstall_desc">¿Quies desinstalar esta aplicación?</string>
   <!-- Application management choice for uninstalling updates for the application [CHAR_LIMIT=40] -->
+  <string name="device_apps_app_management_uninstall_updates">Desinstalar anovamientos</string>
   <!-- Application management description for uninstalling updates for the application [CHAR_LIMIT=NONE] -->
+  <string name="device_apps_app_management_uninstall_updates_desc">Van desinstalase tolos anovamientos d\'esta aplicación del sistema Android.</string>
   <!-- Application management choice for disabling the application [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_disable">Deshabilitar</string>
   <!-- Application management description for disabling the application [CHAR LIMIT=NONE] -->
+  <string name="device_apps_app_management_disable_desc">¿Quies desinstalar esta aplicación?</string>
   <!-- Application management choice for enabling the application [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_enable">Habilitar</string>
   <!-- Application management description for enabling the application [CHAR LIMIT=NONE] -->
+  <string name="device_apps_app_management_enable_desc">¿Quies habilitar esta aplicación?</string>
   <!-- Application management choice for displaying the application's size [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_storage_used">Almacenamientu usáu</string>
   <!-- Application management description for displaying the applicantion's size [CHAR_LIMIT=NONE] -->
+  <string name="device_apps_app_management_storage_used_desc"><xliff:g id="size" example="30.2MB">%1$s</xliff:g> usaos en <xliff:g id="volume" example="internal storage">%2$s</xliff:g></string>
   <!-- Application management choice for clearing the application's data [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_clear_data">Llimpiar datos</string>
   <!-- Application management description for clearing the application's data [CHAR LIMIT=NONE] -->
+  <string name="device_apps_app_management_clear_data_desc">Van desaniciase dafechu tolos datos d\'esta aplicación.\nEsto inclúi tolos ficheros, axustes, cuentes, bases de datos... etc.</string>
   <!-- Application management choice for clearing the application's default actions [CHAR LIMIT=40] -->
   <!-- Application management description for defaults are set for the application [CHAR LIMIT=40] -->
   <!-- Application management description for defaults aren't set for the application [CHAR LIMIT=40] -->
   <!-- Application management choice for clearing the application's cache [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_clear_cache">Llimpiar caché</string>
   <!-- Application management choice for changing the application's notifications option [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_notifications">Avisos</string>
   <!-- Application management choice for displaying the application's permissions [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_permissions">Permisos</string>
   <!-- General settings choice for agreeing to the displayed action [CHAR LIMIT=40] -->
   <!-- General settings choice for disagreeing with the displayed action [CHAR LIMIT=40] -->
   <!-- General settings choice for on [CHAR LIMIT=40] -->
@@ -557,11 +612,14 @@
   <!-- Daydream choice for not having a daydream [CHAR LIMIT=40] -->
   <!-- Daydream choice for selecting a different daydream [CHAR LIMIT=40] -->
   <!-- Daydream choice for testing the selected daydream [CHAR LIMIT=40] -->
+  <string name="device_daydreams_test">Aniciar agora</string>
   <!-- Daydream choice for configuring the time before the device goes to sleep [CHAR LIMIT=40] -->
   <!-- Daydream description for configuring the time before the device goes to sleep [CHAR LIMIT=NONE] -->
   <!-- Daydream summary for displaying the time before the device goes to sleep -->
   <!-- Daydream choice for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=40] -->
+  <string name="device_daydreams_screen_off">Al dormir</string>
   <!-- Daydream description for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=NONE] -->
+  <string name="device_daydreams_screen_off_description">La pantalla apágase dempués d\'esti periodu d\'inactividá.</string>
   <!-- Default summary text of the "Configure backup account" setting [CHAR LIMIT=80] -->
   <!-- Dialog title for confirmation to erase backup data from server -->
   <!-- Dialog title for confirmation to erase backup data from server -->
@@ -569,19 +627,39 @@
   <!-- Privacy choice for choosing which account to backup [CHAR LIMIT=40] -->
   <!-- Privacy choice for configuring automatic restore [CHAR LIMIT=40] -->
   <!-- Factory reset choice for initiating a factory reset [CHAR LIMIT=40] -->
+  <string name="factory_reset_device">Reafitar preséu</string>
   <!-- Factory reset description about what happens when you perform a factory reset [CHAR LIMIT=NONE] -->
   <!-- Factory reset screen, message on screen after user selects Reset phone button -->
   <!-- Factory reset screen, button on screen after user selects Reset phone button -->
+  <string name="confirm_factory_reset_device">Desanicialo too</string>
   <!-- Title for screen where user selects a name for their device [CHAR LIMIT=NONE] -->
   <!-- Description for screen where user selects a name for their device [CHAR LIMIT=NONE] -->
   <!-- Rooms where a user's device might be placed [CHAR LIMIT=40] -->
+  <string-array name="rooms">
+    <!-- [CHAR LIMIT=40] -->
+    <item>Living Room</item>
+    <!-- [CHAR LIMIT=40] -->
+    <item>Media Room</item>
+    <!-- [CHAR LIMIT=40] -->
+    <item>Family Room</item>
+    <!-- [CHAR LIMIT=40] -->
+    <item>Dining Room</item>
+    <!-- [CHAR LIMIT=40] -->
+    <item>Den</item>
+    <!-- [CHAR LIMIT=40] -->
+    <item>Dormitoriu</item>
+    <!-- [CHAR LIMIT=40] -->
+    <item>Cocina</item>
+  </string-array>
   <!-- String displayed for option where user will type in a room name rather than selecting from the list of defaults [CHAR LIMIT=40] -->
   <!-- Title of settings summary/status screen [CHAR LIMIT=100] -->
   <!-- Description on summary/status screen that tells you what the name of your device is [CHAR LIMIT=NONE] -->
   <!-- The 'yes' or 'edit' equivalent in a yes/no choice circumstance [CHAR LIMIT=30] -->
   <!-- The 'no' or  'keep the same' equivalent in a yes/no choice circumstance [CHAR LIMIT=30]-->
   <!-- Group header for app permissions [CHAR LIMIT=20] -->
+  <string name="apps_permissions">Permisos</string>
   <!-- Item title for app permissions [CHAR LIMIT=20] -->
   <!-- Summary of number of apps currently granted a single permission [CHAR LIMIT=45] -->
   <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
+  <string name="security_patch">Nivel de parche de seguranza d\'Android</string>
 </resources>
