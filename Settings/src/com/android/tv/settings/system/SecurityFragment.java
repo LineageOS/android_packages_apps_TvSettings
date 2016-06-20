@@ -19,8 +19,10 @@ package com.android.tv.settings.system;
 import android.accounts.AccountManager;
 import android.app.ActivityManagerNative;
 import android.app.Fragment;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.pm.UserInfo;
@@ -39,6 +41,7 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.IntDef;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v17.preference.LeanbackSettingsFragment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.TwoStatePreference;
@@ -76,6 +79,13 @@ public class SecurityFragment extends LeanbackPreferenceFragment
 
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
 
+    private static final String ACTION_RESTRICTED_PROFILE_CREATED =
+            "SecurityFragment.RESTRICTED_PROFILE_CREATED";
+    private static final String EXTRA_RESTRICTED_PROFILE_INFO =
+            "SecurityFragment.RESTRICTED_PROFILE_INFO";
+    private static final String SAVESTATE_CREATING_RESTRICTED_PROFILE =
+            "SecurityFragment.CREATING_RESTRICTED_PROFILE";
+
     @Retention(RetentionPolicy.SOURCE)
     @IntDef({PIN_MODE_CHOOSE_LOCKSCREEN,
             PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT,
@@ -101,7 +111,17 @@ public class SecurityFragment extends LeanbackPreferenceFragment
     private UserInfo mRestrictedUserInfo;
     private ILockSettings mLockSettingsService;
 
+    private boolean mCreatingRestrictedProfile;
     private static CreateRestrictedProfileTask sCreateRestrictedProfileTask;
+    private final BroadcastReceiver mRestrictedProfileReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            UserInfo result = intent.getParcelableExtra(EXTRA_RESTRICTED_PROFILE_INFO);
+            if (isResumed()) {
+                onRestrictedUserCreated(result);
+            }
+        }
+    };
 
     private final Handler mHandler = new Handler();
 
@@ -113,12 +133,36 @@ public class SecurityFragment extends LeanbackPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         mUserManager = (UserManager) getContext().getSystemService(Context.USER_SERVICE);
         super.onCreate(savedInstanceState);
+        mCreatingRestrictedProfile = savedInstanceState != null
+                && savedInstanceState.getBoolean(SAVESTATE_CREATING_RESTRICTED_PROFILE);
     }
 
     @Override
     public void onResume() {
         super.onResume();
         refresh();
+        LocalBroadcastManager.getInstance(getActivity())
+                .registerReceiver(mRestrictedProfileReceiver,
+                        new IntentFilter(ACTION_RESTRICTED_PROFILE_CREATED));
+        if (mCreatingRestrictedProfile) {
+            UserInfo userInfo = findRestrictedUser(mUserManager);
+            if (userInfo != null) {
+                onRestrictedUserCreated(userInfo);
+            }
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        LocalBroadcastManager.getInstance(getActivity())
+                .unregisterReceiver(mRestrictedProfileReceiver);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(SAVESTATE_CREATING_RESTRICTED_PROFILE, mCreatingRestrictedProfile);
     }
 
     @Override
@@ -420,6 +464,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
                     mUserManager);
             sCreateRestrictedProfileTask.execute();
         }
+        mCreatingRestrictedProfile = true;
     }
 
     private void removeRestrictedUser() {
@@ -451,12 +496,31 @@ public class SecurityFragment extends LeanbackPreferenceFragment
         return userInfo.isRestricted();
     }
 
-    private class CreateRestrictedProfileTask extends AsyncTask<Void, Void, UserInfo> {
+    private void onRestrictedUserCreated(UserInfo result) {
+        UserSwitchListenerService.updateLaunchPoint(getActivity(), true);
+        int userId = result.id;
+        if (result.isRestricted()
+                && result.restrictedProfileParentId == UserHandle.myUserId()) {
+            final AppRestrictionsFragment restrictionsFragment =
+                    AppRestrictionsFragment.newInstance(userId, true);
+            final Fragment settingsFragment = getCallbackFragment();
+            if (settingsFragment instanceof LeanbackSettingsFragment) {
+                ((LeanbackSettingsFragment) settingsFragment)
+                        .startPreferenceFragment(restrictionsFragment);
+            } else {
+                throw new IllegalStateException("Didn't find fragment of expected type: "
+                        + settingsFragment);
+            }
+        }
+        mCreatingRestrictedProfile = false;
+    }
+
+    private static class CreateRestrictedProfileTask extends AsyncTask<Void, Void, UserInfo> {
         private final Context mContext;
         private final UserManager mUserManager;
 
         CreateRestrictedProfileTask(Context context, UserManager userManager) {
-            mContext = context;
+            mContext = context.getApplicationContext();
             mUserManager = userManager;
         }
 
@@ -486,22 +550,9 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             if (result == null) {
                 return;
             }
-            UserSwitchListenerService.updateLaunchPoint(mContext, true);
-            int userId = result.id;
-            if (result.isRestricted()
-                    && isAdded()
-                    && result.restrictedProfileParentId == UserHandle.myUserId()) {
-                final AppRestrictionsFragment restrictionsFragment =
-                        AppRestrictionsFragment.newInstance(userId, true);
-                final Fragment settingsFragment = getCallbackFragment();
-                if (settingsFragment instanceof LeanbackSettingsFragment) {
-                    ((LeanbackSettingsFragment) settingsFragment)
-                            .startPreferenceFragment(restrictionsFragment);
-                } else {
-                    throw new IllegalStateException("Didn't find fragment of expected type: "
-                            + settingsFragment);
-                }
-            }
+            LocalBroadcastManager.getInstance(mContext).sendBroadcast(
+                    new Intent(ACTION_RESTRICTED_PROFILE_CREATED)
+                            .putExtra(EXTRA_RESTRICTED_PROFILE_INFO, result));
         }
 
         private Bitmap createBitmapFromDrawable(@DrawableRes int resId) {
