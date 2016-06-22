@@ -86,10 +86,14 @@ public class DateTimeFragment extends LeanbackPreferenceFragment implements
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.date_time, null);
 
+        final boolean isRestricted = SecurityFragment.isRestrictedProfileInEffect(getContext());
+
         mDatePref = findPreference(KEY_SET_DATE);
         mDatePref.setIntent(SetDateTimeActivity.getSetDateIntent(getActivity()));
+        mDatePref.setVisible(!isRestricted);
         mTimePref = findPreference(KEY_SET_TIME);
         mTimePref.setIntent(SetDateTimeActivity.getSetTimeIntent(getActivity()));
+        mTimePref.setVisible(!isRestricted);
 
         final boolean tsTimeCapable = SystemProperties.getBoolean("ro.config.ts.date.time", false);
         final ListPreference autoDateTimePref =
@@ -100,7 +104,9 @@ public class DateTimeFragment extends LeanbackPreferenceFragment implements
             autoDateTimePref.setEntries(R.array.auto_date_time_ts_entries);
             autoDateTimePref.setEntryValues(R.array.auto_date_time_ts_entry_values);
         }
+        autoDateTimePref.setVisible(!isRestricted);
         mTimeZone = findPreference(KEY_SET_TIME_ZONE);
+        mTimeZone.setVisible(!isRestricted);
         mTime24Pref = findPreference(KEY_USE_24_HOUR);
         mTime24Pref.setOnPreferenceChangeListener(this);
     }

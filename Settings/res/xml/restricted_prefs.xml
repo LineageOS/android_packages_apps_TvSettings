@@ -36,6 +36,11 @@
         android:key="preferences"
         android:title="@string/header_category_preferences">
         <Preference
+            android:icon="@drawable/ic_access_time"
+            android:key="date_time"
+            android:title="@string/system_date_time"
+            android:fragment="com.android.tv.settings.system.DateTimeFragment" />
+        <Preference
             android:icon="@drawable/ic_mic"
             android:key="speech"
             android:title="@string/system_speech" >
