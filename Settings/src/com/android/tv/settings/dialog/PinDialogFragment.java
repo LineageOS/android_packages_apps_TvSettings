@@ -26,7 +26,6 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.IntDef;
-import android.support.annotation.UiThread;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -205,11 +204,11 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
         final long secondsLeft = (mDisablePinUntil - System.currentTimeMillis()) / 1000;
         final boolean enabled = secondsLeft < 1;
         if (enabled) {
-            mWrongPinView.setVisibility(View.INVISIBLE);
+            mWrongPinView.setVisibility(View.GONE);
             mEnterPinView.setVisibility(View.VISIBLE);
             mWrongPinCount = 0;
         } else {
-            mEnterPinView.setVisibility(View.INVISIBLE);
+            mEnterPinView.setVisibility(View.GONE);
             mWrongPinView.setVisibility(View.VISIBLE);
             mWrongPinView.setText(getResources().getString(R.string.pin_enter_wrong_seconds,
                     secondsLeft));
