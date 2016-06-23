@@ -183,18 +183,22 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
                 Log.wtf(TAG, "Tried to set unknown location mode!");
             }
 
-            int currentMode = Settings.Secure.getInt(getActivity().getContentResolver(),
-                    Settings.Secure.LOCATION_MODE, Settings.Secure.LOCATION_MODE_OFF);
-            Intent intent = new Intent(MODE_CHANGING_ACTION);
-            intent.putExtra(CURRENT_MODE_KEY, currentMode);
-            intent.putExtra(NEW_MODE_KEY, mode);
-            getActivity().sendBroadcast(intent, android.Manifest.permission.WRITE_SECURE_SETTINGS);
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.LOCATION_MODE, mode);
+            writeLocationMode(mode);
 
             refreshLocationMode();
         }
         return true;
+    }
+
+    private void writeLocationMode(int mode) {
+        int currentMode = Settings.Secure.getInt(getActivity().getContentResolver(),
+                Settings.Secure.LOCATION_MODE, Settings.Secure.LOCATION_MODE_OFF);
+        Intent intent = new Intent(MODE_CHANGING_ACTION);
+        intent.putExtra(CURRENT_MODE_KEY, currentMode);
+        intent.putExtra(NEW_MODE_KEY, mode);
+        getActivity().sendBroadcast(intent, android.Manifest.permission.WRITE_SECURE_SETTINGS);
+        Settings.Secure.putInt(getActivity().getContentResolver(),
+                Settings.Secure.LOCATION_MODE, mode);
     }
 
     private void refreshLocationMode() {
@@ -206,6 +210,9 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
         if (mode == Settings.Secure.LOCATION_MODE_HIGH_ACCURACY) {
             mLocationMode.setValue(LOCATION_MODE_WIFI);
         } else if (mode == Settings.Secure.LOCATION_MODE_OFF) {
+            mLocationMode.setValue(LOCATION_MODE_OFF);
+        } else if (mode == Settings.Secure.LOCATION_MODE_SENSORS_ONLY) {
+            writeLocationMode(Settings.Secure.LOCATION_MODE_OFF);
             mLocationMode.setValue(LOCATION_MODE_OFF);
         } else {
             Log.d(TAG, "Unknown location mode: " + mode);
