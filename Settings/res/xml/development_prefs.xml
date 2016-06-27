@@ -85,9 +85,7 @@
     <ListPreference
         android:key="root_access"
         android:title="@string/root_access"
-        android:persistent="false"
-        android:entries="@array/root_access_entries"
-        android:entryValues="@array/root_access_values" />
+        android:persistent="false" />
 
     <PreferenceCategory android:key="debug_debugging_category"
                         android:layout="@layout/preference_category_compact_layout"
