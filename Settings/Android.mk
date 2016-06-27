@@ -29,7 +29,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v7-appcompat \
     android-support-v14-preference \
     android-support-v17-preference-leanback \
-    android-support-v17-leanback
+    android-support-v17-leanback \
+    org.lineageos.platform.internal
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
