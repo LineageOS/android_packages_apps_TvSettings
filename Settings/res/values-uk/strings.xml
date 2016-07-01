@@ -24,6 +24,7 @@
     <string name="header_category_preferences" msgid="175105555164713972">"Налаштування"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Дистанційне керування й аксесуари"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Особисте"</string>
+    <string name="accounts_category_title" msgid="7591072907146317425">"Облікові записи"</string>
     <string name="add_account" msgid="4098060223200619258">"Додати обліковий запис"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Вилучення облікового запису"</string>
     <string name="account_sync" msgid="773808124331714965">"Програми для синхронізації"</string>
@@ -35,7 +36,7 @@
     <string name="account_remove_failed" msgid="980654375770693544">"Не вдалося видалити обліковий запис"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"Торкніться, щоб синхронізувати (<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"Синхронізувати (<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>)"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Помилка синхронізації"</string>
     <string name="sync_active" msgid="6891115263481154378">"Синхронізація активна"</string>
@@ -45,12 +46,13 @@
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Постійний пошук мереж"</string>
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"Служба локації Google та інші додатки шукатимуть мережі, навіть якщо Wi-Fi вимкнено"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
-    <string name="device_daydream" msgid="4933581408059561077">"Заставка"</string>
+    <string name="device_daydream" msgid="3354366974209179614">"Заставка"</string>
     <string name="device_display" msgid="101455384386372747">"Екран"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Звук"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"Об’ємний звук"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Системні звуки"</string>
     <string name="device_apps" msgid="9180435229638772838">"Додатки"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Пам’ять і скидання"</string>
-    <string name="device_storage" msgid="5536683600091277826">"Пам’ять"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Резервне копіювання та відновлення"</string>
     <string name="device_reset" msgid="2827002349560023125">"Заводські налаштування"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Калібрування"</string>
@@ -216,20 +218,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Введіть дійсну адресу шлюзу"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Введіть дійсну DNS-адресу"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Введіть довжину префікса мережі від 0 до 32"</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"Введіть дійсну IP-адресу.\nПриклад: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"Введіть дійсну IP-адресу або залиште поле порожнім.\nПриклад: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"Введіть дійсну IP-адресу або залиште поле порожнім.\nПриклад: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"Введіть дійсну IP-адресу або залиште поле порожнім.\nПриклад: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"Введіть довжину префікса мережі.\nПриклад: 24"</string>
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"Введіть дійсну IP-адресу.\nПриклад: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"Введіть дійсну IP-адресу або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"Введіть дійсну IP-адресу або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"Введіть дійсну IP-адресу або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Введіть префікс мережі дійсної довжини.\nПриклад: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Ім’я хосту недійсне"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Список виключень недійсний. Введіть список виключених доменів через кому."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Поле порту не може бути порожнім"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Якщо поле хосту порожнє, залиште поле порту порожнім"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Порт недійсний"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Проксі-сервер HTTP використовується веб-переглядачем, але недоступний для інших додатків"</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"Введіть дійсний порт.\nПриклад: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"Введіть розділений комами список виключених доменів або залиште поле порожнім.\nПриклад: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"Введіть дійсне ім’я хосту.\nПриклад: proxy.example.com"</string>
+    <string name="proxy_port_description" msgid="6791098212244367568">"Введіть дійсний номер порту.\nПриклад: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Введіть виключені домени через кому або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"Введіть дійсне ім’я хосту.\nПриклад: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Під’єднано до мережі"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Мережу не під’єднано"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Уже під’єднано до мережі <xliff:g id="SSID">%1$s</xliff:g>. Під’єднати до іншої мережі?"</string>
@@ -248,10 +250,14 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Кешовані дані"</string>
     <string name="storage_eject" msgid="113476702798691558">"Вийняти"</string>
     <string name="storage_format" msgid="3759273736493279595">"Очистити й відформатувати"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Стерти та відформатувати як пам’ять пристрою"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Стерти та відформатувати як змінну пам’ять"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Відформатувати як пам’ять пристрою"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Не підключено"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Перемістити дані"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Забути цю внутрішню пам’ять"</string>
+    <string name="storage_migrate" msgid="1304058078948715456">"Перенести дані в цю пам’ять"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Перенести дані в іншу пам’ять"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Немає додатків для резервного копіювання"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"Забути цю пам’ять пристрою"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Щоб отримати доступ до додатків і даних на цьому носії, вийміть його та вставте знову. Ви можете вибрати опцію \"Забути\", якщо носій недоступний.\n\nТоді всі дані на носії буде втрачено назавжди.\n\nВи зможете повторно встановити додатки, але не відновите їх дані."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Пам’ять пристрою"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Знімний носій"</string>
@@ -264,12 +270,13 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Не знайдено підключений носій"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"Носій <xliff:g id="NAME">%1$s</xliff:g> відформатовано"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Не вдалося відформатувати носій <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Відформатувати як внутрішню пам’ять"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Відформатувати як пам’ять пристрою"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Щоб носій USB був безпечним, потрібно його відформатувати. Коли ви це зробите, носій працюватиме лише на цьому пристрої. Під час форматування носія буде стерто всі збережені на ньому дані. Щоб не втратити дані, створіть їх резервну копію."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Очистити й відформатувати"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Коли ви відформатуєте носій USB, він працюватиме на інших пристроях. Усі дані на носії буде стерто. Перш ніж форматувати носій, скопіюйте додатки в іншу внутрішню пам’ять."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Коли ви відформатуєте носій USB, він працюватиме на інших пристроях. Усі дані на носії буде стерто. Перш ніж форматувати носій, скопіюйте додатки в іншу пам’ять пристрою."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Форматування носія USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Це може зайняти деякий час. Не виймайте носій."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Виберіть пам’ять для перенесення даних"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Переміщення даних на носій (<xliff:g id="NAME">%1$s</xliff:g>)"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Фотографії, файли та дані додатків буде переміщено на носій (<xliff:g id="NAME">%1$s</xliff:g>). Це може зайняти декілька хвилин. Під час переміщення деякі додатки працюватимуть неналежним чином."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Перемістити"</string>
@@ -285,18 +292,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Додатки на пристрої <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Додатки та дані на пристрої <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Доступно <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Вийняти внутрішню пам’ять"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Коли ви виймете носій USB, збережені на ньому додатки перестануть працювати. Носій відформатовано для роботи лише на цьому пристрої. Він не працюватиме на інших пристроях."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> відключається…"</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Вийняти пам’ять пристрою"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Коли ви виймете носій USB, збережені на ньому додатки перестануть працювати. Носій відформатовано для роботи лише на цьому пристрої. Він не працюватиме на інших пристроях."</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"Відключення диска <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Використовується пам’яті"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Переміщення додатка <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Не виймайте диск під час переміщення.\nДодаток <xliff:g id="APPNAME">%1$s</xliff:g> не з’явиться на цьому пристрої, доки не завершиться переміщення."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Забути внутрішню пам’ять?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Забути пам’ять пристрою?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Якщо вибрати опцію \"Забути\", усі дані на носії буде втрачено назавжди. Продовжити?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Забути"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"Носій USB підключено"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Переглянути"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Налаштувати як внутрішню пам’ять"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Налаштувати як пам’ять пристрою"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Налаштувати як змінний носій"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Вийняти"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"Користувача <xliff:g id="NAME">%1$s</xliff:g> видалено"</string>
@@ -306,6 +313,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"Додаток захищений від копіювання."</string>
     <string name="invalid_location" msgid="5269044848535157307">"Місце встановлення недійсне."</string>
     <string name="system_package" msgid="9200255718634512790">"Оновлення системи не можна встановити на зовнішньому носії."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Адміністратор пристрою не можна встановити на зовнішньому носії."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Докладніше"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Повторити"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Пошук маршрутизатора WPS…"</string>
@@ -365,7 +373,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"Вимкнено"</string>
     <string name="display_options" msgid="5504549024985225774">"Параметри показу"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Налаштувати"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Мова"</string>
+    <string name="captions_language" msgid="2835554055388996343">"Мова"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Розмір тексту"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Стиль субтитрів"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Спеціальні параметри"</string>
@@ -373,12 +381,19 @@
     <string name="captions_textcolor" msgid="3233568269335050287">"Колір тексту"</string>
     <string name="captions_edgetype" msgid="841331274533086103">"Тип контуру"</string>
     <string name="captions_edgecolor" msgid="845125757332620884">"Колір контуру"</string>
+    <string name="captions_backgroundshow" msgid="9177987321551275698">"Показати фон"</string>
     <string name="captions_backgroundcolor" msgid="448518890988125453">"Колір фону"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Прозорість фону"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Субтитри виглядатимуть так:"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Прозорість тексту"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"Показувати вікно"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Колір вікна"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Прозорість вікна"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"Біле на чорному"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"Чорне на білому"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"Жовте на чорному"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"Жовте на синьому"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"Користувацьке"</string>
     <string name="color_white" msgid="65537523012024751">"Білий"</string>
     <string name="color_black" msgid="8804213372565106403">"Чорний"</string>
     <string name="color_red" msgid="5630553203246525989">"Червоний"</string>
@@ -463,6 +478,7 @@
     <string name="disagree" msgid="9170636026862400981">"Не приймаю"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Невідомі джерела"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Дозволити встановлення програм не лише з магазину Play"</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Дозволити невідомі джерела"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Ваш пристрій і особисті дані більш уразливі до атак програм із невідомих джерел. Ви погоджуєтеся, що несете особисту відповідальність за будь-яку заподіяну вашому пристрою шкоду чи втрату даних унаслідок використання таких програм."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Перевіряти програми"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Заборонити встановлення шкідливих програм або попереджати про них."</string>
@@ -521,32 +537,33 @@
     <string name="inputs_game" msgid="1114086481110094757">"Ігрова консоль"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Додаткове джерело"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Ваша назва"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Введіть назву джерела сигналу <xliff:g id="INPUT">%1$s</xliff:g>."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Сховано"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Не видно під час перемикання джерел вхідного сигналу"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Ваша назва:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Показати це джерело сигналу"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Назва"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"Керування HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Дозволити телевізору керувати пристроями HDMI"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Автоматичне вимкнення пристрою"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Вимикати пристрої HDMI за допомогою телевізора"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Автоматичне ввімкн. телевізора"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Вмикати телевізор із пристроєм HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="one">ПІД’ЄДНАНІ ДЖЕРЕЛА СИГНАЛУ</item>
-      <item quantity="few">ПІД’ЄДНАНІ ДЖЕРЕЛА СИГНАЛУ</item>
-      <item quantity="many">ПІД’ЄДНАНІ ДЖЕРЕЛА СИГНАЛУ</item>
-      <item quantity="other">ПІД’ЄДНАНІ ДЖЕРЕЛА СИГНАЛУ</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="one">Під’єднані джерела сигналу</item>
+      <item quantity="few">Під’єднані джерела сигналу</item>
+      <item quantity="many">Під’єднані джерела сигналу</item>
+      <item quantity="other">Під’єднані джерела сигналу</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="one">РЕЗЕРВНІ ДЖЕРЕЛА СИГНАЛУ</item>
-      <item quantity="few">РЕЗЕРВНІ ДЖЕРЕЛА СИГНАЛУ</item>
-      <item quantity="many">РЕЗЕРВНІ ДЖЕРЕЛА СИГНАЛУ</item>
-      <item quantity="other">РЕЗЕРВНІ ДЖЕРЕЛА СИГНАЛУ</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="one">Резервні джерела сигналу</item>
+      <item quantity="few">Резервні джерела сигналу</item>
+      <item quantity="many">Резервні джерела сигналу</item>
+      <item quantity="other">Резервні джерела сигналу</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="one">НЕПІД’ЄДНАНІ ДЖЕРЕЛА СИГНАЛУ</item>
-      <item quantity="few">НЕПІД’ЄДНАНІ ДЖЕРЕЛА СИГНАЛУ</item>
-      <item quantity="many">НЕПІД’ЄДНАНІ ДЖЕРЕЛА СИГНАЛУ</item>
-      <item quantity="other">НЕПІД’ЄДНАНІ ДЖЕРЕЛА СИГНАЛУ</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="one">Непід’єднані джерела сигналу</item>
+      <item quantity="few">Непід’єднані джерела сигналу</item>
+      <item quantity="many">Непід’єднані джерела сигналу</item>
+      <item quantity="other">Непід’єднані джерела сигналу</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Обмежується доступ до додатків та іншого вмісту в обліковому записі"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Обмежений профіль користувача"</string>
@@ -558,6 +575,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Увійти в обмежений профіль"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Вийти з обмеженого профілю"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Видалити обмежений профіль"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"Створити обмежений профіль"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Налаштування"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Дозволені додатки"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
@@ -583,8 +601,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Неправильний PIN-код, повторіть спробу"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"PIN-коди не збігаються. Повторіть спробу"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Введіть пароль для мережі <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_connection_success" msgid="6262755735033937164">"Під’єднано."</string>
-    <string name="wifi_setup_save_success" msgid="4829154865874318015">"Збережено."</string>
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Під’єднано"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"Збережено"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Версія <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Відкрити"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Примусово припинити роботу"</string>
@@ -611,13 +629,13 @@
     <string name="settings_cancel" msgid="304280412158061225">"Скасувати"</string>
     <string name="settings_on" msgid="6892236264945435013">"Увімкнено"</string>
     <string name="settings_off" msgid="449272161738237637">"Вимкнено"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"Немає"</string>
-    <string name="device_daydreams_select" msgid="3691552535056569158">"Заставка"</string>
+    <string name="device_daydreams_none" msgid="2767107052779579259">"Вимикати екран"</string>
+    <string name="device_daydreams_select" msgid="2112338101206187695">"Заставка"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Почати"</string>
-    <string name="device_daydreams_sleep" msgid="8766795993034660366">"Коли запускати заставку"</string>
-    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"Заставка запускається, коли минає цей період бездіяльності. Якщо заставку не вибрано, дисплей вимикається."</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Коли вмикати"</string>
+    <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Заставка вмикається, коли минає цей період бездіяльності. Якщо заставку не вибрано, екран вимикається."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Після <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> бездіяльності"</string>
-    <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Коли переходити в режим сну"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Перевести пристрій у режим сну"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Після цього періоду бездіяльності екран вимикається."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Зараз резервні копії даних не зберігаються в облікових записах"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -652,4 +670,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Рівень виправлень системи безпеки Android"</string>
     <string name="choose_application" msgid="5662960665577780353">"Виберіть додаток"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Експериментальна функція)"</string>
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"Перезапустити в безпечному режимі"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Перезапустити в безпечному режимі?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"Буде вимкнено всі встановлені додатки сторонніх розробників. Вони ввімкнуться після перезапуску."</string>
 </resources>

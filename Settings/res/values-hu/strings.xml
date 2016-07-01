@@ -24,6 +24,7 @@
     <string name="header_category_preferences" msgid="175105555164713972">"Beállítások"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Távoli és kiegészítők"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Személyes"</string>
+    <string name="accounts_category_title" msgid="7591072907146317425">"Fiókok"</string>
     <string name="add_account" msgid="4098060223200619258">"Fiók hozzáadása"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Fiók eltávolítása"</string>
     <string name="account_sync" msgid="773808124331714965">"Szinkronizáltak kiválasztása"</string>
@@ -35,7 +36,7 @@
     <string name="account_remove_failed" msgid="980654375770693544">"A fiók eltávolítása nem sikerült"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"Érintse meg az azonnali szinkronizáláshoz<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"Szinkronizálás most<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"A szinkronizálás nem sikerült"</string>
     <string name="sync_active" msgid="6891115263481154378">"Szinkronizálás aktív"</string>
@@ -45,12 +46,13 @@
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Mindig keressen hálózatot"</string>
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"A Google helyszolgáltatása és más alkalmazások akkor is kereshetnek hálózatokat, ha a Wi-Fi ki van kapcsolva"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
-    <string name="device_daydream" msgid="4933581408059561077">"Álmodozás"</string>
+    <string name="device_daydream" msgid="3354366974209179614">"Képernyővédő"</string>
     <string name="device_display" msgid="101455384386372747">"Képernyő"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Hang"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"Térhatású hangzás"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Rendszerhangok"</string>
     <string name="device_apps" msgid="9180435229638772838">"Alkalmazások"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Tárhely és visszaállítás"</string>
-    <string name="device_storage" msgid="5536683600091277826">"Tárhely"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Biztonsági mentés és visszaállítás"</string>
     <string name="device_reset" msgid="2827002349560023125">"Gyári adatok visszaállítása"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrálás"</string>
@@ -214,20 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Adjon meg egy érvényes átjárócímet"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Adjon meg egy érvényes DNS-címet"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Adja meg a hálózati előtag hosszát 0 és 32 között"</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"Adjon meg egy érvényes IP-címet.\nPéldául: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"Adjon meg egy érvényes IP-címet, vagy hagyja üresen.\nPéldául: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"Adjon meg egy érvényes IP-címet, vagy hagyja üresen.\nPéldául: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"Adjon meg egy érvényes IP-címet, vagy hagyja üresen a mezőt.\nPélda: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"Érvényes hosszúságú hálózati előtagot adjon meg.\nPéldául: 24"</string>
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"Érvényes IP-címet adjon meg.\nPéldául: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"Érvényes IP-címet adjon meg, vagy hagyja üresen.\nPéldául: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"Érvényes IP-címet adjon meg, vagy hagyja üresen.\nPéldául: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"Érvényes IP-címet adjon meg, vagy hagyja üresen.\nPéldául: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Érvényes módon adja meg a hálózati előtag hosszát.\nPéldául: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"A gazdagépnév érvénytelen"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"A kizárási lista érvénytelen. Készítsen vesszővel elválasztott listát a kizárt domainekről."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"A port mezője nem lehet üres"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Ha a gazdagép mezője üres, hagyja a port mezőjét is üresen"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"A port érvénytelen"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"A böngésző használja a HTTP-proxyt, más alkalmazások azonban nem használhatják azt"</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"Adjon meg egy érvényes portot.\nPéldául: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"Vesszővel elválasztott listát adjon meg a kizárt domainekről, vagy hagyja üresen.\nPéldául: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"Adjon meg egy érvényes hostnevet.\nPéldául: proxy.example.com"</string>
+    <string name="proxy_port_description" msgid="6791098212244367568">"Érvényes portot adjon meg.\nPéldául: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Vesszővel elválasztott listát adjon meg a kizárt domainekről, vagy hagyja üresen.\nPéldául: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"Érvényes gazdagépnevet adjon meg.\nPéldául: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Hálózat társítva"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"A hálózat nincs csatlakoztatva"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Már kapcsolódik a következőhöz: <xliff:g id="SSID">%1$s</xliff:g>. Csatlakozik egy másik hálózathoz?"</string>
@@ -246,10 +248,14 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Gyorsítótárazott adatok"</string>
     <string name="storage_eject" msgid="113476702798691558">"Kiadás"</string>
     <string name="storage_format" msgid="3759273736493279595">"Törlés és formázás"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Törlés, illetve formázás eszköztárhelyként"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Törlés, illetve formázás eltávolítható tárhelyként"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formázás eszköztárhelyként"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Nincs csatlakozva"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Adatok áttelepítése"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Belső tárhely elfelejtése"</string>
+    <string name="storage_migrate" msgid="1304058078948715456">"Adatok áthelyezése erre a tárhelyre"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Adatok áthelyezése másik tárhelyre"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Nincs miről biztonsági másolatot készíteni"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"Eszköztárhely elfelejtése"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"A meghajtón tárolt alkalmazások vagy adatok használatához csatlakoztassa azt ismét az eszközhöz. Azonban ha a meghajtó már nem érhető el, a tárhely elfelejtése mellett is dönthet.\n\nHa az „Elfelejt” lehetőséget választja, akkor a meghajtón tárolt összes adat örökre elvész.\n\nAz alkalmazásokat később újratelepítheti, de a meghajtón lévő adatok megsemmisülnek."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Az eszköz tárhelye"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Cserélhető tárhely"</string>
@@ -262,12 +268,13 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Nincs kiadható meghajtó"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"A(z) <xliff:g id="NAME">%1$s</xliff:g> formázása megtörtént"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"A(z) <xliff:g id="NAME">%1$s</xliff:g> formázása sikertelen"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formázás belső tárhelyként"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Formázás eszköztárhelyként"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Ez megköveteli az USB-tárhely biztonságos formázását. A tárhely formázása után ez a meghajtó csak ezzel az eszközzel fog működni. A formázással törlődik a tárhelyen jelenleg megtalálható összes adat. Az adatvesztés elkerülése érdekében fontolja meg biztonsági mentés végrehajtását."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Törlés és formázás"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"A formázást követően más eszközökkel is használhatja majd ezt az USB-tárhelyet. Minden adat törlődni fog. Fontolja meg biztonsági mentés készítését az alkalmazások másik belső tárhelyre való áthelyezésével."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"A formázást követően más eszközökkel is használhatja majd ezt az USB-tárhelyet. Minden adat törlődni fog. Fontolja meg előbb egy biztonsági mentés készítését az alkalmazások másik eszköztárhelyre való áthelyezésével."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB-meghajtó formázása…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Ez eltarthat egy kis ideig. Kérjük, ne távolítsa el a meghajtót."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Válasszon tárhelyet az adatátvitelhez"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Adatok áthelyezése ide: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Fotók, fájlok és alkalmazásadatok áthelyezése ide: <xliff:g id="NAME">%1$s</xliff:g>. Ez eltarthat néhány percig. Egyes alkalmazások nem megfelelően fognak működni az áthelyezés ideje alatt."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Áthelyezés most"</string>
@@ -283,18 +290,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"A következő helyen tárolt alkalmazások: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"A következő helyen tárolt alkalmazások és adatok: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> áll rendelkezésre"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Belső tárhely eltávolítása"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Ha eltávolítja ezt az eszköztárhelyet, a rajta lévő alkalmazások működésképtelenné válnak. Ez az USB-tárhely úgy van formázva, hogy csak ezen az eszközön működjön, más eszközökön ne."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"A(z) <xliff:g id="NAME">%1$s</xliff:g> kiadása…"</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Eszköztárhely eltávolítása"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Ha eltávolítja ezt az eszköztárhelyet, a rajta lévő alkalmazások működésképtelenné válnak. Ez az USB-tárhely úgy van formázva, hogy csak ezen az eszközön működjön, más eszközökön ne."</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"A(z) <xliff:g id="NAME">%1$s</xliff:g> kiadása…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Felhasznált tárhely"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"A(z) <xliff:g id="NAME">%1$s</xliff:g> áthelyezése…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Az áthelyezés végrehajtása során ne távolítsa el a tárhelyet az eszközből.\nAz eszközön lévő <xliff:g id="APPNAME">%1$s</xliff:g> alkalmazás a művelet befejeződéséig nem lesz elérhető."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Szeretné, hogy a rendszer elfelejtse ezt a belső tárhelyet?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Felejtse el a rendszer az eszköztárhelyet?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Ha az „Elfelejt” lehetőséget választja, a meghajtón tárolt összes adat elvész. Biztosan folytatja?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Elfelejt"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB-meghajtó csatlakoztatva"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Böngészés"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Beállítás belső tárhelyként"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Beállítás eszköztárhelyként"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Beállítás eltávolítható tárhelyként"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Kiadás"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> eltávolítva."</string>
@@ -304,6 +311,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"Az alkalmazás másolásvédett."</string>
     <string name="invalid_location" msgid="5269044848535157307">"A telepítés helye nem érvényes."</string>
     <string name="system_package" msgid="9200255718634512790">"A rendszerfrissítéseket nem lehet külső eszközre telepíteni."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Az eszközkezelő nem telepíthető külső tárolóra."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"További információ"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Újra"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS-router keresése…"</string>
@@ -363,7 +371,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"Kikapcsolva"</string>
     <string name="display_options" msgid="5504549024985225774">"Megjelenítési beállítások"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Beállítás"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Nyelv"</string>
+    <string name="captions_language" msgid="2835554055388996343">"Nyelv"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Szöveg mérete"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Felirat stílusa"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Egyéni beállítások"</string>
@@ -371,12 +379,19 @@
     <string name="captions_textcolor" msgid="3233568269335050287">"Betűszín"</string>
     <string name="captions_edgetype" msgid="841331274533086103">"Szegély típusa"</string>
     <string name="captions_edgecolor" msgid="845125757332620884">"Szegély színe"</string>
+    <string name="captions_backgroundshow" msgid="9177987321551275698">"Háttér megjelenítése"</string>
     <string name="captions_backgroundcolor" msgid="448518890988125453">"Háttérszín"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Háttér áttetszősége"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"A feliratok így fognak kinézni"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Szöveg áttetszősége"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"Ablak megjelenítése"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Ablak színe"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Ablak áttetszősége"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"Fekete alapon fehér"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"Fehér alapon fekete"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"Fekete alapon sárga"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"Kék alapon sárga"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"Egyedi"</string>
     <string name="color_white" msgid="65537523012024751">"Fehér"</string>
     <string name="color_black" msgid="8804213372565106403">"Fekete"</string>
     <string name="color_red" msgid="5630553203246525989">"Piros"</string>
@@ -424,7 +439,7 @@
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Részletes Wi-Fi-naplózás engedélyezése"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"Érintések megjelenítése"</string>
     <string name="system_pointer_location" msgid="2673764026490179227">"Mutató helye"</string>
-    <string name="system_show_layout_bounds" msgid="645732439882291943">"Elrendezéshatár mutatása"</string>
+    <string name="system_show_layout_bounds" msgid="645732439882291943">"Elrendezéshatárok"</string>
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"GPU-nézetfrissítések megjelenítése"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"Hardverréteg megjelenítése"</string>
     <string name="system_show_gpu_overdraw" msgid="707861254106800199">"GPU-kitakarás megjelenítése"</string>
@@ -434,7 +449,7 @@
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Animáció léptéke"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Szigorú mód engedélyezve"</string>
     <string name="system_show_cpu_usage" msgid="4797599582027671138">"CPU-használat mutatása"</string>
-    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Profil GPU-renderelésről"</string>
+    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"GPU-renderelési profil"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Nyomkövetés engedélyezése"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"Ne tárolja a tevékenységeket"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"Háttérfolyamat-korlátozás"</string>
@@ -461,6 +476,7 @@
     <string name="disagree" msgid="9170636026862400981">"Elutasítás"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Ismeretlen források"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"A Play Áruházon kívül más forrásokból is lehessen alkalmazásokat telepíteni"</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Telepítés engedélyezése ismeretlen forrásokból"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Az eszközre és a személyes adatokra sokkal nagyobb veszélyt jelentenek az ismeretlen forrásból származó alkalmazások támadásai. Ön kijelenti, hogy egyedül Ön felel az eszközön bekövetkező minden olyan kárért vagy adatvesztésért, amely ezen alkalmazások használatából fakad."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Alkalmazások ellenőrzése"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Tiltás vagy figyelmeztetés az olyan alkalmazások telepítése előtt, amelyek károsak lehetnek."</string>
@@ -519,26 +535,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"Játékkonzol"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Egyéni név"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Adjon nevet a(z) <xliff:g id="INPUT">%1$s</xliff:g>-bemenetnek."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Elrejtés"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Nem jelenik meg bemenetek váltásakor"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Egyéni név:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Bemenet megjelenítése"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Név"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI-vezérlő"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"A tévé vezérelheti a HDMI-eszközöket"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Eszköz automatikus leállítása"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"HDMI-eszközök kikapcsolása a tévével együtt"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Tévé automatikus bekapcsolása"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"A tévé bekapcsolása a HDMI-eszközzel együtt"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="other">CSATLAKOZTATOTT BEMENETEK</item>
-      <item quantity="one">CSATLAKOZTATOTT BEMENET</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="other">Csatlakoztatott bemenetek</item>
+      <item quantity="one">Csatlakoztatott bemenet</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="other">KÉSZENLÉTI BEMENETEK</item>
-      <item quantity="one">KÉSZENLÉTI BEMENET</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="other">Készenléti bemenetek</item>
+      <item quantity="one">Készenléti bemenet</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="other">NEM CSATLAKOZTATOTT BEMENETEK</item>
-      <item quantity="one">NEM CSATLAKOZTATOTT BEMENET</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="other">Nem csatlakoztatott bemenetek</item>
+      <item quantity="one">Nem csatlakoztatott bemenet</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Alkalmazásokhoz és egyéb tartalmakhoz való hozzáférés korlátozása saját fiókjában"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Korlátozott profil"</string>
@@ -550,6 +567,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Belépés korlátozott profilba"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Kilépés a korlátozott profilból"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Korlátozott profil törlése"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"Korlátozott profil létrehozása"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Beállítások"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Engedélyezett alkalmazások"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
@@ -573,8 +591,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Helytelen PIN-kód, próbálja újra"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"A PIN-kód nem egyezik, próbálja újra"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Adja meg jelszót a következőhöz: <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_connection_success" msgid="6262755735033937164">"Sikeresen csatlakozva."</string>
-    <string name="wifi_setup_save_success" msgid="4829154865874318015">"Sikeresen mentve."</string>
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Sikeresen csatlakozva"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"Sikeresen mentve"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Verzió: <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Megnyitás"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Kényszerített leállítás"</string>
@@ -601,13 +619,13 @@
     <string name="settings_cancel" msgid="304280412158061225">"Mégse"</string>
     <string name="settings_on" msgid="6892236264945435013">"Be"</string>
     <string name="settings_off" msgid="449272161738237637">"Ki"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"Nincs"</string>
-    <string name="device_daydreams_select" msgid="3691552535056569158">"Álmodozás"</string>
+    <string name="device_daydreams_none" msgid="2767107052779579259">"A képernyő kikapcsolása"</string>
+    <string name="device_daydreams_select" msgid="2112338101206187695">"Képernyővédő"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Indítás most"</string>
-    <string name="device_daydreams_sleep" msgid="8766795993034660366">"Álmodozás funkció aktiválásának ideje"</string>
-    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"Az álmodozás a tétlenség ezen időtartama után kezdődik. Ha nem választotta ki az álmodozást, a kijelző kikapcsol."</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Mikor aktiválódjon"</string>
+    <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"A képernyővédő a tétlenség ezen időtartama után aktiválódik. Ha nem választott ki képernyővédőt, a kijelző kikapcsol."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> inaktivitás után"</string>
-    <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Mikor lépjen alvó üzemmódba"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Az eszköz alvó üzemmódba helyezése"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Ennyi inaktivitás után a képernyő kikapcsol."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Jelenleg egyik fiók sem tárolja adatok biztonsági másolatát"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -642,4 +660,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Androidos biztonsági hibajavító csomag szintje"</string>
     <string name="choose_application" msgid="5662960665577780353">"Alkalmazás kiválasztása"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Kísérleti)"</string>
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"Újraindítás csökkentett módban"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Újraindítja a rendszert csökkentett módban?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"Ezzel letiltja a telepített, harmadik féltől származó alkalmazásokat. Újraindításkor ezek visszaállnak."</string>
 </resources>
