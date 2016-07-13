@@ -843,8 +843,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
     }
 
     private boolean isOemUnlockAllowed() {
-        return Settings.Global.getInt(getActivity().getContentResolver(),
-                Settings.Global.OEM_UNLOCK_DISALLOWED, 0) == 0;
+        return !mUm.hasUserRestriction(UserManager.DISALLOW_OEM_UNLOCK);
     }
 
     private void updateBugreportOptions() {
