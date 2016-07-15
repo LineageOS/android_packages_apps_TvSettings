@@ -39,6 +39,7 @@ import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
+import android.telephony.SignalStrength;
 import android.text.TextUtils;
 import android.util.ArraySet;
 import android.util.Log;
@@ -159,6 +160,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
         final IntentFilter filter =
                 new IntentFilter(BluetoothConnectionsManager.ACTION_BLUETOOTH_UPDATE);
         LocalBroadcastManager.getInstance(getContext()).registerReceiver(mBCMReceiver, filter);
+        mConnectivityListener.start();
     }
 
     @Override
@@ -183,6 +185,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
         super.onStop();
         mAuthenticatorHelper.stopListeningToAccountUpdates();
         LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mBCMReceiver);
+        mConnectivityListener.stop();
     }
 
     private void hideIfIntentUnhandled(Preference preference) {
@@ -382,10 +385,55 @@ public class MainFragment extends LeanbackPreferenceFragment {
         mNetworkPref.setTitle(mConnectivityListener.isEthernetAvailable()
                 ? R.string.connectivity_network : R.string.connectivity_wifi);
 
-        // TODO: signal strength
+        if (mConnectivityListener.isCellConnected()) {
+            final int signal = mConnectivityListener.getCellSignalStrength();
+            switch (signal) {
+                case SignalStrength.SIGNAL_STRENGTH_GREAT:
+                    mNetworkPref.setIcon(R.drawable.ic_cell_signal_4_white);
+                    break;
+                case SignalStrength.SIGNAL_STRENGTH_GOOD:
+                    mNetworkPref.setIcon(R.drawable.ic_cell_signal_3_white);
+                    break;
+                case SignalStrength.SIGNAL_STRENGTH_MODERATE:
+                    mNetworkPref.setIcon(R.drawable.ic_cell_signal_2_white);
+                    break;
+                case SignalStrength.SIGNAL_STRENGTH_POOR:
+                    mNetworkPref.setIcon(R.drawable.ic_cell_signal_1_white);
+                    break;
+                case SignalStrength.SIGNAL_STRENGTH_NONE_OR_UNKNOWN:
+                default:
+                    mNetworkPref.setIcon(R.drawable.ic_cell_signal_0_white);
+                    break;
+            }
+        } else if (mConnectivityListener.isEthernetConnected()) {
+            mNetworkPref.setIcon(R.drawable.ic_ethernet_white);
+        } else if (mConnectivityListener.isWifiConnected()) {
+            final int signal = mConnectivityListener.getWifiSignalStrength(5);
+            switch (signal) {
+                case 4:
+                    mNetworkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
+                    break;
+                case 3:
+                    mNetworkPref.setIcon(R.drawable.ic_wifi_signal_3_white);
+                    break;
+                case 2:
+                    mNetworkPref.setIcon(R.drawable.ic_wifi_signal_2_white);
+                    break;
+                case 1:
+                    mNetworkPref.setIcon(R.drawable.ic_wifi_signal_1_white);
+                    break;
+                case 0:
+                default:
+                    mNetworkPref.setIcon(R.drawable.ic_wifi_signal_0_white);
+                    break;
+            }
+        } else {
+            // TODO: get a not connected icon
+            mNetworkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
+        }
     }
 
-    public void updateGoogleSettings() {
+    private void updateGoogleSettings() {
         final Preference googleSettingsPref = findPreference(KEY_GOOGLE_SETTINGS);
         if (googleSettingsPref != null) {
             final ResolveInfo info = systemIntentIsHandled(googleSettingsPref.getIntent());
