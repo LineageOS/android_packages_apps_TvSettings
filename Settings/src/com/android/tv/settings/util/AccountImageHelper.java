@@ -34,7 +34,7 @@ import com.android.tv.settings.R;
  */
 public final class AccountImageHelper {
 
-    static final String[] CONTACT_PROJECTION_DATA = new String[] {
+    private static final String[] CONTACT_PROJECTION_DATA = new String[] {
         ContactsContract.Data._ID,
         ContactsContract.Data.CONTACT_ID,
         ContactsContract.Data.RAW_CONTACT_ID,
@@ -42,7 +42,7 @@ public final class AccountImageHelper {
         ContactsContract.Data.PHOTO_URI,
         ContactsContract.Data.PHOTO_FILE_ID
     };
-    static final String CONTACT_SELECTION =
+    private static final String CONTACT_SELECTION =
             ContactsContract.CommonDataKinds.Email.ADDRESS + " LIKE ?";
 
     /**
@@ -112,7 +112,7 @@ public final class AccountImageHelper {
     /**
      * Returns a default image to be used when an account has no picture associated with it.
      */
-    public static String getDefaultPictureUri(Context context) {
+    private static String getDefaultPictureUri(Context context) {
         // TODO: get a better default image.
         ShortcutIconResource iconResource = new ShortcutIconResource();
         iconResource.packageName = context.getPackageName();
