@@ -193,7 +193,7 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
 
         if (ethernetAvailable) {
             final boolean ethernetConnected =
-                    mConnectivityListener.getConnectivityStatus().isEthernetConnected();
+                    mConnectivityListener.isEthernetConnected();
             mEthernetStatusPref.setTitle(ethernetConnected
                     ? R.string.connected : R.string.not_connected);
             mEthernetStatusPref.setSummary(mConnectivityListener.getEthernetIpAddress());
