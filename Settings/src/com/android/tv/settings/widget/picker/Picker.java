@@ -219,7 +219,7 @@ public abstract class Picker extends Fragment {
             for (int i = 0; i < size; i++) {
                 final View item = manager.getChildAt(i);
                 if (item != null) {
-                    if (selected == i) {
+                    if (selected == column.getChildAdapterPosition(item)) {
                         // set alpha for main item (selected) in the column
                         if (keyUp) {
                             setOrAnimateAlphaInternal(item, true, mFocusedAlpha, mUnfocusedAlpha,
