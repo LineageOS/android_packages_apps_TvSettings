@@ -30,6 +30,7 @@ import android.support.annotation.NonNull;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.settingslib.applications.ApplicationsState;
@@ -41,6 +42,18 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
     private static final String TAG = "AppManagementFragment";
 
     private static final String ARG_PACKAGE_NAME = "packageName";
+
+    private static final String KEY_VERSION = "version";
+    private static final String KEY_OPEN = "open";
+    private static final String KEY_FORCE_STOP = "forceStop";
+    private static final String KEY_UNINSTALL = "uninstall";
+    private static final String KEY_ENABLE_DISABLE = "enableDisable";
+    private static final String KEY_APP_STORAGE = "appStorage";
+    private static final String KEY_CLEAR_DATA = "clearData";
+    private static final String KEY_CLEAR_CACHE = "clearCache";
+    private static final String KEY_CLEAR_DEFAULTS = "clearDefaults";
+    private static final String KEY_NOTIFICATIONS = "notifications";
+    private static final String KEY_PERMISSIONS = "permissions";
 
     // Result code identifiers
     private static final int REQUEST_UNINSTALL = 1;
@@ -156,72 +169,104 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         final PreferenceScreen screen =
                 getPreferenceManager().createPreferenceScreen(themedContext);
         screen.setTitle(getAppName());
+        setPreferenceScreen(screen);
 
+        updatePrefs();
+    }
+
+    private void updatePrefs() {
         if (mEntry == null) {
-            setPreferenceScreen(screen);
+            final PreferenceScreen screen = getPreferenceScreen();
+            screen.removeAll();
             return;
         }
+        final Context themedContext = getPreferenceManager().getContext();
 
+        // Version
         final Preference versionPreference = new Preference(themedContext);
+        versionPreference.setKey(KEY_VERSION);
+        replacePreference(versionPreference);
         versionPreference.setSelectable(false);
         versionPreference.setTitle(getString(R.string.device_apps_app_management_version,
                 mEntry.getVersion(getActivity())));
         versionPreference.setSummary(mPackageName);
-        screen.addPreference(versionPreference);
 
         // Open
+        final Preference openPreference = new Preference(themedContext);
+        openPreference.setKey(KEY_OPEN);
+        replacePreference(openPreference);
         Intent appLaunchIntent =
                 mPackageManager.getLeanbackLaunchIntentForPackage(mEntry.info.packageName);
         if (appLaunchIntent == null) {
             appLaunchIntent = mPackageManager.getLaunchIntentForPackage(mEntry.info.packageName);
         }
         if (appLaunchIntent != null) {
-            final Preference openPreference = new Preference(themedContext);
             openPreference.setIntent(appLaunchIntent);
             openPreference.setTitle(R.string.device_apps_app_management_open);
-            screen.addPreference(openPreference);
+            openPreference.setVisible(true);
+        } else {
+            openPreference.setVisible(false);
         }
 
         // Force stop
         mForceStopPreference = new ForceStopPreference(themedContext, mEntry);
-        screen.addPreference(mForceStopPreference);
+        mForceStopPreference.setKey(KEY_FORCE_STOP);
+        replacePreference(mForceStopPreference);
 
         // Uninstall
         mUninstallPreference = new UninstallPreference(themedContext, mEntry);
-        screen.addPreference(mUninstallPreference);
+        mUninstallPreference.setKey(KEY_UNINSTALL);
+        replacePreference(mUninstallPreference);
 
         // Disable/Enable
         mEnableDisablePreference = new EnableDisablePreference(themedContext, mEntry);
-        screen.addPreference(mEnableDisablePreference);
+        mEnableDisablePreference.setKey(KEY_ENABLE_DISABLE);
+        replacePreference(mEnableDisablePreference);
 
         // Storage used
         mAppStoragePreference = new AppStoragePreference(themedContext, mEntry);
-        screen.addPreference(mAppStoragePreference);
+        mAppStoragePreference.setKey(KEY_APP_STORAGE);
+        replacePreference(mAppStoragePreference);
 
         // Clear data
         mClearDataPreference = new ClearDataPreference(themedContext, mEntry);
-        screen.addPreference(mClearDataPreference);
+        mClearDataPreference.setKey(KEY_CLEAR_DATA);
+        replacePreference(mClearDataPreference);
 
         // Clear cache
         mClearCachePreference = new ClearCachePreference(themedContext, mEntry);
-        screen.addPreference(mClearCachePreference);
+        mClearCachePreference.setKey(KEY_CLEAR_CACHE);
+        replacePreference(mClearCachePreference);
 
         // Clear defaults
         mClearDefaultsPreference = new ClearDefaultsPreference(themedContext, mEntry);
-        screen.addPreference(mClearDefaultsPreference);
+        mClearDefaultsPreference.setKey(KEY_CLEAR_DEFAULTS);
+        replacePreference(mClearDefaultsPreference);
 
         // Notifications
         mNotificationsPreference = new NotificationsPreference(themedContext, mEntry);
-        screen.addPreference(mNotificationsPreference);
+        mNotificationsPreference.setKey(KEY_NOTIFICATIONS);
+        replacePreference(mNotificationsPreference);
 
         // Permissions
         final Preference permissionsPreference = new Preference(themedContext);
+        permissionsPreference.setKey(KEY_PERMISSIONS);
         permissionsPreference.setTitle(R.string.device_apps_app_management_permissions);
         permissionsPreference.setIntent(new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS)
                 .putExtra(Intent.EXTRA_PACKAGE_NAME, mPackageName));
-        screen.addPreference(permissionsPreference);
+        replacePreference(permissionsPreference);
+    }
 
-        setPreferenceScreen(screen);
+    private void replacePreference(Preference preference) {
+        final String key = preference.getKey();
+        if (TextUtils.isEmpty(key)) {
+            throw new IllegalArgumentException("Can't replace a preference without a key");
+        }
+        final Preference old = findPreference(key);
+        if (old != null) {
+            getPreferenceScreen().removePreference(old);
+        }
+        getPreferenceScreen().addPreference(preference);
     }
 
     public String getAppName() {
@@ -343,7 +388,7 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
             if (mEntry == null) {
                 navigateBack();
             }
-            onCreatePreferences(null, null);
+            updatePrefs();
         }
 
         @Override
@@ -375,7 +420,9 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         }
 
         @Override
-        public void onLauncherInfoChanged() {}
+        public void onLauncherInfoChanged() {
+            updatePrefs();
+        }
 
         @Override
         public void onLoadEntriesCompleted() {
