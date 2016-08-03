@@ -172,8 +172,7 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
                 startActivity(preference.getIntent());
             } catch (ActivityNotFoundException e) {
                 Log.e(TAG, "Could not find activity to launch", e);
-                // TODO(b/30507703): don't reuse this string
-                Toast.makeText(getContext(), R.string.status_unavailable,
+                Toast.makeText(getContext(), R.string.device_apps_app_management_not_available,
                         Toast.LENGTH_SHORT).show();
             }
             return true;
