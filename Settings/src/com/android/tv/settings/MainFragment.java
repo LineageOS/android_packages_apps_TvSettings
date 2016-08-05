@@ -336,7 +336,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
                 preference = new Preference(themedContext);
                 preference.setKey(key);
             }
-            preference.setTitle(device.getName());
+            preference.setTitle(device.getAliasName());
             preference.setSummary(desc);
             final int deviceImgId = AccessoryUtils.getImageIdForDevice(device);
             preference.setIcon(deviceImgId);
@@ -344,7 +344,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
             BluetoothAccessoryFragment.prepareArgs(
                     preference.getExtras(),
                     device.getAddress(),
-                    device.getName(),
+                    device.getAliasName(),
                     deviceImgId);
             mAccessoriesGroup.addPreference(preference);
         }

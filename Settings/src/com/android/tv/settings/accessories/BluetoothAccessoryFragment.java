@@ -36,6 +36,7 @@ import android.support.v17.leanback.widget.GuidedAction;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.tv.settings.R;
@@ -54,6 +55,10 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
     private static final UUID GATT_BATTERY_LEVEL_CHARACTERISTIC_UUID =
             UUID.fromString("00002a19-0000-1000-8000-00805f9b34fb");
 
+    private static final String KEY_CHANGE_NAME = "changeName";
+    private static final String KEY_UNPAIR = "unpair";
+    private static final String KEY_BATTERY = "battery";
+
     private static final String SAVE_STATE_UNPAIRING = "BluetoothAccessoryActivity.unpairing";
 
     private static final int UNPAIR_TIMEOUT = 5000;
@@ -68,6 +73,7 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
     private String mDeviceName;
     private @DrawableRes int mDeviceImgId;
     private boolean mUnpairing;
+    private Preference mChangeNamePref;
     private Preference mUnpairPref;
     private Preference mBatteryPref;
 
@@ -199,31 +205,30 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        final Context themedContext = getPreferenceManager().getContext();
-        final PreferenceScreen screen =
-                getPreferenceManager().createPreferenceScreen(themedContext);
+        setPreferencesFromResource(R.xml.bluetooth_accessory, null);
+        final PreferenceScreen screen = getPreferenceScreen();
         screen.setTitle(mDeviceName);
 
-        mUnpairPref = new Preference(themedContext);
-        updateUnpairPref(mUnpairPref);
-        mUnpairPref.setFragment(UnpairConfirmFragment.class.getName());
+        mChangeNamePref = findPreference(KEY_CHANGE_NAME);
+        ChangeNameFragment.prepareArgs(mChangeNamePref.getExtras(), mDeviceName, mDeviceImgId);
+
+        mUnpairPref = findPreference(KEY_UNPAIR);
+        updatePrefsForUnpairing();
         UnpairConfirmFragment.prepareArgs(mUnpairPref.getExtras(), mDeviceName, mDeviceImgId);
-        screen.addPreference(mUnpairPref);
 
-        mBatteryPref = new Preference(themedContext);
-        screen.addPreference(mBatteryPref);
+        mBatteryPref = findPreference(KEY_BATTERY);
         mBatteryPref.setVisible(false);
-
-        setPreferenceScreen(screen);
     }
 
-    private void updateUnpairPref(Preference pref) {
+    private void updatePrefsForUnpairing() {
         if (mUnpairing) {
-            pref.setTitle(R.string.accessory_unpairing);
-            pref.setEnabled(false);
+            mUnpairPref.setTitle(R.string.accessory_unpairing);
+            mUnpairPref.setEnabled(false);
+            mChangeNamePref.setEnabled(false);
         } else {
-            pref.setTitle(R.string.accessory_unpair);
-            pref.setEnabled(true);
+            mUnpairPref.setTitle(R.string.accessory_unpair);
+            mUnpairPref.setEnabled(true);
+            mChangeNamePref.setEnabled(true);
         }
     }
 
@@ -253,7 +258,7 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
                     }
                     // set the dialog to a waiting state
                     if (mUnpairPref != null) {
-                        updateUnpairPref(mUnpairPref);
+                        updatePrefsForUnpairing();
                     }
                 } else {
                     Log.e(TAG, "Failed to unpair Bluetooth Device: " + mDevice.getName());
@@ -261,6 +266,14 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
             }
         } else {
             Log.e(TAG, "Bluetooth device not found. Address = " + mDeviceAddress);
+        }
+    }
+
+    private void renameDevice(String deviceName) {
+        if (mDevice != null) {
+            mDevice.setAlias(deviceName);
+            getPreferenceScreen().setTitle(deviceName);
+            setTitle(deviceName);
         }
     }
 
@@ -328,6 +341,50 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
                     }
                 });
             }
+        }
+    }
+
+    public static class ChangeNameFragment extends GuidedStepFragment {
+
+        public static void prepareArgs(@NonNull Bundle args, String deviceName,
+                @DrawableRes int deviceImgId) {
+            args.putString(ARG_ACCESSORY_NAME, deviceName);
+            args.putInt(ARG_ACCESSORY_ICON_ID, deviceImgId);
+        }
+
+        @NonNull
+        @Override
+        public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
+            return new GuidanceStylist.Guidance(
+                    getString(R.string.accessory_change_name_title),
+                    null,
+                    getArguments().getString(ARG_ACCESSORY_NAME),
+                    getContext().getDrawable(getArguments().getInt(ARG_ACCESSORY_ICON_ID,
+                            R.drawable.ic_qs_bluetooth_not_connected))
+            );
+        }
+
+        @Override
+        public void onCreateActions(@NonNull List<GuidedAction> actions,
+                Bundle savedInstanceState) {
+            final Context context = getContext();
+            actions.add(new GuidedAction.Builder(context)
+                    .title(getArguments().getString(ARG_ACCESSORY_NAME))
+                    .editable(true)
+                    .build());
+        }
+
+        @Override
+        public long onGuidedActionEditedAndProceed(GuidedAction action) {
+            if (!TextUtils.equals(action.getTitle(),
+                    getArguments().getString(ARG_ACCESSORY_NAME))
+                    && TextUtils.isGraphic(action.getTitle())) {
+                final BluetoothAccessoryFragment fragment =
+                        (BluetoothAccessoryFragment) getTargetFragment();
+                fragment.renameDevice(action.getTitle().toString());
+                getFragmentManager().popBackStack();
+            }
+            return GuidedAction.ACTION_ID_NEXT;
         }
     }
 
