@@ -27,7 +27,13 @@ import com.android.tv.settings.R;
  */
 public class AccessoryUtils {
     public static @DrawableRes int getImageIdForDevice(BluetoothDevice dev) {
-        int devClass = dev.getBluetoothClass().getDeviceClass();
+        BluetoothClass bluetoothClass = dev.getBluetoothClass();
+        // Possible <BluetoothDevice>.getBluetoothClass method returns null
+        if (bluetoothClass == null) {
+            return R.drawable.ic_bluetooth;
+        }
+
+        int devClass = bluetoothClass.getDeviceClass();
 
         if (devClass == BluetoothClass.Device.AUDIO_VIDEO_WEARABLE_HEADSET) {
             return R.drawable.ic_headset_mic;
