@@ -25,6 +25,7 @@ import android.provider.Settings;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceManager;
 import android.support.v7.preference.TwoStatePreference;
 
 import com.android.settingslib.wifi.AccessPoint;
@@ -114,6 +115,8 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        getPreferenceManager().setPreferenceComparisonCallback(
+                new PreferenceManager.SimplePreferenceComparisonCallback());
         setPreferencesFromResource(R.xml.network, null);
 
         mEnableWifiPref = (TwoStatePreference) findPreference(KEY_WIFI_ENABLE);
