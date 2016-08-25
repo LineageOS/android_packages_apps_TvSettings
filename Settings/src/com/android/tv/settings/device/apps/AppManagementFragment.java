@@ -138,10 +138,14 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         }
         switch (requestCode) {
             case REQUEST_UNINSTALL:
-                if (resultCode == Activity.RESULT_OK) {
+                final int deleteResult = data != null
+                        ? data.getIntExtra(Intent.EXTRA_INSTALL_RESULT, 0) : 0;
+                if (deleteResult == PackageManager.DELETE_SUCCEEDED) {
                     final int userId =  UserHandle.getUserId(mEntry.info.uid);
                     mApplicationsState.removePackage(mPackageName, userId);
                     navigateBack();
+                } else {
+                    Log.e(TAG, "Uninstall failed with result " + deleteResult);
                 }
                 break;
             case REQUEST_MANAGE_SPACE:
@@ -167,9 +171,15 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference.getIntent() != null) {
+        final Intent intent = preference.getIntent();
+        if (intent != null) {
             try {
-                startActivity(preference.getIntent());
+                if (preference.equals(mUninstallPreference)) {
+                    startActivityForResult(intent, mUninstallPreference.canUninstall()
+                            ? REQUEST_UNINSTALL : REQUEST_UNINSTALL_UPDATES);
+                } else {
+                    startActivity(intent);
+                }
             } catch (ActivityNotFoundException e) {
                 Log.e(TAG, "Could not find activity to launch", e);
                 Toast.makeText(getContext(), R.string.device_apps_app_management_not_available,
@@ -376,15 +386,6 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
             Log.w(TAG, "Failed to clear cache!");
             mClearCachePreference.refresh();
         }
-    }
-
-    public void launchUninstall() {
-        if (mUninstallPreference.canUninstall() || mUninstallPreference.canUninstallUpdates()) {
-            Intent uninstallIntent = mUninstallPreference.getUninstallIntent();
-            uninstallIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
-            startActivityForResult(uninstallIntent, REQUEST_UNINSTALL);
-        }
-        mUninstallPreference.refresh();
     }
 
     private class ApplicationsStateCallbacks implements ApplicationsState.Callbacks {
