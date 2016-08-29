@@ -18,7 +18,7 @@ package com.android.tv.settings.users;
 
 import android.app.ActivityManagerNative;
 import android.app.Service;
-import android.app.SynchronousUserSwitchObserver;
+import android.app.UserSwitchObserver;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -109,22 +109,13 @@ public class UserSwitchListenerService extends Service {
         super.onCreate();
         try {
             ActivityManagerNative.getDefault().registerUserSwitchObserver(
-                    new SynchronousUserSwitchObserver() {
-                        @Override
-                        public void onUserSwitching(int newUserId) throws RemoteException {
-                        }
-
+                    new UserSwitchObserver() {
                         @Override
                         public void onUserSwitchComplete(int newUserId) throws RemoteException {
                             if (DEBUG) {
                                 Log.d(TAG, "user has been foregrounded: " + newUserId);
                             }
                             setBootUser(UserSwitchListenerService.this, newUserId);
-                        }
-
-                        @Override
-                        public void onForegroundProfileSwitch(int profileId)
-                            throws RemoteException {
                         }
                     }, UserSwitchListenerService.class.getName());
         } catch (RemoteException e) {
