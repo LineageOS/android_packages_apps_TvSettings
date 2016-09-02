@@ -185,7 +185,9 @@ public class UnmountActivity extends Activity {
             final long id = action.getId();
 
             if (id == GuidedAction.ACTION_ID_CANCEL) {
-                getFragmentManager().popBackStack();
+                if (!getFragmentManager().popBackStackImmediate()) {
+                    getActivity().finish();
+                }
             } else if (id == ACTION_ID_UNMOUNT) {
                 ((UnmountActivity) getActivity()).onRequestUnmount();
             }
