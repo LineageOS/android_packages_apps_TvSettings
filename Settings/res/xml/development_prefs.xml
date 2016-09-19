@@ -26,6 +26,12 @@
         android:key="bugreport"
         android:title="@*android:string/bugreport_title"
         android:dialogTitle="@*android:string/bugreport_title" />
+
+    <cyanogenmod.preference.CMSecureSettingSwitchPreference
+            android:key="advanced_reboot"
+            android:title="@string/advanced_reboot_title"
+            android:summary="@string/advanced_reboot_summary" />
+
     <PreferenceScreen
         android:key="local_backup_password"
         android:title="@string/local_backup_password_title"
@@ -93,6 +99,12 @@
             android:title="@string/enable_adb"
             android:summary="@string/enable_adb_summary"
             android:fragment="com.android.tv.settings.system.development.AdbDialog" />
+
+        <SwitchPreference
+            android:key="adb_over_network"
+            android:title="@string/adb_over_network"
+            android:summary="@string/adb_over_network_summary"
+            android:dependency="enable_adb" />
 
         <Preference android:key="clear_adb_keys"
             android:title="@string/clear_adb_keys"
