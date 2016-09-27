@@ -31,6 +31,8 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Process;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Pair;
@@ -76,6 +78,8 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
     private boolean mShowWpsAtTop;
     private AdvancedWifiOptionsFlow mAdvancedWifiOptionsFlow;
     private WifiTracker mWifiTracker;
+    private HandlerThread mBgThread;
+
     private WifiConfiguration mConfiguration;
     private String mConnectedNetwork;
     private WifiSecurity mWifiSecurity;
@@ -112,7 +116,9 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
                 }
             }
         };
-        mWifiTracker = new WifiTracker(this, wifiListener, true, true);
+        mBgThread = new HandlerThread(TAG, Process.THREAD_PRIORITY_BACKGROUND);
+        mBgThread.start();
+        mWifiTracker = new WifiTracker(this, wifiListener, mBgThread.getLooper(), true, true);
         mNextNetworkRefreshTime = System.currentTimeMillis() + NETWORK_REFRESH_BUFFER_DURATION;
 
         mUserActivityListener = new FormPageDisplayer.UserActivityListener() {
@@ -180,6 +186,7 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
             }
         });
         animator.start();
+        mBgThread.quit();
     }
 
     @Override

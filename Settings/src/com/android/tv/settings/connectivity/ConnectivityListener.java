@@ -28,6 +28,8 @@ import android.net.Network;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.HandlerThread;
+import android.os.Process;
 import android.support.annotation.UiThread;
 import android.telephony.PhoneStateListener;
 import android.telephony.SignalStrength;
@@ -51,6 +53,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
     private boolean mStarted;
 
     private WifiTracker mWifiTracker;
+    private final HandlerThread mBgThread;
 
     private final ConnectivityManager mConnectivityManager;
     private final WifiManager mWifiManager;
@@ -88,7 +91,9 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
         mWifiManager = mContext.getSystemService(WifiManager.class);
         mEthernetManager = mContext.getSystemService(EthernetManager.class);
         mListener = listener;
-        mWifiTracker = new WifiTracker(context, this, true, true);
+        mBgThread = new HandlerThread(TAG, Process.THREAD_PRIORITY_BACKGROUND);
+        mBgThread.start();
+        mWifiTracker = new WifiTracker(context, this, mBgThread.getLooper(), true, true);
     }
 
     /**
@@ -135,6 +140,13 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
                 telephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
             }
         }
+    }
+
+    /**
+     * Causes the background thread to quit.
+     */
+    public void destroy() {
+        mBgThread.quit();
     }
 
     public void setWifiListener(WifiNetworkListener wifiListener) {

@@ -188,6 +188,14 @@ public class MainFragment extends LeanbackPreferenceFragment {
         mConnectivityListener.stop();
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (mConnectivityListener != null) {
+            mConnectivityListener.destroy();
+        }
+    }
+
     private void hideIfIntentUnhandled(Preference preference) {
         if (preference == null) {
             return;

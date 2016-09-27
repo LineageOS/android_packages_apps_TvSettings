@@ -114,6 +114,14 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (mConnectivityListener != null) {
+            mConnectivityListener.destroy();
+        }
+    }
+
+    @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         getPreferenceManager().setPreferenceComparisonCallback(
                 new PreferenceManager.SimplePreferenceComparisonCallback());
