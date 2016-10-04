@@ -41,6 +41,16 @@
             android:title="@string/system_date_time"
             android:fragment="com.android.tv.settings.system.DateTimeFragment" />
         <Preference
+            android:icon="@drawable/ic_language"
+            android:key="language"
+            android:title="@string/system_language"
+            android:fragment="com.android.tv.settings.system.LanguageFragment" />
+        <Preference
+            android:icon="@drawable/ic_keyboard"
+            android:key="keyboard"
+            android:title="@string/system_keyboard"
+            android:fragment="com.android.tv.settings.system.KeyboardFragment" />
+        <Preference
             android:icon="@drawable/ic_mic"
             android:key="speech"
             android:title="@string/system_speech" >
