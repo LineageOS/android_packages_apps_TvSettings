@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.accessories;
 
+import android.app.Fragment;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
@@ -42,6 +43,7 @@ import android.util.Log;
 import com.android.tv.settings.R;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
 
@@ -63,6 +65,7 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
 
     private static final int UNPAIR_TIMEOUT = 5000;
 
+    private static final String ARG_DEVICE = "device";
     private static final String ARG_ACCESSORY_ADDRESS = "accessory_address";
     private static final String ARG_ACCESSORY_NAME = "accessory_name";
     private static final String ARG_ACCESSORY_ICON_ID = "accessory_icon_res";
@@ -88,30 +91,7 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
     };
 
     // Broadcast Receiver for Bluetooth related events
-    private final BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            BluetoothDevice device = intent
-                    .getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-            if (mUnpairing) {
-                if (mDevice.equals(device)) {
-                    // Done removing device, finish the activity
-                    mMsgHandler.removeCallbacks(mTimeoutRunnable);
-                    navigateBack();
-                }
-            }
-        }
-    };
-
-    // Internal message handler
-    private final Handler mMsgHandler = new Handler();
-
-    private final Runnable mTimeoutRunnable = new Runnable() {
-        @Override
-        public void run() {
-            navigateBack();
-        }
-    };
+    private BroadcastReceiver mBroadcastReceiver;
 
     public static BluetoothAccessoryFragment newInstance(String deviceAddress, String deviceName,
             int deviceImgId) {
@@ -147,11 +127,13 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
 
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
         if (btAdapter != null) {
-            Set<BluetoothDevice> bondedDevices = btAdapter.getBondedDevices();
-            for (BluetoothDevice device : bondedDevices) {
-                if (mDeviceAddress.equals(device.getAddress())) {
-                    mDevice = device;
-                    break;
+            final Set<BluetoothDevice> bondedDevices = btAdapter.getBondedDevices();
+            if (bondedDevices != null) {
+                for (BluetoothDevice device : bondedDevices) {
+                    if (mDeviceAddress.equals(device.getAddress())) {
+                        mDevice = device;
+                        break;
+                    }
                 }
             }
         }
@@ -173,11 +155,11 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
             mDeviceGatt = mDevice.connectGatt(getActivity(), true, new GattBatteryCallbacks());
         }
         // Set a broadcast receiver to let us know when the device has been removed
-        IntentFilter adapterIntentFilter = new IntentFilter();
+        final IntentFilter adapterIntentFilter = new IntentFilter();
         adapterIntentFilter.addAction(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
+        mBroadcastReceiver = new UnpairReceiver(this, mDevice);
         getActivity().registerReceiver(mBroadcastReceiver, adapterIntentFilter);
         if (mDevice != null && mDevice.getBondState() == BluetoothDevice.BOND_NONE) {
-            mMsgHandler.removeCallbacks(mTimeoutRunnable);
             navigateBack();
         }
     }
@@ -214,10 +196,16 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
 
         mUnpairPref = findPreference(KEY_UNPAIR);
         updatePrefsForUnpairing();
-        UnpairConfirmFragment.prepareArgs(mUnpairPref.getExtras(), mDeviceName, mDeviceImgId);
+        UnpairConfirmFragment.prepareArgs(
+                mUnpairPref.getExtras(), mDevice, mDeviceName, mDeviceImgId);
 
         mBatteryPref = findPreference(KEY_BATTERY);
         mBatteryPref.setVisible(false);
+    }
+
+    public void setUnpairing(boolean unpairing) {
+        mUnpairing = unpairing;
+        updatePrefsForUnpairing();
     }
 
     private void updatePrefsForUnpairing() {
@@ -236,37 +224,6 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
         // need to post this to avoid recursing in the fragment manager.
         mHandler.removeCallbacks(mBailoutRunnable);
         mHandler.post(mBailoutRunnable);
-    }
-
-    private void unpairDevice() {
-        if (mDevice != null) {
-            int state = mDevice.getBondState();
-
-            if (state == BluetoothDevice.BOND_BONDING) {
-                mDevice.cancelBondProcess();
-            }
-
-            if (state != BluetoothDevice.BOND_NONE) {
-                mUnpairing = true;
-                // Set a timeout, just in case we don't receive the unpair notification we
-                // use to finish the activity
-                mMsgHandler.postDelayed(mTimeoutRunnable, UNPAIR_TIMEOUT);
-                final boolean successful = mDevice.removeBond();
-                if (successful) {
-                    if (DEBUG) {
-                        Log.d(TAG, "Bluetooth device successfully unpaired.");
-                    }
-                    // set the dialog to a waiting state
-                    if (mUnpairPref != null) {
-                        updatePrefsForUnpairing();
-                    }
-                } else {
-                    Log.e(TAG, "Failed to unpair Bluetooth Device: " + mDevice.getName());
-                }
-            }
-        } else {
-            Log.e(TAG, "Bluetooth device not found. Address = " + mDeviceAddress);
-        }
     }
 
     private void renameDevice(String deviceName) {
@@ -330,7 +287,7 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
             if (GATT_BATTERY_LEVEL_CHARACTERISTIC_UUID.equals(characteristic.getUuid())) {
                 final int batteryLevel =
                         characteristic.getIntValue(BluetoothGattCharacteristic.FORMAT_UINT8, 0);
-                mMsgHandler.post(new Runnable() {
+                mHandler.post(new Runnable() {
                     @Override
                     public void run() {
                         if (mBatteryPref != null && !mUnpairing) {
@@ -388,12 +345,94 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
         }
     }
 
+    private static class UnpairReceiver extends BroadcastReceiver {
+
+        private final Fragment mFragment;
+        private final BluetoothDevice mDevice;
+
+        public UnpairReceiver(Fragment fragment, BluetoothDevice device) {
+            mFragment = fragment;
+            mDevice = device;
+        }
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final BluetoothDevice device = intent
+                    .getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+            final int bondState = intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE,
+                    BluetoothDevice.BOND_NONE);
+            if (bondState == BluetoothDevice.BOND_NONE && Objects.equals(mDevice, device)) {
+                // Device was removed, bail out of the fragment
+                if (mFragment instanceof BluetoothAccessoryFragment) {
+                    ((BluetoothAccessoryFragment) mFragment).navigateBack();
+                } else if (mFragment instanceof UnpairConfirmFragment) {
+                    ((UnpairConfirmFragment) mFragment).navigateBack();
+                } else {
+                    throw new IllegalStateException(
+                            "UnpairReceiver attached to wrong fragment class");
+                }
+            }
+        }
+    }
+
     public static class UnpairConfirmFragment extends GuidedStepFragment {
 
-        public static void prepareArgs(@NonNull Bundle args, String deviceName,
-                @DrawableRes int deviceImgId) {
+        private BluetoothDevice mDevice;
+        private BroadcastReceiver mBroadcastReceiver;
+        private final Handler mHandler = new Handler();
+
+        private Runnable mBailoutRunnable = new Runnable() {
+            @Override
+            public void run() {
+                if (isResumed() && !getFragmentManager().popBackStackImmediate()) {
+                    getActivity().onBackPressed();
+                }
+            }
+        };
+
+        private final Runnable mTimeoutRunnable = new Runnable() {
+            @Override
+            public void run() {
+                navigateBack();
+            }
+        };
+
+        public static void prepareArgs(@NonNull Bundle args, BluetoothDevice device,
+                String deviceName, @DrawableRes int deviceImgId) {
+            args.putParcelable(ARG_DEVICE, device);
             args.putString(ARG_ACCESSORY_NAME, deviceName);
             args.putInt(ARG_ACCESSORY_ICON_ID, deviceImgId);
+        }
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            mDevice = getArguments().getParcelable(ARG_DEVICE);
+            super.onCreate(savedInstanceState);
+        }
+
+        @Override
+        public void onStart() {
+            super.onStart();
+            if (mDevice.getBondState() == BluetoothDevice.BOND_NONE) {
+                navigateBack();
+            }
+            final IntentFilter adapterIntentFilter = new IntentFilter();
+            adapterIntentFilter.addAction(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
+            mBroadcastReceiver = new UnpairReceiver(this, mDevice);
+            getActivity().registerReceiver(mBroadcastReceiver, adapterIntentFilter);
+        }
+
+        @Override
+        public void onStop() {
+            super.onStop();
+            getActivity().unregisterReceiver(mBroadcastReceiver);
+        }
+
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            mHandler.removeCallbacks(mTimeoutRunnable);
+            mHandler.removeCallbacks(mBailoutRunnable);
         }
 
         @NonNull
@@ -421,13 +460,44 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
         @Override
         public void onGuidedActionClicked(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_OK) {
-                final BluetoothAccessoryFragment fragment =
-                        (BluetoothAccessoryFragment) getTargetFragment();
-                fragment.unpairDevice();
+                unpairDevice();
             } else if (action.getId() == GuidedAction.ACTION_ID_CANCEL) {
                 getFragmentManager().popBackStack();
             } else {
                 super.onGuidedActionClicked(action);
+            }
+        }
+
+        private void navigateBack() {
+            // need to post this to avoid recursing in the fragment manager.
+            mHandler.removeCallbacks(mBailoutRunnable);
+            mHandler.post(mBailoutRunnable);
+        }
+
+        private void unpairDevice() {
+            if (mDevice != null) {
+                int state = mDevice.getBondState();
+
+                if (state == BluetoothDevice.BOND_BONDING) {
+                    mDevice.cancelBondProcess();
+                }
+
+                if (state != BluetoothDevice.BOND_NONE) {
+                    ((BluetoothAccessoryFragment) getTargetFragment()).setUnpairing(true);
+                    // Set a timeout, just in case we don't receive the unpair notification we
+                    // use to finish the activity
+                    mHandler.postDelayed(mTimeoutRunnable, UNPAIR_TIMEOUT);
+                    final boolean successful = mDevice.removeBond();
+                    if (successful) {
+                        if (DEBUG) {
+                            Log.d(TAG, "Bluetooth device successfully unpaired.");
+                        }
+                    } else {
+                        Log.e(TAG, "Failed to unpair Bluetooth Device: " + mDevice.getName());
+                    }
+                }
+            } else {
+                Log.e(TAG, "Bluetooth device not found. Address = " + mDevice.getAddress());
             }
         }
     }
