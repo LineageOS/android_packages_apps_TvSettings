@@ -195,7 +195,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7380479044141040849">"Подешавања проксија нису важећа"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7228948551397955678">"Подешавања за IP нису важећа"</string>
     <string name="title_wifi_known_network" msgid="819998498700202436">"<xliff:g id="SSID">%1$s</xliff:g> је сачувана мрежа"</string>
-    <string name="wifi_action_try_again" msgid="3308643222864163092">"Покушај поново"</string>
+    <string name="wifi_action_try_again" msgid="3308643222864163092">"Пробај поново"</string>
     <string name="wifi_action_view_available_networks" msgid="560074338908947419">"Прикажи доступне мреже"</string>
     <string name="wifi_connecting" msgid="1299861268647323455">"Повезивање са <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_saving" msgid="1269061570772019215">"Чување конфигурације за <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -314,7 +314,7 @@
     <string name="system_package" msgid="9200255718634512790">"Није могуће инсталирати ажурирања система на спољашњим медијима."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"Администратор уређаја не може да се инсталира на спољним медијумима."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Сазнајте више"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Покушај поново"</string>
+    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Пробај поново"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Претрага WPS рутера…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Притисните дугме Заштићено подешавање Wi-Fi-ја на рутеру.\nМожда је наведено као „WPS“ или има симбол са леве стране."</string>
     <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Унесите PIN <xliff:g id="NUMBER">%1$s</xliff:g> на Wi-Fi рутеру"</string>
@@ -338,7 +338,7 @@
   </string-array>
   <string-array name="auto_date_time_ts_entries">
     <item msgid="8463479794795616025">"Користи време мреже"</item>
-    <item msgid="2475903014233987786">"Користи време транспортног стрима"</item>
+    <item msgid="2475903014233987786">"Користи време превозног стрима"</item>
     <item msgid="150957081326946463">"Искључи"</item>
   </string-array>
     <string name="system_location" msgid="502463575930545806">"Локација"</string>
@@ -449,7 +449,6 @@
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Размера анимације прелаза"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Animator размера трајања"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Омогућен је строги режим"</string>
-    <string name="system_show_cpu_usage" msgid="4797599582027671138">"Прикажи коришћење процесора"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Приказивање профила помоћу GPU-а"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Омогући трагове"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"Не чувај активности"</string>
@@ -467,7 +466,6 @@
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Најбоље ка најгорем: плаво, зелено, светлоцрвено, црвено"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Осветли све површине прозора када се ажурирају"</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Екран трепери код дугих операција аплик. на глав. нити"</string>
-    <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"Елемент постављен преко екрана који приказује тренутну употребу процесора"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Мери време приказивања у adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"Укључи"</string>
     <string name="action_off_title" msgid="3157728958166559966">"Искључи"</string>
@@ -592,9 +590,9 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Подесите нови PIN"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Поново унесите нови PIN"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Унесите стари PIN"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Унели сте погрешан PIN 5 пута.\nПокушајте поново за <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> сек."</string>
-    <string name="pin_toast_wrong" msgid="4628358195224633248">"Погрешан PIN. Покушајте поново"</string>
-    <string name="pin_toast_not_match" msgid="5886041789737632996">"Покушајте поново, PIN се не подудара"</string>
+    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Унели сте погрешан PIN 5 пута.\nПробајте поново за <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> сек."</string>
+    <string name="pin_toast_wrong" msgid="4628358195224633248">"Погрешан PIN. Пробајте поново"</string>
+    <string name="pin_toast_not_match" msgid="5886041789737632996">"Пробајте поново, PIN се не подудара"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Унесите лозинку за <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Веза је успостављена"</string>
     <string name="wifi_setup_save_success" msgid="4785799603638549254">"Сачувано је"</string>
