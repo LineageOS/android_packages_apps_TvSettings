@@ -133,12 +133,10 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
             Settings.Secure.putStringForUser(getActivity().getContentResolver(),
                     Settings.Secure.DEFAULT_INPUT_METHOD, imid, userId);
 
-            if (ActivityManagerNative.isSystemReady()) {
-                Intent intent = new Intent(Intent.ACTION_INPUT_METHOD_CHANGED);
-                intent.addFlags(Intent.FLAG_RECEIVER_REPLACE_PENDING);
-                intent.putExtra("input_method_id", imid);
-                getActivity().sendBroadcastAsUser(intent, UserHandle.CURRENT);
-            }
+            Intent intent = new Intent(Intent.ACTION_INPUT_METHOD_CHANGED);
+            intent.addFlags(Intent.FLAG_RECEIVER_REPLACE_PENDING);
+            intent.putExtra("input_method_id", imid);
+            getActivity().sendBroadcastAsUser(intent, UserHandle.CURRENT);
         } catch (RemoteException e) {
             Log.d(TAG, "set default input method remote exception");
         }
