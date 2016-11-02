@@ -463,8 +463,8 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             sCreateRestrictedProfileTask = new CreateRestrictedProfileTask(getContext(),
                     mUserManager);
             sCreateRestrictedProfileTask.execute();
+            mCreatingRestrictedProfile = true;
         }
-        mCreatingRestrictedProfile = true;
     }
 
     private void removeRestrictedUser() {
@@ -513,6 +513,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             }
         }
         mCreatingRestrictedProfile = false;
+        sCreateRestrictedProfileTask = null;
     }
 
     private static class CreateRestrictedProfileTask extends AsyncTask<Void, Void, UserInfo> {
@@ -530,8 +531,11 @@ public class SecurityFragment extends LeanbackPreferenceFragment
                     mContext.getString(R.string.user_new_profile_name),
                     UserInfo.FLAG_RESTRICTED, UserHandle.myUserId());
             if (restrictedUserInfo == null) {
-                Log.wtf(TAG, "Got back a null user handle!");
-                return null;
+                final UserInfo existingUserInfo = findRestrictedUser(mUserManager);
+                if (existingUserInfo == null) {
+                    Log.wtf(TAG, "Got back a null user handle!");
+                }
+                return existingUserInfo;
             }
             int userId = restrictedUserInfo.id;
             UserHandle user = new UserHandle(userId);
@@ -546,8 +550,8 @@ public class SecurityFragment extends LeanbackPreferenceFragment
 
         @Override
         protected void onPostExecute(UserInfo result) {
-            sCreateRestrictedProfileTask = null;
             if (result == null) {
+                sCreateRestrictedProfileTask = null;
                 return;
             }
             LocalBroadcastManager.getInstance(mContext).sendBroadcast(
