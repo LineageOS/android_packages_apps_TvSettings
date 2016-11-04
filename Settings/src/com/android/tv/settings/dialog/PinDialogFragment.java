@@ -281,9 +281,9 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
                 }
                 break;
             case PIN_DIALOG_TYPE_OLD_PIN:
+                resetPinInput();
                 if (isPinCorrect(pin)) {
                     mType = PIN_DIALOG_TYPE_NEW_PIN;
-                    resetPinInput();
                     mTitleView.setText(R.string.pin_enter_new_pin);
                 } else {
                     handleWrongPin();
