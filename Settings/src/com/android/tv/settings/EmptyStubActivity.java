@@ -14,14 +14,13 @@
  * limitations under the License
  */
 
-package com.android.tv.settings.system;
+package com.android.tv.settings;
 
 import android.annotation.Nullable;
 import android.app.Activity;
 import android.os.Bundle;
 
-// TODO: implement a webview choice screen here. See WebViewImplementation in mobile Settings
-public class WebViewImplementation extends Activity {
+public class EmptyStubActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
