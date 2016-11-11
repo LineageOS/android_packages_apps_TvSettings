@@ -560,9 +560,8 @@
             </intent-filter>
         </activity>
 
-        <!-- Dummy activity for CTS
-         TODO: implement something useful -->
-        <activity android:name=".system.WebViewImplementation"
+        <!-- Dummy intent filters for CTS TODO: implement something useful -->
+        <activity android:name=".EmptyStubActivity"
                   android:exported="true"
                   android:excludeFromRecents="true"
                   android:theme="@android:style/Theme.NoDisplay">
@@ -570,8 +569,25 @@
                 <action android:name="android.settings.WEBVIEW_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
-                       android:value="true" />
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.IGNORE_BACKGROUND_DATA_RESTRICTIONS_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.MANAGE_DEFAULT_APPS_SETTINGS" />
+                <action android:name="android.settings.HOME_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 
