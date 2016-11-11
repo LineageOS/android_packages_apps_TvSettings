@@ -101,6 +101,10 @@ public class WpsConnectionActivity extends DialogActivity
         mWifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 
         overridePendingTransition(R.anim.wps_activity_open_in, R.anim.wps_activity_open_out);
+
+        if (ThemeHelper.fromSetupWizard(getIntent())) {
+            setTitle(getResources().getString(R.string.wifi_wps_title));
+        }
     }
 
     @Override
