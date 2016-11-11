@@ -17,7 +17,7 @@
 package com.android.tv.settings.system;
 
 import android.accounts.AccountManager;
-import android.app.ActivityManagerNative;
+import android.app.ActivityManager;
 import android.app.Fragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -452,7 +452,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
 
     private static void switchUserNow(int userId) {
         try {
-            ActivityManagerNative.getDefault().switchUser(userId);
+            ActivityManager.getService().switchUser(userId);
         } catch (RemoteException re) {
             Log.e(TAG, "Caught exception while switching user! ", re);
         }

@@ -19,7 +19,6 @@ package com.android.tv.settings.system.development;
 import android.Manifest;
 import android.app.Activity;
 import android.app.ActivityManager;
-import android.app.ActivityManagerNative;
 import android.app.AppOpsManager;
 import android.app.admin.DevicePolicyManager;
 import android.app.backup.IBackupManager;
@@ -686,7 +685,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
 
     private void writeDebuggerOptions() {
         try {
-            ActivityManagerNative.getDefault().setDebugApp(
+            ActivityManager.getService().setDebugApp(
                     mDebugApp, mWaitForDebugger.isChecked(), true);
         } catch (RemoteException ex) {
             // ignore
@@ -732,7 +731,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
 
     private static void resetDebuggerOptions() {
         try {
-            ActivityManagerNative.getDefault().setDebugApp(
+            ActivityManager.getService().setDebugApp(
                     null, false, true);
         } catch (RemoteException ex) {
             // ignore
@@ -1318,7 +1317,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
 
     private void writeImmediatelyDestroyActivitiesOptions() {
         try {
-            ActivityManagerNative.getDefault().setAlwaysFinish(
+            ActivityManager.getService().setAlwaysFinish(
                     mImmediatelyDestroyActivities.isChecked());
         } catch (RemoteException ex) {
             // ignore
@@ -1419,7 +1418,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
 
     private void updateAppProcessLimitOptions() {
         try {
-            int limit = ActivityManagerNative.getDefault().getProcessLimit();
+            int limit = ActivityManager.getService().getProcessLimit();
             CharSequence[] values = mAppProcessLimit.getEntryValues();
             for (int i=0; i<values.length; i++) {
                 int val = Integer.parseInt(values[i].toString());
@@ -1442,7 +1441,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
     private void writeAppProcessLimitOptions(Object newValue) {
         try {
             int limit = newValue != null ? Integer.parseInt(newValue.toString()) : -1;
-            ActivityManagerNative.getDefault().setProcessLimit(limit);
+            ActivityManager.getService().setProcessLimit(limit);
             updateAppProcessLimitOptions();
         } catch (RemoteException e) {
             // ignore

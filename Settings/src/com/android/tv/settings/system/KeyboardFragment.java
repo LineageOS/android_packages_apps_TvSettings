@@ -16,7 +16,7 @@
 
 package com.android.tv.settings.system;
 
-import android.app.ActivityManagerNative;
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -129,7 +129,7 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
 
         int userId;
         try {
-            userId = ActivityManagerNative.getDefault().getCurrentUser().id;
+            userId = ActivityManager.getService().getCurrentUser().id;
             Settings.Secure.putStringForUser(getActivity().getContentResolver(),
                     Settings.Secure.DEFAULT_INPUT_METHOD, imid, userId);
 
