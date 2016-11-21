@@ -24,6 +24,7 @@
     <string name="header_category_preferences" msgid="175105555164713972">"환경설정"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"리모컨 및 액세서리"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"개인"</string>
+    <string name="accounts_category_title" msgid="7591072907146317425">"계정"</string>
     <string name="add_account" msgid="4098060223200619258">"계정 추가"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"계정 삭제"</string>
     <string name="account_sync" msgid="773808124331714965">"동기화된 앱 선택"</string>
@@ -35,7 +36,7 @@
     <string name="account_remove_failed" msgid="980654375770693544">"계정을 삭제할 수 없음"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"지금 동기화하려면 터치<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"지금 동기화<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"동기화 실패"</string>
     <string name="sync_active" msgid="6891115263481154378">"동기화 사용 중"</string>
@@ -45,12 +46,13 @@
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Wi‑Fi 항상 검색"</string>
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"Wi‑Fi가 꺼진 경우에도 Google 위치 서비스 및 기타 앱이 네트워크를 검색하도록 합니다."</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
-    <string name="device_daydream" msgid="4933581408059561077">"화면 보호기"</string>
+    <string name="device_daydream" msgid="3354366974209179614">"화면 보호기"</string>
     <string name="device_display" msgid="101455384386372747">"디스플레이"</string>
+    <string name="device_sound" msgid="9214182566287657481">"소리"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"서라운드 사운드"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"시스템 사운드"</string>
     <string name="device_apps" msgid="9180435229638772838">"앱"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"저장소 및 초기화"</string>
-    <string name="device_storage" msgid="5536683600091277826">"저장소"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"백업 및 복원"</string>
     <string name="device_reset" msgid="2827002349560023125">"초기화"</string>
     <string name="device_calibration" msgid="8632962533376605191">"보정"</string>
@@ -214,20 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"올바른 게이트웨이 주소를 입력하세요."</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"올바른 DNS 주소를 입력하세요."</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"0에서 32 사이의 네트워크 접두어 길이를 입력하세요."</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"올바른 IP 주소를 입력하세요.\n예: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"올바른 IP 주소를 입력하거나 비워두세요.\n예: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"올바른 IP 주소를 입력하거나 비워두세요.\n예: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"유효한 IP 주소를 입력하거나 비워두세요.\n예: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"올바른 네트워크 프리픽스 길이를 입력하세요.\n예: 24"</string>
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"유효한 IP 주소를 입력합니다.\n예: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"유효한 IP 주소를 입력하거나 비워둡니다.\n예: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"유효한 IP 주소를 입력하거나 비워둡니다.\n예: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"유효한 IP 주소를 입력하거나 비워둡니다.\n예: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"유효한 네트워크 접두어 길이를 입력합니다.\n예: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"호스트 이름이 유효하지 않습니다."</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"이 제외 목록은 유효하지 않습니다. 제외된 도메인을 콤마로 구분한 목록을 입력하세요."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"포트 입력란은 비워 둘 수 없습니다."</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"호스트 입력란이 비어 있는 경우 포트 입력란을 비워두세요."</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"포트가 유효하지 않습니다."</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP 프록시가 브라우저에서는 사용되지만 다른 앱에서는 사용되지 않을 수 있습니다."</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"올바른 포트를 입력하세요.\n예: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"제외할 도메인을 쉼표로 구분하여 입력하거나 비워두세요.\n예: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"올바른 호스트 이름을 입력하세요.\n예: proxy.example.com"</string>
+    <string name="proxy_port_description" msgid="6791098212244367568">"유효한 포트를 입력합니다.\n예: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"제외된 도메인의 쉼표로 구분된 목록을 입력하거나 비워둡니다.\n예: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"유효한 호스트 이름을 입력합니다.\n예: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"네트워크에 연결됨"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"네트워크에 연결되지 않음"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"이미 <xliff:g id="SSID">%1$s</xliff:g>에 연결되어 있습니다. 다른 네트워크에 연결하시겠습니까?"</string>
@@ -246,10 +248,14 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"캐시된 데이터"</string>
     <string name="storage_eject" msgid="113476702798691558">"제거"</string>
     <string name="storage_format" msgid="3759273736493279595">"삭제 및 포맷"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"삭제 및 기기 스토리지로 포맷"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"삭제 및 이동식 스토리지로 포맷"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"기기 저장소로 포맷"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"연결되지 않음"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"데이터 이전"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"이 내부 저장소 저장 안함"</string>
+    <string name="storage_migrate" msgid="1304058078948715456">"이 스토리지로 데이터 이전"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"다른 스토리지로 데이터 이전"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"백업할 앱이 없습니다."</string>
+    <string name="storage_forget" msgid="8731986045697320463">"이 기기 저장소 설정 삭제"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"이 드라이브에 포함된 앱 또는 데이터를 사용하려면 드라이브를 다시 삽입하세요. 또는 드라이브를 사용할 수 없는 경우 저장소를 저장하지 않을 수도 있습니다.\n\n저장하지 않는 경우 드라이브에 포함된 모든 데이터가 완전히 삭제됩니다.\n\n나중에 앱을 다시 설치할 수는 있으나 드라이브에 저장된 데이터가 모두 사라집니다."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"기기 저장용량"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"이동식 저장소"</string>
@@ -262,12 +268,13 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"제거할 드라이브를 찾을 수 없습니다."</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g>이(가) 포맷되었습니다."</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g>을(를) 포맷하지 못했습니다."</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"내부 저장소로 포맷"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"기기 저장소로 포맷"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"보안을 유지하려면 USB 드라이브를 포맷해야 합니다. 안전하게 포맷된 후 이 드라이브는 이 기기에서만 작동합니다. 포맷하면 드라이브에 저장되어 있는 모든 데이터가 삭제됩니다. 데이터가 손실되지 않도록 하려면 백업하는 것이 좋습니다."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"삭제 및 포맷"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"포맷 후에는 이 USB 드라이브를 다른 기기에서 사용할 수 있습니다. 모든 데이터가 삭제되므로 먼저 다른 내부 저장소로 앱을 이동하여 백업하는 것이 좋습니다."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"포맷 후에는 이 USB 드라이브를 다른 기기에서 사용할 수 있습니다. 모든 데이터가 삭제되므로 먼저 다른 기기 저장소로 앱을 이동하여 백업하는 것이 좋습니다."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB 드라이브 포맷 중…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"시간이 조금 걸릴 수 있습니다. 드라이브를 제거하지 마세요."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"데이터를 이전할 스토리지 선택"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"데이터를 <xliff:g id="NAME">%1$s</xliff:g>(으)로 이동"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"사진, 파일, 앱 데이터를 <xliff:g id="NAME">%1$s</xliff:g>(으)로 이동합니다. 몇 분 정도 소요될 수 있으며 이동 중에 일부 앱이 제대로 작동하지 않을 수 있습니다."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"지금 이동"</string>
@@ -283,18 +290,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g>에 저장된 앱"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g>에 저장된 앱 및 데이터"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> 사용 가능"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"내부 저장소 제거"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"기기의 저장소를 제거하면 저장소에 있는 앱 작동이 중단됩니다. 이 USB 드라이브를 포맷하면 이 기기에서만 작동하며 다른 기기에서는 작동하지 않습니다."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> 제거 중..."</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"기기 저장소 분리"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"기기의 저장소를 분리하면 저장소에 있는 앱 작동이 중단됩니다. 이 USB 드라이브를 포맷하면 이 기기에서만 작동하며 다른 기기에서는 작동하지 않습니다."</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"<xliff:g id="NAME">%1$s</xliff:g> 제거 중..."</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"사용된 저장용량"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> 이동 중..."</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"이동 중에 드라이브를 삭제하지 마세요.\n이동이 완료될 때까지 이 기기에서 <xliff:g id="APPNAME">%1$s</xliff:g> 앱을 사용할 수 없습니다."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"내부 저장소를 저장하지 않으시겠습니까?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"기기 저장소를 삭제하시겠습니까?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'저장 안함\'을 선택하면 이 드라이브에 저장된 모든 데이터가 삭제됩니다. 계속하시겠습니까?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"저장 안함"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB 드라이브 연결됨"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"탐색"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"내부 저장소로 설정"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"기기 저장소로 설정"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"이동식 저장소로 설정"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"제거"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> 삭제됨"</string>
@@ -304,6 +311,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"복제 방지된 앱입니다."</string>
     <string name="invalid_location" msgid="5269044848535157307">"설치 위치가 잘못되었습니다."</string>
     <string name="system_package" msgid="9200255718634512790">"외부 장치에 시스템 업데이트를 설치할 수 없습니다."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"외부 장치에 기기 관리자를 설치할 수 없습니다."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"자세히 알아보기"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"다시 시도"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS 라우터 검색 중…"</string>
@@ -363,7 +371,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"사용 안함"</string>
     <string name="display_options" msgid="5504549024985225774">"표시 옵션"</string>
     <string name="captions_configure" msgid="5537548915977371014">"설정"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"언어"</string>
+    <string name="captions_language" msgid="2835554055388996343">"언어"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"텍스트 크기"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"캡션 스타일"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"맞춤 옵션"</string>
@@ -371,12 +379,19 @@
     <string name="captions_textcolor" msgid="3233568269335050287">"텍스트 색상"</string>
     <string name="captions_edgetype" msgid="841331274533086103">"가장자리 유형"</string>
     <string name="captions_edgecolor" msgid="845125757332620884">"가장자리 색상"</string>
+    <string name="captions_backgroundshow" msgid="9177987321551275698">"백그라운드 표시"</string>
     <string name="captions_backgroundcolor" msgid="448518890988125453">"배경 색상"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"배경 불투명도"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"자막이 다음과 같이 표시됩니다."</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"텍스트 불투명도"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"창 표시"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"창 색상"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"창 불투명도"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"검은색 바탕에 흰색"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"흰색 바탕에 검은색"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"검은색 바탕에 노란색"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"파란색 바탕에 노란색"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"맞춤"</string>
     <string name="color_white" msgid="65537523012024751">"흰색"</string>
     <string name="color_black" msgid="8804213372565106403">"검정색"</string>
     <string name="color_red" msgid="5630553203246525989">"빨간색"</string>
@@ -433,7 +448,6 @@
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"전환 애니메이션 배율"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"애니메이터 길이 배율"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"엄격 모드 사용"</string>
-    <string name="system_show_cpu_usage" msgid="4797599582027671138">"CPU 사용량 표시"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"GPU 렌더링 프로파일"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"추적 사용"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"활동 보관 안함"</string>
@@ -451,7 +465,6 @@
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"오버드로가 많은 순으로: 파란색, 녹색, 옅은 빨간색, 빨간색"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"업데이트할 때 전체 창 표면  깜박이기"</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"앱이 기본 스레드에서 오래 작업하면 화면 깜박이기"</string>
-    <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"현재 CPU 사용량을 나타내는 화면 오버레이"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"adb shell dumpsys gfxinfo에서 렌더링 시간 측정"</string>
     <string name="action_on_title" msgid="6852389884236870765">"사용"</string>
     <string name="action_off_title" msgid="3157728958166559966">"사용 안함"</string>
@@ -461,6 +474,7 @@
     <string name="disagree" msgid="9170636026862400981">"동의 안함"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"알 수 없는 출처"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Play 스토어가 아닌 출처의 앱을 설치하도록 허용합니다."</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"알 수 없는 소스 허용"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"기기 및 개인 정보는 출처를 알 수 없는 앱의 공격에 더욱 취약합니다. 이러한 앱을 사용하여 발생할 수 있는 기기 손상이나 데이터 손실에 대해 사용자가 단독으로 책임이 있음을 동의합니다."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"앱 확인"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"유해할 수 있는 앱은 설치를 허용하지 않거나 설치 전에 경고를 표시합니다."</string>
@@ -519,24 +533,25 @@
     <string name="inputs_game" msgid="1114086481110094757">"게임 콘솔"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"맞춤 이름"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"<xliff:g id="INPUT">%1$s</xliff:g> 입력 이름을 입력합니다."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"숨김"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"입력을 전환할 때 표시되지 않음"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"맞춤 이름:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"이 입력 표시"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"이름"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI 제어"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"TV로 HDMI 기기를 제어하도록 허용합니다."</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"기기 자동 종료"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"TV로 HDMI 기기 종료"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"TV 자동 켜기"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI 기기로 TV 전원 켜기"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
       <item quantity="other">연결된 입력</item>
       <item quantity="one">연결된 입력</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
       <item quantity="other">대기 입력</item>
       <item quantity="one">대기 입력</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
       <item quantity="other">연결되지 않은 입력</item>
       <item quantity="one">연결되지 않은 입력</item>
     </plurals>
@@ -550,6 +565,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"제한된 프로필로 전환"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"제한된 프로필 종료"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"제한된 프로필 삭제"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"제한된 프로필 만들기"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"설정"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"허용된 앱"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
@@ -573,8 +589,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN이 잘못되었습니다. 다시 시도해 주세요."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"다시 시도해 주세요. PIN이 일치하지 않습니다."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> 비밀번호 입력"</string>
-    <string name="wifi_setup_connection_success" msgid="6262755735033937164">"연결되었습니다."</string>
-    <string name="wifi_setup_save_success" msgid="4829154865874318015">"저장되었습니다."</string>
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"연결되었습니다."</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"저장되었습니다."</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"버전 <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"열기"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"강제 종료"</string>
@@ -601,13 +617,13 @@
     <string name="settings_cancel" msgid="304280412158061225">"취소"</string>
     <string name="settings_on" msgid="6892236264945435013">"사용"</string>
     <string name="settings_off" msgid="449272161738237637">"사용 안함"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"없음"</string>
-    <string name="device_daydreams_select" msgid="3691552535056569158">"화면 보호기"</string>
+    <string name="device_daydreams_none" msgid="2767107052779579259">"화면 사용 중지"</string>
+    <string name="device_daydreams_select" msgid="2112338101206187695">"화면 보호기"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"지금 시작"</string>
-    <string name="device_daydreams_sleep" msgid="8766795993034660366">"화면 보호기 전환 시점"</string>
-    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"설정한 비활성 상태가 지나면 화면 보호기가 실행됩니다. 화면 보호기를 선택하지 않은 경우에는 디스플레이가 꺼집니다."</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"시작 시기"</string>
+    <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"화면 보호기는 비활성 상태가 지속되면 실행됩니다. 화면 보호기를 선택하지 않은 경우에는 디스플레이가 꺼집니다."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"비활동 기간 <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> 이후"</string>
-    <string name="device_daydreams_screen_off" msgid="5002473979169042970">"절전 모드 전환 시점"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"기기 절전 모드로 설정"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"설정한 비활성 상태가 지나면 화면이 꺼집니다."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"현재 백업한 데이터를 저장 중인 계정이 없습니다."</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -642,4 +658,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Android 보안 패치 수준"</string>
     <string name="choose_application" msgid="5662960665577780353">"애플리케이션 선택"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(베타)"</string>
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"안전 모드로 재부팅"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"안전 모드로 재부팅하시겠습니까?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"그러면 설치한 모든 제3자 애플리케이션을 사용할 수 없게 됩니다. 재부팅을 반복하면 애플리케이션이 복원됩니다."</string>
 </resources>

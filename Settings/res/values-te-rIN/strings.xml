@@ -24,6 +24,7 @@
     <string name="header_category_preferences" msgid="175105555164713972">"ప్రాధాన్యతలు"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"రిమోట్ &amp; ఉపకరణాలు"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"వ్యక్తిగతం"</string>
+    <string name="accounts_category_title" msgid="7591072907146317425">"ఖాతాలు"</string>
     <string name="add_account" msgid="4098060223200619258">"ఖాతాను జోడించు"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"ఖాతాను తీసివేయి"</string>
     <string name="account_sync" msgid="773808124331714965">"సమకాలీకృత అనువర్తనాలను ఎంచుకోండి"</string>
@@ -35,7 +36,7 @@
     <string name="account_remove_failed" msgid="980654375770693544">"ఖాతాను తీసివేయడం సాధ్యపడదు"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"ఇప్పుడే సమకాలీకరించడానికి తాకండి<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"ఇప్పుడే సమకాలీకరించండి<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"సమకాలీకరణ విఫలమైంది"</string>
     <string name="sync_active" msgid="6891115263481154378">"సమకాలీకరణ సక్రియంగా ఉంది"</string>
@@ -45,12 +46,13 @@
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"స్కానింగ్ ఎల్లప్పుడూ అందుబాటులో ఉంటుంది"</string>
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"Wi‑Fi ఆఫ్‌లో ఉన్నప్పుడు కూడా నెట్‌వర్క్‌ల కోసం స్కాన్ చేయడానికి google స్థాన సేవ మరియు ఇతర అనువర్తనాలను అనుమతించండి"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
-    <string name="device_daydream" msgid="4933581408059561077">"డేడ్రీమ్"</string>
+    <string name="device_daydream" msgid="3354366974209179614">"స్క్రీన్ సేవర్"</string>
     <string name="device_display" msgid="101455384386372747">"ప్రదర్శన"</string>
+    <string name="device_sound" msgid="9214182566287657481">"ధ్వని"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"పరిసర ధ్వని"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"సిస్టమ్ ధ్వనులు"</string>
     <string name="device_apps" msgid="9180435229638772838">"అనువర్తనాలు"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"నిల్వ &amp; రీసెట్"</string>
-    <string name="device_storage" msgid="5536683600091277826">"నిల్వ"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"బ్యాకప్ &amp; పునరుద్ధరణ"</string>
     <string name="device_reset" msgid="2827002349560023125">"ఫ్యాక్టరీ డేటా రీసెట్ చేయి"</string>
     <string name="device_calibration" msgid="8632962533376605191">"క్రమాంకనం"</string>
@@ -214,20 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"చెల్లుబాటు అయ్యే గేట్‌వే చిరునామాను నమోదు చేయండి"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"చెల్లుబాటు అయ్యే DNS చిరునామాను నమోదు చేయండి"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"నెట్. ఆది. పొడ. 0 మరియు 32 మధ్య ఉండేలా నమో. చేయం."</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"చెల్లుబాటు అయ్యే IP చిరునామాను నమోదు చేయండి.\nఉదాహరణ: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"చెల్లుబాటు అయ్యే IP చిరునామాను నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"చెల్లుబాటు అయ్యే IP చిరునామాను నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"చెల్లుబాటు అయ్యే IP చిరునామాను నమోదు చేయండి లేదా ఖాళీగా వదిలిపెట్టండి.\nఉదాహరణ: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"చెల్లుబాటు అయ్యే నెట్‌వర్క్ ఆదిప్రత్యయం పొడవును నమోదు చేయండి.\nఉదాహరణ: 24"</string>
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"చెల్లుబాటు అయ్యే IP చిరునామాని నమోదు చేయండి.\nఉదాహరణ: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"చెల్లుబాటు అయ్యే IP చిరునామాని నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"చెల్లుబాటు అయ్యే IP చిరునామాని నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"చెల్లుబాటు అయ్యే IP చిరునామాని నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"చెల్లుబాటు అయ్యే నెట్‌వర్క్ ఆదిప్రత్యయ పొడవుని నమోదు చేయండి.\nఉదాహరణ: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"హోస్ట్ పేరు చెల్లదు"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"ఈ మినహాయింపు జాబితా చెల్లదు. కామాతో వేరు చేసిన మినహాయింపు డొమైన్‌ల జాబితాను నమోదు చేయండి."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"పోర్ట్ ఫీల్డ్ ఖాళీగా ఉండకూడదు"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"హోస్ట్ ఫీల్డ్ ఖాళీగా ఉంటే, పోర్ట్ ఫీల్డ్‌ని ఖాళీగా వదిలిపెట్టండి"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"పోర్ట్ చెల్లదు"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP ప్రాక్సీని బ్రౌజర్ ఉపయోగిస్తుంది కానీ ఇతర అనువర్తనాలు ఉపయోగించవు"</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"చెల్లుబాటు అయ్యే పోర్ట్‌ను నమోదు చేయండి.\nఉదాహరణ: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"మినహాయించిన డొమైన్‌లను కామాతో వేరు చేస్తూ జాబితా రూపంలో నమోదు చేయండి లేదా ఖాళీగా వదిలిపెట్టండి.\nఉదాహరణ: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"చెల్లుబాటు అయ్యే హోస్ట్‌పేరును నమోదు చేయండి.\nఉదాహరణ: proxy.example.com"</string>
+    <string name="proxy_port_description" msgid="6791098212244367568">"చెల్లుబాటు అయ్యే పోర్ట్‌ను నమోదు చేయండి.\nఉదాహరణ: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"మినహాయించిన డొమైన్‌లను కామాతో వేరు చేస్తూ జాబితా రూపంలో నమోదు చేయండి లేదా ఖాళీగా వదిలివేయండి.\nఉదాహరణ: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"చెల్లుబాటు అయ్యే హోస్ట్ పేరుని నమోదు చేయండి.\nఉదాహరణ: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"నెట్‌వర్క్ కనెక్ట్ చేయబడింది"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"నెట్‌వర్క్ కనెక్ట్ కాలేదు"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"ఇప్పటికే <xliff:g id="SSID">%1$s</xliff:g>కి కనెక్ట్ చేయబడింది. వేరొక నెట్‌వర్క్‌కి కనెక్ట్ చేయాలా?"</string>
@@ -246,10 +248,14 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"కాష్ చేసిన డేటా"</string>
     <string name="storage_eject" msgid="113476702798691558">"తొలగించు"</string>
     <string name="storage_format" msgid="3759273736493279595">"డేటా తొలగించి, ఫార్మాట్ చేయి"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"డేటాను తొలగించి, పరికర నిల్వగా ఫార్మాట్ చేయి"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"డేటాను తొలగించి, తీసివేయదగిన నిల్వగా ఫార్మాట్ చేయి"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"పరికర నిల్వగా ఫార్మాట్ చేయి"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"కనెక్ట్ చేయబడలేదు"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"డేటాను తరలించు"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"ఈ అంతర్గత నిల్వను విస్మరించు"</string>
+    <string name="storage_migrate" msgid="1304058078948715456">"డేటాను ఈ నిల్వకు తరలించు"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"డేటాను వేరే నిల్వకు తరలించు"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"బ్యాకప్ చేయడానికి అనువర్తనాలు ఏవీ లేవు"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"ఈ పరికర నిల్వను విస్మరించు"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"ఈ డ్రైవ్ కలిగి ఉన్న అనువర్తనాలు లేదా డేటాను ఉపయోగించడానికి, దాన్ని మళ్లీ చొప్పించండి. డ్రైవ్ అందుబాటులో లేకపోతే ప్రత్యామ్నాయంగా మీరు ఈ నిల్వను విస్మరించేలా ఎంచుకోవచ్చు.\n\nమీరు విస్మరించాలని ఎంచుకుంటే, డ్రైవ్‌లో ఉన్న మొత్తం డేటాను శాశ్వతంగా కోల్పోతారు.\n\nమీరు తర్వాత అనువర్తనాలను మళ్లీ ఇన్‌స్టాల్ చేయవచ్చు, కానీ ఈ డ్రైవ్‌లో నిల్వ చేసిన వాటి డేటాను కోల్పోతారు."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"పరికర నిల్వ"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"తీసివేయదగిన నిల్వ"</string>
@@ -262,12 +268,13 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"తొలగించడానికి డ్రైవ్‌ను కనుగొనడం సాధ్యపడలేదు"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> ఫార్మాట్ చేయబడింది"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g>ని ఫార్మాట్ చేయలేకపోయింది"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"అంతర్గత నిల్వగా ఫార్మాట్ చేయండి"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"పరికర నిల్వగా ఫార్మాట్ చేయి"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"ఇందుకోసం USB డ్రైవ్‌ని సురక్షితంగా ఉంచడానికి దాన్ని ఫార్మాట్ చేయడం అవసరం. సురక్షితంగా ఫార్మాట్ చేసిన తర్వాత, ఈ డ్రైవ్ ఈ పరికరంతో మాత్రమే పని చేస్తుంది. ఫార్మాట్ చేస్తే ప్రస్తుతం డ్రైవ్‌లో నిల్వ చేయబడిన మొత్తం డేటా తొలగించబడుతుంది. డేటాను కోల్పోకుండా నివారించడం కోసం దాన్ని బ్యాకప్ చేయడానికి చూడండి."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"తొలగించండి &amp; ఫార్మాట్ చేయండి"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"ఫార్మాట్ చేసిన తర్వాత, మీరు ఈ USB డ్రైవ్‌ను ఇతర పరికరాల్లో ఉపయోగించవచ్చు. మొత్తం డేటా తొలగించబడుతుంది. ముందుగా అనువర్తనాలను మరో అంతర్గత నిల్వకు తరలించడం ద్వారా బ్యాకప్ చేయడానికి చూడండి."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"ఫార్మాట్ చేసిన తర్వాత, మీరు ఈ USB డ్రైవ్‌ను ఇతర పరికరాల్లో ఉపయోగించవచ్చు. మొత్తం డేటా తొలగించబడుతుంది. ముందుగా అనువర్తనాలను మరొక పరికర నిల్వకు తరలించడం ద్వారా బ్యాకప్ చేయండి."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB డ్రైవ్‌ను ఫార్మాట్ చేస్తోంది…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"దీనికి కొంత సమయం పట్టవచ్చు. దయచేసి డ్రైవ్‌ను తీసివేయవద్దు."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"డేటాను తరలించాల్సిన నిల్వను ఎంచుకోండి"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"<xliff:g id="NAME">%1$s</xliff:g>కి డేటాను తరలించండి"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"మీ ఫోటోలు, ఫైల్‌లు మరియు అనువర్తన డేటాను <xliff:g id="NAME">%1$s</xliff:g>కి తరలించండి. దీనికి కొన్ని నిమిషాలు పట్టవచ్చు. తరలింపు సమయంలో కొన్ని అనువర్తనాలు సరిగ్గా పని చేయవు."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"ఇప్పుడే తరలించు"</string>
@@ -283,18 +290,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g>లో నిల్వ చేసిన అనువర్తనాలు"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g>లో నిల్వ చేసిన అనువర్తనాలు మరియు డేటా"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> అందుబాటులో ఉంది"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"అంతర్గత నిల్వను తొలగించండి"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"ఈ పరికర నిల్వను తొలగించినప్పుడు ఇందులోని అనువర్తనాలు పని చేయకుండా ఆగిపోతాయి. ఈ USB డ్రైవ్ ఈ పరికరంలో మాత్రమే పని చేసేలా ఫార్మాట్ చేయబడింది. ఇది ఇక వేటిలోనూ పని చేయదు."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g>ని తొలగిస్తోంది…"</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"పరికర నిల్వను తొలగించు"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"ఈ పరికర నిల్వను తొలగించినప్పుడు ఇందులోని అనువర్తనాలు పని చేయకుండా ఆగిపోతాయి. ఈ USB డ్రైవ్ ఈ పరికరంలో మాత్రమే పని చేసేలా ఫార్మాట్ చేయబడింది. ఇది ఇక వేటిలోనూ పని చేయదు."</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"<xliff:g id="NAME">%1$s</xliff:g>ని తొలగిస్తోంది…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"వినియోగించిన నిల్వ"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g>ని తరలిస్తోంది…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"తరలించే సమయంలో డ్రైవ్‌ని తీసివేయవద్దు.\nతరలించడం పూర్తయ్యే వరకు ఈ పరికరంలోని <xliff:g id="APPNAME">%1$s</xliff:g> అనువర్తనం అందుబాటులో ఉండదు."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"అంతర్గత నిల్వను విస్మరించాలా?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"పరికర నిల్వను విస్మరించాలా?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\'విస్మరించు\' ఎంచుకుంటే ఈ డ్రైవ్‌లో నిల్వ చేసిన మీ మొత్తం డేటాను శాశ్వతంగా కోల్పోతారు. మీరు కొనసాగించాలనుకుంటున్నారా?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"విస్మరించు"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB డ్రైవ్ కనెక్ట్ చేయబడింది"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"బ్రౌజ్ చేయండి"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"అంతర్గత నిల్వగా సెటప్ చేయి"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"పరికర నిల్వగా సెటప్ చేయి"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"తీసివేయదగిన నిల్వగా సెటప్ చేయి"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"తొలగించు"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> తీసివేయబడింది"</string>
@@ -304,6 +311,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"అనువర్తనం కాపీ-రక్షితమైనది."</string>
     <string name="invalid_location" msgid="5269044848535157307">"ఇన్‌స్టాల్ స్థానం చెల్లదు."</string>
     <string name="system_package" msgid="9200255718634512790">"సిస్టమ్ నవీకరణలను బాహ్య మీడియాలో ఇన్‌స్టాల్ చేయడం సాధ్యపడదు."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"పరికర నిర్వాహకుడిని బాహ్య మీడియాలో ఇన్‌స్టాల్ చేయలేరు."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"మరింత తెలుసుకోండి"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"మళ్లీ ప్రయత్నించండి"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS రూటర్ కోసం శోధిస్తోంది…"</string>
@@ -363,7 +371,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"ఆఫ్‌లో ఉంది"</string>
     <string name="display_options" msgid="5504549024985225774">"ప్రదర్శన ఎంపికలు"</string>
     <string name="captions_configure" msgid="5537548915977371014">"కాన్ఫిగర్ చేయి"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"భాష"</string>
+    <string name="captions_language" msgid="2835554055388996343">"భాష"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"వచన పరిమాణం"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"శీర్షిక శైలి"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"అనుకూల ఎంపికలు"</string>
@@ -371,12 +379,19 @@
     <string name="captions_textcolor" msgid="3233568269335050287">"వచనం రంగు"</string>
     <string name="captions_edgetype" msgid="841331274533086103">"అంచు రకం"</string>
     <string name="captions_edgecolor" msgid="845125757332620884">"అంచు రంగు"</string>
+    <string name="captions_backgroundshow" msgid="9177987321551275698">"నేపథ్యాన్ని చూపు"</string>
     <string name="captions_backgroundcolor" msgid="448518890988125453">"నేపథ్య రంగు"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"నేపథ్య అపారదర్శకత"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"శీర్షికలు ఈ విధంగా కనిపిస్తాయి"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"వచన అపారదర్శకత"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"విండోను చూపండి"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"విండో రంగు"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"విండో అపారదర్శకత"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"నలుపు నేపథ్యంలో తెలుపు రంగు"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"తెలుపు నేపథ్యంలో నలుపు రంగు"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"నలుపు నేపథ్యంలో పసుపు రంగు"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"నీలి నేపథ్యంలో పసుపు రంగు"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"అనుకూలం"</string>
     <string name="color_white" msgid="65537523012024751">"తెలుపు రంగు"</string>
     <string name="color_black" msgid="8804213372565106403">"నలుపు"</string>
     <string name="color_red" msgid="5630553203246525989">"ఎరుపు రంగు"</string>
@@ -433,7 +448,6 @@
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"పరివర్తన యానిమేషన్ ప్రమాణం"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"యానిమేటర్ వ్యవధి ప్రమాణం"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"ఖచ్చితమైన మోడ్ ప్రారంభించబడింది"</string>
-    <string name="system_show_cpu_usage" msgid="4797599582027671138">"CPU వినియోగాన్ని చూపు"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"ప్రొఫైల్ GPU అమలు"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"ట్రేస్‌లను ప్రారంభించు"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"కార్యాచరణలను ఉంచవద్దు"</string>
@@ -451,7 +465,6 @@
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"ఉత్తమం నుండి అధమం వరకు: నీలి రంగు, ఆకుపచ్చ రంగు, లేత ఎరుపు రంగు, ఎరుపు రంగు"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"పూర్తి విండో ఉపరితలాలు నవీకరించబడినప్పుడు వాటిని ఫ్లాష్ చేసి చూపండి"</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"అనువర్తనాలు ప్రధాన థ్రెడ్‌లో సుదీర్ఘ చర్యలు అమలు చేస్తున్నప్పుడు స్క్రీన్‌ను ఫ్లాష్ చేసి చూపండి"</string>
-    <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"ప్రస్తుత CPU వినియోగాన్ని స్క్రీన్ అతివ్యాప్తి చూపుతోంది"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"adb shell dumpsys gfxinfoలో అమలు చేసే సమయాన్ని గణించండి"</string>
     <string name="action_on_title" msgid="6852389884236870765">"ఆన్ చేయి"</string>
     <string name="action_off_title" msgid="3157728958166559966">"ఆఫ్ చేయి"</string>
@@ -461,6 +474,7 @@
     <string name="disagree" msgid="9170636026862400981">"తిరస్కరిస్తున్నాను"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"తెలియని మూలాలు"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Play Store కాకుండా ఇతర మూలాల నుండి అనువర్తనాలను ఇన్‌స్టాల్ చేయడాన్ని అనుమతించు"</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"తెలియని మూలాలను అనుమతించండి"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"తెలియని మూలాల నుండి అందించబడిన అనువర్తనాలు మీ పరికరం మరియు వ్యక్తిగత డేటాపై దాడి చేసే అవకాశం ఎక్కువగా ఉంటుంది. ఈ అనువర్తనాలను ఉపయోగించడం వల్ల మీ పరికరానికి ఏదైనా నష్టం వాటిల్లినా లేదా డేటాను కోల్పోయినా అందుకు మీదే పూర్తి బాధ్యత అని మీరు అంగీకరిస్తున్నారు."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"అనువర్తనాలను ధృవీకరించండి"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"హాని కలిగించే అనువర్తనాలను ఇన్‌స్టాల్ చేయడానికి ముందు వాటిని అనుమతించవద్దు లేదా హెచ్చరించు"</string>
@@ -519,24 +533,25 @@
     <string name="inputs_game" msgid="1114086481110094757">"గేమ్ కన్సోల్"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"ఆక్స్"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"అనుకూల పేరు"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"<xliff:g id="INPUT">%1$s</xliff:g> ఇన్‌పుట్ కోసం పేరుని నమోదు చేయండి."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"దాచబడింది"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"ఇన్‌పుట్‌లను మారుస్తున్నప్పుడు చూపబడదు"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"అనుకూల పేరు:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"ఈ ఇన్‌పుట్‌ను చూపండి"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"పేరు"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI నియంత్రణ"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"HDMI పరికరాలను నియంత్రించడానికి టీవీని అనుమతిస్తుంది"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"పరికర ఆటో పవర్ ఆఫ్"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"టీవీతో ఉన్న HDMI పరికరాల పవర్‌ను ఆఫ్ చేస్తుంది"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"టీవీ ఆటో పవర్ ఆన్"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI పరికరంతో టీవీ పవర్‌ను ఆన్ చేస్తుంది"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
       <item quantity="other">కనెక్ట్ చేసిన ఇన్‌పుట్‌లు</item>
       <item quantity="one">కనెక్ట్ చేసిన ఇన్‌పుట్</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
       <item quantity="other">స్టాండ్‌బై ఇన్‌పుట్‌లు</item>
       <item quantity="one">స్టాండ్‌బై ఇన్‌పుట్</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
       <item quantity="other">కనెక్ట్ చేయని ఇన్‌పుట్‌లు</item>
       <item quantity="one">కనెక్ట్ చేయని ఇన్‌పుట్</item>
     </plurals>
@@ -550,6 +565,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"నియంత్రిత ప్రొఫైల్‌లోకి ప్రవేశించు"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"పరిమిత ప్రొఫైల్ నుండి నిష్క్రమించు"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"పరిమిత ప్రొఫైల్‌ను తొలగించు"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"నియంత్రిత ప్రొఫైల్‌ను సృష్టించండి"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"సెట్టింగ్‌లు"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"అనుమతించిన అనువర్తనాలు"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
@@ -573,8 +589,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"తప్పు పిన్, మళ్లీ ప్రయత్నించండి"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"మళ్లీ ప్రయత్నించండి, పిన్ సరిపోలలేదు"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> కోసం పాస్‌వర్డ్‌ను నమోదు చేయండి"</string>
-    <string name="wifi_setup_connection_success" msgid="6262755735033937164">"విజయవంతంగా కనెక్ట్ చేయబడింది."</string>
-    <string name="wifi_setup_save_success" msgid="4829154865874318015">"విజయవంతంగా సేవ్ చేయబడింది."</string>
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"విజయవంతంగా కనెక్ట్ చేయబడింది"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"విజయవంతంగా సేవ్ చేయబడింది"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"సంస్కరణ <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"తెరువు"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"నిర్బంధ ఆపివేత"</string>
@@ -601,13 +617,13 @@
     <string name="settings_cancel" msgid="304280412158061225">"రద్దు చేయి"</string>
     <string name="settings_on" msgid="6892236264945435013">"ఆన్ చేయి"</string>
     <string name="settings_off" msgid="449272161738237637">"ఆఫ్ చేయి"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"ఏదీ వద్దు"</string>
-    <string name="device_daydreams_select" msgid="3691552535056569158">"డేడ్రీమ్"</string>
+    <string name="device_daydreams_none" msgid="2767107052779579259">"స్క్రీన్‌ని ఆఫ్ చేయి"</string>
+    <string name="device_daydreams_select" msgid="2112338101206187695">"స్క్రీన్ సేవర్"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"ఇప్పుడే ప్రారంభించు"</string>
-    <string name="device_daydreams_sleep" msgid="8766795993034660366">"ఎప్పుడు డేడ్రీమ్‌లోకి వెళ్లాలి"</string>
-    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"ఈ నిష్క్రియ వ్యవధి తర్వాత డేడ్రీమ్ ప్రారంభం అవుతుంది. డేడ్రీమ్ ఏదీ ఎంచుకోకపోతే, డిస్‌‍ప్లే ఆఫ్ చేయబడుతుంది."</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"ఎప్పుడు ప్రారంభించాలి"</string>
+    <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"స్క్రీన్ సేవర్ ఈ నిష్క్రియ వ్యవధి తర్వాత ప్రారంభమవుతుంది. స్క్రీన్ సేవర్ ఏదీ ఎంచుకోకపోతే, డిస్‌ప్లే ఆఫ్ చేయబడుతుంది."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> నిష్క్రియ వ్యవధి తర్వాత"</string>
-    <string name="device_daydreams_screen_off" msgid="5002473979169042970">"ఎప్పుడు నిద్రావస్థకు వెళ్లాలి"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"పరికరాన్ని నిద్రావస్థలో ఉంచు"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"ఈ నిష్క్రియ వ్యవధి తర్వాత స్క్రీన్ ఆఫ్ చేయబడుతుంది."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"ప్రస్తుతం ఏ ఖాతా కూడా బ్యాకప్ చేసిన డేటాను నిల్వ చేయడం లేదు"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -642,4 +658,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Android భద్రతా అతికింపు స్థాయి"</string>
     <string name="choose_application" msgid="5662960665577780353">"అనువర్తనాన్ని ఎంచుకోండి"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(ప్రయోగాత్మకం)"</string>
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"సురక్షిత మోడ్‌కు రీబూట్ చేయి"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"మీరు సురక్షిత మోడ్‌కు రీబూట్ చేయాలనుకుంటున్నారా?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"దీని వలన మీరు ఇన్‌స్టాల్ చేసిన అన్ని మూడవ పక్షం అనువర్తనాలు నిలిపివేయబడతాయి. మీరు మళ్లీ రీబూట్ చేసినప్పుడు అవి పునరుద్ధరించబడతాయి."</string>
 </resources>

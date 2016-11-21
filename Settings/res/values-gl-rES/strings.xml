@@ -24,6 +24,7 @@
     <string name="header_category_preferences" msgid="175105555164713972">"Preferencias"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Mando a distancia e accesorios"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Persoal"</string>
+    <string name="accounts_category_title" msgid="7591072907146317425">"Contas"</string>
     <string name="add_account" msgid="4098060223200619258">"Engadir conta"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Eliminar conta"</string>
     <string name="account_sync" msgid="773808124331714965">"Seleccionar aplicacións sincronizadas"</string>
@@ -35,7 +36,7 @@
     <string name="account_remove_failed" msgid="980654375770693544">"Non se pode eliminar a conta"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"Toca para sincronizar agora<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"Sincronizar agora<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Produciuse un erro na sincronización"</string>
     <string name="sync_active" msgid="6891115263481154378">"Sincronización activa"</string>
@@ -45,12 +46,13 @@
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Buscar redes sempre"</string>
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"Permite ao servizo de localización de Google e a outras aplicacións buscar redes, aínda que a wifi estea desactivada"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wifi"</string>
-    <string name="device_daydream" msgid="4933581408059561077">"Protector de pantalla"</string>
+    <string name="device_daydream" msgid="3354366974209179614">"Protector de pantalla"</string>
     <string name="device_display" msgid="101455384386372747">"Pantalla"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Son"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"Son envolvente"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sons do sistema"</string>
     <string name="device_apps" msgid="9180435229638772838">"Aplicacións"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Almacenamento e restablecemento"</string>
-    <string name="device_storage" msgid="5536683600091277826">"Almacenamento"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Copia de seguranza e restauración"</string>
     <string name="device_reset" msgid="2827002349560023125">"Restablecemento dos datos de fábrica"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Calibración"</string>
@@ -214,20 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Introduce un enderezo de pasarela válido"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Introduce un enderezo DNS válido"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Introduce lonxitude prefixo rede de entre 0 e 32"</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"Introduce un enderezo IP válido ou deixa o campo en branco.\nExemplo: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"Introduce un enderezo IP válido ou deixa o campo baleiro.\nExemplo: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"Introduce un enderezo IP válido ou deixa o campo en branco.\nExemplo: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"Introduce un enderezo IP válido ou deixa o campo en branco.\nExemplo: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"Introduce unha lonxitude de prefixo de rede válida.\nExemplo: 24"</string>
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"Introduce un enderezo IP válido.\nExemplo: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"Introduce un enderezo IP válido ou deixa o campo baleiro.\nExemplo: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"Introduce un enderezo IP válido ou deixa o campo baleiro.\nExemplo: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"Introduce un enderezo IP válido ou deixa o campo baleiro.\nExemplo: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Introduce unha lonxitude de prefixo de rede válida.\nExemplo: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"O nome de host non é válido"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Esta lista de exclusión non é válida. Introduce unha lista separada por comas de dominios excluídos."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"O campo de porto non pode quedar baleiro"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Se o campo de host está baleiro, deixa o campo de porto baleiro"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"O porto non é válido"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"O navegador utiliza o proxy HTTP, pero é posible que outras aplicacións non o utilicen"</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"Introduce un porto válido.\nExemplo: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"Introduce unha lista de dominios excluídos separados por comas ou deixa este campo en branco.\nExemplo: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"Introduce un nome de host válido.\nExemplo: proxy.example.com"</string>
+    <string name="proxy_port_description" msgid="6791098212244367568">"Introduce un porto válido.\nExemplo: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Introduce unha lista de dominios excluídos separados por comas ou deixa este campo en branco.\nExemplo: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"Introduce un nome de host válido.\nExemplo: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Rede conectada"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"A rede non está conectada"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Xa estás conectado a <xliff:g id="SSID">%1$s</xliff:g>. Queres conectarte a unha rede diferente?"</string>
@@ -246,10 +248,14 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Datos da caché"</string>
     <string name="storage_eject" msgid="113476702798691558">"Expulsar"</string>
     <string name="storage_format" msgid="3759273736493279595">"Borrar e formatar"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Borrar/formatar como almacenamento do dispositivo"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Borrar/formatar como almacenamento extraíble"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formatar como almacenamento do dispositivo"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Sen conectar"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Migrar datos"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Esquecer este almacenamento interno"</string>
+    <string name="storage_migrate" msgid="1304058078948715456">"Migrar datos a este almacenamento"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Migrar datos a un almacenamento diferente"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Non hai aplicacións para facer copia de seguranza"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"Borrar almacenamento deste dispositivo"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Para usar as aplicacións ou datos que contén esta unidade, volve conectala. Tamén podes optar por borrar este almacenamento se a unidade non está dispoñible.\n\nSe decides borralo, todos os datos que contén a unidade perderanse para sempre.\n\nPodes volver instalar as aplicacións máis tarde, pero perderanse os datos almacenados neste dispositivo."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Almacenamento do dispositivo"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Almacenamento extraíble"</string>
@@ -262,12 +268,13 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Non se puido atopar a unidade para expulsala"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"Formatouse <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Non se puido formatar <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatar como almacenamento interno"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Formatar como almacenamento do dispositivo"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Esta acción esixe que se formate a unidade USB para que estea protexida. Despois de formatala de forma segura, esta unidade só funcionará neste dispositivo. Ao formatar borraranse todos os datos almacenados actualmente na unidade. Para evitar perder os datos, considera a posibilidade de facer unha copia de seguranza."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Borrar e formatar"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Despois de formatar, podes usar esta unidade USB noutros dispositivos. Borraranse todos os datos. Considera a posibilidade de facer primeiro unha copia de seguranza movendo as aplicacións a outro almacenamento interno."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Despois de formatar, podes usar esta unidade USB noutros dispositivos. Borraranse todos os datos. Considera a posibilidade de facer unha copia de seguranza movendo as aplicacións a outro almacenamento do dispositivo."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formatando unidade USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Esta acción pode tardar uns minutos. Non extraias a unidade."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Seleccionar almacenamento no que migrar datos"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Migrar datos a <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Migra as túas fotos, os ficheiros e os datos das aplicacións a <xliff:g id="NAME">%1$s</xliff:g>. Esta acción pode tardar uns minutos. Algunhas aplicacións non funcionarán correctamente durante a migración."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Migrar agora"</string>
@@ -283,18 +290,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aplicacións almacenadas na <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Aplicacións e datos almacenados na <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Dispoñible: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Expulsar almacenamento interno"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"As aplicacións da unidade de almacenamento deste dispositivo deixarán de funcionar en canto se expulse. A unidade USB está formatada para funcionar soamente neste dispositivo. Non funcionará noutros."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Expulsando <xliff:g id="NAME">%1$s</xliff:g>…"</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Expulsar almacenamento do dispositivo"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"As aplicacións da unidade de almacenamento deste dispositivo deixarán de funcionar en canto se expulse. A unidade USB está formatada para funcionar soamente neste dispositivo. Non funcionará noutros."</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"Expulsando <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Almacenamento utilizado"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Migrando <xliff:g id="NAME">%1$s</xliff:g>..."</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Non extraias a unidade durante a migración.\nA aplicación <xliff:g id="APPNAME">%1$s</xliff:g> deste dispositivo non estará dispoñible ata que finalice a migración."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Borrar almacenamento interno?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Queres borrar o almacenamento do dispositivo?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Se seleccionas Borrar, perderanse os datos almacenados neste dispositivo para sempre. Queres continuar?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Borrar"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"Unidade USB conectada"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Navegar"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Configurar como almacenamento interno"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Configurar como almacenamento do dispositivo"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Configurar como almacenamento extraíble"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Expulsar"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"Retirouse <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -304,6 +311,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"A aplicación está protexida contra copias."</string>
     <string name="invalid_location" msgid="5269044848535157307">"A localización de instalación non é válida."</string>
     <string name="system_package" msgid="9200255718634512790">"Non se poden instalar actualizacións do sistema en soportes externos."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"O administrador de dispositivos non se pode instalar en soportes externos."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Máis información"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Tentar de novo"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Buscando router WPS…"</string>
@@ -336,7 +344,7 @@
     <string name="system_desc_location" msgid="4243551425631207495">"Permite ás aplicacións que solicitaron permiso utilizar a túa información de localización"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"Autorización de localización"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"Modo"</string>
-    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Pedidos localización recentes"</string>
+    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Solicitudes de localización recentes"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"Ningunha aplicación solicitou a túa localización recentemente"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"Uso da batería elevado"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"Uso da batería reducido"</string>
@@ -363,7 +371,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"Desactivados"</string>
     <string name="display_options" msgid="5504549024985225774">"Opcións de visualización"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Configurar"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Idioma"</string>
+    <string name="captions_language" msgid="2835554055388996343">"Idioma"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Tamaño do texto"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Estilo dos subtítulos"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Opcións personalizadas"</string>
@@ -371,12 +379,19 @@
     <string name="captions_textcolor" msgid="3233568269335050287">"Cor do texto"</string>
     <string name="captions_edgetype" msgid="841331274533086103">"Tipo de bordo"</string>
     <string name="captions_edgecolor" msgid="845125757332620884">"Cor do bordo"</string>
+    <string name="captions_backgroundshow" msgid="9177987321551275698">"Mostrar segundo plano"</string>
     <string name="captions_backgroundcolor" msgid="448518890988125453">"Cor de fondo"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Opacidade do fondo"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Os subtítulos terán un aspecto similar ao seguinte"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Opacidade do texto"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"Mostrar ventá"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Cor da ventá"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Opacidade da ventá"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"Branco sobre negro"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"Negro sobre branco"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"Amarelo sobre negro"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"Amarelo sobre azul"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"Personalizado"</string>
     <string name="color_white" msgid="65537523012024751">"Branco"</string>
     <string name="color_black" msgid="8804213372565106403">"Negro"</string>
     <string name="color_red" msgid="5630553203246525989">"Vermello"</string>
@@ -427,13 +442,12 @@
     <string name="system_show_layout_bounds" msgid="645732439882291943">"Mostrar límites de deseño"</string>
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"Actualizacións GPU"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"Mostrar capa de hardware"</string>
-    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"Mostrar superación de GPU"</string>
+    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"Mostrar superposición de GPU"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"Cambios de superficie"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"Escala de animación da ventá"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Escala de transición-animación"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Escala de duración do animador"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Modo estrito activado"</string>
-    <string name="system_show_cpu_usage" msgid="4797599582027671138">"Mostrar o uso da CPU"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Perfil de procesamento GPU"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Activar rastros"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"Non gardar actividades"</string>
@@ -451,7 +465,6 @@
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"De mellor a peor: azul, verde, vermello claro, vermello"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Iluminar superficies de ventás ao actualizarse"</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Pestanexa se as aplicacións tardan moito no proceso principal"</string>
-    <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"Superpoñer o uso da CPU na pantalla"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Medir tempo de representación en adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"Activar"</string>
     <string name="action_off_title" msgid="3157728958166559966">"Desactivar"</string>
@@ -461,6 +474,7 @@
     <string name="disagree" msgid="9170636026862400981">"Non aceptar"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Fontes descoñecidas"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Permite a instalación de aplicacións de fontes distintas a Play Store"</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Permitir fontes descoñecidas"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"O teu dispositivo e os teus datos persoais son máis vulnerables aos ataques de aplicacións de orixes descoñecidas. Aceptas ser o único responsable de calquera dano que se poida producir no teu dispositivo ou da perda de datos que se poida derivar do uso destas aplicacións."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Verificar aplicacións"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Prohibir ou avisar antes da instalación de aplicacións que poden causar danos"</string>
@@ -470,8 +484,8 @@
     <string name="system_hdmi_optimization_best_resolution" msgid="2612694859060466938">"Mellor resolución"</string>
     <string name="system_hdmi_optimization_best_framerate" msgid="67514549356802383">"Mellor velocidade de fotogramas"</string>
     <string name="system_hw_overdraw_off" msgid="8790815645038325739">"Desactivar"</string>
-    <string name="system_hw_overdraw_areas" msgid="5227122594087360124">"Mostrar áreas sobredebuxadas"</string>
-    <string name="system_hw_overdraw_counter" msgid="3042271307724657436">"Mostrar contador de sobredebuxos"</string>
+    <string name="system_hw_overdraw_areas" msgid="5227122594087360124">"Mostrar áreas superpostas"</string>
+    <string name="system_hw_overdraw_counter" msgid="3042271307724657436">"Mostrar contador de superposicións"</string>
     <string name="no_application" msgid="1746564297589309465">"Nada"</string>
     <string name="enable_opengl_traces_none" msgid="6074804146602749420">"Ningunha"</string>
   <string-array name="animation_scale_entries">
@@ -519,26 +533,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"Videoconsola"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Nome personalizado"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Introduce un nome para a entrada <xliff:g id="INPUT">%1$s</xliff:g>."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Ocultar"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Non se mostra ao cambiar as entradas"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Nome personalizado:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Mostrar esta entrada"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Nome"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"Control HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Permitir que o televisor controle dispositivos HDMI"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Activar apagado automático"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Apagar os dispositivos HDMI co televisor"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Acendido autom. do televisor"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Acender o televisor co dispositivo HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="other">ENTRADAS CONECTADAS</item>
-      <item quantity="one">ENTRADA CONECTADA</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="other">Entradas conectadas</item>
+      <item quantity="one">Entrada conectada</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="other">ENTRADAS EN ESPERA</item>
-      <item quantity="one">ENTRADA EN ESPERA</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="other">Entradas en espera</item>
+      <item quantity="one">Entrada en espera</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="other">ENTRADAS DESCONECTADAS</item>
-      <item quantity="one">ENTRADA DESCONECTADA</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="other">Entradas desconectadas</item>
+      <item quantity="one">Entrada desconectada</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Restrinxe o acceso a aplicacións e a outro tipo de contido da túa conta"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Perfil restrinxido"</string>
@@ -550,6 +565,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Acceder ao perfil restrinxido"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Saír do perfil restrinxido"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Eliminar perfil restrinxido"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"Crear perfil restrinxido"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Configuración"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Aplicacións permitidas"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
@@ -562,7 +578,7 @@
     <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"Un momento..."</string>
     <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"Cambiar PIN"</string>
     <string name="restriction_description" msgid="3104855945910233028">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
-    <string name="app_sees_restricted_accounts_and_controlled_by" msgid="6677671440081319908">"Esta aplicación pode acceder ás túas contas. Controladas por <xliff:g id="APP">%1$s</xliff:g>"</string>
+    <string name="app_sees_restricted_accounts_and_controlled_by" msgid="6677671440081319908">"Esta aplicación pode acceder ás túas contas. Está controlada por <xliff:g id="APP">%1$s</xliff:g>"</string>
     <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"Introduce o PIN para ver esta canle"</string>
     <string name="pin_enter_unlock_program" msgid="52453773316071511">"Introduce o PIN para ver este programa"</string>
     <string name="pin_enter_pin" msgid="821552376577935497">"Introduce o PIN"</string>
@@ -573,8 +589,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN erróneo. Téntao de novo."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Téntao de novo. O PIN non coincide."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Introduce un contrasinal para <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_connection_success" msgid="6262755735033937164">"Conexión realizada correctamente."</string>
-    <string name="wifi_setup_save_success" msgid="4829154865874318015">"Configuración gardada correctamente."</string>
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Realizouse a conexión correctamente"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"Gardouse a configuración correctamente"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Versión <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Abrir"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Forzar a parada"</string>
@@ -601,13 +617,13 @@
     <string name="settings_cancel" msgid="304280412158061225">"Cancelar"</string>
     <string name="settings_on" msgid="6892236264945435013">"Activado"</string>
     <string name="settings_off" msgid="449272161738237637">"Desactivado"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"Ningún"</string>
-    <string name="device_daydreams_select" msgid="3691552535056569158">"Protector de pantalla"</string>
+    <string name="device_daydreams_none" msgid="2767107052779579259">"Desactivar pantalla"</string>
+    <string name="device_daydreams_select" msgid="2112338101206187695">"Protector de pantalla"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Iniciar agora"</string>
-    <string name="device_daydreams_sleep" msgid="8766795993034660366">"Cando activar o protector de pantalla"</string>
-    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"O protector de pantalla comezará transcorrido este período de inactividade. Se non se selecciona ningún protector de pantalla, a pantalla apagarase."</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Cando comezar"</string>
+    <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"O protector de pantalla comezará transcorrido este período de inactividade. Se non se selecciona ningún protector de pantalla, a pantalla apagarase."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Despois de <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> de inactividade"</string>
-    <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Cando activar o modo de suspensión"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Poñer o dispositivo en suspensión"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"A pantalla apágase despois deste período de inactividade."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Non hai ningunha conta que almacene datos de copia de seguranza neste momento"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -620,7 +636,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Queres borrar toda a túa información persoal e as aplicacións descargadas? Non podes desfacer esta acción."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Borrar todo"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Escolle un nome para o teu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Un nome permitirache identificar o teu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> cando accedas a el desde outros dispositivos, como o teu teléfono, tablet ou ordenador."</string>
+    <string name="select_device_name_description" msgid="2697127827643821315">"Un nome permitirache identificar o teu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> cando accedas a el desde outros dispositivos, como o teu teléfono, tableta ou ordenador."</string>
   <string-array name="rooms">
     <item msgid="7085399612393981553">"Salón"</item>
     <item msgid="3722089849939477581">"Sala multimedia"</item>
@@ -642,4 +658,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Nivel de parche de seguranza de Android"</string>
     <string name="choose_application" msgid="5662960665577780353">"Escoller aplicación"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Experimental)"</string>
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"Reiniciar no modo seguro"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Queres reiniciar no modo seguro?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"Esta acción desactivará todas as aplicacións de terceiros que instalaches. Estas restableceranse cando reinicies de novo."</string>
 </resources>
