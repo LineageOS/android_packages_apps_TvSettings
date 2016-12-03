@@ -497,6 +497,16 @@
                     <category android:name="android.intent.category.DEFAULT" />
                 </intent-filter>
         </activity>
+        <activity
+            android:name=".name.setup.DeviceNameFlowStartActivity"
+            android:configChanges="keyboardHidden|navigation"
+            android:theme="@style/SetupFlowGuidedStepTheme"
+            android:excludeFromRecents="true" >
+            <intent-filter>
+                <action android:name="android.settings.START_DEVICE_NAME_FLOW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <service android:name=".users.UserSwitchListenerService"/>
         <receiver android:name=".users.UserSwitchListenerService$BootReceiver">

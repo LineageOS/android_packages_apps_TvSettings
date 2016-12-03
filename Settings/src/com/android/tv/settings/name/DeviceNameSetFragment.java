@@ -16,13 +16,13 @@
 
 package com.android.tv.settings.name;
 
+import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
-
 import com.android.tv.settings.R;
 
 import java.util.List;
@@ -68,6 +68,7 @@ public class DeviceNameSetFragment extends GuidedStepFragment {
             throw new IllegalStateException("Unknown action ID");
         } else if (id < options.length) {
             DeviceManager.setDeviceName(getActivity(), options[(int)id]);
+            getActivity().setResult(Activity.RESULT_OK);
             getActivity().finish();
         } else if (id == options.length) {
             GuidedStepFragment.add(getFragmentManager(), DeviceNameSetCustomFragment.newInstance());

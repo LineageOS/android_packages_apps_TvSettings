@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.name;
 
+import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -57,6 +58,7 @@ public class DeviceNameSetCustomFragment extends GuidedStepFragment {
         final CharSequence name = action.getTitle();
         if (TextUtils.isGraphic(name)) {
             DeviceManager.setDeviceName(getActivity(), name.toString());
+            getActivity().setResult(Activity.RESULT_OK);
             getActivity().finish();
             return super.onGuidedActionEditedAndProceed(action);
         } else {
