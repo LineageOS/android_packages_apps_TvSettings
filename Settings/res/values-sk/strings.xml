@@ -359,10 +359,10 @@
     <string name="third_party_location_services_title" msgid="4089136801976399147">"Služby určovania polohy od tretích strán"</string>
     <string name="location_reporting" msgid="3054236612250063073">"Nahlasovanie polohy"</string>
     <string name="location_history" msgid="2946680949724247804">"História polohy"</string>
-    <string name="location_reporting_desc" msgid="6256424995139430823">"Google používa túto funkciu v službách, ako sú Asistent Google a Mapy Google. Zapnutím Nahlasovania polohy umožníte službám Google využívajúcim túto funkciu ukladať a používať údaje o najaktuálnejšej polohe vášho zariadenia v súvislosti s vaším účtom Google"</string>
-    <string name="location_history_desc" msgid="3861249867748294369">"Keď je v súvislosti s týmto účtom zapnutá História polohy, Google môže ukladať údaje o polohe vášho zariadenia na použitie vo vašich aplikáciách.\n\nNapríklad Mapy Google vám môžu poskytnúť trasy a aplikácia Asistent Google vás môže pri dochádzaní informovať o premávke.\n\nHistóriu polohy môžete kedykoľvek vypnúť, avšak tým ju neodstránite. Zobraziť a spravovať ju môžete na adrese maps.google.com/locationhistory."</string>
+    <string name="location_reporting_desc" msgid="6256424995139430823">"Google používa túto funkciu v službách, ako sú Google Now a Mapy Google. Zapnutím Nahlasovania polohy umožníte službám Google využívajúcim túto funkciu ukladať a používať údaje o najaktuálnejšej polohe vášho zariadenia v súvislosti s vaším účtom Google"</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"Keď je v súvislosti s týmto účtom zapnutá História polohy, Google môže ukladať údaje o polohe vášho zariadenia na použitie vo vašich aplikáciách.\n\nNapríklad Mapy Google vám môžu poskytnúť trasy a aplikácia Google Now vás môže pri dochádzaní informovať o premávke.\n\nHistóriu polohy môžete kedykoľvek vypnúť, avšak tým ju neodstránite. Zobraziť a spravovať ju môžete na adrese maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"Odstrániť históriu polohy"</string>
-    <string name="delete_location_history_desc" msgid="4142806827237093397">"Týmto odstránite celú hist. polohy tohto účtu ulož. v zar. Nedá sa vrátiť späť. Niekt. ap. (aj Asistent) prestanú fungovať."</string>
+    <string name="delete_location_history_desc" msgid="4142806827237093397">"Táto akcia odstráni celú históriu polohy tohto účtu uloženú v zariadení. Akcia sa nedá vrátiť späť. Niektoré aplikácie, vrátane asistenta Google Now, prestanú fungovať."</string>
     <string name="system_services" msgid="7230571820151215779">"Služby"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"Nastavenia služby"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Text s vysokým kontrastom"</string>
@@ -435,7 +435,7 @@
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"Povoliť simulované polohy"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"Vybrať aplikáciu na ladenie"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Čakať na ladiaci nástroj"</string>
-    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Overiť aplikácie inštalované cez USB"</string>
+    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Overovať aplikácie z USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Kontrolovať škodlivosť aplikácií nainštalovaných pomocou nástroja ADB/ADT"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Prihlasovanie Wi-Fi Verbose"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Povoliť prihlasovanie Wi-Fi Verbose"</string>
@@ -450,7 +450,6 @@
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Mierka animácie premeny"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Mierka dĺžky animácie"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Prísny režim bol povolený"</string>
-    <string name="system_show_cpu_usage" msgid="4797599582027671138">"Zobraziť využitie CPU"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Profilovať vykresľovanie GPU"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Povoliť sledovania"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"Neuchovávať aktivity"</string>
@@ -468,7 +467,6 @@
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Od najlep. k najhor.: mod., zel., sv. červ., červ."</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Celý obsah okna pri aktualizácii bliká"</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Blikanie pri dlhých operáciách hlavného vlákna"</string>
-    <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"Prekryvná vrstva s aktuálnym využitím procesora"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Merať čas vykresľov. v adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"Zapnuté"</string>
     <string name="action_off_title" msgid="3157728958166559966">"Vypnuté"</string>
@@ -667,7 +665,7 @@
     <string name="device_apps_permissions" msgid="2966387603529725982">"Povolenia aplikácie"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Povolené aplikácie: <xliff:g id="COUNT_0">%d</xliff:g> z <xliff:g id="COUNT_1">%d</xliff:g>"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"Žiadosť o povolenie použiť rozhranie Bluetooth"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Úroveň opráv zabezpečenia systému Android"</string>
+    <string name="security_patch" msgid="2131617390189164481">"Úroveň opráv zabezpečenia systému"</string>
     <string name="choose_application" msgid="5662960665577780353">"Výber aplikácie"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Experimentálne)"</string>
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Reštartovať do núdzového režimu"</string>
