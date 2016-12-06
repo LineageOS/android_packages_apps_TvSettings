@@ -19,10 +19,17 @@
     android:layout_height="match_parent"
     android:gravity="start" >
 
+    <Space xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/space"
+        android:layout_width="@dimen/setup_title_width"
+        android:layout_height="@dimen/setup_title_height"
+        android:gravity="start|bottom" />
+
     <TextView
         android:id="@+id/title_text"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/setup_title_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/space"
         android:gravity="start|bottom"
         android:lineSpacingMultiplier="@dimen/setup_title_line_spacing_multiplier"
         android:textAppearance="@style/Setup.Description.Title" />
