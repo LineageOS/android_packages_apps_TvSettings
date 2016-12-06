@@ -189,6 +189,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="android.intent.action.MANAGE_PACKAGE_STORAGE" />
+                <action android:name="android.os.storage.action.MANAGE_STORAGE" />
             </intent-filter>
         </activity>
         <activity android:name=".device.storage.ResetActivity"
@@ -557,6 +558,20 @@
                 <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+
+        <!-- Dummy activity for CTS
+         TODO: implement something useful -->
+        <activity android:name=".system.WebViewImplementation"
+                  android:exported="true"
+                  android:excludeFromRecents="true"
+                  android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.settings.WEBVIEW_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                       android:value="true" />
         </activity>
     </application>
 
