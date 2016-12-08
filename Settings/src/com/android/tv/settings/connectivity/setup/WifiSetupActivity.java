@@ -34,6 +34,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Pair;
+import android.view.accessibility.AccessibilityEvent;
 
 import com.android.settingslib.wifi.WifiTracker;
 import com.android.tv.settings.R;
@@ -382,6 +383,9 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
                 mWifiTracker.resumeScanning();
             }
         }
+        if (ThemeHelper.fromSetupWizard(getIntent())) {
+            updateTitle(formPageType);
+        }
     }
 
     @Override
@@ -531,5 +535,33 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
         } else {
             addPage(WifiFormPageType.SUMMARY_NOT_CONNECTED);
         }
+    }
+
+    private void updateTitle(WifiFormPageType pageType) {
+        switch (pageType) {
+            // Fall through for all pageTypes that require the SSID of the network for
+            // the title.
+            case ADVANCED_OPTIONS:
+            case CONNECT:
+            case CONNECT_FAILED:
+            case CONNECT_TIMEOUT:
+            case ENTER_PASSWORD:
+            case KNOWN_NETWORK:
+            case SAVE:
+            case SAVE_FAILED:
+                setTitle(getResources().getString(pageType.getTitleResourceId(),
+                        mConfiguration.getPrintableSsid()));
+                break;
+            case WPS:
+                // Delegate title to the WPSConnectionActivity. Use blank string to prevent
+                // talkback from announcing a misplaced title.
+                setTitle("");
+                return;
+            default:
+                setTitle(getResources().getString(pageType.getTitleResourceId()));
+                break;
+        }
+        getWindow().getDecorView()
+                .sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED);
     }
 }
