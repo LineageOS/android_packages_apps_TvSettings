@@ -30,13 +30,12 @@ import android.support.v17.leanback.widget.VerticalGridView;
 import android.support.v7.util.SortedList;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.util.SortedListAdapterCallback;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver.OnPreDrawListener;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -200,11 +199,12 @@ public class SelectFromListWizardFragment extends Fragment {
             if (o instanceof ListItem) {
                 ListItem li = (ListItem) o;
                 if (mScanResult == null && li.mScanResult == null) {
-                    return mName.equals(li.mName);
+                    return TextUtils.equals(mName, li.mName);
                 }
-                return (mScanResult != null && li.mScanResult != null && mName.equals(li.mName) &&
-                        WifiSecurity.getSecurity(mScanResult)
-                        == WifiSecurity.getSecurity(li.mScanResult));
+                return (mScanResult != null && li.mScanResult != null
+                        && TextUtils.equals(mName, li.mName)
+                        && WifiSecurity.getSecurity(mScanResult)
+                                == WifiSecurity.getSecurity(li.mScanResult));
             }
             return false;
         }
@@ -407,7 +407,7 @@ public class SelectFromListWizardFragment extends Fragment {
         SortedList<ListItem> items = ((VerticalListAdapter) mListView.getAdapter()).getItems();
         for (int i = 0; i < items.size(); i++) {
             ListItem item = (ListItem) items.get(i);
-            if (lastSelectionName.equals(item.getName())) {
+            if (TextUtils.equals(lastSelectionName, item.getName())) {
                 mListView.setSelectedPosition(i);
                 break;
             }
