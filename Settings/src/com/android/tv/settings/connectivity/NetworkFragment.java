@@ -175,7 +175,7 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
             return;
         }
 
-        final boolean wifiEnabled = mConnectivityListener.isWifiEnabled();
+        final boolean wifiEnabled = mConnectivityListener.isWifiEnabledOrEnabling();
         mEnableWifiPref.setChecked(wifiEnabled);
 
         mWifiNetworksCategory.setVisible(wifiEnabled);
@@ -216,7 +216,7 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
             return;
         }
 
-        if (!mConnectivityListener.isWifiEnabled()) {
+        if (!mConnectivityListener.isWifiEnabledOrEnabling()) {
             mWifiNetworksCategory.removeAll();
             mNoWifiUpdateBeforeMillis = 0;
             return;
