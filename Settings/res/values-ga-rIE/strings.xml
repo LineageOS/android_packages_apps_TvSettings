@@ -16,25 +16,19 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Main app title [CHAR LIMIT=40] -->
-  <string name="settings_app_name">Agordoj</string>
   <!-- Leanback Launcher App Title for main Settings app [CHAR LIMIT=40] -->
-  <string name="launcher_settings_app_name">Agordoj</string>
   <!-- Leanback Launcher App Title for Network settings app [CHAR LIMIT=40] -->
-  <string name="launcher_network_app_name">Reto</string>
   <!-- Leanback Launcher App Title for Restricted Profile app [CHAR LIMIT=40] -->
   <!-- Top level headers -->
   <!-- Header title for device [CHAR LIMIT=50] -->
-  <string name="header_category_device">Aparato</string>
   <!-- Header title for preferences [CHAR LIMIT=50] -->
   <!-- Header title for accessories [CHAR LIMIT=50] -->
   <!-- Header title for personal [CHAR LIMIT=50] -->
   <!-- Account preferences -->
   <!-- Preference which adds an account [CHAR LIMIT=50] -->
-  <string name="add_account">Aldoni konton</string>
   <!-- Header for sync [CHAR LIMIT=50] -->
   <!-- Header for remove account [CHAR LIMIT=50] -->
   <!-- Google services under account settings, title for Search -->
-  <string name="search_title">Serĉi</string>
   <!-- Sync item label: control sync settings [CHAR LIMIT=100] -->
   <!-- Label for action to sync now [CHAR LIMIT=50] -->
   <!-- Label for action saying that we are syncing now [CHAR LIMIT=50] -->
@@ -45,17 +39,8 @@
   <!-- Remove account item label: remove the account [CHAR LIMIT=30] -->
   <!-- Message posted if removing the account fails. [CHAR LIMIT=NONE] -->
   <!-- Account details settings  [CHAR LIMIT=50] -->
-  <string-array name="account_detail_settings">
-    <item>Nomo</item>
-    <item>Photo</item>
-    <item>Sekureco</item>
-    <item>Google Wallet</item>
-    <item>Purchase History</item>
-    <item>Forigi konton</item>
-  </string-array>
   <!-- Connectivity preferences -->
   <!-- Top level network card title. [CHAR LIMIT=50] -->
-  <string name="connectivity_network">Reto</string>
   <!-- Preference which manages wifi settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages ethernet settings. [CHAR LIMIT=50] -->
   <!-- Device preferences -->
@@ -63,7 +48,6 @@
   <!-- Preference which changes display settings. [CHAR LIMIT=50] -->
   <!-- Preference and title which changes system sounds settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages apps. [CHAR LIMIT=50] -->
-  <string name="device_apps">Aplikaĵoj</string>
   <!-- Preference which shows storage status. [CHAR LIMIT=50] -->
   <!-- Preference which shows storage status. [CHAR LIMIT=50] -->
   <!-- Preference which manages backup settings. [CHAR LIMIT=50] -->
@@ -83,7 +67,6 @@
   <!-- Device Paring Status: Connecting. [CHAR LIMIT=50] -->
   <!-- Device Paring Status: Error. [CHAR LIMIT=50] -->
   <!-- Device Paring Status: Canceled. [CHAR LIMIT=50] -->
-  <string name="accessory_state_canceled">Nuligita</string>
   <!-- Device Paring Status: Pairing Complete. [CHAR LIMIT=50] -->
   <!-- Preference which manages a single Paired Bluetooth accessory. [CHAR LIMIT=50] -->
   <!-- Preference for renaming a paired Bluetooth accessory[CHAR LIMIT=50] -->
@@ -107,22 +90,17 @@
   <!-- Bluetooth PIN hint text (below the text entry box). [CHAR LIMIT=30] -->
   <!-- Action title for Confirming the Bluetooth secure Pair action [CHAR LIMIT=50] -->
   <!-- Action title for Cancelling the Bluetooth secure Pair action [CHAR LIMIT=50] -->
-  <string name="bluetooth_cancel">Nuligi</string>
   <!-- System -->
   <!-- Preference which manages cast settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages date / time settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages language settings. [CHAR LIMIT=50] -->
-  <string name="system_language">Lingvo</string>
   <!-- Preference which manages input method settings. [CHAR LIMIT=50] -->
-  <string name="system_keyboard">Klavaro</string>
   <!-- Preference which manages home screen settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages search and google now settings. [CHAR LIMIT=50] -->
-  <string name="system_search">Serĉi</string>
   <!-- Preference which manages security settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages speech recognition settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages TV inputs. [CHAR LIMIT=50] -->
   <!-- Preference which manages accessibility settings. [CHAR LIMIT=50] -->
-  <string name="system_accessibility">Alirebleco</string>
   <!-- Preference which manages developer options. [CHAR LIMIT=50] -->
   <!-- Label for no accessibility color or opacity [CHAR LIMIT=50] -->
   <!-- About -->
@@ -137,7 +115,6 @@
   <!-- Toast message displayed if the license data is unavailable [CHAR LIMIT=100] -->
   <!-- Preference which shows model. [CHAR LIMIT=50] -->
   <!-- Preference which shows version. [CHAR LIMIT=50] -->
-  <string name="about_version">Versio</string>
   <!-- Preference which shows serial number. [CHAR LIMIT=50] -->
   <!-- Preference which shows build version. [CHAR LIMIT=50] -->
   <!-- Device Info screen. Countdown for user taps to enable development settings [CHAR LIMIT=NONE] -->
@@ -199,7 +176,6 @@
   <!-- Network SSID title on add network form page [CHAR LIMIT=30] -->
   <!-- Security type title on add network form page [CHAR LIMIT=30] -->
   <!-- Password title on add network form page [CHAR LIMIT=30] -->
-  <string name="password">Pasvorto</string>
   <!-- Title for connecting to a WPS network in setup mode [CHAR LIMIT=30] -->
   <!-- Title for adding hidden network in setup mode [CHAR LIMIT=30] -->
   <!-- Skip configuring a Wi-Fi network during device setup [CHAR LIMIT=30]-->
@@ -228,13 +204,11 @@
   <!-- Title to show when the ip settings are invalid [CHAR LIMIT=80] -->
   <!-- Title to show when the ip settings are invalid [CHAR LIMIT=80] -->
   <!-- Label for action to try to connect to wifi again [CHAR LIMIT=50] -->
-  <string name="wifi_action_try_again">Reprovi</string>
   <!-- Label for action to go back to the list of wifi networks [CHAR LIMIT=50] -->
   <!-- Message to show when wifi is connecting [CHAR LIMIT=80] -->
   <!-- Message to show when wifi is saving a new configuration [CHAR LIMIT=80] -->
   <!-- Title for action to connect to the wifi network [CHAR LIMIT=80] -->
   <!-- Title for action to forget the wifi network configuration [CHAR LIMIT=80] -->
-  <string name="wifi_forget_network">Forgesi reton</string>
   <!-- Description for action to forget the wifi network configuration [CHAR LIMIT=100] -->
   <!-- Label for action to accept the currently connected wifi network [CHAR LIMIT=50] -->
   <!-- Label for action to try to connect to a different wifi network [CHAR LIMIT=50] -->
@@ -245,7 +219,6 @@
   <!-- Label for action to setup a proxy for the wifi connection [CHAR LIMIT=50] -->
   <!-- Label for action to use dhcp to obtain an ip address for the wifi connection [CHAR LIMIT=50] -->
   <!-- Label for action to save advanced settings [CHAR LIMIT=50] -->
-  <string name="wifi_action_save">Konservi</string>
   <!-- Label for action to setup static ip information for the wifi connection [CHAR LIMIT=50] -->
   <!-- Title for action to show status information for the wifi connection [CHAR LIMIT=50] -->
   <!-- Title for action to setup advanced options for the wifi connection [CHAR LIMIT=50] -->
@@ -274,7 +247,6 @@
   <!-- Name to use when we don't know the name of the wifi network the device is connected to [CHAR LIMIT=20] -->
   <!-- Title for action to configure advanced options for a wifi or ethernet connection [CHAR LIMIT=80] -->
   <!-- Description for action to configure advanced options for a wifi or ethernet connection showing a summary of advanced options[CHAR LIMIT=80] -->
-  <string name="connectivity_advanced_options_description"><xliff:g id="ssid">%1$s</xliff:g>, <xliff:g id="ssid">%2$s</xliff:g></string>
   <!-- Strings for Ethernet under Connectivity Setting -->
   <!-- Key for ip settings [CHAR LIMIT=30] -->
   <!-- Title for Test Connection [CHAR LIMIT=50] -->
@@ -286,21 +258,18 @@
   <!-- Title for DNS 2 [CHAR LIMIT=50] -->
   <!-- Title for OK [CHAR LIMIT=50] -->
   <!-- Title for DNS 2 [CHAR LIMIT=50] -->
-  <string name="title_cancel">Nuligi</string>
   <!-- Title of renaming wifi direct device [CHAR LIMIT=50] -->
   <!-- Storage settings screen heading. This is displayed above items that pertain to the phone's internal storage [CHAR LIMIT=50] -->
   <!-- Storage settings title. The amount of free space for some storage partition.  For example, this is listed under both the "Internal phone storage" section and the "SD card" section. [CHAR LIMIT=50] -->
   <!-- Storage settings screen heading.  The total amount of storage space for some storage partition.  For example, this is listed under both the "Internal phone storage" section and the "SD card" section [CHAR LIMIT=50] -->
   <!-- Storage settings summary. Displayed when the total memory usage is being calculated. Will be replaced with a number like "12.3 GB" when finished calucating. [CHAR LIMIT=30] -->
   <!-- Storage settings title. Displayed as a title when showing the total usage of applications installed. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
-  <string name="storage_apps_usage">Aplikaĵoj</string>
   <!-- Storage settings title. Displayed as a title when showing the total usage of /sdcard/Download on the device. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
   <!-- Storage settings title. Displayed as a title when showing the total usage of all pictures, videos in /sdcard/DCIM, /sdcard/Pictures folders on the device. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
   <!-- Storage settings title. Displayed as a title when showing the total usage of audio files in /sdcard on the device. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
   <!-- Storage settings title. Displayed as a title when showing the total usage of misc files on the device. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
   <!-- Storage settings title. Displayed as a title when showing the total usage of all cached data on device. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
   <!-- Action to cancel WPS scanning [CHAR LIMIT=50] -->
-  <string name="wifi_wps_cancel_scan">Nuligi</string>
   <!-- Action to retry WPS scanning [CHAR LIMIT=50] -->
   <!-- Message indicating we are scanning for WPS routers [CHAR LIMIT=150] -->
   <!-- Message describing how to turn on WPS on a router [CHAR LIMIT=150] -->
@@ -320,7 +289,6 @@
   <!-- Title for automatic date & time [CHAR LIMIT = 80] -->
   <!-- Description for using automatic date & time in date time settings [CHAR LIMIT=100] -->
   <!-- Title for Location in System Settings [CHAR LIMIT=50] -->
-  <string name="system_location">Loko</string>
   <!-- Description for Location in System Settings [CHAR LIMIT=NONE] -->
   <!-- Title for the Google location source in System Settings [CHAR LIMIT=50]-->
   <!-- Description for the Google location source in System Settings [CHAR LIMIT=150]-->
@@ -328,7 +296,6 @@
   <!-- Description for confirming location consent [CHAR LIMIT=NONE] -->
   <!-- Security & location settings screen, section header for settings relating to location -->
   <!-- Header title for SecurityActivity [CHAR LIMIT=50] -->
-  <string name="header_category_system">Sistemo</string>
   <!-- [CHAR LIMIT=30] Location settings screen, setting preference screen box label for location mode -->
   <!-- [CHAR LIMIT=30] Location settings screen, sub category for recent location requests -->
   <!-- Location settings screen, displayed when there's no recent app accessing location -->
@@ -357,7 +324,6 @@
   <!-- Description for captions display setting [CHAR LIMIT=100] -->
   <!-- Title for captions configure setting [CHAR LIMIT=50] -->
   <!-- Title for captions language setting [CHAR LIMIT=50] -->
-  <string name="captions_lanaguage">Lingvo</string>
   <!-- Title for captions text size setting [CHAR LIMIT=50] -->
   <!-- Title for captions style setting [CHAR LIMIT=50] -->
   <!-- Title for custom captions settings [CHAR LIMIT=50] -->
@@ -470,11 +436,6 @@
   <!-- Description for action to warn before installing of applications that may cause harm [CHAR LIMIT=NONE]-->
   <!-- Values for HDCP checking preference. -->
   <!-- Summaries for HDCP checking preference. [CHAR LIMIT=100]-->
-  <string-array name="hdcp_checking_summaries">
-    <item>Neniam</item>
-    <item>For DRM content</item>
-    <item>Always</item>
-  </string-array>
   <!-- UI debug setting: label for app picker to select no applicatiojn [CHAR LIMIT=50] -->
   <!-- Titles for OpenGL traces preference. [CHAR LIMIT=35] -->
   <!-- Values for OpenGL traces preference. -->
@@ -548,7 +509,6 @@
   <!-- Summary for apps that aren't supported in limited users [CHAR LIMIT=none] -->
   <!-- Summary text for apps that are allowed to access accounts from the primary user [CHAR LIMIT=none] -->
   <!-- Restrictions title for allowing location sharing [CHAR LIMIT=35] -->
-  <string name="restriction_location_enable_title">Loko</string>
   <!-- Restrictions summary for allowing location sharing [CHAR LIMIT=100] -->
   <!-- Action to create a restricted profile [CHAR LIMIT=100] -->
   <!-- Action to switch to a restricted profile [CHAR LIMIT=100] -->
@@ -556,7 +516,6 @@
   <!-- Title for action to delete a restricted profile [CHAR LIMIT=100] -->
   <!-- DO NOT TRANSLATE Description for action to delete a restricted profile [CHAR LIMIT=100] -->
   <!-- Title for action to configure a restricted profile [CHAR LIMIT=100] -->
-  <string name="restricted_profile_configure_title">Agordoj</string>
   <!-- Title for action to configure apps for a restricted profile [CHAR LIMIT=100] -->
   <!-- Description for action to configure apps for a restricted profile indicating number of allow apps will be ready in a moment [CHAR LIMIT=100] -->
   <!-- An action label indicating the package will be or is allowed [CHAR LIMIT=100] -->
@@ -569,7 +528,6 @@
   <!-- Text to indicate user should enter the password to get out of restricted profile[CHAR LIMIT=100] -->
   <!-- Title for dialog to remove restricted user [CHAR LIMIT=100] -->
   <!-- Description for action to configure an application's restriction [CHAR LIMIT=200] -->
-  <string name="restriction_description"><xliff:g id="description">%1$s</xliff:g>\n<xliff:g id="value">%2$s</xliff:g></string>
   <!-- PIN UX -->
   <!-- Title of PIN dialog when an user is asked to enter PIN to unlock channel.
          [CHAR LIMIT=50] -->
@@ -584,7 +542,6 @@
   <!-- Message shown in the dialog when the user entered the wrong. [CHAR LIMIT=128] -->
   <!-- Name of PIN dialog button for OK. [CHAR LIMIT=8] -->
   <!-- Name of PIN dialog button for cancel. [CHAR LIMIT=8] -->
-  <string name="pin_button_cancel">Nuligi</string>
   <!-- Toast message when an user entered wrong PIN. [CHAR LIMIT=128] -->
   <!-- Toast message when an user couldn't pass the PIN confirmation. [CHAR LIMIT=128] -->
 </resources>
