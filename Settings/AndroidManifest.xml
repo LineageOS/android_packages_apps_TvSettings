@@ -435,7 +435,8 @@
             android:name=".accessories.BluetoothPairingDialog"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
-            android:exported="true" >
+            android:exported="true"
+            android:taskAffinity="" >
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
 
