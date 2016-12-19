@@ -497,7 +497,6 @@ public class SecurityFragment extends LeanbackPreferenceFragment
     }
 
     private void onRestrictedUserCreated(UserInfo result) {
-        UserSwitchListenerService.updateLaunchPoint(getActivity(), true);
         int userId = result.id;
         if (result.isRestricted()
                 && result.restrictedProfileParentId == UserHandle.myUserId()) {
@@ -554,6 +553,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
                 sCreateRestrictedProfileTask = null;
                 return;
             }
+            UserSwitchListenerService.updateLaunchPoint(mContext, true);
             LocalBroadcastManager.getInstance(mContext).sendBroadcast(
                     new Intent(ACTION_RESTRICTED_PROFILE_CREATED)
                             .putExtra(EXTRA_RESTRICTED_PROFILE_INFO, result));
