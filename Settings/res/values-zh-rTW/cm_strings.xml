@@ -37,7 +37,7 @@
   <!-- These statuses are displayed when a device was built with SE Android supoprt.
     These are displayed by the settings app in the about section. -->
   <string name="selinux_status_disabled">已停用</string>
-  <string name="selinux_status_permissive">許可</string>
+  <string name="selinux_status_permissive">權限</string>
   <string name="selinux_status_enforcing">強制</string>
   <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
   <string name="accessories_add_bluetooth_inst_cm">在使用 CyanogenMod 前，請確保藍牙裝置處於配對模式。對於 Nexus 遙控器，同時按下 [返回] 和 [主螢幕] 按鍵即可完成。</string>
@@ -68,11 +68,11 @@
   <string name="advanced_reboot_summary">包括選單內的選項，可重新啟動至 Recovery、Bootloader 或進行軟體重新啟動</string>
   <!-- Reboot menu -->
   <!-- Button to reboot the device into recovery, within the Reboot Options dialog -->
-  <string name="reboot_recovery_button_label">修復模式 (recovery)</string>
+  <string name="reboot_recovery_button_label">Recovery</string>
   <!-- Button to reboot the device into bootloader, within the Reboot Options dialog -->
-  <string name="reboot_bootloader_button_label">啟動載入模式 (bootloader)</string>
+  <string name="reboot_bootloader_button_label">Bootloader</string>
   <!-- Button to soft reboot the device, within the Reboot Options dialog -->
-  <string name="reboot_soft_button_label">軟重啟</string>
+  <string name="reboot_soft_button_label">軟體重新啟動</string>
   <!-- Android debugging over WiFi -->
   <string name="adb_over_network">透過網路 ADB </string>
   <string name="adb_over_network_summary">啟用透過網路介面 (Wi\u2011Fi、USB 網路) 進行 TCP/IP 偵錯。該設定會在重新啟動後重設</string>

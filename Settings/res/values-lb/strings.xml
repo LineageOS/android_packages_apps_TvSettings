@@ -24,6 +24,7 @@
   <!-- Leanback Launcher App Title for Restricted Profile app [CHAR LIMIT=40] -->
   <string name="launcher_restricted_profile_app_name">Ageschränkte Profil</string>
   <!-- Top level headers -->
+  <skip></skip>
   <!-- Header title for device [CHAR LIMIT=50] -->
   <string name="header_category_device">Apparat</string>
   <!-- Header title for preferences [CHAR LIMIT=50] -->
@@ -33,6 +34,7 @@
   <!-- Header title for personal [CHAR LIMIT=50] -->
   <string name="header_category_personal">Perséinlech</string>
   <!-- Account preferences -->
+  <skip></skip>
   <!-- Preference which adds an account [CHAR LIMIT=50] -->
   <string name="add_account">Kont dobäisetzen</string>
   <!-- Header for sync [CHAR LIMIT=50] -->
@@ -58,6 +60,7 @@
   <!-- Message posted if removing the account fails. [CHAR LIMIT=NONE] -->
   <string name="account_remove_failed">Kont kann net ewechgeholl ginn</string>
   <!-- Connectivity preferences -->
+  <skip></skip>
   <!-- Top level network card title. [CHAR LIMIT=50] -->
   <string name="connectivity_network">Netzwierk</string>
   <!-- Preference which manages wifi settings. [CHAR LIMIT=50] -->
@@ -69,6 +72,7 @@
   <!-- Title for enable wifi. [CHAR LIMIT=50] -->
   <string name="wifi_setting_enable_wifi">WLAN</string>
   <!-- Device preferences -->
+  <skip></skip>
   <!-- Preference which changes daydream settings. [CHAR LIMIT=50] -->
   <string name="device_daydream">Dagesdram</string>
   <!-- Preference which changes display settings. [CHAR LIMIT=50] -->
@@ -98,6 +102,7 @@
   <!-- Browse Header for running apps under device settings. [CHAR LIMIT=50] -->
   <string name="apps_running">Lafend App</string>
   <!-- Remote and Accessories -->
+  <skip></skip>
   <!-- Preference which manages pairing new accessories. [CHAR LIMIT=50] -->
   <string name="accessories_add">Accessoiren dobäisetzen</string>
   <!-- Preference which manages WiFi display settings. [CHAR LIMIT=50] -->
@@ -124,6 +129,7 @@
   <!-- Description for Connected accessory[CHAR LIMIT=50] -->
   <string name="accessory_connected">Verbonnen</string>
   <!-- Remote and Accessories -->
+  <skip></skip>
   <!-- Description text for new accessories pairing screen. [CHAR LIMIT=150] -->
   <string name="accessories_add_title">Gëtt no Accessoirë gesicht&#8230;</string>
   <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
@@ -157,6 +163,7 @@
   <!-- Action title for Cancelling the Bluetooth secure Pair action [CHAR LIMIT=50] -->
   <string name="bluetooth_cancel">Ofbriechen</string>
   <!-- System -->
+  <skip></skip>
   <!-- Preference which manages cast settings. [CHAR LIMIT=50] -->
   <string name="system_cast">Google Cast</string>
   <!-- Preference which manages date / time settings. [CHAR LIMIT=50] -->
@@ -183,6 +190,7 @@
   <string name="accessibility_none">Keen</string>
   <!-- Preference which manages Diagnostic and Usage reporting -->
   <!-- About -->
+  <skip></skip>
   <!-- Preference which shows system update status. [CHAR LIMIT=50] -->
   <string name="about_system_update">Systemaktualiséierungen</string>
   <!-- Preference which shows about screen with legal info, model, etc. [CHAR LIMIT=50] -->
@@ -219,6 +227,7 @@
   <!-- Device Info screen. Okay we get it, stop pressing, you already have it on [CHAR LIMIT=NONE] -->
   <string name="show_dev_already">Net néideg, du bass schonn en Entwéckler</string>
   <!-- Wifi -->
+  <skip></skip>
   <!-- wifi signal strength array [CHAR LIMIT=30] -->
   <string-array name="wifi_signal_strength">
     <item>Schwaach</item>
@@ -744,6 +753,7 @@
   <!-- Description for profile GPU rendering in System Settings Developer options [CHAR LIMIT=100] -->
   <string name="system_desc_profile_gpu_rendering">Rendering-Zäit an adb shell dumpsys gfxinfo moossen</string>
   <!-- General use strings -->
+  <skip></skip>
   <!-- Title for an action which turns a feature on [CHAR LIMIT=30] -->
   <string name="action_on_title">Un</string>
   <!-- Title for an action which turns a feature off [CHAR LIMIT=30] -->
@@ -757,6 +767,7 @@
   <!-- Title for action which denotes the user disagrees [CHAR LIMIT=50] -->
   <string name="disagree">Net zoustëmmen</string>
   <!-- Security -->
+  <skip></skip>
   <!-- Title for action to allow installation of applications from unknown sources [CHAR LIMIT=50]-->
   <string name="security_unknown_sources_title">Onbekannt Quellen</string>
   <!-- Description for action to allow installation of applications from unknown sources [CHAR LIMIT=NONE]-->
@@ -954,6 +965,7 @@
   <!-- Description for action to configure an application's restriction [CHAR LIMIT=200] -->
   <string name="restriction_description"><xliff:g id="description">%1$s</xliff:g>\n<xliff:g id="value">%2$s</xliff:g></string>
   <!-- PIN UX -->
+  <eat-comment></eat-comment>
   <!-- Title of PIN dialog when an user is asked to enter PIN to unlock channel.
          [CHAR LIMIT=50] -->
   <string name="pin_enter_unlock_channel">Gëff de PIN an, fir dëse Kanal ze gesinn</string>
@@ -1020,6 +1032,7 @@
   <!-- Daydream description for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=NONE] -->
   <!-- Default summary text of the "Configure backup account" setting [CHAR LIMIT=80] -->
   <!-- Dialog title for confirmation to erase backup data from server -->
+  <string name="backup_erase_dialog_title"></string>
   <!-- Dialog title for confirmation to erase backup data from server -->
   <!-- Privacy choice for configuring backing up data [CHAR LIMIT=40] -->
   <!-- Privacy choice for choosing which account to backup [CHAR LIMIT=40] -->

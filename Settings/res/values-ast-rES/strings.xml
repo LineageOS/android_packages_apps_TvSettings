@@ -20,11 +20,13 @@
   <!-- Leanback Launcher App Title for Network settings app [CHAR LIMIT=40] -->
   <!-- Leanback Launcher App Title for Restricted Profile app [CHAR LIMIT=40] -->
   <!-- Top level headers -->
+  <skip></skip>
   <!-- Header title for device [CHAR LIMIT=50] -->
   <!-- Header title for preferences [CHAR LIMIT=50] -->
   <!-- Header title for accessories [CHAR LIMIT=50] -->
   <!-- Header title for personal [CHAR LIMIT=50] -->
   <!-- Account preferences -->
+  <skip></skip>
   <!-- Preference which adds an account [CHAR LIMIT=50] -->
   <!-- Header for sync [CHAR LIMIT=50] -->
   <!-- Header for remove account [CHAR LIMIT=50] -->
@@ -38,6 +40,7 @@
   <!-- Remove account item label: remove the account [CHAR LIMIT=30] -->
   <!-- Message posted if removing the account fails. [CHAR LIMIT=NONE] -->
   <!-- Connectivity preferences -->
+  <skip></skip>
   <!-- Top level network card title. [CHAR LIMIT=50] -->
   <!-- Preference which manages wifi settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages ethernet settings. [CHAR LIMIT=50] -->
@@ -47,6 +50,7 @@
   <string name="wifi_setting_always_scan_context">Dexa que\'l serviciu d\'allugamientu de Google y otres aplicaciones gueten redes, incluso tando\'l Wi-Fi apagáu</string>
   <!-- Title for enable wifi. [CHAR LIMIT=50] -->
   <!-- Device preferences -->
+  <skip></skip>
   <!-- Preference which changes daydream settings. [CHAR LIMIT=50] -->
   <!-- Preference which changes display settings. [CHAR LIMIT=50] -->
   <!-- Preference and title which changes system sounds settings. [CHAR LIMIT=50] -->
@@ -62,6 +66,7 @@
   <!-- Browse Header for all apps under device settings. [CHAR LIMIT=50] -->
   <!-- Browse Header for running apps under device settings. [CHAR LIMIT=50] -->
   <!-- Remote and Accessories -->
+  <skip></skip>
   <!-- Preference which manages pairing new accessories. [CHAR LIMIT=50] -->
   <!-- Preference which manages WiFi display settings. [CHAR LIMIT=50] -->
   <!-- Device Paring Status: Pairing. [CHAR LIMIT=50] -->
@@ -77,6 +82,7 @@
   <!-- Description shown while we are waiting for a device unpair operation to finish[CHAR LIMIT=50] -->
   <!-- Description for Connected accessory[CHAR LIMIT=50] -->
   <!-- Remote and Accessories -->
+  <skip></skip>
   <!-- Description text for new accessories pairing screen. [CHAR LIMIT=150] -->
   <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
   <!-- Description text for autopairing when the user is in the pairing activity due to pressing the back HW button.  %1 will be replaced with the countdown value. [CHAR LIMIT=150] -->
@@ -94,6 +100,7 @@
   <!-- Action title for Confirming the Bluetooth secure Pair action [CHAR LIMIT=50] -->
   <!-- Action title for Cancelling the Bluetooth secure Pair action [CHAR LIMIT=50] -->
   <!-- System -->
+  <skip></skip>
   <!-- Preference which manages cast settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages date / time settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages language settings. [CHAR LIMIT=50] -->
@@ -109,6 +116,7 @@
   <!-- Preference which manages Diagnostic and Usage reporting -->
   <string name="system_diagnostic">Usu y diagnósticos</string>
   <!-- About -->
+  <skip></skip>
   <!-- Preference which shows system update status. [CHAR LIMIT=50] -->
   <!-- Preference which shows about screen with legal info, model, etc. [CHAR LIMIT=50] -->
   <!-- Preference which shows name of device as it will appear when being accessed remotely [CHAR LIMIT=50] -->
@@ -126,6 +134,7 @@
   <!-- Device Info screen. Confirmation that developer settings are enabled [CHAR LIMIT=NONE] -->
   <!-- Device Info screen. Okay we get it, stop pressing, you already have it on [CHAR LIMIT=NONE] -->
   <!-- Wifi -->
+  <skip></skip>
   <!-- wifi signal strength array [CHAR LIMIT=30] -->
   <!-- titles for connection status -->
   <!-- label mac address [CHAR LIMIT=50] -->
@@ -476,6 +485,7 @@
   <!-- Description for show cpu usage in System Settings Developer options [CHAR LIMIT=100] -->
   <!-- Description for profile GPU rendering in System Settings Developer options [CHAR LIMIT=100] -->
   <!-- General use strings -->
+  <skip></skip>
   <!-- Title for an action which turns a feature on [CHAR LIMIT=30] -->
   <!-- Title for an action which turns a feature off [CHAR LIMIT=30] -->
   <!-- Title for a status description saying that a feature is on [CHAR LIMIT=30] -->
@@ -483,6 +493,7 @@
   <!-- Title for action which denotes the user agrees [CHAR LIMIT=50] -->
   <!-- Title for action which denotes the user disagrees [CHAR LIMIT=50] -->
   <!-- Security -->
+  <skip></skip>
   <!-- Title for action to allow installation of applications from unknown sources [CHAR LIMIT=50]-->
   <!-- Description for action to allow installation of applications from unknown sources [CHAR LIMIT=NONE]-->
   <!-- Description for confirmation to allow installation of applications from unknown sources [CHAR LIMIT=NONE]-->
@@ -581,6 +592,7 @@
   <!-- Title for action to change the PIN code to use when exiting restricted profile [CHAR LIMIT=100] -->
   <!-- Description for action to configure an application's restriction [CHAR LIMIT=200] -->
   <!-- PIN UX -->
+  <eat-comment></eat-comment>
   <!-- Title of PIN dialog when an user is asked to enter PIN to unlock channel.
          [CHAR LIMIT=50] -->
   <!-- Title of PIN dialog when an user is asked to enter PIN to unlock program.
@@ -666,6 +678,7 @@
   <!-- Default summary text of the "Configure backup account" setting [CHAR LIMIT=80] -->
   <string name="backup_configure_account_default_summary">Nesti momentu, nenguna cuenta almacena copies de seguranza de los datos.</string>
   <!-- Dialog title for confirmation to erase backup data from server -->
+  <string name="backup_erase_dialog_title"></string>
   <!-- Dialog title for confirmation to erase backup data from server -->
   <string name="backup_erase_dialog_message">¿Quies dexar de guardar copies de seguranza de contraseñes Wi-Fi, marcadores, configuraciones, datos d\'apps y desaniciar toles copies de los sirvidores de Google?</string>
   <!-- Privacy choice for configuring backing up data [CHAR LIMIT=40] -->
