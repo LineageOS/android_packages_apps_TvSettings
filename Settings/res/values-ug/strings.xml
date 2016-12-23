@@ -20,11 +20,13 @@
   <!-- Leanback Launcher App Title for Network settings app [CHAR LIMIT=40] -->
   <!-- Leanback Launcher App Title for Restricted Profile app [CHAR LIMIT=40] -->
   <!-- Top level headers -->
+  <skip></skip>
   <!-- Header title for device [CHAR LIMIT=50] -->
   <!-- Header title for preferences [CHAR LIMIT=50] -->
   <!-- Header title for accessories [CHAR LIMIT=50] -->
   <!-- Header title for personal [CHAR LIMIT=50] -->
   <!-- Account preferences -->
+  <skip></skip>
   <!-- Preference which adds an account [CHAR LIMIT=50] -->
   <!-- Header for sync [CHAR LIMIT=50] -->
   <!-- Header for remove account [CHAR LIMIT=50] -->
@@ -40,10 +42,12 @@
   <!-- Message posted if removing the account fails. [CHAR LIMIT=NONE] -->
   <!-- Account details settings  [CHAR LIMIT=50] -->
   <!-- Connectivity preferences -->
+  <skip></skip>
   <!-- Top level network card title. [CHAR LIMIT=50] -->
   <!-- Preference which manages wifi settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages ethernet settings. [CHAR LIMIT=50] -->
   <!-- Device preferences -->
+  <skip></skip>
   <!-- Preference which changes daydream settings. [CHAR LIMIT=50] -->
   <!-- Preference which changes display settings. [CHAR LIMIT=50] -->
   <!-- Preference and title which changes system sounds settings. [CHAR LIMIT=50] -->
@@ -59,6 +63,7 @@
   <!-- Browse Header for all apps under device settings. [CHAR LIMIT=50] -->
   <!-- Browse Header for running apps under device settings. [CHAR LIMIT=50] -->
   <!-- Remote and Accessories -->
+  <skip></skip>
   <!-- Preference which manages remote control settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages camera settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages pairing new accessories. [CHAR LIMIT=50] -->
@@ -74,6 +79,7 @@
   <!-- Description shown while we are waiting for a device unpair operation to finish[CHAR LIMIT=50] -->
   <!-- Description for Connected accessory[CHAR LIMIT=50] -->
   <!-- Remote and Accessories -->
+  <skip></skip>
   <!-- Description text for new accessories pairing screen. [CHAR LIMIT=150] -->
   <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
   <!-- Description text for autopairing when the user is in the pairing activity due to pressing the back HW button.  %1 will be replaced with the countdown value. [CHAR LIMIT=150] -->
@@ -91,6 +97,7 @@
   <!-- Action title for Confirming the Bluetooth secure Pair action [CHAR LIMIT=50] -->
   <!-- Action title for Cancelling the Bluetooth secure Pair action [CHAR LIMIT=50] -->
   <!-- System -->
+  <skip></skip>
   <!-- Preference which manages cast settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages date / time settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages language settings. [CHAR LIMIT=50] -->
@@ -104,6 +111,7 @@
   <!-- Preference which manages developer options. [CHAR LIMIT=50] -->
   <!-- Label for no accessibility color or opacity [CHAR LIMIT=50] -->
   <!-- About -->
+  <skip></skip>
   <!-- Preference which shows system update status. [CHAR LIMIT=50] -->
   <!-- Preference which shows about screen with legal info, model, etc. [CHAR LIMIT=50] -->
   <!-- Preference which shows name of device as it will appear when being accessed remotely [CHAR LIMIT=50] -->
@@ -122,6 +130,7 @@
   <!-- Device Info screen. Confirmation that developer settings are enabled [CHAR LIMIT=NONE] -->
   <!-- Device Info screen. Okay we get it, stop pressing, you already have it on [CHAR LIMIT=NONE] -->
   <!-- Wifi -->
+  <skip></skip>
   <!-- Do not translate.  Concise terminology for wifi with WEP security -->
   <!-- Do not translate.  Concise terminology for wifi with WPA security -->
   <!-- Do not translate.  Concise terminology for wifi with WPA2 security -->
@@ -422,6 +431,7 @@
   <!-- The option in the date-format picker for using the normal format
          called for by the user's locale. -->
   <!-- General use strings -->
+  <skip></skip>
   <!-- Title for an action which turns a feature on [CHAR LIMIT=30] -->
   <!-- Title for an action which turns a feature off [CHAR LIMIT=30] -->
   <!-- Title for a status description saying that a feature is on [CHAR LIMIT=30] -->
@@ -429,6 +439,7 @@
   <!-- Title for action which denotes the user agrees [CHAR LIMIT=50] -->
   <!-- Title for action which denotes the user disagrees [CHAR LIMIT=50] -->
   <!-- Security -->
+  <skip></skip>
   <!-- Title for action to allow installation of applications from unknown sources [CHAR LIMIT=50]-->
   <!-- Description for action to allow installation of applications from unknown sources [CHAR LIMIT=NONE]-->
   <!-- Description for confirmation to allow installation of applications from unknown sources [CHAR LIMIT=NONE]-->
@@ -469,6 +480,7 @@
   <!-- Action option which allows the enabling or disabling the PIN requirement of wifi display [CHAR LIMIT=40] -->
   <!-- Header used to list a connected Remote and its serial number. %1 gets replaced with the serial number. [CHAR LIMIT=40] -->
   <!-- Bug Report strings. NOTE: these will not be shown to external users, only internal ones. -->
+  <skip></skip>
   <!-- Message shown when a bug report is being collected [CHAR LIMIT=100] -->
   <!-- Message shown when a bug report could not be collected [CHAR LIMIT=100] -->
   <!-- Disambiguation Activity-->
@@ -529,6 +541,7 @@
   <!-- Title for dialog to remove restricted user [CHAR LIMIT=100] -->
   <!-- Description for action to configure an application's restriction [CHAR LIMIT=200] -->
   <!-- PIN UX -->
+  <eat-comment></eat-comment>
   <!-- Title of PIN dialog when an user is asked to enter PIN to unlock channel.
          [CHAR LIMIT=50] -->
   <!-- Title of PIN dialog when an user is asked to enter PIN to unlock program.
