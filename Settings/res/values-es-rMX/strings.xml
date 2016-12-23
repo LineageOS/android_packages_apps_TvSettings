@@ -20,11 +20,13 @@
   <!-- Leanback Launcher App Title for Network settings app [CHAR LIMIT=40] -->
   <!-- Leanback Launcher App Title for Restricted Profile app [CHAR LIMIT=40] -->
   <!-- Top level headers -->
+  <skip></skip>
   <!-- Header title for device [CHAR LIMIT=50] -->
   <!-- Header title for preferences [CHAR LIMIT=50] -->
   <!-- Header title for accessories [CHAR LIMIT=50] -->
   <!-- Header title for personal [CHAR LIMIT=50] -->
   <!-- Account preferences -->
+  <skip></skip>
   <!-- Title for main screen category for accounts on device [CHAR LIMIT=50] -->
   <!-- Preference which adds an account [CHAR LIMIT=50] -->
   <!-- Header for remove account [CHAR LIMIT=50] -->
@@ -40,6 +42,7 @@
   <!-- Image description for the sync failed icon. -->
   <!-- Animation description for the sync active icon. -->
   <!-- Connectivity preferences -->
+  <skip></skip>
   <!-- Top level network card title. [CHAR LIMIT=50] -->
   <!-- Preference which manages wifi settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages ethernet settings. [CHAR LIMIT=50] -->
@@ -47,6 +50,7 @@
   <!-- Context help for always scan wifi. [CHAR LIMIT=200] -->
   <!-- Title for enable wifi. [CHAR LIMIT=50] -->
   <!-- Device preferences -->
+  <skip></skip>
   <!-- Preference which changes screen saver settings. [CHAR LIMIT=50] -->
   <!-- Preference which changes display settings. [CHAR LIMIT=50] -->
   <!-- Title for preference screen controlling sound settings [CHAR LIMIT=50] -->
@@ -63,6 +67,7 @@
   <!-- Browse Header for all apps under device settings. [CHAR LIMIT=50] -->
   <!-- Browse Header for running apps under device settings. [CHAR LIMIT=50] -->
   <!-- Remote and Accessories -->
+  <skip></skip>
   <!-- Preference which manages pairing new accessories. [CHAR LIMIT=50] -->
   <!-- Device Paring Status: Pairing. [CHAR LIMIT=50] -->
   <!-- Device Paring Status: Connecting. [CHAR LIMIT=50] -->
@@ -75,6 +80,7 @@
   <!-- Description shown while we are waiting for a device unpair operation to finish[CHAR LIMIT=50] -->
   <!-- Description for Connected accessory[CHAR LIMIT=50] -->
   <!-- Remote and Accessories -->
+  <skip></skip>
   <!-- Description text for new accessories pairing screen. [CHAR LIMIT=150] -->
   <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
   <!-- Description text for autopairing when the user is in the pairing activity due to pressing the back HW button.  %1 will be replaced with the countdown value. [CHAR LIMIT=150] -->
@@ -89,6 +95,7 @@
   <!-- Action title for Confirming the Bluetooth secure Pair action [CHAR LIMIT=50] -->
   <!-- Action title for Cancelling the Bluetooth secure Pair action [CHAR LIMIT=50] -->
   <!-- System -->
+  <skip></skip>
   <!-- Preference which manages cast settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages date / time settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages language settings. [CHAR LIMIT=50] -->
@@ -103,6 +110,7 @@
   <!-- Label for no accessibility color or opacity [CHAR LIMIT=50] -->
   <!-- Preference which manages Diagnostic and Usage reporting -->
   <!-- About -->
+  <skip></skip>
   <!-- Preference which shows system update status. [CHAR LIMIT=50] -->
   <!-- Preference which shows about screen with legal info, model, etc. [CHAR LIMIT=50] -->
   <!-- Preference which shows name of device as it will appear when being accessed remotely [CHAR LIMIT=50] -->
@@ -148,16 +156,21 @@
   <!-- Legal screen -->
   <!-- About phone settings screen, setting option name to go to dialog that shows legal info -->
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
+  <skip></skip>
   <!-- About phone settings screen, setting option name to see copyright-related info -->
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
+  <skip></skip>
   <!-- About phone settings screen, setting option name to see licensing info -->
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
+  <skip></skip>
   <!-- About phone settings screen, setting option name to see terms and conditions -->
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
+  <skip></skip>
   <!-- About phone settings screen, setting option name to see licensing info for WebView component. [CHAR LIMIT=35] -->
   <!-- About phone settings screen, setting option name to see wallpapers attributions -->
   <!-- About phone settings screen, setting option name to see wallpapers attributions values -->
   <!-- Wifi -->
+  <skip></skip>
   <!-- wifi signal strength array [CHAR LIMIT=30] -->
   <!-- titles for connection status -->
   <!-- label mac address [CHAR LIMIT=50] -->
@@ -464,6 +477,7 @@
   <!-- Description for strict mode enabled in System Settings Developer options [CHAR LIMIT=100] -->
   <!-- Description for profile GPU rendering in System Settings Developer options [CHAR LIMIT=100] -->
   <!-- General use strings -->
+  <skip></skip>
   <!-- Title for an action which turns a feature on [CHAR LIMIT=30] -->
   <!-- Title for an action which turns a feature off [CHAR LIMIT=30] -->
   <!-- Title for a status description saying that a feature is on [CHAR LIMIT=30] -->
@@ -471,6 +485,7 @@
   <!-- Title for action which denotes the user agrees [CHAR LIMIT=50] -->
   <!-- Title for action which denotes the user disagrees [CHAR LIMIT=50] -->
   <!-- Security -->
+  <skip></skip>
   <!-- Title for action to allow installation of applications from unknown sources [CHAR LIMIT=50]-->
   <!-- Description for action to allow installation of applications from unknown sources [CHAR LIMIT=NONE]-->
   <!-- Title for confirmation dialog to allow installation of applications from unknown sources [CHAR LIMIT=50]-->
@@ -568,6 +583,7 @@
   <!-- Description for action to configure an application's restriction [CHAR LIMIT=200] -->
   <!-- Summary for a case when app entries that are controlled by another entry and app can access user accounts [CHAR LIMIT=none] -->
   <!-- PIN UX -->
+  <eat-comment></eat-comment>
   <!-- Title of PIN dialog when an user is asked to enter PIN to unlock channel.
          [CHAR LIMIT=50] -->
   <!-- Title of PIN dialog when an user is asked to enter PIN to unlock program.
@@ -620,6 +636,7 @@
   <!-- Screen saver description for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=NONE] -->
   <!-- Default summary text of the "Configure backup account" setting [CHAR LIMIT=80] -->
   <!-- Dialog title for confirmation to erase backup data from server -->
+  <string name="backup_erase_dialog_title"></string>
   <!-- Dialog title for confirmation to erase backup data from server -->
   <!-- Privacy choice for configuring backing up data [CHAR LIMIT=40] -->
   <!-- Privacy choice for choosing which account to backup [CHAR LIMIT=40] -->
