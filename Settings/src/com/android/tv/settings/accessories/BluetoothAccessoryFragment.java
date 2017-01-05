@@ -227,10 +227,14 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
     }
 
     private void renameDevice(String deviceName) {
+        mDeviceName = deviceName;
         if (mDevice != null) {
             mDevice.setAlias(deviceName);
             getPreferenceScreen().setTitle(deviceName);
             setTitle(deviceName);
+            ChangeNameFragment.prepareArgs(mChangeNamePref.getExtras(), mDeviceName, mDeviceImgId);
+            UnpairConfirmFragment.prepareArgs(
+                    mUnpairPref.getExtras(), mDevice, mDeviceName, mDeviceImgId);
         }
     }
 
