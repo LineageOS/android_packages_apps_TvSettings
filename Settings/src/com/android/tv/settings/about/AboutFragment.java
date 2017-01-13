@@ -318,6 +318,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
     public boolean onPreferenceTreeClick(Preference preference) {
         switch (preference.getKey()) {
             case KEY_FIRMWARE_VERSION:
+            case KEY_LINEAGE_VERSION:
                 System.arraycopy(mHits, 1, mHits, 0, mHits.length - 1);
                 mHits[mHits.length - 1] = SystemClock.uptimeMillis();
                 if (mHits[0] >= (SystemClock.uptimeMillis() - 500)) {
@@ -335,6 +336,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
                     }
 
                     Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.putExtra("is_lineage", preference.getKey().equals(KEY_LINEAGE_VERSION));
                     intent.setClassName("android",
                             com.android.internal.app.PlatLogoActivity.class.getName());
                     try {
