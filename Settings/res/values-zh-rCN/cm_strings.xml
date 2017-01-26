@@ -21,6 +21,9 @@
   <!-- About screen, CyanogenMod version -->
   <string name="about_mod_version">CyanogenMod 版本</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <plurals name="show_dev_countdown_cm">
+    <item quantity="other">还需 <xliff:g id="step_count">%1$d</xliff:g> 步操作即可启用开发者选项。</item>
+  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
   <string name="show_dev_on_cm">您已经启用了开发者选项！</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
@@ -72,7 +75,7 @@
   <string name="reboot_soft_button_label">软重启</string>
   <!-- Android debugging over WiFi -->
   <string name="adb_over_network">网络 ADB 调试</string>
-  <string name="adb_over_network_summary">通过网络接口 (Wi\u2011Fi，USB 网络) 启用 TCP/IP 调试。该设置重启后失效</string>
+  <string name="adb_over_network_summary">启用通过网络接口（Wi\u2011Fi、USB 网络）的 TCP/IP 调试。该设置重启后失效</string>
   <!-- Warning for Adb over Network -->
   <string name="adb_over_network_warning">警告：当网络 ADB 调试启用时，您的设备将在所有已连接的网络上接收指令！\n\n请只在您信任的网络中启用此功能。\n\n您真的要开启这个功能吗？</string>
 </resources>
