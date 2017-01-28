@@ -404,7 +404,7 @@ public class AppRestrictionsFragment extends LeanbackPreferenceFragment implemen
             PackageInfo pi = null;
             try {
                 pi = mIPm.getPackageInfo(packageName,
-                        PackageManager.MATCH_UNINSTALLED_PACKAGES
+                        PackageManager.MATCH_ANY_USER
                                 | PackageManager.GET_SIGNATURES, userId);
             } catch (RemoteException e) {
                 // Ignore
