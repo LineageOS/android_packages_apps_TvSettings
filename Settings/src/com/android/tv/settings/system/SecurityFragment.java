@@ -429,7 +429,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             case PIN_MODE_RESTRICTED_PROFILE_DELETE:
                 if (success) {
                     removeRestrictedUser();
-                    new LockPatternUtils(getActivity()).clearLock(UserHandle.myUserId());
+                    new LockPatternUtils(getActivity()).clearLock(null, UserHandle.myUserId());
                 }
                 break;
         }
