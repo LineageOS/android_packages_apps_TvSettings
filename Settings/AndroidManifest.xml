@@ -517,7 +517,7 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".device.storage.NewStorageActivity$DiskReceiver">
+        <receiver android:name=".device.storage.DiskReceiver">
             <intent-filter>
                 <action android:name="android.os.storage.action.DISK_SCANNED" />
                 <action android:name="android.os.storage.action.VOLUME_STATE_CHANGED" />
