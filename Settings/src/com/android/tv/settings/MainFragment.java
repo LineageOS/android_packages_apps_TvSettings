@@ -98,6 +98,8 @@ public class MainFragment extends LeanbackPreferenceFragment {
         }
     };
 
+    private final BroadcastReceiver mBtConnectionReceiver = new BluetoothConnectionsManager();
+
     public static MainFragment newInstance() {
         return new MainFragment();
     }
@@ -160,6 +162,11 @@ public class MainFragment extends LeanbackPreferenceFragment {
         final IntentFilter filter =
                 new IntentFilter(BluetoothConnectionsManager.ACTION_BLUETOOTH_UPDATE);
         LocalBroadcastManager.getInstance(getContext()).registerReceiver(mBCMReceiver, filter);
+        IntentFilter btChangeFilter = new IntentFilter();
+        btChangeFilter.addAction(BluetoothDevice.ACTION_ACL_CONNECTED);
+        btChangeFilter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);
+        btChangeFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
+        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mBtConnectionReceiver, btChangeFilter);
         mConnectivityListener.start();
     }
 
@@ -184,6 +191,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
     public void onStop() {
         super.onStop();
         mAuthenticatorHelper.stopListeningToAccountUpdates();
+        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mBtConnectionReceiver);
         LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mBCMReceiver);
         mConnectivityListener.stop();
     }
