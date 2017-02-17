@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<!-- Copyright (C) 2017 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,13 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/list_item"
-    style="@style/Canvas.Text.Dialog.List.Title"
+<android.support.v17.leanback.widget.picker.DatePicker
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/date_picker"
+    android:focusable="false"
     android:layout_width="wrap_content"
-    android:layout_height="@dimen/picker_item_height"
-    android:layout_centerHorizontal="true"
-    android:alpha="@dimen/list_item_unselected_text_alpha"
-    android:focusable="true"
-    android:gravity="center"
-    android:textColor="@color/list_item_unselected_text_color" />
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical" />

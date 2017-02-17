@@ -89,10 +89,8 @@ public class DateTimeFragment extends LeanbackPreferenceFragment implements
         final boolean isRestricted = SecurityFragment.isRestrictedProfileInEffect(getContext());
 
         mDatePref = findPreference(KEY_SET_DATE);
-        mDatePref.setIntent(SetDateTimeActivity.getSetDateIntent(getActivity()));
         mDatePref.setVisible(!isRestricted);
         mTimePref = findPreference(KEY_SET_TIME);
-        mTimePref.setIntent(SetDateTimeActivity.getSetTimeIntent(getActivity()));
         mTimePref.setVisible(!isRestricted);
 
         final boolean tsTimeCapable = SystemProperties.getBoolean("ro.config.ts.date.time", false);
