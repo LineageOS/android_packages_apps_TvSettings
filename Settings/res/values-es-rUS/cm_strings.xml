@@ -22,13 +22,13 @@
   <string name="about_mod_version">Versión de CyanogenMod</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <plurals name="show_dev_countdown_cm">
-    <item quantity="one">Estás a <xliff:g id="step_count">%1$d</xliff:g> paso de habilitar las configuraciones de desarrollo.</item>
-    <item quantity="other">Estás a <xliff:g id="step_count">%1$d</xliff:g> pasos de habilitar las configuraciones de desarrollo.</item>
+    <item quantity="one">Estás a <xliff:g id="step_count">%1$d</xliff:g> paso de activar los ajustes de desarrollo.</item>
+    <item quantity="other">Estás a <xliff:g id="step_count">%1$d</xliff:g> pasos de activar los ajustes de desarrollo.</item>
   </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_cm">¡Has habilitado las configuraciones de desarrollo!</string>
+  <string name="show_dev_on_cm">¡Has activado los ajustes de desarrollo!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_cm">No es necesario. Las configuraciones de desarrollo ya están habilitadas.</string>
+  <string name="show_dev_already_cm">No es necesario. Los ajustes de desarrollo ya están activos.</string>
   <!-- About screen, build date -->
   <string name="about_build_date">Fecha de compilación</string>
   <!-- About screen, kernel version -->
@@ -37,7 +37,7 @@
   <string name="about_selinux_status">Estado de SELinux</string>
   <!-- These statuses are displayed when a device was built with SE Android supoprt.
     These are displayed by the settings app in the about section. -->
-  <string name="selinux_status_disabled">Deshabilitado</string>
+  <string name="selinux_status_disabled">Desactivado</string>
   <string name="selinux_status_permissive">Permisivo</string>
   <string name="selinux_status_enforcing">Forzado</string>
   <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
@@ -47,7 +47,7 @@
   <string name="root_access">Acceso root</string>
   <string name="root_access_warning_title">¿Permitir acceso root?</string>
   <string name="root_access_warning_message">¡Permitir que las aplicaciones tengan acceso root es muy peligroso y puede comprometer la seguridad del dispositivo!</string>
-  <string name="root_access_none">Deshabilitado</string>
+  <string name="root_access_none">Desactivado</string>
   <string name="root_access_apps">Solo aplicaciones</string>
   <string name="root_access_adb">Solo ADB</string>
   <string name="root_access_all">Aplicaciones y ADB</string>
