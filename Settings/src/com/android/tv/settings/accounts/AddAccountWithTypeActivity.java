@@ -16,8 +16,6 @@
 
 package com.android.tv.settings.accounts;
 
-import com.google.android.gsf.GoogleLoginServiceConstants;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,10 +24,9 @@ import android.accounts.AccountManagerCallback;
 import android.accounts.AccountManagerFuture;
 import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
-import android.os.SystemProperties;
+import java.io.IOException;
 import android.util.Log;
 
-import java.io.IOException;
 
 public class AddAccountWithTypeActivity extends Activity {
 
@@ -38,20 +35,10 @@ public class AddAccountWithTypeActivity extends Activity {
 
     private static final String TAG = "AddAccountWithType";
 
-    private static final String CHOOSE_ACCOUNT_TYPE_ACTION =
-            "com.google.android.gms.common.account.CHOOSE_ACCOUNT_TYPE";
-    private static final String SETUP_WRAITH_INTENT_NAME =
-            "com.google.android.tungsten.setupwraith.ADD_ACCOUNT_FLOW";
-    private static final String EXTRA_IS_SETUP_WIZARD = "firstRun";
-    private static final String EXTRA_USE_TRANSPARENT_THEME = "useTransparentTheme";
-    private static final String EXTRA_SHOW_SUMMARY = "showSummary";
-    private static final String EXTRA_SHOW_SKIP = "showSkip";
-    private static final String EXTRA_OFFLINE = "isOffline";
-    private static final String USE_SUW_ACCT_FLOW_PROPERTY = "useSuwAcctFlow";
-
     private static final int REQUEST_CHOOSE_ACCOUNT_TYPE = 0;
     private static final int REQUEST_ADD_ACCOUNT = 1;
-    private static final int REQUEST_SETUP_WRAITH_ADD_ACCOUNT = 2;
+    private static final String CHOOSE_ACCOUNT_TYPE_ACTION =
+            "com.google.android.gms.common.account.CHOOSE_ACCOUNT_TYPE";
 
     private final AccountManagerCallback<Bundle> mCallback = new AccountManagerCallback<Bundle>() {
         @Override
@@ -65,7 +52,7 @@ public class AddAccountWithTypeActivity extends Activity {
                 } else {
                     startActivityForResult(addAccountIntent, REQUEST_ADD_ACCOUNT);
                 }
-            } catch (IOException | AuthenticatorException | OperationCanceledException e) {
+            } catch (IOException|AuthenticatorException|OperationCanceledException e) {
                 Log.e(TAG, "Failed to get add account intent: ", e);
                 setResultAndFinish(Activity.RESULT_CANCELED);
             }
@@ -103,41 +90,12 @@ public class AddAccountWithTypeActivity extends Activity {
     }
 
     private void startAddAccount(String accountType) {
-        // If the account type is google account, then start up decision screen in SUW
-        // otherwise call addAccount.
-        if (accountType.equals(GoogleLoginServiceConstants.ACCOUNT_TYPE)) {
-            // TODO(joshualambert): Remove SystemProperty conditional and use startActivityForResult
-            // only when the MinuteMaid changes in GMSCore are available in master (to avoid calls
-            // to NTAD).
-            if (SystemProperties.getInt(USE_SUW_ACCT_FLOW_PROPERTY, 0) == 1) {
-                // Build Intent, call to SUW
-                Intent accountFlowIntent = buildSetupWraithIntent();
-                startActivityForResult(accountFlowIntent, REQUEST_SETUP_WRAITH_ADD_ACCOUNT);
-            } else {
-                AccountManager.get(this).addAccount(
-                        accountType,
-                        null, /* authTokenType */
-                        null, /* requiredFeatures */
-                        null, /* accountOptions */
-                        null, mCallback, null);
-            }
-        } else {
-            AccountManager.get(this).addAccount(
-                    accountType,
-                    null, /* authTokenType */
-                    null, /* requiredFeatures */
-                    null, /* accountOptions */
-                    null, mCallback, null);
-        }
-    }
-
-    private Intent buildSetupWraithIntent() {
-        Intent intent = new Intent(SETUP_WRAITH_INTENT_NAME);
-        intent.putExtra(EXTRA_IS_SETUP_WIZARD, false);
-        intent.putExtra(EXTRA_SHOW_SUMMARY, false);
-        intent.putExtra(EXTRA_OFFLINE, false);
-        intent.putExtra(EXTRA_SHOW_SKIP, false);
-        return intent;
+        AccountManager.get(this).addAccount(
+                accountType,
+                null, /* authTokenType */
+                null, /* requiredFeatures */
+                null, /* accountOptions */
+                null, mCallback, null);
     }
 
     private void setResultAndFinish(int resultCode) {
