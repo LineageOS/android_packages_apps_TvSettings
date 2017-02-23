@@ -29,8 +29,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v7-appcompat \
     android-support-v14-preference \
     android-support-v17-preference-leanback \
-    android-support-v17-leanback \
-    gsf-client
+    android-support-v17-leanback
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res \
