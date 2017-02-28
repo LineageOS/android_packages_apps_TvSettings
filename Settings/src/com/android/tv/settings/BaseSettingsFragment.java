@@ -23,6 +23,9 @@ import android.support.v17.preference.LeanbackSettingsFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 
+import com.android.tv.settings.system.LeanbackPickerDialogFragment;
+import com.android.tv.settings.system.LeanbackPickerDialogPreference;
+
 /**
  * Base class for settings fragments. Handles launching fragments and dialogs in a reasonably
  * generic way. Subclasses should only override onPreferenceStartInitialScreen.
@@ -45,5 +48,22 @@ public abstract class BaseSettingsFragment extends LeanbackSettingsFragment {
     @Override
     public final boolean onPreferenceStartScreen(PreferenceFragment caller, PreferenceScreen pref) {
         return false;
+    }
+
+    @Override
+    public boolean onPreferenceDisplayDialog(PreferenceFragment caller, Preference pref) {
+        final Fragment f;
+        if (pref instanceof LeanbackPickerDialogPreference) {
+            final LeanbackPickerDialogPreference dialogPreference = (LeanbackPickerDialogPreference)
+                    pref;
+            f = dialogPreference.getType().equals("date")
+                    ? LeanbackPickerDialogFragment.newDatePickerInstance(pref.getKey())
+                    : LeanbackPickerDialogFragment.newTimePickerInstance(pref.getKey());
+            f.setTargetFragment(caller, 0);
+            startPreferenceFragment(f);
+            return true;
+        } else {
+            return super.onPreferenceDisplayDialog(caller, pref);
+        }
     }
 }
