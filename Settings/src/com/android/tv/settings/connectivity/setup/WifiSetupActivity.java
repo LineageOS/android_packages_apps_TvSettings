@@ -30,10 +30,8 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Process;
-import android.os.Message;
 import android.text.TextUtils;
 import android.util.Pair;
 import android.view.accessibility.AccessibilityEvent;
@@ -56,7 +54,6 @@ import com.android.tv.settings.util.ThemeHelper;
 import com.android.tv.settings.util.TransitionUtils;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -187,6 +184,11 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
             }
         });
         animator.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
         mBgThread.quit();
     }
 
