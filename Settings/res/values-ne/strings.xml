@@ -113,12 +113,12 @@
     <string name="about_serial" msgid="2723560490027171187">"क्रम संख्या"</string>
     <string name="about_build" msgid="9148789767199785676">"निर्माण"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
-      <item quantity="other">तपाईँ अहिले एउटा विकासकर्ता हुनबाट <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> कदमहरू टाढा हुनुहुन्छ</item>
-      <item quantity="one">तपाईँ अहिले एउटा विकासकर्ता हुनबाट <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> कदम टाढा हुनुहुन्छ</item>
+      <item quantity="other">तपाईं अहिले एउटा विकासकर्ता हुनबाट <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> कदमहरू टाढा हुनुहुन्छ</item>
+      <item quantity="one">तपाईं अहिले एउटा विकासकर्ता हुनबाट <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> कदम टाढा हुनुहुन्छ</item>
     </plurals>
     <string name="about_ads" msgid="3364786994943748337">"विज्ञापनहरू"</string>
-    <string name="show_dev_on" msgid="8997172736024819952">"तपाईँ अब एउटा विकासकर्ता हुनुहुन्छ!"</string>
-    <string name="show_dev_already" msgid="7525967300421794483">"आवश्यकता छैन, तपाईँ पहिल्यै एउटा विकासकर्ता हुनुहुन्छ"</string>
+    <string name="show_dev_on" msgid="8997172736024819952">"तपाईं अब एउटा विकासकर्ता हुनुहुन्छ!"</string>
+    <string name="show_dev_already" msgid="7525967300421794483">"आवश्यकता छैन, तपाईं पहिल्यै एउटा विकासकर्ता हुनुहुन्छ"</string>
     <string name="device_info_default" msgid="4519181343309136050">"अज्ञात"</string>
     <string name="selinux_status" msgid="8000422283341040360">"SELinux स्थिति"</string>
     <string name="selinux_status_disabled" msgid="4925733135520787807">"असक्षम गरियो"</string>
@@ -258,7 +258,7 @@
     <string name="storage_migrate_away" msgid="3410590501311323877">"डेटालाई फरक भण्डारणमा माइग्रेट गर्नुहोस्"</string>
     <string name="storage_no_apps" msgid="579118619398668670">"ब्याकअप गर्नका लागि कुनै पनि अनुप्रयोगहरू छैनन्"</string>
     <string name="storage_forget" msgid="8731986045697320463">"यस यन्त्रको भण्डारणलाई बिर्सनुहोस्"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"यस ड्राइभमा भएका अनुप्रयोगहरू वा डेटाको प्रयोग गर्न पुन: हाल्नुहोस्। अन्यथा, ड्राइभ नभए यस भण्डारणलाई बिर्सनको लागि रोज्नुहोस्।\n\nयदि बिर्सनको लागि रोज्नुहुन्छ भने यस ड्राइमा भएका सबै डेटा सधैंका लागि नष्ट हुनेछन्।\n\n पछि तपाईँ अनुप्रयोगहरू हाले पनि ड्राइभको भण्डारण भएका डेटा भेटाउनु सक्नुहुने छैन।"</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"यस ड्राइभमा भएका अनुप्रयोगहरू वा डेटाको प्रयोग गर्न पुन: हाल्नुहोस्। अन्यथा, ड्राइभ नभए यस भण्डारणलाई बिर्सनको लागि रोज्नुहोस्।\n\nयदि बिर्सनको लागि रोज्नुहुन्छ भने यस ड्राइमा भएका सबै डेटा सधैंका लागि नष्ट हुनेछन्।\n\n पछि तपाईं अनुप्रयोगहरू हाले पनि ड्राइभको भण्डारण भएका डेटा भेटाउनु सक्नुहुने छैन।"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"यन्त्र भण्डारण"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"हटाउन योग्य भण्डारण"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"रिसेट गर्नुहोस्"</string>
@@ -273,7 +273,7 @@
     <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"यन्त्रको भण्डारणको रूपमा फर्म्याट गर्नुहोस्"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"यो यसलाई सुरक्षित बनाउन USB ड्राइभ फर्म्याट गर्न आवश्यक छ। सुरक्षित तरिकाले फर्म्याट गरेपछि मात्र यो ड्राइभले यस यन्त्रसँग काम गर्छ। फर्म्याट गर्दा ड्राइभमा हाल भण्डारण गरिएका सबै डेटा मेटाउँछ। डेटा हराउनेबाट जोगिन, यसलाई ब्याक अप गर्ने विचार गर्नुहोस्।"</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"मेट्नुहोस् र फर्म्याट गर्नुहोस्"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"फर्म्याट गरेपछि, तपाईँ यो USB ड्राइभलाई अन्य यन्त्रहरूमा प्रयोग गर्न सक्नुहुन्छ। सबै डेटा मेटिनेछन्। पहिले अनुप्रयोगहरूलाई अन्य यन्त्रको भण्डारणमा सारेर ब्याक अप गर्ने बारे विचार गर्नुहोस्।"</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"फर्म्याट गरेपछि, तपाईं यो USB ड्राइभलाई अन्य यन्त्रहरूमा प्रयोग गर्न सक्नुहुन्छ। सबै डेटा मेटिनेछन्। पहिले अनुप्रयोगहरूलाई अन्य यन्त्रको भण्डारणमा सारेर ब्याक अप गर्ने बारे विचार गर्नुहोस्।"</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB ड्राइभ फर्म्याट गरिँदै..."</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"यसलाई एक क्षण लाग्न सक्छ। कृपया ड्राइभ नहटाउनुहोस्।"</string>
     <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"डेटालाई माइग्रेट गरिने भण्डारण छनोट गर्नुहोस्"</string>
@@ -286,7 +286,7 @@
     <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"डेटा <xliff:g id="NAME">%1$s</xliff:g> मा सार्दै..."</string>
     <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"यसलाई एक क्षण लाग्‍न सक्छ। कृपया ड्राइभ नहटाउनुहोस्।\nकेही अनुप्रयोगहरू स्थानान्तरण गर्ने समयमा ठीक सँग काम नगर्न सक्छ।"</string>
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"यो ड्राइभ सुस्त देखिन्छ।"</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"तपाईँ जारी राख्न सक्नुहुन्छ, तर यस स्थानमा सारिएका अनुप्रयोगहरू अड्किन सक्छ र डेटा स्थानान्तरणले लामो समय लिन सक्छ। राम्रो कार्यसम्पादनको लागि थप छिटो ड्राइभको प्रयोग गर्ने विचार गर्नुहोस्।"</string>
+    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"तपाईं जारी राख्न सक्नुहुन्छ, तर यस स्थानमा सारिएका अनुप्रयोगहरू अड्किन सक्छ र डेटा स्थानान्तरणले लामो समय लिन सक्छ। राम्रो कार्यसम्पादनको लागि थप छिटो ड्राइभको प्रयोग गर्ने विचार गर्नुहोस्।"</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"फर्म्याट गर्नुहोस्"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"अनुप्रयोगहरू ब्याक अप गर्नुहोस्"</string>
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"अनुप्रयोगहरु <xliff:g id="NAME">%1$s</xliff:g> मा भण्डारण गरियो"</string>
@@ -299,7 +299,7 @@
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> सार्दै"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"सारिएको बेलामा ड्राइभ नहटाउनुहोस्। \n सार्ने काम नसकिएसम्म यस यन्त्रमा <xliff:g id="APPNAME">%1$s</xliff:g> अनुप्रयोग उपलब्ध हुने छैन।"</string>
     <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"यन्त्रको भण्डारण बिर्सने हो?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"यस ड्राइमा भएका सबै डेटा \'बिर्सनु\' को साथ सधैंका लागि नष्ट हुनेछन्। के तपाईँ अगाडि बढ्न चाहनुहुन्छ?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"यस ड्राइमा भएका सबै डेटा \'बिर्सनु\' को साथ सधैंका लागि नष्ट हुनेछन्। के तपाईं अगाडि बढ्न चाहनुहुन्छ?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"बिर्सनुहोस्"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB ड्राइभ जडान गरियो"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"ब्राउज गर्नुहोस्"</string>
@@ -360,9 +360,9 @@
     <string name="location_reporting" msgid="3054236612250063073">"स्थान रिपोर्ट गर्दै"</string>
     <string name="location_history" msgid="2946680949724247804">"स्थान इतिहास"</string>
     <string name="location_reporting_desc" msgid="6256424995139430823">"Google ले उत्पादनहरूमा यो सुविधा प्रयोग गर्दछ जस्तै Google Now र Google Maps । स्थान रिपोर्टिङ खोल्दै यो सुविधा स्टोर प्रयोग गर्ने तपाईंको  Google  खाता सन्दर्भमा आफ्नो उपकरणको सबै भन्दा भर्खरैको स्थान डेटाको प्रयोग गर्ने कुनै पनि Google उत्पादनले दिन्छ।"</string>
-    <string name="location_history_desc" msgid="3861249867748294369">"स्थान इतिहास यो खाताको लागि बन्द हुँदा Google ले तपाईंको अनुप्रयोगहरूद्वारा प्रयोगको लागि तपाईँको उपकरणको स्थान डेटा भण्डारण गर्न सक्छ। \n\n उदाहरणका लागि, Google Maps ले तपाईँलाई निर्देशन दिन सक्छ, र Google Now ले तपाईँलाई कम्युट ट्राफिकको बारेमा सूचित गर्न सक्छ। \n\n तपाईँ कुनै पनि समयमा स्थान इतिहास बन्द गर्न सक्नुहुन्छ, तर यसले कार्य गर्दछ त्यसैले यसलाई मेट्नु हुँदैन।आफ्नो स्थान इतिहास हेर्न र  व्यवस्थित गर्न, maps.google.com/locationhistory को भ्रमण गर्नुहोस्।"</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"स्थान इतिहास यो खाताको लागि बन्द हुँदा Google ले तपाईंको अनुप्रयोगहरूद्वारा प्रयोगको लागि तपाईंको उपकरणको स्थान डेटा भण्डारण गर्न सक्छ। \n\n उदाहरणका लागि, Google Maps ले तपाईंलाई निर्देशन दिन सक्छ, र Google Now ले तपाईंलाई कम्युट ट्राफिकको बारेमा सूचित गर्न सक्छ। \n\n तपाईं कुनै पनि समयमा स्थान इतिहास बन्द गर्न सक्नुहुन्छ, तर यसले कार्य गर्दछ त्यसैले यसलाई मेट्नु हुँदैन।आफ्नो स्थान इतिहास हेर्न र  व्यवस्थित गर्न, maps.google.com/locationhistory को भ्रमण गर्नुहोस्।"</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"स्थान इतिहास मेटाउनुहोस्"</string>
-    <string name="delete_location_history_desc" msgid="4142806827237093397">"यसले यो Google खाताको लागि स्टोर भएको सबै स्थान इतिहास यो उपकरणबाट मेटाउने छ। तपाईँ यो मेटाउने प्रकृया पूर्ववत गर्न सक्नुहुन्न। Google Now सहित केही अनुप्रयोगहरूले, कार्य गर्न बन्द गर्ने छ।"</string>
+    <string name="delete_location_history_desc" msgid="4142806827237093397">"यसले यो Google खाताको लागि स्टोर भएको सबै स्थान इतिहास यो उपकरणबाट मेटाउने छ। तपाईं यो मेटाउने प्रकृया पूर्ववत गर्न सक्नुहुन्न। Google Now सहित केही अनुप्रयोगहरूले, कार्य गर्न बन्द गर्ने छ।"</string>
     <string name="system_services" msgid="7230571820151215779">"सेवाहरू"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"सेवा सेटिङ्हरू"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"उच्च कन्ट्रास्ट पाठ"</string>
@@ -478,7 +478,7 @@
     <string name="security_unknown_sources_title" msgid="769762478057744545">"अज्ञात स्रोतहरू"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Play स्टोर भन्दा अन्य स्रोतहरूबाट अनुप्रयोगहरूको स्थापनालाई अनुमति दिनुहोस्"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"अज्ञात स्रोतहरूलाई अनुमति दिनुहोस्"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"तपाईँको उपकरण र व्यक्तिगत डेटा अज्ञात स्रोतको अनुप्रयोगहरूद्वारा आक्रमण गर्न बढि असुरक्षित छन्। तपाईँको उपकरणमा वा यी अनुप्रयोगहरू प्रयोगबाट डेटा हराउन परिणाम वा कुनै पनि नोक्सानीका लागि तपाईँ आफैं जिम्मेदार हुनुहुन्छ भन्ने कुरामा सहमत हुनुहुन्छ।"</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"तपाईंको उपकरण र व्यक्तिगत डेटा अज्ञात स्रोतको अनुप्रयोगहरूद्वारा आक्रमण गर्न बढि असुरक्षित छन्। तपाईंको उपकरणमा वा यी अनुप्रयोगहरू प्रयोगबाट डेटा हराउन परिणाम वा कुनै पनि नोक्सानीका लागि तपाईं आफैं जिम्मेदार हुनुहुन्छ भन्ने कुरामा सहमत हुनुहुन्छ।"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"अनुप्रयोगहरू रुजु गर्नुहोस्"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"हानी गर्न सक्ने अनुप्रयोगहरूका स्थापना गर्नुअघि चेतावनी दिनुहोस् वा अनुमति नै नदिनुहोस्"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"कहिले पनि होइन"</string>
@@ -602,9 +602,9 @@
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"अद्यावधिकहरूको स्थापना रद्द गर्नुहोस्"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"यस Android प्रणाली अनुप्रयोगमा भएका सम्पूर्ण अद्यावधिकहरूको स्थापना हटाइनेछ।"</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"अक्षम गर्नुहोस्"</string>
-    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"तपाईँ यो अनुप्रयोग अक्षम गर्न चाहनुहुन्छ?"</string>
+    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"तपाईं यो अनुप्रयोग अक्षम गर्न चाहनुहुन्छ?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"सक्षम गर्नुहोस्"</string>
-    <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"तपाईँ यो अनुप्रयोग सक्षम गर्न चाहनुहुन्छ?"</string>
+    <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"तपाईं यो अनुप्रयोग सक्षम गर्न चाहनुहुन्छ?"</string>
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"प्रयोग भएको भण्डारण"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> मा प्रयोग <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"डाटा खाली गर्नुहोस्"</string>
@@ -662,6 +662,6 @@
     <string name="choose_application" msgid="5662960665577780353">"अनुप्रयोग छनोट गर्नुहोस्"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(प्रयोगात्मक)"</string>
     <string name="reboot_safemode_action" msgid="8129550438717110406">"सुरक्षित मोडमा पुनःबुट गर्नुहोस्"</string>
-    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"तपाईँ सुरक्षित मोडमा पुनःबुट गर्न चाहनुहुन्छ?"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"तपाईं सुरक्षित मोडमा पुनःबुट गर्न चाहनुहुन्छ?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"यसले तपाईँले स्थापना गरेका सबै तेस्रो पक्षीय अनुप्रयोगहरूलाई असक्षम गर्नेछ। तपाईँले पुनःबुट गरेप‍छि तिनीहरूलाई पुनर्स्थापित गरिनेछ।"</string>
 </resources>
