@@ -36,7 +36,6 @@ import android.media.tv.TvInputManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.support.v17.preference.LeanbackPreferenceFragment;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.telephony.SignalStrength;
@@ -47,7 +46,6 @@ import android.util.Log;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 import com.android.tv.settings.accessories.AccessoryUtils;
 import com.android.tv.settings.accessories.BluetoothAccessoryFragment;
-import com.android.tv.settings.accessories.BluetoothConnectionsManager;
 import com.android.tv.settings.accounts.AccountSyncFragment;
 import com.android.tv.settings.accounts.AddAccountWithTypeActivity;
 import com.android.tv.settings.connectivity.ConnectivityListener;
@@ -97,8 +95,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
             updateAccessories();
         }
     };
-
-    private final BroadcastReceiver mBtConnectionReceiver = new BluetoothConnectionsManager();
 
     public static MainFragment newInstance() {
         return new MainFragment();
@@ -159,14 +155,12 @@ public class MainFragment extends LeanbackPreferenceFragment {
     public void onStart() {
         super.onStart();
         mAuthenticatorHelper.listenToAccountUpdates();
-        final IntentFilter filter =
-                new IntentFilter(BluetoothConnectionsManager.ACTION_BLUETOOTH_UPDATE);
-        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mBCMReceiver, filter);
+
         IntentFilter btChangeFilter = new IntentFilter();
         btChangeFilter.addAction(BluetoothDevice.ACTION_ACL_CONNECTED);
         btChangeFilter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);
         btChangeFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
-        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mBtConnectionReceiver, btChangeFilter);
+        getContext().registerReceiver(mBCMReceiver, btChangeFilter);
         mConnectivityListener.start();
     }
 
@@ -191,8 +185,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
     public void onStop() {
         super.onStop();
         mAuthenticatorHelper.stopListeningToAccountUpdates();
-        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mBtConnectionReceiver);
-        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mBCMReceiver);
+        getContext().unregisterReceiver(mBCMReceiver);
         mConnectivityListener.stop();
     }
 
@@ -337,8 +330,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
             return;
         }
 
-        final Set<String> connectedBluetoothAddresses =
-                BluetoothConnectionsManager.getConnectedSet(getContext());
         final Context themedContext = getPreferenceManager().getContext();
 
         final Set<String> touchedKeys = new ArraySet<>(bondedDevices.size() + 1);
@@ -353,6 +344,8 @@ public class MainFragment extends LeanbackPreferenceFragment {
                 continue;
             }
 
+            final String desc = device.isConnected() ? getString(R.string.accessory_connected) :
+                    null;
             final String key = "BluetoothDevice:" + deviceAddress;
             touchedKeys.add(key);
             Preference preference = mAccessoriesGroup.findPreference(key);
@@ -362,9 +355,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
             }
             final String deviceName = device.getAliasName();
             preference.setTitle(deviceName);
-            final String desc = connectedBluetoothAddresses.contains(deviceAddress)
-                    ? getString(R.string.accessory_connected)
-                    : null;
             preference.setSummary(desc);
             final int deviceImgId = AccessoryUtils.getImageIdForDevice(device);
             preference.setIcon(deviceImgId);
