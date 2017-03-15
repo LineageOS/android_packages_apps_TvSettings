@@ -21,12 +21,17 @@
   <!-- Leanback Launcher App Title for Restricted Profile app [CHAR LIMIT=40] -->
   <!-- Top level headers -->
   <!-- Header title for device [CHAR LIMIT=50] -->
+  <string name="header_category_device">Preséu</string>
   <!-- Header title for preferences [CHAR LIMIT=50] -->
+  <string name="header_category_preferences">Preferencies</string>
   <!-- Header title for accessories [CHAR LIMIT=50] -->
+  <string name="header_category_accessories">Mandu y accesorios</string>
   <!-- Header title for personal [CHAR LIMIT=50] -->
+  <string name="header_category_personal">Personal</string>
   <!-- Account preferences -->
   <!-- Title for main screen category for accounts on device [CHAR LIMIT=50] -->
   <!-- Preference which adds an account [CHAR LIMIT=50] -->
+  <string name="add_account">Amestar cuenta</string>
   <!-- Header for remove account [CHAR LIMIT=50] -->
   <!-- Sync item label: control sync settings [CHAR LIMIT=100] -->
   <!-- Label for action to sync now [CHAR LIMIT=50] -->
@@ -55,6 +60,7 @@
   <!-- Preference which manages apps. [CHAR LIMIT=50] -->
   <!-- Preference which shows storage status. [CHAR LIMIT=50] -->
   <!-- Preference which manages backup settings. [CHAR LIMIT=50] -->
+  <string name="device_backup_restore">Respaldu y restauración</string>
   <!-- Preference which shows reset options [CHAR LIMIT=50] -->
   <!-- Preference which sets the device's display calibration. [CHAR LIMIT=50] -->
   <!-- Title of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
@@ -64,9 +70,11 @@
   <!-- Browse Header for running apps under device settings. [CHAR LIMIT=50] -->
   <!-- Remote and Accessories -->
   <!-- Preference which manages pairing new accessories. [CHAR LIMIT=50] -->
+  <string name="accessories_add">Amestar accesoriu</string>
   <!-- Device Paring Status: Pairing. [CHAR LIMIT=50] -->
   <!-- Device Paring Status: Connecting. [CHAR LIMIT=50] -->
   <!-- Device Paring Status: Error. [CHAR LIMIT=50] -->
+  <string name="accessory_state_error">Nun pudo empareyase</string>
   <!-- Device Paring Status: Canceled. [CHAR LIMIT=50] -->
   <!-- Device Paring Status: Pairing Complete. [CHAR LIMIT=50] -->
   <!-- Preference which manages a single Paired Bluetooth accessory. [CHAR LIMIT=50] -->
@@ -79,6 +87,7 @@
   <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
   <!-- Description text for autopairing when the user is in the pairing activity due to pressing the back HW button.  %1 will be replaced with the countdown value. [CHAR LIMIT=150] -->
   <!-- Error message displayed to the user indicating that a selected action is not supported on this device. [CHAR LIMIT=150] -->
+  <string name="error_action_not_supported">Esta aición nun ta sofitada</string>
   <!-- Title for the dialog to enter PIN. [CHAR LIMIT=40] -->
   <!-- Message for confirmation of passkey to complete pairing. [CHAR LIMIT=NONE] -->
   <!-- Message when bluetooth incoming pairing request for (2.1 devices) dialog is showing [CHAR LIMIT=NONE] -->
@@ -88,12 +97,16 @@
   <!-- Bluetooth PIN hint text (below the text entry box). [CHAR LIMIT=30] -->
   <!-- Action title for Confirming the Bluetooth secure Pair action [CHAR LIMIT=50] -->
   <!-- Action title for Cancelling the Bluetooth secure Pair action [CHAR LIMIT=50] -->
+  <string name="bluetooth_cancel">Encaboxar</string>
   <!-- System -->
   <!-- Preference which manages cast settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages date / time settings. [CHAR LIMIT=50] -->
+  <string name="system_date_time">Data y hora</string>
   <!-- Preference which manages language settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages input method settings. [CHAR LIMIT=50] -->
+  <string name="system_keyboard">Tecláu</string>
   <!-- Preference which manages home screen settings. [CHAR LIMIT=50] -->
+  <string name="system_home">Pantalla d\'aniciu</string>
   <!-- Preference which manages search and google now settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages security settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages speech recognition settings. [CHAR LIMIT=50] -->
@@ -109,6 +122,7 @@
   <!-- Button to reboot the device [CHAR LIMIT=40] -->
   <!-- Preference which shows legal info. [CHAR LIMIT=50] -->
   <!-- Preference which shows open source licenses [CHAR LIMIT=50]-->
+  <string name="about_legal_license">Llicencies de códigu abiertu</string>
   <!-- Preference which shows terms of service and privacy info [CHAR LIMIT=50]-->
   <!-- Toast message displayed if the license data is unavailable [CHAR LIMIT=100] -->
   <!-- Preference which shows model. [CHAR LIMIT=50] -->
@@ -145,6 +159,7 @@
   <!-- About phone, status item title.  The bluetooth adapter's hardware address-->
   <!-- About phone, status item title.  How long the device has been running since its last reboot. -->
   <!-- About phone, status item title. WI-MAX MAC address -->
+  <string name="status_wimax_mac_address">Direición MAC 4G</string>
   <!-- Legal screen -->
   <!-- About phone settings screen, setting option name to go to dialog that shows legal info -->
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
@@ -161,10 +176,14 @@
   <!-- wifi signal strength array [CHAR LIMIT=30] -->
   <!-- titles for connection status -->
   <!-- label mac address [CHAR LIMIT=50] -->
+  <string name="title_mac_address">Direición MAC</string>
   <!-- label signal strength [CHAR LIMIT=50] -->
+  <string name="title_signal_strength">Fuercia de señal</string>
   <!-- label IP address [CHAR LIMIT=50] -->
+  <string name="title_ip_address">Direición IP</string>
   <!-- label SSID [CHAR LIMIT=50] -->
   <!-- label internet connection [CHAR LIMIT=50] -->
+  <string name="title_internet_connection">Conexón d\'internet</string>
   <!-- contents for connection status -->
   <!-- Connected [CHAR LIMIT=50] -->
   <!-- Not connected [CHAR LIMIT=50] -->
@@ -172,13 +191,18 @@
   <!-- Other Options under Wifi Settings headers [CHAR LIMIT=50] -->
   <!-- Strings for Add Network under Connectivity Setting -->
   <!-- Security type title on add network form page [CHAR LIMIT=30] -->
+  <string name="security_type">Triba de seguranza</string>
   <!-- Title for connecting to a WPS network in setup mode [CHAR LIMIT=30] -->
   <!-- Title for adding hidden network in setup mode [CHAR LIMIT=30] -->
   <!-- Skip configuring a Wi-Fi network during device setup [CHAR LIMIT=30]-->
   <!-- Wifi Security type indicating no security [CHAR LIMIT=30] -->
+  <string name="wifi_security_type_none">Denguna</string>
   <!-- Wifi Security type indicating WEP security [CHAR LIMIT=30] -->
+  <string name="wifi_security_type_wep">WEP</string>
   <!-- Wifi Security type indicating WPA/WPA2 security [CHAR LIMIT=30] -->
+  <string name="wifi_security_type_wpa">WPA/WPA2 PSK</string>
   <!-- Wifi Security type indicating EAP security [CHAR LIMIT=30] -->
+  <string name="wifi_security_type_eap">802.1x EAP</string>
   <!-- Title to show when no wifi networks are available [CHAR LIMIT=80] -->
   <!-- Title to show when wifi fails to save [CHAR LIMIT=80] -->
   <!-- Title to show when wifi fails to connect [CHAR LIMIT=80] -->
@@ -187,11 +211,15 @@
   <!-- Title to show when the wifi ap rejects the connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking if advanced settings should be used for this wifi connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking if a proxy should be used for this wifi connection [CHAR LIMIT=80] -->
+  <string name="title_wifi_proxy_settings">Axustes de proxy</string>
   <!-- Title to show when asking for the proxy hostname for this wifi connection [CHAR LIMIT=80] -->
+  <string name="title_wifi_proxy_hostname">Nome d\'agospiu de proxy:</string>
   <!-- Title to show when asking for the proxy port for this wifi connection [CHAR LIMIT=80] -->
+  <string name="title_wifi_proxy_port">Puertu de proxy:</string>
   <!-- Title to show when asking for which domains bypass the proxy for this wifi connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking how an ip should be assigned for this wifi connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking for the static ip address to use for this wifi connection [CHAR LIMIT=80] -->
+  <string name="title_wifi_ip_address">Direición IP:</string>
   <!-- Title to show when asking for the gateway's ip address for this wifi connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking for the network prefix length for this wifi connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking for the first DNS to use for this wifi connection [CHAR LIMIT=80] -->
@@ -207,9 +235,11 @@
   <!-- Title for action to forget the wifi network configuration [CHAR LIMIT=80] -->
   <!-- Description for action to forget the wifi network configuration [CHAR LIMIT=100] -->
   <!-- Label for action to accept the currently connected wifi network [CHAR LIMIT=50] -->
+  <string name="wifi_action_ok">ACEUTAR</string>
   <!-- Label for action to try to connect to a different wifi network [CHAR LIMIT=50] -->
   <!-- Label for action to not try to connect to a different wifi network [CHAR LIMIT=50] -->
   <!-- Label for action to use advanced settings for the wifi connection [CHAR LIMIT=50] -->
+  <string name="wifi_action_advanced_yes">ACEUTAR</string>
   <!-- Label for action to not use advanced settings for the wifi connection [CHAR LIMIT=50] -->
   <!-- Label for action to not use a proxy for the wifi connection [CHAR LIMIT=50] -->
   <!-- Label for action to setup a proxy for the wifi connection [CHAR LIMIT=50] -->
@@ -241,7 +271,9 @@
   <!-- Name to use when we don't know the name of the wifi network the device is connected to [CHAR LIMIT=20] -->
   <!-- Strings for Ethernet under Connectivity Setting -->
   <!-- Title for OK [CHAR LIMIT=50] -->
+  <string name="title_ok">ACEUTAR</string>
   <!-- Title for DNS 2 [CHAR LIMIT=50] -->
+  <string name="title_cancel">Encaboxar</string>
   <!-- Storage settings screen heading. This is displayed above items that pertain to the phone's internal storage [CHAR LIMIT=50] -->
   <!-- Storage settings title. The amount of free space for some storage partition.  For example, this is listed under both the "Internal phone storage" section and the "SD card" section. [CHAR LIMIT=50] -->
   <!-- Storage settings screen heading.  The total amount of storage space for some storage partition.  For example, this is listed under both the "Internal phone storage" section and the "SD card" section [CHAR LIMIT=50] -->
@@ -315,6 +347,7 @@
   <!-- Manage applications, text for move error messages -->
   <!-- Error message shown when trying to move device administrators to external disks, such as SD card [CHAR_LIMIT=none] -->
   <!-- Learn more action title [CHAR_LIMIT=50] -->
+  <string name="learn_more_action">Deprendi más</string>
   <!-- Action to retry WPS scanning [CHAR LIMIT=50] -->
   <!-- Message indicating we are scanning for WPS routers [CHAR LIMIT=150] -->
   <!-- Message describing how to turn on WPS on a router [CHAR LIMIT=150] -->
@@ -333,6 +366,7 @@
   <!-- Title for Set time format in System Settings Date Time [CHAR LIMIT=50] -->
   <!-- Format string for displaying the current time format (12/24 hour) [CHAR LIMIT=10] -->
   <!-- Title for automatic date & time [CHAR LIMIT = 80] -->
+  <string name="system_auto_date_time">Hora y data automátiques</string>
   <!-- Options for automatic date & time [CHAR LIMIT=100] -->
   <!-- Values for automatic date & time [DO NOT TRANSLATE] -->
   <!-- Options for automatic date & time [CHAR LIMIT=100] -->
@@ -510,8 +544,10 @@
   <!-- Text-to-speech speech rate choice [CHAR LIMIT=30] -->
   <!-- Keyboard Settings -->
   <!-- Title for Current Keyboard [CHAR LIMIT=80] -->
+  <string name="title_current_keyboard">Tecláu actual</string>
   <!-- Title for configure current keyboard [CHAR LIMIT=80] -->
   <!-- Description for configure current keyboard [CHAR LIMIT=100] -->
+  <string name="desc_configure_keyboard">Opciones de tecláu</string>
   <!-- String shown when computing the total size of an application's cache or data files. [CHAR LIMIT=30] -->
   <!-- Title for selecting wifi network [CHAR LIMIT=150] -->
   <!-- Action option which allows the change of the name this device is known by other wifi display devices [CHAR LIMIT=40] -->
@@ -605,9 +641,12 @@
   <!-- Application management description for defaults aren't set for the application [CHAR LIMIT=40] -->
   <!-- Application management choice for clearing the application's cache [CHAR LIMIT=40] -->
   <!-- Application management choice for changing the application's notifications option [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_notifications">Avisos</string>
   <!-- Application management choice for displaying the application's permissions [CHAR LIMIT=40] -->
   <!-- General settings choice for agreeing to the displayed action [CHAR LIMIT=40] -->
+  <string name="settings_ok">ACEUTAR</string>
   <!-- General settings choice for disagreeing with the displayed action [CHAR LIMIT=40] -->
+  <string name="settings_cancel">Encaboxar</string>
   <!-- General settings choice for on [CHAR LIMIT=40] -->
   <!-- General settings choice for off [CHAR LIMIT=40] -->
   <!-- Screen saver choice for not having a screen saver [CHAR LIMIT=40] -->
