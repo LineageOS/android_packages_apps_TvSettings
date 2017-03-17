@@ -143,9 +143,12 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
             Bundle savedInstanceState) {
         final View v = inflater.inflate(R.layout.pin_dialog, container, false);
 
-        mWrongPinView = (TextView) v.findViewById(R.id.wrong_pin);
+        mWrongPinView = v.findViewById(R.id.wrong_pin);
         mEnterPinView = v.findViewById(R.id.enter_pin);
-        mTitleView = (TextView) mEnterPinView.findViewById(R.id.title);
+        if (mEnterPinView == null) {
+            throw new IllegalStateException("R.id.enter_pin missing!");
+        }
+        mTitleView = mEnterPinView.findViewById(R.id.title);
         if (!isPinSet()) {
             // If PIN isn't set, user should set a PIN.
             // Successfully setting a new set is considered as entering correct PIN.
@@ -172,7 +175,7 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
 
         mPickers = new PinNumberPicker[NUMBER_PICKERS_RES_ID.length];
         for (int i = 0; i < NUMBER_PICKERS_RES_ID.length; i++) {
-            mPickers[i] = (PinNumberPicker) v.findViewById(NUMBER_PICKERS_RES_ID[i]);
+            mPickers[i] = v.findViewById(NUMBER_PICKERS_RES_ID[i]);
             mPickers[i].setValueRange(0, 9);
             mPickers[i].setPinDialogFragment(this);
             mPickers[i].updateFocus();
@@ -187,12 +190,7 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
         return v;
     }
 
-    private final Runnable mUpdateEnterPinRunnable = new Runnable() {
-        @Override
-        public void run() {
-            updateWrongPin();
-        }
-    };
+    private final Runnable mUpdateEnterPinRunnable = this::updateWrongPin;
 
     private void updateWrongPin() {
         if (getActivity() == null) {
@@ -364,10 +362,13 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
             super(context, attrs, defStyleAttr, defStyleRes);
             View view = inflate(context, R.layout.pin_number_picker, this);
             mNumberViewHolder = view.findViewById(R.id.number_view_holder);
+            if (mNumberViewHolder == null) {
+                throw new IllegalStateException("R.id.number_view_holder missing!");
+            }
             mBackgroundView = view.findViewById(R.id.focused_background);
             mNumberViews = new TextView[NUMBER_VIEWS_RES_ID.length];
             for (int i = 0; i < NUMBER_VIEWS_RES_ID.length; ++i) {
-                mNumberViews[i] = (TextView) view.findViewById(NUMBER_VIEWS_RES_ID[i]);
+                mNumberViews[i] = view.findViewById(NUMBER_VIEWS_RES_ID[i]);
             }
             Resources resources = context.getResources();
             mNumberViewHeight = resources.getDimensionPixelOffset(
@@ -375,55 +376,47 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
 
             mScroller = new OverScroller(context);
 
-            mNumberViewHolder.setOnFocusChangeListener(new OnFocusChangeListener() {
-                @Override
-                public void onFocusChange(View v, boolean hasFocus) {
-                    updateFocus();
-                }
-            });
+            mNumberViewHolder.setOnFocusChangeListener((v, hasFocus) -> updateFocus());
 
-            mNumberViewHolder.setOnKeyListener(new OnKeyListener() {
-                @Override
-                public boolean onKey(View v, int keyCode, KeyEvent event) {
-                    if (event.getAction() == KeyEvent.ACTION_DOWN) {
-                        switch (keyCode) {
-                            case KeyEvent.KEYCODE_DPAD_UP:
-                            case KeyEvent.KEYCODE_DPAD_DOWN: {
-                                if (!mScroller.isFinished() || mCancelAnimation) {
-                                    endScrollAnimation();
-                                }
-                                if (mScroller.isFinished() || mCancelAnimation) {
-                                    mCancelAnimation = false;
-                                    if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
-                                        mNextValue = adjustValueInValidRange(mCurrentValue + 1);
-                                        startScrollAnimation(true);
-                                        mScroller.startScroll(0, 0, 0, mNumberViewHeight,
-                                                getResources().getInteger(
-                                                        R.integer.pin_number_scroll_duration));
-                                    } else {
-                                        mNextValue = adjustValueInValidRange(mCurrentValue - 1);
-                                        startScrollAnimation(false);
-                                        mScroller.startScroll(0, 0, 0, -mNumberViewHeight,
-                                                getResources().getInteger(
-                                                        R.integer.pin_number_scroll_duration));
-                                    }
-                                    updateText();
-                                    invalidate();
-                                }
-                                return true;
+            mNumberViewHolder.setOnKeyListener((v, keyCode, event) -> {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    switch (keyCode) {
+                        case KeyEvent.KEYCODE_DPAD_UP:
+                        case KeyEvent.KEYCODE_DPAD_DOWN: {
+                            if (!mScroller.isFinished() || mCancelAnimation) {
+                                endScrollAnimation();
                             }
-                        }
-                    } else if (event.getAction() == KeyEvent.ACTION_UP) {
-                        switch (keyCode) {
-                            case KeyEvent.KEYCODE_DPAD_UP:
-                            case KeyEvent.KEYCODE_DPAD_DOWN: {
-                                mCancelAnimation = true;
-                                return true;
+                            if (mScroller.isFinished() || mCancelAnimation) {
+                                mCancelAnimation = false;
+                                if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
+                                    mNextValue = adjustValueInValidRange(mCurrentValue + 1);
+                                    startScrollAnimation(true);
+                                    mScroller.startScroll(0, 0, 0, mNumberViewHeight,
+                                            getResources().getInteger(
+                                                    R.integer.pin_number_scroll_duration));
+                                } else {
+                                    mNextValue = adjustValueInValidRange(mCurrentValue - 1);
+                                    startScrollAnimation(false);
+                                    mScroller.startScroll(0, 0, 0, -mNumberViewHeight,
+                                            getResources().getInteger(
+                                                    R.integer.pin_number_scroll_duration));
+                                }
+                                updateText();
+                                invalidate();
                             }
+                            return true;
                         }
                     }
-                    return false;
+                } else if (event.getAction() == KeyEvent.ACTION_UP) {
+                    switch (keyCode) {
+                        case KeyEvent.KEYCODE_DPAD_UP:
+                        case KeyEvent.KEYCODE_DPAD_DOWN: {
+                            mCancelAnimation = true;
+                            return true;
+                        }
+                    }
                 }
+                return false;
             });
             mNumberViewHolder.setScrollY(mNumberViewHeight);
         }
