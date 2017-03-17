@@ -187,6 +187,10 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
         if (mType != PIN_DIALOG_TYPE_NEW_PIN) {
             updateWrongPin();
         }
+
+        if (savedInstanceState == null) {
+            mPickers[0].requestFocus();
+        }
         return v;
     }
 
