@@ -16,7 +16,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Main app title [CHAR LIMIT=40] -->
+  <string name="settings_app_name">Axustes</string>
   <!-- Leanback Launcher App Title for main Settings app [CHAR LIMIT=40] -->
+  <string name="launcher_settings_app_name">Axustes</string>
   <!-- Leanback Launcher App Title for Network settings app [CHAR LIMIT=40] -->
   <!-- Leanback Launcher App Title for Restricted Profile app [CHAR LIMIT=40] -->
   <!-- Top level headers -->
@@ -30,6 +32,7 @@
   <string name="header_category_personal">Personal</string>
   <!-- Account preferences -->
   <!-- Title for main screen category for accounts on device [CHAR LIMIT=50] -->
+  <string name="accounts_category_title">Cuentes</string>
   <!-- Preference which adds an account [CHAR LIMIT=50] -->
   <string name="add_account">Amestar cuenta</string>
   <!-- Header for remove account [CHAR LIMIT=50] -->
@@ -41,6 +44,7 @@
   <!-- Remove account item label: remove the account [CHAR LIMIT=30] -->
   <!-- Message posted if removing the account fails. [CHAR LIMIT=NONE] -->
   <!-- Formatter in AccountSyncSettings for each application we wish to synchronize, e.g. "Sync Calendar" -->
+  <string name="sync_item_title"><xliff:g id="authority" example="Calendar">%s</xliff:g></string>
   <!-- Data synchronization settings screen, summary of a sync provider (for example, Gmail) when autosync is off and the user wants to do a one-time sync. -->
   <!-- Image description for the sync failed icon. -->
   <!-- Animation description for the sync active icon. -->
@@ -58,6 +62,7 @@
   <!-- Title for preference which controls surround sound passthrough function [CHAR LIMIT=50] -->
   <!-- Preference and title which changes system sounds settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages apps. [CHAR LIMIT=50] -->
+  <string name="device_apps">Aplicaciones</string>
   <!-- Preference which shows storage status. [CHAR LIMIT=50] -->
   <!-- Preference which manages backup settings. [CHAR LIMIT=50] -->
   <string name="device_backup_restore">Respaldu y restauración</string>
@@ -66,8 +71,11 @@
   <!-- Title of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
   <!-- Message of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
   <!-- Browse Header for downloaded apps under device settings. [CHAR LIMIT=50] -->
+  <string name="apps_downloaded">Aplicaciones baxaes</string>
   <!-- Browse Header for all apps under device settings. [CHAR LIMIT=50] -->
+  <string name="apps_system">Aplicaciones del sistema</string>
   <!-- Browse Header for running apps under device settings. [CHAR LIMIT=50] -->
+  <string name="apps_running">Aplicaciones n\'execución</string>
   <!-- Remote and Accessories -->
   <!-- Preference which manages pairing new accessories. [CHAR LIMIT=50] -->
   <string name="accessories_add">Amestar accesoriu</string>
@@ -81,9 +89,11 @@
   <!-- Preference for unpairing a Bluetooth accessory[CHAR LIMIT=50] -->
   <!-- Preference for displaying battery level percentage. % symbol if used must be escaped as %% [CHAR LIMIT=150] -->
   <!-- Description shown while we are waiting for a device unpair operation to finish[CHAR LIMIT=50] -->
+  <string name="accessory_unpairing">Desempareyando preséu&#8230;</string>
   <!-- Description for Connected accessory[CHAR LIMIT=50] -->
   <!-- Remote and Accessories -->
   <!-- Description text for new accessories pairing screen. [CHAR LIMIT=150] -->
+  <string name="accessories_add_title">Guetando accesorios&#8230;</string>
   <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
   <!-- Description text for autopairing when the user is in the pairing activity due to pressing the back HW button.  %1 will be replaced with the countdown value. [CHAR LIMIT=150] -->
   <!-- Error message displayed to the user indicating that a selected action is not supported on this device. [CHAR LIMIT=150] -->
@@ -109,6 +119,7 @@
   <string name="system_home">Pantalla d\'aniciu</string>
   <!-- Preference which manages search and google now settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages security settings. [CHAR LIMIT=50] -->
+  <string name="system_security">Seguranza y torgues</string>
   <!-- Preference which manages speech recognition settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages TV inputs. [CHAR LIMIT=50] -->
   <!-- Preference which manages accessibility settings. [CHAR LIMIT=50] -->
@@ -135,12 +146,14 @@
   <!-- Device Info screen. Okay we get it, stop pressing, you already have it on [CHAR LIMIT=NONE] -->
   <!-- Device Info screen. Used for a status item's value when the proper value is not known -->
   <!-- About screen,  setting option name  [CHAR LIMIT=40] -->
+  <string name="selinux_status">Estáu de SELinux</string>
   <!-- These statuses are displayed when a device was built with SE Android supoprt.
     These are displayed by the settings app in the about section. -->
   <!-- A menu item in "About phone" that allows the user to update the phone with settings
         from their cell phone carrier. The use of the string is similar to the string
         "system_update_settings_list_item_title" in this project. [CHAR LIMIT=50] -->
   <!-- About screen, title of the item to go into the device status screen -->
+  <string name="device_status">Estáu</string>
   <!-- About screen, summary of the item that takes you to device status screen -->
   <!-- About settings screen, setting option name to show Manual [CHAR LIMIT=25] -->
   <!-- About settings screen, setting option name to show regulatory information [CHAR LIMIT=25] -->
@@ -152,9 +165,12 @@
   <!-- Status screen -->
   <!-- About phone, status item value if the actual value is not available. -->
   <!-- About phone screen, phone status screen title -->
+  <string name="device_status_title">Estáu</string>
   <!-- Phone info screen, section titles: -->
+  <string name="battery_status_title">Estáu de batería</string>
   <!-- Phone info screen, section titles: -->
   <!-- SIM status title  [CHAR LIMIT=40] -->
+  <string name="sim_status_title">Estáu de SIM</string>
   <!-- Title for IMEI preference [CHAR LIMIT=30] -->
   <!-- About phone, status item title.  The bluetooth adapter's hardware address-->
   <!-- About phone, status item title.  How long the device has been running since its last reboot. -->
@@ -210,6 +226,7 @@
   <!-- Title to show when wifi fails to connect due to authentication failure [CHAR LIMIT=80] -->
   <!-- Title to show when the wifi ap rejects the connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking if advanced settings should be used for this wifi connection [CHAR LIMIT=80] -->
+  <string name="title_wifi_advanced_options">¿Configurar los axustes d\'IP y proxy de <xliff:g id="ssid">%1$s</xliff:g>?</string>
   <!-- Title to show when asking if a proxy should be used for this wifi connection [CHAR LIMIT=80] -->
   <string name="title_wifi_proxy_settings">Axustes de proxy</string>
   <!-- Title to show when asking for the proxy hostname for this wifi connection [CHAR LIMIT=80] -->
@@ -218,6 +235,7 @@
   <string name="title_wifi_proxy_port">Puertu de proxy:</string>
   <!-- Title to show when asking for which domains bypass the proxy for this wifi connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking how an ip should be assigned for this wifi connection [CHAR LIMIT=80] -->
+  <string name="title_wifi_ip_settings">Axustes d\'IP</string>
   <!-- Title to show when asking for the static ip address to use for this wifi connection [CHAR LIMIT=80] -->
   <string name="title_wifi_ip_address">Direición IP:</string>
   <!-- Title to show when asking for the gateway's ip address for this wifi connection [CHAR LIMIT=80] -->
@@ -226,6 +244,7 @@
   <!-- Title to show when asking for the second DNS to use for this wifi connection [CHAR LIMIT=80] -->
   <!-- Title to show when the proxy settings are invalid [CHAR LIMIT=80] -->
   <!-- Title to show when the ip settings are invalid [CHAR LIMIT=80] -->
+  <string name="title_wifi_ip_settings_invalid">Axustes IP non válidos</string>
   <!-- Title to show when the ip settings are invalid [CHAR LIMIT=80] -->
   <!-- Label for action to try to connect to wifi again [CHAR LIMIT=50] -->
   <!-- Label for action to go back to the list of wifi networks [CHAR LIMIT=50] -->
@@ -233,6 +252,7 @@
   <!-- Message to show when wifi is saving a new configuration [CHAR LIMIT=80] -->
   <!-- Title for action to connect to the wifi network [CHAR LIMIT=80] -->
   <!-- Title for action to forget the wifi network configuration [CHAR LIMIT=80] -->
+  <string name="wifi_forget_network">Escaecer rede</string>
   <!-- Description for action to forget the wifi network configuration [CHAR LIMIT=100] -->
   <!-- Label for action to accept the currently connected wifi network [CHAR LIMIT=50] -->
   <string name="wifi_action_ok">ACEUTAR</string>
@@ -247,6 +267,7 @@
   <!-- Label for action to setup static ip information for the wifi connection [CHAR LIMIT=50] -->
   <!-- Title for action to show status information for the wifi connection [CHAR LIMIT=50] -->
   <!-- Title for action to setup advanced options for the wifi connection [CHAR LIMIT=50] -->
+  <string name="wifi_action_advanced_options_title">Opciones avanzaes</string>
   <!-- Error message if the IP address is not valid [CHAR LIMIT=50]-->
   <!-- Error message if the gateway is not valid [CHAR LIMIT=50]-->
   <!-- Error message if the dns is not valid [CHAR LIMIT=50]-->
@@ -266,9 +287,12 @@
   <!-- HTTP proxy settings. The description for proxy exclusion list.-->
   <!-- HTTP proxy settings. The description field for the hostname. -->
   <!-- Title to show indicating the user is connected [CHAR LIMIT=100] -->
+  <string name="wifi_summary_title_connected">Rede coneutada</string>
   <!-- Title to show indicating the user is not connected [CHAR LIMIT=100] -->
+  <string name="wifi_summary_title_not_connected">La rede nun ta coneutada</string>
   <!-- Title to show when wifi is already connected [CHAR LIMIT=100] -->
   <!-- Name to use when we don't know the name of the wifi network the device is connected to [CHAR LIMIT=20] -->
+  <string name="wifi_summary_unknown_network">una rede desconocida</string>
   <!-- Strings for Ethernet under Connectivity Setting -->
   <!-- Title for OK [CHAR LIMIT=50] -->
   <string name="title_ok">ACEUTAR</string>
@@ -294,6 +318,7 @@
   <!-- Storage settings migrate primary storage action [CHAR_LIMIT=50] -->
   <!-- Storage settings backup apps empty action [CHAR LIMIT=50] -->
   <!-- Storage settings forget action [CHAR_LIMIT=50] -->
+  <string name="storage_forget">Escaecer l\'almacenamientu d\'esti preséu</string>
   <!-- Storage settings forget description [CHAR_LIMIT=NONE] -->
   <!-- Header title for device storage [CHAR_LIMIT=50] -->
   <!-- Header title for removable storage [CHAR_LIMIT=50] -->
@@ -335,8 +360,10 @@
   <!-- Title for wizard progress screen for moving apps [CHAR_LIMIT=50] -->
   <!-- Description for wizard progress screen for moving apps [CHAR_LIMIT=NONE] -->
   <!-- Title for wizard screen for forgetting private storage [CHAR_LIMIT=50] -->
+  <string name="storage_wizard_forget_confirm_title">¿Escaecer almacenamientu del preséu?</string>
   <!-- Description for wizard screen for forgetting private storage [CHAR_LIMIT=NONE] -->
   <!-- Action for wizard screen for forgetting private storage [CHAR_LIMIT=50] -->
+  <string name="storage_wizard_forget_action">Escaecer</string>
   <!-- Title for new storage activity [CHAR_LIMIT=50] -->
   <!-- Browse action for new storage activity [CHAR_LIMIT=50] -->
   <!-- Adopt action for new storage activity [CHAR_LIMIT=50] -->
@@ -360,16 +387,29 @@
   <!-- Title for Date in System Settings Date Time [CHAR LIMIT=50] -->
   <!-- Title for Time in System Settings Date Time [CHAR LIMIT=50] -->
   <!-- Title for Set Date in System Settings Date Time [CHAR LIMIT=50] -->
+  <string name="system_set_date">Afitar data</string>
   <!-- Title for Set Time in System Settings Date Time [CHAR LIMIT=50] -->
+  <string name="system_set_time">Afitar hora</string>
   <!-- Title for Set Time Zone in System Settings Date Time [CHAR LIMIT=50] -->
   <!-- Format string for displaying the current time zone, eg "GMT-08:00, Pacific Standard Time" [CHAR LIMIT=10] -->
   <!-- Title for Set time format in System Settings Date Time [CHAR LIMIT=50] -->
+  <string name="system_set_time_format">Usar formatu de 24 hores</string>
   <!-- Format string for displaying the current time format (12/24 hour) [CHAR LIMIT=10] -->
+  <string name="desc_set_time_format"><xliff:g id="state" example="Off">%1$s</xliff:g> (<xliff:g id="sample" example="3:14 PM">%2$s</xliff:g>)</string>
   <!-- Title for automatic date & time [CHAR LIMIT = 80] -->
   <string name="system_auto_date_time">Hora y data automátiques</string>
   <!-- Options for automatic date & time [CHAR LIMIT=100] -->
+  <string-array name="auto_date_time_entries">
+    <item>Usa la hora fornida pola rede</item>
+    <item>Off</item>
+  </string-array>
   <!-- Values for automatic date & time [DO NOT TRANSLATE] -->
   <!-- Options for automatic date & time [CHAR LIMIT=100] -->
+  <string-array name="auto_date_time_ts_entries">
+    <item>Usa la hora fornida pola rede</item>
+    <item>Use transport stream-provided time</item>
+    <item>Off</item>
+  </string-array>
   <!-- Values for automatic date & time [DO NOT TRANSLATE] -->
   <!-- Title for Location in System Settings [CHAR LIMIT=50] -->
   <!-- Description for Location in System Settings [CHAR LIMIT=NONE] -->
@@ -450,6 +490,7 @@
   <!-- Title for Set Drawing in System Settings Developer options [CHAR LIMIT=50] -->
   <!-- Title for Set Monitoring in System Settings Developer options [CHAR LIMIT=50] -->
   <!-- Title for Set Apps in System Settings Developer options [CHAR LIMIT=50] -->
+  <string name="system_apps">Aplicaciones</string>
   <!-- Title for Set Stay awake in System Settings Developer options [CHAR LIMIT=50] -->
   <!-- Title for Set HDCP checking in System Settings Developer options [CHAR LIMIT=50] -->
   <!-- Title for HDMI optimization in System Settings Developer options [CHAR LIMIT=50] -->
@@ -594,6 +635,7 @@
   <!-- Title for action to delete a restricted profile [CHAR LIMIT=100] -->
   <!-- Title for action to create a restricted profile [CHAR LIMIT=100] -->
   <!-- Title for action to configure a restricted profile [CHAR LIMIT=100] -->
+  <string name="restricted_profile_configure_title">Axustes</string>
   <!-- Title for action to configure apps for a restricted profile [CHAR LIMIT=100] -->
   <!-- Description for action to configure apps for a restricted profile indicating number of allow apps will be ready in a moment [CHAR LIMIT=100] -->
   <!-- An action label indicating the package will be or is allowed [CHAR LIMIT=100] -->
@@ -680,6 +722,7 @@
   <!-- Summary of number of apps currently granted a single permission [CHAR LIMIT=45] -->
   <!-- Strings for dialog title when asking to the user whether to allow an app to enable discovery mode -->
   <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
+  <string name="security_patch">Nivel de parche de seguranza d\'Android</string>
   <!-- App picker screen title -->
   <!-- Summary Title for saying that the preference is experimental and will evolve over time due to User feedback. [CHAR LIMIT=NONE] -->
   <!-- Title of button to confirm rebooting into safe mode. [CHAR LIMIT=50] -->
