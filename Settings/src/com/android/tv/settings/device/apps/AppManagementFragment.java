@@ -211,18 +211,24 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         final Context themedContext = getPreferenceManager().getContext();
 
         // Version
-        final Preference versionPreference = new Preference(themedContext);
-        versionPreference.setKey(KEY_VERSION);
-        replacePreference(versionPreference);
-        versionPreference.setSelectable(false);
+        Preference versionPreference = findPreference(KEY_VERSION);
+        if (versionPreference == null) {
+            versionPreference = new Preference(themedContext);
+            versionPreference.setKey(KEY_VERSION);
+            replacePreference(versionPreference);
+            versionPreference.setSelectable(false);
+        }
         versionPreference.setTitle(getString(R.string.device_apps_app_management_version,
                 mEntry.getVersion(getActivity())));
         versionPreference.setSummary(mPackageName);
 
         // Open
-        final Preference openPreference = new Preference(themedContext);
-        openPreference.setKey(KEY_OPEN);
-        replacePreference(openPreference);
+        Preference openPreference = findPreference(KEY_OPEN);
+        if (openPreference == null) {
+            openPreference = new Preference(themedContext);
+            openPreference.setKey(KEY_OPEN);
+            replacePreference(openPreference);
+        }
         Intent appLaunchIntent =
                 mPackageManager.getLeanbackLaunchIntentForPackage(mEntry.info.packageName);
         if (appLaunchIntent == null) {
@@ -237,52 +243,87 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         }
 
         // Force stop
-        mForceStopPreference = new ForceStopPreference(themedContext, mEntry);
-        mForceStopPreference.setKey(KEY_FORCE_STOP);
-        replacePreference(mForceStopPreference);
+        if (mForceStopPreference == null) {
+            mForceStopPreference = new ForceStopPreference(themedContext, mEntry);
+            mForceStopPreference.setKey(KEY_FORCE_STOP);
+            replacePreference(mForceStopPreference);
+        } else {
+            mForceStopPreference.setEntry(mEntry);
+        }
 
         // Uninstall
-        mUninstallPreference = new UninstallPreference(themedContext, mEntry);
-        mUninstallPreference.setKey(KEY_UNINSTALL);
-        replacePreference(mUninstallPreference);
+        if (mUninstallPreference == null) {
+            mUninstallPreference = new UninstallPreference(themedContext, mEntry);
+            mUninstallPreference.setKey(KEY_UNINSTALL);
+            replacePreference(mUninstallPreference);
+        } else {
+            mUninstallPreference.setEntry(mEntry);
+        }
 
         // Disable/Enable
-        mEnableDisablePreference = new EnableDisablePreference(themedContext, mEntry);
-        mEnableDisablePreference.setKey(KEY_ENABLE_DISABLE);
-        replacePreference(mEnableDisablePreference);
+        if (mEnableDisablePreference == null) {
+            mEnableDisablePreference = new EnableDisablePreference(themedContext, mEntry);
+            mEnableDisablePreference.setKey(KEY_ENABLE_DISABLE);
+            replacePreference(mEnableDisablePreference);
+        } else {
+            mEnableDisablePreference.setEntry(mEntry);
+        }
 
         // Storage used
-        mAppStoragePreference = new AppStoragePreference(themedContext, mEntry);
-        mAppStoragePreference.setKey(KEY_APP_STORAGE);
-        replacePreference(mAppStoragePreference);
+        if (mAppStoragePreference == null) {
+            mAppStoragePreference = new AppStoragePreference(themedContext, mEntry);
+            mAppStoragePreference.setKey(KEY_APP_STORAGE);
+            replacePreference(mAppStoragePreference);
+        } else {
+            mAppStoragePreference.setEntry(mEntry);
+        }
 
         // Clear data
-        mClearDataPreference = new ClearDataPreference(themedContext, mEntry);
-        mClearDataPreference.setKey(KEY_CLEAR_DATA);
-        replacePreference(mClearDataPreference);
+        if (mClearDataPreference == null) {
+            mClearDataPreference = new ClearDataPreference(themedContext, mEntry);
+            mClearDataPreference.setKey(KEY_CLEAR_DATA);
+            replacePreference(mClearDataPreference);
+        } else {
+            mClearDataPreference.setEntry(mEntry);
+        }
 
         // Clear cache
-        mClearCachePreference = new ClearCachePreference(themedContext, mEntry);
-        mClearCachePreference.setKey(KEY_CLEAR_CACHE);
-        replacePreference(mClearCachePreference);
+        if (mClearCachePreference == null) {
+            mClearCachePreference = new ClearCachePreference(themedContext, mEntry);
+            mClearCachePreference.setKey(KEY_CLEAR_CACHE);
+            replacePreference(mClearCachePreference);
+        } else {
+            mClearCachePreference.setEntry(mEntry);
+        }
 
         // Clear defaults
-        mClearDefaultsPreference = new ClearDefaultsPreference(themedContext, mEntry);
-        mClearDefaultsPreference.setKey(KEY_CLEAR_DEFAULTS);
-        replacePreference(mClearDefaultsPreference);
+        if (mClearDefaultsPreference == null) {
+            mClearDefaultsPreference = new ClearDefaultsPreference(themedContext, mEntry);
+            mClearDefaultsPreference.setKey(KEY_CLEAR_DEFAULTS);
+            replacePreference(mClearDefaultsPreference);
+        } else {
+            mClearDefaultsPreference.setEntry(mEntry);
+        }
 
         // Notifications
-        mNotificationsPreference = new NotificationsPreference(themedContext, mEntry);
-        mNotificationsPreference.setKey(KEY_NOTIFICATIONS);
-        replacePreference(mNotificationsPreference);
+        if (mNotificationsPreference == null) {
+            mNotificationsPreference = new NotificationsPreference(themedContext, mEntry);
+            mNotificationsPreference.setKey(KEY_NOTIFICATIONS);
+            replacePreference(mNotificationsPreference);
+        } else {
+            mNotificationsPreference.setEntry(mEntry);
+        }
 
         // Permissions
-        final Preference permissionsPreference = new Preference(themedContext);
-        permissionsPreference.setKey(KEY_PERMISSIONS);
-        permissionsPreference.setTitle(R.string.device_apps_app_management_permissions);
+        Preference permissionsPreference = findPreference(KEY_PERMISSIONS);
+        if (permissionsPreference == null) {
+            permissionsPreference = new Preference(themedContext);
+            permissionsPreference.setKey(KEY_PERMISSIONS);
+            permissionsPreference.setTitle(R.string.device_apps_app_management_permissions);
+            replacePreference(permissionsPreference);
+        }
         permissionsPreference.setIntent(new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS)
                 .putExtra(Intent.EXTRA_PACKAGE_NAME, mPackageName));
-        replacePreference(permissionsPreference);
     }
 
     private void replacePreference(Preference preference) {
