@@ -69,7 +69,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
     private static final String KEY_NETWORK = "network";
     private static final String KEY_INPUTS = "inputs";
     private static final String KEY_SOUNDS = "sound_effects";
-    private static final String KEY_GOOGLE_SETTINGS = "googleSettings";
+    private static final String KEY_GOOGLE_SETTINGS = "google_settings";
     private static final String KEY_HOME_SETTINGS = "home";
     private static final String KEY_CAST_SETTINGS = "cast";
     private static final String KEY_SPEECH_SETTINGS = "speech";
@@ -103,21 +103,9 @@ public class MainFragment extends LeanbackPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mAuthenticatorHelper = new AuthenticatorHelper(getContext(),
-                new UserHandle(UserHandle.myUserId()),
-                new AuthenticatorHelper.OnAccountsUpdateListener() {
-                    @Override
-                    public void onAccountsUpdate(UserHandle userHandle) {
-                        updateAccounts();
-                    }
-                });
+                new UserHandle(UserHandle.myUserId()), userHandle -> updateAccounts());
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
-        mConnectivityListener = new ConnectivityListener(getContext(),
-                new ConnectivityListener.Listener() {
-                    @Override
-                    public void onConnectivityChange() {
-                        updateWifi();
-                    }
-                });
+        mConnectivityListener = new ConnectivityListener(getContext(), this::updateWifi);
 
         final TvInputManager manager = (TvInputManager) getContext().getSystemService(
                 Context.TV_INPUT_SERVICE);
@@ -466,6 +454,15 @@ public class MainFragment extends LeanbackPreferenceFragment {
                         | SecurityException e) {
                     Log.e(TAG, "Google settings icon not found", e);
                 }
+            }
+
+            final Preference speechPref = findPreference(KEY_SPEECH_SETTINGS);
+            if (speechPref != null) {
+                speechPref.setVisible(info == null);
+            }
+            final Preference searchPref = findPreference(KEY_SEARCH_SETTINGS);
+            if (searchPref != null) {
+                searchPref.setVisible(info == null);
             }
         }
     }
