@@ -17,6 +17,7 @@
 package com.android.tv.settings;
 
 import android.app.Fragment;
+import android.support.annotation.NonNull;
 import android.support.v14.preference.PreferenceDialogFragment;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v17.preference.LeanbackSettingsFragment;
@@ -51,7 +52,7 @@ public abstract class BaseSettingsFragment extends LeanbackSettingsFragment {
     }
 
     @Override
-    public boolean onPreferenceDisplayDialog(PreferenceFragment caller, Preference pref) {
+    public boolean onPreferenceDisplayDialog(@NonNull PreferenceFragment caller, Preference pref) {
         final Fragment f;
         if (pref instanceof LeanbackPickerDialogPreference) {
             final LeanbackPickerDialogPreference dialogPreference = (LeanbackPickerDialogPreference)
