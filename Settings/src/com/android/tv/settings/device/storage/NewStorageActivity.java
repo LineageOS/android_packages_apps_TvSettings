@@ -71,7 +71,18 @@ public class NewStorageActivity extends Activity {
         if (savedInstanceState == null) {
             final String action = getIntent().getAction();
 
-            if (TextUtils.equals(action, ACTION_NEW_STORAGE)) {
+            if (TextUtils.equals(action, ACTION_MISSING_STORAGE)) {
+                // Launched from a notification, see com.android.systemui.usb.StorageNotification
+                final String fsUuid = getIntent().getStringExtra(VolumeRecord.EXTRA_FS_UUID);
+                if (TextUtils.isEmpty(fsUuid)) {
+                    throw new IllegalStateException(
+                            "NewStorageActivity launched without specifying missing storage");
+                }
+
+                getFragmentManager().beginTransaction()
+                        .add(android.R.id.content, MissingStorageFragment.newInstance(fsUuid))
+                        .commit();
+            } else {
                 final String volumeId = getIntent().getStringExtra(VolumeInfo.EXTRA_VOLUME_ID);
                 final String diskId = getIntent().getStringExtra(DiskInfo.EXTRA_DISK_ID);
                 if (TextUtils.isEmpty(volumeId) && TextUtils.isEmpty(diskId)) {
@@ -81,16 +92,6 @@ public class NewStorageActivity extends Activity {
 
                 getFragmentManager().beginTransaction()
                         .add(android.R.id.content, NewStorageFragment.newInstance(volumeId, diskId))
-                        .commit();
-            } else if (TextUtils.equals(action, ACTION_MISSING_STORAGE)) {
-                final String fsUuid = getIntent().getStringExtra(VolumeRecord.EXTRA_FS_UUID);
-                if (TextUtils.isEmpty(fsUuid)) {
-                    throw new IllegalStateException(
-                            "NewStorageActivity launched without specifying missing storage");
-                }
-
-                getFragmentManager().beginTransaction()
-                        .add(android.R.id.content, MissingStorageFragment.newInstance(fsUuid))
                         .commit();
             }
         }
@@ -140,6 +141,7 @@ public class NewStorageActivity extends Activity {
             if (!TextUtils.isEmpty(mVolumeId)) {
                 final VolumeInfo info = storageManager.findVolumeById(mVolumeId);
                 mDescription = storageManager.getBestVolumeDescription(info);
+                mDiskId = info.getDiskId();
             } else {
                 final DiskInfo info = storageManager.findDiskById(mDiskId);
                 mDescription = info.getDescription();

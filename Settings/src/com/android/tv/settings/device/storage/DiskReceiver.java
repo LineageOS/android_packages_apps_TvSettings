@@ -73,37 +73,10 @@ public class DiskReceiver extends BroadcastReceiver {
                     || state == VolumeInfo.STATE_BAD_REMOVAL) {
                 handleUnmount(context, intent);
             }
-        } else if (TextUtils.equals(intent.getAction(), DiskInfo.ACTION_DISK_SCANNED)) {
-            handleScan(context, intent);
         } else if (TextUtils.equals(intent.getAction(),
                 "com.google.android.tungsten.setupwraith.TV_SETTINGS_POST_SETUP")) {
             handleSetupComplete(context);
         }
-    }
-
-    private void handleScan(Context context, Intent intent) {
-        final String diskId = intent.getStringExtra(DiskInfo.EXTRA_DISK_ID);
-        if (TextUtils.isEmpty(diskId)) {
-            Log.e(TAG, intent.getAction() + " with no " + DiskInfo.EXTRA_DISK_ID);
-            return;
-        }
-        final DiskInfo diskInfo = mStorageManager.findDiskById(diskId);
-        if (diskInfo == null) {
-            Log.e(TAG, "Disk ID " + diskId + " is no longer mounted");
-            return;
-        }
-        if (diskInfo.size <= 0) {
-            Log.d(TAG, "Disk ID " + diskId + " has no media");
-            return;
-        }
-        if (intent.getIntExtra(DiskInfo.EXTRA_VOLUME_COUNT, -1) != 0) {
-            Log.d(TAG, "Disk ID " + diskId + " has usable volumes, waiting for mount");
-            return;
-        }
-        // No usable volumes, prompt the user to erase the disk
-        final Intent i = NewStorageActivity.getNewStorageLaunchIntent(context, null, diskId);
-        setPopupLaunchFlags(i);
-        context.startActivity(i);
     }
 
     private void handleMount(Context context, Intent intent) {
@@ -121,21 +94,6 @@ public class DiskReceiver extends BroadcastReceiver {
                 Toast.makeText(context, R.string.storage_mount_adopted, Toast.LENGTH_SHORT)
                     .show();
                 return;
-            }
-            if (info.getType() != VolumeInfo.TYPE_PUBLIC || TextUtils.isEmpty(uuid)) {
-                continue;
-            }
-            final VolumeRecord record = mStorageManager.findRecordByUuid(uuid);
-            if (record.isInited() || record.isSnoozed()) {
-                continue;
-            }
-            final DiskInfo disk = info.getDisk();
-            if (disk.isAdoptable()) {
-                final Intent i = NewStorageActivity.getNewStorageLaunchIntent(context,
-                        volumeId, disk.getId());
-                setPopupLaunchFlags(i);
-                context.startActivity(i);
-                break;
             }
         }
     }
