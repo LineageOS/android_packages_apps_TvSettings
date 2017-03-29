@@ -506,7 +506,6 @@
 
         <receiver android:name=".device.storage.DiskReceiver">
             <intent-filter>
-                <action android:name="android.os.storage.action.DISK_SCANNED" />
                 <action android:name="android.os.storage.action.VOLUME_STATE_CHANGED" />
                 <action android:name="com.google.android.tungsten.setupwraith.TV_SETTINGS_POST_SETUP" />
             </intent-filter>
@@ -517,12 +516,22 @@
 
         <activity android:name=".device.storage.NewStorageActivity"
             android:excludeFromRecents="true"
-            android:exported="false"
-            android:taskAffinity="" />
+            android:taskAffinity=""
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.tv.settings.action.NEW_STORAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".device.storage.UnmountActivity"
             android:excludeFromRecents="true"
-            android:exported="false" />
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.tv.settings.action.UNMOUNT_STORAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".device.storage.FormatActivity"
             android:excludeFromRecents="true"
@@ -530,11 +539,21 @@
 
         <activity android:name=".device.storage.MigrateStorageActivity"
             android:excludeFromRecents="true"
-            android:exported="false" />
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.tv.settings.action.MIGRATE_STORAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".device.apps.MoveAppActivity"
             android:excludeFromRecents="true"
-            android:exported="false" />
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.tv.settings.action.MOVE_APP" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".accessories.BluetoothRequestPermissionActivity"
             android:label="@string/bluetooth_permission_request"
