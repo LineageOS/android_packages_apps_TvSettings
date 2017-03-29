@@ -57,6 +57,7 @@
   <!-- Title for enable wifi. [CHAR LIMIT=50] -->
   <!-- Device preferences -->
   <!-- Preference which changes screen saver settings. [CHAR LIMIT=50] -->
+  <string name="device_daydream">Curiapantalles</string>
   <!-- Preference which changes display settings. [CHAR LIMIT=50] -->
   <!-- Title for preference screen controlling sound settings [CHAR LIMIT=50] -->
   <!-- Title for preference which controls surround sound passthrough function [CHAR LIMIT=50] -->
@@ -156,6 +157,7 @@
   <string name="device_status">Estáu</string>
   <!-- About screen, summary of the item that takes you to device status screen -->
   <!-- About settings screen, setting option name to show Manual [CHAR LIMIT=25] -->
+  <string name="manual">Manual</string>
   <!-- About settings screen, setting option name to show regulatory information [CHAR LIMIT=25] -->
   <!-- Feedback on the device [CHAR LIMIT=35] -->
   <!-- Full package name of OEM preferred device feedback reporter. [DO NOT TRANSLATE] -->
@@ -226,7 +228,7 @@
   <!-- Title to show when wifi fails to connect due to authentication failure [CHAR LIMIT=80] -->
   <!-- Title to show when the wifi ap rejects the connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking if advanced settings should be used for this wifi connection [CHAR LIMIT=80] -->
-  <string name="title_wifi_advanced_options">¿Configurar los axustes d\'IP y proxy de <xliff:g id="ssid">%1$s</xliff:g>?</string>
+  <string name="title_wifi_advanced_options">¿Configurar l\'axuste d\'IP y proxy de <xliff:g id="ssid">%1$s</xliff:g>?</string>
   <!-- Title to show when asking if a proxy should be used for this wifi connection [CHAR LIMIT=80] -->
   <string name="title_wifi_proxy_settings">Axustes de proxy</string>
   <!-- Title to show when asking for the proxy hostname for this wifi connection [CHAR LIMIT=80] -->
@@ -235,13 +237,15 @@
   <string name="title_wifi_proxy_port">Puertu de proxy:</string>
   <!-- Title to show when asking for which domains bypass the proxy for this wifi connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking how an ip should be assigned for this wifi connection [CHAR LIMIT=80] -->
-  <string name="title_wifi_ip_settings">Axustes d\'IP</string>
+  <string name="title_wifi_ip_settings">Axuste d\'IP</string>
   <!-- Title to show when asking for the static ip address to use for this wifi connection [CHAR LIMIT=80] -->
   <string name="title_wifi_ip_address">Direición IP:</string>
   <!-- Title to show when asking for the gateway's ip address for this wifi connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking for the network prefix length for this wifi connection [CHAR LIMIT=80] -->
   <!-- Title to show when asking for the first DNS to use for this wifi connection [CHAR LIMIT=80] -->
+  <string name="title_wifi_dns1">DNS 1:</string>
   <!-- Title to show when asking for the second DNS to use for this wifi connection [CHAR LIMIT=80] -->
+  <string name="title_wifi_dns2">DNS 2:</string>
   <!-- Title to show when the proxy settings are invalid [CHAR LIMIT=80] -->
   <!-- Title to show when the ip settings are invalid [CHAR LIMIT=80] -->
   <string name="title_wifi_ip_settings_invalid">Axustes IP non válidos</string>
@@ -263,7 +267,9 @@
   <!-- Label for action to not use advanced settings for the wifi connection [CHAR LIMIT=50] -->
   <!-- Label for action to not use a proxy for the wifi connection [CHAR LIMIT=50] -->
   <!-- Label for action to setup a proxy for the wifi connection [CHAR LIMIT=50] -->
+  <string name="wifi_action_proxy_manual">Manual</string>
   <!-- Label for action to use dhcp to obtain an ip address for the wifi connection [CHAR LIMIT=50] -->
+  <string name="wifi_action_dhcp">DHCP</string>
   <!-- Label for action to setup static ip information for the wifi connection [CHAR LIMIT=50] -->
   <!-- Title for action to show status information for the wifi connection [CHAR LIMIT=50] -->
   <!-- Title for action to setup advanced options for the wifi connection [CHAR LIMIT=50] -->
@@ -282,6 +288,7 @@
   <!-- HTTP proxy settings. Error msg -->
   <!-- HTTP proxy settings. Error msg -->
   <!-- HTTP proxy settings. Error msg -->
+  <string name="proxy_error_invalid_port">El puertu nun ye válidu</string>
   <!-- HTTP proxy settings. Warning message about limited application support [CHAR LIMIT=100]-->
   <!-- HTTP proxy settings. The description for proxy server port. -->
   <!-- HTTP proxy settings. The description for proxy exclusion list.-->
@@ -693,6 +700,7 @@
   <!-- General settings choice for off [CHAR LIMIT=40] -->
   <!-- Screen saver choice for not having a screen saver [CHAR LIMIT=40] -->
   <!-- Screen saver choice for selecting a different screen saver [CHAR LIMIT=40] -->
+  <string name="device_daydreams_select">Curiapantalles</string>
   <!-- Screen saver choice for testing the selected screen saver [CHAR LIMIT=40] -->
   <!-- Screen saver choice for configuring the time before the device goes to sleep [CHAR LIMIT=40] -->
   <!-- Screen saver description for configuring the time before the device goes to sleep [CHAR LIMIT=NONE] -->
