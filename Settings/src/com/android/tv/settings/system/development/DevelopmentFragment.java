@@ -61,6 +61,7 @@ import android.view.ThreadedRenderer;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityManager;
+import android.widget.Toast;
 
 import com.android.internal.app.LocalePicker;
 import com.android.tv.settings.R;
@@ -175,7 +176,6 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
     private Preference mClearAdbKeys;
     private SwitchPreference mEnableTerminal;
     private Preference mBugreport;
-    private SwitchPreference mBugreportInPower;
     private SwitchPreference mKeepScreenOn;
     private SwitchPreference mBtHciSnoopLog;
     private SwitchPreference mEnableOemUnlock;
@@ -303,9 +303,6 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
         }
 
         mBugreport = findPreference(BUGREPORT);
-        mBugreportInPower = findAndInitSwitchPref(BUGREPORT_IN_POWER_KEY);
-        // No power menu on TV
-        removePreference(BUGREPORT_IN_POWER_KEY);
         mKeepScreenOn = findAndInitSwitchPref(KEEP_SCREEN_ON);
         mBtHciSnoopLog = findAndInitSwitchPref(BT_HCI_SNOOP_LOG);
         mEnableOemUnlock = findAndInitSwitchPref(ENABLE_OEM_UNLOCK);
@@ -570,8 +567,6 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
                     context.getPackageManager().getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
                             == PackageManager.COMPONENT_ENABLED_STATE_ENABLED);
         }
-        updateSwitchPreference(mBugreportInPower, Settings.Secure.getInt(cr,
-                Settings.Global.BUGREPORT_IN_POWER_MENU, 0) != 0);
         updateSwitchPreference(mKeepScreenOn, Settings.Global.getInt(cr,
                 Settings.Global.STAY_ON_WHILE_PLUGGED_IN, 0) != 0);
         updateSwitchPreference(mBtHciSnoopLog, Settings.Secure.getInt(cr,
@@ -842,21 +837,25 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
     }
 
     private void updateBugreportOptions() {
-        if (mBugreport != null) {
-            mBugreport.setEnabled(true);
-        }
-        mBugreportInPower.setEnabled(true);
-        setBugreportStorageProviderStatus();
-    }
-
-    private void setBugreportStorageProviderStatus() {
+        boolean enabled = "1".equals(SystemProperties.get("ro.debuggable"))
+                || mEnableDeveloper.isChecked();
+        mBugreport.setEnabled(enabled);
         final ComponentName componentName = new ComponentName("com.android.shell",
                 "com.android.shell.BugreportStorageProvider");
-        final boolean enabled = mBugreportInPower.isChecked();
         getActivity().getPackageManager().setComponentEnabledSetting(componentName,
                 enabled ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
                         : PackageManager.COMPONENT_ENABLED_STATE_DEFAULT,
                 0);
+    }
+
+    private void captureBugReport() {
+        Toast.makeText(getActivity(), R.string.capturing_bugreport, Toast.LENGTH_SHORT).show();
+        try {
+            ActivityManager.getService()
+                    .requestBugReport(ActivityManager.BUGREPORT_OPTION_INTERACTIVE);
+        } catch (RemoteException e) {
+            Log.e(TAG, "Error taking bugreport", e);
+        }
     }
 
     // Returns the current state of the system property that controls
@@ -1478,7 +1477,6 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
         Settings.Global.putInt(mContentResolver, Settings.Global.ADB_ENABLED, 1);
         mVerifyAppsOverUsb.setEnabled(true);
         updateVerifyAppsOverUsbOptions();
-        updateBugreportOptions();
     }
 
     @Override
@@ -1519,6 +1517,8 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
                 mLastEnabledState = false;
                 setPrefsEnabledState(false);
             }
+        } else if (preference == mBugreport) {
+            captureBugReport();
         } else if (preference == mEnableAdb) {
             if (mEnableAdb.isChecked()) {
                 // Pass to super to launch the dialog, then uncheck until the dialog
@@ -1529,17 +1529,12 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
                 Settings.Global.putInt(mContentResolver, Settings.Global.ADB_ENABLED, 0);
                 mVerifyAppsOverUsb.setEnabled(false);
                 mVerifyAppsOverUsb.setChecked(false);
-                updateBugreportOptions();
             }
         } else if (preference == mEnableTerminal) {
             final PackageManager pm = getActivity().getPackageManager();
             pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,
                     mEnableTerminal.isChecked() ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
                             : PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, 0);
-        } else if (preference == mBugreportInPower) {
-            Settings.Secure.putInt(mContentResolver, Settings.Global.BUGREPORT_IN_POWER_MENU,
-                    mBugreportInPower.isChecked() ? 1 : 0);
-            setBugreportStorageProviderStatus();
         } else if (preference == mKeepScreenOn) {
             Settings.Global.putInt(mContentResolver, Settings.Global.STAY_ON_WHILE_PLUGGED_IN,
                     mKeepScreenOn.isChecked() ?
