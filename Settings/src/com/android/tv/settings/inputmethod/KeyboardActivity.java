@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2017 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,16 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.system;
+package com.android.tv.settings.inputmethod;
 
 import android.app.Fragment;
 
 import com.android.tv.settings.BaseSettingsFragment;
 import com.android.tv.settings.TvSettingsActivity;
 
+/**
+ * Wrapper activity for KeyboardFragment
+ */
 public class KeyboardActivity extends TvSettingsActivity {
 
     @Override
@@ -28,8 +31,14 @@ public class KeyboardActivity extends TvSettingsActivity {
         return SettingsFragment.newInstance();
     }
 
+    /**
+     * SettingsFragment for KeyboardActivity
+     */
     public static class SettingsFragment extends BaseSettingsFragment {
 
+        /**
+         * @return new SettingsFragment instance
+         */
         public static SettingsFragment newInstance() {
             return new SettingsFragment();
         }
