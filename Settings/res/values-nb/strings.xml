@@ -24,6 +24,7 @@
     <string name="header_category_preferences" msgid="175105555164713972">"Innstillinger"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Fjernkontroll og tilbehør"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Personlig"</string>
+    <string name="accounts_category_title" msgid="7591072907146317425">"Kontoer"</string>
     <string name="add_account" msgid="4098060223200619258">"Legg til konto"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Fjern konto"</string>
     <string name="account_sync" msgid="773808124331714965">"Velg synkroniserte apper"</string>
@@ -35,7 +36,7 @@
     <string name="account_remove_failed" msgid="980654375770693544">"Kan ikke fjerne kontoen"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"Trykk for å synkronisere nå<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"Synkroniser nå <xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Synkroniseringen mislyktes"</string>
     <string name="sync_active" msgid="6891115263481154378">"Synkroniserer"</string>
@@ -45,12 +46,13 @@
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Skanning er alltid tilgjengelig"</string>
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"Tillat at Googles posisjonstjeneste og andre apper skanner etter nettverk, selv når Wi-Fi er slått av"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
-    <string name="device_daydream" msgid="4933581408059561077">"Dagdrøm"</string>
+    <string name="device_daydream" msgid="3354366974209179614">"Skjermsparer"</string>
     <string name="device_display" msgid="101455384386372747">"Skjerm"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Lyd"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"Surround-lyd"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Systemlyder"</string>
     <string name="device_apps" msgid="9180435229638772838">"Apper"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Lagring og tilbakestilling"</string>
-    <string name="device_storage" msgid="5536683600091277826">"Lagring"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Sikkerhetskopiering og gjenoppretting"</string>
     <string name="device_reset" msgid="2827002349560023125">"Tilbakestilling til fabrikkstandard"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrering"</string>
@@ -214,20 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Skriv inn en gyldig gateway-adresse"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Skriv inn en gyldig DNS-adresse"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Skriv inn en nettverksprefiks-lengde mellom 0 og 32"</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"Skriv inn en gyldig IP-adresse.\nEksempel: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"Skriv inn en gyldig IP-adresse eller la det stå tomt.\nEksempel: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"Skriv inn en gyldig IP-adresse eller la det stå tomt.\nEksempel: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"Skriv inn en gyldig IP-adresse eller la feltet stå tomt.\nEksempel: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"Skriv inn en gyldig lengde for nettverksprefiks.\nEksempel: 24"</string>
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"Skriv inn en gyldig IP-adresse.\nEksempel: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"Skriv inn en gyldig IP-adresse eller la feltet stå blankt.\nEksempel: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"Skriv inn en gyldig IP-adresse eller la feltet stå blankt.\nEksempel: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"Skriv inn en gyldig IP-adresse eller la feltet stå blankt.\nEksempel: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Skriv inn en gyldig lengde for nettverksprefikset.\nEksempel: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Vertsnavnet er ikke gyldig"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Denne unntakslisten er ikke gyldig. Skriv inn en liste over ekskluderte domener, atskilt med komma."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Portfeltet kan ikke stå tomt"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Hvis vertsfeltet er tomt, la portfeltet stå tomt"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Porten er ikke gyldig"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP-proxy-tjeneren brukes av nettleseren, men kan ikke brukes av andre apper."</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"Skriv inn en gyldig port.\nEksempel: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"Skriv inn en kommadelt liste over domener som skal utelates, eller la det stå tomt.\nEksempel: eksempel.com,minkomp.test.com,lokalvert"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"Skriv inn et gyldig vertsnavn.\nEksempel: proxy-tjener.eksempel.com"</string>
+    <string name="proxy_port_description" msgid="6791098212244367568">"Skriv inn en gyldig port.\nEksempel: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Skriv inn en liste, atskilt med komma, over domener som skal utelates, eller la feltet stå blankt. \nEksempel: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"Skriv inn et gyldig vertsnavn.\nEksempel: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Nettverket er tilkoblet"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Nettverket er ikke tilkoblet"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Allerede koblet til <xliff:g id="SSID">%1$s</xliff:g>. Ønsker du å koble til et annet nettverk?"</string>
@@ -246,10 +248,14 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Bufrede data"</string>
     <string name="storage_eject" msgid="113476702798691558">"Løs ut"</string>
     <string name="storage_format" msgid="3759273736493279595">"Slett og formatér"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Slett og formatér som enhetslagring"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Slett og formatér som flyttbar lagring"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Formater som enhetslagring"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Ikke tilkoblet"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Overfør data"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Glem denne interne lagringen"</string>
+    <string name="storage_migrate" msgid="1304058078948715456">"Overfør data til denne lagringsplassen"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Overfør dataene til en annen lagringsplass"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Ingen apper å sikkerhetskopiere"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"Glem denne lagringsenheten"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Plugg disken i på nytt for å bruke appene eller dataene den inneholder. Alternativt kan du velge å glemme denne lagringen hvis disken ikke er tilgjengelig.\n\nHvis du velger «glem», forsvinner alle dataene på disken for alltid.\n\nDu kan installere appene på nytt senere, men dataene som er lagret på disken, går tapt."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Lagring på enheten"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Flyttbar lagring"</string>
@@ -262,12 +268,13 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Fant ingen disk å løse ut"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> er formatert"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Kunne ikke formatere <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatér som intern lagring"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Formatér som lagringsenhet"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Dette krevet at USB-stasjonen er formatert for å gjøre den sikker. Etter formateringen fungerer stasjonen bare med denne enheten. Formatering sletter alle data som er lagret på stasjonen for øyeblikket. For å unngå at data går tapt, vurder å ta en sikkerhetskopi."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Slett og formatér"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Når du har formatert, kan du bruke denne USB-stasjonen med andre enheter. Alle dataene blir slettet. Du bør vurdere å ta en sikkerhetskopi før du flytter appene til annen intern lagring"</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Når du har formatert, kan du bruke denne USB-stasjonen med andre enheter. Alle dataene blir slettet. Du bør vurdere å ta en sikkerhetskopi før du flytter appene til andre lagringsenheter."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formaterer USB-stasjonen …"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Dette kan ta litt tid. Ikke fjern stasjonen."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Velg lagringsplassen du vil overføre dataene til"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Flytt data til <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Flytt bildene, filene og appdataene dine til <xliff:g id="NAME">%1$s</xliff:g>. Dette kan ta noen minutter. Noen apper kommer ikke til å fungere som de skal under flyttingen."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Flytt nå"</string>
@@ -283,18 +290,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Apper er lagret på <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Apper og data er lagret på <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> er tilgjengelig"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Løs ut internlageret"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Apper på denne lagringsenheten slutter å fungere når den løses ut. Denne USB-stasjonen er formatert for å fungere bare på denne enheten – den fungerer ikke på noen andre."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Løser ut <xliff:g id="NAME">%1$s</xliff:g>…"</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Løs ut lagringsenheten"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Appene på denne lagringsenheten slutter å fungere når den løses ut. Denne USB-stasjonen er formatert for å fungere bare på denne enheten – den fungerer ikke på noen andre."</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"Løser ut <xliff:g id="NAME">%1$s</xliff:g> …"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Lagringsplass som brukes"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Flytter <xliff:g id="NAME">%1$s</xliff:g> …"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Ikke fjern stasjonen under flyttingen.\n<xliff:g id="APPNAME">%1$s</xliff:g>-appen på denne enheten er ikke tilgjengelig før flyttingen er ferdig."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Vil du glemme intern lagring?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Vil du glemme lagringsenheten?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Alle dataene som er lagret på denne disken, går tapt for alltid hvis du velger «glem». Vil du fortsette?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Slett"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"En USB-disk ble koblet til"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Bla gjennom"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Konfigurer som intern lagring"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Konfigurer som lagringsenhet"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Konfigurer som flyttbar lagring"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Løs ut"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> er fjernet"</string>
@@ -304,6 +311,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"Appen er kopibeskyttet."</string>
     <string name="invalid_location" msgid="5269044848535157307">"Den installerte posisjonen er ikke gyldig."</string>
     <string name="system_package" msgid="9200255718634512790">"Systemoppdateringer kan ikke installeres på eksterne medier."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Enhetsadministratoren kan ikke installeres på eksterne medier."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Finn ut mer"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Prøv på nytt"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Søker etter WPS-ruter …"</string>
@@ -363,20 +371,27 @@
     <string name="captions_display_off" msgid="496953007835201523">"Av"</string>
     <string name="display_options" msgid="5504549024985225774">"Vis grupper"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Konfigurer"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Språk"</string>
+    <string name="captions_language" msgid="2835554055388996343">"Språk"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Tekststørrelse"</string>
-    <string name="captions_captionstyle" msgid="7423638523487868230">"Tekstingstil"</string>
+    <string name="captions_captionstyle" msgid="7423638523487868230">"Tekststil"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Tilpassede alternativer"</string>
     <string name="captions_fontfamily" msgid="6840670778173003604">"Skrifttype"</string>
     <string name="captions_textcolor" msgid="3233568269335050287">"Tekstfarge"</string>
     <string name="captions_edgetype" msgid="841331274533086103">"Kant-type"</string>
     <string name="captions_edgecolor" msgid="845125757332620884">"Kantfarge"</string>
+    <string name="captions_backgroundshow" msgid="9177987321551275698">"Vis bakgrunnen"</string>
     <string name="captions_backgroundcolor" msgid="448518890988125453">"Bakgrunnsfarge"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Bakgrunnsopasitet"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Tekstingen kommer til å se slik ut"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Tekstopasitet"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"Vis vindu"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Vindusfarge"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Vindusopasitet"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"Hvitt på svart"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"Svart på hvitt"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"Gult på svart"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"Gult på blått"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"Spesialtilpasset"</string>
     <string name="color_white" msgid="65537523012024751">"Hvit"</string>
     <string name="color_black" msgid="8804213372565106403">"Svart"</string>
     <string name="color_red" msgid="5630553203246525989">"Rød"</string>
@@ -433,7 +448,6 @@
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Overgangsanimasjonsskala"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Varighetsskala for animasjon"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Slå på streng modus"</string>
-    <string name="system_show_cpu_usage" msgid="4797599582027671138">"Vis CPU-bruk"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"GPU-gjengivelse av profil"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Aktiver spor"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"Ikke behold aktiviteter"</string>
@@ -451,7 +465,6 @@
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Fra best til verst: blå, grønn, lyserød, rød"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Fremhev hele vindusoverflater når de oppdateres"</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Skjermblink ved lange apphandlinger på hovedtråd"</string>
-    <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"Skjermoverlegg viser gjeldende CPU-bruk"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Mål gjengivelsestid i adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"På"</string>
     <string name="action_off_title" msgid="3157728958166559966">"Av"</string>
@@ -461,6 +474,7 @@
     <string name="disagree" msgid="9170636026862400981">"Ikke godta"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Ukjente kilder"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Tillat installasjon av apper fra andre kilder enn Play-butikken"</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Tillat ukjente kilder"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Enheten din og de personlige dataene dine er mer sårbare for angrep fra apper som kommer fra ukjente kilder. Du godtar at du selv er ansvarlig for tap av data, eller skader enheten din måtte få, som følge av bruk av disse appene."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Bekreft apper"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Forby eller advar før installasjon av apper som kan være skadelige"</string>
@@ -519,26 +533,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"Spillkonsoll"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Egendefinert navn"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Skriv inn et navn for <xliff:g id="INPUT">%1$s</xliff:g>-inngangen."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Skjult"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Vises ikke når du bytter inngang"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Egendefinert navn:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Vis denne inngangen"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Navn"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI-kontroll"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Tillat TV-en å kontrollere HDMI-enheter"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Automatisk avslåing for enhet"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Slå av HDMI-enheter med TV-en"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Automatisk påslåing av TV"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Slå på TV-en med HDMI-enheter"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="other">TILKOBLEDE INNGANGER</item>
-      <item quantity="one">TILKOBLET INNGANG</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="other">Inngangene er tilkoblet</item>
+      <item quantity="one">Inngangen er tilkoblet</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="other">STANDBYINNGANGER</item>
-      <item quantity="one">STANDBYINNGANG</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="other">Venter på inngangene</item>
+      <item quantity="one">Venter på inngangen</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="other">IKKE-TILKOBLEDE INNGANGER</item>
-      <item quantity="one">IKKE-TILKOBLET INNGANG</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="other">Inngangene er ikke tilkoblet</item>
+      <item quantity="one">Inngangen er ikke tilkoblet</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Begrens tilgangen til apper og annet innhold i kontoen din"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Begrenset profil"</string>
@@ -550,6 +565,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Angi den begrensede profilen"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Lukk den begrensede profilen"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Slett den begrensede profilen"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"Opprett en begrenset profil"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Innstillinger"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Tillatte apper"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
@@ -573,8 +589,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Feil PIN-kode – prøv på nytt"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Prøv på nytt – PIN-koden er feil"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Skriv inn passord for <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_connection_success" msgid="6262755735033937164">"Koblet til."</string>
-    <string name="wifi_setup_save_success" msgid="4829154865874318015">"Lagret."</string>
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Koblet til"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"Lagret"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Versjon <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Åpne"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Tving avslutning"</string>
@@ -591,7 +607,7 @@
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> brukes på <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Slett data"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Alle dataene for denne appen blir slettet permanent.\nDette inkluderer alle filer, innstillinger, kontoer, databaser osv."</string>
-    <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Slett standarder"</string>
+    <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Fjern standardvalg"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Skal starte appen for visse handlinger"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Ingen standarder er angitt"</string>
     <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"Tøm bufferen"</string>
@@ -601,13 +617,13 @@
     <string name="settings_cancel" msgid="304280412158061225">"Avbryt"</string>
     <string name="settings_on" msgid="6892236264945435013">"På"</string>
     <string name="settings_off" msgid="449272161738237637">"Av"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"Ingen"</string>
-    <string name="device_daydreams_select" msgid="3691552535056569158">"Dagdrøm"</string>
+    <string name="device_daydreams_none" msgid="2767107052779579259">"Slå av skjermen"</string>
+    <string name="device_daydreams_select" msgid="2112338101206187695">"Skjermsparer"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Start nå"</string>
-    <string name="device_daydreams_sleep" msgid="8766795993034660366">"Når dagdrøm skal brukes"</string>
-    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"Dagdrømming begynner etter dette tidsrommet med inaktivitet. Hvis ingen dagdrøm er valgt, slås skjermen av."</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Starttidspunkt"</string>
+    <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Skjermspareren starter etter denne perioden med inaktivitet. Hvis ingen skjermsparer er valgt, slås skjermen av."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Etter <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> med inaktivitet"</string>
-    <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Når hvilemodusen skal aktiveres"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Sett enheten i hvilemodus"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Skjermene slår seg av etter denne perioden uten aktivitet."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Ingen kontoer lagrer for øyeblikket sikkerhetskopierte data"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -639,7 +655,10 @@
     <string name="device_apps_permissions" msgid="2966387603529725982">"Apptillatelser"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> av <xliff:g id="COUNT_1">%d</xliff:g> apper er tillatt"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"Forespørsel om Bluetooth-tillatelse"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Nivå for patch (feilretting) av sikkerhet på Android"</string>
+    <string name="security_patch" msgid="2131617390189164481">"Nivå av sikkerhetsoppdatering i Android"</string>
     <string name="choose_application" msgid="5662960665577780353">"Velg app"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Eksperimentell)"</string>
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"Start på nytt i sikker modus"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Vil du starte på nytt i sikker modus?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"Dette slår av alle tredjepartsappene du har installert. De gjenopprettes når du starter på nytt."</string>
 </resources>

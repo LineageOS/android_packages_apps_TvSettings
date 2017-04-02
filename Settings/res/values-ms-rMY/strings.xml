@@ -24,6 +24,7 @@
     <string name="header_category_preferences" msgid="175105555164713972">"Pilihan"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Jauh &amp; aksesori"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Peribadi"</string>
+    <string name="accounts_category_title" msgid="7591072907146317425">"Akaun"</string>
     <string name="add_account" msgid="4098060223200619258">"Tambah akaun"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Alih keluar akaun"</string>
     <string name="account_sync" msgid="773808124331714965">"Pilih aplikasi disegerakkan"</string>
@@ -35,7 +36,7 @@
     <string name="account_remove_failed" msgid="980654375770693544">"Tidak boleh mengalih keluar akaun"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"Sentuh untuk menyegerakkan sekarang<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"Segerakkan sekarang<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Segerak gagal"</string>
     <string name="sync_active" msgid="6891115263481154378">"Segerak aktif"</string>
@@ -45,12 +46,13 @@
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Pengimbasan sentiasa tersedia"</string>
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"Biarkan perkhidmatan lokasi Google dan apl lain mengimbas untuk mengesan rangkaian, meskipun Wi-Fi dimatikan"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
-    <string name="device_daydream" msgid="4933581408059561077">"Lamunan"</string>
+    <string name="device_daydream" msgid="3354366974209179614">"Penyelamat skrin"</string>
     <string name="device_display" msgid="101455384386372747">"Paparan"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Bunyi"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"Bunyi keliling"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Bunyi sistem"</string>
     <string name="device_apps" msgid="9180435229638772838">"Apps"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Storan &amp; tetapan semula"</string>
-    <string name="device_storage" msgid="5536683600091277826">"Storan"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Sandarkan &amp; pulihkan"</string>
     <string name="device_reset" msgid="2827002349560023125">"Tetapan semula data kilang"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Penentukuran"</string>
@@ -214,20 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Masukkan alamat get laluan yang sah"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Masukkan alamat DNS yang sah"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Masukkan panjang awalan rangkaian antara 0 dan 32"</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"Masukkan alamat IP yang sah.\nContoh: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"Masukkan alamat IP yang sah atau biarkan kosong. \n Contoh: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"Masukkan alamat IP yang sah atau tinggalkan kosong.\nContoh: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"Masukkan alamat IP yang sah atau biarkan kosong.\nContoh: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"Masukkan panjang awalan rangkaian yang sah.\nContoh: 24"</string>
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"Masukkan alamat IP yang sah.\nContoh: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"Masukkan alamat IP yang sah atau biarkan kosong.\nContoh: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"Masukkan alamat IP yang sah atau biarkan kosong.\nContoh: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"Masukkan alamat IP yang sah atau biarkan kosong.\nContoh: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Masukkan panjang awalan rangkaian yang sah.\nContoh: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Nama hos tidak sah"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Senarai pengecualian ini tidak sah. Masukkan senarai dipisahkan koma untuk domain yang dikecualikan."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Medan port tidak boleh kosong"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Jika medan hos kosong, biarkan medan port kosong."</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Port tidak sah"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Proksi HTTP dignakan oleh penyemak imbas tetapi tidak boleh digunakan oleh apl lain"</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"Masukkan port yang sah.\nContoh: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"Masukkan senarai dipisahkan koma untuk domain yang dikecualikan atau tinggalkan kosong.\nContoh: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"Masukkan nama hos yang sah.\nContoh: proksi.contoh.com"</string>
+    <string name="proxy_port_description" msgid="6791098212244367568">"Masukkan port yang sah.\nContoh: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Masukkan senarai domain dikecualikan yang dipisahkan dengan koma atau biarkan kosong.\nContoh: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"Masukkan nama hos yang sah.\nContoh: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Rangkaian disambungkan"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Rangkaian tidak disambungkan"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Sudah disambungkan ke <xliff:g id="SSID">%1$s</xliff:g>. Sambungkan ke rangkaian lain?"</string>
@@ -246,10 +248,14 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Data cache"</string>
     <string name="storage_eject" msgid="113476702798691558">"Keluarkan"</string>
     <string name="storage_format" msgid="3759273736493279595">"Padam &amp; format"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Padam &amp; formatkan sebagai storan peranti"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Padam &amp; formatkan sebagai storan boleh alih"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Format sebagai storan peranti"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Tidak bersambung"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Pindahkan data"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Lupakan storan dalaman ini"</string>
+    <string name="storage_migrate" msgid="1304058078948715456">"Pindahkan data ke storan ini"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Pindahkan data ke storan lain"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Tiada apl untuk disandarkan"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"Lupakan storan peranti ini"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Untuk menggunakan apl atau data yang terkandung dalam pemacu ini, masukkannya semula. Sekiranya storan ini tidak tersedia, anda boleh memilih untuk melupakannya.\n\nJika anda memilih Lupa, semua data yang terkandung dalam pemacu itu akan hilang selama-lamanya.\n\nAnda boleh memasang semula apl kemudian, namun data yang disimpan pada pemacu ini akan hilang."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Storan peranti"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Storan boleh tanggal"</string>
@@ -262,12 +268,13 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Tidak menemui pemacu untuk dikeluarkan"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> sudah diformatkan"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Tidak dapat memformat <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Formatkan sebagai storan dalaman"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Formatkan sebagai storan peranti"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Proses ini memerlukan pemacu USB diformatkan supaya pemacu itu menjadi lebih selamat. Selepas memformatnya, pemacu ini hanya akan berfungsi dengan peranti ini. Pemformatan memadamkan semua data yang disimpan pada pemacu. Untuk mengelakkan kehilangan data, sila buat sandaran."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Padam &amp; Format"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Selepas pemformatan, anda boleh menggunakan pemacu USB ini pada peranti lain. Semua data akan dipadamkan. Sila buat sandaran dahulu dengan mengalihkan apl ke storan dalaman yang lain."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Selepas pemformatan, anda boleh menggunakan pemacu USB ini pada peranti lain. Semua data akan dipadamkan. Sila buat sandaran dahulu dengan mengalihkan apl ke storan lain."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Memformat Pemacu USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Proses ini mungkin mengambil masa sedikit. Jangan keluarkan pemacu."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Pilih storan untuk memindahkan data ke"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Alihkan data ke <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Alihkan foto, fail dan data apl anda ke <xliff:g id="NAME">%1$s</xliff:g>. Proses ini boleh mengambil masa beberapa minit. Sesetengah apl tidak akan berfungsi dengan betul semasa pengalihan ini."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Alihkan sekarang"</string>
@@ -283,18 +290,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Apl yang disimpan dalam <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Apl dan data yang disimpan dalam <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> tersedia"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Keluarkan storan dalaman"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Apl pada storan peranti ini akan berhenti berfungsi apabila storan itu dikeluarkan. Pemacu USB ini diformatkan supaya berfungsi pada peranti ini sahaja. Pemacu tersebut tidak akan berfungsi pada sebarang peranti lain."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"Mengeluarkan <xliff:g id="NAME">%1$s</xliff:g>…"</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Keluarkan storan peranti"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Apl pada storan peranti ini akan berhenti berfungsi apabila storan itu dikeluarkan. Pemacu USB ini diformatkan supaya berfungsi pada peranti ini sahaja. Pemacu tersebut tidak akan berfungsi pada sebarang peranti lain."</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"Mengeluarkan <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Storan yang digunakan"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Memindahkan <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Jangan tanggalkan pemacu semasa pemindahan.\nApl <xliff:g id="APPNAME">%1$s</xliff:g> pada peranti ini tidak tersedia sehingga pemindahan selesai."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Lupakan storan dalaman?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Lupakan storan peranti?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Semua data yang disimpan dalam pemacu ini akan hilang selama-lamanya apabila anda memilih \'Lupa\'. Adakah anda mahu meneruskan?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Lupakan"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"Pemacu USB disambungkan"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Semak imbas"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Sediakan sebagai storan dalaman"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Sediakan sebagai storan peranti"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Sediakan sebagai storan boleh alih"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Keluarkan"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> dialih keluar"</string>
@@ -304,6 +311,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"Aplikasi dilindung salin."</string>
     <string name="invalid_location" msgid="5269044848535157307">"Lokasi pemasangan tidak sah."</string>
     <string name="system_package" msgid="9200255718634512790">"Kemas kini sistem tidak boleh dipasangkan pada media luaran."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Pentadbir Peranti tidak boleh dipasang pada media luaran."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Ketahui lebih lanjut"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Cuba semula"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Mencari penghala WPS…"</string>
@@ -363,7 +371,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"Dimatikan"</string>
     <string name="display_options" msgid="5504549024985225774">"Pilihan paparan"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Konfigurasi"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Bahasa"</string>
+    <string name="captions_language" msgid="2835554055388996343">"Bahasa"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Saiz teks"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Gaya kapsyen"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Pilihan tersuai"</string>
@@ -371,12 +379,19 @@
     <string name="captions_textcolor" msgid="3233568269335050287">"Warna teks"</string>
     <string name="captions_edgetype" msgid="841331274533086103">"Jenis tepi"</string>
     <string name="captions_edgecolor" msgid="845125757332620884">"Warna tepi"</string>
+    <string name="captions_backgroundshow" msgid="9177987321551275698">"Tunjukkan latar belakang"</string>
     <string name="captions_backgroundcolor" msgid="448518890988125453">"Warna latar belakang"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Kelegapan latar belakang"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Kapsyen akan kelihatan seperti ini"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Kelegapan teks"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"Tunjukkan tetingkap"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Warna tetingkap"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Kelegapan tetingkap"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"Putih atas hitam"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"Hitam atas putih"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"Kuning atas hitam"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"Kuning atas biru"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"Tersuai"</string>
     <string name="color_white" msgid="65537523012024751">"Putih"</string>
     <string name="color_black" msgid="8804213372565106403">"Hitam"</string>
     <string name="color_red" msgid="5630553203246525989">"Merah"</string>
@@ -433,7 +448,6 @@
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Skala animasi peralihan"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Skala tempoh juruanimasi"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Mod tegas didayakan"</string>
-    <string name="system_show_cpu_usage" msgid="4797599582027671138">"Tunjukkan penggunaan CPU"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Penyerahan GPU profil"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Dayakan kesan"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"Jangan simpan aktiviti"</string>
@@ -451,7 +465,6 @@
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Terbaik -&gt; terburuk: biru, hijau, mrh muda, merah"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Pancar permukaan tetingkap yang dikemas kini"</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Pancr skrin bila apl m\'buat oprsi pjg pd urtn utma"</string>
-    <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"Tindihan atas skrin menunjukkan penggunaan semasa CPU"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Ukur masa penyerahan dlm adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"Hidup"</string>
     <string name="action_off_title" msgid="3157728958166559966">"Mati"</string>
@@ -461,6 +474,7 @@
     <string name="disagree" msgid="9170636026862400981">"Tidak bersetuju"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Sumber tidak diketahui"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Benarkan pemasangan aplikasi dari sumber selain Gedung Play"</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Benarkan sumber tidak diketahui"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Telefon dan data peribadi anda lebih terdedah kepada serangan oleh aplikasi dari sumber yang tidak diketahui. Anda bersetuju bahawa anda bertanggungjawab sepenuhnya atas sebarang kerosakan kepada peranti anda atau kehilangan data yang mungkin berlaku akibat penggunaan aplikasi ini."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Sahkan aplikasi"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Larang atau beri amaran sebelum pemasangan aplikasi yang mungkin membahayakan"</string>
@@ -519,26 +533,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"Konsol permainan"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Nama tersuai"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Masukkan nama untuk input <xliff:g id="INPUT">%1$s</xliff:g>."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Disembunyikan"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Tidak ditunjukkan apabila bertukar input"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Nama tersuai:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Tunjukkan input ini"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Nama"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"Kawalan HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Benarkan TV mengawal peranti HDMI"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Automati peranti"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Matikan peranti HDMI dengan TV"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Autohidup TV"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Hidupkan TV dengan peranti HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="other">INPUT YANG DISAMBUNGKAN</item>
-      <item quantity="one">INPUT YANG DISAMBUNGKAN</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="other">Input yang Disambungkan</item>
+      <item quantity="one">Input yang Disambungkan</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="other">INPUT TUNGGU SEDIA</item>
-      <item quantity="one">INPUT TUNGGU SEDIA</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="other">Input Tunggu Sedia</item>
+      <item quantity="one">Input Tunggu Sedia</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="other">INPUT YANG TIDAK DISAMBUNGKAN</item>
-      <item quantity="one">INPUT YANG TIDAK DISAMBUNGKAN</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="other">Input yang Tidak Disambungkan</item>
+      <item quantity="one">Input yang Tidak Disambungkan</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Hadkan akses kepada apl dan kandungan lain dalam akaun anda"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Profil Terhad"</string>
@@ -550,6 +565,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Masuk ke profil terhad"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Keluar daripada profil terhad"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Padamkan profil terhad"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"Buat profil terhad"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Tetapan"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Apl yang dibenarkan"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
@@ -573,8 +589,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN salah, cuba lagi"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Cuba lagi, PIN tidak sepadan"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Masukkan kata laluan untuk <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_connection_success" msgid="6262755735033937164">"Berjaya disambungkan."</string>
-    <string name="wifi_setup_save_success" msgid="4829154865874318015">"Berjaya disimpan."</string>
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Berjaya disambungkan"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"Berjaya disimpan"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Versi <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Buka"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Henti paksa"</string>
@@ -601,13 +617,13 @@
     <string name="settings_cancel" msgid="304280412158061225">"Batal"</string>
     <string name="settings_on" msgid="6892236264945435013">"Hidupkan"</string>
     <string name="settings_off" msgid="449272161738237637">"Matikan"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"Tiada"</string>
-    <string name="device_daydreams_select" msgid="3691552535056569158">"Lamunan"</string>
+    <string name="device_daydreams_none" msgid="2767107052779579259">"Matikan skrin"</string>
+    <string name="device_daydreams_select" msgid="2112338101206187695">"Penyelamat skrin"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Mulakan sekarang"</string>
-    <string name="device_daydreams_sleep" msgid="8766795993034660366">"Bila untuk melamun"</string>
-    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"Lamunan bermula selepas tempoh ketakaktifan ini. Jika tiada lamunan dipilih, paparan akan dimatikan."</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Masa untuk mula"</string>
+    <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Penyelamat skrin bermula selepas tempoh tidak aktif ini. Paparan dimatikan jika tiada penyelamat skrin dipilih."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Selepas <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> tiada aktiviti"</string>
-    <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Bila masa untuk tidur"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Letakkan peranti pada keadaan tidur"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Skrin dimatikan selepas tempoh tidak aktif ini."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Tiada akaun yang sedang menyimpan data sandaran"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -642,4 +658,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Tahap tampung keselamatan Android"</string>
     <string name="choose_application" msgid="5662960665577780353">"Pilih aplikasi"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Percubaan)"</string>
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"But semula ke mod selamat"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Adakah anda mahu but semula ke mod selamat?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"Tindakan ini akan melumpuhkan semua apl pihak ketiga yang telah anda pasang. Apl akan dipulihkan apabila anda but semula sekali lagi."</string>
 </resources>

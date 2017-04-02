@@ -24,6 +24,7 @@
     <string name="header_category_preferences" msgid="175105555164713972">"Tercihler"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Uzaktan kumanda ve aksesuarlar"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Kişisel"</string>
+    <string name="accounts_category_title" msgid="7591072907146317425">"Hesaplar"</string>
     <string name="add_account" msgid="4098060223200619258">"Hesap ekle"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Hesabı kaldır"</string>
     <string name="account_sync" msgid="773808124331714965">"Senk. edilen uygulmlr. seç"</string>
@@ -35,7 +36,7 @@
     <string name="account_remove_failed" msgid="980654375770693544">"Hesap kaldırılamadı"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="4948432419012834219">"Şimdi senkronize etmek için dokunun<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"Şimdi senkronize et<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Senkronizasyon başarısız oldu"</string>
     <string name="sync_active" msgid="6891115263481154378">"Senkronizasyon etkin"</string>
@@ -45,12 +46,13 @@
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Tarama her zaman kullanılabilir"</string>
     <string name="wifi_setting_always_scan_context" msgid="5588180043357910712">"Kablosuz özelliği kapalıyken dahi Google\'ın konum hizmetinin ve diğer uygulamaların ağları taramasına izin verin"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Kablosuz"</string>
-    <string name="device_daydream" msgid="4933581408059561077">"Hafif uyku"</string>
+    <string name="device_daydream" msgid="3354366974209179614">"Ekran koruyucu"</string>
     <string name="device_display" msgid="101455384386372747">"Görünüm"</string>
+    <string name="device_sound" msgid="9214182566287657481">"Ses"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"Surround ses"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sistem sesleri"</string>
     <string name="device_apps" msgid="9180435229638772838">"Uygulamalar"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Depolama ve sıfırlama"</string>
-    <string name="device_storage" msgid="5536683600091277826">"Depolama"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Yedekle ve geri yükle"</string>
     <string name="device_reset" msgid="2827002349560023125">"Fabrika verilerine sıfırla"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrasyon"</string>
@@ -214,20 +216,20 @@
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Geçerli bir ağ geçidi adresi girin"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Geçerli bir DNS adresi girin"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"0-32 arasında bir ağ öneki uzunluğu girin"</string>
-    <string name="wifi_ip_address_hint" msgid="1895267564692073689">"Geçerli bir IP adresi girin.\nÖrnek: 192.168.1.128"</string>
-    <string name="wifi_dns1_hint" msgid="214345156394229347">"Geçerli bir IP adresi girin veya boş bırakın.\nÖrnek: 8.8.8.8"</string>
-    <string name="wifi_dns2_hint" msgid="1075709328208368894">"Geçerli bir IP adresi girin veya boş bırakın.\nÖrnek: 8.8.4.4"</string>
-    <string name="wifi_gateway_hint" msgid="7687219682024189028">"Geçerli bir IP adresi girin veya alanı boş bırakın.\nÖrnek: 192.168.1.1"</string>
-    <string name="wifi_network_prefix_length_hint" msgid="332915798888599682">"Geçerli bir ağ ön eki uzunluğu girin.\nÖrnek: 24"</string>
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"Geçerli bir IP adresi girin.\nÖrnek: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"Geçerli bir IP adresi girin veya boş bırakın.\nÖrnek: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"Geçerli bir IP adresi girin veya boş bırakın.\nÖrnek: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"Geçerli bir IP adresi girin veya boş bırakın.\nÖrnek: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Geçerli bir ağ önek uzunluğu girin.\nÖrnek: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Ana bilgisayar adı geçerli değil"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Bu hariç tutma listesi geçerli değil. Hariç tutulan alan adlarının virgülle ayrılmış listesini girin."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Bağlantı noktası alanı boş olamaz"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Ana bilgisayar alanı boşsa bağlantı noktası alanını da boş bırakın"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Bağlantı noktası geçerli değil"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP proxy, tarayıcı tarafından kullanılır ancak diğer uygulamalar tarafından kullanılamayabilir"</string>
-    <string name="proxy_port_hint" msgid="8532733797275927007">"Geçerli bir bağlantı noktası girin.\nÖrnek: 8080"</string>
-    <string name="proxy_exclusionlist_hint" msgid="86175095050438325">"Hariç tutulan alan adlarının virgülle ayrılmış bir listesini girin veya boş bırakın.\nÖrnek: example.com,mycomp.test.com,localhost"</string>
-    <string name="proxy_hostname_hint" msgid="3719688422767210803">"Geçerli bir ana bilgisayar adı girin.\nÖrnek: proxy.example.com"</string>
+    <string name="proxy_port_description" msgid="6791098212244367568">"Geçerli bir bağlantı noktası girin.\nÖrnek: <xliff:g id="ID_1">8080</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Hariç tutulan alan adlarının virgülle ayrılmış listesini girin veya boş bırakın.\nÖrnek: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"Geçerli bir ana bilgisayar adı girin.\nÖrnek: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Ağa bağlı"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Ağa bağlı değil"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g> ile zaten bağlantı kuruldu. Farklı bir ağa bağlanılsın mı?"</string>
@@ -246,10 +248,14 @@
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Önbelleğe alınan veriler"</string>
     <string name="storage_eject" msgid="113476702798691558">"Çıkar"</string>
     <string name="storage_format" msgid="3759273736493279595">"Sil ve biçimlendir"</string>
+    <string name="storage_format_as_private" msgid="4169495230765116075">"Sil ve cihaz depolama alanı olarak biçimlendir"</string>
+    <string name="storage_format_as_public" msgid="8568317076021814054">"Sil ve kaldırılabilir depolama olarak biçimlendir"</string>
     <string name="storage_format_for_private" msgid="7095270113028182032">"Cihaz depolaması olarak biçimlendir"</string>
     <string name="storage_not_connected" msgid="6378589497819596096">"Bağlı değil"</string>
-    <string name="storage_migrate" msgid="658894157418304023">"Verileri taşı"</string>
-    <string name="storage_forget" msgid="8541387048014779836">"Bu dahili depolamayı unut"</string>
+    <string name="storage_migrate" msgid="1304058078948715456">"Verileri bu depolama alanına taşı"</string>
+    <string name="storage_migrate_away" msgid="3410590501311323877">"Verileri farklı bir depolama alanına taşı"</string>
+    <string name="storage_no_apps" msgid="579118619398668670">"Yedeklenecek uygulama yok"</string>
+    <string name="storage_forget" msgid="8731986045697320463">"Bu depolama cihazını unut"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Bu sürücünün içerdiği uygulamaları veya verileri kullanmak için sürücüyü tekrar yerleştirin. Sürücü kullanılamıyorsa ayrıca bu depolama birimini unutmayı seçebilirsiniz.\n\nUnutmayı seçerseniz cihazdaki tüm veriler kalıcı olarak kaybolur.\n\nUygulamaları daha sonra yeniden yükleyebilirsiniz, ancak bu cihazda depolanmış olan veriler kaybolur."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Cihaz depolama alanı"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Çıkarılabilir depolama alanı"</string>
@@ -262,12 +268,13 @@
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"Çıkarılacak sürücü bulunamadı"</string>
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> biçimlendirildi"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"<xliff:g id="NAME">%1$s</xliff:g> biçimlendirilemedi"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="1433086533563409114">"Dahili depolama olarak biçimlendir"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Depolama cihazı olarak biçimlendir"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"Bu işlem, USB sürücüsünün güvenli hale getirilmesi için biçimlendirilmesini gerektiriyor. Güvenli bir şekilde biçimlendirildikten sonra bu sürücü yalnızca bu cihazla kullanılabilecektir. Biçimlendirme işlemi, sürücüde mevcut olarak depolanmış tüm verileri siler. Veri kaybı yaşamamak için sürücüdeki verileri yedeklemenizi öneririz."</string>
     <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"Sil ve Biçimlendir"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="8591201523650249337">"Biçimlendirildikten sonra bu USB sürücüsünü başka cihazlarda kullanabilirsiniz. Tüm veriler silinecektir. Öncelikle uygulamaları başka bir dahili depolamaya taşıyarak yedeklemenizi öneririz."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Biçimlendirildikten sonra bu USB sürücüsünü başka cihazlarda kullanabilirsiniz. Tüm veriler silinecektir. Öncelikle uygulamaları başka bir depolama cihazına taşıyarak yedeklemenizi öneririz."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB Sürücüsü Biçimlendiriliyor…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Bu işlem biraz zaman alabilir. Lütfen sürücünüzü kaldırmayın."</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Verilerin taşınacağı depolama alanını seçin"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Verileri <xliff:g id="NAME">%1$s</xliff:g> sürücüsüne taşıyın"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Fotoğraflarınızı, dosyalarınızı ve uygulama verilerinizi <xliff:g id="NAME">%1$s</xliff:g> sürücüsüne taşıyın. Bu işlem birkaç dakika sürebilir. Taşıma işlemi sırasında bazı uygulamalar doğru şekilde çalışmayacaktır."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Şimdi taşı"</string>
@@ -283,18 +290,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> içinde depolanan uygulamalar"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> içinde depolanan uygulamalar ve veriler"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> kullanılabilir"</string>
-    <string name="storage_wizard_eject_internal_title" msgid="3717872796166039893">"Dahili depolamayı çıkarın"</string>
-    <string name="storage_wizard_eject_internal_description" msgid="6107781224687080575">"Cihaz çıkarıldığında, bu cihazın depolama alanındaki uygulamaların çalışması duracaktır. Bu USB sürücüsü, yalnızca bu cihazda çalışacak şekilde biçimlendirildi. Başka cihazlarda çalışmayacaktır."</string>
-    <string name="sotrage_wizard_eject_progress_title" msgid="8034235439954334978">"<xliff:g id="NAME">%1$s</xliff:g> çıkarılıyor…"</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Depolama cihazını çıkar"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Cihaz çıkarıldığında, bu cihazın depolama alanındaki uygulamaların çalışması duracaktır. Bu USB sürücüsü, yalnızca bu cihazda çalışacak şekilde biçimlendirildi. Başka cihazlarda çalışmayacaktır."</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"<xliff:g id="NAME">%1$s</xliff:g> çıkarılıyor…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Kullanılan depolama alanı"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"<xliff:g id="NAME">%1$s</xliff:g> taşınıyor…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Taşıma işlemi sırasında sürücüyü çıkarmayın.\nBu cihazdaki <xliff:g id="APPNAME">%1$s</xliff:g> uygulaması, taşıma işlemi tamamlanana kadar kullanılamayacak."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="1183642893909026951">"Dahili depolama unutulsun mu?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Depolama cihazı unutulsun mu?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"\"Unut\" seçeneği kullanıldığında bu sürücüde depolanmış tüm verileriniz kalıcı olarak kaybolacaktır. Devam etmek istiyor musunuz?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Unut"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB sürücüsü bağlandı"</string>
     <string name="storage_new_action_browse" msgid="9041125660441839453">"Göz at"</string>
-    <string name="storage_new_action_adopt" msgid="1903427557119380415">"Dahili depolama olarak kur"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Depolama cihazı olarak kur"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Kaldırılabilir depolama olarak kur"</string>
     <string name="storage_new_action_eject" msgid="4069294152676217949">"Çıkar"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> kaldırıldı"</string>
@@ -304,6 +311,7 @@
     <string name="app_forward_locked" msgid="6078781450044847966">"Uygulama, kopyalamaya karşı korumalı."</string>
     <string name="invalid_location" msgid="5269044848535157307">"Yükleme konumu geçerli değil."</string>
     <string name="system_package" msgid="9200255718634512790">"Sistem güncellemeleri, harici medyaya yüklenemez."</string>
+    <string name="move_error_device_admin" msgid="2060627704270836951">"Cihaz Yöneticisi harici medyaya yüklenemez."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Daha fazla bilgi edinin"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Tekrar dene"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS yönlendirici aranıyor…"</string>
@@ -363,7 +371,7 @@
     <string name="captions_display_off" msgid="496953007835201523">"Kapalı"</string>
     <string name="display_options" msgid="5504549024985225774">"Görüntüleme seçenekleri"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Yapılandır"</string>
-    <string name="captions_lanaguage" msgid="3291057448460880449">"Dil"</string>
+    <string name="captions_language" msgid="2835554055388996343">"Dil"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Metin boyutu"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Altyazı stili"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Özel seçenekler"</string>
@@ -371,12 +379,19 @@
     <string name="captions_textcolor" msgid="3233568269335050287">"Metin rengi"</string>
     <string name="captions_edgetype" msgid="841331274533086103">"Kenar türü"</string>
     <string name="captions_edgecolor" msgid="845125757332620884">"Kenar rengi"</string>
+    <string name="captions_backgroundshow" msgid="9177987321551275698">"Arka planı göster"</string>
     <string name="captions_backgroundcolor" msgid="448518890988125453">"Arka plan rengi"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Arka plan şeffaflığı"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Altyazılar şöyle görünecek:"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Metin opaklığı"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"Pencereyi göster"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Pencere rengi"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Pencere opaklığı"</string>
+    <string name="captions_style_0" msgid="2068865433439146533">"Siyah üzerine beyaz"</string>
+    <string name="captions_style_1" msgid="8878565905353923498">"Beyaz üzerine siyah"</string>
+    <string name="captions_style_2" msgid="1486695984924671199">"Siyah üzerine sarı"</string>
+    <string name="captions_style_3" msgid="3217829874170162074">"Mavi üzerine sarı"</string>
+    <string name="captions_style_custom" msgid="3645114505000714364">"Özel"</string>
     <string name="color_white" msgid="65537523012024751">"Beyaz"</string>
     <string name="color_black" msgid="8804213372565106403">"Siyah"</string>
     <string name="color_red" msgid="5630553203246525989">"Kırmızı"</string>
@@ -433,7 +448,6 @@
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Geçiş animasyonu ölçeği"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Animatör süre ölçeği"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Yüksek düzey modu etkin"</string>
-    <string name="system_show_cpu_usage" msgid="4797599582027671138">"CPU kullanımını göster"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Profil GPU oluşturma"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"İzleri etkinleştir"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"Etkinlikleri saklama"</string>
@@ -451,7 +465,6 @@
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"En iyiden en kötüye: mavi, yeşil, açık kırmızı, kırmızı"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Güncellenirken tüm pencere yüzeylerini yakıp söndür"</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Uygulamalar ana iş parçacığında uzun işlem yaparken ekranı yanıp söndür"</string>
-    <string name="system_desc_show_cpu_usage" msgid="6151280238151381703">"Mevcut CPU kullanımını gösteren yer paylaşımı"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Oluşturma süresini adb shell dumpsys gfxınfo içinde ölçün"</string>
     <string name="action_on_title" msgid="6852389884236870765">"Aç"</string>
     <string name="action_off_title" msgid="3157728958166559966">"Kapat"</string>
@@ -461,6 +474,7 @@
     <string name="disagree" msgid="9170636026862400981">"Kabul etmiyorum"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Bilinmeyen kaynaklar"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Google Play Store dışındaki kaynaklardan uygulama yüklemeye izin ver"</string>
+    <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Bilinmeyen kaynaklara izin verin"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Cihazınız ve kişisel verileriniz, bilinmeyen kaynaklardan gelen uygulamaların saldırılarına karşı daha savunmasızdır. Bu uygulamaları kullanmanız sonucunda cihazınızın başına gelebilecek her tür hasardan ve veri kaybından yalnızca kendinizin sorumlu olduğunu kabul edersiniz."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Uygulamaları doğrula"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Zararlı olabilecek uygulamaların yüklenmesine izin verme veya uyar"</string>
@@ -519,26 +533,27 @@
     <string name="inputs_game" msgid="1114086481110094757">"Oyun konsolu"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Özel ad"</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"<xliff:g id="INPUT">%1$s</xliff:g> girişi için bir ad girin"</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Gizli"</string>
-    <string name="inputs_hide_desc" msgid="8172670556559886526">"Girişler değiştirilirken gösterilmez"</string>
-    <string name="inputs_custom_title" msgid="374036983231176581">"Özel ad:"</string>
+    <string name="inputs_show" msgid="5069718540369447778">"Bu girişi göster"</string>
+    <string name="input_header_names" msgid="6958427658951236078">"Ad"</string>
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"HDMI kontrolü"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"TV\'nin HDMI cihazları kontrol etmesine izin verin"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Cihazı otomatik kapat"</string>
     <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"HDMI cihazları TV ile kapatın"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"TV\'yi otomatik aç"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"TV\'yi HDMI cihazıyla açın"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="4694899943180976672">
-      <item quantity="other">BAĞLI GİRİŞLER</item>
-      <item quantity="one">BAĞLI GİRİŞ</item>
+    <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
+      <item quantity="other">Bağlı Girişler</item>
+      <item quantity="one">Bağlı Giriş</item>
     </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1903575597797993135">
-      <item quantity="other">BEKLEMEDEKİ GİRİŞLER</item>
-      <item quantity="one">BEKLEMEDEKİ GİRİŞ</item>
+    <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
+      <item quantity="other">Bekleme Modundaki Girişler</item>
+      <item quantity="one">Bekleme Modundaki Giriş</item>
     </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="2979766871256996256">
-      <item quantity="other">BAĞLI OLMAYAN GİRİŞLER</item>
-      <item quantity="one">BAĞLI OLMAYAN GİRİŞ</item>
+    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
+      <item quantity="other">Bağlı Olmayan Girişler</item>
+      <item quantity="one">Bağlı Olmayan Giriş</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Hesabınızdaki uygulamalara ve diğer içeriğe erişimi kısıtlayın"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"Kısıtlanmış Profil"</string>
@@ -550,6 +565,7 @@
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Kısıtlanmış profile gir"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Kısıtlanmış profilden çık"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Kısıtlanmış profili sil"</string>
+    <string name="restricted_profile_create_title" msgid="1392190365829029390">"Kısıtlanmış profil oluştur"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Ayarlar"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"İzin verilen uygulamalar"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
@@ -573,8 +589,8 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Yanlış PIN, tekrar deneyin"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Tekrar deneyin, PIN eşleşmiyor"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> ağının şifresini girin"</string>
-    <string name="wifi_setup_connection_success" msgid="6262755735033937164">"Başarılıyla bağlandı."</string>
-    <string name="wifi_setup_save_success" msgid="4829154865874318015">"Başarıyla kaydedildi."</string>
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Başarıyla bağlandı"</string>
+    <string name="wifi_setup_save_success" msgid="4785799603638549254">"Başarıyla kaydedildi"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Sürüm <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Aç"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Zorla durdur"</string>
@@ -601,13 +617,13 @@
     <string name="settings_cancel" msgid="304280412158061225">"İptal"</string>
     <string name="settings_on" msgid="6892236264945435013">"Açık"</string>
     <string name="settings_off" msgid="449272161738237637">"Kapalı"</string>
-    <string name="device_daydreams_none" msgid="7364189761517824834">"Yok"</string>
-    <string name="device_daydreams_select" msgid="3691552535056569158">"Hafif uyku"</string>
+    <string name="device_daydreams_none" msgid="2767107052779579259">"Ekranı kapat"</string>
+    <string name="device_daydreams_select" msgid="2112338101206187695">"Ekran koruyucu"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Şimdi başlat"</string>
-    <string name="device_daydreams_sleep" msgid="8766795993034660366">"Hafif uykuya geçilecek zaman"</string>
-    <string name="device_daydreams_sleep_description" msgid="5269460120567642259">"Burada belirtilen süre boyunca etkinlik olmazsa hafif uyku moduna geçilir. Hafif uyku seçilmezse ekran kapatılır."</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Başlama zamanı"</string>
+    <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Ekran koruyucu bu süre boyunca etkinlik olmadığında devreye girer. Hiçbir ekran koruyucu seçili değilse ekran kapanır."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> işlem yapılmadıktan sonra"</string>
-    <string name="device_daydreams_screen_off" msgid="5002473979169042970">"Uykuya geçme süresi"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Cihazı uyku moduna geçir"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Belirli bir süre etkinlik olmadığında ekran kapanır."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Şu anda, yedeklenen verilerin depolandığı hiçbir hesap yok"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -642,4 +658,7 @@
     <string name="security_patch" msgid="2131617390189164481">"Android güvenlik yaması düzeyi"</string>
     <string name="choose_application" msgid="5662960665577780353">"Uygulama seçin"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Deneysel)"</string>
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"Güvenli modda yeniden aç"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Güvenli modda yeniden açılmasını ister misiniz?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"Bu işlem, yüklediğiniz tüm üçüncü taraf uygulamaları devre dışı bırakır. Daha sonra tekrar açtığınızda bu uygulamalar geri yüklenir."</string>
 </resources>
