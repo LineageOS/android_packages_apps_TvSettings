@@ -20,6 +20,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -43,6 +46,7 @@ import android.widget.Toast;
 import com.android.internal.telephony.TelephonyProperties;
 import com.android.settingslib.DeviceInfoUtils;
 import com.android.tv.settings.LongClickPreference;
+import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.PreferenceUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.name.DeviceManager;
@@ -70,6 +74,7 @@ public class AboutFragment extends LeanbackPreferenceFragment implements
     private static final String KEY_SAFETY_LEGAL = "safetylegal";
     private static final String KEY_DEVICE_NAME = "device_name";
     private static final String KEY_RESTART = "restart";
+    private static final String KEY_DEVICE_TUTORIALS = "device_tutorials";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -211,6 +216,7 @@ public class AboutFragment extends LeanbackPreferenceFragment implements
                 android.os.Build.TYPE.equals("eng") ? 1 : 0) == 1;
         mDevHitCountdown = developerEnabled ? -1 : TAPS_TO_BE_A_DEVELOPER;
         mDevHitToast = null;
+        updateDeviceTutorials();
     }
 
     @Override
@@ -364,5 +370,30 @@ public class AboutFragment extends LeanbackPreferenceFragment implements
         Intent intent = new Intent(Intent.ACTION_BUG_REPORT);
         intent.setPackage(reporterPackage);
         startActivityForResult(intent, 0);
+    }
+
+    private void updateDeviceTutorials() {
+        final Preference deviceTutorialsPref = findPreference(KEY_DEVICE_TUTORIALS);
+        if (deviceTutorialsPref != null) {
+            final ResolveInfo info = MainFragment.systemIntentIsHandled(getContext(),
+                    deviceTutorialsPref.getIntent());
+            deviceTutorialsPref.setVisible(info != null);
+            if (info != null) {
+                try {
+                    Context context = getContext();
+                    final Context targetContext = context.createPackageContext(
+                            info.resolvePackageName != null
+                                    ? info.resolvePackageName : info.activityInfo.packageName, 0);
+                    // For now, set the preference title to the activity's label since string freeze
+                    // has already happened for OC. Can later switch back to the original preference
+                    // title set in the device_info_settings.xml.
+                    deviceTutorialsPref.setTitle(info.loadLabel(context.getPackageManager()));
+                    deviceTutorialsPref.setIcon(targetContext.getDrawable(info.iconResourceId));
+                } catch (Resources.NotFoundException | PackageManager.NameNotFoundException
+                        | SecurityException e) {
+                    Log.e(TAG, "TV Tutorials icon not found", e);
+                }
+            }
+        }
     }
 }
