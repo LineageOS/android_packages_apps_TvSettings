@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2017 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -11,10 +11,10 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
-package com.android.tv.settings.system;
+package com.android.tv.settings.inputmethod;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -29,6 +29,7 @@ import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.text.TextUtils;
+import android.util.ArraySet;
 import android.util.Log;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
@@ -36,16 +37,24 @@ import android.view.inputmethod.InputMethodManager;
 import com.android.tv.settings.R;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
+/**
+ * Fragment for managing IMEs
+ */
 public class KeyboardFragment extends LeanbackPreferenceFragment {
     private static final String TAG = "KeyboardFragment";
-    private static final String INPUT_METHOD_SEPARATOR = ":";
     private static final String KEY_CURRENT_KEYBOARD = "currentKeyboard";
+    private static final String KEY_MANAGE_KEYBOARDS = "manageKeyboards";
+
+    private static final String KEY_KEYBOARD_SETTINGS_PREFIX = "keyboardSettings:";
 
     private InputMethodManager mInputMethodManager;
 
+    /**
+     * @return New fragment instance
+     */
     public static KeyboardFragment newInstance() {
         return new KeyboardFragment();
     }
@@ -54,8 +63,6 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         mInputMethodManager =
                 (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-
-        enableAllInputMethods();
 
         super.onCreate(savedInstanceState);
     }
@@ -68,9 +75,9 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
         final PreferenceScreen screen =
                 getPreferenceManager().createPreferenceScreen(preferenceContext);
         screen.setTitle(R.string.system_keyboard);
+        setPreferenceScreen(screen);
 
         List<InputMethodInfo> enabledInputMethodInfos = getEnabledSystemInputMethodList();
-
         final List<CharSequence> entries = new ArrayList<>(enabledInputMethodInfos.size());
         final List<CharSequence> values = new ArrayList<>(enabledInputMethodInfos.size());
 
@@ -96,31 +103,66 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
         currentKeyboard.setEntries(entries.toArray(new CharSequence[entries.size()]));
         currentKeyboard.setEntryValues(values.toArray(new CharSequence[values.size()]));
         currentKeyboard.setValueIndex(defaultIndex);
-        currentKeyboard.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                setInputMethod((String) newValue);
-                return true;
-            }
+        currentKeyboard.setOnPreferenceChangeListener((preference, newValue) -> {
+            setInputMethod((String) newValue);
+            return true;
         });
         screen.addPreference(currentKeyboard);
 
+        final Preference manageKeyboards = new Preference(preferenceContext);
+        manageKeyboards.setTitle(R.string.manage_keyboards);
+        manageKeyboards.setKey(KEY_MANAGE_KEYBOARDS);
+        manageKeyboards.setFragment(AvailableVirtualKeyboardFragment.class.getName());
+        screen.addPreference(manageKeyboards);
+
+        updatePrefs();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updatePrefs();
+    }
+
+    private void updatePrefs() {
+        final Context preferenceContext = getPreferenceManager().getContext();
+        final PackageManager packageManager = getActivity().getPackageManager();
+        List<InputMethodInfo> enabledInputMethodInfos = getEnabledSystemInputMethodList();
+
+        final PreferenceScreen screen = getPreferenceScreen();
+
+        final Set<String> enabledInputMethodKeys = new ArraySet<>(enabledInputMethodInfos.size());
         // Add per-IME settings
         for (final InputMethodInfo info : enabledInputMethodInfos) {
             final Intent settingsIntent = getInputMethodSettingsIntent(info);
             if (settingsIntent == null) {
                 continue;
             }
-            final Preference preference = new Preference(preferenceContext);
+            final String key = KEY_KEYBOARD_SETTINGS_PREFIX + info.getId();
+
+            Preference preference = findPreference(key);
+            if (preference == null) {
+                preference = new Preference(preferenceContext);
+                screen.addPreference(preference);
+            }
             preference.setTitle(info.loadLabel(packageManager));
-            preference.setKey("keyboardSettings:" + info.getId());
+            preference.setKey(key);
             preference.setIntent(settingsIntent);
-            screen.addPreference(preference);
+            enabledInputMethodKeys.add(key);
         }
-        setPreferenceScreen(screen);
+
+        for (int i = 0; i < screen.getPreferenceCount();) {
+            final Preference preference = screen.getPreference(i);
+            final String key = preference.getKey();
+            if (!TextUtils.isEmpty(key)
+                    && key.startsWith(KEY_KEYBOARD_SETTINGS_PREFIX)
+                    && !enabledInputMethodKeys.contains(key)) {
+                screen.removePreference(preference);
+            } else {
+                i++;
+            }
+        }
     }
-
-
 
     private void setInputMethod(String imid) {
         if (imid == null) {
@@ -146,11 +188,7 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
         List<InputMethodInfo> enabledInputMethodInfos =
                 new ArrayList<>(mInputMethodManager.getEnabledInputMethodList());
         // Filter auxiliary keyboards out
-        for (Iterator<InputMethodInfo> it = enabledInputMethodInfos.iterator(); it.hasNext();) {
-            if (it.next().isAuxiliaryIme()) {
-                it.remove();
-            }
-        }
+        enabledInputMethodInfos.removeIf(InputMethodInfo::isAuxiliaryIme);
         return enabledInputMethodInfos;
     }
 
@@ -165,22 +203,4 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
         }
         return intent;
     }
-
-    private void enableAllInputMethods() {
-        List<InputMethodInfo> allInputMethodInfos =
-                new ArrayList<>(mInputMethodManager.getInputMethodList());
-        boolean needAppendSeparator = false;
-        StringBuilder builder = new StringBuilder();
-        for (InputMethodInfo imi : allInputMethodInfos) {
-            if (needAppendSeparator) {
-                builder.append(INPUT_METHOD_SEPARATOR);
-            } else {
-                needAppendSeparator = true;
-            }
-            builder.append(imi.getId());
-        }
-        Settings.Secure.putString(getActivity().getContentResolver(),
-                Settings.Secure.ENABLED_INPUT_METHODS, builder.toString());
-    }
-
 }
