@@ -312,6 +312,12 @@ public class MainFragment extends LeanbackPreferenceFragment {
         }
 
         final Set<BluetoothDevice> bondedDevices = mBtAdapter.getBondedDevices();
+        if (bondedDevices == null) {
+            mAccessoriesGroup.setVisible(false);
+            mAccessoriesGroup.removeAll();
+            return;
+        }
+
         final Set<String> connectedBluetoothAddresses =
                 BluetoothConnectionsManager.getConnectedSet(getContext());
         final Context themedContext = getPreferenceManager().getContext();
@@ -322,26 +328,32 @@ public class MainFragment extends LeanbackPreferenceFragment {
         }
 
         for (final BluetoothDevice device : bondedDevices) {
-            final String desc = connectedBluetoothAddresses.contains(device.getAddress())
-                    ? getString(R.string.accessory_connected)
-                    : null;
+            final String deviceAddress = device.getAddress();
+            if (TextUtils.isEmpty(deviceAddress)) {
+                Log.w(TAG, "Skipping mysteriously empty bluetooth device");
+                continue;
+            }
 
-            final String key = "BluetoothDevice:" + device.getAddress();
+            final String key = "BluetoothDevice:" + deviceAddress;
             touchedKeys.add(key);
             Preference preference = mAccessoriesGroup.findPreference(key);
             if (preference == null) {
                 preference = new Preference(themedContext);
                 preference.setKey(key);
             }
-            preference.setTitle(device.getName());
+            final String deviceName = device.getName();
+            preference.setTitle(deviceName);
+            final String desc = connectedBluetoothAddresses.contains(deviceAddress)
+                    ? getString(R.string.accessory_connected)
+                    : null;
             preference.setSummary(desc);
             final int deviceImgId = AccessoryUtils.getImageIdForDevice(device);
             preference.setIcon(deviceImgId);
             preference.setFragment(BluetoothAccessoryFragment.class.getName());
             BluetoothAccessoryFragment.prepareArgs(
                     preference.getExtras(),
-                    device.getAddress(),
-                    device.getName(),
+                    deviceAddress,
+                    deviceName,
                     deviceImgId);
             mAccessoriesGroup.addPreference(preference);
         }
