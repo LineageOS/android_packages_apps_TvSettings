@@ -189,7 +189,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
         if (preference == null) {
             return;
         }
-        preference.setVisible(systemIntentIsHandled(preference.getIntent()) != null);
+        preference.setVisible(systemIntentIsHandled(getContext(), preference.getIntent()) != null);
     }
 
     private boolean isRestricted() {
@@ -442,7 +442,8 @@ public class MainFragment extends LeanbackPreferenceFragment {
     private void updateGoogleSettings() {
         final Preference googleSettingsPref = findPreference(KEY_GOOGLE_SETTINGS);
         if (googleSettingsPref != null) {
-            final ResolveInfo info = systemIntentIsHandled(googleSettingsPref.getIntent());
+            final ResolveInfo info = systemIntentIsHandled(getContext(),
+                    googleSettingsPref.getIntent());
             googleSettingsPref.setVisible(info != null);
             if (info != null) {
                 try {
@@ -467,12 +468,19 @@ public class MainFragment extends LeanbackPreferenceFragment {
         }
     }
 
-    private ResolveInfo systemIntentIsHandled(Intent intent) {
+    /**
+     * Returns the ResolveInfo for the system activity that matches given intent filter or null if
+     * no such activity exists.
+     * @param context Context of the caller
+     * @param intent The intent matching the desired system app
+     * @return ResolveInfo of the matching activity or null if no match exists
+     */
+    public static ResolveInfo systemIntentIsHandled(Context context, Intent intent) {
         if (intent == null) {
             return null;
         }
 
-        final PackageManager pm = getContext().getPackageManager();
+        final PackageManager pm = context.getPackageManager();
 
         for (ResolveInfo info : pm.queryIntentActivities(intent, 0)) {
             if (info.activityInfo != null && info.activityInfo.enabled &&
