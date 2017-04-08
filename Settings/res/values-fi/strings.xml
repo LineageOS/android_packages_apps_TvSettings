@@ -101,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Kehittäjäasetukset"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Ei mitään"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Käyttö- ja diagnostiikkatiedot"</string>
+    <string name="device_tutorials" msgid="5879039536629898133">"Laiteohjeet"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Järjestelmäpäivitys"</string>
     <string name="about_preference" msgid="4131396784531360434">"Tietoja"</string>
     <string name="device_name" msgid="2670488158531273028">"Laitteen nimi"</string>
@@ -641,10 +642,12 @@
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Poista kaikki"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Anna nimi laitteelle <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="2697127827643821315">"Nimi auttaa sinua tunnistamaan laitteen <xliff:g id="DEVICEMODEL">%1$s</xliff:g>, kun haluat käyttää sitä muulla laitteella, kuten puhelimella, tabletilla tai tietokoneella."</string>
-    <!-- no translation found for rooms:0 (9056203990862307284) -->
-    <!-- no translation found for rooms:1 (7449352861592960712) -->
-    <!-- no translation found for rooms:2 (8122798759665439456) -->
-    <!-- no translation found for rooms:3 (1389347662738182100) -->
+  <string-array name="rooms">
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Olohuoneen TV"</item>
+    <item msgid="8122798759665439456">"Oleskelutilan TV"</item>
+    <item msgid="1389347662738182100">"Makuuhuoneen TV"</item>
+  </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Anna muokattu nimi…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Anna uusi nimi laitteelle <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Laitteen <xliff:g id="DEVICEMODEL">%1$s</xliff:g> nimi on tällä hetkellä <xliff:g id="DEVICENAME">%2$s</xliff:g>."</string>
@@ -660,6 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Käynnistä vikasietotilassa"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Haluatko käynnistää uudelleen vikasietotilassa?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Kolmansien osapuolten sovelluksia ei käynnistetä. Sovellukset otetaan jälleen käyttöön, kun käynnistät laitteen uudelleen."</string>
-    <!-- no translation found for capturing_bugreport (3291125403411239592) -->
-    <skip />
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Luodaan virheraporttia."</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Käytettävissä olevat virtuaaliset näppäimistöt"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Näppäimistöjen hallinnointi"</string>
 </resources>

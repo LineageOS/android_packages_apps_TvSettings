@@ -101,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳು"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ಯಾವುದೂ ಇಲ್ಲ"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"ಬಳಕೆ ಮತ್ತು ಡಯಾಗ್ನೋಸ್ಟಿಕ್‌ಗಳು"</string>
+    <string name="device_tutorials" msgid="5879039536629898133">"ಸಾಧನದ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳು"</string>
     <string name="about_system_update" msgid="7282772247661356586">"ಸಿಸ್ಟಂ ಅಪ್‌ಡೇಟ್‌‌"</string>
     <string name="about_preference" msgid="4131396784531360434">"ಕುರಿತು"</string>
     <string name="device_name" msgid="2670488158531273028">"ಸಾಧನದ ಹೆಸರು"</string>
@@ -641,10 +642,12 @@
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ಎಲ್ಲವನ್ನೂ ಅಳಿಸು"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"ನಿಮ್ಮ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ಗೆ ಹೆಸರು ಆಯ್ಕೆಮಾಡಿ"</string>
     <string name="select_device_name_description" msgid="2697127827643821315">"ನಿಮ್ಮ ಫೋನ್, ಟ್ಯಾಬ್ಲೆಟ್ ಅಥವಾ ಕಂಪ್ಯೂಟರ್‌ನಂತಹ ಬೇರೆ ಸಾಧನಗಳ ಮೂಲಕ ಬಳಸುವಾಗ ನಿಮ್ಮ  <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ಅನ್ನು ಗುರುತಿಸಲು ಹೆಸರು ಸಹಾಯ ಮಾಡುತ್ತದೆ."</string>
-    <!-- no translation found for rooms:0 (9056203990862307284) -->
-    <!-- no translation found for rooms:1 (7449352861592960712) -->
-    <!-- no translation found for rooms:2 (8122798759665439456) -->
-    <!-- no translation found for rooms:3 (1389347662738182100) -->
+  <string-array name="rooms">
+    <item msgid="9056203990862307284">"Android ಟಿವಿ"</item>
+    <item msgid="7449352861592960712">"ಲಿವಿಂಗ್ ರೂಂ ಟಿವಿ"</item>
+    <item msgid="8122798759665439456">"ಕುಟುಂಬ ಕೋಣೆಯ ಟಿವಿ"</item>
+    <item msgid="1389347662738182100">"ಮಲಗುವ ಕೋಣೆಯ ಟಿವಿ"</item>
+  </string-array>
     <string name="custom_room" msgid="8991561978321502549">"ಕಸ್ಟಮ್ ಹೆಸರು ನಮೂದಿಸಿ..."</string>
     <string name="device_rename_title" msgid="2629557295786267185">"ಈ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ಅನ್ನು ಮರುಹೆಸರಿಸಿ"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"ಈ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ಅನ್ನು ಪ್ರಸ್ತುತವಾಗಿ \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" ಎಂದು ಹೆಸರಿಸಲಾಗಿದೆ"</string>
@@ -660,6 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"ಸುರಕ್ಷಿತ ಮೋಡ್‍ಗೆ ರೀಬೂಟ್ ಮಾಡಿ"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"ನೀವು ಸುರಕ್ಷಿತ ಮೋಡ್‌ಗೆ ರೀಬೂಟ್ ಮಾಡಲು ಬಯಸುವಿರಾ?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"ಇದು ನೀವು ಸ್ಥಾಪಿಸಿರುವ ಎಲ್ಲಾ ಥರ್ಡ್ ಪಾರ್ಟಿ ಅಪ್ಲಿಕೇಶನ್‌‍ಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸುತ್ತದೆ. ನೀವು ಮತ್ತೊಮ್ಮೆ ರೀಬೂಟ್ ಮಾಡಿದಾಗ ಅವುಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಗುತ್ತದೆ."</string>
-    <!-- no translation found for capturing_bugreport (3291125403411239592) -->
-    <skip />
+    <string name="capturing_bugreport" msgid="3291125403411239592">"ಬಗ್ ವರದಿಯನ್ನು ಕ್ಯಾಪ್ಚರ್ ಮಾಡಲಾಗುತ್ತಿದೆ"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"ಲಭ್ಯವಿರುವ ವರ್ಚುಯಲ್ ಕೀಬೋರ್ಡ್‌ಗಳು"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"ಕೀಬೋರ್ಡ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಿ"</string>
 </resources>
