@@ -101,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Մշակողի ընտրանքներ"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Չկա"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Օգտագործում և ախտորոշում"</string>
+    <string name="device_tutorials" msgid="5879039536629898133">"Սարքի օգտագործման ուղեցույցներ"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Համակարգային թարմացում"</string>
     <string name="about_preference" msgid="4131396784531360434">"Սարքի մասին"</string>
     <string name="device_name" msgid="2670488158531273028">"Սարքի անունը"</string>
@@ -641,10 +642,12 @@
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Ջնջել ամեն ինչ"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Ընտրեք ձեր <xliff:g id="DEVICEMODEL">%1$s</xliff:g> սարքի անունը"</string>
     <string name="select_device_name_description" msgid="2697127827643821315">"Անունը թույլ կտա հեշտությամբ ճանաչել և միանալ ձեր <xliff:g id="DEVICEMODEL">%1$s</xliff:g>–ին այլ սարքերից (հեռախոսից, պլանշետից և համակարգչից):"</string>
-    <!-- no translation found for rooms:0 (9056203990862307284) -->
-    <!-- no translation found for rooms:1 (7449352861592960712) -->
-    <!-- no translation found for rooms:2 (8122798759665439456) -->
-    <!-- no translation found for rooms:3 (1389347662738182100) -->
+  <string-array name="rooms">
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Հյուրասենյակի հեռուստացույց"</item>
+    <item msgid="8122798759665439456">"Ընդհանուր սենյակի հեռուստացույց"</item>
+    <item msgid="1389347662738182100">"Ննջասենյակի հեռուստացույց"</item>
+  </string-array>
     <string name="custom_room" msgid="8991561978321502549">"Մուտքագրել հարմարեցրած անուն…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Վերանվանել այս <xliff:g id="DEVICEMODEL">%1$s</xliff:g> սարքը"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Այս <xliff:g id="DEVICEMODEL">%1$s</xliff:g> սարքն այժմ կոչվում է «<xliff:g id="DEVICENAME">%2$s</xliff:g>»"</string>
@@ -660,6 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Վերագործարկել անվտանգ ռեժիմում"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Վերագործարկե՞լ անվտանգ ռեժիմում:"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Արդյունքում ձեր կողմից տեղադրված բոլոր երրորդ կողմից հավելվածները կանջատվեն: Դրանց աշխատանքը կվերականգնվի միայն սարքը վերագործարկելուց հետո:"</string>
-    <!-- no translation found for capturing_bugreport (3291125403411239592) -->
-    <skip />
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Վրիպակների հաշվետվության ստեղծում"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Հասանելի վիրտուալ ստեղնաշարեր"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Կառավարել ստեղնաշարերը"</string>
 </resources>

@@ -101,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"ပြုစုပေးခဲ့သူ အတွက် ရွေးစရာများ"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"မရှိ"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"သုံးစွဲမှု &amp; ပြဿနာရှာဖွေမှု"</string>
+    <string name="device_tutorials" msgid="5879039536629898133">"စက်ပစ္စည်း သင်ခန်းစာများ"</string>
     <string name="about_system_update" msgid="7282772247661356586">"စနစ် မွမ်းမံမှု"</string>
     <string name="about_preference" msgid="4131396784531360434">"အကြောင်း"</string>
     <string name="device_name" msgid="2670488158531273028">"ကိရိယာ အမည်"</string>
@@ -641,10 +642,12 @@
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"အရာတိုင်းကို ဖျက်ရန်"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"သင့်<xliff:g id="DEVICEMODEL">%1$s</xliff:g>အတွက် အမည်ရွေးပါ"</string>
     <string name="select_device_name_description" msgid="2697127827643821315">"သင့်ဖုန်း၊ တပ်ဘလက်၊ သို့မဟုတ် ကွန်ပျူတာကဲ့သို့ အခြားစက်ပစ္စည်းများမှ အသုံးပြုသည့်အခါ အမည်သည် သင့်<xliff:g id="DEVICEMODEL">%1$s</xliff:g> ကိုဖော်ထုတ်နိုင်လိမ့်မည်။"</string>
-    <!-- no translation found for rooms:0 (9056203990862307284) -->
-    <!-- no translation found for rooms:1 (7449352861592960712) -->
-    <!-- no translation found for rooms:2 (8122798759665439456) -->
-    <!-- no translation found for rooms:3 (1389347662738182100) -->
+  <string-array name="rooms">
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"ဧည့်ခန်း TV"</item>
+    <item msgid="8122798759665439456">"မိသားစုအခန်း TV"</item>
+    <item msgid="1389347662738182100">"အိပ်ခန်း TV"</item>
+  </string-array>
     <string name="custom_room" msgid="8991561978321502549">"စိတ်ကြိုက် အမည်ကို ရိုက်ထည့်ရန်…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> ကိုအမည်ပြောင်းပါ"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> ကိုလက်ရှိတွင် \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" ဟုအမည်ပေးထားသည်"</string>
@@ -660,6 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"ဘေးကင်းလုံခြုံသည့်မုဒ်သို့ ပြန်စပါ"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"ဘေးကင်းလုံခြုံသည့်မုဒ်သို့ ပြန်စလိုပါသလား။"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"၎င်းသည် ပြင်ပကုမ္ပဏီမှ သင်ထည့်သွင်းထားသည့် အက်ပ်များကို ပိတ်လိုက်ပါမည်။ သင်စက်ကို ပြန်စသည့်အချိန်တွင် ၎င်းတို့ပြန်ပွင့်လာပါလိမ့်မည်။"</string>
-    <!-- no translation found for capturing_bugreport (3291125403411239592) -->
-    <skip />
+    <string name="capturing_bugreport" msgid="3291125403411239592">"ချွတ်ယွင်းချက်အစီရင်ခံစာကို သိမ်းဆည်းနေပါသည်"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"ရရှိနိုင်သော ပကတိအသွင် ကီးဘုတ်များ"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"ကီးဘုတ်များကို စီမံခန့်ခွဲရန်"</string>
 </resources>

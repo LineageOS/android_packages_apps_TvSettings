@@ -101,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"டெவெலப்பர் விருப்பங்கள்"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ஏதுமில்லை"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"உபயோகம் &amp; பிழை ஆய்வுகள்"</string>
+    <string name="device_tutorials" msgid="5879039536629898133">"சாதனப் பயிற்சிகள்"</string>
     <string name="about_system_update" msgid="7282772247661356586">"முறைமை புதுப்பிப்பு"</string>
     <string name="about_preference" msgid="4131396784531360434">"அறிமுகம்"</string>
     <string name="device_name" msgid="2670488158531273028">"சாதனத்தின் பெயர்"</string>
@@ -641,10 +642,12 @@
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"எல்லாம் அழி"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g>க்கான பெயரைத் தேர்ந்தெடுக்கவும்"</string>
     <string name="select_device_name_description" msgid="2697127827643821315">"உங்கள் மொபைல், டேப்லெட் அல்லது கணினி போன்ற சாதனங்களிலிருந்து பயன்படுத்தும் போது, உங்கள் <xliff:g id="DEVICEMODEL">%1$s</xliff:g>ஐ அடையாளங்காண பெயர் உதவும்."</string>
-    <!-- no translation found for rooms:0 (9056203990862307284) -->
-    <!-- no translation found for rooms:1 (7449352861592960712) -->
-    <!-- no translation found for rooms:2 (8122798759665439456) -->
-    <!-- no translation found for rooms:3 (1389347662738182100) -->
+  <string-array name="rooms">
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"ஹால் (பொது அறை) டிவி"</item>
+    <item msgid="8122798759665439456">"குடும்ப அறை டிவி"</item>
+    <item msgid="1389347662738182100">"படுக்கையறை டிவி"</item>
+  </string-array>
     <string name="custom_room" msgid="8991561978321502549">"தனிப்பயன் பெயரை உள்ளிடுக…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> இன் பெயரை மாற்று"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> தற்போது \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" எனப் பெயர் மாற்றப்பட்டது"</string>
@@ -660,6 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"பாதுகாப்புப் பயன்முறைக்கு மறுதொடக்கம் செய்"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"பாதுகாப்புப் பயன்முறைக்கு மறுதொடக்கம் செய்ய விரும்புகிறீர்களா?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"இவ்வாறு செய்வதால், நீங்கள் நிறுவிய எல்லா மூன்றாம் தரப்புப் பயன்பாடுகளும் முடக்கப்படும். மீண்டும் மறுதொடக்கம் செய்யும் போது, அவை மீட்டமைக்கப்படும்."</string>
-    <!-- no translation found for capturing_bugreport (3291125403411239592) -->
-    <skip />
+    <string name="capturing_bugreport" msgid="3291125403411239592">"பிழை அறிக்கையைப் பதிவு செய்கிறது"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"கிடைக்கும் விர்ச்சுவல் விசைப்பலகைகள்"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"விசைப்பலகைகளை நிர்வகி"</string>
 </resources>
