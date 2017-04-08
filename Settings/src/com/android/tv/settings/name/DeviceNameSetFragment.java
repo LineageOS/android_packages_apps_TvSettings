@@ -23,11 +23,13 @@ import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
+
 import com.android.tv.settings.R;
 
 import java.util.List;
 
 public class DeviceNameSetFragment extends GuidedStepFragment {
+    private String [] mDeviceNames;
 
     public static DeviceNameSetFragment newInstance() {
         return new DeviceNameSetFragment();
@@ -46,16 +48,20 @@ public class DeviceNameSetFragment extends GuidedStepFragment {
     @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
         final String[] options = getResources().getStringArray(R.array.rooms);
-        final int length = options.length;
+        mDeviceNames = new String[options.length + 1];
+        mDeviceNames[0] = Build.MODEL;
+        System.arraycopy(options, 0, mDeviceNames, 1, options.length);
+
+        final int length = mDeviceNames.length;
         for (int i = 0; i < length; i++) {
             actions.add(new GuidedAction.Builder()
-                    .title(options[i])
+                    .title(mDeviceNames[i])
                     .id(i)
                     .build());
         }
         actions.add(new GuidedAction.Builder()
                 .title(getString(R.string.custom_room))
-                .id(options.length)
+                .id(mDeviceNames.length)
                 .build());
         super.onCreateActions(actions, savedInstanceState);
     }
@@ -63,14 +69,13 @@ public class DeviceNameSetFragment extends GuidedStepFragment {
     @Override
     public void onGuidedActionClicked(GuidedAction action) {
         final long id = action.getId();
-        final String[] options = getResources().getStringArray(R.array.rooms);
-        if (id < 0 || id > options.length) {
+        if (id < 0 || id > mDeviceNames.length) {
             throw new IllegalStateException("Unknown action ID");
-        } else if (id < options.length) {
-            DeviceManager.setDeviceName(getActivity(), options[(int)id]);
+        } else if (id < mDeviceNames.length) {
+            DeviceManager.setDeviceName(getActivity(), mDeviceNames[(int) id]);
             getActivity().setResult(Activity.RESULT_OK);
             getActivity().finish();
-        } else if (id == options.length) {
+        } else if (id == mDeviceNames.length) {
             GuidedStepFragment.add(getFragmentManager(), DeviceNameSetCustomFragment.newInstance());
         }
     }
