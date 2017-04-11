@@ -135,11 +135,11 @@ public class UnmountActivity extends Activity {
                 final Boolean success =
                         intent.getBooleanExtra(SettingsStorageService.EXTRA_SUCCESS, false);
                 if (success) {
-                    Toast.makeText(UnmountActivity.this,
+                    Toast.makeText(context,
                             getString(R.string.storage_unmount_success, mUnmountVolumeDesc),
                             Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(UnmountActivity.this,
+                    Toast.makeText(context,
                             getString(R.string.storage_unmount_failure, mUnmountVolumeDesc),
                             Toast.LENGTH_SHORT).show();
                 }
