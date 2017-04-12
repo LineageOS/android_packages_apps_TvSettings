@@ -263,7 +263,6 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        final Context themedContext = getPreferenceManager().getContext();
         if (!mUm.isAdminUser()
                 || mUm.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES)
                 || Settings.Global.getInt(mContentResolver,
@@ -271,11 +270,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
             // Block access to developer options if the user is not the owner, if user policy
             // restricts it, or if the device has not been provisioned
             mUnavailable = true;
-            setPreferenceScreen(new PreferenceScreen(themedContext, null));
-            Preference emptyPref = new Preference(getPreferenceManager().getContext());
-            emptyPref.setEnabled(false);
-            emptyPref.setTitle(R.string.development_settings_not_available);
-            getPreferenceScreen().addPreference(emptyPref);
+            addPreferencesFromResource(R.xml.development_prefs_not_available);
             return;
         }
 
