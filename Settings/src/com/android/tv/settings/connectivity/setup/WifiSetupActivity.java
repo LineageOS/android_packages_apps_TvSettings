@@ -93,8 +93,6 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(ThemeHelper.getThemeResource(getIntent()));
-
         mConfiguration = new WifiConfiguration();
 
         WifiTracker.WifiListener wifiListener = new WifiTracker.WifiListener() {
