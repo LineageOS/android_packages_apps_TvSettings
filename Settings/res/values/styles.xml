@@ -47,8 +47,8 @@
     </style>
 
     <style name="Theme.Setup" parent="@style/Theme.Settings">
-        <item name="wifi_signal_color">@color/list_item_icon</item>
-        <item name="wps_color">@color/list_item_icon</item>
+        <item name="wifi_signal_color">@color/setup_list_item</item>
+        <item name="wps_color">@color/setup_list_item</item>
     </style>
 
     <style name="Theme.Settings.Transparent">
@@ -73,7 +73,7 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowShowWallpaper">true</item>
         <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
-        <item name="wps_color">@color/list_item_icon</item>
+        <item name="wps_color">@color/setup_list_item</item>
     </style>
 
     <style name="Theme.Settings.BluetoothPairing" parent="@style/SettingsStyle.TextAppearanceMedium">
@@ -192,7 +192,7 @@
 
     <style name="Setup.Action.ListItem">
         <item name="android:fontFamily">sans-serif-condensed</item>
-        <item name="android:textColor">@color/list_item</item>
+        <item name="android:textColor">@color/setup_list_item</item>
         <item name="android:textSize">@dimen/setup_list_item_text_size</item>
     </style>
 
@@ -245,7 +245,7 @@
         <item name="android:layout_height">@dimen/setup_list_item_height</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:duplicateParentState">true</item>
-        <item name="android:background">@drawable/setup_list_item_bg</item>
+        <item name="android:background">@drawable/setup_list_item_background</item>
         <item name="android:elevation">@dimen/setup_elevation</item>
         <item name="android:paddingStart">@dimen/setup_list_item_padding</item>
         <item name="android:paddingEnd">@dimen/setup_list_item_padding</item>
@@ -261,7 +261,7 @@
         <item name="android:singleLine">true</item>
         <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:textSize">@dimen/setup_list_item_text_size</item>
-        <item name="android:textColor">@color/list_item</item>
+        <item name="android:textColor">@color/setup_list_item</item>
     </style>
 
     <style name="Setup.GuidanceContainerStyle" parent="Widget.Leanback.GuidanceContainerStyle">
