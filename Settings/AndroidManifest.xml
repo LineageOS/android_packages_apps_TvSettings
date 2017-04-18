@@ -580,6 +580,7 @@
 
         <activity android:name=".com.android.tv.settings.inputmethod.InputMethodAndSubtypeEnablerActivity"
                   android:label=""
+                  android:theme="@style/Theme.Settings.Transparent"
                   android:clearTaskOnLaunch="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.INPUT_METHOD_SUBTYPE_SETTINGS" />
