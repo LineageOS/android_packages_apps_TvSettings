@@ -70,13 +70,46 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         final Context preferenceContext = getPreferenceManager().getContext();
-        final PackageManager packageManager = getActivity().getPackageManager();
 
         final PreferenceScreen screen =
                 getPreferenceManager().createPreferenceScreen(preferenceContext);
         screen.setTitle(R.string.system_keyboard);
         setPreferenceScreen(screen);
 
+        final ListPreference currentKeyboard = new ListPreference(preferenceContext);
+        currentKeyboard.setPersistent(false);
+        currentKeyboard.setTitle(R.string.title_current_keyboard);
+        currentKeyboard.setDialogTitle(R.string.title_current_keyboard);
+        currentKeyboard.setSummary("%s");
+        currentKeyboard.setKey(KEY_CURRENT_KEYBOARD);
+        currentKeyboard.setOnPreferenceChangeListener((preference, newValue) -> {
+            setInputMethod((String) newValue);
+            return true;
+        });
+        updateCurrentKeyboardPreference(currentKeyboard);
+        screen.addPreference(currentKeyboard);
+
+        final Preference manageKeyboards = new Preference(preferenceContext);
+        manageKeyboards.setTitle(R.string.manage_keyboards);
+        manageKeyboards.setKey(KEY_MANAGE_KEYBOARDS);
+        manageKeyboards.setFragment(AvailableVirtualKeyboardFragment.class.getName());
+        screen.addPreference(manageKeyboards);
+
+        updatePrefs();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updatePrefs();
+        final Preference currentKeyboard = findPreference(KEY_CURRENT_KEYBOARD);
+        if (currentKeyboard instanceof ListPreference) {
+            updateCurrentKeyboardPreference((ListPreference) currentKeyboard);
+        }
+    }
+
+    private void updateCurrentKeyboardPreference(ListPreference currentKeyboardPref) {
+        final PackageManager packageManager = getActivity().getPackageManager();
         List<InputMethodInfo> enabledInputMethodInfos = getEnabledSystemInputMethodList();
         final List<CharSequence> entries = new ArrayList<>(enabledInputMethodInfos.size());
         final List<CharSequence> values = new ArrayList<>(enabledInputMethodInfos.size());
@@ -94,34 +127,9 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
             }
         }
 
-        final ListPreference currentKeyboard = new ListPreference(preferenceContext);
-        currentKeyboard.setPersistent(false);
-        currentKeyboard.setTitle(R.string.title_current_keyboard);
-        currentKeyboard.setDialogTitle(R.string.title_current_keyboard);
-        currentKeyboard.setSummary("%s");
-        currentKeyboard.setKey(KEY_CURRENT_KEYBOARD);
-        currentKeyboard.setEntries(entries.toArray(new CharSequence[entries.size()]));
-        currentKeyboard.setEntryValues(values.toArray(new CharSequence[values.size()]));
-        currentKeyboard.setValueIndex(defaultIndex);
-        currentKeyboard.setOnPreferenceChangeListener((preference, newValue) -> {
-            setInputMethod((String) newValue);
-            return true;
-        });
-        screen.addPreference(currentKeyboard);
-
-        final Preference manageKeyboards = new Preference(preferenceContext);
-        manageKeyboards.setTitle(R.string.manage_keyboards);
-        manageKeyboards.setKey(KEY_MANAGE_KEYBOARDS);
-        manageKeyboards.setFragment(AvailableVirtualKeyboardFragment.class.getName());
-        screen.addPreference(manageKeyboards);
-
-        updatePrefs();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        updatePrefs();
+        currentKeyboardPref.setEntries(entries.toArray(new CharSequence[entries.size()]));
+        currentKeyboardPref.setEntryValues(values.toArray(new CharSequence[values.size()]));
+        currentKeyboardPref.setValueIndex(defaultIndex);
     }
 
     private void updatePrefs() {
