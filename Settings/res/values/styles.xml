@@ -49,6 +49,8 @@
     <style name="Theme.Setup" parent="@style/Theme.Settings">
         <item name="wifi_signal_color">@color/setup_list_item</item>
         <item name="wps_color">@color/setup_list_item</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 
     <style name="Theme.Settings.Transparent">
