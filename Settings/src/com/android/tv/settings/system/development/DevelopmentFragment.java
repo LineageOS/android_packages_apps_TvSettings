@@ -84,6 +84,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
     private static final String ENABLE_TERMINAL = "enable_terminal";
     private static final String KEEP_SCREEN_ON = "keep_screen_on";
     private static final String BT_HCI_SNOOP_LOG = "bt_hci_snoop_log";
+    private static final String BTSNOOP_ENABLE_PROPERTY = "persist.bluetooth.btsnoopenable";
     private static final String ENABLE_OEM_UNLOCK = "oem_unlock_enable";
     private static final String HDCP_CHECKING_KEY = "hdcp_checking";
     private static final String HDCP_CHECKING_PROPERTY = "persist.sys.hdcp_checking";
@@ -564,8 +565,8 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
         }
         updateSwitchPreference(mKeepScreenOn, Settings.Global.getInt(cr,
                 Settings.Global.STAY_ON_WHILE_PLUGGED_IN, 0) != 0);
-        updateSwitchPreference(mBtHciSnoopLog, Settings.Secure.getInt(cr,
-                Settings.Secure.BLUETOOTH_HCI_LOG, 0) != 0);
+        updateSwitchPreference(mBtHciSnoopLog,
+                SystemProperties.getBoolean(BTSNOOP_ENABLE_PROPERTY, false));
         if (mEnableOemUnlock != null) {
             updateSwitchPreference(mEnableOemUnlock, isOemUnlockEnabled(getActivity()));
             mEnableOemUnlock.setEnabled(isOemUnlockAllowed());
@@ -668,9 +669,8 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
 
     private void writeBtHciSnoopLogOptions() {
         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
-        adapter.configHciSnoopLog(mBtHciSnoopLog.isChecked());
-        Settings.Secure.putInt(mContentResolver, Settings.Secure.BLUETOOTH_HCI_LOG,
-                mBtHciSnoopLog.isChecked() ? 1 : 0);
+        SystemProperties.set(BTSNOOP_ENABLE_PROPERTY,
+                Boolean.toString(mBtHciSnoopLog.isChecked()));
     }
 
     private void writeDebuggerOptions() {
