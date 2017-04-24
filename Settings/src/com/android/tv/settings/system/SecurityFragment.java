@@ -17,6 +17,7 @@
 package com.android.tv.settings.system;
 
 import android.accounts.AccountManager;
+import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.app.Fragment;
 import android.content.BroadcastReceiver;
@@ -112,6 +113,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
     private ILockSettings mLockSettingsService;
 
     private boolean mCreatingRestrictedProfile;
+    @SuppressLint("StaticFieldLeak")
     private static CreateRestrictedProfileTask sCreateRestrictedProfileTask;
     private final BroadcastReceiver mRestrictedProfileReceiver = new BroadcastReceiver() {
         @Override
@@ -233,6 +235,8 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             mRestrictedProfileCreatePref.setVisible(false);
             mRestrictedProfileDeletePref.setVisible(false);
         }
+
+        mRestrictedProfileCreatePref.setEnabled(sCreateRestrictedProfileTask == null);
 
         mUnknownSourcesPref.setEnabled(!isUnknownSourcesBlocked());
         mUnknownSourcesPref.setChecked(isUnknownSourcesAllowed());
@@ -466,6 +470,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             sCreateRestrictedProfileTask.execute();
             mCreatingRestrictedProfile = true;
         }
+        refresh();
     }
 
     private void removeRestrictedUser() {
@@ -476,13 +481,10 @@ public class SecurityFragment extends LeanbackPreferenceFragment
         }
         final int restrictedUserHandle = restrictedUser.id;
         mRestrictedUserInfo = null;
-        mHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                mUserManager.removeUser(restrictedUserHandle);
-                UserSwitchListenerService.updateLaunchPoint(getActivity(), false);
-                refresh();
-            }
+        mHandler.post(() -> {
+            mUserManager.removeUser(restrictedUserHandle);
+            UserSwitchListenerService.updateLaunchPoint(getActivity(), false);
+            refresh();
         });
     }
 
@@ -513,7 +515,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             }
         }
         mCreatingRestrictedProfile = false;
-        sCreateRestrictedProfileTask = null;
+        refresh();
     }
 
     private static class CreateRestrictedProfileTask extends AsyncTask<Void, Void, UserInfo> {
@@ -550,8 +552,8 @@ public class SecurityFragment extends LeanbackPreferenceFragment
 
         @Override
         protected void onPostExecute(UserInfo result) {
+            sCreateRestrictedProfileTask = null;
             if (result == null) {
-                sCreateRestrictedProfileTask = null;
                 return;
             }
             UserSwitchListenerService.updateLaunchPoint(mContext, true);
