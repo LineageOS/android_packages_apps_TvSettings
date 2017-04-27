@@ -52,9 +52,9 @@
     <string name="device_surround_sound" msgid="6272196310566546860">"ပတ်ပတ်လည်အသံစနစ်"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"စနစ်၏ အသံများ"</string>
     <string name="device_apps" msgid="9180435229638772838">"အက်ပ်များ"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"သိုလှောင်မှု &amp; ပြန်ညှိရန်"</string>
+    <string name="device_storage_reset" msgid="1425978936501134425">"သိုလှောင်မှု &amp; ပြင်ဆင်သတ်မှတ်ရန်"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"ဘက်အာပ် လုပ်ခြင်း &amp; ပြန်လည်ဖေါ်ထုတ်ခြင်း"</string>
-    <string name="device_reset" msgid="2827002349560023125">"စက်ရုံအတိုင်း ပြန်ညှိရန်"</string>
+    <string name="device_reset" msgid="2827002349560023125">"စက်ရုံအတိုင်း ပြင်ဆင်သတ်မှတ်ရန်"</string>
     <string name="device_calibration" msgid="8632962533376605191">"စံကိုက်ညှိမှု"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"ကရှ်ဒေတာများကို ရှင်းမည်လား?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"apps အားလုံးအတွက် ကရှ်ဒေတာများကို ရှင်းမည်။"</string>
@@ -263,7 +263,7 @@
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"ဤဒရိုက်တွင်ပါသော အပ်ဖ်များ သို့မဟုတ် ဒေတာကို အသုံးပြုရန်၊ ၎င်းကို ပြန်လည်ထည့်သွင်းပါ။ တစ်နည်းအားဖြင့်၊ အကယ်၍ ဒရိုက်အား မရရှိနိုင်လျှင် ဤသိုလှောင်မှုကို မေ့ပစ်ရန် သင်ရွေးချယ်နိုင်သည်။ \n\nအကယ်၍ မေ့ပစ်မည်ကို သင်ရွေးချယ်ခဲ့လျှင်၊ ဒရိုက်တွင်ပါဝင်သော ဒေတာများအားလုံး ထာဝရဆုံးရှုံးသွားပါလိမ့်မည်။ \n\nအပ်ဖ်များကို သင်နောင်တွင် ပြန်လည်ထည့်သွင်းနိုင်သော်လည်း၊ ဤဒရိုက်တွင် သိမ်းဆည်းထားသော ဒေတာများအား ဆုံးရှုံးပါလိမ့်မည်။"</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"စက်ပစ္စည်းသိုလှောင်မှု"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"ဖြုတ်၍ရသည့် သိုလှောင်မှု"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"ပြန်ညှိရန်"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"ပြင်ဆင်သတ်မှတ်ရန်"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> ကိုတပ်ဆင်ထားသည်"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> ကိုတပ်ဆင်၍မရပါ"</string>
     <string name="storage_mount_adopted" msgid="3360994581083675640">"USBသိုလှောင်ခြင်း ပြန်လည်ချိတ်ဆက်သည်"</string>
@@ -641,8 +641,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"သင့် ကိုယ်ပိုင် အချက်အလက်များ နှင့် ဒေါင်းလုဒ် ပြုလုပ်ထားသည့် အက်ပ်များ အားလုံးကို ဖျက်မလား? ဒီ လုပ်ဆောင်ချက်ကို သင်သည် ပြန်ပြောင်း၍ မရနိုင်ပါ!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"အရာတိုင်းကို ဖျက်ရန်"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"သင့်<xliff:g id="DEVICEMODEL">%1$s</xliff:g>အတွက် အမည်ရွေးပါ"</string>
-    <!-- no translation found for select_device_name_description (6890879006777364213) -->
-    <skip />
+    <string name="select_device_name_description" msgid="6890879006777364213">"သင့်စက်ကို အခြားစက်များမှ ကာစ်လုပ်သောအခါဖြစ်စေ ချိတ်ဆက်သောအခါဖြစ်စေ ၎င်းကိုသိရှိစေရန် သင့် <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ကို အမည်ပေးပါ။"</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"ဧည့်ခန်း TV"</item>
