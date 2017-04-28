@@ -41,12 +41,12 @@
   <string name="selinux_status_permissive">Permisivo</string>
   <string name="selinux_status_enforcing">Forzado</string>
   <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
-  <string name="accessories_add_bluetooth_inst_cm">Para empezar a utilizar CyanogenMod asegúrate de que el dispositivo Bluetooth esté en modo emparejamiento. Para Nexus Remote esto se logra al pulsar Inicio y Volver al mismo tiempo.</string>
+  <string name="accessories_add_bluetooth_inst_cm">Para empezar a utilizar CyanogenMod asegúrate de que el dispositivo Bluetooth esté en modo emparejamiento. Para Nexus Remote esto se logra al pulsar Atrás e Inicio al mismo tiempo.</string>
   <!-- Title for Set CM in System Settings Developer options [CHAR LIMIT=50] -->
   <!-- Setting title for root access -->
-  <string name="root_access">Acceso root</string>
-  <string name="root_access_warning_title">¿Permitir acceso root?</string>
-  <string name="root_access_warning_message">¡Permitir que las aplicaciones tengan acceso root es muy peligroso y puede comprometer la seguridad del dispositivo!</string>
+  <string name="root_access">Acceso administrativo</string>
+  <string name="root_access_warning_title">¿Permitir acceso administrativo?</string>
+  <string name="root_access_warning_message">¡Permitir a las aplicaciones solicitar acceso administrativo es muy peligroso y puede comprometer la seguridad del sistema!</string>
   <string name="root_access_none">Desactivado</string>
   <string name="root_access_apps">Solo aplicaciones</string>
   <string name="root_access_adb">Solo ADB</string>
@@ -57,15 +57,15 @@
   <!-- Display settings -->
   <string name="system_display">Pantalla</string>
   <string name="system_display_overscan">Sobrebarrido</string>
-  <string name="system_display_overscan_description">Calibrar la pantalla para ajustar al tamaño de la pantalla.</string>
+  <string name="system_display_overscan_description">Calibra la pantalla para ajustar al tamaño de la pantalla.</string>
   <!-- Home settings -->
-  <string name="system_reset_default_home">Restablecer la pantalla de inicio predeterminada</string>
+  <string name="system_reset_default_home">Restablecer la pantalla de inicio predefinida</string>
   <string name="system_home_settings">Ajustes de la pantalla de inicio</string>
-  <string name="reset_launcher_title">Restablecer la pantalla de inicio predeterminada</string>
-  <string name="reset_launcher_description">Al restablecer la pantalla de inicio podrás elegir una pantalla de inicio alternativa (Ej. Trebuchet).\n\n¿Deseas restablecer la pantalla de inicio predeterminada?</string>
+  <string name="reset_launcher_title">Restablecer la pantalla de inicio predefinida</string>
+  <string name="reset_launcher_description">Al restablecer la pantalla de inicio podrás elegir una pantalla de inicio alternativa (Ej. Trebuchet).\n\n¿Deseas restablecer la pantalla de inicio predefinida?</string>
   <string name="reset_launcher_tip">Pulsa el botón de inicio para que aparezca el cuadro de diálogo de selección de pantalla de inicio.</string>
   <!-- Advanced reboot options -->
-  <string name="advanced_reboot_title">Opciones avanzadas para reiniciar</string>
+  <string name="advanced_reboot_title">Reinicio avanzado</string>
   <string name="advanced_reboot_summary">Incluir opciones en el menú para reiniciar en modo recuperación, bootloader o realizar un reinicio rápido</string>
   <!-- Reboot menu -->
   <!-- Button to reboot the device into recovery, within the Reboot Options dialog -->
@@ -76,7 +76,7 @@
   <string name="reboot_soft_button_label">Reinicio rápido</string>
   <!-- Android debugging over WiFi -->
   <string name="adb_over_network">ADB sobre red</string>
-  <string name="adb_over_network_summary">Activar la depuración TCP/IP sobre las interfaces de red (Wi\u2011Fi, redes USB). Este ajuste se restablecen al reiniciar el dispositivo</string>
+  <string name="adb_over_network_summary">Activar la depuración TCP/IP sobre las interfaces de red (Wi\u2011Fi, redes USB). Este ajuste se restablece al reiniciar el dispositivo</string>
   <!-- Warning for Adb over Network -->
-  <string name="adb_over_network_warning">ADVERTENCIA: Cuando ADB sobre red está activado, el dispositivo podrá recibir intrusiones en todas las redes conectadas.\n\nUtiliza esta función solamente cuando estés conectado a redes de confianza.\n\n¿Realmente deseas activar esta función?</string>
+  <string name="adb_over_network_warning">ADVERTENCIA: Cuando ADB sobre red está activado, el dispositivo podrá recibir intrusiones en todas las redes conectadas.\n\nUtiliza esta función solamente estando conectado a redes de confianza.\n\n¿Realmente deseas activar esta función?</string>
 </resources>
