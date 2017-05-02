@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.system;
+package com.android.tv.settings.accessibility;
 
 import android.content.ComponentName;
 import android.content.Context;

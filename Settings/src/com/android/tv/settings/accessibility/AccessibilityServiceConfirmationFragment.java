@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.system;
+package com.android.tv.settings.accessibility;
 
 import android.app.Fragment;
 import android.content.ComponentName;
