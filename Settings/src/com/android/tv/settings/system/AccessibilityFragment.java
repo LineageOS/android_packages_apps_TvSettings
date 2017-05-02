@@ -31,9 +31,9 @@ import android.support.v17.leanback.widget.GuidedAction;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.CheckBoxPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.TwoStatePreference;
 import android.text.TextUtils;
 import android.view.accessibility.AccessibilityManager;
 
@@ -43,9 +43,12 @@ import com.android.tv.settings.R;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Fragment for Accessibility settings
+ */
 public class AccessibilityFragment extends LeanbackPreferenceFragment {
-    private static final String TOGGLE_HIGH_TEXT_CONTRAST_PREFERENCE =
-            "toggle_high_text_contrast_preference";
+    private static final String TOGGLE_HIGH_TEXT_CONTRAST_KEY = "toggle_high_text_contrast";
+    private static final String ACCESSIBILITY_SERVICES_KEY = "system_accessibility_services";
 
     private PreferenceGroup mServicesPref;
 
@@ -63,43 +66,20 @@ public class AccessibilityFragment extends LeanbackPreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        final Context themedContext = getPreferenceManager().getContext();
-        final PreferenceScreen screen =
-                getPreferenceManager().createPreferenceScreen(themedContext);
-        screen.setTitle(R.string.system_accessibility);
+        setPreferencesFromResource(R.xml.accessibility, null);
 
-        final Preference captionsPreference = new Preference(themedContext);
-        captionsPreference.setTitle(R.string.accessibility_captions);
-        captionsPreference.setIntent(new Intent(Intent.ACTION_MAIN).setComponent(
-                new ComponentName(getActivity(), CaptionSetupActivity.class)));
-        screen.addPreference(captionsPreference);
-
-        final SwitchPreference highContrastPreference = new SwitchPreference(themedContext);
-        highContrastPreference.setKey(TOGGLE_HIGH_TEXT_CONTRAST_PREFERENCE);
-        highContrastPreference.setPersistent(false);
-        highContrastPreference.setTitle(
-                R.string.accessibility_toggle_high_text_contrast_preference_title);
-        highContrastPreference.setSummary(R.string.experimental_preference);
+        final TwoStatePreference highContrastPreference =
+                (TwoStatePreference) findPreference(TOGGLE_HIGH_TEXT_CONTRAST_KEY);
         highContrastPreference.setChecked(Settings.Secure.getInt(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_HIGH_TEXT_CONTRAST_ENABLED, 0) == 1);
-        screen.addPreference(highContrastPreference);
 
-        mServicesPref = new PreferenceCategory(themedContext);
-        mServicesPref.setTitle(R.string.system_services);
-        screen.addPreference(mServicesPref);
+        mServicesPref = (PreferenceGroup) findPreference(ACCESSIBILITY_SERVICES_KEY);
         refreshServices(mServicesPref);
-
-        final Preference ttsPref = new Preference(themedContext);
-        ttsPref.setTitle(R.string.system_accessibility_tts_output);
-        ttsPref.setFragment(TextToSpeechFragment.class.getName());
-        screen.addPreference(ttsPref);
-
-        setPreferenceScreen(screen);
     }
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (TextUtils.equals(preference.getKey(), TOGGLE_HIGH_TEXT_CONTRAST_PREFERENCE)) {
+        if (TextUtils.equals(preference.getKey(), TOGGLE_HIGH_TEXT_CONTRAST_KEY)) {
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.ACCESSIBILITY_HIGH_TEXT_CONTRAST_ENABLED,
                     (((SwitchPreference) preference).isChecked() ? 1 : 0));
