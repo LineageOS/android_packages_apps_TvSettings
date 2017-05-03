@@ -26,10 +26,12 @@ import android.support.v17.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DeviceNameSetFragment extends GuidedStepFragment {
-    private String [] mDeviceNames;
+    private ArrayList<String> mDeviceNames = new ArrayList<>();
 
     public static DeviceNameSetFragment newInstance() {
         return new DeviceNameSetFragment();
@@ -47,36 +49,67 @@ public class DeviceNameSetFragment extends GuidedStepFragment {
 
     @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
-        final String[] options = getResources().getStringArray(R.array.rooms);
-        mDeviceNames = new String[options.length + 1];
-        mDeviceNames[0] = Build.MODEL;
-        System.arraycopy(options, 0, mDeviceNames, 1, options.length);
+        mDeviceNames.add(Build.MODEL);
+        mDeviceNames.addAll(Arrays.asList(getResources().getStringArray(R.array.rooms)));
+        // The strings added above are static names that should always be shown.
+        String currentDeviceName = DeviceManager.getDeviceName(getActivity());
+        if (currentDeviceName == null) {
+            currentDeviceName = Build.MODEL;
+        }
+        // Ideally we don't want to have identical entries. (e.g., if a device was named
+        // "Android TV", then "Android TV" (from static names) will be pre-selected/highlighted
+        // instead of being added to top of the list.
+        // However, since "Enter Custom Name..." is not considered as an static name, if someone
+        // name his/her device to be "Enter Custom Name..." (same to the title of action to
+        // customize device name), this name will still show at top of list just like any other
+        // "normal" names, co-existing with the action button at bottom.
+        if (mDeviceNames.indexOf(currentDeviceName) == -1) {
+            mDeviceNames.add(0, currentDeviceName);
+        }
 
-        final int length = mDeviceNames.length;
+        final int length = mDeviceNames.size();
         for (int i = 0; i < length; i++) {
             actions.add(new GuidedAction.Builder()
-                    .title(mDeviceNames[i])
+                    .title(mDeviceNames.get(i))
                     .id(i)
                     .build());
         }
         actions.add(new GuidedAction.Builder()
                 .title(getString(R.string.custom_room))
-                .id(mDeviceNames.length)
+                .id(mDeviceNames.size())
                 .build());
         super.onCreateActions(actions, savedInstanceState);
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        int currentNamePosition = mDeviceNames.indexOf(DeviceManager.getDeviceName(getActivity()));
+        if (currentNamePosition != -1) {
+            setSelectedActionPosition(currentNamePosition);
+        }
+    }
+
+    @Override
     public void onGuidedActionClicked(GuidedAction action) {
         final long id = action.getId();
-        if (id < 0 || id > mDeviceNames.length) {
+        if (id < 0 || id > mDeviceNames.size()) {
             throw new IllegalStateException("Unknown action ID");
-        } else if (id < mDeviceNames.length) {
-            DeviceManager.setDeviceName(getActivity(), mDeviceNames[(int) id]);
+        } else if (id < mDeviceNames.size()) {
+            DeviceManager.setDeviceName(getActivity(), mDeviceNames.get((int) id));
             getActivity().setResult(Activity.RESULT_OK);
             getActivity().finish();
-        } else if (id == mDeviceNames.length) {
+        } else if (id == mDeviceNames.size()) {
             GuidedStepFragment.add(getFragmentManager(), DeviceNameSetCustomFragment.newInstance());
         }
+    }
+
+    // Overriding this method removes the unpreferable exit transition animation of this fragment,
+    // which is currently only applied before showing DeviceNameSetCustomFragment.
+    // Be sure not to remove this method or leave its body empty as it is also used on Settings
+    // (not during Setup) and we need its default enter transition animation in that case.
+    @Override
+    protected void onProvideFragmentTransitions() {
+        setExitTransition(null);
     }
 }
