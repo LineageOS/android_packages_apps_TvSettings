@@ -17,6 +17,7 @@
 package com.android.tv.settings.connectivity.setup;
 
 import android.animation.Animator;
+import android.animation.AnimatorInflater;
 import android.animation.ObjectAnimator;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -69,9 +70,12 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
     private static final String EXTRA_SHOW_SUMMARY = "extra_show_summary";
     private static final String EXTRA_SHOW_SKIP_NETWORK = "extra_show_skip_network";
     private static final String EXTRA_SHOW_WPS_AT_TOP = "extra_show_wps_at_top";
+    private static final String EXTRA_MOVING_BACKWARD = "moving_backward";
     // If you change this constant, make sure to change the constant in setup wizard
     private static final int RESULT_NETWORK_SKIPPED = 3;
 
+    private boolean mResultOk = false;
+    private boolean mShowFirstFragmentBackwards;
     private boolean mShowSkipNetwork;
     private boolean mShowWpsAtTop;
     private AdvancedWifiOptionsFlow mAdvancedWifiOptionsFlow;
@@ -128,6 +132,7 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
         boolean showSummary = getIntent().getBooleanExtra(EXTRA_SHOW_SUMMARY, false);
         mShowSkipNetwork = getIntent().getBooleanExtra(EXTRA_SHOW_SKIP_NETWORK, false);
         mShowWpsAtTop = getIntent().getBooleanExtra(EXTRA_SHOW_WPS_AT_TOP, false);
+        mShowFirstFragmentBackwards = getIntent().getBooleanExtra(EXTRA_MOVING_BACKWARD, false);
 
         if (showSummary) {
             addSummaryPage();
@@ -158,9 +163,18 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
 
     @Override
     public void finish() {
-        // fade out and really finish when we're done
-        ObjectAnimator animator = TransitionUtils.createActivityFadeOutAnimator(getResources(),
-                true);
+        Animator animator;
+
+        // Choose finish animation based on whether we are in Setup or Settings and really
+        // finish this activity when the animation is complete.
+        if (ThemeHelper.fromSetupWizard(getIntent())) {
+            animator = mResultOk
+                    ? AnimatorInflater.loadAnimator(this, R.anim.setup_fragment_open_out)
+                    : AnimatorInflater.loadAnimator(this, R.anim.setup_fragment_close_out);
+        } else {
+            animator = TransitionUtils.createActivityFadeOutAnimator(getResources(), true);
+        }
+
         animator.setTarget(getContentView());
         animator.addListener(new Animator.AnimatorListener() {
 
@@ -321,24 +335,24 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
                 break;
             case SUMMARY_CONNECTED_WIFI:
                 if (choiceChosen(formPage, R.string.wifi_action_dont_change_network)) {
-                    setResult(RESULT_OK);
+                    setResultOk();
                     finish();
                 } else if (choiceChosen(formPage, R.string.wifi_action_change_network)) {
                     addPage(WifiFormPageType.CHOOSE_NETWORK);
                 }
                 break;
             case SUMMARY_CONNECTED_NON_WIFI:
-                setResult(RESULT_OK);
+                setResultOk();
                 finish();
                 break;
             case SUMMARY_NOT_CONNECTED:
                 addPage(WifiFormPageType.CHOOSE_NETWORK);
                 break;
             case SUCCESS:
-                setResult(RESULT_OK);
+                setResultOk();
                 break;
             case WPS:
-                setResult(RESULT_OK);
+                setResultOk();
                 break;
             default:
                 if (mAdvancedWifiOptionsFlow != null) {
@@ -361,6 +375,15 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
     protected void displayPage(FormPage formPage, FormPageResultListener listener,
             boolean forward) {
         WifiFormPageType formPageType = getFormPageType(formPage);
+
+        if (mShowFirstFragmentBackwards) {
+            // We entered this activity by moving backwards in setup, so set the forward boolean
+            // to false in order to show the first fragment with backwards animation.
+            forward = false;
+
+            // Reset the flag to false so that following fragments are handled normally.
+            mShowFirstFragmentBackwards = false;
+        }
 
         if (formPageType == WifiFormPageType.CONNECT) {
             mConnectPage = formPage;
@@ -570,5 +593,10 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
         }
         getWindow().getDecorView()
                 .sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED);
+    }
+
+    private void setResultOk() {
+        setResult(RESULT_OK);
+        mResultOk = true;
     }
 }
