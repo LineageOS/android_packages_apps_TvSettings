@@ -21,6 +21,7 @@ import android.content.ComponentName;
 import android.content.pm.ServiceInfo;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.annotation.Keep;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
@@ -38,6 +39,7 @@ import java.util.Set;
 /**
  * Fragment for Accessibility settings
  */
+@Keep
 public class AccessibilityFragment extends LeanbackPreferenceFragment {
     private static final String TOGGLE_HIGH_TEXT_CONTRAST_KEY = "toggle_high_text_contrast";
     private static final String ACCESSIBILITY_SERVICES_KEY = "system_accessibility_services";
@@ -86,8 +88,9 @@ public class AccessibilityFragment extends LeanbackPreferenceFragment {
     }
 
     private void refreshServices(PreferenceGroup group) {
-        final List<AccessibilityServiceInfo> installedServiceInfos = AccessibilityManager
-                .getInstance(getActivity()).getInstalledAccessibilityServiceList();
+        final List<AccessibilityServiceInfo> installedServiceInfos =
+                getActivity().getSystemService(AccessibilityManager.class)
+                        .getInstalledAccessibilityServiceList();
         final Set<ComponentName> enabledServices =
                 AccessibilityUtils.getEnabledServicesFromSettings(getActivity());
         final boolean accessibilityEnabled = Settings.Secure.getInt(

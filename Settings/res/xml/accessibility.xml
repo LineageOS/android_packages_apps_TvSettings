@@ -16,30 +16,35 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/system_accessibility">
+        android:title="@string/system_accessibility">
 
     <Preference
-        android:key="captions"
-        android:title="@string/accessibility_captions">
+            android:key="captions"
+            android:title="@string/accessibility_captions">
         <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.android.tv.settings.system.CaptionSetupActivity"
-            android:targetPackage="com.android.tv.settings" />
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.tv.settings.system.CaptionSetupActivity"
+                android:targetPackage="com.android.tv.settings"/>
     </Preference>
 
     <SwitchPreference
-        android:key="toggle_high_text_contrast"
-        android:persistent="false"
-        android:title="@string/accessibility_toggle_high_text_contrast_preference_title"
-        android:summary="@string/experimental_preference" />
-
-    <PreferenceCategory
-        android:key="system_accessibility_services"
-        android:title="@string/system_services"/>
+            android:key="toggle_high_text_contrast"
+            android:persistent="false"
+            android:title="@string/accessibility_toggle_high_text_contrast_preference_title"
+            android:summary="@string/experimental_preference"/>
 
     <Preference
-        android:key="text_to_speech"
-        android:title="@string/system_accessibility_tts_output"
-        android:fragment="com.android.tv.settings.system.TextToSpeechFragment" />
+            android:key="text_to_speech"
+            android:title="@string/system_accessibility_tts_output"
+            android:fragment="com.android.tv.settings.system.TextToSpeechFragment"/>
+
+    <Preference
+            android:key="accessibility_shortcut"
+            android:title="@string/accessibility_shortcut"
+            android:fragment="com.android.tv.settings.accessibility.AccessibilityShortcutFragment"/>
+
+    <PreferenceCategory
+            android:key="system_accessibility_services"
+            android:title="@string/system_services"/>
 
 </PreferenceScreen>
