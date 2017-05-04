@@ -206,12 +206,6 @@
 
     <style name="Setup.Action.TextInput">
         <item name="android:fontFamily">sans-serif-condensed</item>
-        <item name="android:textColor">@color/list_item</item>
-        <item name="android:textSize">@dimen/setup_list_item_text_size</item>
-    </style>
-
-    <style name="Setup.Action.TextInput">
-        <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:background">@drawable/setup_text_input_underline</item>
         <item name="android:textCursorDrawable">@drawable/setup_text_input_cursor</item>
         <item name="android:textColor">@color/setup_list_item_focused</item>
