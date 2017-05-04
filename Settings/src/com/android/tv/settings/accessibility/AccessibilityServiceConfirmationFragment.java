@@ -50,23 +50,40 @@ public class AccessibilityServiceConfirmationFragment extends GuidedStepFragment
     }
 
     /**
+     * Create a new instance of the fragment
+     * @param cn Component of service
+     * @param label Human readable label
+     * @param enabling True for enabling
+     * @return new fragment instance
+     */
+    public static AccessibilityServiceConfirmationFragment newInstance(ComponentName cn,
+            CharSequence label, boolean enabling) {
+        Bundle args = new Bundle(3);
+        prepareArgs(args, cn, label, enabling);
+        AccessibilityServiceConfirmationFragment fragment =
+                new AccessibilityServiceConfirmationFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    /**
      * Put args in bundle
      * @param args Bundle to prepare
      * @param cn Component of service
      * @param label Human readable label
      * @param enabling True for enabling
      */
-    public static void prepareArgs(@NonNull Bundle args, ComponentName cn, String label,
+    public static void prepareArgs(@NonNull Bundle args, ComponentName cn, CharSequence label,
             boolean enabling) {
         args.putParcelable(ARG_COMPONENT, cn);
-        args.putString(ARG_LABEL, label);
+        args.putCharSequence(ARG_LABEL, label);
         args.putBoolean(ARG_ENABLING, enabling);
     }
 
     @NonNull
     @Override
     public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-        final String label = getArguments().getString(ARG_LABEL);
+        final CharSequence label = getArguments().getCharSequence(ARG_LABEL);
         if (getArguments().getBoolean(ARG_ENABLING)) {
             return new GuidanceStylist.Guidance(
                     getString(R.string.system_accessibility_service_on_confirm_title,
