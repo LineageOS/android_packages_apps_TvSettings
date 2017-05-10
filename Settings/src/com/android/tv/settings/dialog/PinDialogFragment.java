@@ -429,10 +429,10 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
             if (sFocusedNumberEnterAnimator == null) {
                 TypedValue outValue = new TypedValue();
                 context.getResources().getValue(
-                        R.float_type.pin_alpha_for_focused_number, outValue, true);
+                        R.dimen.pin_alpha_for_focused_number, outValue, true);
                 sAlphaForFocusedNumber = outValue.getFloat();
                 context.getResources().getValue(
-                        R.float_type.pin_alpha_for_adjacent_number, outValue, true);
+                        R.dimen.pin_alpha_for_adjacent_number, outValue, true);
                 sAlphaForAdjacentNumber = outValue.getFloat();
 
                 sFocusedNumberEnterAnimator = AnimatorInflater.loadAnimator(context,
