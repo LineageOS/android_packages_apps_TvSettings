@@ -258,6 +258,10 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
             case ENTER_SSID:
                 mSsidPage = formPage;
                 String ssid = formPage.getDataSummary();
+                if (mPasswordPage != null
+                        && !TextUtils.equals(mConfiguration.getPrintableSsid(), ssid)) {
+                    mPasswordPage.clearData();
+                }
                 WifiConfigHelper.setConfigSsid(mConfiguration, ssid);
                 addPage(WifiFormPageType.CHOOSE_SECURITY);
                 break;
