@@ -506,9 +506,9 @@ public class MainFragment extends LeanbackPreferenceFragment {
         final PackageManager pm = context.getPackageManager();
 
         for (ResolveInfo info : pm.queryIntentActivities(intent, 0)) {
-            if (info.activityInfo != null && info.activityInfo.enabled &&
-                    (info.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) ==
-                            ApplicationInfo.FLAG_SYSTEM) {
+            if (info.activityInfo != null
+                    && (info.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM)
+                    == ApplicationInfo.FLAG_SYSTEM) {
                 return info;
             }
         }
