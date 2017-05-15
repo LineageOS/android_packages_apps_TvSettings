@@ -28,6 +28,7 @@ import android.text.TextUtils;
 import android.view.View;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.name.setup.DeviceNameFlowStartActivity;
 
 import java.util.List;
 
@@ -76,6 +77,12 @@ public class DeviceNameSetCustomFragment extends GuidedStepFragment {
         if (TextUtils.isGraphic(name)) {
             DeviceManager.setDeviceName(getActivity(), name.toString());
             getActivity().setResult(Activity.RESULT_OK);
+
+            // Set the flag for the appropriate exit animation for setup.
+            if (getActivity() instanceof DeviceNameFlowStartActivity) {
+                ((DeviceNameFlowStartActivity) getActivity()).setResultOk(true);
+            }
+
             getActivity().finish();
             return super.onGuidedActionEditedAndProceed(action);
         } else {
