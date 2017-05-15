@@ -25,6 +25,7 @@ import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.name.setup.DeviceNameFlowStartActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -97,6 +98,12 @@ public class DeviceNameSetFragment extends GuidedStepFragment {
             throw new IllegalStateException("Unknown action ID");
         } else if (id < mDeviceNames.size()) {
             DeviceManager.setDeviceName(getActivity(), mDeviceNames.get((int) id));
+
+            // Set the flag for the appropriate exit animation for setup.
+            if (getActivity() instanceof DeviceNameFlowStartActivity) {
+                ((DeviceNameFlowStartActivity) getActivity()).setResultOk(true);
+            }
+
             getActivity().setResult(Activity.RESULT_OK);
             getActivity().finish();
         } else if (id == mDeviceNames.size()) {
@@ -110,6 +117,7 @@ public class DeviceNameSetFragment extends GuidedStepFragment {
     // (not during Setup) and we need its default enter transition animation in that case.
     @Override
     protected void onProvideFragmentTransitions() {
+        super.onProvideFragmentTransitions();
         setExitTransition(null);
     }
 }
