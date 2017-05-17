@@ -290,8 +290,8 @@
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"ഈ ഡ്രൈവിന് വേഗത കുറവാണെന്ന് തോന്നുന്നു."</string>
     <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"നിങ്ങൾക്ക് തുടരാനാകുമെങ്കിലും, ഈ ലൊക്കേഷനിലേക്ക് നീക്കിയ ആപ്പ്‌സിൽ തടസ്സമുണ്ടാകുകയും വിവരം കൈമാറാൻ കൂടുതൽ സമയമെടുക്കുകയും ചെയ്യാം. മികച്ച പ്രകടനത്തിന് വേഗതയേറിയ ഡ്രൈവ് ഉപയോഗിക്കുന്നത് പരിഗണിക്കുക."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"ഫോർമാറ്റുചെയ്യുക"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"ആപ്പ്‌സ് ബാക്കപ്പുചെയ്യുക"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിൽ സംഭരിച്ചിരിക്കുന്ന ആപ്പ്‌സ്"</string>
+    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"ആപ്പുകൾ ബാക്കപ്പുചെയ്യുക"</string>
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിൽ സംഭരിച്ചിരിക്കുന്ന ആപ്പുകൾ"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിൽ സംഭരിച്ചിരിക്കുന്ന ആപ്പ്‌സും ഡാറ്റയും"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> ലഭ്യമാണ്"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"ഉപകരണ സ്റ്റോറേജ് ഇജക്റ്റുചെയ്യുക"</string>
@@ -368,6 +368,10 @@
     <string name="system_services" msgid="7230571820151215779">"സേവനങ്ങള്‍"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"സേവന ക്രമീകരണങ്ങള്‍"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"ദൃശ്യതീവ്രതയേറിയ ടെക്‌സ്റ്റ്"</string>
+    <string name="accessibility_shortcut" msgid="6726361991387558828">"ഉപയോഗസഹായി കുറുക്കുവഴി"</string>
+    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"ഉപയോഗസഹായി കുറുക്കുവഴി പ്രവർത്തനക്ഷമമാക്കുക"</string>
+    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"കുറുക്കുവഴി സേവനം"</string>
+    <string name="accessibility_shortcut_description" msgid="3241203131630578108">"കുറുക്കുവഴി ഓണായിരിക്കുമ്പോൾ, \'ഹോം, തിരഞ്ഞെടുക്കുക\' എന്നിവ ഒരുമിച്ച് 3 സെക്കൻഡ് നേരം അമർത്തിപ്പിടിച്ച് നിങ്ങൾക്ക് ഉപയോഗസഹായി ഫീച്ചർ ആരംഭിക്കാം"</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"അടിക്കുറിപ്പുകൾ"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"വീഡിയോയിൽ അടച്ച അടിക്കുറിപ്പിന്റെ ടെക്‌സ്റ്റ് ഓവർലേയ്ക്കായുള്ള ക്രമീകരണങ്ങൾ"</string>
     <string name="captions_display" msgid="735692527287125548">"ഡിസ്‌പ്ലേ"</string>
@@ -438,7 +442,7 @@
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"വ്യാജ ലൊക്കേഷനുകൾ അനുവദിക്കുക"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"ഡീബഗ് അപ്ലിക്കേഷൻ തിരഞ്ഞെടുക്കുക"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"ഡീബഗ്ഗറിനായി കാത്തിരിക്കുക"</string>
-    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB വഴി ആപ്സുകൾ പരിശോധിച്ചുറപ്പിക്കൂ"</string>
+    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB വഴി ആപ്പുകൾ പരിശോധിച്ചുറപ്പിക്കൂ"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"ADB/ADT വഴി ദോഷകരമായ പ്രവർത്തനരീതിയുള്ള അപ്ലിക്കേഷനുകൾ ഇൻസ്റ്റാളുചെയ്‌തിട്ടുണ്ടോയെന്ന് പരിശോധിക്കുക"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"വൈഫൈ വെർബോസ് ലോഗിംഗ്"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"വൈഫൈ വെർബോസ് ലോഗിംഗ് പ്രവർത്തനക്ഷമമാക്കുക"</string>
@@ -648,7 +652,7 @@
     <item msgid="8122798759665439456">"ഫാമിലി റൂം ടിവി"</item>
     <item msgid="1389347662738182100">"ബെഡ്റൂം ടിവി"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"ഇ‌ഷ്‌ടാനുസൃത പേര് നൽകുക..."</string>
+    <string name="custom_room" msgid="8655516733933892458">"ഇ‌ഷ്‌ടാനുസൃത പേര് നൽകുക…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"ഈ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> മോഡലിന്റെ പേരുമാറ്റുക"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"നിലവിൽ ഈ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> മോഡലിന്റെ പേര് \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" എന്നാണ്"</string>
     <string name="change_setting" msgid="2047402388786162246">"മാറ്റുക"</string>

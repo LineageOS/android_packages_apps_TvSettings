@@ -56,6 +56,13 @@
             android:key="storagereset"
             android:title="@string/device_storage_reset"
             android:fragment="com.android.tv.settings.device.StorageResetFragment" />
+        <!-- Device Tutorials - launches activity -->
+        <Preference
+            android:icon="@drawable/ic_cc_settings_start_tutorial"
+            android:key="device_tutorials"
+            android:title="@string/device_tutorials">
+        <intent android:action="com.google.android.tvtutorials.action.FEATURE_TUTORIALS_TOUR" />
+        </Preference>
         <Preference
             android:icon="@drawable/ic_info_outline"
             android:key="about_device"
@@ -109,7 +116,7 @@
             android:icon="@drawable/ic_accessibility_new"
             android:key="accessibility"
             android:title="@string/system_accessibility"
-            android:fragment="com.android.tv.settings.system.AccessibilityFragment" />
+            android:fragment="com.android.tv.settings.accessibility.AccessibilityFragment" />
         <Preference
             android:icon="@drawable/ic_settings_developeroptions"
             android:key="developer"

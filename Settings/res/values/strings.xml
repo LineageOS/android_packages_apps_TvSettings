@@ -798,7 +798,14 @@
     <string name="accessibility_service_settings">Service settings</string>
     <!-- Title for the accessibility preference to high contrast text. [CHAR LIMIT=35] -->
     <string name="accessibility_toggle_high_text_contrast_preference_title">High contrast text</string>
-
+    <!-- Title for accessibility shortcut preference and screen [CHAR LIMIT=50] -->
+    <string name="accessibility_shortcut">Accessibility shortcut</string>
+    <!-- Title for accessibility shortcut toggle [CHAR LIMIT=50] -->
+    <string name="accessibility_shortcut_enable">Enable accessibility shortcut</string>
+    <!-- Title for accessibility shortcut service choice preference [CHAR LIMIT=50}-->
+    <string name="accessibility_shortcut_service">Shortcut service</string>
+    <!-- Description for the accessibility shortcut [CHAR LIMIT=NONE] -->
+    <string name="accessibility_shortcut_description">When the shortcut is on, you can press both home and select for 3 seconds to start an accessibility feature</string>
     <!-- Title and description for accessibility captions setting [CHAR LIMIT=50] -->
     <string name="accessibility_captions">Captions</string>
     <!-- Title and description for accessibility captions description [CHAR LIMIT=NONE] -->
@@ -1406,7 +1413,7 @@
         <item>Bedroom TV</item>
     </string-array>
     <!-- String displayed for option where user will type in a room name rather than selecting from the list of defaults [CHAR LIMIT=40] -->
-    <string name="custom_room">Enter Custom Name&#8230;</string>
+    <string name="custom_room">Enter custom name&#8230;</string>
     <!-- Title of settings summary/status screen [CHAR LIMIT=100] -->
     <string name="device_rename_title">Rename this <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g></string>
     <!-- Description on summary/status screen that tells you what the name of your device is [CHAR LIMIT=NONE] -->

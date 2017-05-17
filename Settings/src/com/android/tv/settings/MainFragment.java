@@ -75,6 +75,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
     private static final String KEY_SPEECH_SETTINGS = "speech";
     private static final String KEY_SEARCH_SETTINGS = "search";
     private static final String KEY_ACCOUNTS_CATEGORY = "accounts";
+    private static final String KEY_DEVICE_TUTORIALS = "device_tutorials";
 
     private AuthenticatorHelper mAuthenticatorHelper;
     private BluetoothAdapter mBtAdapter;
@@ -161,6 +162,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
         updateDeveloperOptions();
         updateSounds();
         updateGoogleSettings();
+        updateDeviceTutorials();
 
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS));
@@ -468,6 +470,27 @@ public class MainFragment extends LeanbackPreferenceFragment {
         }
     }
 
+    private void updateDeviceTutorials() {
+        final Preference deviceTutorialsPref = findPreference(KEY_DEVICE_TUTORIALS);
+        if (deviceTutorialsPref != null) {
+            final ResolveInfo info = systemIntentIsHandled(getContext(),
+                    deviceTutorialsPref.getIntent());
+            deviceTutorialsPref.setVisible(info != null);
+            if (info != null) {
+                try {
+                    Context context = getContext();
+                    final Context targetContext = context.createPackageContext(
+                            info.resolvePackageName != null
+                                    ? info.resolvePackageName : info.activityInfo.packageName, 0);
+                    deviceTutorialsPref.setTitle(info.loadLabel(context.getPackageManager()));
+                } catch (Resources.NotFoundException | PackageManager.NameNotFoundException
+                        | SecurityException e) {
+                    Log.e(TAG, "TV Tutorials icon not found", e);
+                }
+            }
+        }
+    }
+
     /**
      * Returns the ResolveInfo for the system activity that matches given intent filter or null if
      * no such activity exists.
@@ -483,9 +506,9 @@ public class MainFragment extends LeanbackPreferenceFragment {
         final PackageManager pm = context.getPackageManager();
 
         for (ResolveInfo info : pm.queryIntentActivities(intent, 0)) {
-            if (info.activityInfo != null && info.activityInfo.enabled &&
-                    (info.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) ==
-                            ApplicationInfo.FLAG_SYSTEM) {
+            if (info.activityInfo != null
+                    && (info.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM)
+                    == ApplicationInfo.FLAG_SYSTEM) {
                 return info;
             }
         }
