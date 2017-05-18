@@ -570,7 +570,8 @@
         <!-- Triggered when user-selected home app isn't encryption aware -->
         <activity android:name=".system.FallbackHome"
                   android:excludeFromRecents="true"
-                  android:theme="@style/FallbackHome">
+                  android:theme="@style/FallbackHome"
+                  android:configChanges="locale|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection" >
             <intent-filter android:priority="-1000">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.HOME" />
