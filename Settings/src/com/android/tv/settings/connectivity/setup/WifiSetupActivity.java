@@ -70,7 +70,7 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
     private static final String EXTRA_SHOW_SUMMARY = "extra_show_summary";
     private static final String EXTRA_SHOW_SKIP_NETWORK = "extra_show_skip_network";
     private static final String EXTRA_SHOW_WPS_AT_TOP = "extra_show_wps_at_top";
-    private static final String EXTRA_MOVING_BACKWARD = "moving_backward";
+    private static final String EXTRA_MOVING_FORWARD = "movingForward";
     // If you change this constant, make sure to change the constant in setup wizard
     private static final int RESULT_NETWORK_SKIPPED = 3;
 
@@ -132,7 +132,9 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
         boolean showSummary = getIntent().getBooleanExtra(EXTRA_SHOW_SUMMARY, false);
         mShowSkipNetwork = getIntent().getBooleanExtra(EXTRA_SHOW_SKIP_NETWORK, false);
         mShowWpsAtTop = getIntent().getBooleanExtra(EXTRA_SHOW_WPS_AT_TOP, false);
-        mShowFirstFragmentBackwards = getIntent().getBooleanExtra(EXTRA_MOVING_BACKWARD, false);
+        // If we are not moving forwards during the setup flow, we need to show the first fragment
+        // with the reverse animation.
+        mShowFirstFragmentBackwards = !getIntent().getBooleanExtra(EXTRA_MOVING_FORWARD, true);
 
         if (showSummary) {
             addSummaryPage();
