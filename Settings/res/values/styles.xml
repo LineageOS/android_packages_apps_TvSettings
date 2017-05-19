@@ -34,6 +34,10 @@
         <item name="android:fragmentCloseExitAnimation">@anim/setup_fragment_close_out</item>
     </style>
 
+    <style name="SetupWindowAnimationStyle" parent="SettingsWindowAnimationStyle">
+        <item name="android:activityCloseExitAnimation">@null</item>
+    </style>
+
     <!-- Default Settings theme -->
     <style name="Theme.Settings" parent="@style/Theme.Leanback">
         <item name="android:windowBackground">@color/settings_background</item>
@@ -52,6 +56,7 @@
         <item name="wps_color">@color/setup_list_item</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/SetupWindowAnimationStyle</item>
     </style>
 
     <style name="Theme.Settings.Transparent">
