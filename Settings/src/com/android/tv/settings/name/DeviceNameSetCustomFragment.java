@@ -77,6 +77,9 @@ public class DeviceNameSetCustomFragment extends GuidedStepFragment {
         if (TextUtils.isGraphic(name)) {
             DeviceManager.setDeviceName(getActivity(), name.toString());
             getActivity().setResult(Activity.RESULT_OK);
+            // Remove background drawable so this action is not shown as focused with blue empty box
+            // before this fragment is gone.
+            getActionItemView(0).findViewById(R.id.guidedactions_item_content).setBackground(null);
 
             // Set the flag for the appropriate exit animation for setup.
             if (getActivity() instanceof DeviceNameFlowStartActivity) {
