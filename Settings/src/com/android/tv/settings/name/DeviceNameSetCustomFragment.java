@@ -25,7 +25,6 @@ import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;
-import android.view.View;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.name.setup.DeviceNameFlowStartActivity;
@@ -60,8 +59,8 @@ public class DeviceNameSetCustomFragment extends GuidedStepFragment {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onResume() {
+        super.onResume();
         openInEditMode(mEditAction);
     }
 
