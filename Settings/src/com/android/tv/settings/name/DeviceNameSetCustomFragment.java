@@ -25,7 +25,6 @@ import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.text.TextUtils;
-import android.view.View;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.name.setup.DeviceNameFlowStartActivity;
@@ -60,8 +59,8 @@ public class DeviceNameSetCustomFragment extends GuidedStepFragment {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onResume() {
+        super.onResume();
         openInEditMode(mEditAction);
     }
 
@@ -77,6 +76,9 @@ public class DeviceNameSetCustomFragment extends GuidedStepFragment {
         if (TextUtils.isGraphic(name)) {
             DeviceManager.setDeviceName(getActivity(), name.toString());
             getActivity().setResult(Activity.RESULT_OK);
+            // Remove background drawable so this action is not shown as focused with blue empty box
+            // before this fragment is gone.
+            getActionItemView(0).findViewById(R.id.guidedactions_item_content).setBackground(null);
 
             // Set the flag for the appropriate exit animation for setup.
             if (getActivity() instanceof DeviceNameFlowStartActivity) {
