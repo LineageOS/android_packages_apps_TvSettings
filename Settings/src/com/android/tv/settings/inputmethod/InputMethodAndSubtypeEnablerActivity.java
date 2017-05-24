@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.com.android.tv.settings.inputmethod;
+package com.android.tv.settings.inputmethod;
 
 import android.app.Fragment;
 
