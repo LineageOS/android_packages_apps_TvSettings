@@ -75,7 +75,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
     private static final String KEY_SPEECH_SETTINGS = "speech";
     private static final String KEY_SEARCH_SETTINGS = "search";
     private static final String KEY_ACCOUNTS_CATEGORY = "accounts";
-    private static final String KEY_DEVICE_TUTORIALS = "device_tutorials";
 
     private AuthenticatorHelper mAuthenticatorHelper;
     private BluetoothAdapter mBtAdapter;
@@ -162,7 +161,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
         updateDeveloperOptions();
         updateSounds();
         updateGoogleSettings();
-        updateDeviceTutorials();
 
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS));
@@ -466,27 +464,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
             final Preference searchPref = findPreference(KEY_SEARCH_SETTINGS);
             if (searchPref != null) {
                 searchPref.setVisible(info == null);
-            }
-        }
-    }
-
-    private void updateDeviceTutorials() {
-        final Preference deviceTutorialsPref = findPreference(KEY_DEVICE_TUTORIALS);
-        if (deviceTutorialsPref != null) {
-            final ResolveInfo info = systemIntentIsHandled(getContext(),
-                    deviceTutorialsPref.getIntent());
-            deviceTutorialsPref.setVisible(info != null);
-            if (info != null) {
-                try {
-                    Context context = getContext();
-                    final Context targetContext = context.createPackageContext(
-                            info.resolvePackageName != null
-                                    ? info.resolvePackageName : info.activityInfo.packageName, 0);
-                    deviceTutorialsPref.setTitle(info.loadLabel(context.getPackageManager()));
-                } catch (Resources.NotFoundException | PackageManager.NameNotFoundException
-                        | SecurityException e) {
-                    Log.e(TAG, "TV Tutorials icon not found", e);
-                }
             }
         }
     }
