@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<!-- Copyright (C) 2017 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -22,21 +22,21 @@
     android:layout_height="match_parent"
     android:gravity="start" >
 
-    <TextView
-        android:id="@+id/guidance_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="start|bottom"
-        android:lineSpacingMultiplier="@dimen/setup_title_line_spacing_multiplier"
-        android:textAppearance="@style/Setup.Description.Title" />
+  <TextView
+      android:id="@+id/guidance_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="start|bottom"
+      android:lineSpacingMultiplier="@dimen/setup_title_line_spacing_multiplier"
+      android:textAppearance="@style/Setup.Description.Title" />
 
-    <TextView
-        android:id="@+id/guidance_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/guidance_title"
-        android:layout_marginTop="@dimen/setup_description_margin_top"
-        android:lineSpacingMultiplier="@dimen/setup_description_line_spacing_multiplier"
-        android:textAppearance="@style/Setup.Description.Description" />
+  <TextView
+      android:id="@+id/guidance_description"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/guidance_title"
+      android:layout_marginTop="@dimen/setup_description_margin_top"
+      android:lineSpacingMultiplier="@dimen/setup_description_line_spacing_multiplier"
+      android:textAppearance="@style/Setup.Description.Description" />
 
 </com.android.tv.settings.connectivity.setup.GuidanceRelativeLayout>
