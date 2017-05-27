@@ -497,8 +497,8 @@ public class SelectFromListWizardFragment extends Fragment {
 
         final ViewGroup actionArea = (ViewGroup) mMainView.findViewById(R.id.action);
 
-        TextView titleText = (TextView) content.findViewById(R.id.title_text);
-        TextView descriptionText = (TextView) content.findViewById(R.id.description_text);
+        TextView titleText = (TextView) content.findViewById(R.id.guidance_title);
+        TextView descriptionText = (TextView) content.findViewById(R.id.guidance_description);
         Bundle args = getArguments();
         String title = args.getString(EXTRA_TITLE);
         String description = args.getString(EXTRA_DESCRIPTION);
