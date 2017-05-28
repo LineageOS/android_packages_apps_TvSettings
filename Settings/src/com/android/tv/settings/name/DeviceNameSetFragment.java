@@ -23,19 +23,44 @@ import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
+import android.support.v17.leanback.widget.GuidedActionsStylist;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.name.setup.DeviceNameFlowStartActivity;
+import com.android.tv.settings.util.GuidedActionsAlignUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Fragment responsible for showing the device names list.
+ */
 public class DeviceNameSetFragment extends GuidedStepFragment {
     private ArrayList<String> mDeviceNames = new ArrayList<>();
 
     public static DeviceNameSetFragment newInstance() {
         return new DeviceNameSetFragment();
+    }
+
+    @Override
+    public GuidanceStylist onCreateGuidanceStylist() {
+        return GuidedActionsAlignUtil.createGuidanceStylist();
+    }
+
+    @Override
+    public GuidedActionsStylist onCreateActionsStylist() {
+        return GuidedActionsAlignUtil.createGuidedActionsStylist();
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+        View view = super.onCreateView(inflater, container, savedInstanceState);
+        return GuidedActionsAlignUtil.createView(view, this);
     }
 
     @NonNull
