@@ -20,6 +20,7 @@
   <!-- Leanback Launcher App Title for main Settings app [CHAR LIMIT=40] -->
   <string name="launcher_settings_app_name">Axustes</string>
   <!-- Leanback Launcher App Title for Network settings app [CHAR LIMIT=40] -->
+  <string name="launcher_network_app_name">Rede</string>
   <!-- Leanback Launcher App Title for Restricted Profile app [CHAR LIMIT=40] -->
   <!-- Top level headers -->
   <!-- Header title for device [CHAR LIMIT=50] -->
@@ -50,9 +51,11 @@
   <!-- Animation description for the sync active icon. -->
   <!-- Connectivity preferences -->
   <!-- Top level network card title. [CHAR LIMIT=50] -->
+  <string name="connectivity_network">Rede</string>
   <!-- Preference which manages wifi settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages ethernet settings. [CHAR LIMIT=50] -->
   <!-- Title for always scan wifi. [CHAR LIMIT=50] -->
+  <string name="wifi_setting_always_scan">Escanéu siempres disponible</string>
   <!-- Context help for always scan wifi. [CHAR LIMIT=200] -->
   <!-- Title for enable wifi. [CHAR LIMIT=50] -->
   <!-- Device preferences -->
@@ -140,11 +143,13 @@
   <!-- Preference which shows name of device as it will appear when being accessed remotely [CHAR LIMIT=50] -->
   <!-- Button to reboot the device [CHAR LIMIT=40] -->
   <!-- Preference which shows legal info. [CHAR LIMIT=50] -->
+  <string name="about_legal_info">Información llegal</string>
   <!-- Preference which shows open source licenses [CHAR LIMIT=50]-->
   <string name="about_legal_license">Llicencies de códigu abiertu</string>
   <!-- Preference which shows terms of service and privacy info [CHAR LIMIT=50]-->
   <!-- Toast message displayed if the license data is unavailable [CHAR LIMIT=100] -->
   <!-- Preference which shows model. [CHAR LIMIT=50] -->
+  <string name="about_model">Modelu</string>
   <!-- Preference which shows version. [CHAR LIMIT=50] -->
   <!-- Preference which shows serial number. [CHAR LIMIT=50] -->
   <string name="about_serial">Númberu de serie</string>
@@ -159,6 +164,8 @@
   <string name="selinux_status">Estáu de SELinux</string>
   <!-- These statuses are displayed when a device was built with SE Android supoprt.
     These are displayed by the settings app in the about section. -->
+  <string name="selinux_status_permissive">Permisivu</string>
+  <string name="selinux_status_enforcing">Obligatoriu</string>
   <!-- A menu item in "About phone" that allows the user to update the phone with settings
         from their cell phone carrier. The use of the string is similar to the string
         "system_update_settings_list_item_title" in this project. [CHAR LIMIT=50] -->
@@ -171,8 +178,11 @@
   <!-- Feedback on the device [CHAR LIMIT=35] -->
   <!-- Full package name of OEM preferred device feedback reporter. [DO NOT TRANSLATE] -->
   <!-- About screen, fcc equipment id label  [CHAR LIMIT=40] -->
+  <string name="fcc_equipment_id">Equipment ID</string>
   <!-- About screen,  setting option name  [CHAR LIMIT=40] -->
+  <string name="baseband_version">Versión de banda base</string>
   <!-- About screen,  setting option name  [CHAR LIMIT=40] -->
+  <string name="kernel_version">Versión del kernel</string>
   <!-- Status screen -->
   <!-- About phone, status item value if the actual value is not available. -->
   <string name="status_unavailable">Non disponible</string>
@@ -184,12 +194,14 @@
   <!-- SIM status title  [CHAR LIMIT=40] -->
   <string name="sim_status_title">Estáu de SIM</string>
   <!-- Title for IMEI preference [CHAR LIMIT=30] -->
+  <string name="imei_information_title">Información d\'IMEI</string>
   <!-- About phone, status item title.  The bluetooth adapter's hardware address-->
   <!-- About phone, status item title.  How long the device has been running since its last reboot. -->
   <!-- About phone, status item title. WI-MAX MAC address -->
   <string name="status_wimax_mac_address">Direición MAC 4G</string>
   <!-- Legal screen -->
   <!-- About phone settings screen, setting option name to go to dialog that shows legal info -->
+  <string name="legal_information">Información llegal</string>
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
   <!-- About phone settings screen, setting option name to see copyright-related info -->
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
@@ -233,6 +245,7 @@
   <!-- Wifi Security type indicating EAP security [CHAR LIMIT=30] -->
   <string name="wifi_security_type_eap">802.1x EAP</string>
   <!-- Title to show when no wifi networks are available [CHAR LIMIT=80] -->
+  <string name="title_wifi_no_networks_available">Escaniando&#8230;</string>
   <!-- Title to show when wifi fails to save [CHAR LIMIT=80] -->
   <!-- Title to show when wifi fails to connect [CHAR LIMIT=80] -->
   <!-- Title to show when wifi fails to connect due to timeout [CHAR LIMIT=80] -->
@@ -443,18 +456,22 @@
   <!-- [CHAR LIMIT=30] Location settings screen, setting preference screen box label for location mode -->
   <string name="location_mode_title">Mou</string>
   <!-- [CHAR LIMIT=30] Location settings screen, sub category for recent location requests -->
+  <string name="location_category_recent_location_requests">Solicitúes recientes d\'allugamientu</string>
   <!-- Location settings screen, displayed when there's no recent app accessing location -->
+  <string name="location_no_recent_apps">Apocayá denguna aplicación solicitó l\'allugamientu</string>
   <!-- [CHAR LIMIT=30] Location settings screen, recent location requests high battery use-->
   <!-- [CHAR LIMIT=30] Location settings screen, recent location requests low battery use-->
   <!-- [CHAR LIMIT=130] Location mode screen, description for wifi mode -->
   <!-- [CHAR LIMIT=60] Label for the status of location -->
   <string name="location_status">Estáu d\'allugamientu</string>
   <!-- [CHAR LIMIT=60] Title for location services in locations settings -->
+  <string name="location_services">Servicios d\'allugamientu</string>
   <!-- [CHAR LIMIT=20] Title for status on for location services -->
   <!-- [CHAR LIMIT=20] Title for status off for location services -->
   <!-- [CAR LIMIT=100] Location services screen title for Google location services -->
   <string name="google_location_services_title">Servicios d\'allugamientu de Google</string>
   <!-- [CAR LIMIT=100] Location services screen title for third party location services -->
+  <string name="third_party_location_services_title">Servicios d\'allugamientu de terceros</string>
   <!-- [CHAR LIMIT=100] Location services screen, title for Location reporting -->
   <string name="location_reporting">Informe d\'allugamientu</string>
   <!-- [CHAR LIMIT=100] Location services screen, title for Location history -->
@@ -690,6 +707,7 @@
   <!-- Restrictions title for allowing location sharing [CHAR LIMIT=35] -->
   <string name="restriction_location_enable_title">Allugamientu</string>
   <!-- Restrictions summary for allowing location sharing [CHAR LIMIT=100] -->
+  <string name="restriction_location_enable_summary">Dexa que les aplicaciones usen la to información d\'allugamientu</string>
   <!-- Action to switch to a restricted profile [CHAR LIMIT=100] -->
   <!-- Action to switch out of a restricted profile [CHAR LIMIT=100] -->
   <!-- Title for action to delete a restricted profile [CHAR LIMIT=100] -->
