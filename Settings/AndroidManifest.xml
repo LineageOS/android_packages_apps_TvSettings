@@ -594,6 +594,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".device.apps.specialaccess.ManageExternalSourcesActivity"
+                android:label="@string/install_other_apps"
+                android:taskAffinity="">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.MANAGE_UNKNOWN_APP_SOURCES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <!-- Dummy intent filters for CTS TODO: implement something useful -->
         <activity android:name=".EmptyStubActivity"
