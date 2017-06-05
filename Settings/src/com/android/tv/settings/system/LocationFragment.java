@@ -136,23 +136,22 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
         setPreferenceScreen(screen);
     }
 
+    // When selecting the location preference, LeanbackPreferenceFragment
+    // creates an inner view with the selection options; that's when we want to
+    // register our receiver, bacause from now on user can change the location
+    // providers.
     @Override
-    public void onStart() {
-        super.onStart();
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(LocationManager.MODE_CHANGED_ACTION);
-        getActivity().registerReceiver(mReceiver, filter);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getActivity().registerReceiver(mReceiver,
+                new IntentFilter(LocationManager.MODE_CHANGED_ACTION));
         refreshLocationMode();
     }
 
     @Override
-    public void onStop() {
-        super.onStop();
-        try {
-            getActivity().unregisterReceiver(mReceiver);
-        } catch (RuntimeException e) {
-            // Ignore exceptions caused by race condition
-        }
+    public void onDestroy() {
+        super.onDestroy();
+        getActivity().unregisterReceiver(mReceiver);
     }
 
     private void addPreferencesSorted(List<Preference> prefs, PreferenceGroup container) {
@@ -173,9 +172,6 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
         if (TextUtils.equals(preference.getKey(), KEY_LOCATION_MODE)) {
             int mode = Settings.Secure.LOCATION_MODE_OFF;
             if (TextUtils.equals((CharSequence) newValue, LOCATION_MODE_WIFI)) {
-                // TODO
-                // com.google.android.gms/com.google.android.location.network.ConfirmAlertActivity
-                // pops up when we turn this on.
                 mode = Settings.Secure.LOCATION_MODE_HIGH_ACCURACY;
             } else if (TextUtils.equals((CharSequence) newValue, LOCATION_MODE_OFF)) {
                 mode = Settings.Secure.LOCATION_MODE_OFF;
@@ -184,7 +180,6 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
             }
 
             writeLocationMode(mode);
-
             refreshLocationMode();
         }
         return true;
@@ -207,7 +202,8 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
         }
         final int mode = Settings.Secure.getInt(getActivity().getContentResolver(),
                 Settings.Secure.LOCATION_MODE, Settings.Secure.LOCATION_MODE_OFF);
-        if (mode == Settings.Secure.LOCATION_MODE_HIGH_ACCURACY) {
+        if (mode == Settings.Secure.LOCATION_MODE_HIGH_ACCURACY
+                    || mode == Settings.Secure.LOCATION_MODE_BATTERY_SAVING) {
             mLocationMode.setValue(LOCATION_MODE_WIFI);
         } else if (mode == Settings.Secure.LOCATION_MODE_OFF) {
             mLocationMode.setValue(LOCATION_MODE_OFF);
