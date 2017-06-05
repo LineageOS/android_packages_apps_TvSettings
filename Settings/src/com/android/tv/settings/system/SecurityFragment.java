@@ -63,8 +63,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.List;
 
 public class SecurityFragment extends LeanbackPreferenceFragment
-        implements RestrictedProfilePinDialogFragment.Callback,
-        UnknownSourcesConfirmationFragment.Callback {
+        implements RestrictedProfilePinDialogFragment.Callback {
 
     private static final String TAG = "SecurityFragment";
 
@@ -98,7 +97,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
     private static final int PIN_MODE_RESTRICTED_PROFILE_CHANGE_PASSWORD = 3;
     private static final int PIN_MODE_RESTRICTED_PROFILE_DELETE = 4;
 
-    private TwoStatePreference mUnknownSourcesPref;
+    private Preference mUnknownSourcesPref;
     private TwoStatePreference mVerifyAppsPref;
     private PreferenceGroup mRestrictedProfileGroup;
     private Preference mRestrictedProfileEnterPref;
@@ -171,7 +170,7 @@ public class SecurityFragment extends LeanbackPreferenceFragment
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.security, null);
 
-        mUnknownSourcesPref = (TwoStatePreference) findPreference(KEY_UNKNOWN_SOURCES);
+        mUnknownSourcesPref = findPreference(KEY_UNKNOWN_SOURCES);
         mVerifyAppsPref = (TwoStatePreference) findPreference(KEY_VERIFY_APPS);
         mRestrictedProfileGroup = (PreferenceGroup) findPreference(KEY_RESTRICTED_PROFILE_GROUP);
         mRestrictedProfileEnterPref = findPreference(KEY_RESTRICTED_PROFILE_ENTER);
@@ -239,7 +238,6 @@ public class SecurityFragment extends LeanbackPreferenceFragment
         mRestrictedProfileCreatePref.setEnabled(sCreateRestrictedProfileTask == null);
 
         mUnknownSourcesPref.setEnabled(!isUnknownSourcesBlocked());
-        mUnknownSourcesPref.setChecked(isUnknownSourcesAllowed());
         mVerifyAppsPref.setChecked(isVerifyAppsEnabled());
         mVerifyAppsPref.setEnabled(isVerifierInstalled());
     }
@@ -251,15 +249,6 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             return super.onPreferenceTreeClick(preference);
         }
         switch (key) {
-            case KEY_UNKNOWN_SOURCES:
-                // TODO: confirmation dialog
-                if (mUnknownSourcesPref.isChecked()) {
-                    /** Launches {@link UnknownSourcesConfirmationFragment} */
-                    super.onPreferenceTreeClick(preference);
-                } else {
-                    setUnknownSourcesAllowed(false);
-                }
-                return true;
             case KEY_VERIFY_APPS:
                 setVerifyAppsEnabled(mVerifyAppsPref.isChecked());
                 return true;
@@ -292,30 +281,9 @@ public class SecurityFragment extends LeanbackPreferenceFragment
         return super.onPreferenceTreeClick(preference);
     }
 
-    private boolean isUnknownSourcesAllowed() {
-        return Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.INSTALL_NON_MARKET_APPS, 0) > 0;
-    }
-
-    private void setUnknownSourcesAllowed(boolean enabled) {
-        if (isUnknownSourcesBlocked()) {
-            return;
-        }
-        // Change the system setting
-        Settings.Secure.putInt(getContext().getContentResolver(),
-                Settings.Secure.INSTALL_NON_MARKET_APPS, enabled ? 1 : 0);
-    }
-
     private boolean isUnknownSourcesBlocked() {
         final UserManager um = (UserManager) getContext().getSystemService(Context.USER_SERVICE);
         return um.hasUserRestriction(UserManager.DISALLOW_INSTALL_UNKNOWN_SOURCES);
-    }
-
-    @Override
-    public void onConfirmUnknownSources(boolean success) {
-        setUnknownSourcesAllowed(success);
-
-        mUnknownSourcesPref.setChecked(success);
     }
 
     private boolean isVerifyAppsEnabled() {
