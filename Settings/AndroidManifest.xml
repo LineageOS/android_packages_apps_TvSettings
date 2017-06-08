@@ -490,6 +490,7 @@
             android:name=".name.setup.DeviceNameFlowStartActivity"
             android:configChanges="keyboardHidden|navigation"
             android:theme="@style/SetupFlowGuidedStepTheme"
+            android:label="@string/device_name"
             android:excludeFromRecents="true" >
             <intent-filter>
                 <action android:name="android.settings.START_DEVICE_NAME_FLOW" />
