@@ -86,6 +86,22 @@ public class GuidedActionsAlignUtil {
     }
 
     /**
+     * Create a customized GuidedActionsStylist {@link GuidedStepFragment} WITHOUT background used
+     * in device name customization input step.
+     */
+    public static GuidedActionsStylist createNoBackgroundGuidedActionsStylist() {
+        return new GuidedActionsStylist() {
+            @Override
+            public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                View v = inflater.inflate(onProvideItemLayoutId(viewType), parent, false);
+                v.setBackground(null);
+                return new GuidedActionsAlignUtil.SetupViewHolder(v);
+            }
+        };
+    }
+
+    /**
      * Create a customized view for {@link android.support.v17.leanback.app.GuidedStepFragment} used
      * in device name setup.
      */
