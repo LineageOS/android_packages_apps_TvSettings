@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.LocationManager;
+import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.provider.Settings;
@@ -111,10 +112,16 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
             Preference pref = new Preference(themedContext);
             pref.setIcon(request.icon);
             pref.setTitle(request.label);
-            if (request.isHighBattery) {
-                pref.setSummary(R.string.location_high_battery_use);
-            } else {
-                pref.setSummary(R.string.location_low_battery_use);
+            // Most Android TV devices don't have built-in batteries and we ONLY show "High/Low
+            // battery use" for devices with built-in batteries when they are not plugged-in.
+            final BatteryManager batteryManager = (BatteryManager) getContext()
+                    .getSystemService(Context.BATTERY_SERVICE);
+            if (batteryManager != null && !batteryManager.isCharging()) {
+                if (request.isHighBattery) {
+                    pref.setSummary(R.string.location_high_battery_use);
+                } else {
+                    pref.setSummary(R.string.location_low_battery_use);
+                }
             }
             pref.setFragment(AppManagementFragment.class.getName());
             AppManagementFragment.prepareArgs(pref.getExtras(), request.packageName);
