@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.LocationManager;
+import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.provider.Settings;
@@ -111,10 +112,16 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
             Preference pref = new Preference(themedContext);
             pref.setIcon(request.icon);
             pref.setTitle(request.label);
-            if (request.isHighBattery) {
-                pref.setSummary(R.string.location_high_battery_use);
-            } else {
-                pref.setSummary(R.string.location_low_battery_use);
+            // Most Android TV devices don't have built-in batteries and we ONLY show "High/Low
+            // battery use" for devices with built-in batteries when they are not plugged-in.
+            final BatteryManager batteryManager = (BatteryManager) getContext()
+                    .getSystemService(Context.BATTERY_SERVICE);
+            if (batteryManager != null && !batteryManager.isCharging()) {
+                if (request.isHighBattery) {
+                    pref.setSummary(R.string.location_high_battery_use);
+                } else {
+                    pref.setSummary(R.string.location_low_battery_use);
+                }
             }
             pref.setFragment(AppManagementFragment.class.getName());
             AppManagementFragment.prepareArgs(pref.getExtras(), request.packageName);
@@ -136,23 +143,22 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
         setPreferenceScreen(screen);
     }
 
+    // When selecting the location preference, LeanbackPreferenceFragment
+    // creates an inner view with the selection options; that's when we want to
+    // register our receiver, bacause from now on user can change the location
+    // providers.
     @Override
-    public void onStart() {
-        super.onStart();
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(LocationManager.MODE_CHANGED_ACTION);
-        getActivity().registerReceiver(mReceiver, filter);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getActivity().registerReceiver(mReceiver,
+                new IntentFilter(LocationManager.MODE_CHANGED_ACTION));
         refreshLocationMode();
     }
 
     @Override
-    public void onStop() {
-        super.onStop();
-        try {
-            getActivity().unregisterReceiver(mReceiver);
-        } catch (RuntimeException e) {
-            // Ignore exceptions caused by race condition
-        }
+    public void onDestroy() {
+        super.onDestroy();
+        getActivity().unregisterReceiver(mReceiver);
     }
 
     private void addPreferencesSorted(List<Preference> prefs, PreferenceGroup container) {
@@ -173,9 +179,6 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
         if (TextUtils.equals(preference.getKey(), KEY_LOCATION_MODE)) {
             int mode = Settings.Secure.LOCATION_MODE_OFF;
             if (TextUtils.equals((CharSequence) newValue, LOCATION_MODE_WIFI)) {
-                // TODO
-                // com.google.android.gms/com.google.android.location.network.ConfirmAlertActivity
-                // pops up when we turn this on.
                 mode = Settings.Secure.LOCATION_MODE_HIGH_ACCURACY;
             } else if (TextUtils.equals((CharSequence) newValue, LOCATION_MODE_OFF)) {
                 mode = Settings.Secure.LOCATION_MODE_OFF;
@@ -184,7 +187,6 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
             }
 
             writeLocationMode(mode);
-
             refreshLocationMode();
         }
         return true;
@@ -207,7 +209,8 @@ public class LocationFragment extends LeanbackPreferenceFragment implements
         }
         final int mode = Settings.Secure.getInt(getActivity().getContentResolver(),
                 Settings.Secure.LOCATION_MODE, Settings.Secure.LOCATION_MODE_OFF);
-        if (mode == Settings.Secure.LOCATION_MODE_HIGH_ACCURACY) {
+        if (mode == Settings.Secure.LOCATION_MODE_HIGH_ACCURACY
+                    || mode == Settings.Secure.LOCATION_MODE_BATTERY_SAVING) {
             mLocationMode.setValue(LOCATION_MODE_WIFI);
         } else if (mode == Settings.Secure.LOCATION_MODE_OFF) {
             mLocationMode.setValue(LOCATION_MODE_OFF);
