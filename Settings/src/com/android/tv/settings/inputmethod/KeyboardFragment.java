@@ -129,7 +129,9 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
 
         currentKeyboardPref.setEntries(entries.toArray(new CharSequence[entries.size()]));
         currentKeyboardPref.setEntryValues(values.toArray(new CharSequence[values.size()]));
-        currentKeyboardPref.setValueIndex(defaultIndex);
+        if (entries.size() > 0) {
+            currentKeyboardPref.setValueIndex(defaultIndex);
+        }
     }
 
     private void updatePrefs() {
