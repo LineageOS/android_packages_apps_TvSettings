@@ -27,7 +27,7 @@
     <string name="accounts_category_title" msgid="7591072907146317425">"Računi"</string>
     <string name="add_account" msgid="4098060223200619258">"Dodaj račun"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Ukloni račun"</string>
-    <string name="account_sync" msgid="773808124331714965">"Odaberite sinhronizirane aplikacije"</string>
+    <string name="account_sync" msgid="773808124331714965">"Odaberi sinhronizirane aplikacije"</string>
     <string name="sync_now" msgid="8732244492880016471">"Sinhroniziraj sada"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Sinhroniziranje…"</string>
     <string name="last_synced" msgid="6178494892357077274">"Posljednji put sinhronizirano u <xliff:g id="TIME">%1s</xliff:g>"</string>
@@ -49,10 +49,10 @@
     <string name="device_daydream" msgid="3354366974209179614">"Čuvar ekrana"</string>
     <string name="device_display" msgid="101455384386372747">"Prikaz"</string>
     <string name="device_sound" msgid="9214182566287657481">"Zvuk"</string>
-    <string name="device_surround_sound" msgid="6272196310566546860">"Surround zvuk"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"Prostorno ozvučenje"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sistemski zvukovi"</string>
     <string name="device_apps" msgid="9180435229638772838">"Aplikacije"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"Pohranjivanje i vraćanje na zadane vrijednost"</string>
+    <string name="device_storage_reset" msgid="1425978936501134425">"Pohranjivanje i vraćanje na zadano"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Sigurnosna kopija i vraćanje"</string>
     <string name="device_reset" msgid="2827002349560023125">"Vraćanje na fabričke postavke"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibracija"</string>
@@ -187,7 +187,7 @@
     <string name="title_wifi_could_not_connect_ap_reject" msgid="328274688839033015">"Wi-Fi mreža nije prihvatila vezu"</string>
     <string name="title_wifi_advanced_options" msgid="5389467736846644832">"Želite li konfigurirati proksi i IP postavke za mrežu <xliff:g id="SSID">%1$s</xliff:g>?"</string>
     <string name="title_wifi_proxy_settings" msgid="7728120764469991303">"Postavke proksija"</string>
-    <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"Proksi hostname:"</string>
+    <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"Ime hosta za proksi:"</string>
     <string name="title_wifi_proxy_port" msgid="9194893429116021337">"Port za proksi:"</string>
     <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"Zaobilazni proksi za:"</string>
     <string name="title_wifi_ip_settings" msgid="1176973848286865602">"IP postavke"</string>
@@ -226,7 +226,7 @@
     <string name="wifi_dns2_description" msgid="8005473174044015359">"Unesite važeću IP adresu ili ostavite prazno.\nPrimjer: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
     <string name="wifi_gateway_description" msgid="4773751224452216231">"Unesite važeću IP adresu ili ostavite prazno.\nPrimjer: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
     <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Unesite važeću dužinu prefiksa mreže.\nPrimjer: <xliff:g id="ID_1">24</xliff:g>"</string>
-    <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Naziv hosta nije ispravan"</string>
+    <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Ime hosta je nevažeće"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Ovaj spisak izuzetaka nije važeći. Unesite nazive izuzetih domena i odvajajte ih zarezom."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Polje za port ne može biti prazno"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Ako je polje za hosta prazno, ostavite prazno i polje za port"</string>
@@ -240,7 +240,7 @@
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"Već je povezano na mrežu <xliff:g id="SSID">%1$s</xliff:g>. Želite li se povezati na drugu mrežu?"</string>
     <string name="wifi_summary_unknown_network" msgid="7903601448928422642">"nepoznata mreža"</string>
     <string name="title_ok" msgid="1021329453788761592">"Uredu"</string>
-    <string name="title_cancel" msgid="4846143417666038604">"Otkaži"</string>
+    <string name="title_cancel" msgid="4846143417666038604">"Otkazivanje"</string>
     <string name="storage_title" msgid="2132026108559493394">"Pohrana"</string>
     <string name="storage_available" msgid="1241005580092138871">"Dostupno"</string>
     <string name="storage_size" msgid="8958530823208352781">"Ukupan prostor: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
@@ -261,10 +261,10 @@
     <string name="storage_migrate_away" msgid="3410590501311323877">"Migriraj podatke na drugu pohranu"</string>
     <string name="storage_no_apps" msgid="579118619398668670">"Nema aplikacija za izradu sigurnosne kopije"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Zaboravi pohranu ovog uređaja"</string>
-    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Da koristite aplikacije ili podatke na ovom disku, ponovo ga priključite. Osim toga,  možete odabrati da zaboravite ovu pohranu ako disk nije dostupan.\n\nAko odaberete opciju Zaboravi, svi podaci na disku će se trajno izgubiti.\n\nAplikacije možete ponovo instalirati kasnije, ali podaci pohranjeni na ovom disku će se izgubiti."</string>
+    <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Da koristite aplikacije ili podatke na ovom disku, ponovo ga priključite. Osim toga, možete odabrati da zaboravite ovu pohranu ako disk nije dostupan.\n\nAko odaberete opciju Zaboravi, svi podaci na disku će se trajno izgubiti.\n\nAplikacije možete ponovo instalirati kasnije, ali podaci pohranjeni na ovom disku će se izgubiti."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Pohrana uređaja"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Uklonjiva pohrana"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Ponovo postavi"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Vraćanje na zadano"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"Uređaj <xliff:g id="NAME">%1$s</xliff:g> je aktiviran"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"Nije uspjelo aktiviranje uređaja <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_mount_adopted" msgid="3360994581083675640">"USB pohrana je ponovo povezana"</string>
@@ -289,19 +289,19 @@
     <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Premještanje podataka na uređaj <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Ovo može potrajati kratko. Nemojte uklanjati disk.\nNeke aplikacije neće ispravno raditi tokom premještanja."</string>
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Čini se da je ovaj disk spor."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Možete nastaviti, ali aplikacije prebačene na ovu lokaciju mogu zastajkivati i prijenosi podataka mogu dugo trajati. Koristite brži disk za bolje performanse."</string>
+    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Možete nastaviti, ali aplikacije premjštene na ovu lokaciju mogu zastajkivati i prijenosi podataka mogu dugo trajati. Koristite brži disk za bolje performanse."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formatiraj"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Izradi sigurnosnu kopiju aplikacija"</string>
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aplikacije pohranjene na uređaju <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Aplikacije i podaci pohranjeni na uređaju <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Dostupno je <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Izbaci pohranu uređaja"</string>
-    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Aplikacije na pohrani ovog uređaja prestat će raditi kada ga izbacite. Ovaj USB uređaj je formatiran za rad samo na ovom uređaju. Neće raditi na drugim uređajima."</string>
+    <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Izbacivanje pohrane uređaja"</string>
+    <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Aplikacije na pohrani ovog uređaja prestat će raditi kada ga izbacite. Ovaj USB uređaj je formatiran za rad samo na ovom uređaju i neće raditi na drugim uređajima."</string>
     <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"Izbacivanje uređaja <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Iskorištena memorija"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Premještanje aplikacije <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Nemojte uklanjati disk za vrijeme premještanja.\nAplikacija <xliff:g id="APPNAME">%1$s</xliff:g> na ovom uređaju neće biti dostupna dok se premještanje ne završi."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Želite li zaboraviti pohranu uređaja?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"Zaboraviti pohranu uređaja?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Ako izaberete \'Zaboravi\', zauvijek ćete izgubiti sve podatke pohranjene na ovom disku. Želite li nastaviti?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Zaboravi"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"USB disk je povezan"</string>
@@ -362,15 +362,15 @@
     <string name="third_party_location_services_title" msgid="4089136801976399147">"Usluge lokacije trećih strana"</string>
     <string name="location_reporting" msgid="3054236612250063073">"Prijava lokacije"</string>
     <string name="location_history" msgid="2946680949724247804">"Historija lokacija"</string>
-    <string name="location_reporting_desc" msgid="6256424995139430823">"Google koristi ovu funkciju u proizvodima kao što su Google Now i Google mape. Uključivanjem funkcije Prijava lokacije omogućit ćete svakom Googleovom proizvodu koji koristi ovu funkciju pohranjivanje i korištenje najnovijih podataka o lokaciji s vašeg uređaja koji su povezani s vašim Google računom."</string>
-    <string name="location_history_desc" msgid="3861249867748294369">"Kada je historija lokacije uključena za ovaj račun, Google može pohranjivati podatke o lokaciji vašeg uređaja za potrebe vaših aplikacija.\n\nNaprimjer, Google mape vam mogu dati smjernice, a Google Now vas može obavještavati o stanju u saobraćaju.\n\nHistoriju lokacija možete isključiti bilo kada, ali je na taj način nećete izbrisati. Za pregled i upravljanje historijom lokacija, posjetite maps.google.com/locationhistory."</string>
+    <string name="location_reporting_desc" msgid="6256424995139430823">"Google koristi ovu funkciju u proizvodima kao što su Google Now i Google Mape. Uključivanjem funkcije Prijava lokacije omogućit ćete svakom Googleovom proizvodu koji koristi ovu funkciju pohranjivanje i korištenje najnovijih podataka o lokaciji s vašeg uređaja koji su povezani s vašim Google računom."</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"Kada je historija lokacije uključena za ovaj račun, Google može pohranjivati podatke o lokaciji vašeg uređaja za potrebe vaših aplikacija.\n\nNaprimjer, Google Mape vam mogu dati smjernice, a Google Now vas može obavještavati o stanju u saobraćaju.\n\nHistoriju lokacija možete isključiti bilo kada, ali je na taj način nećete izbrisati. Za pregled i upravljanje historijom lokacija, posjetite maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"Izbriši historiju lokacija"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"Ovim će se izbrisati sva historija lokacije koja je pohranjena s ovog uređaja na ovaj Google račun. Ova operacija brisanja se ne može opozvati. Neke aplikacije, uključujući Google Now, prestat će raditi."</string>
     <string name="system_services" msgid="7230571820151215779">"Usluge"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"Postavke usluge"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Tekst visokog kontrasta"</string>
     <string name="accessibility_shortcut" msgid="6726361991387558828">"Prečica za pristupačnost"</string>
-    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Omogući prečicu za pristupačnost"</string>
+    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Omogućavanje prečice za pristupačnost"</string>
     <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Usluga prečice"</string>
     <string name="accessibility_shortcut_description" msgid="3241203131630578108">"Kada je uključena prečica, možete istovremeno pritisnuti i držati 3 sekunde dugme za početni ekran i odabir da pokrenete funkciju pristupačnosti."</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Titlovi"</string>
@@ -394,7 +394,7 @@
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Zatamnjenost pozadine"</string>
     <string name="captioning_preview_text" msgid="72080729155950127">"Titlovi će izgledati ovako"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Neprozirnost teksta"</string>
-    <string name="captions_windowshow" msgid="5716898740522196707">"Prikaži prozor"</string>
+    <string name="captions_windowshow" msgid="5716898740522196707">"Prikaz prozora"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Boja prozora"</string>
     <string name="captions_windowopacity" msgid="2784473496224936703">"Neprozirnost prozora"</string>
     <string name="captions_style_0" msgid="2068865433439146533">"Bijelo na crnoj podlozi"</string>
@@ -412,11 +412,11 @@
     <string name="color_magenta" msgid="6395786485839439122">"Magenta"</string>
     <string name="system_accessibility_status" msgid="6150600992901856367">"Omogući"</string>
     <string name="system_accessibility_config" msgid="3216531917536720277">"Konfiguracija"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Želite li zaista koristiti uslugu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Koristiti uslugu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"Usluga <xliff:g id="SERVICE">%1$s</xliff:g> može prikupljati sav tekst koji napišete, osim lozinki. Ovo uključuje lične podatke kao što su brojevi kreditnih kartica."</string>
-    <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"Želite li zaustaviti uslugu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"Zaustaviti uslugu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Ako dodirnete OK, usluga <xliff:g id="SERVICE">%1$s</xliff:g> će se zaustaviti."</string>
-    <string name="system_accessibility_tts_output" msgid="8905477795536714590">"Tekst u govor"</string>
+    <string name="system_accessibility_tts_output" msgid="8905477795536714590">"Pretvaranje teksta u govor"</string>
     <string name="system_accessibility_tts_engine_config" msgid="5331139536083054552">"Konfiguracija programa"</string>
     <string name="system_speak_passwords" msgid="5264650214879185873">"Izgovor lozinki"</string>
     <string name="system_preferred_engine" msgid="8258210139854655567">"Željeni alat"</string>
@@ -432,7 +432,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"Ostani aktivan"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP provjeravanje"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI optimizacija"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"Želite li sada ponovo pokrenuti?"</string>
+    <string name="system_reboot_confirm" msgid="534407910866199191">"Ponovo pokrenuti sada?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Za ažuriranje ove postavke potrebno je ponovo pokrenuti uređaj"</string>
     <string name="system_never_check" msgid="6666520460705041617">"Nikada ne provjeravaj"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Provjeri samo za DRM sadržaj"</string>
@@ -442,7 +442,7 @@
     <string name="system_usb_debugging" msgid="3777895294421924323">"Otklanjanje grešaka putem uređaja spojenog na USB"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"Dozvoli lažne lokacije"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"Odabir aplikacije za otklanjanje grešaka"</string>
-    <string name="system_wait_for_debugger" msgid="4007354935701089555">"Pričekajte program za otklanjanje grešaka"</string>
+    <string name="system_wait_for_debugger" msgid="4007354935701089555">"Čekanje na program za otklanjanje grešaka"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Potvrda aplikacija putem USB-a"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Provjerava ima li štetnog ponašanja u aplikacijama instaliranim putem ADB-a/ADT-a"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi opširno zapisivanje"</string>
@@ -457,7 +457,7 @@
     <string name="system_window_animation_scale" msgid="3213952676672537856">"Skaliranje animacije prozora"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Skaliranje animacije prijelaza"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Skala trajanja animatora"</string>
-    <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Omogućen je strogi režim"</string>
+    <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Omogućen je strogi način rada"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Profil GPU iscrtavanja"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Omogući tragove"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"Ne čuvaj aktivnosti"</string>
@@ -472,7 +472,7 @@
     <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"Prikaži granice isječka, margine itd."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"Prikazi uz treptanje unutar prozora kada se crta koristeći GPU"</string>
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"Treptanje hardverskih slojeva zelenom svjetlošću tokom ažuriranja"</string>
-    <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Od najboljeg ka najgorem: plavo, zeleno, svijetlo crveno, crveno"</string>
+    <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Od najboljeg ka najgorem: plavo, zeleno, svijetlocrveno, crveno"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Osvijetli kompletne površine prilikom ažuriranja"</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Prikaži ekran uz treptanje kada aplikacije vrše duge operacije u glavnoj niti"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Mjeri vrijeme izrade u adb ljuski dumpsys gfxinfo"</string>
@@ -486,7 +486,7 @@
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Dozvoli instalaciju aplikacija koje nisu iz Play trgovine"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Svi nepoznati izvori"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Vaši podaci na uređaju i lični podaci su više izloženi napadima aplikacija iz nepoznatih izvora. Saglasni ste da ste isključivo vi odgovorni za bilo kakvu štetu na uređaju ili gubitak podataka uslijed korištenja tih aplikacija."</string>
-    <string name="security_verify_apps_title" msgid="5787946958632254988">"Potvrdite aplikacije"</string>
+    <string name="security_verify_apps_title" msgid="5787946958632254988">"Potvrda aplikacija"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Zabrani ili upozori prije instalacije štetnih aplikacija"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Nikada"</string>
     <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"Za DRM sadržaj"</string>
@@ -521,14 +521,14 @@
     <string name="tts_rate_fast" msgid="3792863158623953072">"Brz"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"Veoma brz"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"Aktuelna tastatura"</string>
-    <string name="title_configure" msgid="6929522003149212388">"Konfiguriraj"</string>
+    <string name="title_configure" msgid="6929522003149212388">"Konfiguracija"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"Opcije tastature"</string>
     <string name="computing_size" msgid="2955133568424704042">"Računanje…"</string>
-    <string name="title_select_wifi_network" msgid="1038871400014761952">"Odaberite svoju Wi-Fi mrežu"</string>
+    <string name="title_select_wifi_network" msgid="1038871400014761952">"Odabir Wi-Fi mreže"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Preimenuj"</string>
     <string name="accessories_wifi_display_enable" msgid="4779506305656453262">"Wi-Fi ekran"</string>
     <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"Potreban je PIN kôd"</string>
-    <string name="whichApplication" msgid="8382179653567099571">"Završi radnju koristeći"</string>
+    <string name="whichApplication" msgid="8382179653567099571">"Završavanje radnje pomoću"</string>
     <string name="alwaysUseQuestion" msgid="7128459989232213727">"Želite li uvijek koristiti ovu opciju za ovu radnju?"</string>
     <string name="alwaysUseOption" msgid="1057645533268907906">"Uvijek koristi"</string>
     <string name="justOnceOption" msgid="6051458702672920102">"Samo ovaj put"</string>
@@ -550,7 +550,7 @@
     <string name="inputs_hdmi_control" msgid="2462240356665628563">"Upravljanje HDMI uređajima"</string>
     <string name="inputs_hdmi_control_desc" msgid="2300590479729796132">"Dozvoli TV-u upravljanje HDMI uređajima"</string>
     <string name="inputs_device_auto_off" msgid="7510049770946999285">"Automatsko isključivanje uređaja"</string>
-    <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Isključivanje HDMI uređaja s TV-om"</string>
+    <string name="inputs_device_auto_off_desc" msgid="2679638131351116942">"Isključivanje HDMI uređaja pomoću TV-a"</string>
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Automatsko uključivanje TV-a"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Uključi TV s HDMI uređajem"</string>
     <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
@@ -577,7 +577,7 @@
     <string name="restriction_location_enable_summary" msgid="4195349388342385870">"Omogućava aplikacijama korištenje vaših informacija o lokaciji"</string>
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Uđi u ograničeni profil"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Napusti ograničeni profil"</string>
-    <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Izbriši ograničeni profil"</string>
+    <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Brisanje ograničenog profila"</string>
     <string name="restricted_profile_create_title" msgid="1392190365829029390">"Kreiraj ograničeni profil"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Postavke"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Dozvoljene aplikacije"</string>
@@ -600,7 +600,7 @@
     <string name="pin_enter_again" msgid="1510456697040826496">"Ponovo unesite novi PIN kôd"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Unesite stari PIN kôd"</string>
     <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Unijeli ste pogrešan PIN kôd 5 puta.\nPokušajte ponovo za <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> s"</string>
-    <string name="pin_toast_wrong" msgid="4628358195224633248">"Pogrešan PIN kôd. Pokušajte ponov"</string>
+    <string name="pin_toast_wrong" msgid="4628358195224633248">"Pogrešan PIN kôd. Pokušajte ponovo"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Pokušajte ponovo. PIN kôd ne odgovara"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Unesite lozinku za mrežu <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Uspješno povezano"</string>
@@ -645,11 +645,11 @@
     <string name="privacy_backup_data" msgid="1796662583830120812">"Izrada sigurnosnih kopija podataka"</string>
     <string name="privacy_backup_account" msgid="9059939814827165020">"Račun za sigurnosno kopiranje"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Automatsko vraćanje"</string>
-    <string name="factory_reset_device" msgid="7422459553658815011">"Ponovo postavi uređaj"</string>
+    <string name="factory_reset_device" msgid="7422459553658815011">"Vrati uređaj na zadano"</string>
     <string name="factory_reset_description" msgid="5381170999141355891">"Ovim će se potpuno izbrisati svi podaci iz unutrašnje memorije uređaja, uključujući: vaš Google račun, podatke i postavke sistema i aplikacija i preuzete aplikacije."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Želite li izbrisati sve lične podatke i preuzete aplikacije? Ovu radnju ne možete opozvati!"</string>
-    <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Potpuno izbriši sve"</string>
-    <string name="select_device_name_title" msgid="5165800500130943604">"Odaberite ime za svoj uređaj <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Izbriši sve"</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Odaberite ime za svoj <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="6890879006777364213">"Dajte svom uređaju <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ime radi lakše identifikacije prilikom emitiranja ili povezivanja s drugih uređaja."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
@@ -659,7 +659,7 @@
   </string-array>
     <string name="custom_room" msgid="8655516733933892458">"Unesite prilagođeno ime…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Preimenuj ovaj uređaj <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="device_rename_description" msgid="2461752788563877107">"Trenutni naziv ovog uređaja <xliff:g id="DEVICEMODEL">%1$s</xliff:g> je \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Trenutno ime ovog uređaja <xliff:g id="DEVICEMODEL">%1$s</xliff:g> je \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"Promijeni"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Ne mijenjaj"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Odobrenja"</string>
@@ -667,7 +667,7 @@
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Aplikacije s odobrenjem: <xliff:g id="COUNT_0">%d</xliff:g> od <xliff:g id="COUNT_1">%d</xliff:g>"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"Zahtjev za dozvolu za Bluetooth"</string>
     <string name="security_patch" msgid="2131617390189164481">"Nivo sigurnosne zakrpe Androida"</string>
-    <string name="choose_application" msgid="5662960665577780353">"Odaberi aplikaciju"</string>
+    <string name="choose_application" msgid="5662960665577780353">"Odabir aplikacije"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Eksperimentalno)"</string>
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Ponovo pokreni uređaj u sigurnom načinu rada"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Želite li ponovo pokrenuti uređaj u sigurnom načinu rada?"</string>
