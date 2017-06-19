@@ -581,7 +581,6 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
             case CONNECT:
             case CONNECT_FAILED:
             case CONNECT_TIMEOUT:
-            case ENTER_PASSWORD:
             case KNOWN_NETWORK:
             case SAVE:
             case SAVE_FAILED:
@@ -591,6 +590,14 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
             case WPS:
                 // Delegate title to the WPSConnectionActivity. Use blank string to prevent
                 // talkback from announcing a misplaced title.
+                setTitle("");
+                return;
+            case ENTER_PASSWORD:
+                // IME screen; Let the IME handle announcements.
+                setTitle("");
+                return;
+            case ENTER_SSID:
+                // IME screen; Let the IME handle announcements.
                 setTitle("");
                 return;
             default:
