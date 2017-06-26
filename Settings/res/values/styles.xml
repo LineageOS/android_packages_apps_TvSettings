@@ -55,8 +55,8 @@
         <item name="wifi_signal_color">@color/setup_list_item</item>
         <item name="wps_color">@color/setup_list_item</item>
         <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowAnimationStyle">@style/SetupWindowAnimationStyle</item>
+        <item name="android:windowShowWallpaper">true</item>
     </style>
 
     <style name="Theme.Settings.Transparent">
