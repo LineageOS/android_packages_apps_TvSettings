@@ -26,8 +26,8 @@
     <string name="header_category_personal" msgid="8893959635328775096">"Osebno"</string>
     <string name="accounts_category_title" msgid="7591072907146317425">"Računi"</string>
     <string name="add_account" msgid="4098060223200619258">"Dodajanje računa"</string>
-    <string name="account_header_remove_account" msgid="3288957118207682685">"Odstranitev računa"</string>
-    <string name="account_sync" msgid="773808124331714965">"Izberite sinh. apl."</string>
+    <string name="account_header_remove_account" msgid="3288957118207682685">"Odstrani račun"</string>
+    <string name="account_sync" msgid="773808124331714965">"Izberite sinhronizirane aplikacije"</string>
     <string name="sync_now" msgid="8732244492880016471">"Sinhroniziraj"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Sinhronizacija ..."</string>
     <string name="last_synced" msgid="6178494892357077274">"Zadnja sinhronizacija: <xliff:g id="TIME">%1s</xliff:g>"</string>
@@ -232,7 +232,7 @@
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Polje vrat ne sme biti prazno"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Če je polje gostitelja prazno, pustite polje vrat prazno"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Vrata niso veljavna"</string>
-    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Strežnik proxy za HTTP lahko uporablja brskalnik, druge aplikacije pa ne."</string>
+    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Namestniški strežnik za HTTP lahko uporablja brskalnik, druge aplikacije pa ne."</string>
     <string name="proxy_port_description" msgid="6791098212244367568">"Vnesite veljavna vrata.\nPrimer: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Vnesite seznam izključenih domen, ločenih z vejico, ali pustite prazno.\nPrimer: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Vnesite veljavno ime gostitelja.\nPrimer: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -486,7 +486,7 @@
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Neznani viri"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Dovoli namestitev aplikacij iz virov, ki niso Trgovina Google Play"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Dovolitev neznanih virov"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Vaša naprava in osebni podatki so bolj ranljivi za napade aplikacij iz neznanih virov. Strinjate se, da ste sami odgovorni za morebitno škodo ali izgubo podatkov, do katere lahko pride zaradi uporabe teh aplikacij."</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Vaša naprava in osebni podatki so bolj ranljivi za napade aplikacij iz neznanih virov. Strinjate se, da ste sami odgovorni za morebitno poškodovanje naprave ali izgubo podatkov zaradi uporabe teh aplikacij."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Preverjanje aplikacij"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Ne dovoli namestitve ali opozori pred namestitvijo aplikacije, ki je lahko škodljiva"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Nikoli"</string>
@@ -612,7 +612,7 @@
     <string name="wifi_setup_save_success" msgid="4785799603638549254">"Shranjevanje je uspelo"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Različica <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Odpiranje"</string>
-    <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Prisilna ustavitev"</string>
+    <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Vsili ustavitev"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Če boste aplikacijo prisilno ustavili, morda ne bo pravilno delovala."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Odstrani"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Odstrani posodobitve"</string>
@@ -625,7 +625,7 @@
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Uporabljeno: <xliff:g id="SIZE">%1$s</xliff:g> – <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Počisti podatke"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Vsi podatki te aplikacije bodo trajno izbrisani.\nTo vključuje vse datoteke, nastavitve, račune, podatkovne zbirke ipd."</string>
-    <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Izbris privzetih nastavitev"</string>
+    <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Počisti privzete nastavitve"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Zagon te aplikacije za nekatera dejanja"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Ni privzetih nastavitev"</string>
     <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"Počisti predpomnilnik"</string>
@@ -641,8 +641,8 @@
     <string name="device_daydreams_test" msgid="9038920213402659591">"Začni zdaj"</string>
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"Čas začetka"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Ohranjevalnik zaslona se začne prikazovati po tem obdobju nedejavnosti. Če ni izbran noben ohranjevalnik zaslona, se zaslon izklopi."</string>
-    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Po toliko nedejavnosti <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Preklop naprave v stanje pripravljenosti"</string>
+    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Po toliko nedejavnosti: <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Preklop v stanje pripravljenosti"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Po tem obdobju nedejavnosti se zaslon izklopi."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Trenutno niso v nobenem računu shranjeni varnostno kopirani podatki"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
