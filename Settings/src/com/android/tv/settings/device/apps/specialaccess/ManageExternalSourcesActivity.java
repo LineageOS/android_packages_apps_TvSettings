@@ -18,6 +18,7 @@ package com.android.tv.settings.device.apps.specialaccess;
 
 import android.app.Fragment;
 
+import com.android.tv.settings.BaseSettingsFragment;
 import com.android.tv.settings.TvSettingsActivity;
 import com.android.tv.settings.system.SecurityFragment;
 
@@ -32,7 +33,26 @@ public class ManageExternalSourcesActivity extends TvSettingsActivity {
             finish();
             return null;
         } else {
-            return new ManageExternalSources();
+            return SettingsFragment.newInstance();
+        }
+    }
+
+    /**
+     * Wrapper fragment for ManageExternalSources
+     */
+    public static class SettingsFragment extends BaseSettingsFragment {
+
+        /**
+         * @return new instance of {@link SettingsFragment}
+         */
+        public static SettingsFragment newInstance() {
+            return new SettingsFragment();
+        }
+
+        @Override
+        public void onPreferenceStartInitialScreen() {
+            final ManageExternalSources fragment = new ManageExternalSources();
+            startPreferenceFragment(fragment);
         }
     }
 }
