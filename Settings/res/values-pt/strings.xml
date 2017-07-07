@@ -30,7 +30,7 @@
     <string name="account_sync" msgid="773808124331714965">"Escolher apps sincronizados"</string>
     <string name="sync_now" msgid="8732244492880016471">"Sincronizar agora"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Sincronizando…"</string>
-    <string name="last_synced" msgid="6178494892357077274">"Sincronizado pela última vez em <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"Última sincronização: <xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Desativado"</string>
     <string name="account_remove" msgid="4313580520737295272">"Remover conta"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Não é possível remover a conta"</string>
@@ -68,12 +68,12 @@
     <string name="accessory_state_canceled" msgid="4419328837733619447">"Cancelado"</string>
     <string name="accessory_state_paired" msgid="1959238931866401476">"Pareado"</string>
     <string name="accessory_options" msgid="4799658564005710297">"Acessório"</string>
-    <string name="accessory_unpair" msgid="8242725516604465355">"Cancelar pareamento"</string>
+    <string name="accessory_unpair" msgid="8242725516604465355">"Desparear"</string>
     <string name="accessory_battery" msgid="7021788232835772126">"Bateria <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
     <string name="accessory_unpairing" msgid="7568241162181184667">"Cancelando pareamento do dispositivo…"</string>
     <string name="accessory_connected" msgid="2156489304110030393">"Conectado"</string>
     <string name="accessory_change_name" msgid="8958916008739792785">"Alterar nome"</string>
-    <string name="accessory_change_name_title" msgid="4630819456923061184">"Digitar um novo nome para este acessório"</string>
+    <string name="accessory_change_name_title" msgid="4630819456923061184">"Dar um novo nome ao acessório"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"Procurando acessórios…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Antes de fazer o pareamento dos dispositivos Bluetooth, certifique-se de que eles estejam no modo de pareamento"</string>
     <string name="accessories_autopair_msg" msgid="8618829246837821752">"Foi encontrado um dispositivo e ele será pareado automaticamente em <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundos"</string>
@@ -162,7 +162,7 @@
     <string name="title_ip_address" msgid="4533523100923004711">"Endereço IP"</string>
     <string name="title_ssid" msgid="4858945903642469730">"Insira o nome da rede Wi-Fi"</string>
     <string name="title_internet_connection" msgid="8710084774588697646">"Conexão de Internet"</string>
-    <string name="connected" msgid="7563100162902079938">"Conectada"</string>
+    <string name="connected" msgid="7563100162902079938">"Conectado"</string>
     <string name="not_connected" msgid="6858480380326923017">"Não conectado"</string>
     <string name="wifi_setting_header_other_options" msgid="3638677601577777216">"Outras opções"</string>
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"Ver tudo"</string>
@@ -174,7 +174,7 @@
     <string name="wps_network" msgid="1052148085426051873">"Conectar via WPS"</string>
     <string name="other_network" msgid="3539704463099544488">"Outra rede..."</string>
     <string name="skip_network" msgid="6380260543776712357">"Ignorar"</string>
-    <string name="wifi_security_type_none" msgid="6622722325237471927">"Nenhum"</string>
+    <string name="wifi_security_type_none" msgid="6622722325237471927">"Nenhuma"</string>
     <string name="wifi_security_type_wep" msgid="3836879161029325671">"WEP"</string>
     <string name="wifi_security_type_wpa" msgid="4948411057925876780">"WPA/WPA2 PSK"</string>
     <string name="wifi_security_type_eap" msgid="1106303698253987745">"802.1x EAP"</string>
@@ -184,7 +184,7 @@
     <string name="title_wifi_could_not_connect_timeout" msgid="5158184646985406394">"Não foi possível encontrar <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="4836595650380723944">"A senha do Wi-Fi é inválida"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="328274688839033015">"A rede Wi-Fi não aceitou conexão"</string>
-    <string name="title_wifi_advanced_options" msgid="5389467736846644832">"Configurar proxy e configurações de IP de <xliff:g id="SSID">%1$s</xliff:g>?"</string>
+    <string name="title_wifi_advanced_options" msgid="5389467736846644832">"Definir configurações de IP e proxy de <xliff:g id="SSID">%1$s</xliff:g>?"</string>
     <string name="title_wifi_proxy_settings" msgid="7728120764469991303">"Configurações de proxy"</string>
     <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"Nome do host do proxy:"</string>
     <string name="title_wifi_proxy_port" msgid="9194893429116021337">"Porta do proxy:"</string>
@@ -232,7 +232,7 @@
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"A porta não é válida"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"O proxy HTTP é usado pelo navegador, mas não pode ser utilizado por outros apps"</string>
     <string name="proxy_port_description" msgid="6791098212244367568">"Informe uma porta válida.\nExemplo: <xliff:g id="ID_1">8080</xliff:g>"</string>
-    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Digite uma lista de domínios excluídos separados por vírgulas ou deixe em branco.\nExemplo: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Digite os domínios excluídos com vírgulas ou deixe em branco.\nExemplo: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Informe um nome de host válido.\nExemplo: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Rede conectada"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"A rede não está conectada"</string>
@@ -374,7 +374,7 @@
     <string name="accessibility_shortcut_description" msgid="3241203131630578108">"Função: pressionar o botão home e o de seleção juntos por 3s inicia um recurso de acessibilidade."</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Legendas"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Configurações para sobreposição de texto de legenda no vídeo"</string>
-    <string name="captions_display" msgid="735692527287125548">"Exibição"</string>
+    <string name="captions_display" msgid="735692527287125548">"Exibir legendas"</string>
     <string name="captions_display_on" msgid="1989009878719500520">"Ativar"</string>
     <string name="captions_display_off" msgid="496953007835201523">"Desativar"</string>
     <string name="display_options" msgid="5504549024985225774">"Opções de exibição"</string>
@@ -593,12 +593,12 @@
     <string name="pin_enter_pin" msgid="821552376577935497">"Insira o PIN"</string>
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Defina um novo PIN"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"Digite o novo PIN novamente"</string>
-    <string name="pin_enter_old_pin" msgid="851029058127630869">"Insira o PIN antigo"</string>
+    <string name="pin_enter_old_pin" msgid="851029058127630869">"Digite o PIN antigo"</string>
     <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Um PIN incorreto foi inserido cinco vezes.\nTente novamente em <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> segundos."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN incorreto. Tente novamente."</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Tente novamente, o PIN não corresponde"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Insira a senha para <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Conectada"</string>
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Conectado"</string>
     <string name="wifi_setup_save_success" msgid="4785799603638549254">"Salva"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Versão <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Abrir"</string>
@@ -625,7 +625,7 @@
     <string name="settings_ok" msgid="3321630456511355983">"OK"</string>
     <string name="settings_cancel" msgid="304280412158061225">"Cancelar"</string>
     <string name="settings_on" msgid="6892236264945435013">"Ativadas"</string>
-    <string name="settings_off" msgid="449272161738237637">"Desativadas"</string>
+    <string name="settings_off" msgid="449272161738237637">"Desativado"</string>
     <string name="device_daydreams_none" msgid="2767107052779579259">"Desativar tela"</string>
     <string name="device_daydreams_select" msgid="2112338101206187695">"Protetor de tela"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Começar agora"</string>
@@ -645,7 +645,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Apagar todas as suas informações pessoais e os apps transferidos por download? Não é possível reverter esta ação."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Apagar tudo"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Escolher um nome para seu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"Dê um nome ao seu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> para ajudar a identificá-lo em transmissões ou ao se conectar com ele a partir de outros dispositivos."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Dê um nome ao seu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> para identificá-lo em transmissões ou ao se conectar com ele a partir de outros dispositivos."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"TV da sala de estar"</item>

@@ -73,7 +73,7 @@
     <string name="accessory_unpairing" msgid="7568241162181184667">"Disaccoppiamento dispositivo…"</string>
     <string name="accessory_connected" msgid="2156489304110030393">"Connesso"</string>
     <string name="accessory_change_name" msgid="8958916008739792785">"Cambia nome"</string>
-    <string name="accessory_change_name_title" msgid="4630819456923061184">"Inserisci un nuovo nome per l\'accessorio"</string>
+    <string name="accessory_change_name_title" msgid="4630819456923061184">"Inserisci un nuovo nome"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"Ricerca accessori…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Prima di accoppiare i tuoi dispositivi Bluetooth, assicurati che siano in modalità di accoppiamento."</string>
     <string name="accessories_autopair_msg" msgid="8618829246837821752">"È stato trovato un dispositivo che verrà accoppiato automaticamente fra <xliff:g id="COUNTDOWN">%1$s</xliff:g> secondi."</string>
@@ -184,7 +184,7 @@
     <string name="title_wifi_could_not_connect_timeout" msgid="5158184646985406394">"Impossibile trovare <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="4836595650380723944">"Password Wi-Fi non valida"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="328274688839033015">"La rete Wi-Fi non ha accettato la connessione"</string>
-    <string name="title_wifi_advanced_options" msgid="5389467736846644832">"Configurare le impostazioni Proxy e IP di <xliff:g id="SSID">%1$s</xliff:g>?"</string>
+    <string name="title_wifi_advanced_options" msgid="5389467736846644832">"Configurare le impostazioni proxy e IP di <xliff:g id="SSID">%1$s</xliff:g>?"</string>
     <string name="title_wifi_proxy_settings" msgid="7728120764469991303">"Impostazioni proxy"</string>
     <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"Nome host proxy:"</string>
     <string name="title_wifi_proxy_port" msgid="9194893429116021337">"Porta proxy:"</string>
@@ -344,7 +344,7 @@
     <item msgid="2475903014233987786">"Utilizza l\'ora di trasmissione fornita in streaming"</item>
     <item msgid="150957081326946463">"Non attiva"</item>
   </string-array>
-    <string name="system_location" msgid="502463575930545806">"Luogo"</string>
+    <string name="system_location" msgid="502463575930545806">"Geolocalizzazione"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"Consenti alle applicazioni che hanno chiesto la tua autorizzazione di utilizzare le informazioni sulla tua posizione"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"Consenso alla geolocalizzazione"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"Modalità"</string>
@@ -482,11 +482,11 @@
     <string name="agree" msgid="1235622082275451350">"Accetta"</string>
     <string name="disagree" msgid="9170636026862400981">"Non accetto"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Fonti sconosciute"</string>
-    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Consenti l\'installazione di applicazioni da fonti diverse da Play Store"</string>
+    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Consenti l\'installazione di app da fonti diverse da Play Store"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Consenti fonti sconosciute"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Il tuo dispositivo e i tuoi dati personali sono più vulnerabili agli attacchi da parte di applicazioni da fonti sconosciute. Accetti di essere l\'unico responsabile per eventuali danni al dispositivo o perdite di dati che potrebbero derivare dall\'utilizzo di queste applicazioni."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Verifica app"</string>
-    <string name="security_verify_apps_desc" msgid="1456317893117818733">"Non consentire o avvisa prima dell\'installazione di applicazioni che potrebbero causare danni"</string>
+    <string name="security_verify_apps_desc" msgid="1456317893117818733">"Non consentire o avvisa prima dell\'installazione di app che potrebbero essere dannose"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Mai"</string>
     <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"Per contenuti DRM"</string>
     <string name="system_hdcp_checking_always" msgid="7264575337360957746">"Sempre"</string>
@@ -598,7 +598,7 @@
     <string name="pin_toast_wrong" msgid="4628358195224633248">"PIN errato. Riprova"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Riprova, il PIN non corrisponde"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Inserisci la password di <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Connesso correttamente"</string>
+    <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Connessione effettuata"</string>
     <string name="wifi_setup_save_success" msgid="4785799603638549254">"Salvataggio riuscito"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Versione <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Apri"</string>
@@ -653,7 +653,7 @@
     <item msgid="1389347662738182100">"TV della camera da letto"</item>
   </string-array>
     <string name="custom_room" msgid="8655516733933892458">"Inserisci nome personalizzato…"</string>
-    <string name="device_rename_title" msgid="2629557295786267185">"Modifica il nome di questo dispositivo <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"Cambia nome al dispositivo <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Il nome attuale di questo dispositivo <xliff:g id="DEVICEMODEL">%1$s</xliff:g> è \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"Cambia"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Non cambiare"</string>
