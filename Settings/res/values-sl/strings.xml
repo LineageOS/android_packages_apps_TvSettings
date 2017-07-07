@@ -19,7 +19,7 @@
     <string name="settings_app_name" msgid="4243616485579754401">"Nastavitve"</string>
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"Nastavitve"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"Omrežje"</string>
-    <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Omejen profil"</string>
+    <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Omejeni profil"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Naprava"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Nastavitve"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Daljinsko upravljanje in dodatki"</string>
@@ -72,8 +72,8 @@
     <string name="accessory_battery" msgid="7021788232835772126">"Akumulator: <xliff:g id="PERCENTAGE">%1$d</xliff:g> %%"</string>
     <string name="accessory_unpairing" msgid="7568241162181184667">"Preklic seznanitve z napravo …"</string>
     <string name="accessory_connected" msgid="2156489304110030393">"Povezano"</string>
-    <string name="accessory_change_name" msgid="8958916008739792785">"Spreminjanje imena"</string>
-    <string name="accessory_change_name_title" msgid="4630819456923061184">"Vnesite novo ime za ta dodatek"</string>
+    <string name="accessory_change_name" msgid="8958916008739792785">"Spremeni ime"</string>
+    <string name="accessory_change_name_title" msgid="4630819456923061184">"Vnesite novo ime za to dodatno opremo"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"Iskanje dodatne opreme …"</string>
     <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Pred seznanjanjem naprav Bluetooth poskrbite, da sta v načinu seznanjanja"</string>
     <string name="accessories_autopair_msg" msgid="8618829246837821752">"Naprava je bila najdena in bo samodejno seznanjena čez <xliff:g id="COUNTDOWN">%1$s</xliff:g> s"</string>
@@ -252,7 +252,7 @@
     <string name="storage_music_usage" msgid="3509327591741514083">"Zvok"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Razno"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Predpomnjeni podatki"</string>
-    <string name="storage_eject" msgid="113476702798691558">"Izvrženje"</string>
+    <string name="storage_eject" msgid="113476702798691558">"Izvrzi"</string>
     <string name="storage_format" msgid="3759273736493279595">"Izbris in formatiranje"</string>
     <string name="storage_format_as_private" msgid="4169495230765116075">"Izbris in formatiranje kot shramba naprave"</string>
     <string name="storage_format_as_public" msgid="8568317076021814054">"Izbris in formatiranje kot izmenljiva shramba"</string>
@@ -306,10 +306,10 @@
     <string name="storage_wizard_forget_confirm_description" msgid="4264263982217111372">"Če uporabite možnost »Pozabi«, bodo za vedno izgubljeni vsi podatki, shranjeni na tem pogonu. Ali želite nadaljevati?"</string>
     <string name="storage_wizard_forget_action" msgid="2532812620271112355">"Pozabi"</string>
     <string name="storage_new_title" msgid="3098495209500607438">"Pogon USB je povezan"</string>
-    <string name="storage_new_action_browse" msgid="9041125660441839453">"Brskanje"</string>
-    <string name="storage_new_action_adopt" msgid="880224317112988974">"Nastavitev kot shramba naprave"</string>
+    <string name="storage_new_action_browse" msgid="9041125660441839453">"Prebrskaj"</string>
+    <string name="storage_new_action_adopt" msgid="880224317112988974">"Nastavi kot shrambo naprave"</string>
     <string name="storage_new_action_format_public" msgid="5604328981214071670">"Nastavitev kot izmenljiva shramba"</string>
-    <string name="storage_new_action_eject" msgid="4069294152676217949">"Izvrženje"</string>
+    <string name="storage_new_action_eject" msgid="4069294152676217949">"Izvrzi"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"Pogon <xliff:g id="NAME">%1$s</xliff:g> je odstranjen."</string>
     <string name="storage_missing_description" msgid="8400374014342069781">"Nekatere aplikacije ne bodo na voljo ali ne bodo pravilno delovale, dokler ne bo povezava s pogonom znova vzpostavljena."</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"Ni dovolj prostora za shranjevanje."</string>
@@ -411,9 +411,9 @@
     <string name="color_cyan" msgid="796226330055745">"Cianova"</string>
     <string name="color_yellow" msgid="1023390829879874964">"Rumena"</string>
     <string name="color_magenta" msgid="6395786485839439122">"Škrlatna"</string>
-    <string name="system_accessibility_status" msgid="6150600992901856367">"Omogočanje"</string>
+    <string name="system_accessibility_status" msgid="6150600992901856367">"Omogoči"</string>
     <string name="system_accessibility_config" msgid="3216531917536720277">"Konfiguracija"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Želite uporabiti storitev <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Želite uporabiti <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"<xliff:g id="SERVICE">%1$s</xliff:g> lahko zbere vse besedilo, ki ga vnesete, razen gesel. To obsega tudi osebne podatke, na primer številke kreditnih kartic."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"Želite izklopiti storitev <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Če izberete »V redu«, izklopite storitev <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
@@ -573,7 +573,7 @@
       <item quantity="other">Nepovezani vhodi</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Omejitev dostopa do aplikacij in druge vsebine v računu"</string>
-    <string name="user_new_profile_name" msgid="336521054830056189">"Omejen profil"</string>
+    <string name="user_new_profile_name" msgid="336521054830056189">"Omejeni profil"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"Pod nadzorom aplikacije <xliff:g id="APP">%1$s</xliff:g>"</string>
     <string name="app_not_supported_in_limited" msgid="6818309827329010677">"Ta aplikacija ni podprta za profile z omejitvami"</string>
     <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"Ta aplikacija lahko dostopa do vaših računov"</string>
@@ -601,9 +601,9 @@
     <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"Če želite gledati ta kanal, vnesite kodo PIN"</string>
     <string name="pin_enter_unlock_program" msgid="52453773316071511">"Če želite gledati ta program, vnesite kodo PIN"</string>
     <string name="pin_enter_pin" msgid="821552376577935497">"Vnos kode PIN"</string>
-    <string name="pin_enter_new_pin" msgid="4788218421265924211">"Nastavitev nove kode PIN"</string>
-    <string name="pin_enter_again" msgid="1510456697040826496">"Vnovični vnos nove kode PIN"</string>
-    <string name="pin_enter_old_pin" msgid="851029058127630869">"Vnos stare kode PIN"</string>
+    <string name="pin_enter_new_pin" msgid="4788218421265924211">"Nastavite novo kodo PIN"</string>
+    <string name="pin_enter_again" msgid="1510456697040826496">"Znova vnesite novo kodo PIN"</string>
+    <string name="pin_enter_old_pin" msgid="851029058127630869">"Vnesite staro kodo PIN"</string>
     <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Petkrat ste vnesli napačno kodo PIN.\nPoskusite znova čez <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> s."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Napačna koda PIN, poskusite znova"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Poskusite znova. Koda PIN se ne ujema."</string>
