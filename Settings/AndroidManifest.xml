@@ -597,10 +597,16 @@
 
         <activity android:name=".device.apps.specialaccess.ManageExternalSourcesActivity"
                 android:label="@string/install_other_apps"
+                android:theme="@style/Theme.Settings.Transparent"
                 android:taskAffinity="">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.MANAGE_UNKNOWN_APP_SOURCES" />
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.MANAGE_UNKNOWN_APP_SOURCES" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="package" />
             </intent-filter>
         </activity>
 
