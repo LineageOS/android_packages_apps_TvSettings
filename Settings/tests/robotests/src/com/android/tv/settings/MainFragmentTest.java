@@ -16,12 +16,19 @@
 
 package com.android.tv.settings;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.support.v7.preference.Preference;
 
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
@@ -68,5 +75,28 @@ public class MainFragmentTest {
         mMainFragment.updateDeveloperOptions();
         verify(developerPref, atLeastOnce()).setVisible(true);
         verify(developerPref, never()).setVisible(false);
+    }
+
+    @Test
+    public void testUpdateCastSettings() {
+        final Preference castPref = spy(Preference.class);
+        doReturn(castPref).when(mMainFragment).findPreference(MainFragment.KEY_CAST_SETTINGS);
+        final Intent intent = new Intent("com.google.android.settings.CAST_RECEIVER_SETTINGS");
+        doReturn(intent).when(castPref).getIntent();
+
+        final ResolveInfo resolveInfo = new ResolveInfo();
+        resolveInfo.resolvePackageName = "com.test.CastPackage";
+        final ActivityInfo activityInfo = mock(ActivityInfo.class);
+        doReturn("Test Name").when(activityInfo).loadLabel(any(PackageManager.class));
+        resolveInfo.activityInfo = activityInfo;
+        final ApplicationInfo applicationInfo = new ApplicationInfo();
+        applicationInfo.flags = ApplicationInfo.FLAG_SYSTEM;
+        activityInfo.applicationInfo = applicationInfo;
+        RuntimeEnvironment.getRobolectricPackageManager().addResolveInfoForIntent(
+                intent, resolveInfo);
+
+        mMainFragment.updateCastSettings();
+
+        verify(castPref, atLeastOnce()).setTitle("Test Name");
     }
 }

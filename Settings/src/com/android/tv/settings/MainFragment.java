@@ -74,7 +74,8 @@ public class MainFragment extends LeanbackPreferenceFragment {
     private static final String KEY_SOUNDS = "sound_effects";
     private static final String KEY_GOOGLE_SETTINGS = "google_settings";
     private static final String KEY_HOME_SETTINGS = "home";
-    private static final String KEY_CAST_SETTINGS = "cast";
+    @VisibleForTesting
+    static final String KEY_CAST_SETTINGS = "cast";
     private static final String KEY_SPEECH_SETTINGS = "speech";
     private static final String KEY_SEARCH_SETTINGS = "search";
     private static final String KEY_ACCOUNTS_CATEGORY = "accounts";
@@ -162,6 +163,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
         updateDeveloperOptions();
         updateSounds();
         updateGoogleSettings();
+        updateCastSettings();
 
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS));
@@ -442,6 +444,26 @@ public class MainFragment extends LeanbackPreferenceFragment {
         }
     }
 
+    @VisibleForTesting
+    void updateCastSettings() {
+        final Preference castPref = findPreference(KEY_CAST_SETTINGS);
+        if (castPref != null) {
+            final ResolveInfo info = systemIntentIsHandled(getContext(), castPref.getIntent());
+            if (info != null) {
+                try {
+                    final Context targetContext = getContext()
+                            .createPackageContext(info.resolvePackageName != null
+                                    ? info.resolvePackageName : info.activityInfo.packageName, 0);
+                    castPref.setIcon(targetContext.getDrawable(info.iconResourceId));
+                } catch (Resources.NotFoundException | PackageManager.NameNotFoundException
+                        | SecurityException e) {
+                    Log.e(TAG, "Cast settings icon not found", e);
+                }
+                castPref.setTitle(info.activityInfo.loadLabel(getContext().getPackageManager()));
+            }
+        }
+    }
+
     private void updateGoogleSettings() {
         final Preference googleSettingsPref = findPreference(KEY_GOOGLE_SETTINGS);
         if (googleSettingsPref != null) {
@@ -451,8 +473,8 @@ public class MainFragment extends LeanbackPreferenceFragment {
             if (info != null) {
                 try {
                     final Context targetContext = getContext()
-                            .createPackageContext(info.resolvePackageName != null ?
-                                    info.resolvePackageName : info.activityInfo.packageName, 0);
+                            .createPackageContext(info.resolvePackageName != null
+                                    ? info.resolvePackageName : info.activityInfo.packageName, 0);
                     googleSettingsPref.setIcon(targetContext.getDrawable(info.iconResourceId));
                 } catch (Resources.NotFoundException | PackageManager.NameNotFoundException
                         | SecurityException e) {
