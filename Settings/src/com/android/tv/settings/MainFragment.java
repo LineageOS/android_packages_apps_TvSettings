@@ -35,6 +35,7 @@ import android.media.tv.TvInputInfo;
 import android.media.tv.TvInputManager;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.support.annotation.VisibleForTesting;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
@@ -58,7 +59,8 @@ import java.util.Set;
 public class MainFragment extends LeanbackPreferenceFragment {
     private static final String TAG = "MainFragment";
 
-    private static final String KEY_DEVELOPER = "developer";
+    @VisibleForTesting
+    static final String KEY_DEVELOPER = "developer";
     private static final String KEY_LOCATION = "location";
     private static final String KEY_SECURITY = "security";
     private static final String KEY_USAGE = "usageAndDiag";
@@ -82,7 +84,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
 
     private boolean mInputSettingNeeded;
 
-    private Preference mDeveloperPref;
     private PreferenceGroup mAccessoriesGroup;
     private PreferenceGroup mAccountsGroup;
     private Preference mAddAccessory;
@@ -126,7 +127,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
         } else {
             setPreferencesFromResource(R.xml.main_prefs, null);
         }
-        mDeveloperPref = findPreference(KEY_DEVELOPER);
         mAccessoriesGroup = (PreferenceGroup) findPreference(KEY_ACCESSORIES);
         mAddAccessory = findPreference(KEY_ADD_ACCESSORY);
         mNetworkPref = findPreference(KEY_NETWORK);
@@ -365,13 +365,15 @@ public class MainFragment extends LeanbackPreferenceFragment {
         }
     }
 
-    private void updateDeveloperOptions() {
-        if (mDeveloperPref == null) {
+    @VisibleForTesting
+    void updateDeveloperOptions() {
+        final Preference developerPref = findPreference(KEY_DEVELOPER);
+        if (developerPref == null) {
             return;
         }
 
         final boolean developerEnabled = PreferenceUtils.isDeveloperEnabled(getContext());
-        mDeveloperPref.setVisible(developerEnabled);
+        developerPref.setVisible(developerEnabled);
     }
 
     private void updateSounds() {
