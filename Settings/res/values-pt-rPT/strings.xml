@@ -115,7 +115,7 @@
     <string name="about_serial" msgid="2723560490027171187">"Número de série"</string>
     <string name="about_build" msgid="9148789767199785676">"Compilação"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
-      <item quantity="one">You are now <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steps away from being a developer</item>
+      <item quantity="one">Está agora a <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> passo de se tornar um programador</item>
       <item quantity="other">Está agora a <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> passos de se tornar um programador</item>
     </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Anúncios"</string>
@@ -553,15 +553,15 @@
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Ligação automática TV ativada"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Ligue a TV com o dispositivo HDMI"</string>
     <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
-      <item quantity="one">Connected Inputs</item>
+      <item quantity="one">Entrada ligada</item>
       <item quantity="other">Entradas ligadas</item>
     </plurals>
     <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
-      <item quantity="one">Standby Inputs</item>
+      <item quantity="one">Entrada em espera</item>
       <item quantity="other">Entradas em espera</item>
     </plurals>
     <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
-      <item quantity="one">Not Connected Inputs</item>
+      <item quantity="one">Entrada não ligada</item>
       <item quantity="other">Entradas não ligadas</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Restringir o acesso a aplicações e a outro conteúdo na sua conta"</string>
@@ -578,7 +578,7 @@
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Definições"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Aplicações autorizadas"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
-      <item quantity="one">%d apps allowed</item>
+      <item quantity="one">1 aplicação permitida</item>
       <item quantity="other">%d aplicações permitidas</item>
     </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Permitido"</string>
@@ -670,12 +670,8 @@
     <string name="capturing_bugreport" msgid="3291125403411239592">"A capturar o relatório de erro"</string>
     <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Teclados virtuais disponíveis"</string>
     <string name="manage_keyboards" msgid="1905379263117016795">"Gerir teclados"</string>
-    <!-- no translation found for app_permission_summary_allowed (1618833359547333078) -->
-    <skip />
-    <!-- no translation found for app_permission_summary_not_allowed (3667663331476577913) -->
-    <skip />
-    <!-- no translation found for usage_access (1914242907684452328) -->
-    <skip />
-    <!-- no translation found for usage_access_description (6290001769893747651) -->
-    <skip />
+    <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Permitida"</string>
+    <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Não permitida"</string>
+    <string name="usage_access" msgid="1914242907684452328">"Acesso de utilização"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"O acesso de utilização permite a uma aplicação monitorizar que outras aplicações está a utilizar e com que frequência, bem como o operador e as definições de idioma, entre outros detalhes."</string>
 </resources>
