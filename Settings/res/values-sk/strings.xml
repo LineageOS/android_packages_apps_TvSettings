@@ -162,7 +162,7 @@
     <string name="title_mac_address" msgid="3428401680168668544">"Adresa MAC"</string>
     <string name="title_signal_strength" msgid="205478650262078041">"Sila signálu"</string>
     <string name="title_ip_address" msgid="4533523100923004711">"Adresa IP"</string>
-    <string name="title_ssid" msgid="4858945903642469730">"Zadajte názov siete Wi–Fi"</string>
+    <string name="title_ssid" msgid="4858945903642469730">"Zadajte názov siete Wi-Fi"</string>
     <string name="title_internet_connection" msgid="8710084774588697646">"Internetové pripojenie"</string>
     <string name="connected" msgid="7563100162902079938">"Pripojené"</string>
     <string name="not_connected" msgid="6858480380326923017">"Nepripojené"</string>
@@ -436,7 +436,7 @@
     <string name="system_always_check" msgid="1866566828098009853">"Vždy kontrolovať"</string>
     <string name="system_bt_hci_log" msgid="2425757846046504431">"Zaznamenávanie prostredníctvom protokolu Bluetooth HCI"</string>
     <string name="system_email_address" msgid="8669468986250302378">"E-mailová adresa"</string>
-    <string name="system_usb_debugging" msgid="3777895294421924323">"Ladenie USB"</string>
+    <string name="system_usb_debugging" msgid="3777895294421924323">"Ladenie cez USB"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"Povoliť simulované polohy"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"Vybrať aplikáciu na ladenie"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Čakať na ladiaci nástroj"</string>
@@ -631,14 +631,14 @@
     <string name="settings_ok" msgid="3321630456511355983">"OK"</string>
     <string name="settings_cancel" msgid="304280412158061225">"Zrušiť"</string>
     <string name="settings_on" msgid="6892236264945435013">"Zapnúť"</string>
-    <string name="settings_off" msgid="449272161738237637">"Vypnúť"</string>
+    <string name="settings_off" msgid="449272161738237637">"Vypnuté"</string>
     <string name="device_daydreams_none" msgid="2767107052779579259">"Vypnúť obrazovku"</string>
     <string name="device_daydreams_select" msgid="2112338101206187695">"Šetrič obrazovky"</string>
-    <string name="device_daydreams_test" msgid="9038920213402659591">"Začať"</string>
-    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Čas spustenia"</string>
+    <string name="device_daydreams_test" msgid="9038920213402659591">"Spustiť"</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Čas do spustenia"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Šetrič obrazovky sa spustí po tomto čase nečinnosti. Ak nie je vybraný žiadny šetrič obrazovky, obrazovka sa vypne."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Po nečinnosti trvajúcej <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Prepnúť zariadenie do režimu spánku"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Čas do režimu spánku"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Po tomto čase bez aktivity sa vypne obrazovka."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"V súčasnosti neuchováva zálohované údaje žiadny účet"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -664,7 +664,7 @@
     <string name="change_setting" msgid="2047402388786162246">"Zmeniť"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Nemeniť"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Povolenia"</string>
-    <string name="device_apps_permissions" msgid="2966387603529725982">"Povolenia aplikácie"</string>
+    <string name="device_apps_permissions" msgid="2966387603529725982">"Povolenia aplikácií"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Povolené aplikácie: <xliff:g id="COUNT_0">%d</xliff:g> z <xliff:g id="COUNT_1">%d</xliff:g>"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"Žiadosť o povolenie použiť rozhranie Bluetooth"</string>
     <string name="security_patch" msgid="2131617390189164481">"Úroveň opráv zabezpečenia systému"</string>
@@ -676,4 +676,8 @@
     <string name="capturing_bugreport" msgid="3291125403411239592">"Hlásenie chyby sa zaznamenáva"</string>
     <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Dostupné virtuálne klávesnice"</string>
     <string name="manage_keyboards" msgid="1905379263117016795">"Spravovať klávesnice"</string>
+    <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Povolené"</string>
+    <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Nepovolené"</string>
+    <string name="usage_access" msgid="1914242907684452328">"Prístup k dátam o využití"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"Prístup k dátam o využití umožňuje aplikácii sledovať, aké ďalšie aplikácie používate, ako často ich používate, a taktiež nastavenia jazyka, operátora a ďalšie podrobnosti."</string>
 </resources>
