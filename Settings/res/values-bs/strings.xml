@@ -81,7 +81,7 @@
     <string name="bluetooth_pairing_request" msgid="4523088117471287665">"Zahtjev za uparivanje putem Bluetootha"</string>
     <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"Za uparivanje s uređajem: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, provjerite prikazuje li ovaj pristupni kôd: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8234127565393932499">"Šalje: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Želite li upariti s ovim uređajem?"</string>
-    <string name="bluetooth_display_passkey_pin_msg" msgid="8951451728250058901">"Za uparivanje s uređajem: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Napišite na njemu: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, zatim pritisnite tipku Return ili Enter."</string>
+    <string name="bluetooth_display_passkey_pin_msg" msgid="8951451728250058901">"Za uparivanje s uređajem: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Upišite na njemu: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, zatim pritisnite tipku Return ili Enter."</string>
     <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"Za uparivanje s uređajem: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Upišite traženi PIN kôd uređaja:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="7980787196089653577">"Da uparite s uređajem: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Unesite traženi pristupni kôd uređaja:"</string>
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Obično 0000 ili 1234"</string>
@@ -166,7 +166,7 @@
     <string name="connected" msgid="7563100162902079938">"Povezano"</string>
     <string name="not_connected" msgid="6858480380326923017">"Nije povezano"</string>
     <string name="wifi_setting_header_other_options" msgid="3638677601577777216">"Ostale opcije"</string>
-    <string name="wifi_setting_see_all" msgid="3217814666041974878">"Vidi sve"</string>
+    <string name="wifi_setting_see_all" msgid="3217814666041974878">"Prikaži sve"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"Vidi manje"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Dostupne mreže"</string>
     <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"Poveži putem WPS-a"</string>
@@ -279,7 +279,7 @@
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Nakon formatiranja, ovaj USB disk možete koristiti na drugim uređajima. Svi podaci će se potpuno izbrisati. Predlažemo da prvo napravite sigurnosnu kopiju premještanjem aplikacija na pohranu drugog uređaja."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"Formatiranje USB diska…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"Ovo će kratko potrajati. Nemojte uklanjati disk."</string>
-    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Izaberite pohranu na koju ćete migrirati podatke"</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="4247584708563925746">"Odaberite pohranu na koju ćete migrirati podatke"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="369820166257265495">"Premjestite podatke na uređaj <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="2916497196106413598">"Premjestite svoje fotografije, fajlove i podatke iz aplikacija na uređaj <xliff:g id="NAME">%1$s</xliff:g>. To može potrajati nekoliko minuta. Neke aplikacije neće ispravno raditi za vrijeme premještanja."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="512504294066473542">"Premjesti sada"</string>
@@ -637,7 +637,7 @@
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"Kada početi"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Čuvar ekrana se uključuje nakon ovog period neaktivnosti. Ako nije izabran čuvar ekrana, ekran će se isključiti."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Nakon <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> neaktivnosti"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Stavi uređaj u stanje mirovanja"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Postavi uređaj u mirovanje"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Ekran se isključuje nakon ovog perioda neaktivnosti."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Nijedan račun trenutno ne pohranjuje sigurnosne kopije podataka"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -675,4 +675,8 @@
     <string name="capturing_bugreport" msgid="3291125403411239592">"Preuzimanje izvještaja o greškama"</string>
     <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Raspoložive virtuelne tastature"</string>
     <string name="manage_keyboards" msgid="1905379263117016795">"Upravljanje tastaturama"</string>
+    <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Dozvoljeno"</string>
+    <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Nije dozvoljeno"</string>
+    <string name="usage_access" msgid="1914242907684452328">"Pristup korištenju"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"Pristup korištenju omogućava nekoj aplikaciji praćenje korištenja drugih aplikacija i učestalosti, kao i praćenje vašeg mobilnog operatera, postavki jezika i drugih detalja."</string>
 </resources>
