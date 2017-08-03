@@ -25,7 +25,6 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.annotation.Keep;
 import android.support.v17.preference.LeanbackPreferenceFragment;
-import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.TwoStatePreference;
 import android.text.TextUtils;
@@ -80,7 +79,7 @@ public class AccessibilityShortcutFragment extends LeanbackPreferenceFragment {
     private void setAccessibilityShortcutEnabled(boolean enabled) {
         Settings.Secure.putInt(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_SHORTCUT_ENABLED, enabled ? 1 : 0);
-        final ListPreference servicePref = (ListPreference) findPreference(KEY_SERVICE);
+        final Preference servicePref = findPreference(KEY_SERVICE);
         servicePref.setEnabled(enabled);
     }
 
