@@ -22,8 +22,9 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
-import android.provider.Settings;
 import android.support.v7.preference.Preference;
+
+import com.android.settingslib.development.DevelopmentSettingsEnabler;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -49,8 +50,8 @@ public class MainFragmentTest {
 
     @Test
     public void testUpdateDeveloperOptions_developerDisabled() {
-        Settings.Global.putInt(RuntimeEnvironment.application.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
+        DevelopmentSettingsEnabler
+                .setDevelopmentSettingsEnabled(RuntimeEnvironment.application, false);
         final Preference developerPref = spy(Preference.class);
         doReturn(developerPref).when(mMainFragment).findPreference(MainFragment.KEY_DEVELOPER);
         mMainFragment.updateDeveloperOptions();
@@ -60,8 +61,8 @@ public class MainFragmentTest {
 
     @Test
     public void testUpdateDeveloperOptions_developerEnabled() {
-        Settings.Global.putInt(RuntimeEnvironment.application.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
+        DevelopmentSettingsEnabler
+                .setDevelopmentSettingsEnabled(RuntimeEnvironment.application, true);
         final Preference developerPref = spy(Preference.class);
         doReturn(developerPref).when(mMainFragment).findPreference(MainFragment.KEY_DEVELOPER);
         mMainFragment.updateDeveloperOptions();
