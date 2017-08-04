@@ -75,7 +75,9 @@
   <!-- Preference which shows reset options [CHAR LIMIT=50] -->
   <!-- Preference which sets the device's display calibration. [CHAR LIMIT=50] -->
   <!-- Title of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
+  <string name="device_storage_clear_cache_title">¿Llimpiar datos na caché?</string>
   <!-- Message of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
+  <string name="device_storage_clear_cache_message">Llimpiará tolos datos na caché d\'aplicaciones.</string>
   <!-- Browse Header for downloaded apps under device settings. [CHAR LIMIT=50] -->
   <string name="apps_downloaded">Aplicaciones baxaes</string>
   <!-- Browse Header for all apps under device settings. [CHAR LIMIT=50] -->
@@ -210,6 +212,7 @@
   <!-- About phone settings screen, setting option name to see terms and conditions -->
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
   <!-- About phone settings screen, setting option name to see licensing info for WebView component. [CHAR LIMIT=35] -->
+  <string name="webview_license_title">Llicencia de WebView del sistema</string>
   <!-- About phone settings screen, setting option name to see wallpapers attributions -->
   <!-- About phone settings screen, setting option name to see wallpapers attributions values -->
   <!-- Wifi -->
@@ -283,6 +286,7 @@
   <!-- Title for action to forget the wifi network configuration [CHAR LIMIT=80] -->
   <string name="wifi_forget_network">Escaecer rede</string>
   <!-- Description for action to forget the wifi network configuration [CHAR LIMIT=100] -->
+  <string name="wifi_forget_network_description">Esto llimpia la información usada pa coneutar a esta rede, incluyendo la contraseña guardada</string>
   <!-- Label for action to accept the currently connected wifi network [CHAR LIMIT=50] -->
   <string name="wifi_action_ok">ACEUTAR</string>
   <!-- Label for action to try to connect to a different wifi network [CHAR LIMIT=50] -->
@@ -290,6 +294,7 @@
   <!-- Label for action to use advanced settings for the wifi connection [CHAR LIMIT=50] -->
   <string name="wifi_action_advanced_yes">ACEUTAR</string>
   <!-- Label for action to not use advanced settings for the wifi connection [CHAR LIMIT=50] -->
+  <string name="wifi_action_advanced_no">Non (aconséyase)</string>
   <!-- Label for action to not use a proxy for the wifi connection [CHAR LIMIT=50] -->
   <!-- Label for action to setup a proxy for the wifi connection [CHAR LIMIT=50] -->
   <string name="wifi_action_proxy_manual">Manual</string>
@@ -342,6 +347,7 @@
   <!-- Storage settings title. Displayed as a title when showing the total usage of audio files in /sdcard on the device. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
   <!-- Storage settings title. Displayed as a title when showing the total usage of misc files on the device. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
   <!-- Storage settings title. Displayed as a title when showing the total usage of all cached data on device. Below it will be a number like "123.4 MB" indicating used storage. [CHAR LIMIT=50] -->
+  <string name="storage_media_cache_usage">Datos na caché</string>
   <!-- Storage settings eject action [CHAR LIMIT=50] -->
   <!-- Storage settings erase and format action [CHAR LIMIT=50] -->
   <!-- Storage settings erase and format action [CHAR LIMIT=50] -->
@@ -562,6 +568,7 @@
   <!-- Title for Set Email address in System Settings Developer options [CHAR LIMIT=50] -->
   <!-- Title for Set USB debugging in System Settings Developer options [CHAR LIMIT=50] -->
   <!-- Title for Set Allow mock locations in System Settings Developer options [CHAR LIMIT=50] -->
+  <string name="system_allow_mock_locations">Permitir allugamientos falsos</string>
   <!-- Title for Set Select debug app in System Settings Developer options [CHAR LIMIT=50] -->
   <!-- Title for Set Wait for debugger in System Settings Developer options [CHAR LIMIT=50] -->
   <!-- Title for Set Verify apps over USB in System Settings Developer options [CHAR LIMIT=50] -->
@@ -680,7 +687,9 @@
   <!-- Header of HDMI CEC device control [CHAR LIMIT=50] -->
   <!-- Title of CEC device settings [CHAR LIMIT=30] -->
   <!-- Name of predefined name for TV input (Blu-ray player) [CHAR LIMIT=30] -->
+  <string name="inputs_blu_ray">Blu-ray</string>
   <!-- Name of predefined name for TV input (Cable TV) [CHAR LIMIT=30] -->
+  <string name="inputs_cable">Cable</string>
   <!-- Name of predefined name for TV input (DVD player) [CHAR LIMIT=30] -->
   <string name="inputs_dvd">DVD</string>
   <!-- Name of predefined name for TV input (Gaming device) [CHAR LIMIT=30] -->
@@ -692,6 +701,7 @@
   <!-- Title of option to show this input while switching.[CHAR LIMIT=50] -->
   <!-- Header for input name options [CHAR LIMIT=50] -->
   <!-- Option to enable HDMI control [CHAR LIMIT=30] -->
+  <string name="inputs_hdmi_control">Control HDMI</string>
   <!-- Description of HDMI control option [CHAR LIMIT=50] -->
   <!-- Option to enable device auto power off [CHAR LIMIT=30] -->
   <!-- Description of device auto power off option [CHAR LIMIT=50] -->
@@ -723,6 +733,7 @@
   <!-- Action to customize restrictions for a package [CHAR LIMIT=100] -->
   <string name="restricted_profile_customize_restrictions">Torgues personalizaes</string>
   <!-- Description for action to configure apps for a restricted profile indicating the number of allow apps [CHAR LIMIT=100] -->
+  <string name="restricted_profile_configure_apps_description_loading">Un momentu\u2026</string>
   <!-- Title for action to change the PIN code to use when exiting restricted profile [CHAR LIMIT=100] -->
   <!-- Description for action to configure an application's restriction [CHAR LIMIT=200] -->
   <!-- Summary for a case when app entries that are controlled by another entry and app can access user accounts [CHAR LIMIT=none] -->
@@ -746,7 +757,9 @@
   <!-- Application management application version label [CHAR LIMIT=NONE] -->
   <!-- Application management description for opening the application [CHAR LIMIT=NONE] -->
   <!-- Application management choice for force stopping the application [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_force_stop">Forciar parada</string>
   <!-- Application management description for force stopping the application [CHAR LIMIT=NONE] -->
+  <string name="device_apps_app_management_force_stop_desc">Si forcies la parada d\'una aplicación, quiciabes nun funcione bien.</string>
   <!-- Application management choice for uninstalling the application [CHAR LIMIT=40] -->
   <!-- Application management description for uninstalling the application [CHAR LIMIT=NONE] -->
   <!-- Application management choice for uninstalling updates for the application [CHAR_LIMIT=40] -->
@@ -757,12 +770,14 @@
   <!-- Application management description for enabling the application [CHAR LIMIT=NONE] -->
   <!-- Application management choice for displaying the application's size [CHAR LIMIT=40] -->
   <!-- Application management description for displaying the applicantion's size [CHAR_LIMIT=NONE] -->
+  <string name="device_apps_app_management_storage_used_desc"><xliff:g id="size" example="30.2MB">%1$s</xliff:g> usaos en <xliff:g id="volume" example="internal storage">%2$s</xliff:g></string>
   <!-- Application management choice for clearing the application's data [CHAR LIMIT=40] -->
   <!-- Application management description for clearing the application's data [CHAR LIMIT=NONE] -->
   <!-- Application management choice for clearing the application's default actions [CHAR LIMIT=40] -->
   <!-- Application management description for defaults are set for the application [CHAR LIMIT=40] -->
   <!-- Application management description for defaults aren't set for the application [CHAR LIMIT=40] -->
   <!-- Application management choice for clearing the application's cache [CHAR LIMIT=40] -->
+  <string name="device_apps_app_management_clear_cache">Llimpiar caché</string>
   <!-- Application management choice for changing the application's notifications option [CHAR LIMIT=40] -->
   <string name="device_apps_app_management_notifications">Avisos</string>
   <!-- Application management choice for displaying the application's permissions [CHAR LIMIT=40] -->
@@ -788,6 +803,7 @@
   <!-- Privacy choice for configuring backing up data [CHAR LIMIT=40] -->
   <!-- Privacy choice for choosing which account to backup [CHAR LIMIT=40] -->
   <!-- Privacy choice for configuring automatic restore [CHAR LIMIT=40] -->
+  <string name="privacy_automatic_restore">Restauración automática</string>
   <!-- Factory reset choice for initiating a factory reset [CHAR LIMIT=40] -->
   <!-- Factory reset description about what happens when you perform a factory reset [CHAR LIMIT=NONE] -->
   <!-- Factory reset screen, message on screen after user selects Reset phone button -->
@@ -800,6 +816,7 @@
   <!-- Description on summary/status screen that tells you what the name of your device is [CHAR LIMIT=NONE] -->
   <!-- The 'yes' or 'edit' equivalent in a yes/no choice circumstance [CHAR LIMIT=30] -->
   <!-- The 'no' or  'keep the same' equivalent in a yes/no choice circumstance [CHAR LIMIT=30]-->
+  <string name="keep_settings">Nun camudar</string>
   <!-- Group header for app permissions [CHAR LIMIT=20] -->
   <!-- Item title for app permissions [CHAR LIMIT=20] -->
   <!-- Summary of number of apps currently granted a single permission [CHAR LIMIT=45] -->
