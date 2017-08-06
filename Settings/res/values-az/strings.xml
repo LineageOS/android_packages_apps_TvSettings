@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Klaviatura"</string>
     <string name="system_home" msgid="2858989138172296012">"Başlanğıc ekran"</string>
     <string name="system_search" msgid="2837264654143247611">"Axtarış"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"Təhlükəsizlik və məhdudiyyətlər"</string>
     <string name="system_speech" msgid="8128688499687306982">"Nitq"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Daxiletmələr"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Gəlişdirici seçimləri"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Heç bir"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"İstifadə və Diaqnostika"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Təlimatlar"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Sistem güncəlləşdirməsi"</string>
     <string name="about_preference" msgid="4131396784531360434">"Haqqında"</string>
     <string name="device_name" msgid="2670488158531273028">"Cihaz adı"</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Bütün şəxsi məlumatlarınız və endirilmiş tətbiqlər silinsin mi? Bu əməliyyat geri qaytarıla bilməz!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Hər şeyi silin"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> cihazınız üçün ad seçin"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Telefon, planşet və ya kompüteriniz kimi digər cihazlardan daxil olarkən, ad ilə <xliff:g id="DEVICEMODEL">%1$s</xliff:g> cihazını müəyyənləşdirmək olacaq."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Yayımlandıqda və ya başqa cihazdan qoşulduqda <xliff:g id="DEVICEMODEL">%1$s</xliff:g> cihazını tanımaq üçün ona ad verin."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Qonaq Otağı"</item>
-    <item msgid="3722089849939477581">"Media Mərkəzi"</item>
-    <item msgid="6108590585438763574">"Ailəvi Guşə"</item>
-    <item msgid="2581035245390468625">"Yemək Otağı"</item>
-    <item msgid="3127487827308695324">"İş Otağı"</item>
-    <item msgid="6172018430592195063">"Yataq otağı"</item>
-    <item msgid="8120010459866284578">"Mətbəx"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Qonaq Otağı TV-si"</item>
+    <item msgid="8122798759665439456">"Ailə Otağı TV-si"</item>
+    <item msgid="1389347662738182100">"Yataq Otağı TV-si"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Fərdi Ad daxil edin..."</string>
+    <string name="custom_room" msgid="8655516733933892458">"Fərdi ad daxil edin..."</string>
     <string name="device_rename_title" msgid="2629557295786267185">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> cihazı yenidən adlandırın"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> cihazı  \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" olaraq adlanıb"</string>
     <string name="change_setting" msgid="2047402388786162246">"Dəyişin"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Təhlükəsiz rejimdə yenidən başlayın"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Təhlükəsiz rejim üçün yenidən başlamaq istəyirsiniz?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Bu, quraşdırdığınız bütün üçüncü tərəf tətbiqlərini deaktiv edəcək. Onlar, yenidən başlatdığınız zaman bərpa olunacaq."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Baq hesabatı çəkilir"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Əlçatan virtual klaviaturalar"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Klaviaturaları idarə edin"</string>
 </resources>

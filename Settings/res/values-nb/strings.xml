@@ -59,7 +59,7 @@
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Vil du slette bufrede data?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Dette sletter bufrede data for alle apper."</string>
     <string name="apps_downloaded" msgid="4222190849854323480">"Nedlastede apper"</string>
-    <string name="apps_system" msgid="2499191125802829425">"System-apper"</string>
+    <string name="apps_system" msgid="2499191125802829425">"Systemapper"</string>
     <string name="apps_running" msgid="6430310491739956228">"Kjørende apper"</string>
     <string name="accessories_add" msgid="1347802656349218830">"Legg til tilbehør"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"Kobler til ..."</string>
@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Tastatur"</string>
     <string name="system_home" msgid="2858989138172296012">"Startside"</string>
     <string name="system_search" msgid="2837264654143247611">"Søk"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"Sikkerhet og begrensninger"</string>
     <string name="system_speech" msgid="8128688499687306982">"Tale"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Innganger"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Utvikleralternativer"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Ingen"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Bruk og diagnostikk"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Veiledninger"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Systemoppdatering"</string>
     <string name="about_preference" msgid="4131396784531360434">"Info"</string>
     <string name="device_name" msgid="2670488158531273028">"Enhetsnavn"</string>
@@ -319,7 +319,7 @@
     <string name="learn_more_action" msgid="7015991954404958779">"Finn ut mer"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Prøv på nytt"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Søker etter WPS-ruter …"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Trykk på Beskyttet Wi-Fi-konfigurasjon-knappen på ruteren din.\nDen kan være merket WPS eller symbolet til venstre."</string>
+    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Trykk på Beskyttet Wi-Fi-konfigurasjon-knappen på ruteren din.\nDen kan være merket med WPS eller symbolet til venstre."</string>
     <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Skriv inn PIN-koden <xliff:g id="NUMBER">%1$s</xliff:g> på Wi-Fi-ruteren din"</string>
     <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Etter at du har skrevet inn PIN-koden, kan konfigurasjonen ta opptil to minutter å fullføre"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Fant ikke Wi-Fi-ruteren"</string>
@@ -566,9 +566,9 @@
     <string name="app_not_supported_in_limited" msgid="6818309827329010677">"Denne appen støttes ikke i begrensede profiler"</string>
     <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"Denne appen har tilgang til kontoene dine"</string>
     <string name="restriction_location_enable_title" msgid="2575116135395354938">"Posisjon"</string>
-    <string name="restriction_location_enable_summary" msgid="4195349388342385870">"Tillat at apper bruke posisjonsinformasjonen din"</string>
-    <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Angi den begrensede profilen"</string>
-    <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Lukk den begrensede profilen"</string>
+    <string name="restriction_location_enable_summary" msgid="4195349388342385870">"Tillat apper å bruke posisjonsinformasjonen din"</string>
+    <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Gå til den begrensede profilen"</string>
+    <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Gå ut av den begrensede profilen"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Slett den begrensede profilen"</string>
     <string name="restricted_profile_create_title" msgid="1392190365829029390">"Opprett en begrenset profil"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Innstillinger"</string>
@@ -603,7 +603,7 @@
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Avinstaller"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Avinstaller oppdateringer"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Alle oppdateringer i denne Android-systemappen blir avinstallert."</string>
-    <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Slå av"</string>
+    <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Deaktiver"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Vil du deaktivere denne appen?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Slå på"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Vil du aktivere denne appen?"</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Vil du slette alle personlige opplysninger og nedlastede apper? Denne handlingen kan ikke angres!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Slett alt"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Velg et navn for <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Med et navn er det enklere å identifisere <xliff:g id="DEVICEMODEL">%1$s</xliff:g> når du får tilgang til den via andre enheter, for eksempel telefonen, nettbrettet eller datamaskinen."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Gi <xliff:g id="DEVICEMODEL">%1$s</xliff:g>-enheten din et navn, sånn at du lettere kan identifisere den når du caster eller kobler til den fra andre enheter."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Stue"</item>
-    <item msgid="3722089849939477581">"TV-stue"</item>
-    <item msgid="6108590585438763574">"Felles oppholdsrom"</item>
-    <item msgid="2581035245390468625">"Spisestue"</item>
-    <item msgid="3127487827308695324">"Kjellerstue"</item>
-    <item msgid="6172018430592195063">"Soverom"</item>
-    <item msgid="8120010459866284578">"Kjøkken"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"TV i stuen"</item>
+    <item msgid="8122798759665439456">"TV i felles oppholdsrom"</item>
+    <item msgid="1389347662738182100">"TV på soverommet"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Skriv inn et spesialtilpasset navn"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Skriv inn et egendefinert navn"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Gi nytt navn til <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Denne <xliff:g id="DEVICEMODEL">%1$s</xliff:g> har for øyeblikket navnet «<xliff:g id="DEVICENAME">%2$s</xliff:g>»"</string>
     <string name="change_setting" msgid="2047402388786162246">"Endre"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Start på nytt i sikker modus"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Vil du starte på nytt i sikker modus?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Dette slår av alle tredjepartsappene du har installert. De gjenopprettes når du starter på nytt."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Henter feilrapporten"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Tilgjengelige virtuelle tastaturer"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Administrer tastaturer"</string>
 </resources>

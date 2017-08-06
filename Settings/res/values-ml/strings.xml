@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"കീബോർഡ്"</string>
     <string name="system_home" msgid="2858989138172296012">"ഹോം സ്‌ക്രീൻ"</string>
     <string name="system_search" msgid="2837264654143247611">"തിരയുക"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"സുരക്ഷയും നിയന്ത്രണങ്ങളും"</string>
     <string name="system_speech" msgid="8128688499687306982">"സംഭാഷണം"</string>
     <string name="system_inputs" msgid="2413907183796651102">"ഇൻപുട്ടുകൾ"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"ഡെവലപ്പർ ഓ‌പ്ഷനുകൾ"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ഒന്നുമില്ല"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"ഉപയോഗവും പ്രശ്നനിർണ്ണയവും"</string>
+    <string name="tutorials" msgid="3731493987558093244">"ട്യൂട്ടോറിയലുകള്‍‌"</string>
     <string name="about_system_update" msgid="7282772247661356586">"സിസ്റ്റം അപ്ഡേറ്റ്"</string>
     <string name="about_preference" msgid="4131396784531360434">"ആമുഖം"</string>
     <string name="device_name" msgid="2670488158531273028">"ഉപകരണത്തിന്റെ പേര്"</string>
@@ -290,8 +290,8 @@
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"ഈ ഡ്രൈവിന് വേഗത കുറവാണെന്ന് തോന്നുന്നു."</string>
     <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"നിങ്ങൾക്ക് തുടരാനാകുമെങ്കിലും, ഈ ലൊക്കേഷനിലേക്ക് നീക്കിയ ആപ്പ്‌സിൽ തടസ്സമുണ്ടാകുകയും വിവരം കൈമാറാൻ കൂടുതൽ സമയമെടുക്കുകയും ചെയ്യാം. മികച്ച പ്രകടനത്തിന് വേഗതയേറിയ ഡ്രൈവ് ഉപയോഗിക്കുന്നത് പരിഗണിക്കുക."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"ഫോർമാറ്റുചെയ്യുക"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"ആപ്പ്‌സ് ബാക്കപ്പുചെയ്യുക"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിൽ സംഭരിച്ചിരിക്കുന്ന ആപ്പ്‌സ്"</string>
+    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"ആപ്പുകൾ ബാക്കപ്പുചെയ്യുക"</string>
+    <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിൽ സംഭരിച്ചിരിക്കുന്ന ആപ്പുകൾ"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"<xliff:g id="NAME">%1$s</xliff:g> എന്നതിൽ സംഭരിച്ചിരിക്കുന്ന ആപ്പ്‌സും ഡാറ്റയും"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> ലഭ്യമാണ്"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"ഉപകരണ സ്റ്റോറേജ് ഇജക്റ്റുചെയ്യുക"</string>
@@ -438,7 +438,7 @@
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"വ്യാജ ലൊക്കേഷനുകൾ അനുവദിക്കുക"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"ഡീബഗ് അപ്ലിക്കേഷൻ തിരഞ്ഞെടുക്കുക"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"ഡീബഗ്ഗറിനായി കാത്തിരിക്കുക"</string>
-    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB വഴി ആപ്സുകൾ പരിശോധിച്ചുറപ്പിക്കൂ"</string>
+    <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB വഴി ആപ്പുകൾ പരിശോധിച്ചുറപ്പിക്കൂ"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"ADB/ADT വഴി ദോഷകരമായ പ്രവർത്തനരീതിയുള്ള അപ്ലിക്കേഷനുകൾ ഇൻസ്റ്റാളുചെയ്‌തിട്ടുണ്ടോയെന്ന് പരിശോധിക്കുക"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"വൈഫൈ വെർബോസ് ലോഗിംഗ്"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"വൈഫൈ വെർബോസ് ലോഗിംഗ് പ്രവർത്തനക്ഷമമാക്കുക"</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"നിങ്ങളുടെ എല്ലാ വ്യക്തിഗത വിവരങ്ങളും ഡൗൺലോഡുചെയ്‌ത അപ്ലിക്കേഷനുകളും മായ്ക്കണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാനാവില്ല!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"എല്ലാം മായ്ക്കുക"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"നിങ്ങളുടെ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> മോഡലിനായി ഒരു പേര് തിരഞ്ഞെടുക്കുക"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"നിങ്ങളുടെ ഫോണോ ടാബ്‌ലെറ്റോ കമ്പ്യൂട്ടറോ പോലുള്ള മറ്റ് ഉപകരണങ്ങളിൽ നിന്ന് ആക്സസ് ചെയ്യുമ്പോൾ നിങ്ങളുടെ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> മോഡലിനെ തിരിച്ചറിയാൻ ഒരു പേര് സഹായിക്കും."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"കാസ്റ്റ് ചെയ്യുമ്പോഴോ മറ്റ് ഉപകരണങ്ങളിൽ നിന്ന് കണക്റ്റുചെയ്യുമ്പോഴോ തിരിച്ചറിയുന്നതിന് നിങ്ങളുടെ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ഉപകരണത്തിനൊരു പേര് നൽകുക."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"സ്വീകരണമുറി"</item>
-    <item msgid="3722089849939477581">"മീഡിയ റൂം"</item>
-    <item msgid="6108590585438763574">"ഫാമിലി റൂം"</item>
-    <item msgid="2581035245390468625">"ഡൈനിംഗ് റൂം"</item>
-    <item msgid="3127487827308695324">"ഡെൻ"</item>
-    <item msgid="6172018430592195063">"കിടപ്പുമുറി"</item>
-    <item msgid="8120010459866284578">"അടുക്കള"</item>
+    <item msgid="9056203990862307284">"Android ടിവി"</item>
+    <item msgid="7449352861592960712">"ലിവിംഗ് റൂം ടിവി"</item>
+    <item msgid="8122798759665439456">"ഫാമിലി റൂം ടിവി"</item>
+    <item msgid="1389347662738182100">"ബെഡ്റൂം ടിവി"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"ഇ‌ഷ്‌ടാനുസൃത പേര് നൽകുക..."</string>
+    <string name="custom_room" msgid="8655516733933892458">"ഇ‌ഷ്‌ടാനുസൃത പേര് നൽകുക…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"ഈ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> മോഡലിന്റെ പേരുമാറ്റുക"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"നിലവിൽ ഈ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> മോഡലിന്റെ പേര് \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" എന്നാണ്"</string>
     <string name="change_setting" msgid="2047402388786162246">"മാറ്റുക"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"സുരക്ഷിത മോഡിലേക്ക് റീബൂട്ടുചെയ്യുക"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"സുരക്ഷിത മോഡിലേക്ക് റീബൂട്ടുചെയ്യണോ?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"ഇങ്ങനെ ചെയ്യുന്നത് നിങ്ങൾ ഇൻസ്റ്റാളുചെയ്‌ത മൂന്നാം കക്ഷി അപ്ലിക്കേഷനുകളെയെല്ലാം പ്രവർത്തനരഹിതമാക്കും. നിങ്ങൾ വീണ്ടും റീബൂട്ടുചെയ്യുമ്പോൾ അവ പുനഃസ്ഥാപിക്കപ്പെടും."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"ബഗ് റിപ്പോർട്ട് ക്യാപ്ച്വർ ചെയ്യുന്നു"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"ലഭ്യമായ വെർച്വൽ കീബോർഡുകൾ"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"കീബോർഡുകൾ മാനേജുചെയ്യുക"</string>
 </resources>

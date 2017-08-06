@@ -52,7 +52,7 @@
     <string name="device_surround_sound" msgid="6272196310566546860">"Περιφερειακός ήχος"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Ήχοι συστήματος"</string>
     <string name="device_apps" msgid="9180435229638772838">"Εφαρμογές"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"Αποθηκευτικός χώρος και επαναφορά"</string>
+    <string name="device_storage_reset" msgid="1425978936501134425">"Αποθηκ. χώρος και επαναφορά"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Δημιουργία αντιγράφου ασφαλείας και επαναφορά"</string>
     <string name="device_reset" msgid="2827002349560023125">"Επαναφορά δεδομένων"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Βαθμονόμηση"</string>
@@ -73,7 +73,7 @@
     <string name="accessory_unpairing" msgid="7568241162181184667">"Κατάργηση σύζευξης συσκευής…"</string>
     <string name="accessory_connected" msgid="2156489304110030393">"Συνδέθηκε"</string>
     <string name="accessory_change_name" msgid="8958916008739792785">"Αλλαγή ονόματος"</string>
-    <string name="accessory_change_name_title" msgid="4630819456923061184">"Εισαγάγετε ένα νέο όνομα για αυτό το αξεσουάρ"</string>
+    <string name="accessory_change_name_title" msgid="4630819456923061184">"Νέο όνομα για αυτό το αξεσουάρ"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"Αναζήτηση για αξεσουάρ…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Πριν τη σύζευξη των συσκευών Bluetooth, βεβαιωθείτε ότι βρίσκονται σε λειτουργία σύζευξης"</string>
     <string name="accessories_autopair_msg" msgid="8618829246837821752">"Βρέθηκε συσκευή. Η σύζευξη θα γίνει αυτόματα σε <xliff:g id="COUNTDOWN">%1$s</xliff:g> δευτερόλεπτα"</string>
@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Πληκτρολόγιο"</string>
     <string name="system_home" msgid="2858989138172296012">"Αρχική οθόνη"</string>
     <string name="system_search" msgid="2837264654143247611">"Αναζήτηση"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"Ασφάλεια και περιορισμοί"</string>
     <string name="system_speech" msgid="8128688499687306982">"Ομιλία"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Είσοδοι"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Επιλογές για προγραμματιστές"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Κανένα"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Χρήση και διαγνωστικά"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Οδηγοί"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Ενημέρωση συστήματος"</string>
     <string name="about_preference" msgid="4131396784531360434">"Πληροφορίες"</string>
     <string name="device_name" msgid="2670488158531273028">"Όνομα συσκευής"</string>
@@ -232,7 +232,7 @@
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Η θύρα δεν είναι έγκυρη"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Ο διακομ. μεσολ. ΗΤΤΡ χρησιμ. από το πρόγρ. περιήγησης, αλλά δεν πρέπει να χρησιμ. από άλλες εφαρμ."</string>
     <string name="proxy_port_description" msgid="6791098212244367568">"Εισαγάγετε μια έγκυρη θύρα.\nΠαράδειγμα: <xliff:g id="ID_1">8080</xliff:g>"</string>
-    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Εισαγάγετε μια λίστα με τους τομείς που θέλετε να εξαιρεθούν διαχωρισμένους με κόμματα ή αφήστε το πεδίο κενό.\nΠαράδειγμα: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Εισαγάγετε τους τομείς που θέλετε να εξαιρεθούν.\nΠαράδειγμα: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Εισαγάγετε ένα έγκυρο όνομα κεντρικού υπολογιστή.\nΠαράδειγμα: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Το δίκτυο συνδέθηκε"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Δεν έχετε συνδεθεί στο δίκτυο"</string>
@@ -407,7 +407,7 @@
     <string name="color_magenta" msgid="6395786485839439122">"Ματζέντα"</string>
     <string name="system_accessibility_status" msgid="6150600992901856367">"Ενεργοποίηση"</string>
     <string name="system_accessibility_config" msgid="3216531917536720277">"Διαμόρφωση"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Χρήση υπηρεσίας <xliff:g id="SERVICE">%1$s</xliff:g>;"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Χρήση - <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"Η υπηρεσία <xliff:g id="SERVICE">%1$s</xliff:g> μπορεί να συλλέξει όλο το κείμενο που πληκτρολογείτε, εκτός από τους κωδικούς πρόσβασης. Αυτό περιλαμβάνει προσωπικά δεδομένα όπως αριθμούς πιστωτικών καρτών."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"Διακοπή υπηρεσίας <xliff:g id="SERVICE">%1$s</xliff:g>;"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Επιλέξτε OK για να διακοπεί η υπηρεσία <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
@@ -610,7 +610,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Αποθηκευτικός χώρος που χρησιμοποιείται"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Χρησιμοποιούνται <xliff:g id="SIZE">%1$s</xliff:g> σε <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Διαγραφή δεδομένων"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Όλα τα δεδομένα της εφαρμογής θα διαγραφούν οριστικά. \nΑυτό περιλαμβάνει όλα τα αρχεία, τις ρυθμίσεις, τους λογαριασμούς, τις βάσεις δεδομένων κλπ."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Όλα τα δεδομένα της εφαρμογής θα διαγραφούν οριστικά. \nΑυτό περιλαμβάνει όλα τα αρχεία, τις ρυθμίσεις, τους λογαριασμούς, τις βάσεις δεδομένων κ.λπ."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Διαγραφή προεπιλογών"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Εκκίνηση εφαρμογής για κάποιες ενέργειες"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Δεν ορίστηκαν προεπιλογές"</string>
@@ -628,7 +628,7 @@
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"Πότε να ενεργοποιείται"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Η προφύλαξη οθόνης ενεργοποιείται μετά από αυτήν την περίοδο αδράνειας. Εάν δεν έχει οριστεί κάποια επιλογή προφύλαξης οθόνης, η οθόνη σβήνει."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Μετά από <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> αδράνειας"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Ρύθμιση συσκευής σε λειτουργία αδράνειας"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Λειτουργία αδράνειας"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Η οθόνη απενεργοποιείται μετά από αυτήν την περίοδο αδράνειας."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Κανένας λογαριασμός δεν αποθηκεύει προς το παρόν δεδομένα αντιγράφων ασφαλείας"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Να διαγραφούν όλα τα προσωπικά σας στοιχεία και οι ληφθείσες εφαρμογές; Δεν είναι δυνατή η αναίρεση αυτής της ενέργειας!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Διαγραφή όλων"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Επιλέξτε ένα όνομα για τη συσκευή <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Το όνομα θα σας βοηθήσει να εντοπίζετε τη συσκευή <xliff:g id="DEVICEMODEL">%1$s</xliff:g> κατά την πρόσβασή σας από άλλες συσκευές, όπως το τηλέφωνο, το tablet ή τον υπολογιστή σας."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Δώστε στη συσκευή <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ένα όνομα, για να είναι εύκολη η αναγνώρισή της κατά τη μετάδοση ή τη σύνδεση σε αυτήν από άλλες συσκευές."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Σαλόνι"</item>
-    <item msgid="3722089849939477581">"Δωμάτιο προβολής"</item>
-    <item msgid="6108590585438763574">"Οικογενειακό δωμάτιο"</item>
-    <item msgid="2581035245390468625">"Τραπεζαρία"</item>
-    <item msgid="3127487827308695324">"Γραφείο"</item>
-    <item msgid="6172018430592195063">"Κρεβατοκάμαρα"</item>
-    <item msgid="8120010459866284578">"Κουζίνα"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Τηλεόραση στο σαλόνι"</item>
+    <item msgid="8122798759665439456">"Τηλεόραση στο δωμάτιο της οικογένειας"</item>
+    <item msgid="1389347662738182100">"Τηλεόραση στο υπνοδωμάτιο"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Εισαγάγετε προσαρμοσμένο όνομα…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Εισαγάγετε προσαρμοσμένο όνομα…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Μετονομασία αυτής της συσκευής <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Αυτή η συσκευή <xliff:g id="DEVICEMODEL">%1$s</xliff:g> έχει το όνομα \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" αυτήν τη στιγμή"</string>
     <string name="change_setting" msgid="2047402388786162246">"Αλλαγή"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Επανεκκίνηση στην ασφαλή λειτουργία"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Να γίνει επανεκκίνηση στην ασφαλή λειτουργία;"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Αυτό θα απενεργοποιήσει όλες τις εφαρμογές τρίτων μερών που έχετε εγκαταστήσει. Θα γίνει επαναφορά των εφαρμογών με την επόμενη επανεκκίνηση."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Λήψη αναφοράς σφαλμάτων"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Διαθέσιμα εικονικά πληκτρολόγια"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Διαχείριση πληκτρολογίων"</string>
 </resources>

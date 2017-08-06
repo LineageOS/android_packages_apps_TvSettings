@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"የቁልፍ ሰሌዳ"</string>
     <string name="system_home" msgid="2858989138172296012">"መነሻ ማያ ገጽ"</string>
     <string name="system_search" msgid="2837264654143247611">"ፍለጋ"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"ደህንነት እና ገደቦች"</string>
     <string name="system_speech" msgid="8128688499687306982">"ንግግር"</string>
     <string name="system_inputs" msgid="2413907183796651102">"ግብዓቶች"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"የገንቢ አማራጮች"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ምንም"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"አጠቃቀም እና ምርመራ"</string>
+    <string name="tutorials" msgid="3731493987558093244">"አጋዥ ሥልጠናዎች"</string>
     <string name="about_system_update" msgid="7282772247661356586">"የስርዓት ዝማኔ"</string>
     <string name="about_preference" msgid="4131396784531360434">"ስለ"</string>
     <string name="device_name" msgid="2670488158531273028">"የመሣሪያ ስም"</string>
@@ -588,7 +588,7 @@
     <string name="pin_enter_unlock_program" msgid="52453773316071511">"ይህንን ፕሮግራም ለመመልከት ፒን ያስገቡ"</string>
     <string name="pin_enter_pin" msgid="821552376577935497">"ፒን ያስገቡ"</string>
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"አዲስ ፒን ያዘጋጁ"</string>
-    <string name="pin_enter_again" msgid="1510456697040826496">"አደሱን ፒን ደግመው ያስገቡ"</string>
+    <string name="pin_enter_again" msgid="1510456697040826496">"አዲሱን ፒን ደግመው ያስገቡ"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"የድሮውን ፒን ያስገቡ"</string>
     <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"የተሳሳተ ፒን 5 ጊዜ አስገብተዋል።በ\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> ሰከንዶች ውስጥ እንደገና ይሞክሩ።"</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"የተሳሳተ ፒን፣ እንደገና ይሞክሩ"</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"ሁሉም የግል መረጃዎ እና የወረዱ መተግበሪያዎችዎ ይሰረዙ? ይህን እርምጃ መቀልበስ አይችሉም!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ሁሉንም አጥፋ"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"ለእርስዎ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ስም ይምረጡ"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"የእርስዎን <xliff:g id="DEVICEMODEL">%1$s</xliff:g> እንደ የእርስዎ ስልክ፣ ጡባዊ ወይም ኮምፒውተር ካሉ ሌሎች መሣሪያዎች ሲደርሱበት ስም እንዲለየው ያግዛል።"</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"cast በሚያደርጉበት ጊዜ ወይም ከሌሎች መሣሪያዎች ከእሱ ጋር በሚያገናኙበት ጊዜ ለይተው ለማወቅ እንዲያግዝዎት የእርስዎን <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ስም ይስጡት።"</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"ሳሎን"</item>
-    <item msgid="3722089849939477581">"የሚዲያ ክፍል"</item>
-    <item msgid="6108590585438763574">"የቤተሰብ ክፍል"</item>
-    <item msgid="2581035245390468625">"የመመገቢያ ክፍል"</item>
-    <item msgid="3127487827308695324">"የግል ክፍል"</item>
-    <item msgid="6172018430592195063">"መኝታ ቤት"</item>
-    <item msgid="8120010459866284578">"ወጥ ቤት"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"የሳሎን ክፍል ቴሌቪዥን"</item>
+    <item msgid="8122798759665439456">"የቤተሰብ ክፍል ቴሌቪዥን"</item>
+    <item msgid="1389347662738182100">"የመኝታ ክፍል ቴሌቪዥን"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"ብጁ ስም ያስገቡ…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"ብጁ ስም ያስገቡ…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"ይህን <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ዳግም ይሰይሙት"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"ይህ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> በአሁኑ ጊዜ «<xliff:g id="DEVICENAME">%2$s</xliff:g>» ተብሏል"</string>
     <string name="change_setting" msgid="2047402388786162246">"ቀይር"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"በአስተማማኝ ኹነታ ውስጥ ዳግም አስጀምር"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"በአስተማማኝ ኹነታ ውስጥ ዳግም ማስጀመር ይፈልጋሉ?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"ይሄ ሁሉንም የጫኑዋቸው የሦስተኛ ወገን መተግበሪያዎችን ያሰናክላል። እንደገና ዳግም ሲያስጀምሩ ይመለስልዎታል።"</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"የሳንካ ሪፖርቱን በማግኘት ላይ"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"የሚገኙ ምናባዊ ቁልፍ ሰሌዳዎች"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"የቁልፍ ሰሌዳዎችን ያቀናብሩ"</string>
 </resources>

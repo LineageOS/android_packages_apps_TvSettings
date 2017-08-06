@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"ក្ដារចុច"</string>
     <string name="system_home" msgid="2858989138172296012">"អេក្រង់ដើម"</string>
     <string name="system_search" msgid="2837264654143247611">"ស្វែងរក"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"សុវត្ថិភាព &amp; ការ​ដាក់​កម្រិត"</string>
     <string name="system_speech" msgid="8128688499687306982">"និយាយ"</string>
     <string name="system_inputs" msgid="2413907183796651102">"ចូល"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"ជម្រើស​អ្នក​អភិវឌ្ឍ"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"គ្មាន"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"ការប្រើប្រាស់ &amp; ការវិនិច្ឆ័យ"</string>
+    <string name="tutorials" msgid="3731493987558093244">"មេរៀន"</string>
     <string name="about_system_update" msgid="7282772247661356586">"ធ្វើ​បច្ចុប្បន្នភាព​ប្រព័ន្ធ​"</string>
     <string name="about_preference" msgid="4131396784531360434">"អំពី"</string>
     <string name="device_name" msgid="2670488158531273028">"ឈ្មោះ​ឧបករណ៍"</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"លុប​ព័ត៌មាន​ផ្ទាល់ខ្លួន​របស់​អ្នក​ទាំងអស់ និង​កម្មវិធី​ដែល​បាន​​ទាញ​យក? អ្នក​មិន​អាច​​ត្រឡប់​សកម្មភាព​នេះ​វិញ​បាន​ទេ!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"លុប​​​ទាំងអស់"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"ជ្រើសរើសឈ្មោះសម្រាប់ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> របស់អ្នក"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"ឈ្មោះនឹងជួយកំណត់អត្តសញ្ញាណ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> របស់អ្នកនៅពេលដែលអ្នកចូលដំណើរការវាពីឧបករណ៍ផ្សេងទៀតដូចជា ទូរស័ព្ទ ថេប្លេត ឬកុំព្យូទ័ររបស់អ្នក។"</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"ដាក់ឈ្មោះឲ្យ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> របស់អ្នក ដើម្បីជួយកំណត់អត្តសញ្ញាណវា នៅពេលធ្វើការបញ្ជូន ឬភ្ជាប់វាពីឧបករណ៍ផ្សេងទៀត។"</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"បន្ទប់ទទួលភ្ញៀវ"</item>
-    <item msgid="3722089849939477581">"បន្ទប់ព័ត៌មាន"</item>
-    <item msgid="6108590585438763574">"បន្ទប់គ្រួសារ"</item>
-    <item msgid="2581035245390468625">"បន្ទប់បរិភោគអាហារ"</item>
-    <item msgid="3127487827308695324">"បន្ទប់​ធ្វើការ"</item>
-    <item msgid="6172018430592195063">"បន្ទប់គេង"</item>
-    <item msgid="8120010459866284578">"ផ្ទះបាយ"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"ទូរទស្សន៍​ក្នុង​បន្ទប់​ទទួល​ភ្ញៀវ"</item>
+    <item msgid="8122798759665439456">"ទូរទស្សន៍​ក្នុង​បន្ទប់​ទទួល​ភ្ញៀវ"</item>
+    <item msgid="1389347662738182100">"ទូរទស្សន៍​ក្នុង​បន្ទប់គេង"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"បញ្ចូលឈ្មោះផ្ទាល់ខ្លួន…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"បញ្ចូល​ឈ្មោះ​​ផ្ទាល់ខ្លួន..."</string>
     <string name="device_rename_title" msgid="2629557295786267185">"ដាក់ឈ្មោះឲ្យ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> នេះឡើងវិញ"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"បច្ចុប្បន្ននេះ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> នេះមានឈ្មោះថា \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"ផ្លាស់ប្ដូរ"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"ចាប់ផ្ដើមឡើងវិញទៅជារបៀបសុវត្ថិភាព"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"តើអ្នកចង់ចាប់ផ្ដើមឡើងវិញទៅជារបៀបសុវត្ថិភាពឬទេ?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"វានឹងបិទដំណើរការកម្មវិធីភាគីទីបីទាំងអស់ដែលអ្នកបានដំឡើង។ ពួកវានឹងត្រូវបានស្ដារពេលអ្នកចាប់ផ្ដើមឡើងវិញ។"</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"កំពុងថត​របាយការណ៍​អំពី​បញ្ហា"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"ក្ដារ​ចុច​និម្មិត​ដែលអាចប្រើបាន"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"គ្រប់គ្រងក្តារចុច"</string>
 </resources>

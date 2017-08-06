@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Teclado"</string>
     <string name="system_home" msgid="2858989138172296012">"Pantalla de inicio"</string>
     <string name="system_search" msgid="2837264654143247611">"Buscar"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"Seguranza e restricións"</string>
     <string name="system_speech" msgid="8128688499687306982">"Voz"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Entradas"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Opcións de programador"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Ningunha"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Uso e diagnóstico"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Titoriais"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Actualización do sistema"</string>
     <string name="about_preference" msgid="4131396784531360434">"Acerca de"</string>
     <string name="device_name" msgid="2670488158531273028">"Nome do dispositivo"</string>
@@ -628,7 +628,7 @@
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"Cando comezar"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"O protector de pantalla comezará transcorrido este período de inactividade. Se non se selecciona ningún protector de pantalla, a pantalla apagarase."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Despois de <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> de inactividade"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Poñer o dispositivo en suspensión"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Suspender o dispositivo"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"A pantalla apágase despois deste período de inactividade."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Non hai ningunha conta que almacene datos de copia de seguranza neste momento"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Queres borrar toda a túa información persoal e as aplicacións descargadas? Non podes desfacer esta acción."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Borrar todo"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Escolle un nome para o teu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Un nome permitirache identificar o teu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> cando accedas a el desde outros dispositivos, como o teu teléfono, tableta ou ordenador."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Ponlle nome ao teu dispositivo <xliff:g id="DEVICEMODEL">%1$s</xliff:g> para axudar a identificalo cando emitas contido ou cando te conectes a el desde outros dispositivos."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Salón"</item>
-    <item msgid="3722089849939477581">"Sala multimedia"</item>
-    <item msgid="6108590585438763574">"Sala de estar"</item>
-    <item msgid="2581035245390468625">"Comedor"</item>
-    <item msgid="3127487827308695324">"Estudio"</item>
-    <item msgid="6172018430592195063">"Habitación"</item>
-    <item msgid="8120010459866284578">"Cociña"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Televisión do salón"</item>
+    <item msgid="8122798759665439456">"Televisión da sala"</item>
+    <item msgid="1389347662738182100">"Televisión do cuarto"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Introducir nome personalizado…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Introducir nome personalizado…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Cambiar nome deste <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Este <xliff:g id="DEVICEMODEL">%1$s</xliff:g> chámase actualmente \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"Cambiar"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Reiniciar no modo seguro"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Queres reiniciar no modo seguro?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Esta acción desactivará todas as aplicacións de terceiros que instalaches. Estas restableceranse cando reinicies de novo."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Realizando informe de erros"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Teclados virtuais dispoñibles"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Xestionar teclados"</string>
 </resources>

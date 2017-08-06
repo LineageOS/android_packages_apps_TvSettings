@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"מקלדת"</string>
     <string name="system_home" msgid="2858989138172296012">"מסך דף הבית"</string>
     <string name="system_search" msgid="2837264654143247611">"חיפוש"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"אבטחה והגבלות"</string>
     <string name="system_speech" msgid="8128688499687306982">"דיבור"</string>
     <string name="system_inputs" msgid="2413907183796651102">"כניסות קלט"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"אפשרויות מפתח"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ללא"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"שימוש ואבחון"</string>
+    <string name="tutorials" msgid="3731493987558093244">"הדרכות"</string>
     <string name="about_system_update" msgid="7282772247661356586">"עדכון מערכת"</string>
     <string name="about_preference" msgid="4131396784531360434">"מידע כללי"</string>
     <string name="device_name" msgid="2670488158531273028">"שם המכשיר"</string>
@@ -574,7 +574,7 @@
     <string name="app_not_supported_in_limited" msgid="6818309827329010677">"אפליקציה זו אינה נתמכת בפרופילים מוגבלים"</string>
     <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"האפליקציה הזו יכולה לגשת לחשבונות שלך"</string>
     <string name="restriction_location_enable_title" msgid="2575116135395354938">"מיקום"</string>
-    <string name="restriction_location_enable_summary" msgid="4195349388342385870">"התר לאפליקציות להשתמש בנתוני המיקום שלך"</string>
+    <string name="restriction_location_enable_summary" msgid="4195349388342385870">"אפליקציות יוכלו להשתמש בנתוני המיקום שלך"</string>
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"היכנס אל הפרופיל המוגבל"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"צא מהפרופיל המוגבל"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"מחק פרופיל מוגבל"</string>
@@ -651,17 +651,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"האם למחוק את כל המידע האישי שלך ואת האפליקציות שהורדת? לא ניתן לבטל את הפעולה!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"מחק הכל"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"בחר שם עבור ה-<xliff:g id="DEVICEMODEL">%1$s</xliff:g> שלך"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"שם יסייע לזהות את ה-<xliff:g id="DEVICEMODEL">%1$s</xliff:g> כאשר תיגש אליו ממכשירים אחרים, כמו הטלפון, הטאבלט או המחשב."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"תן ל-<xliff:g id="DEVICEMODEL">%1$s</xliff:g> שלך שם שיעזור לזהות אותו כשמעבירים אליו תוכן או מתחברים אליו ממכשירים אחרים."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"סלון"</item>
-    <item msgid="3722089849939477581">"חדר מדיה"</item>
-    <item msgid="6108590585438763574">"חדר משפחה"</item>
-    <item msgid="2581035245390468625">"חדר אוכל"</item>
-    <item msgid="3127487827308695324">"חדר עבודה"</item>
-    <item msgid="6172018430592195063">"חדר שינה"</item>
-    <item msgid="8120010459866284578">"מטבח"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"TV – סלון"</item>
+    <item msgid="8122798759665439456">"TV – חדר משפחה"</item>
+    <item msgid="1389347662738182100">"TV – חדר שינה"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"הזן שם בהתאמה אישית…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"הזן שם בהתאמה אישית…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"שנה את השם של ה-<xliff:g id="DEVICEMODEL">%1$s</xliff:g> הזה"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> הזה נקרא כעת \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"שנה"</string>
@@ -676,4 +673,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"הפעל מחדש במצב בטוח"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"האם אתה רוצה להפעיל מחדש במצב בטוח?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"פעולה זו תשבית את כל האפליקציות של צד שלישי שהתקנת. הן ישוחזרו לאחר שתפעיל מחדש שוב."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"יוצר דוח על באג"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"מקלדות וירטואליות זמינות"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"ניהול מקלדות"</string>
 </resources>

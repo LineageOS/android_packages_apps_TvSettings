@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"แป้นพิมพ์"</string>
     <string name="system_home" msgid="2858989138172296012">"หน้าจอหลัก"</string>
     <string name="system_search" msgid="2837264654143247611">"ค้นหา"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"ความปลอดภัยและข้อจำกัด"</string>
     <string name="system_speech" msgid="8128688499687306982">"คำพูด"</string>
     <string name="system_inputs" msgid="2413907183796651102">"อินพุต"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"ตัวเลือกสำหรับนักพัฒนา"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ไม่มี"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"การใช้และการวินิจฉัย"</string>
+    <string name="tutorials" msgid="3731493987558093244">"บทแนะนำ"</string>
     <string name="about_system_update" msgid="7282772247661356586">"การอัปเดตระบบ"</string>
     <string name="about_preference" msgid="4131396784531360434">"เกี่ยวกับ"</string>
     <string name="device_name" msgid="2670488158531273028">"ชื่ออุปกรณ์"</string>
@@ -192,7 +192,7 @@
     <string name="title_wifi_ip_settings" msgid="1176973848286865602">"การตั้งค่า IP"</string>
     <string name="title_wifi_ip_address" msgid="1176502993805009566">"ที่อยู่ IP:"</string>
     <string name="title_wifi_gateway" msgid="7210935277165358134">"เกตเวย์:"</string>
-    <string name="title_wifi_network_prefix_length" msgid="4821632382990582038">"ความยาวของหมายเลขเครือข่าย:"</string>
+    <string name="title_wifi_network_prefix_length" msgid="4821632382990582038">"ความยาวรหัสนำเครือข่าย:"</string>
     <string name="title_wifi_dns1" msgid="8202712852864206601">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="2673986973918499478">"DNS 2:"</string>
     <string name="title_wifi_proxy_settings_invalid" msgid="7380479044141040849">"การตั้งค่าพร็อกซีไม่ถูกต้อง"</string>
@@ -224,7 +224,7 @@
     <string name="wifi_dns1_description" msgid="2463500547232077393">"ป้อนที่อยู่ IP ที่ถูกต้องหรือปล่อยว่างไว้\nตัวอย่างเช่น <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
     <string name="wifi_dns2_description" msgid="8005473174044015359">"ป้อนที่อยู่ IP ที่ถูกต้องหรือปล่อยว่างไว้\nตัวอย่างเช่น <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
     <string name="wifi_gateway_description" msgid="4773751224452216231">"ป้อนที่อยู่ IP ที่ถูกต้องหรือปล่อยว่างไว้\nตัวอย่างเช่น <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
-    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"ป้อนความยาวของหมายเลขเครือข่ายที่ถูกต้อง\nตัวอย่างเช่น <xliff:g id="ID_1">24</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"ป้อนความยาวรหัสนำเครือข่ายที่ถูกต้อง\nตัวอย่างเช่น <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"ชื่อโฮสต์ไม่ถูกต้อง"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"รายการยกเว้นนี้ไม่ถูกต้อง โปรดป้อนรายการโดเมนที่ยกเว้นโดยคั่นด้วยเครื่องหมายจุลภาค"</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"ต้องระบุข้อมูลในช่องพอร์ต"</string>
@@ -319,7 +319,7 @@
     <string name="learn_more_action" msgid="7015991954404958779">"เรียนรู้เพิ่มเติม"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"ลองอีกครั้ง"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"ค้นหาเราเตอร์ WPS…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"กดปุ่มการตั้งค่าการป้องกัน Wi-Fi บนเราเตอร์\nปุ่มนี้อาจเขียนว่า \"WPS\" หรือมีสัญลักษณ์ทางด้านซ้าย"</string>
+    <string name="wifi_wps_instructions" msgid="3618110962669110034">"กดปุ่ม \"การตั้งค่า WiFi แบบปลอดภัย\" บนเราเตอร์ของคุณ\nปุ่มนี้อาจเขียนว่า \"WPS\" หรือมีสัญลักษณ์ทางด้านซ้าย"</string>
     <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"ป้อน PIN <xliff:g id="NUMBER">%1$s</xliff:g> ในเราเตอร์ Wi-Fi ของคุณ"</string>
     <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"หลังจากที่คุณป้อน PIN แล้ว การตั้งค่าอาจใช้เวลาถึง 2 นาทีกว่าจะเสร็จสิ้น"</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"ไม่พบเราเตอร์ Wi-Fi"</string>
@@ -361,7 +361,7 @@
     <string name="third_party_location_services_title" msgid="4089136801976399147">"บริการตำแหน่งของบุคคลที่สาม"</string>
     <string name="location_reporting" msgid="3054236612250063073">"การรายงานตำแหน่ง"</string>
     <string name="location_history" msgid="2946680949724247804">"ประวัติตำแหน่ง"</string>
-    <string name="location_reporting_desc" msgid="6256424995139430823">"Google ใช้คุณลักษณะนี้ในผลิตภัณฑ์ต่างๆ เช่น Google Now และ Google Maps การเปิดการรายงานตำแหน่งช่วยให้ผลิตภัณฑ์ Google ที่ใช้คุณลักษณะนี้สามารถจัดเก็บและใช้ข้อมูลตำแหน่งล่าสุดของอุปกรณ์ซึ่งเกี่ยวข้องกับบัญชี Google ของคุณ"</string>
+    <string name="location_reporting_desc" msgid="6256424995139430823">"Google ใช้ฟีเจอร์นี้ในผลิตภัณฑ์ต่างๆ เช่น Google Now และ Google Maps การเปิดการรายงานตำแหน่งช่วยให้ผลิตภัณฑ์ Google ที่ใช้ฟีเจอร์นี้สามารถจัดเก็บและใช้ข้อมูลตำแหน่งล่าสุดของอุปกรณ์ซึ่งเกี่ยวข้องกับบัญชี Google ของคุณ"</string>
     <string name="location_history_desc" msgid="3861249867748294369">"เมื่อประวัติตำแหน่งสำหรับบัญชีนี้เปิดอยู่ Google สามารถจัดเก็บข้อมูลตำแหน่งของอุปกรณ์เพื่อให้แอปใช้งาน\n\nตัวอย่างเช่น Google Maps สามารถแสดงเส้นทาง และ Google Now สามารถแจ้งให้คุณทราบเกี่ยวกับสภาพการจราจรในการเดินทาง\n\nคุณสามารถปิดประวัติตำแหน่งได้ทุกเมื่อ แต่การปิดจะไม่ใช่การลบประวัติตำแหน่ง หากต้องการดูและจัดการประวัติตำแหน่ง โปรดไปที่ maps.google.com/locationhistory"</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"ลบประวัติตำแหน่ง"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"การลบนี้จะลบประวัติตำแหน่งทั้งหมดที่จัดเก็บไว้จากอุปกรณ์นี้สำหรับบัญชี Google นี้ คุณเลิกทำการลบนี้ไม่ได้ แอปบางแอป เช่น Google Now จะหยุดทำงาน"</string>
@@ -480,7 +480,7 @@
     <string name="security_unknown_sources_title" msgid="769762478057744545">"ไม่รู้จักที่มา"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"อนุญาตให้ติดตั้งแอปจากแหล่งอื่นๆ ที่นอกเหนือไปจาก Play Store"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"อนุญาตแหล่งที่มาที่ไม่รู้จัก"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"อุปกรณ์และข้อมูลส่วนบุคคลของคุณมีความเสี่ยงยิ่งขึ้นที่จะถูกโจมตีจากแอปที่ไม่รู้จักแหล่งที่มา คุณยอมรับว่าคุณจะเป็นผู้รับผิดชอบแต่เพียงผู้เดียวต่อความเสียหายใดๆ ที่เกิดกับอุปกรณ์หรือหรือการสูญเสียข้อมูลที่เป็นผลจากการใช้แอปเหล่านี้"</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"อุปกรณ์และข้อมูลส่วนบุคคลของคุณมีความเสี่ยงยิ่งขึ้นที่จะถูกโจมตีจากแอปที่ไม่รู้จักแหล่งที่มา คุณยอมรับว่าคุณจะเป็นผู้รับผิดชอบแต่เพียงผู้เดียวต่อความเสียหายใดๆ ที่เกิดกับอุปกรณ์หรือการสูญเสียข้อมูลที่เป็นผลจากการใช้แอปเหล่านี้"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"ยืนยันแอป"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"ไม่อนุญาตหรือแจ้งเตือนก่อนที่จะติดตั้งแอปที่อาจก่อให้เกิดอันตราย"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"ไม่เคยใช้"</string>
@@ -599,7 +599,7 @@
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"เวอร์ชัน <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"เปิด"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"บังคับให้หยุด"</string>
-    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"หากคุณบังคับให้หยุดแอป การทำงานอาจผิดพลาดได้"</string>
+    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"หากคุณบังคับให้แอปหยุด การทำงานอาจผิดพลาดได้"</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"ถอนการติดตั้ง"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"ถอนการติดตั้งการอัปเดต"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"การอัปเดตทั้งหมดของแอประบบ Android นี้จะถูกถอนการติดตั้ง"</string>
@@ -625,10 +625,10 @@
     <string name="device_daydreams_none" msgid="2767107052779579259">"ปิดหน้าจอ"</string>
     <string name="device_daydreams_select" msgid="2112338101206187695">"โปรแกรมรักษาหน้าจอ"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"เริ่มเลย"</string>
-    <string name="device_daydreams_sleep" msgid="7676938708373592766">"จะให้เริ่มเมื่อใด"</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"เริ่มใช้งานเมื่อใด"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"โปรแกรมรักษาหน้าจอจะเริ่มทำงานหลังจากไม่มีการใช้งานตามระยะเวลานี้ หากไม่ได้เลือกโปรแกรมรักษาหน้าจอไว้ จอแสดงผลจะปิดลง"</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"หลังจากไม่ได้ใช้งานเป็นเวลา <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"ให้อุปกรณ์นอนหลับ"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"ให้อุปกรณ์เข้าโหมดสลีป"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"หน้าจอจะดับลงหลังจากไม่มีการใช้งานระยะหนึ่ง"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"ไม่มีบัญชีใดในปัจจุบันที่จัดเก็บข้อมูลสำรองไว้"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"ลบข้อมูลส่วนบุคคลและแอปที่ดาวน์โหลดทั้งหมดไหม คุณไม่สามารถย้อนกลับการทำงานนี้ได้!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ลบทุกอย่าง"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"ตั้งชื่อให้ <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"ชื่อจะช่วยระบุตัวตน <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ของคุณเมื่อเข้าถึงจากอุปกรณ์อื่นๆ เช่น โทรศัพท์ แท็บเล็ต หรือคอมพิวเตอร์"</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"ตั้งชื่อให้กับ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> เพื่อช่วยระบุอุปกรณ์เมื่อมีการแคสต์หรือเชื่อมต่อจากอุปกรณ์อื่น"</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"ห้องนั่งเล่น"</item>
-    <item msgid="3722089849939477581">"ห้องเล่นสื่อ"</item>
-    <item msgid="6108590585438763574">"ห้องสำหรับทั้งครอบครัว"</item>
-    <item msgid="2581035245390468625">"ห้องรับประทานอาหาร"</item>
-    <item msgid="3127487827308695324">"ห้องส่วนตัว"</item>
-    <item msgid="6172018430592195063">"ห้องนอน"</item>
-    <item msgid="8120010459866284578">"ห้องครัว"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"TV ในห้องนั่งเล่น"</item>
+    <item msgid="8122798759665439456">"TV ในห้องครอบครัว"</item>
+    <item msgid="1389347662738182100">"TV ในห้องนอน"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"ป้อนชื่อที่กำหนดเอง…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"ป้อนชื่อที่กำหนดเอง…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"เปลี่ยนชื่อ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> เครื่องนี้"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"ปัจจุบัน <xliff:g id="DEVICEMODEL">%1$s</xliff:g> เครื่องนี้มีชื่อว่า \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"เปลี่ยน"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"รีบูตเข้าสู่โหมดปลอดภัย"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"คุณต้องการรีบูตเข้าสู่โหมดปลอดภัยไหม"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"วิธีนี้จะปิดใช้แอปพลิเคชันของบุคคลที่สามทั้งหมดที่คุณติดตั้งไว้ ระบบจะคืนค่าแอปดังกล่าวเมื่อคุณรีบูตอีกครั้ง"</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"กำลังบันทึกรายงานข้อบกพร่อง"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"แป้นพิมพ์เสมือนที่พร้อมใช้งาน"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"จัดการแป้นพิมพ์"</string>
 </resources>

@@ -27,7 +27,7 @@
     <string name="accounts_category_title" msgid="7591072907146317425">"Accounts"</string>
     <string name="add_account" msgid="4098060223200619258">"Account toevoegen"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Account verwijderen"</string>
-    <string name="account_sync" msgid="773808124331714965">"Gesynchroni&amp;shy;seerde apps kiezen"</string>
+    <string name="account_sync" msgid="773808124331714965">"Gesynchroniseerde apps kiezen"</string>
     <string name="sync_now" msgid="8732244492880016471">"Nu synchroniseren"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Synchroniseren…"</string>
     <string name="last_synced" msgid="6178494892357077274">"Laatst gesynchroniseerd: <xliff:g id="TIME">%1s</xliff:g>"</string>
@@ -54,7 +54,7 @@
     <string name="device_apps" msgid="9180435229638772838">"Apps"</string>
     <string name="device_storage_reset" msgid="1425978936501134425">"Opslag en herstel"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Back-up en herstel"</string>
-    <string name="device_reset" msgid="2827002349560023125">"Fabrieks&amp;shy;instellingen terugzetten"</string>
+    <string name="device_reset" msgid="2827002349560023125">"Fabrieksinstellingen terugzetten"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibratie"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Gecachte gegevens wissen?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"De gecachte gegevens voor alle apps wissen."</string>
@@ -69,11 +69,11 @@
     <string name="accessory_state_paired" msgid="1959238931866401476">"Gekoppeld"</string>
     <string name="accessory_options" msgid="4799658564005710297">"Accessoire"</string>
     <string name="accessory_unpair" msgid="8242725516604465355">"Koppeling ongedaan maken"</string>
-    <string name="accessory_battery" msgid="7021788232835772126">"Accu <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
+    <string name="accessory_battery" msgid="7021788232835772126">"Batterij <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
     <string name="accessory_unpairing" msgid="7568241162181184667">"Koppeling met apparaat ongedaan maken…"</string>
     <string name="accessory_connected" msgid="2156489304110030393">"Verbonden"</string>
     <string name="accessory_change_name" msgid="8958916008739792785">"Naam wijzigen"</string>
-    <string name="accessory_change_name_title" msgid="4630819456923061184">"Geef een nieuwe naam op voor dit accessoire"</string>
+    <string name="accessory_change_name_title" msgid="4630819456923061184">"Accessoire een nieuwe naam geven"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"Zoeken naar accessoires…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Voordat je je Bluetooth-apparaten koppelt, controleer je of ze in de koppelingsmodus staan"</string>
     <string name="accessories_autopair_msg" msgid="8618829246837821752">"Er is een apparaat gevonden. Dit apparaat wordt automatisch over <xliff:g id="COUNTDOWN">%1$s</xliff:g> seconden gekoppeld"</string>
@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Toetsenbord"</string>
     <string name="system_home" msgid="2858989138172296012">"Startscherm"</string>
     <string name="system_search" msgid="2837264654143247611">"Zoeken"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"Beveiliging en beperkingen"</string>
     <string name="system_speech" msgid="8128688499687306982">"Spraak"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Ingangen"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Opties voor ontwikkelaars"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Geen"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Gebruik en diagnostische gegevens"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Trainingen"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Systeemupdate"</string>
     <string name="about_preference" msgid="4131396784531360434">"Over"</string>
     <string name="device_name" msgid="2670488158531273028">"Apparaatnaam"</string>
@@ -137,8 +137,8 @@
     <string name="kernel_version" msgid="2418845475938044903">"Kernel-versie"</string>
     <string name="status_unavailable" msgid="831018565485085059">"Niet beschikbaar"</string>
     <string name="device_status_title" msgid="1629253652287243543">"Status"</string>
-    <string name="battery_status_title" msgid="2557264957661087826">"Accustatus"</string>
-    <string name="battery_level_title" msgid="100046129713781009">"Accuniveau"</string>
+    <string name="battery_status_title" msgid="2557264957661087826">"Batterijstatus"</string>
+    <string name="battery_level_title" msgid="100046129713781009">"Batterijniveau"</string>
     <string name="sim_status_title" msgid="498929467188844611">"Simkaartstatus"</string>
     <string name="imei_information_title" msgid="5208860549282877136">"IMEI-informatie"</string>
     <string name="status_bt_address" msgid="1571721865060122393">"Bluetooth-adres"</string>
@@ -351,7 +351,7 @@
     <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Recente locatieverzoeken"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"Er zijn geen apps die je locatie onlangs hebben aangevraagd"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"Hoog accugebruik"</string>
-    <string name="location_low_battery_use" msgid="5756040390248358148">"Laag accugebruik"</string>
+    <string name="location_low_battery_use" msgid="5756040390248358148">"Laag batterijgebruik"</string>
     <string name="location_mode_wifi_description" msgid="2778774510654527264">"Wifi gebruiken om locatie te schatten"</string>
     <string name="location_status" msgid="3456414279428237558">"Locatiestatus"</string>
     <string name="location_services" msgid="5441085185119797200">"Locatieservices"</string>
@@ -616,7 +616,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Geen standaardwaarden ingesteld"</string>
     <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"Cachegeheugen wissen"</string>
     <string name="device_apps_app_management_notifications" msgid="7291960671957440729">"Meldingen"</string>
-    <string name="device_apps_app_management_permissions" msgid="1829808830974726081">"Rechten"</string>
+    <string name="device_apps_app_management_permissions" msgid="1829808830974726081">"Machtigingen"</string>
     <string name="device_apps_app_management_not_available" msgid="1249731776661207047">"App niet beschikbaar"</string>
     <string name="settings_ok" msgid="3321630456511355983">"OK"</string>
     <string name="settings_cancel" msgid="304280412158061225">"Annuleren"</string>
@@ -628,7 +628,7 @@
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"Wanneer inschakelen"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"De schermbeveiliging wordt ingeschakeld zodra het apparaat gedurende deze tijd inactief is. Als er geen schermbeveiliging is ingesteld, wordt het scherm uitgeschakeld."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Na <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> inactiviteit"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Slaapstand van apparaat inschakelen"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Slaapstand inschakelen"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Scherm wordt uitgeschakeld na deze periode van inactiviteit."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Er is momenteel geen account ingesteld voor het opslaan van back-upgegevens"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -641,22 +641,19 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Wil je al je persoonlijke gegevens en gedownloade apps verwijderen? Je kunt deze actie niet ongedaan maken."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Alles wissen"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Kies een naam voor je <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Als je je <xliff:g id="DEVICEMODEL">%1$s</xliff:g> een naam geeft, kun je deze herkennen wanneer je toegang probeert te krijgen vanaf andere apparaten, zoals je telefoon, tablet of computer."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Geef je <xliff:g id="DEVICEMODEL">%1$s</xliff:g> een naam zodat je deze kunt identificeren tijdens het casten of wanneer je vanaf andere apparaten verbinding met dit apparaat maakt."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Woonkamer"</item>
-    <item msgid="3722089849939477581">"Mediakamer"</item>
-    <item msgid="6108590585438763574">"Huiskamer"</item>
-    <item msgid="2581035245390468625">"Eetkamer"</item>
-    <item msgid="3127487827308695324">"Hobbykamer"</item>
-    <item msgid="6172018430592195063">"Slaapkamer"</item>
-    <item msgid="8120010459866284578">"Keuken"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Tv in woonkamer"</item>
+    <item msgid="8122798759665439456">"Tv in huiskamer"</item>
+    <item msgid="1389347662738182100">"Tv in slaapkamer"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Aangepaste naam opgeven…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Aangepaste naam opgeven…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"De naam van deze <xliff:g id="DEVICEMODEL">%1$s</xliff:g> wijzigen"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Deze <xliff:g id="DEVICEMODEL">%1$s</xliff:g> heeft momenteel de naam \'<xliff:g id="DEVICENAME">%2$s</xliff:g>\'"</string>
     <string name="change_setting" msgid="2047402388786162246">"Wijzigen"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Niet wijzigen"</string>
-    <string name="apps_permissions" msgid="1283592091618660965">"Rechten"</string>
+    <string name="apps_permissions" msgid="1283592091618660965">"Machtigingen"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"App-machtigingen"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Verleend aan <xliff:g id="COUNT_0">%d</xliff:g> van <xliff:g id="COUNT_1">%d</xliff:g> apps"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"Toestemmingsverzoek voor Bluetooth"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Opnieuw opstarten in veilige modus"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Wil je opnieuw opstarten in de veilige modus?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Als je dit doet, worden alle geïnstalleerde apps van derden uitgeschakeld. Ze worden weer ingeschakeld als je nogmaals opnieuw opstart."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Bugrapport wordt vastgelegd"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Beschikbare virtuele toetsenborden"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Toetsenborden beheren"</string>
 </resources>

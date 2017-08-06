@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"კლავიატურ."</string>
     <string name="system_home" msgid="2858989138172296012">"მთავარი ეკრანი"</string>
     <string name="system_search" msgid="2837264654143247611">"ძიება"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"უსაფრთხოება და შეზღუდვები"</string>
     <string name="system_speech" msgid="8128688499687306982">"წარმოთქმა"</string>
     <string name="system_inputs" msgid="2413907183796651102">"შეტანის პორტები"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"პარამეტრები დეველოპერებისთვის"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"არცერთი"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"გამოყენების და დიაგნოსტიკური მონაცემები"</string>
+    <string name="tutorials" msgid="3731493987558093244">"სახელმძღვანელოები"</string>
     <string name="about_system_update" msgid="7282772247661356586">"სისტემის განახლება"</string>
     <string name="about_preference" msgid="4131396784531360434">"შესახებ"</string>
     <string name="device_name" msgid="2670488158531273028">"მოწყობილობის სახელი"</string>
@@ -626,7 +626,7 @@
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"დაწყების დრო"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"ეკრანმზოგი უმოქმედობის მითითებული პერიოდის შემდეგ გაეშვება. თუ ეკრანმზოგი არ არის არჩეული, ეკრანი გამოირთვება."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"უმოქმედობის <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> შემდეგ"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"მოწყობილობის ძილის რეჟიმზე გადაყვანა"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"მოწყობილობის დაძინება"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"ეკრანი გამოირთვება ამ უმოქმედობის პერიოდის შემდეგ."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"ამჟამად მონაცემებს არ ინახავს არცერთი ანგარიში"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -639,17 +639,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"გსურთ, ყველა თქვენი პირადი ინფორმაციისა და ჩამოტვირთული აპების წაშლა? ამ ქმედების უკან დაბრუნება შეუძლებელია."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ყველაფრის წაშლა"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"აირჩიეთ სახელი თქვენი <xliff:g id="DEVICEMODEL">%1$s</xliff:g>-სთვის"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"სახელი დაგეხმარებათ, ამოიცნოთ თქვენი <xliff:g id="DEVICEMODEL">%1$s</xliff:g>, მასზე სხვა მოწყობილობებიდან წვდომისას, როგორიცაა ტელეფონი, ტაბლეტი ან კომპიუტერი."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"დაარქვით სახელი თქვენს <xliff:g id="DEVICEMODEL">%1$s</xliff:g>-ს, რაც გაგიმარტივებთ მის ამოცნობას. მაგალითად, სხვა მოწყობილობებიდან მასზე ტრანსლირებისას, ან მასთან დაკავშირებისას."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"მისაღები ოთახი"</item>
-    <item msgid="3722089849939477581">"მედია ოთახი"</item>
-    <item msgid="6108590585438763574">"საერთო ოთახი"</item>
-    <item msgid="2581035245390468625">"სასადილო ოთახი"</item>
-    <item msgid="3127487827308695324">"სამუშაო კაბინეტი"</item>
-    <item msgid="6172018430592195063">"საძინებელი"</item>
-    <item msgid="8120010459866284578">"სამზარეულო"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"მისაღები ოთახის ტელევიზორი"</item>
+    <item msgid="8122798759665439456">"საერთო ოთახის ტელევიზორი"</item>
+    <item msgid="1389347662738182100">"საძინებელი ოთახის ტელევიზორი"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"მორგებული სახელის შეყვანა..."</string>
+    <string name="custom_room" msgid="8655516733933892458">"შეიყვანეთ მორგებული სახელი…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"ამ <xliff:g id="DEVICEMODEL">%1$s</xliff:g>-ის გადარქმევა"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"ამ <xliff:g id="DEVICEMODEL">%1$s</xliff:g>-ის ამჟამინდელი სახელია „<xliff:g id="DEVICENAME">%2$s</xliff:g>“"</string>
     <string name="change_setting" msgid="2047402388786162246">"შეცვლა"</string>
@@ -664,4 +661,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"უსაფრთხო რეჟიმში გადატვირთვა"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"გსურთ უსაფრთხო რეჟიმში გადატვირთვა?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"ეს მოქმედება გათიშავს მესამე მხარის თქვენ მიერ დაინსტალირებულ აპლიკაციებს. მათი მუშაობა აღდგება ხელახლა გადატვირთვის შემდეგ."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"მიმდინარეობს ხარვეზების შესახებ ანგარიშის აღბეჭდვა"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"ხელმისაწვდომი ვირტუალური კლავიატურები"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"კლავიატურების მართვა"</string>
 </resources>

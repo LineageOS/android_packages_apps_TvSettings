@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Баскычтоп"</string>
     <string name="system_home" msgid="2858989138172296012">"Башкы экран"</string>
     <string name="system_search" msgid="2837264654143247611">"Издөө"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Googlе"</string>
     <string name="system_security" msgid="8230080273993484407">"Коопсуздук &amp; чектөөлөр"</string>
     <string name="system_speech" msgid="8128688499687306982">"Кеп"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Киргизүүлөр"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Иштеп чыгуучунун параметрлери"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Эч бири"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Колдонуу жана мүчүлүштүктөрдү аныктоо"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Үйрөткүчтөр"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Тутум жаңыртуусу"</string>
     <string name="about_preference" msgid="4131396784531360434">"Түзмөк жөнүндө"</string>
     <string name="device_name" msgid="2670488158531273028">"Түзмөктүн аталышы"</string>
@@ -150,7 +150,7 @@
     <string name="terms_title" msgid="8480859222932736291">"Шарттар жана жоболор"</string>
     <string name="webview_license_title" msgid="8843666223583780825">"Систем WebView Уруксаттамасы"</string>
     <string name="wallpaper_attributions" msgid="8622098625739634898">"Тушкагаздар"</string>
-    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Спутник сүрөттөрүн камсыздагычтар:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Спутник сүрөттөрү:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Начар"</item>
     <item msgid="5986166866411161790">"Орто"</item>
@@ -336,11 +336,11 @@
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"Автоматтык күн жана убакыт"</string>
   <string-array name="auto_date_time_entries">
-    <item msgid="4590792581242018007">"Тармактын убакыты колдонулсун"</item>
+    <item msgid="4590792581242018007">"Тармактын убакыты колдонулат"</item>
     <item msgid="3807025813081244357">"Өчүк"</item>
   </string-array>
   <string-array name="auto_date_time_ts_entries">
-    <item msgid="8463479794795616025">"Тармактын убакыты колдонулсун"</item>
+    <item msgid="8463479794795616025">"Тармактын убакыты колдонулат"</item>
     <item msgid="2475903014233987786">"Транспорт агымдар убакытын колдонуу"</item>
     <item msgid="150957081326946463">"Өчүк"</item>
   </string-array>
@@ -407,7 +407,7 @@
     <string name="color_magenta" msgid="6395786485839439122">"Маджента"</string>
     <string name="system_accessibility_status" msgid="6150600992901856367">"Иштетүү"</string>
     <string name="system_accessibility_config" msgid="3216531917536720277">"Конфигурация"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"<xliff:g id="SERVICE">%1$s</xliff:g> колдонулсунбу?"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"<xliff:g id="SERVICE">%1$s</xliff:g> колдоносузбу?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"<xliff:g id="SERVICE">%1$s</xliff:g> сырсөздөрдөн башка, бардык терилген тексттериңизди топтоп турат. Аларга насыя карталарынын номерлери сыяктуу жеке дайындар кирет."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"<xliff:g id="SERVICE">%1$s</xliff:g> токтотулсунбу?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"OK\'ди тандасаңыз, <xliff:g id="SERVICE">%1$s</xliff:g> токтотосуз."</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Жеке маалыматтыңыз жана жүктөлүп алынган колдонмолоруңуздун бардыгы өчүрүлсүнбү? Бул аракетти артка кайтара албайсыз!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Баарын өчүрүү"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> үчүн ат тандаңыз"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Телефон, планшет же компьютер сыяктуу башка түзмөктөрдөн киргенде, бул аталыш аркылуу <xliff:g id="DEVICEMODEL">%1$s</xliff:g> тааный аласыз."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Тышкы экранга чыгарып жатканда же башка түзмөктөр аны менен туташып жатканда түзмөгүңүздү оңой табуу үчүн, <xliff:g id="DEVICEMODEL">%1$s</xliff:g> түзмөгүнө ат коюп коюңуз."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Конок үй"</item>
-    <item msgid="3722089849939477581">"Медиа бөлмөсү"</item>
-    <item msgid="6108590585438763574">"Жалпы бөлмө"</item>
-    <item msgid="2581035245390468625">"Ашкана"</item>
-    <item msgid="3127487827308695324">"Иш бөлмөсү"</item>
-    <item msgid="6172018430592195063">"Уктоочу бөлмө"</item>
-    <item msgid="8120010459866284578">"Ашкана"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Конок үйдөгү сыналгы"</item>
+    <item msgid="8122798759665439456">"Төркү бөлмөдөгү сыналгы"</item>
+    <item msgid="1389347662738182100">"Уктоочу бөлмөдөгү сыналгы"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Өзгөчө аталышты киргизиңиз…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Ыңгайлаштырылган аталышты киргизиңиз…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> аталышын өзгөртүү"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Бул <xliff:g id="DEVICEMODEL">%1$s</xliff:g> учурда \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" деп аталып турат"</string>
     <string name="change_setting" msgid="2047402388786162246">"Өзгөртүү"</string>
@@ -660,10 +657,13 @@
     <string name="device_apps_permissions" msgid="2966387603529725982">"Колдонмо уруксаттары"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%d</xliff:g> ичинен <xliff:g id="COUNT_0">%d</xliff:g> колдонмого уруксат бар"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"Bluetooth\'ду күйгүзүүнү өтүнүү"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android коопсуздугун жаңыртуу деңгээли"</string>
+    <string name="security_patch" msgid="2131617390189164481">"Коопсуздук тутуму качан жаңыртылды"</string>
     <string name="choose_application" msgid="5662960665577780353">"Колдонмо тандаңыз"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Сынамык)"</string>
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Кайра жандырып, коопсуз режимге өтүү"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Кайра жандырып, коопсуз режимге өтөсүзбү?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Ушуну менен үчүнчү тараптын колдонмолорунун баары өчүрүлөт. Алар телефонуңуз өчүп-күйгөндөн кийин калыбына келет."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Мүчүлүштүк тууралуу кабар жаздырылууда"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Жеткиликтүү виртуалдык баскычтоптор"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Баскычтопторду башкаруу"</string>
 </resources>

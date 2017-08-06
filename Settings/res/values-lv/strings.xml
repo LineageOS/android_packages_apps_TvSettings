@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Tastatūra"</string>
     <string name="system_home" msgid="2858989138172296012">"Sākuma ekrāns"</string>
     <string name="system_search" msgid="2837264654143247611">"Meklēšana"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"Drošība un ierobežojumi"</string>
     <string name="system_speech" msgid="8128688499687306982">"Runa"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Ieejas"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Izstrādātājiem paredzētās opcijas"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Nav"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Lietojums un diagnostika"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Pamācības"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Sistēmas atjauninājums"</string>
     <string name="about_preference" msgid="4131396784531360434">"Par"</string>
     <string name="device_name" msgid="2670488158531273028">"Ierīces nosaukums"</string>
@@ -369,7 +369,7 @@
     <string name="system_services" msgid="7230571820151215779">"Pakalpojumi"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"Pakalpojumu iestatījumi"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Liela kontrasta teksts"</string>
-    <string name="accessibility_captions" msgid="6133896463407851079">"Paraksti"</string>
+    <string name="accessibility_captions" msgid="6133896463407851079">"Subtitri"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Videoklipa slēgto parakstu teksta pārklājuma iestatījumi"</string>
     <string name="captions_display" msgid="735692527287125548">"Displejs"</string>
     <string name="captions_display_on" msgid="1989009878719500520">"Ieslēgti"</string>
@@ -408,7 +408,7 @@
     <string name="color_magenta" msgid="6395786485839439122">"Fuksīnsarkana"</string>
     <string name="system_accessibility_status" msgid="6150600992901856367">"Iespējot"</string>
     <string name="system_accessibility_config" msgid="3216531917536720277">"Konfigurācija"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Vai izmantot pakalpojumu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Izmantot <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"Pakalpojumā <xliff:g id="SERVICE">%1$s</xliff:g> var tikt apkopots viss jūsu ievadītais teksts, izņemot paroles. Tas attiecas arī uz personas datiem, piemēram, kredītkartes numuru."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"Vai apturēt pakalpojuma <xliff:g id="SERVICE">%1$s</xliff:g> darbību?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Atlasot “Labi”, pakalpojuma <xliff:g id="SERVICE">%1$s</xliff:g> darbība tiks pārtraukta."</string>
@@ -646,17 +646,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Vai dzēst visu jūsu personas informāciju un lejupielādētās lietotnes? Šo darbību nevar atsaukt."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Dzēst visu"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Nosaukuma izvēlēšanās <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ierīcei"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Nosaukums palīdzēs jums atpazīt savu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ierīci, kad piekļūsiet tai no citām ierīcēm, piemēram, no tālruņa, planšetdatora vai galddatora."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Piešķiriet nosaukumu savai <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ierīcei, lai būtu vieglāk to identificēt, apraidot tajā saturu vai izveidojot ar to savienojumu no citām ierīcēm."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Dzīvojamā istaba"</item>
-    <item msgid="3722089849939477581">"Multivides telpa"</item>
-    <item msgid="6108590585438763574">"Viesistaba"</item>
-    <item msgid="2581035245390468625">"Ēdamistaba"</item>
-    <item msgid="3127487827308695324">"Kabinets"</item>
-    <item msgid="6172018430592195063">"Guļamistaba"</item>
-    <item msgid="8120010459866284578">"Virtuve"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Dzīvojamās istabas TV"</item>
+    <item msgid="8122798759665439456">"Viesistabas TV"</item>
+    <item msgid="1389347662738182100">"Guļamistabas TV"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Ievadīt pielāgotu nosaukumu..."</string>
+    <string name="custom_room" msgid="8655516733933892458">"Ievadīt pielāgotu nosaukumu…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Šīs <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ierīces pārdēvēšana"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Šī <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ierīce pašlaik ir nosaukta kā “<xliff:g id="DEVICENAME">%2$s</xliff:g>”."</string>
     <string name="change_setting" msgid="2047402388786162246">"Mainīt"</string>
@@ -671,4 +668,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Atkārtoti palaist drošajā režīmā"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Vai vēlaties atkārtoti palaist drošajā režīmā?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Tiks atspējotas visas instalētās trešo pušu lietojumprogrammas. To darbība tiks atjaunota, kad vēlreiz veiksiet atkārtotu palaišanu."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Notiek kļūdas pārskata izveide"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Pieejamās virtuālās tastatūras"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Pārvaldīt tastatūras"</string>
 </resources>

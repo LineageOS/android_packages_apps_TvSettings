@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Гар"</string>
     <string name="system_home" msgid="2858989138172296012">"Үндсэн дэлгэц"</string>
     <string name="system_search" msgid="2837264654143247611">"Хайх"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"Аюулгүй байдлын &amp; хязгаарлалт"</string>
     <string name="system_speech" msgid="8128688499687306982">"Яриа"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Оролт"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Хөгжүүлэгчийн тохиргоо"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Хоосон"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Хэрэглээ, оношлогоо"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Практик хичээл"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Системийн шинэчлэлт"</string>
     <string name="about_preference" msgid="4131396784531360434">"Тухай"</string>
     <string name="device_name" msgid="2670488158531273028">"Төхөөрөмжийн нэр"</string>
@@ -290,7 +290,7 @@
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Энэ удаан драйв байна."</string>
     <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Та үргэлжлүүлж болно, гэхдээ байршилд зөөсөн апп гацаж болзошгүй бөгөөд өгөгдөл шилжүүлэлт удаж болзошгүй юм. Илүү сайн гүйцэтгэл авахын тулд илүү хурдан драйв ашиглана уу."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Форматлах"</string>
-    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Апп-ыг нөөцлөх"</string>
+    <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Аппыг нөөцлөх"</string>
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aпп-ыг <xliff:g id="NAME">%1$s</xliff:g>-д хадгалсан"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="1738767666148200795">"Апп болон өгөгдлийг <xliff:g id="NAME">%1$s</xliff:g>-д хадгалсан"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"<xliff:g id="SIZE">%1$s</xliff:g> сул байна"</string>
@@ -463,13 +463,13 @@
     <string name="system_desc_hdmi_optimization" msgid="4400727262768931480">"Ялгарал болон фрэймийн хурдыг хамгийн сайнаар дэлгэцийг тохируулах. Энэ нь зөвхөн Ultra HD дэлгэцүүдэд нөлөөлнө. Энэ тохиргоог өөрчилбөл төхөөрөмжөө дахиж асаах шаардлагатай."</string>
     <string name="system_desc_bt_hci_log" msgid="4219265203570411773">"Bluetooth HCI snoop логийг идэвхжүүлэх"</string>
     <string name="system_desc_usb_debugging" msgid="5168830368191788731">"USB холбогдсон үед debug горимд шилжинэ"</string>
-    <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"Согог засагдсан аппликешн ажиллахын өмнө согог засагчийг хавсаргагдахыг хүлээнэ"</string>
+    <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"Согог засагдсан аппликейшн ажиллахын өмнө согог засагчийг хавсаргагдахыг хүлээнэ"</string>
     <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"Клипийн зах, хязгаар зэргийг харуулах"</string>
     <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"GPU-тай зурагдсан үед цонхнуудын доторхыг гялс харуулна"</string>
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"Техник хангамжууд шинэчлэх үед давхаргыг анивчуулах"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Сайнаас муу руу: цэнхэр, ногоон, цайвар улаан, улаан"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Шинэчлэгдэх үед цонхны гадаргыг бүхэлд нь анивчуулах"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Апп-ууд үндсэн хэлхээс дээр удаан хугацаанд үйлдлүүд хийх үед дэлгэцийг анивчуулах"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Аппууд үндсэн хэлхээс дээр удаан хугацаанд үйлдлүүд хийх үед дэлгэцийг анивчуулах"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"adb суурин дотор dumpsys gfxinfo гаргах цагийг хэмжих"</string>
     <string name="action_on_title" msgid="6852389884236870765">"Идэвхтэй"</string>
     <string name="action_off_title" msgid="3157728958166559966">"Идэвхгүй"</string>
@@ -599,7 +599,7 @@
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Хувилбар <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Нээх"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Хүчээр зогсоох"</string>
-    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Та апп-ыг хүчээр унтраавал энэ нь буруу ажиллаж эхлэх магадлалтай."</string>
+    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Та аппыг хүчээр унтраавал энэ нь буруу ажиллаж эхлэх магадлалтай."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Устгах"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Шинэчлэлтийг устгах"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Энэ Андройд системийн апп-ын бүх шинэчлэлтийг устгах болно."</string>
@@ -612,7 +612,7 @@
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Өгөгдлийг арилгах"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Апп-ийн бүх өгөгдөл бүрмөсөн устах болно.\nҮүнд бүх файл, тохиргоо, бүртгэл өгөгдөл гэх мэт багтана."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Үндсэн тохиргоог арилгах"</string>
-    <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Зарим үйлдэл хйихэд зориулж энэ апп-ыг ажиллуулахаар тохируул"</string>
+    <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Зарим үйлдэл хйихэд зориулж энэ аппыг ажиллуулахаар тохируул"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Үндсэн тохиргоог хийгээгүй"</string>
     <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"Кешийг арилгах"</string>
     <string name="device_apps_app_management_notifications" msgid="7291960671957440729">"Мэдэгдэл"</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Таны бүх хувийн мэдээлэл болон татсан апп-уудыг устгах уу? Та энэ үйлдлийг дараа буцаах боломжгүй!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Бүгдийг устгах"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g>-дээ нэр сонгоорой"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Нэр нь таныг утас, таблет, компьютер зэрэг бусад төхөөрөмжөөс нэвтрэх үед таны <xliff:g id="DEVICEMODEL">%1$s</xliff:g>-г танихад тусална."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g>-д бусад төхөөрөмжөөс дамжуулах эсвэл холбогдох үед үүнийг танихад хялбар болгох үүднээс нэр өгнө үү."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Зочны өрөө"</item>
-    <item msgid="3722089849939477581">"Үзвэрийн өрөө"</item>
-    <item msgid="6108590585438763574">"Нийтийн өрөө"</item>
-    <item msgid="2581035245390468625">"Хоолны өрөө"</item>
-    <item msgid="3127487827308695324">"Ажлын өрөө"</item>
-    <item msgid="6172018430592195063">"Унтлагын өрөө"</item>
-    <item msgid="8120010459866284578">"Гал тогтоо"</item>
+    <item msgid="9056203990862307284">"Андройд ТV"</item>
+    <item msgid="7449352861592960712">"Зочны өрөөний ТВ"</item>
+    <item msgid="8122798759665439456">"Гэр бүлийн өрөөний ТВ"</item>
+    <item msgid="1389347662738182100">"Унтлагын өрөөний ТВ"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Тогтмол ашигладаг нэрээ оруулна уу..."</string>
+    <string name="custom_room" msgid="8655516733933892458">"Тохируулсан нэр оруулна уу..."</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Энэ <xliff:g id="DEVICEMODEL">%1$s</xliff:g>-г өөрчлөх"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Энэ <xliff:g id="DEVICEMODEL">%1$s</xliff:g>-г одоогоор \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" гэж нэрлэсэн байна"</string>
     <string name="change_setting" msgid="2047402388786162246">"Солих"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Аюулгүй горимоор дахин асаах"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Аюулгүй горимоор дахин асаах уу?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Энэ нь таны суулгасан гуравдагч апп-г идэвхгүй болгоно. Тэдгээр нь дахин асаахад сэргээгдэх болно."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Алдааны тайланг илрүүлж байна"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Боломжтой виртуал гар"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Гарыг удирдах"</string>
 </resources>

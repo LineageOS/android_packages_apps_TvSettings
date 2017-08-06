@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Keyboard"</string>
     <string name="system_home" msgid="2858989138172296012">"Home screen"</string>
     <string name="system_search" msgid="2837264654143247611">"Search"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"Security &amp; restrictions"</string>
     <string name="system_speech" msgid="8128688499687306982">"Speech"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Inputs"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Developer options"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"None"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Usage &amp; Diagnostics"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Tutorials"</string>
     <string name="about_system_update" msgid="7282772247661356586">"System update"</string>
     <string name="about_preference" msgid="4131396784531360434">"About"</string>
     <string name="device_name" msgid="2670488158531273028">"Device name"</string>
@@ -263,7 +263,7 @@
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"To use the apps or data this drive contains, replug it in. Alternatively, you can choose to forget this storage if the drive isn\'t available.\n\nIf you choose Forget, all the data the drive contains will be lost forever.\n\nYou can reinstall the apps later, but the data stored on this drive will be lost."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Device storage"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Removable storage"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"reset"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Reset"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> is mounted"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"Couldn\'t mount <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_mount_adopted" msgid="3360994581083675640">"USB storage reconnected"</string>
@@ -599,7 +599,7 @@
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"Version <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Open"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Force stop"</string>
-    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"If you force stop an app, it may misbehave."</string>
+    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"If you force-stop an app, it may misbehave."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Uninstall"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Uninstall updates"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"All updates to this Android system app will be uninstalled."</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Erase all your personal information and downloaded apps? You can\'t reverse this action!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Erase everything"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Choose a name for your <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"A name will help identify your <xliff:g id="DEVICEMODEL">%1$s</xliff:g> when accessing it from other devices like your phone, tablet or computer."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Give your <xliff:g id="DEVICEMODEL">%1$s</xliff:g> a name to help identify it when casting or connecting to it from other devices."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Living Room"</item>
-    <item msgid="3722089849939477581">"Media Room"</item>
-    <item msgid="6108590585438763574">"Family Room"</item>
-    <item msgid="2581035245390468625">"Dining Room"</item>
-    <item msgid="3127487827308695324">"Den"</item>
-    <item msgid="6172018430592195063">"Bedroom"</item>
-    <item msgid="8120010459866284578">"Kitchen"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Living Room TV"</item>
+    <item msgid="8122798759665439456">"Family Room TV"</item>
+    <item msgid="1389347662738182100">"Bedroom TV"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Enter Customised Name…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Enter custom name…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Rename this <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"This <xliff:g id="DEVICEMODEL">%1$s</xliff:g> is currently named \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"Change"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Reboot to safe mode"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Do you want to reboot into safe mode?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"This will disable all third-party applications that you have installed. They will be restored when you reboot again."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Capturing bug report"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Available virtual keyboards"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Manage keyboards"</string>
 </resources>

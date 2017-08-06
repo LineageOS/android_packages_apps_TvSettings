@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Klaviatura"</string>
     <string name="system_home" msgid="2858989138172296012">"Bosh ekran"</string>
     <string name="system_search" msgid="2837264654143247611">"Qidiruv"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"Xavfsizlik va cheklanishlar"</string>
     <string name="system_speech" msgid="8128688499687306982">"Nutq"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Kirishlar"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Dasturchi sozlamalari"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Hech biri"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Foydalanish statistikasi va tashxis"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Qo‘llanmalar"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Tizim yangilanishi"</string>
     <string name="about_preference" msgid="4131396784531360434">"Ma’lumot"</string>
     <string name="device_name" msgid="2670488158531273028">"Qurilma nomi"</string>
@@ -348,7 +348,7 @@
     <string name="system_desc_location" msgid="4243551425631207495">"Sizdan ruxsat so‘ragan ilovalarga joylashuvingiz ma‘lumotidan foydalanishga ruxsat beradi"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"Joylashuv rozili"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"Rejim"</string>
-    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"So‘nggi joylashuv axboroti so‘rovlari"</string>
+    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Joylashuv axboroti so‘rovlari"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"Hech qanday ilova yaqin vaqtda joylashuv ma‘lumotini so‘ramadi"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"Yuqori batareya sarfi"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"Batareya sarfi kam"</string>
@@ -603,7 +603,7 @@
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"O‘chirib tashlash"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Yangilanishlarni o‘chirish"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Android tizimiga oid ushbu ilovaning barcha yangilanishlari o‘chirib tashlanadi."</string>
-    <string name="device_apps_app_management_disable" msgid="6136528600052941589">"O‘chirib qo‘yish"</string>
+    <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Faolsizlantirish"</string>
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Bu ilovani o‘chirib qo‘ymoqchimsiz?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Yoqish"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Bu ilovani yoqmoqchimisiz?"</string>
@@ -628,7 +628,7 @@
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"Qachon yoqilsin"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Uyqu rejimi ushbu harakatsizlik davridan keyin boshlanadi. Agar uyqu rejimi tanlansa, ekran o‘chadi."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> harakatsizlikdan keyin"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Qurilmani uyqu rejimiga sozlash"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Uyqu rejimini yoqish"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Bu harakatsizlik davridan keyin ekran o‘chadi."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Hozir hech qaysi hisobda zahiralangan ma’lumotlar mavjud emas"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Barcha shaxsiy ma’lumotlaringiz va ko‘chirib olingan ilovalarni o‘chirilishiga rozimisiz? Keyin ortga qaytarishni iloji yo‘q bo‘ladi!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Hamma narsani o‘chirish"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> uchun nom tanlang"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Qurilma nomi telefon, planshet yoki kompyuter kabi boshqa qurilmalardan unga kirganda <xliff:g id="DEVICEMODEL">%1$s</xliff:g> qurilmangizni tanib olishga yordam beradi."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Translatsiya qilishda yoki boshqa qurilmalardan unga ulanishda topish uchun <xliff:g id="DEVICEMODEL">%1$s</xliff:g> qurilmani nomlang."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Mehmonxona"</item>
-    <item msgid="3722089849939477581">"Dam olish xonasi"</item>
-    <item msgid="6108590585438763574">"Oilaviy xona"</item>
-    <item msgid="2581035245390468625">"Ovqatlanish xonasi"</item>
-    <item msgid="3127487827308695324">"Den"</item>
-    <item msgid="6172018430592195063">"Yotoqxona"</item>
-    <item msgid="8120010459866284578">"Oshxona"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Mehmonxona TV"</item>
+    <item msgid="8122798759665439456">"Oilaviy xona TV"</item>
+    <item msgid="1389347662738182100">"Yotoqxona TV"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Boshqa nom kiritish…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Boshqa xonani ko‘rsating…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> qurilmasini qayta nomlash"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Bu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> hozirda “<xliff:g id="DEVICENAME">%2$s</xliff:g>” deb nomlangan"</string>
     <string name="change_setting" msgid="2047402388786162246">"O‘zgartirish"</string>
@@ -660,10 +657,13 @@
     <string name="device_apps_permissions" msgid="2966387603529725982">"Ilovalar uchun ruxsatlar"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Ruxsat berilgan ilovalar: <xliff:g id="COUNT_0">%d</xliff:g> / <xliff:g id="COUNT_1">%d</xliff:g> ta"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"Bluetooth ruxsati so‘rovi"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Xavfsizlik tizimi yangilanishi"</string>
+    <string name="security_patch" msgid="2131617390189164481">"Tizim xavfsizligi uchun yangilanish"</string>
     <string name="choose_application" msgid="5662960665577780353">"Ilovani tanlang"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Tajribaviy)"</string>
     <string name="reboot_safemode_action" msgid="8129550438717110406">"O‘tish"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Xavfsiz rejimga o‘tilsinmi?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Barcha tashqi ilovalar o‘chiriladi. Ular odatiy rejimga qaytilgandan keyin ishga tushiriladi."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Xatoliklar hisoboti yozib olinmoqda"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Mavjud virtual klaviaturalar"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Klaviaturalarni boshqarish"</string>
 </resources>

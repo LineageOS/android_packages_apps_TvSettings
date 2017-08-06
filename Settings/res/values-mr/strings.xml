@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"कीबोर्ड"</string>
     <string name="system_home" msgid="2858989138172296012">"मुख्य स्क्रीन"</string>
     <string name="system_search" msgid="2837264654143247611">"शोधा"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"सुरक्षितता आणि प्रतिबंध"</string>
     <string name="system_speech" msgid="8128688499687306982">"उच्चारण"</string>
     <string name="system_inputs" msgid="2413907183796651102">"इनपुट"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"विकासक पर्याय"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"कोणतेही नाही"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"वापर आणि निदान"</string>
+    <string name="tutorials" msgid="3731493987558093244">"ट्यूटोरियल"</string>
     <string name="about_system_update" msgid="7282772247661356586">"सिस्टम अद्यतन"</string>
     <string name="about_preference" msgid="4131396784531360434">"विषयी"</string>
     <string name="device_name" msgid="2670488158531273028">"डिव्हाइस नाव"</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"आपली सर्व वैयक्तिक माहिती आणि डाउनलोड केलेले अ‍ॅप्स मिटयावचे? आपण ही क्रिया उलट करू शकत नाही!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"प्रत्येकगोष्ट मिटवा"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"आपल्‍या <xliff:g id="DEVICEMODEL">%1$s</xliff:g> साठी एक नाव निवडा"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"आपला फोन, टॅबलेट किंवा संगणक यासारख्‍या अन्य डिव्‍हाइसेसवरून आपल्या <xliff:g id="DEVICEMODEL">%1$s</xliff:g> मध्‍ये प्रवेश करताना ते ओळखण्‍यात नाव मदत करेल."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"आपले <xliff:g id="DEVICEMODEL">%1$s</xliff:g> कास्ट करताना किंवा इतर डिव्हाइसवरून त्यासह कनेक्ट करताना ते ओळखण्यात मदत करण्यासाठी त्यास एक नाव द्या."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"बैठकीची खोली"</item>
-    <item msgid="3722089849939477581">"मीडिया खोली"</item>
-    <item msgid="6108590585438763574">"कुटुंब खोली"</item>
-    <item msgid="2581035245390468625">"भोजनकक्ष"</item>
-    <item msgid="3127487827308695324">"अभ्‍यासासाठी निवांत जागा"</item>
-    <item msgid="6172018430592195063">"शयनगृह"</item>
-    <item msgid="8120010459866284578">"स्वयंपाकघर"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"बैठकीच्या खोलीतील टीव्ही"</item>
+    <item msgid="8122798759665439456">"कुटुंबाच्या खोलीतील टीव्ही"</item>
+    <item msgid="1389347662738182100">"झोपण्याच्या खोलीतील टीव्ही"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"सानुकूल नाव प्रविष्ट करा..."</string>
+    <string name="custom_room" msgid="8655516733933892458">"सानुकूल नाव प्रविष्ट करा..."</string>
     <string name="device_rename_title" msgid="2629557295786267185">"या <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ला पुनर्नामित करा"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"या <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ला सध्‍या \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" हे नाव दिले आहे"</string>
     <string name="change_setting" msgid="2047402388786162246">"बदला"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"सुरक्षित मोडमध्ये रीबूट करा"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"आपण सुरक्षित मोडमध्ये रीबूट करू इच्छिता?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"हे आपण स्थापित केलेल्या सर्व तृतीय पक्ष अनुप्रयोगांना अक्षम करेल. आपण पुन्हा रीबूट कराल तेव्हा त्यांना पुनर्संचयित केले जाईल."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"दोष अहवाल कॅप्चर करीत आहे"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"उपलब्ध व्हर्च्युअल कीबोर्ड"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"कीबोर्ड व्यवस्थापित करा"</string>
 </resources>

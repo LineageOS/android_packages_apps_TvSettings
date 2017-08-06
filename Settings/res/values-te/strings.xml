@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"కీబోర్డ్"</string>
     <string name="system_home" msgid="2858989138172296012">"హోమ్ స్క్రీన్"</string>
     <string name="system_search" msgid="2837264654143247611">"శోధించండి"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"భద్రత &amp; పరిమితులు"</string>
     <string name="system_speech" msgid="8128688499687306982">"ప్రసంగం"</string>
     <string name="system_inputs" msgid="2413907183796651102">"ఇన్‌పుట్‌లు"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"డెవలపర్ ఎంపికలు"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ఏదీ లేదు"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"వినియోగం &amp; విశ్లేషణలు"</string>
+    <string name="tutorials" msgid="3731493987558093244">"ట్యుటోరియల్‌లు"</string>
     <string name="about_system_update" msgid="7282772247661356586">"సిస్టమ్ నవీకరణ"</string>
     <string name="about_preference" msgid="4131396784531360434">"పరిచయం"</string>
     <string name="device_name" msgid="2670488158531273028">"పరికరం పేరు"</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"మీ మొత్తం వ్యక్తిగత సమాచారాన్ని మరియు అన్ని డౌన్‌లోడ్ చేయబడిన అనువర్తనాలను తొలగించాలా? మీరు ఈ చర్యను తిరిగి రద్దు చేయలేరు!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"అన్నింటినీ తొలగించు"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"మీ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> కోసం పేరుని ఎంచుకోండి"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"మీ ఫోన్, టాబ్లెట్ లేదా కంప్యూటర్ వంటి ఇతర పరికరాల నుండి మీ <xliff:g id="DEVICEMODEL">%1$s</xliff:g>ని ప్రాప్యత చేస్తున్నప్పుడు దాన్ని గుర్తించడంలో దాని పేరు సహాయపడుతుంది."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"ఇతర పరికరాల నుండి మీ <xliff:g id="DEVICEMODEL">%1$s</xliff:g>కి ప్రసారం చేస్తున్నప్పుడు లేదా కనెక్ట్ చేస్తున్నప్పుడు దాన్ని గుర్తించడం కోసం దానికి పేరు పెట్టండి."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"ప్రధాన గది"</item>
-    <item msgid="3722089849939477581">"మీడియా గది"</item>
-    <item msgid="6108590585438763574">"కుటుంబ గది"</item>
-    <item msgid="2581035245390468625">"భోజనాల గది"</item>
-    <item msgid="3127487827308695324">"గుహ"</item>
-    <item msgid="6172018430592195063">"పడక గది"</item>
-    <item msgid="8120010459866284578">"వంట గది"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"విశ్రాంతి గది టీవీ"</item>
+    <item msgid="8122798759665439456">"ప్రధాన గది టీవీ"</item>
+    <item msgid="1389347662738182100">"పడక గది టీవీ"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"అనుకూల పేరును నమోదు చేయండి…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"అనుకూల పేరును నమోదు చేయండి…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"ఈ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> పేరు మార్చండి"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"ప్రస్తుతం ఈ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> పేరు \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"మార్చు"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"సురక్షిత మోడ్‌కు రీబూట్ చేయి"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"మీరు సురక్షిత మోడ్‌కు రీబూట్ చేయాలనుకుంటున్నారా?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"దీని వలన మీరు ఇన్‌స్టాల్ చేసిన అన్ని మూడవ పక్షం అనువర్తనాలు నిలిపివేయబడతాయి. మీరు మళ్లీ రీబూట్ చేసినప్పుడు అవి పునరుద్ధరించబడతాయి."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"బగ్ నివేదికను సంగ్రహిస్తోంది"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"అందుబాటులో ఉన్న వర్చువల్ కీబోర్డ్‌లు"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"కీబోర్డ్‌లను నిర్వహించండి"</string>
 </resources>

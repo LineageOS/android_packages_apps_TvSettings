@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Klawiatura"</string>
     <string name="system_home" msgid="2858989138172296012">"Ekran główny"</string>
     <string name="system_search" msgid="2837264654143247611">"Wyszukiwanie"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"Bezpieczeństwo i ograniczenia"</string>
     <string name="system_speech" msgid="8128688499687306982">"Mowa"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Wejścia"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Opcje programistyczne"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Brak"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Użycie i diagnostyka"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Samouczki"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Aktualizacje systemu"</string>
     <string name="about_preference" msgid="4131396784531360434">"Informacje"</string>
     <string name="device_name" msgid="2670488158531273028">"Nazwa urządzenia"</string>
@@ -142,7 +142,7 @@
     <string name="battery_status_title" msgid="2557264957661087826">"Stan baterii"</string>
     <string name="battery_level_title" msgid="100046129713781009">"Poziom naładowania baterii"</string>
     <string name="sim_status_title" msgid="498929467188844611">"Stan karty SIM"</string>
-    <string name="imei_information_title" msgid="5208860549282877136">"Informacje o IMEI"</string>
+    <string name="imei_information_title" msgid="5208860549282877136">"Numer IMEI"</string>
     <string name="status_bt_address" msgid="1571721865060122393">"Adres Bluetooth"</string>
     <string name="status_up_time" msgid="1674116490191446110">"Czas działania"</string>
     <string name="status_wimax_mac_address" msgid="1102907383444152052">"Adres MAC 4G"</string>
@@ -651,17 +651,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Wymazać wszystkie Twoje informacje osobiste i pobrane aplikacje? Nie można tego cofnąć."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Wymaż wszystko"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Wybierz nazwę urządzenia <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Nazwa pozwala rozpoznać urządzenie <xliff:g id="DEVICEMODEL">%1$s</xliff:g>, gdy chcesz uzyskać dostęp z innego urządzenia, np. telefonu, tabletu czy komputera."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Nadaj nazwę swojemu urządzeniu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>, by móc je łatwo rozpoznać podczas przesyłania treści lub łączenia się z innych urządzeń."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Salon"</item>
-    <item msgid="3722089849939477581">"Pokój multimedialny"</item>
-    <item msgid="6108590585438763574">"Pokój rodzinny"</item>
-    <item msgid="2581035245390468625">"Jadalnia"</item>
-    <item msgid="3127487827308695324">"Pokój dzienny"</item>
-    <item msgid="6172018430592195063">"Sypialnia"</item>
-    <item msgid="8120010459866284578">"Kuchnia"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Telewizor w salonie"</item>
+    <item msgid="8122798759665439456">"Telewizor w pokoju rodzinnym"</item>
+    <item msgid="1389347662738182100">"Telewizor w sypialni"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Wpisz własną nazwę…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Wpisz własną nazwę…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Zmień nazwę tego urządzenia <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"To urządzenie <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ma nazwę „<xliff:g id="DEVICENAME">%2$s</xliff:g>”"</string>
     <string name="change_setting" msgid="2047402388786162246">"Zmień"</string>
@@ -676,4 +673,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Uruchom w trybie awaryjnym"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Chcesz uruchomić urządzenie w trybie awaryjnym?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"W ten sposób wyłączysz wszystkie zainstalowane aplikacje innych firm. Zostaną one przywrócone po zrestartowaniu urządzenia."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Zapisuję raport o błędzie"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Dostępne klawiatury wirtualne"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Zarządzaj klawiaturami"</string>
 </resources>

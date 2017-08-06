@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"Teklatua"</string>
     <string name="system_home" msgid="2858989138172296012">"Hasierako pantaila"</string>
     <string name="system_search" msgid="2837264654143247611">"Bilatu"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"Segurtasuna eta murriztapenak"</string>
     <string name="system_speech" msgid="8128688499687306982">"Hizketa"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Sarrerak"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Garatzaileen aukerak"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Bat ere ez"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Erabilera eta diagnostikoak"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Tutorialak"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Sistemaren eguneratzea"</string>
     <string name="about_preference" msgid="4131396784531360434">"Honi buruz"</string>
     <string name="device_name" msgid="2670488158531273028">"Gailuaren izena"</string>
@@ -417,7 +417,7 @@
     <string name="system_preferred_engine" msgid="8258210139854655567">"Bilatzaile hobetsia"</string>
     <string name="system_speech_rate" msgid="8099856582088545576">"Hizketaren abiadura"</string>
     <string name="system_play_sample" msgid="7187293932891811148">"Erreproduzitu lagina"</string>
-    <string name="system_install_voice_data" msgid="8920883886563714355">"Instalatu ahots-datuak"</string>
+    <string name="system_install_voice_data" msgid="8920883886563714355">"Instalatu ahotsaren datuak"</string>
     <string name="system_general" msgid="3535958631591158282">"Orokorra"</string>
     <string name="system_debugging" msgid="7204447785851191331">"Arazketa"</string>
     <string name="system_input" msgid="6164987320529039626">"Sarrera"</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Informazio pertsonal guztia eta deskargatutako aplikazioak ezabatu nahi dituzu? Ezin izango duzu ekintza hori desegin."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Ezabatu guztia"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Aukeratu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> gailuaren izena"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Izenarekin errazago identifikatuko duzu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> gailua beste gailu batzuetatik atzitze duzunean, adibidez, telefonotik, tabletatik edo ordenagailutik."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Eman izena <xliff:g id="DEVICEMODEL">%1$s</xliff:g> gailuari, edukia igortzeko edo beste gailu batzuetatik hartara konektatzeko garaian identifikatu ahal izateko."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"Egongela"</item>
-    <item msgid="3722089849939477581">"Multimedia-gela"</item>
-    <item msgid="6108590585438763574">"Jolas-gela"</item>
-    <item msgid="2581035245390468625">"Jangela"</item>
-    <item msgid="3127487827308695324">"Estudioa"</item>
-    <item msgid="6172018430592195063">"Logela"</item>
-    <item msgid="8120010459866284578">"Sukaldea"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"Egongelako telebista"</item>
+    <item msgid="8122798759665439456">"Jolas-gelako telebista"</item>
+    <item msgid="1389347662738182100">"Logelako telebista"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Idatzi izen pertsonalizatua…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Idatzi izen pertsonalizatua…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Aldatu izena <xliff:g id="DEVICEMODEL">%1$s</xliff:g> gailu honi"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"\"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" izena du <xliff:g id="DEVICEMODEL">%1$s</xliff:g> gailu honek"</string>
     <string name="change_setting" msgid="2047402388786162246">"Aldatu"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Berrabiarazi modu seguruan"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Modu seguruan berrabiarazi nahi duzu?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Instalatutako hirugarrenen aplikazio guztiak desgaituko dira. Berriro berrabiarazi ondoren leheneratuko dira."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Akatsen txostena sortzen"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Erabilgarri dauden teklatu birtualak"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"Kudeatu teklatuak"</string>
 </resources>

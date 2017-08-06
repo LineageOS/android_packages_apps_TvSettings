@@ -93,8 +93,7 @@
     <string name="system_keyboard" msgid="7680159735294672514">"ແປ້ນ​ພິມ"</string>
     <string name="system_home" msgid="2858989138172296012">"ຫນ້າ​ຈໍຫຼັກ"</string>
     <string name="system_search" msgid="2837264654143247611">"ຊອກຫາ"</string>
-    <!-- no translation found for system_google (8560404305602209622) -->
-    <skip />
+    <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"ຄວາມປອດໄພ &amp; ການຈຳກັດ"</string>
     <string name="system_speech" msgid="8128688499687306982">"ການ​​ເວົ້າ"</string>
     <string name="system_inputs" msgid="2413907183796651102">"ອິນພຸດ"</string>
@@ -102,6 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"ໂຕເລືອກ​ນັກພັດທະນາ"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ບໍ່ມີ"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"ການ​ນຳ​ໃຊ້  ແລະ ​ການ​ວິ​ເຄາະ​ບັນ​ຫາ"</string>
+    <string name="tutorials" msgid="3731493987558093244">"ສາທິດການນຳໃຊ້"</string>
     <string name="about_system_update" msgid="7282772247661356586">"ການອັບເດດລະບົບ"</string>
     <string name="about_preference" msgid="4131396784531360434">"ກ່ຽວກັບ"</string>
     <string name="device_name" msgid="2670488158531273028">"ຊື່​ອຸ​ປະ​ກອນ"</string>
@@ -641,17 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"ລຶບ​ຂໍ້​ມູນ​ສ່ວນຕົວ ແລະ​ແອັບຯ​ທີ່​ດາວ​ໂຫລດໄວ້​ທັງໝົດ​ບໍ່? ທ່ານ​ຈະ​ບໍ່​ສາມາດ​ເອົາ​ກັບ​ຄືນ​ມາ​ໄດ້​ອີກ!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ລຶບທຸກສິ່ງທຸກຢ່າງ"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"​ເລືອກ​ຊື່​ສຳລັບ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ຂອງ​ທ່ານ"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"ຊື່​ຈະ​ຊ່ວຍ​ລະບຸ​ຕົວ​ຕົນ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ຂອງ​ທ່ານ ​​ໃນ​ເວລາ​ເຂົ້າ​ຫາ​ມັນ​ຈາກ​ອຸປະກອນ​ອື່ນ ​ເຊັ່ນ​ວ່າ ​ໂທລະສັບ, ​ແທັບ​ເລັດ ຫຼື​ຄອມ​ພິວ​ເຕີ​ຂອງ​ທ່ານ."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"ຕັ້ງຊື່ສໃຫ້ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ຂອງທ່ານເພື່ອຊ່ວຍລະບຸຕົວຕົຮໃນເວບລາທີ່ມັນຖ່າບທອດສັນຍາ ຫຼື ເຊື່ອມຕໍາມັນມາຈາກອຸປະກອນອື່ນ."</string>
   <string-array name="rooms">
-    <item msgid="7085399612393981553">"ຫ້ອງ​ຮັບ​ແຂກ"</item>
-    <item msgid="3722089849939477581">"ຫ້ອງ​ມີ​ເດຍ"</item>
-    <item msgid="6108590585438763574">"ຫ້ອງ​ຄອບ​ຄົວ"</item>
-    <item msgid="2581035245390468625">"ຫ້ອງ​ກິນ​ເຂົ້າ"</item>
-    <item msgid="3127487827308695324">"ຫ້ອງ​ນ້ອຍ"</item>
-    <item msgid="6172018430592195063">"ຫ້ອງນອນ"</item>
-    <item msgid="8120010459866284578">"ເຮືອນ​ຄົວ"</item>
+    <item msgid="9056203990862307284">"Android TV"</item>
+    <item msgid="7449352861592960712">"ໂທລະທັດຫ້ອງນັ່ງຫຼິ້ນ"</item>
+    <item msgid="8122798759665439456">"ໂທລະທັດຫ້ອງຄອບຄົວ"</item>
+    <item msgid="1389347662738182100">"ໂທລະທັດຫ້ອງນອນ"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"ປ້ອນ​ຊື່​ກຳ​ນົດ​ເອງ…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"ລະ​ບຸ​ຊື່​ທີ່​ກຳ​ນົດ​ເອງ…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"ປ່ຽນ​ຊື່ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ນີ້"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> ນີ້​ມີ​ຊື່​ໃນ​ປະຈຸ​ບັນ​​ແມ່ນ \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"ປ່ຽນແປງ"</string>
@@ -666,4 +663,7 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"ຣີບູດເຂົ້າ safe mode"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"ທ່ານຕ້ອງການຣີບູດເຂົ້າ safe mode ບໍ່?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"ນີ້ຈະເປັນການປິດການນຳໃຊ້ແອັບພລິເຄຊັນຕ່າງໆຈາກພາກສ່ວນທີສາມທີ່ທ່ານຕິດຕັ້ງໄວ້. ພວກມັນຈະຖືກກູ້ກັບຄືນມາເມື່ອທ່ານຣີບູດຄືນໃໝ່."</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"ກຳລັງຖ່າຍຮູບລາຍງານຂໍ້ຜິດພາດ"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"ແປ້ນພິມສະເໝືອນທີ່ສາມາດໃຊ້ໄດ້"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"ຈັດການແປ້ນພິມ"</string>
 </resources>
