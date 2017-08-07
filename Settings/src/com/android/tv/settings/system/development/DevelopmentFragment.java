@@ -64,6 +64,7 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.Toast;
 
 import com.android.internal.app.LocalePicker;
+import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.R;
 
 import java.util.ArrayList;
@@ -498,8 +499,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
             mDisabledPrefs.remove(mKeepScreenOn);
         }
 
-        mLastEnabledState = Settings.Global.getInt(mContentResolver,
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 0;
+        mLastEnabledState = DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(getContext());
         mEnableDeveloper.setChecked(mLastEnabledState);
         setPrefsEnabledState(mLastEnabledState);
 
@@ -508,8 +508,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
             // settings that are enabled.  This is an invalid state.  Switch
             // to debug settings being enabled, so the user knows there is
             // stuff enabled and can turn it all off if they want.
-            Settings.Global.putInt(mContentResolver,
-                    Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
+            DevelopmentSettingsEnabler.setDevelopmentSettingsEnabled(getContext(), true);
             mLastEnabledState = true;
             mEnableDeveloper.setChecked(mLastEnabledState);
             setPrefsEnabledState(mLastEnabledState);
@@ -1462,7 +1461,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
     @Override
     public void onEnableDevelopmentConfirm() {
         mEnableDeveloper.setChecked(true);
-        Settings.Global.putInt(mContentResolver, Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
+        DevelopmentSettingsEnabler.setDevelopmentSettingsEnabled(getContext(), true);
         mLastEnabledState = true;
         setPrefsEnabledState(true);
     }
@@ -1507,8 +1506,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
                 mEnableDeveloper.setChecked(false);
             } else {
                 resetDangerousOptions();
-                Settings.Global.putInt(mContentResolver,
-                        Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
+                DevelopmentSettingsEnabler.setDevelopmentSettingsEnabled(getContext(), false);
                 mLastEnabledState = false;
                 setPrefsEnabledState(false);
             }

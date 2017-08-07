@@ -21,7 +21,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.RemoteException;
-import android.provider.Settings;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
@@ -29,6 +28,7 @@ import android.util.ArrayMap;
 import android.util.Log;
 
 import com.android.internal.app.LocalePicker;
+import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 
@@ -73,11 +73,9 @@ public class LanguageFragment extends LeanbackPreferenceFragment {
             Log.e(TAG, "Could not retrieve locale", e);
         }
 
-        final boolean isInDeveloperMode = Settings.Global.getInt(themedContext.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 0;
-
         final List<LocalePicker.LocaleInfo> localeInfoList =
-                LocalePicker.getAllAssetLocales(themedContext, isInDeveloperMode);
+                LocalePicker.getAllAssetLocales(themedContext,
+                        DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(getContext()));
 
         Preference activePref = null;
         for (final LocalePicker.LocaleInfo localeInfo : localeInfoList) {
