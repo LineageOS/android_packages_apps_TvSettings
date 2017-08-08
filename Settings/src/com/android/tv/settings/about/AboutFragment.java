@@ -29,7 +29,6 @@ import android.os.SELinux;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.os.UserManager;
-import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v17.preference.LeanbackSettingsFragment;
@@ -43,6 +42,7 @@ import android.widget.Toast;
 
 import com.android.internal.telephony.TelephonyProperties;
 import com.android.settingslib.DeviceInfoUtils;
+import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.LongClickPreference;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.PreferenceUtils;
@@ -209,10 +209,8 @@ public class AboutFragment extends LeanbackPreferenceFragment implements
     @Override
     public void onResume() {
         super.onResume();
-        final boolean developerEnabled = Settings.Global.getInt(getActivity().getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED,
-                android.os.Build.TYPE.equals("eng") ? 1 : 0) == 1;
-        mDevHitCountdown = developerEnabled ? -1 : TAPS_TO_BE_A_DEVELOPER;
+        mDevHitCountdown = DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(getContext())
+                ? -1 : TAPS_TO_BE_A_DEVELOPER;
         mDevHitToast = null;
         updateTutorials();
     }
@@ -277,8 +275,8 @@ public class AboutFragment extends LeanbackPreferenceFragment implements
                 if (mDevHitCountdown > 0) {
                     mDevHitCountdown--;
                     if (mDevHitCountdown == 0) {
-                        Settings.Global.putInt(getActivity().getContentResolver(),
-                                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
+                        DevelopmentSettingsEnabler
+                                .setDevelopmentSettingsEnabled(getContext(), true);
                         if (mDevHitToast != null) {
                             mDevHitToast.cancel();
                         }

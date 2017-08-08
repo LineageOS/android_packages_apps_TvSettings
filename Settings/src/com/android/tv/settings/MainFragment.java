@@ -45,6 +45,7 @@ import android.util.ArraySet;
 import android.util.Log;
 
 import com.android.settingslib.accounts.AuthenticatorHelper;
+import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.accessories.AccessoryUtils;
 import com.android.tv.settings.accessories.BluetoothAccessoryFragment;
 import com.android.tv.settings.accounts.AccountSyncFragment;
@@ -372,8 +373,8 @@ public class MainFragment extends LeanbackPreferenceFragment {
             return;
         }
 
-        final boolean developerEnabled = PreferenceUtils.isDeveloperEnabled(getContext());
-        developerPref.setVisible(developerEnabled);
+        developerPref.setVisible(DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(
+                getContext()));
     }
 
     private void updateSounds() {
