@@ -48,7 +48,6 @@ import android.os.UserManager;
 import android.provider.Settings;
 import android.service.persistentdata.PersistentDataBlockManager;
 import android.support.v14.preference.SwitchPreference;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
@@ -66,15 +65,16 @@ import android.widget.Toast;
 import com.android.internal.app.LocalePicker;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.R;
+import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-/*
+/**
  * Displays preferences for application developers.
  */
-public class DevelopmentFragment extends LeanbackPreferenceFragment
+public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         implements Preference.OnPreferenceChangeListener,
         EnableDevelopmentDialog.Callback, OemUnlockDialog.Callback, AdbDialog.Callback {
     private static final String TAG = "DevelopmentSettings";
