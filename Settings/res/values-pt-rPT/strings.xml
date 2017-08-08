@@ -68,12 +68,12 @@
     <string name="accessory_state_canceled" msgid="4419328837733619447">"Cancelada"</string>
     <string name="accessory_state_paired" msgid="1959238931866401476">"Sincronizado"</string>
     <string name="accessory_options" msgid="4799658564005710297">"Acessório"</string>
-    <string name="accessory_unpair" msgid="8242725516604465355">"Desemparelhar"</string>
+    <string name="accessory_unpair" msgid="8242725516604465355">"Dessincronizar"</string>
     <string name="accessory_battery" msgid="7021788232835772126">"<xliff:g id="PERCENTAGE">%1$d</xliff:g>%% de bateria"</string>
-    <string name="accessory_unpairing" msgid="7568241162181184667">"A desemparelhar dispositivo..."</string>
+    <string name="accessory_unpairing" msgid="7568241162181184667">"A dessincronizar dispositivo..."</string>
     <string name="accessory_connected" msgid="2156489304110030393">"Ligado"</string>
     <string name="accessory_change_name" msgid="8958916008739792785">"Alterar nome"</string>
-    <string name="accessory_change_name_title" msgid="4630819456923061184">"Introduzir um novo nome para este acessório"</string>
+    <string name="accessory_change_name_title" msgid="4630819456923061184">"Inserir um novo nome para o acessório"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"A procurar acessórios..."</string>
     <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Antes de sincronizar os dispositivos Bluetooth, certifique-se de que estão no modo de sincronização"</string>
     <string name="accessories_autopair_msg" msgid="8618829246837821752">"Foi encontrado um dispositivo e será automaticamente sincronizado dentro de <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundos"</string>
@@ -115,7 +115,7 @@
     <string name="about_serial" msgid="2723560490027171187">"Número de série"</string>
     <string name="about_build" msgid="9148789767199785676">"Compilação"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
-      <item quantity="one">You are now <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steps away from being a developer</item>
+      <item quantity="one">Está agora a <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> passo de se tornar um programador</item>
       <item quantity="other">Está agora a <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> passos de se tornar um programador</item>
     </plurals>
     <string name="about_ads" msgid="3364786994943748337">"Anúncios"</string>
@@ -200,7 +200,7 @@
     <string name="title_wifi_known_network" msgid="819998498700202436">"<xliff:g id="SSID">%1$s</xliff:g> é uma rede guardada"</string>
     <string name="wifi_action_try_again" msgid="3308643222864163092">"Tentar novamente"</string>
     <string name="wifi_action_view_available_networks" msgid="560074338908947419">"Ver redes disponíveis"</string>
-    <string name="wifi_connecting" msgid="1299861268647323455">"A ligar a <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="wifi_connecting" msgid="1299861268647323455">"A ligar a <xliff:g id="SSID">%1$s</xliff:g>..."</string>
     <string name="wifi_saving" msgid="1269061570772019215">"A guardar configuração de <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_connect" msgid="8570424816865506077">"Ligar"</string>
     <string name="wifi_forget_network" msgid="7302755141573045803">"Esquecer rede"</string>
@@ -210,7 +210,7 @@
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"Não alterar"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"OK"</string>
     <string name="wifi_action_advanced_no" msgid="8165601242122651326">"Não (recomendado)"</string>
-    <string name="wifi_action_proxy_none" msgid="4457231399674182650">"Nenhum"</string>
+    <string name="wifi_action_proxy_none" msgid="4457231399674182650">"Nenhuma"</string>
     <string name="wifi_action_proxy_manual" msgid="8402002777441261064">"Manual"</string>
     <string name="wifi_action_dhcp" msgid="6338911832360962268">"DHCP"</string>
     <string name="wifi_action_static" msgid="1025855501453321749">"Estático"</string>
@@ -232,7 +232,7 @@
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"A porta não é válida"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"O proxy HTTP é utilizado pelo navegador, mas não pode ser utilizado por outras aplicações"</string>
     <string name="proxy_port_description" msgid="6791098212244367568">"Introduza uma porta válida.\nExemplo: <xliff:g id="ID_1">8080</xliff:g>"</string>
-    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Introduza uma lista separada por vírgulas de domínios excluídos ou deixe em branco.\nExemplo: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Lista separada por vírgulas de domínios excluídos ou em branco.\nExemplo: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Introduza um nome de anfitrião válido.\nExemplo: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Rede ligada"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"A rede não está ligada"</string>
@@ -481,7 +481,7 @@
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Permitir a instalação de aplicações de outras fontes que não a Play Store"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Permitir fontes desconhecidas"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"O seu dispositivo e dados pessoais estão mais vulneráveis a ataques por aplicações de fontes desconhecidas. O utilizador reconhece ser o único responsável por danos no dispositivo ou perda de dados que possam resultar da utilização destas aplicações."</string>
-    <string name="security_verify_apps_title" msgid="5787946958632254988">"Confirmar aplicações"</string>
+    <string name="security_verify_apps_title" msgid="5787946958632254988">"Validar aplicações"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Proibir ou avisar antes da instalação de aplicações que possam causar danos"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Nunca"</string>
     <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"Para conteúdo DRM"</string>
@@ -549,15 +549,15 @@
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"Ligação automática TV ativada"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"Ligue a TV com o dispositivo HDMI"</string>
     <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
-      <item quantity="one">Connected Inputs</item>
+      <item quantity="one">Entrada ligada</item>
       <item quantity="other">Entradas ligadas</item>
     </plurals>
     <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
-      <item quantity="one">Standby Inputs</item>
+      <item quantity="one">Entrada em espera</item>
       <item quantity="other">Entradas em espera</item>
     </plurals>
     <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
-      <item quantity="one">Not Connected Inputs</item>
+      <item quantity="one">Entrada não ligada</item>
       <item quantity="other">Entradas não ligadas</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"Restringir o acesso a aplicações e a outro conteúdo na sua conta"</string>
@@ -572,9 +572,9 @@
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"Eliminar o perfil restrito"</string>
     <string name="restricted_profile_create_title" msgid="1392190365829029390">"Criar perfil restrito"</string>
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"Definições"</string>
-    <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Aplicações permitidas"</string>
+    <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"Aplicações autorizadas"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
-      <item quantity="one">%d apps allowed</item>
+      <item quantity="one">1 aplicação permitida</item>
       <item quantity="other">%d aplicações permitidas</item>
     </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"Permitido"</string>
@@ -650,7 +650,7 @@
   </string-array>
     <string name="custom_room" msgid="8655516733933892458">"Introduzir nome personalizado…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Mudar o nome deste <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="device_rename_description" msgid="2461752788563877107">"Atualmente, este <xliff:g id="DEVICEMODEL">%1$s</xliff:g> tem o nome de \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Atualmente, este <xliff:g id="DEVICEMODEL">%1$s</xliff:g> chama-se \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"Alterar"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Não alterar"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Autorizações"</string>
