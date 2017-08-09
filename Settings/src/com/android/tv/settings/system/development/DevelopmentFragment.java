@@ -63,6 +63,7 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.Toast;
 
 import com.android.internal.app.LocalePicker;
+import com.android.settingslib.core.ConfirmationDialogController;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.R;
 import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
@@ -124,9 +125,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private static final String ANIMATOR_DURATION_SCALE_KEY = "animator_duration_scale";
     private static final String OVERLAY_DISPLAY_DEVICES_KEY = "overlay_display_devices";
     private static final String DEBUG_DEBUGGING_CATEGORY_KEY = "debug_debugging_category";
-    private static final String SELECT_LOGD_SIZE_KEY = "select_logd_size";
-    private static final String SELECT_LOGD_SIZE_PROPERTY = "persist.logd.size";
-    private static final String SELECT_LOGD_DEFAULT_SIZE_PROPERTY = "ro.logd.size";
 
     private static final String WIFI_DISPLAY_CERTIFICATION_KEY = "wifi_display_certification";
     private static final String WIFI_VERBOSE_LOGGING_KEY = "wifi_verbose_logging";
@@ -161,6 +159,10 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private static String DEFAULT_LOG_RING_BUFFER_SIZE_IN_BYTES = "262144"; // 256K
 
     private static final int[] MOCK_LOCATION_APP_OPS = new int[] {AppOpsManager.OP_MOCK_LOCATION};
+
+    private static final String STATE_SHOWING_DIALOG_KEY = "showing_dialog_key";
+
+    private String mPendingDialogKey;
 
     private IWindowManager mWindowManager;
     private IBackupManager mBackupManager;
@@ -211,7 +213,8 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private SwitchPreference mDebugLayout;
     private SwitchPreference mForceRtlLayout;
     private ListPreference mDebugHwOverdraw;
-    private ListPreference mLogdSize;
+    private LogdSizePreferenceController mLogdSizeController;
+    private LogpersistPreferenceController mLogpersistController;
     private ListPreference mUsbConfiguration;
     private ListPreference mTrackFrameTime;
     private ListPreference mShowNonRectClip;
@@ -250,6 +253,11 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     @Override
     public void onCreate(Bundle icicle) {
 
+        if (icicle != null) {
+            // Don't show this in onCreate since we might be on the back stack
+            mPendingDialogKey = icicle.getString(STATE_SHOWING_DIALOG_KEY);
+        }
+
         mWindowManager = IWindowManager.Stub.asInterface(ServiceManager.getService("window"));
         mBackupManager = IBackupManager.Stub.asInterface(
                 ServiceManager.getService(Context.BACKUP_SERVICE));
@@ -265,6 +273,9 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        mLogdSizeController = new LogdSizePreferenceController(getActivity());
+        mLogpersistController = new LogpersistPreferenceController(getActivity(), getLifecycle());
+
         if (!mUm.isAdminUser()
                 || mUm.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES)
                 || Settings.Global.getInt(mContentResolver,
@@ -277,6 +288,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         }
 
         addPreferencesFromResource(R.xml.development_prefs);
+        final PreferenceScreen preferenceScreen = getPreferenceScreen();
 
         // Don't add to prefs lists or it'll disable itself when switched off
         mEnableDeveloper = (SwitchPreference) findPreference(ENABLE_DEVELOPER);
@@ -300,6 +312,9 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         }
 
         mBugreport = findPreference(BUGREPORT);
+        mLogdSizeController.displayPreference(preferenceScreen);
+        mLogpersistController.displayPreference(preferenceScreen);
+
         mKeepScreenOn = findAndInitSwitchPref(KEEP_SCREEN_ON);
         mBtHciSnoopLog = findAndInitSwitchPref(BT_HCI_SNOOP_LOG);
         mEnableOemUnlock = findAndInitSwitchPref(ENABLE_OEM_UNLOCK);
@@ -359,7 +374,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         mWifiAggressiveHandover = findAndInitSwitchPref(WIFI_AGGRESSIVE_HANDOVER_KEY);
         mWifiAllowScansWithTraffic = findAndInitSwitchPref(WIFI_ALLOW_SCAN_WITH_TRAFFIC_KEY);
         mMobileDataAlwaysOn = findAndInitSwitchPref(MOBILE_DATA_ALWAYS_ON);
-        mLogdSize = addListPreference(SELECT_LOGD_SIZE_KEY);
         mUsbConfiguration = addListPreference(USB_CONFIGURATION_KEY);
 
         mWindowAnimationScale = addListPreference(WINDOW_ANIMATION_SCALE_KEY);
@@ -478,6 +492,8 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         for (final Preference pref : mAllPrefs) {
             pref.setEnabled(enabled && !mDisabledPrefs.contains(pref));
         }
+        mLogdSizeController.enablePreference(enabled);
+        mLogpersistController.enablePreference(enabled);
         updateAllOptions();
     }
 
@@ -518,6 +534,11 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
             mColorModePreference.startListening();
             mColorModePreference.updateCurrentAndSupported();
         }
+
+        if (mPendingDialogKey != null) {
+            recreateDialogForKey(mPendingDialogKey);
+            mPendingDialogKey = null;
+        }
     }
 
     @Override
@@ -526,6 +547,12 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         if (mColorModePreference != null) {
             mColorModePreference.stopListening();
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(STATE_SHOWING_DIALOG_KEY, getKeyForShowingDialog());
     }
 
     @Override
@@ -544,6 +571,12 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         super.onDestroyView();
 
         getActivity().unregisterReceiver(mUsbReceiver);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        dismissDialogs();
     }
 
     void updateSwitchPreference(SwitchPreference switchPreference, boolean value) {
@@ -599,7 +632,8 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         updateVerifyAppsOverUsbOptions();
         updateBugreportOptions();
         updateForceRtlOptions();
-        updateLogdSizeValues();
+        mLogdSizeController.updateLogdSizeValues();
+        mLogpersistController.updateLogpersistValues();
         updateWifiDisplayCertificationOptions();
         updateWifiVerboseLoggingOptions();
         updateWifiAggressiveHandoverOptions();
@@ -619,7 +653,8 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
             }
         }
         resetDebuggerOptions();
-        writeLogdSizeOption(null);
+        mLogpersistController.writeLogpersistOption(null, true);
+        mLogdSizeController.writeLogdSizeOption(null);
         writeAnimationScaleOption(0, mWindowAnimationScale, null);
         writeAnimationScaleOption(1, mTransitionAnimationScale, null);
         writeAnimationScaleOption(2, mAnimatorDurationScale, null);
@@ -1230,55 +1265,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
                 mMobileDataAlwaysOn.isChecked() ? 1 : 0);
     }
 
-    private void updateLogdSizeValues() {
-        if (mLogdSize != null) {
-            String currentValue = SystemProperties.get(SELECT_LOGD_SIZE_PROPERTY);
-            if (currentValue == null) {
-                currentValue = SystemProperties.get(SELECT_LOGD_DEFAULT_SIZE_PROPERTY);
-                if (currentValue == null) {
-                    currentValue = "256K";
-                }
-            }
-            String[] values = getResources().getStringArray(R.array.select_logd_size_values);
-            String[] titles = getResources().getStringArray(R.array.select_logd_size_titles);
-            if (SystemProperties.get("ro.config.low_ram").equals("true")) {
-                mLogdSize.setEntries(R.array.select_logd_size_lowram_titles);
-                titles = getResources().getStringArray(R.array.select_logd_size_lowram_titles);
-            }
-            String[] summaries = getResources().getStringArray(R.array.select_logd_size_summaries);
-            int index = 1; // punt to second entry if not found
-            for (int i = 0; i < titles.length; i++) {
-                if (currentValue.equals(values[i])
-                        || currentValue.equals(titles[i])) {
-                    index = i;
-                    break;
-                }
-            }
-            mLogdSize.setValue(values[index]);
-            mLogdSize.setSummary(summaries[index]);
-            mLogdSize.setOnPreferenceChangeListener(this);
-        }
-    }
-
-    private void writeLogdSizeOption(Object newValue) {
-        String currentValue = SystemProperties.get(SELECT_LOGD_DEFAULT_SIZE_PROPERTY);
-        if (currentValue != null) {
-            DEFAULT_LOG_RING_BUFFER_SIZE_IN_BYTES = currentValue;
-        }
-        final String size = (newValue != null) ?
-                newValue.toString() : DEFAULT_LOG_RING_BUFFER_SIZE_IN_BYTES;
-        SystemProperties.set(SELECT_LOGD_SIZE_PROPERTY, size);
-        pokeSystemProperties();
-        try {
-            Process p = Runtime.getRuntime().exec("logcat -b all -G " + size);
-            p.waitFor();
-            Log.i(TAG, "Logcat ring buffer sizes set to: " + size);
-        } catch (Exception e) {
-            Log.w(TAG, "Cannot set logcat ring buffer sizes", e);
-        }
-        updateLogdSizeValues();
-    }
-
     private void updateUsbConfigurationValues() {
         if (mUsbConfiguration != null) {
             UsbManager manager = (UsbManager) getActivity().getSystemService(Context.USB_SERVICE);
@@ -1617,9 +1603,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
             updateHdcpValues();
             pokeSystemProperties();
             return true;
-        } else if (preference == mLogdSize) {
-            writeLogdSizeOption(newValue);
-            return true;
         } else if (preference == mUsbConfiguration) {
             writeUsbConfigurationOption(newValue);
             return true;
@@ -1655,6 +1638,44 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
             return true;
         }
         return false;
+    }
+
+    /**
+     * Iterates through preference controllers that show confirmation dialogs and returns the
+     * preference key for the first currently showing dialog. Ideally there should only ever be one.
+     * @return Preference key, or null if no dialog is showing
+     */
+    private String getKeyForShowingDialog() {
+        // TODO: iterate through a fragment-wide list of PreferenceControllers and just pick out the
+        // ConfirmationDialogController objects
+        final List<ConfirmationDialogController> dialogControllers = new ArrayList<>(2);
+        dialogControllers.add(mLogpersistController);
+        for (ConfirmationDialogController dialogController : dialogControllers) {
+            if (dialogController.isConfirmationDialogShowing()) {
+                return dialogController.getPreferenceKey();
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Re-show the dialog we lost previously
+     * @param preferenceKey Key for the preference the dialog is for
+     */
+    private void recreateDialogForKey(String preferenceKey) {
+        // TODO: iterate through a fragment-wide list of PreferenceControllers and just pick out the
+        // ConfirmationDialogController objects
+        final List<ConfirmationDialogController> dialogControllers = new ArrayList<>(2);
+        dialogControllers.add(mLogpersistController);
+        for (ConfirmationDialogController dialogController : dialogControllers) {
+            if (TextUtils.equals(preferenceKey, dialogController.getPreferenceKey())) {
+                dialogController.showConfirmationDialog(findPreference(preferenceKey));
+            }
+        }
+    }
+
+    private void dismissDialogs() {
+        mLogpersistController.dismissConfirmationDialog();
     }
 
     void pokeSystemProperties() {
