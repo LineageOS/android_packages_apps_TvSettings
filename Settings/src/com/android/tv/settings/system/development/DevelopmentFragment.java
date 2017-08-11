@@ -34,7 +34,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.hardware.usb.UsbManager;
 import android.net.wifi.WifiManager;
-import android.os.AsyncTask;
 import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -65,6 +64,7 @@ import android.widget.Toast;
 import com.android.internal.app.LocalePicker;
 import com.android.settingslib.core.ConfirmationDialogController;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
+import com.android.settingslib.development.SystemPropPoker;
 import com.android.tv.settings.R;
 import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
 
@@ -173,7 +173,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
 
     private boolean mLastEnabledState;
     private boolean mHaveDebugSettings;
-    private boolean mDontPokeProperties;
 
     private SwitchPreference mEnableDeveloper;
     private SwitchPreference mEnableAdb;
@@ -645,7 +644,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     }
 
     private void resetDangerousOptions() {
-        mDontPokeProperties = true;
+        SystemPropPoker.getInstance().blockPokes();
         for (final SwitchPreference cb : mResetSwitchPrefs) {
             if (cb.isChecked()) {
                 cb.setChecked(false);
@@ -666,8 +665,8 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         writeAppProcessLimitOptions(null);
         mHaveDebugSettings = false;
         updateAllOptions();
-        mDontPokeProperties = false;
-        pokeSystemProperties();
+        SystemPropPoker.getInstance().unblockPokes();
+        SystemPropPoker.getInstance().poke();
     }
 
     private void updateHdcpValues() {
@@ -1003,7 +1002,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
 
     private void writeHardwareUiOptions() {
         SystemProperties.set(HARDWARE_UI_PROPERTY, mForceHardwareUi.isChecked() ? "true" : "false");
-        pokeSystemProperties();
+        SystemPropPoker.getInstance().poke();
     }
 
     private void updateMsaaOptions() {
@@ -1012,7 +1011,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
 
     private void writeMsaaOptions() {
         SystemProperties.set(MSAA_PROPERTY, mForceMsaa.isChecked() ? "true" : "false");
-        pokeSystemProperties();
+        SystemPropPoker.getInstance().poke();
     }
 
     private void updateTrackFrameTimeOptions() {
@@ -1036,7 +1035,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private void writeTrackFrameTimeOptions(Object newValue) {
         SystemProperties.set(ThreadedRenderer.PROFILE_PROPERTY,
                 newValue == null ? "" : newValue.toString());
-        pokeSystemProperties();
+        SystemPropPoker.getInstance().poke();
         updateTrackFrameTimeOptions();
     }
 
@@ -1062,7 +1061,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private void writeShowNonRectClipOptions(Object newValue) {
         SystemProperties.set(ThreadedRenderer.DEBUG_SHOW_NON_RECTANGULAR_CLIP_PROPERTY,
                 newValue == null ? "" : newValue.toString());
-        pokeSystemProperties();
+        SystemPropPoker.getInstance().poke();
         updateShowNonRectClipOptions();
     }
 
@@ -1074,7 +1073,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private void writeShowHwScreenUpdatesOptions() {
         SystemProperties.set(ThreadedRenderer.DEBUG_DIRTY_REGIONS_PROPERTY,
                 mShowHwScreenUpdates.isChecked() ? "true" : null);
-        pokeSystemProperties();
+        SystemPropPoker.getInstance().poke();
     }
 
     private void updateShowHwLayersUpdatesOptions() {
@@ -1085,7 +1084,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private void writeShowHwLayersUpdatesOptions() {
         SystemProperties.set(ThreadedRenderer.DEBUG_SHOW_LAYERS_UPDATES_PROPERTY,
                 mShowHwLayersUpdates.isChecked() ? "true" : null);
-        pokeSystemProperties();
+        SystemPropPoker.getInstance().poke();
     }
 
     private void updateDebugHwOverdrawOptions() {
@@ -1109,7 +1108,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private void writeDebugHwOverdrawOptions(Object newValue) {
         SystemProperties.set(ThreadedRenderer.DEBUG_OVERDRAW_PROPERTY,
                 newValue == null ? "" : newValue.toString());
-        pokeSystemProperties();
+        SystemPropPoker.getInstance().poke();
         updateDebugHwOverdrawOptions();
     }
 
@@ -1121,7 +1120,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private void writeDebugLayoutOptions() {
         SystemProperties.set(View.DEBUG_LAYOUT_PROPERTY,
                 mDebugLayout.isChecked() ? "true" : "false");
-        pokeSystemProperties();
+        SystemPropPoker.getInstance().poke();
     }
 
     private void updateSimulateColorSpace() {
@@ -1391,7 +1390,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
 
     private void writeOpenGLTracesOptions(Object newValue) {
         SystemProperties.set(OPENGL_TRACES_PROPERTY, newValue == null ? "" : newValue.toString());
-        pokeSystemProperties();
+        SystemPropPoker.getInstance().poke();
         updateOpenGLTracesOptions();
     }
 
@@ -1601,7 +1600,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         if (HDCP_CHECKING_KEY.equals(preference.getKey())) {
             SystemProperties.set(HDCP_CHECKING_PROPERTY, newValue.toString());
             updateHdcpValues();
-            pokeSystemProperties();
+            SystemPropPoker.getInstance().poke();
             return true;
         } else if (preference == mUsbConfiguration) {
             writeUsbConfigurationOption(newValue);
@@ -1678,42 +1677,12 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         mLogpersistController.dismissConfirmationDialog();
     }
 
-    void pokeSystemProperties() {
-        if (!mDontPokeProperties) {
-            //noinspection unchecked
-            (new SystemPropPoker()).execute();
-        }
-    }
-
     private BroadcastReceiver mUsbReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             updateUsbConfigurationValues();
         }
     };
-
-    static class SystemPropPoker extends AsyncTask<Void, Void, Void> {
-        @Override
-        protected Void doInBackground(Void... params) {
-            String[] services = ServiceManager.listServices();
-            for (String service : services) {
-                IBinder obj = ServiceManager.checkService(service);
-                if (obj != null) {
-                    Parcel data = Parcel.obtain();
-                    try {
-                        obj.transact(IBinder.SYSPROPS_TRANSACTION, data, null, 0);
-                    } catch (RemoteException e) {
-                        // Ignore
-                    } catch (Exception e) {
-                        Log.i(TAG, "Someone wrote a bad service '" + service
-                                + "' that doesn't like to be poked: " + e);
-                    }
-                    data.recycle();
-                }
-            }
-            return null;
-        }
-    }
 
     private static boolean isPackageInstalled(Context context, String packageName) {
         try {
