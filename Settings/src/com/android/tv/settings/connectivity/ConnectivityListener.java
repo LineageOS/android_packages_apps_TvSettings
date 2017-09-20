@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.connectivity;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -40,6 +41,7 @@ import com.android.settingslib.wifi.AccessPoint;
 import com.android.settingslib.wifi.WifiTracker;
 
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Listens for changes to the current connectivity status.
@@ -157,7 +159,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
         if (isWifiConnected()) {
             WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
             int ip = wifiInfo.getIpAddress();
-            return String.format("%d.%d.%d.%d", (ip & 0xff), (ip >> 8 & 0xff),
+            return String.format(Locale.US, "%d.%d.%d.%d", (ip & 0xff), (ip >> 8 & 0xff),
                     (ip >> 16 & 0xff), (ip >> 24 & 0xff));
         } else {
             return "";
@@ -167,6 +169,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
     /**
      * Return the MAC address of the currently connected Wifi AP.
      */
+    @SuppressLint("HardwareIds")
     public String getWifiMacAddress() {
         if (isWifiConnected()) {
             WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
@@ -259,24 +262,18 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
         mWifiManager.setWifiEnabled(enable);
     }
 
-    private boolean setNetworkType(int networkType) {
-        boolean hasChanged = mNetworkType != networkType;
-        mNetworkType = networkType;
-        return hasChanged;
-    }
-
-    private boolean updateConnectivityStatus() {
+    private void updateConnectivityStatus() {
         NetworkInfo networkInfo = mConnectivityManager.getActiveNetworkInfo();
         if (networkInfo == null) {
-            return setNetworkType(ConnectivityManager.TYPE_NONE);
+            mNetworkType = ConnectivityManager.TYPE_NONE;
         } else {
             switch (networkInfo.getType()) {
                 case ConnectivityManager.TYPE_WIFI: {
-                    boolean hasChanged;
 
-                    // Determine if this is an open or secure wifi connection.
+                    // Determine if this is
+                    // an open or secure wifi connection.
                     WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
-                    hasChanged = setNetworkType(ConnectivityManager.TYPE_WIFI);
+                    mNetworkType = ConnectivityManager.TYPE_WIFI;
 
                     // Find the SSID of network.
                     String ssid = null;
@@ -287,7 +284,6 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
                         }
                     }
                     if (!TextUtils.equals(mWifiSsid, ssid)) {
-                        hasChanged = true;
                         mWifiSsid = ssid;
                     }
 
@@ -300,32 +296,36 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
                         signalStrength = 0;
                     }
                     if (mWifiSignalStrength != signalStrength) {
-                        hasChanged = true;
                         mWifiSignalStrength = signalStrength;
                     }
-                    return hasChanged;
+                    break;
                 }
 
                 case ConnectivityManager.TYPE_ETHERNET:
-                    return setNetworkType(ConnectivityManager.TYPE_ETHERNET);
+                    mNetworkType = ConnectivityManager.TYPE_ETHERNET;
+                    break;
 
                 case ConnectivityManager.TYPE_MOBILE:
-                    return setNetworkType(ConnectivityManager.TYPE_MOBILE);
+                    mNetworkType = ConnectivityManager.TYPE_MOBILE;
+                    break;
 
                 default:
-                    return setNetworkType(ConnectivityManager.TYPE_NONE);
+                    mNetworkType = ConnectivityManager.TYPE_NONE;
+                    break;
             }
         }
     }
 
     @Override
     public void onWifiStateChanged(int state) {
+        updateConnectivityStatus();
         mListener.onConnectivityChange();
     }
 
     @Override
     public void onConnectedChanged() {
-
+        updateConnectivityStatus();
+        mListener.onConnectivityChange();
     }
 
     @Override
