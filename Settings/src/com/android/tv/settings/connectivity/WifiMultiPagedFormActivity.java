@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
 
+import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.FormPageDisplayer.FormPageInfo;
 import com.android.tv.settings.connectivity.FormPageDisplayer.UserActivityListener;
@@ -139,8 +140,8 @@ public abstract class WifiMultiPagedFormActivity extends MultiPagedForm
     }
 
     protected void setWifiConfigurationPassword(
-            WifiConfiguration wifiConfiguration, WifiSecurity wifiSecurity, String password) {
-        if (wifiSecurity == WifiSecurity.WEP) {
+            WifiConfiguration wifiConfiguration, int wifiSecurity, String password) {
+        if (wifiSecurity == AccessPoint.SECURITY_WEP) {
             int length = password.length();
             // WEP-40, WEP-104, and 256-bit WEP (WEP-232?)
             if ((length == 10 || length == 26 || length == 32 || length == 58)
@@ -150,7 +151,7 @@ public abstract class WifiMultiPagedFormActivity extends MultiPagedForm
                 wifiConfiguration.wepKeys[0] = '"' + password + '"';
             }
         } else {
-            if (wifiSecurity == WifiSecurity.PSK
+            if (wifiSecurity == AccessPoint.SECURITY_PSK
                     && password.length() < FormPageDisplayer.PSK_MIN_LENGTH) {
                 return;
             }

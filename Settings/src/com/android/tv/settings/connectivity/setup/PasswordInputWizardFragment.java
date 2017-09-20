@@ -44,7 +44,7 @@ public class PasswordInputWizardFragment extends Fragment {
         /**
          * Called when text input is complete.
          *
-         * @param text the text that was input.
+         * @param text      the text that was input.
          * @param obfuscate whether the input was obfuscated or not.
          * @return true if the text is acceptable; false if not.
          */
