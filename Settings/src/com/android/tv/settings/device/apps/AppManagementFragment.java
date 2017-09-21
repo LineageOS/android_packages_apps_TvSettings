@@ -28,7 +28,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.support.annotation.NonNull;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.text.TextUtils;
@@ -37,10 +36,14 @@ import android.widget.Toast;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
+import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
 
 import java.util.ArrayList;
 
-public class AppManagementFragment extends LeanbackPreferenceFragment {
+/**
+ * Fragment for managing a single app
+ */
+public class AppManagementFragment extends ObservableLeanbackPreferenceFragment {
     private static final String TAG = "AppManagementFragment";
 
     private static final String ARG_PACKAGE_NAME = "packageName";
@@ -79,12 +82,9 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
     private NotificationsPreference mNotificationsPreference;
 
     private final Handler mHandler = new Handler();
-    private Runnable mBailoutRunnable = new Runnable() {
-        @Override
-        public void run() {
-            if (isResumed() && !getFragmentManager().popBackStackImmediate()) {
-                getActivity().onBackPressed();
-            }
+    private Runnable mBailoutRunnable = () -> {
+        if (isResumed() && !getFragmentManager().popBackStackImmediate()) {
+            getActivity().onBackPressed();
         }
     };
 
@@ -99,7 +99,7 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         final Activity activity = getActivity();
         mPackageManager = activity.getPackageManager();
         mApplicationsState = ApplicationsState.getInstance(activity.getApplication());
-        mSession = mApplicationsState.newSession(mCallbacks);
+        mSession = mApplicationsState.newSession(mCallbacks, getLifecycle());
         mEntry = mApplicationsState.getEntry(mPackageName, UserHandle.myUserId());
 
         super.onCreate(savedInstanceState);
@@ -108,7 +108,6 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-        mSession.resume();
 
         if (mEntry == null) {
             Log.w(TAG, "App not found, trying to bail out");
@@ -126,7 +125,6 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
     @Override
     public void onPause() {
         super.onPause();
-        mSession.pause();
         mHandler.removeCallbacks(mBailoutRunnable);
     }
 
