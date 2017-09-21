@@ -21,21 +21,20 @@ import android.app.AppOpsManager;
 import android.os.Bundle;
 import android.support.annotation.Keep;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.TwoStatePreference;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 
-import java.util.Comparator;
-
 /**
  * Fragment for controlling if apps can monitor app usage
  */
 @Keep
-public class ManageAppUsageAccess extends ManageAppOp {
+public class ManageAppUsageAccess extends ManageAppOp
+        implements ManageApplicationsController.Callback {
 
     private AppOpsManager mAppOpsManager;
 
@@ -55,12 +54,6 @@ public class ManageAppUsageAccess extends ManageAppOp {
         return Manifest.permission.PACKAGE_USAGE_STATS;
     }
 
-    @Nullable
-    @Override
-    public Comparator<ApplicationsState.AppEntry> getComparator() {
-        return ApplicationsState.ALPHA_COMPARATOR;
-    }
-
     @NonNull
     @Override
     public Preference bindPreference(@NonNull Preference preference,
@@ -68,7 +61,6 @@ public class ManageAppUsageAccess extends ManageAppOp {
         final TwoStatePreference switchPref = (SwitchPreference) preference;
         switchPref.setTitle(entry.label);
         switchPref.setKey(entry.info.packageName);
-        mApplicationsState.ensureIcon(entry);
         switchPref.setIcon(entry.icon);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
             setAppUsageAccess(entry, (Boolean) newValue);
@@ -94,7 +86,7 @@ public class ManageAppUsageAccess extends ManageAppOp {
 
     private CharSequence getPreferenceSummary(ApplicationsState.AppEntry entry) {
         if (entry.extraInfo instanceof PermissionState) {
-            return getContext().getText(((PermissionState) entry.extraInfo).isPermissible()
+            return getContext().getText(((PermissionState) entry.extraInfo).isAllowed()
                     ? R.string.app_permission_summary_allowed
                     : R.string.app_permission_summary_not_allowed);
         } else {
@@ -107,5 +99,11 @@ public class ManageAppUsageAccess extends ManageAppOp {
                 entry.info.uid, entry.info.packageName,
                 grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_IGNORED);
         updateAppList();
+    }
+
+    @NonNull
+    @Override
+    public PreferenceGroup getAppPreferenceGroup() {
+        return getPreferenceScreen();
     }
 }
