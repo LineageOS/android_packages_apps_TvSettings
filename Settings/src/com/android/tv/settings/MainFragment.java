@@ -69,7 +69,8 @@ public class MainFragment extends LeanbackPreferenceFragment {
     private static final String KEY_ACCESSORIES = "accessories";
     private static final String KEY_PERSONAL = "personal";
     private static final String KEY_ADD_ACCESSORY = "add_accessory";
-    private static final String KEY_NETWORK = "network";
+    @VisibleForTesting
+    static final String KEY_NETWORK = "network";
     private static final String KEY_INPUTS = "inputs";
     private static final String KEY_SOUNDS = "sound_effects";
     private static final String KEY_GOOGLE_SETTINGS = "google_settings";
@@ -82,14 +83,14 @@ public class MainFragment extends LeanbackPreferenceFragment {
 
     private AuthenticatorHelper mAuthenticatorHelper;
     private BluetoothAdapter mBtAdapter;
-    private ConnectivityListener mConnectivityListener;
+    @VisibleForTesting
+    ConnectivityListener mConnectivityListener;
 
     private boolean mInputSettingNeeded;
 
     private PreferenceGroup mAccessoriesGroup;
     private PreferenceGroup mAccountsGroup;
     private Preference mAddAccessory;
-    private Preference mNetworkPref;
     private Preference mSoundsPref;
 
     private final BroadcastReceiver mBCMReceiver = new BroadcastReceiver() {
@@ -131,7 +132,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
         }
         mAccessoriesGroup = (PreferenceGroup) findPreference(KEY_ACCESSORIES);
         mAddAccessory = findPreference(KEY_ADD_ACCESSORY);
-        mNetworkPref = findPreference(KEY_NETWORK);
         mSoundsPref = findPreference(KEY_SOUNDS);
         mAccountsGroup = (PreferenceGroup) findPreference(KEY_ACCOUNTS_CATEGORY);
 
@@ -388,59 +388,60 @@ public class MainFragment extends LeanbackPreferenceFragment {
                 ? R.drawable.ic_volume_up : R.drawable.ic_volume_off);
     }
 
-    private void updateWifi() {
-        if (mNetworkPref == null) {
+    @VisibleForTesting
+    void updateWifi() {
+        final Preference networkPref = findPreference(KEY_NETWORK);
+        if (networkPref == null) {
             return;
         }
 
-        mNetworkPref.setTitle(mConnectivityListener.isEthernetAvailable()
+        networkPref.setTitle(mConnectivityListener.isEthernetAvailable()
                 ? R.string.connectivity_network : R.string.connectivity_wifi);
 
         if (mConnectivityListener.isCellConnected()) {
             final int signal = mConnectivityListener.getCellSignalStrength();
             switch (signal) {
                 case SignalStrength.SIGNAL_STRENGTH_GREAT:
-                    mNetworkPref.setIcon(R.drawable.ic_cell_signal_4_white);
+                    networkPref.setIcon(R.drawable.ic_cell_signal_4_white);
                     break;
                 case SignalStrength.SIGNAL_STRENGTH_GOOD:
-                    mNetworkPref.setIcon(R.drawable.ic_cell_signal_3_white);
+                    networkPref.setIcon(R.drawable.ic_cell_signal_3_white);
                     break;
                 case SignalStrength.SIGNAL_STRENGTH_MODERATE:
-                    mNetworkPref.setIcon(R.drawable.ic_cell_signal_2_white);
+                    networkPref.setIcon(R.drawable.ic_cell_signal_2_white);
                     break;
                 case SignalStrength.SIGNAL_STRENGTH_POOR:
-                    mNetworkPref.setIcon(R.drawable.ic_cell_signal_1_white);
+                    networkPref.setIcon(R.drawable.ic_cell_signal_1_white);
                     break;
                 case SignalStrength.SIGNAL_STRENGTH_NONE_OR_UNKNOWN:
                 default:
-                    mNetworkPref.setIcon(R.drawable.ic_cell_signal_0_white);
+                    networkPref.setIcon(R.drawable.ic_cell_signal_0_white);
                     break;
             }
         } else if (mConnectivityListener.isEthernetConnected()) {
-            mNetworkPref.setIcon(R.drawable.ic_ethernet_white);
-        } else if (mConnectivityListener.isWifiConnected()) {
+            networkPref.setIcon(R.drawable.ic_ethernet_white);
+        } else if (mConnectivityListener.isWifiEnabledOrEnabling()) {
             final int signal = mConnectivityListener.getWifiSignalStrength(5);
             switch (signal) {
                 case 4:
-                    mNetworkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
+                    networkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
                     break;
                 case 3:
-                    mNetworkPref.setIcon(R.drawable.ic_wifi_signal_3_white);
+                    networkPref.setIcon(R.drawable.ic_wifi_signal_3_white);
                     break;
                 case 2:
-                    mNetworkPref.setIcon(R.drawable.ic_wifi_signal_2_white);
+                    networkPref.setIcon(R.drawable.ic_wifi_signal_2_white);
                     break;
                 case 1:
-                    mNetworkPref.setIcon(R.drawable.ic_wifi_signal_1_white);
+                    networkPref.setIcon(R.drawable.ic_wifi_signal_1_white);
                     break;
                 case 0:
                 default:
-                    mNetworkPref.setIcon(R.drawable.ic_wifi_signal_0_white);
+                    networkPref.setIcon(R.drawable.ic_wifi_signal_0_white);
                     break;
             }
         } else {
-            // TODO: get a not connected icon
-            mNetworkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
+            networkPref.setIcon(R.drawable.ic_wifi_signal_off_white);
         }
     }
 
@@ -470,16 +471,11 @@ public class MainFragment extends LeanbackPreferenceFragment {
             final ResolveInfo info = systemIntentIsHandled(getContext(),
                     googleSettingsPref.getIntent());
             googleSettingsPref.setVisible(info != null);
-            if (info != null) {
-                try {
-                    final Context targetContext = getContext()
-                            .createPackageContext(info.resolvePackageName != null
-                                    ? info.resolvePackageName : info.activityInfo.packageName, 0);
-                    googleSettingsPref.setIcon(targetContext.getDrawable(info.iconResourceId));
-                } catch (Resources.NotFoundException | PackageManager.NameNotFoundException
-                        | SecurityException e) {
-                    Log.e(TAG, "Google settings icon not found", e);
-                }
+            if (info != null && info.activityInfo != null) {
+                googleSettingsPref.setIcon(
+                    info.activityInfo.loadIcon(getContext().getPackageManager()));
+                googleSettingsPref.setTitle(
+                    info.activityInfo.loadLabel(getContext().getPackageManager()));
             }
 
             final Preference speechPref = findPreference(KEY_SPEECH_SETTINGS);

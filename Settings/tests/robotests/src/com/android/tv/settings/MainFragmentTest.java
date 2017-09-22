@@ -17,11 +17,11 @@
 package com.android.tv.settings;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
 import android.content.Intent;
@@ -30,8 +30,10 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.support.v7.preference.Preference;
+import android.telephony.SignalStrength;
 
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
+import com.android.tv.settings.connectivity.ConnectivityListener;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -59,7 +61,7 @@ public class MainFragmentTest {
     public void testUpdateDeveloperOptions_developerDisabled() {
         DevelopmentSettingsEnabler
                 .setDevelopmentSettingsEnabled(RuntimeEnvironment.application, false);
-        final Preference developerPref = spy(Preference.class);
+        final Preference developerPref = mock(Preference.class);
         doReturn(developerPref).when(mMainFragment).findPreference(MainFragment.KEY_DEVELOPER);
         mMainFragment.updateDeveloperOptions();
         verify(developerPref, atLeastOnce()).setVisible(false);
@@ -70,7 +72,7 @@ public class MainFragmentTest {
     public void testUpdateDeveloperOptions_developerEnabled() {
         DevelopmentSettingsEnabler
                 .setDevelopmentSettingsEnabled(RuntimeEnvironment.application, true);
-        final Preference developerPref = spy(Preference.class);
+        final Preference developerPref = mock(Preference.class);
         doReturn(developerPref).when(mMainFragment).findPreference(MainFragment.KEY_DEVELOPER);
         mMainFragment.updateDeveloperOptions();
         verify(developerPref, atLeastOnce()).setVisible(true);
@@ -79,7 +81,7 @@ public class MainFragmentTest {
 
     @Test
     public void testUpdateCastSettings() {
-        final Preference castPref = spy(Preference.class);
+        final Preference castPref = mock(Preference.class);
         doReturn(castPref).when(mMainFragment).findPreference(MainFragment.KEY_CAST_SETTINGS);
         final Intent intent = new Intent("com.google.android.settings.CAST_RECEIVER_SETTINGS");
         doReturn(intent).when(castPref).getIntent();
@@ -98,5 +100,150 @@ public class MainFragmentTest {
         mMainFragment.updateCastSettings();
 
         verify(castPref, atLeastOnce()).setTitle("Test Name");
+    }
+
+    @Test
+    public void testUpdateWifi_NoNetwork() {
+        final Preference networkPref = mock(Preference.class);
+        doReturn(networkPref).when(mMainFragment).findPreference(MainFragment.KEY_NETWORK);
+        final ConnectivityListener listener = mock(ConnectivityListener.class);
+        mMainFragment.mConnectivityListener = listener;
+
+        doReturn(false).when(listener).isEthernetAvailable();
+        doReturn(false).when(listener).isCellConnected();
+        doReturn(false).when(listener).isEthernetConnected();
+        doReturn(false).when(listener).isWifiEnabledOrEnabling();
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setTitle(R.string.connectivity_wifi);
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_off_white);
+    }
+
+    @Test
+    public void testUpdateWifi_hasEthernet() {
+        final Preference networkPref = mock(Preference.class);
+        doReturn(networkPref).when(mMainFragment).findPreference(MainFragment.KEY_NETWORK);
+        final ConnectivityListener listener = mock(ConnectivityListener.class);
+        mMainFragment.mConnectivityListener = listener;
+
+        doReturn(true).when(listener).isEthernetAvailable();
+        doReturn(false).when(listener).isCellConnected();
+        doReturn(false).when(listener).isEthernetConnected();
+        doReturn(false).when(listener).isWifiEnabledOrEnabling();
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setTitle(R.string.connectivity_network);
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_off_white);
+    }
+
+    @Test
+    public void testUpdateWifi_hasEthernetConnected() {
+        final Preference networkPref = mock(Preference.class);
+        doReturn(networkPref).when(mMainFragment).findPreference(MainFragment.KEY_NETWORK);
+        final ConnectivityListener listener = mock(ConnectivityListener.class);
+        mMainFragment.mConnectivityListener = listener;
+
+        doReturn(true).when(listener).isEthernetAvailable();
+        doReturn(false).when(listener).isCellConnected();
+        doReturn(true).when(listener).isEthernetConnected();
+        doReturn(false).when(listener).isWifiEnabledOrEnabling();
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setTitle(R.string.connectivity_network);
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_ethernet_white);
+    }
+
+    @Test
+    public void testUpdateWifi_wifiSignal() {
+        final Preference networkPref = mock(Preference.class);
+        doReturn(networkPref).when(mMainFragment).findPreference(MainFragment.KEY_NETWORK);
+        final ConnectivityListener listener = mock(ConnectivityListener.class);
+        mMainFragment.mConnectivityListener = listener;
+
+        doReturn(false).when(listener).isEthernetAvailable();
+        doReturn(false).when(listener).isCellConnected();
+        doReturn(false).when(listener).isEthernetConnected();
+        doReturn(true).when(listener).isWifiEnabledOrEnabling();
+        doReturn(0).when(listener).getWifiSignalStrength(anyInt());
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setTitle(R.string.connectivity_wifi);
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_0_white);
+
+        doReturn(1).when(listener).getWifiSignalStrength(anyInt());
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_1_white);
+
+        doReturn(2).when(listener).getWifiSignalStrength(anyInt());
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_2_white);
+
+        doReturn(3).when(listener).getWifiSignalStrength(anyInt());
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_3_white);
+
+        doReturn(4).when(listener).getWifiSignalStrength(anyInt());
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_4_white);
+    }
+
+    @Test
+    public void testUpdateWifi_cellSignal() {
+        final Preference networkPref = mock(Preference.class);
+        doReturn(networkPref).when(mMainFragment).findPreference(MainFragment.KEY_NETWORK);
+        final ConnectivityListener listener = mock(ConnectivityListener.class);
+        mMainFragment.mConnectivityListener = listener;
+
+        doReturn(false).when(listener).isEthernetAvailable();
+        doReturn(true).when(listener).isCellConnected();
+        doReturn(false).when(listener).isEthernetConnected();
+        doReturn(false).when(listener).isWifiEnabledOrEnabling();
+        doReturn(SignalStrength.SIGNAL_STRENGTH_NONE_OR_UNKNOWN)
+                .when(listener).getCellSignalStrength();
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setTitle(R.string.connectivity_wifi);
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_cell_signal_0_white);
+
+        doReturn(SignalStrength.SIGNAL_STRENGTH_POOR)
+                .when(listener).getCellSignalStrength();
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_cell_signal_1_white);
+
+        doReturn(SignalStrength.SIGNAL_STRENGTH_MODERATE)
+                .when(listener).getCellSignalStrength();
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_cell_signal_2_white);
+
+        doReturn(SignalStrength.SIGNAL_STRENGTH_GOOD)
+                .when(listener).getCellSignalStrength();
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_cell_signal_3_white);
+
+        doReturn(SignalStrength.SIGNAL_STRENGTH_GREAT)
+                .when(listener).getCellSignalStrength();
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_cell_signal_4_white);
     }
 }
