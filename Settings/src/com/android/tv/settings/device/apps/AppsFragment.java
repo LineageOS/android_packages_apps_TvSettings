@@ -21,7 +21,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.text.TextUtils;
@@ -31,12 +30,16 @@ import android.util.Log;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
+import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
 
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 
-public class AppsFragment extends LeanbackPreferenceFragment {
+/**
+ * Fragment for managing all apps
+ */
+public class AppsFragment extends ObservableLeanbackPreferenceFragment {
 
     private static final String TAG = "AppsFragment";
 
@@ -111,7 +114,7 @@ public class AppsFragment extends LeanbackPreferenceFragment {
             public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> apps) {
                 updateAppList(mSystemPreferenceGroup, apps);
             }
-        });
+        }, getLifecycle());
         rebuildSystem();
 
         mSessionDownloaded = mApplicationsState.newSession(new RowUpdateCallbacks() {
@@ -124,7 +127,7 @@ public class AppsFragment extends LeanbackPreferenceFragment {
             public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> apps) {
                 updateAppList(mDownloadedPreferenceGroup, apps);
             }
-        });
+        }, getLifecycle());
         rebuildDownloaded();
 
     }
@@ -144,20 +147,6 @@ public class AppsFragment extends LeanbackPreferenceFragment {
 
         mSystemPreferenceGroup = (PreferenceGroup) findPreference("SystemPreferenceGroup");
         mSystemPreferenceGroup.setVisible(TextUtils.isEmpty(volumeUuid));
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        mSessionSystem.resume();
-        mSessionDownloaded.resume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        mSessionSystem.pause();
-        mSessionDownloaded.pause();
     }
 
     private void rebuildSystem() {

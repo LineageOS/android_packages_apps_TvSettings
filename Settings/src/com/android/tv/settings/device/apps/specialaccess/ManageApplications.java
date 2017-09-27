@@ -20,12 +20,12 @@ import android.app.Application;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
+import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Base class for fragments which manage apps
  */
-public abstract class ManageApplications extends LeanbackPreferenceFragment {
+public abstract class ManageApplications extends ObservableLeanbackPreferenceFragment {
     // Use this preference key for a header pref not removed during refresh
     private static final String HEADER_KEY = "header";
     private ApplicationsState.Session mAppSession;
@@ -88,26 +88,8 @@ public abstract class ManageApplications extends LeanbackPreferenceFragment {
         super.onCreate(savedInstanceState);
         mApplicationsState = ApplicationsState.getInstance(
                 (Application) getContext().getApplicationContext());
-        mAppSession = mApplicationsState.newSession(mAppSessionCallbacks);
+        mAppSession = mApplicationsState.newSession(mAppSessionCallbacks, getLifecycle());
         updateAppList();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        mAppSession.resume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        mAppSession.pause();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mAppSession.release();
     }
 
     protected void updateAppList() {
