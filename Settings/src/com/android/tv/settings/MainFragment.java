@@ -36,7 +36,6 @@ import android.media.tv.TvInputManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.support.annotation.VisibleForTesting;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.telephony.SignalStrength;
@@ -51,13 +50,17 @@ import com.android.tv.settings.accessories.BluetoothAccessoryFragment;
 import com.android.tv.settings.accounts.AccountSyncFragment;
 import com.android.tv.settings.accounts.AddAccountWithTypeActivity;
 import com.android.tv.settings.connectivity.ConnectivityListener;
+import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
 import com.android.tv.settings.device.sound.SoundFragment;
 import com.android.tv.settings.system.SecurityFragment;
 
 import java.util.ArrayList;
 import java.util.Set;
 
-public class MainFragment extends LeanbackPreferenceFragment {
+/**
+ * The fragment where all good things begin. Evil is handled elsewhere.
+ */
+public class MainFragment extends ObservableLeanbackPreferenceFragment {
     private static final String TAG = "MainFragment";
 
     @VisibleForTesting
@@ -109,7 +112,8 @@ public class MainFragment extends LeanbackPreferenceFragment {
         mAuthenticatorHelper = new AuthenticatorHelper(getContext(),
                 new UserHandle(UserHandle.myUserId()), userHandle -> updateAccounts());
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
-        mConnectivityListener = new ConnectivityListener(getContext(), this::updateWifi);
+        mConnectivityListener =
+                new ConnectivityListener(getContext(), this::updateWifi, getLifecycle());
 
         final TvInputManager manager = (TvInputManager) getContext().getSystemService(
                 Context.TV_INPUT_SERVICE);
@@ -151,7 +155,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
         btChangeFilter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);
         btChangeFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
         getContext().registerReceiver(mBCMReceiver, btChangeFilter);
-        mConnectivityListener.start();
     }
 
     @Override
@@ -177,15 +180,6 @@ public class MainFragment extends LeanbackPreferenceFragment {
         super.onStop();
         mAuthenticatorHelper.stopListeningToAccountUpdates();
         getContext().unregisterReceiver(mBCMReceiver);
-        mConnectivityListener.stop();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (mConnectivityListener != null) {
-            mConnectivityListener.destroy();
-        }
     }
 
     private void hideIfIntentUnhandled(Preference preference) {

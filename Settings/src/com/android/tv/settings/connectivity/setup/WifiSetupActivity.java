@@ -31,8 +31,6 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.os.HandlerThread;
-import android.os.Process;
 import android.text.TextUtils;
 import android.util.Pair;
 import android.view.accessibility.AccessibilityEvent;
@@ -80,7 +78,6 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
     private boolean mShowWpsAtTop;
     private AdvancedWifiOptionsFlow mAdvancedWifiOptionsFlow;
     private WifiTracker mWifiTracker;
-    private HandlerThread mBgThread;
 
     private WifiConfiguration mConfiguration;
     private String mConnectedNetwork;
@@ -116,9 +113,8 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
                 }
             }
         };
-        mBgThread = new HandlerThread(TAG, Process.THREAD_PRIORITY_BACKGROUND);
-        mBgThread.start();
-        mWifiTracker = new WifiTracker(this, wifiListener, mBgThread.getLooper(), true, true);
+        mWifiTracker = new WifiTracker(this, wifiListener,
+                true /* includeSaved */, true /* includeScans */);
         mNextNetworkRefreshTime = System.currentTimeMillis() + NETWORK_REFRESH_BUFFER_DURATION;
 
         mUserActivityListener = new FormPageDisplayer.UserActivityListener() {
@@ -154,13 +150,13 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
     @Override
     public void onResume() {
         super.onResume();
-        mWifiTracker.startTracking();
+        mWifiTracker.onStart();
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        mWifiTracker.stopTracking();
+        mWifiTracker.onStop();
     }
 
     @Override
@@ -203,7 +199,7 @@ public class WifiSetupActivity extends WifiMultiPagedFormActivity
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mBgThread.quit();
+        mWifiTracker.onDestroy();
     }
 
     @Override

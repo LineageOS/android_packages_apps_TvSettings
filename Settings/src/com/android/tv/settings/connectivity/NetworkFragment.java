@@ -22,7 +22,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceManager;
@@ -31,12 +30,16 @@ import android.support.v7.preference.TwoStatePreference;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.settingslib.wifi.AccessPointPreference;
 import com.android.tv.settings.R;
+import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
 
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-public class NetworkFragment extends LeanbackPreferenceFragment implements
+/**
+ * Fragment for controlling network connectivity
+ */
+public class NetworkFragment extends ObservableLeanbackPreferenceFragment implements
         ConnectivityListener.Listener, ConnectivityListener.WifiNetworkListener,
         AccessPoint.AccessPointListener {
 
@@ -84,7 +87,7 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        mConnectivityListener = new ConnectivityListener(getContext(), this);
+        mConnectivityListener = new ConnectivityListener(getContext(), this, getLifecycle());
         mUserBadgeCache =
                 new AccessPointPreference.UserBadgeCache(getContext().getPackageManager());
         super.onCreate(savedInstanceState);
@@ -93,7 +96,6 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
     @Override
     public void onStart() {
         super.onStart();
-        mConnectivityListener.start();
         mConnectivityListener.setWifiListener(this);
         mNoWifiUpdateBeforeMillis = SystemClock.elapsedRealtime() + INITIAL_UPDATE_DELAY;
         updateWifiList();
@@ -105,20 +107,6 @@ public class NetworkFragment extends LeanbackPreferenceFragment implements
         // There doesn't seem to be an API to listen to everything this could cover, so
         // tickle it here and hope for the best.
         updateConnectivity();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        mConnectivityListener.stop();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (mConnectivityListener != null) {
-            mConnectivityListener.destroy();
-        }
     }
 
     @Override

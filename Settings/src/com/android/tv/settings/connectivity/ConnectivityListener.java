@@ -29,14 +29,16 @@ import android.net.Network;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.os.HandlerThread;
-import android.os.Process;
 import android.support.annotation.UiThread;
 import android.telephony.PhoneStateListener;
 import android.telephony.SignalStrength;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
+import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.settingslib.core.lifecycle.LifecycleObserver;
+import com.android.settingslib.core.lifecycle.events.OnStart;
+import com.android.settingslib.core.lifecycle.events.OnStop;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.settingslib.wifi.WifiTracker;
 
@@ -46,7 +48,8 @@ import java.util.Locale;
 /**
  * Listens for changes to the current connectivity status.
  */
-public class ConnectivityListener implements WifiTracker.WifiListener {
+public class ConnectivityListener implements WifiTracker.WifiListener, LifecycleObserver, OnStart,
+        OnStop {
 
     private static final String TAG = "ConnectivityListener";
 
@@ -55,7 +58,6 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
     private boolean mStarted;
 
     private WifiTracker mWifiTracker;
-    private final HandlerThread mBgThread;
 
     private final ConnectivityManager mConnectivityManager;
     private final WifiManager mWifiManager;
@@ -86,28 +88,47 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
     private String mWifiSsid;
     private int mWifiSignalStrength;
 
+    /**
+     * @deprecated use the constructor that provides a {@link Lifecycle} instead
+     */
+    @Deprecated
     public ConnectivityListener(Context context, Listener listener) {
+        this(context, listener, null);
+    }
+
+    public ConnectivityListener(Context context, Listener listener, Lifecycle lifecycle) {
         mContext = context;
         mConnectivityManager = (ConnectivityManager) mContext.getSystemService(
                 Context.CONNECTIVITY_SERVICE);
         mWifiManager = mContext.getSystemService(WifiManager.class);
         mEthernetManager = mContext.getSystemService(EthernetManager.class);
         mListener = listener;
-        mBgThread = new HandlerThread(TAG, Process.THREAD_PRIORITY_BACKGROUND);
-        mBgThread.start();
-        mWifiTracker = new WifiTracker(context, this, mBgThread.getLooper(), true, true);
+        if (lifecycle != null) {
+            mWifiTracker = new WifiTracker(context, this, lifecycle, true, true);
+        } else {
+            mWifiTracker = new WifiTracker(context, this, true, true);
+        }
     }
 
     /**
      * Starts {@link ConnectivityListener}.
      * This should be called only from main thread.
+     * @deprecated not needed when a {@link Lifecycle} is provided
      */
     @UiThread
+    @Deprecated
     public void start() {
+        if (!mStarted) {
+            mWifiTracker.onStart();
+        }
+        onStart();
+    }
+
+    @Override
+    public void onStart() {
         if (!mStarted) {
             mStarted = true;
             updateConnectivityStatus();
-            mWifiTracker.startTracking();
             IntentFilter networkIntentFilter = new IntentFilter();
             networkIntentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
             networkIntentFilter.addAction(WifiManager.RSSI_CHANGED_ACTION);
@@ -127,12 +148,21 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
     /**
      * Stops {@link ConnectivityListener}.
      * This should be called only from main thread.
+     * @deprecated not needed when a {@link Lifecycle} is provided
      */
     @UiThread
+    @Deprecated
     public void stop() {
         if (mStarted) {
+            mWifiTracker.onStop();
+        }
+        onStop();
+    }
+
+    @Override
+    public void onStop() {
+        if (mStarted) {
             mStarted = false;
-            mWifiTracker.stopTracking();
             mContext.unregisterReceiver(mNetworkReceiver);
             mWifiListener = null;
             mEthernetManager.removeListener(mEthernetListener);
@@ -146,9 +176,11 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
 
     /**
      * Causes the background thread to quit.
+     * @deprecated not needed when a {@link Lifecycle} is provided
      */
+    @Deprecated
     public void destroy() {
-        mBgThread.quit();
+        mWifiTracker.onDestroy();
     }
 
     public void setWifiListener(WifiNetworkListener wifiListener) {
