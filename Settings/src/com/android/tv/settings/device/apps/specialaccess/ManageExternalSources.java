@@ -23,15 +23,13 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.support.annotation.Keep;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.TwoStatePreference;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
-
-import java.util.Comparator;
 
 /**
  * Fragment for controlling if apps can install other apps
@@ -56,12 +54,6 @@ public class ManageExternalSources extends ManageAppOp {
         return Manifest.permission.REQUEST_INSTALL_PACKAGES;
     }
 
-    @Nullable
-    @Override
-    public Comparator<ApplicationsState.AppEntry> getComparator() {
-        return ApplicationsState.ALPHA_COMPARATOR;
-    }
-
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.manage_external_sources, null);
@@ -80,7 +72,6 @@ public class ManageExternalSources extends ManageAppOp {
         final TwoStatePreference switchPref = (SwitchPreference) preference;
         switchPref.setTitle(entry.label);
         switchPref.setKey(entry.info.packageName);
-        mApplicationsState.ensureIcon(entry);
         switchPref.setIcon(entry.icon);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
             setCanInstallApps(entry, (Boolean) newValue);
@@ -132,5 +123,11 @@ public class ManageExternalSources extends ManageAppOp {
                 entry.info.uid, entry.info.packageName,
                 newState ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
         updateAppList();
+    }
+
+    @NonNull
+    @Override
+    public PreferenceGroup getAppPreferenceGroup() {
+        return getPreferenceScreen();
     }
 }
