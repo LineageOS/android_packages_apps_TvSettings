@@ -102,14 +102,20 @@ public class BackupAppsStepFragment extends GuidedStepFragment implements
     @Override
     public void onResume() {
         super.onResume();
-        mSession.resume();
+        mSession.onResume();
         updateActions();
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        mSession.pause();
+        mSession.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mSession.onDestroy();
     }
 
     @Override
