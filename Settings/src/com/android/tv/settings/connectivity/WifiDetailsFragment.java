@@ -25,16 +25,19 @@ import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.text.TextUtils;
 
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
+import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
 
 import java.util.List;
 
-public class WifiDetailsFragment extends LeanbackPreferenceFragment
+/**
+ * Fragment for displaying the details of a single wifi network
+ */
+public class WifiDetailsFragment extends ObservableLeanbackPreferenceFragment
         implements ConnectivityListener.Listener, ConnectivityListener.WifiNetworkListener {
 
     private static final String ARG_ACCESS_POINT_STATE = "apBundle";
@@ -66,7 +69,7 @@ public class WifiDetailsFragment extends LeanbackPreferenceFragment
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        mConnectivityListener = new ConnectivityListener(getContext(), this);
+        mConnectivityListener = new ConnectivityListener(getContext(), this, getLifecycle());
 
         mAccessPoint = new AccessPoint(getContext(),
                 getArguments().getBundle(ARG_ACCESS_POINT_STATE));
@@ -76,7 +79,6 @@ public class WifiDetailsFragment extends LeanbackPreferenceFragment
     @Override
     public void onStart() {
         super.onStart();
-        mConnectivityListener.start();
         mConnectivityListener.setWifiListener(this);
     }
 
@@ -84,20 +86,6 @@ public class WifiDetailsFragment extends LeanbackPreferenceFragment
     public void onResume() {
         super.onResume();
         update();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        mConnectivityListener.stop();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (mConnectivityListener != null) {
-            mConnectivityListener.destroy();
-        }
     }
 
     @Override
