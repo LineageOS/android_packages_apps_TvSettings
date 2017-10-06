@@ -25,7 +25,6 @@ import android.net.ConnectivityManager;
 import android.net.LinkProperties;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -35,6 +34,7 @@ import android.os.UserManager;
 import android.support.annotation.Nullable;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 
@@ -52,7 +52,6 @@ public class StatusFragment extends LeanbackPreferenceFragment {
     private static final String KEY_IP_ADDRESS = "wifi_ip_address";
     private static final String KEY_WIFI_MAC_ADDRESS = "wifi_mac_address";
     private static final String KEY_BT_ADDRESS = "bt_address";
-    private static final String KEY_SERIAL_NUMBER = "serial_number";
     private static final String KEY_WIMAX_MAC_ADDRESS = "wimax_mac_address";
     private static final String KEY_SIM_STATUS = "sim_status";
     private static final String KEY_IMEI_INFO = "imei_info";
@@ -71,6 +70,8 @@ public class StatusFragment extends LeanbackPreferenceFragment {
 
     private ConnectivityManager mCM;
     private WifiManager mWifiManager;
+
+    private SerialNumberPreferenceController mSerialNumberPreferenceController;
 
     private Preference mUptime;
     private Preference mBtAddress;
@@ -128,6 +129,7 @@ public class StatusFragment extends LeanbackPreferenceFragment {
 
         mCM = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         mWifiManager = (WifiManager) getActivity().getSystemService(Context.WIFI_SERVICE);
+        mSerialNumberPreferenceController = new SerialNumberPreferenceController(getActivity());
 
         super.onCreate(savedInstanceState);
     }
@@ -135,6 +137,7 @@ public class StatusFragment extends LeanbackPreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.device_info_status, null);
+        final PreferenceScreen screen = getPreferenceScreen();
 
         // TODO: detect if we have a battery or not
         removePreference(findPreference(KEY_BATTERY_LEVEL));
@@ -146,12 +149,12 @@ public class StatusFragment extends LeanbackPreferenceFragment {
         mUptime = findPreference("up_time");
 
         if (!hasBluetooth()) {
-            getPreferenceScreen().removePreference(mBtAddress);
+            screen.removePreference(mBtAddress);
             mBtAddress = null;
         }
 
         if (!hasWimax()) {
-            getPreferenceScreen().removePreference(mWimaxMacAddress);
+            screen.removePreference(mWimaxMacAddress);
             mWimaxMacAddress = null;
         }
 
@@ -162,13 +165,7 @@ public class StatusFragment extends LeanbackPreferenceFragment {
 
         updateConnectivity();
 
-        final Preference serialPref = findPreference(KEY_SERIAL_NUMBER);
-        String serial = Build.SERIAL;
-        if (!TextUtils.isEmpty(serial)) {
-            serialPref.setSummary(serial);
-        } else {
-            removePreference(serialPref);
-        }
+        mSerialNumberPreferenceController.displayPreference(screen);
 
         // Remove SimStatus and Imei for Secondary user as it access Phone b/19165700
         // Also remove on Wi-Fi only devices.
