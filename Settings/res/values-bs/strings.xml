@@ -82,7 +82,7 @@
     <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"Za uparivanje s uređajem: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, provjerite prikazuje li ovaj pristupni kôd: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8234127565393932499">"Šalje: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Želite li upariti s ovim uređajem?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="8951451728250058901">"Za uparivanje s uređajem: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Upišite na njemu: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, zatim pritisnite tipku Return ili Enter."</string>
-    <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"Za uparivanje s uređajem: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Upišite traženi PIN kôd uređaja:"</string>
+    <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"Za uparivanje s uređajem: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Upišite traženi PIN uređaja:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="7980787196089653577">"Da uparite s uređajem: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Unesite traženi pristupni kôd uređaja:"</string>
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Obično 0000 ili 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"Upari"</string>
@@ -321,8 +321,8 @@
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Ponovi"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"Traženje WPS rutera…"</string>
     <string name="wifi_wps_instructions" msgid="3618110962669110034">"Pritisnite na ruteru dugme Wi-Fi Protected Setup.\nMože biti pod nazivom \"WPS\" ili imati simbol na lijevoj strani."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Unesite PIN kôd <xliff:g id="NUMBER">%1$s</xliff:g> na Wi-Fi ruter"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Nakon što ste unijeli PIN kôd, postavljanje može potrajati do 2 minute."</string>
+    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Unesite PIN <xliff:g id="NUMBER">%1$s</xliff:g> na Wi-Fi ruter"</string>
+    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Nakon što ste unijeli PIN, postavljanje može potrajati do 2 minute."</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Nije pronađen Wi-Fi ruter"</string>
     <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Sigurnosne postavke Wi-Fi rutera (WEP) nisu podržane"</string>
     <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Sigurnosne postavke Wi-Fi rutera (TKIP) nisu podržane"</string>
@@ -527,7 +527,7 @@
     <string name="title_select_wifi_network" msgid="1038871400014761952">"Odabir Wi-Fi mreže"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Promijeni naziv"</string>
     <string name="accessories_wifi_display_enable" msgid="4779506305656453262">"Wi-Fi ekran"</string>
-    <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"Potreban je PIN kôd"</string>
+    <string name="accessories_wifi_display_pin_required" msgid="3242645267864813273">"Potreban je PIN"</string>
     <string name="whichApplication" msgid="8382179653567099571">"Završavanje radnje pomoću"</string>
     <string name="alwaysUseQuestion" msgid="7128459989232213727">"Želite li uvijek koristiti ovu opciju za ovu radnju?"</string>
     <string name="alwaysUseOption" msgid="1057645533268907906">"Uvijek koristi"</string>
@@ -590,18 +590,18 @@
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"Nije dozvoljeno"</string>
     <string name="restricted_profile_customize_restrictions" msgid="8418415019078825537">"Prilagodi ograničenja"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"Samo trenutak…"</string>
-    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"Promijenite PIN kôd"</string>
+    <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"Promijenite PIN"</string>
     <string name="restriction_description" msgid="3104855945910233028">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
     <string name="app_sees_restricted_accounts_and_controlled_by" msgid="6677671440081319908">"Ova aplikacija može pristupati vašim računima. Kontrolira aplikacija <xliff:g id="APP">%1$s</xliff:g>"</string>
-    <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"Unesite PIN kôd da gledate ovaj kanal"</string>
-    <string name="pin_enter_unlock_program" msgid="52453773316071511">"Unesite PIN kôd da gledate ovaj program"</string>
-    <string name="pin_enter_pin" msgid="821552376577935497">"Unesite PIN kôd"</string>
-    <string name="pin_enter_new_pin" msgid="4788218421265924211">"Postavite novi PIN kôd"</string>
-    <string name="pin_enter_again" msgid="1510456697040826496">"Ponovo unesite novi PIN kôd"</string>
-    <string name="pin_enter_old_pin" msgid="851029058127630869">"Unesite stari PIN kôd"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Unijeli ste pogrešan PIN kôd 5 puta.\nPokušajte ponovo za <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> s"</string>
-    <string name="pin_toast_wrong" msgid="4628358195224633248">"Pogrešan PIN kôd. Pokušajte ponovo"</string>
-    <string name="pin_toast_not_match" msgid="5886041789737632996">"Pokušajte ponovo. PIN kôd ne odgovara"</string>
+    <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"Unesite PIN da gledate ovaj kanal"</string>
+    <string name="pin_enter_unlock_program" msgid="52453773316071511">"Unesite PIN da gledate ovaj program"</string>
+    <string name="pin_enter_pin" msgid="821552376577935497">"Unesite PIN"</string>
+    <string name="pin_enter_new_pin" msgid="4788218421265924211">"Postavite novi PIN"</string>
+    <string name="pin_enter_again" msgid="1510456697040826496">"Ponovo unesite novi PIN"</string>
+    <string name="pin_enter_old_pin" msgid="851029058127630869">"Unesite stari PIN"</string>
+    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Unijeli ste pogrešan PIN 5 puta.\nPokušajte ponovo za <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> s"</string>
+    <string name="pin_toast_wrong" msgid="4628358195224633248">"Pogrešan PIN. Pokušajte ponovo"</string>
+    <string name="pin_toast_not_match" msgid="5886041789737632996">"Pokušajte ponovo. PIN ne odgovara"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Unesite lozinku za mrežu <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Uspješno povezano"</string>
     <string name="wifi_setup_save_success" msgid="4785799603638549254">"Uspješno sačuvano"</string>
