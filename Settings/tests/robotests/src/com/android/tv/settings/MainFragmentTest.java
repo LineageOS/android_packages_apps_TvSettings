@@ -23,6 +23,7 @@ import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
+import static org.robolectric.Shadows.shadowOf;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -94,7 +95,7 @@ public class MainFragmentTest {
         final ApplicationInfo applicationInfo = new ApplicationInfo();
         applicationInfo.flags = ApplicationInfo.FLAG_SYSTEM;
         activityInfo.applicationInfo = applicationInfo;
-        RuntimeEnvironment.getRobolectricPackageManager().addResolveInfoForIntent(
+        shadowOf(RuntimeEnvironment.application.getPackageManager()).addResolveInfoForIntent(
                 intent, resolveInfo);
 
         mMainFragment.updateCastSettings();
