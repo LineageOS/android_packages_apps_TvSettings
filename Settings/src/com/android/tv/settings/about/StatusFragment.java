@@ -17,83 +17,77 @@
 package com.android.tv.settings.about;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.os.UserManager;
-import android.support.annotation.Nullable;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
 
+import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.tv.settings.NopePreferenceController;
+import com.android.tv.settings.PreferenceControllerFragment;
 import com.android.tv.settings.R;
-import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Fragment for showing device hardware info, such as MAC addresses and serial numbers
  */
-public class StatusFragment extends ObservableLeanbackPreferenceFragment {
+public class StatusFragment extends PreferenceControllerFragment {
 
     private static final String KEY_BATTERY_STATUS = "battery_status";
     private static final String KEY_BATTERY_LEVEL = "battery_level";
     private static final String KEY_SIM_STATUS = "sim_status";
     private static final String KEY_IMEI_INFO = "imei_info";
 
-    private SerialNumberPreferenceController mSerialNumberPreferenceController;
-    private UptimePreferenceController mUptimePreferenceController;
-    private BluetoothAddressPreferenceController mBluetoothAddressPreferenceController;
-    private IpAddressPreferenceController mIpAddressPreferenceController;
-    private WifiMacAddressPreferenceController mWifiMacAddressPreferenceController;
-    private ImsStatusPreferenceController mImsStatusPreferenceController;
-
     public static StatusFragment newInstance() {
         return new StatusFragment();
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        final Context context = getContext();
-        final Lifecycle lifecycle = getLifecycle();
-
-        mSerialNumberPreferenceController = new SerialNumberPreferenceController(context);
-        mUptimePreferenceController = new UptimePreferenceController(context, lifecycle);
-        mBluetoothAddressPreferenceController =
-                new BluetoothAddressPreferenceController(context, lifecycle);
-        mIpAddressPreferenceController = new IpAddressPreferenceController(context, lifecycle);
-        mWifiMacAddressPreferenceController =
-                new WifiMacAddressPreferenceController(context, lifecycle);
-        mImsStatusPreferenceController = new ImsStatusPreferenceController(context, lifecycle);
-
-        super.onCreate(savedInstanceState);
+    protected int getPreferenceScreenResId() {
+        return R.xml.device_info_status;
     }
 
     @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.device_info_status, null);
-        final PreferenceScreen screen = getPreferenceScreen();
+    protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
+        final List<AbstractPreferenceController> controllers = new ArrayList<>(10);
+        final Lifecycle lifecycle = getLifecycle();
 
         // TODO: detect if we have a battery or not
-        removePreference(findPreference(KEY_BATTERY_LEVEL));
-        removePreference(findPreference(KEY_BATTERY_STATUS));
+        controllers.add(new NopePreferenceController(context, KEY_BATTERY_LEVEL));
+        controllers.add(new NopePreferenceController(context, KEY_BATTERY_STATUS));
 
-        mSerialNumberPreferenceController.displayPreference(screen);
-        mUptimePreferenceController.displayPreference(screen);
-        mBluetoothAddressPreferenceController.displayPreference(screen);
-        mIpAddressPreferenceController.displayPreference(screen);
-        mWifiMacAddressPreferenceController.displayPreference(screen);
-        mImsStatusPreferenceController.displayPreference(screen);
+        controllers.add(new SerialNumberPreferenceController(context));
+        controllers.add(new UptimePreferenceController(context, lifecycle));
+        controllers.add(new BluetoothAddressPreferenceController(context, lifecycle));
+        controllers.add(new IpAddressPreferenceController(context, lifecycle));
+        controllers.add(new WifiMacAddressPreferenceController(context, lifecycle));
+        controllers.add(new ImsStatusPreferenceController(context, lifecycle));
 
-        // Remove SimStatus and Imei for Secondary user as it access Phone b/19165700
-        // Also remove on Wi-Fi only devices.
-        //TODO: the bug above will surface in split system user mode.
-        if (!UserManager.get(getActivity()).isAdminUser()
-                || AboutFragment.isWifiOnly(getActivity())) {
-            removePreference(findPreference(KEY_SIM_STATUS));
-            removePreference(findPreference(KEY_IMEI_INFO));
-        }
+        controllers.add(new AdminUserAndPhoneOnlyPreferenceController(context, KEY_SIM_STATUS));
+        controllers.add(new AdminUserAndPhoneOnlyPreferenceController(context, KEY_IMEI_INFO));
+
+        return controllers;
     }
 
-    private void removePreference(@Nullable Preference preference) {
-        if (preference != null) {
-            getPreferenceScreen().removePreference(preference);
+    private static class AdminUserAndPhoneOnlyPreferenceController
+            extends AbstractPreferenceController {
+
+        private final String mKey;
+
+        private AdminUserAndPhoneOnlyPreferenceController(Context context, String key) {
+            super(context);
+            mKey = key;
+        }
+
+        @Override
+        public boolean isAvailable() {
+            return UserManager.get(mContext).isAdminUser()
+                    && !AboutFragment.isWifiOnly(mContext);
+        }
+
+        @Override
+        public String getPreferenceKey() {
+            return mKey;
         }
     }
 }
