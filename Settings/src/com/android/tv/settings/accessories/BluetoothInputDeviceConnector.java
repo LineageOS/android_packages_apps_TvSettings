@@ -18,7 +18,7 @@ package com.android.tv.settings.accessories;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothInputDevice;
+import android.bluetooth.BluetoothHidHost;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.hardware.input.InputManager;
@@ -55,7 +55,7 @@ public class BluetoothInputDeviceConnector implements BluetoothDevicePairer.Blue
             if (DEBUG) {
                 Log.d(TAG, "Connection made to bluetooth proxy.");
             }
-            mInputProxy = (BluetoothInputDevice) proxy;
+            mInputProxy = (BluetoothHidHost) proxy;
             if (mTarget != null) {
                 registerInputMethodMonitor();
                 if (DEBUG) {
@@ -73,7 +73,7 @@ public class BluetoothInputDeviceConnector implements BluetoothDevicePairer.Blue
         }
     };
 
-    private BluetoothInputDevice mInputProxy;
+    private BluetoothHidHost mInputProxy;
     private boolean mInputMethodMonitorRegistered = false;
 
     private BluetoothDevice mTarget;
@@ -133,7 +133,7 @@ public class BluetoothInputDeviceConnector implements BluetoothDevicePairer.Blue
         if (mInputProxy != null) {
             try {
                 BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
-                adapter.closeProfileProxy(BluetoothProfile.INPUT_DEVICE, mInputProxy);
+                adapter.closeProfileProxy(BluetoothProfile.HID_HOST, mInputProxy);
                 mInputProxy = null;
             } catch (Throwable t) {
                 Log.w(TAG, "Error cleaning up input profile proxy", t);
@@ -154,7 +154,7 @@ public class BluetoothInputDeviceConnector implements BluetoothDevicePairer.Blue
 
     @Override
     public void openConnection(BluetoothAdapter adapter) {
-        if (!adapter.getProfileProxy(mContext, mServiceConnection, BluetoothProfile.INPUT_DEVICE)) {
+        if (!adapter.getProfileProxy(mContext, mServiceConnection, BluetoothProfile.HID_HOST)) {
             mOpenConnectionCallback.failed();
         }
     }
