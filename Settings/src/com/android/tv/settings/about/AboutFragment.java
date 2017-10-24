@@ -42,6 +42,7 @@ import android.widget.Toast;
 
 import com.android.internal.telephony.TelephonyProperties;
 import com.android.settingslib.DeviceInfoUtils;
+import com.android.settingslib.Utils;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.LongClickPreference;
 import com.android.tv.settings.MainFragment;
@@ -158,7 +159,7 @@ public class AboutFragment extends LeanbackPreferenceFragment implements
         }
 
         // Remove Baseband version if wifi-only device
-        if (isWifiOnly(getActivity())) {
+        if (Utils.isWifiOnly(getActivity())) {
             removePreference(findPreference(KEY_BASEBAND_VERSION));
         }
 

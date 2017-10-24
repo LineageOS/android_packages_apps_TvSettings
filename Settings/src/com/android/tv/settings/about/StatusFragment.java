@@ -17,10 +17,10 @@
 package com.android.tv.settings.about;
 
 import android.content.Context;
-import android.os.UserManager;
 
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.settingslib.deviceinfo.AbstractSimStatusImeiInfoPreferenceController;
 import com.android.tv.settings.NopePreferenceController;
 import com.android.tv.settings.PreferenceControllerFragment;
 import com.android.tv.settings.R;
@@ -70,19 +70,13 @@ public class StatusFragment extends PreferenceControllerFragment {
     }
 
     private static class AdminUserAndPhoneOnlyPreferenceController
-            extends AbstractPreferenceController {
+            extends AbstractSimStatusImeiInfoPreferenceController {
 
         private final String mKey;
 
         private AdminUserAndPhoneOnlyPreferenceController(Context context, String key) {
             super(context);
             mKey = key;
-        }
-
-        @Override
-        public boolean isAvailable() {
-            return UserManager.get(mContext).isAdminUser()
-                    && !AboutFragment.isWifiOnly(mContext);
         }
 
         @Override
