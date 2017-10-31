@@ -31,6 +31,7 @@ class EthernetConfig implements NetworkConfiguration {
     private final EthernetManager mEthernetManager;
     private IpConfiguration mIpConfiguration;
     private final String mName;
+    private String mInterfaceName;
 
     EthernetConfig(Context context) {
         mEthernetManager = (EthernetManager) context.getSystemService(Context.ETHERNET_SERVICE);
@@ -50,7 +51,9 @@ class EthernetConfig implements NetworkConfiguration {
 
     @Override
     public void save(WifiManager.ActionListener listener) {
-        mEthernetManager.setConfiguration(mIpConfiguration);
+        if (mInterfaceName != null) {
+            mEthernetManager.setConfiguration(mInterfaceName, mIpConfiguration);
+        }
 
         if (listener != null) {
             listener.onSuccess();
@@ -61,7 +64,11 @@ class EthernetConfig implements NetworkConfiguration {
      * Load IpConfiguration from system.
      */
     public void load() {
-        mIpConfiguration = mEthernetManager.getConfiguration();
+        String[] ifaces = mEthernetManager.getAvailableInterfaces();
+        if (ifaces.length > 0) {
+            mInterfaceName = ifaces[0];
+            mIpConfiguration = mEthernetManager.getConfiguration(mInterfaceName);
+        }
     }
 
     @Override
