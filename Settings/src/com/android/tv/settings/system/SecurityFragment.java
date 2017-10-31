@@ -262,6 +262,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
                     Log.e(TAG, "Tried to enter non-existent restricted user");
                     return true;
                 }
+                updateBackgroundRestriction(restrictedUser);
                 switchUserNow(restrictedUser.id);
                 getActivity().finish();
                 return true;
@@ -283,6 +284,25 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 return true;
         }
         return super.onPreferenceTreeClick(preference);
+    }
+
+    private void updateBackgroundRestriction(UserInfo user) {
+        final boolean allowedToRun = shouldAllowRunInBackground();
+        mUserManager.setUserRestriction(
+                UserManager.DISALLOW_RUN_IN_BACKGROUND, !allowedToRun, user.getUserHandle());
+    }
+
+    /**
+     * Profiles are allowed to run in the background by default, unless the device specifically
+     * sets a config flag and/or has the global setting overridden by something on-device.
+     *
+     * @see {@link Settings.Global#KEEP_PROFILE_IN_BACKGROUND}
+     */
+    private boolean shouldAllowRunInBackground() {
+        final boolean defaultValue = getContext().getResources().getBoolean(
+                com.android.internal.R.bool.config_keepRestrictedProfilesInBackground);
+        return Settings.Global.getInt(getContext().getContentResolver(),
+                Settings.Global.KEEP_PROFILE_IN_BACKGROUND, defaultValue ? 1 : 0) > 0;
     }
 
     private boolean isUnknownSourcesBlocked() {
