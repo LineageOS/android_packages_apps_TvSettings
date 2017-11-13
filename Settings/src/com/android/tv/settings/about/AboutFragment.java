@@ -134,7 +134,8 @@ public class AboutFragment extends LeanbackPreferenceFragment implements
         final Preference buildNumberPref = findPreference(KEY_BUILD_NUMBER);
         buildNumberPref.setSummary(Build.DISPLAY);
         buildNumberPref.setEnabled(true);
-        findPreference(KEY_KERNEL_VERSION).setSummary(DeviceInfoUtils.getFormattedKernelVersion());
+        findPreference(KEY_KERNEL_VERSION)
+                .setSummary(DeviceInfoUtils.getFormattedKernelVersion(getContext()));
 
         final Preference selinuxPref = findPreference(KEY_SELINUX_STATUS);
         if (!SELinux.isSELinuxEnabled()) {
