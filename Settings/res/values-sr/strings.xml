@@ -76,7 +76,7 @@
     <string name="accessory_change_name_title" msgid="4630819456923061184">"Унесите нови назив за ову додатну опрему"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"Претражују се помоћни уређаји…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Пре него што упарите Bluetooth уређаје, проверите да ли су у режиму упаривања"</string>
-    <string name="accessories_autopair_msg" msgid="8618829246837821752">"Пронађен је уређај и аутоматски ће се упарити за <xliff:g id="COUNTDOWN">%1$s</xliff:g> секунде(и)"</string>
+    <string name="accessories_autopair_msg" msgid="8618829246837821752">"Пронађен је уређај и аутоматски ће се упарити за <xliff:g id="COUNTDOWN">%1$s</xliff:g> секунде/и"</string>
     <string name="error_action_not_supported" msgid="300552308104354666">"Ова радња није подржана"</string>
     <string name="bluetooth_pairing_request" msgid="4523088117471287665">"Захтев за Bluetooth упаривање"</string>
     <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"Да бисте упарили са уређајем &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, уверите се да приказује овај приступни кôд: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
@@ -372,7 +372,7 @@
     <string name="accessibility_shortcut" msgid="6726361991387558828">"Пречица за приступачност"</string>
     <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Омогући пречицу за приступачност"</string>
     <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Услуга пречице"</string>
-    <string name="accessibility_shortcut_description" msgid="3241203131630578108">"Када је укључена, притиском на Почетна и Изабери на 3 секунде покрећете функцију приступачности."</string>
+    <string name="accessibility_shortcut_description" msgid="514995490967241715">"Када је пречица укључена, можете да притиснете дугме Назад и дугме са стрелицом надоле и да их задржите 3 секунде да бисте покренули функцију приступачности."</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Титл"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Подешавања за постављање текста опционалног титла преко видео снимка"</string>
     <string name="captions_display" msgid="735692527287125548">"Екран"</string>
@@ -664,7 +664,7 @@
     <string name="keep_settings" msgid="6798327196645732517">"Не мењај"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Дозволе"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Дозволе за апликације"</string>
-    <string name="app_permissions_group_summary" msgid="7906834786705287901">"Апликације са дозволом (<xliff:g id="COUNT_0">%d</xliff:g> од <xliff:g id="COUNT_1">%d</xliff:g>)"</string>
+    <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%d</xliff:g> од <xliff:g id="COUNT_1">%d</xliff:g> апликација има дозволу"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"Захтев за дозволу за Bluetooth"</string>
     <string name="security_patch" msgid="2131617390189164481">"Ниво безбедносне закрпе за Android"</string>
     <string name="choose_application" msgid="5662960665577780353">"Изаберите апликацију"</string>
@@ -675,4 +675,8 @@
     <string name="capturing_bugreport" msgid="3291125403411239592">"Извештај о грешци се прави"</string>
     <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Доступне виртуелне тастатуре"</string>
     <string name="manage_keyboards" msgid="1905379263117016795">"Управљање тастатурама"</string>
+    <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Дозвољено"</string>
+    <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Није дозвољено"</string>
+    <string name="usage_access" msgid="1914242907684452328">"Приступ подацима о коришћењу"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"Приступ подацима о коришћењу омогућава апликацији да прати које друге апликације користите и колико често, као и да види мобилног оператера, језичка подешавања и друге детаље."</string>
 </resources>

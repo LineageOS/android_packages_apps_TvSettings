@@ -98,7 +98,7 @@
     <string name="system_speech" msgid="8128688499687306982">"কথন"</string>
     <string name="system_inputs" msgid="2413907183796651102">"ইনপুট"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"অ্যাক্সেসযোগ্যতা"</string>
-    <string name="system_developer_options" msgid="3237985523474863638">"বিকাশকারীর বিকল্পগুলি"</string>
+    <string name="system_developer_options" msgid="3237985523474863638">"ডেভেলপারের বিকল্পগুলি"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"কিছুই নয়"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"ব্যবহার ও ডায়াগনস্টিক"</string>
     <string name="tutorials" msgid="3731493987558093244">"টিউটোরিয়াল"</string>
@@ -115,12 +115,12 @@
     <string name="about_serial" msgid="2723560490027171187">"ক্রমিক সংখ্যা"</string>
     <string name="about_build" msgid="9148789767199785676">"বিল্ড"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
-      <item quantity="one">এখন আর <xliff:g id="STEP_COUNT_1">%1$d</xliff:g>টি পদক্ষেপ পরেই আপনি একজন বিকাশকারী হিসাবে চিহ্নিত হবেন</item>
-      <item quantity="other">এখন আর <xliff:g id="STEP_COUNT_1">%1$d</xliff:g>টি পদক্ষেপ পরেই আপনি একজন বিকাশকারী হিসাবে চিহ্নিত হবেন</item>
+      <item quantity="one">এখন আর <xliff:g id="STEP_COUNT_1">%1$d</xliff:g>টি পদক্ষেপ পরেই আপনি একজন ডেভেলপার হিসাবে চিহ্নিত হবেন</item>
+      <item quantity="other">এখন আর <xliff:g id="STEP_COUNT_1">%1$d</xliff:g>টি পদক্ষেপ পরেই আপনি একজন ডেভেলপার হিসাবে চিহ্নিত হবেন</item>
     </plurals>
     <string name="about_ads" msgid="3364786994943748337">"বিজ্ঞাপনগুলি"</string>
-    <string name="show_dev_on" msgid="8997172736024819952">"আপনি এখন একজন বিকাশকারী!"</string>
-    <string name="show_dev_already" msgid="7525967300421794483">"কোনো প্রয়োজন নেই, আপনি ইতিমধ্যেই একজন বিকাশকারী হিসাবে চিহ্নিত হয়েছেন"</string>
+    <string name="show_dev_on" msgid="8997172736024819952">"আপনি এখন একজন ডেভেলপার!"</string>
+    <string name="show_dev_already" msgid="7525967300421794483">"কোনো প্রয়োজন নেই, আপনি ইতিমধ্যেই একজন ডেভেলপার হিসাবে চিহ্নিত হয়েছেন"</string>
     <string name="device_info_default" msgid="4519181343309136050">"অজানা"</string>
     <string name="selinux_status" msgid="8000422283341040360">"SELinux স্থিতি"</string>
     <string name="selinux_status_disabled" msgid="4925733135520787807">"অক্ষম করা আছে"</string>
@@ -362,7 +362,7 @@
     <string name="location_reporting" msgid="3054236612250063073">"অবস্থানের প্রতিবেদন"</string>
     <string name="location_history" msgid="2946680949724247804">"অবস্থানের ইতিহাস"</string>
     <string name="location_reporting_desc" msgid="6256424995139430823">"Google Now এবং Google মানচিত্রের মতো পণ্যগুলিতে Google এই বৈশিষ্ট্যটি ব্যবহার করে৷ অবস্থানের প্রতিবেদন চালু করা হলে, তা এই বৈশিষ্ট্যটি ব্যবহার করে এমন যেকোনো Google পণ্যকে আপনার Google অ্যাকাউন্টের সাথে সম্পর্কিত আপনার ডিভাইসের অতি সাম্প্রতিক অবস্থানের ডেটা সঞ্চয় এবং ব্যবহার করতে অনুমোদিত করে৷"</string>
-    <string name="location_history_desc" msgid="3861249867748294369">"এই অ্যাকাউন্টের ক্ষেত্রে অবস্থানের ইতিহাস চালু থাকাকালীন, আপনার অ্যাপ্লিকেশানগুলি যাতে ব্যবহার করতে পারে সেজন্য Google আপনার ডিভাইসের অবস্থান সম্পর্কিত ডেটা সঞ্চয় করতে পারে৷\n\nউদাহরণস্বরূপ, Google মানচিত্র আপনাকে দিকনির্দেশ করতে পারে এবং Google Now আপনাকে আপনার যাতায়াতের ক্ষেত্রে ট্র্যাফিকের অবস্থা সম্পর্কে জানাতে পারে৷\n\nআপনি যেকোনো সময় অবস্থানের ইতিহাস বন্ধ করে দিতে পারেন, কিন্তু এমনটি করলেও এটি মুছে যাবে না৷ আপনার অবস্থানের ইতিহাস দেখতে এবং পরিচালনা করতে, maps.google.com/locationhistory এ যান৷"</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"এই অ্যাকাউন্টের ক্ষেত্রে অবস্থানের ইতিহাস চালু থাকাকালীন, আপনার অ্যাপ্লিকেশানগুলি যাতে ব্যবহার করতে পারে সেজন্য Google আপনার ডিভাইসের অবস্থান সম্পর্কিত ডেটা সঞ্চয় করতে পারে৷\n\nউদাহরণস্বরূপ, Google ম্যাপ আপনাকে দিকনির্দেশ করতে পারে এবং Google Now আপনাকে আপনার যাতায়াতের ক্ষেত্রে ট্র্যাফিকের অবস্থা সম্পর্কে জানাতে পারে৷\n\nআপনি যেকোনো সময় অবস্থানের ইতিহাস বন্ধ করে দিতে পারেন, কিন্তু এমনটি করলেও এটি মুছে যাবে না৷ আপনার অবস্থানের ইতিহাস দেখতে এবং পরিচালনা করতে, maps.google.com/locationhistory এ যান৷"</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"অবস্থানের ইতিহাস মুছে দিন"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"এর ফলে এই Google অ্যাকাউন্টের জন্য সঞ্চিত সকল \'অবস্থান ইতিহাস\' তথ্য এই ডিভাইস থেকে মুছে যাবে। আপনি এই মুছে ফেলা অকার্যকর করতে পারবেন না। ‘Google এখন’ সহ কিছু অ্যাপ্লিকেশান কাজ করা বন্ধ করে দেবে।"</string>
     <string name="system_services" msgid="7230571820151215779">"পরিষেবাগুলি"</string>
@@ -371,7 +371,7 @@
     <string name="accessibility_shortcut" msgid="6726361991387558828">"অ্যাক্সেসযোগ্যতার শর্টকাট"</string>
     <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"অ্যাক্সেসযোগ্যতা শর্টকাট সক্ষম করুন"</string>
     <string name="accessibility_shortcut_service" msgid="1978686501861996601">"শর্টকাট পরিষেবা"</string>
-    <string name="accessibility_shortcut_description" msgid="3241203131630578108">"যখন শর্টকাটটি চালু থাকবে, কোনো অ্যাক্সেসযোগ্যতা বৈশিষ্ট্য চালু করতে আপনি উভয় হোম ও নির্বাচন বোতামকে ৩ সেকেন্ডের জন্য টিপে ধরতে পারেন।"</string>
+    <string name="accessibility_shortcut_description" msgid="514995490967241715">"শর্টকাটটি চালু থাকলে ফিরে যাওয়ার এবং নিচে যাওয়ার বোতামদুটি একসাথে ৩ সেকেন্ড টিপে ধরে রেখে আপনি একটি অ্যাক্সেসিবিলিটি বৈশিষ্ট্য চালু করতে পারবেন।"</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"ক্যাপশন"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"ভিডিওতে ক্লোজড ক্যাপশনিং পাঠ্য ওভারলের জন্য সেটিংস"</string>
     <string name="captions_display" msgid="735692527287125548">"প্রদর্শন"</string>
