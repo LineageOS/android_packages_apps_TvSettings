@@ -62,12 +62,7 @@ public final class WifiConfigHelper {
     }
 
     public static void setConfigSsid(WifiConfiguration config, String ssid) {
-        // if this looks like a BSSID, don't quote it
-        if (!Pattern.matches(REGEX_HEX_BSSID, ssid)) {
-            config.SSID = AccessPoint.convertToQuotedString(ssid);
-        } else {
-            config.SSID = ssid;
-        }
+        config.SSID = AccessPoint.convertToQuotedString(ssid);
     }
 
     public static void setConfigKeyManagementBySecurity(
