@@ -20,7 +20,7 @@ package com.android.tv.settings;
  * Constants for Robolectric config
  */
 public class TestConfig {
-    public static final int SDK_VERSION = 23;
+    public static final int SDK_VERSION = 26;
     public static final String MANIFEST_PATH =
             "packages/apps/TvSettings/Settings/AndroidManifest.xml";
 }
