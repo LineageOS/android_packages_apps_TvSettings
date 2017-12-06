@@ -350,10 +350,10 @@
     <string name="location_mode_title" msgid="6573195849329396150">"Mode"</string>
     <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Sol·licituds d\'ubicació recents"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"Cap aplicació no ha sol·licitat la ubicació recentment"</string>
-    <string name="location_high_battery_use" msgid="576143332793626088">"Ús de bateria elevat"</string>
-    <string name="location_low_battery_use" msgid="5756040390248358148">"Ús de bateria reduït"</string>
+    <string name="location_high_battery_use" msgid="576143332793626088">"Consum de bateria elevat"</string>
+    <string name="location_low_battery_use" msgid="5756040390248358148">"Consum de bateria reduït"</string>
     <string name="location_mode_wifi_description" msgid="2778774510654527264">"Utilitza la Wi-Fi per calcular la ubicació"</string>
-    <string name="location_status" msgid="3456414279428237558">"Estat de la ubicació"</string>
+    <string name="location_status" msgid="3456414279428237558">"Estat de l\'emplaçament"</string>
     <string name="location_services" msgid="5441085185119797200">"Serveis d\'ubicació"</string>
     <string name="on" msgid="6683600681314500652">"Activat"</string>
     <string name="off" msgid="5264189545064767245">"Desactivat"</string>
@@ -371,7 +371,7 @@
     <string name="accessibility_shortcut" msgid="6726361991387558828">"Drecera d\'accessibilitat"</string>
     <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Activa la drecera d\'accessibilitat"</string>
     <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Servei associat a la drecera"</string>
-    <string name="accessibility_shortcut_description" msgid="3241203131630578108">"Si està activada, pots iniciar una funció d\'accessibilitat prement els botons d\'inici i selecció a la vegada durant 3 segons"</string>
+    <string name="accessibility_shortcut_description" msgid="514995490967241715">"Si la drecera està activada, pots prémer els botons Enrere i Avall durant 3 segons per iniciar una funció d\'accessibilitat."</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Subtítols"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Configuració de la superposició del text dels subtítols ocults als vídeos"</string>
     <string name="captions_display" msgid="735692527287125548">"Pantalla"</string>
@@ -417,7 +417,7 @@
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Si selecciones D\'acord, s\'aturarà <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="8905477795536714590">"Síntesi de veu"</string>
     <string name="system_accessibility_tts_engine_config" msgid="5331139536083054552">"Configuració del motor"</string>
-    <string name="system_speak_passwords" msgid="5264650214879185873">"Pronuncia contrasenyes"</string>
+    <string name="system_speak_passwords" msgid="5264650214879185873">"Pronuncia les contrasenyes"</string>
     <string name="system_preferred_engine" msgid="8258210139854655567">"Motor preferit"</string>
     <string name="system_speech_rate" msgid="8099856582088545576">"Velocitat de la veu"</string>
     <string name="system_play_sample" msgid="7187293932891811148">"Reprodueix una mostra"</string>
@@ -451,7 +451,7 @@
     <string name="system_show_layout_bounds" msgid="645732439882291943">"Mostra els límits de format"</string>
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"Mostra les actualitzacions de visualització de GPU"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"Mostra la capa de programari"</string>
-    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"Mostra el descobert de la GPU"</string>
+    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"Mostra el sobredibuix de la GPU"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"Mostra les actualitzacions de superfície"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"Escala de l\'animació de la finestra"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Escala de l\'animació de transició"</string>
@@ -493,8 +493,8 @@
     <string name="system_hdmi_optimization_best_resolution" msgid="2612694859060466938">"Millor resolució"</string>
     <string name="system_hdmi_optimization_best_framerate" msgid="67514549356802383">"Millor velocitat de fotogrames"</string>
     <string name="system_hw_overdraw_off" msgid="8790815645038325739">"Desactivada"</string>
-    <string name="system_hw_overdraw_areas" msgid="5227122594087360124">"Mostrar les àrees modificades"</string>
-    <string name="system_hw_overdraw_counter" msgid="3042271307724657436">"Mostrar comptador de modificacions"</string>
+    <string name="system_hw_overdraw_areas" msgid="5227122594087360124">"Mostrar les àrees sobredibuixades"</string>
+    <string name="system_hw_overdraw_counter" msgid="3042271307724657436">"Mostra el comptador de sobredibuixos"</string>
     <string name="no_application" msgid="1746564297589309465">"Cap"</string>
     <string name="enable_opengl_traces_none" msgid="6074804146602749420">"Cap"</string>
   <string-array name="animation_scale_entries">

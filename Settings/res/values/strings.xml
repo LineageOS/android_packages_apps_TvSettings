@@ -145,7 +145,7 @@
     <string name="accessory_connected">Connected</string>
     <!-- Title of preference item for renaming the bluetooth accessory [CHAR LIMIT=50] -->
     <string name="accessory_change_name">Change name</string>
-    <!-- Title of dialog for renaming the bluetooth accessory [CHAR LIMIT=100] -->
+    <!-- Title of dialog for renaming the bluetooth accessory [CHAR LIMIT=50] -->
     <string name="accessory_change_name_title">Enter a new name for this accessory</string>
 
     <!-- Remote and Accessories -->
@@ -805,7 +805,7 @@
     <!-- Title for accessibility shortcut service choice preference [CHAR LIMIT=50}-->
     <string name="accessibility_shortcut_service">Shortcut service</string>
     <!-- Description for the accessibility shortcut [CHAR LIMIT=NONE] -->
-    <string name="accessibility_shortcut_description">When the shortcut is on, you can press both home and select for 3 seconds to start an accessibility feature</string>
+    <string name="accessibility_shortcut_description">When the shortcut is on, you can press both the back and down buttons for 3 seconds to start an accessibility feature.</string>
     <!-- Title and description for accessibility captions setting [CHAR LIMIT=50] -->
     <string name="accessibility_captions">Captions</string>
     <!-- Title and description for accessibility captions description [CHAR LIMIT=NONE] -->
@@ -887,7 +887,7 @@
     <string name="system_accessibility_status">Enable</string>
     <!-- Title for accessibility service configuration [CHAR LIMIT=50] -->
     <string name="system_accessibility_config">Configuration</string>
-    <!-- Title for confirmation screen when turning ON accessibility service[CHAR LIMIT=50] -->
+    <!-- Title for confirmation screen when turning ON accessibility service[CHAR LIMIT=20] -->
     <string name="system_accessibility_service_on_confirm_title">Use <xliff:g id="service" example="TalkBack">%1$s</xliff:g>?</string>
     <!-- Description for confirmation screen when turning ON accessibility service[[CHAR LIMIT=NONE] -->
     <string name="system_accessibility_service_on_confirm_desc"><xliff:g id="service" example="TalkBack">%1$s</xliff:g> can collect all of the text you type, except passwords. This includes personal data such as credit card numbers.</string>
@@ -1371,7 +1371,7 @@
     <string name="device_daydreams_sleep_description">Screen saver begins after this period of inactivity. If no screen saver is selected, the display turns off.</string>
     <!-- Screen saver summary for displaying the time before the device goes to sleep -->
     <string name="device_daydreams_sleep_summary">After <xliff:g id="sleep_description" example="3 minutes">%1$s</xliff:g> of inactivity</string>
-    <!-- Screen saver choice for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=40] -->
+    <!-- Screen saver choice for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=30] -->
     <string name="device_daydreams_screen_off">Put device to sleep</string>
     <!-- Screen saver description for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=NONE] -->
     <string name="device_daydreams_screen_off_description">Screen turns off after this period of inactivity.</string>
