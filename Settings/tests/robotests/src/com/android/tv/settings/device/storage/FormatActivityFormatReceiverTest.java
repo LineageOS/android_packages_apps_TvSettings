@@ -17,35 +17,36 @@
 package com.android.tv.settings.device.storage;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyFloat;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.atLeastOnce;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
+import static org.robolectric.Robolectric.buildActivity;
 
 import android.content.Intent;
 import android.os.storage.DiskInfo;
 
 import com.android.tv.settings.TestConfig;
+import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(TvSettingsRobolectricTestRunner.class)
 @Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION)
 public class FormatActivityFormatReceiverTest {
 
-    @Mock
     private FormatActivity mActivity;
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
+        mActivity = spy(buildActivity(FormatActivity.class).get());
 
         doReturn("resource string").when(mActivity).getString(anyInt());
         doReturn("resource string").when(mActivity).getString(anyInt(), any());
@@ -54,6 +55,7 @@ public class FormatActivityFormatReceiverTest {
     @Test
     public void testFormatAsPrivate_successResumed() {
         doReturn(true).when(mActivity).isResumed();
+        doNothing().when(mActivity).handleFormatAsPrivateComplete(anyFloat(), anyFloat());
         mActivity.mFormatAsPrivateDiskId = "asdf";
 
         final Intent intent = new Intent(SettingsStorageService.ACTION_FORMAT_AS_PRIVATE);
