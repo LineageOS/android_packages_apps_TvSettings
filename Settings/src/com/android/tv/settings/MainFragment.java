@@ -35,8 +35,10 @@ import android.media.tv.TvInputInfo;
 import android.media.tv.TvInputManager;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.service.settings.suggestions.Suggestion;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceGroup;
 import android.telephony.SignalStrength;
 import android.text.TextUtils;
@@ -45,23 +47,28 @@ import android.util.Log;
 
 import com.android.settingslib.accounts.AuthenticatorHelper;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
+import com.android.settingslib.suggestions.SuggestionControllerMixin;
 import com.android.tv.settings.accessories.AccessoryUtils;
 import com.android.tv.settings.accessories.BluetoothAccessoryFragment;
 import com.android.tv.settings.accounts.AccountSyncFragment;
 import com.android.tv.settings.accounts.AddAccountWithTypeActivity;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.device.sound.SoundFragment;
+import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 /**
  * The fragment where all good things begin. Evil is handled elsewhere.
  */
-public class MainFragment extends SettingsPreferenceFragment {
+public class MainFragment extends SettingsPreferenceFragment implements
+        SuggestionControllerMixin.SuggestionControllerHost {
     private static final String TAG = "MainFragment";
 
+    private static final String KEY_SUGGESTIONS_LIST = "suggestions";
     @VisibleForTesting
     static final String KEY_DEVELOPER = "developer";
     private static final String KEY_LOCATION = "location";
@@ -90,10 +97,12 @@ public class MainFragment extends SettingsPreferenceFragment {
 
     private boolean mInputSettingNeeded;
 
+    private PreferenceCategory mSuggestionsList;
     private PreferenceGroup mAccessoriesGroup;
     private PreferenceGroup mAccountsGroup;
     private Preference mAddAccessory;
     private Preference mSoundsPref;
+    private SuggestionControllerMixin mSuggestionControllerMixin;
 
     private final BroadcastReceiver mBCMReceiver = new BroadcastReceiver() {
         @Override
@@ -510,5 +519,63 @@ public class MainFragment extends SettingsPreferenceFragment {
             }
         }
         return null;
+    }
+
+    @Override
+    public void onSuggestionReady(List<Suggestion> data) {
+        if (data == null || data.size() == 0) {
+            if (mSuggestionsList != null) {
+                getPreferenceScreen().removePreference(mSuggestionsList);
+                mSuggestionsList = null;
+            }
+            return;
+        }
+
+        if (mSuggestionsList == null) {
+            mSuggestionsList = new PreferenceCategory(this.getPreferenceManager().getContext());
+            mSuggestionsList.setKey(KEY_SUGGESTIONS_LIST);
+            mSuggestionsList.setTitle(R.string.header_category_suggestions);
+            int firstOrder = getPreferenceScreen().getPreference(0).getOrder();
+            mSuggestionsList.setOrder(firstOrder - 1);
+            getPreferenceScreen().addPreference(mSuggestionsList);
+        }
+        updateSuggestionList(data);
+    }
+
+    private void updateSuggestionList(List<Suggestion> suggestions) {
+        // Remove suggestions that are not in the new list.
+        for (int i = 0; i < mSuggestionsList.getPreferenceCount(); i++) {
+            SuggestionPreference pref = (SuggestionPreference) mSuggestionsList.getPreference(i);
+            boolean isInNewSuggestionList = false;
+            for (Suggestion suggestion : suggestions) {
+                if (pref.getId().equals(suggestion.getId())) {
+                    isInNewSuggestionList = true;
+                    break;
+                }
+            }
+            if (!isInNewSuggestionList) {
+                mSuggestionsList.removePreference(pref);
+            }
+        }
+
+        // Add suggestions that are not in the old list.
+        for (Suggestion suggestion : suggestions) {
+            Preference curPref = findPreference(
+                        SuggestionPreference.SUGGESTION_PREFERENCE_KEY + suggestion.getId());
+            if (curPref == null) {
+                mSuggestionsList.addPreference(new SuggestionPreference(suggestion,
+                            this.getPreferenceManager().getContext(), mSuggestionControllerMixin));
+            }
+        }
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        ComponentName componentName = new ComponentName(
+                "com.android.settings.intelligence",
+                "com.android.settings.intelligence.suggestions.SuggestionService");
+        mSuggestionControllerMixin = new SuggestionControllerMixin(
+                                            context, this, getLifecycle(), componentName);
     }
 }
