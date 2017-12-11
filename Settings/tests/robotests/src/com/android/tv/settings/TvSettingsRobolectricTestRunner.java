@@ -69,7 +69,7 @@ public class TvSettingsRobolectricTestRunner extends RobolectricTestRunner {
             paths.add(new ResourcePath(null,
                     Fs.fromURL(new URL("file:frameworks/base/core/res/res")), null));
             paths.add(new ResourcePath(null,
-                    Fs.fromURL(new URL("file:frameworks/support/v17/leanback/res")), null));
+                    Fs.fromURL(new URL("file:frameworks/support/leanback/res")), null));
             paths.add(new ResourcePath(null,
                     Fs.fromURL(new URL("file:frameworks/support/v7/preference/res")), null));
         } catch (MalformedURLException e) {
