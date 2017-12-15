@@ -17,15 +17,14 @@
 package com.android.tv.settings.device.apps.specialaccess;
 
 import android.app.Application;
+import android.arch.lifecycle.Lifecycle;
+import android.arch.lifecycle.LifecycleObserver;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 
 import com.android.settingslib.applications.ApplicationsState;
-import com.android.settingslib.core.lifecycle.Lifecycle;
-import com.android.settingslib.core.lifecycle.LifecycleObserver;
-import com.android.settingslib.core.lifecycle.events.OnAttach;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -37,7 +36,7 @@ import java.util.List;
  * {@link ApplicationsState.AppEntry} objects, and the PreferenceGroup is manipulated through the
  * {@link Callback} object.
  */
-public class ManageApplicationsController implements LifecycleObserver, OnAttach {
+public class ManageApplicationsController implements LifecycleObserver {
     /**
      *  Use this preference key for a header pref not removed during refresh
      */
@@ -94,18 +93,14 @@ public class ManageApplicationsController implements LifecycleObserver, OnAttach
                 }
             };
 
-    public ManageApplicationsController(@NonNull Callback callback, @NonNull Lifecycle lifecycle,
-            ApplicationsState.AppFilter filter,
+    public ManageApplicationsController(@NonNull Context context, @NonNull Callback callback,
+            @NonNull Lifecycle lifecycle, ApplicationsState.AppFilter filter,
             Comparator<ApplicationsState.AppEntry> comparator) {
         mCallback = callback;
         lifecycle.addObserver(this);
         mLifecycle = lifecycle;
         mFilter = filter;
         mComparator = comparator;
-    }
-
-    @Override
-    public void onAttach(Context context) {
         mApplicationsState = ApplicationsState.getInstance(
                 (Application) context.getApplicationContext());
         mAppSession = mApplicationsState.newSession(mAppSessionCallbacks, mLifecycle);

@@ -45,9 +45,14 @@ public abstract class ManageAppOp extends ObservableLeanbackPreferenceFragment
     private IPackageManager mIPackageManager;
     private AppOpsManager mAppOpsManager;
 
-    private final ManageApplicationsController mManageApplicationsController =
-            new ManageApplicationsController(this, getLifecycle(), getAppFilter(),
-                    getAppComparator());
+    private ManageApplicationsController mManageApplicationsController;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mManageApplicationsController = new ManageApplicationsController(context, this,
+                getLifecycle(), getAppFilter(), getAppComparator());
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
