@@ -1463,4 +1463,16 @@
     <!-- Description of the usage access setting [CHAR LIMIT=NONE] -->
     <string name="usage_access_description">Usage access allows an app to track what other apps you\u2019re using and how often, as well as your carrier, language settings, and other details.</string>
 
+    <!-- Title of high power app settings page [CHAR LIMIT=30] -->
+    <string name="high_power_apps">Energy optimization</string>
+    <!-- Description of the high power app settings page [CHAR LIMIT=NONE] -->
+    <string name="high_power_apps_description">Optimize energy use of apps</string>
+    <!-- Empty state when no apps are found for optimizing -->
+    <string name="high_power_apps_empty">No apps need optimizing</string>
+    <!-- Summary of app allowed to use a lot of power [CHAR LIMIT=60] -->
+    <string name="high_power_on">Not optimized</string>
+    <!-- Summary of app not allowed to use a lot of power [CHAR LIMIT=60] -->
+    <string name="high_power_off">Optimizing energy use</string>
+    <!-- Summary of app which doesn't have a battery optimization setting [CHAR LIMIT=60] -->
+    <string name="high_power_system">Energy optimization not available</string>
 </resources>

@@ -23,6 +23,10 @@
         <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
     </Preference>
     <Preference
+            android:key="high_power_apps"
+            android:title="@string/high_power_apps"
+            android:fragment="com.android.tv.settings.device.apps.specialaccess.ManageHighPower" />
+    <Preference
             android:key="AppUsage"
             android:title="@string/usage_access"
             android:fragment="com.android.tv.settings.device.apps.specialaccess.ManageAppUsageAccess"/>
