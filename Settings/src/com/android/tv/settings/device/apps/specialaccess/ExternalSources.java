@@ -35,7 +35,7 @@ import com.android.tv.settings.R;
  * Fragment for controlling if apps can install other apps
  */
 @Keep
-public class ManageExternalSources extends ManageAppOp {
+public class ExternalSources extends ManageAppOp {
     private AppOpsManager mAppOpsManager;
 
     @Override

@@ -33,7 +33,7 @@ import com.android.tv.settings.R;
  * Fragment for controlling if apps can monitor app usage
  */
 @Keep
-public class ManageAppUsageAccess extends ManageAppOp
+public class AppUsageAccess extends ManageAppOp
         implements ManageApplicationsController.Callback {
 
     private AppOpsManager mAppOpsManager;
