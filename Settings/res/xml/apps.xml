@@ -25,11 +25,11 @@
     <Preference
             android:key="high_power_apps"
             android:title="@string/high_power_apps"
-            android:fragment="com.android.tv.settings.device.apps.specialaccess.ManageHighPower" />
+            android:fragment="com.android.tv.settings.device.apps.specialaccess.HighPower" />
     <Preference
             android:key="AppUsage"
             android:title="@string/usage_access"
-            android:fragment="com.android.tv.settings.device.apps.specialaccess.ManageAppUsageAccess"/>
+            android:fragment="com.android.tv.settings.device.apps.specialaccess.AppUsageAccess"/>
     <PreferenceCategory
             android:key="DownloadedPreferenceGroup"
             android:title="@string/apps_downloaded"

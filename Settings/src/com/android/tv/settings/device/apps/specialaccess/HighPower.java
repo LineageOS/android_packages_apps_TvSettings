@@ -34,7 +34,7 @@ import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragme
  * Fragment for managing power save whitelist
  */
 @Keep
-public class ManageHighPower extends ObservableLeanbackPreferenceFragment implements
+public class HighPower extends ObservableLeanbackPreferenceFragment implements
         ManageApplicationsController.Callback {
 
     private final PowerWhitelistBackend mPowerWhitelistBackend =

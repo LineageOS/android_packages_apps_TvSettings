@@ -23,9 +23,9 @@ import com.android.tv.settings.TvSettingsActivity;
 import com.android.tv.settings.system.SecurityFragment;
 
 /**
- * Wrapper activity for {@link ManageExternalSources}
+ * Wrapper activity for {@link ExternalSources}
  */
-public class ManageExternalSourcesActivity extends TvSettingsActivity {
+public class ExternalSourcesActivity extends TvSettingsActivity {
 
     @Override
     protected Fragment createSettingsFragment() {
@@ -51,7 +51,7 @@ public class ManageExternalSourcesActivity extends TvSettingsActivity {
 
         @Override
         public void onPreferenceStartInitialScreen() {
-            final ManageExternalSources fragment = new ManageExternalSources();
+            final ExternalSources fragment = new ExternalSources();
             startPreferenceFragment(fragment);
         }
     }
