@@ -16,12 +16,12 @@
 
 package com.android.tv.settings.connectivity;
 
-import com.android.tv.settings.connectivity.setup.MessageWizardFragment;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+
+import com.android.tv.settings.connectivity.setup.MessageWizardFragment;
 
 /**
  * Activity to wait a few seconds before returning

@@ -20,6 +20,7 @@ import android.app.Fragment;
 import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
 
+import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.form.FormPage;
 import com.android.tv.settings.form.FormPageResultListener;
@@ -32,7 +33,7 @@ public class AddWifiNetworkActivity extends WifiMultiPagedFormActivity
 
     private AdvancedWifiOptionsFlow mAdvancedWifiOptionsFlow;
     private WifiConfiguration mConfiguration;
-    private WifiSecurity mWifiSecurity;
+    private int mWifiSecurity;
     private FormPage mSsidPage;
     private FormPage mSecurityPage;
     private FormPage mPasswordPage;
@@ -74,16 +75,16 @@ public class AddWifiNetworkActivity extends WifiMultiPagedFormActivity
             case CHOOSE_SECURITY:
                 mSecurityPage = formPage;
                 if (choiceChosen(formPage, R.string.wifi_security_type_none)) {
-                    mWifiSecurity = WifiSecurity.NONE;
+                    mWifiSecurity = AccessPoint.SECURITY_NONE;
                 } else if (choiceChosen(formPage, R.string.wifi_security_type_wep)) {
-                    mWifiSecurity = WifiSecurity.WEP;
+                    mWifiSecurity = AccessPoint.SECURITY_WEP;
                 } else if (choiceChosen(formPage, R.string.wifi_security_type_wpa)) {
-                    mWifiSecurity = WifiSecurity.PSK;
+                    mWifiSecurity = AccessPoint.SECURITY_PSK;
                 } else if (choiceChosen(formPage, R.string.wifi_security_type_eap)) {
-                    mWifiSecurity = WifiSecurity.EAP;
+                    mWifiSecurity = AccessPoint.SECURITY_EAP;
                 }
                 WifiConfigHelper.setConfigKeyManagementBySecurity(mConfiguration, mWifiSecurity);
-                if (mWifiSecurity == WifiSecurity.NONE) {
+                if (mWifiSecurity == AccessPoint.SECURITY_NONE) {
                     optionsOrConnect();
                 } else {
                     addPage(WifiFormPageType.ENTER_PASSWORD);
