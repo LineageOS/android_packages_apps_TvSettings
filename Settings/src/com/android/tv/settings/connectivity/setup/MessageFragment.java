@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2017 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,8 @@
 
 package com.android.tv.settings.connectivity.setup;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,22 +27,36 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.util.AccessibilityHelper;
 
 /**
- * Displays a UI for showing a message with an optional progress indicator in
- * the "wizard" style.
+ * Displays a UI for showing a message with an optional progress indicator.
  */
-public class MessageWizardFragment extends Fragment {
+public class MessageFragment extends Fragment {
 
     private static final String EXTRA_TITLE = "title";
     private static final String EXTRA_SHOW_PROGRESS_INDICATOR = "show_progress_indicator";
 
-    public static MessageWizardFragment newInstance(String title, boolean showProgressIndicator) {
-        MessageWizardFragment fragment = new MessageWizardFragment();
+    /**
+     * Create a MessageFragment.
+     *
+     * @param title                 title of the fragment
+     * @param showProgressIndicator set true if need to show progress indicator
+     * @return The fragment.
+     */
+    public static MessageFragment newInstance(String title, boolean showProgressIndicator) {
+        MessageFragment
+                fragment = new MessageFragment();
         Bundle args = new Bundle();
         addArguments(args, title, showProgressIndicator);
         fragment.setArguments(args);
         return fragment;
     }
 
+    /**
+     * Set arguments value for the bundle.
+     *
+     * @param args                  where the values are put in
+     * @param title                 the title string
+     * @param showProgressIndicator true if show progress indicator
+     */
     public static void addArguments(Bundle args, String title, boolean showProgressIndicator) {
         args.putString(EXTRA_TITLE, title);
         args.putBoolean(EXTRA_SHOW_PROGRESS_INDICATOR, showProgressIndicator);
@@ -53,7 +67,7 @@ public class MessageWizardFragment extends Fragment {
         final View view = inflater.inflate(R.layout.setup_message, container, false);
 
         final View progressView = view.findViewById(R.id.progress);
-        final TextView titleView = (TextView) view.findViewById(R.id.status_text);
+        final TextView titleView = view.findViewById(R.id.status_text);
 
         Bundle args = getArguments();
         String title = args.getString(EXTRA_TITLE);
@@ -83,7 +97,7 @@ public class MessageWizardFragment extends Fragment {
     public void onResume() {
         super.onResume();
         if (AccessibilityHelper.forceFocusableViews(getActivity())) {
-            TextView titleView = (TextView) getView().findViewById(R.id.status_text);
+            TextView titleView = getView().findViewById(R.id.status_text);
             titleView.requestFocus();
         }
     }

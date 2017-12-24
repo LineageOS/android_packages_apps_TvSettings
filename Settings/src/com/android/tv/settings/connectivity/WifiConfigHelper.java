@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2017 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,13 +27,14 @@ import android.util.Log;
 
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
+import com.android.tv.settings.connectivity.util.WifiSecurityUtil;
 
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Helper class that deals with Wi-fi configuration
+ * Helper class that deals with Wi-fi configuration.
  */
 public final class WifiConfigHelper {
 
@@ -56,32 +57,45 @@ public final class WifiConfigHelper {
     private static final String EXCLUSION_REGEXP =
             "$|^(\\*)?\\.?[" + HC + "]+(\\-[" + HC + "]+)*(\\.[" + HC + "]+(\\-[" + HC + "]+)*)*$";
     private static final Pattern EXCLUSION_PATTERN;
+
     static {
         HOSTNAME_PATTERN = Pattern.compile(HOSTNAME_REGEXP);
         EXCLUSION_PATTERN = Pattern.compile(EXCLUSION_REGEXP);
     }
 
+    private WifiConfigHelper() {
+    }
+
+    /**
+     * Set configuration ssid.
+     *
+     * @param config configuration
+     * @param ssid   network ssid
+     */
     public static void setConfigSsid(WifiConfiguration config, String ssid) {
         config.SSID = AccessPoint.convertToQuotedString(ssid);
     }
 
+    /**
+     * Set configuration key managment by security.
+     */
     public static void setConfigKeyManagementBySecurity(
-            WifiConfiguration config, WifiSecurity security) {
+            WifiConfiguration config, int security) {
         config.allowedKeyManagement.clear();
         config.allowedAuthAlgorithms.clear();
         switch (security) {
-            case NONE:
+            case AccessPoint.SECURITY_NONE:
                 config.allowedKeyManagement.set(KeyMgmt.NONE);
                 break;
-            case WEP:
+            case AccessPoint.SECURITY_WEP:
                 config.allowedKeyManagement.set(KeyMgmt.NONE);
                 config.allowedAuthAlgorithms.set(AuthAlgorithm.OPEN);
                 config.allowedAuthAlgorithms.set(AuthAlgorithm.SHARED);
                 break;
-            case PSK:
+            case AccessPoint.SECURITY_PSK:
                 config.allowedKeyManagement.set(KeyMgmt.WPA_PSK);
                 break;
-            case EAP:
+            case AccessPoint.SECURITY_EAP:
                 config.allowedKeyManagement.set(KeyMgmt.WPA_EAP);
                 config.allowedKeyManagement.set(KeyMgmt.IEEE8021X);
                 break;
@@ -90,11 +104,12 @@ public final class WifiConfigHelper {
 
     /**
      * validate syntax of hostname and port entries
+     *
      * @return 0 on success, string resource ID on failure
      */
     public static int validate(String hostname, String port, String exclList) {
         Matcher match = HOSTNAME_PATTERN.matcher(hostname);
-        String exclListArray[] = exclList.split(",");
+        String[] exclListArray = exclList.split(",");
 
         if (!match.matches()) return R.string.proxy_error_invalid_host;
 
@@ -124,6 +139,12 @@ public final class WifiConfigHelper {
         return 0;
     }
 
+    /**
+     * Get {@link WifiConfiguration} based upon the {@link WifiManager} and networkId.
+     * @param wifiManager
+     * @param networkId the id of the network.
+     * @return the {@link WifiConfiguration} of the specified network.
+     */
     public static WifiConfiguration getWifiConfiguration(WifiManager wifiManager, int networkId) {
         List<WifiConfiguration> configuredNetworks = wifiManager.getConfiguredNetworks();
         if (configuredNetworks != null) {
@@ -146,8 +167,7 @@ public final class WifiConfigHelper {
     /**
      * Return the configured network that matches the ssid/security pair, or create one.
      */
-    public static WifiConfiguration getConfiguration(Context context, String ssid,
-            WifiSecurity security) {
+    public static WifiConfiguration getConfiguration(Context context, String ssid, int security) {
         WifiConfiguration config = getFromConfiguredNetworks(context, ssid, security);
 
         if (config == null) {
@@ -170,18 +190,18 @@ public final class WifiConfigHelper {
         WifiManager wifiMan = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         int networkId = wifiMan.addNetwork(config);
         if (networkId == -1) {
-          if (DEBUG) Log.e(TAG, "failed to add network: " + config.toString());
-          return false;
+            if (DEBUG) Log.e(TAG, "failed to add network: " + config.toString());
+            return false;
         }
 
         if (!wifiMan.enableNetwork(networkId, false)) {
-          if (DEBUG) Log.e(TAG, "enable network failed: " + networkId + "; " + config.toString());
-          return false;
+            if (DEBUG) Log.e(TAG, "enable network failed: " + networkId + "; " + config.toString());
+            return false;
         }
 
         if (!wifiMan.saveConfiguration()) {
-          if (DEBUG) Log.e(TAG, "failed to save: " + config.toString());
-          return false;
+            if (DEBUG) Log.e(TAG, "failed to save: " + config.toString());
+            return false;
         }
 
         if (DEBUG) Log.d(TAG, "saved network: " + config.toString());
@@ -230,8 +250,9 @@ public final class WifiConfigHelper {
      * @return A matching WifiConfiguration from the list of configured
      * networks, or null if no matching network is found.
      */
-    private static WifiConfiguration getFromConfiguredNetworks(Context context, String ssid,
-            WifiSecurity security) {
+    private static WifiConfiguration getFromConfiguredNetworks(Context context,
+            String ssid,
+            int security) {
         WifiManager wifiMan = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         List<WifiConfiguration> configuredNetworks = wifiMan.getConfiguredNetworks();
         if (configuredNetworks != null) {
@@ -243,8 +264,8 @@ public final class WifiConfigHelper {
                 // If the SSID and the security match, that's our network.
                 String configuredSsid = WifiInfo.removeDoubleQuotes(configuredNetwork.SSID);
                 if (TextUtils.equals(configuredSsid, ssid)) {
-                    WifiSecurity configuredSecurity = WifiSecurity.getSecurity(configuredNetwork);
-                    if (configuredSecurity.equals(security)) {
+                    int configuredSecurity = WifiSecurityUtil.getSecurity(configuredNetwork);
+                    if (configuredSecurity == security) {
                         return configuredNetwork;
                     }
                 }
@@ -252,8 +273,5 @@ public final class WifiConfigHelper {
         }
 
         return null;
-    }
-
-    private WifiConfigHelper() {
     }
 }

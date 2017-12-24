@@ -25,6 +25,7 @@ import android.text.TextUtils;
 
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
+import com.android.tv.settings.connectivity.util.WifiSecurityUtil;
 import com.android.tv.settings.form.FormPage;
 import com.android.tv.settings.form.FormPageResultListener;
 
@@ -37,36 +38,35 @@ public class WifiConnectionActivity extends WifiMultiPagedFormActivity
     private static final String EXTRA_WIFI_SSID = "wifi_ssid";
     private static final String EXTRA_WIFI_SECURITY_NAME = "wifi_security_name";
 
-    public static Intent createIntent(Context context, AccessPoint result, WifiSecurity security) {
+    public static Intent createIntent(Context context, AccessPoint result, int security) {
         return new Intent(context, WifiConnectionActivity.class)
                 .putExtra(EXTRA_WIFI_SSID, result.getSsidStr())
-                .putExtra(EXTRA_WIFI_SECURITY_NAME, security.name());
+                .putExtra(EXTRA_WIFI_SECURITY_NAME, security);
     }
 
     public static Intent createIntent(Context context, AccessPoint result) {
-        final WifiSecurity security = WifiSecurity.getSecurity(result);
+        final int security = result.getSecurity();
         return createIntent(context, result, security);
     }
 
     public static Intent createIntent(Context context, WifiConfiguration configuration) {
-        final WifiSecurity security = WifiSecurity.getSecurity(configuration);
+        final int security = WifiSecurityUtil.getSecurity(configuration);
         final String ssid = configuration.getPrintableSsid();
         return new Intent(context, WifiConnectionActivity.class)
                 .putExtra(EXTRA_WIFI_SSID, ssid)
-                .putExtra(EXTRA_WIFI_SECURITY_NAME, security.name());
+                .putExtra(EXTRA_WIFI_SECURITY_NAME, security);
     }
 
     private AdvancedWifiOptionsFlow mAdvancedWifiOptionsFlow;
     private WifiConfiguration mConfiguration;
-    private WifiSecurity mWifiSecurity;
+    private int mWifiSecurity;
     private FormPage mPasswordPage;
     private FormPage mConnectPage;
     private FormPage mSuccessPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        mWifiSecurity = WifiSecurity.valueOf(getIntent().getStringExtra(EXTRA_WIFI_SECURITY_NAME));
-
+        mWifiSecurity = getIntent().getIntExtra(EXTRA_WIFI_SECURITY_NAME, 0);
         mConfiguration = WifiConfigHelper.getConfiguration(
                 this, getIntent().getStringExtra(EXTRA_WIFI_SSID), mWifiSecurity);
 
@@ -148,7 +148,7 @@ public class WifiConnectionActivity extends WifiMultiPagedFormActivity
             case CONNECT_AUTHENTICATION_FAILURE:
                 if (choiceChosen(formPage, R.string.wifi_action_try_again)) {
                     clear();
-                    if (mWifiSecurity.isOpen()) {
+                    if (WifiSecurityUtil.isOpen(mWifiSecurity)) {
                         optionsOrConnect();
                     } else {
                         addPage(WifiFormPageType.ENTER_PASSWORD);
@@ -214,8 +214,10 @@ public class WifiConnectionActivity extends WifiMultiPagedFormActivity
          * If the network isn't open or doesn't have its authentication info present, ask for it.
          * Otherwise, go straight to connecting.
          */
-        if ((mWifiSecurity == WifiSecurity.WEP && TextUtils.isEmpty(mConfiguration.wepKeys[0]))
-                || (!mWifiSecurity.isOpen() && TextUtils.isEmpty(mConfiguration.preSharedKey))) {
+        if ((mWifiSecurity == AccessPoint.SECURITY_WEP
+                    && TextUtils.isEmpty(mConfiguration.wepKeys[0]))
+                || (!WifiSecurityUtil.isOpen(mWifiSecurity)
+                    && TextUtils.isEmpty(mConfiguration.preSharedKey))) {
             addPage(WifiFormPageType.ENTER_PASSWORD);
         } else {
             connect();

@@ -29,7 +29,11 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v7-appcompat \
     android-support-v14-preference \
     android-support-v17-preference-leanback \
-    android-support-v17-leanback
+    android-support-v17-leanback \
+    apptoolkit-lifecycle-extensions
+
+LOCAL_STATIC_JAVA_LIBRARIES := \
+    apptoolkit-lifecycle-common-java8
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
