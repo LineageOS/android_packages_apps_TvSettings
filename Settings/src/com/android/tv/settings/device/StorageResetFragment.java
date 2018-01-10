@@ -23,13 +23,14 @@ import android.os.storage.DiskInfo;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.os.storage.VolumeRecord;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.util.ArraySet;
 import android.util.Log;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
+import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.device.storage.MissingStorageFragment;
 import com.android.tv.settings.device.storage.NewStorageActivity;
 import com.android.tv.settings.device.storage.StorageFragment;
@@ -41,7 +42,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-public class StorageResetFragment extends LeanbackPreferenceFragment {
+/**
+ * The "Storage & reset" screen in TV settings.
+ */
+public class StorageResetFragment extends SettingsPreferenceFragment {
 
     private static final String TAG = "StorageResetFragment";
 
@@ -317,4 +321,8 @@ public class StorageResetFragment extends LeanbackPreferenceFragment {
 
     }
 
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.DEVICEINFO_STORAGE;
+    }
 }

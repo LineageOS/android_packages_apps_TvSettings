@@ -50,7 +50,6 @@ import com.android.tv.settings.accessories.BluetoothAccessoryFragment;
 import com.android.tv.settings.accounts.AccountSyncFragment;
 import com.android.tv.settings.accounts.AddAccountWithTypeActivity;
 import com.android.tv.settings.connectivity.ConnectivityListener;
-import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
 import com.android.tv.settings.device.sound.SoundFragment;
 import com.android.tv.settings.system.SecurityFragment;
 
@@ -60,7 +59,7 @@ import java.util.Set;
 /**
  * The fragment where all good things begin. Evil is handled elsewhere.
  */
-public class MainFragment extends ObservableLeanbackPreferenceFragment {
+public class MainFragment extends SettingsPreferenceFragment {
     private static final String TAG = "MainFragment";
 
     @VisibleForTesting
@@ -105,6 +104,12 @@ public class MainFragment extends ObservableLeanbackPreferenceFragment {
 
     public static MainFragment newInstance() {
         return new MainFragment();
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        // TODO(70572789): Finalize metrics categories.
+        return 0;
     }
 
     @Override

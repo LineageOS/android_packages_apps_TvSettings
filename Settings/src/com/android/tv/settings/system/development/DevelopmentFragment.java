@@ -66,7 +66,7 @@ import com.android.settingslib.core.ConfirmationDialogController;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.settingslib.development.SystemPropPoker;
 import com.android.tv.settings.R;
-import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -75,7 +75,7 @@ import java.util.List;
 /**
  * Displays preferences for application developers.
  */
-public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
+public class DevelopmentFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener,
         EnableDevelopmentDialog.Callback, OemUnlockDialog.Callback, AdbDialog.Callback {
     private static final String TAG = "DevelopmentSettings";
@@ -247,6 +247,12 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
 
     public static DevelopmentFragment newInstance() {
         return new DevelopmentFragment();
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        // TODO(70572789): Finalize metrics cateogries.
+        return 0;
     }
 
     @Override

@@ -24,7 +24,6 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.UserHandle;
 import android.provider.Settings;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
@@ -34,7 +33,9 @@ import android.util.Log;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +44,7 @@ import java.util.Set;
 /**
  * Fragment for managing IMEs
  */
-public class KeyboardFragment extends LeanbackPreferenceFragment {
+public class KeyboardFragment extends SettingsPreferenceFragment {
     private static final String TAG = "KeyboardFragment";
     private static final String KEY_CURRENT_KEYBOARD = "currentKeyboard";
     private static final String KEY_MANAGE_KEYBOARDS = "manageKeyboards";
@@ -212,5 +213,10 @@ public class KeyboardFragment extends LeanbackPreferenceFragment {
             intent = null;
         }
         return intent;
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.INPUTMETHOD_KEYBOARD;
     }
 }

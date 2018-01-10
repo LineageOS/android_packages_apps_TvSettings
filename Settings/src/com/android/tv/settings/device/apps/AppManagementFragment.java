@@ -36,14 +36,14 @@ import android.widget.Toast;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
-import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
 
 /**
  * Fragment for managing a single app
  */
-public class AppManagementFragment extends ObservableLeanbackPreferenceFragment {
+public class AppManagementFragment extends SettingsPreferenceFragment {
     private static final String TAG = "AppManagementFragment";
 
     private static final String ARG_PACKAGE_NAME = "packageName";
@@ -90,6 +90,12 @@ public class AppManagementFragment extends ObservableLeanbackPreferenceFragment 
 
     public static void prepareArgs(@NonNull Bundle args, String packageName) {
         args.putString(ARG_PACKAGE_NAME, packageName);
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        // TODO(70572789): Finalize metrics categories.
+        return 0;
     }
 
     @Override
