@@ -148,8 +148,6 @@
     <string name="license_title" msgid="4482927105870812604">"Licença"</string>
     <string name="terms_title" msgid="8480859222932736291">"Termos e Condições"</string>
     <string name="webview_license_title" msgid="8843666223583780825">"Licença do sistema Webview"</string>
-    <string name="wallpaper_attributions" msgid="8622098625739634898">"Planos de fundo"</string>
-    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"Provedores de imagens de satélite:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"Insatisfatória"</item>
     <item msgid="5986166866411161790">"Bom"</item>
@@ -607,9 +605,9 @@
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Desinstalar atualizações"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Todas as atualizações deste app Android serão desinstaladas."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Desativar"</string>
-    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Deseja desativar este app?"</string>
+    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Quer desativar este app?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Ativar"</string>
-    <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Deseja ativar este app?"</string>
+    <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Quer ativar este app?"</string>
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Armazenamento usado"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="SIZE">%1$s</xliff:g> usados em <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Limpar dados"</string>
@@ -664,7 +662,7 @@
     <string name="choose_application" msgid="5662960665577780353">"Escolher app"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Experimental)"</string>
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Reiniciar no modo de segurança"</string>
-    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Deseja reinicializar no modo de segurança?"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Quer reinicializar no modo de segurança?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Essa opção desativa todos os apps de terceiros instalados. Eles serão restaurados quando você reinicializar novamente."</string>
     <string name="capturing_bugreport" msgid="3291125403411239592">"Capturando relatório do bug"</string>
     <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Teclados virtuais disponíveis"</string>
@@ -672,5 +670,14 @@
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Permitido"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Não permitido"</string>
     <string name="usage_access" msgid="1914242907684452328">"Acesso ao uso"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"O acesso ao uso permite que um app rastreie quais outros apps você está usando e com que frequência, bem como sua operadora, as configurações de idioma e outros detalhes."</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"O acesso ao uso permite que um app rastreie que outros apps você está usando e com que frequência, bem como sua operadora, as configurações de idioma e outros detalhes."</string>
+    <string name="high_power_apps" msgid="7796096221999495077">"Otimização de energia"</string>
+    <string name="high_power_apps_description" msgid="1990016812115792282">"Otimize o uso de energia dos apps"</string>
+    <string name="high_power_apps_empty" msgid="1355906551507153470">"Nenhum app precisa de otimização"</string>
+    <string name="high_power_on" msgid="7725180078784796673">"Não otimizado"</string>
+    <string name="high_power_off" msgid="308272752152871252">"Otimizando o uso de energia"</string>
+    <string name="high_power_system" msgid="7815843517656137656">"Otimização de energia não disponível"</string>
+    <string name="manage_notification_access_title" msgid="2051765294087620434">"Acesso a notificações"</string>
+    <string name="no_notification_listeners" msgid="4583789599075326886">"Nenhum app instalado solicitou acesso a notificações."</string>
+    <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Esses apps poderão ler todas as notificações, incluindo informações pessoais, como nomes de contato e o texto das mensagens que você recebe. Eles também conseguirão dispensar notificações ou acionar botões de ação contidos neles."</string>
 </resources>
