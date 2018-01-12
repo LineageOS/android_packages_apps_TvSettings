@@ -435,6 +435,10 @@
     <string name="wifi_forget_network_description">This clears information used to connect to this network, including a saved password</string>
     <!-- Label for action to accept the currently connected wifi network [CHAR LIMIT=50] -->
     <string name="wifi_action_ok">OK</string>
+    <!-- Label for action to continue in network summary screen in setup [CHAR LIMIT=50] -->
+    <string name="wifi_setup_action_dont_change_network">Continue</string>
+    <!-- Label for action to try to connect to a different wifi network in setup [CHAR LIMIT=50] -->
+    <string name="wifi_setup_action_change_network">Change network</string>
     <!-- Label for action to try to connect to a different wifi network [CHAR LIMIT=50] -->
     <string name="wifi_action_change_network">Change</string>
     <!-- Label for action to not try to connect to a different wifi network [CHAR LIMIT=50] -->
@@ -492,6 +496,8 @@
     <!-- HTTP proxy settings. The description field for the hostname. -->
     <string name="proxy_hostname_description">Enter a valid hostname.\nExample: <xliff:g>proxy.example.com</xliff:g></string>
 
+    <!-- Title used during setup to indicate the user is connected [CHAR LIMIT=100] -->
+    <string name="wifi_setup_summary_title_connected">You\'re connected to <xliff:g id="ssid">%1$s</xliff:g></string>
     <!-- Title to show indicating the user is connected [CHAR LIMIT=100] -->
     <string name="wifi_summary_title_connected">Network connected</string>
     <!-- Title to show indicating the user is not connected [CHAR LIMIT=100] -->
