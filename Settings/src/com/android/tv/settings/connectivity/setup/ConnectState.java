@@ -61,8 +61,7 @@ public class ConnectState implements State {
         String title = mActivity.getString(
                 R.string.wifi_connecting,
                 wifiConfig.getPrintableSsid());
-        mFragment = ConnectToWifiFragment.newInstance(
-                title, false);
+        mFragment = ConnectToWifiFragment.newInstance(title, true);
         if (!WifiConfigHelper.isNetworkSaved(wifiConfig)) {
             AdvancedOptionsFlowInfo advFlowInfo =
                     ViewModelProviders.of(mActivity).get(AdvancedOptionsFlowInfo.class);

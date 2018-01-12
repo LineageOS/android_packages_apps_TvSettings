@@ -78,23 +78,23 @@ public class SummaryConnectedWifiState implements State {
         public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
             Context context = getActivity();
             actions.add(new GuidedAction.Builder(context)
-                    .title(R.string.wifi_action_dont_change_network)
+                    .title(R.string.wifi_setup_action_dont_change_network)
                     .id(DO_NOT_CHANGE_NETWORK)
                     .build());
             actions.add(new GuidedAction.Builder(context)
-                    .title(R.string.wifi_action_change_network)
+                    .title(R.string.wifi_setup_action_change_network)
                     .id(WIFI_ACTION_CHANGE_NETWORK)
                     .build());
         }
 
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String description = getString(
-                    R.string.wifi_summary_description_connected_to_wifi_network,
+            String title = getString(
+                    R.string.wifi_setup_summary_title_connected,
                     mUserChoiceInfo.getConnectedNetwork());
             return new GuidanceStylist.Guidance(
-                    getString(R.string.wifi_summary_title_connected),
-                    description,
+                    title,
+                    null,
                     null,
                     null);
         }
