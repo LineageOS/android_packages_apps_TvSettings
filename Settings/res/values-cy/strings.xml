@@ -26,6 +26,7 @@
   <!-- Header title for personal [CHAR LIMIT=50] -->
   <!-- Account preferences -->
   <!-- Title for main screen category for accounts on device [CHAR LIMIT=50] -->
+  <string name="accounts_category_title">Cyfrifon</string>
   <!-- Preference which adds an account [CHAR LIMIT=50] -->
   <!-- Header for remove account [CHAR LIMIT=50] -->
   <!-- Sync item label: control sync settings [CHAR LIMIT=100] -->
@@ -36,9 +37,13 @@
   <!-- Remove account item label: remove the account [CHAR LIMIT=30] -->
   <!-- Message posted if removing the account fails. [CHAR LIMIT=NONE] -->
   <!-- Formatter in AccountSyncSettings for each application we wish to synchronize, e.g. "Sync Calendar" -->
+  <string name="sync_item_title"><xliff:g id="authority" example="Calendar">%s</xliff:g></string>
   <!-- Data synchronization settings screen, summary of a sync provider (for example, Gmail) when autosync is off and the user wants to do a one-time sync. -->
+  <string name="sync_one_time_sync">Cysoni nawr<xliff:g id="last_sync_time">\n%1$s</xliff:g></string>
   <!-- Image description for the sync failed icon. -->
+  <string name="sync_failed">Methwyd cysoni</string>
   <!-- Animation description for the sync active icon. -->
+  <string name="sync_active">Cysoni\'n weithredol</string>
   <!-- Connectivity preferences -->
   <!-- Top level network card title. [CHAR LIMIT=50] -->
   <!-- Preference which manages wifi settings. [CHAR LIMIT=50] -->
@@ -48,9 +53,12 @@
   <!-- Title for enable wifi. [CHAR LIMIT=50] -->
   <!-- Device preferences -->
   <!-- Preference which changes screen saver settings. [CHAR LIMIT=50] -->
+  <string name="device_daydream">Arbedwr sgrin</string>
   <!-- Preference which changes display settings. [CHAR LIMIT=50] -->
   <!-- Title for preference screen controlling sound settings [CHAR LIMIT=50] -->
+  <string name="device_sound">Sain</string>
   <!-- Title for preference which controls surround sound passthrough function [CHAR LIMIT=50] -->
+  <string name="device_surround_sound">Sain amgylchynu</string>
   <!-- Preference and title which changes system sounds settings. [CHAR LIMIT=50] -->
   <!-- Preference which manages apps. [CHAR LIMIT=50] -->
   <!-- Preference which shows storage status. [CHAR LIMIT=50] -->
@@ -120,43 +128,70 @@
   <!-- Device Info screen. Confirmation that developer settings are enabled [CHAR LIMIT=NONE] -->
   <!-- Device Info screen. Okay we get it, stop pressing, you already have it on [CHAR LIMIT=NONE] -->
   <!-- Device Info screen. Used for a status item's value when the proper value is not known -->
+  <string name="device_info_default">Anhysybys</string>
   <!-- About screen,  setting option name  [CHAR LIMIT=40] -->
+  <string name="selinux_status">Statws SELinux</string>
   <!-- These statuses are displayed when a device was built with SE Android supoprt.
     These are displayed by the settings app in the about section. -->
+  <string name="selinux_status_permissive">Caniataol</string>
+  <string name="selinux_status_enforcing">Gorfodi</string>
   <!-- A menu item in "About phone" that allows the user to update the phone with settings
         from their cell phone carrier. The use of the string is similar to the string
         "system_update_settings_list_item_title" in this project. [CHAR LIMIT=50] -->
+  <string name="additional_system_update_settings_list_item_title">Diweddariadau system ychwanegol</string>
   <!-- About screen, title of the item to go into the device status screen -->
+  <string name="device_status">Statws</string>
   <!-- About screen, summary of the item that takes you to device status screen -->
+  <string name="device_status_summary">Rhwydwaith, rhifau cyfresol a gwybodaeth arall</string>
   <!-- About settings screen, setting option name to show Manual [CHAR LIMIT=25] -->
   <!-- About settings screen, setting option name to show regulatory information [CHAR LIMIT=25] -->
+  <string name="regulatory_information">Gwybodaeth reoliadol</string>
   <!-- Feedback on the device [CHAR LIMIT=35] -->
+  <string name="device_feedback">Anfon adborth am y ddyfais hon</string>
   <!-- Full package name of OEM preferred device feedback reporter. [DO NOT TRANSLATE] -->
   <!-- About screen, fcc equipment id label  [CHAR LIMIT=40] -->
+  <string name="fcc_equipment_id">ID yr Offer</string>
   <!-- About screen,  setting option name  [CHAR LIMIT=40] -->
+  <string name="baseband_version">Fersiwn Baseband</string>
   <!-- About screen,  setting option name  [CHAR LIMIT=40] -->
+  <string name="kernel_version">Fersiwn cnewyllyn</string>
   <!-- Status screen -->
   <!-- About phone, status item value if the actual value is not available. -->
+  <string name="status_unavailable">Dim ar gael</string>
   <!-- About phone screen, phone status screen title -->
+  <string name="device_status_title">Statws</string>
   <!-- Phone info screen, section titles: -->
+  <string name="battery_status_title">Statws batri</string>
   <!-- Phone info screen, section titles: -->
+  <string name="battery_level_title">Lefel batri</string>
   <!-- SIM status title  [CHAR LIMIT=40] -->
+  <string name="sim_status_title">Statws SIM</string>
   <!-- Title for IMEI preference [CHAR LIMIT=30] -->
+  <string name="imei_information_title">Gwybodaeth IMEI</string>
   <!-- About phone, status item title.  The bluetooth adapter's hardware address-->
+  <string name="status_bt_address">Cyfeiriad Bluetooth</string>
   <!-- About phone, status item title.  How long the device has been running since its last reboot. -->
+  <string name="status_up_time">Amser yn rhedeg</string>
   <!-- About phone, status item title. WI-MAX MAC address -->
+  <string name="status_wimax_mac_address">Cyfeiriad MAC 4G</string>
   <!-- Legal screen -->
   <!-- About phone settings screen, setting option name to go to dialog that shows legal info -->
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
   <!-- About phone settings screen, setting option name to see copyright-related info -->
+  <string name="copyright_title">Hawlfraint</string>
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
   <!-- About phone settings screen, setting option name to see licensing info -->
+  <string name="license_title">Trwydded</string>
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
   <!-- About phone settings screen, setting option name to see terms and conditions -->
+  <string name="terms_title">Telerau ac amodau</string>
   <!-- Note: this may be replaced by a more-specific title of the activity that will get launched -->
   <!-- About phone settings screen, setting option name to see licensing info for WebView component. [CHAR LIMIT=35] -->
+  <string name="webview_license_title">Trwydded system WebView</string>
   <!-- About phone settings screen, setting option name to see wallpapers attributions -->
+  <string name="wallpaper_attributions">Papurau wal</string>
   <!-- About phone settings screen, setting option name to see wallpapers attributions values -->
+  <string name="wallpaper_attributions_values">Darparwyr delweddau lloeren:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky</string>
   <!-- Wifi -->
   <!-- wifi signal strength array [CHAR LIMIT=30] -->
   <!-- titles for connection status -->
@@ -169,6 +204,9 @@
   <!-- Connected [CHAR LIMIT=50] -->
   <!-- Not connected [CHAR LIMIT=50] -->
   <!-- Wifi setting headers [CHAR LIMIT=50] -->
+  <string name="wifi_setting_header_other_options">Dewisiadau eraill</string>
+  <string name="wifi_setting_see_fewer">Gweld llai</string>
+  <string name="wifi_setting_available_networks">Rhwydweithiau ar gael</string>
   <!-- Other Options under Wifi Settings headers [CHAR LIMIT=50] -->
   <!-- Strings for Add Network under Connectivity Setting -->
   <!-- Security type title on add network form page [CHAR LIMIT=30] -->
@@ -222,10 +260,15 @@
   <!-- Error message if the dns is not valid [CHAR LIMIT=50]-->
   <!-- Error message if the network prefix length is not valid [CHAR LIMIT=50]-->
   <!-- Description text for the IP address -->
+  <string name="wifi_ip_address_description">Rho gyfeiriad IP dilys.\nEnghraifft: <xliff:g>192.168.1.128</xliff:g></string>
   <!-- Description text for DNS -->
+  <string name="wifi_dns1_description">Rho gyfeiriad IP dilys neu ei adael yn wag.\nEnghraifft: <xliff:g>8.8.8.8</xliff:g></string>
   <!-- Description text for DNS -->
+  <string name="wifi_dns2_description">Rho gyfeiriad IP dilys neu ei adael yn wag.\nEnghraifft: <xliff:g>8.8.4.4</xliff:g></string>
   <!-- Description text for the gateway -->
+  <string name="wifi_gateway_description">Rho gyfeiriad IP dilys neu ei adael yn wag.\nEnghraifft: <xliff:g>192.168.1.1</xliff:g></string>
   <!-- Description text for network prefix length -->
+  <string name="wifi_network_prefix_length_description">Rho hyd ragddodiad rhwydwaith dilys.\nEnghraifft: <xliff:g>24</xliff:g></string>
   <!-- HTTP proxy settings. The error if the hostname is not valid -->
   <!-- HTTP proxy settings. The error if the exclusion list is not valid -->
   <!-- HTTP proxy settings. Error msg -->
@@ -233,8 +276,11 @@
   <!-- HTTP proxy settings. Error msg -->
   <!-- HTTP proxy settings. Warning message about limited application support [CHAR LIMIT=100]-->
   <!-- HTTP proxy settings. The description for proxy server port. -->
+  <string name="proxy_port_description">Rho borth dilys.\nEnghraifft:<xliff:g>8080</xliff:g></string>
   <!-- HTTP proxy settings. The description for proxy exclusion list.-->
+  <string name="proxy_exclusionlist_description">Rho restr coma\'n gwahanu o barthau i\'w heithrio neu gadael yn wag.\nEnghraifft: <xliff:g>esiampl.cymru,news.wales.com,localhost</xliff:g></string>
   <!-- HTTP proxy settings. The description field for the hostname. -->
+  <string name="proxy_hostname_description">Rho enw gwesteiwr dilys.\nEnghraifft:<xliff:g>proxy.enghraifft.com</xliff:g></string>
   <!-- Title to show indicating the user is connected [CHAR LIMIT=100] -->
   <!-- Title to show indicating the user is not connected [CHAR LIMIT=100] -->
   <!-- Title to show when wifi is already connected [CHAR LIMIT=100] -->
@@ -255,13 +301,19 @@
   <!-- Storage settings eject action [CHAR LIMIT=50] -->
   <!-- Storage settings erase and format action [CHAR LIMIT=50] -->
   <!-- Storage settings erase and format action [CHAR LIMIT=50] -->
+  <string name="storage_format_as_private">Dileu popeth a fformatio fel storfa\'r ddyfais</string>
   <!-- Storage settings erase and format action [CHAR LIMIT=50] -->
+  <string name="storage_format_as_public">Dileu popeth a fformatio fel storfa symudol</string>
   <!-- Storage settings format for device storage action [CHAR LIMIT=50] -->
   <!-- Description for a storage volume which is not currently connected to the device -->
   <!-- Storage settings migrate primary storage action [CHAR_LIMIT=50] -->
+  <string name="storage_migrate">Symud data i\'r storfa hon</string>
   <!-- Storage settings migrate primary storage action [CHAR_LIMIT=50] -->
+  <string name="storage_migrate_away">Symud data i storfa wahanol</string>
   <!-- Storage settings backup apps empty action [CHAR LIMIT=50] -->
+  <string name="storage_no_apps">Dim apiau i\'w cadw wrth gefn</string>
   <!-- Storage settings forget action [CHAR_LIMIT=50] -->
+  <string name="storage_forget">Anghofio storfa\'r ddyfais hon</string>
   <!-- Storage settings forget description [CHAR_LIMIT=NONE] -->
   <!-- Header title for device storage [CHAR_LIMIT=50] -->
   <!-- Header title for removable storage [CHAR_LIMIT=50] -->
@@ -269,6 +321,7 @@
   <!-- Toast informing that storage mount operation was successful. [CHAR LIMIT=64]-->
   <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=64]-->
   <!-- Toast shown when the user connects external storage that has been formatted for Android  [CHAR_LIMIT=50] -->
+  <string name="storage_mount_adopted">Storfa USB wedi\'i ailgysylltu</string>
   <!-- Toast informing that storage unmount operation was successful. [CHAR LIMIT=64]-->
   <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=64]-->
   <!-- Toast informing that storage unmount operation failed because the volume couldn't be found. [CHAR LIMIT=64]-->
@@ -278,9 +331,11 @@
   <!-- Description for wizard screen for formatting storage as device [CHAR LIMIT=NONE] -->
   <!-- Title for wizard screen for formatting storage as device [CHAR LIMIT=64] -->
   <!-- Description for wizard screen for formatting storage as device [CHAR LIMIT=NONE] -->
+  <string name="storage_wizard_format_as_public_description">Ar ôl fformatio, bydd yn bosib defnyddio\'r gyriant USB hwn mewn dyfeisiau eraill. Caiff yr holl ddata ei dileu. Meddylia os oes angen gwneud copi wrth gefn gan symud apiau i storfa arall y ddyfais.</string>
   <!-- Title for wizard progress screen for formatting drive [CHAR_LIMIT=50] -->
   <!-- Description for wizard progress screen for formatting drive [CHAR_LIMIT=NONE] -->
   <!-- Title for wizard selection screen for migrating data to new drive [CHAR LIMIT=50] -->
+  <string name="storage_wizard_migrate_choose_title">Dewisa storfa i symud y data iddo.</string>
   <!-- Title for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=50] -->
   <!-- Description for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=NONE] -->
   <!-- Positive action for wizard confirmation screen for migrating data to new drive [CHAR_LIMIT=50] -->
@@ -297,23 +352,27 @@
   <!-- Back up apps title [CHAR LIMIT=50] -->
   <!-- Back up apps storage available description [CHAR_LIMIT=50] -->
   <!-- Title for wizard screen for ejecting device storage [CHAR LIMIT=64] -->
+  <string name="storage_wizard_eject_private_title">Datgysylltu storfa\'r ddyfais</string>
   <!-- Description for wizard screen for ejecting device storage [CHAR LIMIT=NONE] -->
   <!-- Title for wizard progress screen for ejecting a drive [CHAR_LIMIT=64] -->
   <!-- Title for wizard screen for moving apps [CHAR_LIMIT=50] -->
   <!-- Title for wizard progress screen for moving apps [CHAR_LIMIT=50] -->
   <!-- Description for wizard progress screen for moving apps [CHAR_LIMIT=NONE] -->
   <!-- Title for wizard screen for forgetting private storage [CHAR_LIMIT=50] -->
+  <string name="storage_wizard_forget_confirm_title">Anghofio storfa\'r ddyfais?</string>
   <!-- Description for wizard screen for forgetting private storage [CHAR_LIMIT=NONE] -->
   <!-- Action for wizard screen for forgetting private storage [CHAR_LIMIT=50] -->
   <!-- Title for new storage activity [CHAR_LIMIT=50] -->
   <!-- Browse action for new storage activity [CHAR_LIMIT=50] -->
   <!-- Adopt action for new storage activity [CHAR_LIMIT=50] -->
+  <string name="storage_new_action_adopt">Gosod fel storfa dyfais</string>
   <!-- Format as removable action for new storage activity [CHAR_LIMIT=50] -->
   <!-- Eject action for new storage activity [CHAR_LIMIT=50] -->
   <!-- Title for missing storage activity shown when a drive is removed [CHAR_LIMIT=50] -->
   <!-- Description for missing storage activity shown when a drive is removed [CHAR_LIMIT=NONE] -->
   <!-- Manage applications, text for move error messages -->
   <!-- Error message shown when trying to move device administrators to external disks, such as SD card [CHAR_LIMIT=none] -->
+  <string name="move_error_device_admin">Ni all Weinyddwr y ddyfais cael ei osod ar storfa allanol.</string>
   <!-- Learn more action title [CHAR_LIMIT=50] -->
   <!-- Action to retry WPS scanning [CHAR LIMIT=50] -->
   <!-- Message indicating we are scanning for WPS routers [CHAR LIMIT=150] -->
@@ -336,6 +395,11 @@
   <!-- Options for automatic date & time [CHAR LIMIT=100] -->
   <!-- Values for automatic date & time [DO NOT TRANSLATE] -->
   <!-- Options for automatic date & time [CHAR LIMIT=100] -->
+  <string-array name="auto_date_time_ts_entries">
+    <item>Use network-provided time</item>
+    <item>Defnyddio\'r amser a ddarperir gan ffrwd trafnidiaeth</item>
+    <item>Off</item>
+  </string-array>
   <!-- Values for automatic date & time [DO NOT TRANSLATE] -->
   <!-- Title for Location in System Settings [CHAR LIMIT=50] -->
   <!-- Description for Location in System Settings [CHAR LIMIT=NONE] -->
@@ -361,6 +425,7 @@
   <!-- Title for services in accessibility settings [CHAR LIMIT=50] -->
   <!-- Title and description for accessibility service setting [CHAR LIMIT=50] -->
   <!-- Title for the accessibility preference to high contrast text. [CHAR LIMIT=35] -->
+  <string name="accessibility_toggle_high_text_contrast_preference_title">Testun cyferbyniad uchel</string>
   <!-- Title and description for accessibility captions setting [CHAR LIMIT=50] -->
   <!-- Title and description for accessibility captions description [CHAR LIMIT=NONE] -->
   <!-- Title for captions display setting [CHAR LIMIT=50] -->
@@ -377,18 +442,25 @@
   <!-- Title for captions edge type setting [CHAR LIMIT=50] -->
   <!-- Title for captions edge color setting [CHAR LIMIT=50] -->
   <!-- Title for captions background display setting [CHAR LIMIT=50] -->
+  <string name="captions_backgroundshow">Dangos y cefndir</string>
   <!-- Title for captions background color setting [CHAR LIMIT=50] -->
   <!-- Title for captions bacground opacity setting [CHAR LIMIT=50] -->
   <!-- Sample text for previewing video caption preferences. [CHAR LIMIT=NONE] -->
   <!-- Title for captions text opacity setting [CHAR LIMIT=50] -->
   <!-- Title for captions window display setting [CHAR LIMIT=50] -->
+  <string name="captions_windowshow">Dangos ffenestr</string>
   <!-- Title for captions window color setting [CHAR LIMIT=50] -->
   <!-- Title for captions window opacity setting [CHAR LIMIT=50] -->
   <!-- Title for caption style 0 [CHAR LIMIT=50] -->
+  <string name="captions_style_0">Gwyn ar ddu</string>
   <!-- Title for caption style 1 [CHAR LIMIT=50] -->
+  <string name="captions_style_1">Du ar wyn</string>
   <!-- Title for caption style 2 [CHAR LIMIT=50] -->
+  <string name="captions_style_2">Melyn ar ddu</string>
   <!-- Title for caption style 3 [CHAR LIMIT=50] -->
+  <string name="captions_style_3">Melyn ar las</string>
   <!-- Title for customized caption style [CHAR LIMIT=50] -->
+  <string name="captions_style_custom">Addasedig</string>
   <!-- Label for the color white. [CHAR LIMIT=35] -->
   <!-- Label for the color black. [CHAR LIMIT=35] -->
   <!-- Label for the color red. [CHAR LIMIT=35] -->
@@ -405,6 +477,7 @@
   <!-- Description for confirmation screen when turning OFF accessibility service[[CHAR LIMIT=NONE] -->
   <!-- Title for text to speech output in accessibility settings [CHAR LIMIT=50] -->
   <!-- Title for text to speech engine configuration in accessibility settings [CHAR LIMIT=50] -->
+  <string name="system_accessibility_tts_engine_config">Ffurfweddiad injan</string>
   <!-- Title for Set Speak passwords in System Settings Accessibility [CHAR LIMIT=50] -->
   <!-- Title for Set Preferred engine in System Settings Accessibility [CHAR LIMIT=50] -->
   <!-- Title for Set Speech rate in System Settings Accessibility [CHAR LIMIT=50] -->
@@ -474,6 +547,7 @@
   <!-- Title for action to allow installation of applications from unknown sources [CHAR LIMIT=50]-->
   <!-- Description for action to allow installation of applications from unknown sources [CHAR LIMIT=NONE]-->
   <!-- Title for confirmation dialog to allow installation of applications from unknown sources [CHAR LIMIT=50]-->
+  <string name="security_unknown_sources_confirm_title">Caniatáu ffynonellau anhysbys</string>
   <!-- Description for confirmation to allow installation of applications from unknown sources [CHAR LIMIT=NONE]-->
   <!-- Title for action to warn before installing applications that may cause harm [CHAR LIMIT=50]-->
   <!-- Description for action to warn before installing of applications that may cause harm [CHAR LIMIT=NONE]-->
@@ -534,9 +608,12 @@
   <!-- Name of predefined name for TV input (Aux) [CHAR LIMIT=30] -->
   <!-- Title of using customized name for a TV input [CHAR LIMIT=30] -->
   <!-- Description for action of setting a custom name for a TV input [CHAR LIMIT=200] -->
+  <string name="inputs_custom_name_description_fmt">Rho enw ar gyfer y mewnbwn <xliff:g id="input" example="HDMI">%1$s</xliff:g>.</string>
   <!-- Title of option to hide. It will describe current state of the inputs instead of the action [CHAR LIMIT=30] -->
   <!-- Title of option to show this input while switching.[CHAR LIMIT=50] -->
+  <string name="inputs_show">Dangos y mewnbwn hwn</string>
   <!-- Header for input name options [CHAR LIMIT=50] -->
+  <string name="input_header_names">Enw</string>
   <!-- Option to enable HDMI control [CHAR LIMIT=30] -->
   <!-- Description of HDMI control option [CHAR LIMIT=50] -->
   <!-- Option to enable device auto power off [CHAR LIMIT=30] -->
@@ -544,8 +621,32 @@
   <!-- Option to enable TV auto power on [CHAR LIMIT=30] -->
   <!-- Description of TV auto power on [CHAR LIMIT=50] -->
   <!-- Header for connected TV input(s) [CHAR LIMIT=30] -->
+  <plurals name="inputs_header_connected_input">
+    <item quantity="zero">Dim Mewnbynnau wedi eu Cysylltu</item>
+    <item quantity="one">Mewnbwn wedi ei Gysylltu</item>
+    <item quantity="two">Dau Fewnbwn wedi eu Cysylltu</item>
+    <item quantity="few">Tri Mewnbwn wedi eu Cysylltu</item>
+    <item quantity="many">Chwe Mewnbwn wedi eu Cysylltu</item>
+    <item quantity="other">Mewnbynnau wedi eu Cysylltu</item>
+  </plurals>
   <!-- Header for standby TV input(s) [CHAR LIMIT=30] -->
+  <plurals name="inputs_header_standby_input">
+    <item quantity="zero">Dim Mewnbynnau yn Segur</item>
+    <item quantity="one">Mewnbwn sy\'n Segur</item>
+    <item quantity="two">Mewnbynnau sy\'n Segur</item>
+    <item quantity="few">Mewnbynnau sy\'n Segur</item>
+    <item quantity="many">Mewnbynnau sy\'n Segur</item>
+    <item quantity="other">Mewnbynnau sy\'n Segur</item>
+  </plurals>
   <!-- Header for disconnected TV input(s) [CHAR LIMIT=30] -->
+  <plurals name="inputs_header_disconnected_input">
+    <item quantity="zero">Dim Mewnbynnau heb eu Cysylltu</item>
+    <item quantity="one">Un Mewnbwn heb ei Gysylltu</item>
+    <item quantity="two">Dau Fewnbwn heb eu Cysylltu</item>
+    <item quantity="few">Tri Mewnbwn heb eu Cysylltu</item>
+    <item quantity="many">Chwe Mewnbwn heb eu Cysylltu</item>
+    <item quantity="other">Mewnbynnau heb eu Cysylltu</item>
+  </plurals>
   <!-- Summary for add restricted profile entry in the choice dialog [CHAR LIMIT=none] -->
   <!-- User details new restricted profile name [CHAR LIMIT=30] -->
   <!-- Summary for app entries that are controlled by another entry [CHAR LIMIT=none] -->
@@ -557,6 +658,7 @@
   <!-- Action to switch out of a restricted profile [CHAR LIMIT=100] -->
   <!-- Title for action to delete a restricted profile [CHAR LIMIT=100] -->
   <!-- Title for action to create a restricted profile [CHAR LIMIT=100] -->
+  <string name="restricted_profile_create_title">Creu proffil cyfyngedig</string>
   <!-- Title for action to configure a restricted profile [CHAR LIMIT=100] -->
   <!-- Title for action to configure apps for a restricted profile [CHAR LIMIT=100] -->
   <!-- Description for action to configure apps for a restricted profile indicating number of allow apps will be ready in a moment [CHAR LIMIT=100] -->
@@ -567,6 +669,7 @@
   <!-- Title for action to change the PIN code to use when exiting restricted profile [CHAR LIMIT=100] -->
   <!-- Description for action to configure an application's restriction [CHAR LIMIT=200] -->
   <!-- Summary for a case when app entries that are controlled by another entry and app can access user accounts [CHAR LIMIT=none] -->
+  <string name="app_sees_restricted_accounts_and_controlled_by">Gall yr ap hwn gael mynediad i dy gyfrifon. Rheolwyd gan <xliff:g id="app">%1$s</xliff:g></string>
   <!-- PIN UX -->
   <!-- Title of PIN dialog when an user is asked to enter PIN to unlock channel.
          [CHAR LIMIT=50] -->
@@ -583,8 +686,11 @@
   <!-- Toast message when an user couldn't pass the PIN confirmation. [CHAR LIMIT=128] -->
   <!-- Message displayed to prompt the user to input the network password, ^1 will be replaced with the name of the network and should be a possive form related to password [CHAR LIMIT=NONE] -->
   <!-- Message displayed when the selected Wi-Fi network has been connected to [CHAR LIMIT=40] -->
+  <string name="wifi_setup_connection_success">Cysylltwyd yn llwyddiannus</string>
   <!-- Message displayed when the Wi-Fi network's configuration has been saved [CHAR LIMIT=40] -->
+  <string name="wifi_setup_save_success">Cadwyd yn llwyddiannus</string>
   <!-- Application management application version label [CHAR LIMIT=NONE] -->
+  <string name="device_apps_app_management_version">Fersiwn <xliff:g id="app_version">%1$s</xliff:g></string>
   <!-- Application management description for opening the application [CHAR LIMIT=NONE] -->
   <!-- Application management choice for force stopping the application [CHAR LIMIT=40] -->
   <!-- Application management description for force stopping the application [CHAR LIMIT=NONE] -->
@@ -611,12 +717,18 @@
   <!-- General settings choice for on [CHAR LIMIT=40] -->
   <!-- General settings choice for off [CHAR LIMIT=40] -->
   <!-- Screen saver choice for not having a screen saver [CHAR LIMIT=40] -->
+  <string name="device_daydreams_none">Diffodd y sgrin</string>
   <!-- Screen saver choice for selecting a different screen saver [CHAR LIMIT=40] -->
+  <string name="device_daydreams_select">Arbedwr sgrin</string>
   <!-- Screen saver choice for testing the selected screen saver [CHAR LIMIT=40] -->
   <!-- Screen saver choice for configuring the time before the device goes to sleep [CHAR LIMIT=40] -->
+  <string name="device_daydreams_sleep">Pa bryd i ddechrau</string>
   <!-- Screen saver description for configuring the time before the device goes to sleep [CHAR LIMIT=NONE] -->
+  <string name="device_daydreams_sleep_description">Mae\'r arbedwr sgrin yn dechrau ar ôl gyfnod heb weithgaredd. Os nad oes arbedwr sgrin wedi ei ddewis, mae\'r sgrin yn diffodd.</string>
   <!-- Screen saver summary for displaying the time before the device goes to sleep -->
+  <string name="device_daydreams_sleep_summary">Ar ôl <xliff:g id="sleep_description" example="3 minutes">%1$s</xliff:g> heb weithgaredd</string>
   <!-- Screen saver choice for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=40] -->
+  <string name="device_daydreams_screen_off">Rhoi\'r ddyfais i gysgu</string>
   <!-- Screen saver description for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=NONE] -->
   <!-- Default summary text of the "Configure backup account" setting [CHAR LIMIT=80] -->
   <!-- Dialog title for confirmation to erase backup data from server -->
@@ -629,22 +741,32 @@
   <!-- Factory reset screen, message on screen after user selects Reset phone button -->
   <!-- Factory reset screen, button on screen after user selects Reset phone button -->
   <!-- Title for screen where user selects a name for their device [CHAR LIMIT=NONE] -->
+  <string name="select_device_name_title">Dewisa enw ar gyfer dy <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g></string>
   <!-- Description for screen where user selects a name for their device [CHAR LIMIT=NONE] -->
+  <string name="select_device_name_description">Bydd enw yn helpu adnabod dy <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g> pan wyt ti\'n cael mynediad iddo o ddyfeisiau eraill, megis dy ffôn, llechen neu gyfrifiadur.</string>
   <!-- Rooms where a user's device might be placed [CHAR LIMIT=40] -->
   <!-- String displayed for option where user will type in a room name rather than selecting from the list of defaults [CHAR LIMIT=40] -->
   <!-- Title of settings summary/status screen [CHAR LIMIT=100] -->
+  <string name="device_rename_title">Ailenwi\'r <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g> hwn</string>
   <!-- Description on summary/status screen that tells you what the name of your device is [CHAR LIMIT=NONE] -->
+  <string name="device_rename_description">Mae\'r <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g>hwn ar hyn o bryd wedi ei enwi yn "<xliff:g id="devicename" example="Living Room Player">%2$s</xliff:g>\"</string>
   <!-- The 'yes' or 'edit' equivalent in a yes/no choice circumstance [CHAR LIMIT=30] -->
   <!-- The 'no' or  'keep the same' equivalent in a yes/no choice circumstance [CHAR LIMIT=30]-->
   <!-- Group header for app permissions [CHAR LIMIT=20] -->
   <!-- Item title for app permissions [CHAR LIMIT=20] -->
   <!-- Summary of number of apps currently granted a single permission [CHAR LIMIT=45] -->
   <!-- Strings for dialog title when asking to the user whether to allow an app to enable discovery mode -->
+  <string name="bluetooth_permission_request">"Cais caniatâd Bluetooth"</string>
   <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
   <!-- App picker screen title -->
+  <string name="choose_application">Dewisa ap</string>
   <!-- Summary Title for saying that the preference is experimental and will evolve over time due to User feedback. [CHAR LIMIT=NONE] -->
+  <string name="experimental_preference">(Arbrofol)</string>
   <!-- Title of button to confirm rebooting into safe mode. [CHAR LIMIT=50] -->
+  <string name="reboot_safemode_action">Ailgychwyn i\'r modd diogel</string>
   <!-- Shutdown Confirmation Dialog.  Message in the confirmation dialog
          when the user asks to reboot into safe mode. [CHAR LIMIT=50] -->
+  <string name="reboot_safemode_confirm">Wyt ti am ail-ddechrau\'r ddyfais ym modd diogel?</string>
   <!-- Shutdown Confirmation Dialog. Detailed message in the confirmation dialog when the user asks to reboot into safe mode [CHAR LIMIT=NONE] -->
+  <string name="reboot_safemode_desc">Bydd hyn yn analluogi\'r holl apiau trydydd parti sydd wedi eu gosod. Byddan nhw\'n cael eu hadfer pan fyddi di\'n ail-ddechrau eto.</string>
 </resources>
