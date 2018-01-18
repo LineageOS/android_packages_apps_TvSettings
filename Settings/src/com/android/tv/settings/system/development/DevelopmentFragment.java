@@ -128,7 +128,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
 
     private static final String WIFI_DISPLAY_CERTIFICATION_KEY = "wifi_display_certification";
     private static final String WIFI_VERBOSE_LOGGING_KEY = "wifi_verbose_logging";
-    private static final String WIFI_AGGRESSIVE_HANDOVER_KEY = "wifi_aggressive_handover";
     private static final String USB_CONFIGURATION_KEY = "select_usb_configuration";
     private static final String MOBILE_DATA_ALWAYS_ON = "mobile_data_always_on";
     private static final String KEY_COLOR_MODE = "color_mode";
@@ -195,7 +194,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private SwitchPreference mVerifyAppsOverUsb;
     private SwitchPreference mWifiDisplayCertification;
     private SwitchPreference mWifiVerboseLogging;
-    private SwitchPreference mWifiAggressiveHandover;
     private SwitchPreference mMobileDataAlwaysOn;
 
     private SwitchPreference mStrictMode;
@@ -368,7 +366,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         mDebugHwOverdraw = addListPreference(DEBUG_HW_OVERDRAW_KEY);
         mWifiDisplayCertification = findAndInitSwitchPref(WIFI_DISPLAY_CERTIFICATION_KEY);
         mWifiVerboseLogging = findAndInitSwitchPref(WIFI_VERBOSE_LOGGING_KEY);
-        mWifiAggressiveHandover = findAndInitSwitchPref(WIFI_AGGRESSIVE_HANDOVER_KEY);
         mMobileDataAlwaysOn = findAndInitSwitchPref(MOBILE_DATA_ALWAYS_ON);
         mUsbConfiguration = addListPreference(USB_CONFIGURATION_KEY);
 
@@ -632,7 +629,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         mLogpersistController.updateLogpersistValues();
         updateWifiDisplayCertificationOptions();
         updateWifiVerboseLoggingOptions();
-        updateWifiAggressiveHandoverOptions();
         updateMobileDataAlwaysOnOptions();
         updateSimulateColorSpace();
         updateUSBAudioOptions();
@@ -1232,15 +1228,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         mWifiManager.enableVerboseLogging(mWifiVerboseLogging.isChecked() ? 1 : 0);
     }
 
-    private void updateWifiAggressiveHandoverOptions() {
-        boolean enabled = mWifiManager.getAggressiveHandover() > 0;
-        updateSwitchPreference(mWifiAggressiveHandover, enabled);
-    }
-
-    private void writeWifiAggressiveHandoverOptions() {
-        mWifiManager.enableAggressiveHandover(mWifiAggressiveHandover.isChecked() ? 1 : 0);
-    }
-
     private void updateMobileDataAlwaysOnOptions() {
         updateSwitchPreference(mMobileDataAlwaysOn, Settings.Global.getInt(mContentResolver,
                 Settings.Global.MOBILE_DATA_ALWAYS_ON, 0) != 0);
@@ -1565,8 +1552,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
             writeWifiDisplayCertificationOptions();
         } else if (preference == mWifiVerboseLogging) {
             writeWifiVerboseLoggingOptions();
-        } else if (preference == mWifiAggressiveHandover) {
-            writeWifiAggressiveHandoverOptions();
         } else if (preference == mMobileDataAlwaysOn) {
             writeMobileDataAlwaysOnOptions();
         } else if (preference == mUSBAudio) {
