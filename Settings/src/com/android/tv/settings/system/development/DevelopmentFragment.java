@@ -1814,6 +1814,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
                             public void onClick(DialogInterface dialog, int which) {
                                 // We are OK to enable root acess, trigger it
                                 SystemProperties.set(ROOT_ACCESS_PROPERTY, newValue.toString());
+                                writeRootAccessOptions(newValue);
                             }
                         })
                         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
