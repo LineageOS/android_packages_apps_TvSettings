@@ -129,7 +129,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private static final String WIFI_DISPLAY_CERTIFICATION_KEY = "wifi_display_certification";
     private static final String WIFI_VERBOSE_LOGGING_KEY = "wifi_verbose_logging";
     private static final String WIFI_AGGRESSIVE_HANDOVER_KEY = "wifi_aggressive_handover";
-    private static final String WIFI_ALLOW_SCAN_WITH_TRAFFIC_KEY = "wifi_allow_scan_with_traffic";
     private static final String USB_CONFIGURATION_KEY = "select_usb_configuration";
     private static final String MOBILE_DATA_ALWAYS_ON = "mobile_data_always_on";
     private static final String KEY_COLOR_MODE = "color_mode";
@@ -199,7 +198,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private SwitchPreference mWifiAggressiveHandover;
     private SwitchPreference mMobileDataAlwaysOn;
 
-    private SwitchPreference mWifiAllowScansWithTraffic;
     private SwitchPreference mStrictMode;
     private SwitchPreference mPointerLocation;
     private SwitchPreference mShowTouches;
@@ -371,7 +369,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         mWifiDisplayCertification = findAndInitSwitchPref(WIFI_DISPLAY_CERTIFICATION_KEY);
         mWifiVerboseLogging = findAndInitSwitchPref(WIFI_VERBOSE_LOGGING_KEY);
         mWifiAggressiveHandover = findAndInitSwitchPref(WIFI_AGGRESSIVE_HANDOVER_KEY);
-        mWifiAllowScansWithTraffic = findAndInitSwitchPref(WIFI_ALLOW_SCAN_WITH_TRAFFIC_KEY);
         mMobileDataAlwaysOn = findAndInitSwitchPref(MOBILE_DATA_ALWAYS_ON);
         mUsbConfiguration = addListPreference(USB_CONFIGURATION_KEY);
 
@@ -636,7 +633,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         updateWifiDisplayCertificationOptions();
         updateWifiVerboseLoggingOptions();
         updateWifiAggressiveHandoverOptions();
-        updateWifiAllowScansWithTrafficOptions();
         updateMobileDataAlwaysOnOptions();
         updateSimulateColorSpace();
         updateUSBAudioOptions();
@@ -1245,15 +1241,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
         mWifiManager.enableAggressiveHandover(mWifiAggressiveHandover.isChecked() ? 1 : 0);
     }
 
-    private void updateWifiAllowScansWithTrafficOptions() {
-        boolean enabled = mWifiManager.getAllowScansWithTraffic() > 0;
-        updateSwitchPreference(mWifiAllowScansWithTraffic, enabled);
-    }
-
-    private void writeWifiAllowScansWithTrafficOptions() {
-        mWifiManager.setAllowScansWithTraffic(mWifiAllowScansWithTraffic.isChecked() ? 1 : 0);
-    }
-
     private void updateMobileDataAlwaysOnOptions() {
         updateSwitchPreference(mMobileDataAlwaysOn, Settings.Global.getInt(mContentResolver,
                 Settings.Global.MOBILE_DATA_ALWAYS_ON, 0) != 0);
@@ -1580,8 +1567,6 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
             writeWifiVerboseLoggingOptions();
         } else if (preference == mWifiAggressiveHandover) {
             writeWifiAggressiveHandoverOptions();
-        } else if (preference == mWifiAllowScansWithTraffic) {
-            writeWifiAllowScansWithTrafficOptions();
         } else if (preference == mMobileDataAlwaysOn) {
             writeMobileDataAlwaysOnOptions();
         } else if (preference == mUSBAudio) {
