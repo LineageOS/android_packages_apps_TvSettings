@@ -203,6 +203,8 @@
     <string name="wifi_forget_network" msgid="7302755141573045803">"Ağı unut"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"Bu işlem, bu ağa bağlanmak için kullanılan bilgileri (tüm kayıtlı şifreler dahil) siler."</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"Tamam"</string>
+    <string name="wifi_setup_action_dont_change_network" msgid="5136210803832000656">"Devam"</string>
+    <string name="wifi_setup_action_change_network" msgid="4320731433166354508">"Ağ değiştir"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"Değiştir"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"Değiştirme"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"Tamam"</string>
@@ -231,6 +233,7 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"Geçerli bir bağlantı noktası girin.\nÖrnek: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Hariç tutulan alan adlarının virgülle ayrılmış listesini girin veya boş bırakın.\nÖrnek: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Geçerli bir ana bilgisayar adı girin.\nÖrnek: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"\"<xliff:g id="SSID">%1$s</xliff:g>\" ağına bağlısınız"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Ağa bağlı"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Ağa bağlı değil"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g> ile zaten bağlantı kuruldu. Farklı bir ağa bağlanılsın mı?"</string>
@@ -642,7 +645,8 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Kişisel bilgilerinizin tümünü ve indirilen uygulamaların hepsini silmek istiyor musunuz? Bu işlem geri döndürülemez!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Her şeyi sil"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> cihazınız için bir ad seçin"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"Yayın sırasında veya diğer cihazlardan bağlanırken <xliff:g id="DEVICEMODEL">%1$s</xliff:g> cihazınızı tanımlamanıza yardımcı olacak bir ad belirleyin."</string>
+    <!-- no translation found for select_device_name_description (4939767901420114190) -->
+    <skip />
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"Oturma Odasındaki TV"</item>
