@@ -203,6 +203,8 @@
     <string name="wifi_forget_network" msgid="7302755141573045803">"ජාලය අමතක කරන්න"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"සුරකින ලද මුරපදය ඇතුළත්ව, මෙම ජාලයට සම්බන්ධ වීමට භාවිතා කළ තොරතුරු සියල්ල මෙය ඉවත් කරයි"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"හරි"</string>
+    <string name="wifi_setup_action_dont_change_network" msgid="5136210803832000656">"ඉදිරියට යන්න"</string>
+    <string name="wifi_setup_action_change_network" msgid="4320731433166354508">"ජාලය වෙනස් කරන්න"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"වෙනස් කරන්න"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"වෙනස් කරන්න එපා"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"හරි"</string>
@@ -231,6 +233,7 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"වලංගු තොටක් ඇතුළු කරන්න.\nඋදාහරණය: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"බැහැර කරන වසම්වල කොමාවලින් වෙන් වූ ලැයිස්තුවක් ඇතුළු කරන්න නැතහොත් හිස්ව තබන්න.\nඋදාහරණය: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"වලංගු සත්කාරක නමක් ඇතුළු කරන්න.\nඋදාහරණය: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"<xliff:g id="SSID">%1$s</xliff:g> වෙත ඔබ සම්බන්ධයි."</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"ජාලය සම්බන්ධ කර ඇත"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"ජාලයට සම්බන්ධ කර නැත"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g> වෙත දැනටමත් සම්බන්ධ කර තිබේ. වෙනස් ජාලයකට සම්බන්ධ කරන්නද?"</string>
@@ -642,7 +645,8 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"ඔබේ සියලු පෞද්ගලික තොරතුරු සහ බාගත කළ යෙදුම් මකන්නද? ඔබට මෙම ක්‍රියාව ආපසු හැරවිය නොහැක!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"සියල්ල මකන්න"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"ඔබේ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> සඳහා නමක් තෝරන්න"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"ඔබගේ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> වෙත වෙනත් උපාංගවලින් විකාශය කරන හෝ සබඳින විට එය හඳුනා ගැනීමට උදවු වීමට නමක් දෙන්න."</string>
+    <!-- no translation found for select_device_name_description (4939767901420114190) -->
+    <skip />
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"සාලයේ TV"</item>

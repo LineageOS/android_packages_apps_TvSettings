@@ -203,6 +203,8 @@
     <string name="wifi_forget_network" msgid="7302755141573045803">"فراموش کردن شبکه"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"این کار اطلاعات مورد استفاده برای اتصال به این شبکه، از جمله گذرواژه ذخیره شده را پاک می‌کند"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"قبول"</string>
+    <string name="wifi_setup_action_dont_change_network" msgid="5136210803832000656">"ادامه"</string>
+    <string name="wifi_setup_action_change_network" msgid="4320731433166354508">"تغییر شبکه"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"تغییر داده شود"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"تغییر داده نشود"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"تأیید"</string>
@@ -231,6 +233,7 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"نام درگاه معتبری وارد کنید.\nمثال: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"فهرستی جداشده با ویرگول از دامنه‌های مستثنا وارد کنید یا آن را خالی بگذارید.\nمثال: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"نام میزبان معتبری وارد کنید.\nمثال: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"شما به «<xliff:g id="SSID">%1$s</xliff:g>» وصل شدید"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"شبکه متصل شد"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"شبکه متصل نیست"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"در حال حاضر به <xliff:g id="SSID">%1$s</xliff:g> متصل است. به شبکه دیگری متصل شود؟"</string>
@@ -434,7 +437,7 @@
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"فقط بررسی محتوای DRM"</string>
     <string name="system_always_check" msgid="1866566828098009853">"همیشه بررسی شود"</string>
     <string name="system_bt_hci_log" msgid="2425757846046504431">"گزارش‌گیری HCI بلوتوث"</string>
-    <string name="system_email_address" msgid="8669468986250302378">"آدرس رایانامه"</string>
+    <string name="system_email_address" msgid="8669468986250302378">"نشانی رایانامه"</string>
     <string name="system_usb_debugging" msgid="3777895294421924323">"اشکال‌زدایی USB"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"مکان‌های کاذب مجاز هستند"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"انتخاب برنامه اشکال‌زدایی"</string>
@@ -642,7 +645,8 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"همه اطلاعات شخصی و برنامه‌های بارگیری‌شده خودتان را پاک می‌کنید؟ این عملکرد دیگر قابل بازگشت نیست!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"پاک کردن همه موارد"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"نامی برای <xliff:g id="DEVICEMODEL">%1$s</xliff:g> خود انتخاب کنید"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"برای <xliff:g id="DEVICEMODEL">%1$s</xliff:g> نامی انتخاب کنید تا هنگام ارسال محتوا یا اتصال به آن از سایر دستگاه‌ها، به شناسایی دستگاه کمک شود."</string>
+    <!-- no translation found for select_device_name_description (4939767901420114190) -->
+    <skip />
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"تلویزیون اتاق پذیرایی"</item>

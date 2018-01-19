@@ -203,6 +203,8 @@
     <string name="wifi_forget_network" msgid="7302755141573045803">"ကွန်ရက်ကို မေ့ပစ်ရန်"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"၎င်းက ဒီကွန်ရက်ကို ချိတ်ဆက်စဉ် အသုံးပြုခဲ့သည့် အချက်အလက်များကို၊ သိမ်းဆည်းခဲ့သည့် စကားဝှက် တစ်ခုခု အပါအဝင်ကို၊ ရှင်းပစ်သည်။"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"အိုကေ"</string>
+    <string name="wifi_setup_action_dont_change_network" msgid="5136210803832000656">"ရှေ့ဆက်ရန်"</string>
+    <string name="wifi_setup_action_change_network" msgid="4320731433166354508">"ကွန်ရက် ပြောင်းရန်"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"ပြောင်းလဲရန်"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"မပြောင်းလဲပါနှင့်"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"အိုကေ"</string>
@@ -231,6 +233,7 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"မှန်ကန်သည့် ပေါ့တ်နံပါတ်ကို ထည့်ပါ\nဥပမာ − <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"ကော်မာခြားထားသည့် ပယ်ထားသောဒိုမိန်းစာရင်းကို ထည့်ပါ သို့မဟုတ် ဗလာချန်ထားပါ။\nဥပမာ − <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"မှန်ကန်သည့် လက်ခံစက်အမည်ကို ထည့်ပါ။\nဥပမာ − <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"သင်သည် <xliff:g id="SSID">%1$s</xliff:g> သို့ ချိတ်ဆက်ထားသည်"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"ကွန်ရက် ချိတ်ဆက်ထား"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"ကွန်ရက်ကို မချိတ်ဆက်ရသေးပါ"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g>သို့ ချိတ်ဆက်ထားပြီးနေပြီ။ အခြား ကွန်ရက်သို့ ချိတ်ဆက်ရမလား?"</string>
@@ -642,7 +645,8 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"သင့် ကိုယ်ပိုင် အချက်အလက်များ နှင့် ဒေါင်းလုဒ် ပြုလုပ်ထားသည့် အက်ပ်များ အားလုံးကို ဖျက်မလား? ဒီ လုပ်ဆောင်ချက်ကို သင်သည် ပြန်ပြောင်း၍ မရနိုင်ပါ!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"အရာတိုင်းကို ဖျက်ရန်"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"သင့်<xliff:g id="DEVICEMODEL">%1$s</xliff:g>အတွက် အမည်ရွေးပါ"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"သင့်စက်ကို အခြားစက်များမှ ကာစ်လုပ်သောအခါဖြစ်စေ ချိတ်ဆက်သောအခါဖြစ်စေ ၎င်းကိုသိရှိစေရန် သင့် <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ကို အမည်ပေးပါ။"</string>
+    <!-- no translation found for select_device_name_description (4939767901420114190) -->
+    <skip />
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"ဧည့်ခန်း TV"</item>
