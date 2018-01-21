@@ -107,9 +107,9 @@
     <string name="device_name" msgid="2670488158531273028">"ชื่ออุปกรณ์"</string>
     <string name="restart_button_label" msgid="8153112858638352970">"รีสตาร์ท"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"ข้อมูลทางกฎหมาย"</string>
-    <string name="about_legal_license" msgid="7867205982113209033">"สัญญาอนุญาตโอเพนซอร์ส"</string>
+    <string name="about_legal_license" msgid="7867205982113209033">"ใบอนุญาตโอเพนซอร์ส"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"ข้อความทางกฎหมายของ Google"</string>
-    <string name="about_license_activity_unavailable" msgid="8522566562321418498">"ข้อมูลสัญญาอนุญาตไม่สามารถใช้ได้"</string>
+    <string name="about_license_activity_unavailable" msgid="8522566562321418498">"ข้อมูลใบอนุญาตไม่สามารถใช้ได้"</string>
     <string name="about_model" msgid="6625269442206323995">"รุ่น"</string>
     <string name="about_version" msgid="1177287676732287266">"เวอร์ชัน"</string>
     <string name="about_serial" msgid="2723560490027171187">"หมายเลขซีเรียล"</string>
@@ -145,7 +145,7 @@
     <string name="status_up_time" msgid="1674116490191446110">"เวลาทำงาน"</string>
     <string name="legal_information" msgid="2346024659831852038">"ข้อมูลทางกฎหมาย"</string>
     <string name="copyright_title" msgid="5564228453228549353">"ลิขสิทธิ์"</string>
-    <string name="license_title" msgid="4482927105870812604">"สัญญาอนุญาต"</string>
+    <string name="license_title" msgid="4482927105870812604">"ใบอนุญาต"</string>
     <string name="terms_title" msgid="8480859222932736291">"ข้อกำหนดในการให้บริการ"</string>
     <string name="webview_license_title" msgid="8843666223583780825">"ใบอนุญาต WebView ของระบบ"</string>
   <string-array name="wifi_signal_strength">
@@ -203,6 +203,8 @@
     <string name="wifi_forget_network" msgid="7302755141573045803">"ไม่จำเครือข่าย"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"การดำเนินการนี้จะล้างข้อมูลที่ใช้เพื่อเชื่อมต่อกับเครือข่ายนี้ ซึ่งรวมถึงรหัสผ่านที่บันทึกไว้ด้วย"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"ตกลง"</string>
+    <string name="wifi_setup_action_dont_change_network" msgid="5136210803832000656">"ต่อไป"</string>
+    <string name="wifi_setup_action_change_network" msgid="4320731433166354508">"เปลี่ยนเครือข่าย"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"เปลี่ยน"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"ไม่เปลี่ยน"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"ตกลง"</string>
@@ -231,6 +233,7 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"ป้อนพอร์ตที่ถูกต้อง\nตัวอย่างเช่น <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"ป้อนรายการโดเมนที่ยกเว้นซึ่งคั่นค่าด้วยเครื่องหมายจุลภาค หรือปล่อยว่างไว้\nตัวอย่างเช่น <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"ป้อนชื่อโฮสต์ที่ถูกต้อง\nตัวอย่างเช่น <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"คุณเชื่อมต่อ <xliff:g id="SSID">%1$s</xliff:g> แล้ว"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"เชื่อมต่อเครือข่ายแล้ว"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"ไม่ได้เชื่อมต่อเครือข่าย"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"เชื่อมต่อ <xliff:g id="SSID">%1$s</xliff:g> แล้ว ต้องการเชื่อมต่อกับเครือข่ายอื่นไหม"</string>
@@ -642,7 +645,8 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"ลบข้อมูลส่วนบุคคลและแอปที่ดาวน์โหลดทั้งหมดไหม คุณไม่สามารถย้อนกลับการทำงานนี้ได้!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ลบทุกอย่าง"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"ตั้งชื่อให้ <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"ตั้งชื่อให้กับ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> เพื่อช่วยระบุอุปกรณ์เมื่อมีการแคสต์หรือเชื่อมต่อจากอุปกรณ์อื่น"</string>
+    <!-- no translation found for select_device_name_description (4939767901420114190) -->
+    <skip />
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"TV ในห้องนั่งเล่น"</item>

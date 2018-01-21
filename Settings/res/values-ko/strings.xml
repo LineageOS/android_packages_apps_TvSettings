@@ -203,6 +203,8 @@
     <string name="wifi_forget_network" msgid="7302755141573045803">"네트워크 저장 안함"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"저장된 비밀번호를 비롯하여 이 네트워크에 연결하는 데 사용된 정보가 삭제됩니다."</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"확인"</string>
+    <string name="wifi_setup_action_dont_change_network" msgid="5136210803832000656">"계속"</string>
+    <string name="wifi_setup_action_change_network" msgid="4320731433166354508">"네트워크 변경"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"변경"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"변경 안함"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"확인"</string>
@@ -231,6 +233,7 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"유효한 포트를 입력합니다.\n예: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"제외된 도메인의 쉼표로 구분된 목록을 입력하거나 비워둡니다.\n예: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"유효한 호스트 이름을 입력합니다.\n예: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"\'<xliff:g id="SSID">%1$s</xliff:g>\'에 연결됨"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"네트워크에 연결됨"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"네트워크에 연결되지 않음"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"이미 <xliff:g id="SSID">%1$s</xliff:g>에 연결되어 있습니다. 다른 네트워크에 연결하시겠습니까?"</string>
@@ -642,7 +645,8 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"개인정보와 다운로드한 앱을 모두 삭제하시겠습니까? 이 작업은 취소할 수 없습니다."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"모두 지우기"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g>에 사용할 이름 선택"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"다른 기기에서 이 기기로 전송하거나 연결할 때 식별할 수 있도록 <xliff:g id="DEVICEMODEL">%1$s</xliff:g>에 이름을 지정해 주세요."</string>
+    <!-- no translation found for select_device_name_description (4939767901420114190) -->
+    <skip />
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"거실 TV"</item>
