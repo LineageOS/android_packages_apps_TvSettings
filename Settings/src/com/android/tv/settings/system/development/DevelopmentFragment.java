@@ -1245,8 +1245,9 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
             String[] values = getResources().getStringArray(R.array.usb_configuration_values);
             String[] titles = getResources().getStringArray(R.array.usb_configuration_titles);
             int index = 0;
+            long functions = manager.getCurrentFunctions();
             for (int i = 0; i < titles.length; i++) {
-                if (manager.isFunctionEnabled(values[i])) {
+                if ((functions | UsbManager.usbFunctionsFromString(values[i])) != 0) {
                     index = i;
                     break;
                 }
@@ -1260,11 +1261,7 @@ public class DevelopmentFragment extends ObservableLeanbackPreferenceFragment
     private void writeUsbConfigurationOption(Object newValue) {
         UsbManager manager = (UsbManager)getActivity().getSystemService(Context.USB_SERVICE);
         String function = newValue.toString();
-        if (function.equals("none")) {
-            manager.setCurrentFunction(function, false);
-        } else {
-            manager.setCurrentFunction(function, true);
-        }
+        manager.setCurrentFunctions(UsbManager.usbFunctionsFromString(function));
     }
 
     private void writeImmediatelyDestroyActivitiesOptions() {
