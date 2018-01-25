@@ -43,7 +43,6 @@ import android.os.UserManager;
 import android.support.annotation.NonNull;
 import android.support.v14.preference.MultiSelectListPreference;
 import android.support.v14.preference.SwitchPreference;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v4.util.ArrayMap;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -57,8 +56,10 @@ import android.widget.Checkable;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.users.AppRestrictionsHelper;
 import com.android.tv.settings.R;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -71,7 +72,10 @@ import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class AppRestrictionsFragment extends LeanbackPreferenceFragment implements
+/**
+ * The screen in TV settings to configure restricted profile app & content access.
+ */
+public class AppRestrictionsFragment extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener,
         AppRestrictionsHelper.OnDisableUiForPackageListener {
 
@@ -841,5 +845,10 @@ public class AppRestrictionsFragment extends LeanbackPreferenceFragment implemen
             }
         }
         return null;
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.USERS_APP_RESTRICTIONS;
     }
 }

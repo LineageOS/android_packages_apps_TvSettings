@@ -40,7 +40,6 @@ import android.os.UserManager;
 import android.provider.Settings;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.IntDef;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v17.preference.LeanbackSettingsFragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.preference.Preference;
@@ -49,10 +48,12 @@ import android.support.v7.preference.TwoStatePreference;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.widget.ILockSettings;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.VerifyCredentialResponse;
 import com.android.tv.settings.R;
+import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.dialog.PinDialogFragment;
 import com.android.tv.settings.users.AppRestrictionsFragment;
 import com.android.tv.settings.users.RestrictedProfilePinDialogFragment;
@@ -62,7 +63,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.List;
 
-public class SecurityFragment extends LeanbackPreferenceFragment
+/**
+ * The security settings screen in Tv settings.
+ */
+public class SecurityFragment extends SettingsPreferenceFragment
         implements RestrictedProfilePinDialogFragment.Callback {
 
     private static final String TAG = "SecurityFragment";
@@ -541,5 +545,10 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             icon.draw(new Canvas(bitmap));
             return bitmap;
         }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.SECURITY;
     }
 }

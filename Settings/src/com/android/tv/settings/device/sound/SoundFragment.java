@@ -21,17 +21,19 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.TwoStatePreference;
 import android.text.TextUtils;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
-public class SoundFragment extends LeanbackPreferenceFragment implements
+/**
+ * The "Sound" screen in TV Settings.
+ */
+public class SoundFragment extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String KEY_SOUND_EFFECTS = "sound_effects";
@@ -135,5 +137,10 @@ public class SoundFragment extends LeanbackPreferenceFragment implements
             case Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER:
                 return VAL_SURROUND_SOUND_NEVER;
         }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.SOUND;
     }
 }

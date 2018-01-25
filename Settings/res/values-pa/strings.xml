@@ -203,6 +203,8 @@
     <string name="wifi_forget_network" msgid="7302755141573045803">"ਨੈੱਟਵਰਕ ਭੁੱਲ ਜਾਓ"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"ਇਹ ਇਸ ਨੈੱਟਵਰਕ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ ਵਰਤੀ ਜਾਂਦੀ ਜਾਣਕਾਰੀ ਨੂੰ ਕਲੀਅਰ ਕਰ ਦਿੰਦਾ ਹੈ, ਜਿਸ ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਪਾਸਵਰਡ ਵੀ ਸ਼ਾਮਲ ਹੈ"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"ਠੀਕ ਹੈ"</string>
+    <string name="wifi_setup_action_dont_change_network" msgid="5136210803832000656">"ਜਾਰੀ ਰੱਖੋ"</string>
+    <string name="wifi_setup_action_change_network" msgid="4320731433166354508">"ਨੈੱਟਵਰਕ ਬਦਲੋ"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"ਬਦਲੋ"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"ਨਾ ਬਦਲੋ"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"ਠੀਕ ਹੈ"</string>
@@ -231,6 +233,7 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"ਕੋਈ ਵੈਧ ਪੋਰਟ ਦਾਖਲ ਕਰੋ।\nਉਦਾਹਰਨ: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"ਅਲਹਿਦਾ ਕੀਤੀਆਂ ਡੋਮੇਨਾਂ ਦੀ ਇੱਕ ਕੌਮੇ ਨਾਲ ਵੱਖ ਕੀਤੀ ਸੂਚੀ ਦਾਖਲ ਕਰੋ ਜਾਂ ਖਾਲੀ ਛੱਡੋ।\nਉਦਾਹਰਨ: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"ਕੋਈ ਵੈਧ ਹੋਸਟਨਾਮ ਦਾਖਲ ਕਰੋ।\nਉਦਾਹਰਨ: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"ਤੁਸੀਂ <xliff:g id="SSID">%1$s</xliff:g> ਨਾਲ ਕਨੈਕਟ ਹੋ"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"ਨੈੱਟਵਰਕ ਕਨੈਕਟ ਹੈ"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"ਨੈੱਟਵਰਕ ਕਨੈਕਟ ਨਹੀਂ ਹੈ"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"ਪਹਿਲਾਂ ਹੀ <xliff:g id="SSID">%1$s</xliff:g> ਨਾਲ ਕਨੈਕਟ ਹੈ। ਕੀ ਕਿਸੇ ਵੱਖਰੇ ਨੈੱਟਵਰਕ ਨਾਲ ਕਨੈਕਟ ਕਰਨਾ ਹੈ?"</string>
@@ -642,7 +645,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"ਕੀ ਆਪਣੀ ਸਾਰੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਅਤੇ ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਐਪਾਂ ਮਿਟਾਉਣੀਆਂ ਹਨ? ਤੁਸੀਂ ਇਸ ਕਿਰਿਆ ਨੂੰ ਪਲਟ ਨਹੀਂ ਸਕਦੇ!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ਸਭ ਕੁਝ ਮਿਟਾਓ"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"ਆਪਣੇ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ਲਈ ਕੋਈ ਨਾਮ ਚੁਣੋ"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"ਹੋਰ ਡੀਵਾਈਸਾਂ ਤੋਂ ਕਾਸਟ ਕੀਤੇ ਜਾਣ ਜਾਂ ਕਨੈਕਟ ਕੀਤੇ ਜਾਣ ਵੇਲੇ ਪਛਾਣ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਨ ਲਈ ਆਪਣੇ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ਨੂੰ ਕੋਈ ਨਾਮ ਦਿਓ।"</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"ਹੋਰ ਡੀਵਾਈਸਾਂ ਤੋਂ ਕਾਸਟ ਜਾਂ ਕਨੈਕਟ ਕੀਤੇ ਜਾਣ ਵੇਲੇ ਆਪਣੇ ਡੀਵਾਈਸ ਦੀ ਪਛਾਣ ਕਰਨ ਵਿੱਚ ਮਦਦ ਲਈ ਇਸਦਾ ਕੋਈ ਨਾਮ ਰੱਖੋ।"</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"ਬੈਠਕ ਵਾਲਾ ਟੀਵੀ"</item>

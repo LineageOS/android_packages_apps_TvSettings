@@ -203,6 +203,8 @@
     <string name="wifi_forget_network" msgid="7302755141573045803">"নেটওয়ার্ক ভুলে যান"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"এটি এই নেটওয়ার্কের সাথে সংযোগ স্থাপনের জন্য ব্যবহৃত তথ্য সাফ করে, এর মধ্যে সংরক্ষিত পাসওয়ার্ডও অন্তর্ভুক্ত"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"ঠিক আছে"</string>
+    <string name="wifi_setup_action_dont_change_network" msgid="5136210803832000656">"চালিয়ে যান"</string>
+    <string name="wifi_setup_action_change_network" msgid="4320731433166354508">"অন্য নেটওয়ার্ক বেছে নিন"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"পরিবর্তন করুন"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"পরিবর্তন করবেন না"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"ঠিক আছে"</string>
@@ -227,10 +229,11 @@
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"পোর্ট ক্ষেত্রটিকে খালি রাখা যাবে না"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"যদি হোস্ট ক্ষেত্রটি খালি থাকে, তাহলে পোর্ট ক্ষেত্রটিকেও খালি ছেড়ে দিন"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"পোর্ট বৈধ নয়"</string>
-    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP প্রক্সি ব্রাউজারে ব্যবহৃত হয় কিন্তু অন্যান্য অ্যাপ্লিকেশানগুলি হয়তো এর ব্যবহার করে না"</string>
+    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP প্রক্সি ব্রাউজারে ব্যবহৃত হয় কিন্তু অন্যান্য অ্যাপ্লিকেশানগুলি হয়ত এর ব্যবহার করে না"</string>
     <string name="proxy_port_description" msgid="6791098212244367568">"একটি বৈধ পোর্ট লিখুন।\nউদাহরণ: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"বাদ দেওয়া ডোমেনগুলির কমা দিয়ে পৃথক করা একটি তালিকা ঢোকান অথবা ফাঁকা রেখে দিন।\nউদাহরণ: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"একটি বৈধ হোস্টনাম লিখুন।\nউদাহরণ: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"আপনি <xliff:g id="SSID">%1$s</xliff:g> নেটওয়ার্কে সংযুক্ত"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"নেটওয়ার্ক সংযুক্ত হয়েছে"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"নেটওয়ার্কের সাথে সংযোগ স্থাপন করা হয়নি"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g> এর সাথে ইতিমধ্যেই সংযুক্ত৷ অন্য কোনো নেটওয়ার্কের সাথে সংযোগ স্থাপন করবেন?"</string>
@@ -642,7 +645,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"আপনার সমস্ত ব্যক্তিগত ডেটা এবং ডাউনলোড করা অ্যাপ্লিকেশান মুছে দিতে চান? আপনি পদক্ষেপটি আর বাতিল করতে পারবেন না!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"সবকিছু মুছে দিন"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"আপনার <xliff:g id="DEVICEMODEL">%1$s</xliff:g> এর জন্য একটি নাম বেছে নিন"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"এটিকে অন্য ডিভাইস থেকে কাস্ট করার সময় বা সংযোগ করার সময় শনাক্ত করতে সহায়তা করার জন্য আপনার <xliff:g id="DEVICEMODEL">%1$s</xliff:g> এর একটি নাম দিন৷"</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"অন্য ডিভাইস থেকে কাস্টিং অথবা সংযুক্ত করার সময় যাতে সহজেই আপনার ডিভাইসটি চিনে নেওয়ার জন্য ডিভাইসটির একটি নাম দিন।"</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"বসার ঘরের টিভি"</item>

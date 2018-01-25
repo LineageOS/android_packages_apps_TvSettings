@@ -203,6 +203,8 @@
     <string name="wifi_forget_network" msgid="7302755141573045803">"நெட்வொர்க்கை நீக்கு"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"சேமித்தக் கடவுச்சொல் உள்ளிட்ட இந்த நெட்வொர்க்குடன் இணைக்கப் பயன்படுத்திய தகவலை இது அழிக்கிறது"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"சரி"</string>
+    <string name="wifi_setup_action_dont_change_network" msgid="5136210803832000656">"தொடர்க"</string>
+    <string name="wifi_setup_action_change_network" msgid="4320731433166354508">"நெட்வொர்க்கை மாற்று"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"மாற்று"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"மாற்ற வேண்டாம்"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"சரி"</string>
@@ -231,6 +233,7 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"சரியான போர்ட்டை உள்ளிடவும்.\nஎடுத்துக்காட்டு: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"விலக்கப்பட்ட டொமைன்களின் காற்புள்ளியால் பிரிக்கப்பட்ட பட்டியலை உள்ளிடவும் அல்லது வெறுமையாக விடவும்.\nஎடுத்துக்காட்டு: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"சரியான ஹோஸ்ட்பெயரை உள்ளிடவும்.\nஎடுத்துக்காட்டு: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"<xliff:g id="SSID">%1$s</xliff:g> உடன் இணைக்கப்பட்டுள்ளீர்கள்"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"நெட்வொர்க் இணைக்கப்பட்டது"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"நெட்வொர்க் இணைக்கப்படவில்லை"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g> உடன் ஏற்கனவே இணைக்கப்பட்டுள்ளது. வேறொரு நெட்வொர்க்குடன் இணைக்கவா?"</string>
@@ -642,7 +645,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"எல்லா தனிப்பட்ட தகவலையும், இறக்கப்பட்ட பயன்பாடுகளையும் அழிக்கவா? இந்தச் செயலை மீட்டமைக்க முடியாது!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"எல்லாம் அழி"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g>க்கான பெயரைத் தேர்ந்தெடுக்கவும்"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"பிற சாதனங்களிலிருந்து அனுப்பும் போது அல்லது அவற்றுடன் இணைக்கும் போது அடையாளங்காண உதவும் வகையில், உங்கள் <xliff:g id="DEVICEMODEL">%1$s</xliff:g> சாதனத்திற்குப் பெயரிடவும்."</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"பிற சாதனங்களிலிருந்து அனுப்பும்போது அல்லது அவற்றுடன் இணைக்கும்போது அடையாளங்காண உதவும் வகையில், உங்கள் சாதனத்திற்குப் பெயரிடவும்."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"ஹால் (பொது அறை) டிவி"</item>

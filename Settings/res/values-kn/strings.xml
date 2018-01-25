@@ -203,6 +203,8 @@
     <string name="wifi_forget_network" msgid="7302755141573045803">"ನೆಟ್‌ವರ್ಕ್‌ ಮರೆತುಬಿಡು"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"ಇದು ಉಳಿಸಲಾಗಿರುವ ಪಾಸ್‌ವರ್ಡ್ ಸೇರಿದಂತೆ, ಈ ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕಿಸಲು ಬಳಸಲಾಗಿರುವ ಮಾಹಿತಿಯನ್ನು ತೆರವುಗೊಳಿಸುತ್ತದೆ."</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"ಸರಿ"</string>
+    <string name="wifi_setup_action_dont_change_network" msgid="5136210803832000656">"ಮುಂದುವರಿಸಿ"</string>
+    <string name="wifi_setup_action_change_network" msgid="4320731433166354508">"ನೆಟ್‌ವರ್ಕ್ ಅನ್ನು ಬದಲಾಯಿಸಿ"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"ಬದಲಾಯಿಸು"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"ಬದಲಾಯಿಸಬೇಡಿ"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"ಸರಿ"</string>
@@ -231,6 +233,7 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"ಮಾನ್ಯವಾದ ಪೋರ್ಟ್ ನಮೂದಿಸಿ.\nಉದಾಹರಣೆ: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"ಪ್ರತ್ಯೇಕಿಸಿದ ಡೊಮೇನ್‌ಗಳ ಅಲ್ಪವಿರಾಮದಿಂದ ಪ್ರತ್ಯೇಕಿಸಿರುವ ಪಟ್ಟಿಯನ್ನು ನಮೂದಿಸಿ ಅಥವಾ ಖಾಲಿ ಬಿಡಿ.\nಉದಾಹರಣೆ: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"ಮಾನ್ಯವಾದ ಹೋಸ್ಟ್‌ ಹೆಸರನ್ನು ನಮೂದಿಸಿ.\nಉದಾಹರಣೆ: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"ನೀವು <xliff:g id="SSID">%1$s</xliff:g> ಗೆ ಸಂಪರ್ಕಗೊಂಡಿರುವಿರಿ"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕಗೊಂಡಿದೆ"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕಗೊಂಡಿಲ್ಲ"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"ಈಗಾಗಲೇ <xliff:g id="SSID">%1$s</xliff:g> ಗೆ ಸಂಪರ್ಕಪಡಿಸಲಾಗಿದೆ. ಬೇರೆ ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಪಡಿಸುವುದೇ?"</string>
@@ -642,7 +645,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"ನಿಮ್ಮ ಎಲ್ಲಾ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಮತ್ತು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅಳಿಸುವುದೇ? ನಿಮಗೆ ಈ ಕ್ರಮವನ್ನು ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ಎಲ್ಲವನ್ನೂ ಅಳಿಸಿ"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"ನಿಮ್ಮ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ಗೆ ಹೆಸರು ಆಯ್ಕೆಮಾಡಿ"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"ಬಿತ್ತರಿಸುವಾಗ ಅಥವಾ ಇತರ ಸಾಧನಗಳಿಂದ ಅದಕ್ಕೆ ಸಂಪರ್ಕಿಸುವಾಗ ನಿಮ್ಮ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ಅನ್ನು ಗುರುತಿಸಲು ಸಹಾಯಕ್ಕಾಗಿ ಅದಕ್ಕೆ ಹೆಸರನ್ನು ನೀಡಿ."</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"ಬಿತ್ತರಿಸುವಾಗ ಅಥವಾ ಇತರ ಸಾಧನಗಳಿಂದ ಅದಕ್ಕೆ ಸಂಪರ್ಕಿಸುವಾಗ ನಿಮ್ಮ ಸಾಧನವು ಅದನ್ನು ಗುರುತಿಸಲು ಸಹಾಯಕ್ಕಾಗಿ ಅದಕ್ಕೆ ಹೆಸರನ್ನು ನೀಡಿ."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android ಟಿವಿ"</item>
     <item msgid="7449352861592960712">"ಲಿವಿಂಗ್ ರೂಂ ಟಿವಿ"</item>

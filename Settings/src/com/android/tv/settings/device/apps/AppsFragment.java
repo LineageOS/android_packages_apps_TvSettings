@@ -28,9 +28,10 @@ import android.util.ArrayMap;
 import android.util.ArraySet;
 import android.util.Log;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
-import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -39,7 +40,7 @@ import java.util.Set;
 /**
  * Fragment for managing all apps
  */
-public class AppsFragment extends ObservableLeanbackPreferenceFragment {
+public class AppsFragment extends SettingsPreferenceFragment {
 
     private static final String TAG = "AppsFragment";
 
@@ -297,4 +298,8 @@ public class AppsFragment extends ObservableLeanbackPreferenceFragment {
                 }
             };
 
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.APPLICATIONS_INSTALLED_APP_DETAILS;
+    }
 }
