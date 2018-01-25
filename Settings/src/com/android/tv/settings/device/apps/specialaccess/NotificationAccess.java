@@ -35,7 +35,7 @@ import android.util.Log;
 
 import com.android.settingslib.applications.ServiceListing;
 import com.android.tv.settings.R;
-import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.List;
 
@@ -43,7 +43,7 @@ import java.util.List;
  * Settings screen for managing notification listener permissions
  */
 @Keep
-public class NotificationAccess extends ObservableLeanbackPreferenceFragment {
+public class NotificationAccess extends SettingsPreferenceFragment {
     private static final String TAG = "NotificationAccess";
 
     private static final String HEADER_KEY = "header";
@@ -52,6 +52,12 @@ public class NotificationAccess extends ObservableLeanbackPreferenceFragment {
     private PackageManager mPackageManager;
     private ServiceListing mServiceListing;
     private IconDrawableFactory mIconDrawableFactory;
+
+    @Override
+    public int getMetricsCategory() {
+        // TODO(70572789): Finalize metrics categories.
+        return 0;
+    }
 
     @Override
     public void onAttach(Context context) {

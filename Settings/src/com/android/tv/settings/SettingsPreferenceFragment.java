@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.core.lifecycle;
+package com.android.tv.settings;
 
 import static android.arch.lifecycle.Lifecycle.Event.ON_CREATE;
 import static android.arch.lifecycle.Lifecycle.Event.ON_DESTROY;
@@ -33,17 +33,29 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.android.settingslib.core.instrumentation.Instrumentable;
+import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
+import com.android.settingslib.core.instrumentation.VisibilityLoggerMixin;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
 /**
- * {@link LeanbackPreferenceFragment} that has hooks to observe fragment lifecycle events.
+ * A {@link LeanbackPreferenceFragment} that has hooks to observe fragment lifecycle events
+ * and allow for instrumentation.
  */
-public abstract class ObservableLeanbackPreferenceFragment extends LeanbackPreferenceFragment
-        implements LifecycleOwner {
+public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragment
+        implements LifecycleOwner, Instrumentable {
     private final Lifecycle mLifecycle = new Lifecycle(this);
+    private final VisibilityLoggerMixin mVisibilityLoggerMixin;
 
     public Lifecycle getLifecycle() {
         return mLifecycle;
+    }
+
+    public SettingsPreferenceFragment() {
+        // Mixin that logs visibility change for activity.
+        mVisibilityLoggerMixin = new VisibilityLoggerMixin(getMetricsCategory(),
+                new MetricsFeatureProvider());
+        getLifecycle().addObserver(mVisibilityLoggerMixin);
     }
 
     @CallSuper
@@ -84,6 +96,7 @@ public abstract class ObservableLeanbackPreferenceFragment extends LeanbackPrefe
     @CallSuper
     @Override
     public void onResume() {
+        mVisibilityLoggerMixin.setSourceMetricsCategory(getActivity());
         mLifecycle.handleLifecycleEvent(ON_RESUME);
         super.onResume();
     }

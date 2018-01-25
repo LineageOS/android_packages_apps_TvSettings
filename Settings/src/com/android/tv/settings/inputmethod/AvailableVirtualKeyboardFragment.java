@@ -30,15 +30,16 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.PreferenceScreen;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.inputmethod.InputMethodAndSubtypeUtil;
 import com.android.settingslib.inputmethod.InputMethodPreference;
 import com.android.settingslib.inputmethod.InputMethodSettingValuesWrapper;
 import com.android.tv.settings.R;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.text.Collator;
 import java.util.ArrayList;
@@ -47,7 +48,7 @@ import java.util.List;
 /**
  * Fragment for enabling/disabling virtual keyboard IMEs
  */
-public final class AvailableVirtualKeyboardFragment extends LeanbackPreferenceFragment
+public final class AvailableVirtualKeyboardFragment extends SettingsPreferenceFragment
         implements InputMethodPreference.OnSavePreferenceListener {
 
     private final ArrayList<InputMethodPreference> mInputMethodPreferenceList = new ArrayList<>();
@@ -162,5 +163,10 @@ public final class AvailableVirtualKeyboardFragment extends LeanbackPreferenceFr
             InputMethodAndSubtypeUtil.removeUnnecessaryNonPersistentPreference(pref);
             pref.updatePreferenceViews();
         }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.ENABLE_VIRTUAL_KEYBOARDS;
     }
 }

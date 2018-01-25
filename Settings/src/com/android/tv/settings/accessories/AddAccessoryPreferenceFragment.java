@@ -16,6 +16,11 @@
 
 package com.android.tv.settings.accessories;
 
+import static android.arch.lifecycle.Lifecycle.Event.ON_PAUSE;
+import static android.arch.lifecycle.Lifecycle.Event.ON_RESUME;
+
+import android.annotation.CallSuper;
+import android.arch.lifecycle.LifecycleOwner;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -29,13 +34,32 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.util.SparseArray;
 
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settingslib.core.instrumentation.Instrumentable;
+import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
+import com.android.settingslib.core.instrumentation.VisibilityLoggerMixin;
+import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.tv.settings.R;
 
 import java.util.List;
 
-public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragment {
+/**
+ * The screen in TV settings that shows when bluetooth searching/pairing is active.
+ */
+public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragment implements
+        LifecycleOwner, Instrumentable {
 
     private SparseArray<Drawable> mResizedDrawables = new SparseArray<>();
+    private final Lifecycle mLifecycle = new Lifecycle(this);
+    private final VisibilityLoggerMixin mVisibilityLoggerMixin;
+
+    public AddAccessoryPreferenceFragment() {
+        super();
+        // Mixin that logs visibility change for activity.
+        mVisibilityLoggerMixin = new VisibilityLoggerMixin(getMetricsCategory(),
+                new MetricsFeatureProvider());
+        getLifecycle().addObserver(mVisibilityLoggerMixin);
+    }
 
     public static AddAccessoryPreferenceFragment newInstance() {
         return new AddAccessoryPreferenceFragment();
@@ -116,5 +140,29 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
             final int position = (vgv.getSelectedPosition() + 1) % preferenceCount;
             vgv.setSelectedPositionSmooth(position);
         }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.BLUETOOTH_PAIRING;
+    }
+
+    @Override
+    public Lifecycle getLifecycle() {
+        return mLifecycle;
+    }
+
+    @CallSuper
+    @Override
+    public void onResume() {
+        mLifecycle.handleLifecycleEvent(ON_RESUME);
+        super.onResume();
+    }
+
+    @CallSuper
+    @Override
+    public void onPause() {
+        mLifecycle.handleLifecycleEvent(ON_PAUSE);
+        super.onPause();
     }
 }

@@ -26,7 +26,6 @@ import android.util.ArraySet;
 import android.util.Log;
 
 import com.android.settingslib.core.AbstractPreferenceController;
-import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -39,10 +38,16 @@ import java.util.stream.Collectors;
  * {@link AbstractPreferenceController} objects. Based on DashboardFragment from mobile settings,
  * but without the Tile support.
  */
-public abstract class PreferenceControllerFragment extends ObservableLeanbackPreferenceFragment {
+public abstract class PreferenceControllerFragment extends SettingsPreferenceFragment {
     private static final String TAG = "PrefControllerFrag";
 
     private final Set<AbstractPreferenceController> mPreferenceControllers = new ArraySet<>();
+
+    @Override
+    public int getMetricsCategory() {
+        // TODO(70572789): Finalize metrics categories.
+        return 0;
+    }
 
     @Override
     public void onAttach(Context context) {

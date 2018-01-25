@@ -34,20 +34,24 @@ import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
-import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
 
-public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
+/**
+ * The screen in TV settings that let's users rename or unpair a bluetooth device.
+ */
+public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
 
     private static final boolean DEBUG = false;
     private static final String TAG = "BluetoothAccessoryFrag";
@@ -504,5 +508,10 @@ public class BluetoothAccessoryFragment extends LeanbackPreferenceFragment {
                 Log.e(TAG, "Bluetooth device not found. Address = " + mDevice.getAddress());
             }
         }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.DIALOG_BLUETOOTH_PAIRED_DEVICE_PROFILE;
     }
 }
