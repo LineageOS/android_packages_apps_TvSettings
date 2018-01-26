@@ -135,7 +135,6 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
         mEnterSsidState = new EnterSsidState(this);
         mChooseSecurityState = new ChooseSecurityState(this);
         mEnterPasswordState = new EnterPasswordState(this);
-        mEnterSsidState = new EnterSsidState(this);
         mConnectState = new ConnectState(this);
         mConnectTimeOutState = new ConnectTimeOutState(this);
         mConnectRejectedByApState = new ConnectRejectedByApState(this);
@@ -153,8 +152,8 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
             mStateMachine.setStartState(mSelectWifiState);
         }
 
-        AdvancedWifiOptionsFlow.createFlow(
-                this, true, false, null, mOptionsOrConnectState, mConnectState);
+        AdvancedWifiOptionsFlow.createFlow(this, true, false, null,
+                mOptionsOrConnectState, mConnectState, AdvancedWifiOptionsFlow.START_DEFAULT_PAGE);
 
         // Define the transition between different states.
         /** KnownNetwork **/
@@ -272,7 +271,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 mSelectWifiState
         );
 
-        //** Connect Rejected By AP **/
+        /** Connect Rejected By AP **/
         mStateMachine.addState(
                 mConnectRejectedByApState,
                 StateMachine.TRY_AGAIN,

@@ -95,7 +95,7 @@ public class IpSettingsInvalidState implements State {
         public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
             Context context = getActivity();
             actions.add(new GuidedAction.Builder(context)
-                    .title(getString(R.string.title_wifi_ip_settings_invalid))
+                    .title(getString(R.string.wifi_action_try_again))
                     .id(GuidedAction.ACTION_ID_CONTINUE)
                     .build());
         }

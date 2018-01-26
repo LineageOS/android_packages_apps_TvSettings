@@ -109,10 +109,14 @@ public class Dns1State implements State {
 
         @Override
         public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
+            String title = getString(R.string.wifi_dns1_hint);
+            if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.DNS1)) {
+                title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.DNS1);
+            } else if (mAdvancedOptionsFlowInfo.getInitialDns(0) != null) {
+                title = mAdvancedOptionsFlowInfo.getInitialDns(0).getHostAddress();
+            }
+
             Context context = getActivity();
-            String title = mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.DNS1)
-                    ? mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.DNS1)
-                    : getString(R.string.wifi_dns1_hint);
             mAction = new GuidedAction.Builder(context)
                     .editTitle(title)
                     .editable(true)

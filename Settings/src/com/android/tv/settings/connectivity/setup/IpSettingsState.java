@@ -18,6 +18,7 @@ package com.android.tv.settings.connectivity.setup;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
+import android.net.IpConfiguration;
 import android.os.Bundle;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
@@ -100,7 +101,15 @@ public class IpSettingsState implements State {
         @Override
         public void onViewCreated(View view, Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
-            CharSequence title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.IP_SETTINGS);
+            CharSequence title;
+            if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.IP_SETTINGS)) {
+                title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.IP_SETTINGS);
+            } else if (mAdvancedOptionsFlowInfo.getIpConfiguration().getIpAssignment()
+                        == IpConfiguration.IpAssignment.STATIC) {
+                title = getString(R.string.wifi_action_static);
+            } else {
+                title = getString(R.string.wifi_action_dhcp);
+            }
             moveToPosition(title);
         }
 

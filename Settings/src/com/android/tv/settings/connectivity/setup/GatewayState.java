@@ -110,10 +110,14 @@ public class GatewayState implements State {
 
         @Override
         public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
+            String title = getString(R.string.wifi_gateway_hint);
+            if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.GATEWAY)) {
+                title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.GATEWAY);
+            } else if (mAdvancedOptionsFlowInfo.getInitialGateway() != null) {
+                title = mAdvancedOptionsFlowInfo.getInitialGateway().getHostAddress();
+            }
+
             Context context = getActivity();
-            String title = mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.GATEWAY)
-                    ? mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.GATEWAY)
-                    : getString(R.string.wifi_gateway_hint);
             mAction = new GuidedAction.Builder(context)
                     .editTitle(title)
                     .editable(true)
