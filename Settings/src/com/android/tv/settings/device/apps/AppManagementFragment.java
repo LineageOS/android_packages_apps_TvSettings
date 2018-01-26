@@ -34,6 +34,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -94,8 +95,7 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        // TODO(70572789): Finalize metrics categories.
-        return 0;
+        return MetricsProto.MetricsEvent.APPLICATIONS_INSTALLED_APP_DETAILS;
     }
 
     @Override

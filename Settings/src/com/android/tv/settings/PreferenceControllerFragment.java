@@ -44,12 +44,6 @@ public abstract class PreferenceControllerFragment extends SettingsPreferenceFra
     private final Set<AbstractPreferenceController> mPreferenceControllers = new ArraySet<>();
 
     @Override
-    public int getMetricsCategory() {
-        // TODO(70572789): Finalize metrics categories.
-        return 0;
-    }
-
-    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         List<AbstractPreferenceController> controllers = onCreatePreferenceControllers(context);

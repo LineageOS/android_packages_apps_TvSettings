@@ -26,6 +26,7 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.TwoStatePreference;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 
@@ -36,6 +37,11 @@ import com.android.tv.settings.R;
 public class SystemAlertWindow extends ManageAppOp {
 
     private AppOpsManager mAppOpsManager;
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.SYSTEM_ALERT_WINDOW_APPS;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

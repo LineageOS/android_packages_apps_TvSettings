@@ -25,6 +25,7 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.TwoStatePreference;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.fuelgauge.PowerWhitelistBackend;
 import com.android.tv.settings.R;
@@ -59,8 +60,7 @@ public class HighPower extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        // TODO(70572789): Finalize metrics categories.
-        return 0;
+        return MetricsProto.MetricsEvent.APPLICATIONS_HIGH_POWER_APPS;
     }
 
     @Override
