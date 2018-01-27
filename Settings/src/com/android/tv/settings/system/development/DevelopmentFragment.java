@@ -62,6 +62,7 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.Toast;
 
 import com.android.internal.app.LocalePicker;
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.core.ConfirmationDialogController;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.settingslib.development.SystemPropPoker;
@@ -247,8 +248,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        // TODO(70572789): Finalize metrics cateogries.
-        return 0;
+        return MetricsProto.MetricsEvent.DEVELOPMENT;
     }
 
     @Override

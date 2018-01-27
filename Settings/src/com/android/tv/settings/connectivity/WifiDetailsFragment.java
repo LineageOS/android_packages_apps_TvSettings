@@ -28,6 +28,7 @@ import android.support.v17.leanback.widget.GuidedAction;
 import android.support.v7.preference.Preference;
 import android.text.TextUtils;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -69,8 +70,7 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        // TODO(70572789): Finalize metrics categories.
-        return 0;
+        return MetricsProto.MetricsEvent.WIFI_NETWORK_DETAILS;
     }
 
     @Override

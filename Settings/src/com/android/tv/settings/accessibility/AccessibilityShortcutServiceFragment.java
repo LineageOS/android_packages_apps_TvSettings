@@ -30,6 +30,7 @@ import android.support.v7.preference.PreferenceScreen;
 import android.text.TextUtils;
 import android.view.accessibility.AccessibilityManager;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -107,7 +108,6 @@ public class AccessibilityShortcutServiceFragment extends SettingsPreferenceFrag
 
     @Override
     public int getMetricsCategory() {
-        // TODO(70572789): Finalize metrics categories.
-        return 0;
+        return MetricsProto.MetricsEvent.ACCESSIBILITY_SERVICE;
     }
 }
