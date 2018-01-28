@@ -36,7 +36,7 @@ public class StateMachine extends ViewModel {
 
     private Callback mCallback;
     private Map<State, List<Transition>> mTransitionMap = new HashMap<>();
-    private final LinkedList<State> mStatesList = new LinkedList<>();
+    private LinkedList<State> mStatesList = new LinkedList<>();
     private State.StateCompleteListener mCompletionListener =
             new State.StateCompleteListener() {
                 @Override
@@ -70,6 +70,11 @@ public class StateMachine extends ViewModel {
     public static final int ADVANCED_FLOW_COMPLETE = 22;
     public static final int ENTER_ADVANCED_FLOW = 23;
     public static final int EXIT_ADVANCED_FLOW = 24;
+    public static final int WPS_ENTER_PIN = 25;
+    public static final int WPS_SUCCESS = 26;
+    public static final int WPS_ERROR = 27;
+    public static final int WPS_SCANNING = 28;
+    public static final int WPS_START = 29;
 
     @IntDef({
             ADD_START,
@@ -95,7 +100,12 @@ public class StateMachine extends ViewModel {
             PROXY_SETTINGS_INVALID,
             ADVANCED_FLOW_COMPLETE,
             ENTER_ADVANCED_FLOW,
-            EXIT_ADVANCED_FLOW})
+            EXIT_ADVANCED_FLOW,
+            WPS_ENTER_PIN,
+            WPS_SUCCESS,
+            WPS_ERROR,
+            WPS_SCANNING,
+            WPS_START})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Event {
     }
@@ -170,6 +180,13 @@ public class StateMachine extends ViewModel {
         } else {
             currentState.processBackward();
         }
+    }
+
+    /**
+     * Initialize the states list.
+     */
+    public void reset() {
+        mStatesList = new LinkedList<>();
     }
 
     /**

@@ -18,6 +18,7 @@ package com.android.tv.settings.about;
 
 import android.content.Context;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.deviceinfo.AbstractSimStatusImeiInfoPreferenceController;
@@ -40,6 +41,11 @@ public class StatusFragment extends PreferenceControllerFragment {
 
     public static StatusFragment newInstance() {
         return new StatusFragment();
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.DEVICEINFO_STATUS;
     }
 
     @Override

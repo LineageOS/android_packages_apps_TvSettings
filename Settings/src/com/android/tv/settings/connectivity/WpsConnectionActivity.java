@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2017 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,173 +16,212 @@
 
 package com.android.tv.settings.connectivity;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.net.wifi.WifiManager;
-import android.net.wifi.WifiManager.WpsCallback;
-import android.net.wifi.WpsInfo;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.connectivity.setup.SelectFromListWizardFragment;
-import com.android.tv.settings.dialog.old.DialogActivity;
+import com.android.tv.settings.connectivity.setup.SuccessState;
+import com.android.tv.settings.connectivity.util.State;
+import com.android.tv.settings.connectivity.util.StateMachine;
 import com.android.tv.settings.util.ThemeHelper;
 
-import java.util.ArrayList;
-
-public class WpsConnectionActivity extends DialogActivity
-        implements SelectFromListWizardFragment.Listener, TimedMessageWizardFragment.Listener {
-
+/**
+ * Activity responsible for setting up Wi-Fi using WPS methods.
+ */
+public class WpsConnectionActivity extends FragmentActivity
+        implements State.FragmentChangeListener {
     private static final String WPS_FRAGMENT_TAG = "wps_fragment_tag";
 
-    private WifiManager mWifiManager;
-    private boolean mWpsComplete;
-    private boolean mActive;
+    private StateMachine mStateMachine;
+    private State mWpsErrorState;
+    private State mWpsEnterPinState;
+    private State mWpsScanningState;
+    private State mWpsSuccessState;
+    private State mWpsStartState;
+    private WpsFlowInfo mWpsFlowInfo;
 
-    private final WpsCallback mWpsCallback = new WpsCallback() {
+    private final StateMachine.Callback mStateMachineCallback = new StateMachine.Callback() {
         @Override
-        public void onStarted(String pin) {
-            if (pin != null && mActive) {
-                displayFragment(createEnterPinFragment(pin), true);
-            }
-        }
-
-        @Override
-        public void onSucceeded() {
-            mWpsComplete = true;
-
-            if (!mActive) {
-                return;
-            }
-
-            displayFragment(createSuccessFragment(), true);
-        }
-
-        @Override
-        public void onFailed(int reason) {
-            mWpsComplete = true;
-
-            if (!mActive) {
-                return;
-            }
-
-            String errorMessage;
-            switch (reason) {
-                case WifiManager.WPS_OVERLAP_ERROR:
-                    errorMessage = getString(R.string.wifi_wps_failed_overlap);
-                    break;
-                case WifiManager.WPS_WEP_PROHIBITED:
-                    errorMessage = getString(R.string.wifi_wps_failed_wep);
-                    break;
-                case WifiManager.WPS_TKIP_ONLY_PROHIBITED:
-                    errorMessage = getString(R.string.wifi_wps_failed_tkip);
-                    break;
-                case WifiManager.IN_PROGRESS:
-                    mWifiManager.cancelWps(null);
-                    startWps();
-                    return;
-                case WifiManager.WPS_TIMED_OUT:
-                    startWps();
-                    return;
-                default:
-                    errorMessage = getString(R.string.wifi_wps_failed_generic);
-                    break;
-            }
-            displayFragment(createErrorFragment(errorMessage), true);
+        public void onFinish(int result) {
+            setResult(result);
+            finish();
         }
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(ThemeHelper.getThemeResource(getIntent()));
-        setLayoutProperties(R.layout.setup_auth_activity, R.id.description, R.id.action);
         super.onCreate(savedInstanceState);
-        mWifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-
+        setTheme(ThemeHelper.getThemeResource(getIntent()));
+        setContentView(R.layout.wifi_container);
+        WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        mStateMachine = ViewModelProviders.of(this).get(StateMachine.class);
+        mStateMachine.setCallback(mStateMachineCallback);
+        mWpsFlowInfo = ViewModelProviders.of(this).get(WpsFlowInfo.class);
+        mWpsFlowInfo.setWifiManager(wifiManager);
         overridePendingTransition(R.anim.wps_activity_open_in, R.anim.wps_activity_open_out);
 
         if (ThemeHelper.fromSetupWizard(getIntent())) {
             setTitle(getResources().getString(R.string.wifi_wps_title));
         }
+
+        mWpsStartState = new WpsStartState(this);
+        mWpsScanningState = new WpsScanningState(this);
+        mWpsEnterPinState = new WpsEnterPinState(this);
+        mWpsErrorState = new WpsErrorState(this);
+        mWpsSuccessState = new SuccessState(this);
+
+        /** Wps Start  **/
+        mStateMachine.addState(
+                mWpsStartState,
+                StateMachine.WPS_ENTER_PIN,
+                mWpsEnterPinState);
+        mStateMachine.addState(
+                mWpsStartState,
+                StateMachine.WPS_SCANNING,
+                mWpsScanningState
+        );
+
+        /** Wps Scanning **/
+        mStateMachine.addState(
+                mWpsScanningState,
+                StateMachine.WPS_SUCCESS,
+                mWpsSuccessState
+        );
+        mStateMachine.addState(
+                mWpsScanningState,
+                StateMachine.WPS_ERROR,
+                mWpsErrorState
+        );
+        mStateMachine.addState(
+                mWpsScanningState,
+                StateMachine.WPS_SCANNING,
+                mWpsScanningState
+        );
+
+        /** Wps Enter Pin **/
+        mStateMachine.addState(
+                mWpsEnterPinState,
+                StateMachine.WPS_ERROR,
+                mWpsErrorState);
+        mStateMachine.addState(
+                mWpsEnterPinState,
+                StateMachine.WPS_SUCCESS,
+                mWpsSuccessState
+        );
+        mStateMachine.addState(
+                mWpsEnterPinState,
+                StateMachine.WPS_ENTER_PIN,
+                mWpsEnterPinState
+        );
+
+        /** Wps Error **/
+        mStateMachine.addState(
+                mWpsErrorState,
+                StateMachine.WPS_START,
+                mWpsStartState
+        );
+
+        mWpsFlowInfo.setWpsCallback(new WifiManager.WpsCallback() {
+            @Override
+            public void onStarted(String pin) {
+                if (pin != null && mWpsFlowInfo.isActive()) {
+                    mWpsFlowInfo.setPin(pin);
+                    mStateMachine.getListener().onComplete(StateMachine.WPS_ENTER_PIN);
+                } else {
+                    mStateMachine.getListener().onComplete(StateMachine.WPS_SCANNING);
+                }
+            }
+
+            @Override
+            public void onSucceeded() {
+                mWpsFlowInfo.setWpsComplete(true);
+                if (!mWpsFlowInfo.isActive()) {
+                    return;
+                }
+                mStateMachine.getListener().onComplete(StateMachine.WPS_SUCCESS);
+            }
+
+            @Override
+            public void onFailed(int reason) {
+                mWpsFlowInfo.setWpsComplete(true);
+                if (!mWpsFlowInfo.isActive()) {
+                    return;
+                }
+
+                String errorMessage;
+                switch (reason) {
+                    case WifiManager.WPS_OVERLAP_ERROR:
+                        errorMessage = getString(R.string.wifi_wps_failed_overlap);
+                        break;
+                    case WifiManager.WPS_WEP_PROHIBITED:
+                        errorMessage = getString(R.string.wifi_wps_failed_wep);
+                        break;
+                    case WifiManager.WPS_TKIP_ONLY_PROHIBITED:
+                        errorMessage = getString(R.string.wifi_wps_failed_tkip);
+                        break;
+                    case WifiManager.IN_PROGRESS:
+                        mWpsFlowInfo.getWifiManager().cancelWps(null);
+                        if (mStateMachine.getCurrentState() == mWpsScanningState) {
+                            mStateMachine.getListener().onComplete(StateMachine.WPS_SCANNING);
+                        } else  if (mStateMachine.getCurrentState() == mWpsEnterPinState) {
+                            mStateMachine.getListener().onComplete(StateMachine.WPS_ENTER_PIN);
+                        }
+                        return;
+                    case WifiManager.WPS_TIMED_OUT:
+                        if (mStateMachine.getCurrentState() == mWpsScanningState) {
+                            mStateMachine.getListener().onComplete(StateMachine.WPS_SCANNING);
+                        } else  if (mStateMachine.getCurrentState() == mWpsEnterPinState) {
+                            mStateMachine.getListener().onComplete(StateMachine.WPS_ENTER_PIN);
+                        }
+                        return;
+                    default:
+                        errorMessage = getString(R.string.wifi_wps_failed_generic);
+                        break;
+                }
+                mWpsFlowInfo.setErrorMessage(errorMessage);
+                mStateMachine.getListener().onComplete(StateMachine.WPS_ERROR);
+            }
+        });
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         // Must be set before all other actions.
-        mActive = true;
-
-        startWps();
+        mWpsFlowInfo.setActive(true);
+        mStateMachine.reset();
+        mStateMachine.setStartState(mWpsStartState);
+        mStateMachine.start(true);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mActive = false;
+        mWpsFlowInfo.setActive(false);
 
-        if (!mWpsComplete) {
-            mWifiManager.cancelWps(null);
+        if (!mWpsFlowInfo.isWpsComplete()) {
+            mWpsFlowInfo.getWifiManager().cancelWps(null);
         }
     }
 
     @Override
-    public void onTimedMessageCompleted() {
-        setResult(RESULT_OK);
-        finish();
+    public void onBackPressed() {
+        mStateMachine.back();
     }
 
     @Override
-    public void onListSelectionComplete(SelectFromListWizardFragment.ListItem listItem) {
-        startWps();
-    }
-
-    @Override
-    public void onListFocusChanged(SelectFromListWizardFragment.ListItem listItem) {
-        // Do nothing.
-    }
-
-    private void startWps() {
-        Fragment currentFragment = getFragmentManager().findFragmentByTag(WPS_FRAGMENT_TAG);
-        if (!(currentFragment instanceof WpsScanningFragment)) {
-            displayFragment(createWpsScanningFragment(), true);
-        }
-        mWpsComplete = false;
-        WpsInfo wpsConfig = new WpsInfo();
-        wpsConfig.setup = WpsInfo.PBC;
-        mWifiManager.startWps(wpsConfig, mWpsCallback);
-    }
-
-    private Fragment createWpsScanningFragment() {
-        return WpsScanningFragment.newInstance();
-    }
-
-    private Fragment createEnterPinFragment(String pin) {
-        return WpsPinFragment.newInstance(pin);
-    }
-
-    private Fragment createErrorFragment(String errorMessage) {
-        SelectFromListWizardFragment.ListItem retryListItem =
-                new SelectFromListWizardFragment.ListItem(
-                        getString(R.string.wifi_wps_retry_scan), 0);
-        ArrayList<SelectFromListWizardFragment.ListItem> listItems = new ArrayList<>();
-        listItems.add(retryListItem);
-        return SelectFromListWizardFragment.newInstance(errorMessage, null, listItems,
-                retryListItem);
-    }
-
-    private Fragment createSuccessFragment() {
-        return TimedMessageWizardFragment.newInstance(
-                getString(R.string.wifi_setup_connection_success));
-    }
-
-    private void displayFragment(Fragment fragment, boolean forward) {
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+    public void onFragmentChange(Fragment fragment, boolean forward) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         if (forward) {
             transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         } else {
             transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
         }
-        transaction.replace(R.id.content, fragment, WPS_FRAGMENT_TAG).commit();
+        transaction.replace(R.id.wifi_container, fragment, WPS_FRAGMENT_TAG).commit();
     }
 }

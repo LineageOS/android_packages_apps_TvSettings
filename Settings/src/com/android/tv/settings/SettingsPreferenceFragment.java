@@ -46,15 +46,17 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
         implements LifecycleOwner, Instrumentable {
     private final Lifecycle mLifecycle = new Lifecycle(this);
     private final VisibilityLoggerMixin mVisibilityLoggerMixin;
+    protected MetricsFeatureProvider mMetricsFeatureProvider;
 
     public Lifecycle getLifecycle() {
         return mLifecycle;
     }
 
     public SettingsPreferenceFragment() {
+        mMetricsFeatureProvider = new MetricsFeatureProvider();
         // Mixin that logs visibility change for activity.
         mVisibilityLoggerMixin = new VisibilityLoggerMixin(getMetricsCategory(),
-                new MetricsFeatureProvider());
+                mMetricsFeatureProvider);
         getLifecycle().addObserver(mVisibilityLoggerMixin);
     }
 

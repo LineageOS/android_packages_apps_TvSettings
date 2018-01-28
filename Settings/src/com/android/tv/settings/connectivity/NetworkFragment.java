@@ -141,6 +141,17 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         switch (preference.getKey()) {
             case KEY_WIFI_ENABLE:
                 mConnectivityListener.setWifiEnabled(mEnableWifiPref.isChecked());
+                if (mMetricsFeatureProvider != null) {
+                    if (mEnableWifiPref.isChecked()) {
+                        mMetricsFeatureProvider.action(getContext(),
+                                MetricsProto.MetricsEvent.ACTION_WIFI_ON);
+                    } else {
+                        // Log if user was connected at the time of switching off.
+                        mMetricsFeatureProvider.action(getContext(),
+                                MetricsProto.MetricsEvent.ACTION_WIFI_OFF,
+                                mConnectivityListener.isWifiConnected());
+                    }
+                }
                 return true;
             case KEY_WIFI_COLLAPSE:
                 final boolean collapse = !mWifiNetworksCategory.isCollapsed();

@@ -33,6 +33,7 @@ import android.support.v7.preference.PreferenceScreen;
 import android.util.IconDrawableFactory;
 import android.util.Log;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.applications.ServiceListing;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -55,8 +56,7 @@ public class NotificationAccess extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        // TODO(70572789): Finalize metrics categories.
-        return 0;
+        return MetricsProto.MetricsEvent.NOTIFICATION_ACCESS;
     }
 
     @Override

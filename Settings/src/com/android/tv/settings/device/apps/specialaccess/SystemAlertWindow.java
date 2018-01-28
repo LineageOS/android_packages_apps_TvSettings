@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,17 +31,16 @@ import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 
 /**
- * Fragment for controlling if apps can monitor app usage
+ * Settings screen for managing "Display over other apps" permission
  */
 @Keep
-public class AppUsageAccess extends ManageAppOp
-        implements ManageApplicationsController.Callback {
+public class SystemAlertWindow extends ManageAppOp {
 
     private AppOpsManager mAppOpsManager;
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.USAGE_ACCESS;
+        return MetricsProto.MetricsEvent.SYSTEM_ALERT_WINDOW_APPS;
     }
 
     @Override
@@ -52,12 +51,17 @@ public class AppUsageAccess extends ManageAppOp
 
     @Override
     public int getAppOpsOpCode() {
-        return AppOpsManager.OP_GET_USAGE_STATS;
+        return AppOpsManager.OP_SYSTEM_ALERT_WINDOW;
     }
 
     @Override
     public String getPermission() {
-        return Manifest.permission.PACKAGE_USAGE_STATS;
+        return Manifest.permission.SYSTEM_ALERT_WINDOW;
+    }
+
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        setPreferencesFromResource(R.xml.system_alert_window, null);
     }
 
     @NonNull
@@ -69,7 +73,7 @@ public class AppUsageAccess extends ManageAppOp
         switchPref.setKey(entry.info.packageName);
         switchPref.setIcon(entry.icon);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
-            setAppUsageAccess(entry, (Boolean) newValue);
+            setSystemAlertWindowAccess(entry, (Boolean) newValue);
             return true;
         });
 
@@ -85,9 +89,17 @@ public class AppUsageAccess extends ManageAppOp
         return new SwitchPreference(getPreferenceManager().getContext());
     }
 
+    @NonNull
     @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.app_usage_access, null);
+    public PreferenceGroup getAppPreferenceGroup() {
+        return getPreferenceScreen();
+    }
+
+    private void setSystemAlertWindowAccess(ApplicationsState.AppEntry entry, boolean grant) {
+        mAppOpsManager.setMode(AppOpsManager.OP_SYSTEM_ALERT_WINDOW,
+                entry.info.uid, entry.info.packageName,
+                grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
+        updateAppList();
     }
 
     private CharSequence getPreferenceSummary(ApplicationsState.AppEntry entry) {
@@ -98,18 +110,5 @@ public class AppUsageAccess extends ManageAppOp
         } else {
             return null;
         }
-    }
-
-    private void setAppUsageAccess(ApplicationsState.AppEntry entry, boolean grant) {
-        mAppOpsManager.setMode(AppOpsManager.OP_GET_USAGE_STATS,
-                entry.info.uid, entry.info.packageName,
-                grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_IGNORED);
-        updateAppList();
-    }
-
-    @NonNull
-    @Override
-    public PreferenceGroup getAppPreferenceGroup() {
-        return getPreferenceScreen();
     }
 }

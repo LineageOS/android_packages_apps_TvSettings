@@ -48,12 +48,6 @@ public abstract class ManageAppOp extends SettingsPreferenceFragment
     private ManageApplicationsController mManageApplicationsController;
 
     @Override
-    public int getMetricsCategory() {
-        // TODO(70572789): Finalize metrics categories.
-        return 0;
-    }
-
-    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         mManageApplicationsController = new ManageApplicationsController(context, this,
