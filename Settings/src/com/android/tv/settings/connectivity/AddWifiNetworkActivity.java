@@ -206,4 +206,10 @@ public class AddWifiNetworkActivity extends WifiMultiPagedFormActivity
             connect();
         }
     }
+
+    @Override
+    public int getMetricsCategory() {
+        // do not log visibility.
+        return METRICS_CATEGORY_UNKNOWN;
+    }
 }

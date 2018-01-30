@@ -21,19 +21,20 @@ import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.SuccessState;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
+import com.android.tv.settings.core.instrumentation.InstrumentedActivity;
 import com.android.tv.settings.util.ThemeHelper;
 
 /**
  * Activity responsible for setting up Wi-Fi using WPS methods.
  */
-public class WpsConnectionActivity extends FragmentActivity
+public class WpsConnectionActivity extends InstrumentedActivity
         implements State.FragmentChangeListener {
     private static final String WPS_FRAGMENT_TAG = "wps_fragment_tag";
 
@@ -58,7 +59,8 @@ public class WpsConnectionActivity extends FragmentActivity
         super.onCreate(savedInstanceState);
         setTheme(ThemeHelper.getThemeResource(getIntent()));
         setContentView(R.layout.wifi_container);
-        WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(
+                Context.WIFI_SERVICE);
         mStateMachine = ViewModelProviders.of(this).get(StateMachine.class);
         mStateMachine.setCallback(mStateMachineCallback);
         mWpsFlowInfo = ViewModelProviders.of(this).get(WpsFlowInfo.class);
@@ -223,5 +225,10 @@ public class WpsConnectionActivity extends FragmentActivity
             transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
         }
         transaction.replace(R.id.wifi_container, fragment, WPS_FRAGMENT_TAG).commit();
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.DIALOG_WPS_SETUP;
     }
 }

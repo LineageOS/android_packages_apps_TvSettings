@@ -20,7 +20,7 @@
     android:title="@string/accessibility_captions" >
     <SwitchPreference
         android:key="captions_display"
-        android:persistent="false"
+        android:persistent="true"
         android:title="@string/captions_display" />
 
     <PreferenceCategory
@@ -42,27 +42,27 @@
         android:title="@string/captions_captionstyle" >
         <com.android.tv.settings.RadioPreference
             android:key="captions_style_0"
-            android:persistent="false"
+            android:persistent="true"
             android:title="@string/captions_style_0"
             app:radioGroup="captions_style" />
         <com.android.tv.settings.RadioPreference
             android:key="captions_style_1"
-            android:persistent="false"
+            android:persistent="true"
             android:title="@string/captions_style_1"
             app:radioGroup="captions_style" />
         <com.android.tv.settings.RadioPreference
             android:key="captions_style_2"
-            android:persistent="false"
+            android:persistent="true"
             android:title="@string/captions_style_2"
             app:radioGroup="captions_style" />
         <com.android.tv.settings.RadioPreference
             android:key="captions_style_3"
-            android:persistent="false"
+            android:persistent="true"
             android:title="@string/captions_style_3"
             app:radioGroup="captions_style" />
         <com.android.tv.settings.RadioPreference
             android:key="captions_style_custom"
-            android:persistent="false"
+            android:persistent="true"
             android:title="@string/captions_style_custom"
             app:radioGroup="captions_style"
             android:fragment="com.android.tv.settings.system.development.CaptionCustomFragment" />

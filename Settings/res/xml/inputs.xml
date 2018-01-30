@@ -34,17 +34,17 @@
         android:title="@string/inputs_header_cec" >
         <SwitchPreference
             android:key="hdmi_control"
-            android:persistent="false"
+            android:persistent="true"
             android:title="@string/inputs_hdmi_control"
             android:summary="@string/inputs_hdmi_control_desc" />
         <SwitchPreference
             android:key="device_auto_off"
-            android:persistent="false"
+            android:persistent="true"
             android:title="@string/inputs_device_auto_off"
             android:summary="@string/inputs_device_auto_off_desc" />
         <SwitchPreference
             android:key="tv_auto_on"
-            android:persistent="false"
+            android:persistent="true"
             android:title="@string/inputs_tv_auto_on"
             android:summary="@string/inputs_tv_auto_on_desc" />
     </PreferenceCategory>

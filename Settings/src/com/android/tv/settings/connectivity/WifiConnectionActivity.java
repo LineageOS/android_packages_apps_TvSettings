@@ -23,6 +23,7 @@ import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.util.WifiSecurityUtil;
@@ -98,14 +99,20 @@ public class WifiConnectionActivity extends WifiMultiPagedFormActivity
         switch (formPageType) {
             case KNOWN_NETWORK:
                 if (choiceChosen(formPage, R.string.wifi_connect)) {
+                    mMetricsFeatureProvider.action(mVisibilityLoggerMixin,
+                            MetricsProto.MetricsEvent.ACTION_WIFI_CONNECT, true);
                     addStartPage();
                 } else if (choiceChosen(formPage, R.string.wifi_forget_network)) {
+                    mMetricsFeatureProvider.action(this,
+                            MetricsProto.MetricsEvent.ACTION_WIFI_FORGET);
                     WifiConfigHelper.forgetConfiguration(this, mConfiguration);
                     setResult(RESULT_OK);
                     finish();
                 }
                 break;
             case ENTER_PASSWORD:
+                mMetricsFeatureProvider.action(mVisibilityLoggerMixin,
+                        MetricsProto.MetricsEvent.ACTION_WIFI_CONNECT, false);
                 mPasswordPage = formPage;
                 String password = formPage.getDataSummary();
                 setWifiConfigurationPassword(mConfiguration, mWifiSecurity, password);
@@ -238,5 +245,11 @@ public class WifiConnectionActivity extends WifiMultiPagedFormActivity
         } else {
             connect();
         }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        // do not log visibility
+        return METRICS_CATEGORY_UNKNOWN;
     }
 }

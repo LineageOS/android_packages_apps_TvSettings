@@ -23,6 +23,7 @@ import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.form.FormPage;
 import com.android.tv.settings.form.FormPageResultListener;
 
@@ -149,5 +150,12 @@ public class EditProxySettingsActivity extends WifiMultiPagedFormActivity
     private void save() {
         mAdvancedWifiOptionsFlow.updateConfiguration(mConfiguration);
         addPage(WifiFormPageType.SAVE);
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        // TODO(70572789): May need new log event here. On ATV IP Settings and Proxy
+        // Settings are separate activities.
+        return MetricsProto.MetricsEvent.DIALOG_WIFI_AP_EDIT;
     }
 }
