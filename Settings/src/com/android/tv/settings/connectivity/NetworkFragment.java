@@ -166,6 +166,10 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 return true;
             case KEY_ETHERNET_STATUS:
                 return true;
+            case KEY_WIFI_ADD:
+                mMetricsFeatureProvider.action(getActivity(),
+                        MetricsProto.MetricsEvent.ACTION_WIFI_ADD_NETWORK);
+                break;
         }
         return super.onPreferenceTreeClick(preference);
     }

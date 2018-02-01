@@ -23,6 +23,7 @@ import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.form.FormPage;
 import com.android.tv.settings.form.FormPageResultListener;
 
@@ -144,5 +145,10 @@ public class EditIpSettingsActivity extends WifiMultiPagedFormActivity
     private void save() {
         mAdvancedWifiOptionsFlow.updateConfiguration(mConfiguration);
         addPage(WifiFormPageType.SAVE);
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.DIALOG_WIFI_AP_EDIT;
     }
 }

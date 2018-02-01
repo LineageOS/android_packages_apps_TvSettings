@@ -20,12 +20,12 @@
 
     <SwitchPreference
         android:key="sound_effects"
-        android:persistent="false"
+        android:persistent="true"
         android:title="@string/device_sound_effects"/>
 
     <ListPreference
         android:key="surround_passthrough"
-        android:persistent="false"
+        android:persistent="true"
         android:entries="@array/surround_sound_entries"
         android:entryValues="@array/surround_sound_entry_values"
         android:title="@string/device_surround_sound"
