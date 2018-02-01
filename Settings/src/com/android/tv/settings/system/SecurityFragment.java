@@ -349,7 +349,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 pinDialogMode = PinDialogFragment.PIN_DIALOG_TYPE_NEW_PIN;
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_DELETE:
-                pinDialogMode = PinDialogFragment.PIN_DIALOG_TYPE_ENTER_PIN;
+                pinDialogMode = PinDialogFragment.PIN_DIALOG_TYPE_DELETE_PIN;
                 break;
             default:
                 throw new IllegalArgumentException("Unknown pin mode: " + pinMode);
@@ -363,9 +363,14 @@ public class SecurityFragment extends SettingsPreferenceFragment
     }
 
     @Override
-    public void saveLockPassword(String pin, int quality) {
-        new LockPatternUtils(getActivity()).saveLockPassword(pin, null, quality,
+    public void saveLockPassword(String pin, String originalPin, int quality) {
+        new LockPatternUtils(getActivity()).saveLockPassword(pin, originalPin, quality,
                 UserHandle.myUserId());
+    }
+
+    @Override
+    public void clearLockPassword(String oldPin) {
+        new LockPatternUtils(getActivity()).clearLock(oldPin, UserHandle.myUserId());
     }
 
     @Override
@@ -425,7 +430,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
             case PIN_MODE_RESTRICTED_PROFILE_DELETE:
                 if (success) {
                     removeRestrictedUser();
-                    new LockPatternUtils(getActivity()).clearLock(null, UserHandle.myUserId());
                 }
                 break;
         }
