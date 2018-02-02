@@ -1510,5 +1510,15 @@
     <!-- Description of allowing overlay setting [CHAR LIMIT=NONE] -->
     <string name="allow_overlay_description">Allow an app to display on top of other apps you\u2019re using. It may interfere with your use of those apps or change the way they seem to appear or behave.</string>
 
+    <!-- Main settings screen item's title to go into the write system settings screen [CHAR LIMIT=30] -->
+    <string name="write_system_settings">Modify system settings</string>
+    <!-- Title for the apps that are allowed to write system settings [CHAR LIMIT=60] -->
+    <string name="write_settings_title">Can modify system settings</string>
+    <!-- Description of the write system settings [CHAR LIMIT=NONE] -->
+    <string name="write_settings_description">This permission allows an app to modify system settings.</string>
+    <!-- Summary of app allowed to write system settings [CHAR LIMIT=45] -->
+    <string name="write_settings_on">Yes</string>
+    <!-- Summary of app not allowed to write system settings [CHAR LIMIT=45] -->
+    <string name="write_settings_off">No</string>
 
 </resources>
