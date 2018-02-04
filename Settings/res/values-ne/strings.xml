@@ -20,6 +20,7 @@
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"सेटिङहरू"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"नेटवर्क"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"प्रतिबन्धित प्रोफाइल"</string>
+    <string name="header_category_suggestions" msgid="6732367439328586933">"सुझावहरू"</string>
     <string name="header_category_device" msgid="4855983928659541345">"उपकरण"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"प्राथमिकताहरू"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"रिमोट र amp; एसेसरिज"</string>
@@ -193,7 +194,7 @@
     <string name="title_wifi_dns1" msgid="8202712852864206601">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="2673986973918499478">"DNS 2:"</string>
     <string name="title_wifi_proxy_settings_invalid" msgid="7380479044141040849">"प्रोक्सी सेटिङहरू वैध छैनन्"</string>
-    <string name="title_wifi_ip_settings_invalid" msgid="7228948551397955678">"IP सेटिङ्हरू वैध छैनन्"</string>
+    <string name="title_wifi_ip_settings_invalid" msgid="7228948551397955678">"IP सेटिङहरू वैध छैनन्"</string>
     <string name="title_wifi_known_network" msgid="819998498700202436">"<xliff:g id="SSID">%1$s</xliff:g> सुरक्षित नेटवर्क हो"</string>
     <string name="wifi_action_try_again" msgid="3308643222864163092">"पुनः प्रयास गर्नुहोस्"</string>
     <string name="wifi_action_view_available_networks" msgid="560074338908947419">"उपलब्ध नेटवर्कहरू अवलोकन गर्नुहोस्"</string>
@@ -326,6 +327,9 @@
     <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Wi-Fi राउटरको सुरक्षा सेटिङले (WEP) समर्थन गरेन"</string>
     <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Wi-Fi राउटरको सुरक्षा सेटिङले (WEP) समर्थन गरेन"</string>
     <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"अर्को WPS सत्र प्रकृयामा छ। केही मिनेटमा पुनः प्रयास गर्नुहोस्।"</string>
+    <string name="wifi_wps_start_title" msgid="7448016607208427187">"WPS को आफ्नो विधि चयन गर्नुहोस्"</string>
+    <string name="wifi_wps_action_push_button" msgid="3295053933961963105">"WPS को थिच्ने बटन"</string>
+    <string name="wifi_wps_action_pin_entry" msgid="3921490121142056571">"WPS को Pin प्रविष्टि"</string>
     <string name="system_date" msgid="2767108116769558081">"मिति"</string>
     <string name="system_time" msgid="6726022312605226285">"समय"</string>
     <string name="system_set_date" msgid="2437586307768561116">"मिति सेट गर्नुहोस्"</string>
@@ -366,7 +370,7 @@
     <string name="delete_location_history_title" msgid="5804802702252280549">"स्थान इतिहास मेटाउनुहोस्"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"यसले यो Google खाताको लागि स्टोर भएको सबै स्थान इतिहास यो उपकरणबाट मेटाउने छ। तपाईं यो मेटाउने प्रकृया पूर्ववत गर्न सक्नुहुन्न। Google Now सहित केही अनुप्रयोगहरूले, कार्य गर्न बन्द गर्ने छ।"</string>
     <string name="system_services" msgid="7230571820151215779">"सेवाहरू"</string>
-    <string name="accessibility_service_settings" msgid="322888335240595695">"सेवा सेटिङ्हरू"</string>
+    <string name="accessibility_service_settings" msgid="322888335240595695">"सेवा सेटिङहरू"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"उच्च कन्ट्रास्ट पाठ"</string>
     <string name="accessibility_shortcut" msgid="6726361991387558828">"पहुँचको सर्टकट"</string>
     <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"पहुँचको सर्टकटलाई सक्षम पार्नुहोस्"</string>
@@ -683,4 +687,7 @@
     <string name="manage_notification_access_title" msgid="2051765294087620434">"सूचनामाथिको पहुँच"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"कुनै स्थापना गरिएको अनुप्रयोगले सूचनामाथिको पहुँचको लागि अनुरोध गरेका छैन।"</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"यी अनुप्रयोगहरूले सम्पर्कको नाम र तपाईंले प्राप्त गर्नुहुने पाठ सन्देशहरूलगायत सबै सूचनाहरू पढ्न सक्नेछन्। तिनीहरू सूचनाहरू खारेज गर्न वा तिनीहरूमा समावेश कारबाही बटनहरू ट्रिगर गर्न पनि सक्नेछन्।"</string>
+    <string name="system_alert_window_settings" msgid="2069031369694448339">"अन्य अनुप्रयोगहरूको माथिपट्टि देखाउनुहोस्"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"अन्य अनुप्रयोगको माथिपट्टि देखिने अनुमति दिनु…"</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"कुनै अनुप्रयोगलाई आफूले प्रयोग गरिरहेका अन्य अनुप्रयोगहरूको माथिपट्टि देखिन अनुमति दिनुहोस्। यस कार्यले तपाईंले गर्ने ती अनुप्रयोगहरूको प्रयोगमा हस्तक्षेप गर्न वा तिनीहरू देखा पर्ने वा तिनीहरूले काम गर्ने तरिकालाई परिवर्तन गर्न सक्छ।"</string>
 </resources>
