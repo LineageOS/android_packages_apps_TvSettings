@@ -33,13 +33,6 @@
         android:key="wifi_other"
         android:title="@string/wifi_setting_header_other_options" >
         <Preference
-            android:key="wifi_wps"
-            android:title="@string/wifi_setting_other_options_wps" >
-            <intent
-                android:targetClass="com.android.tv.settings.connectivity.WpsConnectionActivity"
-                android:targetPackage="com.android.tv.settings" />
-        </Preference>
-        <Preference
             android:key="wifi_add"
             android:title="@string/wifi_setting_other_options_add_network" >
             <intent

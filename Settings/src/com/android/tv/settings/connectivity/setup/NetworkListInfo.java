@@ -27,7 +27,6 @@ public class NetworkListInfo extends ViewModel {
     private static final int NETWORK_REFRESH_BUFFER_DURATION = 5000;
     private WifiTracker mWifiTracker;
     private boolean mShowSkipNetwork;
-    private boolean mShowWpsAtTop;
     private long mNextNetworkRefreshTime;
 
     public boolean isShowSkipNetwork() {
@@ -36,14 +35,6 @@ public class NetworkListInfo extends ViewModel {
 
     public void setShowSkipNetwork(boolean showSkipNetwork) {
         this.mShowSkipNetwork = showSkipNetwork;
-    }
-
-    public boolean isShowWpsAtTop() {
-        return mShowWpsAtTop;
-    }
-
-    public void setShowWpsAtTop(boolean showWpsAtTop) {
-        this.mShowWpsAtTop = showWpsAtTop;
     }
 
     public long getNextNetworkRefreshTime() {
