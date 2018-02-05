@@ -17,23 +17,27 @@
 package com.android.tv.settings.core.instrumentation;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.instrumentation.VisibilityLoggerMixin;
-import com.android.settingslib.core.lifecycle.ObservableActivity;
 
 /**
  * Instrumented activity that logs visibility state.
  */
-public abstract class InstrumentedActivity extends ObservableActivity implements Instrumentable {
+public abstract class InstrumentedActivity extends FragmentActivity implements Instrumentable {
+
+    protected MetricsFeatureProvider mMetricsFeatureProvider;
+    protected VisibilityLoggerMixin mVisibilityLoggerMixin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Mixin that logs visibility change for activity.
-        getLifecycle().addObserver(new VisibilityLoggerMixin(getMetricsCategory(),
-                new MetricsFeatureProvider()));
-
+        mMetricsFeatureProvider = new MetricsFeatureProvider();
+        mVisibilityLoggerMixin = new VisibilityLoggerMixin(getMetricsCategory(),
+            mMetricsFeatureProvider);
+        getLifecycle().addObserver(mVisibilityLoggerMixin);
     }
 }

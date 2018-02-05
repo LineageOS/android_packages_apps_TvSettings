@@ -71,7 +71,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     };
     private final EthernetManager.Listener mEthernetListener = new EthernetManager.Listener() {
         @Override
-        public void onAvailabilityChanged(boolean isAvailable) {
+        public void onAvailabilityChanged(String iface, boolean isAvailable) {
             mListener.onConnectivityChange();
         }
     };
@@ -228,7 +228,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
      */
     public boolean isEthernetAvailable() {
         return mConnectivityManager.isNetworkSupported(ConnectivityManager.TYPE_ETHERNET)
-                && mEthernetManager.isAvailable();
+                && mEthernetManager.getAvailableInterfaces().length > 0;
     }
 
     private Network getFirstEthernet() {

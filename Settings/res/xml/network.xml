@@ -19,7 +19,7 @@
     android:title="@string/connectivity_network">
     <SwitchPreference
         android:key="wifi_enable"
-        android:persistent="false"
+        android:persistent="true"
         android:title="@string/wifi_setting_enable_wifi" />
 
     <com.android.tv.settings.connectivity.CollapsibleCategory
@@ -49,7 +49,7 @@
         </Preference>
         <SwitchPreference
             android:key="wifi_always_scan"
-            android:persistent="false"
+            android:persistent="true"
             android:title="@string/wifi_setting_always_scan"
             android:summary="@string/wifi_setting_always_scan_context" />
     </PreferenceCategory>

@@ -146,6 +146,7 @@ public abstract class ManageAppOp extends SettingsPreferenceFragment
         final Context context = getContext();
         return context == null
                 || packageName.equals("android")
+                || packageName.equals("com.android.systemui")
                 || packageName.equals(context.getPackageName());
     }
 
