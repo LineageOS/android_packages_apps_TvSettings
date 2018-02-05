@@ -157,9 +157,6 @@
             android:icon="@drawable/ic_add"
             android:key="add_account"
             android:title="@string/add_account" >
-            <intent
-                android:targetClass="com.google.android.gsf.pano.CreateOrAddAccountActivity"
-                android:targetPackage="com.google.android.gsf.pano" />
         </Preference>
     </PreferenceCategory>
 </PreferenceScreen>
