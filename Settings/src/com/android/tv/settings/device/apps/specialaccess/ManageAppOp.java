@@ -76,7 +76,7 @@ public abstract class ManageAppOp extends SettingsPreferenceFragment
             @Override
             public boolean filterApp(ApplicationsState.AppEntry entry) {
                 entry.extraInfo = createPermissionStateFor(entry.info.packageName, entry.info.uid);
-                return !shouldIgnorePackage(entry.info.packageName)
+                return !shouldIgnorePackage(getContext(), entry.info.packageName)
                         && ((PermissionState) entry.extraInfo).isPermissible();
             }
         };
@@ -142,8 +142,7 @@ public abstract class ManageAppOp extends SettingsPreferenceFragment
     /**
      * Checks for packages that should be ignored for further processing
      */
-    private boolean shouldIgnorePackage(String packageName) {
-        final Context context = getContext();
+    static boolean shouldIgnorePackage(Context context, String packageName) {
         return context == null
                 || packageName.equals("android")
                 || packageName.equals("com.android.systemui")
