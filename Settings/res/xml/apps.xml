@@ -16,22 +16,22 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/device_apps">
+                  android:title="@string/applications_category_title">
     <Preference
-            android:key="Permissions"
-            android:title="@string/device_apps_permissions">
+        android:key="Permissions"
+        android:title="@string/device_apps_permissions">
         <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
     </Preference>
     <Preference
-            android:key="special_access"
-            android:title="@string/special_access"
-            android:fragment="com.android.tv.settings.device.apps.specialaccess.SpecialAppAccess"/>
+        android:key="special_access"
+        android:title="@string/special_access"
+        android:fragment="com.android.tv.settings.device.apps.specialaccess.SpecialAppAccess"/>
     <PreferenceCategory
-            android:key="DownloadedPreferenceGroup"
-            android:title="@string/apps_downloaded"
-            android:orderingFromXml="false"/>
+        android:key="DownloadedPreferenceGroup"
+        android:title="@string/apps_downloaded"
+        android:orderingFromXml="false"/>
     <PreferenceCategory
-            android:key="SystemPreferenceGroup"
-            android:title="@string/apps_system"
-            android:orderingFromXml="false"/>
+        android:key="SystemPreferenceGroup"
+        android:title="@string/apps_system"
+        android:orderingFromXml="false"/>
 </PreferenceScreen>
