@@ -17,7 +17,6 @@
 package com.android.tv.settings.connectivity.setup;
 
 import android.arch.lifecycle.ViewModelProviders;
-import android.content.Intent;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.support.v4.app.Fragment;
@@ -25,7 +24,6 @@ import android.support.v4.app.FragmentActivity;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.WifiConfigHelper;
-import com.android.tv.settings.connectivity.WpsConnectionActivity;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
 import com.android.tv.settings.connectivity.util.WifiSecurityUtil;
@@ -52,12 +50,6 @@ public class AddPageBasedOnNetworkState implements State {
                 getString(R.string.other_network), UserChoiceInfo.SELECT_WIFI)) {
             mUserChoiceInfo.getWifiConfiguration().hiddenSSID = true;
             mStateMachine.getListener().onComplete(StateMachine.OTHER_NETWORK);
-        } else if (mUserChoiceInfo.choiceChosen(
-                getString(R.string.wps_network), UserChoiceInfo.SELECT_WIFI)) {
-            Intent wpsConnectionActivity = new Intent(mActivity, WpsConnectionActivity.class)
-                    .putExtras(mActivity.getIntent().getExtras());
-            mActivity.startActivityForResult(wpsConnectionActivity,
-                    ((WifiSetupActivity) mActivity).WPS_REQUEST);
         } else {
             ScanResult scanResult = mUserChoiceInfo.getChosenNetwork();
             String chosenNetwork = mUserChoiceInfo.getChosenNetwork().SSID;

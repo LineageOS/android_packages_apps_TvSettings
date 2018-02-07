@@ -19,7 +19,6 @@ package com.android.tv.settings.connectivity.setup;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
 import static org.robolectric.shadow.api.Shadow.extract;
 
@@ -77,15 +76,6 @@ public class AddPageBasedOnNetworkStateTest {
         mAddPageBasedOnNetworkState.processForward();
         assertTrue(mUserChoiceInfo.getWifiConfiguration().hiddenSSID);
         verify(mStateCompleteListener).onComplete(StateMachine.OTHER_NETWORK);
-    }
-
-    @Test
-    public void testForward_wps() {
-        mUserChoiceInfo.init();
-        mUserChoiceInfo.put(UserChoiceInfo.SELECT_WIFI, getString(R.string.wps_network));
-        mAddPageBasedOnNetworkState.processForward();
-        verify(mActivity).startActivityForResult(any(Intent.class),
-                Mockito.eq(WifiSetupActivity.WPS_REQUEST));
     }
 
     @Test
