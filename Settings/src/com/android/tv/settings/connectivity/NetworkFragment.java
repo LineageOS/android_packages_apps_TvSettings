@@ -48,7 +48,6 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private static final String KEY_WIFI_LIST = "wifi_list";
     private static final String KEY_WIFI_COLLAPSE = "wifi_collapse";
     private static final String KEY_WIFI_OTHER = "wifi_other";
-    private static final String KEY_WIFI_WPS = "wifi_wps";
     private static final String KEY_WIFI_ADD = "wifi_add";
     private static final String KEY_WIFI_ALWAYS_SCAN = "wifi_always_scan";
     private static final String KEY_ETHERNET = "ethernet";
@@ -64,7 +63,6 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private TwoStatePreference mEnableWifiPref;
     private CollapsibleCategory mWifiNetworksCategory;
     private Preference mCollapsePref;
-    private Preference mWpsPref;
     private Preference mAddPref;
     private TwoStatePreference mAlwaysScan;
     private PreferenceCategory mEthernetCategory;
@@ -119,7 +117,6 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mEnableWifiPref = (TwoStatePreference) findPreference(KEY_WIFI_ENABLE);
         mWifiNetworksCategory = (CollapsibleCategory) findPreference(KEY_WIFI_LIST);
         mCollapsePref = findPreference(KEY_WIFI_COLLAPSE);
-        mWpsPref = findPreference(KEY_WIFI_WPS);
         mAddPref = findPreference(KEY_WIFI_ADD);
         mAlwaysScan = (TwoStatePreference) findPreference(KEY_WIFI_ALWAYS_SCAN);
 
@@ -184,7 +181,6 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
 
         mWifiNetworksCategory.setVisible(wifiEnabled);
         mCollapsePref.setVisible(wifiEnabled && mWifiNetworksCategory.shouldShowCollapsePref());
-        mWpsPref.setVisible(wifiEnabled);
         mAddPref.setVisible(wifiEnabled);
 
         if (!wifiEnabled) {

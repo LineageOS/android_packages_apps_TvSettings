@@ -186,18 +186,6 @@ public class SelectWifiState implements State {
             }
 
             Collections.sort(actions, mWifiComparator);
-            WifiGuidedAction wpsAction =
-                    new WifiGuidedAction.Builder(context)
-                            .title(R.string.wps_network)
-                            .icon(R.drawable.setup_wps)
-                            .setHasIconLevel(false)
-                            .build();
-
-            if (mNetworkListInfo.isShowWpsAtTop()) {
-                actions.add(0, wpsAction);
-            } else {
-                actions.add(wpsAction);
-            }
 
             if (mNetworkListInfo.isShowSkipNetwork()) {
                 actions.add(new WifiGuidedAction.Builder(context)

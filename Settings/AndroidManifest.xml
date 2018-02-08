@@ -113,13 +113,6 @@
             android:excludeFromRecents="true"
             android:exported="true"
             android:theme="@style/Theme.Leanback.FormWizard.Solid" />
-        <!-- WpsConnectionActivity may be started from setup so theme
-             is determined at runtime -->
-        <activity
-            android:name=".connectivity.WpsConnectionActivity"
-            android:configChanges="keyboard|keyboardHidden|navigation"
-            android:excludeFromRecents="true"
-            android:exported="true" />
         <activity
             android:name=".accounts.AccountSyncActivity"
             android:theme="@style/Theme.Settings.Transparent"
