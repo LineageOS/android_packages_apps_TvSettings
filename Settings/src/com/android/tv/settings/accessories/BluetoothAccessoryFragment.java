@@ -30,6 +30,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.DrawableRes;
+import android.support.annotation.Keep;
 import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
@@ -309,6 +310,10 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
         }
     }
 
+    /**
+     * Fragment for changing the name of a bluetooth accessory
+     */
+    @Keep
     public static class ChangeNameFragment extends GuidedStepFragment {
 
         public static void prepareArgs(@NonNull Bundle args, String deviceName,
