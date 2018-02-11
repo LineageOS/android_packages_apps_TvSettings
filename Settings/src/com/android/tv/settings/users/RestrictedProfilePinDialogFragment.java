@@ -150,8 +150,11 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
 
         if (callback != null) {
             UserInfo myUserInfo = UserManager.get(getActivity()).getUserInfo(UserHandle.myUserId());
-            return myUserInfo != null &&
-                    callback.checkPassword(pin, myUserInfo.restrictedProfileParentId);
+            // UserInfo.restrictedProfileParentId may not be set if the restricted profile was
+            // created on Android M devices.
+            return myUserInfo != null && callback.checkPassword(pin,
+                    myUserInfo.restrictedProfileParentId == UserHandle.USER_NULL
+                            ? UserHandle.USER_OWNER : myUserInfo.restrictedProfileParentId);
         }
         return false;
     }
