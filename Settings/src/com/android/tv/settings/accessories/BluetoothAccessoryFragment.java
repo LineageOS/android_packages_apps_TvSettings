@@ -41,6 +41,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
@@ -316,10 +317,19 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
     @Keep
     public static class ChangeNameFragment extends GuidedStepFragment {
 
+        private final MetricsFeatureProvider mMetricsFeatureProvider = new MetricsFeatureProvider();
+
         public static void prepareArgs(@NonNull Bundle args, String deviceName,
                 @DrawableRes int deviceImgId) {
             args.putString(ARG_ACCESSORY_NAME, deviceName);
             args.putInt(ARG_ACCESSORY_ICON_ID, deviceImgId);
+        }
+
+        @Override
+        public void onStart() {
+            super.onStart();
+            mMetricsFeatureProvider.action(getContext(),
+                    MetricsProto.MetricsEvent.ACTION_BLUETOOTH_RENAME);
         }
 
         @NonNull
@@ -393,6 +403,8 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
         private BluetoothDevice mDevice;
         private BroadcastReceiver mBroadcastReceiver;
         private final Handler mHandler = new Handler();
+        private final MetricsFeatureProvider mMetricsFeatureProvider =
+                new MetricsFeatureProvider();
 
         private Runnable mBailoutRunnable = new Runnable() {
             @Override
@@ -433,6 +445,8 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
             adapterIntentFilter.addAction(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
             mBroadcastReceiver = new UnpairReceiver(this, mDevice);
             getActivity().registerReceiver(mBroadcastReceiver, adapterIntentFilter);
+            mMetricsFeatureProvider.action(getContext(),
+                    MetricsProto.MetricsEvent.DIALOG_BLUETOOTH_PAIRED_DEVICE_FORGET);
         }
 
         @Override

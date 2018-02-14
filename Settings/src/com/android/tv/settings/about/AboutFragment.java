@@ -37,9 +37,10 @@ import android.support.v7.preference.PreferenceScreen;
 import android.telephony.CarrierConfigManager;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Pair;
 import android.widget.Toast;
 
-import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.internal.telephony.TelephonyProperties;
 import com.android.settingslib.DeviceInfoUtils;
 import com.android.settingslib.Utils;
@@ -272,11 +273,17 @@ public class AboutFragment extends SettingsPreferenceFragment implements
                 break;
             case KEY_BUILD_NUMBER:
                 // Don't enable developer options for secondary users.
-                if (!mUm.isAdminUser())
+                if (!mUm.isAdminUser()) {
+                    mMetricsFeatureProvider.action(getContext(),
+                            MetricsEvent.ACTION_SETTINGS_BUILD_NUMBER_PREF);
                     return true;
+                }
 
-                if (mUm.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES))
+                if (mUm.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES)) {
+                    mMetricsFeatureProvider.action(getContext(),
+                            MetricsEvent.ACTION_SETTINGS_BUILD_NUMBER_PREF);
                     return true;
+                }
 
                 if (mDevHitCountdown > 0) {
                     mDevHitCountdown--;
@@ -293,7 +300,11 @@ public class AboutFragment extends SettingsPreferenceFragment implements
 //                    Index.getInstance(
 //                            getActivity().getApplicationContext()).updateFromClassNameResource(
 //                            DevelopmentSettings.class.getName(), true, true);
-
+                        mMetricsFeatureProvider.action(
+                                getContext(), MetricsEvent.ACTION_SETTINGS_BUILD_NUMBER_PREF,
+                                Pair.create(MetricsEvent
+                                        .FIELD_SETTINGS_BUILD_NUMBER_DEVELOPER_MODE_ENABLED,
+                                0));
                     } else if (mDevHitCountdown > 0
                             && mDevHitCountdown < (TAPS_TO_BE_A_DEVELOPER - 2)) {
                         if (mDevHitToast != null) {
@@ -306,6 +317,11 @@ public class AboutFragment extends SettingsPreferenceFragment implements
                                         Toast.LENGTH_SHORT);
                         mDevHitToast.show();
                     }
+                    mMetricsFeatureProvider.action(
+                            getContext(), MetricsEvent.ACTION_SETTINGS_BUILD_NUMBER_PREF,
+                            Pair.create(
+                                    MetricsEvent.FIELD_SETTINGS_BUILD_NUMBER_DEVELOPER_MODE_ENABLED,
+                            0));
                 } else if (mDevHitCountdown < 0) {
                     if (mDevHitToast != null) {
                         mDevHitToast.cancel();
@@ -313,6 +329,11 @@ public class AboutFragment extends SettingsPreferenceFragment implements
                     mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_already,
                             Toast.LENGTH_LONG);
                     mDevHitToast.show();
+                    mMetricsFeatureProvider.action(
+                            getContext(), MetricsEvent.ACTION_SETTINGS_BUILD_NUMBER_PREF,
+                            Pair.create(
+                                    MetricsEvent.FIELD_SETTINGS_BUILD_NUMBER_DEVELOPER_MODE_ENABLED,
+                            1));
                 }
                 break;
             case KEY_DEVICE_FEEDBACK:
@@ -388,6 +409,6 @@ public class AboutFragment extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DEVICEINFO;
+        return MetricsEvent.DEVICEINFO;
     }
 }
