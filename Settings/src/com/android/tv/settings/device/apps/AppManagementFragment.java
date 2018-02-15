@@ -34,7 +34,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -95,7 +95,7 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.APPLICATIONS_INSTALLED_APP_DETAILS;
+        return MetricsEvent.APPLICATIONS_INSTALLED_APP_DETAILS;
     }
 
     @Override
@@ -179,6 +179,8 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
         if (intent != null) {
             try {
                 if (preference.equals(mUninstallPreference)) {
+                    mMetricsFeatureProvider.action(getContext(),
+                            MetricsEvent.ACTION_SETTINGS_UNINSTALL_APP);
                     startActivityForResult(intent, mUninstallPreference.canUninstall()
                             ? REQUEST_UNINSTALL : REQUEST_UNINSTALL_UPDATES);
                 } else {
@@ -359,6 +361,7 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
     }
 
     public void clearData() {
+        mMetricsFeatureProvider.action(getContext(), MetricsEvent.ACTION_SETTINGS_CLEAR_APP_DATA);
         mClearDataPreference.setClearingData(true);
         String spaceManagementActivityName = mEntry.info.manageSpaceActivityName;
         if (spaceManagementActivityName != null) {
@@ -406,6 +409,7 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
     }
 
     public void clearCache() {
+        mMetricsFeatureProvider.action(getContext(), MetricsEvent.ACTION_SETTINGS_CLEAR_APP_CACHE);
         mClearCachePreference.setClearingCache(true);
         mPackageManager.deleteApplicationCacheFiles(mEntry.info.packageName,
                 new IPackageDataObserver.Stub() {
