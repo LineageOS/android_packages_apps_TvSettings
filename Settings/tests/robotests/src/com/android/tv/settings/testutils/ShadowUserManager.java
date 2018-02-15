@@ -21,7 +21,7 @@ import android.os.UserManager;
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 
-@Implements(UserManager.class)
+@Implements(value = UserManager.class, inheritImplementationMethods = true)
 public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager {
 
     private boolean mAdminUser;

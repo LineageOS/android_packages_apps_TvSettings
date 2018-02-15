@@ -29,7 +29,6 @@ import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.TestConfig;
 import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 import com.android.tv.settings.connectivity.WifiConfigHelper;
 import com.android.tv.settings.connectivity.util.State;
@@ -47,9 +46,7 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 @RunWith(TvSettingsRobolectricTestRunner.class)
-@Config(manifest = TestConfig.MANIFEST_PATH,
-        sdk = TestConfig.SDK_VERSION,
-        shadows = {ShadowStateMachine.class})
+@Config(shadows = ShadowStateMachine.class)
 public class AddPageBasedOnNetworkStateTest {
     private WifiSetupActivity mActivity;
     private AddPageBasedOnNetworkState mAddPageBasedOnNetworkState;

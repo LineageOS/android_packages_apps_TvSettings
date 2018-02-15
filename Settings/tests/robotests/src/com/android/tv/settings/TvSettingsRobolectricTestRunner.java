@@ -16,6 +16,8 @@
 
 package com.android.tv.settings;
 
+import android.annotation.NonNull;
+
 import org.junit.runners.model.InitializationError;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
@@ -33,25 +35,33 @@ import java.util.List;
  * We want to override this to add several spanning different projects.
  */
 public class TvSettingsRobolectricTestRunner extends RobolectricTestRunner {
+
     public TvSettingsRobolectricTestRunner(Class<?> testClass) throws InitializationError {
         super(testClass);
     }
 
+    /**
+     * We are going to create our own custom manifest so we can add multiple resource paths to it.
+     */
     @Override
     protected AndroidManifest getAppManifest(Config config) {
         try {
-            final URL appRoot = new URL("file:packages/apps/TvSettings/Settings/");
+            // Using the manifest file's relative path, we can figure out the application directory.
+            final URL appRoot = new URL("file:packages/apps/TvSettings/Settings/tests/robotests");
             final URL manifestPath = new URL(appRoot, "AndroidManifest.xml");
-            final URL resDir = new URL(appRoot, "tests/robotests/res");
-            final URL assetsDir = new URL(appRoot, config.assetDir());
+            final URL resDir = new URL(appRoot, "res");
+            final URL assetsDir = new URL(appRoot, "assets");
 
-            return new AndroidManifest(Fs.fromURL(manifestPath),
-                    Fs.fromURL(resDir), Fs.fromURL(assetsDir), "com.android.tv.settings") {
+            return new AndroidManifest(Fs.fromURL(manifestPath), Fs.fromURL(resDir),
+                    Fs.fromURL(assetsDir), "com.android.tv.settings") {
                 @Override
                 public List<ResourcePath> getIncludedResourcePaths() {
-                    final List<ResourcePath> paths =
-                            super.getIncludedResourcePaths();
-                    getIncludedResourcePahts(paths);
+                    final List<ResourcePath> paths = super.getIncludedResourcePaths();
+                    paths.add(resourcePath("file:frameworks/base/core/res/res"));
+                    paths.add(resourcePath("file:packages/apps/TvSettings/Settings/res"));
+                    paths.add(resourcePath("file:frameworks/base/packages/SettingsLib/res"));
+                    paths.add(resourcePath("file:frameworks/support/leanback/res"));
+                    paths.add(resourcePath("file:frameworks/support/v7/preference/res"));
                     return paths;
                 }
             };
@@ -60,20 +70,12 @@ public class TvSettingsRobolectricTestRunner extends RobolectricTestRunner {
         }
     }
 
-    private static void getIncludedResourcePahts(List<ResourcePath> paths) {
+    private static ResourcePath resourcePath(@NonNull String spec) {
         try {
-            paths.add(new ResourcePath(null,
-                    Fs.fromURL(new URL("file:packages/apps/TvSettings/Settings/res")), null));
-            paths.add(new ResourcePath(null,
-                    Fs.fromURL(new URL("file:frameworks/base/packages/SettingsLib/res")), null));
-            paths.add(new ResourcePath(null,
-                    Fs.fromURL(new URL("file:frameworks/base/core/res/res")), null));
-            paths.add(new ResourcePath(null,
-                    Fs.fromURL(new URL("file:frameworks/support/leanback/res")), null));
-            paths.add(new ResourcePath(null,
-                    Fs.fromURL(new URL("file:frameworks/support/v7/preference/res")), null));
+            return new ResourcePath(null, Fs.fromURL(new URL(spec)), null);
         } catch (MalformedURLException e) {
             throw new RuntimeException("TvSettingsRobolectricTestRunner failure", e);
         }
     }
+
 }

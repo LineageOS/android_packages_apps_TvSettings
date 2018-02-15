@@ -22,7 +22,7 @@ import com.android.tv.settings.connectivity.util.StateMachine;
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 
-@Implements(StateMachine.class)
+@Implements(value = StateMachine.class, inheritImplementationMethods = true)
 public class ShadowStateMachine {
     private static State.StateCompleteListener sListener;
 

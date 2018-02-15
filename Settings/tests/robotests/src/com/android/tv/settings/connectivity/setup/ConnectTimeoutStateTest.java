@@ -22,7 +22,6 @@ import static org.junit.Assert.assertTrue;
 import android.arch.lifecycle.ViewModelProviders;
 import android.net.wifi.WifiConfiguration;
 
-import com.android.tv.settings.TestConfig;
 import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 import com.android.tv.settings.testutils.TvShadowWifiManager;
 
@@ -34,9 +33,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.annotation.Config;
 
 @RunWith(TvSettingsRobolectricTestRunner.class)
-@Config(manifest = TestConfig.MANIFEST_PATH,
-        sdk = TestConfig.SDK_VERSION,
-        shadows = {TvShadowWifiManager.class})
+@Config(shadows = TvShadowWifiManager.class)
 public class ConnectTimeoutStateTest {
     private WifiSetupActivity mActivity;
     private ConnectTimeOutState mState;

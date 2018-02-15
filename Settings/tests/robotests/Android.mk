@@ -4,20 +4,19 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
+LOCAL_MODULE := TvSettingsRoboTests
+
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
-# Include the testing libraries (JUnit4 + Robolectric libs).
-LOCAL_STATIC_JAVA_LIBRARIES := \
-    mockito-robolectric-prebuilt \
-    platform-robolectric-android-all-stubs \
-    truth-prebuilt
+LOCAL_JAVA_RESOURCE_DIRS := config
 
 LOCAL_JAVA_LIBRARIES := \
-    junit \
-    platform-robolectric-3.6.1-prebuilt
+    robolectric_android-all-stub \
+    Robolectric_all-target \
+    mockito-robolectric-prebuilt \
+    truth-prebuilt
 
 LOCAL_INSTRUMENTATION_FOR := TvSettings
-LOCAL_MODULE := TvSettingsRoboTests
 
 LOCAL_MODULE_TAGS := optional
 
@@ -30,15 +29,15 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := RunTvSettingsRoboTests
 
-LOCAL_SDK_VERSION := current
-
-LOCAL_STATIC_JAVA_LIBRARIES := \
-    TvSettingsRoboTests
+LOCAL_JAVA_LIBRARIES := \
+    TvSettingsRoboTests \
+    robolectric_android-all-stub \
+    Robolectric_all-target \
+    mockito-robolectric-prebuilt \
+    truth-prebuilt
 
 LOCAL_TEST_PACKAGE := TvSettings
 
-LOCAL_INSTRUMENT_SOURCE_DIRS := $(dir $(LOCAL_PATH))../src
-
 LOCAL_ROBOTEST_TIMEOUT := 36000
 
-include prebuilts/misc/common/robolectric/3.6.1/run_robotests.mk
+include external/robolectric-shadows/run_robotests.mk

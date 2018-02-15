@@ -23,7 +23,6 @@ import static org.junit.Assert.assertEquals;
 import android.net.wifi.WifiConfiguration;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.TestConfig;
 import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 
 import org.junit.Before;
@@ -31,10 +30,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.annotation.Config;
 
 @RunWith(TvSettingsRobolectricTestRunner.class)
-@Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION)
 public class WifiConfigHelperTest {
     @Mock
     private WifiConfiguration mConfig;

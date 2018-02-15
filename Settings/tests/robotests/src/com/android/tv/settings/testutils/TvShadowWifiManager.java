@@ -18,11 +18,10 @@ package com.android.tv.settings.testutils;
 
 import android.net.wifi.WifiManager;
 
-
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 
-@Implements(WifiManager.class)
+@Implements(value = WifiManager.class, inheritImplementationMethods = true)
 public class TvShadowWifiManager extends org.robolectric.shadows.ShadowWifiManager {
 
     @Implementation
