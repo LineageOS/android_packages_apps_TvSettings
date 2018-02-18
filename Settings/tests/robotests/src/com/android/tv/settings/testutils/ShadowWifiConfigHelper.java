@@ -25,7 +25,7 @@ import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 
 
-@Implements(WifiConfigHelper.class)
+@Implements(value = WifiConfigHelper.class, inheritImplementationMethods = true)
 public class ShadowWifiConfigHelper {
     private static WifiConfiguration sConfigForTest;
 

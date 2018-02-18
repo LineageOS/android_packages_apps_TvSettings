@@ -27,7 +27,6 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.net.IpConfiguration;
 import android.net.wifi.WifiConfiguration;
 
-import com.android.tv.settings.TestConfig;
 import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
@@ -44,9 +43,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.annotation.Config;
 
 @RunWith(TvSettingsRobolectricTestRunner.class)
-@Config(manifest = TestConfig.MANIFEST_PATH,
-        sdk = TestConfig.SDK_VERSION,
-        shadows = {
+@Config(shadows = {
                 ShadowStateMachine.class,
                 TvShadowWifiManager.class
         })

@@ -34,8 +34,6 @@ import android.os.storage.VolumeInfo;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
-import com.android.tv.settings.TestConfig;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -44,14 +42,12 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION)
 public class SettingsStorageServiceTest {
 
     @Mock

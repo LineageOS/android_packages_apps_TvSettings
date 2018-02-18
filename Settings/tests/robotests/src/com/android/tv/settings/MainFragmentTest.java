@@ -29,6 +29,7 @@ import static org.robolectric.shadow.api.Shadow.extract;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.UserManager;
@@ -44,14 +45,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowPackageManager;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION, shadows = {
-        ShadowUserManager.class
-})
+@RunWith(TvSettingsRobolectricTestRunner.class)
+@Config(shadows = {ShadowUserManager.class})
 public class MainFragmentTest {
 
     @Spy
@@ -118,8 +117,12 @@ public class MainFragmentTest {
         final ApplicationInfo applicationInfo = new ApplicationInfo();
         applicationInfo.flags = ApplicationInfo.FLAG_SYSTEM;
         activityInfo.applicationInfo = applicationInfo;
-        shadowOf(RuntimeEnvironment.application.getPackageManager()).addResolveInfoForIntent(
-                intent, resolveInfo);
+        final ShadowPackageManager shadowPackageManager = shadowOf(
+                RuntimeEnvironment.application.getPackageManager());
+        final PackageInfo castPackageInfo = new PackageInfo();
+        castPackageInfo.packageName = "com.test.CastPackage";
+        shadowPackageManager.addPackage(castPackageInfo);
+        shadowPackageManager.addResolveInfoForIntent(intent, resolveInfo);
 
         mMainFragment.updateCastSettings();
 
