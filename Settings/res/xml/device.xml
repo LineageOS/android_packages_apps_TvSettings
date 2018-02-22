@@ -61,6 +61,10 @@
         android:key="keyboard"
         android:title="@string/system_keyboard"/>
     <Preference
+        android:key="autofill"
+        android:title="@string/system_autofill_service"
+        android:fragment="com.android.tv.settings.app.AutofillFragment" />
+    <Preference
         android:icon="@drawable/ic_home"
         android:key="home"
         android:title="@string/system_home">
