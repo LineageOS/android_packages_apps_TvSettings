@@ -21,11 +21,28 @@
     <string name="launcher_network_app_name" msgid="5107150533945388559">"Желі"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Шектелген профиль"</string>
     <string name="header_category_suggestions" msgid="6732367439328586933">"Ұсыныстар"</string>
+    <!-- no translation found for header_category_quick_settings (6626141045575946920) -->
+    <skip />
+    <!-- no translation found for header_category_general_settings (1208946854116876918) -->
+    <skip />
     <string name="header_category_device" msgid="4855983928659541345">"Құрылғы"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Параметрлер"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Қашықтан басқару құралы және қосалқы құралдар"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Жеке"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"Есептік жазбалар"</string>
+    <!-- no translation found for connect_to_network (2209125715907353369) -->
+    <skip />
+    <!-- no translation found for add_an_account (1123478843971990449) -->
+    <skip />
+    <!-- no translation found for accounts_category_title (594314526488667838) -->
+    <skip />
+    <!-- no translation found for connectivity_network_category_title (6779497231311329071) -->
+    <skip />
+    <!-- no translation found for applications_category_title (3552921143969612110) -->
+    <skip />
+    <!-- no translation found for device_pref_category_title (5264163316572335776) -->
+    <skip />
+    <!-- no translation found for remotes_and_accessories_title_category (4036586169100784602) -->
+    <skip />
     <string name="add_account" msgid="4098060223200619258">"Есептік жазба қосу"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Есептік жазбаны жою"</string>
     <string name="account_sync" msgid="773808124331714965">"Синхрондалған қолданбаларды таңдау"</string>
@@ -41,21 +58,26 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Синхрондалмады"</string>
     <string name="sync_active" msgid="6891115263481154378">"Синхрондау қосылған"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"Желі"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Scanning always available"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Google орынды анықтау қызметіне және басқа қолданбаларға желілерді тексеру мүмкіндігін беріңіз (Wi-Fi өшірулі тұрса да)"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
+    <!-- no translation found for connectivity_hint_message (1314202316675864203) -->
+    <skip />
     <string name="device_daydream" msgid="3354366974209179614">"Экран қорғағыш"</string>
     <string name="device_display" msgid="101455384386372747">"Дисплей"</string>
     <string name="device_sound" msgid="9214182566287657481">"Дыбыс"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"Көлемді дыбыс"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Жүйелік дыбыстар"</string>
-    <string name="device_apps" msgid="9180435229638772838">"Қолданбалар"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"Сақтау және қалпына келтіру"</string>
+    <!-- no translation found for device_apps (1971794537385509294) -->
+    <skip />
+    <string name="device_storage" msgid="5536683600091277826">"Жад"</string>
+    <!-- no translation found for device_reset (1885840356489458285) -->
+    <skip />
     <string name="device_backup_restore" msgid="5627523987587511884">"Сақтық көшірмелер және қалпына келтіру"</string>
-    <string name="device_reset" msgid="2827002349560023125">"Зауыттық деректерді қалпына келтіру"</string>
+    <!-- no translation found for device_factory_reset (6537106927211842545) -->
+    <skip />
     <string name="device_calibration" msgid="8632962533376605191">"Калибрлеу"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Кэштелген деректер өшірілсін бе?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Бұл барлық қолданбалардың кэштелген деректерін тазартады."</string>
@@ -98,6 +120,8 @@
     <string name="system_security" msgid="8230080273993484407">"Қауіпсіздік және шектеулер"</string>
     <string name="system_speech" msgid="8128688499687306982">"Сөз"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Кірістер"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"Кірістер және құрылғылар"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"Үй театрын басқару"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"Арнайы мүмкіндіктер"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Әзірлеуші опциялары"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Ешқандай"</string>
@@ -166,10 +190,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"Барлығын көру"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"Азайту"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Қолжетімді желілер"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"WPS арқылы қосылу"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"Жаңа желі қосу"</string>
     <string name="security_type" msgid="524443802004143058">"Қауіпсіздік түрі"</string>
-    <string name="wps_network" msgid="1052148085426051873">"WPS арқылы қосылу"</string>
     <string name="other_network" msgid="3539704463099544488">"Басқа желі…"</string>
     <string name="skip_network" msgid="6380260543776712357">"Өткізіп жіберу"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"Ешқандай"</string>
@@ -318,18 +340,6 @@
     <string name="system_package" msgid="9200255718634512790">"Жүйе жаңартуларын сыртқы медиаға орнату мүмкін емес."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"Құрылғы әкімшісін сыртқы медиа құралға орнату мүмкін емес."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Қосымша мәліметтер"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Қайталау"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"WPS маршрутизаторы ізделуде…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Маршрутизаторда Wi-Fi Protected Setup түймесін басыңыз.\nОл «WPS» деп аталуы немесе сол жағында таңба болуы мүмкін."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Wi-Fi маршрутизаторында PIN <xliff:g id="NUMBER">%1$s</xliff:g> кодын енгізіңіз."</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"PIN кодын енгізгеннен кейін реттеудің аяқталуына 2 минутқа дейін кетуі мүмкін"</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Wi-Fi маршрутизаторын табу мүмкін болмады"</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Wi-Fi маршрутизаторының қауіпсіздік параметріне (WEP) қолдау көрсетілмейді"</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Wi-Fi маршрутизаторының қауіпсіздік параметріне (TKIP) қолдау көрсетілмейді"</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"Басқа WPS сеансы орындалуда. Әрекетті бірнеше минуттан кейін қайталаңыз."</string>
-    <string name="wifi_wps_start_title" msgid="7448016607208427187">"WPS әдісін таңдаңыз"</string>
-    <string name="wifi_wps_action_push_button" msgid="3295053933961963105">"WPS Push түймесі"</string>
-    <string name="wifi_wps_action_pin_entry" msgid="3921490121142056571">"WPS Pin кодын енгізу"</string>
     <string name="system_date" msgid="2767108116769558081">"Күні"</string>
     <string name="system_time" msgid="6726022312605226285">"Уақыт"</string>
     <string name="system_set_date" msgid="2437586307768561116">"Күнді орнату"</string>
@@ -690,4 +700,14 @@
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Басқа қолданбалардың үстінен көрсету"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"Басқа қолданбалардың үстінен көрсетілуге рұқсат беру"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Қолданбаның пайдаланылып жатқан басқа қолданбалардың үстінен көрсетілуіне рұқсат беріңіз. Ол қолданбаларды пайдалануыңызға кедергі келтіріп, олардың көрсетілуін не жұмыс әдісін өзгертуі мүмкін."</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"Жүйе параметрлерін өзгерту"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Жүйе параметрлерін өзгерте алады"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"Бұл рұқсат қолданбаға жүйе параметрлерін өзгертуге мүмкіндік береді."</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"Иә"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"Жоқ"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"Сурет ішіндегі сурет"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"\"Сурет ішіндегі сурет\" режиміне рұқсат беру"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Орнатылған қолданбалардың ешқайсысы \"сурет ішіндегі сурет\" режимін қолдамайды"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Қолданба ашық болғанда не одан шыққанда (мысалы, бейнені әрі қарай көру үшін), қолданбаларға \"суреттегі сурет\" терезесін ашуға мүмкіндік береді. Бұл терезе ашылған басқа қолданбалардың үстінен шығады."</string>
+    <string name="special_access" msgid="3513811566600299998">"Арнайы кіру рұқсаты"</string>
 </resources>

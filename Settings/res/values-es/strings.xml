@@ -20,11 +20,29 @@
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"Ajustes"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"Red"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Perfil restringido"</string>
+    <string name="header_category_suggestions" msgid="6732367439328586933">"Sugerencias"</string>
+    <!-- no translation found for header_category_quick_settings (6626141045575946920) -->
+    <skip />
+    <!-- no translation found for header_category_general_settings (1208946854116876918) -->
+    <skip />
     <string name="header_category_device" msgid="4855983928659541345">"Dispositivo"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Preferencias"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Mando y accesorios"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Personal"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"Cuentas"</string>
+    <!-- no translation found for connect_to_network (2209125715907353369) -->
+    <skip />
+    <!-- no translation found for add_an_account (1123478843971990449) -->
+    <skip />
+    <!-- no translation found for accounts_category_title (594314526488667838) -->
+    <skip />
+    <!-- no translation found for connectivity_network_category_title (6779497231311329071) -->
+    <skip />
+    <!-- no translation found for applications_category_title (3552921143969612110) -->
+    <skip />
+    <!-- no translation found for device_pref_category_title (5264163316572335776) -->
+    <skip />
+    <!-- no translation found for remotes_and_accessories_title_category (4036586169100784602) -->
+    <skip />
     <string name="add_account" msgid="4098060223200619258">"Añadir cuenta"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Quitar cuenta"</string>
     <string name="account_sync" msgid="773808124331714965">"Elegir aplicaciones sincronizadas"</string>
@@ -40,21 +58,26 @@
 %1$s</xliff:g>)"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Error de sincronización"</string>
     <string name="sync_active" msgid="6891115263481154378">"Sincronización activa"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"Red"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Búsqueda siempre disponible"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Permite que el servicio de ubicación de Google y otras aplicaciones busquen redes, aunque la conexión Wi-Fi esté desactivada"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
+    <!-- no translation found for connectivity_hint_message (1314202316675864203) -->
+    <skip />
     <string name="device_daydream" msgid="3354366974209179614">"Salvapantallas"</string>
     <string name="device_display" msgid="101455384386372747">"Pantalla"</string>
     <string name="device_sound" msgid="9214182566287657481">"Sonido"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"Sonido envolvente"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sonidos del sistema"</string>
-    <string name="device_apps" msgid="9180435229638772838">"Aplicaciones"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"Almacenamiento y restauración"</string>
+    <!-- no translation found for device_apps (1971794537385509294) -->
+    <skip />
+    <string name="device_storage" msgid="5536683600091277826">"Almacenamiento"</string>
+    <!-- no translation found for device_reset (1885840356489458285) -->
+    <skip />
     <string name="device_backup_restore" msgid="5627523987587511884">"Copia de seguridad y restauración"</string>
-    <string name="device_reset" msgid="2827002349560023125">"Restablecer estado de fábrica"</string>
+    <!-- no translation found for device_factory_reset (6537106927211842545) -->
+    <skip />
     <string name="device_calibration" msgid="8632962533376605191">"Calibración"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"¿Borrar datos almacenados en caché?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Se borrarán datos en caché de las aplicaciones."</string>
@@ -97,6 +120,8 @@
     <string name="system_security" msgid="8230080273993484407">"Seguridad y restricciones"</string>
     <string name="system_speech" msgid="8128688499687306982">"Voz"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Entradas"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"Entradas y dispositivos"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"Control de home cinema"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"Accesibilidad"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Opciones para desarrolladores"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Ninguno"</string>
@@ -165,10 +190,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"Ver todo"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"Ver menos"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Redes disponibles"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"Conectar por WPS"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"Añadir red nueva"</string>
     <string name="security_type" msgid="524443802004143058">"Tipo de seguridad"</string>
-    <string name="wps_network" msgid="1052148085426051873">"Conectar por WPS"</string>
     <string name="other_network" msgid="3539704463099544488">"Otra red…"</string>
     <string name="skip_network" msgid="6380260543776712357">"Saltar"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"Ninguna"</string>
@@ -317,15 +340,6 @@
     <string name="system_package" msgid="9200255718634512790">"Las actualizaciones del sistema no se pueden instalar en ubicaciones externas."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"El administrador de dispositivos no se puede instalar en ubicaciones externas."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Más información"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Reintentar"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"Buscando router WPS…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Pulsa el botón Configuración WPS en el router.\nEs posible que se llame WPS o que incluya el símbolo de la izquierda."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Introduce el PIN <xliff:g id="NUMBER">%1$s</xliff:g> en el router Wi-Fi"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Después de introducir el PIN, la configuración puede tardar hasta 2 minutos en completarse"</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"No se ha podido encontrar el router Wi-Fi"</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Configuración de seguridad de router Wi-Fi (WEP) no admitida"</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Configuración de seguridad de router Wi-Fi (TKIP) no admitida"</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"Hay otra sesión de WPS en curso. Vuelve a intentarlo en unos minutos."</string>
     <string name="system_date" msgid="2767108116769558081">"Fecha"</string>
     <string name="system_time" msgid="6726022312605226285">"Hora"</string>
     <string name="system_set_date" msgid="2437586307768561116">"Establecer fecha"</string>
@@ -683,4 +697,17 @@
     <string name="manage_notification_access_title" msgid="2051765294087620434">"Acceso a notificaciones"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"Ninguna aplicación instalada ha solicitado acceso a las notificaciones."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Estas aplicaciones podrán leer todoas las notificaciones, incluidas las relativas a información personal, como nombres de contactos y texto de mensajes que hayas recibido. También podrán ignorar las notificaciones o utilizar los botones de acción que incluyan."</string>
+    <string name="system_alert_window_settings" msgid="2069031369694448339">"Mostrar sobre otras aplicaciones"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"Permitir mostrar sobre otras aplicaciones"</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"Permite que una aplicación se muestre sobre otras aplicaciones que estés utilizando. Esto puede interferir en el uso de esas aplicaciones o cambiar el modo en que se muestran o se comportan."</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"Modificar ajustes del sistema"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Puede modificar los ajustes del sistema"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"Cuando se concede este permiso, la aplicación puede modificar los ajustes del sistema."</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"Sí"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"No"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"Picture-in-Picture"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Permitir pantalla en pantalla"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Las aplicaciones instaladas no admiten el modo pantalla en pantalla"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Permite que las aplicaciones creen una ventana pantalla en pantalla mientras estén abiertas o después de que hayas salido de ellas (por ejemplo, para seguir viendo un vídeo). La ventana se muestra sobre otras aplicaciones que estés utilizando."</string>
+    <string name="special_access" msgid="3513811566600299998">"Acceso especial de aplicaciones"</string>
 </resources>
