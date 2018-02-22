@@ -32,6 +32,11 @@
 
     <!-- Header title for suggestions [CHAR LIMIT=50] -->
     <string name="header_category_suggestions">Suggestions</string>
+    <!-- Header title for quick settings [CHAR LIMIT=50] -->
+    <string name="header_category_quick_settings">Quick Settings</string>
+    <!-- Header title for general settings [CHAR LIMIT=50] -->
+    <string name="header_category_general_settings">General Settings</string>
+
     <!-- Header title for device [CHAR LIMIT=50] -->
     <string name="header_category_device">Device</string>
     <!-- Header title for preferences [CHAR LIMIT=50] -->
@@ -41,10 +46,28 @@
     <!-- Header title for personal [CHAR LIMIT=50] -->
     <string name="header_category_personal">Personal</string>
 
+    <!-- Main Fragment Quick Settings Preferences -->
+    <skip />
+    <!-- Title for main screen quick settings preference for network [CHAR LIMIT=50] -->
+    <string name="connect_to_network">Connect to network</string>
+    <!-- Title for main screen quick settings preference for add an account -->
+    <string name="add_an_account">Add an account</string>
+
+    <!-- Main Fragment General Settings Preferences -->
+    <skip />
+    <!-- Title for main screen preference for accounts on device [CHAR LIMIT=50] -->
+    <string name="accounts_category_title">Accounts and Sign In</string>
+    <!-- Title for main screen preference for network and Internet [CHAR LIMIT=50] -->
+    <string name="connectivity_network_category_title">Network and Internet</string>
+    <!-- Title for main screen preference for applications [CHAR LIMIT=50] -->
+    <string name="applications_category_title">Apps</string>
+    <!-- Title for main screen preference for device [CHAR_LIMIT_50] -->
+    <string name="device_pref_category_title">Device Preferences</string>
+    <!-- Title for main screen preference for remote and accessories [CHAR_LIMIT_50] -->
+    <string name="remotes_and_accessories_title_category">Remotes and Accessories</string>
+
     <!-- Account preferences -->
     <skip />
-    <!-- Title for main screen category for accounts on device [CHAR LIMIT=50] -->
-    <string name="accounts_category_title">Accounts</string>
     <!-- Preference which adds an account [CHAR LIMIT=50] -->
     <string name="add_account">Add account</string>
     <!-- Header for remove account [CHAR LIMIT=50] -->
@@ -74,8 +97,6 @@
 
     <!-- Connectivity preferences -->
     <skip />
-    <!-- Top level network card title. [CHAR LIMIT=50] -->
-    <string name="connectivity_network">Network</string>
     <!-- Preference which manages wifi settings. [CHAR LIMIT=50] -->
     <string name="connectivity_wifi">Wi-Fi</string>
     <!-- Preference which manages ethernet settings. [CHAR LIMIT=50] -->
@@ -86,6 +107,7 @@
     <string name="wifi_setting_always_scan_context">Let Google\'s location service and other apps scan for networks, even when Wi-Fi is off</string>
     <!-- Title for enable wifi. [CHAR LIMIT=50] -->
     <string name="wifi_setting_enable_wifi">Wi-Fi</string>
+    <string name="connectivity_hint_message">Connect to network</string>
 
     <!-- Device preferences -->
     <skip />
@@ -100,13 +122,15 @@
     <!-- Preference and title which changes system sounds settings. [CHAR LIMIT=50] -->
     <string name="device_sound_effects">System sounds</string>
     <!-- Preference which manages apps. [CHAR LIMIT=50] -->
-    <string name="device_apps">Apps</string>
+    <string name="device_apps">Applications</string>
     <!-- Preference which shows storage status. [CHAR LIMIT=50] -->
-    <string name="device_storage_reset">Storage &amp; reset</string>
+    <string name="device_storage">Storage</string>
+    <!-- Preference which shows reset settings. [CHAR LIMIT=50] -->
+    <string name="device_reset">Reset</string>
     <!-- Preference which manages backup settings. [CHAR LIMIT=50] -->
     <string name="device_backup_restore">Backup &amp; restore</string>
     <!-- Preference which shows reset options [CHAR LIMIT=50] -->
-    <string name="device_reset">Factory data reset</string>
+    <string name="device_factory_reset">Factory data reset</string>
     <!-- Preference which sets the device's display calibration. [CHAR LIMIT=50] -->
     <string name="device_calibration">Calibration</string>
 

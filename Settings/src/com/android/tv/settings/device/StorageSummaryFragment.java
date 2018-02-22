@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.tv.settings.device;
@@ -23,6 +23,7 @@ import android.os.storage.DiskInfo;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.os.storage.VolumeRecord;
+import android.support.annotation.Keep;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.util.ArraySet;
@@ -43,11 +44,11 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * The "Storage & reset" screen in TV settings.
+ * The "Storage" screen in TV settings.
  */
-public class StorageResetFragment extends SettingsPreferenceFragment {
-
-    private static final String TAG = "StorageResetFragment";
+@Keep
+public class StorageSummaryFragment extends SettingsPreferenceFragment {
+    private static final String TAG = "StorageSummaryFragment";
 
     private static final String KEY_DEVICE_CATEGORY = "device_storage";
     private static final String KEY_REMOVABLE_CATEGORY = "removable_storage";
@@ -55,7 +56,8 @@ public class StorageResetFragment extends SettingsPreferenceFragment {
     private static final int REFRESH_DELAY_MILLIS = 500;
 
     private StorageManager mStorageManager;
-    private final StorageEventListener mStorageEventListener = new StorageEventListener();
+    private final StorageSummaryFragment.StorageEventListener
+            mStorageEventListener = new StorageSummaryFragment.StorageEventListener();
 
     private final Handler mHandler = new Handler();
     private final Runnable mRefreshRunnable = new Runnable() {
@@ -65,9 +67,10 @@ public class StorageResetFragment extends SettingsPreferenceFragment {
         }
     };
 
-    public static StorageResetFragment newInstance() {
-        return new StorageResetFragment();
+    public static StorageSummaryFragment newInstance() {
+        return new StorageSummaryFragment();
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mStorageManager = getContext().getSystemService(StorageManager.class);
@@ -76,7 +79,7 @@ public class StorageResetFragment extends SettingsPreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.storage_reset, null);
+        setPreferencesFromResource(R.xml.storage_summary, null);
         findPreference(KEY_REMOVABLE_CATEGORY).setVisible(false);
     }
 
@@ -156,23 +159,25 @@ public class StorageResetFragment extends SettingsPreferenceFragment {
                 new ArraySet<>(privateVolumes.size() + privateMissingVolumes.size());
 
         for (final VolumeInfo volumeInfo : privateVolumes) {
-            final String key = VolPreference.makeKey(volumeInfo);
+            final String key = StorageSummaryFragment.VolPreference.makeKey(volumeInfo);
             touchedDeviceKeys.add(key);
-            VolPreference volPreference = (VolPreference) deviceCategory.findPreference(key);
+            StorageSummaryFragment.VolPreference volPreference =
+                        (StorageSummaryFragment.VolPreference) deviceCategory.findPreference(key);
             if (volPreference == null) {
-                volPreference = new VolPreference(themedContext, volumeInfo);
+                volPreference = new StorageSummaryFragment.VolPreference(themedContext, volumeInfo);
             }
             volPreference.refresh(themedContext, mStorageManager, volumeInfo);
             deviceCategory.addPreference(volPreference);
         }
 
         for (final VolumeRecord volumeRecord : privateMissingVolumes) {
-            final String key = MissingPreference.makeKey(volumeRecord);
+            final String key = StorageSummaryFragment.MissingPreference.makeKey(volumeRecord);
             touchedDeviceKeys.add(key);
-            MissingPreference missingPreference =
-                    (MissingPreference) deviceCategory.findPreference(key);
+            StorageSummaryFragment.MissingPreference missingPreference =
+                    (StorageSummaryFragment.MissingPreference) deviceCategory.findPreference(key);
             if (missingPreference == null) {
-                missingPreference = new MissingPreference(themedContext, volumeRecord);
+                missingPreference = new StorageSummaryFragment.MissingPreference(
+                            themedContext, volumeRecord);
             }
             deviceCategory.addPreference(missingPreference);
         }
@@ -194,22 +199,24 @@ public class StorageResetFragment extends SettingsPreferenceFragment {
         removableCategory.setVisible(publicCount > 0);
 
         for (final VolumeInfo volumeInfo : publicVolumes) {
-            final String key = VolPreference.makeKey(volumeInfo);
+            final String key = StorageSummaryFragment.VolPreference.makeKey(volumeInfo);
             touchedRemovableKeys.add(key);
-            VolPreference volPreference = (VolPreference) removableCategory.findPreference(key);
+            StorageSummaryFragment.VolPreference volPreference =
+                    (StorageSummaryFragment.VolPreference) removableCategory.findPreference(key);
             if (volPreference == null) {
-                volPreference = new VolPreference(themedContext, volumeInfo);
+                volPreference = new StorageSummaryFragment.VolPreference(themedContext, volumeInfo);
             }
             volPreference.refresh(themedContext, mStorageManager, volumeInfo);
             removableCategory.addPreference(volPreference);
         }
         for (final DiskInfo diskInfo : unsupportedDisks) {
-            final String key = UnsupportedDiskPreference.makeKey(diskInfo);
+            final String key = StorageSummaryFragment.UnsupportedDiskPreference.makeKey(diskInfo);
             touchedRemovableKeys.add(key);
-            UnsupportedDiskPreference unsupportedDiskPreference =
-                    (UnsupportedDiskPreference) findPreference(key);
+            StorageSummaryFragment.UnsupportedDiskPreference unsupportedDiskPreference =
+                    (StorageSummaryFragment.UnsupportedDiskPreference) findPreference(key);
             if (unsupportedDiskPreference == null) {
-                unsupportedDiskPreference = new UnsupportedDiskPreference(themedContext, diskInfo);
+                unsupportedDiskPreference = new StorageSummaryFragment.UnsupportedDiskPreference(
+                            themedContext, diskInfo);
             }
             removableCategory.addPreference(unsupportedDiskPreference);
         }
@@ -224,9 +231,8 @@ public class StorageResetFragment extends SettingsPreferenceFragment {
         }
     }
 
-
     private static class VolPreference extends Preference {
-        public VolPreference(Context context, VolumeInfo volumeInfo) {
+        VolPreference(Context context, VolumeInfo volumeInfo) {
             super(context);
             setKey(makeKey(volumeInfo));
         }
@@ -261,7 +267,7 @@ public class StorageResetFragment extends SettingsPreferenceFragment {
     }
 
     private static class MissingPreference extends Preference {
-        public MissingPreference(Context context, VolumeRecord volumeRecord) {
+        MissingPreference(Context context, VolumeRecord volumeRecord) {
             super(context);
             setKey(makeKey(volumeRecord));
             setTitle(volumeRecord.getNickname());
@@ -276,7 +282,7 @@ public class StorageResetFragment extends SettingsPreferenceFragment {
     }
 
     private static class UnsupportedDiskPreference extends Preference {
-        public UnsupportedDiskPreference(Context context, DiskInfo info) {
+        UnsupportedDiskPreference(Context context, DiskInfo info) {
             super(context);
             setKey(makeKey(info));
             setTitle(info.getDescription());
@@ -323,6 +329,6 @@ public class StorageResetFragment extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DEVICEINFO_STORAGE;
+        return MetricsProto.MetricsEvent.SETTINGS_STORAGE_CATEGORY;
     }
 }

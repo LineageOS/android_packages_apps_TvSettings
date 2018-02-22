@@ -15,12 +15,13 @@
     limitations under the License.
 -->
 
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:viewportWidth="24"
-        android:viewportHeight="24"
-        android:width="24dp"
-        android:height="24dp">
-    <path
-        android:pathData="M2 20l20 0 0 -4 -20 0 0 4zm2 -3l2 0 0 2 -2 0 0 -2zM2 4L2 8 22 8 22 4 2 4ZM6 7L4 7 4 5 6 5 6 7Zm-4 7l20 0 0 -4 -20 0 0 4zm2 -3l2 0 0 2 -2 0 0 -2z"
-        android:fillColor="#FFFFFF" />
-</vector>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:title="@string/device_storage">
+    <PreferenceCategory
+        android:key="device_storage"
+        android:title="@string/storage_device_storage_section" />
+
+    <PreferenceCategory
+        android:key="removable_storage"
+        android:title="@string/storage_removable_storage_section" />
+</PreferenceScreen>
