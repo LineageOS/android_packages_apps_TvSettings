@@ -18,15 +18,11 @@ package com.android.tv.settings.suggestions;
 
 import android.app.PendingIntent;
 import android.content.Context;
-import android.graphics.drawable.Icon;
 import android.service.settings.suggestions.Suggestion;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceViewHolder;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.android.settingslib.suggestions.SuggestionControllerMixin;
 
@@ -36,9 +32,6 @@ import com.android.settingslib.suggestions.SuggestionControllerMixin;
 public class SuggestionPreference extends Preference {
     private static final String TAG = "SuggestionPreference";
     public static final String SUGGESTION_PREFERENCE_KEY = "suggestion_pref_key";
-    private TextView mTitleView;
-    private TextView mSummaryView;
-    private ImageView mImageView;
 
     private final Suggestion mSuggestion;
     private final SuggestionControllerMixin mSuggestionControllerMixin;
@@ -60,28 +53,6 @@ public class SuggestionPreference extends Preference {
     @Override
     public void onBindViewHolder(final PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
-        mTitleView = (TextView) holder.findViewById(android.R.id.title);
-        mTitleView.setText(mSuggestion.getTitle());
-        mTitleView.setVisibility(View.VISIBLE);
-
-        mSummaryView = (TextView) holder.findViewById(android.R.id.summary);
-        final CharSequence summary = mSuggestion.getSummary();
-        if (!TextUtils.isEmpty(summary)) {
-            mSummaryView.setVisibility(View.VISIBLE);
-            mSummaryView.setText(summary);
-        } else {
-            mSummaryView.setVisibility(View.GONE);
-        }
-
-        mImageView = (ImageView) holder.findViewById(android.R.id.icon);
-        Icon icon = mSuggestion.getIcon();
-        if (icon != null) {
-            mImageView.setImageIcon(icon);
-            mImageView.setVisibility(View.VISIBLE);
-        } else {
-            mImageView.setVisibility(View.GONE);
-        }
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

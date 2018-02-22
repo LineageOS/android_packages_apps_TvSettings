@@ -30,6 +30,7 @@ import android.support.v7.preference.PreferenceCategory;
 import android.telephony.SignalStrength;
 
 import com.android.settingslib.suggestions.SuggestionControllerMixin;
+import com.android.settingslib.utils.IconCache;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
@@ -53,6 +54,7 @@ public class MainFragment extends SettingsPreferenceFragment implements
     ConnectivityListener mConnectivityListener;
     private PreferenceCategory mSuggestionsList;
     private SuggestionControllerMixin mSuggestionControllerMixin;
+    private IconCache mIconCache;
 
     public static MainFragment newInstance() {
         return new MainFragment();
@@ -66,6 +68,7 @@ public class MainFragment extends SettingsPreferenceFragment implements
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        mIconCache = new IconCache(getContext());
         mConnectivityListener =
                 new ConnectivityListener(getContext(), this::updateWifi, getLifecycle());
         super.onCreate(savedInstanceState);
@@ -206,8 +209,12 @@ public class MainFragment extends SettingsPreferenceFragment implements
             Preference curPref = findPreference(
                         SuggestionPreference.SUGGESTION_PREFERENCE_KEY + suggestion.getId());
             if (curPref == null) {
-                mSuggestionsList.addPreference(new SuggestionPreference(suggestion,
-                            this.getPreferenceManager().getContext(), mSuggestionControllerMixin));
+                SuggestionPreference newSuggPref = new SuggestionPreference(suggestion,
+                            this.getPreferenceManager().getContext(), mSuggestionControllerMixin);
+                newSuggPref.setIcon(mIconCache.getIcon(suggestion.getIcon()));
+                newSuggPref.setTitle(suggestion.getTitle());
+                newSuggPref.setSummary(suggestion.getSummary());
+                mSuggestionsList.addPreference(newSuggPref);
             }
         }
     }
