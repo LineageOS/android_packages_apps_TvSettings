@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,20 +14,21 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.form;
+package com.android.tv.settings.connectivity;
+
+import android.arch.lifecycle.ViewModel;
 
 /**
- * Listens for a Form to be completed or cancelled.
+ * Store the information for EditIpSettings and EditProxySettings flows.
  */
-public interface FormResultListener {
+public class EditSettingsInfo extends ViewModel {
+    private NetworkConfiguration mNetworkConfiguration;
 
-    /**
-     * Called when the form has been completed.
-     */
-    void onFormComplete();
+    public NetworkConfiguration getNetworkConfiguration() {
+        return mNetworkConfiguration;
+    }
 
-    /**
-     * Called when the form has been cancelled.
-     */
-    void onFormCancelled();
+    public void setNetworkConfiguration(NetworkConfiguration config) {
+        this.mNetworkConfiguration = config;
+    }
 }

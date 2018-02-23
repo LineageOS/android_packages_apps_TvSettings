@@ -37,13 +37,7 @@ public class StateMachine extends ViewModel {
     private Callback mCallback;
     private Map<State, List<Transition>> mTransitionMap = new HashMap<>();
     private LinkedList<State> mStatesList = new LinkedList<>();
-    private State.StateCompleteListener mCompletionListener =
-            new State.StateCompleteListener() {
-                @Override
-                public void onComplete(@Event int event) {
-                    updateState(event);
-                }
-            };
+    private State.StateCompleteListener mCompletionListener = event -> updateState(event);
 
     public static final int ADD_START = 0;
     public static final int CANCEL = 1;
@@ -60,22 +54,17 @@ public class StateMachine extends ViewModel {
     public static final int RESULT_TIMEOUT = 12;
     public static final int RESULT_BAD_AUTH = 13;
     public static final int RESULT_SUCCESS = 14;
-    public static final int TRY_AGAIN = 15;
-    public static final int ADD_PAGE_BASED_ON_NETWORK_CHOICE = 16;
-    public static final int OPTIONS_OR_CONNECT = 17;
-    public static final int WPS = 18;
+    public static final int RESULT_FAILURE = 15;
+    public static final int TRY_AGAIN = 16;
+    public static final int ADD_PAGE_BASED_ON_NETWORK_CHOICE = 17;
+    public static final int OPTIONS_OR_CONNECT = 18;
     public static final int IP_SETTINGS = 19;
-    public static final int PROXY_HOSTNAME = 20;
-    public static final int PROXY_SETTINGS_INVALID = 21;
-    public static final int ADVANCED_FLOW_COMPLETE = 22;
-    public static final int ENTER_ADVANCED_FLOW = 23;
-    public static final int EXIT_ADVANCED_FLOW = 24;
-    public static final int WPS_ENTER_PIN = 25;
-    public static final int WPS_SUCCESS = 26;
-    public static final int WPS_ERROR = 27;
-    public static final int WPS_SCANNING = 28;
-    public static final int WPS_START = 29;
-
+    public static final int IP_SETTINGS_INVALID = 20;
+    public static final int PROXY_HOSTNAME = 21;
+    public static final int PROXY_SETTINGS_INVALID = 22;
+    public static final int ADVANCED_FLOW_COMPLETE = 23;
+    public static final int ENTER_ADVANCED_FLOW = 24;
+    public static final int EXIT_ADVANCED_FLOW = 25;
     @IntDef({
             ADD_START,
             CANCEL,
@@ -92,20 +81,17 @@ public class StateMachine extends ViewModel {
             RESULT_TIMEOUT,
             RESULT_BAD_AUTH,
             RESULT_SUCCESS,
+            RESULT_FAILURE,
             TRY_AGAIN,
             ADD_PAGE_BASED_ON_NETWORK_CHOICE,
             OPTIONS_OR_CONNECT,
             IP_SETTINGS,
+            IP_SETTINGS_INVALID,
             PROXY_HOSTNAME,
             PROXY_SETTINGS_INVALID,
             ADVANCED_FLOW_COMPLETE,
             ENTER_ADVANCED_FLOW,
-            EXIT_ADVANCED_FLOW,
-            WPS_ENTER_PIN,
-            WPS_SUCCESS,
-            WPS_ERROR,
-            WPS_SCANNING,
-            WPS_START})
+            EXIT_ADVANCED_FLOW})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Event {
     }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.connectivity.setup;
+package com.android.tv.settings.connectivity;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
@@ -25,25 +25,26 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.connectivity.setup.WifiConnectivityGuidedStepFragment;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
 
 import java.util.List;
 
 /**
- * State responsible for handling the failed connection.
+ * State responsible for showing the save failure page.
  */
-public class ConnectFailedState implements State {
+public class SaveFailedState implements State {
     private final FragmentActivity mActivity;
     private Fragment mFragment;
 
-    public ConnectFailedState(FragmentActivity activity) {
+    public SaveFailedState(FragmentActivity activity) {
         mActivity = activity;
     }
 
     @Override
     public void processForward() {
-        mFragment = new ConnectFailedFragment();
+        mFragment = new SaveFailedFragment();
         FragmentChangeListener listener = (FragmentChangeListener) mActivity;
         if (listener != null) {
             listener.onFragmentChange(mFragment, true);
@@ -52,8 +53,8 @@ public class ConnectFailedState implements State {
 
     @Override
     public void processBackward() {
-        StateMachine stateMachine = ViewModelProviders.of(mActivity).get(StateMachine.class);
-        stateMachine.back();
+        StateMachine sm = ViewModelProviders.of(mActivity).get(StateMachine.class);
+        sm.back();
     }
 
     @Override
@@ -62,20 +63,18 @@ public class ConnectFailedState implements State {
     }
 
     /**
-     * Fragment that notifies the user the connection to network is failed.
+     * Fragment that needs user to enter dns1.
      */
-    public static class ConnectFailedFragment extends WifiConnectivityGuidedStepFragment {
-        private static final int ACTION_ID_TRY_AGAIN = 100001;
-        private static final int ACTION_ID_VIEW_AVAILABLE_NETWORK = 100002;
+    public static class SaveFailedFragment extends WifiConnectivityGuidedStepFragment {
         private StateMachine mStateMachine;
-        private UserChoiceInfo mUserChoiceInfo;
 
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String title = getString(
-                    R.string.title_wifi_could_not_connect,
-                    mUserChoiceInfo.getWifiConfiguration().getPrintableSsid());
-            return new GuidanceStylist.Guidance(title, null, null, null);
+            return new GuidanceStylist.Guidance(
+                    getString(R.string.title_wifi_could_not_save),
+                    null,
+                    null,
+                    null);
         }
 
         @Override
@@ -83,9 +82,6 @@ public class ConnectFailedState implements State {
             mStateMachine = ViewModelProviders
                     .of(getActivity())
                     .get(StateMachine.class);
-            mUserChoiceInfo = ViewModelProviders
-                    .of(getActivity())
-                    .get(UserChoiceInfo.class);
             super.onCreate(savedInstanceState);
         }
 
@@ -93,23 +89,15 @@ public class ConnectFailedState implements State {
         public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
             Context context = getActivity();
             actions.add(new GuidedAction.Builder(context)
-                    .title(R.string.wifi_action_try_again)
-                    .id(ACTION_ID_TRY_AGAIN)
-                    .build());
-            actions.add(new GuidedAction.Builder(context)
-                    .title(R.string.wifi_action_view_available_networks)
-                    .id(ACTION_ID_VIEW_AVAILABLE_NETWORK)
+                    .title(getString(R.string.wifi_action_ok))
+                    .id(GuidedAction.ACTION_ID_CONTINUE)
                     .build());
         }
 
         @Override
         public void onGuidedActionClicked(GuidedAction action) {
-            if (action.getId() == ACTION_ID_TRY_AGAIN) {
-                mStateMachine.getListener()
-                        .onComplete(StateMachine.TRY_AGAIN);
-            } else if (action.getId() == ACTION_ID_VIEW_AVAILABLE_NETWORK) {
-                mStateMachine.getListener()
-                        .onComplete(StateMachine.SELECT_WIFI);
+            if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
+                mStateMachine.getListener().onComplete(StateMachine.FAIL);
             }
         }
     }
