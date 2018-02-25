@@ -106,10 +106,14 @@ public class ProxyPortState implements State {
 
         @Override
         public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
+            String title = getString(R.string.proxy_port_hint);
+            if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.PROXY_PORT)) {
+                title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.PROXY_PORT);
+            }  else if (mAdvancedOptionsFlowInfo.getInitialProxyInfo() != null) {
+                title = Integer.toString(mAdvancedOptionsFlowInfo.getInitialProxyInfo().getPort());
+            }
+
             Context context = getActivity();
-            String title = mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.DNS2)
-                    ? mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.DNS2)
-                    : getString(R.string.proxy_port_hint);
             mAction = new GuidedAction.Builder(context)
                     .editTitle(title)
                     .editable(true)

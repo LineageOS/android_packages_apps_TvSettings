@@ -18,17 +18,39 @@ package com.android.tv.settings.connectivity.setup;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.net.IpConfiguration;
+import android.support.annotation.IntDef;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 
 import com.android.tv.settings.connectivity.NetworkConfiguration;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 
 /**
  * Handles the flow of setting advanced options.
  */
 public class AdvancedWifiOptionsFlow {
+
+    /** Flag that set advanced flow start with default page **/
+    public static final int START_DEFAULT_PAGE = 0;
+    /** Flag that set advanced flow start with IP settings page **/
+    public static final int START_IP_SETTINGS_PAGE = 1;
+    /** Flag that set advanced flow start with proxy settings page **/
+    public static final int START_PROXY_SETTINGS_PAGE = 2;
+    private static final String TAG = "AdvancedWifiOptionsFlow";
+
+    @IntDef({
+            START_DEFAULT_PAGE,
+            START_IP_SETTINGS_PAGE,
+            START_PROXY_SETTINGS_PAGE
+    })
+    @Retention(RetentionPolicy.SOURCE)
+    public @interface START_PAGE {
+    }
 
     /**
      * Create a advanced flow.
@@ -37,15 +59,17 @@ public class AdvancedWifiOptionsFlow {
      * @param askFirst             whether ask user to start advanced flow
      * @param isSettingsFlow       whether advanced flow is started from settings flow
      * @param initialConfiguration the previous {@link NetworkConfiguration} info.
-     * @param entranceState        The state that starts the advanced flow.
+     * @param entranceState        The state that starts the advanced flow, null if there is none.
      * @param exitState            The state where the advanced flow go after it ends.
+     * @param startPage            The page where the advanced flow starts with.
      */
     public static void createFlow(FragmentActivity activity,
             boolean askFirst,
             boolean isSettingsFlow,
             NetworkConfiguration initialConfiguration,
             State entranceState,
-            State exitState) {
+            State exitState,
+            @START_PAGE int startPage) {
         StateMachine mStateMachine = ViewModelProviders.of(activity).get(StateMachine.class);
         AdvancedOptionsFlowInfo mAdvancedOptionsFlowInfo = ViewModelProviders.of(activity).get(
                 AdvancedOptionsFlowInfo.class);
@@ -54,7 +78,6 @@ public class AdvancedWifiOptionsFlow {
                 ? initialConfiguration.getIpConfiguration()
                 : new IpConfiguration();
         mAdvancedOptionsFlowInfo.setIpConfiguration(mIpConfiguration);
-
         State mAdvancedOptionsState = new AdvancedOptionsState(activity);
         State mProxySettingsState = new ProxySettingsState(activity);
         State mIpSettingsState = new IpSettingsState(activity);
@@ -72,12 +95,36 @@ public class AdvancedWifiOptionsFlow {
 
         // Define the transitions between external states and internal states for advanced options
         // flow.
+        State startState = null;
+        switch (startPage) {
+            case START_DEFAULT_PAGE :
+                if (askFirst) {
+                    startState = mAdvancedOptionsState;
+                } else {
+                    startState = mProxySettingsState;
+                }
+                break;
+            case START_IP_SETTINGS_PAGE :
+                startState = mIpSettingsState;
+                break;
+            case START_PROXY_SETTINGS_PAGE :
+                startState = mProxySettingsState;
+                break;
+            default:
+                Log.wtf(TAG, "Got a wrong start state");
+                break;
+        }
+
         /** Entrance **/
-        mStateMachine.addState(
-                entranceState,
-                StateMachine.ENTER_ADVANCED_FLOW,
-                (askFirst) ? mAdvancedOptionsState : mProxySettingsState
-        );
+        if (entranceState != null) {
+            mStateMachine.addState(
+                    entranceState,
+                    StateMachine.ENTER_ADVANCED_FLOW,
+                    startState
+            );
+        } else {
+            mStateMachine.setStartState(startState);
+        }
 
         /** Exit **/
         mStateMachine.addState(
@@ -201,7 +248,7 @@ public class AdvancedWifiOptionsFlow {
                 mAdvancedFlowCompleteState);
         mStateMachine.addState(
                 mDns2State,
-                StateMachine.FAIL,
+                StateMachine.IP_SETTINGS_INVALID,
                 mIpSettingsInvalidState
         );
 

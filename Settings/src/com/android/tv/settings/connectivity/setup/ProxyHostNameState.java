@@ -106,11 +106,14 @@ public class ProxyHostNameState implements State {
 
         @Override
         public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
+            String title = getString(R.string.proxy_hostname_hint);
+            if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.PROXY_HOSTNAME)) {
+                title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.PROXY_HOSTNAME);
+            }  else if (mAdvancedOptionsFlowInfo.getInitialProxyInfo() != null) {
+                title = mAdvancedOptionsFlowInfo.getInitialProxyInfo().getHost();
+            }
+
             Context context = getActivity();
-            String title =
-                    mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.PROXY_HOSTNAME)
-                            ? mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.PROXY_HOSTNAME)
-                            : getString(R.string.proxy_hostname_hint);
             mAction = new GuidedAction.Builder(context)
                     .editTitle(title)
                     .editable(true)

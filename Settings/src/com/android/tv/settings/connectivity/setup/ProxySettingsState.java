@@ -23,6 +23,8 @@ import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.text.TextUtils;
+import android.view.View;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.util.AdvancedOptionsFlowUtil;
@@ -109,6 +111,28 @@ public class ProxySettingsState implements State {
                     .title(R.string.wifi_action_proxy_manual)
                     .id(WIFI_ACTION_PROXY_MANUAL)
                     .build());
+        }
+
+        @Override
+        public void onViewCreated(View view, Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+            CharSequence title = null;
+            if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.PROXY_SETTINGS)) {
+                title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.PROXY_SETTINGS);
+            } else if (mAdvancedOptionsFlowInfo.getInitialProxyInfo() != null) {
+                title = getString(R.string.wifi_action_proxy_manual);
+            }
+            moveToPosition(title);
+        }
+
+        private void moveToPosition(CharSequence title) {
+            if (title == null) return;
+            for (int i = 0; i < getActions().size(); i++) {
+                if (TextUtils.equals(getActions().get(i).getTitle(), title)) {
+                    setSelectedActionPosition(i);
+                    break;
+                }
+            }
         }
 
         @Override

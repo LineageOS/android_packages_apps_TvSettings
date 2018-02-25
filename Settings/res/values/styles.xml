@@ -51,6 +51,11 @@
         <item name="wps_color">@color/normal</item>
     </style>
 
+    <!-- Settings theme for connectivity -->
+    <style name="Theme.SettingsConnectivity" parent="@style/Theme.Settings">
+        <item name="guidedStepTheme">@style/Theme.Setup.GuidedStep</item>
+    </style>
+
     <style name="Theme.Setup" parent="@style/Theme.Settings">
         <item name="wifi_signal_color">@color/setup_list_item</item>
         <item name="wps_color">@color/setup_list_item</item>
@@ -79,23 +84,6 @@
         <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.8</item>
-    </style>
-
-    <!-- FormWizard version of Theme.Settings -->
-    <style name="Theme.Leanback.FormWizard.Solid" parent="@android:style/Theme.Leanback.FormWizard">
-        <item name="android:windowBackground">@color/settings_background</item>
-        <item name="android:colorBackgroundCacheHint">@null</item>
-        <item name="android:windowShowWallpaper">true</item>
-        <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
-    </style>
-
-    <!-- Transparent version of FormWizard, shown during Setup -->
-    <style name="Theme.Leanback.FormWizard.Transparent" parent="@android:style/Theme.Leanback.FormWizard">
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowShowWallpaper">true</item>
-        <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
-        <item name="wps_color">@color/setup_list_item</item>
     </style>
 
     <style name="Theme.Settings.BluetoothPairing" parent="@style/SettingsStyle.TextAppearanceMedium">

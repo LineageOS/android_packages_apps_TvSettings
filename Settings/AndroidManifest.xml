@@ -93,26 +93,26 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/Theme.Leanback.FormWizard.Solid" />
+            android:theme="@style/Theme.SettingsConnectivity" />
         <activity
             android:name=".connectivity.EditProxySettingsActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
-            android:theme="@style/Theme.Leanback.FormWizard.Solid" />
+            android:theme="@style/Theme.SettingsConnectivity" />
         <activity
             android:name=".connectivity.EditIpSettingsActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
-            android:theme="@style/Theme.Leanback.FormWizard.Solid" />
+            android:theme="@style/Theme.SettingsConnectivity" />
         <activity
             android:name=".connectivity.AddWifiNetworkActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/Theme.Leanback.FormWizard.Solid" />
+            android:theme="@style/Theme.SettingsConnectivity" />
         <activity
             android:name=".accounts.AccountSyncActivity"
             android:theme="@style/Theme.Settings.Transparent"

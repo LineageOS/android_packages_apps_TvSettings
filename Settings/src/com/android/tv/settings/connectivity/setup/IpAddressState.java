@@ -111,9 +111,14 @@ public class IpAddressState implements State {
         @Override
         public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
             Context context = getActivity();
-            String title = mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.IP_ADDRESS)
-                    ? mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.IP_ADDRESS)
-                    : getString(R.string.wifi_ip_address_hint);
+            String title = getString(R.string.wifi_ip_address_hint);
+            if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.IP_ADDRESS)) {
+                title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.IP_ADDRESS);
+            } else if (mAdvancedOptionsFlowInfo.getInitialLinkAddress() != null) {
+                title = mAdvancedOptionsFlowInfo.getInitialLinkAddress()
+                            .getAddress().getHostAddress();
+            }
+
             mAction = new GuidedAction.Builder(context)
                     .editTitle(title)
                     .editable(true)

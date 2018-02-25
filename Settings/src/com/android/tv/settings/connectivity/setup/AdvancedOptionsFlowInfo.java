@@ -18,11 +18,14 @@ package com.android.tv.settings.connectivity.setup;
 
 import android.arch.lifecycle.ViewModel;
 import android.net.IpConfiguration;
+import android.net.LinkAddress;
+import android.net.ProxyInfo;
 import android.support.annotation.IntDef;
 import android.text.TextUtils;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.net.InetAddress;
 import java.util.HashMap;
 
 /**
@@ -156,5 +159,53 @@ public class AdvancedOptionsFlowInfo extends ViewModel {
 
     public void setPrintableSsid(String ssid) {
         this.mPrintableSsid = ssid;
+    }
+
+    /**
+     * Get the initial DNS.
+     */
+    public InetAddress getInitialDns(int index) {
+        if (mIpConfiguration != null && mIpConfiguration.getStaticIpConfiguration() != null
+                && mIpConfiguration.getStaticIpConfiguration().dnsServers == null) {
+            try {
+                return mIpConfiguration.getStaticIpConfiguration().dnsServers.get(index);
+            } catch (IndexOutOfBoundsException e) {
+                return null;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Get the initial gateway.
+     */
+    public InetAddress getInitialGateway() {
+        if (mIpConfiguration != null && mIpConfiguration.getStaticIpConfiguration() != null) {
+            return mIpConfiguration.getStaticIpConfiguration().gateway;
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * Get the initial static ip configuration address.
+     */
+    public LinkAddress getInitialLinkAddress() {
+        if (mIpConfiguration != null && mIpConfiguration.getStaticIpConfiguration() != null) {
+            return mIpConfiguration.getStaticIpConfiguration().ipAddress;
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * Get the initial proxy info.
+     */
+    public ProxyInfo getInitialProxyInfo() {
+        if (mIpConfiguration != null) {
+            return mIpConfiguration.getHttpProxy();
+        } else {
+            return null;
+        }
     }
 }

@@ -107,11 +107,14 @@ public class ProxyBypassState implements State {
 
         @Override
         public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
+            String title = getString(R.string.proxy_exclusionlist_hint);
+            if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.PROXY_BYPASS)) {
+                title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.PROXY_BYPASS);
+            }  else if (mAdvancedOptionsFlowInfo.getInitialProxyInfo() != null) {
+                title = mAdvancedOptionsFlowInfo.getInitialProxyInfo().getExclusionListAsString();
+            }
+
             Context context = getActivity();
-            String title =
-                    mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.PROXY_BYPASS)
-                            ? mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.PROXY_BYPASS)
-                            : getString(R.string.proxy_exclusionlist_hint);
             mAction = new GuidedAction.Builder(context)
                     .editTitle(title)
                     .editable(true)

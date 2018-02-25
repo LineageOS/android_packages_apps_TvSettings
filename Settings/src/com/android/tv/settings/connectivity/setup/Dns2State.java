@@ -108,10 +108,14 @@ public class Dns2State implements State {
 
         @Override
         public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
+            String title = getString(R.string.wifi_dns2_hint);
+            if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.DNS2)) {
+                title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.DNS2);
+            } else if (mAdvancedOptionsFlowInfo.getInitialDns(1) != null) {
+                title = mAdvancedOptionsFlowInfo.getInitialDns(1).getHostAddress();
+            }
+
             Context context = getActivity();
-            String title = mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.DNS2)
-                    ? mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.DNS2)
-                    : getString(R.string.wifi_dns2_hint);
             mAction = new GuidedAction.Builder(context)
                     .editTitle(title)
                     .editable(true)
@@ -135,7 +139,7 @@ public class Dns2State implements State {
                 if (ipSettingsResult == 0) {
                     mStateMachine.getListener().onComplete(StateMachine.ADVANCED_FLOW_COMPLETE);
                 } else {
-                    mStateMachine.getListener().onComplete(StateMachine.FAIL);
+                    mStateMachine.getListener().onComplete(StateMachine.IP_SETTINGS_INVALID);
                 }
             }
             return action.getId();
