@@ -112,7 +112,7 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
         mAddStartState = new AddStartState(this);
         mFinishState = new FinishState(this);
 
-        /** KnownNetwork **/
+        /* KnownNetwork */
         mStateMachine.addState(
                 mKnownNetworkState,
                 StateMachine.ADD_START,
@@ -122,7 +122,7 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
                 StateMachine.SELECT_WIFI,
                 mFinishState);
 
-        /** Add Start **/
+        /* Add Start */
         mStateMachine.addState(
                 mAddStartState,
                 StateMachine.PASSWORD,
@@ -132,19 +132,19 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
                 StateMachine.CONNECT,
                 mConnectState);
 
-        /** Enter Password **/
+        /* Enter Password */
         mStateMachine.addState(
                 mEnterPasswordState,
                 StateMachine.OPTIONS_OR_CONNECT,
                 mOptionsOrConnectState);
 
-        /** Option or Connect **/
+        /* Option or Connect */
         mStateMachine.addState(
                 mOptionsOrConnectState,
                 StateMachine.CONNECT,
                 mConnectState);
 
-        /** Connect **/
+        /* Connect */
         mStateMachine.addState(
                 mConnectState,
                 StateMachine.RESULT_REJECTED_BY_AP,
@@ -166,7 +166,7 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
                 StateMachine.RESULT_SUCCESS,
                 mSuccessState);
 
-        /** Connect Failed **/
+        /* Connect Failed */
         mStateMachine.addState(
                 mConnectFailedState,
                 StateMachine.TRY_AGAIN,
@@ -178,7 +178,7 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
                 mFinishState
         );
 
-        /** Connect Timeout */
+        /* Connect Timeout */
         mStateMachine.addState(
                 mConnectTimeOutState,
                 StateMachine.TRY_AGAIN,
@@ -190,7 +190,7 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
                 mFinishState
         );
 
-        /** Connect Rejected By AP **/
+        /* Connect Rejected By AP */
         mStateMachine.addState(
                 mConnectRejectedByApState,
                 StateMachine.TRY_AGAIN,

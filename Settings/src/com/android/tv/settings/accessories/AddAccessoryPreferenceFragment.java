@@ -28,6 +28,7 @@ import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v17.leanback.widget.VerticalGridView;
 import android.support.v17.preference.BaseLeanbackPreferenceFragment;
 import android.support.v7.preference.Preference;
@@ -147,6 +148,7 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
         return MetricsProto.MetricsEvent.BLUETOOTH_PAIRING;
     }
 
+    @NonNull
     @Override
     public Lifecycle getLifecycle() {
         return mLifecycle;

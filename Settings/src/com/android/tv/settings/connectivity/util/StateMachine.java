@@ -32,12 +32,11 @@ import java.util.Map;
  * State machine responsible for handling the logic between different states.
  */
 public class StateMachine extends ViewModel {
-    public static final String STATE_MACHINE_KEY = "STATE_MACHINE_KEY";
 
     private Callback mCallback;
     private Map<State, List<Transition>> mTransitionMap = new HashMap<>();
     private LinkedList<State> mStatesList = new LinkedList<>();
-    private State.StateCompleteListener mCompletionListener = event -> updateState(event);
+    private State.StateCompleteListener mCompletionListener = this::updateState;
 
     public static final int ADD_START = 0;
     public static final int CANCEL = 1;
@@ -119,7 +118,7 @@ public class StateMachine extends ViewModel {
      */
     public void addState(State state, @Event int event, State destination) {
         if (!mTransitionMap.containsKey(state)) {
-            mTransitionMap.put(state, new ArrayList<Transition>());
+            mTransitionMap.put(state, new ArrayList<>());
         }
 
         mTransitionMap.get(state).add(new Transition(state, event, destination));
@@ -129,7 +128,7 @@ public class StateMachine extends ViewModel {
      * Add a state that has no outward transitions, but will end the state machine flow.
      */
     public void addTerminalState(State state) {
-        mTransitionMap.put(state, new ArrayList<Transition>());
+        mTransitionMap.put(state, new ArrayList<>());
     }
 
     /**

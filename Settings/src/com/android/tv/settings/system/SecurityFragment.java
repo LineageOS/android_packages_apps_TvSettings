@@ -296,7 +296,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
      * Profiles are allowed to run in the background by default, unless the device specifically
      * sets a config flag and/or has the global setting overridden by something on-device.
      *
-     * @see {@link Settings.Global#KEEP_PROFILE_IN_BACKGROUND}
+     * @see Settings.Global#KEEP_PROFILE_IN_BACKGROUND
      */
     private boolean shouldAllowRunInBackground() {
         final boolean defaultValue = getContext().getResources().getBoolean(

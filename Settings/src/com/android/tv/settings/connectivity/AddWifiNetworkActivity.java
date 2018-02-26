@@ -90,14 +90,14 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
         AdvancedWifiOptionsFlow.createFlow(
                 this, true, true, null, mEnterAdvancedFlowOrRetryState,
                 mConnectState, AdvancedWifiOptionsFlow.START_DEFAULT_PAGE);
-        /** Enter SSID **/
+        /* Enter SSID */
         mStateMachine.addState(
                 mEnterSsidState,
                 StateMachine.CONTINUE,
                 mChooseSecurityState
         );
 
-        /** Choose security **/
+        /* Choose security */
         mStateMachine.addState(
                 mChooseSecurityState,
                 StateMachine.OPTIONS_OR_CONNECT,
@@ -109,21 +109,21 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
                 mEnterPasswordState
         );
 
-        /**Enter Password **/
+        /* Enter Password */
         mStateMachine.addState(
                 mEnterPasswordState,
                 StateMachine.OPTIONS_OR_CONNECT,
                 mOptionsOrConnectState
         );
 
-        /** Options or Connect **/
+        /* Options or Connect */
         mStateMachine.addState(
                 mOptionsOrConnectState,
                 StateMachine.CONNECT,
                 mConnectState
         );
 
-        /** Connect **/
+        /* Connect */
         mStateMachine.addState(
                 mConnectState,
                 StateMachine.RESULT_REJECTED_BY_AP,
@@ -145,7 +145,7 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
                 StateMachine.RESULT_SUCCESS,
                 mSuccessState);
 
-        /** Connect Failed **/
+        /* Connect Failed */
         mStateMachine.addState(
                 mConnectFailedState,
                 StateMachine.TRY_AGAIN,
@@ -158,7 +158,7 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
                 mFinishState
         );
 
-        /** Connect Timeout */
+        /* Connect Timeout */
         mStateMachine.addState(
                 mConnectTimeOutState,
                 StateMachine.TRY_AGAIN,
@@ -170,7 +170,7 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
                 mFinishState
         );
 
-        /** Connect Rejected By AP **/
+        /* Connect Rejected By AP */
         mStateMachine.addState(
                 mConnectRejectedByApState,
                 StateMachine.TRY_AGAIN,
@@ -180,7 +180,7 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
                 StateMachine.SELECT_WIFI,
                 mFinishState);
 
-        /** Connect Auth Failure **/
+        /* Connect Auth Failure */
         mStateMachine.addState(
                 mConnectAuthFailureState,
                 StateMachine.ADD_PAGE_BASED_ON_NETWORK_CHOICE,
@@ -190,7 +190,7 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
                 StateMachine.SELECT_WIFI,
                 mFinishState);
 
-        /** Enter Advanced Flow or Retry **/
+        /* Enter Advanced Flow or Retry */
         mStateMachine.addState(
                 mEnterAdvancedFlowOrRetryState,
                 StateMachine.CONTINUE,

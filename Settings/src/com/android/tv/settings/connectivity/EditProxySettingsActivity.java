@@ -23,7 +23,6 @@ import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
@@ -40,7 +39,7 @@ public class EditProxySettingsActivity extends InstrumentedActivity implements
 
     private static final String TAG = "EditProxySettings";
 
-    public static final int NETWORK_ID_ETHERNET = WifiConfiguration.INVALID_NETWORK_ID;
+    private static final int NETWORK_ID_ETHERNET = WifiConfiguration.INVALID_NETWORK_ID;
     private static final String EXTRA_NETWORK_ID = "network_id";
 
     public static Intent createIntent(Context context, int networkId) {
@@ -48,17 +47,13 @@ public class EditProxySettingsActivity extends InstrumentedActivity implements
                 .putExtra(EXTRA_NETWORK_ID, networkId);
     }
 
-    private NetworkConfiguration mConfiguration;
     private State mSaveState;
     private State mSaveSuccessState;
     private State mSaveFailedState;
     private StateMachine mStateMachine;
-    private final StateMachine.Callback mStateMachineCallback = new StateMachine.Callback() {
-        @Override
-        public void onFinish(int result) {
-            setResult(result);
-            finish();
-        }
+    private final StateMachine.Callback mStateMachineCallback = result -> {
+        setResult(result);
+        finish();
     };
 
     @Override
@@ -71,25 +66,20 @@ public class EditProxySettingsActivity extends InstrumentedActivity implements
         mSaveSuccessState = new SaveSuccessState(this);
         mSaveFailedState = new SaveFailedState(this);
         int networkId = getIntent().getIntExtra(EXTRA_NETWORK_ID, NETWORK_ID_ETHERNET);
+        NetworkConfiguration netConfig;
         if (networkId == NETWORK_ID_ETHERNET) {
-            mConfiguration = NetworkConfigurationFactory.createNetworkConfiguration(this,
-                    NetworkConfigurationFactory.TYPE_ETHERNET);
-            ((EthernetConfig) mConfiguration).load();
+            netConfig = new EthernetConfig(this);
+            ((EthernetConfig) netConfig).load();
         } else {
-            mConfiguration = NetworkConfigurationFactory.createNetworkConfiguration(this,
-                    NetworkConfigurationFactory.TYPE_WIFI);
-            ((WifiConfig) mConfiguration).load(networkId);
+            netConfig = new WifiConfig(this);
+            ((WifiConfig) netConfig).load(networkId);
         }
         EditSettingsInfo editSettingsInfo = ViewModelProviders.of(this).get(EditSettingsInfo.class);
-        editSettingsInfo.setNetworkConfiguration(mConfiguration);
-        if (mConfiguration != null) {
-            AdvancedWifiOptionsFlow.createFlow(this, false, true, mConfiguration,
-                    null, mSaveState, AdvancedWifiOptionsFlow.START_PROXY_SETTINGS_PAGE);
-        } else {
-            Log.e(TAG, "Could not find existing configuration for network id: " + networkId);
-        }
+        editSettingsInfo.setNetworkConfiguration(netConfig);
+        AdvancedWifiOptionsFlow.createFlow(this, false, true, netConfig,
+                null, mSaveState, AdvancedWifiOptionsFlow.START_PROXY_SETTINGS_PAGE);
 
-        /** Save **/
+        /* Save */
         mStateMachine.addState(
                 mSaveState,
                 StateMachine.RESULT_SUCCESS,

@@ -24,7 +24,6 @@ import android.content.Context;
 import android.hardware.input.InputManager;
 import android.os.Handler;
 import android.util.Log;
-import android.view.InputDevice;
 
 /**
  * Manages process of pairing and connecting of input devices.

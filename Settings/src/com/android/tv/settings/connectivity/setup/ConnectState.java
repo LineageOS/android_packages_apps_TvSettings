@@ -98,7 +98,6 @@ public class ConnectState implements State {
         static final int CONNECTION_TIMEOUT = 15000;
         private static final String TAG = "ConnectToWifiFragment";
         private static final boolean DEBUG = false;
-        private static final String EXTRA_CONFIGURATION = "configuration";
         @VisibleForTesting
         StateMachine mStateMachine;
         @VisibleForTesting

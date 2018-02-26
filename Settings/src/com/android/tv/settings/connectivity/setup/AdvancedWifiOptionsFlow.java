@@ -35,11 +35,11 @@ import java.lang.annotation.RetentionPolicy;
  */
 public class AdvancedWifiOptionsFlow {
 
-    /** Flag that set advanced flow start with default page **/
+    /** Flag that set advanced flow start with default page */
     public static final int START_DEFAULT_PAGE = 0;
-    /** Flag that set advanced flow start with IP settings page **/
+    /** Flag that set advanced flow start with IP settings page */
     public static final int START_IP_SETTINGS_PAGE = 1;
-    /** Flag that set advanced flow start with proxy settings page **/
+    /** Flag that set advanced flow start with proxy settings page */
     public static final int START_PROXY_SETTINGS_PAGE = 2;
     private static final String TAG = "AdvancedWifiOptionsFlow";
 
@@ -70,28 +70,28 @@ public class AdvancedWifiOptionsFlow {
             State entranceState,
             State exitState,
             @START_PAGE int startPage) {
-        StateMachine mStateMachine = ViewModelProviders.of(activity).get(StateMachine.class);
-        AdvancedOptionsFlowInfo mAdvancedOptionsFlowInfo = ViewModelProviders.of(activity).get(
+        StateMachine stateMachine = ViewModelProviders.of(activity).get(StateMachine.class);
+        AdvancedOptionsFlowInfo advancedOptionsFlowInfo = ViewModelProviders.of(activity).get(
                 AdvancedOptionsFlowInfo.class);
-        mAdvancedOptionsFlowInfo.setSettingsFlow(isSettingsFlow);
-        IpConfiguration mIpConfiguration = (initialConfiguration != null)
+        advancedOptionsFlowInfo.setSettingsFlow(isSettingsFlow);
+        IpConfiguration ipConfiguration = (initialConfiguration != null)
                 ? initialConfiguration.getIpConfiguration()
                 : new IpConfiguration();
-        mAdvancedOptionsFlowInfo.setIpConfiguration(mIpConfiguration);
-        State mAdvancedOptionsState = new AdvancedOptionsState(activity);
-        State mProxySettingsState = new ProxySettingsState(activity);
-        State mIpSettingsState = new IpSettingsState(activity);
-        State mProxyHostNameState = new ProxyHostNameState(activity);
-        State mProxyPortState = new ProxyPortState(activity);
-        State mProxyBypassState = new ProxyBypassState(activity);
-        State mProxySettingsInvalidState = new ProxySettingsInvalidState(activity);
-        State mIpAddressState = new IpAddressState(activity);
-        State mGatewayState = new GatewayState(activity);
-        State mNetworkPrefixLengthState = new NetworkPrefixLengthState(activity);
-        State mDns1State = new Dns1State(activity);
-        State mDns2State = new Dns2State(activity);
-        State mIpSettingsInvalidState = new IpSettingsInvalidState(activity);
-        State mAdvancedFlowCompleteState = new AdvancedFlowCompleteState(activity);
+        advancedOptionsFlowInfo.setIpConfiguration(ipConfiguration);
+        State advancedOptionsState = new AdvancedOptionsState(activity);
+        State proxySettingsState = new ProxySettingsState(activity);
+        State ipSettingsState = new IpSettingsState(activity);
+        State proxyHostNameState = new ProxyHostNameState(activity);
+        State proxyPortState = new ProxyPortState(activity);
+        State proxyBypassState = new ProxyBypassState(activity);
+        State proxySettingsInvalidState = new ProxySettingsInvalidState(activity);
+        State ipAddressState = new IpAddressState(activity);
+        State gatewayState = new GatewayState(activity);
+        State networkPrefixLengthState = new NetworkPrefixLengthState(activity);
+        State dns1State = new Dns1State(activity);
+        State dns2State = new Dns2State(activity);
+        State ipSettingsInvalidState = new IpSettingsInvalidState(activity);
+        State advancedFlowCompleteState = new AdvancedFlowCompleteState(activity);
 
         // Define the transitions between external states and internal states for advanced options
         // flow.
@@ -99,164 +99,164 @@ public class AdvancedWifiOptionsFlow {
         switch (startPage) {
             case START_DEFAULT_PAGE :
                 if (askFirst) {
-                    startState = mAdvancedOptionsState;
+                    startState = advancedOptionsState;
                 } else {
-                    startState = mProxySettingsState;
+                    startState = proxySettingsState;
                 }
                 break;
             case START_IP_SETTINGS_PAGE :
-                startState = mIpSettingsState;
+                startState = ipSettingsState;
                 break;
             case START_PROXY_SETTINGS_PAGE :
-                startState = mProxySettingsState;
+                startState = proxySettingsState;
                 break;
             default:
                 Log.wtf(TAG, "Got a wrong start state");
                 break;
         }
 
-        /** Entrance **/
+        /* Entrance */
         if (entranceState != null) {
-            mStateMachine.addState(
+            stateMachine.addState(
                     entranceState,
                     StateMachine.ENTER_ADVANCED_FLOW,
                     startState
             );
         } else {
-            mStateMachine.setStartState(startState);
+            stateMachine.setStartState(startState);
         }
 
-        /** Exit **/
-        mStateMachine.addState(
-                mAdvancedFlowCompleteState,
+        /* Exit */
+        stateMachine.addState(
+                advancedFlowCompleteState,
                 StateMachine.EXIT_ADVANCED_FLOW,
                 exitState
         );
 
         // Define the transitions between different states in advanced options flow.
-        /** Advanced Options **/
-        mStateMachine.addState(
-                mAdvancedOptionsState,
+        /* Advanced Options */
+        stateMachine.addState(
+                advancedOptionsState,
                 StateMachine.ADVANCED_FLOW_COMPLETE,
-                mAdvancedFlowCompleteState
+                advancedFlowCompleteState
         );
-        mStateMachine.addState(
-                mAdvancedOptionsState,
+        stateMachine.addState(
+                advancedOptionsState,
                 StateMachine.CONTINUE,
-                mProxySettingsState
+                proxySettingsState
         );
 
-        /** Proxy Settings **/
-        mStateMachine.addState(
-                mProxySettingsState,
+        /* Proxy Settings */
+        stateMachine.addState(
+                proxySettingsState,
                 StateMachine.IP_SETTINGS,
-                mIpSettingsState
+                ipSettingsState
         );
-        mStateMachine.addState(
-                mProxySettingsState,
+        stateMachine.addState(
+                proxySettingsState,
                 StateMachine.ADVANCED_FLOW_COMPLETE,
-                mAdvancedFlowCompleteState
+                advancedFlowCompleteState
         );
-        mStateMachine.addState(
-                mProxySettingsState,
+        stateMachine.addState(
+                proxySettingsState,
                 StateMachine.PROXY_HOSTNAME,
-                mProxyHostNameState
+                proxyHostNameState
         );
 
-        /** Proxy Hostname **/
-        mStateMachine.addState(
-                mProxyHostNameState,
+        /* Proxy Hostname */
+        stateMachine.addState(
+                proxyHostNameState,
                 StateMachine.CONTINUE,
-                mProxyPortState
+                proxyPortState
         );
 
-        /** Proxy Port **/
-        mStateMachine.addState(
-                mProxyPortState,
+        /* Proxy Port */
+        stateMachine.addState(
+                proxyPortState,
                 StateMachine.CONTINUE,
-                mProxyBypassState
+                proxyBypassState
         );
 
-        /** Proxy Bypass **/
-        mStateMachine.addState(
-                mProxyBypassState,
+        /* Proxy Bypass */
+        stateMachine.addState(
+                proxyBypassState,
                 StateMachine.ADVANCED_FLOW_COMPLETE,
-                mAdvancedFlowCompleteState
+                advancedFlowCompleteState
         );
-        mStateMachine.addState(
-                mProxyBypassState,
+        stateMachine.addState(
+                proxyBypassState,
                 StateMachine.IP_SETTINGS,
-                mIpSettingsState
+                ipSettingsState
         );
-        mStateMachine.addState(
-                mProxyBypassState,
+        stateMachine.addState(
+                proxyBypassState,
                 StateMachine.PROXY_SETTINGS_INVALID,
-                mProxySettingsInvalidState
+                proxySettingsInvalidState
         );
 
-        /** Proxy Settings Invalid **/
-        mStateMachine.addState(
-                mProxySettingsInvalidState,
+        /* Proxy Settings Invalid */
+        stateMachine.addState(
+                proxySettingsInvalidState,
                 StateMachine.CONTINUE,
-                mProxySettingsState
+                proxySettingsState
         );
 
-        /** Ip Settings **/
-        mStateMachine.addState(
-                mIpSettingsState,
+        /* Ip Settings */
+        stateMachine.addState(
+                ipSettingsState,
                 StateMachine.ADVANCED_FLOW_COMPLETE,
-                mAdvancedFlowCompleteState
+                advancedFlowCompleteState
         );
-        mStateMachine.addState(
-                mIpSettingsState,
+        stateMachine.addState(
+                ipSettingsState,
                 StateMachine.CONTINUE,
-                mIpAddressState
+                ipAddressState
         );
 
-        /**Ip Address **/
-        mStateMachine.addState(
-                mIpAddressState,
+        /* Ip Address */
+        stateMachine.addState(
+                ipAddressState,
                 StateMachine.CONTINUE,
-                mGatewayState
+                gatewayState
         );
 
-        /** Gateway **/
-        mStateMachine.addState(
-                mGatewayState,
+        /* Gateway */
+        stateMachine.addState(
+                gatewayState,
                 StateMachine.CONTINUE,
-                mNetworkPrefixLengthState
+                networkPrefixLengthState
         );
 
-        /** Network Prefix Length **/
-        mStateMachine.addState(
-                mNetworkPrefixLengthState,
+        /* Network Prefix Length */
+        stateMachine.addState(
+                networkPrefixLengthState,
                 StateMachine.CONTINUE,
-                mDns1State
+                dns1State
         );
 
-        /** Dns1 **/
-        mStateMachine.addState(
-                mDns1State,
+        /* Dns1 */
+        stateMachine.addState(
+                dns1State,
                 StateMachine.CONTINUE,
-                mDns2State
+                dns2State
         );
 
-        /** Dns2 **/
-        mStateMachine.addState(
-                mDns2State,
+        /* Dns2 */
+        stateMachine.addState(
+                dns2State,
                 StateMachine.ADVANCED_FLOW_COMPLETE,
-                mAdvancedFlowCompleteState);
-        mStateMachine.addState(
-                mDns2State,
+                advancedFlowCompleteState);
+        stateMachine.addState(
+                dns2State,
                 StateMachine.IP_SETTINGS_INVALID,
-                mIpSettingsInvalidState
+                ipSettingsInvalidState
         );
 
-        /** Ip Settings Invalid **/
-        mStateMachine.addState(
-                mIpSettingsInvalidState,
+        /* Ip Settings Invalid */
+        stateMachine.addState(
+                ipSettingsInvalidState,
                 StateMachine.CONTINUE,
-                mIpSettingsState
+                ipSettingsState
         );
     }
 }

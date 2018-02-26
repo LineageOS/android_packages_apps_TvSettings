@@ -52,11 +52,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
         @Override
         public void onFinish(int result) {
             setResult(result);
-            if (result == Activity.RESULT_OK) {
-                mResultOk = true;
-            } else {
-                mResultOk = false;
-            }
+            mResultOk = result == Activity.RESULT_OK;
             finish();
         }
     };
@@ -156,7 +152,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 mOptionsOrConnectState, mConnectState, AdvancedWifiOptionsFlow.START_DEFAULT_PAGE);
 
         // Define the transition between different states.
-        /** KnownNetwork **/
+        /* KnownNetwork */
         mStateMachine.addState(
                 mKnownNetworkState,
                 StateMachine.ADD_START,
@@ -166,7 +162,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 StateMachine.SELECT_WIFI,
                 mSelectWifiState);
 
-        /** Add start page **/
+        /* Add start page */
         mStateMachine.addState(
                 mAddStartState,
                 StateMachine.PASSWORD,
@@ -176,13 +172,13 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 StateMachine.CONNECT,
                 mConnectState);
 
-        /** Select Wi-Fi **/
+        /* Select Wi-Fi */
         mStateMachine.addState(
                 mSelectWifiState,
                 StateMachine.ADD_PAGE_BASED_ON_NETWORK_CHOICE,
                 mAddPageBasedOnNetworkChoiceState);
 
-        /** Add page based on network choice**/
+        /* Add page based on network choice*/
         mStateMachine.addState(
                 mAddPageBasedOnNetworkChoiceState,
                 StateMachine.OTHER_NETWORK,
@@ -196,13 +192,13 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 StateMachine.ADD_START,
                 mAddStartState);
 
-        /** Enter SSID **/
+        /* Enter SSID */
         mStateMachine.addState(
                 mEnterSsidState,
                 StateMachine.CONTINUE,
                 mChooseSecurityState);
 
-        /** Choose Security **/
+        /* Choose Security */
         mStateMachine.addState(
                 mChooseSecurityState,
                 StateMachine.OPTIONS_OR_CONNECT,
@@ -212,20 +208,20 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 StateMachine.PASSWORD,
                 mEnterPasswordState);
 
-        /** Enter Password **/
+        /* Enter Password */
         mStateMachine.addState(
                 mEnterPasswordState,
                 StateMachine.OPTIONS_OR_CONNECT,
                 mOptionsOrConnectState);
 
-        /** Options or Connect **/
+        /* Options or Connect */
         mStateMachine.addState(
                 mOptionsOrConnectState,
                 StateMachine.CONNECT,
                 mConnectState
         );
 
-        /** Connect **/
+        /* Connect */
         mStateMachine.addState(
                 mConnectState,
                 StateMachine.RESULT_REJECTED_BY_AP,
@@ -247,7 +243,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 StateMachine.RESULT_SUCCESS,
                 mSuccessState);
 
-        /** Connect Failed **/
+        /* Connect Failed */
         mStateMachine.addState(
                 mConnectFailedState,
                 StateMachine.TRY_AGAIN,
@@ -259,7 +255,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 mSelectWifiState
         );
 
-        /** Connect Timeout */
+        /* Connect Timeout */
         mStateMachine.addState(
                 mConnectTimeOutState,
                 StateMachine.TRY_AGAIN,
@@ -271,7 +267,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 mSelectWifiState
         );
 
-        /** Connect Rejected By AP **/
+        /* Connect Rejected By AP */
         mStateMachine.addState(
                 mConnectRejectedByApState,
                 StateMachine.TRY_AGAIN,
@@ -281,7 +277,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 StateMachine.SELECT_WIFI,
                 mSelectWifiState);
 
-        /** Connect Authentication failure **/
+        /* Connect Authentication failure */
         mStateMachine.addState(
                 mConnectAuthFailureState,
                 StateMachine.TRY_AGAIN,
@@ -291,13 +287,13 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 StateMachine.SELECT_WIFI,
                 mSelectWifiState);
 
-        /** Summary Not Connected **/
+        /* Summary Not Connected */
         mStateMachine.addState(
                 mSummaryNotConnectedState,
                 StateMachine.SELECT_WIFI,
                 mSelectWifiState);
 
-        /** Summary Connected **/
+        /* Summary Connected */
         mStateMachine.addState(
                 mSummaryConnectedWifiState,
                 StateMachine.SELECT_WIFI,

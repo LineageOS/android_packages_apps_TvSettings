@@ -37,8 +37,6 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Locale;
 
 /**
@@ -280,12 +278,7 @@ public class TtsEngineSettingsFragment extends SettingsPreferenceFragment implem
         }
 
         // Sort it
-        Collections.sort(entryPairs, new Comparator<Pair<String, Locale>>() {
-            @Override
-            public int compare(Pair<String, Locale> lhs, Pair<String, Locale> rhs) {
-                return lhs.first.compareToIgnoreCase(rhs.first);
-            }
-        });
+        entryPairs.sort((lhs, rhs) -> lhs.first.compareToIgnoreCase(rhs.first));
 
         // Get two arrays out of one of pairs
         mSelectedLocaleIndex = 0; // Will point to the R.string.tts_lang_use_system value

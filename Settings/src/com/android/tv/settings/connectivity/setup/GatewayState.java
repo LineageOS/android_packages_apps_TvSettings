@@ -19,6 +19,7 @@ package com.android.tv.settings.connectivity.setup;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.support.v17.leanback.widget.GuidedActionsStylist;
@@ -74,6 +75,7 @@ public class GatewayState implements State {
         private AdvancedOptionsFlowInfo mAdvancedOptionsFlowInfo;
         private GuidedAction mAction;
 
+        @NonNull
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
             String title = getString(
@@ -109,7 +111,8 @@ public class GatewayState implements State {
         }
 
         @Override
-        public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
+        public void onCreateActions(@NonNull List<GuidedAction> actions,
+                Bundle savedInstanceState) {
             String title = getString(R.string.wifi_gateway_hint);
             if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.GATEWAY)) {
                 title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.GATEWAY);

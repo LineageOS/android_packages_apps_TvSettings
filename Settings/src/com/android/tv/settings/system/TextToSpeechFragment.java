@@ -591,7 +591,7 @@ public class TextToSpeechFragment extends SettingsPreferenceFragment implements
         if (mAvailableStrLocals == null) {
             Log.e(TAG, "Voice data check complete, but no available voices found");
             // Set mAvailableStrLocals to empty list
-            mAvailableStrLocals = new ArrayList<String>();
+            mAvailableStrLocals = new ArrayList<>();
         }
         if (evaluateDefaultLocale()) {
             getSampleText();
