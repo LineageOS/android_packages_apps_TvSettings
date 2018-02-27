@@ -76,10 +76,7 @@ public class IpAddressState implements State {
 
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String title = getString(
-                    R.string.title_wifi_ip_address,
-                    mAdvancedOptionsFlowInfo.getPrintableSsid()
-            );
+            String title = getString(R.string.title_wifi_ip_address);
             return new GuidanceStylist.Guidance(
                     title,
                     getString(R.string.wifi_ip_address_description),

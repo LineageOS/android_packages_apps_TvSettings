@@ -72,10 +72,7 @@ public class ProxyHostNameState implements State {
 
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String title = getString(
-                    R.string.title_wifi_proxy_hostname,
-                    mAdvancedOptionsFlowInfo.getPrintableSsid()
-            );
+            String title = getString(R.string.title_wifi_proxy_hostname);
             return new GuidanceStylist.Guidance(
                     title,
                     getString(R.string.proxy_hostname_description),

@@ -74,10 +74,7 @@ public class ProxySettingsInvalidState implements State {
 
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String title = getString(
-                    R.string.title_wifi_proxy_settings_invalid,
-                    mAdvancedOptionsFlowInfo.getPrintableSsid()
-            );
+            String title = getString(R.string.title_wifi_proxy_settings_invalid);
             return new GuidanceStylist.Guidance(
                     title,
                     null,
