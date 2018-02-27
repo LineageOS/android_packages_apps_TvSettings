@@ -35,7 +35,6 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -67,7 +66,7 @@ public class TimeZoneFragment extends SettingsPreferenceFragment {
         for (final Map<String, Object> zone : zoneList) {
             zonePrefs.add(new ZonePreference(themedContext, zone));
         }
-        Collections.sort(zonePrefs, new ZonePrefComparator());
+        zonePrefs.sort(new ZonePrefComparator());
         for (final Preference zonePref : zonePrefs) {
             screen.addPreference(zonePref);
         }

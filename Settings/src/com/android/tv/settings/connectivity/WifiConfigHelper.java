@@ -41,11 +41,6 @@ public final class WifiConfigHelper {
     private static final String TAG = "WifiConfigHelper";
     private static final boolean DEBUG = false;
 
-    /**
-     * If there are exactly 12 hex digits, this looks like a BSSID
-     */
-    private static final String REGEX_HEX_BSSID = "[a-fA-F0-9]{12}";
-
     // Allows underscore char to supports proxies that do not
     // follow the spec
     private static final String HC = "a-zA-Z0-9\\_";
@@ -206,44 +201,6 @@ public final class WifiConfigHelper {
 
         if (DEBUG) Log.d(TAG, "saved network: " + config.toString());
         return true;
-    }
-
-    /**
-     * Forget a wifi configuration.
-     */
-    public static void forgetConfiguration(Context context, WifiConfiguration config) {
-        if (config == null) {
-            return;
-        }
-
-        WifiManager wifiMan = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
-        List<WifiConfiguration> configuredNetworks = wifiMan.getConfiguredNetworks();
-        if (configuredNetworks == null) {
-            if (DEBUG) Log.e(TAG, "failed to get configured networks");
-            return;
-        }
-
-        for (WifiConfiguration wc : configuredNetworks) {
-            if (wc != null && wc.SSID != null && TextUtils.equals(wc.SSID, config.SSID)) {
-                wifiMan.forget(wc.networkId, null);
-                if (DEBUG) Log.d(TAG, "forgot network config: " + wc.toString());
-                break;
-            }
-        }
-    }
-
-    /**
-     * Forget the current wifi connection.
-     */
-    public static void forgetWifiNetwork(Context context) {
-        WifiManager mWifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
-        WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
-        if (wifiInfo != null) {
-            int networkId = wifiInfo.getNetworkId();
-            if (networkId != -1) {
-                mWifiManager.forget(networkId, null);
-            }
-        }
     }
 
     /**

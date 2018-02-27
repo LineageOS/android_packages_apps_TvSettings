@@ -20,6 +20,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.support.v17.leanback.widget.GuidedActionsStylist;
@@ -81,6 +82,7 @@ public class EnterPasswordState implements State {
         private EditText mTextInput;
         private CheckBox mCheckBox;
 
+        @NonNull
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
             String title = getString(
@@ -110,12 +112,9 @@ public class EnterPasswordState implements State {
                         PasswordViewHolder viewHolder = (PasswordViewHolder) vh;
                         mTextInput = (EditText) viewHolder.getTitleView();
                         mCheckBox = viewHolder.mCheckbox;
-                        mCheckBox.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                updatePasswordInputObfuscation();
-                                EnterPasswordFragment.this.openInEditMode(action);
-                            }
+                        mCheckBox.setOnClickListener(view -> {
+                            updatePasswordInputObfuscation();
+                            EnterPasswordFragment.this.openInEditMode(action);
                         });
                         mCheckBox.setChecked(mUserChoiceInfo.isPasswordHidden());
                         updatePasswordInputObfuscation();
@@ -142,7 +141,8 @@ public class EnterPasswordState implements State {
         }
 
         @Override
-        public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
+        public void onCreateActions(@NonNull List<GuidedAction> actions,
+                Bundle savedInstanceState) {
             Context context = getActivity();
             CharSequence prevPassword = mUserChoiceInfo.getPageSummary(UserChoiceInfo.PASSWORD);
             boolean isPasswordHidden = mUserChoiceInfo.isPasswordHidden();
@@ -208,7 +208,7 @@ public class EnterPasswordState implements State {
 
             PasswordViewHolder(View v) {
                 super(v);
-                mCheckbox = (CheckBox) v.findViewById(R.id.password_checkbox);
+                mCheckbox = v.findViewById(R.id.password_checkbox);
             }
         }
     }

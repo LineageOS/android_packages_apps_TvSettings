@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ResolveInfo;
-import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -377,12 +376,6 @@ public class AboutFragment extends SettingsPreferenceFragment implements
     private String getSystemPropertySummary(String property) {
         return SystemProperties.get(property,
                 getResources().getString(R.string.device_info_default));
-    }
-
-    public static boolean isWifiOnly(Context context) {
-        ConnectivityManager cm = (ConnectivityManager)context.getSystemService(
-                Context.CONNECTIVITY_SERVICE);
-        return (!cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE));
     }
 
     private void sendFeedback() {

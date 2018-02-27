@@ -39,7 +39,6 @@ import com.android.tv.settings.device.storage.StoragePreference;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -116,7 +115,7 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
         final Context themedContext = getPreferenceManager().getContext();
 
         final List<VolumeInfo> volumes = mStorageManager.getVolumes();
-        Collections.sort(volumes, VolumeInfo.getDescriptionComparator());
+        volumes.sort(VolumeInfo.getDescriptionComparator());
 
         final List<VolumeInfo> privateVolumes = new ArrayList<>(volumes.size());
         final List<VolumeInfo> publicVolumes = new ArrayList<>(volumes.size());
