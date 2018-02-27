@@ -21,11 +21,19 @@
     <string name="launcher_network_app_name" msgid="5107150533945388559">"Mtandao"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Wasifu Uliowekeza Vikwazo"</string>
     <string name="header_category_suggestions" msgid="6732367439328586933">"Mapendekezo"</string>
+    <string name="header_category_quick_settings" msgid="6626141045575946920">"Mipangilio ya Haraka"</string>
+    <string name="header_category_general_settings" msgid="1208946854116876918">"Mipangilio ya Jumla"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Kifaa"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Mapendeleo"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Kidhibiti cha mbali na vifaa"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Ya Kibinafsi"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"Akaunti"</string>
+    <string name="connect_to_network" msgid="2209125715907353369">"Unganisha kwenye mtandao"</string>
+    <string name="add_an_account" msgid="1123478843971990449">"Ongeza akaunti"</string>
+    <string name="accounts_category_title" msgid="594314526488667838">"Akaunti na Kuingia katika Akaunti"</string>
+    <string name="connectivity_network_category_title" msgid="6779497231311329071">"Mtandao na Intaneti"</string>
+    <string name="applications_category_title" msgid="3552921143969612110">"Programu"</string>
+    <string name="device_pref_category_title" msgid="5264163316572335776">"Mapendeleo ya Kifaa"</string>
+    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"Vidhibiti Mbali na Vifaa Mbadala"</string>
     <string name="add_account" msgid="4098060223200619258">"Ongeza akaunti"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Ondoa akaunti"</string>
     <string name="account_sync" msgid="773808124331714965">"Chagua programu zilizosawazishwa"</string>
@@ -41,21 +49,22 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Imeshindwa kusawazisha"</string>
     <string name="sync_active" msgid="6891115263481154378">"Kipengee cha kusawazisha kimewashwa"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"Mtandao"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Uchanganuzi unapatika wakati wote"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Ruhusu huduma ya eneo la Google na programu nyingine kutafuta mitandao, hata wakati Wi-Fi imezimwa"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
+    <string name="connectivity_hint_message" msgid="1314202316675864203">"Unganisha kwenye mtandao"</string>
     <string name="device_daydream" msgid="3354366974209179614">"Taswira ya skrini"</string>
     <string name="device_display" msgid="101455384386372747">"Onyesha"</string>
     <string name="device_sound" msgid="9214182566287657481">"Sauti"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"Sauti ya mzunguko"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sauti za mfumo"</string>
-    <string name="device_apps" msgid="9180435229638772838">"Programu"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"Kuhifadhi na kuweka upya"</string>
+    <string name="device_apps" msgid="1971794537385509294">"Maombi"</string>
+    <string name="device_storage" msgid="5536683600091277826">"Hifadhi"</string>
+    <string name="device_reset" msgid="1885840356489458285">"Badilisha"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Hifadhi nakala na uzirejeshe"</string>
-    <string name="device_reset" msgid="2827002349560023125">"Kurejesha mipangilio ya kiwandani"</string>
+    <string name="device_factory_reset" msgid="6537106927211842545">"Rejesha mipangilio ya kiwandani"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Marekebisho"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Ungependa kufuta data iliyo kwenye akiba?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Hii itafuta data iliyo kwenye akiba ya programu zote."</string>
@@ -98,6 +107,8 @@
     <string name="system_security" msgid="8230080273993484407">"Usalama na vizuizi"</string>
     <string name="system_speech" msgid="8128688499687306982">"Usemi"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Vifaa vya kuingiza sauti"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"Vifaa vya kuingiza sauti"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"Udhibiti wa vifaa vya burudani vya nyumbani"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"Ufikiaji"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Chaguo za wasanidi programu"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Hakuna"</string>
@@ -166,10 +177,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"Angalia zote"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"Angalia chache"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Mitandao inayopatikana"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"Unganisha kupitia WPS"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"Ongeza mtandao mpya"</string>
     <string name="security_type" msgid="524443802004143058">"Aina ya usalama"</string>
-    <string name="wps_network" msgid="1052148085426051873">"Unganisha kupitia WPS"</string>
     <string name="other_network" msgid="3539704463099544488">"Mtandao mwingine..."</string>
     <string name="skip_network" msgid="6380260543776712357">"Ruka"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"Hakuna"</string>
@@ -318,18 +327,6 @@
     <string name="system_package" msgid="9200255718634512790">"Masasisho ya mfumo hayawezi kusakinisha kwenye hifadhi ya nje."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"Huwezi kusakinisha Kidhibiti cha Vifaa kwenye vifaa vya nje."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Pata maelezo zaidi"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Jaribu tena"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"Inatafuta ruta ya WPS…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Bonyeza kitufe cha Wi-Fi Protected Setup kwenye ruta yako.\nInaweza kuwa inaitwa \"WPS\" au iwe na alama upande wa kushoto."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Weka PIN <xliff:g id="NUMBER">%1$s</xliff:g> kwenye kisambaza data chako cha Wi-Fi"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Baada ya kuweka PIN, usanidi unaweza kuchukua hadi dakika 2 kukamilika"</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Haikuweza kupata ruta ya Wi-Fi"</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Mipangilio ya usalama (WEP) ya kisambaza data cha Wi-Fi haiwezi kutumika"</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Mipangilio ya usalama (TKIP) ya kisambaza data cha Wi-Fi haiwezi kutumika"</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"Kipindi kingine cha WPS kinaendelea. Tafadhali jaribu tena baada ya dakika chache."</string>
-    <string name="wifi_wps_start_title" msgid="7448016607208427187">"Chagua mbinu yako ya WPS"</string>
-    <string name="wifi_wps_action_push_button" msgid="3295053933961963105">"Kitufe cha kusukuma cha WSP"</string>
-    <string name="wifi_wps_action_pin_entry" msgid="3921490121142056571">"Kuweka Pin ya WPS"</string>
     <string name="system_date" msgid="2767108116769558081">"Tarehe"</string>
     <string name="system_time" msgid="6726022312605226285">"Saa"</string>
     <string name="system_set_date" msgid="2437586307768561116">"Weka tarehe"</string>
@@ -690,4 +687,14 @@
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Onyesha juu ya programu nyinginezo"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"Ruhusu programu ionekane juu ya nyinginezo"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Ruhusu programu ionekane juu ya programu nyinginezo unazotumia. Huenda hali hii ikaathiri jinsi unavyotumia programu hizo au kubadilisha jinsi zinavyoonekana au kufanya kazi."</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"Badilisha mipangilio ya mfumo"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Inaweza kubadilisha mipangilio ya mfumo"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"Idhini hii huruhusu programu kubadilisha mipangilio ya mfumo"</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"Ndiyo"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"La"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"Picha ndani ya picha"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Ruhusu picha ndani ya picha"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Hujasakinisha programu yoyote inayoweza kutumia kipengele cha Picha ndani ya picha"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Ruhusu programu ifungue kidirisha cha picha ndani ya picha ukiwa umefungua programu au baada ya kuifunga (kwa mfano, ili uendelee kutazama video). Kidirisha hiki kitaonekana juu ya programu nyingine unazotumia."</string>
+    <string name="special_access" msgid="3513811566600299998">"Idhini maalum ya kufikia programu"</string>
 </resources>

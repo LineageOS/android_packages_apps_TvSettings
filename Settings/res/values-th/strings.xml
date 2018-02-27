@@ -21,11 +21,19 @@
     <string name="launcher_network_app_name" msgid="5107150533945388559">"เครือข่าย"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"โปรไฟล์ที่ถูกจำกัด"</string>
     <string name="header_category_suggestions" msgid="6732367439328586933">"คำแนะนำ"</string>
+    <string name="header_category_quick_settings" msgid="6626141045575946920">"การตั้งค่าด่วน"</string>
+    <string name="header_category_general_settings" msgid="1208946854116876918">"การตั้งค่าทั่วไป"</string>
     <string name="header_category_device" msgid="4855983928659541345">"อุปกรณ์"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"ค่ากำหนด"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"รีโมตและอุปกรณ์เสริม"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"ส่วนตัว"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"บัญชี"</string>
+    <string name="connect_to_network" msgid="2209125715907353369">"เชื่อมต่อกับเครือข่าย"</string>
+    <string name="add_an_account" msgid="1123478843971990449">"เพิ่มบัญชี"</string>
+    <string name="accounts_category_title" msgid="594314526488667838">"บัญชีและการลงชื่อเข้าใช้"</string>
+    <string name="connectivity_network_category_title" msgid="6779497231311329071">"เครือข่ายและอินเทอร์เน็ต"</string>
+    <string name="applications_category_title" msgid="3552921143969612110">"แอป"</string>
+    <string name="device_pref_category_title" msgid="5264163316572335776">"ค่ากำหนดอุปกรณ์"</string>
+    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"รีโมตและอุปกรณ์เสริม"</string>
     <string name="add_account" msgid="4098060223200619258">"เพิ่มบัญชี"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"นำบัญชีออก"</string>
     <string name="account_sync" msgid="773808124331714965">"เลือกแอปที่ซิงค์"</string>
@@ -41,21 +49,22 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"การซิงค์ล้มเหลว"</string>
     <string name="sync_active" msgid="6891115263481154378">"เปิดการซิงค์อยู่"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"เครือข่าย"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"WiFi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"อีเทอร์เน็ต"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"สแกนอยู่เสมอ"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"ให้บริการตำแหน่งของ Google และแอปอื่นๆ สแกนหาเครือข่ายได้ แม้ในขณะที่ Wi-Fi ปิดอยู่"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
+    <string name="connectivity_hint_message" msgid="1314202316675864203">"เชื่อมต่อกับเครือข่าย"</string>
     <string name="device_daydream" msgid="3354366974209179614">"โปรแกรมรักษาหน้าจอ"</string>
     <string name="device_display" msgid="101455384386372747">"จอแสดงผล"</string>
     <string name="device_sound" msgid="9214182566287657481">"เสียง"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"เสียงเซอร์ราวด์"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"เสียงระบบ"</string>
-    <string name="device_apps" msgid="9180435229638772838">"แอป"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"ที่เก็บข้อมูลและการรีเซ็ต"</string>
+    <string name="device_apps" msgid="1971794537385509294">"แอปพลิเคชัน"</string>
+    <string name="device_storage" msgid="5536683600091277826">"ที่เก็บข้อมูล"</string>
+    <string name="device_reset" msgid="1885840356489458285">"รีเซ็ต"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"การสำรองและคืนค่าข้อมูล"</string>
-    <string name="device_reset" msgid="2827002349560023125">"รีเซ็ตข้อมูลเป็นค่าเริ่มต้น"</string>
+    <string name="device_factory_reset" msgid="6537106927211842545">"รีเซ็ตข้อมูลเป็นค่าเริ่มต้น"</string>
     <string name="device_calibration" msgid="8632962533376605191">"การเทียบมาตรฐาน"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"ล้างข้อมูลในแคชไหม"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"การทำงานนี้จะล้างข้อมูลในแคชของแอปทั้งหมด"</string>
@@ -98,6 +107,8 @@
     <string name="system_security" msgid="8230080273993484407">"ความปลอดภัยและข้อจำกัด"</string>
     <string name="system_speech" msgid="8128688499687306982">"คำพูด"</string>
     <string name="system_inputs" msgid="2413907183796651102">"อินพุต"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"อินพุตและอุปกรณ์"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"ตัวควบคุมชุดโฮมเธียเตอร์"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"การเข้าถึง"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"ตัวเลือกสำหรับนักพัฒนา"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ไม่มี"</string>
@@ -166,10 +177,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"ดูทั้งหมด"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"ดูน้อยลง"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"เครือข่ายที่ใช้งานได้"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"เชื่อมต่อผ่าน WPS"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"เพิ่มเครือข่ายใหม่"</string>
     <string name="security_type" msgid="524443802004143058">"ประเภทของการรักษาความปลอดภัย"</string>
-    <string name="wps_network" msgid="1052148085426051873">"เชื่อมต่อผ่าน WPS"</string>
     <string name="other_network" msgid="3539704463099544488">"เครือข่ายอื่น…"</string>
     <string name="skip_network" msgid="6380260543776712357">"ข้าม"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"ไม่มี"</string>
@@ -318,18 +327,6 @@
     <string name="system_package" msgid="9200255718634512790">"ติดตั้งการอัปเดตระบบบนสื่อภายนอกไม่ได้"</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"ไม่สามารถติดตั้งโปรแกรมควบคุมอุปกรณ์บนสื่อภายนอก"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"เรียนรู้เพิ่มเติม"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"ลองอีกครั้ง"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"ค้นหาเราเตอร์ WPS…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"กดปุ่ม \"การตั้งค่า WiFi แบบปลอดภัย\" บนเราเตอร์ของคุณ\nปุ่มนี้อาจเขียนว่า \"WPS\" หรือมีสัญลักษณ์ทางด้านซ้าย"</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"ป้อน PIN <xliff:g id="NUMBER">%1$s</xliff:g> ในเราเตอร์ Wi-Fi ของคุณ"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"หลังจากที่คุณป้อน PIN แล้ว การตั้งค่าอาจใช้เวลาถึง 2 นาทีกว่าจะเสร็จสิ้น"</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"ไม่พบเราเตอร์ Wi-Fi"</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"ไม่สนับสนุนการตั้งค่าความปลอดภัยของเราเตอร์ Wi-Fi (WEP)"</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"ไม่สนับสนุนการตั้งค่าความปลอดภัยของเราเตอร์ Wi-Fi (TKIP)"</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"กำลังดำเนินการกับ WPS อีกเซสชันหนึ่ง โปรดลองอีกครั้งในอีกสักครู่"</string>
-    <string name="wifi_wps_start_title" msgid="7448016607208427187">"เลือกวิธี WPS ของคุณ"</string>
-    <string name="wifi_wps_action_push_button" msgid="3295053933961963105">"ปุ่มกด WPS"</string>
-    <string name="wifi_wps_action_pin_entry" msgid="3921490121142056571">"WPS PIN Entry"</string>
     <string name="system_date" msgid="2767108116769558081">"วันที่"</string>
     <string name="system_time" msgid="6726022312605226285">"เวลา"</string>
     <string name="system_set_date" msgid="2437586307768561116">"ตั้งวันที่"</string>
@@ -690,4 +687,14 @@
     <string name="system_alert_window_settings" msgid="2069031369694448339">"แสดงทับแอปอื่นๆ"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"อนุญาตให้แสดงทับแอปอื่นๆ"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"อนุญาตให้แอปแสดงทับแอปอื่นๆ ที่คุณกำลังใช้อยู่ ซึ่งอาจรบกวนการใช้งานแอปเหล่านั้นหรือเปลี่ยนรูปลักษณ์หรือการทำงานตามที่ควรเป็น"</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"แก้ไขการตั้งค่าระบบ"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"แก้ไขการตั้งค่าระบบได้"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"สิทธิ์นี้อนุญาตให้แอปแก้ไขการตั้งค่าระบบได้"</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"ใช่"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"ไม่"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"การแสดงภาพซ้อนภาพ"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"อนุญาตการแสดงภาพซ้อนภาพ"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"แอปที่ติดตั้งอยู่ไม่รองรับการแสดงภาพซ้อนภาพ"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"อนุญาตให้แอปสร้างหน้าต่างการแสดงภาพซ้อนภาพในขณะที่แอปเปิดอยู่หรือหลังจากที่คุณปล่อยทิ้งไว้ (เช่น เพื่อดูวิดีโอต่อ) หน้าต่างนี้จะแสดงทับแอปอื่นๆ ที่คุณกำลังใช้"</string>
+    <string name="special_access" msgid="3513811566600299998">"สิทธิ์เข้าถึงพิเศษของแอป"</string>
 </resources>

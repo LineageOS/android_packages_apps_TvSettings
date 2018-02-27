@@ -21,11 +21,19 @@
     <string name="launcher_network_app_name" msgid="5107150533945388559">"నెట్‌వర్క్"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"నియంత్రిత ప్రొఫైల్"</string>
     <string name="header_category_suggestions" msgid="6732367439328586933">"సూచనలు"</string>
+    <string name="header_category_quick_settings" msgid="6626141045575946920">"శీఘ్ర సెట్టింగ్‌లు"</string>
+    <string name="header_category_general_settings" msgid="1208946854116876918">"సాధారణ సెట్టింగ్‌లు"</string>
     <string name="header_category_device" msgid="4855983928659541345">"పరికరం"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"ప్రాధాన్యతలు"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"రిమోట్ &amp; ఉపకరణాలు"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"వ్యక్తిగతం"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"ఖాతాలు"</string>
+    <string name="connect_to_network" msgid="2209125715907353369">"నెట్‌వర్క్‌కి కనెక్ట్ చేయండి"</string>
+    <string name="add_an_account" msgid="1123478843971990449">"ఖాతాను జోడించండి"</string>
+    <string name="accounts_category_title" msgid="594314526488667838">"ఖాతాలు, సైన్ ఇన్ చేయండి"</string>
+    <string name="connectivity_network_category_title" msgid="6779497231311329071">"నెట్‌వర్క్ మరియు ఇంటర్నెట్"</string>
+    <string name="applications_category_title" msgid="3552921143969612110">"యాప్‌లు"</string>
+    <string name="device_pref_category_title" msgid="5264163316572335776">"పరికర ప్రాధాన్యతలు"</string>
+    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"రిమోట్‌లు మరియు ఉపకరణాలు"</string>
     <string name="add_account" msgid="4098060223200619258">"ఖాతాను జోడించు"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"ఖాతాను తీసివేయి"</string>
     <string name="account_sync" msgid="773808124331714965">"సమకాలీకృత అనువర్తనాలను ఎంచుకోండి"</string>
@@ -41,21 +49,22 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"సమకాలీకరణ విఫలమైంది"</string>
     <string name="sync_active" msgid="6891115263481154378">"సమకాలీకరణ సక్రియంగా ఉంది"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"నెట్‌వర్క్"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ఈథర్‌నెట్"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"స్కానింగ్ ఎల్లప్పుడూ అందుబాటులో ఉంటుంది"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Google యొక్క స్థాన సేవ మరియు ఇతర అనువర్తనాలను Wi-Fi ఆఫ్‌లో ఉన్నప్పటికీ నెట్‌వర్క్‌ల కోసం స్కాన్ చేయడానికి అనుమతిస్తుంది"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
+    <string name="connectivity_hint_message" msgid="1314202316675864203">"నెట్‌వర్క్‌కి కనెక్ట్ చేయండి"</string>
     <string name="device_daydream" msgid="3354366974209179614">"స్క్రీన్ సేవర్"</string>
     <string name="device_display" msgid="101455384386372747">"ప్రదర్శన"</string>
     <string name="device_sound" msgid="9214182566287657481">"ధ్వని"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"పరిసర ధ్వని"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"సిస్టమ్ ధ్వనులు"</string>
-    <string name="device_apps" msgid="9180435229638772838">"అనువర్తనాలు"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"నిల్వ &amp; రీసెట్"</string>
+    <string name="device_apps" msgid="1971794537385509294">"అప్లికేషన్‌లు"</string>
+    <string name="device_storage" msgid="5536683600091277826">"నిల్వ"</string>
+    <string name="device_reset" msgid="1885840356489458285">"రీసెట్ చేయి"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"బ్యాకప్ &amp; పునరుద్ధరణ"</string>
-    <string name="device_reset" msgid="2827002349560023125">"ఫ్యాక్టరీ డేటా రీసెట్ చేయి"</string>
+    <string name="device_factory_reset" msgid="6537106927211842545">"ఫ్యాక్టరీ డేటా రీసెట్"</string>
     <string name="device_calibration" msgid="8632962533376605191">"క్రమాంకనం"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"కాష్ చేసిన డేటాను తీసివేయాలా?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"ఇది అన్ని అను. కాష్ చేసిన డేటాను తీసివేస్తుంది."</string>
@@ -98,6 +107,8 @@
     <string name="system_security" msgid="8230080273993484407">"భద్రత &amp; పరిమితులు"</string>
     <string name="system_speech" msgid="8128688499687306982">"ప్రసంగం"</string>
     <string name="system_inputs" msgid="2413907183796651102">"ఇన్‌పుట్‌లు"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"ఇన్‌పుట్‌లు &amp; పరికరాలు"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"హోమ్ థియేటర్ నియంత్రణ"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"ప్రాప్యత సామర్థ్యం"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"డెవలపర్ ఎంపికలు"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ఏదీ లేదు"</string>
@@ -166,10 +177,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"అన్నీ చూడండి"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"తక్కువ చూడండి"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"అందుబాటులో ఉన్న నెట్‌వర్క్‌లు"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"WPS ద్వారా కనెక్ట్ చేయి"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"కొత్త నెట్‌వర్క్‌ని జోడించండి"</string>
     <string name="security_type" msgid="524443802004143058">"భద్రతా రకం"</string>
-    <string name="wps_network" msgid="1052148085426051873">"WPS ద్వారా కనెక్ట్ చేయి"</string>
     <string name="other_network" msgid="3539704463099544488">"ఇతర నెట్‌వర్క్‌…"</string>
     <string name="skip_network" msgid="6380260543776712357">"దాటవేయండి"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"ఏదీ వద్దు"</string>
@@ -318,18 +327,6 @@
     <string name="system_package" msgid="9200255718634512790">"సిస్టమ్ నవీకరణలను బాహ్య మీడియాలో ఇన్‌స్టాల్ చేయడం సాధ్యపడదు."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"పరికర నిర్వాహకుడిని బాహ్య మీడియాలో ఇన్‌స్టాల్ చేయలేరు."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"మరింత తెలుసుకోండి"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"మళ్లీ ప్రయత్నించండి"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"WPS రూటర్ కోసం శోధిస్తోంది…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"మీ రూటర్‌లో Wi-Fi సురక్షిత సెటప్ బటన్‌ను నొక్కండి.\nఇది \"WPS\" అని పిలవబడవచ్చు లేదా ఎడమవైపు గుర్తును కలిగి ఉంటుంది."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"మీ Wi-Fi రూటర్‌లో పిన్ <xliff:g id="NUMBER">%1$s</xliff:g>ని నమోదు చేయండి"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"మీరు పిన్‌ను నమోదు చేసిన తర్వాత, సెటప్‌ పూర్తి కావడానికి గరిష్టంగా 2 నిమిషాలు పట్టవచ్చు"</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Wi-Fi రూటర్‌ను కనుగొనడం సాధ్యపడలేదు"</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Wi-Fi రూటర్ భద్రతా సెట్టింగ్ (WEP)కి మద్దతు లేదు"</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Wi-Fi రూటర్ భద్రతా సెట్టింగ్ (TKIP)కి మద్దతు లేదు"</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"మరో WPS సెషన్ ప్రోగ్రెస్‌లో ఉంది. కొన్ని నిమిషాల్లో మళ్లీ ప్రయత్నించండి."</string>
-    <string name="wifi_wps_start_title" msgid="7448016607208427187">"మీ WPS పద్ధతిని ఎంచుకోండి"</string>
-    <string name="wifi_wps_action_push_button" msgid="3295053933961963105">"WPS పుష్ బటన్"</string>
-    <string name="wifi_wps_action_pin_entry" msgid="3921490121142056571">"WPS పిన్ నమోదు"</string>
     <string name="system_date" msgid="2767108116769558081">"తేదీ"</string>
     <string name="system_time" msgid="6726022312605226285">"సమయం"</string>
     <string name="system_set_date" msgid="2437586307768561116">"తేదీని సెట్ చేయండి"</string>
@@ -690,4 +687,14 @@
     <string name="system_alert_window_settings" msgid="2069031369694448339">"ఇతర యాప్‌ల ఎగువన ప్రదర్శన"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"ఇతర యాప్‌ల ఎగువన కనిపించడానికి అనుమతించండి"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"మీరు ఉపయోగించే ఇతర యాప్‌లలో ఎగువ భాగంలో కనిపించడం కోసం ఒక యాప్‌ని అనుమతించండి. మీరు ఆ యాప్‌లను ఉపయోగించే సమయంలో ఇది అంతరాయం కలిగించవచ్చు లేదా అవి కనిపించే లేదా ప్రవర్తించే తీరును మార్చవచ్చు."</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"సిస్టమ్ సెట్టింగ్‌ల సవరణ"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"సిస్టమ్ సెట్టింగ్‌లను సవరించగలవు"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"ఈ అనుమతి సిస్టమ్ సెట్టింగ్‌లను సవరించడానికి యాప్‌ని అనుమతిస్తుంది."</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"అవును"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"లేదు"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"చిత్రంలో చిత్రం"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"చిత్రంలో చిత్రాన్ని అనుమతించు"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"చిత్రంలో చిత్రానికి మద్దతిచ్చే యాప్‌లు ఏమీ ఇన్‌స్టాల్ చేయబడలేదు"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"యాప్ తెరవబడి ఉన్నప్పుడు లేదా మీరు దాని నుండి నిష్క్రమించినప్పుడు (ఉదాహరణకు, వీడియోని చూడటం కొనసాగించడానికి) చిత్రంలో చిత్రం విండోని సృష్టించడానికి ఈ యాప్‌ని అనుమతించండి. మీరు ఉపయోగించే ఇతర యాప్‌‌ల ఎగువన ఈ విండో ప్రదర్శితమవుతుంది."</string>
+    <string name="special_access" msgid="3513811566600299998">"ప్రత్యేక యాప్ యాక్సెస్"</string>
 </resources>

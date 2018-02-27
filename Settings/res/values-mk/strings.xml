@@ -20,11 +20,29 @@
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"Поставки"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"Мрежа"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Ограничен профил"</string>
+    <string name="header_category_suggestions" msgid="6732367439328586933">"Предлози"</string>
+    <!-- no translation found for header_category_quick_settings (6626141045575946920) -->
+    <skip />
+    <!-- no translation found for header_category_general_settings (1208946854116876918) -->
+    <skip />
     <string name="header_category_device" msgid="4855983928659541345">"Уред"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Претпочитани вредности"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Далечински управувач и додатоци"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Лични"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"Сметки"</string>
+    <!-- no translation found for connect_to_network (2209125715907353369) -->
+    <skip />
+    <!-- no translation found for add_an_account (1123478843971990449) -->
+    <skip />
+    <!-- no translation found for accounts_category_title (594314526488667838) -->
+    <skip />
+    <!-- no translation found for connectivity_network_category_title (6779497231311329071) -->
+    <skip />
+    <!-- no translation found for applications_category_title (3552921143969612110) -->
+    <skip />
+    <!-- no translation found for device_pref_category_title (5264163316572335776) -->
+    <skip />
+    <!-- no translation found for remotes_and_accessories_title_category (4036586169100784602) -->
+    <skip />
     <string name="add_account" msgid="4098060223200619258">"Додај сметка"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Отстрани сметка"</string>
     <string name="account_sync" msgid="773808124331714965">"Изберете синхронизирани апликации"</string>
@@ -40,21 +58,26 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Синхронизацијата не успеа"</string>
     <string name="sync_active" msgid="6891115263481154378">"Синхронизирањето е активно"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"Мрежа"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Етернет"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Скенирањето е секогаш достапно"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Дозволи услугата за локација на Google и други апликации да скенираат за мрежи, дури и кога Wi-Fi е исклучена"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
+    <!-- no translation found for connectivity_hint_message (1314202316675864203) -->
+    <skip />
     <string name="device_daydream" msgid="3354366974209179614">"Заштитник на екран"</string>
     <string name="device_display" msgid="101455384386372747">"Приказ"</string>
     <string name="device_sound" msgid="9214182566287657481">"Звук"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"Опкружувачки звук"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Системски звуци"</string>
-    <string name="device_apps" msgid="9180435229638772838">"Апликации"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"Капацитет и ресетирање"</string>
+    <!-- no translation found for device_apps (1971794537385509294) -->
+    <skip />
+    <string name="device_storage" msgid="5536683600091277826">"Капацитет"</string>
+    <!-- no translation found for device_reset (1885840356489458285) -->
+    <skip />
     <string name="device_backup_restore" msgid="5627523987587511884">"Направи резервна копија и обнови"</string>
-    <string name="device_reset" msgid="2827002349560023125">"Фабричко ресетирање на податоци"</string>
+    <!-- no translation found for device_factory_reset (6537106927211842545) -->
+    <skip />
     <string name="device_calibration" msgid="8632962533376605191">"Калибрација"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Исчисти кеширани податоци?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Ова ќе исчисти кеширани податоци за сите аплик."</string>
@@ -97,6 +120,8 @@
     <string name="system_security" msgid="8230080273993484407">"Безбедност и ограничувања"</string>
     <string name="system_speech" msgid="8128688499687306982">"Говор"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Влезови"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"Влезови и уреди"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"Контрола на домашно кино"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"Пристапност"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Опции на програмер"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Ништо"</string>
@@ -165,10 +190,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"Погледни ги сите"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"Види помалку"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Достапни мрежи"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"Поврзи преку WPS"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"Додај нова мрежа"</string>
     <string name="security_type" msgid="524443802004143058">"Тип на безбедност"</string>
-    <string name="wps_network" msgid="1052148085426051873">"Поврзи преку WPS"</string>
     <string name="other_network" msgid="3539704463099544488">"Друга мрежа…"</string>
     <string name="skip_network" msgid="6380260543776712357">"Прескокни"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"Ништо"</string>
@@ -317,15 +340,6 @@
     <string name="system_package" msgid="9200255718634512790">"Ажурирањата на системот не може да се инсталираат на надворешни медиуми."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"Администраторот на уредот не може да се инсталира на надворешни уреди."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Дознајте повеќе"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Обиди се повторно"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"Се бара WPS рутер…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Притиснете го копчето Заштитено поставување на Wi-Fi на вашиот рутер.\nТоа може да се нарекува „WPS“ или да го содржи симболот од лево."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Внесете PIN <xliff:g id="NUMBER">%1$s</xliff:g> на вашиот Wi-Fi рутер"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Откако ќе го внесете PIN-бројот, поставувањето може да потрае и до две минути за да се заврши"</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Не може да најде Wi-Fi рутер"</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Поставката за безбедност (WEP) на Wi-Fi рутерот не е поддржана"</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Поставката за безбедност (TKIP) на Wi-Fi рутерот не е поддржана"</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"Во тек е друга WPS сесија. Обидете се повторно за неколку минути."</string>
     <string name="system_date" msgid="2767108116769558081">"Датум"</string>
     <string name="system_time" msgid="6726022312605226285">"Време"</string>
     <string name="system_set_date" msgid="2437586307768561116">"Постави датум"</string>
@@ -683,4 +697,17 @@
     <string name="manage_notification_access_title" msgid="2051765294087620434">"Пристап до известувањата"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"Ниедна од инсталираните апликации не побара пристап до известувањата."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Апликацииве ќе може да ги читаат сите известувања, заедно со личните информации како што се имиња на контакти и текстот од пораките што ги добивате. Ќе може и да отфрлаат известувања или да активираат копчиња за дејство во нив."</string>
+    <string name="system_alert_window_settings" msgid="2069031369694448339">"Прикажување врз други апликации"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"Дозволи прикажување врз други апликации"</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"Дозволете ѝ на апликација да се прикажува врз другите апликации што ги користите. Тоа може да го попречи користењето на другите апликации или да го промени начинот на кој се појавуваат или однесуваат."</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"Менување поставки на системот"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Може да ги менува поставките на системот"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"Оваа дозвола овозможува апликацијата да ги менува поставките на системот."</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"Да"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"Не"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"Слика во слика"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Дозволете слика во слика"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Ниту една од инсталираните апликации не поддржува слика во слика"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Дозволете апликациите да создаваат прозорец за слика во слика додека апликацијата е отворена или пак, откако ќе ја напуштите (на пр., за да продолжите со гледање видео). Прозорецов се прикажува врз другите апликации што ги користите."</string>
+    <string name="special_access" msgid="3513811566600299998">"Посебен пристап за апликации"</string>
 </resources>

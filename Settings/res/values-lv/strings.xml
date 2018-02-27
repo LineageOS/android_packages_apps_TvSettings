@@ -21,11 +21,19 @@
     <string name="launcher_network_app_name" msgid="5107150533945388559">"Tīkls"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Ierobežots profils"</string>
     <string name="header_category_suggestions" msgid="6732367439328586933">"Ieteikumi"</string>
+    <string name="header_category_quick_settings" msgid="6626141045575946920">"Ātrie iestatījumi"</string>
+    <string name="header_category_general_settings" msgid="1208946854116876918">"Vispārīgi iestatījumi"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Ierīce"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Preferences"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Tālvadība un piederumi"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Personiski"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"Konti"</string>
+    <string name="connect_to_network" msgid="2209125715907353369">"Savienojuma izveide ar tīklu"</string>
+    <string name="add_an_account" msgid="1123478843971990449">"Konta pievienošana"</string>
+    <string name="accounts_category_title" msgid="594314526488667838">"Konti un pierakstīšanās"</string>
+    <string name="connectivity_network_category_title" msgid="6779497231311329071">"Tīkls un internets"</string>
+    <string name="applications_category_title" msgid="3552921143969612110">"Lietotnes"</string>
+    <string name="device_pref_category_title" msgid="5264163316572335776">"Ierīces preferences"</string>
+    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"Tālvadības pultis un piederumi"</string>
     <string name="add_account" msgid="4098060223200619258">"Pievienot kontu"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Konta noņemšana"</string>
     <string name="account_sync" msgid="773808124331714965">"Izvēlieties sinhr. lietotnes"</string>
@@ -41,21 +49,22 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Sinhronizācija neizdevās"</string>
     <string name="sync_active" msgid="6891115263481154378">"Sinhronizācija darbojas"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"Tīkls"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Tīkls Ethernet"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Meklēšana vienmēr pieejama"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Atļaut Google atrašanās vietas pakalpojumam un citām lietotnēm meklēt tīklus, pat ja Wi-Fi savienojums ir izslēgts"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
+    <string name="connectivity_hint_message" msgid="1314202316675864203">"Izveidojiet savienojumu ar tīklu"</string>
     <string name="device_daydream" msgid="3354366974209179614">"Ekrānsaudzētājs"</string>
     <string name="device_display" msgid="101455384386372747">"Displejs"</string>
     <string name="device_sound" msgid="9214182566287657481">"Skaņa"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"Ieskaujošā skaņa"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sistēmas signāli"</string>
-    <string name="device_apps" msgid="9180435229638772838">"Lietotnes"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"Krātuve un atiestatīšana"</string>
+    <string name="device_apps" msgid="1971794537385509294">"Lietojumprogrammas"</string>
+    <string name="device_storage" msgid="5536683600091277826">"Atmiņa"</string>
+    <string name="device_reset" msgid="1885840356489458285">"Atiestatīšana"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Dublēšana un atjaunošana"</string>
-    <string name="device_reset" msgid="2827002349560023125">"Rūpnīcas datu atiestatīšana"</string>
+    <string name="device_factory_reset" msgid="6537106927211842545">"Rūpnīcas datu atiestatīšana"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrēšana"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Vai dzēst kešatmiņā ievietotos datus?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Tiks dzēsti kešatmiņā ievietotie lietotņu dati."</string>
@@ -98,6 +107,8 @@
     <string name="system_security" msgid="8230080273993484407">"Drošība un ierobežojumi"</string>
     <string name="system_speech" msgid="8128688499687306982">"Runa"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Ieejas"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"Ieejas un ierīces"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"Mājas kinozāles vadīklas"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"Pieejamība"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Izstrādātājiem paredzētās opcijas"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Nav"</string>
@@ -167,10 +178,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"Skatīt visu"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"Skatīt mazāk"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Pieejamie tīkli"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"Savienošana, izmantojot WPS"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"Pievienot jaunu tīklu"</string>
     <string name="security_type" msgid="524443802004143058">"Drošības veids"</string>
-    <string name="wps_network" msgid="1052148085426051873">"Savienošana, izmantojot WPS"</string>
     <string name="other_network" msgid="3539704463099544488">"Cits tīkls..."</string>
     <string name="skip_network" msgid="6380260543776712357">"Izlaist"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"Nav"</string>
@@ -319,18 +328,6 @@
     <string name="system_package" msgid="9200255718634512790">"Sistēmas atjauninājumus nevar instalēt ārējā datu nesējā."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"Ierīces administratoru nevar instalēt ārējā datu nesējā."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Uzzināt vairāk"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Mēģināt vēlreiz"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"Notiek WPS maršrutētāja meklēšana…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Nospiediet maršrutētāja pogu “Wi-Fi aizsargātā iestatīšana”.\nUz tās var būt uzraksts “WPS” vai simbols, kas norādīts kreisajā pusē."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Wi-Fi maršrutētājā ievadiet PIN kodu: <xliff:g id="NUMBER">%1$s</xliff:g>."</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Kad būsiet ievadījis PIN kodu, iestatīšanas pabeigšana var ilgt 2 minūtes."</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Nevarēja atrast Wi-Fi maršrutētāju"</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Wi-Fi maršrutētāja drošības iestatījums (WEP) netiek atbalstīts."</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Wi-Fi maršrutētāja drošības iestatījums (TKIP) netiek atbalstīts."</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"Šobrīd ir aktīva vēl viena WPS sesija. Pēc dažām minūtēm mēģiniet vēlreiz."</string>
-    <string name="wifi_wps_start_title" msgid="7448016607208427187">"WPS metodes atlase"</string>
-    <string name="wifi_wps_action_push_button" msgid="3295053933961963105">"WPS spiedpoga"</string>
-    <string name="wifi_wps_action_pin_entry" msgid="3921490121142056571">"WPS PIN ievade"</string>
     <string name="system_date" msgid="2767108116769558081">"Datums"</string>
     <string name="system_time" msgid="6726022312605226285">"Laiks"</string>
     <string name="system_set_date" msgid="2437586307768561116">"Datuma iestatīšana"</string>
@@ -695,4 +692,14 @@
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Rādīt pāri citām lietotnēm"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"Atļaut rādīt pāri citām lietotnēm"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Atļaut rādīt lietotni pāri citām jūsu izmantotajām lietotnēm. Šī lietotne var traucēt izmantot citas lietotnes vai mainīt šo lietotņu attēlojumu vai darbību."</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"Iestatījumu pārveidošana"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Var pārveidot sistēmas iestatījumus"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"Ar šo atļauju lietotne var pārveidot sistēmas iestatījumus."</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"Jā"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"Nē"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"Attēls attēlā"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Atļaut attēlu attēlā"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Nevienā no instalētajām lietotnēm netiek atbalstīts attēls attēlā."</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Atļaut lietotnēm izveidot logu ar attēlu attēlā, kad lietotne ir atvērta vai pēc tās aizvēršanas (piemēram, lai turpinātu skatīties video). Šis logs tiek rādīts pāri citām izmantotajām lietotnēm."</string>
+    <string name="special_access" msgid="3513811566600299998">"Īpaša piekļuve lietotnēm"</string>
 </resources>

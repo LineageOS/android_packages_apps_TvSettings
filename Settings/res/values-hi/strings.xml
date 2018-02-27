@@ -21,11 +21,19 @@
     <string name="launcher_network_app_name" msgid="5107150533945388559">"नेटवर्क"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"प्रतिबंधित प्रोफ़ाइल"</string>
     <string name="header_category_suggestions" msgid="6732367439328586933">"सुझाव"</string>
+    <string name="header_category_quick_settings" msgid="6626141045575946920">"क्विक सेटिंग"</string>
+    <string name="header_category_general_settings" msgid="1208946854116876918">"सामान्य सेटिंग"</string>
     <string name="header_category_device" msgid="4855983928659541345">"डिवाइस"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"प्राथमिकताएं"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"रिमोट और एक्सेसरी"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"व्यक्तिगत"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"खाते"</string>
+    <string name="connect_to_network" msgid="2209125715907353369">"नेटवर्क से कनेक्ट करें"</string>
+    <string name="add_an_account" msgid="1123478843971990449">"कोई खाता जोड़ें"</string>
+    <string name="accounts_category_title" msgid="594314526488667838">"खाते और साइन इन"</string>
+    <string name="connectivity_network_category_title" msgid="6779497231311329071">"नेटवर्क और इंटरनेट"</string>
+    <string name="applications_category_title" msgid="3552921143969612110">"ऐप्लिकेशन"</string>
+    <string name="device_pref_category_title" msgid="5264163316572335776">"डिवाइस से जुड़ी पसंद"</string>
+    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"रिमोट और ऐक्सेसरी"</string>
     <string name="add_account" msgid="4098060223200619258">"खाता जोड़ें"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"खाता निकालें"</string>
     <string name="account_sync" msgid="773808124331714965">"सिंक किए गए ऐप्लिकेशन चुनें"</string>
@@ -41,21 +49,22 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"समन्‍वयन विफल"</string>
     <string name="sync_active" msgid="6891115263481154378">"समन्‍वयन सक्रिय"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"नेटवर्क"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"वाई-फ़ाई"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ईथरनेट"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"स्कैनिंग हमेशा उपलब्ध"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Google की स्थान सेवा और अन्य ऐप्लिकेशन को नेटवर्क खोजने दें, भले ही Wi-Fi बंद हो"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"वाई-फ़ाई"</string>
+    <string name="connectivity_hint_message" msgid="1314202316675864203">"नेटवर्क से कनेक्ट करें"</string>
     <string name="device_daydream" msgid="3354366974209179614">"स्क्रीन सेवर"</string>
     <string name="device_display" msgid="101455384386372747">"प्रदर्शन"</string>
     <string name="device_sound" msgid="9214182566287657481">"ध्वनि"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"सराउंड साउंड"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"सिस्टम ध्वनियां"</string>
-    <string name="device_apps" msgid="9180435229638772838">"ऐप्स"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"मेमोरी और रीसेट"</string>
+    <string name="device_apps" msgid="1971794537385509294">"ऐप्लिकेशन"</string>
+    <string name="device_storage" msgid="5536683600091277826">"मेमोरी"</string>
+    <string name="device_reset" msgid="1885840356489458285">"रीसेट करें"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"बैकअप लें और पुनर्स्‍थापित करें"</string>
-    <string name="device_reset" msgid="2827002349560023125">"फ़ैक्टरी डेटा रीसेट"</string>
+    <string name="device_factory_reset" msgid="6537106927211842545">"फ़ैक्ट्री डेटा रीसेट"</string>
     <string name="device_calibration" msgid="8632962533376605191">"अंशांकन"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"संचित डेटा साफ़ करें?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"इससे सभी एेप्‍स का संचित डेटा साफ़ हो जाएगा."</string>
@@ -98,6 +107,8 @@
     <string name="system_security" msgid="8230080273993484407">"सुरक्षा और प्रतिबंध"</string>
     <string name="system_speech" msgid="8128688499687306982">"बोली"</string>
     <string name="system_inputs" msgid="2413907183796651102">"इनपुट"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"टीवी इनपुट और डिवाइस"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"होम थिएटर से जुड़े नियंत्रण"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"सरल उपयोग"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"डेवलपर विकल्प"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"कोई नहीं"</string>
@@ -166,10 +177,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"सभी देखें"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"कम देखें"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"उपलब्ध नेटवर्क"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"WPS के ज़रिए कनेक्ट करें"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"नया नेटवर्क जोड़ें"</string>
     <string name="security_type" msgid="524443802004143058">"सुरक्षा का प्रकार"</string>
-    <string name="wps_network" msgid="1052148085426051873">"WPS के ज़रिए कनेक्ट करें"</string>
     <string name="other_network" msgid="3539704463099544488">"अन्‍य नेटवर्क…"</string>
     <string name="skip_network" msgid="6380260543776712357">"अभी नहीं"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"कोई नहीं"</string>
@@ -318,18 +327,6 @@
     <string name="system_package" msgid="9200255718634512790">"सिस्‍टम के बारे में नई जानकारी को बाहरी मीडिया पर इंस्टॉल नहीं किया जा सकता."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"डिवाइस व्यवस्थापक को बाहरी मीडिया पर इंस्टॉल नहीं किया जा सकता."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"और जानें"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"फिर से प्रयास करें"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"WPS राउटर की खोज हो रही है…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"अपने राउटर पर वाई-फ़ाई  सुरक्षित सेटअप बटन दबाएं.\nइसे \"WPS\" भी कहा जा सकता है या इसमें बाईं ओर चिह्न हो सकता है."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"अपने वाई-फ़ाई राउटर में पिन <xliff:g id="NUMBER">%1$s</xliff:g> डालें"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"आपके द्वारा पिन डालने के बाद, सेटअप को पूर्ण होने में 2 मिनट लग सकते हैं"</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"वाई-फ़ाई  राउटर नहीं मिल सका"</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"वाई-फ़ाई राउटर सुरक्षा सेटिंग (WEP) समर्थित नहीं है"</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"वाई-फ़ाई राउटर सुरक्षा सेटिंग (TKIP) समर्थित नहीं है"</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"अन्य WPS सत्र प्रगति में है. कुछ ही मिनट में फिर से प्रयास करें."</string>
-    <string name="wifi_wps_start_title" msgid="7448016607208427187">"WPS का तरीका चुनें"</string>
-    <string name="wifi_wps_action_push_button" msgid="3295053933961963105">"WPS पुश बटन के ज़रिए"</string>
-    <string name="wifi_wps_action_pin_entry" msgid="3921490121142056571">"WPS पिन के ज़रिए"</string>
     <string name="system_date" msgid="2767108116769558081">"तारीख"</string>
     <string name="system_time" msgid="6726022312605226285">"समय"</string>
     <string name="system_set_date" msgid="2437586307768561116">"तारीख सेट करें"</string>
@@ -688,6 +685,16 @@
     <string name="no_notification_listeners" msgid="4583789599075326886">"इंस्टॉल किए गए किसी भी ऐप्लिकेशन ने सूचना देखने की इजाज़त नहीं मांगी है."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"ये ऐप्लिकेशन संपर्क नामों और आपको मिलने वाले मैसेज जैसी निजी जानकारी के साथ-साथ सभी सूचनाओं को पढ़ सकेंगे. ये सूचनाओं को खारिज कर सकेंगे और उनमें शामिल कार्रवाई बटनों को ट्रिगर भी कर सकेंगे."</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"दूसरे ऐप्लिकेशन के ऊपर दिखाएं"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"दूसरे ऐप्लिकेशन के ऊपर दिखाई देने दें"</string>
-    <string name="allow_overlay_description" msgid="1946279120428813474">"किसी ऐप्लिकेशन को, इस्तेमाल किए जा रहे दूसरे सभी ऐप्लिकेशन के ऊपर दिखाई देने दें. यह उन ऐप्लिकेशन को इस्तेमाल करने में परेशानी कर सकता है या उनके दिखाई देने या काम करने के तरीके में बदलाव कर सकता है."</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"दूसरे ऐप्लिकेशन के ऊपर दिखने की मंज़ूरी दें"</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"किसी ऐप्लिकेशन को, इस्तेमाल किए जा रहे दूसरे सभी ऐप्लिकेशन के ऊपर दिखाई देने की मंज़ूरी दें. यह उन ऐप्लिकेशन को इस्तेमाल करने में परेशानी कर सकता है या उनके दिखाई देने या काम करने के तरीके में बदलाव कर सकता है."</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"सिस्‍टम सेटिंग में बदलाव करना"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"सिस्टम सेटिंग में बदलाव कर सकते हैं"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"यह अनुमति मिलने के बाद कोई ऐप्लिकेशन, सिस्टम सेटिंग में बदलाव कर सकता है."</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"हां"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"नहीं"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"पिक्चर में पिक्चर से जुड़ी सेटिंग"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"पिक्चर में पिक्चर सुविधा चालू करने की मंज़ूरी दें"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"डिवाइस में इंस्टॉल किया गया कोई भी ऐप्लिकेशन पिक्चर में पिक्चर सुविधा के साथ काम नहीं करता"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"कोई ऐप्लिकेशन खुला होने पर या जब आप उसे इस्तेमाल करना बंद कर दें (उदाहरण के लिए, कोई वीडियो देखने के लिए), ऐसे में ऐप्लिकेशन को पिक्चर में पिक्चर विंडो बनाने की मंज़ूरी दें. यह विंडो उन ऐप्लिकेशन के ऊपर दिखाई देती है जिनका आप इस्तेमाल कर रहे हैं."</string>
+    <string name="special_access" msgid="3513811566600299998">"ऐप्लिकेशन को खास अनुमति दें"</string>
 </resources>

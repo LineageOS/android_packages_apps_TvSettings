@@ -20,11 +20,20 @@
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"සැකසීම්"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"ජාලය"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"සීමා කළ පැතිකඩ"</string>
+    <string name="header_category_suggestions" msgid="6732367439328586933">"යෝජනා"</string>
+    <string name="header_category_quick_settings" msgid="6626141045575946920">"ඉක්මන් සැකසීම්"</string>
+    <string name="header_category_general_settings" msgid="1208946854116876918">"පොදු සැකසීම්"</string>
     <string name="header_category_device" msgid="4855983928659541345">"උපාංගය"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"අභිරුචි"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"දුරස්ථ සහ අතිරේක උපාංග"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"පෞද්ගලික"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"ගිණුම්"</string>
+    <string name="connect_to_network" msgid="2209125715907353369">"ජාලයට සබැඳීම"</string>
+    <string name="add_an_account" msgid="1123478843971990449">"ගිණුමක් එක් කරන්න"</string>
+    <string name="accounts_category_title" msgid="594314526488667838">"ගිණුම් සහ පුරන්න"</string>
+    <string name="connectivity_network_category_title" msgid="6779497231311329071">"ජාලය සහ අන්තර්ජාලය"</string>
+    <string name="applications_category_title" msgid="3552921143969612110">"යෙදුම්"</string>
+    <string name="device_pref_category_title" msgid="5264163316572335776">"උපාංග අභිරුචි"</string>
+    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"දුරස්ථ පාලක සහ ආයිත්තම්"</string>
     <string name="add_account" msgid="4098060223200619258">"ගිණුම එක් කරන්න"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"ගිණුම ඉවත් කරන්න"</string>
     <string name="account_sync" msgid="773808124331714965">"සමමුහුර්ත කළ යෙදුම් තෝරන්න"</string>
@@ -40,21 +49,22 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"සමමුහුර්තය ආසාර්ථකයි"</string>
     <string name="sync_active" msgid="6891115263481154378">"සමමුහුර්තය සක්‍රීයයි"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"ජාලය"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ඊතර නෙට්"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"පරිලෝකනය සැමවිට ලබාගත හැක"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Wi-Fi ක්‍රියාවිරහිත විට පවා, Google හි පිහිටීම් සේවාව සහ වෙනත් යෙදුම්වලට ජාල සඳහා ස්කෑන් කිරීමට ඉඩ දෙන්න"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"WiFi"</string>
+    <string name="connectivity_hint_message" msgid="1314202316675864203">"ජාලයට සබැඳීම"</string>
     <string name="device_daydream" msgid="3354366974209179614">"තිර සුරැකුම"</string>
     <string name="device_display" msgid="101455384386372747">"දර්ශනය"</string>
     <string name="device_sound" msgid="9214182566287657481">"හඬ"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"වට ශබ්ද"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"පද්ධති ශබ්ද"</string>
-    <string name="device_apps" msgid="9180435229638772838">"යෙදුම්"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"ආචයනය සහ යළි පිහිටුවන්න"</string>
+    <string name="device_apps" msgid="1971794537385509294">"යෙදුම්"</string>
+    <string name="device_storage" msgid="5536683600091277826">"ආචයනය"</string>
+    <string name="device_reset" msgid="1885840356489458285">"යළි සකසන්න"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"උපස්ථය සහ නැවත පිහිටුවීම"</string>
-    <string name="device_reset" msgid="2827002349560023125">"කර්මාන්තශාලා දත්ත යළි පිහිටුම"</string>
+    <string name="device_factory_reset" msgid="6537106927211842545">"කර්මාන්ත ශාලා දත්ත යළි සැකසීම"</string>
     <string name="device_calibration" msgid="8632962533376605191">"ක්‍රමාංකණය"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"හැඹිලිගත කළ දත්ත හිස් කරන්න ද?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"මෙය සියලුම යෙදුම් සඳහා හැඹිලිගත කළ දත්ත හිස් කරනු ඇත."</string>
@@ -97,6 +107,8 @@
     <string name="system_security" msgid="8230080273993484407">"ආරක්ෂාව සහ සීමා"</string>
     <string name="system_speech" msgid="8128688499687306982">"කථනය"</string>
     <string name="system_inputs" msgid="2413907183796651102">"ආදාන"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"ආදාන සහ උපාංග"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"ගෘහස්ත සිනමා පාලනය"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"ප්‍රවේශ්‍යතාව"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"වර්ධක විකල්ප"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"කිසිවක් නැත"</string>
@@ -165,10 +177,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"සියල්ල බලන්න"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"අඩුවෙන් බලන්න"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"තිබෙන ජාල"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"WPS හරහා සම්බන්ධ කරන්න"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"නව ජාලයක් එකතු කරන්න"</string>
     <string name="security_type" msgid="524443802004143058">"ආරක්ෂක වර්ගය"</string>
-    <string name="wps_network" msgid="1052148085426051873">"WPS හරහා සම්බන්ධ කරන්න"</string>
     <string name="other_network" msgid="3539704463099544488">"වෙනත් ජාලය…"</string>
     <string name="skip_network" msgid="6380260543776712357">"මඟ හරින්න"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"කිසිවක් නැත"</string>
@@ -317,15 +327,6 @@
     <string name="system_package" msgid="9200255718634512790">"බාහිර මාධ්‍යවල පද්ධති යාවත්කාලීනයන් ස්ථාපනය කළ නොහැක."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"බාහිර මාධ්‍යවල උපාංග පරිපාලක ස්ථාපනය කළ නොහැකිය."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"තව දැනගන්න"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"නැවත උත්සාහ කරන්න"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"WPS මාර්ගකාරකයන් සඳහාසොයමින්…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"ඔබගේ රවුටරයේ Wi-Fi Protected Setup බොත්තම ඔබන්න.\nඑය \"WPS\" ලෙස හැඳින්විය හැකි අතර හෝ මෙම සංකේතය අඩංගු විය හැක:"</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"ඔබගේ මාර්ගකාරකයේ PIN <xliff:g id="NUMBER">%1$s</xliff:g> ඇතුලත් කරන්න."</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"ඔබ PIN එක ඇතුළු කළ පසු, සම්පූර්ණ වීමට ස්ථාපනයට මිනිත්තු 2 ක් පමණ ගත වේ"</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Wi-Fi මාර්ගකාරකයක් සොයාගත නොහැක"</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"Wi-Fi මාර්ගකාරකයේ ආරක්ෂක සැකසුම් (WEP) සහය නොදක්වයි"</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"Wi-Fi මාර්ගකාරකයේ ආරක්ෂක සැකසුම් (TKIP) සහය නොදක්වයි"</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"තවත් WPS සැසියක් ක්‍රියාවේ පවතී. තවත් මිනිත්තු කිහිපයකින් යළි උත්සාහ කරන්න."</string>
     <string name="system_date" msgid="2767108116769558081">"දිනය"</string>
     <string name="system_time" msgid="6726022312605226285">"වේලාව"</string>
     <string name="system_set_date" msgid="2437586307768561116">"දිනය සකසන්න"</string>
@@ -683,4 +684,17 @@
     <string name="manage_notification_access_title" msgid="2051765294087620434">"දැනුම්දීම් ප්‍රවේශනය"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"ස්ථාපිත යෙදුම් කිසිවක් දැනුම්දීම් ප්‍රවේශය ඉල්ලා නැත."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"සම්බන්ධතා නම් සහ ඔබට ලැබෙන පණිවිඩවල පෙළ වැනි පුද්ගලික තොරතුරු ඇතුළුව, සියලු දැනුම්දීම් කියවීමට මෙම යෙදුම්වලට හැකි වනු ඇත. එයට දැනුම්දීම ඉවත දැමීමට හෝ ඒවා අඩංගු ක්‍රියා බොත්තම් ප්‍රේරණය කිරීමටද හැකි වනු ඇත."</string>
+    <string name="system_alert_window_settings" msgid="2069031369694448339">"වෙනත් යෙදුම් උඩින් පෙන්වන්න"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"වෙනත් යෙදුම් උඩින් පෙන්වීමට අවසර දෙන්න"</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"යෙදුමකට ඔබ භාවිත කරන වෙනත් යෙදුම්වලට ඉහළින්ම සංදර්ශනය වීමට ඉඩ දෙන්න. එය ඔබේ එම යෙදුම් භාවිතය හෝ ඒවා පෙනෙන හෝ හැසිරෙන ආකාරය වෙත අවහිර කිරීමට හැකිය."</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"පද්ධති සැකසීම් විකරණය කරන්න"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"පද්ධති සැකසීම් විකරණය කළ හැකිය"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"මෙම අවසරය යෙදුමකට පද්ධති සැකසීම් විකරණය කිරීමට ඉඩ දෙයි."</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"ඔව්"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"නැත"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"පින්තූරය-තුළ-පින්තූරය"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"පින්තූරය-තුළ-පින්තූරය වෙත ඉඩ දෙන්න"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"පින්තූරය-තුළ-පින්තූරය සඳහා ස්ථාපනය කළ යෙදුම් සහාය නොදක්වයි"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"මෙම යෙදුම විවෘතව තිබෙන අතරතුර හෝ එයින් ඉවත් වන විට පින්තූරය-තුළ-පින්තූරය කවුළුවක් සැදීමට ඉඩ දෙන්න (උදාහරණයකට, වීඩියෝව දිගටම බැලීමට). මෙම කවුළුව ඔබ භාවිතා කරන අනෙක් යෙදුම් උඩින් පෙන්වයි."</string>
+    <string name="special_access" msgid="3513811566600299998">"විශේෂ යෙදුම් ප්‍රවේශය"</string>
 </resources>

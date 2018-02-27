@@ -21,11 +21,19 @@
     <string name="launcher_network_app_name" msgid="5107150533945388559">"បណ្ដាញ"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"ប្រវត្តិរូប​បាន​ដាក់កម្រិត"</string>
     <string name="header_category_suggestions" msgid="6732367439328586933">"ការ​ណែនាំ"</string>
+    <string name="header_category_quick_settings" msgid="6626141045575946920">"ការកំណត់រហ័ស"</string>
+    <string name="header_category_general_settings" msgid="1208946854116876918">"ការកំណត់ទូទៅ"</string>
     <string name="header_category_device" msgid="4855983928659541345">"ឧបករណ៍"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"ចំណូលចិត្ត"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"ពី​ចម្ងាយ &amp; ឧបករណ៍"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"ផ្ទាល់ខ្លួន"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"គណនី"</string>
+    <string name="connect_to_network" msgid="2209125715907353369">"ភ្ជាប់ទៅបណ្តាញ"</string>
+    <string name="add_an_account" msgid="1123478843971990449">"បញ្ចូល​គណនី"</string>
+    <string name="accounts_category_title" msgid="594314526488667838">"គណនី និងការ​ចូលគណនី"</string>
+    <string name="connectivity_network_category_title" msgid="6779497231311329071">"បណ្តាញ និង​អីុនធឺណិត"</string>
+    <string name="applications_category_title" msgid="3552921143969612110">"កម្មវិធី"</string>
+    <string name="device_pref_category_title" msgid="5264163316572335776">"ចំណូលចិត្ត​ឧបករណ៍"</string>
+    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"ឧបករណ៍​បញ្ជាពីចម្ងាយ និងឧបករណ៍​បន្ទាប់បន្សំ"</string>
     <string name="add_account" msgid="4098060223200619258">"បន្ថែម​គណនី"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"លុប​គណនី​​​ចេញ"</string>
     <string name="account_sync" msgid="773808124331714965">"ជ្រើស​រើស​កម្មវិធី​​​ដែល​បាន​ធ្វើ​សម​កាល​កម្ម"</string>
@@ -41,21 +49,22 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"បានបរាជ័យក្នុងការធ្វើសមកាលកម្ម"</string>
     <string name="sync_active" msgid="6891115263481154378">"ការធ្វើសមកាលកម្មសកម្ម"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"បណ្ដាញ"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"វ៉ាយហ្វាយ"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"អ៊ីសឺរណិត"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"ការស្កេនតែងតែមានជានិច្ច"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"អនុញ្ញាតឲ្យសេវាកម្ម Google និងកម្មវិធីផ្សេងៗស្កេនរកបណ្ដាញ បើទោះបីជា Wi-Fi បិទក៏ដោយ"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
+    <string name="connectivity_hint_message" msgid="1314202316675864203">"ភ្ជាប់ទៅបណ្តាញ"</string>
     <string name="device_daydream" msgid="3354366974209179614">"ធាតុរក្សាអេក្រង់"</string>
     <string name="device_display" msgid="101455384386372747">"បង្ហាញ"</string>
     <string name="device_sound" msgid="9214182566287657481">"សំឡេង"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"សំឡេងជុំវិញ"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"សំឡេង​​ប្រព័ន្ធ"</string>
-    <string name="device_apps" msgid="9180435229638772838">"កម្មវិធី"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"ឧបករណ៍​ផ្ទុក &amp; កំណត់​ឡើងវិញ"</string>
+    <string name="device_apps" msgid="1971794537385509294">"កម្មវិធី"</string>
+    <string name="device_storage" msgid="5536683600091277826">"កន្លែង​ផ្ទុក"</string>
+    <string name="device_reset" msgid="1885840356489458285">"កំណត់​ឡើងវិញ"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"​បម្រុង​ទុក &amp; ស្ដារ​ឡើង​វិញ"</string>
-    <string name="device_reset" msgid="2827002349560023125">"កំណត់​ឡើងវិញ​​ទិន្នន័យ​ដូច​ប្រភព​ដើម"</string>
+    <string name="device_factory_reset" msgid="6537106927211842545">"កំណត់ទិន្នន័យដូចចេញពីរោងចក្រ"</string>
     <string name="device_calibration" msgid="8632962533376605191">"ការ​ក្រិត​តាម​ខ្នាត"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"ជម្រះទិន្នន័យក្នុងឃ្លាំងសម្ងាត់?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"វានឹងជម្រះទិន្នន័យឃ្លាំងសម្រាប់កម្មវិធីទាំងអស់។"</string>
@@ -98,6 +107,8 @@
     <string name="system_security" msgid="8230080273993484407">"សុវត្ថិភាព &amp; ការ​ដាក់​កម្រិត"</string>
     <string name="system_speech" msgid="8128688499687306982">"និយាយ"</string>
     <string name="system_inputs" msgid="2413907183796651102">"ចូល"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"រន្ធដោតទូរទស្សន៍ និងឧបករណ៍"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"ការគ្រប់គ្រង​ប្រព័ន្ធ​បញ្ចាំង​ភាពយន្ត​នៅ​ផ្ទះ"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"ភាព​ងាយស្រួល"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"ជម្រើស​អ្នក​អភិវឌ្ឍ"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"គ្មាន"</string>
@@ -166,10 +177,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"​មើល​ទាំង​អស់"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"មើលតិចជាងមុន"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"បណ្ដាញ​ដែល​មាន"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"តភ្ជាប់​តាម​រយៈ WPS"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"បន្ថែម​បណ្ដាញ​ថ្មី"</string>
     <string name="security_type" msgid="524443802004143058">"ប្រភេទ​​សុវត្ថិភាព"</string>
-    <string name="wps_network" msgid="1052148085426051873">"តភ្ជាប់​តាម​រយៈ WPS"</string>
     <string name="other_network" msgid="3539704463099544488">"បណ្ដាញ​ផ្សេង..."</string>
     <string name="skip_network" msgid="6380260543776712357">"រំលង"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"គ្មាន"</string>
@@ -318,18 +327,6 @@
     <string name="system_package" msgid="9200255718634512790">"មិនអាចដំឡើងបច្ចុប្បន្នភាពប្រព័ន្ធលើមេឌៀខាងក្រៅបានទេ។"</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"អ្នកគ្រប់គ្រងឧបករណ៍មិនអាចដំឡើងលើមេឌៀផ្នែកខាងក្រៅបានទេ។"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"ស្វែងយល់បន្ថែម"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"ព្យាយាម​ម្ដងទៀត"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"កំពុង​ស្វែងរក​រ៉ោទ័រ WPS ..."</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"ចុច​ប៊ូតុង​ ដំឡើង​​​បាន​ការពារ​វ៉ាយហ្វាយ​នៅ​លើ​រោទ័រ​របស់​អ្នក។\nគេ​អាច​ហៅ​វា​បាន​ថា \"WPS\" ឬ​​មាន​និមិត្តសញ្ញា​នៅ​ខាង​ឆ្វេង។"</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"បញ្ចូល​កូដ PIN <xliff:g id="NUMBER">%1$s</xliff:g> លើ​រ៉ោតទ័រ​វ៉ាយហ្វាយរបស់អ្នក"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"បន្ទាប់ពី​បញ្ចូល​កូដ PIN, ការរៀបចំ​អាច​ចំណាយ​ពេល​ពីរ​នាទី​ដើម្បី​បញ្ចប់"</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"មិន​អាច​រក​ឃើញ​រ៉ោតទ័រ​​វ៉ាយហ្វាយ"</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"ការ​កំណត់​សុវត្ថិភាព​រ៉ោតទ័រ​វ៉ាយហ្វាយ (WEP) មិន​ត្រូវ​បាន​គាំទ្រ"</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"ការ​កំណត់​សុវត្ថិភាព​រ៉ោតទ័រ​វ៉ាយហ្វាយ (TKIP) មិន​ត្រូវ​បាន​គាំទ្រ"</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"សម័យ WPS មួយ​ផ្សេង​កំពុង​ដំណើរការ។ សូម​ព្យាយាម​ម្ដង​ទៀត​នៅ​ពេល​បន្តិចទៀត។"</string>
-    <string name="wifi_wps_start_title" msgid="7448016607208427187">"ជ្រើសរើស​វិធី​ WPS របស់​អ្នក"</string>
-    <string name="wifi_wps_action_push_button" msgid="3295053933961963105">"ប៊ូតុង​ចុច WPS"</string>
-    <string name="wifi_wps_action_pin_entry" msgid="3921490121142056571">"ការ​បញ្ចូល WPS Pin"</string>
     <string name="system_date" msgid="2767108116769558081">"កាលបរិច្ឆេទ"</string>
     <string name="system_time" msgid="6726022312605226285">"ពេលវេលា"</string>
     <string name="system_set_date" msgid="2437586307768561116">"កំណត់​កាលបរិច្ឆេទ"</string>
@@ -690,4 +687,14 @@
     <string name="system_alert_window_settings" msgid="2069031369694448339">"បង្ហាញ​នៅលើ​កម្មវិធី​ផ្សេងៗ"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"អនុញ្ញាតឱ្យ​បង្ហាញ​នៅលើ​កម្មវិធី​ផ្សេងៗ"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"អនុញ្ញាត​ឱ្យ​កម្មវិធី​បង្ហាញ​នៅលើ​កម្មវិធី​ផ្សេងៗ ​ដែល​អ្នក​កំពុង​ប្រើ​ប្រាស់។ វា​អាចធ្វើឱ្យមានការ​រំខាន​ដល់ការប្រើប្រាស់​កម្មវិធី​ទាំង​នោះ ឬ​ផ្លាស់ប្តូរ​របៀប​ដែលវា​បង្ហាញ ឬ​ដំណើរការ។"</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"កែ​សម្រួល​ការកំណត់​ប្រព័ន្ធ"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"អាច​កែសម្រួល​ការ​កំណត់​ប្រព័ន្ធ​បាន"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"ការ​អនុញ្ញាត​នេះ​អនុញ្ញាត​ឱ្យ​កម្មវិធី​អាច​កែសម្រួល​ការ​កំណត់​ប្រព័ន្ធ​បាន។"</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"បាទ/ចាស"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"ទេ"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"រូប​ក្នុង​រូប"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"អនុញ្ញាតសម្រាប់មុខងាររូបក្នុងរូប"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"កម្មវិធី​ដែលបាន​ដំឡើង​មិន​អាចប្រើ​មុខងារ​រូប​ក្នុងរូប​បាន​ទេ"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"អនុញ្ញាតឱ្យ​កម្មវិធី​បង្កើត​វិនដូ​រូប​ក្នុង​រូប ខណៈពេល​ដែល​កម្មវិធី​នេះ​កំពុង​បើក ឬ​បន្ទាប់ពី​អ្នក​ចាកចេញ​ពីវា (ឧទាហរណ៍ ដើម្បី​បន្តមើល​វីដេអូ)។ វិនដូនេះ​បង្ហាញ​នៅផ្នែក​ខាងលើ​កម្មវិធី​ផ្សេងទៀត​ដែលអ្នក​កំពុង​ប្រើប្រាស់។"</string>
+    <string name="special_access" msgid="3513811566600299998">"ការចូល​ប្រើ​កម្មវិធី​ពិសេស"</string>
 </resources>

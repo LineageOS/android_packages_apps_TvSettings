@@ -21,11 +21,19 @@
     <string name="launcher_network_app_name" msgid="5107150533945388559">"Xarxa"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Perfil restringit"</string>
     <string name="header_category_suggestions" msgid="6732367439328586933">"Suggeriments"</string>
+    <string name="header_category_quick_settings" msgid="6626141045575946920">"Configuració ràpida"</string>
+    <string name="header_category_general_settings" msgid="1208946854116876918">"Configuració general"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Dispositiu"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Preferències"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Comandament a distància i accessoris"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Personal"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"Comptes"</string>
+    <string name="connect_to_network" msgid="2209125715907353369">"Connecta\'t a la xarxa"</string>
+    <string name="add_an_account" msgid="1123478843971990449">"Afegeix un compte"</string>
+    <string name="accounts_category_title" msgid="594314526488667838">"Comptes i inici de sessió"</string>
+    <string name="connectivity_network_category_title" msgid="6779497231311329071">"Xarxa i Internet"</string>
+    <string name="applications_category_title" msgid="3552921143969612110">"Aplicacions"</string>
+    <string name="device_pref_category_title" msgid="5264163316572335776">"Preferències del dispositiu"</string>
+    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"Comandaments i accessoris"</string>
     <string name="add_account" msgid="4098060223200619258">"Afegeix un compte"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Suprimeix el compte"</string>
     <string name="account_sync" msgid="773808124331714965">"Tria aplicacions sincronitzades"</string>
@@ -41,21 +49,22 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"Error de sincronització"</string>
     <string name="sync_active" msgid="6891115263481154378">"Sincronització activada"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"Xarxa"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Cerca xarxes sempre"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Permet que el servei d\'ubicacions de Google i altres aplicacions cerquin xarxes, fins i tot si la Wi-Fi està desactivada"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
+    <string name="connectivity_hint_message" msgid="1314202316675864203">"Connecta\'t a la xarxa"</string>
     <string name="device_daydream" msgid="3354366974209179614">"Estalvi de pantalla"</string>
     <string name="device_display" msgid="101455384386372747">"Pantalla"</string>
     <string name="device_sound" msgid="9214182566287657481">"So"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"So envoltant"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sons del sistema"</string>
-    <string name="device_apps" msgid="9180435229638772838">"Aplicacions"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"Emmagatzematge i restabliment"</string>
+    <string name="device_apps" msgid="1971794537385509294">"Aplicacions"</string>
+    <string name="device_storage" msgid="5536683600091277826">"Emmagatzematge"</string>
+    <string name="device_reset" msgid="1885840356489458285">"Restabliment"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Còpia de seguretat i restauració"</string>
-    <string name="device_reset" msgid="2827002349560023125">"Restableix les dades de fàbrica"</string>
+    <string name="device_factory_reset" msgid="6537106927211842545">"Restabliment de les dades de fàbrica"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Calibratge"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Vols esborrar dades emmagatzem. a memòria cau?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"S\'esborraran dades aplicacions a la memòria cau."</string>
@@ -98,6 +107,8 @@
     <string name="system_security" msgid="8230080273993484407">"Seguretat i restriccions"</string>
     <string name="system_speech" msgid="8128688499687306982">"Veu"</string>
     <string name="system_inputs" msgid="2413907183796651102">"Entrades"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"Entrades i dispositius"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"Control de cinema domèstic"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"Accessibilitat"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"Opcions per a desenvolupadors"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Cap"</string>
@@ -166,10 +177,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"Mostra-ho tot"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"Mostra\'n menys"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Xarxes disponibles"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"Connexió per WPS"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"Afegeix una xarxa nova"</string>
     <string name="security_type" msgid="524443802004143058">"Tipus de seguretat"</string>
-    <string name="wps_network" msgid="1052148085426051873">"Connexió per WPS"</string>
     <string name="other_network" msgid="3539704463099544488">"Una altra xarxa…"</string>
     <string name="skip_network" msgid="6380260543776712357">"Omet"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"Cap"</string>
@@ -318,18 +327,6 @@
     <string name="system_package" msgid="9200255718634512790">"No es poden instal·lar actualitzacions del sistema en suports externs."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"No es poden instal·lar administradors de dispositius en suports externs."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"Més informació"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Torna-ho a provar"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"S\'està cercant l\'encaminador WPS…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Prem el botó Wi-Fi Protected Setup de l\'encaminador.\nÉs possible que s\'anomeni \"WPS\" o que contingui el símbol que es mostra a l\'esquerra."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Introducció del PIN <xliff:g id="NUMBER">%1$s</xliff:g> a l\'encaminador Wi-Fi"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Un cop hagis introduït el PIN, la configuració pot tardar fins a dos minuts a finalitzar."</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"No s\'ha trobat l\'encaminador Wi-Fi."</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"La configuració de seguretat de l\'encaminador Wi-Fi (WEP) no és compatible."</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"La configuració de seguretat de l\'encaminador Wi-Fi (TKIP) no és compatible."</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"Hi ha una altra sessió WPS en curs. Torna-ho a provar d\'aquí a una estona."</string>
-    <string name="wifi_wps_start_title" msgid="7448016607208427187">"Selecciona el mètode de WPS"</string>
-    <string name="wifi_wps_action_push_button" msgid="3295053933961963105">"Botó de WPS"</string>
-    <string name="wifi_wps_action_pin_entry" msgid="3921490121142056571">"PIN de WPS"</string>
     <string name="system_date" msgid="2767108116769558081">"Data"</string>
     <string name="system_time" msgid="6726022312605226285">"Hora"</string>
     <string name="system_set_date" msgid="2437586307768561116">"Estableix la data"</string>
@@ -690,4 +687,14 @@
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Mostra sobre altres aplicacions"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"Permet que es mostri sobre altres aplicacions"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Permet que una aplicació es mostri sobre les altres aplicacions que estiguis utilitzant. És possible que interfereixi amb l\'ús que fas d\'aquestes aplicacions i canviï la manera com es mostren o es comporten."</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"Modificar configuració sistema"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Pot modificar la configuració del sistema"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"Aquest permís permet que una aplicació modifiqui la configuració del sistema."</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"Sí"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"No"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"Pantalla en pantalla"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Permet la funció de pantalla en pantalla"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Cap de les aplicacions instal·lades no admet la funció de pantalla en pantalla"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Permet que les aplicacions creïn una finestra de pantalla en pantalla mentre estan obertes o després de sortir-ne (per exemple, per seguir veient un vídeo). Aquesta finestra es mostra sobre altres aplicacions que estàs utilitzant."</string>
+    <string name="special_access" msgid="3513811566600299998">"Accés especial d\'aplicacions"</string>
 </resources>

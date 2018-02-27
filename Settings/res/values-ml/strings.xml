@@ -21,11 +21,19 @@
     <string name="launcher_network_app_name" msgid="5107150533945388559">"നെറ്റ്‌വർക്ക്"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"നിയന്ത്രിത പ്രൊഫൈൽ"</string>
     <string name="header_category_suggestions" msgid="6732367439328586933">"നിർദ്ദേശങ്ങൾ"</string>
+    <string name="header_category_quick_settings" msgid="6626141045575946920">"ദ്രുത ക്രമീകരണം"</string>
+    <string name="header_category_general_settings" msgid="1208946854116876918">"പൊതു ക്രമീകരണം"</string>
     <string name="header_category_device" msgid="4855983928659541345">"ഉപകരണം"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"മുൻഗണനകൾ"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"വിദൂര നിയന്ത്രണവും ആക്‌സസറികളും"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"സ്വകാര്യം"</string>
-    <string name="accounts_category_title" msgid="7591072907146317425">"അക്കൗണ്ടുകൾ"</string>
+    <string name="connect_to_network" msgid="2209125715907353369">"നെറ്റ്‌വർക്കിലേക്ക് കണക്‌റ്റ് ചെയ്യുക"</string>
+    <string name="add_an_account" msgid="1123478843971990449">"ഒരു അക്കൗണ്ട് ചേർക്കുക"</string>
+    <string name="accounts_category_title" msgid="594314526488667838">"അക്കൗണ്ടുകളും സൈൻ ഇൻ ചെയ്യലും"</string>
+    <string name="connectivity_network_category_title" msgid="6779497231311329071">"നെറ്റ്‌വർക്കും ഇന്റർനെറ്റും"</string>
+    <string name="applications_category_title" msgid="3552921143969612110">"ആപ്പുകൾ"</string>
+    <string name="device_pref_category_title" msgid="5264163316572335776">"ഉപകരണ മുൻഗണനകൾ"</string>
+    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"റിമോട്ടുകളും ആക്‌സസറികളും"</string>
     <string name="add_account" msgid="4098060223200619258">"അക്കൗണ്ട് ചേർക്കുക"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"അക്കൗണ്ട് നീക്കംചെയ്യുക"</string>
     <string name="account_sync" msgid="773808124331714965">"സമന്വയിപ്പിച്ച അപ്ലിക്കേഷനുകൾ തിരഞ്ഞെടുക്കുക"</string>
@@ -41,21 +49,22 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="5514824149810480551">"സമന്വയം പരാജയപ്പെട്ടു"</string>
     <string name="sync_active" msgid="6891115263481154378">"സമന്വയം സജീവമാണ്"</string>
-    <string name="connectivity_network" msgid="8321537111272398501">"നെറ്റ്‌വർക്ക്"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"വൈഫൈ"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ഇതർനെറ്റ്"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"സ്‌കാനിംഗ് എപ്പോഴും ലഭ്യമാണ്"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Wi-Fi ഓഫാണെങ്കിൽപ്പോലും, Google ലൊക്കേഷൻ സേവനങ്ങളേയും മറ്റ് അപ്ലിക്കേഷനുകളെയും നെറ്റ്‌വർക്കുകൾ സ്‌കാൻ ചെയ്യാൻ അനുവദിക്കുക"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"വൈഫൈ"</string>
+    <string name="connectivity_hint_message" msgid="1314202316675864203">"നെറ്റ്‌വർക്കിലേക്ക് കണക്‌റ്റ് ചെയ്യുക"</string>
     <string name="device_daydream" msgid="3354366974209179614">"സ്ക്രീൻ സേവർ"</string>
     <string name="device_display" msgid="101455384386372747">"ഡിസ്‌പ്ലേ"</string>
     <string name="device_sound" msgid="9214182566287657481">"ശബ്‌ദം"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"സറൗണ്ട് സൗണ്ട്"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"സിസ്റ്റം ശ‌ബ്‌ദം"</string>
-    <string name="device_apps" msgid="9180435229638772838">"അപ്ലിക്കേഷനുകൾ"</string>
-    <string name="device_storage_reset" msgid="1425978936501134425">"സംഭരണവും പുനഃസജ്ജീകരണവും"</string>
+    <string name="device_apps" msgid="1971794537385509294">"ആപ്പുകൾ"</string>
+    <string name="device_storage" msgid="5536683600091277826">"സ്റ്റോറേജ്"</string>
+    <string name="device_reset" msgid="1885840356489458285">"പുനഃക്രമീകരിക്കുക"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"ബാക്കപ്പുചെയ്യലും പുനഃസ്ഥാപിക്കലും"</string>
-    <string name="device_reset" msgid="2827002349560023125">"ഫാക്‌ടറിഡാറ്റ റീസെറ്റ്"</string>
+    <string name="device_factory_reset" msgid="6537106927211842545">"ഫാക്‌ടറി ഡാറ്റ പുനഃക്രമീകരണം"</string>
     <string name="device_calibration" msgid="8632962533376605191">"കാലിബ്രേഷൻ"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"കാഷെ ചെയ്‌ത ഡാറ്റ മായ്‌ക്കണോ?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"ഇത് എല്ലാ അപ്ലിക്കേഷനുകൾക്കുമായി കാഷെ ചെയ്ത ഡാറ്റ മായ്‌ക്കും."</string>
@@ -98,6 +107,8 @@
     <string name="system_security" msgid="8230080273993484407">"സുരക്ഷയും നിയന്ത്രണങ്ങളും"</string>
     <string name="system_speech" msgid="8128688499687306982">"സംഭാഷണം"</string>
     <string name="system_inputs" msgid="2413907183796651102">"ഇൻപുട്ടുകൾ"</string>
+    <string name="system_inputs_devices" msgid="8700905419497948327">"ഇൻപുട്ടുകളും ഉപകരണങ്ങളും"</string>
+    <string name="system_home_theater_control" msgid="2053198603790384368">"ഹോം തീയറ്റർ നിയന്ത്രണം"</string>
     <string name="system_accessibility" msgid="6215431399759498005">"ഉപയോഗസഹായി"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"ഡെവലപ്പർ ഓ‌പ്ഷനുകൾ"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ഒന്നുമില്ല"</string>
@@ -166,10 +177,8 @@
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"എല്ലാം കാണുക"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"കുറച്ച് കാണുക"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"ലഭ്യമായ നെറ്റ്‌വർക്കുകൾ"</string>
-    <string name="wifi_setting_other_options_wps" msgid="2320322351779996152">"WPS വഴി കണ‌ക്‌റ്റുചെയ്യുക"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"പുതിയ നെറ്റ്‌വർക്ക് ചേർക്കുക"</string>
     <string name="security_type" msgid="524443802004143058">"സുരക്ഷാ തരം"</string>
-    <string name="wps_network" msgid="1052148085426051873">"WPS വഴി കണ‌ക്‌റ്റുചെയ്യുക"</string>
     <string name="other_network" msgid="3539704463099544488">"മറ്റ് നെറ്റ്‌വർക്ക്…"</string>
     <string name="skip_network" msgid="6380260543776712357">"ഒഴിവാക്കുക"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"ഒന്നുമില്ല"</string>
@@ -318,18 +327,6 @@
     <string name="system_package" msgid="9200255718634512790">"ബാഹ്യ മീഡിയയിൽ സി‌സ്റ്റം അപ്ഡേറ്റുകൾ ഇൻസ്റ്റാൾ ചെയ്യാനാകില്ല."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"ബാഹ്യ മീഡിയയിൽ ഉപകരണ അഡ്മിനിസ്ട്രേറ്റർ ഇൻസ്റ്റാൾ ചെയ്യാനാകില്ല."</string>
     <string name="learn_more_action" msgid="7015991954404958779">"കൂടുതലറിയുക"</string>
-    <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"വീണ്ടും ശ്രമിക്കുക"</string>
-    <string name="wifi_wps_title" msgid="1872305810119408482">"WPS റൂട്ടറിനായി തിരയുന്നു…"</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"നിങ്ങളുടെ റൂട്ടറിലെ വൈഫൈ പരിരക്ഷിത സജ്ജീകരണ ബട്ടൺ അമർത്തുക.\nഇത് \"WPS\" എന്നറിയപ്പെടാനോ ഇടതുഭാഗത്ത് ചിഹ്നമുണ്ടായിരിക്കാനോ ഇടയുണ്ട്."</string>
-    <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"നിങ്ങളുടെ വൈഫൈ റൂട്ടറിൽ പിൻ <xliff:g id="NUMBER">%1$s</xliff:g> നൽകുക"</string>
-    <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"നിങ്ങൾ പിൻ നൽകിയതിനു ശേഷം, സജ്ജീകരണം പൂർത്തിയാകാൻ 2 മിനിറ്റ് വരെ എടുക്കും"</string>
-    <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"വൈഫൈ റൂട്ടർ കണ്ടെത്താനായില്ല"</string>
-    <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"വൈഫൈ റൂട്ടർ സുരക്ഷാ ക്രമീകരണം (WEP) പിന്തുണയ്ക്കുന്നില്ല"</string>
-    <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"വൈഫൈ റൂട്ടർ സുരക്ഷാ ക്രമീകരണം (TKIP) പിന്തുണയ്ക്കുന്നില്ല"</string>
-    <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"മറ്റൊരു WPS സെഷൻ പുരോഗതിയിലാണ്. അൽപ്പസമയത്തിനകം വീണ്ടും ശ്രമിക്കുക."</string>
-    <string name="wifi_wps_start_title" msgid="7448016607208427187">"നിങ്ങളുടെ WPS രീതി തിരഞ്ഞെടുക്കുക"</string>
-    <string name="wifi_wps_action_push_button" msgid="3295053933961963105">"WPS പുഷ് ബട്ടൺ"</string>
-    <string name="wifi_wps_action_pin_entry" msgid="3921490121142056571">"WPS പിൻ നൽകൽ"</string>
     <string name="system_date" msgid="2767108116769558081">"തീയതി"</string>
     <string name="system_time" msgid="6726022312605226285">"സമയം"</string>
     <string name="system_set_date" msgid="2437586307768561116">"തീയതി സജ്ജീകരിക്കുക"</string>
@@ -690,4 +687,14 @@
     <string name="system_alert_window_settings" msgid="2069031369694448339">"മറ്റ് ആപ്പുകൾക്ക് മുകളിൽ പ്രദർശിപ്പിക്കുക"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"മറ്റ് ആപ്പുകൾക്ക് മുകളിൽ പ്രദർശിപ്പിക്കാൻ അനുവദിക്കുക"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"നിങ്ങൾ ഉപയോഗിക്കുന്ന മറ്റ് ആപ്പുകൾക്ക് മുകളിൽ ഒരു ആപ്പിനെ ദൃശ്യമാക്കാൻ അനുവദിക്കുക. ആ ആപ്പുകളുടെ ഉപയോഗത്തെ ഇത് തടസ്സപ്പെടുത്തുകയോ അവ കാണപ്പെടുന്ന അല്ലെങ്കിൽ പെരുമാറുന്ന രീതിയെ മാറ്റുകയോ ചെയ്തേക്കാം."</string>
+    <string name="write_system_settings" msgid="2730923656857824907">"സിസ്റ്റം ക്രമീകരണങ്ങൾ പരിഷ്‌ക്കരിക്കുക"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"സിസ്റ്റം ക്രമീകരണം പരിഷ്‌ക്കരിക്കാനാകും"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"ഈ അനുമതി, സിസ്റ്റം ക്രമീകരണം പരിഷ്‌ക്കരിക്കാൻ ആപ്പിനെ അനുവദിക്കുന്നു."</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"അതെ"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"ഇല്ല"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"ചിത്രത്തിനുള്ളിൽ ചിത്രം"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"\'ചിത്രത്തിനുള്ളിൽ ചിത്രം\' അനുവദിക്കുക"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"ഇൻസ്റ്റാൾ ചെയ്‌ത ആപ്പുകളൊന്നും \'ചിത്രത്തിനുള്ളിൽ ചിത്രം\' പിന്തുണയ്ക്കുന്നില്ല"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"ഈ ആപ്പ് തുറന്നിരിക്കുന്ന സമയത്തോ നിങ്ങളതിൽ നിന്ന് പുറത്തുകടന്നതിന് ശേഷമോ (ഉദാഹരണത്തിന്, ഒരു വീഡിയോ കാണുന്നത് തുടരുന്നതിന്) \'ചിത്രത്തിനുള്ളിൽ ചിത്രം\' വിൻഡോ സൃഷ്‌ടിക്കാൻ ഈ ആപ്പിനെ അനുവദിക്കുക. നിങ്ങൾ ഉപയോഗിക്കുന്ന മറ്റ് ആപ്പുകളുടെ മുകളിൽ ഈ വിൻഡോ പ്രദർശിപ്പിക്കുന്നു."</string>
+    <string name="special_access" msgid="3513811566600299998">"പ്രത്യേക ആപ്പ് ആക്‌സസ്"</string>
 </resources>
