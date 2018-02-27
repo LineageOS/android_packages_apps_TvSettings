@@ -88,9 +88,7 @@ public class ConnectRejectedByApState implements State {
 
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String title = getString(
-                    R.string.title_wifi_could_not_connect_ap_reject,
-                    mUserChoiceInfo.getWifiConfiguration().getPrintableSsid());
+            String title = getString(R.string.title_wifi_could_not_connect_ap_reject);
             return new GuidanceStylist.Guidance(title, null, null, null);
         }
 

@@ -76,10 +76,7 @@ public class GatewayState implements State {
 
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String title = getString(
-                    R.string.title_wifi_gateway,
-                    mAdvancedOptionsFlowInfo.getPrintableSsid()
-            );
+            String title = getString(R.string.title_wifi_gateway);
             return new GuidanceStylist.Guidance(
                     title,
                     getString(R.string.wifi_gateway_description),

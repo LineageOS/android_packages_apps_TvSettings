@@ -92,9 +92,7 @@ public class ConnectAuthFailureState implements State {
 
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String title = getString(
-                    R.string.title_wifi_could_not_connect_authentication_failure,
-                    mUserChoiceInfo.getWifiConfiguration().getPrintableSsid());
+            String title = getString(R.string.title_wifi_could_not_connect_authentication_failure);
             return new GuidanceStylist.Guidance(title, null, null, null);
         }
 

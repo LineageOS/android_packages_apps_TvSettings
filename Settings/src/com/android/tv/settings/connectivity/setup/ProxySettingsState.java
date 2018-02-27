@@ -78,10 +78,7 @@ public class ProxySettingsState implements State {
 
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String title = getString(
-                    R.string.title_wifi_proxy_settings,
-                    mAdvancedOptionsFlowInfo.getPrintableSsid()
-            );
+            String title = getString(R.string.title_wifi_proxy_settings);
             return new GuidanceStylist.Guidance(
                     title,
                     getString(R.string.proxy_warning_limited_support),
