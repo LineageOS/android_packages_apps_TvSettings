@@ -61,7 +61,7 @@ public class AdvancedOptionsFlowUtil {
             String portStr = flowInfo.get(AdvancedOptionsFlowInfo.PROXY_PORT);
             String exclusionList = flowInfo.get(AdvancedOptionsFlowInfo.PROXY_BYPASS);
             int port = 0;
-            int result = 0;
+            int result;
             try {
                 port = Integer.parseInt(portStr);
                 result = WifiConfigHelper.validate(host, portStr, exclusionList);
@@ -107,16 +107,15 @@ public class AdvancedOptionsFlowUtil {
             if (TextUtils.isEmpty(ipAddr)) {
                 return R.string.wifi_ip_settings_invalid_ip_address;
             }
-            Inet4Address inetAddr = null;
+            Inet4Address inetAddr;
             try {
                 inetAddr = (Inet4Address) NetworkUtils.numericToInetAddress(ipAddr);
             } catch (IllegalArgumentException | ClassCastException e) {
                 return R.string.wifi_ip_settings_invalid_ip_address;
             }
 
-            int networkPrefixLength = -1;
             try {
-                networkPrefixLength = Integer.parseInt(flowInfo.get(
+                int networkPrefixLength = Integer.parseInt(flowInfo.get(
                         AdvancedOptionsFlowInfo.NETWORK_PREFIX_LENGTH));
                 if (networkPrefixLength < 0 || networkPrefixLength > 32) {
                     return R.string.wifi_ip_settings_invalid_network_prefix_length;
@@ -130,7 +129,7 @@ public class AdvancedOptionsFlowUtil {
             if (!TextUtils.isEmpty(gateway)) {
                 try {
                     staticConfig.gateway =
-                            (Inet4Address) NetworkUtils.numericToInetAddress(gateway);
+                            NetworkUtils.numericToInetAddress(gateway);
                 } catch (IllegalArgumentException | ClassCastException e) {
                     return R.string.wifi_ip_settings_invalid_gateway;
                 }
@@ -140,7 +139,7 @@ public class AdvancedOptionsFlowUtil {
             if (!TextUtils.isEmpty(dns1)) {
                 try {
                     staticConfig.dnsServers.add(
-                            (Inet4Address) NetworkUtils.numericToInetAddress(dns1));
+                            NetworkUtils.numericToInetAddress(dns1));
                 } catch (IllegalArgumentException | ClassCastException e) {
                     return R.string.wifi_ip_settings_invalid_dns;
                 }
@@ -150,7 +149,7 @@ public class AdvancedOptionsFlowUtil {
             if (!TextUtils.isEmpty(dns2)) {
                 try {
                     staticConfig.dnsServers.add(
-                            (Inet4Address) NetworkUtils.numericToInetAddress(dns2));
+                            NetworkUtils.numericToInetAddress(dns2));
                 } catch (IllegalArgumentException | ClassCastException e) {
                     return R.string.wifi_ip_settings_invalid_dns;
                 }

@@ -177,12 +177,7 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
 
     private final Handler mAutoExitHandler = new Handler();
 
-    private final Runnable mAutoExitRunnable = new Runnable() {
-        @Override
-        public void run() {
-            finish();
-        }
-    };
+    private final Runnable mAutoExitRunnable = this::finish;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -330,7 +325,7 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
     }
 
     // Events related to a device HW key
-    protected void onHwKeyEvent(boolean keyDown) {
+    private void onHwKeyEvent(boolean keyDown) {
         if (!mHwKeyDown) {
             // HW key was in UP state before
             if (keyDown) {
@@ -398,7 +393,7 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
            }
         }
 
-        TransitionManager.beginDelayedTransition((ViewGroup) findViewById(R.id.content_frame));
+        TransitionManager.beginDelayedTransition(findViewById(R.id.content_frame));
 
         rearrangeViews();
     }
@@ -575,9 +570,7 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
         }
 
         mBluetoothDevices.clear();
-        for (BluetoothDevice device : mBluetoothPairer.getAvailableDevices()) {
-            mBluetoothDevices.add(device);
-        }
+        mBluetoothDevices.addAll(mBluetoothPairer.getAvailableDevices());
 
         cancelTimeout();
 

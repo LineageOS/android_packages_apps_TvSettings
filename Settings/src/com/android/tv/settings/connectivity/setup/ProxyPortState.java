@@ -72,10 +72,7 @@ public class ProxyPortState implements State {
 
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String title = getString(
-                    R.string.title_wifi_proxy_port,
-                    mAdvancedOptionsFlowInfo.getPrintableSsid()
-            );
+            String title = getString(R.string.title_wifi_proxy_port);
             return new GuidanceStylist.Guidance(
                     title,
                     getString(R.string.proxy_port_description),

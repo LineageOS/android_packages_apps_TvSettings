@@ -21,6 +21,7 @@ import android.content.Context;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.support.v17.leanback.widget.GuidedActionsStylist;
@@ -37,7 +38,6 @@ import com.android.tv.settings.connectivity.util.StateMachine;
 import com.android.tv.settings.connectivity.util.WifiSecurityUtil;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -106,7 +106,7 @@ public class SelectWifiState implements State {
                 lastWifiTitle = getActions().get(lastSelectedActionPosition).getTitle();
             }
             List<WifiGuidedAction> newWifiActionList = getNetworks();
-            List<GuidedAction> list = new ArrayList<GuidedAction>(newWifiActionList);
+            List<GuidedAction> list = new ArrayList<>(newWifiActionList);
             setActions(list);
             moveToPosition(lastWifiTitle);
         }
@@ -121,6 +121,7 @@ public class SelectWifiState implements State {
             }
         }
 
+        @NonNull
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
             return new GuidanceStylist.Guidance(
@@ -147,7 +148,8 @@ public class SelectWifiState implements State {
         }
 
         @Override
-        public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
+        public void onCreateActions(@NonNull List<GuidedAction> actions,
+                Bundle savedInstanceState) {
             actions.addAll(getNetworks());
         }
 
@@ -159,7 +161,7 @@ public class SelectWifiState implements State {
                     mNetworkListInfo.getWifiTracker().getManager().getScanResults();
             final HashMap<Pair<String, Integer>, ScanResult> consolidatedScanResults =
                     new HashMap<>();
-            if (results == null) return new ArrayList<WifiGuidedAction>();
+            if (results == null) return new ArrayList<>();
             for (ScanResult result : results) {
                 if (TextUtils.isEmpty(result.SSID)) {
                     continue;
@@ -185,7 +187,7 @@ public class SelectWifiState implements State {
                         .build());
             }
 
-            Collections.sort(actions, mWifiComparator);
+            actions.sort(mWifiComparator);
 
             if (mNetworkListInfo.isShowSkipNetwork()) {
                 actions.add(new WifiGuidedAction.Builder(context)
@@ -206,7 +208,7 @@ public class SelectWifiState implements State {
         }
 
         @Override
-        public void onViewCreated(View view, Bundle savedInstanceState) {
+        public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
             CharSequence title = mUserChoiceInfo.getPageSummary(UserChoiceInfo.SELECT_WIFI);
             if (title != null) {

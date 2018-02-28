@@ -40,7 +40,6 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.device.apps.AppManagementFragment;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -167,12 +166,7 @@ public class LocationFragment extends SettingsPreferenceFragment implements
 
     private void addPreferencesSorted(List<Preference> prefs, PreferenceGroup container) {
         // If there's some items to display, sort the items and add them to the container.
-        Collections.sort(prefs, new Comparator<Preference>() {
-            @Override
-            public int compare(Preference lhs, Preference rhs) {
-                return lhs.getTitle().toString().compareTo(rhs.getTitle().toString());
-            }
-        });
+        prefs.sort(Comparator.comparing(lhs -> lhs.getTitle().toString()));
         for (Preference entry : prefs) {
             container.addPreference(entry);
         }

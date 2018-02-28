@@ -27,6 +27,7 @@ import android.annotation.CallSuper;
 import android.arch.lifecycle.LifecycleOwner;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v17.preference.LeanbackPreferenceFragment;
 import android.support.v7.preference.PreferenceScreen;
 import android.view.Menu;
@@ -48,6 +49,7 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
     private final VisibilityLoggerMixin mVisibilityLoggerMixin;
     protected MetricsFeatureProvider mMetricsFeatureProvider;
 
+    @NonNull
     public Lifecycle getLifecycle() {
         return mLifecycle;
     }

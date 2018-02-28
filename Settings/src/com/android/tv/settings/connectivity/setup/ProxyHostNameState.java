@@ -19,6 +19,7 @@ package com.android.tv.settings.connectivity.setup;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
 import android.support.v17.leanback.widget.GuidedActionsStylist;
@@ -70,12 +71,10 @@ public class ProxyHostNameState implements State {
         private AdvancedOptionsFlowInfo mAdvancedOptionsFlowInfo;
         private GuidedAction mAction;
 
+        @NonNull
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String title = getString(
-                    R.string.title_wifi_proxy_hostname,
-                    mAdvancedOptionsFlowInfo.getPrintableSsid()
-            );
+            String title = getString(R.string.title_wifi_proxy_hostname);
             return new GuidanceStylist.Guidance(
                     title,
                     getString(R.string.proxy_hostname_description),
@@ -105,7 +104,8 @@ public class ProxyHostNameState implements State {
         }
 
         @Override
-        public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
+        public void onCreateActions(@NonNull List<GuidedAction> actions,
+                Bundle savedInstanceState) {
             String title = getString(R.string.proxy_hostname_hint);
             if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.PROXY_HOSTNAME)) {
                 title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.PROXY_HOSTNAME);
@@ -123,14 +123,14 @@ public class ProxyHostNameState implements State {
         }
 
         @Override
-        public void onViewCreated(View view, Bundle savedInstanceState) {
+        public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
             openInEditMode(mAction);
         }
 
         @Override
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
-                mAdvancedOptionsFlowInfo.put(mAdvancedOptionsFlowInfo.PROXY_HOSTNAME,
+                mAdvancedOptionsFlowInfo.put(AdvancedOptionsFlowInfo.PROXY_HOSTNAME,
                         action.getEditTitle());
                 mStateMachine.getListener().onComplete(StateMachine.CONTINUE);
             }
