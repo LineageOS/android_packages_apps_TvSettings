@@ -216,6 +216,8 @@
     <string name="system_language">Language</string>
     <!-- Preference which manages input method settings. [CHAR LIMIT=50] -->
     <string name="system_keyboard">Keyboard</string>
+    <!-- Preference which manages autofill Service. [CHAR LIMIT=50] -->
+    <string name="system_autofill_service">Autofill Service</string>
     <!-- Preference which manages home screen settings. [CHAR LIMIT=50] -->
     <string name="system_home">Home screen</string>
     <!-- Preference which manages search and google now settings. [CHAR LIMIT=50] -->
@@ -1152,6 +1154,11 @@
     <string name="title_configure">Configure</string>
     <!-- Description for configure current keyboard [CHAR LIMIT=100] -->
     <string name="desc_configure_keyboard">Keyboard options</string>
+
+    <!-- Title for Current Autofill Service [CHAR LIMIT=80] -->
+    <string name="title_current_autofill_service">Current Autofill Service</string>
+    <!-- Option to disable Autofill Service [CHAR LIMIT=80] -->
+    <string name="autofill_disable">Disable</string>
 
     <!-- String shown when computing the total size of an application's cache or data files. [CHAR LIMIT=30] -->
     <string name="computing_size">Computing\u2026</string>

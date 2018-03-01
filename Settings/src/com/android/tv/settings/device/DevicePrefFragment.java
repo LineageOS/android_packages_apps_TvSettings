@@ -23,17 +23,23 @@ import android.content.res.Resources;
 import android.media.tv.TvInputInfo;
 import android.media.tv.TvInputManager;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.support.annotation.Keep;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.preference.Preference;
 import android.util.Log;
 
+import com.android.settingslib.applications.DefaultAppInfo;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
+import com.android.settingslib.wrapper.PackageManagerWrapper;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.app.AutofillHelper;
 import com.android.tv.settings.device.sound.SoundFragment;
 import com.android.tv.settings.system.SecurityFragment;
+
+import java.util.List;
 
 /**
  * The "Device Preferences" screen in TV settings.
@@ -55,9 +61,12 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
     private static final String KEY_HOME_SETTINGS = "home";
     private static final String KEY_SPEECH_SETTINGS = "speech";
     private static final String KEY_SEARCH_SETTINGS = "search";
+    @VisibleForTesting
+    static final String KEY_AUTOFILL = "autofill";
 
     private Preference mSoundsPref;
     private boolean mInputSettingNeeded;
+    private PackageManagerWrapper mPm;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -88,6 +97,12 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
     }
 
     @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mPm = new PackageManagerWrapper(context.getPackageManager());
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
 
@@ -95,6 +110,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
         updateSounds();
         updateGoogleSettings();
         updateCastSettings();
+        updateAutofillSettings();
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_USAGE));
@@ -184,4 +200,26 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
             }
         }
     }
+
+    @VisibleForTesting
+    void updateAutofillSettings() {
+        final Preference autofillPref = findPreference(KEY_AUTOFILL);
+        List<DefaultAppInfo> candidates = AutofillHelper.getAutofillCandidates(getContext(),
+                mPm, UserHandle.myUserId());
+        // Hide preference if there is no service on device
+        if (candidates.size() == 0) {
+            autofillPref.setVisible(false);
+            return;
+        }
+        autofillPref.setVisible(true);
+        DefaultAppInfo appInfo = AutofillHelper.getCurrentAutofill(getContext(), candidates);
+        if (appInfo != null) {
+            autofillPref.setSummary(appInfo.loadLabel());
+            autofillPref.setIcon(appInfo.loadIcon());
+        } else {
+            autofillPref.setSummary(null);
+            autofillPref.setIcon(null);
+        }
+    }
+
 }
