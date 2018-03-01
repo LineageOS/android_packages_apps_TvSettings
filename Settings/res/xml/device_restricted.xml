@@ -44,22 +44,10 @@
         <intent android:action="com.google.android.tvlauncher.SETTINGS"/>
     </Preference>
     <Preference
-        android:icon="@drawable/ic_search"
-        android:key="search"
-        android:title="@string/system_search">
-        <intent android:action="android.search.action.SEARCH_SETTINGS"/>
-    </Preference>
-    <Preference
         android:key="google_settings"
         android:title="@string/system_google">
         <intent
             android:action="com.google.assistant.GOOGLE_SETTINGS"/>
-    </Preference>
-    <Preference
-        android:icon="@drawable/ic_mic"
-        android:key="speech"
-        android:title="@string/system_speech">
-        <intent android:action="com.google.android.katniss.setting.SPEECH"/>
     </Preference>
     <Preference
         android:fragment="com.android.tv.settings.accessibility.AccessibilityFragment"
