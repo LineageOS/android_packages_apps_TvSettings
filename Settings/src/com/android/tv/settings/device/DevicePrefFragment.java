@@ -189,6 +189,9 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
     @VisibleForTesting
     void updateAutofillSettings() {
         final Preference autofillPref = findPreference(KEY_AUTOFILL);
+        if (autofillPref == null) {
+            return;
+        }
         List<DefaultAppInfo> candidates = AutofillHelper.getAutofillCandidates(getContext(),
                 mPm, UserHandle.myUserId());
         // Hide preference if there is no service on device
@@ -206,5 +209,4 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
             autofillPref.setIcon(null);
         }
     }
-
 }

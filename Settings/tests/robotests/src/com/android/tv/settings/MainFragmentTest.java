@@ -21,7 +21,10 @@ import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+import static org.robolectric.shadow.api.Shadow.extract;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.support.v7.preference.Preference;
 import android.telephony.SignalStrength;
 
@@ -35,6 +38,7 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowAccountManager;
 
 @RunWith(TvSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowUserManager.class})
@@ -64,7 +68,7 @@ public class MainFragmentTest {
 
         mMainFragment.updateWifi();
 
-        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_off_white);
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_not_connected);
     }
 
     @Test
@@ -81,7 +85,7 @@ public class MainFragmentTest {
 
         mMainFragment.updateWifi();
 
-        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_off_white);
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_not_connected);
     }
 
     @Test
@@ -188,5 +192,27 @@ public class MainFragmentTest {
         mMainFragment.updateWifi();
 
         verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_cell_signal_4_white);
+    }
+
+    @Test
+    public void testUpdateAccountIcon_hasAccount() {
+        final Preference accountsPref = mock(Preference.class);
+        doReturn(accountsPref).when(mMainFragment)
+                    .findPreference(MainFragment.KEY_ACCOUNTS_AND_SIGN_IN);
+        doReturn(true).when(accountsPref).isVisible();
+        ShadowAccountManager am = extract(AccountManager.get(RuntimeEnvironment.application));
+        am.addAccount(new Account("test", "test"));
+        mMainFragment.updateAccountIcon();
+        verify(accountsPref, atLeastOnce()).setIcon(R.drawable.ic_accounts_and_sign_in);
+    }
+
+    @Test
+    public void testUpdateAccountIcon_noAccount() {
+        final Preference accountsPref = mock(Preference.class);
+        doReturn(accountsPref).when(mMainFragment)
+                    .findPreference(MainFragment.KEY_ACCOUNTS_AND_SIGN_IN);
+        doReturn(true).when(accountsPref).isVisible();
+        mMainFragment.updateAccountIcon();
+        verify(accountsPref, atLeastOnce()).setIcon(R.drawable.ic_add_an_account);
     }
 }
