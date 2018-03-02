@@ -21,28 +21,19 @@
     <string name="launcher_network_app_name" msgid="5107150533945388559">"Sarea"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"Profil murriztua"</string>
     <string name="header_category_suggestions" msgid="6732367439328586933">"Iradokizunak"</string>
-    <!-- no translation found for header_category_quick_settings (6626141045575946920) -->
-    <skip />
-    <!-- no translation found for header_category_general_settings (1208946854116876918) -->
-    <skip />
+    <string name="header_category_quick_settings" msgid="6626141045575946920">"Ezarpen bizkorrak"</string>
+    <string name="header_category_general_settings" msgid="1208946854116876918">"Ezarpen orokorrak"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Gailua"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Hobespenak"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Urruneko kontrolagailua eta osagarriak"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"Pertsonala"</string>
-    <!-- no translation found for connect_to_network (2209125715907353369) -->
-    <skip />
-    <!-- no translation found for add_an_account (1123478843971990449) -->
-    <skip />
-    <!-- no translation found for accounts_category_title (594314526488667838) -->
-    <skip />
-    <!-- no translation found for connectivity_network_category_title (6779497231311329071) -->
-    <skip />
-    <!-- no translation found for applications_category_title (3552921143969612110) -->
-    <skip />
-    <!-- no translation found for device_pref_category_title (5264163316572335776) -->
-    <skip />
-    <!-- no translation found for remotes_and_accessories_title_category (4036586169100784602) -->
-    <skip />
+    <string name="connect_to_network" msgid="2209125715907353369">"Konektatu sarera"</string>
+    <string name="add_an_account" msgid="1123478843971990449">"Gehitu kontu bat"</string>
+    <string name="accounts_category_title" msgid="594314526488667838">"Kontuak eta saio-hasiera"</string>
+    <string name="connectivity_network_category_title" msgid="6779497231311329071">"Sarea eta Internet"</string>
+    <string name="applications_category_title" msgid="3552921143969612110">"Aplikazioak"</string>
+    <string name="device_pref_category_title" msgid="5264163316572335776">"Gailuaren hobespenak"</string>
+    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"Urruneko kontrolagailuak eta osagarriak"</string>
     <string name="add_account" msgid="4098060223200619258">"Gehitu kontua"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Kendu kontua"</string>
     <string name="account_sync" msgid="773808124331714965">"Aukeratu sinkronizatutako aplikazioak"</string>
@@ -63,21 +54,17 @@
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Bilaketa beti erabilgarri"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Utzi Google kokapen-zerbitzuei eta beste aplikazioei sareak bilatzeko ekortzen, Wi-Fi desaktibatuta egon arren"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
-    <!-- no translation found for connectivity_hint_message (1314202316675864203) -->
-    <skip />
+    <string name="connectivity_hint_message" msgid="1314202316675864203">"Konektatu sarera"</string>
     <string name="device_daydream" msgid="3354366974209179614">"Pantaila-babeslea"</string>
     <string name="device_display" msgid="101455384386372747">"Bistaratzea"</string>
     <string name="device_sound" msgid="9214182566287657481">"Soinua"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"Inguruko soinuak"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sistemaren soinuak"</string>
-    <!-- no translation found for device_apps (1971794537385509294) -->
-    <skip />
+    <string name="device_apps" msgid="1971794537385509294">"Aplikazioak"</string>
     <string name="device_storage" msgid="5536683600091277826">"Memoria"</string>
-    <!-- no translation found for device_reset (1885840356489458285) -->
-    <skip />
+    <string name="device_reset" msgid="1885840356489458285">"Berrezarri"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Babeskopiak eta leheneratzea"</string>
-    <!-- no translation found for device_factory_reset (6537106927211842545) -->
-    <skip />
+    <string name="device_factory_reset" msgid="6537106927211842545">"Berrezarri jatorrizko datuak"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrazioa"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Cacheko datuak garbitu nahi dituzu?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Aplikazio guztien cacheko datuak garbituko dira."</string>
@@ -114,6 +101,8 @@
     <string name="system_date_time" msgid="8898457978560618950">"Data eta ordua"</string>
     <string name="system_language" msgid="2337138146114609247">"Hizkuntza"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"Teklatua"</string>
+    <!-- no translation found for system_autofill_service (3867736719921644747) -->
+    <skip />
     <string name="system_home" msgid="2858989138172296012">"Hasierako pantaila"</string>
     <string name="system_search" msgid="2837264654143247611">"Bilatu"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -536,6 +525,10 @@
     <string name="title_current_keyboard" msgid="4259032357469819835">"Uneko teklatua"</string>
     <string name="title_configure" msgid="6929522003149212388">"Konfiguratu"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"Teklatuaren aukerak"</string>
+    <!-- no translation found for title_current_autofill_service (6055852915343152350) -->
+    <skip />
+    <!-- no translation found for autofill_disable (539635915296078432) -->
+    <skip />
     <string name="computing_size" msgid="2955133568424704042">"Kalkulatzen…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"Hautatu Wi-Fi sarea"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Aldatu izena"</string>
