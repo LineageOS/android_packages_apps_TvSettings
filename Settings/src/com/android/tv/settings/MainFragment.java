@@ -16,6 +16,7 @@
 
 package com.android.tv.settings;
 
+import android.accounts.AccountManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -45,7 +46,8 @@ public class MainFragment extends SettingsPreferenceFragment implements
     private static final String TAG = "MainFragment";
 
     private static final String KEY_SUGGESTIONS_LIST = "suggestions";
-    private static final String KEY_ACCOUNTS_AND_SIGN_IN = "accounts_and_sign_in";
+    @VisibleForTesting
+    static final String KEY_ACCOUNTS_AND_SIGN_IN = "accounts_and_sign_in";
     private static final String KEY_APPLICATIONS = "applications";
     @VisibleForTesting
     static final String KEY_NETWORK = "network";
@@ -139,7 +141,7 @@ public class MainFragment extends SettingsPreferenceFragment implements
                     break;
             }
         } else {
-            networkPref.setIcon(R.drawable.ic_wifi_signal_off_white);
+            networkPref.setIcon(R.drawable.ic_wifi_not_connected);
         }
     }
 
@@ -222,10 +224,24 @@ public class MainFragment extends SettingsPreferenceFragment implements
     @Override
     public void onResume() {
         super.onResume();
+        updateAccountIcon();
     }
 
     private boolean isRestricted() {
         return SecurityFragment.isRestrictedProfileInEffect(getContext());
+    }
+
+    @VisibleForTesting
+    void updateAccountIcon() {
+        final Preference accountsPref = findPreference(KEY_ACCOUNTS_AND_SIGN_IN);
+        if (accountsPref != null && accountsPref.isVisible()) {
+            final AccountManager am = AccountManager.get(getContext());
+            if (am.getAccounts().length > 0) {
+                accountsPref.setIcon(R.drawable.ic_accounts_and_sign_in);
+            } else {
+                accountsPref.setIcon(R.drawable.ic_add_an_account);
+            }
+        }
     }
 
     @Override
