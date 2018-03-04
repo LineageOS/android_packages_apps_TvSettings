@@ -210,5 +210,4 @@ public class DevicePrefFragmentTest {
         verify(autofillPref, never()).setVisible(false);
         verify(autofillPref, atLeastOnce()).setSummary(null);
     }
-
 }

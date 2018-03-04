@@ -50,8 +50,6 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
 
     @VisibleForTesting
     static final String KEY_DEVELOPER = "developer";
-    private static final String KEY_LOCATION = "location";
-    private static final String KEY_SECURITY = "security";
     private static final String KEY_USAGE = "usageAndDiag";
     private static final String KEY_INPUTS = "inputs";
     private static final String KEY_SOUNDS = "sound_effects";
@@ -59,8 +57,6 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
     static final String KEY_CAST_SETTINGS = "cast";
     private static final String KEY_GOOGLE_SETTINGS = "google_settings";
     private static final String KEY_HOME_SETTINGS = "home";
-    private static final String KEY_SPEECH_SETTINGS = "speech";
-    private static final String KEY_SEARCH_SETTINGS = "search";
     @VisibleForTesting
     static final String KEY_AUTOFILL = "autofill";
 
@@ -114,8 +110,6 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_USAGE));
-        hideIfIntentUnhandled(findPreference(KEY_SPEECH_SETTINGS));
-        hideIfIntentUnhandled(findPreference(KEY_SEARCH_SETTINGS));
     }
 
     @Override
@@ -125,7 +119,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
     }
 
     private void hideIfIntentUnhandled(Preference preference) {
-        if (preference == null) {
+        if (preference == null || !preference.isVisible()) {
             return;
         }
         preference.setVisible(
@@ -168,15 +162,6 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
                 googleSettingsPref.setTitle(
                         info.activityInfo.loadLabel(getContext().getPackageManager()));
             }
-
-            final Preference speechPref = findPreference(KEY_SPEECH_SETTINGS);
-            if (speechPref != null) {
-                speechPref.setVisible(info == null);
-            }
-            final Preference searchPref = findPreference(KEY_SEARCH_SETTINGS);
-            if (searchPref != null) {
-                searchPref.setVisible(info == null);
-            }
         }
     }
 
@@ -204,6 +189,9 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
     @VisibleForTesting
     void updateAutofillSettings() {
         final Preference autofillPref = findPreference(KEY_AUTOFILL);
+        if (autofillPref == null) {
+            return;
+        }
         List<DefaultAppInfo> candidates = AutofillHelper.getAutofillCandidates(getContext(),
                 mPm, UserHandle.myUserId());
         // Hide preference if there is no service on device
@@ -221,5 +209,4 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
             autofillPref.setIcon(null);
         }
     }
-
 }
