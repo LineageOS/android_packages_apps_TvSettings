@@ -29,6 +29,7 @@ import android.support.annotation.VisibleForTesting;
 import android.support.v7.preference.Preference;
 import android.util.Log;
 
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.applications.DefaultAppInfo;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.settingslib.wrapper.PackageManagerWrapper;
@@ -114,8 +115,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        // TODO(70572789): Finalize metrics categories.
-        return 0;
+        return MetricsEvent.SETTINGS_TV_DEVICE_CATEGORY;
     }
 
     private void hideIfIntentUnhandled(Preference preference) {
