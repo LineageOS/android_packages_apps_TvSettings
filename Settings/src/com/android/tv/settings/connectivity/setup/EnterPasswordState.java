@@ -147,7 +147,7 @@ public class EnterPasswordState implements State {
             CharSequence prevPassword = mUserChoiceInfo.getPageSummary(UserChoiceInfo.PASSWORD);
             boolean isPasswordHidden = mUserChoiceInfo.isPasswordHidden();
             actions.add(new GuidedAction.Builder(context)
-                    .editTitle(prevPassword == null ? "" : prevPassword)
+                    .title(prevPassword == null ? "" : prevPassword)
                     .editInputType(InputType.TYPE_CLASS_TEXT
                             | (isPasswordHidden
                             ? InputType.TYPE_TEXT_VARIATION_PASSWORD
@@ -160,9 +160,9 @@ public class EnterPasswordState implements State {
         @Override
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
-                String password = action.getEditTitle().toString();
+                String password = action.getTitle().toString();
                 if (password.length() >= WEP_MIN_LENGTH) {
-                    mUserChoiceInfo.put(UserChoiceInfo.PASSWORD, action.getEditTitle().toString());
+                    mUserChoiceInfo.put(UserChoiceInfo.PASSWORD, action.getTitle().toString());
                     mUserChoiceInfo.setPasswordHidden(mCheckBox.isChecked());
                     setWifiConfigurationPassword(password);
                     mStateMachine.getListener().onComplete(StateMachine.OPTIONS_OR_CONNECT);

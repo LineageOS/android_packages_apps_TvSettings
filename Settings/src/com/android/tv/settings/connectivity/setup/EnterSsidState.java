@@ -115,7 +115,7 @@ public class EnterSsidState implements State {
             CharSequence prevSsid = mUserChoiceInfo.getPageSummary(UserChoiceInfo.SSID);
             mAction = new GuidedAction.Builder(context)
                     .editable(true)
-                    .editTitle(prevSsid == null ? "" : prevSsid)
+                    .title(prevSsid == null ? "" : prevSsid)
                     .build();
             actions.add(mAction);
         }
@@ -127,8 +127,8 @@ public class EnterSsidState implements State {
 
         @Override
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
-            mUserChoiceInfo.put(UserChoiceInfo.SSID, action.getEditTitle().toString());
-            CharSequence ssid = action.getEditTitle();
+            mUserChoiceInfo.put(UserChoiceInfo.SSID, action.getTitle().toString());
+            CharSequence ssid = action.getTitle();
             if (!TextUtils.equals(
                     mUserChoiceInfo.getWifiConfiguration().getPrintableSsid(), ssid)) {
                 mUserChoiceInfo.removePageSummary(UserChoiceInfo.PASSWORD);

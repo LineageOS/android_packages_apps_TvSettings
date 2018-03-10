@@ -119,7 +119,7 @@ public class GatewayState implements State {
 
             Context context = getActivity();
             mAction = new GuidedAction.Builder(context)
-                    .editTitle(title)
+                    .title(title)
                     .editable(true)
                     .id(GuidedAction.ACTION_ID_CONTINUE)
                     .build();
@@ -135,7 +135,7 @@ public class GatewayState implements State {
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                 mAdvancedOptionsFlowInfo.put(AdvancedOptionsFlowInfo.GATEWAY,
-                        action.getEditTitle());
+                        action.getTitle());
                 mStateMachine.getListener().onComplete(StateMachine.CONTINUE);
             }
             return action.getId();
