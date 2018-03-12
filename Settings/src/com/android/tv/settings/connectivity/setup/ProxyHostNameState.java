@@ -115,7 +115,7 @@ public class ProxyHostNameState implements State {
 
             Context context = getActivity();
             mAction = new GuidedAction.Builder(context)
-                    .editTitle(title)
+                    .title(title)
                     .editable(true)
                     .id(GuidedAction.ACTION_ID_CONTINUE)
                     .build();
@@ -131,7 +131,7 @@ public class ProxyHostNameState implements State {
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                 mAdvancedOptionsFlowInfo.put(AdvancedOptionsFlowInfo.PROXY_HOSTNAME,
-                        action.getEditTitle());
+                        action.getTitle());
                 mStateMachine.getListener().onComplete(StateMachine.CONTINUE);
             }
             return action.getId();
