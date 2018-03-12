@@ -117,7 +117,7 @@ public class Dns2State implements State {
 
             Context context = getActivity();
             mAction = new GuidedAction.Builder(context)
-                    .editTitle(title)
+                    .title(title)
                     .editable(true)
                     .id(GuidedAction.ACTION_ID_CONTINUE)
                     .build();
@@ -133,7 +133,7 @@ public class Dns2State implements State {
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                 mAdvancedOptionsFlowInfo.put(AdvancedOptionsFlowInfo.DNS2,
-                        action.getEditTitle());
+                        action.getTitle());
                 int ipSettingsResult = AdvancedOptionsFlowUtil.processIpSettings(
                         getActivity());
                 if (ipSettingsResult == 0) {

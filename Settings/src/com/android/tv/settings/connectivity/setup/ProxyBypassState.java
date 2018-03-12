@@ -116,7 +116,7 @@ public class ProxyBypassState implements State {
 
             Context context = getActivity();
             mAction = new GuidedAction.Builder(context)
-                    .editTitle(title)
+                    .title(title)
                     .editable(true)
                     .id(GuidedAction.ACTION_ID_CONTINUE)
                     .build();
@@ -132,7 +132,7 @@ public class ProxyBypassState implements State {
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                 mAdvancedOptionsFlowInfo.put(AdvancedOptionsFlowInfo.PROXY_BYPASS,
-                        action.getEditTitle());
+                        action.getTitle());
                 int proxySettingsResult = AdvancedOptionsFlowUtil.processProxySettings(
                         getActivity());
                 if (proxySettingsResult == 0) {
