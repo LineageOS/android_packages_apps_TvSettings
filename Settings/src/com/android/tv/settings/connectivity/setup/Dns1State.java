@@ -118,7 +118,7 @@ public class Dns1State implements State {
 
             Context context = getActivity();
             mAction = new GuidedAction.Builder(context)
-                    .editTitle(title)
+                    .title(title)
                     .editable(true)
                     .id(GuidedAction.ACTION_ID_CONTINUE)
                     .build();
@@ -134,7 +134,7 @@ public class Dns1State implements State {
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                 mAdvancedOptionsFlowInfo.put(AdvancedOptionsFlowInfo.DNS1,
-                        action.getEditTitle());
+                        action.getTitle());
                 mStateMachine.getListener().onComplete(StateMachine.CONTINUE);
             }
             return action.getId();

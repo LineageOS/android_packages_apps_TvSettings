@@ -112,7 +112,7 @@ public class ProxyPortState implements State {
 
             Context context = getActivity();
             mAction = new GuidedAction.Builder(context)
-                    .editTitle(title)
+                    .title(title)
                     .editable(true)
                     .id(GuidedAction.ACTION_ID_CONTINUE)
                     .build();
@@ -127,7 +127,7 @@ public class ProxyPortState implements State {
         @Override
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             mAdvancedOptionsFlowInfo.put(AdvancedOptionsFlowInfo.PROXY_PORT,
-                    action.getEditTitle());
+                    action.getTitle());
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                 mStateMachine.getListener().onComplete(StateMachine.CONTINUE);
             }
