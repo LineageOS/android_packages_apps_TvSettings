@@ -89,7 +89,7 @@
         android:key="usageAndDiag"
         android:title="@string/system_diagnostic">
         <intent
-            android:action="com.google.android.gsf.notouch.USAGE_AND_DIAGNOSTICS_SETTING"/>
+            android:action="com.google.android.settings.USAGE_AND_DIAGNOSTICS_SETTING"/>
     </Preference>
     <Preference
         android:fragment="com.android.tv.settings.system.SecurityFragment"

@@ -117,7 +117,7 @@ public class NetworkPrefixLengthState implements State {
 
             Context context = getActivity();
             mAction = new GuidedAction.Builder(context)
-                    .editTitle(title)
+                    .title(title)
                     .editable(true)
                     .id(GuidedAction.ACTION_ID_CONTINUE)
                     .build();
@@ -133,7 +133,7 @@ public class NetworkPrefixLengthState implements State {
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                 mAdvancedOptionsFlowInfo.put(AdvancedOptionsFlowInfo.NETWORK_PREFIX_LENGTH,
-                        action.getEditTitle());
+                        action.getTitle());
                 mStateMachine.getListener().onComplete(StateMachine.CONTINUE);
             }
             return action.getId();
