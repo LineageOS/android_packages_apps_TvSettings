@@ -92,47 +92,20 @@ public class AccountsFragment extends SettingsPreferenceFragment {
         final Context themedContext = getPreferenceManager().getContext();
 
         for (AuthenticatorDescription authDesc : authTypes) {
-            final Context targetContext;
-            try {
-                targetContext = getContext().createPackageContext(authDesc.packageName, 0);
-            } catch (PackageManager.NameNotFoundException e) {
-                Log.e(TAG, "Authenticator description with bad package name", e);
-                continue;
-            } catch (SecurityException e) {
-                Log.e(TAG, "Security exception loading package resources", e);
+            Context targetContext = getTargetContext(getContext(), authDesc);
+            if (targetContext == null) {
                 continue;
             }
 
-            // Main title text comes from the authenticator description (e.g. "Google").
-            String authTitle = null;
-            try {
-                authTitle = targetContext.getString(authDesc.labelId);
-                if (TextUtils.isEmpty(authTitle)) {
-                    authTitle = null;  // Handled later when we add the row.
-                }
-            } catch (Resources.NotFoundException e) {
-                Log.e(TAG, "Authenticator description with bad label id", e);
-            }
+            String authTitle = getAuthTitle(targetContext, authDesc);
 
-            // There exist some authenticators which aren't intended to be user-facing.
-            // If the authenticator doesn't have a title or an icon, don't present it to
-            // the user as an option.
-            if (authTitle != null || authDesc.iconId != 0) {
-                allowableAccountTypes.add(authDesc.type);
-            }
 
             Account[] accounts = am.getAccountsByType(authDesc.type);
             if (accounts == null || accounts.length == 0) {
                 continue;  // No point in continuing; there aren't any accounts to show.
             }
 
-            // Icon URI to be displayed for each account is based on the type of authenticator.
-            Drawable authImage = null;
-            try {
-                authImage = targetContext.getDrawable(authDesc.iconId);
-            } catch (Resources.NotFoundException e) {
-                Log.e(TAG, "Authenticator has bad resources", e);
-            }
+            Drawable authImage = getAuthImage(targetContext, authDesc);
 
             // Display an entry for each installed account we have.
             for (final Account account : accounts) {
@@ -171,14 +144,7 @@ public class AccountsFragment extends SettingsPreferenceFragment {
             if (isRestricted()) {
                 addAccountPref.setVisible(false);
             } else {
-                Intent i = new Intent().setComponent(new ComponentName("com.android.tv.settings",
-                        "com.android.tv.settings.accounts.AddAccountWithTypeActivity"));
-                i.putExtra(AddAccountWithTypeActivity.EXTRA_ALLOWABLE_ACCOUNT_TYPES_STRING_ARRAY,
-                        allowableAccountTypes.toArray(new String[allowableAccountTypes.size()]));
-
-                // If there are available account types, show the "add account" button.
-                addAccountPref.setVisible(!allowableAccountTypes.isEmpty());
-                addAccountPref.setIntent(i);
+                setUpAddAccountPrefIntent(addAccountPref, getContext());
             }
         }
     }
@@ -190,5 +156,71 @@ public class AccountsFragment extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return  MetricsProto.MetricsEvent.ACCOUNTS_MANAGE_ACCOUNTS;
+    }
+
+    /**
+     * Set up the intent and visibility for the given preference based on the information from
+     * AccountManager.
+     */
+    public static void setUpAddAccountPrefIntent(Preference preference, Context context) {
+        final AccountManager am = AccountManager.get(context);
+        final AuthenticatorDescription[] authTypes = am.getAuthenticatorTypes();
+        final ArrayList<String> allowableAccountTypes = new ArrayList<>(authTypes.length);
+        for (AuthenticatorDescription authDesc : authTypes) {
+            final Context targetContext = getTargetContext(context, authDesc);
+            if (targetContext == null) {
+                continue;
+            }
+            String authTitle = getAuthTitle(targetContext, authDesc);
+            if (authTitle != null || authDesc.iconId != 0) {
+                allowableAccountTypes.add(authDesc.type);
+            }
+        }
+
+        Intent i = new Intent().setComponent(new ComponentName("com.android.tv.settings",
+                "com.android.tv.settings.accounts.AddAccountWithTypeActivity"));
+        i.putExtra(AddAccountWithTypeActivity.EXTRA_ALLOWABLE_ACCOUNT_TYPES_STRING_ARRAY,
+                allowableAccountTypes.toArray(new String[allowableAccountTypes.size()]));
+
+                // If there are available account types, show the "add account" button.
+        preference.setVisible(!allowableAccountTypes.isEmpty());
+        preference.setIntent(i);
+    }
+
+    private static Context getTargetContext(Context context, AuthenticatorDescription authDesc) {
+        Context targetContext = null;
+        try {
+            targetContext = context.createPackageContext(authDesc.packageName, 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            Log.e(TAG, "Authenticator description with bad package name", e);
+        } catch (SecurityException e) {
+            Log.e(TAG, "Security exception loading package resources", e);
+        }
+        return targetContext;
+    }
+
+    private static String getAuthTitle(Context targetContext, AuthenticatorDescription authDesc) {
+        // Main title text comes from the authenticator description (e.g. "Google").
+        String authTitle = null;
+        try {
+            authTitle = targetContext.getString(authDesc.labelId);
+            if (TextUtils.isEmpty(authTitle)) {
+                authTitle = null;  // Handled later when we add the row.
+            }
+        } catch (Resources.NotFoundException e) {
+            Log.e(TAG, "Authenticator description with bad label id", e);
+        }
+        return authTitle;
+    }
+
+    private static Drawable getAuthImage(Context targetContext, AuthenticatorDescription authDesc) {
+        // Icon URI to be displayed for each account is based on the type of authenticator.
+        Drawable authImage = null;
+        try {
+            authImage = targetContext.getDrawable(authDesc.iconId);
+        } catch (Resources.NotFoundException e) {
+            Log.e(TAG, "Authenticator has bad resources", e);
+        }
+        return authImage;
     }
 }
