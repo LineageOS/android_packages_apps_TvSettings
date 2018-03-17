@@ -16,6 +16,8 @@
 
 package com.android.tv.settings;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.doReturn;
@@ -25,6 +27,8 @@ import static org.robolectric.shadow.api.Shadow.extract;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.support.v7.preference.Preference;
 import android.telephony.SignalStrength;
 
@@ -39,6 +43,9 @@ import org.mockito.Spy;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowAccountManager;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @RunWith(TvSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowUserManager.class})
@@ -68,7 +75,7 @@ public class MainFragmentTest {
 
         mMainFragment.updateWifi();
 
-        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_not_connected);
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_off_white);
     }
 
     @Test
@@ -85,7 +92,7 @@ public class MainFragmentTest {
 
         mMainFragment.updateWifi();
 
-        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_not_connected);
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_off_white);
     }
 
     @Test
@@ -116,6 +123,7 @@ public class MainFragmentTest {
         doReturn(false).when(listener).isCellConnected();
         doReturn(false).when(listener).isEthernetConnected();
         doReturn(true).when(listener).isWifiEnabledOrEnabling();
+        doReturn(true).when(listener).isWifiConnected();
         doReturn(0).when(listener).getWifiSignalStrength(anyInt());
 
         mMainFragment.updateWifi();
@@ -145,6 +153,29 @@ public class MainFragmentTest {
         mMainFragment.updateWifi();
 
         verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_4_white);
+
+        doReturn(false).when(listener).isWifiConnected();
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_not_connected);
+    }
+
+    @Test
+    public void testUpdateWifi_notConnected() {
+        final Preference networkPref = mock(Preference.class);
+        doReturn(networkPref).when(mMainFragment).findPreference(MainFragment.KEY_NETWORK);
+        final ConnectivityListener listener = mock(ConnectivityListener.class);
+        mMainFragment.mConnectivityListener = listener;
+
+        doReturn(false).when(listener).isEthernetAvailable();
+        doReturn(false).when(listener).isCellConnected();
+        doReturn(false).when(listener).isEthernetConnected();
+        doReturn(false).when(listener).isWifiEnabledOrEnabling();
+
+        mMainFragment.updateWifi();
+
+        verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_off_white);
     }
 
     @Test
@@ -195,24 +226,107 @@ public class MainFragmentTest {
     }
 
     @Test
-    public void testUpdateAccountIcon_hasAccount() {
+    public void testUpdateAccountPref_hasOneAccount() {
         final Preference accountsPref = mock(Preference.class);
         doReturn(accountsPref).when(mMainFragment)
                     .findPreference(MainFragment.KEY_ACCOUNTS_AND_SIGN_IN);
         doReturn(true).when(accountsPref).isVisible();
         ShadowAccountManager am = extract(AccountManager.get(RuntimeEnvironment.application));
         am.addAccount(new Account("test", "test"));
-        mMainFragment.updateAccountIcon();
+
+        mMainFragment.updateAccountPref();
+
         verify(accountsPref, atLeastOnce()).setIcon(R.drawable.ic_accounts_and_sign_in);
+        verify(accountsPref, atLeastOnce()).setSummary("test");
+        assertTrue(mMainFragment.mHasAccounts);
     }
 
     @Test
-    public void testUpdateAccountIcon_noAccount() {
+    public void testUpdateAccountPref_hasNoAccount() {
         final Preference accountsPref = mock(Preference.class);
         doReturn(accountsPref).when(mMainFragment)
                     .findPreference(MainFragment.KEY_ACCOUNTS_AND_SIGN_IN);
         doReturn(true).when(accountsPref).isVisible();
-        mMainFragment.updateAccountIcon();
+
+        mMainFragment.updateAccountPref();
+
         verify(accountsPref, atLeastOnce()).setIcon(R.drawable.ic_add_an_account);
+        verify(accountsPref, atLeastOnce())
+                .setSummary(R.string.accounts_category_summary_no_account);
+        assertFalse(mMainFragment.mHasAccounts);
+    }
+
+    @Test
+    public void testUpdateAccountPref_hasMoreThanOneAccount() {
+        final Preference accountsPref = mock(Preference.class);
+        doReturn(RuntimeEnvironment.application.getResources()).when(mMainFragment).getResources();
+        doReturn(accountsPref).when(mMainFragment)
+                .findPreference(MainFragment.KEY_ACCOUNTS_AND_SIGN_IN);
+        doReturn(true).when(accountsPref).isVisible();
+        ShadowAccountManager am = extract(AccountManager.get(RuntimeEnvironment.application));
+        am.addAccount(new Account("test", "test"));
+        am.addAccount(new Account("test2", "test2"));
+
+        mMainFragment.updateAccountPref();
+
+        verify(accountsPref, atLeastOnce()).setIcon(R.drawable.ic_accounts_and_sign_in);
+        String summary = RuntimeEnvironment.application.getResources()
+                .getQuantityString(R.plurals.accounts_category_summary, 2, 2);
+        verify(accountsPref, atLeastOnce()).setSummary(summary);
+        assertTrue(mMainFragment.mHasAccounts);
+    }
+
+    @Test
+    public void testUpdateAccessoryPref_hasNoAccessory() {
+        final Preference accessoryPref = mock(Preference.class);
+        doReturn(accessoryPref).when(mMainFragment)
+                .findPreference(MainFragment.KEY_ACCESSORIES);
+        mMainFragment.mBtAdapter = mock(BluetoothAdapter.class);
+        Set<BluetoothDevice> set = new HashSet<>();
+        doReturn(set).when(mMainFragment.mBtAdapter).getBondedDevices();
+
+        mMainFragment.updateAccessoryPref();
+
+        verify(accessoryPref, atLeastOnce())
+                .setSummary(R.string.remotes_and_accessories_category_summary_no_bluetooth_device);
+        assertFalse(mMainFragment.mHasBtAccessories);
+    }
+
+    @Test
+    public void testUpdateAccessoryPref_hasOneAccessory() {
+        final Preference accessoryPref = mock(Preference.class);
+        doReturn(accessoryPref).when(mMainFragment)
+                .findPreference(MainFragment.KEY_ACCESSORIES);
+        mMainFragment.mBtAdapter = mock(BluetoothAdapter.class);
+        Set<BluetoothDevice> set = new HashSet<>();
+        BluetoothDevice device = mock(BluetoothDevice.class);
+        doReturn("testDevice").when(device).getAliasName();
+        set.add(device);
+        doReturn(set).when(mMainFragment.mBtAdapter).getBondedDevices();
+
+        mMainFragment.updateAccessoryPref();
+
+        verify(accessoryPref, atLeastOnce()).setSummary("testDevice");
+        assertTrue(mMainFragment.mHasBtAccessories);
+    }
+
+    @Test
+    public void testUpdateAccessoryPref_hasMoreThanOneAccessory() {
+        final Preference accessoryPref = mock(Preference.class);
+        doReturn(RuntimeEnvironment.application.getResources()).when(mMainFragment).getResources();
+        doReturn(accessoryPref).when(mMainFragment)
+                .findPreference(MainFragment.KEY_ACCESSORIES);
+        mMainFragment.mBtAdapter = mock(BluetoothAdapter.class);
+        Set<BluetoothDevice> set = new HashSet<>();
+        set.add(mock(BluetoothDevice.class));
+        set.add(mock(BluetoothDevice.class));
+        doReturn(set).when(mMainFragment.mBtAdapter).getBondedDevices();
+
+        mMainFragment.updateAccessoryPref();
+
+        String summary = RuntimeEnvironment.application.getResources()
+                .getQuantityString(R.plurals.remotes_and_accessories_category_summary, 2, 2);
+        verify(accessoryPref, atLeastOnce()).setSummary(summary);
+        assertTrue(mMainFragment.mHasBtAccessories);
     }
 }
