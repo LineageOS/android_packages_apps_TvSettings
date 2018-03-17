@@ -57,6 +57,13 @@
     <skip />
     <!-- Title for main screen preference for accounts on device [CHAR LIMIT=50] -->
     <string name="accounts_category_title">Accounts &amp; Sign In</string>
+    <!-- Summary for main screen preference for accounts on device indicates no account is signed in[CHAR LIMIT=50] -->
+    <string name="accounts_category_summary_no_account">No accounts</string>
+    <!-- Summary for main screen preference for accounts on device indicates several accounts are signed in[CHAR LIMIT=50] -->
+    <plurals name="accounts_category_summary">
+        <item quantity="one"><xliff:g id="accounts_number">%1$d</xliff:g> account</item>
+        <item quantity="other"><xliff:g id="accounts_number">%1$d</xliff:g> accounts</item>
+    </plurals>
     <!-- Title for main screen preference for network and Internet [CHAR LIMIT=50] -->
     <string name="connectivity_network_category_title">Network &amp; Internet</string>
     <!-- Title for main screen preference for applications [CHAR LIMIT=50] -->
@@ -64,7 +71,14 @@
     <!-- Title for main screen preference for device [CHAR_LIMIT_50] -->
     <string name="device_pref_category_title">Device Preferences</string>
     <!-- Title for main screen preference for remote and accessories [CHAR_LIMIT_50] -->
-    <string name="remotes_and_accessories_title_category">Remotes &amp; Accessories</string>
+    <string name="remotes_and_accessories_category_title">Remotes &amp; Accessories</string>
+    <!-- Summary for main screen preference for remote and accessories indicates no bluetooth device is connected [CHAR LIMIT=50] -->
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device">No connected Bluetooth devices</string>
+    <!-- Summary for main screen preference for remote and accessories indicates more than one devices connected[CHAR LIMIT=50] -->
+    <plurals name="remotes_and_accessories_category_summary">
+        <item quantity="one"><xliff:g id="accessories_number">%1$d</xliff:g> accessory</item>
+        <item quantity="other"><xliff:g id="accessories_number">%1$d</xliff:g> accessories</item>
+    </plurals>
 
     <!-- Account preferences -->
     <skip />
@@ -101,6 +115,12 @@
     <string name="connectivity_wifi">Wi-Fi</string>
     <!-- Preference which manages ethernet settings. [CHAR LIMIT=50] -->
     <string name="connectivity_ethernet">Ethernet</string>
+    <!-- Summary for preference which indicates ethernet is connected. [CHAR LIMIT=50] -->
+    <string name="connectivity_summary_ethernet_connected">Ethernet connected</string>
+    <!-- Summary for preference which indicates no network is connected. [CHAR LIMIT=50] -->
+    <string name="connectivity_summary_no_network_connected">No network connected</string>
+    <!-- Summary for preference which indicates wifi is disabled. [CHAR LIMIT=50] -->
+    <string name="connectivity_summary_wifi_disabled">Wi-Fi is disabled</string>
     <!-- Title for always scan wifi. [CHAR LIMIT=50] -->
     <string name="wifi_setting_always_scan">Scanning always available</string>
     <!-- Context help for always scan wifi. [CHAR LIMIT=200] -->
@@ -108,7 +128,6 @@
     <!-- Title for enable wifi. [CHAR LIMIT=50] -->
     <string name="wifi_setting_enable_wifi">Wi-Fi</string>
     <string name="connectivity_hint_message">Connect to network</string>
-
     <!-- Device preferences -->
     <skip />
     <!-- Preference which changes screen saver settings. [CHAR LIMIT=50] -->

@@ -16,10 +16,15 @@
 
 package com.android.tv.settings;
 
+import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -32,11 +37,14 @@ import android.telephony.SignalStrength;
 
 import com.android.settingslib.suggestions.SuggestionControllerMixin;
 import com.android.settingslib.utils.IconCache;
+import com.android.tv.settings.accounts.AccountsFragment;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
 
 import java.util.List;
+import java.util.Set;
+
 
 /**
  * The fragment where all good things begin. Evil is handled elsewhere.
@@ -50,6 +58,8 @@ public class MainFragment extends SettingsPreferenceFragment implements
     static final String KEY_ACCOUNTS_AND_SIGN_IN = "accounts_and_sign_in";
     private static final String KEY_APPLICATIONS = "applications";
     @VisibleForTesting
+    static final String KEY_ACCESSORIES = "remotes_and_accessories";
+    @VisibleForTesting
     static final String KEY_NETWORK = "network";
 
     @VisibleForTesting
@@ -57,6 +67,19 @@ public class MainFragment extends SettingsPreferenceFragment implements
     private PreferenceCategory mSuggestionsList;
     private SuggestionControllerMixin mSuggestionControllerMixin;
     private IconCache mIconCache;
+    @VisibleForTesting
+    BluetoothAdapter mBtAdapter;
+    @VisibleForTesting
+    boolean mHasBtAccessories;
+    @VisibleForTesting
+    boolean mHasAccounts;
+
+    private final BroadcastReceiver mBCMReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            updateAccessoryPref();
+        }
+    };
 
     public static MainFragment newInstance() {
         return new MainFragment();
@@ -73,6 +96,7 @@ public class MainFragment extends SettingsPreferenceFragment implements
         mIconCache = new IconCache(getContext());
         mConnectivityListener =
                 new ConnectivityListener(getContext(), this::updateWifi, getLifecycle());
+        mBtAdapter = BluetoothAdapter.getDefaultAdapter();
         super.onCreate(savedInstanceState);
     }
 
@@ -120,28 +144,36 @@ public class MainFragment extends SettingsPreferenceFragment implements
             }
         } else if (mConnectivityListener.isEthernetConnected()) {
             networkPref.setIcon(R.drawable.ic_ethernet_white);
+            networkPref.setSummary(R.string.connectivity_summary_ethernet_connected);
         } else if (mConnectivityListener.isWifiEnabledOrEnabling()) {
-            final int signal = mConnectivityListener.getWifiSignalStrength(5);
-            switch (signal) {
-                case 4:
-                    networkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
-                    break;
-                case 3:
-                    networkPref.setIcon(R.drawable.ic_wifi_signal_3_white);
-                    break;
-                case 2:
-                    networkPref.setIcon(R.drawable.ic_wifi_signal_2_white);
-                    break;
-                case 1:
-                    networkPref.setIcon(R.drawable.ic_wifi_signal_1_white);
-                    break;
-                case 0:
-                default:
-                    networkPref.setIcon(R.drawable.ic_wifi_signal_0_white);
-                    break;
+            if (mConnectivityListener.isWifiConnected()) {
+                final int signal = mConnectivityListener.getWifiSignalStrength(5);
+                switch (signal) {
+                    case 4:
+                        networkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
+                        break;
+                    case 3:
+                        networkPref.setIcon(R.drawable.ic_wifi_signal_3_white);
+                        break;
+                    case 2:
+                        networkPref.setIcon(R.drawable.ic_wifi_signal_2_white);
+                        break;
+                    case 1:
+                        networkPref.setIcon(R.drawable.ic_wifi_signal_1_white);
+                        break;
+                    case 0:
+                    default:
+                        networkPref.setIcon(R.drawable.ic_wifi_signal_0_white);
+                        break;
+                }
+                networkPref.setSummary(mConnectivityListener.getSsid());
+            } else {
+                networkPref.setIcon(R.drawable.ic_wifi_not_connected);
+                networkPref.setSummary(R.string.connectivity_summary_no_network_connected);
             }
         } else {
-            networkPref.setIcon(R.drawable.ic_wifi_not_connected);
+            networkPref.setIcon(R.drawable.ic_wifi_signal_off_white);
+            networkPref.setSummary(R.string.connectivity_summary_wifi_disabled);
         }
     }
 
@@ -224,7 +256,8 @@ public class MainFragment extends SettingsPreferenceFragment implements
     @Override
     public void onResume() {
         super.onResume();
-        updateAccountIcon();
+        updateAccountPref();
+        updateAccessoryPref();
     }
 
     private boolean isRestricted() {
@@ -232,17 +265,71 @@ public class MainFragment extends SettingsPreferenceFragment implements
     }
 
     @VisibleForTesting
-    void updateAccountIcon() {
-        final Preference accountsPref = findPreference(KEY_ACCOUNTS_AND_SIGN_IN);
-        if (accountsPref != null && accountsPref.isVisible()) {
-            final AccountManager am = AccountManager.get(getContext());
-            if (am.getAccounts().length > 0) {
-                accountsPref.setIcon(R.drawable.ic_accounts_and_sign_in);
+    void updateAccessoryPref() {
+        Preference accessoryPreference = findPreference(KEY_ACCESSORIES);
+        if (mBtAdapter == null || accessoryPreference == null) {
+            return;
+        }
+
+        final Set<BluetoothDevice> bondedDevices = mBtAdapter.getBondedDevices();
+        if (bondedDevices.size() == 0) {
+            mHasBtAccessories = false;
+            accessoryPreference.setSummary(
+                    R.string.remotes_and_accessories_category_summary_no_bluetooth_device);
+        } else {
+            mHasBtAccessories = true;
+            if (bondedDevices.size() == 1) {
+                BluetoothDevice device = bondedDevices.iterator().next();
+                accessoryPreference.setSummary(device.getAliasName());
             } else {
-                accountsPref.setIcon(R.drawable.ic_add_an_account);
+                accessoryPreference.setSummary(getResources().getQuantityString(
+                        R.plurals.remotes_and_accessories_category_summary,
+                        bondedDevices.size(),
+                        bondedDevices.size()));
             }
         }
     }
+
+    @VisibleForTesting
+    void updateAccountPref() {
+        final Preference accountsPref = findPreference(KEY_ACCOUNTS_AND_SIGN_IN);
+        if (accountsPref != null && accountsPref.isVisible()) {
+            final AccountManager am = AccountManager.get(getContext());
+            Account[] accounts = am.getAccounts();
+            if (accounts.length == 0) {
+                mHasAccounts = false;
+                accountsPref.setIcon(R.drawable.ic_add_an_account);
+                accountsPref.setSummary(R.string.accounts_category_summary_no_account);
+                AccountsFragment.setUpAddAccountPrefIntent(accountsPref, getContext());
+            } else {
+                mHasAccounts = true;
+                accountsPref.setIcon(R.drawable.ic_accounts_and_sign_in);
+                if (accounts.length == 1) {
+                    accountsPref.setSummary(accounts[0].name);
+                } else {
+                    accountsPref.setSummary(getResources().getQuantityString(
+                            R.plurals.accounts_category_summary, accounts.length, accounts.length));
+                }
+            }
+        }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        IntentFilter btChangeFilter = new IntentFilter();
+        btChangeFilter.addAction(BluetoothDevice.ACTION_ACL_CONNECTED);
+        btChangeFilter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);
+        btChangeFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
+        getContext().registerReceiver(mBCMReceiver, btChangeFilter);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        getContext().unregisterReceiver(mBCMReceiver);
+    }
+
 
     @Override
     public void onAttach(Context context) {
@@ -252,5 +339,16 @@ public class MainFragment extends SettingsPreferenceFragment implements
                 "com.android.settings.intelligence.suggestions.SuggestionService");
         mSuggestionControllerMixin = new SuggestionControllerMixin(
                                             context, this, getLifecycle(), componentName);
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference.getKey().equals(KEY_ACCOUNTS_AND_SIGN_IN) && !mHasAccounts
+                || (preference.getKey().equals(KEY_ACCESSORIES) && !mHasBtAccessories)) {
+            getContext().startActivity(preference.getIntent());
+            return true;
+        } else {
+            return super.onPreferenceTreeClick(preference);
+        }
     }
 }
