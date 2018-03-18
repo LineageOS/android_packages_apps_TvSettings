@@ -304,21 +304,14 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
 
                     // Determine if this is
                     // an open or secure wifi connection.
-                    WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
                     mNetworkType = ConnectivityManager.TYPE_WIFI;
 
-                    // Find the SSID of network.
-                    String ssid = null;
-                    if (wifiInfo != null) {
-                        ssid = wifiInfo.getSSID();
-                        if (ssid != null) {
-                            ssid = WifiInfo.removeDoubleQuotes(ssid);
-                        }
-                    }
+                    String ssid = getSsid();
                     if (!TextUtils.equals(mWifiSsid, ssid)) {
                         mWifiSsid = ssid;
                     }
 
+                    WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
                     // Calculate the signal strength.
                     int signalStrength;
                     if (wifiInfo != null) {
@@ -373,5 +366,22 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
 
     public interface WifiNetworkListener {
         void onWifiListChanged();
+    }
+
+    /**
+     * Get the SSID of current connected network.
+     * @return SSID
+     */
+    public String getSsid() {
+        WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
+        // Find the SSID of network.
+        String ssid = null;
+        if (wifiInfo != null) {
+            ssid = wifiInfo.getSSID();
+            if (ssid != null) {
+                ssid = WifiInfo.removeDoubleQuotes(ssid);
+            }
+        }
+        return ssid;
     }
 }
