@@ -107,15 +107,19 @@ public class ChooseSecurityState implements State {
             Context context = getActivity();
             actions.add(new GuidedAction.Builder(context)
                     .title(R.string.wifi_security_type_none)
+                    .id(WIFI_SECURITY_TYPE_NONE)
                     .build());
             actions.add(new GuidedAction.Builder(context)
                     .title(R.string.wifi_security_type_wep)
+                    .id(WIFI_SECURITY_TYPE_WEP)
                     .build());
             actions.add(new GuidedAction.Builder(context)
                     .title(R.string.wifi_security_type_wpa)
+                    .id(WIFI_SECURITY_TYPE_WPA)
                     .build());
             actions.add(new GuidedAction.Builder(context)
                     .title(R.string.wifi_security_type_eap)
+                    .id(WIFI_SECURITY_TYPE_EAP)
                     .build());
         }
 
