@@ -34,6 +34,7 @@ import com.android.tv.settings.connectivity.setup.EnterPasswordState;
 import com.android.tv.settings.connectivity.setup.EnterSsidState;
 import com.android.tv.settings.connectivity.setup.OptionsOrConnectState;
 import com.android.tv.settings.connectivity.setup.SuccessState;
+import com.android.tv.settings.connectivity.setup.UserChoiceInfo;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
 import com.android.tv.settings.core.instrumentation.InstrumentedActivity;
@@ -71,6 +72,9 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
         setContentView(R.layout.wifi_container);
         mStateMachine = ViewModelProviders.of(this).get(StateMachine.class);
         mStateMachine.setCallback(mStateMachineCallback);
+        UserChoiceInfo userChoiceInfo = ViewModelProviders.of(this).get(UserChoiceInfo.class);
+        userChoiceInfo.getWifiConfiguration().hiddenSSID = true;
+
         mEnterSsidState = new EnterSsidState(this);
         mChooseSecurityState = new ChooseSecurityState(this);
         mEnterPasswordState = new EnterPasswordState(this);
@@ -90,6 +94,7 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
         AdvancedWifiOptionsFlow.createFlow(
                 this, true, true, null, mEnterAdvancedFlowOrRetryState,
                 mConnectState, AdvancedWifiOptionsFlow.START_DEFAULT_PAGE);
+
         /* Enter SSID */
         mStateMachine.addState(
                 mEnterSsidState,
@@ -183,7 +188,7 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
         /* Connect Auth Failure */
         mStateMachine.addState(
                 mConnectAuthFailureState,
-                StateMachine.ADD_PAGE_BASED_ON_NETWORK_CHOICE,
+                StateMachine.TRY_AGAIN,
                 mEnterAdvancedFlowOrRetryState);
         mStateMachine.addState(
                 mConnectRejectedByApState,
