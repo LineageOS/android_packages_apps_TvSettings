@@ -200,6 +200,18 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
                 StateMachine.SELECT_WIFI,
                 mFinishState);
 
+        /*Connect Auth Failure */
+        mStateMachine.addState(
+                mConnectAuthFailureState,
+                StateMachine.TRY_AGAIN,
+                mOptionsOrConnectState
+        );
+        mStateMachine.addState(
+                mConnectAuthFailureState,
+                StateMachine.SELECT_WIFI,
+                mFinishState
+        );
+
         mWifiSecurity = getIntent().getIntExtra(EXTRA_WIFI_SECURITY_NAME, 0);
         mConfiguration = WifiConfigHelper.getConfiguration(
                 this, getIntent().getStringExtra(EXTRA_WIFI_SSID), mWifiSecurity);
