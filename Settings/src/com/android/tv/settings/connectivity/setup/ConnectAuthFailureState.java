@@ -111,7 +111,7 @@ public class ConnectAuthFailureState implements State {
         public void onGuidedActionClicked(GuidedAction action) {
             if (action.getId() == ACTION_ID_TRY_AGAIN) {
                 mStateMachine.getListener()
-                        .onComplete(StateMachine.ADD_PAGE_BASED_ON_NETWORK_CHOICE);
+                        .onComplete(StateMachine.TRY_AGAIN);
             } else if (action.getId() == ACTION_ID_VIEW_AVAILABLE_NETWORK) {
                 mUserChoiceInfo.removePageSummary(UserChoiceInfo.SELECT_WIFI);
                 mUserChoiceInfo.removePageSummary(UserChoiceInfo.PASSWORD);
