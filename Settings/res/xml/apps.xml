@@ -17,21 +17,37 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   android:title="@string/applications_category_title">
+
+    <PreferenceCategory
+        android:key="recently_used_apps_category"
+        android:title="@string/apps_recently_used_category_title">
+        <!-- Placeholder for a list of recent apps -->
+    </PreferenceCategory>
+
+    <!-- See all apps button -->
     <Preference
-        android:key="Permissions"
-        android:title="@string/device_apps_permissions">
-        <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
+        android:key="see_all_apps"
+        android:title="@string/apps_see_all_apps">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.tv.settings"
+            android:targetClass="com.android.tv.settings.device.apps.AllAppsActivity">
+         </intent>
     </Preference>
-    <Preference
-        android:key="special_access"
-        android:title="@string/special_access"
-        android:fragment="com.android.tv.settings.device.apps.specialaccess.SpecialAppAccess"/>
+
     <PreferenceCategory
-        android:key="DownloadedPreferenceGroup"
-        android:title="@string/apps_downloaded"
-        android:orderingFromXml="false"/>
-    <PreferenceCategory
-        android:key="SystemPreferenceGroup"
-        android:title="@string/apps_system"
-        android:orderingFromXml="false"/>
+        android:key="permissions"
+        android:title="@string/apps_permissions_category_title">
+
+        <Preference
+            android:key="Permissions"
+            android:title="@string/device_apps_permissions">
+            <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
+        </Preference>
+        <Preference
+            android:key="special_access"
+            android:title="@string/special_access"
+            android:fragment="com.android.tv.settings.device.apps.specialaccess.SpecialAppAccess"/>
+    </PreferenceCategory>
+
 </PreferenceScreen>
