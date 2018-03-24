@@ -174,6 +174,32 @@
     <!-- Preference which sets the device's display calibration. [CHAR LIMIT=50] -->
     <string name="device_calibration">Calibration</string>
 
+    <!-- Surround sound screen -->
+    <skip />
+    <!-- Title for preference which when clicked lets the user select surround sound formats. [CHAR LIMIT=50] -->
+    <string name="surround_sound_select_formats">Select formats</string>
+    <!-- A category title for the settings related to surround sound. [CHAR LIMIT=50] -->
+    <string name="surround_sound_category_title">Surround Sound</string>
+    <!-- Name of the AC3 surround sound format that is displayed to the user [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_ac3">AC3 (Dolby Digital)</string>
+    <!-- Name of the E-AC3 surround sound format that is displayed to the user [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_e_ac3">E-AC3 (Dolby Digital Plus/DD+)</string>
+    <!-- Name of the DTS surround sound format that is displayed to the user [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_dts">DTS</string>
+    <!-- Name of the DTS-HD surround sound format that is displayed to the user [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_dts_hd">DTS-HD</string>
+    <!-- Name of the IEC61937 surround sound format that is displayed to the user [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_iec61937">IEC61937</string>
+
+    <!-- An informational message displayed in the surround sound settings, explaining to the user that the auto setting may sometimes cause issues. [CHAR LIMIT=100]-->
+    <string name="surround_sound_auto_info">Note: The Auto option may not work if your device does not report its supported formats correctly.</string>
+    <!-- Text for a radio button that if selected will cause the device to automatically select an appropriate surround sound format. [CHAR LIMIT=50] -->
+    <string name="surround_sound_auto_summary">Auto: Use the formats that your device reports supporting (recommended)</string>
+    <!-- Text for a radio button that if selected will cause the device to never use a surround sound format. [CHAR LIMIT=50] -->
+    <string name="surround_sound_none_summary">None: Never use surround sound</string>
+    <!-- Text for a radio button that if selected will allow the user to manually select surround sound formats. [CHAR LIMIT=50] -->
+    <string name="surround_sound_manual_summary">Manual: Select which formats to use</string>
+
     <!-- Title of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
     <string name="device_storage_clear_cache_title">Clear cached data?</string>
     <!-- Message of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
