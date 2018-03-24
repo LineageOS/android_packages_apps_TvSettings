@@ -30,10 +30,20 @@
     <string name="connect_to_network" msgid="2209125715907353369">"Konektatu sarera"</string>
     <string name="add_an_account" msgid="1123478843971990449">"Gehitu kontu bat"</string>
     <string name="accounts_category_title" msgid="7839427428921349418">"Kontuak eta saio-hasiera"</string>
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"Ez dago konturik"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> kontu</item>
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> kontu</item>
+    </plurals>
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"Sareak eta Internet"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"Aplikazioak"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"Gailuaren hobespenak"</string>
-    <string name="remotes_and_accessories_title_category" msgid="425985060630483305">"Urruneko kontrolagailuak eta osagarriak"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"Urruneko kontrolagailuak eta osagarriak"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"Ez dago konektatuta Bluetooth gailurik"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> osagarri</item>
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> osagarri</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"Gehitu kontua"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Kendu kontua"</string>
     <string name="account_sync" msgid="773808124331714965">"Aukeratu sinkronizatutako aplikazioak"</string>
@@ -51,6 +61,9 @@
     <string name="sync_active" msgid="6891115263481154378">"Sinkronizatzen ari da"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi konexioa"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Etherneta"</string>
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethernet bidez konektatu da"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Ez dago konektatuta sarerik"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"Desgaituta dago Wi-Fi konexioa"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Bilaketa beti erabilgarri"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Utzi Google kokapen-zerbitzuei eta beste aplikazioei sareak bilatzeko ekortzen, Wi-Fi desaktibatuta egon arren"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
@@ -434,7 +447,7 @@
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP egiaztapena"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI optimizazioa"</string>
     <string name="system_reboot_confirm" msgid="534407910866199191">"Berrabiarazi nahi duzu?"</string>
-    <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Ezarpena aldatzeko, gailua berrabiarazi behar da"</string>
+    <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Ezarpena eguneratzeko, gailua berrabiarazi behar da"</string>
     <string name="system_never_check" msgid="6666520460705041617">"Ez egiaztatu inoiz"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Egiaztatu DRM edukirako soilik"</string>
     <string name="system_always_check" msgid="1866566828098009853">"Egiaztatu beti"</string>
