@@ -30,17 +30,20 @@
     <string name="connect_to_network" msgid="2209125715907353369">"네트워크에 연결"</string>
     <string name="add_an_account" msgid="1123478843971990449">"계정 추가"</string>
     <string name="accounts_category_title" msgid="7839427428921349418">"계정 및 로그인"</string>
-    <!-- no translation found for accounts_category_summary_no_account (5739678666463033824) -->
-    <skip />
-    <!-- no translation found for accounts_category_summary (3864659911073569648) -->
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"계정 없음"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="other">계정 <xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g>개</item>
+      <item quantity="one">계정 <xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g>개</item>
+    </plurals>
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"네트워크 및 인터넷"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"앱"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"기기 환경설정"</string>
-    <!-- no translation found for remotes_and_accessories_category_title (2729050422677319645) -->
-    <skip />
-    <!-- no translation found for remotes_and_accessories_category_summary_no_bluetooth_device (3967545806275801632) -->
-    <skip />
-    <!-- no translation found for remotes_and_accessories_category_summary (2004733390509722820) -->
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"리모컨 및 액세서리"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"연결된 블루투스 기기 없음"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="other">액세서리 <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g>개</item>
+      <item quantity="one">액세서리 <xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g>개</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"계정 추가"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"계정 삭제"</string>
     <string name="account_sync" msgid="773808124331714965">"동기화된 앱 선택"</string>
@@ -58,12 +61,9 @@
     <string name="sync_active" msgid="6891115263481154378">"동기화 사용 중"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"이더넷"</string>
-    <!-- no translation found for connectivity_summary_ethernet_connected (2015335020646410586) -->
-    <skip />
-    <!-- no translation found for connectivity_summary_no_network_connected (5187378791046457432) -->
-    <skip />
-    <!-- no translation found for connectivity_summary_wifi_disabled (1086559359898954682) -->
-    <skip />
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"이더넷에 연결됨"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"네트워크에 연결되지 않음"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"Wi-Fi 사용 중지됨"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"항상 검색"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Wi-Fi가 꺼져 있을 때에도 Google의 위치 서비스 및 기타 앱이 네트워크를 검색하도록 합니다."</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>

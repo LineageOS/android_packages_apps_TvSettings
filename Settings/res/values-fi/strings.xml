@@ -30,17 +30,20 @@
     <string name="connect_to_network" msgid="2209125715907353369">"Yhdistä verkkoon"</string>
     <string name="add_an_account" msgid="1123478843971990449">"Lisää tili"</string>
     <string name="accounts_category_title" msgid="7839427428921349418">"Tilit ja sisäänkirjautuminen"</string>
-    <!-- no translation found for accounts_category_summary_no_account (5739678666463033824) -->
-    <skip />
-    <!-- no translation found for accounts_category_summary (3864659911073569648) -->
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"Ei tilejä"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> tiliä</item>
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> tili</item>
+    </plurals>
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"Verkko ja internet"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"Sovellukset"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"Laitteen asetukset"</string>
-    <!-- no translation found for remotes_and_accessories_category_title (2729050422677319645) -->
-    <skip />
-    <!-- no translation found for remotes_and_accessories_category_summary_no_bluetooth_device (3967545806275801632) -->
-    <skip />
-    <!-- no translation found for remotes_and_accessories_category_summary (2004733390509722820) -->
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"Etälaitteet ja lisävarusteet"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"Ei liitettyjä Bluetooth-laitteita"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> lisävarustetta</item>
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> lisävaruste</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"Lisää tili"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Poista tili"</string>
     <string name="account_sync" msgid="773808124331714965">"Valitse synkronoitavat sovell."</string>
@@ -58,12 +61,9 @@
     <string name="sync_active" msgid="6891115263481154378">"Synkronointi käytössä"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
-    <!-- no translation found for connectivity_summary_ethernet_connected (2015335020646410586) -->
-    <skip />
-    <!-- no translation found for connectivity_summary_no_network_connected (5187378791046457432) -->
-    <skip />
-    <!-- no translation found for connectivity_summary_wifi_disabled (1086559359898954682) -->
-    <skip />
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethernet liitetty"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Ei verkkoyhteyttä"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"Wi-Fi poistettu käytöstä"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Etsiminen aina käytössä"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Anna Googlen sijaintipalvelun ja muiden sovellusten hakea verkkoja, vaikka Wi-Fi-yhteys olisi pois käytöstä."</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
