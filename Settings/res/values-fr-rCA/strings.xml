@@ -30,10 +30,20 @@
     <string name="connect_to_network" msgid="2209125715907353369">"Connexion au réseau"</string>
     <string name="add_an_account" msgid="1123478843971990449">"Ajouter un compte"</string>
     <string name="accounts_category_title" msgid="7839427428921349418">"Comptes et connexion"</string>
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"Aucun compte"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> compte</item>
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> comptes</item>
+    </plurals>
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"Réseau et Internet"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"Applications"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"Préférences de l\'appareil"</string>
-    <string name="remotes_and_accessories_title_category" msgid="425985060630483305">"Télécommande et accessoires"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"Télécommande et accessoires"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"Aucun appareil Bluetooth connecté"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> accessoire</item>
+      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> accessoires</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"Ajouter un compte"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Supprimer le compte"</string>
     <string name="account_sync" msgid="773808124331714965">"Sélectionner applis synchro"</string>
@@ -51,6 +61,9 @@
     <string name="sync_active" msgid="6891115263481154378">"Synchronisation active"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethernet connecté"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Aucun réseau connecté"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"Le Wi-Fi est désactivé"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Recherche de réseaux toujours active"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Autoriser le service de localisation de Google et les autres applications à rechercher des réseaux, même si le Wi-Fi est désactivé"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
