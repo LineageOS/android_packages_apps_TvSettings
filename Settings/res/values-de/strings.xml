@@ -30,10 +30,20 @@
     <string name="connect_to_network" msgid="2209125715907353369">"Mit Netzwerk verbinden"</string>
     <string name="add_an_account" msgid="1123478843971990449">"Konto hinzufügen"</string>
     <string name="accounts_category_title" msgid="7839427428921349418">"Konten &amp; Anmeldung"</string>
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"Keine Konten"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> Konten</item>
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> Konto</item>
+    </plurals>
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"Netzwerk &amp; Internet"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"Apps"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"Geräteeinstellungen"</string>
-    <string name="remotes_and_accessories_title_category" msgid="425985060630483305">"Fernbedienungen &amp; Zubehör"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"Fernbedienungen &amp; Zubehör"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"Keine verbundenen Bluetooth-Geräte"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> Zubehörteile</item>
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> Zubehörteil</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"Konto hinzufügen"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Konto entfernen"</string>
     <string name="account_sync" msgid="773808124331714965">"Synchronisierte Apps auswählen"</string>
@@ -51,6 +61,9 @@
     <string name="sync_active" msgid="6891115263481154378">"Synchronisierung aktiv"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"WLAN"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethernet verbunden"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Kein Netzwerk verbunden"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"WLAN ist deaktiviert"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Erkennungsfunktion immer verfügbar"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Der Standortdienst von Google und andere Apps sollen auch bei deaktiviertem WLAN nach Netzwerken suchen"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"WLAN"</string>
@@ -677,7 +690,7 @@
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Zugelassen"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Nicht zugelassen"</string>
     <string name="usage_access" msgid="1914242907684452328">"Zugriff auf Nutzungsdaten"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"Der Zugriff auf die Nutzungsdaten ermöglicht es einer App, verschiedene Informationen zu erfassen, unter anderem, welche anderen Apps du wie oft verwendest, welchen Mobilfunkanbieter du nutzt und welche Spracheinstellungen du festgelegt hast."</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"Der Zugriff auf die Nutzungsdaten ermöglicht es einer App, verschiedene Informationen zu erfassen. Unter anderem, welche anderen Apps du wie oft verwendest, welchen Mobilfunkanbieter du nutzt und welche Spracheinstellungen du festgelegt hast."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"Optimierter Energieverbrauch"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"Energieverbrauch von Apps optimieren"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"Es müssen keine Apps optimiert werden"</string>

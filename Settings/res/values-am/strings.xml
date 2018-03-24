@@ -30,10 +30,20 @@
     <string name="connect_to_network" msgid="2209125715907353369">"ከአውታረ መረብ ጋር ይገናኙ"</string>
     <string name="add_an_account" msgid="1123478843971990449">"መለያ ያክሉ"</string>
     <string name="accounts_category_title" msgid="7839427428921349418">"መለያዎች &amp; በመለያ መግባት"</string>
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"ምንም መለያዎች የለም"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> መለያዎች</item>
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> መለያዎች</item>
+    </plurals>
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"አውታረ መረብ እና በይነመረብ"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"መተግበሪያዎች"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"የመሣሪያ ምርጫዎች"</string>
-    <string name="remotes_and_accessories_title_category" msgid="425985060630483305">"ርቀት መቆጣጠሪያዎች &amp; መለዋወጫዎች"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"ርቀት መቆጣጠሪያዎች &amp; መለዋወጫዎች"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"ምንም የተገናኙ የብሉቱዝ መሣሪያዎች የሉም"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ተጨማሪዎች</item>
+      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ተጨማሪዎች</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"መለያ ያክሉ"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"መለያ አስወግድ"</string>
     <string name="account_sync" msgid="773808124331714965">"የተመሳሰሉ መተግበሪያዎችን ይምረጡ"</string>
@@ -51,6 +61,9 @@
     <string name="sync_active" msgid="6891115263481154378">"ስምረት ገቢር ነው"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ኤተርኔት"</string>
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"ኢተርኔት ተገናኝቷል"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"ምንም አውታረመረብ አልተገናኘም"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"Wi-Fi ተሰናክሏል"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"ቅኝት ሁልጊዜ ሊገኝ ይችላል"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"የGoogle የአካባቢ አገልግሎትን እና ሌሎች መተግበሪያዎች አውታረ መረቦችን ለማግኘት እንዲቃኙ ያድርጓቸው፣ Wi-Fi ጠፍቶም ቢሆን እንኳን"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>

@@ -30,17 +30,20 @@
     <string name="connect_to_network" msgid="2209125715907353369">"連線至網絡"</string>
     <string name="add_an_account" msgid="1123478843971990449">"新增帳戶"</string>
     <string name="accounts_category_title" msgid="7839427428921349418">"帳戶和登入"</string>
-    <!-- no translation found for accounts_category_summary_no_account (5739678666463033824) -->
-    <skip />
-    <!-- no translation found for accounts_category_summary (3864659911073569648) -->
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"沒有任何帳戶"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> 個帳戶</item>
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> 個帳戶</item>
+    </plurals>
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"網絡和互聯網"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"應用程式"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"裝置偏好設定"</string>
-    <!-- no translation found for remotes_and_accessories_category_title (2729050422677319645) -->
-    <skip />
-    <!-- no translation found for remotes_and_accessories_category_summary_no_bluetooth_device (3967545806275801632) -->
-    <skip />
-    <!-- no translation found for remotes_and_accessories_category_summary (2004733390509722820) -->
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"遙控器和配件"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"沒有連接的藍牙裝置"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> 個配件</item>
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> 個配件</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"新增帳戶"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"移除帳戶"</string>
     <string name="account_sync" msgid="773808124331714965">"選擇已同步的應用程式"</string>
@@ -58,12 +61,9 @@
     <string name="sync_active" msgid="6891115263481154378">"同步啟用中"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"以太網"</string>
-    <!-- no translation found for connectivity_summary_ethernet_connected (2015335020646410586) -->
-    <skip />
-    <!-- no translation found for connectivity_summary_no_network_connected (5187378791046457432) -->
-    <skip />
-    <!-- no translation found for connectivity_summary_wifi_disabled (1086559359898954682) -->
-    <skip />
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"已連接以太網"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"沒有連接任何網絡"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"已停用 Wi-Fi"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"可隨時掃描"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"允許 Google 的位置資訊服務和其他應用程式掃描網絡 (即使 Wi-Fi 已關閉)"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
