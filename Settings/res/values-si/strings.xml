@@ -30,17 +30,20 @@
     <string name="connect_to_network" msgid="2209125715907353369">"ජාලයට සබැඳීම"</string>
     <string name="add_an_account" msgid="1123478843971990449">"ගිණුමක් එක් කරන්න"</string>
     <string name="accounts_category_title" msgid="7839427428921349418">"ගිණුම් සහ පුරන්න"</string>
-    <!-- no translation found for accounts_category_summary_no_account (5739678666463033824) -->
-    <skip />
-    <!-- no translation found for accounts_category_summary (3864659911073569648) -->
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"ගිණුම් නොමැත"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="one">ගිණුම් <xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g></item>
+      <item quantity="other">ගිණුම් <xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g></item>
+    </plurals>
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"ජාලය සහ අන්තර්ජාලය"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"යෙදුම්"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"උපාංග අභිරුචි"</string>
-    <!-- no translation found for remotes_and_accessories_category_title (2729050422677319645) -->
-    <skip />
-    <!-- no translation found for remotes_and_accessories_category_summary_no_bluetooth_device (3967545806275801632) -->
-    <skip />
-    <!-- no translation found for remotes_and_accessories_category_summary (2004733390509722820) -->
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"දුරස්ථ පාලක සහ අමතර උපාංග"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"සම්බන්ධිත බ්ලූටූත් උපාංග නොමැත"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="one">ආයිත්තම් <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g></item>
+      <item quantity="other">ආයිත්තම් <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g></item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"ගිණුම එක් කරන්න"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"ගිණුම ඉවත් කරන්න"</string>
     <string name="account_sync" msgid="773808124331714965">"සමමුහුර්ත කළ යෙදුම් තෝරන්න"</string>
@@ -58,12 +61,9 @@
     <string name="sync_active" msgid="6891115263481154378">"සමමුහුර්තය සක්‍රීයයි"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ඊතර නෙට්"</string>
-    <!-- no translation found for connectivity_summary_ethernet_connected (2015335020646410586) -->
-    <skip />
-    <!-- no translation found for connectivity_summary_no_network_connected (5187378791046457432) -->
-    <skip />
-    <!-- no translation found for connectivity_summary_wifi_disabled (1086559359898954682) -->
-    <skip />
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"ඊතර්නෙට් සම්බන්ධ කරන ලදී"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"සම්බන්ධිත ජාලයක් නොමැත"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"Wi-Fi අබලයි"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"පරිලෝකනය සැමවිට ලබාගත හැක"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Wi-Fi ක්‍රියාවිරහිත විට පවා, Google හි පිහිටීම් සේවාව සහ වෙනත් යෙදුම්වලට ජාල සඳහා ස්කෑන් කිරීමට ඉඩ දෙන්න"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"WiFi"</string>
