@@ -289,7 +289,7 @@ public class RecentAppsPreferenceControllerTest {
 
         mController.displayPreference(mScreen);
 
-        verify(mCategory).addPreference(argThat(summaryMatches("0 min. ago")));
+        verify(mCategory).addPreference(argThat(summaryMatches("0 minutes ago")));
     }
 
     private static ArgumentMatcher<Preference> summaryMatches(String expected) {
