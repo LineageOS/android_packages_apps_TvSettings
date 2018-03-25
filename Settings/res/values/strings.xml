@@ -128,6 +128,29 @@
     <!-- Title for enable wifi. [CHAR LIMIT=50] -->
     <string name="wifi_setting_enable_wifi">Wi-Fi</string>
     <string name="connectivity_hint_message">Connect to network</string>
+
+    <!-- Application preferences -->
+    <skip />
+    <!-- Title for a section that lists recently used apps [CHAR_LIMIT=50]-->
+    <string name="apps_recently_used_category_title">Recently opened apps</string>
+    <!-- An item title on the apps screen. If clicked, the user is taken to a screen listing all apps on the device. [CHAR_LIMIT=50]-->
+    <string name="apps_see_all_apps">See all apps</string>
+    <!-- Title for a section that lets users modify permissions related app settings. [CHAR_LIMIT=50]-->
+    <string name="apps_permissions_category_title">Permissions</string>
+
+    <!-- All application preferences -->
+    <skip />
+    <!-- Title of a settings screen that lists all applications on the device. [CHAR LIMIT= 50] -->
+    <string name="all_apps_title">All apps</string>
+    <!-- A settings item on the all applications screen. If clicked, it will show all other apps, including system apps (they had previously been hidden). [CHAR LIMIT= 50] -->
+    <string name="all_apps_show_system_apps">Show system apps</string>
+    <!-- Browse Header for installed apps under all apps settings screen. [CHAR LIMIT=50] -->
+    <string name="all_apps_installed">Installed apps</string>
+    <!-- Browse Header for system apps under all apps settings screen. [CHAR LIMIT=50] -->
+    <string name="all_apps_other">System apps</string>
+    <!-- Browse Header for disabled apps under all apps settings screen. [CHAR LIMIT=50] -->
+    <string name="all_apps_disabled">Disabled apps</string>
+
     <!-- Device preferences -->
     <skip />
     <!-- Preference which changes screen saver settings. [CHAR LIMIT=50] -->
@@ -153,17 +176,36 @@
     <!-- Preference which sets the device's display calibration. [CHAR LIMIT=50] -->
     <string name="device_calibration">Calibration</string>
 
+    <!-- Surround sound screen -->
+    <skip />
+    <!-- Title for preference which when clicked lets the user select surround sound formats. [CHAR LIMIT=50] -->
+    <string name="surround_sound_select_formats">Select formats</string>
+    <!-- A category title for the settings related to surround sound. [CHAR LIMIT=50] -->
+    <string name="surround_sound_category_title">Surround Sound</string>
+    <!-- Name of the AC3 surround sound format that is displayed to the user [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_ac3">AC3 (Dolby Digital)</string>
+    <!-- Name of the E-AC3 surround sound format that is displayed to the user [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_e_ac3">E-AC3 (Dolby Digital Plus/DD+)</string>
+    <!-- Name of the DTS surround sound format that is displayed to the user [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_dts">DTS</string>
+    <!-- Name of the DTS-HD surround sound format that is displayed to the user [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_dts_hd">DTS-HD</string>
+    <!-- Name of the IEC61937 surround sound format that is displayed to the user [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_iec61937">IEC61937</string>
+
+    <!-- An informational message displayed in the surround sound settings, explaining to the user that the auto setting may sometimes cause issues. [CHAR LIMIT=100]-->
+    <string name="surround_sound_auto_info">Note: The Auto option may not work if your device does not report its supported formats correctly.</string>
+    <!-- Text for a radio button that if selected will cause the device to automatically select an appropriate surround sound format. [CHAR LIMIT=50] -->
+    <string name="surround_sound_auto_summary">Auto: Use the formats that your device reports supporting (recommended)</string>
+    <!-- Text for a radio button that if selected will cause the device to never use a surround sound format. [CHAR LIMIT=50] -->
+    <string name="surround_sound_none_summary">None: Never use surround sound</string>
+    <!-- Text for a radio button that if selected will allow the user to manually select surround sound formats. [CHAR LIMIT=50] -->
+    <string name="surround_sound_manual_summary">Manual: Select which formats to use</string>
+
     <!-- Title of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
     <string name="device_storage_clear_cache_title">Clear cached data?</string>
     <!-- Message of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
     <string name="device_storage_clear_cache_message">This will clear cached data for all apps.</string>
-
-    <!-- Browse Header for downloaded apps under device settings. [CHAR LIMIT=50] -->
-    <string name="apps_downloaded">Downloaded apps</string>
-    <!-- Browse Header for all apps under device settings. [CHAR LIMIT=50] -->
-    <string name="apps_system">System apps</string>
-    <!-- Browse Header for running apps under device settings. [CHAR LIMIT=50] -->
-    <string name="apps_running">Running apps</string>
 
     <!-- Remote and Accessories -->
     <skip />

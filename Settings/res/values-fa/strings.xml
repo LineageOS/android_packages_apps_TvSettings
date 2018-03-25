@@ -30,10 +30,20 @@
     <string name="connect_to_network" msgid="2209125715907353369">"اتصال به شبکه"</string>
     <string name="add_an_account" msgid="1123478843971990449">"افزودن حساب"</string>
     <string name="accounts_category_title" msgid="7839427428921349418">"حساب‌ها و ورود به سیستم"</string>
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"هیچ حسابی وجود ندارد"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> حساب</item>
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> حساب</item>
+    </plurals>
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"شبکه و اینترنت"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"برنامه‌ها"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"تنظیمات ترجیحی دستگاه"</string>
-    <string name="remotes_and_accessories_title_category" msgid="425985060630483305">"کنترل از راه دور و لوازم جانبی"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"کنترل از راه دور و لوازم جانبی"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"دستگاه بلوتوث متصلی وجود ندارد"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> لوازم جانبی</item>
+      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> لوازم جانبی</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"افزودن حساب"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"حذف کردن حساب"</string>
     <string name="account_sync" msgid="773808124331714965">"انتخاب برنامه‌های همگام‌ شده"</string>
@@ -51,6 +61,9 @@
     <string name="sync_active" msgid="6891115263481154378">"همگام‌سازی فعال"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"اترنت"</string>
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"اترنت متصل است"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"هیچ شبکه‌ای متصل نیست"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"Wi-Fi فعال است"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"همیشه اسکن در دسترس باشد"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"به سرویس مکان و دیگر برنامه‌های Google اجازه می‌دهد حتی زمانی که Wi-Fi خاموش است، شبکه‌ها را اسکن کنند."</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>

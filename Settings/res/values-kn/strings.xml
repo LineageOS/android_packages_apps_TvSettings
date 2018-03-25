@@ -30,17 +30,20 @@
     <string name="connect_to_network" msgid="2209125715907353369">"ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಿಸಿ"</string>
     <string name="add_an_account" msgid="1123478843971990449">"ಖಾತೆಯನ್ನು ಸೇರಿಸಿ"</string>
     <string name="accounts_category_title" msgid="7839427428921349418">"ಖಾತೆಗಳು ಮತ್ತು ಸೈನ್ ಇನ್"</string>
-    <!-- no translation found for accounts_category_summary_no_account (5739678666463033824) -->
-    <skip />
-    <!-- no translation found for accounts_category_summary (3864659911073569648) -->
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"ಯಾವುದೇ ಖಾತೆಗಳಿಲ್ಲ"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> ಖಾತೆಗಳು</item>
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> ಖಾತೆಗಳು</item>
+    </plurals>
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"ನೆಟ್‌ವರ್ಕ್ ಮತ್ತು ಇಂಟರ್ನೆಟ್"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"ಸಾಧನದ ಪ್ರಾಶಸ್ತ್ಯಗಳು"</string>
-    <!-- no translation found for remotes_and_accessories_category_title (2729050422677319645) -->
-    <skip />
-    <!-- no translation found for remotes_and_accessories_category_summary_no_bluetooth_device (3967545806275801632) -->
-    <skip />
-    <!-- no translation found for remotes_and_accessories_category_summary (2004733390509722820) -->
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"ರಿಮೋಟ್‌ಗಳು ಮತ್ತು ಪರಿಕರಗಳು"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"ಸಂಪರ್ಕಗೊಂಡಿರುವ ಯಾವುದೇ ಬ್ಲೂಟೂತ್‌ ಸಾಧನಗಳಿಲ್ಲ"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ಪರಿಕರಗಳು</item>
+      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ಪರಿಕರಗಳು</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"ಖಾತೆಯನ್ನು ಸೇರಿಸಿ"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕು"</string>
     <string name="account_sync" msgid="773808124331714965">"ಸಿಂಕ್ ಆಗಿರುವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
@@ -58,12 +61,9 @@
     <string name="sync_active" msgid="6891115263481154378">"ಸಿಂಕ್ ಸಕ್ರಿಯವಾಗಿದೆ"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"ವೈ-ಫೈ"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ಇಥರ್ನೆಟ್"</string>
-    <!-- no translation found for connectivity_summary_ethernet_connected (2015335020646410586) -->
-    <skip />
-    <!-- no translation found for connectivity_summary_no_network_connected (5187378791046457432) -->
-    <skip />
-    <!-- no translation found for connectivity_summary_wifi_disabled (1086559359898954682) -->
-    <skip />
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"ಇಥರ್ನೆಟ್ ಸಂಪರ್ಕಗೊಳಿಸಲಾಗಿದೆ"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"ಯಾವುದೇ ನೆಟ್‌ವರ್ಕ್‌ ಸಂಪರ್ಕಗೊಂಡಿಲ್ಲ"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"ವೈ-ಫೈ ನಿಷ್ಕ್ರಿಯಗೊಂಡಿದೆ"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"ಸ್ಕ್ಯಾನಿಂಗ್‌ ಯಾವಾಗಲೂ ಲಭ್ಯ"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"ವೈ-ಫೈ ಆಫ್‌‌ ಆಗಿದ್ದಾಗಲೂ ಸಹ Google ನ ಸ್ಥಳ ಸೇವೆಗಳು ಮತ್ತು ಇತರ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಸ್ಕ್ಯಾನ್‌‌ ಮಾಡಲು ಅನುಮತಿಸಿ"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"ವೈ-ಫೈ"</string>
