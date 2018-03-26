@@ -238,4 +238,38 @@
         <item>always</item>
         <item>never</item>
     </string-array>
+
+    <!-- Type of EAP method -->
+    <string-array name="wifi_eap_entries" translatable="false">
+        <!-- Do not translate. -->
+        <item>PEAP</item>
+        <!-- Do not translate. -->
+        <item>TLS</item>
+        <!-- Do not translate. -->
+        <item>TTLS</item>
+        <!-- Do not translate. -->
+        <item>PWD</item>
+    </string-array>
+
+    <!-- Phase 2 options for PEAP -->
+    <string-array name="wifi_peap_phase2_entries">
+        <item>None</item>
+        <!-- Do not translate. -->
+        <item>MSCHAPV2</item>
+        <!-- Do not translate. -->
+        <item>GTC</item>
+    </string-array>
+
+    <!-- Phase 2 options for rest of EAP methods -->
+    <string-array name="wifi_phase2_entries">
+        <item>None</item>
+        <!-- Do not translate. -->
+        <item>PAP</item>
+        <!-- Do not translate. -->
+        <item>MSCHAP</item>
+        <!-- Do not translate. -->
+        <item>MSCHAPV2</item>
+        <!-- Do not translate. -->
+        <item>GTC</item>
+    </string-array>
 </resources>
