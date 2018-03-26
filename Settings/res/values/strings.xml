@@ -37,6 +37,11 @@
     <!-- Header title for general settings [CHAR LIMIT=50] -->
     <string name="header_category_general_settings">General Settings</string>
 
+    <!-- Title for main screen preference for hotwording [CHAR LIMIT=50] -->
+    <string name="hotwording_title">\"OK Google\" dectection</string>
+    <!-- Summary for main screen preference for hotwording [CHAR LIMIT=50] -->
+    <string name="hotwording_summary">Talk to Google Assistant anytime</string>
+
     <!-- Header title for device [CHAR LIMIT=50] -->
     <string name="header_category_device">Device</string>
     <!-- Header title for preferences [CHAR LIMIT=50] -->
@@ -119,8 +124,8 @@
     <string name="connectivity_summary_ethernet_connected">Ethernet connected</string>
     <!-- Summary for preference which indicates no network is connected. [CHAR LIMIT=50] -->
     <string name="connectivity_summary_no_network_connected">No network connected</string>
-    <!-- Summary for preference which indicates wifi is disabled. [CHAR LIMIT=50] -->
-    <string name="connectivity_summary_wifi_disabled">Wi-Fi is disabled</string>
+    <!-- Summary for preference which indicates wifi is turned off. [CHAR LIMIT=50] -->
+    <string name="connectivity_summary_wifi_disabled">Wi-Fi is turned off</string>
     <!-- Title for always scan wifi. [CHAR LIMIT=50] -->
     <string name="wifi_setting_always_scan">Scanning always available</string>
     <!-- Context help for always scan wifi. [CHAR LIMIT=200] -->
@@ -586,6 +591,14 @@
     <string name="proxy_exclusionlist_description">Enter a comma-separated list of excluded domains or leave blank.\nExample: <xliff:g>example.com,mycomp.test.com,localhost</xliff:g></string>
     <!-- HTTP proxy settings. The description field for the hostname. -->
     <string name="proxy_hostname_description">Enter a valid hostname.\nExample: <xliff:g>proxy.example.com</xliff:g></string>
+    <!-- Title to show when asking the user to choose EAP method [CHAR LIMIT=80] -->
+    <string name="title_wifi_eap_method">Choose EAP method for <xliff:g id="ssid">%1$s</xliff:g></string>
+    <!-- Title to show when asking the user to choose Phase2 authentication [CHAR LIMIT=80] -->
+    <string name="title_wifi_phase2_authentication">Choose phase2 authentication for <xliff:g id="ssid">%1$s</xliff:g></string>
+    <!-- Title to show when asking the user to input identity [CHAR LIMIT=80] -->
+    <string name="title_wifi_identity">Enter identity for <xliff:g id="ssid">%1$s</xliff:g></string>
+    <!-- Title to show when asking the user to input anonymous identity [CHAR LIMIT=80] -->
+    <string name="title_wifi_anonymous_identity">Enter anonymous identity for <xliff:g id="ssid">%1$s</xliff:g></string>
 
     <!-- Title used during setup to indicate the user is connected [CHAR LIMIT=100] -->
     <string name="wifi_setup_summary_title_connected">You\'re connected to <xliff:g id="ssid">%1$s</xliff:g></string>
