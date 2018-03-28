@@ -15,6 +15,7 @@
  */
 package com.android.tv.settings.device.apps;
 
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -51,13 +52,16 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
             | ApplicationsState.FLAG_SESSION_REQUEST_LEANBACK_LAUNCHER;
 
     private ApplicationsState mApplicationsState;
-    private ApplicationsState.Session mSessionOther;
-    private ApplicationsState.AppFilter mFilterOther;
     private ApplicationsState.Session mSessionInstalled;
     private ApplicationsState.AppFilter mFilterInstalled;
+    private ApplicationsState.Session mSessionDisabled;
+    private ApplicationsState.AppFilter mFilterDisabled;
+    private ApplicationsState.Session mSessionOther;
+    private ApplicationsState.AppFilter mFilterOther;
 
-    private PreferenceGroup mOtherPreferenceGroup;
     private PreferenceGroup mInstalledPreferenceGroup;
+    private PreferenceGroup mDisabledPreferenceGroup;
+    private PreferenceGroup mOtherPreferenceGroup;
     private Preference mShowOtherApps;
 
     private final Handler mHandler = new Handler();
@@ -105,14 +109,43 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
             ApplicationsState.AppFilter volumeFilter =
                     new ApplicationsState.VolumeFilter(volumeUuid);
 
-            mFilterOther =
-                    new ApplicationsState.CompoundFilter(FILTER_OTHER, volumeFilter);
             mFilterInstalled =
                     new ApplicationsState.CompoundFilter(FILTER_INSTALLED, volumeFilter);
+            mFilterDisabled =
+                    new ApplicationsState.CompoundFilter(FILTER_DISABLED, volumeFilter);
+            mFilterOther =
+                    new ApplicationsState.CompoundFilter(FILTER_OTHER, volumeFilter);
         } else {
-            mFilterOther = FILTER_OTHER;
             mFilterInstalled = FILTER_INSTALLED;
+            mFilterDisabled = FILTER_DISABLED;
+            mFilterOther = FILTER_OTHER;
         }
+
+        mSessionInstalled = mApplicationsState.newSession(new RowUpdateCallbacks() {
+            @Override
+            protected void doRebuild() {
+                rebuildInstalled();
+            }
+
+            @Override
+            public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> apps) {
+                updateAppList(mInstalledPreferenceGroup, apps);
+            }
+        }, getLifecycle());
+        mSessionInstalled.setSessionFlags(SESSION_FLAGS);
+
+        mSessionDisabled = mApplicationsState.newSession(new RowUpdateCallbacks() {
+            @Override
+            protected void doRebuild() {
+                rebuildDisabled();
+            }
+
+            @Override
+            public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> apps) {
+                updateAppList(mDisabledPreferenceGroup, apps);
+            }
+        }, getLifecycle());
+        mSessionDisabled.setSessionFlags(SESSION_FLAGS);
 
         mSessionOther = mApplicationsState.newSession(new RowUpdateCallbacks() {
             @Override
@@ -129,25 +162,16 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
         }, getLifecycle());
         mSessionOther.setSessionFlags(SESSION_FLAGS);
 
-        mSessionInstalled = mApplicationsState.newSession(new RowUpdateCallbacks() {
-            @Override
-            protected void doRebuild() {
-                rebuildInstalled();
-            }
 
-            @Override
-            public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> apps) {
-                updateAppList(mInstalledPreferenceGroup, apps);
-            }
-        }, getLifecycle());
-        mSessionInstalled.setSessionFlags(SESSION_FLAGS);
         rebuildInstalled();
+        rebuildDisabled();
     }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.all_apps, null);
         mInstalledPreferenceGroup = (PreferenceGroup) findPreference("InstalledPreferenceGroup");
+        mDisabledPreferenceGroup = (PreferenceGroup) findPreference("DisabledPreferenceGroup");
         mOtherPreferenceGroup = (PreferenceGroup) findPreference("OtherPreferenceGroup");
         mOtherPreferenceGroup.setVisible(false);
         mShowOtherApps = findPreference(KEY_SHOW_OTHER_APPS);
@@ -156,19 +180,27 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
         mShowOtherApps.setVisible(TextUtils.isEmpty(volumeUuid));
     }
 
-    private void rebuildOther() {
-        ArrayList<ApplicationsState.AppEntry> apps =
-                mSessionOther.rebuild(mFilterOther, ApplicationsState.ALPHA_COMPARATOR);
-        if (apps != null) {
-            updateAppList(mOtherPreferenceGroup, apps);
-        }
-    }
-
     private void rebuildInstalled() {
         ArrayList<ApplicationsState.AppEntry> apps =
                 mSessionInstalled.rebuild(mFilterInstalled, ApplicationsState.ALPHA_COMPARATOR);
         if (apps != null) {
             updateAppList(mInstalledPreferenceGroup, apps);
+        }
+    }
+
+    private void rebuildDisabled() {
+        ArrayList<ApplicationsState.AppEntry> apps =
+                mSessionDisabled.rebuild(mFilterDisabled, ApplicationsState.ALPHA_COMPARATOR);
+        if (apps != null) {
+            updateAppList(mDisabledPreferenceGroup, apps);
+        }
+    }
+
+    private void rebuildOther() {
+        ArrayList<ApplicationsState.AppEntry> apps =
+                mSessionOther.rebuild(mFilterOther, ApplicationsState.ALPHA_COMPARATOR);
+        if (apps != null) {
+            updateAppList(mOtherPreferenceGroup, apps);
         }
     }
 
@@ -220,6 +252,7 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
                 }
             }
         }
+        mDisabledPreferenceGroup.setVisible(mDisabledPreferenceGroup.getPreferenceCount() > 0);
     }
 
     /**
@@ -303,10 +336,31 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
 
                 @Override
                 public boolean filterApp(ApplicationsState.AppEntry info) {
-                    return info.info != null
+                    return !FILTER_DISABLED.filterApp(info)
+                            && info.info != null
                             && info.info.enabled
                             && info.hasLauncherEntry
                             && info.launcherEntryEnabled;
+                }
+            };
+
+    private static final ApplicationsState.AppFilter FILTER_DISABLED =
+            new ApplicationsState.AppFilter() {
+
+                @Override
+                public void init() {
+                }
+
+                @Override
+                public boolean filterApp(ApplicationsState.AppEntry info) {
+                    return info.info != null
+                            && (info.info.enabledSetting
+                            == PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+                            || info.info.enabledSetting
+                            == PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER
+                            || (info.info.enabledSetting
+                            == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
+                            && !info.info.enabled));
                 }
             };
 
@@ -318,7 +372,7 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
 
                 @Override
                 public boolean filterApp(ApplicationsState.AppEntry info) {
-                    return !FILTER_INSTALLED.filterApp(info);
+                    return !FILTER_INSTALLED.filterApp(info) && !FILTER_DISABLED.filterApp(info);
                 }
             };
 
