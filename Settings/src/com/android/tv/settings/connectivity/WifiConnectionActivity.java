@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.AddStartState;
@@ -42,6 +43,7 @@ import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
 import com.android.tv.settings.connectivity.util.WifiSecurityUtil;
 import com.android.tv.settings.core.instrumentation.InstrumentedActivity;
+
 /**
  * Add a wifi network where we already know the ssid/security; normal post-install settings.
  */
@@ -256,7 +258,6 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
 
     @Override
     public int getMetricsCategory() {
-        // do not log visibility
-        return METRICS_CATEGORY_UNKNOWN;
+        return MetricsEvent.SETTINGS_TV_WIFI_ADD_KNOWN_CATEGORY;
     }
 }
