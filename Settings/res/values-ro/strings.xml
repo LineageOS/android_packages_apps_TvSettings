@@ -23,6 +23,8 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Sugestii"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Setări rapide"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Setări generale"</string>
+    <string name="hotwording_title" msgid="1770342282683096475">"Detectare „OK Google”"</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"Vorbiți oricând cu Asistentul Google"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Dispozitiv"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Preferințe"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Telecomandă și accesorii"</string>
@@ -65,11 +67,19 @@
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethernet conectat"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Nicio rețea conectată"</string>
-    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"Rețeaua Wi-Fi este dezactivată"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"Wi-Fi este dezactivat"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Scanare mereu disponibilă"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Permiteți serviciului de localizare Google și altor aplicații să caute rețele, chiar dacă rețeaua Wi-Fi este dezactivată"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"Conectați-vă la rețea"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"Aplicații deschise recent"</string>
+    <string name="apps_see_all_apps" msgid="5546179088197139203">"Vedeți toate aplicațiile"</string>
+    <string name="apps_permissions_category_title" msgid="4476837368840442313">"Permisiuni"</string>
+    <string name="all_apps_title" msgid="5330174847732759402">"Toate aplicațiile"</string>
+    <string name="all_apps_show_system_apps" msgid="4648447904721171884">"Afișați aplicațiile de sistem"</string>
+    <string name="all_apps_installed" msgid="54800379871111518">"Aplicații instalate"</string>
+    <string name="all_apps_other" msgid="8297097642727891911">"Aplicații de sistem"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"Aplicații dezactivate"</string>
     <string name="device_daydream" msgid="3354366974209179614">"Economizor de ecran"</string>
     <string name="device_display" msgid="101455384386372747">"Afișaj"</string>
     <string name="device_sound" msgid="9214182566287657481">"Sunet"</string>
@@ -81,11 +91,19 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"Creați și restabiliți backupuri"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Revenire la setările din fabrică"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Calibrare"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"Selectați formatele"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"Sunet surround"</string>
+    <string name="surround_sound_format_ac3" msgid="1482464022424295698">"AC3 (Dolby Digital)"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4406523828595644068">"E-AC3 (Dolby Digital Plus/DD+)"</string>
+    <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
+    <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
+    <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"Notă: opțiunea Auto ar putea să nu funcționeze dacă dispozitivul nu raportează corect formatele acceptate."</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"Auto: utilizați formatele acceptate (recomandat)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"Fără: nu utilizați niciodată sunet surround"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"Manual: selectați formatele de utilizat"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Ștergeți datele memorate în cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Datele din cache ale aplicațiilor vor fi șterse."</string>
-    <string name="apps_downloaded" msgid="4222190849854323480">"Aplicații descărcate"</string>
-    <string name="apps_system" msgid="2499191125802829425">"Aplicații de sistem"</string>
-    <string name="apps_running" msgid="6430310491739956228">"Aplicații pornite"</string>
     <string name="accessories_add" msgid="1347802656349218830">"Adăugați un accesoriu"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"Se împerechează…"</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"Se conectează…"</string>
@@ -260,6 +278,10 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"Introduceți un port valid.\nExemplu: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Introduceți o listă de domenii excluse, separate prin virgulă sau nu completați.\nExemplu: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Introduceți un nume de gazdă valid.\nExemplu: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="3723583936041145157">"Alegeți metoda EAP pentru <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"Alegeți autentificarea din faza 2 pentru <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_identity" msgid="6154397685951091638">"Introduceți identitatea pentru <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_anonymous_identity" msgid="4530402657655491360">"Introduceți identitate anonimă pentru <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"V-ați conectat la <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Conectat la rețea"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Rețeaua nu este conectată"</string>

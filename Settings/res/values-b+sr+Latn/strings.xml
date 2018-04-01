@@ -23,6 +23,8 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Predlozi"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Brza podešavanja"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Opšta podešavanja"</string>
+    <string name="hotwording_title" msgid="1770342282683096475">"Otkrivanje fraze „OK Google“"</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"Razgovarajte sa Google pomoćnikom u bilo kom tren."</string>
     <string name="header_category_device" msgid="4855983928659541345">"Uređaj"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Podešavanja"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Daljinski upravljač i dodatna oprema"</string>
@@ -65,11 +67,19 @@
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Eternet"</string>
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Eternet je povezan"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Nijedna mreža nije povezana"</string>
-    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"Wi-Fi je onemogućen"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"Wi-Fi je isključen"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Skeniranje je uvek dostupno"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Dozvolite Google-ovoj usluzi lociranja i drugim aplikacijama da traže mreže, čak i kada je Wi-Fi isključen"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"Povežite se sa mrežom"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"Nedavno otvarane aplikacije"</string>
+    <string name="apps_see_all_apps" msgid="5546179088197139203">"Prikaži sve aplikacije"</string>
+    <string name="apps_permissions_category_title" msgid="4476837368840442313">"Dozvole"</string>
+    <string name="all_apps_title" msgid="5330174847732759402">"Sve aplikacije"</string>
+    <string name="all_apps_show_system_apps" msgid="4648447904721171884">"Prikaži sistemske aplikacije"</string>
+    <string name="all_apps_installed" msgid="54800379871111518">"Instalirane aplikacije"</string>
+    <string name="all_apps_other" msgid="8297097642727891911">"Sistemske aplikacije"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"Onemogućene aplikacije"</string>
     <string name="device_daydream" msgid="3354366974209179614">"Čuvar ekrana"</string>
     <string name="device_display" msgid="101455384386372747">"Prikaz"</string>
     <string name="device_sound" msgid="9214182566287657481">"Zvuk"</string>
@@ -81,11 +91,19 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"Pravljenje rezervne kopije i vraćanje"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Resetovanje na fabrička podešavanja"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibracija"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"Izaberite formate"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"Zvučni sistem"</string>
+    <string name="surround_sound_format_ac3" msgid="1482464022424295698">"AC3 (Dolby Digital)"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4406523828595644068">"E-AC3 (Dolby Digital Plus/DD+)"</string>
+    <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
+    <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
+    <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"Napomena: Automatska opcija možda neće raditi ako uređaj ne prijavljuje podržane formate ispravno."</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"Automatski: Koristite formate koje uređaj prijavljuje kao podržane (preporučeno)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"Ništa: Nikada ne koristi zvučni sistem"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"Ručno: Izaberite koji formati će se koristiti"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Želite li da obrišete keširane podatke?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Biće obrisani keširani podaci za sve aplikacije."</string>
-    <string name="apps_downloaded" msgid="4222190849854323480">"Preuzete aplikacije"</string>
-    <string name="apps_system" msgid="2499191125802829425">"Sistemske aplikacije"</string>
-    <string name="apps_running" msgid="6430310491739956228">"Pokrenute aplikacije"</string>
     <string name="accessories_add" msgid="1347802656349218830">"Dodaj pomoćni uređaj"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"Uparivanje..."</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"Povezivanje…"</string>
@@ -260,6 +278,10 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"Unesite važeći port.\nPrimer: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Unesite listu izuzetih domena razdvojenih zarezima ili ostavite prazno.\nPrimer: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Unesite važeće ime hosta.\nPrimer: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="3723583936041145157">"Odaberite EAP metod za: <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"Odaberite 2. fazu potvrde identiteta za: <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_identity" msgid="6154397685951091638">"Unesite identitet za: <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_anonymous_identity" msgid="4530402657655491360">"Unesite anoniman identitet za: <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"Povezani ste sa „<xliff:g id="SSID">%1$s</xliff:g>“"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Povezani ste na mrežu"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Mreža nije povezana"</string>

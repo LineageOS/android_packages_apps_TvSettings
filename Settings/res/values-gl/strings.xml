@@ -23,6 +23,8 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Suxestións"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Configuración rápida"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Configuración xeral"</string>
+    <string name="hotwording_title" msgid="1770342282683096475">"Detección de \"Ok Google\""</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"Fala co Asistente de Google en calquera momento"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Dispositivo"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Preferencias"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Mando a distancia e accesorios"</string>
@@ -61,13 +63,21 @@
     <string name="sync_active" msgid="6891115263481154378">"Sincronización activa"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wifi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
-    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Conexión Ethernet conectada"</string>
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Estableceuse a conexión a Ethernet"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Sen conexión de rede"</string>
-    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"A wifi está desactivada"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"A wifi está desactivada"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Buscar redes sempre"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Permite ao servizo de localización de Google e a outras aplicacións buscar redes, aínda que a wifi estea desactivada"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wifi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"Conectarse á rede"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"Aplicacións abertas recentemente"</string>
+    <string name="apps_see_all_apps" msgid="5546179088197139203">"Ver todas as aplicacións"</string>
+    <string name="apps_permissions_category_title" msgid="4476837368840442313">"Permisos"</string>
+    <string name="all_apps_title" msgid="5330174847732759402">"Todas as aplicacións"</string>
+    <string name="all_apps_show_system_apps" msgid="4648447904721171884">"Mostrar aplicacións do sistema"</string>
+    <string name="all_apps_installed" msgid="54800379871111518">"Aplicacións instaladas"</string>
+    <string name="all_apps_other" msgid="8297097642727891911">"Aplicacións do sistema"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"Aplicacións desactivadas"</string>
     <string name="device_daydream" msgid="3354366974209179614">"Protector de pantalla"</string>
     <string name="device_display" msgid="101455384386372747">"Pantalla"</string>
     <string name="device_sound" msgid="9214182566287657481">"Son"</string>
@@ -79,11 +89,19 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"Copia de seguranza e restauración"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Restablecemento dos datos de fábrica"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Calibración"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"Seleccionar formatos"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"Son envolvente"</string>
+    <string name="surround_sound_format_ac3" msgid="1482464022424295698">"AC3 (Dolby Digital)"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4406523828595644068">"E-AC3 (Dolby Digital Plus/DD+)"</string>
+    <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
+    <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
+    <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"Se o dispositivo non indica correctamente os formatos admitidos, poida que non funcione Automático."</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"Automático: usar formatos admitidos segundo o dispositivo (recomendado)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"Ningún: non usar son envolvente nunca"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"Manual: seleccionar que formatos usar"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Queres borrar os datos da caché?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Isto borrará datos da caché para as aplicacións"</string>
-    <string name="apps_downloaded" msgid="4222190849854323480">"Aplicacións descargadas"</string>
-    <string name="apps_system" msgid="2499191125802829425">"Aplicacións do sistema"</string>
-    <string name="apps_running" msgid="6430310491739956228">"Aplicacións en execución"</string>
     <string name="accessories_add" msgid="1347802656349218830">"Engadir accesorio"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"Sincronizando..."</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"Conectando…"</string>
@@ -257,6 +275,10 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"Introduce un porto válido.\nExemplo: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Introduce unha lista de dominios excluídos separados por comas ou deixa este campo en branco.\nExemplo: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Introduce un nome de host válido.\nExemplo: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="3723583936041145157">"Escolle un método de EAP para <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"Escolle unha autenticación phase2 para <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_identity" msgid="6154397685951091638">"Introduce a identidade de <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_anonymous_identity" msgid="4530402657655491360">"Introduce a identidade anónima de <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"Estableciches conexión con <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Rede conectada"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"A rede non está conectada"</string>

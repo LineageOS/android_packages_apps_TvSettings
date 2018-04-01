@@ -23,6 +23,8 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"सुझावहरू"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"द्रुत सेटिङहरू"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"सामान्य सेटिङहरू"</string>
+    <string name="hotwording_title" msgid="1770342282683096475">"\"OK Google\" पहिचान गर्ने सुविधा"</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"Google सहायकसँग जुनसुकै बेला कुराकानी गर्नुहोस्"</string>
     <string name="header_category_device" msgid="4855983928659541345">"उपकरण"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"प्राथमिकताहरू"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"रिमोट र amp; एसेसरिज"</string>
@@ -63,11 +65,19 @@
     <string name="connectivity_ethernet" msgid="2182407318634700320">"इथरनेट"</string>
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"इथरनेट जडान गरियो"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"कुनै पनि नेटवर्क जडान गरिएको छैन"</string>
-    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"Wi-Fi अक्षम पारियो"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"Wi-Fi निष्क्रिय पारियो"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"स्क्यानिङ सधै उपलब्ध छ"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Wi-Fi निष्क्रिय हुँदा पनि Google को स्थान सेवा र अन्य अनुप्रयोगहरूलाई नेटवर्कहरू स्क्यान गर्न दिनुहोस्"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"नेटवर्कमा जडान गर्नुहोस्"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"हालै खोलिएका अनुप्रयोगहरू"</string>
+    <string name="apps_see_all_apps" msgid="5546179088197139203">"सबै अनुप्रयोगहरू हेर्नुहोस्"</string>
+    <string name="apps_permissions_category_title" msgid="4476837368840442313">"अनुमति"</string>
+    <string name="all_apps_title" msgid="5330174847732759402">"सबै अनुप्रयोगहरू"</string>
+    <string name="all_apps_show_system_apps" msgid="4648447904721171884">"प्रणालीका अनुप्रयोगहरू देखाउनुहोस्"</string>
+    <string name="all_apps_installed" msgid="54800379871111518">"स्थापना गरिएका अनुप्रयोगहरू"</string>
+    <string name="all_apps_other" msgid="8297097642727891911">"प्रणालीका अनुप्रयोगहरू"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"असक्षम पारिएका अनुप्रयोगहरू"</string>
     <string name="device_daydream" msgid="3354366974209179614">"स्क्रिन सेभर"</string>
     <string name="device_display" msgid="101455384386372747">"प्रदर्शन गर्नुहोस्"</string>
     <string name="device_sound" msgid="9214182566287657481">"ध्वनि"</string>
@@ -79,11 +89,19 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"ब्याकअप र पुनःस्थापना"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"कारखाना डेटा रिसेट"</string>
     <string name="device_calibration" msgid="8632962533376605191">"क्यालिब्रेसन"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"ढाँचाहरू चयन गर्नुहोस्"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"सराउन्ड साउन्ड"</string>
+    <string name="surround_sound_format_ac3" msgid="1482464022424295698">"AC3 (Dolby Digital)"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4406523828595644068">"E-AC3 (Dolby Digital Plus/DD+)"</string>
+    <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
+    <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
+    <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"टिपोट: तपाईंको यन्त्रले सहीसँग आफ्ना समर्थित ढाँचाहरू रिपोर्ट नगरेको खण्डमा स्वतः काम गर्ने विकल्पले काम नगर्न सक्छ।"</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"स्वतः: तपाईंको यन्त्रका रिपोर्टहरूले समर्थन गरिरहेका ढाँचाहरू प्रयोग गर्नुहोस् (सिफारिस गरिएको)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"कुनै पनि होइन: कहिले पनि सराउन्ड साउन्ड प्रयोग नगर्नुहोस्"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"म्यानुअल: प्रयोग गर्ने ढाँचाहरू चयन गर्नुहोस्"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"केस गरिएको डेटा हटाउने हो?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"यसले सबै अनुप्रयोगहरूको लागि केस गरिएको डेटा हटाउँछ।"</string>
-    <string name="apps_downloaded" msgid="4222190849854323480">"डाउनलोड भएका अनुप्रयोगहरू"</string>
-    <string name="apps_system" msgid="2499191125802829425">"प्रणाली अनुप्रयोगहरू"</string>
-    <string name="apps_running" msgid="6430310491739956228">"चालु अनुप्रयोगहरू"</string>
     <string name="accessories_add" msgid="1347802656349218830">"अतिरक्त सामानहरू थप्नुहोस्"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"जोडा बाँध्दै..."</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"जडान हुँदै..."</string>
@@ -257,6 +275,10 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"एउटा मान्य पोर्ट प्रविष्ट गर्नुहोस्।\nउदाहरण: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"समावेश नगरिएका डोमेनहरूको अल्पविरामले छुट्ट्याइएको सूची टाइप गर्नुहोस् वा खाली छोड्नुहोस्।\nउदाहरण: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"एउटा मान्य होस्टनाम प्रविष्ट गर्नुहोस्।\nउदाहरण: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="3723583936041145157">"<xliff:g id="SSID">%1$s</xliff:g> को EAP विधि छनौट गर्नुहोस्"</string>
+    <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"<xliff:g id="SSID">%1$s</xliff:g> को चरण २ को प्रमाणीकरण छनौट गर्नुहोस्"</string>
+    <string name="title_wifi_identity" msgid="6154397685951091638">"<xliff:g id="SSID">%1$s</xliff:g> को पहिचान प्रविष्ट गर्नुहोस्"</string>
+    <string name="title_wifi_anonymous_identity" msgid="4530402657655491360">"<xliff:g id="SSID">%1$s</xliff:g> को अज्ञात पहिचान प्रविष्ट गर्नुहोस्"</string>
     <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"तपाईं <xliff:g id="SSID">%1$s</xliff:g> मा जडान हुनुहुन्छ"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"नेटवर्क जडान भयो"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"नेटवर्क जडान भएको छैन"</string>

@@ -23,6 +23,8 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"建議"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"快速設定"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"一般設定"</string>
+    <string name="hotwording_title" msgid="1770342282683096475">"「Ok Google」啟動字詞偵測"</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"隨時隨地與 Google 個人助理交談"</string>
     <string name="header_category_device" msgid="4855983928659541345">"裝置"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"偏好設定"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"遙控器和配件"</string>
@@ -63,11 +65,19 @@
     <string name="connectivity_ethernet" msgid="2182407318634700320">"乙太網路"</string>
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"已連上乙太網路"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"未連上任何網路"</string>
-    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"已停用 Wi-Fi"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"Wi-Fi 已關閉"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"一律可以掃描"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"允許 Google 的定位服務和其他應用程式掃描網路 (即使 Wi-Fi 已關閉)"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"連線至網路"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"最近開啟的應用程式"</string>
+    <string name="apps_see_all_apps" msgid="5546179088197139203">"查看所有應用程式"</string>
+    <string name="apps_permissions_category_title" msgid="4476837368840442313">"權限"</string>
+    <string name="all_apps_title" msgid="5330174847732759402">"所有應用程式"</string>
+    <string name="all_apps_show_system_apps" msgid="4648447904721171884">"顯示系統應用程式"</string>
+    <string name="all_apps_installed" msgid="54800379871111518">"已安裝的應用程式"</string>
+    <string name="all_apps_other" msgid="8297097642727891911">"系統應用程式"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"已停用的應用程式"</string>
     <string name="device_daydream" msgid="3354366974209179614">"螢幕保護程式"</string>
     <string name="device_display" msgid="101455384386372747">"螢幕"</string>
     <string name="device_sound" msgid="9214182566287657481">"音效"</string>
@@ -79,11 +89,19 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"備份與還原"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"恢復原廠設定"</string>
     <string name="device_calibration" msgid="8632962533376605191">"校正"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"選取格式"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"環繞音效"</string>
+    <string name="surround_sound_format_ac3" msgid="1482464022424295698">"AC3 (Dolby Digital)"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4406523828595644068">"E-AC3 (Dolby Digital Plus/DD+)"</string>
+    <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
+    <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
+    <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"注意：如果你的裝置未正確回報支援的格式，[自動] 選項可能會無法運作。"</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"自動：使用裝置回報的支援格式 (建議)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"無：一律不使用環繞音效"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"手動：選取要使用的格式"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"清除快取資料？"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"這項操作會清除所有應用程式的快取資料。"</string>
-    <string name="apps_downloaded" msgid="4222190849854323480">"已下載的應用程式"</string>
-    <string name="apps_system" msgid="2499191125802829425">"系統應用程式"</string>
-    <string name="apps_running" msgid="6430310491739956228">"執行中的應用程式"</string>
     <string name="accessories_add" msgid="1347802656349218830">"新增配件"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"配對中…"</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"連線中…"</string>
@@ -257,6 +275,10 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"請輸入有效的通訊埠。\n範例：<xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"請輸入要排除的網域，並以半形逗號分隔，或是將此欄位留空。\n範例：<xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"請輸入有效的主機名稱。\n範例：<xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="3723583936041145157">"選擇 <xliff:g id="SSID">%1$s</xliff:g> 的 EAP 方法"</string>
+    <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"選擇 <xliff:g id="SSID">%1$s</xliff:g> 的 phase2 驗證"</string>
+    <string name="title_wifi_identity" msgid="6154397685951091638">"輸入 <xliff:g id="SSID">%1$s</xliff:g> 的身分"</string>
+    <string name="title_wifi_anonymous_identity" msgid="4530402657655491360">"輸入 <xliff:g id="SSID">%1$s</xliff:g> 的匿名身分"</string>
     <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"你已連上 <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"已連上網路"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"未連上網路"</string>

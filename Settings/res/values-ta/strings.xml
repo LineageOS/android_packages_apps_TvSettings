@@ -23,6 +23,8 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"பரிந்துரைகள்"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"விரைவு அமைப்புகள்"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"பொது அமைப்புகள்"</string>
+    <string name="hotwording_title" msgid="1770342282683096475">"\"OK Google\" சொல்லும்போது, அதைக் கண்டறிதல்"</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"எந்தநேரத்திலும், Google அசிஸ்டண்ட்டுடன் பேசுங்கள்"</string>
     <string name="header_category_device" msgid="4855983928659541345">"சாதனம்"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"விருப்பங்கள்"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"ரிமோட் &amp; துணைக்கருவிகள்"</string>
@@ -63,11 +65,19 @@
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ஈதர்நெட்"</string>
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"ஈத்தர்நெட் இணைக்கப்பட்டது"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"நெட்வொர்க் எதுவும் இணைக்கப்படவில்லை"</string>
-    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"வைஃபை முடக்கப்பட்டுள்ளது"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"வைஃபை ஆஃப் செய்யப்பட்டுள்ளது"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"எப்போதும் ஸ்கேன் செய்"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"வைஃபை முடக்கத்தில் இருந்தாலும்கூட, Google இன் இருப்பிடச் சேவையையும் பிற பயன்பாடுகளையும் நெட்வொர்க்குகளை ஸ்கேன் செய்ய அனுமதி"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"வைஃபை"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"நெட்வொர்க்குடன் இணைக்கும்"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"சமீபத்தில் திறந்த ஆப்ஸ்"</string>
+    <string name="apps_see_all_apps" msgid="5546179088197139203">"எல்லா ஆப்ஸையும் காட்டு"</string>
+    <string name="apps_permissions_category_title" msgid="4476837368840442313">"அனுமதிகள்"</string>
+    <string name="all_apps_title" msgid="5330174847732759402">"எல்லா ஆப்ஸும்"</string>
+    <string name="all_apps_show_system_apps" msgid="4648447904721171884">"சிஸ்டம் ஆப்ஸைக் காட்டு"</string>
+    <string name="all_apps_installed" msgid="54800379871111518">"நிறுவிய ஆப்ஸ்"</string>
+    <string name="all_apps_other" msgid="8297097642727891911">"சிஸ்டம் ஆப்ஸ்"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"முடக்கிய ஆப்ஸ்"</string>
     <string name="device_daydream" msgid="3354366974209179614">"ஸ்கிரீன் சேவர்"</string>
     <string name="device_display" msgid="101455384386372747">"காட்சி"</string>
     <string name="device_sound" msgid="9214182566287657481">"ஒலி"</string>
@@ -79,11 +89,19 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"காப்புப்பிரதி &amp; மீட்டெடுப்பு"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"தரவின் ஆரம்பநிலை மீட்டமைப்பு"</string>
     <string name="device_calibration" msgid="8632962533376605191">"அளவுக்குறியீடு"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"வடிவங்களைத் தேர்ந்தெடுக்கவும்"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"சரவுண்ட் சவுண்ட்"</string>
+    <string name="surround_sound_format_ac3" msgid="1482464022424295698">"AC3 (Dolby Digital)"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4406523828595644068">"E-AC3 (Dolby Digital Plus/DD+)"</string>
+    <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
+    <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
+    <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"குறிப்பு: ஆதரிக்கும் வடிவங்களை சாதனம் சரியாக குறிப்பிடவில்லை எனில், \'தானியங்கு\' செயல்படாமல் போகலாம்."</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"தானியங்கு: உங்கள் சாதனம் ஆதரிக்கும் வடிவங்களைப் பயன்படுத்தும் (பரிந்துரைக்கப்படுவது)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"ஏதுமில்லை: சரவுண்ட் சவுண்ட்டை ஒருபோதும் பயன்படுத்தாது"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"கைமுறை: பயன்படுத்த வேண்டிய வடிவங்களைத் தேர்வுசெய்க"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"தற்காலிகச் சேமிப்பு தரவை அழிக்கவா?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"இது, எல்லா பயன்பாடுகளின் தற்காலிகச் சேமிப்பு தரவை அழிக்கும்."</string>
-    <string name="apps_downloaded" msgid="4222190849854323480">"இறக்கியப் பயன்பாடுகள்"</string>
-    <string name="apps_system" msgid="2499191125802829425">"முறைமைப் பயன்பாடுகள்"</string>
-    <string name="apps_running" msgid="6430310491739956228">"இயங்கும் பயன்பாடுகள்"</string>
     <string name="accessories_add" msgid="1347802656349218830">"துணைக்கருவியைச் சேர்"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"இணைக்கிறது..."</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"இணைக்கிறது..."</string>
@@ -257,6 +275,10 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"சரியான போர்ட்டை உள்ளிடவும்.\nஎடுத்துக்காட்டு: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"விலக்கப்பட்ட டொமைன்களின் காற்புள்ளியால் பிரிக்கப்பட்ட பட்டியலை உள்ளிடவும் அல்லது வெறுமையாக விடவும்.\nஎடுத்துக்காட்டு: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"சரியான ஹோஸ்ட்பெயரை உள்ளிடவும்.\nஎடுத்துக்காட்டு: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="3723583936041145157">"<xliff:g id="SSID">%1$s</xliff:g>க்கான EAP முறையைத் தேர்வுசெய்யவும்"</string>
+    <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"<xliff:g id="SSID">%1$s</xliff:g>க்கான phase2 அங்கீகரிப்பைத் தேர்வுசெய்யவும்"</string>
+    <string name="title_wifi_identity" msgid="6154397685951091638">"<xliff:g id="SSID">%1$s</xliff:g>க்கான அடையாளத்தை உள்ளிடவும்"</string>
+    <string name="title_wifi_anonymous_identity" msgid="4530402657655491360">"<xliff:g id="SSID">%1$s</xliff:g>க்கான அநாமதேய அடையாளத்தை உள்ளிடவும்"</string>
     <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"<xliff:g id="SSID">%1$s</xliff:g> உடன் இணைக்கப்பட்டுள்ளீர்கள்"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"நெட்வொர்க் இணைக்கப்பட்டது"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"நெட்வொர்க் இணைக்கப்படவில்லை"</string>

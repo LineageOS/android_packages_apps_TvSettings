@@ -87,8 +87,8 @@ public class MainFragment extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        // TODO(70572789): Finalize metrics categories.
-        return 0;
+        // Do not log visibility.
+        return METRICS_CATEGORY_UNKNOWN;
     }
 
     @Override
