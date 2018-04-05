@@ -27,13 +27,8 @@
     <!-- See all apps button -->
     <Preference
         android:key="see_all_apps"
-        android:title="@string/apps_see_all_apps">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="com.android.tv.settings"
-            android:targetClass="com.android.tv.settings.device.apps.AllAppsActivity">
-         </intent>
-    </Preference>
+        android:title="@string/apps_see_all_apps"
+        android:fragment="com.android.tv.settings.device.apps.AllAppsFragment" />
 
     <PreferenceCategory
         android:key="permissions"
