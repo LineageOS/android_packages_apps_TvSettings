@@ -19,11 +19,9 @@ package com.android.tv.settings.device.apps;
 import android.app.Application;
 import android.app.usage.UsageStats;
 import android.app.usage.UsageStatsManager;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.UserHandle;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.preference.Preference;
@@ -174,10 +172,8 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
             pref.setSummary(StringUtil.formatRelativeTime(mContext,
                     System.currentTimeMillis() - stat.getLastTimeUsed(), false));
             pref.setOrder(i);
-            pref.setOnPreferenceClickListener(preference -> {
-                startAppManagementActivity(pkgName);
-                return true;
-            });
+            AppManagementFragment.prepareArgs(pref.getExtras(), pkgName);
+            pref.setFragment(AppManagementFragment.class.getName());
             if (!rebindPref) {
                 mCategory.addPreference(pref);
             }
@@ -207,17 +203,6 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
         mStats = mUsageStatsManager.queryUsageStats(
                 UsageStatsManager.INTERVAL_BEST, mCal.getTimeInMillis(),
                 System.currentTimeMillis());
-    }
-
-    private void startAppManagementActivity(String pkgName) {
-        Intent intent = new Intent(mContext, AppManagementActivity.class);
-        intent.setData(Uri.parse(pkgName));
-        try {
-            mContext.startActivity(intent);
-        } catch (ActivityNotFoundException e) {
-            // shall not happen.
-            Log.w(TAG, "Unable to start app management activity.", e);
-        }
     }
 
     private List<UsageStats> getDisplayableRecentAppList() {
