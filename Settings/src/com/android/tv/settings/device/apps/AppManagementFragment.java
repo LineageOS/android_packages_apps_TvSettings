@@ -145,7 +145,7 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
                 final int deleteResult = data != null
                         ? data.getIntExtra(Intent.EXTRA_INSTALL_RESULT, 0) : 0;
                 if (deleteResult == PackageManager.DELETE_SUCCEEDED) {
-                    final int userId =  UserHandle.getUserId(mEntry.info.uid);
+                    final int userId = UserHandle.getUserId(mEntry.info.uid);
                     mApplicationsState.removePackage(mPackageName, userId);
                     navigateBack();
                 } else {
@@ -154,7 +154,7 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
                 break;
             case REQUEST_MANAGE_SPACE:
                 mClearDataPreference.setClearingData(false);
-                if(resultCode == Activity.RESULT_OK) {
+                if (resultCode == Activity.RESULT_OK) {
                     final int userId = UserHandle.getUserId(mEntry.info.uid);
                     mApplicationsState.requestSize(mPackageName, userId);
                 } else {
@@ -371,6 +371,9 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
                 startActivityForResult(intent, REQUEST_MANAGE_SPACE);
             }
         } else {
+            // Disabling clear cache preference while clearing data is in progress. See b/77815256
+            // for details.
+            mClearCachePreference.setClearingCache(true);
             ActivityManager am = (ActivityManager) getActivity().getSystemService(
                     Context.ACTIVITY_SERVICE);
             boolean success = am.clearApplicationUserData(
@@ -381,6 +384,7 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
                                 @Override
                                 public void run() {
                                     mClearDataPreference.setClearingData(false);
+                                    mClearCachePreference.setClearingCache(false);
                                     if (succeeded) {
                                         dataCleared(true);
                                     } else {
@@ -448,7 +452,7 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
 
         @Override
         public void onPackageListChanged() {
-            if (mEntry == null) {
+            if (mEntry == null || mEntry.info == null) {
                 return;
             }
             final int userId = UserHandle.getUserId(mEntry.info.uid);
@@ -494,6 +498,8 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
 
         @Override
         public void onLoadEntriesCompleted() {
+            mEntry = mApplicationsState.getEntry(mPackageName, UserHandle.myUserId());
+            updatePrefs();
             if (mAppStoragePreference == null) {
                 // Nothing to do here.
                 return;
