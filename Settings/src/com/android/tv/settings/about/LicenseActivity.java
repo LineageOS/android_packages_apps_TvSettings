@@ -25,11 +25,12 @@ import android.content.Loader;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemProperties;
-import android.support.annotation.VisibleForTesting;
-import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.annotation.VisibleForTesting;
+import androidx.core.content.FileProvider;
 
 import com.android.settingslib.license.LicenseHtmlLoader;
 import com.android.tv.settings.R;
