@@ -17,7 +17,7 @@
 package com.android.tv.settings.device.storage;
 
 import android.content.Context;
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 import android.text.format.Formatter;
 import android.util.AttributeSet;
 

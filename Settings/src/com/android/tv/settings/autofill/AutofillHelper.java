@@ -26,8 +26,8 @@ import android.content.pm.ServiceInfo;
 import android.provider.Settings;
 import android.service.autofill.AutofillService;
 import android.service.autofill.AutofillServiceInfo;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 

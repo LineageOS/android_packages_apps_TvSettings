@@ -22,7 +22,7 @@ import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v4.view.ViewCompat;
+import androidx.core.view.ViewCompat;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;

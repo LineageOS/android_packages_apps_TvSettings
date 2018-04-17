@@ -23,10 +23,10 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
-import android.support.annotation.Keep;
-import android.support.annotation.VisibleForTesting;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
+import androidx.annotation.Keep;
+import androidx.annotation.VisibleForTesting;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 import android.text.Html;
 import android.widget.Button;
 

@@ -19,8 +19,8 @@ package com.android.tv.settings.suggestions;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.service.settings.suggestions.Suggestion;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceViewHolder;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceViewHolder;
 import android.util.Log;
 import android.view.View;
 

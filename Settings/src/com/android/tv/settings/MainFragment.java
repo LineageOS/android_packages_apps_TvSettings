@@ -31,10 +31,10 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.service.settings.suggestions.Suggestion;
-import android.support.annotation.VisibleForTesting;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
+import androidx.annotation.VisibleForTesting;
+import androidx.preference.SwitchPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import android.telephony.SignalStrength;
 import android.util.Log;
 

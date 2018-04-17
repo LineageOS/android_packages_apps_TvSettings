@@ -16,13 +16,13 @@
 
 package com.android.tv.settings.connectivity.setup;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v17.leanback.widget.GuidanceStylist;
-import android.support.v17.leanback.widget.GuidedAction;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import androidx.leanback.widget.GuidanceStylist;
+import androidx.leanback.widget.GuidedAction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.View;
 

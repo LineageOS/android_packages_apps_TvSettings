@@ -19,11 +19,11 @@ package com.android.tv.settings.system.development;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.Keep;
-import android.support.v17.preference.LeanbackPreferenceFragment;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.TwoStatePreference;
+import androidx.annotation.Keep;
+import androidx.leanback.preference.LeanbackPreferenceFragment;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.TwoStatePreference;
 import android.text.TextUtils;
 
 import com.android.tv.settings.R;

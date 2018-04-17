@@ -16,13 +16,13 @@
 
 package com.android.tv.settings.connectivity;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.wifi.AccessPoint;
@@ -238,7 +238,7 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
         mStateMachine.back();
     }
 
-    private void updateView(android.support.v4.app.Fragment fragment, boolean movingForward) {
+    private void updateView(androidx.fragment.app.Fragment fragment, boolean movingForward) {
         if (fragment != null) {
             FragmentTransaction updateTransaction = getSupportFragmentManager().beginTransaction();
             if (movingForward) {

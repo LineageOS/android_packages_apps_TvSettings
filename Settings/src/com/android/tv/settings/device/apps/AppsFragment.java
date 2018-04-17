@@ -20,7 +20,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 import android.text.TextUtils;
 
 import com.android.internal.logging.nano.MetricsProto;

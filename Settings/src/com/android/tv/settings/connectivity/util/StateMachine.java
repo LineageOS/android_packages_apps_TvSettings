@@ -17,8 +17,8 @@
 package com.android.tv.settings.connectivity.util;
 
 import android.app.Activity;
-import android.arch.lifecycle.ViewModel;
-import android.support.annotation.IntDef;
+import androidx.lifecycle.ViewModel;
+import androidx.annotation.IntDef;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
