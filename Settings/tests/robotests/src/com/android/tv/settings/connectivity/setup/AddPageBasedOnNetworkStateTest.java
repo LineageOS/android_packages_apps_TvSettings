@@ -22,7 +22,7 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.verify;
 import static org.robolectric.shadow.api.Shadow.extract;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;

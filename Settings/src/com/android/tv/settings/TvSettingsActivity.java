@@ -20,7 +20,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.transition.Scene;
 import android.transition.Slide;
 import android.transition.Transition;

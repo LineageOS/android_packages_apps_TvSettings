@@ -31,9 +31,9 @@ import android.accounts.AccountManager;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.service.settings.suggestions.Suggestion;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceManager;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceManager;
 import android.telephony.SignalStrength;
 
 import com.android.settingslib.utils.IconCache;

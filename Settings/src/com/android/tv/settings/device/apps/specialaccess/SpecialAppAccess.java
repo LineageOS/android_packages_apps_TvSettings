@@ -19,9 +19,9 @@ package com.android.tv.settings.device.apps.specialaccess;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Keep;
-import android.support.annotation.VisibleForTesting;
-import android.support.v7.preference.Preference;
+import androidx.annotation.Keep;
+import androidx.annotation.VisibleForTesting;
+import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;

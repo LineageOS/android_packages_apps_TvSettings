@@ -24,10 +24,10 @@ import static org.robolectric.shadow.api.Shadow.extract;
 
 import android.os.UserManager;
 import android.provider.Settings;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.TvSettingsRobolectricTestRunner;

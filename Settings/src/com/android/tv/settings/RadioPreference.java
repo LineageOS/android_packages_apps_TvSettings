@@ -18,9 +18,9 @@ package com.android.tv.settings;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v7.preference.CheckBoxPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceGroup;
+import androidx.preference.CheckBoxPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 

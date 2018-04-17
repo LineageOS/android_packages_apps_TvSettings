@@ -688,7 +688,7 @@
              Note that "com.android.settings.files" is set here as its authorities because a Uri
              permission grant should be allowed to share a file with an external browser but it is
              allowed only for Settings' authorities in ActivityManagerService.  -->
-        <provider android:name="android.support.v4.content.FileProvider"
+        <provider android:name="androidx.core.content.FileProvider"
                   android:authorities="com.android.settings.files"
                   android:grantUriPermissions="true"
                   android:exported="false">

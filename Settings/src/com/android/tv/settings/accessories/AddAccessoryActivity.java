@@ -25,7 +25,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.KeyEvent;
