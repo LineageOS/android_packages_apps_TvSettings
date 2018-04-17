@@ -21,8 +21,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.RemoteException;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 import android.util.ArrayMap;
 import android.util.Log;
 

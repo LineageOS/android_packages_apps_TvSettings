@@ -16,11 +16,11 @@
 
 package com.android.tv.settings.connectivity.setup;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 import android.net.IpConfiguration;
 import android.net.LinkAddress;
 import android.net.ProxyInfo;
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 import android.text.TextUtils;
 
 import java.lang.annotation.Retention;

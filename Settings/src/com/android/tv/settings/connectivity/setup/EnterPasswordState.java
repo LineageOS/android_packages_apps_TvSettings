@@ -16,16 +16,16 @@
 
 package com.android.tv.settings.connectivity.setup;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v17.leanback.widget.GuidanceStylist;
-import android.support.v17.leanback.widget.GuidedAction;
-import android.support.v17.leanback.widget.GuidedActionsStylist;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import androidx.annotation.NonNull;
+import androidx.leanback.widget.GuidanceStylist;
+import androidx.leanback.widget.GuidedAction;
+import androidx.leanback.widget.GuidedActionsStylist;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;

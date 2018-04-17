@@ -19,7 +19,7 @@ package com.android.tv.settings.connectivity.setup;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.net.wifi.WifiConfiguration;
 
 import com.android.tv.settings.TvSettingsRobolectricTestRunner;

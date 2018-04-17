@@ -16,10 +16,10 @@
 
 package com.android.tv.settings.connectivity;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;

@@ -16,10 +16,10 @@
 
 package com.android.tv.settings.connectivity.setup;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.net.IpConfiguration;
-import android.support.annotation.IntDef;
-import android.support.v4.app.FragmentActivity;
+import androidx.annotation.IntDef;
+import androidx.fragment.app.FragmentActivity;
 import android.util.Log;
 
 import com.android.tv.settings.connectivity.NetworkConfiguration;

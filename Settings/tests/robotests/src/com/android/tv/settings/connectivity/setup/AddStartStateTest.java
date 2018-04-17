@@ -19,7 +19,7 @@ package com.android.tv.settings.connectivity.setup;
 import static org.mockito.Mockito.verify;
 import static org.robolectric.shadow.api.Shadow.extract;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.net.wifi.WifiConfiguration;
 
 import com.android.settingslib.wifi.AccessPoint;

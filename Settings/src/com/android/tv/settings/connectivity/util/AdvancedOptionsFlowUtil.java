@@ -16,13 +16,13 @@
 
 package com.android.tv.settings.connectivity.util;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.net.IpConfiguration;
 import android.net.LinkAddress;
 import android.net.NetworkUtils;
 import android.net.ProxyInfo;
 import android.net.StaticIpConfiguration;
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.FragmentActivity;
 import android.text.TextUtils;
 
 import com.android.tv.settings.R;

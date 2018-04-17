@@ -21,11 +21,11 @@ import android.content.ComponentName;
 import android.content.pm.ServiceInfo;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.Keep;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceGroup;
-import android.support.v7.preference.TwoStatePreference;
+import androidx.annotation.Keep;
+import androidx.preference.SwitchPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
+import androidx.preference.TwoStatePreference;
 import android.text.TextUtils;
 import android.view.accessibility.AccessibilityManager;
 

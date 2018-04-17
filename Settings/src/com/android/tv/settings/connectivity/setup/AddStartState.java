@@ -16,10 +16,10 @@
 
 package com.android.tv.settings.connectivity.setup;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.net.wifi.WifiConfiguration;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import android.text.TextUtils;
 
 import com.android.settingslib.wifi.AccessPoint;
