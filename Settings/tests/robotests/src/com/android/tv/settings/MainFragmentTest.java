@@ -287,13 +287,11 @@ public class MainFragmentTest {
 
         mMainFragment.updateAccessoryPref();
 
-        verify(accessoryPref, atLeastOnce())
-                .setSummary(R.string.remotes_and_accessories_category_summary_no_bluetooth_device);
         assertFalse(mMainFragment.mHasBtAccessories);
     }
 
     @Test
-    public void testUpdateAccessoryPref_hasOneAccessory() {
+    public void testUpdateAccessoryPref_hasAccessories() {
         final Preference accessoryPref = mock(Preference.class);
         doReturn(accessoryPref).when(mMainFragment)
                 .findPreference(MainFragment.KEY_ACCESSORIES);
@@ -306,27 +304,6 @@ public class MainFragmentTest {
 
         mMainFragment.updateAccessoryPref();
 
-        verify(accessoryPref, atLeastOnce()).setSummary("testDevice");
-        assertTrue(mMainFragment.mHasBtAccessories);
-    }
-
-    @Test
-    public void testUpdateAccessoryPref_hasMoreThanOneAccessory() {
-        final Preference accessoryPref = mock(Preference.class);
-        doReturn(RuntimeEnvironment.application.getResources()).when(mMainFragment).getResources();
-        doReturn(accessoryPref).when(mMainFragment)
-                .findPreference(MainFragment.KEY_ACCESSORIES);
-        mMainFragment.mBtAdapter = mock(BluetoothAdapter.class);
-        Set<BluetoothDevice> set = new HashSet<>();
-        set.add(mock(BluetoothDevice.class));
-        set.add(mock(BluetoothDevice.class));
-        doReturn(set).when(mMainFragment.mBtAdapter).getBondedDevices();
-
-        mMainFragment.updateAccessoryPref();
-
-        String summary = RuntimeEnvironment.application.getResources()
-                .getQuantityString(R.plurals.remotes_and_accessories_category_summary, 2, 2);
-        verify(accessoryPref, atLeastOnce()).setSummary(summary);
         assertTrue(mMainFragment.mHasBtAccessories);
     }
 }
