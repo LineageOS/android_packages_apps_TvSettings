@@ -23,10 +23,9 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"建議"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"快速設定"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"一般設定"</string>
-    <!-- no translation found for dismiss_suggestion (8288127823132069828) -->
-    <skip />
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"關閉建議"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"「Ok Google」啟動字詞偵測"</string>
-    <string name="hotwording_summary" msgid="2863751845299261441">"隨時都能與 Google 個人助理交談"</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"隨時都能與 Google 助理交談"</string>
     <string name="header_category_device" msgid="4855983928659541345">"裝置"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"偏好設定"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"遙控器和配件"</string>
@@ -399,11 +398,11 @@
     <string name="google_location_services_title" msgid="3382840371861269146">"Google 定位服務"</string>
     <string name="third_party_location_services_title" msgid="4089136801976399147">"第三方定位服務"</string>
     <string name="location_reporting" msgid="3054236612250063073">"位置回報"</string>
-    <string name="location_history" msgid="2946680949724247804">"定位紀錄"</string>
+    <string name="location_history" msgid="2946680949724247804">"定位記錄"</string>
     <string name="location_reporting_desc" msgid="6256424995139430823">"Google 會將這項功能用於 Google 即時資訊和 Google 地圖等產品。開啟位置回報功能後，凡是使用這項功能的 Google 產品皆可透過連結的 Google 帳戶儲存及使用裝置最近回報的位置資料。"</string>
-    <string name="location_history_desc" msgid="3861249867748294369">"為這個帳戶開啟定位紀錄後，Google 即可儲存裝置的位置資料，供您的應用程式使用。\n\n舉例來說，Google 地圖可為您規劃路線，Google 即時資訊則可讓您瞭解通勤路況。\n\n您隨時可以關閉定位紀錄，但紀錄內容不會因此遭到刪除。如要查看及管理您的定位紀錄，請造訪 maps.google.com/locationhistory。"</string>
-    <string name="delete_location_history_title" msgid="5804802702252280549">"刪除定位紀錄"</string>
-    <string name="delete_location_history_desc" msgid="4142806827237093397">"這會刪除您透過這個裝置儲存在此 Google 帳戶中的所有定位紀錄，且一旦刪除即無法復原。部分應用程式會因此而停止運作，包括 Google 即時資訊在內。"</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"為這個帳戶開啟定位記錄後，Google 即可儲存裝置的位置資料，供您的應用程式使用。\n\n舉例來說，Google 地圖可為您規劃路線，Google 即時資訊則可讓您瞭解通勤路況。\n\n您隨時可以關閉定位記錄，但記錄內容不會因此遭到刪除。如要查看及管理您的定位記錄，請造訪 maps.google.com/locationhistory。"</string>
+    <string name="delete_location_history_title" msgid="5804802702252280549">"刪除定位記錄"</string>
+    <string name="delete_location_history_desc" msgid="4142806827237093397">"這會刪除您透過這個裝置儲存在此 Google 帳戶中的所有定位記錄，且一旦刪除即無法復原。部分應用程式會因此而停止運作，包括 Google 即時資訊在內。"</string>
     <string name="system_services" msgid="7230571820151215779">"服務"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"服務設定"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"高對比文字"</string>
@@ -483,8 +482,8 @@
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"等待偵錯程式"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"透過 USB 驗證應用程式"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"檢查透過 ADB/ADT 安裝的應用程式是否具有有害行為"</string>
-    <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi 詳細資訊紀錄"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"啟用 Wi-Fi 詳細資訊紀錄設定"</string>
+    <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi 詳細資訊記錄"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"啟用 Wi-Fi 詳細資訊記錄設定"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"顯示觸控回應"</string>
     <string name="system_pointer_location" msgid="2673764026490179227">"指標位置"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"顯示版面配置界限"</string>
@@ -713,8 +712,8 @@
     <string name="manage_keyboards" msgid="1905379263117016795">"管理鍵盤"</string>
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"允許"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"不允許"</string>
-    <string name="usage_access" msgid="1914242907684452328">"使用紀錄存取權"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"具有使用紀錄存取權的應用程式可以追蹤你使用的其他應用程式與頻率，以及你的電信業者、語言設定和其他詳細資料。"</string>
+    <string name="usage_access" msgid="1914242907684452328">"使用記錄存取權"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"具有使用記錄存取權的應用程式可以追蹤你使用的其他應用程式與頻率，以及你的電信業者、語言設定和其他詳細資料。"</string>
     <string name="high_power_apps" msgid="7796096221999495077">"電池效能最佳化"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"最佳化應用程式用電量"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"沒有任何應用程式需要最佳化"</string>
