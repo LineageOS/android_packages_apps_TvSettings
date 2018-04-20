@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"الاقتراحات"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"الإعدادات السريعة"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"الإعدادات العامة"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"رفض الاقتراح"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"كشف عبارة \"Ok Google\""</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"التواصل مع \"مساعد Google\" في أي وقت"</string>
     <string name="header_category_device" msgid="4855983928659541345">"الجهاز"</string>
@@ -78,7 +79,7 @@
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"السماح لخدمة الموقع في Google والتطبيقات الأخرى بالبحث عن شبكات، حتى عند عدم تشغيل Wi-Fi"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"الاتصال بالشبكة"</string>
-    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"التطبيقات المفتوحة مؤخرًا"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"التطبيقات التي تم فتحها مؤخرًا"</string>
     <string name="apps_see_all_apps" msgid="5546179088197139203">"الاطّلاع على كل التطبيقات"</string>
     <string name="apps_permissions_category_title" msgid="4476837368840442313">"الأذونات"</string>
     <string name="all_apps_title" msgid="5330174847732759402">"جميع التطبيقات"</string>
@@ -179,7 +180,7 @@
     <string name="show_dev_already" msgid="7525967300421794483">"لست بحاجة إلى إجراء ذلك، أنت مطوّر برامج فعلاً"</string>
     <string name="device_info_default" msgid="4519181343309136050">"غير معروف"</string>
     <string name="selinux_status" msgid="8000422283341040360">"حالة SELinux"</string>
-    <string name="selinux_status_disabled" msgid="4925733135520787807">"تم التعطيل"</string>
+    <string name="selinux_status_disabled" msgid="4925733135520787807">"غير مفعّل"</string>
     <string name="selinux_status_permissive" msgid="4806219236988993826">"متساهل"</string>
     <string name="selinux_status_enforcing" msgid="8839484208185347776">"فرض"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="6285273598178967613">"تحديثات إضافية للنظام"</string>
@@ -403,7 +404,7 @@
     <string name="location_low_battery_use" msgid="5756040390248358148">"استخدام منخفض للبطارية"</string>
     <string name="location_mode_wifi_description" msgid="2778774510654527264">"استخدام Wi‑Fi لتقدير الموقع"</string>
     <string name="location_status" msgid="3456414279428237558">"حالة الموقع"</string>
-    <string name="location_services" msgid="5441085185119797200">"خدمات الموقع"</string>
+    <string name="location_services" msgid="5441085185119797200">"خدمات الموقع الجغرافي"</string>
     <string name="on" msgid="6683600681314500652">"تشغيل"</string>
     <string name="off" msgid="5264189545064767245">"إيقاف"</string>
     <string name="google_location_services_title" msgid="3382840371861269146">"خدمات الموقع من Google"</string>
@@ -429,7 +430,7 @@
     <string name="display_options" msgid="5504549024985225774">"خيارات العرض"</string>
     <string name="captions_configure" msgid="5537548915977371014">"تهيئة"</string>
     <string name="captions_language" msgid="2835554055388996343">"اللغة"</string>
-    <string name="captions_language_default" msgid="8113979489252033676">"الافتراضية"</string>
+    <string name="captions_language_default" msgid="8113979489252033676">"التلقائية"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"حجم النص"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"شكل الترجمة والشرح"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"خيارات مخصصة"</string>
@@ -440,7 +441,7 @@
     <string name="captions_backgroundshow" msgid="9177987321551275698">"إظهار الخلفية"</string>
     <string name="captions_backgroundcolor" msgid="448518890988125453">"لون الخلفية"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"تعتيم الخلفية"</string>
-    <string name="captioning_preview_text" msgid="72080729155950127">"ستبدو الترجمة والشرح بالشكل التالي"</string>
+    <string name="captioning_preview_text" msgid="72080729155950127">"ستظهر الترجمة والشرح بالشكل التالي"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"تعتيم النص"</string>
     <string name="captions_windowshow" msgid="5716898740522196707">"عرض النافذة"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"لون النافذة"</string>
@@ -467,7 +468,7 @@
     <string name="system_accessibility_tts_output" msgid="8905477795536714590">"تحويل النص إلى الكلام"</string>
     <string name="system_accessibility_tts_engine_config" msgid="5331139536083054552">"تهيئة المحرك"</string>
     <string name="system_speak_passwords" msgid="5264650214879185873">"نطق كلمات المرور"</string>
-    <string name="system_preferred_engine" msgid="8258210139854655567">"المحرك المفضل"</string>
+    <string name="system_preferred_engine" msgid="8258210139854655567">"المحرّك المفضّل"</string>
     <string name="system_speech_rate" msgid="8099856582088545576">"معدل الكلام"</string>
     <string name="system_play_sample" msgid="7187293932891811148">"تشغيل عينة"</string>
     <string name="system_install_voice_data" msgid="8920883886563714355">"تثبيت البيانات الصوتية"</string>
@@ -505,7 +506,7 @@
     <string name="system_window_animation_scale" msgid="3213952676672537856">"حجم الرسوم المتحركة للنافذة"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"حجم الرسوم المتحركة للنقل"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"طول مدة الرسوم المتحركة"</string>
-    <string name="system_strict_mode_enabled" msgid="5728680397806673270">"تم تمكين الوضع المتشدد"</string>
+    <string name="system_strict_mode_enabled" msgid="5728680397806673270">"تفعيل الوضع المتشدد"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"رسم مخطط لعرض GPU"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"تمكين الآثار"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"عدم الاحتفاظ بالأنشطة"</string>

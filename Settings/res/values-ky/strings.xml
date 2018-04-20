@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Сунуштар"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Ыкчам жөндөөлөр"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Жалпы жөндөөлөр"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"Сунушту четке кагуу"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"\"OK Google\" буйругун аныктоо функциясы"</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Google Жардамчы менен каалаган убакта сүйлөшүңүз"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Түзмөк"</string>
@@ -46,7 +47,7 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> көмөкчү жабдык</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> көмөкчү жабдык</item>
     </plurals>
-    <string name="add_account" msgid="4098060223200619258">"Каттоо эсебин кошуу"</string>
+    <string name="add_account" msgid="4098060223200619258">"Аккаунт кошуу"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Каттоо эсебин алып салуу"</string>
     <string name="account_sync" msgid="773808124331714965">"Шайкештештирилген колдонмолорду тандоо"</string>
     <string name="sync_now" msgid="8732244492880016471">"Азыр шайкештештирилсин"</string>
@@ -407,18 +408,18 @@
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Жогорку контрасттагы текст"</string>
     <string name="accessibility_shortcut" msgid="6726361991387558828">"Атайын мүмкүнчүлүктөр функциясынын кыска жолу"</string>
     <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Атайын мүмкүнчүлүктөр функциясынын кыска жолун иштетүү"</string>
-    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Кыска жол кызматы"</string>
-    <string name="accessibility_shortcut_description" msgid="514995490967241715">"Атайын мүмкүнчүлүктөр функциясын пайдалануу үчүн, анын кыска жолу күйгүзүлгөндө, артка жана төмөн жебе баскычын үч секунд коё бербей басып туруңуз."</string>
+    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Кызматты ыкчам иштетүү"</string>
+    <string name="accessibility_shortcut_description" msgid="514995490967241715">"Атайын мүмкүнчүлүктөр функциясын пайдалануу үчүн, ал күйгүзүлгөндө, үндү катуулатып/акырындаткан эки баскычты тең үч секунддай кое бербей басып туруңуз."</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Түшүндүрмөлөр"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Видеого жашыруун түшүндүрмө тексттерди жазуу жөндөөлөрү"</string>
-    <string name="captions_display" msgid="735692527287125548">"Дисплей"</string>
+    <string name="captions_display" msgid="735692527287125548">"Экран"</string>
     <string name="captions_display_on" msgid="1989009878719500520">"Күйүк"</string>
     <string name="captions_display_off" msgid="496953007835201523">"Өчүк"</string>
     <string name="display_options" msgid="5504549024985225774">"Көрсөтүү параметрлери"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Конфигурациялоо"</string>
     <string name="captions_language" msgid="2835554055388996343">"Тил"</string>
     <string name="captions_language_default" msgid="8113979489252033676">"Демейки"</string>
-    <string name="captions_textsize" msgid="4828195509546070971">"Тексттин чоңдугу"</string>
+    <string name="captions_textsize" msgid="4828195509546070971">"Тексттин көлөмү"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Субтитр стили"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Өзгөчөлөштүрүлгөн параметрлер"</string>
     <string name="captions_fontfamily" msgid="6840670778173003604">"Ариптер топтому"</string>
@@ -428,7 +429,7 @@
     <string name="captions_backgroundshow" msgid="9177987321551275698">"Фонду көрсөтүү"</string>
     <string name="captions_backgroundcolor" msgid="448518890988125453">"Фондун түсү"</string>
     <string name="captions_backgroundopacity" msgid="2643722493273126220">"Фондун күңүрттүгү"</string>
-    <string name="captioning_preview_text" msgid="72080729155950127">"Субтитрлер мындай көрүнөт"</string>
+    <string name="captioning_preview_text" msgid="72080729155950127">"Коштомо жазуулар ушундай көрүнөт"</string>
     <string name="captions_textopacity" msgid="5536765490446288641">"Тексттин бүдөмүктүгү"</string>
     <string name="captions_windowshow" msgid="5716898740522196707">"Терезени көрсөтүү"</string>
     <string name="captions_windowcolor" msgid="8986165172260903279">"Терезенин түсү"</string>
@@ -481,12 +482,12 @@
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Мүчүлүштүктөрдү оңдогучту күтүү"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB аркылуу келген колдонмолор текшерилсин"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"ADB/ADT аркылуу орнотулган колдонмолордогу зыянкеч аракеттерди издеп көрүү"</string>
-    <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi‑Fi дайын-даректүү протоколун иштетүү"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Wi‑Fi дайын-даректүү протоколун иштетүү"</string>
+    <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi‑Fi журналы"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Майда-барат маалыматты Wi‑Fi журналына жазууну иштетүү"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"Тийүүлөр көрсөтүлсүн"</string>
     <string name="system_pointer_location" msgid="2673764026490179227">"Көрсөткүчтүн жайгашкан жери"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"Калыптардын чектери көрсөтүлсүн"</string>
-    <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"GPU көрүнүш жаңыртуулары көрсөтүлсүн"</string>
+    <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"Экран жаңыртуусун көрсөтүү"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"Жабдык катмарын көрсөтүү"</string>
     <string name="system_show_gpu_overdraw" msgid="707861254106800199">"GPU ашыкчалары көрсөтүлсүн"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"Экран жаңырууларын көрсөтүү"</string>
