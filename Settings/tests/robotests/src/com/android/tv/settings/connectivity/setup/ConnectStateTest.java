@@ -23,9 +23,10 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.verify;
 import static org.robolectric.shadow.api.Shadow.extract;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.net.IpConfiguration;
 import android.net.wifi.WifiConfiguration;
+
+import androidx.lifecycle.ViewModelProviders;
 
 import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 import com.android.tv.settings.connectivity.util.State;

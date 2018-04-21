@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"ਸੁਝਾਅ"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"ਤਤਕਾਲ ਸੈਟਿੰਗਾਂ"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"ਸਧਾਰਨ ਸੈਟਿੰਗਾਂ"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"ਸੁਝਾਅ ਖਾਰਜ ਕਰੋ"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"\"Ok Google\" ਦੀ ਪਛਾਣ"</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"ਕਿਸੇ ਵੇਲੇ ਵੀ ਆਪਣੇ \'Google ਸਹਾਇਕ\' ਨਾਲ ਗੱਲ ਕਰੋ"</string>
     <string name="header_category_device" msgid="4855983928659541345">"ਡੀਵਾਈਸ"</string>
@@ -183,7 +184,7 @@
     <string name="device_status_title" msgid="1629253652287243543">"ਅਵਸਥਾ"</string>
     <string name="battery_status_title" msgid="2557264957661087826">"ਬੈਟਰੀ ਅਵਸਥਾ"</string>
     <string name="battery_level_title" msgid="100046129713781009">"ਬੈਟਰੀ ਪੱਧਰ"</string>
-    <string name="sim_status_title" msgid="498929467188844611">"SIM ਅਵਸਥਾ"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"ਸਿਮ ਸਥਿਤੀ"</string>
     <string name="imei_information_title" msgid="5208860549282877136">"IMEI ਜਾਣਕਾਰੀ"</string>
     <string name="status_bt_address" msgid="1571721865060122393">"Bluetooth ਪਤਾ"</string>
     <string name="status_up_time" msgid="1674116490191446110">"ਚਾਲੂ ਰਹਿਣ ਦਾ ਸਮਾਂ"</string>
@@ -369,15 +370,15 @@
     <string name="system_set_time" msgid="4661804115501057452">"ਸਮਾਂ ਸੈੱਟ ਕਰੋ"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"ਸਮਾਂ ਜ਼ੋਨ ਸੈੱਟ ਕਰੋ"</string>
     <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
-    <string name="system_set_time_format" msgid="4447882066895090612">"24-ਘੰਟੇ ਵਾਲੀ ਵੰਨਗੀ ਵਰਤੋ"</string>
+    <string name="system_set_time_format" msgid="4447882066895090612">"24-ਘੰਟੇ ਵਾਲਾ ਫਾਰਮੈਟ ਵਰਤੋ"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"ਸਵੈਚਲਿਤ ਮਿਤੀ ਅਤੇ ਸਮਾਂ"</string>
   <string-array name="auto_date_time_entries">
-    <item msgid="4590792581242018007">"ਨੈੱਟਵਰਕ ਵੱਲੋਂ-ਮੁਹੱਈਆ ਕੀਤਾ ਸਮਾਂ ਵਰਤੋ"</item>
+    <item msgid="4590792581242018007">"ਨੈੱਟਵਰਕ ਵੱਲੋਂ ਮੁਹੱਈਆ ਕਰਵਾਇਆ ਸਮਾਂ ਵਰਤੋ"</item>
     <item msgid="3807025813081244357">"ਬੰਦ"</item>
   </string-array>
   <string-array name="auto_date_time_ts_entries">
-    <item msgid="8463479794795616025">"ਨੈੱਟਵਰਕ ਵੱਲੋਂ-ਮੁਹੱਈਆ ਕੀਤਾ ਸਮਾਂ ਵਰਤੋ"</item>
+    <item msgid="8463479794795616025">"ਨੈੱਟਵਰਕ ਵੱਲੋਂ ਮੁਹੱਈਆ ਕਰਵਾਇਆ ਸਮਾਂ ਵਰਤੋ"</item>
     <item msgid="2475903014233987786">"ਟ੍ਰਾਂਸਪੋਰਟ ਸਟ੍ਰੀਮ ਵੱਲੋਂ ਮੁਹੱਈਆ ਕੀਤਾ ਸਮਾਂ ਵਰਤੋ"</item>
     <item msgid="150957081326946463">"ਬੰਦ"</item>
   </string-array>
@@ -484,7 +485,7 @@
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi ਅਡੰਬਰਪੂਰਨ ਲੌਗਿੰਗ"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Wi‑Fi ਅਡੰਬਰਪੂਰਨ ਲੌਗਿੰਗ ਨੂੰ ਯੋਗ ਬਣਾਓ"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"ਸਪੱਰਸ਼ਾਂ ਨੂੰ ਦਿਖਾਓ"</string>
-    <string name="system_pointer_location" msgid="2673764026490179227">"ਪੌਇੰਟਰ ਟਿਕਾਣਾ"</string>
+    <string name="system_pointer_location" msgid="2673764026490179227">"ਪੁਆਇੰਟਰ ਟਿਕਾਣਾ"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"ਖਾਕਾ ਸੀਮਾਵਾਂ ਦਿਖਾਓ"</string>
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"GPU ਦ੍ਰਿਸ਼ ਅੱਪਡੇਟ ਦਿਖਾਓ"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"ਹਾਰਡਵੇਅਰ ਪਰਤ ਦਿਖਾਓ"</string>

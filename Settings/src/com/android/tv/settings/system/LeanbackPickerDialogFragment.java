@@ -19,15 +19,16 @@ package com.android.tv.settings.system;
 import android.app.AlarmManager;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v17.leanback.widget.picker.DatePicker;
-import android.support.v17.leanback.widget.picker.TimePicker;
-import android.support.v17.preference.LeanbackPreferenceDialogFragment;
-import android.support.v7.preference.DialogPreference;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.leanback.preference.LeanbackPreferenceDialogFragment;
+import androidx.leanback.widget.picker.DatePicker;
+import androidx.leanback.widget.picker.TimePicker;
+import androidx.preference.DialogPreference;
 
 import com.android.tv.settings.R;
 

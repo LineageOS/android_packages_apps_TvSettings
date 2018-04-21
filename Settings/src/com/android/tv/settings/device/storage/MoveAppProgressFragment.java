@@ -19,8 +19,9 @@ package com.android.tv.settings.device.storage;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
+
+import androidx.annotation.Nullable;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.ProgressDialogFragment;

@@ -20,7 +20,6 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.transition.Scene;
 import android.transition.Slide;
 import android.transition.Transition;
@@ -29,6 +28,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+
+import androidx.annotation.Nullable;
 
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.instrumentation.SharedPreferencesLogger;

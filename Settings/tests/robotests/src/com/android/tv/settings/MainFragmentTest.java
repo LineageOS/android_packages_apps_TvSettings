@@ -29,8 +29,9 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.support.v7.preference.Preference;
 import android.telephony.SignalStrength;
+
+import androidx.preference.Preference;
 
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.testutils.ShadowUserManager;

@@ -17,7 +17,8 @@
 package com.android.tv.settings.device.apps.specialaccess;
 
 import android.os.Bundle;
-import android.support.annotation.Keep;
+
+import androidx.annotation.Keep;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
