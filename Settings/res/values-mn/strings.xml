@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Зөвлөмж"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Хурдан тохиргоо"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Ерөнхий тохиргоо"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"Зөвлөмжийг үл хэрэгсэх"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"\"ОК Google\" илрүүлэлт"</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Google Туслахтай хүссэн үедээ ярих"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Төхөөрөмж"</string>
@@ -47,13 +48,13 @@
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> дагалдах хэрэгсэл</item>
     </plurals>
     <string name="add_account" msgid="4098060223200619258">"Аккаунт нэмэх"</string>
-    <string name="account_header_remove_account" msgid="3288957118207682685">"Акаунтыг арилгах"</string>
+    <string name="account_header_remove_account" msgid="3288957118207682685">"Бүртгэлийг хасах"</string>
     <string name="account_sync" msgid="773808124331714965">"Синхрон хийгдсэн програмыг сонго"</string>
     <string name="sync_now" msgid="8732244492880016471">"Одоо синк хийх"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Синк хийж байна…"</string>
     <string name="last_synced" msgid="6178494892357077274">"Хамгийн сүүлд синк хийгдсэн <xliff:g id="TIME">%1s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Идэвхгүйжүүлсэн"</string>
-    <string name="account_remove" msgid="4313580520737295272">"Акаунтыг арилгах"</string>
+    <string name="account_remove" msgid="4313580520737295272">"Бүртгэлийг хасах"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Акаунтыг устгах боломжгүй"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
@@ -409,7 +410,7 @@
     <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Хүртээмжийн товчлолыг идэвхжүүлэх"</string>
     <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Товчлолын үйлчилгээ"</string>
     <string name="accessibility_shortcut_description" msgid="514995490967241715">"Товчлолыг асаасан үед буцах болон доод товчлуурыг хамтад нь 3 секунд дарж хүртээмжийн онцлогийг эхлүүлэх боломжтой."</string>
-    <string name="accessibility_captions" msgid="6133896463407851079">"Титрүүд"</string>
+    <string name="accessibility_captions" msgid="6133896463407851079">"Тайлбар"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Видеон дээрх текст титрийн тохиргоо"</string>
     <string name="captions_display" msgid="735692527287125548">"Дэлгэц"</string>
     <string name="captions_display_on" msgid="1989009878719500520">"Идэвхтэй"</string>
@@ -419,7 +420,7 @@
     <string name="captions_language" msgid="2835554055388996343">"Хэл"</string>
     <string name="captions_language_default" msgid="8113979489252033676">"Үндсэн"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Текстийн хэмжээ"</string>
-    <string name="captions_captionstyle" msgid="7423638523487868230">"Титрийн төрөл"</string>
+    <string name="captions_captionstyle" msgid="7423638523487868230">"Тайлбарын загвар"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Тусгай сонголтууд"</string>
     <string name="captions_fontfamily" msgid="6840670778173003604">"Фонтын бүлэг"</string>
     <string name="captions_textcolor" msgid="3233568269335050287">"Текстийн өнгө"</string>
@@ -478,7 +479,7 @@
     <string name="system_usb_debugging" msgid="3777895294421924323">"USB дебаг"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"Хуурамч байршлыг зөвшөөрөх"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"Дебаг апп сонгоно уу"</string>
-    <string name="system_wait_for_debugger" msgid="4007354935701089555">"Согог засагчийг хүлээх"</string>
+    <string name="system_wait_for_debugger" msgid="4007354935701089555">"Дебаг-г хүлээх"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Апп-г USB-р тулгах"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"ADB/ADT-р суулгасан апп-уудыг хорлонтой авиртай эсэхийг шалгах."</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi дэлгэрэнгүй лог"</string>
@@ -504,7 +505,7 @@
     <string name="system_desc_hdmi_optimization" msgid="4400727262768931480">"Ялгарал болон фрэймийн хурдыг хамгийн сайнаар дэлгэцийг тохируулах. Энэ нь зөвхөн Ultra HD дэлгэцүүдэд нөлөөлнө. Энэ тохиргоог өөрчилбөл төхөөрөмжөө дахиж асаах шаардлагатай."</string>
     <string name="system_desc_bt_hci_log" msgid="4219265203570411773">"Bluetooth HCI snoop логийг идэвхжүүлэх"</string>
     <string name="system_desc_usb_debugging" msgid="5168830368191788731">"USB холбогдсон үед debug горимд шилжинэ"</string>
-    <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"Согог засагдсан аппликейшн ажиллахын өмнө согог засагчийг хавсаргагдахыг хүлээнэ"</string>
+    <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"Дебаг хийгдсэн апп гүйцэтгэхийнхээ өмнө дебаг хийхийг хавсаргахыг хүлээнэ"</string>
     <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"Клипийн зах, хязгаар зэргийг харуулах"</string>
     <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"GPU-тай зурагдсан үед цонхнуудын доторхыг гялс харуулна"</string>
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"Техник хангамжууд шинэчлэх үед давхаргыг анивчуулах"</string>
@@ -698,7 +699,7 @@
     <string name="keep_settings" msgid="6798327196645732517">"Битгий өөрчил"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Зөвшөөрлүүд"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Апп зөвшөөрөл"</string>
-    <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%2$d</xliff:g>-аас <xliff:g id="COUNT_0">%1$d</xliff:g> апп зөвшөөрсөн"</string>
+    <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%2$d</xliff:g>-с <xliff:g id="COUNT_0">%1$d</xliff:g> аппыг зөвшөөрсөн"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"Bluetooth зөвшөөрөл хүсэх"</string>
     <string name="security_patch" msgid="2131617390189164481">"Android аюулгүй байдлын засварын түвшин"</string>
     <string name="choose_application" msgid="5662960665577780353">"Аппликэйшн сонгох"</string>
