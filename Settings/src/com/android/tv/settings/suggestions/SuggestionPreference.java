@@ -62,16 +62,13 @@ public class SuggestionPreference extends Preference {
     public void onBindViewHolder(final PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
 
-        holder.itemView.setOnClickListener(v -> {
-            try {
-                mSuggestion.getPendingIntent().send();
-                mSuggestionControllerMixin.launchSuggestion(mSuggestion);
-                mMetricsFeatureProvider.action(getContext(),
-                        MetricsEvent.ACTION_SETTINGS_SUGGESTION, mId);
-            } catch (PendingIntent.CanceledException e) {
-                Log.w(TAG, "Failed to start suggestion " + mSuggestion.getTitle());
-            }
-        });
+        View containerView = holder.itemView.findViewById(R.id.main_container);
+        containerView.setOnClickListener(v -> launchSuggestion());
+
+        // In accessibility mode, item_container get focused instead of main_container,
+        // so we need to add the same listener to item_container.
+        View itemContainerView = holder.itemView.findViewById(R.id.item_container);
+        itemContainerView.setOnClickListener(v -> launchSuggestion());
 
         View dismissButton = holder.itemView.findViewById(R.id.dismiss_button);
         dismissButton.setOnClickListener(v -> {
@@ -83,6 +80,17 @@ public class SuggestionPreference extends Preference {
 
         mMetricsFeatureProvider.action(getContext(), MetricsEvent.ACTION_SHOW_SETTINGS_SUGGESTION,
                 mId);
+    }
+
+    private void launchSuggestion() {
+        try {
+            mSuggestion.getPendingIntent().send();
+            mSuggestionControllerMixin.launchSuggestion(mSuggestion);
+            mMetricsFeatureProvider.action(getContext(),
+                    MetricsEvent.ACTION_SETTINGS_SUGGESTION, mId);
+        } catch (PendingIntent.CanceledException e) {
+            Log.w(TAG, "Failed to start suggestion " + mSuggestion.getTitle());
+        }
     }
 
     public interface Callback {
