@@ -275,19 +275,8 @@ public class MainFragment extends SettingsPreferenceFragment implements
         final Set<BluetoothDevice> bondedDevices = mBtAdapter.getBondedDevices();
         if (bondedDevices.size() == 0) {
             mHasBtAccessories = false;
-            accessoryPreference.setSummary(
-                    R.string.remotes_and_accessories_category_summary_no_bluetooth_device);
         } else {
             mHasBtAccessories = true;
-            if (bondedDevices.size() == 1) {
-                BluetoothDevice device = bondedDevices.iterator().next();
-                accessoryPreference.setSummary(device.getAliasName());
-            } else {
-                accessoryPreference.setSummary(getResources().getQuantityString(
-                        R.plurals.remotes_and_accessories_category_summary,
-                        bondedDevices.size(),
-                        bondedDevices.size()));
-            }
         }
     }
 
