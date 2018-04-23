@@ -25,6 +25,7 @@ import android.widget.LinearLayout;
 
 import com.android.tv.settings.R;
 
+
 /**
  * View for settings suggestion.
  * Handles dismiss button focus behavior.
@@ -50,8 +51,13 @@ public class SuggestionItemView extends LinearLayout {
         mContainer = findViewById(R.id.main_container);
         mIcon = findViewById(android.R.id.icon);
         mItemContainer = findViewById(R.id.item_container);
+
         int translateX = getResources().getDimensionPixelSize(
                 R.dimen.suggestion_item_change_focus_translate_x);
+
+        if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+            translateX = -translateX;
+        }
 
         ObjectAnimator containerSlideOut = ObjectAnimator.ofFloat(mContainer,
                 View.TRANSLATION_X, 0, translateX);
@@ -79,8 +85,16 @@ public class SuggestionItemView extends LinearLayout {
 
     @Override
     public View focusSearch(View focused, int direction) {
-        if (focused.getId() == R.id.dismiss_button && direction == ViewGroup.FOCUS_LEFT) {
-            return getRootView();
+        boolean isRTL =
+                getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL;
+        if (focused.getId() == R.id.dismiss_button
+                && ((isRTL && direction == ViewGroup.FOCUS_RIGHT)
+                || (!isRTL && direction == ViewGroup.FOCUS_LEFT)))  {
+            return mContainer;
+        } else if (focused.getId() == R.id.main_container
+                && ((isRTL && direction == ViewGroup.FOCUS_LEFT)
+                || (!isRTL && direction == ViewGroup.FOCUS_RIGHT))) {
+            return  mDissmissButton;
         }
         return super.focusSearch(focused, direction);
     }
