@@ -33,7 +33,6 @@ import androidx.preference.Preference;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.applications.DefaultAppInfo;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
-import com.android.settingslib.wrapper.PackageManagerWrapper;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -64,7 +63,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
 
     private Preference mSoundsPref;
     private boolean mInputSettingNeeded;
-    private PackageManagerWrapper mPm;
+    private PackageManager mPm;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -97,7 +96,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mPm = new PackageManagerWrapper(context.getPackageManager());
+        mPm = context.getPackageManager();
     }
 
     @Override
