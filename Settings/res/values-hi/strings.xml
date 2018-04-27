@@ -67,8 +67,8 @@
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"ईथरनेट जोड़ा गया"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"किसी नेटवर्क से नहीं जुड़े हैं"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"वाई-फ़ाई बंद है"</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"स्कैनिंग हमेशा उपलब्ध"</string>
-    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Google की स्थान सेवा और अन्य ऐप्लिकेशन को नेटवर्क खोजने दें, भले ही Wi-Fi बंद हो"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"स्कैनिंग की सुविधा हमेशा मौजूद"</string>
+    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Google की जगह की जानकारी सेवा और दूसरे ऐप्लिकेशन को नेटवर्क खोजने दें, भले ही Wi-Fi बंद हो"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"वाई-फ़ाई"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"नेटवर्क से कनेक्ट करें"</string>
     <string name="apps_recently_used_category_title" msgid="5254492409677346900">"हाल ही में खोले गए ऐप्लिकेशन"</string>
@@ -81,9 +81,9 @@
     <string name="all_apps_disabled" msgid="2016067533586741345">"बंद किए गए ऐप्लिकेशन"</string>
     <string name="device_daydream" msgid="3354366974209179614">"स्क्रीन सेवर"</string>
     <string name="device_display" msgid="101455384386372747">"प्रदर्शन"</string>
-    <string name="device_sound" msgid="9214182566287657481">"ध्वनि"</string>
+    <string name="device_sound" msgid="9214182566287657481">"आवाज़"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"सराउंड साउंड"</string>
-    <string name="device_sound_effects" msgid="7793281745920228622">"सिस्टम ध्वनियां"</string>
+    <string name="device_sound_effects" msgid="7793281745920228622">"सिस्टम की आवाज़ें"</string>
     <string name="device_apps" msgid="1971794537385509294">"ऐप्लिकेशन"</string>
     <string name="device_storage" msgid="5536683600091277826">"मेमोरी"</string>
     <string name="device_reset" msgid="1885840356489458285">"रीसेट करें"</string>
@@ -206,7 +206,7 @@
     <string name="title_internet_connection" msgid="8710084774588697646">"इंटरनेट कनेक्शन"</string>
     <string name="connected" msgid="7563100162902079938">"कनेक्ट है"</string>
     <string name="not_connected" msgid="6858480380326923017">"कनेक्ट नहीं है"</string>
-    <string name="wifi_setting_header_other_options" msgid="3638677601577777216">"अन्य विकल्प"</string>
+    <string name="wifi_setting_header_other_options" msgid="3638677601577777216">"दूसरे विकल्प"</string>
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"सभी देखें"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"कम देखें"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"उपलब्ध नेटवर्क"</string>
@@ -712,28 +712,28 @@
     <string name="manage_keyboards" msgid="1905379263117016795">"कीबोर्ड प्रबंधित करें"</string>
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"अनुमति है"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"अनुमति नहीं है"</string>
-    <string name="usage_access" msgid="1914242907684452328">"उपयोग का एक्‍सेस"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"उपयोग का एक्‍सेस किसी ऐप्लिकेशन को यह ट्रैक करने देता है कि आप कौन से अन्य ऐप्लिकेशन का उपयोग कर रहे हैं और आप उनका उपयोग कितनी बार करते हैं, साथ ही आपके वाहक, भाषा सेटिंग और अन्‍य जानकारी भी ट्रैक करने देता है."</string>
+    <string name="usage_access" msgid="1914242907684452328">"उपयोग का डेटा एक्सेस करना"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"उपयोग का डेटा एक्सेस करने की अनुमति मिलने पर कोई ऐप्लिकेशन यह ट्रैक कर सकता है कि आप कौन से दूसरे ऐप्लिकेशन इस्तेमाल कर रहे हैं और आप उनका इस्तेमाल कितनी बार करते हैं. साथ ही वह आपके कैरियर, भाषा सेटिंग और दूसरी जानकारी भी पता लगा पाता है."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"बैटरी का ऑप्टिमाइज़ेशन"</string>
-    <string name="high_power_apps_description" msgid="1990016812115792282">"एेप्लिकेशन की ओर से इस्तेमाल हो रही बैटरी ऑप्टिमाइज़ करें"</string>
+    <string name="high_power_apps_description" msgid="1990016812115792282">"ऐप्लिकेशन के बैटरी इस्तेमाल को ऑप्टिमाइज़ करें"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"किसी भी ऐप्लिकेशन को ऑप्टिमाइज़ करने की ज़रूरत नहीं है"</string>
     <string name="high_power_on" msgid="7725180078784796673">"ऑप्‍टिमाइज़ नहीं किया गया"</string>
     <string name="high_power_off" msgid="308272752152871252">"बैटरी का इस्तेमाल ऑप्टिमाइज़ किया जा रहा है"</string>
     <string name="high_power_system" msgid="7815843517656137656">"बैटरी ऑप्टिमाइज़ेशन उपलब्ध नहीं है"</string>
-    <string name="manage_notification_access_title" msgid="2051765294087620434">"सूचना देखने की इजाज़त"</string>
+    <string name="manage_notification_access_title" msgid="2051765294087620434">"सूचना देखने की मंज़ूरी"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"इंस्टॉल किए गए किसी भी ऐप्लिकेशन ने सूचना देखने की इजाज़त नहीं मांगी है."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"ये ऐप्लिकेशन संपर्क नामों और आपको मिलने वाले मैसेज जैसी निजी जानकारी के साथ-साथ सभी सूचनाओं को पढ़ सकेंगे. ये सूचनाओं को खारिज कर सकेंगे और उनमें शामिल कार्रवाई बटनों को ट्रिगर भी कर सकेंगे."</string>
-    <string name="system_alert_window_settings" msgid="2069031369694448339">"दूसरे ऐप्लिकेशन के ऊपर दिखाएं"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"दूसरे ऐप्लिकेशन के ऊपर दिखने की मंज़ूरी दें"</string>
+    <string name="system_alert_window_settings" msgid="2069031369694448339">"दूसरे ऐप्लिकेशन के ऊपर दिखाना"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"दूसरे ऐप्लिकेशन के ऊपर दिखने की मंज़ूरी"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"किसी ऐप्लिकेशन को इस्तेमाल किए जा रहे दूसरे सभी ऐप्लिकेशन के ऊपर दिखाई देने की मंज़ूरी देना. इससे यह ऐप्लिकेशन उन ऐप्लिकेशन को इस्तेमाल करने में परेशानी कर सकता है या उनके दिखाई देने या काम करने के तरीके में बदलाव कर सकता है."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"सिस्‍टम सेटिंग में बदलाव करना"</string>
-    <string name="write_settings_title" msgid="8750406725746598710">"सिस्टम सेटिंग में बदलाव कर सकते हैं"</string>
-    <string name="write_settings_description" msgid="2765037074460395437">"यह अनुमति मिलने के बाद कोई ऐप्लिकेशन, सिस्टम सेटिंग में बदलाव कर सकता है."</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"सिस्टम सेटिंग में बदलाव करने की मंज़ूरी"</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"यह मंज़ूरी मिलने के बाद कोई ऐप्लिकेशन, सिस्टम सेटिंग में बदलाव कर सकता है."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"हां"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"नहीं"</string>
     <string name="picture_in_picture_title" msgid="7738692876349058">"पिक्चर में पिक्चर से जुड़ी सेटिंग"</string>
-    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"पिक्चर में पिक्चर सुविधा चालू करने की मंज़ूरी दें"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"पिक्चर में पिक्चर सुविधा चालू करने की मंज़ूरी"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"डिवाइस में इंस्टॉल किया गया कोई भी ऐप्लिकेशन पिक्चर में पिक्चर सुविधा के साथ काम नहीं करता"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"कोई ऐप्लिकेशन खुला होने पर या जब आप उसे इस्तेमाल करना बंद कर दें (उदाहरण के लिए, कोई वीडियो देखने के लिए), ऐसे में ऐप्लिकेशन को पिक्चर में पिक्चर विंडो बनाने की मंज़ूरी दें. यह विंडो उन ऐप्लिकेशन के ऊपर दिखाई देती है जिनका आप इस्तेमाल कर रहे हैं."</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"कोई ऐप्लिकेशन खुला होने पर या जब आप उसका इस्तेमाल करना बंद कर चुके हों (उदाहरण के लिए, कोई वीडियो देखने के लिए), ऐप्लिकेशन को पिक्चर में पिक्चर विंडो बनाने की मंज़ूरी दें. इससे जब आप कोई और ऐप्लिकेशन इस्तेमाल कर रहे होंगे, तो उसके ऊपर एक विंडो बन जाएगी, जिसमें आप पहले वाले ऐप्लिकेशन का इस्तेमाल कर सकेंगे."</string>
     <string name="special_access" msgid="3513811566600299998">"ऐप्लिकेशन को खास अनुमति दें"</string>
 </resources>
