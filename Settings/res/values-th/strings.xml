@@ -489,11 +489,11 @@
     <string name="system_show_layout_bounds" msgid="645732439882291943">"แสดงขอบของการจัดวาง"</string>
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"แสดงการอัปเดตมุมมอง GPU"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"แสดงเลเยอร์ฮาร์ดแวร์"</string>
-    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"แสดงการใช้ GPU มากเกินไป"</string>
+    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"แสดงให้เห็นการแสดงพิกเซลซ้ำด้วย GPU"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"แสดงการอัปเดตพื้นผิว"</string>
-    <string name="system_window_animation_scale" msgid="3213952676672537856">"ขนาดหน้าต่างภาพเคลื่อนไหว"</string>
-    <string name="system_transition_animation_scale" msgid="2964817709721784757">"อัตราการสลับภาพเคลื่อนไหว"</string>
-    <string name="system_animator_duration_scale" msgid="7413512458963984521">"ความเร็วตามผู้สร้างกำหนด"</string>
+    <string name="system_window_animation_scale" msgid="3213952676672537856">"อัตราการเคลื่อนไหวของหน้าต่าง"</string>
+    <string name="system_transition_animation_scale" msgid="2964817709721784757">"อัตราการเคลื่อนไหวของการเปลี่ยนภาพ"</string>
+    <string name="system_animator_duration_scale" msgid="7413512458963984521">"อัตราความเร็วตามตัวสร้างภาพเคลื่อนไหว"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"เปิดใช้งานโหมดเข้มงวด"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"การแสดงผล GPU ตามโปรไฟล์"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"เปิดใช้งานร่องรอย"</string>
@@ -511,7 +511,7 @@
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"แสดงเลเยอร์ฮาร์ดแวร์เป็นสีเขียวเมื่อมีการอัปเดต"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"จากดีที่สุดไปหาแย่ที่สุด: ฟ้า เขียว แดงอ่อน แดง"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"แสดงพื้นผิวหน้าต่างทั้งหมดเมื่อมีการอัปเดต"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"แสดงหน้าจอเมื่อแอปทำงานในชุดข้อความหลักนาน"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"กะพริบหน้าจอเมื่อแอปทำงานในชุดข้อความหลักนาน"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"วัดเวลาที่ใช้แสดงผลใน adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"เปิด"</string>
     <string name="action_off_title" msgid="3157728958166559966">"ปิด"</string>
@@ -537,12 +537,12 @@
     <string name="enable_opengl_traces_none" msgid="6074804146602749420">"ไม่มี"</string>
   <string-array name="animation_scale_entries">
     <item msgid="7477134110460336436">"ปิดภาพเคลื่อนไหว"</item>
-    <item msgid="8327257151534006014">"ภาพเคลื่อนไหวขนาด 0.5 เท่า"</item>
-    <item msgid="2105786719544636780">"ภาพเคลื่อนไหวขนาด 1 เท่า"</item>
-    <item msgid="5290554136790336403">"ภาพเคลื่อนไหวขนาด 1.5 เท่า"</item>
-    <item msgid="1232929590838082483">"ภาพเคลื่อนไหวขนาด 2 เท่า"</item>
-    <item msgid="1889239009419613796">"ภาพเคลื่อนไหวขนาด 5 เท่า"</item>
-    <item msgid="7268894934484547297">"ภาพเคลื่อนไหวขนาด 10 เท่า"</item>
+    <item msgid="8327257151534006014">"อัตราการเคลื่อนไหว 0.5 เท่า"</item>
+    <item msgid="2105786719544636780">"อัตราการเคลื่อนไหว 1 เท่า"</item>
+    <item msgid="5290554136790336403">"อัตราการเคลื่อนไหว 1.5 เท่า"</item>
+    <item msgid="1232929590838082483">"อัตราการเคลื่อนไหว 2 เท่า"</item>
+    <item msgid="1889239009419613796">"อัตราการเคลื่อนไหว 5 เท่า"</item>
+    <item msgid="7268894934484547297">"อัตราการเคลื่อนไหว 10 เท่า"</item>
   </string-array>
     <string name="track_frame_time_off" msgid="5050360262132715904">"ปิด"</string>
     <string name="track_frame_time_bars" msgid="4470692840177888414">"เป็นแถบบนหน้าจอ"</string>

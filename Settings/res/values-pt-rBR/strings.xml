@@ -41,7 +41,7 @@
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"Rede e Internet"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"Apps"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"Preferências do dispositivo"</string>
-    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"Controles remotos e acessórios"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"Controle remoto e acessórios"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"Nenhum dispositivo Bluetooth conectado"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> acessório</item>
@@ -67,7 +67,7 @@
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethernet conectada"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Nenhuma rede conectada"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"O Wi-Fi está desativado"</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Verificação sempre disponível"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Busca sempre ativada"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Permitir que o serviço de localização do Google e outros apps procurem redes, mesmo que o Wi-Fi esteja desligado"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"Conectar-se à rede"</string>
@@ -713,27 +713,27 @@
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Permitido"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Não permitido"</string>
     <string name="usage_access" msgid="1914242907684452328">"Acesso ao uso"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"O acesso ao uso permite que um app rastreie que outros apps você está usando e com que frequência, bem como sua operadora, as configurações de idioma e outros detalhes."</string>
-    <string name="high_power_apps" msgid="7796096221999495077">"Otimização de energia"</string>
-    <string name="high_power_apps_description" msgid="1990016812115792282">"Otimize o uso de energia dos apps"</string>
-    <string name="high_power_apps_empty" msgid="1355906551507153470">"Nenhum app precisa de otimização"</string>
-    <string name="high_power_on" msgid="7725180078784796673">"Não otimizado"</string>
-    <string name="high_power_off" msgid="308272752152871252">"Otimizando o uso de energia"</string>
-    <string name="high_power_system" msgid="7815843517656137656">"Otimização de energia não disponível"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"O acesso ao uso permite que um app monitore que outros apps você está usando e com que frequência, bem como sua operadora, as configurações de idioma e outros detalhes."</string>
+    <string name="high_power_apps" msgid="7796096221999495077">"Economia de energia"</string>
+    <string name="high_power_apps_description" msgid="1990016812115792282">"Economiza o uso de energia dos apps"</string>
+    <string name="high_power_apps_empty" msgid="1355906551507153470">"Nenhum app precisa de economia"</string>
+    <string name="high_power_on" msgid="7725180078784796673">"Sem economia"</string>
+    <string name="high_power_off" msgid="308272752152871252">"Economizando o uso de energia"</string>
+    <string name="high_power_system" msgid="7815843517656137656">"Economia de energia não disponível"</string>
     <string name="manage_notification_access_title" msgid="2051765294087620434">"Acesso a notificações"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"Nenhum app instalado solicitou acesso a notificações."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Esses apps poderão ler todas as notificações, incluindo informações pessoais, como nomes de contato e o texto das mensagens que você recebe. Eles também conseguirão dispensar notificações ou acionar botões de ação contidos neles."</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Sobrepor a outros apps"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"Permitir sobreposição a outros apps"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"Permite sobrepor a outros apps"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Permite que um app seja sobreposto a outros apps que você esteja usando. Ele pode interferir no uso que você faz desses apps ou alterar a forma como eles aparecem ou se comportam."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Modificar config. do sistema"</string>
-    <string name="write_settings_title" msgid="8750406725746598710">"Pode modificar configurações do sistema"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Muda configurações do sistema"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"Permite que um app modifique configurações do sistema."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"Sim"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"Não"</string>
     <string name="picture_in_picture_title" msgid="7738692876349058">"Picture-in-picture"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Permitir picture-in-picture"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Nenhum dos apps instalados é compatível com picture-in-picture"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Permite que apps criem uma janela picture-in-picture enquanto o app é aberto ou depois que você sai dele (por exemplo, para continuar a assistir um vídeo). Essa janela é sobreposta a outros apps que você está usando."</string>
-    <string name="special_access" msgid="3513811566600299998">"Acesso especial ao app"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Permite que apps abram uma janela picture-in-picture enquanto o app está aberto ou depois que você sai dele (por exemplo, para continuar a assistir um vídeo). Essa janela é sobreposta a outros apps que você esteja usando."</string>
+    <string name="special_access" msgid="3513811566600299998">"Acesso especial a apps"</string>
 </resources>
