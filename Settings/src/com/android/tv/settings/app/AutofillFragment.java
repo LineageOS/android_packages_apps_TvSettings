@@ -31,7 +31,6 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.applications.DefaultAppInfo;
-import com.android.settingslib.wrapper.PackageManagerWrapper;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
@@ -52,7 +51,7 @@ public class AutofillFragment extends SettingsPreferenceFragment {
 
     private static final String KEY_AUTOFILL_SETTINGS_PREFIX = "autofillSettings:";
 
-    private PackageManagerWrapper mPm;
+    private PackageManager mPm;
 
     /**
      * @return New fragment instance
@@ -80,7 +79,7 @@ public class AutofillFragment extends SettingsPreferenceFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mPm = new PackageManagerWrapper(context.getPackageManager());
+        mPm = context.getPackageManager();
     }
 
     @Override

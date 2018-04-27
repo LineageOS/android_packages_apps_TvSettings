@@ -33,7 +33,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.android.settingslib.applications.DefaultAppInfo;
-import com.android.settingslib.wrapper.PackageManagerWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +50,7 @@ public class AutofillHelper {
      */
     @NonNull
     public static List<DefaultAppInfo> getAutofillCandidates(@NonNull Context context,
-            @NonNull PackageManagerWrapper pm, int myUserId) {
+            @NonNull PackageManager pm, int myUserId) {
         final List<DefaultAppInfo> candidates = new ArrayList<>();
         final List<ResolveInfo> resolveInfos = pm.queryIntentServices(
                 AUTOFILL_PROBE, PackageManager.GET_META_DATA);
@@ -94,7 +93,7 @@ public class AutofillHelper {
      */
     @Nullable
     public static Intent getAutofillSettingsIntent(@NonNull Context context,
-            @NonNull PackageManagerWrapper pm, @Nullable DefaultAppInfo appInfo) {
+            @NonNull PackageManager pm, @Nullable DefaultAppInfo appInfo) {
         if (appInfo == null || appInfo.componentName == null) {
             return null;
         }
