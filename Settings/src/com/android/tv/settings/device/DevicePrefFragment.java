@@ -176,7 +176,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
                     final Context targetContext = getContext()
                             .createPackageContext(info.resolvePackageName != null
                                     ? info.resolvePackageName : info.activityInfo.packageName, 0);
-                    castPref.setIcon(targetContext.getDrawable(info.iconResourceId));
+                    castPref.setIcon(targetContext.getDrawable(info.getIconResource()));
                 } catch (Resources.NotFoundException | PackageManager.NameNotFoundException
                         | SecurityException e) {
                     Log.e(TAG, "Cast settings icon not found", e);
