@@ -25,22 +25,22 @@ import static org.mockito.Mockito.verify;
 import static org.robolectric.Shadows.shadowOf;
 import static org.robolectric.shadow.api.Shadow.extract;
 
-import android.Manifest;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.content.pm.ServiceInfo;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.support.v7.preference.Preference;
 
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
+import com.android.tv.settings.R;
 import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 import com.android.tv.settings.testutils.ShadowUserManager;
 import com.android.tv.settings.testutils.TvShadowActivityThread;
+import com.android.tv.settings.testutils.Utils;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -139,33 +139,15 @@ public class DevicePrefFragmentTest {
     public void testUpdateAutofillSettings_noCandiate() {
         final Preference autofillPref = mock(Preference.class);
         doReturn(autofillPref).when(mDevicePrefFragment).findPreference(
-                DevicePrefFragment.KEY_AUTOFILL);
+                DevicePrefFragment.KEY_KEYBOARD);
 
-        mDevicePrefFragment.updateAutofillSettings();
+        mDevicePrefFragment.updateKeyboardAutofillSettings();
 
-        verify(autofillPref, atLeastOnce()).setVisible(false);
-        verify(autofillPref, never()).setVisible(true);
-    }
+        verify(autofillPref, atLeastOnce()).setTitle(R.string.system_keyboard);
+        verify(autofillPref, never()).setTitle(R.string.system_keyboard_autofill);
 
-    static void addAutofill(String packageName, String className) {
-        final ShadowPackageManager shadowPackageManager = shadowOf(
-                RuntimeEnvironment.application.getPackageManager());
-        final Intent intent = new Intent("android.service.autofill.AutofillService");
-        final ResolveInfo resolveInfo = new ResolveInfo();
-        resolveInfo.resolvePackageName = packageName;
-        final ServiceInfo serviceInfo = new ServiceInfo();
-        serviceInfo.permission = Manifest.permission.BIND_AUTOFILL_SERVICE;
-        serviceInfo.packageName = packageName;
-        serviceInfo.name = className;
-        resolveInfo.serviceInfo = serviceInfo;
-        final ApplicationInfo applicationInfo = new ApplicationInfo();
-        applicationInfo.flags = ApplicationInfo.FLAG_SYSTEM;
-        serviceInfo.applicationInfo = applicationInfo;
-        final PackageInfo autofillPackageInfo = new PackageInfo();
-        autofillPackageInfo.packageName = packageName;
-        autofillPackageInfo.applicationInfo = applicationInfo;
-        shadowPackageManager.addPackage(autofillPackageInfo);
-        shadowPackageManager.addResolveInfoForIntent(intent, resolveInfo);
+        verify(autofillPref, never()).setSummary("com.test.AutofillPackage.MyService");
+        verify(autofillPref, atLeastOnce()).setSummary("");
     }
 
     @Config(shadows = TvShadowActivityThread.class)
@@ -173,18 +155,18 @@ public class DevicePrefFragmentTest {
     public void testUpdateAutofillSettings_selected() {
         final Preference autofillPref = mock(Preference.class);
         doReturn(autofillPref).when(mDevicePrefFragment).findPreference(
-                DevicePrefFragment.KEY_AUTOFILL);
+                DevicePrefFragment.KEY_KEYBOARD);
 
-        addAutofill("com.test.AutofillPackage", "com.test.AutofillPackage.MyService");
+        Utils.addAutofill("com.test.AutofillPackage", "com.test.AutofillPackage.MyService");
 
         ShadowSettings.ShadowGlobal.putString(mDevicePrefFragment.getContext().getContentResolver(),
                 Settings.Secure.AUTOFILL_SERVICE,
                 "com.test.AutofillPackage/com.test.AutofillPackage.MyService");
 
-        mDevicePrefFragment.updateAutofillSettings();
+        mDevicePrefFragment.updateKeyboardAutofillSettings();
 
-        verify(autofillPref, atLeastOnce()).setVisible(true);
-        verify(autofillPref, never()).setVisible(false);
+        verify(autofillPref, atLeastOnce()).setTitle(R.string.system_keyboard_autofill);
+        verify(autofillPref, never()).setTitle(R.string.system_keyboard);
         // unfortunately we are unable to test lableRes as
         // 1. ShadowPackageManager did not implement getText(int textResId)
         // 2. Mock up serviceInfo.loadLabel() does not work either as the package manager is calling
@@ -197,17 +179,19 @@ public class DevicePrefFragmentTest {
     public void testUpdateAutofillSettings_selectedNone() {
         final Preference autofillPref = mock(Preference.class);
         doReturn(autofillPref).when(mDevicePrefFragment).findPreference(
-                DevicePrefFragment.KEY_AUTOFILL);
+                DevicePrefFragment.KEY_KEYBOARD);
 
-        addAutofill("com.test.AutofillPackage", "com.test.AutofillPackage.MyService");
+        Utils.addAutofill("com.test.AutofillPackage", "com.test.AutofillPackage.MyService");
 
         ShadowSettings.ShadowGlobal.putString(mDevicePrefFragment.getContext().getContentResolver(),
                 Settings.Secure.AUTOFILL_SERVICE, null);
 
-        mDevicePrefFragment.updateAutofillSettings();
+        mDevicePrefFragment.updateKeyboardAutofillSettings();
 
-        verify(autofillPref, atLeastOnce()).setVisible(true);
-        verify(autofillPref, never()).setVisible(false);
-        verify(autofillPref, atLeastOnce()).setSummary(null);
+        verify(autofillPref, atLeastOnce()).setTitle(R.string.system_keyboard_autofill);
+        verify(autofillPref, never()).setTitle(R.string.system_keyboard);
+
+        verify(autofillPref, never()).setSummary("com.test.AutofillPackage.MyService");
+        verify(autofillPref, atLeastOnce()).setSummary("");
     }
 }

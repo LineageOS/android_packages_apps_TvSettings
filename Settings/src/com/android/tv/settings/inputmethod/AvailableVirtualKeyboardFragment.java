@@ -30,6 +30,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.Keep;
 import android.support.v7.preference.PreferenceScreen;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
@@ -48,6 +49,7 @@ import java.util.List;
 /**
  * Fragment for enabling/disabling virtual keyboard IMEs
  */
+@Keep
 public final class AvailableVirtualKeyboardFragment extends SettingsPreferenceFragment
         implements InputMethodPreference.OnSavePreferenceListener {
 
