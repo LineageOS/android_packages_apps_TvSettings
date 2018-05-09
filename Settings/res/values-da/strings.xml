@@ -124,8 +124,8 @@
     <string name="bluetooth_confirm_passkey_msg" msgid="7031117992819855434">"Hvis du vil parre med: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, skal du sørge for, at den viser denne adgangsnøgle: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8234127565393932499">"Fra: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Vil du parre med denne enhed?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="8951451728250058901">"Sådan parrer du med: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;br&gt;Skriv følgende på den: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>, og tryk derefter på Return eller Enter."</string>
-    <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"Sådan parrer du med: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Indtast enhedens påkrævede pinkode:"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="7980787196089653577">"Sådan parrer du med: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Indtast enhedens påkrævede adgangsnøgle:"</string>
+    <string name="bluetooth_enter_pin_msg" msgid="7443458826667686394">"Sådan parrer du med: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Angiv enhedens påkrævede pinkode:"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="7980787196089653577">"Sådan parrer du med: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Angiv enhedens påkrævede adgangsnøgle:"</string>
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Normalt 0000 eller 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"Par"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"Annuller"</string>
@@ -202,7 +202,7 @@
     <string name="title_mac_address" msgid="3428401680168668544">"MAC-adresse"</string>
     <string name="title_signal_strength" msgid="205478650262078041">"Signalstyrke"</string>
     <string name="title_ip_address" msgid="4533523100923004711">"IP-adresse"</string>
-    <string name="title_ssid" msgid="4858945903642469730">"Indtast navnet på Wi-Fi-netværket"</string>
+    <string name="title_ssid" msgid="4858945903642469730">"Angiv navnet på Wi-Fi-netværket"</string>
     <string name="title_internet_connection" msgid="8710084774588697646">"Internetforbindelse"</string>
     <string name="connected" msgid="7563100162902079938">"Tilsluttet"</string>
     <string name="not_connected" msgid="6858480380326923017">"Ikke tilsluttet"</string>
@@ -258,15 +258,15 @@
     <string name="wifi_action_static" msgid="1025855501453321749">"Statisk"</string>
     <string name="wifi_action_status_info" msgid="7664354971197839253">"Statusoplysninger"</string>
     <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"Avancerede valgmuligheder"</string>
-    <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"Indtast en gyldig IP-adresse"</string>
-    <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Indtast en gyldig gateway-adresse"</string>
-    <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Indtast en gyldig DNS-adresse"</string>
-    <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Indtast et gyldigt netværkspræfiks på 0-32 tegn"</string>
-    <string name="wifi_ip_address_description" msgid="6548838784556001283">"Indtast en gyldig IP-adresse.\nEksempel: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
-    <string name="wifi_dns1_description" msgid="2463500547232077393">"Indtast en gyldig IP-adresse, eller lad feltet stå tomt.\nEksempel: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
-    <string name="wifi_dns2_description" msgid="8005473174044015359">"Indtast en gyldig IP-adresse, eller lad feltet stå tomt.\nEksempel: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
-    <string name="wifi_gateway_description" msgid="4773751224452216231">"Indtast en gyldig IP-adresse, eller lad feltet stå tomt.\nEksempel: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
-    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Indtast en gyldig længde på netværkspræfiks.\nEksempel: <xliff:g id="ID_1">24</xliff:g>"</string>
+    <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"Angiv en gyldig IP-adresse"</string>
+    <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"Angiv en gyldig gateway-adresse"</string>
+    <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"Angiv en gyldig DNS-adresse"</string>
+    <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"Angiv et gyldigt netværkspræfiks på 0-32 tegn"</string>
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"Angiv en gyldig IP-adresse.\nEksempel: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"Angiv en gyldig IP-adresse, eller lad feltet stå tomt.\nEksempel: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"Angiv en gyldig IP-adresse, eller lad feltet stå tomt.\nEksempel: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"Angiv en gyldig IP-adresse, eller lad feltet stå tomt.\nEksempel: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"Angiv en gyldig længde på netværkspræfiks.\nEksempel: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"Hostname er ikke gyldigt"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"Udeladelseslisten er ikke gyldig. Angiv en kommasepareret liste over udeladte domæner."</string>
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Feltet Port må ikke være tomt"</string>
@@ -274,8 +274,8 @@
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Porten er ikke gyldig"</string>
     <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP-proxyen anvendes af browseren, men må ikke bruges af andre apps."</string>
     <string name="proxy_port_description" msgid="6791098212244367568">"Angiv en gyldig port.\nEksempel: <xliff:g id="ID_1">8080</xliff:g>"</string>
-    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Indtast en kommasepareret liste over udelukkede domæner, eller lad feltet stå tomt. Eksempel: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g> \n"</string>
-    <string name="proxy_hostname_description" msgid="5824391500254472447">"Indtast et gyldigt hostnavn.\nEksempel: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Angiv en kommasepareret liste over udelukkede domæner, eller lad feltet stå tomt. Eksempel: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g> \n"</string>
+    <string name="proxy_hostname_description" msgid="5824391500254472447">"Angiv et gyldigt hostnavn.\nEksempel: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="title_wifi_eap_method" msgid="3723583936041145157">"Vælg EAP-metoden for <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"Vælg fase 2-godkendelse for <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_identity" msgid="6154397685951091638">"Angiv identiteten for <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -582,7 +582,7 @@
     <string name="inputs_game" msgid="1114086481110094757">"Spillekonsol"</string>
     <string name="inputs_aux" msgid="5704676433978730340">"Aux"</string>
     <string name="inputs_custom_name" msgid="5584925321693432362">"Tilpasset navn"</string>
-    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Indtast et navn på <xliff:g id="INPUT">%1$s</xliff:g>-indgangen."</string>
+    <string name="inputs_custom_name_description_fmt" msgid="7123031859468901866">"Angiv et navn på <xliff:g id="INPUT">%1$s</xliff:g>-indgangen."</string>
     <string name="inputs_hide" msgid="1575971556150395486">"Skjult"</string>
     <string name="inputs_show" msgid="5069718540369447778">"Vis denne indgang"</string>
     <string name="input_header_names" msgid="6958427658951236078">"Navn"</string>
@@ -630,10 +630,10 @@
     <string name="app_sees_restricted_accounts_and_controlled_by" msgid="6677671440081319908">"Denne app har adgang til dine konti. Administreres af <xliff:g id="APP">%1$s</xliff:g>"</string>
     <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"Angiv pinkode for at se denne kanal"</string>
     <string name="pin_enter_unlock_program" msgid="52453773316071511">"Angiv pinkode for at se dette program"</string>
-    <string name="pin_enter_pin" msgid="821552376577935497">"Indtast pinkode"</string>
+    <string name="pin_enter_pin" msgid="821552376577935497">"Angiv pinkode"</string>
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"Angiv en ny pinkode"</string>
-    <string name="pin_enter_again" msgid="1510456697040826496">"Indtast ny pinkode igen"</string>
-    <string name="pin_enter_old_pin" msgid="851029058127630869">"Indtast den gamle pinkode"</string>
+    <string name="pin_enter_again" msgid="1510456697040826496">"Angiv ny pinkode igen"</string>
+    <string name="pin_enter_old_pin" msgid="851029058127630869">"Angiv den gamle pinkode"</string>
     <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Du har indtastet en forkert pinkode fem gange.\nPrøv igen om <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> sekunder."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"Forkert pinkode. Prøv igen"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"Prøv igen. Pinkoden var forkert"</string>
