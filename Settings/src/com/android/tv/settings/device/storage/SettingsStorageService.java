@@ -142,7 +142,7 @@ public class SettingsStorageService {
             try {
                 final StorageManager storageManager = getSystemService(StorageManager.class);
                 storageManager.partitionPrivate(diskId);
-                final long internalBench = storageManager.benchmark(null);
+                final long internalBench = storageManager.benchmark("private");
 
                 final VolumeInfo privateVol = findPrivateVolume(storageManager, diskId);
                 final long privateBench;
