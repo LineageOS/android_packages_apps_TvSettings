@@ -161,7 +161,7 @@ public class SettingsStorageServiceTest {
         volumeInfos.add(volumeInfo);
         doReturn(volumeInfos).when(mMockStorageManager).getVolumes();
 
-        doReturn(123L).when(mMockStorageManager).benchmark(null);
+        doReturn(123L).when(mMockStorageManager).benchmark("private");
         doReturn(456L).when(mMockStorageManager).benchmark("jkl;");
 
         final Intent formatIntent = new Intent(SettingsStorageService.ACTION_FORMAT_AS_PRIVATE);
