@@ -27,7 +27,9 @@ import android.os.UserHandle;
 import android.support.annotation.Keep;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.preference.Preference;
+import android.text.TextUtils;
 import android.util.Log;
+import android.view.inputmethod.InputMethodInfo;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.applications.DefaultAppInfo;
@@ -38,6 +40,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.app.AutofillHelper;
 import com.android.tv.settings.device.sound.SoundFragment;
+import com.android.tv.settings.inputmethod.InputMethodHelper;
 import com.android.tv.settings.system.SecurityFragment;
 
 import java.util.List;
@@ -59,7 +62,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
     private static final String KEY_GOOGLE_SETTINGS = "google_settings";
     private static final String KEY_HOME_SETTINGS = "home";
     @VisibleForTesting
-    static final String KEY_AUTOFILL = "autofill";
+    static final String KEY_KEYBOARD = "keyboard";
 
     private Preference mSoundsPref;
     private boolean mInputSettingNeeded;
@@ -107,7 +110,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
         updateSounds();
         updateGoogleSettings();
         updateCastSettings();
-        updateAutofillSettings();
+        updateKeyboardAutofillSettings();
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_USAGE));
@@ -187,26 +190,40 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
     }
 
     @VisibleForTesting
-    void updateAutofillSettings() {
-        final Preference autofillPref = findPreference(KEY_AUTOFILL);
-        if (autofillPref == null) {
-            return;
-        }
+    void updateKeyboardAutofillSettings() {
+        final Preference keyboardPref = findPreference(KEY_KEYBOARD);
+
         List<DefaultAppInfo> candidates = AutofillHelper.getAutofillCandidates(getContext(),
                 mPm, UserHandle.myUserId());
-        // Hide preference if there is no service on device
-        if (candidates.size() == 0) {
-            autofillPref.setVisible(false);
-            return;
+
+        // Switch title depends on whether there is autofill
+        if (candidates.isEmpty()) {
+            keyboardPref.setTitle(R.string.system_keyboard);
+        } else {
+            keyboardPref.setTitle(R.string.system_keyboard_autofill);
         }
-        autofillPref.setVisible(true);
+
+        CharSequence summary = "";
+        // append current keyboard to summary
+        String defaultImId = InputMethodHelper.getDefaultInputMethodId(getContext());
+        if (!TextUtils.isEmpty(defaultImId)) {
+            InputMethodInfo info = InputMethodHelper.findInputMethod(defaultImId,
+                    InputMethodHelper.getEnabledSystemInputMethodList(getContext()));
+            if (info != null) {
+                summary = info.loadLabel(getContext().getPackageManager());
+            }
+
+        }
+        // append current autofill to summary
         DefaultAppInfo appInfo = AutofillHelper.getCurrentAutofill(getContext(), candidates);
         if (appInfo != null) {
-            autofillPref.setSummary(appInfo.loadLabel());
-            autofillPref.setIcon(appInfo.loadIcon());
-        } else {
-            autofillPref.setSummary(null);
-            autofillPref.setIcon(null);
+            CharSequence autofillInfo = appInfo.loadLabel();
+            if (summary.length() > 0) {
+                getContext().getString(R.string.string_concat, summary, autofillInfo);
+            } else {
+                summary = autofillInfo;
+            }
         }
+        keyboardPref.setSummary(summary);
     }
 }
