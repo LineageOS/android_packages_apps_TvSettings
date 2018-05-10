@@ -33,6 +33,7 @@ import android.os.Bundle;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 
+import androidx.annotation.Keep;
 import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -49,6 +50,7 @@ import java.util.List;
 /**
  * Fragment for enabling/disabling virtual keyboard IMEs
  */
+@Keep
 public final class AvailableVirtualKeyboardFragment extends SettingsPreferenceFragment
         implements InputMethodPreference.OnSavePreferenceListener {
 

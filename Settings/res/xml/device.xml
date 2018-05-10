@@ -71,10 +71,6 @@
         android:key="daydream"
         android:title="@string/device_daydream"/>
     <Preference
-        android:key="autofill"
-        android:title="@string/system_autofill_service"
-        android:fragment="com.android.tv.settings.app.AutofillFragment" />
-    <Preference
         android:fragment="com.android.tv.settings.system.development.DevelopmentFragment"
         android:icon="@drawable/ic_settings_developeroptions"
         android:key="developer"
