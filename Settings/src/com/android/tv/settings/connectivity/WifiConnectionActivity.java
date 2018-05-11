@@ -226,7 +226,13 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
                     ViewModelProviders.of(this).get(UserChoiceInfo.class);
         userChoiceInfo.setWifiConfiguration(mConfiguration);
         userChoiceInfo.setWifiSecurity(mWifiSecurity);
-        if (WifiConfigHelper.isNetworkSaved(mConfiguration)) {
+
+        WifiConfiguration.NetworkSelectionStatus networkStatus =
+                mConfiguration.getNetworkSelectionStatus();
+        if (networkStatus.getNetworkSelectionDisableReason()
+                == WifiConfiguration.NetworkSelectionStatus.DISABLED_BY_WRONG_PASSWORD) {
+            mStateMachine.setStartState(mEnterPasswordState);
+        } else if (WifiConfigHelper.isNetworkSaved(mConfiguration)) {
             mStateMachine.setStartState(mKnownNetworkState);
         } else {
             mStateMachine.setStartState(mAddStartState);
