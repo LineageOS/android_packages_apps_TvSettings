@@ -216,6 +216,7 @@ public class MainFragment extends SettingsPreferenceFragment implements
             mSuggestionsList = new PreferenceCategory(this.getPreferenceManager().getContext());
             mSuggestionsList.setKey(KEY_SUGGESTIONS_LIST);
             mSuggestionsList.setTitle(R.string.header_category_suggestions);
+            mSuggestionsList.setLayoutResource(R.layout.preference_category_compact_layout);
             int firstOrder = getPreferenceScreen().getPreference(0).getOrder();
             mSuggestionsList.setOrder(firstOrder - 1);
             getPreferenceScreen().addPreference(mSuggestionsList);
