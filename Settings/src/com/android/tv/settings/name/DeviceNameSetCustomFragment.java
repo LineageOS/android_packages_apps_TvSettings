@@ -106,7 +106,8 @@ public class DeviceNameSetCustomFragment extends GuidedStepFragment {
             if (getActivity() instanceof DeviceNameFlowStartActivity) {
                 ((DeviceNameFlowStartActivity) getActivity()).setResultOk(true);
             }
-
+            DeviceNameSuggestionStatus.getInstance(
+                    getActivity().getApplicationContext()).setFinished();
             getActivity().finish();
             return super.onGuidedActionEditedAndProceed(action);
         } else {
