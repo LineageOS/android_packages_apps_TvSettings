@@ -45,7 +45,6 @@ import com.android.tv.settings.system.SecurityFragment;
 import java.util.List;
 import java.util.Set;
 
-
 /**
  * The fragment where all good things begin. Evil is handled elsewhere.
  */
@@ -64,9 +63,11 @@ public class MainFragment extends SettingsPreferenceFragment implements
 
     @VisibleForTesting
     ConnectivityListener mConnectivityListener;
-    private PreferenceCategory mSuggestionsList;
+    @VisibleForTesting
+    PreferenceCategory mSuggestionsList;
     private SuggestionControllerMixin mSuggestionControllerMixin;
-    private IconCache mIconCache;
+    @VisibleForTesting
+    IconCache mIconCache;
     @VisibleForTesting
     BluetoothAdapter mBtAdapter;
     @VisibleForTesting
@@ -215,6 +216,7 @@ public class MainFragment extends SettingsPreferenceFragment implements
             mSuggestionsList = new PreferenceCategory(this.getPreferenceManager().getContext());
             mSuggestionsList.setKey(KEY_SUGGESTIONS_LIST);
             mSuggestionsList.setTitle(R.string.header_category_suggestions);
+            mSuggestionsList.setLayoutResource(R.layout.preference_category_compact_layout);
             int firstOrder = getPreferenceScreen().getPreference(0).getOrder();
             mSuggestionsList.setOrder(firstOrder - 1);
             getPreferenceScreen().addPreference(mSuggestionsList);
@@ -222,7 +224,8 @@ public class MainFragment extends SettingsPreferenceFragment implements
         updateSuggestionList(data);
     }
 
-    private void updateSuggestionList(List<Suggestion> suggestions) {
+    @VisibleForTesting
+    void updateSuggestionList(List<Suggestion> suggestions) {
         // Remove suggestions that are not in the new list.
         for (int i = 0; i < mSuggestionsList.getPreferenceCount(); i++) {
             SuggestionPreference pref = (SuggestionPreference) mSuggestionsList.getPreference(i);
@@ -238,7 +241,7 @@ public class MainFragment extends SettingsPreferenceFragment implements
             }
         }
 
-        // Add suggestions that are not in the old list.
+        // Add suggestions that are not in the old list and update the existing suggestions.
         for (Suggestion suggestion : suggestions) {
             Preference curPref = findPreference(
                         SuggestionPreference.SUGGESTION_PREFERENCE_KEY + suggestion.getId());
@@ -250,6 +253,12 @@ public class MainFragment extends SettingsPreferenceFragment implements
                 newSuggPref.setTitle(suggestion.getTitle());
                 newSuggPref.setSummary(suggestion.getSummary());
                 mSuggestionsList.addPreference(newSuggPref);
+            } else {
+                // Even though the id of suggestion might not change, the details could change.
+                // So we need to update icon, title and summary for the suggestions.
+                curPref.setIcon(mIconCache.getIcon(suggestion.getIcon()));
+                curPref.setTitle(suggestion.getTitle());
+                curPref.setSummary(suggestion.getSummary());
             }
         }
     }

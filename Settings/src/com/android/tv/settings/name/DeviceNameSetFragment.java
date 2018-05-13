@@ -128,7 +128,8 @@ public class DeviceNameSetFragment extends GuidedStepFragment {
             if (getActivity() instanceof DeviceNameFlowStartActivity) {
                 ((DeviceNameFlowStartActivity) getActivity()).setResultOk(true);
             }
-
+            DeviceNameSuggestionStatus.getInstance(
+                    getActivity().getApplicationContext()).setFinished();
             getActivity().setResult(Activity.RESULT_OK);
             getActivity().finish();
         } else if (id == mDeviceNames.size()) {

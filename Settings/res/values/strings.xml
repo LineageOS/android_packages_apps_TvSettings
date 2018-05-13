@@ -282,10 +282,12 @@
     <string name="system_date_time">Date &amp; time</string>
     <!-- Preference which manages language settings. [CHAR LIMIT=50] -->
     <string name="system_language">Language</string>
-    <!-- Preference which manages input method settings. [CHAR LIMIT=50] -->
+    <!-- Preference which manages input method settings (without autofill), see also system_keyboard_autofill [CHAR LIMIT=50] -->
     <string name="system_keyboard">Keyboard</string>
+    <!-- Preference which manages both input method settings and autofill settings. [CHAR LIMIT=50] -->
+    <string name="system_keyboard_autofill">Keyboard &amp; Autofill</string>
     <!-- Preference which manages autofill Service. [CHAR LIMIT=50] -->
-    <string name="system_autofill_service">Autofill Service</string>
+    <string name="system_autofill">Autofill</string>
     <!-- Preference which manages home screen settings. [CHAR LIMIT=50] -->
     <string name="system_home">Home screen</string>
     <!-- Preference which manages search and google now settings. [CHAR LIMIT=50] -->
@@ -1224,6 +1226,8 @@
     <string name="tts_rate_very_fast">Very fast</string>
 
     <!-- Keyboard Settings -->
+    <!-- Title for launch settings Intent for IME or Autofill.[CHAR LIMIT=80] -->
+    <string name="title_settings"><xliff:g id="name" example="Gboard">%1$s</xliff:g> Settings</string>
     <!-- Title for Current Keyboard [CHAR LIMIT=80] -->
     <string name="title_current_keyboard">Current keyboard</string>
     <!-- Title for configure current keyboard [CHAR LIMIT=80] -->
@@ -1233,8 +1237,8 @@
 
     <!-- Title for Current Autofill Service [CHAR LIMIT=80] -->
     <string name="title_current_autofill_service">Current Autofill Service</string>
-    <!-- Option to disable Autofill Service [CHAR LIMIT=80] -->
-    <string name="autofill_disable">Disable</string>
+    <!-- Option to select no Autofill Service [CHAR LIMIT=80] -->
+    <string name="autofill_none">None</string>
 
     <!-- String shown when computing the total size of an application's cache or data files. [CHAR LIMIT=30] -->
     <string name="computing_size">Computing\u2026</string>
@@ -1510,6 +1514,10 @@
     <string name="device_rename_title">Rename this <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g></string>
     <!-- Description on summary/status screen that tells you what the name of your device is [CHAR LIMIT=NONE] -->
     <string name="device_rename_description">This <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g> is currently named \"<xliff:g id="devicename" example="Living Room Player">%2$s</xliff:g>\"</string>
+    <!-- The title of the suggestion to notify the user to name the device [CHART LIMIT = 50] -->
+    <string name="device_name_suggestion_title">Set your device name</string>
+    <!-- The summary of the suggestion to notify the user to name the device [CHAR LIMIT = 100] -->
+    <string name="device_name_suggestion_summary">Use this name when casting photos, videos or more from your phone to your TV</string>
     <!-- The 'yes' or 'edit' equivalent in a yes/no choice circumstance [CHAR LIMIT=30] -->
     <string name="change_setting">Change</string>
     <!-- The 'no' or  'keep the same' equivalent in a yes/no choice circumstance [CHAR LIMIT=30]-->
@@ -1616,4 +1624,6 @@
     <!-- [CHAR_LIMIT=60] Label for special access screen -->
     <string name="special_access">Special app access</string>
 
+    <!-- concat two strings, e.g. "Android Keyboard, My Pass" [CHAR LIMIT=NONE] -->
+    <string name="string_concat"><xliff:g id="part1">%1s</xliff:g>, <xliff:g id="part2">%2s</xliff:g></string>
 </resources>
