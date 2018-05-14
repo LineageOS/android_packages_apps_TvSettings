@@ -878,7 +878,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         Toast.makeText(getActivity(), R.string.capturing_bugreport, Toast.LENGTH_SHORT).show();
         try {
             ActivityManager.getService()
-                    .requestBugReport(ActivityManager.BUGREPORT_OPTION_INTERACTIVE);
+                    .requestBugReport(ActivityManager.BUGREPORT_OPTION_FULL);
         } catch (RemoteException e) {
             Log.e(TAG, "Error taking bugreport", e);
         }
