@@ -16,9 +16,13 @@
 
 package com.android.tv.settings.device.apps.specialaccess;
 
+import android.app.ActivityManager;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
+import androidx.annotation.VisibleForTesting;
+import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
@@ -29,13 +33,40 @@ import com.android.tv.settings.SettingsPreferenceFragment;
  */
 @Keep
 public class SpecialAppAccess extends SettingsPreferenceFragment {
+
+    @VisibleForTesting
+    static final String KEY_FEATURE_PIP = "picture_in_picture";
+    private static final String[] DISABLED_FEATURES_LOW_RAM_TV =
+            new String[]{KEY_FEATURE_PIP};
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.special_app_access, null);
+
+        updatePreferenceStates();
     }
 
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.SPECIAL_ACCESS;
+    }
+
+    @VisibleForTesting
+    void updatePreferenceStates() {
+        ActivityManager activityManager = (ActivityManager) getContext()
+                .getSystemService(Context.ACTIVITY_SERVICE);
+        if (activityManager.isLowRamDevice()) {
+            for (String disabledFeature : DISABLED_FEATURES_LOW_RAM_TV) {
+                removePreference(disabledFeature);
+            }
+        }
+    }
+
+    @VisibleForTesting
+    void removePreference(String key) {
+        final Preference preference = findPreference(key);
+        if (preference != null) {
+            getPreferenceScreen().removePreference(preference);
+        }
     }
 }
