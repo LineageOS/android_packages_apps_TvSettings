@@ -68,7 +68,7 @@
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"কোনও নেটওয়ার্কে কানেক্ট করা নেই"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"ওয়াই ফাই বন্ধ আছে"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"স্ক্যান করা সর্বদা উপলব্ধ"</string>
-    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Google অবস্থান পরিষেবা এবং অন্যান্য অ্যাপ্লিকেশানগুলিকে নেটওয়ার্কগুলির জন্য স্ক্যান করতে দিন, এমনকি Wi-Fi বন্ধ থাকা সত্ত্বেও"</string>
+    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Google লোকেশন পরিষেবা এবং অন্যান্য অ্যাপ্লিকেশানগুলিকে নেটওয়ার্কগুলির জন্য স্ক্যান করতে দিন, এমনকি Wi-Fi বন্ধ থাকা সত্ত্বেও"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"ওয়াই ফাই"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"নেটওয়ার্কে কানেক্ট করুন"</string>
     <string name="apps_recently_used_category_title" msgid="5254492409677346900">"সম্প্রতি চালু করা অ্যাপ"</string>
@@ -79,7 +79,7 @@
     <string name="all_apps_installed" msgid="54800379871111518">"ইনস্টল করা অ্যাপ"</string>
     <string name="all_apps_other" msgid="8297097642727891911">"সিস্টেম অ্যাপগুলি"</string>
     <string name="all_apps_disabled" msgid="2016067533586741345">"বন্ধ করা অ্যাপগুলি"</string>
-    <string name="device_daydream" msgid="3354366974209179614">"স্ক্রীন সেভার"</string>
+    <string name="device_daydream" msgid="3354366974209179614">"স্ক্রিন সেভার"</string>
     <string name="device_display" msgid="101455384386372747">"প্রদর্শন"</string>
     <string name="device_sound" msgid="9214182566287657481">"শব্দ"</string>
     <string name="device_surround_sound" msgid="6272196310566546860">"সারাউন্ড সাউন্ড"</string>
@@ -133,11 +133,9 @@
     <string name="system_date_time" msgid="8898457978560618950">"দিন ও তারিখ"</string>
     <string name="system_language" msgid="2337138146114609247">"ভাষা"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"কীবোর্ড"</string>
-    <!-- no translation found for system_keyboard_autofill (5787948036400896834) -->
-    <skip />
-    <!-- no translation found for system_autofill (8647914463541617409) -->
-    <skip />
-    <string name="system_home" msgid="2858989138172296012">"হোম স্ক্রীন"</string>
+    <string name="system_keyboard_autofill" msgid="5787948036400896834">"কীবোর্ড ও আপনা-আপনি পূরণ করা"</string>
+    <string name="system_autofill" msgid="8647914463541617409">"আপনা-আপনি পূরণ করুন"</string>
+    <string name="system_home" msgid="2858989138172296012">"হোম স্ক্রিন"</string>
     <string name="system_search" msgid="2837264654143247611">"খুঁজুন"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
     <string name="system_security" msgid="8230080273993484407">"নিরাপত্তা ও সীমাবদ্ধতাগুলি"</string>
@@ -363,7 +361,7 @@
     <string name="insufficient_storage" msgid="5670157010939153746">"পর্যাপ্ত সঞ্চয়স্থান নেই।"</string>
     <string name="does_not_exist" msgid="4553235698171937217">"অ্যাপ্লিকেশানটি বিদ্যমান নেই।"</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"অ্যাপ্লিকেশানটি প্রতিলিপি-সুরক্ষিত৷"</string>
-    <string name="invalid_location" msgid="5269044848535157307">"ইনস্টল করা অবস্থান বৈধ নয়।"</string>
+    <string name="invalid_location" msgid="5269044848535157307">"ইনস্টল করা লোকেশন বৈধ নয়।"</string>
     <string name="system_package" msgid="9200255718634512790">"সিস্টেম আপডেটগুলি বহিরাগত মিডিয়াতে ইনস্টল করা যাবে না।"</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"বাহ্যিক মিডিয়াতে ডিভাইস প্রশাসক ইনস্টল করা যাবে না৷"</string>
     <string name="learn_more_action" msgid="7015991954404958779">"আরও জানুন"</string>
@@ -385,27 +383,27 @@
     <item msgid="2475903014233987786">"ট্রান্সপোর্ট স্ট্রীমের প্রদেয় সময় ব্যবহার করুন"</item>
     <item msgid="150957081326946463">"বন্ধ করুন"</item>
   </string-array>
-    <string name="system_location" msgid="502463575930545806">"অবস্থান"</string>
+    <string name="system_location" msgid="502463575930545806">"লোকেশন"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"যে অ্যাপ্লিকেশানগুলি আপনার অবস্থানের তথ্য ব্যবহার করার অনুমতি চেয়েছে তাদেরকে অনুমতি দিন"</string>
-    <string name="system_network_location_confirm" msgid="8435144328428634060">"অবস্থান সম্মতি"</string>
+    <string name="system_network_location_confirm" msgid="8435144328428634060">"লোকেশন সম্মতি"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"মোড"</string>
     <string name="location_category_recent_location_requests" msgid="3437903422445812245">"সাম্প্রতিক অবস্থানের অনুরোধগুলি"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"সম্প্রতি কোনো অ্যাপ্লিকেশান অবস্থানের অনুরোধ করেনি"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"ব্যাটারির বেশি ব্যবহার"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"ব্যাটারির কম ব্যবহার"</string>
-    <string name="location_mode_wifi_description" msgid="2778774510654527264">"অবস্থান অনুমান করতে ওয়াই-ফাই ব্যবহার করুন"</string>
+    <string name="location_mode_wifi_description" msgid="2778774510654527264">"লোকেশন অনুমান করতে ওয়াই-ফাই ব্যবহার করুন"</string>
     <string name="location_status" msgid="3456414279428237558">"অবস্থানের স্থিতি"</string>
-    <string name="location_services" msgid="5441085185119797200">"অবস্থান পরিষেবাগুলি"</string>
+    <string name="location_services" msgid="5441085185119797200">"লোকেশন পরিষেবাগুলি"</string>
     <string name="on" msgid="6683600681314500652">"চালু"</string>
     <string name="off" msgid="5264189545064767245">"বন্ধ"</string>
     <string name="google_location_services_title" msgid="3382840371861269146">"Google অবস্থানের পরিষেবাগুলি"</string>
-    <string name="third_party_location_services_title" msgid="4089136801976399147">"তৃতীয় পক্ষের অবস্থান পরিষেবাগুলি"</string>
+    <string name="third_party_location_services_title" msgid="4089136801976399147">"তৃতীয় পক্ষের লোকেশন পরিষেবাগুলি"</string>
     <string name="location_reporting" msgid="3054236612250063073">"অবস্থানের প্রতিবেদন"</string>
     <string name="location_history" msgid="2946680949724247804">"অবস্থানের ইতিহাস"</string>
     <string name="location_reporting_desc" msgid="6256424995139430823">"Google Now এবং Google মানচিত্রের মতো পণ্যগুলিতে Google এই বৈশিষ্ট্যটি ব্যবহার করে৷ অবস্থানের প্রতিবেদন চালু করা হলে, তা এই বৈশিষ্ট্যটি ব্যবহার করে এমন যেকোনো Google পণ্যকে আপনার Google অ্যাকাউন্টের সাথে সম্পর্কিত আপনার ডিভাইসের অতি সাম্প্রতিক অবস্থানের ডেটা সঞ্চয় এবং ব্যবহার করতে অনুমোদিত করে৷"</string>
-    <string name="location_history_desc" msgid="3861249867748294369">"এই অ্যাকাউন্টের ক্ষেত্রে অবস্থানের ইতিহাস চালু থাকাকালীন, আপনার অ্যাপ্লিকেশানগুলি যাতে ব্যবহার করতে পারে সেজন্য Google আপনার ডিভাইসের অবস্থান সম্পর্কিত ডেটা সঞ্চয় করতে পারে৷\n\nউদাহরণস্বরূপ, Google ম্যাপ আপনাকে দিকনির্দেশ করতে পারে এবং Google Now আপনাকে আপনার যাতায়াতের ক্ষেত্রে ট্র্যাফিকের অবস্থা সম্পর্কে জানাতে পারে৷\n\nআপনি যেকোনো সময় অবস্থানের ইতিহাস বন্ধ করে দিতে পারেন, কিন্তু এমনটি করলেও এটি মুছে যাবে না৷ আপনার অবস্থানের ইতিহাস দেখতে এবং পরিচালনা করতে, maps.google.com/locationhistory এ যান৷"</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"এই অ্যাকাউন্টের ক্ষেত্রে লোকেশনের ইতিহাস চালু থাকাকালীন, আপনার অ্যাপ্লিকেশানগুলি যাতে ব্যবহার করতে পারে সেজন্য Google আপনার ডিভাইসের লোকেশন সম্পর্কিত ডেটা সঞ্চয় করতে পারে৷\n\nউদাহরণস্বরূপ, Google ম্যাপ আপনাকে দিকনির্দেশ করতে পারে এবং Google Now আপনাকে আপনার যাতায়াতের ক্ষেত্রে ট্র্যাফিকের অবস্থা সম্পর্কে জানাতে পারে৷\n\nআপনি যেকোনো সময় লোকেশনের ইতিহাস বন্ধ করে দিতে পারেন, কিন্তু এমনটি করলেও এটি মুছে যাবে না৷ আপনার লোকেশনের ইতিহাস দেখতে এবং পরিচালনা করতে, maps.google.com/locationhistory এ যান৷"</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"অবস্থানের ইতিহাস মুছে দিন"</string>
-    <string name="delete_location_history_desc" msgid="4142806827237093397">"এর ফলে এই Google অ্যাকাউন্টের জন্য সঞ্চিত সকল \'অবস্থান ইতিহাস\' তথ্য এই ডিভাইস থেকে মুছে যাবে। আপনি এই মুছে ফেলা অকার্যকর করতে পারবেন না। ‘Google এখন’ সহ কিছু অ্যাপ্লিকেশান কাজ করা বন্ধ করে দেবে।"</string>
+    <string name="delete_location_history_desc" msgid="4142806827237093397">"এর ফলে এই Google অ্যাকাউন্টের জন্য সঞ্চিত সকল \'লোকেশন ইতিহাস\' তথ্য এই ডিভাইস থেকে মুছে যাবে। আপনি এই মুছে ফেলা অকার্যকর করতে পারবেন না। ‘Google এখন’ সহ কিছু অ্যাপ্লিকেশান কাজ করা বন্ধ করে দেবে।"</string>
     <string name="system_services" msgid="7230571820151215779">"পরিষেবাগুলি"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"পরিষেবা সেটিংস"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"উচ্চ কনট্রাস্ট যুক্ত পাঠ্য"</string>
@@ -488,7 +486,7 @@
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"ওয়াই-ফাই ভারবোস লগিং"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"ওয়াই ফাই ভারবোস লগিং সক্ষম করুন"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"স্পর্শগুলি দেখান"</string>
-    <string name="system_pointer_location" msgid="2673764026490179227">"পয়েন্টারের অবস্থান"</string>
+    <string name="system_pointer_location" msgid="2673764026490179227">"পয়েন্টারের লোকেশন"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"লেআউট সীমাগুলি দেখান"</string>
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"GPU দৃশ্য আপডেটগুলি দেখান"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"হার্ডওয়্যার স্তর দেখান"</string>
@@ -514,7 +512,7 @@
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"যখন হার্ডওয়্যার স্তরগুলি আপডেট হয় তখন সেগুলিকে সবুজ রঙে ফ্ল্যাশ করুন"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"শ্রেষ্ঠ থেকে খারাপ: নীল, সবুজ, হালকা লাল, লাল"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"উইন্ডোর সারফেসগুলি আপডেট হওয়ার সময়ে সম্পূর্ণটিকে ফ্ল্যাশ করুন"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"মুখ্য থ্রেডে অ্যাপ্লিকেশানগুলির দীর্ঘ কার্যকলাপের সময় স্ক্রীন ফ্ল্যাশ করুন"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"মুখ্য থ্রেডে অ্যাপ্লিকেশানগুলির দীর্ঘ কার্যকলাপের সময় স্ক্রিন ফ্ল্যাশ করুন"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"adb shell dumpsys gfxinfo এ রেন্ডারিং সময় পরিমাপ করুন"</string>
     <string name="action_on_title" msgid="6852389884236870765">"চালু করুন"</string>
     <string name="action_off_title" msgid="3157728958166559966">"বন্ধ করুন"</string>
@@ -560,14 +558,12 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"স্বাভাবিক"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"দ্রুত"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"খুব দ্রুত"</string>
-    <!-- no translation found for title_settings (5433841477518010243) -->
-    <skip />
+    <string name="title_settings" msgid="5433841477518010243">"<xliff:g id="NAME">%1$s</xliff:g> সেটিংস"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"বর্তমান কীবোর্ড"</string>
     <string name="title_configure" msgid="6929522003149212388">"কনফিগার করুন"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"কীবোর্ড বিকল্পগুলি"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"বর্তমানে বেছে নেওয়া আপনা-আপনি পূরণ করার পরিষেবা"</string>
-    <!-- no translation found for autofill_none (2426888642367790651) -->
-    <skip />
+    <string name="autofill_none" msgid="2426888642367790651">"কোনওটিই নয়"</string>
     <string name="computing_size" msgid="2955133568424704042">"হিসাব করছে..."</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"আপনার ওয়াই-ফাই নেটওয়ার্ক বেছে নিন"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"পুনঃনামকরণ"</string>
@@ -615,8 +611,8 @@
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g>-এর দ্বারা নিয়ন্ত্রিত"</string>
     <string name="app_not_supported_in_limited" msgid="6818309827329010677">"এই অ্যাপ্লিকেশানটি বিধিনিষেধযুক্ত প্রোফাইলগুলিতে সমর্থিত নয়"</string>
     <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"এই অ্যাপ্লিকেশানটি আপনার অ্যাকাউন্টগুলি অ্যাক্সেস করতে পারে"</string>
-    <string name="restriction_location_enable_title" msgid="2575116135395354938">"অবস্থান"</string>
-    <string name="restriction_location_enable_summary" msgid="4195349388342385870">"অ্যাপ্লিকেশানগুলিকে আপনার অবস্থান তথ্য ব্যবহার করতে দিন"</string>
+    <string name="restriction_location_enable_title" msgid="2575116135395354938">"লোকেশন"</string>
+    <string name="restriction_location_enable_summary" msgid="4195349388342385870">"অ্যাপ্লিকেশানগুলিকে আপনার লোকেশন তথ্য ব্যবহার করতে দিন"</string>
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"বিধিনিষেধযুক্ত প্রোফাইলে যান"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"বিধিনিষেধযুক্ত প্রোফাইল থেকে প্রস্থান করুন"</string>
     <string name="restricted_profile_delete_title" msgid="3445944923018324707">"বিধিনিষেধযুক্ত প্রোফাইল মুছুন"</string>
@@ -672,14 +668,14 @@
     <string name="settings_cancel" msgid="304280412158061225">"বাতিল করুন"</string>
     <string name="settings_on" msgid="6892236264945435013">"চালু"</string>
     <string name="settings_off" msgid="449272161738237637">"বন্ধ"</string>
-    <string name="device_daydreams_none" msgid="2767107052779579259">"স্ক্রীন বন্ধ করুন"</string>
-    <string name="device_daydreams_select" msgid="2112338101206187695">"স্ক্রীন সেভার"</string>
+    <string name="device_daydreams_none" msgid="2767107052779579259">"স্ক্রিন বন্ধ করুন"</string>
+    <string name="device_daydreams_select" msgid="2112338101206187695">"স্ক্রিন সেভার"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"এখনই শুরু করুন"</string>
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"কখন শুরু করব"</string>
-    <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"এত সময় ধরে নিষ্ক্রিয় থাকার পরে স্ক্রীন সেভার শুরু হয়।যদি কোনো স্ক্রীন সেভার নিবাচিত না করা থাকে তাহলে প্রদর্শন বন্ধ হয়ে যাবে৷"</string>
+    <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"এত সময় ধরে নিষ্ক্রিয় থাকার পরে স্ক্রিন সেভার শুরু হয়।যদি কোনো স্ক্রিন সেভার নিবাচিত না করা থাকে তাহলে প্রদর্শন বন্ধ হয়ে যাবে৷"</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> সময় নিষ্ক্রিয়তার পরে"</string>
     <string name="device_daydreams_screen_off" msgid="1765925964376076171">"ডিভাইস নিদ্রা মোডে রাখুন"</string>
-    <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"এই সময়সীমা পর্যন্ত নিষ্ক্রিয় অবস্থায় থাকলে স্ক্রীন বন্ধ হয়ে যাবে৷"</string>
+    <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"এই সময়সীমা পর্যন্ত নিষ্ক্রিয় অবস্থায় থাকলে স্ক্রিন বন্ধ হয়ে যাবে৷"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"বর্তমানে কোনো অ্যাকাউন্টই ব্যাক আপ করা ডেটা সংরক্ষণ করছে না"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
     <string name="backup_erase_dialog_message" msgid="2608496013975068701">"আপনার ওয়াই-ফাই পাসওয়ার্ড, বুকমার্ক, অন্যান্য সেটিংস, এবং অ্যাপ্লিকেশান ডেটা ব্যাক আপ করা বন্ধ করে Google সার্ভারে থাকা সব অনুলিপি মুছে ফেলবেন?"</string>
@@ -701,10 +697,8 @@
     <string name="custom_room" msgid="8655516733933892458">"কাস্টম নাম লিখুন..."</string>
     <string name="device_rename_title" msgid="2629557295786267185">"এই <xliff:g id="DEVICEMODEL">%1$s</xliff:g> এর নাম পাল্টান"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"এই <xliff:g id="DEVICEMODEL">%1$s</xliff:g> এর নাম বর্তমানে \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" রাখা হয়েছে"</string>
-    <!-- no translation found for device_name_suggestion_title (2312205155408810120) -->
-    <skip />
-    <!-- no translation found for device_name_suggestion_summary (863826452740003652) -->
-    <skip />
+    <string name="device_name_suggestion_title" msgid="2312205155408810120">"ডিভাইসের নাম সেট করুন"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"আপনার ফোন থেকে ফটো, ভিডিও এবং আরও অনেক কিছু কাস্ট করার সময় এই নামটি ব্যবহার করুন"</string>
     <string name="change_setting" msgid="2047402388786162246">"পরিবর্তন করুন"</string>
     <string name="keep_settings" msgid="6798327196645732517">"পরিবর্তন করবেন না"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"অনুমতিগুলি"</string>
@@ -746,6 +740,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"ইনস্টল করা কোনও অ্যাপ ছবির-মধ্যে-ছবি মোড সমর্থন করে না"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"অ্যাপটি খোলা থাকার সময় অথবা আপনি এটি ছেড়ে বেরিয়ে গেলে (যেমন, কোনও ভিডিও দেখার জন্য) এটিকে একটি ছবির-মধ্যে-ছবি সমেত উইন্ডো তৈরি করার অনুমতি দিন। চালু থাকা অন্যান্য অ্যাপের উপরে এই উইন্ডোটি দেখা যাবে।"</string>
     <string name="special_access" msgid="3513811566600299998">"অ্যাপের বিশেষ অ্যাক্সেস"</string>
-    <!-- no translation found for string_concat (5897947064488902904) -->
-    <skip />
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
 </resources>
