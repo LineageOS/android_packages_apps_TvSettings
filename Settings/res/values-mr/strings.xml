@@ -133,10 +133,8 @@
     <string name="system_date_time" msgid="8898457978560618950">"तारीख आणि वेळ"</string>
     <string name="system_language" msgid="2337138146114609247">"भाषा"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"कीबोर्ड"</string>
-    <!-- no translation found for system_keyboard_autofill (5787948036400896834) -->
-    <skip />
-    <!-- no translation found for system_autofill (8647914463541617409) -->
-    <skip />
+    <string name="system_keyboard_autofill" msgid="5787948036400896834">"कीबोर्ड आणि ऑटोफिल"</string>
+    <string name="system_autofill" msgid="8647914463541617409">"अॉटोफिल"</string>
     <string name="system_home" msgid="2858989138172296012">"मुख्य स्क्रीन"</string>
     <string name="system_search" msgid="2837264654143247611">"शोधा"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -403,7 +401,7 @@
     <string name="location_reporting" msgid="3054236612250063073">"स्थान अहवाल"</string>
     <string name="location_history" msgid="2946680949724247804">"स्थान इतिहास"</string>
     <string name="location_reporting_desc" msgid="6256424995139430823">"Google हे वैशिष्ट्य Google Now आणि Google नकाशे यासारख्या उत्पादनांमध्ये वापरते. स्थान अहवाल चालू करण्यामुळे हे वैशिष्ट्य वापरणार्‍या कोणत्याही Google उत्पादनास आपल्या Google खात्याशी संबंधित आपल्या डिव्हाइसचा सर्वात अलीकडील स्थान डेटा संचयित करू आणि वापरू दिला जातो."</string>
-    <string name="location_history_desc" msgid="3861249867748294369">"या खात्यासाठी स्थान इतिहास चालू केला जातो, तेव्हा आपल्या अॅप्सद्वारे वापरण्यासाठी Google आपल्या डिव्हाइसचा स्थान डेटा संचयित करू शकते.\n\nउदाहरणार्थ, Google नकाशे आपल्याला दिशानिर्देश देऊ शकते आणि Google Now आपल्याला नियत प्रवास रहदारीविषयी सूचित करू शकते.\n\nआपण कधीही स्थान इतिहास बंद करू शकता, परंतु असे करताना तो हटविला जात नाही. आपला स्थान इतिहास पाहण्यासाठी आणि व्यवस्थापित करण्यासाठी, maps.google.com/locationhistory ला भेट द्या."</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"या खात्यासाठी स्थान इतिहास चालू केला जातो, तेव्हा आपल्या अॅप्सद्वारे वापरण्यासाठी Google आपल्या डिव्हाइसचा स्थान डेटा संचयित करू शकते.\n\nउदाहरणार्थ, Google नकाशे आपल्याला दिशानिर्देश देऊ शकते आणि Google Now आपल्याला नियत प्रवास रहदारीविषयी सूचित करू शकते.\n\nआपण कधीही स्थान इतिहास बंद करू शकता, परंतु असे करताना तो हटवला जात नाही. आपला स्थान इतिहास पाहण्यासाठी आणि व्यवस्थापित करण्यासाठी, maps.google.com/locationhistory ला भेट द्या."</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"स्थान इतिहास हटवा"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"हे या Google खात्याकरिता या डिव्हाइसवरून संचयित केलेला सर्व स्थान इतिहास हटवेल. आपण हे हटविणे पूर्ववत करू शकता. Google Now सह, काही अॅप्स कार्य करणे थांबवतील."</string>
     <string name="system_services" msgid="7230571820151215779">"सेवा"</string>
@@ -560,14 +558,12 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"सामान्य"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"जलद"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"खूप जलद"</string>
-    <!-- no translation found for title_settings (5433841477518010243) -->
-    <skip />
+    <string name="title_settings" msgid="5433841477518010243">"<xliff:g id="NAME">%1$s</xliff:g> सेटिंग्‍ज"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"वर्तमान कीबोर्ड"</string>
     <string name="title_configure" msgid="6929522003149212388">"कॉन्फिगर करा"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"कीबोर्ड पर्याय"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"सध्‍याची ऑटोफिल सेवा"</string>
-    <!-- no translation found for autofill_none (2426888642367790651) -->
-    <skip />
+    <string name="autofill_none" msgid="2426888642367790651">"काहीही नाही"</string>
     <string name="computing_size" msgid="2955133568424704042">"गणना करत आहे…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"आपले वाय-फाय नेटवर्क निवडा"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"पुनर्नामित करा"</string>
@@ -660,7 +656,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"वापरलेले संचयन"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> मध्ये <xliff:g id="SIZE">%1$s</xliff:g> वापरले"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"डेटा साफ करा"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"या अॅप चा सर्व डेटा कायमचा हटविला जाईल.\nयात सर्व फायली, सेटिंग्ज, खाती, डेटाबेस इ. समाविष्ट होते."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"या अॅप चा सर्व डेटा कायमचा हटवला जाईल.\nयात सर्व फायली, सेटिंग्ज, खाती, डेटाबेस इ. समाविष्ट होते."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"डीफॉल्ट साफ करा"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"काही क्रियांसाठी हा अॅप लाँच करण्यासाठी सेट करा"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"कोणताही डीफॉल्ट सेट केलेला नाही."</string>
@@ -701,10 +697,8 @@
     <string name="custom_room" msgid="8655516733933892458">"सानुकूल नाव एंटर करा..."</string>
     <string name="device_rename_title" msgid="2629557295786267185">"या <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ला पुनर्नामित करा"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"या <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ला सध्‍या \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" हे नाव दिले आहे"</string>
-    <!-- no translation found for device_name_suggestion_title (2312205155408810120) -->
-    <skip />
-    <!-- no translation found for device_name_suggestion_summary (863826452740003652) -->
-    <skip />
+    <string name="device_name_suggestion_title" msgid="2312205155408810120">"तुमचे डिव्हाइस नाव सेट करा"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"तुमच्या फोनवरून फोटो, व्हिडिओ आणि अधिक गोष्टी कास्ट करताना हे नाव वापरा"</string>
     <string name="change_setting" msgid="2047402388786162246">"बदला"</string>
     <string name="keep_settings" msgid="6798327196645732517">"बदलू नका"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"परवानग्या"</string>
@@ -746,6 +740,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"इंस्टॉल केलेली कोणतीही अॅप्स चित्रात चित्रला सपोर्ट करत नाहीत"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"अ‍ॅप उघडे असताना किंवा तुम्ही ते सोडल्यानंतर या अ‍ॅपला चित्रामध्ये चित्र विंडो तयार करण्याची परवानगी द्या (उदाहरणार्थ, व्हिडिओ पाहणे सुरू ठेवणे). ही विंडो तुम्ही वापरत असलेल्या इतर अ‍ॅप्सच्या वरती दिसते."</string>
     <string name="special_access" msgid="3513811566600299998">"विशेष अॅप अॅक्‍सेस"</string>
-    <!-- no translation found for string_concat (5897947064488902904) -->
-    <skip />
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
 </resources>
