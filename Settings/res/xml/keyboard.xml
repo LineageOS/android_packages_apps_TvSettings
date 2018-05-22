@@ -45,10 +45,10 @@
         android:key="autofillCategory"
         android:title="@string/system_autofill">
 
-        <ListPreference
+        <Preference
             android:key="currentAutofill"
-            android:dialogTitle="@string/title_current_autofill_service"
             android:title="@string/title_current_autofill_service"
+            android:fragment="com.android.tv.settings.autofill.AutofillPickerFragment"
             android:summary="%s" />
 
     </PreferenceCategory>
