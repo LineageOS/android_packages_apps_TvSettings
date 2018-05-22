@@ -18,7 +18,6 @@ package com.android.tv.settings.inputmethod;
 
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.robolectric.shadow.api.Shadow.extract;
@@ -27,6 +26,7 @@ import android.os.UserManager;
 import android.provider.Settings;
 
 import androidx.preference.ListPreference;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 
@@ -56,7 +56,6 @@ public class KeyboardFragmentTest {
     @Spy
     private KeyboardFragment mKeyboardFragment;
 
-    @Mock
     private ShadowUserManager mUserManager;
 
     @Mock
@@ -66,7 +65,7 @@ public class KeyboardFragmentTest {
     private PreferenceCategory mAutofillCategory;
 
     @Mock
-    private ListPreference mCurrentAutofill;
+    private Preference mCurrentAutofill;
 
     @Mock
     private PreferenceCategory mKeyboardCategory;
@@ -83,24 +82,19 @@ public class KeyboardFragmentTest {
         mKeyboardFragment.onAttach(RuntimeEnvironment.application);
         doReturn(RuntimeEnvironment.application).when(mKeyboardFragment).getPreferenceContext();
 
-        mPreferenceScreen = mock(PreferenceScreen.class);
         doReturn(mPreferenceScreen).when(mKeyboardFragment).getPreferenceScreen();
 
-        mKeyboardCategory = mock(PreferenceCategory.class);
         doReturn(mKeyboardCategory).when(mKeyboardFragment).findPreference(
                 KeyboardFragment.KEY_KEYBOARD_CATEGORY);
 
-        mCurrentKeyboard = mock(ListPreference.class);
         doReturn(mCurrentKeyboard).when(mKeyboardFragment).findPreference(
                 KeyboardFragment.KEY_CURRENT_KEYBOARD);
         doReturn(1).when(mKeyboardCategory).getPreferenceCount();
         doReturn(mCurrentKeyboard).when(mKeyboardCategory).getPreference(0);
 
-        mAutofillCategory = mock(PreferenceCategory.class);
         doReturn(mAutofillCategory).when(mKeyboardFragment).findPreference(
                 KeyboardFragment.KEY_AUTOFILL_CATEGORY);
 
-        mCurrentAutofill = mock(ListPreference.class);
         doReturn(mCurrentAutofill).when(mKeyboardFragment).findPreference(
                 KeyboardFragment.KEY_CURRENT_AUTOFILL);
         doReturn(1).when(mAutofillCategory).getPreferenceCount();
@@ -142,10 +136,8 @@ public class KeyboardFragmentTest {
         verify(mAutofillCategory, atLeastOnce()).setVisible(true);
         verify(mAutofillCategory, never()).setVisible(false);
 
-        verify(mCurrentAutofill, atLeastOnce()).setEntryValues(new CharSequence[]{
-                "", "com.test.AutofillPackage/com.test.AutofillPackage.MyService"});
-        verify(mCurrentAutofill, never()).setValueIndex(0);
-        verify(mCurrentAutofill, atLeastOnce()).setValueIndex(1);
+        verify(mCurrentAutofill, atLeastOnce()).setSummary(
+                "com.test.AutofillPackage.MyService");
     }
 
     @Test
@@ -167,10 +159,8 @@ public class KeyboardFragmentTest {
         verify(mAutofillCategory, atLeastOnce()).setVisible(true);
         verify(mAutofillCategory, never()).setVisible(false);
 
-        verify(mCurrentAutofill, atLeastOnce()).setEntryValues(new CharSequence[]{
-                "", "com.test.AutofillPackage/com.test.AutofillPackage.MyService"});
-        verify(mCurrentAutofill, never()).setValueIndex(1);
-        verify(mCurrentAutofill, atLeastOnce()).setValueIndex(0);
+        verify(mCurrentAutofill, atLeastOnce()).setSummary(
+                mKeyboardFragment.getContext().getString(R.string.autofill_none));
     }
 
 }
