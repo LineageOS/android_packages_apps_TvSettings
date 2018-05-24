@@ -38,7 +38,7 @@ import com.android.settingslib.wrapper.PackageManagerWrapper;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.app.AutofillHelper;
+import com.android.tv.settings.autofill.AutofillHelper;
 import com.android.tv.settings.device.sound.SoundFragment;
 import com.android.tv.settings.inputmethod.InputMethodHelper;
 import com.android.tv.settings.system.SecurityFragment;

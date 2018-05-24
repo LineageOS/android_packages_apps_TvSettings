@@ -39,6 +39,9 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission android:name="com.google.android.assistant.READ_HOTWORD_STATE" />
+    <uses-permission android:name="com.google.android.assistant.WRITE_HOTWORD_STATE" />
+
     <application
         android:icon="@drawable/logo_settings_color_48dp"
         android:label="@string/settings_app_name"
@@ -378,6 +381,26 @@
 
                 <category android:name="android.intent.category.VOICE_LAUNCH" />
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".autofill.AutofillPickerActivity"
+            android:theme="@style/Theme.Settings.Transparent"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".autofill.AutofillPickerTrampolineActivity"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:label="@string/title_select_autofill_service">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.REQUEST_SET_AUTOFILL_SERVICE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="package" />
             </intent-filter>
         </activity>
         <activity

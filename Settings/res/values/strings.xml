@@ -40,7 +40,7 @@
     <string name="dismiss_suggestion">Dismiss the suggestion</string>
 
     <!-- Title for main screen preference for hotwording [CHAR LIMIT=50] -->
-    <string name="hotwording_title">\"OK Google\" dectection</string>
+    <string name="hotwording_title">\"OK Google\" detection</string>
     <!-- Summary for main screen preference for hotwording [CHAR LIMIT=50] -->
     <string name="hotwording_summary">Talk to Google Assistant anytime</string>
 
@@ -1237,8 +1237,21 @@
 
     <!-- Title for Current Autofill Service [CHAR LIMIT=80] -->
     <string name="title_current_autofill_service">Current Autofill Service</string>
+    <!-- Dialog title for Select Autofill Service [CHAR LIMIT=80] -->
+    <string name="title_select_autofill_service">Select Autofill Service</string>
     <!-- Option to select no Autofill Service [CHAR LIMIT=80] -->
     <string name="autofill_none">None</string>
+
+    <!-- Message of the warning dialog for setting the auto-fill app. [CHAR_LIMIT=NONE] -->
+    <string name="autofill_confirmation_message">
+        <![CDATA[
+        <b>Make sure you trust this app</b>
+        <br/>
+        <br/>
+        <xliff:g id="app_name" example="Password service">%1$s</xliff:g> uses what\'s on
+        your screen to determine what can be autofilled.
+        ]]>
+    </string>
 
     <!-- String shown when computing the total size of an application's cache or data files. [CHAR LIMIT=30] -->
     <string name="computing_size">Computing\u2026</string>

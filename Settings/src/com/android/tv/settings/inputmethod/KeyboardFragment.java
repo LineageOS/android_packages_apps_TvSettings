@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.support.annotation.Keep;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -35,7 +36,7 @@ import com.android.settingslib.applications.DefaultAppInfo;
 import com.android.settingslib.wrapper.PackageManagerWrapper;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.app.AutofillHelper;
+import com.android.tv.settings.autofill.AutofillHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +45,7 @@ import java.util.Set;
 /**
  * Fragment for managing IMEs and Autofills
  */
+@Keep
 public class KeyboardFragment extends SettingsPreferenceFragment {
     private static final String TAG = "KeyboardFragment";
 
@@ -89,12 +91,6 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
         findPreference(KEY_CURRENT_KEYBOARD).setOnPreferenceChangeListener(
                 (preference, newValue) -> {
                     InputMethodHelper.setDefaultInputMethodId(getContext(), (String) newValue);
-                    return true;
-                });
-
-        findPreference(KEY_CURRENT_AUTOFILL).setOnPreferenceChangeListener(
-                (preference, newValue) -> {
-                    AutofillHelper.setCurrentAutofill(getContext(), (String) newValue);
                     return true;
                 });
 
@@ -196,8 +192,8 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
     private void updateAutofill() {
         final PreferenceCategory autofillCategory = (PreferenceCategory)
                 findPreference(KEY_AUTOFILL_CATEGORY);
-        List<DefaultAppInfo> candidates = getAutofillCandidatesIncludeDisable();
-        if (candidates.size() <= 1) {
+        List<DefaultAppInfo> candidates = getAutofillCandidates();
+        if (candidates.isEmpty()) {
             // No need to show keyboard category and autofill category.
             // Keyboard only preference screen:
             findPreference(KEY_KEYBOARD_CATEGORY).setVisible(false);
@@ -208,47 +204,26 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
             findPreference(KEY_KEYBOARD_CATEGORY).setVisible(true);
             autofillCategory.setVisible(true);
             final Preference currentAutofillPref = findPreference(KEY_CURRENT_AUTOFILL);
-            updateCurrentAutofillPreference((ListPreference) currentAutofillPref, candidates);
+            updateCurrentAutofillPreference(currentAutofillPref, candidates);
             updateAutofillSettings(candidates);
             getPreferenceScreen().setTitle(R.string.system_keyboard_autofill);
         }
 
     }
 
-    private List<DefaultAppInfo> getAutofillCandidatesIncludeDisable() {
-        List<DefaultAppInfo> candidates = AutofillHelper.getAutofillCandidates(getContext(),
+    private List<DefaultAppInfo> getAutofillCandidates() {
+        return AutofillHelper.getAutofillCandidates(getContext(),
                 mPm, UserHandle.myUserId());
-        DefaultAppInfo disableItem = new DefaultAppInfo(null, null, null);
-        candidates.add(0, disableItem);
-        return candidates;
     }
 
-    private void updateCurrentAutofillPreference(ListPreference currentAutofillPref,
+    private void updateCurrentAutofillPreference(Preference currentAutofillPref,
                                          List<DefaultAppInfo> candidates) {
 
         DefaultAppInfo app = AutofillHelper.getCurrentAutofill(getContext(), candidates);
 
-        final List<CharSequence> entries = new ArrayList<>(candidates.size());
-        final List<CharSequence> values = new ArrayList<>(candidates.size());
-
-        int defaultIndex = candidates.indexOf(app);
-        if (defaultIndex < 0) {
-            defaultIndex = 0; // disable
-        }
-
-        for (final DefaultAppInfo info : candidates) {
-            if (info.componentName == null) {
-                entries.add(getContext().getString(R.string.autofill_none));
-                values.add(""); // key for "None"
-            } else {
-                entries.add(info.loadLabel());
-                values.add(info.getKey());
-            }
-        }
-
-        currentAutofillPref.setEntries(entries.toArray(new CharSequence[entries.size()]));
-        currentAutofillPref.setEntryValues(values.toArray(new CharSequence[values.size()]));
-        currentAutofillPref.setValueIndex(defaultIndex);
+        CharSequence summary = app == null ? getContext().getString(R.string.autofill_none)
+                : app.loadLabel();
+        currentAutofillPref.setSummary(summary);
     }
 
     private void updateAutofillSettings(List<DefaultAppInfo> candidates) {
