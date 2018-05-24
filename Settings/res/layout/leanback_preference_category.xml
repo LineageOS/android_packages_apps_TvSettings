@@ -16,18 +16,18 @@
   -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/lb_preference_category_height_compact"
-    android:clipToPadding="false"
-    android:paddingStart="@dimen/lb_preference_item_padding_start"
-    android:paddingEnd="@dimen/lb_preference_item_padding_end">
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/lb_preference_category_height"
+             android:clipToPadding="false"
+             android:paddingStart="@dimen/lb_preference_item_padding_start"
+             android:paddingEnd="@dimen/lb_preference_item_padding_end">
 
     <TextView
         android:id="@android:id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start|center_vertical"
-        android:fontFamily="sans-serif"
+        android:fontFamily="sans-serif-medium"
         android:textColor="?android:attr/colorAccent"
         android:textSize="@dimen/lb_preference_category_text_size"/>
 </FrameLayout>
