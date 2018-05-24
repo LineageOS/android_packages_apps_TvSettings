@@ -381,6 +381,26 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".autofill.AutofillPickerActivity"
+            android:theme="@style/Theme.Settings.Transparent"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".autofill.AutofillPickerTrampolineActivity"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:label="@string/title_select_autofill_service">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.REQUEST_SET_AUTOFILL_SERVICE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".system.LanguageActivity"
             android:theme="@style/Theme.Settings.Transparent"
             android:configChanges="keyboard|keyboardHidden|navigation|locale"
