@@ -20,7 +20,8 @@
     <PreferenceCategory
         android:key="general_settings"
         android:title="@string/header_category_general_settings"
-        android:layout="@layout/preference_category_compact_layout">
+        android:layout="@layout/preference_category_compact_layout"
+        android:order="2">
         <Preference
             android:icon="@drawable/ic_network"
             android:key="network"
