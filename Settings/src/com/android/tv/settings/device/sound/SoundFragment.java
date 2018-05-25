@@ -27,6 +27,7 @@ import android.text.TextUtils;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 
@@ -109,7 +110,16 @@ public class SoundFragment extends PreferenceControllerFragment implements
         for (Map.Entry<Integer, Boolean> format : mFormats.entrySet()) {
             int formatId = format.getKey();
             boolean enabled = format.getValue();
-            SwitchPreference pref = new SwitchPreference(getPreferenceManager().getContext());
+            SwitchPreference pref = new SwitchPreference(getPreferenceManager().getContext()) {
+                @Override
+                public void onBindViewHolder(PreferenceViewHolder holder) {
+                    super.onBindViewHolder(holder);
+                    // Enabling the view will ensure that the preference is focusable even if it
+                    // the preference is disabled. This allows the user to scroll down over the
+                    // disabled surround sound formats and see them all.
+                    holder.itemView.setEnabled(true);
+                }
+            };
             pref.setTitle(getFormatDisplayName(formatId));
             pref.setKey(KEY_SURROUND_SOUND_FORMAT_PREFIX + formatId);
             pref.setChecked(enabled);

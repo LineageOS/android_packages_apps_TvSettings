@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.app;
+package com.android.tv.settings.autofill;
 
 import android.Manifest;
 import android.content.ComponentName;
@@ -56,7 +56,8 @@ public class AutofillHelper {
                 AUTOFILL_PROBE, PackageManager.GET_META_DATA);
         for (ResolveInfo info : resolveInfos) {
             final String permission = info.serviceInfo.permission;
-            if (Manifest.permission.BIND_AUTOFILL_SERVICE.equals(permission)) {
+            if (Manifest.permission.BIND_AUTOFILL_SERVICE.equals(permission)
+                    || Manifest.permission.BIND_AUTOFILL.equals(permission)) {
                 candidates.add(new DefaultAppInfo(context, pm, myUserId, new ComponentName(
                         info.serviceInfo.packageName, info.serviceInfo.name)));
             }
@@ -65,19 +66,31 @@ public class AutofillHelper {
     }
 
     /**
+     * Get flattened ComponentName of current autofill service
+     */
+    @Nullable
+    public static String getCurrentAutofill(@NonNull Context context) {
+        return Settings.Secure.getString(context.getContentResolver(),
+                Settings.Secure.AUTOFILL_SERVICE);
+    }
+
+    /**
+     * Get flattened ComponentName of current autofill service
+     */
+    @Nullable
+    public static ComponentName getCurrentAutofillAsComponentName(@NonNull Context context) {
+        String flattenedName = getCurrentAutofill(context);
+        return TextUtils.isEmpty(flattenedName)
+                ? null : ComponentName.unflattenFromString(flattenedName);
+    }
+
+    /**
      * Find the current autofill service from the list.
      */
     @Nullable
     public static DefaultAppInfo getCurrentAutofill(@NonNull Context context,
             @NonNull List<DefaultAppInfo> candidates) {
-        final String flattenComponent = Settings.Secure.getString(context.getContentResolver(),
-                Settings.Secure.AUTOFILL_SERVICE);
-        final ComponentName name;
-        if (!TextUtils.isEmpty(flattenComponent)) {
-            name = ComponentName.unflattenFromString(flattenComponent);
-        } else {
-            name = null;
-        }
+        final ComponentName name = getCurrentAutofillAsComponentName(context);
         for (int i = 0; i < candidates.size(); i++) {
             DefaultAppInfo appInfo = candidates.get(i);
             if ((name == null && appInfo.componentName == null)
