@@ -20,6 +20,7 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -31,6 +32,7 @@ import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.service.settings.suggestions.Suggestion;
 import android.telephony.SignalStrength;
+import android.util.Log;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -57,6 +59,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         SuggestionControllerMixin.SuggestionControllerHost, SuggestionPreference.Callback,
         HotwordStateListener {
 
+    private static final String TAG = "MainFragment";
     private static final String KEY_SUGGESTIONS_LIST = "suggestions";
     @VisibleForTesting
     static final String KEY_ACCOUNTS_AND_SIGN_IN = "accounts_and_sign_in";
@@ -180,6 +183,28 @@ public class MainFragment extends PreferenceControllerFragment implements
             mHotwordSwitchController.updateState(mHotwordSwitch);
         }
         showOrHideQuickSettings();
+    }
+
+    @Override
+    public void onHotwordEnable() {
+        try {
+            Intent intent = new Intent(HotwordSwitchController.ACTION_HOTWORD_ENABLE);
+            intent.setPackage(HotwordSwitchController.ASSISTANT_PGK_NAME);
+            startActivityForResult(intent, 0);
+        } catch (ActivityNotFoundException e) {
+            Log.w(TAG, "Unable to find hotwording activity.", e);
+        }
+    }
+
+    @Override
+    public void onHotwordDisable() {
+        try {
+            Intent intent = new Intent(HotwordSwitchController.ACTION_HOTWORD_DISABLE);
+            intent.setPackage(HotwordSwitchController.ASSISTANT_PGK_NAME);
+            startActivityForResult(intent, 0);
+        } catch (ActivityNotFoundException e) {
+            Log.w(TAG, "Unable to find hotwording activity.", e);
+        }
     }
 
     @Override
