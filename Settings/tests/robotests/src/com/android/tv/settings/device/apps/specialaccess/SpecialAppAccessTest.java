@@ -54,20 +54,24 @@ public class SpecialAppAccessTest {
     }
 
     @Test
-    public void testPictureInPicture_isHiddenOnLowRam() {
+    public void testFeaturesDisabledOnLowRam() {
         mActivityManager.setLowRamDevice(true);
 
         mSpecialAppAccess.updatePreferenceStates();
 
         verify(mSpecialAppAccess, times(1)).removePreference(SpecialAppAccess.KEY_FEATURE_PIP);
+        verify(mSpecialAppAccess, times(1)).removePreference(
+                SpecialAppAccess.KEY_FEATURE_NOTIFICATION_ACCESS);
     }
 
     @Test
-    public void testPictureInPicture_isShownOnNonLowRam() {
+    public void testFeaturesNotDisabledNonLowRam() {
         mActivityManager.setLowRamDevice(false);
 
         mSpecialAppAccess.updatePreferenceStates();
 
         verify(mSpecialAppAccess, never()).removePreference(SpecialAppAccess.KEY_FEATURE_PIP);
+        verify(mSpecialAppAccess, never()).removePreference(
+                SpecialAppAccess.KEY_FEATURE_NOTIFICATION_ACCESS);
     }
 }
