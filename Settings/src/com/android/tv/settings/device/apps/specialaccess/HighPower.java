@@ -39,8 +39,7 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 public class HighPower extends SettingsPreferenceFragment implements
         ManageApplicationsController.Callback {
 
-    private final PowerWhitelistBackend mPowerWhitelistBackend =
-            PowerWhitelistBackend.getInstance();
+    private PowerWhitelistBackend mPowerWhitelistBackend;
     private ManageApplicationsController mManageApplicationsController;
     private final ApplicationsState.AppFilter mFilter =
             new ApplicationsState.CompoundFilter(
@@ -68,6 +67,7 @@ public class HighPower extends SettingsPreferenceFragment implements
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        mPowerWhitelistBackend = PowerWhitelistBackend.getInstance(context);
         mManageApplicationsController = new ManageApplicationsController(context, this,
                 getLifecycle(), mFilter, ApplicationsState.ALPHA_COMPARATOR);
     }
