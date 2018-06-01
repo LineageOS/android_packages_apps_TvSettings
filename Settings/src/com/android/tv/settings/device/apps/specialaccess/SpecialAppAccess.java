@@ -36,8 +36,9 @@ public class SpecialAppAccess extends SettingsPreferenceFragment {
 
     @VisibleForTesting
     static final String KEY_FEATURE_PIP = "picture_in_picture";
+    static final String KEY_FEATURE_NOTIFICATION_ACCESS = "notification_access";
     private static final String[] DISABLED_FEATURES_LOW_RAM_TV =
-            new String[]{KEY_FEATURE_PIP};
+            new String[]{KEY_FEATURE_PIP, KEY_FEATURE_NOTIFICATION_ACCESS};
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
