@@ -17,9 +17,7 @@
 package com.android.tv.settings;
 
 import android.annotation.Nullable;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.ContentObserver;
@@ -41,8 +39,10 @@ public class HotwordSwitchController extends AbstractPreferenceController {
     private static final String TAG = "HotwordController";
     private static final Uri URI = Uri.parse("content://com.google.android.katniss.search."
             + "searchapi.VoiceInteractionProvider/sharedvalue");
-    private static final String ACTION_HOTWORD_SETUP = "com.google.android.assistant.HOTWORD_SETUP";
-    private static final String ACTION_HOTWORD_DISABLE =
+    static final String ASSISTANT_PGK_NAME = "com.google.android.katniss";
+    static final String ACTION_HOTWORD_ENABLE =
+            "com.google.android.assistant.HOTWORD_ENABLE";
+    static final String ACTION_HOTWORD_DISABLE =
             "com.google.android.assistant.HOTWORD_DISABLE";
 
     static final String KEY_HOTWORD_SWITCH = "hotword_switch";
@@ -51,6 +51,10 @@ public class HotwordSwitchController extends AbstractPreferenceController {
     public interface HotwordStateListener {
         /** hotword state has changed */
         void onHotwordStateChanged();
+        /** request to enable hotwording */
+        void onHotwordEnable();
+        /** request to disable hotwording */
+        void onHotwordDisable();
     }
 
     private ContentObserver mHotwordSwitchObserver = new ContentObserver(null) {
@@ -156,29 +160,13 @@ public class HotwordSwitchController extends AbstractPreferenceController {
                     mHotwordSwitchObserver);
             new HotwordLoader().execute();
         } catch (SecurityException e) {
-            Log.w(TAG, "Hotword content provider not found.");
+            Log.w(TAG, "Hotword content provider not found.", e);
         }
     }
 
     /** Must be invoked by caller to unregister receivers. */
     public void unregister() {
         mContext.getContentResolver().unregisterContentObserver(mHotwordSwitchObserver);
-    }
-
-    private void enableHotwording() {
-        try {
-            mContext.startActivity(new Intent(ACTION_HOTWORD_SETUP));
-        } catch (ActivityNotFoundException e) {
-            Log.w(TAG, "Unable to find hotwording activity.");
-        }
-    }
-
-    private void disableHotwording() {
-        try {
-            mContext.startActivity(new Intent(ACTION_HOTWORD_DISABLE));
-        } catch (ActivityNotFoundException e) {
-            Log.w(TAG, "Unable to find hotwording activity.");
-        }
     }
 
     @Override
@@ -210,10 +198,10 @@ public class HotwordSwitchController extends AbstractPreferenceController {
             SwitchPreference hotwordSwitchPref = (SwitchPreference) preference;
             if (hotwordSwitchPref.isChecked()) {
                 hotwordSwitchPref.setChecked(false);
-                enableHotwording();
+                mHotwordStateListener.onHotwordEnable();
             } else {
                 hotwordSwitchPref.setChecked(true);
-                disableHotwording();
+                mHotwordStateListener.onHotwordDisable();
             }
         }
         return super.handlePreferenceTreeClick(preference);
