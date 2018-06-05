@@ -22,7 +22,8 @@
     <PreferenceCategory
         android:key="keyboardCategory"
         android:order="0"
-        android:title="@string/system_keyboard" >
+        android:title="@string/system_keyboard"
+        android:layout="@layout/preference_category_compact_layout">
     </PreferenceCategory>
 
     <ListPreference
@@ -43,7 +44,8 @@
     <PreferenceCategory
         android:order="4"
         android:key="autofillCategory"
-        android:title="@string/system_autofill">
+        android:title="@string/system_autofill"
+        android:layout="@layout/preference_category_compact_layout">
 
         <Preference
             android:key="currentAutofill"
