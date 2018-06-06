@@ -16,12 +16,12 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/development_settings_title">
+                  android:title="@string/development_settings_title">
     <SwitchPreference
         android:key="development_settings_enable"
         android:title="@string/development_settings_enable"
         android:fragment="com.android.tv.settings.system.development.EnableDevelopmentDialog"
-        />
+    />
     <Preference
         android:key="bugreport"
         android:title="@*android:string/bugreport_title"
@@ -64,15 +64,15 @@
         android:key="running_apps"
         android:title="@string/runningservices_settings_title"
         android:summary="@string/runningservices_settings_summary" />
-        <!-- TODO: implement this -->
-        <!--android:fragment="com.android.settings.applications.RunningServices" />-->
+    <!-- TODO: implement this -->
+    <!--android:fragment="com.android.settings.applications.RunningServices" />-->
 
     <PreferenceScreen
         android:key="convert_to_file_encryption"
         android:title="@string/convert_to_file_encryption"
         android:summary="@string/convert_to_file_encryption_enabled" />
-        <!-- TODO: implement this-->
-        <!--android:fragment="com.android.settings.applications.ConvertToFbe" />-->
+    <!-- TODO: implement this-->
+    <!--android:fragment="com.android.settings.applications.ConvertToFbe" />-->
 
     <com.android.tv.settings.system.development.ColorModePreference
         android:key="color_mode"
@@ -81,7 +81,8 @@
         android:persistent="true" />
 
     <PreferenceCategory android:key="debug_debugging_category"
-        android:title="@string/debug_debugging_category">
+                        android:layout="@layout/preference_category_compact_layout"
+                        android:title="@string/debug_debugging_category">
 
         <SwitchPreference
             android:key="enable_adb"
@@ -90,8 +91,8 @@
             android:fragment="com.android.tv.settings.system.development.AdbDialog" />
 
         <Preference android:key="clear_adb_keys"
-            android:title="@string/clear_adb_keys"
-            android:fragment="com.android.tv.settings.system.development.AdbKeysDialog" />
+                    android:title="@string/clear_adb_keys"
+                    android:fragment="com.android.tv.settings.system.development.AdbKeysDialog" />
 
         <SwitchPreference
             android:key="enable_terminal"
@@ -99,14 +100,14 @@
             android:summary="@string/enable_terminal_summary" />
 
         <PreferenceScreen android:key="mock_location_app"
-            android:title="@string/mock_location_app" />
+                          android:title="@string/mock_location_app" />
 
         <SwitchPreference
             android:key="debug_view_attributes"
             android:title="@string/debug_view_attributes" />
 
         <PreferenceScreen android:key="debug_app"
-            android:title="@string/debug_app" />
+                          android:title="@string/debug_app" />
 
         <SwitchPreference
             android:key="wait_for_debugger"
@@ -135,7 +136,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:key="debug_networking_category"
-        android:title="@string/debug_networking_category">
+                        android:layout="@layout/preference_category_compact_layout"
+                        android:title="@string/debug_networking_category">
 
         <SwitchPreference
             android:key="wifi_display_certification"
@@ -162,7 +164,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:key="debug_input_category"
-        android:title="@string/debug_input_category">
+                        android:layout="@layout/preference_category_compact_layout"
+                        android:title="@string/debug_input_category">
 
         <SwitchPreference
             android:key="show_touches"
@@ -177,7 +180,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:key="debug_drawing_category"
-        android:title="@string/debug_drawing_category">
+                        android:layout="@layout/preference_category_compact_layout"
+                        android:title="@string/debug_drawing_category">
 
         <SwitchPreference
             android:key="show_screen_updates"
@@ -225,12 +229,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:key="debug_hw_drawing_category"
-        android:title="@string/debug_hw_drawing_category">
-
-        <SwitchPreference
-            android:key="force_hw_ui"
-            android:title="@string/force_hw_ui"
-            android:summary="@string/force_hw_ui_summary"/>
+                        android:layout="@layout/preference_category_compact_layout"
+                        android:title="@string/debug_hw_drawing_category">
 
         <SwitchPreference
             android:key="show_hw_screen_udpates"
@@ -277,7 +277,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:key="media_category"
-        android:title="@string/media_category">
+                        android:layout="@layout/preference_category_compact_layout"
+                        android:title="@string/media_category">
 
         <SwitchPreference
             android:key="usb_audio"
@@ -287,7 +288,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:key="debug_monitoring_category"
-        android:title="@string/debug_monitoring_category">
+                        android:layout="@layout/preference_category_compact_layout"
+                        android:title="@string/debug_monitoring_category">
 
         <SwitchPreference
             android:key="strict_mode"
@@ -311,7 +313,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:key="debug_applications_category"
-        android:title="@string/debug_applications_category">
+                        android:layout="@layout/preference_category_compact_layout"
+                        android:title="@string/debug_applications_category">
 
         <SwitchPreference
             android:key="immediately_destroy_activities"
