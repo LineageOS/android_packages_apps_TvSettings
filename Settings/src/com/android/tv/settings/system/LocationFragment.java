@@ -107,6 +107,7 @@ public class LocationFragment extends SettingsPreferenceFragment implements
         final PreferenceCategory recentRequests = new PreferenceCategory(themedContext);
         screen.addPreference(recentRequests);
         recentRequests.setTitle(R.string.location_category_recent_location_requests);
+        recentRequests.setLayoutResource(R.layout.preference_category_compact_layout);
 
         List<RecentLocationApps.Request> recentLocationRequests =
                 new RecentLocationApps(themedContext).getAppList();
