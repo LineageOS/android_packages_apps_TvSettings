@@ -615,7 +615,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
                     context.getPackageManager().getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
                             == PackageManager.COMPONENT_ENABLED_STATE_ENABLED);
         }
-        updateSwitchPreference(mBugreportInPower, Settings.Secure.getInt(cr,
+        updateSwitchPreference(mBugreportInPower, Settings.Global.getInt(cr,
                 Settings.Global.BUGREPORT_IN_POWER_MENU, 0) != 0);
         updateSwitchPreference(mKeepScreenOn, Settings.Global.getInt(cr,
                 Settings.Global.STAY_ON_WHILE_PLUGGED_IN, 0) != 0);
@@ -1669,7 +1669,7 @@ public class DevelopmentFragment extends LeanbackPreferenceFragment
                     mEnableTerminal.isChecked() ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
                             : PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, 0);
         } else if (preference == mBugreportInPower) {
-            Settings.Secure.putInt(mContentResolver, Settings.Global.BUGREPORT_IN_POWER_MENU,
+            Settings.Global.putInt(mContentResolver, Settings.Global.BUGREPORT_IN_POWER_MENU,
                     mBugreportInPower.isChecked() ? 1 : 0);
             setBugreportStorageProviderStatus();
         } else if (preference == mKeepScreenOn) {
