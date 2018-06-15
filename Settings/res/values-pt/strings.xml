@@ -23,7 +23,8 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Sugestões"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Configurações rápidas"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Configurações gerais"</string>
-    <string name="hotwording_title" msgid="1770342282683096475">"Detecção de \"OK Google\""</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"Dispensar sugestão"</string>
+    <string name="hotwording_title" msgid="1984130766527626626">"Detecção de \"Ok Google\""</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Fale com o Google Assistente a qualquer momento"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Dispositivo"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Preferências"</string>
@@ -40,7 +41,7 @@
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"Rede e Internet"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"Apps"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"Preferências do dispositivo"</string>
-    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"Controles remotos e acessórios"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"Controle remoto e acessórios"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"Nenhum dispositivo Bluetooth conectado"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> acessório</item>
@@ -66,7 +67,7 @@
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethernet conectada"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Nenhuma rede conectada"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"O Wi-Fi está desativado"</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Verificação sempre disponível"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Busca sempre ativada"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Permitir que o serviço de localização do Google e outros apps procurem redes, mesmo que o Wi-Fi esteja desligado"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"Conectar-se à rede"</string>
@@ -132,7 +133,8 @@
     <string name="system_date_time" msgid="8898457978560618950">"Data e hora"</string>
     <string name="system_language" msgid="2337138146114609247">"Idioma"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"Teclado"</string>
-    <string name="system_autofill_service" msgid="3867736719921644747">"Serviço de preenchimento automático"</string>
+    <string name="system_keyboard_autofill" msgid="5787948036400896834">"Teclado e preenchimento automático"</string>
+    <string name="system_autofill" msgid="8647914463541617409">"Preenchimento automático"</string>
     <string name="system_home" msgid="2858989138172296012">"Tela inicial"</string>
     <string name="system_search" msgid="2837264654143247611">"Pesquisar"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -489,7 +491,7 @@
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"Mostrar atualiz. da GPU"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"Mostrar camada de hardware"</string>
     <string name="system_show_gpu_overdraw" msgid="707861254106800199">"Mostrar overdraw da GPU"</string>
-    <string name="system_show_surface_updates" msgid="8878834675712192327">"Mostrar atualiz. de superfície"</string>
+    <string name="system_show_surface_updates" msgid="8878834675712192327">"Mostrar atualização de superfície"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"Escala de animação da janela"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Escala de animação de transição"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Escala de duração do Animator"</string>
@@ -556,11 +558,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"Normal"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"Rápida"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"Muito rápida"</string>
+    <string name="title_settings" msgid="5433841477518010243">"Configurações do <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"Teclado atual"</string>
     <string name="title_configure" msgid="6929522003149212388">"Configurar"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"Opções do teclado"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"Serviço atual de preenchimento automático"</string>
-    <string name="autofill_disable" msgid="539635915296078432">"Desativar"</string>
+    <string name="title_select_autofill_service" msgid="2515782066694197988">"Selecione o serviço de preenchimento automático"</string>
+    <string name="autofill_none" msgid="2426888642367790651">"Nenhum"</string>
+    <string name="autofill_confirmation_message" msgid="9068009043054751287">"&lt;b&gt;Você precisa confiar neste app&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Password service&gt;%1$s&lt;/xliff:g&gt; usa o que é exibido na tela para determinar o que pode ser preenchido automaticamente."</string>
     <string name="computing_size" msgid="2955133568424704042">"Calculando…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"Selecione sua rede Wi-Fi"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Renomear"</string>
@@ -694,6 +699,8 @@
     <string name="custom_room" msgid="8655516733933892458">"Inserir um nome personalizado…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Renomear este <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Este <xliff:g id="DEVICEMODEL">%1$s</xliff:g> atualmente é chamado de \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
+    <string name="device_name_suggestion_title" msgid="2312205155408810120">"Definir o nome do dispositivo"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Use esse nome ao transmitir fotos, vídeos e outros itens do seu smartphone"</string>
     <string name="change_setting" msgid="2047402388786162246">"Alterar"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Não alterar"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Permissões"</string>
@@ -712,27 +719,28 @@
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Permitido"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Não permitido"</string>
     <string name="usage_access" msgid="1914242907684452328">"Acesso ao uso"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"O acesso ao uso permite que um app rastreie que outros apps você está usando e com que frequência, bem como sua operadora, as configurações de idioma e outros detalhes."</string>
-    <string name="high_power_apps" msgid="7796096221999495077">"Otimização de energia"</string>
-    <string name="high_power_apps_description" msgid="1990016812115792282">"Otimize o uso de energia dos apps"</string>
-    <string name="high_power_apps_empty" msgid="1355906551507153470">"Nenhum app precisa de otimização"</string>
-    <string name="high_power_on" msgid="7725180078784796673">"Não otimizado"</string>
-    <string name="high_power_off" msgid="308272752152871252">"Otimizando o uso de energia"</string>
-    <string name="high_power_system" msgid="7815843517656137656">"Otimização de energia não disponível"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"O acesso ao uso permite que um app monitore que outros apps você está usando e com que frequência, bem como sua operadora, as configurações de idioma e outros detalhes."</string>
+    <string name="high_power_apps" msgid="7796096221999495077">"Economia de energia"</string>
+    <string name="high_power_apps_description" msgid="1990016812115792282">"Economiza o uso de energia dos apps"</string>
+    <string name="high_power_apps_empty" msgid="1355906551507153470">"Nenhum app precisa de economia"</string>
+    <string name="high_power_on" msgid="7725180078784796673">"Sem economia"</string>
+    <string name="high_power_off" msgid="308272752152871252">"Economizando o uso de energia"</string>
+    <string name="high_power_system" msgid="7815843517656137656">"Economia de energia não disponível"</string>
     <string name="manage_notification_access_title" msgid="2051765294087620434">"Acesso a notificações"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"Nenhum app instalado solicitou acesso a notificações."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Esses apps poderão ler todas as notificações, incluindo informações pessoais, como nomes de contato e o texto das mensagens que você recebe. Eles também conseguirão dispensar notificações ou acionar botões de ação contidos neles."</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Sobrepor a outros apps"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"Permitir sobreposição a outros apps"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"Permite sobrepor a outros apps"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Permite que um app seja sobreposto a outros apps que você esteja usando. Ele pode interferir no uso que você faz desses apps ou alterar a forma como eles aparecem ou se comportam."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Modificar config. do sistema"</string>
-    <string name="write_settings_title" msgid="8750406725746598710">"Pode modificar configurações do sistema"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Muda configurações do sistema"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"Permite que um app modifique configurações do sistema."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"Sim"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"Não"</string>
     <string name="picture_in_picture_title" msgid="7738692876349058">"Picture-in-picture"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Permitir picture-in-picture"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Nenhum dos apps instalados é compatível com picture-in-picture"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Permite que apps criem uma janela picture-in-picture enquanto o app é aberto ou depois que você sai dele (por exemplo, para continuar a assistir um vídeo). Essa janela é sobreposta a outros apps que você está usando."</string>
-    <string name="special_access" msgid="3513811566600299998">"Acesso especial ao app"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Permite que apps abram uma janela picture-in-picture enquanto o app está aberto ou depois que você sai dele (por exemplo, para continuar a assistir um vídeo). Essa janela é sobreposta a outros apps que você esteja usando."</string>
+    <string name="special_access" msgid="3513811566600299998">"Acesso especial a apps"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
 </resources>
