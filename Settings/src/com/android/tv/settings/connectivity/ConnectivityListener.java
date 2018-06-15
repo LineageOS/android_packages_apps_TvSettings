@@ -67,7 +67,9 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     private final BroadcastReceiver mNetworkReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            mListener.onConnectivityChange();
+            if (mListener != null) {
+                mListener.onConnectivityChange();
+            }
         }
     };
     private final EthernetManager.Listener mEthernetListener = new EthernetManager.Listener() {
@@ -345,13 +347,17 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     @Override
     public void onWifiStateChanged(int state) {
         updateConnectivityStatus();
-        mListener.onConnectivityChange();
+        if (mListener != null) {
+            mListener.onConnectivityChange();
+        }
     }
 
     @Override
     public void onConnectedChanged() {
         updateConnectivityStatus();
-        mListener.onConnectivityChange();
+        if (mListener != null) {
+            mListener.onConnectivityChange();
+        }
     }
 
     @Override
