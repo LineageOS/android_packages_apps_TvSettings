@@ -15,12 +15,9 @@
   limitations under the License.
   -->
 
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:viewportWidth="24"
-        android:viewportHeight="24"
-        android:width="24dp"
-        android:height="24dp">
-    <path
-        android:pathData="M12 2C6.47 2 2 6.47 2 12 2 17.53 6.47 22 12 22 17.53 22 22 17.53 22 12 22 6.47 17.53 2 12 2ZM17 15.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59Z"
-        android:fillColor="#FFFFFF" />
-</vector>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_dismiss_focused"
+          android:state_focused="true" />
+    <item android:drawable="@drawable/ic_dismiss_non_focused"
+          android:state_focused="false" />
+</selector>
