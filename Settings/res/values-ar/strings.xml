@@ -321,7 +321,7 @@
     <string name="storage_no_apps" msgid="579118619398668670">"ليس هناك تطبيقات للاحتفاظ بنسخ احتياطية منها."</string>
     <string name="storage_forget" msgid="8731986045697320463">"تجاهل سعة تخزين الجهاز هذه"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"لاستخدام التطبيقات أو البيانات التي يتضمنها محرك الأقراص هذا، عليك إعادة توصيله بالجهاز. ويمكنك بدلاً من ذلك حذف وحدة التخزين هذه إذا لم يكن محرك الأقراص متاحًا.\n\nإذا اخترت \"حذف\"، فسيتم فقد كل البيانات التي يتضمنها محرك الأقراص للأبد.\n\nيمكنك إعادة تثبيت التطبيقات لاحقًا، ولكن سيتم فقد البيانات المخزنة على محرك الأقراص هذا."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"السعة التخزينية للجهاز"</string>
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"سعة التخزين للجهاز"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"وحدة التخزين القابلة للنقل"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"إعادة الضبط"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"تم تثبيت <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -357,7 +357,7 @@
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"إخراج سعة تخزين الجهاز"</string>
     <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"سيتوقف عمل التطبيقات على سعة تخزين هذا الجهاز عند إخراجها. تمت تهيئة محرك أقراص USB هذا بحيث يعمل على هذا الجهاز فقط، ولن يعمل على أي جهاز آخر."</string>
     <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"جارٍ إخراج <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"السعة التخزينية المستخدمة"</string>
+    <string name="storage_wizard_move_app_title" msgid="37057801779891287">"سعة التخزين المستخدمة"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"جارٍ نقل <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"يُرجى عدم إزالة محرك الأقراص أثناء النقل.\nلن يكون تطبيق <xliff:g id="APPNAME">%1$s</xliff:g> على هذا الجهاز متاحًا حتى اكتمال النقل."</string>
     <string name="storage_wizard_forget_confirm_title" msgid="4321200084208420221">"هل تريد تجاهل سعة تخزين الجهاز؟"</string>
@@ -683,7 +683,7 @@
     <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"هل تريد إيقاف هذا التطبيق؟"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"تفعيل"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"هل تريد تفعيل هذا التطبيق؟"</string>
-    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"السعة التخزينية المستخدمة"</string>
+    <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"سعة التخزين المستخدمة"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"تم استخدام <xliff:g id="SIZE">%1$s</xliff:g> في <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"محو البيانات"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"سيتم حذف جميع بيانات هذا التطبيق نهائيًا.\nويتضمن ذلك جميع الملفات والإعدادات والحسابات وقواعد البيانات، وما إلى ذلك."</string>
@@ -757,6 +757,9 @@
     <string name="manage_notification_access_title" msgid="2051765294087620434">"الوصول إلى الإشعارات"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"لم تطلب أي تطبيقات مثبّتة حق الوصول إلى الإشعارات."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"سيكون بإمكان هذه التطبيقات قراءة جميع الإشعارات، بما في ذلك المعلومات الشخصية مثل أسماء جهات الاتصال ونص الرسائل التي تتلقاها. وسيكون بإمكانها أيضًا تجاهل الإشعارات أو تفعيل الأزرار داخل هذه الإشعارات."</string>
+    <string name="directory_access" msgid="7439168599298598101">"الوصول إلى الدليل"</string>
+    <string name="directory_access_description" msgid="878500352290246580">"تملك هذه التطبيقات إذنًا بالوصول إلى أدلة معينة."</string>
+    <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"عرض التطبيق فوق التطبيقات الأخرى"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"عرض التطبيق فوق التطبيقات الأخرى"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"السماح بعرض تطبيق ما فوق التطبيقات الأخرى التي تستخدمها، وقد يؤثّر هذا على استخدامك لهذه التطبيقات أو يغيِّر طريقة ظهورها أو عملها"</string>
