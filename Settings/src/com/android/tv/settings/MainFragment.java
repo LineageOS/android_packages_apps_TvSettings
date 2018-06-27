@@ -220,6 +220,12 @@ public class MainFragment extends PreferenceControllerFragment implements
                 accountsPref.setVisible(false);
             }
         }
+        if (!supportBluetooth()) {
+            Preference accessoryPreference = findPreference(KEY_ACCESSORIES);
+            if (accessoryPreference != null) {
+                accessoryPreference.setVisible(false);
+            }
+        }
         mHotwordSwitchController.init(this);
     }
 
@@ -473,5 +479,11 @@ public class MainFragment extends PreferenceControllerFragment implements
         } else {
             mSuggestionsList.removePreference(preference);
         }
+    }
+
+    private boolean supportBluetooth() {
+        return getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)
+                ? true
+                : false;
     }
 }
