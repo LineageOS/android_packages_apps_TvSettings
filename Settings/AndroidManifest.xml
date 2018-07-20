@@ -189,6 +189,17 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".device.apps.specialaccess.PictureInPictureActivity"
+                  android:theme="@style/Theme.Settings.Transparent"
+                  android:taskAffinity=""
+                  android:excludeFromRecents="true"
+                  android:exported="true">
+            <intent-filter android:priority="1">
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.settings.PICTURE_IN_PICTURE_SETTINGS" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".device.apps.AppManagementActivity"
             android:theme="@style/Theme.Settings.Transparent"
@@ -243,6 +254,11 @@
                 <action android:name="android.settings.WIFI_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LEANBACK_SETTINGS" />
+            </intent-filter>
+
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.LOCATION_SCANNING_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
