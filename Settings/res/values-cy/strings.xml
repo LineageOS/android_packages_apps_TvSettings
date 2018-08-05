@@ -41,7 +41,7 @@
   <!-- Data synchronization settings screen, summary of a sync provider (for example, Gmail) when autosync is off and the user wants to do a one-time sync. -->
   <string name="sync_one_time_sync">Cysoni nawr<xliff:g id="last_sync_time">\n%1$s</xliff:g></string>
   <!-- Image description for the sync failed icon. -->
-  <string name="sync_failed">Methwyd cysoni</string>
+  <string name="sync_failed">Methwyd â chysoni</string>
   <!-- Animation description for the sync active icon. -->
   <string name="sync_active">Cysoni\'n weithredol</string>
   <!-- Connectivity preferences -->
@@ -63,6 +63,7 @@
   <!-- Preference which manages apps. [CHAR LIMIT=50] -->
   <!-- Preference which shows storage status. [CHAR LIMIT=50] -->
   <!-- Preference which manages backup settings. [CHAR LIMIT=50] -->
+  <string name="device_backup_restore">Cadw copi wrth gefn ac adfer</string>
   <!-- Preference which shows reset options [CHAR LIMIT=50] -->
   <!-- Preference which sets the device's display calibration. [CHAR LIMIT=50] -->
   <!-- Title of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
@@ -207,6 +208,7 @@
   <!-- contents for connection status -->
   <!-- Connected [CHAR LIMIT=50] -->
   <!-- Not connected [CHAR LIMIT=50] -->
+  <string name="not_connected">Heb gysylltu</string>
   <!-- Wifi setting headers [CHAR LIMIT=50] -->
   <string name="wifi_setting_header_other_options">Dewisiadau eraill</string>
   <string name="wifi_setting_see_fewer">Gweld llai</string>
@@ -313,6 +315,7 @@
   <string name="storage_format_as_public">Dileu popeth a fformatio fel storfa symudol</string>
   <!-- Storage settings format for device storage action [CHAR LIMIT=50] -->
   <!-- Description for a storage volume which is not currently connected to the device -->
+  <string name="storage_not_connected">Heb gysylltu</string>
   <!-- Storage settings migrate primary storage action [CHAR_LIMIT=50] -->
   <string name="storage_migrate">Symud data i\'r storfa hon</string>
   <!-- Storage settings migrate primary storage action [CHAR_LIMIT=50] -->
@@ -379,6 +382,7 @@
   <!-- Title for missing storage activity shown when a drive is removed [CHAR_LIMIT=50] -->
   <!-- Description for missing storage activity shown when a drive is removed [CHAR_LIMIT=NONE] -->
   <!-- Manage applications, text for move error messages -->
+  <string name="insufficient_storage">Dim digon o gof yn weddill.</string>
   <!-- Error message shown when trying to move device administrators to external disks, such as SD card [CHAR_LIMIT=none] -->
   <string name="move_error_device_admin">Ni all Weinyddwr y ddyfais cael ei osod ar storfa allanol.</string>
   <!-- Learn more action title [CHAR_LIMIT=50] -->
@@ -459,13 +463,17 @@
   <!-- Title for captions background display setting [CHAR LIMIT=50] -->
   <string name="captions_backgroundshow">Dangos y cefndir</string>
   <!-- Title for captions background color setting [CHAR LIMIT=50] -->
+  <string name="captions_backgroundcolor">Lliw cefndir</string>
   <!-- Title for captions bacground opacity setting [CHAR LIMIT=50] -->
+  <string name="captions_backgroundopacity">Anhryloywder cefndir</string>
   <!-- Sample text for previewing video caption preferences. [CHAR LIMIT=NONE] -->
   <!-- Title for captions text opacity setting [CHAR LIMIT=50] -->
+  <string name="captions_textopacity">Anhryloywder testun</string>
   <!-- Title for captions window display setting [CHAR LIMIT=50] -->
   <string name="captions_windowshow">Dangos ffenestr</string>
   <!-- Title for captions window color setting [CHAR LIMIT=50] -->
   <!-- Title for captions window opacity setting [CHAR LIMIT=50] -->
+  <string name="captions_windowopacity">Anhryloywder ffenestr</string>
   <!-- Title for caption style 0 [CHAR LIMIT=50] -->
   <string name="captions_style_0">Gwyn ar ddu</string>
   <!-- Title for caption style 1 [CHAR LIMIT=50] -->
@@ -613,6 +621,7 @@
   <!-- Option to only use the selected option this time. See the "Complete action using" dialog title [CHAR LIMIT=50]-->
   <!-- Text to display when there are no activities found to display in the activity chooser. See the whichApplication title.[CHAR LIMIT=50] -->
   <!-- Action to go back to the previous screen, when no apps have been found to perform the requested action. [CHAR LIMIT=50]-->
+  <string name="noAppsGoBack">Nôl</string>
   <!-- TV input settings row -->
   <!-- Header of HDMI CEC device control [CHAR LIMIT=50] -->
   <!-- Title of CEC device settings [CHAR LIMIT=30] -->
@@ -679,6 +688,7 @@
   <!-- Description for action to configure apps for a restricted profile indicating number of allow apps will be ready in a moment [CHAR LIMIT=100] -->
   <!-- An action label indicating the package will be or is allowed [CHAR LIMIT=100] -->
   <!-- An action label indicating the package will be or is not allowed [CHAR LIMIT=100] -->
+  <string name="restricted_profile_not_allowed">Ni chaniateir</string>
   <!-- Action to customize restrictions for a package [CHAR LIMIT=100] -->
   <!-- Description for action to configure apps for a restricted profile indicating the number of allow apps [CHAR LIMIT=100] -->
   <!-- Title for action to change the PIN code to use when exiting restricted profile [CHAR LIMIT=100] -->
@@ -751,6 +761,7 @@
   <!-- Dialog title for confirmation to erase backup data from server -->
   <!-- Dialog title for confirmation to erase backup data from server -->
   <!-- Privacy choice for configuring backing up data [CHAR LIMIT=40] -->
+  <string name="privacy_backup_data">Creu copi wrth gefn o fy nata</string>
   <!-- Privacy choice for choosing which account to backup [CHAR LIMIT=40] -->
   <!-- Privacy choice for configuring automatic restore [CHAR LIMIT=40] -->
   <!-- Factory reset choice for initiating a factory reset [CHAR LIMIT=40] -->
@@ -790,6 +801,8 @@
   <!-- Title for the preference entry for managing keyboards [CHAR LIMIT=50] -->
   <!-- Preference summary text for an app when it is allowed for a permission. [CHAR LIMIT=45] -->
   <!-- Preference summary text for an app when it is disallowed for a permission. [CHAR LIMIT=45] -->
+  <string name="app_permission_summary_not_allowed">Ni chaniateir</string>
   <!-- Title of usage access screen [CHAR LIMIT=30] -->
   <!-- Description of the usage access setting [CHAR LIMIT=NONE] -->
+  <string name="usage_access_description">Mae mynediad defnydd yn caniatáu i ap ddilyn pa apiau eraill wyt yn eu defnyddio a pha mor aml, yn ogystal â dy ddarparwr gwasanaeth, iaith y system a manylion eraill.</string>
 </resources>
