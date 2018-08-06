@@ -20,7 +20,6 @@ import android.content.Context;
 import android.net.EthernetManager;
 import android.net.IpConfiguration;
 import android.net.wifi.WifiManager;
-import android.os.Parcelable;
 
 import com.android.tv.settings.R;
 
@@ -76,21 +75,4 @@ class EthernetConfig implements NetworkConfiguration {
         return mName;
     }
 
-    @Override
-    public Parcelable toParcelable() {
-        return mIpConfiguration;
-    }
-
-    public void fromParcelable(Parcelable parcelable) {
-        if (parcelable instanceof IpConfiguration) {
-            mIpConfiguration = (IpConfiguration) parcelable;
-        } else {
-            throw new IllegalArgumentException("Invalid parcelable");
-        }
-    }
-
-    @Override
-    public int getNetworkType() {
-        return NetworkConfigurationFactory.TYPE_ETHERNET;
-    }
 }
