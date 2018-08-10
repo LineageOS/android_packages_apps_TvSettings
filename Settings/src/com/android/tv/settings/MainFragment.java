@@ -94,8 +94,10 @@ public class MainFragment extends PreferenceControllerFragment implements
     /** Controllers for the Quick Settings section. */
     private List<AbstractPreferenceController> mPreferenceControllers;
     private HotwordSwitchController mHotwordSwitchController;
+    private TakeBugReportController mTakeBugReportController;
     private PreferenceCategory mQuickSettingsList;
     private SwitchPreference mHotwordSwitch;
+    private Preference mTakeBugReportPreference;
 
     private final BroadcastReceiver mBCMReceiver = new BroadcastReceiver() {
         @Override
@@ -172,10 +174,18 @@ public class MainFragment extends PreferenceControllerFragment implements
         mQuickSettingsList.setLayoutResource(R.layout.preference_category_compact_layout);
         mQuickSettingsList.setOrder(1); // at top, but below suggested settings
         getPreferenceScreen().addPreference(mQuickSettingsList);
-        mHotwordSwitch = new SwitchPreference(this.getPreferenceManager().getContext());
-        mHotwordSwitch.setKey(HotwordSwitchController.KEY_HOTWORD_SWITCH);
-        mHotwordSwitchController.updateState(mHotwordSwitch);
-        mQuickSettingsList.addPreference(mHotwordSwitch);
+        if (mHotwordSwitchController.isAvailable()) {
+            mHotwordSwitch = new SwitchPreference(this.getPreferenceManager().getContext());
+            mHotwordSwitch.setKey(HotwordSwitchController.KEY_HOTWORD_SWITCH);
+            mHotwordSwitchController.updateState(mHotwordSwitch);
+            mQuickSettingsList.addPreference(mHotwordSwitch);
+        }
+        if (mTakeBugReportController.isAvailable()) {
+            mTakeBugReportPreference = new Preference(this.getPreferenceManager().getContext());
+            mTakeBugReportPreference.setKey(TakeBugReportController.KEY_TAKE_BUG_REPORT);
+            mTakeBugReportController.updateState(mTakeBugReportPreference);
+            mQuickSettingsList.addPreference(mTakeBugReportPreference);
+        }
     }
 
     /** Removes the quick settings category and all its children. */
@@ -243,9 +253,11 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     @Override
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
-        mPreferenceControllers = new ArrayList<>(1);
+        mPreferenceControllers = new ArrayList<>(2);
         mHotwordSwitchController = new HotwordSwitchController(context);
+        mTakeBugReportController = new TakeBugReportController(context);
         mPreferenceControllers.add(mHotwordSwitchController);
+        mPreferenceControllers.add(mTakeBugReportController);
         return mPreferenceControllers;
     }
 
@@ -398,6 +410,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     @Override
     public void onResume() {
         super.onResume();
+        showOrHideQuickSettings();
         updateAccountPref();
         updateAccessoryPref();
         updateConnectivity();
