@@ -18,7 +18,6 @@ package com.android.tv.settings.system;
 
 import android.accounts.AccountManager;
 import android.annotation.SuppressLint;
-import android.app.ActivityManager;
 import android.app.Fragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -33,7 +32,6 @@ import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
@@ -52,11 +50,11 @@ import androidx.preference.TwoStatePreference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.widget.ILockSettings;
 import com.android.internal.widget.LockPatternUtils;
-import com.android.internal.widget.VerifyCredentialResponse;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.dialog.PinDialogFragment;
 import com.android.tv.settings.users.AppRestrictionsFragment;
+import com.android.tv.settings.users.RestrictedProfileModel;
 import com.android.tv.settings.users.RestrictedProfilePinDialogFragment;
 import com.android.tv.settings.users.UserSwitchListenerService;
 
@@ -112,10 +110,8 @@ public class SecurityFragment extends SettingsPreferenceFragment
     private Preference mRestrictedProfileCreatePref;
     private Preference mRestrictedProfileDeletePref;
 
-    private UserManager mUserManager;
     private ILockSettings mLockSettingsService;
-    private UserInfo mRestrictedUserInfo;
-    private UserInfo mOwnerUserInfo;
+    private RestrictedProfileModel mRestrictedProfile;
 
     private boolean mCreatingRestrictedProfile;
     @SuppressLint("StaticFieldLeak")
@@ -138,7 +134,8 @@ public class SecurityFragment extends SettingsPreferenceFragment
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        mUserManager = (UserManager) getContext().getSystemService(Context.USER_SERVICE);
+        mRestrictedProfile = new RestrictedProfileModel(getContext());
+
         super.onCreate(savedInstanceState);
         mCreatingRestrictedProfile = savedInstanceState != null
                 && savedInstanceState.getBoolean(SAVESTATE_CREATING_RESTRICTED_PROFILE);
@@ -152,7 +149,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 .registerReceiver(mRestrictedProfileReceiver,
                         new IntentFilter(ACTION_RESTRICTED_PROFILE_CREATED));
         if (mCreatingRestrictedProfile) {
-            UserInfo userInfo = findRestrictedUser(mUserManager);
+            UserInfo userInfo = mRestrictedProfile.getUser();
             if (userInfo != null) {
                 onRestrictedUserCreated(userInfo);
             }
@@ -188,7 +185,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
     }
 
     private void refresh() {
-        if (isRestrictedProfileInEffect(mUserManager)) {
+        if (mRestrictedProfile.isCurrentUser()) {
             // We are in restricted profile
             mUnknownSourcesPref.setVisible(false);
             mVerifyAppsPref.setVisible(false);
@@ -200,7 +197,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
             mRestrictedProfilePinPref.setVisible(false);
             mRestrictedProfileCreatePref.setVisible(false);
             mRestrictedProfileDeletePref.setVisible(false);
-        } else if (getRestrictedUser() != null) {
+        } else if (mRestrictedProfile.getUser() != null) {
             // Not in restricted profile, but it exists
             mUnknownSourcesPref.setVisible(true);
             mVerifyAppsPref.setVisible(shouldShowVerifierSetting());
@@ -214,7 +211,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
             mRestrictedProfileDeletePref.setVisible(true);
 
             AppRestrictionsFragment.prepareArgs(mRestrictedProfileAppsPref.getExtras(),
-                    getRestrictedUser().id, false);
+                    mRestrictedProfile.getUser().id, false);
         } else if (UserManager.supportsMultipleUsers()) {
             // Not in restricted profile, and it doesn't exist
             mUnknownSourcesPref.setVisible(true);
@@ -259,14 +256,9 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 setVerifyAppsEnabled(mVerifyAppsPref.isChecked());
                 return true;
             case KEY_RESTRICTED_PROFILE_ENTER:
-                final UserInfo restrictedUser = getRestrictedUser();
-                if (restrictedUser == null) {
-                    Log.e(TAG, "Tried to enter non-existent restricted user");
-                    return true;
+                if (mRestrictedProfile.enterUser()) {
+                    getActivity().finish();
                 }
-                updateBackgroundRestriction(restrictedUser);
-                switchUserNow(restrictedUser.id);
-                getActivity().finish();
                 return true;
             case KEY_RESTRICTED_PROFILE_EXIT:
                 if (hasLockscreenSecurity()) {
@@ -290,25 +282,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 return true;
         }
         return super.onPreferenceTreeClick(preference);
-    }
-
-    private void updateBackgroundRestriction(UserInfo user) {
-        final boolean allowedToRun = shouldAllowRunInBackground();
-        mUserManager.setUserRestriction(
-                UserManager.DISALLOW_RUN_IN_BACKGROUND, !allowedToRun, user.getUserHandle());
-    }
-
-    /**
-     * Profiles are allowed to run in the background by default, unless the device specifically
-     * sets a config flag and/or has the global setting overridden by something on-device.
-     *
-     * @see Settings.Global#KEEP_PROFILE_IN_BACKGROUND
-     */
-    private boolean shouldAllowRunInBackground() {
-        final boolean defaultValue = getContext().getResources().getBoolean(
-                com.android.internal.R.bool.config_keepRestrictedProfilesInBackground);
-        return Settings.Global.getInt(getContext().getContentResolver(),
-                Settings.Global.KEEP_PROFILE_IN_BACKGROUND, defaultValue ? 1 : 0) > 0;
     }
 
     private boolean isUnknownSourcesBlocked() {
@@ -371,32 +344,22 @@ public class SecurityFragment extends SettingsPreferenceFragment
     @Override
     public void saveLockPassword(String pin, String originalPin, int quality) {
         new LockPatternUtils(getActivity())
-                .saveLockPassword(pin, originalPin, quality, getOwnerUser().id);
+                .saveLockPassword(pin, originalPin, quality, getContext().getUserId());
     }
 
     @Override
     public void clearLockPassword(String oldPin) {
-        new LockPatternUtils(getActivity()).clearLock(oldPin, getOwnerUser().id);
+        new LockPatternUtils(getActivity()).clearLock(oldPin, getContext().getUserId());
     }
 
     @Override
     public boolean checkPassword(String password) {
-        try {
-            return getLockSettings()
-                    .checkCredential(password, LockPatternUtils.CREDENTIAL_TYPE_PASSWORD,
-                            getOwnerUser().id, null /* progressCallback */)
-                    .getResponseCode() == VerifyCredentialResponse.RESPONSE_OK;
-        } catch (final RemoteException e) {
-            // ignore
-        }
-        return false;
+        return mRestrictedProfile.checkPassword(password);
     }
 
     @Override
     public boolean hasLockscreenSecurity() {
-        UserInfo owner = getOwnerUser();
-        LockPatternUtils lpu = new LockPatternUtils(getActivity());
-        return lpu.isLockPasswordEnabled(owner.id) || lpu.isLockPatternEnabled(owner.id);
+        return mRestrictedProfile.hasLockscreenSecurity();
     }
 
     private ILockSettings getLockSettings() {
@@ -417,7 +380,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT:
                 if (success) {
-                    switchUserNow(getOwnerUser().id);
+                    mRestrictedProfile.exitUser();
                     getActivity().finish();
                 }
                 break;
@@ -426,90 +389,31 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_DELETE:
                 if (success) {
-                    removeRestrictedUser();
+                    mHandler.post(() -> {
+                        mRestrictedProfile.removeUser();
+                        UserSwitchListenerService.updateLaunchPoint(getActivity(), false);
+                        refresh();
+                    });
+
                 }
                 break;
         }
     }
 
-    private static UserInfo findOwnerUser(UserManager userManager) {
-        UserInfo myUserInfo = userManager.getUserInfo(UserHandle.myUserId());
-        if (!myUserInfo.isRestricted()) {
-            return myUserInfo;
-        }
-        // UserInfo.restrictedProfileParentId may not be set if the restricted profile was
-        // created on Android M devices.
-        return userManager.getUserInfo(
-                myUserInfo.restrictedProfileParentId != UserInfo.NO_PROFILE_GROUP_ID
-                        ? myUserInfo.restrictedProfileParentId
-                        : UserHandle.USER_OWNER);
-    }
-
-    private UserInfo getOwnerUser() {
-        if (mOwnerUserInfo == null) {
-            mOwnerUserInfo = findOwnerUser(mUserManager);
-        }
-        return mOwnerUserInfo;
-    }
-
-    public static UserInfo findRestrictedUser(UserManager userManager) {
-        for (UserInfo userInfo : userManager.getUsers()) {
-            if (userInfo.isRestricted()) {
-                return userInfo;
-            }
-        }
-        return null;
-    }
-
-    private UserInfo getRestrictedUser() {
-        if (mRestrictedUserInfo == null) {
-            mRestrictedUserInfo = findRestrictedUser(mUserManager);
-        }
-        return mRestrictedUserInfo;
-    }
-
-    private static void switchUserNow(int userId) {
-        try {
-            ActivityManager.getService().switchUser(userId);
-        } catch (RemoteException re) {
-            Log.e(TAG, "Caught exception while switching user! ", re);
-        }
-    }
-
     private void addRestrictedUser() {
         if (sCreateRestrictedProfileTask == null) {
-            sCreateRestrictedProfileTask = new CreateRestrictedProfileTask(getContext(),
-                    mUserManager);
+            sCreateRestrictedProfileTask = new CreateRestrictedProfileTask(getContext());
             sCreateRestrictedProfileTask.execute();
             mCreatingRestrictedProfile = true;
         }
         refresh();
     }
 
-    private void removeRestrictedUser() {
-        final UserInfo restrictedUser = getRestrictedUser();
-        if (restrictedUser == null) {
-            Log.w(TAG, "No restricted user to remove?");
-            return;
-        }
-        final int restrictedUserHandle = restrictedUser.id;
-        mRestrictedUserInfo = null;
-        mHandler.post(() -> {
-            mUserManager.removeUser(restrictedUserHandle);
-            UserSwitchListenerService.updateLaunchPoint(getActivity(), false);
-            refresh();
-        });
-    }
-
+    /**
+      * Called by other Fragments to decide whether to show or hide profile-related views.
+      */
     public static boolean isRestrictedProfileInEffect(Context context) {
-        UserManager userManager = (UserManager) context.getSystemService(Context.USER_SERVICE);
-        UserInfo userInfo = userManager.getUserInfo(UserHandle.myUserId());
-        return userInfo.isRestricted();
-    }
-
-    private static boolean isRestrictedProfileInEffect(UserManager userManager) {
-        UserInfo userInfo = userManager.getUserInfo(UserHandle.myUserId());
-        return userInfo.isRestricted();
+        return new RestrictedProfileModel(context).isCurrentUser();
     }
 
     private void onRestrictedUserCreated(UserInfo result) {
@@ -535,9 +439,9 @@ public class SecurityFragment extends SettingsPreferenceFragment
         private final Context mContext;
         private final UserManager mUserManager;
 
-        CreateRestrictedProfileTask(Context context, UserManager userManager) {
+        CreateRestrictedProfileTask(Context context) {
             mContext = context.getApplicationContext();
-            mUserManager = userManager;
+            mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
         }
 
         @Override
@@ -546,7 +450,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
                     mContext.getString(R.string.user_new_profile_name),
                     UserInfo.FLAG_RESTRICTED, UserHandle.myUserId());
             if (restrictedUserInfo == null) {
-                final UserInfo existingUserInfo = findRestrictedUser(mUserManager);
+                final UserInfo existingUserInfo = new RestrictedProfileModel(mContext).getUser();
                 if (existingUserInfo == null) {
                     Log.wtf(TAG, "Got back a null user handle!");
                 }
