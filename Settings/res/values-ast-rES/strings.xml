@@ -458,6 +458,7 @@
   <!-- Title for wizard screen for moving apps [CHAR_LIMIT=50] -->
   <!-- Title for wizard progress screen for moving apps [CHAR_LIMIT=50] -->
   <!-- Description for wizard progress screen for moving apps [CHAR_LIMIT=NONE] -->
+  <string name="storage_wizard_move_app_progress_description">Nun estrayas la unidá na movición.\nL\'aplicación <xliff:g id="appname" example="YouTube">%1$s</xliff:g> d\'esti preséu nun va tar disponible hasta que se complete la operación.</string>
   <!-- Title for wizard screen for forgetting private storage [CHAR_LIMIT=50] -->
   <string name="storage_wizard_forget_confirm_title">¿Escaecer almacenamientu del preséu?</string>
   <!-- Description for wizard screen for forgetting private storage [CHAR_LIMIT=NONE] -->
@@ -484,6 +485,7 @@
   <!-- Text displayed when WPS fails due to WEP [CHAR LIMIT=150] -->
   <!-- Text displayed when WPS fails to TKIP [CHAR LIMIT=150] -->
   <!-- Text displayed when WPS fails due to another session [CHAR LIMIT=150] -->
+  <string name="wifi_wps_failed_overlap">Hai otra sesión WPS en cursu. Volvi tentalo en dellos segundos.</string>
   <!-- Title for Date in System Settings Date Time [CHAR LIMIT=50] -->
   <string name="system_date">Data</string>
   <!-- Title for Time in System Settings Date Time [CHAR LIMIT=50] -->
@@ -782,6 +784,7 @@
   <!-- Option to enable HDMI control [CHAR LIMIT=30] -->
   <string name="inputs_hdmi_control">Control HDMI</string>
   <!-- Description of HDMI control option [CHAR LIMIT=50] -->
+  <string name="inputs_hdmi_control_desc">Permite que la TV controle preseos HDMI</string>
   <!-- Option to enable device auto power off [CHAR LIMIT=30] -->
   <!-- Description of device auto power off option [CHAR LIMIT=50] -->
   <!-- Option to enable TV auto power on [CHAR LIMIT=30] -->
@@ -808,6 +811,10 @@
   <!-- Title for action to configure apps for a restricted profile [CHAR LIMIT=100] -->
   <string name="restricted_profile_configure_apps_title">Aplicaciones permitíes</string>
   <!-- Description for action to configure apps for a restricted profile indicating number of allow apps will be ready in a moment [CHAR LIMIT=100] -->
+  <plurals name="restricted_profile_configure_apps_description">
+    <item quantity="one">1 aplicación permitida</item>
+    <item quantity="other">%d aplicaciones permitíes</item>
+  </plurals>
   <!-- An action label indicating the package will be or is allowed [CHAR LIMIT=100] -->
   <!-- An action label indicating the package will be or is not allowed [CHAR LIMIT=100] -->
   <!-- Action to customize restrictions for a package [CHAR LIMIT=100] -->
@@ -900,6 +907,7 @@
   <!-- Summary of number of apps currently granted a single permission [CHAR LIMIT=45] -->
   <!-- Strings for dialog title when asking to the user whether to allow an app to enable discovery mode -->
   <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
+  <string name="security_patch">Nivel del parche de seguranza d\'Android</string>
   <!-- App picker screen title -->
   <!-- Summary Title for saying that the preference is experimental and will evolve over time due to User feedback. [CHAR LIMIT=NONE] -->
   <string name="experimental_preference">(Esperimental)</string>
