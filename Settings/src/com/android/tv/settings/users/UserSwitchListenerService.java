@@ -31,7 +31,7 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.Log;
 
-import com.android.tv.settings.system.SecurityFragment;
+import com.android.internal.widget.LockPatternUtils;
 
 public class UserSwitchListenerService extends Service {
 
@@ -49,8 +49,9 @@ public class UserSwitchListenerService extends Service {
         public void onReceive(final Context context, Intent intent) {
 
             boolean isSystemUser = UserManager.get(context).isSystemUser();
+            boolean isFbeEnabled = LockPatternUtils.isFileEncryptionEnabled();
 
-            if (isSystemUser) {
+            if (isSystemUser && !isFbeEnabled) {
                 context.startService(new Intent(context, UserSwitchListenerService.class));
                 int bootUserId = getBootUser(context);
                 if (DEBUG) {
@@ -64,8 +65,7 @@ public class UserSwitchListenerService extends Service {
                 }
             }
 
-            updateLaunchPoint(context, null != SecurityFragment.findRestrictedUser(
-                    (UserManager) context.getSystemService(Context.USER_SERVICE)));
+            updateLaunchPoint(context, new RestrictedProfileModel(context).getUser() != null);
         }
     }
 
