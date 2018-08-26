@@ -33,6 +33,9 @@ import android.os.Bundle;
 import android.service.settings.suggestions.Suggestion;
 import android.telephony.SignalStrength;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -147,6 +150,13 @@ public class MainFragment extends PreferenceControllerFragment implements
         } else {
             hideQuickSettings();
         }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+        showOrHideQuickSettings();
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     /** Creates the quick settings category and its children. */
