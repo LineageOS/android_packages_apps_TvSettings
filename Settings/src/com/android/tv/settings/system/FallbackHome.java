@@ -25,6 +25,7 @@ import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.Log;
 
@@ -87,7 +88,7 @@ public class FallbackHome extends Activity implements RestrictedProfilePinDialog
      * we will need to decrypt first.
      */
     private void maybeStartPinDialog() {
-        if (isUserUnlocked() || !hasLockscreenSecurity()
+        if (isUserUnlocked() || !hasLockscreenSecurity(getUserId())
                  || !LockPatternUtils.isFileEncryptionEnabled()) {
             return;
         }
@@ -128,7 +129,12 @@ public class FallbackHome extends Activity implements RestrictedProfilePinDialog
 
     @Override
     public boolean hasLockscreenSecurity() {
-        return new RestrictedProfileModel(this).hasLockscreenSecurity();
+        return hasLockscreenSecurity(UserHandle.USER_SYSTEM);
+    }
+
+    private boolean hasLockscreenSecurity(final int userId) {
+        final LockPatternUtils lpu = new LockPatternUtils(this);
+        return lpu.isLockPasswordEnabled(userId) || lpu.isLockPatternEnabled(userId);
     }
 
     @Override
