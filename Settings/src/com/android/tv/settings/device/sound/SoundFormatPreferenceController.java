@@ -111,7 +111,7 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
             formats.addAll(mAudioManager.getSurroundFormats().keySet());
         } else {
             try {
-                Arrays.stream(enabledFormats.split(",")).mapToInt(Integer::parseInt)
+                Arrays.stream(TextUtils.split(enabledFormats, ",")).mapToInt(Integer::parseInt)
                         .forEach(formats::add);
             } catch (NumberFormatException e) {
                 Log.w(TAG, "ENCODED_SURROUND_OUTPUT_ENABLED_FORMATS misformatted.", e);
