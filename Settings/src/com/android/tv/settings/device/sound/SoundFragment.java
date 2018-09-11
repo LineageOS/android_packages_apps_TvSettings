@@ -58,6 +58,7 @@ public class SoundFragment extends PreferenceControllerFragment implements
 
     private AudioManager mAudioManager;
     private Map<Integer, Boolean> mFormats;
+    private Map<Integer, Boolean> mReportedFormats;
     private List<AbstractPreferenceController> mPreferenceControllers;
     private PreferenceCategory mSurroundSoundCategoryPref;
 
@@ -69,6 +70,7 @@ public class SoundFragment extends PreferenceControllerFragment implements
     public void onAttach(Context context) {
         mAudioManager = context.getSystemService(AudioManager.class);
         mFormats = mAudioManager.getSurroundFormats();
+        mReportedFormats = mAudioManager.getReportedSurroundFormats();
         super.onAttach(context);
     }
 
@@ -100,7 +102,7 @@ public class SoundFragment extends PreferenceControllerFragment implements
         mPreferenceControllers = new ArrayList<>(mFormats.size());
         for (Map.Entry<Integer, Boolean> format : mFormats.entrySet()) {
             mPreferenceControllers.add(new SoundFormatPreferenceController(context,
-                    format.getKey() /*formatId*/));
+                    format.getKey() /*formatId*/, mFormats, mReportedFormats));
         }
         return mPreferenceControllers;
     }
