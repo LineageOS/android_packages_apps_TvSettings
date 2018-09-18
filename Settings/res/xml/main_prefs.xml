@@ -34,6 +34,13 @@
             android:title="@string/accounts_category_title"
             android:fragment="com.android.tv.settings.accounts.AccountsFragment" />
         <Preference
+            android:icon="@drawable/ic_volume_up"
+            android:key="sound"
+            android:title="@string/sound_category_title"
+            android:visible="false">
+            <intent android:action="com.android.tv.settings.SOUND" />
+        </Preference>
+        <Preference
             android:icon="@drawable/ic_applications"
             android:key="applications"
             android:title="@string/applications_category_title"
@@ -51,6 +58,14 @@
             <intent
                 android:targetClass="com.android.tv.settings.accessories.AddAccessoryActivity"
                 android:targetPackage="com.android.tv.settings"/>
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_remotes_and_accessories"
+            android:key="connected_devices"
+            android:title="@string/remotes_and_accessories_category_title"
+            android:visible="false">
+            <intent
+                android:action="com.android.tv.settings.CONNECTED_DEVICES" />
         </Preference>
         <Preference
             android:iconSpaceReserved="true"
