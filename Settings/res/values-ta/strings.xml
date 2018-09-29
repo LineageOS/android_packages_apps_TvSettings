@@ -492,8 +492,8 @@
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"வன்பொருள் லேயரைக் காட்டு"</string>
     <string name="system_show_gpu_overdraw" msgid="707861254106800199">"GPU ஓவர்டிராவைக் காட்டு"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"மேலோட்ட புதுப்பிப்புகளைக் காட்டு"</string>
-    <string name="system_window_animation_scale" msgid="3213952676672537856">"சாளர அனிமேஷன் அளவு"</string>
-    <string name="system_transition_animation_scale" msgid="2964817709721784757">"அனிமேஷன் மாற்றத்தின் அளவு"</string>
+    <string name="system_window_animation_scale" msgid="3213952676672537856">"சாளர அனிமேஷன் வேகம்"</string>
+    <string name="system_transition_animation_scale" msgid="2964817709721784757">"அனிமேஷன் மாற்றத்தின் வேகம்"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"அனிமேட்டர் கால அளவு"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"நிலையான பயன்முறை இயக்கப்பட்டது"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"சுயவிவர GPU வழங்கல்"</string>
@@ -538,12 +538,12 @@
     <string name="enable_opengl_traces_none" msgid="6074804146602749420">"ஏதுமில்லை"</string>
   <string-array name="animation_scale_entries">
     <item msgid="7477134110460336436">"அனிமேஷனை முடக்கு"</item>
-    <item msgid="8327257151534006014">"அனிமேஷன் அளவு .5x"</item>
-    <item msgid="2105786719544636780">"அனிமேஷன் அளவு 1x"</item>
-    <item msgid="5290554136790336403">"அனிமேஷன் அளவு 1.5x"</item>
-    <item msgid="1232929590838082483">"அனிமேஷன் அளவு 2x"</item>
-    <item msgid="1889239009419613796">"அனிமேஷன் அளவு 5x"</item>
-    <item msgid="7268894934484547297">"அனிமேஷன் அளவு 10x"</item>
+    <item msgid="8327257151534006014">"அனிமேஷன் வேகம் .5x"</item>
+    <item msgid="2105786719544636780">"அனிமேஷன் வேகம் 1x"</item>
+    <item msgid="5290554136790336403">"அனிமேஷன் வேகம் 1.5x"</item>
+    <item msgid="1232929590838082483">"அனிமேஷன் வேகம் 2x"</item>
+    <item msgid="1889239009419613796">"அனிமேஷன் வேகம் 5x"</item>
+    <item msgid="7268894934484547297">"அனிமேஷன் வேகம் 10x"</item>
   </string-array>
     <string name="track_frame_time_off" msgid="5050360262132715904">"முடக்கு"</string>
     <string name="track_frame_time_bars" msgid="4470692840177888414">"திரையைப் பட்டிகளாக இயக்கு"</string>
@@ -719,7 +719,7 @@
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"அனுமதிக்கப்பட்டது"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"அனுமதிக்கப்படவில்லை"</string>
     <string name="usage_access" msgid="1914242907684452328">"உபயோக அணுகல்"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"உபயோக அணுகலானது நீங்கள் பயன்படுத்தும் பிற பயன்பாடுகள், அவற்றை எவ்வளவு அடிக்கடிப் பயன்படுத்துகிறீர்கள் என்பதையும், அத்துடன் தொலைத்தொடர்பு நிறுவனம், மொழி அமைப்புகள், பிற விவரங்களையும் கண்காணிக்க, பயன்பாட்டை அனுமதிக்கும்."</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"உபயோக அணுகலானது, நீங்கள் வேறு எந்தெந்த ஆப்ஸை எவ்வளவு அடிக்கடி பயன்படுத்துகிறீர்கள் என்று அறியும் அனுமதியை ஒரு ஆப்ஸுக்கு வழங்குகிறது. உங்கள் மொபைல் நிறுவனம், மொழி அமைப்புகள் மற்றும் பிற விவரங்களையும் அறிந்து கொள்ளும் அனுமதியும் இதில் அடங்கும்."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"பேட்டரி ஆற்றலை மேம்படுத்துதல்"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"பேட்டரியைக் குறைவாகப் பயன்படுத்த, ஆப்ஸின் ஆற்றல் உபயோகத்தை மேம்படுத்துதல்"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"பேட்டரியைக் குறைவாகப் பயன்படுத்துவதற்காக, ஆற்றல் மேம்படுத்தப்பட வேண்டிய ஆப்ஸ் எதுவும் இல்லை"</string>
