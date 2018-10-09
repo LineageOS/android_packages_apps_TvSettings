@@ -48,6 +48,7 @@ import java.util.List;
 public class EnterPasswordState implements State {
     private final FragmentActivity mActivity;
     private Fragment mFragment;
+    private static final int ACTION_ID_CHECKBOX = 999;
 
     public EnterPasswordState(FragmentActivity activity) {
         mActivity = activity;
@@ -82,6 +83,8 @@ public class EnterPasswordState implements State {
         private StateMachine mStateMachine;
         private EditText mTextInput;
         private CheckBox mCheckBox;
+        private GuidedAction mPasswordAction;
+        private boolean mEditFocused = false;
 
         @NonNull
         @Override
@@ -103,29 +106,51 @@ public class EnterPasswordState implements State {
                 public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
                     LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                     View v = inflater.inflate(onProvideItemLayoutId(viewType), parent, false);
-                    return new PasswordViewHolder(v);
+                    if (viewType == ACTION_ID_CHECKBOX) {
+                        return new CheckBoxViewHolder(v);
+                    }
+                    return new GuidedActionsAlignUtil.SetupViewHolder(v);
+                }
+
+                @Override
+                public int getItemViewType(GuidedAction action) {
+                    return (int) action.getId();
                 }
 
                 @Override
                 public void onBindViewHolder(ViewHolder vh, GuidedAction action) {
                     super.onBindViewHolder(vh, action);
-                    if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
-                        PasswordViewHolder viewHolder = (PasswordViewHolder) vh;
-                        mTextInput = (EditText) viewHolder.getTitleView();
-                        mCheckBox = viewHolder.mCheckbox;
-                        mCheckBox.setOnClickListener(view -> {
-                            updatePasswordInputObfuscation();
-                            EnterPasswordFragment.this.openInEditMode(action);
+                    if (action.getId() == ACTION_ID_CHECKBOX) {
+                        CheckBoxViewHolder checkBoxVH = (CheckBoxViewHolder) vh;
+                        mCheckBox = checkBoxVH.mCheckbox;
+                        checkBoxVH.itemView.setOnClickListener(view -> {
+                            mCheckBox.setChecked(!mCheckBox.isChecked());
+                            if (mPasswordAction != null) {
+                                setSelectedActionPosition(0);
+                            }
                         });
                         mCheckBox.setChecked(mUserChoiceInfo.isPasswordHidden());
-                        updatePasswordInputObfuscation();
+                    } else if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
+                        mTextInput = (EditText) vh.itemView.findViewById(
+                                R.id.guidedactions_item_title);
                         openInEditMode(action);
                     }
                 }
 
                 @Override
-                public int onProvideItemLayoutId() {
-                    return R.layout.setup_password_item;
+                protected void onEditingModeChange(ViewHolder vh, boolean editing,
+                        boolean withTransition) {
+                    super.onEditingModeChange(vh, editing, withTransition);
+                    updatePasswordInputObfuscation();
+                }
+
+                @Override
+                public int onProvideItemLayoutId(int viewType) {
+                    if (viewType == ACTION_ID_CHECKBOX) {
+                        return R.layout.password_checkbox;
+                    } else {
+                        return R.layout.setup_password_item;
+                    }
                 }
             };
         }
@@ -147,7 +172,7 @@ public class EnterPasswordState implements State {
             Context context = getActivity();
             CharSequence prevPassword = mUserChoiceInfo.getPageSummary(UserChoiceInfo.PASSWORD);
             boolean isPasswordHidden = mUserChoiceInfo.isPasswordHidden();
-            actions.add(new GuidedAction.Builder(context)
+            mPasswordAction = new GuidedAction.Builder(context)
                     .title(prevPassword == null ? "" : prevPassword)
                     .editInputType(InputType.TYPE_CLASS_TEXT
                             | (isPasswordHidden
@@ -155,7 +180,12 @@ public class EnterPasswordState implements State {
                             : InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD))
                     .id(GuidedAction.ACTION_ID_CONTINUE)
                     .editable(true)
-                    .build());
+                    .build();
+            actions.add(mPasswordAction);
+            GuidedAction checkboxAction = new GuidedAction.Builder(context)
+                    .id(ACTION_ID_CHECKBOX)
+                    .build();
+            actions.add(checkboxAction);
         }
 
         @Override
@@ -170,6 +200,15 @@ public class EnterPasswordState implements State {
                 }
             }
             return action.getId();
+        }
+
+        @Override
+        public void onGuidedActionFocused(GuidedAction action) {
+            boolean newEditFocused = action == mPasswordAction;
+            if (!mEditFocused && newEditFocused) {
+                openInEditMode(action);
+            }
+            mEditFocused = newEditFocused;
         }
 
         private void updatePasswordInputObfuscation() {
@@ -204,10 +243,10 @@ public class EnterPasswordState implements State {
             }
         }
 
-        private static class PasswordViewHolder extends GuidedActionsAlignUtil.SetupViewHolder {
+        private static class CheckBoxViewHolder extends GuidedActionsAlignUtil.SetupViewHolder {
             CheckBox mCheckbox;
 
-            PasswordViewHolder(View v) {
+            CheckBoxViewHolder(View v) {
                 super(v);
                 mCheckbox = v.findViewById(R.id.password_checkbox);
             }
