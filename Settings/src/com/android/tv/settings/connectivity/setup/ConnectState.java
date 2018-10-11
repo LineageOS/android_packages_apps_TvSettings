@@ -106,7 +106,6 @@ public class ConnectState implements State {
         @VisibleForTesting
         Handler mHandler;
         private ConnectivityListener mConnectivityListener;
-        private boolean mConnected;
 
         /**
          * Obtain a new instance of ConnectToWifiFragment.
@@ -159,7 +158,7 @@ public class ConnectState implements State {
 
         @Override
         public void onDestroy() {
-            if (!mConnected) {
+            if (!isNetworkConnected()) {
                 mWifiManager.disconnect();
             }
 
@@ -266,7 +265,6 @@ public class ConnectState implements State {
 
                 if (fragment.isNetworkConnected()) {
                     if (DEBUG) Log.d(TAG, "Fake timeout; we're actually connected");
-                    fragment.mConnected = true;
                     fragment.notifyListener(StateMachine.RESULT_SUCCESS);
                 } else {
                     if (DEBUG) Log.d(TAG, "Timeout is real; telling the listener");
