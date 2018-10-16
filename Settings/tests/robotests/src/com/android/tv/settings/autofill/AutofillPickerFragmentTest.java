@@ -32,7 +32,6 @@ import androidx.preference.PreferenceScreen;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 import com.android.tv.settings.testutils.ShadowInputMethodManager;
-import com.android.tv.settings.testutils.ShadowUserManager;
 import com.android.tv.settings.testutils.TvShadowActivityThread;
 import com.android.tv.settings.testutils.Utils;
 
@@ -45,13 +44,10 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowSettings;
+import org.robolectric.shadows.ShadowUserManager;
 
 @RunWith(TvSettingsRobolectricTestRunner.class)
-@Config(shadows = {
-        ShadowUserManager.class,
-        TvShadowActivityThread.class,
-        ShadowInputMethodManager.class})
+@Config(shadows = {TvShadowActivityThread.class, ShadowInputMethodManager.class})
 public class AutofillPickerFragmentTest {
     @Spy
     private AutofillPickerFragment mFragment;
@@ -79,10 +75,9 @@ public class AutofillPickerFragmentTest {
 
     @Test
     public void selectedService() {
-
         Utils.addAutofill("com.test.AutofillPackage", "com.test.AutofillPackage.MyService");
 
-        ShadowSettings.ShadowGlobal.putString(mFragment.getContext().getContentResolver(),
+        Settings.Secure.putString(mFragment.getContext().getContentResolver(),
                 Settings.Secure.AUTOFILL_SERVICE,
                 "com.test.AutofillPackage/com.test.AutofillPackage.MyService");
 
@@ -99,7 +94,6 @@ public class AutofillPickerFragmentTest {
 
     @Test
     public void selectedNone() {
-
         Utils.addAutofill("com.test.AutofillPackage", "com.test.AutofillPackage.MyService");
 
         mFragment.bind(mPreferenceScreen, false);
