@@ -179,17 +179,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".device.apps.specialaccess.DirectoryAccessActivity"
-                  android:theme="@style/Theme.Settings.Transparent"
-                  android:taskAffinity=""
-                  android:excludeFromRecents="true"
-                  android:exported="true">
-            <intent-filter android:priority="1">
-                <category android:name="android.intent.category.DEFAULT" />
-                <action android:name="android.settings.STORAGE_VOLUME_ACCESS_SETTINGS" />
-            </intent-filter>
-        </activity>
-
         <activity android:name=".device.apps.specialaccess.PictureInPictureActivity"
                   android:theme="@style/Theme.Settings.Transparent"
                   android:taskAffinity=""
