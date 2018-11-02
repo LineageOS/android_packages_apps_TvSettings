@@ -17,7 +17,7 @@
 package com.android.tv.settings.system.development;
 
 import android.content.Context;
-import android.hardware.usb.IUsbManager;
+import android.debug.IAdbManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -61,9 +61,9 @@ public class AdbKeysDialog extends GuidedStepFragment {
     public void onGuidedActionClicked(GuidedAction action) {
         if (action.getId() == GuidedAction.ACTION_ID_OK) {
             try {
-                IBinder b = ServiceManager.getService(Context.USB_SERVICE);
-                IUsbManager service = IUsbManager.Stub.asInterface(b);
-                service.clearUsbDebuggingKeys();
+                IBinder b = ServiceManager.getService(Context.ADB_SERVICE);
+                IAdbManager service = IAdbManager.Stub.asInterface(b);
+                service.clearDebuggingKeys();
             } catch (RemoteException e) {
                 Log.e(TAG, "Unable to clear adb keys", e);
             }
