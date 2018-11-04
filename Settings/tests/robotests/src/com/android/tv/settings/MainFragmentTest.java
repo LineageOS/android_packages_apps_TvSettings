@@ -40,7 +40,6 @@ import androidx.preference.PreferenceManager;
 import com.android.settingslib.utils.IconCache;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.suggestions.SuggestionPreference;
-import com.android.tv.settings.testutils.ShadowUserManager;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -48,7 +47,6 @@ import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowAccountManager;
 
 import java.util.Arrays;
@@ -57,7 +55,6 @@ import java.util.List;
 import java.util.Set;
 
 @RunWith(TvSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowUserManager.class})
 public class MainFragmentTest {
 
     @Spy

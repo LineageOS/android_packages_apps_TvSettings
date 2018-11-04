@@ -14,7 +14,8 @@ LOCAL_JAVA_LIBRARIES := \
     robolectric_android-all-stub \
     Robolectric_all-target \
     mockito-robolectric-prebuilt \
-    truth-prebuilt
+    truth-prebuilt \
+    jsr305
 
 LOCAL_INSTRUMENTATION_FOR := TvSettings
 
@@ -34,7 +35,8 @@ LOCAL_JAVA_LIBRARIES := \
     robolectric_android-all-stub \
     Robolectric_all-target \
     mockito-robolectric-prebuilt \
-    truth-prebuilt
+    truth-prebuilt \
+    jsr305
 
 LOCAL_TEST_PACKAGE := TvSettings
 

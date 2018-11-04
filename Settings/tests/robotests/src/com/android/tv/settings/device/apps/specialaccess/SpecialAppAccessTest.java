@@ -25,7 +25,6 @@ import static org.robolectric.shadow.api.Shadow.extract;
 import android.app.ActivityManager;
 
 import com.android.tv.settings.TvSettingsRobolectricTestRunner;
-import com.android.tv.settings.testutils.ShadowActivityManager;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -33,10 +32,9 @@ import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowActivityManager;
 
 @RunWith(TvSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowActivityManager.class})
 public class SpecialAppAccessTest {
 
     @Spy
@@ -55,7 +53,7 @@ public class SpecialAppAccessTest {
 
     @Test
     public void testFeaturesDisabledOnLowRam() {
-        mActivityManager.setLowRamDevice(true);
+        mActivityManager.setIsLowRamDevice(true);
 
         mSpecialAppAccess.updatePreferenceStates();
 
@@ -66,7 +64,7 @@ public class SpecialAppAccessTest {
 
     @Test
     public void testFeaturesNotDisabledNonLowRam() {
-        mActivityManager.setLowRamDevice(false);
+        mActivityManager.setIsLowRamDevice(false);
 
         mSpecialAppAccess.updatePreferenceStates();
 
