@@ -90,9 +90,16 @@
                 <action android:name="com.android.net.wifi.SETUP_WIFI_NETWORK" />
                 <!-- TODO remove custom action when stop including /packages/apps/Settings -->
                 <action android:name="com.android.net.wifi.CANVAS_SETUP_WIFI_NETWORK" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <!--
+            Enabling this <intent-filter> will signal to Setup that WifiSetupActivity will handle
+            network connectivity (in that case Setup will launch us to handle network duty).
+            <intent-filter>
+                <action android:name="com.android.net.GET_CONNECTED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".connectivity.WifiConnectionActivity"
