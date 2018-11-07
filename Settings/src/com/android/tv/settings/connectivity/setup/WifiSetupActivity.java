@@ -21,6 +21,7 @@ import android.animation.AnimatorInflater;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
@@ -52,7 +53,10 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
     private final StateMachine.Callback mStateMachineCallback = new StateMachine.Callback() {
         @Override
         public void onFinish(int result) {
-            setResult(result);
+            // Setting user_initiated allows TV Setup to identify crashes.
+            //   -- a RESULT_CANCELLED result without user_initiated gets interpreted as a crash.
+            //   -- a RESULT_CANCELLED result with user_initiated gets interpreted as a back-out.
+            setResult(result, new Intent().putExtra("user_initiated", true));
             mResultOk = result == Activity.RESULT_OK;
             finish();
         }
