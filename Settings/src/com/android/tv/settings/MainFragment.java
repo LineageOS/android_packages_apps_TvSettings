@@ -87,6 +87,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     @VisibleForTesting
     static final String KEY_QUICK_SETTINGS = "quick_settings";
 
+    private static final String ACTION_ACCOUNTS = "com.android.tv.settings.ACCOUNTS";
     @VisibleForTesting
     ConnectivityListener mConnectivityListener;
     @VisibleForTesting
@@ -537,6 +538,13 @@ public class MainFragment extends PreferenceControllerFragment implements
     @VisibleForTesting
     void updateAccountPref() {
         final Preference accountsPref = findPreference(KEY_ACCOUNTS_AND_SIGN_IN);
+        Intent intent = new Intent(ACTION_ACCOUNTS);
+        if (systemIntentIsHandled(getContext(), intent) != null) {
+            accountsPref.setIntent(intent);
+            accountsPref.setFragment(null);
+            return;
+        }
+
         if (accountsPref != null && accountsPref.isVisible()) {
             final AccountManager am = AccountManager.get(getContext());
             Account[] accounts = am.getAccounts();
