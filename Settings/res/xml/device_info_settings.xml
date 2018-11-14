@@ -48,6 +48,10 @@
         android:title="@string/restart_button_label"
         android:fragment="com.android.tv.settings.about.RebootConfirmFragment" />
 
+    <Preference android:key="shutdown"
+        android:title="@string/shutdown_button_label"
+        android:fragment="com.android.tv.settings.about.ShutdownConfirmFragment" />
+
     <!-- Device status - launches as activity, must run in separate process -->
     <Preference android:key="status_info"
         android:title="@string/device_status"
