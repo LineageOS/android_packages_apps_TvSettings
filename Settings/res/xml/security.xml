@@ -26,6 +26,11 @@
         android:key="verify_apps"
         android:title="@string/security_verify_apps_title"
         android:summary="@string/security_verify_apps_desc" />
+
+    <!-- Trust interface -->
+    <org.lineageos.internal.lineageparts.LineagePartsPreference
+        android:key="trust_interface" />
+
     <PreferenceCategory
         android:key="restricted_profile_group"
         android:title="@string/user_new_profile_name"
