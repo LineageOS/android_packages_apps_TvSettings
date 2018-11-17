@@ -63,6 +63,9 @@ public class AccessibilityShortcutServiceFragment extends SettingsPreferenceFrag
                     if (settingsFragment instanceof LeanbackSettingsFragment) {
                         ((LeanbackSettingsFragment) settingsFragment)
                                 .startImmersiveFragment(confirmFragment);
+                    } else if (settingsFragment instanceof TwoPanelSettingsFragment) {
+                        ((TwoPanelSettingsFragment) settingsFragment)
+                                .startImmersiveFragment(confirmFragment);
                     } else {
                         throw new IllegalStateException("Not attached to settings fragment??");
                     }

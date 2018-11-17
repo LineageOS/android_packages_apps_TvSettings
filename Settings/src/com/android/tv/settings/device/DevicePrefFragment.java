@@ -47,6 +47,7 @@ import com.android.tv.settings.autofill.AutofillHelper;
 import com.android.tv.settings.device.sound.SoundFragment;
 import com.android.tv.settings.inputmethod.InputMethodHelper;
 import com.android.tv.settings.system.SecurityFragment;
+import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 import java.util.List;
 
@@ -133,6 +134,10 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
             Fragment fragment = getCallbackFragment();
             if (fragment instanceof LeanbackSettingsFragment) {
                 ((LeanbackSettingsFragment) fragment).startImmersiveFragment(
+                        RebootConfirmFragment.newInstance(true /* safeMode */));
+                return true;
+            } else if (fragment instanceof TwoPanelSettingsFragment) {
+                ((TwoPanelSettingsFragment) fragment).startImmersiveFragment(
                         RebootConfirmFragment.newInstance(true /* safeMode */));
                 return true;
             }
