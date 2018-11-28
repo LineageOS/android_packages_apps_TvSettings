@@ -30,7 +30,6 @@ import android.os.Bundle;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 import com.android.tv.settings.connectivity.WifiConfigHelper;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
@@ -43,10 +42,11 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
-@RunWith(TvSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = ShadowStateMachine.class)
 public class AddPageBasedOnNetworkStateTest {
     private WifiSetupActivity mActivity;

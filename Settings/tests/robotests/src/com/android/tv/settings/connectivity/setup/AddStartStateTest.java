@@ -24,7 +24,6 @@ import android.net.wifi.WifiConfiguration;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.android.settingslib.wifi.AccessPoint;
-import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
 import com.android.tv.settings.testutils.ShadowStateMachine;
@@ -35,9 +34,10 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
-@RunWith(TvSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = ShadowStateMachine.class)
 public class AddStartStateTest {
     private WifiSetupActivity mActivity;
@@ -52,7 +52,7 @@ public class AddStartStateTest {
         mActivity = Robolectric.buildActivity(WifiSetupActivity.class).get();
         StateMachine stateMachine = ViewModelProviders.of(mActivity).get(StateMachine.class);
         mUserChoiceInfo = ViewModelProviders.of(mActivity).get(UserChoiceInfo.class);
-        ShadowStateMachine shadowStateMachine = (ShadowStateMachine) extract(stateMachine);
+        ShadowStateMachine shadowStateMachine = extract(stateMachine);
         shadowStateMachine.setListener(mStateCompleteListener);
         mAddStartState = new AddStartState(mActivity);
     }

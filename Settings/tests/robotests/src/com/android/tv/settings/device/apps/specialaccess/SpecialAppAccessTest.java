@@ -24,17 +24,16 @@ import static org.robolectric.shadow.api.Shadow.extract;
 
 import android.app.ActivityManager;
 
-import com.android.tv.settings.TvSettingsRobolectricTestRunner;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadows.ShadowActivityManager;
 
-@RunWith(TvSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class SpecialAppAccessTest {
 
     @Spy

@@ -31,24 +31,23 @@ import android.content.pm.UserInfo;
 import android.os.UserHandle;
 import android.os.UserManager;
 
-import com.android.tv.settings.TvSettingsRobolectricTestRunner;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@RunWith(TvSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class RestrictedProfileTest {
 
-    final UserInfo mOwnerInfo = new UserInfo(123, "owner", 0);
-    final UserInfo mProfileInfo = new UserInfo(345, "profile", UserInfo.FLAG_RESTRICTED);
-    final UserInfo mSystemInfo = new UserInfo(UserHandle.USER_SYSTEM, "system", 0);
+    private final UserInfo mOwnerInfo = new UserInfo(123, "owner", 0);
+    private final UserInfo mProfileInfo = new UserInfo(345, "profile", UserInfo.FLAG_RESTRICTED);
+    private final UserInfo mSystemInfo = new UserInfo(UserHandle.USER_SYSTEM, "system", 0);
 
     @Mock private Context mContext;
     @Mock private ActivityManager mActivityManager;
@@ -135,7 +134,7 @@ public class RestrictedProfileTest {
     private class UserSetter {
         private final List<UserInfo> mUsers = new ArrayList<>();
 
-        public UserSetter addOtherUsers(UserInfo... users) {
+        private UserSetter addOtherUsers(UserInfo... users) {
             for (UserInfo user : users) {
                 when(mUserManager.getUserInfo(eq(user.id))).thenReturn(user);
             }

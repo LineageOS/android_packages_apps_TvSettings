@@ -38,7 +38,6 @@ import androidx.preference.Preference;
 
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.R;
-import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 import com.android.tv.settings.testutils.TvShadowActivityThread;
 import com.android.tv.settings.testutils.Utils;
 
@@ -47,12 +46,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowPackageManager;
 import org.robolectric.shadows.ShadowUserManager;
 
-@RunWith(TvSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class DevicePrefFragmentTest {
     @Spy
     private DevicePrefFragment mDevicePrefFragment;
@@ -73,7 +73,7 @@ public class DevicePrefFragmentTest {
                 .setDevelopmentSettingsEnabled(RuntimeEnvironment.application, false);
         final Preference developerPref = mock(Preference.class);
         doReturn(developerPref).when(mDevicePrefFragment)
-                .findPreference(mDevicePrefFragment.KEY_DEVELOPER);
+                .findPreference(DevicePrefFragment.KEY_DEVELOPER);
         mDevicePrefFragment.updateDeveloperOptions();
         verify(developerPref, atLeastOnce()).setVisible(false);
         verify(developerPref, never()).setVisible(true);
