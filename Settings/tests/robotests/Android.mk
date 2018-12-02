@@ -1,10 +1,11 @@
-#############################################
-# TvSettings Robolectric test target. #
-#############################################
-LOCAL_PATH:= $(call my-dir)
+#############################################################
+# TvSettings Robolectric test target.                       #
+#############################################################
+LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := TvSettingsRoboTests
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
@@ -21,10 +22,13 @@ LOCAL_INSTRUMENTATION_FOR := TvSettings
 
 LOCAL_MODULE_TAGS := optional
 
+# Generate test_config.properties
+include external/robolectric-shadows/gen_test_config.mk
+
 include $(BUILD_STATIC_JAVA_LIBRARY)
 
 #############################################################
-# TvSettings runner target to run the previous target. #
+# TvSettings runner target to run the previous target.      #
 #############################################################
 include $(CLEAR_VARS)
 

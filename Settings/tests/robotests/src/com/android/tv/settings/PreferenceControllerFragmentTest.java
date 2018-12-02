@@ -37,11 +37,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 import java.util.Collection;
 
-@RunWith(TvSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class PreferenceControllerFragmentTest {
 
     @Spy

@@ -30,7 +30,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.tv.settings.RadioPreference;
-import com.android.tv.settings.TvSettingsRobolectricTestRunner;
 import com.android.tv.settings.testutils.ShadowInputMethodManager;
 import com.android.tv.settings.testutils.TvShadowActivityThread;
 import com.android.tv.settings.testutils.Utils;
@@ -42,11 +41,12 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowUserManager;
 
-@RunWith(TvSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {TvShadowActivityThread.class, ShadowInputMethodManager.class})
 public class AutofillPickerFragmentTest {
     @Spy
