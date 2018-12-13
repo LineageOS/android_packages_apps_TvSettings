@@ -28,6 +28,7 @@ import android.os.SELinux;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.os.UserManager;
+import android.sysprop.TelephonyProperties;
 import android.telephony.CarrierConfigManager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -41,7 +42,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.internal.telephony.TelephonyProperties;
 import com.android.settingslib.DeviceInfoUtils;
 import com.android.settingslib.Utils;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
@@ -50,6 +50,8 @@ import com.android.tv.settings.PreferenceUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.name.DeviceManager;
+
+import java.util.stream.Collectors;
 
 /**
  * The "About" screen in TV settings.
@@ -125,8 +127,15 @@ public class AboutFragment extends SettingsPreferenceFragment {
             removePreference(securityPatchPref);
         }
 
-        findPreference(KEY_BASEBAND_VERSION).setSummary(
-                getSystemPropertySummary(TelephonyProperties.PROPERTY_BASEBAND_VERSION));
+        String basebandVersion = TelephonyProperties.baseband_version().stream()
+                .map(x -> x == null ? "" : x)
+                .collect(Collectors.joining(","));
+
+        if (basebandVersion.isEmpty()) {
+            basebandVersion = getResources().getString(R.string.device_info_default);
+        }
+
+        findPreference(KEY_BASEBAND_VERSION).setSummary(basebandVersion);
         findPreference(KEY_DEVICE_MODEL).setSummary(Build.MODEL + DeviceInfoUtils.getMsvSuffix());
         findPreference(KEY_EQUIPMENT_ID)
                 .setSummary(getSystemPropertySummary(PROPERTY_EQUIPMENT_ID));
