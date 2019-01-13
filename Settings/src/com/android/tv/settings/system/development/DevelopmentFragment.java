@@ -46,6 +46,7 @@ import android.os.SystemProperties;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.service.persistentdata.PersistentDataBlockManager;
+import android.sysprop.AdbProperties;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.IWindowManager;
@@ -296,7 +297,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
         mEnableAdb = findAndInitSwitchPref(ENABLE_ADB);
         mClearAdbKeys = findPreference(CLEAR_ADB_KEYS);
-        if (!SystemProperties.getBoolean("ro.adb.secure", false)) {
+        if (!AdbProperties.secure().orElse(false)) {
             if (debugDebuggingCategory != null) {
                 debugDebuggingCategory.removePreference(mClearAdbKeys);
             }
