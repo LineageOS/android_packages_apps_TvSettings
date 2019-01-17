@@ -47,6 +47,7 @@ import android.os.UserManager;
 import android.provider.Settings;
 import android.service.persistentdata.PersistentDataBlockManager;
 import android.sysprop.AdbProperties;
+import android.sysprop.DisplayProperties;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.IWindowManager;
@@ -94,10 +95,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private static final String HDCP_CHECKING_KEY = "hdcp_checking";
     private static final String HDCP_CHECKING_PROPERTY = "persist.sys.hdcp_checking";
     private static final String LOCAL_BACKUP_PASSWORD = "local_backup_password";
-    private static final String MSAA_PROPERTY = "debug.egl.force_msaa";
     private static final String BUGREPORT = "bugreport";
     private static final String BUGREPORT_IN_POWER_KEY = "bugreport_in_power";
-    private static final String OPENGL_TRACES_PROPERTY = "debug.egl.trace";
     private static final String RUNNING_APPS = "running_apps";
 
     private static final String DEBUG_APP_KEY = "debug_app";
@@ -991,11 +990,11 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     }
 
     private void updateMsaaOptions() {
-        updateSwitchPreference(mForceMsaa, SystemProperties.getBoolean(MSAA_PROPERTY, false));
+        updateSwitchPreference(mForceMsaa, DisplayProperties.debug_force_msaa().orElse(false));
     }
 
     private void writeMsaaOptions() {
-        SystemProperties.set(MSAA_PROPERTY, mForceMsaa.isChecked() ? "true" : "false");
+        DisplayProperties.debug_force_msaa(mForceMsaa.isChecked());
         SystemPropPoker.getInstance().poke();
     }
 
@@ -1099,12 +1098,11 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private void updateDebugLayoutOptions() {
         updateSwitchPreference(mDebugLayout,
-                SystemProperties.getBoolean(View.DEBUG_LAYOUT_PROPERTY, false));
+                DisplayProperties.debug_layout().orElse(false));
     }
 
     private void writeDebugLayoutOptions() {
-        SystemProperties.set(View.DEBUG_LAYOUT_PROPERTY,
-                mDebugLayout.isChecked() ? "true" : "false");
+        DisplayProperties.debug_layout(mDebugLayout.isChecked());
         SystemPropPoker.getInstance().poke();
     }
 
@@ -1196,7 +1194,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         boolean value = mForceRtlLayout.isChecked();
         Settings.Global.putInt(mContentResolver,
                 Settings.Global.DEVELOPMENT_FORCE_RTL, value ? 1 : 0);
-        SystemProperties.set(Settings.Global.DEVELOPMENT_FORCE_RTL, value ? "1" : "0");
+        DisplayProperties.debug_force_rtl(value);
         LocalePicker.updateLocale(
                 getActivity().getResources().getConfiguration().getLocales().get(0));
     }
@@ -1335,10 +1333,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     }
 
     private void updateOpenGLTracesOptions() {
-        String value = SystemProperties.get(OPENGL_TRACES_PROPERTY);
-        if (value == null) {
-            value = "";
-        }
+        String value = DisplayProperties.debug_opengl_trace().orElse("");
 
         CharSequence[] values = mOpenGLTraces.getEntryValues();
         for (int i = 0; i < values.length; i++) {
@@ -1353,7 +1348,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     }
 
     private void writeOpenGLTracesOptions(Object newValue) {
-        SystemProperties.set(OPENGL_TRACES_PROPERTY, newValue == null ? "" : newValue.toString());
+        DisplayProperties.debug_opengl_trace(newValue == null ? "" : newValue.toString());
         SystemPropPoker.getInstance().poke();
         updateOpenGLTracesOptions();
     }
