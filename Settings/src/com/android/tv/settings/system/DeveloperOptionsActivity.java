@@ -76,7 +76,7 @@ public class DeveloperOptionsActivity extends SettingsLayoutActivity {
 
     private static final String HDMI_OPTIMIZATION_PROPERTY = "persist.sys.hdmi.resolution";
 
-    private static final String ADB_ROOT_PROPERTY = "service.adb.root";
+    private static final String ADB_ROOT_PROPERTY = "cm.service.adb.root";
     private static final String ROOT_ACCESS_PROPERTY = "persist.sys.root_access";
     private static String setting = SystemProperties.get(ROOT_ACCESS_PROPERTY, "0");
     private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
