@@ -402,6 +402,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         // TODO: implement UI for TV
         removePreference(KEY_CONVERT_FBE);
 /*
+        // Please import android.sysprop.CryptoProperties when you uncomment this block.
         PreferenceScreen convertFbePreference =
                 (PreferenceScreen) findPreference(KEY_CONVERT_FBE);
 
@@ -410,7 +411,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             IMountService mountService = IMountService.Stub.asInterface(service);
             if (!mountService.isConvertibleToFBE()) {
                 removePreference(KEY_CONVERT_FBE);
-            } else if ("file".equals(SystemProperties.get("ro.crypto.type", "none"))) {
+            } else if ("file".equals(CryptoProperties.type().orElse("none"))) {
                 convertFbePreference.setEnabled(false);
                 convertFbePreference.setSummary(getResources()
                         .getString(R.string.convert_to_file_encryption_done));
