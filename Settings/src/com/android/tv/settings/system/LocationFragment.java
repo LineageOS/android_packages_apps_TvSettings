@@ -23,6 +23,7 @@ import android.content.IntentFilter;
 import android.location.LocationManager;
 import android.os.BatteryManager;
 import android.os.Bundle;
+import android.os.Process;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -179,7 +180,7 @@ public class LocationFragment extends SettingsPreferenceFragment implements
         if (TextUtils.equals(preference.getKey(), KEY_LOCATION_MODE)) {
             int mode = Settings.Secure.LOCATION_MODE_OFF;
             if (TextUtils.equals((CharSequence) newValue, LOCATION_MODE_WIFI)) {
-                mode = Settings.Secure.LOCATION_MODE_HIGH_ACCURACY;
+                mode = Settings.Secure.LOCATION_MODE_ON;
             } else if (TextUtils.equals((CharSequence) newValue, LOCATION_MODE_OFF)) {
                 mode = Settings.Secure.LOCATION_MODE_OFF;
             } else {
@@ -199,26 +200,19 @@ public class LocationFragment extends SettingsPreferenceFragment implements
         intent.putExtra(CURRENT_MODE_KEY, currentMode);
         intent.putExtra(NEW_MODE_KEY, mode);
         getActivity().sendBroadcast(intent, android.Manifest.permission.WRITE_SECURE_SETTINGS);
-        Settings.Secure.putInt(getActivity().getContentResolver(),
-                Settings.Secure.LOCATION_MODE, mode);
+        getActivity().getSystemService(LocationManager.class).setLocationEnabledForUser(
+                mode != Settings.Secure.LOCATION_MODE_OFF,
+                Process.myUserHandle());
     }
 
     private void refreshLocationMode() {
         if (mLocationMode == null) {
             return;
         }
-        final int mode = Settings.Secure.getInt(getActivity().getContentResolver(),
-                Settings.Secure.LOCATION_MODE, Settings.Secure.LOCATION_MODE_OFF);
-        if (mode == Settings.Secure.LOCATION_MODE_HIGH_ACCURACY
-                    || mode == Settings.Secure.LOCATION_MODE_BATTERY_SAVING) {
+        if (getActivity().getSystemService(LocationManager.class).isLocationEnabled()) {
             mLocationMode.setValue(LOCATION_MODE_WIFI);
-        } else if (mode == Settings.Secure.LOCATION_MODE_OFF) {
-            mLocationMode.setValue(LOCATION_MODE_OFF);
-        } else if (mode == Settings.Secure.LOCATION_MODE_SENSORS_ONLY) {
-            writeLocationMode(Settings.Secure.LOCATION_MODE_OFF);
-            mLocationMode.setValue(LOCATION_MODE_OFF);
         } else {
-            Log.d(TAG, "Unknown location mode: " + mode);
+            mLocationMode.setValue(LOCATION_MODE_OFF);
         }
     }
 
