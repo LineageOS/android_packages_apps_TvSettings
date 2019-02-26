@@ -411,7 +411,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             IMountService mountService = IMountService.Stub.asInterface(service);
             if (!mountService.isConvertibleToFBE()) {
                 removePreference(KEY_CONVERT_FBE);
-            } else if ("file".equals(CryptoProperties.type().orElse("none"))) {
+            } else if (CryptoProperties.type().orElse(CryptoProperties.type_values.NONE) ==
+                       CryptoProperties.type_values.FILE) {
                 convertFbePreference.setEnabled(false);
                 convertFbePreference.setSummary(getResources()
                         .getString(R.string.convert_to_file_encryption_done));
