@@ -349,7 +349,8 @@ public class SecurityFragment extends SettingsPreferenceFragment
 
     @Override
     public void clearLockPassword(String oldPin) {
-        new LockPatternUtils(getActivity()).clearLock(oldPin, getContext().getUserId());
+        byte[] oldPinBytes = oldPin != null ? oldPin.getBytes() : null;
+        new LockPatternUtils(getActivity()).clearLock(oldPinBytes, getContext().getUserId());
     }
 
     @Override

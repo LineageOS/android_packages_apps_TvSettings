@@ -167,9 +167,10 @@ public class RestrictedProfileModel {
     public boolean checkPassword(String password) {
         try {
             final int userId = getOwnerUserId();
+            final byte[] passwordBytes = password != null ? password.getBytes() : null;
             return VerifyCredentialResponse.RESPONSE_OK
                     == new LockPatternUtils(mContext).getLockSettings().checkCredential(
-                            password, LockPatternUtils.CREDENTIAL_TYPE_PASSWORD, userId,  null)
+                            passwordBytes, LockPatternUtils.CREDENTIAL_TYPE_PASSWORD, userId, null)
                                     .getResponseCode();
         } catch (RemoteException e) {
             Log.e(TAG, "Unable to check password for unlocking the user", e);
