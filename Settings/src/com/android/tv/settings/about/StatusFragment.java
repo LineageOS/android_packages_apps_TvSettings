@@ -70,7 +70,7 @@ public class StatusFragment extends PreferenceControllerFragment implements Slic
 
         // TODO: detect if we have a battery or not
         addPreferenceController(new NopePreferenceController(context, KEY_BATTERY_LEVEL));
-        addPreferenceController(new NopePreferenceController(context, KEY_BATTERY_STATUS));
+        addPreferenceController(new BatteryStatusPreferenceController(context, lifecycle));
 
         addPreferenceController(new SerialNumberPreferenceController(context));
         addPreferenceController(new UptimePreferenceController(context, lifecycle));
