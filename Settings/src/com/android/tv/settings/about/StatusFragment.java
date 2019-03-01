@@ -22,7 +22,6 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.deviceinfo.AbstractSimStatusImeiInfoPreferenceController;
-import com.android.tv.settings.NopePreferenceController;
 import com.android.tv.settings.PreferenceControllerFragment;
 import com.android.tv.settings.R;
 
@@ -58,10 +57,7 @@ public class StatusFragment extends PreferenceControllerFragment {
         final List<AbstractPreferenceController> controllers = new ArrayList<>(10);
         final Lifecycle lifecycle = getLifecycle();
 
-        // TODO: detect if we have a battery or not
-        controllers.add(new NopePreferenceController(context, KEY_BATTERY_LEVEL));
-        controllers.add(new NopePreferenceController(context, KEY_BATTERY_STATUS));
-
+        controllers.add(new BatteryStatusPreferenceController(context, lifecycle));
         controllers.add(new SerialNumberPreferenceController(context));
         controllers.add(new UptimePreferenceController(context, lifecycle));
         controllers.add(new BluetoothAddressPreferenceController(context, lifecycle));
