@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Display settings.  The delay in inactivity before the daydream starts. -->
     <string-array name="sleep_timeout_entries">
         <item>5 munud</item>
         <item>15 munud</item>
@@ -23,8 +22,6 @@
         <item>1 awr</item>
         <item>2 awr</item>
     </string-array>
-    <!-- Do not translate. -->
-    <!-- Display settings.  The delay after the daydream starts when the screen goes off. -->
     <string-array name="screen_off_timeout_entries">
         <item>30 munud</item>
         <item>1 awr</item>
@@ -33,21 +30,17 @@
         <item>12 awr</item>
         <item>Byth</item>
     </string-array>
-    <!-- Do not translate. -->
-    <!-- Titles for captioning typeface preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_typeface_selector_titles">
         <item>Rhagosodiad</item>
         <item>Sans-serif</item>
-        <item>Sans-serif condensed</item>
-        <item>Sans-serif monospace</item>
+        <item>Sans-serif cyddwys</item>
+        <item>Sans-serif monofwlch</item>
         <item>Serif</item>
-        <item>Serif monospace</item>
-        <item>Casual</item>
-        <item>Cursive</item>
+        <item>Serif monofwlch</item>
+        <item>Achlysurol</item>
+        <item>Rhedol</item>
         <item>Priflythrennau bychain</item>
     </string-array>
-    <!-- Values for captioning typeface preference. -->
-    <!-- Titles for captioning font size preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_font_size_selector_titles">
         <item>Bach iawn</item>
         <item>Bach</item>
@@ -55,31 +48,22 @@
         <item>Mawr</item>
         <item>Mawr iawn</item>
     </string-array>
-    <!-- Values for captioning font size preference. -->
-    <!-- Titles for captioning character edge type preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_edge_type_selector_titles">
         <item>Dim</item>
         <item>Amlinell</item>
-        <item>Drop shadow</item>
-        <item>Raised</item>
-        <item>Depressed</item>
+        <item>Gyda chysgod</item>
+        <item>Wedi\'i godi</item>
+        <item>Wedi\'i disgyn</item>
     </string-array>
-    <!-- Values for captioning character edge type preference. -->
-    <!-- Titles for captioning color preference. -->
-    <!-- Index to id mapping for captioning color preference. -->
-    <!-- Titles for captioning opacity preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_opacity_selector_titles">
         <item>25%</item>
         <item>50%</item>
         <item>75%</item>
         <item>100%</item>
     </string-array>
-    <!-- Values for captioning opacity preference. -->
-    <!-- List entries for controlling surround sound passthrough setting [CHAR LIMIT=50] -->
     <string-array name="surround_sound_entries">
         <item>Awto</item>
         <item>O hyd</item>
         <item>Byth</item>
     </string-array>
-    <!-- Entry values for surround sound preference -->
 </resources>

@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Display settings.  The delay in inactivity before the daydream starts. -->
     <string-array name="sleep_timeout_entries">
         <item>5 minutos</item>
         <item>15 minutos</item>
@@ -23,8 +22,6 @@
         <item>1 hora</item>
         <item>2 hores</item>
     </string-array>
-    <!-- Do not translate. -->
-    <!-- Display settings.  The delay after the daydream starts when the screen goes off. -->
     <string-array name="screen_off_timeout_entries">
         <item>30 minutos</item>
         <item>1 hora</item>
@@ -33,8 +30,6 @@
         <item>12 hores</item>
         <item>Enxamás</item>
     </string-array>
-    <!-- Do not translate. -->
-    <!-- Titles for captioning typeface preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_typeface_selector_titles">
         <item>Por defeutu</item>
         <item>Sans-serif</item>
@@ -46,8 +41,6 @@
         <item>Cursiva</item>
         <item>Mayúscules pequeñes</item>
     </string-array>
-    <!-- Values for captioning typeface preference. -->
-    <!-- Titles for captioning font size preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_font_size_selector_titles">
         <item>Perpequeñu</item>
         <item>Pequeñu</item>
@@ -55,8 +48,6 @@
         <item>Grande</item>
         <item>Pergrande</item>
     </string-array>
-    <!-- Values for captioning font size preference. -->
-    <!-- Titles for captioning character edge type preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_edge_type_selector_titles">
         <item>Denguna</item>
         <item>Contornu</item>
@@ -64,22 +55,15 @@
         <item>Alzáu</item>
         <item>Fundíu</item>
     </string-array>
-    <!-- Values for captioning character edge type preference. -->
-    <!-- Titles for captioning color preference. -->
-    <!-- Index to id mapping for captioning color preference. -->
-    <!-- Titles for captioning opacity preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_opacity_selector_titles">
         <item>25%</item>
         <item>50%</item>
         <item>75%</item>
         <item>100%</item>
     </string-array>
-    <!-- Values for captioning opacity preference. -->
-    <!-- List entries for controlling surround sound passthrough setting [CHAR LIMIT=50] -->
     <string-array name="surround_sound_entries">
         <item>Auto</item>
         <item>Siempres</item>
         <item>Enxamás</item>
     </string-array>
-    <!-- Entry values for surround sound preference -->
 </resources>
