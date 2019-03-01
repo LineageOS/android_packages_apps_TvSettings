@@ -25,6 +25,7 @@ import android.net.ConnectivityManager;
 import android.net.LinkProperties;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -77,6 +78,8 @@ public class StatusFragment extends LeanbackPreferenceFragment {
     private Preference mIpAddress;
     private Preference mWifiMacAddress;
     private Preference mWimaxMacAddress;
+    private Preference mBatteryLevel;
+    private Preference mBatteryStatus;
 
     private IntentFilter mConnectivityIntentFilter;
     private final BroadcastReceiver mConnectivityReceiver = new BroadcastReceiver() {
@@ -108,6 +111,7 @@ public class StatusFragment extends LeanbackPreferenceFragment {
             switch (msg.what) {
                 case EVENT_UPDATE_STATS:
                     status.updateTimes();
+                    status.updateBattery();
                     sendEmptyMessageDelayed(EVENT_UPDATE_STATS, 1000);
                     break;
 
@@ -137,13 +141,20 @@ public class StatusFragment extends LeanbackPreferenceFragment {
         setPreferencesFromResource(R.xml.device_info_status, null);
 
         // TODO: detect if we have a battery or not
-        removePreference(findPreference(KEY_BATTERY_LEVEL));
-        removePreference(findPreference(KEY_BATTERY_STATUS));
+        mBatteryLevel = findPreference(KEY_BATTERY_LEVEL);
+        mBatteryStatus = findPreference(KEY_BATTERY_STATUS);
         mBtAddress = findPreference(KEY_BT_ADDRESS);
         mWifiMacAddress = findPreference(KEY_WIFI_MAC_ADDRESS);
         mWimaxMacAddress = findPreference(KEY_WIMAX_MAC_ADDRESS);
         mIpAddress = findPreference(KEY_IP_ADDRESS);
         mUptime = findPreference("up_time");
+
+        if (!hasBattery()) {
+            getPreferenceScreen().removePreference(mBatteryLevel);
+            getPreferenceScreen().removePreference(mBatteryStatus);
+            mBatteryLevel = null;
+            mBatteryStatus = null;
+        }
 
         if (!hasBluetooth()) {
             getPreferenceScreen().removePreference(mBtAddress);
@@ -184,6 +195,13 @@ public class StatusFragment extends LeanbackPreferenceFragment {
         if (preference != null) {
             getPreferenceScreen().removePreference(preference);
         }
+    }
+
+    private boolean hasBattery() {
+        Intent intent = getActivity().registerReceiver(null,
+                new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+
+        return intent.getBooleanExtra(BatteryManager.EXTRA_PRESENT, false);
     }
 
     private boolean hasBluetooth() {
@@ -243,6 +261,40 @@ public class StatusFragment extends LeanbackPreferenceFragment {
             } else {
                 mBtAddress.setSummary(R.string.status_unavailable);
             }
+        }
+    }
+
+    private void updateBattery() {
+        Intent intent = getActivity().registerReceiver(null,
+                new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+
+        if (mBatteryLevel != null) {
+            mBatteryLevel.setSummary(Integer.toString(Math.round(100.f
+                    * intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 100)
+                    / intent.getIntExtra(BatteryManager.EXTRA_SCALE, 100))) + "%");
+        }
+
+        if (mBatteryStatus != null) {
+            String batterystatus = getString(R.string.battery_info_status_unknown);
+
+            switch (intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1)) {
+                case BatteryManager.BATTERY_STATUS_CHARGING:
+                    batterystatus = getString(R.string.battery_info_status_charging);
+                    break;
+                case BatteryManager.BATTERY_STATUS_DISCHARGING:
+                    batterystatus = getString(R.string.battery_info_status_discharging);
+                    break;
+                case BatteryManager.BATTERY_STATUS_FULL:
+                    batterystatus = getString(R.string.battery_info_status_full);
+                    break;
+                case BatteryManager.BATTERY_STATUS_NOT_CHARGING:
+                    batterystatus = getString(R.string.battery_info_status_not_charging);
+                    break;
+                case BatteryManager.BATTERY_STATUS_UNKNOWN:
+                default:
+                    break;
+            }
+            mBatteryStatus.setSummary(batterystatus);
         }
     }
 
