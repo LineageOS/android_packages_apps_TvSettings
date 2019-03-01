@@ -63,7 +63,7 @@ public class StatusFragment extends PreferenceControllerFragment {
 
         // TODO: detect if we have a battery or not
         controllers.add(new NopePreferenceController(context, KEY_BATTERY_LEVEL));
-        controllers.add(new NopePreferenceController(context, KEY_BATTERY_STATUS));
+        controllers.add(new BatteryStatusPreferenceController(context, lifecycle));
 
         controllers.add(new SerialNumberPreferenceController(context));
         controllers.add(new UptimePreferenceController(context, lifecycle));
