@@ -18,8 +18,8 @@ package com.android.tv.settings.device.apps.specialaccess;
 
 import android.app.Fragment;
 
-import com.android.tv.settings.BaseSettingsFragment;
 import com.android.tv.settings.TvSettingsActivity;
+import com.android.tv.settings.overlay.FeatureFactory;
 import com.android.tv.settings.system.SecurityFragment;
 
 /**
@@ -33,26 +33,8 @@ public class PictureInPictureActivity extends TvSettingsActivity {
             finish();
             return null;
         } else {
-            return SettingsFragment.newInstance();
-        }
-    }
-
-    /**
-     * Wrapper fragment for PictureInPicture
-     */
-    public static class SettingsFragment extends BaseSettingsFragment {
-
-        /**
-         * @return new instance of {@link SettingsFragment}
-         */
-        public static SettingsFragment newInstance() {
-            return new SettingsFragment();
-        }
-
-        @Override
-        public void onPreferenceStartInitialScreen() {
-            final PictureInPicture fragment = new PictureInPicture();
-            startPreferenceFragment(fragment);
+            return FeatureFactory.getFactory(this).getSettingsFragmentProvider()
+                .newSettingsFragment(PictureInPicture.class.getName(), null);
         }
     }
 }

@@ -29,6 +29,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.annotation.Keep;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -48,6 +49,7 @@ import java.util.List;
 /**
  * The location settings screen in TV settings.
  */
+@Keep
 public class LocationFragment extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
