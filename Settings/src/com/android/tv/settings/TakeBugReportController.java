@@ -36,7 +36,11 @@ public class TakeBugReportController extends AbstractPreferenceController {
 
     @Override
     public boolean isAvailable() {
-        return android.os.Build.TYPE.equals("userdebug");
+        return android.os.Build.TYPE.equals("userdebug")
+                && mContext != null
+                && mContext.getResources() != null
+                && mContext.getResources().getBoolean(
+                        R.bool.config_quick_settings_show_take_bugreport);
     }
 
     @Override

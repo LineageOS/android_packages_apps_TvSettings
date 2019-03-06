@@ -29,6 +29,9 @@
     <!-- Whether to show a preference item for regulatory information in About phone -->
     <bool name="config_show_regulatory_info">false</bool>
 
+    <!-- Determines whether the "Take bug report" option is shown in quick settings. -->
+    <bool name="config_quick_settings_show_take_bugreport" translatable="false">true</bool>
+
     <!-- Fully-qualified class name for the implementation of the FeatureFactory to be instantiated. -->
     <string name="config_featureFactory" translatable="false">com.android.tv.settings.overlay.FeatureFactoryImpl</string>
 </resources>
