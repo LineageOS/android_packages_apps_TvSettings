@@ -35,6 +35,7 @@ import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.util.Log;
 
+import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
@@ -52,6 +53,7 @@ import java.util.List;
 /**
  * The account sync settings screen in TV Settings.
  */
+@Keep
 public class AccountSyncFragment extends SettingsPreferenceFragment implements
         AuthenticatorHelper.OnAccountsUpdateListener {
     private static final String TAG = "AccountSyncFragment";

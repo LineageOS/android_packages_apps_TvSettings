@@ -30,6 +30,7 @@ import android.text.format.DateUtils;
 import android.util.ArrayMap;
 import android.util.Log;
 
+import androidx.annotation.Keep;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 
@@ -45,6 +46,7 @@ import java.util.Objects;
 /**
  * The screen saver screen in TV settings.
  */
+@Keep
 public class DaydreamFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 

@@ -22,6 +22,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import androidx.annotation.Keep;
 import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -35,6 +36,7 @@ import java.util.List;
 /**
  * Fragment for managing recent apps, and apps permissions.
  */
+@Keep
 public class AppsFragment extends PreferenceControllerFragment {
 
     private static final String KEY_PERMISSIONS = "Permissions";

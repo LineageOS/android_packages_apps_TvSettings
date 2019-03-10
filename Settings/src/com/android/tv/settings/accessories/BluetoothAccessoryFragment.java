@@ -54,6 +54,7 @@ import java.util.UUID;
 /**
  * The screen in TV settings that let's users rename or unpair a bluetooth device.
  */
+@Keep
 public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
 
     private static final boolean DEBUG = false;

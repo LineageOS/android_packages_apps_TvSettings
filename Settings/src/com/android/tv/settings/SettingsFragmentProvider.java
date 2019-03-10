@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2019 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,22 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-package com.android.tv.settings.inputmethod;
+package com.android.tv.settings;
 
 import android.app.Fragment;
-
-import com.android.tv.settings.TvSettingsActivity;
-import com.android.tv.settings.overlay.FeatureFactory;
+import android.os.Bundle;
 
 /**
- * Wrapper activity for KeyboardFragment
+ * Provides a settings fragment for display in either the normal or two panel layout.
  */
-public class KeyboardActivity extends TvSettingsActivity {
+public interface SettingsFragmentProvider {
 
-    @Override
-    protected Fragment createSettingsFragment() {
-        return FeatureFactory.getFactory(this).getSettingsFragmentProvider()
-            .newSettingsFragment(KeyboardFragment.class.getName(), null);
-    }
+    /** Creates a new instance of a settings fragment. */
+    Fragment newSettingsFragment(String className, Bundle arguments)
+            throws IllegalArgumentException;
 }

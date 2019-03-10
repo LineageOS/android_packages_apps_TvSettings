@@ -24,6 +24,7 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.TwoStatePreference;
@@ -38,6 +39,7 @@ import java.util.Set;
 /**
  * Fragment to control TV input settings.
  */
+@Keep
 public class InputsFragment extends SettingsPreferenceFragment {
 
     private static final String KEY_CONNECTED_INPUTS = "connected_inputs";

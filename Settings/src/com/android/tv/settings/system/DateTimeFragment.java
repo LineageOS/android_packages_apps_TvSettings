@@ -27,6 +27,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 
+import androidx.annotation.Keep;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
@@ -42,6 +43,7 @@ import java.util.Date;
 /**
  * The date and time screen in TV settings.
  */
+@Keep
 public class DateTimeFragment extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 

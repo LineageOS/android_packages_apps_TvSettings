@@ -24,6 +24,7 @@ import android.util.ArrayMap;
 import android.util.ArraySet;
 import android.util.Log;
 
+import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
@@ -40,6 +41,7 @@ import java.util.Set;
 /**
  * Fragment for listing and managing all apps on the device.
  */
+@Keep
 public class AllAppsFragment extends SettingsPreferenceFragment implements
         Preference.OnPreferenceClickListener {
 

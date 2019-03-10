@@ -37,6 +37,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -58,6 +59,7 @@ import java.util.Set;
 /**
  * The fragment where all good things begin. Evil is handled elsewhere.
  */
+@Keep
 public class MainFragment extends PreferenceControllerFragment implements
         SuggestionControllerMixin.SuggestionControllerHost, SuggestionPreference.Callback,
         HotwordStateListener {

@@ -41,6 +41,7 @@ import android.util.Log;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.IntDef;
+import androidx.annotation.Keep;
 import androidx.leanback.preference.LeanbackSettingsFragment;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.Preference;
@@ -65,6 +66,7 @@ import java.util.List;
 /**
  * The security settings screen in Tv settings.
  */
+@Keep
 public class SecurityFragment extends SettingsPreferenceFragment
         implements RestrictedProfilePinDialogFragment.Callback {
 

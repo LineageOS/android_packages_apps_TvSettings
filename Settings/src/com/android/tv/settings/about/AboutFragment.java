@@ -34,6 +34,7 @@ import android.util.Log;
 import android.util.Pair;
 import android.widget.Toast;
 
+import androidx.annotation.Keep;
 import androidx.annotation.Nullable;
 import androidx.leanback.preference.LeanbackSettingsFragment;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
@@ -55,6 +56,7 @@ import com.android.tv.settings.name.DeviceManager;
 /**
  * The "About" screen in TV settings.
  */
+@Keep
 public class AboutFragment extends SettingsPreferenceFragment implements
         LongClickPreference.OnLongClickListener {
     private static final String TAG = "AboutFragment";

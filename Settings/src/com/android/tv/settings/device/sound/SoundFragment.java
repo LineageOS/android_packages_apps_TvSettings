@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+import androidx.annotation.Keep;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -43,6 +44,7 @@ import java.util.Map;
 /**
  * The "Sound" screen in TV Settings.
  */
+@Keep
 public class SoundFragment extends PreferenceControllerFragment implements
         Preference.OnPreferenceChangeListener {
 
