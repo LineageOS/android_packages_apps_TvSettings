@@ -1415,7 +1415,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     @Override
     public void onEnableAdbConfirm() {
         Settings.Global.putInt(mContentResolver, Settings.Global.ADB_ENABLED, 1);
-        mVerifyAppsOverUsb.setEnabled(true);
+        mEnableAdb.setChecked(true);
         updateVerifyAppsOverUsbOptions();
     }
 
