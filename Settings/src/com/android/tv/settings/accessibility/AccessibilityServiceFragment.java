@@ -129,7 +129,6 @@ public class AccessibilityServiceFragment extends SettingsPreferenceFragment imp
         if (mEnablePref != null) {
             mEnablePref.setChecked(enabling);
         }
-        getActivity().finish();
     }
 
     @Override
