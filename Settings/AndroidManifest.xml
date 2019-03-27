@@ -54,7 +54,8 @@
         android:theme="@style/Theme.Settings"
         android:usesCleartextTraffic="true"
         android:defaultToDeviceProtectedStorage="true"
-        android:directBootAware="true">
+        android:directBootAware="true"
+        android:allowClearUserData="false">
 
         <activity
             android:name=".MainSettings"
@@ -603,6 +604,9 @@
                 <action android:name="com.google.android.tungsten.setupwraith.TV_SETTINGS_POST_SETUP" />
             </intent-filter>
         </receiver>
+
+        <service android:name=".users.RestrictedProfilePinService"
+            android:exported="false" />
 
         <service android:name=".device.storage.SettingsStorageService$Impl"
             android:exported="false" />

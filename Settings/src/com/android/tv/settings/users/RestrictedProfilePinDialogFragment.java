@@ -16,51 +16,30 @@
 
 package com.android.tv.settings.users;
 
-import android.app.Fragment;
-import android.app.admin.DevicePolicyManager;
 import android.content.Context;
-import android.content.pm.UserInfo;
 import android.os.Bundle;
-import android.os.UserHandle;
-import android.os.UserManager;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
 
 import com.android.tv.settings.dialog.PinDialogFragment;
 
 import java.util.function.Consumer;
 
+/**
+ * Fragment that handles the PIN dialog for Restricted Profile actions.
+ */
 public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
-
-    public interface Callback extends ResultListener {
-        /**
-         * Save the PIN password for the profile
-         * @param pin Password to save
-         * @param originalPin Previously saved password, or null if no password was previously set
-         * @param quality Password quality, see {@link DevicePolicyManager}
-         */
-        void saveLockPassword(String pin, String originalPin, int quality);
-
-        /**
-         * Clear the PIN password
-         * @param oldPin Current PIN password (required)
-         */
-        void clearLockPassword(String oldPin);
-
-        /**
-         * Check the PIN password
-         * @param password Password to check
-         * @return {@code True} if password is correct
-         */
-        boolean checkPassword(String password);
-
-        /**
-         * Query if there is a password set
-         * @return {@code True} if password is set
-         */
-        boolean hasLockscreenSecurity();
-    }
+    private static final String TAG = RestrictedProfilePinDialogFragment.class.getSimpleName();
 
     private static final  String SHARED_PREFERENCE_NAME = "RestrictedProfilePinDialogFragment";
     private static final String PREF_DISABLE_PIN_UNTIL = "disable_pin_until";
+
+    private RestrictedProfilePinStorage mRestrictedProfilePinStorage;
+
+    private HandlerThread mBackgroundThread;
+    private Handler mBackgroundThreadHandler;
+    private Handler mUiThreadHandler;
 
     public static RestrictedProfilePinDialogFragment newInstance(@PinDialogType int type) {
         RestrictedProfilePinDialogFragment fragment = new RestrictedProfilePinDialogFragment();
@@ -68,6 +47,32 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
         b.putInt(PinDialogFragment.ARG_TYPE, type);
         fragment.setArguments(b);
         return fragment;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        mBackgroundThread = new HandlerThread(TAG);
+        mBackgroundThread.start();
+        mBackgroundThreadHandler = new Handler(mBackgroundThread.getLooper());
+        mUiThreadHandler = new Handler(Looper.getMainLooper());
+
+        mBackgroundThreadHandler.post(() -> {
+            mRestrictedProfilePinStorage = RestrictedProfilePinStorage.newInstance(getContext());
+            mRestrictedProfilePinStorage.bind();
+        });
+    }
+
+    @Override
+    public void onDetach() {
+        mRestrictedProfilePinStorage.unbind();
+        mRestrictedProfilePinStorage = null;
+        mUiThreadHandler = null;
+        mBackgroundThreadHandler = null;
+        mBackgroundThread.quitSafely();
+        mBackgroundThread = null;
+        super.onDetach();
     }
 
     /**
@@ -102,90 +107,37 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
 
     @Override
     public void setPin(String pin, String originalPin, Consumer<Boolean> consumer) {
-        Callback callback = null;
-
-        Fragment f = getTargetFragment();
-        if (f instanceof Callback) {
-            callback = (Callback) f;
-        }
-
-        if (callback == null && getActivity() instanceof Callback) {
-            callback = (Callback) getActivity();
-        }
-
-        if (callback != null) {
-            callback.saveLockPassword(pin, originalPin,
-                    DevicePolicyManager.PASSWORD_QUALITY_NUMERIC);
-        }
-
-        consumer.accept(true);
+        // Set pin on the background thread and consume the result on the UI thread.
+        mBackgroundThreadHandler.post(() -> {
+            mRestrictedProfilePinStorage.setPin(pin, originalPin);
+            mUiThreadHandler.post(() -> consumer.accept(true));
+        });
     }
 
     @Override
     public void deletePin(String oldPin, Consumer<Boolean> consumer) {
-        Callback callback = null;
-
-        Fragment f = getTargetFragment();
-        if (f instanceof Callback) {
-            callback = (Callback) f;
-        }
-
-        if (callback == null && getActivity() instanceof Callback) {
-            callback = (Callback) getActivity();
-        }
-
-        if (callback != null) {
-            callback.clearLockPassword(oldPin);
-        }
-
-        consumer.accept(true);
+        // Delete the pin on the background thread and consume the result on the UI thread.
+        mBackgroundThreadHandler.post(() -> {
+            mRestrictedProfilePinStorage.deletePin(oldPin);
+            mUiThreadHandler.post(() -> consumer.accept(true));
+        });
     }
 
     @Override
     public void isPinCorrect(String pin, Consumer<Boolean> consumer) {
-        Callback callback = null;
-
-        Fragment f = getTargetFragment();
-        if (f instanceof Callback) {
-            callback = (Callback) f;
-        }
-
-        if (callback == null && getActivity() instanceof Callback) {
-            callback = (Callback) getActivity();
-        }
-
-        boolean isPinCorrect = false;
-        if (callback != null) {
-            UserInfo myUserInfo = UserManager.get(getActivity()).getUserInfo(UserHandle.myUserId());
-            // UserInfo.restrictedProfileParentId may not be set if the restricted profile was
-            // created on Android M devices.
-            isPinCorrect = myUserInfo != null && callback.checkPassword(pin);
-        }
-
-        consumer.accept(isPinCorrect);
+        // Check if the pin is correct and consume the result on the UI thread.
+        mBackgroundThreadHandler.post(() -> {
+            boolean isPinCorrect = mRestrictedProfilePinStorage.isPinCorrect(pin);
+            mUiThreadHandler.post(() -> consumer.accept(isPinCorrect));
+        });
     }
 
     @Override
     public void isPinSet(Consumer<Boolean> consumer) {
-        Callback callback = null;
-
-        Fragment f = getTargetFragment();
-        if (f instanceof Callback) {
-            callback = (Callback) f;
-        }
-
-        if (callback == null && getActivity() instanceof Callback) {
-            callback = (Callback) getActivity();
-        }
-
-        if (callback != null) {
-            UserInfo myUserInfo = UserManager.get(getActivity()).getUserInfo(UserHandle.myUserId());
-            boolean isPinSet = (myUserInfo != null && myUserInfo.isRestricted())
-                    || callback.hasLockscreenSecurity();
-
-            consumer.accept(isPinSet);
-        } else {
-            throw new IllegalStateException("Can't call isPinSet when not attached");
-        }
+        // Check if the pin is set and consume the result on the UI thread.
+        mBackgroundThreadHandler.post(() -> {
+            boolean isPinSet = mRestrictedProfilePinStorage.isPinSet();
+            mUiThreadHandler.post(() -> consumer.accept(isPinSet));
+        });
     }
 }
