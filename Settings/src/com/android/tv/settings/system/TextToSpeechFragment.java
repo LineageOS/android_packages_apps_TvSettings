@@ -472,7 +472,6 @@ public class TextToSpeechFragment extends SettingsPreferenceFragment implements
     }
 
     private void updateWidgetState(boolean enable) {
-        mEngineSettingsPref.setEnabled(enable);
         mPlayExample.setEnabled(enable);
         mDefaultRatePref.setEnabled(enable);
         mEngineStatus.setEnabled(enable);
