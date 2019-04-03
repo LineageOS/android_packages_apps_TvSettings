@@ -16,6 +16,9 @@
 
 package com.android.tv.settings.device.apps;
 
+import static android.content.pm.ApplicationInfo.FLAG_ALLOW_CLEAR_USER_DATA;
+import static android.content.pm.ApplicationInfo.FLAG_SYSTEM;
+
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ActivityNotFoundException;
@@ -286,12 +289,14 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
         }
 
         // Clear data
-        if (mClearDataPreference == null) {
-            mClearDataPreference = new ClearDataPreference(themedContext, mEntry);
-            mClearDataPreference.setKey(KEY_CLEAR_DATA);
-            replacePreference(mClearDataPreference);
-        } else {
-            mClearDataPreference.setEntry(mEntry);
+        if (clearDataAllowed()) {
+            if (mClearDataPreference == null) {
+                mClearDataPreference = new ClearDataPreference(themedContext, mEntry);
+                mClearDataPreference.setKey(KEY_CLEAR_DATA);
+                replacePreference(mClearDataPreference);
+            } else {
+                mClearDataPreference.setEntry(mEntry);
+            }
         }
 
         // Clear cache
@@ -362,6 +367,11 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
     }
 
     public void clearData() {
+        if (!clearDataAllowed()) {
+            Log.e(TAG, "Attempt to clear data failed. Clear data is disabled for " + mPackageName);
+            return;
+        }
+
         mMetricsFeatureProvider.action(getContext(), MetricsEvent.ACTION_SETTINGS_CLEAR_APP_DATA);
         mClearDataPreference.setClearingData(true);
         String spaceManagementActivityName = mEntry.info.manageSpaceActivityName;
@@ -442,6 +452,17 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
         }
     }
 
+    /**
+     * Clearing data can only be disabled for system apps. For all non-system apps it is enabled.
+     * System apps disable it explicitly via the android:allowClearUserData tag.
+     **/
+    private boolean clearDataAllowed() {
+        boolean sysApp = (mEntry.info.flags & FLAG_SYSTEM) == FLAG_SYSTEM;
+        boolean allowClearData =
+                (mEntry.info.flags & FLAG_ALLOW_CLEAR_USER_DATA) == FLAG_ALLOW_CLEAR_USER_DATA;
+        return !sysApp || allowClearData;
+    }
+
     private class ApplicationsStateCallbacks implements ApplicationsState.Callbacks {
 
         @Override
@@ -477,8 +498,11 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
                 return;
             }
             mAppStoragePreference.refresh();
-            mClearDataPreference.refresh();
             mClearCachePreference.refresh();
+
+            if (mClearDataPreference != null) {
+                mClearDataPreference.refresh();
+            }
         }
 
         @Override
@@ -488,8 +512,11 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
                 return;
             }
             mAppStoragePreference.refresh();
-            mClearDataPreference.refresh();
             mClearCachePreference.refresh();
+
+            if (mClearDataPreference != null) {
+                mClearDataPreference.refresh();
+            }
         }
 
         @Override
@@ -506,8 +533,11 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
                 return;
             }
             mAppStoragePreference.refresh();
-            mClearDataPreference.refresh();
             mClearCachePreference.refresh();
+
+            if (mClearDataPreference != null) {
+                mClearDataPreference.refresh();
+            }
         }
     }
 }
