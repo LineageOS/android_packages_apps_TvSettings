@@ -314,7 +314,7 @@
     <string name="storage_reset_section" msgid="7324235036547192861">"रीसेट करें"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g> को माउंट किया गया है"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"<xliff:g id="NAME">%1$s</xliff:g> को माउंट नहीं किया जा सका"</string>
-    <string name="storage_mount_adopted" msgid="3360994581083675640">"USB मेमोरी पुन: कनेक्‍ट की गई"</string>
+    <string name="storage_mount_adopted" msgid="3360994581083675640">"USB मेमोरी फिर से कनेक्‍ट की गई"</string>
     <string name="storage_unmount_success" msgid="7921627277443856151">"<xliff:g id="NAME">%1$s</xliff:g> को सुरक्षित रूप से निकाला गया"</string>
     <string name="storage_unmount_failure" msgid="6322048355281833871">"<xliff:g id="NAME">%1$s</xliff:g> को सुरक्षित रूप से नहीं निकाला जा सका"</string>
     <string name="storage_unmount_failure_cant_find" msgid="240731723168567217">"निकालने के लिए डिस्क नहीं ढूंढ सका"</string>
@@ -358,7 +358,7 @@
     <string name="storage_new_action_eject" msgid="4069294152676217949">"निकालें"</string>
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> निकाला गया"</string>
     <string name="storage_missing_description" msgid="8400374014342069781">"जब तक डिस्क को पुनः कनेक्ट नहीं किया जाता, तब तक कुछ ऐप्स अनुपलब्ध रहेंगे या ठीक से काम नहीं करेंगे."</string>
-    <string name="insufficient_storage" msgid="5670157010939153746">"पर्याप्त मेमोरी स्‍थान नहीं है."</string>
+    <string name="insufficient_storage" msgid="5670157010939153746">"काफ़ी मेमोरी स्‍थान नहीं है."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"ऐप्स मौजूद नहीं है."</string>
     <string name="app_forward_locked" msgid="6078781450044847966">"ऐप्स की प्रति नहीं बनाई जा सकती."</string>
     <string name="invalid_location" msgid="5269044848535157307">"इंस्‍टॉल स्‍थान मान्‍य नहीं है."</string>
@@ -507,7 +507,7 @@
     <string name="system_desc_bt_hci_log" msgid="4219265203570411773">"ब्लूटूथ HCI स्नूप लॉग इन करना सक्षम करें"</string>
     <string name="system_desc_usb_debugging" msgid="5168830368191788731">"USB कनेक्‍ट होने पर डीबग मोड"</string>
     <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"डीबग किया गया ऐप्स निष्पादन के पहले अनुलग्न करने के लिए डीबगर की प्रतीक्षा करता है"</string>
-    <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"क्लिप सीमाएं, मार्जिन, आदि दिखाएं."</string>
+    <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"क्लिप सीमाएं, मार्जिन, वगैरह दिखाएं."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"GPU के साथ आरेखित करने पर विंडो में दृश्‍यों को फ़्लैश करें"</string>
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"हार्डवेयर लेयर अपडेट होने पर हरे फ़्लैश होते हैं"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"सबसे अच्छे से सबसे खराब: नीला, हरा, हल्का लाल, लाल"</string>
@@ -638,7 +638,7 @@
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"कोई नया पिन सेट करें"</string>
     <string name="pin_enter_again" msgid="1510456697040826496">"नया पिन फिर से डालें"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"पुराना पिन डालें"</string>
-    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"आपने 5 बार गलत पिन डाला है.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> सेकंड में पुन: प्रयास करें."</string>
+    <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"आपने 5 बार गलत पिन डाला है.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> सेकंड में फिर से प्रयास करें."</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"गलत पिन, फिर से प्रयास करें"</string>
     <string name="pin_toast_not_match" msgid="5886041789737632996">"फिर से प्रयास करें, पिन का मिलान नहीं हुआ"</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"<xliff:g id="SSID">%1$s</xliff:g> के लिए पासवर्ड डालें"</string>
@@ -658,7 +658,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"उपयोग की गई मेमोरी"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> में <xliff:g id="SIZE">%1$s</xliff:g> का उपयोग किया गया"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"डेटा साफ़ करें"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"इस ऐप का सभी डेटा स्‍थायी रूप से हटा दिया जाएगा.\nइसमें सभी फ़ाइलें, सेटिंग, खाते, डेटाबेस आदि शामिल हैं."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"इस ऐप का सभी डेटा स्‍थायी रूप से हटा दिया जाएगा.\nइसमें सभी फ़ाइलें, सेटिंग, खाते, डेटाबेस वगैरह शामिल हैं."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"डिफ़ॉल्ट साफ़ करें"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"कुछ कार्य हेतु यह ऐप लॉन्च के लिए सेट है"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"कोई डिफ़ॉल्ट सेट नहीं किया गया है"</string>
@@ -685,7 +685,7 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"बैकअप खाता"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"अपने आप पुनर्स्थापित करें"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"डिवाइस रीसेट करें"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"इससे आपके Google खाते, सिस्टम और ऐप डेटा तथा सेटिंग और डाउनलोड किए गए ऐप्स सहित आपके डिवाइस के मोबाइल मेमोरी का सभी डेटा मिट जाएगा"</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"इससे आपके Google खाते, सिस्टम और ऐप डेटा और सेटिंग और डाउनलोड किए गए ऐप्स सहित आपके डिवाइस के मोबाइल मेमोरी का सभी डेटा मिट जाएगा"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"आपकी सभी निजी जानकारी और डाउनलोड किए गए ऐप्स मिटाएं? आप इस क्रिया को वापस नहीं ला सकते!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"सब कुछ मिटाएं"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"अपने <xliff:g id="DEVICEMODEL">%1$s</xliff:g> के लिए कोई नाम चुनें"</string>
@@ -710,9 +710,9 @@
     <string name="security_patch" msgid="2131617390189164481">"Android सुरक्षा पैच का स्‍तर"</string>
     <string name="choose_application" msgid="5662960665577780353">"ऐप्लिकेशन चुनें"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(प्रयोगात्‍मक)"</string>
-    <string name="reboot_safemode_action" msgid="8129550438717110406">"सुरक्षित मोड में पुन: बूट करें"</string>
-    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"क्या आप सुरक्षित मोड में पुन: बूट करना चाहते हैं?"</string>
-    <string name="reboot_safemode_desc" msgid="5031024337104679492">"इससे आपके द्वारा इंस्टॉल किए गए सभी तृतीय पक्ष ऐप्लिकेशन अक्षम हो जाएंगे. जब आप पुन: बूट करेंगे तो उन्हें पुनर्स्थापित कर दिया जाएगा."</string>
+    <string name="reboot_safemode_action" msgid="8129550438717110406">"सुरक्षित मोड में फिर से बूट करें"</string>
+    <string name="reboot_safemode_confirm" msgid="3329475617645192086">"क्या आप सुरक्षित मोड में फिर से बूट करना चाहते हैं?"</string>
+    <string name="reboot_safemode_desc" msgid="5031024337104679492">"इससे आपके द्वारा इंस्टॉल किए गए सभी तृतीय पक्ष ऐप्लिकेशन अक्षम हो जाएंगे. जब आप फिर से बूट करेंगे तो उन्हें पुनर्स्थापित कर दिया जाएगा."</string>
     <string name="capturing_bugreport" msgid="3291125403411239592">"बग रिपोर्ट कैप्‍चर की जा रही है"</string>
     <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"उपलब्ध वर्चुअल कीबोर्ड"</string>
     <string name="manage_keyboards" msgid="1905379263117016795">"कीबोर्ड प्रबंधित करें"</string>
