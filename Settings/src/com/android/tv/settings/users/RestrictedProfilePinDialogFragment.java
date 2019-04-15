@@ -109,7 +109,7 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
 
         if (callback != null) {
             callback.saveLockPassword(pin, originalPin,
-                    DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
+                    DevicePolicyManager.PASSWORD_QUALITY_NUMERIC);
         }
     }
 
