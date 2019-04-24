@@ -1213,12 +1213,14 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     }
 
     private void updateWifiVerboseLoggingOptions() {
-        boolean enabled = mWifiManager.getVerboseLoggingLevel() > 0;
+        boolean enabled = mWifiManager != null && mWifiManager.getVerboseLoggingLevel() > 0;
         updateSwitchPreference(mWifiVerboseLogging, enabled);
     }
 
     private void writeWifiVerboseLoggingOptions() {
-        mWifiManager.enableVerboseLogging(mWifiVerboseLogging.isChecked() ? 1 : 0);
+        if (mWifiManager != null) {
+            mWifiManager.enableVerboseLogging(mWifiVerboseLogging.isChecked() ? 1 : 0);
+        }
     }
 
     private void updateMobileDataAlwaysOnOptions() {
