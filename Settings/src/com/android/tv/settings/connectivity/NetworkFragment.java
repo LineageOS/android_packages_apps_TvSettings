@@ -17,6 +17,7 @@
 package com.android.tv.settings.connectivity;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
 import android.os.Handler;
@@ -72,6 +73,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private Preference mEthernetStatusPref;
     private Preference mEthernetProxyPref;
     private Preference mEthernetDhcpPref;
+    private PreferenceCategory mWifiOther;
 
     private final Handler mHandler = new Handler();
     private long mNoWifiUpdateBeforeMillis;
@@ -82,6 +84,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             updateWifiList();
         }
     };
+    private boolean mIsWifiHardwarePresent;
 
     public static NetworkFragment newInstance() {
         return new NetworkFragment();
@@ -89,6 +92,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        mIsWifiHardwarePresent = getContext().getPackageManager()
+                .hasSystemFeature(PackageManager.FEATURE_WIFI);
         mConnectivityListener = new ConnectivityListener(getContext(), this, getLifecycle());
         mUserBadgeCache =
                 new AccessPointPreference.UserBadgeCache(getContext().getPackageManager());
@@ -122,6 +127,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mCollapsePref = findPreference(KEY_WIFI_COLLAPSE);
         mAddPref = findPreference(KEY_WIFI_ADD);
         mAlwaysScan = (TwoStatePreference) findPreference(KEY_WIFI_ALWAYS_SCAN);
+        mWifiOther = (PreferenceCategory) findPreference(KEY_WIFI_OTHER);
 
         mEthernetCategory = (PreferenceCategory) findPreference(KEY_ETHERNET);
         mEthernetStatusPref = findPreference(KEY_ETHERNET_STATUS);
@@ -131,6 +137,11 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mEthernetDhcpPref = findPreference(KEY_ETHERNET_DHCP);
         mEthernetDhcpPref.setIntent(EditIpSettingsActivity.createIntent(getContext(),
                 WifiConfiguration.INVALID_NETWORK_ID));
+
+        if (!mIsWifiHardwarePresent) {
+            mEnableWifiPref.setVisible(false);
+            mWifiOther.setVisible(false);
+        }
     }
 
     @Override
@@ -179,7 +190,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             return;
         }
 
-        final boolean wifiEnabled = mConnectivityListener.isWifiEnabledOrEnabling();
+        final boolean wifiEnabled = mIsWifiHardwarePresent
+                && mConnectivityListener.isWifiEnabledOrEnabling();
         mEnableWifiPref.setChecked(wifiEnabled);
 
         mWifiNetworksCategory.setVisible(wifiEnabled);
@@ -219,7 +231,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             return;
         }
 
-        if (!mConnectivityListener.isWifiEnabledOrEnabling()) {
+        if (!mIsWifiHardwarePresent || !mConnectivityListener.isWifiEnabledOrEnabling()) {
             mWifiNetworksCategory.removeAll();
             mNoWifiUpdateBeforeMillis = 0;
             return;
