@@ -78,8 +78,6 @@ public class ChooseSecurityState implements State {
         static final long WIFI_SECURITY_TYPE_WEP = 100002;
         @VisibleForTesting
         static final long WIFI_SECURITY_TYPE_WPA = 100003;
-        @VisibleForTesting
-        static final long WIFI_SECURITY_TYPE_EAP = 100004;
         private StateMachine mStateMachine;
         private UserChoiceInfo mUserChoiceInfo;
 
@@ -118,10 +116,6 @@ public class ChooseSecurityState implements State {
                     .title(R.string.wifi_security_type_wpa)
                     .id(WIFI_SECURITY_TYPE_WPA)
                     .build());
-            actions.add(new GuidedAction.Builder(context)
-                    .title(R.string.wifi_security_type_eap)
-                    .id(WIFI_SECURITY_TYPE_EAP)
-                    .build());
         }
 
         @Override
@@ -132,8 +126,6 @@ public class ChooseSecurityState implements State {
                 mUserChoiceInfo.setWifiSecurity(AccessPoint.SECURITY_WEP);
             } else if (action.getId() == WIFI_SECURITY_TYPE_WPA) {
                 mUserChoiceInfo.setWifiSecurity(AccessPoint.SECURITY_PSK);
-            } else if (action.getId() == WIFI_SECURITY_TYPE_EAP) {
-                mUserChoiceInfo.setWifiSecurity(AccessPoint.SECURITY_EAP);
             }
             WifiConfigHelper.setConfigKeyManagementBySecurity(
                     mUserChoiceInfo.getWifiConfiguration(),
