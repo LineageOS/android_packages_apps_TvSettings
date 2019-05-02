@@ -370,15 +370,13 @@ public class SecurityFragment extends SettingsPreferenceFragment
 
     @Override
     public void clearLockPassword(String oldPin) {
-        byte[] oldPinBytes = oldPin != null ? oldPin.getBytes() : null;
-        new LockPatternUtils(getActivity()).clearLock(oldPinBytes, getContext().getUserId());
+        new LockPatternUtils(getActivity()).clearLock(oldPin, UserHandle.myUserId());
     }
 
     @Override
     public boolean checkPassword(String password, int userId) {
         try {
-            byte[] passwordBytes = password != null ? password.getBytes() : null;
-            return getLockSettings().checkCredential(passwordBytes,
+            return getLockSettings().checkCredential(password,
                 LockPatternUtils.CREDENTIAL_TYPE_PASSWORD, userId,  null /* progressCallback */)
                     .getResponseCode() == VerifyCredentialResponse.RESPONSE_OK;
         } catch (final RemoteException e) {
