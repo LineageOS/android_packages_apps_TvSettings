@@ -359,7 +359,7 @@
     <string name="storage_missing_title" msgid="2803464623922381858">"<xliff:g id="NAME">%1$s</xliff:g> அகற்றப்பட்டது"</string>
     <string name="storage_missing_description" msgid="8400374014342069781">"டிரைவை மீண்டும் இணைக்கும் வரை சில பயன்பாடுகள் கிடைக்காது அல்லது சரியாகச் செயல்படாது."</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"போதுமான சேமிப்பிடம் இல்லை."</string>
-    <string name="does_not_exist" msgid="4553235698171937217">"பயன்பாடு இல்லை."</string>
+    <string name="does_not_exist" msgid="4553235698171937217">"ஆப்ஸ் இல்லை."</string>
     <string name="invalid_location" msgid="5269044848535157307">"நிறுவும் இடம் சரியானதல்ல."</string>
     <string name="system_package" msgid="9200255718634512790">"வெளிப்புற மீடியாவில் முறைமை புதுப்பிப்புகளை நிறுவ முடியாது."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"சாதன நிர்வாகியை வெளிப்புற மீடியாவில் நிறுவ முடியாது."</string>
@@ -505,7 +505,7 @@
     <string name="system_desc_hdmi_optimization" msgid="4400727262768931480">"அதிகபட்ச தெளிவுத்திறன் அல்லது ஃப்ரேம் வீதத்திற்கு திரை உகப்பாக்கப்பட்டது. இது அல்ட்ரா HD திரைகளை மட்டும் பாதிக்கும். இந்த அமைப்பை மாற்றுவது, சாதனத்தை மீண்டும் தொடங்கும்."</string>
     <string name="system_desc_bt_hci_log" msgid="4219265203570411773">"புளுடூத் HCI ஸ்னூப் பதிவை இயக்கு"</string>
     <string name="system_desc_usb_debugging" msgid="5168830368191788731">"USB இணைக்கப்பட்டிருக்கும்போது பிழைத்திருத்தப் பயன்முறையை அமை"</string>
-    <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"பிழைத்திருத்தப்பட்ட பயன்பாடு செயல்படுவதற்கு முன்பு பிழைத்திருத்தியை இணைப்பதற்குக் காத்திருக்கிறது"</string>
+    <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"பிழைத்திருத்தப்பட்ட ஆப்ஸ் செயல்படுவதற்கு முன்பு பிழைத்திருத்தியை இணைப்பதற்குக் காத்திருக்கிறது"</string>
     <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"கிளிப் எல்லைகள், ஓரங்கள், மேலும் பலவற்றைக் காட்டு"</string>
     <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"GPU மூலம் வரையும்போது சாளரங்களில் காட்சிகளைக் காட்டு"</string>
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"வன்பொருள் லேயர்களைப் புதுப்பிக்கும்போது, அவற்றைப் பச்சை நிறத்தில் காட்டு"</string>
@@ -610,7 +610,7 @@
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"உங்கள் கணக்கில் உள்ள பயன்பாடுகள் மற்றும் மற்ற உள்ளடக்கத்தின் அணுகலை வரையறுக்கவும்"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"கட்டுப்படுத்தப்பட்ட சுயவிவரம்"</string>
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g> ஆல் கட்டுப்படுத்தப்படுகிறது"</string>
-    <string name="app_not_supported_in_limited" msgid="6818309827329010677">"வரையறுக்கப்பட்ட சுயவிவரங்களில் பயன்பாடு ஆதரிக்கப்படாது"</string>
+    <string name="app_not_supported_in_limited" msgid="6818309827329010677">"வரையறுக்கப்பட்ட சுயவிவரங்களில் ஆப்ஸ் ஆதரிக்கப்படாது"</string>
     <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"இந்த ஆப்ஸ் கணக்குகளை அணுகலாம்"</string>
     <string name="restriction_location_enable_title" msgid="2575116135395354938">"இருப்பிடம்"</string>
     <string name="restriction_location_enable_summary" msgid="4195349388342385870">"பயன்பாடுகள் உங்கள் இருப்பிடத் தகவலைப் பயன்படுத்தலாம்"</string>
@@ -621,8 +621,8 @@
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"அமைப்புகள்"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"அனுமதிக்கப்பட்ட பயன்பாடுகள்"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
-      <item quantity="other">%d பயன்பாடுகள் அனுமதிக்கப்படும்</item>
-      <item quantity="one">1 பயன்பாடு அனுமதிக்கப்படும்</item>
+      <item quantity="other">%d ஆப்ஸ்கள் அனுமதிக்கப்படும்</item>
+      <item quantity="one">1 ஆப்ஸ் அனுமதிக்கப்படும்</item>
     </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"அனுமதிக்கப்படும்"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"அனுமதிக்கப்படாது"</string>
@@ -630,7 +630,7 @@
     <string name="restricted_profile_configure_apps_description_loading" msgid="5269477581791409700">"ஒரு நிமிடம்…"</string>
     <string name="restricted_profile_change_password_title" msgid="2848537651211816659">"பின்னை மாற்று"</string>
     <string name="restriction_description" msgid="3104855945910233028">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
-    <string name="app_sees_restricted_accounts_and_controlled_by" msgid="6677671440081319908">"இந்த ஆப்ஸ் உங்கள் கணக்குகளை அணுகலாம். கட்டுப்படுத்தும் பயன்பாடு: <xliff:g id="APP">%1$s</xliff:g>"</string>
+    <string name="app_sees_restricted_accounts_and_controlled_by" msgid="6677671440081319908">"இந்த ஆப்ஸ் உங்கள் கணக்குகளை அணுகலாம். கட்டுப்படுத்தும் ஆப்ஸ்: <xliff:g id="APP">%1$s</xliff:g>"</string>
     <string name="pin_enter_unlock_channel" msgid="5980400420298506069">"இந்தச் சேனலைப் பார்க்க PINஐ உள்ளிடவும்"</string>
     <string name="pin_enter_unlock_program" msgid="52453773316071511">"இந்த நிகழ்ச்சியைப் பார்க்க PINஐ உள்ளிடவும்"</string>
     <string name="pin_enter_pin" msgid="821552376577935497">"PINஐ உள்ளிடவும்"</string>
@@ -646,25 +646,25 @@
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"பதிப்பு <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"திறக்கும்"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"உடனே நிறுத்து"</string>
-    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"பயன்பாட்டை உடனே நிறுத்தினால், தவறாகச் செயல்படலாம்."</string>
+    <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"ஆப்ஸை உடனே நிறுத்தினால், தவறாகச் செயல்படலாம்."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"நிறுவல் நீக்கு"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"புதுப்பிப்புகளை நிறுவல் நீக்கு"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"இந்த Android அமைப்பின் பயன்பாட்டிற்கான எல்லா புதுப்பிப்புகளும் நிறுவல் நீக்கப்படும்."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"முடக்கு"</string>
-    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"பயன்பாட்டை முடக்க விரும்புகிறீர்களா?"</string>
+    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"ஆப்ஸை முடக்க விரும்புகிறீர்களா?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"இயக்கு"</string>
-    <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"பயன்பாட்டை இயக்க விரும்புகிறீர்களா?"</string>
+    <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"ஆப்ஸை இயக்க விரும்புகிறீர்களா?"</string>
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"பயன்படுத்திய சேமிப்பிடம்"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"<xliff:g id="VOLUME">%2$s</xliff:g> இல் <xliff:g id="SIZE">%1$s</xliff:g> பயன்படுத்தப்பட்டது"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"தரவை அழி"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"ஆப்ஸின் எல்லா தரவும் நிரந்தரமாக நீக்கப்படும்.\nஇதில் எல்லா கோப்புகளும் அமைப்புகளும் கணக்குகளும் தரவுத்தளங்களும் மேலும் பலவும் அடங்கும்."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"இயல்புநிலைகளை அழி"</string>
-    <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"சிலவற்றிற்கு பயன்பாட்டை தொடங்க, அமைக்கவும்"</string>
+    <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"சிலவற்றிற்கு ஆப்ஸை தொடங்க, அமைக்கவும்"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"இயல்புநிலைகள் அமைக்கப்படவில்லை"</string>
     <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"தற்காலிகச் சேமிப்பை அழி"</string>
     <string name="device_apps_app_management_notifications" msgid="7291960671957440729">"அறிவிப்புகள்"</string>
     <string name="device_apps_app_management_permissions" msgid="1829808830974726081">"அனுமதிகள்"</string>
-    <string name="device_apps_app_management_not_available" msgid="1249731776661207047">"பயன்பாடு இல்லை"</string>
+    <string name="device_apps_app_management_not_available" msgid="1249731776661207047">"ஆப்ஸ் இல்லை"</string>
     <string name="settings_ok" msgid="3321630456511355983">"சரி"</string>
     <string name="settings_cancel" msgid="304280412158061225">"ரத்துசெய்"</string>
     <string name="settings_on" msgid="6892236264945435013">"இயக்கு"</string>
@@ -733,7 +733,7 @@
     <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"பிற ஆப்ஸின் இடைமுகத்தின் மேல் தோன்றுதல்"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"பிற ஆப்ஸின் இடைமுகத்தின் மேல் தோன்ற அனுமதி"</string>
-    <string name="allow_overlay_description" msgid="1946279120428813474">"நீங்கள் பயன்படுத்தும் பிற ஆப்ஸின் இடைமுகத்தின் மேல் தோன்ற, பயன்பாட்டை அனுமதிக்கும். மேலும், அந்த ஆப்ஸை நீங்கள் பயன்படுத்தும்போது இது குறுக்கிடலாம் அல்லது அவை தோன்றும்/செயல்படும் விதத்தை மாற்றக்கூடும்."</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"நீங்கள் பயன்படுத்தும் பிற ஆப்ஸின் இடைமுகத்தின் மேல் தோன்ற, ஆப்ஸை அனுமதிக்கும். மேலும், அந்த ஆப்ஸை நீங்கள் பயன்படுத்தும்போது இது குறுக்கிடலாம் அல்லது அவை தோன்றும்/செயல்படும் விதத்தை மாற்றக்கூடும்."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"சிஸ்டம் அமைப்புகளை மாற்றுதல்"</string>
     <string name="write_settings_title" msgid="8750406725746598710">"சிஸ்டம் அமைப்புகளை மாற்றக் கூடியவை"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"இந்த அனுமதியின் மூலம், பயன்பாட்டினால் சிஸ்டம் அமைப்புகளை மாற்ற முடியும்."</string>
@@ -742,7 +742,7 @@
     <string name="picture_in_picture_title" msgid="7738692876349058">"பிக்ச்சர்-இன்-பிக்ச்சர்"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"பிக்ச்சர்-இன்-பிக்ச்சரை அனுமதி"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"நிறுவியுள்ள ஆப்ஸ் எதிலும் பிக்ச்சர்-இன்-பிக்ச்சர் அம்சம் இயங்காது"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"பயன்பாடு திறந்திருக்கும்போது அல்லது அதிலிருந்து நீங்கள் வெளியேறும்போது (வீடியோவைத் தொடர்ந்து பார்ப்பதற்காக), பிக்ச்சர்-இன்-பிக்ச்சர் சாளரத்தை உருவாக்குவதற்கு, ஆப்ஸை அனுமதிக்கும். இந்தச் சாளரம் நீங்கள் பயன்படுத்தும் பிற ஆப்ஸின் மேல் காட்டப்படும்."</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"ஆப்ஸ் திறந்திருக்கும்போது அல்லது அதிலிருந்து நீங்கள் வெளியேறும்போது (வீடியோவைத் தொடர்ந்து பார்ப்பதற்காக), பிக்ச்சர்-இன்-பிக்ச்சர் சாளரத்தை உருவாக்குவதற்கு, ஆப்ஸை அனுமதிக்கும். இந்தச் சாளரம் நீங்கள் பயன்படுத்தும் பிற ஆப்ஸின் மேல் காட்டப்படும்."</string>
     <string name="special_access" msgid="3513811566600299998">"பயன்பாட்டிற்கான சிறப்பு அணுகல்"</string>
     <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
 </resources>
