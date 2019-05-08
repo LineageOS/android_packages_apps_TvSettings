@@ -114,7 +114,7 @@ public class LocationFragment extends SettingsPreferenceFragment implements
         recentRequests.setLayoutResource(R.layout.preference_category_compact_layout);
 
         List<RecentLocationApps.Request> recentLocationRequests =
-                new RecentLocationApps(themedContext).getAppList();
+                new RecentLocationApps(themedContext).getAppList(true);
         List<Preference> recentLocationPrefs = new ArrayList<>(recentLocationRequests.size());
         for (final RecentLocationApps.Request request : recentLocationRequests) {
             Preference pref = new Preference(themedContext);
