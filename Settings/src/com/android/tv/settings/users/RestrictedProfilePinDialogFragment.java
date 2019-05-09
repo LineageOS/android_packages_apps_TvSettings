@@ -20,7 +20,6 @@ import android.app.Fragment;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 
 import com.android.tv.settings.dialog.PinDialogFragment;
 
@@ -55,8 +54,8 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
         boolean hasLockscreenSecurity();
     }
 
-    private static final String PREF_DISABLE_PIN_UNTIL =
-            "RestrictedProfileActivity$RestrictedProfilePinDialogFragment.disable_pin_until";
+    private static final  String SHARED_PREFERENCE_NAME = "RestrictedProfilePinDialogFragment";
+    private static final String PREF_DISABLE_PIN_UNTIL = "disable_pin_until";
 
     public static RestrictedProfilePinDialogFragment newInstance(@PinDialogType int type) {
         RestrictedProfilePinDialogFragment fragment = new RestrictedProfilePinDialogFragment();
@@ -71,8 +70,8 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
      * PINs repeatedly).
      */
     public static long getDisablePinUntil(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getLong(
-                PREF_DISABLE_PIN_UNTIL, 0);
+        return context.getSharedPreferences(SHARED_PREFERENCE_NAME, Context.MODE_PRIVATE)
+                      .getLong(PREF_DISABLE_PIN_UNTIL, 0);
     }
 
     /**
@@ -80,8 +79,10 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
      * repeatedly).
      */
     public static void setDisablePinUntil(Context context, long timeMillis) {
-        PreferenceManager.getDefaultSharedPreferences(context).edit().putLong(
-                PREF_DISABLE_PIN_UNTIL, timeMillis).apply();
+        context.getSharedPreferences(SHARED_PREFERENCE_NAME, Context.MODE_PRIVATE)
+                .edit()
+                .putLong(PREF_DISABLE_PIN_UNTIL, timeMillis)
+                .apply();
     }
 
     @Override
