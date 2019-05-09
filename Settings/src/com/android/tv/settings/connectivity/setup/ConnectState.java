@@ -18,6 +18,7 @@ package com.android.tv.settings.connectivity.setup;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
+import android.net.Network;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
@@ -215,9 +216,22 @@ public class ConnectState implements State {
             }
         }
 
-        private boolean isNetworkConnected() {
+        private NetworkInfo getActiveWifiNetworkInfo() {
             ConnectivityManager connMan = getActivity().getSystemService(ConnectivityManager.class);
-            NetworkInfo netInfo = connMan.getActiveNetworkInfo();
+            Network[] networks = connMan.getAllNetworks();
+
+            for (Network network : networks) {
+                NetworkInfo networkInfo = connMan.getNetworkInfo(network);
+                if (networkInfo.isConnected()
+                        && networkInfo.getType() == ConnectivityManager.TYPE_WIFI) {
+                    return networkInfo;
+                }
+            }
+            return null;
+        }
+
+        private boolean isNetworkConnected() {
+            NetworkInfo netInfo = getActiveWifiNetworkInfo();
             if (netInfo == null) {
                 if (DEBUG) Log.d(TAG, "NetworkInfo is null; network is not connected");
                 return false;

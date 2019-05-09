@@ -224,7 +224,15 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     }
 
     public boolean isWifiConnected() {
-        return mNetworkType == ConnectivityManager.TYPE_WIFI;
+        if (mNetworkType == ConnectivityManager.TYPE_WIFI) {
+            return true;
+        } else {
+            if (mWifiManager != null) {
+                WifiInfo connectionInfo = mWifiManager.getConnectionInfo();
+                return connectionInfo.getNetworkId() != -1;
+            }
+        }
+        return false;
     }
 
     public boolean isCellConnected() {
