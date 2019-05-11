@@ -32,16 +32,16 @@
     <string name="header_category_personal" msgid="8893959635328775096">"​ສ່ວນ​ໂຕ"</string>
     <string name="connect_to_network" msgid="2209125715907353369">"ເຊື່ອມ​ຕໍ່ກັບ​ເຄືອ​ຂ່າຍ"</string>
     <string name="add_an_account" msgid="1123478843971990449">"ເພີ່ມບັນຊີ"</string>
-    <string name="accounts_category_title" msgid="7839427428921349418">"ບັນຊີ ແລະ ການເຂົ້າສູ່ລະບົບ"</string>
+    <string name="accounts_category_title" msgid="7227152796790399068">"ບັນຊີ ແລະ ການເຂົ້າສູ່ລະບົບ"</string>
     <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"ບໍ່ມີບັນຊີ"</string>
     <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> ບັນຊີ</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> ບັນຊີ</item>
     </plurals>
-    <string name="connectivity_network_category_title" msgid="6005656364481347542">"ເຄືອຂ່າຍ ແລະ ອິນເຕີເນັດ"</string>
+    <string name="connectivity_network_category_title" msgid="4369211310335709727">"ເຄືອຂ່າຍ ແລະ ອິນເຕີເນັດ"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"ແອັບ"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"ການຕັ້ງຄ່າອຸປະກອນ"</string>
-    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"ຣີໂໝດ ແລະ ອຸປະກອນເສີມ"</string>
+    <string name="remotes_and_accessories_category_title" msgid="3361463550113457913">"ຣີໂໝດ ແລະ ອຸປະກອນເສີມ"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"ບໍ່ມີອຸປະກອນ Bluetooth ທີ່ເຊື່ອມຕໍ່ໄວ້"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ອຸປະກອນເສີມ</item>
@@ -133,7 +133,7 @@
     <string name="system_date_time" msgid="8898457978560618950">"ວັນທີ &amp; ເວລາ"</string>
     <string name="system_language" msgid="2337138146114609247">"ພາສາ"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"ແປ້ນ​ພິມ"</string>
-    <string name="system_keyboard_autofill" msgid="5787948036400896834">"ແປ້ນພິມ ແລະ ການຕື່ມຂໍ້ມູນອັດຕະໂນມັດ"</string>
+    <string name="system_keyboard_autofill" msgid="1406009886678025505">"ແປ້ນພິມ ແລະ ການຕື່ມຂໍ້ມູນອັດຕະໂນມັດ"</string>
     <string name="system_autofill" msgid="8647914463541617409">"ຕື່ມຂໍ້ມູນອັດຕະໂນມັດ"</string>
     <string name="system_home" msgid="2858989138172296012">"ຫນ້າ​ຈໍຫຼັກ"</string>
     <string name="system_search" msgid="2837264654143247611">"ຊອກຫາ"</string>
@@ -146,7 +146,7 @@
     <string name="system_accessibility" msgid="6215431399759498005">"ການຊ່ວຍເຂົ້າເຖິງ"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"ໂຕເລືອກ​ນັກພັດທະນາ"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ບໍ່ມີ"</string>
-    <string name="system_diagnostic" msgid="7269638365915225701">"ການ​ນຳ​ໃຊ້  ແລະ ​ການ​ວິ​ເຄາະ​ບັນ​ຫາ"</string>
+    <string name="system_diagnostic" msgid="4824915262415273530">"ການນຳໃຊ້ ແລະ ການວິນິໄສ"</string>
     <string name="tutorials" msgid="3731493987558093244">"ສາທິດການນຳໃຊ້"</string>
     <string name="about_system_update" msgid="7282772247661356586">"ການອັບເດດລະບົບ"</string>
     <string name="about_preference" msgid="4131396784531360434">"ກ່ຽວກັບ"</string>
@@ -322,7 +322,7 @@
     <string name="storage_format_failure" msgid="7336977074523932399">"ບໍ່​ສາ​ມາດ​ຟໍ​ແມັດ <xliff:g id="NAME">%1$s</xliff:g> ໄດ້"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"ຟໍ​ແມັດ​ເປັນ​ບ່ອນ​​ເກັບ​ຂໍ້​ມູນຂອງ​ອຸ​ປະ​ກອນ"</string>
     <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"ອັນ​ນີ້​ຕ້ອງ​ການ​ໃຫ້ USB ດ​ຣ້າຍ​ຖືກ​ຟໍ​ແມັດ ເພື່ອ​ເຮັດ​ໃຫ້​ມັນ​ປອດ​ໄພ. ຫຼັງ​ຈາກ​ທຳ​ການ​ຟໍ​ແມັດ​ໄດ້​ຢ່າງ​ປອດ​ໄພ​ແລ້ວ, ດ​ຣ້າຍ​ນີ້​ຈະ​ເຮັດ​ວຽກ​ກັບ​ແຕ່​ອຸ​ປະ​ກອນ​ນີ້​ເທົ່າ​ນັ້ນ. ການ​ຟໍ​ແມັດ​ແມ່ນ​ຈະ​ລຶບ​ທຸກ​ຂໍ້​ມູນ​ທີ່​ເກັບ​ໄວ້​ຢູ່​ໃນ​ດ​ຣ້າຍ​ໃນ​ປະ​ຈຸ​ບັນ. ເພື່ອ​ຫຼີກ​ເວັ້ນ​ການ​ເສຍ​ຂໍ້​ມູນ, ໃຫ້​ທຳ​ການ​ສຳ​ຮອງ​ມັນ​ໄວ້​ກ່ອນ."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="977475385015522171">"ລຶບ ແລະ​ຟໍ​ແມັດ"</string>
+    <string name="storage_wizard_format_as_public_title" msgid="5908924206021859650">"ລຶບ ແລະ ຟໍແມັດ"</string>
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"ຫຼັງ​ຈາກ​ການ​ຟໍ​ແມັດ, ທ່ານ​ສາ​ມາດ​ໃຊ້ໄດຣຟ໌ USB ​ນີ້​ຢູ່​ໃນ​ອຸ​ປະ​ກອນ​ອື່ນ​ໄດ້. ທຸກ​ຂໍ້​ມູນ​ຈະ​ຖືກ​ລຶບ. ໃຫ້ພິຈາລະນາເຮັດການ​ສຳ​ຮອງ​ຂໍ້ມູນໄວ້​ກ່ອນ ໂດຍ​ການ​ຍ້າຍ​ແອັບ​ໄປໃສ່​ບ່ອນ​​ເກັບ​ຂໍ້ມູນໃນອຸປະກອນອື່ນ."</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"ກຳ​ລັງ​ຟໍ​ແມັດ USB ດ​ຣ້າຍ…"</string>
     <string name="storage_wizard_format_progress_description" msgid="5320980721352781920">"ອັນ​ນີ້​ອາດ​ຈະ​ໃຊ້​ເວ​ລາ​ຈັກ​ໜ້ອຍ. ກະ​ລຸ​ນາ​ຢ່າ​ເອົາ​ມັນ​ອອກ​ໄປ​ຈາກດ​ຣ້າຍ."</string>
