@@ -45,7 +45,6 @@ import com.android.settingslib.wifi.WifiTracker;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Listens for changes to the current connectivity status.
@@ -197,10 +196,8 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
 
     public String getWifiIpAddress() {
         if (isWifiConnected()) {
-            WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
-            int ip = wifiInfo.getIpAddress();
-            return String.format(Locale.US, "%d.%d.%d.%d", (ip & 0xff), (ip >> 8 & 0xff),
-                    (ip >> 16 & 0xff), (ip >> 24 & 0xff));
+            Network network = mWifiManager.getCurrentNetwork();
+            return formatIpAddresses(network);
         } else {
             return "";
         }
@@ -224,7 +221,15 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     }
 
     public boolean isWifiConnected() {
-        return mNetworkType == ConnectivityManager.TYPE_WIFI;
+        if (mNetworkType == ConnectivityManager.TYPE_WIFI) {
+            return true;
+        } else {
+            if (mWifiManager != null) {
+                WifiInfo connectionInfo = mWifiManager.getConnectionInfo();
+                return connectionInfo.getNetworkId() != -1;
+            }
+        }
+        return false;
     }
 
     public boolean isCellConnected() {
@@ -250,11 +255,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         return null;
     }
 
-    public String getEthernetIpAddress() {
-        final Network network = getFirstEthernet();
-        if (network == null) {
-            return null;
-        }
+    private String formatIpAddresses(Network network) {
         final StringBuilder sb = new StringBuilder();
         boolean gotAddress = false;
         final LinkProperties linkProperties = mConnectivityManager.getLinkProperties(network);
@@ -270,6 +271,18 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         } else {
             return null;
         }
+    }
+
+    /**
+     * Returns the formatted IP addresses of the Ethernet connection or null
+     * if none available.
+     */
+    public String getEthernetIpAddress() {
+        final Network network = getFirstEthernet();
+        if (network == null) {
+            return null;
+        }
+        return formatIpAddresses(network);
     }
 
     public int getWifiSignalStrength(int maxLevel) {
