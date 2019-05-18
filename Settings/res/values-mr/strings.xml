@@ -35,8 +35,8 @@
     <string name="accounts_category_title" msgid="7839427428921349418">"खाती आणि साइन इन"</string>
     <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"कोणतीही खाती नाहीत"</string>
     <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> खाते</item>
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> खाती</item>
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> खाते</item>
     </plurals>
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"नेटवर्क आणि इंटरनेट"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"अॅप्स"</string>
@@ -44,8 +44,8 @@
     <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"रिमोट आणि अॅक्सेसरी"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"कनेक्ट केलेली कोणतीही ब्लूटूथ डिव्हाइस नाहीत"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> अॅक्सेसरी</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> अॅक्सेसरी</item>
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> अॅक्सेसरी</item>
     </plurals>
     <string name="add_account" msgid="4098060223200619258">"खाते जोडा"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"खाते काढा"</string>
@@ -153,7 +153,7 @@
     <string name="device_name" msgid="2670488158531273028">"डिव्हाइस नाव"</string>
     <string name="restart_button_label" msgid="8153112858638352970">"रीस्टार्ट करा"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"कायदेशीर माहिती"</string>
-    <string name="about_legal_license" msgid="7867205982113209033">"मुक्त स्त्रोत परवाने"</string>
+    <string name="about_legal_license" msgid="7867205982113209033">"मुक्त स्रोत परवाने"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google कायदेशीर"</string>
     <string name="about_license_activity_unavailable" msgid="8522566562321418498">"परवाना डेटा अनुपलब्‍ध आहे"</string>
     <string name="about_model" msgid="6625269442206323995">"मॉडेल"</string>
@@ -161,8 +161,8 @@
     <string name="about_serial" msgid="2723560490027171187">"अनुक्रमांक"</string>
     <string name="about_build" msgid="9148789767199785676">"बिल्ड"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
-      <item quantity="one">तुम्ही अाता विकासक होण्यापासून <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> चरण दूर आहात</item>
       <item quantity="other">तुम्ही विकासक होण्यापासून<xliff:g id="STEP_COUNT_1">%1$d</xliff:g> चरणे दूर आहात</item>
+      <item quantity="one">तुम्ही आता विकासक होण्यापासून <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> चरण दूर आहात</item>
     </plurals>
     <string name="about_ads" msgid="3364786994943748337">"जाहिराती"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"आता तुम्ही एक विकासक आहात!"</string>
@@ -519,7 +519,7 @@
     <string name="action_off_description" msgid="4364261457368041502">"बंद"</string>
     <string name="agree" msgid="1235622082275451350">"सहमत आहे"</string>
     <string name="disagree" msgid="9170636026862400981">"असहमत"</string>
-    <string name="security_unknown_sources_title" msgid="769762478057744545">"अज्ञात स्त्रोत"</string>
+    <string name="security_unknown_sources_title" msgid="769762478057744545">"अज्ञात स्रोत"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Play Store च्या व्यतिरिक्त इतर स्रोतांवरील अॅप्सच्या स्थापनेस अनुमती द्या"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"अज्ञात स्रोतांना अनुमती द्या"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"तुमचे डिव्‍हाइस आणि वैयक्तिक डेटा अज्ञात स्त्रोतांवरील अ‍ॅप्‍सद्वारे होणार्‍या आक्रमणांना अधिक असुरक्षित असतात. तुम्ही सहमती देता की हे अ‍ॅप्स वापरल्यामुळे आपल्या डिव्‍हाइसच्या होणार्‍या कोणत्याही नुकसानास किंवा डेटाच्या हानीस तुम्ही पूर्णपणे जबाबदार आहात."</string>
@@ -596,16 +596,16 @@
     <string name="inputs_tv_auto_on" msgid="2627932269256793797">"TV स्वयं चालू"</string>
     <string name="inputs_tv_auto_on_desc" msgid="7658625130577708249">"HDMI डिव्हाइससह टीव्ही चालू"</string>
     <plurals name="inputs_header_connected_input" formatted="false" msgid="3158173055262045630">
-      <item quantity="one">कनेक्ट केलेले इनपुट</item>
       <item quantity="other">कनेक्ट केलेले इनपुट</item>
+      <item quantity="one">कनेक्ट केलेले इनपुट</item>
     </plurals>
     <plurals name="inputs_header_standby_input" formatted="false" msgid="8614849472167217134">
-      <item quantity="one">स्टँडबाय इनपुट</item>
       <item quantity="other">स्टँडबाय इनपुट</item>
+      <item quantity="one">स्टँडबाय इनपुट</item>
     </plurals>
     <plurals name="inputs_header_disconnected_input" formatted="false" msgid="1092697966171944243">
-      <item quantity="one">कनेक्ट न केलेले इनपुट</item>
       <item quantity="other">कनेक्ट न केलेले इनपुट</item>
+      <item quantity="one">कनेक्ट न केलेले इनपुट</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="2946168478936086933">"आपल्या खात्यामधील अ‍ॅप्स आणि इतर सामग्रीवर प्रवेश प्रतिबंधित करा"</string>
     <string name="user_new_profile_name" msgid="336521054830056189">"प्रतिबंधित प्रोफाईल"</string>
@@ -621,8 +621,8 @@
     <string name="restricted_profile_configure_title" msgid="4684188123147519620">"सेटिंग्ज"</string>
     <string name="restricted_profile_configure_apps_title" msgid="11507255932348492">"अनुमती दिलेले अ‍ॅप्स"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="1138147479259808487">
-      <item quantity="one">%d अ‍ॅपला अनुमती आहे</item>
       <item quantity="other">%d अ‍ॅप्सना अनुमती आहे</item>
+      <item quantity="one">1 अ‍ॅपला अनुमती आहे</item>
     </plurals>
     <string name="restricted_profile_allowed" msgid="2903829140619950232">"अनुमती दिली"</string>
     <string name="restricted_profile_not_allowed" msgid="1622620680118897330">"अनुमती नाही"</string>
