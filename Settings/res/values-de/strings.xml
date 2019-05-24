@@ -491,9 +491,9 @@
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"Hardwareebene anzeigen"</string>
     <string name="system_show_gpu_overdraw" msgid="707861254106800199">"GPU-Überzeichnung anzeigen"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"Oberflächenaktualisierungen anzeigen"</string>
-    <string name="system_window_animation_scale" msgid="3213952676672537856">"Maßstab Fensteranimation"</string>
-    <string name="system_transition_animation_scale" msgid="2964817709721784757">"Maßstab Übergangsanimation"</string>
-    <string name="system_animator_duration_scale" msgid="7413512458963984521">"Maßstab für Animatorzeit"</string>
+    <string name="system_window_animation_scale" msgid="3213952676672537856">"Fensteranimationsfaktor"</string>
+    <string name="system_transition_animation_scale" msgid="2964817709721784757">"Übergangsanimationsfaktor"</string>
+    <string name="system_animator_duration_scale" msgid="7413512458963984521">"Animationsdauerfaktor"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Strikter Modus aktiviert"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"GPU-Rendering für Profil"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Tracing aktivieren"</string>
@@ -508,7 +508,7 @@
     <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"App wartet vor Ausführung auf Start des Debuggers"</string>
     <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"Clip-Begrenzungen, Ränder usw. anzeigen"</string>
     <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"Ansichten in Fenstern blinken beim Rendern mit GPU"</string>
-    <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"Hardwareebenen blinken beim Aktualisieren grün."</string>
+    <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"Hardwareschichten blinken beim Aktualisieren grün"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Niedrig nach hoch: blau, grün, hellrot, rot"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Ganze Fensteroberfläche blinkt bei Aktualisierung."</string>
     <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Bei langen App-Operationen im Hauptthread blinkt der Bildschirm"</string>
@@ -537,12 +537,12 @@
     <string name="enable_opengl_traces_none" msgid="6074804146602749420">"Keine"</string>
   <string-array name="animation_scale_entries">
     <item msgid="7477134110460336436">"Animation aus"</item>
-    <item msgid="8327257151534006014">"Animationsmaßstab: 0,5x"</item>
-    <item msgid="2105786719544636780">"Animationsmaßstab: 1x"</item>
-    <item msgid="5290554136790336403">"Animationsmaßstab: 1,5x"</item>
-    <item msgid="1232929590838082483">"Animationsmaßstab: 2x"</item>
-    <item msgid="1889239009419613796">"Animationsmaßstab: 5x"</item>
-    <item msgid="7268894934484547297">"Animationsmaßstab: 10x"</item>
+    <item msgid="8327257151534006014">"Animationsfaktor: 0,5x"</item>
+    <item msgid="2105786719544636780">"Animationsfaktor: 1x"</item>
+    <item msgid="5290554136790336403">"Animationsfaktor: 1,5x"</item>
+    <item msgid="1232929590838082483">"Animationsfaktor: 2x"</item>
+    <item msgid="1889239009419613796">"Animationsfaktor: 5x"</item>
+    <item msgid="7268894934484547297">"Animationsfaktor: 10x"</item>
   </string-array>
     <string name="track_frame_time_off" msgid="5050360262132715904">"Aus"</string>
     <string name="track_frame_time_bars" msgid="4470692840177888414">"Auf Bildschirm als Balken"</string>
@@ -564,7 +564,7 @@
     <string name="title_current_autofill_service" msgid="6055852915343152350">"Aktueller AutoFill-Dienst"</string>
     <string name="title_select_autofill_service" msgid="2515782066694197988">"AutoFill-Dienst auswählen"</string>
     <string name="autofill_none" msgid="2426888642367790651">"Keinen AutoFill-Dienst"</string>
-    <string name="autofill_confirmation_message" msgid="9068009043054751287">"&lt;b&gt;Findest du diese App vertrauenswürdig?&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Passwortdienst&gt;%1$s&lt;/xliff:g&gt; entscheidet anhand der Inhalte auf dem Display, welche Informationen automatisch ausgefüllt werden können."</string>
+    <string name="autofill_confirmation_message" msgid="9068009043054751287">"&lt;b&gt;Nur für vertrauenswürdige Apps&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Passwortdienst&gt;%1$s&lt;/xliff:g&gt; greift auf die Displayanzeige zu, um zu bestimmen, welche Felder automatisch ausgefüllt werden können. AutoFill sollte daher nur für vertrauenswürdige Apps zugelassen werden."</string>
     <string name="computing_size" msgid="2955133568424704042">"Berechnung..."</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"WLAN auswählen"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Umbenennen"</string>
