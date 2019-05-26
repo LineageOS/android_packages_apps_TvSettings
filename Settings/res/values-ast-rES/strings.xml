@@ -36,6 +36,7 @@
     <string name="sync_item_title"><xliff:g id="authority" example="Calendar">%s</xliff:g></string>
     <string name="sync_one_time_sync">Sincronizar agora<xliff:g id="last_sync_time">\n%1$s</xliff:g></string>
     <string name="sync_failed">Falló la sincronización</string>
+    <string name="sync_active">Sincronización activa</string>
     <string name="connectivity_network">Rede</string>
     <string name="connectivity_wifi">Wi-Fi</string>
     <string name="connectivity_ethernet">Ethernet</string>
@@ -93,6 +94,7 @@
     <string name="about_preference">Tocante a</string>
     <string name="device_name">Nome del preséu</string>
     <string name="restart_button_label">Reaniciar</string>
+    <string name="shutdown_button_label">Apagar</string>
     <string name="about_legal_info">Información llegal</string>
     <string name="about_legal_license">Llicencies de códigu abiertu</string>
     <string name="about_terms_of_service">Google llegal</string>
@@ -113,10 +115,12 @@
     <string name="selinux_status_disabled">Deshabilitao</string>
     <string name="selinux_status_permissive">Permisivu</string>
     <string name="selinux_status_enforcing">Obligatoriu</string>
+    <string name="additional_system_update_settings_list_item_title">Otros anovamientos del sistema</string>
     <string name="device_status">Estáu</string>
     <string name="device_status_summary">Rede, númberos de serie y otra información</string>
     <string name="manual">Manual</string>
     <string name="regulatory_information">Información regulatoria</string>
+    <string name="device_feedback">Unviar coment. tocante a preséu</string>
     <string name="fcc_equipment_id">Equipment ID</string>
     <string name="baseband_version">Versión de banda base</string>
     <string name="kernel_version">Versión del kernel</string>
@@ -135,6 +139,7 @@
     <string name="terms_title">Términos y condiciones</string>
     <string name="webview_license_title">Llicencia de WebView del sistema</string>
     <string name="wallpaper_attributions">Fondos de pantalla</string>
+    <string name="wallpaper_attributions_values">Fornidores d\'imáxenes de satélite:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky</string>
     <string-array name="wifi_signal_strength">
         <item>Mala</item>
         <item>Aceutable</item>
@@ -202,6 +207,11 @@
     <string name="wifi_ip_settings_invalid_gateway">Teclexa una direición de pasera d\'enllaz válida</string>
     <string name="wifi_ip_settings_invalid_dns">Teclexa una direición DNS válida</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length">Pon un prefixu de rede que tenga ente 0 y 32 caráuteres</string>
+    <string name="wifi_ip_address_description">Introduz una direición IP válida.\nExemplu: <xliff:g>192.168.1.128</xliff:g></string>
+    <string name="wifi_dns1_description">Introduz una direición IP válida o déxalo balero.\nExemplu: <xliff:g>8.8.8.8</xliff:g></string>
+    <string name="wifi_dns2_description">Introduz una direición IP válida o déxalo balero.\nExemplu: <xliff:g>8.8.4.4</xliff:g></string>
+    <string name="wifi_gateway_description">Introduz una direición IP válida o déxalo balero.\nExemplu: <xliff:g>192.168.1.1</xliff:g></string>
+    <string name="wifi_network_prefix_length_description">Introduz un llargor válidu del prefixu de rede.\nExemplu: <xliff:g>24</xliff:g></string>
     <string name="proxy_error_invalid_host">El nome del host nun ye válidu</string>
     <string name="proxy_error_invalid_exclusion_list">Esta llista d\'esclusión nun val. Pon una llista de dominios escluyíos separtaos por comes.</string>
     <string name="proxy_error_empty_port">El campu Puertu nun pue tar baleru</string>
@@ -209,6 +219,8 @@
     <string name="proxy_error_invalid_port">El puertu nun ye válidu</string>
     <string name="proxy_warning_limited_support">El restolador usa\'l proxy HTTP, pero nun puen usalu otres aplicaciones</string>
     <string name="proxy_port_description">Introduz un puertu válidu.\nExemplu: <xliff:g>8080</xliff:g></string>
+    <string name="proxy_exclusionlist_description">Introduz un llistáu separtáu per comes de dominios escluyíos o déxalo balero.\nExemplu:<xliff:g>exemplu.com,miocompaña.prueba.com,localhost</xliff:g></string>
+    <string name="proxy_hostname_description">Introduz un nome d\'agospiu válidu.\nExemplu: <xliff:g>proxy.exemplu.com</xliff:g></string>
     <string name="wifi_summary_title_connected">Rede coneutada</string>
     <string name="wifi_summary_title_not_connected">La rede nun ta coneutada</string>
     <string name="wifi_summary_description_connected_to_wifi_network">Yá tas coneutáu a <xliff:g id="ssid">%1$s</xliff:g>. ¿Quies coneutar con una rede estremada?</string>
@@ -227,6 +239,8 @@
     <string name="storage_media_cache_usage">Datos na caché</string>
     <string name="storage_eject">Espulsar</string>
     <string name="storage_format">Desaniciar y formatiar</string>
+    <string name="storage_format_as_private">Formatiar &amp; como almacenamientu del preséu</string>
+    <string name="storage_format_as_public">Formatiar &amp; como almacenamientu estrayible</string>
     <string name="storage_format_for_private">Formatiar como almacenamientu del preséu</string>
     <string name="storage_not_connected">Non coneutáu</string>
     <string name="storage_migrate">Migrar datos a esti almacenamientu</string>
@@ -250,6 +264,7 @@
     <string name="storage_wizard_format_as_public_title">Desaniciar y formatiar</string>
     <string name="storage_wizard_format_as_public_description">Dempués de formatiar, pues usar esta unidá USB n\'otros preseos. Desaniciaránse tolos datos. Piensa en facer primero un respaldu moviendo les aplicaciones a otros almacenamientos del preséu.</string>
     <string name="storage_wizard_format_progress_description">Esti procesu pue llevar unos minutos. Nun quites la unidá.</string>
+    <string name="storage_wizard_migrate_choose_title">Escueyi l\'almacenamientu al que migrar los datos</string>
     <string name="storage_wizard_migrate_confirm_title">Tresferir datos a <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
     <string name="storage_wizard_migrate_confirm_description">Tresfier les tos semeyes, ficheros y datos de les apps a <xliff:g id="name" example="SD card">%1$s</xliff:g>. Esto pue llevar unos minutos. Dalgunes apps nun van funcionar correutamente mentanto la tresferencia.</string>
     <string name="storage_wizard_migrate_confirm_action_move_now">Mover agora</string>
@@ -264,6 +279,7 @@
     <string name="storage_wizard_back_up_apps_title">Aplicaciones atroxaes en <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
     <string name="storage_wizard_back_up_apps_and_data_title">Aplicaciones y datos atroxaos en <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
     <string name="storage_wizard_back_up_apps_space_available"><xliff:g id="size" example="1.23GB">%1$s</xliff:g> disponibles</string>
+    <string name="storage_wizard_eject_private_title">Estrayer almacenamientu del preséu</string>
     <string name="storage_wizard_eject_private_description">Les apps que s\'almacenaron nesti preséu van dexar de funcionar cuando s\'espulse. Esta unidá USB ta formatiada pa funcionar namái nesti preséu y nun va funcionar n\'otros.</string>
     <string name="storage_wizard_move_app_title">Almacenamientu usáu</string>
     <string name="storage_wizard_move_app_progress_description">Nun estrayas la unidá na movición.\nL\'aplicación <xliff:g id="appname" example="YouTube">%1$s</xliff:g> d\'esti preséu nun va tar disponible hasta que se complete la operación.</string>
@@ -272,6 +288,7 @@
     <string name="storage_wizard_forget_action">Escaecer</string>
     <string name="storage_new_title">Unidá USB coneutada</string>
     <string name="storage_new_action_browse">Restolar</string>
+    <string name="storage_new_action_adopt">Afitar como almacenamientu del preséu</string>
     <string name="storage_new_action_format_public">Configurar como almacenamientu estrayible</string>
     <string name="storage_new_action_eject">Espulsar</string>
     <string name="storage_missing_title">Estráxose la unidá <xliff:g id="name" example="SD Card">%1$s</xliff:g></string>
@@ -281,6 +298,7 @@
     <string name="app_forward_locked">L\u2019aplicación ta protexida escontra copies.</string>
     <string name="invalid_location">L\u2019allugamientu d\u2019instalación nun ye válidu.</string>
     <string name="system_package">Los anovamientos del sistema nun pue instalase en medios esternos.</string>
+    <string name="move_error_device_admin">El xestor de preseos nun pue instalase en medios esternos.</string>
     <string name="learn_more_action">Deprendi más</string>
     <string name="wifi_wps_retry_scan">Retentar</string>
     <string name="wifi_wps_title">Guetando WPS router\u2026</string>
@@ -332,6 +350,7 @@
     <string name="delete_location_history_desc">Esto va desaniciar tol historial d\'allugamientos almacenáu nesti preséu pa esta cuenta de Google. Nun podrás desfacer esti desaniciu. Delles aplicaciones, incluyendo Google Now, van dexar de furrular.</string>
     <string name="system_services">Servicios</string>
     <string name="accessibility_service_settings">Axustes de servicios</string>
+    <string name="accessibility_toggle_high_text_contrast_preference_title">Testu de contraste altu</string>
     <string name="accessibility_captions">Sotítulos</string>
     <string name="accessibility_captions_description">Configuraciones pa superposición de testu de subtítulos en videu</string>
     <string name="captions_display">Pantalla</string>
@@ -347,12 +366,19 @@
     <string name="captions_textcolor">Color del testu</string>
     <string name="captions_edgetype">Tipu de berbesu</string>
     <string name="captions_edgecolor">Color del berbesu</string>
+    <string name="captions_backgroundshow">Amosar fondu</string>
     <string name="captions_backgroundcolor">Color de fondu</string>
     <string name="captions_backgroundopacity">Opacidá del fondu</string>
     <string name="captioning_preview_text">Los subtítulos van vese d\'esti mou</string>
     <string name="captions_textopacity">Opacidá del testu</string>
+    <string name="captions_windowshow">Amosar ventana</string>
     <string name="captions_windowcolor">Color de la ventana</string>
     <string name="captions_windowopacity">Opacidá de la ventana</string>
+    <string name="captions_style_0">Blancu sobro prietu</string>
+    <string name="captions_style_1">Prietu sobro blancu</string>
+    <string name="captions_style_2">Mariellu sobro prietu</string>
+    <string name="captions_style_3">Mariellu sobro azul</string>
+    <string name="captions_style_custom">Personalizao</string>
     <string name="color_white">Blancu</string>
     <string name="color_black">Prietu</string>
     <string name="color_red">Bermeyu</string>
@@ -385,6 +411,7 @@
     <string name="system_hdmi_optimization">Optimización de HDMI</string>
     <string name="system_reboot_confirm">¿Reaniciar agora?</string>
     <string name="system_desc_reboot_confirm">P\'anovar esta configuración, el to preséu necesita reaniciar</string>
+    <string name="system_shutdown_confirm">¿Apagara agora?</string>
     <string name="system_never_check">Enxamás comprobar</string>
     <string name="system_check_for_drm_content_only">Comprobar namái conteníu DRM</string>
     <string name="system_always_check">Comprobar siempres</string>
@@ -499,7 +526,9 @@
     <string name="inputs_game">Video-consola</string>
     <string name="inputs_aux">Aux</string>
     <string name="inputs_custom_name">Nome personalizáu</string>
+    <string name="inputs_custom_name_description_fmt">Introduz un nome pa la entrada <xliff:g id="input" example="HDMI">%1$s</xliff:g>.</string>
     <string name="inputs_hide">Anubríu</string>
+    <string name="inputs_show">Amosar esta entrada</string>
     <string name="input_header_names">Nome</string>
     <string name="inputs_hdmi_control">Control HDMI</string>
     <string name="inputs_hdmi_control_desc">Permite que la TV controle preseos HDMI</string>
@@ -507,6 +536,18 @@
     <string name="inputs_device_auto_off_desc">Apagar los preseos HDMI cola TV</string>
     <string name="inputs_tv_auto_on">Autoencendíu de la TV</string>
     <string name="inputs_tv_auto_on_desc">Prender la TV colos preseos HDMI</string>
+    <plurals name="inputs_header_connected_input">
+        <item quantity="one">Entrada coneutada</item>
+        <item quantity="other">Entraes coneutaes</item>
+    </plurals>
+    <plurals name="inputs_header_standby_input">
+        <item quantity="one">Entrada n\'espera</item>
+        <item quantity="other">Entraes n\'espera</item>
+    </plurals>
+    <plurals name="inputs_header_disconnected_input">
+        <item quantity="one">Entrada non coneutada</item>
+        <item quantity="other">Entraes non coneutaes</item>
+    </plurals>
     <string name="user_add_profile_item_summary">Restrinxir l\'accesu a les apps y otros conteníos na to cuenta</string>
     <string name="user_new_profile_name">Perfil torgáu</string>
     <string name="user_restrictions_controlled_by">Remanaes por <xliff:g id="App">%1$s</xliff:g></string>
@@ -517,6 +558,7 @@
     <string name="restricted_profile_switch_to">Entrar nel perfil restrinxíu</string>
     <string name="restricted_profile_switch_out">Salir del perfil restrinxíu</string>
     <string name="restricted_profile_delete_title">Desaniciar perfil restrinxíu</string>
+    <string name="restricted_profile_create_title">Crear perfil restrinxíu</string>
     <string name="restricted_profile_configure_title">Axustes</string>
     <string name="restricted_profile_configure_apps_title">Aplicaciones permitíes</string>
     <plurals name="restricted_profile_configure_apps_description">
@@ -540,6 +582,8 @@
     <string name="pin_toast_wrong">PIN incorreutu, volvi tentalo</string>
     <string name="pin_toast_not_match">Volvi tentalo, el PIN nun s\'atopa</string>
     <string name="wifi_setup_input_password">Introduz la contraseña de <xliff:g id="ssid">%1$s</xliff:g>.</string>
+    <string name="wifi_setup_connection_success">Coneutóse con éxitu</string>
+    <string name="wifi_setup_save_success">Guardóse con ésitu</string>
     <string name="device_apps_app_management_version">Versión <xliff:g id="app_version">%1$s</xliff:g></string>
     <string name="device_apps_app_management_open">Abrir</string>
     <string name="device_apps_app_management_force_stop">Forciar parada</string>
@@ -565,10 +609,13 @@
     <string name="settings_cancel">Encaboxar</string>
     <string name="settings_on">Prendíu</string>
     <string name="settings_off">Apagáu</string>
+    <string name="device_daydreams_none">Apagar la pantalla</string>
     <string name="device_daydreams_select">Curiapantalles</string>
     <string name="device_daydreams_test">Aniciar agora</string>
+    <string name="device_daydreams_sleep">Cuando s\'anicie</string>
     <string name="device_daydreams_sleep_description">El curiapantalles aníciase dempués d\'esti periodu d\'inactividá. Si nun s\'esbilla dengún curiapantalles, apagaráse la pantalla.</string>
     <string name="device_daydreams_sleep_summary">Dempués de <xliff:g id="sleep_description" example="3 minutes">%1$s</xliff:g> d\'inactividá</string>
+    <string name="device_daydreams_screen_off">Poner preséu a dormir</string>
     <string name="device_daydreams_screen_off_description">La pantalla apágase dempués d\'esti periodu d\'inactividá.</string>
     <string name="backup_configure_account_default_summary">Nesti momentu, nenguna cuenta almacena copies de seguranza de los datos.</string>
     <string name="backup_erase_dialog_message">¿Quies dexar de guardar copies de seguranza de contraseñes Wi-Fi, marcadores, configuraciones, datos d\'apps y desaniciar toles copies de los sirvidores de Google?</string>
@@ -579,13 +626,21 @@
     <string name="factory_reset_description">Van desaniciase toos datos del almacenamientu internu del to preséu, incluyendo datos y parámetros d\'axustes d\'apps y del sistema, les apps que descargasti y la to cuenta de Google.</string>
     <string name="confirm_factory_reset_description">¿Quies desaniciar la to info personal y les apps que descargasti? Esta aición nun pue desfacese.</string>
     <string name="confirm_factory_reset_device">Desanicialo too</string>
+    <string name="select_device_name_title">Escueyi un nome pal to <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g></string>
+    <string name="device_rename_title">Renomar esti <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g></string>
+    <string name="device_rename_description">Esti <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g> anguaño llámase «<xliff:g id="devicename" example="Living Room Player">%2$s</xliff:g>»</string>
     <string name="change_setting">Camudar</string>
     <string name="keep_settings">Nun camudar</string>
     <string name="apps_permissions">Permisos</string>
     <string name="device_apps_permissions">Permisos d\'apps.</string>
     <string name="app_permissions_group_summary"><xliff:g id="count" example="10">%d</xliff:g> de <xliff:g id="count" example="10">%d</xliff:g> apps permitíes</string>
+    <string name="bluetooth_permission_request">"Solicitú de permisu de Bluetooth"</string>
     <string name="security_patch">Nivel del parche de seguranza d\'Android</string>
+    <string name="choose_application">Escoyer aplicación</string>
     <string name="experimental_preference">(Esperimental)</string>
+    <string name="reboot_safemode_action">Reaniciar en mou seguru</string>
+    <string name="reboot_safemode_confirm">¿Quies desaniciar nel mou seguru?</string>
+    <string name="reboot_safemode_desc">Esto desaniciará toles aplicaciones de terceros qu\'instalares. Restauraránse de nueves cuando reanicies.</string>
     <string name="app_permission_summary_allowed">Permitíu</string>
     <string name="app_permission_summary_not_allowed">Non permitíu</string>
 </resources>
