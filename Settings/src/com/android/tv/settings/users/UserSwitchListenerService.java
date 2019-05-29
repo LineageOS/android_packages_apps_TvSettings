@@ -32,8 +32,6 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.Log;
 
-import com.android.internal.widget.LockPatternUtils;
-
 public class UserSwitchListenerService extends Service {
 
     private static final boolean DEBUG = false;
@@ -64,7 +62,7 @@ public class UserSwitchListenerService extends Service {
     private BroadcastReceiver mUserUnlockedReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            switchToLastUserIfUnlocked();
+            switchToLastUser();
         }
     };
 
@@ -121,7 +119,7 @@ public class UserSwitchListenerService extends Service {
         }
 
         registerReceiver(mUserUnlockedReceiver, new IntentFilter(Intent.ACTION_USER_UNLOCKED));
-        switchToLastUserIfUnlocked();
+        switchToLastUser();
     }
 
     @Override
@@ -140,19 +138,13 @@ public class UserSwitchListenerService extends Service {
         return null;
     }
 
-    private void switchToLastUserIfUnlocked() {
+    private void switchToLastUser() {
         if (!UserManager.get(this).isUserUnlocked()) return;
 
-        boolean isFbeEnabled = LockPatternUtils.isFileEncryptionEnabled();
-        boolean hasLockscreenSecurity = new LockPatternUtils(this).isSecure(getUserId());
-
-        // If the device is FBE-enabled and has a lockscreen password, the user is asked
-        // to enter the PIN on boot so there is no need to switch back to the last user.
-        if (!isFbeEnabled || !hasLockscreenSecurity) {
-            int bootUserId = getBootUser(this);
-            if (UserHandle.myUserId() != bootUserId) {
-                switchUserNow(bootUserId);
-            }
+        int bootUserId = getBootUser(this);
+        if (UserHandle.myUserId() != bootUserId) {
+            // reboot back into the last user
+            switchUserNow(bootUserId);
         }
 
         updateLaunchPoint(this, new RestrictedProfileModel(this).getUser() != null);
