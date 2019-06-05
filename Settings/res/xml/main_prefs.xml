@@ -16,6 +16,7 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:custom="http://schemas.android.com/apk/res-auto"
                   android:title="@string/settings_app_name">
     <PreferenceCategory
         android:key="general_settings"
@@ -50,6 +51,13 @@
             <intent
                 android:targetClass="com.android.tv.settings.accessories.AddAccessoryActivity"
                 android:targetPackage="com.android.tv.settings"/>
+        </Preference>
+        <Preference
+            android:iconSpaceReserved="true"
+            android:key="help_and_feedback"
+            android:title="@string/help_and_feedback_category_title"
+            android:fragment="com.android.tv.settings.help.HelpFragment"
+            custom:isPreferenceVisible="false">
         </Preference>
     </PreferenceCategory>
 </PreferenceScreen>
