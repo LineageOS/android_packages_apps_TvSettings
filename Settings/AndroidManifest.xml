@@ -75,6 +75,16 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LEANBACK_SETTINGS" />
             </intent-filter>
+
+            <!-- Intent filter used to display this activity as a launcher
+                 entry point in the LeanbackLauncher -->
+            <intent-filter
+                android:priority="3"
+                android:label="@string/launcher_settings_app_name"
+                android:icon="@drawable/ic_settings_launcher_icon" >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <!-- WifiSetupActivity may be (usually is) started from setup so theme is
