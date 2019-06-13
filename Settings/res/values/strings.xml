@@ -86,6 +86,8 @@
         <item quantity="one"><xliff:g id="accessories_number">%1$d</xliff:g> accessory</item>
         <item quantity="other"><xliff:g id="accessories_number">%1$d</xliff:g> accessories</item>
     </plurals>
+    <!-- Title for main screen preference for help and feedback [CHAR LIMIT=50] -->
+    <string name="help_and_feedback_category_title">Help &amp; feedback</string>
 
     <!-- Account preferences -->
     <skip />
@@ -273,6 +275,13 @@
     <string name="bluetooth_pair">Pair</string>
     <!-- Action title for Cancelling the Bluetooth secure Pair action [CHAR LIMIT=50] -->
     <string name="bluetooth_cancel">Cancel</string>
+
+    <!-- Help and feedback preferences -->
+    <skip />
+    <!-- Preference which manages sending feedback about an issue. [CHAR LIMIT=50] -->
+    <string name="send_feedback">Take bug report</string>
+    <!-- Preference which manages launching the help center. [CHAR LIMIT=50] -->
+    <string name="launch_help">Help Center</string>
 
     <!-- System -->
     <skip />

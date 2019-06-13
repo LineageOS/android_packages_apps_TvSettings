@@ -872,8 +872,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 0);
     }
 
-    private void captureBugReport() {
-        Toast.makeText(getActivity(), R.string.capturing_bugreport, Toast.LENGTH_SHORT).show();
+    /**
+     * Take bug report and show notification.
+     * @param activity
+     */
+    public static void captureBugReport(Activity activity) {
+        Toast.makeText(activity, R.string.capturing_bugreport, Toast.LENGTH_SHORT).show();
         try {
             ActivityManager.getService()
                     .requestBugReport(ActivityManager.BUGREPORT_OPTION_FULL);
@@ -1459,7 +1463,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 setPrefsEnabledState(false);
             }
         } else if (preference == mBugreport) {
-            captureBugReport();
+            captureBugReport(this.getActivity());
         } else if (preference == mEnableAdb) {
             if (mEnableAdb.isChecked()) {
                 // Pass to super to launch the dialog, then uncheck until the dialog
