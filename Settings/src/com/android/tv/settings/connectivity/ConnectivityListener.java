@@ -113,6 +113,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
                 mWifiTracker = new WifiTracker(context, this, true, true);
             }
         }
+        updateConnectivityStatus();
     }
 
     /**

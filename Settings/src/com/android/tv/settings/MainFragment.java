@@ -123,7 +123,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     public void onCreate(Bundle savedInstanceState) {
         mIconCache = new IconCache(getContext());
         mConnectivityListener =
-                new ConnectivityListener(getContext(), this::updateWifi, getLifecycle());
+                new ConnectivityListener(getContext(), this::updateConnectivity, getLifecycle());
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
         super.onCreate(savedInstanceState);
     }
@@ -250,7 +250,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     }
 
     @VisibleForTesting
-    void updateWifi() {
+    void updateConnectivity() {
         final Preference networkPref = findPreference(KEY_NETWORK);
         if (networkPref == null) {
             return;
@@ -400,6 +400,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         super.onResume();
         updateAccountPref();
         updateAccessoryPref();
+        updateConnectivity();
     }
 
     private boolean isRestricted() {
