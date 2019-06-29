@@ -135,10 +135,10 @@ public class ProxySettingsState implements State {
 
         @Override
         public void onGuidedActionClicked(GuidedAction action) {
-            mAdvancedOptionsFlowInfo.put(AdvancedOptionsFlowInfo.PROXY_HOSTNAME,
+            mAdvancedOptionsFlowInfo.put(AdvancedOptionsFlowInfo.PROXY_SETTINGS,
                     action.getTitle());
             if (action.getId() == WIFI_ACTION_PROXY_NONE) {
-                AdvancedOptionsFlowUtil.processIpSettings(getActivity());
+                AdvancedOptionsFlowUtil.processProxySettings(getActivity());
                 if (mAdvancedOptionsFlowInfo.isSettingsFlow()) {
                     mStateMachine.getListener().onComplete(StateMachine.ADVANCED_FLOW_COMPLETE);
                 } else {
