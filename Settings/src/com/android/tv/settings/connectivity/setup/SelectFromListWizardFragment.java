@@ -27,13 +27,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcel;
 import android.os.Parcelable;
-import androidx.leanback.widget.FacetProvider;
-import androidx.leanback.widget.ItemAlignmentFacet;
-import androidx.leanback.widget.ItemAlignmentFacet.ItemAlignmentDef;
-import androidx.leanback.widget.VerticalGridView;
-import androidx.recyclerview.widget.SortedList;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.SortedListAdapterCallback;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
@@ -43,6 +36,14 @@ import android.view.ViewTreeObserver.OnPreDrawListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.leanback.widget.FacetProvider;
+import androidx.leanback.widget.ItemAlignmentFacet;
+import androidx.leanback.widget.ItemAlignmentFacet.ItemAlignmentDef;
+import androidx.leanback.widget.VerticalGridView;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SortedList;
+import androidx.recyclerview.widget.SortedListAdapterCallback;
 
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;

@@ -22,6 +22,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings;
+
+import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
@@ -40,6 +42,7 @@ import java.util.Set;
 /**
  * Fragment for controlling network connectivity
  */
+@Keep
 public class NetworkFragment extends SettingsPreferenceFragment implements
         ConnectivityListener.Listener, ConnectivityListener.WifiNetworkListener,
         AccessPoint.AccessPointListener {

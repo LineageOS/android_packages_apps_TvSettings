@@ -16,12 +16,13 @@
 
 package com.android.tv.settings.connectivity.setup;
 
-import androidx.lifecycle.ViewModel;
 import android.net.IpConfiguration;
 import android.net.LinkAddress;
 import android.net.ProxyInfo;
-import androidx.annotation.IntDef;
 import android.text.TextUtils;
+
+import androidx.annotation.IntDef;
+import androidx.lifecycle.ViewModel;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   Copyright (C) 2018 The Android Open Source Project
 
@@ -14,10 +15,9 @@
   limitations under the License.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        coreApp="true"
-        package="com.android.tvsettings.robotests">
-
-    <application/>
-
-</manifest>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_dismiss_focused"
+          android:state_focused="true" />
+    <item android:drawable="@drawable/ic_dismiss_non_focused"
+          android:state_focused="false" />
+</selector>

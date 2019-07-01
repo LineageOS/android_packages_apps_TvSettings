@@ -18,11 +18,12 @@ package com.android.tv.settings;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.text.TextUtils;
+import android.util.AttributeSet;
+
 import androidx.preference.CheckBoxPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
-import android.text.TextUtils;
-import android.util.AttributeSet;
 
 public class RadioPreference extends CheckBoxPreference {
     private String mRadioGroup;

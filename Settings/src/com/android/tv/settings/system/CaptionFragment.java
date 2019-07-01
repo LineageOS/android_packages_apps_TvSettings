@@ -19,12 +19,13 @@ package com.android.tv.settings.system;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.text.TextUtils;
+
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.TwoStatePreference;
-import android.text.TextUtils;
 
 import com.android.internal.app.LocalePicker;
 import com.android.internal.logging.nano.MetricsProto;

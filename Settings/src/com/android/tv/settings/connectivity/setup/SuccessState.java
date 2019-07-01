@@ -17,12 +17,13 @@
 package com.android.tv.settings.connectivity.setup;
 
 import android.app.Activity;
-import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.util.State;

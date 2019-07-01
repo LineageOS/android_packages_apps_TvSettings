@@ -17,11 +17,12 @@
 package com.android.tv.settings;
 
 import android.app.Fragment;
+
 import androidx.annotation.NonNull;
-import androidx.preference.PreferenceDialogFragment;
-import androidx.preference.PreferenceFragment;
 import androidx.leanback.preference.LeanbackSettingsFragment;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceDialogFragment;
+import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceScreen;
 
 import com.android.tv.settings.system.LeanbackPickerDialogFragment;

@@ -17,6 +17,7 @@
 package com.android.tv.settings.core.instrumentation;
 
 import android.os.Bundle;
+
 import androidx.fragment.app.FragmentActivity;
 
 import com.android.settingslib.core.instrumentation.Instrumentable;

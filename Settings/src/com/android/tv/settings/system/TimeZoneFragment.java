@@ -23,11 +23,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.text.TextUtils;
+
 import androidx.annotation.Keep;
 import androidx.preference.CheckBoxPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import android.text.TextUtils;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.datetime.ZoneGetter;

@@ -22,6 +22,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.leanback.widget.GuidanceStylist;
 

@@ -19,11 +19,12 @@ package com.android.tv.settings.device.apps.specialaccess;
 import android.Manifest;
 import android.app.AppOpsManager;
 import android.os.Bundle;
+
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
-import androidx.preference.SwitchPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
+import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 
 import com.android.internal.logging.nano.MetricsProto;

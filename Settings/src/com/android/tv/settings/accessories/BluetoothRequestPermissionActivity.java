@@ -18,6 +18,7 @@ package com.android.tv.settings.accessories;
 
 import android.app.Activity;
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 
 public class BluetoothRequestPermissionActivity extends Activity {

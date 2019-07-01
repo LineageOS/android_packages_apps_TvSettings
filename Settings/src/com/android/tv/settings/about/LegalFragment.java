@@ -18,6 +18,7 @@ package com.android.tv.settings.about;
 
 import android.content.Context;
 import android.os.Bundle;
+
 import androidx.annotation.Keep;
 import androidx.preference.PreferenceScreen;
 

@@ -16,10 +16,11 @@ package com.android.tv.quicksettings;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
-import androidx.preference.PreferenceFragment;
+
 import androidx.leanback.preference.LeanbackPreferenceFragment;
 import androidx.leanback.preference.LeanbackSettingsFragment;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceScreen;
 
 public class QuickSettings extends Activity {

@@ -26,15 +26,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.leanback.app.GuidedStepFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import android.text.TextUtils;
-import android.view.View;
-import android.widget.Toast;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.ProgressDialogFragment;
