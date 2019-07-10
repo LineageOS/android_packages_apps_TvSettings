@@ -17,6 +17,7 @@
 package com.android.tv.settings.connectivity.setup;
 
 import android.content.Context;
+import android.net.IpConfiguration;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -117,6 +118,9 @@ public class ProxySettingsState implements State {
             CharSequence title = null;
             if (mAdvancedOptionsFlowInfo.containsPage(AdvancedOptionsFlowInfo.PROXY_SETTINGS)) {
                 title = mAdvancedOptionsFlowInfo.get(AdvancedOptionsFlowInfo.PROXY_SETTINGS);
+            } else if (mAdvancedOptionsFlowInfo.getIpConfiguration().getProxySettings()
+                    == IpConfiguration.ProxySettings.NONE) {
+                title = getString(R.string.wifi_action_proxy_none);
             } else if (mAdvancedOptionsFlowInfo.getInitialProxyInfo() != null) {
                 title = getString(R.string.wifi_action_proxy_manual);
             }
