@@ -97,12 +97,9 @@
         android:icon="@drawable/ic_accessibility_new"
         android:key="accessibility"
         android:title="@string/system_accessibility"/>
-    <Preference
-        android:icon="@drawable/ic_reset"
-        android:key="reset"
-        android:title="@string/device_reset">
-        <intent
-            android:targetClass="com.android.tv.settings.device.storage.ResetActivity"
-            android:targetPackage="com.android.tv.settings"/>
-    </Preference>
+    <com.android.tv.settings.LongClickPreference
+        android:icon="@drawable/ic_restart_alt"
+        android:key="reboot"
+        android:title="@string/restart_button_label"
+        android:fragment="com.android.tv.settings.about.RebootConfirmFragment" />
 </PreferenceScreen>

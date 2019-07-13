@@ -36,7 +36,6 @@ import android.widget.Toast;
 
 import androidx.annotation.Keep;
 import androidx.annotation.Nullable;
-import androidx.leanback.preference.LeanbackSettingsFragment;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
@@ -46,7 +45,6 @@ import com.android.internal.telephony.TelephonyProperties;
 import com.android.settingslib.DeviceInfoUtils;
 import com.android.settingslib.Utils;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
-import com.android.tv.settings.LongClickPreference;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.PreferenceUtils;
 import com.android.tv.settings.R;
@@ -57,8 +55,7 @@ import com.android.tv.settings.name.DeviceManager;
  * The "About" screen in TV settings.
  */
 @Keep
-public class AboutFragment extends SettingsPreferenceFragment implements
-        LongClickPreference.OnLongClickListener {
+public class AboutFragment extends SettingsPreferenceFragment {
     private static final String TAG = "AboutFragment";
 
     private static final String KEY_MANUAL = "manual";
@@ -79,7 +76,6 @@ public class AboutFragment extends SettingsPreferenceFragment implements
     private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
     private static final String KEY_SAFETY_LEGAL = "safetylegal";
     private static final String KEY_DEVICE_NAME = "device_name";
-    private static final String KEY_RESTART = "restart";
     private static final String KEY_TUTORIALS = "tutorials";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
@@ -128,9 +124,6 @@ public class AboutFragment extends SettingsPreferenceFragment implements
         } else {
             removePreference(securityPatchPref);
         }
-
-        final LongClickPreference restartPref = (LongClickPreference) findPreference(KEY_RESTART);
-        restartPref.setLongClickListener(this);
 
         findPreference(KEY_BASEBAND_VERSION).setSummary(
                 getSystemPropertySummary(TelephonyProperties.PROPERTY_BASEBAND_VERSION));
@@ -235,20 +228,6 @@ public class AboutFragment extends SettingsPreferenceFragment implements
         if (deviceNamePref != null) {
             deviceNamePref.setSummary(DeviceManager.getDeviceName(getActivity()));
         }
-    }
-
-    @Override
-    public boolean onPreferenceLongClick(Preference preference) {
-        if (TextUtils.equals(preference.getKey(), KEY_RESTART)) {
-            if (getCallbackFragment() instanceof LeanbackSettingsFragment) {
-                LeanbackSettingsFragment callback =
-                        (LeanbackSettingsFragment) getCallbackFragment();
-                callback.startImmersiveFragment(
-                        RebootConfirmFragment.newInstance(true /* safeMode */));
-                return true;
-            }
-        }
-        return false;
     }
 
     @Override

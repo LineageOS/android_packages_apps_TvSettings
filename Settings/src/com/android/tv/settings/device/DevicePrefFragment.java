@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.device;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -30,14 +31,17 @@ import android.view.inputmethod.InputMethodInfo;
 
 import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
+import androidx.leanback.preference.LeanbackSettingsFragment;
 import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.applications.DefaultAppInfo;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
+import com.android.tv.settings.LongClickPreference;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.about.RebootConfirmFragment;
 import com.android.tv.settings.autofill.AutofillHelper;
 import com.android.tv.settings.device.sound.SoundFragment;
 import com.android.tv.settings.inputmethod.InputMethodHelper;
@@ -49,7 +53,8 @@ import java.util.List;
  * The "Device Preferences" screen in TV settings.
  */
 @Keep
-public class DevicePrefFragment extends SettingsPreferenceFragment {
+public class DevicePrefFragment extends SettingsPreferenceFragment implements
+        LongClickPreference.OnLongClickListener {
     private static final String TAG = "DeviceFragment";
 
     @VisibleForTesting
@@ -63,6 +68,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
     private static final String KEY_HOME_SETTINGS = "home";
     @VisibleForTesting
     static final String KEY_KEYBOARD = "keyboard";
+    private static final String KEY_REBOOT = "reboot";
 
     private Preference mSoundsPref;
     private boolean mInputSettingNeeded;
@@ -80,6 +86,8 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
         if (inputPref != null) {
             inputPref.setVisible(mInputSettingNeeded);
         }
+        final LongClickPreference restartPref = (LongClickPreference) findPreference(KEY_REBOOT);
+        restartPref.setLongClickListener(this);
     }
 
     @Override
@@ -114,6 +122,19 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_USAGE));
+    }
+
+    @Override
+    public boolean onPreferenceLongClick(Preference preference) {
+        if (TextUtils.equals(preference.getKey(), KEY_REBOOT)) {
+            Fragment fragment = getCallbackFragment();
+            if (fragment instanceof LeanbackSettingsFragment) {
+                ((LeanbackSettingsFragment) fragment).startImmersiveFragment(
+                        RebootConfirmFragment.newInstance(true /* safeMode */));
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
