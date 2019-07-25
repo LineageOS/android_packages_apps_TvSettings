@@ -26,6 +26,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.IPackageDataObserver;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -44,6 +45,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Fragment for managing a single app
@@ -64,6 +66,10 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
     private static final String KEY_CLEAR_DEFAULTS = "clearDefaults";
     private static final String KEY_NOTIFICATIONS = "notifications";
     private static final String KEY_PERMISSIONS = "permissions";
+    private static final String KEY_LICENSES = "licenses";
+
+    // Intent action implemented by apps that have open source licenses to display under settings
+    private static final String VIEW_LICENSES_ACTION = "com.android.tv.settings.VIEW_LICENSES";
 
     // Result code identifiers
     private static final int REQUEST_UNINSTALL = 1;
@@ -333,6 +339,28 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
             mNotificationsPreference.setEntry(mEntry);
         }
 
+        // Open Source Licenses
+        Preference licensesPreference = findPreference(KEY_LICENSES);
+        if (licensesPreference == null) {
+            licensesPreference = new Preference(themedContext);
+            licensesPreference.setKey(KEY_LICENSES);
+            replacePreference(licensesPreference);
+        }
+        // Check if app has open source licenses to display
+        Intent licenseIntent = new Intent(VIEW_LICENSES_ACTION);
+        licenseIntent.setPackage(mEntry.info.packageName);
+        ResolveInfo resolveInfo = resolveIntent(licenseIntent);
+        if (resolveInfo == null) {
+            licensesPreference.setVisible(false);
+        } else {
+            Intent intent = new Intent(licenseIntent);
+            intent.setClassName(resolveInfo.activityInfo.packageName,
+                    resolveInfo.activityInfo.name);
+            licensesPreference.setIntent(intent);
+            licensesPreference.setTitle(R.string.device_apps_app_management_licenses);
+            licensesPreference.setVisible(true);
+        }
+
         // Permissions
         Preference permissionsPreference = findPreference(KEY_PERMISSIONS);
         if (permissionsPreference == null) {
@@ -355,6 +383,11 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
             getPreferenceScreen().removePreference(old);
         }
         getPreferenceScreen().addPreference(preference);
+    }
+
+    private ResolveInfo resolveIntent(Intent intent) {
+        List<ResolveInfo> resolveInfos = mPackageManager.queryIntentActivities(intent, 0);
+        return (resolveInfos == null || resolveInfos.size() <= 0) ? null : resolveInfos.get(0);
     }
 
     public String getAppName() {
