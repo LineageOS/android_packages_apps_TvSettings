@@ -46,8 +46,6 @@ LOCAL_SRC_FILES := \
 
 include frameworks/base/packages/SettingsLib/common.mk
 
-LOCAL_AAPT_FLAGS += --legacy
-
 include $(BUILD_PACKAGE)
 
 # Use the following include to make our test apk.
