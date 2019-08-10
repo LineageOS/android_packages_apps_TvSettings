@@ -16,67 +16,44 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- CM Updater -->
-  <string name="about_cmupdate_settings_title">CyanogenMod opgraderings</string>
-  <!-- About screen, CyanogenMod version -->
-  <string name="about_mod_version">CyanogenMod weergawe</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
-  <plurals name="show_dev_countdown_cm">
-    <item quantity="one">Jy is nou <xliff:g id="step_count">%1$d</xliff:g> stap weg van aktivering van ontwikkelaaropsies.</item>
-    <item quantity="other">Jy is nou <xliff:g id="step_count">%1$d</xliff:g> stappe weg van aktivering van ontwikkelaaropsies.</item>
-  </plurals>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_cm">Jy het die ontwikkelaaropsies geaktiveer!</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_cm">Nie nodig, het jy reeds ontwikkelaaropsies geaktiveer.</string>
-  <!-- About screen, build date -->
-  <string name="about_build_date">Bou datum</string>
-  <!-- About screen, kernel version -->
-  <string name="about_kernel_version">Kernel weergawe</string>
-  <!-- About screen, SELinux status -->
-  <string name="about_selinux_status">SELinux status</string>
-  <!-- These statuses are displayed when a device was built with SE Android supoprt.
-    These are displayed by the settings app in the about section. -->
-  <string name="selinux_status_disabled">Af</string>
-  <string name="selinux_status_permissive">Permissive</string>
-  <string name="selinux_status_enforcing">Enforcing</string>
-  <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
-  <string name="accessories_add_bluetooth_inst_cm">Om CyanogenMod mee te begin, maak seker dat jou Bluetooth-toestel is in saambindmodus. Vir Nexus Remote dit gedoen deur die gelyktydige druk van die terug en  tuis knoppies.</string>
-  <!-- Title for Set CM in System Settings Developer options [CHAR LIMIT=50] -->
-  <!-- Setting title for root access -->
-  <string name="root_access">\'Root\' toegang</string>
-  <string name="root_access_warning_title">Laat \'root\' toegang toe?</string>
-  <string name="root_access_warning_message">Die toelaat van programme om \'root\' toegang aan te vra kan die sekuriteit van jou stelsel in gevaar stel!</string>
-  <string name="root_access_none">Af</string>
-  <string name="root_access_apps">Slegs programme</string>
-  <string name="root_access_adb">Slegs ADB</string>
-  <string name="root_access_all">Programme en ADB</string>
-  <!-- Setting that enables the terminal app. [CHAR LIMIT=32] -->
-  <string name="enable_terminal_title">Lokale terminaal</string>
-  <string name="enable_terminal_summary">Aktiveer terminaal toep om plaaslike shell toegang te kry</string>
-  <!-- Display settings -->
-  <string name="system_display">Vertooneienskappe</string>
-  <string name="system_display_overscan">Overscan</string>
-  <string name="system_display_overscan_description">Kalibreer die skerm om jou skerm grootte te pas.</string>
-  <!-- Home settings -->
-  <string name="system_reset_default_home">Herstel standaard tuis skerm</string>
-  <string name="system_home_settings">Tuis instellings</string>
-  <string name="reset_launcher_title">Herstel standaard tuis skerm</string>
-  <string name="reset_launcher_description">Deur die standaard tuis instellings te herstel, sal jy in staat wees om alternatiewe tuis skerms (o.a. Trebuchet) te kies.\n\nWil jy voortgaan om jou standaard tuis skerm te herstel?</string>
-  <string name="reset_launcher_tip">Druk die tuis knoppie om die tuis skerm kies lys te wys.</string>
-  <!-- Advanced reboot options -->
-  <string name="advanced_reboot_title">Gevorderde herlaai</string>
-  <string name="advanced_reboot_summary">Sluit opsies in die aangaande kieslys vir herlaai na \'recovery\', \'bootloader\' of vinnige herlaai</string>
-  <!-- Reboot menu -->
-  <!-- Button to reboot the device into recovery, within the Reboot Options dialog -->
-  <string name="reboot_recovery_button_label">Recovery</string>
-  <!-- Button to reboot the device into bootloader, within the Reboot Options dialog -->
-  <string name="reboot_bootloader_button_label">Bootloader</string>
-  <!-- Button to soft reboot the device, within the Reboot Options dialog -->
-  <string name="reboot_soft_button_label">Vinnige herlaai</string>
-  <!-- Android debugging over WiFi -->
-  <string name="adb_over_network">ADB oor netwerk</string>
-  <string name="adb_over_network_summary">Aktiveer TCP/IP-ontfouting oor die netwerk koppelvlakke (Wi-Fi, USB netwerke). Hierdie instelling word teruggestel tydens herlaai</string>
-  <!-- Warning for Adb over Network -->
-  <string name="adb_over_network_warning">WAARSKUWING: Wanneer ADB oor netwerk aangeskakel is, is die toestel kwesbaar vir indringers op alle verbonde netwerke, insluitend die GSM data netwerk\n\nGebruik Slegs hierdie funksie wanneer vertroude netwerke verbind is\n\nWil jy dit aanskakel?</string>
+    <string name="about_cmupdate_settings_title">CyanogenMod opgraderings</string>
+    <string name="about_mod_version">CyanogenMod weergawe</string>
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Jy is nou <xliff:g id="step_count">%1$d</xliff:g> stap weg van aktivering van ontwikkelaaropsies.</item>
+        <item quantity="other">Jy is nou <xliff:g id="step_count">%1$d</xliff:g> stappe weg van aktivering van ontwikkelaaropsies.</item>
+    </plurals>
+    <string name="show_dev_on_cm">Jy het die ontwikkelaaropsies geaktiveer!</string>
+    <string name="show_dev_already_cm">Nie nodig, het jy reeds ontwikkelaaropsies geaktiveer.</string>
+    <string name="about_build_date">Bou datum</string>
+    <string name="about_kernel_version">Kernel weergawe</string>
+    <string name="about_selinux_status">SELinux status</string>
+    <string name="selinux_status_disabled">Af</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
+    <string name="accessories_add_bluetooth_inst_cm">Om CyanogenMod mee te begin, maak seker dat jou Bluetooth-toestel is in saambindmodus. Vir Nexus Remote dit gedoen deur die gelyktydige druk van die terug en  tuis knoppies.</string>
+    <string name="root_access">\'Root\' toegang</string>
+    <string name="root_access_warning_title">Laat \'root\' toegang toe?</string>
+    <string name="root_access_warning_message">Die toelaat van programme om \'root\' toegang aan te vra kan die sekuriteit van jou stelsel in gevaar stel!</string>
+    <string name="root_access_none">Af</string>
+    <string name="root_access_apps">Slegs programme</string>
+    <string name="root_access_adb">Slegs ADB</string>
+    <string name="root_access_all">Programme en ADB</string>
+    <string name="enable_terminal_title">Lokale terminaal</string>
+    <string name="enable_terminal_summary">Aktiveer terminaal toep om plaaslike shell toegang te kry</string>
+    <string name="system_display">Vertooneienskappe</string>
+    <string name="system_display_overscan">Overscan</string>
+    <string name="system_display_overscan_description">Kalibreer die skerm om jou skerm grootte te pas.</string>
+    <string name="system_reset_default_home">Herstel standaard tuis skerm</string>
+    <string name="system_home_settings">Tuis instellings</string>
+    <string name="reset_launcher_title">Herstel standaard tuis skerm</string>
+    <string name="reset_launcher_description">Deur die standaard tuis instellings te herstel, sal jy in staat wees om alternatiewe tuis skerms (o.a. Trebuchet) te kies.\n\nWil jy voortgaan om jou standaard tuis skerm te herstel?</string>
+    <string name="reset_launcher_tip">Druk die tuis knoppie om die tuis skerm kies lys te wys.</string>
+    <string name="advanced_reboot_title">Gevorderde herlaai</string>
+    <string name="advanced_reboot_summary">Sluit opsies in die aangaande kieslys vir herlaai na \'recovery\', \'bootloader\' of vinnige herlaai</string>
+    <string name="reboot_recovery_button_label">Recovery</string>
+    <string name="reboot_bootloader_button_label">Bootloader</string>
+    <string name="reboot_soft_button_label">Vinnige herlaai</string>
+    <string name="adb_over_network">ADB oor netwerk</string>
+    <string name="adb_over_network_summary">Aktiveer TCP/IP-ontfouting oor die netwerk koppelvlakke (Wi-Fi, USB netwerke). Hierdie instelling word teruggestel tydens herlaai</string>
+    <string name="adb_over_network_warning">WAARSKUWING: Wanneer ADB oor netwerk aangeskakel is, is die toestel kwesbaar vir indringers op alle verbonde netwerke, insluitend die GSM data netwerk\n\nGebruik Slegs hierdie funksie wanneer vertroude netwerke verbind is\n\nWil jy dit aanskakel?</string>
 </resources>

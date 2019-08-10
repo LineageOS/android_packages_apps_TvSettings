@@ -16,67 +16,44 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- CM Updater -->
-  <string name="about_cmupdate_settings_title">Ενημερώσεις CyanogenMod</string>
-  <!-- About screen, CyanogenMod version -->
-  <string name="about_mod_version">Έκδοση CyanogenMod</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
-  <plurals name="show_dev_countdown_cm">
-    <item quantity="one">Απομένει <xliff:g id="step_count">%1$d</xliff:g> βήμα για να ενεργοποιήσετε τις ρυθμίσεις για προγραμματιστές.</item>
-    <item quantity="other">Απομένουν <xliff:g id="step_count">%1$d</xliff:g> βήματα για να ενεργοποιήσετε τις ρυθμίσεις για προγραμματιστές.</item>
-  </plurals>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_cm">Ενεργοποιήσατε τις ρυθμίσεις για προγραμματιστές!</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_cm">Δεν χρειάζεται, έχετε ήδη ενεργοποιήσει τις ρυθμίσεις για προγραμματιστές.</string>
-  <!-- About screen, build date -->
-  <string name="about_build_date">Ημερομηνία έκδοσης</string>
-  <!-- About screen, kernel version -->
-  <string name="about_kernel_version">Έκδοση Kernel</string>
-  <!-- About screen, SELinux status -->
-  <string name="about_selinux_status">Κατάσταση SELinux</string>
-  <!-- These statuses are displayed when a device was built with SE Android supoprt.
-    These are displayed by the settings app in the about section. -->
-  <string name="selinux_status_disabled">Απενεργοποιημένο</string>
-  <string name="selinux_status_permissive">Ανεκτικό</string>
-  <string name="selinux_status_enforcing">Επιβολή</string>
-  <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
-  <string name="accessories_add_bluetooth_inst_cm">Για να αρχίσετε να χρησιμοποιείτε το CyanogenMod, βεβαιωθείτε ότι η συσκευή Bluetooth βρίσκεται σε λειτουργία σύζευξης. Στο Nexus Remote αυτό γίνεται πιέζοντας το πλήκτρο πίσω και αρχικής οθόνης ταυτόχρονα.</string>
-  <!-- Title for Set CM in System Settings Developer options [CHAR LIMIT=50] -->
-  <!-- Setting title for root access -->
-  <string name="root_access">Πρόσβαση root</string>
-  <string name="root_access_warning_title">Να επιτρέπεται η πρόσβαση root;</string>
-  <string name="root_access_warning_message">Επιτρέποντας στις εφαρμογές να ζητούν πρόσβαση root είναι πολύ επικίνδυνο και θα μπορούσε να θέσει σε κίνδυνο την ασφάλεια του συστήματος σας!</string>
-  <string name="root_access_none">Απενεργοποιημένη</string>
-  <string name="root_access_apps">Μόνο εφαρμογές</string>
-  <string name="root_access_adb">Μόνο ADB</string>
-  <string name="root_access_all">Εφαρμογές και ADB</string>
-  <!-- Setting that enables the terminal app. [CHAR LIMIT=32] -->
-  <string name="enable_terminal_title">Τοπική τερματική εφαρμογή</string>
-  <string name="enable_terminal_summary">Ενεργοπ. τερμ. εφαρμογής που προσφέρει πρόσβαση στο τοπικό κέλυφος</string>
-  <!-- Display settings -->
-  <string name="system_display">Οθόνη</string>
-  <string name="system_display_overscan">Overscan</string>
-  <string name="system_display_overscan_description">Μικρορύθμιση της εικόνας ώστε να ταιριάξει στο μέγεθος της οθόνης σας.</string>
-  <!-- Home settings -->
-  <string name="system_reset_default_home">Επαναφορά προεπιλεγμένης αρχικής οθόνης</string>
-  <string name="system_home_settings">Ρυθμίσεις αρχικής οθόνης</string>
-  <string name="reset_launcher_title">Επαναφορά προεπιλεγμένης αρχικής οθόνης</string>
-  <string name="reset_launcher_description">Επαναφέροντας την προεπιλεγμένη αρχική οθόνη, θα είστε σε θέση να επιλέξετε μια εναλλακτική αρχική οθόνη (π.χ. Trebuchet).\n\nΘα θέλατε να επαναφέρετε την προεπιλεγμένη αρχική οθόνη;</string>
-  <string name="reset_launcher_tip">Πιέστε το πλήκτρο αρχικής οθόνης για εμφάνιση του διαλόγου επιλογής αρχικής οθόνης.</string>
-  <!-- Advanced reboot options -->
-  <string name="advanced_reboot_title">Προηγμένη επανεκκίνηση</string>
-  <string name="advanced_reboot_summary">Να περιλαμβάνονται στο μενού οι επιλογές επανεκκίνησης σε λειτουργία recovery, bootloader ή εκτέλεση γρήγορης επανεκκίνησης</string>
-  <!-- Reboot menu -->
-  <!-- Button to reboot the device into recovery, within the Reboot Options dialog -->
-  <string name="reboot_recovery_button_label">Recovery</string>
-  <!-- Button to reboot the device into bootloader, within the Reboot Options dialog -->
-  <string name="reboot_bootloader_button_label">Bootloader</string>
-  <!-- Button to soft reboot the device, within the Reboot Options dialog -->
-  <string name="reboot_soft_button_label">Γρήγορη επανεκκίνηση</string>
-  <!-- Android debugging over WiFi -->
-  <string name="adb_over_network">Εντοπισμός σφαλμάτων μέσω δικτύου</string>
-  <string name="adb_over_network_summary">Λειτουργία εντοπισμού σφαλμάτων μέσω TCP/IP δικτύων (δίκτυα Wi-Fi, USB). Η ρύθμιση επαναφέρεται κατα την εκκίνηση</string>
-  <!-- Warning for Adb over Network -->
-  <string name="adb_over_network_warning">ΠΡΟΣΟΧΗ: Όταν ο εντοπισμός σφαλμάτων μέσω δικτύου είναι ενεργοποιημένος, η τηλεόρασή σας είναι ανοικτή για εισβολές σε όλα τα συνδεδεμένα δίκτυα!\n\nΧρησιμοποιήστε αυτή τη λειτουργία μόνο όταν είστε συνδεδεμένοι σε έμπιστα δίκτυα.\n\nΘέλετε πραγματικά να ενεργοποιήσετε αυτή τη λειτουργία;</string>
+    <string name="about_cmupdate_settings_title">Ενημερώσεις CyanogenMod</string>
+    <string name="about_mod_version">Έκδοση CyanogenMod</string>
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Απομένει <xliff:g id="step_count">%1$d</xliff:g> βήμα για να ενεργοποιήσετε τις ρυθμίσεις για προγραμματιστές.</item>
+        <item quantity="other">Απομένουν <xliff:g id="step_count">%1$d</xliff:g> βήματα για να ενεργοποιήσετε τις ρυθμίσεις για προγραμματιστές.</item>
+    </plurals>
+    <string name="show_dev_on_cm">Ενεργοποιήσατε τις ρυθμίσεις για προγραμματιστές!</string>
+    <string name="show_dev_already_cm">Δεν χρειάζεται, έχετε ήδη ενεργοποιήσει τις ρυθμίσεις για προγραμματιστές.</string>
+    <string name="about_build_date">Ημερομηνία έκδοσης</string>
+    <string name="about_kernel_version">Έκδοση Kernel</string>
+    <string name="about_selinux_status">Κατάσταση SELinux</string>
+    <string name="selinux_status_disabled">Απενεργοποιημένο</string>
+    <string name="selinux_status_permissive">Ανεκτικό</string>
+    <string name="selinux_status_enforcing">Επιβολή</string>
+    <string name="accessories_add_bluetooth_inst_cm">Για να αρχίσετε να χρησιμοποιείτε το CyanogenMod, βεβαιωθείτε ότι η συσκευή Bluetooth βρίσκεται σε λειτουργία σύζευξης. Στο Nexus Remote αυτό γίνεται πιέζοντας το πλήκτρο πίσω και αρχικής οθόνης ταυτόχρονα.</string>
+    <string name="root_access">Πρόσβαση root</string>
+    <string name="root_access_warning_title">Να επιτρέπεται η πρόσβαση root;</string>
+    <string name="root_access_warning_message">Επιτρέποντας στις εφαρμογές να ζητούν πρόσβαση root είναι πολύ επικίνδυνο και θα μπορούσε να θέσει σε κίνδυνο την ασφάλεια του συστήματος σας!</string>
+    <string name="root_access_none">Απενεργοποιημένη</string>
+    <string name="root_access_apps">Μόνο εφαρμογές</string>
+    <string name="root_access_adb">Μόνο ADB</string>
+    <string name="root_access_all">Εφαρμογές και ADB</string>
+    <string name="enable_terminal_title">Τοπική τερματική εφαρμογή</string>
+    <string name="enable_terminal_summary">Ενεργοπ. τερμ. εφαρμογής που προσφέρει πρόσβαση στο τοπικό κέλυφος</string>
+    <string name="system_display">Οθόνη</string>
+    <string name="system_display_overscan">Overscan</string>
+    <string name="system_display_overscan_description">Μικρορύθμιση της εικόνας ώστε να ταιριάξει στο μέγεθος της οθόνης σας.</string>
+    <string name="system_reset_default_home">Επαναφορά προεπιλεγμένης αρχικής οθόνης</string>
+    <string name="system_home_settings">Ρυθμίσεις αρχικής οθόνης</string>
+    <string name="reset_launcher_title">Επαναφορά προεπιλεγμένης αρχικής οθόνης</string>
+    <string name="reset_launcher_description">Επαναφέροντας την προεπιλεγμένη αρχική οθόνη, θα είστε σε θέση να επιλέξετε μια εναλλακτική αρχική οθόνη (π.χ. Trebuchet).\n\nΘα θέλατε να επαναφέρετε την προεπιλεγμένη αρχική οθόνη;</string>
+    <string name="reset_launcher_tip">Πιέστε το πλήκτρο αρχικής οθόνης για εμφάνιση του διαλόγου επιλογής αρχικής οθόνης.</string>
+    <string name="advanced_reboot_title">Προηγμένη επανεκκίνηση</string>
+    <string name="advanced_reboot_summary">Να περιλαμβάνονται στο μενού οι επιλογές επανεκκίνησης σε λειτουργία recovery, bootloader ή εκτέλεση γρήγορης επανεκκίνησης</string>
+    <string name="reboot_recovery_button_label">Recovery</string>
+    <string name="reboot_bootloader_button_label">Bootloader</string>
+    <string name="reboot_soft_button_label">Γρήγορη επανεκκίνηση</string>
+    <string name="adb_over_network">Εντοπισμός σφαλμάτων μέσω δικτύου</string>
+    <string name="adb_over_network_summary">Λειτουργία εντοπισμού σφαλμάτων μέσω TCP/IP δικτύων (δίκτυα Wi-Fi, USB). Η ρύθμιση επαναφέρεται κατα την εκκίνηση</string>
+    <string name="adb_over_network_warning">ΠΡΟΣΟΧΗ: Όταν ο εντοπισμός σφαλμάτων μέσω δικτύου είναι ενεργοποιημένος, η τηλεόρασή σας είναι ανοικτή για εισβολές σε όλα τα συνδεδεμένα δίκτυα!\n\nΧρησιμοποιήστε αυτή τη λειτουργία μόνο όταν είστε συνδεδεμένοι σε έμπιστα δίκτυα.\n\nΘέλετε πραγματικά να ενεργοποιήσετε αυτή τη λειτουργία;</string>
 </resources>
