@@ -41,6 +41,7 @@
 
     <!-- Display settings.  The delay after the daydream starts when the screen goes off. -->
     <string-array name="screen_off_timeout_entries">
+        <item>15 minutes</item>
         <item>30 minutes</item>
         <item>1 hour</item>
         <item>3 hours</item>
@@ -51,6 +52,8 @@
 
     <!-- Do not translate. -->
     <string-array name="screen_off_timeout_values" translatable="false">
+        <!-- Do not translate. -->
+        <item>900000</item>
         <!-- Do not translate. -->
         <item>1800000</item>
         <!-- Do not translate. -->
