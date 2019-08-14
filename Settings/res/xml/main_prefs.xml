@@ -21,7 +21,6 @@
     <PreferenceCategory
         android:key="general_settings"
         android:title="@string/header_category_general_settings"
-        android:layout="@layout/preference_category_compact_layout"
         android:order="2">
         <Preference
             android:icon="@drawable/ic_network"
@@ -33,6 +32,12 @@
             android:key="accounts_and_sign_in"
             android:title="@string/accounts_category_title"
             android:fragment="com.android.tv.settings.accounts.AccountsFragment" />
+        <com.android.tv.twopanelsettings.slices.SlicePreference
+            android:icon="@drawable/ic_add_an_account"
+            android:key="accounts_and_sign_in_slice"
+            android:title="@string/accounts_category_title"
+            android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+            custom:uri="content://com.google.android.apps.tv.launcherx.sliceprovider/general"/>
         <Preference
             android:icon="@drawable/ic_volume_up"
             android:key="sound"
