@@ -55,12 +55,6 @@
         <intent android:action="com.google.android.tvlauncher.SETTINGS"/>
     </Preference>
     <Preference
-        android:icon="@drawable/ic_cast"
-        android:key="cast"
-        android:title="@string/system_cast" >
-        <intent android:action="com.google.android.settings.CAST_RECEIVER_SETTINGS" />
-    </Preference>
-    <Preference
         android:fragment="com.android.tv.settings.device.display.daydream.DaydreamFragment"
         android:icon="@drawable/ic_settings_system_daydream"
         android:key="daydream"
