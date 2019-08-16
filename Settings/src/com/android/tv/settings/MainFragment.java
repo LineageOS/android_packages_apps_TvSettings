@@ -181,7 +181,6 @@ public class MainFragment extends PreferenceControllerFragment implements
         mQuickSettingsList = new PreferenceCategory(this.getPreferenceManager().getContext());
         mQuickSettingsList.setKey(KEY_QUICK_SETTINGS);
         mQuickSettingsList.setTitle(R.string.header_category_quick_settings);
-        mQuickSettingsList.setLayoutResource(R.layout.preference_category_compact_layout);
         mQuickSettingsList.setOrder(1); // at top, but below suggested settings
         getPreferenceScreen().addPreference(mQuickSettingsList);
         if (mHotwordSwitchController.isAvailable()) {
@@ -439,7 +438,6 @@ public class MainFragment extends PreferenceControllerFragment implements
             mSuggestionsList = new PreferenceCategory(this.getPreferenceManager().getContext());
             mSuggestionsList.setKey(KEY_SUGGESTIONS_LIST);
             mSuggestionsList.setTitle(R.string.header_category_suggestions);
-            mSuggestionsList.setLayoutResource(R.layout.preference_category_compact_layout);
             mSuggestionsList.setOrder(0); // always at top
             getPreferenceScreen().addPreference(mSuggestionsList);
         }
