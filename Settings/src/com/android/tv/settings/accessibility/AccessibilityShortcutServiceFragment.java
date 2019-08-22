@@ -35,6 +35,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 import java.util.List;
 
@@ -104,7 +105,22 @@ public class AccessibilityShortcutServiceFragment extends SettingsPreferenceFrag
         Settings.Secure.putString(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_SHORTCUT_TARGET_SERVICE,
                 componentString);
-        getFragmentManager().popBackStack();
+
+        if (!(getCallbackFragment() instanceof TwoPanelSettingsFragment)) {
+            getFragmentManager().popBackStack();
+        }
+
+        if (enabling) {
+            // the listener is only triggered when enabling a new service
+            int prefCount = getPreferenceScreen().getPreferenceCount();
+            for (int i = 0; i < prefCount; i++) {
+                RadioPreference pref = (RadioPreference) getPreferenceScreen().getPreference(i);
+                boolean shouldEnable = componentString.equals(pref.getKey());
+                if (pref != null) {
+                    pref.setChecked(shouldEnable);
+                }
+            }
+        }
     }
 
     @Override
