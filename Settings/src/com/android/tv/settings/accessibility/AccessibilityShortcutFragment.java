@@ -59,6 +59,7 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
                 Settings.Secure.ACCESSIBILITY_SHORTCUT_ENABLED, 1) == 1;
 
         enablePref.setChecked(shortcutEnabled);
+        setAccessibilityShortcutEnabled(shortcutEnabled);
     }
 
     @Override
