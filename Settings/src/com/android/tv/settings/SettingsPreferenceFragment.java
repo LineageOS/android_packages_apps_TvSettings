@@ -39,6 +39,7 @@ import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.instrumentation.VisibilityLoggerMixin;
 import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 /**
  * A {@link LeanbackPreferenceFragment} that has hooks to observe fragment lifecycle events
@@ -97,13 +98,17 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
         mLifecycle.handleLifecycleEvent(ON_START);
         super.onStart();
     }
-
     @CallSuper
     @Override
     public void onResume() {
         mVisibilityLoggerMixin.setSourceMetricsCategory(getActivity());
-        mLifecycle.handleLifecycleEvent(ON_RESUME);
         super.onResume();
+        mLifecycle.handleLifecycleEvent(ON_RESUME);
+        if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
+            TwoPanelSettingsFragment parentFragment =
+                    (TwoPanelSettingsFragment) getCallbackFragment();
+            parentFragment.addListenerForFragment(this);
+        }
     }
 
     @CallSuper
@@ -111,6 +116,11 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
     public void onPause() {
         mLifecycle.handleLifecycleEvent(ON_PAUSE);
         super.onPause();
+        if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
+            TwoPanelSettingsFragment parentFragment =
+                    (TwoPanelSettingsFragment) getCallbackFragment();
+            parentFragment.removeListenerForFragment(this);
+        }
     }
 
     @CallSuper

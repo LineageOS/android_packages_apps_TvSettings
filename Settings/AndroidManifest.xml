@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.tv.settings"
-    android:sharedUserId="android.uid.system"
-    android:versionCode="1"
-    android:versionName="1.0" >
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.android.tv.settings"
+          android:sharedUserId="android.uid.system"
+          android:versionCode="1"
+          android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="23" />
@@ -738,6 +739,14 @@
                 <action android:name="com.android.settings.action.SUGGESTION_STATE_PROVIDER" />
             </intent-filter>
         </provider>
+        <!-- Workaround to fix b/139637267 in Q. -->
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            tools:replace="android:authorities"
+            android:authorities="${applicationId}.lifecycle-tests"
+            android:exported="false"
+            android:multiprocess="true" />
+
     </application>
 
 </manifest>

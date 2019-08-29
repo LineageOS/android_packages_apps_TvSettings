@@ -18,6 +18,7 @@ package com.android.tv.settings.device;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
@@ -172,6 +173,11 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
 
         mSoundsPref.setIcon(SoundFragment.getSoundEffectsEnabled(getContext().getContentResolver())
                 ? R.drawable.ic_volume_up : R.drawable.ic_volume_off);
+        Intent soundIntent = new Intent(MainFragment.ACTION_SOUND);
+        final ResolveInfo info = MainFragment.systemIntentIsHandled(getContext(), soundIntent);
+        if (info != null) {
+            mSoundsPref.setVisible(false);
+        }
     }
 
     private void updateGoogleSettings() {
