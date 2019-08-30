@@ -73,6 +73,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             "SUBTYPE_ICON_NEED_TO_BE_PROCESSED";
     public static final String SUBTYPE_FOLLOWUP_INTENT = "SUBTYPE_FOLLOWUP_INTENT";
     public static final String SUBTYPE_IS_CHECK_MARK = "SUBTYPE_IS_CHECK_MARK";
+    public static final String SUBTYPE_IS_SELECTABLE = "SUBTYPE_IS_SELECTABLE";
 
     /**
      *
@@ -196,6 +197,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         private SliceItem mKeyItem;
         private SliceItem mIconNeedsToBeProcessedItem;
         private SliceItem mIsCheckMarkItem;
+        private SliceItem mIsSelectableItem;
         /**
          *
          */
@@ -259,6 +261,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
                 setIconNeedsToBeProcessed(builder.iconNeedsToBeProcessed());
             }
             setCheckMark(builder.isCheckMark());
+            setSelectable(builder.isSelectable());
             List<Object> endItems = builder.getEndItems();
             List<Integer> endTypes = builder.getEndTypes();
             List<Boolean> endLoads = builder.getEndLoads();
@@ -376,6 +379,14 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
                     isCheckMark ? 1 : 0, FORMAT_INT, SUBTYPE_IS_CHECK_MARK, new String[]{});
         }
 
+        /**
+         *
+         */
+        public void setSelectable(boolean selectable) {
+            mIsSelectableItem = new SliceItem(
+                    selectable ? 1 : 0, FORMAT_INT, SUBTYPE_IS_SELECTABLE, new String[]{});
+        }
+
         public void setKey(CharSequence key) {
             mKeyItem = new SliceItem(key, FORMAT_TEXT, TAG_KEY, new String[] {HINT_KEYWORDS});
         }
@@ -477,6 +488,9 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             }
             if (mIsCheckMarkItem != null) {
                 b.addItem(mIsCheckMarkItem);
+            }
+            if (mIsSelectableItem != null) {
+                b.addItem(mIsSelectableItem);
             }
             for (int i = 0; i < mEndItems.size(); i++) {
                 Slice item = mEndItems.get(i);
