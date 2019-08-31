@@ -233,7 +233,7 @@ public class MainFragmentTest {
     }
 
     @Test
-    public void testUpdateAccountPref_hasOneAccount() {
+    public void testUpdateAccountPrefInfo_hasOneAccount() {
         final Preference accountsPref = mock(Preference.class);
         doReturn(accountsPref).when(mMainFragment)
                     .findPreference(MainFragment.KEY_ACCOUNTS_AND_SIGN_IN);
@@ -241,7 +241,7 @@ public class MainFragmentTest {
         ShadowAccountManager am = extract(AccountManager.get(RuntimeEnvironment.application));
         am.addAccount(new Account("test", "test"));
 
-        mMainFragment.updateAccountPref();
+        mMainFragment.updateAccountPrefInfo();
 
         verify(accountsPref, atLeastOnce()).setIcon(R.drawable.ic_accounts_and_sign_in);
         verify(accountsPref, atLeastOnce()).setSummary("test");
@@ -249,13 +249,13 @@ public class MainFragmentTest {
     }
 
     @Test
-    public void testUpdateAccountPref_hasNoAccount() {
+    public void testUpdateAccountPrefInfo_hasNoAccount() {
         final Preference accountsPref = mock(Preference.class);
         doReturn(accountsPref).when(mMainFragment)
                     .findPreference(MainFragment.KEY_ACCOUNTS_AND_SIGN_IN);
         doReturn(true).when(accountsPref).isVisible();
 
-        mMainFragment.updateAccountPref();
+        mMainFragment.updateAccountPrefInfo();
 
         verify(accountsPref, atLeastOnce()).setIcon(R.drawable.ic_add_an_account);
         verify(accountsPref, atLeastOnce())
@@ -264,7 +264,7 @@ public class MainFragmentTest {
     }
 
     @Test
-    public void testUpdateAccountPref_hasMoreThanOneAccount() {
+    public void testUpdateAccountPrefInfo_hasMoreThanOneAccount() {
         final Preference accountsPref = mock(Preference.class);
         doReturn(RuntimeEnvironment.application.getResources()).when(mMainFragment).getResources();
         doReturn(accountsPref).when(mMainFragment)
@@ -274,7 +274,7 @@ public class MainFragmentTest {
         am.addAccount(new Account("test", "test"));
         am.addAccount(new Account("test2", "test2"));
 
-        mMainFragment.updateAccountPref();
+        mMainFragment.updateAccountPrefInfo();
 
         verify(accountsPref, atLeastOnce()).setIcon(R.drawable.ic_accounts_and_sign_in);
         String summary = RuntimeEnvironment.application.getResources()
