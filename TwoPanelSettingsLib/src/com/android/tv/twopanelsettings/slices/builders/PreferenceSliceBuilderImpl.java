@@ -24,6 +24,7 @@ import static android.app.slice.Slice.HINT_LIST_ITEM;
 import static android.app.slice.Slice.HINT_NO_TINT;
 import static android.app.slice.Slice.HINT_PARTIAL;
 import static android.app.slice.Slice.HINT_SHORTCUT;
+import static android.app.slice.Slice.HINT_SUMMARY;
 import static android.app.slice.Slice.HINT_TITLE;
 import static android.app.slice.Slice.HINT_TTL;
 import static android.app.slice.Slice.SUBTYPE_CONTENT_DESCRIPTION;
@@ -74,6 +75,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     public static final String SUBTYPE_FOLLOWUP_INTENT = "SUBTYPE_FOLLOWUP_INTENT";
     public static final String SUBTYPE_IS_CHECK_MARK = "SUBTYPE_IS_CHECK_MARK";
     public static final String SUBTYPE_IS_SELECTABLE = "SUBTYPE_IS_SELECTABLE";
+    public static final String SUBTYPE_INFO_PREFERENCE = "SUBTYPE_INFO_PREFERENCE";
 
     /**
      *
@@ -192,6 +194,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         private SliceItem mSubtitleItem;
         private Slice mStartItem;
         private ArrayList<Slice> mEndItems = new ArrayList<>();
+        private ArrayList<Slice> mInfoItems = new ArrayList<>();
         private CharSequence mContentDescr;
         private SliceItem mUriItem;
         private SliceItem mKeyItem;
@@ -277,6 +280,11 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
                         break;
                 }
             }
+
+            List<Pair<String, String>> infoItems = builder.getInfoItems();
+            for (int i = 0; i < infoItems.size(); i++) {
+                addInfoItem(infoItems.get(i).first, infoItems.get(i).second);
+            }
         }
 
         /**
@@ -285,6 +293,13 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         @NonNull
         private void setTitleItem(IconCompat icon, int imageMode) {
             setTitleItem(icon, imageMode, false /* isLoading */);
+        }
+
+        private void addInfoItem(String title, String summary) {
+            Slice.Builder sb = new Slice.Builder(getBuilder())
+                        .addText(title, null, HINT_TITLE)
+                        .addText(summary, null, HINT_SUMMARY);
+            mInfoItems.add(sb.build());
         }
 
         /**
@@ -495,6 +510,10 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             for (int i = 0; i < mEndItems.size(); i++) {
                 Slice item = mEndItems.get(i);
                 b.addSubSlice(item);
+            }
+            for (int i = 0; i < mInfoItems.size(); i++) {
+                Slice item = mInfoItems.get(i);
+                b.addSubSlice(item, SUBTYPE_INFO_PREFERENCE);
             }
             if (mContentDescr != null) {
                 b.addText(mContentDescr, SUBTYPE_CONTENT_DESCRIPTION);
