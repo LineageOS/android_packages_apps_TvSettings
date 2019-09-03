@@ -140,6 +140,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     @Override
     public void onPause() {
         super.onPause();
+        hideProgressBar();
         getContext().getContentResolver().unregisterContentObserver(mContentObserver);
         getSliceLiveData().removeObserver(this);
     }
@@ -398,6 +399,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private void showProgressBar() {
         View progressBar = getView().findViewById(R.id.progress_bar);
         if (progressBar != null) {
+            progressBar.bringToFront();
             progressBar.setVisibility(View.VISIBLE);
         }
     }
