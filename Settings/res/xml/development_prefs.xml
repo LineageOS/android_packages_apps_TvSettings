@@ -280,6 +280,30 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory android:key="audio_category"
+                        android:title="@string/audio_category">
+        <SwitchPreference
+            android:key="record_audio"
+            android:title="@string/record_audio"
+            android:summaryOn="@string/record_audio_summary_on"
+            android:summaryOff="@string/record_audio_summary_off"/>
+        <Preference
+            android:key="play_recorded_audio"
+            android:title="@string/play_recorded_audio_title"/>
+        <Preference
+            android:key="save_recorded_audio"
+            android:title="@string/save_recorded_audio_title"/>
+        <Preference
+            android:key="time_to_start_read"
+            android:title="@string/time_to_start_read_title"/>
+        <Preference
+            android:key="time_to_valid_audio"
+            android:title="@string/time_to_valid_audio_title"/>
+        <Preference
+            android:key="empty_audio_duration"
+            android:title="@string/empty_audio_duration_title"/>
+    </PreferenceCategory>
+
     <PreferenceCategory android:key="debug_monitoring_category"
                         android:title="@string/debug_monitoring_category">
 

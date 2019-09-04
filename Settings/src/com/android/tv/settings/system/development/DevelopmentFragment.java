@@ -71,10 +71,13 @@ import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.settingslib.development.SystemPropPoker;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.system.development.audio.AudioDebug;
+import com.android.tv.settings.system.development.audio.AudioMetrics;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Displays preferences for application developers.
@@ -112,6 +115,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private static final String DISABLE_OVERLAYS_KEY = "disable_overlays";
     private static final String SIMULATE_COLOR_SPACE = "simulate_color_space";
     private static final String USB_AUDIO_KEY = "usb_audio";
+    private static final String RECORD_AUDIO_KEY = "record_audio";
+    private static final String PLAY_RECORDED_AUDIO_KEY = "play_recorded_audio";
+    private static final String SAVE_RECORDED_AUDIO_KEY = "save_recorded_audio";
+    private static final String TIME_TO_START_READ_KEY = "time_to_start_read";
+    private static final String TIME_TO_VALID_AUDIO_KEY = "time_to_valid_audio";
+    private static final String EMPTY_AUDIO_DURATION_KEY = "empty_audio_duration";
     private static final String FORCE_MSAA_KEY = "force_msaa";
     private static final String TRACK_FRAME_TIME_KEY = "track_frame_time";
     private static final String SHOW_NON_RECTANGULAR_CLIP_KEY = "show_non_rect_clip";
@@ -221,6 +230,14 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private ListPreference mSimulateColorSpace;
 
     private SwitchPreference mUSBAudio;
+
+    private SwitchPreference mRecordAudio;
+    private Preference mPlayRecordedAudio;
+    private Preference mSaveAudio;
+    private Preference mTimeToStartRead;
+    private Preference mTimeToValidAudio;
+    private Preference mEmptyAudioDuration;
+
     private SwitchPreference mImmediatelyDestroyActivities;
 
     private ListPreference mAppProcessLimit;
@@ -239,6 +256,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private final HashSet<Preference> mDisabledPrefs = new HashSet<>();
 
     private boolean mUnavailable;
+
+    private AudioDebug mAudioDebug;
 
     public static DevelopmentFragment newInstance() {
         return new DevelopmentFragment();
@@ -266,6 +285,10 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mWifiManager = (WifiManager) getActivity().getSystemService(Context.WIFI_SERVICE);
 
         mContentResolver = getActivity().getContentResolver();
+
+        mAudioDebug = new AudioDebug(getActivity(),
+                () -> onAudioTrackRecorded(),
+                (AudioMetrics.Data data) -> updateAudioRecordingMetrics(data));
 
         super.onCreate(icicle);
     }
@@ -379,6 +402,17 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mOpenGLTraces = addListPreference(OPENGL_TRACES_KEY);
         mSimulateColorSpace = addListPreference(SIMULATE_COLOR_SPACE);
         mUSBAudio = findAndInitSwitchPref(USB_AUDIO_KEY);
+        mRecordAudio = findAndInitSwitchPref(RECORD_AUDIO_KEY);
+        mPlayRecordedAudio = findPreference(PLAY_RECORDED_AUDIO_KEY);
+        mPlayRecordedAudio.setVisible(false);
+        mSaveAudio = findPreference(SAVE_RECORDED_AUDIO_KEY);
+        mSaveAudio.setVisible(false);
+        mTimeToStartRead = findPreference(TIME_TO_START_READ_KEY);
+        mTimeToStartRead.setVisible(false);
+        mTimeToValidAudio = findPreference(TIME_TO_VALID_AUDIO_KEY);
+        mTimeToValidAudio.setVisible(false);
+        mEmptyAudioDuration = findPreference(EMPTY_AUDIO_DURATION_KEY);
+        mEmptyAudioDuration.setVisible(false);
         mForceResizable = findAndInitSwitchPref(FORCE_RESIZABLE_KEY);
 
         mImmediatelyDestroyActivities = (SwitchPreference) findPreference(
@@ -1178,6 +1212,44 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 mUSBAudio.isChecked() ? 1 : 0);
     }
 
+    private void writeRecordAudioOptions() {
+        if (mRecordAudio.isChecked()) {
+            mAudioDebug.startRecording();
+        } else {
+            mAudioDebug.stopRecording();
+        }
+    }
+
+    /** Called when an audio track has been recorded. Updates UI component states. */
+    private void onAudioTrackRecorded() {
+        mPlayRecordedAudio.setVisible(true);
+        mSaveAudio.setVisible(true);
+
+        mRecordAudio.setChecked(false);
+    }
+
+    /** Updates displayed audio recording metrics */
+    private void updateAudioRecordingMetrics(AudioMetrics.Data data) {
+        updateAudioRecordingMetric(mTimeToStartRead, data.timeToStartReadMs);
+        updateAudioRecordingMetric(mTimeToValidAudio, data.timeToValidAudioMs);
+        updateAudioRecordingMetric(mEmptyAudioDuration, data.emptyAudioDurationMs);
+    }
+
+    private static void updateAudioRecordingMetric(Preference preference, Optional<Long> ts) {
+        ts.ifPresent(x -> preference.setVisible(true));
+        if (preference.isVisible()) {
+            preference.setSummary(AudioMetrics.msTimestampToString(ts));
+        }
+    }
+
+    private void playRecordedAudio() {
+        mAudioDebug.playAudio();
+    }
+
+    private void saveRecordedAudio() {
+        mAudioDebug.writeAudioToFile();
+    }
+
     private void updateForceResizableOptions() {
         updateSwitchPreference(mForceResizable,
                 Settings.Global.getInt(mContentResolver,
@@ -1549,6 +1621,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             writeUSBAudioOptions();
         } else if (preference == mForceResizable) {
             writeForceResizableOptions();
+        } else if (preference == mRecordAudio) {
+            writeRecordAudioOptions();
+        } else if (preference == mSaveAudio) {
+            saveRecordedAudio();
+        } else if (preference == mPlayRecordedAudio) {
+            playRecordedAudio();
         } else {
             return super.onPreferenceTreeClick(preference);
         }
