@@ -20,11 +20,12 @@ import android.content.Context;
 import android.media.tv.TvInputInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.TwoStatePreference;
-import android.text.TextUtils;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.tv.settings.R;

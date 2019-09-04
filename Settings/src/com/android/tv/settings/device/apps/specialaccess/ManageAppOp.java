@@ -23,10 +23,11 @@ import android.content.pm.IPackageManager;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.preference.Preference;
-import android.util.Log;
 
 import com.android.internal.util.ArrayUtils;
 import com.android.settingslib.applications.ApplicationsState;

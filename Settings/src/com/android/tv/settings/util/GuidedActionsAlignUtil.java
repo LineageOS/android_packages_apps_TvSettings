@@ -16,6 +16,10 @@
 
 package com.android.tv.settings.util;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import androidx.leanback.app.GuidedStepFragment;
 import androidx.leanback.widget.BaseGridView;
 import androidx.leanback.widget.FacetProvider;
@@ -24,9 +28,6 @@ import androidx.leanback.widget.GuidedActionsStylist;
 import androidx.leanback.widget.ItemAlignmentFacet;
 import androidx.leanback.widget.ItemAlignmentFacet.ItemAlignmentDef;
 import androidx.leanback.widget.VerticalGridView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.android.tv.settings.R;
 

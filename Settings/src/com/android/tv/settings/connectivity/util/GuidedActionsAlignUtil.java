@@ -18,12 +18,13 @@ package com.android.tv.settings.connectivity.util;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.view.View;
+
 import androidx.leanback.widget.BaseGridView;
 import androidx.leanback.widget.FacetProvider;
 import androidx.leanback.widget.GuidedActionsStylist;
 import androidx.leanback.widget.ItemAlignmentFacet;
 import androidx.leanback.widget.VerticalGridView;
-import android.view.View;
 
 /**
  * Utilities to align the ActionGridView so that the baseline of the title view matches with

@@ -23,17 +23,30 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"建议"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"快捷设置"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"常规设置"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"忽略此建议"</string>
+    <string name="hotwording_title" msgid="1984130766527626626">"“Ok Google”启动指令检测"</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"随时与 Google 助理交谈"</string>
     <string name="header_category_device" msgid="4855983928659541345">"设备"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"偏好设置"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"遥控器和配件"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"个人"</string>
     <string name="connect_to_network" msgid="2209125715907353369">"连接到网络"</string>
     <string name="add_an_account" msgid="1123478843971990449">"添加帐号"</string>
-    <string name="accounts_category_title" msgid="594314526488667838">"帐号和登录"</string>
-    <string name="connectivity_network_category_title" msgid="6779497231311329071">"网络和互联网"</string>
+    <string name="accounts_category_title" msgid="7839427428921349418">"帐号和登录"</string>
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"未登录任何帐号"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> 个帐号</item>
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> 个帐号</item>
+    </plurals>
+    <string name="connectivity_network_category_title" msgid="6005656364481347542">"网络和互联网"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"应用"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"设备偏好设置"</string>
-    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"遥控器和配件"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"遥控器和配件"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"未连接任何蓝牙设备"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> 个配件</item>
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> 个配件</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"添加帐号"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"移除帐号"</string>
     <string name="account_sync" msgid="773808124331714965">"选择要同步的应用"</string>
@@ -51,10 +64,21 @@
     <string name="sync_active" msgid="6891115263481154378">"正在同步"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"WLAN"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"有线网络"</string>
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"已连接至以太网"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"未连接任何网络"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"WLAN 已关闭"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"随时都可扫描"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"允许 Google 的位置信息服务和其他应用扫描网络（即使 WLAN 已关闭）"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"WLAN"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"连接到网络"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"最近打开的应用"</string>
+    <string name="apps_see_all_apps" msgid="5546179088197139203">"查看所有应用"</string>
+    <string name="apps_permissions_category_title" msgid="4476837368840442313">"权限"</string>
+    <string name="all_apps_title" msgid="5330174847732759402">"所有应用"</string>
+    <string name="all_apps_show_system_apps" msgid="4648447904721171884">"显示系统应用"</string>
+    <string name="all_apps_installed" msgid="54800379871111518">"已安装的应用"</string>
+    <string name="all_apps_other" msgid="8297097642727891911">"系统应用"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"已停用的应用"</string>
     <string name="device_daydream" msgid="3354366974209179614">"屏保"</string>
     <string name="device_display" msgid="101455384386372747">"显示"</string>
     <string name="device_sound" msgid="9214182566287657481">"声音"</string>
@@ -66,11 +90,19 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"备份和还原"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"恢复出厂设置"</string>
     <string name="device_calibration" msgid="8632962533376605191">"校准"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"选择格式"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"环绕声"</string>
+    <string name="surround_sound_format_ac3" msgid="1724977459494885356">"Dolby Digital"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
+    <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
+    <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"注意：如果您的设备未正确报告其支持的格式，“自动”选项可能无法正常使用。"</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"自动：使用设备报告的支持格式（建议）"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"无：一律不使用环绕声"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"手动：选择要使用的格式"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"要清除缓存的数据吗？"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"此操作会清除所有应用的缓存数据。"</string>
-    <string name="apps_downloaded" msgid="4222190849854323480">"已下载的应用"</string>
-    <string name="apps_system" msgid="2499191125802829425">"系统应用"</string>
-    <string name="apps_running" msgid="6430310491739956228">"正在运行的应用"</string>
     <string name="accessories_add" msgid="1347802656349218830">"添加配件"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"正在配对…"</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"正在连接…"</string>
@@ -101,8 +133,8 @@
     <string name="system_date_time" msgid="8898457978560618950">"日期和时间"</string>
     <string name="system_language" msgid="2337138146114609247">"语言"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"键盘"</string>
-    <!-- no translation found for system_autofill_service (3867736719921644747) -->
-    <skip />
+    <string name="system_keyboard_autofill" msgid="5787948036400896834">"键盘和自动填充"</string>
+    <string name="system_autofill" msgid="8647914463541617409">"自动填充"</string>
     <string name="system_home" msgid="2858989138172296012">"主屏幕"</string>
     <string name="system_search" msgid="2837264654143247611">"搜索"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -245,6 +277,10 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"请输入有效的端口。\n示例：<xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"请输入以英文逗号分隔的排除网域列表或留空。\n示例：<xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"请输入有效的主机名。\n示例：<xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="3723583936041145157">"为 <xliff:g id="SSID">%1$s</xliff:g> 选择 EAP 方法"</string>
+    <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"为 <xliff:g id="SSID">%1$s</xliff:g> 选择阶段 2 身份验证"</string>
+    <string name="title_wifi_identity" msgid="6154397685951091638">"输入 <xliff:g id="SSID">%1$s</xliff:g> 的身份信息"</string>
+    <string name="title_wifi_anonymous_identity" msgid="4530402657655491360">"输入 <xliff:g id="SSID">%1$s</xliff:g> 的匿名身份"</string>
     <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"您已连接到 <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"已连接至网络"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"未连接到网络"</string>
@@ -324,7 +360,6 @@
     <string name="storage_missing_description" msgid="8400374014342069781">"在重新连接硬盘前，某些应用将不可用或无法正常运行。"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"存储空间不足。"</string>
     <string name="does_not_exist" msgid="4553235698171937217">"应用不存在。"</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"应用受版权保护。"</string>
     <string name="invalid_location" msgid="5269044848535157307">"安装位置无效。"</string>
     <string name="system_package" msgid="9200255718634512790">"无法在外部介质上安装系统更新。"</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"无法在外部介质上安装设备管理器。"</string>
@@ -458,9 +493,9 @@
     <string name="system_show_surface_updates" msgid="8878834675712192327">"显示面(surface)更新"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"窗口动画缩放"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"过渡动画缩放"</string>
-    <string name="system_animator_duration_scale" msgid="7413512458963984521">"动画程序时长调整"</string>
+    <string name="system_animator_duration_scale" msgid="7413512458963984521">"Animator 时长调整"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"启用严格模式"</string>
-    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"GPU渲染模式分析"</string>
+    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"GPU 渲染模式分析"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"启用跟踪"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"不保留活动"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"后台进程限制"</string>
@@ -472,7 +507,7 @@
     <string name="system_desc_usb_debugging" msgid="5168830368191788731">"连接 USB 后开启调试模式"</string>
     <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"调试应用会在执行前等待附加调试程序"</string>
     <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"显示剪裁边界、边距等"</string>
-    <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"使用GPU绘图时在窗口中闪烁视图"</string>
+    <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"使用 GPU 进行绘图时闪烁显示窗口中的视图"</string>
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"硬件层更新时闪烁绿色"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"从最优到最差依次显示为：蓝色、绿色、淡红色、红色"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"窗口中的面(surface)更新时全部闪烁"</string>
@@ -522,13 +557,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"正常"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"快"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"很快"</string>
+    <string name="title_settings" msgid="5433841477518010243">"<xliff:g id="NAME">%1$s</xliff:g>设置"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"当前键盘"</string>
     <string name="title_configure" msgid="6929522003149212388">"配置"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"键盘选项"</string>
-    <!-- no translation found for title_current_autofill_service (6055852915343152350) -->
-    <skip />
-    <!-- no translation found for autofill_disable (539635915296078432) -->
-    <skip />
+    <string name="title_current_autofill_service" msgid="6055852915343152350">"目前的自动填充服务"</string>
+    <string name="title_select_autofill_service" msgid="2515782066694197988">"选择自动填充服务"</string>
+    <string name="autofill_none" msgid="2426888642367790651">"无"</string>
+    <string name="autofill_confirmation_message" msgid="9068009043054751287">"&lt;b&gt;请确认这是您信任的应用&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Password service&gt;%1$s&lt;/xliff:g&gt;会根据您的屏幕内容判断可自动填充哪些内容。"</string>
     <string name="computing_size" msgid="2955133568424704042">"正在计算..."</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"选择您的 WLAN 网络"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"改名"</string>
@@ -662,6 +698,8 @@
     <string name="custom_room" msgid="8655516733933892458">"输入自定义名称…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"重命名此 <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"此 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 目前的名称为“<xliff:g id="DEVICENAME">%2$s</xliff:g>”"</string>
+    <string name="device_name_suggestion_title" msgid="2312205155408810120">"请设置设备名称"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"从手机投射照片、视频等内容时会使用此名称"</string>
     <string name="change_setting" msgid="2047402388786162246">"更改"</string>
     <string name="keep_settings" msgid="6798327196645732517">"不更改"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"权限"</string>
@@ -680,7 +718,7 @@
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"允许"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"不允许"</string>
     <string name="usage_access" msgid="1914242907684452328">"使用情况访问权限"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"使用情况访问权限允许应用跟踪您正在使用的其他应用和使用频率，以及您的运营商、语言设置及其他详细信息。"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"给应用授予“使用情况访问权限”后，该应用就能跟踪您正在使用的其他应用和使用频率，以及您的运营商、语言设置及其他详细信息。"</string>
     <string name="high_power_apps" msgid="7796096221999495077">"电源优化"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"优化应用耗电量"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"没有应用需要优化"</string>
@@ -690,6 +728,9 @@
     <string name="manage_notification_access_title" msgid="2051765294087620434">"通知使用权"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"没有任何已安装的应用申请通知使用权。"</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"这些应用将能够读取所有通知（包括联系人姓名和您收到的消息文字等个人信息），还将可以关闭这些通知或触发通知中包含的操作按钮。"</string>
+    <string name="directory_access" msgid="7439168599298598101">"目录访问权限"</string>
+    <string name="directory_access_description" msgid="878500352290246580">"这些应用有权访问特定目录。"</string>
+    <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g>（<xliff:g id="DIRECTORY">%2$s</xliff:g>）"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"显示在其他应用的上层"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"允许显示在其他应用的上层"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"允许应用显示在您当前使用的其他应用的上层。这可能会干扰您使用相关应用，或变更这类应用的显示或运行方式。"</string>
@@ -703,4 +744,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"已安装的应用均不支持画中画功能"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"允许应用在您打开应用时或您离开应用后（例如继续观看视频）创建画中画窗口。这类窗口会显示在您当前使用的其他应用的上层。"</string>
     <string name="special_access" msgid="3513811566600299998">"特殊应用权限"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>，<xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

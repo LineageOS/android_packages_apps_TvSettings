@@ -23,17 +23,34 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"הצעות"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"הגדרות מהירות"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"הגדרות כלליות"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"דחיית ההצעה"</string>
+    <string name="hotwording_title" msgid="1984130766527626626">"זיהוי של \"Ok Google\""</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"אפשר לדבר עם Google Assistant בכל עת"</string>
     <string name="header_category_device" msgid="4855983928659541345">"מכשיר"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"העדפות"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"שלט רחוק ועזרים"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"אישי"</string>
     <string name="connect_to_network" msgid="2209125715907353369">"התחברות לרשת"</string>
     <string name="add_an_account" msgid="1123478843971990449">"הוספת חשבון"</string>
-    <string name="accounts_category_title" msgid="594314526488667838">"חשבונות וכניסה"</string>
-    <string name="connectivity_network_category_title" msgid="6779497231311329071">"רשת ואינטרנט"</string>
+    <string name="accounts_category_title" msgid="7839427428921349418">"חשבונות וכניסה"</string>
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"אין חשבונות"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="two"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> חשבונות</item>
+      <item quantity="many"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> חשבונות</item>
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> חשבונות</item>
+      <item quantity="one">חשבון אחד (<xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g>)</item>
+    </plurals>
+    <string name="connectivity_network_category_title" msgid="6005656364481347542">"רשת ואינטרנט"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"אפליקציות"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"העדפות מכשיר"</string>
-    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"מכשירי שלט רחוק ואביזרים"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"מכשירי שלט רחוק ואביזרים"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"אין מכשירי Bluetooth מחוברים"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="two"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> אביזרים</item>
+      <item quantity="many"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> אביזרים</item>
+      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> אביזרים</item>
+      <item quantity="one">אביזר אחד (<xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g>)</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"הוסף חשבון"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"הסרת חשבון"</string>
     <string name="account_sync" msgid="773808124331714965">"בחר אפליקציות מסונכרנות"</string>
@@ -51,10 +68,21 @@
     <string name="sync_active" msgid="6891115263481154378">"הסנכרון פעיל"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethernet מחובר"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"אין רשת מחוברת"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"Wi-Fi כבוי"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"סריקה זמינה תמיד"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"תן לשירות המיקום של Google ולאפליקציות אחרות לסרוק על מנת למצוא רשתות, גם כשה-Wi-Fi כבוי"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"התחברות לרשת"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"אפליקציות שנפתחו לאחרונה"</string>
+    <string name="apps_see_all_apps" msgid="5546179088197139203">"הצגת כל האפליקציות"</string>
+    <string name="apps_permissions_category_title" msgid="4476837368840442313">"הרשאות"</string>
+    <string name="all_apps_title" msgid="5330174847732759402">"כל האפליקציות"</string>
+    <string name="all_apps_show_system_apps" msgid="4648447904721171884">"הצגת אפליקציות מערכת"</string>
+    <string name="all_apps_installed" msgid="54800379871111518">"אפליקציות מותקנות"</string>
+    <string name="all_apps_other" msgid="8297097642727891911">"אפליקציות מערכת"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"אפליקציות מושבתות"</string>
     <string name="device_daydream" msgid="3354366974209179614">"שומר מסך"</string>
     <string name="device_display" msgid="101455384386372747">"תצוגה"</string>
     <string name="device_sound" msgid="9214182566287657481">"צליל"</string>
@@ -66,11 +94,19 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"גיבוי ושחזור"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"איפוס לנתוני היצרן"</string>
     <string name="device_calibration" msgid="8632962533376605191">"כיול"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"בחירת פורמטים"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"סראונד"</string>
+    <string name="surround_sound_format_ac3" msgid="1724977459494885356">"Dolby Digital"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
+    <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
+    <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"הערה: ייתכן שהאפשרות להגדרה אוטומטית לא תפעל אם המכשיר שלך לא מדווח כראוי על הפורמטים הנתמכים שלו."</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"אוטומטי: שימוש בפורמטים המדווחים כנתמכים על ידי המכשיר (מומלץ)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"ללא: אל תשתמש אף פעם בצליל סראונד"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"ידני: בחירה בפורמטים שבהם ייעשה שימוש"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"האם לנקות נתונים בקובץ שמור?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"פעולה זו תנקה נתונים בקובץ שמור, לכל האפליקציות."</string>
-    <string name="apps_downloaded" msgid="4222190849854323480">"אפליקציות שהורדו"</string>
-    <string name="apps_system" msgid="2499191125802829425">"אפליקציות מערכת"</string>
-    <string name="apps_running" msgid="6430310491739956228">"אפליקציות פועלות"</string>
     <string name="accessories_add" msgid="1347802656349218830">"הוסף ציוד היקפי"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"מבצע התאמה…"</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"מתחבר..."</string>
@@ -101,8 +137,8 @@
     <string name="system_date_time" msgid="8898457978560618950">"תאריך ושעה"</string>
     <string name="system_language" msgid="2337138146114609247">"שפה"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"מקלדת"</string>
-    <!-- no translation found for system_autofill_service (3867736719921644747) -->
-    <skip />
+    <string name="system_keyboard_autofill" msgid="5787948036400896834">"מקלדת ומילוי אוטומטי"</string>
+    <string name="system_autofill" msgid="8647914463541617409">"מילוי אוטומטי"</string>
     <string name="system_home" msgid="2858989138172296012">"מסך דף הבית"</string>
     <string name="system_search" msgid="2837264654143247611">"חיפוש"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -247,6 +283,10 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"הזן יציאה חוקית.\nלדוגמה: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"הזן רשימה עם ערכים המופרדים באמצעות פסיקים של דומיינים שאינם נכללים, או השאר ריק.\nלדוגמה: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"הזן שם מארח.\nלדוגמה: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="3723583936041145157">"בחירה בשיטת EAP עבור <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"בחירה באימות שלב 2 עבור <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_identity" msgid="6154397685951091638">"הזנת זהות עבור <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_anonymous_identity" msgid="4530402657655491360">"הזנת זהות אנונימית עבור <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"אתה מחובר אל <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"הרשת מחוברת"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"הרשת לא מחוברת"</string>
@@ -326,7 +366,6 @@
     <string name="storage_missing_description" msgid="8400374014342069781">"חלק מהאפליקציות לא יהיו זמינות או שלא יתפקדו כראוי עד שהכונן יחובר מחדש."</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"אין מספיק שטח אחסון."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"האפליקציה לא קיימת."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"האפליקציה מוגנת בפני העתקה."</string>
     <string name="invalid_location" msgid="5269044848535157307">"מיקום ההתקנה אינו חוקי."</string>
     <string name="system_package" msgid="9200255718634512790">"לא ניתן להתקין עדכוני מערכת במדיה חיצונית."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"לא ניתן להתקין את מנהל ההתקנים במדיה חיצונית."</string>
@@ -524,13 +563,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"רגיל"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"מהיר"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"מהיר מאוד"</string>
+    <string name="title_settings" msgid="5433841477518010243">"הגדרות <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"מקלדת נוכחית"</string>
     <string name="title_configure" msgid="6929522003149212388">"הגדר"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"אפשרויות מקלדת"</string>
-    <!-- no translation found for title_current_autofill_service (6055852915343152350) -->
-    <skip />
-    <!-- no translation found for autofill_disable (539635915296078432) -->
-    <skip />
+    <string name="title_current_autofill_service" msgid="6055852915343152350">"שירות מילוי אוטומטי נוכחי"</string>
+    <string name="title_select_autofill_service" msgid="2515782066694197988">"בחירת שירות של מילוי אוטומטי"</string>
+    <string name="autofill_none" msgid="2426888642367790651">"ללא"</string>
+    <string name="autofill_confirmation_message" msgid="9068009043054751287">"&lt;b&gt;יש לוודא שאפליקציה זו מהימנה&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Password service&gt;%1$s&lt;/xliff:g&gt; האפליקציה משתמשת במידע שבמסך כדי לקבוע מה ניתן למלא באופן אוטומטי."</string>
     <string name="computing_size" msgid="2955133568424704042">"מבצע חישוב…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"בחר רשת Wi-Fi"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"שנה שם"</string>
@@ -619,7 +659,7 @@
     <string name="wifi_setup_save_success" msgid="4785799603638549254">"נשמר בהצלחה"</string>
     <string name="device_apps_app_management_version" msgid="2267065043941006486">"גרסה <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"פתח"</string>
-    <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"אלץ עצירה"</string>
+    <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"אילוץ עצירה"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"אם תאלץ עצירה של אפליקציה, ייתכן שהיא לא תפעל כהלכה."</string>
     <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"הסר התקנה"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"הסר התקנה של עדכונים"</string>
@@ -672,6 +712,8 @@
     <string name="custom_room" msgid="8655516733933892458">"הזן שם בהתאמה אישית…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"שנה את השם של ה-<xliff:g id="DEVICEMODEL">%1$s</xliff:g> הזה"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> הזה נקרא כעת \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
+    <string name="device_name_suggestion_title" msgid="2312205155408810120">"הגדרת שם המכשיר"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"יש לבחור בשם זה כשמעבירים תמונות, סרטונים ופריטים נוספים מהטלפון"</string>
     <string name="change_setting" msgid="2047402388786162246">"שנה"</string>
     <string name="keep_settings" msgid="6798327196645732517">"אל תשנה"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"אישורים"</string>
@@ -700,6 +742,9 @@
     <string name="manage_notification_access_title" msgid="2051765294087620434">"גישה להודעות"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"אין אפליקציות מותקנות שביקשו גישה להודעות."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"אפליקציות אלה יוכלו לקרוא את כל ההודעות, כולל מידע אישי כמו שמות של אנשי קשר והודעות טקסט שתקבל. הן גם יוכלו לבטל הודעות או להפעיל לחצני פעולה שהן כוללות."</string>
+    <string name="directory_access" msgid="7439168599298598101">"גישה לספרייה"</string>
+    <string name="directory_access_description" msgid="878500352290246580">"לאפליקציות אלה יש הרשאת גישה לספריות מסוימות."</string>
+    <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"תצוגה מעל אפליקציות אחרות"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"מתן אישור לתצוגה מעל אפליקציות אחרות"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"הגדרה זו מתירה לאפליקציה להופיע מעל אפליקציות אחרות שנמצאות בשימוש. הפעולה הזאת עשויה להפריע לשימוש שלך באפליקציות האלה או לשנות את האופן שבו הן מוצגות או מתנהגות."</string>
@@ -713,4 +758,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"אין אפליקציות מותקנות שתומכות ב\'תמונה בתוך תמונה\'"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"אפליקציה זו תוכל ליצור חלון מסוג תמונה בתוך תמונה בזמן שהיא תהיה פתוחה או לאחר היציאה ממנה (למשל, כדי להמשיך לצפות בסרטון). חלון זה מוצג מעל אפליקציות אחרות שנמצאות בשימוש."</string>
     <string name="special_access" msgid="3513811566600299998">"גישה מיוחדת לאפליקציה"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

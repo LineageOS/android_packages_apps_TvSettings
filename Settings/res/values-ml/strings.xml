@@ -23,17 +23,30 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"നിർദ്ദേശങ്ങൾ"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"ദ്രുത ക്രമീകരണം"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"പൊതു ക്രമീകരണം"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"നിർദ്ദേശം ഡിസ്മിസ്സ് ചെയ്യുക"</string>
+    <string name="hotwording_title" msgid="1984130766527626626">"\"Ok Google\" തിരിച്ചറിയൽ"</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"ഏത് സമയത്തും Google അസിസ്‌റ്റന്റിനോട് സംസാരിക്കുക"</string>
     <string name="header_category_device" msgid="4855983928659541345">"ഉപകരണം"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"മുൻഗണനകൾ"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"വിദൂര നിയന്ത്രണവും ആക്‌സസറികളും"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"സ്വകാര്യം"</string>
     <string name="connect_to_network" msgid="2209125715907353369">"നെറ്റ്‌വർക്കിലേക്ക് കണക്‌റ്റ് ചെയ്യുക"</string>
     <string name="add_an_account" msgid="1123478843971990449">"ഒരു അക്കൗണ്ട് ചേർക്കുക"</string>
-    <string name="accounts_category_title" msgid="594314526488667838">"അക്കൗണ്ടുകളും സൈൻ ഇൻ ചെയ്യലും"</string>
-    <string name="connectivity_network_category_title" msgid="6779497231311329071">"നെറ്റ്‌വർക്കും ഇന്റർനെറ്റും"</string>
+    <string name="accounts_category_title" msgid="7839427428921349418">"അക്കൗണ്ടുകളും സൈൻ ഇൻ ചെയ്യലും"</string>
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"അക്കൗണ്ടുകളില്ല"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> അക്കൗണ്ടുകൾ</item>
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> അക്കൗണ്ട്</item>
+    </plurals>
+    <string name="connectivity_network_category_title" msgid="6005656364481347542">"നെറ്റ്‌വർക്കും ഇന്റർനെറ്റും"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"ആപ്പുകൾ"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"ഉപകരണ മുൻഗണനകൾ"</string>
-    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"റിമോട്ടുകളും ആക്‌സസറികളും"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"റിമോട്ടുകളും ആക്‌സസറികളും"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"കണക്റ്റ് ചെയ്‌ത Bluetooth ഉപകരണങ്ങളൊന്നുമില്ല"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ആക്സസറികൾ</item>
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ആക്സസറി</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"അക്കൗണ്ട് ചേർക്കുക"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"അക്കൗണ്ട് നീക്കംചെയ്യുക"</string>
     <string name="account_sync" msgid="773808124331714965">"സമന്വയിപ്പിച്ച അപ്ലിക്കേഷനുകൾ തിരഞ്ഞെടുക്കുക"</string>
@@ -51,10 +64,21 @@
     <string name="sync_active" msgid="6891115263481154378">"സമന്വയം സജീവമാണ്"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"വൈഫൈ"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"ഇതർനെറ്റ്"</string>
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"ഇതർനെറ്റ് കണക്റ്റ് ചെയ്‌തു"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"നെറ്റ്‌വർക്കൊന്നും കണക്‌റ്റ് ചെയ്‌തിട്ടില്ല"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"വൈഫൈ ഓഫാക്കിയിരിക്കുന്നു"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"സ്‌കാനിംഗ് എപ്പോഴും ലഭ്യമാണ്"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Wi-Fi ഓഫാണെങ്കിൽപ്പോലും, Google ലൊക്കേഷൻ സേവനങ്ങളേയും മറ്റ് അപ്ലിക്കേഷനുകളെയും നെറ്റ്‌വർക്കുകൾ സ്‌കാൻ ചെയ്യാൻ അനുവദിക്കുക"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"വൈഫൈ"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"നെറ്റ്‌വർക്കിലേക്ക് കണക്‌റ്റ് ചെയ്യുക"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"ഈയടുത്ത് തുറന്ന ആപ്പുകൾ"</string>
+    <string name="apps_see_all_apps" msgid="5546179088197139203">"എല്ലാ ആപ്പുകളും കാണുക"</string>
+    <string name="apps_permissions_category_title" msgid="4476837368840442313">"അനുമതികൾ"</string>
+    <string name="all_apps_title" msgid="5330174847732759402">"എല്ലാ ആപ്പുകളും"</string>
+    <string name="all_apps_show_system_apps" msgid="4648447904721171884">"സിസ്റ്റം ആപ്പുകൾ കാണിക്കുക"</string>
+    <string name="all_apps_installed" msgid="54800379871111518">"ഇൻസ്‌റ്റാൾ ചെയ്‌ത ആപ്പുകൾ"</string>
+    <string name="all_apps_other" msgid="8297097642727891911">"സിസ്‌റ്റം അപ്ലിക്കേഷനുകൾ"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"പ്രവർത്തനരഹിതമാക്കിയ ആപ്പുകൾ"</string>
     <string name="device_daydream" msgid="3354366974209179614">"സ്ക്രീൻ സേവർ"</string>
     <string name="device_display" msgid="101455384386372747">"ഡിസ്‌പ്ലേ"</string>
     <string name="device_sound" msgid="9214182566287657481">"ശബ്‌ദം"</string>
@@ -66,11 +90,19 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"ബാക്കപ്പുചെയ്യലും പുനഃസ്ഥാപിക്കലും"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"ഫാക്‌ടറി ഡാറ്റ പുനഃക്രമീകരണം"</string>
     <string name="device_calibration" msgid="8632962533376605191">"കാലിബ്രേഷൻ"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"ഫോർമാറ്റുകൾ തിരഞ്ഞെടുക്കുക"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"സറൗണ്ട് ശബ്‌ദം"</string>
+    <string name="surround_sound_format_ac3" msgid="1724977459494885356">"ഡോൾബി ഡിജിറ്റൽ"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"ഡോൾബി ഡിജിറ്റൽ പ്ലസ്"</string>
+    <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
+    <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
+    <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"ശ്രദ്ധിക്കുക: ഉപകരണം അതിന്റെ പിന്തുണക്കുന്ന ഫോർമാറ്റുകൾ റിപ്പോർട്ട് ചെയ്‌തില്ലെങ്കിൽ, സ്വമേധയായുള്ള ഓപ്ഷൻ പ്രവർത്തിക്കണമെന്നില്ല."</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"സ്വമേധയാ: ഉപകരണം പിന്തുണക്കുമെന്ന് റിപ്പോർട്ട് ചെയ്‌തിരിക്കുന്ന ഫോർമാറ്റുകൾ ഉപയോഗിക്കുക (ശുപാർശ ചെയ്‌തത്)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"ഒരിക്കലും: സറൗണ്ട് ശബ്‌ദം ഒരിക്കലും ഉപയോഗിക്കരുത്"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"മാനുവൽ: ഉപയോഗിക്കുന്ന ഫോർമാറ്റ് തിരഞ്ഞെടുക്കുക"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"കാഷെ ചെയ്‌ത ഡാറ്റ മായ്‌ക്കണോ?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"ഇത് എല്ലാ അപ്ലിക്കേഷനുകൾക്കുമായി കാഷെ ചെയ്ത ഡാറ്റ മായ്‌ക്കും."</string>
-    <string name="apps_downloaded" msgid="4222190849854323480">"ഡൗൺലോഡുചെയ്ത അപ്ലിക്കേഷനുകൾ"</string>
-    <string name="apps_system" msgid="2499191125802829425">"സിസ്‌റ്റം അപ്ലിക്കേഷനുകൾ"</string>
-    <string name="apps_running" msgid="6430310491739956228">"പ്രവർത്തിക്കുന്ന അപ്ലിക്കേഷനുകൾ"</string>
     <string name="accessories_add" msgid="1347802656349218830">"ചേർക്കൂ"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"ജോടിയാക്കുന്നു…"</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"കണക്‌റ്റുചെയ്യുന്നു..."</string>
@@ -101,8 +133,8 @@
     <string name="system_date_time" msgid="8898457978560618950">"തീയതിയും സമയവും"</string>
     <string name="system_language" msgid="2337138146114609247">"ഭാഷ"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"കീബോർഡ്"</string>
-    <!-- no translation found for system_autofill_service (3867736719921644747) -->
-    <skip />
+    <string name="system_keyboard_autofill" msgid="5787948036400896834">"കീബോർഡും സ്വമേധയാ പൂരിപ്പിക്കലും"</string>
+    <string name="system_autofill" msgid="8647914463541617409">"സ്വമേധയാ പൂരിപ്പിക്കൽ"</string>
     <string name="system_home" msgid="2858989138172296012">"ഹോം സ്‌ക്രീൻ"</string>
     <string name="system_search" msgid="2837264654143247611">"തിരയുക"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -245,6 +277,10 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"സാധുതയുള്ളൊരു പോർട്ട് നൽകുക.\nഉദാഹരണം: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"ഒഴിവാക്കിയ ഡൊമെയ്നുകളുടെ കോമയാൽ വേർതിരിച്ച ലിസ്‌റ്റ് നൽകുക അല്ലെങ്കിൽ ശൂന്യമായി വിടുക.\nഉദാഹരണം: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"സാധുതയുള്ളൊരു ഹോസ്‌റ്റ്‌നെയിം നൽകുക.\nഉദാഹരണം: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="3723583936041145157">"<xliff:g id="SSID">%1$s</xliff:g> എന്നതിനായി EAP രീതി തിരഞ്ഞെടുക്കുക"</string>
+    <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"<xliff:g id="SSID">%1$s</xliff:g> എന്നതിന്റെ രണ്ടാംഘട്ട പരിശോധിച്ചുറപ്പിക്കൽ തിരഞ്ഞെടുക്കുക"</string>
+    <string name="title_wifi_identity" msgid="6154397685951091638">"<xliff:g id="SSID">%1$s</xliff:g> എന്നതിന്റെ ഐഡന്റിറ്റി നൽകുക"</string>
+    <string name="title_wifi_anonymous_identity" msgid="4530402657655491360">"<xliff:g id="SSID">%1$s</xliff:g> എന്നതിനായി അജ്ഞാത ഐഡന്റിറ്റി നൽകുക"</string>
     <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"<xliff:g id="SSID">%1$s</xliff:g>-ലേക്ക് കണ‌ക്‌റ്റ് ചെയ്‌തു"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"നെറ്റ്‌വർക്ക് കണക്‌റ്റുചെയ്‌തു"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"നെറ്റ്‌വർക്ക് കണക്‌റ്റുചെയ്‌തിട്ടില്ല"</string>
@@ -324,7 +360,6 @@
     <string name="storage_missing_description" msgid="8400374014342069781">"ഡ്രൈവ് വീണ്ടും കണക്റ്റുചെയ്യുന്നത് വരെ, ചില ആപ്‌സ് ലഭ്യമാവുകയോ ശരിയായി പ്രവർത്തിക്കുകയോ ചെയ്യില്ല."</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"ആവശ്യമായ സംഭരണ ഇടമില്ല."</string>
     <string name="does_not_exist" msgid="4553235698171937217">"ആപ്പ് നിലവിലില്ല."</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"പകർത്തുന്നതിൽ നിന്ന് ആപ്പിനെ പരിരക്ഷിച്ചിരിക്കുന്നു."</string>
     <string name="invalid_location" msgid="5269044848535157307">"ഇൻസ്റ്റാൾ ചെയ്ത ലൊക്കേഷൻ അസാധുവാണ്."</string>
     <string name="system_package" msgid="9200255718634512790">"ബാഹ്യ മീഡിയയിൽ സി‌സ്റ്റം അപ്ഡേറ്റുകൾ ഇൻസ്റ്റാൾ ചെയ്യാനാകില്ല."</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"ബാഹ്യ മീഡിയയിൽ ഉപകരണ അഡ്മിനിസ്ട്രേറ്റർ ഇൻസ്റ്റാൾ ചെയ്യാനാകില്ല."</string>
@@ -522,13 +557,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"സാധാരണം"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"വേഗത്തിൽ"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"വേഗതയേറിയത്"</string>
+    <string name="title_settings" msgid="5433841477518010243">"<xliff:g id="NAME">%1$s</xliff:g> ക്രമീകരണം"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"നിലവിലെ കീബോർഡ്"</string>
     <string name="title_configure" msgid="6929522003149212388">"കോൺഫിഗർ ചെയ്യുക"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"ക്കീബോർഡ് ഓപ്ഷനുകൾ"</string>
-    <!-- no translation found for title_current_autofill_service (6055852915343152350) -->
-    <skip />
-    <!-- no translation found for autofill_disable (539635915296078432) -->
-    <skip />
+    <string name="title_current_autofill_service" msgid="6055852915343152350">"നിലവിലെ സ്വമേധയാ പൂരിപ്പിക്കൽ സേവനം"</string>
+    <string name="title_select_autofill_service" msgid="2515782066694197988">"സ്വമേധയാ പൂരിപ്പിക്കൽ സേവനം തിരഞ്ഞെടുക്കുക"</string>
+    <string name="autofill_none" msgid="2426888642367790651">"ഒന്നുമില്ല"</string>
+    <string name="autofill_confirmation_message" msgid="9068009043054751287">"&lt;b&gt;ഈ ആപ്പിനെ നിങ്ങൾ വിശ്വസിക്കുന്നുണ്ടെന്ന് ഉറപ്പുവരുത്തുക&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=പാസ്‍വേഡ് സേവനം&gt;%1$s&lt;/xliff:g&gt; സ്വയമേവ പൂരിപ്പിക്കേണ്ടത് എന്താണെന്ന് നിർണ്ണയിക്കുന്നതിന് നിങ്ങളുടെ സ്‌ക്രീനിൽ ഉള്ളത് ഉപയോഗിക്കുന്നു."</string>
     <string name="computing_size" msgid="2955133568424704042">"കണക്കാക്കുന്നു…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"നിങ്ങളുടെ വൈഫൈ നെറ്റ്‌വർക്ക് തിരഞ്ഞെടുക്കുക"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"പേരുമാറ്റുക"</string>
@@ -662,6 +698,8 @@
     <string name="custom_room" msgid="8655516733933892458">"ഇ‌ഷ്‌ടാനുസൃത പേര് നൽകുക…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"ഈ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> മോഡലിന്റെ പേരുമാറ്റുക"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"നിലവിൽ ഈ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> മോഡലിന്റെ പേര് \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" എന്നാണ്"</string>
+    <string name="device_name_suggestion_title" msgid="2312205155408810120">"നിങ്ങളുടെ ഉപകരണത്തിന്റെ പേര് സജ്ജീകരിക്കുക"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"നിങ്ങളുടെ ഫോണിൽ നിന്ന് ഫോട്ടോകളും വീഡിയോകളും മറ്റും കാസ്‌റ്റ് ചെയ്യുമ്പോൾ ഈ പേര് ഉപയോഗിക്കുക"</string>
     <string name="change_setting" msgid="2047402388786162246">"മാറ്റുക"</string>
     <string name="keep_settings" msgid="6798327196645732517">"മാറ്റരുത്"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"അനുമതികൾ"</string>
@@ -690,6 +728,9 @@
     <string name="manage_notification_access_title" msgid="2051765294087620434">"അറിയിപ്പ് ആക്സസ്"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"ഇൻസ്‌റ്റാൾ ചെയ്ത ആപ്പുകളൊന്നും അറിയിപ്പ് ആക്‌സസ് അഭ്യർത്ഥിച്ചിട്ടില്ല."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"കോൺടാക്റ്റ് പേരുകളും നിങ്ങൾ സ്വീകരിക്കുന്ന സന്ദേശ ടെക്സ്റ്റുകളും പോലുള്ള വ്യക്തിഗത വിവരങ്ങൾ ഉൾപ്പെടെ, എല്ലാ അറിയിപ്പുകളും ഈ ആപ്പുകൾക്ക് വായിക്കാനാകും. കൂടാതെ അറിയിപ്പുകൾ ഒഴിവാക്കാനോ അവയിലടങ്ങിയിരിക്കുന്ന പ്രവർത്തന ബട്ടണുകൾ ട്രിഗർ ചെയ്യാനോ ഇവയ്ക്ക് കഴിയും."</string>
+    <string name="directory_access" msgid="7439168599298598101">"ഡയറക്റ്ററി ആക്‌സസ്"</string>
+    <string name="directory_access_description" msgid="878500352290246580">"ഈ ആപ്പുകൾക്ക് ചില ഡയറക്റ്ററികൾ ആക്‌സസ് ചെയ്യാൻ അനുമതിയുണ്ട്."</string>
+    <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"മറ്റ് ആപ്പുകൾക്ക് മുകളിൽ പ്രദർശിപ്പിക്കുക"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"മറ്റ് ആപ്പുകൾക്ക് മുകളിൽ പ്രദർശിപ്പിക്കാൻ അനുവദിക്കുക"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"നിങ്ങൾ ഉപയോഗിക്കുന്ന മറ്റ് ആപ്പുകൾക്ക് മുകളിൽ ഒരു ആപ്പിനെ ദൃശ്യമാക്കാൻ അനുവദിക്കുക. ആ ആപ്പുകളുടെ ഉപയോഗത്തെ ഇത് തടസ്സപ്പെടുത്തുകയോ അവ കാണപ്പെടുന്ന അല്ലെങ്കിൽ പെരുമാറുന്ന രീതിയെ മാറ്റുകയോ ചെയ്തേക്കാം."</string>
@@ -703,4 +744,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"ഇൻസ്റ്റാൾ ചെയ്‌ത ആപ്പുകളൊന്നും \'ചിത്രത്തിനുള്ളിൽ ചിത്രം\' പിന്തുണയ്ക്കുന്നില്ല"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"ഈ ആപ്പ് തുറന്നിരിക്കുന്ന സമയത്തോ നിങ്ങളതിൽ നിന്ന് പുറത്തുകടന്നതിന് ശേഷമോ (ഉദാഹരണത്തിന്, ഒരു വീഡിയോ കാണുന്നത് തുടരുന്നതിന്) \'ചിത്രത്തിനുള്ളിൽ ചിത്രം\' വിൻഡോ സൃഷ്‌ടിക്കാൻ ഈ ആപ്പിനെ അനുവദിക്കുക. നിങ്ങൾ ഉപയോഗിക്കുന്ന മറ്റ് ആപ്പുകളുടെ മുകളിൽ ഈ വിൻഡോ പ്രദർശിപ്പിക്കുന്നു."</string>
     <string name="special_access" msgid="3513811566600299998">"പ്രത്യേക ആപ്പ് ആക്‌സസ്"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

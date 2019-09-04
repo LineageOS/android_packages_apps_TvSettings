@@ -26,6 +26,7 @@ import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserHandle;
+
 import androidx.annotation.NonNull;
 import androidx.leanback.widget.GuidanceStylist;
 

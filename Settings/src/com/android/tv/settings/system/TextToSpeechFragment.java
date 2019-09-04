@@ -25,13 +25,14 @@ import android.provider.Settings;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TtsEngines;
 import android.speech.tts.UtteranceProgressListener;
+import android.text.TextUtils;
+import android.util.Log;
+import android.widget.Checkable;
+
 import androidx.annotation.Keep;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
-import android.text.TextUtils;
-import android.util.Log;
-import android.widget.Checkable;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
@@ -471,7 +472,6 @@ public class TextToSpeechFragment extends SettingsPreferenceFragment implements
     }
 
     private void updateWidgetState(boolean enable) {
-        mEngineSettingsPref.setEnabled(enable);
         mPlayExample.setEnabled(enable);
         mDefaultRatePref.setEnabled(enable);
         mEngineStatus.setEnabled(enable);

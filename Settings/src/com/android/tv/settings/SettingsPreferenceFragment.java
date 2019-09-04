@@ -24,15 +24,16 @@ import static androidx.lifecycle.Lifecycle.Event.ON_START;
 import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
 
 import android.annotation.CallSuper;
-import androidx.lifecycle.LifecycleOwner;
 import android.content.Context;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.leanback.preference.LeanbackPreferenceFragment;
-import androidx.preference.PreferenceScreen;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.leanback.preference.LeanbackPreferenceFragment;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.preference.PreferenceScreen;
 
 import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;

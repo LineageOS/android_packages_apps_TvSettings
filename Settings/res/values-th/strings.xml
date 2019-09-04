@@ -23,17 +23,30 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"คำแนะนำ"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"การตั้งค่าด่วน"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"การตั้งค่าทั่วไป"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"ปิดคำแนะนำ"</string>
+    <string name="hotwording_title" msgid="1984130766527626626">"การตรวจพบ \"Ok Google\""</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"คุยกับ Google Assistant ได้ทุกเมื่อ"</string>
     <string name="header_category_device" msgid="4855983928659541345">"อุปกรณ์"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"ค่ากำหนด"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"รีโมตและอุปกรณ์เสริม"</string>
     <string name="header_category_personal" msgid="8893959635328775096">"ส่วนตัว"</string>
     <string name="connect_to_network" msgid="2209125715907353369">"เชื่อมต่อกับเครือข่าย"</string>
     <string name="add_an_account" msgid="1123478843971990449">"เพิ่มบัญชี"</string>
-    <string name="accounts_category_title" msgid="594314526488667838">"บัญชีและการลงชื่อเข้าใช้"</string>
-    <string name="connectivity_network_category_title" msgid="6779497231311329071">"เครือข่ายและอินเทอร์เน็ต"</string>
+    <string name="accounts_category_title" msgid="7839427428921349418">"บัญชีและการลงชื่อเข้าใช้"</string>
+    <string name="accounts_category_summary_no_account" msgid="5739678666463033824">"ไม่มีบัญชี"</string>
+    <plurals name="accounts_category_summary" formatted="false" msgid="3864659911073569648">
+      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> บัญชี</item>
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> บัญชี</item>
+    </plurals>
+    <string name="connectivity_network_category_title" msgid="6005656364481347542">"เครือข่ายและอินเทอร์เน็ต"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"แอป"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"ค่ากำหนดอุปกรณ์"</string>
-    <string name="remotes_and_accessories_title_category" msgid="4036586169100784602">"รีโมตและอุปกรณ์เสริม"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"รีโมตและอุปกรณ์เสริม"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"ไม่ได้เชื่อมต่ออุปกรณ์บลูทูธ"</string>
+    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
+      <item quantity="other">อุปกรณ์เสริม <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ชิ้น</item>
+      <item quantity="one">อุปกรณ์เสริม <xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ชิ้น</item>
+    </plurals>
     <string name="add_account" msgid="4098060223200619258">"เพิ่มบัญชี"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"นำบัญชีออก"</string>
     <string name="account_sync" msgid="773808124331714965">"เลือกแอปที่ซิงค์"</string>
@@ -51,10 +64,21 @@
     <string name="sync_active" msgid="6891115263481154378">"เปิดการซิงค์อยู่"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"WiFi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"อีเทอร์เน็ต"</string>
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"เชื่อมต่ออีเทอร์เน็ตแล้ว"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"ไม่ได้เชื่อมต่อเครือข่าย"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"Wi-Fi ปิดอยู่"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"สแกนอยู่เสมอ"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"ให้บริการตำแหน่งของ Google และแอปอื่นๆ สแกนหาเครือข่ายได้ แม้ในขณะที่ Wi-Fi ปิดอยู่"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"เชื่อมต่อกับเครือข่าย"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"แอปที่เปิดล่าสุด"</string>
+    <string name="apps_see_all_apps" msgid="5546179088197139203">"ดูแอปทั้งหมด"</string>
+    <string name="apps_permissions_category_title" msgid="4476837368840442313">"สิทธิ์"</string>
+    <string name="all_apps_title" msgid="5330174847732759402">"แอปทั้งหมด"</string>
+    <string name="all_apps_show_system_apps" msgid="4648447904721171884">"แสดงแอประบบ"</string>
+    <string name="all_apps_installed" msgid="54800379871111518">"แอปที่ติดตั้ง"</string>
+    <string name="all_apps_other" msgid="8297097642727891911">"แอประบบ"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"แอปที่ปิดใช้"</string>
     <string name="device_daydream" msgid="3354366974209179614">"โปรแกรมรักษาหน้าจอ"</string>
     <string name="device_display" msgid="101455384386372747">"จอแสดงผล"</string>
     <string name="device_sound" msgid="9214182566287657481">"เสียง"</string>
@@ -66,11 +90,19 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"การสำรองและคืนค่าข้อมูล"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"รีเซ็ตข้อมูลเป็นค่าเริ่มต้น"</string>
     <string name="device_calibration" msgid="8632962533376605191">"การเทียบมาตรฐาน"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"เลือกรูปแบบ"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"เสียงเซอร์ราวด์"</string>
+    <string name="surround_sound_format_ac3" msgid="1724977459494885356">"Dolby Digital"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
+    <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
+    <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"หมายเหตุ: ตัวเลือกอัตโนมัติอาจใช้ไม่ได้หากอุปกรณ์ที่คุณใช้รายงานรูปแบบที่รองรับไม่ถูกต้อง"</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"อัตโนมัติ: ใช้รูปแบบที่อุปกรณ์แจ้งว่ารองรับ (แนะนำ)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"ไม่มี: ไม่ใช้เสียงเซอร์ราวด์"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"กำหนดเอง: เลือกรูปแบบที่จะใช้"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"ล้างข้อมูลในแคชไหม"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"การทำงานนี้จะล้างข้อมูลในแคชของแอปทั้งหมด"</string>
-    <string name="apps_downloaded" msgid="4222190849854323480">"แอปที่ดาวน์โหลดไว้"</string>
-    <string name="apps_system" msgid="2499191125802829425">"แอประบบ"</string>
-    <string name="apps_running" msgid="6430310491739956228">"แอปที่ใช้งานอยู่"</string>
     <string name="accessories_add" msgid="1347802656349218830">"เพิ่มอุปกรณ์เสริม"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"กำลังจับคู่…"</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"กำลังเชื่อมต่อ…"</string>
@@ -101,8 +133,8 @@
     <string name="system_date_time" msgid="8898457978560618950">"วันที่และเวลา"</string>
     <string name="system_language" msgid="2337138146114609247">"ภาษา"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"แป้นพิมพ์"</string>
-    <!-- no translation found for system_autofill_service (3867736719921644747) -->
-    <skip />
+    <string name="system_keyboard_autofill" msgid="5787948036400896834">"แป้นพิมพ์และการป้อนข้อความอัตโนมัติ"</string>
+    <string name="system_autofill" msgid="8647914463541617409">"ป้อนอัตโนมัติ"</string>
     <string name="system_home" msgid="2858989138172296012">"หน้าจอหลัก"</string>
     <string name="system_search" msgid="2837264654143247611">"ค้นหา"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -245,6 +277,10 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"ป้อนพอร์ตที่ถูกต้อง\nตัวอย่างเช่น <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"ป้อนรายการโดเมนที่ยกเว้นซึ่งคั่นค่าด้วยเครื่องหมายจุลภาค หรือปล่อยว่างไว้\nตัวอย่างเช่น <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"ป้อนชื่อโฮสต์ที่ถูกต้อง\nตัวอย่างเช่น <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="3723583936041145157">"เลือกเมธอด EAP สำหรับ <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"เลือกการตรวจสอบสิทธิ์ขั้นที่ 2 สำหรับ <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_identity" msgid="6154397685951091638">"ป้อนข้อมูลประจำตัวสำหรับ <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_anonymous_identity" msgid="4530402657655491360">"ป้อนข้อมูลประจำตัวที่ไม่ระบุตัวตนสำหรับ <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"คุณเชื่อมต่อ <xliff:g id="SSID">%1$s</xliff:g> แล้ว"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"เชื่อมต่อเครือข่ายแล้ว"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"ไม่ได้เชื่อมต่อเครือข่าย"</string>
@@ -324,11 +360,10 @@
     <string name="storage_missing_description" msgid="8400374014342069781">"แอปบางแอปจะไม่สามารถใช้ได้หรือทำงานไม่ถูกต้องจนกว่าจะมีการเชื่อมต่อไดรฟ์อีกครั้ง"</string>
     <string name="insufficient_storage" msgid="5670157010939153746">"พื้นที่จัดเก็บข้อมูลไม่เพียงพอ"</string>
     <string name="does_not_exist" msgid="4553235698171937217">"ไม่มีแอปนี้"</string>
-    <string name="app_forward_locked" msgid="6078781450044847966">"แอปมีการป้องกันการคัดลอก"</string>
     <string name="invalid_location" msgid="5269044848535157307">"ตำแหน่งที่ติดตั้งไม่ถูกต้อง"</string>
     <string name="system_package" msgid="9200255718634512790">"ติดตั้งการอัปเดตระบบบนสื่อภายนอกไม่ได้"</string>
     <string name="move_error_device_admin" msgid="2060627704270836951">"ไม่สามารถติดตั้งโปรแกรมควบคุมอุปกรณ์บนสื่อภายนอก"</string>
-    <string name="learn_more_action" msgid="7015991954404958779">"เรียนรู้เพิ่มเติม"</string>
+    <string name="learn_more_action" msgid="7015991954404958779">"ดูข้อมูลเพิ่มเติม"</string>
     <string name="system_date" msgid="2767108116769558081">"วันที่"</string>
     <string name="system_time" msgid="6726022312605226285">"เวลา"</string>
     <string name="system_set_date" msgid="2437586307768561116">"ตั้งวันที่"</string>
@@ -454,11 +489,11 @@
     <string name="system_show_layout_bounds" msgid="645732439882291943">"แสดงขอบของการจัดวาง"</string>
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"แสดงการอัปเดตมุมมอง GPU"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"แสดงเลเยอร์ฮาร์ดแวร์"</string>
-    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"แสดงการใช้ GPU มากเกินไป"</string>
+    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"แสดงให้เห็นการแสดงพิกเซลซ้ำด้วย GPU"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"แสดงการอัปเดตพื้นผิว"</string>
-    <string name="system_window_animation_scale" msgid="3213952676672537856">"ขนาดหน้าต่างภาพเคลื่อนไหว"</string>
-    <string name="system_transition_animation_scale" msgid="2964817709721784757">"อัตราการสลับภาพเคลื่อนไหว"</string>
-    <string name="system_animator_duration_scale" msgid="7413512458963984521">"ความเร็วตามผู้สร้างกำหนด"</string>
+    <string name="system_window_animation_scale" msgid="3213952676672537856">"อัตราการเคลื่อนไหวของหน้าต่าง"</string>
+    <string name="system_transition_animation_scale" msgid="2964817709721784757">"อัตราการเคลื่อนไหวของการเปลี่ยนภาพ"</string>
+    <string name="system_animator_duration_scale" msgid="7413512458963984521">"อัตราความเร็วตามตัวสร้างภาพเคลื่อนไหว"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"เปิดใช้งานโหมดเข้มงวด"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"การแสดงผล GPU ตามโปรไฟล์"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"เปิดใช้งานร่องรอย"</string>
@@ -476,7 +511,7 @@
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"แสดงเลเยอร์ฮาร์ดแวร์เป็นสีเขียวเมื่อมีการอัปเดต"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"จากดีที่สุดไปหาแย่ที่สุด: ฟ้า เขียว แดงอ่อน แดง"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"แสดงพื้นผิวหน้าต่างทั้งหมดเมื่อมีการอัปเดต"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"แสดงหน้าจอเมื่อแอปทำงานในชุดข้อความหลักนาน"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"กะพริบหน้าจอเมื่อแอปทำงานในชุดข้อความหลักนาน"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"วัดเวลาที่ใช้แสดงผลใน adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"เปิด"</string>
     <string name="action_off_title" msgid="3157728958166559966">"ปิด"</string>
@@ -502,12 +537,12 @@
     <string name="enable_opengl_traces_none" msgid="6074804146602749420">"ไม่มี"</string>
   <string-array name="animation_scale_entries">
     <item msgid="7477134110460336436">"ปิดภาพเคลื่อนไหว"</item>
-    <item msgid="8327257151534006014">"ภาพเคลื่อนไหวขนาด 0.5 เท่า"</item>
-    <item msgid="2105786719544636780">"ภาพเคลื่อนไหวขนาด 1 เท่า"</item>
-    <item msgid="5290554136790336403">"ภาพเคลื่อนไหวขนาด 1.5 เท่า"</item>
-    <item msgid="1232929590838082483">"ภาพเคลื่อนไหวขนาด 2 เท่า"</item>
-    <item msgid="1889239009419613796">"ภาพเคลื่อนไหวขนาด 5 เท่า"</item>
-    <item msgid="7268894934484547297">"ภาพเคลื่อนไหวขนาด 10 เท่า"</item>
+    <item msgid="8327257151534006014">"อัตราการเคลื่อนไหว 0.5 เท่า"</item>
+    <item msgid="2105786719544636780">"อัตราการเคลื่อนไหว 1 เท่า"</item>
+    <item msgid="5290554136790336403">"อัตราการเคลื่อนไหว 1.5 เท่า"</item>
+    <item msgid="1232929590838082483">"อัตราการเคลื่อนไหว 2 เท่า"</item>
+    <item msgid="1889239009419613796">"อัตราการเคลื่อนไหว 5 เท่า"</item>
+    <item msgid="7268894934484547297">"อัตราการเคลื่อนไหว 10 เท่า"</item>
   </string-array>
     <string name="track_frame_time_off" msgid="5050360262132715904">"ปิด"</string>
     <string name="track_frame_time_bars" msgid="4470692840177888414">"เป็นแถบบนหน้าจอ"</string>
@@ -522,13 +557,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"ปกติ"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"เร็ว"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"เร็วมาก"</string>
+    <string name="title_settings" msgid="5433841477518010243">"การตั้งค่า <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"แป้นพิมพ์ปัจจุบัน"</string>
     <string name="title_configure" msgid="6929522003149212388">"กำหนดค่า"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"ตัวเลือกแป้นพิมพ์"</string>
-    <!-- no translation found for title_current_autofill_service (6055852915343152350) -->
-    <skip />
-    <!-- no translation found for autofill_disable (539635915296078432) -->
-    <skip />
+    <string name="title_current_autofill_service" msgid="6055852915343152350">"บริการป้อนอัตโนมัติปัจจุบัน"</string>
+    <string name="title_select_autofill_service" msgid="2515782066694197988">"เลือกบริการป้อนอัตโนมัติ"</string>
+    <string name="autofill_none" msgid="2426888642367790651">"ไม่มี"</string>
+    <string name="autofill_confirmation_message" msgid="9068009043054751287">"&lt;b&gt;ตรวจดูว่าคุณเชื่อถือแอปนี้ได้&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=บริการรหัสผ่าน&gt;%1$s&lt;/xliff:g&gt;ใช้สิ่งที่อยู่บนหน้าจอเพื่อดูว่าจะป้อนข้อมูลใดโดยอัตโนมัติได้บ้าง"</string>
     <string name="computing_size" msgid="2955133568424704042">"กำลังคำนวณ…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"เลือกเครือข่าย WiFi ของคุณ"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"เปลี่ยนชื่อ"</string>
@@ -662,6 +698,8 @@
     <string name="custom_room" msgid="8655516733933892458">"ป้อนชื่อที่กำหนดเอง…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"เปลี่ยนชื่อ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> เครื่องนี้"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"ปัจจุบัน <xliff:g id="DEVICEMODEL">%1$s</xliff:g> เครื่องนี้มีชื่อว่า \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
+    <string name="device_name_suggestion_title" msgid="2312205155408810120">"ตั้งชื่ออุปกรณ์ของคุณ"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"ใช้ชื่อนี้เมื่อแคสต์รูปภาพ วิดีโอ และเนื้อหาอื่นๆ จากโทรศัพท์"</string>
     <string name="change_setting" msgid="2047402388786162246">"เปลี่ยน"</string>
     <string name="keep_settings" msgid="6798327196645732517">"ไม่เปลี่ยนแปลง"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"สิทธิ์"</string>
@@ -690,6 +728,9 @@
     <string name="manage_notification_access_title" msgid="2051765294087620434">"การเข้าถึงการแจ้งเตือน"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"ไม่มีแอปใดที่ติดตั้งไว้ขอเข้าถึงการแจ้งเตือน"</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"แอปเหล่านี้จะอ่านการแจ้งเตือนทั้งหมดได้ ซึ่งรวมถึงข้อมูลส่วนบุคคล เช่น ชื่อผู้ติดต่อและข้อความที่คุณได้รับ นอกจากนี้ยังปิดการแจ้งเตือนหรือทริกเกอร์ปุ่มการทำงานที่อยู่ในแอปได้อีกด้วย"</string>
+    <string name="directory_access" msgid="7439168599298598101">"การเข้าถึงไดเรกทอรี"</string>
+    <string name="directory_access_description" msgid="878500352290246580">"แอปเหล่านี้มีสิทธิ์เข้าถึงบางไดเรกทอรี"</string>
+    <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"แสดงทับแอปอื่นๆ"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"อนุญาตให้แสดงทับแอปอื่นๆ"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"อนุญาตให้แอปแสดงทับแอปอื่นๆ ที่คุณกำลังใช้อยู่ ซึ่งอาจรบกวนการใช้งานแอปเหล่านั้นหรือเปลี่ยนรูปลักษณ์หรือการทำงานตามที่ควรเป็น"</string>
@@ -703,4 +744,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"แอปที่ติดตั้งอยู่ไม่รองรับการแสดงภาพซ้อนภาพ"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"อนุญาตให้แอปสร้างหน้าต่างการแสดงภาพซ้อนภาพในขณะที่แอปเปิดอยู่หรือหลังจากที่คุณปล่อยทิ้งไว้ (เช่น เพื่อดูวิดีโอต่อ) หน้าต่างนี้จะแสดงทับแอปอื่นๆ ที่คุณกำลังใช้"</string>
     <string name="special_access" msgid="3513811566600299998">"สิทธิ์เข้าถึงพิเศษของแอป"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

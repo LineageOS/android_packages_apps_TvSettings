@@ -17,10 +17,11 @@
 package com.android.tv.settings;
 
 import android.content.Context;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.preference.Preference;
+import androidx.preference.PreferenceViewHolder;
 
 public class LongClickPreference extends Preference implements View.OnLongClickListener {
 

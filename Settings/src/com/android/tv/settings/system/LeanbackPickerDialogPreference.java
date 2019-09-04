@@ -18,9 +18,10 @@ package com.android.tv.settings.system;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.util.AttributeSet;
+
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.preference.DialogPreference;
-import android.util.AttributeSet;
 
 import com.android.tv.settings.R;
 

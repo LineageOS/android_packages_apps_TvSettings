@@ -26,12 +26,13 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.leanback.app.GuidedStepFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.android.tv.settings.R;
 

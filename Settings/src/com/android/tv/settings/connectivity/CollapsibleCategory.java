@@ -17,8 +17,9 @@
 package com.android.tv.settings.connectivity;
 
 import android.content.Context;
-import androidx.preference.PreferenceCategory;
 import android.util.AttributeSet;
+
+import androidx.preference.PreferenceCategory;
 
 public class CollapsibleCategory extends PreferenceCategory {
 

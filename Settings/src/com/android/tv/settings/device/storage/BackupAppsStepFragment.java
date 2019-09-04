@@ -23,12 +23,13 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
+import android.text.TextUtils;
+import android.util.ArrayMap;
+
 import androidx.annotation.NonNull;
 import androidx.leanback.app.GuidedStepFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
-import android.text.TextUtils;
-import android.util.ArrayMap;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;

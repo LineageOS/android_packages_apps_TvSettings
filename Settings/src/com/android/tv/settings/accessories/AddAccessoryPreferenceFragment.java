@@ -20,7 +20,6 @@ import static androidx.lifecycle.Lifecycle.Event.ON_PAUSE;
 import static androidx.lifecycle.Lifecycle.Event.ON_RESUME;
 
 import android.annotation.CallSuper;
-import androidx.lifecycle.LifecycleOwner;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -28,12 +27,14 @@ import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.SparseArray;
+
 import androidx.annotation.NonNull;
-import androidx.leanback.widget.VerticalGridView;
 import androidx.leanback.preference.BaseLeanbackPreferenceFragment;
+import androidx.leanback.widget.VerticalGridView;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import android.util.SparseArray;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.core.instrumentation.Instrumentable;
