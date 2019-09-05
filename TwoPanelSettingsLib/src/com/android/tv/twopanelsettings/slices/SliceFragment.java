@@ -99,6 +99,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mUriString = getArguments().getString(SlicesConstants.TAG_TARGET_URI);
+        ContextSingleton.getInstance().grantFullAccess(getContext(), Uri.parse(mUriString));
         super.onCreate(savedInstanceState);
     }
 
@@ -382,6 +383,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (!getSliceLiveData().mUpdatePending.compareAndSet(true, false)) {
             return;
         }
+
         mSlice = slice;
         // Make TvSettings guard against the case that slice provider is not set up correctly
         if (slice == null || slice.getHints() == null) {
