@@ -412,6 +412,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         fragment.setTargetFragment(target, 0);
         transaction
                 .add(R.id.two_panel_fragment_container, fragment)
+                .remove(target)
                 .addToBackStack(null)
                 .commit();
     }
