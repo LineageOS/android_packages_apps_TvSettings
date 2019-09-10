@@ -178,6 +178,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private CharSequence mKey;
         private boolean mIconNeedsToBeProcessed;
         private boolean mIsCheckMark;
+        private boolean mSelectable;
 
         public static final int TYPE_ICON = 1;
         public static final int TYPE_ACTION = 2;
@@ -186,6 +187,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
          * Builder to construct a row.
          */
         public RowBuilder() {
+            mSelectable = true;
             mUri = null;
         }
 
@@ -195,6 +197,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
          * @param uri Uri to tag for this slice.
          */
         public RowBuilder(Uri uri) {
+            mSelectable = true;
             mUri = uri;
         }
 
@@ -531,6 +534,15 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         }
 
         /**
+         * Set whether this item is focusable.
+         */
+        @NonNull
+        public RowBuilder setSelectable(boolean selectable) {
+            mSelectable = selectable;
+            return this;
+        }
+
+        /**
          *
          */
         public boolean iconNeedsToBeProcessed() {
@@ -570,6 +582,10 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         public boolean hasDefaultToggle() {
             return mHasDefaultToggle;
+        }
+
+        public boolean isSelectable() {
+            return mSelectable;
         }
 
         public boolean isTitleItemLoading() {

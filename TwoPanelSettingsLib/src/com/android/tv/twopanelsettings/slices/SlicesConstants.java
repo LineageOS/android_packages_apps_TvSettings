@@ -31,6 +31,7 @@ public final class SlicesConstants {
     public static final String SUBTYPE_ICON_NEED_TO_BE_PROCESSED =
             "SUBTYPE_ICON_NEED_TO_BE_PROCESSED";
     public static final String SUBTYPE_IS_CHECK_MARK = "SUBTYPE_IS_CHECK_MARK";
+    public static final String SUBTYPE_IS_SELECTABLE = "SUBTYPE_IS_SELECTABLE";
     public static final String PATH_STATUS = "status";
     public static final String PARAMETER_DIRECTION = "direction";
     public static final String FORWARD = "forward";
