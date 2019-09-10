@@ -173,6 +173,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private List<Object> mEndItems = new ArrayList<>();
         private List<Integer> mEndTypes = new ArrayList<>();
         private List<Boolean> mEndLoads = new ArrayList<>();
+        private List<Pair<String, String>> mInfoItems = new ArrayList<>();
         private boolean mTitleActionLoading;
         private CharSequence mTargetSliceUri;
         private CharSequence mKey;
@@ -428,6 +429,14 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
 
         /**
+         * Add an item to the RowBuilder. Each item would contain title and summary.
+         */
+        public RowBuilder addInfoItem(String title, String summary) {
+            mInfoItems.add(new Pair<>(title, summary));
+            return this;
+        }
+
+        /**
          * Add a switch for the preference.
          * @param pendingIntent pendingIntent
          * @param actionTitle title for the switch, also used for contentDescription.
@@ -634,6 +643,10 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         public List<Object> getEndItems() {
             return mEndItems;
+        }
+
+        public List<Pair<String, String>> getInfoItems() {
+            return mInfoItems;
         }
 
         public List<Integer> getEndTypes() {
