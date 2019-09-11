@@ -179,6 +179,12 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference.equals(mEnableDisablePreference)) {
+            // disable the preference to prevent double clicking
+            mHandler.post(() -> {
+                mEnableDisablePreference.setEnabled(false);
+            });
+        }
         final Intent intent = preference.getIntent();
         if (intent != null) {
             try {
@@ -277,6 +283,7 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
             replacePreference(mEnableDisablePreference);
         } else {
             mEnableDisablePreference.setEntry(mEntry);
+            mEnableDisablePreference.setEnabled(true);
         }
 
         // Storage used
