@@ -24,6 +24,7 @@ import static android.app.slice.Slice.HINT_LIST_ITEM;
 import static android.app.slice.Slice.HINT_NO_TINT;
 import static android.app.slice.Slice.HINT_PARTIAL;
 import static android.app.slice.Slice.HINT_SHORTCUT;
+import static android.app.slice.Slice.HINT_SUMMARY;
 import static android.app.slice.Slice.HINT_TITLE;
 import static android.app.slice.Slice.HINT_TTL;
 import static android.app.slice.Slice.SUBTYPE_CONTENT_DESCRIPTION;
@@ -73,6 +74,8 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             "SUBTYPE_ICON_NEED_TO_BE_PROCESSED";
     public static final String SUBTYPE_FOLLOWUP_INTENT = "SUBTYPE_FOLLOWUP_INTENT";
     public static final String SUBTYPE_IS_CHECK_MARK = "SUBTYPE_IS_CHECK_MARK";
+    public static final String SUBTYPE_IS_SELECTABLE = "SUBTYPE_IS_SELECTABLE";
+    public static final String SUBTYPE_INFO_PREFERENCE = "SUBTYPE_INFO_PREFERENCE";
 
     /**
      *
@@ -191,11 +194,13 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         private SliceItem mSubtitleItem;
         private Slice mStartItem;
         private ArrayList<Slice> mEndItems = new ArrayList<>();
+        private ArrayList<Slice> mInfoItems = new ArrayList<>();
         private CharSequence mContentDescr;
         private SliceItem mUriItem;
         private SliceItem mKeyItem;
         private SliceItem mIconNeedsToBeProcessedItem;
         private SliceItem mIsCheckMarkItem;
+        private SliceItem mIsSelectableItem;
         /**
          *
          */
@@ -259,6 +264,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
                 setIconNeedsToBeProcessed(builder.iconNeedsToBeProcessed());
             }
             setCheckMark(builder.isCheckMark());
+            setSelectable(builder.isSelectable());
             List<Object> endItems = builder.getEndItems();
             List<Integer> endTypes = builder.getEndTypes();
             List<Boolean> endLoads = builder.getEndLoads();
@@ -274,6 +280,11 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
                         break;
                 }
             }
+
+            List<Pair<String, String>> infoItems = builder.getInfoItems();
+            for (int i = 0; i < infoItems.size(); i++) {
+                addInfoItem(infoItems.get(i).first, infoItems.get(i).second);
+            }
         }
 
         /**
@@ -282,6 +293,13 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         @NonNull
         private void setTitleItem(IconCompat icon, int imageMode) {
             setTitleItem(icon, imageMode, false /* isLoading */);
+        }
+
+        private void addInfoItem(String title, String summary) {
+            Slice.Builder sb = new Slice.Builder(getBuilder())
+                        .addText(title, null, HINT_TITLE)
+                        .addText(summary, null, HINT_SUMMARY);
+            mInfoItems.add(sb.build());
         }
 
         /**
@@ -374,6 +392,14 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         public void setCheckMark(boolean isCheckMark) {
             mIsCheckMarkItem = new SliceItem(
                     isCheckMark ? 1 : 0, FORMAT_INT, SUBTYPE_IS_CHECK_MARK, new String[]{});
+        }
+
+        /**
+         *
+         */
+        public void setSelectable(boolean selectable) {
+            mIsSelectableItem = new SliceItem(
+                    selectable ? 1 : 0, FORMAT_INT, SUBTYPE_IS_SELECTABLE, new String[]{});
         }
 
         public void setKey(CharSequence key) {
@@ -478,9 +504,16 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             if (mIsCheckMarkItem != null) {
                 b.addItem(mIsCheckMarkItem);
             }
+            if (mIsSelectableItem != null) {
+                b.addItem(mIsSelectableItem);
+            }
             for (int i = 0; i < mEndItems.size(); i++) {
                 Slice item = mEndItems.get(i);
                 b.addSubSlice(item);
+            }
+            for (int i = 0; i < mInfoItems.size(); i++) {
+                Slice item = mInfoItems.get(i);
+                b.addSubSlice(item, SUBTYPE_INFO_PREFERENCE);
             }
             if (mContentDescr != null) {
                 b.addText(mContentDescr, SUBTYPE_CONTENT_DESCRIPTION);

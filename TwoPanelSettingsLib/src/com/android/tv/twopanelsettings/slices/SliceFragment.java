@@ -99,6 +99,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mUriString = getArguments().getString(SlicesConstants.TAG_TARGET_URI);
+        ContextSingleton.getInstance().grantFullAccess(getContext(), Uri.parse(mUriString));
         super.onCreate(savedInstanceState);
     }
 
@@ -140,6 +141,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     @Override
     public void onPause() {
         super.onPause();
+        hideProgressBar();
         getContext().getContentResolver().unregisterContentObserver(mContentObserver);
         getSliceLiveData().removeObserver(this);
     }
@@ -269,6 +271,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                         oldPref.setIcon(newPref.getIcon());
                         oldPref.setTitle(newPref.getTitle());
                         oldPref.setSummary(newPref.getSummary());
+                        oldPref.setSelectable(newPref.isSelectable());
                         if ((oldPref instanceof TwoStatePreference)
                                 && (newPref instanceof TwoStatePreference)) {
                             ((TwoStatePreference) oldPref)
@@ -380,6 +383,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (!getSliceLiveData().mUpdatePending.compareAndSet(true, false)) {
             return;
         }
+
         mSlice = slice;
         // Make TvSettings guard against the case that slice provider is not set up correctly
         if (slice == null || slice.getHints() == null) {
@@ -397,6 +401,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private void showProgressBar() {
         View progressBar = getView().findViewById(R.id.progress_bar);
         if (progressBar != null) {
+            progressBar.bringToFront();
             progressBar.setVisibility(View.VISIBLE);
         }
     }

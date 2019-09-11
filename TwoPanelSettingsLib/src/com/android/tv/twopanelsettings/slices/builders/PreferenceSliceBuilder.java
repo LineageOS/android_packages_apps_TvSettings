@@ -173,11 +173,13 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private List<Object> mEndItems = new ArrayList<>();
         private List<Integer> mEndTypes = new ArrayList<>();
         private List<Boolean> mEndLoads = new ArrayList<>();
+        private List<Pair<String, String>> mInfoItems = new ArrayList<>();
         private boolean mTitleActionLoading;
         private CharSequence mTargetSliceUri;
         private CharSequence mKey;
         private boolean mIconNeedsToBeProcessed;
         private boolean mIsCheckMark;
+        private boolean mSelectable;
 
         public static final int TYPE_ICON = 1;
         public static final int TYPE_ACTION = 2;
@@ -186,6 +188,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
          * Builder to construct a row.
          */
         public RowBuilder() {
+            mSelectable = true;
             mUri = null;
         }
 
@@ -195,6 +198,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
          * @param uri Uri to tag for this slice.
          */
         public RowBuilder(Uri uri) {
+            mSelectable = true;
             mUri = uri;
         }
 
@@ -425,6 +429,14 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
 
         /**
+         * Add an item to the RowBuilder. Each item would contain title and summary.
+         */
+        public RowBuilder addInfoItem(String title, String summary) {
+            mInfoItems.add(new Pair<>(title, summary));
+            return this;
+        }
+
+        /**
          * Add a switch for the preference.
          * @param pendingIntent pendingIntent
          * @param actionTitle title for the switch, also used for contentDescription.
@@ -531,6 +543,15 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         }
 
         /**
+         * Set whether this item is focusable.
+         */
+        @NonNull
+        public RowBuilder setSelectable(boolean selectable) {
+            mSelectable = selectable;
+            return this;
+        }
+
+        /**
          *
          */
         public boolean iconNeedsToBeProcessed() {
@@ -570,6 +591,10 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         public boolean hasDefaultToggle() {
             return mHasDefaultToggle;
+        }
+
+        public boolean isSelectable() {
+            return mSelectable;
         }
 
         public boolean isTitleItemLoading() {
@@ -618,6 +643,10 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         public List<Object> getEndItems() {
             return mEndItems;
+        }
+
+        public List<Pair<String, String>> getInfoItems() {
+            return mInfoItems;
         }
 
         public List<Integer> getEndTypes() {

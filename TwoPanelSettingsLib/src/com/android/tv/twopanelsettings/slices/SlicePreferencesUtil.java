@@ -29,11 +29,13 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.text.TextUtils;
+import android.util.Pair;
 import android.view.ContextThemeWrapper;
 
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
+import androidx.slice.Slice;
 import androidx.slice.SliceItem;
 import androidx.slice.core.SliceActionImpl;
 import androidx.slice.core.SliceQuery;
@@ -56,7 +58,10 @@ public final class SlicePreferencesUtil {
         if (item.getSubType() != null) {
             if (item.getSubType().equals(SlicesConstants.TYPE_PREFERENCE)) {
                 // TODO: Figure out all the possible cases and reorganize the logic
-                if (data.mIntentItem != null) {
+                if (data.mInfoItems.size() > 0) {
+                    preference = new InfoPreference(
+                                contextThemeWrapper, getInfoList(data.mInfoItems));
+                } else if (data.mIntentItem != null) {
                     SliceActionImpl action = new SliceActionImpl(data.mIntentItem);
                     if (action != null) {
                         // Currently if we don't set icon for the SliceAction, slice lib will
@@ -100,6 +105,10 @@ public final class SlicePreferencesUtil {
         }
 
         if (preference != null) {
+            // Set whether preference is selectable.
+            if (preference instanceof InfoPreference || !selectable(item)) {
+                preference.setSelectable(false);
+            }
             // Set the key for the preference
             CharSequence key = getKey(item);
             if (key != null) {
@@ -149,6 +158,7 @@ public final class SlicePreferencesUtil {
         SliceItem mIntentItem;
         SliceItem mFollowupIntentItem;
         List<SliceItem> mEndItems = new ArrayList<>();
+        List<SliceItem> mInfoItems = new ArrayList<>();
     }
 
     static Data extract(SliceItem sliceItem) {
@@ -173,6 +183,8 @@ public final class SlicePreferencesUtil {
             String subType = item.getSubType();
             if (subType != null) {
                 switch (subType) {
+                    case SlicesConstants.SUBTYPE_INFO_PREFERENCE :
+                        data.mInfoItems.add(item);
                     case SlicesConstants.SUBTYPE_INTENT :
                         data.mIntentItem = item;
                         break;
@@ -198,6 +210,26 @@ public final class SlicePreferencesUtil {
         }
         data.mEndItems.remove(data.mStartItem);
         return data;
+    }
+
+    private static List<Pair<CharSequence, CharSequence>> getInfoList(List<SliceItem> sliceItems) {
+        List<Pair<CharSequence, CharSequence>> infoList = new ArrayList<>();
+        for (SliceItem item : sliceItems) {
+            Slice itemSlice = item.getSlice();
+            if (itemSlice != null) {
+                CharSequence title = null;
+                CharSequence summary = null;
+                for (SliceItem element : itemSlice.getItems()) {
+                    if (element.getHints().contains(HINT_TITLE)) {
+                        title = element.getText();
+                    } else if (element.getHints().contains(HINT_SUMMARY)) {
+                        summary = element.getText();
+                    }
+                }
+                infoList.add(new Pair<CharSequence, CharSequence>(title, summary));
+            }
+        }
+        return infoList;
     }
 
     private static CharSequence getKey(SliceItem item) {
@@ -245,6 +277,17 @@ public final class SlicePreferencesUtil {
             }
         }
         return false;
+    }
+
+    private static boolean selectable(SliceItem sliceItem) {
+        List<SliceItem> items = sliceItem.getSlice().getItems();
+        for (SliceItem item : items)  {
+            if (item.getSubType() != null
+                    && item.getSubType().equals(SlicesConstants.SUBTYPE_IS_SELECTABLE)) {
+                return item.getInt() == 1;
+            }
+        }
+        return true;
     }
 
     /**

@@ -16,11 +16,13 @@
 
 package com.android.tv.twopanelsettings.slices;
 
+import android.app.slice.SliceManager;
 import android.content.Context;
 import android.net.Uri;
 import android.util.ArrayMap;
 
 import com.android.tv.twopanelsettings.slices.PreferenceSliceLiveData.SliceLiveDataImpl;
+
 
 /**
  * Ensure the SliceLiveData with same uri is created only once across the activity.
@@ -28,6 +30,7 @@ import com.android.tv.twopanelsettings.slices.PreferenceSliceLiveData.SliceLiveD
 public class ContextSingleton {
     private static ContextSingleton sInstance;
     private ArrayMap<Uri, SliceLiveDataImpl> mSliceMap;
+    private boolean mGivenFullSliceAccess;
 
     /**
      * Get the instance.
@@ -41,6 +44,7 @@ public class ContextSingleton {
 
     private ContextSingleton() {
         mSliceMap = new ArrayMap<>();
+        mGivenFullSliceAccess = false;
     }
 
     /**
@@ -50,6 +54,21 @@ public class ContextSingleton {
         if (!mSliceMap.containsKey(uri)) {
             mSliceMap.put(uri, PreferenceSliceLiveData.fromUri(context, uri));
         }
+
         return mSliceMap.get(uri);
+    }
+
+    /**
+     *  Grant full access to current package.
+     */
+    public void grantFullAccess(Context ctx, Uri uri) {
+        if (!mGivenFullSliceAccess) {
+            String currentPackageName = ctx.getApplicationContext().getPackageName();
+            // Uri cannot be null here as SliceManagerService calls notifyChange(uri, null) in
+            // grantPermissionFromUser.
+            ctx.getSystemService(SliceManager.class).grantPermissionFromUser(
+                    uri, currentPackageName, true);
+            mGivenFullSliceAccess = true;
+        }
     }
 }
