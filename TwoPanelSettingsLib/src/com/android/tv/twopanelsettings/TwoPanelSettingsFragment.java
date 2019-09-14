@@ -438,10 +438,31 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             } else if (event.getAction() == KeyEvent.ACTION_UP
                     && ((!isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_RIGHT)
                         || (isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_LEFT))) {
-                navigateToPreviewFragment();
+                if (shouldPerformClick()) {
+                    v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN,
+                            KeyEvent.KEYCODE_DPAD_CENTER));
+                    v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP,
+                            KeyEvent.KEYCODE_DPAD_CENTER));
+                } else {
+                    navigateToPreviewFragment();
+                }
+                return true;
             }
             return false;
         }
+    }
+
+    private boolean shouldPerformClick() {
+        Fragment prefFragment =
+                    getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
+        Preference preference = getChosenPreference(prefFragment);
+        if (preference instanceof SlicePreference
+                    && ((SlicePreference) preference).getSliceAction() != null
+                    && ((SlicePreference) preference).getUri() != null) {
+            return true;
+        }
+
+        return false;
     }
 
     private boolean back(boolean isKeyBackPressed) {
@@ -627,6 +648,25 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             return null;
         }
         return  onCreatePreviewFragment(fragment, chosenPreference);
+    }
+
+    private Preference getChosenPreference(Fragment fragment) {
+        if (!(fragment instanceof LeanbackPreferenceFragment)) {
+            return null;
+        }
+
+        LeanbackPreferenceFragment leanbackPreferenceFragment =
+                (LeanbackPreferenceFragment) fragment;
+        if (leanbackPreferenceFragment.getListView() == null) {
+            return null;
+        }
+
+        VerticalGridView listView = (VerticalGridView) leanbackPreferenceFragment.getListView();
+        int position = listView.getSelectedPosition();
+        PreferenceGroupAdapter adapter =
+                (PreferenceGroupAdapter) (leanbackPreferenceFragment.getListView().getAdapter());
+        Preference chosenPreference = adapter.getItem(position);
+        return chosenPreference;
     }
 
     /** Creates preview preference fragment. */
