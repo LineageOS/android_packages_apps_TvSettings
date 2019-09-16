@@ -185,6 +185,7 @@ public final class SlicePreferencesUtil {
                 switch (subType) {
                     case SlicesConstants.SUBTYPE_INFO_PREFERENCE :
                         data.mInfoItems.add(item);
+                        break;
                     case SlicesConstants.SUBTYPE_INTENT :
                         data.mIntentItem = item;
                         break;
