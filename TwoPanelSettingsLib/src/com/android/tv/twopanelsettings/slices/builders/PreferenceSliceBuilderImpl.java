@@ -74,7 +74,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             "SUBTYPE_ICON_NEED_TO_BE_PROCESSED";
     public static final String SUBTYPE_FOLLOWUP_INTENT = "SUBTYPE_FOLLOWUP_INTENT";
     public static final String SUBTYPE_IS_CHECK_MARK = "SUBTYPE_IS_CHECK_MARK";
-    public static final String SUBTYPE_IS_SELECTABLE = "SUBTYPE_IS_SELECTABLE";
+    public static final String SUBTYPE_IS_ENABLED = "SUBTYPE_IS_ENABLED";
     public static final String SUBTYPE_INFO_PREFERENCE = "SUBTYPE_INFO_PREFERENCE";
 
     /**
@@ -200,7 +200,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         private SliceItem mKeyItem;
         private SliceItem mIconNeedsToBeProcessedItem;
         private SliceItem mIsCheckMarkItem;
-        private SliceItem mIsSelectableItem;
+        private SliceItem mIsEnabledItem;
         /**
          *
          */
@@ -264,7 +264,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
                 setIconNeedsToBeProcessed(builder.iconNeedsToBeProcessed());
             }
             setCheckMark(builder.isCheckMark());
-            setSelectable(builder.isSelectable());
+            setEnabled(builder.isEnabled());
             List<Object> endItems = builder.getEndItems();
             List<Integer> endTypes = builder.getEndTypes();
             List<Boolean> endLoads = builder.getEndLoads();
@@ -397,9 +397,9 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         /**
          *
          */
-        public void setSelectable(boolean selectable) {
-            mIsSelectableItem = new SliceItem(
-                    selectable ? 1 : 0, FORMAT_INT, SUBTYPE_IS_SELECTABLE, new String[]{});
+        public void setEnabled(boolean enabled) {
+            mIsEnabledItem = new SliceItem(
+                    enabled ? 1 : 0, FORMAT_INT, SUBTYPE_IS_ENABLED, new String[]{});
         }
 
         public void setKey(CharSequence key) {
@@ -504,8 +504,8 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             if (mIsCheckMarkItem != null) {
                 b.addItem(mIsCheckMarkItem);
             }
-            if (mIsSelectableItem != null) {
-                b.addItem(mIsSelectableItem);
+            if (mIsEnabledItem != null) {
+                b.addItem(mIsEnabledItem);
             }
             for (int i = 0; i < mEndItems.size(); i++) {
                 Slice item = mEndItems.get(i);
