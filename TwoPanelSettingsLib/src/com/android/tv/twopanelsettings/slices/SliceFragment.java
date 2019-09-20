@@ -78,10 +78,13 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private CharSequence mScreenSubtitle;
     private Icon mScreenIcon;
     private PendingIntent mPreferenceFollowupIntent;
+    private int mFollowupPendingIntentResultCode;
     private Intent mFollowupPendingIntentExtras;
     private String mLastFocusedPreferenceKey;
 
     private static final String KEY_PREFERENCE_FOLLOWUP_INTENT = "key_preference_followup_intent";
+    private static final String KEY_PREFERENCE_FOLLOWUP_RESULT_CODE =
+            "key_preference_followup_result_code";
     private static final String KEY_SCREEN_TITLE = "key_screen_title";
     private static final String KEY_SCREEN_SUBTITLE = "key_screen_subtitle";
     private static final String KEY_SCREEN_ICON = "key_screen_icon";
@@ -131,7 +134,8 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             return;
         }
         try {
-            mPreferenceFollowupIntent.send(getContext(), 0, mFollowupPendingIntentExtras);
+            mPreferenceFollowupIntent.send(getContext(),
+                    mFollowupPendingIntentResultCode, mFollowupPendingIntentExtras);
         } catch (CanceledException e) {
             Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
         }
@@ -351,12 +355,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             return;
         }
         mFollowupPendingIntentExtras = data;
+        mFollowupPendingIntentResultCode = resultCode;
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelable(KEY_PREFERENCE_FOLLOWUP_INTENT, mPreferenceFollowupIntent);
+        outState.putInt(KEY_PREFERENCE_FOLLOWUP_RESULT_CODE, mFollowupPendingIntentResultCode);
         outState.putCharSequence(KEY_SCREEN_TITLE, mScreenTitle);
         outState.putCharSequence(KEY_SCREEN_SUBTITLE, mScreenSubtitle);
         outState.putParcelable(KEY_SCREEN_ICON, mScreenIcon);
@@ -370,6 +376,8 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (savedInstanceState != null) {
             mPreferenceFollowupIntent =
                     savedInstanceState.getParcelable(KEY_PREFERENCE_FOLLOWUP_INTENT);
+            mFollowupPendingIntentResultCode =
+                    savedInstanceState.getInt(KEY_PREFERENCE_FOLLOWUP_RESULT_CODE);
             mScreenTitle = savedInstanceState.getCharSequence(KEY_SCREEN_TITLE);
             mScreenSubtitle = savedInstanceState.getCharSequence(KEY_SCREEN_SUBTITLE);
             mScreenIcon = savedInstanceState.getParcelable(KEY_SCREEN_ICON);
