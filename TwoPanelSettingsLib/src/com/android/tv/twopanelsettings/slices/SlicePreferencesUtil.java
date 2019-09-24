@@ -105,9 +105,9 @@ public final class SlicePreferencesUtil {
         }
 
         if (preference != null) {
-            // Set whether preference is selectable.
-            if (preference instanceof InfoPreference || !selectable(item)) {
-                preference.setSelectable(false);
+            // Set whether preference is enabled.
+            if (preference instanceof InfoPreference || !enabled(item)) {
+                preference.setEnabled(false);
             }
             // Set the key for the preference
             CharSequence key = getKey(item);
@@ -280,11 +280,11 @@ public final class SlicePreferencesUtil {
         return false;
     }
 
-    private static boolean selectable(SliceItem sliceItem) {
+    private static boolean enabled(SliceItem sliceItem) {
         List<SliceItem> items = sliceItem.getSlice().getItems();
         for (SliceItem item : items)  {
             if (item.getSubType() != null
-                    && item.getSubType().equals(SlicesConstants.SUBTYPE_IS_SELECTABLE)) {
+                    && item.getSubType().equals(SlicesConstants.SUBTYPE_IS_ENABLED)) {
                 return item.getInt() == 1;
             }
         }
