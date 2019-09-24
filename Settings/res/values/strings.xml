@@ -1656,4 +1656,29 @@
 
     <!-- concat two strings, e.g. "Android Keyboard, My Pass" [CHAR LIMIT=NONE] -->
     <string name="string_concat"><xliff:g id="part1">%1$s</xliff:g>, <xliff:g id="part2">%2$s</xliff:g></string>
+
+    <!-- Group header for the audio category in developer options. [CHAR LIMIT=50] -->
+    <string name="audio_category">Audio</string>
+
+    <!-- Title for the preference to toggle audio recording. [CHAR LIMIT=40] -->
+    <string name="record_audio">Record audio</string>
+    <!-- Summary for the preference to toggle audio recording when enabled. [CHAR LIMIT=50] -->
+    <string name="record_audio_summary_on">Disable to stop recording audio</string>
+    <!-- Summary for the preference to toggle audio recording when disabled. [CHAR LIMIT=50] -->
+    <string name="record_audio_summary_off">Enable to immediately start recording audio</string>
+
+    <!-- Title of the preference for playing recorded audio. [CHAR LIMIT=50] -->
+    <string name="play_recorded_audio_title">Play recorded audio</string>
+
+    <!-- Title of the preference for saving recorded audio. [CHAR LIMIT=50] -->
+    <string name="save_recorded_audio_title">Save recorded audio</string>
+
+    <!-- Title of the preference displaying the amount of time before reading audio. [CHAR LIMIT=50] -->
+    <string name="time_to_start_read_title">Time to start reading</string>
+
+    <!-- Title of the preference displaying the amount of time before recording audio. [CHAR LIMIT=50] -->
+    <string name="time_to_valid_audio_title">Time to valid audio data</string>
+
+    <!-- Title of the preference displaying the duration of empty audio received. [CHAR LIMIT=50] -->
+    <string name="empty_audio_duration_title">Duration of empty audio</string>
 </resources>
