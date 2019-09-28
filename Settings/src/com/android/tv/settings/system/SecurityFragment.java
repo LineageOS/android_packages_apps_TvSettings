@@ -51,6 +51,7 @@ import androidx.preference.TwoStatePreference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.widget.ILockSettings;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.LockscreenCredential;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.dialog.PinDialogFragment;
@@ -345,14 +346,22 @@ public class SecurityFragment extends SettingsPreferenceFragment
 
     @Override
     public void saveLockPassword(String pin, String originalPin, int quality) {
-        new LockPatternUtils(getActivity())
-                .saveLockPassword(pin, originalPin, quality, getContext().getUserId());
+        LockscreenCredential newPin = LockPatternUtils.isQualityAlphabeticPassword(quality)
+                ? LockscreenCredential.createPassword(pin)
+                : LockscreenCredential.createPin(pin);
+
+        new LockPatternUtils(getActivity()).setLockCredential(
+                newPin,
+                LockscreenCredential.createPasswordOrNone(originalPin),
+                getContext().getUserId());
     }
 
     @Override
     public void clearLockPassword(String oldPin) {
-        byte[] oldPinBytes = oldPin != null ? oldPin.getBytes() : null;
-        new LockPatternUtils(getActivity()).clearLock(oldPinBytes, getContext().getUserId());
+        new LockPatternUtils(getActivity()).setLockCredential(
+                LockscreenCredential.createNone(),
+                LockscreenCredential.createPasswordOrNone(oldPin),
+                getContext().getUserId());
     }
 
     @Override
