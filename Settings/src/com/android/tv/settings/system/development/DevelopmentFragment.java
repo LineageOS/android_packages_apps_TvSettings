@@ -22,7 +22,6 @@ import android.app.ActivityManager;
 import android.app.AppOpsManager;
 import android.app.admin.DevicePolicyManager;
 import android.app.backup.IBackupManager;
-import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.ContentResolver;
@@ -90,7 +89,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private static final String ENABLE_TERMINAL = "enable_terminal";
     private static final String KEEP_SCREEN_ON = "keep_screen_on";
     private static final String BT_HCI_SNOOP_LOG = "bt_hci_snoop_log";
-    private static final String BTSNOOP_ENABLE_PROPERTY = "persist.bluetooth.btsnoopenable";
+    private static final String BTSNOOP_LOG_MODE_PROPERTY = "persist.bluetooth.btsnooplogmode";
     private static final String ENABLE_OEM_UNLOCK = "oem_unlock_enable";
     private static final String HDCP_CHECKING_KEY = "hdcp_checking";
     private static final String HDCP_CHECKING_PROPERTY = "persist.sys.hdcp_checking";
@@ -178,7 +177,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private SwitchPreference mEnableTerminal;
     private Preference mBugreport;
     private SwitchPreference mKeepScreenOn;
-    private SwitchPreference mBtHciSnoopLog;
+    private ListPreference mBtHciSnoopLog;
     private SwitchPreference mEnableOemUnlock;
     private SwitchPreference mDebugViewAttributes;
     private SwitchPreference mForceAllowOnExternal;
@@ -315,7 +314,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mLogpersistController.displayPreference(preferenceScreen);
 
         mKeepScreenOn = findAndInitSwitchPref(KEEP_SCREEN_ON);
-        mBtHciSnoopLog = findAndInitSwitchPref(BT_HCI_SNOOP_LOG);
+        mBtHciSnoopLog = addListPreference(BT_HCI_SNOOP_LOG);
         mEnableOemUnlock = findAndInitSwitchPref(ENABLE_OEM_UNLOCK);
         if (!showEnableOemUnlockPreference()) {
             removePreference(mEnableOemUnlock);
@@ -595,8 +594,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
         updateSwitchPreference(mKeepScreenOn, Settings.Global.getInt(cr,
                 Settings.Global.STAY_ON_WHILE_PLUGGED_IN, 0) != 0);
-        updateSwitchPreference(mBtHciSnoopLog,
-                SystemProperties.getBoolean(BTSNOOP_ENABLE_PROPERTY, false));
         if (mEnableOemUnlock != null) {
             updateSwitchPreference(mEnableOemUnlock, isOemUnlockEnabled(getActivity()));
             mEnableOemUnlock.setEnabled(isOemUnlockAllowed());
@@ -605,6 +602,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 Settings.Global.DEBUG_VIEW_ATTRIBUTES, 0) != 0);
         updateSwitchPreference(mForceAllowOnExternal, Settings.Global.getInt(cr,
                 Settings.Global.FORCE_ALLOW_ON_EXTERNAL, 0) != 0);
+        updateBluetoothHciSnoopLogValues();
         updateHdcpValues();
         updatePasswordSummary();
         updateDebuggerOptions();
@@ -665,6 +663,30 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         SystemPropPoker.getInstance().poke();
     }
 
+    private void updateBluetoothHciSnoopLogValues() {
+        ListPreference bluetoothSnoopLog = (ListPreference) findPreference(BT_HCI_SNOOP_LOG);
+        if (bluetoothSnoopLog != null) {
+            String currentValue = SystemProperties.get(BTSNOOP_LOG_MODE_PROPERTY);
+            String[] values = getResources().getStringArray(R.array.bt_hci_snoop_log_values);
+            String[] summaries = getResources().getStringArray(R.array.bt_hci_snoop_log_entries);
+            int disabledIndex = 0; // defaults to DISABLED
+            updateListPreference(bluetoothSnoopLog, currentValue, values, summaries, disabledIndex);
+        }
+    }
+
+    private void updateListPreference(ListPreference preference, String currentValue,
+            String[] values, String[] summaries, int index) {
+        for (int i = 0; i < values.length; i++) {
+            if (currentValue.equals(values[i])) {
+                index = i;
+                break;
+            }
+        }
+        preference.setValue(values[index]);
+        preference.setSummary(summaries[index]);
+        preference.setOnPreferenceChangeListener(this);
+    }
+
     private void updateHdcpValues() {
         ListPreference hdcpChecking = (ListPreference) findPreference(HDCP_CHECKING_KEY);
         if (hdcpChecking != null) {
@@ -672,15 +694,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             String[] values = getResources().getStringArray(R.array.hdcp_checking_values);
             String[] summaries = getResources().getStringArray(R.array.hdcp_checking_summaries);
             int index = 1; // Defaults to drm-only. Needs to match with R.array.hdcp_checking_values
-            for (int i = 0; i < values.length; i++) {
-                if (currentValue.equals(values[i])) {
-                    index = i;
-                    break;
-                }
-            }
-            hdcpChecking.setValue(values[index]);
-            hdcpChecking.setSummary(summaries[index]);
-            hdcpChecking.setOnPreferenceChangeListener(this);
+            updateListPreference(hdcpChecking, currentValue, values, summaries, index);
         }
     }
 
@@ -696,10 +710,11 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
     }
 
-    private void writeBtHciSnoopLogOptions() {
-        BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
-        SystemProperties.set(BTSNOOP_ENABLE_PROPERTY,
-                Boolean.toString(mBtHciSnoopLog.isChecked()));
+    private void writeBtHciSnoopLogOptions(Object newValue) {
+        SystemProperties.set(BTSNOOP_LOG_MODE_PROPERTY,
+                newValue == null ? "" : newValue.toString());
+        updateBluetoothHciSnoopLogValues();
+        SystemPropPoker.getInstance().poke();
     }
 
     private void writeDebuggerOptions() {
@@ -1479,8 +1494,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                     mKeepScreenOn.isChecked() ?
                             (BatteryManager.BATTERY_PLUGGED_AC | BatteryManager.BATTERY_PLUGGED_USB)
                             : 0);
-        } else if (preference == mBtHciSnoopLog) {
-            writeBtHciSnoopLogOptions();
         } else if (preference == mEnableOemUnlock) {
             if (mEnableOemUnlock.isChecked()) {
                 // Pass to super to launch the dialog, then uncheck until the dialog
@@ -1589,6 +1602,9 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             return true;
         } else if (preference == mSimulateColorSpace) {
             writeSimulateColorSpace(newValue);
+            return true;
+        } else if (preference == mBtHciSnoopLog) {
+            writeBtHciSnoopLogOptions(newValue);
             return true;
         }
         return false;
