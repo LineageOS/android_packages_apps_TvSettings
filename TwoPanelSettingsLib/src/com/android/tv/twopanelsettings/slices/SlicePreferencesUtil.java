@@ -25,6 +25,10 @@ import static android.app.slice.SliceItem.FORMAT_LONG;
 import static android.app.slice.SliceItem.FORMAT_SLICE;
 import static android.app.slice.SliceItem.FORMAT_TEXT;
 
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.CHECKMARK;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.RADIO;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
+
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
@@ -42,6 +46,7 @@ import androidx.slice.core.SliceQuery;
 import androidx.slice.widget.SliceContent;
 
 import com.android.tv.twopanelsettings.IconUtil;
+import com.android.tv.twopanelsettings.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +61,9 @@ public final class SlicePreferencesUtil {
         Preference preference = null;
         Data data = extract(item);
         if (item.getSubType() != null) {
-            if (item.getSubType().equals(SlicesConstants.TYPE_PREFERENCE)) {
+            String subType = item.getSubType();
+            if (subType.equals(SlicesConstants.TYPE_PREFERENCE)
+                    || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED)) {
                 // TODO: Figure out all the possible cases and reorganize the logic
                 if (data.mInfoItems.size() > 0) {
                     preference = new InfoPreference(
@@ -78,11 +85,19 @@ public final class SlicePreferencesUtil {
                 } else if (data.mEndItems.size() > 0 && data.mEndItems.get(0) != null) {
                     SliceActionImpl action = new SliceActionImpl(data.mEndItems.get(0));
                     if (action != null) {
-                        boolean isCheckMark = SlicePreferencesUtil.isCheckMark(item);
-                        if (isCheckMark) {
-                            preference = new SliceCheckboxPreference(contextThemeWrapper, action);
-                        } else {
-                            preference = new SliceSwitchPreference(contextThemeWrapper, action);
+                        int buttonStyle = SlicePreferencesUtil.getButtonStyle(item);
+                        switch (buttonStyle) {
+                            case CHECKMARK :
+                                preference = new SliceCheckboxPreference(
+                                        contextThemeWrapper, action);
+                                break;
+                            case SWITCH :
+                                preference = new SliceSwitchPreference(contextThemeWrapper, action);
+                                break;
+                            case RADIO:
+                                preference = new SliceRadioPreference(contextThemeWrapper, action);
+                                preference.setLayoutResource(R.layout.preference_reversed_widget);
+                                break;
                         }
                     }
                 }
@@ -258,6 +273,17 @@ public final class SlicePreferencesUtil {
         return null;
     }
 
+    static SliceItem getEmbeddedItem(List<SliceContent> sliceItems) {
+        for (SliceContent contentItem : sliceItems)  {
+            SliceItem item = contentItem.getSliceItem();
+            if (item.getSubType() != null
+                    && item.getSubType().equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
     private static boolean isIconNeedsToBeProcessed(SliceItem sliceItem) {
         List<SliceItem> items = sliceItem.getSlice().getItems();
         for (SliceItem item : items)  {
@@ -269,15 +295,15 @@ public final class SlicePreferencesUtil {
         return false;
     }
 
-    private static boolean isCheckMark(SliceItem sliceItem) {
+    private static int getButtonStyle(SliceItem sliceItem) {
         List<SliceItem> items = sliceItem.getSlice().getItems();
         for (SliceItem item : items)  {
             if (item.getSubType() != null
-                    && item.getSubType().equals(SlicesConstants.SUBTYPE_IS_CHECK_MARK)) {
-                return item.getInt() == 1;
+                    && item.getSubType().equals(SlicesConstants.SUBTYPE_BUTTON_STYLE)) {
+                return item.getInt();
             }
         }
-        return false;
+        return -1;
     }
 
     private static boolean enabled(SliceItem sliceItem) {
