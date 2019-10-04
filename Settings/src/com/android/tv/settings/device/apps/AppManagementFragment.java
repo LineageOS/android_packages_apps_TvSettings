@@ -43,6 +43,7 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -178,9 +179,17 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
     }
 
     private void navigateBack() {
-        // need to post this to avoid recursing in the fragment manager.
-        mHandler.removeCallbacks(mBailoutRunnable);
-        mHandler.post(mBailoutRunnable);
+        if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
+            TwoPanelSettingsFragment parentFragment =
+                    (TwoPanelSettingsFragment) getCallbackFragment();
+            if (parentFragment.isFragmentInTheMainPanel(this)) {
+                parentFragment.navigateBack();
+            }
+        } else {
+            // need to post this to avoid recursing in the fragment manager.
+            mHandler.removeCallbacks(mBailoutRunnable);
+            mHandler.post(mBailoutRunnable);
+        }
     }
 
     @Override
