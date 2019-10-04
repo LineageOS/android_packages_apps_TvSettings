@@ -19,6 +19,8 @@ package com.android.tv.twopanelsettings.slices;
 import static android.app.slice.Slice.EXTRA_TOGGLE_STATE;
 import static android.app.slice.Slice.HINT_PARTIAL;
 
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_KEY;
+
 import android.app.PendingIntent;
 import android.app.PendingIntent.CanceledException;
 import android.content.Intent;
@@ -304,14 +306,41 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference instanceof TwoStatePreference && preference instanceof HasSliceAction) {
+        if (preference instanceof SliceRadioPreference) {
+            SliceRadioPreference radioPref = (SliceRadioPreference) preference;
+            if (!radioPref.isChecked()) {
+                radioPref.setChecked(true);
+                return true;
+            }
+
+            try {
+                SliceActionImpl action = radioPref.getSliceAction();
+                PendingIntent pendingIntent = action.getAction();
+                Intent fillInIntent =
+                        new Intent().putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
+                IntentSender intentSender = pendingIntent.getIntentSender();
+                startIntentSenderForResult(
+                        intentSender, SLICE_REQUEST_CODE, fillInIntent, 0, 0, 0, null);
+                for (int i = 0; i < getPreferenceScreen().getPreferenceCount(); i++) {
+                    Preference pref = getPreferenceScreen().getPreference(i);
+                    if (pref instanceof SliceRadioPreference && pref != preference) {
+                        ((SliceRadioPreference) pref).setChecked(false);
+                    }
+                }
+            } catch (SendIntentException e) {
+                Log.e(TAG, "PendingIntent for slice cannot be sent", e);
+            }
+        } else if (preference instanceof TwoStatePreference
+                && preference instanceof HasSliceAction) {
             // TODO - Show loading indicator here?
             try {
                 SliceActionImpl action = ((HasSliceAction) preference).getSliceAction();
                 if (action.isToggle()) {
                     // Update the intent extra state
                     boolean isChecked = ((TwoStatePreference) preference).isChecked();
-                    Intent i = new Intent().putExtra(EXTRA_TOGGLE_STATE, isChecked);
+                    Intent i = new Intent()
+                            .putExtra(EXTRA_TOGGLE_STATE, isChecked)
+                            .putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
                     action.getActionItem().fireAction(getContext(), i);
                 } else {
                     action.getActionItem().fireAction(null, null);
@@ -329,9 +358,11 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 try {
                     SliceActionImpl action = actionPref.getSliceAction();
                     PendingIntent pendingIntent = action.getAction();
+                    Intent fillInIntent =
+                            new Intent().putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
                     IntentSender intentSender = pendingIntent.getIntentSender();
                     startIntentSenderForResult(
-                            intentSender, SLICE_REQUEST_CODE, null, 0, 0, 0, null);
+                            intentSender, SLICE_REQUEST_CODE, fillInIntent, 0, 0, 0, null);
                     if (actionPref.getFollowupSliceAction() != null) {
                         mPreferenceFollowupIntent = actionPref.getFollowupSliceAction().getAction();
                     }
