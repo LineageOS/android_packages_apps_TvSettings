@@ -37,6 +37,8 @@ import static androidx.slice.builders.ListBuilder.INFINITY;
 import static androidx.slice.builders.ListBuilder.LARGE_IMAGE;
 import static androidx.slice.core.SliceHints.SUBTYPE_MILLIS;
 
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.BUTTONSTYLE;
+
 import android.net.Uri;
 
 import androidx.annotation.NonNull;
@@ -67,13 +69,15 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     public static final String TYPE_PREFERENCE = "TYPE_PREFERENCE";
     public static final String TYPE_PREFERENCE_CATEGORY = "TYPE_PREFERENCE_CATEGORY";
     public static final String TYPE_PREFERENCE_SCREEN_TITLE = "TYPE_PREFERENCE_SCREEN_TITLE";
+    public static final String TYPE_PREFERENCE_EMBEDDED = "TYPE_PREFERENCE_EMBEDDED";
+    public static final String TYPE_PREFERENCE_RADIO = "TYPE_PREFERENCE_RADIO";
     public static final String TAG_TARGET_URI = "TAG_TARGET_URI";
     public static final String TAG_KEY = "TAG_KEY";
     public static final String SUBTYPE_INTENT = "SUBTYPE_INTENT";
     public static final String SUBTYPE_ICON_NEED_TO_BE_PROCESSED =
             "SUBTYPE_ICON_NEED_TO_BE_PROCESSED";
     public static final String SUBTYPE_FOLLOWUP_INTENT = "SUBTYPE_FOLLOWUP_INTENT";
-    public static final String SUBTYPE_IS_CHECK_MARK = "SUBTYPE_IS_CHECK_MARK";
+    public static final String SUBTYPE_BUTTON_STYLE = "SUBTYPE_BUTTON_STYLE";
     public static final String SUBTYPE_IS_ENABLED = "SUBTYPE_IS_ENABLED";
     public static final String SUBTYPE_INFO_PREFERENCE = "SUBTYPE_INFO_PREFERENCE";
 
@@ -130,6 +134,13 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         addRow(builder, TYPE_PREFERENCE_SCREEN_TITLE);
     }
 
+    /**
+     * Set the embedded preference. This preference would be embedded in other TvSettings
+     * preference items.
+     */
+    public void setEmbeddedPreference(@NonNull RowBuilder builder) {
+        addRow(builder, TYPE_PREFERENCE_EMBEDDED);
+    }
     /**
      * Add a row to list builder.
      */
@@ -199,7 +210,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         private SliceItem mUriItem;
         private SliceItem mKeyItem;
         private SliceItem mIconNeedsToBeProcessedItem;
-        private SliceItem mIsCheckMarkItem;
+        private SliceItem mButtonStyleItem;
         private SliceItem mIsEnabledItem;
         /**
          *
@@ -263,7 +274,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             if (builder.getTitleIcon() != null) {
                 setIconNeedsToBeProcessed(builder.iconNeedsToBeProcessed());
             }
-            setCheckMark(builder.isCheckMark());
+            setButtonStyle(builder.getButtonStyle());
             setEnabled(builder.isEnabled());
             List<Object> endItems = builder.getEndItems();
             List<Integer> endTypes = builder.getEndTypes();
@@ -389,9 +400,9 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         /**
          *
          */
-        public void setCheckMark(boolean isCheckMark) {
-            mIsCheckMarkItem = new SliceItem(
-                    isCheckMark ? 1 : 0, FORMAT_INT, SUBTYPE_IS_CHECK_MARK, new String[]{});
+        public void setButtonStyle(@BUTTONSTYLE int buttonStyle) {
+            mButtonStyleItem = new SliceItem(
+                    buttonStyle, FORMAT_INT, SUBTYPE_BUTTON_STYLE, new String[]{});
         }
 
         /**
@@ -501,8 +512,8 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             if (mIconNeedsToBeProcessedItem != null) {
                 b.addItem(mIconNeedsToBeProcessedItem);
             }
-            if (mIsCheckMarkItem != null) {
-                b.addItem(mIsCheckMarkItem);
+            if (mButtonStyleItem != null) {
+                b.addItem(mButtonStyleItem);
             }
             if (mIsEnabledItem != null) {
                 b.addItem(mIsEnabledItem);

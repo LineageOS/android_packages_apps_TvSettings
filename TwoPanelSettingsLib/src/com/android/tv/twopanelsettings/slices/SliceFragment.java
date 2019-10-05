@@ -19,6 +19,8 @@ package com.android.tv.twopanelsettings.slices;
 import static android.app.slice.Slice.EXTRA_TOGGLE_STATE;
 import static android.app.slice.Slice.HINT_PARTIAL;
 
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_KEY;
+
 import android.app.PendingIntent;
 import android.app.PendingIntent.CanceledException;
 import android.content.Intent;
@@ -78,10 +80,13 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private CharSequence mScreenSubtitle;
     private Icon mScreenIcon;
     private PendingIntent mPreferenceFollowupIntent;
+    private int mFollowupPendingIntentResultCode;
     private Intent mFollowupPendingIntentExtras;
     private String mLastFocusedPreferenceKey;
 
     private static final String KEY_PREFERENCE_FOLLOWUP_INTENT = "key_preference_followup_intent";
+    private static final String KEY_PREFERENCE_FOLLOWUP_RESULT_CODE =
+            "key_preference_followup_result_code";
     private static final String KEY_SCREEN_TITLE = "key_screen_title";
     private static final String KEY_SCREEN_SUBTITLE = "key_screen_subtitle";
     private static final String KEY_SCREEN_ICON = "key_screen_icon";
@@ -131,7 +136,8 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             return;
         }
         try {
-            mPreferenceFollowupIntent.send(getContext(), 0, mFollowupPendingIntentExtras);
+            mPreferenceFollowupIntent.send(getContext(),
+                    mFollowupPendingIntentResultCode, mFollowupPendingIntentExtras);
         } catch (CanceledException e) {
             Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
         }
@@ -304,14 +310,41 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference instanceof TwoStatePreference && preference instanceof HasSliceAction) {
+        if (preference instanceof SliceRadioPreference) {
+            SliceRadioPreference radioPref = (SliceRadioPreference) preference;
+            if (!radioPref.isChecked()) {
+                radioPref.setChecked(true);
+                return true;
+            }
+
+            try {
+                SliceActionImpl action = radioPref.getSliceAction();
+                PendingIntent pendingIntent = action.getAction();
+                Intent fillInIntent =
+                        new Intent().putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
+                IntentSender intentSender = pendingIntent.getIntentSender();
+                startIntentSenderForResult(
+                        intentSender, SLICE_REQUEST_CODE, fillInIntent, 0, 0, 0, null);
+                for (int i = 0; i < getPreferenceScreen().getPreferenceCount(); i++) {
+                    Preference pref = getPreferenceScreen().getPreference(i);
+                    if (pref instanceof SliceRadioPreference && pref != preference) {
+                        ((SliceRadioPreference) pref).setChecked(false);
+                    }
+                }
+            } catch (SendIntentException e) {
+                Log.e(TAG, "PendingIntent for slice cannot be sent", e);
+            }
+        } else if (preference instanceof TwoStatePreference
+                && preference instanceof HasSliceAction) {
             // TODO - Show loading indicator here?
             try {
                 SliceActionImpl action = ((HasSliceAction) preference).getSliceAction();
                 if (action.isToggle()) {
                     // Update the intent extra state
                     boolean isChecked = ((TwoStatePreference) preference).isChecked();
-                    Intent i = new Intent().putExtra(EXTRA_TOGGLE_STATE, isChecked);
+                    Intent i = new Intent()
+                            .putExtra(EXTRA_TOGGLE_STATE, isChecked)
+                            .putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
                     action.getActionItem().fireAction(getContext(), i);
                 } else {
                     action.getActionItem().fireAction(null, null);
@@ -329,9 +362,11 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 try {
                     SliceActionImpl action = actionPref.getSliceAction();
                     PendingIntent pendingIntent = action.getAction();
+                    Intent fillInIntent =
+                            new Intent().putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
                     IntentSender intentSender = pendingIntent.getIntentSender();
                     startIntentSenderForResult(
-                            intentSender, SLICE_REQUEST_CODE, null, 0, 0, 0, null);
+                            intentSender, SLICE_REQUEST_CODE, fillInIntent, 0, 0, 0, null);
                     if (actionPref.getFollowupSliceAction() != null) {
                         mPreferenceFollowupIntent = actionPref.getFollowupSliceAction().getAction();
                     }
@@ -351,12 +386,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             return;
         }
         mFollowupPendingIntentExtras = data;
+        mFollowupPendingIntentResultCode = resultCode;
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelable(KEY_PREFERENCE_FOLLOWUP_INTENT, mPreferenceFollowupIntent);
+        outState.putInt(KEY_PREFERENCE_FOLLOWUP_RESULT_CODE, mFollowupPendingIntentResultCode);
         outState.putCharSequence(KEY_SCREEN_TITLE, mScreenTitle);
         outState.putCharSequence(KEY_SCREEN_SUBTITLE, mScreenSubtitle);
         outState.putParcelable(KEY_SCREEN_ICON, mScreenIcon);
@@ -370,6 +407,8 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (savedInstanceState != null) {
             mPreferenceFollowupIntent =
                     savedInstanceState.getParcelable(KEY_PREFERENCE_FOLLOWUP_INTENT);
+            mFollowupPendingIntentResultCode =
+                    savedInstanceState.getInt(KEY_PREFERENCE_FOLLOWUP_RESULT_CODE);
             mScreenTitle = savedInstanceState.getCharSequence(KEY_SCREEN_TITLE);
             mScreenSubtitle = savedInstanceState.getCharSequence(KEY_SCREEN_SUBTITLE);
             mScreenIcon = savedInstanceState.getParcelable(KEY_SCREEN_ICON);

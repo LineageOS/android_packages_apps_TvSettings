@@ -17,45 +17,29 @@
 package com.android.tv.twopanelsettings.slices;
 
 import android.content.Context;
-import android.util.AttributeSet;
 
-import androidx.preference.SwitchPreference;
 import androidx.slice.core.SliceActionImpl;
 
 /**
- * Slices version of SwitchPreference.
+ * Slice version of RadioPreference.
  */
-public class SliceSwitchPreference extends SwitchPreference implements HasSliceAction {
-    protected SliceActionImpl mAction;
+public class SliceRadioPreference extends RadioPreference implements HasSliceAction {
+    private SliceActionImpl mSliceAction;
 
-    public SliceSwitchPreference(Context context, SliceActionImpl action) {
+    public SliceRadioPreference(Context context, SliceActionImpl action) {
         super(context);
-        mAction = action;
+        mSliceAction = action;
         update();
-    }
-
-    public SliceSwitchPreference(Context context, AttributeSet attrs, SliceActionImpl action) {
-        super(context, attrs);
-        mAction = action;
-        update();
-    }
-
-    public SliceSwitchPreference(Context context) {
-        super(context);
-    }
-
-    public SliceSwitchPreference(Context context, AttributeSet attrs) {
-        super(context, attrs);
     }
 
     @Override
     public SliceActionImpl getSliceAction() {
-        return mAction;
+        return mSliceAction;
     }
 
     @Override
     public void setSliceAction(SliceActionImpl sliceAction) {
-        mAction = sliceAction;
+        mSliceAction = sliceAction;
     }
 
     @Override
@@ -65,10 +49,10 @@ public class SliceSwitchPreference extends SwitchPreference implements HasSliceA
 
     @Override
     public void setFollowupSliceAction(SliceActionImpl sliceAction) {
-
+        // no-op
     }
 
     private void update() {
-        this.setChecked(mAction.isChecked());
+        this.setChecked(mSliceAction.isChecked());
     }
 }
