@@ -22,7 +22,6 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.leanback.preference.LeanbackPreferenceFragment;
 import androidx.leanback.preference.LeanbackSettingsFragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceDialogFragment;
@@ -43,9 +42,6 @@ public abstract class BaseSettingsFragment extends LeanbackSettingsFragment {
     @Override
     public final boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
         if (pref.getFragment() != null) {
-            if (!isLeanbackPreferenceFragment(pref.getFragment())) {
-                return false;
-            }
             if (pref instanceof SlicePreference) {
                 SlicePreference slicePref = (SlicePreference) pref;
                 if (slicePref.getUri() == null || !isUriValid(slicePref.getUri())) {
@@ -56,7 +52,6 @@ public abstract class BaseSettingsFragment extends LeanbackSettingsFragment {
                 b.putCharSequence(SlicesConstants.TAG_SCREEN_TITLE, slicePref.getTitle());
             }
         }
-
         final Fragment f =
                 Fragment.instantiate(getActivity(), pref.getFragment(), pref.getExtras());
         f.setTargetFragment(caller, 0);
@@ -66,15 +61,6 @@ public abstract class BaseSettingsFragment extends LeanbackSettingsFragment {
             startImmersiveFragment(f);
         }
         return true;
-    }
-
-    private boolean isLeanbackPreferenceFragment(String fragment) {
-        try {
-            return LeanbackPreferenceFragment.class
-                    .isAssignableFrom(Class.forName(fragment));
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Fragment class not found.", e);
-        }
     }
 
     private boolean isUriValid(String uri) {
