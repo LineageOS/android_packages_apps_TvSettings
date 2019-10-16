@@ -88,7 +88,9 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
             inputPref.setVisible(mInputSettingNeeded);
         }
         final LongClickPreference restartPref = (LongClickPreference) findPreference(KEY_REBOOT);
-        restartPref.setLongClickListener(this);
+        if (restartPref != null) {
+            restartPref.setLongClickListener(this);
+        }
     }
 
     @Override
