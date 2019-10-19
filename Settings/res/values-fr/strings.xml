@@ -51,7 +51,7 @@
     <string name="help_and_feedback_category_title" msgid="6565641596360780888">"Aide et commentaires"</string>
     <string name="add_account" msgid="4098060223200619258">"Ajouter un compte"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Supprimer le compte"</string>
-    <string name="account_sync" msgid="773808124331714965">"Sélectionner appli synchro"</string>
+    <string name="account_sync" msgid="773808124331714965">"Sélectionner les applis synchronisées"</string>
     <string name="sync_now" msgid="8732244492880016471">"Synchroniser"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Synchronisation en cours…"</string>
     <string name="last_synced" msgid="6178494892357077274">"Dernière synchronisation : <xliff:g id="TIME">%1$s</xliff:g>"</string>
@@ -88,8 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Son système"</string>
     <string name="device_apps" msgid="1971794537385509294">"Applications"</string>
     <string name="device_storage" msgid="5536683600091277826">"Stockage"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Rétablir la configuration d\'usine"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Sauvegarde et restauration"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Rétablissement de la configuration d\'usine"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Étalonnage"</string>
@@ -314,7 +313,7 @@
     <string name="storage_no_apps" msgid="579118619398668670">"Aucune application à sauvegarder"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Supprimer cet espace de stockage de l\'appareil"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Pour utiliser les applications ou les données de ce disque, insérez celui-ci de nouveau. Vous pouvez également le supprimer de la liste des mémoires de stockage s\'il n\'est pas disponible.\n\nSi vous le supprimez, toutes les données qu\'il contient seront définitivement effacées.\n\nVous pouvez réinstaller les applications plus tard, mais les données correspondantes enregistrées sur ce disque seront perdues."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Mémoire de stockage de l\'appareil"</string>
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Espace de stockage de l\'appareil"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Mémoire de stockage amovible"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Réinitialiser"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"La mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\" a bien été installée."</string>
@@ -395,8 +394,8 @@
     <string name="location_no_recent_apps" msgid="4218851908476344030">"Aucune application n\'a envoyé de demande d\'accès à votre position récemment."</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"Forte utilisation de la batterie"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"Faible utilisation de batterie"</string>
-    <string name="location_mode_wifi_description" msgid="2778774510654527264">"Utiliser le Wi-Fi pour estimer la position"</string>
-    <string name="location_status" msgid="3456414279428237558">"État de la position"</string>
+    <string name="location_mode_wifi_description" msgid="2778774510654527264">"Utiliser le Wi-Fi pour estimer la localisation"</string>
+    <string name="location_status" msgid="3456414279428237558">"État de la localisation"</string>
     <string name="location_services" msgid="5441085185119797200">"Services de localisation"</string>
     <string name="on" msgid="6683600681314500652">"Activé"</string>
     <string name="off" msgid="5264189545064767245">"Désactivé"</string>
@@ -694,7 +693,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Effacer toutes vos informations personnelles et les applications téléchargées ? Cette action est irréversible."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Tout effacer"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Choisir un nom pour votre <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="4939767901420114190">"Donnez un nom à votre appareil afin de l\'identifier lors de la diffusion de contenus ou lorsque vous vous y connectez à partir d\'autres appareils."</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"Donnez un nom à votre appareil afin de l\'identifier lorsque vous diffusez des contenus ou établissez une connexion à partir d\'autres appareils."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"Salon"</item>
@@ -702,8 +701,8 @@
     <item msgid="1389347662738182100">"Chambre"</item>
   </string-array>
     <string name="custom_room" msgid="8655516733933892458">"Saisir un nom personnalisé…"</string>
-    <string name="device_rename_title" msgid="2629557295786267185">"Renommer ce <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="device_rename_description" msgid="2461752788563877107">"Le nom actuel de ce <xliff:g id="DEVICEMODEL">%1$s</xliff:g> est \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\"."</string>
+    <string name="device_rename_title" msgid="2629557295786267185">"Renommer cet appareil <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Le nom actuel de cet appareil <xliff:g id="DEVICEMODEL">%1$s</xliff:g> est \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\"."</string>
     <string name="device_name_suggestion_title" msgid="2312205155408810120">"Définir le nom de votre appareil"</string>
     <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Utilisez ce nom pour caster des photos, des vidéos ou d\'autres contenus depuis votre téléphone"</string>
     <string name="change_setting" msgid="2047402388786162246">"Modifier"</string>

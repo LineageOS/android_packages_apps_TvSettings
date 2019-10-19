@@ -87,9 +87,8 @@
     <string name="device_surround_sound" msgid="6272196310566546860">"เสียงเซอร์ราวด์"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"เสียงระบบ"</string>
     <string name="device_apps" msgid="1971794537385509294">"แอปพลิเคชัน"</string>
-    <string name="device_storage" msgid="5536683600091277826">"ที่เก็บข้อมูล"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_storage" msgid="5536683600091277826">"พื้นที่เก็บข้อมูล"</string>
+    <string name="device_reset" msgid="8260472343489104736">"รีเซ็ตเป็นค่าเริ่มต้น"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"การสำรองและคืนค่าข้อมูล"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"รีเซ็ตข้อมูลเป็นค่าเริ่มต้น"</string>
     <string name="device_calibration" msgid="8632962533376605191">"การเทียบมาตรฐาน"</string>
@@ -101,7 +100,7 @@
     <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
     <string name="surround_sound_auto_info" msgid="4957977219847012992">"หมายเหตุ: ตัวเลือกอัตโนมัติอาจใช้ไม่ได้หากอุปกรณ์ที่คุณใช้รายงานรูปแบบที่รองรับไม่ถูกต้อง"</string>
-    <string name="surround_sound_auto_summary" msgid="175387511376834034">"อัตโนมัติ: ใช้รูปแบบที่อุปกรณ์แจ้งว่ารองรับ (แนะนำ)"</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"อัตโนมัติ: ใช้รูปแบบที่อุปกรณ์รายงานว่ารองรับ (แนะนำ)"</string>
     <string name="surround_sound_none_summary" msgid="4295042972785042496">"ไม่มี: ไม่ใช้เสียงเซอร์ราวด์"</string>
     <string name="surround_sound_manual_summary" msgid="9208540024024014501">"กำหนดเอง: เลือกรูปแบบที่จะใช้"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"ล้างข้อมูลในแคชไหม"</string>
@@ -164,7 +163,7 @@
     <string name="about_model" msgid="6625269442206323995">"รุ่น"</string>
     <string name="about_version" msgid="1177287676732287266">"เวอร์ชัน"</string>
     <string name="about_serial" msgid="2723560490027171187">"หมายเลขซีเรียล"</string>
-    <string name="about_build" msgid="9148789767199785676">"บิวด์"</string>
+    <string name="about_build" msgid="9148789767199785676">"บิลด์"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
       <item quantity="other">อีก <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ขั้นตอน คุณก็จะได้เป็นนักพัฒนาซอฟต์แวร์แล้ว</item>
       <item quantity="one">อีก <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> ขั้นตอน คุณก็จะได้เป็นนักพัฒนาซอฟต์แวร์แล้ว</item>
@@ -293,7 +292,7 @@
     <string name="wifi_summary_unknown_network" msgid="7903601448928422642">"เครือข่ายไม่ทราบชื่อ"</string>
     <string name="title_ok" msgid="1021329453788761592">"ตกลง"</string>
     <string name="title_cancel" msgid="4846143417666038604">"ยกเลิก"</string>
-    <string name="storage_title" msgid="2132026108559493394">"ที่เก็บข้อมูล"</string>
+    <string name="storage_title" msgid="2132026108559493394">"พื้นที่เก็บข้อมูล"</string>
     <string name="storage_available" msgid="1241005580092138871">"พร้อมใช้งาน"</string>
     <string name="storage_size" msgid="8958530823208352781">"พื้นที่ทั้งหมด: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
     <string name="storage_calculating_size" msgid="2644732407412520565">"กำลังคำนวณ…"</string>
@@ -314,7 +313,7 @@
     <string name="storage_no_apps" msgid="579118619398668670">"ไม่มีแอปที่จะสำรองข้อมูล"</string>
     <string name="storage_forget" msgid="8731986045697320463">"ลืมพื้นที่เก็บข้อมูลของอุปกรณ์นี้"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"หากต้องการใช้แอปหรือข้อมูลที่อยู่ในไดรฟ์นี้ ให้เสียบไดรฟ์ใหม่ หรือคุณสามารถเลือกไม่จำที่เก็บข้อมูลนี้หากไดรฟ์ไม่พร้อมใช้งาน\n\nหากคุณเลือกไม่จำ ข้อมูลทั้งหมดในไดรฟ์จะสูญหายอย่างถาวร\n\nคุณสามารถติดตั้งแอปอีกครั้งในภายหลัง แต่ข้อมูลที่จัดเก็บไว้ในไดรฟ์นี้จะสูญหาย"</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"ที่เก็บข้อมูลอุปกรณ์"</string>
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"พื้นที่เก็บข้อมูลของอุปกรณ์"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"ที่เก็บข้อมูลแบบถอดได้"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"รีเซ็ต"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"ต่อเชื่อม <xliff:g id="NAME">%1$s</xliff:g> แล้ว"</string>
@@ -395,7 +394,7 @@
     <string name="location_no_recent_apps" msgid="4218851908476344030">"ไม่มีแอปใดทำการขอตำแหน่งเมื่อเร็วๆ นี้"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"ใช้แบตเตอรี่มาก"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"ใช้แบตเตอรี่น้อย"</string>
-    <string name="location_mode_wifi_description" msgid="2778774510654527264">"ใช้ WiFi เพื่อหาตำแหน่ง"</string>
+    <string name="location_mode_wifi_description" msgid="2778774510654527264">"ใช้ Wi-Fi เพื่อคาดคะเนตำแหน่ง"</string>
     <string name="location_status" msgid="3456414279428237558">"สถานะตำแหน่ง"</string>
     <string name="location_services" msgid="5441085185119797200">"บริการตำแหน่ง"</string>
     <string name="on" msgid="6683600681314500652">"เปิด"</string>
@@ -694,7 +693,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"ลบข้อมูลส่วนบุคคลและแอปที่ดาวน์โหลดทั้งหมดไหม คุณไม่สามารถย้อนกลับการทำงานนี้ได้!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"ลบทุกอย่าง"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"ตั้งชื่อให้ <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="4939767901420114190">"ตั้งชื่อให้กับอุปกรณ์เพื่อช่วยระบุอุปกรณ์เมื่อมีการแคสต์หรือเชื่อมต่อจากอุปกรณ์อื่น"</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"ตั้งชื่อให้อุปกรณ์เพื่อช่วยระบุอุปกรณ์เมื่อมีการแคสต์หรือเชื่อมต่อจากอุปกรณ์อื่น"</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"TV ในห้องนั่งเล่น"</item>
@@ -707,7 +706,7 @@
     <string name="device_name_suggestion_title" msgid="2312205155408810120">"ตั้งชื่ออุปกรณ์ของคุณ"</string>
     <string name="device_name_suggestion_summary" msgid="5657494684788779371">"ใช้ชื่อนี้เมื่อแคสต์รูปภาพ วิดีโอ และเนื้อหาอื่นๆ จากโทรศัพท์"</string>
     <string name="change_setting" msgid="2047402388786162246">"เปลี่ยน"</string>
-    <string name="keep_settings" msgid="6798327196645732517">"ไม่เปลี่ยนแปลง"</string>
+    <string name="keep_settings" msgid="6798327196645732517">"ไม่เปลี่ยน"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"สิทธิ์"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"สิทธิ์ของแอป"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"อนุญาต <xliff:g id="COUNT_0">%1$d</xliff:g> จาก <xliff:g id="COUNT_1">%2$d</xliff:g> แอปแล้ว"</string>

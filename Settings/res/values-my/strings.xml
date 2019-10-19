@@ -51,8 +51,8 @@
     <string name="help_and_feedback_category_title" msgid="6565641596360780888">"အကူအညီနှင့် အကြံပြုချက်"</string>
     <string name="add_account" msgid="4098060223200619258">"အကောင့်ထည့်ရန်"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"အကောင့်ကို ဖယ်ရှားရန်"</string>
-    <string name="account_sync" msgid="773808124331714965">"စင့်က် လုပ်ပြီးသား အက်ပ်များကို ရွေးရန်"</string>
-    <string name="sync_now" msgid="8732244492880016471">"ယခု စင့်က် လုပ်ရန်"</string>
+    <string name="account_sync" msgid="773808124331714965">"စင့်ခ်လုပ်ထားသည့် အက်ပ်များ ရွေးရန်"</string>
+    <string name="sync_now" msgid="8732244492880016471">"ယခု စင့်ခ်လုပ်ရန်"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"စင့်ခ်လုပ်နေဆဲ…"</string>
     <string name="last_synced" msgid="6178494892357077274">"နောက်ဆုံး စင့်ခ်လုပ်ချိန် <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"ပိတ်ထား"</string>
@@ -69,8 +69,8 @@
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"အီတာနက် ချိတ်ထားသည်"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"မည်သည့် ကွန်ရက်မျှ ချိတ်ဆက်မထားပါ"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"Wi-Fi ကို ပိတ်ထားသည်"</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"စကင်န်လုပ်ခြင်း အမြဲတန်းရနိုင်ရန်"</string>
-    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Wi-Fi ပိတ်ထားလျှင်တောင်မှ Google ၏ တည်နေရာဝန်ဆောင်မှုနှင့် အခြားအက်ပ်များအား ကွန်ရက်များ ရှာဖွေခွင့်ပေးပါ"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"စကင် အမြဲတန်းလုပ်နိုင်ခြင်း"</string>
+    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Wi-Fi ပိတ်ထားစေကာမူ Google ၏ တည်နေရာဝန်ဆောင်မှုနှင့် အခြားအက်ပ်များအား ကွန်ရက်များ ရှာဖွေခွင့်ပေးပါ"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"ကွန်ရက်သို့ ချိတ်ဆက်ရန်"</string>
     <string name="apps_recently_used_category_title" msgid="5254492409677346900">"မကြာသေးမီက ဖွင့်ထားသော အက်ပ်များ"</string>
@@ -88,8 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"စနစ်၏ အသံများ"</string>
     <string name="device_apps" msgid="1971794537385509294">"အပလီကေးရှင်းများ"</string>
     <string name="device_storage" msgid="5536683600091277826">"သိုလှောင်မှု"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"စက်ရုံထုတ်အတိုင်း ပြင်ဆင်သတ်မှတ်ရန်"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"ဘက်အာပ် လုပ်ခြင်း &amp; ပြန်လည်ဖေါ်ထုတ်ခြင်း"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"စက်ရုံထုတ် အခြေအနေ ပြန်ယူခြင်း"</string>
     <string name="device_calibration" msgid="8632962533376605191">"စံကိုက်ညှိမှု"</string>
@@ -135,7 +134,7 @@
     <string name="send_feedback" msgid="163934291815367080">"ချွတ်ယွင်းမှု အစီရင်ခံစာ ယူရန်"</string>
     <string name="launch_help" msgid="6712789610098190689">"ကူညီရေးဌာန"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
-    <string name="system_date_time" msgid="8898457978560618950">"နေ့စွဲ&amp; အချိန်"</string>
+    <string name="system_date_time" msgid="8898457978560618950">"နေ့စွဲနှင့် အချိန်"</string>
     <string name="system_language" msgid="2337138146114609247">"ဘာသာစကား"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"ကီးဘုတ်"</string>
     <string name="system_keyboard_autofill" msgid="1406009886678025505">"ကီးဘုတ်နှင့် အော်တိုဖြည့်"</string>
@@ -208,7 +207,7 @@
     <string name="title_mac_address" msgid="3428401680168668544">"MAC လိပ်စာ"</string>
     <string name="title_signal_strength" msgid="205478650262078041">"ထုတ်လွင့်မှု အား"</string>
     <string name="title_ip_address" msgid="4533523100923004711">"IP လိပ်စာ"</string>
-    <string name="title_ssid" msgid="4858945903642469730">"ကြိုးမဲ့ ကွန်ရက်ကို ထည့်သွင်းရန်"</string>
+    <string name="title_ssid" msgid="4858945903642469730">"Wi-Fi ကွန်ရက် ထည့်သွင်းရန်"</string>
     <string name="title_internet_connection" msgid="8710084774588697646">"အင်တာနက် ချိတ်ဆက်မှု"</string>
     <string name="connected" msgid="7563100162902079938">"ချိတ်ဆက်ထား"</string>
     <string name="not_connected" msgid="6858480380326923017">"ချိတ်ဆက် မထား"</string>
@@ -302,7 +301,7 @@
     <string name="storage_dcim_usage" msgid="2977564696540645452">"ဓာတ်ပုံများ &amp; ဗီဒီယိုများ"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"အသံ"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"အထွေထွေ"</string>
-    <string name="storage_media_cache_usage" msgid="5906737163212649904">"ကက်ရှလုပ်ထား ဒေတာ"</string>
+    <string name="storage_media_cache_usage" msgid="5906737163212649904">"ကက်ရှ်လုပ်ထားသော ဒေတာ"</string>
     <string name="storage_eject" msgid="113476702798691558">"ထုတ်မည်"</string>
     <string name="storage_format" msgid="3759273736493279595">"ပယ်ဖျက်ရန် &amp; amp; ဖောမတ်ချရန်"</string>
     <string name="storage_format_as_private" msgid="4169495230765116075">"စက်ပစ္စည်းသိုလှောင်ခန်းအဖြစ် ဖျက်ပြီး ဖောမတ်ချပါ"</string>
@@ -395,7 +394,7 @@
     <string name="location_no_recent_apps" msgid="4218851908476344030">"မည်သည့် အက်ပ်ကမှ မကြာမီတုန်းက တည်နေရာကို မတောင်းခံခဲ့ပါ။"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"ဘက်ထရီ သုံးစွဲမှု များသော"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"ဘက်ထရီ သုံးမှု နည်း"</string>
-    <string name="location_mode_wifi_description" msgid="2778774510654527264">"တည်နေရာကို ခန့်မှန်းရန် ကြိုးမဲ့ကို သုံးပါ"</string>
+    <string name="location_mode_wifi_description" msgid="2778774510654527264">"တည်နေရာကို ခန့်မှန်းရန် Wi-Fi ကို သုံးပါ"</string>
     <string name="location_status" msgid="3456414279428237558">"တည်နေရာ အခြေအနေ"</string>
     <string name="location_services" msgid="5441085185119797200">"တည်နေရာ ဝန်ဆောင်မှုများ"</string>
     <string name="on" msgid="6683600681314500652">"ဖွင့်ရန်"</string>
@@ -527,7 +526,7 @@
     <string name="security_unknown_sources_title" msgid="769762478057744545">"မသိရသော ရင်းမြစ်များ"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Play စတိုး မဟုတ်သည့် အခြား အရင်းအမြစ်များမှ အက်ပ်များ တပ်ဆင်မှုကို ခွင့်ပြုရန်"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"အမည်မသိအရင်းအမြစ်များကို ခွင့်ပြုပါ"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"သင်၏ ကိရိယာ နှင့် ကိုယ်ရေး ဒေတာများမှာ မသိရသည့် ရင်းမြစ်များထဲက အက်ပ်များ၏ တိုက်ခိုက်မှု​ကြောင့် ပိုပြီး ထိခိုက်ပျက်စီးမှာ စိုးရပါသည်။ ယင်း အက်ပ်များကို အသုံးပြုမှုကြောင့် သင့် ကိရိယာ ထိခိုက်ခံရမှာ သို့မဟုတ် ဒေတာ ဆုံးရှုံးခံရမှာ အတွက် သင်သည်သာ လုံးဝ တာဝန်ရှိတာကို သင် သဘောတူပါသည်။"</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"အမျိုးအမည်မသိ အက်ပ်များက သင်၏ ကိရိယာနှင့် ကိုယ်ရေး ဒေတာများကို ပို၍တိုက်ခိုက်နိုင်ပါသည်။ ယင်း အက်ပ်များကို အသုံးပြုမှုကြောင့် သင့်ကိရိယာ ထိခိုက်ခြင်း သို့မဟုတ် ဒေတာ ဆုံးရှုံးခြင်းတို့အတွက် သင်သည်သာ လုံးဝ တာဝန်ရှိကြောင်း သင်က သဘောတူသည်။"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"အက်ပ်များကို စိစစ်ရန်"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"အန္တရာယ် ဖြစ်စေနိုင်သော အက်ပ်များကို ခွင့်မပြုရန် သို့မဟုတ် မတပ်ဆင်မီ သတိပေးရန်"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"မည်သည့်အခါမှ"</string>
@@ -680,7 +679,7 @@
     <string name="device_daydreams_test" msgid="9038920213402659591">"ယခု စတင်ပါ"</string>
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"ဘယ်အချိန် စမလဲ"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"အသုံးမပြုသည့် ဤအချိန်ကာလပြီးနောက် ဖန်သားပြင်အသုံးပြုမှု ချွေတာမှုစနစ်ကို စတင်ပါမည်။ ဖန်သားပြင်အသုံးပြုမှု ချွေတာမှုစနစ်တစ်ခုကို ရွေးချယ်ထားခြင်း မရှိလျှင်၊ ဖန်သားပြင် ပိတ်သွားပါမည်။"</string>
-    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"လှုပ်ရှားမှုမရှိခြင်း၏ <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ပြီးနောက်"</string>
+    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ကြာ လှုပ်ရှားမှုမရှိလျှင်"</string>
     <string name="device_daydreams_screen_off" msgid="1765925964376076171">"စက်ကို နားနေမုဒ်တွင် ထားပါ"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"မလှုပ်ရှားမှု ဒီကာလ နောက်မှာ မျက်နှာပြင် ပိတ်သွားမည်။"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"မည်သည့်အကောင့်မှ ဒေတာအရံသင့်သိမ်းဆည်းခြင်းကို လောလောဆယ်မှာ သိုလှောင်ခြင်း မပြုလုပ်ပါ။"</string>
@@ -690,8 +689,8 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"အရန်ထားသည့် အကောင့်"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"အလိုအလျောက် ပြန်လည်ဖေါ်ထုတ်ရန်"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"ကိရိယာကို ပြန်ညှိပါ"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"ဒီလုပ်ရပ်က သင့် ကိရိယာ ထဲက ဒေတာများ အားလုံးကို ဖျက်ပစ်မှာ ဖြစ်ပြီး၊ ပါဝင်ကြမည်မှာ: သင်၏ Google အကောင့်၊ စနစ် နှင့် အက်ပ်ဒေတာ နှင့် ဆက်တင်များ၊ ပြီးတော့ ဒေါင်းလုဒ် လုပ်ပြီး အက်ပ်များ။"</string>
-    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"သင့် ကိုယ်ပိုင် အချက်အလက်များ နှင့် ဒေါင်းလုဒ် ပြုလုပ်ထားသည့် အက်ပ်များ အားလုံးကို ဖျက်မလား? ဒီ လုပ်ဆောင်ချက်ကို သင်သည် ပြန်ပြောင်း၍ မရနိုင်ပါ!"</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"ဤလုပ်ရပ်က အောက်ပါတို့ အပါအဝင် သင့်ကိရိယာတွင်းရှိ ဒေတာအားလုံးကို ဖျက်ပါမည်- သင်၏ Google အကောင့်၊ စနစ်၊ အက်ပ်ဒေတာနှင့် ဆက်တင်များ၊ ဒေါင်းလုဒ်လုပ်ပြီး အက်ပ်များ"</string>
+    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"သင့်ကိုယ်ပိုင် အချက်အလက်နှင့် ဒေါင်းလုဒ်လုပ်ထားသည့် အက်ပ်များ အားလုံးကို ဖျက်မလား။ ဤ လုပ်ဆောင်ချက်ကို ပြန်ပြင်၍ မရနိုင်ပါ။"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"အရာတိုင်းကို ဖျက်ရန်"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"သင့်<xliff:g id="DEVICEMODEL">%1$s</xliff:g>အတွက် အမည်ရွေးပါ"</string>
     <string name="select_device_name_description" msgid="4939767901420114190">"သင့်စက်ကို အခြားစက်များမှ ကာစ်လုပ်သောအခါဖြစ်စေ ချိတ်ဆက်သောအခါဖြစ်စေ ၎င်းကိုသိရှိစေရန် သင့်စက်ကို အမည်ပေးပါ။"</string>
@@ -738,10 +737,10 @@
     <string name="directory_access_description" msgid="878500352290246580">"ဤအက်ပ်များတွင် အချို့သောဖိုင်လမ်းညွှန်များကို သုံးခွင့်ရှိသည်။"</string>
     <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"အခြားအက်ပ်များ၏ အပေါ်၌ ပြသခြင်း"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"အခြားအက်ပ်များ၏ အပေါ်၌ ပြသခွင့်ပြုရန်"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"အခြားအက်ပ်များပေါ် ပြခွင့်ပြုရန်"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"သင်သုံးနေသော အခြားအက်ပ်များ၏ အပေါ်၌ နောက်အက်ပ်တစ်ခုအား ပြသခွင့်ပြုပါ။ ၎င်းသည် ထိုအက်ပ်များအသုံးပြုရာ၌ အနှောင့်အယှက်ဖြစ်စေနိုင်သည် သို့မဟုတ် ၎င်းတို့၏ အသွင်အပြင် သို့မဟုတ် အပြုအမူတို့ကို ပြောင်းလဲစေနိုင်သည်။"</string>
     <string name="write_system_settings" msgid="2730923656857824907">"စက်စနစ် ဆက်တင်များ ပြုပြင်ခြင်း"</string>
-    <string name="write_settings_title" msgid="8750406725746598710">"စက်စနစ် ဆက်တင်များ ပြုပြင်နိုင်သည်"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"စနစ်ဆက်တင်များ ပြင်နိုင်ခြင်း"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"ဤခွင့်ပြုချက်သည် အက်ပ်ကို စက်စနစ် ဆက်တင်များအား ပြုပြင်ခွင့်ပေးသည်။"</string>
     <string name="write_settings_on" msgid="3312616037931341656">"Yes"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"No"</string>

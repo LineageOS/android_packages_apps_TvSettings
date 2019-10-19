@@ -54,9 +54,9 @@
     <string name="account_sync" msgid="773808124331714965">"सिंक किए गए ऐप्लिकेशन चुनें"</string>
     <string name="sync_now" msgid="8732244492880016471">"अभी सिंक करें"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"समन्वयन हो रहा है…"</string>
-    <string name="last_synced" msgid="6178494892357077274">"अंतिम बार समन्वयित: <xliff:g id="TIME">%1$s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"आखिरी बार सिंक किया गया: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"अक्षम किया गया"</string>
-    <string name="account_remove" msgid="4313580520737295272">"खाता निकालें"</string>
+    <string name="account_remove" msgid="4313580520737295272">"खाता हटाएं"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"खाता निकाला नहीं जा सकता"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
@@ -70,7 +70,7 @@
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"किसी नेटवर्क से नहीं जुड़े हैं"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"वाई-फ़ाई बंद है"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"स्कैनिंग की सुविधा हमेशा मौजूद"</string>
-    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Google की जगह की जानकारी सेवा और दूसरे ऐप्लिकेशन को नेटवर्क खोजने दें, भले ही Wi-Fi बंद हो"</string>
+    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Google की जगह की जानकारी सेवा और दूसरे ऐप्लिकेशन को नेटवर्क खोजने दें, भले ही वाई-फ़ाई बंद हो"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"वाई-फ़ाई"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"नेटवर्क से कनेक्ट करें"</string>
     <string name="apps_recently_used_category_title" msgid="5254492409677346900">"हाल ही में खोले गए ऐप्लिकेशन"</string>
@@ -88,8 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"सिस्टम की आवाज़ें"</string>
     <string name="device_apps" msgid="1971794537385509294">"ऐप्लिकेशन"</string>
     <string name="device_storage" msgid="5536683600091277826">"मेमोरी"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"फ़ैक्ट्री रीसेट करें"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"बैकअप लें और पुनर्स्‍थापित करें"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"फ़ैक्ट्री डेटा रीसेट"</string>
     <string name="device_calibration" msgid="8632962533376605191">"अंशांकन"</string>
@@ -101,7 +100,7 @@
     <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"डीटीएस-एचडी"</string>
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"आईईसी61937"</string>
     <string name="surround_sound_auto_info" msgid="4957977219847012992">"ध्यान दें: डिवाइस पर चलने वाले फ़ॉर्मैट का सही पता न लगने पर अपने आप चलने की सुविधा शायद काम न करे."</string>
-    <string name="surround_sound_auto_summary" msgid="175387511376834034">"अपने आप: डिवाइस पर चलने वाला फ़ॉर्मैट इस्तेमाल करें"</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"डिवाइस पर अपने आप चलने वाला फ़ॉर्मैट इस्तेमाल करें"</string>
     <string name="surround_sound_none_summary" msgid="4295042972785042496">"कोई नहीं: आस-पास की आवाज़ कभी भी इस्तेमाल न करें"</string>
     <string name="surround_sound_manual_summary" msgid="9208540024024014501">"मैन्युअल: चुनें कि कौनसा फ़ॉर्मैट इस्तेमाल किया जाए"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"संचित डेटा साफ़ करें?"</string>
@@ -206,9 +205,9 @@
     <item msgid="1546771355788926692">"उत्कृष्ट"</item>
   </string-array>
     <string name="title_mac_address" msgid="3428401680168668544">"MAC पता"</string>
-    <string name="title_signal_strength" msgid="205478650262078041">"सिग्‍नल शक्ति"</string>
+    <string name="title_signal_strength" msgid="205478650262078041">"सिग्‍नल की क्षमता"</string>
     <string name="title_ip_address" msgid="4533523100923004711">"IP पता"</string>
-    <string name="title_ssid" msgid="4858945903642469730">"वाई-फ़ाई  नेटवर्क का नाम डालें"</string>
+    <string name="title_ssid" msgid="4858945903642469730">"वाई-फ़ाई नेटवर्क का नाम डालें"</string>
     <string name="title_internet_connection" msgid="8710084774588697646">"इंटरनेट कनेक्शन"</string>
     <string name="connected" msgid="7563100162902079938">"कनेक्ट है"</string>
     <string name="not_connected" msgid="6858480380326923017">"कनेक्ट नहीं है"</string>
@@ -235,7 +234,7 @@
     <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"प्रॉक्सी होस्‍टनाम:"</string>
     <string name="title_wifi_proxy_port" msgid="9194893429116021337">"प्रॉक्सी पोर्ट:"</string>
     <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"इसके लिए प्रॉक्‍सी का उपयोग न करें:"</string>
-    <string name="title_wifi_ip_settings" msgid="1176973848286865602">"IP सेटिंग"</string>
+    <string name="title_wifi_ip_settings" msgid="1176973848286865602">"आईपी सेटिंग"</string>
     <string name="title_wifi_ip_address" msgid="1176502993805009566">"IP पता:"</string>
     <string name="title_wifi_gateway" msgid="7210935277165358134">"गेटवे:"</string>
     <string name="title_wifi_network_prefix_length" msgid="4821632382990582038">"नेटवर्क उपसर्ग लंबाई:"</string>
@@ -391,12 +390,12 @@
     <string name="system_desc_location" msgid="4243551425631207495">"आप अपनी उन ऐप्स  को स्थान जानकारी का उपयोग करने दें, जिन्होंने आपकी अनुमति मांगी है."</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"स्‍थान सहमति"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"मोड"</string>
-    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"हाल ही के स्थान अनुरोध"</string>
+    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"हाल ही के जगह के अनुरोध"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"किसी भी ऐप्लिकेशन ने हाल ही में स्थान का अनुरोध नहीं किया है"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"ज़्यादा बैटरी उपयोग"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"कम बैटरी उपयोग"</string>
-    <string name="location_mode_wifi_description" msgid="2778774510654527264">"स्थान का अनुमान लगाने के लिए वाई-फ़ाई  का उपयोग करें"</string>
-    <string name="location_status" msgid="3456414279428237558">"स्थान की स्थिति"</string>
+    <string name="location_mode_wifi_description" msgid="2778774510654527264">"जगह का अनुमान लगाने के लिए वाई-फ़ाई का उपयोग करें"</string>
+    <string name="location_status" msgid="3456414279428237558">"जगह की स्थिति"</string>
     <string name="location_services" msgid="5441085185119797200">"स्‍थान सेवाएं"</string>
     <string name="on" msgid="6683600681314500652">"चालू"</string>
     <string name="off" msgid="5264189545064767245">"बंद"</string>
@@ -681,7 +680,7 @@
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"कब चालू हो"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"स्क्रीन सेवर निष्क्रियता की इस समयावधि के बाद शुरू होता है. अगर कोई भी स्क्रीर सेवर चयनित ना हो, तो डिस्प्ले बंद हो जाता है."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"निष्क्रियता के <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> बाद"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"डिवाइस को निष्क्रिय करें"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"डिवाइस को नींद मोड पर करें"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"निष्क्रियता की इस अवधि के बाद स्क्रीन बंद हो जाती है."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"वर्तमान में कोई भी खाता, बैकअप डेटा संग्रहित नहीं कर रहा है"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -726,29 +725,29 @@
     <string name="usage_access" msgid="1914242907684452328">"उपयोग का डेटा ऐक्सेस करना"</string>
     <string name="usage_access_description" msgid="6290001769893747651">"उपयोग का डेटा ऐक्सेस करने की अनुमति मिलने पर कोई ऐप्लिकेशन यह ट्रैक कर सकता है कि आप कौन से दूसरे ऐप्लिकेशन इस्तेमाल कर रहे हैं और आप उनका इस्तेमाल कितनी बार करते हैं. साथ ही वह आपके कैरियर, भाषा सेटिंग और दूसरी जानकारी भी पता लगा पाता है."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"बैटरी का ऑप्टिमाइज़ेशन"</string>
-    <string name="high_power_apps_description" msgid="1990016812115792282">"ऐप्लिकेशन के बैटरी इस्तेमाल को ऑप्टिमाइज़ करें"</string>
+    <string name="high_power_apps_description" msgid="1990016812115792282">"ऐप्लिकेशन में इस्तेमाल हो रही बैटरी को ऑप्टिमाइज़ करें"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"किसी भी ऐप्लिकेशन को ऑप्टिमाइज़ करने की ज़रूरत नहीं है"</string>
     <string name="high_power_on" msgid="7725180078784796673">"ऑप्‍टिमाइज़ नहीं किया गया"</string>
     <string name="high_power_off" msgid="308272752152871252">"बैटरी का इस्तेमाल ऑप्टिमाइज़ किया जा रहा है"</string>
     <string name="high_power_system" msgid="7815843517656137656">"बैटरी ऑप्टिमाइज़ेशन उपलब्ध नहीं है"</string>
     <string name="manage_notification_access_title" msgid="2051765294087620434">"सूचना देखने की मंज़ूरी"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"इंस्टॉल किए गए किसी भी ऐप्लिकेशन ने सूचना देखने की इजाज़त नहीं मांगी है."</string>
-    <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"ये ऐप्लिकेशन संपर्क नामों और आपको मिलने वाले मैसेज जैसी निजी जानकारी के साथ-साथ सभी सूचनाओं को पढ़ सकेंगे. ये सूचनाओं को खारिज कर सकेंगे और उनमें शामिल कार्रवाई बटनों को ट्रिगर भी कर सकेंगे."</string>
+    <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"ये ऐप्लिकेशन, आपको मिलने वाली सभी सूचनाओं के साथ-साथ, आपकी निजी जानकारी जैसे, आपके संपर्क और मैसेज को पढ़ सकेंगे. ये सूचनाओं को खारिज कर सकेंगे और उनमें शामिल कार्रवाई बटनों को ट्रिगर भी कर सकेंगे."</string>
     <string name="directory_access" msgid="7439168599298598101">"निर्देशिका का ऐक्सेस"</string>
     <string name="directory_access_description" msgid="878500352290246580">"इन ऐप्लिकेशन के पास कुछ निर्देशिकाओं को ऐक्सेस करने की मंज़ूरी है."</string>
     <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"दूसरे ऐप्लिकेशन के ऊपर दिखाना"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"दूसरे ऐप्लिकेशन के ऊपर दिखने की मंज़ूरी"</string>
-    <string name="allow_overlay_description" msgid="1946279120428813474">"किसी ऐप्लिकेशन को इस्तेमाल किए जा रहे दूसरे सभी ऐप्लिकेशन के ऊपर दिखाई देने की मंज़ूरी देना. इससे यह ऐप्लिकेशन उन ऐप्लिकेशन को इस्तेमाल करने में परेशानी कर सकता है या उनके दिखाई देने या काम करने के तरीके में बदलाव कर सकता है."</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"आप जिस ऐप्लिकेशन का इस्तेमाल कर रहे हैं उसे दूसरे ऐप्लिकेशन के ऊपर दिखाई देने की मंज़ूरी दें. ऐसा करने पर इस ऐप्लिकेशन से, दूसरे ऐप्लिकेशन को इस्तेमाल करने में परेशानी हो सकती है या उनके दिखाई देने या काम करने के तरीके में बदलाव आ सकता है."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"सिस्‍टम सेटिंग में बदलाव करना"</string>
     <string name="write_settings_title" msgid="8750406725746598710">"सिस्टम सेटिंग में बदलाव करने की मंज़ूरी"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"यह मंज़ूरी मिलने के बाद कोई ऐप्लिकेशन, सिस्टम सेटिंग में बदलाव कर सकता है."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"हां"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"नहीं"</string>
-    <string name="picture_in_picture_title" msgid="7738692876349058">"पिक्चर में पिक्चर से जुड़ी सेटिंग"</string>
-    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"पिक्चर में पिक्चर सुविधा चालू करने की मंज़ूरी"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"\'पिक्चर में पिक्चर\' की सेटिंग"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"\'पिक्चर में पिक्चर\' को मंज़ूरी दें"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"डिवाइस में इंस्टॉल किया गया कोई भी ऐप्लिकेशन पिक्चर में पिक्चर सुविधा के साथ काम नहीं करता"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"कोई ऐप्लिकेशन खुला होने पर या जब आप उसका इस्तेमाल करना बंद कर चुके हों (उदाहरण के लिए, कोई वीडियो देखने के लिए), ऐप्लिकेशन को पिक्चर में पिक्चर विंडो बनाने की मंज़ूरी दें. इससे जब आप कोई और ऐप्लिकेशन इस्तेमाल कर रहे होंगे, तो उसके ऊपर एक विंडो बन जाएगी, जिसमें आप पहले वाले ऐप्लिकेशन का इस्तेमाल कर सकेंगे."</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"किसी ऐप्लिकेशन के खुले रहने पर या जब आप उसका इस्तेमाल करना बंद कर चुके हों (जैसे, कोई वीडियो देखते रहने के लिए), इसके दौरान ऐप्लिकेशन को पिक्चर में पिक्चर विंडो बनाने की मंज़ूरी दें. जब आप किसी और ऐप्लिकेशन का इस्तेमाल कर रहे होंगे, तब उसके ऊपर एक विंडो बन जाएगी जिसमें आप पहले वाले ऐप्लिकेशन का इस्तेमाल कर सकेंगे."</string>
     <string name="special_access" msgid="3513811566600299998">"ऐप्लिकेशन को खास अनुमति दें"</string>
     <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="943824924394588129">"ऑडियो"</string>

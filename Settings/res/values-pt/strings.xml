@@ -84,25 +84,24 @@
     <string name="device_daydream" msgid="3354366974209179614">"Protetor de tela"</string>
     <string name="device_display" msgid="101455384386372747">"Exibição"</string>
     <string name="device_sound" msgid="9214182566287657481">"Som"</string>
-    <string name="device_surround_sound" msgid="6272196310566546860">"Sistema surround"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"Som surround"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sons do sistema"</string>
     <string name="device_apps" msgid="1971794537385509294">"Apps"</string>
     <string name="device_storage" msgid="5536683600091277826">"Armazenamento"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Redefinir para a configuração original"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Backup e restauração"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Redefinição para configuração original"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Calibração"</string>
     <string name="surround_sound_select_formats" msgid="6329868407147678259">"Selecionar formatos"</string>
-    <string name="surround_sound_category_title" msgid="1331285587464316534">"Sistema surround"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"Som surround"</string>
     <string name="surround_sound_format_ac3" msgid="1724977459494885356">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
     <string name="surround_sound_auto_info" msgid="4957977219847012992">"Observação: a opção \"Automático\" pode não funcionar se o dispositivo não informa corretamente os formatos compatíveis."</string>
-    <string name="surround_sound_auto_summary" msgid="175387511376834034">"Automático: usar formatos compatíveis segundo o dispositivo (recomendado)"</string>
-    <string name="surround_sound_none_summary" msgid="4295042972785042496">"Nenhum: nunca usar o sistema surround"</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"Automático: usar formatos compatíveis de acordo com o dispositivo (recomendado)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"Nenhum: nunca usar o som surround"</string>
     <string name="surround_sound_manual_summary" msgid="9208540024024014501">"Manual: selecionar quais formatos devem ser usados"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Limpar os dados em cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Esta ação limpa dados em cache de todos os apps."</string>
@@ -132,7 +131,7 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Geralmente, 0000 ou 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"Parear"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"Cancelar"</string>
-    <string name="send_feedback" msgid="163934291815367080">"Criar relatório do bug"</string>
+    <string name="send_feedback" msgid="163934291815367080">"Criar relatório de bug"</string>
     <string name="launch_help" msgid="6712789610098190689">"Central de Ajuda"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"Data e hora"</string>
@@ -690,11 +689,11 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"Conta de backup"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Restauração automática"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"Redefinir dispositivo"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"Isso fará com que todos os dados do armazenamento interno do dispositivo sejam apagados, incluindo sua Conta do Google, dados e configurações do sistema e de apps e apps transferidos por download"</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"Isso fará com que todos os dados do armazenamento interno do dispositivo sejam apagados, incluindo sua Conta do Google, dados e configurações do sistema e de apps e os apps transferidos por download."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Apagar todas as suas informações pessoais e os apps transferidos por download? Não é possível reverter esta ação."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Apagar tudo"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Escolher um nome para seu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="4939767901420114190">"Dê um nome ao seu dispositivo para identificá-lo em transmissões ou ao se conectar com ele a partir de outros dispositivos."</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"Dê um nome ao seu dispositivo para identificá-lo em transmissões ou para se conectar com ele a partir de outros dispositivos."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"TV da sala de estar"</item>
@@ -718,13 +717,13 @@
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Reiniciar no modo de segurança"</string>
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Quer reinicializar no modo de segurança?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Essa opção desativa todos os apps de terceiros instalados. Eles serão restaurados quando você reinicializar novamente."</string>
-    <string name="capturing_bugreport" msgid="3291125403411239592">"Capturando relatório do bug"</string>
+    <string name="capturing_bugreport" msgid="3291125403411239592">"Capturando relatório de bug"</string>
     <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Teclados virtuais disponíveis"</string>
     <string name="manage_keyboards" msgid="1905379263117016795">"Gerenciar teclados"</string>
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Permitido"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Não permitido"</string>
     <string name="usage_access" msgid="1914242907684452328">"Acesso ao uso"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"O acesso ao uso permite que um app monitore que outros apps você está usando e com que frequência, bem como sua operadora, as configurações de idioma e outros detalhes."</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"O acesso ao uso permite que um app monitore quais outros apps você está usando e com que frequência, bem como sua operadora, configurações de idioma e outros detalhes."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"Economia de energia"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"Economiza o uso de energia dos apps"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"Nenhum app precisa de economia"</string>
@@ -738,7 +737,7 @@
     <string name="directory_access_description" msgid="878500352290246580">"Esses apps têm permissão para acessar determinados diretórios."</string>
     <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Sobrepor a outros apps"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"Permite sobrepor a outros apps"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"Permitir sobreposição a outros apps"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Permite que um app seja sobreposto a outros apps que você esteja usando. Ele pode interferir no uso que você faz desses apps ou alterar a forma como eles aparecem ou se comportam."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Modificar config. do sistema"</string>
     <string name="write_settings_title" msgid="8750406725746598710">"Muda configurações do sistema"</string>

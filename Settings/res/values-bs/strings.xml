@@ -53,10 +53,10 @@
     <string name="help_and_feedback_category_title" msgid="6565641596360780888">"Pomoć i povratne informacije"</string>
     <string name="add_account" msgid="4098060223200619258">"Dodaj račun"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Ukloni račun"</string>
-    <string name="account_sync" msgid="773808124331714965">"Odaberi sinhronizirane aplikacije"</string>
+    <string name="account_sync" msgid="773808124331714965">"Odaberite sinhronizirane aplikacije"</string>
     <string name="sync_now" msgid="8732244492880016471">"Sinhroniziraj sada"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Sinhroniziranje…"</string>
-    <string name="last_synced" msgid="6178494892357077274">"Posljednji put sinhronizirano u <xliff:g id="TIME">%1$s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"Posljednji put sinhronizirano: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Onemogućeno"</string>
     <string name="account_remove" msgid="4313580520737295272">"Ukloni račun"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Račun se ne može ukloniti"</string>
@@ -72,7 +72,7 @@
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Nema povezanih mreža"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"WiFi veza je isključena"</string>
     <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Skeniranje je uvijek dostupno"</string>
-    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Dopusti Googleovim uslugama lokacije i drugim aplikacijama skeniranje mreža, čak i kada je WiFi isključen"</string>
+    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Dozvolite Googleovim uslugama lokacije i drugim aplikacijama da skeniraju mreže, čak i kada je WiFi isključen"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"WiFi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"Poveži se na mrežu"</string>
     <string name="apps_recently_used_category_title" msgid="5254492409677346900">"Nedavno otvarane aplikacije"</string>
@@ -86,26 +86,25 @@
     <string name="device_daydream" msgid="3354366974209179614">"Čuvar ekrana"</string>
     <string name="device_display" msgid="101455384386372747">"Prikaz"</string>
     <string name="device_sound" msgid="9214182566287657481">"Zvuk"</string>
-    <string name="device_surround_sound" msgid="6272196310566546860">"Prostorno ozvučenje"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"Okružujući zvuk"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"Sistemski zvukovi"</string>
     <string name="device_apps" msgid="1971794537385509294">"Aplikacije"</string>
     <string name="device_storage" msgid="5536683600091277826">"Pohrana"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Vraćanje na fabričke postavke"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Sigurnosna kopija i vraćanje"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Vraćanje na fabričke postavke"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibracija"</string>
     <string name="surround_sound_select_formats" msgid="6329868407147678259">"Odabir formata"</string>
-    <string name="surround_sound_category_title" msgid="1331285587464316534">"Prostorno ozvučenje"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"Okružujući zvuk"</string>
     <string name="surround_sound_format_ac3" msgid="1724977459494885356">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
     <string name="surround_sound_auto_info" msgid="4957977219847012992">"Napomena: opcija Automatski možda neće raditi ako uređaj ne prijavi podržane formate ispravno."</string>
-    <string name="surround_sound_auto_summary" msgid="175387511376834034">"Automatski: koristi podržane formate (preporučeno)"</string>
-    <string name="surround_sound_none_summary" msgid="4295042972785042496">"Nijedno: nikada ne koristi prostorno ozvučenje"</string>
-    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"Ručno: odaberite koji formati će se koristiti"</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"Automatski: koriste se podržani formati (preporučeno)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"Nijedno: nikada se ne koristi okružujući zvuk"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"Ručno: odabir koji formati će se koristiti"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Želite li obrisati keširane podatke?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Ovim će se obrisati keširani podaci za sve aplikacije."</string>
     <string name="accessories_add" msgid="1347802656349218830">"Dodaj periferni uređaj"</string>
@@ -157,7 +156,7 @@
     <string name="tutorials" msgid="3731493987558093244">"Praktični vodiči"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Ažuriranje sistema"</string>
     <string name="about_preference" msgid="4131396784531360434">"Osnovne informacije"</string>
-    <string name="device_name" msgid="2670488158531273028">"Ime uređaja"</string>
+    <string name="device_name" msgid="2670488158531273028">"Naziv uređaja"</string>
     <string name="restart_button_label" msgid="142580191737806071">"Ponovo pokreni"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Pravne informacije"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Licence otvorenog koda"</string>
@@ -211,7 +210,7 @@
     <string name="title_mac_address" msgid="3428401680168668544">"MAC adresa"</string>
     <string name="title_signal_strength" msgid="205478650262078041">"Jačina signala"</string>
     <string name="title_ip_address" msgid="4533523100923004711">"IP adresa"</string>
-    <string name="title_ssid" msgid="4858945903642469730">"Unesite ime WiFi mreže"</string>
+    <string name="title_ssid" msgid="4858945903642469730">"Unesite naziv WiFi mreže"</string>
     <string name="title_internet_connection" msgid="8710084774588697646">"Internetska veza"</string>
     <string name="connected" msgid="7563100162902079938">"Povezano"</string>
     <string name="not_connected" msgid="6858480380326923017">"Nije povezano"</string>
@@ -281,7 +280,7 @@
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Polje za port ne može biti prazno"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Ako je polje za hosta prazno, ostavite prazno i polje za port"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Port nije važeći"</string>
-    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Preglednik koristi HTTP proksi ali ga možda ne koriste druge aplikacije"</string>
+    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Preglednik koristi HTTP proksi, ali ga druge aplikacije ne mogu koristiti"</string>
     <string name="proxy_port_description" msgid="6791098212244367568">"Unesite važeći port.\nPrimjer: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Unesite spisak izuzetih domena odvojenih zarezom ili ostavite prazno.\nPrimjer: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Unesite važeće ima hosta.\nPrimjer: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -394,11 +393,11 @@
     <string name="system_desc_location" msgid="4243551425631207495">"Dopustite korištenje informacija o vašoj lokaciji aplikacijama koje su tražile vaše odobrenje"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"Saglasnost za lokaciju"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"Način rada"</string>
-    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Nedavni zahtjevi za lokacijom"</string>
+    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Nedavni zahtjevi za lokaciju"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"Nijedna aplikacija nije u posljednje vrijeme tražila određivanje lokacije"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"Visoka potrošnja baterije"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"Niska potrošnja baterije"</string>
-    <string name="location_mode_wifi_description" msgid="2778774510654527264">"Koristi Wi‑Fi za određivanje lokacije"</string>
+    <string name="location_mode_wifi_description" msgid="2778774510654527264">"Koristi WiFi za određivanje lokacije"</string>
     <string name="location_status" msgid="3456414279428237558">"Status lokacije"</string>
     <string name="location_services" msgid="5441085185119797200">"Usluge lokacije"</string>
     <string name="on" msgid="6683600681314500652">"Uključeno"</string>
@@ -528,11 +527,11 @@
     <string name="agree" msgid="1235622082275451350">"Prihvatam"</string>
     <string name="disagree" msgid="9170636026862400981">"Ne prihvatam"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Nepoznati izvori"</string>
-    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Dozvoli instalaciju aplikacija koje nisu iz Play trgovine"</string>
+    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Dozvolite instalaciju aplikacija koje nisu iz Play trgovine"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Svi nepoznati izvori"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Vaši podaci na uređaju i lični podaci su više izloženi napadima aplikacija iz nepoznatih izvora. Saglasni ste da ste isključivo vi odgovorni za bilo kakvu štetu na uređaju ili gubitak podataka uslijed korištenja tih aplikacija."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Potvrda aplikacija"</string>
-    <string name="security_verify_apps_desc" msgid="1456317893117818733">"Zabrani ili upozori prije instalacije štetnih aplikacija"</string>
+    <string name="security_verify_apps_desc" msgid="1456317893117818733">"Zabranite ili budite upozoreni prije instalacije štetnih aplikacija"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Nikada"</string>
     <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"Za DRM sadržaj"</string>
     <string name="system_hdcp_checking_always" msgid="7264575337360957746">"Uvijek"</string>
@@ -685,10 +684,10 @@
     <string name="device_daydreams_none" msgid="2767107052779579259">"Isključi ekran"</string>
     <string name="device_daydreams_select" msgid="2112338101206187695">"Čuvar ekrana"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Pokreni odmah"</string>
-    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Kada početi"</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Vrijeme do pokretanja"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Čuvar ekrana se uključuje nakon ovog period neaktivnosti. Ako nije izabran čuvar ekrana, ekran će se isključiti."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Nakon <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> neaktivnosti"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Postavi uređaj u mirovanje"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Postavi vrijeme do mirovanja"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Ekran se isključuje nakon ovog perioda neaktivnosti."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Nijedan račun trenutno ne pohranjuje sigurnosne kopije podataka"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -700,19 +699,19 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Ovim će se potpuno izbrisati svi podaci iz unutrašnje memorije uređaja, uključujući: vaš Google račun, podatke i postavke sistema i aplikacija i preuzete aplikacije."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Želite li izbrisati sve lične podatke i preuzete aplikacije? Ovu radnju ne možete opozvati!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Izbriši sve"</string>
-    <string name="select_device_name_title" msgid="5165800500130943604">"Odaberite ime za svoj <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="4939767901420114190">"Dajte svom uređaju ime radi lakše identifikacije prilikom emitiranja ili povezivanja s drugih uređaja."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Odaberite naziv za uređaj <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"Dajte svom uređaju naziv radi lakše identifikacije prilikom emitiranja ili povezivanja s drugih uređaja."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"TV u dnevnom boravku"</item>
     <item msgid="8122798759665439456">"TV u porodičnoj sobi"</item>
     <item msgid="1389347662738182100">"TV u spavaćoj sobi"</item>
   </string-array>
-    <string name="custom_room" msgid="8655516733933892458">"Unesite prilagođeno ime…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Unesite prilagođeni naziv…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Promijeni naziv uređaja <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="device_rename_description" msgid="2461752788563877107">"Trenutno ime ovog uređaja <xliff:g id="DEVICEMODEL">%1$s</xliff:g> je \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Trenutni naziv ovog uređaja <xliff:g id="DEVICEMODEL">%1$s</xliff:g> je \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="device_name_suggestion_title" msgid="2312205155408810120">"Postavite naziv uređaja"</string>
-    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Koristite ovo ime kada s telefona emitirate fotografije, videozapise i drugi sadržaj"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Koristite ovaj naziv kada s telefona emitirate fotografije, videozapise i drugi sadržaj"</string>
     <string name="change_setting" msgid="2047402388786162246">"Promijeni"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Ne mijenjaj"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Odobrenja"</string>
@@ -731,9 +730,9 @@
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Dozvoljeno"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Nije dozvoljeno"</string>
     <string name="usage_access" msgid="1914242907684452328">"Pristup korištenju"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"Pristup korištenju omogućava nekoj aplikaciji praćenje korištenja drugih aplikacija i učestalosti, kao i praćenje vašeg mobilnog operatera, postavki jezika i drugih detalja."</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"Pristup korištenju omogućava aplikaciji da prati koje druge aplikacije koristite i koliko često, kao i da vidi vašeg mobilnog operatera, postavke jezika i druge detalje."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"Optimizacija potrošnje baterije"</string>
-    <string name="high_power_apps_description" msgid="1990016812115792282">"Optimizacija aplikacija u pogledu potrošnje baterije"</string>
+    <string name="high_power_apps_description" msgid="1990016812115792282">"Optimizacija potrošnje baterije aplikacija"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"Nijednoj aplikaciji nije potrebna optimizacija"</string>
     <string name="high_power_on" msgid="7725180078784796673">"Nije optimizirano"</string>
     <string name="high_power_off" msgid="308272752152871252">"Optimizacija potrošnje baterije"</string>
@@ -746,16 +745,16 @@
     <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Prikaz preko drugih aplikacija"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"Dozvoli prikaz preko drugih aplikacija"</string>
-    <string name="allow_overlay_description" msgid="1946279120428813474">"family link da prekrije ostale aplikacije koje koristite. Može vas ometati u korištenju tih aplikacija ili promijeniti način na koji se one prikazuju ili ponašaju."</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"Dozvolite aplikaciji da prekrije ostale aplikacije koje koristite. Može vas ometati u korištenju tih aplikacija ili promijeniti način na koji se one prikazuju ili ponašaju."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Izmjena postavki sistema"</string>
     <string name="write_settings_title" msgid="8750406725746598710">"Mogu mijenjati postavke sistema"</string>
-    <string name="write_settings_description" msgid="2765037074460395437">"Ovo odobrenje omogućava aplikaciji izmjenu postavki sistema."</string>
+    <string name="write_settings_description" msgid="2765037074460395437">"Ovo odobrenje omogućava aplikaciji da izmijeni postavke sistema."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"Da"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"Ne"</string>
     <string name="picture_in_picture_title" msgid="7738692876349058">"Slika u slici"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Dozvoli način rada Slika u slici"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Nijedna instalirana aplikacija ne podržava način rada Slika u slici"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Dozvoli aplikacijama kreiranje prozora u načinu rada Slika u slici dok je aplikacija otvorena ili nakon što je napustite (naprimjer, da nastavite gledati videozapis). Ovaj prozor se prikazuje preko drugih aplikacija koje koristite."</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Dozvolite aplikacijama da kreiraju prozor u načinu rada Slika u slici dok je aplikacija otvorena ili nakon što je napustite (naprimjer, da nastavite gledati videozapis). Ovaj prozor se prikazuje preko drugih aplikacija koje koristite."</string>
     <string name="special_access" msgid="3513811566600299998">"Poseban pristup aplikacijama"</string>
     <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="943824924394588129">"Zvučni zapis"</string>

@@ -45,7 +45,7 @@
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"الشبكة والإنترنت"</string>
     <string name="sound_category_title" msgid="4712268573174731554">"الصوت"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"التطبيقات"</string>
-    <string name="device_pref_category_title" msgid="5264163316572335776">"تفضيلات الأجهزة"</string>
+    <string name="device_pref_category_title" msgid="5264163316572335776">"إعدادات الجهاز"</string>
     <string name="remotes_and_accessories_category_title" msgid="3361463550113457913">"أجهزة التحكّم عن بُعد والمُلحَقات"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"ليس هناك أجهزة بلوتوث متّصلة."</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
@@ -62,7 +62,7 @@
     <string name="account_sync" msgid="773808124331714965">"اختر التطبيقات المتزامنة"</string>
     <string name="sync_now" msgid="8732244492880016471">"المزامنة الآن"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"جارٍ المزامنة..."</string>
-    <string name="last_synced" msgid="6178494892357077274">"وقت آخر مزامنة <xliff:g id="TIME">%1$s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"تاريخ آخر مزامنة: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"غير مفعّلة"</string>
     <string name="account_remove" msgid="4313580520737295272">"إزالة الحساب"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"تعذرت إزالة الحساب"</string>
@@ -77,7 +77,7 @@
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"تمّ الاتصال بشبكة إيثرنت."</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"ليس هناك اتصال شبكة."</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"تم إيقاف Wi-Fi."</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"البحث عن شبكة متوفّر دائمًا"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"إمكانية البحث عن شبكة دائمًا"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"السماح لخدمة الموقع الجغرافي والتطبيقات الأخرى من Google بالبحث عن شبكات، حتى عند عدم تشغيل Wi-Fi"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"الاتصال بالشبكة"</string>
@@ -92,17 +92,16 @@
     <string name="device_daydream" msgid="3354366974209179614">"شاشة التوقف"</string>
     <string name="device_display" msgid="101455384386372747">"العرض"</string>
     <string name="device_sound" msgid="9214182566287657481">"الصوت"</string>
-    <string name="device_surround_sound" msgid="6272196310566546860">"الصوت المحيط"</string>
+    <string name="device_surround_sound" msgid="6272196310566546860">"الصوت المحيطي"</string>
     <string name="device_sound_effects" msgid="7793281745920228622">"أصوات النظام"</string>
     <string name="device_apps" msgid="1971794537385509294">"التطبيقات"</string>
     <string name="device_storage" msgid="5536683600091277826">"وحدة التخزين"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"إعادة الضبط على الإعدادات الأصلية"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"النسخ الاحتياطي والاستعادة"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"إعادة الضبط بحسب بيانات المصنع"</string>
     <string name="device_calibration" msgid="8632962533376605191">"المعايرة"</string>
     <string name="surround_sound_select_formats" msgid="6329868407147678259">"اختيار الصيغ"</string>
-    <string name="surround_sound_category_title" msgid="1331285587464316534">"الصوت المجسم"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"الصوت المحيطي"</string>
     <string name="surround_sound_format_ac3" msgid="1724977459494885356">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
@@ -110,7 +109,7 @@
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
     <string name="surround_sound_auto_info" msgid="4957977219847012992">"ملاحظة: قد لا يعمل الخيار \"تلقائي\" إذا لم يُبلغ جهازك عن الصيغ المتوافقة معه بشكل صحيح."</string>
     <string name="surround_sound_auto_summary" msgid="175387511376834034">"تلقائي: استخدام الصيغ التي يُبلغ جهازك عن توافقها معه (إجراء مقترَح)"</string>
-    <string name="surround_sound_none_summary" msgid="4295042972785042496">"بدون: عدم استخدام الصوت المجسم"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"بدون صيغ: عدم استخدام الصوت المحيطي"</string>
     <string name="surround_sound_manual_summary" msgid="9208540024024014501">"يدوي: اختيار الصيغ التي تريد استخدامها"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"هل تريد محو البيانات المؤقتة؟"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"يؤدي ذلك إلى محو البيانات المؤقتة لكل التطبيقات."</string>
@@ -166,7 +165,7 @@
     <string name="device_name" msgid="2670488158531273028">"اسم الجهاز"</string>
     <string name="restart_button_label" msgid="142580191737806071">"إعادة التشغيل"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"المعلومات القانونية"</string>
-    <string name="about_legal_license" msgid="7867205982113209033">"تراخيص البرامج مفتوحة المصدر"</string>
+    <string name="about_legal_license" msgid="7867205982113209033">"تراخيص البرامج المفتوحة المصدر"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"معلومات قانونية من Google"</string>
     <string name="about_license_activity_unavailable" msgid="8522566562321418498">"بيانات الترخيص غير متاحة"</string>
     <string name="about_model" msgid="6625269442206323995">"الطراز"</string>
@@ -270,7 +269,7 @@
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"عدم التغيير"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"موافقة"</string>
     <string name="wifi_action_advanced_no" msgid="8165601242122651326">"لا (مستحسن)"</string>
-    <string name="wifi_action_proxy_none" msgid="4457231399674182650">"بدون"</string>
+    <string name="wifi_action_proxy_none" msgid="4457231399674182650">"بدون خادم وكيل"</string>
     <string name="wifi_action_proxy_manual" msgid="8402002777441261064">"يدوي"</string>
     <string name="wifi_action_dhcp" msgid="6338911832360962268">"DHCP"</string>
     <string name="wifi_action_static" msgid="1025855501453321749">"ثابت"</string>
@@ -310,7 +309,7 @@
     <string name="storage_size" msgid="8958530823208352781">"إجمالي المساحة: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
     <string name="storage_calculating_size" msgid="2644732407412520565">"جارٍ الحساب..."</string>
     <string name="storage_apps_usage" msgid="4366049071039081219">"التطبيقات"</string>
-    <string name="storage_downloads_usage" msgid="6172975879962599380">"التنزيلات"</string>
+    <string name="storage_downloads_usage" msgid="6172975879962599380">"عمليات التنزيل"</string>
     <string name="storage_dcim_usage" msgid="2977564696540645452">"الصور والفيديوهات"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"الصوت"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"متنوع"</string>
@@ -383,9 +382,9 @@
     <string name="learn_more_action" msgid="7015991954404958779">"مزيد من المعلومات"</string>
     <string name="system_date" msgid="2767108116769558081">"التاريخ"</string>
     <string name="system_time" msgid="6726022312605226285">"الوقت"</string>
-    <string name="system_set_date" msgid="2437586307768561116">"تعيين التاريخ"</string>
-    <string name="system_set_time" msgid="4661804115501057452">"تعيين الوقت"</string>
-    <string name="system_set_time_zone" msgid="8239601932757697259">"تعيين المنطقة الزمنية"</string>
+    <string name="system_set_date" msgid="2437586307768561116">"ضبط التاريخ"</string>
+    <string name="system_set_time" msgid="4661804115501057452">"ضبط الوقت"</string>
+    <string name="system_set_time_zone" msgid="8239601932757697259">"ضبط المنطقة الزمنية"</string>
     <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>، <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"استخدام تنسيق 24 ساعة"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
@@ -399,7 +398,7 @@
     <item msgid="2475903014233987786">"استخدام وقت بث النقل"</item>
     <item msgid="150957081326946463">"إيقاف"</item>
   </string-array>
-    <string name="system_location" msgid="502463575930545806">"الموقع"</string>
+    <string name="system_location" msgid="502463575930545806">"الموقع الجغرافي"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"السماح للتطبيقات التي طلبت الحصول على إذن منك باستخدام معلومات موقعك"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"موافقة الموقع"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"الوضع"</string>
@@ -591,7 +590,7 @@
     <string name="alwaysUseQuestion" msgid="7128459989232213727">"هل ترغب في استخدام هذا الخيار مع هذا الإجراء؟"</string>
     <string name="alwaysUseOption" msgid="1057645533268907906">"الاستخدام دائمًا"</string>
     <string name="justOnceOption" msgid="6051458702672920102">"مرة واحدة فقط"</string>
-    <string name="noApplications" msgid="4197983402774959346">"ليست هناك تطبيقات يمكنها تنفيذ هذا الإجراء."</string>
+    <string name="noApplications" msgid="4197983402774959346">"ما من تطبيقات يمكنها تنفيذ هذا الإجراء."</string>
     <string name="noAppsGoBack" msgid="5663180241276177314">"رجوع"</string>
     <string name="inputs_inputs" msgid="4249080110281833521">"أجهزة الإدخال"</string>
     <string name="inputs_header_cec" msgid="3701104827756278489">"التحكم الإلكتروني في الاستهلاك (CEC)"</string>
@@ -641,7 +640,7 @@
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"تخضع لتحكم <xliff:g id="APP">%1$s</xliff:g>"</string>
     <string name="app_not_supported_in_limited" msgid="6818309827329010677">"هذا التطبيق غير متوافق مع الملفات الشخصية المقيدة"</string>
     <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"يمكن لهذا التطبيق الدخول إلى حساباتك"</string>
-    <string name="restriction_location_enable_title" msgid="2575116135395354938">"الموقع"</string>
+    <string name="restriction_location_enable_title" msgid="2575116135395354938">"الموقع الجغرافي"</string>
     <string name="restriction_location_enable_summary" msgid="4195349388342385870">"السماح للتطبيقات باستخدام معلومات موقعك"</string>
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"الدخول إلى الملف الشخصي المقيّد"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"الخروج من الملف الشخصي المقيّد"</string>
@@ -722,7 +721,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"هل تريد محو جميع المعلومات الشخصية والتطبيقات التي تم تنزيلها؟ لا يمكنك التراجع عن هذا الإجراء!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"محو كل شيء"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"اختيار اسم لجهاز <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="4939767901420114190">"اختر اسمًا لجهازك للمساعدة في التعرّف عليه عند الإرسال إليه أو الاتصال به من أجهزة أخرى."</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"اختَر اسمًا لجهازك للمساعدة في التعرّف عليه عند الإرسال إليه أو الاتصال به من أجهزة أخرى."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"تلفزيون غرفة المعيشة"</item>
@@ -732,8 +731,8 @@
     <string name="custom_room" msgid="8655516733933892458">"إدخال اسم مخصص…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"إعادة تسمية جهاز <xliff:g id="DEVICEMODEL">%1$s</xliff:g> هذا"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"جهاز <xliff:g id="DEVICEMODEL">%1$s</xliff:g> هذا يحمل الاسم \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" حاليًا"</string>
-    <string name="device_name_suggestion_title" msgid="2312205155408810120">"تعيين اسم الجهاز"</string>
-    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"استخدم هذا الاسم عند إرسال الصور والفيديوهات وغيرها من هاتفك."</string>
+    <string name="device_name_suggestion_title" msgid="2312205155408810120">"ضبط اسم الجهاز"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"استخدِم هذا الاسم عند إرسال الصور والفيديوهات وغيرها من هاتفك."</string>
     <string name="change_setting" msgid="2047402388786162246">"تغيير"</string>
     <string name="keep_settings" msgid="6798327196645732517">"عدم التغيير"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"الأذونات"</string>
@@ -751,13 +750,13 @@
     <string name="manage_keyboards" msgid="1905379263117016795">"إدارة لوحات المفاتيح"</string>
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"مسموح به"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"غير مسموح به"</string>
-    <string name="usage_access" msgid="1914242907684452328">"الدخول إلى الاستخدام"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"عند السماح بالدخول إلى الاستخدام، سيتمكّن التطبيق من تتبّع التطبيقات الأخرى التي تستخدمها ومدى تكرار استخدامها وكذلك تتبّع مشغِّل شبكة الجوّال وإعدادات اللغة وغيرها من التفاصيل الأخرى."</string>
+    <string name="usage_access" msgid="1914242907684452328">"الوصول إلى بيانات الاستخدام"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"عند السماح بالوصول إلى بيانات الاستخدام، سيتمكّن التطبيق من تتبع التطبيقات الأخرى التي تستخدمها ومدى تكرار استخدامها وكذلم تتبّع مشغّل شبكة الجوال وإعدادات اللغة بالإضافة إلى تفاصيل أخرى."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"تحسين استخدام الطاقة"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"تحسين استخدام التطبيقات للطاقة"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"ليست هناك تطبيقات تحتاج إلى تحسين"</string>
     <string name="high_power_on" msgid="7725180078784796673">"بدون تحسين"</string>
-    <string name="high_power_off" msgid="308272752152871252">"تحسين استخدام الطاقة"</string>
+    <string name="high_power_off" msgid="308272752152871252">"يستخدم طاقة أقل"</string>
     <string name="high_power_system" msgid="7815843517656137656">"تحسين الطاقة غير متوفر"</string>
     <string name="manage_notification_access_title" msgid="2051765294087620434">"الوصول إلى الإشعارات"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"لم تطلب أي تطبيقات مثبّتة حق الوصول إلى الإشعارات."</string>
@@ -776,7 +775,7 @@
     <string name="picture_in_picture_title" msgid="7738692876349058">"نافذة ضمن نافذة"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"السماح بعرض نافذة ضمن نافذة"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"ليست هناك تطبيقات مثبَّتة تتيح عرض نافذة ضمن نافذة."</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"يمكنك السماح للتطبيقات بإنشاء نافذة ضمن نافذة أثناء فتح التطبيق أو بعد مغادرته (مثلاً لمواصلة مشاهدة فيديو). وستظهر هذه النافذة فوق التطبيقات الأخرى التي تستخدمها."</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"يمكنك السماح للتطبيقات بإنشاء نافذة ضمن نافذة أثناء استخدامها أو بعد مغادرتها (مثلاً لمواصلة مشاهدة فيديو). وستظهر هذه النافذة فوق التطبيقات الأخرى التي تستخدمها."</string>
     <string name="special_access" msgid="3513811566600299998">"وصول خاص إلى التطبيقات"</string>
     <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>، <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="943824924394588129">"الصوت"</string>

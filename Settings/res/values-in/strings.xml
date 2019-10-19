@@ -55,7 +55,7 @@
     <string name="sync_now" msgid="8732244492880016471">"Sinkronkan sekarang"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Menyinkronkan..."</string>
     <string name="last_synced" msgid="6178494892357077274">"Terakhir disinkronkan <xliff:g id="TIME">%1$s</xliff:g>"</string>
-    <string name="sync_disabled" msgid="3089360175872892781">"Nonaktifkan"</string>
+    <string name="sync_disabled" msgid="3089360175872892781">"Nonaktif"</string>
     <string name="account_remove" msgid="4313580520737295272">"Hapus akun"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Tidak dapat membuang akun"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
@@ -88,8 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Suara sistem"</string>
     <string name="device_apps" msgid="1971794537385509294">"Aplikasi"</string>
     <string name="device_storage" msgid="5536683600091277826">"Penyimpanan"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Reset ke setelan pabrik"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Pencadangan &amp; pemulihan"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Reset ke setelan pabrik"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrasi"</string>
@@ -159,7 +158,7 @@
     <string name="restart_button_label" msgid="142580191737806071">"Reboot"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Informasi hukum"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Lisensi open source"</string>
-    <string name="about_terms_of_service" msgid="7743088207977334874">"Google hukum"</string>
+    <string name="about_terms_of_service" msgid="7743088207977334874">"Info hukum Google"</string>
     <string name="about_license_activity_unavailable" msgid="8522566562321418498">"Data lisensi tidak tersedia"</string>
     <string name="about_model" msgid="6625269442206323995">"Model"</string>
     <string name="about_version" msgid="1177287676732287266">"Versi"</string>
@@ -209,7 +208,7 @@
     <string name="title_signal_strength" msgid="205478650262078041">"Kekuatan sinyal"</string>
     <string name="title_ip_address" msgid="4533523100923004711">"Alamat IP"</string>
     <string name="title_ssid" msgid="4858945903642469730">"Masukkan nama jaringan Wi-Fi"</string>
-    <string name="title_internet_connection" msgid="8710084774588697646">"Sambungan internet"</string>
+    <string name="title_internet_connection" msgid="8710084774588697646">"Koneksi internet"</string>
     <string name="connected" msgid="7563100162902079938">"Tersambung"</string>
     <string name="not_connected" msgid="6858480380326923017">"Tidak tersambung"</string>
     <string name="wifi_setting_header_other_options" msgid="3638677601577777216">"Opsi lain"</string>
@@ -278,7 +277,7 @@
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Bidang port tidak boleh kosong"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Jika bidang hosting kosong, kosongkan juga bidang port"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Port tidak valid"</string>
-    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Proxy HTTP digunakan oleh browser namun mungkin tidak digunakan oleh aplikasi lainnya"</string>
+    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Proxy HTTP digunakan oleh browser tetapi mungkin tidak digunakan oleh aplikasi lainnya"</string>
     <string name="proxy_port_description" msgid="6791098212244367568">"Masukkan port yang valid.\nContoh: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Masukkan daftar domain yang dikecualikan yang dipisahkan dengan koma, atau biarkan kosong.\nContoh: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Masukkan nama host yang valid.\nContoh: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -301,7 +300,7 @@
     <string name="storage_downloads_usage" msgid="6172975879962599380">"Download"</string>
     <string name="storage_dcim_usage" msgid="2977564696540645452">"Foto &amp; video"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"Audio"</string>
-    <string name="storage_media_misc_usage" msgid="6066868724030127457">"Serbaneka"</string>
+    <string name="storage_media_misc_usage" msgid="6066868724030127457">"Lain-lain"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Data dalam cache"</string>
     <string name="storage_eject" msgid="113476702798691558">"Keluarkan"</string>
     <string name="storage_format" msgid="3759273736493279595">"Hapus &amp; format"</string>
@@ -681,7 +680,7 @@
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"Waktu mulai"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Screen saver dimulai setelah periode tidak aktif ini. Jika tidak ada screen saver yang dipilih, layar akan dimatikan."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Setelah tidak aktif selama <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Ubah perangkat ke mode tidur"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Aktifkan mode tidur perangkat"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Layar akan mati setelah tidak aktif dalam jangka waktu ini."</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Saat ini tidak ada akun yang menyimpan data cadangan"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -691,10 +690,10 @@
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Pemulihan otomatis"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"Reset perangkat"</string>
     <string name="factory_reset_description" msgid="5381170999141355891">"Tindakan ini akan menghapus semua data dari penyimpanan internal perangkat, termasuk akun Google, setelan serta data aplikasi dan sistem, dan aplikasi yang didownload"</string>
-    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Hapus semua informasi pribadi dan aplikasi yang diunduh? Anda tidak dapat mengurungkan tindakan ini!"</string>
+    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Hapus semua informasi pribadi dan aplikasi yang didownload? Anda tidak dapat mengurungkan tindakan ini!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Hapus semua"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Pilih nama untuk <xliff:g id="DEVICEMODEL">%1$s</xliff:g> Anda"</string>
-    <string name="select_device_name_description" msgid="4939767901420114190">"Beri nama perangkat agar memudahkan identifikasi saat mentransmisikan atau menyambungkan ke perangkat tersebut dari perangkat lain."</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"Beri nama perangkat untuk memudahkan identifikasi saat mentransmisikan atau menyambungkan perangkat lain ke perangkat tersebut."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"TV Ruang Tamu"</item>
@@ -733,7 +732,7 @@
     <string name="high_power_system" msgid="7815843517656137656">"Pengoptimalan energi tidak tersedia"</string>
     <string name="manage_notification_access_title" msgid="2051765294087620434">"Akses notifikasi"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"Tidak ada aplikasi terinstal yang meminta akses notifikasi."</string>
-    <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Aplikasi ini dapat membaca semua notifikasi, termasuk informasi pribadi seperti nama kontak dan teks pesan yang Anda terima. Aplikasi ini juga dapat menutup notifikasi atau memicu tombol tindakan yang dimilikinya."</string>
+    <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Aplikasi ini dapat membaca semua notifikasi, termasuk informasi pribadi seperti nama kontak dan teks pesan yang Anda terima. Aplikasi ini juga dapat menutup notifikasi atau memicu tombol tindakan yang ada di dalamnya."</string>
     <string name="directory_access" msgid="7439168599298598101">"Akses direktori"</string>
     <string name="directory_access_description" msgid="878500352290246580">"Aplikasi ini memiliki izin untuk mengakses direktori tertentu."</string>
     <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
