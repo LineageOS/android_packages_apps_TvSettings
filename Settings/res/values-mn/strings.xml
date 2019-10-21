@@ -51,7 +51,7 @@
     <string name="help_and_feedback_category_title" msgid="6565641596360780888">"Тусламж, санал хүсэлт"</string>
     <string name="add_account" msgid="4098060223200619258">"Аккаунт нэмэх"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Бүртгэлийг хасах"</string>
-    <string name="account_sync" msgid="773808124331714965">"Синхрон хийгдсэн програмыг сонго"</string>
+    <string name="account_sync" msgid="773808124331714965">"Синк хийгдсэн програмыг сонгоно уу"</string>
     <string name="sync_now" msgid="8732244492880016471">"Одоо синк хийх"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Синк хийж байна…"</string>
     <string name="last_synced" msgid="6178494892357077274">"Хамгийн сүүлд синк хийгдсэн <xliff:g id="TIME">%1$s</xliff:g>"</string>
@@ -88,8 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Системийн дуу"</string>
     <string name="device_apps" msgid="1971794537385509294">"Апп"</string>
     <string name="device_storage" msgid="5536683600091277826">"Сан"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Үйлдвэрийн тохиргоо"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Нөөшлөх &amp; сэргээх"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Үйлдвэрээс гарсан төлөвт"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Тааруулалт"</string>
@@ -208,7 +207,7 @@
     <string name="title_mac_address" msgid="3428401680168668544">"MAC хаяг"</string>
     <string name="title_signal_strength" msgid="205478650262078041">"Сигналын хүч"</string>
     <string name="title_ip_address" msgid="4533523100923004711">"IP хаяг"</string>
-    <string name="title_ssid" msgid="4858945903642469730">"Wi-Fi сүлжээнд нэр өгнө үү"</string>
+    <string name="title_ssid" msgid="4858945903642469730">"Wi-Fi сүлжээний нэрийг оруулна уу"</string>
     <string name="title_internet_connection" msgid="8710084774588697646">"Интернэт холболт"</string>
     <string name="connected" msgid="7563100162902079938">"Холбогдсон"</string>
     <string name="not_connected" msgid="6858480380326923017">"Холбогдоогүй"</string>
@@ -314,7 +313,7 @@
     <string name="storage_no_apps" msgid="579118619398668670">"Нөөцлөх апп байхгүй"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Энэ төхөөрөмжийн хадгалах санг хэрэгсэхгүй болгох"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Энэ драйв дахь апп болон өгөгдлийг ашиглахын тулд дахин залгана уу. Драйв ажиллахгүй байх тохиолдолд та энэхүү санаг ойг мартах сонголтыг хийж болно.\n\nХэрвээ та мартах сонголт хийвэл драйв дээрх бүх өгөгдөл устах болно.\n\nТа апп-ийг дахин суулгаж болох хэдий ч энэ драйв дээр хадгалсан өгөгдөл устах болно."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Төхөөрөмжийн санах ой"</string>
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Төхөөрөмжийн хадгалах сан"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Хөдөлгөөнт санах ой"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Дахин шинэчлэх"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"<xliff:g id="NAME">%1$s</xliff:g>-ыг залгасан байна"</string>
@@ -527,7 +526,7 @@
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Тодорхойгүй эх үүсвэр"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Play Store-с өөр эх үүсвэрээс татсан апп-уудыг суулгахыг зөвшөөрөх"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Үл мэдэгдэх эх сурвалжийг зөвшөөрөх"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Таны төхөөрөмж болон хувийн мэдээлэл нь үл мэдэгдэх эх сурвалж бүхий програмын довтолгоонд эмзэг байдаг. Та эдгээр програмыг ашигласнаар үүсж болон аливаа мэдээллий алдагдал болон таны төхөөрөмжид учир ч болох гэмтэл доголдлын хариуцлагыг та өөрөө бүрэн хариуцана гэдгийг хүлээн зөвшөөрч байна."</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Таны төхөөрөмж болон хувийн мэдээлэл нь үл мэдэгдэх эх сурвалжийн аппын дайралтад эмзэг байдаг. Та эдгээр аппыг ашигласнаар үүсэх аливаа мэдээллийн алдагдал болон таны төхөөрөмжид учирч болох гэмтэл доголдлын хариуцлагыг та өөрөө бүрэн хариуцахаа хүлээн зөвшөөрсөн болно."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Апп-уудыг тулгах"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Хор учруулж болзошгүй апп-уудыг суулгахын өмнө үл зөвшөөрөх буюу анхааруулах"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Хэзээ ч үгүй"</string>
@@ -707,7 +706,7 @@
     <string name="device_name_suggestion_title" msgid="2312205155408810120">"Төхөөрөмжийнхөө нэрийг тохируулах"</string>
     <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Утаснаасаа зураг, видео болон бусад зүйлийг дамжуулах үедээ энэ нэрийг ашиглана уу"</string>
     <string name="change_setting" msgid="2047402388786162246">"Солих"</string>
-    <string name="keep_settings" msgid="6798327196645732517">"Битгий өөрчил"</string>
+    <string name="keep_settings" msgid="6798327196645732517">"Бүү өөрчил"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Зөвшөөрлүүд"</string>
     <string name="device_apps_permissions" msgid="2966387603529725982">"Апп зөвшөөрөл"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_1">%2$d</xliff:g>-с <xliff:g id="COUNT_0">%1$d</xliff:g> аппыг зөвшөөрсөн"</string>
@@ -724,13 +723,13 @@
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Зөвшөөрсөн"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Зөвшөөрөөгүй"</string>
     <string name="usage_access" msgid="1914242907684452328">"Ашиглалтын хандалт"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"Хэрэглээний хандалт нь таныг бусад ямар аппыг хэр тогтмол ашиглаж байгааг болон таны оператор компани, хэлний тохиргоо, бусад мэдээллийг хянах зөвшөөрлийг аппад олгодог."</string>
-    <string name="high_power_apps" msgid="7796096221999495077">"Эрчим хүчний оновчлол"</string>
-    <string name="high_power_apps_description" msgid="1990016812115792282">"Аппын эрчим хүчний хэрэглээг оновчлох"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"Ашиглалтын хандалт нь таныг бусад ямар аппыг хэр тогтмол ашиглаж байгааг болон таны оператор компани, хэлний тохиргоо, бусад мэдээллийг хянах зөвшөөрлийг аппад олгодог."</string>
+    <string name="high_power_apps" msgid="7796096221999495077">"Батарейны хэрэглээний оновчлол"</string>
+    <string name="high_power_apps_description" msgid="1990016812115792282">"Аппуудын батарейны хэрэглээг оновчлох"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"Oновчлох шаардлагатай апп алга"</string>
     <string name="high_power_on" msgid="7725180078784796673">"Оновчлоогүй"</string>
-    <string name="high_power_off" msgid="308272752152871252">"Эрчим хүчний хэрэглээг оновчилж байна"</string>
-    <string name="high_power_system" msgid="7815843517656137656">"Эрчим хүчийг оновчлох боломжгүй байна"</string>
+    <string name="high_power_off" msgid="308272752152871252">"Батарейны хэрэглээг оновчилж байна"</string>
+    <string name="high_power_system" msgid="7815843517656137656">"Батарейны хэрэглээг оновчлох боломжгүй байна"</string>
     <string name="manage_notification_access_title" msgid="2051765294087620434">"Мэдэгдлийн хандалт"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"Суулгасан аппаас мэдэгдлийн хандалт хүссэн апп алга."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Эдгээр апп харилцагчийн нэр, таны хүлээж авдаг зурвасын текст зэрэг хувийн мэдээлэл бүхий бүх мэдэгдлийг унших боломжтой болно. Түүнчлэн эдгээр нь мэдэгдлийг хаах эсвэл үйлдэл хийх товчлуураа өдөөх боломжтой."</string>

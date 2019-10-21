@@ -92,8 +92,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Системные звуки"</string>
     <string name="device_apps" msgid="1971794537385509294">"Приложения"</string>
     <string name="device_storage" msgid="5536683600091277826">"Хранилище"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Сброс настроек"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Резервное копирование и восстановление"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Сброс настроек"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Калибровка"</string>
@@ -266,7 +265,7 @@
     <string name="wifi_action_advanced_no" msgid="8165601242122651326">"Нет (рекомендуется)"</string>
     <string name="wifi_action_proxy_none" msgid="4457231399674182650">"Не использовать прокси-сервер"</string>
     <string name="wifi_action_proxy_manual" msgid="8402002777441261064">"Настроить вручную"</string>
-    <string name="wifi_action_dhcp" msgid="6338911832360962268">"Использовать DHCP"</string>
+    <string name="wifi_action_dhcp" msgid="6338911832360962268">"DHCP"</string>
     <string name="wifi_action_static" msgid="1025855501453321749">"Статический"</string>
     <string name="wifi_action_status_info" msgid="7664354971197839253">"Статус"</string>
     <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"Расширенные настройки"</string>
@@ -284,7 +283,7 @@
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Укажите номер порта"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Если имя хоста не указано, не следует указывать и номер порта"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Укажите допустимый номер порта"</string>
-    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Прокси-сервер HTTP используется браузером, но не другими приложениями"</string>
+    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"Прокси-сервер HTTP используется только браузером, а не другими приложениями."</string>
     <string name="proxy_port_description" msgid="6791098212244367568">"Укажите допустимый порт.\nПример: <xliff:g id="ID_1">8080</xliff:g>."</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Введите домены, к которым нужно подключаться без прокси-сервера, или оставьте поле пустым.\nПример: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>."</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Введите допустимое имя хоста.\nПример: <xliff:g id="ID_1">proxy.example.com</xliff:g>."</string>
@@ -320,7 +319,7 @@
     <string name="storage_no_apps" msgid="579118619398668670">"Нет приложений"</string>
     <string name="storage_forget" msgid="8731986045697320463">"Не использовать как накопитель"</string>
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Подключите диск заново, чтобы получить доступ к приложениям и другим данным на нем. Если это невозможно и диск недоступен, выберите \"Удалить данные\".\n\nПосле этого все данные, хранившиеся на диске, будут утеряны.\n\nВы сможете скачать приложения снова, однако их данные восстановить не удастся."</string>
-    <string name="storage_device_storage_section" msgid="7797805634316822741">"Память устройства"</string>
+    <string name="storage_device_storage_section" msgid="7797805634316822741">"Хранилище устройства"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Съемный накопитель"</string>
     <string name="storage_reset_section" msgid="7324235036547192861">"Сброс"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"Подключено: <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -386,12 +385,12 @@
     <string name="system_auto_date_time" msgid="3629668599205033272">"Автонастройка даты и времени"</string>
   <string-array name="auto_date_time_entries">
     <item msgid="4590792581242018007">"Использовать время сети"</item>
-    <item msgid="3807025813081244357">"Отключить"</item>
+    <item msgid="3807025813081244357">"Отключено"</item>
   </string-array>
   <string-array name="auto_date_time_ts_entries">
     <item msgid="8463479794795616025">"Использовать время сети"</item>
     <item msgid="2475903014233987786">"Использовать время потока"</item>
-    <item msgid="150957081326946463">"Отключить"</item>
+    <item msgid="150957081326946463">"Отключено"</item>
   </string-array>
     <string name="system_location" msgid="502463575930545806">"Местоположение"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"Разрешить приложениям использовать данные о вашем местоположении"</string>
@@ -402,10 +401,10 @@
     <string name="location_high_battery_use" msgid="576143332793626088">"Высокий расход заряда батареи"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"Низкий расход заряда батареи"</string>
     <string name="location_mode_wifi_description" msgid="2778774510654527264">"По точкам доступа Wi‑Fi"</string>
-    <string name="location_status" msgid="3456414279428237558">"Определение местоположения"</string>
+    <string name="location_status" msgid="3456414279428237558">"Геолокация"</string>
     <string name="location_services" msgid="5441085185119797200">"Данные о местоположении"</string>
     <string name="on" msgid="6683600681314500652">"Вкл."</string>
-    <string name="off" msgid="5264189545064767245">"Выкл."</string>
+    <string name="off" msgid="5264189545064767245">"Отключено"</string>
     <string name="google_location_services_title" msgid="3382840371861269146">"Службы геопозиционирования Google"</string>
     <string name="third_party_location_services_title" msgid="4089136801976399147">"Сторонние службы геопозиционирования"</string>
     <string name="location_reporting" msgid="3054236612250063073">"Отправка геоданных"</string>
@@ -691,8 +690,8 @@
     <string name="settings_off" msgid="449272161738237637">"Выкл."</string>
     <string name="device_daydreams_none" msgid="2767107052779579259">"Отключать экран"</string>
     <string name="device_daydreams_select" msgid="2112338101206187695">"Заставка"</string>
-    <string name="device_daydreams_test" msgid="9038920213402659591">"Включить"</string>
-    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Период неактивности"</string>
+    <string name="device_daydreams_test" msgid="9038920213402659591">"Запустить"</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Запуск"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Если в течение этого времени устройство не будет использоваться, на экране появится заставка. Если заставка не выбрана, экран отключится."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"После <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> бездействия"</string>
     <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Включить спящий режим"</string>
@@ -704,7 +703,7 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"Резервный аккаунт"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Автоматическое восстановление"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"Сбросить настройки"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"Из памяти устройства будет удалена вся информация, включая данные вашего аккаунта Google и приложений, а также настройки, системные данные и загруженные программы."</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"Из внутреннего хранилища устройства будет удалена вся информация, включая данные вашего аккаунта Google и приложений, а также настройки, системные данные и загруженные приложения."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Удалить всю личную информацию и загруженные приложения без возможности восстановления?"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Удалить всё"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Укажите название для устройства <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
@@ -733,7 +732,7 @@
     <string name="reboot_safemode_confirm" msgid="3329475617645192086">"Перейти в безопасный режим?"</string>
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"Все сторонние приложения будут отключены. Они будут запущены по возвращении в обычный режим."</string>
     <string name="capturing_bugreport" msgid="3291125403411239592">"Создание отчета об ошибке…"</string>
-    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Доступные виртуальные клавиатуры"</string>
+    <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Виртуальные клавиатуры"</string>
     <string name="manage_keyboards" msgid="1905379263117016795">"Управление клавиатурами"</string>
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Разрешено"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Запрещено"</string>
@@ -760,7 +759,7 @@
     <string name="write_settings_on" msgid="3312616037931341656">"Да"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"Нет"</string>
     <string name="picture_in_picture_title" msgid="7738692876349058">"Картинка в картинке"</string>
-    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Режим \"Картинка в картинке\""</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Картинка в картинке"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Установленные приложения не поддерживают режим \"Картинка в картинке\"."</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Когда приложение открыто или когда вы выходите из него, оно может создавать окно \"Картинка в картинке\". Так вы можете, например, продолжить просмотр видео. Это окно отображается поверх остальных приложений."</string>
     <string name="special_access" msgid="3513811566600299998">"Специальный доступ"</string>

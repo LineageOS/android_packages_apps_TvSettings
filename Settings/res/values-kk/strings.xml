@@ -69,8 +69,8 @@
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethernet қосылған"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Желі қосылмаған"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"Wi-Fi өшірулі"</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Scanning always available"</string>
-    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Google орынды анықтау қызметіне және басқа қолданбаларға желілерді тексеру мүмкіндігін беріңіз (Wi-Fi өшірулі тұрса да)"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Желілерді ылғи іздеу"</string>
+    <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Google орынды анықтау қызметіне және басқа қолданбаларға желілерді тексеру мүмкіндігін беру (Wi-Fi өшірулі тұрса да)"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"Желімен байланыс орнату"</string>
     <string name="apps_recently_used_category_title" msgid="5254492409677346900">"Жақында ашылған қолданбалар"</string>
@@ -88,8 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Жүйелік дыбыстар"</string>
     <string name="device_apps" msgid="1971794537385509294">"Қолданбалар"</string>
     <string name="device_storage" msgid="5536683600091277826">"Жад"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Зауыттық параметрлерге қайтару"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Сақтық көшірмелер және қалпына келтіру"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Зауыттық деректерді қалпына келтіру"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Калибрлеу"</string>
@@ -194,7 +193,7 @@
     <string name="imei_information_title" msgid="5208860549282877136">"IMEI ақпараты"</string>
     <string name="status_bt_address" msgid="1571721865060122393">"Bluetooth мекенжайы"</string>
     <string name="status_up_time" msgid="1674116490191446110">"Қосылғаннан бергі жұмыс уақыты"</string>
-    <string name="legal_information" msgid="2346024659831852038">"Заңнамалық ақпарат"</string>
+    <string name="legal_information" msgid="2346024659831852038">"Құқықтық ақпарат"</string>
     <string name="copyright_title" msgid="5564228453228549353">"Авторлық құқық"</string>
     <string name="license_title" msgid="4482927105870812604">"Лицензия"</string>
     <string name="terms_title" msgid="8480859222932736291">"Талаптар мен шарттар"</string>
@@ -208,7 +207,7 @@
     <string name="title_mac_address" msgid="3428401680168668544">"MAC мекенжайы"</string>
     <string name="title_signal_strength" msgid="205478650262078041">"Сигнал күші"</string>
     <string name="title_ip_address" msgid="4533523100923004711">"IP мекенжайы"</string>
-    <string name="title_ssid" msgid="4858945903642469730">"Wi-Fi желісінің атауын енгізу"</string>
+    <string name="title_ssid" msgid="4858945903642469730">"Wi-Fi желісінің атауын енгізіңіз"</string>
     <string name="title_internet_connection" msgid="8710084774588697646">"Интернет байланысы"</string>
     <string name="connected" msgid="7563100162902079938">"Қосылды"</string>
     <string name="not_connected" msgid="6858480380326923017">"Қосылмаған"</string>
@@ -278,7 +277,7 @@
     <string name="proxy_error_empty_port" msgid="6835658067776408062">"Порт өрісі бос болмауы керек"</string>
     <string name="proxy_error_empty_host_set_port" msgid="4428793978424303244">"Егер хост өрісі бос болса, порт өрісін бос қалдырыңыз"</string>
     <string name="proxy_error_invalid_port" msgid="1434922103959603993">"Порт жарамсыз"</string>
-    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP прокси-серверін браузер пайдаланады, бірақ оны басқа қолданбалар пайдаланбауы мүмкін"</string>
+    <string name="proxy_warning_limited_support" msgid="6160239282535986523">"HTTP прокси-серверін браузер пайдаланады, бірақ басқа қолданбалар пайдалана алмайды."</string>
     <string name="proxy_port_description" msgid="6791098212244367568">"Жарамды портты енгізіңіз.\nМысалы: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Тыйым салынған домендердің үтірмен бөлінген тізімін енгізіңіз немесе бос қалдырыңыз.\nМысалы: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Жарамды хост атауын енгізіңіз.\nМысалы: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -298,7 +297,7 @@
     <string name="storage_size" msgid="8958530823208352781">"Жалпы бос орын: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
     <string name="storage_calculating_size" msgid="2644732407412520565">"Есептелуде…"</string>
     <string name="storage_apps_usage" msgid="4366049071039081219">"Қолданбалар"</string>
-    <string name="storage_downloads_usage" msgid="6172975879962599380">"Жүктеулер"</string>
+    <string name="storage_downloads_usage" msgid="6172975879962599380">"Жүктеп алынғандар"</string>
     <string name="storage_dcim_usage" msgid="2977564696540645452">"Фотосуреттер және бейнелер"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"Aудио"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Өзге"</string>
@@ -375,7 +374,7 @@
     <string name="system_set_time" msgid="4661804115501057452">"Уақытты орнату"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"Уақыт белдеуін орнату"</string>
     <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
-    <string name="system_set_time_format" msgid="4447882066895090612">"24 сағаттық пішімді пайдалану"</string>
+    <string name="system_set_time_format" msgid="4447882066895090612">"24 сағаттық форматты пайдалану"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"Автоматты күн мен уақыт"</string>
   <string-array name="auto_date_time_entries">
@@ -387,16 +386,16 @@
     <item msgid="2475903014233987786">"Ағын үшін берілген уақытты пайдалану"</item>
     <item msgid="150957081326946463">"Өшірулі"</item>
   </string-array>
-    <string name="system_location" msgid="502463575930545806">"Орын"</string>
+    <string name="system_location" msgid="502463575930545806">"Орналасу"</string>
     <string name="system_desc_location" msgid="4243551425631207495">"Рұқсат сұраған қолданбаларға орныңыз туралы ақпаратты пайдалануға рұқсат ету"</string>
     <string name="system_network_location_confirm" msgid="8435144328428634060">"Орынды анықтауға келісім"</string>
     <string name="location_mode_title" msgid="6573195849329396150">"Режим"</string>
-    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Соңғы орынды сұраулар"</string>
+    <string name="location_category_recent_location_requests" msgid="3437903422445812245">"Соңғы орналасу сұраулары"</string>
     <string name="location_no_recent_apps" msgid="4218851908476344030">"Жуықта ешбір қолданба орынды сұрамаған"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"Батареяны пайдалану жоғары"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"Төмен деңгейде батарея пайдалану"</string>
-    <string name="location_mode_wifi_description" msgid="2778774510654527264">"Орынды болжау үшін Wi‑Fi желісін пайдаланыңыз"</string>
-    <string name="location_status" msgid="3456414279428237558">"Орын күйі"</string>
+    <string name="location_mode_wifi_description" msgid="2778774510654527264">"Орналасқан жерді анықтау үшін Wi‑Fi желісін пайдалану"</string>
+    <string name="location_status" msgid="3456414279428237558">"Орналасу күйі"</string>
     <string name="location_services" msgid="5441085185119797200">"Орынды анықтау қызметтері"</string>
     <string name="on" msgid="6683600681314500652">"Қосулы"</string>
     <string name="off" msgid="5264189545064767245">"Өшірулі"</string>
@@ -527,7 +526,7 @@
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Белгісіз көздер"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Қолданбаларды Play Store дүкенінен басқа көздерден орнатуға рұқсат ету"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Белгісіз дереккөздерге рұқсат беру"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Құрылғыңызға және жеке деректеріңізге белгісіз көздерден алынған қолданбалар шабуылдау ықтималдығы көбірек. Сіз осындай қолданбаларды пайдаланудан болуы мүмкін кез келген құрылғының зақымдалуына немесе деректердің жоғалуына тек өзіңіз жауапты болуға келісесіз."</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Белгісіз көздерден алынған қолданбалардың құрылғыңызға және жеке деректеріңізге  шабуылдау ықтималдығы жоғары болады. Осындай қолданбаларды пайдаланудан болған құрылғының зақымдалуына немесе деректердің жоғалуына тек өзіңіз жауапты болуға келісесіз."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Қолданбаларды растау"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Зиян келтіруі мүмкін қолданбаларды орнатуға тыйым салу немесе орнатар алдында ескерту"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Ешқашан"</string>
@@ -617,7 +616,7 @@
     <string name="user_restrictions_controlled_by" msgid="2107349341393761750">"<xliff:g id="APP">%1$s</xliff:g> басқарады"</string>
     <string name="app_not_supported_in_limited" msgid="6818309827329010677">"Бұл қолданбаға шектелген профильдерде қолдау көрсетілмейді"</string>
     <string name="app_sees_restricted_accounts" msgid="1967195038085624916">"Бұл қолданба есептік жазбаларыңызға қатынаса алады"</string>
-    <string name="restriction_location_enable_title" msgid="2575116135395354938">"Орын"</string>
+    <string name="restriction_location_enable_title" msgid="2575116135395354938">"Орналасу"</string>
     <string name="restriction_location_enable_summary" msgid="4195349388342385870">"Қолданбаларға орныңыз туралы ақпаратты пайдалануға рұқсат беру"</string>
     <string name="restricted_profile_switch_to" msgid="1926433350907032138">"Шектелген профильге кіру"</string>
     <string name="restricted_profile_switch_out" msgid="1893784095623209495">"Шектелген профильден шығу"</string>
@@ -690,8 +689,8 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"Есептік жазбаның сақтық көшірмесін жасау"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Автоматты түрде қалпына келтіру"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"Құрылғыны ысыру"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"Бұл құрылғының ішкі жадынан барлық деректерді өшіреді, соның ішінде: Google есептік жазбасын, жүйелік және қолданба деректері мен параметрлерін, әрі жүктелген қолданабаларды"</string>
-    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Барлық жеке ақпаратыңыз бен жүктелген қолданбаларыңыз өшірілсін бе? Бұл әрекетті кері орындау мүмкін болмайды!"</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"Құрылғының ішкі жадындағы барлық деректер, соның ішінде Google есептік жазбасы, жүйе және қолданба деректері мен параметрлері, жүктеп алынған қолданбалар өшеді."</string>
+    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Барлық жеке ақпаратыңыз бен жүктеп алынған қолданбаларыңыз өшірілсін бе? Бұл әрекетті кері қайтару мүмкін болмайды!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Барлығын өшіру"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> құрылғысына атау таңдау"</string>
     <string name="select_device_name_description" msgid="4939767901420114190">"Басқа құрылғылардан трансляциялағанда немесе қосылғанда, өз құрылғыңызды тану үшін оған ат қойыңыз."</string>
@@ -701,9 +700,9 @@
     <item msgid="8122798759665439456">"Отбасы бөлмесіндегі теледидар"</item>
     <item msgid="1389347662738182100">"Жатын бөлмедегі теледидар"</item>
   </string-array>
-    <string name="custom_room" msgid="8655516733933892458">"Реттелетін атты енгізу…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Басқа атау енгізу…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Бұл <xliff:g id="DEVICEMODEL">%1$s</xliff:g> құрылғысының атын өзгерту"</string>
-    <string name="device_rename_description" msgid="2461752788563877107">"Бұл <xliff:g id="DEVICEMODEL">%1$s</xliff:g> құрылғы қазір \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" деп аталады"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"Бұл <xliff:g id="DEVICEMODEL">%1$s</xliff:g> құрылғысы қазір \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" деп аталады."</string>
     <string name="device_name_suggestion_title" msgid="2312205155408810120">"Құрылғы атауын орнату"</string>
     <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Суреттерді, бейнелерді, т.б. телефоннан трансляциялаған кезде, осы атты пайдаланыңыз"</string>
     <string name="change_setting" msgid="2047402388786162246">"Өзгерту"</string>
@@ -723,8 +722,8 @@
     <string name="manage_keyboards" msgid="1905379263117016795">"Пернетақталарды басқару"</string>
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Рұқсат етілген"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Рұқсат етілмеген"</string>
-    <string name="usage_access" msgid="1914242907684452328">"Деректерге кіру"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"Пайдалану мүмкіндігі қолданбаға сіз пайдаланатын басқа қолданбаларды және қаншалықты жиі пайдаланатыңыз туралы ақпаратты, сондай-ақ операторды, тіл параметрлерін және басқа мәліметтерді бақылауға мүмкіндік береді."</string>
+    <string name="usage_access" msgid="1914242907684452328">"Пайдалану тарихын көру"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"Пайдалану тарихын көру мүмкіндігі қолданбаға сіз пайдаланатын басқа қолданбаларды және қаншалықты жиі пайдаланатыңыз туралы ақпаратты, сондай-ақ операторды, тіл параметрлерін және басқа мәліметтерді бақылауға мүмкіндік береді."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"Қуат үнемдеу"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"Қолданбалардың қуат тұтынуын оңтайландыру"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"Оңтайландыру қажет емес"</string>
@@ -738,16 +737,16 @@
     <string name="directory_access_description" msgid="878500352290246580">"Бұл қолданбаларда белгілі каталогтерге кіру рұқсаты бар."</string>
     <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Басқа қолданбалардың үстінен көрсету"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"Басқа қолданбалардың үстінен көрсетілуге рұқсат беру"</string>
-    <string name="allow_overlay_description" msgid="1946279120428813474">"Қолданбаның пайдаланылып жатқан басқа қолданбалардың үстінен көрсетілуіне рұқсат беріңіз. Ол қолданбаларды пайдалануыңызға кедергі келтіріп, олардың көрсетілуін не жұмыс әдісін өзгертуі мүмкін."</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"Басқа қолданба үстінен көрсетуге рұқсат беру"</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"Қолданбаның пайдаланылып жатқан басқа қолданбалардың үстінен көрсетілуіне рұқсат беріледі. Ол қолданбаларды пайдалануыңызға кедергі келтіріп, олардың көрсетілуін не жұмысын өзгертуі мүмкін."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Жүйе параметрлерін өзгерту"</string>
     <string name="write_settings_title" msgid="8750406725746598710">"Жүйе параметрлерін өзгерте алады"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"Бұл рұқсат қолданбаға жүйе параметрлерін өзгертуге мүмкіндік береді."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"Иә"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"Жоқ"</string>
-    <string name="picture_in_picture_title" msgid="7738692876349058">"Сурет ішіндегі сурет"</string>
-    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"\"Сурет ішіндегі сурет\" режиміне рұқсат беру"</string>
-    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Орнатылған қолданбалардың ешқайсысы \"сурет ішіндегі сурет\" режимін қолдамайды"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"Суреттегі сурет"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"\"Суреттегі сурет\" режиміне рұқсат беру"</string>
+    <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Орнатылған қолданбалардың ешқайсысы \"суреттегі сурет\" режимін қолдамайды"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Қолданба ашық болғанда не одан шыққанда (мысалы, бейнені әрі қарай көру үшін), қолданбаларға \"суреттегі сурет\" терезесін ашуға мүмкіндік береді. Бұл терезе ашылған басқа қолданбалардың үстінен шығады."</string>
     <string name="special_access" msgid="3513811566600299998">"Арнайы рұқсат"</string>
     <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>

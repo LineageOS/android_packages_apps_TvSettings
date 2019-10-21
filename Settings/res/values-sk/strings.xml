@@ -73,7 +73,7 @@
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethernetová sieť je pripojená"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Nie je pripojená žiadna sieť"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"Pripojenie Wi‑Fi je vypnuté"</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Vyhľadávanie je vždy k dispozícii"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Vyhľadávanie vždy zapnuté"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Povoliť službe určovania polohy Google a ostatným aplikáciám vyhľadávať siete aj v prípade, že je sieť Wi‑Fi vypnutá"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi‑Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"Pripojte sa k sieti"</string>
@@ -92,8 +92,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Systémové zvuky"</string>
     <string name="device_apps" msgid="1971794537385509294">"Aplikácie"</string>
     <string name="device_storage" msgid="5536683600091277826">"Úložisko"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Obnovenie výrobných nastavení"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Zálohovanie a obnovenie"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Obnovenie výrobných nastavení"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrácia"</string>
@@ -401,7 +400,7 @@
     <string name="location_no_recent_apps" msgid="4218851908476344030">"V poslednom čase žiadne aplikácie o polohu nepožiadali"</string>
     <string name="location_high_battery_use" msgid="576143332793626088">"Vysoká spotreba batérie"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"Nízka spotreba batérie"</string>
-    <string name="location_mode_wifi_description" msgid="2778774510654527264">"Odhadovať polohu pomocou siete Wi‑Fi"</string>
+    <string name="location_mode_wifi_description" msgid="2778774510654527264">"Odhadovať polohu pomocou Wi‑Fi"</string>
     <string name="location_status" msgid="3456414279428237558">"Stav polohy"</string>
     <string name="location_services" msgid="5441085185119797200">"Služby určovania polohy"</string>
     <string name="on" msgid="6683600681314500652">"Zapnuté"</string>
@@ -704,11 +703,11 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"Záložný účet"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Automatické obnovenie"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"Resetovať zariadenie"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"Táto operácia vymaže z interného úložiska zariadenia všetky údaje vrátane nasledujúcich: účet Google, údaje a nastavenia systému a aplikácií a stiahnuté aplikácie."</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"Táto operácia vymaže z interného úložiska zariadenia všetky údaje vrátane nasledujúcich: účet Google, údaje a nastavenia systému aj aplikácií, ako aj stiahnuté aplikácie."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Chcete vymazať všetky svoje osobné údaje a stiahnuté aplikácie? Túto akciu nebude možné vrátiť späť."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Vymazať všetko"</string>
-    <string name="select_device_name_title" msgid="5165800500130943604">"Výber názvu pre zariadenie <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="4939767901420114190">"Pomenujte svoje zariadenie. Uľahčí vám to jeho identifikáciu, keď budete prenášať obsah alebo sa k nemu pripájať z iných zariadení."</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Vyberte názov pre zariadenie <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"Pomenujte svoje zariadenie, aby ste ho ľahšie spoznali pri prenosoch alebo keď sa k nemu budete pripájať z iných zariadení."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"Televízor v obývačke"</item>
@@ -718,8 +717,8 @@
     <string name="custom_room" msgid="8655516733933892458">"Zadať vlastný názov..."</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Zmena názvu zariadenia <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Toto zariadenie <xliff:g id="DEVICEMODEL">%1$s</xliff:g> sa momentálne nazýva <xliff:g id="DEVICENAME">%2$s</xliff:g>"</string>
-    <string name="device_name_suggestion_title" msgid="2312205155408810120">"Nastavenie názvu zariadenia"</string>
-    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Použite tento názov pri prenášaní fotiek, videí a ďalšieho obsahu z telefónu"</string>
+    <string name="device_name_suggestion_title" msgid="2312205155408810120">"Zadajte názov zariadenia"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Používajte tento názov pri prenose fotiek, videí a ďalšieho obsahu z telefónu"</string>
     <string name="change_setting" msgid="2047402388786162246">"Zmeniť"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Nemeniť"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Povolenia"</string>
@@ -752,18 +751,18 @@
     <string name="directory_access_description" msgid="878500352290246580">"Tieto aplikácie majú povolenie na prístup k určitým adresárom."</string>
     <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Zobrazenie cez iné aplikácie"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"Povoliť zobrazenie cez iné aplikácie"</string>
-    <string name="allow_overlay_description" msgid="1946279120428813474">"Umožňuje určitej aplikácii zobrazovať sa nad inými aplikáciami, ktoré používate. Môže to narušiť používanie týchto aplikácií alebo zmeniť ich vzhľad či správanie."</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"Povoliť zobrazenie nad ostatnými aplikáciami"</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"Umožní aplikácii zobrazovať sa nad ostatnými aplikáciami, ktoré používate. Môže tak narušiť vašu prácu s týmito aplikáciami alebo zmeniť ich vzhľad či správanie."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Úprava nastavení systému"</string>
-    <string name="write_settings_title" msgid="8750406725746598710">"Môže upravovať nastavenia systému"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Môže meniť nastavenia systému"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"Toto povolenie umožňuje aplikácii upravovať nastavenia systému."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"Áno"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"Nie"</string>
     <string name="picture_in_picture_title" msgid="7738692876349058">"Obraz v obraze"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Povoliť obraz v obraze"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Žiadna z nainštalovaných aplikácií nepodporuje obraz v obraze"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Povoľte aplikáciám vytvoriť okno obrazu v obraze, kým sú otvorené alebo keď ich opustíte (napríklad pokračovanie v pozeraní videa). Toto okno sa zobrazuje cez ďalšie aplikácie, ktoré používate."</string>
-    <string name="special_access" msgid="3513811566600299998">"Prístup k špeciálnym aplikáciám"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Povoľte aplikáciám vytvoriť okno v režime obraz v obraze, kým je aplikácia otvorená alebo potom, čo ju opustíte (napríklad aby ste mohli pokračovať v pozeraní videa). Toto okno sa zobrazuje nad ostatnými aplikáciami, ktoré používate."</string>
+    <string name="special_access" msgid="3513811566600299998">"Špeciálny prístup aplikácií"</string>
     <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="943824924394588129">"Zvuk"</string>
     <string name="record_audio" msgid="101006980787931106">"Nahrať zvuk"</string>

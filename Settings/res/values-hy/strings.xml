@@ -54,7 +54,7 @@
     <string name="account_sync" msgid="773808124331714965">"Ընտրեք հավելվածներ"</string>
     <string name="sync_now" msgid="8732244492880016471">"Համաժամացնել հիմա"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Համաժամացում..."</string>
-    <string name="last_synced" msgid="6178494892357077274">"Վերջին անգամ համաժամացվել է <xliff:g id="TIME">%1$s</xliff:g>-ին"</string>
+    <string name="last_synced" msgid="6178494892357077274">"Վերջին համաժամացումը՝ <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Անջատված է"</string>
     <string name="account_remove" msgid="4313580520737295272">"Հաշվի ջնջում"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Հնարավոր չէ հեռացնել հաշիվը"</string>
@@ -88,12 +88,11 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Համակարգի ձայներ"</string>
     <string name="device_apps" msgid="1971794537385509294">"Հավելվածներ"</string>
     <string name="device_storage" msgid="5536683600091277826">"Պահեստ"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Զրոյացնել"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Պահուստավորում և վերականգնում"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Վերակայել բոլոր տվյալները"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Չափաբերում"</string>
-    <string name="surround_sound_select_formats" msgid="6329868407147678259">"Ընտրել ձևաչափերը"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"Ընտրեք ձևաչափերը"</string>
     <string name="surround_sound_category_title" msgid="1331285587464316534">"Ծավալային ձայն"</string>
     <string name="surround_sound_format_ac3" msgid="1724977459494885356">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"Dolby Digital Plus"</string>
@@ -164,7 +163,7 @@
     <string name="about_model" msgid="6625269442206323995">"Մոդելը"</string>
     <string name="about_version" msgid="1177287676732287266">"Տարբերակը"</string>
     <string name="about_serial" msgid="2723560490027171187">"Սերիական համարը"</string>
-    <string name="about_build" msgid="9148789767199785676">"Հավաքման տարբերակը"</string>
+    <string name="about_build" msgid="9148789767199785676">"Կառուցման տարբերակը"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="5361765297521871966">
       <item quantity="one">Մնաց <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> քայլ, և դուք մշակող եք</item>
       <item quantity="other">Մնաց <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> քայլ, և դուք մշակող եք</item>
@@ -299,7 +298,7 @@
     <string name="storage_calculating_size" msgid="2644732407412520565">"Հաշվարկում…"</string>
     <string name="storage_apps_usage" msgid="4366049071039081219">"Հավելվածներ"</string>
     <string name="storage_downloads_usage" msgid="6172975879962599380">"Ներբեռնումներ"</string>
-    <string name="storage_dcim_usage" msgid="2977564696540645452">"Լուսանկարներ &amp; տեսահոլովակներ"</string>
+    <string name="storage_dcim_usage" msgid="2977564696540645452">"Լուսանկարներ և տեսահոլովակներ"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"Աուդիո"</string>
     <string name="storage_media_misc_usage" msgid="6066868724030127457">"Տարբեր"</string>
     <string name="storage_media_cache_usage" msgid="5906737163212649904">"Քեշի տվյալներ"</string>
@@ -377,9 +376,9 @@
     <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"24-ժամյա ձևաչափ"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
-    <string name="system_auto_date_time" msgid="3629668599205033272">"Ավտոմատ սահմանում"</string>
+    <string name="system_auto_date_time" msgid="3629668599205033272">"Ամսաթվի և ժամի ավտոմատ կարգավորում"</string>
   <string-array name="auto_date_time_entries">
-    <item msgid="4590792581242018007">"Օգտագործել ցանցի տրամադրած ժամանակը"</item>
+    <item msgid="4590792581242018007">"Օգտագործել ցանցի ժամանակը"</item>
     <item msgid="3807025813081244357">"Անջատել"</item>
   </string-array>
   <string-array name="auto_date_time_ts_entries">
@@ -525,7 +524,7 @@
     <string name="agree" msgid="1235622082275451350">"Ընդունել"</string>
     <string name="disagree" msgid="9170636026862400981">"Չընդունել"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Անհայտ աղբյուրներ"</string>
-    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Թույլատրել ծրագրերի տեղադրումը ոչ միայն Play Store-ից, այլ նաև ուրիշ աղբյուրներից"</string>
+    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Թույլատրել ծրագրերի տեղադրումը ոչ միայն Play Խանութից, այլ նաև ուրիշ աղբյուրներից"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Թույլատրել անհայտ աղբյուրներից տեղադրումը"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Անհայտ աղբյուրներից բեռնված ծրագրերը կարող են վնասել ձեր սարքը և անձնական տվյալները: Ձեր սարքին պատճառված որևէ վնասի կամ կորած տվյալների համար միայն դուք եք պատասխանատու:"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Հավելվածների ստուգում"</string>
@@ -671,7 +670,7 @@
     <string name="device_apps_app_management_licenses" msgid="8087633636434422908">"Բաց կոդով ծրագրակազմի արտոնագրեր"</string>
     <string name="device_apps_app_management_permissions" msgid="1829808830974726081">"Թույլտվություններ"</string>
     <string name="device_apps_app_management_not_available" msgid="1249731776661207047">"Հավելվածն անհասանելի է"</string>
-    <string name="settings_ok" msgid="3321630456511355983">"Լավ"</string>
+    <string name="settings_ok" msgid="3321630456511355983">"Հաստատել"</string>
     <string name="settings_cancel" msgid="304280412158061225">"Չեղարկել"</string>
     <string name="settings_on" msgid="6892236264945435013">"Միացված է"</string>
     <string name="settings_off" msgid="449272161738237637">"Անջատված է"</string>
@@ -680,8 +679,8 @@
     <string name="device_daydreams_test" msgid="9038920213402659591">"Սկսել"</string>
     <string name="device_daydreams_sleep" msgid="7676938708373592766">"Երբ սկսել"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Էկրանապահը միանում է՝ այս ժամանակահատվածում սարքը չօգտագործելու դեպքում: Եթե էկրանապահ ընտրված չէ, էկրանը կանջատվի։"</string>
-    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Սարքը չօգտագործելուց <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> հետո"</string>
-    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Սարքն անցկացնել քնի ռեժիմ"</string>
+    <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> անգործությունից հետո"</string>
+    <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Միացնել քնի ռեժիմը"</string>
     <string name="device_daydreams_screen_off_description" msgid="4181262365345306243">"Էկրանը կանջատվի, եթե այս ժամանակահատվածում չակտիվացվի:"</string>
     <string name="backup_configure_account_default_summary" msgid="5619226302157702967">"Ներկայումս պահուստավորված տվյալներով հաշիվ չկա"</string>
     <string name="backup_erase_dialog_title" msgid="3720907811680819429"></string>
@@ -694,7 +693,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Ջնջե՞լ ձեր բոլոր անձնական տվյալներն ու ներբեռնած հավելվածները: Չեք կարող հետադարձել այս գործողությունը:"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Ջնջել ամեն ինչ"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Ընտրեք ձեր <xliff:g id="DEVICEMODEL">%1$s</xliff:g> սարքի անունը"</string>
-    <string name="select_device_name_description" msgid="4939767901420114190">"Անվանեք ձեր սարքը, որպեսզի նույնականացնեք այն, երբ անհրաժեշտ լինի կապակցվել դրան այլ սարքերից։"</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"Անվանեք ձեր սարքը, որպեսզի նույնականացնեք այն, երբ անհրաժեշտ լինի միանալ դրան այլ սարքերից։"</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"Հյուրասենյակի հեռուստացույց"</item>
@@ -712,7 +711,7 @@
     <string name="device_apps_permissions" msgid="2966387603529725982">"Հավելվածների թույլտվություններ"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"Թույլատրված է <xliff:g id="COUNT_0">%1$d</xliff:g> հավելվածի՝ <xliff:g id="COUNT_1">%2$d</xliff:g>-ից"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"Bluetooth-ի թույլտվության հայց"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Android-ի խոցելիության շտկման մակարդակը"</string>
+    <string name="security_patch" msgid="2131617390189164481">"Անվտանգության համակարգի վերջին թարմացումը"</string>
     <string name="choose_application" msgid="5662960665577780353">"Ընտրեք հավելված"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Փորձնական)"</string>
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Վերագործարկել անվտանգ ռեժիմում"</string>
@@ -737,9 +736,9 @@
     <string name="directory_access" msgid="7439168599298598101">"Մուտք գրացուցակներ"</string>
     <string name="directory_access_description" msgid="878500352290246580">"Այս հավելվածներն ունեն որոշակի գրացուցակների մուտքի թույլտվություն:"</string>
     <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
-    <string name="system_alert_window_settings" msgid="2069031369694448339">"Ցույց տալ մյուս հավելվածների վերևում"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"Ցուցադրել մյուս հավելվածների վերևում"</string>
-    <string name="allow_overlay_description" msgid="1946279120428813474">"Թույլատրել հավելվածների ցուցադրումը մյուս հավելվածների վերևում։ Դա կարող է խանգարել օգտագործել մյուս հավելվածները կամ փոխել դրանց տեսքը։"</string>
+    <string name="system_alert_window_settings" msgid="2069031369694448339">"Ցույց տալ մյուս հավելվածների վրայից"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"Ցուցադրել մյուս հավելվածների վրայից"</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"Թույլատրել հավելվածների ցուցադրումը մյուս հավելվածների վրայից։ Դա կարող է խանգարել մյուս հավելվածների օգտագործմանը, փոխել դրանց տեսքը։"</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Փոփոխել կարգավորումները"</string>
     <string name="write_settings_title" msgid="8750406725746598710">"Կարող են փոփոխել համակարգի կարգավորումները"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"Միացնելով այս թույլտվությունը՝ թույլ եք տալիս հավելվածին փոփոխել համակարգի կարգավորումները:"</string>
@@ -748,7 +747,7 @@
     <string name="picture_in_picture_title" msgid="7738692876349058">"«Նկար նկարի մեջ» ռեժիմ"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Թույլատրել «նկար նկարի մեջ» ռեժիմը"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Տեղադրված հավելվածները չեն աջակցում «նկար նկարի մեջ» ռեժիմը"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Թույլատրել հավելվածներին ստեղծել «նկար նկարի մեջ» պատուհան` հավելվածն օգտագործելիս կամ փակելուց հետո (օրինակ՝ տեսանյութի դիտումը շարունակելու համար): Այս պատուհանը ցուցադրվում է ձեր կողմից օգտագործվող այլ հավելվածների վերևում:"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Թույլատրել հավելվածներին ստեղծել «նկար նկարի մեջ» պատուհան` հավելվածն օգտագործելիս կամ փակելուց հետո (օրինակ՝ տեսանյութի դիտումը շարունակելու համար): Այս պատուհանը ցուցադրվում է ձեր կողմից օգտագործվող այլ հավելվածների վրայից:"</string>
     <string name="special_access" msgid="3513811566600299998">"Հատուկ հասանելիություն"</string>
     <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="943824924394588129">"Աուդիո"</string>

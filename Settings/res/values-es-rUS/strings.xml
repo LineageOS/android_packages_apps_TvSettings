@@ -88,8 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Sonidos del sistema"</string>
     <string name="device_apps" msgid="1971794537385509294">"Aplicaciones"</string>
     <string name="device_storage" msgid="5536683600091277826">"Almacenamiento"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Restablecer configuración de fábrica"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Crear copia de seguridad y Restablecer"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Restablecimiento de la configuración de fábrica"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Calibración"</string>
@@ -100,7 +99,7 @@
     <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="4957977219847012992">"Nota: La opción Automático podría no funciona si no se indican correctamente los formatos admitidos."</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"Nota: es posible que no funcione la opción Automático si no se indican correctamente los formatos admitidos."</string>
     <string name="surround_sound_auto_summary" msgid="175387511376834034">"Automático: Usa formatos admitidos (recomendado)"</string>
     <string name="surround_sound_none_summary" msgid="4295042972785042496">"Ninguno: No usar sonido envolvente"</string>
     <string name="surround_sound_manual_summary" msgid="9208540024024014501">"Manual: Selecciona qué formatos usar"</string>
@@ -690,8 +689,8 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"Cuenta de copia de seguridad"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Restauración automática"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"Restablecer dispositivo"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"Se borrarán todos los datos del almacenamiento interno de tu dispositivo, incluidos los datos y parámetros de configuración de tus aplicaciones y del sistema, las aplicaciones que descargaste y tu cuenta de Google."</string>
-    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"¿Quieres borrar tu información personal y las aplicaciones que descargaste? Esta acción no se puede deshacer."</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"Se borrarán todos los datos del almacenamiento interno del dispositivo, incluidos los datos y parámetros de configuración de las aplicaciones y el sistema, las aplicaciones que descargaste y tu cuenta de Google."</string>
+    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"¿Quieres borrar tu información personal y las aplicaciones que descargaste? No puede deshacerse esta acción."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Borrar todo"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Elegir un nombre para <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="4939767901420114190">"Asígnale un nombre a tu dispositivo para identificarlo cuando transmita contenido o te conectes a él desde otros dispositivos."</string>
@@ -705,7 +704,7 @@
     <string name="device_rename_title" msgid="2629557295786267185">"Cambiar el nombre de <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Actualmente, <xliff:g id="DEVICEMODEL">%1$s</xliff:g> se llama \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="device_name_suggestion_title" msgid="2312205155408810120">"Escribe el nombre del dispositivo"</string>
-    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Usa este nombre cuando transmitas fotos, videos y mucho más contenido desde tu teléfono"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Usa este nombre cuando transmitas fotos, videos y mucho más contenido desde el teléfono"</string>
     <string name="change_setting" msgid="2047402388786162246">"Cambiar"</string>
     <string name="keep_settings" msgid="6798327196645732517">"No cambiar"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Permisos"</string>
@@ -738,10 +737,10 @@
     <string name="directory_access_description" msgid="878500352290246580">"Estas apps tienen permiso para acceder a ciertos directorios."</string>
     <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Mostrar sobre otras apps"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"Permitir mostrar sobre otras apps"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"Mostrar sobre otras apps"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Permite que una app se muestre sobre otras que estés utilizando. Esto puede interferir con el uso de esas apps o cambiar el modo en que se muestran o comportan."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Modificar config. del sistema"</string>
-    <string name="write_settings_title" msgid="8750406725746598710">"Modificar la config. del sistema"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Modificar config. del sistema"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"Cuando se otorga este permiso, la app puede modificar la configuración del sistema."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"Sí"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"No"</string>

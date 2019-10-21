@@ -88,8 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Sons del sistema"</string>
     <string name="device_apps" msgid="1971794537385509294">"Aplicacions"</string>
     <string name="device_storage" msgid="5536683600091277826">"Emmagatzematge"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Restableix les dades de fàbrica"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Còpia de seguretat i restauració"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Restabliment de les dades de fàbrica"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Calibratge"</string>
@@ -193,7 +192,7 @@
     <string name="sim_status_title" msgid="498929467188844611">"Estat de la SIM"</string>
     <string name="imei_information_title" msgid="5208860549282877136">"Informació sobre l\'IMEI"</string>
     <string name="status_bt_address" msgid="1571721865060122393">"Adreça Bluetooth"</string>
-    <string name="status_up_time" msgid="1674116490191446110">"Temps actiu"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"Temps d\'activitat"</string>
     <string name="legal_information" msgid="2346024659831852038">"Informació legal"</string>
     <string name="copyright_title" msgid="5564228453228549353">"Drets d\'autor"</string>
     <string name="license_title" msgid="4482927105870812604">"Llicència"</string>
@@ -301,8 +300,8 @@
     <string name="storage_downloads_usage" msgid="6172975879962599380">"Baixades"</string>
     <string name="storage_dcim_usage" msgid="2977564696540645452">"Fotos i vídeos"</string>
     <string name="storage_music_usage" msgid="3509327591741514083">"Àudio"</string>
-    <string name="storage_media_misc_usage" msgid="6066868724030127457">"Diversos"</string>
-    <string name="storage_media_cache_usage" msgid="5906737163212649904">"Dades emmagatzemades a la memòria cau"</string>
+    <string name="storage_media_misc_usage" msgid="6066868724030127457">"Altres"</string>
+    <string name="storage_media_cache_usage" msgid="5906737163212649904">"Dades de la memòria cau"</string>
     <string name="storage_eject" msgid="113476702798691558">"Expulsa"</string>
     <string name="storage_format" msgid="3759273736493279595">"Esborra i formata"</string>
     <string name="storage_format_as_private" msgid="4169495230765116075">"Esborra i formata com a emmagatzematge de dispositiu"</string>
@@ -396,7 +395,7 @@
     <string name="location_high_battery_use" msgid="576143332793626088">"Consum de bateria elevat"</string>
     <string name="location_low_battery_use" msgid="5756040390248358148">"Consum de bateria reduït"</string>
     <string name="location_mode_wifi_description" msgid="2778774510654527264">"Utilitza la Wi-Fi per calcular la ubicació"</string>
-    <string name="location_status" msgid="3456414279428237558">"Estat de l\'emplaçament"</string>
+    <string name="location_status" msgid="3456414279428237558">"Estat de la ubicació"</string>
     <string name="location_services" msgid="5441085185119797200">"Serveis d\'ubicació"</string>
     <string name="on" msgid="6683600681314500652">"Activat"</string>
     <string name="off" msgid="5264189545064767245">"Desactivat"</string>
@@ -460,7 +459,7 @@
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Si selecciones D\'acord, s\'aturarà <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="8905477795536714590">"Text a parla"</string>
     <string name="system_accessibility_tts_engine_config" msgid="5331139536083054552">"Configuració del motor"</string>
-    <string name="system_speak_passwords" msgid="5264650214879185873">"Pronuncia les contrasenyes"</string>
+    <string name="system_speak_passwords" msgid="5264650214879185873">"Enuncia les contrasenyes"</string>
     <string name="system_preferred_engine" msgid="8258210139854655567">"Motor preferit"</string>
     <string name="system_speech_rate" msgid="8099856582088545576">"Velocitat de la parla"</string>
     <string name="system_play_sample" msgid="7187293932891811148">"Reprodueix una mostra"</string>
@@ -579,7 +578,7 @@
     <string name="alwaysUseQuestion" msgid="7128459989232213727">"Vols utilitzar sempre aquesta opció per a l\'acció?"</string>
     <string name="alwaysUseOption" msgid="1057645533268907906">"Utilitza sempre"</string>
     <string name="justOnceOption" msgid="6051458702672920102">"Només una vegada"</string>
-    <string name="noApplications" msgid="4197983402774959346">"No hi ha aplicacions que puguin fer aquesta acció."</string>
+    <string name="noApplications" msgid="4197983402774959346">"No hi ha cap aplicació que pugui fer aquesta acció."</string>
     <string name="noAppsGoBack" msgid="5663180241276177314">"Enrere"</string>
     <string name="inputs_inputs" msgid="4249080110281833521">"Entrades"</string>
     <string name="inputs_header_cec" msgid="3701104827756278489">"Control d\'electrònica del consumidor (CEC)"</string>
@@ -690,20 +689,20 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"Compte de còpia de seguretat"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Restauració automàtica"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"Restableix el dispositiu"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"Aquesta acció esborrarà totes les dades de l\'emmagatzematge intern del dispositiu, com ara el compte de Google, les dades i la configuració del sistema i de les aplicacions, i les aplicacions baixades."</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"Aquesta acció esborrarà totes les dades de l\'emmagatzematge intern del dispositiu, com ara el Compte de Google, les dades i la configuració del sistema i de les aplicacions, i les aplicacions baixades"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Vols esborrar tota la informació personal i les aplicacions baixades? Aquesta acció no es pot desfer."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Esborra-ho tot"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Tria un nom per al teu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="4939767901420114190">"Assigna un nom al teu dispositiu per ajudar-te a identificar-lo quan estigui emetent contingut o t\'hi connectis des d\'altres dispositius."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
-    <item msgid="7449352861592960712">"Televisor de la sala d\'estar"</item>
+    <item msgid="7449352861592960712">"Televisor del menjador"</item>
     <item msgid="8122798759665439456">"Televisor de la sala d\'estar"</item>
     <item msgid="1389347662738182100">"Televisor del dormitori"</item>
   </string-array>
     <string name="custom_room" msgid="8655516733933892458">"Introdueix un nom personalitzat…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Canvia el nom del dispositiu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="device_rename_description" msgid="2461752788563877107">"El nom actual d\'aquest <xliff:g id="DEVICEMODEL">%1$s</xliff:g> és <xliff:g id="DEVICENAME">%2$s</xliff:g>"</string>
+    <string name="device_rename_description" msgid="2461752788563877107">"El nom actual d\'aquest <xliff:g id="DEVICEMODEL">%1$s</xliff:g> és \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="device_name_suggestion_title" msgid="2312205155408810120">"Defineix el nom del dispositiu"</string>
     <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Utilitza aquest nom quan emetis fotos, vídeos i altres tipus de contingut des del telèfon"</string>
     <string name="change_setting" msgid="2047402388786162246">"Canvia"</string>

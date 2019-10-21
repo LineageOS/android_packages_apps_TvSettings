@@ -88,8 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Systemljud"</string>
     <string name="device_apps" msgid="1971794537385509294">"Appar"</string>
     <string name="device_storage" msgid="5536683600091277826">"Lagring"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Återställ standardinställningarna"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Säkerhetskopiera och återställ"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Återställ standardinställningarna"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrering"</string>
@@ -377,7 +376,7 @@
     <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"Använd 24-timmarsformat"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
-    <string name="system_auto_date_time" msgid="3629668599205033272">"Automatisk inställning av datum och tid"</string>
+    <string name="system_auto_date_time" msgid="3629668599205033272">"Automatiskt datum och tid"</string>
   <string-array name="auto_date_time_entries">
     <item msgid="4590792581242018007">"Använd nätverkets tid"</item>
     <item msgid="3807025813081244357">"Av"</item>
@@ -529,7 +528,7 @@
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Tillåt okända källor"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Enheten och dina personliga uppgifter är mer sårbara för angrepp från appar från okända källor. Du samtycker till att du ensam kan hållas ansvarig för eventuella skador på enheten eller förlust av data som kan uppstå till följd av att du använder de här apparna."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Verifiera appar"</string>
-    <string name="security_verify_apps_desc" msgid="1456317893117818733">"Tillåt inte installation av appar som kan orsaka skada eller varna innan"</string>
+    <string name="security_verify_apps_desc" msgid="1456317893117818733">"Tillåt inte installation av appar som kan orsaka skada eller varna innan installation"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Aldrig"</string>
     <string name="system_hdcp_checking_drm" msgid="8563220452241389905">"För DRM-innehåll"</string>
     <string name="system_hdcp_checking_always" msgid="7264575337360957746">"Alltid"</string>
@@ -690,8 +689,8 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"Konto för säkerhetskopiering"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Automatisk återställning"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"Återställ enheten"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"Alla uppgifter i enhetens internminne raderas, inklusive ditt Google-konto, system- och appdata, systeminställningar, appinställningar och hämtade appar."</string>
-    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Vill du radera alla personliga uppgifter och alla hämtade appar? Åtgärden kan inte ångras."</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"All data i enhetens internminne raderas, inklusive ditt Google-konto, system- och appdata, systeminställningar, appinställningar och nedladdade appar."</string>
+    <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Vill du radera alla personliga uppgifter och alla nedladdade appar? Åtgärden kan inte ångras."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Radera allt"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Välj ett namn på din <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="4939767901420114190">"Ge enheten ett namn så att det blir lättare att identifiera den när du castar eller ansluter till den från andra enheter."</string>
@@ -745,7 +744,7 @@
     <string name="write_settings_description" msgid="2765037074460395437">"Med den här behörigheten kan appen ändra systeminställningar."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"Ja"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"Nej"</string>
-    <string name="picture_in_picture_title" msgid="7738692876349058">"Bild i bild"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"Bild-i-bild"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Tillåt bild-i-bild"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Inga installerade appar stöder bild-i-bild"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Tillåt att ett bild-i-bild-fönster skapas av appen medan den är öppen eller när du har slutat att använda den (till exempel när du fortsätter att titta på en video). Detta fönster visas ovanpå andra appar du använder."</string>

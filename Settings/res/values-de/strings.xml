@@ -88,8 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Systemtöne"</string>
     <string name="device_apps" msgid="1971794537385509294">"Anwendungen"</string>
     <string name="device_storage" msgid="5536683600091277826">"Speicher"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Auf Werkseinstellungen zurücksetzen"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Sicherung &amp; Wiederherstellung"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Zurücksetzen auf Werkseinstellungen"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrierung"</string>
@@ -158,7 +157,7 @@
     <string name="device_name" msgid="2670488158531273028">"Gerätename"</string>
     <string name="restart_button_label" msgid="142580191737806071">"Neu starten"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Rechtliche Hinweise"</string>
-    <string name="about_legal_license" msgid="7867205982113209033">"Open Source-Lizenzen"</string>
+    <string name="about_legal_license" msgid="7867205982113209033">"Open-Source-Lizenzen"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Rechtliche Hinweise"</string>
     <string name="about_license_activity_unavailable" msgid="8522566562321418498">"Lizenzdaten sind nicht verfügbar."</string>
     <string name="about_model" msgid="6625269442206323995">"Modell"</string>
@@ -377,7 +376,7 @@
     <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"24-Stunden-Format"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
-    <string name="system_auto_date_time" msgid="3629668599205033272">"Automatisches Datum &amp; Uhrzeit"</string>
+    <string name="system_auto_date_time" msgid="3629668599205033272">"Autom. Datum/Uhrzeit"</string>
   <string-array name="auto_date_time_entries">
     <item msgid="4590792581242018007">"Zeit aus Netzwerk beziehen"</item>
     <item msgid="3807025813081244357">"Aus"</item>
@@ -690,22 +689,22 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"Zu sicherndes Konto"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Automatische Wiederherstellung"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"Gerät zurücksetzen"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"Hiermit werden alle Daten, einschließlich deines Google-Kontos, deiner System- und App-Daten und -Einstellungen sowie deine heruntergeladenen Apps aus dem internen Speicher deines Geräts gelöscht."</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"Hiermit werden alle Daten, einschließlich deines Google-Kontos, deiner System- und App-Daten und -Einstellungen sowie deiner heruntergeladenen Apps aus dem internen Speicher deines Geräts gelöscht."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Alle personenbezogenen Daten und heruntergeladenen Apps löschen? Dieser Vorgang kann nicht rückgängig gemacht werden."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Alles löschen"</string>
-    <string name="select_device_name_title" msgid="5165800500130943604">"Namen für <xliff:g id="DEVICEMODEL">%1$s</xliff:g> auswählen"</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Name für <xliff:g id="DEVICEMODEL">%1$s</xliff:g> auswählen"</string>
     <string name="select_device_name_description" msgid="4939767901420114190">"Gib deinem Gerät einen Namen, damit du es identifizieren kannst, wenn du von anderen Geräten darauf streamen oder eine Verbindung damit herstellen möchtest."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"Fernseher im Wohnzimmer"</item>
-    <item msgid="8122798759665439456">"Fernseher im Familienzimmer"</item>
-    <item msgid="1389347662738182100">"Fernseher im Gästezimmer"</item>
+    <item msgid="8122798759665439456">"Fernseher im Gemeinschaftsraum"</item>
+    <item msgid="1389347662738182100">"Fernseher im Schlafzimmer"</item>
   </string-array>
     <string name="custom_room" msgid="8655516733933892458">"Benutzerdefinierten Namen eingeben…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> umbenennen"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> heißt momentan \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\"."</string>
     <string name="device_name_suggestion_title" msgid="2312205155408810120">"Gerätename festlegen"</string>
-    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Diesen Namen beim Streamen von Fotos, Videos und anderem vom Smartphone verwenden"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Diesen Namen beim Streamen von Fotos, Videos und anderen Medien vom Smartphone verwenden"</string>
     <string name="change_setting" msgid="2047402388786162246">"Ändern"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Nicht ändern"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Berechtigungen"</string>

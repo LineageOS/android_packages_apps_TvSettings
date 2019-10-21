@@ -51,7 +51,7 @@
     <string name="help_and_feedback_category_title" msgid="6565641596360780888">"Ohje ja palaute"</string>
     <string name="add_account" msgid="4098060223200619258">"Lisää tili"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Poista tili"</string>
-    <string name="account_sync" msgid="773808124331714965">"Valitse synkronoitavat sovell."</string>
+    <string name="account_sync" msgid="773808124331714965">"Valitse synkronoitavat sovellukset"</string>
     <string name="sync_now" msgid="8732244492880016471">"Synkronoi nyt"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Synkronoidaan…"</string>
     <string name="last_synced" msgid="6178494892357077274">"Synkronoitu viimeksi <xliff:g id="TIME">%1$s</xliff:g>"</string>
@@ -88,8 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Järjestelmän äänet"</string>
     <string name="device_apps" msgid="1971794537385509294">"Sovellukset"</string>
     <string name="device_storage" msgid="5536683600091277826">"Tallentaminen"</string>
-    <!-- no translation found for device_reset (8260472343489104736) -->
-    <skip />
+    <string name="device_reset" msgid="8260472343489104736">"Tehdasasetusten palautus"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Varmuuskopiointi ja palautus"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Tehdasasetuksien palauttaminen"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrointi"</string>
@@ -525,9 +524,9 @@
     <string name="agree" msgid="1235622082275451350">"Hyväksyn"</string>
     <string name="disagree" msgid="9170636026862400981">"En hyväksy"</string>
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Tuntemattomat lähteet"</string>
-    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Salli muista lähteistä kuin Play Kaupasta tulevien sovelluksien asentaminen"</string>
+    <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Salli muualta kuin Play Kaupasta tulevien sovelluksien asentaminen"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Salli tuntemattomat lähteet"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Laitteesi ja henkilötietosi ovat alttiimpia tuntemattomista lähteistä tulevien sovelluksien kautta tapahtuville hyökkäyksille. Hyväksyt, että olet itse vastuussa mahdollisista laitteelle aiheutuvista vahingoista tai tietojen menetyksestä, joka voi johtua näiden sovelluksien käytöstä."</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Laitteesi ja henkilötietosi ovat alttiita tuntemattomien sovelluksien kautta tapahtuville hyökkäyksille. Hyväksyt, että olet itse vastuussa mahdollisista laitteelle aiheutuvista vahingoista tai tietojen menetyksestä, joka voi johtua näiden sovelluksien käytöstä."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Vahvista sovellukset"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Estä mahdollisesti haitallisten sovellusten asennus tai näytä varoitus ennen asennusta"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Ei koskaan"</string>
@@ -678,7 +677,7 @@
     <string name="device_daydreams_none" msgid="2767107052779579259">"Sammuta näyttö"</string>
     <string name="device_daydreams_select" msgid="2112338101206187695">"Näytönsäästäjä"</string>
     <string name="device_daydreams_test" msgid="9038920213402659591">"Aloita nyt"</string>
-    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Näytönsäästäjän käynnistäminen"</string>
+    <string name="device_daydreams_sleep" msgid="7676938708373592766">"Käynnistä näytönsäästäjä"</string>
     <string name="device_daydreams_sleep_description" msgid="7655223016581708511">"Näytönsäästäjä käynnistyy, kun laite on ollut käyttämättä valitsemasi ajan. Jos näytönsäästäjää ei ole valittuna, näyttö sammuu."</string>
     <string name="device_daydreams_sleep_summary" msgid="7361113408939289262">"Kun laite on käyttämättä <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_daydreams_screen_off" msgid="1765925964376076171">"Aseta laite virransäästötilaan"</string>
@@ -741,15 +740,15 @@
     <string name="permit_draw_overlay" msgid="2400084757761408906">"Salli näkyminen muiden päällä"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Anna sovelluksen näkyä muiden avoimien sovellusten päällä. Se voi häiritä muiden sovellusten käyttöä tai muuttaa niiden ulkoasua tai käyttäytymistä."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Muokkaa järjestelmäasetuksia"</string>
-    <string name="write_settings_title" msgid="8750406725746598710">"Voi muokata järjestelmäasetuksia"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Järjestelmäasetusten muokkaus"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"Tämä käyttöoikeus antaa sovelluksen muokata järjestelmäasetuksia."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"Kyllä"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"Ei"</string>
     <string name="picture_in_picture_title" msgid="7738692876349058">"Kuva kuvassa"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Salli kuva kuvassa"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Mikään asennettu sovellus ei tue kuva kuvassa ‑toimintoa."</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Anna sovelluksille lupa luoda kuva kuvassa ‑ikkuna, kun se on auki tai siirryt siitä muualle (esimerkiksi palaat videoon). Tämä ikkuna näytetään muiden sovellusten ikkunoiden päällä."</string>
-    <string name="special_access" msgid="3513811566600299998">"Sovelluksen erikoiskäyttö"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Anna sovelluksille lupa luoda Kuva kuvassa ‑ikkuna, kun sovellus on auki tai kun olet poistunut siitä (esimerkiksi takaisin katsomaan videota). Tämä ikkuna näytetään muiden sovellusten ikkunoiden päällä."</string>
+    <string name="special_access" msgid="3513811566600299998">"Erityisoikeudet"</string>
     <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="943824924394588129">"Ääni"</string>
     <string name="record_audio" msgid="101006980787931106">"Tallenna ääntä"</string>
