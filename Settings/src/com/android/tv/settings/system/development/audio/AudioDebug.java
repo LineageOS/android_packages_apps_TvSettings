@@ -140,6 +140,15 @@ public class AudioDebug {
         }
     }
 
+    /** Stops recording audio, and discards the recorded audio. */
+    public void cancelRecording() {
+        if (mAudioReader != null) {
+            mAudioReader.cancel();
+            mAudioReader = null;
+        }
+    }
+
+
     /** Plays the recorded audio. */
     public void playAudio() {
         if (mAudioTrack == null) {

@@ -42,6 +42,7 @@ public class AudioReader implements Runnable {
     private final int mMinBufferSize;
 
     private volatile boolean mActive = true;
+    private volatile boolean mCancelled = false;
 
     /** Interface for receiving recorded audio. */
     public interface Listener {
@@ -128,23 +129,32 @@ public class AudioReader implements Runnable {
             }
         }
 
-        Log.i(TAG,
-                String.format("Finished recording audio buffer with %d samples", samplesRecorded));
-
         mAudioRecord.release();
 
-        ShortBuffer audioBuffer = ShortBuffer.wrap(mBuffer, samplesRecorded,
-                mBuffer.length - samplesRecorded);
+        if (mCancelled) {
+            Log.i(TAG, "Cancelled audio recording");
+        } else {
+            Log.i(TAG,
+                    String.format("Recorded audio buffer with %d samples", samplesRecorded));
 
-        mListeners.forEach(l -> l.onAudioRecorded(audioBuffer));
+            ShortBuffer audioBuffer = ShortBuffer.wrap(mBuffer, samplesRecorded,
+                    mBuffer.length - samplesRecorded);
 
+            mListeners.forEach(l -> l.onAudioRecorded(audioBuffer));
+        }
     }
 
-
-    /** Stops audio recording. */
+    /** Stops audio recording, and sends recorded audio to listeners. */
     public void stop() {
         mActive = false;
     }
+
+    /** Stops audio recording, and discards the recorded audio. */
+    public void cancel() {
+        mCancelled = true;
+        mActive = false;
+    }
+
 
     private static long samplesToMs(int samples) {
         return Math.round((double) samples / AudioDebug.SAMPLE_RATE / AudioDebug.CHANNELS * 1000);
