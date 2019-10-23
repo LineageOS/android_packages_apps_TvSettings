@@ -19,9 +19,14 @@ package com.android.tv.settings.users;
 import android.app.Fragment;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
+import android.content.pm.UserInfo;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
 
 import com.android.tv.settings.dialog.PinDialogFragment;
+
+import java.util.function.Consumer;
 
 public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
 
@@ -96,7 +101,7 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
     }
 
     @Override
-    public void setPin(String pin, String originalPin) {
+    public void setPin(String pin, String originalPin, Consumer<Boolean> consumer) {
         Callback callback = null;
 
         Fragment f = getTargetFragment();
@@ -112,10 +117,12 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
             callback.saveLockPassword(pin, originalPin,
                     DevicePolicyManager.PASSWORD_QUALITY_NUMERIC);
         }
+
+        consumer.accept(true);
     }
 
     @Override
-    public void deletePin(String oldPin) {
+    public void deletePin(String oldPin, Consumer<Boolean> consumer) {
         Callback callback = null;
 
         Fragment f = getTargetFragment();
@@ -130,10 +137,36 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
         if (callback != null) {
             callback.clearLockPassword(oldPin);
         }
+
+        consumer.accept(true);
     }
 
     @Override
-    public boolean isPinCorrect(String pin) {
+    public void isPinCorrect(String pin, Consumer<Boolean> consumer) {
+        Callback callback = null;
+
+        Fragment f = getTargetFragment();
+        if (f instanceof Callback) {
+            callback = (Callback) f;
+        }
+
+        if (callback == null && getActivity() instanceof Callback) {
+            callback = (Callback) getActivity();
+        }
+
+        boolean isPinCorrect = false;
+        if (callback != null) {
+            UserInfo myUserInfo = UserManager.get(getActivity()).getUserInfo(UserHandle.myUserId());
+            // UserInfo.restrictedProfileParentId may not be set if the restricted profile was
+            // created on Android M devices.
+            isPinCorrect = myUserInfo != null && callback.checkPassword(pin);
+        }
+
+        consumer.accept(isPinCorrect);
+    }
+
+    @Override
+    public void isPinSet(Consumer<Boolean> consumer) {
         Callback callback = null;
 
         Fragment f = getTargetFragment();
@@ -146,26 +179,11 @@ public class RestrictedProfilePinDialogFragment extends PinDialogFragment {
         }
 
         if (callback != null) {
-            return callback.checkPassword(pin);
-        }
-        return false;
-    }
+            UserInfo myUserInfo = UserManager.get(getActivity()).getUserInfo(UserHandle.myUserId());
+            boolean isPinSet = (myUserInfo != null && myUserInfo.isRestricted())
+                    || callback.hasLockscreenSecurity();
 
-    @Override
-    public boolean isPinSet() {
-        Callback callback = null;
-
-        Fragment f = getTargetFragment();
-        if (f instanceof Callback) {
-            callback = (Callback) f;
-        }
-
-        if (callback == null && getActivity() instanceof Callback) {
-            callback = (Callback) getActivity();
-        }
-
-        if (callback != null) {
-            return callback.hasLockscreenSecurity();
+            consumer.accept(isPinSet);
         } else {
             throw new IllegalStateException("Can't call isPinSet when not attached");
         }

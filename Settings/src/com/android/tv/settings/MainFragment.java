@@ -525,8 +525,8 @@ public class MainFragment extends PreferenceControllerFragment implements
                 if (!TextUtils.isEmpty(summary)) {
                     connectedDevicesPreference.setSummary(summary);
                 }
+                return;
             }
-            return;
         }
         if (mBtAdapter == null || accessoryPreference == null) {
             return;

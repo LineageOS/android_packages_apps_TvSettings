@@ -384,30 +384,28 @@ public class SecurityFragment extends SettingsPreferenceFragment
 
     @Override
     public void pinFragmentDone(int requestCode, boolean success) {
+        if (!success) {
+            Log.d(TAG, "Request " + requestCode + " unsuccessful.");
+            return;
+        }
+
         switch (requestCode) {
             case PIN_MODE_CHOOSE_LOCKSCREEN:
-                if (success) {
-                    addRestrictedUser();
-                }
+                addRestrictedUser();
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT:
-                if (success) {
-                    mRestrictedProfile.exitUser();
-                    getActivity().finish();
-                }
+                mRestrictedProfile.exitUser();
+                getActivity().finish();
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_CHANGE_PASSWORD:
                 // do nothing
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_DELETE:
-                if (success) {
-                    mHandler.post(() -> {
-                        mRestrictedProfile.removeUser();
-                        UserSwitchListenerService.updateLaunchPoint(getActivity(), false);
-                        refresh();
-                    });
-
-                }
+                mHandler.post(() -> {
+                    mRestrictedProfile.removeUser();
+                    UserSwitchListenerService.updateLaunchPoint(getActivity(), false);
+                    refresh();
+                });
                 break;
         }
     }
