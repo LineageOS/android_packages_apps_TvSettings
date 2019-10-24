@@ -173,14 +173,4 @@ public class RestrictedProfileModel {
         }
         return false;
     }
-
-    /**
-     * @return {@code true} if the owner user has a PIN set to prevent access from the restricted
-     * profile.
-     */
-    public boolean hasLockscreenSecurity() {
-        final int userId = getOwnerUserId();
-        final LockPatternUtils lpu = new LockPatternUtils(mContext);
-        return lpu.isLockPasswordEnabled(userId) || lpu.isLockPatternEnabled(userId);
-    }
 }

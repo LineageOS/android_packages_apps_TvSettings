@@ -29,6 +29,9 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
 LOCAL_STATIC_JAVA_LIBRARIES := \
     androidx.annotation_annotation
 
+LOCAL_STATIC_JAVA_LIBRARIES := \
+    androidx.annotation_annotation
+
 LOCAL_USE_AAPT2 := true
 LOCAL_PACKAGE_NAME := TwoPanelSettingsOverlay
 LOCAL_PRIVATE_PLATFORM_APIS := true

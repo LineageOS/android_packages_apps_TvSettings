@@ -19,9 +19,7 @@ package com.android.tv.settings.dialog;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.app.Dialog;
-import android.app.Fragment;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
@@ -199,81 +197,6 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
         return v;
     }
 
-    @Override
-    public void onDismiss(DialogInterface dialog) {
-        super.onDismiss(dialog);
-        if (DEBUG) Log.d(TAG, "onDismiss: mRetCode=" + mRetCode);
-
-        boolean result = mRetCode == PIN_DIALOG_RESULT_SUCCESS;
-        Fragment f = getTargetFragment();
-        if (f instanceof ResultListener) {
-            ((ResultListener) f).pinFragmentDone(getTargetRequestCode(), result);
-        } else if (getActivity() instanceof ResultListener) {
-            final ResultListener listener = (ResultListener) getActivity();
-            listener.pinFragmentDone(getTargetRequestCode(), result);
-        }
-    }
-
-    public int getType() {
-        return mType;
-    }
-
-    private void dispatchOnIsPinSet(Boolean result, Bundle savedInstanceState, View v) {
-        mIsPinSet = result;
-        if (!mIsPinSet) {
-            // If PIN isn't set, user should set a PIN.
-            // Successfully setting a new set is considered as entering correct PIN.
-            mType = PIN_DIALOG_TYPE_NEW_PIN;
-        }
-
-        mEnterPinView.setVisibility(View.VISIBLE);
-        setDialogTitle();
-        setUpPinNumberPicker(savedInstanceState, v);
-    }
-
-    private void setDialogTitle() {
-        switch (mType) {
-            case PIN_DIALOG_TYPE_UNLOCK_CHANNEL:
-                mTitleView.setText(R.string.pin_enter_unlock_channel);
-                break;
-            case PIN_DIALOG_TYPE_UNLOCK_PROGRAM:
-                mTitleView.setText(R.string.pin_enter_unlock_program);
-                break;
-            case PIN_DIALOG_TYPE_ENTER_PIN:
-            case PIN_DIALOG_TYPE_DELETE_PIN:
-                mTitleView.setText(R.string.pin_enter_pin);
-                break;
-            case PIN_DIALOG_TYPE_NEW_PIN:
-                if (!mIsPinSet) {
-                    mTitleView.setText(R.string.pin_enter_new_pin);
-                } else {
-                    mTitleView.setText(R.string.pin_enter_old_pin);
-                    mType = PIN_DIALOG_TYPE_OLD_PIN;
-                }
-        }
-    }
-
-    private void setUpPinNumberPicker(Bundle savedInstanceState, View v) {
-        if (mType != PIN_DIALOG_TYPE_NEW_PIN) {
-            updateWrongPin();
-        }
-
-        mPickers = new PinNumberPicker[NUMBER_PICKERS_RES_ID.length];
-        for (int i = 0; i < NUMBER_PICKERS_RES_ID.length; i++) {
-            mPickers[i] = v.findViewById(NUMBER_PICKERS_RES_ID[i]);
-            mPickers[i].setValueRange(0, 9);
-            mPickers[i].setPinDialogFragment(this);
-            mPickers[i].updateFocus();
-        }
-        for (int i = 0; i < NUMBER_PICKERS_RES_ID.length - 1; i++) {
-            mPickers[i].setNextNumberPicker(mPickers[i + 1]);
-        }
-
-        if (savedInstanceState == null) {
-            mPickers[0].requestFocus();
-        }
-    }
-
     private void updateWrongPin() {
         if (getActivity() == null) {
             // The activity is already detached. No need to update.
@@ -360,8 +283,8 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
     }
 
     private void dispatchOnNewPinTyped(String pin) {
-        resetPinInput();
         if (mPrevPin == null) {
+            resetPinInput();
             mPrevPin = pin;
             mTitleView.setText(R.string.pin_enter_again);
         } else {
@@ -370,6 +293,7 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
                     exit(PIN_DIALOG_RESULT_SUCCESS);
                 });
             } else {
+                resetPinInput();
                 mTitleView.setText(R.string.pin_enter_new_pin);
                 mPrevPin = null;
                 showToast(R.string.pin_toast_not_match);
@@ -390,6 +314,66 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
                 }
             }
         });
+    }
+
+    public int getType() {
+        return mType;
+    }
+
+    private void dispatchOnIsPinSet(Boolean result, Bundle savedInstanceState, View v) {
+        mIsPinSet = result;
+        if (!mIsPinSet) {
+            // If PIN isn't set, user should set a PIN.
+            // Successfully setting a new set is considered as entering correct PIN.
+            mType = PIN_DIALOG_TYPE_NEW_PIN;
+        }
+
+        mEnterPinView.setVisibility(View.VISIBLE);
+        setDialogTitle();
+        setUpPinNumberPicker(savedInstanceState, v);
+    }
+
+    private void setDialogTitle() {
+        switch (mType) {
+            case PIN_DIALOG_TYPE_UNLOCK_CHANNEL:
+                mTitleView.setText(R.string.pin_enter_unlock_channel);
+                break;
+            case PIN_DIALOG_TYPE_UNLOCK_PROGRAM:
+                mTitleView.setText(R.string.pin_enter_unlock_program);
+                break;
+            case PIN_DIALOG_TYPE_ENTER_PIN:
+            case PIN_DIALOG_TYPE_DELETE_PIN:
+                mTitleView.setText(R.string.pin_enter_pin);
+                break;
+            case PIN_DIALOG_TYPE_NEW_PIN:
+                if (!mIsPinSet) {
+                    mTitleView.setText(R.string.pin_enter_new_pin);
+                } else {
+                    mTitleView.setText(R.string.pin_enter_old_pin);
+                    mType = PIN_DIALOG_TYPE_OLD_PIN;
+                }
+        }
+    }
+
+    private void setUpPinNumberPicker(Bundle savedInstanceState, View v) {
+        if (mType != PIN_DIALOG_TYPE_NEW_PIN) {
+            updateWrongPin();
+        }
+
+        mPickers = new PinNumberPicker[NUMBER_PICKERS_RES_ID.length];
+        for (int i = 0; i < NUMBER_PICKERS_RES_ID.length; i++) {
+            mPickers[i] = v.findViewById(NUMBER_PICKERS_RES_ID[i]);
+            mPickers[i].setValueRange(0, 9);
+            mPickers[i].setPinDialogFragment(this);
+            mPickers[i].updateFocus();
+        }
+        for (int i = 0; i < NUMBER_PICKERS_RES_ID.length - 1; i++) {
+            mPickers[i].setNextNumberPicker(mPickers[i + 1]);
+        }
+
+        if (savedInstanceState == null) {
+            mPickers[0].requestFocus();
+        }
     }
 
     private String getPinInput() {
