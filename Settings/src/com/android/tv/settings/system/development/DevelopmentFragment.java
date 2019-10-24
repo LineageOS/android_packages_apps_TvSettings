@@ -578,6 +578,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         if (mColorModePreference != null) {
             mColorModePreference.stopListening();
         }
+
+        mAudioDebug.cancelRecording();
     }
 
     @Override
