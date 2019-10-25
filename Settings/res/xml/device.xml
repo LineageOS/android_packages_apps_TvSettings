@@ -88,11 +88,6 @@
             android:action="com.google.android.settings.USAGE_AND_DIAGNOSTICS_SETTING"/>
     </Preference>
     <Preference
-        android:fragment="com.android.tv.settings.system.SecurityFragment"
-        android:icon="@drawable/ic_lock"
-        android:key="security"
-        android:title="@string/system_security"/>
-    <Preference
         android:fragment="com.android.tv.settings.accessibility.AccessibilityFragment"
         android:icon="@drawable/ic_accessibility_new"
         android:key="accessibility"
