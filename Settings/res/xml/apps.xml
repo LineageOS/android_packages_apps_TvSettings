@@ -45,4 +45,8 @@
             android:fragment="com.android.tv.settings.device.apps.specialaccess.SpecialAppAccess"/>
     </PreferenceCategory>
 
+    <Preference
+        android:fragment="com.android.tv.settings.system.SecurityFragment"
+        android:key="security"
+        android:title="@string/system_security"/>
 </PreferenceScreen>
