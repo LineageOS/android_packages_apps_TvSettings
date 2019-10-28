@@ -57,6 +57,7 @@ import com.android.tv.settings.users.RestrictedProfileModel;
 import com.android.tv.settings.users.RestrictedProfilePinDialogFragment;
 import com.android.tv.settings.users.RestrictedProfilePinStorage;
 import com.android.tv.settings.users.UserSwitchListenerService;
+import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -437,6 +438,9 @@ public class SecurityFragment extends SettingsPreferenceFragment
             final Fragment settingsFragment = getCallbackFragment();
             if (settingsFragment instanceof LeanbackSettingsFragment) {
                 ((LeanbackSettingsFragment) settingsFragment)
+                        .startPreferenceFragment(restrictionsFragment);
+            } else if (settingsFragment instanceof TwoPanelSettingsFragment) {
+                ((TwoPanelSettingsFragment) settingsFragment)
                         .startPreferenceFragment(restrictionsFragment);
             } else {
                 throw new IllegalStateException("Didn't find fragment of expected type: "
