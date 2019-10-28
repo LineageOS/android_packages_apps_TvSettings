@@ -615,8 +615,10 @@ public class MainFragment extends PreferenceControllerFragment implements
         ComponentName componentName = new ComponentName(
                 "com.android.settings.intelligence",
                 "com.android.settings.intelligence.suggestions.SuggestionService");
-        mSuggestionControllerMixin = new SuggestionControllerMixin(
-                                            context, this, getLifecycle(), componentName);
+        if (!isRestricted()) {
+            mSuggestionControllerMixin = new SuggestionControllerMixin(
+                    context, this, getLifecycle(), componentName);
+        }
     }
 
     @Override
