@@ -464,7 +464,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
         protected UserInfo doInBackground(Void... params) {
             UserInfo restrictedUserInfo = mUserManager.createProfileForUser(
                     mContext.getString(R.string.user_new_profile_name),
-                    UserInfo.FLAG_RESTRICTED, UserHandle.myUserId());
+                    UserManager.USER_TYPE_FULL_RESTRICTED, /* flags */ 0, UserHandle.myUserId());
             if (restrictedUserInfo == null) {
                 final UserInfo existingUserInfo = new RestrictedProfileModel(mContext).getUser();
                 if (existingUserInfo == null) {
