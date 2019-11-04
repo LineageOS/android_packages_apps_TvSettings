@@ -21,7 +21,6 @@ import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.util.Log;
 
-//import java.nio.ByteBuffer;
 import java.nio.ShortBuffer;
 import java.util.HashSet;
 import java.util.Set;
@@ -53,23 +52,26 @@ public class AudioReader implements Runnable {
     /**
      * @param metrics Object for storing metrics.
      */
-    public AudioReader(AudioMetrics metrics) {
+    public AudioReader(AudioMetrics metrics) throws AudioReaderException {
         this.mMetrics = metrics;
 
         mMinBufferSize =
                 AudioRecord.getMinBufferSize(AudioDebug.SAMPLE_RATE, AudioFormat.CHANNEL_IN_DEFAULT,
                         AudioDebug.ENCODING);
-
-        mAudioRecord =
-                new AudioRecord.Builder()
-                        .setAudioFormat(
-                                new AudioFormat.Builder()
-                                        .setSampleRate(AudioDebug.SAMPLE_RATE)
-                                        .setEncoding(AudioDebug.ENCODING)
-                                        .build())
-                        .setAudioSource(MediaRecorder.AudioSource.VOICE_RECOGNITION)
-                        .setBufferSizeInBytes(2 * mMinBufferSize)
-                        .build();
+        try {
+            mAudioRecord =
+                    new AudioRecord.Builder()
+                            .setAudioFormat(
+                                    new AudioFormat.Builder()
+                                            .setSampleRate(AudioDebug.SAMPLE_RATE)
+                                            .setEncoding(AudioDebug.ENCODING)
+                                            .build())
+                            .setAudioSource(MediaRecorder.AudioSource.VOICE_RECOGNITION)
+                            .setBufferSizeInBytes(2 * mMinBufferSize)
+                            .build();
+        } catch (UnsupportedOperationException | IllegalArgumentException e) {
+            throw new AudioReaderException(e);
+        }
 
         Log.i(TAG, String.format("Constructed AudioRecord with buffer size %d", BUFFER_SIZE));
 
