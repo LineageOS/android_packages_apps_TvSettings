@@ -305,7 +305,7 @@ public class MainFragmentTest {
         mMainFragment.mBtAdapter = mock(BluetoothAdapter.class);
         Set<BluetoothDevice> set = new HashSet<>();
         BluetoothDevice device = mock(BluetoothDevice.class);
-        doReturn("testDevice").when(device).getAliasName();
+        doReturn("testDevice").when(device).getAlias();
         set.add(device);
         doReturn(set).when(mMainFragment.mBtAdapter).getBondedDevices();
 
