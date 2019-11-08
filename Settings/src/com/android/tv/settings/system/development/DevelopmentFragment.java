@@ -72,6 +72,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.system.development.audio.AudioDebug;
 import com.android.tv.settings.system.development.audio.AudioMetrics;
+import com.android.tv.settings.system.development.audio.AudioReaderException;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -286,7 +287,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mContentResolver = getActivity().getContentResolver();
 
         mAudioDebug = new AudioDebug(getActivity(),
-                () -> onAudioTrackRecorded(),
+                (boolean successful) -> onAudioRecorded(successful),
                 (AudioMetrics.Data data) -> updateAudioRecordingMetrics(data));
 
         super.onCreate(icicle);
@@ -1230,18 +1231,31 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private void writeRecordAudioOptions() {
         if (mRecordAudio.isChecked()) {
-            mAudioDebug.startRecording();
+            try {
+                mAudioDebug.startRecording();
+            } catch (AudioReaderException e) {
+                mRecordAudio.setChecked(false);
+                Toast errorToast = Toast.makeText(getContext(),
+                        getString(R.string.show_audio_recording_start_failed), Toast.LENGTH_SHORT);
+                errorToast.show();
+                Log.e(TAG, "Unable to start recording audio from the microphone", e);
+            }
         } else {
             mAudioDebug.stopRecording();
         }
     }
 
-    /** Called when an audio track has been recorded. Updates UI component states. */
-    private void onAudioTrackRecorded() {
-        mPlayRecordedAudio.setVisible(true);
-        mSaveAudio.setVisible(true);
-
+    /** Called when audio recording is finished. Updates UI component states. */
+    private void onAudioRecorded(boolean successful) {
+        mPlayRecordedAudio.setVisible(successful);
+        mSaveAudio.setVisible(successful);
         mRecordAudio.setChecked(false);
+
+        if (!successful) {
+            Toast errorToast = Toast.makeText(getContext(),
+                    getString(R.string.show_audio_recording_failed), Toast.LENGTH_SHORT);
+            errorToast.show();
+        }
     }
 
     /** Updates displayed audio recording metrics */
