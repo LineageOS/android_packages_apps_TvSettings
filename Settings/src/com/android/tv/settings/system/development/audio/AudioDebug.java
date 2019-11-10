@@ -50,10 +50,10 @@ public class AudioDebug {
     @Nullable
     private AudioTrack mAudioTrack;
 
-    /** Interface for receiving a notification for each successful audio recording. */
+    /** Interface for receiving a notification when audio recording finishes. */
     public interface AudioRecordedCallback {
-        /** Callback for receiving a notification for each successful audio recording. */
-        void onAudioRecorded();
+        /** Callback for receiving a notification when audio recording finishes. */
+        void onAudioRecorded(boolean successful);
     }
 
     /**
@@ -70,7 +70,7 @@ public class AudioDebug {
     }
 
     /** Starts recording audio. */
-    public void startRecording() {
+    public void startRecording() throws AudioReaderException {
         if (mAudioReader != null) {
             mAudioReader.stop();
         }
@@ -102,18 +102,26 @@ public class AudioDebug {
         int numShorts = audioBuffer.position();
         int numBytes = numShorts * 2;
 
-        mAudioTrack =
-                new AudioTrack.Builder()
-                        .setAudioFormat(
-                                new AudioFormat.Builder()
-                                        .setSampleRate(SAMPLE_RATE)
-                                        .setChannelMask(AudioFormat.CHANNEL_OUT_MONO)
-                                        .setEncoding(ENCODING)
-                                        .build()
-                        )
-                        .setTransferMode(AudioTrack.MODE_STATIC)
-                        .setBufferSizeInBytes(numBytes)
-                        .build();
+        Handler mainHandler = new Handler(mContext.getMainLooper());
+
+        try {
+            mAudioTrack =
+                    new AudioTrack.Builder()
+                            .setAudioFormat(
+                                    new AudioFormat.Builder()
+                                            .setSampleRate(SAMPLE_RATE)
+                                            .setChannelMask(AudioFormat.CHANNEL_OUT_MONO)
+                                            .setEncoding(ENCODING)
+                                            .build()
+                            )
+                            .setTransferMode(AudioTrack.MODE_STATIC)
+                            .setBufferSizeInBytes(numBytes)
+                            .build();
+        } catch (UnsupportedOperationException | IllegalArgumentException e) {
+            Log.e(TAG, "Failed to create AudioTrack", e);
+            mainHandler.post(() -> mAudioRecordedCallback.onAudioRecorded(false));
+            return;
+        }
 
         Log.i(TAG, String.format("AudioTrack state: %d", mAudioTrack.getState()));
 
@@ -121,13 +129,12 @@ public class AudioDebug {
                 AudioTrack.WRITE_BLOCKING);
         if (writeStatus > 0) {
             Log.i(TAG, String.format("Wrote %d bytes to an AudioTrack", numBytes));
-
-            Handler mainHandler = new Handler(mContext.getMainLooper());
-            mainHandler.post(() -> mAudioRecordedCallback.onAudioRecorded());
+            mainHandler.post(() -> mAudioRecordedCallback.onAudioRecorded(true));
         } else if (writeStatus == 0) {
             Log.e(TAG, "Received empty audio buffer");
         } else {
-            Log.e(TAG, String.format("Error writing to AudioTrack: %d", writeStatus));
+            Log.e(TAG, String.format("Error calling AudioTrack.write(): %d", writeStatus));
+            mainHandler.post(() -> mAudioRecordedCallback.onAudioRecorded(false));
         }
     }
 

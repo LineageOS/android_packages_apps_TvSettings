@@ -33,7 +33,7 @@ public class AudioMetrics {
 
     private final UpdateMetricsCallback mCallback;
 
-    /** Contains mData to be exposed via the mCallback. */
+    /** Contains data to be exposed via the callback. */
     public static class Data {
 
         public Optional<Long> timeToStartReadMs = Optional.empty();
