@@ -282,6 +282,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".connectivity.DataSaverActivity"
+                  android:theme="@style/Theme.Settings.Transparent"
+                  android:configChanges="keyboard|keyboardHidden|navigation"
+                  android:excludeFromRecents="true"
+                  android:exported="true" >
+            <intent-filter>
+                <action android:name="android.settings.DATA_SAVER_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".system.SecurityActivity"
             android:theme="@style/Theme.Settings.Transparent"
