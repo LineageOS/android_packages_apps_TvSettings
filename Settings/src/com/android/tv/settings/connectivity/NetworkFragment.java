@@ -16,9 +16,8 @@
 
 package com.android.tv.settings.connectivity;
 
-import static com.android.tv.settings.connectivity.DataSaverActivity.EXTRA_DATA_SAVER;
-
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -66,6 +65,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private static final String KEY_ETHERNET_DHCP = "ethernet_dhcp";
     private static final String KEY_DATA_SAVER_SLICE = "data_saver_slice";
     private static final String KEY_DATA_ALERT_SLICE = "data_alert_slice";
+    private static final String ACTION_DATA_ALERT_SETTINGS = "android.settings.DATA_ALERT_SETTINGS";
     private static final int INITIAL_UPDATE_DELAY = 500;
 
     private ConnectivityListener mConnectivityListener;
@@ -155,15 +155,16 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 getContext(), ((SlicePreference) dataSaverSlicePref).getUri());
         boolean isDataAlertVisible = isConnected() && SliceUtils.isSliceProviderValid(
                 getContext(), ((SlicePreference) dataAlertSlicePref).getUri());
+
         dataSaverSlicePref.setVisible(isDataSaverVisible);
         dataAlertSlicePref.setVisible(isDataAlertVisible);
-        boolean shouldFocusOnDataSaverPref = getArguments().containsKey(EXTRA_DATA_SAVER)
-                ? getArguments().getBoolean(EXTRA_DATA_SAVER)
-                : false;
-        if (shouldFocusOnDataSaverPref) {
-            if (dataSaverSlicePref.isVisible()) {
+        Intent i = getActivity().getIntent();
+        if (i != null) {
+            if (i.getAction().equals(Settings.ACTION_DATA_SAVER_SETTINGS)
+                    && dataSaverSlicePref.isVisible()) {
                 scrollToPreference(dataSaverSlicePref);
-            } else if (dataAlertSlicePref.isVisible()) {
+            } else if (i.getAction().equals(ACTION_DATA_ALERT_SETTINGS)
+                    && dataAlertSlicePref.isVisible()) {
                 scrollToPreference(dataAlertSlicePref);
             }
         }
