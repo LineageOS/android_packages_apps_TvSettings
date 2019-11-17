@@ -16,7 +16,8 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/connectivity_network_category_title">
+                  xmlns:custom="http://schemas.android.com/apk/res-auto"
+                  android:title="@string/connectivity_network_category_title">
     <SwitchPreference
         android:key="wifi_enable"
         android:persistent="true"
@@ -40,6 +41,18 @@
                 android:targetPackage="com.android.tv.settings" />
 
         </Preference>
+        <com.android.tv.twopanelsettings.slices.SlicePreference
+            android:key="data_saver_slice"
+            android:title="@string/title_data_saver"
+            android:summary="@string/summary_data_saver"
+            android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+            custom:uri="content://com.google.android.apps.nbu.smartconnect.tv/datasaver"/>
+        <com.android.tv.twopanelsettings.slices.SlicePreference
+            android:key="data_alert_slice"
+            android:title="@string/title_data_alert"
+            android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+            custom:uri="content://com.google.android.apps.nbu.smartconnect.tv/dataalert"/>
+
         <SwitchPreference
             android:key="wifi_always_scan"
             android:persistent="true"

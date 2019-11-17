@@ -23,7 +23,6 @@ import android.bluetooth.BluetoothDevice;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
-import android.content.ContentProviderClient;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -32,7 +31,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.service.settings.suggestions.Suggestion;
 import android.telephony.SignalStrength;
@@ -56,6 +54,7 @@ import com.android.tv.settings.accounts.AccountsFragment;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
+import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 import java.util.ArrayList;
@@ -559,7 +558,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         // If a slice is available, use it to display the accounts settings, otherwise fall back to
         // use AccountsFragment.
         String uri = acccountsSlicePref.getUri();
-        if (isSliceProviderValid(uri)) {
+        if (SliceUtils.isSliceProviderValid(getContext(), uri)) {
             accountsPref.setVisible(false);
             acccountsSlicePref.setVisible(true);
         } else {
@@ -647,19 +646,5 @@ public class MainFragment extends PreferenceControllerFragment implements
         return getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)
                 ? true
                 : false;
-    }
-
-    private boolean isSliceProviderValid(String uri) {
-        if (uri == null) {
-            return false;
-        }
-        ContentProviderClient client =
-                getContext().getContentResolver().acquireContentProviderClient(Uri.parse(uri));
-        if (client != null) {
-            client.close();
-            return true;
-        } else {
-            return false;
-        }
     }
 }

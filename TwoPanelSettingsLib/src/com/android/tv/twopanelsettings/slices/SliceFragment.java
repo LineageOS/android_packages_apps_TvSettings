@@ -459,7 +459,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 : (TextView) view.findViewById(R.id.decor_subtitle);
         if (decorSubtitle != null) {
             if (TextUtils.isEmpty(subtitle)) {
-                decorSubtitle.setVisibility(View.INVISIBLE);
+                decorSubtitle.setVisibility(View.GONE);
             } else {
                 decorSubtitle.setVisibility(View.VISIBLE);
                 decorSubtitle.setText(subtitle);
