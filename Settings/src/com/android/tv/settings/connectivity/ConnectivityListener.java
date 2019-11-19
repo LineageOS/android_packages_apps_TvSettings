@@ -67,15 +67,10 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     private final BroadcastReceiver mNetworkReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
+            updateConnectivityStatus();
             if (mListener != null) {
                 mListener.onConnectivityChange();
             }
-        }
-    };
-    private final EthernetManager.Listener mEthernetListener = new EthernetManager.Listener() {
-        @Override
-        public void onAvailabilityChanged(String iface, boolean isAvailable) {
-            mListener.onConnectivityChange();
         }
     };
     private final PhoneStateListener mPhoneStateListener = new PhoneStateListener() {
@@ -107,6 +102,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         mEthernetManager = mContext.getSystemService(EthernetManager.class);
         mListener = listener;
         if (lifecycle != null) {
+            lifecycle.addObserver(this);
             mWifiTracker = new WifiTracker(context, this, lifecycle, true, true);
         } else {
             mWifiTracker = new WifiTracker(context, this, true, true);
@@ -136,9 +132,9 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
             networkIntentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
             networkIntentFilter.addAction(WifiManager.RSSI_CHANGED_ACTION);
             networkIntentFilter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION);
+            networkIntentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
 
             mContext.registerReceiver(mNetworkReceiver, networkIntentFilter);
-            mEthernetManager.addListener(mEthernetListener);
             final TelephonyManager telephonyManager = mContext
                     .getSystemService(TelephonyManager.class);
             if (telephonyManager != null) {
@@ -168,7 +164,6 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
             mStarted = false;
             mContext.unregisterReceiver(mNetworkReceiver);
             mWifiListener = null;
-            mEthernetManager.removeListener(mEthernetListener);
             final TelephonyManager telephonyManager = mContext
                     .getSystemService(TelephonyManager.class);
             if (telephonyManager != null) {
