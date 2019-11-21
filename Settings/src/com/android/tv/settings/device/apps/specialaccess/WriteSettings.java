@@ -88,6 +88,7 @@ public class WriteSettings extends ManageAppOp {
         mAppOpsManager.setMode(AppOpsManager.OP_WRITE_SETTINGS,
                 entry.info.uid, entry.info.packageName,
                 grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
+        updateAppList();
     }
 
     @NonNull
