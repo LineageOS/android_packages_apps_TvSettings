@@ -214,6 +214,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 newPrefs.add(preference);
             }
         }
+
         updatePreferenceScreen(preferenceScreen, newPrefs);
         if (mLastFocusedPreferenceKey != null) {
             scrollToPreference(mLastFocusedPreferenceKey);

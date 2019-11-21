@@ -22,7 +22,8 @@ import android.net.Uri;
 
 /** Utility class for slice **/
 public final class SliceUtils {
-
+    public static final String PATH_SLICE_FRAGMENT =
+            "com.android.tv.twopanelsettings.slices.SliceFragment";
     /**
      * Check if slice provider exists.
      */
