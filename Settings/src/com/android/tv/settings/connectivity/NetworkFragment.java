@@ -159,7 +159,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         dataSaverSlicePref.setVisible(isDataSaverVisible);
         dataAlertSlicePref.setVisible(isDataAlertVisible);
         Intent i = getActivity().getIntent();
-        if (i != null) {
+        if (i != null && i.getAction() != null) {
             if (i.getAction().equals(Settings.ACTION_DATA_SAVER_SETTINGS)
                     && dataSaverSlicePref.isVisible()) {
                 mHandler.post(() -> scrollToPreference(dataSaverSlicePref));
