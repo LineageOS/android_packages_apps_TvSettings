@@ -883,20 +883,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         if (Settings.Global.getInt(mContentResolver, Settings.Global.ADB_ENABLED, 0) == 0) {
             return false;
         }
-        if (Settings.Global.getInt(mContentResolver,
-                Settings.Global.PACKAGE_VERIFIER_ENABLE, 1) == 0) {
-            return false;
-        } else {
-            final PackageManager pm = getActivity().getPackageManager();
-            final Intent verification = new Intent(Intent.ACTION_PACKAGE_NEEDS_VERIFICATION);
-            verification.setType(PACKAGE_MIME_TYPE);
-            verification.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            final List<ResolveInfo> receivers = pm.queryBroadcastReceivers(verification, 0);
-            if (receivers.size() == 0) {
-                return false;
-            }
-        }
-        return true;
+        final PackageManager pm = getActivity().getPackageManager();
+        final Intent verification = new Intent(Intent.ACTION_PACKAGE_NEEDS_VERIFICATION);
+        verification.setType(PACKAGE_MIME_TYPE);
+        verification.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        final List<ResolveInfo> receivers = pm.queryBroadcastReceivers(verification, 0);
+        return !receivers.isEmpty();
     }
 
     private boolean showVerifierSetting() {
