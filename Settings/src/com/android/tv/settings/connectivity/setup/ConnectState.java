@@ -199,7 +199,6 @@ public class ConnectState implements State {
                         notifyListener(StateMachine.RESULT_BAD_AUTH);
                         break;
                     case WifiConfiguration.NetworkSelectionStatus.DISABLED_DHCP_FAILURE:
-                    case WifiConfiguration.NetworkSelectionStatus.DISABLED_DNS_FAILURE:
                         notifyListener(StateMachine.RESULT_UNKNOWN_ERROR);
                         break;
                     case WifiConfiguration.NetworkSelectionStatus.DISABLED_ASSOCIATION_REJECTION:
