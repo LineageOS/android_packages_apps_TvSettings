@@ -23,7 +23,6 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.IBinder;
@@ -46,25 +45,21 @@ public class UserSwitchListenerService extends Service {
     public static class BootReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(final Context context, Intent intent) {
-
             boolean isSystemUser = UserManager.get(context).isSystemUser();
-
             if (isSystemUser) {
                 context.startService(new Intent(context, UserSwitchListenerService.class));
+                int bootUserId = getBootUser(context);
                 if (DEBUG) {
                     Log.d(TAG, "boot completed, user is " + UserHandle.myUserId()
-                            + " boot user id: " + getBootUser(context));
+                            + " boot user id: " + bootUserId);
+                }
+                if (UserHandle.myUserId() != bootUserId) {
+                    switchUserNow(bootUserId);
                 }
             }
+            updateLaunchPoint(context, new RestrictedProfileModel(context).getUser() != null);
         }
     }
-
-    private BroadcastReceiver mUserUnlockedReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            switchToLastUser();
-        }
-    };
 
     public static void updateLaunchPoint(Context context, boolean enableLaunchPoint) {
         if (DEBUG) {
@@ -117,15 +112,11 @@ public class UserSwitchListenerService extends Service {
                     }, UserSwitchListenerService.class.getName());
         } catch (RemoteException e) {
         }
-
-        registerReceiver(mUserUnlockedReceiver, new IntentFilter(Intent.ACTION_USER_UNLOCKED));
-        switchToLastUser();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(mUserUnlockedReceiver);
     }
 
     @Override
@@ -136,17 +127,5 @@ public class UserSwitchListenerService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         return null;
-    }
-
-    private void switchToLastUser() {
-        if (!UserManager.get(this).isUserUnlocked()) return;
-
-        int bootUserId = getBootUser(this);
-        if (UserHandle.myUserId() != bootUserId) {
-            // reboot back into the last user
-            switchUserNow(bootUserId);
-        }
-
-        updateLaunchPoint(this, new RestrictedProfileModel(this).getUser() != null);
     }
 }
