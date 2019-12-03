@@ -91,6 +91,10 @@ public class SecurityFragment extends SettingsPreferenceFragment
     private static final String SAVESTATE_CREATING_RESTRICTED_PROFILE =
             "SecurityFragment.CREATING_RESTRICTED_PROFILE";
 
+    // Was Settings.Global.PACKAGE_VERIFIER_ENABLE
+    // TODO(b/144996777) Remove all references to this
+    private static final String PACKAGE_VERIFIER_ENABLE = "package_verifier_enable";
+
     @Retention(RetentionPolicy.SOURCE)
     @IntDef({PIN_MODE_CHOOSE_LOCKSCREEN,
             PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT,
@@ -333,12 +337,12 @@ public class SecurityFragment extends SettingsPreferenceFragment
 
     private boolean isVerifyAppsEnabled() {
         return Settings.Global.getInt(getContext().getContentResolver(),
-                Settings.Global.PACKAGE_VERIFIER_ENABLE, 1) > 0 && isVerifierInstalled();
+                PACKAGE_VERIFIER_ENABLE, 1) > 0 && isVerifierInstalled();
     }
 
     private void setVerifyAppsEnabled(boolean enable) {
         Settings.Global.putInt(getContext().getContentResolver(),
-                Settings.Global.PACKAGE_VERIFIER_ENABLE, enable ? 1 : 0);
+                PACKAGE_VERIFIER_ENABLE, enable ? 1 : 0);
     }
 
     private boolean isVerifierInstalled() {
