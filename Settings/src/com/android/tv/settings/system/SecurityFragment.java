@@ -23,8 +23,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.content.pm.UserInfo;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -35,7 +33,6 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -46,7 +43,6 @@ import androidx.leanback.preference.LeanbackSettingsFragment;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.TwoStatePreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
@@ -61,7 +57,6 @@ import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.util.List;
 
 /**
  * The security settings screen in Tv settings.
@@ -73,7 +68,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
     private static final String TAG = "SecurityFragment";
 
     private static final String KEY_UNKNOWN_SOURCES = "unknown_sources";
-    private static final String KEY_VERIFY_APPS = "verify_apps";
     private static final String KEY_RESTRICTED_PROFILE_GROUP = "restricted_profile_group";
     private static final String KEY_RESTRICTED_PROFILE_ENTER = "restricted_profile_enter";
     private static final String KEY_RESTRICTED_PROFILE_EXIT = "restricted_profile_exit";
@@ -81,8 +75,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
     private static final String KEY_RESTRICTED_PROFILE_PIN = "restricted_profile_pin";
     private static final String KEY_RESTRICTED_PROFILE_CREATE = "restricted_profile_create";
     private static final String KEY_RESTRICTED_PROFILE_DELETE = "restricted_profile_delete";
-
-    private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
 
     private static final String ACTION_RESTRICTED_PROFILE_CREATED =
             "SecurityFragment.RESTRICTED_PROFILE_CREATED";
@@ -103,7 +95,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
     private static final int PIN_MODE_RESTRICTED_PROFILE_DELETE = 4;
 
     private Preference mUnknownSourcesPref;
-    private TwoStatePreference mVerifyAppsPref;
     private PreferenceGroup mRestrictedProfileGroup;
     private Preference mRestrictedProfileEnterPref;
     private Preference mRestrictedProfileExitPref;
@@ -210,7 +201,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
         setPreferencesFromResource(R.xml.security, null);
 
         mUnknownSourcesPref = findPreference(KEY_UNKNOWN_SOURCES);
-        mVerifyAppsPref = (TwoStatePreference) findPreference(KEY_VERIFY_APPS);
         mRestrictedProfileGroup = (PreferenceGroup) findPreference(KEY_RESTRICTED_PROFILE_GROUP);
         mRestrictedProfileEnterPref = findPreference(KEY_RESTRICTED_PROFILE_ENTER);
         mRestrictedProfileExitPref = findPreference(KEY_RESTRICTED_PROFILE_EXIT);
@@ -224,7 +214,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
         if (mRestrictedProfile.isCurrentUser()) {
             // We are in restricted profile
             mUnknownSourcesPref.setVisible(false);
-            mVerifyAppsPref.setVisible(false);
 
             mRestrictedProfileGroup.setVisible(true);
             mRestrictedProfileEnterPref.setVisible(false);
@@ -236,7 +225,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
         } else if (mRestrictedProfile.getUser() != null) {
             // Not in restricted profile, but it exists
             mUnknownSourcesPref.setVisible(true);
-            mVerifyAppsPref.setVisible(shouldShowVerifierSetting());
 
             mRestrictedProfileGroup.setVisible(true);
             mRestrictedProfileEnterPref.setVisible(true);
@@ -251,7 +239,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
         } else if (UserManager.supportsMultipleUsers()) {
             // Not in restricted profile, and it doesn't exist
             mUnknownSourcesPref.setVisible(true);
-            mVerifyAppsPref.setVisible(shouldShowVerifierSetting());
 
             mRestrictedProfileGroup.setVisible(true);
             mRestrictedProfileEnterPref.setVisible(false);
@@ -263,7 +250,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
         } else {
             // Not in restricted profile, and can't create one either
             mUnknownSourcesPref.setVisible(true);
-            mVerifyAppsPref.setVisible(shouldShowVerifierSetting());
 
             mRestrictedProfileGroup.setVisible(false);
             mRestrictedProfileEnterPref.setVisible(false);
@@ -277,8 +263,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
         mRestrictedProfileCreatePref.setEnabled(sCreateRestrictedProfileTask == null);
 
         mUnknownSourcesPref.setEnabled(!isUnknownSourcesBlocked());
-        mVerifyAppsPref.setChecked(isVerifyAppsEnabled());
-        mVerifyAppsPref.setEnabled(isVerifierInstalled());
     }
 
     @Override
@@ -288,9 +272,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
             return super.onPreferenceTreeClick(preference);
         }
         switch (key) {
-            case KEY_VERIFY_APPS:
-                setVerifyAppsEnabled(mVerifyAppsPref.isChecked());
-                return true;
             case KEY_RESTRICTED_PROFILE_ENTER:
                 if (mRestrictedProfile.enterUser()) {
                     getActivity().finish();
@@ -329,30 +310,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
     private boolean isUnknownSourcesBlocked() {
         final UserManager um = (UserManager) getContext().getSystemService(Context.USER_SERVICE);
         return um.hasUserRestriction(UserManager.DISALLOW_INSTALL_UNKNOWN_SOURCES);
-    }
-
-    private boolean isVerifyAppsEnabled() {
-        return Settings.Global.getInt(getContext().getContentResolver(),
-                Settings.Global.PACKAGE_VERIFIER_ENABLE, 1) > 0 && isVerifierInstalled();
-    }
-
-    private void setVerifyAppsEnabled(boolean enable) {
-        Settings.Global.putInt(getContext().getContentResolver(),
-                Settings.Global.PACKAGE_VERIFIER_ENABLE, enable ? 1 : 0);
-    }
-
-    private boolean isVerifierInstalled() {
-        final PackageManager pm = getContext().getPackageManager();
-        final Intent verification = new Intent(Intent.ACTION_PACKAGE_NEEDS_VERIFICATION);
-        verification.setType(PACKAGE_MIME_TYPE);
-        verification.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        final List<ResolveInfo> receivers = pm.queryBroadcastReceivers(verification, 0);
-        return receivers.size() > 0;
-    }
-
-    private boolean shouldShowVerifierSetting() {
-        return Settings.Global.getInt(getContext().getContentResolver(),
-                Settings.Global.PACKAGE_VERIFIER_SETTING_VISIBLE, 1) > 0;
     }
 
     private void launchPinDialog(@PinMode int pinMode) {
