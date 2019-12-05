@@ -122,9 +122,8 @@ public class PictureInPicture extends SettingsPreferenceFragment
                     (Boolean) newValue ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
             return true;
         });
-        switchPref.setSummary((Boolean) entry.extraInfo
-                ? R.string.app_permission_summary_allowed
-                : R.string.app_permission_summary_not_allowed);
+        switchPref.setSummaryOn(R.string.app_permission_summary_allowed);
+        switchPref.setSummaryOff(R.string.app_permission_summary_not_allowed);
         return switchPref;
     }
 
