@@ -16,9 +16,11 @@
 
 package com.android.tv.settings.connectivity.setup;
 
+import android.annotation.Nullable;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
@@ -107,6 +109,7 @@ public class ConnectState implements State {
         @VisibleForTesting
         Handler mHandler;
         private ConnectivityListener mConnectivityListener;
+        private ConnectivityManager mConnectivityManager;
 
         /**
          * Obtain a new instance of ConnectToWifiFragment.
@@ -129,6 +132,9 @@ public class ConnectState implements State {
             super.onCreate(icicle);
             mConnectivityListener = new ConnectivityListener(getActivity(), null);
             mConnectivityListener.start();
+            mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(
+                    Context.CONNECTIVITY_SERVICE);
+
             UserChoiceInfo userChoiceInfo = ViewModelProviders
                     .of(getActivity()).get(UserChoiceInfo.class);
             mWifiConfiguration = userChoiceInfo.getWifiConfiguration();
@@ -173,7 +179,7 @@ public class ConnectState implements State {
         public void onWifiListChanged() {
             List<AccessPoint> accessPointList = mConnectivityListener.getAvailableNetworks();
             if (accessPointList != null) {
-                for (AccessPoint accessPoint: accessPointList) {
+                for (AccessPoint accessPoint : accessPointList) {
                     if (accessPoint != null && AccessPoint.convertToQuotedString(
                             accessPoint.getSsidStr()).equals(mWifiConfiguration.SSID)) {
                         inferConnectionStatus(accessPoint);
@@ -188,12 +194,19 @@ public class ConnectState implements State {
                 return;
             }
             if (configuration.getNetworkSelectionStatus().isNetworkEnabled()) {
-                if (isNetworkConnected()) {
-                    notifyListener(StateMachine.RESULT_SUCCESS);
+                NetworkCapabilities wifiNetworkCapabilities = getActiveWifiNetworkCapabilities();
+                if (wifiNetworkCapabilities != null) {
+                    if (wifiNetworkCapabilities.hasCapability(
+                            NetworkCapabilities.NET_CAPABILITY_VALIDATED)) {
+                        notifyListener(StateMachine.RESULT_SUCCESS);
+                    } else if (wifiNetworkCapabilities.hasCapability(
+                            NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL)) {
+                        notifyListener(StateMachine.RESULT_CAPTIVE_PORTAL);
+                    }
                 }
             } else {
                 switch (configuration.getNetworkSelectionStatus()
-                            .getNetworkSelectionDisableReason()) {
+                        .getNetworkSelectionDisableReason()) {
                     case WifiConfiguration.NetworkSelectionStatus.DISABLED_AUTHENTICATION_FAILURE:
                     case WifiConfiguration.NetworkSelectionStatus.DISABLED_BY_WRONG_PASSWORD:
                         notifyListener(StateMachine.RESULT_BAD_AUTH);
@@ -215,12 +228,25 @@ public class ConnectState implements State {
             }
         }
 
-        private NetworkInfo getActiveWifiNetworkInfo() {
-            ConnectivityManager connMan = getActivity().getSystemService(ConnectivityManager.class);
-            Network[] networks = connMan.getAllNetworks();
+        @Nullable
+        private NetworkCapabilities getActiveWifiNetworkCapabilities() {
+            Network[] networks = mConnectivityManager.getAllNetworks();
 
             for (Network network : networks) {
-                NetworkInfo networkInfo = connMan.getNetworkInfo(network);
+                NetworkInfo networkInfo = mConnectivityManager.getNetworkInfo(network);
+                if (networkInfo.isConnected()
+                        && networkInfo.getType() == ConnectivityManager.TYPE_WIFI) {
+                    return mConnectivityManager.getNetworkCapabilities(network);
+                }
+            }
+            return null;
+        }
+
+        private NetworkInfo getActiveWifiNetworkInfo() {
+            Network[] networks = mConnectivityManager.getAllNetworks();
+
+            for (Network network : networks) {
+                NetworkInfo networkInfo = mConnectivityManager.getNetworkInfo(network);
                 if (networkInfo.isConnected()
                         && networkInfo.getType() == ConnectivityManager.TYPE_WIFI) {
                     return networkInfo;

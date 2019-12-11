@@ -30,6 +30,7 @@ import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.AddStartState;
 import com.android.tv.settings.connectivity.setup.AdvancedWifiOptionsFlow;
+import com.android.tv.settings.connectivity.setup.CaptivePortalWaitingState;
 import com.android.tv.settings.connectivity.setup.ConnectAuthFailureState;
 import com.android.tv.settings.connectivity.setup.ConnectFailedState;
 import com.android.tv.settings.connectivity.setup.ConnectRejectedByApState;
@@ -88,6 +89,7 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
     private State mOptionsOrConnectState;
     private State mAddStartState;
     private State mFinishState;
+    private State mCaptivePortalWaitingState;
 
     private final StateMachine.Callback mStateMachineCallback = new StateMachine.Callback() {
         @Override
@@ -114,6 +116,7 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
         mOptionsOrConnectState = new OptionsOrConnectState(this);
         mAddStartState = new AddStartState(this);
         mFinishState = new FinishState(this);
+        mCaptivePortalWaitingState = new CaptivePortalWaitingState(this);
 
         /* KnownNetwork */
         mStateMachine.addState(
@@ -168,6 +171,10 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
                 mConnectState,
                 StateMachine.RESULT_SUCCESS,
                 mSuccessState);
+        mStateMachine.addState(
+                mConnectState,
+                StateMachine.RESULT_CAPTIVE_PORTAL,
+                mCaptivePortalWaitingState);
 
         /* Connect Failed */
         mStateMachine.addState(
