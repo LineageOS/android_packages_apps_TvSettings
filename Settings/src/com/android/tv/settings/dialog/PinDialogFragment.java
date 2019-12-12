@@ -115,6 +115,7 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
     private int mWrongPinCount;
     private long mDisablePinUntil;
     private boolean mIsPinSet;
+    private boolean mIsDispatched;
 
     private final Handler mHandler = new Handler();
 
@@ -221,6 +222,7 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
 
     private void exit(int retCode) {
         mRetCode = retCode;
+        mIsDispatched = false;
         dismiss();
     }
 
@@ -240,6 +242,11 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
 
     private void done(String pin) {
         if (DEBUG) Log.d(TAG, "done: mType=" + mType + " pin=" + pin);
+        if (mIsDispatched) {
+            // avoid re-triggering any of the dispatch methods if the user
+            // double clicks in the pin dialog
+            return;
+        }
         switch (mType) {
             case PIN_DIALOG_TYPE_UNLOCK_CHANNEL:
             case PIN_DIALOG_TYPE_UNLOCK_PROGRAM:
@@ -272,6 +279,7 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
     private void dispatchOnDeletePin(String pin) {
         isPinCorrect(pin, pinIsCorrect -> {
             if (pinIsCorrect) {
+                mIsDispatched = true;
                 deletePin(pin, success -> {
                     exit(success ? PIN_DIALOG_RESULT_SUCCESS : PIN_DIALOG_RESULT_FAIL);
                 });
@@ -289,6 +297,7 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
             mTitleView.setText(R.string.pin_enter_again);
         } else {
             if (pin.equals(mPrevPin)) {
+                mIsDispatched = true;
                 setPin(pin, mOriginalPin, success -> {
                     exit(PIN_DIALOG_RESULT_SUCCESS);
                 });
