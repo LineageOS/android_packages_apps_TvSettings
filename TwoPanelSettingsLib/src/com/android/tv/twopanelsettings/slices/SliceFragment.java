@@ -278,6 +278,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                         oldPref.setTitle(newPref.getTitle());
                         oldPref.setSummary(newPref.getSummary());
                         oldPref.setEnabled(newPref.isEnabled());
+                        oldPref.setSelectable(newPref.isSelectable());
                         if ((oldPref instanceof TwoStatePreference)
                                 && (newPref instanceof TwoStatePreference)) {
                             ((TwoStatePreference) oldPref)

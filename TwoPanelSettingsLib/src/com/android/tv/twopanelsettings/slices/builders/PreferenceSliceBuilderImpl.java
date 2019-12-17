@@ -79,6 +79,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     public static final String SUBTYPE_FOLLOWUP_INTENT = "SUBTYPE_FOLLOWUP_INTENT";
     public static final String SUBTYPE_BUTTON_STYLE = "SUBTYPE_BUTTON_STYLE";
     public static final String SUBTYPE_IS_ENABLED = "SUBTYPE_IS_ENABLED";
+    public static final String SUBTYPE_IS_SELECTABLE = "SUBTYPE_IS_SELECTABLE";
     public static final String SUBTYPE_INFO_PREFERENCE = "SUBTYPE_INFO_PREFERENCE";
 
     /**
@@ -212,6 +213,8 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         private SliceItem mIconNeedsToBeProcessedItem;
         private SliceItem mButtonStyleItem;
         private SliceItem mIsEnabledItem;
+        private SliceItem mIsSelectableItem;
+
         /**
          *
          */
@@ -276,6 +279,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             }
             setButtonStyle(builder.getButtonStyle());
             setEnabled(builder.isEnabled());
+            setSelectable(builder.isSelectable());
             List<Object> endItems = builder.getEndItems();
             List<Integer> endTypes = builder.getEndTypes();
             List<Boolean> endLoads = builder.getEndLoads();
@@ -413,6 +417,11 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
                     enabled ? 1 : 0, FORMAT_INT, SUBTYPE_IS_ENABLED, new String[]{});
         }
 
+        public void setSelectable(boolean selectable) {
+            mIsSelectableItem = new SliceItem(
+                    selectable ? 1 : 0, FORMAT_INT, SUBTYPE_IS_SELECTABLE, new String[]{});
+        }
+
         public void setKey(CharSequence key) {
             mKeyItem = new SliceItem(key, FORMAT_TEXT, TAG_KEY, new String[] {HINT_KEYWORDS});
         }
@@ -517,6 +526,9 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             }
             if (mIsEnabledItem != null) {
                 b.addItem(mIsEnabledItem);
+            }
+            if (mIsSelectableItem != null) {
+                b.addItem(mIsSelectableItem);
             }
             for (int i = 0; i < mEndItems.size(); i++) {
                 Slice item = mEndItems.get(i);

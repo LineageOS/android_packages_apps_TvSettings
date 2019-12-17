@@ -38,6 +38,7 @@ public final class SlicesConstants {
             "SUBTYPE_ICON_NEED_TO_BE_PROCESSED";
     public static final String SUBTYPE_BUTTON_STYLE = "SUBTYPE_BUTTON_STYLE";
     public static final String SUBTYPE_IS_ENABLED = "SUBTYPE_IS_ENABLED";
+    public static final String SUBTYPE_IS_SELECTABLE = "SUBTYPE_IS_SELECTABLE";
     public static final String SUBTYPE_INFO_PREFERENCE = "SUBTYPE_INFO_PREFERENCE";
     public static final String PATH_STATUS = "status";
     public static final String PARAMETER_DIRECTION = "direction";

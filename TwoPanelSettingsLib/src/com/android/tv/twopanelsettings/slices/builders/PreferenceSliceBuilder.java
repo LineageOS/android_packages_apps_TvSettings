@@ -191,6 +191,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private boolean mIconNeedsToBeProcessed;
         private @BUTTONSTYLE int mButtonStyle;
         private boolean mEnabled;
+        private boolean mSelectable;
 
         public static final int TYPE_ICON = 1;
         public static final int TYPE_ACTION = 2;
@@ -200,6 +201,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
          */
         public RowBuilder() {
             mEnabled = true;
+            mSelectable = true;
             mUri = null;
         }
 
@@ -210,6 +212,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
          */
         public RowBuilder(Uri uri) {
             mEnabled = true;
+            mSelectable = true;
             mUri = uri;
         }
 
@@ -615,6 +618,16 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         }
 
         /**
+         * Set whether this item is selectable.
+         * @param selectable
+         */
+        @NonNull
+        public RowBuilder setSelectable(boolean selectable) {
+            mSelectable = selectable;
+            return this;
+        }
+
+        /**
          *
          */
         public boolean iconNeedsToBeProcessed() {
@@ -658,6 +671,10 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         public boolean isEnabled() {
             return mEnabled;
+        }
+
+        public boolean isSelectable() {
+            return mSelectable;
         }
 
         public boolean isTitleItemLoading() {
