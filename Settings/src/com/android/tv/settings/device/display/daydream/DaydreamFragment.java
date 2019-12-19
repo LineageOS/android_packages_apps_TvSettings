@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.device.display.daydream;
 
-import static android.provider.Settings.Secure.SLEEP_TIMEOUT;
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 
 import android.content.BroadcastReceiver;
@@ -54,14 +53,12 @@ public class DaydreamFragment extends SettingsPreferenceFragment
 
     private static final String KEY_ACTIVE_DREAM = "activeDream";
     private static final String KEY_DREAM_TIME = "dreamTime";
-    private static final String KEY_SLEEP_TIME = "sleepTime";
     private static final String KEY_DREAM_NOW = "dreamNow";
 
     private static final String DREAM_COMPONENT_NONE = "NONE";
     private static final String PACKAGE_SCHEME = "package";
 
     private static final int DEFAULT_DREAM_TIME_MS = (int) (30 * DateUtils.MINUTE_IN_MILLIS);
-    private static final int DEFAULT_SLEEP_TIME_MS = (int) (3 * DateUtils.HOUR_IN_MILLIS);
 
     private final PackageReceiver mPackageReceiver = new PackageReceiver();
 
@@ -112,10 +109,6 @@ public class DaydreamFragment extends SettingsPreferenceFragment
         dreamTimePref.setValue(Integer.toString(getDreamTime()));
         dreamTimePref.setOnPreferenceChangeListener(this);
 
-        final ListPreference sleepTimePref = (ListPreference) findPreference(KEY_SLEEP_TIME);
-        sleepTimePref.setValue(Integer.toString(getSleepTime()));
-        sleepTimePref.setOnPreferenceChangeListener(this);
-
         final Preference dreamNowPref = findPreference(KEY_DREAM_NOW);
         dreamNowPref.setEnabled(mBackend.isEnabled());
     }
@@ -156,9 +149,6 @@ public class DaydreamFragment extends SettingsPreferenceFragment
             case KEY_DREAM_TIME:
                 setDreamTime(Integer.parseInt((String) newValue));
                 break;
-            case KEY_SLEEP_TIME:
-                setSleepTime(Integer.parseInt((String) newValue));
-                break;
         }
         return true;
     }
@@ -193,15 +183,6 @@ public class DaydreamFragment extends SettingsPreferenceFragment
 
     }
 
-    private int getSleepTime() {
-        return Settings.Secure.getInt(getActivity().getContentResolver(), SLEEP_TIMEOUT,
-                DEFAULT_SLEEP_TIME_MS);
-    }
-
-    private void setSleepTime(int ms) {
-        Settings.Secure.putInt(getActivity().getContentResolver(), SLEEP_TIMEOUT, ms);
-    }
-
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         switch (preference.getKey()) {
@@ -229,11 +210,6 @@ public class DaydreamFragment extends SettingsPreferenceFragment
             dreamTimePref.setValue(Integer.toString(getDreamTime()));
         }
 
-        final ListPreference sleepTimePref = (ListPreference) findPreference(KEY_SLEEP_TIME);
-        if (sleepTimePref != null) {
-            sleepTimePref.setValue(Integer.toString(getSleepTime()));
-        }
-
         final Preference dreamNowPref = findPreference(KEY_DREAM_NOW);
         if (dreamNowPref != null) {
             dreamNowPref.setEnabled(mBackend.isEnabled());
@@ -251,5 +227,4 @@ public class DaydreamFragment extends SettingsPreferenceFragment
             refreshFromBackend();
         }
     }
-
 }

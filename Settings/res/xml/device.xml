@@ -71,6 +71,11 @@
         android:key="daydream"
         android:title="@string/device_daydream"/>
     <Preference
+        android:fragment="com.android.tv.settings.device.display.daydream.EnergySaverFragment"
+        android:icon="@drawable/ic_settings_system_daydream"
+        android:key="energysaver"
+        android:title="@string/device_energy_saver"/>
+    <Preference
         android:fragment="com.android.tv.settings.system.development.DevelopmentFragment"
         android:icon="@drawable/ic_settings_developeroptions"
         android:key="developer"
