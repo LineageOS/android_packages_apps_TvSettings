@@ -20,8 +20,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
+import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -69,6 +71,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private static final int INITIAL_UPDATE_DELAY = 500;
 
     private ConnectivityListener mConnectivityListener;
+    private WifiManager mWifiManager;
+    private ConnectivityManager mConnectivityManager;
     private AccessPointPreference.UserBadgeCache mUserBadgeCache;
 
     private TwoStatePreference mEnableWifiPref;
@@ -102,6 +106,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mIsWifiHardwarePresent = getContext().getPackageManager()
                 .hasSystemFeature(PackageManager.FEATURE_WIFI);
         mConnectivityListener = new ConnectivityListener(getContext(), this, getLifecycle());
+        mWifiManager = getContext().getSystemService(WifiManager.class);
+        mConnectivityManager = getContext().getSystemService(ConnectivityManager.class);
         mUserBadgeCache =
                 new AccessPointPreference.UserBadgeCache(getContext().getPackageManager());
         super.onCreate(savedInstanceState);
@@ -212,9 +218,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     }
 
     private boolean isConnected() {
-        ConnectivityManager connectivityManager =
-                (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        NetworkInfo activeNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
@@ -287,6 +291,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         final Context themedContext = getPreferenceManager().getContext();
         final Collection<AccessPoint> accessPoints = mConnectivityListener.getAvailableNetworks();
         int index = 0;
+
         for (final AccessPoint accessPoint : accessPoints) {
             accessPoint.setListener(this);
             AccessPointPreference pref = (AccessPointPreference) accessPoint.getTag();
@@ -297,7 +302,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             } else {
                 toRemove.remove(pref);
             }
-            if (accessPoint.isActive()) {
+            if (accessPoint.isActive() && !isCaptivePortal(accessPoint)) {
                 pref.setFragment(WifiDetailsFragment.class.getName());
                 WifiDetailsFragment.prepareArgs(pref.getExtras(), accessPoint);
                 pref.setIntent(null);
@@ -315,6 +320,15 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         }
 
         mCollapsePref.setVisible(mWifiNetworksCategory.shouldShowCollapsePref());
+    }
+
+    private boolean isCaptivePortal(AccessPoint accessPoint) {
+        if (accessPoint.getDetailedState() != NetworkInfo.DetailedState.CONNECTED) {
+            return false;
+        }
+        NetworkCapabilities nc = mConnectivityManager.getNetworkCapabilities(
+                mWifiManager.getCurrentNetwork());
+        return nc != null && nc.hasCapability(NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL);
     }
 
     @Override
