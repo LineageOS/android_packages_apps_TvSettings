@@ -65,6 +65,7 @@ public class StateMachine extends ViewModel {
     public static final int ADVANCED_FLOW_COMPLETE = 23;
     public static final int ENTER_ADVANCED_FLOW = 24;
     public static final int EXIT_ADVANCED_FLOW = 25;
+    public static final int RESULT_CAPTIVE_PORTAL = 26;
     @IntDef({
             ADD_START,
             CANCEL,
@@ -91,7 +92,8 @@ public class StateMachine extends ViewModel {
             PROXY_SETTINGS_INVALID,
             ADVANCED_FLOW_COMPLETE,
             ENTER_ADVANCED_FLOW,
-            EXIT_ADVANCED_FLOW})
+            EXIT_ADVANCED_FLOW,
+            RESULT_CAPTIVE_PORTAL})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Event {
     }
