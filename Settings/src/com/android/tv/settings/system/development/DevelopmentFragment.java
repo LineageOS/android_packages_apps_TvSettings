@@ -1340,7 +1340,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             int index = 0;
             long functions = manager.getCurrentFunctions();
             for (int i = 0; i < titles.length; i++) {
-                if ((functions | UsbManager.usbFunctionsFromString(values[i])) != 0) {
+                if ((functions & UsbManager.usbFunctionsFromString(values[i])) != 0) {
                     index = i;
                     break;
                 }
@@ -1352,7 +1352,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     }
 
     private void writeUsbConfigurationOption(Object newValue) {
-        UsbManager manager = (UsbManager)getActivity().getSystemService(Context.USB_SERVICE);
+        UsbManager manager = (UsbManager) getActivity().getSystemService(Context.USB_SERVICE);
         String function = newValue.toString();
         manager.setCurrentFunctions(UsbManager.usbFunctionsFromString(function));
     }
