@@ -66,6 +66,7 @@ public class StateMachine extends ViewModel {
     public static final int ENTER_ADVANCED_FLOW = 24;
     public static final int EXIT_ADVANCED_FLOW = 25;
     public static final int RESULT_CAPTIVE_PORTAL = 26;
+    public static final int RESTART = 27;
     @IntDef({
             ADD_START,
             CANCEL,

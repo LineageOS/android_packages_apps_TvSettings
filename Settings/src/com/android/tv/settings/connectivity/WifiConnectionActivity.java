@@ -31,11 +31,8 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.AddStartState;
 import com.android.tv.settings.connectivity.setup.AdvancedWifiOptionsFlow;
 import com.android.tv.settings.connectivity.setup.CaptivePortalWaitingState;
-import com.android.tv.settings.connectivity.setup.ConnectAuthFailureState;
 import com.android.tv.settings.connectivity.setup.ConnectFailedState;
-import com.android.tv.settings.connectivity.setup.ConnectRejectedByApState;
 import com.android.tv.settings.connectivity.setup.ConnectState;
-import com.android.tv.settings.connectivity.setup.ConnectTimeOutState;
 import com.android.tv.settings.connectivity.setup.EnterPasswordState;
 import com.android.tv.settings.connectivity.setup.KnownNetworkState;
 import com.android.tv.settings.connectivity.setup.OptionsOrConnectState;
@@ -78,11 +75,8 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
     private WifiConfiguration mConfiguration;
     private int mWifiSecurity;
     private StateMachine mStateMachine;
-    private State mConnectAuthFailureState;
-    private State mConnectFailedState;
-    private State mConnectRejectedByApState;
+    private State mConnectFailureState;
     private State mConnectState;
-    private State mConnectTimeOutState;
     private State mEnterPasswordState;
     private State mKnownNetworkState;
     private State mSuccessState;
@@ -108,10 +102,7 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
         mKnownNetworkState = new KnownNetworkState(this);
         mEnterPasswordState = new EnterPasswordState(this);
         mConnectState = new ConnectState(this);
-        mConnectTimeOutState = new ConnectTimeOutState(this);
-        mConnectRejectedByApState = new ConnectRejectedByApState(this);
-        mConnectFailedState = new ConnectFailedState(this);
-        mConnectAuthFailureState = new ConnectAuthFailureState(this);
+        mConnectFailureState = new ConnectFailedState(this);
         mSuccessState = new SuccessState(this);
         mOptionsOrConnectState = new OptionsOrConnectState(this);
         mAddStartState = new AddStartState(this);
@@ -149,24 +140,16 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
                 mOptionsOrConnectState,
                 StateMachine.CONNECT,
                 mConnectState);
+        mStateMachine.addState(
+                mOptionsOrConnectState,
+                StateMachine.RESTART,
+                mEnterPasswordState);
 
         /* Connect */
         mStateMachine.addState(
                 mConnectState,
-                StateMachine.RESULT_REJECTED_BY_AP,
-                mConnectRejectedByApState);
-        mStateMachine.addState(
-                mConnectState,
-                StateMachine.RESULT_UNKNOWN_ERROR,
-                mConnectFailedState);
-        mStateMachine.addState(
-                mConnectState,
-                StateMachine.RESULT_TIMEOUT,
-                mConnectTimeOutState);
-        mStateMachine.addState(
-                mConnectState,
-                StateMachine.RESULT_BAD_AUTH,
-                mConnectAuthFailureState);
+                StateMachine.RESULT_FAILURE,
+                mConnectFailureState);
         mStateMachine.addState(
                 mConnectState,
                 StateMachine.RESULT_SUCCESS,
@@ -178,46 +161,12 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
 
         /* Connect Failed */
         mStateMachine.addState(
-                mConnectFailedState,
+                mConnectFailureState,
                 StateMachine.TRY_AGAIN,
                 mOptionsOrConnectState
         );
         mStateMachine.addState(
-                mConnectFailedState,
-                StateMachine.SELECT_WIFI,
-                mFinishState
-        );
-
-        /* Connect Timeout */
-        mStateMachine.addState(
-                mConnectTimeOutState,
-                StateMachine.TRY_AGAIN,
-                mOptionsOrConnectState
-        );
-        mStateMachine.addState(
-                mConnectTimeOutState,
-                StateMachine.SELECT_WIFI,
-                mFinishState
-        );
-
-        /* Connect Rejected By AP */
-        mStateMachine.addState(
-                mConnectRejectedByApState,
-                StateMachine.TRY_AGAIN,
-                mOptionsOrConnectState);
-        mStateMachine.addState(
-                mConnectRejectedByApState,
-                StateMachine.SELECT_WIFI,
-                mFinishState);
-
-        /*Connect Auth Failure */
-        mStateMachine.addState(
-                mConnectAuthFailureState,
-                StateMachine.TRY_AGAIN,
-                mOptionsOrConnectState
-        );
-        mStateMachine.addState(
-                mConnectAuthFailureState,
+                mConnectFailureState,
                 StateMachine.SELECT_WIFI,
                 mFinishState
         );
