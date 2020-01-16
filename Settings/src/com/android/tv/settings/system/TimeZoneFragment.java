@@ -17,7 +17,8 @@
 package com.android.tv.settings.system;
 
 import android.app.Activity;
-import android.app.AlarmManager;
+import android.app.timezonedetector.ManualTimeZoneSuggestion;
+import android.app.timezonedetector.TimeZoneDetector;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -93,9 +94,11 @@ public class TimeZoneFragment extends SettingsPreferenceFragment {
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference instanceof ZonePreference) {
             // Update the system timezone value
-            final AlarmManager alarm = (AlarmManager)
-                    getActivity().getSystemService(Context.ALARM_SERVICE);
-            alarm.setTimeZone(preference.getKey());
+            final TimeZoneDetector timeZoneDetector =
+                    getActivity().getSystemService(TimeZoneDetector.class);
+            ManualTimeZoneSuggestion suggestion = TimeZoneDetector.createManualTimeZoneSuggestion(
+                    preference.getKey(), "Settings: Set time zone");
+            timeZoneDetector.suggestManualTimeZone(suggestion);
             if (!getFragmentManager().popBackStackImmediate()) {
                 getActivity().finish();
             }
