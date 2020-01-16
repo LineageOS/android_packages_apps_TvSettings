@@ -186,6 +186,8 @@
     <string name="device_factory_reset">Factory data reset</string>
     <!-- Preference which sets the device's display calibration. [CHAR LIMIT=50] -->
     <string name="device_calibration">Calibration</string>
+    <!-- Preference which changes energy saver settings. [CHAR LIMIT=50] -->
+    <string name="device_energy_saver">Energy saver</string>
 
     <!-- Surround sound screen -->
     <skip />
@@ -1488,10 +1490,16 @@
     <string name="device_daydreams_sleep_description">Screen saver begins after this period of inactivity. If no screen saver is selected, the display turns off.</string>
     <!-- Screen saver summary for displaying the time before the device goes to sleep -->
     <string name="device_daydreams_sleep_summary">After <xliff:g id="sleep_description" example="3 minutes">%1$s</xliff:g> of inactivity</string>
-    <!-- Screen saver choice for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=30] -->
-    <string name="device_daydreams_screen_off">Put device to sleep</string>
-    <!-- Screen saver description for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=NONE] -->
-    <string name="device_daydreams_screen_off_description">Screen turns off after this period of inactivity.</string>
+    <!-- Energy saver choice for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=30] -->
+    <string name="device_energy_saver_screen_off">Turn off display</string>
+    <!-- Energy saver summary for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=NONE] -->
+    <string name="device_energy_saver_screen_off_description">After <xliff:g id="sleep_description" example="4 hours">%1$s</xliff:g></string>
+    <!-- Energy saver dialog title for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=30] -->
+    <string name="device_energy_saver_screen_off_dialog_title">Turn off display after</string>
+    <!-- Energy saver choice for allow turning screen off during media playback [CHAR LIMIT=NONE] -->
+    <string name="device_energy_saver_allow_turning_screen_off">Allow turning screen off</string>
+    <!-- Energy saver description for allow turning screen off during media playback [CHAR LIMIT=NONE] -->
+    <string name="device_energy_saver_allow_turning_screen_off_description">During media playback</string>
     <!-- Default summary text of the "Configure backup account" setting [CHAR LIMIT=80] -->
     <string name="backup_configure_account_default_summary">No account is currently storing backed up data</string>
     <!-- Dialog title for confirmation to erase backup data from server -->
