@@ -16,7 +16,8 @@
 
 package com.android.tv.settings.system;
 
-import android.app.AlarmManager;
+import android.app.timedetector.ManualTimeSuggestion;
+import android.app.timedetector.TimeDetector;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -123,9 +124,11 @@ public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragme
             datePicker.setActivated(true);
             datePicker.setOnClickListener(v -> {
                 // Setting the new system date
-                ((AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE)).setTime(
-                        datePicker.getDate()
-                );
+                long whenMillis = datePicker.getDate();
+                TimeDetector timeDetector = getContext().getSystemService(TimeDetector.class);
+                ManualTimeSuggestion manualTimeSuggestion = TimeDetector.createManualTimeSuggestion(
+                        whenMillis, "Settings: Set date");
+                timeDetector.suggestManualTime(manualTimeSuggestion);
                 // Finish the fragment/activity when clicked.
                 if (!getFragmentManager().popBackStackImmediate()) {
                     getActivity().finish();
@@ -142,9 +145,13 @@ public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragme
                 mCalendar.set(Calendar.MINUTE, timePicker.getMinute());
                 mCalendar.set(Calendar.SECOND, 0);
                 mCalendar.set(Calendar.MILLISECOND, 0);
-                ((AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE)).setTime(
-                        mCalendar.getTimeInMillis()
-                );
+                long whenMillis = mCalendar.getTimeInMillis();
+
+                TimeDetector timeDetector = getContext().getSystemService(TimeDetector.class);
+                ManualTimeSuggestion manualTimeSuggestion = TimeDetector.createManualTimeSuggestion(
+                        whenMillis, "Settings: Set time");
+                timeDetector.suggestManualTime(manualTimeSuggestion);
+
                 // Finish the fragment/activity when clicked.
                 if (!getFragmentManager().popBackStackImmediate()) {
                     getActivity().finish();
