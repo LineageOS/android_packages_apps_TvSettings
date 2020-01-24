@@ -383,7 +383,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
         if (isConnected) {
             if (currentConnection.getType() == ConnectivityManager.TYPE_WIFI) {
                 WifiInfo currentWifiConnection = mWifiTracker.getManager().getConnectionInfo();
-                String connectedNetwork = WifiInfo.removeDoubleQuotes(
+                String connectedNetwork = WifiInfo.sanitizeSsid(
                         currentWifiConnection.getSSID());
                 if (connectedNetwork == null) {
                     connectedNetwork = getString(R.string.wifi_summary_unknown_network);
