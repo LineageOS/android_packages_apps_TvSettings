@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Sao lưu và khôi phục"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Đặt lại về dữ liệu gốc"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Hiệu chỉnh"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Trình tiết kiệm pin"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Chọn các định dạng"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Âm thanh vòm"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Cho phép cài đặt ứng dụng từ những nguồn khác ngoài Cửa hàng Play"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Cho phép nguồn không xác định"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Thiết bị và dữ liệu cá nhân dễ bị tấn công hơn bởi các ứng dụng từ những nguồn không xác định. Bạn đồng ý rằng bạn tự chịu trách nhiệm cho bất kỳ hư hỏng nào xảy ra với thiết bị của bạn hoặc mất mát dữ liệu có thể có từ việc sử dụng các ứng dụng này."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Xác minh ứng dụng"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Không cho phép hoặc cảnh báo trước khi cài đặt ứng dụng có thể gây hại"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Không bao giờ"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"Dành cho nội dung DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Luôn luôn"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Thời điểm bắt đầu"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Trình bảo vệ màn hình sẽ bắt đầu chạy sau khoảng thời gian không hoạt động này. Nếu không có trình bảo vệ màn hình nào được chọn thì màn hình sẽ tắt."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Sau <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> không hoạt động"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Đặt thiết bị ở chế độ ngủ"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Màn hình sẽ tắt sau khoảng thời gian không hoạt động này."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Tắt màn hình"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Sau <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Tắt màn hình sau"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Cho phép tắt màn hình"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Trong khi phát nội dung nghe nhìn"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Hiện không có tài khoản nào đang lưu trữ dữ liệu được sao lưu"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Dừng sao lưu mật khẩu Wi-Fi, dấu trang, các cài đặt khác và dữ liệu ứng dụng của bạn cũng như xóa tất cả các bản sao trên máy chủ Google?"</string>

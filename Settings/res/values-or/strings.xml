@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"ବ୍ୟାକ୍‌ଅପ୍‌ ଓ ରିଷ୍ଟୋର୍‌"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"ଫ୍ୟାକ୍ଟୋରୀ ଡାଟା ରିସେଟ୍‌"</string>
     <string name="device_calibration" msgid="2907914144048739705">"କାଲିବ୍ରାସନ୍‍"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"ଏନର୍ଜି ସେଭର୍"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"ଫର୍ମାଟ୍‌ ବାଛନ୍ତୁ"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"ପରିପାର୍ଶ୍ଵର ଶଦ୍ଦ"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"ଡଲ୍‌ବି ଡିଜିଟାଲ୍‍"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Store ବ୍ୟତୀତ ଅନ୍ୟ ଉତ୍ସରୁ ଆସିଥିବା ଆପ୍‌ର ଇନଷ୍ଟଲେସନ୍‌ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"ଅଜଣା ଉତ୍ସ ଅନୁମତି କରନ୍ତୁ"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"ଅଜଣା ଆପ୍‌ ଦ୍ୱାରା ଆପଣଙ୍କ ଡିଭାଇସ୍‌ ଏବଂ ବ୍ୟକ୍ତିଗତ ଡାଟାକୁ ନଷ୍ଟ କରାଯାଇ ପାରିବାର ସମ୍ଭାବନା ବହୁତ ଅଧିକ। ଆପଣଙ୍କ ଡିଭାଇସ୍‌ରେ ଘଟିବା କୌଣସି ପ୍ରକାର କ୍ଷତି କିମ୍ବା ସେଗୁଡ଼ିକର ବ୍ୟବହାରରୁ ହେବା କୌଣସି ପ୍ରକାର ଡାଟାର ହାନୀ ପାଇଁ ଆପଣ ଦାୟୀ ରହିବାକୁ ରାଜି ହୁଅନ୍ତି।"</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"ଆପ୍‌ ଯାଞ୍ଚ କରନ୍ତୁ"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"ସମ୍ଭବତଃ କ୍ଷତିକାରକ ଆପ୍‍ଗୁଡ଼ିକ ଇନଷ୍ଟଲ୍‍ କରିବା ପୂର୍ବରୁ ସତର୍କ କରନ୍ତୁ କିମ୍ବା ଅନୁମତି ଦିଅନ୍ତୁ ନାହିଁ"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"ଆଦୌ ନୁହେଁ"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM ବିଷୟବସ୍ତୁ ପାଇଁ"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"ସଦାବେଳେ"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"କେତେବେଳେ ଆରମ୍ଭ କରିବେ"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"କିଛି ସମୟ ନିଷ୍କ୍ରିୟ ରହିବା ପରେ ସ୍କ୍ରିନ୍‌ ସେଭର୍‌ ଆରମ୍ଭ ହୁଏ। ଯଦି କୌଣସି ସ୍କ୍ରିନ୍‌ ସେଭର୍‌ ବଛା ଯାଇନଥିବ, ଯଦି କୌଣସି ସ୍କ୍ରିନ୍‌ ସେଭର୍‌ ବଛା ଯାଇନଥାଏ, ତେବେ ଡିସପ୍ଲେ ବନ୍ଦ ହେବ।"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"ନିଷ୍କ୍ରିୟତାର <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ପରେ"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"ଡିଭାଇସକୁ ସ୍ଲିପରେ  ରଖନ୍ତୁ"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"କିଛି ସମୟ ନିଷ୍କ୍ରିୟ ରହିବା ପରେ ସ୍କ୍ରିନ୍‌ ବନ୍ଦ ହେବ।"</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ଡିସପ୍ଲେ ବନ୍ଦ କରନ୍ତୁ"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ପରେ"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"ଏହାପରେ ଡିସପ୍ଲେ ବନ୍ଦ କରନ୍ତୁ"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"ସ୍କ୍ରିନ୍ ବନ୍ଦ କରିବାକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"ମିଡିଆ ପ୍ଲେବ୍ୟାକ୍ ସମୟରେ"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"ବର୍ତ୍ତମାନ କୌଣସି ଆକାଉଣ୍ଟରେ ବ୍ୟାକଅପ୍‍ ଡାଟା ଷ୍ଟୋର୍‌ ହେଉନାହିଁ"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"ଆପଣଙ୍କ ୱାଇ-ଫାଇ ପାସ୍‌ୱର୍ଡ, ବୁକ୍‌ମାର୍କ, ଅନ୍ୟାନ୍ୟ ସେଟିଂଗୁଡ଼ିକ, ତଥା ଆପ୍‌ ଡାଟା ବ୍ୟାକ୍‌‌ଅପ୍‌ ନେବା ବନ୍ଦ କରି ଏବଂ Google ସର୍ଭର୍‌ରୁ ସମସ୍ତ କପିଗୁଡ଼ିକ ଲିଭାଇବେ?"</string>

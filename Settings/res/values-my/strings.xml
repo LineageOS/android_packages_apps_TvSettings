@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"ဘက်အာပ် လုပ်ခြင်း &amp; ပြန်လည်ဖေါ်ထုတ်ခြင်း"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"စက်ရုံထုတ် အခြေအနေ ပြန်ယူခြင်း"</string>
     <string name="device_calibration" msgid="2907914144048739705">"စံကိုက်ညှိမှု"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"စွမ်းအင်ချွေတာမှု"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"ပုံစံများ ရွေးရန်"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"ပတ်လည် အသံစနစ်"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby ဒစ်ဂျစ်တယ်"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play စတိုး မဟုတ်သည့် အခြား အရင်းအမြစ်များမှ အက်ပ်များ တပ်ဆင်မှုကို ခွင့်ပြုရန်"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"အမည်မသိအရင်းအမြစ်များကို ခွင့်ပြုပါ"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"အမျိုးအမည်မသိ အက်ပ်များက သင်၏ ကိရိယာနှင့် ကိုယ်ရေး ဒေတာများကို ပို၍တိုက်ခိုက်နိုင်ပါသည်။ ယင်း အက်ပ်များကို အသုံးပြုမှုကြောင့် သင့်ကိရိယာ ထိခိုက်ခြင်း သို့မဟုတ် ဒေတာ ဆုံးရှုံးခြင်းတို့အတွက် သင်သည်သာ လုံးဝ တာဝန်ရှိကြောင်း သင်က သဘောတူသည်။"</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"အက်ပ်များကို စိစစ်ရန်"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"အန္တရာယ် ဖြစ်စေနိုင်သော အက်ပ်များကို ခွင့်မပြုရန် သို့မဟုတ် မတပ်ဆင်မီ သတိပေးရန်"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"မည်သည့်အခါမှ"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM အကြောင်းအရာ အတွက်"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"အမြဲတမ်း"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"ဘယ်အချိန် စမလဲ"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"အသုံးမပြုသည့် ဤအချိန်ကာလပြီးနောက် ဖန်သားပြင်အသုံးပြုမှု ချွေတာမှုစနစ်ကို စတင်ပါမည်။ ဖန်သားပြင်အသုံးပြုမှု ချွေတာမှုစနစ်တစ်ခုကို ရွေးချယ်ထားခြင်း မရှိလျှင်၊ ဖန်သားပြင် ပိတ်သွားပါမည်။"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ကြာ လှုပ်ရှားမှုမရှိလျှင်"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"စက်ကို နားနေမုဒ်တွင် ထားပါ"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"မလှုပ်ရှားမှု ဒီကာလ နောက်မှာ မျက်နှာပြင် ပိတ်သွားမည်။"</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ဖန်သားပြင်ပြသမှုကို ပိတ်ရန်"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ပြီးနောက်"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"ဖန်သားပြင်ပြသမှုပိတ်ရန် အချိန်"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"ဖန်သားပြင်ပိတ်ခြင်းကို ခွင့်ပြုရန်"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"မီဒီယာဖွင့်ခြင်းအတွင်း"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"မည်သည့်အကောင့်မှ ဒေတာအရံသင့်သိမ်းဆည်းခြင်းကို လောလောဆယ်မှာ သိုလှောင်ခြင်း မပြုလုပ်ပါ။"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"သင်၏ ကြိုးမဲ့ စကားဝှက်များ၊ စာညှပ်များ၊ အခြား ဆက်တင်များ၊ နှင့် အက်ပ်ဒေတာအရံသင့်သိမ်းဆည်းမှု ရပ်စဲလိုက်ကာ Google ဆာဗာများ၏ ကော်ပီ အားလုံးကို ဖျက်ပစ်လိုပါသလား။"</string>

@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"বেকআপ আৰু পুনঃস্থাপন"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"ফেক্টৰী ডাটা ৰিছেট"</string>
     <string name="device_calibration" msgid="2907914144048739705">"ক্ৰমাংকণ"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"শক্তি সঞ্চয়কাৰী"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"ফৰমেটসমূহ বাছনি কৰক"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"ছাৰাউণ্ড ছাউণ্ড"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"প্লে ষ্ট\'ৰৰ বাদে আন উৎসৰ পৰা লাভ কৰা এপ্ ইনষ্টল কৰিবলৈ অনুমতি দিয়ক"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"অজ্ঞাত উৎসবিলাকক অনুমতি দিয়ক"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"অজ্ঞাত উৎসৰ এপৰ দ্বাৰা আপোনাৰ ডিভাইচ আৰু ব্যক্তিগত ডাটাৰ ওপৰত আক্ৰমণ হোৱাৰ আশংকা অধিক থাকে। এই এপ্ ব্যৱহাৰ কৰাৰ ফলত আপোনাৰ ডিভাইচৰ যিকোনো ধৰণৰ ক্ষতি আৰু ডাটা ক্ষয়ৰ বাবে আপুনি নিজে দায়বদ্ধ বুলি স্বীকাৰ কৰিছে।"</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"এপবোৰ সত্যাপন কৰক"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"ক্ষতিকাৰক এপবোৰ ইনষ্টল কৰাৰ পূৰ্বে বাধা দিয়ক বা সতৰ্ক কৰক"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"কেতিয়াও নহয়"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"ডিআৰএম সমলৰ বাবে"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"সদায়"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"কেতিয়া ষ্টাৰ্ট কৰিব"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"নিষ্ক্ৰিয় অৱস্থাৰ পিছতহে স্ক্ৰীণ ছেভাৰ আৰম্ভ হয়। যদি স্ক্ৰীণ ছেভাৰ বাছনি কৰা নহয়, তেনেহ\'লে ডিছপ্লে’\' অফ হৈ যায়।"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"নিষ্ক্ৰিয় হোৱাৰ <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>ৰ পিছত"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"ডিভাইচটো সুপ্ত অৱস্থালৈ নিয়ক"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"নিষ্ক্ৰিয় হোৱাৰ ইমান সময়ৰ পিছতহে স্ক্ৰীণ অফ হয়।"</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ডিছপ্লে’ অফ কৰক"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>ৰ পাছত"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"ইমান সময়ৰ পাছত ডিছপ্লে’ অফ কৰক"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"স্ক্রীন অফ কৰিবলৈ দিয়ক"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"মিডিয়া প্লে’বেকৰ সময়ত"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"সম্প্ৰতি কোনো একাউণ্টে বেকআপ লোৱা ডাটা সঞ্চয় কৰা নাই"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"আপোনাৰ ৱাই-ফাই পাছৱৰ্ড, বুকমাৰ্ক, অন্য ছেটিং আৰু এপ্ ডেটাৰ বেকআপ বন্ধ কৰাৰ লগতে Google ছাৰ্ভাৰত প্ৰতিলিপি কৰা সকলো বস্তুব মচিবনে?"</string>

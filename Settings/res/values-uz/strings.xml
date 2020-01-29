@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Zaxira nusxa va qayta tiklash"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Zavod sozlamalarini tiklash"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrlash"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Quvvat tejalishi"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Formatlarni tanlang"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Qamrovli ovoz"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Ilovalarni Play Store xizmatidan o‘zga manbalardan o‘rnatishga ruxsat berish"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Noma’lum manbalardan o‘rnatishga ruxsat bering"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Qurilmangiz va shaxsiy ma\'lumotlaringiz noma\'lum manbalardan keluvchi ilovalar tomonidan hujumga ko\'proq darajada duchordir. Siz ushbu ilovalardan foydalanish natijasida qurilmangizga yetkaziladigan har qanday shikast yoki ma\'lumotlarning yo\'qotilishi uchun yolg\'iz o\'zingiz javobgar ekanligingizga rozi bo\'lasiz."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Ilovalarni tekshirish"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Zarar yetkazishi mumkin bo‘lgan ilovalarni o‘rnatishga ruxsat berilmasin yoki o‘rnatishdan oldin ogohlantiril"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Hech qachon"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM kontent uchun"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Har doim"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Qachon yoqilsin"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Uyqu rejimi ushbu harakatsizlik davridan keyin boshlanadi. Agar uyqu rejimi tanlansa, ekran o‘chadi."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> harakatsizlikdan keyin"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Uyqu rejimini yoqish"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Bu harakatsizlik davridan keyin ekran o‘chadi."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Ekranni oʻchirish"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> dan keyin"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Ekran bundan keyin oʻchsin"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Ekran oʻchishiga ruxsat berish"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Multimedia ijro etilishida"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Hozir hech qaysi hisobda zahiralangan ma’lumotlar mavjud emas"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wi-Fi parollaringiz, xatcho\'plar, boshqa sozlanmalar va ilova ma\'lumotlarini zahiraviy nuxsalash to\'xtatilsin va Google serverlarining barcha nusxalari o\'chirilsinmi?"</string>

@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Резервни копия и възстановяване"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Възстановяване на фабричните настройки"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калибриране"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Икономия на енергия"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Избиране на формати"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Обемен звук"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -141,7 +142,7 @@
     <string name="system_autofill" msgid="6983989261108020046">"Автоматично попълване"</string>
     <string name="system_home" msgid="2149349845791104094">"Начален екран"</string>
     <string name="system_search" msgid="3170169128257586925">"Търсене"</string>
-    <string name="system_google" msgid="945985164023885276">"Googlе"</string>
+    <string name="system_google" msgid="945985164023885276">"Google"</string>
     <string name="system_security" msgid="5053021134921182612">"Сигурност и ограничения"</string>
     <string name="system_speech" msgid="8779582280374089518">"Говор"</string>
     <string name="system_inputs" msgid="5552840337357572096">"Входове"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Разрешаване на инсталирането на приложения от източници, различни от Google Play Магазин"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Разрешаване на неизвестни източници"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Устройството и личните ви данни са по-уязвими към атака от приложения от неизвестни източници. Приемате, че вие носите цялата отговорност за повреда на устройството си или при загуба на данни вследствие използването на тези приложения."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Потвърждаване на приложенията"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Забраняване или предупреждаване преди инсталирането на приложения, които може да причинят вреди"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Никога"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"За съдържание с управление на цифровите права (DRM)"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Винаги"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Стартиране"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Скрийнсейвърът започва след този период на неактивност. Ако не е избран скрийнсейвър, дисплеят се изключва."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"След <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> на неактивност"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Активиране на спящ режим"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Екранът се изключва след този период на неактивност."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Изключване на екрана"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"След <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Изключване на екрана след"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Разрешете изключването на екрана"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"По време на възпроизвеждане на мултимедия"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Понастоящем няма профил, който да съхранява данните от резервното копие"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Да се спре ли създаването на резервни копия на вашите пароли за Wi-Fi, отметки, други настройки и данните за приложенията ви и да се изтрият всички копия от сървърите на Google?"</string>

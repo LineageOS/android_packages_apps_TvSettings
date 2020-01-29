@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"బ్యాకప్ &amp; పునరుద్ధరణ"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"ఫ్యాక్టరీ డేటా రీసెట్"</string>
     <string name="device_calibration" msgid="2907914144048739705">"క్రమాంకనం"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"విద్యుత్తు పొదుపు"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"ఫార్మాట్‌లను ఎంచుకోండి"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"సరౌండ్ సౌండ్"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"డాల్బీ డిజిటల్"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Store కాకుండా ఇతర మూలాల నుండి యాప్‌లను ఇన్‌స్టాల్ చేయడం అనుమతించు"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"తెలియని మూలాలను అనుమతించండి"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"తెలియని మూలాల నుండి అందించబడే యాప్‌లు మీ పరికరంపై, వ్యక్తిగత డేటాపై దాడి చేసే అవకాశం ఎక్కువగా ఉంటుంది. ఈ యాప్‌లను ఉపయోగించడం వల్ల మీ పరికరానికి ఏదైనా నష్టం వాటిల్లినా లేదా డేటాను కోల్పోయినా అందుకు మీదే పూర్తి బాధ్యత అని మీరు అంగీకరిస్తున్నారు."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"యాప్‌లను ధృవీకరించడం"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"హాని చేయగల యాప్‌లను ఇన్‌స్టాల్ చేసే ముందు హెచ్చరించు లేదా వాటిని అనుమతించవద్దు"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"ఎప్పుడూ వద్దు"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM కంటెంట్ కోసం"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"ఎల్లప్పుడూ"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"ఎప్పుడు ప్రారంభించాలి"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"స్క్రీన్ సేవర్ ఈ నిష్క్రియ వ్యవధి తర్వాత ప్రారంభమవుతుంది. స్క్రీన్ సేవర్ ఏదీ ఎంచుకోకపోతే, డిస్‌ప్లే ఆఫ్ చేయబడుతుంది."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> పాటు ఇన్‌యాక్టివ్‌గా ఉన్న తర్వాత"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"పరికరాన్ని నిద్రావస్థలో ఉంచు"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"ఈ నిష్క్రియ వ్యవధి తర్వాత స్క్రీన్ ఆఫ్ చేయబడుతుంది."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ప్రదర్శనను ఆఫ్ చేయండి"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> తర్వాత"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"తర్వాత ప్రదర్శనను ఆఫ్ చేయండి"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"స్క్రీన్‌ను ఆఫ్ చేయడానికి అనుమతించండి"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"మీడియా ప్లే‌బ్యాక్ సమయంలో"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"ప్రస్తుతం ఏ ఖాతా కూడా బ్యాకప్ చేసిన డేటాను నిల్వ చేయడం లేదు"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"మీ Wi-Fi పాస్‌వర్డ్‌లు, బుక్‌మార్క్‌లు, ఇతర సెట్టింగ్‌లు మరియు అనువర్తన డేటాను బ్యాకప్ చేయడాన్ని ఆపివేసి, Google సర్వర్‌ల్లోని అన్ని కాపీలను తొలగించాలా?"</string>

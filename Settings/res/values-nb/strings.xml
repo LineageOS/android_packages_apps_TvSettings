@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Sikkerhetskopiering og gjenoppretting"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Tilbakestilling til fabrikkstandard"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrering"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Strømsparing"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Velg formater"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Surround-lyd"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Tillat installasjon av apper fra andre kilder enn Play-butikken"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Tillat ukjente kilder"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Enheten din og de personlige dataene dine er mer sårbare for angrep fra apper som kommer fra ukjente kilder. Du godtar at du selv er ansvarlig for tap av data, eller skader enheten din måtte få, som følge av bruk av disse appene."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Bekreft apper"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Forby eller advar før installasjon av apper som kan være skadelige"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Aldri"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"For DRM-innhold"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Alltid"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Starttidspunkt"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Skjermspareren starter etter denne perioden med inaktivitet. Hvis ingen skjermsparer er valgt, slås skjermen av."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Etter <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> med inaktivitet"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Sett enheten i hvilemodus"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Skjermene slår seg av etter denne perioden uten aktivitet."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Slå av skjermen"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Etter <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Slå av skjermen etter"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Tillat at skjermen slås av"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"I løpet av medieavspilling"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Ingen kontoer lagrer for øyeblikket sikkerhetskopierte data"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Vil du stoppe sikkerhetskopieringen av Wi-Fi-passord, bokmerker, andre innstillinger og appdata, samt slette alle kopier på Google-tjenere?"</string>

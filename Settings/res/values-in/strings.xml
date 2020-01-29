@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Pencadangan &amp; pemulihan"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Reset ke setelan pabrik"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrasi"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Penghemat energi"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Pilih format"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Suara Surround"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -404,7 +405,7 @@
     <string name="location_reporting" msgid="3552501333650895634">"Pelaporan Lokasi"</string>
     <string name="location_history" msgid="4055660203090513120">"Histori Lokasi"</string>
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google menggunakan fitur ini pada produk seperti Google Now dan Google Maps. Mengaktifkan Pelaporan Lokasi memungkinkan produk Google apa pun yang menggunakan fitur ini menyimpan dan menggunakan data lokasi terbaru perangkat yang terkait dengan Akun Google Anda."</string>
-    <string name="location_history_desc" msgid="926674012916014270">"Saat Histori Lokasi diaktifkan untuk akun ini, Google dapat menyimpan data lokasi perangkat Anda untuk digunakan oleh aplikasi Anda.\n\nMisalnya, Google Maps dapat memberi petunjuk arah dan Google Now dapat memberi informasi tentang lalu lintas perjalanan.\n\nAnda dapat menonaktifkan Histori Lokasi kapan saja, namun menonaktifkannya tidak akan menghapusnya. Untuk melihat dan mengelola Histori Lokasi Anda, kunjungi maps.google.com/locationhistory."</string>
+    <string name="location_history_desc" msgid="926674012916014270">"Saat Histori Lokasi diaktifkan untuk akun ini, Google dapat menyimpan data lokasi perangkat Anda untuk digunakan oleh aplikasi Anda.\n\nMisalnya, Google Maps dapat memberi rute dan Google Now dapat memberi informasi tentang lalu lintas perjalanan.\n\nAnda dapat menonaktifkan Histori Lokasi kapan saja, namun menonaktifkannya tidak akan menghapusnya. Untuk melihat dan mengelola Histori Lokasi Anda, kunjungi maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Hapus histori lokasi"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Tindakan ini akan menghapus semua Histori Lokasi yang tersimpan dari perangkat untuk Akun Google ini. Anda tidak dapat mengurungkan penghapusan. Beberapa aplikasi, termasuk Google Now, akan berhenti bekerja."</string>
     <string name="system_services" msgid="5754310941186053151">"Layanan"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Izinkan penginstalan aplikasi dari sumber selain Google Play Store"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Izinkan sumber yang tidak dikenal"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Perangkat dan data pribadi Anda lebih rentan diserang oleh aplikasi dari sumber yang tidak dikenal. Anda menyetujui bahwa kerusakan perangkat atau hilangnya data yang diakibatkan oleh penggunaan aplikasi ini merupakan tanggung jawab Anda semata-mata."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Verifikasi aplikasi"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Jangan izinkan atau peringatkan sebelum penginstalan aplikasi yang dapat menyebabkan kerusakan"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Tidak pernah"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"Untuk konten DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Selalu"</string>
@@ -577,7 +576,7 @@
     <string name="whichApplication" msgid="4510042089342879264">"Tindakan lengkap menggunakan"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"Selalu gunakan opsi ini untuk tindakan ini?"</string>
     <string name="alwaysUseOption" msgid="8799609235198714441">"Selalu gunakan"</string>
-    <string name="justOnceOption" msgid="6714005843102804865">"Hanya sekali"</string>
+    <string name="justOnceOption" msgid="6714005843102804865">"Sekali ini saja"</string>
     <string name="noApplications" msgid="7511175717026318399">"Tidak ada aplikasi yang dapat melakukannya."</string>
     <string name="noAppsGoBack" msgid="2538480554615467065">"Kembali"</string>
     <string name="inputs_inputs" msgid="8639408473661259307">"Masukan"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Waktu mulai"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Screen saver dimulai setelah periode tidak aktif ini. Jika tidak ada screen saver yang dipilih, layar akan dimatikan."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Setelah tidak aktif selama <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Aktifkan mode tidur perangkat"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Layar akan mati setelah tidak aktif dalam jangka waktu ini."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Matikan layar"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Setelah <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Matikan layar setelah"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Izinkan mematikan layar"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Selama pemutaran media"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Saat ini tidak ada akun yang menyimpan data cadangan"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Berhenti mencadangkan sandi Wi-Fi, bookmark, setelan lainnya, dan data aplikasi, serta hapus semua salinan di server Google?"</string>

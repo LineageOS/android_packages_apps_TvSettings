@@ -98,8 +98,9 @@
     <string name="device_storage" msgid="8540243547121791073">"وحدة التخزين"</string>
     <string name="device_reset" msgid="6115282675800077867">"إعادة الضبط على الإعدادات الأصلية"</string>
     <string name="device_backup_restore" msgid="4552158624969018687">"النسخ الاحتياطي والاستعادة"</string>
-    <string name="device_factory_reset" msgid="1110189450013225971">"إعادة الضبط بحسب بيانات المصنع"</string>
+    <string name="device_factory_reset" msgid="1110189450013225971">"إعادة الضبط على الإعدادات الأصلية"</string>
     <string name="device_calibration" msgid="2907914144048739705">"المعايرة"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"أداة توفير الطاقة"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"اختيار الصيغ"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"الصوت المحيطي"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -471,7 +472,7 @@
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"يؤدي النقر على \"حسنًا\" إلى إيقاف <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"تحويل النص إلى الكلام"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"تهيئة المحرك"</string>
-    <string name="system_speak_passwords" msgid="8556036524146404052">"نطق كلمات المرور"</string>
+    <string name="system_speak_passwords" msgid="8556036524146404052">"قول كلمات المرور"</string>
     <string name="system_preferred_engine" msgid="3545505072652708443">"المحرّك المفضّل"</string>
     <string name="system_speech_rate" msgid="6553204071403872669">"معدل الكلام"</string>
     <string name="system_play_sample" msgid="3934369914309865584">"تشغيل عينة"</string>
@@ -539,8 +540,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"السماح بتثبيت التطبيقات من مصادر أخرى غير متجر Play"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"السماح بالمصادر غير المعروفة"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"يعد جهازك وبياناتك الشخصية أكثر عرضة للهجوم من خلال التطبيقات مجهولة المصادر، ولذلك يُرجى الموافقة على أنك المسؤول الوحيد عن أي ضرر يلحق بالجهاز أو أي فقدان للبيانات نتيجة استخدام هذه التطبيقات."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"التحقق من التطبيقات"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"عدم السماح أو التحذير قبل تثبيت التطبيقات التي قد تؤدي إلى حدوث ضرر"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"مطلقًا"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"للمحتوى الخاضع لإدارة الحقوق الرقمية"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"دائمًا"</string>
@@ -562,7 +561,7 @@
   </string-array>
     <string name="track_frame_time_off" msgid="8845064783618702239">"إيقاف"</string>
     <string name="track_frame_time_bars" msgid="5841531515222229632">"على الشاشة كأشرطة"</string>
-    <string name="app_process_limit_standard" msgid="6069948528843313888">"الحد القياسي"</string>
+    <string name="app_process_limit_standard" msgid="6069948528843313888">"الحدّ العادي"</string>
     <string name="app_process_limit_zero" msgid="4094665021909774994">"ليست هناك عمليات بالخلفية"</string>
     <string name="app_process_limit_one" msgid="4509089015775863726">"عملية واحدة بحد أقصى"</string>
     <string name="app_process_limit_two" msgid="368216781690488529">"عمليتان بحد أقصى"</string>
@@ -706,10 +705,13 @@
     <string name="device_daydreams_select" msgid="7203264446482623438">"شاشة التوقف"</string>
     <string name="device_daydreams_test" msgid="7828275397550076567">"البدء الآن"</string>
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"وقت البدء"</string>
-    <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"يبدأ عرض شاشة التوقف بعد مرور هذه الفترة من عدم النشاط. فإذا لم يتم تحديد أي شاشة توقف، يتم إيقاف تشغيل شاشة الجهاز."</string>
+    <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"يبدأ عرض شاشة التوقف بعد مرور هذه الفترة من عدم النشاط. فإذا لم يتم اختيار أي شاشة توقف، يتم إيقاف تشغيل شاشة الجهاز."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"بعد <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> من عدم النشاط"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"تشغيل وضع السكون للجهاز"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"تتوقّف الشاشة عن العمل بعد مرور هذه الفترة من عدم الاستخدام."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"إيقاف تشغيل الشاشة"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"بعد <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"لإيقاف تشغيل شاشة العرض بعد"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"السماح بإيقاف تشغيل الشاشة"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"أثناء تشغيل الوسائط"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"ليس هناك حساب يخزن حاليًا البيانات التي يتم نسخها احتياطيًا."</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"هل تريد إيقاف الاحتفاظ بنسخة احتياطية بكل من كلمات مرور Wi-Fi والإشارات المرجعية والإعدادات الأخرى وبيانات التطبيقات ومحو كل نسخ البيانات على خوادم Google؟"</string>
