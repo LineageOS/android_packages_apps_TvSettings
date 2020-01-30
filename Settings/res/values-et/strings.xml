@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Varundamine ja taastamine"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Tehase andmetele lähtestamine"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibreerimine"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Energiasäästja"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Vormingute valimine"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Ruumiline heli"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Rakenduste installimise lubamine muudest allikatest peale Play poe"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Tundmatute allikate lubamine"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Teie seade ja isiklikud andmed on haavatavamad tundmatutest allikatest pärinevate rakenduste rünnakute suhtes. Nõustute, et olete ainuisikuliselt vastutav seadme kahjustuste või andmekao eest, mis võivad tuleneda nende rakenduste kasutusest."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Rakenduste kinnitamine"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Potentsiaalselt kahjulike rakenduste installimise keelamine või hoiatamine enne installimist"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Mitte kunagi"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM-i sisu puhul"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Alati"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Alustamise aeg"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Ekraanisäästja käivitatakse pärast seda tegevusetusperioodi. Kui ekraanisäästjat pole valitud, lülitub ekraanikuva välja."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> pärast tegevusetust"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Seadme lülitamine unerežiimile"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Ekraan lülitub pärast seda tegevusetusperioodi välja."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Lülita ekraan välja"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Pärast <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Lülita ekraan välja pärast"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Luba ekraani väljalülitamine"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Meedia taasesituse ajal"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Ühelegi kontole ei ole praegu salvestatud varundatud andmeid"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Kas soovite WiFi-paroolide, järjehoidjate, muude seadete ja rakendusandmete varundamise lõpetada ning kõik Google\'i serverites olevad koopiad kustutada?"</string>

@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Backup e ripristino"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Ripristino dati di fabbrica"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Calibrazione"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Risparmio energetico"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Seleziona i formati"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Audio surround"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -379,12 +380,12 @@
     <string name="system_auto_date_time" msgid="8458199433555868708">"Data e ora automatiche"</string>
   <string-array name="auto_date_time_entries">
     <item msgid="8119837829162871025">"Utilizza l\'ora fornita dalla rete"</item>
-    <item msgid="369146066143710034">"Off"</item>
+    <item msgid="369146066143710034">"OFF"</item>
   </string-array>
   <string-array name="auto_date_time_ts_entries">
     <item msgid="1010003447137304123">"Utilizza l\'ora fornita dalla rete"</item>
     <item msgid="5645263357181875427">"Utilizza l\'ora di trasmissione fornita in streaming"</item>
-    <item msgid="5501503537181350884">"Off"</item>
+    <item msgid="5501503537181350884">"OFF"</item>
   </string-array>
     <string name="system_location" msgid="4057295363709016511">"Geolocalizzazione"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Consenti alle applicazioni che hanno chiesto la tua autorizzazione di utilizzare le informazioni sulla tua posizione"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Consenti l\'installazione di app da fonti diverse da Play Store"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Consenti fonti sconosciute"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Il tuo dispositivo e i tuoi dati personali sono più vulnerabili agli attacchi da parte di applicazioni da fonti sconosciute. Accetti di essere l\'unico responsabile per eventuali danni al dispositivo o perdite di dati che potrebbero derivare dall\'utilizzo di queste applicazioni."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Verifica app"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Non consentire o avvisa prima dell\'installazione di app che potrebbero essere dannose"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Mai"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"Per contenuti DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Sempre"</string>
@@ -673,15 +672,18 @@
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
     <string name="settings_cancel" msgid="576094334743686152">"Annulla"</string>
     <string name="settings_on" msgid="7734010120323404333">"On"</string>
-    <string name="settings_off" msgid="4060451657850476369">"Off"</string>
+    <string name="settings_off" msgid="4060451657850476369">"OFF"</string>
     <string name="device_daydreams_none" msgid="3405655350757277348">"Disattiva lo schermo"</string>
     <string name="device_daydreams_select" msgid="7203264446482623438">"Salvaschermo"</string>
     <string name="device_daydreams_test" msgid="7828275397550076567">"Avvia adesso"</string>
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Quando avviare"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Il salvaschermo viene attivato dopo il periodo di inattività selezionato. Se non selezioni un salvaschermo, il display si spegne."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Dopo <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> di inattività"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Attiva sospensione dispositivo"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Lo schermo si spegne dopo questo periodo di inattività."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Disattiva lo schermo"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Dopo <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Disattiva lo schermo dopo"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Consenti la disattivazione dello schermo"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Durante la riproduzione di contenuti multimediali"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Al momento nessun account contiene dati di backup"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Interrompere il backup delle password Wi-Fi, dei segnalibri, di altre impostazioni e dei dati delle applicazioni e cancellare tutte le copie sui server di Google?"</string>

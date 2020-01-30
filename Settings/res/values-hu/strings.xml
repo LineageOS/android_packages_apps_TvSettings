@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Biztonsági mentés és visszaállítás"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Gyári adatok visszaállítása"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrálás"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Akkumulátorkímélő"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Formátumok kiválasztása"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Térhatású hangzás"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -479,7 +480,7 @@
     <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"Csak DRM-tartalom ellenőrzése"</string>
     <string name="system_always_check" msgid="384870282800221580">"Ellenőrzés mindig"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Bluetooth HCI naplózás"</string>
-    <string name="system_email_address" msgid="3725494874473757217">"E-mail cím"</string>
+    <string name="system_email_address" msgid="3725494874473757217">"E-mail-cím"</string>
     <string name="system_usb_debugging" msgid="2158285492172755923">"USB-hibakeresés"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Nem valós helyadatok engedélyezése"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Válassza az alkalmazás hibakeresése lehetőséget"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"A Play Áruházon kívül más forrásokból is lehessen alkalmazásokat telepíteni"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Telepítés engedélyezése ismeretlen forrásokból"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Az eszközre és a személyes adatokra sokkal nagyobb veszélyt jelentenek az ismeretlen forrásból származó alkalmazások támadásai. Ön kijelenti, hogy egyedül Ön felel az eszközön bekövetkező minden olyan kárért vagy adatvesztésért, amely ezen alkalmazások használatából fakad."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Alkalmazások ellenőrzése"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Tiltás vagy figyelmeztetés az olyan alkalmazások telepítése előtt, amelyek károsak lehetnek"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Soha"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM-tartalomhoz"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Mindig"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Mikor aktiválódjon"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"A képernyővédő a tétlenség ezen időtartama után aktiválódik. Ha nem választott ki képernyővédőt, a kijelző kikapcsol."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> inaktivitás után"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Alvó üzemmódba állítás"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Ennyi inaktivitás után a képernyő kikapcsol."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"A kijelző kikapcsolása"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> után"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Kijelző kikapcsolása"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"A képernyő kikapcsolásának engedélyezése"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Médialejátszás közben"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Jelenleg egyik fiók sem tárolja adatok biztonsági másolatát"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Kikapcsolja a Wi-Fi-jelszavak, könyvjelzők, egyéb beállítások és alkalmazásadatok biztonsági mentését, valamint törli a Google szerverein lévő összes példányt?"</string>

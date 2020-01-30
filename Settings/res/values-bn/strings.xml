@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"ব্যাকআপ ও পুনরুদ্ধার"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"ফ্যাক্টরি ডেটা রিসেট করুন"</string>
     <string name="device_calibration" msgid="2907914144048739705">"ক্রমাঙ্কন"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"পাওয়ার সেভার"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"ফর্ম্যাট বেছে নিন"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"চারিপাশের সাউন্ড"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"ডলবি ডিজিটাল"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play স্টোর ছাড়াও অন্য উৎস থেকে অ্যাপ্লিকেশন ইনস্টল করার অনুমতি দিন"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"অজানা উৎসগুলিকে অনুমতি দিন"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"অজানা উৎসের অ্যাপ দ্বারা আপনার ডিভাইস এবং ব্যক্তিগত তথ্য আক্রান্ত হওয়ার সম্ভাবনা বেশি। আপনি সম্মত হচ্ছেন যে এই অ্যাপ ব্যবহারের ফলে আপনার ফোনের কোনও ক্ষতি হলে বা ডেটা হারিয়ে গেলে তার জন্য আপনিই দায়ী থাকবেন।"</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"অ্যাপ যাচাই করুন"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"ক্ষতি করতে পারে এমন অ্যাপ ইনস্টল করার আগে সতর্ক করুন বা সেগুলিকে অনুমতি দেবেন না"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"কখনো নয়"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM সামগ্রীর জন্য"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"সবসময়"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"কখন শুরু করব"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"এত সময় ধরে নিষ্ক্রিয় থাকার পরে স্ক্রিন সেভার শুরু হয়।যদি কোনো স্ক্রিন সেভার নিবাচিত না করা থাকে তাহলে প্রদর্শন বন্ধ হয়ে যাবে৷"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> সময় নিষ্ক্রিয়তার পরে"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"ডিভাইস নিদ্রা মোডে রাখুন"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"এই সময়সীমা পর্যন্ত নিষ্ক্রিয় অবস্থায় থাকলে স্ক্রিন বন্ধ হয়ে যাবে৷"</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ডিসপ্লে ফিচার বন্ধ করুন"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>-এর পর"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"এর পর ডিসপ্লে ফিচার বন্ধ করুন:"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"স্ক্রিন বন্ধ করার অনুমতি দিন"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"মিডিয়া প্লেব্যাকের সময়"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"বর্তমানে কোনো অ্যাকাউন্টই ব্যাক আপ করা ডেটা সংরক্ষণ করছে না"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"আপনার ওয়াই-ফাই পাসওয়ার্ড, বুকমার্ক, অন্যান্য সেটিংস, এবং অ্যাপ্লিকেশান ডেটা ব্যাক আপ করা বন্ধ করে Google সার্ভারে থাকা সব অনুলিপি মুছে ফেলবেন?"</string>

@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"ब्याकअप र पुनःस्थापना"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"कारखाना डेटा रिसेट"</string>
     <string name="device_calibration" msgid="2907914144048739705">"क्यालिब्रेसन"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"इनर्जी सेभर"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"ढाँचाहरू चयन गर्नुहोस्"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"सराउन्ड साउन्ड"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play स्टोर भन्दा अन्य स्रोतहरूबाट अनुप्रयोगहरूको स्थापनालाई अनुमति दिनुहोस्"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"अज्ञात स्रोतहरूलाई अनुमति दिनुहोस्"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"तपाईंको उपकरण र व्यक्तिगत डेटा अज्ञात स्रोतको अनुप्रयोगहरूद्वारा आक्रमण गर्न बढि असुरक्षित छन्। तपाईंको उपकरणमा वा यी अनुप्रयोगहरू प्रयोगबाट डेटा हराउन परिणाम वा कुनै पनि नोक्सानीका लागि तपाईं आफैं जिम्मेदार हुनुहुन्छ भन्ने कुरामा सहमत हुनुहुन्छ।"</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"अनुप्रयोगहरू रुजु गर्नुहोस्"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"हानी गर्न सक्ने अनुप्रयोगहरूका स्थापना गर्नुअघि चेतावनी दिनुहोस् वा अनुमति नै नदिनुहोस्"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"कहिले पनि होइन"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM सामग्रीको लागि"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"सधैं"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"सुरु गर्ने समय"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"यस निष्क्रियताको अवधि पछि स्क्रिन सेभर सुरु हुन्छ। यदि कुनै पनि स्क्रिन सेभरलाई चयन गरिएको छैन भने प्रदर्शन अफ हुन्छ।"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> को निष्क्रियता पछि"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"यन्त्रलाई शयन अवस्थामा लानु .."</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"यो अवधिको निष्क्रियताले स्क्रिन बन्द हुन्छ।"</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"डिस्प्ले निष्क्रिय पार्नुहोस्"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> पछि"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"यसपछि डिस्प्ले निष्क्रिय पार्नु…"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"स्क्रिन निष्क्रिय पार्न दिनुहोस्"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"मिडिया प्लेब्याक हुँदा"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"कुनैपनि खाताले ब्याकअप गरेको डाटा भण्डार गरेको छैन"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"आफ्नो Wi-Fi पासवर्ड, बुकमार्कहरू, अन्य सेटिङ्स, र अनुप्रयोग डेटा ब्याक अप गर्न रोक्ने, र Google सर्भरहरूमा सबै प्रतिलिपिहरू मेटाउने?"</string>

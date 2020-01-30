@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"백업 및 복원"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"초기화"</string>
     <string name="device_calibration" msgid="2907914144048739705">"보정"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"에너지 절약"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"형식 선택"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"서라운드 사운드"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play 스토어가 아닌 출처의 앱을 설치하도록 허용합니다."</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"알 수 없는 소스 허용"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"기기 및 개인 정보는 출처를 알 수 없는 앱의 공격에 더욱 취약합니다. 이러한 앱을 사용하여 발생할 수 있는 기기 손상이나 데이터 손실에 대한 책임은 전적으로 사용자에게 있음에 동의합니다."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"앱 확인"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"유해할 수 있는 앱은 설치를 허용하지 않거나 설치 전에 경고를 표시합니다."</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"안함"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM 콘텐츠용"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"항상"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"시작 시간"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"화면 보호기는 비활성 상태가 지속되면 실행됩니다. 화면 보호기를 선택하지 않은 경우에는 디스플레이가 꺼집니다."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> 동안 동작이 없을 때"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"기기 절전 모드 사용"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"설정한 비활성 상태가 지나면 화면이 꺼집니다."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"디스플레이 끄기"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> 후"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"다음 시간 후 디스플레이 끄기"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"화면 끄기 허용"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"미디어 재생 중"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"현재 백업한 데이터를 저장 중인 계정이 없습니다."</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wi-Fi 비밀번호, 북마크, 기타 설정 및 앱 데이터 백업을 중지하고 Google 서버에 있는 모든 사본을 지우시겠습니까?"</string>

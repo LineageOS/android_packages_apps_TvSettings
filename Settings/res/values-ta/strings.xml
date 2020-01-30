@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"காப்புப்பிரதி &amp; மீட்டெடுப்பு"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"தரவின் ஆரம்பநிலை மீட்டமைப்பு"</string>
     <string name="device_calibration" msgid="2907914144048739705">"அளவுக்குறியீடு"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"எனர்ஜி சேமிப்பான்"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"வடிவங்களைத் தேர்ந்தெடுக்கவும்"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"சரவுண்ட் சவுண்ட்"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play ஸ்டோர் அல்லாத, பிற மூலங்களிலிருந்து ஆப்ஸை நிறுவ அனுமதி"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"அறியப்படாத மூலங்களை அனுமதி"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"உங்கள் சாதனம் மற்றும் தனிப்பட்ட தரவு ஆகியவை அறியப்படாத மூலங்களிலிருந்து பெற்ற ஆப்ஸால் தாக்குதலுக்கு உள்ளாகக்கூடும். இந்தப் பயன்பாடுகளைப் பயன்படுத்தியதன் விளைவாக உங்கள் சாதனம் பாதிக்கப்பட்டால் அல்லது தரவை இழந்தால் அதற்கு நீங்கள் மட்டுமே பொறுப்பு என்பதை ஒப்புக்கொள்கிறீர்கள்."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"பயன்பாடுகளைச் சரிபார்"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"தீங்கு ஏற்படுத்தக்கூடிய ஆப்ஸை நிறுவ அனுமதிக்காதே அல்லது நிறுவுவதற்கு முன்பு எச்சரிக்கை செய்"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"ஒருபோதும் வேண்டாம்"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM உள்ளடக்கத்திற்கானது"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"எப்போதும்"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"உறக்கநிலைக்குச் செல்ல வேண்டிய நேரம்"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"செயல்படாத நேரத்திற்குப் பின், ஸ்கிரீன் சேவர் இயங்கும். ஸ்கிரீன் சேவர் எதுவும் தேர்ந்தெடுக்கப்படவில்லை எனில், திரை அணைந்துவிடும்."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"செயல்படாத <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>க்குப் பின்"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"உறக்கநிலைக்கு அமை"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"செயல்படாமல் இருந்தால் திரை முடக்கப்படும்."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"திரையை ஆஃப் செய்"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>க்குப் பின்"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"இதன்பின் டிஸ்ப்ளேவை ஆஃப் செய்:"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"திரையை ஆஃப் செய்ய அனுமதி"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"மீடியா பிளேபேக்கின்போது"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"தற்போது எந்தக் கணக்கிலும் காப்புப்பிரதி எடுத்த தரவு சேமிக்கப்படவில்லை"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"உங்கள் வைஃபை கடவுச்சொற்கள், புத்தகக்குறிகள், பிற அமைப்புகள் மற்றும் பயன்பாட்டுத் தரவைக் காப்புப்பிரதியெடுப்பதை நிறுத்தி Google சேவையகங்களில் உள்ள எல்லா நகல்களையும் அழிக்கவா?"</string>

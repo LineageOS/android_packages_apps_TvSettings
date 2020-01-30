@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"备份和还原"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"恢复出厂设置"</string>
     <string name="device_calibration" msgid="2907914144048739705">"校准"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"节能模式"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"选择格式"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"环绕声"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"允许安装来自 Play 商店以外其他来源的应用"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"允许安装来自未知来源的应用"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"您的设备和个人数据更容易受到来源不明的应用的攻击。您同意，对于因使用这类应用造成的设备损坏或数据丢失情况，您自行承担全部责任。"</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"验证应用"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"禁止安装可能会造成危害的应用，或在安装前提出警告"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"一律不检查"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"检查 DRM 内容"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"一律检查"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"启动时间"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"如果在这段时间内无任何操作，系统就会启动屏保。如果未选择屏保，显示屏将会自动关闭。"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"闲置 <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>后"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"让设备进入休眠状态"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"如果在这段时间内无任何操作，屏幕将会自动关闭。"</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"关闭显示屏"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>之后"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"休眠以下时间之后关闭显示屏"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"允许关闭屏幕"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"播放媒体内容期间"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"目前没有存储备份数据的帐号"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"要停止备份您的 WLAN 密码、书签、其他设置以及应用数据，并清除 Google 服务器上的所有副本吗？"</string>

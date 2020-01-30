@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"備份與還原"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"恢復原廠設定"</string>
     <string name="device_calibration" msgid="2907914144048739705">"校正"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"節約耗電量"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"選取格式"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"環繞音效"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"允許安裝 Play 商店以外的來源提供的應用程式"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"允許安裝來源不明的應用程式"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"來歷不明的應用程式可能會損害您的裝置及個人資料。如因使用這些應用程式導致裝置受損或資料遺失，後果請自行負責。"</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"驗證應用程式"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"不允許安裝可能造成系統損壞的應用程式，或在安裝前提出警告"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"一律不啟用"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"針對 DRM 內容"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"一律啟用"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"啟動時間"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"經過這段閒置時間後，螢幕保護程式就會啟動。如果未選取螢幕保護程式，螢幕將自動關閉。"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"閒置 <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>後"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"讓裝置進入休眠模式"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"閒置超過這段時間後關閉螢幕。"</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"關閉螢幕"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>之後"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"在以下時間後關閉螢幕"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"允許關閉螢幕"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"播放媒體時"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"目前沒有任何帳戶在儲存備份資料"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"停止備份您的 Wi-Fi 密碼、書籤、其他設定和應用程式資料，並清除 Google 伺服器上的所有複本嗎？"</string>
