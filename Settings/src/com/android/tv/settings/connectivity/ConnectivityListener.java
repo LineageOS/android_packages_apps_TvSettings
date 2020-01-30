@@ -415,7 +415,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         if (wifiInfo != null) {
             ssid = wifiInfo.getSSID();
             if (ssid != null) {
-                ssid = WifiInfo.removeDoubleQuotes(ssid);
+                ssid = WifiInfo.sanitizeSsid(ssid);
             }
         }
         return ssid;
