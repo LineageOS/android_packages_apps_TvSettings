@@ -17,7 +17,8 @@
 package com.android.tv.settings.connectivity;
 
 import android.content.Context;
-import android.net.IpConfiguration;
+import android.net.IpConfiguration.IpAssignment;
+import android.net.IpConfiguration.ProxySettings;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -156,14 +157,14 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
         WifiConfiguration wifiConfiguration = mAccessPoint.getConfig();
         if (wifiConfiguration != null) {
             final int networkId = wifiConfiguration.networkId;
-            mProxySettingsPref.setSummary(
-                    wifiConfiguration.getProxySettings() == IpConfiguration.ProxySettings.NONE
-                            ? R.string.wifi_action_proxy_none : R.string.wifi_action_proxy_manual);
+            ProxySettings proxySettings = wifiConfiguration.getIpConfiguration().getProxySettings();
+            mProxySettingsPref.setSummary(proxySettings == ProxySettings.NONE
+                    ? R.string.wifi_action_proxy_none : R.string.wifi_action_proxy_manual);
             mProxySettingsPref.setIntent(EditProxySettingsActivity.createIntent(getContext(),
                     networkId));
 
-            mIpSettingsPref.setSummary(
-                    wifiConfiguration.getIpAssignment() == IpConfiguration.IpAssignment.STATIC
+            IpAssignment ipAssignment = wifiConfiguration.getIpConfiguration().getIpAssignment();
+            mIpSettingsPref.setSummary(ipAssignment == IpAssignment.STATIC
                             ? R.string.wifi_action_static : R.string.wifi_action_dhcp);
             mIpSettingsPref.setIntent(EditIpSettingsActivity.createIntent(getContext(), networkId));
 
