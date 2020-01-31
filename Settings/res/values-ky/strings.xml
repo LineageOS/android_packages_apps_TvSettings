@@ -52,7 +52,7 @@
     <string name="account_sync" msgid="4315295293211313989">"Колдонмолорду тандоо"</string>
     <string name="sync_now" msgid="4335217984374620551">"Азыр шайкештирүү"</string>
     <string name="sync_in_progress" msgid="8081367667406185785">"Шайкештештирилүүдө…"</string>
-    <string name="last_synced" msgid="8371967816955123864">"Акыркы жолу качан шайкештирилген: <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="8371967816955123864">"Акыркы жолу качан шайкештирилген: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="6652778349371079140">"Өчүрүлгөн"</string>
     <string name="account_remove" msgid="8456848988853890155">"Аккаунтту өчүрүү"</string>
     <string name="account_remove_failed" msgid="5654411101098531690">"Каттоо эсеби өчүрүлбөй жатат"</string>
@@ -349,7 +349,7 @@
     <string name="storage_wizard_move_app_progress_title" msgid="7058465372227392453">"<xliff:g id="NAME">%1$s</xliff:g> жылдырылууда…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="7673347796805764888">"Жылдырп жаткнд түзмктү чыгарбңз.\nЖылдырлп бүтмйнчө бул түзмктгү <xliff:g id="APPNAME">%1$s</xliff:g> колдонм иштебйт."</string>
     <string name="storage_wizard_forget_confirm_title" msgid="3709482471888830896">"Түзмөктүн сактагычы унутулсунбу?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="5896860042525566767">"\'Унутуу\' баскычы басылганда, бул дискте сакталган бардык дайындарыңыз биротоло жоголот. Уланткыңыз келеби?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="5896860042525566767">"\'Унутуу\' баскычы басылганда, бул дискте сакталган бардык дайын-даректериңиз биротоло жоголот. Уланткыңыз келеби?"</string>
     <string name="storage_wizard_forget_action" msgid="5609631662522950596">"Унутуу"</string>
     <string name="storage_new_title" msgid="4768955281180255038">"USB диск туташты"</string>
     <string name="storage_new_action_browse" msgid="3355241742574072658">"Серептөө"</string>
@@ -399,7 +399,7 @@
     <string name="third_party_location_services_title" msgid="2826218400381676508">"3-жактын жайгашкан жерди аныктоо кызматтары"</string>
     <string name="location_reporting" msgid="3552501333650895634">"Жайгашкан жерди кабарлоо"</string>
     <string name="location_history" msgid="4055660203090513120">"Жайгашкан жерлер таржымалы"</string>
-    <string name="location_reporting_desc" msgid="1580018652781674608">"Google бул мүмкүнчүлүктү Google Now жана Google Карталары сыяктуу өнүмдөрүндө колдонот. Жайгашкан жерди кабарлоо кызматы иштетилгенде, ушул мүмкүнчүлүктү пайдаланган Google өнүмдөрү түзмөгүңүздөгү Google каттоо эсебинин эң соңку жайгашкан жерлеринин дайындарын сактап, колдонуп турат."</string>
+    <string name="location_reporting_desc" msgid="1580018652781674608">"Google бул мүмкүнчүлүктү Google Now жана Google Карталары сыяктуу өнүмдөрүндө колдонот. Жайгашкан жерди кабарлоо кызматы иштетилгенде, ушул мүмкүнчүлүктү пайдаланган Google өнүмдөрү түзмөгүңүздөгү Google аккаунтунун эң соңку жайгашкан жерлеринин дайындарын сактап, колдонуп турат."</string>
     <string name="location_history_desc" msgid="926674012916014270">"Бул каттоо эсебинде Жайгашкан жерлер таржымалы иштетилгенде, Google түзмөгүңүздүн жайгашкан жерлери жөнүндө дайындарды сактап, колдонмолордо пайдаланат.\n\nМисалы, Google Карталары сизге керектүү багыттарды көрсөтүп, Google Now учурдагы жол кыймылы тууралуу маалымат берип турат.\n\nЖайгашкан жерлер таржымалын каалаган учурда өчүрүп койсоңуз болот, бирок ал ушуну менен таптакыр жок болбойт. Жайгашкан жерлер таржымалын карап көрүп, аны башкаруу үчүн төмөнкү жерге өтүңүз maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Жайгашкан жерлер таржымалын жок кылуу"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Ушуну менен бул түзмөктөгү Google каттоо эсебинде сакталган Жайгашкан жерлер таржымалы жок болот. Таржымал биротоло өчүп, аны кайра калыбына келтире албайсыз. Мындан тышкары, Google Now сыяктуу айрым колдонмолор иштебей калышы мүмкүн."</string>
@@ -522,7 +522,7 @@
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Белгисиз булактар"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Дүкөндөн тышкары булактардан алынган колдонмолорду орнотууга уруксат берүү"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Белгисиз булактардан орнотууга уруксат берүү"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Түзмөгүңүз жана жеке дайындарыңыз белгисиз колдонмолордон зыян тартып калышы мүмкүн. Бул булактан келген колдонмолорду орнотуп, түзмөгүңүзгө кандайдыр бир зыян келтирип алсаңыз же дайын-даректериңизди жоготуп алсаңыз, өзүңүз жооптуу болосуз."</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Түзмөгүңүз жана жеке дайын-даректериңиз белгисиз колдонмолордон зыян тартып калышы мүмкүн. Бул булактан келген колдонмолорду орнотуп, түзмөгүңүзгө кандайдыр бир зыян келтирип алсаңыз же дайын-даректериңизди жоготуп алсаңыз, өзүңүз жооптуу болосуз."</string>
     <string name="security_verify_apps_title" msgid="7701897649287177386">"Колдонмолорду текшерүү"</string>
     <string name="security_verify_apps_desc" msgid="4638106288791726527">"Зыян келтириши мүмкүн болгон колдонмолорду орнотуудан мурун тыюу салуу же эскертүү"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Эч качан"</string>
@@ -744,5 +744,5 @@
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Орнотулган колдонмолордун бири да сүрөт ичиндеги сүрөт функциясын колдобойт"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Колдонмо ачылып турганда же андан чыгып кеткенде (мисалы, видео көрүүнү улантуу үчүн), колдонмодо сүрөт ичиндеги сүрөт терезеси пайда болушу мүмкүн. Мындай терезе башка колдонмолордун үстүнөн көрүнөт."</string>
     <string name="special_access" msgid="21806055758289916">"Атайын мүмкүнчүлүк"</string>
-    <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

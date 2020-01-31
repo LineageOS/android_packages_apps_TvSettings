@@ -60,7 +60,7 @@
     <string name="account_sync" msgid="4315295293211313989">"اختر التطبيقات المتزامنة"</string>
     <string name="sync_now" msgid="4335217984374620551">"المزامنة الآن"</string>
     <string name="sync_in_progress" msgid="8081367667406185785">"جارٍ المزامنة..."</string>
-    <string name="last_synced" msgid="8371967816955123864">"تاريخ آخر مزامنة: <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="8371967816955123864">"تاريخ آخر مزامنة: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="6652778349371079140">"غير مفعّلة"</string>
     <string name="account_remove" msgid="8456848988853890155">"إزالة الحساب"</string>
     <string name="account_remove_failed" msgid="5654411101098531690">"تعذرت إزالة الحساب"</string>
@@ -96,7 +96,7 @@
     <string name="device_storage" msgid="8540243547121791073">"وحدة التخزين"</string>
     <string name="device_reset" msgid="8964022725655207224">"إعادة الضبط"</string>
     <string name="device_backup_restore" msgid="4552158624969018687">"النسخ الاحتياطي والاستعادة"</string>
-    <string name="device_factory_reset" msgid="1110189450013225971">"إعادة الضبط بحسب بيانات المصنع"</string>
+    <string name="device_factory_reset" msgid="1110189450013225971">"إعادة الضبط على الإعدادات الأصلية"</string>
     <string name="device_calibration" msgid="2907914144048739705">"المعايرة"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"اختيار الصيغ"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"الصوت المحيطي"</string>
@@ -467,7 +467,7 @@
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"يؤدي النقر على \"حسنًا\" إلى إيقاف <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"تحويل النص إلى الكلام"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"تهيئة المحرك"</string>
-    <string name="system_speak_passwords" msgid="8556036524146404052">"نطق كلمات المرور"</string>
+    <string name="system_speak_passwords" msgid="8556036524146404052">"قول كلمات المرور"</string>
     <string name="system_preferred_engine" msgid="3545505072652708443">"المحرّك المفضّل"</string>
     <string name="system_speech_rate" msgid="6553204071403872669">"معدل الكلام"</string>
     <string name="system_play_sample" msgid="3934369914309865584">"تشغيل عينة"</string>
@@ -558,7 +558,7 @@
   </string-array>
     <string name="track_frame_time_off" msgid="8845064783618702239">"إيقاف"</string>
     <string name="track_frame_time_bars" msgid="5841531515222229632">"على الشاشة كأشرطة"</string>
-    <string name="app_process_limit_standard" msgid="6069948528843313888">"الحد القياسي"</string>
+    <string name="app_process_limit_standard" msgid="6069948528843313888">"الحدّ العادي"</string>
     <string name="app_process_limit_zero" msgid="4094665021909774994">"ليست هناك عمليات بالخلفية"</string>
     <string name="app_process_limit_one" msgid="4509089015775863726">"عملية واحدة بحد أقصى"</string>
     <string name="app_process_limit_two" msgid="368216781690488529">"عمليتان بحد أقصى"</string>
@@ -701,7 +701,7 @@
     <string name="device_daydreams_select" msgid="7203264446482623438">"شاشة التوقف"</string>
     <string name="device_daydreams_test" msgid="7828275397550076567">"البدء الآن"</string>
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"وقت البدء"</string>
-    <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"يبدأ عرض شاشة التوقف بعد مرور هذه الفترة من عدم النشاط. فإذا لم يتم تحديد أي شاشة توقف، يتم إيقاف تشغيل شاشة الجهاز."</string>
+    <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"يبدأ عرض شاشة التوقف بعد مرور هذه الفترة من عدم النشاط. فإذا لم يتم اختيار أي شاشة توقف، يتم إيقاف تشغيل شاشة الجهاز."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"بعد <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> من عدم النشاط"</string>
     <string name="device_daydreams_screen_off" msgid="2513117894550171240">"تشغيل وضع السكون للجهاز"</string>
     <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"تتوقّف الشاشة عن العمل بعد مرور هذه الفترة من عدم الاستخدام."</string>
@@ -772,5 +772,5 @@
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"ليست هناك تطبيقات مثبَّتة تتيح عرض نافذة ضمن نافذة."</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"يمكنك السماح للتطبيقات بإنشاء نافذة ضمن نافذة أثناء استخدامها أو بعد مغادرتها (مثلاً لمواصلة مشاهدة فيديو). وستظهر هذه النافذة فوق التطبيقات الأخرى التي تستخدمها."</string>
     <string name="special_access" msgid="21806055758289916">"وصول خاص إلى التطبيقات"</string>
-    <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1s</xliff:g>، <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>، <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>
