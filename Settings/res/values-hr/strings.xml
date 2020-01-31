@@ -94,6 +94,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Sigurnosna kopija i vraćanje"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Vraćanje na tvorničko stanje"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibracija"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Ušteda energije"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Odaberite formate"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Okružujući zvuk"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -530,8 +531,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Dopusti instalaciju aplikacija iz drugih izvora osim Trgovine Google Play"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Dopusti nepoznate izvore"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Vaš uređaj i osobni podaci izloženiji su napadima aplikacija iz nepoznatih izvora. Prihvaćate isključivu odgovornost za svu štetu nastalu na uređaju ili gubitak podataka uzrokovan upotrebom tih aplikacija."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Potvrđivanje aplikacija"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Onemogući ili upozori prije instalacije aplikacija koje mogu uzrokovati štetu"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Nikada"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"Za DRM sadržaj"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Uvijek"</string>
@@ -687,8 +686,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Kada pokrenuti"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Čuvar zaslona pokreće se nakon tog razdoblja neaktivnosti. Ako nije odabran nijedan čuvar zaslona, zaslon će se isključiti."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Nakon <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> neaktivnosti"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Odredi vrijeme do mirovanja"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Zaslon se isključuje nakon tog razdoblja neaktivnosti."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Isključi zaslon"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Poslije <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Isključi zaslon nakon"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Dopusti isključivanje zaslona"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Tijekom reprodukcije medija"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Nijedan račun trenutačno ne pohranjuje sigurnosne kopije podataka"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Želite li zaustaviti sigurnosno kopiranje Wi-Fi zaporki, oznaka, drugih postavki i podataka aplikacija te izbrisati sve kopije na Googleovim poslužiteljima?"</string>

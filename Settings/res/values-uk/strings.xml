@@ -96,6 +96,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Резервне копіювання та відновлення"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Відновлення заводських налаштувань"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калібрування"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Режим енергозбереження"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Вибрати формати"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Об’ємний звук"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -135,7 +136,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Зазвичай 0000 або 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Створити пару"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Скасувати"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Повідомлення про помилки"</string>
+    <string name="send_feedback" msgid="6802193099319924746">"Створити звіт про помилку"</string>
     <string name="launch_help" msgid="2607478763131952469">"Довідковий центр"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Дата й час"</string>
@@ -466,7 +467,7 @@
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Синтез мовлення з тексту"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"Конфігурація обробника"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"Диктувати паролі"</string>
-    <string name="system_preferred_engine" msgid="3545505072652708443">"Бажана система"</string>
+    <string name="system_preferred_engine" msgid="3545505072652708443">"Система за умовчанням"</string>
     <string name="system_speech_rate" msgid="6553204071403872669">"Швидкість мовлення"</string>
     <string name="system_play_sample" msgid="3934369914309865584">"Відтворити зразок"</string>
     <string name="system_install_voice_data" msgid="8016395777968958673">"Установити голосові дані"</string>
@@ -533,8 +534,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Дозволити встановлення додатків не лише з Google Play"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Дозволити невідомі джерела"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Ваш пристрій і особисті дані більш уразливі до атак із боку додатків із невідомих джерел. Ви погоджуєтеся, що несете особисту відповідальність за будь-яку заподіяну вашому пристрою шкоду чи втрату даних унаслідок використання таких додатків."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Перевіряти додатки"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Забороняти встановлення шкідливих додатків або попереджати про них."</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Ніколи"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"Для вмісту, захищеного DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Завжди"</string>
@@ -694,8 +693,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Коли вмикати заставку"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Заставка вмикається, коли минає цей період бездіяльності. Якщо заставку не вибрано, екран вимикається."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Після <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> бездіяльності"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Коли вмикати режим сну"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Після цього періоду бездіяльності екран вимикається."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Вимикати екран"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Після <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Вимикати екран після"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Дозволити вимикати екран"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Під час відтворення медіафайлів"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Зараз резервні копії даних не зберігаються в облікових записах"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Припинити резервне копіювання паролів Wi-Fi, закладок, інших налаштувань і даних додатків, а також стерти всі копії на серверах Google?"</string>
@@ -731,7 +733,7 @@
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Перезапустити в безпечному режимі"</string>
     <string name="reboot_safemode_confirm" msgid="5745977150299953603">"Перезапустити в безпечному режимі?"</string>
     <string name="reboot_safemode_desc" msgid="2919933461408942799">"Буде вимкнено всі встановлені додатки сторонніх розробників. Вони ввімкнуться після перезапуску."</string>
-    <string name="capturing_bugreport" msgid="832512801903486821">"Створюється повідомлення про помилку"</string>
+    <string name="capturing_bugreport" msgid="832512801903486821">"Створення звіту про помилку"</string>
     <string name="available_virtual_keyboard_category" msgid="7445262027711560629">"Доступні віртуальні клавіатури"</string>
     <string name="manage_keyboards" msgid="7983890675377321912">"Керувати клавіатурами"</string>
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"Дозволено"</string>

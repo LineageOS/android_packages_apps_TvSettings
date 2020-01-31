@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Còpia de seguretat i restauració"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Restabliment de les dades de fàbrica"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Calibratge"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Estalvi d\'energia"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Selecciona els formats"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"So envoltant"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Permet instal·lar aplicacions que no siguin de Play Store"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Permet les fonts desconegudes"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"El teu dispositiu i les dades personals són més vulnerables als atacs d\'aplicacions de fonts desconegudes. Acceptes que ets l\'únic responsable dels danys que es puguin causar al dispositiu o de les pèrdues de dades que es puguin produir amb l\'ús d\'aquestes aplicacions."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Verifica les aplicacions"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"No permetis la instal·lació d\'aplicacions que puguin causar danys o bé mostra un advertiment abans de fer-ho"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Mai"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"Per a contingut DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Sempre"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Quan s\'activa"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"L\'estalvi de pantalla s\'inicia després d\'aquest període d\'inactivitat. Si no se\'n selecciona cap, la pantalla s\'apaga."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> d\'inactivitat"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Posa el dispositiu en repòs"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"La pantalla s\'apaga després d\'aquest període d\'inactivitat."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Desactiva la pantalla"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Després de: <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Temps per desactivar la pantalla"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Permet desactivar la pantalla"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Durant la reproducció de contingut multimèdia"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Actualment no hi ha cap compte que emmagatzemi dades de còpia de seguretat."</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Vols deixar de crear còpies de seguretat de les contrasenyes de Wi-Fi, de les adreces d\'interès, d\'altres configuracions i dades d\'aplicacions i, a més, esborrar totes les còpies dels servidors de Google?"</string>

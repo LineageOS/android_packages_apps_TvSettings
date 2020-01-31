@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"バックアップと復元"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"データの初期化"</string>
     <string name="device_calibration" msgid="2907914144048739705">"キャリブレーション"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"省エネツール"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"形式の選択"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"サラウンド サウンド"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"ドルビー デジタル"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"提供元が Play ストアではないアプリのインストールを許可する"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"提供元不明のアプリの許可"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"提供元不明のアプリからモバイル デバイスや個人データが攻撃を受ける可能性が高くなります。 このようなアプリの使用により生じる可能性があるモバイル デバイスへの損害やデータの損失について、 ユーザーご自身が単独で責任を負うことに同意するものとします。"</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"アプリの確認"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"損害をもたらす可能性があるアプリのインストールを 禁止またはインストール前に警告する"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"使用しない"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRMコンテンツにのみ使用する"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"常に使用する"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"起動までの時間"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"設定した時間以上、動作のない状態が続くと、スクリーン セーバーが開始します。選択していない場合は、画面が OFF になります。"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>以上動作がない"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"デバイスをスリープ状態にする"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"設定した時間以上、動作のない状態が続くと画面が OFF になります。"</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"画面を OFF にする"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>後"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"画面を OFF にする時間"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"画面の OFF を許可する"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"メディアの再生時"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"現在バックアップデータを保存しているアカウントはありません"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wi-Fiパスワード、ブックマーク、その他の設定、およびアプリのデータのバックアップを停止し、Googleサーバー上のすべてのコピーを消去しますか？"</string>

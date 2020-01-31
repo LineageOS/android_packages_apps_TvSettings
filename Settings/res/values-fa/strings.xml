@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"تهیهٔ نسخهٔ پشتیبان و بازیابی"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"بازنشانی داده‌های کارخانه"</string>
     <string name="device_calibration" msgid="2907914144048739705">"کالیبراسیون"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"بهینه‌سازی انرژی"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"انتخاب قالب"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"صدای فراگیر"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -325,9 +326,9 @@
     <string name="storage_format_success" msgid="5599914756144012286">"<xliff:g id="NAME">%1$s</xliff:g> قالب‌بندی شد"</string>
     <string name="storage_format_failure" msgid="5619442934314277332">"<xliff:g id="NAME">%1$s</xliff:g> قالب‌بندی نشد"</string>
     <string name="storage_wizard_format_as_private_title" msgid="7985715762649933211">"قالب‌بندی به‌عنوان دستگاه ذخیره‌سازی"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="6143406934742456154">"این دستگاه قالب‌بندی درایو USB را برای ایمن کردن آن الزامی می‌کند. بعد از قالب‌بندی ایمن، این درایو فقط در این دستگاه کار می‌کند. با قالب‌بندی، همه داده‌هایی که درحال‌حاضر در این درایو ذخیره شده است، پاک می‌شود. برای از دست ندادن داده، سعی کنید آنها را پشتیبان‌گیری کنید."</string>
+    <string name="storage_wizard_format_as_private_description" msgid="6143406934742456154">"این دستگاه قالب‌بندی درایو USB را برای ایمن کردن آن الزامی می‌کند. بعد از قالب‌بندی ایمن، این درایو فقط در این دستگاه کار می‌کند. با قالب‌بندی، همه داده‌هایی که درحال‌حاضر در این درایو ذخیره شده است، پاک می‌شود. برای از دست ندادن داده، سعی کنید آن‌ها را پشتیبان‌گیری کنید."</string>
     <string name="storage_wizard_format_as_public_title" msgid="3546915348149438389">"پاک کردن و قالب‌بندی"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"پس از قالب‌بندی، می‌توانید از این درایو USB در سایر دستگاه‌ها استفاده کنید. همه داده‌ها پاک می‌شوند. قبل از قالب‌بندی، با انتقال برنامه‌ها به دستگاه ذخیره‌سازی دیگری، از آنها پشتیبان بگیرید."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"پس از قالب‌بندی، می‌توانید از این درایو USB در سایر دستگاه‌ها استفاده کنید. همه داده‌ها پاک می‌شوند. قبل از قالب‌بندی، با انتقال برنامه‌ها به دستگاه ذخیره‌سازی دیگری، از آن‌ها پشتیبان بگیرید."</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"در حال قالب‌بندی درایو USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"ممکن است چند دقیقه طول بکشد. لطفاً درایو را جدا نکنید."</string>
     <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"فضای ذخیره‌سازی موردنظر را برای انتقال داده‌ها انتخاب کنید"</string>
@@ -404,7 +405,7 @@
     <string name="location_reporting" msgid="3552501333650895634">"گزارش‌دهی مکان"</string>
     <string name="location_history" msgid="4055660203090513120">"سابقه مکان"</string>
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google از این قابلیت در محصولاتی مانند Google Now و Google Maps استفاده می‌کند. روشن کردن گزارش‌گیری مکان به محصولات Google اجازه می‌دهد از این ویژگی برای ذخیره و استفاده از جدیدترین داده‌های مکانی دستگاه شما درارتباط با حساب Google شما استفاده کنند."</string>
-    <string name="location_history_desc" msgid="926674012916014270">"هنگامی که سابقه مکان برای این حساب روشن است، Google می‌تواند داده‌های مکان دستگاهتان را ذخیره کند تا برنامه‌هایتان از آنها استفاده کنند.\n\nبه‌عنوان مثال، Google Maps می‌تواند مسیرها را به شما نشان دهد و Google Now می‌تواند شما را از ترافیک رفت و آمد مطلع سازد.\n\nمی‌توانید در هر زمان سابقه مکان را خاموش کنید، اما انجام این کار سابقه را حذف نمی‌کند. برای مشاهده و مدیریت سابقه مکان خود، از maps.google.com/locationhistory بازدید کنید."</string>
+    <string name="location_history_desc" msgid="926674012916014270">"هنگامی که سابقه مکان برای این حساب روشن است، Google می‌تواند داده‌های مکان دستگاهتان را ذخیره کند تا برنامه‌هایتان از آن‌ها استفاده کنند.\n\nبه‌عنوان مثال، Google Maps می‌تواند مسیرها را به شما نشان دهد و Google Now می‌تواند شما را از ترافیک رفت و آمد مطلع سازد.\n\nمی‌توانید در هر زمان سابقه مکان را خاموش کنید، اما انجام این کار سابقه را حذف نمی‌کند. برای مشاهده و مدیریت سابقه مکان خود، از maps.google.com/locationhistory بازدید کنید."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"حذف سابقه مکان"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"این کار همه سابقه مکان که از این دستگاه برای این حساب Google ذخیره شده است را حذف خواهد کرد. نمی‌توانید این حذف را واگردانید و برخی از برنامه‌ها از جمله Google Now از کار خواهند ایستاد."</string>
     <string name="system_services" msgid="5754310941186053151">"سرویس‌ها"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"اجازه نصب برنامه‌ها از منابعی غیر از فروشگاه Play"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"اجازه به منابع ناشناس"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"دستگاه و داده‌های شخصی‌تان در برابر حمله برنامه‌هایی با منابع ناشناس بیشتر آسیب‌پذیرند. شما می‌پذیرید که مسئولیت انحصاری هرگونه آسیب به دستگاه یا ازبین رفتن داده دراثر استفاده از این برنامه‌ها با خودتان است."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"تأیید برنامه‌ها"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"مجاز ندانستن یا اخطار قبل از نصب برنامه‌ای که ممکن است آسیب برساند"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"هیچ‌وقت"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"برای محتوای DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"همیشه"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"زمان شروع"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"محافظ صفحه پس از این دوره عدم فعالیت آغاز می‌شود. اگر محافظ صفحه‌ای انتخاب نشود، نمایشگر خاموش می‌شود."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"پس از <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> عدم فعالیت"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"تنظیم دستگاه روی حالت خواب"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"بعد از این دوره عدم فعالیت، صفحه‌نمایش خاموش می‌شود."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"خاموش کردن نمایشگر"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"بعد از <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"خاموش کردن نمایشگر بعد از"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"خاموش کردن صفحه مجاز شود"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"درطول بازپخش رسانه"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"در حال حاضر، هیچ حسابی داده‌های پشتیبانی‌گرفته شده را ذخیره نمی‌کند"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"پشتیبان‌گیری از گذرواژه‌های Wi-Fi، نشانک‌ها، سایر تنظیمات و داده‌های برنامه را متوقف می‌کنید، و تمام نسخه‌های موجود در سرورهای Google را پاک می‌کنید؟"</string>
@@ -738,7 +740,7 @@
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="5790572489650085051">"نمایش روی سایر برنامه‌ها"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"مجاز کردن نمایش روی سایر برنامه‌ها"</string>
-    <string name="allow_overlay_description" msgid="5152329837278240259">"به برنامه‌‌‌ اجازه می‌دهد روی سایر برنامه‌هایی که درحال استفاده شدن هستند نشان داده شود. ممکن است این قابلیت در استفاده شما از آن برنامه‌ها تداخل ایجاد کند یا طرز نمایش یا عملکرد آنها را تغییر دهد."</string>
+    <string name="allow_overlay_description" msgid="5152329837278240259">"به برنامه‌‌‌ اجازه می‌دهد روی سایر برنامه‌هایی که درحال استفاده شدن هستند نشان داده شود. ممکن است این قابلیت در استفاده شما از آن برنامه‌ها تداخل ایجاد کند یا طرز نمایش یا عملکرد آن‌ها را تغییر دهد."</string>
     <string name="write_system_settings" msgid="4284654265954461890">"تغییر تنظیمات سیستم"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"می‌تواند تنظیمات سیستم را تغییر دهد"</string>
     <string name="write_settings_description" msgid="7382397926674265937">"این مجوز به برنامه امکان می‌دهد تنظیمات سیستم را تغییر دهد."</string>

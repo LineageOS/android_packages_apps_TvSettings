@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Нөөшлөх &amp; сэргээх"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Үйлдвэрээс гарсан төлөвт"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Тааруулалт"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Эрчим хүч хэмнэгч"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Формат сонгох"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Орчин тойрны дуу"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Store-с өөр эх үүсвэрээс татсан апп-уудыг суулгахыг зөвшөөрөх"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Үл мэдэгдэх эх сурвалжийг зөвшөөрөх"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Таны төхөөрөмж болон хувийн мэдээлэл нь үл мэдэгдэх эх сурвалжийн аппын дайралтад эмзэг байдаг. Та эдгээр аппыг ашигласнаар үүсэх аливаа мэдээллийн алдагдал болон таны төхөөрөмжид учирч болох гэмтэл доголдлын хариуцлагыг та өөрөө бүрэн хариуцахаа хүлээн зөвшөөрсөн болно."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Апп-уудыг тулгах"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Хор учруулж болзошгүй апп-уудыг суулгахын өмнө үл зөвшөөрөх буюу анхааруулах"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Хэзээ ч үгүй"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM контент-д зориулсан"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Байнга"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Хэзээ эхлүүлэх вэ"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Идэвхгүй байдал дуусмагц дэлгэц амраагч ажиллаж эхэлнэ. Хэрэв дэлгэц амраагч сонгоогүй бол дэлгэц унтрах болно."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Идэвхгүй байдал үргэлжилсний дараах <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Төхөөрөмжийг идэвхгүй болгох"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Идэвхгүй энэ хугацаа өнгөрсний дараа дэлгэц унтарна."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Дэлгэцийг унтраах"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>-н дараа"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Дэлгэцийг унтраах хүртэл:"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Дэлгэцийг унтраахыг зөвшөөрөх"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Медиаг дахин тоглуулах үеэр"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Одоогоор ямар ч бүртгэл нөөц мэдээллийг хадгалаагүй байна"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Таны Wi-Fi нууц үг, хавчуурга, бусад тохиргоо болон апп-ын мэдээллийг хадгалахаа зогсоож, Google серверүүд дээр байгаа бүх хуулбаруудыг устгах уу?"</string>

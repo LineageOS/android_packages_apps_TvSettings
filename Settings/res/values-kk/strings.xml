@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Сақтық көшірмелер және қалпына келтіру"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Зауыттық деректерді қалпына келтіру"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калибрлеу"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Қуат үнемдеу"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Форматтарды таңдау"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Көлемді дыбыс"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Қолданбаларды Play Store дүкенінен басқа көздерден орнатуға рұқсат ету"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Белгісіз дереккөздерге рұқсат беру"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Белгісіз көздерден алынған қолданбалардың құрылғыңызға және жеке деректеріңізге  шабуылдау ықтималдығы жоғары болады. Осындай қолданбаларды пайдаланудан болған құрылғының зақымдалуына немесе деректердің жоғалуына тек өзіңіз жауапты болуға келісесіз."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Қолданбаларды растау"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Зиян келтіруі мүмкін қолданбаларды орнатуға тыйым салу немесе орнатар алдында ескерту"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Ешқашан"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM мазмұны үшін"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Әрқашан"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Іске қосылатын кезі"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Экран қорғағыш режимі көрсетілген уақыт бойы еш әрекет жасалмаған жағдайда қосылады. Егер экран қорғағыш таңдалмаса, дисплей өшіп қалады."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> әрекетсіздіктен кейін"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Құрылғыны ұйқы режиміне қою"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Экран әрекетсіздік кезеңінен кейін өшеді."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Дисплейді өшіру"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> кейін"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Дисплейдің өшуі"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Экранды өшіруге рұқсат ету"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Медиамазмұн ойнату кезінде"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Ешқандай есептік жазба қазір сақтық көшірмесі жасалған деректерді сақтап жатқан жоқ"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wi-Fi құпия сөздерінің, бетбелгілердің, басқа параметрлердің және қолданба деректерінің сақтық көшірмесін жасауды тоқтатып, Google серверлеріндегі барлық көшірмелерді өшіру керек пе?"</string>

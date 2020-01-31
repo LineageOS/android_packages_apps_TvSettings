@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"बैकअप लें और पुनर्स्‍थापित करें"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"फ़ैक्ट्री डेटा रीसेट"</string>
     <string name="device_calibration" msgid="2907914144048739705">"अंशांकन"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"बैटरी बचाने की सेटिंग"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"फ़ॉर्मैट चुनें"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"आस-पास की आवाज़"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play स्टोर के अलावा अन्‍य स्रोतों से ऐप्स  इंस्टॉल करने दें"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"अज्ञात स्रोतों को अनुमति दें"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"आपका डिवाइस और व्यक्तिगत डेटा अज्ञात स्रोतों से होने वाले ऐप्स के आक्रमण के प्रति ज़्यादा संवेदनशील हैं. आप इस बात से सहमत हैं कि इन ऐप्स के उपयोग के परिणामस्वरूप संभावित रूप से आपके डिवाइस को होने वाले नुकसान या डेटा की हानि के लिए पूरी तरह से आप उत्तरदायी हैं."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"ऐप्स की पुष्टि करें"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"हानि पहुंचा सकने वाले ऐप्स  का इंस्टॉलेशन अस्वीकार करें या पहले चेतावनी दें"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"कभी नहीं"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM सामग्री के लिए"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"हमेशा"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"कब चालू हो"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"स्क्रीन सेवर निष्क्रियता की इस समयावधि के बाद शुरू होता है. अगर कोई भी स्क्रीर सेवर चयनित ना हो, तो डिस्प्ले बंद हो जाता है."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"निष्क्रियता के <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> बाद"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"डिवाइस को नींद मोड पर करें"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"निष्क्रियता की इस अवधि के बाद स्क्रीन बंद हो जाती है."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"डिसप्ले बंद करें"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> के बाद"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"डिसप्ले इतने समय बाद बंद करें"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"स्क्रीन बंद करने की अनुमति दें"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"मीडिया चलाते समय"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"वर्तमान में कोई भी खाता, बैकअप डेटा संग्रहित नहीं कर रहा है"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"अपने वाई-फ़ाई पासवर्ड, बुकमार्क, अन्य सेटिंग और ऐप्स डेटा का बैक अप लेना रोकें और Google सर्वर से सभी कॉपी मिटाएं?"</string>

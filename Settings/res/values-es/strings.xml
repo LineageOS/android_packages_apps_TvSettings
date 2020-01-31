@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Copia de seguridad y restauración"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Restablecer estado de fábrica"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Calibración"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Ahorro de energía"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Seleccionar formatos"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Sonido envolvente"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Permitir la instalación de aplicaciones que no sean de Play Store"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Permitir fuentes desconocidas"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Tu dispositivo y tus datos personales son más vulnerables a los ataques de aplicaciones de fuentes desconocidas. Aceptas ser el único responsable de cualquier daño que se pueda producir en tu dispositivo o de la pérdida de datos que se pueda derivar del uso de estas aplicaciones."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Verificar aplicaciones"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"No permitir la instalación de aplicaciones que puedan provocar daños o mostrar una advertencia antes de instalarlas"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Nunca"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"Para contenido DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Siempre"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Cuándo se activa"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"El salvapantallas se activa después de este periodo de inactividad, y la pantalla se apaga si no se ha seleccionado ningún salvapantallas."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> de inactividad"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Cuándo suspender el dispositivo"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"La pantalla se apaga después de este periodo de inactividad."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Apagar la pantalla"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Después de <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Apagar pantalla después de"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Permitir apagar la pantalla"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Mientras se reproduce contenido multimedia"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Ninguna cuenta está almacenando datos de copia de seguridad en este momento."</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"¿Quieres dejar de crear copias de seguridad de las contraseñas Wi-Fi, de los marcadores y de otros ajustes y datos de aplicaciones, además de borrar todas las copias de los servidores de Google?"</string>

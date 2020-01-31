@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Камдык көчүрмө жана калыбына келтирүү"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Баштапкы абалга кайтаруу"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калибрдөө аяктады"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Кубатты үнөмдөгүч"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Форматтарды тандоо"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Көлөмдүү үн"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -141,7 +142,7 @@
     <string name="system_autofill" msgid="6983989261108020046">"Автотолтуруу"</string>
     <string name="system_home" msgid="2149349845791104094">"Башкы экран"</string>
     <string name="system_search" msgid="3170169128257586925">"Издөө"</string>
-    <string name="system_google" msgid="945985164023885276">"Googlе"</string>
+    <string name="system_google" msgid="945985164023885276">"Google"</string>
     <string name="system_security" msgid="5053021134921182612">"Коопсуздук жана чектөөлөр"</string>
     <string name="system_speech" msgid="8779582280374089518">"Кеп"</string>
     <string name="system_inputs" msgid="5552840337357572096">"Киргизүүлөр"</string>
@@ -353,7 +354,7 @@
     <string name="storage_wizard_move_app_progress_title" msgid="7058465372227392453">"<xliff:g id="NAME">%1$s</xliff:g> жылдырылууда…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="7673347796805764888">"Жылдырп жаткнд түзмктү чыгарбңз.\nЖылдырлп бүтмйнчө бул түзмктгү <xliff:g id="APPNAME">%1$s</xliff:g> колдонм иштебйт."</string>
     <string name="storage_wizard_forget_confirm_title" msgid="3709482471888830896">"Түзмөктүн сактагычы унутулсунбу?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="5896860042525566767">"\'Унутуу\' баскычы басылганда, бул дискте сакталган бардык дайындарыңыз биротоло жоголот. Уланткыңыз келеби?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="5896860042525566767">"\'Унутуу\' баскычы басылганда, бул дискте сакталган бардык дайын-даректериңиз биротоло жоголот. Уланткыңыз келеби?"</string>
     <string name="storage_wizard_forget_action" msgid="5609631662522950596">"Унутуу"</string>
     <string name="storage_new_title" msgid="4768955281180255038">"USB диск туташты"</string>
     <string name="storage_new_action_browse" msgid="3355241742574072658">"Серептөө"</string>
@@ -526,9 +527,7 @@
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Белгисиз булактар"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Дүкөндөн тышкары булактардан алынган колдонмолорду орнотууга уруксат берүү"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Белгисиз булактардан орнотууга уруксат берүү"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Түзмөгүңүз жана жеке дайындарыңыз белгисиз колдонмолордон зыян тартып калышы мүмкүн. Бул булактан келген колдонмолорду орнотуп, түзмөгүңүзгө кандайдыр бир зыян келтирип алсаңыз же дайын-даректериңизди жоготуп алсаңыз, өзүңүз жооптуу болосуз."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Колдонмолорду текшерүү"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Зыян келтириши мүмкүн болгон колдонмолорду орнотуудан мурун тыюу салуу же эскертүү"</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Түзмөгүңүз жана жеке дайын-даректериңиз белгисиз колдонмолордон зыян тартып калышы мүмкүн. Бул булактан келген колдонмолорду орнотуп, түзмөгүңүзгө кандайдыр бир зыян келтирип алсаңыз же дайын-даректериңизди жоготуп алсаңыз, өзүңүз жооптуу болосуз."</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Эч качан"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM мазмуну үчүн"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Ар дайым"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Качан башталат"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Ушунча мөөнөткө кыймылсыз тургандан кийин экран сактагыч иштей баштайт. Эгер экран сактагыч тандалбаса, дисплей жөн гана өчүп калат."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Сенек мезгил <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> чейин созулгандан кийин"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Уйку режимин иштетүү"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Ушунча мөөнөткө кыймылсыз тургандан кийин экран өчүрүлөт."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Дисплейди өчүрүү"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> кийин"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Дислпейди төмөнкү убакыттан кийин өчүрүү:"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Экранды өчүрүүгө уруксат берүү"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Мультимедианы ойнотуу учурунда"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Дайындардын камдык көчүрмөсүн сактап жаткан каттоо эсеби жок"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wi-Fi сырсөздөрүнүн, кыстармалардын жана башка жөндөөлөрдүн, ошондой эле колдонмолордун дайындарынын камдык көчүрмөлөрүн сактоо аракети токтотулуп, Google серверлериндеги бардык көчүрмөлөр өчүрүлсүнбү?"</string>

@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Babeskopiak eta leheneratzea"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Berrezarri jatorrizko datuak"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrazioa"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Energia-aurrezlea"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Hautatu formatuak"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Soinu inguratzailea"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -403,7 +404,7 @@
     <string name="third_party_location_services_title" msgid="2826218400381676508">"Hirugarrenen kokapen-zerbitzuak"</string>
     <string name="location_reporting" msgid="3552501333650895634">"Kokapenaren berri-ematea"</string>
     <string name="location_history" msgid="4055660203090513120">"Kokapen-historia"</string>
-    <string name="location_reporting_desc" msgid="1580018652781674608">"Google-k Google Now, Google Maps eta beste produktu batzuetan erabiltzen du eginbide hau. Kokapenaren berri-ematea aktibatuz gero, eginbide hau darabilen edozein Google produktuk Google-ko kontuarekin konektatuta duzun gailuaren azken kokapen-datuak gorde eta erabil ditzake."</string>
+    <string name="location_reporting_desc" msgid="1580018652781674608">"Google-k Google Now, Google Maps eta beste produktu batzuetan erabiltzen du eginbide hau. Kokapenaren berri-ematea aktibatuz gero, eginbide hau darabilen Google-ren edozein produktuk Google-ko kontuarekin konektatuta duzun gailuaren azken kokapen-datuak gorde eta erabil ditzake."</string>
     <string name="location_history_desc" msgid="926674012916014270">"Kontu honen Kokapen-historia aktibatuta dagoenean, Google-k gailuaren kokapen-datuak gorde ditzake aplikazioek erabil ditzaten.\n\nAdibidez, Google Maps-ek jarraibideak eman diezazkizuke eta Google Now aplikazioak, berriz, eguneroko joan-etorrietan aurki dezakezun trafikoaren berri eman diezazuke.\n\nEdonoiz desaktiba dezakezu Kokapen-historia, baina horrek ez du ezabatuko. Kokapen-historia ikusteko eta kudeatzeko, joan maps.google.com/locationhistory helbidera."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Ezabatu kokapen-historia"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Honekin, Kokapen-historiak kontu honetarako gorde duen gailuko guztia ezabatuko da. Ezin duzu ezabatzea desegin. Zenbait aplikaziok (besteak beste, Google Now aplikazioak) funtzionatzeari utziko diote."</string>
@@ -480,7 +481,7 @@
     <string name="system_always_check" msgid="384870282800221580">"Egiaztatu beti"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Bluetooth HCI interfazeko saio-hasiera"</string>
     <string name="system_email_address" msgid="3725494874473757217">"Helbide elektronikoa"</string>
-    <string name="system_usb_debugging" msgid="2158285492172755923">"USB arazketa"</string>
+    <string name="system_usb_debugging" msgid="2158285492172755923">"USB bidezko arazketa"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Baimendu kokapen faltsuak sortzea"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Hautatu arazteko aplikazioa"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Itxaron araztaileari"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Baimendu Play Store ez diren iturburuetatik datozen aplikazioak instalatzea"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Baimendu iturburu ezezagunak"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Gailuak eta datu pertsonalek iturburu ezezagunetako aplikazioen erasoak jaso ditzakete. Aplikazio horiek erabiltzen badituzu, onartzen duzu gailuari agian gertatuko zaizkion kalteen edo datu-galeren erantzule bakarra zeu zarela."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Egiaztatu aplikazioak"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Debekatu edo abisatu kalteak eragin ditzaketen aplikazioak instalatu aurretik."</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Inoiz ez"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM edukirako"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Beti"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Denbora tartea"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Tarte horretan inaktibo egon ondoren agertzen da pantaila-babeslea. Pantaila-babeslerik hautatzen ez bada, itzali egiten da pantaila."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> inaktibo egon ondoren"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Lokarrarazi gailua"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Pantaila itzali egiten da tarte hau igarotakoan."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Itzali pantaila"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> eta gero"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Itzali pantaila denbora hau eta gero"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Onartu pantaila itzaltzea"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Multimedia-edukia erreproduzitzean"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Ez dago babeskopiak gordetzen dituen aplikaziorik"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wifi-sareen pasahitzen, laster-marken, bestelako ezarpenen eta aplikazioetako datuen babeskopia egiteari utzi eta Google zerbitzarietako kopia guztiak ezabatu nahi dituzu?"</string>

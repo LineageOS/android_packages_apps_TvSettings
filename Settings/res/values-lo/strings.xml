@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"ການສຳຮອງ &amp; ການກູ້ຂໍ້ມູນ"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"ຣີເຊັດຄ່າຈາກໂຮງງານ"</string>
     <string name="device_calibration" msgid="2907914144048739705">"ການ​ປັບ​ທຽບ"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"ຕົວປະຢັດພະລັງງານ"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"ເລືອກຮູບແບບ"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"ສຽງຮອບທິດທາງ"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -527,8 +528,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"ອະນຸຍາດ​ການຕິດຕັ້ງ​ແອັບຯ ຈາກ​ແຫລ່ງ​ຂໍ້ມູນ​ທີ່​ນອກເໜືອ​ໄປ​ຈາກ Play Store"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"ອະນຸຍາດແຫຼ່ງທີ່ບໍ່ຮູ້ຈັກ"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"ອຸປະກອນ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານຈະມີຄວາມສ່ຽງຕໍ່ການຖືກໂຈມຕີຫຼາຍຂຶ້ນໂດຍແອັບຈາກແຫຼ່ງທີ່ບໍ່ຮູ້ຈັກ. ທ່ານຍອມຮັບວ່າຈະຮັບຜິດຊອບຕໍ່ຄວາມເສຍຫາຍໃດກໍຕາມທີ່ເກີດຂຶ້ນກັບອຸປະກອນຂອງທ່ານ ຫຼື ການສູນເສຍຂໍ້ມູນທີ່ອາດເປັນຜົນມາຈາກການນຳໃຊ້ແອັບເຫຼົ່ານີ້ແຕ່ພຽງຜູ້ດຽວ."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"ຢືນຢັນແອັບຯ"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"ບໍ່​ອະນຸຍາດ ຫຼື​ແຈ້ງເຕືອນ​ກ່ອນ​ການ​ຕິດຕັ້ງ​ແອັບຯ ທີ່​ອາດ​ກໍ່​ໃຫ້​ເກີດ​ບັນຫາ"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"​ບໍ່​ເລີຍ"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"ຈາກເນື້ອໃນ DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"​ທຸກ​ເທື່ອ"</string>
@@ -680,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"ເລີ່ມຕອນໃດ"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"ພາບພັກໜ້າຈໍຈະເລີ່ມຂຶ້ນຫຼັງຈາກອຸປະກອນບໍ່ມີການເຄື່ອນໄຫວຕາມໄລຍະເວລານີ້. ຫາກບໍ່ມີການເລືອກພາບພັກໜ້າຈໍ, ໜ້າຈໍກໍຈະປິດໄວ້ຢ່າງດຽວ."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"ຫຼັງຈາກບໍ່ໄດ້ໃຊ້ <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"ສັ່ງໃຫ້ອຸປະກອນນອນຫຼັບ"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"ປິດໜ້າ​ຈໍຫຼັງ​ຈາກໄລ​ຍະ​ທີ່​ຢູ່​ຊື່ໆ​ນີ້."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ປິດໜ້າຈໍ"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"ຫຼັງຈາກ <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>:"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"ປິດໜ້າຈໍຫຼັງຈາກ"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"ອະນຸຍາດໃຫ້ປິດໜ້າຈໍ"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"ໃນລະຫວ່າງການຫຼິ້ນມີເດຍ"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"ບໍ່ມີບັນຊີໃດຈັດເກັບຂໍ້ມູນສຳຮອງໄວ້ໃນ​ປະ​ຈຸ​ບັນ"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"​ຢຸດ​ການ​ສຳ​ຮອງ​ລະ​ຫັດ​ຜ່ານ Wi-Fi, ບຸກ​ມາກ​ສ໌, ການ​ຕັ້ງ​ຄ່າ​ອື່ນ, ແລະ​ຂໍ້​ມູນ​ແອັບຯ​ຂອງ​ທ່ານ, ແລະ​ລຶບ​ທຸກ​ສຳ​ເນົາ​ຢູ່​ໃນ​ເຊີບ​ເວີ Google?"</string>
