@@ -175,6 +175,9 @@ public class MainFragment extends PreferenceControllerFragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         showOrHideQuickSettings();
+        updateAccountPref();
+        updateAccessoryPref();
+        updateConnectivity();
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
@@ -486,15 +489,6 @@ public class MainFragment extends PreferenceControllerFragment implements
                 curPref.setSummary(suggestion.getSummary());
             }
         }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        showOrHideQuickSettings();
-        updateAccountPref();
-        updateAccessoryPref();
-        updateConnectivity();
     }
 
     private boolean isRestricted() {

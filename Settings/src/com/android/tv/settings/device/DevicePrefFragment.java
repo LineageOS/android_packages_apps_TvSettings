@@ -28,6 +28,9 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodInfo;
 
 import androidx.annotation.Keep;
@@ -115,9 +118,8 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
         updateDeveloperOptions();
         updateSounds();
         updateGoogleSettings();
@@ -126,6 +128,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_USAGE));
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
