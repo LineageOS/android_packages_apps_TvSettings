@@ -37,6 +37,9 @@ import com.android.settingslib.applications.DefaultAppInfo;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.autofill.AutofillHelper;
+import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -154,26 +157,38 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
         final Set<String> enabledInputMethodKeys = new ArraySet<>(enabledInputMethodInfos.size());
         // Add per-IME settings
         for (final InputMethodInfo info : enabledInputMethodInfos) {
+            final String uri = InputMethodHelper.getInputMethodsSettingsUri(getContext(), info);
             final Intent settingsIntent = InputMethodHelper.getInputMethodSettingsIntent(info);
-            if (settingsIntent == null) {
+            if (uri == null && settingsIntent == null) {
                 continue;
             }
             final String key = KEY_KEYBOARD_SETTINGS_PREFIX + info.getId();
 
             Preference preference = preferenceScreen.findPreference(key);
+            boolean useSlice = FeatureFactory.getFactory(getContext()).isTwoPanelLayout()
+                    && uri != null;
             if (preference == null) {
-                preference = new Preference(preferenceContext);
+                if (useSlice) {
+                    preference = new SlicePreference(preferenceContext);
+                } else {
+                    preference = new Preference(preferenceContext);
+                }
                 preference.setOrder(INPUT_METHOD_PREFERENCE_ORDER);
                 preferenceScreen.addPreference(preference);
             }
             preference.setTitle(getContext().getString(R.string.title_settings,
                     info.loadLabel(packageManager)));
             preference.setKey(key);
-            preference.setIntent(settingsIntent);
+            if (useSlice) {
+                ((SlicePreference) preference).setUri(uri);
+                preference.setFragment(SliceUtils.PATH_SLICE_FRAGMENT);
+            } else {
+                preference.setIntent(settingsIntent);
+            }
             enabledInputMethodKeys.add(key);
         }
 
-        for (int i = 0; i < preferenceScreen.getPreferenceCount();) {
+        for (int i = 0; i < preferenceScreen.getPreferenceCount(); ) {
             final Preference preference = preferenceScreen.getPreference(i);
             final String key = preference.getKey();
             if (!TextUtils.isEmpty(key)
@@ -217,7 +232,7 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
     }
 
     private void updateCurrentAutofillPreference(Preference currentAutofillPref,
-                                         List<DefaultAppInfo> candidates) {
+            List<DefaultAppInfo> candidates) {
 
         DefaultAppInfo app = AutofillHelper.getCurrentAutofill(getContext(), candidates);
 
