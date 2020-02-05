@@ -12,11 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+prebuilt_etc {
+    name: "privapp_whitelist_com.android.tv.settings",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "com.android.tv.settings.xml",
+    filename_from_src: true,
+}
+
 android_app {
     name: "TvSettings",
     defaults: ["SettingsLibDefaults"],
     platform_apis: true,
     certificate: "platform",
+    system_ext_specific: true,
+    required: ["privapp_whitelist_com.android.tv.settings"],
 
     optimize: {
         proguard_flags_files: ["proguard.cfg"],
