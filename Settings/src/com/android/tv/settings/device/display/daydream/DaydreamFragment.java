@@ -106,12 +106,15 @@ public class DaydreamFragment extends SettingsPreferenceFragment
 
         final ListPreference activeDreamPref = (ListPreference) findPreference(KEY_ACTIVE_DREAM);
         refreshActiveDreamPref(activeDreamPref);
-        activeDreamPref.setOnPreferenceChangeListener(this);
+        if (activeDreamPref != null) {
+            activeDreamPref.setOnPreferenceChangeListener(this);
+        }
 
         final ListPreference dreamTimePref = (ListPreference) findPreference(KEY_DREAM_TIME);
-        dreamTimePref.setValue(Integer.toString(getDreamTime()));
-        dreamTimePref.setOnPreferenceChangeListener(this);
-
+        if (dreamTimePref != null) {
+            dreamTimePref.setValue(Integer.toString(getDreamTime()));
+            dreamTimePref.setOnPreferenceChangeListener(this);
+        }
         final Preference dreamNowPref = findPreference(KEY_DREAM_NOW);
         dreamNowPref.setEnabled(mBackend.isEnabled());
     }
@@ -121,11 +124,15 @@ public class DaydreamFragment extends SettingsPreferenceFragment
         final CharSequence[] dreamEntries = new CharSequence[infos.size() + 1];
         final CharSequence[] dreamEntryValues = new CharSequence[infos.size() + 1];
         refreshDreamInfoMap(infos, dreamEntries, dreamEntryValues);
-        activeDreamPref.setEntries(dreamEntries);
-        activeDreamPref.setEntryValues(dreamEntryValues);
+        if (activeDreamPref != null) {
+            activeDreamPref.setEntries(dreamEntries);
+            activeDreamPref.setEntryValues(dreamEntryValues);
+        }
         final ComponentName currentDreamComponent = mBackend.getActiveDream();
-        activeDreamPref.setValue(mBackend.isEnabled() && currentDreamComponent != null
-                ? currentDreamComponent.toShortString() : DREAM_COMPONENT_NONE);
+        if (activeDreamPref != null) {
+            activeDreamPref.setValue(mBackend.isEnabled() && currentDreamComponent != null
+                    ? currentDreamComponent.toShortString() : DREAM_COMPONENT_NONE);
+        }
     }
 
     private void refreshDreamInfoMap(List<DreamBackend.DreamInfo> infos,
@@ -188,7 +195,6 @@ public class DaydreamFragment extends SettingsPreferenceFragment
 
     private void setDreamTime(int ms) {
         Settings.System.putInt(getActivity().getContentResolver(), SCREEN_OFF_TIMEOUT, ms);
-
     }
 
     @Override
