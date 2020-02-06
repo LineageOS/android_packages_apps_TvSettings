@@ -35,6 +35,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.datetime.ZoneGetter;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -99,7 +100,9 @@ public class TimeZoneFragment extends SettingsPreferenceFragment {
             ManualTimeZoneSuggestion suggestion = TimeZoneDetector.createManualTimeZoneSuggestion(
                     preference.getKey(), "Settings: Set time zone");
             timeZoneDetector.suggestManualTimeZone(suggestion);
-            if (!getFragmentManager().popBackStackImmediate()) {
+            if (getParentFragment() instanceof TwoPanelSettingsFragment) {
+                ((TwoPanelSettingsFragment) getParentFragment()).navigateBack();
+            } else if (!getFragmentManager().popBackStackImmediate()) {
                 getActivity().finish();
             }
         }
