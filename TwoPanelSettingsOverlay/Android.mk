@@ -37,7 +37,8 @@ LOCAL_PACKAGE_NAME := TwoPanelSettingsOverlay
 LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
-
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_REQUIRED_MODULES := privapp_whitelist_com.android.tv.settings
 LOCAL_FULL_LIBS_MANIFEST_FILES := $(SETTINGS_TWO_PANEL_PATH)/AndroidManifest.xml
 
 LOCAL_PROGUARD_FLAG_FILES := ../Settings/proguard.cfg
