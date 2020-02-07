@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.connectivity.setup;
 
+import static android.net.wifi.WifiConfiguration.NetworkSelectionStatus.NETWORK_SELECTION_ENABLED;
+
 import android.annotation.Nullable;
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -193,7 +195,8 @@ public class ConnectState implements State {
             if (configuration == null) {
                 return;
             }
-            if (configuration.getNetworkSelectionStatus().isNetworkEnabled()) {
+            if (configuration.getNetworkSelectionStatus().getNetworkSelectionStatus()
+                    == NETWORK_SELECTION_ENABLED) {
                 NetworkCapabilities wifiNetworkCapabilities = getActiveWifiNetworkCapabilities();
                 if (wifiNetworkCapabilities != null) {
                     if (wifiNetworkCapabilities.hasCapability(
