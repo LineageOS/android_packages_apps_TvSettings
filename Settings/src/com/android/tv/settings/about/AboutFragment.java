@@ -116,7 +116,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
         PreferenceUtils.resolveSystemActivityOrRemove(getActivity(), screen, deviceNamePref, 0);
 
         final Preference firmwareVersionPref = findPreference(KEY_FIRMWARE_VERSION);
-        firmwareVersionPref.setSummary(Build.VERSION.RELEASE);
+        firmwareVersionPref.setSummary(Build.VERSION.RELEASE_OR_CODENAME);
         firmwareVersionPref.setEnabled(true);
 
         final Preference securityPatchPref = findPreference(KEY_SECURITY_PATCH);
