@@ -36,7 +36,7 @@
             android:icon="@drawable/ic_add_an_account"
             android:key="accounts_and_sign_in_slice"
             android:title="@string/accounts_category_title"
-            android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+            android:fragment="com.android.tv.settings.accounts.AccountsSliceFragment"
             custom:uri="content://com.google.android.apps.tv.launcherx.sliceprovider/general"/>
         <Preference
             android:icon="@drawable/ic_volume_up"
