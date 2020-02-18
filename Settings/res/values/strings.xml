@@ -1712,4 +1712,22 @@
 
     <!-- Slice uri for "Connected devices" -->
     <string name="connected_devices_slice_uri" translatable="false"/>
+
+    <!-- Title for dialog displayed when user selects on a setting locked by an admin [CHAR LIMIT=30 BACKUP_MESSAGE_ID:4867639270211833535] -->
+    <string name="disabled_by_policy_title">Action not allowed</string>
+    <!-- Title for dialog displayed to tell user that changing volume was disallowed by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_adjust_volume">Can’t change volume</string>
+    <!-- Title for dialog displayed to tell user that outgoing calls were disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_outgoing_calls">Calling not allowed</string>
+    <!-- Title for dialog displayed to tell user that sending SMS were disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_sms">SMS not allowed</string>
+    <!-- Title for dialog displayed to tell user that the camera was disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_camera">Camera not allowed</string>
+    <!-- Title for dialog displayed to tell user that screenshots are disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_screen_capture">Screenshot not allowed</string>
+    <!-- Title for dialog displayed to tell user that the app was suspended by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_suspend_packages">Can’t open this app</string>
+
+    <string name="default_admin_support_msg">If you have questions, contact your IT admin</string>
+
 </resources>

@@ -43,6 +43,8 @@
     <uses-permission android:name="android.permission.MANAGE_DEBUGGING" />
     <uses-permission android:name="android.permission.MANAGE_SCOPED_ACCESS_DIRECTORY_PERMISSIONS" />
     <uses-permission android:name="android.permission.MANAGE_USERS" />
+    <uses-permission android:name="android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.NETWORK_SETTINGS" />
     <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG" />
     <uses-permission android:name="android.permission.PEERS_MAC_ADDRESS"/>
@@ -769,6 +771,28 @@
             android:authorities="${applicationId}.lifecycle-tests"
             android:exported="false"
             android:multiprocess="true" />
+
+        <activity android:name=".deviceadmin.ProfileOwnerAdd"
+              android:excludeFromRecents="true"
+              android:theme="@style/Theme.Settings.Transparent"
+              android:clearTaskOnLaunch="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.app.action.SET_PROFILE_OWNER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ActionDisabledByAdminDialog"
+              android:theme="@style/Theme.Settings.Transparent"
+              android:taskAffinity="com.android.tv.settings"
+              android:excludeFromRecents="true"
+              android:launchMode="singleTop">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.SHOW_ADMIN_SUPPORT_DETAILS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
