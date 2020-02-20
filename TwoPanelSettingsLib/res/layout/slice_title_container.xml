@@ -24,7 +24,12 @@
       android:id="@+id/decor_title"
       android:layout_width="@dimen/decor_title_width"
       android:layout_height="wrap_content"
-      style="?android:attr/titleTextStyle"/>
+      android:includeFontPadding="false"
+      android:singleLine="false"
+      android:maxLines="2"
+      android:autoSizeTextType="uniform"
+      style="?android:attr/titleTextStyle"
+      android:layout_marginEnd="0dp"/>
   <TextView
       android:id="@+id/decor_subtitle"
       android:layout_width="@dimen/decor_subtitle_width"
@@ -33,14 +38,13 @@
       android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
       android:layout_marginBottom="@dimen/decor_subtitle_margin_bottom"
       android:layout_below="@id/decor_title"
+      android:includeFontPadding="false"
       android:maxLines="2"
       style="@style/TextAppearance.TwoPanelPreference.Subtitle"/>
   <ImageView
       android:id="@+id/decor_icon"
       android:layout_width="@dimen/decor_icon_width"
       android:layout_height="@dimen/decor_icon_height"
-      android:layout_alignParentRight="true"
       android:layout_alignTop="@id/decor_title"
-      android:layout_marginTop="@dimen/decor_icon_margin_top"
       android:layout_toRightOf="@id/decor_title"/>
 </RelativeLayout>
