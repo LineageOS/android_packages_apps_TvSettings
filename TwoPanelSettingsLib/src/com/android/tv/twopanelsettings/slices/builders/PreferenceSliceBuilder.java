@@ -180,6 +180,8 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private CharSequence mSubtitle;
         private boolean mSubtitleLoading;
         private CharSequence mContentDescription;
+        private CharSequence mInfoText;
+        private IconCompat mInfoImage;
         private int mLayoutDirection = -1;
         private List<Object> mEndItems = new ArrayList<>();
         private List<Integer> mEndTypes = new ArrayList<>();
@@ -307,6 +309,26 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         @NonNull
         public RowBuilder setIcon(@NonNull IconCompat icon) {
             return setTitleItem(icon);
+        }
+
+        /**
+         * Sets the information image for the preference builder.
+         * The image would be displayed at the top of preview screen.
+         */
+        @NonNull
+        public RowBuilder setInfoImage(@NonNull IconCompat icon) {
+            mInfoImage = icon;
+            return this;
+        }
+
+        /**
+         * Sets the information text for the preference builder.
+         * The image would be displayed at the top of preview screen.
+         */
+        @NonNull
+        public RowBuilder setInfoText(CharSequence text) {
+            mInfoText = text;
+            return this;
         }
 
         /**
@@ -745,6 +767,14 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         public int getLayoutDirection() {
             return mLayoutDirection;
+        }
+
+        public CharSequence getInfoText() {
+            return mInfoText;
+        }
+
+        public IconCompat getInfoImage() {
+            return mInfoImage;
         }
 
         public List<Object> getEndItems() {
