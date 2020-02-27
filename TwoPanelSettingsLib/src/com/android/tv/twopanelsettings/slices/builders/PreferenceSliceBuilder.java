@@ -190,6 +190,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private CharSequence mKey;
         private boolean mIconNeedsToBeProcessed;
         private @BUTTONSTYLE int mButtonStyle;
+        private CharSequence mRadioGroup;
         private boolean mEnabled;
         private boolean mSelectable;
 
@@ -461,6 +462,17 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         }
 
         /**
+         * Add a radio button to the RowBuilder.
+         * @param pendingIntent pendingIntent to launch when radio is clicked.
+         * @param isChecked Initial state of the radio button
+         * @param radioGroup group of the radio
+         */
+        public RowBuilder addRadioButton(
+                PendingIntent pendingIntent, boolean isChecked, CharSequence radioGroup) {
+            return addButton(pendingIntent, isChecked, RADIO).setRadioGroup(radioGroup);
+        }
+
+        /**
          * Add a checkmark to the RowBuilder.
          * @param pendingIntent pendingIntent to launch when checkmark is clicked.
          * @param isChecked Initial state of the check mark.
@@ -486,6 +498,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
             mButtonStyle = style;
             return addEndItem(switchAction);
         }
+
         /**
          * Add a switch for the preference.
          * @param pendingIntent pendingIntent
@@ -609,6 +622,15 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         }
 
         /**
+         * Set radio group for radio
+         */
+        @NonNull
+        public RowBuilder setRadioGroup(CharSequence radioGroup) {
+            mRadioGroup = radioGroup;
+            return this;
+        }
+
+        /**
          * Set whether this item is enabled.
          */
         @NonNull
@@ -667,6 +689,10 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         public boolean hasDefaultToggle() {
             return mHasDefaultToggle;
+        }
+
+        public CharSequence getRadioGroup() {
+            return mRadioGroup;
         }
 
         public boolean isEnabled() {
