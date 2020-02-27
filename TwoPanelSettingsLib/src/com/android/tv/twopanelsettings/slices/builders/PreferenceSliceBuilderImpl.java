@@ -73,6 +73,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     public static final String TYPE_PREFERENCE_RADIO = "TYPE_PREFERENCE_RADIO";
     public static final String TAG_TARGET_URI = "TAG_TARGET_URI";
     public static final String TAG_KEY = "TAG_KEY";
+    public static final String TAG_RADIO_GROUP = "TAG_RADIO_GROUP";
     public static final String SUBTYPE_INTENT = "SUBTYPE_INTENT";
     public static final String SUBTYPE_ICON_NEED_TO_BE_PROCESSED =
             "SUBTYPE_ICON_NEED_TO_BE_PROCESSED";
@@ -214,6 +215,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         private SliceItem mButtonStyleItem;
         private SliceItem mIsEnabledItem;
         private SliceItem mIsSelectableItem;
+        private SliceItem mRadioGroupItem;
 
         /**
          *
@@ -276,6 +278,9 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             }
             if (builder.getTitleIcon() != null) {
                 setIconNeedsToBeProcessed(builder.iconNeedsToBeProcessed());
+            }
+            if (builder.getRadioGroup() != null) {
+                setRadioGroup(builder.getRadioGroup());
             }
             setButtonStyle(builder.getButtonStyle());
             setEnabled(builder.isEnabled());
@@ -412,6 +417,14 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         /**
          *
          */
+        public void setRadioGroup(CharSequence radioGroup) {
+            mRadioGroupItem = new SliceItem(
+                    radioGroup, FORMAT_TEXT, TAG_RADIO_GROUP, new String[]{});
+        }
+
+        /**
+         *
+         */
         public void setEnabled(boolean enabled) {
             mIsEnabledItem = new SliceItem(
                     enabled ? 1 : 0, FORMAT_INT, SUBTYPE_IS_ENABLED, new String[]{});
@@ -529,6 +542,9 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             }
             if (mIsSelectableItem != null) {
                 b.addItem(mIsSelectableItem);
+            }
+            if (mRadioGroupItem != null) {
+                b.addItem(mRadioGroupItem);
             }
             for (int i = 0; i < mEndItems.size(); i++) {
                 Slice item = mEndItems.get(i);
