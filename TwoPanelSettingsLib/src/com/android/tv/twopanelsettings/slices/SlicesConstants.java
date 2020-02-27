@@ -32,6 +32,7 @@ public final class SlicesConstants {
     public static final String TAG_TARGET_URI = "TAG_TARGET_URI";
     public static final String TAG_SCREEN_TITLE = "TAG_SCREEN_TITLE";
     public static final String TAG_KEY = "TAG_KEY";
+    public static final String TAG_RADIO_GROUP = "TAG_RADIO_GROUP";
     public static final String SUBTYPE_INTENT = "SUBTYPE_INTENT";
     public static final String SUBTYPE_FOLLOWUP_INTENT = "SUBTYPE_FOLLOWUP_INTENT";
     public static final String SUBTYPE_ICON_NEED_TO_BE_PROCESSED =

@@ -327,12 +327,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 IntentSender intentSender = pendingIntent.getIntentSender();
                 startIntentSenderForResult(
                         intentSender, SLICE_REQUEST_CODE, fillInIntent, 0, 0, 0, null);
-                for (int i = 0; i < getPreferenceScreen().getPreferenceCount(); i++) {
-                    Preference pref = getPreferenceScreen().getPreference(i);
-                    if (pref instanceof SliceRadioPreference && pref != preference) {
-                        ((SliceRadioPreference) pref).setChecked(false);
-                    }
-                }
+                radioPref.clearOtherRadioPreferences(getPreferenceScreen());
             } catch (SendIntentException e) {
                 Log.e(TAG, "PendingIntent for slice cannot be sent", e);
             }
