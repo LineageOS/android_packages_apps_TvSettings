@@ -97,6 +97,10 @@ public final class SlicePreferencesUtil {
                             case RADIO:
                                 preference = new SliceRadioPreference(contextThemeWrapper, action);
                                 preference.setLayoutResource(R.layout.preference_reversed_widget);
+                                if (getRadioGroup(item) != null) {
+                                    ((SliceRadioPreference) preference).setRadioGroup(
+                                            getRadioGroup(item).toString());
+                                }
                                 break;
                         }
                     }
@@ -174,6 +178,7 @@ public final class SlicePreferencesUtil {
         SliceItem mSubtitleItem;
         SliceItem mSummaryItem;
         SliceItem mTargetSliceItem;
+        SliceItem mRadioGroupItem;
         SliceItem mIntentItem;
         SliceItem mFollowupIntentItem;
         List<SliceItem> mEndItems = new ArrayList<>();
@@ -254,11 +259,13 @@ public final class SlicePreferencesUtil {
 
     private static CharSequence getKey(SliceItem item) {
         SliceItem target = SliceQuery.findSubtype(item, FORMAT_TEXT, SlicesConstants.TAG_KEY);
-        if (target != null) {
-            return target.getText();
-        } else {
-            return null;
-        }
+        return target != null ? target.getText() : null;
+    }
+
+    private static CharSequence getRadioGroup(SliceItem item) {
+        SliceItem target = SliceQuery.findSubtype(
+                item, FORMAT_TEXT, SlicesConstants.TAG_RADIO_GROUP);
+        return target != null ? target.getText() : null;
     }
 
     /**
