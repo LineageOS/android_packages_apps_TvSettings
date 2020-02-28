@@ -1753,6 +1753,8 @@
     <!-- Slice uri for "hdr settings" -->
     <string name="hdr_settings_slice_uri" translatable="false"/>
 
+    <string name="storage_summary_fragment_name" translatable="false"/>
+
     <!-- Title for dialog displayed when user selects on a setting locked by an admin [CHAR LIMIT=30 BACKUP_MESSAGE_ID:4867639270211833535] -->
     <string name="disabled_by_policy_title">Action not allowed</string>
     <!-- Title for dialog displayed to tell user that changing volume was disallowed by an admin [CHAR LIMIT=50] -->
@@ -1769,4 +1771,19 @@
     <string name="disabled_by_policy_title_suspend_packages">Can’t open this app</string>
 
     <string name="default_admin_support_msg">If you have questions, contact your IT admin</string>
+
+    <!-- Title for Network connection request Dialog [CHAR LIMIT=60] -->
+    <string name="network_connection_request_dialog_title">Device to use with <xliff:g id="appName" example="ThirdPartyAppName">%1$s</xliff:g></string>
+    <!-- Message for Network connection timeout Dialog [CHAR LIMIT=NONE] -->
+    <string name="network_connection_timeout_dialog_message">No devices found. Make sure devices are turned on and available to connect.</string>
+    <!-- OK button for Network connection timeout Dialog [CHAR LIMIT=30] -->
+    <string name="network_connection_timeout_dialog_ok">Try again</string>
+    <!-- Message for Network connection error state Dialog [CHAR LIMIT=NONE] -->
+    <string name="network_connection_errorstate_dialog_message">Something came up. The application has cancelled the request to choose a device.</string>
+    <!-- Toast message when connection is successful [CHAR LIMIT=30] -->
+    <string name="network_connection_connect_successful">Connection successful</string>
+    <!-- Neutral button for Network connection request Dialog [CHAR LIMIT=30] -->
+    <string name="network_connection_request_dialog_showall">Show all</string>
+    <!--Bluetooth settings screen, text that appears in heading bar when scanning for devices -->
+    <string name="progress_scanning">Searching</string>
 </resources>

@@ -46,43 +46,39 @@ import java.util.List;
  * items, but will automatically update its status and communicates with external apps through
  * slice api.
  */
-public class EmbeddedSliceSwitchPreference extends SliceSwitchPreference implements
-        Observer<Slice> {
+public class EmbeddedSliceSwitchPreference extends SliceSwitchPreference {
     private static final String TAG = "EmbeddedSliceSwitchPreference";
+    private final EmbeddedSlicePreferenceHelper mHelper;
     private String mUri;
-    private Slice mSlice;
 
     @Override
     public void onAttached() {
         super.onAttached();
-        getSliceLiveData().observeForever(this);
+        mHelper.onAttached();
     }
 
     @Override
     public void onDetached() {
         super.onDetached();
-        getSliceLiveData().removeObserver(this);
+        mHelper.onDetached();
     }
 
     public EmbeddedSliceSwitchPreference(Context context) {
         super(context);
         init(null);
+        mHelper = new EmbeddedSlicePreferenceHelper(this, mUri);
     }
 
     public EmbeddedSliceSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs);
+        mHelper = new EmbeddedSlicePreferenceHelper(this, mUri);
     }
 
     private void init(@Nullable AttributeSet attrs) {
         if (attrs != null) {
             initStyleAttributes(attrs);
         }
-    }
-
-    private PreferenceSliceLiveData.SliceLiveDataImpl getSliceLiveData() {
-        return ContextSingleton.getInstance()
-                .getSliceLiveData(getContext(), Uri.parse(mUri));
     }
 
     private void initStyleAttributes(AttributeSet attrs) {
@@ -97,41 +93,23 @@ public class EmbeddedSliceSwitchPreference extends SliceSwitchPreference impleme
         }
     }
 
-    @Override
-    public void onChanged(Slice slice) {
-        if (!getSliceLiveData().mUpdatePending.compareAndSet(true, false)) {
-            return;
-        }
-        mSlice = slice;
-        if (slice == null || slice.getHints() == null || slice.getHints().contains(HINT_PARTIAL)) {
-            setVisible(false);
-            return;
-        }
-        update();
+    public void addListener(EmbeddedSlicePreferenceHelper.SlicePreferenceListener listener) {
+        mHelper.mListener = listener;
     }
 
-    private void update() {
-        ListContent mListContent = new ListContent(mSlice);
-        List<SliceContent> items = mListContent.getRowItems();
-        if (items == null || items.size() == 0) {
-            setVisible(false);
-            return;
+    public void removeListener(EmbeddedSlicePreferenceHelper.SlicePreferenceListener listener) {
+        mHelper.mListener = null;
+    }
+
+    void update() {
+        setTitle(mHelper.mNewPref.getTitle());
+        setSummary(mHelper.mNewPref.getSummary());
+        setIcon(mHelper.mNewPref.getIcon());
+        if (mHelper.mNewPref instanceof TwoStatePreference) {
+            setChecked(((TwoStatePreference) mHelper.mNewPref).isChecked());
         }
-        SliceItem embeddedItem = SlicePreferencesUtil.getEmbeddedItem(items);
-        Preference newPref = SlicePreferencesUtil.getPreference(embeddedItem,
-                (ContextThemeWrapper) getContext(), null);
-        if (newPref == null) {
-            setVisible(false);
-            return;
-        }
-        setTitle(newPref.getTitle());
-        setSummary(newPref.getSummary());
-        setIcon(newPref.getIcon());
-        if (newPref instanceof TwoStatePreference) {
-            setChecked(((TwoStatePreference) newPref).isChecked());
-        }
-        if (newPref instanceof HasSliceAction) {
-            setSliceAction(((HasSliceAction) newPref).getSliceAction());
+        if (mHelper.mNewPref instanceof HasSliceAction) {
+            setSliceAction(((HasSliceAction) mHelper.mNewPref).getSliceAction());
         }
         setVisible(true);
     }
