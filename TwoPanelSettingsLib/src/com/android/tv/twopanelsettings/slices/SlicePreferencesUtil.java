@@ -26,12 +26,15 @@ import static android.app.slice.SliceItem.FORMAT_SLICE;
 import static android.app.slice.SliceItem.FORMAT_TEXT;
 
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.CHECKMARK;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_IMAGE;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.RADIO;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
 
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Pair;
 import android.view.ContextThemeWrapper;
@@ -167,6 +170,19 @@ public final class SlicePreferencesUtil {
                 }
             }
 
+            // Set preview info image and text
+            CharSequence infoText = getInfoText(item);
+            IconCompat infoImage = getInfoImage(item);
+            Bundle b = preference.getExtras();
+            if (infoImage != null) {
+                b.putParcelable(EXTRA_PREFERENCE_INFO_IMAGE, infoImage.toIcon());
+            }
+            if (infoText != null) {
+                b.putCharSequence(EXTRA_PREFERENCE_INFO_TEXT, infoText);
+            }
+            if (infoImage != null || infoText != null) {
+                preference.setFragment(InfoFragment.class.getCanonicalName());
+            }
         }
 
         return preference;
@@ -367,5 +383,16 @@ public final class SlicePreferencesUtil {
         Uri statusUri = Uri.parse(uriString)
                 .buildUpon().path("/" + SlicesConstants.PATH_STATUS).build();
         return statusUri;
+    }
+
+
+    private static CharSequence getInfoText(SliceItem item) {
+        SliceItem target = SliceQuery.findSubtype(item, FORMAT_TEXT, EXTRA_PREFERENCE_INFO_TEXT);
+        return target != null ? target.getText() : null;
+    }
+
+    private static IconCompat getInfoImage(SliceItem item) {
+        SliceItem target = SliceQuery.findSubtype(item, FORMAT_IMAGE, EXTRA_PREFERENCE_INFO_IMAGE);
+        return target != null ? target.getIcon() : null;
     }
 }
