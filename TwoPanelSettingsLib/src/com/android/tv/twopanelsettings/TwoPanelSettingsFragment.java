@@ -46,6 +46,7 @@ import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.tv.twopanelsettings.slices.InfoFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
 
@@ -147,10 +148,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     /** Extend this method to provide the initial screen **/
     public abstract void onPreferenceStartInitialScreen();
 
-    private boolean isLeanbackPreferenceFragment(String fragment) {
+    private boolean shouldDisplay(String fragment) {
         try {
-            return LeanbackPreferenceFragment.class
-                    .isAssignableFrom(Class.forName(fragment));
+            return LeanbackPreferenceFragment.class.isAssignableFrom(Class.forName(fragment))
+                    || InfoFragment.class.isAssignableFrom(Class.forName(fragment));
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("Fragment class not found.", e);
         }
@@ -167,7 +168,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         Fragment preview = getChildFragmentManager().findFragmentById(
                 frameResIds[mPrefPanelIdx + 1]);
         if (preview != null && !(preview instanceof DummyFragment)) {
-            navigateToPreviewFragment();
+            if (!(preview instanceof InfoFragment)) {
+                navigateToPreviewFragment();
+            }
         } else {
             // If there is no corresponding slice provider, thus the corresponding fragment is not
             // created, return false to check the intent of the SlicePreference.
@@ -444,7 +447,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP,
                             KeyEvent.KEYCODE_DPAD_CENTER));
                 } else {
-                    navigateToPreviewFragment();
+                    Fragment previewFragment = getChildFragmentManager()
+                            .findFragmentById(frameResIds[mPrefPanelIdx + 1]);
+                    if (!(previewFragment instanceof InfoFragment)) {
+                        navigateToPreviewFragment();
+                    }
                 }
                 return true;
             }
@@ -672,7 +679,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     /** Creates preview preference fragment. */
     public Fragment onCreatePreviewFragment(Fragment caller, Preference preference) {
         if (preference.getFragment() != null) {
-            if (!isLeanbackPreferenceFragment(preference.getFragment())) {
+            if (!shouldDisplay(preference.getFragment())) {
                 return null;
             }
             if (preference instanceof SlicePreference) {
