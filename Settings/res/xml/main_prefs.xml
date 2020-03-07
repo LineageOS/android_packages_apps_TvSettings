@@ -37,7 +37,7 @@
             android:key="accounts_and_sign_in_slice"
             android:title="@string/accounts_category_title"
             android:fragment="com.android.tv.settings.accounts.AccountsSliceFragment"
-            custom:uri="content://com.google.android.apps.tv.launcherx.sliceprovider/general"/>
+            custom:uri="@string/account_slice_uri"/>
         <Preference
             android:icon="@drawable/ic_volume_up"
             android:key="sound"
@@ -72,6 +72,13 @@
             <intent
                 android:action="com.android.tv.settings.CONNECTED_DEVICES" />
         </Preference>
+        <com.android.tv.twopanelsettings.slices.SlicePreference
+            android:icon="@drawable/ic_remotes_and_accessories"
+            android:key="connected_devices_slice"
+            android:title="@string/remotes_and_accessories_category_title"
+            android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+            custom:isPreferenceVisible="false"
+            custom:uri="@string/connected_devices_slice_uri"/>
         <Preference
             android:iconSpaceReserved="true"
             android:key="help_and_feedback"
