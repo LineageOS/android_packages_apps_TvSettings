@@ -34,6 +34,6 @@ public class TwoPanelScrollView extends HorizontalScrollView {
 
     @Override
     public boolean arrowScroll(int direction) {
-        return true;
+        return false;
     }
 }
