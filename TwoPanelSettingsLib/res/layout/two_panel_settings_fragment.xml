@@ -43,12 +43,12 @@
 
             <FrameLayout
                 android:id="@+id/frame1_container"
-                android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent">
                 <FrameLayout
                     android:id="@+id/frame1"
+                    android:paddingStart="@dimen/preview_pane_padding_start"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <FrameLayout
@@ -61,13 +61,20 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/frame1_padding"
+                android:visibility="gone"
+                android:background="@color/tp_preference_panel_background_color"
+                android:layout_width="@dimen/preview_pane_padding_end"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
                 android:id="@+id/frame2_container"
-                android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent">
                 <FrameLayout
                     android:id="@+id/frame2"
+                    android:paddingStart="@dimen/preview_pane_padding_start"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <FrameLayout
@@ -80,13 +87,19 @@
             </FrameLayout>
 
             <FrameLayout
-                android:id="@+id/frame3_container"
-                android:paddingEnd="@dimen/preference_pane_padding_end"
+                android:id="@+id/frame2_padding"
                 android:background="@color/tp_preference_panel_background_color"
+                android:visibility="gone"
+                android:layout_width="@dimen/preview_pane_padding_end"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:id="@+id/frame3_container"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent" >
                 <FrameLayout
                     android:id="@+id/frame3"
+                    android:paddingStart="@dimen/preview_pane_padding_start"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <FrameLayout
@@ -99,13 +112,20 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/frame3_padding"
+                android:background="@color/tp_preference_panel_background_color"
+                android:visibility="gone"
+                android:layout_width="@dimen/preview_pane_padding_end"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
                 android:id="@+id/frame4_container"
-                android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent">
                 <FrameLayout
                     android:id="@+id/frame4"
+                    android:paddingStart="@dimen/preview_pane_padding_start"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <FrameLayout
@@ -118,13 +138,20 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/frame4_padding"
+                android:background="@color/tp_preference_panel_background_color"
+                android:visibility="gone"
+                android:layout_width="@dimen/preview_pane_padding_end"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
                 android:id="@+id/frame5_container"
-                android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent">
                 <FrameLayout
                     android:id="@+id/frame5"
+                    android:paddingStart="@dimen/preview_pane_padding_start"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <FrameLayout
@@ -137,13 +164,20 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/frame5_padding"
+                android:background="@color/tp_preference_panel_background_color"
+                android:visibility="gone"
+                android:layout_width="@dimen/preview_pane_padding_end"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
                 android:id="@+id/frame6_container"
-                android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent" >
                 <FrameLayout
                     android:id="@+id/frame6"
+                    android:paddingStart="@dimen/preview_pane_padding_start"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <FrameLayout
@@ -156,13 +190,20 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/frame6_padding"
+                android:background="@color/tp_preference_panel_background_color"
+                android:visibility="gone"
+                android:layout_width="@dimen/preview_pane_padding_end"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
                 android:id="@+id/frame7_container"
-                android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent" >
                 <FrameLayout
                     android:id="@+id/frame7"
+                    android:paddingStart="@dimen/preview_pane_padding_start"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <FrameLayout
@@ -175,13 +216,20 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/frame7_padding"
+                android:background="@color/tp_preference_panel_background_color"
+                android:visibility="gone"
+                android:layout_width="@dimen/preview_pane_padding_end"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
                 android:id="@+id/frame8_container"
-                android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent" >
                 <FrameLayout
                     android:id="@+id/frame8"
+                    android:paddingStart="@dimen/preview_pane_padding_start"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <FrameLayout
@@ -194,13 +242,20 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/frame8_padding"
+                android:background="@color/tp_preference_panel_background_color"
+                android:visibility="gone"
+                android:layout_width="@dimen/preview_pane_padding_end"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
                 android:id="@+id/frame9_container"
-                android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent" >
                 <FrameLayout
                     android:id="@+id/frame9"
+                    android:paddingStart="@dimen/preview_pane_padding_start"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <FrameLayout
@@ -212,15 +267,21 @@
                     android:focusable="false"/>
             </FrameLayout>
 
+            <FrameLayout
+                android:id="@+id/frame9_padding"
+                android:background="@color/tp_preference_panel_background_color"
+                android:visibility="gone"
+                android:layout_width="@dimen/preview_pane_padding_end"
+                android:layout_height="match_parent" />
 
             <FrameLayout
                 android:id="@+id/frame10_container"
-                android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent" >
                 <FrameLayout
                     android:id="@+id/frame10"
+                    android:paddingStart="@dimen/preview_pane_padding_start"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <FrameLayout
