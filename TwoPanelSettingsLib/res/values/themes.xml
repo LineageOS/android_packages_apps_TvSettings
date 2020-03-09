@@ -17,6 +17,7 @@
 
 <resources>
     <style name="TwoPanelPreferenceTheme" parent="PreferenceThemeOverlayLeanback">
+        <item name="android:windowBackground">@color/tp_preference_window_background</item>
         <item name="android:colorPrimary">@color/tp_preference_brand_color</item>
         <item name="android:textAppearanceListItemSmall">@style/TextAppearance.TwoPanelPreference.Category</item>
         <item name="android:titleTextAppearance">@style/TextAppearance.TwoPanelPreference.Title</item>
@@ -27,5 +28,7 @@
         <item name="android:colorControlNormal">#FF808080</item>
         <item name="android:thumbTint">@drawable/switch_thumb</item>
         <item name="android:trackTint">@drawable/switch_track</item>
+        <item name="android:listPreferredItemPaddingStart">20dp</item>
+        <item name="android:listPreferredItemPaddingEnd">20dp</item>
     </style>
 </resources>
