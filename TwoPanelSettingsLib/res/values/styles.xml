@@ -36,13 +36,13 @@
     </style>
 
     <style name="TextAppearance.TwoPanelPreference.ListItem" parent="android:TextAppearance">
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@color/tp_preference_item_primary_text_color_selector</item>
-        <item name="android:textSize">@dimen/tp_preference_item_secondary_text_size</item>
+        <item name="android:textSize">@dimen/tp_preference_item_primary_text_size</item>
     </style>
 
     <style name="TextAppearance.TwoPanelPreference.ListItem.Secondary" parent="android:TextAppearance">
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:fontFamily">roboto-regular</item>
         <item name="android:textColor">@color/tp_preference_item_secondary_text_color_selector</item>
         <item name="android:textSize">@dimen/tp_preference_item_secondary_text_size</item>
     </style>
