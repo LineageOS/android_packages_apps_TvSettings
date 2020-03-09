@@ -20,12 +20,14 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.PreferenceUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.FeatureFactory;
 
 @Keep
 public class LegalFragment extends SettingsPreferenceFragment {
@@ -50,8 +52,15 @@ public class LegalFragment extends SettingsPreferenceFragment {
                 findPreference(KEY_COPYRIGHT), PreferenceUtils.FLAG_SET_TITLE);
         PreferenceUtils.resolveSystemActivityOrRemove(context, screen,
                 findPreference(KEY_WEBVIEW_LICENSE), PreferenceUtils.FLAG_SET_TITLE);
-        PreferenceUtils.resolveSystemActivityOrRemove(context, screen,
-                findPreference(KEY_ADS), PreferenceUtils.FLAG_SET_TITLE);
+        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+            Preference adsPref = findPreference(KEY_ADS);
+            if (adsPref != null) {
+                adsPref.setVisible(false);
+            }
+        } else {
+            PreferenceUtils.resolveSystemActivityOrRemove(context, screen,
+                    findPreference(KEY_ADS), PreferenceUtils.FLAG_SET_TITLE);
+        }
     }
 
     @Override
