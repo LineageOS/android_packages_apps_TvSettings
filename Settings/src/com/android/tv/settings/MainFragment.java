@@ -89,7 +89,10 @@ public class MainFragment extends PreferenceControllerFragment implements
     public static final String ACTION_SOUND = "com.android.tv.settings.SOUND";
     @VisibleForTesting
     static final String ACTION_CONNECTED_DEVICES = "com.android.tv.settings.CONNECTED_DEVICES";
-
+    @VisibleForTesting
+    static final String KEY_PRIVACY = "privacy";
+    @VisibleForTesting
+    static final String KEY_DISPLAY_AND_SOUND = "display_and_sound";
     @VisibleForTesting
     static final String KEY_QUICK_SETTINGS = "quick_settings";
 
@@ -265,6 +268,16 @@ public class MainFragment extends PreferenceControllerFragment implements
             Preference accessoryPreference = findPreference(KEY_ACCESSORIES);
             if (accessoryPreference != null) {
                 accessoryPreference.setVisible(false);
+            }
+        }
+        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+            Preference displaySoundPref = findPreference(KEY_DISPLAY_AND_SOUND);
+            if (displaySoundPref != null) {
+                displaySoundPref.setVisible(true);
+            }
+            Preference privacyPref = findPreference(KEY_PRIVACY);
+            if (privacyPref != null) {
+                privacyPref.setVisible(true);
             }
         }
         mHotwordSwitchController.init(this);

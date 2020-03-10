@@ -46,6 +46,18 @@
             <intent android:action="com.android.tv.settings.SOUND" />
         </Preference>
         <Preference
+            android:icon="@drawable/ic_policy"
+            android:key="privacy"
+            android:title="@string/privacy_category_title"
+            android:fragment="com.android.tv.settings.privacy.PrivacyFragment"
+            custom:isPreferenceVisible="false" />
+        <Preference
+            android:icon="@drawable/ic_photo_size_select_actual"
+            android:key="display_and_sound"
+            android:title="@string/display_and_sound_category_title"
+            android:fragment="com.android.tv.settings.device.sound.SoundFragment"
+            custom:isPreferenceVisible="false" />
+        <Preference
             android:icon="@drawable/ic_applications"
             android:key="applications"
             android:title="@string/applications_category_title"

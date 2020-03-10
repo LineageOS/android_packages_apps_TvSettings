@@ -90,6 +90,10 @@
     </plurals>
     <!-- Title for main screen preference for help and feedback [CHAR LIMIT=50] -->
     <string name="help_and_feedback_category_title">Help &amp; feedback</string>
+    <!-- Title for main screen preference for display & sound [CHAR LIMIT=50] -->
+    <string name="display_and_sound_category_title">Display &amp; Sound</string>
+    <!-- Title for main screen preference for privacy settings [CHAR LIMIT=50] -->
+    <string name="privacy_category_title">Privacy</string>
 
     <!-- Account preferences -->
     <skip />
@@ -1517,7 +1521,7 @@
     <!-- Factory reset description about what happens when you perform a factory reset [CHAR LIMIT=NONE] -->
     <string name="factory_reset_description">This will erase all data from your device\'s internal storage, including: your Google account, system and app data and settings, and downloaded apps</string>
     <!-- Factory reset screen, message on screen after user selects Reset phone button -->
-    <string name="confirm_factory_reset_description">Erase all your personal information and downloaded apps? You can\'t reverse this action!</string>
+    <string name="confirm_factory_reset_description">Erase all your personal information and downloaded apps on this device? You can\'t reverse this action!</string>
     <!-- Factory reset screen, button on screen after user selects Reset phone button -->
     <string name="confirm_factory_reset_device">Erase everything</string>
 
@@ -1708,4 +1712,22 @@
 
     <!-- Slice uri for "Connected devices" -->
     <string name="connected_devices_slice_uri" translatable="false"/>
+
+    <!-- Title for dialog displayed when user selects on a setting locked by an admin [CHAR LIMIT=30 BACKUP_MESSAGE_ID:4867639270211833535] -->
+    <string name="disabled_by_policy_title">Action not allowed</string>
+    <!-- Title for dialog displayed to tell user that changing volume was disallowed by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_adjust_volume">Can’t change volume</string>
+    <!-- Title for dialog displayed to tell user that outgoing calls were disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_outgoing_calls">Calling not allowed</string>
+    <!-- Title for dialog displayed to tell user that sending SMS were disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_sms">SMS not allowed</string>
+    <!-- Title for dialog displayed to tell user that the camera was disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_camera">Camera not allowed</string>
+    <!-- Title for dialog displayed to tell user that screenshots are disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_screen_capture">Screenshot not allowed</string>
+    <!-- Title for dialog displayed to tell user that the app was suspended by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_suspend_packages">Can’t open this app</string>
+
+    <string name="default_admin_support_msg">If you have questions, contact your IT admin</string>
+
 </resources>

@@ -75,9 +75,12 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     R.id.frame7, R.id.frame8, R.id.frame9, R.id.frame10};
     private static final int[] frameResOverlayIds =
             {R.id.frame1_overlay, R.id.frame2_overlay, R.id.frame3_overlay, R.id.frame4_overlay,
-                    R.id.frame5_overlay, R.id.frame6_overlay, R.id.frame7_overlay,
-                    R.id.frame8_overlay,
-                    R.id.frame9_overlay, R.id.frame10_overlay};
+            R.id.frame5_overlay, R.id.frame6_overlay, R.id.frame7_overlay, R.id.frame8_overlay,
+            R.id.frame9_overlay, R.id.frame10_overlay};
+    private static final int[] frameResPaddingIds =
+            {R.id.frame1_padding, R.id.frame2_padding, R.id.frame3_padding, R.id.frame4_padding,
+            R.id.frame5_padding, R.id.frame6_padding, R.id.frame7_padding,
+            R.id.frame8_padding, R.id.frame9_padding};
     private static final long PANEL_ANIMATION_MS = 400;
     private static final long PANEL_ANIMATION_DELAY_MS = 200;
 
@@ -597,7 +600,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         int panelWidth = getResources().getDimensionPixelSize(
                 R.dimen.tp_settings_preference_pane_width);
         int panelPadding = getResources().getDimensionPixelSize(
-                R.dimen.preference_pane_padding_end);
+                R.dimen.preference_pane_padding_end) + getResources().getDimensionPixelSize(
+                R.dimen.preview_pane_padding_start) + getResources().getDimensionPixelSize(
+                R.dimen.preview_pane_padding_end);
         int result = frameResIds.length * panelWidth - scrollViewWidth + panelPadding;
         return result < 0 ? 0 : result;
     }
@@ -618,6 +623,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             boolean scrollsToPreview =
                     isRTL() ? mScrollView.getScrollX() >= mMaxScrollX - panelWidth * index
                             : mScrollView.getScrollX() <= panelWidth * index;
+            int paddingPanelIndex = -1;
             Fragment preview = getChildFragmentManager().findFragmentById(frameResIds[index + 1]);
             boolean hasPreviewFragment = preview != null && !(preview instanceof DummyFragment);
             if (smoothScroll) {
@@ -630,6 +636,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 slideAnim.start();
                 // Color animation
                 if (scrollsToPreview) {
+                    paddingPanelIndex = index - 1;
                     previewPanelOverlay.setAlpha(hasPreviewFragment ? 1f : 0f);
                     ObjectAnimator colorAnim = ObjectAnimator.ofFloat(scrollToPanelOverlay, "alpha",
                             scrollToPanelOverlay.getAlpha(), 0f);
@@ -637,6 +644,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     colorAnim.setDuration(PANEL_ANIMATION_MS);
                     colorAnim.start();
                 } else {
+                    paddingPanelIndex = index + 1;
                     scrollToPanelOverlay.setAlpha(0f);
                     ObjectAnimator colorAnim = ObjectAnimator.ofFloat(previewPanelOverlay, "alpha",
                             previewPanelOverlay.getAlpha(), hasPreviewFragment ? 1f : 0f);
@@ -649,6 +657,12 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 mScrollView.scrollTo(scrollToX, 0);
                 scrollToPanelOverlay.setAlpha(0f);
                 previewPanelOverlay.setAlpha(hasPreviewFragment ? 1f : 0f);
+            }
+            // add padding to separate the currently displayed frames
+            getView().findViewById(frameResPaddingIds[index]).setVisibility(View.VISIBLE);
+            if (paddingPanelIndex >= 0 && paddingPanelIndex < frameResPaddingIds.length) {
+                getView().findViewById(frameResPaddingIds[paddingPanelIndex]).setVisibility(
+                        View.GONE);
             }
             Fragment fragment = getChildFragmentManager().findFragmentById(frameResIds[index]);
             if (fragment != null && fragment.getView() != null) {
