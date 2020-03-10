@@ -36,6 +36,7 @@
             android:icon="@drawable/ic_add_an_account"
             android:key="accounts_and_sign_in_slice"
             android:title="@string/accounts_category_title"
+            android:summary="@string/accounts_slice_summary"
             android:fragment="com.android.tv.settings.accounts.AccountsSliceFragment"
             custom:uri="@string/account_slice_uri"/>
         <Preference
@@ -49,6 +50,7 @@
             android:icon="@drawable/ic_policy"
             android:key="privacy"
             android:title="@string/privacy_category_title"
+            android:summary="@string/privacy_category_summary"
             android:fragment="com.android.tv.settings.privacy.PrivacyFragment"
             custom:isPreferenceVisible="false" />
         <Preference
