@@ -467,9 +467,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
 
     private void setIcon(Icon icon) {
         View view = this.getView();
-        ImageView  decorIcon = view == null ? null : (ImageView) view.findViewById(R.id.decor_icon);
+        ImageView decorIcon = view == null ? null : (ImageView) view.findViewById(R.id.decor_icon);
         if (decorIcon != null && icon != null) {
+            TextView decorTitle = view.findViewById(R.id.decor_title);
+            decorTitle.setMaxWidth(getResources().getDimensionPixelSize(R.dimen.decor_title_width));
             decorIcon.setImageDrawable(icon.loadDrawable(mContextThemeWrapper));
+            decorIcon.setVisibility(View.VISIBLE);
+        } else {
+            decorIcon.setVisibility(View.GONE);
         }
         mScreenIcon = icon;
     }
