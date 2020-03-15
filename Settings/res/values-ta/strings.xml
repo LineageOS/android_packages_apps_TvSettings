@@ -38,8 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> கணக்குகள்</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> கணக்கு</item>
     </plurals>
-    <!-- no translation found for accounts_slice_summary (1571012157154521119) -->
-    <skip />
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"மீடியா சேவைகள், Assistant, பேமெண்ட்டுகள்"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"நெட்வொர்க் &amp; இணையம்"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"ஒலி"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ஆப்ஸ்"</string>
@@ -51,12 +50,9 @@
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> துணைக்கருவி</item>
     </plurals>
     <string name="help_and_feedback_category_title" msgid="6922908437959528460">"உதவியும் கருத்தும்"</string>
-    <!-- no translation found for display_and_sound_category_title (9203309625380755860) -->
-    <skip />
-    <!-- no translation found for privacy_category_title (8552430590908463601) -->
-    <skip />
-    <!-- no translation found for privacy_category_summary (3534434883380511043) -->
-    <skip />
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"டிஸ்ப்ளேவும் சத்தமும்"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"தனியுரிமை"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"இருப்பிடம், உபயோகம் &amp; பிழை கண்டறிதல், விளம்பரங்கள்"</string>
     <string name="add_account" msgid="7386223854837017129">"கணக்கைச் சேர்"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"கணக்கை அகற்று"</string>
     <string name="account_sync" msgid="4315295293211313989">"ஒத்திசைத்த ஆப்ஸைத் தேர்ந்தெடு"</string>
@@ -700,8 +696,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"தானாக மீட்டெடு"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"சாதனத்தை மீட்டமை"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"உங்கள் Google கணக்கு, முறைமை மற்றும் ஆப்ஸின் தரவு, அமைப்புகள், மேலும் இறக்கிய ஆப்ஸ் உள்ளிட்ட சாதனத்தின் அகச் சேமிப்பகத்தில் உள்ள எல்லா தரவையும் இது அழிக்கும்"</string>
-    <!-- no translation found for confirm_factory_reset_description (1337483463207721713) -->
-    <skip />
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"உங்கள் தனிப்பட்ட தகவல்கள் அனைத்தையும் பதிவிறக்கப்பட்ட ஆப்ஸையும் இந்தச் சாதனத்தில் இருந்து அழிக்கவா? இதை நீங்கள் செயல்தவிர்க்க இயலாது!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"எல்லாம் அழி"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g>க்கான பெயரைத் தேர்ந்தெடுக்கவும்"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"பிற சாதனங்களிலிருந்து அனுப்பும்போது அல்லது அவற்றுடன் இணைக்கும்போது அடையாளங்காண உதவும் வகையில், உங்கள் சாதனத்திற்குப் பெயரிடவும்."</string>
@@ -775,20 +770,12 @@
     <string name="title_data_saver" msgid="7500278996154002792">"டேட்டா சேமிப்பு"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"மொபைல் டேட்டாவைப் பயன்படுத்த வீடியோ தரத்தைத் தானாகவே சரிசெய்யுசெய்யும்"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"டேட்டா உபயோகமும் விழிப்பூட்டல்களும்"</string>
-    <!-- no translation found for disabled_by_policy_title (2220484346213756472) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_adjust_volume (4229779946666263271) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (8642280178608881544) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_sms (5721045390560951358) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_camera (6576557964422257426) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_screen_capture (5774035841010091253) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_suspend_packages (6500185610058872758) -->
-    <skip />
-    <!-- no translation found for default_admin_support_msg (7913455019068370350) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"செயல் அனுமதிக்கப்படவில்லை"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"ஒலியளவை மாற்ற முடியாது"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"அழைப்பு அனுமதிக்கப்படவில்லை"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS அனுமதிக்கப்படவில்லை"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"கேமரா அனுமதிக்கப்படவில்லை"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"ஸ்கிரீன்ஷாட் அனுமதிக்கப்படவில்லை"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"இந்தப் பயன்பாட்டைத் திறக்க முடியாது"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"கேள்விகள் இருந்தால், IT நிர்வாகியைத் தொடர்புகொள்ளவும்"</string>
 </resources>
