@@ -27,7 +27,6 @@ import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FeatureFactory;
-import com.android.tv.settings.system.development.DevelopmentFragment;
 
 /**
  * The "Help & feedback" screen in TV settings.
@@ -35,7 +34,6 @@ import com.android.tv.settings.system.development.DevelopmentFragment;
 @Keep
 public class HelpFragment extends SettingsPreferenceFragment {
 
-    private static final String KEY_FEEDBACK = "feedback";
     private static final String KEY_HELP = "help_center";
 
     @Override
@@ -53,9 +51,6 @@ public class HelpFragment extends SettingsPreferenceFragment {
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         switch (preference.getKey()) {
-            case KEY_FEEDBACK:
-                DevelopmentFragment.captureBugReport(getActivity());
-                return true;
             case KEY_HELP:
                 FeatureFactory.getFactory(getActivity()).getSupportFeatureProvider().startSupport(
                         getActivity());
