@@ -38,8 +38,7 @@
       <item quantity="one">ගිණුම් <xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g></item>
       <item quantity="other">ගිණුම් <xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g></item>
     </plurals>
-    <!-- no translation found for accounts_slice_summary (1571012157154521119) -->
-    <skip />
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"මාධ්‍ය සේවා, සහකරු, ගෙවීම්"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"ජාලය සහ අන්තර්ජාලය"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"හඬ"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"යෙදුම්"</string>
@@ -51,12 +50,9 @@
       <item quantity="other">ආයිත්තම් <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g></item>
     </plurals>
     <string name="help_and_feedback_category_title" msgid="6922908437959528460">"උදවු සහ ප්‍රතිපෝෂණ"</string>
-    <!-- no translation found for display_and_sound_category_title (9203309625380755860) -->
-    <skip />
-    <!-- no translation found for privacy_category_title (8552430590908463601) -->
-    <skip />
-    <!-- no translation found for privacy_category_summary (3534434883380511043) -->
-    <skip />
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"සංදර්ශකය හා ශබ්දය"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"පෞද්ගලිකත්වය"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"ස්ථානය, භාවිතය හා දෝෂ විනිශ්චය, දැන්වීම්"</string>
     <string name="add_account" msgid="7386223854837017129">"ගිණුම එක් කරන්න"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"ගිණුම ඉවත් කරන්න"</string>
     <string name="account_sync" msgid="4315295293211313989">"සමමුහුර්ත කළ යෙදුම් තෝරන්න"</string>
@@ -700,8 +696,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"ස්වයංක්‍රීය ප්‍රතිසාධනය"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"උපාංගය යළි පිහිටුවන්න"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"මෙමගින් ඔබේ Google ගිණුම, පද්ධති සහ යෙදුම් දත්ත සහ සැකසීම්, සහ බාගත් යෙදුම් ඇතුළුව, ඔබේ උපාංගයේ අභ්‍යන්තර ආචයනයෙන් සියලුම දත්ත මකා දමනු ඇත"</string>
-    <!-- no translation found for confirm_factory_reset_description (1337483463207721713) -->
-    <skip />
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"ඔබේ සියලු පෞද්ගලික තොරතුරු සහ බාගත් යෙදුම් මකන්නද? ඔබට මෙම ක්‍රියාව ආපසු හැරවිය නොහැක!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"සියල්ල මකන්න"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"ඔබේ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> සඳහා නමක් තෝරන්න"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"ඔබගේ උපාංගයට වෙනත් උපාංගවලින් විකාශය කරන හෝ සබඳින විට හඳුනා ගැනීමට උදවු වීමට නමක් දෙන්න."</string>
@@ -775,20 +770,12 @@
     <string name="title_data_saver" msgid="7500278996154002792">"දත්ත සුරැකුම"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"ජංගම දත්ත අඩුවෙන් භාවිත කිරීමට වීඩියෝ ගුණත්වය ස්වයංක්‍රීයව ගළපන්න"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"දත්ත භාවිතය සහ ඇඟවීම්"</string>
-    <!-- no translation found for disabled_by_policy_title (2220484346213756472) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_adjust_volume (4229779946666263271) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (8642280178608881544) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_sms (5721045390560951358) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_camera (6576557964422257426) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_screen_capture (5774035841010091253) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_suspend_packages (6500185610058872758) -->
-    <skip />
-    <!-- no translation found for default_admin_support_msg (7913455019068370350) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"ක්‍රියාවට ඉඩ නොදේ"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"හඬ පරිමාව වෙනස් කළ නොහැකිය"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"ඇමතීමට ඉඩ නොදේ"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS සඳහා ඉඩ නොදේ"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"කැමරාවට ඉඩ නොදේ"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"තිර රුවට ඉඩ නොදේ"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"මෙම යෙදුම විවෘත කළ නොහැකිය"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"ඔබට ප්‍රශ්න තිබේ නම්, ඔබේ තොරතුරු තාක්‍ෂණ පරිපාලකයා සම්බන්ධ කර ගන්න."</string>
 </resources>
