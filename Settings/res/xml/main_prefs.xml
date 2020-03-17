@@ -94,7 +94,7 @@
             custom:isPreferenceVisible="false"
             custom:uri="@string/connected_devices_slice_uri"/>
         <Preference
-            android:iconSpaceReserved="true"
+            android:icon="@drawable/ic_help_outline"
             android:key="help_and_feedback"
             android:title="@string/help_and_feedback_category_title"
             android:fragment="com.android.tv.settings.help.HelpFragment"
