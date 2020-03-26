@@ -45,6 +45,15 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
     private static final String KEY_ENABLE = "enable";
     private static final String KEY_SERVICE = "service";
 
+    /**
+     * Setting specifying if the accessibility shortcut is enabled.
+     *
+     * @deprecated this setting is no longer in use.
+     */
+    @Deprecated
+    private static final String ACCESSIBILITY_SHORTCUT_ENABLED =
+            "accessibility_shortcut_enabled";
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.accessibility_shortcut, null);
@@ -56,7 +65,7 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
         });
 
         boolean shortcutEnabled = Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_SHORTCUT_ENABLED, 1) == 1;
+                ACCESSIBILITY_SHORTCUT_ENABLED, 1) == 1;
 
         enablePref.setChecked(shortcutEnabled);
         setAccessibilityShortcutEnabled(shortcutEnabled);
@@ -81,7 +90,7 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
 
     private void setAccessibilityShortcutEnabled(boolean enabled) {
         Settings.Secure.putInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_SHORTCUT_ENABLED, enabled ? 1 : 0);
+                ACCESSIBILITY_SHORTCUT_ENABLED, enabled ? 1 : 0);
         final Preference servicePref = findPreference(KEY_SERVICE);
         servicePref.setEnabled(enabled);
     }
