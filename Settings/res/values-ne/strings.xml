@@ -38,8 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> खाताहरू</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> खाता</item>
     </plurals>
-    <!-- no translation found for accounts_slice_summary (1571012157154521119) -->
-    <skip />
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"मिडिया सेवा, सहायक, भुक्तानी"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"नेटवर्क र इन्टरनेट"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"ध्वनि"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"अनुप्रयोगहरू"</string>
@@ -50,13 +49,10 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> सामग्रीहरू</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> सामग्री</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"मद्दत तथा प्रतिक्रिया"</string>
-    <!-- no translation found for display_and_sound_category_title (9203309625380755860) -->
-    <skip />
-    <!-- no translation found for privacy_category_title (8552430590908463601) -->
-    <skip />
-    <!-- no translation found for privacy_category_summary (3534434883380511043) -->
-    <skip />
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"डिस्प्ले तथा ध्वनि"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"मद्दत र प्रतिक्रिया"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"गोपनीयता"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"स्थान, प्रयोग र निदान, विज्ञापनहरू"</string>
     <string name="add_account" msgid="7386223854837017129">"खाता थप्नुहोस्"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"खाता हटाउनुहोस्"</string>
     <string name="account_sync" msgid="4315295293211313989">"सिंक गरिएको अनुप्रयोगहरू छनौट गर्नुहोस्"</string>
@@ -140,7 +136,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"सामान्यत ०००० वा १२३४"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"जोड"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"रद्द गर्नुहोस्"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"बगसम्बन्धी रिपोर्ट लिनुहोस्"</string>
+    <string name="send_feedback" msgid="936698637869795473">"प्रतिक्रिया पठाउनुहोस्"</string>
     <string name="launch_help" msgid="2607478763131952469">"मद्दत केन्द्र"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"मिति र समय"</string>
@@ -700,8 +696,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"स्वचालित पुन: भण्डार"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"उपकरण रिसेट गर्नुहोस्"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"यसले तपाईंको उपकरणको आन्तरिक भण्डारण र निम्न अनुसारका सबै डेटा भण्डारणहरू मेटाउने छ: तपाईंको Google खाता, प्रणाली र अनुप्रयोग डेटा र सेटिङहरू, र डाउनलोड भएका अनुप्रयोगहरू"</string>
-    <!-- no translation found for confirm_factory_reset_description (1337483463207721713) -->
-    <skip />
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"यो यन्त्रबाट तपाईंका सबै व्यक्तिगत जानकारी र डाउनलोड गरिएका अनुप्रयोगहरू मेटाउने हो? तपाईं यो कार्य उल्टाउन सक्नुहुन्न!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"सबै मेटाउनुहोस्"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"आफ्नो <xliff:g id="DEVICEMODEL">%1$s</xliff:g> को लागि नाम छनौट गर्नुहोस्"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"अन्य यन्त्रहरूबाट तपाईंको यन्त्रमा casting वा जडान गर्दा पहिचान गर्नमा मद्दत गर्नका लागि यसलाई कुनै नाम दिनुहोस्।"</string>
@@ -782,6 +777,5 @@
     <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"यो क्यामेरालाई अनुमति छैन"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"स्क्रिनसटलाई अनुमति छैन"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"यो अनुप्रयोग खोल्न सकिँदैन"</string>
-    <!-- no translation found for default_admin_support_msg (7913455019068370350) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"तपाईंसँग प्रश्नहरू छन् भने आफ्नो IT प्रशासकलाई सम्पर्क गर्नुहोस्"</string>
 </resources>
