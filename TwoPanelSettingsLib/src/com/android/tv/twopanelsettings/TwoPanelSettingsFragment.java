@@ -464,6 +464,23 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         void onNavigateBack();
     }
 
+    /**
+     * Implement this if the component (typically a Fragment) is preview-able and would like to get
+     * some lifecycle-like callback(s) when the component becomes the main panel.
+     */
+    public interface PreviewableComponentCallback {
+
+        /**
+         * Lifecycle-like callback when the component becomes main panel from the preview panel. For
+         * Fragment, this will be invoked right after the preview fragment sliding into the main
+         * panel.
+         *
+         * @param forward means whether the component arrives at main panel when users are
+         *    navigating forwards (deeper into the TvSettings tree).
+         */
+        void onArriveAtMainPanel(boolean forward);
+    }
+
     private class RootViewOnKeyListener implements View.OnKeyListener {
 
         @Override
@@ -616,6 +633,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             if (!isAdded()) {
                 return;
             }
+            Fragment fragmentToBecomeMainPanel =
+                    getChildFragmentManager().findFragmentById(frameResIds[index]);
+            Fragment fragmentToBecomePreviewPanel =
+                    getChildFragmentManager().findFragmentById(frameResIds[index + 1]);
+            // Positive value means that the panel is scrolling to right (navigate forward for LTR
+            // or navigate backwards for RTL) and vice versa; 0 means that this is likely invoked
+            // by GlobalLayoutListener and there's no actual sliding.
+            int distanceToScrollToRight;
             int panelWidth = getResources().getDimensionPixelSize(
                     R.dimen.tp_settings_preference_pane_width);
             View scrollToPanelOverlay = getView().findViewById(frameResOverlayIds[index]);
@@ -624,10 +649,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     isRTL() ? mScrollView.getScrollX() >= mMaxScrollX - panelWidth * index
                             : mScrollView.getScrollX() <= panelWidth * index;
             int paddingPanelIndex = -1;
-            Fragment preview = getChildFragmentManager().findFragmentById(frameResIds[index + 1]);
-            boolean hasPreviewFragment = preview != null && !(preview instanceof DummyFragment);
+            boolean hasPreviewFragment = fragmentToBecomePreviewPanel != null
+                    && !(fragmentToBecomePreviewPanel instanceof DummyFragment);
             if (smoothScroll) {
                 int animationEnd = isRTL() ? mMaxScrollX - panelWidth * index : panelWidth * index;
+                distanceToScrollToRight = animationEnd - mScrollView.getScrollX();
                 // Slide animation
                 ObjectAnimator slideAnim = ObjectAnimator.ofInt(mScrollView, "scrollX",
                         mScrollView.getScrollX(), animationEnd);
@@ -654,6 +680,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 }
             } else {
                 int scrollToX = isRTL() ? mMaxScrollX - panelWidth * index : panelWidth * index;
+                distanceToScrollToRight = scrollToX - mScrollView.getScrollX();
                 mScrollView.scrollTo(scrollToX, 0);
                 scrollToPanelOverlay.setAlpha(0f);
                 previewPanelOverlay.setAlpha(hasPreviewFragment ? 1f : 0f);
@@ -664,19 +691,28 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 getView().findViewById(frameResPaddingIds[paddingPanelIndex]).setVisibility(
                         View.GONE);
             }
-            Fragment fragment = getChildFragmentManager().findFragmentById(frameResIds[index]);
-            if (fragment != null && fragment.getView() != null) {
-                fragment.getView().requestFocus();
+            if (fragmentToBecomeMainPanel != null && fragmentToBecomeMainPanel.getView() != null) {
+                fragmentToBecomeMainPanel.getView().requestFocus();
                 for (int resId : frameResIds) {
                     Fragment f = getChildFragmentManager().findFragmentById(resId);
                     if (f != null) {
                         View view = f.getView();
                         if (view != null) {
                             view.setImportantForAccessibility(
-                                    f == fragment ? View.IMPORTANT_FOR_ACCESSIBILITY_YES :
-                                            View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS);
+                                    f == fragmentToBecomeMainPanel
+                                            ? View.IMPORTANT_FOR_ACCESSIBILITY_YES
+                                            : View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS);
                         }
                     }
+                }
+                if (fragmentToBecomeMainPanel instanceof PreviewableComponentCallback) {
+                    if (distanceToScrollToRight > 0) {
+                        ((PreviewableComponentCallback) fragmentToBecomeMainPanel)
+                                .onArriveAtMainPanel(!isRTL());
+                    } else if (distanceToScrollToRight < 0) {
+                        ((PreviewableComponentCallback) fragmentToBecomeMainPanel)
+                                .onArriveAtMainPanel(isRTL());
+                    } // distanceToScrollToRight being 0 means no actual panel sliding; thus noop.
                 }
             }
         });
