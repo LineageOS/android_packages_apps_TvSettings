@@ -16,6 +16,10 @@
 
 package com.android.tv.settings.connectivity;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -184,6 +188,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         switch (preference.getKey()) {
             case KEY_WIFI_ENABLE:
                 mConnectivityListener.setWifiEnabled(mEnableWifiPref.isChecked());
+                logToggleInteracted(
+                        TvSettingsEnums.NETWORK_WIFI_ON_OFF, mEnableWifiPref.isChecked());
                 if (mMetricsFeatureProvider != null) {
                     if (mEnableWifiPref.isChecked()) {
                         mMetricsFeatureProvider.action(getContext(),
@@ -201,15 +207,22 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 mCollapsePref.setTitle(collapse
                         ? R.string.wifi_setting_see_all : R.string.wifi_setting_see_fewer);
                 mWifiNetworksCategory.setCollapsed(collapse);
+                logEntrySelected(
+                        collapse
+                                ? TvSettingsEnums.NETWORK_SEE_FEWER
+                                : TvSettingsEnums.NETWORK_SEE_ALL);
                 return true;
             case KEY_WIFI_ALWAYS_SCAN:
                 Settings.Global.putInt(getActivity().getContentResolver(),
                         Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE,
                         mAlwaysScan.isChecked() ? 1 : 0);
+                logToggleInteracted(
+                        TvSettingsEnums.NETWORK_ALWAYS_SCANNING_NETWORKS, mAlwaysScan.isChecked());
                 return true;
             case KEY_ETHERNET_STATUS:
                 return true;
             case KEY_WIFI_ADD:
+                logEntrySelected(TvSettingsEnums.NETWORK_ADD_NEW_NETWORK);
                 mMetricsFeatureProvider.action(getActivity(),
                         MetricsProto.MetricsEvent.ACTION_WIFI_ADD_NETWORK);
                 break;
@@ -252,7 +265,17 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mEthernetCategory.setVisible(ethernetAvailable);
         mEthernetStatusPref.setVisible(ethernetAvailable);
         mEthernetProxyPref.setVisible(ethernetAvailable);
+        mEthernetProxyPref.setOnPreferenceClickListener(
+                preference -> {
+                    logEntrySelected(TvSettingsEnums.NETWORK_ETHERNET_PROXY_SETTINGS);
+                    return false;
+                });
         mEthernetDhcpPref.setVisible(ethernetAvailable);
+        mEthernetDhcpPref.setOnPreferenceClickListener(
+                preference -> {
+                    logEntrySelected(TvSettingsEnums.NETWORK_ETHERNET_IP_SETTINGS);
+                    return false;
+                });
 
         if (ethernetAvailable) {
             final boolean ethernetConnected =
@@ -304,11 +327,18 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             }
             if (accessPoint.isActive() && !isCaptivePortal(accessPoint)) {
                 pref.setFragment(WifiDetailsFragment.class.getName());
+                // No need to track entry selection as new page will be focused
+                pref.setOnPreferenceClickListener(preference -> false);
                 WifiDetailsFragment.prepareArgs(pref.getExtras(), accessPoint);
                 pref.setIntent(null);
             } else {
                 pref.setFragment(null);
                 pref.setIntent(WifiConnectionActivity.createIntent(getContext(), accessPoint));
+                pref.setOnPreferenceClickListener(
+                        preference -> {
+                            logEntrySelected(TvSettingsEnums.NETWORK_NOT_CONNECTED_AP);
+                            return false;
+                        });
             }
             pref.setOrder(index++);
             // Double-adding is harmless
@@ -354,5 +384,10 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.SETTINGS_NETWORK_CATEGORY;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.NETWORK;
     }
 }
