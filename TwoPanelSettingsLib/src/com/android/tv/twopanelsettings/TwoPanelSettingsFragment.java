@@ -155,10 +155,17 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     /** Extend this method to provide the initial screen **/
     public abstract void onPreferenceStartInitialScreen();
 
-    private boolean shouldDisplay(String fragment) {
+    private boolean isPreferenceFragment(String fragment) {
         try {
-            return LeanbackPreferenceFragment.class.isAssignableFrom(Class.forName(fragment))
-                    || InfoFragment.class.isAssignableFrom(Class.forName(fragment));
+            return LeanbackPreferenceFragment.class.isAssignableFrom(Class.forName(fragment));
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException("Fragment class not found.", e);
+        }
+    }
+
+    private boolean isInfoFragment(String fragment) {
+        try {
+            return InfoFragment.class.isAssignableFrom(Class.forName(fragment));
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("Fragment class not found.", e);
         }
@@ -901,10 +908,12 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     /** Creates preview preference fragment. */
     public Fragment onCreatePreviewFragment(Fragment caller, Preference preference) {
         if (preference.getFragment() != null) {
-            if (!shouldDisplay(preference.getFragment())) {
+            if (!isInfoFragment(preference.getFragment())
+                    && !isPreferenceFragment(preference.getFragment())) {
                 return null;
             }
-            if (preference instanceof HasSliceUri) {
+            if (isPreferenceFragment(preference.getFragment())
+                    && preference instanceof HasSliceUri) {
                 HasSliceUri slicePref = (HasSliceUri) preference;
                 if (slicePref.getUri() == null || !isUriValid(slicePref.getUri())) {
                     return null;
