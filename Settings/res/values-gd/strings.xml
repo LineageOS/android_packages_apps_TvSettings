@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="settings_app_name">Roghainnean</string>
+    <string name="launcher_settings_app_name">Roghainnean</string>
+    <string name="launcher_network_app_name">Lìonra</string>
+    <string name="header_category_suggestions">Molaidhean</string>
+    <string name="header_category_quick_settings">Grad-roghainnean</string>
+    <string name="header_category_general_settings">Na roghainnean coitcheann</string>
+    <string name="dismiss_suggestion">Leig seachad am moladh</string>
+    <string name="hotwording_title">Mothachadh dha “OK Google”</string>
+    <string name="hotwording_summary">Bruidhinn ri Google Assistant uair sam bith</string>
+    <string name="header_category_device">Uidheam</string>
+    <string name="header_category_personal">Pearsanta</string>
+    <string name="connect_to_network">Ceangail ri lìonra</string>
+    <string name="add_an_account">Cuir cunntas ris</string>
+    <string name="accounts_category_title">Cunntasan ⁊ clàradh a-steach</string>
+    <string name="accounts_category_summary_no_account">Chan eil cunntas ann fhathast</string>
+    <plurals name="accounts_category_summary">
+        <item quantity="one"><xliff:g id="accounts_number">%1$d</xliff:g> chunntas</item>
+        <item quantity="two"><xliff:g id="accounts_number">%1$d</xliff:g> chunntas</item>
+        <item quantity="few"><xliff:g id="accounts_number">%1$d</xliff:g> cunntasan</item>
+        <item quantity="other"><xliff:g id="accounts_number">%1$d</xliff:g> cunntas</item>
+    </plurals>
+    <string name="connectivity_network_category_title">An lìonra ⁊ an t-eadar-lìon</string>
+    <string name="applications_category_title">Aplacaidean</string>
+    <string name="device_pref_category_title">Roghainnean an uidheim</string>
+    <string name="remotes_and_accessories_category_title">Innealan cèine ⁊ co-innealan</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device">Chan eil uidheam Bluetooth ceangailte</string>
+    <plurals name="remotes_and_accessories_category_summary">
+        <item quantity="one"><xliff:g id="accessories_number">%1$d</xliff:g> cho-uidheam</item>
+        <item quantity="two"><xliff:g id="accessories_number">%1$d</xliff:g> cho-uidheam</item>
+        <item quantity="few"><xliff:g id="accessories_number">%1$d</xliff:g> co-uidheaman</item>
+        <item quantity="other"><xliff:g id="accessories_number">%1$d</xliff:g> co-uidheam</item>
+    </plurals>
+    <string name="sync_now">Sioncronaich an-dràsta</string>
+    <string name="sync_disabled">À comas</string>
+    <string name="connectivity_wifi">WiFi</string>
+    <string name="connectivity_summary_ethernet_connected">Tha Ethernet ceangailte</string>
+    <string name="connectivity_summary_no_network_connected">Chan eil lìonra ceangailte</string>
+    <string name="connectivity_summary_wifi_disabled">Tha WiFi dheth</string>
+    <string name="wifi_setting_enable_wifi">WiFi</string>
+    <string name="connectivity_hint_message">Ceangail ri lìonra</string>
+    <string name="apps_recently_used_category_title">Na h-aplacaidean a bha fosgailte o chionn ghoirid</string>
+    <string name="apps_see_all_apps">Faic na h-aplacaidean uile</string>
+    <string name="all_apps_title">A h-uile aplacaid</string>
+    <string name="all_apps_show_system_apps">Seall aplacaidean an t-siostaim</string>
+    <string name="all_apps_installed">Aplacaidean stàlaichte</string>
+    <string name="all_apps_disabled">Aplacaidean à comas</string>
+    <string name="device_apps">Aplacaidean</string>
+    <string name="device_reset">Ath-shuidhich</string>
+    <string name="device_calibration">Cailbhreachadh</string>
+    <string name="surround_sound_select_formats">Tagh fòrmatan</string>
+    <string name="surround_sound_category_title">Fuaim cuairteachaidh</string>
+    <string name="surround_sound_format_ac3">AC3 (Dolby Digital)</string>
+    <string name="surround_sound_format_e_ac3">E-AC3 (Dolby Digital Plus/DD+)</string>
+    <string name="surround_sound_format_dts">DTS</string>
+    <string name="surround_sound_format_dts_hd">DTS-HD</string>
+    <string name="surround_sound_format_iec61937">IEC61937</string>
+    <string name="surround_sound_auto_info">An aire: Dh’fhaoidte nach obraich roghainn na fuaime mur innis an t-uidheam gu ceart dè na fòrmatan a chuireas e taic ris.</string>
+    <string name="surround_sound_auto_summary">Fèin-obrachail: Cleachd na fòrmatan ris an cuir an t-uidheam agad taic (mholamaid seo)</string>
+    <string name="surround_sound_none_summary">Chan eil gin: Na cleachd fuaim cuairteachaidh idir</string>
+    <string name="surround_sound_manual_summary">A làimh: Tagh dè na fòrmatan a chleachdas tu</string>
+    <string name="bluetooth_pair">Paidhrich</string>
+    <string name="system_date_time">Ceann-là ⁊ an t-àm</string>
+    <string name="system_language">Cànan</string>
+    <string name="system_keyboard_autofill">Am meur-chlàr ⁊ fèin-lìonadh</string>
+    <string name="system_autofill">Fèin-lìonadh</string>
+    <string name="system_home">An sgrìn dachaigh</string>
+    <string name="system_search">Lorg</string>
+    <string name="system_inputs_devices">Ion-chuir ⁊ uidheman</string>
+    <string name="system_home_theater_control">Stiùireadh tèatair-dhachaigh</string>
+    <string name="system_accessibility">So-ruigsinneachd</string>
+    <string name="about_system_update">Ùrachadh an t-siostaim</string>
+    <string name="device_name">Ainm an uidheim</string>
+    <string name="about_legal_info">Fiosrachadh laghail</string>
+    <string name="about_legal_license">Ceadachasan Open Source</string>
+    <string name="about_version">Tionndadh</string>
+    <string name="about_build">Togail</string>
+    <string name="about_ads">Sanasachd</string>
+    <string name="selinux_status">Staid SELinux</string>
+    <string name="selinux_status_disabled">À comas</string>
+    <string name="selinux_status_permissive">Ceadachail</string>
+    <string name="selinux_status_enforcing">Teann</string>
+    <string name="kernel_version">Ceann-là an eitein</string>
+    <string name="status_bt_address">Seòladh Bluetooth</string>
+    <string name="legal_information">Fiosrachadh laghail</string>
+    <string name="copyright_title">Còir-lethbhreac</string>
+    <string name="license_title">Ceadachas</string>
+    <string-array name="wifi_signal_strength">
+        <item>Poor</item>
+        <item>Fair</item>
+        <item>Math</item>
+        <item>Excellent</item>
+    </string-array>
+    <string name="title_signal_strength">Neart an t-siognail</string>
+    <string name="title_ip_address">Seòladh IP</string>
+    <string name="title_internet_connection">Ceangal eadar-lìn</string>
+    <string name="wifi_setting_see_all">Seall na h-uile</string>
+    <string name="title_wifi_gateway">Bealach:</string>
+    <string name="wifi_action_try_again">Feuch ris a-rithist</string>
+    <string name="wifi_setup_action_dont_change_network">Lean air adhart</string>
+    <string name="wifi_setup_action_change_network">Atharraich an lìonra</string>
+    <string name="wifi_action_change_network">Atharraich</string>
+    <string name="wifi_action_advanced_options_title">Roghainnean adhartach</string>
+    <string name="title_wifi_eap_method">Tagh modh EAP airson <xliff:g id="ssid">%1$s</xliff:g></string>
+    <string name="title_wifi_phase2_authentication">Tagh dearbhadh phase2 airson <xliff:g id="ssid">%1$s</xliff:g></string>
+    <string name="title_wifi_identity">Cuir a-steach dearbh-aithne airson <xliff:g id="ssid">%1$s</xliff:g></string>
+    <string name="title_wifi_anonymous_identity">Cuir a-steach dearbh-aithne gun urra airson <xliff:g id="ssid">%1$s</xliff:g></string>
+    <string name="wifi_setup_summary_title_connected">Tha ceangal agad ri <xliff:g id="ssid">%1$s</xliff:g></string>
+    <string name="storage_apps_usage">Aplacaidean</string>
+    <string name="storage_music_usage">Fuaimean</string>
+    <string name="storage_media_misc_usage">Measgaichte</string>
+    <string name="storage_eject">Gluais a-mach</string>
+    <string name="storage_reset_section">Ath-shuidhich</string>
+    <string name="storage_wizard_forget_action">Dìochuimhnich</string>
+    <string name="storage_new_action_browse">Rùraich</string>
+    <string name="storage_new_action_eject">Gluais a-mach</string>
+    <string name="learn_more_action">Barrachd fiosrachaidh</string>
+    <string name="system_set_time_zone">Suidhich an roinn-tìde</string>
+    <string-array name="auto_date_time_entries">
+        <item>Use network-provided time</item>
+        <item>Dheth</item>
+    </string-array>
+    <string-array name="auto_date_time_ts_entries">
+        <item>Use network-provided time</item>
+        <item>Use transport stream-provided time</item>
+        <item>Dheth</item>
+    </string-array>
+    <string name="location_services">Seirbheisean ionaid</string>
+    <string name="on">Air</string>
+    <string name="off">Dheth</string>
+    <string name="system_services">Seirbheisean</string>
+    <string name="accessibility_captions">Fo-thiotalan</string>
+    <string name="captions_display_on">Air</string>
+    <string name="captions_display_off">Dheth</string>
+    <string name="captions_configure">Rèitich</string>
+    <string name="captions_language">Cànan</string>
+    <string name="captions_textsize">Meud an teacsa</string>
+    <string name="captions_fontfamily">Teaghlach a’ chrutha-chlò</string>
+    <string name="captions_backgroundcolor">Dath a’ chùlaibh</string>
+    <string name="captions_style_0">Geal air dubh</string>
+    <string name="captions_style_1">Dubh air geal</string>
+    <string name="captions_style_custom">Gnàthaichte</string>
+    <string name="color_white">Geal</string>
+    <string name="color_black">Dubh</string>
+    <string name="color_red">Dearg</string>
+    <string name="color_green">Uaine</string>
+    <string name="color_blue">Gorm</string>
+    <string name="color_cyan">Saidhean</string>
+    <string name="color_yellow">Buidhe</string>
+    <string name="system_accessibility_status">Cuir an comas</string>
+    <string name="system_accessibility_config">Rèiteachadh</string>
+    <string name="system_debugging">Dì-bhugachadh</string>
+    <string name="system_drawing">Peantadh</string>
+    <string name="system_apps">Aplacaidean</string>
+    <string name="system_always_check">Thoir sùil an-còmhnaidh</string>
+    <string name="system_email_address">Seòladh puist-d</string>
+    <string name="system_show_touches">Seall na suathaidhean</string>
+    <string name="action_on_title">Air</string>
+    <string name="action_off_title">Dheth</string>
+    <string name="action_on_description">Air</string>
+    <string name="action_off_description">Dheth</string>
+    <string name="system_hdcp_checking_always">An-còmhnaidh</string>
+    <string name="system_hw_overdraw_off">Dheth</string>
+    <string name="no_application">Na dèan dad</string>
+    <string name="track_frame_time_off">Dheth</string>
+    <string name="tts_rate_very_slow">Glè shlaodach</string>
+    <string name="tts_rate_fast">Luath</string>
+    <string name="tts_rate_very_fast">Glè luath</string>
+    <string name="title_settings">Roghainnean <xliff:g id="name" example="Gboard">%1$s</xliff:g></string>
+    <string name="title_configure">Rèitich</string>
+    <string name="title_current_autofill_service">Seirbheis fèin-lìonaidh làithreach</string>
+    <string name="title_select_autofill_service">Tagh seirbheis fèin-lìonaidh</string>
+    <string name="autofill_confirmation_message">        &lt;b&gt;Dèan cinnteach gu bheil earbsa agad san aplacaid seo&lt;/b&gt;
+        &lt;br/&gt;
+        &lt;br/&gt;
+        Cleachdaidh &lt;xliff:g id="app_name" example="Password service"&gt;%1$s&lt;/xliff:g&gt; na tha air an sgrìn agad
+        airson faighinn a-mach dè ghabhas fhèin-lìonadh.
+        </string>
+    <string name="whichApplication">Coilean seo le</string>
+    <string name="justOnceOption">Aon turas a-mhàin</string>
+    <string name="inputs_hide">Falaichte</string>
+    <string name="input_header_names">Ainm</string>
+    <string name="restricted_profile_configure_title">Roghainnean</string>
+    <string name="restricted_profile_allowed">Ceadaichte</string>
+    <string name="pin_enter_pin">Cuir a-steach am PIN</string>
+    <string name="device_apps_app_management_force_stop">Èignich stad</string>
+    <string name="device_apps_app_management_uninstall">Dì-stàlaich</string>
+    <string name="device_apps_app_management_disable">Cuir à comas</string>
+    <string name="device_apps_app_management_enable">Cuir an comas</string>
+    <string name="device_apps_app_management_clear_data">Falamhaich an dàta</string>
+    <string name="device_apps_app_management_notifications">Brathan</string>
+    <string name="settings_on">Air</string>
+    <string name="settings_off">Dheth</string>
+    <string name="device_daydreams_none">Cuir an sgrìn dheth</string>
+    <string name="factory_reset_device">Ath-shuidhich an t-uidheam</string>
+    <string name="select_device_name_description">Thoir ainm air an uidheam agad ach an aithnich thu e nuair a bhios tu ri tilgeil no a’ ceangal ris o uidheaman eile.</string>
+    <string name="device_name_suggestion_title">Suidhich ainm an uidheim agad</string>
+    <string name="device_name_suggestion_summary">Cleachd an t-ainm seo nuair bhios tu a’ tilgeil dealbhan-camara, videothan, agus barrachd on fhòn agad</string>
+    <string name="change_setting">Atharraich</string>
+    <string name="device_apps_permissions">Ceadan na h-aplacaid</string>
+    <string name="app_permissions_group_summary">Chaidh cead a thoirt dha <xliff:g id="count" example="10">%1$d</xliff:g> à <xliff:g id="count" example="10">%2$d</xliff:g> aplacaid</string>
+    <string name="app_permission_summary_allowed">Ceadaichte</string>
+    <string name="high_power_apps">Piseachadh na cumhachd</string>
+    <string name="high_power_apps_description">Pisich an uiread a chumhachd a chaitheas aplacaidean</string>
+    <string name="high_power_apps_empty">Chan eil aplacaid feumach air piseachadh</string>
+    <string name="high_power_on">Cha deach a phiseachadh</string>
+    <string name="high_power_off">A’ piseachadh na cumhachd</string>
+    <string name="high_power_system">Chan eil an piseachadh na cumhachd ri làimh</string>
+    <string name="manage_notification_access_title">Inntrigeadh do bhrathan</string>
+    <string name="no_notification_listeners">Cha do dh’iarr aplacaid air a stàladh inntrigeadh dha na brathan.</string>
+    <string name="notification_listener_security_warning_summary">        ’S urrainn dha na h-aplacaidean seo na brathan uile a leughadh,
+        a’ gabhail a-staigh fiosrachadh pearsanta mar ainmean an luchd-aithne agus teacsa nan teachdaireachdan a gheibh thu.
+        ’S urrainn dhaibh brathan a leigeil seachad cuideachd no na putanan gnìomhachd ’nam broinn a chur gu dol.
+    </string>
+    <string name="system_alert_window_settings">Seall thar aplacaidean eile</string>
+    <string name="permit_draw_overlay">Ceadaich gun dèid a shealltainn thar aplacaidean eile</string>
+    <string name="allow_overlay_description">Ceadaich gun dèid aplacaid a shealltainn air beulaibh aplacaidean eile a bhios tu a’ cleachdadh. Dh’fhaoidte gum bris seo a-steach air do chleachdadh nan aplacaidean eile no gun atharraich e coltas an seallaidh no giùlain aca dhut.</string>
+    <string name="write_system_settings">Atharrachadh roghainnean an t-siostaim</string>
+    <string name="write_settings_title">Faodaidh e roghainnean an t-siostaim atharrachadh</string>
+    <string name="write_settings_description">Leigidh an cead seo le aplacaid roghainnean an t-siostaim atharrachadh.</string>
+    <string name="write_settings_on">Faodaidh</string>
+    <string name="write_settings_off">Chan fhaod</string>
+    <string name="picture_in_picture_title">Dealbh am broinn dealbh</string>
+    <string name="picture_in_picture_app_detail_switch">Ceadaich dealbh am broinn dealbh</string>
+    <string name="picture_in_picture_empty_text">Chan eil aplacaid stàlaichte a chuireas taic ri dealbh am broinn dealbh</string>
+    <string name="picture_in_picture_app_detail_summary">Leigidh seo le aplacaidean gun cruthaich iad uinneag dealbh am broinn dealbh fhad ’s a bhios an aplacaid fosgailte no às dèidh dhut a fàgail (can airson cumail a’ dol a choimhead air video). Thèid an uinneag sin a shealltainn air beulaibh nan aplacaidean eile a bhios tu a’ cleachdadh.</string>
+    <string name="special_access">Inntrigeadh sònraichte nan aplacaid</string>
+    <string name="string_concat"><xliff:g id="part1">%1s</xliff:g>, <xliff:g id="part2">%2s</xliff:g></string>
+</resources>
