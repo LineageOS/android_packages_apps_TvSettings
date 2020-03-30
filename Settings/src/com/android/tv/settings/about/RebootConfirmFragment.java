@@ -30,6 +30,8 @@ import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
 
+import org.lineageos.internal.util.PowerMenuUtils;
+
 import java.util.List;
 
 @Keep
@@ -50,7 +52,11 @@ public class RebootConfirmFragment extends GuidedStepFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        setSelectedActionPosition(1);
+        if (PowerMenuUtils.isAdvancedRestartPossible(getActivity())) {
+            setSelectedActionPosition(4);
+        } else {
+            setSelectedActionPosition(1);
+        }
     }
 
     @Override
@@ -60,6 +66,13 @@ public class RebootConfirmFragment extends GuidedStepFragment {
             return new GuidanceStylist.Guidance(
                     getString(R.string.reboot_safemode_confirm),
                     getString(R.string.reboot_safemode_desc),
+                    getString(R.string.about_preference),
+                    getActivity().getDrawable(R.drawable.ic_warning_132dp)
+            );
+        } else if (PowerMenuUtils.isAdvancedRestartPossible(getActivity())) {
+            return new GuidanceStylist.Guidance(
+                    getString(R.string.system_reboot_confirm_cm),
+                    null,
                     getString(R.string.about_preference),
                     getActivity().getDrawable(R.drawable.ic_warning_132dp)
             );
@@ -82,6 +95,23 @@ public class RebootConfirmFragment extends GuidedStepFragment {
                     .id(GuidedAction.ACTION_ID_OK)
                     .title(R.string.reboot_safemode_action)
                     .build());
+        } else if (PowerMenuUtils.isAdvancedRestartPossible(context)) {
+            actions.add(new GuidedAction.Builder(context)
+                    .id(GuidedAction.ACTION_ID_OK)
+                    .title(R.string.global_action_restart_system)
+                    .build());
+            actions.add(new GuidedAction.Builder(context)
+                    .id(GuidedAction.ACTION_ID_YES)
+                    .title(R.string.global_action_restart_recovery)
+                    .build());
+            actions.add(new GuidedAction.Builder(context)
+                    .id(GuidedAction.ACTION_ID_NO)
+                    .title(R.string.global_action_restart_bootloader)
+                    .build());
+            actions.add(new GuidedAction.Builder(context)
+                    .id(GuidedAction.ACTION_ID_FINISH)
+                    .title(R.string.global_action_restart_download)
+                    .build());
         } else {
             actions.add(new GuidedAction.Builder(context)
                     .id(GuidedAction.ACTION_ID_OK)
@@ -95,7 +125,8 @@ public class RebootConfirmFragment extends GuidedStepFragment {
 
     @Override
     public void onGuidedActionClicked(GuidedAction action) {
-        if (action.getId() == GuidedAction.ACTION_ID_OK) {
+        long actionId = action.getId();
+        if (actionId != GuidedAction.ACTION_ID_CANCEL) {
             final boolean toSafeMode = getArguments().getBoolean(ARG_SAFE_MODE, false);
             final PowerManager pm =
                     (PowerManager) getActivity().getSystemService(Context.POWER_SERVICE);
@@ -105,6 +136,16 @@ public class RebootConfirmFragment extends GuidedStepFragment {
                 protected Void doInBackground(Void... params) {
                     if (toSafeMode) {
                         pm.rebootSafeMode();
+                    } else if (PowerMenuUtils.isAdvancedRestartPossible(getActivity())) {
+                        if (actionId == GuidedAction.ACTION_ID_YES) {
+                            pm.rebootCustom("recovery");
+                        } else if (actionId == GuidedAction.ACTION_ID_NO) {
+                            pm.rebootCustom("bootloader");
+                        } else if (actionId == GuidedAction.ACTION_ID_FINISH) {
+                            pm.rebootCustom("download");
+                        } else {
+                            pm.rebootCustom(null);
+                        }
                     } else {
                         pm.reboot(null);
                     }
