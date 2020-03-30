@@ -31,6 +31,8 @@ import com.android.tv.settings.R;
 
 import java.util.List;
 
+import org.lineageos.internal.util.PowerMenuUtils;
+
 @Keep
 public class RebootConfirmFragment extends GuidedStepFragment {
 
@@ -87,6 +89,20 @@ public class RebootConfirmFragment extends GuidedStepFragment {
                     .title(R.string.restart_button_label)
                     .build());
         }
+        if (PowerMenuUtils.isAdvancedRestartPossible(context)) {
+            actions.add(new GuidedAction.Builder(context)
+                    .id(GuidedAction.ACTION_ID_YES)
+                    .title(com.android.systemui.R.string.global_action_restart_recovery)
+                    .build());
+            actions.add(new GuidedAction.Builder(context)
+                    .id(GuidedAction.ACTION_ID_NO)
+                    .title(com.android.systemui.R.string.global_action_restart_bootloader)
+                    .build());
+            actions.add(new GuidedAction.Builder(context)
+                    .id(GuidedAction.ACTION_ID_FINISH)
+                    .title(com.android.systemui.R.string.global_action_restart_download)
+                    .build());
+        }
         actions.add(new GuidedAction.Builder(context)
                 .clickAction(GuidedAction.ACTION_ID_CANCEL)
                 .build());
@@ -94,7 +110,8 @@ public class RebootConfirmFragment extends GuidedStepFragment {
 
     @Override
     public void onGuidedActionClicked(GuidedAction action) {
-        if (action.getId() == GuidedAction.ACTION_ID_OK) {
+        long action_id = action.getId();
+        if (acion_id != GuidedAction.ACTION_ID_CANCEL) {
             final boolean toSafeMode = getArguments().getBoolean(ARG_SAFE_MODE, false);
             final PowerManager pm =
                     (PowerManager) getActivity().getSystemService(Context.POWER_SERVICE);
@@ -104,6 +121,12 @@ public class RebootConfirmFragment extends GuidedStepFragment {
                 protected Void doInBackground(Void... params) {
                     if (toSafeMode) {
                         pm.rebootSafeMode();
+                    } else if (action_id == GuidedAction.ACTION_ID_YES) {
+                        pm.reboot("recovery");
+                    } else if (action_id == GuidedAction.ACTION_ID_NO) {
+                        pm.reboot("bootloader");
+                    } else if (action_id == GuidedAction.ACTION_ID_FINISH) {
+                        pm.reboot("download");
                     } else {
                         pm.reboot(null);
                     }
