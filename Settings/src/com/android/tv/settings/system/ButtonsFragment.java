@@ -21,7 +21,6 @@ import android.os.Bundle;
 
 import androidx.annotation.Keep;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
