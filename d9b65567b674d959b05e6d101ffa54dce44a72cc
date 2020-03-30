@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9951cbfa_4f30306e",
+        "filename": "Settings/src/com/android/tv/settings/about/RebootConfirmFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-03-30T14:22:45Z",
+      "side": 1,
+      "message": "Missing { and }. You could as well simplify to:\n\nsetSelectedActionPosition(PowerMenuUtils.isAdvancedRestartPossible(context) ? 4 : 1);\n\nAlthough I am not sure if it fits in a single line, i.e. doesn\u0027t get over 100 chars.",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 41
+      },
+      "revId": "d9b65567b674d959b05e6d101ffa54dce44a72cc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
