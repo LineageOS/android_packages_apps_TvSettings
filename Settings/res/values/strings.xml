@@ -1734,4 +1734,18 @@
 
     <string name="default_admin_support_msg">If you have questions, contact your IT admin</string>
 
+    <!-- Title for Network connection request Dialog [CHAR LIMIT=60] -->
+    <string name="network_connection_request_dialog_title">Device to use with <xliff:g id="appName" example="ThirdPartyAppName">%1$s</xliff:g></string>
+    <!-- Message for Network connection timeout Dialog [CHAR LIMIT=NONE] -->
+    <string name="network_connection_timeout_dialog_message">No devices found. Make sure devices are turned on and available to connect.</string>
+    <!-- OK button for Network connection timeout Dialog [CHAR LIMIT=30] -->
+    <string name="network_connection_timeout_dialog_ok">Try again</string>
+    <!-- Message for Network connection error state Dialog [CHAR LIMIT=NONE] -->
+    <string name="network_connection_errorstate_dialog_message">Something came up. The application has cancelled the request to choose a device.</string>
+    <!-- Toast message when connection is successful [CHAR LIMIT=30] -->
+    <string name="network_connection_connect_successful">Connection successful</string>
+    <!-- Neutral button for Network connection request Dialog [CHAR LIMIT=30] -->
+    <string name="network_connection_request_dialog_showall">Show all</string>
+    <!--Bluetooth settings screen, text that appears in heading bar when scanning for devices -->
+    <string name="progress_scanning">Searching</string>
 </resources>
