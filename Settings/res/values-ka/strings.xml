@@ -620,8 +620,10 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"შეზღუდული პროფილის შექმნა"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"პარამეტრები"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"დაშვებული აპები"</string>
-    <!-- String.format failed for translation -->
-    <!-- no translation found for restricted_profile_configure_apps_description (7923692208224457728) -->
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
+      <item quantity="other">%d აპი დაშვებულია</item>
+      <item quantity="one">დაშვებულია 1 აპი</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"დაშვებული"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"არ არის ნებადართული"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"შეზღუდვების მორგება"</string>
