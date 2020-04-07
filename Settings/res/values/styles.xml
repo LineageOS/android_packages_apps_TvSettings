@@ -286,4 +286,9 @@
     <style name="Setup.GuidedActionItemIcon" parent="@style/Widget.Leanback.GuidedActionItemIconStyle">
         <item name="android:layout_marginEnd">16dp</item>
     </style>
+
+    <style name="TextAppearance.DialogMessage"
+           parent="@*android:style/TextAppearance.DeviceDefault.Body1">
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>
