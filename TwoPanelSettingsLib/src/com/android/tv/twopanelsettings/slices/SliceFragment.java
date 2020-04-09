@@ -19,6 +19,8 @@ package com.android.tv.twopanelsettings.slices;
 import static android.app.slice.Slice.EXTRA_TOGGLE_STATE;
 import static android.app.slice.Slice.HINT_PARTIAL;
 
+import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logEntrySelected;
+import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logToggleInteracted;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_KEY;
 
 import android.app.PendingIntent;
@@ -192,6 +194,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             setTitle(mScreenTitle);
         } else {
             Data data = SlicePreferencesUtil.extract(screenTitleItem);
+            mCurrentPageId = SlicePreferencesUtil.getPageId(screenTitleItem);
             CharSequence title = SlicePreferencesUtil.getText(data.mTitleItem);
             if (!TextUtils.isEmpty(title)) {
                 setTitle(title);
@@ -332,6 +335,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 return true;
             }
 
+            logEntrySelected(getPreferenceActionId(preference));
             try {
                 SliceActionImpl action = radioPref.getSliceAction();
                 PendingIntent pendingIntent = action.getAction();
@@ -353,6 +357,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 if (action.isToggle()) {
                     // Update the intent extra state
                     boolean isChecked = ((TwoStatePreference) preference).isChecked();
+                    logToggleInteracted(getPreferenceActionId(preference), isChecked);
                     Intent i = new Intent()
                             .putExtra(EXTRA_TOGGLE_STATE, isChecked)
                             .putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
@@ -369,6 +374,11 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             return true;
         } else if (preference instanceof SlicePreference) {
             SlicePreference actionPref = (SlicePreference) preference;
+            // In this case, we may intentionally ignore this entry selection to avoid double
+            // logging as the action should result in a PAGE_FOCUSED event being logged.
+            if (getPreferenceActionId(actionPref) != TvSettingsEnums.ENTRY_DEFAULT) {
+                logEntrySelected(getPreferenceActionId(actionPref));
+            }
             if (actionPref.getSliceAction() != null) {
                 try {
                     SliceActionImpl action = actionPref.getSliceAction();
@@ -534,6 +544,15 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (errorMessage != null) {
             Toast.makeText(getContext(), errorMessage, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private int getPreferenceActionId(Preference preference) {
+        if (preference instanceof HasSliceAction) {
+            return ((HasSliceAction) preference).getActionId() != 0
+                    ? ((HasSliceAction) preference).getActionId()
+                    : TvSettingsEnums.ENTRY_DEFAULT;
+        }
+        return TvSettingsEnums.ENTRY_DEFAULT;
     }
 
     @Override
