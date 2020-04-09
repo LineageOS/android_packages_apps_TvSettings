@@ -23,7 +23,10 @@ import static androidx.lifecycle.Lifecycle.Event.ON_RESUME;
 import static androidx.lifecycle.Lifecycle.Event.ON_START;
 import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logPageFocused;
+
 import android.annotation.CallSuper;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
@@ -46,7 +49,8 @@ import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
  * and allow for instrumentation.
  */
 public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragment
-        implements LifecycleOwner, Instrumentable {
+        implements LifecycleOwner, Instrumentable,
+        TwoPanelSettingsFragment.PreviewableComponentCallback {
     private final Lifecycle mLifecycle = new Lifecycle(this);
     private final VisibilityLoggerMixin mVisibilityLoggerMixin;
     protected MetricsFeatureProvider mMetricsFeatureProvider;
@@ -77,6 +81,10 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
         mLifecycle.onCreate(savedInstanceState);
         mLifecycle.handleLifecycleEvent(ON_CREATE);
         super.onCreate(savedInstanceState);
+        if (getCallbackFragment() != null
+                && !(getCallbackFragment() instanceof TwoPanelSettingsFragment)) {
+            logPageFocused(getPageId(), true);
+        }
     }
 
     @Override
@@ -98,6 +106,7 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
         mLifecycle.handleLifecycleEvent(ON_START);
         super.onStart();
     }
+
     @CallSuper
     @Override
     public void onResume() {
@@ -109,6 +118,13 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
                     (TwoPanelSettingsFragment) getCallbackFragment();
             parentFragment.addListenerForFragment(this);
         }
+    }
+
+    // This should only be invoked if the parent Fragment is TwoPanelSettingsFragment.
+    @CallSuper
+    @Override
+    public void onArriveAtMainPanel(boolean forward) {
+        logPageFocused(getPageId(), forward);
     }
 
     @CallSuper
@@ -159,5 +175,10 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
             return super.onOptionsItemSelected(menuItem);
         }
         return lifecycleHandled;
+    }
+
+    /** Subclasses should override this to use their own PageId for Westworld logging. */
+    protected int getPageId() {
+        return TvSettingsEnums.PAGE_CLASSIC_DEFAULT;
     }
 }

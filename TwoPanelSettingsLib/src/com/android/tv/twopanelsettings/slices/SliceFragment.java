@@ -23,6 +23,7 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFE
 
 import android.app.PendingIntent;
 import android.app.PendingIntent.CanceledException;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.IntentSender.SendIntentException;
@@ -76,6 +77,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private Slice mSlice;
     private ContextThemeWrapper mContextThemeWrapper;
     private String mUriString = null;
+    private int mCurrentPageId;
     private CharSequence mScreenTitle;
     private CharSequence mScreenSubtitle;
     private Icon mScreenIcon;
@@ -520,5 +522,10 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (errorMessage != null) {
             Toast.makeText(getContext(), errorMessage, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    protected int getPageId() {
+        return mCurrentPageId != 0 ? mCurrentPageId : TvSettingsEnums.PAGE_SLICE_DEFAULT;
     }
 }
