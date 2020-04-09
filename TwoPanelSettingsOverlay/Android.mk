@@ -27,10 +27,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     TwoPanelSettingsLib \
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    androidx.annotation_annotation
-
-LOCAL_STATIC_JAVA_LIBRARIES := \
-    androidx.annotation_annotation
+    androidx.annotation_annotation \
+    statslog-tvsettings
 
 LOCAL_USE_AAPT2 := true
 LOCAL_PACKAGE_NAME := TwoPanelSettingsOverlay
