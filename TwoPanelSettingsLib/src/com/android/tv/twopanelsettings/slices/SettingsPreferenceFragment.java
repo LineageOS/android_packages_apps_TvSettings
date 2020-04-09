@@ -23,6 +23,9 @@ import static androidx.lifecycle.Lifecycle.Event.ON_RESUME;
 import static androidx.lifecycle.Lifecycle.Event.ON_START;
 import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
 
+import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logPageFocused;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
@@ -39,12 +42,14 @@ import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.instrumentation.VisibilityLoggerMixin;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.tv.twopanelsettings.SettingsPreferenceFragmentBase;
+import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 /**
  * A copy of SettingsPreferenceFragment in Settings.
  */
 public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragmentBase
-        implements LifecycleOwner, Instrumentable {
+        implements LifecycleOwner, Instrumentable,
+        TwoPanelSettingsFragment.PreviewableComponentCallback {
     private final Lifecycle mLifecycle = new Lifecycle(this);
     private final VisibilityLoggerMixin mVisibilityLoggerMixin;
     protected MetricsFeatureProvider mMetricsFeatureProvider;
@@ -75,6 +80,10 @@ public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragm
         mLifecycle.onCreate(savedInstanceState);
         mLifecycle.handleLifecycleEvent(ON_CREATE);
         super.onCreate(savedInstanceState);
+        if (getCallbackFragment() != null
+                && !(getCallbackFragment() instanceof TwoPanelSettingsFragment)) {
+            logPageFocused(getPageId(), true);
+        }
     }
 
     @Override
@@ -103,6 +112,13 @@ public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragm
         mVisibilityLoggerMixin.setSourceMetricsCategory(getActivity());
         super.onResume();
         mLifecycle.handleLifecycleEvent(ON_RESUME);
+    }
+
+    // This should only be invoked if the parent Fragment is TwoPanelSettingsFragment.
+    @CallSuper
+    @Override
+    public void onArriveAtMainPanel(boolean forward) {
+        logPageFocused(getPageId(), forward);
     }
 
     @CallSuper
@@ -148,5 +164,10 @@ public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragm
             return super.onOptionsItemSelected(menuItem);
         }
         return lifecycleHandled;
+    }
+
+    /** Subclasses should override this to use their own PageId for Westworld logging. */
+    protected int getPageId() {
+        return TvSettingsEnums.PAGE_CLASSIC_DEFAULT;
     }
 }
