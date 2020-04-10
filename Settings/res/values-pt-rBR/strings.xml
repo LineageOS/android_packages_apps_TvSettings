@@ -38,6 +38,7 @@
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> conta</item>
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> contas</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Serviços de mídia, Assistente, pagamentos"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Rede e Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Som"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Apps"</string>
@@ -48,7 +49,10 @@
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> acessório</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> acessórios</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Ajuda e feedback"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Tela e som"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Ajuda e feedback"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Privacidade"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Local, uso e diagnósticos, anúncios"</string>
     <string name="add_account" msgid="7386223854837017129">"Adicionar conta"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Remover conta"</string>
     <string name="account_sync" msgid="4315295293211313989">"Escolher apps sincronizados"</string>
@@ -132,7 +136,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Geralmente, 0000 ou 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Parear"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancelar"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Criar relatório de bug"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Enviar feedback"</string>
     <string name="launch_help" msgid="2607478763131952469">"Central de Ajuda"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Data e hora"</string>
@@ -692,7 +696,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Restauração automática"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Redefinir dispositivo"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Isso fará com que todos os dados do armazenamento interno do dispositivo sejam apagados, incluindo sua Conta do Google, dados e configurações do sistema e de apps e os apps transferidos por download."</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Apagar todas as suas informações pessoais e os apps transferidos por download? Não é possível reverter esta ação."</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Apagar todas as suas informações pessoais e todos os apps transferidos por download neste dispositivo? Não é possível reverter essa ação."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Apagar tudo"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Escolher um nome para seu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Dê um nome ao seu dispositivo para identificá-lo em transmissões ou para se conectar com ele a partir de outros dispositivos."</string>
@@ -766,4 +770,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Economia de dados"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Ajusta automaticamente a qualidade de vídeo para usar menos dados móveis"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Alertas e uso de dados"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Ação não permitida"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Não é possível alterar o volume"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Chamada não permitida"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS não permitido"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Câmera não permitida"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Captura de tela não permitida"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Não é possível abrir este app"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Se tiver alguma dúvida, entre em contato com o administrador de TI"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Dispositivo para usar com <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Nenhum dispositivo encontrado. Os dispositivos precisam estar ligados e disponíveis para conexão."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Tentar novamente"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Algo deu errado. O aplicativo cancelou a solicitação para selecionar um dispositivo."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Conexão realizada"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Mostrar tudo"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Pesquisando"</string>
 </resources>

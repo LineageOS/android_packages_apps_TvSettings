@@ -38,6 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> ანგარიში</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> ანგარიში</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"მედიასერვისები, ასისტენტი, გადახდები"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"ქსელი და ინტერნეტი"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"ხმა"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"აპები"</string>
@@ -48,7 +49,10 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> აქსესუარი</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> აქსესუარი</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"დახმარება და გამოხმაურება"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"ჩვენება და ხმა"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"დახმარება და გამოხმაურება"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"კონფიდენციალურობა"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"მდებარეობა, გამოყენება და დიაგნოსტიკა, რეკლამები"</string>
     <string name="add_account" msgid="7386223854837017129">"ანგარიშის დამატება"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"ანგარიშის წაშლა"</string>
     <string name="account_sync" msgid="4315295293211313989">"აირჩიეთ დასინქრონებული აპები"</string>
@@ -132,7 +136,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"ჩვეულებრივ 0000 ან 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"დაწყვილება"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"გაუქმება"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"სისტემის ხარვეზის ანგარიშის შექმნა"</string>
+    <string name="send_feedback" msgid="936698637869795473">"გამოხმაურება"</string>
     <string name="launch_help" msgid="2607478763131952469">"დახმარების ცენტრი"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"თარიღი და დრო"</string>
@@ -237,7 +241,7 @@
     <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"პროქსის გვერდის ავლა კავშირისთვის:"</string>
     <string name="title_wifi_ip_settings" msgid="296029383749112888">"IP პარამეტრები"</string>
     <string name="title_wifi_ip_address" msgid="5505806431042689276">"IP მისამართი:"</string>
-    <string name="title_wifi_gateway" msgid="4496416267930824360">"კარიბჭე:"</string>
+    <string name="title_wifi_gateway" msgid="4496416267930824360">"გეითვეი:"</string>
     <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"ქსელის პრეფიქსის სიგრძე:"</string>
     <string name="title_wifi_dns1" msgid="1585965227665007553">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="4563319371301555072">"DNS 2:"</string>
@@ -265,7 +269,7 @@
     <string name="wifi_action_status_info" msgid="3947061894001350963">"სტატუსის ინფორმაცია"</string>
     <string name="wifi_action_advanced_options_title" msgid="2863126553877147921">"გაფართოებული პარამეტრები"</string>
     <string name="wifi_ip_settings_invalid_ip_address" msgid="4051342269154914595">"შეიყვანეთ სწორი IP მისამართი"</string>
-    <string name="wifi_ip_settings_invalid_gateway" msgid="4511579679784872130">"შეიყვანეთ სწორი კარიბჭის მისამართი"</string>
+    <string name="wifi_ip_settings_invalid_gateway" msgid="4511579679784872130">"შეიყვანეთ სწორი გეითვეის მისამართი"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="5111100342560120360">"შეიყვანეთ სწორი DNS მისამართი"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="2726889303835927777">"შეიყვანეთ ქსელის პრეფიქსი სიგრძით 0-დან 32-მდე."</string>
     <string name="wifi_ip_address_description" msgid="7109677764979198618">"შეიყვანეთ სწორი IP მისამართი.\nმაგალითად: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
@@ -623,8 +627,10 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"შეზღუდული პროფილის შექმნა"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"პარამეტრები"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"დაშვებული აპები"</string>
-    <!-- String.format failed for translation -->
-    <!-- no translation found for restricted_profile_configure_apps_description (7923692208224457728) -->
+    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
+      <item quantity="other">%d აპი დაშვებულია</item>
+      <item quantity="one">დაშვებულია 1 აპი</item>
+    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"დაშვებული"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"არ არის ნებადართული"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"შეზღუდვების მორგება"</string>
@@ -690,7 +696,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"ავტომატური აღდგენა"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"მოწყობილობის გადატვირთვა"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"ეს წაშლის თქვენი მოწყობილობის შიდა შენახვის სრულ მონაცემს, მათ შორის: თქვენს Google ანგარიშს, სისტემისა და აპლიკაციის მონაცემებს, პარამეტრებს, და ჩამოტვირთულ აპლიკაციებს."</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"გსურთ, ყველა თქვენი პირადი ინფორმაციისა და ჩამოტვირთული აპების წაშლა? ამ ქმედების უკან დაბრუნება შეუძლებელია."</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"ამოიშალოს თქვენი ყველა პერსონალური ინფორმაცია და ჩამოტვირთული აპი ამ მოწყობილობაზე? ამ მოქმედების უკან დაბრუნება შეუძლებელია!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"ყველაფრის წაშლა"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"აირჩიეთ სახელი თქვენი <xliff:g id="DEVICEMODEL">%1$s</xliff:g>-სთვის"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"დაარქვით სახელი თქვენს მოწყობილობას, რაც გაგიმარტივებთ მის ამოცნობას. მაგალითად, სხვა მოწყობილობებიდან მასზე ტრანსლირებისას, ან მასთან დაკავშირებისას."</string>
@@ -764,4 +770,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"მონაცემთა დამზოგველი"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"მობილური ინტერნეტის ნაკლებად მოსახმარად ავტომატურად დააკორექტირეთ ვიდეოს ხარისხი"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"მონაცემთა მოხმარება და გაფრთხილებები"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"მოქმედება დაუშვებელია"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"ხმის შეცვლა ვერ მოხერხდა"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"დარეკვა არ არის დაშვებული"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS შეტყობინებები არ არის დაშვებული"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"კამერა არ არის დაშვებული"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"ეკრანის ანაბეჭდები არ არის დაშვებული"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"ამ აპის გახსნა ვერ ხერხდება"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"თუ შეკითხვები გაქვთ, დაუკავშირდით თქვენს IT ადმინისტრატორს"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g>-თან გამოსაყენებელი მოწყობილობა"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"მოწყობილობები ვერ მოიძებნა. დარწმუნდით, რომ მოწყობილობები ჩართულია და ხელმისაწვდომია დასაკავშირებლად."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"ხელახლა ცდა"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"წარმოიქმნა შეფერხება. აპლიკაციამ გააუქმა მოწყობილობის არჩევის მოთხოვნა."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"წარმატებით დაკავშირდა"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"ყველას ჩვენება"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"მიმდინარეობს ძიება"</string>
 </resources>
