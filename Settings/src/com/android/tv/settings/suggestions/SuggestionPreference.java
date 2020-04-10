@@ -16,7 +16,10 @@
 
 package com.android.tv.settings.suggestions;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
 import android.app.PendingIntent;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.service.settings.suggestions.Suggestion;
 import android.util.Log;
@@ -94,6 +97,7 @@ public class SuggestionPreference extends Preference {
         try {
             mSuggestion.getPendingIntent().send();
             mSuggestionControllerMixin.launchSuggestion(mSuggestion);
+            logEntrySelected(TvSettingsEnums.SUGGESTED_SETTINGS);
             mMetricsFeatureProvider.action(getContext(),
                     MetricsEvent.ACTION_SETTINGS_SUGGESTION, mId);
         } catch (PendingIntent.CanceledException e) {
