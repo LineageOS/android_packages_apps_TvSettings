@@ -16,8 +16,12 @@
 
 package com.android.tv.settings;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+import static com.android.tv.settings.util.InstrumentationUtils.logPageFocused;
+
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.app.tvsettings.TvSettingsEnums;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.ActivityNotFoundException;
@@ -56,6 +60,7 @@ import com.android.tv.settings.overlay.FeatureFactory;
 import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
 import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 import java.util.ArrayList;
@@ -148,6 +153,13 @@ public class MainFragment extends PreferenceControllerFragment implements
                 new ConnectivityListener(getContext(), this::updateConnectivity, getLifecycle());
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
         super.onCreate(savedInstanceState);
+        // This is to record the initial start of Settings root in two panel settings case, as the
+        // MainFragment is the left-most pane and will not be slided in from preview pane. For
+        // classic settings case, the event will be recorded in onResume() as this is an instance
+        // of SettingsPreferenceFragment.
+        if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
+            logPageFocused(getPageId(), true);
+        }
     }
 
     @Override
@@ -199,12 +211,24 @@ public class MainFragment extends PreferenceControllerFragment implements
         if (mHotwordSwitchController.isAvailable()) {
             mHotwordSwitch = new SwitchPreference(this.getPreferenceManager().getContext());
             mHotwordSwitch.setKey(HotwordSwitchController.KEY_HOTWORD_SWITCH);
+            mHotwordSwitch.setOnPreferenceClickListener(
+                    preference -> {
+                        logEntrySelected(TvSettingsEnums.QUICK_SETTINGS);
+                        return false;
+                    }
+            );
             mHotwordSwitchController.updateState(mHotwordSwitch);
             mQuickSettingsList.addPreference(mHotwordSwitch);
         }
         if (mTakeBugReportController.isAvailable()) {
             mTakeBugReportPreference = new Preference(this.getPreferenceManager().getContext());
             mTakeBugReportPreference.setKey(TakeBugReportController.KEY_TAKE_BUG_REPORT);
+            mTakeBugReportPreference.setOnPreferenceClickListener(
+                    preference -> {
+                        logEntrySelected(TvSettingsEnums.QUICK_SETTINGS);
+                        return false;
+                    }
+            );
             mTakeBugReportController.updateState(mTakeBugReportPreference);
             mQuickSettingsList.addPreference(mTakeBugReportPreference);
         }
@@ -671,5 +695,10 @@ public class MainFragment extends PreferenceControllerFragment implements
         return getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)
                 ? true
                 : false;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.TV_SETTINGS_ROOT;
     }
 }
