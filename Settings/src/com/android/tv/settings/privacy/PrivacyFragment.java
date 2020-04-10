@@ -20,7 +20,9 @@ import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
 import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
 import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
 import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -42,6 +44,7 @@ import com.android.tv.twopanelsettings.slices.SlicePreference;
 public class PrivacyFragment extends SettingsPreferenceFragment {
 
     private static final String KEY_ACCOUNT_SETTINGS_CATEGORY = "accountSettings";
+    private static final String KEY_USAGE = "usageAndDiag";
     private static final String KEY_ADS = "ads";
     private static final String KEY_ASSISTANT = "assistant";
     private static final String KEY_PURCHASES = "purchases";
@@ -91,7 +94,25 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
     }
 
     @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        switch (preference.getKey()) {
+            case KEY_USAGE:
+                logEntrySelected(TvSettingsEnums.PRIVACY_DIAGNOSTICS);
+                break;
+            case KEY_ADS:
+                logEntrySelected(TvSettingsEnums.PRIVACY_ADS);
+                break;
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
+
+    @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.PRIVACY;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.PRIVACY;
     }
 }
