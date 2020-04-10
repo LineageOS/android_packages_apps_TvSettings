@@ -16,6 +16,9 @@
 
 package com.android.tv.settings.connectivity;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.net.IpConfiguration.IpAssignment;
 import android.net.IpConfiguration.ProxySettings;
@@ -169,14 +172,34 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
         }
 
         mProxySettingsPref.setVisible(wifiConfiguration != null);
+        mProxySettingsPref.setOnPreferenceClickListener(
+                preference -> {
+                    logEntrySelected(TvSettingsEnums.NETWORK_AP_INFO_PROXY_SETTINGS);
+                    return false;
+                });
         mIpSettingsPref.setVisible(wifiConfiguration != null);
+        mIpSettingsPref.setOnPreferenceClickListener(
+                preference -> {
+                    logEntrySelected(TvSettingsEnums.NETWORK_AP_INFO_IP_SETTINGS);
+                    return false;
+                });
         mForgetNetworkPref.setVisible(wifiConfiguration != null);
+        mForgetNetworkPref.setOnPreferenceClickListener(
+                preference -> {
+                    logEntrySelected(TvSettingsEnums.NETWORK_AP_INFO_FORGET_NETWORK);
+                    return false;
+                });
     }
 
     private String getSignalStrength() {
         String[] signalLevels = getResources().getStringArray(R.array.wifi_signal_strength);
         int strength = mConnectivityListener.getWifiSignalStrength(signalLevels.length);
         return signalLevels[strength];
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.NETWORK_AP_INFO;
     }
 
     public static class ForgetNetworkConfirmFragment extends GuidedStepFragment {
