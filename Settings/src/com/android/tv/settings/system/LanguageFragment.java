@@ -46,6 +46,10 @@ import java.util.Map;
 public class LanguageFragment extends SettingsPreferenceFragment {
     private static final String TAG = "LanguageFragment";
 
+    // Pseudo locales used for internal purposes only should not be shown in the
+    // language picker.
+    private static final String PSEUDO_LOCALE_EN_XC = "en-XC";
+
     private static final String LANGUAGE_RADIO_GROUP = "language";
 
     private final Map<String, LocalePicker.LocaleInfo> mLocaleInfoMap = new ArrayMap<>();
@@ -87,6 +91,9 @@ public class LanguageFragment extends SettingsPreferenceFragment {
         Preference activePref = null;
         for (final LocalePicker.LocaleInfo localeInfo : localeInfoList) {
             final String languageTag = localeInfo.getLocale().toLanguageTag();
+            if (PSEUDO_LOCALE_EN_XC.equals(languageTag)) {
+                continue;
+            }
             mLocaleInfoMap.put(languageTag, localeInfo);
 
             final RadioPreference radioPreference = new RadioPreference(themedContext);
