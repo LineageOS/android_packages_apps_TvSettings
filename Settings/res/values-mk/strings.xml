@@ -236,13 +236,13 @@
     <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Wi-Fi мрежата не прифати поврзување"</string>
     <string name="title_wifi_advanced_options" msgid="371185991282743258">"Конфигурирај <xliff:g id="SSID">%1$s</xliff:g> прокси и Поставки за ИП?"</string>
     <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Поставки за прокси"</string>
-    <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Име на домаќин на прокси:"</string>
+    <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Име на хост за прокси:"</string>
     <string name="title_wifi_proxy_port" msgid="566244407030390328">"Порта на прокси:"</string>
     <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"Заобиколи прокси за:"</string>
     <string name="title_wifi_ip_settings" msgid="296029383749112888">"Поставки за IP"</string>
     <string name="title_wifi_ip_address" msgid="5505806431042689276">"IP-адреса:"</string>
     <string name="title_wifi_gateway" msgid="4496416267930824360">"Капија:"</string>
-    <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"Должина на префикс на мрежа:"</string>
+    <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"Должина на мрежен префикс:"</string>
     <string name="title_wifi_dns1" msgid="1585965227665007553">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="4563319371301555072">"DNS 2:"</string>
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Поставките за прокси не се важечки"</string>
@@ -276,7 +276,7 @@
     <string name="wifi_dns1_description" msgid="2287252520192279195">"Внесете важечка IP адреса или оставете празно.\nПример: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
     <string name="wifi_dns2_description" msgid="6495565714252833784">"Внесете важечка IP адреса или оставете празно.\nПример: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
     <string name="wifi_gateway_description" msgid="8902481147103929271">"Внесете важечка IP адреса или оставете празно.\nПример: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
-    <string name="wifi_network_prefix_length_description" msgid="2670994968279018896">"Внесете важечка должина за префикс на мрежа.\nПример: <xliff:g id="ID_1">24</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="2670994968279018896">"Внесете важечка должина за мрежен префикс.\nПример: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="5629893736174170157">"Името на домаќинот не е важечко"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="1762079966901078116">"Оваа листа со исклучоци не е важечка. Внесете листа на исклучени домени, одвоени со запирки."</string>
     <string name="proxy_error_empty_port" msgid="692020249267351015">"Полето за порта не може да биде празно"</string>
@@ -778,18 +778,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Слика од екранот не е дозволена"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Апликацијава не може да се отвори"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Ако имате прашања, контактирајте со вашиот администратор"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Уред за користење со <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Не се најдени уреди. Уверете се дека уредите се вклучени и достапни за поврзување."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Обиди се пак"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Нешто се случи. Апликацијата го откажа барањето за избор на уред."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Поврзувањето е успешно"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Прикажи ги сите"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Се пребарува"</string>
 </resources>

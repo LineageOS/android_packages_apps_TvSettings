@@ -395,8 +395,8 @@
     <string name="system_desc_location" msgid="1680134126100535031">"Cho phép các ứng dụng đã yêu cầu bạn cho phép sử dụng thông tin vị trí của bạn"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Đồng ý vị trí"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Chế độ"</string>
-    <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Yêu cầu vị trí gần đây"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"Không có ứng dụng nào yêu cầu vị trí gần đây"</string>
+    <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Các yêu cầu gần đây về vị trí"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"Không có ứng dụng nào gần đây yêu cầu vị trí"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Mức sử dụng pin cao"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Mức sử dụng pin thấp"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"Sử dụng Wi-Fi để ước tính vị trí"</string>
@@ -747,7 +747,7 @@
     <string name="allow_overlay_description" msgid="5152329837278240259">"Cho phép một ứng dụng hiển thị trên các ứng dụng khác mà bạn đang sử dụng. Điều này có thể ảnh hưởng đến cách bạn sử dụng các ứng dụng đó hoặc thay đổi cách chúng xuất hiện hoặc hoạt động."</string>
     <string name="write_system_settings" msgid="4284654265954461890">"Sửa đổi các tùy chọn cài đặt hệ thống"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"Được sửa đổi cài đặt hệ thống"</string>
-    <string name="write_settings_description" msgid="7382397926674265937">"Quyền này cho phép ứng dụng sửa đổi cài đặt hệ thống."</string>
+    <string name="write_settings_description" msgid="7382397926674265937">"Quyền này cho phép ứng dụng sửa đổi các tùy chọn cài đặt hệ thống."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Có"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Không"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Hình trong hình"</string>
@@ -770,26 +770,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Trình tiết kiệm dữ liệu"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Tự động điều chỉnh chất lượng video để tiết kiệm dữ liệu di động"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Mức sử dụng dữ liệu và thông báo"</string>
-    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Tác vụ này không được cho phép"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Thao tác này không được phép"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Không thể thay đổi âm lượng"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Không cho phép gọi"</string>
     <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"Không cho phép SMS"</string>
     <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Không cho phép máy ảnh"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Không cho phép ảnh chụp màn hình"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Không thể mở ứng dụng này"</string>
-    <string name="default_admin_support_msg" msgid="7913455019068370350">"Nếu bạn có thắc mắc, hãy liên hệ với quản trị viên CNTT"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Nếu bạn có câu hỏi, hãy liên hệ với quản trị viên CNTT của bạn"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Thiết bị sẽ sử dụng với <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Không tìm thấy thiết bị nào. Đảm bảo rằng các thiết bị đang bật và sẵn sàng kết nối."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Thử lại"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Đã xảy ra lỗi. Ứng dụng đã hủy yêu cầu chọn thiết bị."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Kết nối thành công"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Hiển thị tất cả"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Đang tìm kiếm"</string>
 </resources>
