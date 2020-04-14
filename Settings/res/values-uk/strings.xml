@@ -402,7 +402,7 @@
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Згода щодо місцезнаходження"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Режим"</string>
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Останні запити на геодані"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"Жодна програма не запитувала місцезнаходження останнім часом"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"Останнім часом додатки не запитували доступ до геоданих"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Значне використання заряду"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Низьке використання заряду"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"Використовувати Wi-Fi для визначення місцезнаходження"</string>
@@ -792,18 +792,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Робити знімки екрана заборонено"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Цей додаток не можна відкрити"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Якщо у вас виникли запитання, зверніться до ІТ-адміністратора"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Пристрій для використання з додатком <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Немає пристроїв. Переконайтеся, що пристрої ввімкнені й готові до підключення."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Повторити спробу"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Щось трапилося. Додаток скасував запит на вибір пристрою."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Підключено"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Показати все"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Пошук"</string>
 </resources>

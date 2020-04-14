@@ -288,7 +288,7 @@
     <string name="proxy_error_empty_port" msgid="692020249267351015">"Поле порта не можа быць пустым"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"Калі поле вузла пустое, пакіньце поле порта пустым"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Порт несапраўдны"</string>
-    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Проксі HTTP выкарыстоўваецца браўзерам, але ён не можа выкарыстоўвацца іншымі праграмамі"</string>
+    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Проксі HTTP выкарыстоўваецца браўзерам, але не можа выкарыстоўвацца іншымі праграмамі"</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"Увядзіце сапраўдны порт.\nПрыклад: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Увядзіце спіс выключаных даменаў праз коску або пакіньце поле пустым.\nПрыклад: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"Увядзіце сапраўдную назву вузла.\nПрыклад: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -792,18 +792,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Здымкі экрана забаронены"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Не ўдалося адкрыць праграму"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Калі ў вас ёсць пытанні, звярніцеся да ІТ-адміністратара"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Прылада для выкарыстання з праграмай \"<xliff:g id="APPNAME">%1$s</xliff:g>\""</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Прылады не знойдзены. Пераканайцеся, што прылады ўключаны і даступныя для падключэння."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Паўтарыць спробу"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Нешта пайшло не так. Праграма скасавала запыт на выбар прылады."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Падключэнне выканана"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Паказаць усе"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Ідзе пошук"</string>
 </resources>

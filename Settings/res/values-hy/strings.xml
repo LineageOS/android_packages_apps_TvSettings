@@ -134,7 +134,7 @@
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Հետևյալ սարքին միանալու համար՝ &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;մուտքագրեք սարքի PIN-ը՝"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;-ին միանալու համար մուտքագրեք պահանջվող անցաբառը՝"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Սովորաբար 0000 կամ 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Զուգավորել"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Զուգակցել"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Չեղարկել"</string>
     <string name="send_feedback" msgid="936698637869795473">"Կարծիք հայտնել"</string>
     <string name="launch_help" msgid="2607478763131952469">"Օգնության կենտրոն"</string>
@@ -396,7 +396,7 @@
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Տեղադրության մասին տվյալների հավաքում"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Ռեժիմ"</string>
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Տեղադրության վերջին հարցումներ"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"Որևէ ծրագիր տեղադրության հարցում չի կատարել վերջերս"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"Վերջին ժամանակաշրջանում հավելվածները տեղադրության հարցում չեն արել"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Մարտկոցի լիցքի բարձր ծախսում"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Մարտկոցի լիցքի ցածր ծախսում"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"Տեղադրությունը որոշել Wi-Fi-ի օգնությամբ"</string>
@@ -589,7 +589,7 @@
     <string name="inputs_blu_ray" msgid="6561004081102615775">"Blu-ray"</string>
     <string name="inputs_cable" msgid="8274665772422377063">"Մալուխ"</string>
     <string name="inputs_dvd" msgid="1452146927899250552">"DVD"</string>
-    <string name="inputs_game" msgid="4762255172943107070">"Խաղի վահանակ"</string>
+    <string name="inputs_game" msgid="4762255172943107070">"Խաղային բարձակ"</string>
     <string name="inputs_aux" msgid="5331442342029867329">"Aux"</string>
     <string name="inputs_custom_name" msgid="2649826613531559538">"Մուտքագրեք անունը"</string>
     <string name="inputs_custom_name_description_fmt" msgid="2879134265596928298">"Մուտքագրեք <xliff:g id="INPUT">%1$s</xliff:g> մուտքի անունը:"</string>
@@ -778,18 +778,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Էկրանի պատկերի պահպանումը արգելված է"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Հնարավոր չէ բացել հավելվածը"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Եթե հարցեր ունեք, դիմեք ձեր ՏՏ ադմինիստրատորին"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Սարք <xliff:g id="APPNAME">%1$s</xliff:g> հավելվածի հետ օգտագործելու համար"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Սարքեր չեն գտնվել։ Համոզվեք, որ դրանք անջատված չեն և հասանելի են` ցանցին միանալու համար։"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Նորից փորձել"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Սխալ առաջացավ: Հավելվածը չեղարկել է սարք ընտրելու հայտը:"</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Կապը հաստատվեց"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Ցույց տալ բոլորը"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Որոնում"</string>
 </resources>

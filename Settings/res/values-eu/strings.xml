@@ -234,19 +234,19 @@
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"Ezin izan da <xliff:g id="SSID">%1$s</xliff:g> sarea aurkitu"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Wifi-sarearen pasahitzak ez du balio"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Wi-Fi sareak ez du onartu konexioa"</string>
-    <string name="title_wifi_advanced_options" msgid="371185991282743258">"<xliff:g id="SSID">%1$s</xliff:g> proxya eta IP ezarpenak konfiguratu nahi dituzu?"</string>
+    <string name="title_wifi_advanced_options" msgid="371185991282743258">"<xliff:g id="SSID">%1$s</xliff:g> proxya eta IParen ezarpenak konfiguratu nahi dituzu?"</string>
     <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Proxy-ezarpenak"</string>
     <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Proxyaren ostalariaren izena:"</string>
     <string name="title_wifi_proxy_port" msgid="566244407030390328">"Proxyaren ataka:"</string>
-    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"Saihestu honen proxya:"</string>
-    <string name="title_wifi_ip_settings" msgid="296029383749112888">"IP ezarpenak"</string>
+    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"Egin ez ikusi proxyari kasu hauetan:"</string>
+    <string name="title_wifi_ip_settings" msgid="296029383749112888">"IParen ezarpenak"</string>
     <string name="title_wifi_ip_address" msgid="5505806431042689276">"IP helbidea:"</string>
     <string name="title_wifi_gateway" msgid="4496416267930824360">"Atebidea:"</string>
     <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"Sare-aurrizkiaren luzera:"</string>
     <string name="title_wifi_dns1" msgid="1585965227665007553">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="4563319371301555072">"DNS 2:"</string>
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Proxy-ezarpenak ez dira baliozkoak"</string>
-    <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP ezarpenak ez dira baliozkoak"</string>
+    <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IParen ezarpenak ez dira baliozkoak"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> gordetako sareetan dago"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Saiatu berriro"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Ikusi sare erabilgarriak"</string>
@@ -778,18 +778,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Ez da onartzen pantaila-argazkiak ateratzea"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Ezin da ireki aplikazioa"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Galderarik baduzu, jarri IKT saileko administratzailearekin harremanetan"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> aplikazioarekin erabili behar den gailua"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Ez da aurkitu gailurik. Ziurtatu gailuak piztuta daudela eta konekta daitezkeela."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Saiatu berriro"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Arazoren bat izan da. Aplikazioak bertan behera utzi du gailu bat aukeratzeko eskaera."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Konektatu da"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Erakutsi guztiak"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Bilatzen"</string>
 </resources>
