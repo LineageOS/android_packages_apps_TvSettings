@@ -15,6 +15,9 @@
  */
 package com.android.tv.settings.device.apps;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -279,6 +282,7 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceClick(Preference preference) {
         if  (KEY_SHOW_OTHER_APPS.equals(preference.getKey())) {
+            logEntrySelected(TvSettingsEnums.APPS_ALL_APPS_SHOW_SYSTEM_APPS);
             showOtherApps();
             return true;
         }
@@ -382,5 +386,10 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.MANAGE_APPLICATIONS;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.APPS_ALL_APPS;
     }
 }
