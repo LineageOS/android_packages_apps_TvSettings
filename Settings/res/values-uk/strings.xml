@@ -53,8 +53,8 @@
       <item quantity="many"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> аксесуарів</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> аксесуара</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Довідка й відгуки"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Зображення та звук"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Довідка й відгуки"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Конфіденційність"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Місцезнаходження, використання й діагностика, реклама"</string>
     <string name="add_account" msgid="7386223854837017129">"Додати обліковий запис"</string>
@@ -140,7 +140,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Зазвичай 0000 або 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Створити пару"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Скасувати"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Створити звіт про помилку"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Надіслати відгук"</string>
     <string name="launch_help" msgid="2607478763131952469">"Довідковий центр"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Дата й час"</string>
@@ -402,7 +402,7 @@
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Згода щодо місцезнаходження"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Режим"</string>
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Останні запити на геодані"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"Жодна програма не запитувала місцезнаходження останнім часом"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"Останнім часом додатки не запитували доступ до геоданих"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Значне використання заряду"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Низьке використання заряду"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"Використовувати Wi-Fi для визначення місцезнаходження"</string>
@@ -792,4 +792,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Робити знімки екрана заборонено"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Цей додаток не можна відкрити"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Якщо у вас виникли запитання, зверніться до ІТ-адміністратора"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Пристрій для використання з додатком <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Немає пристроїв. Переконайтеся, що пристрої ввімкнені й готові до підключення."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Повторити спробу"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Щось трапилося. Додаток скасував запит на вибір пристрою."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Підключено"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Показати все"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Пошук"</string>
 </resources>
