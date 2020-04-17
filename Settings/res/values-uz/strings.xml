@@ -49,8 +49,8 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ta aksessuar</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ta aksessuar</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Yordam va fikr-mulohaza"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Displey va tovush"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Yordam va fikr-mulohaza"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Maxfiylik"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Joylashuv, foydalanish statistikasi va diagnostika, reklamalar"</string>
     <string name="add_account" msgid="7386223854837017129">"Hisob qo‘shish"</string>
@@ -136,7 +136,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Odatda 0000 yoki 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Biriktirish"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Bekor qilish"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Xatoliklar hisobotini olish"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Fikr-mulohaza yuborish"</string>
     <string name="launch_help" msgid="2607478763131952469">"Yordam markazi"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Sana va vaqt"</string>
@@ -453,7 +453,7 @@
     <string name="color_red" msgid="1899020130465926495">"Qizil"</string>
     <string name="color_green" msgid="7546929005626106667">"Yashil"</string>
     <string name="color_blue" msgid="7681690245150985958">"Havorang"</string>
-    <string name="color_cyan" msgid="3172130225116530998">"Moviy"</string>
+    <string name="color_cyan" msgid="3172130225116530998">"Zangori"</string>
     <string name="color_yellow" msgid="3519470952904560404">"Sariq"</string>
     <string name="color_magenta" msgid="2377854703399624607">"Pushtirang"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Yoqish"</string>
@@ -717,7 +717,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Ilovalar uchun ruxsatlar"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"Ruxsat berilgan ilovalar: <xliff:g id="COUNT_0">%1$d</xliff:g> / <xliff:g id="COUNT_1">%2$d</xliff:g> ta"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth ruxsati so‘rovi"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Tizim xavfsizligi uchun yangilanish"</string>
+    <string name="security_patch" msgid="5468261708915367254">"Android tizim xavfsizligi yangilanishi"</string>
     <string name="choose_application" msgid="2375936782103669988">"Ilovani tanlang"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Tajribaviy)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"O‘tish"</string>
@@ -778,4 +778,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Skrinshot olishga ruxsat berilmagan"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Bu ilovani ochish imkonsiz"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Savollaringizga javob olish uchun AT administratoringizga murojaat qiling"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> ishlatiladigan qurilma"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Qurilmalar topilmadi. Qurilmalar yoniq va tarmoqda ekanligi tekshiring."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Qaytadan"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Xatolik yuz berdi. Ilova qurilmani tanlash talabini bekor qildi."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Muvaffaqiyatli ulandi"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Hammasi"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Qidirilmoqda"</string>
 </resources>
