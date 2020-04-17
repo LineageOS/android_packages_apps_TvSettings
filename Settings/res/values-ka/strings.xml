@@ -118,7 +118,7 @@
     <string name="accessory_state_paired" msgid="3296695242499532000">"დაწყვილდა"</string>
     <string name="accessory_options" msgid="774592782382321681">"აქსესუარი"</string>
     <string name="accessory_unpair" msgid="2473411128146068804">"გაცალკევება"</string>
-    <string name="accessory_battery" msgid="2283700366184703548">"ელემენტის <xliff:g id="PERCENTAGE">%1$d</xliff:g> %%"</string>
+    <string name="accessory_battery" msgid="2283700366184703548">"ბატარეა <xliff:g id="PERCENTAGE">%1$d</xliff:g> %%"</string>
     <string name="accessory_unpairing" msgid="2529195578082286563">"მოწყობილობის გაცალკევება..."</string>
     <string name="accessory_connected" msgid="5229574480869175180">"შეერთებულია"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"სახელის შეცვლა"</string>
@@ -241,7 +241,7 @@
     <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"პროქსის გვერდის ავლა კავშირისთვის:"</string>
     <string name="title_wifi_ip_settings" msgid="296029383749112888">"IP პარამეტრები"</string>
     <string name="title_wifi_ip_address" msgid="5505806431042689276">"IP მისამართი:"</string>
-    <string name="title_wifi_gateway" msgid="4496416267930824360">"კარიბჭე:"</string>
+    <string name="title_wifi_gateway" msgid="4496416267930824360">"გეითვეი:"</string>
     <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"ქსელის პრეფიქსის სიგრძე:"</string>
     <string name="title_wifi_dns1" msgid="1585965227665007553">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="4563319371301555072">"DNS 2:"</string>
@@ -269,7 +269,7 @@
     <string name="wifi_action_status_info" msgid="3947061894001350963">"სტატუსის ინფორმაცია"</string>
     <string name="wifi_action_advanced_options_title" msgid="2863126553877147921">"გაფართოებული პარამეტრები"</string>
     <string name="wifi_ip_settings_invalid_ip_address" msgid="4051342269154914595">"შეიყვანეთ სწორი IP მისამართი"</string>
-    <string name="wifi_ip_settings_invalid_gateway" msgid="4511579679784872130">"შეიყვანეთ სწორი კარიბჭის მისამართი"</string>
+    <string name="wifi_ip_settings_invalid_gateway" msgid="4511579679784872130">"შეიყვანეთ სწორი გეითვეის მისამართი"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="5111100342560120360">"შეიყვანეთ სწორი DNS მისამართი"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="2726889303835927777">"შეიყვანეთ ქსელის პრეფიქსი სიგრძით 0-დან 32-მდე."</string>
     <string name="wifi_ip_address_description" msgid="7109677764979198618">"შეიყვანეთ სწორი IP მისამართი.\nმაგალითად: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
@@ -398,7 +398,7 @@
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"მდებარეობის ბოლო მოთხოვნები"</string>
     <string name="location_no_recent_apps" msgid="7033474075806435793">"ბოლო დროს აპებს მდებარეობის ინფორმაცია არ მოუთხოვია"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"მძლავრი ბატარეა"</string>
-    <string name="location_low_battery_use" msgid="728585923412018253">"ელემენტის მცირე გამოყენება"</string>
+    <string name="location_low_battery_use" msgid="728585923412018253">"ბატარეის მცირე გამოყენება"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"Wi-Fi-ს გამოყენება მდებარეობის დასადგენად"</string>
     <string name="location_status" msgid="3037321737386011224">"მდებარეობის სტატუსი"</string>
     <string name="location_services" msgid="551503779736382878">"მდებარეობის სერვისები"</string>
@@ -778,18 +778,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"ეკრანის ანაბეჭდები არ არის დაშვებული"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"ამ აპის გახსნა ვერ ხერხდება"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"თუ შეკითხვები გაქვთ, დაუკავშირდით თქვენს IT ადმინისტრატორს"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g>-თან გამოსაყენებელი მოწყობილობა"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"მოწყობილობები ვერ მოიძებნა. დარწმუნდით, რომ მოწყობილობები ჩართულია და ხელმისაწვდომია დასაკავშირებლად."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"ხელახლა ცდა"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"წარმოიქმნა შეფერხება. აპლიკაციამ გააუქმა მოწყობილობის არჩევის მოთხოვნა."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"წარმატებით დაკავშირდა"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"ყველას ჩვენება"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"მიმდინარეობს ძიება"</string>
 </resources>

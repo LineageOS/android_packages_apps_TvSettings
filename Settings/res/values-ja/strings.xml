@@ -485,14 +485,14 @@
     <string name="system_always_check" msgid="384870282800221580">"常にチェック"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Bluetooth HCIログ"</string>
     <string name="system_email_address" msgid="3725494874473757217">"メールアドレス"</string>
-    <string name="system_usb_debugging" msgid="2158285492172755923">"USBデバッグ"</string>
+    <string name="system_usb_debugging" msgid="2158285492172755923">"USB デバッグ"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"仮の現在地情報を許可する"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"デバッグアプリの選択"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"デバッガの待機"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"USB経由のアプリの確認"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"ADB/ADT経由でインストールされたアプリに不正な動作がないかを確認する"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Wi-Fi詳細ログ"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Wi-Fi詳細ログの有効化"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Wi-Fi 詳細ログの有効化"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"タップの表示"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"ポインタの位置"</string>
     <string name="system_show_layout_bounds" msgid="8803080672553699649">"レイアウト境界の表示"</string>
@@ -513,7 +513,7 @@
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"DRMコンテンツのみに使用"</string>
     <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"最大解像度または最大フレームレートの表示を最適化します。この影響を受けるのはUltra HDディスプレイのみです。変更するとデバイスを再起動します。"</string>
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Bluetooth HCIスヌープログを有効にする"</string>
-    <string name="system_desc_usb_debugging" msgid="5672275208185222785">"USB接続時はデバッグモードにする"</string>
+    <string name="system_desc_usb_debugging" msgid="5672275208185222785">"USB 接続時はデバッグモードにする"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"アプリは実行前にデバッガのアタッチを待機します"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"クリップの境界線、マージンなどを表示する"</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"GPUでの描画時にウィンドウ内の表示を点滅させる"</string>
@@ -778,18 +778,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"スクリーンショットは許可されていません"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"このアプリを開くことはできません"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"ご不明な点がある場合は、IT 管理者にお問い合わせください"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> で使用するデバイス"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"デバイスが見つかりません。デバイスの電源が入っており、接続が可能であることを確認してください。"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"再試行"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"エラーが発生しました。デバイス選択リクエストはアプリでキャンセルされました。"</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"接続しました"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"すべて表示"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"検索中"</string>
 </resources>

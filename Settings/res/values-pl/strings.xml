@@ -174,10 +174,10 @@
     <string name="about_serial" msgid="3432319328808745459">"Numer seryjny"</string>
     <string name="about_build" msgid="1139171613038225768">"Kompilacja"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="few">Jesteś teraz <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroki od zostania programistą</item>
-      <item quantity="many">Jesteś teraz <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroków od zostania programistą</item>
-      <item quantity="other">Od zostania programistą dzieli Cię tyle kroków: <xliff:g id="STEP_COUNT_1">%1$d</xliff:g></item>
-      <item quantity="one">Jesteś teraz o <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> krok od zostania programistą</item>
+      <item quantity="few">Od zostania programistą dzielą Cię już tylko <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroki.</item>
+      <item quantity="many">Od zostania programistą dzieli Cię już tylko <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroków.</item>
+      <item quantity="other">Od zostania programistą dzieli Cię już tylko <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroku.</item>
+      <item quantity="one">Od zostania programistą dzieli Cię już tylko <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> krok.</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Reklamy"</string>
     <string name="show_dev_on" msgid="612741433124106067">"Jesteś teraz programistą!"</string>
@@ -792,18 +792,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Brak uprawnień do tworzenia zrzutów ekranu"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Nie można otworzyć tej aplikacji"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Jeśli masz pytania, skontaktuj się z administratorem"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Urządzenie, na którym chcesz korzystać z aplikacji <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Nie znaleziono urządzeń. Upewnij się, że urządzenia są włączone i mogą się połączyć."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Spróbuj ponownie"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Coś się stało. Aplikacja anulowała prośbę o wybór urządzenia."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Połączono"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Pokaż wszystko"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Szukam"</string>
 </resources>

@@ -87,7 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"બંધ કરેલી ઍપ"</string>
     <string name="device_daydream" msgid="2631191946958113220">"સ્ક્રીન સેવર"</string>
     <string name="device_display" msgid="244634591698925025">"પ્રદર્શન"</string>
-    <string name="device_sound" msgid="8616320533559404963">"ધ્વનિ"</string>
+    <string name="device_sound" msgid="8616320533559404963">"સાઉન્ડ"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"સરાઉન્ડ સાઉન્ડ"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"સિસ્ટમ સાઉન્ડ"</string>
     <string name="device_apps" msgid="2134756632245008919">"ઍપ"</string>
@@ -175,7 +175,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"જાહેરાતો"</string>
     <string name="show_dev_on" msgid="612741433124106067">"તમે હવે એક વિકાસકર્તા છો!"</string>
-    <string name="show_dev_already" msgid="1522591284776449818">"કોઈ જરૂર નથી, તમે પહેલાંથી જ વિકાસકર્તા છો"</string>
+    <string name="show_dev_already" msgid="1522591284776449818">"કોઈ જરૂર નથી, તમે પહેલાંથી જ ડેવલપર છો"</string>
     <string name="device_info_default" msgid="2374506935205518448">"અજાણ"</string>
     <string name="selinux_status" msgid="1146662734953021410">"SELinux સ્થિતિ"</string>
     <string name="selinux_status_disabled" msgid="4027105362332795142">"બંધ છે"</string>
@@ -186,7 +186,7 @@
     <string name="device_status_summary" msgid="3270932829412434985">"નેટવર્ક, અનુક્રમ નંબર અને અન્ય માહિતી"</string>
     <string name="manual" msgid="5683935624321864999">"મેન્યુઅલ"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"નિયમનકારી માહિતી"</string>
-    <string name="device_feedback" msgid="4871903271442960465">"આ ઉપકરણ વિશે પ્રતિસાદ મોકલો"</string>
+    <string name="device_feedback" msgid="4871903271442960465">"આ ડિવાઇસ વિશે પ્રતિસાદ મોકલો"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"સાધન ID"</string>
     <string name="baseband_version" msgid="5618116741093274294">"બેઝબેન્ડ સંસ્કરણ"</string>
     <string name="kernel_version" msgid="7265509054070001542">"કર્નલ વર્ઝન"</string>
@@ -778,18 +778,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"સ્ક્રીનશૉટની મંજૂરી નથી"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"આ ઍપ ખોલી શકાતી નથી"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"જો તમને કોઈ પ્રશ્નો હોય, તો તમારા IT વ્યવસ્થાપકનો સંપર્ક કરો"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> સાથે ઉપયોગમાં લેવાતું ડિવાઇસ"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"કોઈ ડિવાઇસ મળ્યું નથી. ખાતરી કરો કે ડિવાઇસ ચાલુ છે અને કનેક્ટ કરવા માટે ઉપલબ્ધ છે."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"ફરી પ્રયાસ કરો"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"કંઈક ભૂલ આવી. ઍપ્લિકેશને ડિવાઇસ પસંદ કરવાની વિનંતી રદ કરી છે."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"કનેક્શન સફળ થયું"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"બધા બતાવો"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"શોધી રહ્યાં છીએ"</string>
 </resources>
