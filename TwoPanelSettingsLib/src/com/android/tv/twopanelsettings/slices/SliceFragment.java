@@ -221,6 +221,10 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (mLastFocusedPreferenceKey != null) {
             scrollToPreference(mLastFocusedPreferenceKey);
         }
+
+        if (getParentFragment() instanceof TwoPanelSettingsFragment) {
+            ((TwoPanelSettingsFragment) getParentFragment()).refocusPreference(this);
+        }
     }
 
 
@@ -282,6 +286,8 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                         oldPref.setSummary(newPref.getSummary());
                         oldPref.setEnabled(newPref.isEnabled());
                         oldPref.setSelectable(newPref.isSelectable());
+                        oldPref.setFragment(newPref.getFragment());
+                        oldPref.getExtras().putAll(newPref.getExtras());
                         if ((oldPref instanceof TwoStatePreference)
                                 && (newPref instanceof TwoStatePreference)) {
                             ((TwoStatePreference) oldPref)
@@ -291,6 +297,11 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                                 && (newPref instanceof HasSliceAction)) {
                             ((HasSliceAction) oldPref)
                                     .setSliceAction(((HasSliceAction) newPref).getSliceAction());
+                        }
+                        if ((oldPref instanceof HasSliceUri)
+                                && (newPref instanceof HasSliceUri)) {
+                            ((HasSliceUri) oldPref)
+                                    .setUri(((HasSliceUri) newPref).getUri());
                         }
                         oldPref.setOrder(i);
                         neededToAddNewPref = false;
@@ -333,6 +344,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             } catch (SendIntentException e) {
                 Log.e(TAG, "PendingIntent for slice cannot be sent", e);
             }
+            return true;
         } else if (preference instanceof TwoStatePreference
                 && preference instanceof HasSliceAction) {
             // TODO - Show loading indicator here?
