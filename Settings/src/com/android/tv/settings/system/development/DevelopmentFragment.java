@@ -36,10 +36,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.hardware.usb.UsbManager;
-import android.net.NetworkUtils;
-import android.net.wifi.IWifiManager;
 import android.net.wifi.WifiManager;
-import android.net.wifi.WifiInfo;
 import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -78,7 +75,12 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 import lineageos.providers.LineageSettings;
 import org.lineageos.internal.util.FileUtils;
 
+import java.net.NetworkInterface;
+import java.net.InetAddress;
+import java.net.SocketException;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -694,21 +696,26 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
         updateSwitchPreference(mAdbOverNetwork, enabled);
 
-        WifiInfo wifiInfo = null;
+        String hostAddress = null;
 
         if (enabled) {
-            IWifiManager wifiManager = IWifiManager.Stub.asInterface(
-                    ServiceManager.getService(Context.WIFI_SERVICE));
             try {
-                wifiInfo = wifiManager.getConnectionInfo("");
-            } catch (RemoteException e) {
-                Log.e(TAG, "wifiManager, getConnectionInfo()", e);
-            }
+                List<NetworkInterface> interfaces = Collections.list(
+                        NetworkInterface.getNetworkInterfaces());
+                for (NetworkInterface intf : interfaces) {
+                    List<InetAddress> addrs = Collections.list(intf.getInetAddresses());
+                    for (InetAddress addr : addrs) {
+                        if (!addr.isLoopbackAddress() &&
+                            addr.getHostAddress().indexOf(':') < 0) {
+                            hostAddress = addr.getHostAddress();
+                            break;
+                        }
+                    }
+                }
+	    } catch (SocketException se) {};
         }
 
-        if (wifiInfo != null) {
-            String hostAddress = NetworkUtils.intToInetAddress(
-                    wifiInfo.getIpAddress()).getHostAddress();
+        if (hostAddress != null) {
             mAdbOverNetwork.setSummary(hostAddress + ":" + String.valueOf(port));
         } else {
             mAdbOverNetwork.setSummary(R.string.adb_over_network_summary);
