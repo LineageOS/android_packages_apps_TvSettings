@@ -118,7 +118,7 @@ public final class SlicePreferencesUtil {
                     if (preference == null) {
                         preference = new SlicePreference(contextThemeWrapper);
                     }
-                    ((SlicePreference) preference).setUri(uri.toString());
+                    ((HasSliceUri) preference).setUri(uri.toString());
                     preference.setFragment(className);
                 }
             } else if (item.getSubType().equals(SlicesConstants.TYPE_PREFERENCE_CATEGORY)) {
@@ -169,7 +169,6 @@ public final class SlicePreferencesUtil {
                     preference.setSummary(getText(data.mSummaryItem));
                 }
             }
-
             // Set preview info image and text
             CharSequence infoText = getInfoText(item);
             IconCompat infoImage = getInfoImage(item);

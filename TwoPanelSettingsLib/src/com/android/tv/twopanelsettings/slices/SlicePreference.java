@@ -28,7 +28,7 @@ import com.android.tv.twopanelsettings.R;
 /**
  * A preference that represents a slice provided by another app.
  */
-public class SlicePreference extends Preference implements HasSliceAction {
+public class SlicePreference extends Preference implements HasSliceAction, HasSliceUri {
 
     private static final String TAG = "SlicePreference";
 
