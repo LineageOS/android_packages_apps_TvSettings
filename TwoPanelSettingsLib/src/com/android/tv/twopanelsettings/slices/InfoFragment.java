@@ -32,26 +32,19 @@ import com.android.tv.twopanelsettings.R;
  * Fragment to display informational image and description text for slice.
  */
 public class InfoFragment extends Fragment {
-    private Icon mImage;
-    private String mText;
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.info_fragment, container, false);
-        mImage = getArguments().getParcelable(SlicesConstants.EXTRA_PREFERENCE_INFO_IMAGE);
-        mText = getArguments().getString(SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT);
-        if (mImage != null) {
+        Icon image = getArguments().getParcelable(SlicesConstants.EXTRA_PREFERENCE_INFO_IMAGE);
+        String text = getArguments().getString(SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT);
+        if (image != null) {
             ((ImageView) view.findViewById(R.id.info_image))
-                    .setImageDrawable(mImage.loadDrawable(getContext()));
+                    .setImageDrawable(image.loadDrawable(getContext()));
         }
-        if (mText != null) {
-            ((TextView) view.findViewById(R.id.info_text)).setText(mText);
+        if (text != null) {
+            ((TextView) view.findViewById(R.id.info_text)).setText(text);
         }
         return view;
     }

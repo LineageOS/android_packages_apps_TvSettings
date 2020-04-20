@@ -46,6 +46,7 @@ import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.tv.twopanelsettings.slices.HasSliceUri;
 import com.android.tv.twopanelsettings.slices.InfoFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
@@ -348,7 +349,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         } else {
             previewFragment.setTargetFragment(prefFragment, 0);
         }
-
 
         final Fragment existingPreviewFragment =
                 getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx + 1]);
@@ -755,7 +755,27 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         return onCreatePreviewFragment(fragment, chosenPreference);
     }
 
-    private Preference getChosenPreference(Fragment fragment) {
+    /**
+     * Refocus the current selected preference. When a preference is selected and its InfoFragment
+     * slice data changes. We need to call this method to make sure InfoFragment updates in time.
+     */
+    public void refocusPreference(Fragment fragment) {
+        if (!isFragmentInTheMainPanel(fragment)) {
+            return;
+        }
+        Preference chosenPreference = getChosenPreference(fragment);
+        try {
+            if (chosenPreference != null && chosenPreference.getFragment() != null
+                    && InfoFragment.class.isAssignableFrom(
+                    Class.forName(chosenPreference.getFragment()))) {
+                onPreferenceFocused(chosenPreference);
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static Preference getChosenPreference(Fragment fragment) {
         if (!(fragment instanceof LeanbackPreferenceFragment)) {
             return null;
         }
@@ -780,14 +800,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             if (!shouldDisplay(preference.getFragment())) {
                 return null;
             }
-            if (preference instanceof SlicePreference) {
-                SlicePreference slicePref = (SlicePreference) preference;
+            if (preference instanceof HasSliceUri) {
+                HasSliceUri slicePref = (HasSliceUri) preference;
                 if (slicePref.getUri() == null || !isUriValid(slicePref.getUri())) {
                     return null;
                 }
                 Bundle b = preference.getExtras();
                 b.putString(SlicesConstants.TAG_TARGET_URI, slicePref.getUri());
-                b.putCharSequence(SlicesConstants.TAG_SCREEN_TITLE, slicePref.getTitle());
+                b.putCharSequence(SlicesConstants.TAG_SCREEN_TITLE, preference.getTitle());
             }
             return Fragment.instantiate(getActivity(), preference.getFragment(),
                     preference.getExtras());
