@@ -21,6 +21,7 @@ import android.annotation.NonNull;
 import android.annotation.Nullable;
 import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -171,5 +172,10 @@ public final class AvailableVirtualKeyboardFragment extends SettingsPreferenceFr
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.ENABLE_VIRTUAL_KEYBOARDS;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_KEYBOARD_MANAGE_KEYBOARDS;
     }
 }
