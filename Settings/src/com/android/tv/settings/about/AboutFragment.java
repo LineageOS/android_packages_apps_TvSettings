@@ -16,6 +16,9 @@
 
 package com.android.tv.settings.about;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -79,6 +82,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
     private static final String KEY_SAFETY_LEGAL = "safetylegal";
     private static final String KEY_DEVICE_NAME = "device_name";
     private static final String KEY_TUTORIALS = "tutorials";
+    private static final String KEY_RESET = "reset";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -262,6 +266,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
                 }
                 break;
             case KEY_BUILD_NUMBER:
+                logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_BUILD);
                 // Don't enable developer options for secondary users.
                 if (!mUm.isAdminUser()) {
                     mMetricsFeatureProvider.action(getContext(),
@@ -330,6 +335,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
                 sendFeedback();
                 break;
             case KEY_SYSTEM_UPDATE_SETTINGS:
+                logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_SYSTEM_UPDATE);
                 CarrierConfigManager configManager = (CarrierConfigManager)
                         getActivity().getSystemService(Context.CARRIER_CONFIG_SERVICE);
                 PersistableBundle b = configManager.getConfig();
@@ -337,6 +343,12 @@ public class AboutFragment extends SettingsPreferenceFragment {
                         b.getBoolean(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL)) {
                     ciActionOnSysUpdate(b);
                 }
+                break;
+            case KEY_DEVICE_NAME:
+                logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_DEVICE_NAME);
+                break;
+            case KEY_RESET:
+                logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_FACTORY_RESET);
                 break;
         }
         return super.onPreferenceTreeClick(preference);
@@ -394,5 +406,10 @@ public class AboutFragment extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return MetricsEvent.DEVICEINFO;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_ABOUT;
     }
 }
