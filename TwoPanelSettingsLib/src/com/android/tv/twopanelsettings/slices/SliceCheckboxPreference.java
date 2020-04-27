@@ -26,6 +26,7 @@ import androidx.slice.core.SliceActionImpl;
  * Slice version of CheckboxPreference.
  */
 public class SliceCheckboxPreference extends CheckBoxPreference implements HasSliceAction {
+    private int mActionId;
     private SliceActionImpl mAction;
 
     public SliceCheckboxPreference(Context context, SliceActionImpl action) {
@@ -38,6 +39,16 @@ public class SliceCheckboxPreference extends CheckBoxPreference implements HasSl
         super(context, attrs);
         mAction = action;
         update();
+    }
+
+    @Override
+    public int getActionId() {
+        return mActionId;
+    }
+
+    @Override
+    public void setActionId(int actionId) {
+        mActionId = actionId;
     }
 
     @Override
