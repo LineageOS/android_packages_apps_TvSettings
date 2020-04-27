@@ -39,6 +39,8 @@ import static androidx.slice.builders.ListBuilder.LARGE_IMAGE;
 import static androidx.slice.core.SliceHints.SUBTYPE_MILLIS;
 
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.BUTTONSTYLE;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_ACTION_ID;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PAGE_ID;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_IMAGE;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
 
@@ -206,6 +208,8 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
 
         private SliceAction mPrimaryAction;
         private SliceAction mFollowupAction;
+        private SliceItem mActionIdItem;
+        private SliceItem mPageIdItem;
         private SliceItem mTitleItem;
         private SliceItem mSubtitleItem;
         private Slice mStartItem;
@@ -260,6 +264,8 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             if (builder.getLayoutDirection() != -1) {
                 setLayoutDirection(builder.getLayoutDirection());
             }
+            setActionId(builder.getActionId());
+            setPageId(builder.getPageId());
             if (builder.getTitleAction() != null || builder.isTitleActionLoading()) {
                 setTitleItem(builder.getTitleAction(), builder.isTitleActionLoading());
             } else if (builder.getTitleIcon() != null || builder.isTitleItemLoading()) {
@@ -385,6 +391,16 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
 
         public void setFollowupAction(@NonNull SliceAction action) {
             mFollowupAction = action;
+        }
+
+        /** Set the actionId to be digested for logging. */
+        public void setActionId(int actionId) {
+            mActionIdItem = new SliceItem(actionId, FORMAT_INT, EXTRA_ACTION_ID, new String[]{});
+        }
+
+        /** Set the pageId to be digested for logging. */
+        public void setPageId(int pageId) {
+            mPageIdItem = new SliceItem(pageId, FORMAT_INT, EXTRA_PAGE_ID, new String[]{});
         }
 
         /**
@@ -572,6 +588,12 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             }
             if (mInfoImageItem != null) {
                 b.addItem(mInfoImageItem);
+            }
+            if (mActionIdItem != null) {
+                b.addItem(mActionIdItem);
+            }
+            if (mPageIdItem != null) {
+                b.addItem(mPageIdItem);
             }
             for (int i = 0; i < mEndItems.size(); i++) {
                 Slice item = mEndItems.get(i);
