@@ -16,9 +16,12 @@
 
 package com.android.tv.settings.system;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
 import android.accounts.AccountManager;
 import android.annotation.SuppressLint;
 import android.app.Fragment;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -273,20 +276,25 @@ public class SecurityFragment extends SettingsPreferenceFragment
         }
         switch (key) {
             case KEY_RESTRICTED_PROFILE_ENTER:
+                logEntrySelected(TvSettingsEnums.APPS_SECURITY_RESTRICTIONS_ENTER_PROFILE);
                 if (mRestrictedProfile.enterUser()) {
                     getActivity().finish();
                 }
                 return true;
             case KEY_RESTRICTED_PROFILE_EXIT:
+                logEntrySelected(TvSettingsEnums.APPS_SECURITY_RESTRICTIONS_EXIT_PROFILE);
                 launchPinDialog(PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT);
                 return true;
             case KEY_RESTRICTED_PROFILE_PIN:
+                logEntrySelected(TvSettingsEnums.APPS_SECURITY_RESTRICTIONS_PROFILE_CHANGE_PIN);
                 launchPinDialog(PIN_MODE_RESTRICTED_PROFILE_CHANGE_PASSWORD);
                 return true;
             case KEY_RESTRICTED_PROFILE_CREATE:
+                logEntrySelected(TvSettingsEnums.APPS_SECURITY_RESTRICTIONS_CREATE_PROFILE);
                 createRestrictedProfile();
                 return true;
             case KEY_RESTRICTED_PROFILE_DELETE:
+                logEntrySelected(TvSettingsEnums.APPS_SECURITY_RESTRICTIONS_DELETE_PROFILE);
                 launchPinDialog(PIN_MODE_RESTRICTED_PROFILE_DELETE);
                 return true;
         }
@@ -468,5 +476,10 @@ public class SecurityFragment extends SettingsPreferenceFragment
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.SECURITY;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.APPS_SECURITY_RESTRICTIONS;
     }
 }
