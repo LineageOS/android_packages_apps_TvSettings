@@ -16,6 +16,9 @@
 
 package com.android.tv.settings.inputmethod;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -93,6 +96,7 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
 
         findPreference(KEY_CURRENT_KEYBOARD).setOnPreferenceChangeListener(
                 (preference, newValue) -> {
+                    logEntrySelected(TvSettingsEnums.SYSTEM_KEYBOARD_CURRENT_KEYBOARD);
                     InputMethodHelper.setDefaultInputMethodId(getContext(), (String) newValue);
                     return true;
                 });
@@ -283,5 +287,10 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.INPUTMETHOD_KEYBOARD;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_KEYBOARD;
     }
 }
