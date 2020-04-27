@@ -26,6 +26,7 @@ import androidx.slice.core.SliceActionImpl;
  * Slices version of SwitchPreference.
  */
 public class SliceSwitchPreference extends SwitchPreference implements HasSliceAction {
+    private int mActionId;
     protected SliceActionImpl mAction;
 
     public SliceSwitchPreference(Context context, SliceActionImpl action) {
@@ -38,6 +39,16 @@ public class SliceSwitchPreference extends SwitchPreference implements HasSliceA
         super(context, attrs);
         mAction = action;
         update();
+    }
+
+    @Override
+    public int getActionId() {
+        return mActionId;
+    }
+
+    @Override
+    public void setActionId(int actionId) {
+        mActionId = actionId;
     }
 
     public SliceSwitchPreference(Context context) {

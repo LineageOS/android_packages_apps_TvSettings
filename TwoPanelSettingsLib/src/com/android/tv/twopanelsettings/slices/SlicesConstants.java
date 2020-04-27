@@ -50,6 +50,8 @@ public final class SlicesConstants {
     public static final String EXTRA_PREFERENCE_KEY = "extra_preference_key";
     public static final String EXTRA_PREFERENCE_INFO_TEXT= "extra_preference_info_text";
     public static final String EXTRA_PREFERENCE_INFO_IMAGE = "extra_preference_info_image";
+    public static final String EXTRA_ACTION_ID = "extra_action_id";
+    public static final String EXTRA_PAGE_ID = "extra_page_id";
     public static final int SWITCH = 0;
     public static final int CHECKMARK = 1;
     public static final int RADIO = 2;
