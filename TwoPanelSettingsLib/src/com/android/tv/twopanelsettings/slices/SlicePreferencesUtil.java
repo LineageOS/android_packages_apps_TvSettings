@@ -21,11 +21,14 @@ import static android.app.slice.Slice.HINT_SUMMARY;
 import static android.app.slice.Slice.HINT_TITLE;
 import static android.app.slice.SliceItem.FORMAT_ACTION;
 import static android.app.slice.SliceItem.FORMAT_IMAGE;
+import static android.app.slice.SliceItem.FORMAT_INT;
 import static android.app.slice.SliceItem.FORMAT_LONG;
 import static android.app.slice.SliceItem.FORMAT_SLICE;
 import static android.app.slice.SliceItem.FORMAT_TEXT;
 
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.CHECKMARK;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_ACTION_ID;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PAGE_ID;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_IMAGE;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.RADIO;
@@ -79,6 +82,7 @@ public final class SlicePreferencesUtil {
                         // toggle action, we need to add a subtype if this is a preference action.
                         preference = new SlicePreference(contextThemeWrapper);
                         ((SlicePreference) preference).setSliceAction(action);
+                        ((SlicePreference) preference).setActionId(getActionId(item));
                         if (data.mFollowupIntentItem != null) {
                             SliceActionImpl followUpAction =
                                     new SliceActionImpl(data.mFollowupIntentItem);
@@ -106,6 +110,9 @@ public final class SlicePreferencesUtil {
                                 }
                                 break;
                         }
+                        if (preference instanceof HasSliceAction) {
+                            ((HasSliceAction) preference).setActionId(getActionId(item));
+                        }
                     }
                 }
 
@@ -119,6 +126,9 @@ public final class SlicePreferencesUtil {
                         preference = new SlicePreference(contextThemeWrapper);
                     }
                     ((HasSliceUri) preference).setUri(uri.toString());
+                    if (preference instanceof HasSliceAction) {
+                        ((HasSliceAction) preference).setActionId(getActionId(item));
+                    }
                     preference.setFragment(className);
                 }
             } else if (item.getSubType().equals(SlicesConstants.TYPE_PREFERENCE_CATEGORY)) {
@@ -382,6 +392,16 @@ public final class SlicePreferencesUtil {
         Uri statusUri = Uri.parse(uriString)
                 .buildUpon().path("/" + SlicesConstants.PATH_STATUS).build();
         return statusUri;
+    }
+
+    static int getPageId(SliceItem item) {
+        SliceItem target = SliceQuery.findSubtype(item, FORMAT_INT, EXTRA_PAGE_ID);
+        return target != null ? target.getInt() : 0;
+    }
+
+    private static int getActionId(SliceItem item) {
+        SliceItem target = SliceQuery.findSubtype(item, FORMAT_INT, EXTRA_ACTION_ID);
+        return target != null ? target.getInt() : 0;
     }
 
 
