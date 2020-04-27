@@ -17,6 +17,7 @@
 package com.android.tv.settings.device.apps.specialaccess;
 
 import android.app.AppOpsManager;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -152,5 +153,10 @@ public class PictureInPicture extends SettingsPreferenceFragment
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.SETTINGS_MANAGE_PICTURE_IN_PICTURE;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.APPS_SPECIAL_APP_ACCESS_PICTURE_IN_PICTURE;
     }
 }
