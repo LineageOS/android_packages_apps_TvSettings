@@ -33,6 +33,7 @@ public class SlicePreference extends Preference implements HasSliceAction, HasSl
     private static final String TAG = "SlicePreference";
 
     private String mUri;
+    private int mActionId;
     private SliceActionImpl mAction;
     private SliceActionImpl mFollowUpAction;
 
@@ -71,6 +72,16 @@ public class SlicePreference extends Preference implements HasSliceAction, HasSl
 
     public String getUri() {
         return mUri;
+    }
+
+    @Override
+    public int getActionId() {
+        return mActionId;
+    }
+
+    @Override
+    public void setActionId(int actionId) {
+        mActionId = actionId;
     }
 
     public void setSliceAction(SliceActionImpl action) {
