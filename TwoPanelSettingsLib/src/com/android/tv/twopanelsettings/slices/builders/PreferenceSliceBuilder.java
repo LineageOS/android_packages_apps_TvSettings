@@ -131,7 +131,8 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     }
 
     /**
-     * Add a preference builder.
+     * Add a preference builder. If the row is expected to be actionable, it is recommended to
+     * invoke setActionId() for the RowBuilder to help with logging.
      */
     public PreferenceSliceBuilder addPreference(RowBuilder builder) {
         mImpl.addPreference(builder);
@@ -146,7 +147,10 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         return this;
     }
 
-    /** Set a custom screen title for slice. */
+    /**
+     * Set a custom screen title for slice. It is recommended to invoke setPageId() for the
+     * RowBuilder in addition to setTitle(), to help with logging.
+     */
     public PreferenceSliceBuilder addScreenTitle(RowBuilder builder) {
         mImpl.addScreenTitle(builder);
         return this;
@@ -175,6 +179,8 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private SliceAction mTitleAction;
         private SliceAction mPrimaryAction;
         private SliceAction mFollowupAction;
+        private int mActionId;
+        private int mPageId;
         private CharSequence mTitle;
         private boolean mTitleLoading;
         private CharSequence mSubtitle;
@@ -363,6 +369,30 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         @NonNull
         public RowBuilder setFollowupPendingIntent(@NonNull PendingIntent pendingIntent) {
             mFollowupAction = new SliceAction(pendingIntent, "", false);
+            return this;
+        }
+
+        /**
+         * Set the action ID for the row builder. If this is invoked for building an actionable row,
+         * it will be digested as actionId for logging purpose when the action is triggered.
+         *
+         * @param actionId pre-defined ID of an action
+         */
+        @NonNull
+        public RowBuilder setActionId(int actionId) {
+            mActionId = actionId;
+            return this;
+        }
+
+        /**
+         * Set the page ID for the row builder. If this is invoked for building the screen title
+         * row, it will be digested as pageId for logging purpose when the SliceFragment is focused.
+         *
+         * @param pageId pre-defined ID of a page
+         */
+        @NonNull
+        public RowBuilder setPageId(int pageId) {
+            mPageId = pageId;
             return this;
         }
 
@@ -743,6 +773,14 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         public SliceAction getFollowupAction() {
             return mFollowupAction;
+        }
+
+        public int getActionId() {
+            return mActionId;
+        }
+
+        public int getPageId() {
+            return mPageId;
         }
 
         public CharSequence getTitle() {
