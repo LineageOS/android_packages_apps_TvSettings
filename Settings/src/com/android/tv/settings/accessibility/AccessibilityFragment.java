@@ -16,7 +16,10 @@
 
 package com.android.tv.settings.accessibility;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
+
 import android.accessibilityservice.AccessibilityServiceInfo;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.ComponentName;
 import android.content.pm.ServiceInfo;
 import android.os.Bundle;
@@ -80,6 +83,9 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (TextUtils.equals(preference.getKey(), TOGGLE_HIGH_TEXT_CONTRAST_KEY)) {
+            logToggleInteracted(
+                    TvSettingsEnums.SYSTEM_A11Y_HIGH_CONTRAST_TEXT,
+                    ((SwitchPreference) preference).isChecked());
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.ACCESSIBILITY_HIGH_TEXT_CONTRAST_ENABLED,
                     (((SwitchPreference) preference).isChecked() ? 1 : 0));
@@ -131,5 +137,10 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.ACCESSIBILITY;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_A11Y;
     }
 }

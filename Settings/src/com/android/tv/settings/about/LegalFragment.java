@@ -16,6 +16,9 @@
 
 package com.android.tv.settings.about;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
 
@@ -64,7 +67,28 @@ public class LegalFragment extends SettingsPreferenceFragment {
     }
 
     @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        switch (preference.getKey()) {
+            case KEY_LICENSE:
+                logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_LEGAL_INFO_OPEN_SOURCE);
+                break;
+            case KEY_TERMS:
+                logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_LEGAL_INFO_GOOGLE_LEGAL);
+                break;
+            case KEY_WEBVIEW_LICENSE:
+                logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_LEGAL_INFO_SYSTEM_WEBVIEW);
+                break;
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
+
+    @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.ABOUT_LEGAL_SETTINGS;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_ABOUT_LEGAL_INFO;
     }
 }
