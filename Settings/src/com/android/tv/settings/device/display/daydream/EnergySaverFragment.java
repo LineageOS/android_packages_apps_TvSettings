@@ -19,6 +19,9 @@ package com.android.tv.settings.device.display.daydream;
 import static android.provider.Settings.Secure.ATTENTIVE_TIMEOUT;
 import static android.provider.Settings.Secure.SLEEP_TIMEOUT;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.format.DateUtils;
@@ -59,6 +62,11 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
             mSleepTimePref.setValue(String.valueOf(getSleepTime()));
         }
         mSleepTimePref.setOnPreferenceChangeListener(this);
+        mSleepTimePref.setOnPreferenceClickListener(
+                preference -> {
+                    logEntrySelected(TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY);
+                    return false;
+                });
     }
 
     private boolean showStandbyTimeout() {
@@ -93,8 +101,12 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         switch (preference.getKey()) {
-            case KEY_SLEEP_TIME :
-                updateTimeOut(allowTurnOffWithWakeLock(), Integer.parseInt((String) newValue));
+            case KEY_SLEEP_TIME:
+                final int newSleepTime = Integer.parseInt((String) newValue);
+                if (getSleepTimeEntryId(newSleepTime) != -1) {
+                    logEntrySelected(getSleepTimeEntryId(newSleepTime));
+                }
+                updateTimeOut(allowTurnOffWithWakeLock(), newSleepTime);
                 break;
             case KEY_ALLOW_TURN_SCREEN_OFF:
                 updateTimeOut((boolean) newValue, Integer.parseInt(mSleepTimePref.getValue()));
@@ -134,5 +146,32 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
 
     private void setAttentiveSleepTime(int ms) {
         Settings.Secure.putInt(getActivity().getContentResolver(), ATTENTIVE_TIMEOUT, ms);
+    }
+
+    // Map @array/screen_off_timeout_entries to defined log enum
+    private int getSleepTimeEntryId(int sleepTimeValue) {
+        switch(sleepTimeValue) {
+            case -1:
+                return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_NEVER;
+            case 900000:
+                return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_15M;
+            case 1800000:
+                return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_30M;
+            case 3600000:
+                return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_1H;
+            case 10800000:
+                return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_3H;
+            case 21600000:
+                return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_6H;
+            case 43200000:
+                return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_12H;
+            default:
+                return -1;
+        }
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_ENERGYSAVER;
     }
 }

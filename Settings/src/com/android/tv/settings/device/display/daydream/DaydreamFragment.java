@@ -18,6 +18,9 @@ package com.android.tv.settings.device.display.daydream;
 
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -144,10 +147,15 @@ public class DaydreamFragment extends SettingsPreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         switch (preference.getKey()) {
             case KEY_ACTIVE_DREAM:
+                logEntrySelected(TvSettingsEnums.PREFERENCES_SCREENSAVER_CHOOSER);
                 setActiveDream((String) newValue);
                 break;
             case KEY_DREAM_TIME:
-                setDreamTime(Integer.parseInt((String) newValue));
+                final int sleepTimeout = Integer.parseInt((String) newValue);
+                if (getSleepTimeoutEntryId(sleepTimeout) != -1) {
+                    logEntrySelected(getSleepTimeoutEntryId(sleepTimeout));
+                }
+                setDreamTime(sleepTimeout);
                 break;
         }
         return true;
@@ -187,6 +195,7 @@ public class DaydreamFragment extends SettingsPreferenceFragment
     public boolean onPreferenceTreeClick(Preference preference) {
         switch (preference.getKey()) {
             case KEY_DREAM_NOW:
+                logEntrySelected(TvSettingsEnums.PREFERENCES_SCREENSAVER_START_NOW);
                 mBackend.startDreaming();
                 return true;
             default:
@@ -226,5 +235,28 @@ public class DaydreamFragment extends SettingsPreferenceFragment
         public void onReceive(Context context, Intent intent) {
             refreshFromBackend();
         }
+    }
+
+    // Map @array/sleep_timeout_entries to defined log enum
+    private int getSleepTimeoutEntryId(int sleepTimeout) {
+        switch(sleepTimeout) {
+            case 300000:
+                return TvSettingsEnums.PREFERENCES_SCREENSAVER_START_DELAY_5M;
+            case 900000:
+                return TvSettingsEnums.PREFERENCES_SCREENSAVER_START_DELAY_15M;
+            case 1800000:
+                return TvSettingsEnums.PREFERENCES_SCREENSAVER_START_DELAY_30M;
+            case 3600000:
+                return TvSettingsEnums.PREFERENCES_SCREENSAVER_START_DELAY_1H;
+            case 7200000:
+                return TvSettingsEnums.PREFERENCES_SCREENSAVER_START_DELAY_2H;
+            default:
+                return -1;
+        }
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.PREFERENCES_SCREENSAVER;
     }
 }
