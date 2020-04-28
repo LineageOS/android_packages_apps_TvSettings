@@ -19,6 +19,7 @@ package com.android.tv.settings.system;
 import android.app.Activity;
 import android.app.timezonedetector.ManualTimeZoneSuggestion;
 import android.app.timezonedetector.TimeZoneDetector;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -150,5 +151,10 @@ public class TimeZoneFragment extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.ZONE_PICKER;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_DATE_TIME_SET_TIME_ZONE;
     }
 }

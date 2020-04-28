@@ -558,6 +558,11 @@ public class MainFragment extends PreferenceControllerFragment implements
             Intent intent = new Intent(ACTION_CONNECTED_DEVICES);
             ResolveInfo info = systemIntentIsHandled(getContext(), intent);
             connectedDevicesPreference.setVisible(info != null);
+            connectedDevicesPreference.setOnPreferenceClickListener(
+                    preference -> {
+                        logEntrySelected(TvSettingsEnums.CONNECTED_CLASSIC);
+                        return false;
+                    });
             accessoryPreference.setVisible(info == null);
             if (info != null) {
                 String pkgName = info.activityInfo.packageName;
