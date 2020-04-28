@@ -16,7 +16,10 @@
 
 package com.android.tv.settings.device;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
 import android.app.Fragment;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -132,8 +135,28 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     }
 
     @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        switch (preference.getKey()) {
+            case KEY_HOME_SETTINGS:
+                logEntrySelected(TvSettingsEnums.PREFERENCES_HOME_SCREEN);
+                break;
+            case KEY_GOOGLE_SETTINGS:
+                logEntrySelected(TvSettingsEnums.PREFERENCES_ASSISTANT);
+                break;
+            case KEY_CAST_SETTINGS:
+                logEntrySelected(TvSettingsEnums.PREFERENCES_CHROMECAST_SHELL);
+                break;
+            case KEY_REBOOT:
+                logEntrySelected(TvSettingsEnums.SYSTEM_REBOOT);
+                break;
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
+
+    @Override
     public boolean onPreferenceLongClick(Preference preference) {
         if (TextUtils.equals(preference.getKey(), KEY_REBOOT)) {
+            logEntrySelected(TvSettingsEnums.SYSTEM_REBOOT);
             Fragment fragment = getCallbackFragment();
             if (fragment instanceof LeanbackSettingsFragment) {
                 ((LeanbackSettingsFragment) fragment).startImmersiveFragment(
@@ -262,5 +285,10 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
             }
         }
         keyboardPref.setSummary(summary);
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM;
     }
 }
