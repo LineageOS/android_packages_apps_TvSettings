@@ -19,8 +19,11 @@ package com.android.tv.settings.device.apps;
 import static android.content.pm.ApplicationInfo.FLAG_ALLOW_CLEAR_USER_DATA;
 import static android.content.pm.ApplicationInfo.FLAG_SYSTEM;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -269,6 +272,11 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
             openPreference.setIntent(appLaunchIntent);
             openPreference.setTitle(R.string.device_apps_app_management_open);
             openPreference.setVisible(true);
+            openPreference.setOnPreferenceClickListener(
+                    preference -> {
+                        logEntrySelected(TvSettingsEnums.APPS_ALL_APPS_APP_ENTRY_OPEN);
+                        return false;
+                    });
         } else {
             openPreference.setVisible(false);
         }
@@ -367,6 +375,11 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
                     resolveInfo.activityInfo.name);
             licensesPreference.setIntent(intent);
             licensesPreference.setTitle(R.string.device_apps_app_management_licenses);
+            licensesPreference.setOnPreferenceClickListener(
+                    preference -> {
+                        logEntrySelected(TvSettingsEnums.APPS_ALL_APPS_APP_ENTRY_LICENSES);
+                        return false;
+                    });
             licensesPreference.setVisible(true);
         }
 
@@ -378,6 +391,11 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
             permissionsPreference.setTitle(R.string.device_apps_app_management_permissions);
             replacePreference(permissionsPreference);
         }
+        permissionsPreference.setOnPreferenceClickListener(
+                preference -> {
+                    logEntrySelected(TvSettingsEnums.APPS_ALL_APPS_APP_ENTRY_PERMISSIONS);
+                    return false;
+                });
         permissionsPreference.setIntent(new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS)
                 .putExtra(Intent.EXTRA_PACKAGE_NAME, mPackageName));
     }
@@ -510,6 +528,11 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
         boolean allowClearData =
                 (mEntry.info.flags & FLAG_ALLOW_CLEAR_USER_DATA) == FLAG_ALLOW_CLEAR_USER_DATA;
         return !sysApp || allowClearData;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.APPS_ALL_APPS_APP_ENTRY;
     }
 
     private class ApplicationsStateCallbacks implements ApplicationsState.Callbacks {
