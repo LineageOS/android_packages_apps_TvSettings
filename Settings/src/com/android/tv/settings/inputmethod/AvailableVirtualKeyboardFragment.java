@@ -154,6 +154,9 @@ public final class AvailableVirtualKeyboardFragment extends SettingsPreferenceFr
                     || permittedList.contains(imi.getPackageName());
             final InputMethodPreference pref = new InputMethodPreference(
                     context, imi, true, isAllowedByOrganization, this);
+            // TODO: Update the icon container in leanback_preference.xml to use LinearLayout.
+            // This is a workaround to avoid the crash. b/146654624
+            pref.setIconSize(0);
             pref.setIcon(getInputMethodIcon(packageManager, imi));
             mInputMethodPreferenceList.add(pref);
         }
