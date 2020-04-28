@@ -18,6 +18,7 @@ package com.android.tv.settings.accessibility;
 
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.Fragment;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -129,5 +130,10 @@ public class AccessibilityShortcutServiceFragment extends SettingsPreferenceFrag
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.ACCESSIBILITY_SERVICE;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_A11Y_SHORTCUT_SERVICE;
     }
 }
