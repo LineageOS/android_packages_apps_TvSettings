@@ -17,6 +17,7 @@
 package com.android.tv.settings.system;
 
 import android.app.ActivityManager;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -137,5 +138,10 @@ public class LanguageFragment extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.SETTINGS_LANGUAGE_CATEGORY;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_LANGUAGE;
     }
 }
