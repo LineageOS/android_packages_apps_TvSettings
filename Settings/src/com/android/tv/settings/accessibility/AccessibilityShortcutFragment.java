@@ -16,7 +16,10 @@
 
 package com.android.tv.settings.accessibility;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
+
 import android.accessibilityservice.AccessibilityServiceInfo;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -60,6 +63,7 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
 
         final TwoStatePreference enablePref = (TwoStatePreference) findPreference(KEY_ENABLE);
         enablePref.setOnPreferenceChangeListener((preference, newValue) -> {
+            logToggleInteracted(TvSettingsEnums.SYSTEM_A11Y_SHORTCUT_ON_OFF, (Boolean) newValue);
             setAccessibilityShortcutEnabled((Boolean) newValue);
             return true;
         });
@@ -110,5 +114,10 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.ACCESSIBILITY_TOGGLE_GLOBAL_GESTURE;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_A11Y_SHORTCUT;
     }
 }
