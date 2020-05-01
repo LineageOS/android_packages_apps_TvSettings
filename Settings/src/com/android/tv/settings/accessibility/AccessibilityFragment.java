@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.accessibility;
 
+import static android.content.Context.ACCESSIBILITY_SERVICE;
+
 import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
 import android.accessibilityservice.AccessibilityServiceInfo;
@@ -50,6 +52,8 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
     private static final String ACCESSIBILITY_SERVICES_KEY = "system_accessibility_services";
 
     private PreferenceGroup mServicesPref;
+    private AccessibilityManager.AccessibilityStateChangeListener
+            mAccessibilityStateChangeListener = enabled -> refreshServices(mServicesPref);
 
     /**
      * Create a new instance of the fragment
@@ -68,6 +72,16 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
     }
 
     @Override
+    public void onStop() {
+        super.onStop();
+        AccessibilityManager am = (AccessibilityManager)
+                getContext().getSystemService(ACCESSIBILITY_SERVICE);
+        if (am != null && mServicesPref != null) {
+            am.removeAccessibilityStateChangeListener(mAccessibilityStateChangeListener);
+        }
+    }
+
+    @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.accessibility, null);
 
@@ -77,7 +91,14 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
                 Settings.Secure.ACCESSIBILITY_HIGH_TEXT_CONTRAST_ENABLED, 0) == 1);
 
         mServicesPref = (PreferenceGroup) findPreference(ACCESSIBILITY_SERVICES_KEY);
-        refreshServices(mServicesPref);
+        if (mServicesPref != null) {
+            refreshServices(mServicesPref);
+            AccessibilityManager am = (AccessibilityManager)
+                    getContext().getSystemService(ACCESSIBILITY_SERVICE);
+            if (am != null) {
+                am.addAccessibilityStateChangeListener(mAccessibilityStateChangeListener);
+            }
+        }
     }
 
     @Override
