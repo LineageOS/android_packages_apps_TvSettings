@@ -67,6 +67,8 @@ public class StateMachine extends ViewModel {
     public static final int EXIT_ADVANCED_FLOW = 25;
     public static final int RESULT_CAPTIVE_PORTAL = 26;
     public static final int RESTART = 27;
+    public static final int FINISH_SECURITY_FLOW = 28;
+
     @IntDef({
             ADD_START,
             CANCEL,
@@ -94,7 +96,8 @@ public class StateMachine extends ViewModel {
             ADVANCED_FLOW_COMPLETE,
             ENTER_ADVANCED_FLOW,
             EXIT_ADVANCED_FLOW,
-            RESULT_CAPTIVE_PORTAL})
+            RESULT_CAPTIVE_PORTAL,
+            FINISH_SECURITY_FLOW})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Event {
     }
@@ -254,13 +257,20 @@ public class StateMachine extends ViewModel {
 
     private void addToStack(State state) {
         for (int i = mStatesList.size() - 1; i >= 0; i--) {
-            if (state.getClass().equals(mStatesList.get(i).getClass())) {
+            if (equal(state, mStatesList.get(i))) {
                 for (int j = mStatesList.size() - 1; j >= i; j--) {
                     mStatesList.removeLast();
                 }
             }
         }
         mStatesList.addLast(state);
+    }
+
+    private boolean equal(State s1, State s2) {
+        if (!s1.getClass().equals(s2.getClass())) {
+            return false;
+        }
+        return true;
     }
 
     public State.StateCompleteListener getListener() {
