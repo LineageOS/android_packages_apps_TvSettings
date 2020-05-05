@@ -38,8 +38,10 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Fragment for listing and managing all apps on the device.
@@ -50,7 +52,7 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
 
     private static final String TAG = "AllAppsFragment";
     private static final String KEY_SHOW_OTHER_APPS = "ShowOtherApps";
-
+    private static Set<String> sSystemAppPackages;
     private static final @ApplicationsState.SessionFlags int SESSION_FLAGS =
             ApplicationsState.FLAG_SESSION_REQUEST_HOME_APP
             | ApplicationsState.FLAG_SESSION_REQUEST_ICONS
@@ -105,6 +107,8 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mApplicationsState = ApplicationsState.getInstance(getActivity().getApplication());
+        sSystemAppPackages = Arrays.stream(getResources()
+                .getStringArray(R.array.system_app_packages)).collect(Collectors.toSet());
 
         final String volumeUuid = getArguments().getString(AppsActivity.EXTRA_VOLUME_UUID);
         final String volumeName = getArguments().getString(AppsActivity.EXTRA_VOLUME_NAME);
@@ -347,7 +351,8 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
                             && info.info != null
                             && info.info.enabled
                             && info.hasLauncherEntry
-                            && info.launcherEntryEnabled;
+                            && info.launcherEntryEnabled
+                            && !sSystemAppPackages.contains(info.info.packageName);
                 }
             };
 
