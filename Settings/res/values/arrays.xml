@@ -242,6 +242,10 @@
         <item>manual</item>
     </string-array>
 
+    <!-- Blacklist packages which should be seen as system apps in "All apps" page -->
+    <string-array name="system_app_packages" translatable="false">
+    </string-array>
+
     <!-- Type of EAP method -->
     <string-array name="wifi_eap_entries" translatable="false">
         <!-- Do not translate. -->
