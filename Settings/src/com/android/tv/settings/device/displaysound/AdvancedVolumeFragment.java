@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2020 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -11,12 +11,11 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
-package com.android.tv.settings.device.sound;
+package com.android.tv.settings.device.displaysound;
 
-import android.content.ContentResolver;
 import android.content.Context;
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -27,10 +26,8 @@ import android.text.TextUtils;
 import androidx.annotation.Keep;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreference;
-import androidx.preference.TwoStatePreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.core.AbstractPreferenceController;
@@ -42,15 +39,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The "Sound" screen in TV Settings.
+ * The "Advanced sound settings" screen in TV Settings.
  */
 @Keep
-public class SoundFragment extends PreferenceControllerFragment implements
+public class AdvancedVolumeFragment extends PreferenceControllerFragment implements
         Preference.OnPreferenceChangeListener {
-
-    static final String KEY_SOUND_EFFECTS = "sound_effects";
     static final String KEY_SURROUND_PASSTHROUGH = "surround_passthrough";
-    static final String KEY_SURROUND_SOUND_CATEGORY = "surround_sound_category";
     static final String KEY_SURROUND_SOUND_FORMAT_PREFIX = "surround_sound_format_";
 
     static final String VAL_SURROUND_SOUND_AUTO = "auto";
@@ -62,10 +56,9 @@ public class SoundFragment extends PreferenceControllerFragment implements
     private Map<Integer, Boolean> mFormats;
     private Map<Integer, Boolean> mReportedFormats;
     private List<AbstractPreferenceController> mPreferenceControllers;
-    private PreferenceCategory mSurroundSoundCategoryPref;
 
-    public static SoundFragment newInstance() {
-        return new SoundFragment();
+    public static DisplaySoundFragment newInstance() {
+        return new DisplaySoundFragment();
     }
 
     @Override
@@ -78,23 +71,18 @@ public class SoundFragment extends PreferenceControllerFragment implements
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.sound;
+        return R.xml.advanced_sound;
     }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.sound, null);
+        setPreferencesFromResource(R.xml.advanced_sound, null);
 
-        final TwoStatePreference soundPref = (TwoStatePreference) findPreference(KEY_SOUND_EFFECTS);
-        soundPref.setChecked(getSoundEffectsEnabled());
 
-        final ListPreference surroundPref =
-                (ListPreference) findPreference(KEY_SURROUND_PASSTHROUGH);
+        final ListPreference surroundPref = findPreference(KEY_SURROUND_PASSTHROUGH);
         surroundPref.setValue(getSurroundPassthroughSetting(getContext()));
         surroundPref.setOnPreferenceChangeListener(this);
 
-        mSurroundSoundCategoryPref =
-                (PreferenceCategory) findPreference(KEY_SURROUND_SOUND_CATEGORY);
         createFormatPreferences();
         updateFormatPreferencesStates();
     }
@@ -127,7 +115,7 @@ public class SoundFragment extends PreferenceControllerFragment implements
             pref.setTitle(getFormatDisplayName(formatId));
             pref.setKey(KEY_SURROUND_SOUND_FORMAT_PREFIX + formatId);
             pref.setChecked(enabled);
-            mSurroundSoundCategoryPref.addPreference(pref);
+            getPreferenceScreen().addPreference(pref);
         }
     }
 
@@ -152,21 +140,12 @@ public class SoundFragment extends PreferenceControllerFragment implements
 
     private void updateFormatPreferencesStates() {
         for (AbstractPreferenceController controller : mPreferenceControllers) {
-            Preference preference = mSurroundSoundCategoryPref.findPreference(
+            Preference preference = findPreference(
                     controller.getPreferenceKey());
             if (preference != null) {
                 controller.updateState(preference);
             }
         }
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        if (TextUtils.equals(preference.getKey(), KEY_SOUND_EFFECTS)) {
-            final TwoStatePreference soundPref = (TwoStatePreference) preference;
-            setSoundEffectsEnabled(soundPref.isChecked());
-        }
-        return super.onPreferenceTreeClick(preference);
     }
 
     @Override
@@ -194,25 +173,6 @@ public class SoundFragment extends PreferenceControllerFragment implements
             return true;
         }
         return true;
-    }
-
-    private boolean getSoundEffectsEnabled() {
-        return getSoundEffectsEnabled(getActivity().getContentResolver());
-    }
-
-    public static boolean getSoundEffectsEnabled(ContentResolver contentResolver) {
-        return Settings.System.getInt(contentResolver, Settings.System.SOUND_EFFECTS_ENABLED, 1)
-                != 0;
-    }
-
-    private void setSoundEffectsEnabled(boolean enabled) {
-        if (enabled) {
-            mAudioManager.loadSoundEffects();
-        } else {
-            mAudioManager.unloadSoundEffects();
-        }
-        Settings.System.putInt(getActivity().getContentResolver(),
-                Settings.System.SOUND_EFFECTS_ENABLED, enabled ? 1 : 0);
     }
 
     private void setSurroundPassthroughSetting(int newVal) {

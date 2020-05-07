@@ -38,10 +38,10 @@
         android:key="keyboard"
         android:title="@string/system_keyboard"/>
     <Preference
-        android:fragment="com.android.tv.settings.device.sound.SoundFragment"
-        android:icon="@drawable/ic_volume_up"
+        android:fragment="com.android.tv.settings.device.displaysound.DisplaySoundFragment"
+        android:icon="@drawable/ic_display_sound"
         android:key="sound_effects"
-        android:title="@string/device_sound"/>
+        android:title="@string/device_display_sound"/>
     <Preference
         android:fragment="com.android.tv.settings.device.StorageSummaryFragment"
         android:icon="@drawable/ic_storage"
