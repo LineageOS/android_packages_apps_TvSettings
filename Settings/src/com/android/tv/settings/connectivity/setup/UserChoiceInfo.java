@@ -46,6 +46,13 @@ public class UserChoiceInfo extends ViewModel {
     public @interface PAGE {
     }
 
+    public enum ConnectionFailedStatus {
+        AUTHENTICATION,
+        REJECTED,
+        TIMEOUT,
+        UNKNOWN
+    }
+
     private HashMap<Integer, CharSequence> mDataSummary = new HashMap<>();
 
     private WifiConfiguration mWifiConfiguration = new WifiConfiguration();
@@ -53,6 +60,7 @@ public class UserChoiceInfo extends ViewModel {
     private ScanResult mChosenNetwork;
     private String mConnectedNetwork;
     private boolean mIsPasswordHidden = false;
+    private ConnectionFailedStatus mConnectionFailedStatus;
 
     /**
      * Store the page summary into a HashMap.
@@ -182,6 +190,13 @@ public class UserChoiceInfo extends ViewModel {
         this.mIsPasswordHidden = hidden;
     }
 
+    public void setConnectionFailedStatus(ConnectionFailedStatus status) {
+        mConnectionFailedStatus = status;
+    }
+
+    public ConnectionFailedStatus getConnectionFailedStatus() {
+        return mConnectionFailedStatus;
+    }
     /**
      * Initialize all the information.
      */
