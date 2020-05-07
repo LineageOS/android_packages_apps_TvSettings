@@ -112,6 +112,7 @@ public class ConnectState implements State {
         Handler mHandler;
         private ConnectivityListener mConnectivityListener;
         private ConnectivityManager mConnectivityManager;
+        private UserChoiceInfo mUserChoiceInfo;
 
         /**
          * Obtain a new instance of ConnectToWifiFragment.
@@ -137,9 +138,9 @@ public class ConnectState implements State {
             mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(
                     Context.CONNECTIVITY_SERVICE);
 
-            UserChoiceInfo userChoiceInfo = ViewModelProviders
+            mUserChoiceInfo = ViewModelProviders
                     .of(getActivity()).get(UserChoiceInfo.class);
-            mWifiConfiguration = userChoiceInfo.getWifiConfiguration();
+            mWifiConfiguration = mUserChoiceInfo.getWifiConfiguration();
             mStateMachine = ViewModelProviders
                     .of(getActivity()).get(StateMachine.class);
 
@@ -212,15 +213,21 @@ public class ConnectState implements State {
                         .getNetworkSelectionDisableReason()) {
                     case WifiConfiguration.NetworkSelectionStatus.DISABLED_AUTHENTICATION_FAILURE:
                     case WifiConfiguration.NetworkSelectionStatus.DISABLED_BY_WRONG_PASSWORD:
-                        notifyListener(StateMachine.RESULT_BAD_AUTH);
+                        mUserChoiceInfo.setConnectionFailedStatus(
+                                UserChoiceInfo.ConnectionFailedStatus.AUTHENTICATION);
+                        break;
+                    case WifiConfiguration.NetworkSelectionStatus.DISABLED_ASSOCIATION_REJECTION:
+                        mUserChoiceInfo.setConnectionFailedStatus(
+                                UserChoiceInfo.ConnectionFailedStatus.REJECTED);
                         break;
                     case WifiConfiguration.NetworkSelectionStatus.DISABLED_DHCP_FAILURE:
                         notifyListener(StateMachine.RESULT_UNKNOWN_ERROR);
                         break;
-                    case WifiConfiguration.NetworkSelectionStatus.DISABLED_ASSOCIATION_REJECTION:
-                        notifyListener(StateMachine.RESULT_REJECTED_BY_AP);
-                        break;
+                    default:
+                        mUserChoiceInfo.setConnectionFailedStatus(
+                                UserChoiceInfo.ConnectionFailedStatus.UNKNOWN);
                 }
+                notifyListener(StateMachine.RESULT_FAILURE);
                 accessPoint.clearConfig();
             }
         }
@@ -273,10 +280,8 @@ public class ConnectState implements State {
                             + ((currentConnection == null)
                             ? "nothing" : currentConnection.getSSID()));
                 }
-                if (currentConnection != null
-                        && currentConnection.getSSID().equals(mWifiConfiguration.SSID)) {
-                    return true;
-                }
+                return currentConnection != null
+                        && currentConnection.getSSID().equals(mWifiConfiguration.SSID);
             } else {
                 if (DEBUG) Log.d(TAG, "Network is not connected");
             }
@@ -310,7 +315,11 @@ public class ConnectState implements State {
                     fragment.notifyListener(StateMachine.RESULT_SUCCESS);
                 } else {
                     if (DEBUG) Log.d(TAG, "Timeout is real; telling the listener");
-                    fragment.notifyListener(StateMachine.RESULT_TIMEOUT);
+                    UserChoiceInfo userChoiceInfo = ViewModelProviders
+                            .of(fragment.getActivity()).get(UserChoiceInfo.class);
+                    userChoiceInfo.setConnectionFailedStatus(
+                            UserChoiceInfo.ConnectionFailedStatus.TIMEOUT);
+                    fragment.notifyListener(StateMachine.RESULT_FAILURE);
                 }
             }
         }
