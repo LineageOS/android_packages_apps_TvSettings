@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.device.sound;
+package com.android.tv.settings.device.displaysound;
 
 import android.app.Fragment;
 
@@ -22,13 +22,13 @@ import com.android.tv.settings.TvSettingsActivity;
 import com.android.tv.settings.overlay.FeatureFactory;
 
 /**
- * Activity that allows the enabling and disabling of sound effects.
+ * Activity that allows the enabling and disabling of display and sound effects.
  */
-public class SoundActivity extends TvSettingsActivity {
+public class DisplaySoundActivity extends TvSettingsActivity {
 
     @Override
     protected Fragment createSettingsFragment() {
         return FeatureFactory.getFactory(this).getSettingsFragmentProvider()
-            .newSettingsFragment(SoundFragment.class.getName(), null);
+                .newSettingsFragment(DisplaySoundFragment.class.getName(), null);
     }
 }
