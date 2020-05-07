@@ -23,6 +23,7 @@ import android.content.ContentProviderClient;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.transition.Fade;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -522,6 +523,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         Fragment prefFragment =
                 getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
         Preference preference = getChosenPreference(prefFragment);
+        if (preference == null) {
+            return false;
+        }
+        // This is for the case when a preference has preview but once user navigate to
+        // see the preview, settings actually launch an intent to start external activity.
+        if (preference.getIntent() != null  && !TextUtils.isEmpty(preference.getFragment())) {
+            return true;
+        }
         if (preference instanceof SlicePreference
                 && ((SlicePreference) preference).getSliceAction() != null
                 && ((SlicePreference) preference).getUri() != null) {
