@@ -19,12 +19,6 @@
                   android:title="@string/privacy_category_title"
                   xmlns:custom="http://schemas.android.com/apk/res-auto">
     <Preference
-        android:icon="@drawable/ic_feature_video"
-        android:key="ads"
-        android:title="@string/about_ads">
-        <intent android:action="com.google.android.gms.settings.ADS_PRIVACY" />
-    </Preference>
-    <Preference
         android:fragment="com.android.tv.settings.system.LocationFragment"
         android:icon="@drawable/ic_location_on"
         android:key="location"
@@ -37,4 +31,10 @@
         custom:uri="content://com.google.android.settings.usage/usagediagnostics">
         <intent android:action="com.google.android.settings.USAGE_AND_DIAGNOSTICS_SETTING"/>
     </com.android.tv.twopanelsettings.slices.SlicePreference>
+    <Preference
+        android:icon="@drawable/ic_feature_video"
+        android:key="ads"
+        android:title="@string/about_ads">
+        <intent android:action="com.google.android.gms.settings.ADS_PRIVACY" />
+    </Preference>
 </PreferenceScreen>
