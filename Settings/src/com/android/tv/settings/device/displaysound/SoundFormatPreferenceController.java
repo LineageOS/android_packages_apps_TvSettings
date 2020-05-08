@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.device.sound;
+package com.android.tv.settings.device.displaysound;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -61,7 +61,7 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
 
     @Override
     public String getPreferenceKey() {
-        return SoundFragment.KEY_SURROUND_SOUND_FORMAT_PREFIX + mFormatId;
+        return AdvancedVolumeFragment.KEY_SURROUND_SOUND_FORMAT_PREFIX + mFormatId;
     }
 
     @Override
@@ -86,23 +86,24 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
      * audio manager state for the format.
      */
     private boolean getFormatPreferenceCheckedState() {
-        switch (SoundFragment.getSurroundPassthroughSetting(mContext)) {
-            case SoundFragment.VAL_SURROUND_SOUND_NEVER:
+        switch (AdvancedVolumeFragment.getSurroundPassthroughSetting(mContext)) {
+            case AdvancedVolumeFragment.VAL_SURROUND_SOUND_NEVER:
                 return false;
-            case SoundFragment.VAL_SURROUND_SOUND_ALWAYS:
+            case AdvancedVolumeFragment.VAL_SURROUND_SOUND_ALWAYS:
                 return true;
-            case SoundFragment.VAL_SURROUND_SOUND_AUTO:
+            case AdvancedVolumeFragment.VAL_SURROUND_SOUND_AUTO:
                 return isReportedFormat();
-            case SoundFragment.VAL_SURROUND_SOUND_MANUAL:
+            case AdvancedVolumeFragment.VAL_SURROUND_SOUND_MANUAL:
                 return getFormatsEnabledInManualMode().contains(mFormatId);
-            default: return false;
+            default:
+                return false;
         }
     }
 
     /** @return true if the format checkboxes should be enabled, i.e. in manual mode. */
     private boolean getFormatPreferencesEnabledState() {
-        return SoundFragment.getSurroundPassthroughSetting(mContext)
-                == SoundFragment.VAL_SURROUND_SOUND_MANUAL;
+        return AdvancedVolumeFragment.getSurroundPassthroughSetting(mContext)
+                == AdvancedVolumeFragment.VAL_SURROUND_SOUND_MANUAL;
     }
 
     /** @return the formats that are enabled in manual mode, from global settings */
