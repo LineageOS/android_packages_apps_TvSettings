@@ -156,6 +156,15 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         return this;
     }
 
+    /**
+     * Set the focused preference for slice.
+     * @param key key of the focused preference.
+     */
+    public PreferenceSliceBuilder setFocusedPreference(CharSequence key) {
+        mImpl.setFocusedPreference(key);
+        return this;
+    }
+
     /** Add a preference which can be embedded in other settings items. **/
     public PreferenceSliceBuilder setEmbeddedPreference(RowBuilder builder) {
         mImpl.setEmbeddedPreference(builder);
