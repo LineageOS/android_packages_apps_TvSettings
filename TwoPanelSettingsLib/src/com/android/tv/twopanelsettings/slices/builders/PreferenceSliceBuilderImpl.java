@@ -74,6 +74,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     public static final String TYPE_PREFERENCE = "TYPE_PREFERENCE";
     public static final String TYPE_PREFERENCE_CATEGORY = "TYPE_PREFERENCE_CATEGORY";
     public static final String TYPE_PREFERENCE_SCREEN_TITLE = "TYPE_PREFERENCE_SCREEN_TITLE";
+    public static final String TYPE_FOCUSED_PREFERENCE = "TYPE_FOCUSED_PREFERENCE";
     public static final String TYPE_PREFERENCE_EMBEDDED = "TYPE_PREFERENCE_EMBEDDED";
     public static final String TYPE_PREFERENCE_RADIO = "TYPE_PREFERENCE_RADIO";
     public static final String TAG_TARGET_URI = "TAG_TARGET_URI";
@@ -139,6 +140,14 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     @NonNull
     public void addScreenTitle(@NonNull RowBuilder builder) {
         addRow(builder, TYPE_PREFERENCE_SCREEN_TITLE);
+    }
+
+    /**
+     * Set the focused preference for the slice
+     */
+    @NonNull
+    public void setFocusedPreference(CharSequence key) {
+        addRow(new RowBuilder().setTitle(key), TYPE_FOCUSED_PREFERENCE);
     }
 
     /**
