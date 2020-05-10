@@ -100,6 +100,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     static final String KEY_DISPLAY_AND_SOUND = "display_and_sound";
     @VisibleForTesting
     static final String KEY_QUICK_SETTINGS = "quick_settings";
+    private static final String KEY_CHANNELS_AND_INPUTS = "channels_and_inputs";
 
     private static final String ACTION_ACCOUNTS = "com.android.tv.settings.ACCOUNTS";
     @VisibleForTesting
@@ -677,7 +678,11 @@ public class MainFragment extends PreferenceControllerFragment implements
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference.getKey().equals(KEY_ACCOUNTS_AND_SIGN_IN) && !mHasAccounts
-                || (preference.getKey().equals(KEY_ACCESSORIES) && !mHasBtAccessories)) {
+                || (preference.getKey().equals(KEY_ACCESSORIES) && !mHasBtAccessories)
+                || (preference.getKey().equals(KEY_DISPLAY_AND_SOUND)
+                        && preference.getIntent() != null)
+                || (preference.getKey().equals(KEY_CHANNELS_AND_INPUTS)
+                        && preference.getIntent() != null)) {
             getContext().startActivity(preference.getIntent());
             return true;
         } else {
