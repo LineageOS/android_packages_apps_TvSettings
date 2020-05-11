@@ -87,6 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Disabled apps"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Screen saver"</string>
     <string name="device_display" msgid="244634591698925025">"Display"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Display and sound"</string>
     <string name="device_sound" msgid="8616320533559404963">"Sound"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Surround sound"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"System sounds"</string>
@@ -108,6 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Auto: Use the formats that your device reports supporting (recommended)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"None: Never use surround sound"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manual: Select which formats to use"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Display"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Advanced display settings"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Advanced sound settings"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Allow game mode"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Clear cached data?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"This will clear cached data for all apps."</string>
     <string name="accessories_add" msgid="413764175035531452">"Add accessory"</string>
@@ -308,9 +313,9 @@
     <string name="storage_media_misc_usage" msgid="3404230292054880339">"Misc."</string>
     <string name="storage_media_cache_usage" msgid="6397941751551207630">"Cached data"</string>
     <string name="storage_eject" msgid="3268870873944951902">"Eject"</string>
-    <string name="storage_format" msgid="1068977713279648756">"Erase &amp; format"</string>
-    <string name="storage_format_as_private" msgid="77945551149326052">"Erase &amp; format as device storage"</string>
-    <string name="storage_format_as_public" msgid="6745112917895223463">"Erase &amp; format as removable storage"</string>
+    <string name="storage_format" msgid="1068977713279648756">"Delete and format"</string>
+    <string name="storage_format_as_private" msgid="77945551149326052">"Delete and format as device storage"</string>
+    <string name="storage_format_as_public" msgid="6745112917895223463">"Delete and format as removable storage"</string>
     <string name="storage_format_for_private" msgid="5380138334184923252">"Format as device storage"</string>
     <string name="storage_not_connected" msgid="4327902652748552794">"Not connected"</string>
     <string name="storage_migrate" msgid="9137556600192167701">"Migrate data to this storage"</string>
@@ -331,7 +336,7 @@
     <string name="storage_format_failure" msgid="5619442934314277332">"Couldn\'t format <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="7985715762649933211">"Format as device storage"</string>
     <string name="storage_wizard_format_as_private_description" msgid="6143406934742456154">"This requires the USB drive to be formatted to make it secure. After securely formatting, this drive will only work with this device. Formatting deletes all data currently stored on the drive. To avoid losing the data, consider backing it up."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="3546915348149438389">"Erase &amp; format"</string>
+    <string name="storage_wizard_format_as_public_title" msgid="3546915348149438389">"Delete and format"</string>
     <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"After formatting, you can use this USB drive in other devices. All data will be deleted. Consider backing up first by moving apps to other device storage."</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"Formatting USB Drive…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"This may take a moment. Please don\'t remove the drive."</string>
@@ -690,14 +695,14 @@
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"During media playback"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"No account is currently storing backed-up data"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
-    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Stop backing up your Wi-Fi passwords, bookmarks, other settings and app data, and erase all copies on Google servers?"</string>
+    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Stop backing up your Wi-Fi passwords, bookmarks, other settings and app data, and delete all copies on Google servers?"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"Back up my data"</string>
     <string name="privacy_backup_account" msgid="4527813051841860610">"Backup account"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Automatic restore"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Reset device"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"This will erase all data from your device\'s internal storage, including: your Google Account, system and app data and settings and downloaded apps"</string>
-    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Erase all your personal information and downloaded apps on this device? You can\'t reverse this action."</string>
-    <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Erase everything"</string>
+    <string name="factory_reset_description" msgid="4448783644897046471">"This will delete all data from your device\'s internal storage, including: your Google Account, system and app data and settings and downloaded apps"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Delete all your personal information and downloaded apps on this device? You can\'t reverse this action."</string>
+    <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Delete everything"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Choose a name for your <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Give your device a name to help identify it when casting or connecting to it from other devices."</string>
   <string-array name="rooms">
