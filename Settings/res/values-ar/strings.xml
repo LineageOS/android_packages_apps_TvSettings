@@ -95,6 +95,8 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"التطبيقات التي تم إيقافها"</string>
     <string name="device_daydream" msgid="2631191946958113220">"شاشة التوقف"</string>
     <string name="device_display" msgid="244634591698925025">"العرض"</string>
+    <!-- no translation found for device_display_sound (7399153506435649193) -->
+    <skip />
     <string name="device_sound" msgid="8616320533559404963">"الصوت"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"الصوت المحيطي"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"أصوات النظام"</string>
@@ -116,6 +118,14 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"تلقائي: استخدام الصيغ التي يُبلغ جهازك عن توافقها معه (إجراء مقترَح)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"بدون صيغ: عدم استخدام الصوت المحيطي"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"يدوي: اختيار الصيغ التي تريد استخدامها"</string>
+    <!-- no translation found for display_category_title (247804007525046312) -->
+    <skip />
+    <!-- no translation found for advanced_display_settings_title (6293280819870140631) -->
+    <skip />
+    <!-- no translation found for advanced_sound_settings_title (319921303039469139) -->
+    <skip />
+    <!-- no translation found for game_mode_title (7280816243531315755) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"هل تريد محو البيانات المؤقتة؟"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"يؤدي ذلك إلى محو البيانات المؤقتة لكل التطبيقات."</string>
     <string name="accessories_add" msgid="413764175035531452">"إضافة ملحق"</string>
@@ -325,8 +335,8 @@
     <string name="storage_format_as_public" msgid="6745112917895223463">"محو البيانات والتهيئة كوحدة تخزين قابلة للنقل"</string>
     <string name="storage_format_for_private" msgid="5380138334184923252">"التنسيق كوحدة تخزين على الجهاز"</string>
     <string name="storage_not_connected" msgid="4327902652748552794">"غير متصل"</string>
-    <string name="storage_migrate" msgid="9137556600192167701">"ترحيل البيانات إلى مساحة التخزين هذه"</string>
-    <string name="storage_migrate_away" msgid="7880100961434638430">"ترحيل البيانات إلى مساحة تخزين مختلفة"</string>
+    <string name="storage_migrate" msgid="9137556600192167701">"نقل البيانات إلى مساحة التخزين هذه"</string>
+    <string name="storage_migrate_away" msgid="7880100961434638430">"نقل البيانات إلى مساحة تخزين مختلفة"</string>
     <string name="storage_no_apps" msgid="95566375753627272">"ليس هناك تطبيقات للاحتفاظ بنسخ احتياطية منها."</string>
     <string name="storage_forget" msgid="4671975563260507003">"تجاهل مساحة تخزين الجهاز هذه"</string>
     <string name="storage_forget_wall_of_text" msgid="230454348256179142">"لاستخدام التطبيقات أو البيانات التي يتضمنها محرك الأقراص هذا، عليك إعادة توصيله بالجهاز. ويمكنك بدلاً من ذلك حذف وحدة التخزين هذه إذا لم يكن محرك الأقراص متاحًا.\n\nإذا اخترت \"حذف\"، فسيتم فقد كل البيانات التي يتضمنها محرك الأقراص للأبد.\n\nيمكنك إعادة تثبيت التطبيقات لاحقًا، ولكن سيتم فقد البيانات المخزنة على محرك الأقراص هذا."</string>
@@ -347,13 +357,13 @@
     <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"بعد التهيئة، يمكنك استخدام محرك أقراص USB هذا على أجهزة أخرى. سيتم محو جميع البيانات. جرِّب الاحتفاظ بنسخة احتياطية أولاً من خلال نقل التطبيقات إلى مساحة تخزين أخرى على الجهاز."</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"جارٍ تهيئة محرك أقراص USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"قد يستغرق هذا دقيقة. يُرجى عدم إزالة محرك الأقراص."</string>
-    <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"اختيار مساحة تخزين لترحيل البيانات إليها"</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"اختيار مساحة تخزين لنقل البيانات إليها"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="5086390005970210697">"نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"يمكنك نقل الصور والملفات وبيانات التطبيقات إلى <xliff:g id="NAME">%1$s</xliff:g>، قد يستغرق هذا بضع دقائق علمًا بأن بعض التطبيقات لن تعمل بشكل صحيح أثناء النقل."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="7512917600174814567">"النقل الآن"</string>
     <string name="storage_wizard_migrate_confirm_action_move_later" msgid="6379986754827551474">"النقل لاحقًا"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"تم ترحيل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="8580347235983040966">"تعذر ترحيل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"تم نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="8580347235983040966">"تعذر نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_progress_title" msgid="2623480667090826800">"جارٍ نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>..."</string>
     <string name="storage_wizard_migrate_progress_description" msgid="4023358325977284145">"قد يستغرق هذا وقتًا قصيرًا، يرجى عدم إزالة محرك الأقراص.\nعلمًا بأن بعض التطبيقات لن تعمل بشكل صحيح أثناء النقل."</string>
     <string name="storage_wizard_format_slow_title" msgid="7640229918512394316">"يبدو أن محرك الأقراص هذا بطيء."</string>
