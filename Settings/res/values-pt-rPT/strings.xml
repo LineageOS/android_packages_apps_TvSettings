@@ -87,6 +87,8 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Aplicações desativadas"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Proteção de ecrã"</string>
     <string name="device_display" msgid="244634591698925025">"Visualização"</string>
+    <!-- no translation found for device_display_sound (7399153506435649193) -->
+    <skip />
     <string name="device_sound" msgid="8616320533559404963">"Som"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Som surround"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Sons do sistema"</string>
@@ -108,6 +110,14 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automático: usar formatos que dispositivo indica suportar (recomendado)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Nenhum: nunca utilizar o som surround"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manual: selecionar os formatos a utilizar"</string>
+    <!-- no translation found for display_category_title (247804007525046312) -->
+    <skip />
+    <!-- no translation found for advanced_display_settings_title (6293280819870140631) -->
+    <skip />
+    <!-- no translation found for advanced_sound_settings_title (319921303039469139) -->
+    <skip />
+    <!-- no translation found for game_mode_title (7280816243531315755) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Pretende limpar os dados em cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Isto limpa os dados em cache de todas as app"</string>
     <string name="accessories_add" msgid="413764175035531452">"Adicionar acessório"</string>
@@ -614,7 +624,7 @@
       <item quantity="other">Entradas não ligadas</item>
       <item quantity="one">Entrada não ligada</item>
     </plurals>
-    <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Restringir o acesso a aplicações e a outro conteúdo na sua conta"</string>
+    <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Restringir o acesso a apps e a outro conteúdo na sua conta"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Perfil restrito"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Controlado por <xliff:g id="APP">%1$s</xliff:g>"</string>
     <string name="app_not_supported_in_limited" msgid="4046604594925826955">"Esta aplicação não é suportada nos perfis restritos"</string>
@@ -690,7 +700,7 @@
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Durante a reprodução de multimédia"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"De momento, não há nenhuma conta a armazenar dados de cópia de segurança"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
-    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Deixar de fazer uma cópia de segurança de palavras-passe de Wi-Fi, marcadores, outras definições e dados de aplicações, e apagar todas as cópias nos servidores da Google?"</string>
+    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Deixar de fazer uma cópia de segurança de palavras-passe de Wi-Fi, marcadores, outras definições e dados de apps, e apagar todas as cópias nos servidores da Google?"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"Fazer uma cópia de segur. dos meus dados"</string>
     <string name="privacy_backup_account" msgid="4527813051841860610">"Conta de segurança"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Restauro automático"</string>
@@ -737,7 +747,7 @@
     <string name="high_power_off" msgid="3588854600942236231">"Com otimização da utilização de energia"</string>
     <string name="high_power_system" msgid="6263052626979462255">"Otimização de energia não disponível"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Acesso a notificações"</string>
-    <string name="no_notification_listeners" msgid="5119406452675724448">"Nenhuma aplicação instalada solicitou acesso a notificações."</string>
+    <string name="no_notification_listeners" msgid="5119406452675724448">"Nenhuma app instalada solicitou acesso a notificações."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Estas aplicações poderão ler todas as notificações, incluindo informações pessoais como nomes de contactos e o texto de mensagens recebidas. Também poderão ignorar notificações ou acionar botões de ação incluídos nas mesmas."</string>
     <string name="directory_access" msgid="7338555825237012006">"Acesso ao diretório"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Estas aplicações têm autorização de acesso a certos diretórios."</string>
@@ -752,7 +762,7 @@
     <string name="write_settings_off" msgid="6730113471695092167">"Não"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Ecrã no ecrã"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Permitir ecrã no ecrã"</string>
-    <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Nenhuma aplicação instalada é compatível com Ecrã no ecrã."</string>
+    <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Nenhuma app instalada é compatível com Ecrã no ecrã."</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Permitir que as aplicações criem uma janela de ecrã no ecrã enquanto as aplicações estão abertas ou depois de sair das mesmas (por exemplo, para continuar a ver um vídeo). Esta janela é apresentada sobre as outras aplicações que estiver a utilizar."</string>
     <string name="special_access" msgid="21806055758289916">"Acesso especial a aplicações"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
