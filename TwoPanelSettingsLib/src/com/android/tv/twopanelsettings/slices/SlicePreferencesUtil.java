@@ -309,6 +309,17 @@ public final class SlicePreferencesUtil {
         return null;
     }
 
+    static SliceItem getFocusedPreferenceItem(List<SliceContent> sliceItems) {
+        for (SliceContent contentItem : sliceItems)  {
+            SliceItem item = contentItem.getSliceItem();
+            if (item.getSubType() != null
+                    && item.getSubType().equals(SlicesConstants.TYPE_FOCUSED_PREFERENCE)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
     static SliceItem getEmbeddedItem(List<SliceContent> sliceItems) {
         for (SliceContent contentItem : sliceItems)  {
             SliceItem item = contentItem.getSliceItem();

@@ -210,6 +210,16 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             setIcon(icon);
         }
 
+        SliceItem focusedPrefItem = SlicePreferencesUtil.getFocusedPreferenceItem(items);
+        CharSequence defaultFocusedKey = null;
+        if (focusedPrefItem != null) {
+            Data data = SlicePreferencesUtil.extract(focusedPrefItem);
+            CharSequence title = SlicePreferencesUtil.getText(data.mTitleItem);
+            if (!TextUtils.isEmpty(title)) {
+                defaultFocusedKey = title;
+            }
+        }
+
         List<Preference> newPrefs = new ArrayList<>();
         for (SliceContent contentItem : items) {
             SliceItem item = contentItem.getSliceItem();
@@ -221,7 +231,9 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         }
 
         updatePreferenceScreen(preferenceScreen, newPrefs);
-        if (mLastFocusedPreferenceKey != null) {
+        if (defaultFocusedKey != null) {
+            scrollToPreference(defaultFocusedKey.toString());
+        } else if (mLastFocusedPreferenceKey != null) {
             scrollToPreference(mLastFocusedPreferenceKey);
         }
 
