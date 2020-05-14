@@ -821,6 +821,17 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".slice.SliceActivity"
+                  android:theme="@style/Theme.Settings.Transparent"
+                  android:configChanges="keyboard|keyboardHidden|navigation"
+                  android:excludeFromRecents="true"
+                  android:exported="true">
+            <intent-filter android:priority="3">
+                <action android:name="android.settings.SLICE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
