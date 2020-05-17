@@ -185,7 +185,18 @@ public class DeviceAdminAdd extends Activity {
             }
         }
 
-        finish();
+        // do not finish if ACTION_ADD_DEVICE_ADMIN, expected by some CTS tests
+        if (DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN.equals(getIntent().getAction())) {
+            if (mDPM.isAdminActive(who)) {
+                if (mDPM.isRemovingAdmin(who, android.os.Process.myUserHandle().getIdentifier())) {
+                    Log.w(TAG, "Requested admin is already being removed: " + who);
+                    finish();
+                    return;
+                }
+            }
+        } else {
+            finish();
+        }
     }
 
     void addAndFinish() {
