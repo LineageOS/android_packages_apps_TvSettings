@@ -19,8 +19,6 @@ package com.android.tv.settings.util;
 import android.app.tvsettings.TvSettingsEnums;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
-
 import com.android.tv.twopanelsettings.slices.TvSettingsStatsLog;
 
 /**
@@ -42,11 +40,12 @@ public final class InstrumentationUtils {
         try {
             TvSettingsStatsLog.write(
                     TvSettingsStatsLog.TVSETTINGS_UI_INTERACTED,
-                    TvSettingsEnums.PAGE_FOCUSED,
-                    pageId,
                     forward != null
-                            ? (forward ? "forward" : "backward")
-                            : "unknown");
+                            ? (forward
+                                    ? TvSettingsEnums.PAGE_FOCUSED_FORWARD
+                                    : TvSettingsEnums.PAGE_FOCUSED_BACKWARD)
+                            : TvSettingsEnums.PAGE_FOCUSED,
+                    pageId);
         } catch (Exception e) {
             Log.e(TAG, "Unable to log PAGE_FOCUSED for id: " + pageId + " " + e);
         }
@@ -56,28 +55,17 @@ public final class InstrumentationUtils {
      * Log the ENTRY_SELECTED event with additional information to Westworld.
      *
      * @param entryId the id of the selected entry
-     * @param additionalInfo any additional info about the selection
      */
-    public static void logEntrySelected(int entryId, @Nullable String additionalInfo) {
+    public static void logEntrySelected(int entryId) {
         // It is necessary to use try-catch as StatsLog.write() could crash in extreme conditions.
         try {
             TvSettingsStatsLog.write(
                     TvSettingsStatsLog.TVSETTINGS_UI_INTERACTED,
                     TvSettingsEnums.ENTRY_SELECTED,
-                    entryId,
-                    additionalInfo != null ? additionalInfo : "");
+                    entryId);
         } catch (Exception e) {
             Log.e(TAG, "Unable to log ENTRY_SELECTED for id: " + entryId + " " + e);
         }
-    }
-
-    /**
-     * Log the ENTRY_SELECTED event without any additional information to Westworld.
-     *
-     * @param entryId the id of the selected entry
-     */
-    public static void logEntrySelected(int entryId) {
-        logEntrySelected(entryId, null);
     }
 
     /**
@@ -91,11 +79,12 @@ public final class InstrumentationUtils {
         try {
             TvSettingsStatsLog.write(
                     TvSettingsStatsLog.TVSETTINGS_UI_INTERACTED,
-                    TvSettingsEnums.TOGGLE_INTERACTED,
-                    toggleId,
                     toggledOn != null
-                            ? (toggledOn ? "on" : "off")
-                            : "");
+                            ? (toggledOn
+                                    ? TvSettingsEnums.TOGGLED_ON
+                                    : TvSettingsEnums.TOGGLED_OFF)
+                            : TvSettingsEnums.TOGGLE_INTERACTED,
+                    toggleId);
         } catch (Exception e) {
             Log.e(TAG, "Unable to log TOGGLE_INTERACTED for id: " + toggleId + " " + e);
         }
