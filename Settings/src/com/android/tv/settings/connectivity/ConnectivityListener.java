@@ -27,12 +27,14 @@ import android.net.LinkAddress;
 import android.net.LinkProperties;
 import android.net.Network;
 import android.net.NetworkInfo;
+import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.telephony.PhoneStateListener;
 import android.telephony.SignalStrength;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
+import android.util.Log;
 
 import androidx.annotation.UiThread;
 
@@ -203,12 +205,55 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
      * Return the MAC address of the currently connected Wifi AP.
      */
     @SuppressLint("HardwareIds")
-    public String getWifiMacAddress() {
-        if (isWifiConnected()) {
-            WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
-            return wifiInfo.getMacAddress();
-        } else {
-            return "";
+    public String getWifiMacAddress(AccessPoint ap) {
+        if (isWifiConnected() && mWifiManager.getConnectionInfo() != null) {
+            return mWifiManager.getConnectionInfo().getMacAddress();
+        }
+        if (ap != null) {
+            WifiConfiguration wifiConfig = ap.getConfig();
+            if (wifiConfig != null
+                    && wifiConfig.macRandomizationSetting
+                            == WifiConfiguration.RANDOMIZATION_PERSISTENT) {
+                return wifiConfig.getRandomizedMacAddress().toString();
+            }
+        }
+
+        // return device MAC address
+        final String[] macAddresses = mWifiManager.getFactoryMacAddresses();
+        if (macAddresses != null && macAddresses.length > 0) {
+            return macAddresses[0];
+        }
+
+        Log.e(TAG, "Unable to get MAC address");
+        return "";
+    }
+
+    /** Return whether the connected Wifi supports MAC address randomization. */
+    public boolean isMacAddressRandomizationSupported() {
+        return mWifiManager.isConnectedMacRandomizationSupported();
+    }
+
+    /** Return whether the MAC address of the currently connected Wifi AP is randomized. */
+    public int getWifiMacRandomizationSetting(AccessPoint ap) {
+        if (ap == null || ap.getConfig() == null) {
+            return WifiConfiguration.RANDOMIZATION_NONE;
+        }
+        return ap.getConfig().macRandomizationSetting;
+    }
+
+    /** Apply the setting of whether to use MAC address randimization. */
+    public void applyMacRandomizationSetting(AccessPoint ap, boolean enable) {
+        if (ap != null && ap.getConfig() != null) {
+            ap.getConfig().macRandomizationSetting = enable
+                    ? WifiConfiguration.RANDOMIZATION_PERSISTENT
+                    : WifiConfiguration.RANDOMIZATION_NONE;
+            mWifiManager.updateNetwork(ap.getConfig());
+            // To activate changing, we need to reconnect network. WiFi will auto connect to
+            // current network after disconnect(). Only needed when this is connected network.
+            final WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
+            if (wifiInfo != null && wifiInfo.getNetworkId() == ap.getConfig().networkId) {
+                mWifiManager.disconnect();
+            }
         }
     }
 

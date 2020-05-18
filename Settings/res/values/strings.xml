@@ -468,10 +468,28 @@
     </string-array>
 
     <!-- titles for connection status -->
-    <!-- label mac address [CHAR LIMIT=50] -->
-    <string name="title_mac_address">MAC address</string>
+    <!-- label device mac address [CHAR LIMIT=50] -->
+    <string name="title_mac_address">Device MAC address</string>
+    <!-- label randomized mac address [CHAR LIMIT=50] -->
+    <string name="title_randomized_mac_address">Randomized MAC address</string>
     <!-- label signal strength [CHAR LIMIT=50] -->
     <string name="title_signal_strength">Signal strength</string>
+    <!-- label privacy (randomized MAC address settings) [CHAR LIMIT=20] -->
+    <string name="title_random_mac_settings">Privacy</string>
+    <!-- Options for randomized MAC address settings [CHAR LIMIT=50] -->
+    <string-array name="random_mac_settings_entries">
+        <item>Use randomized MAC (default)</item>
+        <item>Use device MAC</item>
+    </string-array>
+    <!-- Values for randomized MAC address settings [DO NOT TRANSLATE] -->
+    <string-array name="random_mac_settings_entry_values" translatable="false">
+        <item>random</item>
+        <item>device</item>
+    </string-array>
+    <!-- Indicate that Mac address is not available [CHAR LIMIT=50] -->
+    <string name="mac_address_not_available">Not available</string>
+    <!-- Summary for Wifi MAC randomization option when it is ephemeral network [CHAR LIMIT=50] -->
+    <string name="mac_address_ephemeral_summary">Randomized MAC</string>
     <!-- label IP address [CHAR LIMIT=50] -->
     <string name="title_ip_address">IP address</string>
     <!-- label SSID [CHAR LIMIT=50] -->
