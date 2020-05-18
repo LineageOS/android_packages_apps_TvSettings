@@ -23,6 +23,7 @@ import android.content.Context;
 import android.net.IpConfiguration.IpAssignment;
 import android.net.IpConfiguration.ProxySettings;
 import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -31,6 +32,7 @@ import androidx.annotation.NonNull;
 import androidx.leanback.app.GuidedStepFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -53,14 +55,19 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
     private static final String KEY_IP_ADDRESS = "ip_address";
     private static final String KEY_MAC_ADDRESS = "mac_address";
     private static final String KEY_SIGNAL_STRENGTH = "signal_strength";
+    private static final String KEY_RANDOM_MAC = "random_mac";
     private static final String KEY_PROXY_SETTINGS = "proxy_settings";
     private static final String KEY_IP_SETTINGS = "ip_settings";
     private static final String KEY_FORGET_NETWORK = "forget_network";
+
+    private static final String VALUE_MAC_RANDOM = "random";
+    private static final String VALUE_MAC_DEVICE = "device";
 
     private Preference mConnectionStatusPref;
     private Preference mIpAddressPref;
     private Preference mMacAddressPref;
     private Preference mSignalStrengthPref;
+    private ListPreference mRandomMacPref;
     private Preference mProxySettingsPref;
     private Preference mIpSettingsPref;
     private Preference mForgetNetworkPref;
@@ -82,7 +89,6 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mConnectivityListener = new ConnectivityListener(getContext(), this, getLifecycle());
-
         mAccessPoint = new AccessPoint(getContext(),
                 getArguments().getBundle(ARG_ACCESS_POINT_STATE));
         super.onCreate(savedInstanceState);
@@ -110,6 +116,7 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
         mIpAddressPref = findPreference(KEY_IP_ADDRESS);
         mMacAddressPref = findPreference(KEY_MAC_ADDRESS);
         mSignalStrengthPref = findPreference(KEY_SIGNAL_STRENGTH);
+        mRandomMacPref = (ListPreference) findPreference(KEY_RANDOM_MAC);
         mProxySettingsPref = findPreference(KEY_PROXY_SETTINGS);
         mIpSettingsPref = findPreference(KEY_IP_SETTINGS);
         mForgetNetworkPref = findPreference(KEY_FORGET_NETWORK);
@@ -144,13 +151,22 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
 
         mConnectionStatusPref.setSummary(active ? R.string.connected : R.string.not_connected);
         mIpAddressPref.setVisible(active);
-        mMacAddressPref.setVisible(active);
         mSignalStrengthPref.setVisible(active);
 
         if (active) {
             mIpAddressPref.setSummary(mConnectivityListener.getWifiIpAddress());
-            mMacAddressPref.setSummary(mConnectivityListener.getWifiMacAddress());
             mSignalStrengthPref.setSummary(getSignalStrength());
+        }
+
+        // Mac address related Preferences (info entry and random mac setting entry)
+        String macAddress = mConnectivityListener.getWifiMacAddress(mAccessPoint);
+        if (active && !TextUtils.isEmpty(macAddress)) {
+            mMacAddressPref.setVisible(true);
+            updateMacAddressPref(macAddress);
+            updateRandomMacPref();
+        } else {
+            mMacAddressPref.setVisible(false);
+            mRandomMacPref.setVisible(false);
         }
 
         WifiConfiguration wifiConfiguration = mAccessPoint.getConfig();
@@ -195,6 +211,53 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
         String[] signalLevels = getResources().getStringArray(R.array.wifi_signal_strength);
         int strength = mConnectivityListener.getWifiSignalStrength(signalLevels.length);
         return signalLevels[strength];
+    }
+
+    private void updateMacAddressPref(String macAddress) {
+        if (WifiInfo.DEFAULT_MAC_ADDRESS.equals(macAddress)) {
+            mMacAddressPref.setSummary(R.string.mac_address_not_available);
+        } else {
+            mMacAddressPref.setSummary(macAddress);
+        }
+        if (mAccessPoint == null || mAccessPoint.getConfig() == null) {
+            return;
+        }
+        // For saved Passpoint network, framework doesn't have the field to keep the MAC choice
+        // persistently, so Passpoint network will always use the default value so far, which is
+        // randomized MAC address, so don't need to modify title.
+        if (mAccessPoint.isPasspoint() || mAccessPoint.isPasspointConfig()) {
+            return;
+        }
+        mMacAddressPref.setTitle(
+                (mAccessPoint.getConfig().macRandomizationSetting
+                        == WifiConfiguration.RANDOMIZATION_PERSISTENT)
+                        ? R.string.title_randomized_mac_address
+                        : R.string.title_mac_address);
+    }
+
+    private void updateRandomMacPref() {
+        mRandomMacPref.setVisible(mConnectivityListener.isMacAddressRandomizationSupported());
+        boolean isMacRandomized =
+                (mConnectivityListener.getWifiMacRandomizationSetting(mAccessPoint)
+                        == WifiConfiguration.RANDOMIZATION_PERSISTENT);
+        mRandomMacPref.setValue(isMacRandomized ? VALUE_MAC_RANDOM : VALUE_MAC_DEVICE);
+        if (mAccessPoint.isEphemeral() || mAccessPoint.isPasspoint()
+                || mAccessPoint.isPasspointConfig()) {
+            mRandomMacPref.setSelectable(false);
+            mRandomMacPref.setSummary(R.string.mac_address_ephemeral_summary);
+        } else {
+            mRandomMacPref.setSelectable(true);
+            mRandomMacPref.setSummary(mRandomMacPref.getEntries()[isMacRandomized ? 0 : 1]);
+        }
+        mRandomMacPref.setOnPreferenceChangeListener(
+                (pref, newValue) -> {
+                    mConnectivityListener.applyMacRandomizationSetting(
+                            mAccessPoint,
+                            VALUE_MAC_RANDOM.equals(newValue));
+                    // The above call should trigger a connectivity change which will refresh
+                    // the UI.
+                    return true;
+                });
     }
 
     @Override
