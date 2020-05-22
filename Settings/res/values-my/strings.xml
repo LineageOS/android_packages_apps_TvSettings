@@ -87,8 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"ပိတ်ထားသော အက်ပ်များ"</string>
     <string name="device_daydream" msgid="2631191946958113220">"ဖန်သားပြင်အသုံးပြုမှု ချွေတာမှုစနစ်"</string>
     <string name="device_display" msgid="244634591698925025">"မြင်ကွင်း"</string>
-    <!-- no translation found for device_display_sound (7399153506435649193) -->
-    <skip />
+    <string name="device_display_sound" msgid="7399153506435649193">"ဖန်သားပြင်ပြသမှုနှင့် အသံ"</string>
     <string name="device_sound" msgid="8616320533559404963">"အသံ"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"ပတ်ပတ်လည်အသံစနစ်"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"စနစ်၏ အသံများ"</string>
@@ -110,14 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"အလိုအလျောက်- သင့်စက်က ပံ့ပိုးသည်ဟု အသိပေးထားသော ပုံစံများကို အသုံးပြုပါ (အကြံပြုထားသည်)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"တစ်ခုမျှမဟုတ်- ပတ်လည် အသံစနစ် ဘယ်တော့မှ မသုံးရန်"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"မည်သည့်ပုံစံ အသုံးပြုမည်ကို ကိုယ်တိုင် ရွေးချယ်ရန်"</string>
-    <!-- no translation found for display_category_title (247804007525046312) -->
-    <skip />
-    <!-- no translation found for advanced_display_settings_title (6293280819870140631) -->
-    <skip />
-    <!-- no translation found for advanced_sound_settings_title (319921303039469139) -->
-    <skip />
-    <!-- no translation found for game_mode_title (7280816243531315755) -->
-    <skip />
+    <string name="display_category_title" msgid="247804007525046312">"ဖန်သားပြင်ပြသမှု"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"အဆင့်မြင့် ဖန်သားပြင်ပြသမှု ဆက်တင်များ"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"အဆင့်မြင့် အသံ ဆက်တင်များ"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"ဂိမ်းမုဒ် ခွင့်ပြုခြင်း"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"ကရှ်ဒေတာများကို ရှင်းမည်လား?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"apps အားလုံးအတွက် ကရှ်ဒေတာများကို ရှင်းမည်။"</string>
     <string name="accessories_add" msgid="413764175035531452">"အသုံးအဆောင်များ ထည့်ရန်"</string>
@@ -219,8 +214,16 @@
     <item msgid="2713050260700175954">"ကောင်း"</item>
     <item msgid="6005053494500517261">"အလွန်ကောင်း"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC လိပ်စာ"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"စက်ပစ္စည်း MAC လိပ်စာ"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"ကျပန်းလုပ်ထားသည့် MAC လိပ်စာ"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"ထုတ်လွင့်မှု အား"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"ပုဂ္ဂိုလ်ရေး"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"ကျပန်းပြုလုပ်ထားသည့် MAC ကို အသုံးပြုရန် (မူရင်း)"</item>
+    <item msgid="2490415280467390067">"စက်၏ MAC သုံးရန်"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"မရနိုင်ပါ"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"ကျပန်းပြုလုပ်ထားသည့် MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP လိပ်စာ"</string>
     <string name="title_ssid" msgid="255328048344188682">"Wi-Fi ကွန်ရက် ထည့်သွင်းရန်"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"အင်တာနက် ချိတ်ဆက်မှု"</string>
@@ -677,7 +680,7 @@
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"ဤအပ်ဖ်၏ ဒေတာများအားလုံး ထာဝရဖျက်ပစ်ပါမည်။ \n၎င်းတွင် ဖိုင်များအားလုံး၊ ဆက်တင်များ၊ အကောင့်များ၊ ဒေတာဘေ့စ်များ၊ စသည်တို့ပါဝင်သည်။"</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"ပုံသေများကို ဖယ်ရှားရန်"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"အချို့သော လုပ်ဆောင်မှုများအတွက် ဤ အက်ပ်ကိုဖွင့်ရန်သတ်မှတ်ပါ"</string>
-    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"ပုံသေများ သတ်မှတ် မထား"</string>
+    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"မူရင်း သတ်မှတ်မထားပါ။"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"ကက်ရှကို ဖယ်ရှားရန်"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"အကြောင်းကြားချက်များ"</string>
     <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"အခမဲ့ရင်းမြစ် လိုင်စင်များ"</string>
