@@ -87,8 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Անջատած հավելվածներ"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Էկրանապահ"</string>
     <string name="device_display" msgid="244634591698925025">"Էկրան"</string>
-    <!-- no translation found for device_display_sound (7399153506435649193) -->
-    <skip />
+    <string name="device_display_sound" msgid="7399153506435649193">"Էկրան և ձայն"</string>
     <string name="device_sound" msgid="8616320533559404963">"Ձայն"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Ծավալային ձայն"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Համակարգի ձայներ"</string>
@@ -110,14 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Ավտոմատ․ օգտագործեք ձեր սարքում աջակցվող ձևաչափերը (առաջարկվող)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Ոչ մեկը․ երբեք չօգտագործել ծավալային ձայն"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Ձեռքով ընտրություն․ ընտրեք ձևաչափերը"</string>
-    <!-- no translation found for display_category_title (247804007525046312) -->
-    <skip />
-    <!-- no translation found for advanced_display_settings_title (6293280819870140631) -->
-    <skip />
-    <!-- no translation found for advanced_sound_settings_title (319921303039469139) -->
-    <skip />
-    <!-- no translation found for game_mode_title (7280816243531315755) -->
-    <skip />
+    <string name="display_category_title" msgid="247804007525046312">"Էկրան"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Էկրանի լրացուցիչ կարգավորումներ"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Ձայնի լրացուցիչ կարգավորումներ"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Թույլատրեք խաղային ռեժիմը"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Ջնջե՞լ քեշավորված տվյալները:"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Սա կմաքրի բոլոր ծրագրերի քեշավորված տվյալները:"</string>
     <string name="accessories_add" msgid="413764175035531452">"Ավելացնել լրասարք"</string>
@@ -219,8 +214,19 @@
     <item msgid="2713050260700175954">"Լավ"</item>
     <item msgid="6005053494500517261">"Գերազանց"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC-հասցե"</string>
+    <!-- no translation found for title_mac_address (7511588678922209883) -->
+    <skip />
+    <!-- no translation found for title_randomized_mac_address (3359532498635833471) -->
+    <skip />
     <string name="title_signal_strength" msgid="5047116893338315998">"Ազդանշանի հզորությունը"</string>
+    <!-- no translation found for title_random_mac_settings (6685812569356353378) -->
+    <skip />
+    <!-- no translation found for random_mac_settings_entries:0 (3457228452595715533) -->
+    <!-- no translation found for random_mac_settings_entries:1 (2490415280467390067) -->
+    <!-- no translation found for mac_address_not_available (2992935344891853369) -->
+    <skip />
+    <!-- no translation found for mac_address_ephemeral_summary (3284374877361772531) -->
+    <skip />
     <string name="title_ip_address" msgid="705842159484772807">"IP հասցե"</string>
     <string name="title_ssid" msgid="255328048344188682">"Մուտքագրեք Wi-Fi ցանցի անունը"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Ինտերնետ կապ"</string>
@@ -424,7 +430,7 @@
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Google հաշվի տեղադրության պատմությունը ընդմիշտ կջնջվի այս սարքից: Դուք չեք կարող հետարկել այս գործողությունը: Որոշ ծրագրեր Google Now-ի հետ մեկտեղ կդադարեն աշխատել:"</string>
     <string name="system_services" msgid="5754310941186053151">"Ծառայություններ"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Ծառայության կարգավորումներ"</string>
-    <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Ցայտուն տեքստ"</string>
+    <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Բարձր կոնտրաստի տեքստ"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Մատչելիության դյուրանցում"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Միացնել մատչելիության դյուրացումը"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Դյուրանցման ծառայություն"</string>
@@ -780,7 +786,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Թրաֆիկի տնտեսում"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Ավտոմատ կարգավորել տեսանյութի որակը՝ թրաֆիկը տնտեսելու համար"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Թրաֆիկի օգտագործում և ծանուցումներ"</string>
-    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Գործողությունը չի թույլատրվում"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Գործողությունն արգելված է"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Հնարավոր չէ փոխել ձայնի ուժգնությունը"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Զանգելն արգելված է"</string>
     <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS-ների ուղարկումն արգելված է"</string>

@@ -87,8 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Aplicações desativadas"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Proteção de ecrã"</string>
     <string name="device_display" msgid="244634591698925025">"Visualização"</string>
-    <!-- no translation found for device_display_sound (7399153506435649193) -->
-    <skip />
+    <string name="device_display_sound" msgid="7399153506435649193">"Ecrã e som"</string>
     <string name="device_sound" msgid="8616320533559404963">"Som"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Som surround"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Sons do sistema"</string>
@@ -110,14 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automático: usar formatos que dispositivo indica suportar (recomendado)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Nenhum: nunca utilizar o som surround"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manual: selecionar os formatos a utilizar"</string>
-    <!-- no translation found for display_category_title (247804007525046312) -->
-    <skip />
-    <!-- no translation found for advanced_display_settings_title (6293280819870140631) -->
-    <skip />
-    <!-- no translation found for advanced_sound_settings_title (319921303039469139) -->
-    <skip />
-    <!-- no translation found for game_mode_title (7280816243531315755) -->
-    <skip />
+    <string name="display_category_title" msgid="247804007525046312">"Ecrã"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Definições de visualização avançadas"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Definições de som avançadas"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Permitir modo de jogo"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Pretende limpar os dados em cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Isto limpa os dados em cache de todas as app"</string>
     <string name="accessories_add" msgid="413764175035531452">"Adicionar acessório"</string>
@@ -146,7 +141,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Geralmente, 0000 ou 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Sincronizar"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancelar"</string>
-    <string name="send_feedback" msgid="936698637869795473">"Enviar comentários"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Enviar feedback"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centro de Ajuda"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Data e hora"</string>
@@ -173,7 +168,7 @@
     <string name="restart_button_label" msgid="2124590135040611899">"Reiniciar"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Informações legais"</string>
     <string name="about_legal_license" msgid="4801707286720681261">"Licenças de código aberto"</string>
-    <string name="about_terms_of_service" msgid="8514826341101557623">"Google jurídico"</string>
+    <string name="about_terms_of_service" msgid="8514826341101557623">"Informações legais da Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Dados da licença indisponíveis"</string>
     <string name="about_model" msgid="9164284529291439296">"Modelo"</string>
     <string name="about_version" msgid="7800676128792880991">"Versão"</string>
@@ -196,7 +191,7 @@
     <string name="device_status_summary" msgid="3270932829412434985">"Rede, números de série e outras informações"</string>
     <string name="manual" msgid="5683935624321864999">"Manual"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"Informações regulamentares"</string>
-    <string name="device_feedback" msgid="4871903271442960465">"Enviar comentários do dispositivo"</string>
+    <string name="device_feedback" msgid="4871903271442960465">"Enviar feedback do dispositivo"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"ID do equipamento"</string>
     <string name="baseband_version" msgid="5618116741093274294">"Versão da banda de base"</string>
     <string name="kernel_version" msgid="7265509054070001542">"Versão do kernel"</string>
@@ -219,8 +214,16 @@
     <item msgid="2713050260700175954">"Boa"</item>
     <item msgid="6005053494500517261">"Excelente"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"Endereço MAC"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Endereço MAC do dispositivo"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Endereço MAC aleatório"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Intensidade do sinal"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Privacidade"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Utilizar MAC aleatório (predefinição)"</item>
+    <item msgid="2490415280467390067">"Utilizar MAC do dispositivo"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Não disponível"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"MAC aleatório"</string>
     <string name="title_ip_address" msgid="705842159484772807">"Endereço IP"</string>
     <string name="title_ssid" msgid="255328048344188682">"Introduza o nome da rede Wi-Fi"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Ligação à Internet"</string>
