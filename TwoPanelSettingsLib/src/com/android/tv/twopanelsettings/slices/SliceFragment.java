@@ -38,6 +38,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -491,6 +492,12 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 ? null
                 : (TextView) view.findViewById(R.id.decor_subtitle);
         if (decorSubtitle != null) {
+            // This is to remedy some complicated RTL scenario such as Hebrew RTL Account slice with
+            // English account name subtitle.
+            if (getResources().getConfiguration().getLayoutDirection()
+                    == View.LAYOUT_DIRECTION_RTL) {
+                decorSubtitle.setGravity(Gravity.TOP | Gravity.RIGHT);
+            }
             if (TextUtils.isEmpty(subtitle)) {
                 decorSubtitle.setVisibility(View.GONE);
             } else {
