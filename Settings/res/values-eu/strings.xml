@@ -87,8 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Desgaitutako aplikazioak"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Pantaila-babeslea"</string>
     <string name="device_display" msgid="244634591698925025">"Bistaratzea"</string>
-    <!-- no translation found for device_display_sound (7399153506435649193) -->
-    <skip />
+    <string name="device_display_sound" msgid="7399153506435649193">"Pantaila eta soinua"</string>
     <string name="device_sound" msgid="8616320533559404963">"Soinua"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Soinu inguratzailea"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Sistemaren soinuak"</string>
@@ -110,14 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automatikoa: erabili gailuak onartzen dituen formatuak (gomendatua)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Bat ere ez: ez erabili inoiz soinu inguratzailea"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Eskuzkoa: hautatu erabili beharreko formatuak"</string>
-    <!-- no translation found for display_category_title (247804007525046312) -->
-    <skip />
-    <!-- no translation found for advanced_display_settings_title (6293280819870140631) -->
-    <skip />
-    <!-- no translation found for advanced_sound_settings_title (319921303039469139) -->
-    <skip />
-    <!-- no translation found for game_mode_title (7280816243531315755) -->
-    <skip />
+    <string name="display_category_title" msgid="247804007525046312">"Pantaila"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Pantailaren ezarpen aurreratuak"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Soinuaren ezarpen aurreratuak"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Eman jokatzeko modua erabiltzeko baimena"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Cacheko datuak garbitu nahi dituzu?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Aplikazio guztien cacheko datuak garbituko dira."</string>
     <string name="accessories_add" msgid="413764175035531452">"Gehitu osagarria"</string>
@@ -219,8 +214,16 @@
     <item msgid="2713050260700175954">"Ona"</item>
     <item msgid="6005053494500517261">"Bikaina"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC helbidea"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Gailuaren MAC helbidea"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Ausaz antolatutako MAC helbidea"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Seinalearen indarra"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Pribatutasuna"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Erabili ausaz aukeratutako MAC helbidea (lehenetsia)"</item>
+    <item msgid="2490415280467390067">"Erabili gailuaren MAC helbidea"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Ez dago erabilgarri"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Ausaz aukeratutako MAC helbidea"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP helbidea"</string>
     <string name="title_ssid" msgid="255328048344188682">"Idatzi wifi-sarearen izena"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Interneteko konexioa"</string>

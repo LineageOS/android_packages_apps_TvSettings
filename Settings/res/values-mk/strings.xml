@@ -87,8 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Оневозможени апликации"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Заштитник на екран"</string>
     <string name="device_display" msgid="244634591698925025">"Приказ"</string>
-    <!-- no translation found for device_display_sound (7399153506435649193) -->
-    <skip />
+    <string name="device_display_sound" msgid="7399153506435649193">"Екран и звук"</string>
     <string name="device_sound" msgid="8616320533559404963">"Звук"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Опкружувачки звук"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Системски звуци"</string>
@@ -110,14 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Автоматски: користи ги форматите пријавени како поддржани (препорачано)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Нема: никогаш не користи опкружувачки звук"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Рачно: избери кои формати да се користат"</string>
-    <!-- no translation found for display_category_title (247804007525046312) -->
-    <skip />
-    <!-- no translation found for advanced_display_settings_title (6293280819870140631) -->
-    <skip />
-    <!-- no translation found for advanced_sound_settings_title (319921303039469139) -->
-    <skip />
-    <!-- no translation found for game_mode_title (7280816243531315755) -->
-    <skip />
+    <string name="display_category_title" msgid="247804007525046312">"Екран"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Напредни поставки за екран"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Напредни поставки за звук"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Дозволете режим на игри"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Исчисти кеширани податоци?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Ова ќе исчисти кеширани податоци за сите аплик."</string>
     <string name="accessories_add" msgid="413764175035531452">"Додај додаток"</string>
@@ -219,8 +214,16 @@
     <item msgid="2713050260700175954">"Добар"</item>
     <item msgid="6005053494500517261">"Одлична"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC-адреса"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"MAC-адреса на уредот"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Рандомизирана MAC-адреса"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Јачина на сигнал"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Приватност"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Користи рандомизирана MAC-адреса (стандардно)"</item>
+    <item msgid="2490415280467390067">"Користи ја MAC-адресата на уредот"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Не е достапна"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Рандомизирана MAC-адреса"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP-адреса"</string>
     <string name="title_ssid" msgid="255328048344188682">"Внесете име на Wi-Fi мрежа"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Интернет врска"</string>
