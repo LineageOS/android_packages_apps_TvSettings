@@ -28,9 +28,12 @@ import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logPag
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
@@ -41,6 +44,7 @@ import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.instrumentation.VisibilityLoggerMixin;
 import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.tv.twopanelsettings.R;
 import com.android.tv.twopanelsettings.SettingsPreferenceFragmentBase;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
@@ -83,6 +87,25 @@ public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragm
         if (getCallbackFragment() != null
                 && !(getCallbackFragment() instanceof TwoPanelSettingsFragment)) {
             logPageFocused(getPageId(), true);
+        }
+    }
+
+    // We explicitly set the title gravity to RIGHT in RTL cases to remedy some complicated gravity
+    // issues. For more details, please read the comment of onViewCreated() in
+    // com.android.tv.settings.SettingsPreferenceFragment.
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        if (view != null) {
+            TextView titleView = view.findViewById(R.id.decor_title);
+            // We rely on getResources().getConfiguration().getLayoutDirection() instead of
+            // view.isLayoutRtl() as the latter could return false in some complex scenarios even if
+            // it is RTL.
+            if (titleView != null
+                    && getResources().getConfiguration().getLayoutDirection()
+                            == View.LAYOUT_DIRECTION_RTL) {
+                titleView.setGravity(Gravity.RIGHT);
+            }
         }
     }
 
