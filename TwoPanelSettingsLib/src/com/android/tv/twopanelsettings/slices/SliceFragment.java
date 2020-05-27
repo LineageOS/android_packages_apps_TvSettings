@@ -22,6 +22,7 @@ import static android.app.slice.Slice.HINT_PARTIAL;
 import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logToggleInteracted;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_KEY;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_SLICE_FOLLOWUP;
 
 import android.app.PendingIntent;
 import android.app.PendingIntent.CanceledException;
@@ -34,6 +35,7 @@ import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Parcelable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
@@ -137,16 +139,31 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     }
 
     private void fireFollowupPendingIntent() {
-        if (mPreferenceFollowupIntent == null) {
+        if (mFollowupPendingIntentExtras == null) {
             return;
         }
-        try {
-            mPreferenceFollowupIntent.send(getContext(),
-                    mFollowupPendingIntentResultCode, mFollowupPendingIntentExtras);
-        } catch (CanceledException e) {
-            Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
+        // If there is followup pendingIntent returned from initial activity, send it.
+        // Otherwise send the followup pendingIntent provided by slice api.
+        Parcelable followupPendingIntent = mFollowupPendingIntentExtras.getParcelableExtra(
+                EXTRA_SLICE_FOLLOWUP);
+        if (followupPendingIntent instanceof PendingIntent) {
+            try {
+                ((PendingIntent) followupPendingIntent).send();
+            } catch (CanceledException e) {
+                Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
+            }
+        } else {
+            if (mPreferenceFollowupIntent == null) {
+                return;
+            }
+            try {
+                mPreferenceFollowupIntent.send(getContext(),
+                        mFollowupPendingIntentResultCode, mFollowupPendingIntentExtras);
+            } catch (CanceledException e) {
+                Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
+            }
+            mPreferenceFollowupIntent = null;
         }
-        mPreferenceFollowupIntent = null;
     }
 
     @Override
