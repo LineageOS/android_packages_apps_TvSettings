@@ -16,9 +16,14 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:title="@string/advanced_display_settings_title">
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:title="@string/advanced_display_settings_title">
     <SwitchPreference
         android:key="game_mode"
         android:persistent="true"
         android:title="@string/game_mode_title"/>
+    <com.android.tv.twopanelsettings.slices.EmbeddedSliceSwitchPreference
+        android:key="hdr_match_content"
+        custom:uri="@string/hdr_settings_slice_uri"
+        custom:isPreferenceVisible="false" />
 </PreferenceScreen>
