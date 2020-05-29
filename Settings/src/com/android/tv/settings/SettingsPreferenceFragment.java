@@ -25,6 +25,7 @@ import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
 
 import static com.android.tv.settings.util.InstrumentationUtils.logPageFocused;
 
+import android.animation.AnimatorInflater;
 import android.annotation.CallSuper;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
@@ -34,17 +35,22 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.leanback.preference.LeanbackPreferenceFragment;
 import androidx.lifecycle.LifecycleOwner;
+import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceViewHolder;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.instrumentation.VisibilityLoggerMixin;
 import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.tv.settings.overlay.FeatureFactory;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 /**
@@ -106,10 +112,28 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
             // it is RTL.
             if (titleView != null
                     && getResources().getConfiguration().getLayoutDirection()
-                            == View.LAYOUT_DIRECTION_RTL) {
+                        == View.LAYOUT_DIRECTION_RTL) {
                 titleView.setGravity(Gravity.RIGHT);
             }
         }
+    }
+
+    @Override
+    protected RecyclerView.Adapter onCreateAdapter(PreferenceScreen preferenceScreen) {
+        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+            return new PreferenceGroupAdapter(preferenceScreen) {
+                @Override
+                @NonNull
+                public PreferenceViewHolder onCreateViewHolder(@NonNull ViewGroup parent,
+                        int viewType) {
+                    PreferenceViewHolder vh = super.onCreateViewHolder(parent, viewType);
+                    vh.itemView.setStateListAnimator(AnimatorInflater.loadStateListAnimator(
+                            getContext(), R.animator.preference));
+                    return vh;
+                }
+            };
+        }
+        return new PreferenceGroupAdapter(preferenceScreen);
     }
 
     @Override
