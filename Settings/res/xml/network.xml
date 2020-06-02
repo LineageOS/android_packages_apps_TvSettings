@@ -39,7 +39,6 @@
             <intent
                 android:targetClass="com.android.tv.settings.connectivity.AddWifiNetworkActivity"
                 android:targetPackage="com.android.tv.settings" />
-
         </Preference>
         <com.android.tv.twopanelsettings.slices.SlicePreference
             android:key="data_saver_slice"
@@ -73,4 +72,10 @@
             android:key="ethernet_dhcp"
             android:title="@string/title_wifi_ip_settings" />
     </PreferenceCategory>
+
+    <Preference
+        android:key="network_diagnostics"
+        android:icon="@drawable/ic_network_check"
+        android:title="@string/connectivity_network_diagnostics" />
+
 </PreferenceScreen>
