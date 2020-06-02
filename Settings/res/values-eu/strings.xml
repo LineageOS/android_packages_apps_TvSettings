@@ -42,12 +42,12 @@
     <string name="applications_category_title" msgid="7112019490898586223">"Aplikazioak"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Gailuaren hobespenak"</string>
     <string name="remotes_and_accessories_category_title" msgid="4162706682994116779">"Urruneko kontrolagailuak eta osagarriak"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Ez dago konektatuta Bluetooth gailurik"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Ez dago konektatuta Bluetooth bidezko gailurik"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> osagarri</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> osagarri</item>
     </plurals>
-    <string name="add_account" msgid="7386223854837017129">"Gehitu kontua"</string>
+    <string name="add_account" msgid="7386223854837017129">"Gehitu kontu bat"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Kendu kontua"</string>
     <string name="account_sync" msgid="4315295293211313989">"Aukeratu sinkronizatutako aplikazioak"</string>
     <string name="sync_now" msgid="4335217984374620551">"Sinkronizatu"</string>
@@ -117,7 +117,7 @@
     <string name="accessory_change_name" msgid="6493717176878500683">"Aldatu izena"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Ezarri beste izen bat osagarriari"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Osagarriak bilatzen…"</string>
-    <string name="accessories_add_bluetooth_inst" msgid="5109947637581187896">"Bluetooth gailuak parekatu aurretik, ziurtatu parekatze moduan daudela"</string>
+    <string name="accessories_add_bluetooth_inst" msgid="5109947637581187896">"Bluetooth bidezko gailuak parekatu aurretik, ziurtatu parekatze moduan daudela"</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Gailu bat aurkitu da eta automatikoki parekatuko da <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundo igarotakoan"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Ez da onartzen ekintza hori"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Bluetooth bidez parekatzeko eskaera"</string>
@@ -422,7 +422,7 @@
     <string name="captions_textsize" msgid="7161136610669343510">"Testuaren tamaina"</string>
     <string name="captions_captionstyle" msgid="6650139717545516071">"Azpitituluen estiloa"</string>
     <string name="captions_customoptions" msgid="7691004663572161126">"Aukera pertsonalizatuak"</string>
-    <string name="captions_fontfamily" msgid="1026632786438880997">"Letra-tipoaren familia"</string>
+    <string name="captions_fontfamily" msgid="1026632786438880997">"Letra-familia"</string>
     <string name="captions_textcolor" msgid="1566679779609140317">"Testuaren kolorea"</string>
     <string name="captions_edgetype" msgid="4875636291904824401">"Ertz mota"</string>
     <string name="captions_edgecolor" msgid="2779925179084237336">"Ertzaren kolorea"</string>
@@ -566,7 +566,7 @@
     <string name="autofill_none" msgid="1615056985649424207">"Bat ere ez"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Ziurtatu aplikazioa fidagarria dela&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Pasahitzen zerbitzuak&gt;%1$s&lt;/xliff:g&gt; pantailan dagoena erabiltzen du automatikoki bete daitekeena zehazteko."</string>
     <string name="computing_size" msgid="8623916230485437579">"Kalkulatzen…"</string>
-    <string name="title_select_wifi_network" msgid="935820896444071617">"Hautatu Wi-Fi sarea"</string>
+    <string name="title_select_wifi_network" msgid="935820896444071617">"Hautatu wifi-sarea"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Aldatu izena"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"Wi-Fi bidezko pantaila"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"PINa behar da"</string>
@@ -679,7 +679,7 @@
     <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Pantaila itzali egiten da tarte hau igarotakoan."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Ez dago babeskopiak gordetzen dituen aplikaziorik"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
-    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wifi-sareen pasahitzen, laster-marken, bestelako ezarpenen eta aplikazioetako datuen babeskopia egiteari utzi eta Google zerbitzarietako kopia guztiak ezabatu nahi dituzu?"</string>
+    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wifi-sareen pasahitzen, laster-marken, bestelako ezarpenen eta aplikazioetako datuen babeskopia egiteari utzi eta Google-ren zerbitzarietako kopia guztiak ezabatu nahi dituzu?"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"Egin nire datuen babeskopia"</string>
     <string name="privacy_backup_account" msgid="4527813051841860610">"Babeskopiak gordetzeko kontua"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Leheneratze automatikoa"</string>
