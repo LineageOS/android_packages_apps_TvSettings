@@ -55,7 +55,12 @@ public class DeviceNameSetCustomFragment extends GuidedStepSupportFragment {
 
     @Override
     public GuidedActionsStylist onCreateActionsStylist() {
-        return GuidedActionsAlignUtil.createNoBackgroundGuidedActionsStylist();
+        return new GuidedActionsStylist() {
+            @Override
+            public int onProvideItemLayoutId() {
+                return R.layout.guided_step_input_action;
+            }
+        };
     }
 
     @Override

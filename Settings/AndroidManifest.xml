@@ -695,6 +695,7 @@
 
         <activity
             android:name=".name.DeviceNameSettingsActivity"
+            android:theme="@style/GuidedStepFragmentThemeTwoPanel"
             android:configChanges="keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true">
@@ -707,6 +708,7 @@
         <activity
             android:name=".name.DeviceNameSuggestionActivity"
             android:excludeFromRecents="true"
+            android:theme="@style/GuidedStepFragmentThemeTwoPanel"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -726,10 +728,10 @@
         <activity
             android:name=".name.setup.DeviceNameFlowStartActivity"
             android:configChanges="keyboardHidden|navigation"
+            android:theme="@style/GuidedStepFragmentThemeTwoPanel"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:label="@string/device_name"
-            android:theme="@style/SetupFlowGuidedStepTheme">
+            android:label="@string/device_name">
             <intent-filter>
                 <action android:name="android.settings.START_DEVICE_NAME_FLOW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
