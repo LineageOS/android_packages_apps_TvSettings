@@ -18,13 +18,14 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   android:title="@string/privacy_category_title"
                   xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/privacy_device_settings_category" />
+
     <Preference
-        android:fragment="com.android.tv.settings.system.LocationFragment"
-        android:icon="@drawable/ic_location_on"
         android:key="location"
-        android:title="@string/system_location"/>
+        android:title="@string/system_location"
+        android:fragment="com.android.tv.settings.system.LocationFragment" />
     <com.android.tv.twopanelsettings.slices.SlicePreference
-        android:icon="@drawable/ic_timeline"
         android:key="usageAndDiag"
         android:title="@string/system_diagnostic"
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
@@ -32,9 +33,25 @@
         <intent android:action="com.google.android.settings.USAGE_AND_DIAGNOSTICS_SETTING"/>
     </com.android.tv.twopanelsettings.slices.SlicePreference>
     <Preference
-        android:icon="@drawable/ic_feature_video"
         android:key="ads"
         android:title="@string/about_ads">
         <intent android:action="com.google.android.gms.settings.ADS_PRIVACY" />
     </Preference>
+
+    <PreferenceCategory android:title="@string/privacy_app_settings_category" />
+
+    <com.android.tv.twopanelsettings.slices.SlicePreference
+        android:key="permissions"
+        android:title="@string/device_apps_permissions"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:uri="content://com.android.packageinstaller.permission/general" />
+    <Preference
+        android:key="specialAccess"
+        android:title="@string/special_access"
+        android:fragment="com.android.tv.settings.device.apps.specialaccess.SpecialAppAccess" />
+    <Preference
+        android:key="security"
+        android:title="@string/system_security"
+        android:fragment="com.android.tv.settings.system.SecurityFragment" />
+
 </PreferenceScreen>
