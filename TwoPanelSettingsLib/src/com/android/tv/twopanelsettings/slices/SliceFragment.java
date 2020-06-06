@@ -89,6 +89,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private PendingIntent mPreferenceFollowupIntent;
     private int mFollowupPendingIntentResultCode;
     private Intent mFollowupPendingIntentExtras;
+    private Intent mFollowupPendingIntentExtrasCopy;
     private String mLastFocusedPreferenceKey;
 
     private static final String KEY_PREFERENCE_FOLLOWUP_INTENT = "key_preference_followup_intent";
@@ -144,8 +145,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         }
         // If there is followup pendingIntent returned from initial activity, send it.
         // Otherwise send the followup pendingIntent provided by slice api.
-        Parcelable followupPendingIntent = mFollowupPendingIntentExtras.getParcelableExtra(
-                EXTRA_SLICE_FOLLOWUP);
+        Parcelable followupPendingIntent;
+        try {
+            followupPendingIntent = mFollowupPendingIntentExtrasCopy.getParcelableExtra(
+                    EXTRA_SLICE_FOLLOWUP);
+        } catch (Throwable ex) {
+            // unable to parse, the Intent has custom Parcelable, fallback
+            followupPendingIntent = null;
+        }
         if (followupPendingIntent instanceof PendingIntent) {
             try {
                 ((PendingIntent) followupPendingIntent).send();
@@ -437,6 +444,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             return;
         }
         mFollowupPendingIntentExtras = data;
+        mFollowupPendingIntentExtrasCopy = data == null ? null : new Intent(data);
         mFollowupPendingIntentResultCode = resultCode;
     }
 
