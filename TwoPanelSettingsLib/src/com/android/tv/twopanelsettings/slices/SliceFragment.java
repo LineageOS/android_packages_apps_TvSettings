@@ -444,7 +444,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             return;
         }
         mFollowupPendingIntentExtras = data;
-        mFollowupPendingIntentExtrasCopy = new Intent(data);
+        mFollowupPendingIntentExtrasCopy = data == null ? null : new Intent(data);
         mFollowupPendingIntentResultCode = resultCode;
     }
 
