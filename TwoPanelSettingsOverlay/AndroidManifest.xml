@@ -220,6 +220,17 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".device.apps.specialaccess.SystemAlertActivity"
+                  android:theme="@style/Theme.Settings.TwoPanel"
+                  android:taskAffinity=""
+                  android:excludeFromRecents="true"
+                  android:exported="true">
+            <intent-filter android:priority="1">
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".device.apps.AppManagementActivity"
             android:theme="@style/Theme.Settings.TwoPanel"
