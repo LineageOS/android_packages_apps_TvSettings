@@ -219,6 +219,11 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION"/>
             </intent-filter>
+            <intent-filter android:priority="1">
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION" />
+                <data android:scheme="package" />
+            </intent-filter>
         </activity>
 
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
