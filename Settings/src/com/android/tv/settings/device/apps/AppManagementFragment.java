@@ -244,6 +244,23 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
         }
         final Context themedContext = getPreferenceManager().getContext();
 
+        // Permissions
+        Preference permissionsPreference = findPreference(KEY_PERMISSIONS);
+        if (permissionsPreference == null) {
+            permissionsPreference = new Preference(themedContext);
+            permissionsPreference.setKey(KEY_PERMISSIONS);
+            permissionsPreference.setTitle(R.string.device_apps_app_management_permissions);
+            replacePreference(permissionsPreference);
+        }
+        permissionsPreference.setOnPreferenceClickListener(
+                preference -> {
+                    logEntrySelected(TvSettingsEnums.APPS_ALL_APPS_APP_ENTRY_PERMISSIONS);
+                    return false;
+                });
+        permissionsPreference.setIntent(new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS)
+                .putExtra(Intent.EXTRA_PACKAGE_NAME, mPackageName));
+
+
         // Version
         Preference versionPreference = findPreference(KEY_VERSION);
         if (versionPreference == null) {
@@ -382,22 +399,6 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
                     });
             licensesPreference.setVisible(true);
         }
-
-        // Permissions
-        Preference permissionsPreference = findPreference(KEY_PERMISSIONS);
-        if (permissionsPreference == null) {
-            permissionsPreference = new Preference(themedContext);
-            permissionsPreference.setKey(KEY_PERMISSIONS);
-            permissionsPreference.setTitle(R.string.device_apps_app_management_permissions);
-            replacePreference(permissionsPreference);
-        }
-        permissionsPreference.setOnPreferenceClickListener(
-                preference -> {
-                    logEntrySelected(TvSettingsEnums.APPS_ALL_APPS_APP_ENTRY_PERMISSIONS);
-                    return false;
-                });
-        permissionsPreference.setIntent(new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS)
-                .putExtra(Intent.EXTRA_PACKAGE_NAME, mPackageName));
     }
 
     private void replacePreference(Preference preference) {
