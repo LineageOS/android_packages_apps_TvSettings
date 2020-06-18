@@ -226,7 +226,7 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
         return lifecycleHandled;
     }
 
-    /** Subclasses should override this to use their own PageId for Westworld logging. */
+    /** Subclasses should override this to use their own PageId for statsd logging. */
     protected int getPageId() {
         return TvSettingsEnums.PAGE_CLASSIC_DEFAULT;
     }
