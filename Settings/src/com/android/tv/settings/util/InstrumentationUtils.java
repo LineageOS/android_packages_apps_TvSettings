@@ -29,7 +29,7 @@ public final class InstrumentationUtils {
     private static final String TAG = "InstrumentationUtils";
 
     /**
-     * Log the PAGE_FOCUSED event to Westworld.
+     * Log the PAGE_FOCUSED event to statsd.
      *
      * @param pageId the id of the focused page
      * @param forward whether the page is focused in the forward navigation (deeper into the
@@ -52,7 +52,7 @@ public final class InstrumentationUtils {
     }
 
     /**
-     * Log the ENTRY_SELECTED event with additional information to Westworld.
+     * Log the ENTRY_SELECTED event with additional information to statsd.
      *
      * @param entryId the id of the selected entry
      */
@@ -69,7 +69,7 @@ public final class InstrumentationUtils {
     }
 
     /**
-     * Log the TOGGLE_INTERACTED event to Westworld.
+     * Log the TOGGLE_INTERACTED event to statsd.
      *
      * @param toggleId the id of the interacted toggle
      * @param toggledOn whether the toggle is being flipped on
