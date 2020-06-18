@@ -354,19 +354,6 @@
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
              android:exported="true"
-             android:name=".device.privacy.PrivacyActivity"
-             android:theme="@android:style/Theme.NoDisplay">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <action android:name="android.settings.PRIVACY_SETTINGS"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.VOICE_LAUNCH"/>
-            </intent-filter>
-        </activity>
-        <activity android:configChanges="keyboard|keyboardHidden|navigation"
-             android:excludeFromRecents="true"
-             android:exported="true"
              android:name=".system.CaptionSetupActivity"
              android:theme="@style/Theme.Settings.TwoPanel">
             <intent-filter>
