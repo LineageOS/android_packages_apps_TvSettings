@@ -210,6 +210,17 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".device.apps.specialaccess.SystemAlertActivity"
+                  android:theme="@style/Theme.Settings.TwoPanel"
+                  android:taskAffinity=""
+                  android:excludeFromRecents="true"
+                  android:exported="true">
+            <intent-filter android:priority="1">
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION" />
+            </intent-filter>
+        </activity>
+
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
              android:exported="true"
@@ -338,19 +349,6 @@
                 <action android:name="com.google.android.pano.action.SLEEP"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:configChanges="keyboard|keyboardHidden|navigation"
-             android:excludeFromRecents="true"
-             android:exported="true"
-             android:name=".device.privacy.PrivacyActivity"
-             android:theme="@android:style/Theme.NoDisplay">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <action android:name="android.settings.PRIVACY_SETTINGS"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.VOICE_LAUNCH"/>
             </intent-filter>
         </activity>
         <activity android:configChanges="keyboard|keyboardHidden|navigation"

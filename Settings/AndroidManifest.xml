@@ -239,6 +239,7 @@
              android:name=".device.apps.AppManagementActivity"
              android:theme="@style/Theme.Settings.Transparent">
             <intent-filter android:priority="1">
+                <action android:name="android.intent.action.AUTO_REVOKE_PERMISSIONS" />
                 <action android:name="android.settings.APPLICATION_DETAILS_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:scheme="package"/>
@@ -367,19 +368,6 @@
                 <action android:name="com.google.android.pano.action.SLEEP"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:configChanges="keyboard|keyboardHidden|navigation"
-             android:excludeFromRecents="true"
-             android:exported="true"
-             android:name=".device.privacy.PrivacyActivity"
-             android:theme="@android:style/Theme.NoDisplay">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <action android:name="android.settings.PRIVACY_SETTINGS"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.VOICE_LAUNCH"/>
             </intent-filter>
         </activity>
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
