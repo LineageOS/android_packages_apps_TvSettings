@@ -31,6 +31,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;
@@ -40,7 +44,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.ConnectivityListener;
-import com.android.tv.settings.connectivity.WifiConfigHelper;
+import com.android.tv.settings.connectivity.security.WifiSecurityHelper;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
 
@@ -60,20 +64,8 @@ public class ConnectState implements State {
 
     @Override
     public void processForward() {
-        UserChoiceInfo userChoiceInfo = ViewModelProviders.of(mActivity).get(UserChoiceInfo.class);
-        WifiConfiguration wifiConfig = userChoiceInfo.getWifiConfiguration();
-        String title = mActivity.getString(
-                R.string.wifi_connecting,
-                wifiConfig.getPrintableSsid());
-        mFragment = ConnectToWifiFragment.newInstance(title, true);
-        if (!WifiConfigHelper.isNetworkSaved(wifiConfig)) {
-            AdvancedOptionsFlowInfo advFlowInfo =
-                    ViewModelProviders.of(mActivity).get(AdvancedOptionsFlowInfo.class);
-            if (advFlowInfo.getIpConfiguration() != null) {
-                wifiConfig.setIpConfiguration(advFlowInfo.getIpConfiguration());
-            }
-        }
         FragmentChangeListener listener = (FragmentChangeListener) mActivity;
+        mFragment = ConnectToWifiFragment.newInstance("", true);
         if (listener != null) {
             listener.onFragmentChange(mFragment, true);
         }
@@ -138,9 +130,8 @@ public class ConnectState implements State {
             mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(
                     Context.CONNECTIVITY_SERVICE);
 
-            mUserChoiceInfo = ViewModelProviders
-                    .of(getActivity()).get(UserChoiceInfo.class);
-            mWifiConfiguration = mUserChoiceInfo.getWifiConfiguration();
+            mWifiConfiguration = WifiSecurityHelper.getConfig(getActivity());
+
             mStateMachine = ViewModelProviders
                     .of(getActivity()).get(StateMachine.class);
 
@@ -148,6 +139,15 @@ public class ConnectState implements State {
                     .getSystemService(Context.WIFI_SERVICE));
             mHandler = new MessageHandler(this);
             mConnectivityListener.setWifiListener(this);
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle icicle) {
+            View view = super.onCreateView(inflater, container, icicle);
+            ((TextView) view.findViewById(R.id.status_text)).setText(
+                    getContext().getString(R.string.wifi_connecting,
+                            WifiSecurityHelper.getSsid(getActivity())));
+            return view;
         }
 
         @Override
