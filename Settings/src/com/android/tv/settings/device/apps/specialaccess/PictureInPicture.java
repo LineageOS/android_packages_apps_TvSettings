@@ -64,7 +64,7 @@ public class PictureInPicture extends SettingsPreferenceFragment
                                     info.info.uid,
                                     info.info.packageName) == AppOpsManager.MODE_ALLOWED;
                             return !ManageAppOp.shouldIgnorePackage(
-                                    getContext(), info.info.packageName)
+                                    getContext(), info.info.packageName, 0)
                                     && checkPackageHasPipActivities(info.info.packageName);
                         }
                     });
