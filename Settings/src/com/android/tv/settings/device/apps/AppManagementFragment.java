@@ -234,6 +234,10 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
         setPreferenceScreen(screen);
 
         updatePrefs();
+
+        if (Intent.ACTION_AUTO_REVOKE_PERMISSIONS.equals(getActivity().getIntent().getAction())) {
+            scrollToPreference(findPreference(KEY_PERMISSIONS));
+        }
     }
 
     private void updatePrefs() {
