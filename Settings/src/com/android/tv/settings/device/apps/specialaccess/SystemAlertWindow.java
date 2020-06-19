@@ -66,6 +66,11 @@ public class SystemAlertWindow extends ManageAppOp {
         setPreferencesFromResource(R.xml.system_alert_window, null);
     }
 
+    @Override
+    public int customizedIgnoredPackagesArray() {
+        return R.array.customized_ignored_system_alert_window_packages;
+    }
+
     @NonNull
     @Override
     public Preference bindPreference(@NonNull Preference preference,
