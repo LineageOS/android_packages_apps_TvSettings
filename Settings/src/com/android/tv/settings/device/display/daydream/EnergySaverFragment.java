@@ -44,7 +44,7 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
     private static final String TAG = "EnergySaverFragment";
     private static final String KEY_SLEEP_TIME = "sleepTime";
     private static final String KEY_ALLOW_TURN_SCREEN_OFF = "allowTurnScreenOff";
-    private static final int DEFAULT_SLEEP_TIME_MS = (int) (3 * DateUtils.HOUR_IN_MILLIS);
+    private static final int DEFAULT_SLEEP_TIME_MS = (int) (24 * DateUtils.HOUR_IN_MILLIS);
     private SwitchPreference mAllowTurnScreenOffWithWakeLockPref;
     private ListPreference mSleepTimePref;
 
@@ -57,9 +57,17 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
         updateAllowTurnScreenOffWithWakeLockPref();
         mSleepTimePref = findPreference(KEY_SLEEP_TIME);
         if (allowTurnOffWithWakeLock()) {
-            mSleepTimePref.setValue(String.valueOf(getAttentiveSleepTime()));
+            int validatedAttentiveSleepTime = getValidatedTimeout(getAttentiveSleepTime());
+            mSleepTimePref.setValue(String.valueOf(validatedAttentiveSleepTime));
+            if (getAttentiveSleepTime() != validatedAttentiveSleepTime) {
+                setAttentiveSleepTime(validatedAttentiveSleepTime);
+            }
         } else {
-            mSleepTimePref.setValue(String.valueOf(getSleepTime()));
+            int validatedSleepTime = getValidatedTimeout(getSleepTime());
+            mSleepTimePref.setValue(String.valueOf(validatedSleepTime));
+            if (getSleepTime() != validatedSleepTime) {
+                setSleepTime(validatedSleepTime);
+            }
         }
         mSleepTimePref.setOnPreferenceChangeListener(this);
         mSleepTimePref.setOnPreferenceClickListener(
@@ -148,6 +156,30 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
         Settings.Secure.putInt(getActivity().getContentResolver(), ATTENTIVE_TIMEOUT, ms);
     }
 
+    // The SLEEP_TIMEOUT and ATTENTIVE_TIMEOUT could be defined in overlay by OEMs. We validate the
+    // value to make sure that we select from the predefined options. If the value from overlay is
+    // not one of the predefined options, we round it to the closest predefined value, except -1.
+    private int getValidatedTimeout(int purposedTimeout) {
+        int validatedTimeout = DEFAULT_SLEEP_TIME_MS;
+        if (purposedTimeout < 0) {
+            return -1;
+        }
+        String[] optionsString = getResources().getStringArray(R.array.screen_off_timeout_values);
+        // Find the value from the predefined values that is closest to the proposed value except -1
+        int diff = Integer.MAX_VALUE;
+        for (String option : optionsString) {
+            if (Integer.parseInt(option) != -1) {
+                int currentDiff = Math.abs(purposedTimeout - Integer.parseInt(option));
+                if (currentDiff < diff) {
+                    diff = currentDiff;
+                    validatedTimeout = Integer.parseInt(option);
+                }
+            }
+        }
+        return validatedTimeout;
+    }
+
+    // TODO(b/158783050): update logging for new options 4H, 8H, 24H.
     // Map @array/screen_off_timeout_entries to defined log enum
     private int getSleepTimeEntryId(int sleepTimeValue) {
         switch(sleepTimeValue) {
@@ -159,10 +191,6 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
                 return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_30M;
             case 3600000:
                 return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_1H;
-            case 10800000:
-                return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_3H;
-            case 21600000:
-                return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_6H;
             case 43200000:
                 return TvSettingsEnums.SYSTEM_ENERGYSAVER_START_DELAY_12H;
             default:
