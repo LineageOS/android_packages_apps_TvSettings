@@ -96,7 +96,7 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
         );
         mStateMachine.addState(
                 mChooseSecurityState,
-                StateMachine.PASSWORD,
+                StateMachine.CONTINUE,
                 mEnterPasswordState
         );
 
