@@ -268,7 +268,7 @@
                 <category android:name="android.intent.category.LEANBACK_SETTINGS"/>
             </intent-filter>
 
-            <intent-filter>
+            <intent-filter android:priority="100">
                 <action android:name="android.settings.WIFI_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.LEANBACK_SETTINGS"/>
