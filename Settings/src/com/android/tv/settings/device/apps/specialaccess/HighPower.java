@@ -56,7 +56,7 @@ public class HighPower extends SettingsPreferenceFragment implements
                             info.extraInfo =
                                     mPowerWhitelistBackend.isWhitelisted(info.info.packageName);
                             return !ManageAppOp.shouldIgnorePackage(getContext(),
-                                    info.info.packageName);
+                                    info.info.packageName, 0);
                         }
                     });
 

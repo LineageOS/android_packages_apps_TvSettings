@@ -44,9 +44,10 @@
         <item>15 minutes</item>
         <item>30 minutes</item>
         <item>1 hour</item>
-        <item>3 hours</item>
-        <item>6 hours</item>
+        <item>4 hours</item>
+        <item>8 hours</item>
         <item>12 hours</item>
+        <item>24 hours</item>
         <item>Never</item>
     </string-array>
 
@@ -59,11 +60,13 @@
         <!-- Do not translate. -->
         <item>3600000</item>
         <!-- Do not translate. -->
-        <item>10800000</item>
+        <item>14400000</item>
         <!-- Do not translate. -->
-        <item>21600000</item>
+        <item>28800000</item>
         <!-- Do not translate. -->
         <item>43200000</item>
+        <!-- Do not translate. -->
+        <item>86400000</item>
         <!-- Do not translate. -->
         <item>-1</item>
     </string-array>
@@ -279,4 +282,9 @@
         <!-- Do not translate. -->
         <item>GTC</item>
     </string-array>
+
+    <!-- customized ignored packages for system alert window-->
+    <string-array name="customized_ignored_system_alert_window_packages" translatable="false">
+    </string-array>
+
 </resources>
