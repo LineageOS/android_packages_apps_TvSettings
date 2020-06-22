@@ -60,7 +60,7 @@ public class AdvancedDisplayFragment extends SettingsPreferenceFragment {
     private int getGameModeStatus() {
         return Settings.Secure.getInt(getActivity().getContentResolver(),
                 MINIMAL_POST_PROCESSING_ALLOWED,
-                0);
+                1);
     }
 
     private void setGameModeStatus(int state) {
