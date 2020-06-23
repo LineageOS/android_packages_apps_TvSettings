@@ -77,6 +77,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     public static final String TYPE_FOCUSED_PREFERENCE = "TYPE_FOCUSED_PREFERENCE";
     public static final String TYPE_PREFERENCE_EMBEDDED = "TYPE_PREFERENCE_EMBEDDED";
     public static final String TYPE_PREFERENCE_RADIO = "TYPE_PREFERENCE_RADIO";
+    public static final String TYPE_REDIRECTED_SLICE_URI = "TYPE_REDIRECTED_SLICE_URI";
     public static final String TAG_TARGET_URI = "TAG_TARGET_URI";
     public static final String TAG_KEY = "TAG_KEY";
     public static final String TAG_RADIO_GROUP = "TAG_RADIO_GROUP";
@@ -157,6 +158,15 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     public void setEmbeddedPreference(@NonNull RowBuilder builder) {
         addRow(builder, TYPE_PREFERENCE_EMBEDDED);
     }
+
+    /**
+     * Set the redirected slice uri.
+     * @param redirectedSliceUri the new redirected slice uri
+     */
+    public void setRedirectedSliceUri(CharSequence redirectedSliceUri) {
+        addRow(new RowBuilder().setTitle(redirectedSliceUri), TYPE_REDIRECTED_SLICE_URI);
+    }
+
     /**
      * Add a row to list builder.
      */
