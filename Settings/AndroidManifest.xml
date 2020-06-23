@@ -210,6 +210,17 @@
 
         <activity android:excludeFromRecents="true"
              android:exported="true"
+             android:name=".device.apps.specialaccess.AppUsageAccessActivity"
+             android:taskAffinity=""
+             android:theme="@style/Theme.Settings.Transparent">
+            <intent-filter android:priority="1">
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.settings.USAGE_ACCESS_SETTINGS"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:excludeFromRecents="true"
+             android:exported="true"
              android:name=".device.apps.specialaccess.PictureInPictureActivity"
              android:taskAffinity=""
              android:theme="@style/Theme.Settings.Transparent">
@@ -227,6 +238,11 @@
             <intent-filter android:priority="1">
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION"/>
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION" />
+                <data android:scheme="package" />
             </intent-filter>
         </activity>
 
@@ -303,6 +319,12 @@
                 <action android:name="android.settings.panel.action.INTERNET_CONNECTIVITY"/>
                 <action android:name="android.settings.panel.action.WIFI"/>
                 <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.settings.WIFI_ADD_NETWORKS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LEANBACK_SETTINGS"/>
             </intent-filter>
         </activity>
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
