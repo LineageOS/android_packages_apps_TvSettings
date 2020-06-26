@@ -123,11 +123,11 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         this.setIcon(mScreenIcon);
         this.getPreferenceScreen().removeAll();
 
+        showProgressBar();
         getSliceLiveData().observeForever(this);
         if (TextUtils.isEmpty(mScreenTitle)) {
             mScreenTitle = getArguments().getCharSequence(SlicesConstants.TAG_SCREEN_TITLE, "");
         }
-        showProgressBar();
         super.onResume();
         getContext().getContentResolver().registerContentObserver(
                 SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver);
@@ -478,10 +478,6 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
 
     @Override
     public void onChanged(@NonNull Slice slice) {
-        if (!getSliceLiveData().mUpdatePending.compareAndSet(true, false)) {
-            return;
-        }
-
         mSlice = slice;
         // Make TvSettings guard against the case that slice provider is not set up correctly
         if (slice == null || slice.getHints() == null) {
