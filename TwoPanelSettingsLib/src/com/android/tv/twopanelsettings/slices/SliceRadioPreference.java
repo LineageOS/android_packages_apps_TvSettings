@@ -27,6 +27,7 @@ public class SliceRadioPreference extends RadioPreference implements HasSliceAct
     private int mActionId;
     private SliceActionImpl mSliceAction;
     private String mUri;
+    private SliceActionImpl mFollowupSliceAction;
 
     public SliceRadioPreference(Context context, SliceActionImpl action) {
         super(context);
@@ -56,12 +57,12 @@ public class SliceRadioPreference extends RadioPreference implements HasSliceAct
 
     @Override
     public SliceActionImpl getFollowupSliceAction() {
-        return null;
+        return mFollowupSliceAction;
     }
 
     @Override
     public void setFollowupSliceAction(SliceActionImpl sliceAction) {
-        // no-op
+        mFollowupSliceAction = sliceAction;
     }
 
     private void update() {
