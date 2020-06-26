@@ -749,7 +749,10 @@ public class MainFragment extends PreferenceControllerFragment implements
         if (icon != null) {
             pref.setIcon(icon);
         }
-        String title = getStringResource(pkgName, "connected_devices_pref_title");
+        String title =
+                (pref instanceof SlicePreference)
+                        ? getStringResource(pkgName, "connected_devices_slice_pref_title")
+                        : getStringResource(pkgName, "connected_devices_pref_title");
         if (!TextUtils.isEmpty(title)) {
             pref.setTitle(title);
         }
