@@ -28,6 +28,7 @@ import androidx.slice.core.SliceActionImpl;
 public class SliceSwitchPreference extends SwitchPreference implements HasSliceAction {
     private int mActionId;
     protected SliceActionImpl mAction;
+    private SliceActionImpl mFollowupSliceAction;
 
     public SliceSwitchPreference(Context context, SliceActionImpl action) {
         super(context);
@@ -71,12 +72,12 @@ public class SliceSwitchPreference extends SwitchPreference implements HasSliceA
 
     @Override
     public SliceActionImpl getFollowupSliceAction() {
-        return null;
+        return mFollowupSliceAction;
     }
 
     @Override
     public void setFollowupSliceAction(SliceActionImpl sliceAction) {
-
+        mFollowupSliceAction = sliceAction;
     }
 
     private void update() {

@@ -1,4 +1,3 @@
-
 /*
  * Copyright (C) 2020 The Android Open Source Project
  *
@@ -56,7 +55,6 @@ public class EmbeddedSlicePreferenceHelper implements Observer<Slice> {
     void onDetached() {
         getSliceLiveData().removeObserver(this);
     }
-
 
     private PreferenceSliceLiveData.SliceLiveDataImpl getSliceLiveData() {
         return ContextSingleton.getInstance()
