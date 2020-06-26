@@ -498,7 +498,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 return back(false);
             }
 
-            if (event.getAction() == KeyEvent.ACTION_UP
+            if (event.getAction() == KeyEvent.ACTION_DOWN
                     && ((!isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_RIGHT)
                     || (isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_LEFT))) {
                 if (shouldPerformClick()) {
