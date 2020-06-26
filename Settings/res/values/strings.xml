@@ -902,6 +902,8 @@
 
     <!-- Title for Location in System Settings [CHAR LIMIT=50] -->
     <string name="system_location">Location</string>
+    <!-- Summary for Location in System Settings. This shall be an empty string. [DO NOT TRANSLATE] -->
+    <string name="system_location_summary"></string>
     <!-- Description for Location in System Settings [CHAR LIMIT=NONE] -->
     <string name="system_desc_location">Let apps that have asked your permission use your location information</string>
     <!-- Title for confirming location consent [CHAR LIMIT=50] -->
@@ -917,7 +919,7 @@
     <!-- [CHAR LIMIT=30] Location settings screen, recent location requests low battery use-->
     <string name="location_low_battery_use">Low battery use</string>
     <!-- [CHAR LIMIT=130] Location mode screen, description for wifi mode -->
-    <string name="location_mode_wifi_description">Use Wi\u2011Fi to estimate location </string>
+    <string name="location_mode_wifi_description">Use Wi\u2011Fi to estimate location</string>
 
     <!-- [CHAR LIMIT=60] Label for the status of location -->
     <string name="location_status">Location status</string>
