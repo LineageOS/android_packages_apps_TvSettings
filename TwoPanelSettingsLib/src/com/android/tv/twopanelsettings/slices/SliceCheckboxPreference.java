@@ -28,6 +28,7 @@ import androidx.slice.core.SliceActionImpl;
 public class SliceCheckboxPreference extends CheckBoxPreference implements HasSliceAction {
     private int mActionId;
     private SliceActionImpl mAction;
+    private SliceActionImpl mFollowupSliceAction;
 
     public SliceCheckboxPreference(Context context, SliceActionImpl action) {
         super(context);
@@ -63,11 +64,12 @@ public class SliceCheckboxPreference extends CheckBoxPreference implements HasSl
 
     @Override
     public SliceActionImpl getFollowupSliceAction() {
-        return null;
+        return mFollowupSliceAction;
     }
 
     @Override
     public void setFollowupSliceAction(SliceActionImpl sliceAction) {
+        mFollowupSliceAction = sliceAction;
     }
 
     private void update() {
