@@ -65,6 +65,9 @@ public final class SlicePreferencesUtil {
     static Preference getPreference(SliceItem item, ContextThemeWrapper contextThemeWrapper,
             String className) {
         Preference preference = null;
+        if (item == null) {
+            return null;
+        }
         Data data = extract(item);
         if (item.getSubType() != null) {
             String subType = item.getSubType();
@@ -112,6 +115,12 @@ public final class SlicePreferencesUtil {
                         }
                         if (preference instanceof HasSliceAction) {
                             ((HasSliceAction) preference).setActionId(getActionId(item));
+                        }
+                        if (data.mFollowupIntentItem != null) {
+                            SliceActionImpl followUpAction =
+                                    new SliceActionImpl(data.mFollowupIntentItem);
+                            ((HasSliceAction) preference).setFollowupSliceAction(followUpAction);
+
                         }
                     }
                 }
