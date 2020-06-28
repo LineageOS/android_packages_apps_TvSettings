@@ -17,29 +17,18 @@
 package com.android.tv.twopanelsettings.slices;
 
 import static android.app.slice.Slice.EXTRA_TOGGLE_STATE;
-import static android.app.slice.Slice.HINT_PARTIAL;
 
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.net.Uri;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 
 import androidx.annotation.Nullable;
-import androidx.lifecycle.Observer;
-import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
-import androidx.slice.Slice;
-import androidx.slice.SliceItem;
-import androidx.slice.widget.ListContent;
-import androidx.slice.widget.SliceContent;
 
 import com.android.tv.twopanelsettings.R;
-
-import java.util.List;
 
 /**
  * An embedded slice switch preference which would be embedded in common TvSettings preference

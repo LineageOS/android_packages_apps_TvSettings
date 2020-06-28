@@ -56,7 +56,6 @@ public class EmbeddedSlicePreferenceHelper implements Observer<Slice> {
         getSliceLiveData().removeObserver(this);
     }
 
-
     private PreferenceSliceLiveData.SliceLiveDataImpl getSliceLiveData() {
         return ContextSingleton.getInstance()
                 .getSliceLiveData(mContext, Uri.parse(mUri));
@@ -64,9 +63,6 @@ public class EmbeddedSlicePreferenceHelper implements Observer<Slice> {
 
     @Override
     public void onChanged(Slice slice) {
-        if (!getSliceLiveData().mUpdatePending.compareAndSet(true, false)) {
-            return;
-        }
         mSlice = slice;
         if (slice == null || slice.getHints() == null || slice.getHints().contains(HINT_PARTIAL)) {
             updateVisibility(false);

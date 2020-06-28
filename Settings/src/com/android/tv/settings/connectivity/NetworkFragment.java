@@ -23,6 +23,7 @@ import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
@@ -42,6 +43,7 @@ import androidx.preference.TwoStatePreference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.settingslib.wifi.AccessPointPreference;
+import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.util.SliceUtils;
@@ -71,8 +73,13 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private static final String KEY_ETHERNET_DHCP = "ethernet_dhcp";
     private static final String KEY_DATA_SAVER_SLICE = "data_saver_slice";
     private static final String KEY_DATA_ALERT_SLICE = "data_alert_slice";
+    private static final String KEY_NETWORK_DIAGNOSTICS = "network_diagnostics";
+
     private static final String ACTION_DATA_ALERT_SETTINGS = "android.settings.DATA_ALERT_SETTINGS";
     private static final int INITIAL_UPDATE_DELAY = 500;
+
+    private static final String NETWORK_DIAGNOSTICS_ACTION =
+            "com.android.tv.settings.network.NETWORK_DIAGNOSTICS";
 
     private ConnectivityListener mConnectivityListener;
     private WifiManager mWifiManager;
@@ -177,6 +184,15 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                     && dataAlertSlicePref.isVisible()) {
                 mHandler.post(() -> scrollToPreference(dataAlertSlicePref));
             }
+        }
+
+        Preference networkDiagnosticsPref = findPreference(KEY_NETWORK_DIAGNOSTICS);
+        Intent networkDiagnosticsIntent = makeNetworkDiagnosticsIntent();
+        if (networkDiagnosticsIntent != null) {
+            networkDiagnosticsPref.setVisible(true);
+            networkDiagnosticsPref.setIntent(networkDiagnosticsIntent);
+        } else {
+            networkDiagnosticsPref.setVisible(false);
         }
     }
 
@@ -359,6 +375,20 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         NetworkCapabilities nc = mConnectivityManager.getNetworkCapabilities(
                 mWifiManager.getCurrentNetwork());
         return nc != null && nc.hasCapability(NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL);
+    }
+
+    private Intent makeNetworkDiagnosticsIntent() {
+        Intent intent = new Intent();
+        intent.setAction(NETWORK_DIAGNOSTICS_ACTION);
+
+        ResolveInfo resolveInfo = MainFragment.systemIntentIsHandled(getContext(), intent);
+        if (resolveInfo == null || resolveInfo.activityInfo == null) {
+            return null;
+        }
+
+        intent.setPackage(resolveInfo.activityInfo.packageName);
+
+        return intent;
     }
 
     @Override

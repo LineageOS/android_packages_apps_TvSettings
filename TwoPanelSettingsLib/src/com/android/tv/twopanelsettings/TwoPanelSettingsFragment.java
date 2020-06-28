@@ -326,7 +326,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         void onPreferenceFocused(Preference preference);
     }
 
-    private boolean onPreferenceFocused(Preference pref) {
+    protected boolean onPreferenceFocused(Preference pref) {
+        return onPreferenceFocusedImpl(pref, false);
+    }
+
+    private boolean onPreferenceFocusedImpl(Preference pref, boolean forceRefresh) {
         if (DEBUG) {
             Log.d(TAG, "onPreferenceFocused " + pref.getTitle());
         }
@@ -358,7 +362,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 // launches a new activity because the horizontal scroll goes back to 0.
                 getView().getViewTreeObserver().addOnGlobalLayoutListener(mOnGlobalLayoutListener);
             }
-            return true;
+            if (!forceRefresh) {
+                return true;
+            }
         }
 
         // If the existing preview fragment is recreated when the activity is recreated, the
@@ -498,7 +504,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 return back(false);
             }
 
-            if (event.getAction() == KeyEvent.ACTION_UP
+            if (event.getAction() == KeyEvent.ACTION_DOWN
                     && ((!isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_RIGHT)
                     || (isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_LEFT))) {
                 if (shouldPerformClick()) {
@@ -752,6 +758,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     /**
      * Refocus the current selected preference. When a preference is selected and its InfoFragment
      * slice data changes. We need to call this method to make sure InfoFragment updates in time.
+     * This is also helpful in refreshing preview of ListPreference.
      */
     public void refocusPreference(Fragment fragment) {
         if (!isFragmentInTheMainPanel(fragment)) {
@@ -759,10 +766,15 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
         Preference chosenPreference = getChosenPreference(fragment);
         try {
-            if (chosenPreference != null && chosenPreference.getFragment() != null
-                    && InfoFragment.class.isAssignableFrom(
-                    Class.forName(chosenPreference.getFragment()))) {
-                onPreferenceFocused(chosenPreference);
+            if (chosenPreference != null) {
+                if (chosenPreference.getFragment() != null
+                        && InfoFragment.class.isAssignableFrom(
+                                Class.forName(chosenPreference.getFragment()))) {
+                    onPreferenceFocusedImpl(chosenPreference, false);
+                }
+                if (chosenPreference instanceof ListPreference) {
+                    onPreferenceFocusedImpl(chosenPreference, true);
+                }
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
