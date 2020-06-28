@@ -52,6 +52,8 @@
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"डिस्प्ले आणि आवाज"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"मदत आणि फीडबॅक"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"गोपनीयता"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"डिव्हाइस सेटिंग्ज"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"ॲप सेटिंग्ज"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"स्थान, वापर आणि निदाने, जाहिराती"</string>
     <string name="add_account" msgid="7386223854837017129">"खाते जोडा"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"खाते काढा"</string>
@@ -77,6 +79,8 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Google ची स्थान सेवा आणि इतर ॲप्सना नेटवर्कसाठी स्कॅन करू द्या, वाय-फाय बंद असतानादेखील."</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"वाय-फाय"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"नेटवर्कशी कनेक्ट करा"</string>
+    <!-- no translation found for connectivity_network_diagnostics (4396132865849151854) -->
+    <skip />
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"अलीकडे उघडलेले अ‍ॅप्स"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"सर्व अ‍ॅप्स पहा"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"परवानग्या"</string>
@@ -171,9 +175,11 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google कायदेशीर"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"परवाना डेटा अनुपलब्‍ध आहे"</string>
     <string name="about_model" msgid="9164284529291439296">"मॉडेल"</string>
-    <string name="about_version" msgid="7800676128792880991">"आवृत्ती"</string>
+    <!-- no translation found for about_version (6223547403835399861) -->
+    <skip />
     <string name="about_serial" msgid="3432319328808745459">"अनुक्रमांक"</string>
-    <string name="about_build" msgid="1139171613038225768">"बिल्ड"</string>
+    <!-- no translation found for about_build (8467840394761634575) -->
+    <skip />
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="other">तुम्ही डेव्हलपर होण्यापासून<xliff:g id="STEP_COUNT_1">%1$d</xliff:g> पायऱ्या दूर आहात</item>
       <item quantity="one">तुम्ही आता डेव्हलपर होण्यापासून <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> पायरी दूर आहात</item>
@@ -687,6 +693,8 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"परवानग्या"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"ॲप्लिकेशन अनुपलब्ध आहे"</string>
     <string name="settings_ok" msgid="5950888975075541964">"ठीक"</string>
+    <!-- no translation found for settings_confirm (4489126458677153411) -->
+    <skip />
     <string name="settings_cancel" msgid="576094334743686152">"रद्द करा"</string>
     <string name="settings_on" msgid="7734010120323404333">"सुरू"</string>
     <string name="settings_off" msgid="4060451657850476369">"बंद"</string>
@@ -701,6 +709,10 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"नंतर डिस्प्ले बंद करा"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"स्क्रीन बंद करण्याची परवानगी द्या"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"मीडिया प्लेबॅक दरम्यान"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (3888708298070409591) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_text (3157546670441493125) -->
+    <skip />
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"कोणतेही खाते सध्‍या बॅकअप घेतलेला डेटा स्टोअर करीत नाही"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"तुमचे वाय-फाय पासवर्ड, बुकमार्क, अन्य सेटिंग्ज आणि ॲप डेटा चा बॅक अप घेणे बंद करायचे आणि Google सर्व्हरवरील सर्व प्रती मिटवायच्या?"</string>
@@ -730,7 +742,8 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"ॲप परवानग्या"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_1">%2$d</xliff:g> पैकी <xliff:g id="COUNT_0">%1$d</xliff:g> अ‍ॅप्सना अनुमती आहे"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"ब्लूटूथ परवानगी विनंती"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Android सुरक्षितता पॅच दर्जा"</string>
+    <!-- no translation found for security_patch (8924741264829495392) -->
+    <skip />
     <string name="choose_application" msgid="2375936782103669988">"ॲप्लिकेशन निवडा"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(प्रायोगिक)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"सुरक्षित मोडमध्ये रीबूट करा"</string>
