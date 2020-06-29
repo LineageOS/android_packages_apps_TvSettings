@@ -53,6 +53,12 @@
     <!-- Header title for personal [CHAR LIMIT=50] -->
     <string name="header_category_personal">Personal</string>
 
+    <!--
+      Subtitle of disabled preferences in offline mode. For now, this is a placeholder to provide a
+      base for specific build to override and should generally not be shown. [CHAR LIMIT=60]
+    -->
+    <string name="offline_mode_disabled_entry_subtitle">Not available in offline mode</string>
+
     <!-- Main Fragment Quick Settings Preferences -->
     <skip />
     <!-- Title for main screen quick settings preference for network [CHAR LIMIT=50] -->
