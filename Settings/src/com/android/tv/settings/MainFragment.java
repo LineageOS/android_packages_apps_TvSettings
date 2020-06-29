@@ -303,6 +303,16 @@ public class MainFragment extends PreferenceControllerFragment implements
             Preference privacyPref = findPreference(KEY_PRIVACY);
             if (privacyPref != null) {
                 privacyPref.setVisible(true);
+                if (FeatureFactory.getFactory(getContext()).getOfflineFeatureProvider()
+                        .isOfflineMode(getContext())) {
+                    privacyPref.setSummary(R.string.offline_mode_disabled_entry_subtitle);
+                    privacyPref.setEnabled(false);
+                    privacyPref.setSelectable(false);
+                } else {
+                    privacyPref.setSummary(null);
+                    privacyPref.setEnabled(true);
+                    privacyPref.setSelectable(true);
+                }
             }
         }
         mHotwordSwitchController.init(this);
@@ -324,6 +334,18 @@ public class MainFragment extends PreferenceControllerFragment implements
         final Preference networkPref = findPreference(KEY_NETWORK);
         if (networkPref == null) {
             return;
+        }
+        if (FeatureFactory.getFactory(getContext()).getOfflineFeatureProvider()
+                .isOfflineMode(getContext())) {
+            networkPref.setIcon(R.drawable.ic_wifi_signal_off_white);
+            networkPref.setSummary(R.string.offline_mode_disabled_entry_subtitle);
+            networkPref.setEnabled(false);
+            networkPref.setSelectable(false);
+            return;
+        } else {
+            networkPref.setSummary(null);
+            networkPref.setEnabled(true);
+            networkPref.setSelectable(true);
         }
 
         if (mConnectivityListener.isCellConnected()) {
@@ -597,7 +619,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     @VisibleForTesting
     void updateAccountPref() {
         Preference accountsPref = findPreference(KEY_ACCOUNTS_AND_SIGN_IN);
-        SlicePreference acccountsSlicePref =
+        SlicePreference accountsSlicePref =
                 (SlicePreference) findPreference(KEY_ACCOUNTS_AND_SIGN_IN_SLICE);
         Intent intent = new Intent(ACTION_ACCOUNTS);
 
@@ -606,19 +628,40 @@ public class MainFragment extends PreferenceControllerFragment implements
             accountsPref.setVisible(true);
             accountsPref.setFragment(null);
             accountsPref.setIntent(intent);
-            acccountsSlicePref.setVisible(false);
+            accountsSlicePref.setVisible(false);
             return;
         }
 
         // If a slice is available, use it to display the accounts settings, otherwise fall back to
         // use AccountsFragment.
-        String uri = acccountsSlicePref.getUri();
+        String uri = accountsSlicePref.getUri();
         if (SliceUtils.isSliceProviderValid(getContext(), uri)) {
             accountsPref.setVisible(false);
-            acccountsSlicePref.setVisible(true);
+            accountsSlicePref.setVisible(true);
+            if (FeatureFactory.getFactory(getContext()).getOfflineFeatureProvider()
+                    .isOfflineMode(getContext())) {
+                accountsSlicePref.setSummary(R.string.offline_mode_disabled_entry_subtitle);
+                accountsSlicePref.setEnabled(false);
+                accountsSlicePref.setSelectable(false);
+            } else {
+                accountsSlicePref.setSummary(null);
+                accountsSlicePref.setEnabled(true);
+                accountsSlicePref.setSelectable(true);
+            }
         } else {
             accountsPref.setVisible(true);
-            acccountsSlicePref.setVisible(false);
+            accountsSlicePref.setVisible(false);
+            if (FeatureFactory.getFactory(getContext()).getOfflineFeatureProvider()
+                    .isOfflineMode(getContext())) {
+                accountsPref.setSummary(R.string.offline_mode_disabled_entry_subtitle);
+                accountsPref.setEnabled(false);
+                accountsPref.setSelectable(false);
+                return;
+            } else {
+                // Summary will be handled by the updateAccountPrefInfo() method.
+                accountsPref.setEnabled(true);
+                accountsSlicePref.setSelectable(true);
+            }
             updateAccountPrefInfo();
         }
     }
