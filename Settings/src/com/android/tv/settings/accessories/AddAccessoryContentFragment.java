@@ -18,15 +18,23 @@ package com.android.tv.settings.accessories;
 
 import android.annotation.Nullable;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.TextUtils;
+import android.text.style.DynamicDrawableSpan;
 import android.view.View;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.ProgressDialogFragment;
+import com.android.tv.settings.widget.CenterAlignedDynamicDrawableSpan;
 
 /**
  * Custom Content Fragment for the Bluetooth settings activity.
  */
 public class AddAccessoryContentFragment extends ProgressDialogFragment {
+
+    private static final String BUTTON1_TOKEN = "button1_token";
+    private static final String BUTTON2_TOKEN = "button2_token";
 
     public static AddAccessoryContentFragment newInstance() {
         return new AddAccessoryContentFragment();
@@ -38,5 +46,43 @@ public class AddAccessoryContentFragment extends ProgressDialogFragment {
         setTitle(R.string.accessories_add_title);
         setIcon(R.drawable.ic_bluetooth_searching_128dp);
         setSummary(R.string.accessories_add_bluetooth_inst);
+        if (getExtraDescription() != null) {
+            setExtraText(getExtraDescription());
+        }
+    }
+
+    private SpannableStringBuilder getExtraDescription() {
+        String extraDescription = getString(
+                R.string.accessories_add_bluetooth_inst_extra, BUTTON1_TOKEN, BUTTON2_TOKEN);
+        if (TextUtils.isEmpty(extraDescription) || getActivity() == null) {
+            return null;
+        }
+
+        SpannableStringBuilder builder = new SpannableStringBuilder(extraDescription);
+        int indexOfBackButtonImage = extraDescription.indexOf(BUTTON1_TOKEN);
+        DynamicDrawableSpan imageSpan =
+                new CenterAlignedDynamicDrawableSpan(
+                        getActivity(), R.drawable.pairing_button1_icon);
+        if (indexOfBackButtonImage != -1) {
+            builder.setSpan(
+                    imageSpan,
+                    indexOfBackButtonImage,
+                    indexOfBackButtonImage + BUTTON1_TOKEN.length(),
+                    SpannableString.SPAN_INCLUSIVE_INCLUSIVE);
+        }
+
+        int indexOfHomeButtonImage = extraDescription.indexOf(BUTTON2_TOKEN);
+        DynamicDrawableSpan imageSpan2 =
+                new CenterAlignedDynamicDrawableSpan(
+                        getActivity(), R.drawable.pairing_button2_icon);
+        if (indexOfHomeButtonImage != -1) {
+            builder.setSpan(
+                    imageSpan2,
+                    indexOfHomeButtonImage,
+                    indexOfHomeButtonImage + BUTTON2_TOKEN.length(),
+                    SpannableString.SPAN_INCLUSIVE_INCLUSIVE);
+        }
+
+        return builder;
     }
 }
