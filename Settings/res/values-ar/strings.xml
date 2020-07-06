@@ -285,7 +285,7 @@
     <string name="proxy_error_empty_port" msgid="692020249267351015">"لا يُمكن ترك حقل المنفذ فارغًا"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"إذا كان الحقل المضيف فارغًا، فاترك حقل المنفذ فارغًا"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"منفذ غير صالح"</string>
-    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"يستخدم المتصفّح خادم HTTP الوكيل، ومع ذلك قد لا يكون مستخدمًا بواسطة تطبيقات أخرى"</string>
+    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"يتم استخدام الخادم الوكيل HTTP على المتصفّح، ولكن قد لا تستخدمه التطبيقات الأخرى."</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"أدخل منفذًا صالحًا.\nمثال: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"أدخل قائمة مفصولة بفواصل للنطاقات المستثناة أو اترك الحقل خاليًا.\nمثال: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"أدخل اسم مضيف صالحًا.\nمثال: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -316,8 +316,8 @@
     <string name="storage_format_as_public" msgid="6745112917895223463">"محو البيانات والتهيئة كوحدة تخزين قابلة للنقل"</string>
     <string name="storage_format_for_private" msgid="5380138334184923252">"التنسيق كوحدة تخزين على الجهاز"</string>
     <string name="storage_not_connected" msgid="4327902652748552794">"غير متصل"</string>
-    <string name="storage_migrate" msgid="9137556600192167701">"ترحيل البيانات إلى مساحة التخزين هذه"</string>
-    <string name="storage_migrate_away" msgid="7880100961434638430">"ترحيل البيانات إلى مساحة تخزين مختلفة"</string>
+    <string name="storage_migrate" msgid="9137556600192167701">"نقل البيانات إلى مساحة التخزين هذه"</string>
+    <string name="storage_migrate_away" msgid="7880100961434638430">"نقل البيانات إلى مساحة تخزين مختلفة"</string>
     <string name="storage_no_apps" msgid="95566375753627272">"ليس هناك تطبيقات للاحتفاظ بنسخ احتياطية منها."</string>
     <string name="storage_forget" msgid="4671975563260507003">"تجاهل مساحة تخزين الجهاز هذه"</string>
     <string name="storage_forget_wall_of_text" msgid="230454348256179142">"لاستخدام التطبيقات أو البيانات التي يتضمنها محرك الأقراص هذا، عليك إعادة توصيله بالجهاز. ويمكنك بدلاً من ذلك حذف وحدة التخزين هذه إذا لم يكن محرك الأقراص متاحًا.\n\nإذا اخترت \"حذف\"، فسيتم فقد كل البيانات التي يتضمنها محرك الأقراص للأبد.\n\nيمكنك إعادة تثبيت التطبيقات لاحقًا، ولكن سيتم فقد البيانات المخزنة على محرك الأقراص هذا."</string>
@@ -338,13 +338,13 @@
     <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"بعد التهيئة، يمكنك استخدام محرك أقراص USB هذا على أجهزة أخرى. سيتم محو جميع البيانات. جرِّب الاحتفاظ بنسخة احتياطية أولاً من خلال نقل التطبيقات إلى مساحة تخزين أخرى على الجهاز."</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"جارٍ تهيئة محرك أقراص USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"قد يستغرق هذا دقيقة. يُرجى عدم إزالة محرك الأقراص."</string>
-    <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"اختيار مساحة تخزين لترحيل البيانات إليها"</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"اختيار مساحة تخزين لنقل البيانات إليها"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="5086390005970210697">"نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"يمكنك نقل الصور والملفات وبيانات التطبيقات إلى <xliff:g id="NAME">%1$s</xliff:g>، قد يستغرق هذا بضع دقائق علمًا بأن بعض التطبيقات لن تعمل بشكل صحيح أثناء النقل."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="7512917600174814567">"النقل الآن"</string>
     <string name="storage_wizard_migrate_confirm_action_move_later" msgid="6379986754827551474">"النقل لاحقًا"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"تم ترحيل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="8580347235983040966">"تعذر ترحيل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"تم نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="8580347235983040966">"تعذر نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_progress_title" msgid="2623480667090826800">"جارٍ نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>..."</string>
     <string name="storage_wizard_migrate_progress_description" msgid="4023358325977284145">"قد يستغرق هذا وقتًا قصيرًا، يرجى عدم إزالة محرك الأقراص.\nعلمًا بأن بعض التطبيقات لن تعمل بشكل صحيح أثناء النقل."</string>
     <string name="storage_wizard_format_slow_title" msgid="7640229918512394316">"يبدو أن محرك الأقراص هذا بطيء."</string>
@@ -490,7 +490,7 @@
     <string name="system_email_address" msgid="3725494874473757217">"عنوان البريد الإلكتروني"</string>
     <string name="system_usb_debugging" msgid="2158285492172755923">"تصحيح أخطاء USB"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"السماح بمواقع وهمية"</string>
-    <string name="system_select_debug_app" msgid="6200987902307533721">"تحديد التطبيق لتصحيحه"</string>
+    <string name="system_select_debug_app" msgid="6200987902307533721">"اختيار التطبيق لتصحيحه"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"انتظار برنامج التصحيح"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"التحقق من التطبيقات عبر USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"التحقق من التطبيقات المثبتة عبر ADB/ADT لكشف السلوك الضار"</string>
@@ -578,7 +578,7 @@
     <string name="autofill_none" msgid="1615056985649424207">"بدون خدمة"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;تأكد من أنك تثق بهذا التطبيق&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Password service&gt;%1$s&lt;/xliff:g&gt; يستخدم البيانات المعروضة على الشاشة لتحديد ما يمكن ملؤه تلقائيًا."</string>
     <string name="computing_size" msgid="8623916230485437579">"جارٍ الحساب..."</string>
-    <string name="title_select_wifi_network" msgid="935820896444071617">"تحديد شبكة Wi-Fi"</string>
+    <string name="title_select_wifi_network" msgid="935820896444071617">"اختيار شبكة Wi-Fi"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"إعادة تسمية"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"العرض باتصال Wi-Fi"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"يلزم رقم التعريف الشخصي"</string>
@@ -638,9 +638,9 @@
     <string name="app_sees_restricted_accounts" msgid="174038126799649152">"يمكن لهذا التطبيق الدخول إلى حساباتك"</string>
     <string name="restriction_location_enable_title" msgid="2552780806199464266">"الموقع الجغرافي"</string>
     <string name="restriction_location_enable_summary" msgid="3719330231217994482">"السماح للتطبيقات باستخدام معلومات موقعك"</string>
-    <string name="restricted_profile_switch_to" msgid="6193201935877168764">"الدخول إلى الملف الشخصي المقيّد"</string>
-    <string name="restricted_profile_switch_out" msgid="3589381233390753413">"الخروج من الملف الشخصي المقيّد"</string>
-    <string name="restricted_profile_delete_title" msgid="7153982195273379506">"حذف الملف الشخصي المقيّد"</string>
+    <string name="restricted_profile_switch_to" msgid="6193201935877168764">"الدخول إلى الملف الشخصي ذات الصلاحيات المحدودة"</string>
+    <string name="restricted_profile_switch_out" msgid="3589381233390753413">"الخروج من الملف الشخصي ذات الصلاحيات المحدودة"</string>
+    <string name="restricted_profile_delete_title" msgid="7153982195273379506">"حذف الملف الشخصي ذات الصلاحيات المحدودة"</string>
     <string name="restricted_profile_create_title" msgid="700322590579894058">"إنشاء ملف شخصي مُقيَّد"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"الإعدادات"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"التطبيقات المسموح بها"</string>

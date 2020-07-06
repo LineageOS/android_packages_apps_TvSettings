@@ -374,11 +374,11 @@
     <string name="desc_set_time_format" msgid="8688587526768572230">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="8458199433555868708">"Ngày và giờ tự động"</string>
   <string-array name="auto_date_time_entries">
-    <item msgid="8119837829162871025">"Sử dụng thời gian do mạng cung cấp"</item>
+    <item msgid="8119837829162871025">"Sử dụng ngày và giờ do mạng cung cấp"</item>
     <item msgid="369146066143710034">"Tắt"</item>
   </string-array>
   <string-array name="auto_date_time_ts_entries">
-    <item msgid="1010003447137304123">"Sử dụng thời gian do mạng cung cấp"</item>
+    <item msgid="1010003447137304123">"Sử dụng ngày và giờ do mạng cung cấp"</item>
     <item msgid="5645263357181875427">"Sử dụng thời gian do luồng vận chuyển cung cấp"</item>
     <item msgid="5501503537181350884">"Tắt"</item>
   </string-array>
@@ -386,8 +386,8 @@
     <string name="system_desc_location" msgid="1680134126100535031">"Cho phép các ứng dụng đã yêu cầu bạn cho phép sử dụng thông tin vị trí của bạn"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Đồng ý vị trí"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Chế độ"</string>
-    <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Yêu cầu vị trí gần đây"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"Không có ứng dụng nào yêu cầu vị trí gần đây"</string>
+    <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Các yêu cầu gần đây về vị trí"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"Không có ứng dụng nào gần đây yêu cầu vị trí"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Mức sử dụng pin cao"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Mức sử dụng pin thấp"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"Sử dụng Wi-Fi để ước tính vị trí"</string>
@@ -638,7 +638,7 @@
     <string name="pin_enter_again" msgid="7615050143778858658">"Nhập lại mã PIN mới"</string>
     <string name="pin_enter_old_pin" msgid="5665265735227617942">"Nhập mã PIN cũ"</string>
     <string name="pin_enter_wrong_seconds" msgid="3014013615537066237">"Bạn đã nhập sai mã PIN 5 lần.\nHãy thử lại sau <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> giây."</string>
-    <string name="pin_toast_wrong" msgid="4297542365877164402">"Mã PIN sai, hãy thử lại"</string>
+    <string name="pin_toast_wrong" msgid="4297542365877164402">"Mã PIN không chính xác, hãy thử lại"</string>
     <string name="pin_toast_not_match" msgid="2439298696342975155">"Hãy thử lại, mã PIN không khớp"</string>
     <string name="wifi_setup_input_password" msgid="8510003548463241234">"Nhập mật khẩu cho <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_connection_success" msgid="3301901673876973474">"Đã kết nối thành công"</string>
@@ -735,8 +735,8 @@
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Cho hiển thị trên ứng dụng khác"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Cho phép một ứng dụng hiển thị trên các ứng dụng khác mà bạn đang sử dụng. Điều này có thể ảnh hưởng đến cách bạn sử dụng các ứng dụng đó hoặc thay đổi cách chúng xuất hiện hoặc hoạt động."</string>
     <string name="write_system_settings" msgid="4284654265954461890">"Sửa đổi các tùy chọn cài đặt hệ thống"</string>
-    <string name="write_settings_title" msgid="2361816483383105754">"Được sửa đổi cài đặt hệ thống"</string>
-    <string name="write_settings_description" msgid="7382397926674265937">"Quyền này cho phép ứng dụng sửa đổi cài đặt hệ thống."</string>
+    <string name="write_settings_title" msgid="2361816483383105754">"Có thể sửa đổi các tùy chọn cài đặt của hệ thống"</string>
+    <string name="write_settings_description" msgid="7382397926674265937">"Quyền này cho phép ứng dụng sửa đổi các tùy chọn cài đặt hệ thống."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Có"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Không"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Hình trong hình"</string>

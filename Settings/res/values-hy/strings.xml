@@ -127,7 +127,7 @@
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Հետևյալ սարքին միանալու համար՝ &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;մուտքագրեք սարքի PIN-ը՝"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;-ին միանալու համար մուտքագրեք պահանջվող անցաբառը՝"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Սովորաբար 0000 կամ 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Զուգավորել"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Զուգակցել"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Չեղարկել"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Ամսաթիվ և ժամ"</string>
@@ -187,7 +187,7 @@
     <string name="battery_level_title" msgid="2672804570916248736">"Մարտկոցի մակարդակը"</string>
     <string name="sim_status_title" msgid="1704273079796640946">"SIM քարտի կարգավիճակը"</string>
     <string name="imei_information_title" msgid="3790368306353698724">"IMEI կոդ"</string>
-    <string name="status_bt_address" msgid="7190052214963950844">"Bluetooth-ի հասցեն"</string>
+    <string name="status_bt_address" msgid="7190052214963950844">"Bluetooth հասցե"</string>
     <string name="status_up_time" msgid="1758102680983108313">"Աշխատած ժամանակը"</string>
     <string name="legal_information" msgid="1087445528481370874">"Իրավական տեղեկություններ"</string>
     <string name="copyright_title" msgid="5879660711078649518">"Հեղինակային իրավունք"</string>
@@ -387,7 +387,7 @@
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Տեղադրության մասին տվյալների հավաքում"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Ռեժիմ"</string>
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Տեղադրության վերջին հարցումներ"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"Որևէ ծրագիր տեղադրության հարցում չի կատարել վերջերս"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"Վերջին ժամանակաշրջանում հավելվածները տեղադրության հարցում չեն արել"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Մարտկոցի լիցքի բարձր ծախսում"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Մարտկոցի լիցքի ցածր ծախսում"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"Տեղադրությունը որոշել Wi-Fi-ի օգնությամբ"</string>
@@ -405,7 +405,7 @@
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Google հաշվի տեղադրության պատմությունը ընդմիշտ կջնջվի այս սարքից: Դուք չեք կարող հետարկել այս գործողությունը: Որոշ ծրագրեր Google Now-ի հետ մեկտեղ կդադարեն աշխատել:"</string>
     <string name="system_services" msgid="5754310941186053151">"Ծառայություններ"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Ծառայության կարգավորումներ"</string>
-    <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Ցայտուն տեքստ"</string>
+    <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Բարձր կոնտրաստի տեքստ"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Մատչելիության դյուրանցում"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Միացնել մատչելիության դյուրացումը"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Դյուրանցման ծառայություն"</string>
@@ -582,7 +582,7 @@
     <string name="inputs_blu_ray" msgid="6561004081102615775">"Blu-ray"</string>
     <string name="inputs_cable" msgid="8274665772422377063">"Մալուխ"</string>
     <string name="inputs_dvd" msgid="1452146927899250552">"DVD"</string>
-    <string name="inputs_game" msgid="4762255172943107070">"Խաղի վահանակ"</string>
+    <string name="inputs_game" msgid="4762255172943107070">"Խաղային բարձակ"</string>
     <string name="inputs_aux" msgid="5331442342029867329">"Aux"</string>
     <string name="inputs_custom_name" msgid="2649826613531559538">"Մուտքագրեք անունը"</string>
     <string name="inputs_custom_name_description_fmt" msgid="2879134265596928298">"Մուտքագրեք <xliff:g id="INPUT">%1$s</xliff:g> մուտքի անունը:"</string>
@@ -704,7 +704,7 @@
     <string name="keep_settings" msgid="703474489210093961">"Չփոխել"</string>
     <string name="apps_permissions" msgid="7876407267050498394">"Թույլտվություններ"</string>
     <string name="device_apps_permissions" msgid="8421323706003063878">"Հավելվածների թույլտվություններ"</string>
-    <string name="app_permissions_group_summary" msgid="6818210080117761117">"Թույլատրված է <xliff:g id="COUNT_0">%1$d</xliff:g> հավելվածի՝ <xliff:g id="COUNT_1">%2$d</xliff:g>-ից"</string>
+    <string name="app_permissions_group_summary" msgid="6818210080117761117">"Թույլատրված է <xliff:g id="COUNT_0">%1$d</xliff:g>/<xliff:g id="COUNT_1">%2$d</xliff:g> հավելվածի"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth-ի թույլտվության հայց"</string>
     <string name="security_patch" msgid="5468261708915367254">"Անվտանգության համակարգի վերջին թարմացումը"</string>
     <string name="choose_application" msgid="2375936782103669988">"Ընտրեք հավելված"</string>

@@ -47,7 +47,7 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ta aksessuar</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ta aksessuar</item>
     </plurals>
-    <string name="add_account" msgid="7386223854837017129">"Hisob qo‘shish"</string>
+    <string name="add_account" msgid="7386223854837017129">"Hisob kiritish"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Hisobni olib tashlash"</string>
     <string name="account_sync" msgid="4315295293211313989">"Sinxronadigan ilovalarni tanlang"</string>
     <string name="sync_now" msgid="4335217984374620551">"Hozir sinxronlash"</string>
@@ -387,7 +387,7 @@
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Joylashuv rozili"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Rejim"</string>
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Joylashuv axboroti so‘rovlari"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"Hech qanday ilova yaqin vaqtda joylashuv ma‘lumotini so‘ramadi"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"Yaqin-orada hech qanday ilova joylashuv axborotini talab qilmadi"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Yuqori batareya sarfi"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Batareya sarfi kam"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"Joyni hisoblash uchun Wi‑Fi dan foydalanish"</string>
@@ -420,7 +420,7 @@
     <string name="captions_language" msgid="5905918439449912646">"Til"</string>
     <string name="captions_language_default" msgid="3894192926725192528">"Standart"</string>
     <string name="captions_textsize" msgid="7161136610669343510">"Matn o‘lchami"</string>
-    <string name="captions_captionstyle" msgid="6650139717545516071">"Sarlavha uslubi"</string>
+    <string name="captions_captionstyle" msgid="6650139717545516071">"Taglavhalar uslubi"</string>
     <string name="captions_customoptions" msgid="7691004663572161126">"Buyurtmali tanlamalar"</string>
     <string name="captions_fontfamily" msgid="1026632786438880997">"Shriftlar oilasi"</string>
     <string name="captions_textcolor" msgid="1566679779609140317">"Matn rangi"</string>
@@ -429,7 +429,7 @@
     <string name="captions_backgroundshow" msgid="1080183686470477645">"Fonni ko‘rsatish"</string>
     <string name="captions_backgroundcolor" msgid="2056944109914399253">"Orqa fon rangi"</string>
     <string name="captions_backgroundopacity" msgid="1850126438162000027">"Fon yarim tiniqligi"</string>
-    <string name="captioning_preview_text" msgid="3034147586392743237">"Sarlavlahar quyidagicha ko‘rinadi"</string>
+    <string name="captioning_preview_text" msgid="3034147586392743237">"Taglavhalar shunday chiqadi"</string>
     <string name="captions_textopacity" msgid="6055602491649526307">"Matn yarim tiniqligi"</string>
     <string name="captions_windowshow" msgid="6002072054703167886">"Oynani ko‘rsatish"</string>
     <string name="captions_windowcolor" msgid="7460430328878876648">"Oyna rangi"</string>
@@ -444,7 +444,7 @@
     <string name="color_red" msgid="1899020130465926495">"Qizil"</string>
     <string name="color_green" msgid="7546929005626106667">"Yashil"</string>
     <string name="color_blue" msgid="7681690245150985958">"Havorang"</string>
-    <string name="color_cyan" msgid="3172130225116530998">"Moviy"</string>
+    <string name="color_cyan" msgid="3172130225116530998">"Zangori"</string>
     <string name="color_yellow" msgid="3519470952904560404">"Sariq"</string>
     <string name="color_magenta" msgid="2377854703399624607">"Pushtirang"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Yoqish"</string>
@@ -660,7 +660,7 @@
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Bu ilovaning barcha ma’lumotlari butunlay o’chirib tashlanadi.\nBunga barcha fayllar, sozlamalar, hisoblar, ma’lumotlar bazalari va h.k. kiradi."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"Standartlarni tozalash"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"Ba’zi amallar uchun ochish"</string>
-    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Birlamchi sozlamalar o‘rnatilmagan"</string>
+    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Birlamchi sozlamalar belgilanmagan"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Keshni tozalash"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Bildirishnomalar"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Ruxsatlar"</string>
@@ -706,7 +706,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Ilovalar uchun ruxsatlar"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"Ruxsat berilgan ilovalar: <xliff:g id="COUNT_0">%1$d</xliff:g> / <xliff:g id="COUNT_1">%2$d</xliff:g> ta"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth ruxsati so‘rovi"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Tizim xavfsizligi uchun yangilanish"</string>
+    <string name="security_patch" msgid="5468261708915367254">"Android tizim xavfsizligi yangilanishi"</string>
     <string name="choose_application" msgid="2375936782103669988">"Ilovani tanlang"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Tajribaviy)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"O‘tish"</string>
