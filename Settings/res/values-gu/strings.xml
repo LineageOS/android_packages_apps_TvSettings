@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"પસંદગીઓ"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"રિમોટ અને એસેસરીઝ"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"વ્યક્તિગત"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"ઑફલાઇન મોડમાં ઉપલબ્ધ રહેશે નહીં"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"નેટવર્ક સાથે કનેક્ટ કરો"</string>
     <string name="add_an_account" msgid="2601275122685226096">"એકાઉન્ટ ઉમેરો"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"એકાઉન્ટ અને સાઇન ઇન"</string>
@@ -79,8 +80,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Google ની સ્થાન સેવા અને અન્ય ઍપ્લિકેશનોને નેટવર્ક માટે સ્કૅન કરવા દો, Wi‑Fi બંધ હોય ત્યારે પણ"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"વાઇ-ફાઇ"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"નેટવર્ક સાથે કનેક્ટ કરો"</string>
-    <!-- no translation found for connectivity_network_diagnostics (4396132865849151854) -->
-    <skip />
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"નેટવર્કના નિદાન"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"તાજેતરમાં ખોલેલી ઍપ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"બધી ઍપ જુઓ"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"પરવાનગીઓ"</string>
@@ -175,11 +175,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google કાનૂની"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"લાઇસન્સ ડેટા અનુપલબ્ધ છે"</string>
     <string name="about_model" msgid="9164284529291439296">"મોડલ"</string>
-    <!-- no translation found for about_version (6223547403835399861) -->
-    <skip />
+    <string name="about_version" msgid="6223547403835399861">"Android TV OS વર્ઝન"</string>
     <string name="about_serial" msgid="3432319328808745459">"અનુક્રમ ક્રમાંક"</string>
-    <!-- no translation found for about_build (8467840394761634575) -->
-    <skip />
+    <string name="about_build" msgid="8467840394761634575">"Android TV OS બિલ્ડ"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="one">તમે હવે એક વિકાસકર્તા બનવાથી <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> પગલાં દૂર છો</item>
       <item quantity="other">તમે હવે એક વિકાસકર્તા બનવાથી <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> પગલાં દૂર છો</item>
@@ -693,8 +691,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"પરવાનગીઓ"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"ઍપ્લિકેશન અનુપલબ્ધ છે"</string>
     <string name="settings_ok" msgid="5950888975075541964">"ઓકે"</string>
-    <!-- no translation found for settings_confirm (4489126458677153411) -->
-    <skip />
+    <string name="settings_confirm" msgid="4489126458677153411">"કન્ફર્મ કરો"</string>
     <string name="settings_cancel" msgid="576094334743686152">"રદ કરો"</string>
     <string name="settings_on" msgid="7734010120323404333">"ચાલુ"</string>
     <string name="settings_off" msgid="4060451657850476369">"બંધ"</string>
@@ -709,10 +706,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"આના પછી ડિસ્પ્લે બંધ કરો"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"સ્ક્રીન બંધ કરવાની મંજૂરી આપો"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"મીડિયા પ્લેબૅક દરમ્યાન"</string>
-    <!-- no translation found for device_energy_saver_confirmation_title (3888708298070409591) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_confirmation_text (3157546670441493125) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"ઊર્જા બચતનું સેટિંગ કન્ફર્મ કરો"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"કૃપા કરીને <xliff:g id="SLEEP_TIME">%1$s</xliff:g>ના સેટિંગમાં કરેલો ફેરફાર કન્ફર્મ કરો, સંભવ છે કે આને કારણે ઊર્જાનો તમારો વપરાશ વધી જાય."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"બેકઅપ લેવાયેલ ડેટા અત્યારે કોઇ એકાઉન્ટ સ્ટોર કરી રહ્યું નથી"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wi-Fi પાસવર્ડ, બુકમાર્ક અન્ય સેટિંગ્સ અને ઍપ્લિકેશન ડેટાનું બૅકઅપ લેવાનું રોકીએ અને Google સર્વર પરની બધી કૉપિ કાઢી નાખીએ?"</string>
@@ -742,8 +737,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"ઍપ્લિકેશન પરવાનગીઓ"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_1">%2$d</xliff:g> માંથી <xliff:g id="COUNT_0">%1$d</xliff:g> ઍપ્લિકેશનો મંજૂર કરી"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth પરવાનગી વિનંતી"</string>
-    <!-- no translation found for security_patch (8924741264829495392) -->
-    <skip />
+    <string name="security_patch" msgid="8924741264829495392">"Android TV OS સુરક્ષા પૅચ લેવલ"</string>
     <string name="choose_application" msgid="2375936782103669988">"ઍપ્લિકેશન પસંદ કરો"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(પ્રાયોગિક)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"સુરક્ષિત મોડ પર રીબૂટ કરો"</string>

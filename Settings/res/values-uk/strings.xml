@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"Налаштування"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"Дистанційне керування й аксесуари"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"Особисте"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"Недоступно в режимі офлайн"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"Під’єднатися до мережі"</string>
     <string name="add_an_account" msgid="2601275122685226096">"Додати обліковий запис"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Облікові записи та вхід"</string>
@@ -83,8 +84,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Дозволити службі локації Google та іншим додаткам сканувати мережі, навіть якщо Wi-Fi вимкнено"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Під’єднатися до мережі"</string>
-    <!-- no translation found for connectivity_network_diagnostics (4396132865849151854) -->
-    <skip />
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Діагностика мережі"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Нещодавно відкриті додатки"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Показати всі додатки"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Дозволи"</string>
@@ -179,11 +179,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Юридичні умови Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Дані ліцензії недоступні"</string>
     <string name="about_model" msgid="9164284529291439296">"Модель"</string>
-    <!-- no translation found for about_version (6223547403835399861) -->
-    <skip />
+    <string name="about_version" msgid="6223547403835399861">"Версія ОС Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Серійний номер"</string>
-    <!-- no translation found for about_build (8467840394761634575) -->
-    <skip />
+    <string name="about_build" msgid="8467840394761634575">"Складання ОС Android TV"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="one">Щоб стати розробником, потрібно виконати ще <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> дію</item>
       <item quantity="few">Щоб стати розробником, потрібно виконати ще <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> дії</item>
@@ -707,8 +705,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Дозволи"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Додаток недоступний"</string>
     <string name="settings_ok" msgid="5950888975075541964">"ОК"</string>
-    <!-- no translation found for settings_confirm (4489126458677153411) -->
-    <skip />
+    <string name="settings_confirm" msgid="4489126458677153411">"Підтвердити"</string>
     <string name="settings_cancel" msgid="576094334743686152">"Скасувати"</string>
     <string name="settings_on" msgid="7734010120323404333">"Увімкнено"</string>
     <string name="settings_off" msgid="4060451657850476369">"Вимкнено"</string>
@@ -723,10 +720,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Вимикати екран після"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Дозволити вимикати екран"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Під час відтворення медіафайлів"</string>
-    <!-- no translation found for device_energy_saver_confirmation_title (3888708298070409591) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_confirmation_text (3157546670441493125) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Підтвердьте налаштування енергозбереження"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Підтвердьте нове налаштування: <xliff:g id="SLEEP_TIME">%1$s</xliff:g>. Це може збільшити споживання енергії."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Зараз резервні копії даних не зберігаються в облікових записах"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Припинити резервне копіювання паролів Wi-Fi, закладок, інших налаштувань і даних додатків, а також стерти всі копії на серверах Google?"</string>
@@ -756,8 +751,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Дозволи додатків"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"Додатки з дозволом: <xliff:g id="COUNT_0">%1$d</xliff:g> з <xliff:g id="COUNT_1">%2$d</xliff:g>"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Запит на дозвіл вмикати Bluetooth"</string>
-    <!-- no translation found for security_patch (8924741264829495392) -->
-    <skip />
+    <string name="security_patch" msgid="8924741264829495392">"Виправлення системи безпеки ОС Android TV"</string>
     <string name="choose_application" msgid="2375936782103669988">"Виберіть додаток"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Експериментальна функція)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Перезапустити в безпечному режимі"</string>

@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"Ustawienia"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"Pilot i akcesoria"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"Osobiste"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"Niedostępne w trybie offline"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"Łączenie z siecią"</string>
     <string name="add_an_account" msgid="2601275122685226096">"Dodaj konto"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Konta i logowanie"</string>
@@ -56,6 +57,8 @@
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Wyświetlacz i dźwięk"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Pomoc i opinie"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Prywatność"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Ustawienia urządzenia"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Ustawienia aplikacji"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Lokalizacja, użycie i diagnostyka, reklamy"</string>
     <string name="add_account" msgid="7386223854837017129">"Dodaj konto"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Usuń konto"</string>
@@ -81,6 +84,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Zezwalaj usłudze lokalizacyjnej Google i innym aplikacjom na skanowanie w poszukiwaniu sieci nawet przy wyłączonym Wi-Fi"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Łączenie z siecią"</string>
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnostyka sieci"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Niedawno otwierane aplikacje"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Zobacz wszystkie aplikacje"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Uprawnienia"</string>
@@ -175,9 +179,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Informacje prawne Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Dane licencji są niedostępne"</string>
     <string name="about_model" msgid="9164284529291439296">"Model"</string>
-    <string name="about_version" msgid="7800676128792880991">"Wersja"</string>
+    <string name="about_version" msgid="6223547403835399861">"Wersja systemu operacyjnego Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Numer seryjny"</string>
-    <string name="about_build" msgid="1139171613038225768">"Kompilacja"</string>
+    <string name="about_build" msgid="8467840394761634575">"Kompilacja systemu operacyjnego Android TV"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="few">Od zostania programistą dzielą Cię już tylko <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroki.</item>
       <item quantity="many">Od zostania programistą dzieli Cię już tylko <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroków.</item>
@@ -701,6 +705,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Uprawnienia"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Aplikacja niedostępna"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
+    <string name="settings_confirm" msgid="4489126458677153411">"Potwierdź"</string>
     <string name="settings_cancel" msgid="576094334743686152">"Anuluj"</string>
     <string name="settings_on" msgid="7734010120323404333">"Wł."</string>
     <string name="settings_off" msgid="4060451657850476369">"Wył."</string>
@@ -715,6 +720,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Wyłączaj ekran po"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Zezwalaj na wyłączanie ekranu"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Podczas odtwarzania"</string>
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Potwierdź ustawienia oszczędzania energii"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Potwierdź nowe ustawienie: <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, które może powodować większe zużycie energii."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Dane kopii zapasowej nie są aktualnie przechowywane na żadnym koncie"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Zatrzymać tworzenie kopii zapasowych haseł do Wi-Fi, zakładek, innych ustawień oraz danych aplikacji, a także usunąć wszystkie kopie z serwerów Google?"</string>
@@ -744,7 +751,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Uprawnienia aplikacji"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"Dozwolone: <xliff:g id="COUNT_0">%1$d</xliff:g> z <xliff:g id="COUNT_1">%2$d</xliff:g> aplikacji"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Prośba o pozwolenie na włączenie modułu Bluetooth"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Stan aktualizacji zabezpieczeń"</string>
+    <string name="security_patch" msgid="8924741264829495392">"Poziom poprawek zabezpieczeń systemu operacyjnego Android TV"</string>
     <string name="choose_application" msgid="2375936782103669988">"Wybierz aplikację"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Funkcja eksperymentalna)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Uruchom w trybie awaryjnym"</string>

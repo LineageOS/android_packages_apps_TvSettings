@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"අභිරුචි"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"දුරස්ථ සහ අතිරේක උපාංග"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"පෞද්ගලික"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"නොබැඳි ප්‍රකාරයෙහි ලබා ගත නොහැකිය"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"ජාලයට සබැඳීම"</string>
     <string name="add_an_account" msgid="2601275122685226096">"ගිණුමක් එක් කරන්න"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"ගිණුම් සහ පුරනය වීම"</string>
@@ -52,6 +53,8 @@
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"සංදර්ශකය හා ශබ්දය"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"උදවු සහ ප්‍රතිපෝෂණය"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"පෞද්ගලිකත්වය"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"උපාංග සැකසීම්"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"යෙදුම් සැකසීම්"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"ස්ථානය, භාවිතය හා දෝෂ විනිශ්චය, දැන්වීම්"</string>
     <string name="add_account" msgid="7386223854837017129">"ගිණුම එක් කරන්න"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"ගිණුම ඉවත් කරන්න"</string>
@@ -77,6 +80,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Wi-Fi ක්‍රියාවිරහිත විට පවා, Google හි පිහිටීම් සේවාව සහ වෙනත් යෙදුම්වලට ජාල සඳහා ස්කෑන් කිරීමට ඉඩ දෙන්න"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"WiFi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"ජාලයට සබැඳීම"</string>
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"ජාල දෝෂ නිර්ණ"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"මෑතකදී විවෘත කරන ලද යෙදුම්"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"සියලු යෙදුම් බලන්න"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"අවසර"</string>
@@ -171,9 +175,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google නීතිමය"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"බලපත්‍ර දත්ත ලබාගත නොහැක"</string>
     <string name="about_model" msgid="9164284529291439296">"අනුකෘතිය"</string>
-    <string name="about_version" msgid="7800676128792880991">"අනුවාදය"</string>
+    <string name="about_version" msgid="6223547403835399861">"Android TV OS අනුවාදය"</string>
     <string name="about_serial" msgid="3432319328808745459">"අනුක්‍රමාංකය"</string>
-    <string name="about_build" msgid="1139171613038225768">"තැනුම"</string>
+    <string name="about_build" msgid="8467840394761634575">"Android TV OS තැනුම"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="one">සංවර්ධකයෙක් වීමට පියවර <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ක් ඇතින් ඔබ දැන් සිටියි.</item>
       <item quantity="other">සංවර්ධකයෙක් වීමට පියවර <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ක් ඇතින් ඔබ දැන් සිටියි.</item>
@@ -687,6 +691,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"අවසර"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"යෙදුම ලබා ගත නොහැකිය"</string>
     <string name="settings_ok" msgid="5950888975075541964">"හරි"</string>
+    <string name="settings_confirm" msgid="4489126458677153411">"තහවුරු කරන්න"</string>
     <string name="settings_cancel" msgid="576094334743686152">"අවලංගු කරන්න"</string>
     <string name="settings_on" msgid="7734010120323404333">"සක්‍රිය කරන්න"</string>
     <string name="settings_off" msgid="4060451657850476369">"අක්‍රිය කරන්න"</string>
@@ -701,6 +706,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"සංදර්ශකය ක්‍රියාවිරහිත කරන්න"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"තිරය ක්‍රියා විරහිත කිරීමට ඉඩ දෙන්න"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"මාධ්‍ය පසුධාවනය අතරතුර"</string>
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"ශක්ති සුරැකුම් සැකසීම තහවුරු කරන්න"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"කරුණාකර වැඩි වූ ශක්ති භාවිතය සඳහා හැකියාව තිබෙන <xliff:g id="SLEEP_TIME">%1$s</xliff:g> වෙත නව සැකසීම තහවුරු කරන්න."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"දැනට කිසිම ගිණුමක් උපස්ථ කළ දත්ත ගබඩා නොකරයි."</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"ඔබේ Wi-Fi මුරපද, පිටුසන්, වෙනත් සැකසීම්, සහ යෙදුම් දත්ත උපස්ථ කිරීම නවත්වා සහ Google සේවාදායක මත ඇති සියලු පිටපත් මකා දමන්නද?"</string>
@@ -730,7 +737,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"යෙදුම් අවසර"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"යෙදුම් <xliff:g id="COUNT_1">%2$d</xliff:g> කින් <xliff:g id="COUNT_0">%1$d</xliff:g> කට ඉඩ දෙන ලදී"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"බ්ලූටූත් අවසර ඉල්ලීම"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Android ආරක්ෂණ පැච් මට්ටම"</string>
+    <string name="security_patch" msgid="8924741264829495392">"Android TV OS ආරක්ෂක පැච් මට්ටම"</string>
     <string name="choose_application" msgid="2375936782103669988">"යෙදුම තේරීම"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(පරීක්ෂණාත්මක)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"ආරක්ෂක ප්‍රකාරයට නැවත පණ ගන්වන්න"</string>

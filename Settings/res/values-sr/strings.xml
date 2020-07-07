@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"Подешавања"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"Даљински управљач и додатна опрема"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"Лично"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"Није доступно у офлајн режиму"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"Повежите се са мрежом"</string>
     <string name="add_an_account" msgid="2601275122685226096">"Додајте налог"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Налози и пријављивање"</string>
@@ -54,6 +55,8 @@
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Приказ и звук"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Помоћ и повратне информације"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Приватност"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Подешавања уређаја"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Подешавања апликације"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Локација, коришћење и дијагностика, огласи"</string>
     <string name="add_account" msgid="7386223854837017129">"Додај налог"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Уклањање налога"</string>
@@ -79,6 +82,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Дозволите Google-овој услузи лоцирања и другим апликацијама да траже мреже, чак и када је Wi-Fi искључен"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Повежите се са мрежом"</string>
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Дијагностика мреже"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Недавно отваране апликације"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Прикажи све апликације"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Дозволе"</string>
@@ -173,9 +177,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google правне информације"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Подаци о лиценци нису доступни"</string>
     <string name="about_model" msgid="9164284529291439296">"Модел"</string>
-    <string name="about_version" msgid="7800676128792880991">"Верзија"</string>
+    <string name="about_version" msgid="6223547403835399861">"Верзија оперативног система Android TV-а"</string>
     <string name="about_serial" msgid="3432319328808745459">"Серијски број"</string>
-    <string name="about_build" msgid="1139171613038225768">"Верзија"</string>
+    <string name="about_build" msgid="8467840394761634575">"Верзија оперативног система Android TV-а"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="one">Још само <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> корак и постаћете програмер</item>
       <item quantity="few">Још само <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> корака и постаћете програмер</item>
@@ -694,6 +698,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Дозволе"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Апликација није доступна"</string>
     <string name="settings_ok" msgid="5950888975075541964">"Потврди"</string>
+    <string name="settings_confirm" msgid="4489126458677153411">"Потврди"</string>
     <string name="settings_cancel" msgid="576094334743686152">"Откажи"</string>
     <string name="settings_on" msgid="7734010120323404333">"Укључено"</string>
     <string name="settings_off" msgid="4060451657850476369">"Искључено"</string>
@@ -708,6 +713,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Искључи екран после"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Дозволи искључивање екрана"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Током репродукције медија"</string>
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Потврдите подешавање Уштеде енергије"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Потврдите ново подешавање на <xliff:g id="SLEEP_TIME">%1$s</xliff:g>. Оно може да повећа потрошњу енергије."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Тренутно ниједан налог не чува резервне копије података"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Желите ли да зауставите прављење резервних копија Wi-Fi лозинки, обележивача, осталих подешавања и података о апликацијама, као и да избришете све копије на Google серверима?"</string>
@@ -737,7 +744,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Дозволе за апликације"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_0">%1$d</xliff:g> од <xliff:g id="COUNT_1">%2$d</xliff:g> апликација има дозволу"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Захтев за дозволу за Bluetooth"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Ниво безбедносне закрпе за Android"</string>
+    <string name="security_patch" msgid="8924741264829495392">"Ниво безбедносне закрпе за ОС Android TV-а"</string>
     <string name="choose_application" msgid="2375936782103669988">"Изаберите апликацију"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Експериментално)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Рестартуј систем у безбедном режиму"</string>

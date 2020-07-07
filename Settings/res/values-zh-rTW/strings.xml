@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"偏好設定"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"遙控器和配件"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"個人"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"不適用於離線模式"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"連線至網路"</string>
     <string name="add_an_account" msgid="2601275122685226096">"新增帳戶"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"帳戶與登入"</string>
@@ -52,6 +53,8 @@
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"螢幕和音效偏好設定"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"說明和意見回饋"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"隱私權"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"裝置設定"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"應用程式設定"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"位置、使用狀況與診斷、廣告"</string>
     <string name="add_account" msgid="7386223854837017129">"新增帳戶"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"移除帳戶"</string>
@@ -77,6 +80,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"允許 Google 的定位服務和其他應用程式掃描網路 (即使 Wi-Fi 已關閉)"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"連線至網路"</string>
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"網路診斷"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"最近開啟的應用程式"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"查看所有應用程式"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"權限"</string>
@@ -171,9 +175,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google 法律條款"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"無法提供授權資料"</string>
     <string name="about_model" msgid="9164284529291439296">"型號"</string>
-    <string name="about_version" msgid="7800676128792880991">"版本"</string>
+    <string name="about_version" msgid="6223547403835399861">"Android TV 作業系統版本"</string>
     <string name="about_serial" msgid="3432319328808745459">"序號"</string>
-    <string name="about_build" msgid="1139171613038225768">"版次"</string>
+    <string name="about_build" msgid="8467840394761634575">"Android TV 作業系統版本"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="other">只要再 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 個步驟即可啟用開發人員設定</item>
       <item quantity="one">只要再 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 個步驟即可啟用開發人員設定</item>
@@ -687,6 +691,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"權限"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"無法使用應用程式"</string>
     <string name="settings_ok" msgid="5950888975075541964">"確定"</string>
+    <string name="settings_confirm" msgid="4489126458677153411">"確認"</string>
     <string name="settings_cancel" msgid="576094334743686152">"取消"</string>
     <string name="settings_on" msgid="7734010120323404333">"開啟"</string>
     <string name="settings_off" msgid="4060451657850476369">"關閉"</string>
@@ -701,6 +706,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"在以下時間後關閉螢幕"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"允許關閉螢幕"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"播放媒體時"</string>
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"確認節約耗電量設定"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"請確認是否要將螢幕關閉延遲時間設為 <xliff:g id="SLEEP_TIME">%1$s</xliff:g>，這項設定可能會提高用電量。"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"目前沒有任何帳戶在儲存備份資料"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"停止備份您的 Wi-Fi 密碼、書籤、其他設定和應用程式資料，並清除 Google 伺服器上的所有複本嗎？"</string>
@@ -730,7 +737,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"應用程式權限"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"已授權 <xliff:g id="COUNT_0">%1$d</xliff:g> 個應用程式 (共 <xliff:g id="COUNT_1">%2$d</xliff:g> 個)"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"藍牙權限要求"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Android 安全性修補程式等級"</string>
+    <string name="security_patch" msgid="8924741264829495392">"Android TV 作業系統的安全性修補程式等級"</string>
     <string name="choose_application" msgid="2375936782103669988">"選擇應用程式"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(實驗性)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"重新啟動進入安全模式"</string>

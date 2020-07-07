@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"Predvoľby"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"Diaľkové ovládanie a príslušenstvo"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"Osobné"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"Nedostupné v režime offline"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"Pripojenie k sieti"</string>
     <string name="add_an_account" msgid="2601275122685226096">"Pridanie účtu"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Účty a prihlasovanie"</string>
@@ -56,6 +57,8 @@
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Zobrazenie a zvuk"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Pomocník a spätná väzba"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Ochrana súkromia"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Nastavenia zariadenia"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Nastavenia aplikácie"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Poloha, využitie a diagnostika, reklamy"</string>
     <string name="add_account" msgid="7386223854837017129">"Pridať účet"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Odstrániť účet"</string>
@@ -81,6 +84,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Povoliť službe určovania polohy Google a ostatným aplikáciám vyhľadávať siete aj v prípade, že je sieť Wi‑Fi vypnutá"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi‑Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Pripojte sa k sieti"</string>
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnostika siete"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Nedávno spustené aplikácie"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Zobraziť všetky aplikácie"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Povolenia"</string>
@@ -175,9 +179,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Právne informácie spoločnosti Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Údaje licencie nie sú dostupné"</string>
     <string name="about_model" msgid="9164284529291439296">"Model"</string>
-    <string name="about_version" msgid="7800676128792880991">"Verzia"</string>
+    <string name="about_version" msgid="6223547403835399861">"Verzia operačného systému Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Sériové číslo"</string>
-    <string name="about_build" msgid="1139171613038225768">"Zostava"</string>
+    <string name="about_build" msgid="8467840394761634575">"Zostava operačného systému Android TV"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="few">Ešte <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroky a bude z vás vývojár</item>
       <item quantity="many">Ešte <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroku a bude z vás vývojár</item>
@@ -701,6 +705,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Povolenia"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Aplikácia nie je k dispozícii"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
+    <string name="settings_confirm" msgid="4489126458677153411">"Potvrdiť"</string>
     <string name="settings_cancel" msgid="576094334743686152">"Zrušiť"</string>
     <string name="settings_on" msgid="7734010120323404333">"Zapnuté"</string>
     <string name="settings_off" msgid="4060451657850476369">"Vypnuté"</string>
@@ -715,6 +720,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Vypnúť obrazovku od"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Povoliť vypínanie obrazovky"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Počas prehrávania médií"</string>
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Potvrďte nastavenie šetriča energie"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Potvrďte nové nastavenie na <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, ktoré môže zvýšiť spotrebu energie."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"V súčasnosti neuchováva zálohované údaje žiadny účet"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Chcete zastaviť zálohovanie hesiel sietí Wi‑Fi, záložiek, ďalších nastavení a údajov aplikácií a vymazať všetky kópie na serveroch spoločnosti Google?"</string>
@@ -744,7 +751,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Povolenia aplikácií"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"Povolené aplikácie: <xliff:g id="COUNT_0">%1$d</xliff:g> z <xliff:g id="COUNT_1">%2$d</xliff:g>"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Žiadosť o povolenie použiť rozhranie Bluetooth"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Úroveň opráv zabezpečenia systému"</string>
+    <string name="security_patch" msgid="8924741264829495392">"Úroveň opravy zabezpečenia operačného systému Android TV"</string>
     <string name="choose_application" msgid="2375936782103669988">"Výber aplikácie"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Experimentálne)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Reštartovať do núdzového režimu"</string>

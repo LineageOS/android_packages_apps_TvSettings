@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"Preferințe"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"Telecomandă și accesorii"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"Personal"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"Nu este disponibilă în modul offline"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"Conectați-vă la rețea"</string>
     <string name="add_an_account" msgid="2601275122685226096">"Adăugați un cont"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Conturi și conectare"</string>
@@ -81,8 +82,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Permiteți serviciului de localizare Google și altor aplicații să caute rețele, chiar dacă rețeaua Wi-Fi este dezactivată"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Conectați-vă la rețea"</string>
-    <!-- no translation found for connectivity_network_diagnostics (4396132865849151854) -->
-    <skip />
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnosticarea rețelei"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Aplicații deschise recent"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Vedeți toate aplicațiile"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Permisiuni"</string>
@@ -177,11 +177,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Aspecte juridice Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Datele despre licență nu sunt disponibile"</string>
     <string name="about_model" msgid="9164284529291439296">"Model"</string>
-    <!-- no translation found for about_version (6223547403835399861) -->
-    <skip />
+    <string name="about_version" msgid="6223547403835399861">"Versiunea SO Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Număr de serie"</string>
-    <!-- no translation found for about_build (8467840394761634575) -->
-    <skip />
+    <string name="about_build" msgid="8467840394761634575">"Versiunea SO Android TV"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="few">Mai aveți <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> pași pentru a deveni dezvoltator</item>
       <item quantity="other">Mai aveți <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> de pași pentru a deveni dezvoltator</item>
@@ -700,8 +698,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Permisiuni"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Aplicația nu este disponibilă"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
-    <!-- no translation found for settings_confirm (4489126458677153411) -->
-    <skip />
+    <string name="settings_confirm" msgid="4489126458677153411">"Confirmați"</string>
     <string name="settings_cancel" msgid="576094334743686152">"Anulați"</string>
     <string name="settings_on" msgid="7734010120323404333">"Activat"</string>
     <string name="settings_off" msgid="4060451657850476369">"Dezactivat"</string>
@@ -716,10 +713,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Dezactivați ecranul după"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Permiteți dezactivarea ecranului"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"În timpul redării media"</string>
-    <!-- no translation found for device_energy_saver_confirmation_title (3888708298070409591) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_confirmation_text (3157546670441493125) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Confirmați setarea Economizorului de energie"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Confirmați noua setare la <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, care are potențialul de a folosi mai multă energie."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"În prezent, niciun cont nu stochează backupuri pentru date"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Doriți să nu mai faceți backup pentru parole Wi-Fi, marcaje, alte setări, datele aplicațiilor și să ștergeți toate copiile aflate pe serverele Google?"</string>
@@ -749,8 +744,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Permisiuni aplicație"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_0">%1$d</xliff:g> din <xliff:g id="COUNT_1">%2$d</xliff:g> aplicații permise"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Solicitare de permisiune Bluetooth"</string>
-    <!-- no translation found for security_patch (8924741264829495392) -->
-    <skip />
+    <string name="security_patch" msgid="8924741264829495392">"Nivelul corecției de securitate pentru SO Android TV"</string>
     <string name="choose_application" msgid="2375936782103669988">"Alegeți aplicația"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Experimentală)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Reporniți în modul sigur"</string>
