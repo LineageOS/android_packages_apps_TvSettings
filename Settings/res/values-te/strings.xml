@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"ప్రాధాన్యతలు"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"రిమోట్ &amp; ఉపకరణాలు"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"వ్యక్తిగతం"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"ఆఫ్‌లైన్ మోడ్‌లో అందుబాటులో లేదు"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"నెట్‌వర్క్‌కి కనెక్ట్ చేయండి"</string>
     <string name="add_an_account" msgid="2601275122685226096">"ఖాతాను జోడించండి"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"ఖాతాలు &amp; సైన్ ఇన్"</string>
@@ -79,8 +80,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Wi-Fi ఆఫ్‌లో ఉన్నప్పటికీ నెట్‌వర్క్‌ల కోసం స్కాన్ చేయడానికి Google లొకేషన్‌ సేవను, ఇతర యాప్‌లను అనుమతిస్తుంది"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"నెట్‌వర్క్‌కి కనెక్ట్ చేయండి"</string>
-    <!-- no translation found for connectivity_network_diagnostics (4396132865849151854) -->
-    <skip />
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"నెట్‌వర్క్ సమస్య విశ్లేషణ"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"ఇటీవల తెరిచిన యాప్‌లు"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"అన్ని యాప్‌లను చూడండి"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"అనుమతులు"</string>
@@ -175,11 +175,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google చట్టపరం"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"లైసెన్స్ డేటా అందుబాటులో లేదు"</string>
     <string name="about_model" msgid="9164284529291439296">"నమూనా"</string>
-    <!-- no translation found for about_version (6223547403835399861) -->
-    <skip />
+    <string name="about_version" msgid="6223547403835399861">"Android TV OS వెర్షన్"</string>
     <string name="about_serial" msgid="3432319328808745459">"క్రమ సంఖ్య"</string>
-    <!-- no translation found for about_build (8467840394761634575) -->
-    <skip />
+    <string name="about_build" msgid="8467840394761634575">"Android TV OS బిల్డ్"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="other">మీరు ఇప్పుడు డెవలపర్‌గా కావడానికి <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> దశలు మాత్రమే మిగిలి ఉన్నాయి</item>
       <item quantity="one">మీరు ఇప్పుడు డెవలపర్‌గా కావడానికి <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> దశ మాత్రమే మిగిలి ఉంది</item>
@@ -693,8 +691,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"అనుమతులు"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"అనువర్తనం అందుబాటులో లేదు"</string>
     <string name="settings_ok" msgid="5950888975075541964">"సరే"</string>
-    <!-- no translation found for settings_confirm (4489126458677153411) -->
-    <skip />
+    <string name="settings_confirm" msgid="4489126458677153411">"నిర్ధారించండి"</string>
     <string name="settings_cancel" msgid="576094334743686152">"రద్దు చేయి"</string>
     <string name="settings_on" msgid="7734010120323404333">"ఆన్"</string>
     <string name="settings_off" msgid="4060451657850476369">"ఆఫ్"</string>
@@ -709,10 +706,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"తర్వాత ప్రదర్శనను ఆఫ్ చేయండి"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"స్క్రీన్‌ను ఆఫ్ చేయడానికి అనుమతించండి"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"మీడియా ప్లే‌బ్యాక్ సమయంలో"</string>
-    <!-- no translation found for device_energy_saver_confirmation_title (3888708298070409591) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_confirmation_text (3157546670441493125) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"ఎనర్జీ సేవర్ సెట్టింగ్‌ను నిర్ధారించండి"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"ఎక్కువ ఎనర్జీని వినియోగించే అవకాశం ఉన్న కొత్త సెట్టింగ్‌ను దయచేసి <xliff:g id="SLEEP_TIME">%1$s</xliff:g>కు నిర్ధారించండి."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"ప్రస్తుతం ఏ ఖాతా కూడా బ్యాకప్ చేసిన డేటాను నిల్వ చేయడం లేదు"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"మీ Wi-Fi పాస్‌వర్డ్‌లు, బుక్‌మార్క్‌లు, ఇతర సెట్టింగ్‌లు మరియు అనువర్తన డేటాను బ్యాకప్ చేయడాన్ని ఆపివేసి, Google సర్వర్‌ల్లోని అన్ని కాపీలను తొలగించాలా?"</string>
@@ -742,8 +737,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"అనువర్తన అనుమతులు"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_1">%2$d</xliff:g>లో <xliff:g id="COUNT_0">%1$d</xliff:g> అనువర్తనాలు అనుమతించబడ్డాయి"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"బ్లూటూత్ అనుమతి అభ్యర్థన"</string>
-    <!-- no translation found for security_patch (8924741264829495392) -->
-    <skip />
+    <string name="security_patch" msgid="8924741264829495392">"Android TV OS ప్యాచ్ స్థాయి భద్రత"</string>
     <string name="choose_application" msgid="2375936782103669988">"అనువర్తనాన్ని ఎంచుకోండి"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(ప్రయోగాత్మకం)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"సురక్షిత మోడ్‌కు రీబూట్ చేయి"</string>

@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"পছন্দগুলি"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"রিমোট ও আনুষঙ্গিক উপকরণগুলি"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"ব্যক্তিগত"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"অফলাইন মোডে উপলভ্য নয়"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"নেটওয়ার্কে কানেক্ট করুন"</string>
     <string name="add_an_account" msgid="2601275122685226096">"একটি অ্যাকাউন্ট জুড়ুন"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"অ্যাকাউন্ট ও সাইন-ইন"</string>
@@ -79,8 +80,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Google লোকেশন পরিষেবা এবং অন্যান্য অ্যাপকে নেটওয়ার্কের জন্য স্ক্যান করতে দিন, এমনকি ওয়াই-ফাই বন্ধ থাকা সত্ত্বেও"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"ওয়াই-ফাই"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"নেটওয়ার্কে কানেক্ট করুন"</string>
-    <!-- no translation found for connectivity_network_diagnostics (4396132865849151854) -->
-    <skip />
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"নেটওয়ার্ক ডায়াগনস্টিকস"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"সম্প্রতি ব্যবহার করা অ্যাপ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"সমস্ত অ্যাপ দেখুন"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"অনুমতি"</string>
@@ -175,11 +175,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google আইনি"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"লাইসেন্স ডেটা অনুপলব্ধ"</string>
     <string name="about_model" msgid="9164284529291439296">"মডেল"</string>
-    <!-- no translation found for about_version (6223547403835399861) -->
-    <skip />
+    <string name="about_version" msgid="6223547403835399861">"Android TV OS ভার্সন"</string>
     <string name="about_serial" msgid="3432319328808745459">"ক্রমিক সংখ্যা"</string>
-    <!-- no translation found for about_build (8467840394761634575) -->
-    <skip />
+    <string name="about_build" msgid="8467840394761634575">"Android TV OS বিল্ড ভার্সন"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="one">এখন আর <xliff:g id="STEP_COUNT_1">%1$d</xliff:g>টি পদক্ষেপ পরেই আপনি একজন ডেভেলপার হিসাবে চিহ্নিত হবেন</item>
       <item quantity="other">এখন আর <xliff:g id="STEP_COUNT_1">%1$d</xliff:g>টি পদক্ষেপ পরেই আপনি একজন ডেভেলপার হিসাবে চিহ্নিত হবেন</item>
@@ -693,8 +691,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"অনুমতিগুলি"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"অ্যাপ্লিকেশান অনুপলব্ধ"</string>
     <string name="settings_ok" msgid="5950888975075541964">"ঠিক আছে"</string>
-    <!-- no translation found for settings_confirm (4489126458677153411) -->
-    <skip />
+    <string name="settings_confirm" msgid="4489126458677153411">"কনফার্ম করুন"</string>
     <string name="settings_cancel" msgid="576094334743686152">"বাতিল করুন"</string>
     <string name="settings_on" msgid="7734010120323404333">"চালু"</string>
     <string name="settings_off" msgid="4060451657850476369">"বন্ধ"</string>
@@ -709,10 +706,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"এর পর ডিসপ্লে ফিচার বন্ধ করুন:"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"স্ক্রিন বন্ধ করার অনুমতি দিন"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"মিডিয়া প্লেব্যাকের সময়"</string>
-    <!-- no translation found for device_energy_saver_confirmation_title (3888708298070409591) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_confirmation_text (3157546670441493125) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"পাওয়ার সেভার সেটিং কনফার্ম করুন"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"<xliff:g id="SLEEP_TIME">%1$s</xliff:g> সময়ের জন্য নতুন সেটিং কনফার্ম করুন, এর ফলে বিদ্যুৎ খরচ বেশি হতে পারে।"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"বর্তমানে কোনো অ্যাকাউন্টই ব্যাক আপ করা ডেটা সংরক্ষণ করছে না"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"আপনার ওয়াই-ফাই পাসওয়ার্ড, বুকমার্ক, অন্যান্য সেটিংস, এবং অ্যাপ্লিকেশান ডেটা ব্যাক আপ করা বন্ধ করে Google সার্ভারে থাকা সব অনুলিপি মুছে ফেলবেন?"</string>
@@ -742,8 +737,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"অ্যাপ্লিকেশানের অনুমতি"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_1">%2$d</xliff:g>টির মধ্যে <xliff:g id="COUNT_0">%1$d</xliff:g>টি অ্যাপ্লিকেশান মঞ্জুরিপ্রাপ্ত"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"ব্লুটুথ অনুমতির অনুরোধ"</string>
-    <!-- no translation found for security_patch (8924741264829495392) -->
-    <skip />
+    <string name="security_patch" msgid="8924741264829495392">"Android TV OS সিকিউরিটি প্যাচ লেভেল"</string>
     <string name="choose_application" msgid="2375936782103669988">"অ্যাপ্লিকেশান চয়্ন করুন"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(পরীক্ষামূলক)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"নিরাপদ মোডে আবার চালু করুন"</string>

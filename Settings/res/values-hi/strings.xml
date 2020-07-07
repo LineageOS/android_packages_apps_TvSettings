@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"प्राथमिकताएं"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"रिमोट और एक्सेसरी"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"व्यक्तिगत"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"यह ऑफ़लाइन मोड में उपलब्ध नहीं है"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"नेटवर्क से कनेक्ट करें"</string>
     <string name="add_an_account" msgid="2601275122685226096">"कोई खाता जोड़ें"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"खाते और साइन-इन"</string>
@@ -79,8 +80,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Google की जगह की जानकारी सेवा और दूसरे ऐप्लिकेशन को नेटवर्क खोजने दें, भले ही वाई-फ़ाई बंद हो"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"वाई-फ़ाई"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"नेटवर्क से कनेक्ट करें"</string>
-    <!-- no translation found for connectivity_network_diagnostics (4396132865849151854) -->
-    <skip />
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"नेटवर्क की गड़बड़ी की जानकारी"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"हाल ही में खोले गए ऐप्लिकेशन"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"सभी ऐप्लिकेशन देखें"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"अनुमतियां"</string>
@@ -175,11 +175,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google से जुड़ी कानूनी जानकारी"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"लाइसेंस डेटा अनुपलब्ध है"</string>
     <string name="about_model" msgid="9164284529291439296">"मॉडल"</string>
-    <!-- no translation found for about_version (6223547403835399861) -->
-    <skip />
+    <string name="about_version" msgid="6223547403835399861">"Android TV का ओएस वर्शन"</string>
     <string name="about_serial" msgid="3432319328808745459">"सीरियल नंबर"</string>
-    <!-- no translation found for about_build (8467840394761634575) -->
-    <skip />
+    <string name="about_build" msgid="8467840394761634575">"Android TV के ओएस बिल्ड का वर्शन"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="one">अब आप डेवलपर बनने से <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> चरण दूर हैं</item>
       <item quantity="other">अब आप डेवलपर बनने से <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> चरण दूर हैं</item>
@@ -599,7 +597,7 @@
     <string name="whichApplication" msgid="4510042089342879264">"इसका उपयोग करके कार्रवाई पूरी करें"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"इस कार्यवाही के लिए हमेशा इसी विकल्प का उपयोग करें?"</string>
     <string name="alwaysUseOption" msgid="8799609235198714441">"हमेशा उपयोग करें"</string>
-    <string name="justOnceOption" msgid="6714005843102804865">"केवल एक बार"</string>
+    <string name="justOnceOption" msgid="6714005843102804865">"सिर्फ़ एक बार"</string>
     <string name="noApplications" msgid="7511175717026318399">"कोई भी ऐप्स यह कार्यवाही नहीं कर सकता."</string>
     <string name="noAppsGoBack" msgid="2538480554615467065">"वापस जाएं"</string>
     <string name="inputs_inputs" msgid="8639408473661259307">"इनपुट"</string>
@@ -693,8 +691,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"अनुमतियां"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"ऐप्लिकेशन अनुपलब्ध है"</string>
     <string name="settings_ok" msgid="5950888975075541964">"ठीक"</string>
-    <!-- no translation found for settings_confirm (4489126458677153411) -->
-    <skip />
+    <string name="settings_confirm" msgid="4489126458677153411">"पुष्टि करें"</string>
     <string name="settings_cancel" msgid="576094334743686152">"अभी नहीं"</string>
     <string name="settings_on" msgid="7734010120323404333">"चालू"</string>
     <string name="settings_off" msgid="4060451657850476369">"बंद"</string>
@@ -709,10 +706,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"डिसप्ले इतने समय बाद बंद करें"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"स्क्रीन बंद करने की अनुमति दें"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"मीडिया चलाते समय"</string>
-    <!-- no translation found for device_energy_saver_confirmation_title (3888708298070409591) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_confirmation_text (3157546670441493125) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"देखें कि बैटरी बचाने की सेटिंग चालू है या नहीं"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"पक्का करें कि नई सेटिंग, <xliff:g id="SLEEP_TIME">%1$s</xliff:g> पर सेट हो. इससे बैटरी बचाई जा सकती है."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"वर्तमान में कोई भी खाता, बैकअप डेटा संग्रहित नहीं कर रहा है"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"अपने वाई-फ़ाई पासवर्ड, बुकमार्क, अन्य सेटिंग और ऐप्स डेटा का बैक अप लेना रोकें और Google सर्वर से सभी कॉपी मिटाएं?"</string>
@@ -742,8 +737,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"ऐप अनुमतियां"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_1">%2$d</xliff:g> में से <xliff:g id="COUNT_0">%1$d</xliff:g> ऐप्‍स को अनुमति है"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"ब्लूटूथ अनुमति अनुरोध"</string>
-    <!-- no translation found for security_patch (8924741264829495392) -->
-    <skip />
+    <string name="security_patch" msgid="8924741264829495392">"Android TV के ओएस का सुरक्षा पैच लेवल"</string>
     <string name="choose_application" msgid="2375936782103669988">"ऐप्लिकेशन चुनें"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(प्रयोगात्‍मक)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"सुरक्षित मोड में फिर से बूट करें"</string>

@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"Tercihler"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"Uzaktan kumanda ve aksesuarlar"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"Kişisel"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"Çevrimdışı modda kullanılamaz"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"Ağa bağlanma"</string>
     <string name="add_an_account" msgid="2601275122685226096">"Hesap ekleme"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Hesaplar ve oturum açma"</string>
@@ -52,6 +53,8 @@
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Ekran ve Ses"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Yardım ve geri bildirim"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Gizlilik"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Cihaz Ayarları"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Uygulama Ayarları"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Konum, Kullanım ve Teşhis, Reklamlar"</string>
     <string name="add_account" msgid="7386223854837017129">"Hesap ekle"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Hesabı kaldır"</string>
@@ -77,6 +80,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Kablosuz özelliği kapalıyken dahi Google\'ın konum hizmetinin ve diğer uygulamaların ağları taramasına izin ver"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Kablosuz"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Ağa bağlan"</string>
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Ağ teşhisi"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Son açılan uygulamalar"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Tüm uygulamaları göster"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"İzinler"</string>
@@ -171,9 +175,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google yasal"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Lisans verileri kullanılamıyor"</string>
     <string name="about_model" msgid="9164284529291439296">"Model"</string>
-    <string name="about_version" msgid="7800676128792880991">"Sürüm"</string>
+    <string name="about_version" msgid="6223547403835399861">"Android TV OS sürümü"</string>
     <string name="about_serial" msgid="3432319328808745459">"Seri numarası"</string>
-    <string name="about_build" msgid="1139171613038225768">"Yapı"</string>
+    <string name="about_build" msgid="8467840394761634575">"Android TV OS derlemesi"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="other">Geliştirici olmanıza yalnızca <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> adım kaldı</item>
       <item quantity="one">Geliştirici olmanıza yalnızca <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> adım kaldı</item>
@@ -687,6 +691,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"İzinler"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Uygulama kullanılamıyor"</string>
     <string name="settings_ok" msgid="5950888975075541964">"Tamam"</string>
+    <string name="settings_confirm" msgid="4489126458677153411">"Onayla"</string>
     <string name="settings_cancel" msgid="576094334743686152">"İptal"</string>
     <string name="settings_on" msgid="7734010120323404333">"Açık"</string>
     <string name="settings_off" msgid="4060451657850476369">"Kapalı"</string>
@@ -701,6 +706,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Şundan sonra ekranı kapat:"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Ekranı kapatmaya izin ver"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Medya oynatma sırasında"</string>
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Enerji Tasarrufu ayarını onaylayın"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Lütfen enerji kullanımını artırabilecek <xliff:g id="SLEEP_TIME">%1$s</xliff:g> için yeni ayarı onaylayın."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Şu anda, yedeklenen verilerin depolandığı hiçbir hesap yok"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Kablosuz şifrelerinizin, yer işaretlerinizin, diğer ayarlarınızın ve uygulama verilerinizin yedeklenmesi durdurulup bunların Google sunucularındaki tüm kopyaları silinsin mi?"</string>
@@ -730,7 +737,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Uygulama izinleri"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_1">%2$d</xliff:g> uygulamadan <xliff:g id="COUNT_0">%1$d</xliff:g> tanesine izin veriliyor"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth izin isteği"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Android güvenlik yaması düzeyi"</string>
+    <string name="security_patch" msgid="8924741264829495392">"Android TV OS güvenlik yaması düzeyi"</string>
     <string name="choose_application" msgid="2375936782103669988">"Uygulama seçin"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Deneysel)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Güvenli modda yeniden aç"</string>

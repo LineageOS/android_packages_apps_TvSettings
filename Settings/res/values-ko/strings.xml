@@ -30,6 +30,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"환경설정"</string>
     <string name="header_category_accessories" msgid="8310540329290988415">"리모컨 및 액세서리"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"개인"</string>
+    <string name="offline_mode_disabled_entry_subtitle" msgid="5588529737212778207">"오프라인 모드에서는 사용할 수 없음"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"네트워크에 연결"</string>
     <string name="add_an_account" msgid="2601275122685226096">"계정 추가"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"계정 및 로그인"</string>
@@ -79,8 +80,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Wi-Fi가 꺼져 있을 때에도 Google의 위치 서비스 및 기타 앱이 네트워크를 검색하도록 합니다."</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"네트워크에 연결"</string>
-    <!-- no translation found for connectivity_network_diagnostics (4396132865849151854) -->
-    <skip />
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"네트워크 진단"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"최근에 사용한 앱"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"모든 앱 보기"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"권한"</string>
@@ -175,11 +175,9 @@
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google 법적 고지"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"라이선스 데이터를 사용할 수 없습니다."</string>
     <string name="about_model" msgid="9164284529291439296">"모델"</string>
-    <!-- no translation found for about_version (6223547403835399861) -->
-    <skip />
+    <string name="about_version" msgid="6223547403835399861">"Android TV OS 버전"</string>
     <string name="about_serial" msgid="3432319328808745459">"일련번호"</string>
-    <!-- no translation found for about_build (8467840394761634575) -->
-    <skip />
+    <string name="about_build" msgid="8467840394761634575">"Android TV OS 빌드"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="other">개발자가 되기까지 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g>단계 남았습니다.</item>
       <item quantity="one">개발자가 되기까지 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g>단계 남았습니다.</item>
@@ -693,8 +691,7 @@
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"권한"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"사용할 수 없는 애플리케이션"</string>
     <string name="settings_ok" msgid="5950888975075541964">"확인"</string>
-    <!-- no translation found for settings_confirm (4489126458677153411) -->
-    <skip />
+    <string name="settings_confirm" msgid="4489126458677153411">"확인"</string>
     <string name="settings_cancel" msgid="576094334743686152">"취소"</string>
     <string name="settings_on" msgid="7734010120323404333">"사용"</string>
     <string name="settings_off" msgid="4060451657850476369">"사용 안함"</string>
@@ -709,10 +706,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"다음 시간 후 디스플레이 끄기"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"화면 끄기 허용"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"미디어 재생 중"</string>
-    <!-- no translation found for device_energy_saver_confirmation_title (3888708298070409591) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_confirmation_text (3157546670441493125) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"에너지 절약 모드 설정 확인"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"새 설정에서 에너지 사용을 늘릴 수 있는 시간(<xliff:g id="SLEEP_TIME">%1$s</xliff:g>)을 확인하세요."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"현재 백업한 데이터를 저장 중인 계정이 없습니다."</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wi-Fi 비밀번호, 북마크, 기타 설정 및 앱 데이터 백업을 중지하고 Google 서버에 있는 모든 사본을 지우시겠습니까?"</string>
@@ -742,8 +737,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"앱 권한"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"앱 <xliff:g id="COUNT_1">%2$d</xliff:g>개 중 <xliff:g id="COUNT_0">%1$d</xliff:g>개가 허용됨"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"블루투스 권한 요청"</string>
-    <!-- no translation found for security_patch (8924741264829495392) -->
-    <skip />
+    <string name="security_patch" msgid="8924741264829495392">"Android TV OS 보안 패치 수준"</string>
     <string name="choose_application" msgid="2375936782103669988">"애플리케이션 선택"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(베타)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"안전 모드로 재부팅"</string>
