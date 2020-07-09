@@ -30,7 +30,6 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.annotation.Keep;
-import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
@@ -43,6 +42,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.device.apps.AppManagementFragment;
 import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.twopanelsettings.SummaryListPreference;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -68,7 +68,7 @@ public class LocationFragment extends SettingsPreferenceFragment implements
     private static final String CURRENT_MODE_KEY = "CURRENT_MODE";
     private static final String NEW_MODE_KEY = "NEW_MODE";
 
-    private ListPreference mLocationMode;
+    private SummaryListPreference mLocationMode;
     private SwitchPreference mAlwaysScan;
 
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -92,7 +92,7 @@ public class LocationFragment extends SettingsPreferenceFragment implements
                 themedContext);
         screen.setTitle(R.string.system_location);
 
-        mLocationMode = new ListPreference(themedContext);
+        mLocationMode = new SummaryListPreference(themedContext);
         screen.addPreference(mLocationMode);
         mLocationMode.setKey(KEY_LOCATION_MODE);
         mLocationMode.setPersistent(false);
@@ -106,6 +106,10 @@ public class LocationFragment extends SettingsPreferenceFragment implements
         mLocationMode.setEntryValues(new CharSequence[] {
                 LOCATION_MODE_WIFI,
                 LOCATION_MODE_OFF
+        });
+        mLocationMode.setSummaries(new CharSequence[] {
+                getString(R.string.system_location_summary),
+                null
         });
         mLocationMode.setOnPreferenceChangeListener(this);
 
