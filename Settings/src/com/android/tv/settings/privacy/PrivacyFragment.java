@@ -19,19 +19,42 @@ package com.android.tv.settings.privacy;
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
+import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 /**
  * The Privacy policies screen in Settings.
  */
 @Keep
 public class PrivacyFragment extends SettingsPreferenceFragment {
+
+    private static final String KEY_ACCOUNT_SETTINGS_CATEGORY = "accountSettings";
+    private static final String KEY_ASSISTANT = "assistant";
+    private static final String KEY_PURCHASES = "purchases";
+
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
         setPreferencesFromResource(R.xml.privacy, null);
+        Preference assistantSlicePreference = findPreference(KEY_ASSISTANT);
+        Preference purchasesSlicePreference = findPreference(KEY_PURCHASES);
+        if (assistantSlicePreference instanceof SlicePreference
+                && SliceUtils.isSliceProviderValid(
+                        getContext(), ((SlicePreference) assistantSlicePreference).getUri())) {
+            assistantSlicePreference.setVisible(true);
+        }
+        if (purchasesSlicePreference instanceof SlicePreference
+                && SliceUtils.isSliceProviderValid(
+                        getContext(), ((SlicePreference) purchasesSlicePreference).getUri())) {
+            purchasesSlicePreference.setVisible(true);
+        }
+        if (assistantSlicePreference.isVisible() && purchasesSlicePreference.isVisible()) {
+            findPreference(KEY_ACCOUNT_SETTINGS_CATEGORY).setVisible(true);
+        }
     }
 
     @Override
