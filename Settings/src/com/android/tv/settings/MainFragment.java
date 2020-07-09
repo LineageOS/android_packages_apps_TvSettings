@@ -32,9 +32,11 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.ProviderInfo;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.service.settings.suggestions.Suggestion;
 import android.telephony.SignalStrength;
@@ -483,7 +485,6 @@ public class MainFragment extends PreferenceControllerFragment implements
         }
 
         final PackageManager pm = context.getPackageManager();
-
         for (ResolveInfo info : pm.queryIntentActivities(intent, 0)) {
             if (info.activityInfo != null
                     && (info.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM)
@@ -492,6 +493,10 @@ public class MainFragment extends PreferenceControllerFragment implements
             }
         }
         return null;
+    }
+
+    private static ProviderInfo getProviderInfo(Context context, String authority) {
+        return context.getPackageManager().resolveContentProvider(authority, 0);
     }
 
     @Override
@@ -570,6 +575,11 @@ public class MainFragment extends PreferenceControllerFragment implements
             connectedDevicesSlicePreference.setVisible(true);
             connectedDevicesPreference.setVisible(false);
             accessoryPreference.setVisible(false);
+            ProviderInfo pkgInfo = getProviderInfo(getContext(),
+                    Uri.parse(connectedDevicesSlicePreference.getUri()).getAuthority());
+            if (pkgInfo != null) {
+                updateConnectedDevicePref(pkgInfo.packageName, connectedDevicesSlicePreference);
+            }
             return;
         }
 
@@ -581,26 +591,10 @@ public class MainFragment extends PreferenceControllerFragment implements
             Intent intent = new Intent(ACTION_CONNECTED_DEVICES);
             ResolveInfo info = systemIntentIsHandled(getContext(), intent);
             connectedDevicesPreference.setVisible(info != null);
-            connectedDevicesPreference.setOnPreferenceClickListener(
-                    preference -> {
-                        logEntrySelected(TvSettingsEnums.CONNECTED_CLASSIC);
-                        return false;
-                    });
             accessoryPreference.setVisible(info == null);
             if (info != null) {
-                String pkgName = info.activityInfo.packageName;
-                Drawable icon = getDrawableResource(pkgName, "connected_devices_pref_icon");
-                if (icon != null) {
-                    connectedDevicesPreference.setIcon(icon);
-                }
-                String title = getStringResource(pkgName, "connected_devices_pref_title");
-                if (!TextUtils.isEmpty(title)) {
-                    connectedDevicesPreference.setTitle(title);
-                }
-                String summary = getStringResource(pkgName, "connected_devices_pref_summary");
-                if (!TextUtils.isEmpty(summary)) {
-                    connectedDevicesPreference.setSummary(summary);
-                }
+                updateConnectedDevicePref(
+                        info.activityInfo.packageName, connectedDevicesPreference);
                 return;
             }
         }
@@ -748,6 +742,29 @@ public class MainFragment extends PreferenceControllerFragment implements
         return getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)
                 ? true
                 : false;
+    }
+
+    private void updateConnectedDevicePref(String pkgName, Preference pref) {
+        Drawable icon = getDrawableResource(pkgName, "connected_devices_pref_icon");
+        if (icon != null) {
+            pref.setIcon(icon);
+        }
+        String title =
+                (pref instanceof SlicePreference)
+                        ? getStringResource(pkgName, "connected_devices_slice_pref_title")
+                        : getStringResource(pkgName, "connected_devices_pref_title");
+        if (!TextUtils.isEmpty(title)) {
+            pref.setTitle(title);
+        }
+        String summary = getStringResource(pkgName, "connected_devices_pref_summary");
+        if (!TextUtils.isEmpty(summary)) {
+            pref.setSummary(summary);
+        }
+        pref.setOnPreferenceClickListener(
+                preference -> {
+                    logEntrySelected(TvSettingsEnums.CONNECTED_CLASSIC);
+                    return false;
+                });
     }
 
     @Override
