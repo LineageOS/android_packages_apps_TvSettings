@@ -17,6 +17,7 @@
 package com.android.tv.settings.accessories;
 
 import android.annotation.Nullable;
+import android.content.Context;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
@@ -46,16 +47,14 @@ public class AddAccessoryContentFragment extends ProgressDialogFragment {
         setTitle(R.string.accessories_add_title);
         setIcon(R.drawable.ic_bluetooth_searching_128dp);
         setSummary(R.string.accessories_add_bluetooth_inst);
-        if (getExtraDescription() != null) {
-            setExtraText(getExtraDescription());
-        }
+        updateExtraDescription();
     }
 
-    private SpannableStringBuilder getExtraDescription() {
+    private void updateExtraDescription() {
         String extraDescription = getString(
                 R.string.accessories_add_bluetooth_inst_extra, BUTTON1_TOKEN, BUTTON2_TOKEN);
         if (TextUtils.isEmpty(extraDescription) || getActivity() == null) {
-            return null;
+            return;
         }
 
         SpannableStringBuilder builder = new SpannableStringBuilder(extraDescription);
@@ -83,6 +82,25 @@ public class AddAccessoryContentFragment extends ProgressDialogFragment {
                     SpannableString.SPAN_INCLUSIVE_INCLUSIVE);
         }
 
-        return builder;
+        setExtraText(builder);
+        if (getExtraInstructionContentDescription(getActivity()) != null) {
+            setExtraContentDescription(getExtraInstructionContentDescription(getActivity()));
+        }
+    }
+
+    static String getExtraInstructionContentDescription(Context context) {
+        if (context == null) {
+            return null;
+        }
+        String mainDescription =
+                context.getResources().getString(R.string.accessories_add_bluetooth_inst_extra);
+        String button1 = context.getResources().getString(R.string.accessories_pairing_button1);
+        String button2 = context.getResources().getString(R.string.accessories_pairing_button2);
+        if (TextUtils.isEmpty(mainDescription) || TextUtils.isEmpty(button1)
+                || TextUtils.isEmpty(button2)) {
+            return null;
+        }
+        return context.getResources()
+                .getString(R.string.accessories_add_bluetooth_inst_extra, button1, button2);
     }
 }

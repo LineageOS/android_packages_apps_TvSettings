@@ -186,6 +186,13 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Normally, we set contentDescription for View elements in resource files for Talkback to
+        // announce when the element is being focused. However, this Activity is special as users
+        // may not have a connected remote control so we need to make an accessibility announcement
+        // when the Activity is launched. As the description is flexible, we construct it in runtime
+        // instead of setting the label for this Activity in the AndroidManifest.xml.
+        setTitle(getInitialAccessibilityAnnouncement());
+
         setContentView(R.layout.lb_dialog_fragment);
 
         mMsgHandler.setActivity(this);
@@ -679,6 +686,22 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
             return;
         }
         client.oneTouchPlay(callback);
+    }
+
+    /**
+     * @return String containing text to be announced when the Activity is visible to the users
+     * when Talkback is on.
+     */
+    private String getInitialAccessibilityAnnouncement() {
+        StringBuilder sb =
+                new StringBuilder(getString(R.string.accessories_add_accessibility_title));
+        sb.append(getString(R.string.accessories_add_title));
+        sb.append(getString(R.string.accessories_add_bluetooth_inst));
+        String extra = AddAccessoryContentFragment.getExtraInstructionContentDescription(this);
+        if (extra != null) {
+            sb.append(extra);
+        }
+        return sb.toString();
     }
 
     List<BluetoothDevice> getBluetoothDevices() {
