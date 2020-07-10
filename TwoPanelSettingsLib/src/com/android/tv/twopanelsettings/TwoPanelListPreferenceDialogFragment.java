@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.leanback.preference.LeanbackListPreferenceDialogFragment;
 import androidx.preference.DialogPreference;
@@ -36,11 +37,14 @@ public class TwoPanelListPreferenceDialogFragment extends LeanbackListPreference
     private static final String SAVE_STATE_ENTRIES = "LeanbackListPreferenceDialogFragment.entries";
     private static final String SAVE_STATE_ENTRY_VALUES =
             "LeanbackListPreferenceDialogFragment.entryValues";
+    private static final String SAVE_STATE_SUMMARIES =
+            "LeanbackListPreferenceDialogFragment.summaries";
     private static final String SAVE_STATE_INITIAL_SELECTION =
             "LeanbackListPreferenceDialogFragment.initialSelection";
     private boolean mMultiCopy;
     private CharSequence[] mEntriesCopy;
     private CharSequence[] mEntryValuesCopy;
+    private CharSequence[] mSummariesCopy;
     private String mInitialSelectionCopy;
 
     /** Provide a ListPreferenceDialogFragment which satisfy the use of two panel lib **/
@@ -64,6 +68,9 @@ public class TwoPanelListPreferenceDialogFragment extends LeanbackListPreference
                 mMultiCopy = false;
                 mEntriesCopy = ((ListPreference) preference).getEntries();
                 mEntryValuesCopy = ((ListPreference) preference).getEntryValues();
+                if (preference instanceof SummaryListPreference) {
+                    mSummariesCopy = ((SummaryListPreference) preference).getSummaries();
+                }
                 mInitialSelectionCopy = ((ListPreference) preference).getValue();
             } else if (preference instanceof MultiSelectListPreference) {
                 mMultiCopy = true;
@@ -75,6 +82,7 @@ public class TwoPanelListPreferenceDialogFragment extends LeanbackListPreference
             mMultiCopy = savedInstanceState.getBoolean(SAVE_STATE_IS_MULTI);
             mEntriesCopy = savedInstanceState.getCharSequenceArray(SAVE_STATE_ENTRIES);
             mEntryValuesCopy = savedInstanceState.getCharSequenceArray(SAVE_STATE_ENTRY_VALUES);
+            mSummariesCopy = savedInstanceState.getCharSequenceArray(SAVE_STATE_SUMMARIES);
             if (!mMultiCopy) {
                 mInitialSelectionCopy = savedInstanceState.getString(SAVE_STATE_INITIAL_SELECTION);
             }
@@ -84,7 +92,8 @@ public class TwoPanelListPreferenceDialogFragment extends LeanbackListPreference
     @Override
     public RecyclerView.Adapter onCreateAdapter() {
         if (!mMultiCopy) {
-            return new TwoPanelAdapterSingle(mEntriesCopy, mEntryValuesCopy, mInitialSelectionCopy);
+            return new TwoPanelAdapterSingle(mEntriesCopy, mEntryValuesCopy, mSummariesCopy,
+                    mInitialSelectionCopy);
         }
         return super.onCreateAdapter();
     }
@@ -93,12 +102,14 @@ public class TwoPanelListPreferenceDialogFragment extends LeanbackListPreference
             implements ViewHolder.OnItemClickListener  {
         private final CharSequence[] mEntries;
         private final CharSequence[] mEntryValues;
+        private final CharSequence[] mSummaries;
         private CharSequence mSelectedValue;
 
         TwoPanelAdapterSingle(CharSequence[] entries, CharSequence[] entryValues,
-                CharSequence selectedValue) {
+                CharSequence[] summaries, CharSequence selectedValue) {
             mEntries = entries;
             mEntryValues = entryValues;
+            mSummaries = summaries;
             mSelectedValue = selectedValue;
         }
 
@@ -114,6 +125,12 @@ public class TwoPanelListPreferenceDialogFragment extends LeanbackListPreference
         public void onBindViewHolder(ViewHolder holder, int position) {
             holder.getWidgetView().setChecked(mEntryValues[position].equals(mSelectedValue));
             holder.getTitleView().setText(mEntries[position]);
+            TextView summaryView = (TextView) holder.getContainer()
+                    .findViewById(android.R.id.summary);
+            if (summaryView != null) {
+                summaryView.setText(mSummaries[position]);
+                summaryView.setVisibility(View.VISIBLE);
+            }
         }
 
         @Override

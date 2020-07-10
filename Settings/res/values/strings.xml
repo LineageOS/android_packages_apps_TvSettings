@@ -104,6 +104,12 @@
     <string name="privacy_category_title">Privacy</string>
     <!-- Title for device-related privacy settings category [CHAR LIMIT=50] -->
     <string name="privacy_device_settings_category">Device Settings</string>
+    <!-- Title for account-related privacy settings category [CHAR LIMIT=50] -->
+    <string name="privacy_account_settings_category">Account Settings</string>
+    <!-- Title for Google Assistant privacy settings [CHAR LIMIT=50] -->
+    <string name="privacy_assistant_settings_title">Google Assistant</string>
+    <!-- Title for purchases-related privacy settings [CHAR LIMIT=50] -->
+    <string name="privacy_purchases_settings_title">Purchases</string>
     <!-- Title for application-related privacy settings category [CHAR LIMIT=50] -->
     <string name="privacy_app_settings_category">App Settings</string>
     <!-- Summary for main screen preference for privacy settings [CHAR LIMIT=75] -->
@@ -904,6 +910,8 @@
 
     <!-- Title for Location in System Settings [CHAR LIMIT=50] -->
     <string name="system_location">Location</string>
+    <!-- Summary for Location in System Settings. This shall be an empty string. [DO NOT TRANSLATE] -->
+    <string name="system_location_summary"></string>
     <!-- Description for Location in System Settings [CHAR LIMIT=NONE] -->
     <string name="system_desc_location">Let apps that have asked your permission use your location information</string>
     <!-- Title for confirming location consent [CHAR LIMIT=50] -->
@@ -919,7 +927,7 @@
     <!-- [CHAR LIMIT=30] Location settings screen, recent location requests low battery use-->
     <string name="location_low_battery_use">Low battery use</string>
     <!-- [CHAR LIMIT=130] Location mode screen, description for wifi mode -->
-    <string name="location_mode_wifi_description">Use Wi\u2011Fi to estimate location </string>
+    <string name="location_mode_wifi_description">Use Wi\u2011Fi to estimate location</string>
 
     <!-- [CHAR LIMIT=60] Label for the status of location -->
     <string name="location_status">Location status</string>
@@ -1763,6 +1771,9 @@
 
     <!-- Slice uri for "Accounts & Sign in" -->
     <string name="account_slice_uri" translatable="false"/>
+    <!-- Slice uri for "Privacy" -->
+    <string name="privacy_assistant_slice_uri" translatable="false"/>
+    <string name="privacy_purchases_slice_uri" translatable="false"/>
 
     <!-- Slice uri for "Connected devices" -->
     <string name="connected_devices_slice_uri" translatable="false"/>
