@@ -289,12 +289,17 @@
 
     <!-- Remote and Accessories -->
     <skip />
+    <!-- Title text for new accessories pairing screen used by Talkback. [CHAR LIMIT=50] -->
+    <string name="accessories_add_accessibility_title">Bluetooth pairing.</string>
     <!-- Description text for new accessories pairing screen. [CHAR LIMIT=150] -->
     <string name="accessories_add_title">Searching for accessories&#8230;</string>
     <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
-    <string name="accessories_add_bluetooth_inst">Before pairing your Bluetooth devices, make sure they\'re in pairing mode</string>
+    <string name="accessories_add_bluetooth_inst">Before pairing your Bluetooth devices, make sure they\'re in pairing mode.</string>
     <!-- Extra description text for bluetooth device pairing instructions. It is a placeholder to be overrode. -->
-    <string name="accessories_add_bluetooth_inst_extra" translatable="false"></string>
+    <string name="accessories_add_bluetooth_inst_extra" translatable="false"/>
+    <!-- The extra description is presented with button icons. These two strings can be overrode to be used for describing the pairing buttons for accessibility feature such as Talkback. -->
+    <string name="accessories_pairing_button1" translatable="false"/>
+    <string name="accessories_pairing_button2" translatable="false"/>
     <!-- Description text for autopairing when the user is in the pairing activity due to pressing the back HW button.  %1 will be replaced with the countdown value. [CHAR LIMIT=150] -->
     <string name="accessories_autopair_msg">A device was found and will automatically pair in <xliff:g id="countdown">%1$s</xliff:g> seconds</string>
     <!-- Error message displayed to the user indicating that a selected action is not supported on this device. [CHAR LIMIT=150] -->

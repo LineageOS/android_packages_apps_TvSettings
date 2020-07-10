@@ -90,6 +90,14 @@ public class ProgressDialogFragment extends Fragment {
         mExtraTextView.setVisibility(TextUtils.isEmpty(text) ? View.GONE : View.VISIBLE);
     }
 
+    /**
+     * This is helpful in setting the content description to be used by accessibility feature such
+     * as Talkback.
+     */
+    public void setExtraContentDescription(CharSequence text) {
+        mExtraTextView.setContentDescription(text);
+    }
+
     public void setSummary(@StringRes int resId) {
         mSummaryView.setText(resId);
     }
