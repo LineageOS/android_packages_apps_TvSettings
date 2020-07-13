@@ -127,7 +127,7 @@ public class TwoPanelListPreferenceDialogFragment extends LeanbackListPreference
             holder.getTitleView().setText(mEntries[position]);
             TextView summaryView = (TextView) holder.getContainer()
                     .findViewById(android.R.id.summary);
-            if (summaryView != null) {
+            if (summaryView != null && mSummaries != null) {
                 summaryView.setText(mSummaries[position]);
                 summaryView.setVisibility(View.VISIBLE);
             }
