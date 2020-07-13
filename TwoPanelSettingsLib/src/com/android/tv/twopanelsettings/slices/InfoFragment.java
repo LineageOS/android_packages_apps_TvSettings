@@ -32,20 +32,55 @@ import com.android.tv.twopanelsettings.R;
  * Fragment to display informational image and description text for slice.
  */
 public class InfoFragment extends Fragment {
+    public static final String EXTRA_INFO_HAS_STATUS = "extra_info_has_status";
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.info_fragment, container, false);
+        updateInfo(view);
+        return view;
+    }
+
+    /** Update the infos in InfoFragment **/
+    public void updateInfoFragment() {
+        updateInfo(getView());
+    }
+
+    private void updateInfo(View view) {
         Icon image = getArguments().getParcelable(SlicesConstants.EXTRA_PREFERENCE_INFO_IMAGE);
-        String text = getArguments().getString(SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT);
+        Icon titleIcon = getArguments().getParcelable(
+                SlicesConstants.EXTRA_PREFERENCE_INFO_TITLE_ICON);
+        String title = getArguments().getString(SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT);
+        String summary = getArguments().getString(SlicesConstants.EXTRA_PREFERENCE_INFO_SUMMARY);
+        boolean hasStatus = getArguments().getBoolean(EXTRA_INFO_HAS_STATUS);
+        boolean status = getArguments().getBoolean(SlicesConstants.EXTRA_PREFERENCE_INFO_STATUS);
         if (image != null) {
             ((ImageView) view.findViewById(R.id.info_image))
                     .setImageDrawable(image.loadDrawable(getContext()));
         }
-        if (text != null) {
-            ((TextView) view.findViewById(R.id.info_text)).setText(text);
+        if (titleIcon != null) {
+            ((ImageView) view.findViewById(R.id.info_title_icon))
+                    .setImageDrawable(titleIcon.loadDrawable(getContext()));
         }
-        return view;
+        if (title != null) {
+            ((TextView) view.findViewById(R.id.info_title)).setText(title);
+        }
+        if (summary != null) {
+            ((TextView) view.findViewById(R.id.info_summary)).setText(summary);
+        }
+        TextView statusView = view.findViewById(R.id.info_status);
+        if (hasStatus) {
+            statusView.setVisibility(View.VISIBLE);
+            if (status) {
+                statusView.setTextColor(getResources().getColor(R.color.info_status_on));
+                statusView.setText(getString(R.string.info_status_on));
+            } else {
+                statusView.setTextColor(getResources().getColor(R.color.info_status_off));
+                statusView.setText(getString(R.string.info_status_off));
+            }
+        } else {
+            statusView.setVisibility(View.GONE);
+        }
     }
 }

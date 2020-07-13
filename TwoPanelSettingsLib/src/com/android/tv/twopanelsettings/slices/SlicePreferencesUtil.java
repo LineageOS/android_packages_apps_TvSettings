@@ -28,9 +28,13 @@ import static android.app.slice.SliceItem.FORMAT_TEXT;
 
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.CHECKMARK;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_ACTION_ID;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_ADD_INFO_STATUS;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PAGE_ID;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_IMAGE;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_STATUS;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_SUMMARY;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TITLE_ICON;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.RADIO;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
 
@@ -188,15 +192,32 @@ public final class SlicePreferencesUtil {
                     preference.setSummary(getText(data.mSummaryItem));
                 }
             }
+
             // Set preview info image and text
             CharSequence infoText = getInfoText(item);
+            CharSequence infoSummary = getInfoSummary(item);
+            boolean addInfoStatus = addInfoStatus(item);
             IconCompat infoImage = getInfoImage(item);
+            IconCompat infoTitleIcon = getInfoTitleIcon(item);
             Bundle b = preference.getExtras();
             if (infoImage != null) {
                 b.putParcelable(EXTRA_PREFERENCE_INFO_IMAGE, infoImage.toIcon());
             }
+            if (infoTitleIcon != null) {
+                b.putParcelable(EXTRA_PREFERENCE_INFO_TITLE_ICON, infoTitleIcon.toIcon());
+            }
             if (infoText != null) {
+                if (preference instanceof SliceSwitchPreference && addInfoStatus) {
+                    b.putBoolean(InfoFragment.EXTRA_INFO_HAS_STATUS, true);
+                    b.putBoolean(EXTRA_PREFERENCE_INFO_STATUS,
+                            ((SliceSwitchPreference) preference).isChecked());
+                } else {
+                    b.putBoolean(InfoFragment.EXTRA_INFO_HAS_STATUS, false);
+                }
                 b.putCharSequence(EXTRA_PREFERENCE_INFO_TEXT, infoText);
+            }
+            if (infoSummary != null) {
+                b.putCharSequence(EXTRA_PREFERENCE_INFO_SUMMARY, infoSummary);
             }
             if (infoImage != null || infoText != null) {
                 preference.setFragment(InfoFragment.class.getCanonicalName());
@@ -395,6 +416,17 @@ public final class SlicePreferencesUtil {
         return true;
     }
 
+    private static boolean addInfoStatus(SliceItem sliceItem) {
+        List<SliceItem> items = sliceItem.getSlice().getItems();
+        for (SliceItem item : items)  {
+            if (item.getSubType() != null
+                    && item.getSubType().equals(EXTRA_ADD_INFO_STATUS)) {
+                return item.getInt() == 1;
+            }
+        }
+        return true;
+    }
+
     /**
      * Get the text from the SliceItem.
      */
@@ -441,8 +473,19 @@ public final class SlicePreferencesUtil {
         return target != null ? target.getText() : null;
     }
 
+    private static CharSequence getInfoSummary(SliceItem item) {
+        SliceItem target = SliceQuery.findSubtype(item, FORMAT_TEXT, EXTRA_PREFERENCE_INFO_SUMMARY);
+        return target != null ? target.getText() : null;
+    }
+
     private static IconCompat getInfoImage(SliceItem item) {
         SliceItem target = SliceQuery.findSubtype(item, FORMAT_IMAGE, EXTRA_PREFERENCE_INFO_IMAGE);
+        return target != null ? target.getIcon() : null;
+    }
+
+    private static IconCompat getInfoTitleIcon(SliceItem item) {
+        SliceItem target = SliceQuery.findSubtype(
+                item, FORMAT_IMAGE, EXTRA_PREFERENCE_INFO_TITLE_ICON);
         return target != null ? target.getIcon() : null;
     }
 }
