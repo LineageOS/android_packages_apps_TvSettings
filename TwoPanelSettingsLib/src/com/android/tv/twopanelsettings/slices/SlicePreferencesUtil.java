@@ -318,6 +318,17 @@ public final class SlicePreferencesUtil {
         return null;
     }
 
+    static SliceItem getRedirectSlice(List<SliceContent> sliceItems) {
+        for (SliceContent contentItem : sliceItems)  {
+            SliceItem item = contentItem.getSliceItem();
+            if (item.getSubType() != null
+                    && item.getSubType().equals(SlicesConstants.TYPE_REDIRECTED_SLICE_URI)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
     static SliceItem getFocusedPreferenceItem(List<SliceContent> sliceItems) {
         for (SliceContent contentItem : sliceItems)  {
             SliceItem item = contentItem.getSliceItem();
