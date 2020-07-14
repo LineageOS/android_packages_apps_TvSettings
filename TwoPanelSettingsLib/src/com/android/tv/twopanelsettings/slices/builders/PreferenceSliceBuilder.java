@@ -177,6 +177,17 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         return this;
     }
 
+
+    /**
+     * Set the redirected slice uri. Settings would render the slice from the redirected slice uri.
+     * @param redirectedSliceUri the redirected slice uri.
+     */
+    @NonNull
+    public PreferenceSliceBuilder setRedirectedSliceUri(@NonNull CharSequence redirectedSliceUri) {
+        mImpl.setRedirectedSliceUri(redirectedSliceUri);
+        return this;
+    }
+
     public static class RowBuilder {
 
         private final Uri mUri;
@@ -210,6 +221,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private CharSequence mRadioGroup;
         private boolean mEnabled;
         private boolean mSelectable;
+        private CharSequence mRedirectSliceUri;
 
         public static final int TYPE_ICON = 1;
         public static final int TYPE_ACTION = 2;
@@ -405,7 +417,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
             return this;
         }
 
-      /**
+        /**
          * Sets the title for the row builder. A title should fit on a single line and is ellipsized
          * if too long.
          */
@@ -790,6 +802,10 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         public int getPageId() {
             return mPageId;
+        }
+
+        public CharSequence getRedirectSliceUri() {
+            return mRedirectSliceUri;
         }
 
         public CharSequence getTitle() {

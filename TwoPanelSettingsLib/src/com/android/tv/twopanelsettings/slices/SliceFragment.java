@@ -27,6 +27,7 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_SLICE
 import android.app.PendingIntent;
 import android.app.PendingIntent.CanceledException;
 import android.app.tvsettings.TvSettingsEnums;
+import android.content.ContentProviderClient;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.IntentSender.SendIntentException;
@@ -195,10 +196,23 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         return MetricsEvent.VIEW_UNKNOWN;
     }
 
+    private boolean isUriValid(String uri) {
+        if (uri == null) {
+            return false;
+        }
+        ContentProviderClient client =
+                getContext().getContentResolver().acquireContentProviderClient(Uri.parse(uri));
+        if (client != null) {
+            client.close();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     private void update() {
         // TODO: Remove ListContent
         mListContent = new ListContent(mSlice);
-        // TODO: Compare and update the existing preferences instead of rebuilding the screen.
         PreferenceScreen preferenceScreen =
                 getPreferenceManager().getPreferenceScreen();
 
@@ -209,6 +223,24 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         List<SliceContent> items = mListContent.getRowItems();
         if (items == null || items.size() == 0) {
             return;
+        }
+
+        SliceItem redirectSliceItem = SlicePreferencesUtil.getRedirectSlice(items);
+        String redirectSlice = null;
+        if (redirectSliceItem != null) {
+            Data data = SlicePreferencesUtil.extract(redirectSliceItem);
+            CharSequence title = SlicePreferencesUtil.getText(data.mTitleItem);
+            if (!TextUtils.isEmpty(title)) {
+                redirectSlice = title.toString();
+            }
+        }
+        if (isUriValid(redirectSlice)) {
+            getSliceLiveData().removeObserver(this);
+            getContext().getContentResolver().unregisterContentObserver(mContentObserver);
+            mUriString = redirectSlice;
+            getSliceLiveData().observeForever(this);
+            getContext().getContentResolver().registerContentObserver(
+                    SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver);
         }
 
         SliceItem screenTitleItem = SlicePreferencesUtil.getScreenTitleItem(items);
