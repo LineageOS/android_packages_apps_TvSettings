@@ -27,6 +27,25 @@
     <!-- Leanback Launcher App Title for Restricted Profile app [CHAR LIMIT=40] -->
     <string name="launcher_restricted_profile_app_name">Restricted Profile</string>
 
+    <!-- General use strings -->
+    <skip />
+    <!-- Title for an action which turns a feature on [CHAR LIMIT=30] -->
+    <string name="action_on_title">On</string>
+    <!-- Title for an action which turns a feature off [CHAR LIMIT=30] -->
+    <string name="action_off_title">Off</string>
+    <!-- Title for a status description saying that a feature is on [CHAR LIMIT=30] -->
+    <string name="action_on_description">On</string>
+    <!-- Title for a status description saying that a feature is off [CHAR LIMIT=30] -->
+    <string name="action_off_description">Off</string>
+    <!-- Title for action which denotes the user agrees [CHAR LIMIT=50] -->
+    <string name="agree">Agree</string>
+    <!-- Title for action which denotes the user disagrees [CHAR LIMIT=50] -->
+    <string name="disagree">Disagree</string>
+    <!-- Title indicating a certain setting is enabled [CHAR LIMIT = 30] -->
+    <string name="enabled">Enabled</string>
+    <!-- Title indicating a certain setting is disabled [CHAR LIMIT = 30] -->
+    <string name="disabled">Disabled</string>
+
     <!-- Top level headers -->
     <skip />
 
@@ -247,6 +266,8 @@
     <string name="display_category_title">Display</string>
     <!-- Title for preference which when clicked lets the user configure advanced display settings. [CHAR LIMIT=50] -->
     <string name="advanced_display_settings_title">Advanced display settings</string>
+    <!-- Title for HDMI-CEC settings entry. [CHAR LIMIT=20] -->
+    <string name="hdmi_cec_settings_title">HDMI-CEC</string>
     <!-- Title for preference which when clicked lets the user configure advanced sound settings. [CHAR LIMIT=50] -->
     <string name="advanced_sound_settings_title">Advanced sound settings</string>
     <!-- Title for preference to allow game mode for display. [CHAR LIMIT=50] -->
@@ -1183,21 +1204,6 @@
     <!-- Description for profile GPU rendering in System Settings Developer options [CHAR LIMIT=100] -->
     <string name="system_desc_profile_gpu_rendering">Measure rendering time in adb shell dumpsys gfxinfo</string>
 
-    <!-- General use strings -->
-    <skip />
-    <!-- Title for an action which turns a feature on [CHAR LIMIT=30] -->
-    <string name="action_on_title">On</string>
-    <!-- Title for an action which turns a feature off [CHAR LIMIT=30] -->
-    <string name="action_off_title">Off</string>
-    <!-- Title for a status description saying that a feature is on [CHAR LIMIT=30] -->
-    <string name="action_on_description">On</string>
-    <!-- Title for a status description saying that a feature is off [CHAR LIMIT=30] -->
-    <string name="action_off_description">Off</string>
-    <!-- Title for action which denotes the user agrees [CHAR LIMIT=50] -->
-    <string name="agree">Agree</string>
-    <!-- Title for action which denotes the user disagrees [CHAR LIMIT=50] -->
-    <string name="disagree">Disagree</string>
-
     <!-- Security -->
     <skip />
     <!-- Title for action to allow installation of applications from unknown sources [CHAR LIMIT=50]-->
@@ -1784,6 +1790,7 @@
     <string name="connected_devices_slice_uri" translatable="false"/>
     <!-- Slice uri for "hdr settings" -->
     <string name="hdr_settings_slice_uri" translatable="false"/>
+    <string name="cec_settings_slice_uri" translatable="false"/>
 
     <string name="storage_summary_fragment_name" translatable="false"/>
 
