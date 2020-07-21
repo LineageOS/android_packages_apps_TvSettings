@@ -7,6 +7,8 @@ android_robolectric_test {
 
     srcs: ["src/**/*.java"],
 
+    libs: ["services.core"],
+
     java_resource_dirs: ["config"],
 
     instrumentation_for: "TvSettings",
