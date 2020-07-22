@@ -20,6 +20,14 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Seaded"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Võrk"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Piiratud profiil"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"Sees"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"Väljas"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"Sees"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"Väljas"</string>
+    <string name="agree" msgid="8155497436593889753">"Nõustun"</string>
+    <string name="disagree" msgid="7402998517682194430">"Ei nõustu"</string>
+    <string name="enabled" msgid="5127188665060746381">"Lubatud"</string>
+    <string name="disabled" msgid="4589065923272201387">"Keelatud"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"Soovitused"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Kiirseaded"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Üldseaded"</string>
@@ -54,12 +62,9 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Abi ja tagasiside"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Privaatsus"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Seadme seaded"</string>
-    <!-- no translation found for privacy_account_settings_category (5786591549945777400) -->
-    <skip />
-    <!-- no translation found for privacy_assistant_settings_title (4524957824712623680) -->
-    <skip />
-    <!-- no translation found for privacy_purchases_settings_title (4377973661628486311) -->
-    <skip />
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"Konto seaded"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google\'i assistent"</string>
+    <string name="privacy_purchases_settings_title" msgid="4377973661628486311">"Ostud"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Rakenduse seaded"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Asukoht, kasutus ja diagnostika, reklaamid"</string>
     <string name="add_account" msgid="7386223854837017129">"Lisa konto"</string>
@@ -121,6 +126,7 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Käsitsi: valige, milliseid vorminguid kasutada"</string>
     <string name="display_category_title" msgid="247804007525046312">"Ekraanikuva"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Täpsemad kuvaseaded"</string>
+    <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Täpsemad heliseaded"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Luba mängurežiim"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Kas soovite vahemälus olevad andmed kustutada?"</string>
@@ -138,11 +144,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"Ühendatud"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"Nime muutmine"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Sisestage selle tarviku uus nimi"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Bluetoothi seadme sidumine."</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Tarvikute otsimine …"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Enne Bluetoothi seadmete sidumist veenduge, et need oleks sidumisrežiimis."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Seade on leitud ja seotakse automaatselt <xliff:g id="COUNTDOWN">%1$s</xliff:g> sekundi jooksul"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"See toiming ei ole toetatud"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Bluetoothi sidumistaotlus"</string>
@@ -548,12 +552,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Akna pinna värskendam. kirjuta kogu akna pind üle"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Ekraan vilgub rakenduste pealõime toimingute ajal"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Mõõda renderdusaega adb-kestas dumpsys gfxinfo"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"Sees"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"Väljas"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"Sees"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"Väljas"</string>
-    <string name="agree" msgid="8155497436593889753">"Nõustun"</string>
-    <string name="disagree" msgid="7402998517682194430">"Ei nõustu"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Tundmatud allikad"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Rakenduste installimise lubamine muudest allikatest peale Play poe"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Tundmatute allikate lubamine"</string>
@@ -603,7 +601,7 @@
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Nimeta ümber"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"WiFi-kuva"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"PIN-kood on kohustuslik"</string>
-    <string name="whichApplication" msgid="4510042089342879264">"Toimingu lõpuleviimine rakendusega"</string>
+    <string name="whichApplication" msgid="4510042089342879264">"Lõpetage toiming rakendusega"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"Kas kasutada toimingu puhul alati seda valikut?"</string>
     <string name="alwaysUseOption" msgid="8799609235198714441">"Kasuta alati"</string>
     <string name="justOnceOption" msgid="6714005843102804865">"Ainult seekord"</string>

@@ -20,6 +20,16 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Настройки"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Сеть"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Профиль с ограниченным доступом"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"ВКЛ"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"ВЫКЛ"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"ВКЛ"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"ВЫКЛ"</string>
+    <string name="agree" msgid="8155497436593889753">"Принимаю"</string>
+    <string name="disagree" msgid="7402998517682194430">"Не принимаю"</string>
+    <!-- no translation found for enabled (5127188665060746381) -->
+    <skip />
+    <!-- no translation found for disabled (4589065923272201387) -->
+    <skip />
     <string name="header_category_suggestions" msgid="106077820663753645">"Подсказки"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Быстрые настройки"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Общие настройки"</string>
@@ -58,12 +68,9 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Справка/отзыв"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Конфиденциальность"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Настройки устройства"</string>
-    <!-- no translation found for privacy_account_settings_category (5786591549945777400) -->
-    <skip />
-    <!-- no translation found for privacy_assistant_settings_title (4524957824712623680) -->
-    <skip />
-    <!-- no translation found for privacy_purchases_settings_title (4377973661628486311) -->
-    <skip />
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"Настройки аккаунта"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Ассистент"</string>
+    <string name="privacy_purchases_settings_title" msgid="4377973661628486311">"Покупки"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Настройки приложения"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Местоположение, использование и диагностика, реклама"</string>
     <string name="add_account" msgid="7386223854837017129">"Добавить аккаунт"</string>
@@ -125,6 +132,8 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Вручную: выбирать форматы"</string>
     <string name="display_category_title" msgid="247804007525046312">"Экран"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Расширенные настройки экрана"</string>
+    <!-- no translation found for hdmi_cec_settings_title (7120729705063868627) -->
+    <skip />
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Расширенные настройки звука"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Разрешить игровой режим"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Очистить кеш?"</string>
@@ -142,11 +151,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"Подключено"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"Переименовать"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Введите новое название"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Подключение по Bluetooth."</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Поиск устройств…"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Прежде чем подключать устройства Bluetooth, убедитесь, что они находятся в режиме подключения."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Устройство найдено. Оно подключится автоматически через <xliff:g id="COUNTDOWN">%1$s</xliff:g> сек."</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Это действие не поддерживается"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Запрос на подключение по Bluetooth"</string>
@@ -554,12 +561,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Подсвечивать окна полностью при их обновлении"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Подсвечивать экран во время длительных операций"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Измерение времени для adb shell dumpsys gfxinfo"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"ВКЛ"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"ВЫКЛ"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"ВКЛ"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"ВЫКЛ"</string>
-    <string name="agree" msgid="8155497436593889753">"Принимаю"</string>
-    <string name="disagree" msgid="7402998517682194430">"Не принимаю"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Неизвестные источники"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Разрешить установку приложений не из Play Маркета"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Разрешите неизвестные источники"</string>

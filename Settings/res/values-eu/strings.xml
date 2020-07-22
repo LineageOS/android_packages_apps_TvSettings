@@ -20,6 +20,14 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Ezarpenak"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Sarea"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Profil murriztua"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"Aktibatuta"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"Desaktibatuta"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"Aktibatuta"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"Desaktibatuta"</string>
+    <string name="agree" msgid="8155497436593889753">"Onartu"</string>
+    <string name="disagree" msgid="7402998517682194430">"Ez nago ados"</string>
+    <string name="enabled" msgid="5127188665060746381">"Gaituta"</string>
+    <string name="disabled" msgid="4589065923272201387">"Desgaituta"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"Iradokizunak"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Ezarpen bizkorrak"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Ezarpen orokorrak"</string>
@@ -118,6 +126,7 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Eskuzkoa: hautatu erabili beharreko formatuak"</string>
     <string name="display_category_title" msgid="247804007525046312">"Pantaila"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Pantailaren ezarpen aurreratuak"</string>
+    <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Soinuaren ezarpen aurreratuak"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Eman jokatzeko modua erabiltzeko baimena"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Cacheko datuak garbitu nahi dituzu?"</string>
@@ -135,11 +144,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"Konektatuta"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"Aldatu izena"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Ezarri beste izen bat osagarriari"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Bluetooth bidez parekatzea."</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Osagarriak bilatzen…"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Bluetooth bidezko gailuak parekatu aurretik, ziurtatu parekatze moduan daudela."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Gailu bat aurkitu da eta automatikoki parekatuko da <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundo igarotakoan"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Ez da onartzen ekintza hori"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Bluetooth bidez parekatzeko eskaera"</string>
@@ -545,12 +552,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Nabarmendu leiho osoen azalak eguneratzen direnean"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Nabarmendu pantaila hari nagusian eragiketa luzeak egitean"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Neurtu errendatze-denbora ADB shell dumpsys gfxinfo aginduan"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"Aktibatuta"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"Desaktibatuta"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"Aktibatuta"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"Desaktibatuta"</string>
-    <string name="agree" msgid="8155497436593889753">"Onartu"</string>
-    <string name="disagree" msgid="7402998517682194430">"Ez nago ados"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Iturburu ezezagunak"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Baimendu Play Store ez diren iturburuetatik datozen aplikazioak instalatzea"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Baimendu iturburu ezezagunak"</string>
@@ -776,7 +777,7 @@
     <string name="write_settings_description" msgid="7382397926674265937">"Baimen honekin, sistemaren ezarpenak alda ditzakete aplikazioek."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Bai"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Ez"</string>
-    <string name="picture_in_picture_title" msgid="2636935591386702348">"Pantaila txikia"</string>
+    <string name="picture_in_picture_title" msgid="2636935591386702348">"Pantaila txiki gainjarria"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Eman pantaila txiki gainjarria erabiltzeko baimena"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Ez dago instalatuta pantaila txiki gainjarriarekin bateragarria den aplikaziorik"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Eman pantaila txiki gainjarri bat sortzeko baimena aplikazioei, aplikazioa irekita dagoenean nahiz hartatik irtetean (adibidez, bideoak ikusten jarraitzeko). Erabiltzen ari zaren beste aplikazioen gaienean erakutsiko da leiho hori."</string>

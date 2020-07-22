@@ -20,6 +20,16 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Configuración"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Red"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Perfil restringido"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"Activar"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"Desactivado"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"Activado"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"Desactivado"</string>
+    <string name="agree" msgid="8155497436593889753">"Aceptar"</string>
+    <string name="disagree" msgid="7402998517682194430">"Rechazar"</string>
+    <!-- no translation found for enabled (5127188665060746381) -->
+    <skip />
+    <!-- no translation found for disabled (4589065923272201387) -->
+    <skip />
     <string name="header_category_suggestions" msgid="106077820663753645">"Sugerencias"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Configuración rápida"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Configuración general"</string>
@@ -54,12 +64,9 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Ayuda y comentarios"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Privacidad"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Configuración del dispositivo"</string>
-    <!-- no translation found for privacy_account_settings_category (5786591549945777400) -->
-    <skip />
-    <!-- no translation found for privacy_assistant_settings_title (4524957824712623680) -->
-    <skip />
-    <!-- no translation found for privacy_purchases_settings_title (4377973661628486311) -->
-    <skip />
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"Configuración de la cuenta"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Asistente de Google"</string>
+    <string name="privacy_purchases_settings_title" msgid="4377973661628486311">"Compras"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Configuración de la app"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Ubicación, Uso y Diagnóstico, Anuncios"</string>
     <string name="add_account" msgid="7386223854837017129">"Agregar cuenta"</string>
@@ -121,6 +128,8 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manual: Selecciona qué formatos usar"</string>
     <string name="display_category_title" msgid="247804007525046312">"Pantalla"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Configuración de pantalla avanzada"</string>
+    <!-- no translation found for hdmi_cec_settings_title (7120729705063868627) -->
+    <skip />
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Configuración de sonido avanzada"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Habilitar modo de juego"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"¿Deseas borrar los datos almacenados en caché?"</string>
@@ -138,11 +147,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"Conectado"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"Cambiar nombre"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Ingresa un nombre nuevo para este accesorio"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Sincronización por Bluetooth"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Buscando accesorios…"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Antes de sincronizar los dispositivos Bluetooth, asegúrate de que el modo de sincronización esté activado."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Se encontró un dispositivo que se sincronizará de forma automática en <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundos."</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Esta acción no se admite."</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Solicitud de sincronización de Bluetooth"</string>
@@ -548,12 +555,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Mostrar superficies de ventana al actualizar"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Mostrar pantalla con oper. largas en conv. princ."</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Mide tiempo de repr. en adb shell dumpsys gfxinfo."</string>
-    <string name="action_on_title" msgid="1074972820237738324">"Activar"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"Desactivado"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"Activado"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"Desactivado"</string>
-    <string name="agree" msgid="8155497436593889753">"Aceptar"</string>
-    <string name="disagree" msgid="7402998517682194430">"Rechazar"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Fuentes desconocidas"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Permitir la instalación de aplicaciones que no sean de Play Store"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Permitir fuentes desconocidas"</string>

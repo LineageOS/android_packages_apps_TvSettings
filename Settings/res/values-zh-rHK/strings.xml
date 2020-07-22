@@ -20,6 +20,16 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"設定"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"網絡"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"限制存取的個人檔案"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"開啟"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"關閉"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"開啟"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"關閉"</string>
+    <string name="agree" msgid="8155497436593889753">"同意"</string>
+    <string name="disagree" msgid="7402998517682194430">"不同意"</string>
+    <!-- no translation found for enabled (5127188665060746381) -->
+    <skip />
+    <!-- no translation found for disabled (4589065923272201387) -->
+    <skip />
     <string name="header_category_suggestions" msgid="106077820663753645">"建議"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"快速設定"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"一般設定"</string>
@@ -54,12 +64,9 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"說明與意見反映"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"私隱"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"裝置設定"</string>
-    <!-- no translation found for privacy_account_settings_category (5786591549945777400) -->
-    <skip />
-    <!-- no translation found for privacy_assistant_settings_title (4524957824712623680) -->
-    <skip />
-    <!-- no translation found for privacy_purchases_settings_title (4377973661628486311) -->
-    <skip />
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"帳戶設定"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google 助理"</string>
+    <string name="privacy_purchases_settings_title" msgid="4377973661628486311">"購買"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"應用程式設定"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"位置、使用情況與診斷、廣告"</string>
     <string name="add_account" msgid="7386223854837017129">"新增帳戶"</string>
@@ -121,6 +128,8 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"手動：選取要使用的格式"</string>
     <string name="display_category_title" msgid="247804007525046312">"顯示"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"進階顯示設定"</string>
+    <!-- no translation found for hdmi_cec_settings_title (7120729705063868627) -->
+    <skip />
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"進階音效設定"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"允許啟用遊戲模式"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"清除快取資料？"</string>
@@ -138,11 +147,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"已連線"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"變更名稱"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"為此配件輸入新名稱"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"藍牙配對。"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"正在搜尋配件…"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"配對藍牙裝置前，請確認裝置處於配對模式。"</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"已找到一部裝置，其將於 <xliff:g id="COUNTDOWN">%1$s</xliff:g> 秒後自動配對"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"不支援此操作"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"藍牙配對要求"</string>
@@ -548,12 +555,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"更新視窗表層時閃動整個表層"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"當應用程式在主執行緒中進行長時間作業時，讓屏幕閃爍"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"量度「adb shell dumpsys gfxinfo」指令中的轉譯時間"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"開啟"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"關閉"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"開啟"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"關閉"</string>
-    <string name="agree" msgid="8155497436593889753">"同意"</string>
-    <string name="disagree" msgid="7402998517682194430">"不同意"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"不明來源"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"允許安裝「Play 商店」以外的應用程式"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"允許安裝不明來源的應用程式"</string>

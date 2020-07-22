@@ -20,6 +20,16 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Cài đặt"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Mạng"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Tiểu sử bị hạn chế"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"Bật"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"Tắt"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"Bật"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"Tắt"</string>
+    <string name="agree" msgid="8155497436593889753">"Đồng ý"</string>
+    <string name="disagree" msgid="7402998517682194430">"Không đồng ý"</string>
+    <!-- no translation found for enabled (5127188665060746381) -->
+    <skip />
+    <!-- no translation found for disabled (4589065923272201387) -->
+    <skip />
     <string name="header_category_suggestions" msgid="106077820663753645">"Đề xuất"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Cài đặt nhanh"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Cài đặt chung"</string>
@@ -54,12 +64,9 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Trợ giúp và Phản hồi"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Quyền riêng tư"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Cài đặt thiết bị"</string>
-    <!-- no translation found for privacy_account_settings_category (5786591549945777400) -->
-    <skip />
-    <!-- no translation found for privacy_assistant_settings_title (4524957824712623680) -->
-    <skip />
-    <!-- no translation found for privacy_purchases_settings_title (4377973661628486311) -->
-    <skip />
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"Cài đặt tài khoản"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Trợ lý Google"</string>
+    <string name="privacy_purchases_settings_title" msgid="4377973661628486311">"Giao dịch mua"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Cài đặt ứng dụng"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Vị trí, Sử dụng và chẩn đoán, Quảng cáo"</string>
     <string name="add_account" msgid="7386223854837017129">"Thêm tài khoản"</string>
@@ -121,6 +128,8 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Thủ công: Chọn định dạng để sử dụng"</string>
     <string name="display_category_title" msgid="247804007525046312">"Hiển thị"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Cài đặt hiển thị nâng cao"</string>
+    <!-- no translation found for hdmi_cec_settings_title (7120729705063868627) -->
+    <skip />
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Cài đặt âm thanh nâng cao"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Cho phép chế độ trò chơi"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Xóa dữ liệu đã lưu trong bộ nhớ đệm?"</string>
@@ -138,11 +147,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"Đã kết nối"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"Đổi tên"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Nhập tên mới cho phụ kiện này"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Ghép nối Bluetooth."</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Đang tìm kiếm phụ kiện…"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Trước khi ghép nối các thiết bị Bluetooth, hãy đảm bảo các thiết bị đó đang ở chế độ ghép nối."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Đã tìm thấy một thiết bị và sẽ tự động ghép nối sau <xliff:g id="COUNTDOWN">%1$s</xliff:g> giây nữa"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Tác vụ này không được hỗ trợ"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Yêu cầu ghép nối Bluetooth"</string>
@@ -548,12 +555,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Chuyển nhanh toàn bộ các giao diện cửa sổ khi các giao diện này cập nhật"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Màn hình nháy khi ứng dụng thực hiện các hoạt động dài trên luồng chính"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Đo thời gian kết xuất trong adb shell dumpsys gfxinfo"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"Bật"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"Tắt"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"Bật"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"Tắt"</string>
-    <string name="agree" msgid="8155497436593889753">"Đồng ý"</string>
-    <string name="disagree" msgid="7402998517682194430">"Không đồng ý"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Nguồn không xác định"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Cho phép cài đặt ứng dụng từ những nguồn khác ngoài Cửa hàng Play"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Cho phép nguồn không xác định"</string>
@@ -603,7 +604,7 @@
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Ðổi tên"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"Hiển thị Wi-Fi"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"Yêu cầu mã PIN"</string>
-    <string name="whichApplication" msgid="4510042089342879264">"Hoàn tất tác vụ sử dụng"</string>
+    <string name="whichApplication" msgid="4510042089342879264">"Hoàn tất thao tác bằng"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"Luôn sử dụng tùy chọn này cho tác vụ này?"</string>
     <string name="alwaysUseOption" msgid="8799609235198714441">"Luôn sử dụng"</string>
     <string name="justOnceOption" msgid="6714005843102804865">"Chỉ một lần"</string>

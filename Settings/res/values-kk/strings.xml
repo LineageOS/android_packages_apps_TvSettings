@@ -20,6 +20,16 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Параметрлер"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Желі"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Шектелген профиль"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"Қосулы"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"Өшірулі"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"Қосулы"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"Өшірулі"</string>
+    <string name="agree" msgid="8155497436593889753">"Келісу"</string>
+    <string name="disagree" msgid="7402998517682194430">"Келіспеу"</string>
+    <!-- no translation found for enabled (5127188665060746381) -->
+    <skip />
+    <!-- no translation found for disabled (4589065923272201387) -->
+    <skip />
     <string name="header_category_suggestions" msgid="106077820663753645">"Ұсыныстар"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Жылдам параметрлер"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Жалпы параметрлер"</string>
@@ -54,12 +64,9 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Анықтама және пікір"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Құпиялылық"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Құрылғы параметрлері"</string>
-    <!-- no translation found for privacy_account_settings_category (5786591549945777400) -->
-    <skip />
-    <!-- no translation found for privacy_assistant_settings_title (4524957824712623680) -->
-    <skip />
-    <!-- no translation found for privacy_purchases_settings_title (4377973661628486311) -->
-    <skip />
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"Есептік жазба параметрлері"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_purchases_settings_title" msgid="4377973661628486311">"Сатып алынғандар"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Қолданба параметрлері"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Геодерек, пайдалану дерегі және диагностика, жарнамалар"</string>
     <string name="add_account" msgid="7386223854837017129">"Есептік жазба қосу"</string>
@@ -121,6 +128,8 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Қолмен: пайдаланылатын форматтарды таңдау"</string>
     <string name="display_category_title" msgid="247804007525046312">"Дисплей"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Қосымша дисплей параметрлері"</string>
+    <!-- no translation found for hdmi_cec_settings_title (7120729705063868627) -->
+    <skip />
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Қосымша дыбыс параметрлері"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Ойын режиміне рұқсат ету"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Кэштелген деректер өшірілсін бе?"</string>
@@ -138,11 +147,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"Қосылды"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"Атауын өзгерту"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Бұл жабдық үшін жаңа ат енгізіңіз"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Bluetooth жұптауы."</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Қосалқы құралдар ізделуде…"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Bluetooth құрылғыларын жұптау алдында олардың жұптау режимінде екенін тексеріңіз."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Құрылғы табылды және <xliff:g id="COUNTDOWN">%1$s</xliff:g> секундтан кейін автоматты түрде жұпталады"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Бұл әрекетке қолдау көрсетілмейді"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Bluetooth жұптау сұрауы"</string>
@@ -548,12 +555,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Бедері жаңарғанда, терезені түгелдей жыпылықтату"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Қолданбалар негізгі ағында ұзақ әрекеттерді орындағанда экранды жыпылықтату"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"adb shell dumpsys gfxinfo ішінде бейнелеу уақытын өлшеу"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"Қосулы"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"Өшірулі"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"Қосулы"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"Өшірулі"</string>
-    <string name="agree" msgid="8155497436593889753">"Келісу"</string>
-    <string name="disagree" msgid="7402998517682194430">"Келіспеу"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Белгісіз көздер"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Қолданбаларды Play Store дүкенінен басқа көздерден орнатуға рұқсат ету"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Белгісіз дереккөздерге рұқсат беру"</string>

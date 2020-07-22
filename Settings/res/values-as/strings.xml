@@ -20,6 +20,16 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"ছেটিংসমূহ"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"নেটৱৰ্ক"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"সীমিত প্ৰ’ফাইল"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"অন কৰক"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"অফ"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"অন"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"অফ"</string>
+    <string name="agree" msgid="8155497436593889753">"সন্মত"</string>
+    <string name="disagree" msgid="7402998517682194430">"অসন্মত"</string>
+    <!-- no translation found for enabled (5127188665060746381) -->
+    <skip />
+    <!-- no translation found for disabled (4589065923272201387) -->
+    <skip />
     <string name="header_category_suggestions" msgid="106077820663753645">"পৰামৰ্শবোৰ"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"ক্ষিপ্ৰ ছেটিংসমূহ"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"সাধাৰণ ছেটিংসমূহ"</string>
@@ -54,12 +64,9 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"সহায় আৰু মতামত"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"গোপনীয়তা"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"ডিভাইচৰ ছেটিং"</string>
-    <!-- no translation found for privacy_account_settings_category (5786591549945777400) -->
-    <skip />
-    <!-- no translation found for privacy_assistant_settings_title (4524957824712623680) -->
-    <skip />
-    <!-- no translation found for privacy_purchases_settings_title (4377973661628486311) -->
-    <skip />
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"একাউণ্টৰ ছেটিংসমূহ"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_purchases_settings_title" msgid="4377973661628486311">"ক্ৰয়সমূহ"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"এপৰ ছেটিংসমূহ"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"অৱস্থান, ব্যৱহাৰ আৰু ডায়েগন’ষ্টিক্স, বিজ্ঞাপন"</string>
     <string name="add_account" msgid="7386223854837017129">"একাউণ্ট যোগ কৰক"</string>
@@ -121,6 +128,8 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"মেনুৱেল: কোনটো ফৰমেট ব্যৱহাৰ কৰিব বাছনি কৰক"</string>
     <string name="display_category_title" msgid="247804007525046312">"ডিছপ্লে’"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"উন্নত ডিছপ্লে’ ছেটিংসমূহ"</string>
+    <!-- no translation found for hdmi_cec_settings_title (7120729705063868627) -->
+    <skip />
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"উন্নত ধ্বনি ছেটিংসমূহ"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"গে’ম ম’ডৰ অনুমতি দিয়ক"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"কেশ্ব কৰা ডাটা মচিবনে?"</string>
@@ -138,11 +147,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"সংযুক্ত হৈ থকা"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"নাম সলনি কৰক"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"এই সহায়ক সামগ্ৰীৰ নতুন নাম দিয়ক"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"ব্লুটুথ পেয়াৰিং।"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"সহায়ক সামগ্ৰীৰ সন্ধান কৰি আছে…"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"আপোনাৰ ব্লুটুথ ডিভাইচসমূহ পেয়াৰ কৰাৰ আগতে, সেইসমূহ পেয়াৰ কৰা ম’ডত থকাটো সুনিশ্চিত কৰক।"</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"এটা ডিভাইচ বিচাৰি পোৱা গৈছে আৰু <xliff:g id="COUNTDOWN">%1$s</xliff:g> ছেকেণ্ডত স্বয়ংক্ৰিয়ভাবে যোৰা লাগিব"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"এই কামটো কৰিব পৰা নাযায়"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"ব্লুটুথ যোৰা লগোৱাৰ অনুৰোধ"</string>
@@ -548,12 +555,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"আপডেইট হওতে গোটেই ৱিণ্ড পৃষ্ঠাসমূহ ফ্লাশ্ব কৰক"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"যেতিয়া এপসমূহে মুখ্য থ্ৰেডত দীঘলীয়া কাৰ্যকলাপ চলাই, তেতিয়া স্ক্ৰীণ ফ্লাশ্ব কৰক"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"adb shell dumpsys gfxinfoত ৰেণ্ডাৰিং সময় জোখক"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"অন কৰক"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"অফ"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"অন"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"অফ"</string>
-    <string name="agree" msgid="8155497436593889753">"সন্মত"</string>
-    <string name="disagree" msgid="7402998517682194430">"অসন্মত"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"অজ্ঞাত উৎসবোৰ"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"প্লে ষ্ট\'ৰৰ বাদে আন উৎসৰ পৰা লাভ কৰা এপ্ ইনষ্টল কৰিবলৈ অনুমতি দিয়ক"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"অজ্ঞাত উৎসবিলাকক অনুমতি দিয়ক"</string>

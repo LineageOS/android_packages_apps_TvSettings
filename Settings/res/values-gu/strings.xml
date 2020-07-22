@@ -20,6 +20,16 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"સેટિંગ્સ"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"નેટવર્ક"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"પ્રતિબંધિત પ્રોફાઇલ"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"ચાલુ"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"બંધ"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"ચાલુ"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"બંધ"</string>
+    <string name="agree" msgid="8155497436593889753">"સંમત છું"</string>
+    <string name="disagree" msgid="7402998517682194430">"અસંમત છું"</string>
+    <!-- no translation found for enabled (5127188665060746381) -->
+    <skip />
+    <!-- no translation found for disabled (4589065923272201387) -->
+    <skip />
     <string name="header_category_suggestions" msgid="106077820663753645">"સૂચનો"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"ઝડપી સેટિંગ"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"સામાન્ય સેટિંગ"</string>
@@ -54,12 +64,9 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"સહાય અને પ્રતિસાદ"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"પ્રાઇવસી"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"ડિવાઇસના સેટિંગ"</string>
-    <!-- no translation found for privacy_account_settings_category (5786591549945777400) -->
-    <skip />
-    <!-- no translation found for privacy_assistant_settings_title (4524957824712623680) -->
-    <skip />
-    <!-- no translation found for privacy_purchases_settings_title (4377973661628486311) -->
-    <skip />
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"એકાઉન્ટ સેટિંગ"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_purchases_settings_title" msgid="4377973661628486311">"ખરીદીઓ"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"ઍપના સેટિંગ"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"સ્થાન, વપરાશ અને નિદાન, જાહેરાતો"</string>
     <string name="add_account" msgid="7386223854837017129">"એકાઉન્ટ ઉમેરો"</string>
@@ -121,6 +128,8 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"મેન્યુઅલ: ક્યા ફૉર્મેટનો ઉપયોગ કરવો તે પસંદ કરો"</string>
     <string name="display_category_title" msgid="247804007525046312">"ડિસ્પ્લે"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"વિગતવાર ડિસ્પ્લે સેટિંગ"</string>
+    <!-- no translation found for hdmi_cec_settings_title (7120729705063868627) -->
+    <skip />
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"વિગતવાર સાઉન્ડ સેટિંગ"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"ગેમ મોડની મંજૂરી આપો"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"કૅશ કરેલ ડેટા સાફ કરીએ?"</string>
@@ -138,11 +147,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"કનેક્ટ કર્યુ"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"નામ બદલો"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"આ ઍક્સેસરી માટે એક નવું નામ દાખલ કરો"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"બ્લૂટૂથનો ઉપયોગ કરીને ઍક્સેસરી જોડો."</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"ઍક્સેસરી શોધી રહ્યું છે…"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"તમારા બ્લૂટૂથ ડિવાઇસને જોડતા પહેલાં, તેઓ જોડાણ બનાવવાના મોડમાં હોવાની ખાતરી કરો."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"ઉપકરણ મળ્યું હતું અને તે <xliff:g id="COUNTDOWN">%1$s</xliff:g> સેકન્ડમાં આપમેળે જોડી કરશે"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"આ ક્રિયા સમર્થિત નથી"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Bluetooth જોડી કરવાની વિનંતી"</string>
@@ -548,12 +555,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"જ્યારે તે અપડેટ થાય ત્યારે સમગ્ર વિંડો સપાટીને ફ્લેશ કરો"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"જ્યારે મુખ્ય થ્રેડ પર ઍપ્લિકેશનો લાંબી કામગીરીઓ કરે ત્યારે સ્ક્રીનને ફ્લેશ કરો"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"adb shell dumpsys gfxinfo માં રીડિંગ સમય માપો"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"ચાલુ"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"બંધ"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"ચાલુ"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"બંધ"</string>
-    <string name="agree" msgid="8155497436593889753">"સંમત છું"</string>
-    <string name="disagree" msgid="7402998517682194430">"અસંમત છું"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"અજાણ્યા સ્રોતો"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play સ્ટોર સિવાયનાં અન્ય સ્રોતોથી ઍપ્લિકેશનોનાં ઇન્સ્ટૉલેશનની મંજૂરી આપો"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"અજાણ્યા સ્રોતોને મંજૂરી આપો"</string>
@@ -759,12 +760,12 @@
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"મંજૂરી નથી"</string>
     <string name="usage_access" msgid="8402350645248312782">"વપરાશ ઍક્સેસ"</string>
     <string name="usage_access_description" msgid="3276026988575551587">"વપરાશ ઍક્સેસ કોઈ એપ્લિકેશનને તમે કઈ અન્ય એપ્લિકેશન્સનો અને કેટલીવાર ઉપયોગ કરી રહ્યાં છો તેમજ તમારા કેરીઅર, ભાષા સેટિંગ્સ અને અન્ય વિગતોને ટ્રેક કરવાની મંજૂરી આપે છે."</string>
-    <string name="high_power_apps" msgid="5841073958519976562">"ઉર્જા ઑપ્ટિમાઇઝેશન"</string>
-    <string name="high_power_apps_description" msgid="8651692364795060525">"ઍપની ઉર્જા વપરાશને ઑપ્ટિમાઇઝ કરો"</string>
+    <string name="high_power_apps" msgid="5841073958519976562">"ઊર્જા ઑપ્ટિમાઇઝેશન"</string>
+    <string name="high_power_apps_description" msgid="8651692364795060525">"ઍપની ઊર્જા વપરાશને ઑપ્ટિમાઇઝ કરો"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"કોઈપણ ઍપને ઑપ્ટિમાઇઝ કરવાની જરૂર નથી"</string>
     <string name="high_power_on" msgid="3120162683093360951">"ઑપ્ટિમાઇઝ કરેલ નથી"</string>
     <string name="high_power_off" msgid="3588854600942236231">"ઉર્જાના વપરાશને ઑપ્ટિમાઇઝ કરી રહ્યાં છીએ"</string>
-    <string name="high_power_system" msgid="6263052626979462255">"ઉર્જા ઑપ્ટિમાઇઝેશન ઉપલબ્ધ નથી"</string>
+    <string name="high_power_system" msgid="6263052626979462255">"ઊર્જા ઑપ્ટિમાઇઝેશન ઉપલબ્ધ નથી"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"નોટિફિકેશન ઍક્સેસ"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"કોઈ ઇન્સ્ટૉલ કરેલ ઍપએ નોટિફિકેશન ઍક્સેસની વિનંતી કરી નથી."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"સંપર્ક નામ અને તમને મળતા સંદેશાના ટેક્સ્ટ જેવી વ્યક્તિગત માહિતી સહિતની બધી નોટિફિકેશન વાંચવામાં આ બધી ઍપ સમર્થ રહેશે. તે આ નોટિફિકેશનને છોડી દેવા અથવા તેમાં રહેલા ક્રિયા બટનોને ટ્રિગર કરવામાં પણ સમર્થ રહેશે."</string>

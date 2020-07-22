@@ -20,6 +20,14 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Definições"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Rede"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Perfil restrito"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"Ativar"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"Desativar"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"Ativado"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"Desativado"</string>
+    <string name="agree" msgid="8155497436593889753">"Concordo"</string>
+    <string name="disagree" msgid="7402998517682194430">"Não concordo"</string>
+    <string name="enabled" msgid="5127188665060746381">"Ativado"</string>
+    <string name="disabled" msgid="4589065923272201387">"Desativado"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"Sugestões"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Definições rápidas"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Definições gerais"</string>
@@ -42,7 +50,7 @@
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Serviços multimédia, Assistente, Pagamentos"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Rede e Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Som"</string>
-    <string name="applications_category_title" msgid="7112019490898586223">"Aplicações"</string>
+    <string name="applications_category_title" msgid="7112019490898586223">"Apps"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Preferências do dispositivo"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Controlos remotos e acessórios"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Sem dispositivos Bluetooth ligados."</string>
@@ -84,21 +92,21 @@
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Ligue-se à rede."</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnósticos de rede"</string>
-    <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Aplicações abertas recentemente"</string>
+    <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Apps abertas recentemente"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Ver todas as apps"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Autorizações"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Todas as aplicações"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Mostrar aplicações do sistema"</string>
-    <string name="all_apps_installed" msgid="8217778476185598971">"Aplicações instaladas"</string>
-    <string name="all_apps_other" msgid="4420174882983813158">"Aplicações do sistema"</string>
-    <string name="all_apps_disabled" msgid="2776041242863791053">"Aplicações desativadas"</string>
+    <string name="all_apps_installed" msgid="8217778476185598971">"Apps instaladas"</string>
+    <string name="all_apps_other" msgid="4420174882983813158">"Apps do sistema"</string>
+    <string name="all_apps_disabled" msgid="2776041242863791053">"Apps desativadas"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Proteção de ecrã"</string>
     <string name="device_display" msgid="244634591698925025">"Visualização"</string>
     <string name="device_display_sound" msgid="7399153506435649193">"Ecrã e som"</string>
     <string name="device_sound" msgid="8616320533559404963">"Som"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Som surround"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Sons do sistema"</string>
-    <string name="device_apps" msgid="2134756632245008919">"Aplicações"</string>
+    <string name="device_apps" msgid="2134756632245008919">"Apps"</string>
     <string name="device_storage" msgid="8540243547121791073">"Armazenamento"</string>
     <string name="device_reset" msgid="6115282675800077867">"Reposição de dados de fábrica"</string>
     <string name="device_backup_restore" msgid="4552158624969018687">"Cópia de segurança e restauro"</string>
@@ -118,6 +126,7 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manual: selecionar os formatos a utilizar"</string>
     <string name="display_category_title" msgid="247804007525046312">"Ecrã"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Definições de visualização avançadas"</string>
+    <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Definições de som avançadas"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Permitir modo de jogo"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Pretende limpar os dados em cache?"</string>
@@ -135,11 +144,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"Ligado"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"Alterar nome"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Inserir um novo nome para o acessório"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Sincronização por Bluetooth"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"A procurar acessórios..."</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Antes de sincronizar os dispositivos Bluetooth, certifique-se de que estão no modo de sincronização."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Foi encontrado um dispositivo e será automaticamente sincronizado dentro de <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundos"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Esta ação não é suportada"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Pedido de sincronização de Bluetooth"</string>
@@ -324,7 +331,7 @@
     <string name="storage_available" msgid="8860901789290434209">"Disponível"</string>
     <string name="storage_size" msgid="5517261387579171381">"Espaço total: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
     <string name="storage_calculating_size" msgid="5716281278843281044">"A calcular..."</string>
-    <string name="storage_apps_usage" msgid="8659915575274468924">"Aplicações"</string>
+    <string name="storage_apps_usage" msgid="8659915575274468924">"Apps"</string>
     <string name="storage_downloads_usage" msgid="8429196848359517158">"Transferências"</string>
     <string name="storage_dcim_usage" msgid="337290403400541958">"Fotos e vídeos"</string>
     <string name="storage_music_usage" msgid="5362871290115089474">"Áudio"</string>
@@ -371,8 +378,8 @@
     <string name="storage_wizard_format_slow_summary" msgid="3674023258060474037">"Pode continuar, mas as aplicações movidas para esta localização podem falhar e as transferências de dados podem demorar muito tempo. Para obter um melhor desempenho, considere utilizar uma unidade mais rápida."</string>
     <string name="storage_wizard_format_action" msgid="3275676687226857170">"Formatar"</string>
     <string name="storage_wizard_backup_apps_action" msgid="1402199004931596519">"Fazer uma cópia de segurança de aplicações"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="6225663573896846937">"Aplicações armazenadas no <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="7763611380573099978">"Aplicações e dados armazenados no <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_title" msgid="6225663573896846937">"Apps armazenadas no <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="7763611380573099978">"Apps e dados armazenados no <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="5741521038349239359">"<xliff:g id="SIZE">%1$s</xliff:g> disponível(eis)"</string>
     <string name="storage_wizard_eject_private_title" msgid="1336088625197134497">"Ejetar armazenamento do dispositivo"</string>
     <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"As aplicações no armazenamento deste dispositivo deixarão de funcionar quando ejetar a unidade. Esta unidade USB está formatada para funcionar apenas neste dispositivo. Não funciona em mais nenhum."</string>
@@ -497,7 +504,7 @@
     <string name="system_input" msgid="4457152980514604873">"Entrada"</string>
     <string name="system_drawing" msgid="5802739024643871942">"Desenho"</string>
     <string name="system_monitoring" msgid="7997260748312620855">"Monitorizar"</string>
-    <string name="system_apps" msgid="8481888654606868074">"Aplicações"</string>
+    <string name="system_apps" msgid="8481888654606868074">"Apps"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Manter ativo"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"Verificação HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"Otimização HDMI"</string>
@@ -545,12 +552,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Destacar todas as superf. de janelas ao atualizar"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Piscar qd app fazem oper. prol. tópico princ."</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Medir tempo de conv. em adb shell dumpsys gfxinfo"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"Ativar"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"Desativar"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"Ativado"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"Desativado"</string>
-    <string name="agree" msgid="8155497436593889753">"Concordo"</string>
-    <string name="disagree" msgid="7402998517682194430">"Não concordo"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Fontes desconhecidas"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Permitir a instalação de aplicações de outras fontes que não a Play Store"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Permitir fontes desconhecidas"</string>
@@ -649,7 +650,7 @@
     <string name="restricted_profile_delete_title" msgid="7153982195273379506">"Eliminar o perfil restrito"</string>
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Criar perfil restrito"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Definições"</string>
-    <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Aplicações autorizadas"</string>
+    <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Apps autorizadas"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
       <item quantity="other">%d aplicações permitidas</item>
       <item quantity="one">1 aplicação permitida</item>
