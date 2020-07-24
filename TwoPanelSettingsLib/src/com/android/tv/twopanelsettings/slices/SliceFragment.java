@@ -277,10 +277,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         List<Preference> newPrefs = new ArrayList<>();
         for (SliceContent contentItem : items) {
             SliceItem item = contentItem.getSliceItem();
-            Preference preference = SlicePreferencesUtil.getPreference(item, mContextThemeWrapper,
-                    getClass().getCanonicalName());
-            if (preference != null) {
-                newPrefs.add(preference);
+            if (SlicesConstants.TYPE_PREFERENCE.equals(item.getSubType())
+                    || SlicesConstants.TYPE_PREFERENCE_CATEGORY.equals(item.getSubType())) {
+                Preference preference =
+                        SlicePreferencesUtil.getPreference(
+                            item, mContextThemeWrapper, getClass().getCanonicalName());
+                if (preference != null) {
+                    newPrefs.add(preference);
+                }
             }
         }
 
