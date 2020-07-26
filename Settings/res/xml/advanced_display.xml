@@ -22,9 +22,15 @@
         android:key="game_mode"
         android:persistent="true"
         android:title="@string/game_mode_title"/>
-    <com.android.tv.twopanelsettings.slices.EmbeddedSliceSwitchPreference
-        android:key="hdr_match_content"
-        custom:uri="@string/hdr_settings_slice_uri"
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="hdr_format_selection"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:uri="@string/format_selection_slice_uri"
+        custom:isPreferenceVisible="false"/>
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="hdr_resolution"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:uri="@string/resolution_slice_uri"
         custom:isPreferenceVisible="false" />
     <com.android.tv.twopanelsettings.slices.SlicePreference
         android:key="cec"
