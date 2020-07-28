@@ -206,8 +206,10 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private CharSequence mSubtitle;
         private boolean mSubtitleLoading;
         private CharSequence mContentDescription;
-        private CharSequence mInfoText;
+        private CharSequence mInfoTitle;
+        private CharSequence mInfoSummary;
         private IconCompat mInfoImage;
+        private IconCompat mInfoTitleIcon;
         private int mLayoutDirection = -1;
         private List<Object> mEndItems = new ArrayList<>();
         private List<Integer> mEndTypes = new ArrayList<>();
@@ -221,6 +223,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private CharSequence mRadioGroup;
         private boolean mEnabled;
         private boolean mSelectable;
+        private boolean mAddInfoStatus;
         private CharSequence mRedirectSliceUri;
 
         public static final int TYPE_ICON = 1;
@@ -339,7 +342,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         }
 
         /**
-         * Sets the information image for the preference builder.
+         * Set the information image for the preference builder.
          * The image would be displayed at the top of preview screen.
          */
         @NonNull
@@ -349,12 +352,50 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         }
 
         /**
-         * Sets the information text for the preference builder.
-         * The image would be displayed at the top of preview screen.
+         * Set the information title icon for the preference builder.
+         * The icon will be displayed to the left of description text title
          */
         @NonNull
+        public RowBuilder setInfoTitleIcon(@NonNull IconCompat icon) {
+            mInfoTitleIcon = icon;
+            return this;
+        }
+
+        /**
+         * Set the information text for the preference builder.
+         */
+        @Deprecated
+        @NonNull
         public RowBuilder setInfoText(CharSequence text) {
-            mInfoText = text;
+            mInfoTitle = text;
+            return this;
+        }
+
+        /**
+         * Set the information text title for the preference builder.
+         */
+        @NonNull
+        public RowBuilder setInfoTitle(CharSequence text) {
+            mInfoTitle = text;
+            return this;
+        }
+
+        /**
+         * Set the information text summary for the preference builder.
+         */
+        @NonNull
+        public RowBuilder setInfoSummary(CharSequence text) {
+            mInfoSummary = text;
+            return this;
+        }
+
+        /**
+         * Set whether need to add info status. If set true, info status would be automatically
+         * generated based upon the on/off status of the switch.
+         */
+        @NonNull
+        public RowBuilder setAddInfoStatus(boolean addInfoStatus) {
+            mAddInfoStatus = addInfoStatus;
             return this;
         }
 
@@ -776,6 +817,10 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
             return mSelectable;
         }
 
+        public boolean addInfoStatus() {
+            return mAddInfoStatus;
+        }
+
         public boolean isTitleItemLoading() {
             return mTitleItemLoading;
         }
@@ -833,11 +878,23 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         }
 
         public CharSequence getInfoText() {
-            return mInfoText;
+            return mInfoTitle;
+        }
+
+        public CharSequence getInfoTitle() {
+            return mInfoTitle;
+        }
+
+        public CharSequence getInfoSummary() {
+            return mInfoSummary;
         }
 
         public IconCompat getInfoImage() {
             return mInfoImage;
+        }
+
+        public IconCompat getInfoTitleIcon() {
+            return mInfoTitleIcon;
         }
 
         public List<Object> getEndItems() {
