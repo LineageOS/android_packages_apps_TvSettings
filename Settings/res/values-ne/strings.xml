@@ -20,6 +20,14 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"सेटिङहरू"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"नेटवर्क"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"प्रतिबन्धित प्रोफाइल"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"सक्रिय गर्नुहोस्"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"बन्द गर्नुहोस्"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"सक्रिय गर्नुहोस्"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"बन्द गर्नुहोस्"</string>
+    <string name="agree" msgid="8155497436593889753">"सहमत"</string>
+    <string name="disagree" msgid="7402998517682194430">"असहमत"</string>
+    <string name="enabled" msgid="5127188665060746381">"सक्षम पारिएको छ"</string>
+    <string name="disabled" msgid="4589065923272201387">"असक्षम पारिएको छ"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"सुझावहरू"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"द्रुत सेटिङहरू"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"सामान्य सेटिङहरू"</string>
@@ -54,12 +62,9 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"मद्दत र प्रतिक्रिया"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"गोपनीयता"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"यन्त्रका सेटिङहरू"</string>
-    <!-- no translation found for privacy_account_settings_category (5786591549945777400) -->
-    <skip />
-    <!-- no translation found for privacy_assistant_settings_title (4524957824712623680) -->
-    <skip />
-    <!-- no translation found for privacy_purchases_settings_title (4377973661628486311) -->
-    <skip />
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"खाताका सेटिङहरू"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google सहायक"</string>
+    <string name="privacy_purchases_settings_title" msgid="4377973661628486311">"खरिदहरू"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"एपका सेटिङहरू"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"स्थान, प्रयोग र निदान, विज्ञापनहरू"</string>
     <string name="add_account" msgid="7386223854837017129">"खाता थप्नुहोस्"</string>
@@ -121,6 +126,7 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"म्यानुअल: प्रयोग गर्ने ढाँचाहरू चयन गर्नुहोस्"</string>
     <string name="display_category_title" msgid="247804007525046312">"डिस्प्ले"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"डिस्प्लेसम्बन्धी उन्नत सेटिङ"</string>
+    <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"ध्वनिसम्बन्धी उन्नत सेटिङ"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"गेम मोडलाई अनुमति दिनुहोस्"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"केस गरिएको डेटा हटाउने हो?"</string>
@@ -138,11 +144,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"जोडिएको"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"नाम परिवर्तन गर्नुहोस्"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"यस सहायक उपकरणको कुनै नयाँ नाम प्रविष्टि गर्नुहोस्"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"ब्लुटुथबाट सहायक उपकरणसँग जोडा बनाउने प्रक्रिया।"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"चीजहरूको लागि खोजी कार्य गर्दै..."</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"ब्लुटुथ चल्ने यन्त्रहरूसँग जोडा बनाउनुअघि ती यन्त्रहरूमा जोडा बनाउने मोड अन गरिएको छ भन्ने कुरा सुनिश्चित गर्नुहोस्।"</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"उपकरण फेला परेको थिएन र स्वचालित रूपमा <xliff:g id="COUNTDOWN">%1$s</xliff:g> सेकेन्डमा पेयर हुने छ"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"यो कार्य समर्थित छैन"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"ब्लुटुथ जोडा बाँध्ने अनुरोध"</string>
@@ -548,12 +552,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"तिनीहरू अपडेट हुँदा पुरै विन्डो सतहहरूमा फ्यास गर्नुहोस्"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"मुख्य थ्रेडमा लामा कार्यहरू अनुप्रयोगले सञ्चालन गर्दा स्क्रिनमा फ्ल्यास गर्नुहोस्"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"adb shell dumpsys gfxinfo मा रेन्डर गर्ने समय मापन गर्नुहोस्"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"सक्रिय गर्नुहोस्"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"बन्द गर्नुहोस्"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"सक्रिय गर्नुहोस्"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"बन्द गर्नुहोस्"</string>
-    <string name="agree" msgid="8155497436593889753">"सहमत"</string>
-    <string name="disagree" msgid="7402998517682194430">"असहमत"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"अज्ञात स्रोतहरू"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play स्टोर भन्दा अन्य स्रोतहरूबाट अनुप्रयोगहरूको स्थापनालाई अनुमति दिनुहोस्"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"अज्ञात स्रोतहरूलाई अनुमति दिनुहोस्"</string>

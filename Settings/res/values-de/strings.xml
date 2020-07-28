@@ -20,6 +20,14 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Einstellungen"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Netzwerk"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Eingeschränktes Profil"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"An"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"Aus"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"An"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"Aus"</string>
+    <string name="agree" msgid="8155497436593889753">"Zustimmen"</string>
+    <string name="disagree" msgid="7402998517682194430">"Ablehnen"</string>
+    <string name="enabled" msgid="5127188665060746381">"Aktiviert"</string>
+    <string name="disabled" msgid="4589065923272201387">"Deaktiviert"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"Vorschläge"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Schnelleinstellungen"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Allgemeine Einstellungen"</string>
@@ -54,12 +62,9 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Hilfe und Feedback"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Datenschutz"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Geräteeinstellungen"</string>
-    <!-- no translation found for privacy_account_settings_category (5786591549945777400) -->
-    <skip />
-    <!-- no translation found for privacy_assistant_settings_title (4524957824712623680) -->
-    <skip />
-    <!-- no translation found for privacy_purchases_settings_title (4377973661628486311) -->
-    <skip />
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"Kontoeinstellungen"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_purchases_settings_title" msgid="4377973661628486311">"Käufe"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"App-Einstellungen"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Standort, Nutzung &amp; Diagnose, Werbung"</string>
     <string name="add_account" msgid="7386223854837017129">"Konto hinzufügen"</string>
@@ -121,6 +126,7 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuell: Zu verwendende Formate auswählen"</string>
     <string name="display_category_title" msgid="247804007525046312">"Display"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Erweiterte Displayeinstellungen"</string>
+    <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Erweiterte Toneinstellungen"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Spielmodus zulassen"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Daten im Cache löschen?"</string>
@@ -138,11 +144,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"Verbunden"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"Namen ändern"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Neuen Namen eingeben"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Bluetooth-Kopplung."</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Suche nach Zubehör…"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Deine Bluetooth-Geräte müssen sich im Kopplungsmodus befinden, damit du die Kopplung durchführen kannst."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Ein Gerät wurde gefunden. Die Kopplung wird in <xliff:g id="COUNTDOWN">%1$s</xliff:g> Sekunden automatisch durchgeführt."</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Diese Aktion wird nicht unterstützt."</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Bluetooth-Kopplungsanfrage"</string>
@@ -160,8 +164,8 @@
     <string name="system_date_time" msgid="6938588387002473344">"Datum &amp; Uhrzeit"</string>
     <string name="system_language" msgid="5516099388471974346">"Sprache"</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Tastatur"</string>
-    <string name="system_keyboard_autofill" msgid="8530944165814838255">"Tastatur &amp; AutoFill"</string>
-    <string name="system_autofill" msgid="6983989261108020046">"AutoFill"</string>
+    <string name="system_keyboard_autofill" msgid="8530944165814838255">"Tastatur &amp; Automatisches Ausfüllen"</string>
+    <string name="system_autofill" msgid="6983989261108020046">"Automatisches Ausfüllen"</string>
     <string name="system_home" msgid="2149349845791104094">"Startbildschirm"</string>
     <string name="system_search" msgid="3170169128257586925">"Suche"</string>
     <string name="system_google" msgid="945985164023885276">"Google"</string>
@@ -548,12 +552,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Ganze Fensteroberfläche blinkt bei Aktualisierung."</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Bei langen App-Operationen im Hauptthread blinkt der Bildschirm"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Rendering-Zeit in adb shell dumpsys gfxinfo messen"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"An"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"Aus"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"An"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"Aus"</string>
-    <string name="agree" msgid="8155497436593889753">"Zustimmen"</string>
-    <string name="disagree" msgid="7402998517682194430">"Ablehnen"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Unbekannte Herkunft"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Installation von Apps aus anderen Quellen als dem Play Store zulassen"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Apps mit unbekannter Herkunft zulassen"</string>
@@ -594,10 +592,10 @@
     <string name="title_current_keyboard" msgid="891238509164879851">"Aktuelle Tastatur"</string>
     <string name="title_configure" msgid="846802387014612210">"Konfigurieren"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Tastaturoptionen"</string>
-    <string name="title_current_autofill_service" msgid="9029001041887283153">"Aktueller AutoFill-Dienst"</string>
-    <string name="title_select_autofill_service" msgid="696559582725756848">"AutoFill-Dienst auswählen"</string>
-    <string name="autofill_none" msgid="1615056985649424207">"Keinen AutoFill-Dienst"</string>
-    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Nur für vertrauenswürdige Apps&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Passwortdienst&gt;%1$s&lt;/xliff:g&gt; greift auf die Displayanzeige zu, um zu bestimmen, welche Felder automatisch ausgefüllt werden können. AutoFill sollte daher nur für vertrauenswürdige Apps zugelassen werden."</string>
+    <string name="title_current_autofill_service" msgid="9029001041887283153">"Aktueller Dienst für automatisches Ausfüllen"</string>
+    <string name="title_select_autofill_service" msgid="696559582725756848">"Dienst für automatisches Ausfüllen auswählen"</string>
+    <string name="autofill_none" msgid="1615056985649424207">"Keinen Dienst für automatisches Ausfüllen"</string>
+    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Nur für vertrauenswürdige Apps&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Passwortdienst&gt;%1$s&lt;/xliff:g&gt; greift auf die Displayanzeige zu, um zu bestimmen, welche Felder automatisch ausgefüllt werden können. Automatisches Ausfüllen sollte daher nur für vertrauenswürdige Apps zugelassen werden."</string>
     <string name="computing_size" msgid="8623916230485437579">"Berechnung..."</string>
     <string name="title_select_wifi_network" msgid="935820896444071617">"WLAN auswählen"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Umbenennen"</string>

@@ -20,6 +20,14 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Configuració"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Xarxa"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Perfil restringit"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"Activa"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"Desactiva"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"Activat"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"Desactivada"</string>
+    <string name="agree" msgid="8155497436593889753">"Accepto"</string>
+    <string name="disagree" msgid="7402998517682194430">"No accepto"</string>
+    <string name="enabled" msgid="5127188665060746381">"Activat"</string>
+    <string name="disabled" msgid="4589065923272201387">"Desactivat"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"Suggeriments"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Configuració ràpida"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Configuració general"</string>
@@ -54,12 +62,9 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Ajuda i suggeriments"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Privadesa"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Configuració del dispositiu"</string>
-    <!-- no translation found for privacy_account_settings_category (5786591549945777400) -->
-    <skip />
-    <!-- no translation found for privacy_assistant_settings_title (4524957824712623680) -->
-    <skip />
-    <!-- no translation found for privacy_purchases_settings_title (4377973661628486311) -->
-    <skip />
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"Configuració del compte"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Assistent de Google"</string>
+    <string name="privacy_purchases_settings_title" msgid="4377973661628486311">"Compres"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Configuració de l\'aplicació"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Ubicació, Ús i diagnòstic, Anuncis"</string>
     <string name="add_account" msgid="7386223854837017129">"Afegeix un compte"</string>
@@ -121,6 +126,7 @@
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manual: selecciona quins formats cal fer servir"</string>
     <string name="display_category_title" msgid="247804007525046312">"Pantalla"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Configuració avançada de la pantalla"</string>
+    <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Configuració avançada del so"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Permet el mode de joc"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vols esborrar dades emmagatzem. a memòria cau?"</string>
@@ -138,11 +144,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"Connectat"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"Canvia el nom"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Introdueix un nom nou per a aquest accessori"</string>
-    <!-- no translation found for accessories_add_accessibility_title (1300294413423909579) -->
-    <skip />
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Vinculació per Bluetooth"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"S\'estan cercant accessoris…"</string>
-    <!-- no translation found for accessories_add_bluetooth_inst (2508151218328384366) -->
-    <skip />
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Abans de vincular els dispositius Bluetooth, assegura\'t que estiguin en mode de vinculació."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"S\'ha trobat un dispositiu i s\'hi emparellarà automàticament d\'aquí a <xliff:g id="COUNTDOWN">%1$s</xliff:g> segons."</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"No s\'admet aquesta acció."</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Sol·licitud de sincronització Bluetooth"</string>
@@ -548,12 +552,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Il·lumina superfície de finestres en actualitzar-se"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Il·lumina si aplicacions tarden molt al procés principal"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Mesura temps represen. a adb shell dumpsys gfxinfo"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"Activa"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"Desactiva"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"Activat"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"Desactivada"</string>
-    <string name="agree" msgid="8155497436593889753">"Accepto"</string>
-    <string name="disagree" msgid="7402998517682194430">"No accepto"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Fonts desconegudes"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Permet instal·lar aplicacions que no siguin de Play Store"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Permet les fonts desconegudes"</string>
