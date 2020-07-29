@@ -74,7 +74,8 @@ public class CenterAlignedDynamicDrawableSpan extends DynamicDrawableSpan {
         Paint.FontMetricsInt fmPaint = paint.getFontMetricsInt();
         int fontHeight = fmPaint.descent - fmPaint.ascent;
 
-        int transY = fmPaint.descent; // Align text descent (bottom most part) to bottom of drawable
+        // Align text descent (bottom most part) to bottom of drawable
+        int transY = bottom - drawable.getBounds().bottom;
         // Translate half of the extra space between the drawable and the font to center.
         transY += (drawable.getIntrinsicHeight() - fontHeight) / 2;
 

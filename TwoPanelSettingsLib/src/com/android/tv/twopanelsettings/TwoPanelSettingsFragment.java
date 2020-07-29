@@ -770,7 +770,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 if (chosenPreference.getFragment() != null
                         && InfoFragment.class.isAssignableFrom(
                                 Class.forName(chosenPreference.getFragment()))) {
-                    onPreferenceFocusedImpl(chosenPreference, false);
+                    updateInfoFragmentStatus(fragment);
                 }
                 if (chosenPreference instanceof ListPreference) {
                     onPreferenceFocusedImpl(chosenPreference, true);
@@ -778,6 +778,17 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void updateInfoFragmentStatus(Fragment fragment) {
+        if (!isFragmentInTheMainPanel(fragment)) {
+            return;
+        }
+        final Fragment existingPreviewFragment =
+                getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx + 1]);
+        if (existingPreviewFragment instanceof InfoFragment) {
+            ((InfoFragment) existingPreviewFragment).updateInfoFragment();
         }
     }
 

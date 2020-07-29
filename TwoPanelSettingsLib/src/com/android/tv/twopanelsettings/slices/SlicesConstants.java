@@ -52,6 +52,11 @@ public final class SlicesConstants {
     public static final String EXTRA_PREFERENCE_KEY = "extra_preference_key";
     public static final String EXTRA_PREFERENCE_INFO_TEXT= "extra_preference_info_text";
     public static final String EXTRA_PREFERENCE_INFO_IMAGE = "extra_preference_info_image";
+    public static final String EXTRA_PREFERENCE_INFO_TITLE_ICON =
+            "extra_preference_info_title_icon";
+    public static final String EXTRA_PREFERENCE_INFO_SUMMARY = "extra_preference_info_summary";
+    public static final String EXTRA_PREFERENCE_INFO_STATUS = "extra_preference_info_status";
+    public static final String EXTRA_ADD_INFO_STATUS = "extra_preference_add_info_status";
     public static final String EXTRA_ACTION_ID = "extra_action_id";
     public static final String EXTRA_PAGE_ID = "extra_page_id";
     public static final String EXTRA_SLICE_FOLLOWUP = "extra_slice_followup";
