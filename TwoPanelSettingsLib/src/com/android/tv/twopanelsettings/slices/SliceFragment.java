@@ -390,6 +390,18 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 screen.addPreference(newPref);
             }
         }
+        removeAnimationClipping(getView());
+    }
+
+    protected void removeAnimationClipping(View v) {
+        if (v instanceof ViewGroup) {
+            ((ViewGroup) v).setClipChildren(false);
+            ((ViewGroup) v).setClipToPadding(false);
+            for (int index = 0; index < ((ViewGroup) v).getChildCount(); index++) {
+                View child = ((ViewGroup) v).getChildAt(index);
+                removeAnimationClipping(child);
+            }
+        }
     }
 
     @Override
@@ -590,6 +602,9 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 R.layout.slice_title_container, container, false);
         view.removeView(view.findViewById(R.id.decor_title_container));
         view.addView(newTitleContainer, 0);
+
+        newTitleContainer.setOutlineProvider(null);
+        newTitleContainer.setBackgroundResource(R.color.tp_preference_panel_background_color);
 
         final View newContainer =
                 themedInflater.inflate(R.layout.slice_progress_bar, container, false);
