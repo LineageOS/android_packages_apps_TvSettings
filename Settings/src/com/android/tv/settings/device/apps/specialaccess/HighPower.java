@@ -29,18 +29,18 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.applications.ApplicationsState;
-import com.android.settingslib.fuelgauge.PowerWhitelistBackend;
+import com.android.settingslib.fuelgauge.PowerAllowlistBackend;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
 /**
- * Fragment for managing power save whitelist
+ * Fragment for managing power save allowlist
  */
 @Keep
 public class HighPower extends SettingsPreferenceFragment implements
         ManageApplicationsController.Callback {
 
-    private PowerWhitelistBackend mPowerWhitelistBackend;
+    private PowerAllowlistBackend mPowerAllowlistBackend;
     private ManageApplicationsController mManageApplicationsController;
     private final ApplicationsState.AppFilter mFilter =
             new ApplicationsState.CompoundFilter(
@@ -54,7 +54,7 @@ public class HighPower extends SettingsPreferenceFragment implements
                         @Override
                         public boolean filterApp(ApplicationsState.AppEntry info) {
                             info.extraInfo =
-                                    mPowerWhitelistBackend.isWhitelisted(info.info.packageName);
+                                    mPowerAllowlistBackend.isAllowlisted(info.info.packageName);
                             return !ManageAppOp.shouldIgnorePackage(getContext(),
                                     info.info.packageName, 0);
                         }
@@ -68,7 +68,7 @@ public class HighPower extends SettingsPreferenceFragment implements
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mPowerWhitelistBackend = PowerWhitelistBackend.getInstance(context);
+        mPowerAllowlistBackend = PowerAllowlistBackend.getInstance(context);
         mManageApplicationsController = new ManageApplicationsController(context, this,
                 getLifecycle(), mFilter, ApplicationsState.ALPHA_COMPARATOR);
     }
@@ -92,7 +92,7 @@ public class HighPower extends SettingsPreferenceFragment implements
         switchPref.setTitle(entry.label);
         switchPref.setKey(entry.info.packageName);
         switchPref.setIcon(entry.icon);
-        if (mPowerWhitelistBackend.isSysWhitelisted(entry.info.packageName)) {
+        if (mPowerAllowlistBackend.isSysAllowlisted(entry.info.packageName)) {
             switchPref.setChecked(false);
             switchPref.setEnabled(false);
         } else {
@@ -101,9 +101,9 @@ public class HighPower extends SettingsPreferenceFragment implements
             switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
                 final String pkg = pref.getKey();
                 if ((Boolean) newValue) {
-                    mPowerWhitelistBackend.removeApp(pkg);
+                    mPowerAllowlistBackend.removeApp(pkg);
                 } else {
-                    mPowerWhitelistBackend.addApp(pkg);
+                    mPowerAllowlistBackend.addApp(pkg);
                 }
                 updateSummary(pref);
                 return true;
@@ -115,9 +115,9 @@ public class HighPower extends SettingsPreferenceFragment implements
 
     private void updateSummary(Preference preference) {
         final String pkg = preference.getKey();
-        if (mPowerWhitelistBackend.isSysWhitelisted(pkg)) {
+        if (mPowerAllowlistBackend.isSysAllowlisted(pkg)) {
             preference.setSummary(R.string.high_power_system);
-        } else if (mPowerWhitelistBackend.isWhitelisted(pkg)) {
+        } else if (mPowerAllowlistBackend.isAllowlisted(pkg)) {
             preference.setSummary(R.string.high_power_on);
         } else {
             preference.setSummary(R.string.high_power_off);
