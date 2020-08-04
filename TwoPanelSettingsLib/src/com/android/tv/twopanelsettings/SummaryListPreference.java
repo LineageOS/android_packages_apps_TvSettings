@@ -28,21 +28,12 @@ public class SummaryListPreference extends ListPreference {
 
     private CharSequence[] mSummaries;
 
-    public SummaryListPreference(Context context, AttributeSet attrs, int defStyleAttr,
-            int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
-
-    public SummaryListPreference(Context context, AttributeSet attrs, int defStyleAttr) {
-        this(context, attrs, defStyleAttr, 0);
-    }
-
     public SummaryListPreference(Context context, AttributeSet attrs) {
-      this(context, attrs, 0, 0);
+        super(context, attrs, 0, 0);
     }
 
     public SummaryListPreference(Context context) {
-        this(context, null);
+        super(context, null);
     }
 
     public void setSummaries(CharSequence[] summaries) {
