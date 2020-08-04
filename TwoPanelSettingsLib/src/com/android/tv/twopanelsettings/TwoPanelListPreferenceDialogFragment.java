@@ -17,6 +17,7 @@
 package com.android.tv.twopanelsettings;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -127,9 +128,13 @@ public class TwoPanelListPreferenceDialogFragment extends LeanbackListPreference
             holder.getTitleView().setText(mEntries[position]);
             TextView summaryView = (TextView) holder.getContainer()
                     .findViewById(android.R.id.summary);
-            if (summaryView != null && mSummaries != null) {
-                summaryView.setText(mSummaries[position]);
-                summaryView.setVisibility(View.VISIBLE);
+            if (summaryView != null) {
+                if (mSummaries != null && !TextUtils.isEmpty(mSummaries[position])) {
+                    summaryView.setText(mSummaries[position]);
+                    summaryView.setVisibility(View.VISIBLE);
+                } else {
+                    summaryView.setVisibility(View.GONE);
+                }
             }
         }
 

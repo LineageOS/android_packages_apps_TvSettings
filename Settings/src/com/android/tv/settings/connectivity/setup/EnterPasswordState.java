@@ -149,8 +149,8 @@ public class EnterPasswordState implements State {
                 }
 
                 @Override
-                protected void onEditingModeChange(ViewHolder vh, boolean editing,
-                        boolean withTransition) {
+                protected void onEditingModeChange(
+                        ViewHolder vh, boolean editing, boolean withTransition) {
                     super.onEditingModeChange(vh, editing, withTransition);
                     updatePasswordInputObfuscation();
                 }
@@ -222,10 +222,12 @@ public class EnterPasswordState implements State {
         }
 
         private void updatePasswordInputObfuscation() {
-            mTextInput.setInputType(InputType.TYPE_CLASS_TEXT
-                    | (mCheckBox.isChecked()
-                    ? InputType.TYPE_TEXT_VARIATION_PASSWORD
-                    : InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD));
+            if (mTextInput != null && mCheckBox != null) {
+                mTextInput.setInputType(InputType.TYPE_CLASS_TEXT
+                        | (mCheckBox.isChecked()
+                        ? InputType.TYPE_TEXT_VARIATION_PASSWORD
+                        : InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD));
+            }
         }
 
 
