@@ -115,6 +115,25 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
                         == View.LAYOUT_DIRECTION_RTL) {
                 titleView.setGravity(Gravity.RIGHT);
             }
+            if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+                ViewGroup decor = view.findViewById(R.id.decor_title_container);
+                if (decor != null) {
+                    decor.setOutlineProvider(null);
+                    decor.setBackgroundResource(R.color.tp_preference_panel_background_color);
+                }
+            }
+            removeAnimationClipping(view);
+        }
+    }
+
+    protected void removeAnimationClipping(View v) {
+        if (v instanceof ViewGroup) {
+            ((ViewGroup) v).setClipChildren(false);
+            ((ViewGroup) v).setClipToPadding(false);
+            for (int index = 0; index < ((ViewGroup) v).getChildCount(); index++) {
+                View child = ((ViewGroup) v).getChildAt(index);
+                removeAnimationClipping(child);
+            }
         }
     }
 
