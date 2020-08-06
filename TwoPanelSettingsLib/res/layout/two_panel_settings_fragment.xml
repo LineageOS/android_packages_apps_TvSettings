@@ -72,13 +72,17 @@
                 android:id="@+id/frame1_container"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
                 <FrameLayout
                     android:id="@+id/frame1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingStart="@dimen/pane_basic_padding_start"
-                    android:paddingEnd="@dimen/preference_pane_padding_end" />
+                    android:paddingEnd="@dimen/preference_pane_padding_end"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"/>
                 <FrameLayout
                     android:id="@+id/frame1_overlay"
                     android:layout_width="match_parent"
@@ -92,13 +96,17 @@
                 android:id="@+id/frame2_container"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
                 <FrameLayout
                     android:id="@+id/frame2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingStart="@dimen/pane_basic_padding_start"
-                    android:paddingEnd="@dimen/preference_pane_padding_end" />
+                    android:paddingEnd="@dimen/preference_pane_padding_end"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"/>
                 <FrameLayout
                     android:id="@+id/frame2_overlay"
                     android:layout_width="match_parent"
@@ -111,13 +119,17 @@
             <FrameLayout
                 android:id="@+id/frame3_container"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
                 <FrameLayout
                     android:id="@+id/frame3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingStart="@dimen/pane_basic_padding_start"
-                    android:paddingEnd="@dimen/preference_pane_padding_end" />
+                    android:paddingEnd="@dimen/preference_pane_padding_end"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"/>
                 <FrameLayout
                     android:id="@+id/frame3_overlay"
                     android:layout_width="match_parent"
@@ -131,13 +143,17 @@
                 android:id="@+id/frame4_container"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
                 <FrameLayout
                     android:id="@+id/frame4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingStart="@dimen/pane_basic_padding_start"
-                    android:paddingEnd="@dimen/preference_pane_padding_end" />
+                    android:paddingEnd="@dimen/preference_pane_padding_end"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"/>
                 <FrameLayout
                     android:id="@+id/frame4_overlay"
                     android:layout_width="match_parent"
@@ -151,13 +167,17 @@
                 android:id="@+id/frame5_container"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
                 <FrameLayout
                     android:id="@+id/frame5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingStart="@dimen/pane_basic_padding_start"
-                    android:paddingEnd="@dimen/preference_pane_padding_end" />
+                    android:paddingEnd="@dimen/preference_pane_padding_end"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"/>
                 <FrameLayout
                     android:id="@+id/frame5_overlay"
                     android:layout_width="match_parent"
@@ -171,13 +191,17 @@
                 android:id="@+id/frame6_container"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
                 <FrameLayout
                     android:id="@+id/frame6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingStart="@dimen/pane_basic_padding_start"
-                    android:paddingEnd="@dimen/preference_pane_padding_end" />
+                    android:paddingEnd="@dimen/preference_pane_padding_end"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"/>
                 <FrameLayout
                     android:id="@+id/frame6_overlay"
                     android:layout_width="match_parent"
@@ -191,13 +215,17 @@
                 android:id="@+id/frame7_container"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
                 <FrameLayout
                     android:id="@+id/frame7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingStart="@dimen/pane_basic_padding_start"
-                    android:paddingEnd="@dimen/preference_pane_padding_end" />
+                    android:paddingEnd="@dimen/preference_pane_padding_end"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"/>
                 <FrameLayout
                     android:id="@+id/frame7_overlay"
                     android:layout_width="match_parent"
@@ -211,13 +239,17 @@
                 android:id="@+id/frame8_container"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
                 <FrameLayout
                     android:id="@+id/frame8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingStart="@dimen/pane_basic_padding_start"
-                    android:paddingEnd="@dimen/preference_pane_padding_end" />
+                    android:paddingEnd="@dimen/preference_pane_padding_end"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"/>
                 <FrameLayout
                     android:id="@+id/frame8_overlay"
                     android:layout_width="match_parent"
@@ -231,13 +263,17 @@
                 android:id="@+id/frame9_container"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
                 <FrameLayout
                     android:id="@+id/frame9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingStart="@dimen/pane_basic_padding_start"
-                    android:paddingEnd="@dimen/preference_pane_padding_end" />
+                    android:paddingEnd="@dimen/preference_pane_padding_end"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"/>
                 <FrameLayout
                     android:id="@+id/frame9_overlay"
                     android:layout_width="match_parent"
@@ -251,13 +287,17 @@
                 android:id="@+id/frame10_container"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
                 <FrameLayout
                     android:id="@+id/frame10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingStart="@dimen/pane_basic_padding_start"
-                    android:paddingEnd="@dimen/preference_pane_padding_end" />
+                    android:paddingEnd="@dimen/preference_pane_padding_end"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"/>
                 <FrameLayout
                     android:id="@+id/frame10_overlay"
                     android:layout_width="match_parent"
