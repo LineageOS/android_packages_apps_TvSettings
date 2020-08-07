@@ -219,7 +219,7 @@ public final class SlicePreferencesUtil {
             if (infoSummary != null) {
                 b.putCharSequence(EXTRA_PREFERENCE_INFO_SUMMARY, infoSummary);
             }
-            if (infoImage != null || infoText != null) {
+            if (infoImage != null || infoText != null || infoSummary != null) {
                 preference.setFragment(InfoFragment.class.getCanonicalName());
             }
         }
