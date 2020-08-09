@@ -18,6 +18,7 @@ package com.android.tv.twopanelsettings.slices;
 
 
 import android.app.Fragment;
+import android.content.res.Resources;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -55,32 +56,55 @@ public class InfoFragment extends Fragment {
         String summary = getArguments().getString(SlicesConstants.EXTRA_PREFERENCE_INFO_SUMMARY);
         boolean hasStatus = getArguments().getBoolean(EXTRA_INFO_HAS_STATUS);
         boolean status = getArguments().getBoolean(SlicesConstants.EXTRA_PREFERENCE_INFO_STATUS);
+
+        Resources res = getResources();
+        ImageView infoImage = view.findViewById(R.id.info_image);
+        ImageView infoIcon = view.findViewById(R.id.info_title_icon);
+        TextView infoTitle = view.findViewById(R.id.info_title);
+        TextView infoStatus = view.findViewById(R.id.info_status);
+        TextView infoSummary = view.findViewById(R.id.info_summary);
+
         if (image != null) {
-            ((ImageView) view.findViewById(R.id.info_image))
-                    .setImageDrawable(image.loadDrawable(getContext()));
+            infoImage.setImageDrawable(image.loadDrawable(getContext()));
         }
         if (titleIcon != null) {
-            ((ImageView) view.findViewById(R.id.info_title_icon))
-                    .setImageDrawable(titleIcon.loadDrawable(getContext()));
+            infoIcon.setImageDrawable(titleIcon.loadDrawable(getContext()));
+            infoIcon.setVisibility(View.VISIBLE);
+        } else {
+            infoIcon.setVisibility(View.GONE);
         }
         if (title != null) {
-            ((TextView) view.findViewById(R.id.info_title)).setText(title);
-        }
-        if (summary != null) {
-            ((TextView) view.findViewById(R.id.info_summary)).setText(summary);
-        }
-        TextView statusView = view.findViewById(R.id.info_status);
-        if (hasStatus) {
-            statusView.setVisibility(View.VISIBLE);
-            if (status) {
-                statusView.setTextColor(getResources().getColor(R.color.info_status_on));
-                statusView.setText(getString(R.string.info_status_on));
+            infoTitle.setText(title);
+            infoTitle.setVisibility(View.VISIBLE);
+            if (hasStatus) {
+                infoStatus.setVisibility(View.VISIBLE);
+                if (infoIcon.getVisibility() == View.VISIBLE) {
+                    infoTitle.setMaxWidth(
+                            res.getDimensionPixelSize(
+                                    R.dimen.settings_info_fragment_title_text_max_width_short));
+                } else {
+                    infoTitle.setMaxWidth(
+                            res.getDimensionPixelSize(
+                                    R.dimen.settings_info_fragment_title_text_max_width_long));
+                }
+                if (status) {
+                    infoStatus.setTextColor(getResources().getColor(R.color.info_status_on));
+                    infoStatus.setText(getString(R.string.info_status_on));
+                } else {
+                    infoStatus.setTextColor(getResources().getColor(R.color.info_status_off));
+                    infoStatus.setText(getString(R.string.info_status_off));
+                }
             } else {
-                statusView.setTextColor(getResources().getColor(R.color.info_status_off));
-                statusView.setText(getString(R.string.info_status_off));
+                infoStatus.setVisibility(View.GONE);
+                // Reset maxWidth to allow the TextView to utilize the full width of its container.
+                infoTitle.setMaxWidth(Integer.MAX_VALUE);
             }
         } else {
-            statusView.setVisibility(View.GONE);
+            infoTitle.setVisibility(View.GONE);
+            infoStatus.setVisibility(View.GONE);
+        }
+        if (summary != null) {
+            infoSummary.setText(summary);
         }
     }
 }
