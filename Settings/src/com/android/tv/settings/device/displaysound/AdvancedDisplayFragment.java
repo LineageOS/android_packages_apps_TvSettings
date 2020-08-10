@@ -18,7 +18,6 @@ package com.android.tv.settings.device.displaysound;
 
 import static android.provider.Settings.Secure.MINIMAL_POST_PROCESSING_ALLOWED;
 
-import android.content.ContentResolver;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -30,8 +29,6 @@ import androidx.preference.SwitchPreference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.util.SliceUtils;
-import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 /**
  * The "Advanced display settings" screen in TV Settings.
@@ -39,7 +36,6 @@ import com.android.tv.twopanelsettings.slices.SlicePreference;
 @Keep
 public class AdvancedDisplayFragment extends SettingsPreferenceFragment {
     private static final String KEY_GAME_MODE = "game_mode";
-    private static final String KEY_CEC = "cec";
 
     @Override
     public int getMetricsCategory() {
@@ -51,14 +47,6 @@ public class AdvancedDisplayFragment extends SettingsPreferenceFragment {
         setPreferencesFromResource(R.xml.advanced_display, null);
         SwitchPreference gameModePreference = findPreference(KEY_GAME_MODE);
         gameModePreference.setChecked(getGameModeStatus() == 1);
-        updateCecPreference();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        // Update the subtitle of CEC setting when navigating back to this page.
-        updateCecPreference();
     }
 
     @Override
@@ -78,22 +66,5 @@ public class AdvancedDisplayFragment extends SettingsPreferenceFragment {
     private void setGameModeStatus(int state) {
         Settings.Secure.putInt(getActivity().getContentResolver(), MINIMAL_POST_PROCESSING_ALLOWED,
                 state);
-    }
-
-    private void updateCecPreference() {
-        Preference cecPreference = findPreference(KEY_CEC);
-        if (cecPreference instanceof SlicePreference
-                && SliceUtils.isSliceProviderValid(
-                        getContext(), ((SlicePreference) cecPreference).getUri())) {
-            ContentResolver resolver = getContext().getContentResolver();
-            // Note that default CEC is enabled. You'll find similar retrieval of property in
-            // HdmiControlService.
-            boolean cecEnabled =
-                    Settings.Global.getInt(resolver, Settings.Global.HDMI_CONTROL_ENABLED, 1) != 0;
-            cecPreference.setSummary(cecEnabled ? R.string.enabled : R.string.disabled);
-            cecPreference.setVisible(true);
-        } else {
-            cecPreference.setVisible(false);
-        }
     }
 }
