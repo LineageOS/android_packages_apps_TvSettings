@@ -16,8 +16,15 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:title="@string/device_display_sound">
 
+    <com.android.tv.twopanelsettings.slices.SlicePreference
+        android:key="cec"
+        android:title="@string/hdmi_cec_settings_title"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:uri="@string/cec_settings_slice_uri"
+        custom:isPreferenceVisible="false" />
     <PreferenceCategory
         android:key="display_category"
         android:title="@string/display_category_title" />
