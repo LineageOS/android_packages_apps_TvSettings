@@ -32,10 +32,4 @@
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
         custom:uri="@string/resolution_slice_uri"
         custom:isPreferenceVisible="false" />
-    <com.android.tv.twopanelsettings.slices.SlicePreference
-        android:key="cec"
-        android:title="@string/hdmi_cec_settings_title"
-        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
-        custom:uri="@string/cec_settings_slice_uri"
-        custom:isPreferenceVisible="false" />
 </PreferenceScreen>

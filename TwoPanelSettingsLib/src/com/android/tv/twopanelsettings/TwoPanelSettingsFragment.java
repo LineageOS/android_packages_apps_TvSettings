@@ -519,6 +519,12 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                         navigateToPreviewFragment();
                     }
                 }
+                // TODO(b/163432209): improve NavigationCallback and be more specific here.
+                // Do not consume the KeyEvent for NavigationCallback classes such as date & time
+                // picker.
+                if (prefFragment instanceof NavigationCallback) {
+                    return false;
+                }
                 return true;
             }
             return false;
