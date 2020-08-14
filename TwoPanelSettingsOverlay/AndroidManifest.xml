@@ -122,6 +122,19 @@
             </intent-filter>
                             -->
         </activity>
+        <activity
+            android:name=".connectivity.NetworkRequestDialogActivity"
+            android:theme="@style/Transparent"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=".connectivity.NetworkRequestDialogActivity"
+            android:exported="true"
+            android:permission="android.permission.NETWORK_SETTINGS">
+            <intent-filter>
+                <action android:name="com.android.settings.wifi.action.NETWORK_REQUEST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:clearTaskOnLaunch="true"
              android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
