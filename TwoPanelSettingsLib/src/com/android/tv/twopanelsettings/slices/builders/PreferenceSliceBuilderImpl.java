@@ -244,6 +244,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         private SliceItem mButtonStyleItem;
         private SliceItem mIsEnabledItem;
         private SliceItem mIsSelectableItem;
+        private SliceItem mIsAddingInfoStatusItem;
         private SliceItem mRadioGroupItem;
         private SliceItem mInfoTextItem;
         private SliceItem mInfoImageItem;
@@ -497,7 +498,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         }
 
         public void setAddInfoStatus(boolean addInfoStatus) {
-            mIsSelectableItem = new SliceItem(
+            mIsAddingInfoStatusItem = new SliceItem(
                     addInfoStatus ? 1 : 0, FORMAT_INT, EXTRA_ADD_INFO_STATUS, new String[]{});
         }
 
@@ -653,6 +654,9 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             }
             if (mInfoSummaryItem != null) {
                 b.addItem(mInfoSummaryItem);
+            }
+            if (mIsAddingInfoStatusItem != null) {
+                b.addItem(mIsAddingInfoStatusItem);
             }
             for (int i = 0; i < mEndItems.size(); i++) {
                 Slice item = mEndItems.get(i);
