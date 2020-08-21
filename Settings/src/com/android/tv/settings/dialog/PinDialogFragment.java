@@ -19,7 +19,9 @@ package com.android.tv.settings.dialog;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.app.Dialog;
+import android.app.Fragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
@@ -44,7 +46,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.function.Consumer;
 
-public abstract class PinDialogFragment extends SafeDismissDialogFragment {
+public abstract class PinDialogFragment extends SafeDismissDialogFragment
+        implements DialogInterface.OnDismissListener {
     private static final String TAG = PinDialogFragment.class.getSimpleName();
     private static final boolean DEBUG = false;
 
@@ -196,6 +199,21 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment {
         isPinSet(result -> dispatchOnIsPinSet(result, savedInstanceState, v));
 
         return v;
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+        if (DEBUG) Log.d(TAG, "onDismiss: mRetCode=" + mRetCode);
+
+        boolean result = mRetCode == PIN_DIALOG_RESULT_SUCCESS;
+        Fragment f = getTargetFragment();
+        if (f instanceof ResultListener) {
+            ((ResultListener) f).pinFragmentDone(getTargetRequestCode(), result);
+        } else if (getActivity() instanceof ResultListener) {
+            final ResultListener listener = (ResultListener) getActivity();
+            listener.pinFragmentDone(getTargetRequestCode(), result);
+        }
     }
 
     private void updateWrongPin() {
