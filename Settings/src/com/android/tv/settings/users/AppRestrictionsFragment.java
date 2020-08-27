@@ -839,7 +839,7 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
      * @return UserInfo of the user or null for non-existent user.
      */
     private static UserInfo getExistingUser(UserManager userManager, UserHandle checkUser) {
-        final List<UserInfo> users = userManager.getAliveUsers();
+        final List<UserInfo> users = userManager.getUsers(true /* excludeDying */);
         final int checkUserId = checkUser.getIdentifier();
         for (UserInfo user : users) {
             if (user.id == checkUserId) {
