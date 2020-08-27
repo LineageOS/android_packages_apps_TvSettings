@@ -79,10 +79,14 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     private static final String TAG = "MainFragment";
     private static final String KEY_SUGGESTIONS_LIST = "suggestions";
+    private static final String KEY_OFFLINE_MODE_SUGGESTION = "offline_mode_suggestion";
+    private static final String KEY_OFFLINE_EXIT = "offline_mode_exit";
     @VisibleForTesting
     static final String KEY_ACCOUNTS_AND_SIGN_IN = "accounts_and_sign_in";
     @VisibleForTesting
     static final String KEY_ACCOUNTS_AND_SIGN_IN_SLICE = "accounts_and_sign_in_slice";
+    @VisibleForTesting
+    static final String KEY_ACCOUNTS_AND_SIGN_IN_OFFLINE = "accounts_and_sign_in_offline";
     private static final String KEY_APPLICATIONS = "applications";
     @VisibleForTesting
     static final String KEY_ACCESSORIES = "remotes_and_accessories";
@@ -198,6 +202,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         updateAccountPref();
         updateAccessoryPref();
         updateConnectivity();
+        updateOfflineModeSuggestion();
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
@@ -305,16 +310,6 @@ public class MainFragment extends PreferenceControllerFragment implements
             Preference privacyPref = findPreference(KEY_PRIVACY);
             if (privacyPref != null) {
                 privacyPref.setVisible(true);
-                if (FeatureFactory.getFactory(getContext()).getOfflineFeatureProvider()
-                        .isOfflineMode(getContext())) {
-                    privacyPref.setSummary(R.string.offline_mode_disabled_entry_subtitle);
-                    privacyPref.setEnabled(false);
-                    privacyPref.setSelectable(false);
-                } else {
-                    privacyPref.setSummary(null);
-                    privacyPref.setEnabled(true);
-                    privacyPref.setSelectable(true);
-                }
             }
         }
         mHotwordSwitchController.init(this);
@@ -336,18 +331,6 @@ public class MainFragment extends PreferenceControllerFragment implements
         final Preference networkPref = findPreference(KEY_NETWORK);
         if (networkPref == null) {
             return;
-        }
-        if (FeatureFactory.getFactory(getContext()).getOfflineFeatureProvider()
-                .isOfflineMode(getContext())) {
-            networkPref.setIcon(R.drawable.ic_wifi_signal_off_white);
-            networkPref.setSummary(R.string.offline_mode_disabled_entry_subtitle);
-            networkPref.setEnabled(false);
-            networkPref.setSelectable(false);
-            return;
-        } else {
-            networkPref.setSummary(null);
-            networkPref.setEnabled(true);
-            networkPref.setSelectable(true);
         }
 
         if (mConnectivityListener.isCellConnected()) {
@@ -501,7 +484,10 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     @Override
     public void onSuggestionReady(List<Suggestion> data) {
-        if (data == null || data.size() == 0) {
+        // Suggestion category is handled differently in offline mode
+        if (data == null || data.size() == 0
+                || FeatureFactory.getFactory(getContext())
+                .getOfflineFeatureProvider().isOfflineMode(getContext())) {
             if (mSuggestionsList != null) {
                 getPreferenceScreen().removePreference(mSuggestionsList);
                 mSuggestionsList = null;
@@ -615,7 +601,26 @@ public class MainFragment extends PreferenceControllerFragment implements
         Preference accountsPref = findPreference(KEY_ACCOUNTS_AND_SIGN_IN);
         SlicePreference accountsSlicePref =
                 (SlicePreference) findPreference(KEY_ACCOUNTS_AND_SIGN_IN_SLICE);
+        Preference accountsOffline = findPreference(KEY_ACCOUNTS_AND_SIGN_IN_OFFLINE);
         Intent intent = new Intent(ACTION_ACCOUNTS);
+
+        if (FeatureFactory.getFactory(getContext()).getOfflineFeatureProvider()
+                .isOfflineMode(getContext())) {
+            if (accountsOffline != null) {
+                accountsOffline.setVisible(true);
+            }
+            if (accountsPref != null) {
+                accountsPref.setVisible(false);
+            }
+            if (accountsSlicePref != null) {
+                accountsSlicePref.setVisible(false);
+            }
+            return;
+        } else {
+            if (accountsOffline != null) {
+                accountsOffline.setVisible(false);
+            }
+        }
 
         // If the intent can be handled, use it.
         if (systemIntentIsHandled(getContext(), intent) != null) {
@@ -632,30 +637,9 @@ public class MainFragment extends PreferenceControllerFragment implements
         if (SliceUtils.isSliceProviderValid(getContext(), uri)) {
             accountsPref.setVisible(false);
             accountsSlicePref.setVisible(true);
-            if (FeatureFactory.getFactory(getContext()).getOfflineFeatureProvider()
-                    .isOfflineMode(getContext())) {
-                accountsSlicePref.setSummary(R.string.offline_mode_disabled_entry_subtitle);
-                accountsSlicePref.setEnabled(false);
-                accountsSlicePref.setSelectable(false);
-            } else {
-                accountsSlicePref.setSummary(null);
-                accountsSlicePref.setEnabled(true);
-                accountsSlicePref.setSelectable(true);
-            }
         } else {
             accountsPref.setVisible(true);
             accountsSlicePref.setVisible(false);
-            if (FeatureFactory.getFactory(getContext()).getOfflineFeatureProvider()
-                    .isOfflineMode(getContext())) {
-                accountsPref.setSummary(R.string.offline_mode_disabled_entry_subtitle);
-                accountsPref.setEnabled(false);
-                accountsPref.setSelectable(false);
-                return;
-            } else {
-                // Summary will be handled by the updateAccountPrefInfo() method.
-                accountsPref.setEnabled(true);
-                accountsSlicePref.setSelectable(true);
-            }
             updateAccountPrefInfo();
         }
     }
@@ -681,6 +665,20 @@ public class MainFragment extends PreferenceControllerFragment implements
                             R.plurals.accounts_category_summary, accounts.length, accounts.length));
                 }
             }
+        }
+    }
+
+    @VisibleForTesting
+    void updateOfflineModeSuggestion() {
+        PreferenceCategory offlineModeSuggestion = findPreference(KEY_OFFLINE_MODE_SUGGESTION);
+        if (offlineModeSuggestion == null) {
+            return;
+        }
+        if (FeatureFactory.getFactory(getContext())
+                .getOfflineFeatureProvider().isOfflineMode(getContext())) {
+            offlineModeSuggestion.setVisible(true);
+        } else {
+            offlineModeSuggestion.setVisible(false);
         }
     }
 
@@ -721,6 +719,12 @@ public class MainFragment extends PreferenceControllerFragment implements
                 || (preference.getKey().equals(KEY_CHANNELS_AND_INPUTS)
                         && preference.getIntent() != null)) {
             getContext().startActivity(preference.getIntent());
+            return true;
+        } else if (preference.getKey().equals(KEY_OFFLINE_EXIT)
+                && FeatureFactory.getFactory(getContext())
+                .getOfflineFeatureProvider().isOfflineMode(getContext())) {
+            FeatureFactory.getFactory(getContext())
+                    .getOfflineFeatureProvider().startOfflineExitActivity(getContext());
             return true;
         } else {
             return super.onPreferenceTreeClick(preference);
