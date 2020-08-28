@@ -24,6 +24,7 @@ import androidx.preference.Preference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.FeatureFactory;
 import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
@@ -40,6 +41,11 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
         setPreferencesFromResource(R.xml.privacy, null);
+        findPreference(KEY_ACCOUNT_SETTINGS_CATEGORY).setVisible(false);
+        if (FeatureFactory.getFactory(getContext()).getOfflineFeatureProvider()
+                .isOfflineMode(getContext())) {
+            return;
+        }
         Preference assistantSlicePreference = findPreference(KEY_ASSISTANT);
         Preference purchasesSlicePreference = findPreference(KEY_PURCHASES);
         if (assistantSlicePreference instanceof SlicePreference
