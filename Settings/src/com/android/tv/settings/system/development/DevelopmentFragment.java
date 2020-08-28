@@ -70,10 +70,14 @@ import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.settingslib.development.SystemPropPoker;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.system.development.audio.AudioDebug;
+import com.android.tv.settings.system.development.audio.AudioMetrics;
+import com.android.tv.settings.system.development.audio.AudioReaderException;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Displays preferences for application developers.
@@ -111,6 +115,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private static final String DISABLE_OVERLAYS_KEY = "disable_overlays";
     private static final String SIMULATE_COLOR_SPACE = "simulate_color_space";
     private static final String USB_AUDIO_KEY = "usb_audio";
+    private static final String RECORD_AUDIO_KEY = "record_audio";
+    private static final String PLAY_RECORDED_AUDIO_KEY = "play_recorded_audio";
+    private static final String SAVE_RECORDED_AUDIO_KEY = "save_recorded_audio";
+    private static final String TIME_TO_START_READ_KEY = "time_to_start_read";
+    private static final String TIME_TO_VALID_AUDIO_KEY = "time_to_valid_audio";
+    private static final String EMPTY_AUDIO_DURATION_KEY = "empty_audio_duration";
     private static final String FORCE_MSAA_KEY = "force_msaa";
     private static final String TRACK_FRAME_TIME_KEY = "track_frame_time";
     private static final String SHOW_NON_RECTANGULAR_CLIP_KEY = "show_non_rect_clip";
@@ -220,6 +230,14 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private ListPreference mSimulateColorSpace;
 
     private SwitchPreference mUSBAudio;
+
+    private SwitchPreference mRecordAudio;
+    private Preference mPlayRecordedAudio;
+    private Preference mSaveAudio;
+    private Preference mTimeToStartRead;
+    private Preference mTimeToValidAudio;
+    private Preference mEmptyAudioDuration;
+
     private SwitchPreference mImmediatelyDestroyActivities;
 
     private ListPreference mAppProcessLimit;
@@ -238,6 +256,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private final HashSet<Preference> mDisabledPrefs = new HashSet<>();
 
     private boolean mUnavailable;
+
+    private AudioDebug mAudioDebug;
 
     public static DevelopmentFragment newInstance() {
         return new DevelopmentFragment();
@@ -265,6 +285,10 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mWifiManager = (WifiManager) getActivity().getSystemService(Context.WIFI_SERVICE);
 
         mContentResolver = getActivity().getContentResolver();
+
+        mAudioDebug = new AudioDebug(getActivity(),
+                (boolean successful) -> onAudioRecorded(successful),
+                (AudioMetrics.Data data) -> updateAudioRecordingMetrics(data));
 
         super.onCreate(icicle);
     }
@@ -378,6 +402,17 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mOpenGLTraces = addListPreference(OPENGL_TRACES_KEY);
         mSimulateColorSpace = addListPreference(SIMULATE_COLOR_SPACE);
         mUSBAudio = findAndInitSwitchPref(USB_AUDIO_KEY);
+        mRecordAudio = findAndInitSwitchPref(RECORD_AUDIO_KEY);
+        mPlayRecordedAudio = findPreference(PLAY_RECORDED_AUDIO_KEY);
+        mPlayRecordedAudio.setVisible(false);
+        mSaveAudio = findPreference(SAVE_RECORDED_AUDIO_KEY);
+        mSaveAudio.setVisible(false);
+        mTimeToStartRead = findPreference(TIME_TO_START_READ_KEY);
+        mTimeToStartRead.setVisible(false);
+        mTimeToValidAudio = findPreference(TIME_TO_VALID_AUDIO_KEY);
+        mTimeToValidAudio.setVisible(false);
+        mEmptyAudioDuration = findPreference(EMPTY_AUDIO_DURATION_KEY);
+        mEmptyAudioDuration.setVisible(false);
         mForceResizable = findAndInitSwitchPref(FORCE_RESIZABLE_KEY);
 
         mImmediatelyDestroyActivities = (SwitchPreference) findPreference(
@@ -544,6 +579,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         if (mColorModePreference != null) {
             mColorModePreference.stopListening();
         }
+
+        mAudioDebug.cancelRecording();
     }
 
     @Override
@@ -846,20 +883,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         if (Settings.Global.getInt(mContentResolver, Settings.Global.ADB_ENABLED, 0) == 0) {
             return false;
         }
-        if (Settings.Global.getInt(mContentResolver,
-                Settings.Global.PACKAGE_VERIFIER_ENABLE, 1) == 0) {
-            return false;
-        } else {
-            final PackageManager pm = getActivity().getPackageManager();
-            final Intent verification = new Intent(Intent.ACTION_PACKAGE_NEEDS_VERIFICATION);
-            verification.setType(PACKAGE_MIME_TYPE);
-            verification.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            final List<ResolveInfo> receivers = pm.queryBroadcastReceivers(verification, 0);
-            if (receivers.size() == 0) {
-                return false;
-            }
-        }
-        return true;
+        final PackageManager pm = getActivity().getPackageManager();
+        final Intent verification = new Intent(Intent.ACTION_PACKAGE_NEEDS_VERIFICATION);
+        verification.setType(PACKAGE_MIME_TYPE);
+        verification.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        final List<ResolveInfo> receivers = pm.queryBroadcastReceivers(verification, 0);
+        return !receivers.isEmpty();
     }
 
     private boolean showVerifierSetting() {
@@ -887,11 +916,14 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 0);
     }
 
-    private void captureBugReport() {
-        Toast.makeText(getActivity(), R.string.capturing_bugreport, Toast.LENGTH_SHORT).show();
+    /**
+     * Take bug report and show notification.
+     * @param activity
+     */
+    public static void captureBugReport(Activity activity) {
+        Toast.makeText(activity, R.string.capturing_bugreport, Toast.LENGTH_SHORT).show();
         try {
-            ActivityManager.getService()
-                    .requestBugReport(ActivityManager.BUGREPORT_OPTION_FULL);
+            ActivityManager.getService().requestFullBugReport();
         } catch (RemoteException e) {
             Log.e(TAG, "Error taking bugreport", e);
         }
@@ -1189,6 +1221,57 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 mUSBAudio.isChecked() ? 1 : 0);
     }
 
+    private void writeRecordAudioOptions() {
+        if (mRecordAudio.isChecked()) {
+            try {
+                mAudioDebug.startRecording();
+            } catch (AudioReaderException e) {
+                mRecordAudio.setChecked(false);
+                Toast errorToast = Toast.makeText(getContext(),
+                        getString(R.string.show_audio_recording_start_failed), Toast.LENGTH_SHORT);
+                errorToast.show();
+                Log.e(TAG, "Unable to start recording audio from the microphone", e);
+            }
+        } else {
+            mAudioDebug.stopRecording();
+        }
+    }
+
+    /** Called when audio recording is finished. Updates UI component states. */
+    private void onAudioRecorded(boolean successful) {
+        mPlayRecordedAudio.setVisible(successful);
+        mSaveAudio.setVisible(successful);
+        mRecordAudio.setChecked(false);
+
+        if (!successful) {
+            Toast errorToast = Toast.makeText(getContext(),
+                    getString(R.string.show_audio_recording_failed), Toast.LENGTH_SHORT);
+            errorToast.show();
+        }
+    }
+
+    /** Updates displayed audio recording metrics */
+    private void updateAudioRecordingMetrics(AudioMetrics.Data data) {
+        updateAudioRecordingMetric(mTimeToStartRead, data.timeToStartReadMs);
+        updateAudioRecordingMetric(mTimeToValidAudio, data.timeToValidAudioMs);
+        updateAudioRecordingMetric(mEmptyAudioDuration, data.emptyAudioDurationMs);
+    }
+
+    private static void updateAudioRecordingMetric(Preference preference, Optional<Long> ts) {
+        ts.ifPresent(x -> preference.setVisible(true));
+        if (preference.isVisible()) {
+            preference.setSummary(AudioMetrics.msTimestampToString(ts));
+        }
+    }
+
+    private void playRecordedAudio() {
+        mAudioDebug.playAudio();
+    }
+
+    private void saveRecordedAudio() {
+        mAudioDebug.writeAudioToFile();
+    }
+
     private void updateForceResizableOptions() {
         updateSwitchPreference(mForceResizable,
                 Settings.Global.getInt(mContentResolver,
@@ -1228,12 +1311,14 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     }
 
     private void updateWifiVerboseLoggingOptions() {
-        boolean enabled = mWifiManager.getVerboseLoggingLevel() > 0;
+        boolean enabled = mWifiManager != null && mWifiManager.isVerboseLoggingEnabled();
         updateSwitchPreference(mWifiVerboseLogging, enabled);
     }
 
     private void writeWifiVerboseLoggingOptions() {
-        mWifiManager.enableVerboseLogging(mWifiVerboseLogging.isChecked() ? 1 : 0);
+        if (mWifiManager != null) {
+            mWifiManager.setVerboseLoggingEnabled(mWifiVerboseLogging.isChecked());
+        }
     }
 
     private void updateMobileDataAlwaysOnOptions() {
@@ -1255,7 +1340,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             int index = 0;
             long functions = manager.getCurrentFunctions();
             for (int i = 0; i < titles.length; i++) {
-                if ((functions | UsbManager.usbFunctionsFromString(values[i])) != 0) {
+                if ((functions & UsbManager.usbFunctionsFromString(values[i])) != 0) {
                     index = i;
                     break;
                 }
@@ -1267,7 +1352,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     }
 
     private void writeUsbConfigurationOption(Object newValue) {
-        UsbManager manager = (UsbManager)getActivity().getSystemService(Context.USB_SERVICE);
+        UsbManager manager = (UsbManager) getActivity().getSystemService(Context.USB_SERVICE);
         String function = newValue.toString();
         manager.setCurrentFunctions(UsbManager.usbFunctionsFromString(function));
     }
@@ -1472,7 +1557,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 setPrefsEnabledState(false);
             }
         } else if (preference == mBugreport) {
-            captureBugReport();
+            captureBugReport(this.getActivity());
         } else if (preference == mEnableAdb) {
             if (mEnableAdb.isChecked()) {
                 // Pass to super to launch the dialog, then uncheck until the dialog
@@ -1556,6 +1641,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             writeUSBAudioOptions();
         } else if (preference == mForceResizable) {
             writeForceResizableOptions();
+        } else if (preference == mRecordAudio) {
+            writeRecordAudioOptions();
+        } else if (preference == mSaveAudio) {
+            saveRecordedAudio();
+        } else if (preference == mPlayRecordedAudio) {
+            playRecordedAudio();
         } else {
             return super.onPreferenceTreeClick(preference);
         }
