@@ -407,7 +407,6 @@ public abstract class PinDialogFragment extends SafeDismissDialogFragment
         String result = "";
         try {
             for (PinNumberPicker pnp : mPickers) {
-                pnp.updateText();
                 result += pnp.getValue();
             }
         } catch (IllegalStateException e) {
