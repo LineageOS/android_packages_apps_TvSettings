@@ -17,6 +17,7 @@
 package com.android.tv.settings.device;
 
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
 import android.app.Fragment;
 import android.app.tvsettings.TvSettingsEnums;
@@ -25,10 +26,12 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.media.AudioManager;
 import android.media.tv.TvInputInfo;
 import android.media.tv.TvInputManager;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -40,6 +43,7 @@ import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
 import androidx.leanback.preference.LeanbackSettingsFragment;
 import androidx.preference.Preference;
+import androidx.preference.TwoStatePreference;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.applications.DefaultAppInfo;
@@ -72,13 +76,16 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     private static final String KEY_USAGE = "usageAndDiag";
     private static final String KEY_INPUTS = "inputs";
     private static final String KEY_SOUNDS = "sound_effects";
+    private static final String KEY_SOUNDS_SWITCH = "sound_effects_switch";
     private static final String KEY_GOOGLE_SETTINGS = "google_settings";
     private static final String KEY_HOME_SETTINGS = "home";
     private static final String KEY_REBOOT = "reboot";
 
     private Preference mSoundsPref;
+    private TwoStatePreference mSoundsSwitchPref;
     private boolean mInputSettingNeeded;
     private PackageManager mPm;
+    private AudioManager mAudioManager;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -88,6 +95,11 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
             setPreferencesFromResource(R.xml.device, null);
         }
         mSoundsPref = findPreference(KEY_SOUNDS);
+        mSoundsSwitchPref = findPreference(KEY_SOUNDS_SWITCH);
+        if (mSoundsSwitchPref != null) {
+            mSoundsSwitchPref.setChecked(getSoundEffectsEnabled());
+        }
+
         final Preference inputPref = findPreference(KEY_INPUTS);
         if (inputPref != null) {
             inputPref.setVisible(mInputSettingNeeded);
@@ -109,6 +121,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
                 }
             }
         }
+        mAudioManager = getContext().getSystemService(AudioManager.class);
         super.onCreate(savedInstanceState);
     }
 
@@ -147,6 +160,13 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
             case KEY_REBOOT:
                 logEntrySelected(TvSettingsEnums.SYSTEM_REBOOT);
                 break;
+            case KEY_SOUNDS_SWITCH:
+                if (mSoundsSwitchPref != null) {
+                    logToggleInteracted(TvSettingsEnums.DISPLAY_SOUND_SYSTEM_SOUNDS,
+                            mSoundsSwitchPref.isChecked());
+                    setSoundEffectsEnabled(mSoundsSwitchPref.isChecked());
+                }
+                break;
         }
         return super.onPreferenceTreeClick(preference);
     }
@@ -172,6 +192,21 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     @Override
     public int getMetricsCategory() {
         return MetricsEvent.SETTINGS_TV_DEVICE_CATEGORY;
+    }
+
+    public boolean getSoundEffectsEnabled() {
+        return Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.SOUND_EFFECTS_ENABLED, 1) != 0;
+    }
+
+    private void setSoundEffectsEnabled(boolean enabled) {
+        if (enabled) {
+            mAudioManager.loadSoundEffects();
+        } else {
+            mAudioManager.unloadSoundEffects();
+        }
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.SOUND_EFFECTS_ENABLED, enabled ? 1 : 0);
     }
 
     private void hideIfIntentUnhandled(Preference preference) {
