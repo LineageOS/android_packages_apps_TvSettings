@@ -663,8 +663,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             boolean scrollsToPreview =
                     isRTL() ? mScrollView.getScrollX() >= mMaxScrollX - panelWidth * index
                             : mScrollView.getScrollX() <= panelWidth * index;
-            boolean hasPreviewFragment = fragmentToBecomePreviewPanel != null
-                    && !(fragmentToBecomePreviewPanel instanceof DummyFragment);
+            boolean hasPreviewFragmentWithOverlay = fragmentToBecomePreviewPanel != null
+                    && !(fragmentToBecomePreviewPanel instanceof DummyFragment)
+                    && !(fragmentToBecomePreviewPanel instanceof InfoFragment);
             if (smoothScroll) {
                 int animationEnd = isRTL() ? mMaxScrollX - panelWidth * index : panelWidth * index;
                 distanceToScrollToRight = animationEnd - mScrollView.getScrollX();
@@ -676,7 +677,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 slideAnim.start();
                 // Color animation
                 if (scrollsToPreview) {
-                    previewPanelOverlay.setAlpha(hasPreviewFragment ? 1f : 0f);
+                    previewPanelOverlay.setAlpha(hasPreviewFragmentWithOverlay ? 1f : 0f);
                     ObjectAnimator colorAnim = ObjectAnimator.ofFloat(scrollToPanelOverlay, "alpha",
                             scrollToPanelOverlay.getAlpha(), 0f);
                     colorAnim.setAutoCancel(true);
@@ -685,7 +686,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 } else {
                     scrollToPanelOverlay.setAlpha(0f);
                     ObjectAnimator colorAnim = ObjectAnimator.ofFloat(previewPanelOverlay, "alpha",
-                            previewPanelOverlay.getAlpha(), hasPreviewFragment ? 1f : 0f);
+                            previewPanelOverlay.getAlpha(),
+                            hasPreviewFragmentWithOverlay ? 1f : 0f);
                     colorAnim.setAutoCancel(true);
                     colorAnim.setDuration(PANEL_ANIMATION_MS);
                     colorAnim.start();
@@ -695,7 +697,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 distanceToScrollToRight = scrollToX - mScrollView.getScrollX();
                 mScrollView.scrollTo(scrollToX, 0);
                 scrollToPanelOverlay.setAlpha(0f);
-                previewPanelOverlay.setAlpha(hasPreviewFragment ? 1f : 0f);
+                previewPanelOverlay.setAlpha(hasPreviewFragmentWithOverlay ? 1f : 0f);
             }
             if (fragmentToBecomeMainPanel != null && fragmentToBecomeMainPanel.getView() != null) {
                 fragmentToBecomeMainPanel.getView().requestFocus();
