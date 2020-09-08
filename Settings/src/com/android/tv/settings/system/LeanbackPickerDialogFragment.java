@@ -29,11 +29,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.leanback.preference.LeanbackPreferenceDialogFragment;
+import androidx.leanback.preference.LeanbackSettingsFragment;
 import androidx.leanback.widget.picker.DatePicker;
+import androidx.leanback.widget.picker.Picker;
 import androidx.leanback.widget.picker.TimePicker;
 import androidx.preference.DialogPreference;
 
 import com.android.tv.settings.R;
+import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 import java.util.Calendar;
 
@@ -43,7 +46,8 @@ import java.util.Calendar;
  * that's clicked. Launching of these two fragments is done inside
  * {@link com.android.tv.settings.BaseSettingsFragment#onPreferenceDisplayDialog}.
  */
-public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragment {
+public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragment implements
+        TwoPanelSettingsFragment.NavigationCallback {
 
     private static final String EXTRA_PICKER_TYPE = "LeanbackPickerDialogFragment.PickerType";
     private static final String TYPE_DATE = "date";
@@ -52,9 +56,11 @@ public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragme
 
     private CharSequence mDialogTitle;
     private Calendar mCalendar;
+    private Picker mPicker;
 
     /**
      * Generated a new DialogFragment displaying a Leanback DatePicker widget.
+     *
      * @param key The preference key starting this DialogFragment.
      * @return The fragment to be started displaying a DatePicker widget for setting date.
      */
@@ -70,6 +76,7 @@ public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragme
 
     /**
      * Generated a new DialogFragment displaying a Leanback TimePicker widget.
+     *
      * @param key The preference key starting this DialogFragment.
      * @return The fragment to be started displaying a TimePicker widget for setting time.
      */
@@ -104,7 +111,7 @@ public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragme
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+            Bundle savedInstanceState) {
         final String pickerType = getArguments().getString(EXTRA_PICKER_TYPE);
 
         final TypedValue tv = new TypedValue();
@@ -121,7 +128,10 @@ public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragme
         if (pickerType.equals(TYPE_DATE)) {
             styledInflater.inflate(R.layout.date_picker_widget, pickerContainer, true);
             DatePicker datePicker = pickerContainer.findViewById(R.id.date_picker);
-            datePicker.setActivated(true);
+            mPicker = datePicker;
+            if (getParentFragment() instanceof LeanbackSettingsFragment) {
+                datePicker.setActivated(true);
+            }
             datePicker.setOnClickListener(v -> {
                 // Setting the new system date
                 long whenMillis = datePicker.getDate();
@@ -129,8 +139,11 @@ public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragme
                 ManualTimeSuggestion manualTimeSuggestion = TimeDetector.createManualTimeSuggestion(
                         whenMillis, "Settings: Set date");
                 timeDetector.suggestManualTime(manualTimeSuggestion);
-                // Finish the fragment/activity when clicked.
-                if (!getFragmentManager().popBackStackImmediate()) {
+                // a) Two Panel: Navigate back, setActivated(false) in the callback
+                // b) Side Panel: Finish the fragment/activity when clicked.
+                if (getParentFragment() instanceof TwoPanelSettingsFragment) {
+                    ((TwoPanelSettingsFragment) getParentFragment()).navigateBack();
+                } else if (!getFragmentManager().popBackStackImmediate()) {
                     getActivity().finish();
                 }
             });
@@ -138,7 +151,10 @@ public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragme
         } else {
             styledInflater.inflate(R.layout.time_picker_widget, pickerContainer, true);
             TimePicker timePicker = pickerContainer.findViewById(R.id.time_picker);
-            timePicker.setActivated(true);
+            if (getParentFragment() instanceof LeanbackSettingsFragment) {
+                timePicker.setActivated(true);
+            }
+            mPicker = timePicker;
             timePicker.setOnClickListener(v -> {
                 // Setting the new system time
                 mCalendar.set(Calendar.HOUR_OF_DAY, timePicker.getHour());
@@ -151,9 +167,11 @@ public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragme
                 ManualTimeSuggestion manualTimeSuggestion = TimeDetector.createManualTimeSuggestion(
                         whenMillis, "Settings: Set time");
                 timeDetector.suggestManualTime(manualTimeSuggestion);
-
-                // Finish the fragment/activity when clicked.
-                if (!getFragmentManager().popBackStackImmediate()) {
+                // a) Two Panel: Navigate back, setActivated(false) in the callback.
+                // b) Side Panel: Finish the fragment/activity when clicked.
+                if (getParentFragment() instanceof TwoPanelSettingsFragment) {
+                    ((TwoPanelSettingsFragment) getParentFragment()).navigateBack();
+                } else if (!getFragmentManager().popBackStackImmediate()) {
                     getActivity().finish();
                 }
             });
@@ -165,5 +183,27 @@ public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragme
             titleView.setText(title);
         }
         return view;
+    }
+
+    @Override
+    public boolean canNavigateBackOnDPAD() {
+        if (mPicker.isActivated() && mPicker.hasFocus()) {
+            if (mPicker.getSelectedColumn() == 0) {
+                return true;
+            }
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public void onNavigateToPreview() {
+        mPicker.setActivated(true);
+        mPicker.requestFocus();
+    }
+
+    @Override
+    public void onNavigateBack() {
+        mPicker.setActivated(false);
     }
 }

@@ -32,21 +32,29 @@
     <string name="header_category_personal" msgid="7880053929985150368">"Хувийн"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"Сүлжээнд холбогдох"</string>
     <string name="add_an_account" msgid="2601275122685226096">"Бүртгэл нэмэх"</string>
-    <string name="accounts_category_title" msgid="7899133563558530195">"Бүртгэл, нэвтрэлт"</string>
+    <string name="accounts_category_title" msgid="7286858931427579845">"Бүртгэл, нэвтрэлт"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Бүртгэл алга"</string>
     <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> бүртгэл</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> бүртгэл</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Медиа үйлчилгээ, Туслах, Төлбөр"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Сүлжээ, интернэт"</string>
+    <string name="sound_category_title" msgid="7899816751041939518">"Дуу"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Апп"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Төхөөрөмжийн сонголт"</string>
-    <string name="remotes_and_accessories_category_title" msgid="4162706682994116779">"Удирдлага, дагалдах хэрэгслүүд"</string>
+    <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Удирдлага, дагалдах хэрэгслүүд"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Холбогдсон Bluetooth төхөөрөмж алга"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> дагалдах хэрэгсэл</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> дагалдах хэрэгсэл</item>
     </plurals>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Дэлгэц болон дуу чимээ"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Тусламж болон санал хүсэлт"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Нууцлал"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Төхөөрөмжийн тохиргоо"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Аппын тохиргоо"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Байршил, Ашиглалт болон оношилгоо, Зар"</string>
     <string name="add_account" msgid="7386223854837017129">"Аккаунт нэмэх"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Бүртгэлийг хасах"</string>
     <string name="account_sync" msgid="4315295293211313989">"Синк хийгдсэн программыг сонгоно уу"</string>
@@ -81,15 +89,17 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Идэвхгүй болгосон апп"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Дэлгэц амраагч"</string>
     <string name="device_display" msgid="244634591698925025">"Дэлгэц"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Дэлгэц &amp; дуу чимээ"</string>
     <string name="device_sound" msgid="8616320533559404963">"Дуу"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Өндөр чанартай дуу"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Системийн дуу"</string>
     <string name="device_apps" msgid="2134756632245008919">"Апп"</string>
     <string name="device_storage" msgid="8540243547121791073">"Сан"</string>
-    <string name="device_reset" msgid="8964022725655207224">"Шинэчлэх"</string>
+    <string name="device_reset" msgid="6115282675800077867">"Үйлдвэрийн тохиргоо"</string>
     <string name="device_backup_restore" msgid="4552158624969018687">"Нөөшлөх &amp; сэргээх"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Үйлдвэрээс гарсан төлөвт"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Тааруулалт"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Эрчим хүч хэмнэгч"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Формат сонгох"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Орчин тойрны дуу"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -101,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Автомат: Төхөөрөмжийнхөө дэмждэг гэж мэдээлсэн форматыг ашиглах (санал болгосон)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Байхгүй: Орчин тойрны дууг хэзээ ч бүү ашигла"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Гараар: Ашиглах форматаа сонгох"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Дэлгэц"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Нарийвчилсан дэлгэцийн тохиргоо"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Нарийвчилсан дууны тохиргоо"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Тоглоомын горимыг зөвшөөрөх"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Кеш хийгдсэн өгөгдлийг арилгах уу?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Бүх програмд зориулан кеш хийгдсэн өгөгдлийг арилгах болно."</string>
     <string name="accessories_add" msgid="413764175035531452">"Аксесуар нэмэх"</string>
@@ -129,11 +143,13 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Гол төлөв 0000 эсвэл 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Хослуулах"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Цуцлах"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Санал хүсэлт илгээх"</string>
+    <string name="launch_help" msgid="2607478763131952469">"Тусламжийн төв"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Нэвтрүүлэг"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Огноо &amp; цаг"</string>
     <string name="system_language" msgid="5516099388471974346">"Хэл"</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Гар"</string>
-    <string name="system_keyboard_autofill" msgid="3689510278682933776">"Гар, автоматаар бөглөх хэсэг"</string>
+    <string name="system_keyboard_autofill" msgid="8530944165814838255">"Гар, автоматаар бөглөх хэсэг"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Автоматaaр бөглөх хэсэг"</string>
     <string name="system_home" msgid="2149349845791104094">"Үндсэн дэлгэц"</string>
     <string name="system_search" msgid="3170169128257586925">"Хайх"</string>
@@ -146,12 +162,12 @@
     <string name="system_accessibility" msgid="3081009195560501010">"Хандалт"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"Хөгжүүлэгчийн тохиргоо"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Хоосон"</string>
-    <string name="system_diagnostic" msgid="4099565916831872129">"Хэрэглээ, оношлогоо"</string>
+    <string name="system_diagnostic" msgid="1654842813331919958">"Хэрэглээ, оношилгоо"</string>
     <string name="tutorials" msgid="7880770425872110455">"Практик хичээл"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Системийн шинэчлэлт"</string>
     <string name="about_preference" msgid="9112690446998150670">"Тухай"</string>
     <string name="device_name" msgid="566626587332817733">"Төхөөрөмжийн нэр"</string>
-    <string name="restart_button_label" msgid="911750765086382990">"Дахин эхлүүлэх"</string>
+    <string name="restart_button_label" msgid="2124590135040611899">"Дахин асаах"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Хууль эрх зүйн мэдээлэл"</string>
     <string name="about_legal_license" msgid="4801707286720681261">"Нээлттэй эхийн лиценз"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google-ийн хууль эрх зүйн"</string>
@@ -200,8 +216,16 @@
     <item msgid="2713050260700175954">"Сайн"</item>
     <item msgid="6005053494500517261">"Маш сайн"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC хаяг"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Төхөөрөмжийн MAC-н хаяг"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Санамсаргүй байдлаар эмхэлсэн MAC-н хаяг"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Сигналын хүч"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Нууцлал"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Санамсаргүй байдлаар эмхэлсэн MAC-г ашиглах (өгөгдмөл)"</item>
+    <item msgid="2490415280467390067">"Төхөөрөмжийн MAC-г ашиглах"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Боломжгүй"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Санамсаргүй байдлаар эмхэлсэн MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP хаяг"</string>
     <string name="title_ssid" msgid="255328048344188682">"Wi-Fi сүлжээний нэрийг оруулна уу"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Интернэт холболт"</string>
@@ -322,7 +346,7 @@
     <string name="storage_format_failure" msgid="5619442934314277332">"<xliff:g id="NAME">%1$s</xliff:g>-ыг форматлах боломжгүй байна."</string>
     <string name="storage_wizard_format_as_private_title" msgid="7985715762649933211">"Төхөөрөмжийн санах ойг хэлбэршүүлэх"</string>
     <string name="storage_wizard_format_as_private_description" msgid="6143406934742456154">"Аюулгүй байдлыг хангахын тулд USB драйвыг форматлах хэрэгтэй. Амжилттай форматалсны дараа драйв зөвхөн энэ төхөөрөмж дээр ажиллана. Форматалснаар энэ драйв дээр хадгалсан бүх өгөгдөл устах болно. Өгөгдлөө алдахгүйн тулд нөөцөлж авна уу."</string>
-    <string name="storage_wizard_format_as_public_title" msgid="7838838563997876718">"Арилгах &amp; Форматлах"</string>
+    <string name="storage_wizard_format_as_public_title" msgid="3546915348149438389">"Устгах; хэлбэршүүлэх"</string>
     <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"Хэлбэршүүлсний дараа та энэ USB драйвыг бусад төхөөрөмжид ашиглах боломжтой бөгөөд бүх өгөгдөл устах болно. Юун түрүүнд апп-аа бусад дотоод санах ой руу шилжүүлж, нөөцлөнө үү."</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"USB Драйвыг хэлбэршүүлж байна…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"Хэдэн хором хүлээж болох юм. Драйвыг хөдөлгөхгүй байна уу."</string>
@@ -469,7 +493,7 @@
     <string name="system_stay_awake" msgid="5935117574414511413">"Идэвхтэй байлгах"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP шалгах"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI-н оновчлол"</string>
-    <string name="system_reboot_confirm" msgid="7035370306447878560">"Одоо дахин эхлүүлэх үү?"</string>
+    <string name="system_reboot_confirm" msgid="8346913287126400728">"Одоо дахин асаах уу?"</string>
     <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"Энэ тохиргоог шинэчлэхийн тулд төхөөрөмжөө дахиж асаах шаардлагатай"</string>
     <string name="system_never_check" msgid="2860070727606369055">"Хэзээ ч шалгахгүй"</string>
     <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"Зөвхөн DRM агуулгыг шалгах"</string>
@@ -523,8 +547,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Store-с өөр эх үүсвэрээс татсан апп-уудыг суулгахыг зөвшөөрөх"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Үл мэдэгдэх эх сурвалжийг зөвшөөрөх"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Таны төхөөрөмж болон хувийн мэдээлэл нь үл мэдэгдэх эх сурвалжийн аппын дайралтад эмзэг байдаг. Та эдгээр аппыг ашигласнаар үүсэх аливаа мэдээллийн алдагдал болон таны төхөөрөмжид учирч болох гэмтэл доголдлын хариуцлагыг та өөрөө бүрэн хариуцахаа хүлээн зөвшөөрсөн болно."</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"Апп-уудыг тулгах"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"Хор учруулж болзошгүй апп-уудыг суулгахын өмнө үл зөвшөөрөх буюу анхааруулах"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Хэзээ ч үгүй"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM контент-д зориулсан"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Байнга"</string>
@@ -663,6 +685,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Үндсэн тохиргоог хийгээгүй"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Кешийг арилгах"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Мэдэгдэл"</string>
+    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Нээлттэй эх кодын лиценз"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Зөвшөөрлүүд"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Апп боломжгүй байна"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
@@ -675,8 +698,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Хэзээ эхлүүлэх вэ"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Идэвхгүй байдал дуусмагц дэлгэц амраагч ажиллаж эхэлнэ. Хэрэв дэлгэц амраагч сонгоогүй бол дэлгэц унтрах болно."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Идэвхгүй байдал үргэлжилсний дараах <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Төхөөрөмжийг идэвхгүй болгох"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"Идэвхгүй энэ хугацаа өнгөрсний дараа дэлгэц унтарна."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Дэлгэцийг унтраах"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>-н дараа"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Дэлгэцийг унтраах хүртэл:"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Дэлгэцийг унтраахыг зөвшөөрөх"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Медиаг дахин тоглуулах үеэр"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Одоогоор ямар ч бүртгэл нөөц мэдээллийг хадгалаагүй байна"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Таны Wi-Fi нууц үг, хавчуурга, бусад тохиргоо болон апп-ын мэдээллийг хадгалахаа зогсоож, Google серверүүд дээр байгаа бүх хуулбаруудыг устгах уу?"</string>
@@ -685,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Автоматаар сэргээх"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Төхөөрөмжийг хуучин тохиргоонд нь оруул"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Энэ нь таны төхөөрөмжийн дотоод хадгалалтын сангаас тухайлбал: таны Google бүртгэл, систем болон апп-ын мэдээлэл, тохиргоонууд болон татаж авсан апп-уудаас бүх мэдээллийг устгах болно"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Таны бүх хувийн мэдээлэл болон татсан апп-уудыг устгах уу? Та энэ үйлдлийг дараа буцаах боломжгүй!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Энэ төхөөрөмж дээрх таны бүх хувийн мэдээлэл болон татсан аппыг устгах уу? Та энэ үйлдлийг буцаах боломжгүй!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Бүгдийг устгах"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g>-дээ нэр сонгоорой"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Төхөөрөмжөө нэрлэнэ үү. Ингэснээр бусад төхөөрөмжөөс дамжуулах эсвэл холбогдох үед төхөөрөмжөө танихад хялбар болно."</string>
@@ -745,6 +771,28 @@
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Апп нээлттэй үед эсвэл таныг энэ аппаас гарсны дараа (жишээ нь видео үргэлжлүүлэн үзэхийн тулд) дэлгэцэн доторх дэлгэц цонх үүсгэхийг аппад зөвшөөрнө үү. Энэ цонх таны ашиглаж буй бусад апп дээр харагдана."</string>
     <string name="special_access" msgid="21806055758289916">"Аппын тусгай хандалт"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
+    <string name="audio_category" msgid="6143623109624947993">"Аудио"</string>
+    <string name="record_audio" msgid="5035689290259575229">"Аудио бичих"</string>
+    <string name="record_audio_summary_on" msgid="8724494646461335090">"Аудио бичихийг зогсоохын тулд идэвхгүй болгох"</string>
+    <string name="record_audio_summary_off" msgid="1392440365091422816">"Нэн даруй аудио бичиж эхлэхийн тулд идэвхжүүлэх"</string>
+    <string name="play_recorded_audio_title" msgid="4627717067151602729">"Бичсэн аудиог тоглуулах"</string>
+    <string name="save_recorded_audio_title" msgid="378003351782124651">"Бичсэн аудиог хадгалах"</string>
+    <string name="time_to_start_read_title" msgid="6565449163802837806">"Аудиог уншиж эхлэхийн өмнөх хугацаа"</string>
+    <string name="time_to_valid_audio_title" msgid="7246101824813414348">"Аудионы чимээтэй хэсгийг бичихийн өмнөх хугацаа"</string>
+    <string name="empty_audio_duration_title" msgid="9024377320171450683">"Аудионы чимээгүй хэсгийн үргэлжлэх хугацаа"</string>
+    <string name="show_audio_recording_start_failed" msgid="9131762831381326605">"Аудио бичихийг эхлүүлж чадсангүй."</string>
+    <string name="show_audio_recording_failed" msgid="8128216664039868681">"Аудио бичлэг хийх амжилтгүй боллоо."</string>
+    <string name="title_data_saver" msgid="7500278996154002792">"Дата хэмнэгч"</string>
+    <string name="summary_data_saver" msgid="6793558728898207405">"Илүү бага мобайл дата ашиглахын тулд видеоны чанарыг автоматаар тохируулах"</string>
+    <string name="title_data_alert" msgid="8262081890052682475">"Дата ашиглалт болон сэрэмжлүүлэг"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Үйлдлийг зөвшөөрөөгүй"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Дууны түвшнийг өөрчлөх боломжгүй"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Дуудлага хийх боломжгүй"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS илгээх боломжгүй"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Камер ашиглах боломжгүй"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Дэлгэцийн зураг дарах боломжгүй"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Энэ аппыг нээх боломжгүй"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Хэрэв танд асуух зүйл байвал IT админтайгаа холбогдоно уу"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g>-тай ашиглах төхөөрөмж"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Ямар ч төхөөрөмж олдсонгүй. Төхөөрөмжүүдийн асаалттай байгааг болон холбогдох боломжтой эсэхийг нь шалгана уу."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Дахин оролдох"</string>

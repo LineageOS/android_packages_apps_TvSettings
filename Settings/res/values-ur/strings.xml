@@ -32,21 +32,29 @@
     <string name="header_category_personal" msgid="7880053929985150368">"ذاتی"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"نیٹ ورک سے منسلک ہوں"</string>
     <string name="add_an_account" msgid="2601275122685226096">"ایک اکاؤنٹ شامل کریں"</string>
-    <string name="accounts_category_title" msgid="7899133563558530195">"اکاؤنٹس اور سائن ان"</string>
+    <string name="accounts_category_title" msgid="7286858931427579845">"اکاؤنٹس اور سائن ان"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"کوئی اکاؤنٹ نہیں ہے"</string>
     <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> اکاؤنٹس</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> اکاؤنٹ</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"میڈیا سروسز، اسسٹنٹ، ادائيگیاں"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"نیٹ ورک اور انٹرنیٹ"</string>
+    <string name="sound_category_title" msgid="7899816751041939518">"آواز"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ایپس"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"آلہ کی ترجیحات"</string>
-    <string name="remotes_and_accessories_category_title" msgid="4162706682994116779">"ریموٹس اور لوازمات"</string>
+    <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"ریموٹس اور لوازمات"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"کوئی بلوٹوتھ آلہ منسلک نہیں ہے"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> لوازمات</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> لوازم</item>
     </plurals>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"ڈسپلے اور آواز"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"مدد اور تاثرات"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"رازداری"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"آلے کی ترتیبات"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"ایپ کی ترتیبات"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"مقام، استعمال اور تشخیصات، اشتہارات"</string>
     <string name="add_account" msgid="7386223854837017129">"اکاؤنٹ شامل کریں"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"اکاؤنٹ ہٹائیں"</string>
     <string name="account_sync" msgid="4315295293211313989">"مطابقت پذیر ایپس منتخب کریں"</string>
@@ -81,15 +89,17 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"غیر فعال کردہ ایپس"</string>
     <string name="device_daydream" msgid="2631191946958113220">"اسکرین سیور"</string>
     <string name="device_display" msgid="244634591698925025">"ڈسپلے"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"ڈسپلے اور آواز"</string>
     <string name="device_sound" msgid="8616320533559404963">"آواز"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"گردوپیش آواز"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"سسٹم کی آوازیں"</string>
     <string name="device_apps" msgid="2134756632245008919">"ایپلیکیشنز"</string>
     <string name="device_storage" msgid="8540243547121791073">"اسٹوریج"</string>
-    <string name="device_reset" msgid="8964022725655207224">"ری سیٹ کریں"</string>
+    <string name="device_reset" msgid="6115282675800077867">"فیکٹری ری سیٹ کریں"</string>
     <string name="device_backup_restore" msgid="4552158624969018687">"بیک اپ لیں اور بحال کریں"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"فیکٹری ڈیٹا ری سیٹ"</string>
     <string name="device_calibration" msgid="2907914144048739705">"کیلیبریشن"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"انرجی سیور"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"فارمیٹس منتخب کریں"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"محیط آواز"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -101,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"خودکار: وہ فارمیٹس استعمال کریں جن کی آپ کا آلہ سپورٹ کرنے والے کے بطور اطلاع دیتا ہے (تجویز کردہ)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"کوئی نہیں: محیط آواز کبھی استعمال نہ کریں"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"دستی: منتخب کریں کہ کون سا فارمیٹس استعمال کرنا ہے"</string>
+    <string name="display_category_title" msgid="247804007525046312">"ڈسپلے"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"جدید ترین ڈسپلے کی ترتیبات"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"جدید ترین صوتی ترتیبات"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"گیم وضع کی اجازت"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"کیش کیا ہوا ڈیٹا صاف کریں؟"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"یہ سبھی ایپس کیلئے کیش کیے ہوئے ڈیٹا کو صاف کر دے گا۔"</string>
     <string name="accessories_add" msgid="413764175035531452">"امدادی سامان شامل کریں"</string>
@@ -129,11 +143,13 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"عام طور پر 0000 یا 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"جوڑا بنائیں"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"منسوخ کریں"</string>
+    <string name="send_feedback" msgid="936698637869795473">"تاثرات بھیجیں"</string>
+    <string name="launch_help" msgid="2607478763131952469">"مرکز امداد"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"تاریخ اور وقت"</string>
     <string name="system_language" msgid="5516099388471974346">"زبان"</string>
     <string name="system_keyboard" msgid="1514460705385401872">"کی بورڈ"</string>
-    <string name="system_keyboard_autofill" msgid="3689510278682933776">"کی بورڈ اور آٹو فل"</string>
+    <string name="system_keyboard_autofill" msgid="8530944165814838255">"کی بورڈ اور آٹو فل"</string>
     <string name="system_autofill" msgid="6983989261108020046">"آٹو فل"</string>
     <string name="system_home" msgid="2149349845791104094">"ہوم اسکرین"</string>
     <string name="system_search" msgid="3170169128257586925">"تلاش کریں"</string>
@@ -146,12 +162,12 @@
     <string name="system_accessibility" msgid="3081009195560501010">"ایکسیسبیلٹی"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"ڈیولپر کے اختیارات"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"کوئی نہیں"</string>
-    <string name="system_diagnostic" msgid="4099565916831872129">"استعمال اور تشخیصات"</string>
+    <string name="system_diagnostic" msgid="1654842813331919958">"استعمال اور تشخیصات"</string>
     <string name="tutorials" msgid="7880770425872110455">"ٹیوٹوریلز"</string>
     <string name="about_system_update" msgid="7421264399111367755">"سسٹم اپ ڈیٹ"</string>
     <string name="about_preference" msgid="9112690446998150670">"تفصیل"</string>
     <string name="device_name" msgid="566626587332817733">"آلہ کا نام"</string>
-    <string name="restart_button_label" msgid="911750765086382990">"دوبارہ سٹارٹ کریں"</string>
+    <string name="restart_button_label" msgid="2124590135040611899">"ریبوٹ کریں"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"قانونی معلومات"</string>
     <string name="about_legal_license" msgid="4801707286720681261">"اوپن سورس لائسنسز"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google قانونی"</string>
@@ -200,8 +216,16 @@
     <item msgid="2713050260700175954">"اچھی"</item>
     <item msgid="6005053494500517261">"عمدہ ترین"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC پتہ"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"آلہ کا MAC پتہ"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"بے ترتیب MAC پتہ"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"سگنل کی مضبوطی"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"رازداری"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"بے ترتیب MAC کا استعمال کریں (ڈیفالٹ)"</item>
+    <item msgid="2490415280467390067">"آلہ کا MAC استعمال کریں"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"دستیاب نہیں ہے"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"بے ترتیب MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP پتہ"</string>
     <string name="title_ssid" msgid="255328048344188682">"‫Wi-Fi نیٹ ورک کا نام درج کریں"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"انٹرنیٹ کنکشن"</string>
@@ -322,7 +346,7 @@
     <string name="storage_format_failure" msgid="5619442934314277332">"<xliff:g id="NAME">%1$s</xliff:g> کو فارمیٹ نہیں کیا جا سکا"</string>
     <string name="storage_wizard_format_as_private_title" msgid="7985715762649933211">"آلہ اسٹوریج کے بطور فارمیٹ کریں"</string>
     <string name="storage_wizard_format_as_private_description" msgid="6143406934742456154">"یہ تقاضہ کرتا ہے کہ USB ڈرائیو کو محفوظ کرنے کیلئے اس کو فارمیٹ کیا جائے۔ محفوظ طریقہ سے ‎فارمیٹنگ کے بعد، یہ ڈرائیو صرف اس آلہ پر کام کرے گی۔ ‎فارمیٹنگ سے ڈرائیو پر فی الحال اسٹور کردہ سبھی ڈیٹا مٹ جاتے ہیں۔ ڈیٹا سے محروم ہونے سے بچنے کیلئے اس کا بیک اپ لینے پر غور کریں۔"</string>
-    <string name="storage_wizard_format_as_public_title" msgid="7838838563997876718">"مٹائیں اور فارمیٹ کریں"</string>
+    <string name="storage_wizard_format_as_public_title" msgid="3546915348149438389">"مٹائیں اور فارمیٹ کریں"</string>
     <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"فارمیٹنگ کے بعد، آپ اس USB آلہ کو دوسرے آلات میں استعمال کر سکتے ہیں۔ سبھی ڈیٹا مٹا دیا جائے گا۔ ایپس کو دوسری آلہ اسٹوریج پر منتقل کر کے پہلے بیک اپ لینے پر غور کریں۔"</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"USB ڈرائیو کو فارمیٹ کیا جا رہا ہے…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"اس میں ایک لمحہ لگ سکتا ہے۔ براہ کرم ڈرائیو کو نہ ہٹائیں۔"</string>
@@ -469,7 +493,7 @@
     <string name="system_stay_awake" msgid="5935117574414511413">"بیدار رکھیں"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP چیکنگ"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI آپٹمائزیشن"</string>
-    <string name="system_reboot_confirm" msgid="7035370306447878560">"ابھی دوبارہ سٹارٹ کریں؟"</string>
+    <string name="system_reboot_confirm" msgid="8346913287126400728">"ابھی ریبوٹ کریں؟"</string>
     <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"اس ترتیب کو اپ ڈیٹ کرنے کیلئے، آپ کے آلہ کو دوبارہ سٹارٹ کرنے کی ضرورت ہے"</string>
     <string name="system_never_check" msgid="2860070727606369055">"کبھی چیک نہ کریں"</string>
     <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"صرف DRM مواد چیک کریں"</string>
@@ -523,8 +547,6 @@
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play اسٹور کے علاوہ مآخذ سے ایپس کے انسٹالیشن کی اجازت دیں"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"نامعلوم ذرائع کو اجازت دیں"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"آپ کا آلہ یا ذاتی ڈیٹا کو نامعلوم ذرائع کی ایپس سے حملے کا زیادہ خطرہ ہے۔ آپ اس بات سے متفق ہیں کہ آپ ان ایپس کے استعمال سے اپنے آلہ کو ہونے والے کسی نقصان یا ڈیٹا کے نقصان کیلئے تنہا ذمہ دار ہوں گے۔"</string>
-    <string name="security_verify_apps_title" msgid="7701897649287177386">"ایپس کی توثیق کریں"</string>
-    <string name="security_verify_apps_desc" msgid="4638106288791726527">"نقصان کا سبب بننے والی ایپس کے انسٹالیشن کی اجازت نہ دیں یا اس سے پہلے متنبہ کریں"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"کبھی نہیں"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM مواد کیلئے"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"ہمیشہ"</string>
@@ -663,6 +685,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"کوئی ڈیفالٹس سیٹ نہیں ہیں"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"کیش صاف کریں"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"اطلاعات"</string>
+    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"اوپن سورس لائسنسز"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"اجازتیں"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"درخواست دستیاب نہیں"</string>
     <string name="settings_ok" msgid="5950888975075541964">"ٹھیک ہے"</string>
@@ -675,8 +698,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"کب شروع ہو"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"غیر فعالیت کے اس دورانیے کے بعد اسکرین سیور شروع ہو جاتا ہے۔ اگر کوئی اسکرین سیور منتخب نہیں ہے تو ڈسپلے آف ہو جاتا ہے۔"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"غیرفعالیت کے <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> کے بعد"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"آلہ کو سلیپ موڈ میں بھیجیں"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"غیرفعالیت کے اس وقفے کے بعد اسکرین آف ہو جاتی ہے۔"</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ڈسپلے آف کریں"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> کے بعد"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"کے بعد ڈسپلے آف کریں"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"سکرین آف کرنے کی اجازت دیں"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"میڈیا پلے بیک کے دوران"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"فی الحال کوئی بھی اکاؤنٹ بیک اپ لیا گیا ڈیٹا اسٹور نہیں کر رہا ہے"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"آپ کے Wi‑Fi پاس ورڈز، بُک مارکس، دوسری ترتیبات اور ایپ کے ڈیٹا کا بیک اپ لینا بند کریں، اور Google سرورز پر موجود سبھی کاپیاں حذف کریں؟"</string>
@@ -685,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"خود کار طور بحال کریں"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"آلہ کو دوبارہ ترتیب دیں"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"اس سے آپ کے Google اکاؤنٹ، سسٹم اور ایپ ڈیٹا اور سیٹنگز اور ڈاؤن لوڈ کردہ ایپس سمیت، آپ کے آلہ کے داخلی اسٹوریج سے سبھی ڈیٹا مٹ جائے گا۔"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"اپنی سبھی ذاتی معلومات اور ڈاؤن لوڈ کردہ ایپس کو مٹائیں؟ آپ اس عمل کو لوٹا نہیں سکتے ہیں!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"اس آلہ پر اپنی سبھی ذاتی معلومات اور ڈاؤن لوڈ کردہ ایپس مٹائیں؟ آپ اس عمل کو لوٹا نہیں سکتے ہیں!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"ہر چیز مٹا دیں"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"اپنے <xliff:g id="DEVICEMODEL">%1$s</xliff:g> کیلئے کوئی نام منتخب کریں"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"دوسرے آلات سے کاسٹ یا منسلک کرتے وقت اس کی شناخت کیلئے اپنے آلے کو ایک نام دیں۔"</string>
@@ -745,6 +771,28 @@
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"ایپ کے کھلے رہنے پر یا آپ کے اسے چھوڑنے کے بعد ایپس کو تصویر میں تصویر ونڈو بنانے کی اجازت دیں (مثال کے طور پر، ویڈیو دیکھنا جاری رکھنے کیلئے)۔ یہ ونڈو آپ کے ذریعے استعمال کی جانے والی دیگر ایپس کے اوپری حصے پر ڈسپلے ہوتی ہے۔"</string>
     <string name="special_access" msgid="21806055758289916">"ایپ کی خاص رسائی"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>، <xliff:g id="PART2">%2$s</xliff:g>"</string>
+    <string name="audio_category" msgid="6143623109624947993">"آڈیو"</string>
+    <string name="record_audio" msgid="5035689290259575229">"آڈیو ریکارڈ کریں"</string>
+    <string name="record_audio_summary_on" msgid="8724494646461335090">"آڈیو ریکارڈنگ کو روکنے کے ليے غیر فعال کریں"</string>
+    <string name="record_audio_summary_off" msgid="1392440365091422816">"فوری طور پر آڈیو ریکارڈنگ شروع کرنے کے ليے فعال کریں"</string>
+    <string name="play_recorded_audio_title" msgid="4627717067151602729">"ریکارڈ کردہ آڈیو چلائیں"</string>
+    <string name="save_recorded_audio_title" msgid="378003351782124651">"ریکارڈ کردہ آڈیو محفوظ کریں"</string>
+    <string name="time_to_start_read_title" msgid="6565449163802837806">"پڑھنا شروع کرنے کا وقت"</string>
+    <string name="time_to_valid_audio_title" msgid="7246101824813414348">"درست آڈیو ڈیٹا کا وقت"</string>
+    <string name="empty_audio_duration_title" msgid="9024377320171450683">"خالی آڈیو کا دورانیہ"</string>
+    <string name="show_audio_recording_start_failed" msgid="9131762831381326605">"آڈیو ریکارڈنگ شروع کرنے میں ناکام۔"</string>
+    <string name="show_audio_recording_failed" msgid="8128216664039868681">"آڈیو ریکارڈنگ ناکام ہو گئی۔"</string>
+    <string name="title_data_saver" msgid="7500278996154002792">"ڈیٹا سیور"</string>
+    <string name="summary_data_saver" msgid="6793558728898207405">"کم موبائل ڈیٹا استعمال کرنے کے ليے ویڈیو کے معیار کو خودکار طور پر ایڈجسٹ کریں"</string>
+    <string name="title_data_alert" msgid="8262081890052682475">"ڈیٹا کا استعمال اور الرٹس"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"کارروائی کی اجازت نہیں ہے"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"والیوم تبدیل نہیں کر سکتے"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"کال کرنے کی اجازت نہیں ہے"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS کی اجازت نہیں ہے"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"کیمرے کی اجازت نہیں ہے"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"اسکرین شاٹ کی اجازت نہیں ہے"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"اس ایپ کو نہیں کھولا جا سکتا"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"اگر آپ کے پاس سوالات ہیں، تو اپنے IT منتظم سے رابطہ کریں"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> کے ساتھ استعمال کیا جانے والا آلہ"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"کوئی آلہ نہیں ملا۔ یقینی بنائیں کہ آلات آن ہیں اور منسلک کرنے کے لیے دستیاب ہیں۔"</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"پھر آزمائیں"</string>
