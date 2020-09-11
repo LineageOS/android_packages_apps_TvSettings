@@ -29,6 +29,8 @@ import com.android.tv.twopanelsettings.slices.SlicesConstants;
  */
 public class SliceActivity extends TvSettingsActivity {
     private static final String EXTRA_SLICE_URI = "slice_uri";
+    private static final String EXTRA_STARTUP_VERIFICATION_REQUIRED =
+            "startup_verification_required";
 
     /** Provide slice uri */
     public String getSliceUri() {
@@ -51,5 +53,13 @@ public class SliceActivity extends TvSettingsActivity {
         bundle.putString(SlicesConstants.TAG_SCREEN_TITLE, getScreenTitle());
         return FeatureFactory.getFactory(this).getSettingsFragmentProvider()
                 .newSettingsFragment(SliceFragment.class.getName(), bundle);
+    }
+
+    // The startup verification requirement is assumed unless otherwise specified in the Intent, as
+    // this Activity may be started with "SLICE_SETTINGS" action combined with an URL extra
+    // corresponding to a sensitive settings page such as account settings.
+    @Override
+    protected boolean isStartupVerificationRequired() {
+        return getIntent().getBooleanExtra(EXTRA_STARTUP_VERIFICATION_REQUIRED, true);
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2020 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,25 +14,18 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings;
+package com.android.tv.settings.startup;
 
-import android.app.Fragment;
+import android.app.Activity;
 
-import com.android.tv.settings.overlay.FeatureFactory;
+import androidx.annotation.NonNull;
 
-/**
- * Main settings which loads up the top level headers.
- */
-public class MainSettings extends TvSettingsActivity {
+/** Default implementation of {@link StartupVerificationFeatureProvider} */
+public class StartupVerificationFeatureProviderImpl implements StartupVerificationFeatureProvider {
 
     @Override
-    protected Fragment createSettingsFragment() {
-        return FeatureFactory.getFactory(this).getSettingsFragmentProvider()
-            .newSettingsFragment(MainFragment.class.getName(), null);
-    }
-
-    @Override
-    protected boolean isStartupVerificationRequired() {
-        return true;
+    public boolean startStartupVerificationActivityForResult(
+            @NonNull Activity activity, int requestCode) {
+        return false;
     }
 }
