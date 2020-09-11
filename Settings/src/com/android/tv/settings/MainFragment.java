@@ -177,6 +177,10 @@ public class MainFragment extends PreferenceControllerFragment implements
         super.onDestroy();
     }
 
+    private boolean quickSettingsEnabled() {
+        return getContext().getResources().getBoolean(R.bool.config_quick_settings_enabled);
+    }
+
     /** @return true if there is at least one available item in quick settings. */
     private boolean shouldShowQuickSettings() {
         for (AbstractPreferenceController controller : mPreferenceControllers) {
@@ -216,7 +220,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         mQuickSettingsList.setTitle(R.string.header_category_quick_settings);
         mQuickSettingsList.setOrder(1); // at top, but below suggested settings
         getPreferenceScreen().addPreference(mQuickSettingsList);
-        if (mHotwordSwitchController.isAvailable()) {
+        if (mHotwordSwitchController != null && mHotwordSwitchController.isAvailable()) {
             mHotwordSwitch = new SwitchPreference(this.getPreferenceManager().getContext());
             mHotwordSwitch.setKey(HotwordSwitchController.KEY_HOTWORD_SWITCH);
             mHotwordSwitch.setOnPreferenceClickListener(
@@ -228,7 +232,7 @@ public class MainFragment extends PreferenceControllerFragment implements
             mHotwordSwitchController.updateState(mHotwordSwitch);
             mQuickSettingsList.addPreference(mHotwordSwitch);
         }
-        if (mTakeBugReportController.isAvailable()) {
+        if (mTakeBugReportController != null && mTakeBugReportController.isAvailable()) {
             mTakeBugReportPreference = new Preference(this.getPreferenceManager().getContext());
             mTakeBugReportPreference.setKey(TakeBugReportController.KEY_TAKE_BUG_REPORT);
             mTakeBugReportPreference.setOnPreferenceClickListener(
@@ -255,7 +259,7 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     @Override
     public void onHotwordStateChanged() {
-        if (mHotwordSwitch != null) {
+        if (mHotwordSwitch != null && mHotwordSwitchController != null) {
             mHotwordSwitchController.updateState(mHotwordSwitch);
         }
         showOrHideQuickSettings();
@@ -312,17 +316,21 @@ public class MainFragment extends PreferenceControllerFragment implements
                 privacyPref.setVisible(true);
             }
         }
-        mHotwordSwitchController.init(this);
+        if (mHotwordSwitchController != null) {
+            mHotwordSwitchController.init(this);
+        }
         updateSoundSettings();
     }
 
     @Override
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
         mPreferenceControllers = new ArrayList<>(2);
-        mHotwordSwitchController = new HotwordSwitchController(context);
-        mTakeBugReportController = new TakeBugReportController(context);
-        mPreferenceControllers.add(mHotwordSwitchController);
-        mPreferenceControllers.add(mTakeBugReportController);
+        if (quickSettingsEnabled()) {
+            mHotwordSwitchController = new HotwordSwitchController(context);
+            mTakeBugReportController = new TakeBugReportController(context);
+            mPreferenceControllers.add(mHotwordSwitchController);
+            mPreferenceControllers.add(mTakeBugReportController);
+        }
         return mPreferenceControllers;
     }
 
