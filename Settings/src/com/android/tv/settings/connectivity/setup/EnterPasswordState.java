@@ -22,6 +22,7 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
@@ -144,6 +145,8 @@ public class EnterPasswordState implements State {
                     } else if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                         mTextInput = (EditText) vh.itemView.findViewById(
                                 R.id.guidedactions_item_title);
+                        mTextInput.setImeOptions(
+                                EditorInfo.IME_ACTION_DONE | EditorInfo.IME_FLAG_NO_EXTRACT_UI);
                         openInEditMode(action);
                     }
                 }
