@@ -18,6 +18,7 @@ package com.android.tv.settings;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.transition.Scene;
@@ -41,6 +42,8 @@ public abstract class TvSettingsActivity extends Activity {
     private static final String SETTINGS_FRAGMENT_TAG =
             "com.android.tv.settings.MainSettings.SETTINGS_FRAGMENT";
 
+    private static final int REQUEST_CODE_STARTUP_VERIFICATION = 1;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +54,14 @@ public abstract class TvSettingsActivity extends Activity {
                 return;
             }
             if (FeatureFactory.getFactory(this).isTwoPanelLayout()) {
+                if (isStartupVerificationRequired()) {
+                    if (FeatureFactory.getFactory(this)
+                            .getStartupVerificationFeatureProvider()
+                            .startStartupVerificationActivityForResult(
+                                    this, REQUEST_CODE_STARTUP_VERIFICATION)) {
+                        return;
+                    }
+                }
                 getFragmentManager().beginTransaction()
                         .setCustomAnimations(android.R.animator.fade_in,
                                 android.R.animator.fade_out)
@@ -139,6 +150,46 @@ public abstract class TvSettingsActivity extends Activity {
     }
 
     protected abstract Fragment createSettingsFragment();
+
+    /**
+     * Subclass may override this to return true to indicate that the Activity may only be started
+     * after some verification. Example: in kids mode, we need to challenge the user with adult
+     * re-auth before launching account settings.
+     *
+     * This only works in two panel style as we do not have features requiring the startup
+     * verification in classic one panel style.
+     * TODO: make this more explicit to TvSettings' "flavor" instead of 1 panel vs 2 panels.
+     */
+    protected boolean isStartupVerificationRequired() {
+        return false;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE_STARTUP_VERIFICATION) {
+            if (resultCode == RESULT_OK) {
+                Log.v(TAG, "Startup verification succeeded.");
+                if (FeatureFactory.getFactory(this).isTwoPanelLayout()) {
+                    if (createSettingsFragment() == null) {
+                        Log.e(TAG, "Fragment is null.");
+                        finish();
+                        return;
+                    }
+                    getFragmentManager().beginTransaction()
+                            .setCustomAnimations(
+                                    android.R.animator.fade_in, android.R.animator.fade_out)
+                            .add(
+                                    android.R.id.content,
+                                    createSettingsFragment(),
+                                    SETTINGS_FRAGMENT_TAG)
+                            .commitNow();
+                }
+            } else {
+                Log.v(TAG, "Startup verification cancelled or failed.");
+                finish();
+            }
+        }
+    }
 
     private String getMetricsTag() {
         String tag = getClass().getName();
