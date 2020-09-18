@@ -28,6 +28,8 @@ import com.android.tv.settings.help.SupportFeatureProviderImpl;
 import com.android.tv.settings.offline.OfflineFeatureProvider;
 import com.android.tv.settings.offline.OfflineFeatureProviderImpl;
 import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.startup.StartupVerificationFeatureProvider;
+import com.android.tv.settings.startup.StartupVerificationFeatureProviderImpl;
 
 /**
  * Two panel customized implementation of the feature factory.
@@ -48,6 +50,11 @@ public class FeatureFactoryImpl extends FeatureFactory {
     @Override
     public OfflineFeatureProvider getOfflineFeatureProvider() {
         return new OfflineFeatureProviderImpl();
+    }
+
+    @Override
+    public StartupVerificationFeatureProvider getStartupVerificationFeatureProvider() {
+        return new StartupVerificationFeatureProviderImpl();
     }
 
     @Override
