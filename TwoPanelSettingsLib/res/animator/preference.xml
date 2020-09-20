@@ -24,19 +24,22 @@
                 android:duration="160"
                 android:propertyName="translationZ"
                 android:valueTo="6dp"
-                android:valueType="floatType" />
+                android:valueType="floatType"
+                android:interpolator="@android:anim/accelerate_interpolator" />
 
             <objectAnimator
                 android:duration="160"
                 android:propertyName="scaleX"
-                android:valueTo="1.05"
-                android:valueType="floatType" />
+                android:valueTo="1.025"
+                android:valueType="floatType"
+                android:interpolator="@android:anim/accelerate_interpolator" />
 
             <objectAnimator
                 android:duration="160"
                 android:propertyName="scaleY"
-                android:valueTo="1.05"
-                android:valueType="floatType" />
+                android:valueTo="1.025"
+                android:valueType="floatType"
+                android:interpolator="@android:anim/accelerate_interpolator" />
 
         </set>
     </item>
@@ -48,19 +51,22 @@
                 android:duration="320"
                 android:propertyName="translationZ"
                 android:valueTo="12dp"
-                android:valueType="floatType" />
+                android:valueType="floatType"
+                android:interpolator="@android:anim/accelerate_interpolator" />
 
             <objectAnimator
                 android:duration="320"
                 android:propertyName="scaleX"
-                android:valueTo="1.1"
-                android:valueType="floatType" />
+                android:valueTo="1.05"
+                android:valueType="floatType"
+                android:interpolator="@android:anim/accelerate_interpolator" />
 
             <objectAnimator
                 android:duration="320"
                 android:propertyName="scaleY"
-                android:valueTo="1.1"
-                android:valueType="floatType" />
+                android:valueTo="1.05"
+                android:valueType="floatType"
+                android:interpolator="@android:anim/accelerate_interpolator" />
         </set>
     </item>
 
@@ -70,19 +76,22 @@
                 android:duration="320"
                 android:propertyName="translationZ"
                 android:valueTo="0dp"
-                android:valueType="floatType" />
+                android:valueType="floatType"
+                android:interpolator="@android:anim/decelerate_interpolator" />
 
             <objectAnimator
                 android:duration="320"
                 android:propertyName="scaleX"
                 android:valueTo="1"
-                android:valueType="floatType" />
+                android:valueType="floatType"
+                android:interpolator="@android:anim/decelerate_interpolator" />
 
             <objectAnimator
                 android:duration="320"
                 android:propertyName="scaleY"
                 android:valueTo="1"
-                android:valueType="floatType" />
+                android:valueType="floatType"
+                android:interpolator="@android:anim/decelerate_interpolator" />
         </set>
     </item>
 
