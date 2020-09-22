@@ -17,6 +17,7 @@
 package com.android.tv.settings.system.development;
 
 import android.Manifest;
+import android.adb.ADBRootService;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AppOpsManager;
@@ -89,6 +90,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private static final String ENABLE_DEVELOPER = "development_settings_enable";
     private static final String ENABLE_ADB = "enable_adb";
+    private static final String ENABLE_ADB_ROOT = "enable_adb_root";
     private static final String CLEAR_ADB_KEYS = "clear_adb_keys";
     private static final String ENABLE_TERMINAL = "enable_terminal";
     private static final String KEEP_SCREEN_ON = "keep_screen_on";
@@ -181,9 +183,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private boolean mLastEnabledState;
     private boolean mHaveDebugSettings;
 
+    private ADBRootService mADBRootService;
+
     private SwitchPreference mEnableDeveloper;
     private SwitchPreference mEnableAdb;
     private Preference mClearAdbKeys;
+    private SwitchPreference mEnableAdbRoot;
     private SwitchPreference mEnableTerminal;
     private Preference mBugreport;
     private SwitchPreference mKeepScreenOn;
@@ -290,6 +295,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 (boolean successful) -> onAudioRecorded(successful),
                 (AudioMetrics.Data data) -> updateAudioRecordingMetrics(data));
 
+        mADBRootService = new ADBRootService();
+
         super.onCreate(icicle);
     }
 
@@ -318,6 +325,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         final PreferenceGroup debugDebuggingCategory = (PreferenceGroup)
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
         mEnableAdb = findAndInitSwitchPref(ENABLE_ADB);
+        mEnableAdbRoot = findAndInitSwitchPref(ENABLE_ADB_ROOT);
         mClearAdbKeys = findPreference(CLEAR_ADB_KEYS);
         if (!AdbProperties.secure().orElse(false)) {
             if (debugDebuggingCategory != null) {
@@ -358,6 +366,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         if (!mUm.isAdminUser()) {
             disableForUser(mEnableAdb);
             disableForUser(mClearAdbKeys);
+            disableForUser(mEnableAdbRoot);
             disableForUser(mEnableTerminal);
             disableForUser(mPassword);
         }
@@ -624,6 +633,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mHaveDebugSettings = false;
         updateSwitchPreference(mEnableAdb, Settings.Global.getInt(cr,
                 Settings.Global.ADB_ENABLED, 0) != 0);
+        updateSwitchPreference(mEnableAdbRoot, mADBRootService.getEnabled());
         if (mEnableTerminal != null) {
             updateSwitchPreference(mEnableTerminal,
                     context.getPackageManager().getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
@@ -1569,6 +1579,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 mVerifyAppsOverUsb.setEnabled(false);
                 mVerifyAppsOverUsb.setChecked(false);
             }
+        } else if (preference == mEnableAdbRoot) {
+            mADBRootService.setEnabled(mEnableAdbRoot.isChecked());
         } else if (preference == mEnableTerminal) {
             final PackageManager pm = getActivity().getPackageManager();
             pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,
