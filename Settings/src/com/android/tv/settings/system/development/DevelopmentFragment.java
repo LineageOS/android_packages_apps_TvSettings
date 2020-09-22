@@ -17,6 +17,7 @@
 package com.android.tv.settings.system.development;
 
 import android.Manifest;
+import android.adb.ADBRootService;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AppOpsManager;
@@ -171,9 +172,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private boolean mLastEnabledState;
     private boolean mHaveDebugSettings;
 
+    private final ADBRootService mADBRootService;
+
     private SwitchPreference mEnableDeveloper;
     private SwitchPreference mEnableAdb;
     private Preference mClearAdbKeys;
+    private SwitchPreference mEnableAdbRoot;
     private SwitchPreference mEnableTerminal;
     private Preference mBugreport;
     private SwitchPreference mKeepScreenOn;
@@ -266,6 +270,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
         mContentResolver = getActivity().getContentResolver();
 
+        mADBRootService = new ADBRootService();
+
         super.onCreate(icicle);
     }
 
@@ -301,6 +307,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             }
         }
         mAllPrefs.add(mClearAdbKeys);
+        mEnableAdbRoot = mADBRootService.getEnabled();
         mEnableTerminal = findAndInitSwitchPref(ENABLE_TERMINAL);
         if (!isPackageInstalled(getActivity(), TERMINAL_APP_PACKAGE)) {
             if (debugDebuggingCategory != null) {
@@ -334,6 +341,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         if (!mUm.isAdminUser()) {
             disableForUser(mEnableAdb);
             disableForUser(mClearAdbKeys);
+            disableForUser(mEnableAdbRoot);
             disableForUser(mEnableTerminal);
             disableForUser(mPassword);
         }
@@ -587,6 +595,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mHaveDebugSettings = false;
         updateSwitchPreference(mEnableAdb, Settings.Global.getInt(cr,
                 Settings.Global.ADB_ENABLED, 0) != 0);
+        updateSwitchPreference(mEnableAdbRoot, mADBRootService.getEnabled());
         if (mEnableTerminal != null) {
             updateSwitchPreference(mEnableTerminal,
                     context.getPackageManager().getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
@@ -1484,6 +1493,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 mVerifyAppsOverUsb.setEnabled(false);
                 mVerifyAppsOverUsb.setChecked(false);
             }
+        } else if (preference == mEnableAdbRoot) {
+            mADBRootService.setEnabled(mEnableAdbRoot.isChecked());
         } else if (preference == mEnableTerminal) {
             final PackageManager pm = getActivity().getPackageManager();
             pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,
