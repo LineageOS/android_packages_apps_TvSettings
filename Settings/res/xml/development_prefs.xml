@@ -88,6 +88,12 @@
         android:summary="@string/picture_color_mode_desc"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="adb_enable_root"
+        android:title="@string/adb_enable_root"
+        android:summary="@string/adb_enable_root_summary"
+        android:fragment="com.android.tv.settings.system.development.AdbRootDialog" />
+
     <PreferenceCategory android:key="debug_debugging_category"
                         android:layout="@layout/preference_category_compact_layout"
                         android:title="@string/debug_debugging_category">
