@@ -731,8 +731,10 @@ public class MainFragment extends PreferenceControllerFragment implements
         } else if (preference.getKey().equals(KEY_OFFLINE_EXIT)
                 && FeatureFactory.getFactory(getContext())
                 .getOfflineFeatureProvider().isOfflineMode(getContext())) {
-            FeatureFactory.getFactory(getContext())
-                    .getOfflineFeatureProvider().startOfflineExitActivity(getContext());
+            if (getActivity() != null) {
+                FeatureFactory.getFactory(getContext())
+                        .getOfflineFeatureProvider().startOfflineExitActivity(getActivity());
+            }
             return true;
         } else {
             return super.onPreferenceTreeClick(preference);
