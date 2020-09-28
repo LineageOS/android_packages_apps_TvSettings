@@ -42,11 +42,11 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.wifi.AccessPoint;
-import com.android.settingslib.wifi.AccessPointPreference;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.settings.widget.TvAccessPointPreference;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 import java.util.Collection;
@@ -84,7 +84,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private ConnectivityListener mConnectivityListener;
     private WifiManager mWifiManager;
     private ConnectivityManager mConnectivityManager;
-    private AccessPointPreference.UserBadgeCache mUserBadgeCache;
+    private TvAccessPointPreference.UserBadgeCache mUserBadgeCache;
 
     private TwoStatePreference mEnableWifiPref;
     private CollapsibleCategory mWifiNetworksCategory;
@@ -120,7 +120,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mWifiManager = getContext().getSystemService(WifiManager.class);
         mConnectivityManager = getContext().getSystemService(ConnectivityManager.class);
         mUserBadgeCache =
-                new AccessPointPreference.UserBadgeCache(getContext().getPackageManager());
+                new TvAccessPointPreference.UserBadgeCache(getContext().getPackageManager());
         super.onCreate(savedInstanceState);
     }
 
@@ -333,9 +333,9 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
 
         for (final AccessPoint accessPoint : accessPoints) {
             accessPoint.setListener(this);
-            AccessPointPreference pref = (AccessPointPreference) accessPoint.getTag();
+            TvAccessPointPreference pref = (TvAccessPointPreference) accessPoint.getTag();
             if (pref == null) {
-                pref = new AccessPointPreference(accessPoint, themedContext, mUserBadgeCache,
+                pref = new TvAccessPointPreference(accessPoint, themedContext, mUserBadgeCache,
                         false);
                 accessPoint.setTag(pref);
             } else {
@@ -403,12 +403,12 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
 
     @Override
     public void onAccessPointChanged(AccessPoint accessPoint) {
-        ((AccessPointPreference) accessPoint.getTag()).refresh();
+        ((TvAccessPointPreference) accessPoint.getTag()).refresh();
     }
 
     @Override
     public void onLevelChanged(AccessPoint accessPoint) {
-        ((AccessPointPreference) accessPoint.getTag()).onLevelChanged();
+        ((TvAccessPointPreference) accessPoint.getTag()).onLevelChanged();
     }
 
     @Override
