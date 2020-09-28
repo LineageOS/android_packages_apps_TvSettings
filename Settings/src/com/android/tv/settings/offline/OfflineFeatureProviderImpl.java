@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.offline;
 
+import android.app.Activity;
 import android.content.Context;
 
 import androidx.annotation.NonNull;
@@ -31,7 +32,7 @@ public class OfflineFeatureProviderImpl implements OfflineFeatureProvider {
     }
 
     @Override
-    public boolean startOfflineExitActivity(@NonNull Context context) {
-        return false;
+    public void startOfflineExitActivity(@NonNull Activity activity) {
+        // no-op
     }
 }

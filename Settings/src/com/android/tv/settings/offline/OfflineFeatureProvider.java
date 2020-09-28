@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.offline;
 
+import android.app.Activity;
 import android.content.Context;
 
 import androidx.annotation.NonNull;
@@ -30,10 +31,9 @@ public interface OfflineFeatureProvider {
     boolean isOfflineMode(@NonNull Context context);
 
     /**
-     * Start the Activity for exiting offline mode.
-     * @param context
-     * @return whether the Activity is found and started.
+     * Attempt to start the Activity for exiting offline mode.
+     * @param activity the Activity to start the offline exit Activity from
      */
-    boolean startOfflineExitActivity(@NonNull Context context);
+    void startOfflineExitActivity(@NonNull Activity activity);
 
 }
