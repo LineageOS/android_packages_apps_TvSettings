@@ -20,7 +20,6 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="?android:attr/windowBackground"
-              android:elevation="@dimen/lb_preference_decor_elevation"
               android:orientation="vertical"
               android:transitionGroup="false">
 
@@ -28,8 +27,9 @@
         android:id="@+id/decor_title_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/defaultBrandColor"
-        android:elevation="@dimen/lb_preference_decor_title_container_elevation"
+        android:layout_marginBottom="5dp"
+        android:background="@color/tp_preference_brand_color"
+        android:elevation="0dp"
         android:transitionGroup="false">
         <TextView
             android:id="@+id/decor_title"
