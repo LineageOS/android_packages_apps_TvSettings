@@ -94,6 +94,16 @@ public class RebootConfirmFragment extends GuidedStepFragment {
     }
 
     @Override
+    public GuidanceStylist onCreateGuidanceStylist() {
+        return new GuidanceStylist() {
+            @Override
+            public int onProvideLayoutId() {
+                return R.layout.confirm_guidance;
+            }
+        };
+    }
+
+    @Override
     public void onGuidedActionClicked(GuidedAction action) {
         if (action.getId() == GuidedAction.ACTION_ID_OK) {
             final boolean toSafeMode = getArguments().getBoolean(ARG_SAFE_MODE, false);
