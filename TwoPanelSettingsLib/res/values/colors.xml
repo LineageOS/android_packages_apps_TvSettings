@@ -15,13 +15,12 @@
 -->
 
 <resources>
-    <color name="tp_preview_panel_overlay_color">#99000000</color>
-    <color name="tp_preference_window_background">#FF0E0E0F</color>
+    <color name="tp_preference_window_background">@android:color/transparent</color>
     <color name="tp_preference_brand_color">@android:color/transparent</color>
 
-    <color name="tp_fragment_container_background_color">#FF0E0E0F</color>
-    <color name="tp_preview_panel_background_color">#ff1c1d1f</color>
-    <color name="tp_preference_panel_background_color">#FF0E0E0F</color>
+    <color name="tp_fragment_container_background_color">#FF1E232C</color>
+    <color name="tp_preview_panel_background_color">#FF222730</color>
+    <color name="tp_preference_panel_background_color">#FF1E232C</color>
 
     <color name="tp_preference_item_primary_text_focused_color">#FF0E0E0F</color>
     <color name="tp_preference_item_primary_text_disabled_color">#FF5F6368</color>
@@ -34,9 +33,8 @@
     <color name="tp_preference_category_text_color">#FF5F6368</color>
     <color name="tp_preference_decor_title_text_color">#FFE8EAED</color>
 
-    <color name="tp_preference_item_icon_focused_background_color">#FFE8EAED</color>
-    <color name="tp_preference_item_icon_default_background_color">#14E8EAED</color>
-    <color name="tp_preference_item_icon_stroke_color">#4D0E0E0F</color>
+    <color name="tp_preference_item_icon_focused_background_color">#FFD3E0F5</color>
+    <color name="tp_preference_item_icon_default_background_color">#FF263041</color>
 
     <color name="tp_preference_switch_thumb_on">#FF4284f4</color>
     <color name="tp_preference_switch_thumb_off">#FFF1F1F1</color>
