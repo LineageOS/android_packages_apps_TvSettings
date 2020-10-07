@@ -217,6 +217,7 @@
     <string name="device_surround_sound">Surround sound</string>
     <!-- Preference and title which changes system sounds settings. [CHAR LIMIT=50] -->
     <string name="device_sound_effects">System sounds</string>
+    <string name="surround_sound_toggle_slice_uri" translatable="false" />
     <!-- Preference which manages apps. [CHAR LIMIT=50] -->
     <string name="device_apps">Applications</string>
     <!-- Preference which shows storage status. [CHAR LIMIT=50] -->
@@ -258,12 +259,14 @@
     <!-- Text for a radio button that if selected will allow the user to manually select surround sound formats. [CHAR LIMIT=50] -->
     <string name="surround_sound_manual_summary">Manual: Select which formats to use</string>
 
+    <string name="match_content_slice_uri" translatable="false" />
     <!-- A category title for the settings related to display. [CHAR LIMIT=50] -->
     <string name="display_category_title">Display</string>
     <!-- Title for preference which when clicked lets the user configure advanced display settings. [CHAR LIMIT=50] -->
     <string name="advanced_display_settings_title">Advanced display settings</string>
     <!-- Title for HDMI-CEC settings entry. [CHAR LIMIT=20] -->
     <string name="hdmi_cec_settings_title">HDMI-CEC</string>
+    <string name="advanced_sound_settings_slice_uri" translatable="false" />
     <!-- Title for preference which when clicked lets the user configure advanced sound settings. [CHAR LIMIT=50] -->
     <string name="advanced_sound_settings_title">Advanced sound settings</string>
     <!-- Title for preference to allow game mode for display. [CHAR LIMIT=50] -->
@@ -387,6 +390,8 @@
     <string name="accessibility_none">None</string>
     <!-- Preference which manages Diagnostic and Usage reporting -->
     <string name="system_diagnostic">Usage &amp; diagnostics</string>
+    <string name="cast_settings_title" translatable="false" />
+    <string name="cast_settings_slice_uri" translatable="false" />
 
     <!-- About -->
     <skip />
@@ -762,6 +767,8 @@
     <!-- Storage settings forget description [CHAR_LIMIT=NONE] -->
     <string name="storage_forget_wall_of_text">To use the apps or data this drive contains, replug it in. Alternatively, you can choose to forget this storage if the drive isn\'t available.\n\nIf you choose Forget, all the data the drive contains will be lost forever.\n\nYou can reinstall the apps later, but the data stored on this drive will be lost.</string>
 
+    <string name="storage_suggestions" translatable="false" />
+    <string name="ambient_slice_storage_uri" translatable="false" />
     <!-- Header title for device storage [CHAR_LIMIT=50] -->
     <string name="storage_device_storage_section">Device storage</string>
     <!-- Header title for removable storage [CHAR_LIMIT=50] -->
@@ -1787,9 +1794,17 @@
 
     <!-- Slice uri for "Accounts & Sign in" -->
     <string name="account_slice_uri" translatable="false"/>
+    <!-- Slice uri and title for manange user services settings -->
+    <string name="manage_user_services_slice_uri" translatable="false" />
+    <string name="manage_user_services_slice_title" translatable="false" />
+
     <!-- Slice uri for "Privacy" -->
     <string name="privacy_assistant_slice_uri" translatable="false"/>
     <string name="privacy_purchases_slice_uri" translatable="false"/>
+
+    <!-- Slice uri and title for "Ambient mode" -->
+    <string name="ambient_slice_uri" translatable="false" />
+    <string name="ambient_settings_title" translatable="false" />
 
     <!-- Slice uri for "Connected devices" -->
     <string name="connected_devices_slice_uri" translatable="false"/>
@@ -1833,9 +1848,37 @@
     <string name="network_connection_connect_successful">Connection successful</string>
     <!-- Neutral button for Network connection request Dialog [CHAR LIMIT=30] -->
     <string name="network_connection_request_dialog_showall">Show all</string>
-    <!--Bluetooth settings screen, text that appears in heading bar when scanning for devices -->
+    <!-- Bluetooth settings screen, text that appears in heading bar when scanning for devices -->
     <string name="progress_scanning">Searching</string>
 
-    <!-- The message of toast showing to users when action of launching TvSettings in kids mode is blocked. -->
-    <string name="kids_mode_noop_settings_toast"></string>
+    <!-- Placeholder font for compiling. The real font will be provided by RRO. -->
+    <string name="preference_title_text_font" translatable="false" />
+
+    <!-- Start up verification -->
+    <string name="startup_verification_action" translatable="false" />
+    <string name="startup_verification_package" translatable="false" />
+
+    <!-- Basic mode -->
+    <string name="basic_mode_provider_uri" translatable="false" />
+    <string name="basic_mode_exit_package" translatable="false" />
+    <string name="basic_mode_exit_component" translatable="false" />
+    <string name="basic_mode_exit_data" translatable="false" />
+    <string name="basic_mode_suggestion_category_title" translatable="false" />
+    <string name="basic_mode_exit_preference_title" translatable="false" />
+    <string name="basic_mode_exit_preference_subtitle" translatable="false" />
+    <string name="basic_mode_exit_info_title" translatable="false" />
+    <string name="basic_mode_exit_info_summary" translatable="false" />
+    <string name="basic_mode_accounts_and_sign_in_info_summary" translatable="false" />
+
+    <!-- Vendor & Samples -->
+    <string name="vendor_activity_title" translatable="false">Vendor sample activity</string>
+    <string name="channels_and_inputs" translatable="false" >Channels &amp; Inputs</string>
+    <!-- Title of power and energy page [CHAR LIMIT=60] -->
+    <string name="power_and_energy">Power &amp; Energy</string>
+    <!-- Title of power on behavior item [CHAR LIMIT=60] -->
+    <string name="power_on_behavior">Power on behavior</string>
+    <string name="power_boot_resume_slice_uri" translatable="false" />
+    <!-- Title of the Reset section, which lets user select from factory reset or other reset related operations. [CHAR LIMIT=60] -->
+    <string name="reset_options_title">Reset</string>
+
 </resources>

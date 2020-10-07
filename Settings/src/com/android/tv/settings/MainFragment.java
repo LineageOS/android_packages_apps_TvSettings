@@ -16,6 +16,10 @@
 
 package com.android.tv.settings;
 
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.settings.util.InstrumentationUtils.logPageFocused;
 
@@ -59,6 +63,7 @@ import com.android.tv.settings.HotwordSwitchController.HotwordStateListener;
 import com.android.tv.settings.accounts.AccountsFragment;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.OverlayUtils;
 import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
 import com.android.tv.settings.util.SliceUtils;
@@ -79,14 +84,14 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     private static final String TAG = "MainFragment";
     private static final String KEY_SUGGESTIONS_LIST = "suggestions";
-    private static final String KEY_OFFLINE_MODE_SUGGESTION = "offline_mode_suggestion";
-    private static final String KEY_OFFLINE_EXIT = "offline_mode_exit";
+    private static final String KEY_BASIC_MODE_SUGGESTION = "basic_mode_suggestion";
+    private static final String KEY_BASIC_MODE_EXIT = "basic_mode_exit";
     @VisibleForTesting
     static final String KEY_ACCOUNTS_AND_SIGN_IN = "accounts_and_sign_in";
     @VisibleForTesting
     static final String KEY_ACCOUNTS_AND_SIGN_IN_SLICE = "accounts_and_sign_in_slice";
     @VisibleForTesting
-    static final String KEY_ACCOUNTS_AND_SIGN_IN_OFFLINE = "accounts_and_sign_in_offline";
+    static final String KEY_ACCOUNTS_AND_SIGN_IN_BASIC_MODE = "accounts_and_sign_in_basic_mode";
     private static final String KEY_APPLICATIONS = "applications";
     @VisibleForTesting
     static final String KEY_ACCESSORIES = "remotes_and_accessories";
@@ -150,7 +155,17 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.main_prefs;
+        switch (OverlayUtils.getFlavor(getContext())) {
+            case FLAVOR_CLASSIC:
+            case FLAVOR_TWO_PANEL:
+                return R.xml.main_prefs;
+            case FLAVOR_X:
+                return R.xml.main_prefs_x;
+            case FLAVOR_VENDOR:
+                return R.xml.main_prefs_vendor;
+            default:
+                return R.xml.main_prefs;
+        }
     }
 
     @Override
@@ -206,7 +221,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         updateAccountPref();
         updateAccessoryPref();
         updateConnectivity();
-        updateOfflineModeSuggestion();
+        updateBasicModeSuggestion();
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
@@ -289,7 +304,7 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.main_prefs, null);
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
         if (isRestricted()) {
             Preference appPref = findPreference(KEY_APPLICATIONS);
             if (appPref != null) {
@@ -492,10 +507,10 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     @Override
     public void onSuggestionReady(List<Suggestion> data) {
-        // Suggestion category is handled differently in offline mode
+        // Suggestion category is handled differently in basic mode
         if (data == null || data.size() == 0
                 || FeatureFactory.getFactory(getContext())
-                .getOfflineFeatureProvider().isOfflineMode(getContext())) {
+                .getBasicModeFeatureProvider().isBasicMode(getContext())) {
             if (mSuggestionsList != null) {
                 getPreferenceScreen().removePreference(mSuggestionsList);
                 mSuggestionsList = null;
@@ -609,13 +624,13 @@ public class MainFragment extends PreferenceControllerFragment implements
         Preference accountsPref = findPreference(KEY_ACCOUNTS_AND_SIGN_IN);
         SlicePreference accountsSlicePref =
                 (SlicePreference) findPreference(KEY_ACCOUNTS_AND_SIGN_IN_SLICE);
-        Preference accountsOffline = findPreference(KEY_ACCOUNTS_AND_SIGN_IN_OFFLINE);
+        Preference accountsBasicMode = findPreference(KEY_ACCOUNTS_AND_SIGN_IN_BASIC_MODE);
         Intent intent = new Intent(ACTION_ACCOUNTS);
 
-        if (FeatureFactory.getFactory(getContext()).getOfflineFeatureProvider()
-                .isOfflineMode(getContext())) {
-            if (accountsOffline != null) {
-                accountsOffline.setVisible(true);
+        if (FeatureFactory.getFactory(getContext()).getBasicModeFeatureProvider()
+                .isBasicMode(getContext())) {
+            if (accountsBasicMode != null) {
+                accountsBasicMode.setVisible(true);
             }
             if (accountsPref != null) {
                 accountsPref.setVisible(false);
@@ -625,8 +640,8 @@ public class MainFragment extends PreferenceControllerFragment implements
             }
             return;
         } else {
-            if (accountsOffline != null) {
-                accountsOffline.setVisible(false);
+            if (accountsBasicMode != null) {
+                accountsBasicMode.setVisible(false);
             }
         }
 
@@ -677,16 +692,16 @@ public class MainFragment extends PreferenceControllerFragment implements
     }
 
     @VisibleForTesting
-    void updateOfflineModeSuggestion() {
-        PreferenceCategory offlineModeSuggestion = findPreference(KEY_OFFLINE_MODE_SUGGESTION);
-        if (offlineModeSuggestion == null) {
+    void updateBasicModeSuggestion() {
+        PreferenceCategory basicModeSuggestion = findPreference(KEY_BASIC_MODE_SUGGESTION);
+        if (basicModeSuggestion == null) {
             return;
         }
         if (FeatureFactory.getFactory(getContext())
-                .getOfflineFeatureProvider().isOfflineMode(getContext())) {
-            offlineModeSuggestion.setVisible(true);
+                .getBasicModeFeatureProvider().isBasicMode(getContext())) {
+            basicModeSuggestion.setVisible(true);
         } else {
-            offlineModeSuggestion.setVisible(false);
+            basicModeSuggestion.setVisible(false);
         }
     }
 
@@ -728,12 +743,12 @@ public class MainFragment extends PreferenceControllerFragment implements
                         && preference.getIntent() != null)) {
             getContext().startActivity(preference.getIntent());
             return true;
-        } else if (preference.getKey().equals(KEY_OFFLINE_EXIT)
+        } else if (preference.getKey().equals(KEY_BASIC_MODE_EXIT)
                 && FeatureFactory.getFactory(getContext())
-                .getOfflineFeatureProvider().isOfflineMode(getContext())) {
+                .getBasicModeFeatureProvider().isBasicMode(getContext())) {
             if (getActivity() != null) {
                 FeatureFactory.getFactory(getContext())
-                        .getOfflineFeatureProvider().startOfflineExitActivity(getActivity());
+                        .getBasicModeFeatureProvider().startBasicModeExitActivity(getActivity());
             }
             return true;
         } else {

@@ -18,6 +18,11 @@ package com.android.tv.settings.help;
 
 import static android.content.Context.ACCESSIBILITY_SERVICE;
 
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
+
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.view.accessibility.AccessibilityManager;
@@ -31,6 +36,7 @@ import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.OverlayUtils;
 
 /**
  * The "Help & feedback" screen in TV settings.
@@ -41,14 +47,27 @@ public class HelpFragment extends SettingsPreferenceFragment {
     private static final String KEY_SEND_FEEDBACK = "feedback";
     private static final String KEY_HELP = "help_center";
 
+    private int getPreferenceScreenResId() {
+        switch (OverlayUtils.getFlavor(getContext())) {
+            case FLAVOR_CLASSIC:
+            case FLAVOR_TWO_PANEL:
+                return R.xml.help_and_feedback;
+            case FLAVOR_X:
+            case FLAVOR_VENDOR:
+                return R.xml.help_and_feedback_x;
+            default:
+                return R.xml.help_and_feedback;
+        }
+    }
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.help_and_feedback, null);
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
 
         final Preference sendFeedbackPref = findPreference(KEY_SEND_FEEDBACK);
         if (sendFeedbackPref != null) {
             sendFeedbackPref.setVisible(!FeatureFactory.getFactory(getContext())
-                    .getOfflineFeatureProvider().isOfflineMode(getContext()));
+                    .getBasicModeFeatureProvider().isBasicMode(getContext()));
         }
 
         final Preference helpPref = findPreference(KEY_HELP);

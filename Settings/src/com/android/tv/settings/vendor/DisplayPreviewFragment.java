@@ -14,26 +14,25 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.offline;
+package com.android.tv.settings.vendor;
 
-import android.app.Activity;
-import android.content.Context;
+import android.os.Bundle;
 
-import androidx.annotation.NonNull;
+import androidx.annotation.Keep;
 
-/** Feature provider for offline mode. */
-public interface OfflineFeatureProvider {
+import com.android.tv.settings.R;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
-    /**
-     * @param context
-     * @return whether the device is in offline mode.
-     */
-    boolean isOfflineMode(@NonNull Context context);
+/** A vendor sample of display preview settings. */
+@Keep
+public class DisplayPreviewFragment extends SettingsPreferenceFragment {
+    @Override
+    public void onCreatePreferences(Bundle bundle, String s) {
+        setPreferencesFromResource(R.xml.preview_display_vendor, null);
+    }
 
-    /**
-     * Attempt to start the Activity for exiting offline mode.
-     * @param activity the Activity to start the offline exit Activity from
-     */
-    void startOfflineExitActivity(@NonNull Activity activity);
-
+    @Override
+    public int getMetricsCategory() {
+        return 0;
+    }
 }

@@ -16,6 +16,11 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
+
 import android.content.ContentResolver;
 import android.content.Context;
 import android.media.AudioManager;
@@ -29,6 +34,7 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.OverlayUtils;
 import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
@@ -58,9 +64,22 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment {
         super.onAttach(context);
     }
 
+    private int getPreferenceScreenResId() {
+        switch (OverlayUtils.getFlavor(getContext())) {
+            case FLAVOR_CLASSIC:
+            case FLAVOR_TWO_PANEL:
+                return R.xml.display_sound;
+            case FLAVOR_X:
+            case FLAVOR_VENDOR:
+                return R.xml.display_sound_x;
+            default:
+                return R.xml.display_sound;
+        }
+    }
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.display_sound, null);
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
 
         final TwoStatePreference soundPref = findPreference(KEY_SOUND_EFFECTS);
         soundPref.setChecked(getSoundEffectsEnabled());
