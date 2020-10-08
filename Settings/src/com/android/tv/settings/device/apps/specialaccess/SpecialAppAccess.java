@@ -19,6 +19,7 @@ package com.android.tv.settings.device.apps.specialaccess;
 import android.app.ActivityManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
@@ -61,6 +62,10 @@ public class SpecialAppAccess extends SettingsPreferenceFragment {
             for (String disabledFeature : DISABLED_FEATURES_LOW_RAM_TV) {
                 removePreference(disabledFeature);
             }
+        }
+        PackageManager packageManager = getActivity().getPackageManager();
+        if (!packageManager.hasSystemFeature(PackageManager.FEATURE_PICTURE_IN_PICTURE)) {
+            removePreference(KEY_FEATURE_PIP);
         }
     }
 
