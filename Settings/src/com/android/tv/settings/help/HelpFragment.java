@@ -16,10 +16,14 @@
 
 package com.android.tv.settings.help;
 
+import static android.content.Context.ACCESSIBILITY_SERVICE;
+
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.view.accessibility.AccessibilityManager;
 
 import androidx.annotation.Keep;
+import androidx.leanback.widget.VerticalGridView;
 import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -50,6 +54,14 @@ public class HelpFragment extends SettingsPreferenceFragment {
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
+        AccessibilityManager am =
+                (AccessibilityManager) getContext().getSystemService(ACCESSIBILITY_SERVICE);
+        boolean isAccessibilityEnabled = am.isEnabled();
+        VerticalGridView listView = (VerticalGridView) getListView();
+        if (!listView.getChildAt(listView.getSelectedPosition()).isAccessibilityFocused()
+                && isAccessibilityEnabled) {
+            return true;
+        }
         switch (preference.getKey()) {
             case KEY_HELP:
                 FeatureFactory.getFactory(getActivity()).getSupportFeatureProvider().startSupport(
