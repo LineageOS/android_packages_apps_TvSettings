@@ -78,8 +78,8 @@ public class AboutFragment extends SettingsPreferenceFragment implements
     private static final String KEY_DEVICE_NAME = "device_name";
     private static final String KEY_RESTART = "restart";
     private static final String KEY_TUTORIALS = "tutorials";
-    private static final String KEY_ROM_VERSION = "rom_version";
-    private static final String PROPERTY_ROM_VERSION = "ro.lineage.display.version";
+    private static final String KEY_LINEAGE_VERSION = "lineage_version";
+    private static final String PROPERTY_LINEAGE_VERSION = "ro.lineage.display.version";
     private static final String KEY_BUILD_DATE = "build_date";
     private static final String PROPERTY_BUILD_DATE = "ro.build.date";
 
@@ -138,8 +138,8 @@ public class AboutFragment extends SettingsPreferenceFragment implements
         findPreference(KEY_DEVICE_MODEL).setSummary(Build.MODEL + DeviceInfoUtils.getMsvSuffix());
         findPreference(KEY_EQUIPMENT_ID)
                 .setSummary(getSystemPropertySummary(PROPERTY_EQUIPMENT_ID));
-        findPreference(KEY_ROM_VERSION)
-                .setSummary(getSystemPropertySummary(PROPERTY_ROM_VERSION));
+        findPreference(KEY_LINEAGE_VERSION)
+                .setSummary(getSystemPropertySummary(PROPERTY_LINEAGE_VERSION));
         findPreference(KEY_BUILD_DATE)
                 .setSummary(getSystemPropertySummary(PROPERTY_BUILD_DATE));
 
@@ -260,7 +260,7 @@ public class AboutFragment extends SettingsPreferenceFragment implements
     public boolean onPreferenceTreeClick(Preference preference) {
         switch (preference.getKey()) {
             case KEY_FIRMWARE_VERSION:
-            case KEY_ROM_VERSION:
+            case KEY_LINEAGE_VERSION:
                 System.arraycopy(mHits, 1, mHits, 0, mHits.length - 1);
                 mHits[mHits.length - 1] = SystemClock.uptimeMillis();
                 if (mHits[0] >= (SystemClock.uptimeMillis() - 500)) {
@@ -270,7 +270,7 @@ public class AboutFragment extends SettingsPreferenceFragment implements
                     }
 
                     Intent intent = new Intent(Intent.ACTION_MAIN);
-                    intent.putExtra("is_lineage", preference.getKey().equals(KEY_ROM_VERSION));
+                    intent.putExtra("is_lineage", preference.getKey().equals(KEY_LINEAGE_VERSION));
                     intent.setClassName("android",
                             com.android.internal.app.PlatLogoActivity.class.getName());
                     try {
