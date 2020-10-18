@@ -48,7 +48,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
@@ -634,7 +633,13 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
 
         String errorMessage = uri.getQueryParameter(SlicesConstants.PARAMETER_ERROR);
         if (errorMessage != null) {
-            Toast.makeText(getContext(), errorMessage, Toast.LENGTH_SHORT).show();
+            showErrorMessage(errorMessage);
+        }
+    }
+
+    private void showErrorMessage(String errorMessage) {
+        if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
+            ((TwoPanelSettingsFragment) getCallbackFragment()).showErrorMessage(errorMessage);
         }
     }
 
