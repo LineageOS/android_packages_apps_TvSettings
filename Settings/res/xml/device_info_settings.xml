@@ -45,11 +45,7 @@
 
     <Preference
         android:key="reset"
-        android:title="@string/device_reset">
-        <intent
-            android:targetClass="com.android.tv.settings.device.storage.ResetActivity"
-            android:targetPackage="com.android.tv.settings"/>
-    </Preference>
+        android:title="@string/device_reset"/>
 
     <!-- Device status - launches as activity, must run in separate process -->
     <Preference android:key="status_info"
