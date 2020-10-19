@@ -16,12 +16,17 @@
 
 package com.android.tv.twopanelsettings;
 
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_SUMMARY;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TITLE_ICON;
+
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.ContentProviderClient;
+import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -841,6 +846,20 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    /** Show error message in preview panel **/
+    public void showErrorMessage(String errorMessage) {
+        Fragment prefFragment =
+                getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
+        Preference preference = getChosenPreference(prefFragment);
+        preference.setFragment(InfoFragment.class.getCanonicalName());
+        Bundle b = preference.getExtras();
+        b.putParcelable(EXTRA_PREFERENCE_INFO_TITLE_ICON,
+                Icon.createWithResource(getContext(), R.drawable.slice_error_icon));
+        b.putCharSequence(EXTRA_PREFERENCE_INFO_TEXT, getString(R.string.status_unavailable));
+        b.putCharSequence(EXTRA_PREFERENCE_INFO_SUMMARY, errorMessage);
+        onPreferenceFocused(preference);
     }
 
     private void updateInfoFragmentStatus(Fragment fragment) {
