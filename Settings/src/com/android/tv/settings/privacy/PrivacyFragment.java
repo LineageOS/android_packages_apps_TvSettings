@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.privacy;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
@@ -35,6 +36,7 @@ import com.android.tv.twopanelsettings.slices.SlicePreference;
 public class PrivacyFragment extends SettingsPreferenceFragment {
 
     private static final String KEY_ACCOUNT_SETTINGS_CATEGORY = "accountSettings";
+    private static final String KEY_ADS = "ads";
     private static final String KEY_ASSISTANT = "assistant";
     private static final String KEY_PURCHASES = "purchases";
 
@@ -61,6 +63,12 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
         if (assistantSlicePreference.isVisible() && purchasesSlicePreference.isVisible()) {
             findPreference(KEY_ACCOUNT_SETTINGS_CATEGORY).setVisible(true);
         }
+        findPreference(KEY_ADS).setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent();
+            intent.setAction("com.google.android.gms.settings.ADS_PRIVACY");
+            startActivity(intent);
+            return true;
+        });
     }
 
     @Override
