@@ -180,6 +180,7 @@
     <string name="system_diagnostic" msgid="1654842813331919958">"वापर आणि निदान"</string>
     <string name="tutorials" msgid="7880770425872110455">"ट्यूटोरियल"</string>
     <string name="about_system_update" msgid="7421264399111367755">"सिस्टम अपडेट"</string>
+    <string name="system_update_description" msgid="998883510488461766">"यामुळे तुमचे सिस्टम सॉफ्टवेअर सर्वात अलीकडील आवृत्तीवर अपडेट होईल. तुमचे डिव्हाइस रीस्टार्ट होईल."</string>
     <string name="about_preference" msgid="9112690446998150670">"विषयी"</string>
     <string name="device_name" msgid="566626587332817733">"डिव्हाइस नाव"</string>
     <string name="restart_button_label" msgid="911750765086382990">"रीस्टार्ट करा"</string>
@@ -196,6 +197,7 @@
       <item quantity="one">तुम्ही आता डेव्हलपर होण्यापासून <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> पायरी दूर आहात</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"जाहिराती"</string>
+    <string name="ads_description" msgid="8081069475265061074">"जाहिरात आयडी रीसेट करण्यासारखी जाहिरात सेटिंग्ज व्यवस्थापित करा."</string>
     <string name="show_dev_on" msgid="612741433124106067">"आता तुम्ही एक डेव्हलपर आहात!"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"आवश्यकता नाही, तुम्ही आधीपासूनच एक विकसक आहात"</string>
     <string name="device_info_default" msgid="2374506935205518448">"अज्ञात"</string>
@@ -259,12 +261,12 @@
     <string name="wifi_security_type_wpa" msgid="9205358644485448199">"WPA/WPA2 PSK"</string>
     <string name="wifi_security_type_eap" msgid="3948280751219829163">"802.1x EAP"</string>
     <string name="title_wifi_no_networks_available" msgid="3696700321170616981">"स्कॅन करत आहे…"</string>
-    <string name="title_wifi_could_not_save" msgid="7549912968719395764">"<xliff:g id="SSID">%1$s</xliff:g> साठी कॉन्फिगरेशन सेव्ह करू शकलो नाही"</string>
+    <string name="title_wifi_could_not_save" msgid="7549912968719395764">"<xliff:g id="SSID">%1$s</xliff:g> साठी कॉंफिगरेशन सेव्ह करू शकलो नाही"</string>
     <string name="title_wifi_could_not_connect" msgid="6654031057635481872">"<xliff:g id="SSID">%1$s</xliff:g> शी कनेक्ट करू शकलो नाही"</string>
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"<xliff:g id="SSID">%1$s</xliff:g> शोधू शकलो नाही"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"वाय-फाय पासवर्ड वैध नाही"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"वाय-फाय नेटवर्कने कनेक्शन स्वीकारले नाही"</string>
-    <string name="title_wifi_advanced_options" msgid="371185991282743258">"<xliff:g id="SSID">%1$s</xliff:g> प्रॉक्सी आणि IP सेटिंग्ज कॉन्फिगर करायचे?"</string>
+    <string name="title_wifi_advanced_options" msgid="371185991282743258">"<xliff:g id="SSID">%1$s</xliff:g> प्रॉक्सी आणि IP सेटिंग्ज कॉंफिगर करायचे?"</string>
     <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"प्रॉक्सी सेटिंग्ज"</string>
     <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"प्रॉक्सी होस्टनाव:"</string>
     <string name="title_wifi_proxy_port" msgid="566244407030390328">"प्रॉक्सी पोर्ट:"</string>
@@ -281,7 +283,7 @@
     <string name="wifi_action_try_again" msgid="8920677153891141148">"पुन्हा प्रयत्न करा"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"उपलब्ध नेटवर्क पहा"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g> शी कनेक्ट करत आहे"</string>
-    <string name="wifi_saving" msgid="320653339670641708">"<xliff:g id="SSID">%1$s</xliff:g> साठी कॉन्फिगरेशन सेव्ह करत आहे"</string>
+    <string name="wifi_saving" msgid="320653339670641708">"<xliff:g id="SSID">%1$s</xliff:g> साठी कॉंफिगरेशन सेव्ह करत आहे"</string>
     <string name="wifi_connect" msgid="2206086690065242121">"कनेक्ट करा"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"नेटवर्क विसरा"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"सेव्ह केलेल्या संकेतशब्दाच्या समावेशासह, या नेटवर्कशी कनेक्ट करण्यासाठी वापरलेली माहिती साफ करते"</string>
@@ -455,7 +457,7 @@
     <string name="captions_display_on" msgid="480438033345455728">"सुरू"</string>
     <string name="captions_display_off" msgid="87881163874948539">"बंद"</string>
     <string name="display_options" msgid="2645282080948371603">"प्रदर्शन पर्याय"</string>
-    <string name="captions_configure" msgid="711991018642931958">"कॉन्फिगर करा"</string>
+    <string name="captions_configure" msgid="711991018642931958">"कॉंफिगर करा"</string>
     <string name="captions_language" msgid="5905918439449912646">"भाषा"</string>
     <string name="captions_language_default" msgid="3894192926725192528">"डीफॉल्ट"</string>
     <string name="captions_textsize" msgid="7161136610669343510">"मजकूर आकार"</string>
@@ -487,13 +489,13 @@
     <string name="color_yellow" msgid="3519470952904560404">"पिवळा"</string>
     <string name="color_magenta" msgid="2377854703399624607">"किरमिजी तांबडा"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"सक्षम करा"</string>
-    <string name="system_accessibility_config" msgid="4820879735377962851">"कॉन्फिगरेशन"</string>
+    <string name="system_accessibility_config" msgid="4820879735377962851">"कॉंफिगरेशन"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"<xliff:g id="SERVICE">%1$s</xliff:g> वापरायची?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> संकेतशब्दांशिवाय, तुम्ही टाइप करता तो सर्व मजकूर संकलित करू शकते. यात क्रेडिट कार्ड नंबर सारखा वैयक्तिक डेटा समाविष्ट होतो."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"<xliff:g id="SERVICE">%1$s</xliff:g> थांबवायचे?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"ठीक आहे निवडल्याने <xliff:g id="SERVICE">%1$s</xliff:g> थांबेल."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"टेक्स्ट टू स्पीच"</string>
-    <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"इंजिन कॉन्फिगरेशन"</string>
+    <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"इंजिन कॉंफिगरेशन"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"पासवर्ड म्हणा"</string>
     <string name="system_preferred_engine" msgid="3545505072652708443">"प्राधान्यकृत इंजिन"</string>
     <string name="system_speech_rate" msgid="6553204071403872669">"उच्चार दर"</string>
@@ -590,7 +592,7 @@
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"खूप जलद"</string>
     <string name="title_settings" msgid="780933693363320088">"<xliff:g id="NAME">%1$s</xliff:g> सेटिंग्‍ज"</string>
     <string name="title_current_keyboard" msgid="891238509164879851">"वर्तमान कीबोर्ड"</string>
-    <string name="title_configure" msgid="846802387014612210">"कॉन्फिगर करा"</string>
+    <string name="title_configure" msgid="846802387014612210">"कॉंफिगर करा"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"कीबोर्ड पर्याय"</string>
     <string name="title_current_autofill_service" msgid="9029001041887283153">"सध्‍याची ऑटोफिल सेवा"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"ऑटोफिल सेवा निवडा"</string>
@@ -723,7 +725,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"ऑटोमॅटिक रिस्टोअर"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"डिव्‍हाइस रीसेट करा"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"हे तुमच्या डिव्‍हाइसच्‍या अंतर्गत स्टाेरेजवरील तुमचे Google खाते, सिस्‍टम, अ‍ॅप डेटा व सेटिंग्‍ज आणि डाउनलोड केलेली अ‍ॅप्‍स यांच्यातील डेटासह सर्व डेटा मिटवेल"</string>
-    <string name="factory_reset_info_description" msgid="6684503527649034537">"हे तुमचा सर्व डेटा, खाती, फाइल, डाउनलोड केलेली ॲप्स मिटवेल आणि तुमचे डिव्हाइस डीफॉल्ट सेटिंग्जवर रिस्टोअर करेल."</string>
+    <string name="factory_reset_info_description" msgid="5098454670833183487">"यामुळे तुमचे डिव्हाइस डीफॉल्ट सेटिंग्जवर रिस्टोअर होईल आणि सर्व डेटा, खाती, फाइल आणि डाउनलोड केलेली ॲप्स मिटवली जातील."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"या डिव्हाइसवरील तुमची सर्व वैयक्तिक माहिती आणि डाउनलोड केलेली ॲप्स मिटवायची आहेत का? तुम्ही हे पहिल्यासारखे करू शकत नाही!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"प्रत्येकगोष्ट मिटवा"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"आपल्‍या <xliff:g id="DEVICEMODEL">%1$s</xliff:g> साठी एक नाव निवडा"</string>
