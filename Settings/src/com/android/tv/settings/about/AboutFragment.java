@@ -343,12 +343,20 @@ public class AboutFragment extends SettingsPreferenceFragment {
                         b.getBoolean(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL)) {
                     ciActionOnSysUpdate(b);
                 }
+                Intent systemUpdateIntent = new Intent();
+                systemUpdateIntent.setAction("android.settings.SYSTEM_UPDATE_SETTINGS");
+                startActivity(systemUpdateIntent);
                 break;
             case KEY_DEVICE_NAME:
                 logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_DEVICE_NAME);
                 break;
             case KEY_RESET:
                 logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_FACTORY_RESET);
+                Intent factoryResetIntent = new Intent();
+                factoryResetIntent.setClassName(
+                        "com.android.tv.settings",
+                        "com.android.tv.settings.device.storage.ResetActivity");
+                startActivity(factoryResetIntent);
                 break;
         }
         return super.onPreferenceTreeClick(preference);

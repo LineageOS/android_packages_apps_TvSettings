@@ -34,9 +34,7 @@
     </com.android.tv.twopanelsettings.slices.SlicePreference>
     <Preference
         android:key="ads"
-        android:title="@string/about_ads">
-        <intent android:action="com.google.android.gms.settings.ADS_PRIVACY" />
-    </Preference>
+        android:title="@string/about_ads"/>
 
     <PreferenceCategory
         android:key="accountSettings"
