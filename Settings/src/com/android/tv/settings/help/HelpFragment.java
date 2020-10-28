@@ -38,11 +38,18 @@ import com.android.tv.settings.overlay.FeatureFactory;
 @Keep
 public class HelpFragment extends SettingsPreferenceFragment {
 
+    private static final String KEY_SEND_FEEDBACK = "feedback";
     private static final String KEY_HELP = "help_center";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.help_and_feedback, null);
+
+        final Preference sendFeedbackPref = findPreference(KEY_SEND_FEEDBACK);
+        if (sendFeedbackPref != null) {
+            sendFeedbackPref.setVisible(!FeatureFactory.getFactory(getContext())
+                    .getOfflineFeatureProvider().isOfflineMode(getContext()));
+        }
 
         final Preference helpPref = findPreference(KEY_HELP);
         if (helpPref != null) {
