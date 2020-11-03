@@ -16,6 +16,10 @@
 
 package com.android.tv.settings.connectivity;
 
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
@@ -45,6 +49,7 @@ import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.OverlayUtils;
 import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.settings.widget.TvAccessPointPreference;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
@@ -140,11 +145,24 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         updateConnectivity();
     }
 
+    private int getPreferenceScreenResId() {
+        switch (OverlayUtils.getFlavor(getContext())) {
+            case FLAVOR_CLASSIC:
+            case FLAVOR_TWO_PANEL:
+                return R.xml.network;
+            case FLAVOR_X:
+            case FLAVOR_VENDOR:
+                return R.xml.network_x;
+            default:
+                return R.xml.network;
+        }
+    }
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         getPreferenceManager().setPreferenceComparisonCallback(
                 new PreferenceManager.SimplePreferenceComparisonCallback());
-        setPreferencesFromResource(R.xml.network, null);
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
 
         mEnableWifiPref = (TwoStatePreference) findPreference(KEY_WIFI_ENABLE);
         mWifiNetworksCategory = (CollapsibleCategory) findPreference(KEY_WIFI_LIST);

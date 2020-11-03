@@ -16,6 +16,11 @@
 
 package com.android.tv.settings.about;
 
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
+
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -29,6 +34,7 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.overlay.OverlayUtils;
 
 import java.util.List;
 
@@ -98,7 +104,16 @@ public class RebootConfirmFragment extends GuidedStepFragment {
         return new GuidanceStylist() {
             @Override
             public int onProvideLayoutId() {
-                return R.layout.confirm_guidance;
+                switch (OverlayUtils.getFlavor(getContext())) {
+                    case FLAVOR_CLASSIC:
+                    case FLAVOR_TWO_PANEL:
+                        return R.layout.confirm_guidance;
+                    case FLAVOR_X:
+                    case FLAVOR_VENDOR:
+                        return R.layout.confirm_guidance_x;
+                    default:
+                        return R.layout.confirm_guidance;
+                }
             }
         };
     }

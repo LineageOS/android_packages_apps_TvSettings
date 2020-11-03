@@ -14,25 +14,25 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.offline;
+package com.android.tv.settings.vendor;
 
-import android.app.Activity;
-import android.content.Context;
+import android.os.Bundle;
 
-import androidx.annotation.NonNull;
+import androidx.annotation.Keep;
 
-/** Implementation of {@link OfflineFeatureProvider} */
-public class OfflineFeatureProviderImpl implements OfflineFeatureProvider {
+import com.android.tv.settings.R;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
-    protected static final String TAG = "OfflineFeature";
-
+/** A vendor version power and energy settings. */
+@Keep
+public class PowerAndEnergyFragment extends SettingsPreferenceFragment {
     @Override
-    public boolean isOfflineMode(@NonNull Context context) {
-        return false;
+    public void onCreatePreferences(Bundle bundle, String s) {
+        setPreferencesFromResource(R.xml.power_and_energy_vendor, null);
     }
 
     @Override
-    public void startOfflineExitActivity(@NonNull Activity activity) {
-        // no-op
+    public int getMetricsCategory() {
+        return 0;
     }
 }

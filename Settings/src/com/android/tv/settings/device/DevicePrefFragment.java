@@ -16,6 +16,10 @@
 
 package com.android.tv.settings.device;
 
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
@@ -55,6 +59,7 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.about.RebootConfirmFragment;
 import com.android.tv.settings.autofill.AutofillHelper;
 import com.android.tv.settings.inputmethod.InputMethodHelper;
+import com.android.tv.settings.overlay.OverlayUtils;
 import com.android.tv.settings.system.SecurityFragment;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
@@ -87,13 +92,27 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     private PackageManager mPm;
     private AudioManager mAudioManager;
 
+    private int getPreferenceScreenResId() {
+        if (isRestricted()) {
+            return R.xml.device_restricted;
+        }
+        switch (OverlayUtils.getFlavor(getContext())) {
+            case FLAVOR_CLASSIC:
+                return R.xml.device;
+            case FLAVOR_TWO_PANEL:
+                return R.xml.device_two_panel;
+            case FLAVOR_X:
+                return R.xml.device_x;
+            case FLAVOR_VENDOR:
+                return R.xml.device_vendor;
+            default:
+                return R.xml.device;
+        }
+    }
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        if (isRestricted()) {
-            setPreferencesFromResource(R.xml.device_restricted, null);
-        } else {
-            setPreferencesFromResource(R.xml.device, null);
-        }
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
         mSoundsPref = findPreference(KEY_SOUNDS);
         mSoundsSwitchPref = findPreference(KEY_SOUNDS_SWITCH);
         if (mSoundsSwitchPref != null) {
