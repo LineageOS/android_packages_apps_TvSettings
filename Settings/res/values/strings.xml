@@ -259,17 +259,49 @@
     <string name="surround_sound_format_dts">DTS</string>
     <!-- Name of the DTS-HD surround sound format that is displayed to the user [CHAR LIMIT=50] -->
     <string name="surround_sound_format_dts_hd">DTS-HD</string>
-    <!-- Name of the IEC61937 surround sound format that is displayed to the user [CHAR LIMIT=50] -->
-    <string name="surround_sound_format_iec61937">IEC61937</string>
+    <!-- Name of the DOLBY_MAT surround sound format that is displayed to the user
+        [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_dolby_mat">Dolby Atmos with Dolby TrueHD</string>
+    <!-- Name of the DOLBY_TRUEHD surround sound format that is displayed to the user
+        [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_dolby_truehd">Dolby TrueHD</string>
+    <!-- Name of the E_AC3_JOC surround sound format that is displayed to the user
+        [CHAR LIMIT=50] -->
+    <string name="surround_sound_format_e_ac3_joc">Dolby Atmos with Dolby Digital Plus</string>
 
-    <!-- An informational message displayed in the surround sound settings, explaining to the user that the auto setting may sometimes cause issues. [CHAR LIMIT=100]-->
-    <string name="surround_sound_auto_info">Note: The Auto option may not work if your device does not report its supported formats correctly.</string>
-    <!-- Text for a radio button that if selected will cause the device to automatically select an appropriate surround sound format. [CHAR LIMIT=50] -->
-    <string name="surround_sound_auto_summary">Auto: Use the formats that your device reports supporting (recommended)</string>
-    <!-- Text for a radio button that if selected will cause the device to never use a surround sound format. [CHAR LIMIT=50] -->
+    <!-- An informational message displayed in the surround sound settings, explaining to the
+        user that the auto setting may sometimes cause issues. [CHAR LIMIT=100]-->
+    <string name="surround_sound_auto_info">Note: The Automatic option may not work if your device
+        does not report its supported formats correctly.</string>
+    <!-- Text for a radio button that if selected will cause the device to automatically select
+        an appropriate surround sound format. [CHAR LIMIT=50] -->
+    <string name="surround_sound_auto_summary">Automatic: Use device reported formats</string>
+    <!-- Text for a radio button that if selected will cause the device to never use a surround
+       sound format. [CHAR LIMIT=50] -->
     <string name="surround_sound_none_summary">None: Never use surround sound</string>
-    <!-- Text for a radio button that if selected will allow the user to manually select surround sound formats. [CHAR LIMIT=50] -->
-    <string name="surround_sound_manual_summary">Manual: Select which formats to use</string>
+    <!-- Text for a radio button that if selected will allow the user to manually select surround
+        sound formats. [CHAR LIMIT=70] -->
+    <string name="surround_sound_manual_summary">Manual: Choose formats manually from available
+        formats</string>
+    <!-- Title for warning dialog that is shown when user enables an unsupported surround sound
+        format. [CHAR LIMIT=70]-->
+    <string name="surround_sound_enable_unsupported_dialog_title">Enabling unsupported sound
+        format?</string>
+    <!-- Description for warning dialog that is shown when user enables an unsupported surround
+        sound format. [CHAR LIMIT=150]-->
+    <string name="surround_sound_enable_unsupported_dialog_desc">Your connected audio device does
+            not report support for this format. This may cause unexpected behaviours like loud
+            noises or pops from your device.</string>
+    <!-- Cancel button title for warning dialog that is shown when user enables an unsupported
+        surround sound format. [CHAR LIMIT=30]-->
+    <string name="surround_sound_enable_unsupported_dialog_cancel">Cancel</string>
+    <!-- Ok button title for warning dialog that is shown when user enables an unsupported surround
+        sound format. [CHAR LIMIT=50]-->
+    <string name="surround_sound_enable_unsupported_dialog_ok">Change anyway</string>
+    <!-- Title for supported surround sound section [CHAR LIMIT=50]-->
+    <string name="surround_sound_supported_title">SUPPORTED FORMATS</string>
+    <!-- Title for unsupported surround sound section [CHAR LIMIT=50]-->
+    <string name="surround_sound_unsupported_title">UNSUPPORTED FORMATS</string>
 
     <string name="match_content_slice_uri" translatable="false" />
     <!-- A category title for the settings related to display. [CHAR LIMIT=50] -->

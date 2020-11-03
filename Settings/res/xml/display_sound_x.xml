@@ -55,4 +55,8 @@
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
         custom:uri="@string/advanced_sound_settings_slice_uri"
         custom:isPreferenceVisible="false"/>
+    <Preference
+        android:key="advanced_sound_settings"
+        android:title="@string/advanced_sound_settings_title"
+        android:fragment="com.android.tv.settings.device.displaysound.AdvancedVolumeFragment" />
 </PreferenceScreen>
