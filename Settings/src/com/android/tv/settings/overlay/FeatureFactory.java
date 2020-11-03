@@ -24,8 +24,8 @@ import androidx.annotation.Keep;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsFragmentProvider;
+import com.android.tv.settings.basic.BasicModeFeatureProvider;
 import com.android.tv.settings.help.SupportFeatureProvider;
-import com.android.tv.settings.offline.OfflineFeatureProvider;
 import com.android.tv.settings.startup.StartupVerificationFeatureProvider;
 
 /**
@@ -78,8 +78,8 @@ public abstract class FeatureFactory {
     /** Supplies a support provider. */
     public abstract SupportFeatureProvider getSupportFeatureProvider();
 
-    /** Supplies a provider for offline feature. */
-    public abstract OfflineFeatureProvider getOfflineFeatureProvider();
+    /** Supplies a provider for basic mode feature. */
+    public abstract BasicModeFeatureProvider getBasicModeFeatureProvider();
 
     /** Supplies a provider for startup verification feature. */
     public abstract StartupVerificationFeatureProvider getStartupVerificationFeatureProvider();
