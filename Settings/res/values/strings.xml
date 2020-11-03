@@ -1497,6 +1497,10 @@
 
     <!-- Message displayed to prompt the user to input the network password, ^1 will be replaced with the name of the network and should be a possive form related to password [CHAR LIMIT=NONE] -->
     <string name="wifi_setup_input_password">Enter password for <xliff:g id="ssid">%1$s</xliff:g></string>
+    <!-- Summary displayed to explain next steps for user to submit network password, ^1 be replaced with keyboard icon to be selected [CHAR LIMIT=NONE] -->
+    <string name="wifi_setup_description">Select <xliff:g id="wifi_submit_icon">%1$s</xliff:g> to continue.</string>
+    <!-- The subtitle wifi setup description presents an action done icon to match the action done keyboard icon. This string, therefore, should match the content description of action done on the keyboard [CHAR LIMIT=NONE]-->
+    <string name="label_done_key">Done</string>
     <!-- Message displayed when the selected Wi-Fi network has been connected to [CHAR LIMIT=40] -->
     <string name="wifi_setup_connection_success">Connected successfully</string>
     <!-- Message displayed when the Wi-Fi network's configuration has been saved [CHAR LIMIT=40] -->
