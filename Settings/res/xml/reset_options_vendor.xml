@@ -12,10 +12,19 @@
   ~ distributed under the License is distributed on an "AS IS" BASIS,
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the License for the specific language governing permissions and
-  ~ limitations under the License
+  ~ limitations under the License.
   -->
 
-<resources>
-    <!-- Title for main screen preference for device [CHAR_LIMIT_50] -->
-    <string name="device_pref_category_title">System</string>
-</resources>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:title="@string/reset_options_title">
+
+    <Preference
+        android:key="reset"
+        android:title="@string/device_reset">
+        <intent
+            android:targetClass="com.android.tv.settings.device.storage.ResetActivity"
+            android:targetPackage="com.android.tv.settings"/>
+    </Preference>
+
+</PreferenceScreen>

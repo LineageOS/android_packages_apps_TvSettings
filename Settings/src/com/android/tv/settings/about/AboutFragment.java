@@ -16,6 +16,10 @@
 
 package com.android.tv.settings.about;
 
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 
 import android.app.tvsettings.TvSettingsEnums;
@@ -53,6 +57,7 @@ import com.android.tv.settings.PreferenceUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.name.DeviceManager;
+import com.android.tv.settings.overlay.OverlayUtils;
 
 import java.util.stream.Collectors;
 
@@ -110,9 +115,23 @@ public class AboutFragment extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
     }
 
+    private int getPreferenceScreenResId() {
+        switch (OverlayUtils.getFlavor(getContext())) {
+            case FLAVOR_CLASSIC:
+            case FLAVOR_TWO_PANEL:
+                return R.xml.device_info_settings;
+            case FLAVOR_X:
+                return R.xml.device_info_settings_x;
+            case FLAVOR_VENDOR:
+                return R.xml.device_info_settings_vendor;
+            default:
+                return R.xml.device_info_settings;
+        }
+    }
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.device_info_settings, null);
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
         final PreferenceScreen screen = getPreferenceScreen();
 
         refreshDeviceName();

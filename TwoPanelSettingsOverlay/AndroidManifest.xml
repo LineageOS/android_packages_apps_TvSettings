@@ -157,6 +157,23 @@
              android:exported="true"
              android:name=".connectivity.AddWifiNetworkActivity"
              android:theme="@style/Theme.SettingsConnectivity"/>
+        <!-- AccountSliceActivity is just here to facilitate the activity-alias below to eliminate
+        the risk of repackaging. -->
+        <activity
+            android:name=".accounts.AccountSliceActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.Settings.TwoPanel"
+            android:exported="false" />
+        <activity-alias
+            android:name="com.google.android.tv.settings.AccountActivity"
+            android:targetActivity=".accounts.AccountSliceActivity"
+            android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.USER_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
              android:exported="true"
@@ -170,6 +187,23 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <!-- ManageUserServicesSliceActivity is just here to facilitate the activity-alias below to
+        eliminate the risk of repackaging. -->
+        <activity
+            android:name=".accounts.ManageUserServicesSliceActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.Settings.TwoPanel"
+            android:exported="false" />
+        <activity-alias
+            android:name="com.google.android.tv.settings.ManageUserServicesActivity"
+            android:targetActivity=".accounts.ManageUserServicesSliceActivity"
+            android:exported="true" >
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.MANAGE_USER_SERVICES_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
              android:name=".accounts.RemoveAccountDialog"/>
@@ -278,8 +312,11 @@
                 <action android:name="android.os.storage.action.MANAGE_STORAGE"/>
             </intent-filter>
         </activity>
+        <!-- android:noHistory prevents it from lingering in stack in case it is started by the OEM
+        link. -->
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
+             android:noHistory="true"
              android:name=".device.storage.ResetActivity"
              android:theme="@style/Theme.Settings.TwoPanel"/>
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
@@ -375,6 +412,23 @@
                 <category android:name="com.android.settings.SHORTCUT"/>
             </intent-filter>
         </activity>
+        <!-- AmbientSliceActivity is just here to facilitate the activity-alias below to eliminate
+        the risk of repackaging. -->
+        <activity
+            android:name=".device.display.ambient.AmbientSliceActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.Settings.TwoPanel"
+            android:exported="false" />
+        <activity-alias
+            android:name="com.google.android.tv.settings.AmbientActivity"
+            android:targetActivity=".device.display.ambient.AmbientSliceActivity"
+            android:exported="true" >
+            <intent-filter android:priority="1">
+                <action android:name="com.google.android.tv.settings.ambient"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
              android:exported="true"
@@ -829,6 +883,96 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!--
+            It is critical to make sure that the OEM links below all have "android:priority" larger
+            than 0 to make sure that non-System apps, whose "android:priority" are capped to 0 at
+            runtime by the system, cannot "abduct" the intent.
+        -->
+        <activity-alias
+            android:name=".oemlink.AccessibilityCaptionActivity"
+            android:targetActivity=".system.CaptionSetupActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:theme="@style/Theme.Settings.TwoPanel" >
+            <intent-filter android:priority="1" >
+                <action android:name="android.settings.ACCESSIBILITY_CAPTION_TV_OEM_LINK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name=".oemlink.AccessibilitySettingsActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:theme="@style/Theme.Settings.TwoPanel" >
+            <intent-filter android:priority="1" >
+                <action android:name="android.settings.ACCESSIBILITY_TV_OEM_LINK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".oemlink.AccessibilityServiceActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:theme="@style/Theme.Settings.TwoPanel" >
+            <intent-filter android:priority="1" >
+                <action android:name="android.settings.ACCESSIBILITY_SHORTCUT_SERVICES_TV_OEM_LINK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name=".oemlink.NetworkSettingsActivity"
+            android:targetActivity=".connectivity.NetworkActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:theme="@style/Theme.Settings.TwoPanel" >
+            <intent-filter android:priority="1" >
+                <action android:name="android.settings.NETWORK_SETTINGS_TV_OEM_LINK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name=".oemlink.FactoryResetActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:theme="@style/Theme.Settings.TwoPanel" >
+            <intent-filter android:priority="1" >
+                <action android:name="android.settings.FACTORY_RESET_TV_OEM_LINK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.android.tv.settings.vendor.VendorActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:theme="@style/Theme.Settings.TwoPanel">
+            <intent-filter android:priority="1">
+                <action android:name="com.google.android.tv.settings.vendor"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".DeviceSettingBroadcastReceiver"
+            android:permission="android.permission.READ_PRIVILEGED_PHONE_STATE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.tv.settings.REBOOT_DEVICE"/>
+                <action android:name="com.android.tv.settings.REMOVE_WIFI"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

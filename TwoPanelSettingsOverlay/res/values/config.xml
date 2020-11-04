@@ -19,6 +19,9 @@
   <bool name="config_quick_settings_show_take_bugreport" translatable="false">false</bool>
 
   <!-- Fully-qualified class name for the implementation of the FeatureFactory to be instantiated. -->
-  <string name="config_featureFactory" translatable="false">com.android.tv.twopanelsettingsoverlay.FeatureFactoryImpl</string>
+  <string name="config_featureFactory" translatable="false">com.android.tv.settings.overlay.FeatureFactoryImplTwoPanel</string>
+
+  <!-- Flavor of TvSettings. -->
+  <string name="config_tvSettingsFlavor" translatable="false">TwoPanel</string>
 
 </resources>
