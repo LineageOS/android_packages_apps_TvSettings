@@ -18,6 +18,9 @@ package com.android.tv.settings.device.displaysound;
 
 import static android.provider.Settings.Secure.MINIMAL_POST_PROCESSING_ALLOWED;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -52,6 +55,9 @@ public class AdvancedDisplayFragment extends SettingsPreferenceFragment {
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (TextUtils.equals(preference.getKey(), KEY_GAME_MODE)) {
+            logToggleInteracted(
+                    TvSettingsEnums.DISPLAY_SOUND_ADVANCED_DISPLAY_GAME_MODE,
+                    ((SwitchPreference) preference).isChecked());
             setGameModeStatus(((SwitchPreference) preference).isChecked() ? 1 : 0);
         }
         return super.onPreferenceTreeClick(preference);
@@ -66,5 +72,10 @@ public class AdvancedDisplayFragment extends SettingsPreferenceFragment {
     private void setGameModeStatus(int state) {
         Settings.Secure.putInt(getActivity().getContentResolver(), MINIMAL_POST_PROCESSING_ALLOWED,
                 state);
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_DISPLAY;
     }
 }
