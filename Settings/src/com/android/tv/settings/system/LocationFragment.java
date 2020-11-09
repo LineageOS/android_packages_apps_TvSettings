@@ -16,6 +16,10 @@
 
 package com.android.tv.settings.system;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -112,6 +116,11 @@ public class LocationFragment extends SettingsPreferenceFragment implements
                 null
         });
         mLocationMode.setOnPreferenceChangeListener(this);
+        mLocationMode.setOnPreferenceClickListener(
+                preference -> {
+                    logEntrySelected(TvSettingsEnums.PRIVACY_LOCATION_STATUS);
+                    return false;
+                });
 
         final UserManager um = UserManager.get(getContext());
         mLocationMode.setEnabled(!um.hasUserRestriction(UserManager.DISALLOW_SHARE_LOCATION));
@@ -146,6 +155,11 @@ public class LocationFragment extends SettingsPreferenceFragment implements
                     pref.setSummary(R.string.location_low_battery_use);
                 }
             }
+            pref.setOnPreferenceClickListener(
+                    preference -> {
+                        logEntrySelected(TvSettingsEnums.PRIVACY_LOCATION_REQUESTED_APP);
+                        return false;
+                    });
             pref.setFragment(AppManagementFragment.class.getName());
             AppManagementFragment.prepareArgs(pref.getExtras(), request.packageName);
             recentLocationPrefs.add(pref);
@@ -204,8 +218,10 @@ public class LocationFragment extends SettingsPreferenceFragment implements
             int mode = Settings.Secure.LOCATION_MODE_OFF;
             if (TextUtils.equals((CharSequence) newValue, LOCATION_MODE_WIFI)) {
                 mode = Settings.Secure.LOCATION_MODE_ON;
+                logEntrySelected(TvSettingsEnums.PRIVACY_LOCATION_STATUS_USE_WIFI);
             } else if (TextUtils.equals((CharSequence) newValue, LOCATION_MODE_OFF)) {
                 mode = Settings.Secure.LOCATION_MODE_OFF;
+                logEntrySelected(TvSettingsEnums.PRIVACY_LOCATION_STATUS_OFF);
             } else {
                 Log.wtf(TAG, "Tried to set unknown location mode!");
             }
@@ -222,6 +238,9 @@ public class LocationFragment extends SettingsPreferenceFragment implements
             Settings.Global.putInt(getActivity().getContentResolver(),
                     Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE,
                     mAlwaysScan.isChecked() ? 1 : 0);
+            logToggleInteracted(
+                    TvSettingsEnums.PRIVACY_LOCATION_ALWAYS_SCANNING_NETWORKS,
+                    mAlwaysScan.isChecked());
             updateConnectivity();
         }
         return super.onPreferenceTreeClick(preference);
@@ -261,5 +280,10 @@ public class LocationFragment extends SettingsPreferenceFragment implements
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.LOCATION;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.PRIVACY_LOCATION;
     }
 }

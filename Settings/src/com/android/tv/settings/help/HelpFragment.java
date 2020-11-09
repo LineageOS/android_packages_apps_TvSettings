@@ -22,7 +22,9 @@ import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
 import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
 import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
 import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.view.accessibility.AccessibilityManager;
@@ -89,6 +91,9 @@ public class HelpFragment extends SettingsPreferenceFragment {
             return true;
         }
         switch (preference.getKey()) {
+            case KEY_SEND_FEEDBACK:
+                logEntrySelected(TvSettingsEnums.FEEDBACK_SEND);
+                return super.onPreferenceTreeClick(preference);
             case KEY_HELP:
                 FeatureFactory.getFactory(getActivity()).getSupportFeatureProvider().startSupport(
                         getActivity());
@@ -101,5 +106,10 @@ public class HelpFragment extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.ACTION_SETTING_HELP_AND_FEEDBACK;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.FEEDBACK;
     }
 }
