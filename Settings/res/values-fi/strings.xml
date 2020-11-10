@@ -20,6 +20,15 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Asetukset"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Verkko"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Rajoitettu profiili"</string>
+    <string name="action_on_title" msgid="1074972820237738324">"Ota käyttöön"</string>
+    <string name="action_off_title" msgid="3598665702863436597">"Poista käytöstä"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"Käytössä"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"Pois päältä"</string>
+    <string name="agree" msgid="8155497436593889753">"Hyväksyn"</string>
+    <string name="disagree" msgid="7402998517682194430">"En hyväksy"</string>
+    <string name="enabled" msgid="5127188665060746381">"Käytössä"</string>
+    <string name="disabled" msgid="4589065923272201387">"Ei käytössä"</string>
+    <string name="unavailable" msgid="1610732303812180196">"Ei saatavilla"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"Ehdotukset"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Pika-asetukset"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Yleisasetukset"</string>
@@ -28,7 +37,7 @@
     <string name="hotwording_summary" msgid="2170375928302175449">"Puhu Google Assistantille koska vain"</string>
     <string name="header_category_device" msgid="3023893663454705969">"Laite"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Asetukset"</string>
-    <string name="header_category_accessories" msgid="8310540329290988415">"Etäkäyttö ja tarvikkeet"</string>
+    <string name="header_category_accessories" msgid="6479803330480847199">"Kaukosäädin ja lisävarusteet"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"Henkilökohtainen"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"Yhdistä verkkoon"</string>
     <string name="add_an_account" msgid="2601275122685226096">"Lisää tili"</string>
@@ -49,9 +58,14 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> lisävarustetta</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> lisävaruste</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Ohje ja palaute"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Näyttö ja ääni"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Ohje ja palaute"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Tietosuoja"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Laiteasetukset"</string>
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"Tilin asetukset"</string>
+    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Maksaminen ja ostokset"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Sovellusasetukset"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Sijainti, käyttö, diagnostiikka, mainokset"</string>
     <string name="add_account" msgid="7386223854837017129">"Lisää tili"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Poista tili"</string>
@@ -77,6 +91,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Anna Googlen sijaintipalvelun ja muiden sovellusten hakea verkkoja, vaikka Wi-Fi-yhteys olisi pois käytöstä."</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Yhdistä verkkoon"</string>
+    <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Verkon diagnostiikka"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Viimeksi avatut sovellukset"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Näytä kaikki sovellukset"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Käyttöluvat"</string>
@@ -87,13 +102,14 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Käytöstä poistetut sovellukset"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Näytönsäästäjä"</string>
     <string name="device_display" msgid="244634591698925025">"Näyttö"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Näyttö ja ääni"</string>
     <string name="device_sound" msgid="8616320533559404963">"Ääni"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Tilaääni"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Järjestelmän äänet"</string>
     <string name="device_apps" msgid="2134756632245008919">"Sovellukset"</string>
     <string name="device_storage" msgid="8540243547121791073">"Tallennustila"</string>
     <string name="device_reset" msgid="6115282675800077867">"Tehdasasetusten palautus"</string>
-    <string name="device_backup_restore" msgid="4552158624969018687">"Varmuuskopiointi ja palautus"</string>
+    <string name="device_backup_restore" msgid="3634531946308269398">"Varmuuskopiointi ja palautus"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Tehdasasetuksien palauttaminen"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrointi"</string>
     <string name="device_energy_saver" msgid="1105023232841036991">"Virransäästö"</string>
@@ -108,6 +124,11 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automaattinen: käytä laitteen tukemia formaatteja (suositellaan)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Ei mitään: älä koskaan käytä surround-ääntä"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuaalinen: valitse käytettävät formaatit"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Näyttö"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Näytön lisäasetukset"</string>
+    <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Äänen lisäasetukset"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Salli pelitila"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Tyhjennetäänkö välimuistitiedot?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Sovellusten välimuistit tyhjennetään."</string>
     <string name="accessories_add" msgid="413764175035531452">"Lisää lisälaite"</string>
@@ -123,8 +144,9 @@
     <string name="accessory_connected" msgid="5229574480869175180">"Yhdistetty"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"Muuta nimeä"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Varusteen nimeäminen"</string>
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Laiteparin muodostus Bluetoothin kautta"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Etsitään lisälaitteita…"</string>
-    <string name="accessories_add_bluetooth_inst" msgid="5109947637581187896">"Varmista ennen Bluetooth-laitteiden laiteparin muodostusta, että laitteet ovat parinmuodostustilassa"</string>
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Varmista ennen Bluetooth-laitteiden yhdistämistä, että ne ovat parinmuodostustilassa."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Laite löydettiin, ja laitepari muodostetaan <xliff:g id="COUNTDOWN">%1$s</xliff:g> sekunnin kuluttua"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Toimintoa ei tueta"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Bluetooth-laiteparipyyntö"</string>
@@ -136,10 +158,10 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Yleensä 0000 tai 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Muodosta laitepari"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Peruuta"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Luo virheraportti"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Lähetä palautetta"</string>
     <string name="launch_help" msgid="2607478763131952469">"Ohjekeskus"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
-    <string name="system_date_time" msgid="6938588387002473344">"Päivämäärä ja aika"</string>
+    <string name="system_date_time" msgid="5922833592234018667">"Päivä ja aika"</string>
     <string name="system_language" msgid="5516099388471974346">"Kieli"</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Näppäimistö"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Näppäimistö ja automaattinen täyttö"</string>
@@ -147,10 +169,10 @@
     <string name="system_home" msgid="2149349845791104094">"Aloitusnäyttö"</string>
     <string name="system_search" msgid="3170169128257586925">"Haku"</string>
     <string name="system_google" msgid="945985164023885276">"Google"</string>
-    <string name="system_security" msgid="5053021134921182612">"Turvallisuus ja rajoitukset"</string>
+    <string name="system_security" msgid="1012999639810957132">"Turvallisuus ja rajoitukset"</string>
     <string name="system_speech" msgid="8779582280374089518">"Puhe"</string>
     <string name="system_inputs" msgid="5552840337357572096">"Tulot"</string>
-    <string name="system_inputs_devices" msgid="8423782334271632810">"Tuloliitännät ja laitteet"</string>
+    <string name="system_inputs_devices" msgid="2158421111699829399">"Tuloliitännät ja laitteet"</string>
     <string name="system_home_theater_control" msgid="6228949628173590310">"Kotiteatterin ohjaus"</string>
     <string name="system_accessibility" msgid="3081009195560501010">"Esteettömyys"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"Kehittäjäasetukset"</string>
@@ -158,22 +180,24 @@
     <string name="system_diagnostic" msgid="1654842813331919958">"Käyttö- ja diagnostiikkatiedot"</string>
     <string name="tutorials" msgid="7880770425872110455">"Opasvideot"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Järjestelmäpäivitys"</string>
+    <string name="system_update_description" msgid="998883510488461766">"Tämä päivittää järjestelmäohjelmiston uusimpaan versioon. Laite käynnistyy uudelleen."</string>
     <string name="about_preference" msgid="9112690446998150670">"Tietoja"</string>
     <string name="device_name" msgid="566626587332817733">"Laitteen nimi"</string>
-    <string name="restart_button_label" msgid="2124590135040611899">"Käynnistä uudelleen"</string>
+    <string name="restart_button_label" msgid="911750765086382990">"Käynnistä uudelleen"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Oikeudelliset tiedot"</string>
     <string name="about_legal_license" msgid="4801707286720681261">"Avoimen lähdekoodin käyttöluvat"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Googlen lakiasiat"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Käyttölupatietoja ei ole saatavilla"</string>
     <string name="about_model" msgid="9164284529291439296">"Malli"</string>
-    <string name="about_version" msgid="7800676128792880991">"Versio"</string>
+    <string name="about_version" msgid="6223547403835399861">"Android TV ‑käyttöjärjestelmän versio"</string>
     <string name="about_serial" msgid="3432319328808745459">"Sarjanumero"</string>
-    <string name="about_build" msgid="1139171613038225768">"Koontiversio"</string>
+    <string name="about_build" msgid="8467840394761634575">"Android TV ‑käyttöjärjestelmän koontiversio"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="other"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> vaiheen jälkeen sinusta tulee kehittäjä</item>
       <item quantity="one"><xliff:g id="STEP_COUNT_0">%1$d</xliff:g> vaiheen jälkeen sinusta tulee kehittäjä</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Mainokset"</string>
+    <string name="ads_description" msgid="8081069475265061074">"Muuta mainosasetuksia, esim. nollaa mainostunnus."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Olet nyt kehittäjä!"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"Selvä, olet jo kehittäjä"</string>
     <string name="device_info_default" msgid="2374506935205518448">"Tuntematon"</string>
@@ -209,8 +233,16 @@
     <item msgid="2713050260700175954">"Hyvä"</item>
     <item msgid="6005053494500517261">"Erinomainen"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC-osoite"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Laitteen MAC-osoite"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Satunnaistettu MAC-osoite"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Signaalin vahvuus"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Tietosuoja"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Käytä satunnaistettua MAC-osoitetta (oletus)"</item>
+    <item msgid="2490415280467390067">"Käytä laitteen MAC-osoitetta"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Ei käytettävissä"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Satunnaistettu MAC-osoite"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP-osoite"</string>
     <string name="title_ssid" msgid="255328048344188682">"Lisää Wi-Fi-verkon nimi"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Internetyhteys"</string>
@@ -303,12 +335,12 @@
     <string name="storage_calculating_size" msgid="5716281278843281044">"Lasketaan…"</string>
     <string name="storage_apps_usage" msgid="8659915575274468924">"Sovellukset"</string>
     <string name="storage_downloads_usage" msgid="8429196848359517158">"Lataukset"</string>
-    <string name="storage_dcim_usage" msgid="337290403400541958">"Kuvat ja videot"</string>
+    <string name="storage_dcim_usage" msgid="1890098882753254745">"Kuvat ja videot"</string>
     <string name="storage_music_usage" msgid="5362871290115089474">"Ääni"</string>
     <string name="storage_media_misc_usage" msgid="3404230292054880339">"Muut"</string>
     <string name="storage_media_cache_usage" msgid="6397941751551207630">"Välimuistitiedot"</string>
     <string name="storage_eject" msgid="3268870873944951902">"Poista"</string>
-    <string name="storage_format" msgid="1068977713279648756">"Tyhjennä ja alusta"</string>
+    <string name="storage_format" msgid="5360900929128087085">"Tyhjennä ja alusta"</string>
     <string name="storage_format_as_private" msgid="77945551149326052">"Poista ja alusta laitteen tallennustilana"</string>
     <string name="storage_format_as_public" msgid="6745112917895223463">"Poista ja alusta siirrettävänä tallennustilana"</string>
     <string name="storage_format_for_private" msgid="5380138334184923252">"Alusta laitteen tallennustilana"</string>
@@ -337,7 +369,7 @@
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"Tämä saattaa kestää hetken. Älä poista asemaa."</string>
     <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"Valitse tallennustila, johon tiedot siirretään"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="5086390005970210697">"Siirrä tiedot kohteeseen <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"Siirrä valokuvat, tiedostot ja sovellustiedot kohteeseen <xliff:g id="NAME">%1$s</xliff:g>. Siirto voi kestää muutaman minuutin. Jotkin sovellukset eivät toimi oikein siirron aikana."</string>
+    <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"Siirrä kuvat, tiedostot ja sovellustiedot kohteeseen <xliff:g id="NAME">%1$s</xliff:g>. Siirto voi kestää muutaman minuutin. Jotkin sovellukset eivät toimi oikein siirron aikana."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="7512917600174814567">"Siirrä nyt"</string>
     <string name="storage_wizard_migrate_confirm_action_move_later" msgid="6379986754827551474">"Siirrä myöhemmin"</string>
     <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"Tiedot siirrettiin kohteeseen <xliff:g id="NAME">%1$s</xliff:g>."</string>
@@ -384,12 +416,12 @@
     <string name="system_auto_date_time" msgid="8458199433555868708">"Automaattinen päivä ja aika"</string>
   <string-array name="auto_date_time_entries">
     <item msgid="8119837829162871025">"Käytä verkon määrittämää aikaa"</item>
-    <item msgid="369146066143710034">"Ei käytössä"</item>
+    <item msgid="369146066143710034">"Ei päällä"</item>
   </string-array>
   <string-array name="auto_date_time_ts_entries">
     <item msgid="1010003447137304123">"Käytä verkon määrittämää aikaa"</item>
     <item msgid="5645263357181875427">"Käytä siirtovirran määrittämää aikaa"</item>
-    <item msgid="5501503537181350884">"Ei käytössä"</item>
+    <item msgid="5501503537181350884">"Ei päällä"</item>
   </string-array>
     <string name="system_location" msgid="4057295363709016511">"Sijainti"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Anna lupaa pyytäneille sovelluksille lupa käyttää sijaintitietoja"</string>
@@ -423,7 +455,7 @@
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Videon päällä näytettävän tekstityksen asetukset"</string>
     <string name="captions_display" msgid="2598662495450633375">"Näyttö"</string>
     <string name="captions_display_on" msgid="480438033345455728">"Käytössä"</string>
-    <string name="captions_display_off" msgid="87881163874948539">"Ei käytössä"</string>
+    <string name="captions_display_off" msgid="87881163874948539">"Ei päällä"</string>
     <string name="display_options" msgid="2645282080948371603">"Näyttövalinnat"</string>
     <string name="captions_configure" msgid="711991018642931958">"Asetukset"</string>
     <string name="captions_language" msgid="5905918439449912646">"Kieli"</string>
@@ -478,7 +510,7 @@
     <string name="system_stay_awake" msgid="5935117574414511413">"Pysy käynnissä"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP-tarkistus"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI-optimointi"</string>
-    <string name="system_reboot_confirm" msgid="8346913287126400728">"Käynnistetäänkö uudelleen nyt?"</string>
+    <string name="system_reboot_confirm" msgid="7035370306447878560">"Käynnistetäänkö uudelleen?"</string>
     <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"Laite on käynnistettävä uudelleen, jotta asetus voidaan päivittää"</string>
     <string name="system_never_check" msgid="2860070727606369055">"Älä tarkista koskaan"</string>
     <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"Tarkista vain DRM-suojattu sisältö"</string>
@@ -522,12 +554,6 @@
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Väläytä koko ikkunoiden pinnat päivitettäessä"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Vilkuta näyttöä sovellusten tehdessä pitkiä toimia"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Mittaa hahmonnusaika: adb shell dumpsys gfxinfo"</string>
-    <string name="action_on_title" msgid="1074972820237738324">"Ota käyttöön"</string>
-    <string name="action_off_title" msgid="3598665702863436597">"Poista käytöstä"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"Käytössä"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"Pois päältä"</string>
-    <string name="agree" msgid="8155497436593889753">"Hyväksyn"</string>
-    <string name="disagree" msgid="7402998517682194430">"En hyväksy"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Tuntemattomat lähteet"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Salli muualta kuin Play Kaupasta tulevien sovelluksien asentaminen"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Salli tuntemattomat lähteet"</string>
@@ -537,7 +563,7 @@
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Aina"</string>
     <string name="system_hdmi_optimization_best_resolution" msgid="4916028940107998097">"Paras resoluutio"</string>
     <string name="system_hdmi_optimization_best_framerate" msgid="3778579148517609370">"Paras kuvanopeus"</string>
-    <string name="system_hw_overdraw_off" msgid="6637679040053936280">"Ei käytössä"</string>
+    <string name="system_hw_overdraw_off" msgid="6637679040053936280">"Ei päällä"</string>
     <string name="system_hw_overdraw_areas" msgid="6442009722913530348">"Näytä päällekkäiset alueet"</string>
     <string name="system_hw_overdraw_counter" msgid="9132113146364838852">"Näytä päällekkäisyyslaskuri"</string>
     <string name="no_application" msgid="1904437693440706534">"Ei mitään"</string>
@@ -551,7 +577,7 @@
     <item msgid="5015441793276576312">"Animaatioasteikko 5-kertainen"</item>
     <item msgid="1290233583371556415">"Animaatioasteikko 10-kertainen"</item>
   </string-array>
-    <string name="track_frame_time_off" msgid="8845064783618702239">"Ei käytössä"</string>
+    <string name="track_frame_time_off" msgid="8845064783618702239">"Ei päällä"</string>
     <string name="track_frame_time_bars" msgid="5841531515222229632">"Ruudulla palkkeina"</string>
     <string name="app_process_limit_standard" msgid="6069948528843313888">"Vakioraja"</string>
     <string name="app_process_limit_zero" msgid="4094665021909774994">"Ei taustaprosesseja"</string>
@@ -667,16 +693,17 @@
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Kaikki tämän sovelluksen tiedot poistetaan pysyvästi.\n Tähän sisältyvät kaikki tiedostot, asetukset, tilit, tietokannat jne."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"Tyhjennä oletukset"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"Käsittele tapahtumia tällä sovelluksella"</string>
-    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Oletuksia ei ole asetettu"</string>
+    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Ei oletuksia valittuina"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Tyhjennä välimuisti"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Ilmoitukset"</string>
     <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Avoimen lähdekoodin käyttöluvat"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Käyttöluvat"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Sovellus ei käytettävissä"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
+    <string name="settings_confirm" msgid="4489126458677153411">"Vahvista"</string>
     <string name="settings_cancel" msgid="576094334743686152">"Peruuta"</string>
     <string name="settings_on" msgid="7734010120323404333">"Käytössä"</string>
-    <string name="settings_off" msgid="4060451657850476369">"Ei käytössä"</string>
+    <string name="settings_off" msgid="4060451657850476369">"Ei päällä"</string>
     <string name="device_daydreams_none" msgid="3405655350757277348">"Sammuta näyttö"</string>
     <string name="device_daydreams_select" msgid="7203264446482623438">"Näytönsäästäjä"</string>
     <string name="device_daydreams_test" msgid="7828275397550076567">"Aloita nyt"</string>
@@ -688,6 +715,8 @@
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Sammuta näyttö, kun on kulunut"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Salli näytön sammuttaminen"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Median toiston aikana"</string>
+    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Vahvista virransäästön asetus"</string>
+    <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Vahvista uusi asetus: <xliff:g id="SLEEP_TIME">%1$s</xliff:g>. Se saattaa lisätä energiankäyttöä."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Millään tilillä ei ole tällä hetkellä varmuuskopiota"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Haluatko lopettaa Wi-Fi-salasanojen, kirjanmerkkien, muiden asetuksien ja sovellustietojen varmuuskopioinnin ja poistaa kaikki kopiot Googlen palvelimilta?"</string>
@@ -696,6 +725,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Automaattinen palauttaminen"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Palauta laitteen tehdasasetukset"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Toiminto poistaa kaikki tiedot laitteesi sisäisestä tallennustilasta. Poistettavia tietoja ovat muun muassa Google-tilisi, järjestelmän ja sovelluksien tiedot ja asetukset sekä ladatut sovellukset."</string>
+    <string name="factory_reset_info_description" msgid="5098454670833183487">"Tämä palauttaa laitteesi oletusasetukset sekä pyyhkii kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Poistetaanko kaikki henkilökohtaiset tietosi ja lataamasi sovellukset tältä laitteelta? Tätä toimintoa ei voi peruuttaa."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Poista kaikki"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Nimeä <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
@@ -713,11 +743,11 @@
     <string name="device_name_suggestion_summary" msgid="4582691399302362938">"Käytä tätä nimeä kuvien, videoiden ja muun sisällön suoratoistoon puhelimella."</string>
     <string name="change_setting" msgid="7211706374208138343">"Vaihda"</string>
     <string name="keep_settings" msgid="703474489210093961">"Älä vaihda"</string>
-    <string name="apps_permissions" msgid="7876407267050498394">"Käyttöoikeudet"</string>
+    <string name="apps_permissions" msgid="7876407267050498394">"Luvat"</string>
     <string name="device_apps_permissions" msgid="8421323706003063878">"Sovelluksen käyttöoikeudet"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"Lupa on <xliff:g id="COUNT_0">%1$d</xliff:g>/<xliff:g id="COUNT_1">%2$d</xliff:g> sovelluksella."</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth-käyttöoikeuspyyntö"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Android-tietoturvakorjauksen taso"</string>
+    <string name="security_patch" msgid="8924741264829495392">"Android TV ‑käyttöjärjestelmän tietoturvakorjaustaso"</string>
     <string name="choose_application" msgid="2375936782103669988">"Sovelluksen valinta"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Kokeellinen)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Käynnistä vikasietotilassa"</string>
@@ -770,6 +800,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Data Saver"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Säädä videoiden laatua automaattisesti mobiilidatan käytön vähentämiseksi"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Datan käyttö ja ilmoitukset"</string>
+    <string name="data_saver_header_info" msgid="239820871940156510">"Voit yhdistää verkkoon langattomasti, Ethernetillä tai puhelimesi hotspotilla. Katso lisäohjeita osoitteesta "<b>"g.co/network"</b>"."</string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Toiminto ei ole sallittu"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Äänenvoimakkuutta ei voi muuttaa"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Puheluja ei sallita"</string>
@@ -778,4 +809,14 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Kuvakaappauksia ei sallita"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Sovellusta ei voi avata"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Jos sinulla on kysyttävää, ota yhteyttä järjestelmänvalvojaan."</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Käytettävä laite: <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Laitteita ei löytynyt. Varmista, että laitteet ovat päällä ja voivat muodostaa yhteyden."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Yritä uudelleen"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Jotain meni pieleen. Sovellus peruutti laitteenvalintapyynnön."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Yhteyden muodostus onnistui"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Näytä kaikki"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Haetaan"</string>
+    <string name="power_and_energy" msgid="4638182439670702556">"Virta ja energia"</string>
+    <string name="power_on_behavior" msgid="927607372303160716">"Käynnistymistoiminta"</string>
+    <string name="reset_options_title" msgid="7632580482285108955">"Nollaa"</string>
 </resources>

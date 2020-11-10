@@ -20,7 +20,9 @@ import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
 import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
 import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
 import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
+import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.media.AudioManager;
@@ -97,6 +99,7 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment {
     public boolean onPreferenceTreeClick(Preference preference) {
         if (TextUtils.equals(preference.getKey(), KEY_SOUND_EFFECTS)) {
             final TwoStatePreference soundPref = (TwoStatePreference) preference;
+            logToggleInteracted(TvSettingsEnums.DISPLAY_SOUND_SYSTEM_SOUNDS, soundPref.isChecked());
             setSoundEffectsEnabled(soundPref.isChecked());
         }
         return super.onPreferenceTreeClick(preference);
@@ -136,5 +139,10 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return 0;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.DISPLAY_SOUND;
     }
 }

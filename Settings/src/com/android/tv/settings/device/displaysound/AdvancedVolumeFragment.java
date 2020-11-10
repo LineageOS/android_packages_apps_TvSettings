@@ -16,6 +16,10 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -115,6 +119,14 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
             pref.setTitle(getFormatDisplayName(formatId));
             pref.setKey(KEY_SURROUND_SOUND_FORMAT_PREFIX + formatId);
             pref.setChecked(enabled);
+            if (getEntryId(formatId) != -1) {
+                pref.setOnPreferenceClickListener(
+                        preference -> {
+                            logToggleInteracted(getEntryId(formatId), pref.isChecked());
+                            return false;
+                        }
+                );
+            }
             getPreferenceScreen().addPreference(pref);
         }
     }
@@ -154,15 +166,24 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
             final String selection = (String) newValue;
             switch (selection) {
                 case VAL_SURROUND_SOUND_AUTO:
+                    logEntrySelected(
+                            TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_SELECT_FORMATS_AUTO);
                     setSurroundPassthroughSetting(Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO);
                     break;
                 case VAL_SURROUND_SOUND_NEVER:
+                    logEntrySelected(
+                            TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_SELECT_FORMATS_NONE);
                     setSurroundPassthroughSetting(Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER);
                     break;
                 case VAL_SURROUND_SOUND_ALWAYS:
+                    // On Android P ALWAYS is replaced by MANUAL.
+                    logEntrySelected(
+                            TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_SELECT_FORMATS_MANUAL);
                     setSurroundPassthroughSetting(Settings.Global.ENCODED_SURROUND_OUTPUT_ALWAYS);
                     break;
                 case VAL_SURROUND_SOUND_MANUAL:
+                    logEntrySelected(
+                            TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_SELECT_FORMATS_MANUAL);
                     setSurroundPassthroughSetting(Settings.Global.ENCODED_SURROUND_OUTPUT_MANUAL);
                     break;
                 default:
@@ -198,8 +219,36 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
         }
     }
 
+    private int getEntryId(int formatId) {
+        switch(formatId) {
+            case AudioFormat.ENCODING_AC4:
+                return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DAC4;
+            case AudioFormat.ENCODING_E_AC3_JOC:
+                return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DADDP;
+            case AudioFormat.ENCODING_AC3:
+                return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DD;
+            case AudioFormat.ENCODING_E_AC3:
+                return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DDP;
+            case AudioFormat.ENCODING_DTS:
+                return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DTS;
+            case AudioFormat.ENCODING_DTS_HD:
+                return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DTSHD;
+            case AudioFormat.ENCODING_AAC_LC:
+                return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_AAC;
+            case AudioFormat.ENCODING_DOLBY_TRUEHD:
+                return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DTHD;
+            default:
+                return -1;
+        }
+    }
+
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.SOUND;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS;
     }
 }
