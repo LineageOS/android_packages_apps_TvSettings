@@ -59,9 +59,12 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.about.RebootConfirmFragment;
 import com.android.tv.settings.autofill.AutofillHelper;
 import com.android.tv.settings.inputmethod.InputMethodHelper;
+import com.android.tv.settings.overlay.FeatureFactory;
 import com.android.tv.settings.overlay.OverlayUtils;
 import com.android.tv.settings.system.SecurityFragment;
+import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
+import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 import java.util.List;
 
@@ -75,6 +78,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     static final String KEY_DEVELOPER = "developer";
     @VisibleForTesting
     static final String KEY_CAST_SETTINGS = "cast";
+    private static final String KEY_CAST_SETTINGS_SLICE = "cast_settings";
     @VisibleForTesting
     static final String KEY_KEYBOARD = "keyboard";
     private static final String TAG = "DeviceFragment";
@@ -281,6 +285,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     @VisibleForTesting
     void updateCastSettings() {
         final Preference castPref = findPreference(KEY_CAST_SETTINGS);
+        final SlicePreference castSlicePref = findPreference(KEY_CAST_SETTINGS_SLICE);
         if (castPref != null) {
             final ResolveInfo info = MainFragment.systemIntentIsHandled(
                     getContext(), castPref.getIntent());
@@ -295,6 +300,13 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
                     Log.e(TAG, "Cast settings icon not found", e);
                 }
                 castPref.setTitle(info.activityInfo.loadLabel(getContext().getPackageManager()));
+            }
+        }
+        if (castSlicePref != null) {
+            if (!SliceUtils.isSliceProviderValid(getContext(), castSlicePref.getUri())
+                    || FeatureFactory.getFactory(getContext()).getBasicModeFeatureProvider()
+                    .isBasicMode(getContext())) {
+                castSlicePref.setVisible(false);
             }
         }
     }
