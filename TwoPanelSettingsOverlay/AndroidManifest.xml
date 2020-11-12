@@ -290,6 +290,7 @@
              android:name=".device.apps.AppManagementActivity"
              android:theme="@style/Theme.Settings.TwoPanel">
             <intent-filter android:priority="1">
+                <action android:name="android.intent.action.AUTO_REVOKE_PERMISSIONS" />
                 <action android:name="android.settings.APPLICATION_DETAILS_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:scheme="package"/>
