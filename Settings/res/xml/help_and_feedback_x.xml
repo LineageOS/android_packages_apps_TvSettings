@@ -31,4 +31,11 @@
         <intent
             android:action="com.android.settings.action.LAUNCH_HELP" />
     </Preference>
+    <Preference
+        android:key="help_center_info"
+        android:title="@string/help_center_title"
+        android:summary="@string/help_center_link"
+        android:selectable="false"
+        android:enabled="false"
+        android:shouldDisableView="false" />
 </PreferenceScreen>
