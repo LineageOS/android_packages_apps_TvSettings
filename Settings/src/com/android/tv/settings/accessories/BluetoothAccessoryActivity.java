@@ -21,7 +21,7 @@ import android.os.Bundle;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.TvSettingsActivity;
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 public class BluetoothAccessoryActivity extends TvSettingsActivity {
 
@@ -43,7 +43,7 @@ public class BluetoothAccessoryActivity extends TvSettingsActivity {
             deviceName = getString(R.string.accessory_options);
             deviceImgId = R.drawable.ic_qs_bluetooth_not_connected;
         }
-        return FeatureFactory.getFactory(this).getSettingsFragmentProvider()
+        return FlavorUtils.getFeatureFactory(this).getSettingsFragmentProvider()
                 .newSettingsFragment(BluetoothAccessoryFragment.class.getName(),
                         getArguments(deviceAddress, deviceName, deviceImgId));
     }

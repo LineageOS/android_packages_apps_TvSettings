@@ -20,14 +20,14 @@ import android.app.Fragment;
 
 import com.android.tv.settings.TvSettingsActivity;
 import com.android.tv.settings.accessibility.AccessibilityFragment;
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 /** An OEM hook for starting accessibility settings directly. */
 public class AccessibilitySettingsActivity extends TvSettingsActivity {
 
     @Override
     protected Fragment createSettingsFragment()  {
-        return FeatureFactory.getFactory(this).getSettingsFragmentProvider()
+        return FlavorUtils.getFeatureFactory(this).getSettingsFragmentProvider()
                 .newSettingsFragment(AccessibilityFragment.class.getName(), null);
     }
 }

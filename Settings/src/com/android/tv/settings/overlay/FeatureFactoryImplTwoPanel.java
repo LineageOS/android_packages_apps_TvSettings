@@ -39,7 +39,9 @@ import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 /** Two panel customized implementation of the feature factory. */
 @Keep
-public class FeatureFactoryImplTwoPanel extends FeatureFactory {
+public class FeatureFactoryImplTwoPanel implements FeatureFactory {
+
+    protected static final String TAG = "FeatureFactoryImplTwoP";
 
     @Override
     public SettingsFragmentProvider getSettingsFragmentProvider() {
@@ -61,16 +63,13 @@ public class FeatureFactoryImplTwoPanel extends FeatureFactory {
         return new StartupVerificationFeatureProviderImpl();
     }
 
-    @Override
-    public boolean isTwoPanelLayout() {
-        return true;
-    }
-
     /**
      * A settings fragment suitable for displaying in the two panel layout. Handles launching
      * fragments and dialogs in a reasonably generic way.
      */
     public static class SettingsFragment extends TwoPanelSettingsFragment {
+
+        private static final String EXTRA_FRAGMENT_CLASS_NAME = "fragmentClassName";
 
         public SettingsFragment() {}
 
@@ -114,7 +113,7 @@ public class FeatureFactoryImplTwoPanel extends FeatureFactory {
                 startPreferenceFragment(fragment);
             } catch (IllegalAccessException | ClassNotFoundException
                     | java.lang.InstantiationException e) {
-                Log.e(FeatureFactory.TAG, "Unable to start initial preference screen.", e);
+                Log.e(TAG, "Unable to start initial preference screen.", e);
             }
         }
     }

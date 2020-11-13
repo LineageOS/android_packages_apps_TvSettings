@@ -18,10 +18,10 @@ package com.android.tv.settings.device.display.daydream;
 
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 
 import android.app.tvsettings.TvSettingsEnums;
@@ -44,7 +44,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.dream.DreamBackend;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.overlay.OverlayUtils;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -107,7 +107,7 @@ public class DaydreamFragment extends SettingsPreferenceFragment
 
 
     private int getPreferenceScreenResId() {
-        switch (OverlayUtils.getFlavor(getContext())) {
+        switch (FlavorUtils.getFlavor(getContext())) {
             case FLAVOR_CLASSIC:
             case FLAVOR_TWO_PANEL:
                 return R.xml.daydream;

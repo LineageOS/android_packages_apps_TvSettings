@@ -27,6 +27,8 @@ import com.android.tv.settings.startup.StartupVerificationFeatureProviderImplX;
 @Keep
 public class FeatureFactoryImplX extends FeatureFactoryImplTwoPanel {
 
+    protected static final String TAG = "FeatureFactoryImplX";
+
     @Override
     public BasicModeFeatureProvider getBasicModeFeatureProvider() {
         return new BasicModeFeatureProviderImplX();

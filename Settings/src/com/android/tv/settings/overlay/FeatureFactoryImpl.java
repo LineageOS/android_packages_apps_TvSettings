@@ -35,7 +35,9 @@ import com.android.tv.settings.startup.StartupVerificationFeatureProviderImpl;
  * Default implementation of the feature factory.
  */
 @Keep
-public class FeatureFactoryImpl extends FeatureFactory {
+public class FeatureFactoryImpl implements FeatureFactory {
+
+    private static final String TAG = "FeatureFactoryImpl";
 
     @Override
     public SettingsFragmentProvider getSettingsFragmentProvider() {
@@ -57,13 +59,10 @@ public class FeatureFactoryImpl extends FeatureFactory {
         return new StartupVerificationFeatureProviderImpl();
     }
 
-    @Override
-    public boolean isTwoPanelLayout() {
-        return false;
-    }
-
     /** A settings fragment suitable for displaying in the default (one panel) layout. */
     public static class SettingsFragment extends BaseSettingsFragment {
+
+        private static final String EXTRA_FRAGMENT_CLASS_NAME = "fragmentClassName";
 
         public SettingsFragment() {}
 
@@ -85,7 +84,7 @@ public class FeatureFactoryImpl extends FeatureFactory {
                 startPreferenceFragment(fragment);
             } catch (IllegalAccessException | ClassNotFoundException
                     | java.lang.InstantiationException e) {
-                Log.e(FeatureFactory.TAG, "Unable to start initial preference screen.", e);
+                Log.e(TAG, "Unable to start initial preference screen.", e);
             }
         }
     }

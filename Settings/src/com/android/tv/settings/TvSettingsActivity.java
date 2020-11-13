@@ -34,7 +34,7 @@ import androidx.annotation.Nullable;
 
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.instrumentation.SharedPreferencesLogger;
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 public abstract class TvSettingsActivity extends Activity {
     private static final String TAG = "TvSettingsActivity";
@@ -53,15 +53,15 @@ public abstract class TvSettingsActivity extends Activity {
             if (fragment == null) {
                 return;
             }
-            if (FeatureFactory.getFactory(this).isTwoPanelLayout()) {
-                if (isStartupVerificationRequired()) {
-                    if (FeatureFactory.getFactory(this)
-                            .getStartupVerificationFeatureProvider()
-                            .startStartupVerificationActivityForResult(
-                                    this, REQUEST_CODE_STARTUP_VERIFICATION)) {
-                        return;
-                    }
+            if (isStartupVerificationRequired()) {
+                if (FlavorUtils.getFeatureFactory(this)
+                        .getStartupVerificationFeatureProvider()
+                        .startStartupVerificationActivityForResult(
+                                this, REQUEST_CODE_STARTUP_VERIFICATION)) {
+                    return;
                 }
+            }
+            if (FlavorUtils.isTwoPanel(this)) {
                 getFragmentManager().beginTransaction()
                         .setCustomAnimations(android.R.animator.fade_in,
                                 android.R.animator.fade_out)
@@ -105,7 +105,7 @@ public abstract class TvSettingsActivity extends Activity {
     @Override
     public void finish() {
         final Fragment fragment = getFragmentManager().findFragmentByTag(SETTINGS_FRAGMENT_TAG);
-        if (FeatureFactory.getFactory(this).isTwoPanelLayout()) {
+        if (FlavorUtils.isTwoPanel(this)) {
             super.finish();
             return;
         }
@@ -153,12 +153,11 @@ public abstract class TvSettingsActivity extends Activity {
 
     /**
      * Subclass may override this to return true to indicate that the Activity may only be started
-     * after some verification. Example: in kids mode, we need to challenge the user with adult
-     * re-auth before launching account settings.
+     * after some verification. Example: in special mode, we need to challenge the user with re-auth
+     * before launching account settings.
      *
-     * This only works in two panel style as we do not have features requiring the startup
-     * verification in classic one panel style.
-     * TODO: make this more explicit to TvSettings' "flavor" instead of 1 panel vs 2 panels.
+     * This only works in certain flavors as we do not have features requiring the startup
+     * verification in classic flavor or ordinary two panel flavor.
      */
     protected boolean isStartupVerificationRequired() {
         return false;
@@ -169,7 +168,8 @@ public abstract class TvSettingsActivity extends Activity {
         if (requestCode == REQUEST_CODE_STARTUP_VERIFICATION) {
             if (resultCode == RESULT_OK) {
                 Log.v(TAG, "Startup verification succeeded.");
-                if (FeatureFactory.getFactory(this).isTwoPanelLayout()) {
+                if (FlavorUtils.getFlavor(this) == FlavorUtils.FLAVOR_X
+                        || FlavorUtils.getFlavor(this) == FlavorUtils.FLAVOR_VENDOR) {
                     if (createSettingsFragment() == null) {
                         Log.e(TAG, "Fragment is null.");
                         finish();
