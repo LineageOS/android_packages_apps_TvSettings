@@ -28,6 +28,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
@@ -65,13 +66,17 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
         setPreferencesFromResource(getPreferenceScreenResId(), null);
-        findPreference(KEY_ACCOUNT_SETTINGS_CATEGORY).setVisible(false);
-        if (FeatureFactory.getFactory(getContext()).getBasicModeFeatureProvider()
-                .isBasicMode(getContext())) {
-            return;
-        }
+        PreferenceCategory accountPrefCategory = findPreference(KEY_ACCOUNT_SETTINGS_CATEGORY);
         Preference assistantSlicePreference = findPreference(KEY_ASSISTANT);
         Preference purchasesSlicePreference = findPreference(KEY_PURCHASES);
+
+        if (FeatureFactory.getFactory(getContext()).getBasicModeFeatureProvider()
+                .isBasicMode(getContext())) {
+            accountPrefCategory.setVisible(false);
+            assistantSlicePreference.setVisible(false);
+            purchasesSlicePreference.setVisible(false);
+            return;
+        }
         if (assistantSlicePreference instanceof SlicePreference
                 && SliceUtils.isSliceProviderValid(
                         getContext(), ((SlicePreference) assistantSlicePreference).getUri())) {
@@ -82,9 +87,8 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
                         getContext(), ((SlicePreference) purchasesSlicePreference).getUri())) {
             purchasesSlicePreference.setVisible(true);
         }
-        if (assistantSlicePreference.isVisible() && purchasesSlicePreference.isVisible()) {
-            findPreference(KEY_ACCOUNT_SETTINGS_CATEGORY).setVisible(true);
-        }
+        accountPrefCategory.setVisible(
+                assistantSlicePreference.isVisible() || purchasesSlicePreference.isVisible());
         findPreference(KEY_ADS).setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent();
             intent.setAction("com.google.android.gms.settings.ADS_PRIVACY");
