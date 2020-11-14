@@ -16,22 +16,18 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="Display &amp; Sound">
+    android:title="@string/device_display_sound">
     <Preference
-        android:key="Picture"
-        android:title="Picture"
-        android:summary="Adjust the picture settings such as Brightness, Color and Hue."/>
+        android:key="picture"
+        android:title="@string/picture_settings_title"
+        android:summary="@string/vendor_sample_settings_summary"/>
     <Preference
-        android:key="Screen"
-        android:title="Screen"
-        android:summary="Adjust the aspect ratio and viewable screen area."/>
+        android:key="screen"
+        android:title="@string/screen_settings_title"
+        android:summary="@string/vendor_sample_settings_summary"/>
     <Preference
-        android:key="Sound"
-        android:title="Sound"
-        android:summary="Adjust to experience the different sound effects."/>
-    <Preference
-        android:key="Audio output"
-        android:title="Audio output"
-        android:summary="Adjust to use headphones and audio system."/>
+        android:key="sound"
+        android:title="@string/sound_settings_title"
+        android:summary="@string/vendor_sample_settings_summary"/>
 
 </PreferenceScreen>

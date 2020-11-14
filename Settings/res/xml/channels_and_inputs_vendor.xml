@@ -16,25 +16,12 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/channels_and_inputs">
+    android:title="@string/channels_and_inputs_title">
     <Preference
         android:key="channels"
-        android:title="Channels"
-        android:summary="Setup your TV to receive broadcast signal."/>
-    <Preference
-        android:key="preferences"
-        android:title="Preferences(Channels)" />
-    <Preference
-        android:key="infoBanner"
-        android:title="Info banner"
-        android:summary="Display program information when channel is changed."/>
-    <Preference
-        android:key="parentalControls"
-        android:title="Parental controls" />
+        android:title="@string/channels_settings_title"
+        android:summary="@string/vendor_sample_settings_summary"/>
     <Preference
         android:key="externalInputs"
-        android:title="External inputs" />
-    <Preference
-        android:key="tvButtonsShortcut"
-        android:title="TV buttons shortcut" />
+        android:title="@string/external_inputs_settings_title" />
 </PreferenceScreen>

@@ -42,8 +42,8 @@
         <Preference
             android:icon="@drawable/ic_photo_size_select_actual"
             android:key="channels_and_inputs"
-            android:title="@string/channels_and_inputs"
-            android:summary="TV tuner, channels, button shortcuts"
+            android:title="@string/channels_and_inputs_title"
+            android:summary="@string/channels_and_inputs_summary"
             android:fragment="com.android.tv.settings.vendor.ChannelsAndInputFragment">
             <!-- This is an example. Change to your intent for display and preview-->
         </Preference>
@@ -52,7 +52,7 @@
             android:icon="@drawable/ic_photo_size_select_actual"
             android:key="display_and_sound"
             android:title="@string/device_display_sound"
-            android:summary="Picture, screen, sound, audio output"
+            android:summary="@string/display_and_sound_vendor_summary"
             android:fragment="com.android.tv.settings.vendor.DisplayPreviewFragment">
             <!-- This is an example. Change to your intent for display and preview-->
         </Preference>
