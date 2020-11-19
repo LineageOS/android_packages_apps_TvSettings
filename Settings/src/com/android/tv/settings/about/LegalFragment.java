@@ -30,7 +30,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.PreferenceUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 @Keep
 public class LegalFragment extends SettingsPreferenceFragment {
@@ -55,7 +55,7 @@ public class LegalFragment extends SettingsPreferenceFragment {
                 findPreference(KEY_COPYRIGHT), PreferenceUtils.FLAG_SET_TITLE);
         PreferenceUtils.resolveSystemActivityOrRemove(context, screen,
                 findPreference(KEY_WEBVIEW_LICENSE), PreferenceUtils.FLAG_SET_TITLE);
-        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+        if (FlavorUtils.isTwoPanel(getContext())) {
             Preference adsPref = findPreference(KEY_ADS);
             if (adsPref != null) {
                 adsPref.setVisible(false);

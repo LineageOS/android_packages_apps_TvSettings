@@ -25,7 +25,7 @@ import androidx.preference.PreferenceViewHolder;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.settingslib.wifi.AccessPointPreference;
 import com.android.tv.settings.R;
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 /**
  * Preference for overriding wifi icons
@@ -42,7 +42,7 @@ public class TvAccessPointPreference extends AccessPointPreference {
 
     @Override
     protected void updateIcon(int level, Context context) {
-        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+        if (FlavorUtils.isTwoPanel(getContext())) {
             switch (level) {
                 case 4:
                     setIcon(R.drawable.ic_wifi_signal_4_white);
@@ -70,7 +70,7 @@ public class TvAccessPointPreference extends AccessPointPreference {
     @Override
     public void onBindViewHolder(final PreferenceViewHolder view) {
         super.onBindViewHolder(view);
-        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+        if (FlavorUtils.isTwoPanel(getContext())) {
             ImageView frictionImageView = (ImageView) view.findViewById(R.id.friction_icon);
             if (frictionImageView == null || mAccessPoint == null) {
                 return;

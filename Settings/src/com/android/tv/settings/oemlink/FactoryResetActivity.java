@@ -21,7 +21,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 /**
  * Oemlink of Factory Reset that takes special mode into consideration before launching the real
@@ -36,7 +36,7 @@ public class FactoryResetActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!FeatureFactory.getFactory(this)
+        if (!FlavorUtils.getFeatureFactory(this)
                 .getStartupVerificationFeatureProvider()
                 .startStartupVerificationActivityForResult(
                         this, REQUEST_CODE_STARTUP_VERIFICATION)) {

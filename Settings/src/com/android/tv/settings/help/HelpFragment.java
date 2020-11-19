@@ -18,10 +18,10 @@ package com.android.tv.settings.help;
 
 import static android.content.Context.ACCESSIBILITY_SERVICE;
 
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 
 import android.app.tvsettings.TvSettingsEnums;
@@ -37,8 +37,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.overlay.FeatureFactory;
-import com.android.tv.settings.overlay.OverlayUtils;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 /**
  * The "Help & feedback" screen in TV settings.
@@ -50,7 +49,7 @@ public class HelpFragment extends SettingsPreferenceFragment {
     private static final String KEY_HELP = "help_center";
 
     private int getPreferenceScreenResId() {
-        switch (OverlayUtils.getFlavor(getContext())) {
+        switch (FlavorUtils.getFlavor(getContext())) {
             case FLAVOR_CLASSIC:
             case FLAVOR_TWO_PANEL:
                 return R.xml.help_and_feedback;
@@ -68,7 +67,7 @@ public class HelpFragment extends SettingsPreferenceFragment {
 
         final Preference sendFeedbackPref = findPreference(KEY_SEND_FEEDBACK);
         if (sendFeedbackPref != null) {
-            sendFeedbackPref.setVisible(!FeatureFactory.getFactory(getContext())
+            sendFeedbackPref.setVisible(!FlavorUtils.getFeatureFactory(getContext())
                     .getBasicModeFeatureProvider().isBasicMode(getContext()));
         }
 
@@ -95,8 +94,8 @@ public class HelpFragment extends SettingsPreferenceFragment {
                 logEntrySelected(TvSettingsEnums.FEEDBACK_SEND);
                 return super.onPreferenceTreeClick(preference);
             case KEY_HELP:
-                FeatureFactory.getFactory(getActivity()).getSupportFeatureProvider().startSupport(
-                        getActivity());
+                FlavorUtils.getFeatureFactory(getActivity()).getSupportFeatureProvider()
+                        .startSupport(getActivity());
                 return true;
             default:
                 return super.onPreferenceTreeClick(preference);

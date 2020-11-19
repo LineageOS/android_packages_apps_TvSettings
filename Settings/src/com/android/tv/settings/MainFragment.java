@@ -16,10 +16,10 @@
 
 package com.android.tv.settings;
 
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.settings.util.InstrumentationUtils.logPageFocused;
 
@@ -62,8 +62,7 @@ import com.android.settingslib.utils.IconCache;
 import com.android.tv.settings.HotwordSwitchController.HotwordStateListener;
 import com.android.tv.settings.accounts.AccountsFragment;
 import com.android.tv.settings.connectivity.ConnectivityListener;
-import com.android.tv.settings.overlay.FeatureFactory;
-import com.android.tv.settings.overlay.OverlayUtils;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
 import com.android.tv.settings.util.SliceUtils;
@@ -155,7 +154,7 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     @Override
     protected int getPreferenceScreenResId() {
-        switch (OverlayUtils.getFlavor(getContext())) {
+        switch (FlavorUtils.getFlavor(getContext())) {
             case FLAVOR_CLASSIC:
             case FLAVOR_TWO_PANEL:
                 return R.xml.main_prefs;
@@ -321,7 +320,7 @@ public class MainFragment extends PreferenceControllerFragment implements
                 accessoryPreference.setVisible(false);
             }
         }
-        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+        if (FlavorUtils.isTwoPanel(getContext())) {
             Preference displaySoundPref = findPreference(KEY_DISPLAY_AND_SOUND);
             if (displaySoundPref != null) {
                 displaySoundPref.setVisible(true);
@@ -509,7 +508,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     public void onSuggestionReady(List<Suggestion> data) {
         // Suggestion category is handled differently in basic mode
         if (data == null || data.size() == 0
-                || FeatureFactory.getFactory(getContext())
+                || FlavorUtils.getFeatureFactory(getContext())
                 .getBasicModeFeatureProvider().isBasicMode(getContext())) {
             if (mSuggestionsList != null) {
                 getPreferenceScreen().removePreference(mSuggestionsList);
@@ -578,7 +577,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         Preference accessoryPreference = findPreference(KEY_ACCESSORIES);
         Preference connectedDevicesPreference = findPreference(KEY_CONNECTED_DEVICES);
         if (connectedDevicesSlicePreference != null
-                && FeatureFactory.getFactory(getContext()).isTwoPanelLayout()
+                && FlavorUtils.isTwoPanel(getContext())
                 && SliceUtils.isSliceProviderValid(
                         getContext(), connectedDevicesSlicePreference.getUri())) {
             connectedDevicesSlicePreference.setVisible(true);
@@ -627,7 +626,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         Preference accountsBasicMode = findPreference(KEY_ACCOUNTS_AND_SIGN_IN_BASIC_MODE);
         Intent intent = new Intent(ACTION_ACCOUNTS);
 
-        if (FeatureFactory.getFactory(getContext()).getBasicModeFeatureProvider()
+        if (FlavorUtils.getFeatureFactory(getContext()).getBasicModeFeatureProvider()
                 .isBasicMode(getContext())) {
             if (accountsBasicMode != null) {
                 accountsBasicMode.setVisible(true);
@@ -697,7 +696,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         if (basicModeSuggestion == null) {
             return;
         }
-        if (FeatureFactory.getFactory(getContext())
+        if (FlavorUtils.getFeatureFactory(getContext())
                 .getBasicModeFeatureProvider().isBasicMode(getContext())) {
             basicModeSuggestion.setVisible(true);
         } else {
@@ -744,10 +743,10 @@ public class MainFragment extends PreferenceControllerFragment implements
             getContext().startActivity(preference.getIntent());
             return true;
         } else if (preference.getKey().equals(KEY_BASIC_MODE_EXIT)
-                && FeatureFactory.getFactory(getContext())
+                && FlavorUtils.getFeatureFactory(getContext())
                 .getBasicModeFeatureProvider().isBasicMode(getContext())) {
             if (getActivity() != null) {
-                FeatureFactory.getFactory(getContext())
+                FlavorUtils.getFeatureFactory(getContext())
                         .getBasicModeFeatureProvider().startBasicModeExitActivity(getActivity());
             }
             return true;
