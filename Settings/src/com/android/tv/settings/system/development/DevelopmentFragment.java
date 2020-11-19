@@ -70,6 +70,7 @@ import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.settingslib.development.SystemPropPoker;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.OverlayUtils;
 import com.android.tv.settings.system.development.audio.AudioDebug;
 import com.android.tv.settings.system.development.audio.AudioMetrics;
 import com.android.tv.settings.system.development.audio.AudioReaderException;
@@ -334,6 +335,10 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
 
         mBugreport = findPreference(BUGREPORT);
+        if (!showBugReportPreference()) {
+            removePreference(mBugreport);
+        }
+
         mLogdSizeController.displayPreference(preferenceScreen);
         mLogpersistController.displayPreference(preferenceScreen);
 
@@ -902,6 +907,11 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private boolean isOemUnlockAllowed() {
         return !mUm.hasUserRestriction(UserManager.DISALLOW_OEM_UNLOCK);
+    }
+
+    private boolean showBugReportPreference() {
+        return !(OverlayUtils.getFlavor(getContext()) == OverlayUtils.FLAVOR_VENDOR
+                || OverlayUtils.getFlavor(getContext()) == OverlayUtils.FLAVOR_X);
     }
 
     private void updateBugreportOptions() {
