@@ -20,7 +20,7 @@ import android.app.Fragment;
 import android.os.Bundle;
 
 import com.android.tv.settings.TvSettingsActivity;
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.slices.SliceFragment;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
 
@@ -51,7 +51,7 @@ public class SliceActivity extends TvSettingsActivity {
         }
         bundle.putString(SlicesConstants.TAG_TARGET_URI, sliceUri);
         bundle.putString(SlicesConstants.TAG_SCREEN_TITLE, getScreenTitle());
-        return FeatureFactory.getFactory(this).getSettingsFragmentProvider()
+        return FlavorUtils.getFeatureFactory(this).getSettingsFragmentProvider()
                 .newSettingsFragment(SliceFragment.class.getName(), bundle);
     }
 

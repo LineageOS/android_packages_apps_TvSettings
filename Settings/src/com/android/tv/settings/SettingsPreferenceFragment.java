@@ -50,7 +50,7 @@ import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.instrumentation.VisibilityLoggerMixin;
 import com.android.settingslib.core.lifecycle.Lifecycle;
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 /**
@@ -115,7 +115,7 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
                         == View.LAYOUT_DIRECTION_RTL) {
                 titleView.setGravity(Gravity.RIGHT);
             }
-            if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+            if (FlavorUtils.isTwoPanel(getContext())) {
                 ViewGroup decor = view.findViewById(R.id.decor_title_container);
                 if (decor != null) {
                     decor.setOutlineProvider(null);
@@ -139,7 +139,7 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
 
     @Override
     protected RecyclerView.Adapter onCreateAdapter(PreferenceScreen preferenceScreen) {
-        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+        if (FlavorUtils.isTwoPanel(getContext())) {
             return new PreferenceGroupAdapter(preferenceScreen) {
                 @Override
                 @NonNull

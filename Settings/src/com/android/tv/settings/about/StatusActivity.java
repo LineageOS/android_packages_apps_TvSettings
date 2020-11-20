@@ -19,13 +19,13 @@ package com.android.tv.settings.about;
 import android.app.Fragment;
 
 import com.android.tv.settings.TvSettingsActivity;
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 public class StatusActivity extends TvSettingsActivity {
 
     @Override
     protected Fragment createSettingsFragment() {
-        return FeatureFactory.getFactory(this).getSettingsFragmentProvider()
+        return FlavorUtils.getFeatureFactory(this).getSettingsFragmentProvider()
             .newSettingsFragment(StatusFragment.class.getName(), null);
     }
 }

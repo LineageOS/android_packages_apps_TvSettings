@@ -25,8 +25,7 @@ import androidx.annotation.Nullable;
 import com.android.tv.settings.R;
 
 /** An Util class that manages logic related to build flavor and feature. */
-// TODO(zhensun@): Integrate FeatureFactory with OverlayUtils
-public final class OverlayUtils {
+public final class FlavorUtils {
 
     private static final String TAG = "OverlayUtils";
 
@@ -36,6 +35,8 @@ public final class OverlayUtils {
     public static final int FLAVOR_TWO_PANEL = 1;  // The two panel settings
     public static final int FLAVOR_X = 2;          // The two panel settings with the X experience
     public static final int FLAVOR_VENDOR = 3;     // The two panel settings with Vendor overlay
+
+    private static FeatureFactory sFeatureFactory;
 
     /** Returns the flavor of current TvSettings. */
     public static int getFlavor(@Nullable Context context) {
@@ -60,5 +61,40 @@ public final class OverlayUtils {
                 Log.w(TAG, "Flavor is unspecified. Default to Classic flavor.");
                 return FLAVOR_CLASSIC;
         }
+    }
+
+    /** Returns whether the UI is two panel style. */
+    public static boolean isTwoPanel(@Nullable Context context) {
+        switch (getFlavor(context)) {
+            case FLAVOR_TWO_PANEL:
+            case FLAVOR_X:
+            case FLAVOR_VENDOR:
+                return true;
+            case FLAVOR_UNDEFINED:
+            case FLAVOR_CLASSIC:
+            default:
+                return false;
+        }
+    }
+
+    /** Returns the correct FeatureFactory. */
+    public static FeatureFactory getFeatureFactory(@Nullable Context context) {
+        if (sFeatureFactory != null) {
+            return sFeatureFactory;
+        }
+        switch (getFlavor(context)) {
+            case FLAVOR_TWO_PANEL:
+                sFeatureFactory = new FeatureFactoryImplTwoPanel();
+                break;
+            case FLAVOR_X:
+            case FLAVOR_VENDOR:
+                sFeatureFactory = new FeatureFactoryImplX();
+                break;
+            case FLAVOR_CLASSIC:
+            case FLAVOR_UNDEFINED:
+            default:
+                sFeatureFactory = new FeatureFactoryImpl();
+        }
+        return sFeatureFactory;
     }
 }
