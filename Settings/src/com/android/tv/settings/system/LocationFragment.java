@@ -45,7 +45,7 @@ import com.android.settingslib.location.RecentLocationApps;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.device.apps.AppManagementFragment;
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.SummaryListPreference;
 
 import java.util.ArrayList;
@@ -125,7 +125,7 @@ public class LocationFragment extends SettingsPreferenceFragment implements
         final UserManager um = UserManager.get(getContext());
         mLocationMode.setEnabled(!um.hasUserRestriction(UserManager.DISALLOW_SHARE_LOCATION));
 
-        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+        if (FlavorUtils.isTwoPanel(getContext())) {
             mAlwaysScan = new SwitchPreference(themedContext);
             mAlwaysScan.setKey(KEY_WIFI_ALWAYS_SCAN);
             mAlwaysScan.setTitle(R.string.wifi_setting_always_scan);
@@ -270,7 +270,7 @@ public class LocationFragment extends SettingsPreferenceFragment implements
     }
 
     private void updateConnectivity() {
-        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+        if (FlavorUtils.isTwoPanel(getContext())) {
             int scanAlwaysAvailable = Settings.Global.getInt(getActivity().getContentResolver(),
                     Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
             mAlwaysScan.setChecked(scanAlwaysAvailable == 1);

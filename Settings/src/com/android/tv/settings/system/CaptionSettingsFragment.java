@@ -35,7 +35,7 @@ import com.android.internal.widget.SubtitleView;
 import com.android.settingslib.accessibility.AccessibilityUtils;
 import com.android.tv.settings.BaseSettingsFragment;
 import com.android.tv.settings.R;
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.Locale;
 
@@ -118,7 +118,7 @@ public class CaptionSettingsFragment extends BaseSettingsFragment {
         super.onViewCreated(view, savedInstanceState);
         mPreviewText = view.findViewById(R.id.preview_text);
         mPreviewWindow = view.findViewById(R.id.preview_window);
-        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+        if (FlavorUtils.isTwoPanel(getContext())) {
             // Customize the padding and layout of caption settings in two panel case
             View v = getView().findViewById(R.id.settings_preference_fragment_container);
             Resources res = getResources();

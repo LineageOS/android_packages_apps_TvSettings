@@ -24,7 +24,7 @@ import android.view.accessibility.AccessibilityManager;
 
 import com.android.tv.settings.TvSettingsActivity;
 import com.android.tv.settings.accessibility.AccessibilityServiceFragment;
-import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.List;
 
@@ -58,7 +58,7 @@ public class AccessibilityServiceActivity extends TvSettingsActivity {
                 a11yServiceInfo.getResolveInfo().serviceInfo.name,
                 a11yServiceInfo.getSettingsActivityName(),
                 a11yServiceInfo.getResolveInfo().loadLabel(this.getPackageManager()).toString());
-        return FeatureFactory.getFactory(this).getSettingsFragmentProvider()
+        return FlavorUtils.getFeatureFactory(this).getSettingsFragmentProvider()
                 .newSettingsFragment(AccessibilityServiceFragment.class.getName(), args);
     }
 }

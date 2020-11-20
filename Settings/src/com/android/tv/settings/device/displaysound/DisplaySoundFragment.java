@@ -16,10 +16,10 @@
 
 package com.android.tv.settings.device.displaysound;
 
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_CLASSIC;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_TWO_PANEL;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_VENDOR;
-import static com.android.tv.settings.overlay.OverlayUtils.FLAVOR_X;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
 import android.app.tvsettings.TvSettingsEnums;
@@ -36,7 +36,7 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.overlay.OverlayUtils;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
@@ -67,7 +67,7 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment {
     }
 
     private int getPreferenceScreenResId() {
-        switch (OverlayUtils.getFlavor(getContext())) {
+        switch (FlavorUtils.getFlavor(getContext())) {
             case FLAVOR_CLASSIC:
             case FLAVOR_TWO_PANEL:
                 return R.xml.display_sound;
