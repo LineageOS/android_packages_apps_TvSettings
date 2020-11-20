@@ -50,9 +50,9 @@ public class ProgressDialogFragment extends Fragment {
 
         mIconView = view.findViewById(android.R.id.icon);
         mTitleView = view.findViewById(android.R.id.title);
-        mExtraTextView = view.findViewById(R.id.extra);
-        mSummaryView = view.findViewById(android.R.id.summary);
         mProgressBar = view.findViewById(android.R.id.progress);
+        mSummaryView = view.findViewById(android.R.id.summary);
+        mExtraTextView = view.findViewById(R.id.extra);
 
         if (mWidth != -1) {
             final ViewGroup.LayoutParams params = view.getLayoutParams();
@@ -127,5 +127,20 @@ public class ProgressDialogFragment extends Fragment {
         final ViewGroup.LayoutParams params = root.getLayoutParams();
         params.width = width;
         root.setLayoutParams(params);
+    }
+
+    /**
+     * Sets customized line spacing
+     * @param multiplier line spacing multiplier
+     */
+    public void setDescriptionLineSpacingMultiplier(float multiplier) {
+        if (getResources() != null) {
+            if (mSummaryView != null) {
+                mSummaryView.setLineSpacing(mSummaryView.getLineSpacingExtra(), multiplier);
+            }
+            if (mExtraTextView != null) {
+                mExtraTextView.setLineSpacing(mExtraTextView.getLineSpacingExtra(), multiplier);
+            }
+        }
     }
 }
