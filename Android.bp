@@ -12,16 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-prebuilt_etc {
-    name: "privapp_whitelist_com.android.tv.settings",
-    system_ext_specific: true,
-    sub_dir: "permissions",
-    src: "com.android.tv.settings.xml",
-    filename_from_src: true,
-}
-
 android_app {
-    name: "TvSettings",
+    name: "TwoPanelSettingsOverlay",
+    manifest: "TwoPanelSettingsOverlay/AndroidManifest.xml",
+
+    overrides: ["TvSettings"],
+
     defaults: ["SettingsLibDefaults"],
     platform_apis: true,
     certificate: "platform",
@@ -29,7 +25,7 @@ android_app {
     required: ["privapp_whitelist_com.android.tv.settings"],
 
     optimize: {
-        proguard_flags_files: ["proguard.cfg"],
+        proguard_flags_files: ["Settings/proguard.cfg"],
     },
 
     privileged: true,
@@ -48,10 +44,23 @@ android_app {
         "TwoPanelSettingsLib",
     ],
 
-    resource_dirs: ["res"],
+    resource_dirs: [
+        "TwoPanelSettingsOverlay/res",
+        "Settings/res",
+    ],
+
 
     srcs: [
-        "src/**/*.java",
-        "src/**/I*.aidl",
+        "Settings/src/**/*.java",
+        "Settings/src/**/I*.aidl",
     ],
+
+
+    jacoco: {
+        include_filter: [
+            "com.android.tv.settings.*",
+            "com.android.settingslib.*",
+            "com.android.tv.twopanelsettingsoverlay.*",
+        ],
+    },
 }
