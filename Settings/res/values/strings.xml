@@ -174,7 +174,15 @@
     <!-- Title for always scan wifi. [CHAR LIMIT=50] -->
     <string name="wifi_setting_always_scan">Scanning always available</string>
     <!-- Context help for always scan wifi. [CHAR LIMIT=200] -->
-    <string name="wifi_setting_always_scan_context">Let Google\'s location service and other apps scan for networks, even when Wi-Fi is off</string>
+    <string name="wifi_setting_always_scan_context">Let Google\'s location
+        service and other apps scan for networks, even when Wi-Fi is off
+    </string>
+    <!-- Always scan wifi content description for talkback mode with
+        comma-separated title (wifi_setting_always_scan) and info text
+        (wifi_setting_always_scan_context) [CHAR LIMIT=NONE] -->
+    <string name="wifi_setting_always_scan_content_description">Scanning
+        always available, Let Google\'s location service and other apps scan
+        for networks, even when Wi-Fi is off</string>
     <!-- Title for enable wifi. [CHAR LIMIT=50] -->
     <string name="wifi_setting_enable_wifi">Wi-Fi</string>
     <string name="connectivity_hint_message">Connect to network</string>
@@ -406,8 +414,16 @@
     <string name="tutorials">Tutorials</string>
     <!-- Preference which shows system update status. [CHAR LIMIT=50] -->
     <string name="about_system_update">System update</string>
-    <!-- System update info description about what happens if you perform a system update [CHAR LIMIT=NONE] -->
-    <string name="system_update_description">This will update your system software to the most recent version. Your device will restart.</string>
+    <!-- System update info description about what happens if you perform a
+        system update [CHAR LIMIT=NONE] -->
+    <string name="system_update_description">This will update your system
+        software to the most recent version. Your device will restart.</string>
+    <!-- System update content description for talkback mode with
+        comma-separated title (about_system_update) and info text
+        (system_update_description) [CHAR LIMIT=NONE] -->
+    <string name="system_update_content_description">System update,
+        This will update your system software to the most recent version.
+        Your device will restart.</string>
     <!-- Preference which shows about screen with legal info, model, etc. [CHAR LIMIT=50] -->
     <string name="about_preference">About</string>
     <!-- Preference which shows name of device as it will appear when being accessed remotely [CHAR LIMIT=50] -->
@@ -439,6 +455,10 @@
     <string name="about_ads">Ads</string>
     <!-- Ads info description outlining the Ads settings options [CHAR LIMIT=NONE] -->
     <string name="ads_description">Manage your ads settings, such as resetting your advertising ID.</string>
+    <!-- Ads content description for talkback mode with comma-separated title
+        (about_ads) and info text (ads_description) [CHAR LIMIT=NONE] -->
+    <string name="ads_content_description">Ads, Manage your ads settings,
+        such as resetting your advertising ID.</string>
     <!-- Device Info screen. Confirmation that developer settings are enabled [CHAR LIMIT=NONE] -->
     <string name="show_dev_on">You are now a developer!</string>
     <!-- Device Info screen. Okay we get it, stop pressing, you already have it on [CHAR LIMIT=NONE] -->
@@ -1609,10 +1629,22 @@
     <string name="privacy_automatic_restore">Automatic restore</string>
     <!-- Factory reset choice for initiating a factory reset [CHAR LIMIT=40] -->
     <string name="factory_reset_device">Reset device</string>
-    <!-- Factory reset description about what happens when you perform a factory reset [CHAR LIMIT=NONE] -->
-    <string name="factory_reset_description">This will erase all data from your device\'s internal storage, including: your Google account, system and app data and settings, and downloaded apps</string>
-    <!-- Factory reset info description about what happens when you perform a factory reset [CHAR LIMIT=NONE] -->
-    <string name="factory_reset_info_description">This will restore your device to default settings and erase all data, accounts, files, and downloaded apps.</string>
+    <!-- Factory reset info description about what happens when
+        you perform a factory reset [CHAR LIMIT=NONE] -->
+    <string name="factory_reset_description">This will restore your device
+        to default settings and erase all data, accounts, files,
+        and downloaded apps.</string>
+    <!-- Factory reset info description about what happens when
+        you perform a factory reset [CHAR LIMIT=NONE] -->
+    <string name="factory_reset_info_description">This will restore your device
+        to default settings and erase all data, accounts, files,
+        and downloaded apps.</string>
+    <!-- Factory reset content description for talkback mode with
+        comma-separated title (device_reset) and info text
+        (factory_reset_description) [CHAR LIMIT=NONE] -->
+    <string name="factory_reset_content_description">Factory Reset, This will
+        restore your device to default settings and erase all data, accounts,
+        files, and downloaded apps.</string>
     <!-- Factory reset screen, message on screen after user selects Reset phone button -->
     <string name="confirm_factory_reset_description">Erase all your personal information and downloaded apps on this device? You can\'t reverse this action!</string>
     <!-- Factory reset screen, button on screen after user selects Reset phone button -->

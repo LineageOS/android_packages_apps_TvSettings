@@ -373,6 +373,9 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         /**
          * Set the information text title for the preference builder.
+         *
+         * It is strongly recommended to also invoke setContentDescription() for a11y
+         * purposes. Please see setContentDescription() for more details.
          */
         @NonNull
         public RowBuilder setInfoTitle(CharSequence text) {
@@ -382,6 +385,9 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         /**
          * Set the information text summary for the preference builder.
+         *
+         * It is strongly recommended to also invoke setContentDescription() for a11y
+         * purposes. Please see setContentDescription() for more details.
          */
         @NonNull
         public RowBuilder setInfoSummary(CharSequence text) {
@@ -662,6 +668,14 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         /**
          * Sets the content description for the row.
+         *
+         * Although TvSettings will try to construct the content description to its best extent
+         * if it's not set, it is strongly recommended to invoke this method with info items
+         * folded in the content description for the Roy for a11y purposes, as the info items
+         * may be unfocusable when talkback is on.
+         *
+         * By default, this method will assign the full info item title and summary to the
+         * content description if one is not specified.
          */
         @NonNull
         public RowBuilder setContentDescription(@NonNull CharSequence description) {

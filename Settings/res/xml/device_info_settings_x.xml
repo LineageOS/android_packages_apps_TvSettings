@@ -26,11 +26,12 @@
     </Preference>
 
     <!-- System update settings - launches activity -->
-    <Preference android:key="system_update_settings"
+    <com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference
+        android:key="system_update_settings"
         android:title="@string/about_system_update"
         android:fragment="com.android.tv.settings.about.SystemUpdateInfoFragment">
         <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
-    </Preference>
+    </com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference>
 
     <Preference android:key="additional_system_update_settings"
         android:title="@string/additional_system_update_settings_list_item_title">
@@ -44,11 +45,11 @@
         <intent android:action="android.settings.DEVICE_NAME" />
     </Preference>
 
-    <Preference
+    <com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference
         android:key="reset"
         android:title="@string/device_reset"
         android:fragment="com.android.tv.settings.about.FactoryResetInfoFragment">
-    </Preference>
+    </com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference>
 
     <!-- Device status - launches as activity, must run in separate process -->
     <Preference android:key="status_info"
