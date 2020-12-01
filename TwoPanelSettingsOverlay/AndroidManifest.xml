@@ -49,13 +49,16 @@
     <uses-permission android:name="android.permission.PEERS_MAC_ADDRESS"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS"/>
+    <uses-permission android:name="android.permission.SUGGEST_MANUAL_TIME_AND_ZONE"/>
     <uses-permission android:name="android.permission.SET_TIME"/>
     <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
     <uses-permission android:name="android.permission.USE_RESERVED_DISK"/>
     <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
@@ -64,7 +67,8 @@
     <uses-permission android:name="com.google.android.assistant.WRITE_HOTWORD_STATE"/>
     <uses-permission android:name="android.permission.MANAGE_SLICE_PERMISSIONS"/>
 
-    <application android:banner="@drawable/ic_launcher_banner_settings"
+    <application android:allowClearUserData="false"
+         android:banner="@drawable/ic_launcher_banner_settings"
          android:defaultToDeviceProtectedStorage="true"
          android:directBootAware="true"
          android:forceQueryable="true"
@@ -122,6 +126,7 @@
             </intent-filter>
                             -->
         </activity>
+
         <activity
             android:name=".connectivity.NetworkRequestDialogActivity"
             android:theme="@style/Transparent"
@@ -131,10 +136,11 @@
             android:exported="true"
             android:permission="android.permission.NETWORK_SETTINGS">
             <intent-filter>
-                <action android:name="com.android.settings.wifi.action.NETWORK_REQUEST" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.android.settings.wifi.action.NETWORK_REQUEST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
         <activity android:clearTaskOnLaunch="true"
              android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
@@ -144,11 +150,13 @@
         <activity android:clearTaskOnLaunch="true"
              android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
+             android:exported="true"
              android:name=".connectivity.EditProxySettingsActivity"
              android:theme="@style/Theme.SettingsConnectivity"/>
         <activity android:clearTaskOnLaunch="true"
              android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
+             android:exported="true"
              android:name=".connectivity.EditIpSettingsActivity"
              android:theme="@style/Theme.SettingsConnectivity"/>
         <activity android:clearTaskOnLaunch="true"
@@ -206,6 +214,7 @@
         </activity-alias>
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
+             android:exported="true"
              android:name=".accounts.RemoveAccountDialog"/>
         <activity android:excludeFromRecents="true"
              android:exported="true"
@@ -274,8 +283,8 @@
                   android:excludeFromRecents="true"
                   android:exported="true">
             <intent-filter android:priority="1">
-                <category android:name="android.intent.category.DEFAULT" />
-                <action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION"/>
             </intent-filter>
             <intent-filter android:priority="1">
                 <category android:name="android.intent.category.DEFAULT" />
@@ -313,8 +322,6 @@
                 <action android:name="android.os.storage.action.MANAGE_STORAGE"/>
             </intent-filter>
         </activity>
-        <!-- android:noHistory prevents it from lingering in stack in case it is started by the OEM
-        link. -->
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
              android:noHistory="true"
@@ -670,8 +677,9 @@
         <service android:name=".users.UserSwitchListenerService"/>
         <receiver android:exported="true"
              android:name=".users.UserSwitchListenerService$BootReceiver">
-            <intent-filter>
+            <intent-filter android:priority="1">
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
 
@@ -785,7 +793,7 @@
             </intent-filter>
         </activity>
 
-        <!-- Dummy intent filters for CTS TODO: implement something useful -->
+        <!-- Stub intent filters for CTS TODO: implement something useful -->
         <activity android:excludeFromRecents="true"
              android:exported="true"
              android:name=".EmptyStubActivity"
