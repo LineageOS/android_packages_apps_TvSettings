@@ -44,9 +44,10 @@ android_app {
         "TwoPanelSettingsLib",
     ],
 
+    // Resources in TwoPanelSettingsOverlay should be applied last so they take precedence
     resource_dirs: [
-        "TwoPanelSettingsOverlay/res",
         "Settings/res",
+        "TwoPanelSettingsOverlay/res",
     ],
 
 
