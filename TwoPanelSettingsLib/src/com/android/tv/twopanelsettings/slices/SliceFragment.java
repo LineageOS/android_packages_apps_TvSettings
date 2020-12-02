@@ -107,6 +107,11 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         }
     };
 
+    /** Callback for one panel settings fragment **/
+    public interface OnePanelSliceFragmentContainer {
+        void navigateBack();
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mUriString = getArguments().getString(SlicesConstants.TAG_TARGET_URI);
@@ -308,6 +313,8 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             if (parentFragment.isFragmentInTheMainPanel(this)) {
                 parentFragment.navigateBack();
             }
+        } else if (getCallbackFragment() instanceof OnePanelSliceFragmentContainer) {
+            ((OnePanelSliceFragmentContainer) getCallbackFragment()).navigateBack();
         }
     }
 
