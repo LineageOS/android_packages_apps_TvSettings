@@ -17,6 +17,7 @@
 package com.android.tv.settings;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.ContentProviderClient;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.tv.settings.system.LeanbackPickerDialogFragment;
 import com.android.tv.settings.system.LeanbackPickerDialogPreference;
+import com.android.tv.twopanelsettings.slices.SliceFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
 
@@ -38,7 +40,8 @@ import com.android.tv.twopanelsettings.slices.SlicesConstants;
  * generic way. Subclasses should only override onPreferenceStartInitialScreen.
  */
 
-public abstract class BaseSettingsFragment extends LeanbackSettingsFragment {
+public abstract class BaseSettingsFragment extends LeanbackSettingsFragment implements
+        SliceFragment.OnePanelSliceFragmentContainer {
     @Override
     public final boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
         if (pref.getFragment() != null) {
@@ -80,6 +83,14 @@ public abstract class BaseSettingsFragment extends LeanbackSettingsFragment {
     @Override
     public final boolean onPreferenceStartScreen(PreferenceFragment caller, PreferenceScreen pref) {
         return false;
+    }
+
+    /** Navigate back to the previous fragment **/
+    public void navigateBack() {
+        FragmentManager fragmentManager = getChildFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStack();
+        }
     }
 
     @Override
