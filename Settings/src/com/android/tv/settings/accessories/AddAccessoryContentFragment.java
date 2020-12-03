@@ -23,6 +23,7 @@ import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.style.DynamicDrawableSpan;
+import android.util.TypedValue;
 import android.view.View;
 
 import com.android.tv.settings.R;
@@ -48,6 +49,14 @@ public class AddAccessoryContentFragment extends ProgressDialogFragment {
         setIcon(R.drawable.ic_bluetooth_searching_128dp);
         setSummary(R.string.accessories_add_bluetooth_inst);
         updateExtraDescription();
+        if (getResources() != null) {
+            TypedValue lineSpacingMultiplier = new TypedValue();
+            getResources().getValue(
+                    R.dimen.description_with_inline_icon_line_spacing_multiplier,
+                    lineSpacingMultiplier,
+                    true);
+            setDescriptionLineSpacingMultiplier(lineSpacingMultiplier.getFloat());
+        }
     }
 
     private void updateExtraDescription() {
