@@ -29,6 +29,10 @@
 
     <!-- General use strings -->
     <skip />
+    <!-- General string for items such as buttons for confirmation [CHAR LIMIT=30] -->
+    <string name="general_action_yes">Yes</string>
+    <!-- General string for items such as buttons for rejection [CHAR LIMIT=30] -->
+    <string name="general_action_no">No</string>
     <!-- Title for an action which turns a feature on [CHAR LIMIT=30] -->
     <string name="action_on_title">On</string>
     <!-- Title for an action which turns a feature off [CHAR LIMIT=30] -->
@@ -360,6 +364,57 @@
     <string name="bluetooth_pair">Pair</string>
     <!-- Action title for Cancelling the Bluetooth secure Pair action [CHAR LIMIT=50] -->
     <string name="bluetooth_cancel">Cancel</string>
+
+    <!-- Toast message when a bluetooth device is connected. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_device_connected_toast">%1$s connected</string>
+    <!-- Toast message when a bluetooth device is disconnected. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_device_disconnected_toast">%1$s disconnected</string>
+
+    <!-- The title for "Remotes & Accessories" Slice [CHAR LIMIT = 50]-->
+    <string name="connected_devices_slice_pref_title">Remotes &amp; Accessories</string>
+    <!-- The title for the Bluetooth toggle [CHAR LIMIT=20] -->
+    <string name="bluetooth_toggle_title">Bluetooth</string>
+    <!-- The title for the confirmation dialog when users try to turn off bluetooth.
+        [CHAR LIMIT=50]-->
+    <string name="bluetooth_toggle_confirmation_dialog_title">Turn off Bluetooth</string>
+    <!-- The summary for the confirmation dialog when users try to turn off bluetooth.
+        [CHAR LIMIT=240]-->
+    <string name="bluetooth_toggle_confirmation_dialog_summary">You will not be able to
+        access Google Assistant from your remote while Bluetooth is off.</string>
+    <!-- The title on button that starts pairing flow. [CHAR LIMIT=40] -->
+    <string name="bluetooth_pair_accessory">Pair accessory</string>
+    <!-- The category title for connected/paired accessories. [CHAR LIMIT=30] -->
+    <string name="bluetooth_known_devices_category">Accessories</string>
+    <!-- Uri to be overlaid by partner to show official remote control settings. -->
+    <string name="bluetooth_official_remote_entry_slice_uri" translatable="false" />
+    <!-- Category for listing official remote control devices. Can be overlaid by OEM to something
+        like "Foobar Remote". -->
+    <string name="bluetooth_official_remote_category">Remote Control</string>
+    <!-- Title for official remote control settings. Can be overlaid by OEM to something like as
+        "Foobar Remote Settings". -->
+    <string name="bluetooth_official_remote_entry_title">Remote control settings</string>
+    <!-- Text on button that allows users to connect their Bluetooth devices. [CHAR LIMIT=30] -->
+    <string name="bluetooth_connect_action_title">Connect</string>
+    <!-- Text asking users to confirm connecting their Bluetooth devices. [CHAR LIMIT=40] -->
+    <string name="bluetooth_connect_confirm">Connect to %1$s</string>
+    <!-- Text on button that allows users to disconnect their Bluetooth devices. [CHAR LIMIT=30] -->
+    <string name="bluetooth_disconnect_action_title">Disconnect</string>
+    <!-- Text asking users to confirm disconnecting their Bluetooth devices. [CHAR LIMIT=40] -->
+    <string name="bluetooth_disconnect_confirm">Disconnect from %1$s</string>
+    <!-- Text on button that allows users to rename their Bluetooth devices. [CHAR LIMIT=30] -->
+    <string name="bluetooth_rename_action_title">Rename</string>
+    <!-- Text shown on Bluetooth devices renaming screen. [CHAR LIMIT=40] -->
+    <string name="bluetooth_rename">Rename your connected device</string>
+    <!-- Text on button that allows users to forget their Bluetooth devices. [CHAR LIMIT=30] -->
+    <string name="bluetooth_forget_action_title">Forget</string>
+    <!-- Text asking users to confirm forgetting their Bluetooth devices. [CHAR LIMIT=40] -->
+    <string name="bluetooth_forget_confirm">Forget %1$s</string>
+    <!-- Text preceded by the bluetooth serial. [CHAR LIMIT=40] -->
+    <string name="bluetooth_serial_number_label">Bluetooth address</string>
+    <!-- Subtitle showing connected connection status of Bluetooth device. [CHAR LIMIT=40] -->
+    <string name="bluetooth_connected_status">Connected</string>
+    <!-- Subtitle showing disconnected connection status of Bluetooth device. [CHAR LIMIT=40] -->
+    <string name="bluetooth_disconnected_status">Disconnected</string>
 
     <!-- Help and feedback preferences -->
     <skip />

@@ -109,7 +109,7 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
     }
 
     private Drawable getDeviceDrawable(BluetoothDevice device) {
-        final int resId = AccessoryUtils.getImageIdForDevice(device);
+        final int resId = AccessoryUtils.getImageIdForDevice(device, false);
         Drawable drawable = mResizedDrawables.get(resId);
         if (drawable == null) {
             final Drawable tempDrawable = getActivity().getDrawable(resId);
