@@ -38,6 +38,7 @@
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> ಖಾತೆಗಳು</item>
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> ಖಾತೆಗಳು</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"ಮಾಧ್ಯಮ ಸೇವೆಗಳು, Assistant, ಪಾವತಿಗಳು"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"ನೆಟ್‌ವರ್ಕ್ ಮತ್ತು ಇಂಟರ್ನೆಟ್"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"ಧ್ವನಿ"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"</string>
@@ -48,7 +49,12 @@
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ಪರಿಕರಗಳು</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ಪರಿಕರಗಳು</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"ಸಹಾಯ ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆ"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"ಡಿಸ್‌ಪ್ಲೇ ಮತ್ತು ಧ್ವನಿ"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"ಸಹಾಯ ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆ"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"ಗೌಪ್ಯತೆ"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"ಸಾಧನ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"ಆ್ಯಪ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"ಸ್ಥಳ, ಬಳಕೆ ಮತ್ತು ಡಯಾಗ್ನಾಸ್ಟಿಕ್ಸ್‌, ಜಾಹೀರಾತುಗಳು"</string>
     <string name="add_account" msgid="7386223854837017129">"ಖಾತೆಯನ್ನು ಸೇರಿಸಿ"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕಿ"</string>
     <string name="account_sync" msgid="4315295293211313989">"ಸಿಂಕ್ ಆಗಿರುವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"</string>
     <string name="device_daydream" msgid="2631191946958113220">"ಸ್ಕ್ರೀನ್ ಸೇವರ್"</string>
     <string name="device_display" msgid="244634591698925025">"ಪ್ರದರ್ಶನ"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"ಡಿಸ್‌ಪ್ಲೇ ಮತ್ತು ಧ್ವನಿ"</string>
     <string name="device_sound" msgid="8616320533559404963">"ಶಬ್ದ"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"ಆವರಿಸಿದ ಶಬ್ದ"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"ಸಿಸ್ಟಂ ಧ್ವನಿಗಳು"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"ಆಟೋ: ನಿಮ್ಮ ಸಾಧನ ವರದಿ ಮಾಡುವ ಸ್ವರೂಪಗಳನ್ನು ಬಳಸಿ (ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"ಯಾವುದೂ ಇಲ್ಲ: ಸರೌಂಡ್ ಸೌಂಡ್ ಅನ್ನು ಎಂದಿಗೂ ಬಳಸಬೇಡಿ"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"ಹಸ್ತಚಾಲಿತ: ಯಾವ ಸ್ವರೂಪಗಳನ್ನು ಬಳಸಬೇಕು ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="display_category_title" msgid="247804007525046312">"ಡಿಸ್‌ಪ್ಲೇ"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"ಸುಧಾರಿತ ಡಿಸ್‌ಪ್ಲೇ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"ಸುಧಾರಿತ ಧ್ವನಿ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"ಗೇಮ್ ಮೋಡ್‌ಗೆ ಅನುಮತಿಸಿ"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"ಸಂಗ್ರಹ ಡೇಟಾವನ್ನು ತೆರುವುಗೊಳಿಸುವುದೇ?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"ಎಲ್ಲ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ ಸಂಗ್ರಹ ಡೇಟಾವನ್ನು ಇದು ತೆರುವುಗೊಳಿಸುತ್ತದೆ."</string>
     <string name="accessories_add" msgid="413764175035531452">"ಪರಿಕರವನ್ನು ಸೇರಿಸಿ"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"ಸಾಮಾನ್ಯವಾಗಿ 0000 ಅಥವಾ 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ಜೋಡಿ"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"ರದ್ದುಮಾಡಿ"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"ದೋಷದ ವರದಿಯನ್ನು ರಚಿಸಿ"</string>
+    <string name="send_feedback" msgid="936698637869795473">"ಪ್ರತಿಕ್ರಿಯೆ ಕಳುಹಿಸಿ"</string>
     <string name="launch_help" msgid="2607478763131952469">"ಸಹಾಯ ಕೇಂದ್ರ"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"ದಿನಾಂಕ &amp; ಸಮಯ"</string>
@@ -141,7 +152,7 @@
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"ಕೀಬೋರ್ಡ್‌ ಮತ್ತು ಸ್ವಯಂ ಭರ್ತಿ"</string>
     <string name="system_autofill" msgid="6983989261108020046">"ಸ್ವಯಂ ಭರ್ತಿ"</string>
     <string name="system_home" msgid="2149349845791104094">"ಮುಖಪುಟ ಪರದೆ"</string>
-    <string name="system_search" msgid="3170169128257586925">"ಹುಡುಕಾಟ"</string>
+    <string name="system_search" msgid="3170169128257586925">"Search"</string>
     <string name="system_google" msgid="945985164023885276">"Google"</string>
     <string name="system_security" msgid="5053021134921182612">"ಭದ್ರತೆ &amp; ನಿರ್ಬಂಧಗಳು"</string>
     <string name="system_speech" msgid="8779582280374089518">"ಮಾತು"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"ಉತ್ತಮ"</item>
     <item msgid="6005053494500517261">"ಅತ್ಯುತ್ತಮ"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC ವಿಳಾಸ"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"ಸಾಧನದ MAC ವಿಳಾಸ"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"ಯಾದೃಚ್ಛಿಕಗೊಳಿಸಿದ MAC ವಿಳಾಸ"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"ಸಿಗ್ನಲ್ ಸಾಮರ್ಥ್ಯ"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"ಗೌಪ್ಯತೆ"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"ಯಾದೃಚ್ಛಿಕಗೊಳಿಸಿದ MAC (ಡೀಫಾಲ್ಟ್) ಅನ್ನು ಬಳಸಿ"</item>
+    <item msgid="2490415280467390067">"ಸಾಧನದ MAC ಬಳಸಿ"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"ಲಭ್ಯವಿಲ್ಲ"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"ಯಾದೃಚ್ಛಿಕಗೊಳಿಸಿದ MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP ವಿಳಾಸ"</string>
     <string name="title_ssid" msgid="255328048344188682">"ವೈ-ಫೈ ನೆಟ್‌ವರ್ಕ್‌ನ ಹೆಸರನ್ನು ನಮೂದಿಸಿ"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ"</string>
@@ -278,7 +297,7 @@
     <string name="proxy_error_empty_port" msgid="692020249267351015">"ಪೋರ್ಟ್ ಕ್ಷೇತ್ರ ಖಾಲಿ ಇರುವಂತಿಲ್ಲ"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"ಹೋಸ್ಟ್ ಕ್ಷೇತ್ರವು ಖಾಲಿಯಾಗಿದ್ದಲ್ಲಿ, ಪೋರ್ಟ್ ಕ್ಷೇತ್ರವನ್ನು ಖಾಲಿ ಬಿಡಿ"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"ಪೋರ್ಟ್ ಮಾನ್ಯವಾಗಿಲ್ಲ"</string>
-    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"ಬ್ರೌಸರ್ HTTP ಪ್ರಾಕ್ಸಿ ಬಳಸಿಕೊಂಡಿದೆ. ಇತರೆ ಆಪ್‌ಗಳು ಬಳಸಿಕೊಳ್ಳದೆ ಇರಬಹುದು."</string>
+    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"ಬ್ರೌಸರ್ HTTP ಪ್ರಾಕ್ಸಿ ಬಳಸಿಕೊಂಡಿದೆ. ಇತರೆ ಆ್ಯಪ್‌ಗಳು ಬಳಸಿಕೊಳ್ಳದೆ ಇರಬಹುದು."</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"ಮಾನ್ಯವಾದ ಪೋರ್ಟ್ ನಮೂದಿಸಿ.\nಉದಾಹರಣೆ: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"ಪ್ರತ್ಯೇಕಿಸಿದ ಡೊಮೇನ್‌ಗಳ ಅಲ್ಪವಿರಾಮದಿಂದ ಪ್ರತ್ಯೇಕಿಸಿರುವ ಪಟ್ಟಿಯನ್ನು ನಮೂದಿಸಿ ಅಥವಾ ಖಾಲಿ ಬಿಡಿ.\nಉದಾಹರಣೆ: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"ಮಾನ್ಯವಾದ ಹೋಸ್ಟ್‌ ಹೆಸರನ್ನು ನಮೂದಿಸಿ.\nಉದಾಹರಣೆ: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -485,7 +504,7 @@
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"ಅಣಕು ಸ್ಥಾನಗಳನ್ನು ಅನುಮತಿಸಿ"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"ಡೀಬಗ್ ಅಪ್ಲಿಕೇಶನ್‌ ಆಯ್ಕೆಮಾಡಿ"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"ಡೀಬಗರ್‌‌ಗಾಗಿ ಕಾಯಿರಿ"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"USB ಮೂಲಕ ಆಪ್‌ ಪರಿಶೀಲಿಸಿ"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"USB ಮೂಲಕ ಆ್ಯಪ್‌ ಪರಿಶೀಲಿಸಿ"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"ಹಾನಿಮಾಡುವಂತಹ ವರ್ತನೆಗಾಗಿ ADB/ADT ಮೂಲಕ ಸ್ಥಾಪಿಸಲಾದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"ವೈ-ಫೈ ವೆರ್ಬೋಸ್ ಲಾಗಿಂಗ್"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Wi‑Fi ವೆರ್ಬೋಸ್ ಲಾಗಿಂಗ್ ಸಕ್ರಿಯಗೊಳಿಸಿ"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"ಸ್ವಯಂಚಾಲಿತ ಮರುಸ್ಥಾಪನೆ"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"ಸಾಧನವನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"ಇದು ನಿಮ್ಮ ಸಾಧನದ ಆಂತರಿಕ ಸಂಗ್ರಹಣೆಯಿಂದ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸುತ್ತದೆ, ಇವುಗಳೂ ಸೇರಿದಂತೆ: ನಿಮ್ಮ Google ಖಾತೆ, ಸಿಸ್ಟಂ ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್ ಡೇಟಾ ಹಾಗೂ ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಡೌನ್‌ಲೋಡ್ ಆಗಿರುವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"ನಿಮ್ಮ ಎಲ್ಲಾ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಮತ್ತು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅಳಿಸುವುದೇ? ನಿಮಗೆ ಈ ಕ್ರಮವನ್ನು ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"ಈ ಸಾಧನದಲ್ಲಿ ನಿಮ್ಮ ಎಲ್ಲಾ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಮತ್ತು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾದ ಆ್ಯಪ್‌ಗಳನ್ನು ಅಳಿಸುವುದೇ? ನೀವು ಈ ಕ್ರಿಯೆಯನ್ನು ರಿವರ್ಸ್ ಮಾಡಲಾಗುವುದಿಲ್ಲ!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"ಎಲ್ಲವನ್ನೂ ಅಳಿಸಿ"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"ನಿಮ್ಮ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ಗೆ ಹೆಸರು ಆಯ್ಕೆಮಾಡಿ"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"ಬಿತ್ತರಿಸುವಾಗ ಅಥವಾ ಇತರ ಸಾಧನಗಳಿಂದ ಅದಕ್ಕೆ ಸಂಪರ್ಕಿಸುವಾಗ ನಿಮ್ಮ ಸಾಧನವು ಅದನ್ನು ಗುರುತಿಸಲು ಸಹಾಯಕ್ಕಾಗಿ ಅದಕ್ಕೆ ಹೆಸರನ್ನು ನೀಡಿ."</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"ಡೇಟಾ ಸೇವರ್"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"ಕಡಿಮೆ ಮೊಬೈಲ್ ಡೇಟಾ ಬಳಸಲು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ವೀಡಿಯೊ ಗುಣಮಟ್ಟವನ್ನು ಹೊಂದಿಸಿ"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"ಡೇಟಾ ಬಳಕೆ ಮತ್ತು ಅಲರ್ಟ್‌ಗಳು"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"ಚಟುವಟಿಕೆಯನ್ನು ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"ವಾಲ್ಯೂಮ್ ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"ಕರೆ ಮಾಡುವುದಕ್ಕೆ ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"ಎಸ್ಎಂಎಸ್‌ಗೆ ಅನುಮತಿಯಿಲ್ಲ"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"ಕ್ಯಾಮರಾಗೆ ಅನುಮತಿಯಿಲ್ಲ"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"ಸ್ಕ್ರೀನ್‌ಶಾಟ್‌ಗೆ ಅನುಮತಿಯಿಲ್ಲ"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"ಈ ಅಪ್ಲಿಕೇಶನ್ ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"ನಿಮಗೆ ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳಿದ್ದರೆ, ನಿಮ್ಮ IT ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> ನ ಜೊತೆಗೆ ಬಳಸಲು ಸಾಧನ"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"ಯಾವುದೇ ಸಾಧನಗಳು ಕಂಡುಬಂದಿಲ್ಲ. ಸಾಧನಗಳನ್ನು ಆನ್ ಮಾಡಲಾಗಿದೆ ಮತ್ತು ಕನೆಕ್ಟ್ ಮಾಡಲು ಲಭ್ಯವಿದೆ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"ಪುನಃ ಪ್ರಯತ್ನಿಸಿ"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"ಏನೋ ಬಂದಿದೆ. ಸಾಧನವನ್ನು ಆಯ್ಕೆಮಾಡಲು ಆ್ಯಪ್‌ ವಿನಂತಿಯನ್ನು ರದ್ದುಗೊಳಿಸಿದೆ."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"ಕನೆಕ್ಷನ್ ಯಶಸ್ವಿಯಾಗಿದೆ"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"ಎಲ್ಲವನ್ನೂ ತೋರಿಸಿ"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"ಹುಡುಕಲಾಗುತ್ತಿದೆ"</string>
 </resources>
