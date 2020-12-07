@@ -38,6 +38,9 @@
         <item name="android:activityCloseExitAnimation">@null</item>
     </style>
 
+    <!-- The primary theme used in AndroidManifest allowing overlay. -->
+    <style name="TvSettingsActivityTheme" parent="Theme.Settings.Transparent" />
+
     <!-- Default Settings theme -->
     <style name="Theme.Settings" parent="@style/Theme.Leanback">
         <item name="android:windowBackground">@color/settings_background</item>

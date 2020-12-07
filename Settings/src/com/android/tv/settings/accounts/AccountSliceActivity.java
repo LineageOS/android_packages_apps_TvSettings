@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.accounts;
 
+import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
+
 import com.android.tv.settings.R;
 import com.android.tv.settings.slice.SliceActivity;
 
@@ -29,5 +31,10 @@ public class AccountSliceActivity extends SliceActivity {
     @Override
     public String getScreenTitle() {
         return getString(R.string.accounts_category_title);
+    }
+
+    @Override
+    protected int getAvailableFlavors() {
+        return X_EXPERIENCE_FLAVORS_MASK;
     }
 }

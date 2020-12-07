@@ -15,6 +15,10 @@
   limitations under the License
   -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Override the Theme.Settings.Transparent to TwoPanel style. -->
+    <style name="TvSettingsActivityTheme" parent="Theme.Settings.TwoPanel" />
+
     <style name="Theme.Settings.TwoPanel">
         <item name="android:windowBackground">@color/settings_background</item>
         <item name="android:windowIsTranslucent">false</item>

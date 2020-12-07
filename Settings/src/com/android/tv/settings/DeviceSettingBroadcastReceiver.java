@@ -16,6 +16,8 @@
 
 package com.android.tv.settings;
 
+import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -23,16 +25,24 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.PowerManager;
+import android.util.Log;
+
+import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.List;
 
 /** BroadcastReceiver to handle the request from setup */
 public class DeviceSettingBroadcastReceiver extends BroadcastReceiver {
+    private static final String TAG = "DeviceSettingsReceiver";
     private static final String ACTION_REBOOT_DEVICE = "com.android.tv.settings.REBOOT_DEVICE";
     private static final String ACTION_REMOVE_WIFI = "com.android.tv.settings.REMOVE_WIFI";
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        if ((FlavorUtils.getFlavor(context) & X_EXPERIENCE_FLAVORS_MASK) == 0) {
+            Log.w(TAG, "Not supported in this flavor.");
+            return;
+        }
         switch (intent.getAction()) {
             case ACTION_REBOOT_DEVICE:
                 restartDevice(context);
