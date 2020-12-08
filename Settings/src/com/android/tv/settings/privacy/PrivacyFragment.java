@@ -35,6 +35,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 /**
@@ -68,6 +69,7 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
         PreferenceCategory accountPrefCategory = findPreference(KEY_ACCOUNT_SETTINGS_CATEGORY);
         Preference assistantSlicePreference = findPreference(KEY_ASSISTANT);
         Preference purchasesSlicePreference = findPreference(KEY_PURCHASES);
+        Preference adsPreference = findPreference(KEY_ADS);
 
         if (FlavorUtils.getFeatureFactory(getContext()).getBasicModeFeatureProvider()
                 .isBasicMode(getContext())) {
@@ -94,6 +96,10 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
             startActivity(intent);
             return true;
         });
+        if (adsPreference instanceof CustomContentDescriptionPreference) {
+            ((CustomContentDescriptionPreference) adsPreference).setContentDescription(
+                    getResources().getString(R.string.ads_content_description));
+        }
     }
 
     @Override

@@ -51,6 +51,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.settings.widget.CustomContentDescriptionSwitchPreference;
 import com.android.tv.settings.widget.TvAccessPointPreference;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
@@ -299,6 +300,12 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             // Ignore
         }
         mAlwaysScan.setChecked(scanAlwaysAvailable == 1);
+        if (mAlwaysScan instanceof CustomContentDescriptionSwitchPreference) {
+            ((CustomContentDescriptionSwitchPreference) mAlwaysScan).setContentDescription(
+                    getResources()
+                            .getString(
+                                    R.string.wifi_setting_always_scan_content_description));
+        }
 
         final boolean ethernetAvailable = mConnectivityListener.isEthernetAvailable();
         mEthernetCategory.setVisible(ethernetAvailable);

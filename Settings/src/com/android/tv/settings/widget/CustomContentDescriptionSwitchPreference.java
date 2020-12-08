@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2020 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.twopanelsettings.slices;
+package com.android.tv.settings.widget;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -22,29 +22,21 @@ import android.util.AttributeSet;
 
 import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreference;
-import androidx.slice.core.SliceActionImpl;
+
+import com.android.tv.twopanelsettings.slices.CustomContentDescriptionUtil;
+import com.android.tv.twopanelsettings.slices.HasCustomContentDescription;
 
 /**
- * Slices version of SwitchPreference.
+ * Preference that allows external classes to set its view's content description for accessibility
+ * purposes.
  */
-public class SliceSwitchPreference extends SwitchPreference implements HasSliceAction,
+public class CustomContentDescriptionSwitchPreference extends SwitchPreference implements
         HasCustomContentDescription {
 
-    private int mActionId;
-    protected SliceActionImpl mAction;
-    private SliceActionImpl mFollowupSliceAction;
     private String mContentDescription;
 
-    public SliceSwitchPreference(Context context, SliceActionImpl action) {
-        super(context);
-        mAction = action;
-        update();
-    }
-
-    public SliceSwitchPreference(Context context, AttributeSet attrs, SliceActionImpl action) {
+    public CustomContentDescriptionSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mAction = action;
-        update();
     }
 
     @Override
@@ -57,48 +49,6 @@ public class SliceSwitchPreference extends SwitchPreference implements HasSliceA
         }
     }
 
-    @Override
-    public int getActionId() {
-        return mActionId;
-    }
-
-    @Override
-    public void setActionId(int actionId) {
-        mActionId = actionId;
-    }
-
-    public SliceSwitchPreference(Context context) {
-        super(context);
-    }
-
-    public SliceSwitchPreference(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
-
-    @Override
-    public SliceActionImpl getSliceAction() {
-        return mAction;
-    }
-
-    @Override
-    public void setSliceAction(SliceActionImpl sliceAction) {
-        mAction = sliceAction;
-    }
-
-    @Override
-    public SliceActionImpl getFollowupSliceAction() {
-        return mFollowupSliceAction;
-    }
-
-    @Override
-    public void setFollowupSliceAction(SliceActionImpl sliceAction) {
-        mFollowupSliceAction = sliceAction;
-    }
-
-    private void update() {
-        this.setChecked(mAction.isChecked());
-    }
-
     /**
      * Sets the accessibility content description that will be read to the TalkBack users when they
      * focus on this preference.
@@ -108,7 +58,6 @@ public class SliceSwitchPreference extends SwitchPreference implements HasSliceA
     }
 
     public String getContentDescription() {
-        return this.mContentDescription;
+        return mContentDescription;
     }
-
 }
