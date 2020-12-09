@@ -256,12 +256,12 @@
     <string name="wifi_security_type_wpa" msgid="9205358644485448199">"WPA/WPA2 PSK"</string>
     <string name="wifi_security_type_eap" msgid="3948280751219829163">"802.1x EAP"</string>
     <string name="title_wifi_no_networks_available" msgid="3696700321170616981">"جارٍ البحث..."</string>
-    <string name="title_wifi_could_not_save" msgid="7549912968719395764">"تعذر حفظ تهيئة <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_could_not_save" msgid="7549912968719395764">"تعذر حفظ إعداد <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect" msgid="6654031057635481872">"تعذر الاتصال بـ <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"تعذر العثور على <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"كلمة مرور Wi-Fi غير صالحة"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"لم تقبل شبكة Wi-Fi الاتصال"</string>
-    <string name="title_wifi_advanced_options" msgid="371185991282743258">"هل تريد تهيئة الخادم الوكيل <xliff:g id="SSID">%1$s</xliff:g> وإعدادات IP؟"</string>
+    <string name="title_wifi_advanced_options" msgid="371185991282743258">"هل تريد إعداد الخادم الوكيل <xliff:g id="SSID">%1$s</xliff:g> وإعدادات IP؟"</string>
     <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"إعدادات الخادم الوكيل"</string>
     <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"اسم المضيف للخادم الوكيل:"</string>
     <string name="title_wifi_proxy_port" msgid="566244407030390328">"منفذ الخادم الوكيل:"</string>
@@ -278,7 +278,7 @@
     <string name="wifi_action_try_again" msgid="8920677153891141148">"إعادة المحاولة"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"عرض الشبكات المتاحة"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"جارٍ الاتصال بـ <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_saving" msgid="320653339670641708">"جارٍ حفظ تهيئة <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="wifi_saving" msgid="320653339670641708">"جارٍ حفظ إعداد <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_connect" msgid="2206086690065242121">"الاتصال"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"حذف الشبكة"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"يؤدي هذا إلى محو المعلومات المستخدمة للاتصال بهذه الشبكة، بما في ذلك كلمات المرور المحفوظة"</string>
@@ -336,8 +336,8 @@
     <string name="storage_media_cache_usage" msgid="6397941751551207630">"البيانات المؤقتة"</string>
     <string name="storage_eject" msgid="3268870873944951902">"إخراج"</string>
     <string name="storage_format" msgid="1068977713279648756">"محو البيانات والتنسيق"</string>
-    <string name="storage_format_as_private" msgid="77945551149326052">"محو البيانات والتهيئة كسعة تخزين داخل الجهاز"</string>
-    <string name="storage_format_as_public" msgid="6745112917895223463">"محو البيانات والتهيئة كوحدة تخزين قابلة للنقل"</string>
+    <string name="storage_format_as_private" msgid="77945551149326052">"محو البيانات والإعداد كسعة تخزين داخل الجهاز"</string>
+    <string name="storage_format_as_public" msgid="6745112917895223463">"محو البيانات والإعداد كوحدة تخزين قابلة للنقل"</string>
     <string name="storage_format_for_private" msgid="5380138334184923252">"التنسيق كوحدة تخزين على الجهاز"</string>
     <string name="storage_not_connected" msgid="4327902652748552794">"غير متصل"</string>
     <string name="storage_migrate" msgid="9137556600192167701">"نقل البيانات إلى مساحة التخزين هذه"</string>
@@ -379,7 +379,7 @@
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="7763611380573099978">"التطبيقات والبيانات المخزَّنة في <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="5741521038349239359">"<xliff:g id="SIZE">%1$s</xliff:g> متاحة"</string>
     <string name="storage_wizard_eject_private_title" msgid="1336088625197134497">"إخراج مساحة تخزين الجهاز"</string>
-    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"سيتوقف عمل التطبيقات على مساحة تخزين هذا الجهاز عند إخراجها. تمت تهيئة محرك أقراص USB هذا بحيث يعمل على هذا الجهاز فقط، ولن يعمل على أي جهاز آخر."</string>
+    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"سيتوقف عمل التطبيقات على مساحة تخزين هذا الجهاز عند إخراجها. تم إعداد محرك أقراص USB هذا بحيث يعمل على هذا الجهاز فقط، ولن يعمل على أي جهاز آخر."</string>
     <string name="storage_wizard_eject_progress_title" msgid="6025569356827683446">"جارٍ إخراج <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="6504922588346440942">"مساحة التخزين المستخدمة"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7058465372227392453">"جارٍ نقل <xliff:g id="NAME">%1$s</xliff:g>…"</string>
@@ -452,7 +452,7 @@
     <string name="captions_display_on" msgid="480438033345455728">"مفعّلة"</string>
     <string name="captions_display_off" msgid="87881163874948539">"إيقاف"</string>
     <string name="display_options" msgid="2645282080948371603">"خيارات العرض"</string>
-    <string name="captions_configure" msgid="711991018642931958">"تهيئة"</string>
+    <string name="captions_configure" msgid="711991018642931958">"إعداد"</string>
     <string name="captions_language" msgid="5905918439449912646">"اللغة"</string>
     <string name="captions_language_default" msgid="3894192926725192528">"التلقائية"</string>
     <string name="captions_textsize" msgid="7161136610669343510">"حجم النص"</string>
@@ -490,7 +490,7 @@
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"هل تريد إيقاف خدمة <xliff:g id="SERVICE">%1$s</xliff:g>؟"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"يؤدي النقر على \"حسنًا\" إلى إيقاف <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"تحويل النص إلى الكلام"</string>
-    <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"تهيئة المحرك"</string>
+    <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"إعداد المحرك"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"قول كلمات المرور"</string>
     <string name="system_preferred_engine" msgid="3545505072652708443">"المحرّك المفضّل"</string>
     <string name="system_speech_rate" msgid="6553204071403872669">"معدل الكلام"</string>
@@ -593,7 +593,7 @@
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"سريع للغاية"</string>
     <string name="title_settings" msgid="780933693363320088">"إعدادات <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="title_current_keyboard" msgid="891238509164879851">"لوحة المفاتيح الحالية"</string>
-    <string name="title_configure" msgid="846802387014612210">"تهيئة"</string>
+    <string name="title_configure" msgid="846802387014612210">"إعداد"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"خيارات لوحة المفاتيح"</string>
     <string name="title_current_autofill_service" msgid="9029001041887283153">"خدمة الملء التلقائي الحالية"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"اختيار خدمة \"الملء التلقائي\""</string>
@@ -710,7 +710,7 @@
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"سيتم حذف جميع بيانات هذا التطبيق نهائيًا.\nويتضمن ذلك جميع الملفات والإعدادات والحسابات وقواعد البيانات، وما إلى ذلك."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"محو الإعدادات التلقائية"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"تعيين تشغيل هذا التطبيق لبعض الإجراءات"</string>
-    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"لم يتم تعيين إعدادات تلقائية"</string>
+    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"لم يتم ضبط إعدادات تلقائية"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"محو ذاكرة التخزين المؤقت"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"الإشعارات"</string>
     <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"تراخيص البرامج المفتوحة المصدر"</string>

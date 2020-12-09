@@ -149,8 +149,8 @@
     <string name="system_date_time" msgid="6938588387002473344">"Datum en tijd"</string>
     <string name="system_language" msgid="5516099388471974346">"Taal"</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Toetsenbord"</string>
-    <string name="system_keyboard_autofill" msgid="8530944165814838255">"Toetsenbord en automatisch aanvullen"</string>
-    <string name="system_autofill" msgid="6983989261108020046">"Automatisch aanvullen"</string>
+    <string name="system_keyboard_autofill" msgid="8530944165814838255">"Toetsenbord en automatisch invullen"</string>
+    <string name="system_autofill" msgid="6983989261108020046">"Automatisch invullen"</string>
     <string name="system_home" msgid="2149349845791104094">"Startscherm"</string>
     <string name="system_search" msgid="3170169128257586925">"Zoeken"</string>
     <string name="system_google" msgid="945985164023885276">"Google"</string>
@@ -407,7 +407,7 @@
     <item msgid="5501503537181350884">"Uit"</item>
   </string-array>
     <string name="system_location" msgid="4057295363709016511">"Locatie"</string>
-    <string name="system_desc_location" msgid="1680134126100535031">"Apps die je toestemming hebben gevraagd, toestaan je locatiegegevens te gebruiken"</string>
+    <string name="system_desc_location" msgid="1680134126100535031">"Apps die je toestemming hebben gevraagd, rechten geven om je locatiegegevens te gebruiken"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Locatietoestemming"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Modus"</string>
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Recente locatieverzoeken"</string>
@@ -583,8 +583,8 @@
     <string name="title_current_keyboard" msgid="891238509164879851">"Huidig toetsenbord"</string>
     <string name="title_configure" msgid="846802387014612210">"Configureren"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Toetsenbordopties"</string>
-    <string name="title_current_autofill_service" msgid="9029001041887283153">"Huidige service voor automatisch aanvullen"</string>
-    <string name="title_select_autofill_service" msgid="696559582725756848">"Service voor automatisch aanvullen selecteren"</string>
+    <string name="title_current_autofill_service" msgid="9029001041887283153">"Huidige service voor automatisch invullen"</string>
+    <string name="title_select_autofill_service" msgid="696559582725756848">"Service voor automatisch invullen selecteren"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Geen"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Zorg dat je deze app vertrouwt&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Wachtwoordservice&gt;%1$s&lt;/xliff:g&gt; maakt gebruik van de content op je scherm om te bepalen wat automatisch kan worden aangevuld."</string>
     <string name="computing_size" msgid="8623916230485437579">"Berekenen…"</string>
@@ -731,7 +731,7 @@
     <string name="apps_permissions" msgid="7876407267050498394">"Machtigingen"</string>
     <string name="device_apps_permissions" msgid="8421323706003063878">"App-machtigingen"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"Verleend aan <xliff:g id="COUNT_0">%1$d</xliff:g> van <xliff:g id="COUNT_1">%2$d</xliff:g> apps"</string>
-    <string name="bluetooth_permission_request" msgid="7788089036741496993">"Toestemmingsverzoek voor Bluetooth"</string>
+    <string name="bluetooth_permission_request" msgid="7788089036741496993">"Rechtenverzoek voor Bluetooth"</string>
     <string name="security_patch" msgid="5468261708915367254">"Niveau van Android-beveiligingspatch"</string>
     <string name="choose_application" msgid="2375936782103669988">"App kiezen"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Experimenteel)"</string>
@@ -755,14 +755,14 @@
     <string name="no_notification_listeners" msgid="5119406452675724448">"Er zijn geen geïnstalleerde apps die toegang tot meldingen hebben aangevraagd."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Deze apps kunnen alle meldingen lezen, waaronder persoonlijke informatie zoals contactnamen en de tekst van berichten die je ontvangt. De apps kunnen meldingen ook sluiten of actieknoppen in de meldingen activeren."</string>
     <string name="directory_access" msgid="7338555825237012006">"Toegang tot map"</string>
-    <string name="directory_access_description" msgid="3630855858552422012">"Deze apps hebben toegang tot bepaalde mappen."</string>
+    <string name="directory_access_description" msgid="3630855858552422012">"Deze apps hebben rechten voor bepaalde mappen."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Weergeven vóór andere apps"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Weergeven vóór andere apps toestaan"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Een app toestaan op de voorgrond te worden weergegeven vóór andere apps die je gebruikt. Dit kan je gebruik van die apps verstoren of de manier wijzigen waarop die apps worden weergegeven of zich gedragen."</string>
     <string name="write_system_settings" msgid="4284654265954461890">"Systeeminstellingen aanpassen"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"Kan systeeminstellingen aanpassen"</string>
-    <string name="write_settings_description" msgid="7382397926674265937">"Met deze machtigingen kan een app de systeeminstellingen aanpassen."</string>
+    <string name="write_settings_description" msgid="7382397926674265937">"Met deze rechten kan een app de systeeminstellingen aanpassen."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Ja"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Nee"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Scherm-in-scherm"</string>
