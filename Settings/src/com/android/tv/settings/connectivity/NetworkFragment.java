@@ -51,6 +51,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.settings.widget.CustomContentDescriptionSwitchPreference;
 import com.android.tv.settings.widget.TvAccessPointPreference;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
@@ -182,17 +183,11 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
 
         if (!mIsWifiHardwarePresent) {
             mEnableWifiPref.setVisible(false);
-            mWifiOther.setVisible(false);
         }
+
+        updateVisibilityForDataSaver();
         Preference dataSaverSlicePref = findPreference(KEY_DATA_SAVER_SLICE);
         Preference dataAlertSlicePref = findPreference(KEY_DATA_ALERT_SLICE);
-        boolean isDataSaverVisible = isConnected() && SliceUtils.isSliceProviderValid(
-                getContext(), ((SlicePreference) dataSaverSlicePref).getUri());
-        boolean isDataAlertVisible = isConnected() && SliceUtils.isSliceProviderValid(
-                getContext(), ((SlicePreference) dataAlertSlicePref).getUri());
-
-        dataSaverSlicePref.setVisible(isDataSaverVisible);
-        dataAlertSlicePref.setVisible(isDataAlertVisible);
         Intent i = getActivity().getIntent();
         if (i != null && i.getAction() != null) {
             if (i.getAction().equals(Settings.ACTION_DATA_SAVER_SETTINGS)
@@ -212,6 +207,17 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         } else {
             networkDiagnosticsPref.setVisible(false);
         }
+    }
+
+    private void updateVisibilityForDataSaver() {
+        Preference dataSaverSlicePref = findPreference(KEY_DATA_SAVER_SLICE);
+        Preference dataAlertSlicePref = findPreference(KEY_DATA_ALERT_SLICE);
+        boolean isDataSaverVisible = isConnected() && SliceUtils.isSliceProviderValid(
+                getContext(), ((SlicePreference) dataSaverSlicePref).getUri());
+        boolean isDataAlertVisible = isConnected() && SliceUtils.isSliceProviderValid(
+                getContext(), ((SlicePreference) dataAlertSlicePref).getUri());
+        dataSaverSlicePref.setVisible(isDataSaverVisible);
+        dataAlertSlicePref.setVisible(isDataAlertVisible);
     }
 
     @Override
@@ -294,6 +300,12 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             // Ignore
         }
         mAlwaysScan.setChecked(scanAlwaysAvailable == 1);
+        if (mAlwaysScan instanceof CustomContentDescriptionSwitchPreference) {
+            ((CustomContentDescriptionSwitchPreference) mAlwaysScan).setContentDescription(
+                    getResources()
+                            .getString(
+                                    R.string.wifi_setting_always_scan_content_description));
+        }
 
         final boolean ethernetAvailable = mConnectivityListener.isEthernetAvailable();
         mEthernetCategory.setVisible(ethernetAvailable);
@@ -318,6 +330,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                     ? R.string.connected : R.string.not_connected);
             mEthernetStatusPref.setSummary(mConnectivityListener.getEthernetIpAddress());
         }
+
+        updateVisibilityForDataSaver();
     }
 
     private void updateWifiList() {

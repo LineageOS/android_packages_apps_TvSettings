@@ -38,7 +38,7 @@ public class FactoryResetInfoFragment extends InfoFragment {
                 .setImageResource(R.drawable.ic_info_outline_base);
         view.findViewById(R.id.info_title_icon).setVisibility(View.VISIBLE);
         ((TextView) view.findViewById(R.id.info_summary))
-                .setText(R.string.factory_reset_info_description);
+                .setText(R.string.factory_reset_description);
         view.findViewById(R.id.info_summary).setVisibility(View.VISIBLE);
         return view;
     }

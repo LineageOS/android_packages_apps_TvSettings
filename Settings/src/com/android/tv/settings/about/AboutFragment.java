@@ -58,6 +58,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.name.DeviceManager;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference;
 
 import java.util.stream.Collectors;
 
@@ -201,7 +202,18 @@ public class AboutFragment extends SettingsPreferenceFragment {
             removePreference(findPreference(KEY_DEVICE_FEEDBACK));
         }
 
+        final Preference resetPreference = findPreference(KEY_RESET);
+        if (resetPreference instanceof CustomContentDescriptionPreference) {
+            ((CustomContentDescriptionPreference) resetPreference).setContentDescription(
+                    getResources().getString(R.string.factory_reset_content_description));
+        }
+
         final Preference updateSettingsPref = findPreference(KEY_SYSTEM_UPDATE_SETTINGS);
+        if (updateSettingsPref instanceof CustomContentDescriptionPreference) {
+            ((CustomContentDescriptionPreference) updateSettingsPref).setContentDescription(
+                    getResources().getString(R.string.system_update_content_description));
+        }
+
         if (mUm.isAdminUser()) {
             PreferenceUtils.resolveSystemActivityOrRemove(getActivity(), screen,
                     updateSettingsPref, PreferenceUtils.FLAG_SET_TITLE);

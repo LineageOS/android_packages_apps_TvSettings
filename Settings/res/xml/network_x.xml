@@ -55,7 +55,7 @@
             android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
             custom:uri="content://com.google.android.apps.nbu.smartconnect.tv/dataalert"/>
 
-        <SwitchPreference
+        <com.android.tv.settings.widget.CustomContentDescriptionSwitchPreference
             android:key="wifi_always_scan"
             android:persistent="true"
             android:title="@string/wifi_setting_always_scan"
