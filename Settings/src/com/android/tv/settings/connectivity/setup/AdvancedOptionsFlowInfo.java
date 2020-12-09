@@ -167,7 +167,7 @@ public class AdvancedOptionsFlowInfo extends ViewModel {
      */
     public InetAddress getInitialDns(int index) {
         if (mIpConfiguration != null && mIpConfiguration.getStaticIpConfiguration() != null
-                && mIpConfiguration.getStaticIpConfiguration().dnsServers == null) {
+                && mIpConfiguration.getStaticIpConfiguration().dnsServers != null) {
             try {
                 return mIpConfiguration.getStaticIpConfiguration().dnsServers.get(index);
             } catch (IndexOutOfBoundsException e) {
