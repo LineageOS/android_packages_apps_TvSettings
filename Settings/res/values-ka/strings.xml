@@ -89,6 +89,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi გამორთულია"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"ყოველთვის ეძებე ქსელი"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Google-ის მდებარეობის სერვისისთვისა და სხვა აპებისთვის ქსელების სკანირების დაშვება, მაშინაც კი, როცა Wi-Fi გამორთულია"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"სკანირება ყოველთვის ხელმისაწვდომია, Google-ის მდებარეობის სერვისისთვისა და სხვა აპებისთვის ქსელების სკანირების დაშვება, მაშინაც კი, როცა Wi-Fi გამორთულია"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"ქსელთან დაკავშირება"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"ქსელის დიაგნოსტიკა"</string>
@@ -129,6 +130,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"ხმის გაფართოებული პარამეტრები"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"თამაშის რეჟიმის დაშვება"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"კონტენტის კადრების სიჩქარესთან შესაბამისობა"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"ავტო"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"ყოველთვის"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"არასოდეს"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"წაიშალოს ქეშირებული მონაცემები?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"წაიშლება ქეშირებული მონაცემები ყველა აპისთვის."</string>
     <string name="accessories_add" msgid="413764175035531452">"აქსესუარის დამატება"</string>
@@ -181,6 +186,7 @@
     <string name="tutorials" msgid="7880770425872110455">"სახელმძღვანელოები"</string>
     <string name="about_system_update" msgid="7421264399111367755">"სისტემის განახლება"</string>
     <string name="system_update_description" msgid="998883510488461766">"ამის შედეგად თქვენი სისტემის პროგრამული უზრუნველყოფა ბოლო ვერსიამდე განახლდება. თქვენი მოწყობილობა გადაიტვირთება."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"სისტემის განახლება, ამის შედეგად თქვენი სისტემის პროგრამული უზრუნველყოფა ბოლო ვერსიამდე განახლდება. თქვენი მოწყობილობა გადაიტვირთება."</string>
     <string name="about_preference" msgid="9112690446998150670">"შესახებ"</string>
     <string name="device_name" msgid="566626587332817733">"მოწყობილობის სახელი"</string>
     <string name="restart_button_label" msgid="911750765086382990">"გადატვირთვა"</string>
@@ -198,6 +204,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"რეკლამები"</string>
     <string name="ads_description" msgid="8081069475265061074">"მართეთ რეკლამის პარამეტრები, მაგალითად, რეკლამის ID-ის გადაყენება."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"რეკლამები, მართეთ რეკლამის პარამეტრები, მაგალითად, რეკლამის ID-ის გადაყენება."</string>
     <string name="show_dev_on" msgid="612741433124106067">"ახლა დეველოპერი ხართ!"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"არ არის საჭირო, თქვენ უკვე დეველოპერი ხართ"</string>
     <string name="device_info_default" msgid="2374506935205518448">"უცნობი"</string>
@@ -726,8 +733,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"ანგარიშის დამარქაფება"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"ავტომატური აღდგენა"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"მოწყობილობის გადატვირთვა"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"ეს წაშლის თქვენი მოწყობილობის შიდა შენახვის სრულ მონაცემს, მათ შორის: თქვენს Google ანგარიშს, სისტემისა და აპლიკაციის მონაცემებს, პარამეტრებს, და ჩამოტვირთულ აპლიკაციებს."</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"ეს აღადგენს თქვენი მოწყობილობის ნაგულისხმევ პარამეტრებს და ამოშლის ყველა მონაცემს, ანგარიშს, ფაილს და ჩამოტვირთულ აპს."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"ეს აღადგენს თქვენი მოწყობილობის ნაგულისხმევ პარამეტრებს და ამოშლის ყველა მონაცემს, ანგარიშს, ფაილს და ჩამოტვირთულ აპს."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"ქარხნული პარამეტრების დაბრუნება, ეს აღადგენს თქვენი მოწყობილობის ნაგულისხმევ პარამეტრებს და ამოშლის ყველა მონაცემს, ანგარიშს, ფაილს და ჩამოტვირთულ აპს."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"ამოიშალოს თქვენი ყველა პერსონალური ინფორმაცია და ჩამოტვირთული აპი ამ მოწყობილობაზე? ამ მოქმედების უკან დაბრუნება შეუძლებელია!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"ყველაფრის წაშლა"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"აირჩიეთ სახელი თქვენი <xliff:g id="DEVICEMODEL">%1$s</xliff:g>-სთვის"</string>

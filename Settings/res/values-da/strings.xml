@@ -89,6 +89,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi er deaktiveret"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Scanning altid tilgængelig"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Lad Googles placeringstjeneste og andre apps scanne efter netværk, selv når Wi-Fi er slået fra"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Scanning altid tilgængelig, lad Googles placeringstjeneste og andre apps scanne efter netværk, selv når Wi-Fi er slået fra"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Opret forbindelse til netværk"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Netværksdiagnostik"</string>
@@ -129,6 +130,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Avancerede lydindstillinger"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Tillad spiltilstand"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Match indholdets billedfrekvens"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"Automatisk"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"Altid"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Aldrig"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vil du rydde cachelagrede data?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Dette vil rydde cachelagrede data for alle apps."</string>
     <string name="accessories_add" msgid="413764175035531452">"Tilføj tilbehør"</string>
@@ -181,6 +186,7 @@
     <string name="tutorials" msgid="7880770425872110455">"Selvstudier"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Systemopdatering"</string>
     <string name="system_update_description" msgid="998883510488461766">"Dette opdaterer systemsoftwaren til den nyeste version. Enheden genstarter."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"Systemopdatering, dette opdaterer systemsoftwaren til den nyeste version. Enheden genstarter."</string>
     <string name="about_preference" msgid="9112690446998150670">"Om"</string>
     <string name="device_name" msgid="566626587332817733">"Enhedens navn"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Genstart"</string>
@@ -198,6 +204,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Annoncer"</string>
     <string name="ads_description" msgid="8081069475265061074">"Administrer annonceindstillinger, f.eks. nulstilling af annoncerings-id."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Annoncer, administrer dine annonceindstillinger, f.eks. nulstilling af dit annoncerings-id."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Nu er du udvikler."</string>
     <string name="show_dev_already" msgid="1522591284776449818">"Det behøver du ikke. Du er allerede udvikler."</string>
     <string name="device_info_default" msgid="2374506935205518448">"Ukendt"</string>
@@ -727,8 +734,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"Konto til backup"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Automatisk gendannelse"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Nulstil enheden"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"Dette medfører sletning af alle data fra enhedens interne lager, herunder din Google-konto, data og indstillinger for system og apps samt downloadede apps"</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"Dette gendanner din enhed til standardindstillingerne og rydder alle data, konti, filer og downloadede apps."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"Dette gendanner din enhed til standardindstillingerne og rydder alle data, konti, filer og downloadede apps."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"Gendannelse af fabriksindstillinger, dette gendanner din enhed til standardindstillingerne og rydder alle data, konti, filer og downloadede apps."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Vil du slette alle dine personlige oplysninger og downloade apps på denne enhed? Denne handling kan ikke fortrydes."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Slet alt"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Vælg et navn til din <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>

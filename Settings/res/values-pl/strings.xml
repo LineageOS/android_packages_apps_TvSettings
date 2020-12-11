@@ -70,7 +70,7 @@
     <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Asystent Google"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Płatności i zakupy"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Ustawienia aplikacji"</string>
-    <string name="privacy_category_summary" msgid="3534434883380511043">"Lokalizacja, użycie i diagnostyka, reklamy"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Lokalizacja, użytkowanie i diagnostyka, reklamy"</string>
     <string name="add_account" msgid="7386223854837017129">"Dodaj konto"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Usuń konto"</string>
     <string name="account_sync" msgid="4315295293211313989">"Wybierz synchronizowane aplikacje"</string>
@@ -93,6 +93,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Połączenie Wi-Fi jest wyłączone"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Skanowanie zawsze dostępne"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Zezwalaj usłudze lokalizacyjnej Google i innym aplikacjom na skanowanie w poszukiwaniu sieci nawet przy wyłączonym Wi-Fi"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Skanowanie zawsze dostępne, zezwalaj usłudze lokalizacyjnej Google i innym aplikacjom na skanowanie w poszukiwaniu sieci nawet przy wyłączonym Wi-Fi"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Łączenie z siecią"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnostyka sieci"</string>
@@ -133,6 +134,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Zaawansowane ustawienia dźwięku"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Zezwalaj na tryb gry"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Dopasuj do liczby klatek treści"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"Automatycznie"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"Zawsze"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nigdy"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Wyczyścić dane z pamięci podręcznej?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Usuwasz dane z pamięci podr. wszystkich aplikacji."</string>
     <string name="accessories_add" msgid="413764175035531452">"Dodaj akcesoria"</string>
@@ -181,10 +186,11 @@
     <string name="system_accessibility" msgid="3081009195560501010">"Ułatwienia dostępu"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"Opcje programistyczne"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Brak"</string>
-    <string name="system_diagnostic" msgid="1654842813331919958">"Użycie i diagnostyka"</string>
+    <string name="system_diagnostic" msgid="1654842813331919958">"Użytkowanie i diagnostyka"</string>
     <string name="tutorials" msgid="7880770425872110455">"Samouczki"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Aktualizacja systemu"</string>
     <string name="system_update_description" msgid="998883510488461766">"Spowoduje to zaktualizowanie oprogramowania systemu do najnowszej wersji. Urządzenie uruchomi się ponownie."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"Aktualizacja systemu, spowoduje to zaktualizowanie oprogramowania systemowego do najnowszej wersji. Urządzenie uruchomi się ponownie."</string>
     <string name="about_preference" msgid="9112690446998150670">"Informacje"</string>
     <string name="device_name" msgid="566626587332817733">"Nazwa urządzenia"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Uruchom ponownie"</string>
@@ -204,6 +210,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Reklamy"</string>
     <string name="ads_description" msgid="8081069475265061074">"Zarządzaj ustawieniami reklam, np. resetowaniem identyfikatora wyświetlania reklam."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Reklamy, zarządzaj ustawieniami reklam, na przykład resetowaniem identyfikatora wyświetlania reklam."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Jesteś teraz programistą!"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"Nie ma potrzeby, już jesteś programistą"</string>
     <string name="device_info_default" msgid="2374506935205518448">"Nieznany"</string>
@@ -740,8 +747,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"Konto kopii zapasowej"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Autoprzywracanie"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Zresetuj urządzenie"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"Spowoduje to wymazanie wszystkich danych z pamięci wewnętrznej Twojego urządzenia, w tym konta Google, ustawień i danych aplikacji i systemu, a także pobranych aplikacji"</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"Spowoduje to przywrócenie na urządzeniu ustawień domyślnych oraz wykasowanie wszystkich danych, kont, plików i pobranych aplikacji."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"Spowoduje to przywrócenie domyślnych ustawień urządzenia oraz usunięcie wszystkich danych, kont, plików i pobranych aplikacji."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"Resetuj do ustawień fabrycznych, spowoduje to przywrócenie na urządzeniu ustawień domyślnych oraz wykasowanie wszystkich danych, kont, plików i pobranych aplikacji."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Wykasować z tego urządzenia wszystkie Twoje dane osobowe i pobrane aplikacje? Nie można tego cofnąć."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Wymaż wszystko"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Wybierz nazwę urządzenia <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>

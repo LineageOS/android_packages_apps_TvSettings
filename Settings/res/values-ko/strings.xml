@@ -89,6 +89,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi가 사용 중지됨"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"항상 검색"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Wi-Fi가 꺼져 있을 때에도 Google의 위치 서비스 및 기타 앱이 네트워크를 검색하도록 합니다."</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"네트워크 항상 검색, Wi-Fi가 꺼져 있을 때도 Google의 위치 서비스 및 기타 앱이 네트워크를 검색하도록 허용합니다."</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"네트워크에 연결"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"네트워크 진단"</string>
@@ -129,6 +130,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"고급 소리 설정"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"게임 모드 허용"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"일치하는 콘텐츠 프레임 속도"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"자동"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"항상"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"사용 안함"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"캐시된 데이터를 지우시겠습니까?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"모든 앱의 캐시된 데이터가 지워집니다."</string>
     <string name="accessories_add" msgid="413764175035531452">"액세서리 추가"</string>
@@ -181,6 +186,7 @@
     <string name="tutorials" msgid="7880770425872110455">"가이드"</string>
     <string name="about_system_update" msgid="7421264399111367755">"시스템 업데이트"</string>
     <string name="system_update_description" msgid="998883510488461766">"시스템 소프트웨어가 최신 버전으로 업데이트됩니다. 기기가 다시 시작됩니다."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"시스템 업데이트, 시스템 소프트웨어가 최신 버전으로 업데이트됩니다. 기기가 다시 시작됩니다."</string>
     <string name="about_preference" msgid="9112690446998150670">"정보"</string>
     <string name="device_name" msgid="566626587332817733">"기기 이름"</string>
     <string name="restart_button_label" msgid="911750765086382990">"다시 시작"</string>
@@ -198,6 +204,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"광고"</string>
     <string name="ads_description" msgid="8081069475265061074">"광고 ID 재설정 등의 광고 설정을 관리합니다."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"광고, 광고 ID 재설정 등의 광고 설정을 관리합니다."</string>
     <string name="show_dev_on" msgid="612741433124106067">"개발자가 되셨습니다."</string>
     <string name="show_dev_already" msgid="1522591284776449818">"이미 개발자입니다."</string>
     <string name="device_info_default" msgid="2374506935205518448">"알 수 없음"</string>
@@ -726,8 +733,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"백업 계정"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"자동 복원"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"초기화"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"Google 계정, 시스템이나 앱의 데이터 및 설정, 다운로드한 앱 등 기기 내부 저장소에 있는 데이터가 모두 삭제됩니다."</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"기기가 기본 설정으로 복원되고 데이터, 계정, 파일 및 다운로드한 앱이 모두 삭제됩니다."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"기기가 기본 설정으로 복원되고 데이터, 계정, 파일 및 다운로드한 앱이 모두 삭제됩니다."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"초기화, 기기가 기본 설정으로 복원되고 데이터, 계정, 파일 및 다운로드한 앱이 모두 삭제됩니다."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"이 기기에서 개인정보와 다운로드된 앱을 모두 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"모두 지우기"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g>에 사용할 이름 선택"</string>

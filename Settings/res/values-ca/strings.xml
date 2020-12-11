@@ -89,6 +89,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"La Wi-Fi està desactivada"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Cerca sempre disponible"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Permet que el servei d\'ubicacions de Google i altres aplicacions cerquin xarxes, fins i tot si la Wi-Fi està desactivada"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Cerca sempre disponible, Permet que els serveis d\'ubicació de Google i altres aplicacions cerquin xarxes, fins i tot si la Wi‑Fi està desactivada."</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Connecta\'t a la xarxa"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnòstic de xarxa"</string>
@@ -129,6 +130,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Configuració avançada del so"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Permet el mode de joc"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Iguala amb els fotogrames per segon del contingut"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"Automàtic"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"Sempre"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Mai"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vols esborrar dades emmagatzem. a memòria cau?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"S\'esborraran dades aplicacions a la memòria cau."</string>
     <string name="accessories_add" msgid="413764175035531452">"Afegeix un accessori"</string>
@@ -181,6 +186,7 @@
     <string name="tutorials" msgid="7880770425872110455">"Tutorials"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Actualització del sistema"</string>
     <string name="system_update_description" msgid="998883510488461766">"El programari del teu sistema s\'actualitzarà a la versió més recent. El dispositiu es reiniciarà."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"Actualització del sistema, El programari del teu sistema s\'actualitzarà a la versió més recent. El dispositiu es reiniciarà."</string>
     <string name="about_preference" msgid="9112690446998150670">"Informació"</string>
     <string name="device_name" msgid="566626587332817733">"Nom del dispositiu"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Reinicia"</string>
@@ -198,6 +204,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Anuncis"</string>
     <string name="ads_description" msgid="8081069475265061074">"Gestiona la configuració d\'anuncis; restableix id. de publicitat."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Anuncis, Gestiona la configuració d\'anuncis; per exemple, restableix l\'identificador de publicitat."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Ara ja ets desenvolupador."</string>
     <string name="show_dev_already" msgid="1522591284776449818">"No cal, ja ets desenvolupador"</string>
     <string name="device_info_default" msgid="2374506935205518448">"Desconegut"</string>
@@ -726,8 +733,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"Compte de còpia de seguretat"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Restauració automàtica"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Restableix el dispositiu"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"Aquesta acció esborrarà totes les dades de l\'emmagatzematge intern del dispositiu, com ara el Compte de Google, les dades i la configuració del sistema i de les aplicacions, i les aplicacions baixades"</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"Aquesta acció restablirà la configuració predeterminada del dispositiu i esborrarà tots els comptes i fitxers, així com totes les dades i aplicacions baixades."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"Aquesta acció restablirà la configuració predeterminada del dispositiu i esborrarà tots els comptes i fitxers, així com totes les dades i aplicacions baixades."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"Restabliment de les dades de fàbrica, Aquesta acció restablirà la configuració predeterminada del dispositiu i esborrarà tots els comptes i fitxers, així com totes les dades i aplicacions baixades."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Vols esborrar tota la informació personal i les aplicacions baixades d\'aquest dispositiu? Aquesta acció no es pot desfer."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Esborra-ho tot"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Tria un nom per al teu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>

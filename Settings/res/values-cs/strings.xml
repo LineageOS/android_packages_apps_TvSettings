@@ -93,6 +93,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi je vypnuta"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Vyhledávání je vždy k dispozici"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Povolit službě určování polohy Google a ostatním aplikacím hledat sítě, i když je síť Wi-Fi vypnutá"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Vždy aktivní vyhledávání: Povolit službě určování polohy Google a ostatním aplikacím hledat sítě, i když je síť Wi-Fi vypnutá"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Připojení k síti"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnostika sítě"</string>
@@ -133,6 +134,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Rozšířená nastavení zvuku"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Povolit herní režim"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Sladit snímkovou frekvenci obsahu"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"Automaticky"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"Vždy"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nikdy"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vymazat data uložená v mezipaměti?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Tímto vymažete z mezipaměti data všech aplikací."</string>
     <string name="accessories_add" msgid="413764175035531452">"Přidat příslušenství"</string>
@@ -185,6 +190,7 @@
     <string name="tutorials" msgid="7880770425872110455">"Výukové programy"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Aktualizace systému"</string>
     <string name="system_update_description" msgid="998883510488461766">"Software systému se aktualizuje na nejnovější verzi. Zařízení se restartuje."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"Aktualizace systému: Software systému se aktualizuje na nejnovější verzi. Zařízení se restartuje."</string>
     <string name="about_preference" msgid="9112690446998150670">"O zařízení"</string>
     <string name="device_name" msgid="566626587332817733">"Název zařízení"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Restartovat"</string>
@@ -204,6 +210,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Reklamy"</string>
     <string name="ads_description" msgid="8081069475265061074">"Spravujte nastavení reklam (např. inzertní ID)."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Reklamy: Spravujte nastavení reklam (např. inzertní ID)."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Voilà! Stal se z vás vývojář."</string>
     <string name="show_dev_already" msgid="1522591284776449818">"Není potřeba, již jste vývojář."</string>
     <string name="device_info_default" msgid="2374506935205518448">"Neznámý"</string>
@@ -740,8 +747,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"Záložní účet"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Automatické obnovení"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Resetovat zařízení"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"Touto akcí smažete z interního úložiště zařízení všechna data včetně vašeho účtu Google, dat a nastavení systému a aplikací a stažených aplikací"</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"Touto akcí obnovíte v zařízení výchozí nastavení a vymažete z něj veškerá data, účty, soubory a stažené aplikace."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"Touto akcí obnovíte v zařízení výchozí nastavení a vymažete z něj veškerá data, účty, soubory a stažené aplikace."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"Resetování do továrního nastavení: Touto akcí obnovíte v zařízení výchozí nastavení a vymažete z něj veškerá data, účty, soubory a stažené aplikace."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Chcete z tohoto zařízení vymazat všechny osobní informace a stažené aplikace? Tuto akci nelze vrátit zpět."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Vymazat vše"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Výběr názvu pro zařízení <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>

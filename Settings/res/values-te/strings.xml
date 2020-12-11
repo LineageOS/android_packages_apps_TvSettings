@@ -89,6 +89,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi ఆఫ్ చేయబడింది"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"స్కానింగ్ ఎల్లప్పుడూ అందుబాటులో ఉంటుంది"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Wi-Fi ఆఫ్‌లో ఉన్నప్పటికీ నెట్‌వర్క్‌ల కోసం స్కాన్ చేయడానికి Google లొకేషన్‌ సేవను, ఇతర యాప్‌లను అనుమతిస్తుంది"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"స్కానింగ్ ఎల్లప్పుడూ అందుబాటులో ఉంటుంది, Wi-Fi ఆఫ్‌లో ఉన్నప్పుడు నెట్‌వర్క్‌ల కోసం స్కాన్ చేయడానికి Google లొకేషన్‌ సర్వీస్‌ను, ఇతర యాప్‌లను అనుమతిస్తుంది"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"నెట్‌వర్క్‌కి కనెక్ట్ చేయండి"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"నెట్‌వర్క్ సమస్య విశ్లేషణ"</string>
@@ -129,6 +130,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"అధునాతన సౌండ్ సెట్టింగ్‌లు"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"గేమ్ మోడ్‌ను అనుమతించు"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"మ్యాచ్ కంటెంట్ ఫ్రేమ్ రేట్"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"ఆటో"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"ఎల్లప్పుడూ"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"ఎప్పుడూ వద్దు"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"కాష్ చేసిన డేటాను తీసివేయాలా?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"ఇది అన్ని అను. కాష్ చేసిన డేటాను తీసివేస్తుంది."</string>
     <string name="accessories_add" msgid="413764175035531452">"ఉపకరణాన్ని జోడించండి"</string>
@@ -181,6 +186,7 @@
     <string name="tutorials" msgid="7880770425872110455">"ట్యుటోరియల్‌లు"</string>
     <string name="about_system_update" msgid="7421264399111367755">"సిస్టమ్ నవీకరణ"</string>
     <string name="system_update_description" msgid="998883510488461766">"ఇది మీ సిస్టమ్ సాఫ్ట్‌వేర్‌ను అత్యంత ఇటీవలి వెర్షన్‌కు అప్‌డేట్ చేస్తుంది. మీ పరికరం రీస్టార్ట్ అవుతుంది."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"సిస్టమ్ అప్‌డేట్, ఇది మీ సిస్టమ్ సాఫ్ట్‌వేర్‌ను అత్యంత ఇటీవలి వెర్షన్‌కు అప్‌డేట్ చేస్తుంది. మీ పరికరం రీస్టార్ట్ అవుతుంది."</string>
     <string name="about_preference" msgid="9112690446998150670">"పరిచయం"</string>
     <string name="device_name" msgid="566626587332817733">"పరికరం పేరు"</string>
     <string name="restart_button_label" msgid="911750765086382990">"రీస్టార్ట్ చేయి"</string>
@@ -198,6 +204,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"ప్రకటనలు"</string>
     <string name="ads_description" msgid="8081069475265061074">"మీ అడ్వర్టయిజింగ్ IDని రీసెట్ చేయడం వంటి, మీ యాడ్‌ల సెట్టింగ్‌లను మేనేజ్ చేయండి."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"యాడ్‌లు, మీ అడ్వర్టయిజింగ్ IDని రీసెట్ చేయడం వంటి, మీ యాడ్‌ల సెట్టింగ్‌లను మేనేజ్ చేయండి."</string>
     <string name="show_dev_on" msgid="612741433124106067">"మీరు ఇప్పుడు డెవలపర్!"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"అవసరం లేదు, మీరు ఇప్పటికే డెవలపర్"</string>
     <string name="device_info_default" msgid="2374506935205518448">"తెలియదు"</string>
@@ -726,8 +733,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"బ్యాకప్ చేయాల్సిన ఖాతా"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"ఆటోమేటిక్ పున‌రుద్ధ‌ర‌ణ‌"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"పరికరాన్ని రీసెట్ చేయి"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"దీని వలన మీ Google ఖాతా, సిస్టమ్ మరియు అనువర్తనం డేటా మరియు సెట్టింగ్‌లు మరియు డౌన్‌లోడ్ చేసిన అనువర్తనాలతో సహా మీ పరికరం అంతర్గత నిల్వలోని మొత్తం డేటా తొలగించబడుతుంది"</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"ఇది మీ పరికరాన్ని ఆటోమేటిక్‌గా సెట్ చేయబడి ఉండే సెట్టింగ్‌లకు రీస్టోర్ చేస్తుంది, అలాగే డేటా, ఖాతాలు, ఫైల్‌లు, డౌన్‌లోడ్ చేయబడిన యాప్‌లు అన్నిటినీ తొలగిస్తుంది."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"ఇది మీ పరికరాన్ని ఆటోమేటిక్‌గా సెట్ చేయబడి ఉండే సెట్టింగ్‌లకు రీస్టోర్ చేస్తుంది, అలాగే డేటా, ఖాతాలు, ఫైల్‌లు, డౌన్‌లోడ్ చేయబడిన యాప్‌లు అన్నిటినీ తొలగిస్తుంది."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"ఫ్యాక్టరీ రీసెట్, ఇది మీ పరికరాన్ని ఆటోమేటిక్‌గా సెట్ చేయబడి ఉండే సెట్టింగ్‌లకు రీస్టోర్ చేస్తుంది, అలాగే డేటా, ఖాతాలు, ఫైల్‌లు, డౌన్‌లోడ్ చేయబడిన యాప్‌లు అన్నిటినీ తొలగిస్తుంది."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"ఈ పరికరంలో మీ వ్యక్తిగత సమాచారం మొత్తాన్ని, డౌన్‌లోడ్ చేయబడిన యాప్‌లు అన్నింటిని తొలగించాలా? అమలు జరిగాక మీరు ఈ చర్యను తిరిగి రద్దు చేయలేరు!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"అన్నింటినీ తొలగించు"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"మీ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> కోసం పేరును ఎంచుకోండి"</string>

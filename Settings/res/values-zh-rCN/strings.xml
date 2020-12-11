@@ -89,6 +89,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"WLAN 已关闭"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"随时都可扫描"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"允许 Google 的位置信息服务和其他应用扫描网络（即使 WLAN 已关闭）"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"随时都可扫描，允许 Google 的位置信息服务和其他应用扫描网络，即使 WLAN 已关闭"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"WLAN"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"连接到网络"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"网络诊断"</string>
@@ -129,6 +130,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"高级声音设置"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"允许游戏模式"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"匹配内容的帧速率"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"自动"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"始终"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"永不"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"要清除缓存的数据吗？"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"此操作会清除所有应用的缓存数据。"</string>
     <string name="accessories_add" msgid="413764175035531452">"添加配件"</string>
@@ -181,6 +186,7 @@
     <string name="tutorials" msgid="7880770425872110455">"教程"</string>
     <string name="about_system_update" msgid="7421264399111367755">"系统更新"</string>
     <string name="system_update_description" msgid="998883510488461766">"此操作会将系统软件更新到最新版本。您的设备将会重启。"</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"系统更新，此操作会将系统软件更新到最新版本。您的设备将会重启。"</string>
     <string name="about_preference" msgid="9112690446998150670">"关于"</string>
     <string name="device_name" msgid="566626587332817733">"设备名称"</string>
     <string name="restart_button_label" msgid="911750765086382990">"重新启动"</string>
@@ -198,6 +204,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"广告"</string>
     <string name="ads_description" msgid="8081069475265061074">"管理广告设置，例如重置广告 ID。"</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"广告，管理广告设置，例如重置广告 ID。"</string>
     <string name="show_dev_on" msgid="612741433124106067">"您现在已处于开发者模式！"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"您已处于开发者模式，无需再执行此操作"</string>
     <string name="device_info_default" msgid="2374506935205518448">"未知"</string>
@@ -726,8 +733,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"备份帐号"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"自动还原"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"重置设备"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"此操作将会从您的设备的内部存储空间中清除所有数据，包括您的 Google 帐号、系统数据、应用数据、相关设置，以及已下载的应用"</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"此操作会将您的设备恢复为默认设置，并清空所有数据、帐号、文件和已下载的应用。"</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"此操作会将您的设备恢复为默认设置，并清空所有数据、帐号、文件和已下载的应用。"</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"恢复出厂设置，此操作会将您的设备恢复为默认设置，并清空所有数据、帐号、文件和已下载的应用。"</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"要清除此设备上的所有个人信息和已下载的应用吗？此操作无法撤消！"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"全部清除"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"为您的 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 选择名称"</string>
