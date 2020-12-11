@@ -89,6 +89,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi が OFF です"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"常にスキャン"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Wi-Fi が OFF になっていても、Google の位置情報サービスと他のアプリでネットワークをスキャンする"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"スキャンを常に実行する。Wi-Fi が OFF になっていても、Google の位置情報サービスと他のアプリでネットワークをスキャンできます"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"ネットワークへの接続"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"ネットワーク診断"</string>
@@ -129,6 +130,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"音の詳細設定"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"ゲームモードを有効にする"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"コンテンツのフレームレートを合わせる"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"自動"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"常時"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"なし"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"キャッシュデータを削除しますか？"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"すべてのアプリのキャッシュデータが削除されます。"</string>
     <string name="accessories_add" msgid="413764175035531452">"アクセサリを追加"</string>
@@ -181,6 +186,7 @@
     <string name="tutorials" msgid="7880770425872110455">"チュートリアル"</string>
     <string name="about_system_update" msgid="7421264399111367755">"システムアップデート"</string>
     <string name="system_update_description" msgid="998883510488461766">"これにより、システム ソフトウェアが最新のバージョンに更新され、デバイスが再起動します。"</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"システム アップデート。システム ソフトウェアが最新のバージョンに更新され、デバイスが再起動します。"</string>
     <string name="about_preference" msgid="9112690446998150670">"デバイス情報"</string>
     <string name="device_name" msgid="566626587332817733">"デバイス名"</string>
     <string name="restart_button_label" msgid="911750765086382990">"再起動"</string>
@@ -198,6 +204,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"広告"</string>
     <string name="ads_description" msgid="8081069475265061074">"広告設定（広告 ID のリセットなど）を管理します。"</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"広告。広告設定（広告 ID のリセットなど）を管理します。"</string>
     <string name="show_dev_on" msgid="612741433124106067">"開発者向けオプションが有効になりました"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"開発者向けオプションが既に有効です"</string>
     <string name="device_info_default" msgid="2374506935205518448">"不明"</string>
@@ -726,8 +733,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"バックアップアカウント"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"自動復元"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"デバイスをリセット"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"これにより、お使いのデバイスの内部ストレージから、Googleアカウント、システムとアプリのデータと設定、ダウンロードしたアプリなどすべてのデータが削除されます"</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"デバイスがデフォルトの設定にリセットされ、データ、アカウント、ファイル、ダウンロードしたアプリがすべて削除されます。"</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"デバイスがデフォルトの設定にリセットされ、データ、アカウント、ファイル、ダウンロードしたアプリがすべて削除されます。"</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"出荷時の設定へのリセット。デバイスがデフォルトの設定にリセットされ、データ、アカウント、ファイル、ダウンロードしたアプリがすべて削除されます。"</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"このデバイスから個人情報とダウンロードしたアプリをすべて消去しますか？この操作を元に戻すことはできません。"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"すべて消去"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> の名前を選択"</string>
