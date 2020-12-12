@@ -18,6 +18,7 @@ package com.android.tv.settings.device.displaysound;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.provider.Settings;
 
 import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
@@ -43,7 +44,8 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
     private static final String KEY_MATCH_CONTENT_FRAME_RATE_NEVER =
             "match_content_frame_rate_never";
 
-    private PreferenceGroup mPreferenceGroup;
+    private String mCurrentPreferenceKey;
+
 
     /** @return the new instance of the class */
     public static MatchContentFrameRateFragment newInstance() {
@@ -58,12 +60,18 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.match_content_frame_rate, null);
-        mPreferenceGroup = getPreferenceGroup();
+
+        mCurrentPreferenceKey = preferenceKeyFromSetting();
+        onPreferenceTreeClick(getRadioPreference(mCurrentPreferenceKey));
     }
 
     @VisibleForTesting
     PreferenceGroup getPreferenceGroup() {
         return (PreferenceGroup) findPreference(KEY_MATCH_CONTENT_FRAME_RATE);
+    }
+
+    RadioPreference getRadioPreference(String key) {
+        return (RadioPreference) findPreference(key);
     }
 
     @Override
@@ -80,21 +88,36 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
         if (preference instanceof RadioPreference) {
             final RadioPreference radioPreference = (RadioPreference) preference;
             radioPreference.setChecked(true);
-            radioPreference.clearOtherRadioPreferences(mPreferenceGroup);
+            radioPreference.clearOtherRadioPreferences(getPreferenceGroup());
 
-            switch (key) {
-                case KEY_MATCH_CONTENT_FRAME_RATE_AUTO: {
-                    break;
+            if (key != mCurrentPreferenceKey) {
+                switch (key) {
+                    case KEY_MATCH_CONTENT_FRAME_RATE_AUTO: {
+                        Settings.Secure.putInt(
+                                getContext().getContentResolver(),
+                                Settings.Secure.MATCH_CONTENT_FRAME_RATE,
+                                Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY);
+                        break;
+                    }
+                    case KEY_MATCH_CONTENT_FRAME_RATE_ALWAYS: {
+                        Settings.Secure.putInt(
+                                getContext().getContentResolver(),
+                                Settings.Secure.MATCH_CONTENT_FRAME_RATE,
+                                Settings.Secure.MATCH_CONTENT_FRAMERATE_ALWAYS);
+                        break;
+                    }
+                    case KEY_MATCH_CONTENT_FRAME_RATE_NEVER: {
+                        Settings.Secure.putInt(
+                                getContext().getContentResolver(),
+                                Settings.Secure.MATCH_CONTENT_FRAME_RATE,
+                                Settings.Secure.MATCH_CONTENT_FRAMERATE_NEVER);
+                        break;
+                    }
+                    default:
+                        throw new IllegalArgumentException(
+                                "Unknown match content frame rate pref value"
+                                        + ": " + key);
                 }
-                case KEY_MATCH_CONTENT_FRAME_RATE_ALWAYS: {
-                    break;
-                }
-                case KEY_MATCH_CONTENT_FRAME_RATE_NEVER: {
-                    break;
-                }
-                default:
-                    throw new IllegalArgumentException("Unknown match content frame rate pref value"
-                            + ": " + key);
             }
         }
         return super.onPreferenceTreeClick(preference);
@@ -103,5 +126,26 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return 0;
+    }
+
+    private String preferenceKeyFromSetting() {
+        int matchContentSetting = Settings.Secure.getInt(
+                getContext().getContentResolver(),
+                Settings.Secure.MATCH_CONTENT_FRAME_RATE,
+                Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY);
+        switch (matchContentSetting) {
+            case (Settings.Secure.MATCH_CONTENT_FRAMERATE_NEVER): {
+                return KEY_MATCH_CONTENT_FRAME_RATE_NEVER;
+            }
+            case (Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY): {
+                return KEY_MATCH_CONTENT_FRAME_RATE_AUTO;
+            }
+            case (Settings.Secure.MATCH_CONTENT_FRAMERATE_ALWAYS): {
+                return KEY_MATCH_CONTENT_FRAME_RATE_ALWAYS;
+            }
+            default:
+                throw new IllegalArgumentException("Unknown match content frame rate pref "
+                        + "value in stored settings");
+        }
     }
 }

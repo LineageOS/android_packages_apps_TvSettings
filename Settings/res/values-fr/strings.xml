@@ -67,7 +67,7 @@
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Paramètres du compte"</string>
     <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Assistant Google"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Paiement et achats"</string>
-    <string name="privacy_app_settings_category" msgid="858250971978879266">"Paramètres de l\'application"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Paramètres des applications"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Localisation, utilisation et diagnostics, annonces"</string>
     <string name="add_account" msgid="7386223854837017129">"Ajouter un compte"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Supprimer le compte"</string>
@@ -91,6 +91,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Le Wi-Fi est désactivé"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Recherche toujours disponible"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Autoriser le service de localisation de Google et les autres applications à rechercher des réseaux, même si le Wi-Fi est désactivé"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Recherche toujours disponible, Autoriser le service de localisation de Google et les autres applications à rechercher des réseaux, même si le Wi-Fi est désactivé"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Se connecter au réseau"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnostic réseau"</string>
@@ -131,6 +132,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Paramètres audio avancés"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Autoriser le mode Jeu"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Faire correspondre à fréquence d\'images du contenu"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"Automatique"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"Toujours"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Jamais"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Effacer les données mises en cache ?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Les données en cache des applis seront effacées."</string>
     <string name="accessories_add" msgid="413764175035531452">"Ajouter un accessoire"</string>
@@ -183,6 +188,7 @@
     <string name="tutorials" msgid="7880770425872110455">"Didacticiels"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Mise à jour du système"</string>
     <string name="system_update_description" msgid="998883510488461766">"Le logiciel système sera mis à jour vers la dernière version, et votre appareil redémarrera."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"Mise à jour du système, Le logiciel système sera mis à jour vers la dernière version, et votre appareil redémarrera."</string>
     <string name="about_preference" msgid="9112690446998150670">"À propos"</string>
     <string name="device_name" msgid="566626587332817733">"Nom de l\'appareil"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Redémarrer"</string>
@@ -193,7 +199,7 @@
     <string name="about_model" msgid="9164284529291439296">"Modèle"</string>
     <string name="about_version" msgid="6223547403835399861">"Version d\'Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Numéro de série"</string>
-    <string name="about_build" msgid="8467840394761634575">"Version d\'Android TV"</string>
+    <string name="about_build" msgid="8467840394761634575">"Build Android TV"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
       <item quantity="one">Plus que <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> étape pour devenir développeur</item>
       <item quantity="many">You are now <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steps away from being a developer</item>
@@ -201,6 +207,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Annonces"</string>
     <string name="ads_description" msgid="8081069475265061074">"Gérez paramètres annonces, modifiez identifiant publicitaire."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Annonces, Gérez les paramètres des annonces, modifiez par exemple votre identifiant publicitaire."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Vous êtes désormais développeur !"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"Inutile, vous êtes déjà développeur."</string>
     <string name="device_info_default" msgid="2374506935205518448">"Inconnu"</string>
@@ -733,8 +740,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"Sauvegarder le compte"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Restauration automatique"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Réinitialiser l\'appareil"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"Toutes les données de votre mémoire de stockage interne seront effacées, y compris les paramètres et les données de votre compte Google, de votre système et de vos applications, ainsi que les applications que vous aviez téléchargées."</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"Cette opération rétablira les paramètres par défaut de votre appareil et effacera l\'ensemble des données, comptes, fichiers et applications téléchargées."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"Cette opération rétablira les paramètres par défaut de votre appareil et effacera l\'ensemble des données, comptes, fichiers et applications téléchargées."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"Rétablir la configuration d\'usine, Cette opération rétablira les paramètres par défaut de votre appareil et effacera l\'ensemble des données, comptes, fichiers et applications téléchargées."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Effacer toutes vos informations personnelles et les applications téléchargées sur cet appareil ? Cette action est irréversible."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Tout effacer"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Choisir un nom pour votre <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>

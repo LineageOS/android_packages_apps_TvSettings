@@ -89,6 +89,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi ei ole käytössä."</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Etsiminen aina käytössä"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Anna Googlen sijaintipalvelun ja muiden sovellusten hakea verkkoja, vaikka Wi-Fi-yhteys olisi pois käytöstä."</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Etsiminen aina käytössä. Anna Googlen sijaintipalvelun ja muiden sovellusten hakea verkkoja, vaikka Wi-Fi-yhteys olisi poissa päältä."</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Yhdistä verkkoon"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Verkon diagnostiikka"</string>
@@ -129,6 +130,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Äänen lisäasetukset"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Salli pelitila"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Valitse sama kuvanopeus kuin sisällöllä"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"Automaattinen"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"Aina"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Ei koskaan"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Tyhjennetäänkö välimuistitiedot?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Sovellusten välimuistit tyhjennetään."</string>
     <string name="accessories_add" msgid="413764175035531452">"Lisää lisälaite"</string>
@@ -181,6 +186,7 @@
     <string name="tutorials" msgid="7880770425872110455">"Opasvideot"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Järjestelmäpäivitys"</string>
     <string name="system_update_description" msgid="998883510488461766">"Tämä päivittää järjestelmäohjelmiston uusimpaan versioon. Laite käynnistyy uudelleen."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"Järjestelmäpäivitys. Tämä päivittää järjestelmän ohjelmiston uusimpaan versioon. Laite käynnistyy uudelleen."</string>
     <string name="about_preference" msgid="9112690446998150670">"Tietoja"</string>
     <string name="device_name" msgid="566626587332817733">"Laitteen nimi"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Käynnistä uudelleen"</string>
@@ -198,6 +204,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Mainokset"</string>
     <string name="ads_description" msgid="8081069475265061074">"Muuta mainosasetuksia, esim. nollaa mainostunnus."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Mainokset. Muuta mainosasetuksia, esim. nollaa mainostunnus."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Olet nyt kehittäjä!"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"Selvä, olet jo kehittäjä"</string>
     <string name="device_info_default" msgid="2374506935205518448">"Tuntematon"</string>
@@ -726,8 +733,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"Varmuuskopioitava tili"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Automaattinen palauttaminen"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Palauta laitteen tehdasasetukset"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"Toiminto poistaa kaikki tiedot laitteesi sisäisestä tallennustilasta. Poistettavia tietoja ovat muun muassa Google-tilisi, järjestelmän ja sovelluksien tiedot ja asetukset sekä ladatut sovellukset."</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"Tämä palauttaa laitteesi oletusasetukset sekä pyyhkii kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"Tämä palauttaa laitteesi oletusasetukset sekä pyyhkii kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"Tehdasasetusten palautus. Tämä palauttaa laitteesi oletusasetukset sekä pyyhkii kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Poistetaanko kaikki henkilökohtaiset tietosi ja lataamasi sovellukset tältä laitteelta? Tätä toimintoa ei voi peruuttaa."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Poista kaikki"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Nimeä <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>

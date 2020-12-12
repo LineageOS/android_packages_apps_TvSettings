@@ -89,6 +89,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"O Wi-Fi está desativado"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Busca sempre ativada"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Permitir que o serviço de localização do Google e outros apps procurem redes, mesmo que o Wi-Fi esteja desligado"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Verificação sempre disponível: permitir que o Serviço de localização do Google e outros apps procurem redes, mesmo que o Wi-Fi esteja desativado"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Conectar à rede"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnósticos de rede"</string>
@@ -129,6 +130,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Configurações de som avançadas"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Permitir modo jogo"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Frame rate do conteúdo correspondente"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"Automático"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"Sempre"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nunca"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Limpar os dados em cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Esta ação limpa dados em cache de todos os apps."</string>
     <string name="accessories_add" msgid="413764175035531452">"Adicionar acessório"</string>
@@ -181,6 +186,7 @@
     <string name="tutorials" msgid="7880770425872110455">"Tutoriais"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Atualização do sistema"</string>
     <string name="system_update_description" msgid="998883510488461766">"Essa ação atualizará o software do sistema para a versão mais recente. O dispositivo será reiniciado."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"Atualização do sistema: essa ação atualizará o software do sistema para a versão mais recente. O dispositivo será reiniciado."</string>
     <string name="about_preference" msgid="9112690446998150670">"Sobre"</string>
     <string name="device_name" msgid="566626587332817733">"Nome do dispositivo"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Reiniciar"</string>
@@ -198,6 +204,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Anúncios"</string>
     <string name="ads_description" msgid="8081069475265061074">"Gerencie as Configurações de anúncios, por exemplo, redefinindo seu ID de publicidade."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Anúncios: gerencie suas Configurações de anúncios, por exemplo, redefinindo seu ID de publicidade."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Você agora é um desenvolvedor!"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"Não é necessário. Você já é um desenvolvedor."</string>
     <string name="device_info_default" msgid="2374506935205518448">"Desconhecido"</string>
@@ -726,8 +733,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"Conta de backup"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Restauração automática"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Redefinir dispositivo"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"Isso fará com que todos os dados do armazenamento interno do dispositivo sejam apagados, incluindo sua Conta do Google, dados e configurações do sistema e de apps e os apps transferidos por download."</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"Essa ação restaurará seu dispositivo para as configurações padrão e apagará todos os dados, contas, arquivos e apps transferidos por download."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"Essa ação restaurará seu dispositivo às configurações padrão e apagará dados, contas, arquivos e apps transferidos por download."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"Redefinir para a configuração original: essa ação restaurará seu dispositivo para as configurações padrão e apagará todos os dados, contas, arquivos e apps transferidos por download."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Apagar todas as suas informações pessoais e todos os apps transferidos por download neste dispositivo? Não é possível reverter essa ação."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Apagar tudo"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Escolher um nome para seu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>

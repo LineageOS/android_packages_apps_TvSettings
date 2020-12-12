@@ -93,6 +93,7 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Отсутствует подключение к Wi-Fi."</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Всегда искать сети"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Разрешить службе геопозиционирования и другим приложениям Google искать сети, даже если модуль Wi-Fi выключен"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Всегда искать сети, разрешить службе геопозиционирования и другим приложениям Google искать сети, даже если модуль Wi-Fi выключен"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Подключитесь к сети"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Диагностика сети"</string>
@@ -133,6 +134,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Расширенные настройки звука"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Разрешить игровой режим"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Использовать частоту кадров контента"</string>
+    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"Авто"</string>
+    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"Всегда"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Никогда"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Очистить кеш?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Будут удалены данные всех приложений."</string>
     <string name="accessories_add" msgid="413764175035531452">"Добавить устройство"</string>
@@ -185,6 +190,7 @@
     <string name="tutorials" msgid="7880770425872110455">"Руководства"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Обновление системы"</string>
     <string name="system_update_description" msgid="998883510488461766">"Будет установлена последняя версия программного обеспечения системы. Устройство перезапустится."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"Обновление системы, будет установлена последняя версия программного обеспечения системы. Устройство перезапустится."</string>
     <string name="about_preference" msgid="9112690446998150670">"Об устройстве"</string>
     <string name="device_name" msgid="566626587332817733">"Название устройства"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Перезагрузить"</string>
@@ -204,6 +210,7 @@
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Реклама"</string>
     <string name="ads_description" msgid="8081069475265061074">"Управление настройками (например, сброс рекламного идентификатора)."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Реклама, управление настройками, такими как сброс рекламного идентификатора."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Вы стали разработчиком!"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"У вас уже есть статус разработчика"</string>
     <string name="device_info_default" msgid="2374506935205518448">"Неизвестно"</string>
@@ -740,8 +747,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"Резервный аккаунт"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Автоматическое восстановление"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Сбросить настройки"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"Из внутреннего хранилища устройства будет удалена вся информация, включая данные вашего аккаунта Google и приложений, а также настройки, системные данные и загруженные приложения."</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"С устройства будут удалены все данные, аккаунты, файлы и скачанные приложения, а настройки вернутся к заводским."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"С устройства будут удалены все данные, аккаунты, файлы и скачанные приложения, а настройки вернутся к заводским."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"Сброс настроек, с устройства будут удалены все данные, аккаунты, файлы и скачанные приложения, а настройки вернутся к заводским."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Удалить всю личную информацию и скачанные приложения с этого устройства без возможности восстановления?"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Удалить всё"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Укажите название для устройства <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
