@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.vendor;
 
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+
 import com.android.tv.settings.R;
 import com.android.tv.settings.slice.SliceActivity;
 
@@ -32,5 +34,10 @@ public class VendorActivity extends SliceActivity {
     @Override
     public String getScreenTitle() {
         return getString(R.string.vendor_activity_title);
+    }
+
+    @Override
+    protected int getAvailableFlavors() {
+        return FLAVOR_VENDOR;
     }
 }

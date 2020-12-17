@@ -30,11 +30,14 @@ public final class FlavorUtils {
     private static final String TAG = "OverlayUtils";
 
     // Build flavors of TvSettings that determines
-    public static final int FLAVOR_UNDEFINED = -1; // Error/undefined flavor
-    public static final int FLAVOR_CLASSIC = 0;    // The ordinary classic one panel settings
-    public static final int FLAVOR_TWO_PANEL = 1;  // The two panel settings
-    public static final int FLAVOR_X = 2;          // The two panel settings with the X experience
-    public static final int FLAVOR_VENDOR = 3;     // The two panel settings with Vendor overlay
+    public static final int FLAVOR_UNDEFINED = 0b00000000; // Error/undefined flavor
+    public static final int FLAVOR_CLASSIC = 0b00000001;   // Ordinary classic one panel settings
+    public static final int FLAVOR_TWO_PANEL = 0b00000010; // Two panel settings
+    public static final int FLAVOR_X = 0b00000100;         // Two panel settings with the X overlay
+    public static final int FLAVOR_VENDOR = 0b00001000;    // Two panel settings with Vendor overlay
+
+    public static final int TWO_PANEL_FLAVORS_MASK = FLAVOR_TWO_PANEL | FLAVOR_X | FLAVOR_VENDOR;
+    public static final int X_EXPERIENCE_FLAVORS_MASK = FLAVOR_X | FLAVOR_VENDOR;
 
     private static FeatureFactory sFeatureFactory;
 
@@ -65,16 +68,7 @@ public final class FlavorUtils {
 
     /** Returns whether the UI is two panel style. */
     public static boolean isTwoPanel(@Nullable Context context) {
-        switch (getFlavor(context)) {
-            case FLAVOR_TWO_PANEL:
-            case FLAVOR_X:
-            case FLAVOR_VENDOR:
-                return true;
-            case FLAVOR_UNDEFINED:
-            case FLAVOR_CLASSIC:
-            default:
-                return false;
-        }
+        return (getFlavor(context) & TWO_PANEL_FLAVORS_MASK) != 0;
     }
 
     /** Returns the correct FeatureFactory. */

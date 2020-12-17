@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.oemlink;
 
+import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,6 +38,10 @@ public class FactoryResetActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if ((FlavorUtils.getFlavor(this) & X_EXPERIENCE_FLAVORS_MASK) == 0) {
+            Log.w(TAG, "OEM factory reset activity is not available in this flavor.");
+            finish();
+        }
         if (!FlavorUtils.getFeatureFactory(this)
                 .getStartupVerificationFeatureProvider()
                 .startStartupVerificationActivityForResult(
