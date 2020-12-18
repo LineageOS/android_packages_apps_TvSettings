@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.accounts;
 
+import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
+
 import android.text.TextUtils;
 
 import com.android.tv.settings.R;
@@ -36,5 +38,10 @@ public class ManageUserServicesSliceActivity extends SliceActivity {
     @Override
     public String getScreenTitle() {
         return getString(R.string.manage_user_services_slice_title);
+    }
+
+    @Override
+    protected int getAvailableFlavors() {
+        return X_EXPERIENCE_FLAVORS_MASK;
     }
 }

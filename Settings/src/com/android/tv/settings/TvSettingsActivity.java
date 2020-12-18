@@ -16,6 +16,11 @@
 
 package com.android.tv.settings;
 
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
@@ -47,6 +52,10 @@ public abstract class TvSettingsActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if ((FlavorUtils.getFlavor(this) & getAvailableFlavors()) == 0) {
+            Log.w(TAG, "Activity is not supported in current flavor");
+            finish();
+        }
         if (savedInstanceState == null) {
 
             final Fragment fragment = createSettingsFragment();
@@ -161,6 +170,11 @@ public abstract class TvSettingsActivity extends Activity {
      */
     protected boolean isStartupVerificationRequired() {
         return false;
+    }
+
+    /** Subclass may override this to specify the flavor, in which the activity is available. */
+    protected int getAvailableFlavors() {
+        return FLAVOR_CLASSIC | FLAVOR_TWO_PANEL | FLAVOR_X | FLAVOR_VENDOR;
     }
 
     @Override

@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.oemlink;
 
+import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
+
 import android.app.Fragment;
 
 import com.android.tv.settings.TvSettingsActivity;
@@ -29,5 +31,10 @@ public class AccessibilitySettingsActivity extends TvSettingsActivity {
     protected Fragment createSettingsFragment()  {
         return FlavorUtils.getFeatureFactory(this).getSettingsFragmentProvider()
                 .newSettingsFragment(AccessibilityFragment.class.getName(), null);
+    }
+
+    @Override
+    protected int getAvailableFlavors() {
+        return X_EXPERIENCE_FLAVORS_MASK;
     }
 }
