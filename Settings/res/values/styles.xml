@@ -272,7 +272,7 @@
         <item name="android:paddingEnd">@dimen/setup_guidance_padding_end</item>
     </style>
 
-    <style name="Setup.GuidanceTitleStyle" parent="Widget.Leanback.GuidanceTitleStyle">
+    <style name="Setup.GuidanceTitleStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">start|bottom</item>
@@ -280,7 +280,7 @@
         <item name="android:textAppearance">@style/Setup.Description.Title</item>
     </style>
 
-    <style name="Setup.GuidanceDescriptionStyle" parent="Widget.Leanback.GuidanceDescriptionStyle">
+    <style name="Setup.GuidanceDescriptionStyle">
         <item name="android:textColor">@color/setup_primary_text_color</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/setup_description_text_size</item>
@@ -354,6 +354,7 @@
         <item name="android:inputType">textNoSuggestions</item>
         <item name="android:gravity">start|center_vertical</item>
         <item name="android:singleLine">false</item>
+        <item name="android:maxLines">3</item>
         <item name="android:fontFamily">@string/preference_category_text_font</item>
         <item name="android:textSize">@dimen/guided_action_text_size_two_panel</item>
         <item name="android:textColor">@color/tp_preference_item_primary_text_color_selector</item>
@@ -389,6 +390,23 @@
         <item name="android:layout_marginEnd">@dimen/guidance_group_margin_end_two_panel</item>
     </style>
 
+    <style name="GuidanceTitleStyle">
+        <item name="android:gravity">start</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:lineSpacingMultiplier">@dimen/setup_title_line_spacing_multiplier</item>
+        <item name="android:fontFamily">@string/font_sans_serif</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">36sp</item>
+
+    </style>
+
+    <style name="GuidanceDescriptionStyle">
+        <item name="android:gravity">start</item>
+        <item name="android:lineSpacingMultiplier">@dimen/setup_description_line_spacing_multiplier</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 
     <style name="GuidanceIconStyleTwoPanel">
         <item name="android:layout_marginBottom">@dimen/guidance_icon_margin_bottom_two_panel</item>
@@ -396,5 +414,4 @@
         <item name="android:layout_width">@dimen/guidance_icon_width_two_panel</item>
         <item name="android:visibility">visible</item>
     </style>
-
 </resources>

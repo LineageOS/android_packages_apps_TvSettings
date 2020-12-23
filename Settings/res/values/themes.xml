@@ -67,6 +67,10 @@
         <item name="guidedActionsListStyle">@style/Setup.GuidedActionsListStyle</item>
         <item name="guidedActionContentWidthWeight">@string/setup_actions_width_weight</item>
     </style>
+    <style name="GuidedStepFragmentThemeOnePanel" parent="Theme.Leanback.GuidedStep">
+        <item name="guidanceTitleStyle">@style/GuidanceTitleStyle</item>
+        <item name="guidanceDescriptionStyle">@style/GuidanceDescriptionStyle</item>
+    </style>
 
     <style name="GuidedStepFragmentThemeTwoPanel" parent="Theme.Leanback.GuidedStep">
         <item name="guidedActionsElevation">@dimen/guided_actions_list_elevation</item>
@@ -79,6 +83,8 @@
         <item name="guidedActionItemContentStyle">@style/GuidedActionItemContentStyle</item>
         <item name="guidedActionItemTitleStyle">@style/GuidedActionItemTitleStyleTwoPanel</item>
         <item name="guidedActionItemDescriptionStyle">@style/GuidedActionItemDescriptionStyleTwoPanel</item>
+        <item name="guidanceTitleStyle">@style/GuidanceTitleStyle</item>
+        <item name="guidanceDescriptionStyle">@style/GuidanceDescriptionStyle</item>
         <item name="guidedActionContentWidthWeight">@string/guided_action_width_weight_two_panel</item>
         <item name="guidedStepBackground">@null</item>
         <item name="guidanceContainerStyle">@style/GuidanceContainerStyleTwoPanel</item>

@@ -699,10 +699,10 @@
             android:configChanges="keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.settings.DEVICE_NAME"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
+                <intent-filter>
+                    <action android:name="android.settings.DEVICE_NAME" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                </intent-filter>
         </activity>
 
         <activity
