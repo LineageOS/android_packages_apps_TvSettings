@@ -34,6 +34,7 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.util.GuidedActionsAlignUtil;
 
 import java.util.List;
 
@@ -100,6 +101,11 @@ public class ResetActivity extends Activity {
                 Log.wtf(TAG, "Unknown action clicked");
             }
         }
+
+        @Override
+        public GuidanceStylist onCreateGuidanceStylist() {
+            return GuidedActionsAlignUtil.createGuidanceStylist();
+        }
     }
 
     public static class ResetConfirmFragment extends GuidedStepFragment {
@@ -133,6 +139,11 @@ public class ResetActivity extends Activity {
                     .clickAction(GuidedAction.ACTION_ID_OK)
                     .title(getString(R.string.confirm_factory_reset_device))
                     .build());
+        }
+
+        @Override
+        public GuidanceStylist onCreateGuidanceStylist() {
+            return GuidedActionsAlignUtil.createGuidanceStylist();
         }
 
         @Override

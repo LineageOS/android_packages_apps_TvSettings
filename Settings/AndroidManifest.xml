@@ -355,13 +355,10 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".device.storage.ResetActivity"
+        <activity android:name=".device.storage.ResetActivity"
+            android:theme="@style/GuidedStepFragmentThemeTwoPanel"
             android:configChanges="keyboard|keyboardHidden|navigation"
-            android:excludeFromRecents="true"
-            android:noHistory="true"
-            android:theme="@style/TvSettingsActivityTheme" />
-
+            android:excludeFromRecents="true" />
         <activity
             android:name=".connectivity.NetworkActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
