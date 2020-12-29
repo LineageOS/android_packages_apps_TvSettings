@@ -934,7 +934,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     public static void captureBugReport(Activity activity) {
         Toast.makeText(activity, R.string.capturing_bugreport, Toast.LENGTH_SHORT).show();
         try {
-            ActivityManager.getService().requestFullBugReport();
+            ActivityManager.getService().requestInteractiveBugReport();
         } catch (RemoteException e) {
             Log.e(TAG, "Error taking bugreport", e);
         }
