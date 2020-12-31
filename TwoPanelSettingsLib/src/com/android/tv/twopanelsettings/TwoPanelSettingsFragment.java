@@ -840,12 +840,17 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     updateInfoFragmentStatus(fragment);
                 }
                 if (chosenPreference instanceof ListPreference) {
-                    onPreferenceFocusedImpl(chosenPreference, true);
+                    refocusPreferenceForceRefresh(chosenPreference);
                 }
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    /** Force refresh preview panel. */
+    public void refocusPreferenceForceRefresh(Preference chosenPreference) {
+        onPreferenceFocusedImpl(chosenPreference, true);
     }
 
     /** Show error message in preview panel **/
@@ -873,7 +878,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
     }
 
-    private static Preference getChosenPreference(Fragment fragment) {
+    /** Get the current chosen preference. */
+    public static Preference getChosenPreference(Fragment fragment) {
         if (!(fragment instanceof LeanbackPreferenceFragment)) {
             return null;
         }

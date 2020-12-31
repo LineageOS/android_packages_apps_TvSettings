@@ -208,6 +208,10 @@ public final class SlicePreferencesUtil {
             IconCompat infoImage = getInfoImage(item);
             IconCompat infoTitleIcon = getInfoTitleIcon(item);
             Bundle b = preference.getExtras();
+            String fallbackInfoContentDescription = "";
+            if (preference.getTitle() != null) {
+                fallbackInfoContentDescription += preference.getTitle().toString();
+            }
             if (infoImage != null) {
                 b.putParcelable(EXTRA_PREFERENCE_INFO_IMAGE, infoImage.toIcon());
             }
@@ -223,19 +227,19 @@ public final class SlicePreferencesUtil {
                     b.putBoolean(InfoFragment.EXTRA_INFO_HAS_STATUS, false);
                 }
                 b.putCharSequence(EXTRA_PREFERENCE_INFO_TEXT, infoText);
+                if (preference.getTitle() != null
+                        && !preference.getTitle().equals(infoText.toString())) {
+                    fallbackInfoContentDescription +=
+                            CONTENT_DESCRIPTION_SEPARATOR + infoText.toString();
+                }
+
             }
             if (infoSummary != null) {
                 b.putCharSequence(EXTRA_PREFERENCE_INFO_SUMMARY, infoSummary);
+                fallbackInfoContentDescription +=
+                        CONTENT_DESCRIPTION_SEPARATOR + infoSummary.toString();
             }
-            if (infoImage != null || infoText != null || infoSummary != null) {
-                preference.setFragment(InfoFragment.class.getCanonicalName());
-                String fallbackInfoContentDescription = infoSummary.toString();
-                if (!preference.getTitle().equals(infoText.toString())) {
-                    fallbackInfoContentDescription = infoText.toString()
-                            + CONTENT_DESCRIPTION_SEPARATOR + fallbackInfoContentDescription;
-                }
-                fallbackInfoContentDescription = preference.getTitle()
-                        + CONTENT_DESCRIPTION_SEPARATOR + fallbackInfoContentDescription;
+            if (infoText != null || infoSummary != null) {
                 if (preference instanceof SlicePreference) {
                     ((SlicePreference) preference).setContentDescription(
                             getInfoContentDescription(item, fallbackInfoContentDescription));
@@ -246,6 +250,9 @@ public final class SlicePreferencesUtil {
                     ((CustomContentDescriptionPreference) preference).setContentDescription(
                             getInfoContentDescription(item, fallbackInfoContentDescription));
                 }
+            }
+            if (infoImage != null || infoText != null || infoSummary != null) {
+                preference.setFragment(InfoFragment.class.getCanonicalName());
             }
         }
 
