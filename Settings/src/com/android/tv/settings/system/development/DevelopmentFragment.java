@@ -109,7 +109,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private static final String WAIT_FOR_DEBUGGER_KEY = "wait_for_debugger";
     private static final String MOCK_LOCATION_APP_KEY = "mock_location_app";
     private static final String VERIFY_APPS_OVER_USB_KEY = "verify_apps_over_usb";
-    private static final String DEBUG_VIEW_ATTRIBUTES =  "debug_view_attributes";
+    private static final String DEBUG_VIEW_ATTRIBUTES = "debug_view_attributes";
     private static final String FORCE_ALLOW_ON_EXTERNAL_KEY = "force_allow_on_external";
     private static final String STRICT_MODE_KEY = "strict_mode";
     private static final String POINTER_LOCATION_KEY = "pointer_location";
@@ -166,9 +166,9 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private static final String PERSISTENT_DATA_BLOCK_PROP = "ro.frp.pst";
 
-    private static String DEFAULT_LOG_RING_BUFFER_SIZE_IN_BYTES = "262144"; // 256K
+    private static final String DEFAULT_LOG_RING_BUFFER_SIZE_IN_BYTES = "262144"; // 256K
 
-    private static final int[] MOCK_LOCATION_APP_OPS = new int[] {AppOpsManager.OP_MOCK_LOCATION};
+    private static final int[] MOCK_LOCATION_APP_OPS = new int[]{AppOpsManager.OP_MOCK_LOCATION};
 
     private static final String STATE_SHOWING_DIALOG_KEY = "showing_dialog_key";
 
@@ -299,7 +299,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         mLogdSizeController = new LogdSizePreferenceController(getActivity());
-        mLogpersistController = new LogpersistPreferenceController(getActivity(), getLifecycle());
+        mLogpersistController = new LogpersistPreferenceController(getActivity(),
+                getSettingsLifecycle());
 
         if (!mUm.isAdminUser()
                 || mUm.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES)
@@ -877,7 +878,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private void updateVerifyAppsOverUsbOptions() {
         updateSwitchPreference(mVerifyAppsOverUsb,
                 Settings.Global.getInt(mContentResolver,
-                Settings.Global.PACKAGE_VERIFIER_INCLUDE_ADB, 1) != 0);
+                        Settings.Global.PACKAGE_VERIFIER_INCLUDE_ADB, 1) != 0);
         mVerifyAppsOverUsb.setEnabled(enableVerifierSetting());
     }
 
@@ -1190,7 +1191,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     /**
      * @return <code>true</code> if the color space preference is currently
-     *         controlled by development settings
+     * controlled by development settings
      */
     private boolean usingDevelopmentColorSpace() {
         final boolean enabled = Settings.Secure.getInt(
@@ -1200,10 +1201,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                     mContentResolver, Settings.Secure.ACCESSIBILITY_DISPLAY_DALTONIZER,
                     AccessibilityManager.DALTONIZER_DISABLED));
             final int index = mSimulateColorSpace.findIndexOfValue(mode);
-            if (index >= 0) {
-                // We're using a mode controlled by developer preferences.
-                return true;
-            }
+            // We're using a mode controlled by developer preferences.
+            return index >= 0;
         }
         return false;
     }
@@ -1286,7 +1285,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private void updateForceResizableOptions() {
         updateSwitchPreference(mForceResizable,
                 Settings.Global.getInt(mContentResolver,
-                Settings.Global.DEVELOPMENT_FORCE_RESIZABLE_ACTIVITIES, 0) != 0);
+                        Settings.Global.DEVELOPMENT_FORCE_RESIZABLE_ACTIVITIES, 0) != 0);
     }
 
     private void writeForceResizableOptions() {
@@ -1389,7 +1388,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 mHaveDebugSettings = true;
             }
             CharSequence[] values = pref.getEntryValues();
-            for (int i=0; i<values.length; i++) {
+            for (int i = 0; i < values.length; i++) {
                 float val = Float.parseFloat(values[i].toString());
                 if (scale <= val) {
                     pref.setValueIndex(i);
@@ -1397,7 +1396,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                     return;
                 }
             }
-            pref.setValueIndex(values.length-1);
+            pref.setValueIndex(values.length - 1);
             pref.setSummary(pref.getEntries()[0]);
         } catch (RemoteException e) {
             // ignore
@@ -1441,7 +1440,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private void writeOverlayDisplayDevicesOptions(Object newValue) {
         Settings.Global.putString(mContentResolver, Settings.Global.OVERLAY_DISPLAY_DEVICES,
-                (String)newValue);
+                (String) newValue);
         updateOverlayDisplayDevicesOptions();
     }
 
@@ -1470,7 +1469,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         try {
             int limit = ActivityManager.getService().getProcessLimit();
             CharSequence[] values = mAppProcessLimit.getEntryValues();
-            for (int i=0; i<values.length; i++) {
+            for (int i = 0; i < values.length; i++) {
                 int val = Integer.parseInt(values[i].toString());
                 if (val >= limit) {
                     if (i != 0) {
@@ -1715,6 +1714,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     /**
      * Iterates through preference controllers that show confirmation dialogs and returns the
      * preference key for the first currently showing dialog. Ideally there should only ever be one.
+     *
      * @return Preference key, or null if no dialog is showing
      */
     private String getKeyForShowingDialog() {
@@ -1732,6 +1732,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     /**
      * Re-show the dialog we lost previously
+     *
      * @param preferenceKey Key for the preference the dialog is for
      */
     private void recreateDialogForKey(String preferenceKey) {
@@ -1750,7 +1751,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mLogpersistController.dismissConfirmationDialog();
     }
 
-    private BroadcastReceiver mUsbReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mUsbReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             updateUsbConfigurationValues();
@@ -1769,7 +1770,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
      * Returns whether or not this device is able to be OEM unlocked.
      */
     static boolean isOemUnlockEnabled(Context context) {
-        PersistentDataBlockManager manager =(PersistentDataBlockManager)
+        PersistentDataBlockManager manager = (PersistentDataBlockManager)
                 context.getSystemService(Context.PERSISTENT_DATA_BLOCK_SERVICE);
         return manager.getOemUnlockEnabled();
     }

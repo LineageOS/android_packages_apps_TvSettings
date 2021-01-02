@@ -16,11 +16,11 @@
 
 package com.android.tv.settings.overlay;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.Keep;
+import androidx.fragment.app.Fragment;
 
 import com.android.tv.settings.BaseSettingsFragment;
 import com.android.tv.settings.SettingsFragmentProvider;

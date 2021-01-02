@@ -18,9 +18,10 @@ package com.android.tv.settings.accounts;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.text.TextUtils;
+
+import androidx.fragment.app.Fragment;
 
 import com.android.tv.settings.TvSettingsActivity;
 import com.android.tv.settings.overlay.FlavorUtils;

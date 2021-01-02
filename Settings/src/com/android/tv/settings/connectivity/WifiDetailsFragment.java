@@ -88,7 +88,9 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        mConnectivityListener = new ConnectivityListener(getContext(), this, getLifecycle());
+        mConnectivityListener = new ConnectivityListener(
+                getContext(), this, getSettingsLifecycle());
+
         mAccessPoint = new AccessPoint(getContext(),
                 getArguments().getBundle(ARG_ACCESS_POINT_STATE));
         super.onCreate(savedInstanceState);

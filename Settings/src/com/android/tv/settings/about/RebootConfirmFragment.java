@@ -29,7 +29,7 @@ import android.view.View;
 
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
-import androidx.leanback.app.GuidedStepFragment;
+import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
@@ -39,7 +39,7 @@ import com.android.tv.settings.overlay.FlavorUtils;
 import java.util.List;
 
 @Keep
-public class RebootConfirmFragment extends GuidedStepFragment {
+public class RebootConfirmFragment extends GuidedStepSupportFragment {
 
     private static final String ARG_SAFE_MODE = "RebootConfirmFragment.safe_mode";
 

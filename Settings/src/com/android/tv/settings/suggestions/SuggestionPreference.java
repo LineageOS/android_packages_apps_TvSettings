@@ -30,7 +30,7 @@ import androidx.preference.PreferenceViewHolder;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
-import com.android.settingslib.suggestions.SuggestionControllerMixin;
+import com.android.settingslib.suggestions.SuggestionControllerMixinCompat;
 import com.android.tv.settings.R;
 
 /**
@@ -43,12 +43,12 @@ public class SuggestionPreference extends Preference {
             new MetricsFeatureProvider();
 
     private final Suggestion mSuggestion;
-    private final SuggestionControllerMixin mSuggestionControllerMixin;
+    private final SuggestionControllerMixinCompat mSuggestionControllerMixin;
     private String mId;
     private Callback mCallback;
 
     public SuggestionPreference(Suggestion suggestion, Context context,
-            SuggestionControllerMixin suggestionControllerMixin, Callback callback) {
+            SuggestionControllerMixinCompat suggestionControllerMixin, Callback callback) {
         super(context);
         setLayoutResource(R.layout.suggestion_item);
         this.mSuggestionControllerMixin = suggestionControllerMixin;

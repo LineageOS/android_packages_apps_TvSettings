@@ -23,8 +23,6 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFE
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.content.ContentProviderClient;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
@@ -42,14 +40,16 @@ import android.widget.HorizontalScrollView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.leanback.preference.LeanbackListPreferenceDialogFragment;
-import androidx.leanback.preference.LeanbackPreferenceFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.leanback.preference.LeanbackListPreferenceDialogFragmentCompat;
+import androidx.leanback.preference.LeanbackPreferenceFragmentCompat;
 import androidx.leanback.widget.OnChildViewHolderSelectedListener;
 import androidx.leanback.widget.VerticalGridView;
 import androidx.preference.ListPreference;
 import androidx.preference.MultiSelectListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
@@ -62,15 +62,15 @@ import com.android.tv.twopanelsettings.slices.SlicesConstants;
 import java.util.Set;
 
 /**
- * This fragment provides containers for displaying two {@link LeanbackPreferenceFragment}.
+ * This fragment provides containers for displaying two {@link LeanbackPreferenceFragmentCompat}.
  * The preference fragment on the left works as a main panel on which the user can operate.
  * The preference fragment on the right works as a preview panel for displaying the preview
  * information.
  */
 public abstract class TwoPanelSettingsFragment extends Fragment implements
-        PreferenceFragment.OnPreferenceStartFragmentCallback,
-        PreferenceFragment.OnPreferenceStartScreenCallback,
-        PreferenceFragment.OnPreferenceDisplayDialogCallback {
+        PreferenceFragmentCompat.OnPreferenceStartFragmentCallback,
+        PreferenceFragmentCompat.OnPreferenceStartScreenCallback,
+        PreferenceFragmentCompat.OnPreferenceDisplayDialogCallback {
     private static final String TAG = "TwoPanelSettingsFragment";
     private static final boolean DEBUG = false;
     private static final String PREVIEW_FRAGMENT_TAG =
@@ -157,7 +157,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
     private boolean isPreferenceFragment(String fragment) {
         try {
-            return LeanbackPreferenceFragment.class.isAssignableFrom(Class.forName(fragment));
+            return LeanbackPreferenceFragmentCompat.class.isAssignableFrom(Class.forName(fragment));
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("Fragment class not found.", e);
         }
@@ -172,7 +172,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     }
 
     @Override
-    public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
+    public boolean onPreferenceStartFragment(PreferenceFragmentCompat caller, Preference pref) {
         if (DEBUG) {
             Log.d(TAG, "onPreferenceStartFragment " + pref.getTitle());
         }
@@ -240,11 +240,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     }
 
     private void addOrRemovePreferenceFocusedListener(Fragment fragment, boolean isAddingListener) {
-        if (fragment == null || !(fragment instanceof LeanbackPreferenceFragment)) {
+        if (fragment == null || !(fragment instanceof LeanbackPreferenceFragmentCompat)) {
             return;
         }
-        LeanbackPreferenceFragment leanbackPreferenceFragment =
-                (LeanbackPreferenceFragment) fragment;
+        LeanbackPreferenceFragmentCompat leanbackPreferenceFragment =
+                (LeanbackPreferenceFragmentCompat) fragment;
         VerticalGridView listView = (VerticalGridView) leanbackPreferenceFragment.getListView();
         if (listView != null) {
             if (isAddingListener) {
@@ -281,7 +281,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     }
 
     @Override
-    public boolean onPreferenceDisplayDialog(@NonNull PreferenceFragment caller, Preference pref) {
+    public boolean onPreferenceDisplayDialog(
+            @NonNull PreferenceFragmentCompat caller, Preference pref) {
         if (DEBUG) {
             Log.d(TAG, "PreferenceDisplayDialog");
         }
@@ -793,12 +794,12 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     }
 
     private Fragment getInitialPreviewFragment(Fragment fragment) {
-        if (!(fragment instanceof LeanbackPreferenceFragment)) {
+        if (!(fragment instanceof LeanbackPreferenceFragmentCompat)) {
             return null;
         }
 
-        LeanbackPreferenceFragment leanbackPreferenceFragment =
-                (LeanbackPreferenceFragment) fragment;
+        LeanbackPreferenceFragmentCompat leanbackPreferenceFragment =
+                (LeanbackPreferenceFragmentCompat) fragment;
         if (leanbackPreferenceFragment.getListView() == null) {
             return null;
         }
@@ -887,12 +888,12 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
     /** Get the current chosen preference. */
     public static Preference getChosenPreference(Fragment fragment) {
-        if (!(fragment instanceof LeanbackPreferenceFragment)) {
+        if (!(fragment instanceof LeanbackPreferenceFragmentCompat)) {
             return null;
         }
 
-        LeanbackPreferenceFragment leanbackPreferenceFragment =
-                (LeanbackPreferenceFragment) fragment;
+        LeanbackPreferenceFragmentCompat leanbackPreferenceFragment =
+                (LeanbackPreferenceFragmentCompat) fragment;
         if (leanbackPreferenceFragment.getListView() == null) {
             return null;
         }
@@ -908,7 +909,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     /** Creates preview preference fragment. */
     public Fragment onCreatePreviewFragment(Fragment caller, Preference preference) {
         if (preference.getFragment() != null) {
-            if (!isInfoFragment(preference.getFragment())
+           if (!isInfoFragment(preference.getFragment())
                     && !isPreferenceFragment(preference.getFragment())) {
                 return null;
             }
@@ -929,7 +930,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             if (preference instanceof ListPreference) {
                 f = TwoPanelListPreferenceDialogFragment.newInstanceSingle(preference.getKey());
             } else if (preference instanceof MultiSelectListPreference) {
-                f = LeanbackListPreferenceDialogFragment.newInstanceMulti(preference.getKey());
+                f = LeanbackListPreferenceDialogFragmentCompat.newInstanceMulti(
+                        preference.getKey());
             }
             if (f != null && caller != null) {
                 f.setTargetFragment(caller, 0);

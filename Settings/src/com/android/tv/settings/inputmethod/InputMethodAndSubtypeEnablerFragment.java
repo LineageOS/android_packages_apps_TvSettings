@@ -24,7 +24,7 @@ import androidx.annotation.Keep;
 import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.settingslib.inputmethod.InputMethodAndSubtypeEnablerManager;
+import com.android.settingslib.inputmethod.InputMethodAndSubtypeEnablerManagerCompat;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
 /**
@@ -32,7 +32,7 @@ import com.android.tv.settings.SettingsPreferenceFragment;
  */
 @Keep
 public class InputMethodAndSubtypeEnablerFragment extends SettingsPreferenceFragment {
-    private InputMethodAndSubtypeEnablerManager mManager;
+    private InputMethodAndSubtypeEnablerManagerCompat mManager;
 
     /**
      * @return new instance of {@link InputMethodAndSubtypeEnablerFragment}
@@ -60,7 +60,7 @@ public class InputMethodAndSubtypeEnablerFragment extends SettingsPreferenceFrag
 
         final String title = getStringExtraFromIntentOrArguments(Intent.EXTRA_TITLE);
 
-        mManager = new InputMethodAndSubtypeEnablerManager(this);
+        mManager = new InputMethodAndSubtypeEnablerManagerCompat(this);
         mManager.init(this, targetImi, root);
         root.setTitle(title);
         setPreferenceScreen(root);
