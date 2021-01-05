@@ -1070,6 +1070,38 @@
             </intent-filter>
         </receiver>
 
+        <activity
+            android:name=".accessories.BluetoothActionActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".accessories.BluetoothDevicesService"
+            android:exported="false" />
+
+        <provider
+            android:name=".accessories.ConnectedDevicesSliceProvider"
+            android:authorities="com.android.tv.settings.accessories.sliceprovider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.app.slice.category.SLICE"/>
+            </intent-filter>
+        </provider>
+
+        <receiver
+            android:name=".accessories.ConnectedDevicesSliceBroadcastReceiver"
+            android:exported="false">
+        </receiver>
+
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

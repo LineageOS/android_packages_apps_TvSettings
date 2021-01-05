@@ -108,7 +108,7 @@ public class AccessoriesFragment extends SettingsPreferenceFragment {
             final String deviceName = device.getAlias();
             preference.setTitle(deviceName);
             preference.setSummary(desc);
-            final int deviceImgId = AccessoryUtils.getImageIdForDevice(device);
+            final int deviceImgId = AccessoryUtils.getImageIdForDevice(device, false);
             preference.setIcon(deviceImgId);
             preference.setFragment(BluetoothAccessoryFragment.class.getName());
             BluetoothAccessoryFragment.prepareArgs(
