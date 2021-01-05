@@ -63,8 +63,10 @@ public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragm
     private final VisibilityLoggerMixin mVisibilityLoggerMixin;
     protected MetricsFeatureProvider mMetricsFeatureProvider;
 
+    // Rename getLifecycle() to getSettingsLifecycle() as androidx Fragment has already implemented
+    // getLifecycle(), overriding here would cause unexpected crash in framework.
     @NonNull
-    public Lifecycle getLifecycle() {
+    public Lifecycle getSettingsLifecycle() {
         return mLifecycle;
     }
 
@@ -73,7 +75,7 @@ public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragm
         // Mixin that logs visibility change for activity.
         mVisibilityLoggerMixin = new VisibilityLoggerMixin(getMetricsCategory(),
                 mMetricsFeatureProvider);
-        getLifecycle().addObserver(mVisibilityLoggerMixin);
+        getSettingsLifecycle().addObserver(mVisibilityLoggerMixin);
     }
 
     @CallSuper

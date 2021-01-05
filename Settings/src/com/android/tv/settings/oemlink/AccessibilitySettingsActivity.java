@@ -18,7 +18,7 @@ package com.android.tv.settings.oemlink;
 
 import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
 
-import android.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 import com.android.tv.settings.TvSettingsActivity;
 import com.android.tv.settings.accessibility.AccessibilityFragment;

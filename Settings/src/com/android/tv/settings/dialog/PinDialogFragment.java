@@ -19,7 +19,6 @@ package com.android.tv.settings.dialog;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.app.Dialog;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
@@ -39,6 +38,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.IntDef;
+import androidx.fragment.app.Fragment;
 
 import com.android.tv.settings.R;
 

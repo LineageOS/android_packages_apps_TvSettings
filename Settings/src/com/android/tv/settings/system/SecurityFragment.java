@@ -20,7 +20,6 @@ import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected
 
 import android.accounts.AccountManager;
 import android.annotation.SuppressLint;
-import android.app.Fragment;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -42,7 +41,8 @@ import android.util.Log;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.IntDef;
 import androidx.annotation.Keep;
-import androidx.leanback.preference.LeanbackSettingsFragment;
+import androidx.fragment.app.Fragment;
+import androidx.leanback.preference.LeanbackSettingsFragmentCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
@@ -401,8 +401,8 @@ public class SecurityFragment extends SettingsPreferenceFragment
             final AppRestrictionsFragment restrictionsFragment =
                     AppRestrictionsFragment.newInstance(userId, true);
             final Fragment settingsFragment = getCallbackFragment();
-            if (settingsFragment instanceof LeanbackSettingsFragment) {
-                ((LeanbackSettingsFragment) settingsFragment)
+            if (settingsFragment instanceof LeanbackSettingsFragmentCompat) {
+                ((LeanbackSettingsFragmentCompat) settingsFragment)
                         .startPreferenceFragment(restrictionsFragment);
             } else if (settingsFragment instanceof TwoPanelSettingsFragment) {
                 ((TwoPanelSettingsFragment) settingsFragment)

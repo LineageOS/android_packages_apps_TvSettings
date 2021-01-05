@@ -16,7 +16,7 @@
 
 package com.android.tv.settings;
 
-import android.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 import com.android.tv.settings.overlay.FlavorUtils;
 

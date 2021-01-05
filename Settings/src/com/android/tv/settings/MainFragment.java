@@ -57,7 +57,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.SwitchPreference;
 
 import com.android.settingslib.core.AbstractPreferenceController;
-import com.android.settingslib.suggestions.SuggestionControllerMixin;
+import com.android.settingslib.suggestions.SuggestionControllerMixinCompat;
 import com.android.settingslib.utils.IconCache;
 import com.android.tv.settings.HotwordSwitchController.HotwordStateListener;
 import com.android.tv.settings.accounts.AccountsFragment;
@@ -78,7 +78,7 @@ import java.util.Set;
  */
 @Keep
 public class MainFragment extends PreferenceControllerFragment implements
-        SuggestionControllerMixin.SuggestionControllerHost, SuggestionPreference.Callback,
+        SuggestionControllerMixinCompat.SuggestionControllerHost, SuggestionPreference.Callback,
         HotwordStateListener {
 
     private static final String TAG = "MainFragment";
@@ -117,7 +117,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     ConnectivityListener mConnectivityListener;
     @VisibleForTesting
     PreferenceCategory mSuggestionsList;
-    private SuggestionControllerMixin mSuggestionControllerMixin;
+    private SuggestionControllerMixinCompat mSuggestionControllerMixin;
     @VisibleForTesting
     IconCache mIconCache;
     @VisibleForTesting
@@ -170,8 +170,8 @@ public class MainFragment extends PreferenceControllerFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mIconCache = new IconCache(getContext());
-        mConnectivityListener =
-                new ConnectivityListener(getContext(), this::updateConnectivity, getLifecycle());
+        mConnectivityListener = new ConnectivityListener(getContext(), this::updateConnectivity,
+                getSettingsLifecycle());
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
         super.onCreate(savedInstanceState);
         // This is to record the initial start of Settings root in two panel settings case, as the
@@ -438,7 +438,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     /**
      * Extracts a string resource from a given package.
      *
-     * @param pkgName the package name
+     * @param pkgName  the package name
      * @param resource name, e.g. "my_string_name"
      */
     private String getStringResource(String pkgName, String resourceName) {
@@ -459,7 +459,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     /**
      * Extracts an drawable resource from a given package.
      *
-     * @param pkgName the package name
+     * @param pkgName  the package name
      * @param resource name, e.g. "my_icon_name"
      */
     private Drawable getDrawableResource(String pkgName, String resourceName) {
@@ -480,8 +480,9 @@ public class MainFragment extends PreferenceControllerFragment implements
     /**
      * Returns the ResolveInfo for the system activity that matches given intent filter or null if
      * no such activity exists.
+     *
      * @param context Context of the caller
-     * @param intent The intent matching the desired system app
+     * @param intent  The intent matching the desired system app
      * @return ResolveInfo of the matching activity or null if no match exists
      */
     public static ResolveInfo systemIntentIsHandled(Context context, Intent intent) {
@@ -547,7 +548,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         // Add suggestions that are not in the old list and update the existing suggestions.
         for (Suggestion suggestion : suggestions) {
             Preference curPref = findPreference(
-                        SuggestionPreference.SUGGESTION_PREFERENCE_KEY + suggestion.getId());
+                    SuggestionPreference.SUGGESTION_PREFERENCE_KEY + suggestion.getId());
             if (curPref == null) {
                 SuggestionPreference newSuggPref = new SuggestionPreference(
                         suggestion, this.getPreferenceManager().getContext(),
@@ -579,7 +580,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         if (connectedDevicesSlicePreference != null
                 && FlavorUtils.isTwoPanel(getContext())
                 && SliceUtils.isSliceProviderValid(
-                        getContext(), connectedDevicesSlicePreference.getUri())) {
+                getContext(), connectedDevicesSlicePreference.getUri())) {
             connectedDevicesSlicePreference.setVisible(true);
             connectedDevicesPreference.setVisible(false);
             accessoryPreference.setVisible(false);
@@ -611,11 +612,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         }
 
         final Set<BluetoothDevice> bondedDevices = mBtAdapter.getBondedDevices();
-        if (bondedDevices.size() == 0) {
-            mHasBtAccessories = false;
-        } else {
-            mHasBtAccessories = true;
-        }
+        mHasBtAccessories = bondedDevices.size() != 0;
     }
 
     @VisibleForTesting
@@ -727,8 +724,8 @@ public class MainFragment extends PreferenceControllerFragment implements
                 "com.android.settings.intelligence",
                 "com.android.settings.intelligence.suggestions.SuggestionService");
         if (!isRestricted()) {
-            mSuggestionControllerMixin = new SuggestionControllerMixin(
-                    context, this, getLifecycle(), componentName);
+            mSuggestionControllerMixin = new SuggestionControllerMixinCompat(
+                    context, this, getSettingsLifecycle(), componentName);
         }
     }
 
@@ -737,9 +734,9 @@ public class MainFragment extends PreferenceControllerFragment implements
         if (preference.getKey().equals(KEY_ACCOUNTS_AND_SIGN_IN) && !mHasAccounts
                 || (preference.getKey().equals(KEY_ACCESSORIES) && !mHasBtAccessories)
                 || (preference.getKey().equals(KEY_DISPLAY_AND_SOUND)
-                        && preference.getIntent() != null)
+                && preference.getIntent() != null)
                 || (preference.getKey().equals(KEY_CHANNELS_AND_INPUTS)
-                        && preference.getIntent() != null)) {
+                && preference.getIntent() != null)) {
             getContext().startActivity(preference.getIntent());
             return true;
         } else if (preference.getKey().equals(KEY_BASIC_MODE_EXIT)
@@ -767,9 +764,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     }
 
     private boolean supportBluetooth() {
-        return getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)
-                ? true
-                : false;
+        return getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH);
     }
 
     private void updateConnectedDevicePref(String pkgName, Preference pref) {
