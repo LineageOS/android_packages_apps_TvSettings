@@ -39,7 +39,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.leanback.preference.LeanbackPreferenceFragment;
+import androidx.leanback.preference.LeanbackPreferenceFragmentCompat;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceScreen;
@@ -54,18 +54,20 @@ import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 /**
- * A {@link LeanbackPreferenceFragment} that has hooks to observe fragment lifecycle events
+ * A {@link LeanbackPreferenceFragmentCompat} that has hooks to observe fragment lifecycle events
  * and allow for instrumentation.
  */
-public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragment
+public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragmentCompat
         implements LifecycleOwner, Instrumentable,
         TwoPanelSettingsFragment.PreviewableComponentCallback {
     private final Lifecycle mLifecycle = new Lifecycle(this);
     private final VisibilityLoggerMixin mVisibilityLoggerMixin;
     protected MetricsFeatureProvider mMetricsFeatureProvider;
 
+    // Rename getLifecycle() to getSettingsLifecycle() as androidx Fragment has already implemented
+    // getLifecycle(), overriding here would cause unexpected crash in framework.
     @NonNull
-    public Lifecycle getLifecycle() {
+    public Lifecycle getSettingsLifecycle() {
         return mLifecycle;
     }
 
@@ -74,7 +76,7 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
         // Mixin that logs visibility change for activity.
         mVisibilityLoggerMixin = new VisibilityLoggerMixin(getMetricsCategory(),
                 mMetricsFeatureProvider);
-        getLifecycle().addObserver(mVisibilityLoggerMixin);
+        getSettingsLifecycle().addObserver(mVisibilityLoggerMixin);
     }
 
     @CallSuper

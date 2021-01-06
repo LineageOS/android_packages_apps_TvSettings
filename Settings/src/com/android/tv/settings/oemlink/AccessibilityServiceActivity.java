@@ -19,10 +19,11 @@ package com.android.tv.settings.oemlink;
 import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
 
 import android.accessibilityservice.AccessibilityServiceInfo;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.accessibility.AccessibilityManager;
+
+import androidx.fragment.app.Fragment;
 
 import com.android.tv.settings.TvSettingsActivity;
 import com.android.tv.settings.accessibility.AccessibilityServiceFragment;

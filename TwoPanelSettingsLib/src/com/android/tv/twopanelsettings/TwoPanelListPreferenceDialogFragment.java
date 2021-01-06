@@ -24,16 +24,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.leanback.preference.LeanbackListPreferenceDialogFragment;
 import androidx.preference.DialogPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.MultiSelectListPreference;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 /** A workaround for pi-tv-dev to fix the issue that ListPreference is not correctly handled by two
  * panel lib. When moving to Q, we should fix this problem in androidx(b/139085296).
  */
-public class TwoPanelListPreferenceDialogFragment extends LeanbackListPreferenceDialogFragment {
+public class TwoPanelListPreferenceDialogFragment extends
+        LeanbackListPreferenceDialogFragmentCompat {
     private static final String SAVE_STATE_IS_MULTI =
             "LeanbackListPreferenceDialogFragment.isMulti";
     private static final String SAVE_STATE_ENTRIES = "LeanbackListPreferenceDialogFragment.entries";
@@ -124,7 +125,7 @@ public class TwoPanelListPreferenceDialogFragment extends LeanbackListPreference
     }
 
     private class TwoPanelAdapterSingle extends RecyclerView.Adapter<ViewHolder>
-            implements ViewHolder.OnItemClickListener  {
+            implements OnItemClickListener  {
         private final CharSequence[] mEntries;
         private final CharSequence[] mEntryValues;
         private final CharSequence[] mSummaries;

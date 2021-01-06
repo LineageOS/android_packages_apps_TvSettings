@@ -16,7 +16,7 @@
 
 package com.android.tv.settings.device.apps.specialaccess;
 
-import android.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 import com.android.tv.settings.TvSettingsActivity;
 import com.android.tv.settings.overlay.FlavorUtils;

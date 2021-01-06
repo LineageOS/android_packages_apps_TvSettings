@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.accessories;
 
-import android.app.Fragment;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
@@ -35,7 +34,8 @@ import android.util.Log;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
-import androidx.leanback.app.GuidedStepFragment;
+import androidx.fragment.app.Fragment;
+import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 import androidx.preference.Preference;
@@ -317,7 +317,7 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
      * Fragment for changing the name of a bluetooth accessory
      */
     @Keep
-    public static class ChangeNameFragment extends GuidedStepFragment {
+    public static class ChangeNameFragment extends GuidedStepSupportFragment {
 
         private final MetricsFeatureProvider mMetricsFeatureProvider = new MetricsFeatureProvider();
 
@@ -400,7 +400,7 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
         }
     }
 
-    public static class UnpairConfirmFragment extends GuidedStepFragment {
+    public static class UnpairConfirmFragment extends GuidedStepSupportFragment {
 
         private BluetoothDevice mDevice;
         private BroadcastReceiver mBroadcastReceiver;
