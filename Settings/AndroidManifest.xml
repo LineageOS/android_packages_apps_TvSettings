@@ -1045,6 +1045,10 @@
                 <action android:name="android.settings.FACTORY_RESET_TV_OEM_LINK" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <intent-filter android:priority="1" >
+                <action android:name="android.intent.action.FACTORY_RESET" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <activity
