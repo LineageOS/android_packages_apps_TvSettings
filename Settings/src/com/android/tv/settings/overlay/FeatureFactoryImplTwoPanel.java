@@ -16,14 +16,14 @@
 
 package com.android.tv.settings.overlay;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 
 import com.android.tv.settings.SettingsFragmentProvider;
@@ -84,7 +84,7 @@ public class FeatureFactoryImplTwoPanel implements FeatureFactory {
 
         @Override
         public final boolean onPreferenceStartScreen(
-                PreferenceFragment caller, PreferenceScreen pref) {
+                PreferenceFragmentCompat caller, PreferenceScreen pref) {
             return false;
         }
 

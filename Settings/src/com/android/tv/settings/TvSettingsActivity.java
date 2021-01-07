@@ -21,8 +21,6 @@ import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -36,12 +34,14 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.instrumentation.SharedPreferencesLogger;
 import com.android.tv.settings.overlay.FlavorUtils;
 
-public abstract class TvSettingsActivity extends Activity {
+public abstract class TvSettingsActivity extends FragmentActivity {
     private static final String TAG = "TvSettingsActivity";
 
     private static final String SETTINGS_FRAGMENT_TAG =
@@ -71,7 +71,7 @@ public abstract class TvSettingsActivity extends Activity {
                 }
             }
             if (FlavorUtils.isTwoPanel(this)) {
-                getFragmentManager().beginTransaction()
+                getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(android.R.animator.fade_in,
                                 android.R.animator.fade_out)
                         .add(android.R.id.content, fragment, SETTINGS_FRAGMENT_TAG)
@@ -92,7 +92,7 @@ public abstract class TvSettingsActivity extends Activity {
                                     Log.d(TAG, "Got torn down before adding fragment");
                                     return;
                                 }
-                                getFragmentManager().beginTransaction()
+                                getSupportFragmentManager().beginTransaction()
                                         .add(android.R.id.content, fragment,
                                                 SETTINGS_FRAGMENT_TAG)
                                         .commitNow();
@@ -113,7 +113,7 @@ public abstract class TvSettingsActivity extends Activity {
 
     @Override
     public void finish() {
-        final Fragment fragment = getFragmentManager().findFragmentByTag(SETTINGS_FRAGMENT_TAG);
+        final Fragment fragment = getSupportFragmentManager().findFragmentByTag(SETTINGS_FRAGMENT_TAG);
         if (FlavorUtils.isTwoPanel(this)) {
             super.finish();
             return;
@@ -122,7 +122,7 @@ public abstract class TvSettingsActivity extends Activity {
         if (isResumed() && fragment != null) {
             final ViewGroup root = findViewById(android.R.id.content);
             final Scene scene = new Scene(root);
-            scene.setEnterAction(() -> getFragmentManager().beginTransaction()
+            scene.setEnterAction(() -> getSupportFragmentManager().beginTransaction()
                     .remove(fragment)
                     .commitNow());
             final Slide slide = new Slide(Gravity.END);
@@ -189,7 +189,7 @@ public abstract class TvSettingsActivity extends Activity {
                         finish();
                         return;
                     }
-                    getFragmentManager().beginTransaction()
+                    getSupportFragmentManager().beginTransaction()
                             .setCustomAnimations(
                                     android.R.animator.fade_in, android.R.animator.fade_out)
                             .add(

@@ -99,6 +99,9 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private Intent mFollowupPendingIntentExtras;
     private Intent mFollowupPendingIntentExtrasCopy;
     private String mLastFocusedPreferenceKey;
+    private boolean mIsMainPanelReady = true;
+
+    private Handler mHandler = new Handler();
     private ContentObserver mContentObserver = new ContentObserver(new Handler()) {
         @Override
         public void onChange(boolean selfChange, Uri uri) {
@@ -216,7 +219,6 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     }
 
     private void update() {
-        // TODO: Remove ListContent
         mListContent = new ListContent(mSlice);
         PreferenceScreen preferenceScreen =
                 getPreferenceManager().getPreferenceScreen();
@@ -292,7 +294,6 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 }
             }
         }
-
         updatePreferenceScreen(preferenceScreen, newPrefs);
         if (defaultFocusedKey != null) {
             scrollToPreference(defaultFocusedKey.toString());
@@ -303,6 +304,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (getParentFragment() instanceof TwoPanelSettingsFragment) {
             ((TwoPanelSettingsFragment) getParentFragment()).refocusPreference(this);
         }
+        mIsMainPanelReady = true;
     }
 
 
@@ -319,12 +321,25 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     }
 
     private void forward() {
-        if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
-            TwoPanelSettingsFragment parentFragment =
-                    (TwoPanelSettingsFragment) getCallbackFragment();
-            if (parentFragment.isFragmentInTheMainPanel(this)) {
-                parentFragment.navigateToPreviewFragment();
+        if (mIsMainPanelReady) {
+            if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
+                TwoPanelSettingsFragment parentFragment =
+                        (TwoPanelSettingsFragment) getCallbackFragment();
+                Preference chosenPreference = parentFragment.getChosenPreference(this);
+                if (chosenPreference == null) {
+                    chosenPreference = findPreference(mLastFocusedPreferenceKey);
+                }
+                if (chosenPreference != null && chosenPreference instanceof HasSliceUri
+                        && ((HasSliceUri) chosenPreference).getUri() != null) {
+                    chosenPreference.setFragment(SliceFragment.class.getCanonicalName());
+                    parentFragment.refocusPreferenceForceRefresh(chosenPreference);
+                }
+                if (parentFragment.isFragmentInTheMainPanel(this)) {
+                    parentFragment.navigateToPreviewFragment();
+                }
             }
+        } else {
+            mHandler.post(() -> forward());
         }
     }
 
@@ -421,7 +436,9 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             SliceRadioPreference radioPref = (SliceRadioPreference) preference;
             if (!radioPref.isChecked()) {
                 radioPref.setChecked(true);
-                return true;
+                if (TextUtils.isEmpty(radioPref.getUri())) {
+                    return true;
+                }
             }
 
             logEntrySelected(getPreferenceActionId(preference));
@@ -544,6 +561,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         } else {
             hideProgressBar();
         }
+        mIsMainPanelReady = false;
         update();
     }
 

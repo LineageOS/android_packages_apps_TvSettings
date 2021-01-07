@@ -60,7 +60,7 @@ public class StatusFragment extends PreferenceControllerFragment {
     @Override
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>(10);
-        final Lifecycle lifecycle = getLifecycle();
+        final Lifecycle lifecycle = getSettingsLifecycle();
 
         // TODO: detect if we have a battery or not
         controllers.add(new NopePreferenceController(context, KEY_BATTERY_LEVEL));

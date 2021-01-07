@@ -39,4 +39,17 @@
 
     <!-- Flavor of TvSettings. -->
     <string name="config_tvSettingsFlavor" translatable="false">Classic</string>
+
+    <!-- Allow overlay to specify known/official device names using the return value of
+        BluetoothDevice # getName() so that it is hidden from the generic bluetooth accessories
+        section and is only visible in OEM-implemented Slice. -->
+    <string-array name="known_bluetooth_device_labels" translatable="false">
+    </string-array>
+
+    <!-- Whether to show the bluetooth toggle. Please be very careful with this config as setting it
+        to true would surface a toggle in Remotes & Accessories settings that allows the user to
+        turn off Bluetooth. Without an IR remote or some other form of connection, the user may not
+        be able to turn it back on and have to perform FDR. -->
+    <bool name="show_bluetooth_toggle">false</bool>
+
 </resources>

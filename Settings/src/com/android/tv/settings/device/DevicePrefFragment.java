@@ -23,7 +23,6 @@ import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
-import android.app.Fragment;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.Intent;
@@ -45,7 +44,8 @@ import android.view.inputmethod.InputMethodInfo;
 
 import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
-import androidx.leanback.preference.LeanbackSettingsFragment;
+import androidx.fragment.app.Fragment;
+import androidx.leanback.preference.LeanbackSettingsFragmentCompat;
 import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
@@ -198,8 +198,8 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
         if (TextUtils.equals(preference.getKey(), KEY_REBOOT)) {
             logEntrySelected(TvSettingsEnums.SYSTEM_REBOOT);
             Fragment fragment = getCallbackFragment();
-            if (fragment instanceof LeanbackSettingsFragment) {
-                ((LeanbackSettingsFragment) fragment).startImmersiveFragment(
+            if (fragment instanceof LeanbackSettingsFragmentCompat) {
+                ((LeanbackSettingsFragmentCompat) fragment).startImmersiveFragment(
                         RebootConfirmFragment.newInstance(true /* safeMode */));
                 return true;
             } else if (fragment instanceof TwoPanelSettingsFragment) {

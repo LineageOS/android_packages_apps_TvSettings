@@ -50,7 +50,7 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
     private static final boolean DEBUG = false;
     private static final String TAG = "AddAccessoryActivity";
 
-    private static final String ACTION_CONNECT_INPUT =
+    static final String ACTION_CONNECT_INPUT =
             "com.google.android.intent.action.CONNECT_INPUT";
 
     private static final String INTENT_EXTRA_NO_INPUT_MODE = "no_input_mode";

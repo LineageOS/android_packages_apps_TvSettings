@@ -17,7 +17,6 @@
 package com.android.tv.settings.accessibility;
 
 import android.accessibilityservice.AccessibilityServiceInfo;
-import android.app.Fragment;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.ComponentName;
 import android.content.Context;
@@ -28,7 +27,8 @@ import android.text.TextUtils;
 import android.view.accessibility.AccessibilityManager;
 
 import androidx.annotation.Keep;
-import androidx.leanback.preference.LeanbackSettingsFragment;
+import androidx.fragment.app.Fragment;
+import androidx.leanback.preference.LeanbackSettingsFragmentCompat;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
@@ -61,8 +61,8 @@ public class AccessibilityShortcutServiceFragment extends SettingsPreferenceFrag
                     confirmFragment.setTargetFragment(AccessibilityShortcutServiceFragment.this, 0);
 
                     final Fragment settingsFragment = getCallbackFragment();
-                    if (settingsFragment instanceof LeanbackSettingsFragment) {
-                        ((LeanbackSettingsFragment) settingsFragment)
+                    if (settingsFragment instanceof LeanbackSettingsFragmentCompat) {
+                        ((LeanbackSettingsFragmentCompat) settingsFragment)
                                 .startImmersiveFragment(confirmFragment);
                     } else if (settingsFragment instanceof TwoPanelSettingsFragment) {
                         ((TwoPanelSettingsFragment) settingsFragment)

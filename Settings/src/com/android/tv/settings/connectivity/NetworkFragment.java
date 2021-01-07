@@ -122,7 +122,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         mIsWifiHardwarePresent = getContext().getPackageManager()
                 .hasSystemFeature(PackageManager.FEATURE_WIFI);
-        mConnectivityListener = new ConnectivityListener(getContext(), this, getLifecycle());
+        mConnectivityListener = new ConnectivityListener(
+                getContext(), this, getSettingsLifecycle());
         mWifiManager = getContext().getSystemService(WifiManager.class);
         mConnectivityManager = getContext().getSystemService(ConnectivityManager.class);
         mUserBadgeCache =
