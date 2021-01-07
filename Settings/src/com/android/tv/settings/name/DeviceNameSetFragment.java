@@ -99,11 +99,13 @@ public class DeviceNameSetFragment extends GuidedStepSupportFragment {
             actions.add(new GuidedAction.Builder()
                     .title(mDeviceNames.get(i))
                     .id(i)
+                    .multilineDescription(true)
                     .build());
         }
         actions.add(new GuidedAction.Builder()
                 .title(getString(R.string.custom_room))
                 .id(mDeviceNames.size())
+                .multilineDescription(true)
                 .build());
         super.onCreateActions(actions, savedInstanceState);
     }
