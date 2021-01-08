@@ -59,11 +59,11 @@
 
     <PreferenceCategory android:title="@string/privacy_app_settings_category" />
 
-    <com.android.tv.twopanelsettings.slices.SlicePreference
+    <Preference
         android:key="permissions"
-        android:title="@string/device_apps_permissions"
-        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
-        custom:uri="content://com.android.packageinstaller.permission/general" />
+        android:title="@string/device_apps_permissions">
+        <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
+    </Preference>
     <Preference
         android:key="specialAccess"
         android:title="@string/special_access"
