@@ -30,7 +30,7 @@ import android.os.Bundle;
 import android.util.SparseArray;
 
 import androidx.annotation.NonNull;
-import androidx.leanback.preference.BaseLeanbackPreferenceFragment;
+import androidx.leanback.preference.BaseLeanbackPreferenceFragmentCompat;
 import androidx.leanback.widget.VerticalGridView;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
@@ -48,7 +48,7 @@ import java.util.List;
 /**
  * The screen in TV settings that shows when bluetooth searching/pairing is active.
  */
-public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragment implements
+public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragmentCompat implements
         LifecycleOwner, Instrumentable {
 
     private SparseArray<Drawable> mResizedDrawables = new SparseArray<>();
