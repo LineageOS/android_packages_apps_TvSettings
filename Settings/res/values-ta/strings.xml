@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"அமைப்புகள்"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"நெட்வொர்க்"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"கட்டுப்படுத்தப்பட்ட சுயவிவரம்"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"சரி"</string>
+    <string name="general_action_no" msgid="674735073031386948">"வேண்டாம்"</string>
     <string name="action_on_title" msgid="1074972820237738324">"இயக்கு"</string>
     <string name="action_off_title" msgid="3598665702863436597">"முடக்கு"</string>
     <string name="action_on_description" msgid="9146557891514835767">"இயக்கு"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"பொதுவாக 0000 அல்லது 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"இணை"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"ரத்துசெய்"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s இணைக்கப்பட்டது"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s துண்டிக்கப்பட்டது"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"ரிமோட்களும் துணைக்கருவிகளும்"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"புளூடூத்"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"புளூடூத்தை ஆஃப் செய்தல்"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"புளுடூத் ஆஃபில் இருக்கும்போது உங்கள் ரிமோட்டிலிருந்து Google Assistantடை அணுக முடியாது."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"துணைக்கருவியை இணை"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"துணைக்கருவிகள்"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"ரிமோட் கன்ட்ரோல்"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"ரிமோட் கன்ட்ரோல் அமைப்புகள்"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"இணை"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s உடன் இணைக்கவா?"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"இணைப்பைத் துண்டி"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s இணைப்பைத் துண்டிக்கவா?"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"பெயர் மாற்று"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"இணைக்கப்பட்ட சாதனத்தின் பெயரை மாற்றுக"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"அகற்று"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s சாதனத்தை அகற்றவா?"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"புளூடூத் முகவரி"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"இணைக்கப்பட்டது"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"துண்டிக்கப்பட்டது"</string>
     <string name="send_feedback" msgid="936698637869795473">"கருத்து தெரிவி"</string>
     <string name="launch_help" msgid="2607478763131952469">"உதவி மையம்"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"அறிவிப்பு அணுகல்"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"நிறுவப்பட்ட எந்தவொரு ஆப்ஸும் அறிவிப்பு அணுகலைக் கோரவில்லை."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"தொடர்புப் பெயர்கள், நீங்கள் பெறும் உரைச் செய்திகள் போன்ற தனிப்பட்ட தகவல் உள்ளிட்ட எல்லா அறிவிப்புகளையும் இந்த ஆப்ஸால் படிக்க முடியும். அறிவிப்புகளை நிராகரிக்கவும் அல்லது அவ்வறிவிப்புகளில் இருக்கும் செயல் பட்டன்களைத் தூண்டவும் இவற்றால் முடியும்."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"சிஸ்டத்திற்குத் தேவை"</string>
     <string name="directory_access" msgid="7338555825237012006">"கோப்பக அணுகல்"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"குறிப்பிட்ட கோப்பகங்களை அணுகுவதற்கு, இந்த ஆப்ஸ் அனுமதியைப் பெற்றுள்ளன."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

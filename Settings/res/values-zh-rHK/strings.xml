@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"設定"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"網絡"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"限制存取的個人檔案"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"是"</string>
+    <string name="general_action_no" msgid="674735073031386948">"否"</string>
     <string name="action_on_title" msgid="1074972820237738324">"開啟"</string>
     <string name="action_off_title" msgid="3598665702863436597">"關閉"</string>
     <string name="action_on_description" msgid="9146557891514835767">"開啟"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"通常是 0000 或 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"配對"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"取消"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"「%1$s」已連接"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"「%1$s」已解除連接"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"遙控器和配件"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"藍牙"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"關閉藍牙"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"關閉藍牙後，您將無法透過遙控器使用「Google 助理」。"</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"配對配件"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"配件"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"遙控器"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"遙控器設定"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"連接"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"連接至「%1$s」"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"解除連接"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"與「%1$s」解除連接"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"重新命名"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"為已連接的裝置重新命名"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"刪除"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"刪除「%1$s」"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"藍牙位址"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"已連接"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"已中斷連接"</string>
     <string name="send_feedback" msgid="936698637869795473">"傳送意見"</string>
     <string name="launch_help" msgid="2607478763131952469">"說明中心"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"通知權限"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"沒有任何已安裝的應用程式要求通知存取權。"</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"這些應用程式將可讀取所有通知，包括聯絡人姓名和您收到的訊息文字等個人資料，還能關閉通知或觸發通知中的動作按鈕。"</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"系統要求"</string>
     <string name="directory_access" msgid="7338555825237012006">"目錄存取權"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"這些應用程式有權存取特定目錄。"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

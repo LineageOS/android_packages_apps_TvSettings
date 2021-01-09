@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"تنظیمات"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"شبکه"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"نمایه محدود شده"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"بله"</string>
+    <string name="general_action_no" msgid="674735073031386948">"نه"</string>
     <string name="action_on_title" msgid="1074972820237738324">"فعال"</string>
     <string name="action_off_title" msgid="3598665702863436597">"خاموش"</string>
     <string name="action_on_description" msgid="9146557891514835767">"فعال"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"معمولاً ۰۰۰۰ یا ۱۲۳۴"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"مرتبط‌سازی"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"لغو"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s متصل شد"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"اتصال %1$s قطع شد"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"کنترل ازراه‌دور و لوازم جانبی"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"بلوتوث"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"خاموش کردن بلوتوث"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"وقتی بلوتوث خاموش است، نمی‌توانید از کنترل ازراه‌دور به «دستیار Google» دسترسی پیدا کنید."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"مرتبط‌سازی وسیله جانبی"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"لوازم جانبی"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"کنترل ازراه‌دور"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"تنظیمات کنترل ازراه‌دور"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"اتصال"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"اتصال به %1$s"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"قطع اتصال"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"قطع اتصال از %1$s"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"تغییر نام"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"نام دستگاه متصل‌شده را تغییر دهید"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"فراموش کردن"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"فراموش کردن %1$s"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"نشانی بلوتوث"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"متصل"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"قطع اتصال"</string>
     <string name="send_feedback" msgid="936698637869795473">"ارسال بازخورد"</string>
     <string name="launch_help" msgid="2607478763131952469">"مرکز راهنمایی"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"دسترسی به اعلان"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"هیچ برنامه نصب‌شده‌ای دسترسی به اعلان را درخواست نکرده است."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"این برنامه‌ها می‌توانند همه اعلان‌ها از جمله اطلاعات شخصی شما مانند نام مخاطبین و نوشتار پیام‌هایی را که دریافت می‌کنید بخوانند. همچنین می‌توانند اعلان‌ها را رد کنند یا دکمه‌های کنش موجود در آن‌ها را به‌کار بیندازند."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"مورد نیاز سیستم"</string>
     <string name="directory_access" msgid="7338555825237012006">"دسترسی به فهرست راهنما"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"این برنامه‌ها برای دسترسی به برخی از فهرست‌های راهنما مجوز دارند."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

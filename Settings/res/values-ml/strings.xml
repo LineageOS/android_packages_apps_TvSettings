@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"ക്രമീകരണം"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"നെറ്റ്‌വർക്ക്"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"നിയന്ത്രിത പ്രൊഫൈൽ"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"അതെ"</string>
+    <string name="general_action_no" msgid="674735073031386948">"അല്ല"</string>
     <string name="action_on_title" msgid="1074972820237738324">"ഓണാക്കുക"</string>
     <string name="action_off_title" msgid="3598665702863436597">"ഓഫാക്കുക"</string>
     <string name="action_on_description" msgid="9146557891514835767">"ഓണാണ്"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"സാധാരണയായി 0000 അല്ലെങ്കിൽ 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ജോടിയാക്കുക"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"റദ്ദാക്കുക"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s കണക്റ്റ് ചെയ്തു"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s വിച്ഛേദിച്ചു"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"റിമോട്ടുകളും ആക്‌സസറികളും"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Bluetooth ഓഫാക്കുക"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Bluetooth ഓഫായിരിക്കുമ്പോൾ നിങ്ങളുടെ റിമോട്ടിൽ നിന്ന് Google Assistant ആക്‌സസ് ചെയ്യാനാകില്ല."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ആക്‌സസറി ജോടിയാക്കുക"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"ആക്‌സസറികൾ"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"റിമോട്ട് കൺട്രോൾ"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"റിമോട്ട് കൺട്രോൾ ക്രമീകരണം"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"കണക്റ്റ് ചെയ്യുക"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s എന്നതിലേക്ക് കണക്‌റ്റ് ചെയ്യുക"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"വിച്ഛേദിക്കുക"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s എന്നതിൽ നിന്ന് വിച്ഛേദിക്കുക"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"പേര് മാറ്റുക"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"കണക്റ്റ് ചെയ്ത ഉപകരണത്തിന്റെ പേര് മാറ്റൂ"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"മറക്കുക"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s മറക്കുക"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth വിലാസം"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"കണക്റ്റ് ചെയ്തു"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"വിച്ഛേദിച്ചു"</string>
     <string name="send_feedback" msgid="936698637869795473">"ഫീഡ്ബാക്ക് അയയ്ക്കുക"</string>
     <string name="launch_help" msgid="2607478763131952469">"സഹായകേന്ദ്രം"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"അറിയിപ്പ് ആക്സസ്"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"ഇൻസ്‌റ്റാൾ ചെയ്ത ആപ്പുകളൊന്നും അറിയിപ്പ് ആക്‌സസ് അഭ്യർത്ഥിച്ചിട്ടില്ല."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"കോൺടാക്റ്റ് പേരുകളും നിങ്ങൾ സ്വീകരിക്കുന്ന സന്ദേശ ടെക്സ്റ്റുകളും പോലുള്ള വ്യക്തിഗത വിവരങ്ങൾ ഉൾപ്പെടെ, എല്ലാ അറിയിപ്പുകളും ഈ ആപ്പുകൾക്ക് വായിക്കാനാകും. കൂടാതെ അറിയിപ്പുകൾ ഒഴിവാക്കാനോ അവയിലടങ്ങിയിരിക്കുന്ന പ്രവർത്തന ബട്ടണുകൾ ട്രിഗർ ചെയ്യാനോ ഇവയ്ക്ക് കഴിയും."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"സിസ്റ്റം ആവശ്യപ്പെടുന്നത്"</string>
     <string name="directory_access" msgid="7338555825237012006">"ഡയറക്റ്ററി ആക്‌സസ്"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"ഈ ആപ്പുകൾക്ക് ചില ഡയറക്റ്ററികൾ ആക്‌സസ് ചെയ്യാൻ അനുമതിയുണ്ട്."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

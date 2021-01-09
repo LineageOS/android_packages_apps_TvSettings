@@ -20,6 +20,10 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"הגדרות"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"רשת"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"פרופיל מוגבל"</string>
+    <!-- no translation found for general_action_yes (1303080504548165355) -->
+    <skip />
+    <!-- no translation found for general_action_no (674735073031386948) -->
+    <skip />
     <string name="action_on_title" msgid="1074972820237738324">"הפעלה"</string>
     <string name="action_off_title" msgid="3598665702863436597">"כיבוי"</string>
     <string name="action_on_description" msgid="9146557891514835767">"פועל"</string>
@@ -167,6 +171,46 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"בדרך כלל 0000 או 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"התאם"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"ביטול"</string>
+    <!-- no translation found for bluetooth_device_connected_toast (1896195197089204806) -->
+    <skip />
+    <!-- no translation found for bluetooth_device_disconnected_toast (7459239447363156499) -->
+    <skip />
+    <!-- no translation found for connected_devices_slice_pref_title (6761921505544005991) -->
+    <skip />
+    <!-- no translation found for bluetooth_toggle_title (3808904783456336104) -->
+    <skip />
+    <!-- no translation found for bluetooth_toggle_confirmation_dialog_title (3906746631391295717) -->
+    <skip />
+    <!-- no translation found for bluetooth_toggle_confirmation_dialog_summary (9017044450625172698) -->
+    <skip />
+    <!-- no translation found for bluetooth_pair_accessory (5508750142754420984) -->
+    <skip />
+    <!-- no translation found for bluetooth_known_devices_category (6895470515631452961) -->
+    <skip />
+    <!-- no translation found for bluetooth_official_remote_category (5817814488268307170) -->
+    <skip />
+    <!-- no translation found for bluetooth_official_remote_entry_title (6699700335229570038) -->
+    <skip />
+    <!-- no translation found for bluetooth_connect_action_title (7715342395313781643) -->
+    <skip />
+    <!-- no translation found for bluetooth_connect_confirm (4769958536295137386) -->
+    <skip />
+    <!-- no translation found for bluetooth_disconnect_action_title (1135513009197728480) -->
+    <skip />
+    <!-- no translation found for bluetooth_disconnect_confirm (1445977623973613581) -->
+    <skip />
+    <!-- no translation found for bluetooth_rename_action_title (4200419902722729907) -->
+    <skip />
+    <!-- no translation found for bluetooth_rename (7791922876280337194) -->
+    <skip />
+    <!-- no translation found for bluetooth_forget_action_title (2351140076684719196) -->
+    <skip />
+    <!-- no translation found for bluetooth_forget_confirm (5175414848391021666) -->
+    <skip />
+    <!-- no translation found for bluetooth_serial_number_label (6639294603220209971) -->
+    <skip />
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"מחובר"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"מנותק"</string>
     <string name="send_feedback" msgid="936698637869795473">"שליחת משוב"</string>
     <string name="launch_help" msgid="2607478763131952469">"מרכז עזרה"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -501,7 +545,7 @@
     <string name="color_cyan" msgid="3172130225116530998">"ציאן"</string>
     <string name="color_yellow" msgid="3519470952904560404">"צהוב"</string>
     <string name="color_magenta" msgid="2377854703399624607">"מגנטה"</string>
-    <string name="system_accessibility_status" msgid="8504842254080682515">"הפעל"</string>
+    <string name="system_accessibility_status" msgid="8504842254080682515">"הפעלה"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"תצורה"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"האם להשתמש ב-<xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> יכול לאסוף את כל הטקסט שאתה מקליד, מלבד סיסמאות. נכללים בכך נתונים אישיים כמו מספרי כרטיס אשראי."</string>
@@ -708,7 +752,7 @@
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="4508586498292236706">"כל העדכונים לאפליקציית מערכת Android הזו יוסרו."</string>
     <string name="device_apps_app_management_disable" msgid="819003297535493633">"השבת"</string>
     <string name="device_apps_app_management_disable_desc" msgid="9143166267511427607">"האם ברצונך להשבית את האפליקציה הזו?"</string>
-    <string name="device_apps_app_management_enable" msgid="9173340340253029114">"הפעל"</string>
+    <string name="device_apps_app_management_enable" msgid="9173340340253029114">"הפעלה"</string>
     <string name="device_apps_app_management_enable_desc" msgid="8686291003061136476">"האם ברצונך להפעיל את האפליקציה הזו?"</string>
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"שטח אחסון בשימוש"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="SIZE">%1$s</xliff:g> בשימוש ב-<xliff:g id="VOLUME">%2$s</xliff:g>"</string>
@@ -793,6 +837,8 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"גישה להודעות"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"אין אפליקציות מותקנות שביקשו גישה להודעות."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"אפליקציות אלה יוכלו לקרוא את כל ההודעות, כולל מידע אישי כמו שמות של אנשי קשר והודעות טקסט שתקבל. הן גם יוכלו לבטל הודעות או להפעיל לחצני פעולה שהן כוללות."</string>
+    <!-- no translation found for default_notification_access_package_summary (1354775994781420222) -->
+    <skip />
     <string name="directory_access" msgid="7338555825237012006">"גישה לספרייה"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"לאפליקציות אלה יש הרשאת גישה לספריות מסוימות."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
