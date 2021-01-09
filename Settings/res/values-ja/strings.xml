@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"設定"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"ネットワーク"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"制限付きプロファイル"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"はい"</string>
+    <string name="general_action_no" msgid="674735073031386948">"いいえ"</string>
     <string name="action_on_title" msgid="1074972820237738324">"ON"</string>
     <string name="action_off_title" msgid="3598665702863436597">"OFF"</string>
     <string name="action_on_description" msgid="9146557891514835767">"ON"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"通常は0000または1234です"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ペア設定する"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"キャンセル"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s に接続しました"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s との接続を解除しました"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"リモコンとアクセサリ"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Bluetooth を OFF にする"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Bluetooth が OFF の場合は、リモコンから Google アシスタントにアクセスできません。"</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"アクセサリのペア設定"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"アクセサリ"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"リモコン"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"リモコンの設定"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"接続"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s に接続"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"接続を解除"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s との接続を解除"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"名前を変更"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"接続済みのデバイスの名前を変更"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"削除"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s を削除"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth アドレス"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"接続完了"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"接続を解除しました"</string>
     <string name="send_feedback" msgid="936698637869795473">"フィードバックを送信"</string>
     <string name="launch_help" msgid="2607478763131952469">"ヘルプセンター"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -199,14 +222,14 @@
     <string name="about_serial" msgid="3432319328808745459">"シリアル番号"</string>
     <string name="about_build" msgid="8467840394761634575">"Android TV の OS ビルド"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other">デベロッパーになるまであと<xliff:g id="STEP_COUNT_1">%1$d</xliff:g>ステップです</item>
-      <item quantity="one">デベロッパーになるまであと<xliff:g id="STEP_COUNT_0">%1$d</xliff:g>ステップです</item>
+      <item quantity="other">開発者向けオプションが有効になるまであと <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 回です</item>
+      <item quantity="one">開発者向けオプションが有効になるまであと <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 回です</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"広告"</string>
     <string name="ads_description" msgid="8081069475265061074">"広告設定（広告 ID のリセットなど）を管理します。"</string>
     <string name="ads_content_description" msgid="1006489792324920289">"広告。広告設定（広告 ID のリセットなど）を管理します。"</string>
     <string name="show_dev_on" msgid="612741433124106067">"開発者向けオプションが有効になりました"</string>
-    <string name="show_dev_already" msgid="1522591284776449818">"開発者向けオプションが既に有効です"</string>
+    <string name="show_dev_already" msgid="1522591284776449818">"開発者向けオプションはすでに有効です"</string>
     <string name="device_info_default" msgid="2374506935205518448">"不明"</string>
     <string name="selinux_status" msgid="1146662734953021410">"SELinux のステータス"</string>
     <string name="selinux_status_disabled" msgid="4027105362332795142">"無効"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"通知へのアクセス"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"通知へのアクセスをリクエストしたインストール済みアプリはありません。"</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"このアプリはすべての通知を読み取ることができます。通知には、連絡先名などの個人情報や受信したメッセージの本文も含まれます。また、通知を非表示にしたり、通知内のボタン操作を実行したりすることもできます。"</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"システムで必要"</string>
     <string name="directory_access" msgid="7338555825237012006">"ディレクトリへのアクセス"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"このアプリには、特定のディレクトリへのアクセス権限が付与されています。"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g>（<xliff:g id="DIRECTORY">%2$s</xliff:g>）"</string>

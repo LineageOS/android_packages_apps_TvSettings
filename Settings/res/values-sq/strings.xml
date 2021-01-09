@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Cilësimet"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Rrjeti"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Profil i kufizuar"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"Po"</string>
+    <string name="general_action_no" msgid="674735073031386948">"Jo"</string>
     <string name="action_on_title" msgid="1074972820237738324">"Aktiv"</string>
     <string name="action_off_title" msgid="3598665702863436597">"Joaktiv"</string>
     <string name="action_on_description" msgid="9146557891514835767">"Aktiv"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Zakonisht 0000 ose 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Çifto"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Anulo"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s u lidh"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s u shkëput"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Telekomandat dhe aksesorët"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Çaktivizo Bluetooth-in"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Nuk do të mund të qasesh tek \"Asistenti i Google\" nga telekomanda jote ndërkohë që Bluetooth-i është joaktiv."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Çifto aksesorin"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Aksesorët"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Telekomanda"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"Cilësimet e telekomandës"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"Lidh"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"Lidhe me %1$s"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"Shkëput"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"Shkëpute nga %1$s"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"Riemërto"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"Riemërto pajisjen tënde"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"Harro"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"Harro %1$s"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Adresa e Bluetooth-it"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"Lidhur"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Shkëputur"</string>
     <string name="send_feedback" msgid="936698637869795473">"Dërgo koment"</string>
     <string name="launch_help" msgid="2607478763131952469">"Qendra e ndihmës"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -524,7 +547,7 @@
     <string name="system_always_check" msgid="384870282800221580">"Kontrollo gjithmonë"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Regjistrimi i Bluetooth HCI"</string>
     <string name="system_email_address" msgid="3725494874473757217">"Adresa e email-it"</string>
-    <string name="system_usb_debugging" msgid="2158285492172755923">"Korrigjimi i USB-së"</string>
+    <string name="system_usb_debugging" msgid="2158285492172755923">"Korrigjimi përmes USB-së"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Lejo vendndodhje të simuluara"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Zgjidh aplikacionin e korrigjimit"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Prit për korrigjuesin"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Qasja te njoftimet"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"Asnjë apl. i instaluar nuk ka kërkuar qasje te njoftimet."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Këto aplikacione do të jenë në gjendje të lexojnë të gjitha njoftimet, duke përfshirë informacione personale të tilla si emrat e kontakteve dhe tekstin e mesazheve që merr. Ato do të jenë po ashtu në gjendje t\'i heqin njoftimet ose të aktivizojnë butonat e veprimeve që përmbajnë."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"Kërkohet nga sistemi"</string>
     <string name="directory_access" msgid="7338555825237012006">"Qasja në direktori"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Këto aplikacione kanë leje për t\'u qasur në disa direktori të caktuara."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

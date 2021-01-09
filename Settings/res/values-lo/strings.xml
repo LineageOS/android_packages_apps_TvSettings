@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"ການ​ຕັ້ງ​ຄ່າ"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"ເຄືອຂ່າຍ"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"ໂປຣໄຟລ໌ຈຳກັດ"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"ແມ່ນ"</string>
+    <string name="general_action_no" msgid="674735073031386948">"ບໍ່"</string>
     <string name="action_on_title" msgid="1074972820237738324">"ເປີດ"</string>
     <string name="action_off_title" msgid="3598665702863436597">"ປິດ"</string>
     <string name="action_on_description" msgid="9146557891514835767">"ເປີດ"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"ປົກກະຕິແລ້ວໃຊ້ 0000 ຫຼື 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ຈັບຄູ່"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"​ຍົກ​ເລີກ"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"ເຊື່ອມຕໍ່ %1$s ແລ້ວ"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"ຕັດການເຊື່ອມຕໍ່ %1$s ແລ້ວ"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"ຣີໂໝດ ແລະ ອຸປະກອນເສີມ"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ປິດ Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"ທ່ານຈະບໍ່ສາມາດໃຊ້ຜູ້ຊ່ວຍ Google ໄດ້ຈາກຣີໂໝດຂອງທ່ານໃນເວລາປິດ Bluetooth ໄວ້."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ຈັບຄູ່ອຸປະກອນເສີມ"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"ອຸປະກອນເສີມ"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"ຣີໂໝດ"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"ການຕັ້ງຄ່າ​ຣີ​ໂໝດ"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"ເຊື່ອມຕໍ່"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"ເຊື່ອມຕໍ່ຫາ %1$s"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"ຕັດການເຊື່ອມຕໍ່"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"ຕັດການເຊື່ອມຕໍ່ຈາກ %1$s"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"ປ່ຽນຊື່"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"ປ່ຽນຊື່ອຸປະກອນທີ່ເຊື່ອມຕໍ່ແລ້ວຂອງທ່ານ"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"ລືມ"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"ລືມ %1$s"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"ທີ່ຢູ່ Bluetooth"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"ເຊື່ອມຕໍ່ແລ້ວ"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"ຕັດການເຊື່ອມຕໍ່ແລ້ວ"</string>
     <string name="send_feedback" msgid="936698637869795473">"ສົ່ງຄຳຕິຊົມ"</string>
     <string name="launch_help" msgid="2607478763131952469">"ສູນຊ່ວຍເຫຼືອ"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"ການ​ເຂົ້າ​ເຖິງ​ການ​ແຈ້ງ​ເຕືອນ"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"ບໍ່​ມີ​ແອັບ​ທີ່​ຕິດ​ຕັ້ງ​ໃດ​​ຮ້ອງ​ຂໍ​ການ​ເຂົ້າ​ເຖິງ​ການ​ແຈ້ງ​ເຕືອນ."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"ແອັບເຫຼົ່ານີ້ຈະສາມາດອ່ານການແຈ້ງເຕືອນທັງໝົດ, ຮວມທັງຂໍ້ມູນສ່ວນຕົວ ເຊັ່ນ: ຊື່ລາຍຊື່ຕິດຕໍ່ ແລະ ຂໍ້ຄວາມທີ່ທ່ານໄດ້ຮັບ. ພວກມັນຈະສາມາດປິດການແຈ້ງເຕືອນ ຫຼື ໃຊ້ປຸ່ມຄຳສັ່ງພວກມັນມີໄດ້ນຳ."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"ລະບົບຕ້ອງການ"</string>
     <string name="directory_access" msgid="7338555825237012006">"ການເຂົ້າເຖິງໄດເຣັກທໍຣີ"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"ແອັບເຫຼົ່ານີ້ມີການອະນຸຍາດເຂົ້າເຖິງບາງໄດເຣັກທໍຣີສະເພາະ."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

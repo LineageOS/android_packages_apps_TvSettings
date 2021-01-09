@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Параметрлер"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Желі"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Шектелген профиль"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"Иә"</string>
+    <string name="general_action_no" msgid="674735073031386948">"Жоқ"</string>
     <string name="action_on_title" msgid="1074972820237738324">"Қосулы"</string>
     <string name="action_off_title" msgid="3598665702863436597">"Өшірулі"</string>
     <string name="action_on_description" msgid="9146557891514835767">"Қосулы"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Әдетте 0000 немесе 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Жұптау"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Бас тарту"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s жалғанды."</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s ажыратылды."</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Пульттер және жабдықтар"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Bluetooth-ді өшіру"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Bluetooth өшірулі кезде, пульттен Google Assistant-ке кіре алмайсыз."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Жабдықты жұптау"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Жабдықтар"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Пульт"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"Пульт параметрлері"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"Жалғау"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s құрылғысына жалғау"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"Ажырату"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s құрылғысынан ажырату"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"Атын өзгерту"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"Жалғанған құрылғының атын өзгерту"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"Ұмыту"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s құрылғысын ұмыту"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth мекенжайы"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"Қосулы"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Ажыратулы"</string>
     <string name="send_feedback" msgid="936698637869795473">"Пікір жіберу"</string>
     <string name="launch_help" msgid="2607478763131952469">"Анықтама орталығы"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Хабарландыруларды пайдалану"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"Орнатылған қолданбалардың ешбірі хабарландыруға кіруге рұқсат сұрамады."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Бұл қолданбалар барлық хабарландыруларды, соның ішінде контакт аты мен алынатын хабар мәтіні сияқты жеке ақпаратты оқи алады. Сонымен қатар олар хабарландырулардан бас тарта не әрекет түймелерін іске қоса алады."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"Жүйе талап етеді."</string>
     <string name="directory_access" msgid="7338555825237012006">"Каталогке кіру"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Бұл қолданбаларда белгілі каталогтерге кіру рұқсаты бар."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

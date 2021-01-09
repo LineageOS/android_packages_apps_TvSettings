@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"설정"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"네트워크"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"제한된 프로필"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"예"</string>
+    <string name="general_action_no" msgid="674735073031386948">"아니요"</string>
     <string name="action_on_title" msgid="1074972820237738324">"사용"</string>
     <string name="action_off_title" msgid="3598665702863436597">"사용 안함"</string>
     <string name="action_on_description" msgid="9146557891514835767">"사용"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"일반적으로 0000 또는 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"페어링"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"취소"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s 연결됨"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s 연결 해제됨"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"리모컨 및 액세서리"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"블루투스"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"블루투스 끄기"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"블루투스가 꺼진 상태에서는 리모컨으로 Google 어시스턴트에 액세스할 수 없습니다."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"액세서리 페어링"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"액세서리"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"리모컨"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"리모컨 설정"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"연결"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s에 연결하세요"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"연결 해제"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s에서 연결 해제하세요."</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"이름 바꾸기"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"연결된 기기 이름을 변경하세요."</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"삭제"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s 기기를 삭제하세요."</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"블루투스 주소"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"연결됨"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"연결 끊김"</string>
     <string name="send_feedback" msgid="936698637869795473">"의견 보내기"</string>
     <string name="launch_help" msgid="2607478763131952469">"고객센터"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -683,7 +706,7 @@
     <string name="wifi_setup_input_password" msgid="8510003548463241234">"<xliff:g id="SSID">%1$s</xliff:g> 비밀번호 입력"</string>
     <string name="wifi_setup_description" msgid="6843574399437584520">"계속하려면 <xliff:g id="WIFI_SUBMIT_ICON">%1$s</xliff:g> 아이콘을 선택하세요."</string>
     <string name="label_done_key" msgid="8576286462300373440">"완료"</string>
-    <string name="wifi_setup_connection_success" msgid="3301901673876973474">"연결되었습니다."</string>
+    <string name="wifi_setup_connection_success" msgid="3301901673876973474">"연결되었습니다"</string>
     <string name="wifi_setup_save_success" msgid="6862510218032734919">"저장되었습니다."</string>
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"버전 <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"열기"</string>
@@ -719,9 +742,9 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"시작 시간"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"화면 보호기는 비활성 상태가 지속되면 실행됩니다. 화면 보호기를 선택하지 않은 경우에는 디스플레이가 꺼집니다."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> 동안 동작이 없을 때"</string>
-    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"디스플레이 끄기"</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"화면 끄기"</string>
     <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> 후"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"다음 시간 후 디스플레이 끄기"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"다음 시간 후 화면 끄기"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"화면 끄기 허용"</string>
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"미디어 재생 중"</string>
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"에너지 절약 모드 설정 확인"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"알림 액세스"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"설치된 앱 중에서 알림 액세스를 요청한 앱이 없습니다."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"이 앱이 연락처 이름과 수신 메시지에 포함된 텍스트 등의 개인정보를 비롯한 모든 알림을 읽을 수 있게 됩니다. 또한 알림을 닫거나 알림에 포함된 작업을 실행할 수도 있습니다."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"시스템에서 요구함"</string>
     <string name="directory_access" msgid="7338555825237012006">"디렉터리 액세스"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"다음 앱에 특정 디렉터리에 액세스할 수 있는 권한이 있습니다."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g>(<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

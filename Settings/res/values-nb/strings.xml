@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Innstillinger"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Nettverk"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Begrenset profil"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"Ja"</string>
+    <string name="general_action_no" msgid="674735073031386948">"Nei"</string>
     <string name="action_on_title" msgid="1074972820237738324">"På"</string>
     <string name="action_off_title" msgid="3598665702863436597">"Av"</string>
     <string name="action_on_description" msgid="9146557891514835767">"På"</string>
@@ -161,8 +163,29 @@
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Sånn kobler du til:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;&lt;br&gt;Skriv inn enhetens obligatoriske PIN-kode:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Sånn kobler du til: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Skriv inn enhetens obligatoriske passord:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Vanligvis 0000 eller 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Par"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Koble til"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Avbryt"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s er koblet til"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s er frakoblet"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Fjernkontroller og tilbehør"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Slå av Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Du får ikke tilgang til Google-assistenten fra fjernkontrollen når Bluetooth er av."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Koble til tilbehør"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Tilbehør"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Fjernkontroll"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"Fjernkontroll-innstillinger"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"Koble til"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"Koble til %1$s"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"Koble fra"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"Koble fra %1$s"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"Gi nytt navn"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"Gi nytt navn til den tilkoblede enheten"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"Glem"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"Glem %1$s"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth-adresse"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"Tilkoblet"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Frakoblet"</string>
     <string name="send_feedback" msgid="936698637869795473">"Send tilbakemelding"</string>
     <string name="launch_help" msgid="2607478763131952469">"Brukerstøtte"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -454,7 +477,7 @@
     <string name="system_services" msgid="5754310941186053151">"Tjenester"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Tjenesteinnstillinger"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Tekst med høy kontrast"</string>
-    <string name="accessibility_shortcut" msgid="5856158637840030531">"Tilgjengelighetssnarvei"</string>
+    <string name="accessibility_shortcut" msgid="5856158637840030531">"Tilgjengelighets-snarvei"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Slå på tilgjengelighetssnarveien"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Snarveitjeneste"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Når snarveien er på, kan du trykke på både tilbake- og ned-knappen i tre sekunder for å starte en tilgjengelighetsfunksjon."</string>
@@ -463,7 +486,7 @@
     <string name="captions_display" msgid="2598662495450633375">"Visning"</string>
     <string name="captions_display_on" msgid="480438033345455728">"På"</string>
     <string name="captions_display_off" msgid="87881163874948539">"Av"</string>
-    <string name="display_options" msgid="2645282080948371603">"Vis grupper"</string>
+    <string name="display_options" msgid="2645282080948371603">"Visningsalternativer"</string>
     <string name="captions_configure" msgid="711991018642931958">"Konfigurer"</string>
     <string name="captions_language" msgid="5905918439449912646">"Språk"</string>
     <string name="captions_language_default" msgid="3894192926725192528">"Standard"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Tilgang til varsler"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"Ingen installerte apper har bedt om tilgang til varsler."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Disse appene kan lese alle varsler, inkludert personopplysninger som kontaktnavn og tekstinnholdet i meldinger du mottar. De kan også avvise varsler eller utløse handlingsknapper i varslene."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"Kreves av systemet"</string>
     <string name="directory_access" msgid="7338555825237012006">"Katalogtilgang"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Disse appene har tilgang til visse kataloger."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
