@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"الإعدادات"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"الشبكة"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"ملف شخصي"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"نعم"</string>
+    <string name="general_action_no" msgid="674735073031386948">"لا"</string>
     <string name="action_on_title" msgid="1074972820237738324">"تفعيل"</string>
     <string name="action_off_title" msgid="3598665702863436597">"إيقاف"</string>
     <string name="action_on_description" msgid="9146557891514835767">"مفعّلة"</string>
@@ -171,6 +173,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"0000 أو 1234 عادة"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"إقران"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"إلغاء"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"تم الاتصال بجهاز %1$s."</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"تم قطع اتصال %1$s."</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"وحدات التحكّم عن بُعد والملحقات"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"البلوتوث"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"إيقاف البلوتوث"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"لن تتمكن من الوصول إلى \"مساعد Google\" باستخدام وحدة التحكّم عن بُعد عندما تكون تقنية البلوتوث متوقّفة."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"إقران جهاز ملحق"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"الملحقات"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"وحدة التحكّم عن بُعد"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"إعدادات وحدة التحكّم عن بُعد"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"الاتصال"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"الاتصال بـ %1$s"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"قطع الاتصال"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"هل تريد قطع الاتصال بجهاز %1$s؟"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"إعادة تسمية"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"إعادة تسمية الجهاز المتصل"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"حذف"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"هل تريد حذف بيانات %1$s؟"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"عنوان البلوتوث"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"متّصل"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"غير متّصل"</string>
     <string name="send_feedback" msgid="936698637869795473">"إرسال تعليق"</string>
     <string name="launch_help" msgid="2607478763131952469">"مركز المساعدة"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -807,6 +830,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"الوصول إلى الإشعارات"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"لم تطلب أي تطبيقات مثبّتة حق الوصول إلى الإشعارات."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"سيكون بإمكان هذه التطبيقات قراءة جميع الإشعارات، بما في ذلك المعلومات الشخصية مثل أسماء جهات الاتصال ونص الرسائل التي تتلقاها. وسيكون بإمكانها أيضًا تجاهل الإشعارات أو تفعيل الأزرار داخل هذه الإشعارات."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"مطلوب من النظام"</string>
     <string name="directory_access" msgid="7338555825237012006">"الوصول إلى الدليل"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"تملك هذه التطبيقات إذنًا بالوصول إلى أدلة معينة."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

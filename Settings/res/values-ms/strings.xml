@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Tetapan"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Rangkaian"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Profil Terhad"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"Ya"</string>
+    <string name="general_action_no" msgid="674735073031386948">"Tidak"</string>
     <string name="action_on_title" msgid="1074972820237738324">"Hidup"</string>
     <string name="action_off_title" msgid="3598665702863436597">"Mati"</string>
     <string name="action_on_description" msgid="9146557891514835767">"Hidup"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Biasanya 0000 atau 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Jadikan Pasangan"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Batal"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s disambungkan"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s diputuskan sambungan"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Alat Kawalan Jauh &amp; Aksesori"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Matikan Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Anda tidak akan dapat mengakses Google Assistant daripada alat kawalan jauh anda semasa Bluetooth dimatikan."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Gandingkan aksesori"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Aksesori"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Alat Kawalan Jauh"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"Tetapan kawalan jauh"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"Sambung"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"Sambung ke %1$s"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"Putuskan sambungan"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"Putuskan sambungan daripada %1$s"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"Namakan semula"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"Namakan semula peranti yang dihubungkan"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"Lupakan"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"Lupakan %1$s"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Alamat Bluetooth"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"Disambungkan"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Diputuskan sambungan"</string>
     <string name="send_feedback" msgid="936698637869795473">"Hantar maklum balas"</string>
     <string name="launch_help" msgid="2607478763131952469">"Pusat Bantuan"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Akses pemberitahuan"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"Tiada apl terpasang yang meminta akses pemberitahuan."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Apl ini akan dapat membaca semua pemberitahuan, termasuk maklumat peribadi seperti nama kenalan dan teks mesej yang anda terima. Selain itu, apl ini turut dapat mengetepikan pemberitahuan atau mencetuskan butang tindakan yang terdapat padanya."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"Diperlukan oleh sistem"</string>
     <string name="directory_access" msgid="7338555825237012006">"Akses direktori"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Apl ini mempunyai kebenaran untuk mengakses direktori tertentu."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

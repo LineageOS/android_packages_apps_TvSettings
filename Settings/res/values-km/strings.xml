@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"ការកំណត់"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"បណ្ដាញ"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"ប្រវត្តិរូប​បាន​ដាក់កម្រិត"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"បាទ/ចាស"</string>
+    <string name="general_action_no" msgid="674735073031386948">"ទេ"</string>
     <string name="action_on_title" msgid="1074972820237738324">"បើក"</string>
     <string name="action_off_title" msgid="3598665702863436597">"បិទ"</string>
     <string name="action_on_description" msgid="9146557891514835767">"បើក"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"តាម​ធម្មតា 0000 ឬ 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ផ្គូផ្គង"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"បោះបង់"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"បានភ្ជាប់ %1$s"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"បានផ្ដាច់ %1$s"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"ឧបករណ៍បញ្ជាពីចម្ងាយ និង​គ្រឿងបន្ថែម"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"ប៊្លូធូស"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"បិទ​ប៊្លូធូស"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"អ្នកនឹង​មិនអាច​ចូលប្រើ Google ជំនួយការ​ពីឧបករណ៍បញ្ជាពីចម្ងាយ​របស់អ្នក​បានទៀតទេ ខណៈពេលដែល​បិទប៊្លូធូស។"</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ផ្គូផ្គង​គ្រឿងបន្ថែម"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"គ្រឿងបន្ថែម"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"ឧបករណ៍​បញ្ជា​ពី​ចម្ងាយ"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"ការកំណត់​ឧបករណ៍​បញ្ជា​ពីចម្ងាយ"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"ភ្ជាប់"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"ភ្ជាប់ទៅ %1$s"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"ផ្ដាច់"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"ផ្ដាច់ចេញពី %1$s"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"ប្ដូរ​ឈ្មោះ"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"ប្ដូរ​ឈ្មោះ​ឧបករណ៍ដែលបានភ្ជាប់របស់អ្នក"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"បំភ្លេច"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"បំភ្លេច %1$s"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"អាសយដ្ឋាន​ប៊្លូធូស"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"បានភ្ជាប់"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"បាន​ដាច់"</string>
     <string name="send_feedback" msgid="936698637869795473">"ផ្ញើមតិកែលម្អ"</string>
     <string name="launch_help" msgid="2607478763131952469">"មជ្ឈមណ្ឌលជំនួយ"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"សិទ្ធិចូល​ប្រើប្រាស់​ការ​ជូន​ដំណឹង"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"គ្មានកម្មវិធីដែលបានដំឡើងណាមួយបានស្នើសុំសិទ្ធិចូលប្រើប្រាស់ការជូនដំណឹងទេ។"</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"កម្មវិធី​ទាំងនេះ​នឹងអាច​អាន​ការជូន​ដំណឹង​ទាំងអស់ រួមទាំង​ព័ត៌មាន​ផ្ទាល់​ខ្លួន ដូចជា​ឈ្មោះ​ទំនាក់​ទំនង និង​សារជា​អក្សរ​ដែល​អ្នក​ទទួល​។ កម្មវិធីទាំងនេះ​ក៏នឹង​អាច​ច្រានចោល​ការជូន​ដំណឹង ឬ​បើកដំណើរការ​ប៊ូតុង​សកម្មភាព​ដែល​កម្មវិធីទាំងនេះ​មាន​ផងដែរ​។"</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"ប្រព័ន្ធ​តម្រូវឱ្យ​មាន"</string>
     <string name="directory_access" msgid="7338555825237012006">"ការចូល​ប្រើ​បញ្ជី"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"កម្មវិធី​ទាំងនេះ​មាន​សិទ្ធិ​អនុញ្ញាត​ចូល​ប្រើ​បញ្ជី​ជាក់លាក់។"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

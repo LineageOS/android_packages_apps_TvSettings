@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"सेटिंग"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"नेटवर्क"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"प्रतिबंधित प्रोफ़ाइल"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"हां"</string>
+    <string name="general_action_no" msgid="674735073031386948">"नहीं"</string>
     <string name="action_on_title" msgid="1074972820237738324">"चालू करें"</string>
     <string name="action_off_title" msgid="3598665702863436597">"बंद"</string>
     <string name="action_on_description" msgid="9146557891514835767">"चालू"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"आमतौर पर 0000 या 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"युग्‍मित करें"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"अभी नहीं"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s कनेक्ट किया गया"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s डिसकनेक्ट किया गया"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"रिमोट और ऐक्सेसरी"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"ब्लूटूथ"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ब्लूटूथ बंद करें"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"अगर ब्लूटूथ बंद है, तो आप Google Assistant को रिमोट से ऐक्सेस नहीं कर पाएंगे."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ऐक्सेसरी जोड़ें"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"कनेक्ट की गई ऐक्सेसरी"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"रिमोट कंट्रोल"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"रिमोट कंट्रोल की सेटिंग"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"कनेक्ट करें"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s से कनेक्ट करना चाहते हैं?"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"डिसकनेक्ट करें"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s से डिसकनेक्ट करना चाहते हैं?"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"नाम बदलें"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"कनेक्ट किए गए डिवाइस का नाम बदलें"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"हटाएं"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s की जानकारी हटाना चाहते हैं?"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"ब्लूटूथ का पता"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"कनेक्ट हो गया"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"डिसकनेक्ट हो गया"</string>
     <string name="send_feedback" msgid="936698637869795473">"सुझाव भेजें"</string>
     <string name="launch_help" msgid="2607478763131952469">"सहायता केंद्र"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -250,7 +273,7 @@
   </string-array>
     <string name="mac_address_not_available" msgid="2992935344891853369">"मैक पता उपलब्ध नहीं है"</string>
     <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"बिना किसी तय नियम के चुना गया मैक पता"</string>
-    <string name="title_ip_address" msgid="705842159484772807">"IP पता"</string>
+    <string name="title_ip_address" msgid="705842159484772807">"आईपी पता"</string>
     <string name="title_ssid" msgid="255328048344188682">"वाई-फ़ाई नेटवर्क का नाम डालें"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"इंटरनेट कनेक्शन"</string>
     <string name="connected" msgid="4981532275162345997">"कनेक्ट है"</string>
@@ -279,7 +302,7 @@
     <string name="title_wifi_proxy_port" msgid="566244407030390328">"प्रॉक्सी पोर्ट:"</string>
     <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"इसके लिए प्रॉक्‍सी का उपयोग न करें:"</string>
     <string name="title_wifi_ip_settings" msgid="296029383749112888">"आईपी सेटिंग"</string>
-    <string name="title_wifi_ip_address" msgid="5505806431042689276">"IP पता:"</string>
+    <string name="title_wifi_ip_address" msgid="5505806431042689276">"आईपी पता:"</string>
     <string name="title_wifi_gateway" msgid="4496416267930824360">"गेटवे:"</string>
     <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"नेटवर्क उपसर्ग लंबाई:"</string>
     <string name="title_wifi_dns1" msgid="1585965227665007553">"DNS 1:"</string>
@@ -296,7 +319,7 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"इससे सहेजे गए पासवर्ड सहित, इस नेटवर्क से कनेक्ट होने में उपयोग होने वाली जानकारी साफ़ हो जाती है"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"ठीक"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"जारी रखें"</string>
-    <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"दूसरे नेटवर्क से कनेक्ट करने की कोशिश करें"</string>
+    <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"नेटवर्क बदलें"</string>
     <string name="wifi_action_change_network" msgid="3943123581726966199">"बदलें"</string>
     <string name="wifi_action_dont_change_network" msgid="2685585142299769847">"न बदलें"</string>
     <string name="wifi_action_advanced_yes" msgid="6192652088198093438">"ठीक"</string>
@@ -430,7 +453,7 @@
     <item msgid="5645263357181875427">"परिवहन स्‍ट्रीम-प्रदत्त समय का उपयोग करें"</item>
     <item msgid="5501503537181350884">"बंद करें"</item>
   </string-array>
-    <string name="system_location" msgid="4057295363709016511">"स्थान"</string>
+    <string name="system_location" msgid="4057295363709016511">"जगह"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"आप अपनी उन ऐप्स  को स्थान जानकारी का उपयोग करने दें, जिन्होंने आपकी अनुमति मांगी है."</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"स्‍थान सहमति"</string>
     <string name="location_mode_title" msgid="728244518174115443">"मोड"</string>
@@ -446,7 +469,7 @@
     <string name="google_location_services_title" msgid="6304196603522909239">"Google स्‍थान सेवाएं"</string>
     <string name="third_party_location_services_title" msgid="2826218400381676508">"तृतीय पक्ष स्थान सेवाएं"</string>
     <string name="location_reporting" msgid="3552501333650895634">"स्थान रिपोर्टिंग"</string>
-    <string name="location_history" msgid="4055660203090513120">"स्‍थान इतिहास"</string>
+    <string name="location_history" msgid="4055660203090513120">"जगह की जानकारी का इतिहास"</string>
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google इस सुविधा का इस्तेमाल ‘Google नाओ’ और Google Maps जैसे प्रॉडक्टों में करता है. स्थान रिपोर्टिंग की सुविधा चालू हो, तो Google के वे प्रॉडक्ट जो इस सुविधा का इस्तेमाल करते हैं, आपके डिवाइस की सबसे हाल की जगह की जानकारी का डेटा स्टोर और इस्तेमाल कर सकते हैं. ऐसा वे आपके Google खाते के ज़रिए करते हैं."</string>
     <string name="location_history_desc" msgid="926674012916014270">"इस खाते के लिए स्थान इतिहास चालू होने पर, Google आपके डिवाइस के स्थान डेटा को आपके ऐप्स द्वारा उपयोग किए जाने के लिए संग्रहित कर सकता है.\n\nउदाहरण के लिए, Google मैप आपको दिशा-निर्देश दे सकता है और Google नाओ आपको यात्रा ट्रैफ़िक के बारे में सूचित कर सकती है.\n\nआप स्थान इतिहास को कभी भी बंद कर सकते हैं, लेकिन ऐसा करने से वह हटता नहीं है. अपने स्थान इतिहास को देखने और उसे प्रबंधित करने के लिए, maps.google.com/locationhistory पर जाएं."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"स्थान इतिहास हटाएं"</string>
@@ -614,7 +637,7 @@
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"इस कार्यवाही के लिए हमेशा इसी विकल्प का उपयोग करें?"</string>
     <string name="alwaysUseOption" msgid="8799609235198714441">"हमेशा उपयोग करें"</string>
     <string name="justOnceOption" msgid="6714005843102804865">"सिर्फ़ एक बार"</string>
-    <string name="noApplications" msgid="7511175717026318399">"कोई भी ऐप्स यह कार्यवाही नहीं कर सकता."</string>
+    <string name="noApplications" msgid="7511175717026318399">"कोई भी ऐप्लिकेशन यह कार्रवाई नहीं कर सकता."</string>
     <string name="noAppsGoBack" msgid="2538480554615467065">"वापस जाएं"</string>
     <string name="inputs_inputs" msgid="8639408473661259307">"इनपुट"</string>
     <string name="inputs_header_cec" msgid="4139015942980115323">"कंज्यूमर इलेक्ट्रॉनिक कंट्रोल (CEC)"</string>
@@ -652,7 +675,7 @@
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"<xliff:g id="APP">%1$s</xliff:g> द्वारा नियंत्रित"</string>
     <string name="app_not_supported_in_limited" msgid="4046604594925826955">"यह ऐप्स प्रतिबंधित प्रोफ़ाइल में समर्थित नहीं है"</string>
     <string name="app_sees_restricted_accounts" msgid="174038126799649152">"यह ऐप्स आपके खातों को ऐक्सेस कर सकता है"</string>
-    <string name="restriction_location_enable_title" msgid="2552780806199464266">"स्थान"</string>
+    <string name="restriction_location_enable_title" msgid="2552780806199464266">"जगह"</string>
     <string name="restriction_location_enable_summary" msgid="3719330231217994482">"ऐप्स को आपके स्थान की जानकारी का उपयोग करने दें"</string>
     <string name="restricted_profile_switch_to" msgid="6193201935877168764">"प्रतिबंधित प्रोफ़ाइल में प्रवेश करें"</string>
     <string name="restricted_profile_switch_out" msgid="3589381233390753413">"प्रतिबंधित प्रोफ़ाइल से बाहर निकलें"</string>
@@ -703,7 +726,7 @@
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"डिफ़ॉल्ट साफ़ करें"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"कुछ काम के लिए यह ऐप लॉन्च के लिए सेट है"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"कोई डिफ़ॉल्ट सेट नहीं किया गया है"</string>
-    <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"संचय साफ़ करें"</string>
+    <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"कैश मेमोरी मिटाएं"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"नोटिफ़िकेशन"</string>
     <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"ओपन सोर्स लाइसेंस"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"अनुमतियां"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"सूचना देखने की मंज़ूरी"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"इंस्टॉल किए गए किसी भी ऐप्लिकेशन ने सूचना देखने की इजाज़त नहीं मांगी है."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"ये ऐप्लिकेशन, आपको मिलने वाली सभी सूचनाओं के साथ-साथ, आपकी निजी जानकारी जैसे, आपके संपर्क और मैसेज को पढ़ सकेंगे. ये सूचनाओं को खारिज कर सकेंगे और उनमें शामिल कार्रवाई बटनों को ट्रिगर भी कर सकेंगे."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"आपके डिवाइस के हिसाब से यह ज़रूरी है"</string>
     <string name="directory_access" msgid="7338555825237012006">"निर्देशिका का ऐक्सेस"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"इन ऐप्लिकेशन के पास कुछ निर्देशिकाओं को ऐक्सेस करने की मंज़ूरी है."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

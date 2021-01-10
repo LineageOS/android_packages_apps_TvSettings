@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"সেটিংস"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"নেটওয়ার্ক"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"বিধিনিষেধযুক্ত প্রোফাইল"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"হ্যাঁ"</string>
+    <string name="general_action_no" msgid="674735073031386948">"না"</string>
     <string name="action_on_title" msgid="1074972820237738324">"চালু করুন"</string>
     <string name="action_off_title" msgid="3598665702863436597">"বন্ধ করুন"</string>
     <string name="action_on_description" msgid="9146557891514835767">"চালু আছে"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"সাধারণত ০০০০ বা ১২৩৪"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"যুক্ত করুন"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"বাতিল করুন"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s কানেক্ট করা আছে"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s কানেক্ট করা নেই"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"রিমোট ও অ্যাক্সেসরি"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"ব্লুটুথ"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ব্লুটুথ বন্ধ করুন"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"ব্লুটুথ বন্ধ থাকাকালীন আপনার রিমোট ডিভাইস থেকে Google Assistant অ্যাক্সেস করতে পারবেন না।"</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"অ্যাক্সেসরি পেয়ার করুন"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"অ্যাক্সেসরি"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"রিমোট কন্ট্রোল"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"রিমোট কন্ট্রোল সেটিংস"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"কানেক্ট করুন"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s-এ কানেক্ট করুন"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"ডিসকানেক্ট করুন"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s থেকে ডিসকানেক্ট করুন"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"নাম পরিবর্তন করুন"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"আপনার কানেক্ট করা ডিভাইসের নাম দিন"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"সরিয়ে দিন"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s সরিয়ে দিন"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"ব্লুটুথ অ্যাড্রেস"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"কানেক্ট করা আছে"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"ডিসকানেক্ট হয়ে গেছে"</string>
     <string name="send_feedback" msgid="936698637869795473">"মতামত জানান"</string>
     <string name="launch_help" msgid="2607478763131952469">"সহায়তা কেন্দ্র"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"বিজ্ঞপ্তি অ্যাক্সেস"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"ইনস্টল করা কোনও অ্যাপের অনুরোধ করা বিজ্ঞপ্তি অ্যাক্সেস নেই৷"</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"আপনার ব্যক্তিগত তথ্য যেমন পরিচিতির নাম এবং আপনার গ্রহণ করা মেসেজগুলির টেক্সট সহ সমস্ত বিজ্ঞপ্তিগুলি এই অ্যাপগুলি পড়তে সক্ষম হবে। এর মধ্যে থাকা বিজ্ঞপ্তিগুলি খারিজ করতে অথবা অ্যাকশন বোতাম ট্রিগার করতে পারবে।"</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"সিস্টেমের প্রয়োজন"</string>
     <string name="directory_access" msgid="7338555825237012006">"ডিরেক্টরি অ্যাক্সেস"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"এই অ্যাপগুলির কিছু নির্দিষ্ট ডিরেক্টরি অ্যাক্সেস করার অনুমতি আছে।"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

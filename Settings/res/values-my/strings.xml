@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"ဆက်တင်များ"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"ကွန်ရက်"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"ကန့်သတ် ပရိုဖိုင်"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"Yes"</string>
+    <string name="general_action_no" msgid="674735073031386948">"No"</string>
     <string name="action_on_title" msgid="1074972820237738324">"ဖွင့်ရန်"</string>
     <string name="action_off_title" msgid="3598665702863436597">"မရှိ"</string>
     <string name="action_on_description" msgid="9146557891514835767">"ဖွင့်ရန်"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"ပုံမှန်အားဖြင့် ၀၀၀၀ သို့မဟုတ် ၁၂၃၄"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ချိတ်တွဲရန်"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"မလုပ်တော့"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s ကို ချိတ်ဆက်ထားသည်"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s ကို ချိတ်ဆက်မထားပါ"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"အဝေးထိန်းခလုတ်နှင့် ဆက်စပ်ပစ္စည်းများ"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"ဘလူးတုသ်"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ဘလူးတုသ် ပိတ်မလား"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"ဘလူးတုသ် ပိတ်ထားချိန်တွင် သင့်အဝေးထိန်းခလုတ်မှ Google Assistant ကို သုံးနိုင်မည် မဟုတ်ပါ။"</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ဆက်စပ်ပစ္စည်းနှင့် တွဲချိတ်ပါ"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"ဆက်စပ်ပစ္စည်းများ"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"အဝေးထိန်းခလုတ်"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"အဝေးထိန်းခလုတ် ဆက်တင်များ"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"ချိတ်ဆက်ရန်"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s သို့ ချိတ်ဆက်ပါ"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"ချိတ်ဆက်မှု ဖြုတ်ရန်"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s မှ ချိတ်ဆက်မှုဖြုတ်မလား"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"အမည်ပြောင်းရန်"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"သင်၏ ချိတ်ဆက်ထားသောစက်ကို အမည်ပြောင်းပါ"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"မေ့ပစ်ရန်"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s ကို မေ့ပစ်မလား"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"ဘလူးတုသ်လိပ်စာ"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"ချိတ်ဆက်ထားသည်"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"ချိတ်ဆက်မထားပါ"</string>
     <string name="send_feedback" msgid="936698637869795473">"အကြံပြုချက် ပို့ရန်"</string>
     <string name="launch_help" msgid="2607478763131952469">"ကူညီရေးဌာန"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"အကြောင်းကြားချက် ရယူခြင်း"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"ထည့်သွင်းထားသည့်အက်ပ်များသည် အကြောင်းကြားချက်ရယူရန် တောင်းဆိုထားခြင်းမရှိပါ။"</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"၎င်းအက်ပ်များသည် အဆက်အသွယ် အမည်များနှင့် သင်လက်ခံရရှိသည့် စာများကဲ့သို့ ကိုယ်ရေးကိုယ်တာ အချက်အလက်များအပါအဝင် အသိပေးချက်များအားလုံး ကိုဖတ်နိုင်ပါလိမ့်မည်။ ၎င်းတို့သည် အသိပေးချက်များကို ပယ်ခြင်းသို့မဟုတ် ၎င်းတို့တွင်ပါဝင်သည့် လုပ်ဆောင်ချက် ခလုတ်များကို နှိပ်ခြင်းများ ပြုလုပ်နိုင်ပါမည်။"</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"စနစ်က လိုအပ်ပါသည်"</string>
     <string name="directory_access" msgid="7338555825237012006">"ဖိုင်လမ်းညွှန် သုံးခွင့်"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"ဤအက်ပ်များတွင် အချို့သောဖိုင်လမ်းညွှန်များကို သုံးခွင့်ရှိသည်။"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

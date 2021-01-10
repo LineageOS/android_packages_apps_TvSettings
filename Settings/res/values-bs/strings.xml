@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Postavke"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Mreža"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Ograničeni profil"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"Da"</string>
+    <string name="general_action_no" msgid="674735073031386948">"Ne"</string>
     <string name="action_on_title" msgid="1074972820237738324">"Uključi"</string>
     <string name="action_off_title" msgid="3598665702863436597">"Isključi"</string>
     <string name="action_on_description" msgid="9146557891514835767">"Uključeno"</string>
@@ -165,6 +167,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Obično 0000 ili 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Upari"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Otkaži"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"Uređaj %1$s je povezan"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"Prekinuta je veza s uređajem %1$s"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Daljinski upravljači i periferni uređaji"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Isključite Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Dok je Bluetooth isključen, nećete moći pristupati Google Asistentu putem daljinskog upravljača."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Upari periferni uređaj"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Periferni uređaji"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Daljinski upravljač"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"Postavke daljinskog upravljača"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"Poveži"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"Povezivanje s uređajem %1$s"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"Prekini vezu"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"Prekini vezu s uređajem %1$s"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"Promijeni naziv"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"Preimenujte povezani uređaj"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"Zaboravi"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"Zaboravi uređaj %1$s"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth adresa"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"Povezano"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Veza je prekinuta"</string>
     <string name="send_feedback" msgid="936698637869795473">"Slanje povratnih informacija"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centar za pomoć"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -786,6 +809,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Pristup obavještenjima"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"Nijedna instalirana aplikacija nije zatražila pristup obavještenjima."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Ove aplikacije će moći čitati sva obavještenja, uključujući lične informacije kao što su imena kontakata i tekst primljenih poruka. Također će moći odbaciti obavještenja ili aktivirati dugmad sadržanu u njima."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"Zahtijeva sistem"</string>
     <string name="directory_access" msgid="7338555825237012006">"Pristup direktorijima"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Ove aplikacije imaju odobrenje za pristup određenim direktorijima."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
