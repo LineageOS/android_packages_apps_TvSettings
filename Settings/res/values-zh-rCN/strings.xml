@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"设置"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"网络"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"受限个人资料"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"是"</string>
+    <string name="general_action_no" msgid="674735073031386948">"否"</string>
     <string name="action_on_title" msgid="1074972820237738324">"开启"</string>
     <string name="action_off_title" msgid="3598665702863436597">"关闭"</string>
     <string name="action_on_description" msgid="9146557891514835767">"开启"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"通常为0000或1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"配对"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"取消"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s已连接"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s已断开连接"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"遥控器和配件"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"蓝牙"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"关闭蓝牙"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"如果关闭蓝牙，您将无法通过遥控器使用 Google 助理。"</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"与配件配对"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"配件"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"遥控器"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"遥控器设置"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"连接"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"连接到%1$s"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"断开连接"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"断开与%1$s的连接"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"重命名"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"重命名已连接的设备"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"取消保存"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"取消保存%1$s"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"蓝牙地址"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"已连接"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"已断开连接"</string>
     <string name="send_feedback" msgid="936698637869795473">"发送反馈"</string>
     <string name="launch_help" msgid="2607478763131952469">"帮助中心"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"通知使用权"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"没有任何已安装的应用申请通知使用权。"</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"这些应用将能够读取所有通知（包括联系人姓名和您收到的消息文字等个人信息），而且还能关闭这些通知或触发通知中包含的操作按钮。"</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"系统要求"</string>
     <string name="directory_access" msgid="7338555825237012006">"目录访问权限"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"这些应用有权访问特定目录。"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g>（<xliff:g id="DIRECTORY">%2$s</xliff:g>）"</string>

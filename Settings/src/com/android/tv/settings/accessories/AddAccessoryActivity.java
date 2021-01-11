@@ -16,8 +16,6 @@
 
 package com.android.tv.settings.accessories;
 
-import android.app.Activity;
-import android.app.FragmentManager;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.hardware.hdmi.HdmiControlManager;
@@ -35,6 +33,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.android.tv.settings.R;
 
@@ -45,7 +45,8 @@ import java.util.List;
 /**
  * Activity for detecting and adding (pairing) new bluetooth devices.
  */
-public class AddAccessoryActivity extends Activity implements BluetoothDevicePairer.EventListener {
+public class AddAccessoryActivity extends FragmentActivity
+        implements BluetoothDevicePairer.EventListener {
 
     private static final boolean DEBUG = false;
     private static final String TAG = "AddAccessoryActivity";
@@ -209,7 +210,7 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
                     savedInstanceState.getParcelableArrayList(SAVED_STATE_BLUETOOTH_DEVICES);
         }
 
-        final FragmentManager fm = getFragmentManager();
+        final FragmentManager fm = getSupportFragmentManager();
         if (savedInstanceState == null) {
             mPreferenceFragment = AddAccessoryPreferenceFragment.newInstance();
             mContentFragment = AddAccessoryContentFragment.newInstance();
@@ -239,9 +240,9 @@ public class AddAccessoryActivity extends Activity implements BluetoothDevicePai
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        getFragmentManager().putFragment(outState,
+        getSupportFragmentManager().putFragment(outState,
                 SAVED_STATE_PREFERENCE_FRAGMENT, mPreferenceFragment);
-        getFragmentManager().putFragment(outState,
+        getSupportFragmentManager().putFragment(outState,
                 SAVED_STATE_CONTENT_FRAGMENT, mContentFragment);
         outState.putParcelableList(SAVED_STATE_BLUETOOTH_DEVICES, mBluetoothDevices);
     }

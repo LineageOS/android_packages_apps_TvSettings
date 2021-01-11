@@ -27,10 +27,12 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 
+import androidx.fragment.app.FragmentActivity;
+
 import java.io.IOException;
 
 
-public class AddAccountWithTypeActivity extends Activity {
+public class AddAccountWithTypeActivity extends FragmentActivity {
 
     // Must match com.google.android.gms.common.AccountPicker.
     public static final String EXTRA_ALLOWABLE_ACCOUNT_TYPES_STRING_ARRAY = "allowableAccountTypes";

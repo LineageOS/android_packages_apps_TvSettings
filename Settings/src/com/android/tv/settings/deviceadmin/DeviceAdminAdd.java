@@ -35,12 +35,14 @@ import android.os.UserHandle;
 import android.util.EventLog;
 import android.util.Log;
 
+import androidx.fragment.app.FragmentActivity;
+
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.List;
 
-public class DeviceAdminAdd extends Activity {
+public class DeviceAdminAdd extends FragmentActivity {
     static final String TAG = "DeviceAdminAdd";
 
     DevicePolicyManager mDPM;

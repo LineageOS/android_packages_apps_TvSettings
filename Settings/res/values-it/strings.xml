@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Impostazioni"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Rete"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Profilo con limitazioni"</string>
+    <string name="general_action_yes" msgid="1303080504548165355">"Sì"</string>
+    <string name="general_action_no" msgid="674735073031386948">"No"</string>
     <string name="action_on_title" msgid="1074972820237738324">"Attiva"</string>
     <string name="action_off_title" msgid="3598665702863436597">"Disattiva"</string>
     <string name="action_on_description" msgid="9146557891514835767">"Funzione attiva"</string>
@@ -163,6 +165,27 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Di solito 0000 o 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Accoppia"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Annulla"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"Dispositivo %1$s connesso"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"Dispositivo %1$s disconnesso"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Telecomandi e accessori"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Disattiva Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Quando il Bluetooth sarà disattivato non potrai accedere all\'Assistente Google dal telecomando."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Accoppia l\'accessorio"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Accessori"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Telecomando"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"Impostazioni telecomando"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"Connetti"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"Connetti a %1$s"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"Disconnetti"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"Disconnetti da %1$s"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"Rinomina"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"Rinomina il dispositivo connesso"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"Elimina"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"Elimina %1$s"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Indirizzo Bluetooth"</string>
+    <string name="bluetooth_connected_status" msgid="8629393539370085418">"Connesso"</string>
+    <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Disconnesso"</string>
     <string name="send_feedback" msgid="936698637869795473">"Invia feedback"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centro assistenza"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -779,6 +802,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Accesso alle notifiche"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"Nessuna delle app installate ha richiesto l\'accesso alle notifiche."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Queste app potranno leggere tutte le notifiche, incluse le informazioni personali quali i nomi dei contatti e il testo dei messaggi ricevuti. Potranno inoltre ignorare le notifiche o attivare i pulsanti di azione inclusi."</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"Richiesta dal sistema"</string>
     <string name="directory_access" msgid="7338555825237012006">"Accesso alla directory"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Queste app sono autorizzate ad accedere a directory specifiche."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

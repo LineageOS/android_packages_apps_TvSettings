@@ -23,8 +23,9 @@ import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 
-public class BluetoothRequestPermissionActivity extends Activity {
+public class BluetoothRequestPermissionActivity extends FragmentActivity {
 
     private static final String TAG = "BluetoothRequestPermissionActivity";
 
