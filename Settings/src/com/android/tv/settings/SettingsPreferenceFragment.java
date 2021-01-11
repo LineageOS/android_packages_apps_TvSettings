@@ -41,6 +41,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.leanback.preference.LeanbackPreferenceFragmentCompat;
 import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceViewHolder;
@@ -51,6 +54,9 @@ import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.instrumentation.VisibilityLoggerMixin;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.util.SettingsPreferenceUtil;
+import com.android.tv.settings.widget.SettingsViewModel;
+import com.android.tv.settings.widget.TsPreference;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 /**
@@ -125,6 +131,26 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
                 }
             }
             removeAnimationClipping(view);
+        }
+        SettingsViewModel settingsViewModel = new ViewModelProvider(this.getActivity(),
+                ViewModelProvider.AndroidViewModelFactory.getInstance(
+                        this.getActivity().getApplication())).get(SettingsViewModel.class);
+        iteratePreferenceAndSetObserver(settingsViewModel, getPreferenceScreen());
+    }
+
+    private void iteratePreferenceAndSetObserver(SettingsViewModel viewModel,
+            PreferenceGroup preferenceGroup) {
+        for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
+            Preference pref = preferenceGroup.getPreference(i);
+            if (pref instanceof TsPreference
+                    && ((TsPreference) pref).updatableFromGoogleSettings()) {
+                viewModel.getVisibilityLiveData(
+                        SettingsPreferenceUtil.getCompoundKey(this, pref))
+                        .observe(getViewLifecycleOwner(), (Boolean b) -> pref.setVisible(b));
+            }
+            if (pref instanceof PreferenceGroup) {
+                iteratePreferenceAndSetObserver(viewModel, (PreferenceGroup) pref);
+            }
         }
     }
 
