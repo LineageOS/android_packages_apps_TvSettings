@@ -16,10 +16,7 @@
 
 package com.android.tv.settings;
 
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
+import static com.android.tv.settings.overlay.FlavorUtils.ALL_FLAVORS_MASK;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -174,7 +171,7 @@ public abstract class TvSettingsActivity extends FragmentActivity {
 
     /** Subclass may override this to specify the flavor, in which the activity is available. */
     protected int getAvailableFlavors() {
-        return FLAVOR_CLASSIC | FLAVOR_TWO_PANEL | FLAVOR_X | FLAVOR_VENDOR;
+        return ALL_FLAVORS_MASK;
     }
 
     @Override

@@ -36,6 +36,8 @@ public final class FlavorUtils {
     public static final int FLAVOR_X = 0b00000100;         // Two panel settings with the X overlay
     public static final int FLAVOR_VENDOR = 0b00001000;    // Two panel settings with Vendor overlay
 
+    public static final int ALL_FLAVORS_MASK =
+            FLAVOR_CLASSIC | FLAVOR_TWO_PANEL | FLAVOR_X | FLAVOR_VENDOR;
     public static final int TWO_PANEL_FLAVORS_MASK = FLAVOR_TWO_PANEL | FLAVOR_X | FLAVOR_VENDOR;
     public static final int X_EXPERIENCE_FLAVORS_MASK = FLAVOR_X | FLAVOR_VENDOR;
 
