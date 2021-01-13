@@ -55,4 +55,26 @@
         be able to turn it back on and have to perform FDR. -->
     <bool name="show_bluetooth_toggle">false</bool>
 
+    <!-- The list of supported HDR formats. This list is overlaid by OEMs to specify
+         the HDR formats supported by their device. -->
+    <integer-array name="config_deviceSupportedHdrFormats">
+        <item>@integer/dolby_vision</item>
+        <item>@integer/hdr10</item>
+        <item>@integer/hlg</item>
+        <item>@integer/hdr10plus</item>
+    </integer-array>
+
+    <!-- The integer value for HDR format Dolby Vision. This should match
+            android.view.Display.HdrCapabilities.HDR_TYPE_DOLBY_VISION -->
+    <integer name="dolby_vision">1</integer>
+    <!-- The integer value for HDR format HDR 10. This should match
+            android.view.Display.HdrCapabilities.HDR_TYPE_HDR10 -->
+    <integer name="hdr10">2</integer>
+    <!-- The integer value for HDR format HLG. This should match
+            android.view.Display.HdrCapabilities.HDR_TYPE_HLG -->
+    <integer name="hlg">3</integer>
+    <!-- The integer value for HDR format HDR10+. This should match
+            android.view.Display.HdrCapabilities.HDR_TYPE_HDR10_PLUS -->
+    <integer name="hdr10plus">4</integer>
+
 </resources>
