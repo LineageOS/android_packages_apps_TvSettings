@@ -20,10 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"सेटिंग्ज"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"नेटवर्क"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"प्रतिबंधित प्रोफाईल"</string>
-    <!-- no translation found for general_action_yes (1303080504548165355) -->
-    <skip />
-    <!-- no translation found for general_action_no (674735073031386948) -->
-    <skip />
+    <string name="general_action_yes" msgid="1303080504548165355">"होय"</string>
+    <string name="general_action_no" msgid="674735073031386948">"नाही"</string>
     <string name="action_on_title" msgid="1074972820237738324">"सुरू"</string>
     <string name="action_off_title" msgid="3598665702863436597">"बंद"</string>
     <string name="action_on_description" msgid="9146557891514835767">"सुरू"</string>
@@ -124,11 +122,31 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"टीप: तुमच्या डिव्हाइसने त्याच्या सपोर्ट असलेल्या फॉरमॅटचा योग्यरीत्या अहवाल न दिल्यास ऑटाे पर्याय कार्य करणार नाही."</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"ऑटाे: तुमच्या डिव्हाइसने सपोर्ट करत असलेले, असा अहवाल दिलेले फॉरमॅट वापरा (शिफारस केली)"</string>
+    <!-- no translation found for surround_sound_format_dolby_mat (3029804841912462928) -->
+    <skip />
+    <!-- no translation found for surround_sound_format_dolby_truehd (5113046743572967088) -->
+    <skip />
+    <!-- no translation found for surround_sound_format_e_ac3_joc (3360344066462262996) -->
+    <skip />
+    <!-- no translation found for surround_sound_auto_info (4829346839183591680) -->
+    <skip />
+    <!-- no translation found for surround_sound_auto_summary (4217758237138215068) -->
+    <skip />
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"काही नाही: आसपासचा ध्वनी कधीही वापरू नका"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"मॅन्युअल: कोणते फॉरमॅट वापरायचे ते निव"</string>
+    <!-- no translation found for surround_sound_manual_summary (7333186407367883972) -->
+    <skip />
+    <!-- no translation found for surround_sound_enable_unsupported_dialog_title (9155579373370356463) -->
+    <skip />
+    <!-- no translation found for surround_sound_enable_unsupported_dialog_desc (1901648758103522741) -->
+    <skip />
+    <!-- no translation found for surround_sound_enable_unsupported_dialog_cancel (3499147437078761105) -->
+    <skip />
+    <!-- no translation found for surround_sound_enable_unsupported_dialog_ok (7466983147896640444) -->
+    <skip />
+    <!-- no translation found for surround_sound_supported_title (4873195851187547020) -->
+    <skip />
+    <!-- no translation found for surround_sound_unsupported_title (2302820271700954900) -->
+    <skip />
     <string name="display_category_title" msgid="247804007525046312">"डिस्प्ले"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"प्रगत डिस्प्ले सेटिंग्ज"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -167,44 +185,25 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"सामान्यतः 0000 किंवा 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"जोडा"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"रद्द करा"</string>
-    <!-- no translation found for bluetooth_device_connected_toast (1896195197089204806) -->
-    <skip />
-    <!-- no translation found for bluetooth_device_disconnected_toast (7459239447363156499) -->
-    <skip />
-    <!-- no translation found for connected_devices_slice_pref_title (6761921505544005991) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_title (3808904783456336104) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_title (3906746631391295717) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_summary (9017044450625172698) -->
-    <skip />
-    <!-- no translation found for bluetooth_pair_accessory (5508750142754420984) -->
-    <skip />
-    <!-- no translation found for bluetooth_known_devices_category (6895470515631452961) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_category (5817814488268307170) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_entry_title (6699700335229570038) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_action_title (7715342395313781643) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_confirm (4769958536295137386) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_action_title (1135513009197728480) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_confirm (1445977623973613581) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename_action_title (4200419902722729907) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename (7791922876280337194) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_action_title (2351140076684719196) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_confirm (5175414848391021666) -->
-    <skip />
-    <!-- no translation found for bluetooth_serial_number_label (6639294603220209971) -->
-    <skip />
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s कनेक्ट केले"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s डिस्कनेक्ट केले"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"रिमोट आणि ॲक्सेसरी"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"ब्लूटूथ"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ब्लूटूथ बंद करा"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"ब्लूटूथ बंद असताना तुम्ही तुमच्या रिमोटवरून Google Assistant ॲक्सेस करू शकणार नाही."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ॲक्सेसरी पेअर करा"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"अ‍ॅक्सेसरी"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"रिमोट कंट्रोल"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"रिमोट कंट्रोल सेटिंग्ज"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"कनेक्ट करा"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s शी कनेक्ट करा"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"‍डिस्कनेक्ट करा"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s वरून डिस्कनेक्ट करा"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"नाव बदला"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"कनेक्‍ट केलेल्या डिव्‍हाइसचे नाव बदला"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"विसरा"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s विसरा"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"ब्लूटूथ अ‍ॅड्रेस"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"कनेक्ट केलेले आहे"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"डिस्कनेक्ट केलेले आहे"</string>
     <string name="send_feedback" msgid="936698637869795473">"फीडबॅक पाठवा"</string>
@@ -823,8 +822,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"सूचना अ‍ॅक्सेस"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"इंस्टॉल केलेल्या कोणत्याही अ‍ॅप्सनी सूचना अ‍ॅक्सेसची विनंती केली नाही."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"संपर्क नावे आणि तुम्हाला मिळणार्‍या संदेशांच्या मजकुरासारख्या वैयक्तिक माहितीसह सर्व सूचना ही अ‍ॅप्स वाचू शकतील. तसेच सूचना डिसमिस करू शकतील किंवा त्यामध्ये असलेली कारवाई बटणे ट्रिगर करू शकतील."</string>
-    <!-- no translation found for default_notification_access_package_summary (1354775994781420222) -->
-    <skip />
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"सिस्टमसाठी आवश्यक"</string>
     <string name="directory_access" msgid="7338555825237012006">"डिरेक्टरी अ‍ॅक्सेस"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"या अ‍ॅप्सना विशिष्ट निर्देशिका अ‍ॅक्सेस करण्याची परवानगी आहे."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
