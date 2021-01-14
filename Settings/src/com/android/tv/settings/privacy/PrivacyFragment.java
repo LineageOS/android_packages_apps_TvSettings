@@ -76,6 +76,7 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
             accountPrefCategory.setVisible(false);
             assistantSlicePreference.setVisible(false);
             purchasesSlicePreference.setVisible(false);
+            adsPreference.setVisible(false);
             return;
         }
         if (assistantSlicePreference instanceof SlicePreference
