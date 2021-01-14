@@ -20,10 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"ਸੈਟਿੰਗਾਂ"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"ਨੈੱਟਵਰਕ"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"ਮਨਾਹੀਆ ਪ੍ਰੋਫ਼ਾਈਲ"</string>
-    <!-- no translation found for general_action_yes (1303080504548165355) -->
-    <skip />
-    <!-- no translation found for general_action_no (674735073031386948) -->
-    <skip />
+    <string name="general_action_yes" msgid="1303080504548165355">"ਹਾਂ"</string>
+    <string name="general_action_no" msgid="674735073031386948">"ਨਹੀਂ"</string>
     <string name="action_on_title" msgid="1074972820237738324">"ਚਾਲੂ"</string>
     <string name="action_off_title" msgid="3598665702863436597">"ਬੰਦ"</string>
     <string name="action_on_description" msgid="9146557891514835767">"ਚਾਲੂ"</string>
@@ -187,44 +185,25 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"ਆਮ ਤੌਰ \'ਤੇ 0000 ਜਾਂ 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ਜੋੜਾਬੱਧ ਕਰੋ"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"ਰੱਦ ਕਰੋ"</string>
-    <!-- no translation found for bluetooth_device_connected_toast (1896195197089204806) -->
-    <skip />
-    <!-- no translation found for bluetooth_device_disconnected_toast (7459239447363156499) -->
-    <skip />
-    <!-- no translation found for connected_devices_slice_pref_title (6761921505544005991) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_title (3808904783456336104) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_title (3906746631391295717) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_summary (9017044450625172698) -->
-    <skip />
-    <!-- no translation found for bluetooth_pair_accessory (5508750142754420984) -->
-    <skip />
-    <!-- no translation found for bluetooth_known_devices_category (6895470515631452961) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_category (5817814488268307170) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_entry_title (6699700335229570038) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_action_title (7715342395313781643) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_confirm (4769958536295137386) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_action_title (1135513009197728480) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_confirm (1445977623973613581) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename_action_title (4200419902722729907) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename (7791922876280337194) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_action_title (2351140076684719196) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_confirm (5175414848391021666) -->
-    <skip />
-    <!-- no translation found for bluetooth_serial_number_label (6639294603220209971) -->
-    <skip />
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s ਨੂੰ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s ਨੂੰ ਡਿਸਕਨੈਕਟ ਕੀਤਾ ਗਿਆ"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"ਰਿਮੋਟ ਅਤੇ ਐਕਸੈਸਰੀਆਂ"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"ਬਲੂਟੁੱਥ"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ਬਲੂਟੁੱਥ ਬੰਦ ਕਰੋ"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"ਬਲੂਟੁੱਥ ਬੰਦ ਹੋਣ \'ਤੇ ਤੁਸੀਂ ਆਪਣੇ ਰਿਮੋਟ ਤੋਂ Google Assistant ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਕਰ ਸਕੋਗੇ।"</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ਐਕਸੈਸਰੀ ਨੂੰ ਜੋੜਾਬੱਧ ਕਰੋ"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"ਐਕਸੈਸਰੀਆਂ"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"ਰਿਮੋਟ ਕੰਟਰੋਲ"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"ਰਿਮੋਟ ਕੰਟਰੋਲ ਸੈਟਿੰਗਾਂ"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"ਕਨੈਕਟ ਕਰੋ"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s ਨਾਲ ਕਨੈਕਟ ਕਰੋ"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"ਡਿਸਕਨੈਕਟ ਕਰੋ"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s ਤੋਂ ਡਿਸਕਨੈਕਟ ਕਰੋ"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"ਨਾਮ ਬਦਲੋ"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"ਆਪਣੇ ਕਨੈਕਟ ਕੀਤੇ ਡੀਵਾਈਸ ਦਾ ਨਾਮ ਬਦਲੋ"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"ਛੱਡੋ"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s ਨੂੰ ਭੁੱਲ ਜਾਓ"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"ਬਲੂਟੁੱਥ ਪਤਾ"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"ਕਨੈਕਟ ਹੋ ਗਿਆ"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"ਡਿਸਕਨੈਕਟ ਹੋ ਗਿਆ"</string>
     <string name="send_feedback" msgid="936698637869795473">"ਵਿਚਾਰ ਭੇਜੋ"</string>
@@ -843,8 +822,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"ਸੂਚਨਾ ਪਹੁੰਚ"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"ਕਿਸੇ ਵੀ ਸਥਾਪਤ ਕੀਤੀਆਂ ਐਪਾਂ ਨੇ ਸੂਚਨਾ ਪਹੁੰਚ ਦੀ ਬੇਨਤੀ ਨਹੀਂ ਕੀਤੀ ਹੈ।"</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"ਇਹ ਐਪਾਂ ਸੰਪਰਕਾਂ ਦੇ ਨਾਮਾਂ ਅਤੇ ਤੁਹਾਨੂੰ ਪ੍ਰਾਪਤ ਹੋਣ ਵਾਲੇ ਸੁਨੇਹਿਆਂ ਦੀਆਂ ਲਿਖਤਾਂ ਵਰਗੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਸਮੇਤ ਸਾਰੀਆਂ ਸੂਚਨਾਵਾਂ ਪੜ੍ਹ ਸਕਣਗੀਆਂ। ਉਹ ਸੂਚਨਾਵਾਂ ਨੂੰ ਖਾਰਜ ਵੀ ਕਰ ਸਕਣਗੀਆਂ ਜਾਂ ਉਹਨਾਂ ਵਿੱਚ ਮੌਜੂਦ ਕਾਰਵਾਈ ਬਟਨਾਂ ਨੂੰ ਦਿਖਾ ਸਕਣਗੀਆਂ।"</string>
-    <!-- no translation found for default_notification_access_package_summary (1354775994781420222) -->
-    <skip />
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"ਸਿਸਟਮ ਵੱਲੋਂ ਲੋੜੀਂਦਾ"</string>
     <string name="directory_access" msgid="7338555825237012006">"ਡਾਇਰੈਕਟਰੀ ਤੱਕ ਪਹੁੰਚ"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"ਇਹਨਾਂ ਐਪਾਂ ਕੋਲ ਕੁਝ ਡਾਇਰੈਕਟਰੀਆਂ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਹੈ।"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
