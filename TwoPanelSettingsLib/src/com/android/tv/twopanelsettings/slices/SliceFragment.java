@@ -288,7 +288,8 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                     || SlicesConstants.TYPE_PREFERENCE_CATEGORY.equals(item.getSubType())) {
                 Preference preference =
                         SlicePreferencesUtil.getPreference(
-                            item, mContextThemeWrapper, getClass().getCanonicalName());
+                            item, mContextThemeWrapper, getClass().getCanonicalName(),
+                                getParentFragment() instanceof TwoPanelSettingsFragment);
                 if (preference != null) {
                     newPrefs.add(preference);
                 }
