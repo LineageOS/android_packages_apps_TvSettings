@@ -25,6 +25,7 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFE
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_KEY;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_SLICE_FOLLOWUP;
 
+import android.app.Activity;
 import android.app.PendingIntent;
 import android.app.PendingIntent.CanceledException;
 import android.app.tvsettings.TvSettingsEnums;
@@ -653,6 +654,8 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 forward();
             } else if (direction.equals(SlicesConstants.BACKWARD)) {
                 back();
+            } else if (direction.equals(SlicesConstants.EXIT)) {
+                finish();
             }
         }
 
@@ -660,6 +663,11 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (errorMessage != null) {
             showErrorMessage(errorMessage);
         }
+    }
+
+    private void finish() {
+        getActivity().setResult(Activity.RESULT_OK);
+        getActivity().finish();
     }
 
     private void showErrorMessage(String errorMessage) {

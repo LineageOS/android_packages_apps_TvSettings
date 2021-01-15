@@ -47,6 +47,7 @@ public final class SlicesConstants {
     public static final String PARAMETER_DIRECTION = "direction";
     public static final String FORWARD = "forward";
     public static final String BACKWARD = "back";
+    public static final String EXIT = "exit";
     public static final String PARAMETER_ERROR = "error";
     public static final String PARAMETER_URI = "uri";
     public static final String EXTRA_PREFERENCE_KEY = "extra_preference_key";
