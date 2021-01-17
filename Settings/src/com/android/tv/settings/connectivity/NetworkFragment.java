@@ -72,7 +72,6 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private static final String KEY_WIFI_COLLAPSE = "wifi_collapse";
     private static final String KEY_WIFI_OTHER = "wifi_other";
     private static final String KEY_WIFI_ADD = "wifi_add";
-    private static final String KEY_WIFI_ADD_EASYCONNECT = "wifi_add_easyconnect";
     private static final String KEY_WIFI_ALWAYS_SCAN = "wifi_always_scan";
     private static final String KEY_ETHERNET = "ethernet";
     private static final String KEY_ETHERNET_STATUS = "ethernet_status";
@@ -97,7 +96,6 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private CollapsibleCategory mWifiNetworksCategory;
     private Preference mCollapsePref;
     private Preference mAddPref;
-    private Preference mAddEasyConnectPref;
     private TwoStatePreference mAlwaysScan;
     private PreferenceCategory mEthernetCategory;
     private Preference mEthernetStatusPref;
@@ -172,7 +170,6 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mWifiNetworksCategory = (CollapsibleCategory) findPreference(KEY_WIFI_LIST);
         mCollapsePref = findPreference(KEY_WIFI_COLLAPSE);
         mAddPref = findPreference(KEY_WIFI_ADD);
-        mAddEasyConnectPref = findPreference(KEY_WIFI_ADD_EASYCONNECT);
         mAlwaysScan = (TwoStatePreference) findPreference(KEY_WIFI_ALWAYS_SCAN);
         mWifiOther = (PreferenceCategory) findPreference(KEY_WIFI_OTHER);
 
@@ -270,9 +267,6 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 mMetricsFeatureProvider.action(getActivity(),
                         MetricsProto.MetricsEvent.ACTION_WIFI_ADD_NETWORK);
                 break;
-            case KEY_WIFI_ADD_EASYCONNECT:
-                startActivity(AddWifiNetworkActivity.createEasyConnectIntent(getContext()));
-                break;
         }
         return super.onPreferenceTreeClick(preference);
     }
@@ -294,7 +288,6 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mWifiNetworksCategory.setVisible(wifiEnabled);
         mCollapsePref.setVisible(wifiEnabled && mWifiNetworksCategory.shouldShowCollapsePref());
         mAddPref.setVisible(wifiEnabled);
-        mAddEasyConnectPref.setVisible(wifiEnabled && mWifiManager.isEasyConnectSupported());
 
         if (!wifiEnabled) {
             updateWifiList();
