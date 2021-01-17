@@ -31,6 +31,7 @@ android_app {
     },
     privileged: true,
     static_libs: [
+        "androidx-constraintlayout_constraintlayout",
         "androidx.recyclerview_recyclerview",
         "androidx.preference_preference",
         "androidx.appcompat_appcompat",
@@ -42,6 +43,7 @@ android_app {
         "androidx.annotation_annotation",
         "statslog-tvsettings",
         "TwoPanelSettingsLib",
+        "zxing-core-1.7",
     ],
 }
 
@@ -69,6 +71,7 @@ android_app {
     },
     privileged: true,
     static_libs: [
+        "androidx-constraintlayout_constraintlayout",
         "androidx.recyclerview_recyclerview",
         "androidx.preference_preference",
         "androidx.appcompat_appcompat",
@@ -80,6 +83,7 @@ android_app {
         "androidx.annotation_annotation",
         "statslog-tvsettings",
         "TwoPanelSettingsLib",
+        "zxing-core-1.7",
     ],
     jacoco: {
         include_filter: [
