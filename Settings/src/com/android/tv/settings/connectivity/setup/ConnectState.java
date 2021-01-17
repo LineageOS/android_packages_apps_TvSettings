@@ -125,7 +125,6 @@ public class ConnectState implements State {
         @Override
         public void onCreate(Bundle icicle) {
             super.onCreate(icicle);
-            mUserChoiceInfo = ViewModelProviders.of(getActivity()).get(UserChoiceInfo.class);
             mConnectivityListener = new ConnectivityListener(getActivity(), null);
             mConnectivityListener.start();
             mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(
@@ -163,26 +162,8 @@ public class ConnectState implements State {
             if (isNetworkConnected()) {
                 mWifiManager.disconnect();
             }
-
-            int easyConnectNetworkId = mUserChoiceInfo.getEasyConnectNetworkId();
-            if (easyConnectNetworkId != -1) {
-                if (DEBUG) Log.d(TAG, "Starting to connect via EasyConnect");
-
-                mWifiManager.connect(easyConnectNetworkId, new WifiManager.ActionListener() {
-                    @Override
-                    public void onSuccess() {
-                        if (DEBUG) Log.d(TAG, "EasyConnect: onSuccess");
-                    }
-
-                    @Override
-                    public void onFailure(int reason) {
-                        if (DEBUG) Log.d(TAG, "EasyConnect: onFailure, reason = " + reason);
-                    }
-                });
-            } else {
-                mWifiManager.addNetwork(mWifiConfiguration);
-                mWifiManager.connect(mWifiConfiguration, null);
-            }
+            mWifiManager.addNetwork(mWifiConfiguration);
+            mWifiManager.connect(mWifiConfiguration, null);
         }
 
         @Override
