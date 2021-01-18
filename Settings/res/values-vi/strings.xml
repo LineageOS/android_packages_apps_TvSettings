@@ -122,11 +122,19 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"Lưu ý: Tùy chọn Tự động có thể không hoạt động nếu thiết bị không báo cáo đúng các định dạng hỗ trợ."</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Tự động: Dùng định dạng thiết bị báo có hỗ trợ"</string>
+    <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Sử dụng Dolby Atmos với Dolby TrueHD"</string>
+    <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
+    <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Sử dụng Dolby Atmos với Dolby Digital Plus"</string>
+    <string name="surround_sound_auto_info" msgid="4829346839183591680">"Lưu ý: Tùy chọn Tự động có thể không hoạt động nếu thiết bị không báo cáo đúng các định dạng hỗ trợ."</string>
+    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Tự động: Sử dụng các định dạng do thiết bị báo cáo"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Không: Không bao giờ sử dụng âm thanh vòm"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Thủ công: Chọn định dạng để sử dụng"</string>
+    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Thủ công: Chọn thủ công các định dạng trong số những định dạng có sẵn"</string>
+    <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Cho phép định dạng âm thanh không được hỗ trợ?"</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Thiết bị âm thanh đã kết nối của bạn không hỗ trợ định dạng này. Điều này có thể gây ra vấn đề ngoài ý muốn như thiết bị phát ra tiếng ồn lớn hay tiếng bốp."</string>
+    <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Hủy"</string>
+    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"Vẫn thay đổi"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"ĐỊNH DẠNG ĐƯỢC HỖ TRỢ"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"ĐỊNH DẠNG KHÔNG ĐƯỢC HỖ TRỢ"</string>
     <string name="display_category_title" msgid="247804007525046312">"Hiển thị"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Cài đặt hiển thị nâng cao"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -283,6 +291,10 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Ẩn bớt"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Các mạng có thể kết nối"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Thêm mạng mới"</string>
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect (2869989555950644533) -->
+    <skip />
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect_info_summary (4564538591168691865) -->
+    <skip />
     <string name="security_type" msgid="2297615092250075696">"Loại bảo mật"</string>
     <string name="other_network" msgid="5299289104661858596">"Mạng khác…"</string>
     <string name="skip_network" msgid="3095529090560000692">"Bỏ qua"</string>
@@ -310,6 +322,8 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Cài đặt proxy không hợp lệ"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Cài đặt IP không hợp lệ"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> là một mạng đã lưu"</string>
+    <!-- no translation found for title_wifi_scan_qr_code (7485605625055717874) -->
+    <skip />
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Thử lại"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Xem các mạng có thể kết nối"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Đang kết nối với <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -317,6 +331,10 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Kết nối"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Xóa mạng"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Thao tác này sẽ xóa thông tin được sử dụng để kết nối với mạng này, bao gồm mật khẩu đã lưu"</string>
+    <!-- no translation found for wifi_scan_qr_code_description (2375814285190385839) -->
+    <skip />
+    <!-- no translation found for wifi_scan_qr_code_back_description (8830716278283379280) -->
+    <skip />
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Tiếp tục"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Thay đổi mạng"</string>

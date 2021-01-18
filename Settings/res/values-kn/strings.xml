@@ -20,10 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"ನೆಟ್‌ವರ್ಕ್"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"ನಿರ್ಬಂಧಿಸಿದ ಪ್ರೊಫೈಲ್"</string>
-    <!-- no translation found for general_action_yes (1303080504548165355) -->
-    <skip />
-    <!-- no translation found for general_action_no (674735073031386948) -->
-    <skip />
+    <string name="general_action_yes" msgid="1303080504548165355">"ಹೌದು"</string>
+    <string name="general_action_no" msgid="674735073031386948">"ಇಲ್ಲ"</string>
     <string name="action_on_title" msgid="1074972820237738324">"ಆನ್"</string>
     <string name="action_off_title" msgid="3598665702863436597">"ಆಫ್"</string>
     <string name="action_on_description" msgid="9146557891514835767">"ಆನ್"</string>
@@ -124,11 +122,19 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"ಡಾಲ್‌ಬೈ ಡಿಜಿಟಲ್ ಪ್ಲಸ್"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"ಗಮನಿಸಿ: ನಿಮ್ಮ ಸಾಧನವು ಅದರ ಬೆಂಬಲಿತ ಸ್ವರೂಪಗಳನ್ನು ಸರಿಯಾಗಿ ವರದಿ ಮಾಡದಿದ್ದರೆ ಆಟೋ ಆಯ್ಕೆಯು ಕಾರ್ಯನಿರ್ವಹಿಸದೆ ಇರಬಹುದು."</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"ಆಟೋ: ನಿಮ್ಮ ಸಾಧನ ವರದಿ ಮಾಡುವ ಸ್ವರೂಪಗಳನ್ನು ಬಳಸಿ (ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ)"</string>
+    <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD ಜೊತೆಗೆ Dolby Atmos"</string>
+    <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
+    <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus ಜೊತೆಗೆ Dolby Atmos"</string>
+    <string name="surround_sound_auto_info" msgid="4829346839183591680">"ಗಮನಿಸಿ: ಸಾಧನ ಅದರ ಬೆಂಬಲಿತ ಫಾರ್ಮ್ಯಾಟ್‌ಗಳನ್ನು ಸರಿಯಾಗಿ ವರದಿ ಮಾಡದಿದ್ದರೆ, ಸ್ವಯಂಚಾಲಿತ ಆಯ್ಕೆ ಕಾರ್ಯನಿರ್ವಹಿಸದಿರಬಹುದು."</string>
+    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"ಸ್ವಯಂಚಾಲಿತ: ಸಾಧನ ವರದಿಮಾಡಿದ ಫಾರ್ಮ್ಯಾಟ್‌ಗಳನ್ನು ಬಳಸಿ"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"ಯಾವುದೂ ಇಲ್ಲ: ಸರೌಂಡ್ ಸೌಂಡ್ ಅನ್ನು ಎಂದಿಗೂ ಬಳಸಬೇಡಿ"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"ಹಸ್ತಚಾಲಿತ: ಯಾವ ಸ್ವರೂಪಗಳನ್ನು ಬಳಸಬೇಕು ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"ಹಸ್ತಚಾಲಿತ: ಲಭ್ಯವಿರುವ ಫಾರ್ಮ್ಯಾಟ್‌ಗಳಿಂದ ಫಾರ್ಮ್ಯಾಟ್ ಹಸ್ತಚಾಲಿತವಾಗಿ ಆರಿಸಿ"</string>
+    <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"ಬೆಂಬಲಿಸದ ಧ್ವನಿ ಫಾರ್ಮ್ಯಾಟ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುತ್ತಿರುವಿರೇ?"</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"ಕನೆಕ್ಟ್ ಮಾಡಿರುವ ಆಡಿಯೊ ಸಾಧನವು ಈ ಫಾರ್ಮ್ಯಾಟ್‌ಗೆ ಬೆಂಬಲವನ್ನು ವರದಿ ಮಾಡುವುದಿಲ್ಲ. ಇದು ನಿಮ್ಮ ಸಾಧನದಿಂದ ಅನಿರೀಕ್ಷಿತ ವರ್ತನೆಗಳಾದ ಜೋರು ಶಬ್ದಗಳು, ಪಾಪ್ ಉಂಟು ಮಾಡಬಹುದು."</string>
+    <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"ರದ್ದುಮಾಡಿ"</string>
+    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"ಹೇಗಾದರೂ ಬದಲಾಯಿಸಿ"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"ಬೆಂಬಲಿತ ಫಾರ್ಮ್ಯಾಟ್‌ಗಳು"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"ಬೆಂಬಲಿಸದ ಫಾರ್ಮ್ಯಾಟ್‌ಗಳು"</string>
     <string name="display_category_title" msgid="247804007525046312">"ಡಿಸ್‌ಪ್ಲೇ"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"ಸುಧಾರಿತ ಡಿಸ್‌ಪ್ಲೇ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -167,44 +173,25 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"ಸಾಮಾನ್ಯವಾಗಿ 0000 ಅಥವಾ 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ಜೋಡಿ"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"ರದ್ದುಮಾಡಿ"</string>
-    <!-- no translation found for bluetooth_device_connected_toast (1896195197089204806) -->
-    <skip />
-    <!-- no translation found for bluetooth_device_disconnected_toast (7459239447363156499) -->
-    <skip />
-    <!-- no translation found for connected_devices_slice_pref_title (6761921505544005991) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_title (3808904783456336104) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_title (3906746631391295717) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_summary (9017044450625172698) -->
-    <skip />
-    <!-- no translation found for bluetooth_pair_accessory (5508750142754420984) -->
-    <skip />
-    <!-- no translation found for bluetooth_known_devices_category (6895470515631452961) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_category (5817814488268307170) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_entry_title (6699700335229570038) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_action_title (7715342395313781643) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_confirm (4769958536295137386) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_action_title (1135513009197728480) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_confirm (1445977623973613581) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename_action_title (4200419902722729907) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename (7791922876280337194) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_action_title (2351140076684719196) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_confirm (5175414848391021666) -->
-    <skip />
-    <!-- no translation found for bluetooth_serial_number_label (6639294603220209971) -->
-    <skip />
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s ಅನ್ನು ಕನೆಕ್ಟ್ ಮಾಡಲಾಗಿದೆ"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s ಅನ್ನು ಡಿಸ್‌ಕನೆಕ್ಟ್ ಮಾಡಲಾಗಿದೆ"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"ರಿಮೋಟ್‌ಗಳು ಮತ್ತು ಪರಿಕರಗಳು"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"ಬ್ಲೂಟೂತ್"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ಬ್ಲೂಟೂತ್ ಆಫ್ ಮಾಡಿ"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"ಬ್ಲೂಟೂತ್ ಆಫ್ ಆಗಿರುವಾಗ, ನಿಮ್ಮ ರಿಮೋಟ್‌ನಿಂದ Google Assistant ಅನ್ನು ಪ್ರವೇಶಿಸಲು ನಿಮಗೆ ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ಪರಿಕರವನ್ನು ಜೋಡಿಸಿ"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"ಪರಿಕರಗಳು"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"ರಿಮೋಟ್ ನಿಯಂತ್ರಣ"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"ರಿಮೋಟ್ ನಿಯಂತ್ರಣದ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"ಕನೆಕ್ಟ್ ಮಾಡಿ"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s ಗೆ ಕನೆಕ್ಟ್ ಮಾಡಿ"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"ಡಿಸ್‌ಕನೆಕ್ಟ್ ಮಾಡಿ"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s ನಿಂದ ಡಿಸ್‌ಕನೆಕ್ಟ್ ಮಾಡಿ"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"ಮರುಹೆಸರಿಸಿ"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"ಕನೆಕ್ಟ್ ಆಗಿರುವ ನಿಮ್ಮ ಸಾಧನಕ್ಕೆ ಮರುಹೆಸರಿಸಿ"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"ಮರೆಯಿರಿ"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s ಮರೆಯಿರಿ"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"ಬ್ಲೂಟೂತ್‌‌ ವಿಳಾಸ"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"ಕನೆಕ್ಟ್ ಆಗಿದೆ"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"ಡಿಸ್‌ಕನೆಕ್ಟ್ ಆಗಿದೆ"</string>
     <string name="send_feedback" msgid="936698637869795473">"ಪ್ರತಿಕ್ರಿಯೆ ಕಳುಹಿಸಿ"</string>
@@ -304,6 +291,10 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"ಸ್ವಲ್ಪ ವೀಕ್ಷಿಸಿ"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"ಲಭ್ಯವಿರುವ ನೆಟ್‌ವರ್ಕ್‌ಗಳು"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"ಹೊಸ ನೆಟ್‌ವರ್ಕ್‌ ಸೇರಿಸಿ"</string>
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect (2869989555950644533) -->
+    <skip />
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect_info_summary (4564538591168691865) -->
+    <skip />
     <string name="security_type" msgid="2297615092250075696">"ಭದ್ರತೆಯ ಪ್ರಕಾರ"</string>
     <string name="other_network" msgid="5299289104661858596">"ಇತರ ನೆಟ್‌‌ವರ್ಕ್‌…"</string>
     <string name="skip_network" msgid="3095529090560000692">"ಸ್ಕಿಪ್‌"</string>
@@ -331,6 +322,8 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"ಪ್ರಾಕ್ಸಿ ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಮಾನ್ಯವಾಗಿಲ್ಲ"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಮಾನ್ಯವಾಗಿಲ್ಲ"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> ಒಂದು ಉಳಿಸಿದ ನೆಟ್‌ವರ್ಕ್"</string>
+    <!-- no translation found for title_wifi_scan_qr_code (7485605625055717874) -->
+    <skip />
     <string name="wifi_action_try_again" msgid="8920677153891141148">"ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"ಲಭ್ಯವಿರುವ ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g> ಗೆ ಸಂಪರ್ಕಪಡಿಸಲಾಗುತ್ತಿದೆ"</string>
@@ -338,6 +331,10 @@
     <string name="wifi_connect" msgid="2206086690065242121">"ಸಂಪರ್ಕಪಡಿಸು"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"ನೆಟ್‌ವರ್ಕ್‌ ಮರೆತುಬಿಡು"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"ಇದು ಉಳಿಸಲಾಗಿರುವ ಪಾಸ್‌ವರ್ಡ್ ಸೇರಿದಂತೆ, ಈ ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕಿಸಲು ಬಳಸಲಾಗಿರುವ ಮಾಹಿತಿಯನ್ನು ತೆರವುಗೊಳಿಸುತ್ತದೆ."</string>
+    <!-- no translation found for wifi_scan_qr_code_description (2375814285190385839) -->
+    <skip />
+    <!-- no translation found for wifi_scan_qr_code_back_description (8830716278283379280) -->
+    <skip />
     <string name="wifi_action_ok" msgid="6257483288047397880">"ಸರಿ"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"ಮುಂದುವರಿಸಿ"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"ನೆಟ್‌ವರ್ಕ್ ಅನ್ನು ಬದಲಾಯಿಸಿ"</string>
@@ -823,8 +820,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"ಅಧಿಸೂಚನೆ ಪ್ರವೇಶ"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"ಯಾವುದೇ ಸ್ಥಾಪಿಸಿದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಅಧಿಸೂಚನೆ ಪ್ರವೇಶವನ್ನು ವಿನಂತಿಸಿಲ್ಲ."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"ಸಂಪರ್ಕ ಹೆಸರುಗಳು ಮತ್ತು ನೀವು ಸ್ವೀಕರಿಸುವ ಸಂದೇಶಗಳ ಪಠ್ಯದಂತಹ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಸೇರಿದಂತೆ ಈ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ ಎಲ್ಲ ಅಧಿಸೂಚನೆಗಳನ್ನು ಓದಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ. ಇವುಗಳಿಗೆ ಅಧಿಸೂಚನೆಗಳನ್ನು ವಜಾ ಮಾಡಲು ಅಥವಾ ಅವುಗಳು ಹೊಂದಿರುವಂತಹ ಕ್ರಿಯೆ ಬಟನ್‌ಗಳನ್ನು ಟ್ರಿಗ್ಗರ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ."</string>
-    <!-- no translation found for default_notification_access_package_summary (1354775994781420222) -->
-    <skip />
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"ಸಿಸ್ಟಂಗೆ ಅಗತ್ಯವಿದೆ"</string>
     <string name="directory_access" msgid="7338555825237012006">"ಡೈರೆಕ್ಟರಿ ಪ್ರವೇಶ"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"ಕೆಲವು ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಪ್ರವೇಶಿಸಲು ಈ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ ಅನುಮತಿ ಇದೆ."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

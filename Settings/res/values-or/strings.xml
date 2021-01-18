@@ -20,10 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"ସେଟିଂସ୍‌"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"ନେଟ୍‌ୱର୍କ"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"ପ୍ରତିବନ୍ଧିତ ପ୍ରୋଫାଇଲ୍‌"</string>
-    <!-- no translation found for general_action_yes (1303080504548165355) -->
-    <skip />
-    <!-- no translation found for general_action_no (674735073031386948) -->
-    <skip />
+    <string name="general_action_yes" msgid="1303080504548165355">"ହଁ"</string>
+    <string name="general_action_no" msgid="674735073031386948">"ନା"</string>
     <string name="action_on_title" msgid="1074972820237738324">"ଚାଲୁ"</string>
     <string name="action_off_title" msgid="3598665702863436597">"ବନ୍ଦ"</string>
     <string name="action_on_description" msgid="9146557891514835767">"ଅନ୍"</string>
@@ -124,11 +122,19 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"ଡଲ୍‌ବି ଡିଜିଟାଲ୍‍ ପ୍ଲସ୍‌"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"ଧ୍ୟାନ ଦିଅନ୍ତୁ: ଯଦି ଆପଣଙ୍କ ଡିଭାଇସ୍‍ ସଠିକ୍‍ଭାବରେ ସପୋର୍ଟ କରୁଥିବା ଫର୍ମାଟ୍‍ଗୁଡ଼ିକୁ ରିପୋର୍ଟ ନକରେ ତେବେ ଅଟୋ ବିକଳ୍ପ କାମ କରିନପାରେ।"</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"ଅଟୋ: ଆପଣଙ୍କ ଡିଭାଇସ୍‌ ସମର୍ଥନ କରୁଥିବା ଫର୍ମାଟ୍‌ଗୁଡ଼ିକୁ ବ୍ୟବହାର କରନ୍ତୁ (ସୁପାରିଶ କରାଯାଇଛି)"</string>
+    <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD ସହିତ Dolby Atmos"</string>
+    <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
+    <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus ସହିତ Dolby Atmos"</string>
+    <string name="surround_sound_auto_info" msgid="4829346839183591680">"ଧ୍ୟାନ ଦିଅ: ଆପଣଙ୍କ ଡିଭାଇସ୍ ଏହାର ସମର୍ଥିତ ଫର୍ମାଟକୁ ସଠିକଭାବେ ରିପୋର୍ଟ ନକଲେ ସ୍ୱଚାଳିତ ବିକଳ୍ପ କାମ କରିନପାରେ।"</string>
+    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"ସ୍ୱଚାଳିତ: ଡିଭାଇସ୍-ରିପୋର୍ଟ ଫର୍ମାଟକୁ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"କିଛି ନୁହେଁ: କେବେବି ଆଖପାଖ ସାଉଣ୍ଡ୍‍ ବ୍ୟବହାର କର ନାହିଁ"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"ମାନୁଆଲ: କେଉଁ ଫର୍ମାଟ ବ୍ୟବହାର କରିବେ ବାଛନ୍ତୁ"</string>
+    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"ମାନୁଆଲ୍: ଉପଲବ୍ଧ ଫର୍ମାଟଗୁଡ଼ିକରୁ ଫର୍ମାଟକୁ ମାନୁଆଲୀ ବାଛନ୍ତୁ"</string>
+    <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"ଅସମର୍ଥିତ ସାଉଣ୍ଡ ଫର୍ମାଟକୁ ସକ୍ଷମ କରୁଛନ୍ତି କି?"</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"ଆପଣଙ୍କ ସଂଯୁକ୍ତ ଅଡିଓ ଡିଭାଇସ୍ ଏହି ଫର୍ମାଟକୁ ସମର୍ଥନ କରେ ନାହିଁ। ଏହା ଫଳରେ ଆପଣଙ୍କ ଡିଭାଇସରୁ ତୀବ୍ର ଶବ୍ଦ କିମ୍ବା ବିସ୍ଫୋଟ ପରି ଅପ୍ରତ୍ୟାଶିତ ଶବ୍ଦର କାରଣ ହୋଇପାରେ।"</string>
+    <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"ବାତିଲ୍ କରନ୍ତୁ"</string>
+    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"ଯେ କୌଣସି ମତେ ବଦଳାନ୍ତୁ"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"ସମର୍ଥିତ ଫର୍ମାଟଗୁଡ଼ିକ"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"ଅସମର୍ଥିତ ଫର୍ମାଟଗୁଡ଼ିକ"</string>
     <string name="display_category_title" msgid="247804007525046312">"ଡିସପ୍ଲେ"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"ଉନ୍ନତ ଡିସପ୍ଲେ ସେଟିଂସ୍"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -144,7 +150,7 @@
     <string name="accessory_state_pairing" msgid="15908899628218319">"ପେୟାର୍‌ କରୁଛି…"</string>
     <string name="accessory_state_connecting" msgid="6560241025917621212">"ସଂଯୋଗ କରୁଛି…"</string>
     <string name="accessory_state_error" msgid="8353621828816824428">"ପେୟାର୍‌ ହୋଇପାରିଲା ନାହିଁ"</string>
-    <string name="accessory_state_canceled" msgid="4794837663402063770">"କ୍ୟାନ୍ସଲ୍ କରାଯାଇଛି"</string>
+    <string name="accessory_state_canceled" msgid="4794837663402063770">"ବାତିଲ୍ କରାଯାଇଛି"</string>
     <string name="accessory_state_paired" msgid="3296695242499532000">"ପେୟାର୍‌ ହୋଇଛି"</string>
     <string name="accessory_options" msgid="774592782382321681">"ଆସେସୋରୀ"</string>
     <string name="accessory_unpair" msgid="2473411128146068804">"ଅନପେୟାର୍‌ କରନ୍ତୁ"</string>
@@ -166,45 +172,26 @@
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"ଏହା ସହିତ ପେୟାର୍‌ କରିବାକୁ: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;ଡିଭାଇସ୍‌ ଆବଶ୍ୟକ କରୁଥିବା ପାସକୀ ଟାଇପ୍‌ କରନ୍ତୁ:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"ସାଧାରଣତଃ 0000 କିମ୍ବା 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ପେୟାର୍‌"</string>
-    <string name="bluetooth_cancel" msgid="4415185529332987034">"କ୍ୟାନ୍ସଲ୍‍ କରନ୍ତୁ"</string>
-    <!-- no translation found for bluetooth_device_connected_toast (1896195197089204806) -->
-    <skip />
-    <!-- no translation found for bluetooth_device_disconnected_toast (7459239447363156499) -->
-    <skip />
-    <!-- no translation found for connected_devices_slice_pref_title (6761921505544005991) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_title (3808904783456336104) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_title (3906746631391295717) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_summary (9017044450625172698) -->
-    <skip />
-    <!-- no translation found for bluetooth_pair_accessory (5508750142754420984) -->
-    <skip />
-    <!-- no translation found for bluetooth_known_devices_category (6895470515631452961) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_category (5817814488268307170) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_entry_title (6699700335229570038) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_action_title (7715342395313781643) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_confirm (4769958536295137386) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_action_title (1135513009197728480) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_confirm (1445977623973613581) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename_action_title (4200419902722729907) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename (7791922876280337194) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_action_title (2351140076684719196) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_confirm (5175414848391021666) -->
-    <skip />
-    <!-- no translation found for bluetooth_serial_number_label (6639294603220209971) -->
-    <skip />
+    <string name="bluetooth_cancel" msgid="4415185529332987034">"ବାତିଲ୍‍ କରନ୍ତୁ"</string>
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s ସଂଯୋଗ କରାଯାଇଛି"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s ବିଚ୍ଛିନ୍ନ କରାଯାଇଛି"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"ରିମୋଟ୍ ଓ ଆକସେସୋରୀଗୁଡ଼ିକ"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"ବ୍ଲୁଟୁଥ୍"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ବ୍ଲୁଟୁଥ୍ ବନ୍ଦ କରନ୍ତୁ"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"ବ୍ଲୁଟୁଥ୍ ବନ୍ଦ ଥିବା ସମୟରେ ଆପଣ ଆପଣଙ୍କ ରିମୋଟରୁ Google Assistantକୁ ଆକ୍ସେସ୍ କରିବା ପାଇଁ ସକ୍ଷମ ହେବେ ନାହିଁ।"</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ଆକସେସୋରୀ ପେୟାର୍ କରନ୍ତୁ"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"ଆକସେସୋରୀଗୁଡ଼ିକ"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"ରିମୋଟ୍ କଣ୍ଟ୍ରୋଲ୍"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"ରିମୋଟ୍ କଣ୍ଟ୍ରୋଲ୍ ସେଟିଂସ୍"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"ସଂଯୋଗ କରନ୍ତୁ"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s ସହ ସଂଯୋଗ କରନ୍ତୁ"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"ବିଚ୍ଛିନ୍ନ କରନ୍ତୁ"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$sରୁ ବିଚ୍ଛିନ୍ନ କରନ୍ତୁ"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"ଆଉ ଗୋଟିଏ ନାମ ଦିଅନ୍ତୁ"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"ଆପଣଙ୍କ ସଂଯୁକ୍ତ ଡିଭାଇସର ଆଉ ଏକ ନାମ ଦିଅନ୍ତୁ"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"ଭୁଲି ଯାଆନ୍ତୁ"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$sକୁ ଭୁଲି ଯାଆନ୍ତୁ"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"ବ୍ଲୁଟୁଥ୍ ଠିକଣା"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"ସଂଯୋଗ କରାଯାଇଛି"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"ବିଚ୍ଛିନ୍ନ କରାଯାଇଛି"</string>
     <string name="send_feedback" msgid="936698637869795473">"ମତାମତ ପଠାନ୍ତୁ"</string>
@@ -304,6 +291,10 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"କିଛି ଦେଖନ୍ତୁ"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"ଉପଲବ୍ଧ ଥିବା ନେଟ୍‌ୱର୍କ"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"ନୂଆ ନେଟ୍‌ୱାର୍କ ଯୋଗ କରନ୍ତୁ"</string>
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect (2869989555950644533) -->
+    <skip />
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect_info_summary (4564538591168691865) -->
+    <skip />
     <string name="security_type" msgid="2297615092250075696">"ସୁରକ୍ଷାର ପ୍ରକାର"</string>
     <string name="other_network" msgid="5299289104661858596">"ଅନ୍ୟାନ୍ୟ ନେଟ୍‌ୱର୍କ…"</string>
     <string name="skip_network" msgid="3095529090560000692">"ଛାଡ଼ି ଦିଅନ୍ତୁ"</string>
@@ -331,6 +322,8 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"ପ୍ରୋକ୍ସି ସେଟିଂସ୍‌ ମାନ୍ୟ ନୁହେଁ"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP ସେଟିଂସ ଠିକ୍‍ ନାହିଁ"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> ହେଉଛି ଏକ ସେଭ୍‍ ହୋଇଥିବା ନେଟୱର୍କ୍"</string>
+    <!-- no translation found for title_wifi_scan_qr_code (7485605625055717874) -->
+    <skip />
     <string name="wifi_action_try_again" msgid="8920677153891141148">"ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"ଉପଲବ୍ଧ ଥିବା ନେଟ୍‌ୱର୍କ ଦେଖନ୍ତୁ"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g>କୁ ସଂଯୋଗ ହେଉଛି"</string>
@@ -338,6 +331,10 @@
     <string name="wifi_connect" msgid="2206086690065242121">"କନେକ୍ଟ କରନ୍ତୁ"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"ନେଟୱର୍କକୁ ଡିଲିଟ କରିଦିଅନ୍ତୁ"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"ସେଭ୍‌ ହୋଇଥିବା ପାସୱାର୍ଡ୍‌ ସହିତ, ଏହି ନେଟୱର୍କ୍‌କୁ କନେକ୍ଟ କରିବାକୁ ବ୍ୟବହୃତ ହୋଇଥିବା ସୂଚନାକୁ ଏହା ଖାଲି କରେ"</string>
+    <!-- no translation found for wifi_scan_qr_code_description (2375814285190385839) -->
+    <skip />
+    <!-- no translation found for wifi_scan_qr_code_back_description (8830716278283379280) -->
+    <skip />
     <string name="wifi_action_ok" msgid="6257483288047397880">"ଠିକ୍ ଅଛି"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"ଜାରି ରଖନ୍ତୁ"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"ନେଟ୍‍ୱର୍କ ବଦଳାନ୍ତୁ"</string>
@@ -379,7 +376,7 @@
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"ପୂର୍ବରୁ <xliff:g id="SSID">%1$s</xliff:g>କୁ କନେକ୍ଟ ହୋଇଛି। ଏକ ଭିନ୍ନ ନେଟ୍‍ୱର୍କକ୍‍ କନେକ୍ଟ କରିବେ?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"ଏକ ଅଜଣା ନେଟୱାର୍କ୍"</string>
     <string name="title_ok" msgid="6500452958848127145">"ଓକେ"</string>
-    <string name="title_cancel" msgid="2337143367016419016">"କ୍ୟାନ୍ସଲ୍‍ କରନ୍ତୁ"</string>
+    <string name="title_cancel" msgid="2337143367016419016">"ବାତିଲ୍‍ କରନ୍ତୁ"</string>
     <string name="storage_title" msgid="6637715914885228193">"ଷ୍ଟୋରେଜ୍"</string>
     <string name="storage_available" msgid="8860901789290434209">"ଉପଲବ୍ଧ ଅଛି"</string>
     <string name="storage_size" msgid="5517261387579171381">"ମୋଟ ସ୍ଥାନ: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
@@ -823,8 +820,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"ବିଜ୍ଞପ୍ତି ଆକସେସ୍"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"ଇନ୍‌ଷ୍ଟଲ୍‌ କରାଯାଇଥିବା କୌଣସି ଆପ୍‌ ବିଜ୍ଞପ୍ତି ଆକସେସ୍‌ କରିବାର ଅନୁରୋଧ କରିନାହିଁ।"</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"ଯୋଗାଯୋଗ ନାମଗୁଡ଼ିକ ଏବଂ ଆପଣ ପାଉଥିବା ମେସେଜର ଟେକ୍ସଟ୍‌ ଅନ୍ତର୍ଭୂକ୍ତ କରି ଏହି ଆପଗୁଡ଼ିକ ସମସ୍ତ ବିଜ୍ଞପ୍ତି ପଢ଼ିପାରିବ। ସେଥିରେ ଥିବା ବିଜ୍ଞପ୍ତି କିମ୍ବା ଟ୍ରିଗର୍‌ କ୍ରିୟା ବଟନ୍‌‌ଗୁଡ଼ିକୁ ମଧ୍ୟ ସେଗୁଡିକ ବରଖାସ୍ତ କରିପାରିବେ।"</string>
-    <!-- no translation found for default_notification_access_package_summary (1354775994781420222) -->
-    <skip />
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"ସିଷ୍ଟମ୍ ପାଇଁ ଆବଶ୍ୟକ"</string>
     <string name="directory_access" msgid="7338555825237012006">"ଡିରେକ୍ଟୋରୀ ଆକ୍ସେସ୍"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"ନିର୍ଦ୍ଧିଷ୍ଟ ଡିରେକ୍ଟୋରୀଗୁଡିକୁ ଆକ୍ସେସ କରିବାକୁ ଏହି ଆପ୍‍ରେ ଅନୁମତି ରହିଛି।"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

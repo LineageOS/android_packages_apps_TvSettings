@@ -130,11 +130,19 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"ملاحظة: قد لا يعمل الخيار \"تلقائي\" إذا لم يُبلغ جهازك عن الصيغ المتوافقة معه بشكل صحيح."</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"تلقائي: استخدام الصيغ التي يُبلغ جهازك عن توافقها معه (إجراء مقترَح)"</string>
+    <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos مع Dolby TrueHD"</string>
+    <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
+    <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos مع Dolby Digital Plus"</string>
+    <string name="surround_sound_auto_info" msgid="4829346839183591680">"ملاحظة: قد لا يعمل الخيار \"تلقائي\" إذا لم يعلن جهازك بشكل صحيح عن التنسيقات المتوافقة معه."</string>
+    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"\"تلقائي\": استخدام التنسيقات التي أعلن عنها الجهاز"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"بدون صيغ: عدم استخدام الصوت المحيطي"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"يدوي: اختيار الصيغ التي تريد استخدامها"</string>
+    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"\"يدوي\": الاختيار يدويًا من التنسيقات المتاحة"</string>
+    <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"هل تريد تفعيل تنسيق الصوت غير المتوافق؟"</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"لا يعلن جهازك السماعي المتصل عن توافق هذا التنسيق معه. قد يتسبب هذا في عمل جهازك بطريقة غير متوقعة، كصدور أصوات مزعجة ومرتفعة أو صوت فرقعة من جهازك."</string>
+    <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"إلغاء"</string>
+    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"التغيير على أي حال"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"التنسيقات المتوافقة"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"التنسيقات غير المتوافقة"</string>
     <string name="display_category_title" msgid="247804007525046312">"العرض"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"إعدادات العرض المتقدمة"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -295,6 +303,10 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"عرض أقل"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"الشبكات المتاحة"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"إضافة شبكة جديدة"</string>
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect (2869989555950644533) -->
+    <skip />
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect_info_summary (4564538591168691865) -->
+    <skip />
     <string name="security_type" msgid="2297615092250075696">"نوع الأمان"</string>
     <string name="other_network" msgid="5299289104661858596">"شبكة أخرى..."</string>
     <string name="skip_network" msgid="3095529090560000692">"تخطي"</string>
@@ -322,6 +334,8 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"إعدادات الخادم الوكيل غير صالحة"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"إعدادات IP غير صالحة"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> هي شبكة محفوظة"</string>
+    <!-- no translation found for title_wifi_scan_qr_code (7485605625055717874) -->
+    <skip />
     <string name="wifi_action_try_again" msgid="8920677153891141148">"إعادة المحاولة"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"عرض الشبكات المتاحة"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"جارٍ الاتصال بـ <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -329,6 +343,10 @@
     <string name="wifi_connect" msgid="2206086690065242121">"الاتصال"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"حذف الشبكة"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"يؤدي هذا إلى محو المعلومات المستخدمة للاتصال بهذه الشبكة، بما في ذلك كلمات المرور المحفوظة"</string>
+    <!-- no translation found for wifi_scan_qr_code_description (2375814285190385839) -->
+    <skip />
+    <!-- no translation found for wifi_scan_qr_code_back_description (8830716278283379280) -->
+    <skip />
     <string name="wifi_action_ok" msgid="6257483288047397880">"موافقة"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"متابعة"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"تغيير الشبكة"</string>

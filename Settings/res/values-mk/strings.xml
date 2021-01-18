@@ -122,11 +122,19 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"Забелешка: „Автоматски“ може нема да работи ако уредот не ги пријавува правилно поддржаните формати."</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Автоматски: користи ги форматите пријавени како поддржани (препорачано)"</string>
+    <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos со Dolby TrueHD"</string>
+    <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
+    <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos со Dolby Digital Plus"</string>
+    <string name="surround_sound_auto_info" msgid="4829346839183591680">"Забелешка: „Автоматски“ може нема да работи ако уредот не ги пријавува правилно поддржаните формати."</string>
+    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Автоматски: користи формати пријавени од уредот"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Нема: никогаш не користи опкружувачки звук"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Рачно: избери кои формати да се користат"</string>
+    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Рачно: изберете формати рачно од достапните формати"</string>
+    <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Да се овозможи неподдржан формат за звук?"</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Поврзаниот аудиоуред не пријавува поддршка за форматов. Ова може да предизвика неочекувано однесување, како гласни звуци или потпукнувања од уредот."</string>
+    <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Откажи"</string>
+    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"Сепак промени"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"ПОДДРЖАНИ ФОРМАТИ"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"НЕПОДДРЖАНИ ФОРМАТИ"</string>
     <string name="display_category_title" msgid="247804007525046312">"Екран"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Напредни поставки за екран"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -283,6 +291,10 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Види помалку"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Достапни мрежи"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Додај нова мрежа"</string>
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect (2869989555950644533) -->
+    <skip />
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect_info_summary (4564538591168691865) -->
+    <skip />
     <string name="security_type" msgid="2297615092250075696">"Тип на безбедност"</string>
     <string name="other_network" msgid="5299289104661858596">"Друга мрежа…"</string>
     <string name="skip_network" msgid="3095529090560000692">"Прескокни"</string>
@@ -310,6 +322,8 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Поставките за прокси не се важечки"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Поставките за ИП не се важечки"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> е зачувана мрежа"</string>
+    <!-- no translation found for title_wifi_scan_qr_code (7485605625055717874) -->
+    <skip />
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Обидете се повторно"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Прикажи достапни мрежи"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Се поврзува со <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -317,6 +331,10 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Поврзи се"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Заборави мрежа"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Ова ги чисти информациите користени за поврзување со оваа мрежа, вклучувајќи ги зачуваните лозинки."</string>
+    <!-- no translation found for wifi_scan_qr_code_description (2375814285190385839) -->
+    <skip />
+    <!-- no translation found for wifi_scan_qr_code_back_description (8830716278283379280) -->
+    <skip />
     <string name="wifi_action_ok" msgid="6257483288047397880">"Во ред"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Продолжете"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Променете ја мрежата"</string>

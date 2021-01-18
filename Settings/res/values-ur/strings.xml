@@ -20,10 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"ترتیبات"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"نیٹ ورک"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"محدود پروفائل"</string>
-    <!-- no translation found for general_action_yes (1303080504548165355) -->
-    <skip />
-    <!-- no translation found for general_action_no (674735073031386948) -->
-    <skip />
+    <string name="general_action_yes" msgid="1303080504548165355">"ہاں"</string>
+    <string name="general_action_no" msgid="674735073031386948">"نہیں"</string>
     <string name="action_on_title" msgid="1074972820237738324">"آن"</string>
     <string name="action_off_title" msgid="3598665702863436597">"آف"</string>
     <string name="action_on_description" msgid="9146557891514835767">"آن"</string>
@@ -124,11 +122,19 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"نوٹ: اگر آپ کا آلہ اپنے تعاون یافتہ فارمیٹس کی صحیح اطلاع نہیں دیتا ہے تو ممکن ہے خود کار اختیار کام نہ کرے۔"</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"خودکار: وہ فارمیٹس استعمال کریں جن کی آپ کا آلہ سپورٹ کرنے والے کے بطور اطلاع دیتا ہے (تجویز کردہ)"</string>
+    <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD کے ساتھ Dolby Atmos"</string>
+    <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
+    <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus کے ساتھ Dolby Atmos"</string>
+    <string name="surround_sound_auto_info" msgid="4829346839183591680">"نوٹ: آلے کے اپنے تعاون یافتہ فارمیٹس کے صحیح اطلاع نہ دینے پر ممکن ہے خود کار اختیار کام نہ کرے۔"</string>
+    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"خود کار: آلے سے اطلاع کردہ فارمیٹس استعمال کریں"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"کوئی نہیں: محیط آواز کبھی استعمال نہ کریں"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"دستی: منتخب کریں کہ کون سا فارمیٹس استعمال کرنا ہے"</string>
+    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"دستی: دستیاب فارمیٹس سے دستی طور پر فارمیٹس منتخب کریں"</string>
+    <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"غیر تعاون یافتہ آواز کے فارمیٹ کو فعال کرنا ہے؟"</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"آپ کا منسلک کردہ آڈیو آلہ اس فارمیٹ کے لیے سپورٹ کی رپورٹ نہیں دیتا ہے۔ یہ آپ کے آلے سے تیز شور یا پاپس جیسے غیر متوقع رویوں کا سبب بن سکتا ہے۔"</string>
+    <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"منسوخ کریں"</string>
+    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"بہر حال تبدیل کریں"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"تعاون یافتہ فارمیٹس"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"غیر تعاون یافتہ فارمیٹس"</string>
     <string name="display_category_title" msgid="247804007525046312">"ڈسپلے"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"جدید ترین ڈسپلے کی ترتیبات"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -167,44 +173,25 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"عام طور پر 0000 یا 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"جوڑا بنائیں"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"منسوخ کریں"</string>
-    <!-- no translation found for bluetooth_device_connected_toast (1896195197089204806) -->
-    <skip />
-    <!-- no translation found for bluetooth_device_disconnected_toast (7459239447363156499) -->
-    <skip />
-    <!-- no translation found for connected_devices_slice_pref_title (6761921505544005991) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_title (3808904783456336104) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_title (3906746631391295717) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_summary (9017044450625172698) -->
-    <skip />
-    <!-- no translation found for bluetooth_pair_accessory (5508750142754420984) -->
-    <skip />
-    <!-- no translation found for bluetooth_known_devices_category (6895470515631452961) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_category (5817814488268307170) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_entry_title (6699700335229570038) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_action_title (7715342395313781643) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_confirm (4769958536295137386) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_action_title (1135513009197728480) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_confirm (1445977623973613581) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename_action_title (4200419902722729907) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename (7791922876280337194) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_action_title (2351140076684719196) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_confirm (5175414848391021666) -->
-    <skip />
-    <!-- no translation found for bluetooth_serial_number_label (6639294603220209971) -->
-    <skip />
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s منسلک ہے"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s غیر منسلک کر دیا گیا"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"ریموٹس اور لوازمات"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"بلوٹوتھ"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"بلوٹوتھ آف کریں"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"بلوٹوتھ آف ہونے کے دوران آپ اپنے ریموٹ سے Google اسسٹنٹ تک رسائی حاصل نہیں کر سکیں گے۔"</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"لوازمات کا جوڑا بنائیں"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"لوازمات"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"ریموٹ کنٹرول"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"ریموٹ کنٹرول کی ترتیبات"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"منسلک کریں"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$s سے منسلک ہوں"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"غیر منسلک کریں"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s سے غیر منسلک کریں"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"نام تبدیل کریں"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"اپنے منسلک آلہ کا نام تبدیل کریں"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"بھول جائیں"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$s کو بھول جائيں"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"بلوٹوتھ پتہ"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"منسلک ہے"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"غیر منسلک ہے"</string>
     <string name="send_feedback" msgid="936698637869795473">"تاثرات بھیجیں"</string>
@@ -304,6 +291,10 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"کم ملاحظہ کریں"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"دستیاب نیٹ ورکس"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"نیا نیٹ ورک شامل کریں"</string>
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect (2869989555950644533) -->
+    <skip />
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect_info_summary (4564538591168691865) -->
+    <skip />
     <string name="security_type" msgid="2297615092250075696">"سیکیورٹی کی قسم"</string>
     <string name="other_network" msgid="5299289104661858596">"دیگر نیٹ ورک…"</string>
     <string name="skip_network" msgid="3095529090560000692">"نظر انداز کریں"</string>
@@ -331,6 +322,8 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"پراکسی کی ترتیبات درست نہیں ہیں"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP کی ترتیبات درست نہیں ہیں"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> ایک محفوظ کردہ نیٹ ورک ہے"</string>
+    <!-- no translation found for title_wifi_scan_qr_code (7485605625055717874) -->
+    <skip />
     <string name="wifi_action_try_again" msgid="8920677153891141148">"دوبارہ کوشش کریں"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"دستیاب نیٹ ورکس دیکھیں"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g> سے مربوط ہو رہا ہے"</string>
@@ -338,6 +331,10 @@
     <string name="wifi_connect" msgid="2206086690065242121">"مربوط کریں"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"نیٹ ورک کو بھول جائیں"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"محفوظ کردہ پاس ورڈ سمیت، یہ اس نیٹ ورک سے منسلک کرنے کیلئے استعمال کردہ معلومات کو صاف کر دیتا ہے۔"</string>
+    <!-- no translation found for wifi_scan_qr_code_description (2375814285190385839) -->
+    <skip />
+    <!-- no translation found for wifi_scan_qr_code_back_description (8830716278283379280) -->
+    <skip />
     <string name="wifi_action_ok" msgid="6257483288047397880">"ٹھیک ہے"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"جاری رکھیں"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"نیٹ ورک تبدیل کریں"</string>
@@ -823,8 +820,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"اطلاع تک رسائی"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"کسی انسٹال کردہ ایپ نے اطلاع تک رسائی کی درخواست نہیں کی ہے۔"</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"یہ ایپس رابطوں کے نام اور آپ کو موصول ہونے والے پیغامات کے متن جیسی ذاتی معلومات سمیت سبھی اطلاعات پڑھنے کے قابل ہوں گی۔ یہ ایپس اطلاعات برخاست کرنے یا ان میں موجود کارروائی کے بٹنز کو محرک کرنے کے بھی قابل ہوں گی۔"</string>
-    <!-- no translation found for default_notification_access_package_summary (1354775994781420222) -->
-    <skip />
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"سسٹم کے ذریعے درکار ہے"</string>
     <string name="directory_access" msgid="7338555825237012006">"ڈائرکٹری تک رسائی"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"ان ایپس کو مخصوص ڈائرکٹریز تک رسائی کی اجازت ہے۔"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

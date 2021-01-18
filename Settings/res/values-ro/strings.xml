@@ -124,11 +124,19 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"Notă: opțiunea Auto ar putea să nu funcționeze dacă dispozitivul nu raportează corect formatele acceptate."</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Auto: utilizați formatele acceptate (recomandat)"</string>
+    <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos cu Dolby TrueHD"</string>
+    <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
+    <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos cu Dolby Digital Plus"</string>
+    <string name="surround_sound_auto_info" msgid="4829346839183591680">"Notă: opțiunea Automat poate să nu funcționeze dacă dispozitivul nu raportează corect formatele acceptate"</string>
+    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Automat: folosiți formate acceptate de dispozitiv"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Fără: nu utilizați niciodată sunet surround"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manual: selectați formatele de utilizat"</string>
+    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Manual: alegeți manual formate dintre formatele disponibile"</string>
+    <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Activați formatul audio incompatibil?"</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Dispozitivul audio conectat nu acceptă acest format. Aceasta poate duce la un comportament neașteptat, cum ar fi zgomote puternice sau pocnituri ale dispozitivului."</string>
+    <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Anulați"</string>
+    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"Modificați oricum"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"FORMATE ACCEPTATE"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"FORMATE NEACCEPTATE"</string>
     <string name="display_category_title" msgid="247804007525046312">"Afișare"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Setări de afișare avansate"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -286,6 +294,10 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Afișați mai puține"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Rețele disponibile"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Adăugați o rețea nouă"</string>
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect (2869989555950644533) -->
+    <skip />
+    <!-- no translation found for wifi_setting_other_options_add_network_via_easyconnect_info_summary (4564538591168691865) -->
+    <skip />
     <string name="security_type" msgid="2297615092250075696">"Tip de securitate"</string>
     <string name="other_network" msgid="5299289104661858596">"Altă rețea…"</string>
     <string name="skip_network" msgid="3095529090560000692">"Omiteți"</string>
@@ -313,6 +325,8 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Setările proxy nu sunt valide"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Setările IP nu sunt valide"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> este o rețea salvată"</string>
+    <!-- no translation found for title_wifi_scan_qr_code (7485605625055717874) -->
+    <skip />
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Încercați din nou"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Afișați rețelele disponibile"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Se conectează la <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -320,6 +334,10 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Conectați-vă"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Eliminați rețeaua"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Vor fi șterse informațiile utilizate pentru conectarea la această rețea, inclusiv parolele salvate"</string>
+    <!-- no translation found for wifi_scan_qr_code_description (2375814285190385839) -->
+    <skip />
+    <!-- no translation found for wifi_scan_qr_code_back_description (8830716278283379280) -->
+    <skip />
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Continuați"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Schimbați rețeaua"</string>
