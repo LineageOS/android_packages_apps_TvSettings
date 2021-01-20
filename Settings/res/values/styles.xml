@@ -92,6 +92,10 @@
         <item name="android:textSize">@dimen/text_size_description</item>
     </style>
 
+    <style name="BluetoothActionTitleStyle" parent="Widget.Leanback.GuidanceTitleStyle">
+        <item name="android:maxLines">3</item>
+    </style>
+
     <style name="HintText">
         <item name="android:fontFamily">@string/font_sans_serif_thin</item>
         <item name="android:textColor">@color/add_accessory_hint_text_color</item>
