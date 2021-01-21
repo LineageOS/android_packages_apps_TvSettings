@@ -92,4 +92,8 @@
         <item name="guidanceIconStyle">@style/GuidanceIconStyle</item>
         <item name="guidedStepKeyline">@string/guidedstep_keyline_two_panel</item>
     </style>
+
+    <style name="BluetoothActionGuidedStepTheme" parent="Theme.Leanback.GuidedStep">
+        <item name="guidanceTitleStyle">@style/BluetoothActionTitleStyle</item>
+    </style>
 </resources>
