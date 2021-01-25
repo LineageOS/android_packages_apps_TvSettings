@@ -16,7 +16,7 @@
 
 package com.android.tv.settings.privacy;
 
-import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
+import static com.android.tv.settings.overlay.FlavorUtils.ALL_FLAVORS_MASK;
 
 import androidx.fragment.app.Fragment;
 
@@ -35,6 +35,6 @@ public class NotificationAccessActivity extends TvSettingsActivity {
 
     @Override
     protected int getAvailableFlavors() {
-        return X_EXPERIENCE_FLAVORS_MASK;
+        return ALL_FLAVORS_MASK;
     }
 }

@@ -122,11 +122,19 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"Shënim: Opsioni \"Automatike\" mund të mos funksionojë nëse pajisja jote nuk i raporton saktë formatet e saj të mbështetura."</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automatike: Përdor formatet që pajisja jote raporton se mbështet (rekomandohet)"</string>
+    <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos me Dolby TrueHD"</string>
+    <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
+    <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos me Dolby Digital Plus"</string>
+    <string name="surround_sound_auto_info" msgid="4829346839183591680">"Shënim. Opsioni \"Automatik\" mund të mos funksionojë nëse pajisja nuk i raporton saktë formatet e mbështetura."</string>
+    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Automatik: Përdor formatet e raportuara të pajisjes"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Asnjë: Asnjëherë mos përdor tingull rrethues"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuale: Zgjidh se cilat formate do të përdorësh"</string>
+    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Manual: Zgjidh formatet në mënyrë manuale nga formatet e ofruara"</string>
+    <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Po aktivizon një format të pambështetur të tingullit?"</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Pajisja audio e lidhur nuk raporton mbështetjen për këtë format. Kjo mund të shkaktojë sjellje të papritura si p.sh. zhurma të larta ose kërcitje nga pajisja jote."</string>
+    <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Anulo"</string>
+    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"Ndrysho gjithsesi"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"FORMATET E MBËSHTETURA"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"FORMATET E PAMBËSHTETURA"</string>
     <string name="display_category_title" msgid="247804007525046312">"Ekrani"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Cilësimet e përparuara të ekranit"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -180,7 +188,7 @@
     <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"Shkëput"</string>
     <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"Shkëpute nga %1$s"</string>
     <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"Riemërto"</string>
-    <string name="bluetooth_rename" msgid="7791922876280337194">"Riemërto pajisjen tënde"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"Riemërto pajisjen tënde të lidhur"</string>
     <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"Harro"</string>
     <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"Harro %1$s"</string>
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Adresa e Bluetooth-it"</string>
@@ -466,7 +474,7 @@
     <string name="location_services" msgid="551503779736382878">"Shërbimet e vendndodhjes"</string>
     <string name="on" msgid="4899322147062342542">"Aktive"</string>
     <string name="off" msgid="3127416478888499352">"Joaktive"</string>
-    <string name="google_location_services_title" msgid="6304196603522909239">"Shërbimet e vendndodhjes së Google"</string>
+    <string name="google_location_services_title" msgid="6304196603522909239">"Shërbimet e vendndodhjes të Google"</string>
     <string name="third_party_location_services_title" msgid="2826218400381676508">"Shërbimet e vendndodhjes së palës së tretë"</string>
     <string name="location_reporting" msgid="3552501333650895634">"Raportimi i vendndodhjes"</string>
     <string name="location_history" msgid="4055660203090513120">"Historiku i vendndodhjeve"</string>

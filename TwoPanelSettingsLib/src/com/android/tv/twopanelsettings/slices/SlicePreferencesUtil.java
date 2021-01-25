@@ -69,7 +69,7 @@ import java.util.List;
 public final class SlicePreferencesUtil {
 
     static Preference getPreference(SliceItem item, ContextThemeWrapper contextThemeWrapper,
-            String className) {
+            String className, boolean isTwoPanel) {
         Preference preference = null;
         if (item == null) {
             return null;
@@ -177,7 +177,7 @@ public final class SlicePreferencesUtil {
                 boolean isIconNeedToBeProcessed =
                         SlicePreferencesUtil.isIconNeedsToBeProcessed(item);
                 Drawable iconDrawable = icon.loadDrawable(contextThemeWrapper);
-                if (isIconNeedToBeProcessed) {
+                if (isIconNeedToBeProcessed && isTwoPanel) {
                     preference.setIcon(IconUtil.getCompoundIcon(contextThemeWrapper, iconDrawable));
                 } else {
                     preference.setIcon(iconDrawable);

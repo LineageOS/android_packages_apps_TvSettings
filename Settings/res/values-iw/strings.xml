@@ -20,10 +20,8 @@
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"הגדרות"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"רשת"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"פרופיל מוגבל"</string>
-    <!-- no translation found for general_action_yes (1303080504548165355) -->
-    <skip />
-    <!-- no translation found for general_action_no (674735073031386948) -->
-    <skip />
+    <string name="general_action_yes" msgid="1303080504548165355">"כן"</string>
+    <string name="general_action_no" msgid="674735073031386948">"לא"</string>
     <string name="action_on_title" msgid="1074972820237738324">"הפעלה"</string>
     <string name="action_off_title" msgid="3598665702863436597">"כיבוי"</string>
     <string name="action_on_description" msgid="9146557891514835767">"פועל"</string>
@@ -128,11 +126,19 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"הערה: ייתכן שהאפשרות להגדרה אוטומטית לא תפעל אם המכשיר שלך לא מדווח כראוי על הפורמטים הנתמכים שלו."</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"אוטומטי: שימוש בפורמטים המדווחים כנתמכים על ידי המכשיר (מומלץ)"</string>
+    <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos עם Dolby TrueHD"</string>
+    <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
+    <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos עם Dolby Digital Plus"</string>
+    <string name="surround_sound_auto_info" msgid="4829346839183591680">"הערה: ייתכן שהאפשרות \'אוטומטי\' לא תפעל אם המכשיר שלך לא מדווח כראוי על הפורמטים הנתמכים שלו."</string>
+    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"אוטומטי: שימוש בפורמטים המדווחים על ידי המכשיר"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"ללא: אל תשתמש אף פעם בצליל סראונד"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"ידני: בחירה בפורמטים שבהם ייעשה שימוש"</string>
+    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"ידני: בחירה ידנית של פורמטים מתוך הפורמטים הזמינים"</string>
+    <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"להפעיל פורמט צלילים שאינו נתמך?"</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"התקן האודיו המחובר לא דיווח על תמיכה בפורמט הזה. הדבר עלול להוביל להתנהגות בלתי צפויה, כמו חריקות או רעשים רמים מההתקן שלך."</string>
+    <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"ביטול"</string>
+    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"אני רוצה לשנות בכל זאת"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"פורמטים נתמכים"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"פורמטים שלא נתמכים"</string>
     <string name="display_category_title" msgid="247804007525046312">"מסך"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"הגדרות תצוגה מתקדמות"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -171,44 +177,25 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"בדרך כלל 0000 או 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"התאם"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"ביטול"</string>
-    <!-- no translation found for bluetooth_device_connected_toast (1896195197089204806) -->
-    <skip />
-    <!-- no translation found for bluetooth_device_disconnected_toast (7459239447363156499) -->
-    <skip />
-    <!-- no translation found for connected_devices_slice_pref_title (6761921505544005991) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_title (3808904783456336104) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_title (3906746631391295717) -->
-    <skip />
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_summary (9017044450625172698) -->
-    <skip />
-    <!-- no translation found for bluetooth_pair_accessory (5508750142754420984) -->
-    <skip />
-    <!-- no translation found for bluetooth_known_devices_category (6895470515631452961) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_category (5817814488268307170) -->
-    <skip />
-    <!-- no translation found for bluetooth_official_remote_entry_title (6699700335229570038) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_action_title (7715342395313781643) -->
-    <skip />
-    <!-- no translation found for bluetooth_connect_confirm (4769958536295137386) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_action_title (1135513009197728480) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnect_confirm (1445977623973613581) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename_action_title (4200419902722729907) -->
-    <skip />
-    <!-- no translation found for bluetooth_rename (7791922876280337194) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_action_title (2351140076684719196) -->
-    <skip />
-    <!-- no translation found for bluetooth_forget_confirm (5175414848391021666) -->
-    <skip />
-    <!-- no translation found for bluetooth_serial_number_label (6639294603220209971) -->
-    <skip />
+    <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s מחובר"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s מנותק"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"מכשירי שלט רחוק ואביזרים"</string>
+    <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"השבתת Bluetooth"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"כאשר Bluetooth כבוי, לא תהיה לך גישה אל Google Assistant מהשלט הרחוק."</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"התאמת האביזר"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"אביזרים"</string>
+    <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"שלט רחוק"</string>
+    <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"הגדרות לשלט רחוק"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"התחברות"</string>
+    <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"חיבור אל %1$s"</string>
+    <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"ניתוק"</string>
+    <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"התנתקות מ-%1$s"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"שינוי שם"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"שינוי שם למכשיר המחובר"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"אפשר לשכוח"</string>
+    <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"לשכוח את %1$s"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"כתובת Bluetooth"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"מחובר"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"מנותק"</string>
     <string name="send_feedback" msgid="936698637869795473">"שליחת משוב"</string>
@@ -837,8 +824,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"גישה להודעות"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"אין אפליקציות מותקנות שביקשו גישה להודעות."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"אפליקציות אלה יוכלו לקרוא את כל ההודעות, כולל מידע אישי כמו שמות של אנשי קשר והודעות טקסט שתקבל. הן גם יוכלו לבטל הודעות או להפעיל לחצני פעולה שהן כוללות."</string>
-    <!-- no translation found for default_notification_access_package_summary (1354775994781420222) -->
-    <skip />
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"ההגדרה הזו נדרשת על ידי המערכת"</string>
     <string name="directory_access" msgid="7338555825237012006">"גישה לספרייה"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"לאפליקציות אלה יש הרשאת גישה לספריות מסוימות."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>

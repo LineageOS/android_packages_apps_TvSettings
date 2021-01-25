@@ -122,11 +122,19 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"Hinweis: Die Option \"Automatisch\" funktioniert möglicherweise nicht, wenn dein Gerät die unterstützten Formate nicht korrekt meldet."</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automatisch: Die Formate verwenden, die von deinem Gerät als unterstützt gemeldet werden (empfohlen)"</string>
+    <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos mit Dolby TrueHD"</string>
+    <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
+    <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos mit Dolby Digital Plus"</string>
+    <string name="surround_sound_auto_info" msgid="4829346839183591680">"„Automatisch“ funktioniert ggf. nicht, wenn das Gerät die unterstützten Formate nicht korrekt meldet."</string>
+    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Automatisch: Vom Gerät gemeldete Formate verwenden"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Keine: Nie Surround-Sound verwenden"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuell: Zu verwendende Formate auswählen"</string>
+    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Manuell: Manuell aus den verfügbaren Formaten auswählen"</string>
+    <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Nicht unterstütztes Tonformat aktivieren?"</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Verbundenes Audiogerät meldet nicht, dass es das Format unterstützt. Das kann zu unerwartetem Verhalten (laute Geräusche/Knacken des Geräts) führen."</string>
+    <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Abbrechen"</string>
+    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"Trotzdem ändern"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"UNTERSTÜTZTE FORMATE"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"NICHT UNTERSTÜTZTE FORMATE"</string>
     <string name="display_category_title" msgid="247804007525046312">"Display"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Erweiterte Displayeinstellungen"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -499,7 +507,7 @@
     <string name="captions_edgecolor" msgid="2779925179084237336">"Rahmenfarbe"</string>
     <string name="captions_backgroundshow" msgid="1080183686470477645">"Hintergrund anzeigen"</string>
     <string name="captions_backgroundcolor" msgid="2056944109914399253">"Hintergrundfarbe"</string>
-    <string name="captions_backgroundopacity" msgid="1850126438162000027">"Hintergrund­­transparenz"</string>
+    <string name="captions_backgroundopacity" msgid="1850126438162000027">"Hintergrund­­­transparenz"</string>
     <string name="captioning_preview_text" msgid="3034147586392743237">"Untertitel sehen so aus."</string>
     <string name="captions_textopacity" msgid="6055602491649526307">"Textdeckkraft"</string>
     <string name="captions_windowshow" msgid="6002072054703167886">"Fenster anzeigen"</string>
@@ -799,7 +807,7 @@
     <string name="high_power_on" msgid="3120162683093360951">"Energieverbrauch wird nicht optimiert"</string>
     <string name="high_power_off" msgid="3588854600942236231">"Energieverbrauch wird optimiert"</string>
     <string name="high_power_system" msgid="6263052626979462255">"\"Optimierter Energieverbrauch\" nicht verfügbar"</string>
-    <string name="manage_notification_access_title" msgid="8659254371564990084">"Benachrichtigungszugriff"</string>
+    <string name="manage_notification_access_title" msgid="8659254371564990084">"Benachrichtigungs­zugriff"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"Keine installierte App hat Benachrichtigungszugriff angefordert."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Bei Aktivierung können diese Apps alle Benachrichtigungen lesen, also auch persönliche Informationen wie Kontaktnamen und eingehende Nachrichten, sowie Benachrichtigungen schließen oder in ihnen enthaltene Aktionen auslösen."</string>
     <string name="default_notification_access_package_summary" msgid="1354775994781420222">"Vom System angefordert"</string>

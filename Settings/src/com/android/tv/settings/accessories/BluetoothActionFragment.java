@@ -28,6 +28,8 @@ import androidx.leanback.app.GuidedStepFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
+import com.android.tv.settings.R;
+
 import java.util.List;
 
 /**
@@ -152,6 +154,11 @@ public class BluetoothActionFragment extends GuidedStepFragment {
             listener.onText(key, action.getTitle().toString());
         }
         return action.getId();
+    }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.BluetoothActionGuidedStepTheme;
     }
 
     private String getTitleImpl() {
