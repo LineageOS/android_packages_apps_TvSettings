@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -28,6 +30,7 @@ import androidx.preference.PreferenceGroup;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 /**
  * This Fragment is responsible for allowing the user to express a preference for matching the
@@ -38,9 +41,10 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
 
     private static final String KEY_MATCH_CONTENT_FRAME_RATE = "match_content_frame_rate_option";
 
-    private static final String KEY_MATCH_CONTENT_FRAME_RATE_AUTO = "match_content_frame_rate_auto";
-    private static final String KEY_MATCH_CONTENT_FRAME_RATE_ALWAYS =
-            "match_content_frame_rate_always";
+    private static final String KEY_MATCH_CONTENT_FRAME_RATE_SEAMLESS =
+            "match_content_frame_rate_seamless";
+    private static final String KEY_MATCH_CONTENT_FRAME_RATE_NON_SEAMLESS =
+            "match_content_frame_rate_non_seamless";
     private static final String KEY_MATCH_CONTENT_FRAME_RATE_NEVER =
             "match_content_frame_rate_never";
 
@@ -61,6 +65,10 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.match_content_frame_rate, null);
 
+        // Do not show sidebar info texts in case of 1 panel settings.
+        if (FlavorUtils.getFlavor(getContext()) != FLAVOR_CLASSIC) {
+            createInfoFragments();
+        }
         mCurrentPreferenceKey = preferenceKeyFromSetting();
         onPreferenceTreeClick(getRadioPreference(mCurrentPreferenceKey));
     }
@@ -79,6 +87,7 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
         super.onResume();
     }
 
+
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         final String key = preference.getKey();
@@ -92,14 +101,14 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
 
             if (key != mCurrentPreferenceKey) {
                 switch (key) {
-                    case KEY_MATCH_CONTENT_FRAME_RATE_AUTO: {
+                    case KEY_MATCH_CONTENT_FRAME_RATE_SEAMLESS: {
                         Settings.Secure.putInt(
                                 getContext().getContentResolver(),
                                 Settings.Secure.MATCH_CONTENT_FRAME_RATE,
                                 Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY);
                         break;
                     }
-                    case KEY_MATCH_CONTENT_FRAME_RATE_ALWAYS: {
+                    case KEY_MATCH_CONTENT_FRAME_RATE_NON_SEAMLESS: {
                         Settings.Secure.putInt(
                                 getContext().getContentResolver(),
                                 Settings.Secure.MATCH_CONTENT_FRAME_RATE,
@@ -133,14 +142,28 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
                 return KEY_MATCH_CONTENT_FRAME_RATE_NEVER;
             }
             case (Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY): {
-                return KEY_MATCH_CONTENT_FRAME_RATE_AUTO;
+                return KEY_MATCH_CONTENT_FRAME_RATE_SEAMLESS;
             }
             case (Settings.Secure.MATCH_CONTENT_FRAMERATE_ALWAYS): {
-                return KEY_MATCH_CONTENT_FRAME_RATE_ALWAYS;
+                return KEY_MATCH_CONTENT_FRAME_RATE_NON_SEAMLESS;
             }
             default:
                 throw new IllegalArgumentException("Unknown match content frame rate pref "
                         + "value in stored settings");
         }
+    }
+
+    private void createInfoFragments() {
+        Preference seamlessPreference = findPreference(KEY_MATCH_CONTENT_FRAME_RATE_SEAMLESS);
+        seamlessPreference.setFragment(
+                MatchContentFrameRateInfo.SeamlessInfoFragment.class.getName());
+
+        Preference nonSeamlessPreference = findPreference(
+                KEY_MATCH_CONTENT_FRAME_RATE_NON_SEAMLESS);
+        nonSeamlessPreference.setFragment(
+                MatchContentFrameRateInfo.NonSeamlessInfoFragment.class.getName());
+
+        Preference neverPreference = findPreference(KEY_MATCH_CONTENT_FRAME_RATE_NEVER);
+        neverPreference.setFragment(MatchContentFrameRateInfo.NeverInfoFragment.class.getName());
     }
 }
