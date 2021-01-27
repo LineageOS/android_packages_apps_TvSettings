@@ -59,6 +59,12 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
     static final String VAL_SURROUND_SOUND_NEVER = "never";
     static final String VAL_SURROUND_SOUND_MANUAL = "manual";
 
+    static final int[] SURROUND_SOUND_DISPLAY_ORDER = {
+            AudioFormat.ENCODING_AC3, AudioFormat.ENCODING_E_AC3, AudioFormat.ENCODING_DOLBY_TRUEHD,
+            AudioFormat.ENCODING_E_AC3_JOC, AudioFormat.ENCODING_DOLBY_MAT,
+            AudioFormat.ENCODING_DTS, AudioFormat.ENCODING_DTS_HD
+    };
+
     private Map<Integer, Boolean> mFormats;
     private Map<Integer, Boolean> mReportedFormats;
     private List<AbstractPreferenceController> mPreferenceControllers;
@@ -121,41 +127,42 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
                 KEY_UNSUPPORTED_SURROUND_SOUND);
         getPreferenceScreen().addPreference(mUnsupportedFormatsPreferenceCategory);
 
-        for (Map.Entry<Integer, Boolean> format : mFormats.entrySet()) {
-            int formatId = format.getKey();
-            boolean enabled = format.getValue();
+        for (int formatId : SURROUND_SOUND_DISPLAY_ORDER) {
+            if (mFormats.containsKey(formatId)) {
+                boolean enabled = mFormats.get(formatId);
 
-            // If the format is not a known surround sound format, do not create a preference
-            // for it.
-            int titleId = getFormatDisplayResourceId(formatId);
-            if (titleId == -1) {
-                continue;
-            }
-            final SwitchPreference pref = new SwitchPreference(getContext()) {
-                @Override
-                public void onBindViewHolder(PreferenceViewHolder holder) {
-                    super.onBindViewHolder(holder);
-                    // Enabling the view will ensure that the preference is focusable even if it
-                    // the preference is disabled. This allows the user to scroll down over the
-                    // disabled surround sound formats and see them all.
-                    holder.itemView.setEnabled(true);
+                // If the format is not a known surround sound format, do not create a preference
+                // for it.
+                int titleId = getFormatDisplayResourceId(formatId);
+                if (titleId == -1) {
+                    continue;
                 }
-            };
-            pref.setTitle(titleId);
-            pref.setKey(KEY_SURROUND_SOUND_FORMAT_PREFIX + formatId);
-            pref.setChecked(enabled);
-            if (getEntryId(formatId) != -1) {
-                pref.setOnPreferenceClickListener(
-                        preference -> {
-                            logToggleInteracted(getEntryId(formatId), pref.isChecked());
-                            return false;
-                        }
-                );
-            }
-            if (mReportedFormats.containsKey(formatId)) {
-                mSupportedFormatsPreferenceCategory.addPreference(pref);
-            } else {
-                mUnsupportedFormatsPreferenceCategory.addPreference(pref);
+                final SwitchPreference pref = new SwitchPreference(getContext()) {
+                    @Override
+                    public void onBindViewHolder(PreferenceViewHolder holder) {
+                        super.onBindViewHolder(holder);
+                        // Enabling the view will ensure that the preference is focusable even if it
+                        // the preference is disabled. This allows the user to scroll down over the
+                        // disabled surround sound formats and see them all.
+                        holder.itemView.setEnabled(true);
+                    }
+                };
+                pref.setTitle(titleId);
+                pref.setKey(KEY_SURROUND_SOUND_FORMAT_PREFIX + formatId);
+                pref.setChecked(enabled);
+                if (getEntryId(formatId) != -1) {
+                    pref.setOnPreferenceClickListener(
+                            preference -> {
+                                logToggleInteracted(getEntryId(formatId), pref.isChecked());
+                                return false;
+                            }
+                    );
+                }
+                if (mReportedFormats.containsKey(formatId)) {
+                    mSupportedFormatsPreferenceCategory.addPreference(pref);
+                } else {
+                    mUnsupportedFormatsPreferenceCategory.addPreference(pref);
+                }
             }
         }
     }
