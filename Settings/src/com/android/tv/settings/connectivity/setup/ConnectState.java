@@ -130,6 +130,7 @@ public class ConnectState implements State {
             mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(
                     Context.CONNECTIVITY_SERVICE);
 
+            mUserChoiceInfo = ViewModelProviders.of(getActivity()).get(UserChoiceInfo.class);
             mWifiConfiguration = WifiSecurityHelper.getConfig(getActivity());
 
             mStateMachine = ViewModelProviders
