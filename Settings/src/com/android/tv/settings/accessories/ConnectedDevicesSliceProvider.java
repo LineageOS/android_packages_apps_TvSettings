@@ -83,7 +83,6 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                 @Override
                 public void onServiceConnected(ComponentName className, IBinder service) {
                     mBtDeviceServiceBinder = (BluetoothDevicesService.LocalBinder) service;
-                    mBtDeviceServiceBound = true;
                     mBtDeviceServiceBinder.addListener(ConnectedDevicesSliceProvider.this);
                     getContext().getContentResolver()
                             .notifyChange(ConnectedDevicesSliceUtils.GENERAL_SLICE_URI, null);
@@ -94,7 +93,6 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                     if (mBtDeviceServiceBinder != null) {
                         mBtDeviceServiceBinder.removeListener(ConnectedDevicesSliceProvider.this);
                     }
-                    mBtDeviceServiceBound = false;
                     mBtDeviceServiceBinder = null;
                 }
             };
@@ -133,11 +131,11 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                 Log.d(TAG, "Slice pinned: " + sliceUri);
             }
             Context context = getContext();
-            if (!mBtDeviceServiceBound) {
-                context.bindService(
-                        new Intent(context, AccessoryUtils.getBluetoothDeviceServiceClass()),
-                        mBtDeviceServiceConnection,
-                        Context.BIND_AUTO_CREATE);
+            if (!mBtDeviceServiceBound && context.bindService(
+                    new Intent(context, AccessoryUtils.getBluetoothDeviceServiceClass()),
+                    mBtDeviceServiceConnection,
+                    Context.BIND_AUTO_CREATE)) {
+                mBtDeviceServiceBound = true;
             }
             if (!mPinnedUris.containsKey(sliceUri)) {
                 mPinnedUris.put(sliceUri, 0);
@@ -175,7 +173,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                     mPinnedUris.remove(sliceUri);
                 }
             }
-            if (mPinnedUris.isEmpty()) {
+            if (mPinnedUris.isEmpty() && mBtDeviceServiceBound) {
                 context.unbindService(mBtDeviceServiceConnection);
                 mBtDeviceServiceBound = false;
             }
