@@ -31,15 +31,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.collection.ArraySet;
 import androidx.leanback.preference.LeanbackPreferenceDialogFragmentCompat;
-import androidx.leanback.preference.R.attr;
-import androidx.leanback.preference.R.id;
-import androidx.leanback.preference.R.layout;
-import androidx.leanback.preference.R.style;
 import androidx.leanback.widget.VerticalGridView;
 import androidx.preference.DialogPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.MultiSelectListPreference;
 import androidx.recyclerview.widget.RecyclerView.Adapter;
+import com.android.tv.twopanelsettings.R;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -163,15 +160,15 @@ public class LeanbackListPreferenceDialogFragmentCompat extends
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         TypedValue tv = new TypedValue();
-        this.getActivity().getTheme().resolveAttribute(attr.preferenceTheme, tv, true);
+        this.getActivity().getTheme().resolveAttribute(R.attr.preferenceTheme, tv, true);
         int theme = tv.resourceId;
         if (theme == 0) {
-            theme = style.PreferenceThemeOverlayLeanback;
+            theme = R.style.PreferenceThemeOverlayLeanback;
         }
 
         Context styledContext = new ContextThemeWrapper(this.getActivity(), theme);
         LayoutInflater styledInflater = inflater.cloneInContext(styledContext);
-        View view = styledInflater.inflate(layout.leanback_list_preference_fragment, container,
+        View view = styledInflater.inflate(R.layout.leanback_list_preference_fragment, container,
                 false);
         VerticalGridView verticalGridView = (VerticalGridView) view.findViewById(16908298);
         verticalGridView.setWindowAlignment(3);
@@ -180,7 +177,7 @@ public class LeanbackListPreferenceDialogFragmentCompat extends
         verticalGridView.requestFocus();
         CharSequence title = this.mDialogTitle;
         if (!TextUtils.isEmpty(title)) {
-            TextView titleView = (TextView) view.findViewById(id.decor_title);
+            TextView titleView = (TextView) view.findViewById(R.id.decor_title);
             titleView.setText(title);
         }
 
@@ -211,8 +208,8 @@ public class LeanbackListPreferenceDialogFragmentCompat extends
         public ViewHolder(@NonNull View view,
                 @NonNull LeanbackListPreferenceDialogFragmentCompat.OnItemClickListener listener) {
             super(view);
-            this.mWidgetView = (Checkable) view.findViewById(id.button);
-            this.mContainer = (ViewGroup) view.findViewById(id.container);
+            this.mWidgetView = (Checkable) view.findViewById(R.id.button);
+            this.mContainer = (ViewGroup) view.findViewById(R.id.container);
             this.mTitleView = (TextView) view.findViewById(16908310);
             this.mContainer.setOnClickListener(this);
             this.mListener = listener;
@@ -256,7 +253,7 @@ public class LeanbackListPreferenceDialogFragmentCompat extends
         public LeanbackListPreferenceDialogFragmentCompat.ViewHolder onCreateViewHolder(
                 ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            View view = inflater.inflate(layout.leanback_list_preference_item_multi, parent, false);
+            View view = inflater.inflate(R.layout.leanback_list_preference_item_multi, parent, false);
             return new LeanbackListPreferenceDialogFragmentCompat.ViewHolder(view, this);
         }
 
@@ -315,7 +312,7 @@ public class LeanbackListPreferenceDialogFragmentCompat extends
         public LeanbackListPreferenceDialogFragmentCompat.ViewHolder onCreateViewHolder(
                 ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            View view = inflater.inflate(layout.leanback_list_preference_item_single, parent,
+            View view = inflater.inflate(R.layout.leanback_list_preference_item_single, parent,
                     false);
             return new LeanbackListPreferenceDialogFragmentCompat.ViewHolder(view, this);
         }
