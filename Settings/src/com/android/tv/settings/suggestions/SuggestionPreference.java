@@ -28,8 +28,6 @@ import android.view.View;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.suggestions.SuggestionControllerMixinCompat;
 import com.android.tv.settings.R;
 
@@ -39,8 +37,6 @@ import com.android.tv.settings.R;
 public class SuggestionPreference extends Preference {
     public static final String SUGGESTION_PREFERENCE_KEY = "suggestion_pref_key";
     private static final String TAG = "SuggestionPreference";
-    private final MetricsFeatureProvider mMetricsFeatureProvider =
-            new MetricsFeatureProvider();
 
     private final Suggestion mSuggestion;
     private final SuggestionControllerMixinCompat mSuggestionControllerMixin;
@@ -88,9 +84,6 @@ public class SuggestionPreference extends Preference {
                 }
             });
         }
-
-        mMetricsFeatureProvider.action(getContext(), MetricsEvent.ACTION_SHOW_SETTINGS_SUGGESTION,
-                mId);
     }
 
     private void launchSuggestion() {
@@ -98,8 +91,6 @@ public class SuggestionPreference extends Preference {
             mSuggestion.getPendingIntent().send();
             mSuggestionControllerMixin.launchSuggestion(mSuggestion);
             logEntrySelected(TvSettingsEnums.SUGGESTED_SETTINGS);
-            mMetricsFeatureProvider.action(getContext(),
-                    MetricsEvent.ACTION_SETTINGS_SUGGESTION, mId);
         } catch (PendingIntent.CanceledException e) {
             Log.w(TAG, "Failed to start suggestion " + mSuggestion.getTitle());
         }

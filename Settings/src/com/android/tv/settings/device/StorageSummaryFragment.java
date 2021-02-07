@@ -36,7 +36,6 @@ import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.device.storage.MissingStorageFragment;
@@ -345,11 +344,6 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
             refresh();
         }
 
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SETTINGS_STORAGE_CATEGORY;
     }
 
     @Override

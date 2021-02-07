@@ -31,7 +31,6 @@ import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
@@ -58,11 +57,6 @@ public class AccessoriesFragment extends SettingsPreferenceFragment {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.remotes_and_accessories, null);
         mAddAccessory = findPreference(KEY_ADD_ACCESSORY);
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return  MetricsProto.MetricsEvent.BLUETOOTH;
     }
 
     private void updateAccessories() {

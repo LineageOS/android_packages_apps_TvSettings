@@ -38,7 +38,6 @@ import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -157,11 +156,6 @@ public class AccountsFragment extends SettingsPreferenceFragment {
         return SecurityFragment.isRestrictedProfileInEffect(getContext());
     }
 
-    @Override
-    public int getMetricsCategory() {
-        return  MetricsProto.MetricsEvent.ACCOUNTS_MANAGE_ACCOUNTS;
-    }
-
     /**
      * Set up the intent and visibility for the given preference based on the information from
      * AccountManager.
@@ -233,8 +227,4 @@ public class AccountsFragment extends SettingsPreferenceFragment {
         return authImage;
     }
 
-    @Override
-    protected int getPageId() {
-        return TvSettingsEnums.ACCOUNT_CLASSIC;
-    }
 }

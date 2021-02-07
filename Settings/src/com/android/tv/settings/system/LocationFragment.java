@@ -40,7 +40,6 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.location.RecentLocationApps;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -275,11 +274,6 @@ public class LocationFragment extends SettingsPreferenceFragment implements
                     Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
             mAlwaysScan.setChecked(scanAlwaysAvailable == 1);
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.LOCATION;
     }
 
     @Override

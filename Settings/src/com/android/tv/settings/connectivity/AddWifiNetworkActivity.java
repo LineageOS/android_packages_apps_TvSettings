@@ -22,7 +22,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.AdvancedWifiOptionsFlow;
 import com.android.tv.settings.connectivity.setup.ChooseSecurityState;
@@ -142,12 +141,6 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
 
         mStateMachine.setStartState(mEnterSsidState);
         mStateMachine.start(true);
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        // do not log visibility.
-        return MetricsProto.MetricsEvent.ACTION_WIFI_ADD_NETWORK;
     }
 
     @Override

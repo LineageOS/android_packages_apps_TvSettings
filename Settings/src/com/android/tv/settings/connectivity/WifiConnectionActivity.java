@@ -25,7 +25,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.AddStartState;
@@ -219,8 +218,4 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
         updateView(newFragment, movingForward);
     }
 
-    @Override
-    public int getMetricsCategory() {
-        return MetricsEvent.SETTINGS_TV_WIFI_ADD_KNOWN_CATEGORY;
-    }
 }

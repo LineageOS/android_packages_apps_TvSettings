@@ -40,7 +40,6 @@ import androidx.annotation.Keep;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.dream.DreamBackend;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -248,11 +247,6 @@ public class DaydreamFragment extends SettingsPreferenceFragment
         if (dreamNowPref != null) {
             dreamNowPref.setEnabled(mBackend.isEnabled());
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DREAM;
     }
 
     private class PackageReceiver extends BroadcastReceiver {

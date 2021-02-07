@@ -33,7 +33,6 @@ import androidx.annotation.Keep;
 import androidx.leanback.widget.VerticalGridView;
 import androidx.preference.Preference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -100,11 +99,6 @@ public class HelpFragment extends SettingsPreferenceFragment {
             default:
                 return super.onPreferenceTreeClick(preference);
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.ACTION_SETTING_HELP_AND_FEEDBACK;
     }
 
     @Override

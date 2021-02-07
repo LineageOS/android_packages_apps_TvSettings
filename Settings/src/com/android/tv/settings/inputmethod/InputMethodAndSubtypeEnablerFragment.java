@@ -23,7 +23,6 @@ import android.text.TextUtils;
 import androidx.annotation.Keep;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.inputmethod.InputMethodAndSubtypeEnablerManagerCompat;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
@@ -96,10 +95,5 @@ public class InputMethodAndSubtypeEnablerFragment extends SettingsPreferenceFrag
     public void onPause() {
         super.onPause();
         mManager.save(getContext(), this);
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.INPUTMETHOD_SUBTYPE_ENABLER;
     }
 }
