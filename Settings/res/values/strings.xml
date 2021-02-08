@@ -273,16 +273,27 @@
         user that the auto setting may sometimes cause issues. [CHAR LIMIT=135]-->
     <string name="surround_sound_auto_info">Note: The Automatic option may not work if your device
         does not report its supported formats correctly.</string>
-    <!-- Text for a radio button that if selected will cause the device to automatically select
+    <!-- Title for a radio button that if selected will cause the device to automatically select
         an appropriate surround sound format. [CHAR LIMIT=65] -->
-    <string name="surround_sound_auto_summary">Automatic: Use device reported formats</string>
-    <!-- Text for a radio button that if selected will cause the device to never use a surround
+    <string name="surround_sound_auto_title">Automatic: Use device reported formats</string>
+    <!-- Summary for a radio button that if selected will cause the device to automatically select
+        an appropriate surround sound format. [CHAR LIMIT=300] -->
+    <string name="surround_sound_auto_summary">When selected, the system will allow apps to select
+        any sound format that is supported by your device chain. Apps may choose a format that is
+        not the highest-quality format.</string>
+    <!-- Title for a radio button that if selected will cause the device to never use a surround
        sound format. [CHAR LIMIT=50] -->
-    <string name="surround_sound_none_summary">None: Never use surround sound</string>
-    <!-- Text for a radio button that if selected will allow the user to manually select surround
+    <string name="surround_sound_none_title">None: Never use surround sound</string>
+    <!-- Title for a radio button that if selected will allow the user to manually select surround
         sound formats. [CHAR LIMIT=87] -->
-    <string name="surround_sound_manual_summary">Manual: Choose formats manually from available
+    <string name="surround_sound_manual_title">Manual: Choose formats manually from available
         formats</string>
+    <!-- Summary for a radio button that if selected will allow the user to manually select surround
+        sound formats. [CHAR LIMIT=300] -->
+    <string name="surround_sound_manual_summary">When selected, you can manually disable sound
+        formats that are supported by your device chain that cause problems with playback. Sound
+        formats not supported by your device chain can be enabled. In some cases apps may choose a
+        format that is not the highest-quality format.</string>
     <!-- Title for warning dialog that is shown when user enables an unsupported surround sound
         format. [CHAR LIMIT=70]-->
     <string name="surround_sound_enable_unsupported_dialog_title">Enabling unsupported sound
