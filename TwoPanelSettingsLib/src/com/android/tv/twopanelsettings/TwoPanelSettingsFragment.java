@@ -239,6 +239,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         removeFragmentAndAddToBackStack(mPrefPanelIdx - 1);
     }
 
+    private void updateAccessibilityTitle(CharSequence title) {
+        getView().findViewById(R.id.two_panel_fragment_container).setAccessibilityPaneTitle(title);
+    }
+
     private void addOrRemovePreferenceFocusedListener(Fragment fragment, boolean isAddingListener) {
         if (fragment == null || !(fragment instanceof LeanbackPreferenceFragmentCompat)) {
             return;
@@ -788,6 +792,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                         ((PreviewableComponentCallback) fragmentToBecomeMainPanel)
                                 .onArriveAtMainPanel(isRTL());
                     } // distanceToScrollToRight being 0 means no actual panel sliding; thus noop.
+                }
+                if (fragmentToBecomeMainPanel instanceof LeanbackPreferenceFragmentCompat) {
+                    updateAccessibilityTitle(
+                            ((LeanbackPreferenceFragmentCompat) fragmentToBecomeMainPanel)
+                                    .getPreferenceScreen().getTitle());
                 }
             }
         });
