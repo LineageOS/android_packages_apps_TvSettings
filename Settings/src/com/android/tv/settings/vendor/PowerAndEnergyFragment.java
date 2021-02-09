@@ -30,9 +30,4 @@ public class PowerAndEnergyFragment extends SettingsPreferenceFragment {
     public void onCreatePreferences(Bundle bundle, String s) {
         setPreferencesFromResource(R.xml.power_and_energy_vendor, null);
     }
-
-    @Override
-    public int getMetricsCategory() {
-        return 0;
-    }
 }

@@ -36,7 +36,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.applications.ServiceListing;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -59,11 +58,6 @@ public class NotificationAccess extends SettingsPreferenceFragment {
     private PackageManager mPackageManager;
     private ServiceListing mServiceListing;
     private IconDrawableFactory mIconDrawableFactory;
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.NOTIFICATION_ACCESS;
-    }
 
     @Override
     public void onAttach(Context context) {

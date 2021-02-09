@@ -35,8 +35,6 @@ import androidx.leanback.widget.GuidedAction;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -79,11 +77,6 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
         final Bundle apBundle = new Bundle();
         accessPoint.saveWifiState(apBundle);
         args.putParcelable(ARG_ACCESS_POINT_STATE, apBundle);
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.WIFI_NETWORK_DETAILS;
     }
 
     @Override
@@ -270,7 +263,6 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
     public static class ForgetNetworkConfirmFragment extends GuidedStepSupportFragment {
 
         private AccessPoint mAccessPoint;
-        private final MetricsFeatureProvider mMetricsFeatureProvider = new MetricsFeatureProvider();
 
         public static void prepareArgs(@NonNull Bundle args, AccessPoint accessPoint) {
             final Bundle apBundle = new Bundle();
@@ -313,8 +305,6 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
                 WifiManager wifiManager =
                         (WifiManager) getContext().getSystemService(Context.WIFI_SERVICE);
                 wifiManager.forget(mAccessPoint.getConfig().networkId, null);
-                mMetricsFeatureProvider.action(
-                        getContext(), MetricsProto.MetricsEvent.ACTION_WIFI_FORGET);
             }
             getFragmentManager().popBackStack();
         }

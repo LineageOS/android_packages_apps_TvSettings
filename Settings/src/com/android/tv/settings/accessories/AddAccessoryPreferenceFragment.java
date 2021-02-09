@@ -36,10 +36,6 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.settingslib.core.instrumentation.Instrumentable;
-import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
-import com.android.settingslib.core.instrumentation.VisibilityLoggerMixin;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.tv.settings.R;
 
@@ -49,18 +45,13 @@ import java.util.List;
  * The screen in TV settings that shows when bluetooth searching/pairing is active.
  */
 public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragmentCompat implements
-        LifecycleOwner, Instrumentable {
+        LifecycleOwner {
 
     private SparseArray<Drawable> mResizedDrawables = new SparseArray<>();
     private final Lifecycle mLifecycle = new Lifecycle(this);
-    private final VisibilityLoggerMixin mVisibilityLoggerMixin;
 
     public AddAccessoryPreferenceFragment() {
         super();
-        // Mixin that logs visibility change for activity.
-        mVisibilityLoggerMixin = new VisibilityLoggerMixin(getMetricsCategory(),
-                new MetricsFeatureProvider());
-        getLifecycle().addObserver(mVisibilityLoggerMixin);
     }
 
     public static AddAccessoryPreferenceFragment newInstance() {
@@ -142,11 +133,6 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
             final int position = (vgv.getSelectedPosition() + 1) % preferenceCount;
             vgv.setSelectedPositionSmooth(position);
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.BLUETOOTH_PAIRING;
     }
 
     @NonNull

@@ -137,11 +137,6 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment {
     }
 
     @Override
-    public int getMetricsCategory() {
-        return 0;
-    }
-
-    @Override
     protected int getPageId() {
         return TvSettingsEnums.DISPLAY_SOUND;
     }

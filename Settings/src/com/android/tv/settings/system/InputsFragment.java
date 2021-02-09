@@ -29,7 +29,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.TwoStatePreference;
 
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
@@ -216,10 +215,5 @@ public class InputsFragment extends SettingsPreferenceFragment {
 
     public static String makeInputPrefKey(TvInputInfo inputInfo) {
         return "InputPref:" + inputInfo.getId();
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsEvent.SETTINGS_TV_INPUTS_CATEGORY;
     }
 }

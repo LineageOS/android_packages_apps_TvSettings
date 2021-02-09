@@ -48,7 +48,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.DeviceInfoUtils;
 import com.android.settingslib.Utils;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
@@ -300,14 +299,10 @@ public class AboutFragment extends SettingsPreferenceFragment {
                 logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_BUILD);
                 // Don't enable developer options for secondary users.
                 if (!mUm.isAdminUser()) {
-                    mMetricsFeatureProvider.action(getContext(),
-                            MetricsEvent.ACTION_SETTINGS_BUILD_NUMBER_PREF);
                     return true;
                 }
 
                 if (mUm.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES)) {
-                    mMetricsFeatureProvider.action(getContext(),
-                            MetricsEvent.ACTION_SETTINGS_BUILD_NUMBER_PREF);
                     return true;
                 }
 
@@ -326,11 +321,6 @@ public class AboutFragment extends SettingsPreferenceFragment {
 //                    Index.getInstance(
 //                            getActivity().getApplicationContext()).updateFromClassNameResource(
 //                            DevelopmentSettings.class.getName(), true, true);
-                        mMetricsFeatureProvider.action(
-                                getContext(), MetricsEvent.ACTION_SETTINGS_BUILD_NUMBER_PREF,
-                                Pair.create(MetricsEvent
-                                        .FIELD_SETTINGS_BUILD_NUMBER_DEVELOPER_MODE_ENABLED,
-                                0));
                     } else if (mDevHitCountdown > 0
                             && mDevHitCountdown < (TAPS_TO_BE_A_DEVELOPER - 2)) {
                         if (mDevHitToast != null) {
@@ -343,11 +333,6 @@ public class AboutFragment extends SettingsPreferenceFragment {
                                         Toast.LENGTH_SHORT);
                         mDevHitToast.show();
                     }
-                    mMetricsFeatureProvider.action(
-                            getContext(), MetricsEvent.ACTION_SETTINGS_BUILD_NUMBER_PREF,
-                            Pair.create(
-                                    MetricsEvent.FIELD_SETTINGS_BUILD_NUMBER_DEVELOPER_MODE_ENABLED,
-                            0));
                 } else if (mDevHitCountdown < 0) {
                     if (mDevHitToast != null) {
                         mDevHitToast.cancel();
@@ -355,11 +340,6 @@ public class AboutFragment extends SettingsPreferenceFragment {
                     mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_already,
                             Toast.LENGTH_LONG);
                     mDevHitToast.show();
-                    mMetricsFeatureProvider.action(
-                            getContext(), MetricsEvent.ACTION_SETTINGS_BUILD_NUMBER_PREF,
-                            Pair.create(
-                                    MetricsEvent.FIELD_SETTINGS_BUILD_NUMBER_DEVELOPER_MODE_ENABLED,
-                            1));
                 }
                 break;
             case KEY_DEVICE_FEEDBACK:
@@ -440,11 +420,6 @@ public class AboutFragment extends SettingsPreferenceFragment {
                 deviceTutorialsPref.setTitle(info.loadLabel(getContext().getPackageManager()));
             }
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsEvent.DEVICEINFO;
     }
 
     @Override

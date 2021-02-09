@@ -26,7 +26,6 @@ import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
@@ -47,11 +46,6 @@ public class SpecialAppAccess extends SettingsPreferenceFragment {
         setPreferencesFromResource(R.xml.special_app_access, null);
 
         updatePreferenceStates();
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SPECIAL_ACCESS;
     }
 
     @VisibleForTesting

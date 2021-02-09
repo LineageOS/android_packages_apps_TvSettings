@@ -37,7 +37,6 @@ import android.view.inputmethod.InputMethodManager;
 import androidx.annotation.Keep;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.inputmethod.InputMethodAndSubtypeUtilCompat;
 import com.android.settingslib.inputmethod.InputMethodPreference;
 import com.android.settingslib.inputmethod.InputMethodSettingValuesWrapper;
@@ -170,11 +169,6 @@ public final class AvailableVirtualKeyboardFragment extends SettingsPreferenceFr
             InputMethodAndSubtypeUtilCompat.removeUnnecessaryNonPersistentPreference(pref);
             pref.updatePreferenceViews();
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.ENABLE_VIRTUAL_KEYBOARDS;
     }
 
     @Override

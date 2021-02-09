@@ -30,9 +30,4 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment {
     public void onCreatePreferences(Bundle bundle, String s) {
         setPreferencesFromResource(R.xml.preview_display_vendor, null);
     }
-
-    @Override
-    public int getMetricsCategory() {
-        return 0;
-    }
 }

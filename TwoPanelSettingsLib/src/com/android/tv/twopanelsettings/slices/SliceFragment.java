@@ -61,7 +61,6 @@ import androidx.slice.SliceItem;
 import androidx.slice.widget.ListContent;
 import androidx.slice.widget.SliceContent;
 
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.tv.twopanelsettings.R;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment.SliceFragmentCallback;
@@ -198,11 +197,6 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         getActivity().getTheme().resolveAttribute(R.attr.preferenceTheme, themeTypedValue, true);
         mContextThemeWrapper = new ContextThemeWrapper(getActivity(), themeTypedValue.resourceId);
 
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsEvent.VIEW_UNKNOWN;
     }
 
     private boolean isUriValid(String uri) {

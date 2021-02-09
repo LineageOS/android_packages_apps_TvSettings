@@ -37,7 +37,6 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
@@ -395,11 +394,6 @@ public class TtsEngineSettingsFragment extends SettingsPreferenceFragment implem
 
     private String getEngineLabel() {
         return getArguments().getString(ARG_ENGINE_LABEL);
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.TTS_ENGINE_SETTINGS;
     }
 
     @Override

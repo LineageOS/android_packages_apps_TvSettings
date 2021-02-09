@@ -132,11 +132,6 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
         return super.onPreferenceTreeClick(preference);
     }
 
-    @Override
-    public int getMetricsCategory() {
-        return 0;
-    }
-
     private String preferenceKeyFromSetting() {
         int matchContentSetting = Settings.Secure.getInt(
                 getContext().getContentResolver(),
