@@ -20,6 +20,9 @@ android_app {
         "Settings/src/**/*.java",
         "Settings/src/**/I*.aidl",
     ],
+     aidl: {
+            local_include_dirs: ["Settings/src"],
+        },
     resource_dirs: ["Settings/res"],
     defaults: ["SettingsLibDefaults"],
     platform_apis: true,
@@ -53,6 +56,9 @@ android_app {
         "Settings/src/**/*.java",
         "Settings/src/**/I*.aidl",
     ],
+     aidl: {
+            local_include_dirs: ["Settings/src"],
+        },
     // Resources in res-twopanel should be applied last so they take precedence
     resource_dirs: [
         "Settings/res",
