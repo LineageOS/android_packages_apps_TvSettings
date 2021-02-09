@@ -684,4 +684,9 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     protected int getPageId() {
         return mCurrentPageId != 0 ? mCurrentPageId : TvSettingsEnums.PAGE_SLICE_DEFAULT;
     }
+
+    @Deprecated
+    public int getMetricsCategory() {
+        return 0;
+    }
 }
