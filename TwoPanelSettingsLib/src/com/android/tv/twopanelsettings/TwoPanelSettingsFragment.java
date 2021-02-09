@@ -159,7 +159,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         try {
             return LeanbackPreferenceFragmentCompat.class.isAssignableFrom(Class.forName(fragment));
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Fragment class not found.", e);
+            Log.e(TAG, "Fragment class not found " + e);
+            return false;
         }
     }
 
@@ -167,7 +168,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         try {
             return InfoFragment.class.isAssignableFrom(Class.forName(fragment));
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Fragment class not found.", e);
+            Log.e(TAG, "Fragment class not found " + e);
+            return false;
         }
     }
 
@@ -191,8 +193,15 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             if (pref instanceof SlicePreference) {
                 return false;
             }
-            startImmersiveFragment(Fragment.instantiate(getActivity(), pref.getFragment(),
-                    pref.getExtras()));
+            try {
+                Fragment immersiveFragment = Fragment.instantiate(getActivity(), pref.getFragment(),
+                        pref.getExtras());
+                startImmersiveFragment(immersiveFragment);
+            } catch (Exception e) {
+                Log.e(TAG, "error trying to instantiate fragment " + e);
+                // return true so it won't be handled by onPreferenceTreeClick in PreferenceFragment
+                return true;
+            }
         }
         return true;
     }
