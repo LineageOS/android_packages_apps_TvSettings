@@ -21,8 +21,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.leanback.preference.LeanbackPreferenceFragmentCompat;
-import androidx.leanback.preference.R;
 import androidx.preference.Preference;
+import com.android.tv.settings.R;
 
 public class SettingsPreferenceUtil {
     private static final String DELIMITER = ":";
