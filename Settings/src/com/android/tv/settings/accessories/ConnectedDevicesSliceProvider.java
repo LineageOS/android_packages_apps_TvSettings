@@ -487,7 +487,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                         ? getString(R.string.bluetooth_connected_status)
                         : getString(R.string.bluetooth_disconnected_status));
         pref.setIcon(IconCompat.createWithResource(
-                context, AccessoryUtils.getImageIdForDevice(device, true)));
+                context, AccessoriesFragment.getImageIdForDevice(device, true)));
         pref.setIconNeedsToBeProcessed(true);
         Uri targetSliceUri = ConnectedDevicesSliceUtils
                 .getDeviceUri(device.getAddress(), device.getAlias());
