@@ -29,7 +29,6 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.accessibility.AccessibilityUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -130,11 +129,6 @@ public class AccessibilityServiceFragment extends SettingsPreferenceFragment imp
         if (mEnablePref != null) {
             mEnablePref.setChecked(enabling);
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.ACCESSIBILITY_SERVICE;
     }
 
     @Override

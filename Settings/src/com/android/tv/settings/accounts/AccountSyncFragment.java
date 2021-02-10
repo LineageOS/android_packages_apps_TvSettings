@@ -43,7 +43,6 @@ import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -424,11 +423,6 @@ public class AccountSyncFragment extends SettingsPreferenceFragment implements
         preference.setTitle(title);
         preference.setKey(authority);
         return preference;
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.ACCOUNTS_ACCOUNT_SYNC;
     }
 
     @Override

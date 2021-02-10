@@ -163,7 +163,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/Theme.SettingsConnectivity" />
+            android:theme="@style/Theme.SettingsConnectivity">
+            <intent-filter>
+                <action android:name="com.android.settings.wifi.action.EDIT_PROXY_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".connectivity.EditIpSettingsActivity"
@@ -171,7 +176,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/Theme.SettingsConnectivity" />
+            android:theme="@style/Theme.SettingsConnectivity">
+            <intent-filter>
+                <action android:name="com.android.settings.wifi.action.EDIT_IP_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".connectivity.AddWifiNetworkActivity"
@@ -1093,6 +1103,13 @@
             android:name=".accessories.BluetoothDevicesService"
             android:exported="false" />
 
+        <service
+            android:name=".service.NetworkService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.tv.settings.NETWORK_SERVICE" />
+            </intent-filter>
+        </service>
         <provider
             android:name=".accessories.ConnectedDevicesSliceProvider"
             android:authorities="com.android.tv.settings.accessories.sliceprovider"
@@ -1116,6 +1133,7 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
+
 
     </application>
 

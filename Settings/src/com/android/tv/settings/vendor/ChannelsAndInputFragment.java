@@ -30,9 +30,4 @@ public class ChannelsAndInputFragment  extends SettingsPreferenceFragment {
     public void onCreatePreferences(Bundle bundle, String s) {
         setPreferencesFromResource(R.xml.channels_and_inputs_vendor, null);
     }
-
-    @Override
-    public int getMetricsCategory() {
-        return 0;
-    }
 }

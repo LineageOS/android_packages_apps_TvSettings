@@ -27,7 +27,6 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.fuelgauge.PowerAllowlistBackend;
 import com.android.tv.settings.R;
@@ -59,11 +58,6 @@ public class HighPower extends SettingsPreferenceFragment implements
                                     info.info.packageName, 0);
                         }
                     });
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.APPLICATIONS_HIGH_POWER_APPS;
-    }
 
     @Override
     public void onAttach(Context context) {

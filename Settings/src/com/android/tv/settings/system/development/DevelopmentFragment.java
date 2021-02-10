@@ -66,7 +66,6 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.app.LocalePicker;
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.core.ConfirmationDialogController;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.settingslib.development.SystemPropPoker;
@@ -264,11 +263,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     public static DevelopmentFragment newInstance() {
         return new DevelopmentFragment();
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DEVELOPMENT;
     }
 
     @Override

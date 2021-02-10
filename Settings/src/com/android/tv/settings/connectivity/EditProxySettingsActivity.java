@@ -25,7 +25,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.AdvancedWifiOptionsFlow;
 import com.android.tv.settings.connectivity.util.State;
@@ -92,11 +91,6 @@ public class EditProxySettingsActivity extends InstrumentedActivity implements
                 mSaveFailedState
         );
         mStateMachine.start(true);
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DIALOG_WIFI_AP_EDIT;
     }
 
     @Override

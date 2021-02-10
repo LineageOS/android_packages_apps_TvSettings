@@ -47,7 +47,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.dialog.PinDialogFragment;
@@ -471,11 +470,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
             icon.draw(new Canvas(bitmap));
             return bitmap;
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SECURITY;
     }
 
     @Override
