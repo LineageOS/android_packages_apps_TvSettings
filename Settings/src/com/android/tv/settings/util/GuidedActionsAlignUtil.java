@@ -57,7 +57,7 @@ public class GuidedActionsAlignUtil {
                 ItemAlignmentFacet.ItemAlignmentDef alignedDef =
                         new ItemAlignmentFacet.ItemAlignmentDef();
                 alignedDef.setItemAlignmentViewId(
-                        androidx.leanback.R.id.guidedactions_item_title);
+                        R.id.guidedactions_item_title);
                 alignedDef.setAlignedToTextViewBaseline(false);
                 alignedDef.setItemAlignmentOffset(0);
                 alignedDef.setItemAlignmentOffsetWithPadding(true);

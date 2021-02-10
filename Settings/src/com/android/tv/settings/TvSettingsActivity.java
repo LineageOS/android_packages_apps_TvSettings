@@ -34,8 +34,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
-import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
-import com.android.settingslib.core.instrumentation.SharedPreferencesLogger;
 import com.android.tv.settings.overlay.FlavorUtils;
 
 public abstract class TvSettingsActivity extends FragmentActivity {
@@ -200,22 +198,5 @@ public abstract class TvSettingsActivity extends FragmentActivity {
                 finish();
             }
         }
-    }
-
-    private String getMetricsTag() {
-        String tag = getClass().getName();
-        if (tag.startsWith("com.android.tv.settings.")) {
-            tag = tag.replace("com.android.tv.settings.", "");
-        }
-        return tag;
-    }
-
-    @Override
-    public SharedPreferences getSharedPreferences(String name, int mode) {
-        if (name.equals(getPackageName() + "_preferences")) {
-            return new SharedPreferencesLogger(this, getMetricsTag(),
-                    new MetricsFeatureProvider());
-        }
-        return super.getSharedPreferences(name, mode);
     }
 }

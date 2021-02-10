@@ -147,12 +147,6 @@ public class MainFragment extends PreferenceControllerFragment implements
     }
 
     @Override
-    public int getMetricsCategory() {
-        // Do not log visibility.
-        return METRICS_CATEGORY_UNKNOWN;
-    }
-
-    @Override
     protected int getPreferenceScreenResId() {
         switch (FlavorUtils.getFlavor(getContext())) {
             case FLAVOR_CLASSIC:

@@ -32,7 +32,6 @@ import androidx.leanback.preference.LeanbackSettingsFragmentCompat;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -125,11 +124,6 @@ public class AccessibilityShortcutServiceFragment extends SettingsPreferenceFrag
                 }
             }
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.ACCESSIBILITY_SERVICE;
     }
 
     @Override

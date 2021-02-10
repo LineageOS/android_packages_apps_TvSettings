@@ -31,7 +31,6 @@ import android.util.Log;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.deviceinfo.StorageMeasurement;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -288,11 +287,6 @@ public class StorageFragment extends SettingsPreferenceFragment {
                 }
             }
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SETTINGS_STORAGE_CATEGORY;
     }
 
     @Override

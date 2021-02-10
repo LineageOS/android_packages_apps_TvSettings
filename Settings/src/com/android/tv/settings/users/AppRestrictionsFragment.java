@@ -58,7 +58,6 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.users.AppRestrictionsHelper;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -847,11 +846,6 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
             }
         }
         return null;
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.USERS_APP_RESTRICTIONS;
     }
 
     @Override

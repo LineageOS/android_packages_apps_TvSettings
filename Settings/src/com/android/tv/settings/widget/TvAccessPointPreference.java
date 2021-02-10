@@ -23,7 +23,6 @@ import android.widget.ImageView;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.settingslib.wifi.AccessPoint;
-import com.android.settingslib.wifi.AccessPointPreference;
 import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
 
