@@ -32,7 +32,6 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
@@ -102,11 +101,6 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
             mAllowTurnScreenOffWithWakeLockPref.setChecked(true);
             mAllowTurnScreenOffWithWakeLockPref.setEnabled(true);
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DREAM;
     }
 
     @Override

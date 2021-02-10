@@ -32,7 +32,6 @@ import androidx.annotation.NonNull;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -387,11 +386,6 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
                     return !FILTER_INSTALLED.filterApp(info) && !FILTER_DISABLED.filterApp(info);
                 }
             };
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.MANAGE_APPLICATIONS;
-    }
 
     @Override
     protected int getPageId() {

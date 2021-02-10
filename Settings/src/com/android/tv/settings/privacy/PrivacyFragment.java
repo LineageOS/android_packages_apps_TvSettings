@@ -30,7 +30,6 @@ import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
@@ -114,11 +113,6 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
                 break;
         }
         return super.onPreferenceTreeClick(preference);
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.PRIVACY;
     }
 
     @Override

@@ -29,10 +29,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.leanback.widget.GuidanceStylist;
 
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.ApplicationsState;
-import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.tv.settings.R;
 
 import java.util.ArrayList;
@@ -139,8 +137,6 @@ public class EnableDisablePreference extends AppActionPreference {
             args.putBoolean(ARG_ENABLE, enable);
         }
 
-        private final MetricsFeatureProvider mMetricsFeatureProvider = new MetricsFeatureProvider();
-
         @NonNull
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
@@ -158,9 +154,6 @@ public class EnableDisablePreference extends AppActionPreference {
         @Override
         public void onOk() {
             boolean enable = getArguments().getBoolean(ARG_ENABLE);
-            mMetricsFeatureProvider.action(getContext(), enable
-                    ? MetricsEvent.ACTION_SETTINGS_ENABLE_APP
-                    : MetricsEvent.ACTION_SETTINGS_DISABLE_APP);
             getActivity().getPackageManager().setApplicationEnabledSetting(
                     getArguments().getString(ARG_PACKAGE_NAME), enable
                             ? PackageManager.COMPONENT_ENABLED_STATE_DEFAULT

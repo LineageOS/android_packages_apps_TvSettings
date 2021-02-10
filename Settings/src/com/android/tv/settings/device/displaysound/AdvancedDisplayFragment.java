@@ -29,7 +29,6 @@ import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
@@ -39,11 +38,6 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 @Keep
 public class AdvancedDisplayFragment extends SettingsPreferenceFragment {
     private static final String KEY_GAME_MODE = "game_mode";
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DISPLAY;
-    }
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {

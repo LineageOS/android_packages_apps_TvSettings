@@ -28,7 +28,6 @@ import android.text.TextUtils;
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.tv.settings.PreferenceControllerFragment;
 import com.android.tv.settings.R;
@@ -84,11 +83,6 @@ public class AppsFragment extends PreferenceControllerFragment {
         List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new RecentAppsPreferenceController(getContext(), app));
         return controllers;
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SETTINGS_APP_NOTIF_CATEGORY;
     }
 
     @Override

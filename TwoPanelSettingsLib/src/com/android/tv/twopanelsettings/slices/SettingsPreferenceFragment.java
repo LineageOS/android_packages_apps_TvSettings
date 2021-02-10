@@ -45,9 +45,6 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.settingslib.core.instrumentation.Instrumentable;
-import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
-import com.android.settingslib.core.instrumentation.VisibilityLoggerMixin;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.tv.twopanelsettings.R;
 import com.android.tv.twopanelsettings.SettingsPreferenceFragmentBase;
@@ -57,11 +54,9 @@ import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
  * A copy of SettingsPreferenceFragment in Settings.
  */
 public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragmentBase
-        implements LifecycleOwner, Instrumentable,
+        implements LifecycleOwner,
         TwoPanelSettingsFragment.PreviewableComponentCallback {
     private final Lifecycle mLifecycle = new Lifecycle(this);
-    private final VisibilityLoggerMixin mVisibilityLoggerMixin;
-    protected MetricsFeatureProvider mMetricsFeatureProvider;
 
     // Rename getLifecycle() to getSettingsLifecycle() as androidx Fragment has already implemented
     // getLifecycle(), overriding here would cause unexpected crash in framework.
@@ -71,11 +66,6 @@ public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragm
     }
 
     public SettingsPreferenceFragment() {
-        mMetricsFeatureProvider = new MetricsFeatureProvider();
-        // Mixin that logs visibility change for activity.
-        mVisibilityLoggerMixin = new VisibilityLoggerMixin(getMetricsCategory(),
-                mMetricsFeatureProvider);
-        getSettingsLifecycle().addObserver(mVisibilityLoggerMixin);
     }
 
     @CallSuper
@@ -154,7 +144,6 @@ public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragm
     @CallSuper
     @Override
     public void onResume() {
-        mVisibilityLoggerMixin.setSourceMetricsCategory(getActivity());
         super.onResume();
         mLifecycle.handleLifecycleEvent(ON_RESUME);
     }

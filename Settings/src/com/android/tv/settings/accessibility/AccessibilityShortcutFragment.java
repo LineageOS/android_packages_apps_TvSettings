@@ -33,7 +33,6 @@ import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.accessibility.AccessibilityUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -109,11 +108,6 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
             }
         }
         return null;
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.ACCESSIBILITY_TOGGLE_GLOBAL_GESTURE;
     }
 
     @Override

@@ -49,7 +49,6 @@ import androidx.leanback.preference.LeanbackSettingsFragmentCompat;
 import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.applications.DefaultAppInfo;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.LongClickPreference;
@@ -209,11 +208,6 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
             }
         }
         return false;
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsEvent.SETTINGS_TV_DEVICE_CATEGORY;
     }
 
     public boolean getSoundEffectsEnabled() {

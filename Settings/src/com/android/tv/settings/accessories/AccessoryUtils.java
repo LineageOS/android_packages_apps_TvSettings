@@ -153,49 +153,6 @@ final class AccessoryUtils {
         return false;
     }
 
-    public static boolean isA2dpSource(BluetoothDevice device) {
-        return device != null && device.getBluetoothClass() != null
-                && device.getBluetoothClass().doesClassMatch(BluetoothProfile.A2DP);
-    }
-
-    /**
-     * @param dev             the bluetooth device
-     * @param willBeProcessed whether the icon will be processed by Slice
-     * @return the resource id for a bluetooth device's icon based on its device type
-     */
-    public static @DrawableRes int getImageIdForDevice(
-            @NonNull BluetoothDevice dev, boolean willBeProcessed) {
-        if (dev == null || dev.getBluetoothClass() == null) {
-            return willBeProcessed ? R.drawable.ic_bluetooth_raw : R.drawable.ic_bluetooth;
-        }
-
-        final int devClass = dev.getBluetoothClass().getDeviceClass();
-        // The order is critical
-        if (devClass == BluetoothClass.Device.AUDIO_VIDEO_WEARABLE_HEADSET) {
-            return willBeProcessed ? R.drawable.ic_headset_mic_raw : R.drawable.ic_headset_mic;
-        } else if (devClass == BluetoothClass.Device.AUDIO_VIDEO_HEADPHONES
-                || devClass == BluetoothClass.Device.AUDIO_VIDEO_LOUDSPEAKER
-                || devClass == BluetoothClass.Device.AUDIO_VIDEO_PORTABLE_AUDIO
-                || devClass == BluetoothClass.Device.AUDIO_VIDEO_HIFI_AUDIO) {
-            return willBeProcessed ? R.drawable.ic_headset_raw : R.drawable.ic_headset;
-        } else if ((devClass & InputDeviceCriteria.MINOR_DEVICE_CLASS_POINTING) != 0) {
-            return willBeProcessed ? R.drawable.ic_mouse_raw : R.drawable.ic_mouse;
-        } else if (isA2dpSource(dev) && willBeProcessed) {
-            return R.drawable.ic_a2dp_raw;
-        } else if ((devClass & InputDeviceCriteria.MINOR_DEVICE_CLASS_REMOTE) != 0) {
-            return willBeProcessed ? R.drawable.ic_games_raw : R.drawable.ic_games;
-        } else if ((devClass & InputDeviceCriteria.MINOR_DEVICE_CLASS_JOYSTICK) != 0) {
-            return willBeProcessed ? R.drawable.ic_games_raw : R.drawable.ic_games;
-        } else if ((devClass & InputDeviceCriteria.MINOR_DEVICE_CLASS_GAMEPAD) != 0) {
-            return willBeProcessed ? R.drawable.ic_games_raw : R.drawable.ic_games;
-        } else if ((devClass & InputDeviceCriteria.MINOR_DEVICE_CLASS_KEYBOARD) != 0) {
-            return willBeProcessed ? R.drawable.ic_keyboard_raw : R.drawable.ic_keyboard;
-        }
-
-        // Default for now
-        return willBeProcessed ? R.drawable.ic_bluetooth_raw : R.drawable.ic_bluetooth;
-    }
-
     private AccessoryUtils() {
         // do not allow instantiation
     }
