@@ -189,6 +189,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         if (preview != null && !(preview instanceof DummyFragment)) {
             if (!(preview instanceof InfoFragment)) {
                 navigateToPreviewFragment();
+            } else {
+                possiblyNavigateToInfoFragment();
             }
         } else {
             // If there is no corresponding slice provider, thus the corresponding fragment is not
@@ -546,6 +548,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                             .findFragmentById(frameResIds[mPrefPanelIdx + 1]);
                     if (!(previewFragment instanceof InfoFragment)) {
                         navigateToPreviewFragment();
+                    } else {
+                        possiblyNavigateToInfoFragment();
                     }
                 }
                 // TODO(b/163432209): improve NavigationCallback and be more specific here.
@@ -577,8 +581,19 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 && ((SlicePreference) preference).getUri() != null) {
             return true;
         }
-
         return false;
+    }
+
+    private void possiblyNavigateToInfoFragment() {
+        if (isA11yOn()) {
+            Fragment previewFragment = getChildFragmentManager().findFragmentById(
+                    frameResIds[mPrefPanelIdx + 1]);
+            Fragment mainFragment = getChildFragmentManager().findFragmentById(
+                    frameResIds[mPrefPanelIdx]);
+            if (previewFragment != null && mainFragment != null) {
+                ((InfoFragment) previewFragment).takeA11yFocus(mainFragment.getView());
+            }
+        }
     }
 
     private boolean back(boolean isKeyBackPressed) {
@@ -596,6 +611,15 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
         if (DEBUG) {
             Log.d(TAG, "Going back one level.");
+        }
+
+        // If an InfoFragment has intercepted a11y focus, then we make sure to release the focus
+        // on backwards navigation.
+        Fragment currentPreviewFragment =
+                getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx + 1]);
+        if (currentPreviewFragment instanceof InfoFragment
+                && ((InfoFragment) currentPreviewFragment).releaseA11yFocus()) {
+            return true;
         }
 
         final Fragment immersiveFragment =
@@ -668,6 +692,12 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         return result < 0 ? 0 : result;
     }
 
+    private boolean isA11yOn() {
+        return Settings.Secure.getInt(
+                getActivity().getContentResolver(),
+                Settings.Secure.ACCESSIBILITY_ENABLED, 0) == 1;
+    }
+
     /** Scrolls such that the panel with given index is the main panel shown on the left. */
     private void moveToPanel(final int index, boolean smoothScroll) {
         mHandler.post(() -> {
@@ -677,13 +707,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             if (!isAdded()) {
                 return;
             }
-            final boolean accessibilityEnabled = Settings.Secure.getInt(
-                    getActivity().getContentResolver(),
-                    Settings.Secure.ACCESSIBILITY_ENABLED, 0) == 1;
             Fragment fragmentToBecomeMainPanel =
                     getChildFragmentManager().findFragmentById(frameResIds[index]);
             Fragment fragmentToBecomePreviewPanel =
                     getChildFragmentManager().findFragmentById(frameResIds[index + 1]);
+
             // Positive value means that the panel is scrolling to right (navigate forward for LTR
             // or navigate backwards for RTL) and vice versa; 0 means that this is likely invoked
             // by GlobalLayoutListener and there's no actual sliding.
@@ -716,7 +744,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 // In order to preserve panel-switching functionality, we must keep the requestFocus
                 // invocation, however, a11y focus does not correctly get assigned while animations
                 // are being played.
-                if (accessibilityEnabled) {
+                if (isA11yOn()) {
                     slideAnim.addListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
@@ -801,7 +829,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 }
             }
             if (fragmentToBecomeMainPanel != null && fragmentToBecomeMainPanel.getView() != null) {
-                if (!accessibilityEnabled) {
+                if (!isA11yOn()) {
                     fragmentToBecomeMainPanel.getView().requestFocus();
                 }
                 if (fragmentToBecomeMainPanel instanceof PreviewableComponentCallback) {
