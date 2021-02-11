@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.KEY_SHOW_HIDE_FORMAT_INFO;
 import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.KEY_SURROUND_PASSTHROUGH;
 import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.KEY_SURROUND_SOUND_FORMAT_PREFIX;
 import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.VAL_SURROUND_SOUND_AUTO;
@@ -56,10 +57,9 @@ import java.util.stream.IntStream;
 public class AdvancedVolumeFragmentTest {
 
     @Test
-    public void testOnPreferenceChange_autoSelected() {
+    public void testOnPreferenceChange_withAuto_storesAutoInSettings() {
         AdvancedVolumeFragment fragment = createDefaultAdvancedVolumeFragment();
-        Preference preference = new Preference(fragment.getContext());
-        preference.setKey(KEY_SURROUND_PASSTHROUGH);
+        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
 
         fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_AUTO);
 
@@ -68,10 +68,9 @@ public class AdvancedVolumeFragmentTest {
     }
 
     @Test
-    public void testOnPreferenceChange_manualSelected() {
+    public void testOnPreferenceChange_withManual_storesManualInSettings() {
         AdvancedVolumeFragment fragment = createDefaultAdvancedVolumeFragment();
-        Preference preference = new Preference(fragment.getContext());
-        preference.setKey(KEY_SURROUND_PASSTHROUGH);
+        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
 
         fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_MANUAL);
 
@@ -80,10 +79,9 @@ public class AdvancedVolumeFragmentTest {
     }
 
     @Test
-    public void testOnPreferenceChange_neverSelected() {
+    public void testOnPreferenceChange_withNever_storesNeverInSettings() {
         AdvancedVolumeFragment fragment = createDefaultAdvancedVolumeFragment();
-        Preference preference = new Preference(fragment.getContext());
-        preference.setKey(KEY_SURROUND_PASSTHROUGH);
+        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
 
         fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_NEVER);
 
@@ -103,8 +101,7 @@ public class AdvancedVolumeFragmentTest {
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
-        Preference preference = new Preference(fragment.getContext());
-        preference.setKey(KEY_SURROUND_PASSTHROUGH);
+        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
         fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_MANUAL);
 
         setSettingsStr(
@@ -112,8 +109,8 @@ public class AdvancedVolumeFragmentTest {
                 Settings.Global.ENCODED_SURROUND_OUTPUT_ENABLED_FORMATS,
                 Joiner.on(",").join(
                         AudioFormat.ENCODING_DOLBY_TRUEHD, AudioFormat.ENCODING_DOLBY_MAT));
-        SwitchPreference pref = new SwitchPreference(fragment.getContext());
-        pref.setKey(KEY_SURROUND_SOUND_FORMAT_PREFIX + AudioFormat.ENCODING_DTS);
+        SwitchPreference pref = (SwitchPreference) fragment.findPreference(
+                KEY_SURROUND_SOUND_FORMAT_PREFIX + AudioFormat.ENCODING_DTS);
         pref.setChecked(true);
         fragment.onPreferenceTreeClick(pref);
 
@@ -139,8 +136,7 @@ public class AdvancedVolumeFragmentTest {
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
-        Preference preference = new Preference(fragment.getContext());
-        preference.setKey(KEY_SURROUND_PASSTHROUGH);
+        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
         fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_MANUAL);
 
         setSettingsStr(
@@ -150,8 +146,8 @@ public class AdvancedVolumeFragmentTest {
                         AudioFormat.ENCODING_DOLBY_MAT,
                         AudioFormat.ENCODING_DTS,
                         AudioFormat.ENCODING_DOLBY_TRUEHD));
-        SwitchPreference pref = new SwitchPreference(fragment.getContext());
-        pref.setKey(KEY_SURROUND_SOUND_FORMAT_PREFIX + AudioFormat.ENCODING_DTS);
+        SwitchPreference pref = (SwitchPreference) fragment.findPreference(
+                KEY_SURROUND_SOUND_FORMAT_PREFIX + AudioFormat.ENCODING_DTS);
         pref.setChecked(false);
         fragment.onPreferenceTreeClick(pref);
 
@@ -164,7 +160,7 @@ public class AdvancedVolumeFragmentTest {
     }
 
     @Test
-    public void testGetPreferenceScreen_onManualSelected_returnsFormatsInCorrectPreferenceGroup() {
+    public void testGetPreferenceScreen_whenManual_returnsFormatsInCorrectPreferenceGroup() {
         Map<Integer, Boolean> formats = ImmutableMap.of(
                 AudioFormat.ENCODING_DTS, true,
                 AudioFormat.ENCODING_DOLBY_MAT, true);
@@ -173,8 +169,7 @@ public class AdvancedVolumeFragmentTest {
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
-        Preference preference = new Preference(fragment.getContext());
-        preference.setKey(KEY_SURROUND_PASSTHROUGH);
+        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
         fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_MANUAL);
 
         assertThat(fragment.getPreferenceScreen().getPreferenceCount()).isEqualTo(3);
@@ -191,6 +186,68 @@ public class AdvancedVolumeFragmentTest {
         assertThat(unsupportedFormatPreference.getTitle()).isEqualTo(
                 fragment.getContext().getString(R.string.surround_sound_unsupported_title));
         assertThat(getChildrenTitles(unsupportedFormatPreference)).containsExactly(
+                fragment.getContext().getString(R.string.surround_sound_format_dolby_mat));
+    }
+
+    @Test
+    public void testGetPreferenceScreen_whenAuto_showsFormatInfoPreference() {
+        Map<Integer, Boolean> formats = ImmutableMap.of(
+                AudioFormat.ENCODING_DTS, true,
+                AudioFormat.ENCODING_DOLBY_MAT, false);
+        Map<Integer, Boolean> reportedFormats = ImmutableMap.of(
+                AudioFormat.ENCODING_DTS, true);
+        AdvancedVolumeFragment fragment =
+                createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
+
+        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
+        fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_AUTO);
+
+        assertThat(fragment.getPreferenceScreen().getPreferenceCount()).isEqualTo(2);
+
+        PreferenceCategory formatInfoPreferenceCategory =
+                (PreferenceCategory) fragment.getPreferenceScreen().getPreference(1);
+        assertThat(formatInfoPreferenceCategory.getTitle()).isEqualTo(
+                fragment.getContext().getString(R.string.surround_sound_format_info));
+        assertThat(formatInfoPreferenceCategory.getPreferenceCount()).isEqualTo(1);
+        Preference showFormatPreference = formatInfoPreferenceCategory.getPreference(0);
+        assertThat(showFormatPreference.getTitle()).isEqualTo(
+                fragment.getContext().getString(R.string.surround_sound_show_formats));
+    }
+
+    @Test
+    public void testGetPreferenceScreen_whenAuto_returnsFormatsInCorrectPreferenceGroup() {
+        Map<Integer, Boolean> formats = ImmutableMap.of(
+                AudioFormat.ENCODING_DTS, true,
+                AudioFormat.ENCODING_DOLBY_MAT, true);
+        Map<Integer, Boolean> reportedFormats = ImmutableMap.of(
+                AudioFormat.ENCODING_DTS, true);
+        AdvancedVolumeFragment fragment =
+                createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
+
+        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
+        fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_AUTO);
+
+        preference = fragment.findPreference(KEY_SHOW_HIDE_FORMAT_INFO);
+        fragment.onPreferenceTreeClick(preference);
+
+        PreferenceCategory formatInfoPreferenceCategory =
+                (PreferenceCategory) fragment.getPreferenceScreen().getPreference(1);
+        assertThat(formatInfoPreferenceCategory.getPreferenceCount()).isEqualTo(3);
+
+        Preference hideFormatPreference = formatInfoPreferenceCategory.getPreference(0);
+        assertThat(hideFormatPreference.getTitle()).isEqualTo(
+                fragment.getContext().getString(R.string.surround_sound_hide_formats));
+
+        Preference enabledFormatsCategory = formatInfoPreferenceCategory.getPreference(1);
+        assertThat(enabledFormatsCategory.getTitle()).isEqualTo(
+                fragment.getContext().getString(R.string.surround_sound_enabled_formats));
+        assertThat(getChildrenTitles(enabledFormatsCategory)).containsExactly(
+                fragment.getContext().getString(R.string.surround_sound_format_dts));
+
+        Preference disabledFormatsCategory = formatInfoPreferenceCategory.getPreference(2);
+        assertThat(disabledFormatsCategory.getTitle()).isEqualTo(
+                fragment.getContext().getString(R.string.surround_sound_disabled_formats));
+        assertThat(getChildrenTitles(disabledFormatsCategory)).containsExactly(
                 fragment.getContext().getString(R.string.surround_sound_format_dolby_mat));
     }
 
