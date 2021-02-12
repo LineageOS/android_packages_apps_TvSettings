@@ -28,9 +28,7 @@ import android.accounts.AccountManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -43,7 +41,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.service.settings.suggestions.Suggestion;
-import android.telephony.SignalStrength;
+import android.telephony.CellSignalStrength;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -54,7 +52,6 @@ import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.SwitchPreference;
 
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.suggestions.SuggestionControllerMixinCompat;
@@ -69,7 +66,6 @@ import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -82,7 +78,6 @@ public class MainFragment extends PreferenceControllerFragment implements
         HotwordStateListener {
 
     private static final String TAG = "MainFragment";
-    private static final String KEY_SUGGESTIONS_LIST = "suggestions";
     private static final String KEY_BASIC_MODE_SUGGESTION = "basic_mode_suggestion";
     private static final String KEY_BASIC_MODE_EXIT = "basic_mode_exit";
     @VisibleForTesting
@@ -108,18 +103,11 @@ public class MainFragment extends PreferenceControllerFragment implements
     static final String KEY_PRIVACY = "privacy";
     @VisibleForTesting
     static final String KEY_DISPLAY_AND_SOUND = "display_and_sound";
-    @VisibleForTesting
-    static final String KEY_QUICK_SETTINGS = "quick_settings";
     private static final String KEY_CHANNELS_AND_INPUTS = "channels_and_inputs";
 
     private static final String ACTION_ACCOUNTS = "com.android.tv.settings.ACCOUNTS";
     @VisibleForTesting
     ConnectivityListener mConnectivityListener;
-    @VisibleForTesting
-    PreferenceCategory mSuggestionsList;
-    private SuggestionControllerMixinCompat mSuggestionControllerMixin;
-    @VisibleForTesting
-    IconCache mIconCache;
     @VisibleForTesting
     BluetoothAdapter mBtAdapter;
     @VisibleForTesting
@@ -127,13 +115,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     @VisibleForTesting
     boolean mHasAccounts;
 
-    /** Controllers for the Quick Settings section. */
-    private List<AbstractPreferenceController> mPreferenceControllers;
-    private HotwordSwitchController mHotwordSwitchController;
-    private TakeBugReportController mTakeBugReportController;
-    private PreferenceCategory mQuickSettingsList;
-    private SwitchPreference mHotwordSwitch;
-    private Preference mTakeBugReportPreference;
+    private SuggestionQuickSettingPrefsContainer mSuggestionQuickSettingPrefsContainer;
 
     private final BroadcastReceiver mBCMReceiver = new BroadcastReceiver() {
         @Override
@@ -161,9 +143,15 @@ public class MainFragment extends PreferenceControllerFragment implements
         }
     }
 
+    @Override 
+    public void onAttach(Context context) {
+        mSuggestionQuickSettingPrefsContainer = new SuggestionQuickSettingPrefsContainer(this);
+        super.onAttach(context);
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        mIconCache = new IconCache(getContext());
+        mSuggestionQuickSettingPrefsContainer.onCreate();
         mConnectivityListener = new ConnectivityListener(getContext(), this::updateConnectivity,
                 getSettingsLifecycle());
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -178,121 +166,14 @@ public class MainFragment extends PreferenceControllerFragment implements
     }
 
     @Override
-    public void onDestroy() {
-        if (mHotwordSwitchController != null) {
-            mHotwordSwitchController.unregister();
-        }
-        super.onDestroy();
-    }
-
-    private boolean quickSettingsEnabled() {
-        return getContext().getResources().getBoolean(R.bool.config_quick_settings_enabled);
-    }
-
-    /** @return true if there is at least one available item in quick settings. */
-    private boolean shouldShowQuickSettings() {
-        for (AbstractPreferenceController controller : mPreferenceControllers) {
-            if (controller.isAvailable()) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private void showOrHideQuickSettings() {
-        if (shouldShowQuickSettings()) {
-            showQuickSettings();
-        } else {
-            hideQuickSettings();
-        }
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        showOrHideQuickSettings();
+        mSuggestionQuickSettingPrefsContainer.showOrHideQuickSettings();
         updateAccountPref();
         updateAccessoryPref();
         updateConnectivity();
         updateBasicModeSuggestion();
         return super.onCreateView(inflater, container, savedInstanceState);
-    }
-
-    /** Creates the quick settings category and its children. */
-    private void showQuickSettings() {
-        if (mQuickSettingsList != null) {
-            return;
-        }
-        mQuickSettingsList = new PreferenceCategory(this.getPreferenceManager().getContext());
-        mQuickSettingsList.setKey(KEY_QUICK_SETTINGS);
-        mQuickSettingsList.setTitle(R.string.header_category_quick_settings);
-        mQuickSettingsList.setOrder(1); // at top, but below suggested settings
-        getPreferenceScreen().addPreference(mQuickSettingsList);
-        if (mHotwordSwitchController != null && mHotwordSwitchController.isAvailable()) {
-            mHotwordSwitch = new SwitchPreference(this.getPreferenceManager().getContext());
-            mHotwordSwitch.setKey(HotwordSwitchController.KEY_HOTWORD_SWITCH);
-            mHotwordSwitch.setOnPreferenceClickListener(
-                    preference -> {
-                        logEntrySelected(TvSettingsEnums.QUICK_SETTINGS);
-                        return false;
-                    }
-            );
-            mHotwordSwitchController.updateState(mHotwordSwitch);
-            mQuickSettingsList.addPreference(mHotwordSwitch);
-        }
-        if (mTakeBugReportController != null && mTakeBugReportController.isAvailable()) {
-            mTakeBugReportPreference = new Preference(this.getPreferenceManager().getContext());
-            mTakeBugReportPreference.setKey(TakeBugReportController.KEY_TAKE_BUG_REPORT);
-            mTakeBugReportPreference.setOnPreferenceClickListener(
-                    preference -> {
-                        logEntrySelected(TvSettingsEnums.QUICK_SETTINGS);
-                        return false;
-                    }
-            );
-            mTakeBugReportController.updateState(mTakeBugReportPreference);
-            mQuickSettingsList.addPreference(mTakeBugReportPreference);
-        }
-    }
-
-    /** Removes the quick settings category and all its children. */
-    private void hideQuickSettings() {
-        Preference quickSettingsPref = findPreference(KEY_QUICK_SETTINGS);
-        if (quickSettingsPref == null) {
-            return;
-        }
-        mQuickSettingsList.removeAll();
-        getPreferenceScreen().removePreference(mQuickSettingsList);
-        mQuickSettingsList = null;
-    }
-
-    @Override
-    public void onHotwordStateChanged() {
-        if (mHotwordSwitch != null && mHotwordSwitchController != null) {
-            mHotwordSwitchController.updateState(mHotwordSwitch);
-        }
-        showOrHideQuickSettings();
-    }
-
-    @Override
-    public void onHotwordEnable() {
-        try {
-            Intent intent = new Intent(HotwordSwitchController.ACTION_HOTWORD_ENABLE);
-            intent.setPackage(HotwordSwitchController.ASSISTANT_PGK_NAME);
-            startActivityForResult(intent, 0);
-        } catch (ActivityNotFoundException e) {
-            Log.w(TAG, "Unable to find hotwording activity.", e);
-        }
-    }
-
-    @Override
-    public void onHotwordDisable() {
-        try {
-            Intent intent = new Intent(HotwordSwitchController.ACTION_HOTWORD_DISABLE);
-            intent.setPackage(HotwordSwitchController.ASSISTANT_PGK_NAME);
-            startActivityForResult(intent, 0);
-        } catch (ActivityNotFoundException e) {
-            Log.w(TAG, "Unable to find hotwording activity.", e);
-        }
     }
 
     @Override
@@ -324,22 +205,8 @@ public class MainFragment extends PreferenceControllerFragment implements
                 privacyPref.setVisible(true);
             }
         }
-        if (mHotwordSwitchController != null) {
-            mHotwordSwitchController.init(this);
-        }
+        mSuggestionQuickSettingPrefsContainer.onCreatePreferences();
         updateSoundSettings();
-    }
-
-    @Override
-    protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
-        mPreferenceControllers = new ArrayList<>(2);
-        if (quickSettingsEnabled()) {
-            mHotwordSwitchController = new HotwordSwitchController(context);
-            mTakeBugReportController = new TakeBugReportController(context);
-            mPreferenceControllers.add(mHotwordSwitchController);
-            mPreferenceControllers.add(mTakeBugReportController);
-        }
-        return mPreferenceControllers;
     }
 
     @VisibleForTesting
@@ -352,19 +219,19 @@ public class MainFragment extends PreferenceControllerFragment implements
         if (mConnectivityListener.isCellConnected()) {
             final int signal = mConnectivityListener.getCellSignalStrength();
             switch (signal) {
-                case SignalStrength.SIGNAL_STRENGTH_GREAT:
+                case CellSignalStrength.SIGNAL_STRENGTH_GREAT:
                     networkPref.setIcon(R.drawable.ic_cell_signal_4_white);
                     break;
-                case SignalStrength.SIGNAL_STRENGTH_GOOD:
+                case CellSignalStrength.SIGNAL_STRENGTH_GOOD:
                     networkPref.setIcon(R.drawable.ic_cell_signal_3_white);
                     break;
-                case SignalStrength.SIGNAL_STRENGTH_MODERATE:
+                case CellSignalStrength.SIGNAL_STRENGTH_MODERATE:
                     networkPref.setIcon(R.drawable.ic_cell_signal_2_white);
                     break;
-                case SignalStrength.SIGNAL_STRENGTH_POOR:
+                case CellSignalStrength.SIGNAL_STRENGTH_POOR:
                     networkPref.setIcon(R.drawable.ic_cell_signal_1_white);
                     break;
-                case SignalStrength.SIGNAL_STRENGTH_NONE_OR_UNKNOWN:
+                case CellSignalStrength.SIGNAL_STRENGTH_NONE_OR_UNKNOWN:
                 default:
                     networkPref.setIcon(R.drawable.ic_cell_signal_0_white);
                     break;
@@ -497,68 +364,6 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     private static ProviderInfo getProviderInfo(Context context, String authority) {
         return context.getPackageManager().resolveContentProvider(authority, 0);
-    }
-
-    @Override
-    public void onSuggestionReady(List<Suggestion> data) {
-        // Suggestion category is handled differently in basic mode
-        if (data == null || data.size() == 0
-                || FlavorUtils.getFeatureFactory(getContext())
-                .getBasicModeFeatureProvider().isBasicMode(getContext())) {
-            if (mSuggestionsList != null) {
-                getPreferenceScreen().removePreference(mSuggestionsList);
-                mSuggestionsList = null;
-            }
-            return;
-        }
-
-        if (mSuggestionsList == null) {
-            mSuggestionsList = new PreferenceCategory(this.getPreferenceManager().getContext());
-            mSuggestionsList.setKey(KEY_SUGGESTIONS_LIST);
-            mSuggestionsList.setTitle(R.string.header_category_suggestions);
-            mSuggestionsList.setOrder(0); // always at top
-            getPreferenceScreen().addPreference(mSuggestionsList);
-        }
-        updateSuggestionList(data);
-    }
-
-    @VisibleForTesting
-    void updateSuggestionList(List<Suggestion> suggestions) {
-        // Remove suggestions that are not in the new list.
-        for (int i = 0; i < mSuggestionsList.getPreferenceCount(); i++) {
-            SuggestionPreference pref = (SuggestionPreference) mSuggestionsList.getPreference(i);
-            boolean isInNewSuggestionList = false;
-            for (Suggestion suggestion : suggestions) {
-                if (pref.getId().equals(suggestion.getId())) {
-                    isInNewSuggestionList = true;
-                    break;
-                }
-            }
-            if (!isInNewSuggestionList) {
-                mSuggestionsList.removePreference(pref);
-            }
-        }
-
-        // Add suggestions that are not in the old list and update the existing suggestions.
-        for (Suggestion suggestion : suggestions) {
-            Preference curPref = findPreference(
-                    SuggestionPreference.SUGGESTION_PREFERENCE_KEY + suggestion.getId());
-            if (curPref == null) {
-                SuggestionPreference newSuggPref = new SuggestionPreference(
-                        suggestion, this.getPreferenceManager().getContext(),
-                        mSuggestionControllerMixin, this);
-                newSuggPref.setIcon(mIconCache.getIcon(suggestion.getIcon()));
-                newSuggPref.setTitle(suggestion.getTitle());
-                newSuggPref.setSummary(suggestion.getSummary());
-                mSuggestionsList.addPreference(newSuggPref);
-            } else {
-                // Even though the id of suggestion might not change, the details could change.
-                // So we need to update icon, title and summary for the suggestions.
-                curPref.setIcon(mIconCache.getIcon(suggestion.getIcon()));
-                curPref.setTitle(suggestion.getTitle());
-                curPref.setSummary(suggestion.getSummary());
-            }
-        }
     }
 
     private boolean isRestricted() {
@@ -712,18 +517,6 @@ public class MainFragment extends PreferenceControllerFragment implements
     }
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        ComponentName componentName = new ComponentName(
-                "com.android.settings.intelligence",
-                "com.android.settings.intelligence.suggestions.SuggestionService");
-        if (!isRestricted()) {
-            mSuggestionControllerMixin = new SuggestionControllerMixinCompat(
-                    context, this, getSettingsLifecycle(), componentName);
-        }
-    }
-
-    @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference.getKey().equals(KEY_ACCOUNTS_AND_SIGN_IN) && !mHasAccounts
                 || (preference.getKey().equals(KEY_ACCESSORIES) && !mHasBtAccessories)
@@ -747,14 +540,39 @@ public class MainFragment extends PreferenceControllerFragment implements
     }
 
     @Override
+    public void onDestroy() {
+        mSuggestionQuickSettingPrefsContainer.onDestroy();
+        super.onDestroy();
+    }
+
+    @Override
+    protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
+        return mSuggestionQuickSettingPrefsContainer.onCreatePreferenceControllers(context);
+    }
+
+    @Override
     public void onSuggestionClosed(Preference preference) {
-        if (mSuggestionsList == null || mSuggestionsList.getPreferenceCount() == 0) {
-            return;
-        } else if (mSuggestionsList.getPreferenceCount() == 1) {
-            getPreferenceScreen().removePreference(mSuggestionsList);
-        } else {
-            mSuggestionsList.removePreference(preference);
-        }
+      mSuggestionQuickSettingPrefsContainer.onSuggestionClosed(preference);
+    }
+
+    @Override
+    public void onSuggestionReady(List<Suggestion> data) {
+        mSuggestionQuickSettingPrefsContainer.onSuggestionReady(data);
+    }
+
+    @Override
+    public void onHotwordStateChanged() {
+        mSuggestionQuickSettingPrefsContainer.onHotwordStateChanged();
+    }
+
+    @Override
+    public void onHotwordEnable() {
+        mSuggestionQuickSettingPrefsContainer.onHotwordEnable();
+    }
+
+    @Override
+    public void onHotwordDisable() {
+        mSuggestionQuickSettingPrefsContainer.onHotwordDisable();
     }
 
     private boolean supportBluetooth() {
