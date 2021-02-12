@@ -26,6 +26,7 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.widget.Toast;
 
 import androidx.annotation.Keep;
 import androidx.preference.ListPreference;
@@ -51,8 +52,13 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
         Preference.OnPreferenceChangeListener {
     static final String KEY_SURROUND_PASSTHROUGH = "surround_passthrough";
     static final String KEY_SURROUND_SOUND_FORMAT_PREFIX = "surround_sound_format_";
+    static final String KEY_SURROUND_SOUND_FORMAT_INFO_PREFIX = "surround_sound_format_info_";
     static final String KEY_SUPPORTED_SURROUND_SOUND = "supported_formats";
     static final String KEY_UNSUPPORTED_SURROUND_SOUND = "unsupported_formats";
+    static final String KEY_FORMAT_INFO = "surround_sound_format_info";
+    static final String KEY_SHOW_HIDE_FORMAT_INFO = "surround_sound_show_hide_format_info";
+    static final String KEY_ENABLED_FORMATS = "enabled_formats";
+    static final String KEY_DISABLED_FORMATS = "disabled_formats";
 
     static final String VAL_SURROUND_SOUND_AUTO = "auto";
     static final String VAL_SURROUND_SOUND_NEVER = "never";
@@ -69,6 +75,9 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
     private List<AbstractPreferenceController> mPreferenceControllers;
     private PreferenceCategory mSupportedFormatsPreferenceCategory;
     private PreferenceCategory mUnsupportedFormatsPreferenceCategory;
+    private PreferenceCategory mFormatsInfoPreferenceCategory;
+    private PreferenceCategory mEnabledFormatsPreferenceCategory;
+    private PreferenceCategory mDisabledFormatsPreferenceCategory;
 
     @Override
     public void onAttach(Context context) {
@@ -92,6 +101,7 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
         surroundPref.setValue(surroundPassthroughSetting);
         surroundPref.setOnPreferenceChangeListener(this);
 
+        createFormatInfoPreferences();
         createFormatPreferences();
         if (surroundPassthroughSetting == VAL_SURROUND_SOUND_MANUAL) {
             showFormatPreferences();
@@ -110,6 +120,32 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
         return mPreferenceControllers;
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        final String key = preference.getKey();
+        if (key == null) {
+            return super.onPreferenceTreeClick(preference);
+        }
+
+        if (key.equals(KEY_SHOW_HIDE_FORMAT_INFO)) {
+            if (preference.getTitle().equals(
+                    getContext().getString(R.string.surround_sound_hide_formats))) {
+                hideFormatInfoPreferences();
+                preference.setTitle(R.string.surround_sound_show_formats);
+            } else {
+                showFormatInfoPreferences();
+                preference.setTitle(R.string.surround_sound_hide_formats);
+            }
+        } else if (key.contains(KEY_SURROUND_SOUND_FORMAT_INFO_PREFIX)) {
+            if (preference.getParent() == mEnabledFormatsPreferenceCategory) {
+                showToast(R.string.surround_sound_enabled_format_info_clicked);
+            } else {
+                showToast(R.string.surround_sound_disabled_format_info_clicked);
+            }
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
+
     @VisibleForTesting
     AudioManager getAudioManager() {
         return getContext().getSystemService(AudioManager.class);
@@ -118,12 +154,10 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
     /** Creates titles and switches for each surround sound format. */
     private void createFormatPreferences() {
         mSupportedFormatsPreferenceCategory = createPreferenceCategory(
-                R.string.surround_sound_supported_title,
-                KEY_SUPPORTED_SURROUND_SOUND);
+                R.string.surround_sound_supported_title, KEY_SUPPORTED_SURROUND_SOUND);
         getPreferenceScreen().addPreference(mSupportedFormatsPreferenceCategory);
         mUnsupportedFormatsPreferenceCategory = createPreferenceCategory(
-                R.string.surround_sound_unsupported_title,
-                KEY_UNSUPPORTED_SURROUND_SOUND);
+                R.string.surround_sound_unsupported_title, KEY_UNSUPPORTED_SURROUND_SOUND);
         getPreferenceScreen().addPreference(mUnsupportedFormatsPreferenceCategory);
 
         for (int formatId : SURROUND_SOUND_DISPLAY_ORDER) {
@@ -166,16 +200,72 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
         }
     }
 
+    /** Creates titles and preferences for each surround sound format. */
+    private void createFormatInfoPreferences() {
+        mFormatsInfoPreferenceCategory = createPreferenceCategory(
+                R.string.surround_sound_format_info, KEY_FORMAT_INFO);
+        getPreferenceScreen().addPreference(mFormatsInfoPreferenceCategory);
+
+        Preference pref = createPreference(
+                R.string.surround_sound_show_formats, KEY_SHOW_HIDE_FORMAT_INFO);
+        mFormatsInfoPreferenceCategory.addPreference(pref);
+
+        mEnabledFormatsPreferenceCategory = createPreferenceCategory(
+                R.string.surround_sound_enabled_formats, KEY_ENABLED_FORMATS);
+        mFormatsInfoPreferenceCategory.addPreference(mEnabledFormatsPreferenceCategory);
+
+        mDisabledFormatsPreferenceCategory = createPreferenceCategory(
+                R.string.surround_sound_disabled_formats, KEY_DISABLED_FORMATS);
+        mFormatsInfoPreferenceCategory.addPreference(mDisabledFormatsPreferenceCategory);
+
+        for (int formatId : SURROUND_SOUND_DISPLAY_ORDER) {
+            if (mFormats.containsKey(formatId)) {
+                // If the format is not a known surround sound format, do not create a preference
+                // for it.
+                int titleId = getFormatDisplayResourceId(formatId);
+                if (titleId == -1) {
+                    continue;
+                }
+                pref = createPreference(titleId, KEY_SURROUND_SOUND_FORMAT_INFO_PREFIX + formatId);
+                if (mReportedFormats.containsKey(formatId)) {
+                    mEnabledFormatsPreferenceCategory.addPreference(pref);
+                } else {
+                    mDisabledFormatsPreferenceCategory.addPreference(pref);
+                }
+            }
+        }
+        hideFormatInfoPreferences();
+    }
+
     private void showFormatPreferences() {
         getPreferenceScreen().addPreference(mSupportedFormatsPreferenceCategory);
         getPreferenceScreen().addPreference(mUnsupportedFormatsPreferenceCategory);
         updateFormatPreferencesStates();
+        // hide the formats info section.
+        getPreferenceScreen().removePreference(mFormatsInfoPreferenceCategory);
     }
 
     private void hideFormatPreferences() {
         getPreferenceScreen().removePreference(mSupportedFormatsPreferenceCategory);
         getPreferenceScreen().removePreference(mUnsupportedFormatsPreferenceCategory);
         updateFormatPreferencesStates();
+        // show the formats info section.
+        getPreferenceScreen().addPreference(mFormatsInfoPreferenceCategory);
+    }
+
+    private void showFormatInfoPreferences() {
+        mFormatsInfoPreferenceCategory.addPreference(mEnabledFormatsPreferenceCategory);
+        mFormatsInfoPreferenceCategory.addPreference(mDisabledFormatsPreferenceCategory);
+    }
+
+    private void hideFormatInfoPreferences() {
+        mFormatsInfoPreferenceCategory.removePreference(mEnabledFormatsPreferenceCategory);
+        mFormatsInfoPreferenceCategory.removePreference(mDisabledFormatsPreferenceCategory);
+    }
+
+    private void showToast(int resId) {
+        Toast.makeText(getContext(), getContext().getString(resId), Toast.LENGTH_SHORT)
+                .show();
     }
 
     private PreferenceCategory createPreferenceCategory(int titleResourceId, String key) {
@@ -183,6 +273,13 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
         preferenceCategory.setTitle(titleResourceId);
         preferenceCategory.setKey(key);
         return preferenceCategory;
+    }
+
+    private Preference createPreference(int titleResourceId, String key) {
+        Preference preference = new Preference(getContext());
+        preference.setTitle(titleResourceId);
+        preference.setKey(key);
+        return preference;
     }
 
     /**
