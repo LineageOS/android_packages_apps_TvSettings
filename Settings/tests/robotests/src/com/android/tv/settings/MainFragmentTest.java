@@ -320,12 +320,8 @@ public class MainFragmentTest {
         PreferenceCategory suggestionCategory = mock(PreferenceCategory.class);
         Suggestion suggestion = new Suggestion.Builder("xyz").setSummary("abc").build();
         List<Suggestion> suggestions = Arrays.asList(suggestion);
-        mMainFragment.mSuggestionsList = suggestionCategory;
         doReturn(pref).when(mMainFragment)
                 .findPreference(SuggestionPreference.SUGGESTION_PREFERENCE_KEY + "xyz");
-        mMainFragment.mIconCache = mock(IconCache.class);
-
-        mMainFragment.updateSuggestionList(suggestions);
 
         verify(pref, atLeastOnce()).setSummary("abc");
     }
@@ -335,15 +331,11 @@ public class MainFragmentTest {
         PreferenceCategory suggestionCategory = mock(PreferenceCategory.class);
         Suggestion suggestion = new Suggestion.Builder("xyz").setSummary("abc").build();
         List<Suggestion> suggestions = Arrays.asList(suggestion);
-        mMainFragment.mSuggestionsList = suggestionCategory;
         PreferenceManager preferenceManager = mock(PreferenceManager.class);
         doReturn(preferenceManager).when(mMainFragment).getPreferenceManager();
         doReturn(RuntimeEnvironment.application).when(preferenceManager).getContext();
         doReturn(null).when(mMainFragment)
                 .findPreference(SuggestionPreference.SUGGESTION_PREFERENCE_KEY + "xyz");
-        mMainFragment.mIconCache = mock(IconCache.class);
-
-        mMainFragment.updateSuggestionList(suggestions);
 
         verify(suggestionCategory, atLeastOnce()).addPreference(any());
     }

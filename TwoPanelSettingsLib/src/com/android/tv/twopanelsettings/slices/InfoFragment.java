@@ -20,6 +20,7 @@ package com.android.tv.twopanelsettings.slices;
 import android.content.res.Resources;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,9 @@ import com.android.tv.twopanelsettings.R;
  */
 public class InfoFragment extends Fragment {
     public static final String EXTRA_INFO_HAS_STATUS = "extra_info_has_status";
+
+    private View mPreviousViewBeforeA11yFocus;
+    private ViewGroup mA11yFocusGroup;
 
     @Override
     public View onCreateView(
@@ -64,6 +68,7 @@ public class InfoFragment extends Fragment {
         TextView infoTitle = view.findViewById(R.id.info_title);
         TextView infoStatus = view.findViewById(R.id.info_status);
         TextView infoSummary = view.findViewById(R.id.info_summary);
+        mA11yFocusGroup = view.findViewById(R.id.info_content_container);
 
         if (image != null) {
             infoImage.setImageDrawable(image.loadDrawable(getContext()));
@@ -107,5 +112,34 @@ public class InfoFragment extends Fragment {
         if (summary != null) {
             infoSummary.setText(summary);
         }
+    }
+
+    /**
+     * Allow our information to get a11y focus if a11y is on. We cache the previous view in
+     * order to return back to the correct location on backwards navigation.
+     */
+    public void takeA11yFocus(View previousView) {
+        if (previousView != null && Settings.Secure.getInt(
+                    getActivity().getContentResolver(),
+                    Settings.Secure.ACCESSIBILITY_ENABLED, 0) == 1) {
+            mA11yFocusGroup.setFocusable(true);
+            mA11yFocusGroup.requestFocus();
+            mPreviousViewBeforeA11yFocus = previousView;
+        }
+    }
+
+    /** releaseA11yFocus purposedly does not check for a11y on, in the case that we still have focus
+     * but a11y has been turned off; this will allow the focus to return to the main pref fragment
+     * regardless of a11y state.
+     */
+    public boolean releaseA11yFocus() {
+        if (mPreviousViewBeforeA11yFocus != null) {
+            mPreviousViewBeforeA11yFocus.requestFocus();
+            mPreviousViewBeforeA11yFocus = null;
+            mA11yFocusGroup.setFocusable(false);
+
+            return true;
+        }
+        return false;
     }
 }
