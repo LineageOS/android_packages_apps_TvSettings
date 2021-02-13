@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class PreferenceParcelable implements Parcelable {
     public static final byte TYPE_RPEFERENCE = 0;
@@ -196,6 +197,25 @@ public class PreferenceParcelable implements Parcelable {
                 '}';
     }
 
+    public PreferenceParcelable immutableCopy() {
+        PreferenceParcelable copy = new PreferenceParcelable(Arrays.copyOf(key, key.length));
+        copy.setTitle(title);
+        copy.setSummary(summary);
+        copy.setType(type);
+        copy.setChecked(checked);
+        copy.setVisible(visible);
+        copy.setContentDescription(contentDescription);
+        Map<String, String> infoMapCopy = new ArrayMap<>();
+        if (infoMap != null) {
+            infoMapCopy.putAll(infoMap);
+        }
+        copy.setInfoMap(infoMapCopy);
+        if (childPrefParcelables != null) {
+            copy.setChildPrefParcelables(childPrefParcelables.stream()
+                    .map(PreferenceParcelable::immutableCopy).collect(Collectors.toList()));
+        }
+        return copy;
+    }
 
     @Override
     public int describeContents() {
