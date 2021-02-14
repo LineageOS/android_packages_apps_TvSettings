@@ -32,7 +32,6 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.SystemClock;
 import android.provider.Settings;
-import android.util.ArrayMap;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
@@ -46,7 +45,6 @@ import com.android.tv.settings.service.data.PreferenceParcelableManager;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 
 public class NetworkService extends Service implements ConnectivityListener.Listener,
         ConnectivityListener.WifiNetworkListener,
@@ -286,6 +284,7 @@ public class NetworkService extends Service implements ConnectivityListener.List
             PreferenceParcelable accessPointPref = new PreferenceParcelable(
                     new String[]{KEY_WIFI_LIST, accessPoint.getKey()});
             accessPointPref.setTitle(accessPoint.getTitle());
+            accessPointPref.setType(PreferenceParcelable.TYPE_PREFERENCE_ACCESS_POINT);
             accessPointPref.addInfo(WIFI_SIGNAL_LEVEL, String.valueOf(accessPoint.getLevel()));
             if (accessPoint.isActive() && !isCaptivePortal(accessPoint)) {
                 // TODO: link to WifiDetailsFragment
