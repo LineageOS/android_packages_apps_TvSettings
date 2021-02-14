@@ -38,12 +38,10 @@
     </androidx.cardview.widget.CardView>
 
     <RelativeLayout
-        android:id="@+id/info_content_container"
         android:layout_width="@dimen/settings_info_fragment_bottom_section_width"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:importantForAccessibility="yes"
         android:layout_marginBottom="@dimen/settings_info_fragment_bottom_section_margin_bottom"
         android:paddingEnd="@dimen/settings_info_fragment_bottom_section_padding_end" >
 
