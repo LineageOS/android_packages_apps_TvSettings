@@ -41,6 +41,7 @@ import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.service.INetworkService;
+import com.android.tv.settings.service.data.PreferenceParcelableManager;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -83,7 +84,7 @@ public class NetworkService extends Service implements ConnectivityListener.List
     PreferenceParcelable mEthernetProxyPref;
     PreferenceParcelable mAlwaysScan;
     PreferenceParcelable mWifiNetworkCategoryPref;
-    Map<String, PreferenceParcelable> mPreferenceMap;
+    PreferenceParcelableManager mPreferenceParcelableManager;
 
     private INetworkServiceListener mListener;
 
@@ -170,32 +171,27 @@ public class NetworkService extends Service implements ConnectivityListener.List
     };
 
     void onCreateFragment() {
+        mPreferenceParcelableManager = new PreferenceParcelableManager();
         mConnectivityListener = new ConnectivityListener(this, this, null);
         mIsWifiHardwarePresent = getPackageManager()
                 .hasSystemFeature(PackageManager.FEATURE_WIFI);
         mWifiManager = getSystemService(WifiManager.class);
         mConnectivityManager = getSystemService(ConnectivityManager.class);
-        mPreferenceMap = new ArrayMap<>();
-        mEnableWifiPref = new PreferenceParcelable(KEY_WIFI_ENABLE);
-        mAlwaysScan = new PreferenceParcelable(KEY_WIFI_ALWAYS_SCAN);
-        mCollapsePref = new PreferenceParcelable(KEY_WIFI_COLLAPSE);
+        mEnableWifiPref = mPreferenceParcelableManager.getOrCreatePrefParcelable(KEY_WIFI_ENABLE);
+        mAlwaysScan = mPreferenceParcelableManager.getOrCreatePrefParcelable(KEY_WIFI_ALWAYS_SCAN);
+        mCollapsePref = mPreferenceParcelableManager.getOrCreatePrefParcelable(KEY_WIFI_COLLAPSE);
         mCollapsePref.addInfo(COLLAPSE, "true");
-        mAddPref = new PreferenceParcelable(KEY_WIFI_ADD);
-        mEthernetCategory = new PreferenceParcelable(KEY_ETHERNET);
-        mEthernetStatusPref = new PreferenceParcelable(KEY_ETHERNET_STATUS);
-        mEthernetProxyPref = new PreferenceParcelable(KEY_ETHERNET_PROXY);
-        mWifiNetworkCategoryPref = new PreferenceParcelable(KEY_WIFI_LIST);
+        mAddPref = mPreferenceParcelableManager.getOrCreatePrefParcelable(KEY_WIFI_ADD);
+        mEthernetCategory = mPreferenceParcelableManager.getOrCreatePrefParcelable(KEY_ETHERNET);
+        mEthernetStatusPref = mPreferenceParcelableManager.getOrCreatePrefParcelable(
+                KEY_ETHERNET_STATUS);
+        mEthernetProxyPref = mPreferenceParcelableManager.getOrCreatePrefParcelable(
+                KEY_ETHERNET_PROXY);
+        mWifiNetworkCategoryPref = mPreferenceParcelableManager.getOrCreatePrefParcelable(
+                KEY_WIFI_LIST);
         mWifiNetworkCategoryPref.addInfo(COLLAPSE, "true");
         mWifiNetworkCategoryPref.setType(
                 PreferenceParcelable.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY);
-        mPreferenceMap.put(KEY_WIFI_ENABLE, mEnableWifiPref);
-        mPreferenceMap.put(KEY_WIFI_ALWAYS_SCAN, mAlwaysScan);
-        mPreferenceMap.put(KEY_WIFI_COLLAPSE, mCollapsePref);
-        mPreferenceMap.put(KEY_WIFI_ADD, mAddPref);
-        mPreferenceMap.put(KEY_WIFI_LIST, mWifiNetworkCategoryPref);
-        mPreferenceMap.put(KEY_ETHERNET, mEthernetCategory);
-        mPreferenceMap.put(KEY_ETHERNET_STATUS, mEthernetStatusPref);
-        mPreferenceMap.put(KEY_ETHERNET_PROXY, mEthernetProxyPref);
     }
 
     void onStartFragment() {
@@ -262,7 +258,8 @@ public class NetworkService extends Service implements ConnectivityListener.List
         }
 
         try {
-            mListener.notifyUpdateAll(new ArrayList<PreferenceParcelable>(mPreferenceMap.values()));
+            mListener.notifyUpdateAll(
+                    mPreferenceParcelableManager.prefParcelablesCopy(preferenceParcelables));
         } catch (RemoteException e) {
             Log.e(TAG, "remote failed: " + e);
         }
@@ -270,6 +267,7 @@ public class NetworkService extends Service implements ConnectivityListener.List
 
     private void updateWifiList() {
         if (!mIsWifiHardwarePresent || !mConnectivityListener.isWifiEnabledOrEnabling()) {
+            mNoWifiUpdateBeforeMillis = 0;
             return;
         }
 
@@ -297,7 +295,8 @@ public class NetworkService extends Service implements ConnectivityListener.List
             mWifiNetworkCategoryPref.addChildPrefParcelable(accessPointPref);
         }
         try {
-            mListener.notifyUpdate(mWifiNetworkCategoryPref);
+            mListener.notifyUpdate(
+                    PreferenceParcelableManager.prefParcelableCopy(mWifiNetworkCategoryPref));
         } catch (RemoteException e) {
             Log.e(TAG, "remote failed: " + e);
         }
@@ -322,7 +321,8 @@ public class NetworkService extends Service implements ConnectivityListener.List
                                 ? TvSettingsEnums.NETWORK_SEE_FEWER
                                 : TvSettingsEnums.NETWORK_SEE_ALL);
                 try {
-                    mListener.notifyUpdate(mWifiNetworkCategoryPref);
+                    mListener.notifyUpdate(PreferenceParcelableManager.prefParcelableCopy(
+                            mWifiNetworkCategoryPref));
                 } catch (RemoteException e) {
                     Log.e(TAG, "remote failed: " + e);
                 }
@@ -350,7 +350,7 @@ public class NetworkService extends Service implements ConnectivityListener.List
                 // no-op
         }
         try {
-            mListener.notifyUpdate(mPreferenceMap.get(key));
+            mListener.notifyUpdate(mPreferenceParcelableManager.prefParcelableCopy(key));
         } catch (RemoteException e) {
             Log.e(TAG, "remote failed: " + e);
         }
@@ -379,7 +379,7 @@ public class NetworkService extends Service implements ConnectivityListener.List
         PreferenceParcelable accessPointPref = new PreferenceParcelable(
                 new String[]{KEY_WIFI_LIST, accessPoint.getKey()});
         try {
-            mListener.notifyUpdate(accessPointPref);
+            mListener.notifyUpdate(PreferenceParcelableManager.prefParcelableCopy(accessPointPref));
         } catch (RemoteException e) {
             Log.e(TAG, "remote failed: " + e);
         }
@@ -390,7 +390,7 @@ public class NetworkService extends Service implements ConnectivityListener.List
         PreferenceParcelable accessPointPref = new PreferenceParcelable(
                 new String[]{KEY_WIFI_LIST, accessPoint.getKey()});
         try {
-            mListener.notifyUpdate(accessPointPref);
+            mListener.notifyUpdate(PreferenceParcelableManager.prefParcelableCopy(accessPointPref));
         } catch (RemoteException e) {
             Log.e(TAG, "remote failed: " + e);
         }
