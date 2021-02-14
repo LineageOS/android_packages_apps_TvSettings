@@ -20,8 +20,6 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFE
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TITLE_ICON;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
@@ -30,7 +28,6 @@ import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.transition.Fade;
 import android.util.Log;
@@ -677,9 +674,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             if (!isAdded()) {
                 return;
             }
-            final boolean accessibilityEnabled = Settings.Secure.getInt(
-                    getActivity().getContentResolver(),
-                    Settings.Secure.ACCESSIBILITY_ENABLED, 0) == 1;
             Fragment fragmentToBecomeMainPanel =
                     getChildFragmentManager().findFragmentById(frameResIds[index]);
             Fragment fragmentToBecomePreviewPanel =
@@ -713,21 +707,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                         mScrollView.getScrollX(), animationEnd);
                 slideAnim.setAutoCancel(true);
                 slideAnim.setDuration(PANEL_ANIMATION_MS);
-                // In order to preserve panel-switching functionality, we must keep the requestFocus
-                // invocation, however, a11y focus does not correctly get assigned while animations
-                // are being played.
-                if (accessibilityEnabled) {
-                    slideAnim.addListener(new AnimatorListenerAdapter() {
-                        @Override
-                        public void onAnimationEnd(Animator animation) {
-                            super.onAnimationEnd(animation);
-                            if (fragmentToBecomeMainPanel != null
-                                    && fragmentToBecomeMainPanel.getView() != null) {
-                                fragmentToBecomeMainPanel.getView().requestFocus();
-                            }
-                        }
-                    });
-                }
                 slideAnim.start();
                 // Color animation
                 if (scrollsToPreview) {
@@ -801,8 +780,18 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 }
             }
             if (fragmentToBecomeMainPanel != null && fragmentToBecomeMainPanel.getView() != null) {
-                if (!accessibilityEnabled) {
-                    fragmentToBecomeMainPanel.getView().requestFocus();
+                fragmentToBecomeMainPanel.getView().requestFocus();
+                for (int resId : frameResIds) {
+                    Fragment f = getChildFragmentManager().findFragmentById(resId);
+                    if (f != null) {
+                        View view = f.getView();
+                        if (view != null) {
+                            view.setImportantForAccessibility(
+                                    f == fragmentToBecomeMainPanel
+                                            ? View.IMPORTANT_FOR_ACCESSIBILITY_YES
+                                            : View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS);
+                        }
+                    }
                 }
                 if (fragmentToBecomeMainPanel instanceof PreviewableComponentCallback) {
                     if (distanceToScrollToRight > 0) {
