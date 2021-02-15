@@ -37,6 +37,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings;
+import android.util.Log;
 
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
@@ -136,6 +137,11 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mConnectivityListener.setWifiListener(this);
         mNoWifiUpdateBeforeMillis = SystemClock.elapsedRealtime() + INITIAL_UPDATE_DELAY;
         updateWifiList();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 
     @Override
