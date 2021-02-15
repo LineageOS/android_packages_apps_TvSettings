@@ -20,6 +20,8 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFE
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TITLE_ICON;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
@@ -28,6 +30,7 @@ import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.transition.Fade;
 import android.util.Log;
@@ -234,6 +237,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
         initialPreviewFragment.setExitTransition(null);
 
+        if (previewFragment.getView() != null) {
+            previewFragment.getView().setImportantForAccessibility(
+                    View.IMPORTANT_FOR_ACCESSIBILITY_YES);
+        }
+
         mPrefPanelIdx++;
 
         Fragment fragment = getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
@@ -246,6 +254,12 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
         moveToPanel(mPrefPanelIdx, true);
         removeFragmentAndAddToBackStack(mPrefPanelIdx - 1);
+    }
+
+    private boolean isA11yOn() {
+        return Settings.Secure.getInt(
+                getActivity().getContentResolver(),
+                Settings.Secure.ACCESSIBILITY_ENABLED, 0) == 1;
     }
 
     private void updateAccessibilityTitle(CharSequence title) {
@@ -707,6 +721,15 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                         mScrollView.getScrollX(), animationEnd);
                 slideAnim.setAutoCancel(true);
                 slideAnim.setDuration(PANEL_ANIMATION_MS);
+                slideAnim.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        if (isA11yOn() && fragmentToBecomeMainPanel.getView() != null) {
+                            fragmentToBecomeMainPanel.getView().requestFocus();
+                        }
+                    }
+                });
                 slideAnim.start();
                 // Color animation
                 if (scrollsToPreview) {
@@ -780,7 +803,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 }
             }
             if (fragmentToBecomeMainPanel != null && fragmentToBecomeMainPanel.getView() != null) {
-                fragmentToBecomeMainPanel.getView().requestFocus();
+                if (!isA11yOn()) {
+                    fragmentToBecomeMainPanel.getView().requestFocus();
+                }
                 for (int resId : frameResIds) {
                     Fragment f = getChildFragmentManager().findFragmentById(resId);
                     if (f != null) {
