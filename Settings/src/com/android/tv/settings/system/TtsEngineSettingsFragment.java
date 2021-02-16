@@ -389,11 +389,11 @@ public class TtsEngineSettingsFragment extends SettingsPreferenceFragment implem
     }
 
     private String getEngineName() {
-        return getArguments().getString(ARG_ENGINE_NAME);
+        return getArguments().getString(ARG_ENGINE_NAME, "");
     }
 
     private String getEngineLabel() {
-        return getArguments().getString(ARG_ENGINE_LABEL);
+        return getArguments().getString(ARG_ENGINE_LABEL, "");
     }
 
     @Override
