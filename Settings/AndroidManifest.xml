@@ -1104,10 +1104,10 @@
             android:exported="false" />
 
         <service
-            android:name=".service.NetworkService"
+            android:name=".service.SettingsService"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.android.tv.settings.NETWORK_SERVICE" />
+                <action android:name="com.android.tv.settings.SETTINGS_SERVICE" />
             </intent-filter>
         </service>
         <provider
