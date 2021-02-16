@@ -17,6 +17,12 @@
 package com.android.tv.settings.service;
 
 public final class ServiceUtil {
+    public static final int STATE_NETWORK_MAIN = 0;
+    public static final int STATE_WIFI_DETAILS = 1;
+
+    public static final String INFO_WIFI_SIGNAL_LEVEL = "wifi_signal_level";
+    public static final String INFO_COLLAPSE = "collapse";
+
     private ServiceUtil() {}
 
     static byte getChecked(boolean checked) {

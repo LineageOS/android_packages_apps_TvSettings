@@ -14,20 +14,23 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.service;
+package com.android.tv.settings.service.data;
 
-import com.android.tv.settings.service.INetworkServiceListener;
-import com.android.tv.settings.service.PreferenceParcelable;
+/** Implement this to provide data for each settings screen. */
+public interface State {
+    void onCreate();
 
-interface INetworkService {
-  List<PreferenceParcelable> getPreferences();
-  PreferenceParcelable getPreference(String key);
-  void registerListener(INetworkServiceListener listener);
-  void unRegisterListener(INetworkServiceListener listener);
-  void onCreate();
-  void onStart();
-  void onResume();
-  void onPause();
-  void onDestroy();
-  void onPreferenceClick(String key, boolean status);
+    void onStart();
+
+    void onResume();
+
+    void onPause();
+
+    void onStop();
+
+    void onDestroy();
+
+    void onPreferenceTreeClick(String key, boolean status);
+
+    int getStateIdentifier();
 }
