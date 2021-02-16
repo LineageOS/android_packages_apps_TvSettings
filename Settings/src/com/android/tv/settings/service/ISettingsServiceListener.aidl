@@ -17,7 +17,7 @@
 package com.android.tv.settings.service;
 
 import com.android.tv.settings.service.PreferenceParcelable;
-interface INetworkServiceListener {
-  void notifyUpdate(in PreferenceParcelable preferenceParcelable);
-  void notifyUpdateAll(in List<PreferenceParcelable> preferences);
+interface ISettingsServiceListener {
+  void notifyUpdate(int state, in PreferenceParcelable preferenceParcelable);
+  void notifyUpdateAll(int state, in List<PreferenceParcelable> preferences);
 }

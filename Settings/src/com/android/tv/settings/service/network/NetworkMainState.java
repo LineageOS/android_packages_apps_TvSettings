@@ -14,46 +14,40 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.service;
+package com.android.tv.settings.service.network;
 
+import static com.android.tv.settings.service.ServiceUtil.INFO_COLLAPSE;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
-import android.app.Service;
 import android.app.tvsettings.TvSettingsEnums;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.ConnectivityManager;
+import android.content.Context;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
-import android.net.wifi.WifiManager;
 import android.os.Handler;
-import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.SystemClock;
 import android.provider.Settings;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
-
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.ConnectivityListener;
-import com.android.tv.settings.service.INetworkService;
+import com.android.tv.settings.service.ISettingsServiceListener;
+import com.android.tv.settings.service.PreferenceParcelable;
+import com.android.tv.settings.service.ServiceUtil;
 import com.android.tv.settings.service.data.PreferenceParcelableManager;
+import com.android.tv.settings.service.data.State;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class NetworkService extends Service implements ConnectivityListener.Listener,
-        ConnectivityListener.WifiNetworkListener,
-        AccessPoint.AccessPointListener {
-    private static final String TAG = "NetworkService";
-    private ConnectivityListener mConnectivityListener;
-    private WifiManager mWifiManager;
-    private ConnectivityManager mConnectivityManager;
-    private boolean mIsWifiHardwarePresent;
+/** State to provide data for rendering NetworkFragment. */
+public class NetworkMainState implements State, AccessPoint.AccessPointListener,
+        ConnectivityListener.WifiNetworkListener, ConnectivityListener.Listener {
+    private static final String TAG = "NetworkMainState";
+    private static final boolean DEBUG = true;
     private static final String KEY_WIFI_ENABLE = "wifi_enable";
     private static final String KEY_WIFI_LIST = "wifi_list";
     private static final String KEY_WIFI_COLLAPSE = "wifi_collapse";
@@ -69,11 +63,6 @@ public class NetworkService extends Service implements ConnectivityListener.List
     private static final String KEY_NETWORK_DIAGNOSTICS = "network_diagnostics";
     private static final int INITIAL_UPDATE_DELAY = 500;
 
-    private static final String WIFI_SIGNAL_LEVEL = "wifi_signal_level";
-    private static final String COLLAPSE = "collapse";
-
-    // TODO : create PrefParcelablesManager to share parcelable info across service and provide data
-    // for client
     PreferenceParcelable mEnableWifiPref;
     PreferenceParcelable mCollapsePref;
     PreferenceParcelable mAddPref;
@@ -83,9 +72,9 @@ public class NetworkService extends Service implements ConnectivityListener.List
     PreferenceParcelable mAlwaysScan;
     PreferenceParcelable mWifiNetworkCategoryPref;
     PreferenceParcelableManager mPreferenceParcelableManager;
-
-    private INetworkServiceListener mListener;
-
+    private NetworkModule mNetworkModule;
+    private final Context mContext;
+    private final ISettingsServiceListener mServiceListener;
     private final Handler mHandler = new Handler();
     private long mNoWifiUpdateBeforeMillis;
     private final Runnable mInitialUpdateWifiListRunnable = new Runnable() {
@@ -96,89 +85,19 @@ public class NetworkService extends Service implements ConnectivityListener.List
         }
     };
 
+    public NetworkMainState(Context context, ISettingsServiceListener listener) {
+        mServiceListener = listener;
+        mContext = context;
+    }
 
-    private final INetworkService.Stub mBinder = new INetworkService.Stub() {
-
-        @Override
-        public List<PreferenceParcelable> getPreferences() throws RemoteException {
-
-            return null;
-        }
-
-        @Override
-        public PreferenceParcelable getPreference(String key) throws RemoteException {
-            return null;
-        }
-
-        @Override
-        public void registerListener(INetworkServiceListener listener) throws RemoteException {
-            mHandler.post(() -> {
-                mListener = listener;
-            });
-        }
-
-        @Override
-        public void unRegisterListener(INetworkServiceListener listener) throws RemoteException {
-            mHandler.post(() -> {
-                mListener = null;
-            });
-        }
-
-        @Override
-        public void onCreate() throws RemoteException {
-            mHandler.post(() -> {
-                NetworkService.this.onCreateFragment();
-            });
-        }
-
-        @Override
-        public void onStart() throws RemoteException {
-            mHandler.post(() -> {
-                NetworkService.this.onStartFragment();
-            });
-        }
-
-        @Override
-        public void onResume() throws RemoteException {
-            mHandler.post(() -> {
-                NetworkService.this.onResumeFragment();
-            });
-
-        }
-
-        @Override
-        public void onPause() throws RemoteException {
-            mHandler.post(() -> {
-                NetworkService.this.onPauseFragment();
-            });
-        }
-
-        @Override
-        public void onDestroy() {
-            mHandler.post(() -> {
-                NetworkService.this.onDestroyFragment();
-            });
-        }
-
-        @Override
-        public void onPreferenceClick(String key, boolean status) throws RemoteException {
-            mHandler.post(() -> {
-                NetworkService.this.onPreferenceClick(key, status);
-            });
-        }
-    };
-
-    void onCreateFragment() {
+    @Override
+    public void onCreate() {
+        mNetworkModule = NetworkModule.getInstance(mContext);
         mPreferenceParcelableManager = new PreferenceParcelableManager();
-        mConnectivityListener = new ConnectivityListener(this, this, null);
-        mIsWifiHardwarePresent = getPackageManager()
-                .hasSystemFeature(PackageManager.FEATURE_WIFI);
-        mWifiManager = getSystemService(WifiManager.class);
-        mConnectivityManager = getSystemService(ConnectivityManager.class);
         mEnableWifiPref = mPreferenceParcelableManager.getOrCreatePrefParcelable(KEY_WIFI_ENABLE);
         mAlwaysScan = mPreferenceParcelableManager.getOrCreatePrefParcelable(KEY_WIFI_ALWAYS_SCAN);
         mCollapsePref = mPreferenceParcelableManager.getOrCreatePrefParcelable(KEY_WIFI_COLLAPSE);
-        mCollapsePref.addInfo(COLLAPSE, "true");
+        mCollapsePref.addInfo(INFO_COLLAPSE, "true");
         mAddPref = mPreferenceParcelableManager.getOrCreatePrefParcelable(KEY_WIFI_ADD);
         mEthernetCategory = mPreferenceParcelableManager.getOrCreatePrefParcelable(KEY_ETHERNET);
         mEthernetStatusPref = mPreferenceParcelableManager.getOrCreatePrefParcelable(
@@ -187,84 +106,42 @@ public class NetworkService extends Service implements ConnectivityListener.List
                 KEY_ETHERNET_PROXY);
         mWifiNetworkCategoryPref = mPreferenceParcelableManager.getOrCreatePrefParcelable(
                 KEY_WIFI_LIST);
-        mWifiNetworkCategoryPref.addInfo(COLLAPSE, "true");
+        mWifiNetworkCategoryPref.addInfo(INFO_COLLAPSE, "true");
         mWifiNetworkCategoryPref.setType(
                 PreferenceParcelable.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY);
     }
 
-    void onStartFragment() {
-        mConnectivityListener.setWifiListener(this);
-        mConnectivityListener.start();
+    @Override
+    public void onStart() {
+        mNetworkModule.addState(this);
+        mNetworkModule.getConnectivityListener().setWifiListener(this);
         mNoWifiUpdateBeforeMillis = SystemClock.elapsedRealtime() + INITIAL_UPDATE_DELAY;
+        mNetworkModule.getConnectivityListener().start();
         updateWifiList();
     }
 
-    void onResumeFragment() {
+    @Override
+    public void onResume() {
         updateConnectivity();
     }
 
-    void onDestroyFragment() {
-        mConnectivityListener.destroy();
+    @Override
+    public void onPause() {
     }
 
-    private void updateConnectivity() {
-        List<PreferenceParcelable> preferenceParcelables = new ArrayList<>();
-        final boolean wifiEnabled = mIsWifiHardwarePresent
-                && mConnectivityListener.isWifiEnabledOrEnabling();
-        mEnableWifiPref.setChecked(wifiEnabled);
-        preferenceParcelables.add(mEnableWifiPref);
+    @Override
+    public void onStop() {
+        mNetworkModule.getConnectivityListener().stop();
+        mNetworkModule.removeState(this);
+    }
 
-        mWifiNetworkCategoryPref.setVisible(wifiEnabled);
-        preferenceParcelables.add(mWifiNetworkCategoryPref);
-
-        mCollapsePref.setVisible(wifiEnabled);
-        preferenceParcelables.add(mCollapsePref);
-
-        mAddPref.setVisible(wifiEnabled);
-        preferenceParcelables.add(mAddPref);
-
-
-        if (!wifiEnabled) {
-            updateWifiList();
-        }
-
-        int scanAlwaysAvailable = 0;
-        try {
-            scanAlwaysAvailable = Settings.Global.getInt(getContentResolver(),
-                    Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE);
-        } catch (Settings.SettingNotFoundException e) {
-            // Ignore
-        }
-
-        mAlwaysScan.setChecked(scanAlwaysAvailable == 1);
-        mAlwaysScan.setContentDescription(
-                getString(R.string.wifi_setting_always_scan_content_description));
-
-        final boolean ethernetAvailable = mConnectivityListener.isEthernetAvailable();
-        mEthernetCategory.setVisible(ethernetAvailable);
-        mEthernetStatusPref.setVisible(ethernetAvailable);
-        mEthernetProxyPref.setVisible(ethernetAvailable);
-        preferenceParcelables.add(mEthernetCategory);
-        preferenceParcelables.add(mEthernetStatusPref);
-        preferenceParcelables.add(mEthernetProxyPref);
-        if (ethernetAvailable) {
-            final boolean ethernetConnected =
-                    mConnectivityListener.isEthernetConnected();
-            mEthernetStatusPref.setTitle(ethernetConnected
-                    ? getString(R.string.connected) : getString(R.string.not_connected));
-            mEthernetStatusPref.setSummary(mConnectivityListener.getEthernetIpAddress());
-        }
-
-        try {
-            mListener.notifyUpdateAll(
-                    mPreferenceParcelableManager.prefParcelablesCopy(preferenceParcelables));
-        } catch (RemoteException e) {
-            Log.e(TAG, "remote failed: " + e);
-        }
+    @Override
+    public void onDestroy() {
     }
 
     private void updateWifiList() {
-        if (!mIsWifiHardwarePresent || !mConnectivityListener.isWifiEnabledOrEnabling()) {
+        if (!mNetworkModule.isWifiHardwarePresent() ||
+                !mNetworkModule.getConnectivityListener().isWifiEnabledOrEnabling()) {
             mNoWifiUpdateBeforeMillis = 0;
             return;
         }
@@ -277,7 +154,8 @@ public class NetworkService extends Service implements ConnectivityListener.List
             return;
         }
 
-        final Collection<AccessPoint> accessPoints = mConnectivityListener.getAvailableNetworks();
+        final Collection<AccessPoint> accessPoints =
+                mNetworkModule.getConnectivityListener().getAvailableNetworks();
         mWifiNetworkCategoryPref.initChildPreferences();
         for (final AccessPoint accessPoint : accessPoints) {
             accessPoint.setListener(this);
@@ -285,7 +163,8 @@ public class NetworkService extends Service implements ConnectivityListener.List
                     new String[]{KEY_WIFI_LIST, accessPoint.getKey()});
             accessPointPref.setTitle(accessPoint.getTitle());
             accessPointPref.setType(PreferenceParcelable.TYPE_PREFERENCE_ACCESS_POINT);
-            accessPointPref.addInfo(WIFI_SIGNAL_LEVEL, String.valueOf(accessPoint.getLevel()));
+            accessPointPref.addInfo(ServiceUtil.INFO_WIFI_SIGNAL_LEVEL,
+                    String.valueOf(accessPoint.getLevel()));
             if (accessPoint.isActive() && !isCaptivePortal(accessPoint)) {
                 // TODO: link to WifiDetailsFragment
             } else {
@@ -294,41 +173,41 @@ public class NetworkService extends Service implements ConnectivityListener.List
             mWifiNetworkCategoryPref.addChildPrefParcelable(accessPointPref);
         }
         try {
-            mListener.notifyUpdate(
+            mServiceListener.notifyUpdate(getStateIdentifier(),
                     PreferenceParcelableManager.prefParcelableCopy(mWifiNetworkCategoryPref));
         } catch (RemoteException e) {
             Log.e(TAG, "remote failed: " + e);
         }
     }
 
-    void onPauseFragment() {
-        mConnectivityListener.stop();
-    }
-
-    void onPreferenceClick(String key, boolean status) {
+    @Override
+    public void onPreferenceTreeClick(String key, boolean status) {
         switch (key) {
             case KEY_WIFI_ENABLE:
-                mConnectivityListener.setWifiEnabled(status);
+                mNetworkModule.getConnectivityListener().setWifiEnabled(status);
                 mEnableWifiPref.setChecked(status);
                 break;
             case KEY_WIFI_COLLAPSE:
-                boolean collapse = !("true".equals(mWifiNetworkCategoryPref.getInfo(COLLAPSE)));
-                mWifiNetworkCategoryPref.addInfo(COLLAPSE, String.valueOf(collapse));
-                mCollapsePref.addInfo(COLLAPSE, String.valueOf(collapse));
+                boolean collapse = !("true".equals(
+                        mWifiNetworkCategoryPref.getInfo(ServiceUtil.INFO_COLLAPSE)));
+                mWifiNetworkCategoryPref.addInfo(ServiceUtil.INFO_COLLAPSE,
+                        String.valueOf(collapse));
+                mCollapsePref.addInfo(ServiceUtil.INFO_COLLAPSE, String.valueOf(collapse));
                 logEntrySelected(
                         collapse
                                 ? TvSettingsEnums.NETWORK_SEE_FEWER
                                 : TvSettingsEnums.NETWORK_SEE_ALL);
                 try {
-                    mListener.notifyUpdate(PreferenceParcelableManager.prefParcelableCopy(
-                            mWifiNetworkCategoryPref));
+                    mServiceListener.notifyUpdate(getStateIdentifier(),
+                            PreferenceParcelableManager.prefParcelableCopy(
+                                    mWifiNetworkCategoryPref));
                 } catch (RemoteException e) {
                     Log.e(TAG, "remote failed: " + e);
                 }
                 break;
             case KEY_WIFI_ALWAYS_SCAN:
                 mAlwaysScan.setChecked(status);
-                Settings.Global.putInt(getContentResolver(),
+                Settings.Global.putInt(mContext.getContentResolver(),
                         Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE,
                         status ? 1 : 0);
                 logToggleInteracted(
@@ -349,36 +228,80 @@ public class NetworkService extends Service implements ConnectivityListener.List
                 // no-op
         }
         try {
-            mListener.notifyUpdate(mPreferenceParcelableManager.prefParcelableCopy(key));
+            mServiceListener.notifyUpdate(getStateIdentifier(),
+                    mPreferenceParcelableManager.prefParcelableCopy(key));
         } catch (RemoteException e) {
             Log.e(TAG, "remote failed: " + e);
         }
     }
 
 
-    @Nullable
-    @Override
-    public IBinder onBind(Intent intent) {
-        return mBinder;
-    }
+    private void updateConnectivity() {
+        List<PreferenceParcelable> preferenceParcelables = new ArrayList<>();
+        final boolean wifiEnabled = mNetworkModule.isWifiHardwarePresent()
+                && mNetworkModule.getConnectivityListener().isWifiEnabledOrEnabling();
+        mEnableWifiPref.setChecked(wifiEnabled);
+        preferenceParcelables.add(mEnableWifiPref);
 
-    @Override
-    public void onConnectivityChange() {
-        updateConnectivity();
-    }
+        mWifiNetworkCategoryPref.setVisible(wifiEnabled);
+        preferenceParcelables.add(mWifiNetworkCategoryPref);
 
-    @Override
-    public void onWifiListChanged() {
-        updateWifiList();
-    }
+        mCollapsePref.setVisible(wifiEnabled);
+        preferenceParcelables.add(mCollapsePref);
 
+        mAddPref.setVisible(wifiEnabled);
+        preferenceParcelables.add(mAddPref);
+
+
+        if (!wifiEnabled) {
+            updateWifiList();
+        }
+
+        int scanAlwaysAvailable = 0;
+        try {
+            scanAlwaysAvailable = Settings.Global.getInt(mContext.getContentResolver(),
+                    Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE);
+        } catch (Settings.SettingNotFoundException e) {
+            // Ignore
+        }
+
+        mAlwaysScan.setChecked(scanAlwaysAvailable == 1);
+        mAlwaysScan.setContentDescription(
+                mContext.getString(R.string.wifi_setting_always_scan_content_description));
+
+        final boolean ethernetAvailable =
+                mNetworkModule.getConnectivityListener().isEthernetAvailable();
+        mEthernetCategory.setVisible(ethernetAvailable);
+        mEthernetStatusPref.setVisible(ethernetAvailable);
+        mEthernetProxyPref.setVisible(ethernetAvailable);
+        preferenceParcelables.add(mEthernetCategory);
+        preferenceParcelables.add(mEthernetStatusPref);
+        preferenceParcelables.add(mEthernetProxyPref);
+        if (ethernetAvailable) {
+            final boolean ethernetConnected =
+                    mNetworkModule.getConnectivityListener().isEthernetConnected();
+            mEthernetStatusPref.setTitle(ethernetConnected
+                    ? mContext.getString(R.string.connected)
+                    : mContext.getString(R.string.not_connected));
+            mEthernetStatusPref.setSummary(
+                    mNetworkModule.getConnectivityListener().getEthernetIpAddress());
+        }
+
+        try {
+            mServiceListener.notifyUpdateAll(getStateIdentifier(),
+                    PreferenceParcelableManager.prefParcelablesCopy(preferenceParcelables));
+        } catch (RemoteException e) {
+            Log.e(TAG, "remote failed: " + e);
+        }
+    }
 
     @Override
     public void onAccessPointChanged(AccessPoint accessPoint) {
         PreferenceParcelable accessPointPref = new PreferenceParcelable(
                 new String[]{KEY_WIFI_LIST, accessPoint.getKey()});
         try {
-            mListener.notifyUpdate(PreferenceParcelableManager.prefParcelableCopy(accessPointPref));
+            mServiceListener.notifyUpdate(getStateIdentifier(),
+                    PreferenceParcelableManager.prefParcelableCopy(accessPointPref));
         } catch (RemoteException e) {
             Log.e(TAG, "remote failed: " + e);
         }
@@ -389,19 +312,35 @@ public class NetworkService extends Service implements ConnectivityListener.List
         PreferenceParcelable accessPointPref = new PreferenceParcelable(
                 new String[]{KEY_WIFI_LIST, accessPoint.getKey()});
         try {
-            mListener.notifyUpdate(PreferenceParcelableManager.prefParcelableCopy(accessPointPref));
+            mServiceListener.notifyUpdate(getStateIdentifier(),
+                    PreferenceParcelableManager.prefParcelableCopy(accessPointPref));
         } catch (RemoteException e) {
             Log.e(TAG, "remote failed: " + e);
         }
     }
 
+    @Override
+    public void onWifiListChanged() {
+        updateWifiList();
+    }
+
+
+    @Override
+    public int getStateIdentifier() {
+        return ServiceUtil.STATE_NETWORK_MAIN;
+    }
 
     private boolean isCaptivePortal(AccessPoint accessPoint) {
         if (accessPoint.getDetailedState() != NetworkInfo.DetailedState.CONNECTED) {
             return false;
         }
-        NetworkCapabilities nc = mConnectivityManager.getNetworkCapabilities(
-                mWifiManager.getCurrentNetwork());
+        NetworkCapabilities nc = mNetworkModule.getConnectivityManager().getNetworkCapabilities(
+                mNetworkModule.getWifiManager().getCurrentNetwork());
         return nc != null && nc.hasCapability(NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL);
+    }
+
+    @Override
+    public void onConnectivityChange() {
+        updateConnectivity();
     }
 }
