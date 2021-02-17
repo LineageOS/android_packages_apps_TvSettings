@@ -119,6 +119,11 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
                     decor.setOutlineProvider(null);
                     decor.setBackgroundResource(R.color.tp_preference_panel_background_color);
                 }
+            } else {
+                // We only want to set the pane title in this location for one-panel settings.
+                // TwoPanelSettings behavior is handled moveToPanel in TwoPanelSettingsFragment
+                // since we only want the active/main panel to announce its title.
+                view.setAccessibilityPaneTitle(getPreferenceScreen().getTitle());
             }
             removeAnimationClipping(view);
         }
