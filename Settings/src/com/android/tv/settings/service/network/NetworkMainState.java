@@ -24,6 +24,7 @@ import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.RemoteException;
 import android.os.SystemClock;
@@ -33,6 +34,7 @@ import android.util.Log;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.ConnectivityListener;
+import com.android.tv.settings.connectivity.WifiConnectionActivity;
 import com.android.tv.settings.service.ISettingsServiceListener;
 import com.android.tv.settings.service.PreferenceParcelable;
 import com.android.tv.settings.service.ServiceUtil;
@@ -91,7 +93,7 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     }
 
     @Override
-    public void onCreate() {
+    public void onCreate(Bundle extras) {
         mNetworkModule = NetworkModule.getInstance(mContext);
         mPreferenceParcelableManager = new PreferenceParcelableManager();
         mEnableWifiPref = mPreferenceParcelableManager.getOrCreatePrefParcelable(KEY_WIFI_ENABLE);
@@ -166,9 +168,15 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
             accessPointPref.addInfo(ServiceUtil.INFO_WIFI_SIGNAL_LEVEL,
                     String.valueOf(accessPoint.getLevel()));
             if (accessPoint.isActive() && !isCaptivePortal(accessPoint)) {
-                // TODO: link to WifiDetailsFragment
+                Bundle apBundle = new Bundle();
+                accessPoint.saveWifiState(apBundle);
+                accessPointPref.setExtras(apBundle);
+                accessPointPref.addInfo(ServiceUtil.INFO_NEXT_STATE, String.valueOf(
+                        ServiceUtil.STATE_WIFI_DETAILS));
+                accessPointPref.setIntent(null);
             } else {
-                // TODO: link to WifiConnectionActivity
+                accessPointPref.setIntent(
+                        WifiConnectionActivity.createIntent(mContext, accessPoint));
             }
             mWifiNetworkCategoryPref.addChildPrefParcelable(accessPointPref);
         }
