@@ -77,7 +77,7 @@
     <string name="last_synced" msgid="8371967816955123864">"Акыркы жолу качан шайкештирилген: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="6652778349371079140">"Өчүрүлгөн"</string>
     <string name="account_remove" msgid="8456848988853890155">"Аккаунтту өчүрүү"</string>
-    <string name="account_remove_failed" msgid="5654411101098531690">"Каттоо эсеби өчүрүлбөй жатат"</string>
+    <string name="account_remove_failed" msgid="5654411101098531690">"Аккаунт өчүрүлбөй жатат"</string>
     <!-- no translation found for sync_item_title (5884138264243772176) -->
     <skip />
     <string name="sync_one_time_sync" msgid="1665961083810584134">"Азыр шайкештирүү<xliff:g id="LAST_SYNC_TIME">
@@ -135,15 +135,25 @@
     <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"Баары бир өзгөртүү"</string>
     <string name="surround_sound_supported_title" msgid="4873195851187547020">"КОЛДООГО АЛЫНГАН ФОРМАТТАР"</string>
     <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"КОЛДООГО АЛЫНБАГАН ФОРМАТТАР"</string>
+    <string name="surround_sound_format_info" msgid="5671866505653542934">"ФОРМАТ ТУУРАЛУУ МААЛЫМАТ"</string>
+    <string name="surround_sound_show_formats" msgid="1929849219042916469">"Форматтарды көрсөтүү"</string>
+    <string name="surround_sound_hide_formats" msgid="7770931097236868238">"Форматтарды жашыруу"</string>
+    <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"ИШТЕТИЛГЕН ФОРМАТТАР"</string>
+    <string name="surround_sound_disabled_formats" msgid="2250466936859455802">"ӨЧҮРҮЛГӨН ФОРМАТТАР"</string>
+    <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Иштетүү үчүн форматты Кол менен тандоого өзгөртүңүз."</string>
+    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Өчүрүү үчүн форматты Кол менен тандоого өзгөртүңүз."</string>
     <string name="display_category_title" msgid="247804007525046312">"Экран"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Өркүндөтүлгөн дисплейдин жөндөөлөрү"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Өркүндөтүлгөн добуштун жөндөөлөрү"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Оюн режимине уруксат берүү"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Мазмундун кадрлар жыштыгын дал келтирүү"</string>
-    <string name="match_content_frame_rate_auto" msgid="6214788970633587734">"Авто"</string>
-    <string name="match_content_frame_rate_always" msgid="5642271496986859043">"Ар дайым"</string>
+    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Үзгүлтүксүз"</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Эгер колдонмо суранса, түзмөгүңүз ойнотулуп жаткан видеонун баштапкы кадрларынын жыштыгын тууралайт. Бул TV үзгүлтүксүз өтүүнү аткара алса гана мүмкүн."</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Үзгүлтүксүз эмес"</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Эгер колдонмо суранса, түзмөгүңүз ойнотулуп жаткан видеонун баштапкы кадрларынын жыштыгын тууралайт. Видеону ойноткучка кирип же чыгып жатканда экран бир секундга өчүп калышы мүмкүн."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Эч качан"</string>
+    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Колдонмо суранган учурда да, түзмөгүңүз ойнотулуп жаткан видеонун баштапкы кадрларынын жыштыгын тууралоого эч качан аракет кылбайт."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Кэш берилиштери тазалансынбы?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Бул бардык колдонмолордун кэштелген берилиштерин тазалайт."</string>
     <string name="accessories_add" msgid="413764175035531452">"Көмөкчү жабдык кошуу"</string>
@@ -215,7 +225,7 @@
     <string name="accessibility_none" msgid="6355646833528306702">"Эч бири"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Колдонуу жана мүчүлүштүктөрдү аныктоо"</string>
     <string name="tutorials" msgid="7880770425872110455">"Үйрөткүчтөр"</string>
-    <string name="about_system_update" msgid="7421264399111367755">"Тутум жаңыртуусу"</string>
+    <string name="about_system_update" msgid="7421264399111367755">"Системанын жаңыртуусу"</string>
     <string name="system_update_description" msgid="998883510488461766">"Муну менен тутум программасы эң акыркы версияга жаңыртылат. Түзмөгүңүз өчүп күйөт."</string>
     <string name="system_update_content_description" msgid="5702888187682876466">"Тутумду жаңыртуу. Муну менен тутум программасы эң акыркы версияга жаңыртылат. Түзмөгүңүз өчүп күйөт."</string>
     <string name="about_preference" msgid="9112690446998150670">"Түзмөк жөнүндө"</string>
@@ -817,9 +827,9 @@
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Башка терезелердин үстүнөн көрсөтүү"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Башка терезелердин үстүнөн көрсөтүүгө уруксат"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Колдонмону башка терезелердин үстүнөн көрсөтүүгө уруксат бериңиз. Бирок башка колдонмолорду пайдаланууга тоскоол болуп же алардын интерфейсин бузуп салышы мүмкүн."</string>
-    <string name="write_system_settings" msgid="4284654265954461890">"Тутум жөндөөлөрүн өзгөртүү"</string>
-    <string name="write_settings_title" msgid="2361816483383105754">"Тутум жөндөөлөрүн өзгөртө алат"</string>
-    <string name="write_settings_description" msgid="7382397926674265937">"Колдонмо тутум жөндөөлөрүн өзгөртө алат."</string>
+    <string name="write_system_settings" msgid="4284654265954461890">"Системанын жөндөөлөрүн өзгөртүү"</string>
+    <string name="write_settings_title" msgid="2361816483383105754">"Системанын жөндөөлөрүн өзгөртө алат"</string>
+    <string name="write_settings_description" msgid="7382397926674265937">"Колдонмо системанын жөндөөлөрүн өзгөртө алат."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Ооба"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Жок"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Сүрөт ичиндеги сүрөт"</string>
