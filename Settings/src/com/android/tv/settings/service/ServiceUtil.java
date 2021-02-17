@@ -20,6 +20,8 @@ public final class ServiceUtil {
     public static final int STATE_NETWORK_MAIN = 0;
     public static final int STATE_WIFI_DETAILS = 1;
 
+    public static final String INFO_INTENT = "intent";
+    public static final String INFO_NEXT_STATE = "next_state";
     public static final String INFO_WIFI_SIGNAL_LEVEL = "wifi_signal_level";
     public static final String INFO_COLLAPSE = "collapse";
 
