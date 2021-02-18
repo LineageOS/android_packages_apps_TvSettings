@@ -54,7 +54,11 @@ public class PreferenceParcelableManager {
     }
 
     public PreferenceParcelable prefParcelableCopy(String key) {
-        return prefParcelables.get(getKey(new String[]{key})).immutableCopy();
+        PreferenceParcelable preferenceParcelable = prefParcelables.get(getKey(new String[]{key}));
+        if (preferenceParcelable != null) {
+            return preferenceParcelable.immutableCopy();
+        }
+        return null;
     }
 
     public static PreferenceParcelable prefParcelableCopy(

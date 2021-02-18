@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.service;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.ArrayMap;
@@ -36,6 +38,8 @@ public class PreferenceParcelable implements Parcelable {
     private String title;
     private String summary;
     private String contentDescription;
+    private Bundle extras;
+    private Intent intent;
 
     // 0 : preference, 1 : preferenceCategory, 2 : AccessPointPreference
     private byte type;
@@ -171,6 +175,22 @@ public class PreferenceParcelable implements Parcelable {
         this.visible = visible;
     }
 
+    public Bundle getExtras() {
+        return extras;
+    }
+
+    public void setExtras(Bundle extras) {
+        this.extras = extras;
+    }
+
+    public Intent getIntent() {
+        return intent;
+    }
+
+    public void setIntent(Intent intent) {
+        this.intent = intent;
+    }
+
     public void initChildPreferences() {
         childPrefParcelables = new ArrayList<>();
     }
@@ -190,6 +210,8 @@ public class PreferenceParcelable implements Parcelable {
                 ", summary='" + summary + '\'' +
                 ", contentDescription='" + contentDescription + '\'' +
                 ", type=" + type +
+                ", extras=" + extras +
+                ", intent=" + intent +
                 ", infoMap=" + infoMap +
                 ", checked=" + checked +
                 ", visible=" + visible +
@@ -205,6 +227,12 @@ public class PreferenceParcelable implements Parcelable {
         copy.setChecked(checked);
         copy.setVisible(visible);
         copy.setContentDescription(contentDescription);
+        if (extras != null) {
+            copy.setExtras(new Bundle(extras));
+        }
+        if (intent != null) {
+            copy.setIntent(new Intent(intent));
+        }
         Map<String, String> infoMapCopy = new ArrayMap<>();
         if (infoMap != null) {
             infoMapCopy.putAll(infoMap);
@@ -231,6 +259,8 @@ public class PreferenceParcelable implements Parcelable {
         dest.writeByte(checked);
         dest.writeByte(visible);
         dest.writeByte(type);
+        dest.writeBundle(extras);
+        dest.writeParcelable(intent, flags);
         dest.writeMap(infoMap);
         dest.writeParcelableList(childPrefParcelables, flags);
     }
@@ -247,6 +277,9 @@ public class PreferenceParcelable implements Parcelable {
                     preferenceParcelable.setChecked(source.readByte());
                     preferenceParcelable.setVisible(source.readByte());
                     preferenceParcelable.setType(source.readByte());
+                    preferenceParcelable.setExtras(source.readBundle());
+                    preferenceParcelable.setIntent(
+                            source.readParcelable(Intent.class.getClassLoader()));
                     source.readMap(preferenceParcelable.getInfoMap(), Map.class.getClassLoader());
                     source.readParcelableList(
                             preferenceParcelable.getChildPrefParcelables(),
