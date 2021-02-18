@@ -22,7 +22,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.util.ArrayMap;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -118,7 +117,6 @@ public class SettingsService extends Service {
     };
 
     void onCreateFragment(int state, Bundle extras) {
-        Log.v("XXX111", "on create fragment " + state);
         StateUtil.createState(getApplicationContext(), state, mListener, stateMap).onCreate(extras);
     }
 
@@ -145,7 +143,6 @@ public class SettingsService extends Service {
     }
 
     void onPreferenceClick(int state, String key, boolean status) {
-        Log.v("XXX111", "on preferenc tree click " + key);
         StateUtil.getState(state, stateMap).onPreferenceTreeClick(key, status);
     }
 
