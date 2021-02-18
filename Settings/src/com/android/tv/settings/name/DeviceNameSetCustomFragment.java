@@ -26,6 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
@@ -121,6 +122,12 @@ public class DeviceNameSetCustomFragment extends GuidedStepSupportFragment {
                     DeviceNameSetCustomFragment.class, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             return GuidedAction.ACTION_ID_CANCEL;
         }
+    }
+
+    @Override
+    protected void onAddSharedElementTransition(
+            FragmentTransaction ft, GuidedStepSupportFragment disappearing) {
+        // no-op
     }
 
     @Override
