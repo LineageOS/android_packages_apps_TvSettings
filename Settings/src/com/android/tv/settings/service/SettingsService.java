@@ -18,9 +18,11 @@ package com.android.tv.settings.service;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.util.ArrayMap;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -65,9 +67,9 @@ public class SettingsService extends Service {
         }
 
         @Override
-        public void onCreate(int state) {
+        public void onCreate(int state, Bundle extras) {
             mHandler.post(() -> {
-                SettingsService.this.onCreateFragment(state);
+                SettingsService.this.onCreateFragment(state, extras);
             });
         }
 
@@ -115,8 +117,9 @@ public class SettingsService extends Service {
         }
     };
 
-    void onCreateFragment(int state) {
-        StateUtil.createState(getApplicationContext(), state, mListener, stateMap).onCreate();
+    void onCreateFragment(int state, Bundle extras) {
+        Log.v("XXX111", "on create fragment " + state);
+        StateUtil.createState(getApplicationContext(), state, mListener, stateMap).onCreate(extras);
     }
 
     void onStartFragment(int state) {
@@ -142,6 +145,7 @@ public class SettingsService extends Service {
     }
 
     void onPreferenceClick(int state, String key, boolean status) {
+        Log.v("XXX111", "on preferenc tree click " + key);
         StateUtil.getState(state, stateMap).onPreferenceTreeClick(key, status);
     }
 
