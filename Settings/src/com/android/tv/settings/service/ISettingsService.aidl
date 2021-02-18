@@ -18,13 +18,14 @@ package com.android.tv.settings.service;
 
 import com.android.tv.settings.service.ISettingsServiceListener;
 import com.android.tv.settings.service.PreferenceParcelable;
+import android.os.Bundle;
 
 interface ISettingsService {
   List<PreferenceParcelable> getPreferences(int state);
   PreferenceParcelable getPreference(int state, String key);
   void registerListener(ISettingsServiceListener listener);
   void unRegisterListener(ISettingsServiceListener listener);
-  void onCreate(int state);
+  void onCreate(int state, in Bundle extras);
   void onStart(int state);
   void onResume(int state);
   void onPause(int state);

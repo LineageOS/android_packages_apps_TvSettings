@@ -16,9 +16,11 @@
 
 package com.android.tv.settings.service.data;
 
+import android.os.Bundle;
+
 /** Implement this to provide data for each settings screen. */
 public interface State {
-    void onCreate();
+    void onCreate(Bundle extras);
 
     void onStart();
 

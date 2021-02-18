@@ -20,4 +20,5 @@ import com.android.tv.settings.service.PreferenceParcelable;
 interface ISettingsServiceListener {
   void notifyUpdate(int state, in PreferenceParcelable preferenceParcelable);
   void notifyUpdateAll(int state, in List<PreferenceParcelable> preferences);
+  void notifyUpdateScreenTitle(int state, String title);
 }
