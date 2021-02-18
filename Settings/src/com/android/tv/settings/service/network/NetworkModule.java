@@ -20,12 +20,17 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.wifi.WifiManager;
+import android.os.Bundle;
 import android.util.ArraySet;
 import android.util.Log;
 
+import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.connectivity.ConnectivityListener;
+import com.android.tv.settings.service.PreferenceParcelable;
 import com.android.tv.settings.service.data.Module;
 import com.android.tv.settings.service.data.State;
+
+import java.util.List;
 
 public class NetworkModule implements Module, ConnectivityListener.Listener {
     private static final String TAG = "NetworkModule";
@@ -36,7 +41,7 @@ public class NetworkModule implements Module, ConnectivityListener.Listener {
     private boolean mIsWifiHardwarePresent;
     private static NetworkModule instance;
     private final Context mContext;
-
+    private List<PreferenceParcelable> mAccessPoints;
     ArraySet<State> states = new ArraySet<>();
 
 
@@ -91,6 +96,7 @@ public class NetworkModule implements Module, ConnectivityListener.Listener {
 
     @Override
     public void destroy() {
+        mAccessPoints = null;
         mConnectivityListener.destroy();
     }
 
@@ -115,5 +121,23 @@ public class NetworkModule implements Module, ConnectivityListener.Listener {
 
     boolean isWifiHardwarePresent() {
         return mIsWifiHardwarePresent;
+    }
+
+    AccessPoint getAccessPoint(Bundle extras) {
+        AccessPoint accessPoint = new AccessPoint(mContext, extras);
+        if (mAccessPoints == null) {
+            return accessPoint;
+        }
+        PreferenceParcelable matched =
+                mAccessPoints.stream()
+                        .filter(prefParcelable -> prefParcelable.getKey()[1].equals(
+                                accessPoint.getKey()))
+                        .findFirst().orElse(null);
+        return matched == null ? accessPoint : new AccessPoint(mContext, matched.getExtras());
+    }
+
+    public void setAccessPoints(
+            List<PreferenceParcelable> accessPoints) {
+        this.mAccessPoints = accessPoints;
     }
 }
