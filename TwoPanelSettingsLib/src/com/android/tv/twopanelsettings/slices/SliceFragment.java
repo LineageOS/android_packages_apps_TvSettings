@@ -672,6 +672,10 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         return TvSettingsEnums.ENTRY_DEFAULT;
     }
 
+    public CharSequence getScreenTitle() {
+        return mScreenTitle;
+    }
+
     @Override
     protected int getPageId() {
         return mCurrentPageId != 0 ? mCurrentPageId : TvSettingsEnums.PAGE_SLICE_DEFAULT;
