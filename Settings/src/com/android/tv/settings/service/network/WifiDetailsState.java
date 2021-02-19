@@ -84,7 +84,7 @@ public class WifiDetailsState implements State,
     public void onCreate(Bundle extras) {
         mNetworkModule = NetworkModule.getInstance(mContext);
         mPreferenceParcelableManager = new PreferenceParcelableManager();
-        mAccessPoint = new AccessPoint(mContext, extras);
+        mAccessPoint = mNetworkModule.getAccessPoint(extras);
         try {
             mServiceListener.notifyUpdateScreenTitle(getStateIdentifier(),
                     String.valueOf(mAccessPoint.getSsid()));
