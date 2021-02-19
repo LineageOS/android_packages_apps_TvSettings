@@ -180,6 +180,7 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
             }
             mWifiNetworkCategoryPref.addChildPrefParcelable(accessPointPref);
         }
+        mNetworkModule.setAccessPoints(mWifiNetworkCategoryPref.getChildPrefParcelables());
         try {
             mServiceListener.notifyUpdate(getStateIdentifier(),
                     PreferenceParcelableManager.prefParcelableCopy(mWifiNetworkCategoryPref));
