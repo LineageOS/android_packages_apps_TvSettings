@@ -19,7 +19,6 @@ package com.android.tv.settings;
 import static com.android.tv.settings.overlay.FlavorUtils.ALL_FLAVORS_MASK;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.transition.Scene;
 import android.transition.Slide;
@@ -174,6 +173,7 @@ public abstract class TvSettingsActivity extends FragmentActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE_STARTUP_VERIFICATION) {
             if (resultCode == RESULT_OK) {
                 Log.v(TAG, "Startup verification succeeded.");
