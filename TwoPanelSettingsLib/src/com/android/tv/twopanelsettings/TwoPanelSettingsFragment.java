@@ -387,8 +387,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
         if (previewFragment == null) {
             previewFragment = new DummyFragment();
-        } else {
-            previewFragment.setTargetFragment(prefFragment, 0);
         }
 
         final Fragment existingPreviewFragment =
