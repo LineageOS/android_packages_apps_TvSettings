@@ -32,7 +32,6 @@ import android.app.tvsettings.TvSettingsEnums;
 import android.content.ContentProviderClient;
 import android.content.Intent;
 import android.content.IntentSender;
-import android.content.IntentSender.SendIntentException;
 import android.database.ContentObserver;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
@@ -50,6 +49,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.IntentSenderRequest;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.Observer;
@@ -101,8 +105,20 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private String mLastFocusedPreferenceKey;
     private boolean mIsMainPanelReady = true;
 
-    private Handler mHandler = new Handler();
-    private ContentObserver mContentObserver = new ContentObserver(new Handler()) {
+    private final Handler mHandler = new Handler();
+    private final ActivityResultLauncher<IntentSenderRequest> mActivityResultLauncher =
+            registerForActivityResult(new ActivityResultContracts.StartIntentSenderForResult(),
+                    new ActivityResultCallback<ActivityResult>() {
+                        @Override
+                        public void onActivityResult(ActivityResult result) {
+                            Intent data = result.getData();
+                            mFollowupPendingIntentExtras = data;
+                            mFollowupPendingIntentExtrasCopy = data == null ? null : new Intent(
+                                    data);
+                            mFollowupPendingIntentResultCode = result.getResultCode();
+                        }
+                    });
+    private final ContentObserver mContentObserver = new ContentObserver(new Handler()) {
         @Override
         public void onChange(boolean selfChange, Uri uri) {
             handleUri(uri);
@@ -283,7 +299,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                     || SlicesConstants.TYPE_PREFERENCE_CATEGORY.equals(item.getSubType())) {
                 Preference preference =
                         SlicePreferencesUtil.getPreference(
-                            item, mContextThemeWrapper, getClass().getCanonicalName(),
+                                item, mContextThemeWrapper, getClass().getCanonicalName(),
                                 getParentFragment() instanceof TwoPanelSettingsFragment);
                 if (preference != null) {
                     newPrefs.add(preference);
@@ -321,7 +337,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
                 TwoPanelSettingsFragment parentFragment =
                         (TwoPanelSettingsFragment) getCallbackFragment();
-                Preference chosenPreference = parentFragment.getChosenPreference(this);
+                Preference chosenPreference = TwoPanelSettingsFragment.getChosenPreference(this);
                 if (chosenPreference == null) {
                     chosenPreference = findPreference(mLastFocusedPreferenceKey);
                 }
@@ -439,81 +455,57 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
 
             logEntrySelected(getPreferenceActionId(preference));
             Intent fillInIntent = new Intent().putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
-            try {
-                boolean result = firePendingIntent(radioPref, fillInIntent);
-                radioPref.clearOtherRadioPreferences(getPreferenceScreen());
-                if (result) {
-                    return true;
-                }
-            } catch (SendIntentException e) {
-                Log.e(TAG, "PendingIntent for slice cannot be sent", e);
+
+            boolean result = firePendingIntent(radioPref, fillInIntent);
+            radioPref.clearOtherRadioPreferences(getPreferenceScreen());
+            if (result) {
+                return true;
             }
         } else if (preference instanceof TwoStatePreference
                 && preference instanceof HasSliceAction) {
-            // TODO - Show loading indicator here?
-            try {
-                boolean isChecked = ((TwoStatePreference) preference).isChecked();
-                preference.getExtras().putBoolean(EXTRA_PREFERENCE_INFO_STATUS, isChecked);
-                if (getParentFragment() instanceof TwoPanelSettingsFragment) {
-                    ((TwoPanelSettingsFragment) getParentFragment()).refocusPreference(this);
-                }
-                logToggleInteracted(getPreferenceActionId(preference), isChecked);
-                Intent fillInIntent =
-                        new Intent()
-                                .putExtra(EXTRA_TOGGLE_STATE, isChecked)
-                                .putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
-                if (firePendingIntent((HasSliceAction) preference, fillInIntent)) {
-                    return true;
-                }
-            } catch (SendIntentException e) {
-                ((TwoStatePreference) preference).setChecked(
-                        !((TwoStatePreference) preference).isChecked());
-                Log.e(TAG, "PendingIntent for slice cannot be sent", e);
+            boolean isChecked = ((TwoStatePreference) preference).isChecked();
+            preference.getExtras().putBoolean(EXTRA_PREFERENCE_INFO_STATUS, isChecked);
+            if (getParentFragment() instanceof TwoPanelSettingsFragment) {
+                ((TwoPanelSettingsFragment) getParentFragment()).refocusPreference(this);
+            }
+            logToggleInteracted(getPreferenceActionId(preference), isChecked);
+            Intent fillInIntent =
+                    new Intent()
+                            .putExtra(EXTRA_TOGGLE_STATE, isChecked)
+                            .putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
+            if (firePendingIntent((HasSliceAction) preference, fillInIntent)) {
+                return true;
             }
             return true;
         } else if (preference instanceof SlicePreference) {
-            try {
-                // In this case, we may intentionally ignore this entry selection to avoid double
-                // logging as the action should result in a PAGE_FOCUSED event being logged.
-                if (getPreferenceActionId(preference) != TvSettingsEnums.ENTRY_DEFAULT) {
-                    logEntrySelected(getPreferenceActionId(preference));
-                }
-                Intent fillInIntent =
-                        new Intent().putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
-                if (firePendingIntent((HasSliceAction) preference, fillInIntent)) {
-                    return true;
-                }
-
-            } catch (SendIntentException e) {
-                Log.e(TAG, "PendingIntent for slice cannot be sent", e);
+            // In this case, we may intentionally ignore this entry selection to avoid double
+            // logging as the action should result in a PAGE_FOCUSED event being logged.
+            if (getPreferenceActionId(preference) != TvSettingsEnums.ENTRY_DEFAULT) {
+                logEntrySelected(getPreferenceActionId(preference));
+            }
+            Intent fillInIntent =
+                    new Intent().putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
+            if (firePendingIntent((HasSliceAction) preference, fillInIntent)) {
+                return true;
             }
         }
 
         return super.onPreferenceTreeClick(preference);
     }
 
-    private boolean firePendingIntent(HasSliceAction preference, Intent fillInIntent)
-            throws SendIntentException {
+    private boolean firePendingIntent(HasSliceAction preference, Intent fillInIntent) {
         if (preference.getSliceAction() == null) {
             return false;
         }
         IntentSender intentSender = preference.getSliceAction().getAction().getIntentSender();
-        startIntentSenderForResult(
-                intentSender, SLICE_REQUEST_CODE, fillInIntent, 0, 0, 0, null);
+        mActivityResultLauncher.launch(
+                new IntentSenderRequest.Builder(intentSender).setFillInIntent(
+                        fillInIntent).build());
         if (preference.getFollowupSliceAction() != null) {
             mPreferenceFollowupIntent = preference.getFollowupSliceAction().getAction();
         }
-        return true;
-    }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 0) {
-            return;
-        }
-        mFollowupPendingIntentExtras = data;
-        mFollowupPendingIntentExtrasCopy = data == null ? null : new Intent(data);
-        mFollowupPendingIntentResultCode = resultCode;
+        return true;
     }
 
     @Override
@@ -678,6 +670,10 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                     : TvSettingsEnums.ENTRY_DEFAULT;
         }
         return TvSettingsEnums.ENTRY_DEFAULT;
+    }
+
+    public CharSequence getScreenTitle() {
+        return mScreenTitle;
     }
 
     @Override
