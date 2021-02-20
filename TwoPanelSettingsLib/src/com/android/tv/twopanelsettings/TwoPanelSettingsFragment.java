@@ -59,6 +59,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.tv.twopanelsettings.slices.HasSliceUri;
 import com.android.tv.twopanelsettings.slices.InfoFragment;
+import com.android.tv.twopanelsettings.slices.SliceFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
 
@@ -262,8 +263,26 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 Settings.Secure.ACCESSIBILITY_ENABLED, 0) == 1;
     }
 
-    private void updateAccessibilityTitle(CharSequence title) {
-        getView().findViewById(R.id.two_panel_fragment_container).setAccessibilityPaneTitle(title);
+    private void updateAccessibilityTitle(Fragment fragment) {
+        CharSequence newA11yTitle = "";
+        if (fragment instanceof SliceFragment) {
+            newA11yTitle = ((SliceFragment) fragment).getScreenTitle();
+        } else if (fragment instanceof LeanbackPreferenceFragmentCompat) {
+            newA11yTitle = ((LeanbackPreferenceFragmentCompat) fragment).getPreferenceScreen()
+                    .getTitle();
+        }
+
+        if (!TextUtils.isEmpty(newA11yTitle)) {
+            if (DEBUG) {
+                Log.d(TAG, "changing a11y title to: " + newA11yTitle);
+            }
+
+            // Set both window title and pane title to avoid messy announcements when coming from
+            // other activities. (window title is announced on activity change)
+            getActivity().getWindow().setTitle(newA11yTitle);
+            getView().findViewById(R.id.two_panel_fragment_container)
+                    .setAccessibilityPaneTitle(newA11yTitle);
+        }
     }
 
     private void addOrRemovePreferenceFocusedListener(Fragment fragment, boolean isAddingListener) {
@@ -387,8 +406,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
         if (previewFragment == null) {
             previewFragment = new DummyFragment();
-        } else {
-            previewFragment.setTargetFragment(prefFragment, 0);
         }
 
         final Fragment existingPreviewFragment =
@@ -827,11 +844,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                                 .onArriveAtMainPanel(isRTL());
                     } // distanceToScrollToRight being 0 means no actual panel sliding; thus noop.
                 }
-                if (fragmentToBecomeMainPanel instanceof LeanbackPreferenceFragmentCompat) {
-                    updateAccessibilityTitle(
-                            ((LeanbackPreferenceFragmentCompat) fragmentToBecomeMainPanel)
-                                    .getPreferenceScreen().getTitle());
-                }
+                updateAccessibilityTitle(fragmentToBecomeMainPanel);
             }
         });
     }
