@@ -17,11 +17,10 @@
 package com.android.tv.settings.device.displaysound;
 
 import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.KEY_SHOW_HIDE_FORMAT_INFO;
-import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.KEY_SURROUND_PASSTHROUGH;
+import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.KEY_SURROUND_SOUND_AUTO;
 import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.KEY_SURROUND_SOUND_FORMAT_PREFIX;
-import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.VAL_SURROUND_SOUND_AUTO;
-import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.VAL_SURROUND_SOUND_MANUAL;
-import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.VAL_SURROUND_SOUND_NEVER;
+import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.KEY_SURROUND_SOUND_MANUAL;
+import static com.android.tv.settings.device.displaysound.AdvancedVolumeFragment.KEY_SURROUND_SOUND_NONE;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -59,9 +58,9 @@ public class AdvancedVolumeFragmentTest {
     @Test
     public void testOnPreferenceChange_withAuto_storesAutoInSettings() {
         AdvancedVolumeFragment fragment = createDefaultAdvancedVolumeFragment();
-        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
+        Preference preference = fragment.findPreference(KEY_SURROUND_SOUND_AUTO);
 
-        fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_AUTO);
+        fragment.onPreferenceTreeClick(preference);
 
         assertThat(getSettingsInt(fragment.getContext(), Settings.Global.ENCODED_SURROUND_OUTPUT))
                 .isEqualTo(Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO);
@@ -70,9 +69,9 @@ public class AdvancedVolumeFragmentTest {
     @Test
     public void testOnPreferenceChange_withManual_storesManualInSettings() {
         AdvancedVolumeFragment fragment = createDefaultAdvancedVolumeFragment();
-        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
+        Preference preference = fragment.findPreference(KEY_SURROUND_SOUND_MANUAL);
 
-        fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_MANUAL);
+        fragment.onPreferenceTreeClick(preference);
 
         assertThat(getSettingsInt(fragment.getContext(), Settings.Global.ENCODED_SURROUND_OUTPUT))
                 .isEqualTo(Settings.Global.ENCODED_SURROUND_OUTPUT_MANUAL);
@@ -81,9 +80,9 @@ public class AdvancedVolumeFragmentTest {
     @Test
     public void testOnPreferenceChange_withNever_storesNeverInSettings() {
         AdvancedVolumeFragment fragment = createDefaultAdvancedVolumeFragment();
-        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
+        Preference preference = fragment.findPreference(KEY_SURROUND_SOUND_NONE);
 
-        fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_NEVER);
+        fragment.onPreferenceTreeClick(preference);
 
         assertThat(getSettingsInt(fragment.getContext(), Settings.Global.ENCODED_SURROUND_OUTPUT))
                 .isEqualTo(Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER);
@@ -101,8 +100,8 @@ public class AdvancedVolumeFragmentTest {
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
-        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
-        fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_MANUAL);
+        Preference preference = fragment.findPreference(KEY_SURROUND_SOUND_MANUAL);
+        fragment.onPreferenceTreeClick(preference);
 
         setSettingsStr(
                 fragment.getContext(),
@@ -136,8 +135,8 @@ public class AdvancedVolumeFragmentTest {
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
-        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
-        fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_MANUAL);
+        Preference preference = fragment.findPreference(KEY_SURROUND_SOUND_MANUAL);
+        fragment.onPreferenceTreeClick(preference);
 
         setSettingsStr(
                 fragment.getContext(),
@@ -169,8 +168,8 @@ public class AdvancedVolumeFragmentTest {
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
-        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
-        fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_MANUAL);
+        Preference preference = fragment.findPreference(KEY_SURROUND_SOUND_MANUAL);
+        fragment.onPreferenceTreeClick(preference);
 
         assertThat(fragment.getPreferenceScreen().getPreferenceCount()).isEqualTo(3);
 
@@ -199,8 +198,8 @@ public class AdvancedVolumeFragmentTest {
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
-        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
-        fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_AUTO);
+        Preference preference = fragment.findPreference(KEY_SURROUND_SOUND_AUTO);
+        fragment.onPreferenceTreeClick(preference);
 
         assertThat(fragment.getPreferenceScreen().getPreferenceCount()).isEqualTo(2);
 
@@ -224,8 +223,8 @@ public class AdvancedVolumeFragmentTest {
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
-        Preference preference = fragment.findPreference(KEY_SURROUND_PASSTHROUGH);
-        fragment.onPreferenceChange(preference, VAL_SURROUND_SOUND_AUTO);
+        Preference preference = fragment.findPreference(KEY_SURROUND_SOUND_AUTO);
+        fragment.onPreferenceTreeClick(preference);
 
         preference = fragment.findPreference(KEY_SHOW_HIDE_FORMAT_INFO);
         fragment.onPreferenceTreeClick(preference);
