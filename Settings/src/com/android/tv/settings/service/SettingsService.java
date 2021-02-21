@@ -22,6 +22,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.util.ArrayMap;
+import android.util.Log;
+import android.util.Pair;
 
 import androidx.annotation.Nullable;
 
@@ -34,8 +36,9 @@ import java.util.List;
 
 public class SettingsService extends Service {
     private static final String TAG = "TvSettingsService";
+    private static final boolean DEBUG = true;
     private final Handler mHandler = new Handler();
-    private final ArrayMap<Integer, State> stateMap = new ArrayMap<>();
+    private final ArrayMap<Integer, Pair<State, Integer>> stateMap = new ArrayMap<>();
 
     private ISettingsServiceListener mListener;
 
@@ -68,6 +71,9 @@ public class SettingsService extends Service {
         @Override
         public void onCreate(int state, Bundle extras) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onCreate " + state);
+                }
                 SettingsService.this.onCreateFragment(state, extras);
             });
         }
@@ -75,6 +81,9 @@ public class SettingsService extends Service {
         @Override
         public void onStart(int state) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onStart " + state);
+                }
                 SettingsService.this.onStartFragment(state);
             });
         }
@@ -82,6 +91,9 @@ public class SettingsService extends Service {
         @Override
         public void onResume(int state) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onResume " + state);
+                }
                 SettingsService.this.onResumeFragment(state);
             });
 
@@ -90,6 +102,9 @@ public class SettingsService extends Service {
         @Override
         public void onPause(int state) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onPause " + state);
+                }
                 SettingsService.this.onPauseFragment(state);
             });
         }
@@ -97,6 +112,9 @@ public class SettingsService extends Service {
         @Override
         public void onStop(int state) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onStop " + state);
+                }
                 SettingsService.this.onStopFragment(state);
             });
         }
@@ -104,6 +122,9 @@ public class SettingsService extends Service {
         @Override
         public void onDestroy(int state) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onDestroy " + state);
+                }
                 SettingsService.this.onDestroyFragment(state);
             });
         }
@@ -111,6 +132,9 @@ public class SettingsService extends Service {
         @Override
         public void onPreferenceClick(int state, String key, boolean status) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onPreferenceTreeClick " + state + " " + key);
+                }
                 SettingsService.this.onPreferenceClick(state, key, status);
             });
         }
