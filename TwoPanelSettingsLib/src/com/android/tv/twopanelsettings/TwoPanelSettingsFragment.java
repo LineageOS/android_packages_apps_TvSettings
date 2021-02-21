@@ -40,11 +40,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.HorizontalScrollView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.preference.LeanbackListPreferenceDialogFragmentCompat;
 import androidx.leanback.preference.LeanbackPreferenceFragmentCompat;
 import androidx.leanback.widget.OnChildViewHolderSelectedListener;
@@ -270,6 +272,13 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         } else if (fragment instanceof LeanbackPreferenceFragmentCompat) {
             newA11yTitle = ((LeanbackPreferenceFragmentCompat) fragment).getPreferenceScreen()
                     .getTitle();
+        } else if (fragment instanceof GuidedStepSupportFragment) {
+            if (fragment.getView() != null) {
+                View titleView = fragment.getView().findViewById(R.id.guidance_title);
+                if (titleView instanceof TextView) {
+                    newA11yTitle = ((TextView) titleView).getText();
+                }
+            }
         }
 
         if (!TextUtils.isEmpty(newA11yTitle)) {
@@ -489,6 +498,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 .remove(target)
                 .addToBackStack(null)
                 .commit();
+        mHandler.post(() -> {
+            updateAccessibilityTitle(fragment);
+        });
+
     }
 
     public static class DummyFragment extends Fragment {
