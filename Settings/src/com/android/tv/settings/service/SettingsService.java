@@ -31,6 +31,7 @@ import com.android.tv.settings.service.ISettingsService;
 import com.android.tv.settings.service.ISettingsServiceListener;
 import com.android.tv.settings.service.data.State;
 import com.android.tv.settings.service.data.StateUtil;
+import com.android.tv.twopanelsettings.slices.ContextSingleton;
 
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class SettingsService extends Service {
     private static final String TAG = "TvSettingsService";
     private static final boolean DEBUG = true;
     private final Handler mHandler = new Handler();
-    private final ArrayMap<Integer, Pair<State, Integer>> stateMap = new ArrayMap<>();
+    private final ArrayMap<Integer, Pair<State, Integer>> mStateMap = new ArrayMap<>();
 
     private ISettingsServiceListener mListener;
 
@@ -138,36 +139,43 @@ public class SettingsService extends Service {
                 SettingsService.this.onPreferenceClick(state, key, status);
             });
         }
+
+        @Override
+        public void grantSliceAccess(String packageName, String uri) {
+            ContextSingleton.getInstance()
+                    .grantFullAccess(getApplicationContext(), uri, packageName);
+        }
     };
 
     void onCreateFragment(int state, Bundle extras) {
-        StateUtil.createState(getApplicationContext(), state, mListener, stateMap).onCreate(extras);
+        StateUtil.createState(
+                getApplicationContext(), state, mListener, mStateMap).onCreate(extras);
     }
 
     void onStartFragment(int state) {
-        StateUtil.getState(state, stateMap).onStart();
+        StateUtil.getState(state, mStateMap).onStart();
     }
 
 
     void onResumeFragment(int state) {
-        StateUtil.getState(state, stateMap).onResume();
+        StateUtil.getState(state, mStateMap).onResume();
     }
 
     void onStopFragment(int state) {
-        StateUtil.getState(state, stateMap).onStop();
+        StateUtil.getState(state, mStateMap).onStop();
     }
 
     void onPauseFragment(int state) {
-        StateUtil.getState(state, stateMap).onPause();
+        StateUtil.getState(state, mStateMap).onPause();
     }
 
     void onDestroyFragment(int state) {
-        StateUtil.getState(state, stateMap).onDestroy();
-        StateUtil.removeState(state, stateMap);
+        StateUtil.getState(state, mStateMap).onDestroy();
+        StateUtil.removeState(state, mStateMap);
     }
 
     void onPreferenceClick(int state, String key, boolean status) {
-        StateUtil.getState(state, stateMap).onPreferenceTreeClick(key, status);
+        StateUtil.getState(state, mStateMap).onPreferenceTreeClick(key, status);
     }
 
 
