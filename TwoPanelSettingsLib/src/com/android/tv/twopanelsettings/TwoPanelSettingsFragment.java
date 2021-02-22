@@ -647,6 +647,21 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             return true;
         }
 
+        // When a11y is on, we allow InfoFragments to take focus without scrolling panels. So if
+        // the user presses back button in this state, we should not scroll our panels back, or exit
+        // Settings activity, but rather reinstate the focus to be on the main panel.
+        Fragment preview =
+                getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx + 1]);
+        if (isA11yOn() && preview instanceof InfoFragment && preview.getView() != null
+                && preview.getView().hasFocus()) {
+            View mainPanelView = getChildFragmentManager()
+                    .findFragmentById(frameResIds[mPrefPanelIdx]).getView();
+            if (mainPanelView != null) {
+                mainPanelView.requestFocus();
+                return true;
+            }
+        }
+
         if (mPrefPanelIdx < 1) {
             // Disallow the user to use "dpad left" to finish activity in the first screen
             if (isKeyBackPressed) {
@@ -842,7 +857,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                         View view = f.getView();
                         if (view != null) {
                             view.setImportantForAccessibility(
-                                    f == fragmentToBecomeMainPanel
+                                    f == fragmentToBecomeMainPanel || f instanceof InfoFragment
                                             ? View.IMPORTANT_FOR_ACCESSIBILITY_YES
                                             : View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS);
                         }

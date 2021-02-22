@@ -42,6 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:focusable="true"
+        android:importantForAccessibility="yes"
         android:layout_marginBottom="@dimen/settings_info_fragment_bottom_section_margin_bottom"
         android:paddingEnd="@dimen/settings_info_fragment_bottom_section_padding_end" >
 
@@ -51,6 +53,8 @@
             android:layout_height="@dimen/settings_info_fragment_title_icon_width"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:focusable="false"
+            android:importantForAccessibility="no"
             android:layout_marginEnd="@dimen/settings_info_fragment_title_icon_margin_end"
             android:clickable="false" />
 
@@ -62,6 +66,8 @@
             android:layout_alignParentTop="true"
             android:layout_alignWithParentIfMissing="true"
             android:layout_marginBottom="@dimen/settings_info_fragment_title_margin_bottom"
+            android:focusable="false"
+            android:importantForAccessibility="yes"
             android:maxLines="2"
             android:ellipsize="end"
             style="@style/TwoPanelInfoTitleTextStyle"/>
@@ -73,6 +79,8 @@
             android:layout_toEndOf="@id/info_title"
             android:layout_alignParentTop="true"
             android:layout_marginStart="@dimen/settings_info_fragment_status_margin_start"
+            android:focusable="false"
+            android:importantForAccessibility="yes"
             android:visibility="gone"
             style="@style/TwoPanelInfoTitleTextStyle"/>
 
@@ -83,6 +91,8 @@
             android:layout_toEndOf="@id/info_title_icon"
             android:layout_below="@id/info_title"
             android:layout_alignWithParentIfMissing="true"
+            android:focusable="false"
+            android:importantForAccessibility="yes"
             android:maxLines="12"
             android:ellipsize="end"
             style="@style/TwoPanelInfoSummaryTextStyle"/>
