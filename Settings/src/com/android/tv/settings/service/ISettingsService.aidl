@@ -32,4 +32,5 @@ interface ISettingsService {
   void onStop(int state);
   void onDestroy(int state);
   void onPreferenceClick(int state, String key, boolean status);
+  void grantSliceAccess(String packageName, String uri);
 }
