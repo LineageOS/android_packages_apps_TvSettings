@@ -20,6 +20,7 @@ import static com.android.tv.settings.service.ServiceUtil.STATE_NETWORK_MAIN;
 import static com.android.tv.settings.service.ServiceUtil.STATE_WIFI_DETAILS;
 
 import android.content.Context;
+import android.util.Pair;
 
 import com.android.tv.settings.service.ISettingsServiceListener;
 import com.android.tv.settings.service.network.NetworkMainState;
@@ -31,26 +32,38 @@ public final class StateUtil {
     private StateUtil() {
     }
 
-    public static State createState(Context context, int state, ISettingsServiceListener listener,
-            Map<Integer, State> stateMap) {
-        switch (state) {
-            case STATE_NETWORK_MAIN :
-                stateMap.put(STATE_NETWORK_MAIN, new NetworkMainState(context, listener));
+    public static State createState(
+            Context context, int stateIdentifier, ISettingsServiceListener listener,
+            Map<Integer, Pair<State, Integer>> stateMap) {
+        State state = null;
+        switch (stateIdentifier) {
+            case STATE_NETWORK_MAIN:
+                state = new NetworkMainState(context, listener);
                 break;
-            case STATE_WIFI_DETAILS :
-                stateMap.put(STATE_WIFI_DETAILS, new WifiDetailsState(context, listener));
+            case STATE_WIFI_DETAILS:
+                state = new WifiDetailsState(context, listener);
                 break;
             default:
                 // no-op
         }
-        return stateMap.get(state);
+        if (!stateMap.containsKey(stateIdentifier)) {
+            stateMap.put(stateIdentifier, new Pair(state, 0));
+        }
+        Pair<State, Integer> stateAndCount = stateMap.get(stateIdentifier);
+        stateMap.put(stateIdentifier, new Pair<>(stateAndCount.first, stateAndCount.second + 1));
+        return stateAndCount.first;
     }
 
-    public static State getState(int state, Map<Integer, State> stateMap) {
-        return stateMap.get(state);
+    public static State getState(int stateIdentifier, Map<Integer, Pair<State, Integer>> stateMap) {
+        return stateMap.get(stateIdentifier).first;
     }
 
-    public static void removeState(int state, Map<Integer, State> stateMap) {
-        stateMap.remove(state);
+    public static void removeState(
+            int stateIdentifier, Map<Integer, Pair<State, Integer>> stateMap) {
+        Pair<State, Integer> stateAndCount = stateMap.get(stateIdentifier);
+        stateMap.put(stateIdentifier, new Pair(stateAndCount.first, stateAndCount.second - 1));
+        if (stateAndCount.second == 1) {
+            stateMap.remove(stateIdentifier);
+        }
     }
 }
