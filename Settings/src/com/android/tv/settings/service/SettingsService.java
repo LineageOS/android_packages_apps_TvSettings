@@ -22,6 +22,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.util.ArrayMap;
+import android.util.Log;
+import android.util.Pair;
 
 import androidx.annotation.Nullable;
 
@@ -29,13 +31,15 @@ import com.android.tv.settings.service.ISettingsService;
 import com.android.tv.settings.service.ISettingsServiceListener;
 import com.android.tv.settings.service.data.State;
 import com.android.tv.settings.service.data.StateUtil;
+import com.android.tv.twopanelsettings.slices.ContextSingleton;
 
 import java.util.List;
 
 public class SettingsService extends Service {
     private static final String TAG = "TvSettingsService";
+    private static final boolean DEBUG = true;
     private final Handler mHandler = new Handler();
-    private final ArrayMap<Integer, State> stateMap = new ArrayMap<>();
+    private final ArrayMap<Integer, Pair<State, Integer>> mStateMap = new ArrayMap<>();
 
     private ISettingsServiceListener mListener;
 
@@ -68,6 +72,9 @@ public class SettingsService extends Service {
         @Override
         public void onCreate(int state, Bundle extras) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onCreate " + state);
+                }
                 SettingsService.this.onCreateFragment(state, extras);
             });
         }
@@ -75,6 +82,9 @@ public class SettingsService extends Service {
         @Override
         public void onStart(int state) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onStart " + state);
+                }
                 SettingsService.this.onStartFragment(state);
             });
         }
@@ -82,6 +92,9 @@ public class SettingsService extends Service {
         @Override
         public void onResume(int state) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onResume " + state);
+                }
                 SettingsService.this.onResumeFragment(state);
             });
 
@@ -90,6 +103,9 @@ public class SettingsService extends Service {
         @Override
         public void onPause(int state) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onPause " + state);
+                }
                 SettingsService.this.onPauseFragment(state);
             });
         }
@@ -97,6 +113,9 @@ public class SettingsService extends Service {
         @Override
         public void onStop(int state) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onStop " + state);
+                }
                 SettingsService.this.onStopFragment(state);
             });
         }
@@ -104,6 +123,9 @@ public class SettingsService extends Service {
         @Override
         public void onDestroy(int state) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onDestroy " + state);
+                }
                 SettingsService.this.onDestroyFragment(state);
             });
         }
@@ -111,39 +133,49 @@ public class SettingsService extends Service {
         @Override
         public void onPreferenceClick(int state, String key, boolean status) {
             mHandler.post(() -> {
+                if (DEBUG) {
+                    Log.d(TAG, "onPreferenceTreeClick " + state + " " + key);
+                }
                 SettingsService.this.onPreferenceClick(state, key, status);
             });
+        }
+
+        @Override
+        public void grantSliceAccess(String packageName, String uri) {
+            ContextSingleton.getInstance()
+                    .grantFullAccess(getApplicationContext(), uri, packageName);
         }
     };
 
     void onCreateFragment(int state, Bundle extras) {
-        StateUtil.createState(getApplicationContext(), state, mListener, stateMap).onCreate(extras);
+        StateUtil.createState(
+                getApplicationContext(), state, mListener, mStateMap).onCreate(extras);
     }
 
     void onStartFragment(int state) {
-        StateUtil.getState(state, stateMap).onStart();
+        StateUtil.getState(state, mStateMap).onStart();
     }
 
 
     void onResumeFragment(int state) {
-        StateUtil.getState(state, stateMap).onResume();
+        StateUtil.getState(state, mStateMap).onResume();
     }
 
     void onStopFragment(int state) {
-        StateUtil.getState(state, stateMap).onStop();
+        StateUtil.getState(state, mStateMap).onStop();
     }
 
     void onPauseFragment(int state) {
-        StateUtil.getState(state, stateMap).onPause();
+        StateUtil.getState(state, mStateMap).onPause();
     }
 
     void onDestroyFragment(int state) {
-        StateUtil.getState(state, stateMap).onDestroy();
-        StateUtil.removeState(state, stateMap);
+        StateUtil.getState(state, mStateMap).onDestroy();
+        StateUtil.removeState(state, mStateMap);
     }
 
     void onPreferenceClick(int state, String key, boolean status) {
-        StateUtil.getState(state, stateMap).onPreferenceTreeClick(key, status);
+        StateUtil.getState(state, mStateMap).onPreferenceTreeClick(key, status);
     }
 
 
