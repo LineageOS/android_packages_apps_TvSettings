@@ -41,6 +41,7 @@ import com.android.tv.settings.R;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Activity for detecting and adding (pairing) new bluetooth devices.
@@ -96,6 +97,7 @@ public class AddAccessoryActivity extends FragmentActivity
     private boolean mPairingSuccess = false;
     private boolean mPairingBluetooth = false;
     private List<BluetoothDevice> mBluetoothDevices;
+    List<BluetoothDevice> mA11yAnnouncedDevices = new ArrayList<>();
     private String mCancelledAddress = ADDRESS_NONE;
     private String mCurrentTargetAddress = ADDRESS_NONE;
     private String mCurrentTargetStatus = "";
@@ -588,6 +590,7 @@ public class AddAccessoryActivity extends FragmentActivity
 
         mBluetoothDevices.clear();
         mBluetoothDevices.addAll(mBluetoothPairer.getAvailableDevices());
+        announceNewDevicesForA11y();
 
         cancelTimeout();
 
@@ -651,6 +654,29 @@ public class AddAccessoryActivity extends FragmentActivity
         mCurrentTargetAddress = address;
         mCurrentTargetStatus = getMessageForStatus(status);
         mMsgHandler.sendEmptyMessage(MSG_UPDATE_VIEW);
+    }
+
+    /**
+     * Announce device names as they become visible.
+     */
+    private void announceNewDevicesForA11y() {
+        Log.d(TAG, "announceNewDevicesForA11y");
+
+        // Filter out the already announced devices from the visible list
+        List<BluetoothDevice> newDevicesToAnnounce =
+                mBluetoothDevices
+                        .stream()
+                        .filter(device-> !mA11yAnnouncedDevices.contains(device))
+                        .collect(Collectors.toList());
+
+        // Create announcement string
+        StringBuilder sb = new StringBuilder();
+        for (BluetoothDevice device : newDevicesToAnnounce) {
+            sb.append(device.getName()).append(" ");
+        }
+        getWindow().getDecorView().setAccessibilityPaneTitle(sb.toString());
+
+        mA11yAnnouncedDevices = new ArrayList<>(mBluetoothDevices);
     }
 
     private void clearDeviceList() {
