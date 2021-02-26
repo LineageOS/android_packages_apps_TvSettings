@@ -190,7 +190,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private Preference mBugreport;
     private SwitchPreference mKeepScreenOn;
     private ListPreference mBtHciSnoopLog;
-    private SwitchPreference mEnableOemUnlock;
+    private OemUnlockPreferenceController mEnableOemUnlock;
     private SwitchPreference mDebugViewAttributes;
     private SwitchPreference mForceAllowOnExternal;
 
@@ -341,11 +341,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
         mKeepScreenOn = findAndInitSwitchPref(KEEP_SCREEN_ON);
         mBtHciSnoopLog = addListPreference(BT_HCI_SNOOP_LOG);
-        mEnableOemUnlock = findAndInitSwitchPref(ENABLE_OEM_UNLOCK);
-        if (!showEnableOemUnlockPreference()) {
-            removePreference(mEnableOemUnlock);
-            mEnableOemUnlock = null;
-        }
+        mEnableOemUnlock = new OemUnlockPreferenceController(
+                getActivity(), findAndInitSwitchPref(ENABLE_OEM_UNLOCK));
 
         // TODO: implement UI for TV
         removePreference(RUNNING_APPS);
@@ -633,10 +630,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
         updateSwitchPreference(mKeepScreenOn, Settings.Global.getInt(cr,
                 Settings.Global.STAY_ON_WHILE_PLUGGED_IN, 0) != 0);
-        if (mEnableOemUnlock != null) {
-            updateSwitchPreference(mEnableOemUnlock, isOemUnlockEnabled(getActivity()));
-            mEnableOemUnlock.setEnabled(isOemUnlockAllowed());
-        }
+        mEnableOemUnlock.updateState();
         updateSwitchPreference(mDebugViewAttributes, Settings.Global.getInt(cr,
                 Settings.Global.DEBUG_VIEW_ATTRIBUTES, 0) != 0);
         updateSwitchPreference(mForceAllowOnExternal, Settings.Global.getInt(cr,
@@ -900,10 +894,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private static boolean showEnableOemUnlockPreference() {
         return !SystemProperties.get(PERSISTENT_DATA_BLOCK_PROP).equals("");
-    }
-
-    private boolean isOemUnlockAllowed() {
-        return !mUm.hasUserRestriction(UserManager.DISALLOW_OEM_UNLOCK);
     }
 
     private boolean showBugReportPreference() {
@@ -1503,8 +1493,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     @Override
     public void onOemUnlockConfirm() {
-        mEnableOemUnlock.setChecked(true);
-        setOemUnlockEnabled(getActivity(), true);
+        mEnableOemUnlock.onOemUnlockConfirm();
         updateAllOptions();
     }
 
@@ -1583,14 +1572,10 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                     mKeepScreenOn.isChecked() ?
                             (BatteryManager.BATTERY_PLUGGED_AC | BatteryManager.BATTERY_PLUGGED_USB)
                             : 0);
-        } else if (preference == mEnableOemUnlock) {
-            if (mEnableOemUnlock.isChecked()) {
-                // Pass to super to launch the dialog, then uncheck until the dialog
-                // result comes back
+        } else if (preference == mEnableOemUnlock.getPreference()) {
+            if (!mEnableOemUnlock.onPreferenceClick()) {
+                // Pass to super to launch the confirmation dialog.
                 super.onPreferenceTreeClick(preference);
-                mEnableOemUnlock.setChecked(false);
-            } else {
-                setOemUnlockEnabled(getActivity(), false);
             }
         } else if (preference == mMockLocationAppPref) {
             Intent intent = new Intent(getActivity(), AppPicker.class);
@@ -1757,29 +1742,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             return context.getPackageManager().getPackageInfo(packageName, 0) != null;
         } catch (PackageManager.NameNotFoundException e) {
             return false;
-        }
-    }
-
-    /**
-     * Returns whether or not this device is able to be OEM unlocked.
-     */
-    static boolean isOemUnlockEnabled(Context context) {
-        PersistentDataBlockManager manager = (PersistentDataBlockManager)
-                context.getSystemService(Context.PERSISTENT_DATA_BLOCK_SERVICE);
-        return manager.getOemUnlockEnabled();
-    }
-
-    /**
-     * Allows enabling or disabling OEM unlock on this device. OEM unlocked
-     * devices allow users to flash other OSes to them.
-     */
-    static void setOemUnlockEnabled(Context context, boolean enabled) {
-        try {
-            PersistentDataBlockManager manager = (PersistentDataBlockManager)
-                    context.getSystemService(Context.PERSISTENT_DATA_BLOCK_SERVICE);
-            manager.setOemUnlockEnabled(enabled);
-        } catch (SecurityException e) {
-            Log.e(TAG, "Fail to set oem unlock.", e);
         }
     }
 }
