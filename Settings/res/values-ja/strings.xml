@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"ドルビー TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"ドルビー アトモス / ドルビー デジタルプラス"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"注: デバイスからサポート形式が正しく報告されないと、[自動] 機能は動作しないことがあります。"</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"自動: デバイスから報告された形式を使用する"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"なし: サラウンド サウンドを使用しない"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"手動: 利用可能な形式から手動で形式を選択する"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"自動: デバイスから報告された形式を使用する"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"選択すると、アプリはデバイス チェーンでサポートされているどの音声形式でも指定できるようになります。最高音質ではない形式が指定される可能性もあります。"</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"なし: サラウンド音声を使用しない"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"手動: 利用可能な形式から手動で形式を選択する"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"選択すると、再生に関する問題の原因となる、デバイス チェーンでサポートされている音声形式を手動で無効にできます。デバイス チェーンでサポートされていない音声形式を有効にできます。最高音質ではない形式が指定される可能性もあります。"</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"サポートされていない音声形式を有効にしていますか？"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"接続されているオーディオ機器では、この形式はサポートされていないため、機器で大きなノイズや破裂音など、予期しない動作が発生することがあります。"</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"キャンセル"</string>
@@ -819,7 +821,7 @@
     <string name="high_power_system" msgid="6263052626979462255">"電気使用量の最適化を利用できないアプリ"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"通知へのアクセス"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"通知へのアクセスをリクエストしたインストール済みアプリはありません。"</string>
-    <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"このアプリはすべての通知を読み取ることができます。通知には、連絡先名などの個人情報や受信したメッセージの本文も含まれます。また、通知を非表示にしたり、通知内のボタン操作を実行したりすることもできます。"</string>
+    <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"このアプリがすべての通知を読み取れるようになります。通知には、連絡先名などの個人情報や受信したメッセージの本文も含まれます。また、通知を非表示にしたり、通知内の操作ボタンをタップしたりすることも可能になります。"</string>
     <string name="default_notification_access_package_summary" msgid="1354775994781420222">"システムで必要"</string>
     <string name="directory_access" msgid="7338555825237012006">"ディレクトリへのアクセス"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"このアプリには、特定のディレクトリへのアクセス権限が付与されています。"</string>
