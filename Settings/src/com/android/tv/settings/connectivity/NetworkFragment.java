@@ -37,7 +37,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings;
-import android.util.Log;
 
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
@@ -286,7 +285,9 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mWifiNetworksCategory.setVisible(wifiEnabled);
         mCollapsePref.setVisible(wifiEnabled && mWifiNetworksCategory.shouldShowCollapsePref());
         mAddPref.setVisible(wifiEnabled);
-        mAddEasyConnectPref.setVisible(wifiEnabled && mWifiManager.isEasyConnectSupported());
+        if (mAddEasyConnectPref != null) {
+            mAddEasyConnectPref.setVisible(wifiEnabled && mWifiManager.isEasyConnectSupported());
+        }
 
         if (!wifiEnabled) {
             updateWifiList();
