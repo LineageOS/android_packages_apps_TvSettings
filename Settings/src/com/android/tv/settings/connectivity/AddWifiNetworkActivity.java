@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.connectivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -27,6 +29,7 @@ import com.android.tv.settings.connectivity.setup.AdvancedWifiOptionsFlow;
 import com.android.tv.settings.connectivity.setup.ChooseSecurityState;
 import com.android.tv.settings.connectivity.setup.ConnectFailedState;
 import com.android.tv.settings.connectivity.setup.ConnectState;
+import com.android.tv.settings.connectivity.setup.EasyConnectQRState;
 import com.android.tv.settings.connectivity.setup.EnterPasswordState;
 import com.android.tv.settings.connectivity.setup.EnterSsidState;
 import com.android.tv.settings.connectivity.setup.OptionsOrConnectState;
@@ -42,6 +45,18 @@ import com.android.tv.settings.core.instrumentation.InstrumentedActivity;
 public class AddWifiNetworkActivity extends InstrumentedActivity
         implements State.FragmentChangeListener {
     private static final String TAG = "AddWifiNetworkActivity";
+
+    private static final String EXTRA_TYPE = "com.android.tv.settings.connectivity.type";
+    private static final String EXTRA_TYPE_EASYCONNECT = "easyconnect";
+
+    /**
+     * Create an intent to launch this activity in EasyConnect mode.
+     */
+    public static Intent createEasyConnectIntent(Context context) {
+        return new Intent(context, AddWifiNetworkActivity.class)
+                .putExtra(EXTRA_TYPE, EXTRA_TYPE_EASYCONNECT);
+    }
+
     private final StateMachine.Callback mStateMachineCallback = new StateMachine.Callback() {
         @Override
         public void onFinish(int result) {
@@ -54,6 +69,7 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
     private State mConnectState;
     private State mEnterPasswordState;
     private State mEnterSsidState;
+    private State mEasyConnectQrState;
     private State mSuccessState;
     private State mOptionsOrConnectState;
     private State mFinishState;
@@ -68,7 +84,11 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
         UserChoiceInfo userChoiceInfo = ViewModelProviders.of(this).get(UserChoiceInfo.class);
         userChoiceInfo.getWifiConfiguration().hiddenSSID = true;
 
+        boolean isEasyConnectFlow = EXTRA_TYPE_EASYCONNECT.equals(
+                getIntent().getStringExtra(EXTRA_TYPE));
+
         mEnterSsidState = new EnterSsidState(this);
+        mEasyConnectQrState = new EasyConnectQRState(this);
         mChooseSecurityState = new ChooseSecurityState(this);
         mEnterPasswordState = new EnterPasswordState(this);
         mConnectState = new ConnectState(this);
@@ -106,6 +126,18 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
                 mOptionsOrConnectState
         );
 
+        /* EasyConnect QR code */
+        mStateMachine.addState(
+                mEasyConnectQrState,
+                StateMachine.CONNECT,
+                mConnectState
+        );
+        mStateMachine.addState(
+                mEasyConnectQrState,
+                StateMachine.RESULT_FAILURE,
+                mConnectFailedState
+        );
+
         /* Options or Connect */
         mStateMachine.addState(
                 mOptionsOrConnectState,
@@ -115,31 +147,40 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
         mStateMachine.addState(
                 mOptionsOrConnectState,
                 StateMachine.RESTART,
-                mEnterSsidState);
+                mEnterSsidState
+        );
 
         /* Connect */
         mStateMachine.addState(
                 mConnectState,
                 StateMachine.RESULT_FAILURE,
-                mConnectFailedState);
+                mConnectFailedState
+        );
         mStateMachine.addState(
                 mConnectState,
                 StateMachine.RESULT_SUCCESS,
-                mSuccessState);
+                mSuccessState
+        );
 
         /* Connect Failed */
         mStateMachine.addState(
                 mConnectFailedState,
                 StateMachine.TRY_AGAIN,
-                mOptionsOrConnectState
+                isEasyConnectFlow ? mEasyConnectQrState : mOptionsOrConnectState
         );
+
         mStateMachine.addState(
                 mConnectFailedState,
                 StateMachine.SELECT_WIFI,
                 mFinishState
         );
 
-        mStateMachine.setStartState(mEnterSsidState);
+        if (isEasyConnectFlow) {
+            mStateMachine.setStartState(mEasyConnectQrState);
+        } else {
+            mStateMachine.setStartState(mEnterSsidState);
+        }
+
         mStateMachine.start(true);
     }
 
