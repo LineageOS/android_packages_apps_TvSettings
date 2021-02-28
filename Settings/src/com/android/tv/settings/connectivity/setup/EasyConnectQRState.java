@@ -45,9 +45,11 @@ import com.android.tv.settings.connectivity.util.StateMachine;
 public class EasyConnectQRState implements State {
     private final FragmentActivity mActivity;
     private Fragment mFragment;
+    private final StateMachine mStateMachine;
 
     public EasyConnectQRState(FragmentActivity wifiSetupActivity) {
         this.mActivity = wifiSetupActivity;
+        mStateMachine = ViewModelProviders.of(mActivity).get(StateMachine.class);
     }
 
     @Override
@@ -61,9 +63,7 @@ public class EasyConnectQRState implements State {
     @Override
     public void processBackward() {
         mFragment = new QRCodeFragment();
-
-        FragmentChangeListener listener = (FragmentChangeListener) mActivity;
-        listener.onFragmentChange(mFragment, false);
+        mStateMachine.back();
     }
 
     @Override
@@ -91,7 +91,6 @@ public class EasyConnectQRState implements State {
 
             mUserChoiceInfo = ViewModelProviders.of(getActivity()).get(UserChoiceInfo.class);
             mStateMachine = ViewModelProviders.of(getActivity()).get(StateMachine.class);
-
             mWifiManager = (WifiManager) getActivity().getApplicationContext().getSystemService(
                     Context.WIFI_SERVICE);
         }
@@ -172,7 +171,8 @@ public class EasyConnectQRState implements State {
             @Override
             public void onFailure(int code) {
                 if (DEBUG) Log.d(TAG, "onFailure: code = " + code);
-                // TODO: Set error code?
+                mUserChoiceInfo.setConnectionFailedStatus(
+                        UserChoiceInfo.ConnectionFailedStatus.EASY_CONNECT_FAILURE);
                 mStateMachine.getListener().onComplete(StateMachine.RESULT_FAILURE);
             }
 

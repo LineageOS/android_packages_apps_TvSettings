@@ -237,7 +237,8 @@ public class UserChoiceInfo extends ViewModel {
         AUTHENTICATION,
         REJECTED,
         TIMEOUT,
-        UNKNOWN
+        UNKNOWN,
+        EASY_CONNECT_FAILURE,
     }
 
     @IntDef({
