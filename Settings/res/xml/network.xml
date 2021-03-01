@@ -34,6 +34,12 @@
         android:key="wifi_other"
         android:title="@string/wifi_setting_header_other_options">
         <Preference
+            android:key="wifi_add_easyconnect"
+            android:title="@string/wifi_setting_other_options_add_network_via_easyconnect"
+            android:icon="@drawable/ic_qr_code"
+            android:fragment="com.android.tv.settings.connectivity.WiFiEasyConnectInfoFragment">
+        </Preference>
+        <Preference
             android:key="wifi_add"
             android:title="@string/wifi_setting_other_options_add_network" >
             <intent
