@@ -100,17 +100,17 @@
     <string name="device_factory_reset" msgid="1110189450013225971">"Rétablir la configuration par défaut"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Étalonnage"</string>
     <string name="device_energy_saver" msgid="1105023232841036991">"Économiseur d\'énergie"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"Sélectionner les formats"</string>
+    <string name="surround_sound_select_formats" msgid="6070283650131226239">"Sélectionner les options"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Son ambiophonique"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
     <string name="surround_sound_format_iec61937" msgid="9035476171988404170">"IEC61937"</string>
-    <string name="surround_sound_auto_info" msgid="852202989256054406">"Remarque : L\'option Auto peut ne pas fonctionner si votre appareil signale mal les formats compatibles."</string>
-    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Auto : utiliser les formats que votre appareil signale comme compatibles (recommandé)"</string>
+    <string name="surround_sound_auto_info" msgid="852202989256054406">"Remarque : L\'option Automatique peut ne pas fonctionner si votre appareil signale mal les options compatibles."</string>
+    <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automatique : utiliser les options que votre appareil signale comme compatibles (recommandé)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Aucun : ne jamais utiliser le son ambiophonique"</string>
-    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuel : sélectionner les formats à utiliser"</string>
+    <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuelle : sélectionner les options à utiliser"</string>
     <string name="display_category_title" msgid="247804007525046312">"Écran"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Paramètres d\'affichage avancés"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Paramètres de son avancés"</string>
@@ -191,7 +191,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"M. à j. système supplém."</string>
     <string name="device_status" msgid="8266002761193692207">"État"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Réseau, numéros de série et autres renseignements"</string>
-    <string name="manual" msgid="5683935624321864999">"Manuel"</string>
+    <string name="manual" msgid="5683935624321864999">"Manuelle"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"Données réglementaires"</string>
     <string name="device_feedback" msgid="4871903271442960465">"Commentaires sur cet appareil"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"Identifiant d\'équipement"</string>
@@ -278,7 +278,7 @@
     <string name="wifi_action_advanced_yes" msgid="6192652088198093438">"OK"</string>
     <string name="wifi_action_advanced_no" msgid="6152107256122343959">"Non (recommandé)"</string>
     <string name="wifi_action_proxy_none" msgid="4009573120495700922">"Aucun"</string>
-    <string name="wifi_action_proxy_manual" msgid="7667686394955896293">"Manuel"</string>
+    <string name="wifi_action_proxy_manual" msgid="7667686394955896293">"Manuelle"</string>
     <string name="wifi_action_dhcp" msgid="6172127495589802964">"DHCP"</string>
     <string name="wifi_action_static" msgid="8139559358727790887">"Statique"</string>
     <string name="wifi_action_status_info" msgid="3947061894001350963">"État de la connexion"</string>
@@ -342,7 +342,7 @@
     <string name="storage_unmount_success" msgid="8024867595129715661">"<xliff:g id="NAME">%1$s</xliff:g> a été éjecté en toute sécurité"</string>
     <string name="storage_unmount_failure" msgid="2228448194484319930">"Impossible d\'éjecter <xliff:g id="NAME">%1$s</xliff:g> en toute sécurité"</string>
     <string name="storage_unmount_failure_cant_find" msgid="2890335341404932068">"Impossible de trouver le disque à éjecter"</string>
-    <string name="storage_format_success" msgid="5599914756144012286">"<xliff:g id="NAME">%1$s</xliff:g> a été formaté"</string>
+    <string name="storage_format_success" msgid="5599914756144012286">"La mémoire de stockage <xliff:g id="NAME">%1$s</xliff:g> a été formatée"</string>
     <string name="storage_format_failure" msgid="5619442934314277332">"Impossible de formater <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_format_as_private_title" msgid="7985715762649933211">"Formater comme mémoire pour l\'appareil"</string>
     <string name="storage_wizard_format_as_private_description" msgid="6143406934742456154">"Cette option nécessite de formater la clé USB afin de la rendre sécurisée. Après le formatage, ce lecteur ne fonctionnera que sur cet appareil. Le formatage entraîne la suppression de toutes les données enregistrées sur le lecteur. Pour ne pas perdre vos données, nous vous conseillons de les sauvegarder."</string>
@@ -615,7 +615,7 @@
     <string name="inputs_hdmi_control_desc" msgid="306769914209526682">"Autoriser le téléviseur à commander les appareils HDMI"</string>
     <string name="inputs_device_auto_off" msgid="2659766884754402352">"Désact. auto de l\'appareil"</string>
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"Éteindre les appareils HDMI avec le téléviseur"</string>
-    <string name="inputs_tv_auto_on" msgid="544848340484583318">"Allumer autom. le téléviseur"</string>
+    <string name="inputs_tv_auto_on" msgid="544848340484583318">"Allumer automatiquement la télé"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Allumer le téléviseur avec l\'appareil HDMI"</string>
     <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
       <item quantity="one">Entrée connectée</item>

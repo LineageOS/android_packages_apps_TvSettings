@@ -72,14 +72,14 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="2998289556481804047">"Синхронизација није успела"</string>
     <string name="sync_active" msgid="1621239982176888680">"Синхронизација је активна"</string>
-    <string name="connectivity_wifi" msgid="1138689464484009184">"Wi-Fi"</string>
+    <string name="connectivity_wifi" msgid="1138689464484009184">"WiFi"</string>
     <string name="connectivity_ethernet" msgid="4270588618633681766">"Етернет"</string>
     <string name="connectivity_summary_ethernet_connected" msgid="2612843587731520061">"Етернет је повезан"</string>
     <string name="connectivity_summary_no_network_connected" msgid="6111160695454212460">"Ниједна мрежа није повезана"</string>
-    <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi је искључен"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"WiFi је искључен"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Скенирање је увек доступно"</string>
-    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Дозволите Google-овој услузи лоцирања и другим апликацијама да траже мреже, чак и када је Wi-Fi искључен"</string>
-    <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
+    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Дозволите Google-овој услузи лоцирања и другим апликацијама да траже мреже, чак и када је WiFi искључен"</string>
+    <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"WiFi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Повежите се са мрежом"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Недавно отваране апликације"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Прикажи све апликације"</string>
@@ -230,7 +230,7 @@
     <string name="mac_address_not_available" msgid="2992935344891853369">"Није доступно"</string>
     <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Насумично изабрана MAC адреса"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP адреса"</string>
-    <string name="title_ssid" msgid="255328048344188682">"Унесите назив Wi-Fi мреже"</string>
+    <string name="title_ssid" msgid="255328048344188682">"Унесите назив WiFi мреже"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Интернет веза"</string>
     <string name="connected" msgid="4981532275162345997">"Повезано"</string>
     <string name="not_connected" msgid="475810896484271663">"Није повезано"</string>
@@ -250,8 +250,8 @@
     <string name="title_wifi_could_not_save" msgid="7549912968719395764">"Није могуће сачувати конфигурацију за <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect" msgid="6654031057635481872">"Повезивање на <xliff:g id="SSID">%1$s</xliff:g> није могуће"</string>
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"Није могуће пронаћи <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Лозинка за Wi-Fi је погрешна"</string>
-    <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Wi-Fi мрежа не прихвата везе"</string>
+    <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Лозинка за WiFi је погрешна"</string>
+    <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"WiFi мрежа не прихвата везе"</string>
     <string name="title_wifi_advanced_options" msgid="371185991282743258">"Желите ли да конфигуришете прокси и IP подешавања за <xliff:g id="SSID">%1$s</xliff:g>?"</string>
     <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Подешавања за прокси"</string>
     <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Име хоста за прокси:"</string>
@@ -509,7 +509,7 @@
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Сачекај програм за отклањање грешака"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Верификуј апликације преко USB-а"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Проверава да ли су апликације инсталиране преко ADB-а/ADT-а штетне"</string>
-    <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Детаљнија евиденција за Wi-Fi"</string>
+    <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Детаљнија евиденција за WiFi"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Омогућите детаљнију евиденцију за Wi‑Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Прикажи додире"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"Локација показивача"</string>
@@ -591,9 +591,9 @@
     <string name="autofill_none" msgid="1615056985649424207">"Ништа"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Уверите се да је ова апликација поуздана&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Услуга за лозинку&gt;%1$s&lt;/xliff:g&gt; користи садржај екрана за утврђивање података који могу аутоматски да се попуне."</string>
     <string name="computing_size" msgid="8623916230485437579">"Израчунавање..."</string>
-    <string name="title_select_wifi_network" msgid="935820896444071617">"Изаберите Wi-Fi мрежу"</string>
+    <string name="title_select_wifi_network" msgid="935820896444071617">"Изаберите WiFi мрежу"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Преименуј"</string>
-    <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"Wi-Fi екран"</string>
+    <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"WiFi екран"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"Потребан је PIN"</string>
     <string name="whichApplication" msgid="4510042089342879264">"Доврши радњу преко"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"Желите увек да користите ову опцију за ову радњу?"</string>
@@ -712,7 +712,7 @@
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Током репродукције медија"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Тренутно ниједан налог не чува резервне копије података"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
-    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Желите ли да зауставите прављење резервних копија Wi-Fi лозинки, обележивача, осталих подешавања и података о апликацијама, као и да избришете све копије на Google серверима?"</string>
+    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Желите ли да зауставите прављење резервних копија WiFi лозинки, обележивача, осталих подешавања и података о апликацијама, као и да избришете све копије на Google серверима?"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"Прављење резервне копије мојих података"</string>
     <string name="privacy_backup_account" msgid="4527813051841860610">"Прављење резервне копије налога"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Аутоматско враћање"</string>
