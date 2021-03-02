@@ -16,6 +16,7 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/about_preference">
 
     <!-- Entry point to Tutorials app - launches activity displaying feature tours -->
@@ -43,10 +44,11 @@
         <intent android:action="android.settings.DEVICE_NAME" />
     </Preference>
 
-    <Preference
+    <com.android.settingslib.RestrictedPreference
         android:key="reset_options"
         android:title="@string/reset_options_title"
-        android:fragment="com.android.tv.settings.vendor.ResetOptionsFragment" />
+        android:fragment="com.android.tv.settings.vendor.ResetOptionsFragment"
+        settings:userRestriction="no_factory_reset"/>
 
     <!-- Device status - launches as activity, must run in separate process -->
     <Preference android:key="status_info"

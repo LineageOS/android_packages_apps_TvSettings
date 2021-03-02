@@ -17,6 +17,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/about_preference">
 
     <!-- Entry point to Tutorials app - launches activity displaying feature tours -->
@@ -48,8 +49,8 @@
     <com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference
         android:key="reset"
         android:title="@string/device_reset"
-        android:fragment="com.android.tv.settings.about.FactoryResetInfoFragment">
-    </com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference>
+        android:fragment="com.android.tv.settings.about.FactoryResetInfoFragment"
+        settings:userRestriction="no_factory_reset" />
 
     <!-- Device status - launches as activity, must run in separate process -->
     <Preference android:key="status_info"
