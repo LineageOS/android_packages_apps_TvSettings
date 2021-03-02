@@ -71,7 +71,7 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
     };
 
     private Map<Integer, Boolean> mFormats;
-    private Map<Integer, Boolean> mReportedFormats;
+    private List<Integer> mReportedFormats;
     private List<AbstractPreferenceController> mPreferenceControllers;
     private PreferenceCategory mSupportedFormatsPreferenceCategory;
     private PreferenceCategory mUnsupportedFormatsPreferenceCategory;
@@ -191,7 +191,7 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
                             }
                     );
                 }
-                if (mReportedFormats.containsKey(formatId)) {
+                if (mReportedFormats.contains(formatId)) {
                     mSupportedFormatsPreferenceCategory.addPreference(pref);
                 } else {
                     mUnsupportedFormatsPreferenceCategory.addPreference(pref);
@@ -227,7 +227,7 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment impleme
                     continue;
                 }
                 pref = createPreference(titleId, KEY_SURROUND_SOUND_FORMAT_INFO_PREFIX + formatId);
-                if (mReportedFormats.containsKey(formatId)) {
+                if (mReportedFormats.contains(formatId)) {
                     mEnabledFormatsPreferenceCategory.addPreference(pref);
                 } else {
                     mDisabledFormatsPreferenceCategory.addPreference(pref);

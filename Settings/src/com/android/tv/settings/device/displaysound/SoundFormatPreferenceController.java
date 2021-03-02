@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import android.annotation.NonNull;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -31,6 +32,7 @@ import com.android.tv.settings.R;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -42,13 +44,13 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
 
     private int mFormatId;
     private Map<Integer, Boolean> mFormats;
-    private Map<Integer, Boolean> mReportedFormats;
+    private List<Integer> mReportedFormats;
 
     public SoundFormatPreferenceController(
             Context context,
             int formatId,
-            Map<Integer, Boolean> formats,
-            Map<Integer, Boolean> reportedFormats) {
+            @NonNull Map<Integer, Boolean> formats,
+            @NonNull List<Integer> reportedFormats) {
         super(context);
         mFormatId = formatId;
         mFormats = formats;
@@ -138,7 +140,7 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
 
     /** @return true if the given format is reported by the device. */
     private boolean isReportedFormat() {
-        return mReportedFormats != null && mReportedFormats.get(mFormatId) != null;
+        return mReportedFormats.contains(mFormatId);
     }
 
     private void updateEnabledFormatsSetting(boolean enabled) {
