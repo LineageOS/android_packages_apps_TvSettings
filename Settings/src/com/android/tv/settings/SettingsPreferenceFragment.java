@@ -36,6 +36,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.accessibility.AccessibilityEvent;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -120,10 +121,15 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
                     decor.setBackgroundResource(R.color.tp_preference_panel_background_color);
                 }
             } else {
-                // We only want to set the pane title in this location for one-panel settings.
+                // We only want to set the title in this location for one-panel settings.
                 // TwoPanelSettings behavior is handled moveToPanel in TwoPanelSettingsFragment
                 // since we only want the active/main panel to announce its title.
-                view.setAccessibilityPaneTitle(getPreferenceScreen().getTitle());
+                // For some reason, setAccessibiltyPaneTitle interferes with the initial a11y focus
+                // of this screen.
+                if (getActivity().getWindow() != null) {
+                    getActivity().getWindow().setTitle(getPreferenceScreen().getTitle());
+                    view.sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED);
+                }
             }
             removeAnimationClipping(view);
         }
