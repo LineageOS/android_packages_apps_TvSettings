@@ -25,7 +25,11 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
+import android.content.BroadcastReceiver;
 import android.content.ContentProviderClient;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
@@ -91,7 +95,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
     private static final long PANEL_ANIMATION_MS = 400;
     private static final long PANEL_ANIMATION_DELAY_MS = 200;
-    private static final long PREVIEW_PANEL_DELAY_MS = 400;
+    private static final long PREVIEW_PANEL_DEFAULT_DELAY_MS = 200;
+    private static long sPreviewPanelCreationDelay = 400;
     private static final float PREVIEW_PANEL_ALPHA = 0.6f;
 
     private int mMaxScrollX;
@@ -102,6 +107,18 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private boolean mIsNavigatingBack;
     private Preference mFocusedPreference;
     private boolean mIsWaitingForUpdatingPreview = false;
+
+    private static final String DELAY_MS = "delay_ms";
+
+    /** An broadcast receiver to help OEM test best delay for preview panel fragment creation. */
+    private BroadcastReceiver mPreviewPanelDelayReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            long delay = intent.getLongExtra(DELAY_MS, PREVIEW_PANEL_DEFAULT_DELAY_MS);
+            Log.d(TAG, "New delay for creating preview panel fragment " + delay);
+            sPreviewPanelCreationDelay = delay;
+        }
+    };
 
     private final OnChildViewHolderSelectedListener mOnChildViewHolderSelectedListener =
             new OnChildViewHolderSelectedListener() {
@@ -463,7 +480,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 // Some fragments may steal focus on creation. Reclaim focus on main fragment.
                 getView().getViewTreeObserver().addOnGlobalLayoutListener(mOnGlobalLayoutListener);
             }
-        }, PREVIEW_PANEL_DELAY_MS);
+        }, sPreviewPanelCreationDelay);
         return true;
     }
 
@@ -477,6 +494,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             Log.d(TAG, "onResume");
         }
         super.onResume();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("com.android.tv.settings.PREVIEW_DELAY");
+        getContext().registerReceiver(mPreviewPanelDelayReceiver, intentFilter);
         // Trap back button presses
         final TwoPanelSettingsRootView rootView = (TwoPanelSettingsRootView) getView();
         if (rootView != null) {
@@ -490,6 +510,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             Log.d(TAG, "onPause");
         }
         super.onPause();
+        getContext().unregisterReceiver(mPreviewPanelDelayReceiver);
         final TwoPanelSettingsRootView rootView = (TwoPanelSettingsRootView) getView();
         if (rootView != null) {
             rootView.setOnBackKeyListener(null);
