@@ -25,7 +25,11 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
+import android.content.BroadcastReceiver;
 import android.content.ContentProviderClient;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
@@ -91,6 +95,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
     private static final long PANEL_ANIMATION_MS = 400;
     private static final long PANEL_ANIMATION_DELAY_MS = 200;
+    private static final long PREVIEW_PANEL_DEFAULT_DELAY_MS = 200;
+    private static long sPreviewPanelCreationDelay = 400;
     private static final float PREVIEW_PANEL_ALPHA = 0.6f;
 
     private int mMaxScrollX;
@@ -99,8 +105,22 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private HorizontalScrollView mScrollView;
     private Handler mHandler;
     private boolean mIsNavigatingBack;
+    private Preference mFocusedPreference;
+    private boolean mIsWaitingForUpdatingPreview = false;
 
-    private OnChildViewHolderSelectedListener mOnChildViewHolderSelectedListener =
+    private static final String DELAY_MS = "delay_ms";
+
+    /** An broadcast receiver to help OEM test best delay for preview panel fragment creation. */
+    private BroadcastReceiver mPreviewPanelDelayReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            long delay = intent.getLongExtra(DELAY_MS, PREVIEW_PANEL_DEFAULT_DELAY_MS);
+            Log.d(TAG, "New delay for creating preview panel fragment " + delay);
+            sPreviewPanelCreationDelay = delay;
+        }
+    };
+
+    private final OnChildViewHolderSelectedListener mOnChildViewHolderSelectedListener =
             new OnChildViewHolderSelectedListener() {
                 @Override
                 public void onChildViewHolderSelected(RecyclerView parent,
@@ -121,7 +141,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 }
             };
 
-    private OnGlobalLayoutListener mOnGlobalLayoutListener = new OnGlobalLayoutListener() {
+    private final OnGlobalLayoutListener mOnGlobalLayoutListener = new OnGlobalLayoutListener() {
         @Override
         public void onGlobalLayout() {
             getView().getViewTreeObserver().removeOnGlobalLayoutListener(mOnGlobalLayoutListener);
@@ -191,7 +211,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 frameResIds[mPrefPanelIdx + 1]);
         if (preview != null && !(preview instanceof DummyFragment)) {
             if (!(preview instanceof InfoFragment)) {
-                navigateToPreviewFragment();
+                if (!mIsWaitingForUpdatingPreview) {
+                    navigateToPreviewFragment();
+                }
             }
         } else {
             // If there is no corresponding slice provider, thus the corresponding fragment is not
@@ -407,48 +429,58 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         if (prefFragment instanceof SliceFragmentCallback) {
             ((SliceFragmentCallback) prefFragment).onPreferenceFocused(pref);
         }
-        Fragment previewFragment = null;
-        try {
-            previewFragment = onCreatePreviewFragment(prefFragment, pref);
-        } catch (Exception e) {
-            Log.w(TAG, "Cannot instantiate the fragment from preference: " + pref, e);
-        }
-        if (previewFragment == null) {
-            previewFragment = new DummyFragment();
-        }
+        mFocusedPreference = pref;
 
-        final Fragment existingPreviewFragment =
-                getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx + 1]);
-        if (existingPreviewFragment != null
-                && existingPreviewFragment.getClass().equals(previewFragment.getClass())
-                && equalArguments(existingPreviewFragment.getArguments(),
-                previewFragment.getArguments())) {
-            if (isRTL() && mScrollView.getScrollX() == 0 && mPrefPanelIdx == 0) {
-                // For RTL we need to reclaim focus to the correct scroll position if a pref
-                // launches a new activity because the horizontal scroll goes back to 0.
+        mIsWaitingForUpdatingPreview = true;
+        mHandler.postDelayed(() -> {
+            if (pref == mFocusedPreference) {
+                mIsWaitingForUpdatingPreview = false;
+                Fragment previewFragment = null;
+                try {
+                    previewFragment = onCreatePreviewFragment(prefFragment, pref);
+                } catch (Exception e) {
+                    Log.w(TAG, "Cannot instantiate the fragment from preference: " + pref, e);
+                }
+                if (previewFragment == null) {
+                    previewFragment = new DummyFragment();
+                }
+                final Fragment existingPreviewFragment =
+                        getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx + 1]);
+                if (existingPreviewFragment != null
+                        && existingPreviewFragment.getClass().equals(previewFragment.getClass())
+                        && equalArguments(existingPreviewFragment.getArguments(),
+                        previewFragment.getArguments())) {
+                    if (isRTL() && mScrollView.getScrollX() == 0 && mPrefPanelIdx == 0) {
+                        // For RTL we need to reclaim focus to the correct scroll position if a pref
+                        // launches a new activity because the horizontal scroll goes back to 0.
+                        getView().getViewTreeObserver().addOnGlobalLayoutListener(
+                                mOnGlobalLayoutListener);
+                    }
+                    if (!forceRefresh) {
+                        return;
+                    }
+                }
+
+                // If the existing preview fragment is recreated when the activity is recreated, the
+                // animation would fall back to "slide left", in this case, we need to set the exit
+                // transition.
+                if (existingPreviewFragment != null) {
+                    existingPreviewFragment.setExitTransition(null);
+                }
+                previewFragment.setEnterTransition(new Fade());
+                previewFragment.setExitTransition(null);
+
+                final FragmentTransaction transaction =
+                        getChildFragmentManager().beginTransaction();
+                transaction.setCustomAnimations(android.R.animator.fade_in,
+                        android.R.animator.fade_out);
+                transaction.replace(frameResIds[mPrefPanelIdx + 1], previewFragment);
+                transaction.commit();
+
+                // Some fragments may steal focus on creation. Reclaim focus on main fragment.
                 getView().getViewTreeObserver().addOnGlobalLayoutListener(mOnGlobalLayoutListener);
             }
-            if (!forceRefresh) {
-                return true;
-            }
-        }
-
-        // If the existing preview fragment is recreated when the activity is recreated, the
-        // animation would fall back to "slide left", in this case, we need to set the exit
-        // transition.
-        if (existingPreviewFragment != null) {
-            existingPreviewFragment.setExitTransition(null);
-        }
-        previewFragment.setEnterTransition(new Fade());
-        previewFragment.setExitTransition(null);
-
-        final FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-        transaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
-        transaction.replace(frameResIds[mPrefPanelIdx + 1], previewFragment);
-        transaction.commit();
-
-        // Some fragments may steal focus on creation. Reclaim focus on main fragment.
-        getView().getViewTreeObserver().addOnGlobalLayoutListener(mOnGlobalLayoutListener);
+        }, sPreviewPanelCreationDelay);
         return true;
     }
 
@@ -462,6 +494,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             Log.d(TAG, "onResume");
         }
         super.onResume();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("com.android.tv.settings.PREVIEW_DELAY");
+        getContext().registerReceiver(mPreviewPanelDelayReceiver, intentFilter);
         // Trap back button presses
         final TwoPanelSettingsRootView rootView = (TwoPanelSettingsRootView) getView();
         if (rootView != null) {
@@ -475,6 +510,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             Log.d(TAG, "onPause");
         }
         super.onPause();
+        getContext().unregisterReceiver(mPreviewPanelDelayReceiver);
         final TwoPanelSettingsRootView rootView = (TwoPanelSettingsRootView) getView();
         if (rootView != null) {
             rootView.setOnBackKeyListener(null);
@@ -585,17 +621,15 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 } else {
                     Fragment previewFragment = getChildFragmentManager()
                             .findFragmentById(frameResIds[mPrefPanelIdx + 1]);
-                    if (!(previewFragment instanceof InfoFragment)) {
+                    if (!(previewFragment instanceof InfoFragment)
+                            && !mIsWaitingForUpdatingPreview) {
                         navigateToPreviewFragment();
                     }
                 }
                 // TODO(b/163432209): improve NavigationCallback and be more specific here.
                 // Do not consume the KeyEvent for NavigationCallback classes such as date & time
                 // picker.
-                if (prefFragment instanceof NavigationCallback) {
-                    return false;
-                }
-                return true;
+                return !(prefFragment instanceof NavigationCallback);
             }
             return false;
         }
@@ -613,13 +647,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         if (preference.getIntent() != null && !TextUtils.isEmpty(preference.getFragment())) {
             return true;
         }
-        if (preference instanceof SlicePreference
+        return preference instanceof SlicePreference
                 && ((SlicePreference) preference).getSliceAction() != null
-                && ((SlicePreference) preference).getUri() != null) {
-            return true;
-        }
-
-        return false;
+                && ((SlicePreference) preference).getUri() != null;
     }
 
     private boolean back(boolean isKeyBackPressed) {
@@ -993,7 +1023,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     /** Creates preview preference fragment. */
     public Fragment onCreatePreviewFragment(Fragment caller, Preference preference) {
         if (preference.getFragment() != null) {
-           if (!isInfoFragment(preference.getFragment())
+            if (!isInfoFragment(preference.getFragment())
                     && !isPreferenceFragment(preference.getFragment())) {
                 return null;
             }
