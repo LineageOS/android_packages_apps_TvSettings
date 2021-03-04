@@ -338,7 +338,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 TwoPanelSettingsFragment parentFragment =
                         (TwoPanelSettingsFragment) getCallbackFragment();
                 Preference chosenPreference = TwoPanelSettingsFragment.getChosenPreference(this);
-                if (chosenPreference == null) {
+                if (chosenPreference == null && mLastFocusedPreferenceKey != null) {
                     chosenPreference = findPreference(mLastFocusedPreferenceKey);
                 }
                 if (chosenPreference != null && chosenPreference instanceof HasSliceUri
