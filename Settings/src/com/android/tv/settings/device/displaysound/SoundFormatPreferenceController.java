@@ -88,9 +88,9 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
      */
     private boolean getFormatPreferenceCheckedState() {
         switch (AdvancedVolumeFragment.getSurroundPassthroughSetting(mContext)) {
-            case AdvancedVolumeFragment.VAL_SURROUND_SOUND_AUTO:
+            case AdvancedVolumeFragment.KEY_SURROUND_SOUND_AUTO:
                 return isReportedFormat();
-            case AdvancedVolumeFragment.VAL_SURROUND_SOUND_MANUAL:
+            case AdvancedVolumeFragment.KEY_SURROUND_SOUND_MANUAL:
                 return getEnabledFormats().contains(mFormatId);
             default:
                 return false;
@@ -100,7 +100,7 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
     /** @return true if the format checkboxes should be enabled, i.e. in manual mode. */
     private boolean getFormatPreferencesEnabledState() {
         return AdvancedVolumeFragment.getSurroundPassthroughSetting(mContext)
-                == AdvancedVolumeFragment.VAL_SURROUND_SOUND_MANUAL;
+                == AdvancedVolumeFragment.KEY_SURROUND_SOUND_MANUAL;
     }
 
     /** @return the formats that are enabled in global settings */
