@@ -130,9 +130,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos s tehnologijo Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Opomba: nastavitev »Samodejno« morda ne deluje, če naprava neustrezno sporoča podprte oblike zvoka."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Samodejno: Uporaba oblik, ki jih sporoča naprava"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Brez: prostorski zvok se nikoli ne uporabi"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Ročn: Izbira oblik na seznamu razpoložljivih oblik"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Samodejno: Uporaba oblik, ki jih sporoča naprava"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Če je izbrano, sistem aplikacijam omogoči izbiro oblike zvoka, ki jo podpira veriga naprav. Aplikacije morda izberejo obliko, ki ni največje kakovosti."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Brez: Prostorski zvok se nikoli ne uporabi"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Ročno: Izbira oblik na seznamu razpoložljivih oblik"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Če je izbrano, lahko ročno onemogočite oblike zvoka, ki jih podpira veriga naprav, ki povzročajo težave s predvajanjem. Oblik zvoka, ki jih ne podpira veriga naprav, ni mogoče omogočiti. Aplikacije v nekaterih primerih morda izberejo obliko, ki ni največje kakovosti."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Želite omogočiti nepodprto obliko zvoka?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Povezana zvočna naprava ne sporoča podpore za to obliko. Zaradi tega lahko v napravi pride do nepričakovanega delovanja, kot so glasni zvoki ali poki."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Prekliči"</string>
@@ -307,6 +309,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Prikaži manj"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Razpoložljiva omrežja"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Dodajanje novega omrežja"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Hitra pridružitev"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Hitra pridružitev vam pomaga, da se hitro povežete z omrežjem Wi-Fi, tako da optično preberete kodo QR iz telefona."</string>
     <string name="security_type" msgid="2297615092250075696">"Vrsta varnosti"</string>
     <string name="other_network" msgid="5299289104661858596">"Drugo omrežje …"</string>
     <string name="skip_network" msgid="3095529090560000692">"Preskoči"</string>
@@ -334,6 +338,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Nastavitve namestniškega strežnika niso veljavne"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Nastavitve IP niso veljavne"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> je shranjeno omrežje"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Optično preberite kodo QR, če se želite pridružiti"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Poskusite znova"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Prikaz razpoložljivih omrežij"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Povezovanje z omrežjem <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -341,6 +346,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Poveži se"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Pozabi omrežje"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"S tem se izbrišejo podatki za povezavo s tem omrežjem, vključno s shranjenim geslom"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"Pridružite se omrežju Wi-Fi, tako da optično preberete kodo QR iz mobilnega telefona in upoštevate navodila."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Pritisnite gumb za nazaj, če želite preklicati."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"V redu"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Naprej"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Zamenjava omrežja"</string>

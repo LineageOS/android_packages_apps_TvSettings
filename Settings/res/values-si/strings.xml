@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus සහිත Dolby Atmos"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"සටහන: ඔබේ උපාංගය එහි සහාය දක්වන ආකෘති නිවැරදිව වාර්තා නොකළහොත් ස්වයංක්‍රිය විකල්පය ක්‍රියා නොකළ හැක."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"ස්වයංක්‍රිය: උපාංගය වාර්තා කළ ආකෘති භාවිත කරන්න"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"නැත: කිසි විටක වට ශබ්දය භාවිත නොකරන්න"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"හස්තීය: ලබා ගත හැකි ආකෘතිවලින් හස්තීයව ආකෘති තෝරන්න"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"ස්වයංක්‍රිය: උපාංගය වාර්තා කළ ආකෘති භාවිත කරන්න"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"තේරූ විට, පද්ධතිය ඔබගේ උපාංග දාමය මගින් සහාය දක්වන ඕනෑම හඬ ආකෘතියක් තෝරා ගැනීමට යෙදුම්වලට ඉඩ දෙයි. යෙදුම් ඉහළම ගුණත්වයේ ආකෘතියක් නොවන ආකෘතියක් තෝරා ගත හැකිය."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"නැත: කිසි විටක වට ශබ්දය භාවිත නොකරන්න"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"හස්තීය: ලබා ගත හැකි ආකෘතිවලින් හස්තීයව ආකෘති තෝරන්න"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"තේරූ විට, ඔබට ඔබගේ උපාංග දාමය මගින් සහාය දක්වන පසුධාවනය සමගින් ගැටලු ඇති කරන හඬ ආකෘති හස්තීයව අබල කළ හැකිය. ඔබගේ උපාංග දාමය මගින් සහාය නොදක්වන හඬ ආකෘති සබල කළ නොහැකිය. සමහර අවස්ථාවල යෙදුම් ඉහළම ගුණත්වයේ ආකෘතියක් නොවන ආකෘතියක් තෝරා ගත හැකිය."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"සහාය නොදක්වන හඬ ආකෘතිය සබල කරන්නද?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"ඔබගේ සම්බන්ධිත ශ්‍රව්‍ය උපාංගය මෙම ආකෘතිය සඳහා සහාය වාර්තා නොකරයි. මෙය ඔබගේ උපාංගයෙන් මහ ශබ්ද හෝ පොප් වැනි අනපේක්ෂිත හැසිරීම්වලට හේතු විය හැකිය."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"අවලංගු කරන්න"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"අඩුවෙන් බලන්න"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"තිබෙන ජාල"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"නව ජාලයක් එකතු කරන්න"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"ඉක්මන් සබැඳීම"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"ඔබගේ දුරකථනයේ QR කේතය ස්කෑන් කිරීමෙන් ඉක්මන් සබැඳීම ඔබගේ Wi-Fi වෙත ඉක්මනින් සම්බන්ධ වීමට උපකාරී වේ."</string>
     <string name="security_type" msgid="2297615092250075696">"ආරක්ෂක වර්ගය"</string>
     <string name="other_network" msgid="5299289104661858596">"වෙනත් ජාලය…"</string>
     <string name="skip_network" msgid="3095529090560000692">"මඟ හරින්න"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Proxy සැකසීම් වලංගු නැත"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP සැකසීම් වලංගු නැත"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> ජාලයේ සුරකින ලදී"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"එක් වීමට QR කේතය ස්කෑන් කරන්න"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"නැවත උත්සාහ කරන්න"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"තිබෙන ජාල බලන්න"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g> වෙත සම්බන්ධ කරමින්"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"සම්බන්ධ කරන්න"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"ජාලය අමතක කරන්න"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"සුරකින ලද මුරපදය ඇතුළත්ව, මෙම ජාලයට සම්බන්ධ වීමට භාවිතා කළ තොරතුරු සියල්ල මෙය ඉවත් කරයි"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"ඔබගේ ජංගම දුරකථනයෙන් QR කේතය ස්කෑන් කිරීමෙන් Wi-Fi වෙත සම්බන්ධ වී උපදෙස් අනුගමනය කරන්න."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"අවලංගු කිරීමට ආපසු බොත්තම ඔබන්න"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"හරි"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"ඉදිරියට යන්න"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"ජාලය වෙනස් කරන්න"</string>

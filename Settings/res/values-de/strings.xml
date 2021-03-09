@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos mit Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"„Automatisch“ funktioniert ggf. nicht, wenn das Gerät die unterstützten Formate nicht korrekt meldet."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Automatisch: Vom Gerät gemeldete Formate verwenden"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Keine: Nie Surround-Sound verwenden"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Manuell: Manuell aus den verfügbaren Formaten auswählen"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automatisch: Vom Gerät gemeldete Formate verwenden"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Bei dieser Option können Apps jedes Tonformat wählen, das von deiner Gerätekette unterstützt wird. Möglicherweise wählen Apps ein Format, das nicht der höchsten Qualität entspricht."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Keinen Surround-Sound verwenden"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manuell: Formate manuell aus den verfügbaren Formaten auswählen"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Du kannst von deiner Gerätekette unterstützte Tonformate, die Probleme bei der Wiedergabe verursachen, manuell deaktivieren. Es können auch Tonformate aktiviert werden, die nicht von deiner Gerätekette unterstützt werden. Manchmal wählen Apps ein Format, das nicht der höchsten Qualität entspricht."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Nicht unterstütztes Tonformat aktivieren?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Verbundenes Audiogerät meldet nicht, dass es das Format unterstützt. Das kann zu unerwartetem Verhalten (laute Geräusche/Knacken des Geräts) führen."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Abbrechen"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Weniger anzeigen"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Verfügbare Netzwerke"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Neues Netzwerk hinzufügen"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Sofort-Verbindung"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Mit der Sofort-Verbindung kannst du schnell eine Verbindung zu deinem WLAN herstellen. Du musst nur den QR-Code mit deinem Smartphone scannen."</string>
     <string name="security_type" msgid="2297615092250075696">"Sicherheitstyp"</string>
     <string name="other_network" msgid="5299289104661858596">"Anderes Netzwerk…"</string>
     <string name="skip_network" msgid="3095529090560000692">"Überspringen"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Proxyeinstellungen ungültig"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP-Einstellungen ungültig"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> ist ein gespeichertes Netzwerk."</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"QR-Code scannen, um Verbindung herzustellen"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Erneut versuchen"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Verfügbare Netzwerke anzeigen"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Verbindung zu <xliff:g id="SSID">%1$s</xliff:g> wird hergestellt"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Verbinden"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Netzwerk entfernen"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Löscht die Informationen für die Verbindung mit diesem Netzwerk, auch das gespeicherte Passwort"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"QR-Code mit Smartphone scannen und der Anleitung folgen, um Verbindung zu einem WLAN herzustellen."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Schaltfläche „Zurück“ drücken, um abzubrechen"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"Ok"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Weiter"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Netzwerk ändern"</string>

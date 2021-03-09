@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus колдоого алынган Dolby Atmos"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Эскертүү: Түзмөк колдоого алынган форматтарды аныктай албаса, \"Автоматтык\" параметри иштебеши мүмкүн."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Автоматтык: Түзмөктөгү форматтарды колдонуу"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Жок: көлөмдүү үн эч качан колдонулбасын"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Кол менен: Форматты жеткиликтүү форматтардын арасынан кол менен тандаңыз"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Автоматтык: Түзмөктөгү форматтарды колдонуу"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Бул параметр тандалганда, колдонмолор түзмөктөрүңүздө колдоого алынган үн форматтарынын бирин тандай алат. Колдонмолор төмөнүрөөк сапаттагы форматты тандашы мүмкүн."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Жок: көлөмдүү үн эч качан колдонулбасын"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Кол менен: Форматты жеткиликтүү форматтардын арасынан кол менен тандаңыз"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Бул параметр тандалганда, түзмөктөрүңүздө колдоого алынып, ойнотууга кесепетин тийгизген үн форматтарын кол менен өчүрө аласыз. Түзмөктөрүңүздө колдоого алынбаган үн форматтарын иштетүүгө болот. Айрым учурларда колдонмолор төмөнүрөөк сапаттагы форматты тандашы мүмкүн."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Колдоого алынбаган үн форматы иштетилсинби?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Аудио түзмөгүңүз бул формат менен иштебейт. Ызы-чуу үндөр катуу угулуп же калкыма терезелер чыгып калышы мүмкүн."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Кереги жок"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Азыраак көрүү"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Жеткиликтүү тармактар"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Жаңы тармак кошуу"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Ыкчам туташуу"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"\"Ыкчам туташуу\" менен телефонуңуздагы QR кодун скандап, WiFi\'га ыкчам туташыңыз."</string>
     <string name="security_type" msgid="2297615092250075696">"Коопсуздук түрү"</string>
     <string name="other_network" msgid="5299289104661858596">"Башка тармак…"</string>
     <string name="skip_network" msgid="3095529090560000692">"Өткөрүп жиберүү"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Прокси жөндөөлөрү жараксыз"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP жөндөөлөрү жараксыз"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> – сакталган тармак"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Кошулуу үчүн QR кодун скандаңыз"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Дагы бир жолу аракет кылыңыз"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Мүмкүн болгон тармактарды карап көрүү"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g> менен туташууда"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Туташуу"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Тармак унутулсун"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Ушуну менен бул тармакка туташуу үчүн колдонулган маалымат, ошондой эле сакталган сырсөз тазаланат"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"Мобилдик телефонуңуздагы QR кодун скандап жана нускамаларды аткарып, Wifi\'га туташыңыз."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Жокко чыгаруу үчүн \"Артка\" баскычын басыңыз"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Улантуу"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Тармакты өзгөртүү"</string>

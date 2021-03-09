@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus کے ساتھ Dolby Atmos"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"نوٹ: آلے کے اپنے تعاون یافتہ فارمیٹس کے صحیح اطلاع نہ دینے پر ممکن ہے خود کار اختیار کام نہ کرے۔"</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"خود کار: آلے سے اطلاع کردہ فارمیٹس استعمال کریں"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"کوئی نہیں: محیط آواز کبھی استعمال نہ کریں"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"دستی: دستیاب فارمیٹس سے دستی طور پر فارمیٹس منتخب کریں"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"خود کار: آلے سے اطلاع کردہ فارمیٹس استعمال کریں"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"منتخب کیے جانے پر سسٹم ایپس کو ساؤنڈ کے کسی بھی اس فارمیٹ کو منتخب کرنے کی اجازت دے گا جو آپ کے آلے کی چین کے ذریعے تعاون یافتہ ہے۔ ایپس ایک ایسے فارمیٹ کا انتخاب کر سکتی ہیں جو اعلی معیار کا فارمیٹ نہ ہو۔"</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"کوئی نہیں: سراؤنڈ ساؤنڈ کبھی استعمال نہ کریں"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"دستی: دستیاب فارمیٹس سے دستی طور پر فارمیٹس منتخب کریں"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"منتخب کیے جانے پر آپ پلے بیک کے ساتھ مسائل کا سبب بننے والے ان ساؤنڈ فارمیٹس کو دستی طور پر غیر فعال کر سکتے ہیں جو آپ کے آلے کی چین کے ذریعے تعاون یافتہ ہیں۔ آپ کے آلے کی چین کے ذریعے غیر تعاون یافتہ ساؤنڈ فارمیٹس کو فعال کیا جا سکتا ہے۔ کچھ کیسیز میں ایپس ایک ایسے فارمیٹ کا انتخاب کر سکتی ہیں جو اعلی معیار کا فارمیٹ نہ ہو۔"</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"غیر تعاون یافتہ آواز کے فارمیٹ کو فعال کرنا ہے؟"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"آپ کا منسلک کردہ آڈیو آلہ اس فارمیٹ کے لیے سپورٹ کی رپورٹ نہیں دیتا ہے۔ یہ آپ کے آلے سے تیز شور یا پاپس جیسے غیر متوقع رویوں کا سبب بن سکتا ہے۔"</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"منسوخ کریں"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"کم ملاحظہ کریں"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"دستیاب نیٹ ورکس"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"نیا نیٹ ورک شامل کریں"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"فوری طور پر منسلک ہوں"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"\"فوری طور پر منسلک ہوں\" کی سہولت آپ کو اپنے فون پر QR کوڈ کو اسکین کر کے فوری طور پر اپنے WiFi سے منسلک ہونے میں مدد کرتی ہے۔"</string>
     <string name="security_type" msgid="2297615092250075696">"سیکیورٹی کی قسم"</string>
     <string name="other_network" msgid="5299289104661858596">"دیگر نیٹ ورک…"</string>
     <string name="skip_network" msgid="3095529090560000692">"نظر انداز کریں"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"پراکسی کی ترتیبات درست نہیں ہیں"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP کی ترتیبات درست نہیں ہیں"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> ایک محفوظ کردہ نیٹ ورک ہے"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"شامل ہونے کیلئے QR کوڈ اسکین کریں"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"دوبارہ کوشش کریں"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"دستیاب نیٹ ورکس دیکھیں"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g> سے مربوط ہو رہا ہے"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"مربوط کریں"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"نیٹ ورک کو بھول جائیں"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"محفوظ کردہ پاس ورڈ سمیت، یہ اس نیٹ ورک سے منسلک کرنے کیلئے استعمال کردہ معلومات کو صاف کر دیتا ہے۔"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"اپنے موبائل فون سے QR کوڈ اسکین کر کے Wi-Fi میں شامل ہوں اور ہدایت کی پیروی کریں۔"</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"منسوخ کرنے کیلئے \"پیچھے جائيں\" بٹن پر دبائیں"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"ٹھیک ہے"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"جاری رکھیں"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"نیٹ ورک تبدیل کریں"</string>
