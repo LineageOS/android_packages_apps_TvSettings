@@ -128,9 +128,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos cu Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Notă: opțiunea Automat poate să nu funcționeze dacă dispozitivul nu raportează corect formatele acceptate"</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Automat: folosiți formate acceptate de dispozitiv"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Fără: nu utilizați niciodată sunet surround"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Manual: alegeți manual formate dintre formatele disponibile"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automat: folosiți formate acceptate de dispozitiv"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Dacă este selectată această opțiune, sistemul va permite aplicațiilor să selecteze orice format audio compatibil cu dispozitivele dvs. Aplicațiile pot alege un format care nu este de cea mai bună calitate."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Fără: nu folosiți niciodată sunet surround"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manual: alegeți manual formate dintre formatele disponibile"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Dacă opțiunea este selectată, puteți dezactiva manual formatele audio compatibile cu dispozitivele dvs., care cauzează probleme la redare. Formatele audio care nu sunt compatibile cu dispozitivele dvs. pot fi activate. Uneori, aplicațiile pot alege un format care nu este de cea mai bună calitate."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Activați formatul audio incompatibil?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Dispozitivul audio conectat nu acceptă acest format. Aceasta poate duce la producerea unor zgomote puternice sau pocnituri."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Anulați"</string>
@@ -159,11 +161,11 @@
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Ștergeți datele memorate în cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Datele din cache ale aplicațiilor vor fi șterse."</string>
     <string name="accessories_add" msgid="413764175035531452">"Adăugați un accesoriu"</string>
-    <string name="accessory_state_pairing" msgid="15908899628218319">"Se împerechează…"</string>
+    <string name="accessory_state_pairing" msgid="15908899628218319">"Se asociază…"</string>
     <string name="accessory_state_connecting" msgid="6560241025917621212">"Se conectează…"</string>
     <string name="accessory_state_error" msgid="8353621828816824428">"Nu s-a putut conecta"</string>
     <string name="accessory_state_canceled" msgid="4794837663402063770">"Anulată"</string>
-    <string name="accessory_state_paired" msgid="3296695242499532000">"Împerecheat"</string>
+    <string name="accessory_state_paired" msgid="3296695242499532000">"Asociat"</string>
     <string name="accessory_options" msgid="774592782382321681">"Accesoriu"</string>
     <string name="accessory_unpair" msgid="2473411128146068804">"Anulați asocierea"</string>
     <string name="accessory_battery" msgid="2283700366184703548">"Baterie <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
@@ -183,7 +185,7 @@
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Pentru împerecherea cu: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduceți codul PIN necesar al dispozitivului:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Pentru împerecherea cu: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt; &lt;br&gt;Introduceți cheia de acces necesară a dispozitivului:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"De obicei, 0000 sau 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Împerecheați"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Asociați"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Anulați"</string>
     <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s s-a conectat"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s s-a deconectat"</string>
@@ -304,6 +306,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Afișați mai puține"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Rețele disponibile"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Adăugați o rețea nouă"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Conectare rapidă"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Conectarea rapidă vă ajută să vă conectați repede la Wi-Fi scanând codul QR de pe telefonul dvs."</string>
     <string name="security_type" msgid="2297615092250075696">"Tip de securitate"</string>
     <string name="other_network" msgid="5299289104661858596">"Altă rețea…"</string>
     <string name="skip_network" msgid="3095529090560000692">"Omiteți"</string>
@@ -331,6 +335,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Setările proxy nu sunt valide"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Setările IP nu sunt valide"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> este o rețea salvată"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Scanați codul QR pentru a participa"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Încercați din nou"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Afișați rețelele disponibile"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Se conectează la <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -338,6 +343,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Conectați-vă"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Eliminați rețeaua"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Vor fi șterse informațiile utilizate pentru conectarea la această rețea, inclusiv parolele salvate"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"Conectați-vă la o rețea Wi-Fi scanând codul QR de pe telefonul mobil și urmați instrucțiunile."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Apăsați butonul Înapoi pentru a anula"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Continuați"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Schimbați rețeaua"</string>

@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos con Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: La opción Automático quizá no funcione si tu dispositivo no indica bien qué formatos admite."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Automático: usar formatos que indica el dispositivo"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Ninguno: no usar nunca sonido envolvente"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Manual: elegir manualmente un formato disponible"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automático: usar formatos que indica el dispositivo"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Si se selecciona, el sistema permitirá que las aplicaciones elijan cualquier formato de sonido compatible con tu cadena de dispositivos. Es posible que las aplicaciones no elijan el formato de la máxima calidad."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Ninguno: no usar nunca sonido envolvente"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manual: elegir manualmente un formato disponible"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Si está seleccionado, puedes inhabilitar manualmente los formatos de sonido compatibles con tu cadena de dispositivos que causen problemas en la reproducción y habilitar los que no sean compatibles. En algunos casos, es posible que las aplicaciones no elijan el formato de la máxima calidad."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"¿Habilitar formato de sonido no compatible?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"El dispositivo de audio conectado no indica que sea compatible con este formato. Quizá emita sonidos fuertes o se comporte de otra manera no esperada."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Cancelar"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Ver menos"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Redes disponibles"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Añadir red nueva"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Conexión rápida"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"La función Conexión rápida te permite unirte rápidamente a tu red Wi-Fi escaneando un código QR con tu teléfono."</string>
     <string name="security_type" msgid="2297615092250075696">"Tipo de seguridad"</string>
     <string name="other_network" msgid="5299289104661858596">"Otra red…"</string>
     <string name="skip_network" msgid="3095529090560000692">"Saltar"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Ajustes de proxy no válidos"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Ajustes de IP no válidos"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> es una red guardada"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Escanea el código QR para unirte"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Reintentar"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Ver redes disponibles"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Conectando a <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Conectar"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Borrar red"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Se borrará la información usada para conectarse a esta red (incluidas las contraseñas guardadas)."</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"Únete a una red Wi-Fi escaneando el código QR con tu teléfono móvil y siguiendo las instrucciones."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Pulsa el botón para volver si quieres cancelar"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"Aceptar"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Continuar"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Cambiar red"</string>

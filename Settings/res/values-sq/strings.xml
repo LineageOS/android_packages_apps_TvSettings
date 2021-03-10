@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos me Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Shënim. Opsioni \"Automatik\" mund të mos funksionojë nëse pajisja nuk i raporton saktë formatet e mbështetura."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Automatik: Përdor formatet e raportuara të pajisjes"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Asnjë: Asnjëherë mos përdor tingull rrethues"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Manual: Zgjidh formatet në mënyrë manuale nga formatet e ofruara"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automatik: Përdor formatet e raportuara të pajisjes"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Kur përzgjidhet, sistemi do të lejojë që aplikacionet të zgjedhin çdo format tingulli që mbështetet nga zinxhiri i pajisjeve të tua. Aplikacionet mund të zgjedhin një format që nuk është formati i cilësisë më të lartë."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Asnjë: Asnjëherë mos përdor tingull rrethues"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manual: Zgjidh formatet në mënyrë manuale nga formatet e ofruara"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Kur zgjidhet, mund të çaktivizosh manualisht formatet e tingujve që mbështeten nga zinxhiri i pajisjeve të tua që shkaktojnë probleme me luajtjen. Formatet e tingujve që nuk mbështeten nga zinxhiri i pajisjeve të tua mund të aktivizohen. Në disa raste, aplikacionet mund të zgjedhin një format që nuk është formati i cilësisë më të lartë."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Po aktivizon një format të pambështetur të tingullit?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Pajisja audio e lidhur nuk raporton mbështetjen për këtë format. Kjo mund të shkaktojë sjellje të papritura si p.sh. zhurma të larta ose kërcitje nga pajisja jote."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Anulo"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Shiko më pak"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Rrjetet në dispozicion"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Shto një rrjet të ri"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Lidhja e shpejtë"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Lidhja e shpejtë të ndihmon të lidhesh me shpejtësi me rrjetin tënd Wi-Fi duke skanuar kodin QR në telefonin tënd."</string>
     <string name="security_type" msgid="2297615092250075696">"Lloji i sigurisë"</string>
     <string name="other_network" msgid="5299289104661858596">"Rrjet tjetër…"</string>
     <string name="skip_network" msgid="3095529090560000692">"Kapërce"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Cilësimet e përfaqësuesit nuk janë të vlefshme"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Cilësimet e IP-së nuk janë të vlefshme"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> është një rrjet i ruajtur"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Skano kodin QR për t\'u bashkuar"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Provo përsëri"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Shiko rrjetet në dispozicion"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Po lidhet me <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Lidh"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Harroje rrjetin"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Kjo pastron informacionet e përdorura për t\'u lidhur me këtë rrjet, duke përfshirë një fjalëkalim të ruajtur"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"Bashkohu me një rrjet Wi-Fi duke skanuar kodin QR nga telefoni celular dhe ndiq udhëzimet."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Shtyp butonin \"Prapa\" për ta anuluar"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"Në rregull"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Vazhdo"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Ndrysho rrjetin"</string>

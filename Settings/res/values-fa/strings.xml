@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos به‌همراه Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"توجه: اگر دستگاه قالب‌هایی را که پشتیبانی می‌کند به‌درستی گزارش نکند، شاید گزینه «خودکار» عمل نکند."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"خودکار: استفاده از قالب‌های گزارش‌شده دستگاه"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"هیچ‌کدام: هرگز از صدای فراگیر استفاده نکنید"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"دستی: انتخاب قالب‌ها به‌صورت دستی ازبین قالب‌های موجود"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"خودکار: استفاده از قالب‌های گزارش‌شده دستگاه"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"وقتی انتخاب شده باشد، سیستم به برنامه‌ها اجازه می‌دهد هر قالب صدایی را که در زنجیره دستگاه‌هایتان پشتیبانی می‌شود انتخاب کنند. برنامه‌ها ممکن است قالبی را انتخاب کنند که بالاترین کیفیت را نداشته باشد."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"هیچ‌کدام: هرگز از صدای فراگیر استفاده نکنید"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"دستی: انتخاب قالب‌ها به‌صورت دستی ازبین قالب‌های موجود"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"وقتی انتخاب شده باشد، می‌توانید قالب‌های صدایی را که در زنجیره دستگاهتان پشتیبانی می‌شود، اما باعث بروز مشکلات بازپخش می‌شود، دستی غیرفعال کنید. می‌توانید قالب‌های صدایی را که در زنجیره دستگاهتان پشتیبانی نمی‌شود فعال کنید. در برخی موارد، ممکن است برنامه‌ها قالبی را انتخاب کنند که باکیفیت‌ترین قالب نباشد."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"قالب صدای پشتیبانی‌نشده فعال شود؟"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"دستگاه صوتی متصل شما برای این قالب پشتیبانی گزارش نمی‌کند. این کار ممکن است باعث عملکردهای غیرمنتظره (مثل صداهای بلند یا نمایان شدن بالاپر) در دستگاه شود."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"لغو"</string>
@@ -271,7 +273,7 @@
     <string name="status_bt_address" msgid="7190052214963950844">"آدرس بلوتوث"</string>
     <string name="status_up_time" msgid="1758102680983108313">"زمان فعالیت"</string>
     <string name="legal_information" msgid="1087445528481370874">"اطلاعات حقوقی"</string>
-    <string name="copyright_title" msgid="5879660711078649518">"حق نسخه‌برداری"</string>
+    <string name="copyright_title" msgid="5879660711078649518">"حق نشر"</string>
     <string name="license_title" msgid="4032466200355435641">"مجوز"</string>
     <string name="terms_title" msgid="192888187310800678">"شرایط و مقررات"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"مجوز وب‌نمای سیستم"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"مشاهده موارد کمتر"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"شبکه‌های موجود"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"افزودن شبکه جدید"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"اتصال سریع"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"«اتصال سریع» به شما کمک می‌کند با اسکن کردن رمزینه پاسخ‌سریع در تلفن، سریع به Wi-Fi متصل شوید."</string>
     <string name="security_type" msgid="2297615092250075696">"نوع امنیت"</string>
     <string name="other_network" msgid="5299289104661858596">"شبکه‌ای دیگر…"</string>
     <string name="skip_network" msgid="3095529090560000692">"رد شدن"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"تنظیمات پروکسی معتبر نیست"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"تنظیمات IP معتبر نیست"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"‏<xliff:g id="SSID">%1$s</xliff:g> شبکه‌ای ذخیره شده است"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"برای اتصال، رمزینه پاسخ‌سریع را اسکن کنید"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"دوباره امتحان کنید"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"مشاهده شبکه‌های در دسترس"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"در حال اتصال به <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"اتصال"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"فراموش کردن شبکه"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"این کار اطلاعات مورد استفاده برای اتصال به این شبکه، از جمله گذرواژه ذخیره شده را پاک می‌کند"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"با اسکن کردن رمزینه پاسخ‌سریع از تلفن همراه، به Wi-Fi متصل شوید و دستورالعمل را دنبال کنید."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"دکمه برگشت را برای لغو کردن فشار دهید"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"قبول"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"ادامه"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"تغییر شبکه"</string>
