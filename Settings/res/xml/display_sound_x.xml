@@ -29,9 +29,14 @@
         android:key="display_category"
         android:title="@string/display_category_title" />
     <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
-        android:key="match_content"
+        android:key="display_resolution"
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
-        custom:uri="@string/match_content_slice_uri"
+        custom:uri="@string/resolution_slice_uri"
+        custom:isPreferenceVisible="false" />
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="hdr_and_color_format"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:uri="@string/hdr_and_color_format_slice_uri"
         custom:isPreferenceVisible="false" />
     <Preference
         android:fragment="com.android.tv.settings.device.displaysound.MatchContentFrameRateFragment"
