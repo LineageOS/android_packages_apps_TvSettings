@@ -622,6 +622,19 @@
     <!-- Full package name of OEM preferred device feedback reporter. [DO NOT TRANSLATE] -->
     <string name="oem_preferred_feedback_reporter" translatable="false" />
 
+    <!-- OEM Unlock strings (duplicated with Settings) -->
+    <!-- setting enable OEM unlock Checkbox's summary to explain this Checkbox is disabled because the bootloader has been unlocked [CHAR_LIMIT=60] -->
+    <string name="oem_unlock_enable_disabled_summary_bootloader_unlocked">Bootloader is already unlocked</string>
+    <!-- setting enable OEM unlock Checkbox's summary to explain this Checkbox is disabled because there is no connectivity. [CHAR_LIMIT=60] -->
+    <string name="oem_unlock_enable_disabled_summary_connectivity">Connect to the internet first</string>
+    <!-- setting enable OEM unlock Checkbox's summary to explain this Checkbox is disabled because there is no connectivity or the device is locked by the carrier [CHAR_LIMIT=60] -->
+    <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked">Connect to the internet or contact your carrier</string>
+    <!-- setting enable OEM unlock Checkbox's summary to explain this Checkbox is disabled because this setting is unavailable on sim-locked devices. [CHAR_LIMIT=60] -->
+    <string name="oem_unlock_enable_disabled_summary_sim_locked_device">Unavailable on carrier-locked devices</string>
+    <!-- Information displayed after user locks OEM lock [Char Limit=None]-->
+    <string name="oem_lock_info_message">Please restart the device to enable device protection feature.</string>
+    <string name="automatic_storage_manager_freed_bytes"><xliff:g id="size" example="3.25MB">%1$s</xliff:g> total made available\n\nLast ran on <xliff:g id="date" example="Jan 12">%2$s</xliff:g></string>
+
     <!-- About screen, fcc equipment id label  [CHAR LIMIT=40] -->
     <string name="fcc_equipment_id">Equipment ID</string>
     <!-- About screen,  setting option name  [CHAR LIMIT=40] -->
