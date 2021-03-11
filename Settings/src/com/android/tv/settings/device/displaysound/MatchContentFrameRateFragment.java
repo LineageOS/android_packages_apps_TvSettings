@@ -17,7 +17,9 @@
 package com.android.tv.settings.device.displaysound;
 
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -100,26 +102,18 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
             radioPreference.clearOtherRadioPreferences(getPreferenceGroup());
 
             if (key != mCurrentPreferenceKey) {
+                int newValue;
                 switch (key) {
                     case KEY_MATCH_CONTENT_FRAME_RATE_SEAMLESS: {
-                        Settings.Secure.putInt(
-                                getContext().getContentResolver(),
-                                Settings.Secure.MATCH_CONTENT_FRAME_RATE,
-                                Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY);
+                        newValue = Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY;
                         break;
                     }
                     case KEY_MATCH_CONTENT_FRAME_RATE_NON_SEAMLESS: {
-                        Settings.Secure.putInt(
-                                getContext().getContentResolver(),
-                                Settings.Secure.MATCH_CONTENT_FRAME_RATE,
-                                Settings.Secure.MATCH_CONTENT_FRAMERATE_ALWAYS);
+                        newValue = Settings.Secure.MATCH_CONTENT_FRAMERATE_ALWAYS;
                         break;
                     }
                     case KEY_MATCH_CONTENT_FRAME_RATE_NEVER: {
-                        Settings.Secure.putInt(
-                                getContext().getContentResolver(),
-                                Settings.Secure.MATCH_CONTENT_FRAME_RATE,
-                                Settings.Secure.MATCH_CONTENT_FRAMERATE_NEVER);
+                        newValue = Settings.Secure.MATCH_CONTENT_FRAMERATE_NEVER;
                         break;
                     }
                     default:
@@ -127,16 +121,35 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
                                 "Unknown match content frame rate pref value"
                                         + ": " + key);
                 }
+
+                int oldValue = getCurrentSettingValue();
+                if (newValue != oldValue) {
+                    Settings.Secure.putInt(
+                            getContext().getContentResolver(),
+                            Settings.Secure.MATCH_CONTENT_FRAME_RATE,
+                            newValue);
+                    logToggleInteracted(toggleIdFromSetting(oldValue), false);
+                    logToggleInteracted(toggleIdFromSetting(newValue), true);
+                }
             }
         }
         return super.onPreferenceTreeClick(preference);
     }
 
-    private String preferenceKeyFromSetting() {
-        int matchContentSetting = Settings.Secure.getInt(
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.DISPLAY_SOUND_MATCH_CONTENT_FRAMERATE;
+    }
+
+    private int getCurrentSettingValue() {
+        return Settings.Secure.getInt(
                 getContext().getContentResolver(),
                 Settings.Secure.MATCH_CONTENT_FRAME_RATE,
                 Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY);
+    }
+
+    private String preferenceKeyFromSetting() {
+        int matchContentSetting = getCurrentSettingValue();
         switch (matchContentSetting) {
             case (Settings.Secure.MATCH_CONTENT_FRAMERATE_NEVER): {
                 return KEY_MATCH_CONTENT_FRAME_RATE_NEVER;
@@ -150,6 +163,19 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
             default:
                 throw new IllegalArgumentException("Unknown match content frame rate pref "
                         + "value in stored settings");
+        }
+    }
+
+    private int toggleIdFromSetting(int matchContentSetting) {
+        switch (matchContentSetting) {
+            case Settings.Secure.MATCH_CONTENT_FRAMERATE_NEVER:
+                return TvSettingsEnums.DISPLAY_SOUND_MATCH_CONTENT_FRAMERATE_NEVER;
+            case Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY:
+                return TvSettingsEnums.DISPLAY_SOUND_MATCH_CONTENT_FRAMERATE_SEAMLESS;
+            case Settings.Secure.MATCH_CONTENT_FRAMERATE_ALWAYS:
+                return TvSettingsEnums.DISPLAY_SOUND_MATCH_CONTENT_FRAMERATE_NON_SEAMLESS;
+            default:
+                throw new IllegalArgumentException("Unknown match content frame rate pref value");
         }
     }
 
