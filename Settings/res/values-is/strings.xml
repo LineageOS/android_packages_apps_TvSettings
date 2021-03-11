@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos með Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Ath.: „Sjálfvirkt“ virkar mögulega ekki ef tækið veitir ekki réttar upplýsingar um studd snið."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Sjálfvirkt: Nota tilkynnt snið tækis"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Ekkert: Nota aldrei víðóma hljóð"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Handvirkt: Velja snið handvirkt úr tiltækum sniðum"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Sjálfvirkt: Nota tilkynnt snið tækis"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Þegar þetta er valið leyfir kerfið forritum að velja hvaða hljóðsnið sem er sé það stutt af tækjakeðjunni þinni. Forrit gætu valið snið sem skilar ekki mestu gæðunum."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Ekkert: Nota aldrei víðóma hljóð"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Handvirkt: Velja snið handvirkt úr tiltækum sniðum"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Þegar þetta er valið geturðu slökkt handvirkt á hljóðsniðum sem tækjakeðjan þín styður og valda vandamálum við spilun. Hægt er að kveikja á hljóðsniðum sem tækjakeðjan þín styður ekki. Forrit gætu valið snið sem skilar ekki mestu gæðunum."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Viltu virkja óstutt hljóðsnið?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Tengda hljómtækið tilkynnir ekki stuðning við þetta snið. Þetta gæti valdið óvæntri hegðun eins og hávaða eða smellum í tækinu."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Hætta við"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Sýna færri"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Tiltæk net"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Bæta nýju neti við"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Hraðtenging"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Hraðtenging auðveldar þér að tengjast Wi-Fi hratt með því að skanna QR-kóðann í símanum."</string>
     <string name="security_type" msgid="2297615092250075696">"Gerð öryggis"</string>
     <string name="other_network" msgid="5299289104661858596">"Annað net…"</string>
     <string name="skip_network" msgid="3095529090560000692">"Sleppa"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Proxy-stillingar ekki gildar"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP-stillingar ekki gildar"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> er vistað net"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Skannaðu QR-kóðann til að tengjast"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Reyna aftur"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Skoða net í boði"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Tengist <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Tengjast"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Gleyma neti"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Þetta hreinsar upplýsingar sem notaðar eru til að tengjast þessu neti, þar á meðal vistað aðgangsorð"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"Tengstu Wi-Fi með því að skanna QR-kóðann í snjallsímanum og fylgja leiðbeiningunum."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Ýttu á bakkhnappinn til að hætta við"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"Í lagi"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Áfram"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Skipta um netkerfi"</string>

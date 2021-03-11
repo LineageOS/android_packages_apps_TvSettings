@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos Dolby Digital Plus-szal"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Megjegyzés: Az Automatikus beállítás nem működik, ha eszköze nem jelzi helyesen a támogatott formátumait."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Automatikus: Eszköz által jelzett formátumok használata"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Nincs: Soha ne használjon térhatású hangzást"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Kézi: Formátumok kézi kiválasztása a listából"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automatikus: Eszköz által jelzett formátumok használata"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Kiválasztása esetén a rendszer lehetővé teszi az alkalmazások számára bármilyen olyan hangformátum használatát, amelyet támogat az eszközlánc. Előfordulhat, hogy az alkalmazások nem a legjobb minőséget biztosító formátumot választják ki."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Nincs: Soha ne használjon térhatású hangzást"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Kézi: Formátumok kézi kiválasztása a listából"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Kiválasztása esetén manuálisan letilthatók az eszközlánc által támogatott, de lejátszási problémát okozó hangformátumok. Az eszközlánc által nem támogatott hangformátumok engedélyezésére nincs lehetőség. Esetenként az alkalmazások nem a legjobb minőséget biztosító formátumot választják ki."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Engedélyezi a nem támogatott audioformátumot?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"A csatlakoztatott audioeszköz jelzése szerint ez a formátum nem támogatott. Ez váratlan viselkedést okozhat az eszközön, például hangos zajt vagy pattogó hangokat eredményezhet."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Mégse"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Kevesebb megjelenítése"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Rendelkezésre álló hálózatok"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Új hálózat hozzáadása"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Quick connect"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"A Quick connect segítségével gyorsan csatlakozhat a Wi-Fi-hez: csak olvassa be a telefonján található QR-kódot."</string>
     <string name="security_type" msgid="2297615092250075696">"A biztonság típusa"</string>
     <string name="other_network" msgid="5299289104661858596">"Másik hálózat..."</string>
     <string name="skip_network" msgid="3095529090560000692">"Kihagyás"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Érvénytelen proxybeállítások"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Érvénytelen IP-beállítások"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"A(z) <xliff:g id="SSID">%1$s</xliff:g> egy mentett hálózat"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"QR-kód beolvasása a csatlakozáshoz"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Újrapróbálkozás"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Elérhető hálózatok megtekintése"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Csatlakozás a következőhöz: <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Csatlakozás"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Hálózat elfelejtése"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Ezzel törli a hálózathoz való kapcsolódás során használt adatokat, beleértve a mentett jelszót is"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"A Wi-Fi-hez való csatlakozáshoz olvassa be a QR-kódot a mobiltelefonjáról, majd kövesse az utasításokat."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"A megszakításhoz nyomja meg a vissza gombot"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Tovább"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Hálózat módosítása"</string>

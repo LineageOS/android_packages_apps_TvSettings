@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos koos Dolby Digital Plusiga"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Märkus. Valik Automaatne ei pruugi töötada, kui teie seade ei teavita toetatud vormingutest õigesti."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Automaatne: kasuta seadme teavitatud vorminguid"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Puudub: ruumilist heli ei kasutata kunagi"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Käsitsi: valige vormingud käsitsi saadaolevate vormingute hulgast"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automaatne: kasuta seadme teavitatud vorminguid"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Kui see on valitud, lubab süsteem rakendustel valida mis tahes helivormingu, mida teie seadmeahel toetab. Rakendused võivad valida vormingu, mis pole kõige kõrgema kvaliteediga."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Puudub: ruumilist heli ei kasutata kunagi"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Käsitsi: valige vormingud käsitsi saadaolevate vormingute hulgast"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Kui see on valitud, saate käsitsi keelata teie seadmeahela toetatavad helivormingud, mis põhjustavad taasesitusel probleeme. Helivormingud, mida teie seadmeahel ei toeta, saab lubada. Mõnel juhul võivad rakendused valida vormingu, mis pole kõige kõrgema kvaliteediga."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Kas lubada toetamata helivorming?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Teie ühendatud heliseade ei ole selle vormingu toest teada andnud. See võib põhjustada ootamatut käitumist, nagu seadmest kostuv vali müra või ragin."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Tühista"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Kuva vähem"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Saadaolevad võrgud"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Lisa uus võrk"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Kiirühendus"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Funktsioon Kiirühendus võimaldab teil kiirelt WiFi-võrguga ühenduse luua, skannides telefoniga QR-koodi."</string>
     <string name="security_type" msgid="2297615092250075696">"Kaitsetüüp"</string>
     <string name="other_network" msgid="5299289104661858596">"Muu võrk ..."</string>
     <string name="skip_network" msgid="3095529090560000692">"Jäta vahele"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Puhverserveri seaded pole õiged"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP-seaded pole õiged"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> on salvestatud võrk"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Liitumiseks skannige QR-kood"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Proovi uuesti"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Kuva saadaolevad võrgud"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Ühendamine võrguga <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Ühenda"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Unusta võrk"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"See kustutab teabe, mida kasutatakse võrguga ühenduse loomiseks, sh salvestatud parooli"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"Liituge WiFi-võrguga, skannides oma mobiilseadmega QR-koodi ja järgides juhiseid."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Tühistamiseks vajutage tagasiliikumise nuppu"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Jätka"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Vaheta võrku"</string>

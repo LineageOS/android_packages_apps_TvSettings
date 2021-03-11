@@ -130,9 +130,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos с Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Примечание. Параметр \"Автоматически\" может не работать, если устройство предоставляет неверные данные о поддерживаемых форматах."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Автоматически: использовать форматы, сообщаемые устройством"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Нет: никогда не использовать объемный звук"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Вручную: выбрать форматы вручную из списка доступных"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Автоматически: использовать форматы, сообщаемые устройством"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Когда эта настройка включена, приложения могут автоматически выбирать один из аудиоформатов, поддерживаемых на ваших устройствах. При этом качество выбранного формата может быть не самым высоким из доступных."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Нет: никогда не использовать объемный звук"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Вручную: выбрать форматы вручную из списка доступных"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Когда эта настройка включена, вы можете вручную отключать аудиоформаты, при которых возникают проблемы с воспроизведением. Аудиоформаты, которые не поддерживаются на ваших устройствах, можно включать. Качество формата, автоматически выбранного приложением, может быть не самым высоким из доступных."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Использовать неподдерживаемый аудиоформат?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Подключенное аудиоустройство не поддерживает этот формат. Поэтому могут возникать такие неполадки, как громкий шум или щелчки."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Отмена"</string>
@@ -307,6 +309,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Свернуть"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Доступные сети"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Добавить сеть"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Быстрое подключение"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Чтобы подключиться к сети Wi-Fi, будет достаточно просканировать QR-код с помощью телефона"</string>
     <string name="security_type" msgid="2297615092250075696">"Тип защиты"</string>
     <string name="other_network" msgid="5299289104661858596">"Другие сети"</string>
     <string name="skip_network" msgid="3095529090560000692">"Пропустить"</string>
@@ -334,6 +338,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Недействительные настройки прокси-сервера"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Недействительные настройки IP-адреса"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"Сеть <xliff:g id="SSID">%1$s</xliff:g> уже сохранена"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Отсканируйте QR-код, чтобы подключиться к сети"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Повторить"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Доступные сети"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Подключение к сети <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -341,6 +346,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Подключиться"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Удалить эту сеть"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Данные, которые использовались для подключения к этой сети (включая пароль), будут удалены"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"Чтобы подключиться к сети Wi-Fi, отсканируйте QR-код с помощью телефона и следуйте инструкциям на экране."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Чтобы отменить действие, нажмите кнопку \"Назад\"."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"ОК"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Далее"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Подключиться к другой сети"</string>
