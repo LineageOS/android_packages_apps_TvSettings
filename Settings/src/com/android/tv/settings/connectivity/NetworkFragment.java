@@ -286,7 +286,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mCollapsePref.setVisible(wifiEnabled && mWifiNetworksCategory.shouldShowCollapsePref());
         mAddPref.setVisible(wifiEnabled);
         if (mAddEasyConnectPref != null) {
-            mAddEasyConnectPref.setVisible(wifiEnabled && mWifiManager.isEasyConnectSupported());
+            mAddEasyConnectPref.setVisible(isEasyConnectEnabled());
         }
 
         if (!wifiEnabled) {
@@ -447,5 +447,16 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     @Override
     protected int getPageId() {
         return TvSettingsEnums.NETWORK;
+    }
+
+    private boolean isEasyConnectEnabled() {
+        final boolean wifiEnabled = mIsWifiHardwarePresent
+                && mConnectivityListener.isWifiEnabledOrEnabling();
+
+        if (!wifiEnabled || !mWifiManager.isEasyConnectSupported()) {
+            return false;
+        }
+
+        return getContext().getResources().getBoolean(R.bool.config_easyconnect_enabled);
     }
 }
