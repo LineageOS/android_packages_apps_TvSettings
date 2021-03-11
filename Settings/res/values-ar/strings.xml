@@ -134,9 +134,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos مع Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"ملاحظة: قد لا يعمل الخيار \"تلقائي\" إذا لم يعلن جهازك بشكل صحيح عن التنسيقات المتوافقة معه."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"\"تلقائي\": استخدام التنسيقات التي أعلن عنها الجهاز"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"بدون صيغ: عدم استخدام الصوت المحيطي"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"\"يدوي\": الاختيار يدويًا من التنسيقات المتاحة"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"\"تلقائي\": استخدام الصيغ التي اختارها الجهاز"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"عند الاختيار، سيسمح النظام للتطبيقات باختيار أي صيغة صوت توفّرها سلسلة جهازك. قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"\"بدون صيغ\": عدم استخدام الصوت المحيطي"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"\"يدوي\": اختيار الصيغ يدويًا من الصيغ المتوفرة"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"عند الاختيار، يمكنك يدويًا إيقاف صيغ الصوت التي توفّرها سلسلة جهازك وتسبب مشاكل في التشغيل. ويمكنك تفعيل صيغ الصوت التي لا توفّرها سلسلة جهازك. في بعض الأحيان، قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"هل تريد تفعيل تنسيق الصوت غير المتوافق؟"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"لا يعلن جهازك السماعي المتصل عن توافق هذا التنسيق معه. قد يتسبب هذا في عمل جهازك بطريقة غير متوقعة، كصدور أصوات مزعجة ومرتفعة أو صوت فرقعة من جهازك."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"إلغاء"</string>
@@ -313,6 +315,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"عرض أقل"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"الشبكات المتاحة"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"إضافة شبكة جديدة"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"الاتصال السريع"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"توفّر لك ميزة الاتصال السريع إمكانية الاتصال بشبكة Wi-Fi بشكل سريع عن طريق مسح رمز الاستجابة السريعة ضوئيًا على هاتفك."</string>
     <string name="security_type" msgid="2297615092250075696">"نوع الأمان"</string>
     <string name="other_network" msgid="5299289104661858596">"شبكة أخرى..."</string>
     <string name="skip_network" msgid="3095529090560000692">"تخطي"</string>
@@ -340,6 +344,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"إعدادات الخادم الوكيل غير صالحة"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"إعدادات IP غير صالحة"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> هي شبكة محفوظة"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"الانضمام عن طريق مسح رمز الاستجابة السريعة ضوئيًا"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"إعادة المحاولة"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"عرض الشبكات المتاحة"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"جارٍ الاتصال بـ <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -347,6 +352,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"الاتصال"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"حذف الشبكة"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"يؤدي هذا إلى محو المعلومات المستخدمة للاتصال بهذه الشبكة، بما في ذلك كلمات المرور المحفوظة"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"يمكنك الانضمام إلى شبكة Wi-Fi عن طريق مسح رمز الاستجابة السريعة ضوئيًا باستخدام هاتفك الجوّال واتّباع التعليمات."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"اضغط على زر الرجوع للإلغاء."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"موافقة"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"متابعة"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"تغيير الشبكة"</string>

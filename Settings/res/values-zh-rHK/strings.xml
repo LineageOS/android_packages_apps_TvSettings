@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"配備 Dolby Atmos 技術的 Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"請注意：如果您的裝置無法正確報告支援的格式，自動選項未必可以運作。"</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"自動：使用裝置報告的格式"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"無：一律不使用環迴音效"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"手動：從可用的格式中手動選擇"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"自動：使用裝置報告的格式"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"選取後，系統將允許應用程式選擇裝置系統支援的任何音效格式。應用程式未必會選擇最高音質的格式。"</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"無：一律不使用環迴立體聲"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"手動：手動選擇可用的格式"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"選取後，您可以手動停用裝置系統支援但播放時出現問題的音效格式，同時可以啟用裝置系統不支援的音效格式。在個別情況下，應用程式未必會選擇最高音質的格式。"</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"要啟用不支援的音效格式嗎？"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"您已連接的音響裝置並不支援此格式。這可能會導致裝置出現非預期的行為，如發出大聲的噪音或劈啪聲。"</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"取消"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"顯示較少"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"可用的網絡"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"新增網絡"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"快速連接"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"「快速連接」可助您使用手機掃瞄 QR 碼，以快速連接 Wi-Fi。"</string>
     <string name="security_type" msgid="2297615092250075696">"安全性類型"</string>
     <string name="other_network" msgid="5299289104661858596">"其他網絡…"</string>
     <string name="skip_network" msgid="3095529090560000692">"略過"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Proxy 設定無效"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP 設定無效"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> 是已儲存的網絡"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"掃瞄 QR 碼以加入網絡"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"重試"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"查看可用的網絡"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"正在連線至 <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"連線"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"刪除網絡"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"用於連接此網絡的資料將被清除，包括已儲存的密碼"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"使用手機掃瞄 QR 碼以加入 Wi-Fi 網絡，然後按照指示操作。"</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"按一下返回按鈕以取消"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"確定"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"繼續"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"變更網絡"</string>

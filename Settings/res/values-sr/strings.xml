@@ -128,9 +128,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos са технологијом Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Напомена: Аутоматска опција можда неће радити ако уређај не пријављује подржане формате исправно."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Аутоматски: Користи формате које уређај пријављује"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Ништа: Никада не користи звучни систем"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Ручно: Одаберите ручно неке од доступних формата"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Аутоматски: Користи формате које уређај пријављује"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Када је изабрано, систем ће омогућити апликацијама да изаберу било који формат звука који ланац уређаја подржава. Апликације могу да одаберу формат који није највишег квалитета."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Ништа: Никада не користи звучни систем"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Ручно: Одаберите ручно неке од доступних формата"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Када је изабрано, можете да ручно онемогућите формате звука које подржава ланац уређаја, а који узрокују проблеме са репродукцијом. Можете да омогућите формате звука које не подржава ланац уређаја. У неким случајевима, апликације могу да одаберу формат који није највишег квалитета."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Омогућавате неподржани формат звука?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Повезани аудио уређај не показује да подржава овај формат. То може да изазове неочекивано понашање, попут буке или звукова пуцања на уређају."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Откажи"</string>
@@ -304,6 +306,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Прикажи мање"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Доступне мреже"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Додај нову мрежу"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Брзо повезивање"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Брзо повезивање вам помаже да се брзо повежете на WiFi тако што ћете скенирати QR кôд на телефону."</string>
     <string name="security_type" msgid="2297615092250075696">"Тип безбедности"</string>
     <string name="other_network" msgid="5299289104661858596">"Друга мрежа..."</string>
     <string name="skip_network" msgid="3095529090560000692">"Прескочи"</string>
@@ -331,6 +335,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Подешавања проксија нису важећа"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Подешавања за IP нису важећа"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> је сачувана мрежа"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Скениајте QR кôд да бисте се придружили"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Пробај поново"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Прикажи доступне мреже"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Повезује са <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -338,6 +343,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Повежи"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Заборави мрежу"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Овако ћете обрисати информације за повезивање на ову мрежу, укључујући и сачувану лозинку"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"Придружите се WiFi мрежи тако што ћете скенирати QR кôд помоћу мобилног телефона и пратити упутства."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Притисните дугме Назад да бисте отказали"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"Потврди"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Настави"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Промени мрежу"</string>
@@ -420,7 +427,7 @@
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"Ово може мало да потраје. Не уклањајте диск."</string>
     <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"Изаберите меморијски простор за пренос података"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="5086390005970210697">"Пренесите податке на уређај <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"Пренесите слике, датотеке и податке апликација на уређај <xliff:g id="NAME">%1$s</xliff:g>. То може да потраје неколико минута. Неке апликације неће радити исправно током преноса."</string>
+    <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"Пренесите слике, датотеке и податке апликација на уређај <xliff:g id="NAME">%1$s</xliff:g>. То може да потраје пар минута. Неке апликације неће радити исправно током преноса."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="7512917600174814567">"Пренеси одмах"</string>
     <string name="storage_wizard_migrate_confirm_action_move_later" msgid="6379986754827551474">"Пренеси касније"</string>
     <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"Подаци су пренети на уређај <xliff:g id="NAME">%1$s</xliff:g>"</string>

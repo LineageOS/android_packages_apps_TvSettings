@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus के साथ Dolby Atmos"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"ध्यान दें: अगर डिवाइस पर चलने वाले फ़ॉर्मैट का सही पता नहीं लगता, तो हो सकता है कि अपने-आप फ़ॉर्मैट चुनने की सेटिंग काम न करे."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"अपने-आप: डिवाइस पर चलने वाले फ़ॉर्मैट इस्तेमाल करें"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"कोई नहीं: आस-पास की आवाज़ कभी भी इस्तेमाल न करें"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"मैन्युअल: मौजूदा फ़ॉर्मैट की सूची में से चुनें"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"अपने-आप: डिवाइस पर चलने वाले फ़ॉर्मैट इस्तेमाल करें"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"इस विकल्प को चुनने पर, ऐप्लिकेशन ऐसे किसी भी साउंड फ़ॉर्मैट को चुन सकते हैं जो आपकी डिवाइस चेन के साथ काम करता हो. ऐप्लिकेशन किसी ऐसे फ़ॉर्मैट को चुन सकते हैं जो सबसे अच्छी क्वालिटी का न हो."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"कभी नहीं: सराउंड साउंड कभी इस्तेमाल न करें"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"मैन्युअल तरीके से: मौजूदा फ़ॉर्मैट की सूची में से चुनें"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"इसे चुनने पर, आप अपनी डिवाइस चेन के साथ काम करने वाले ऐसे साउंड फ़ॉर्मैट को मैन्युअल तौर पर बंद कर सकते हैं जो वीडियो चलाने में समस्या पैदा करते हों. आपकी डिवाइस चेन के साथ काम न करने वाले साउंड फ़ॉर्मैट, चालू किए जा सकते हैं. ऐप्लिकेशन किसी ऐसे फ़ॉर्मैट को चुन सकते हैं जो सबसे अच्छी क्वालिटी का न हो."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"आप अपने डिवाइस पर काम न करने वाले साउंड फ़ॉर्मैट चालू करना चाहते हैं?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"कनेक्ट किया गया ऑडियो डिवाइस, इस फ़ॉर्मैट पर काम नहीं करता. इससे, आपके डिवाइस में अनचाही गतिविधियां हो सकती हैं, जैसे कि तेज़ आवाज़ या पॉप-अप होना."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"रद्द करें"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"कम देखें"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"उपलब्ध नेटवर्क"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"नया नेटवर्क जोड़ें"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"क्विक कनेक्ट"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"क्विक कनेक्ट का इस्तेमाल करके, आप वाई-फ़ाई से फटाफट जुड़ सकते हैं. इसके लिए, आपको फ़ोन पर क्यूआर कोड स्कैन करना होगा."</string>
     <string name="security_type" msgid="2297615092250075696">"सुरक्षा का प्रकार"</string>
     <string name="other_network" msgid="5299289104661858596">"अन्‍य नेटवर्क…"</string>
     <string name="skip_network" msgid="3095529090560000692">"अभी नहीं"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"प्रॉक्सी सेटिंग मान्य नहीं"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP सेटिंग मान्य नहीं"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> एक सहेजा गया नेटवर्क है"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"नेटवर्क से जुड़ने के लिए, क्यूआर कोड स्कैन करें"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"फिर से प्रयास करें"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"उपलब्ध नेटवर्क देखें"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g> से कनेक्ट हो रहा है"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"जोड़ दें"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"नेटवर्क भूलें"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"इससे सहेजे गए पासवर्ड सहित, इस नेटवर्क से कनेक्ट होने में उपयोग होने वाली जानकारी साफ़ हो जाती है"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"अपने मोबाइल फ़ोन से क्यूआर कोड स्कैन करके, वाई-फ़ाई से जुड़ें और निर्देशों के मुताबिक आगे बढ़ें."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"इस कार्रवाई को रद्द करने के लिए, \'वापस जाएं\' बटन दबाएं"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"ठीक"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"जारी रखें"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"नेटवर्क बदलें"</string>

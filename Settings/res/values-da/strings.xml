@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos med Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Bemærk! Automatisk fungerer muligvis kun, hvis enheden rapporterer sine understøttede formater korrekt."</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"Automatisk: Brug formater, som enheden rapporterer"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"Ingen: Brug aldrig surroundsound"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"Manuelt: Vælg manuelt formater blandt de tilgængelige formater"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automatisk: Brug formater, som enheden rapporterer"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Når du har valgt dette, tillader systemet, at apps kan vælge ethvert lydformat, der understøttes af din enhedskæde. Apps kan vælge et format, der ikke er af højeste kvalitet."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Ingen: Brug aldrig surroundsound"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manuelt: Vælg manuelt formater blandt de tilgængelige formater"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Når du har valgt dette, kan du manuelt deaktivere lydformater, der understøttes af din enhedskæde, som forårsager afspilningsproblemer. Lydformater, der ikke understøttes af din enhed, kan aktiveres. I visse tilfælde kan apps vælge et format, der ikke er af højeste kvalitet."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Vil du tillade lydformatet, selvom det ikke er understøttet?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Din tilsluttede lydenhed rapporterer ikke understøttelse af dette format. Dette kan medføre høje lyde fra enheden eller anden uventet adfærd."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Annuller"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Se færre"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Tilgængelige netværk"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Tilføj nyt netværk"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Hurtig forbindelse"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Hurtig forbindelse er en funktion, der hjælper dig med hurtigt at oprette forbindelse til dit Wi-Fi-netværk ved at scanne en QR-kode på din telefon."</string>
     <string name="security_type" msgid="2297615092250075696">"Sikkerhedstype"</string>
     <string name="other_network" msgid="5299289104661858596">"Andre netværk..."</string>
     <string name="skip_network" msgid="3095529090560000692">"Spring over"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Proxyindstillingerne er ikke gyldige"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP-indstillingerne er ikke gyldige"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> er et gemt netværk"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Scan QR-koden for at oprette forbindelse"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Prøv igen"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Se tilgængelige netværk"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Der oprettes forbindelse til <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Tilslut"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Glem netværk"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Rydder oplysninger, som bruges til at oprette forbindelse til netværket, bl.a. eventuelle gemte adgangskoder."</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"Opret forbindelse til et Wi-Fi-netværk ved at scanne QR-koden på din mobiltelefon og følge vejledningen."</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Tryk på tilbageknappen for at annullere"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Fortsæt"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Skift netværk"</string>

@@ -126,9 +126,11 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"采用 Dolby Digital Plus 的 Dolby Atmos"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"注意：如果您的设备未正确报告其支持的格式，“自动”选项可能无法正常使用。"</string>
-    <string name="surround_sound_auto_summary" msgid="4217758237138215068">"自动：使用设备报告的格式"</string>
-    <string name="surround_sound_none_summary" msgid="2791597033750908940">"无：一律不使用环绕声"</string>
-    <string name="surround_sound_manual_summary" msgid="7333186407367883972">"手动：从可用格式中手动选择格式"</string>
+    <string name="surround_sound_auto_title" msgid="3549230030132727609">"自动：使用设备报告的格式"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"您选择此选项后，系统将允许应用选择您的设备链支持的任何声音格式。应用不一定会选择最高品质的格式。"</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"无：一律不使用环绕声"</string>
+    <string name="surround_sound_manual_title" msgid="589702982544517671">"手动：从可用格式中手动选择格式"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"您选择此选项后，如果您的设备链支持的声音格式造成播放问题，您可以手动停用相应的格式。您可以启用您的设备链不支持的声音格式。在某些情况下，应用不一定会选择最高品质的格式。"</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"要启用不支持的声音格式吗？"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"您连接的音频设备未报告支持此格式。设备可能会因此出现意外行为，例如，发出很大杂音或爆音。"</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"取消"</string>
@@ -301,6 +303,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"隐藏部分"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"可用网络"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"添加新网络"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"快速连接"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"借助快速连接功能，您只要使用手机扫描二维码，即可快速连接到 WLAN。"</string>
     <string name="security_type" msgid="2297615092250075696">"安全类型"</string>
     <string name="other_network" msgid="5299289104661858596">"其他网络…"</string>
     <string name="skip_network" msgid="3095529090560000692">"跳过"</string>
@@ -328,6 +332,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"代理设置无效"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP 设置无效"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"“<xliff:g id="SSID">%1$s</xliff:g>”是已保存的网络"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"扫描二维码即可加入"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"重试"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"查看可用的网络"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"正在连接到“<xliff:g id="SSID">%1$s</xliff:g>”"</string>
@@ -335,6 +340,8 @@
     <string name="wifi_connect" msgid="2206086690065242121">"连接"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"取消保存网络"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"这将清除用于连接至此网络的信息（包括已保存的密码）"</string>
+    <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"如要加入 WLAN，请使用手机扫描二维码，然后按照说明操作。"</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"按返回按钮即可取消"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"确定"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"继续"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"更改网络"</string>
