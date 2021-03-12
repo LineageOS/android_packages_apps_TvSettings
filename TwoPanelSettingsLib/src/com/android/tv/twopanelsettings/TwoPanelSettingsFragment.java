@@ -96,7 +96,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private static final long PANEL_ANIMATION_MS = 400;
     private static final long PANEL_ANIMATION_DELAY_MS = 200;
     private static final long PREVIEW_PANEL_DEFAULT_DELAY_MS = 200;
-    private static long sPreviewPanelCreationDelay = 400;
+    private static final long CHECK_IDLE_STATE_MS = 100;
+    private static long sPreviewPanelCreationDelay = 0;
     private static final float PREVIEW_PANEL_ALPHA = 0.6f;
 
     private int mMaxScrollX;
@@ -105,18 +106,23 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private HorizontalScrollView mScrollView;
     private Handler mHandler;
     private boolean mIsNavigatingBack;
+    private boolean mCheckVerticalGridViewScrollState;
     private Preference mFocusedPreference;
     private boolean mIsWaitingForUpdatingPreview = false;
 
     private static final String DELAY_MS = "delay_ms";
+    private static final String CHECK_SCROLL_STATE = "check_scroll_state";
 
     /** An broadcast receiver to help OEM test best delay for preview panel fragment creation. */
     private BroadcastReceiver mPreviewPanelDelayReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             long delay = intent.getLongExtra(DELAY_MS, PREVIEW_PANEL_DEFAULT_DELAY_MS);
-            Log.d(TAG, "New delay for creating preview panel fragment " + delay);
+            boolean checkScrollState = intent.getBooleanExtra(CHECK_SCROLL_STATE, false);
+            Log.d(TAG, "New delay for creating preview panel fragment " + delay
+                    + " check scroll state " + checkScrollState);
             sPreviewPanelCreationDelay = delay;
+            mCheckVerticalGridViewScrollState = checkScrollState;
         }
     };
 
@@ -430,58 +436,91 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             ((SliceFragmentCallback) prefFragment).onPreferenceFocused(pref);
         }
         mFocusedPreference = pref;
-
-        mIsWaitingForUpdatingPreview = true;
-        mHandler.postDelayed(() -> {
-            if (pref == mFocusedPreference) {
-                mIsWaitingForUpdatingPreview = false;
-                Fragment previewFragment = null;
-                try {
-                    previewFragment = onCreatePreviewFragment(prefFragment, pref);
-                } catch (Exception e) {
-                    Log.w(TAG, "Cannot instantiate the fragment from preference: " + pref, e);
-                }
-                if (previewFragment == null) {
-                    previewFragment = new DummyFragment();
-                }
-                final Fragment existingPreviewFragment =
-                        getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx + 1]);
-                if (existingPreviewFragment != null
-                        && existingPreviewFragment.getClass().equals(previewFragment.getClass())
-                        && equalArguments(existingPreviewFragment.getArguments(),
-                        previewFragment.getArguments())) {
-                    if (isRTL() && mScrollView.getScrollX() == 0 && mPrefPanelIdx == 0) {
-                        // For RTL we need to reclaim focus to the correct scroll position if a pref
-                        // launches a new activity because the horizontal scroll goes back to 0.
-                        getView().getViewTreeObserver().addOnGlobalLayoutListener(
-                                mOnGlobalLayoutListener);
-                    }
-                    if (!forceRefresh) {
-                        return;
-                    }
-                }
-
-                // If the existing preview fragment is recreated when the activity is recreated, the
-                // animation would fall back to "slide left", in this case, we need to set the exit
-                // transition.
-                if (existingPreviewFragment != null) {
-                    existingPreviewFragment.setExitTransition(null);
-                }
-                previewFragment.setEnterTransition(new Fade());
-                previewFragment.setExitTransition(null);
-
-                final FragmentTransaction transaction =
-                        getChildFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(android.R.animator.fade_in,
-                        android.R.animator.fade_out);
-                transaction.replace(frameResIds[mPrefPanelIdx + 1], previewFragment);
-                transaction.commit();
-
-                // Some fragments may steal focus on creation. Reclaim focus on main fragment.
-                getView().getViewTreeObserver().addOnGlobalLayoutListener(mOnGlobalLayoutListener);
-            }
-        }, sPreviewPanelCreationDelay);
+        if (mCheckVerticalGridViewScrollState || sPreviewPanelCreationDelay > 0) {
+            mIsWaitingForUpdatingPreview = true;
+            VerticalGridView listView = (VerticalGridView)
+                    ((LeanbackPreferenceFragmentCompat) prefFragment).getListView();
+            mHandler.postDelayed(new PostShowPreviewRunnable(
+                    listView, pref, forceRefresh), sPreviewPanelCreationDelay);
+        } else {
+            handleFragmentTransactionWhenFocused(pref, forceRefresh);
+        }
         return true;
+    }
+
+    private final class PostShowPreviewRunnable implements Runnable {
+        private final VerticalGridView mListView;
+        private final Preference mPref;
+        private final boolean mForceFresh;
+
+        PostShowPreviewRunnable(VerticalGridView listView, Preference pref, boolean forceFresh) {
+            this.mListView = listView;
+            this.mPref = pref;
+            this.mForceFresh = forceFresh;
+        }
+
+        @Override
+        public void run() {
+            if (mPref == mFocusedPreference) {
+                if (mListView.getScrollState() != RecyclerView.SCROLL_STATE_IDLE) {
+                    mHandler.postDelayed(this, CHECK_IDLE_STATE_MS);
+                } else {
+                    handleFragmentTransactionWhenFocused(mPref, mForceFresh);
+                    mIsWaitingForUpdatingPreview = false;
+                }
+            }
+        }
+    }
+
+    private void handleFragmentTransactionWhenFocused(Preference pref, boolean forceRefresh) {
+        Fragment previewFragment = null;
+        final Fragment prefFragment =
+                getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
+        try {
+            previewFragment = onCreatePreviewFragment(prefFragment, pref);
+        } catch (Exception e) {
+            Log.w(TAG, "Cannot instantiate the fragment from preference: " + pref, e);
+        }
+        if (previewFragment == null) {
+            previewFragment = new DummyFragment();
+        }
+        final Fragment existingPreviewFragment =
+                getChildFragmentManager().findFragmentById(
+                        frameResIds[mPrefPanelIdx + 1]);
+        if (existingPreviewFragment != null
+                && existingPreviewFragment.getClass().equals(previewFragment.getClass())
+                && equalArguments(existingPreviewFragment.getArguments(),
+                previewFragment.getArguments())) {
+            if (isRTL() && mScrollView.getScrollX() == 0 && mPrefPanelIdx == 0) {
+                // For RTL we need to reclaim focus to the correct scroll position if a pref
+                // launches a new activity because the horizontal scroll goes back to 0.
+                getView().getViewTreeObserver().addOnGlobalLayoutListener(
+                        mOnGlobalLayoutListener);
+            }
+            if (!forceRefresh) {
+                return;
+            }
+        }
+
+        // If the existing preview fragment is recreated when the activity is recreated, the
+        // animation would fall back to "slide left", in this case, we need to set the exit
+        // transition.
+        if (existingPreviewFragment != null) {
+            existingPreviewFragment.setExitTransition(null);
+        }
+        previewFragment.setEnterTransition(new Fade());
+        previewFragment.setExitTransition(null);
+
+        final FragmentTransaction transaction =
+                getChildFragmentManager().beginTransaction();
+        transaction.setCustomAnimations(android.R.animator.fade_in,
+                android.R.animator.fade_out);
+        transaction.replace(frameResIds[mPrefPanelIdx + 1], previewFragment);
+        transaction.commit();
+
+        // Some fragments may steal focus on creation. Reclaim focus on main fragment.
+        getView().getViewTreeObserver().addOnGlobalLayoutListener(
+                mOnGlobalLayoutListener);
     }
 
     private boolean isRTL() {
