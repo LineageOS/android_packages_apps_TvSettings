@@ -46,6 +46,8 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.shadows.androidx.fragment.FragmentController;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -94,9 +96,9 @@ public class AdvancedVolumeFragmentTest {
                 AudioFormat.ENCODING_DTS, true,
                 AudioFormat.ENCODING_DOLBY_MAT, true,
                 AudioFormat.ENCODING_DOLBY_TRUEHD, true);
-        Map<Integer, Boolean> reportedFormats = ImmutableMap.of(
-                AudioFormat.ENCODING_DTS, true,
-                AudioFormat.ENCODING_DOLBY_TRUEHD, true);
+        List<Integer> reportedFormats = Arrays.asList(
+                AudioFormat.ENCODING_DTS,
+                AudioFormat.ENCODING_DOLBY_TRUEHD);
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
@@ -129,9 +131,9 @@ public class AdvancedVolumeFragmentTest {
                 AudioFormat.ENCODING_DTS, true,
                 AudioFormat.ENCODING_DOLBY_MAT, true,
                 AudioFormat.ENCODING_DOLBY_TRUEHD, true);
-        Map<Integer, Boolean> reportedFormats = ImmutableMap.of(
-                AudioFormat.ENCODING_DTS, true,
-                AudioFormat.ENCODING_DOLBY_TRUEHD, true);
+        List<Integer> reportedFormats = Arrays.asList(
+                AudioFormat.ENCODING_DTS,
+                AudioFormat.ENCODING_DOLBY_TRUEHD);
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
@@ -163,8 +165,7 @@ public class AdvancedVolumeFragmentTest {
         Map<Integer, Boolean> formats = ImmutableMap.of(
                 AudioFormat.ENCODING_DTS, true,
                 AudioFormat.ENCODING_DOLBY_MAT, true);
-        Map<Integer, Boolean> reportedFormats = ImmutableMap.of(
-                AudioFormat.ENCODING_DTS, true);
+        List<Integer> reportedFormats = Arrays.asList(AudioFormat.ENCODING_DTS);
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
@@ -193,8 +194,7 @@ public class AdvancedVolumeFragmentTest {
         Map<Integer, Boolean> formats = ImmutableMap.of(
                 AudioFormat.ENCODING_DTS, true,
                 AudioFormat.ENCODING_DOLBY_MAT, false);
-        Map<Integer, Boolean> reportedFormats = ImmutableMap.of(
-                AudioFormat.ENCODING_DTS, true);
+        List<Integer> reportedFormats = Arrays.asList(AudioFormat.ENCODING_DTS);
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
@@ -218,8 +218,7 @@ public class AdvancedVolumeFragmentTest {
         Map<Integer, Boolean> formats = ImmutableMap.of(
                 AudioFormat.ENCODING_DTS, true,
                 AudioFormat.ENCODING_DOLBY_MAT, true);
-        Map<Integer, Boolean> reportedFormats = ImmutableMap.of(
-                AudioFormat.ENCODING_DTS, true);
+        List<Integer> reportedFormats = Arrays.asList(AudioFormat.ENCODING_DTS);
         AdvancedVolumeFragment fragment =
                 createAdvancedVolumeFragmentWithAudioManagerReturning(formats, reportedFormats);
 
@@ -277,14 +276,14 @@ public class AdvancedVolumeFragmentTest {
 
     private AdvancedVolumeFragment createDefaultAdvancedVolumeFragment() {
         return createAdvancedVolumeFragmentWithAudioManagerReturning(
-                Collections.EMPTY_MAP, Collections.EMPTY_MAP);
+                Collections.EMPTY_MAP, new ArrayList<>());
     }
 
     private AdvancedVolumeFragment createAdvancedVolumeFragmentWithAudioManagerReturning(
-            Map<Integer, Boolean> formats, Map<Integer, Boolean> reportedFormats) {
+            Map<Integer, Boolean> formats, List<Integer> reportedFormats) {
         AudioManager audioManager = spy(AudioManager.class);
         doReturn(formats).when(audioManager).getSurroundFormats();
-        doReturn(reportedFormats).when(audioManager).getReportedSurroundFormats();
+        doReturn(new ArrayList(reportedFormats)).when(audioManager).getReportedSurroundFormats();
 
         AdvancedVolumeFragment fragment = spy(AdvancedVolumeFragment.class);
         doReturn(audioManager).when(fragment).getAudioManager();
