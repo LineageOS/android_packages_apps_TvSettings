@@ -87,7 +87,7 @@
     <string name="connectivity_wifi" msgid="1138689464484009184">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="4270588618633681766">"Ethernet"</string>
     <string name="connectivity_summary_ethernet_connected" msgid="2612843587731520061">"Ethernet dihubungkan."</string>
-    <string name="connectivity_summary_no_network_connected" msgid="6111160695454212460">"Tiada rangkaian yang dihubungkan"</string>
+    <string name="connectivity_summary_no_network_connected" msgid="6111160695454212460">"Tiada rangkaian yang disambungkan"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi dimatikan"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Pengimbasan sentiasa tersedia"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Benarkan perkhidmatan lokasi Google dan apl lain mengimbas rangkaian, walaupun semasa Wi-Fi dimatikan"</string>
@@ -159,11 +159,11 @@
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Padam bersih data cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Ini akan memadam bersih data cache semua apl."</string>
     <string name="accessories_add" msgid="413764175035531452">"Tambah aksesori"</string>
-    <string name="accessory_state_pairing" msgid="15908899628218319">"Memasangkan..."</string>
+    <string name="accessory_state_pairing" msgid="15908899628218319">"Menggandingkan..."</string>
     <string name="accessory_state_connecting" msgid="6560241025917621212">"Menyambung…"</string>
     <string name="accessory_state_error" msgid="8353621828816824428">"Tidak dapat berpasangan"</string>
     <string name="accessory_state_canceled" msgid="4794837663402063770">"Dibatalkan"</string>
-    <string name="accessory_state_paired" msgid="3296695242499532000">"Berpasangan"</string>
+    <string name="accessory_state_paired" msgid="3296695242499532000">"Digandingkan"</string>
     <string name="accessory_options" msgid="774592782382321681">"Aksesori"</string>
     <string name="accessory_unpair" msgid="2473411128146068804">"Pisahkan"</string>
     <string name="accessory_battery" msgid="2283700366184703548">"Bateri <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
@@ -176,14 +176,14 @@
     <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Sebelum menggandingkan peranti Bluetooth anda, pastikan peranti itu dalam mod penggandingan."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Satu peranti ditemui dan akan berpasangan secara automatik dalam <xliff:g id="COUNTDOWN">%1$s</xliff:g> saat"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Tindakan ini tidak disokong"</string>
-    <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Permintaan menjadi pasangan Bluetooth"</string>
+    <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Permintaan gandingan Bluetooth"</string>
     <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Untuk berpasangan dengan: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, pastikan kunci laluan ini ditunjukkan: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"Dari: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Berpasangan dengan peranti ini?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Untuk berpasangan dengan: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Taip padanya: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, kemudian tekan kekunci Return atau Enter."</string>
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Untuk berpasangan dengan: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Taip PIN yang diperlukan peranti:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Untuk berpasangan dengan: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Taipkan kunci laluan yang diperlukan peranti:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Biasanya 0000 atau 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Jadikan Pasangan"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Gandingkan"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Batal"</string>
     <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s disambungkan"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s diputuskan sambungan"</string>
@@ -261,6 +261,13 @@
     <string name="manual" msgid="5683935624321864999">"Manual"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"Maklumat kawal selia"</string>
     <string name="device_feedback" msgid="4871903271442960465">"Hntr mklm balas tentang peranti ini"</string>
+    <!-- no translation found for oem_unlock_enable_disabled_summary_bootloader_unlocked (4641790432171693921) -->
+    <skip />
+    <string name="oem_unlock_enable_disabled_summary_connectivity" msgid="2979556699380115576">"Sambung ke Internet dahulu"</string>
+    <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="1946089732305102622">"Sambung ke Internet atau hubungi pembawa anda"</string>
+    <string name="oem_unlock_enable_disabled_summary_sim_locked_device" msgid="5634005787486307657">"Tidak tersedia pada peranti yang dikunci pembawa"</string>
+    <string name="oem_lock_info_message" msgid="2165887409937351689">"Sila mulakan semula peranti untuk mendayakan ciri perlindungan peranti."</string>
+    <string name="automatic_storage_manager_freed_bytes" msgid="1654574152815129396">"Sejumlah <xliff:g id="SIZE">%1$s</xliff:g> disediakan\n\nKali terakhir dijalankan pada <xliff:g id="DATE">%2$s</xliff:g>"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"ID Peralatan"</string>
     <string name="baseband_version" msgid="5618116741093274294">"Versi jalur dasar"</string>
     <string name="kernel_version" msgid="7265509054070001542">"Versi inti"</string>
@@ -303,6 +310,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Lihat kurang lagi"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Rangkaian tersedia"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Tambahkan rangkaian baharu"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Sambungan pantas"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Sambungan pantas membantu anda bersambung dengan pantas ke Wi-Fi anda dengan mengimbas kod QR pada telefon anda."</string>
     <string name="security_type" msgid="2297615092250075696">"Jenis keselamatan"</string>
     <string name="other_network" msgid="5299289104661858596">"Rangkaian lain..."</string>
     <string name="skip_network" msgid="3095529090560000692">"Langkau"</string>
@@ -330,6 +339,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Tetapan proksi tidak sah"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Tetapan IP tidak sah"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> ialah rangkaian yang disimpan"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Imbas kod QR untuk menyertai"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Cuba lagi"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Lihat rangkaian yang tersedia"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Menyambung ke <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -337,6 +347,9 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Sambung"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Lupakan rangkaian"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Ini memadam bersih maklumat untuk bersambung ke rangkaian ini, termasuk kata laluan yang disimpan"</string>
+    <!-- no translation found for wifi_scan_qr_code_description (6620444691131671132) -->
+    <skip />
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Tekan butang kembali untuk membatalkan"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Teruskan"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Tukar rangkaian"</string>
