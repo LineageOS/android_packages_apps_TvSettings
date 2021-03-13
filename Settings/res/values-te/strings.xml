@@ -261,6 +261,13 @@
     <string name="manual" msgid="5683935624321864999">"మాన్యువల్"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"నియంత్రిత సమాచారం"</string>
     <string name="device_feedback" msgid="4871903271442960465">"ఈ పరికరం గురించి అభిప్రాయం పంపండి"</string>
+    <!-- no translation found for oem_unlock_enable_disabled_summary_bootloader_unlocked (4641790432171693921) -->
+    <skip />
+    <string name="oem_unlock_enable_disabled_summary_connectivity" msgid="2979556699380115576">"ముందుగా ఇంటర్నెట్‌కు కనెక్ట్ చేయండి"</string>
+    <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="1946089732305102622">"ఇంటర్నెట్‌కి కనెక్ట్ చేయండి లేదా మీ క్యారియర్‌ని సంప్రదించండి"</string>
+    <string name="oem_unlock_enable_disabled_summary_sim_locked_device" msgid="5634005787486307657">"క్యారియర్ ద్వారా లాక్ చేయబడిన పరికరాల్లో అందుబాటులో లేదు"</string>
+    <string name="oem_lock_info_message" msgid="2165887409937351689">"దయచేసి పరికర రక్షణ ఫీచర్‌ని ప్రారంభించడానికి పరికరాన్ని మళ్లీ ప్రారంభించండి."</string>
+    <string name="automatic_storage_manager_freed_bytes" msgid="1654574152815129396">"మొత్తం <xliff:g id="SIZE">%1$s</xliff:g> అందుబాటులో ఉంచబడింది\n\nచివరిగా <xliff:g id="DATE">%2$s</xliff:g>న అమలు చేయబడింది"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"ఉపకరణ ID"</string>
     <string name="baseband_version" msgid="5618116741093274294">"బేస్‌బ్యాండ్ సంస్కరణ"</string>
     <string name="kernel_version" msgid="7265509054070001542">"కెర్నల్ సంస్కరణ"</string>
@@ -303,6 +310,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"తక్కువ చూడండి"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"అందుబాటులో ఉన్న నెట్‌వర్క్‌లు"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"కొత్త నెట్‌వర్క్‌ను జోడించండి"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"త్వరిత కనెక్ట్"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"మీ ఫోన్‌లో QR కోడ్‌ను స్కాన్ చేయడం ద్వారా మీ Wifiకి త్వరగా కనెక్ట్ కావడానికి \'త్వరిత కనెక్ట్\' సహాయపడుతుంది."</string>
     <string name="security_type" msgid="2297615092250075696">"భద్రతా రకం"</string>
     <string name="other_network" msgid="5299289104661858596">"ఇతర నెట్‌వర్క్‌…"</string>
     <string name="skip_network" msgid="3095529090560000692">"దాటవేయండి"</string>
@@ -330,6 +339,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"ప్రాక్సీ సెట్టింగ్‌లు చెల్లవు"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP సెట్టింగ్‌లు చెల్లవు"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> సేవ్ చేయబడిన నెట్‌వర్క్"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"చేరడానికి QR కోడ్‌ను స్కాన్ చేయండి"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"మళ్లీ ప్రయత్నించు"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"అందుబాటులో ఉన్న నెట్‌వర్క్‌లను వీక్షించండి"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g>కి కనెక్ట్ చేస్తోంది"</string>
@@ -337,6 +347,9 @@
     <string name="wifi_connect" msgid="2206086690065242121">"కనెక్ట్ చేయి"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"నెట్‌వర్క్‌ను విస్మరించు"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"ఇది సేవ్ చేసిన పాస్‌వర్డ్‌తో సహా ఈ నెట్‌వర్క్‌కి కనెక్ట్ చేయడా. ఉపయో. సమాచారాన్ని క్లియర్ చేస్తుంది"</string>
+    <!-- no translation found for wifi_scan_qr_code_description (6620444691131671132) -->
+    <skip />
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"రద్దు చేయడానికి \'వెనుకకు\' బటన్‌ను నొక్కండి"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"సరే"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"కొనసాగించండి"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"నెట్‌వర్క్‌ని మార్చండి"</string>

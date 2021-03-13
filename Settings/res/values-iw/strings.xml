@@ -267,6 +267,13 @@
     <string name="manual" msgid="5683935624321864999">"ידני"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"מידע על תקנות"</string>
     <string name="device_feedback" msgid="4871903271442960465">" שליחת משוב על המכשיר הזה"</string>
+    <!-- no translation found for oem_unlock_enable_disabled_summary_bootloader_unlocked (4641790432171693921) -->
+    <skip />
+    <string name="oem_unlock_enable_disabled_summary_connectivity" msgid="2979556699380115576">"תחילה יש להתחבר לאינטרנט"</string>
+    <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="1946089732305102622">"צריך להתחבר לאינטרנט או ליצור קשר עם הספק"</string>
+    <string name="oem_unlock_enable_disabled_summary_sim_locked_device" msgid="5634005787486307657">"לא זמין במכשירים הנעולים לספק"</string>
+    <string name="oem_lock_info_message" msgid="2165887409937351689">"יש להפעיל מחדש את המכשיר כדי להפעיל את התכונה של הגנת המכשיר."</string>
+    <string name="automatic_storage_manager_freed_bytes" msgid="1654574152815129396">"סה\"כ <xliff:g id="SIZE">%1$s</xliff:g> הפכו לזמינים\n\nהורץ לאחרונה בתאריך <xliff:g id="DATE">%2$s</xliff:g>"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"מזהה ציוד"</string>
     <string name="baseband_version" msgid="5618116741093274294">"גרסת פס בסיס"</string>
     <string name="kernel_version" msgid="7265509054070001542">"גרסת ליבה"</string>
@@ -287,7 +294,7 @@
     <item msgid="4475363344103354364">"חלש"</item>
     <item msgid="2098818614362343532">"סביר"</item>
     <item msgid="2713050260700175954">"טוב"</item>
-    <item msgid="6005053494500517261">"מצוין"</item>
+    <item msgid="6005053494500517261">"מצוינת"</item>
   </string-array>
     <string name="title_mac_address" msgid="7511588678922209883">"כתובת MAC של המכשיר"</string>
     <string name="title_randomized_mac_address" msgid="3359532498635833471">"כתובת MAC אקראית"</string>
@@ -309,6 +316,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"הצג פחות"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"רשתות זמינות"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"הוספת רשת חדשה"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"התחברות מהירה"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"התחברות המהירה מאפשרת לך להתחבר בזריזות ל-Wi-Fi על ידי סריקת קוד QR באמצעות הטלפון."</string>
     <string name="security_type" msgid="2297615092250075696">"סוג אבטחה"</string>
     <string name="other_network" msgid="5299289104661858596">"רשת אחרת..."</string>
     <string name="skip_network" msgid="3095529090560000692">"דילוג"</string>
@@ -336,13 +345,17 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"הגדרות ה-Proxy אינן חוקיות"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"הגדרות ה-IP אינן חוקיות"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> היא רשת שמורה"</string>
-    <string name="wifi_action_try_again" msgid="8920677153891141148">"נסה שוב"</string>
-    <string name="wifi_action_view_available_networks" msgid="609561604257828342">"הצג רשתות זמינות"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"סריקת קוד QR להצטרפות"</string>
+    <string name="wifi_action_try_again" msgid="8920677153891141148">"יש לנסות שוב"</string>
+    <string name="wifi_action_view_available_networks" msgid="609561604257828342">"הצגת הרשתות הזמינות"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"מתחבר אל <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_saving" msgid="320653339670641708">"שומר תצורה עבור <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_connect" msgid="2206086690065242121">"התחבר"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"שכח רשת"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"פעולה זו מנקה מידע המשמש להתחבר אל הרשת הזו, כולל סיסמה שמורה"</string>
+    <!-- no translation found for wifi_scan_qr_code_description (6620444691131671132) -->
+    <skip />
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"יש ללחוץ על הלחצן \'הקודם\' כדי לבטל"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"אישור"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"המשך"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"שינוי רשת"</string>
@@ -566,7 +579,7 @@
     <string name="system_stay_awake" msgid="5935117574414511413">"הישאר ער"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"בדיקת HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"אופטימיזציית HDMI"</string>
-    <string name="system_reboot_confirm" msgid="7035370306447878560">"האם לאתחל עכשיו?"</string>
+    <string name="system_reboot_confirm" msgid="7035370306447878560">"להפעיל מחדש עכשיו?"</string>
     <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"כדי לעדכן את ההגדרה הזו, יש לאתחל את המכשיר."</string>
     <string name="system_never_check" msgid="2860070727606369055">"אל תבדוק לעולם"</string>
     <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"בדוק אם יש תוכן DRM בלבד"</string>
