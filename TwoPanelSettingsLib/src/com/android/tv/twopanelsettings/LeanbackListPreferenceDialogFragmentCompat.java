@@ -36,6 +36,7 @@ import androidx.preference.DialogPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.MultiSelectListPreference;
 import androidx.recyclerview.widget.RecyclerView.Adapter;
+
 import com.android.tv.twopanelsettings.R;
 
 import java.util.Collections;
@@ -174,7 +175,6 @@ public class LeanbackListPreferenceDialogFragmentCompat extends
         verticalGridView.setWindowAlignment(3);
         verticalGridView.setFocusScrollStrategy(0);
         verticalGridView.setAdapter(this.onCreateAdapter());
-        verticalGridView.requestFocus();
         CharSequence title = this.mDialogTitle;
         if (!TextUtils.isEmpty(title)) {
             TextView titleView = (TextView) view.findViewById(R.id.decor_title);
