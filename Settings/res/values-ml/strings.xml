@@ -261,6 +261,13 @@
     <string name="manual" msgid="5683935624321864999">"മാനുവൽ"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"റെഗുലേറ്ററി വിവരം"</string>
     <string name="device_feedback" msgid="4871903271442960465">"ഈ ഉപകരണത്തെക്കുറിച്ചുള്ള ഫീഡ്‌ബാക്ക് അയയ്‌ക്കുക"</string>
+    <!-- no translation found for oem_unlock_enable_disabled_summary_bootloader_unlocked (4641790432171693921) -->
+    <skip />
+    <string name="oem_unlock_enable_disabled_summary_connectivity" msgid="2979556699380115576">"ആദ്യം ഇന്‍റർനെറ്റിലേക്ക് കണക്‌റ്റ് ചെയ്യുക"</string>
+    <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="1946089732305102622">"ഇന്‍റർനെറ്റിൽ കണക്‌റ്റ് ചെയ്യുക അല്ലെങ്കിൽ കാരിയറുമായി ബന്ധപ്പെടുക"</string>
+    <string name="oem_unlock_enable_disabled_summary_sim_locked_device" msgid="5634005787486307657">"കാരിയർ ലോക്കുചെയ്തിട്ടുള്ള ഉപകരണങ്ങളിൽ ലഭ്യമല്ല"</string>
+    <string name="oem_lock_info_message" msgid="2165887409937351689">"ഉപകരണ പരിരക്ഷ ഫീച്ചർ പ്രവർത്തനക്ഷമമാക്കാൻ ഉപകരണം റീസ്‌റ്റാർട്ട് ചെയ്യുക"</string>
+    <string name="automatic_storage_manager_freed_bytes" msgid="1654574152815129396">"<xliff:g id="SIZE">%1$s</xliff:g> മൊത്തം ലഭ്യമാക്കിയിരിക്കുന്നു\n\nഅവസാനം റൺ ചെയ്തത് <xliff:g id="DATE">%2$s</xliff:g>-ന്"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"ഉപകരണ ഐഡി"</string>
     <string name="baseband_version" msgid="5618116741093274294">"ബെയ്‌സ്‌ബാൻഡ് പതിപ്പ്"</string>
     <string name="kernel_version" msgid="7265509054070001542">"പ്രധാന പതിപ്പ്"</string>
@@ -303,6 +310,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"കുറച്ച് കാണുക"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"ലഭ്യമായ നെറ്റ്‌വർക്കുകൾ"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"പുതിയ നെറ്റ്‌വർക്ക് ചേർക്കുക"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"ദ്രുത കണക്റ്റ്"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"ഫോണിൽ QR കോഡ് സ്‌കാൻ ചെയ്‌ത് അതിവേഗം വേഗം നിങ്ങളുടെ വൈഫൈയിലേക്ക് കണക്റ്റ് ചെയ്യാൻ ദ്രുത കണക്റ്റ് സഹായിക്കുന്നു."</string>
     <string name="security_type" msgid="2297615092250075696">"സുരക്ഷാ തരം"</string>
     <string name="other_network" msgid="5299289104661858596">"മറ്റ് നെറ്റ്‌വർക്ക്…"</string>
     <string name="skip_network" msgid="3095529090560000692">"ഒഴിവാക്കുക"</string>
@@ -330,6 +339,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"പ്രോക്‌സി ക്രമീകരണങ്ങൾ സാധുവായതല്ല"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP ക്രമീകരണങ്ങൾ സാധുവായതല്ല"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> എന്നത് സംരക്ഷിച്ച നെറ്റ്‌വർക്കാണ്"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"ചേരാൻ, QR കോഡ് സ്‌കാൻ ചെയ്യുക"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"വീണ്ടും ശ്രമിക്കുക"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"ലഭ്യമായ നെറ്റ്‌വർക്കുകൾ കാണുക"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g> എന്നതിലേക്ക് കണക്‌റ്റുചെയ്യുന്നു"</string>
@@ -337,6 +347,9 @@
     <string name="wifi_connect" msgid="2206086690065242121">"കണക്റ്റുചെയ്യുക"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"നെറ്റ്‌വർക്ക് മറക്കുക"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"സംരക്ഷിച്ച ഒരു പാസ്‌വേഡ് ഉൾപ്പടെ, ഈ നെറ്റ്‌വർക്കിലേക്ക് കണക്‌റ്റുചെയ്യാൻ ഉപയോഗിച്ച വിവരങ്ങളെ ഇത് മായ്ക്കുന്നു"</string>
+    <!-- no translation found for wifi_scan_qr_code_description (6620444691131671132) -->
+    <skip />
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"റദ്ദാക്കാൻ, മടങ്ങുക ബട്ടൺ അമർത്തുക"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"ശരി"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"തുടരുക"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"നെറ്റ്‍വര്‍ക്ക് മാറ്റുക"</string>

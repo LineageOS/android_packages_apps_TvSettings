@@ -161,11 +161,11 @@
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Ștergeți datele memorate în cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Datele din cache ale aplicațiilor vor fi șterse."</string>
     <string name="accessories_add" msgid="413764175035531452">"Adăugați un accesoriu"</string>
-    <string name="accessory_state_pairing" msgid="15908899628218319">"Se împerechează…"</string>
+    <string name="accessory_state_pairing" msgid="15908899628218319">"Se asociază…"</string>
     <string name="accessory_state_connecting" msgid="6560241025917621212">"Se conectează…"</string>
     <string name="accessory_state_error" msgid="8353621828816824428">"Nu s-a putut conecta"</string>
     <string name="accessory_state_canceled" msgid="4794837663402063770">"Anulată"</string>
-    <string name="accessory_state_paired" msgid="3296695242499532000">"Împerecheat"</string>
+    <string name="accessory_state_paired" msgid="3296695242499532000">"Asociat"</string>
     <string name="accessory_options" msgid="774592782382321681">"Accesoriu"</string>
     <string name="accessory_unpair" msgid="2473411128146068804">"Anulați asocierea"</string>
     <string name="accessory_battery" msgid="2283700366184703548">"Baterie <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
@@ -180,12 +180,12 @@
     <string name="error_action_not_supported" msgid="5377532621386080296">"Această acțiune nu este acceptată"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Solicitare de asociere prin Bluetooth"</string>
     <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Pentru conectarea cu: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, asigurați-vă că se afișează această cheie de acces: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
-    <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"De la: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Împerecheați cu acest dispozitiv?"</string>
+    <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"De la: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Asociați cu acest dispozitiv?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Pentru împerecherea cu: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Introduceți pe acesta: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, apoi apăsați tasta Return sau Enter."</string>
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Pentru împerecherea cu: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduceți codul PIN necesar al dispozitivului:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Pentru împerecherea cu: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt; &lt;br&gt;Introduceți cheia de acces necesară a dispozitivului:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"De obicei, 0000 sau 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Împerecheați"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Asociați"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Anulați"</string>
     <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s s-a conectat"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s s-a deconectat"</string>
@@ -264,6 +264,13 @@
     <string name="manual" msgid="5683935624321864999">"Manual"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"Informații reglementare"</string>
     <string name="device_feedback" msgid="4871903271442960465">"Trimiteți feedback despre dispozitiv"</string>
+    <!-- no translation found for oem_unlock_enable_disabled_summary_bootloader_unlocked (4641790432171693921) -->
+    <skip />
+    <string name="oem_unlock_enable_disabled_summary_connectivity" msgid="2979556699380115576">"Mai întâi, conectați-vă la internet"</string>
+    <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="1946089732305102622">"Conectați-vă la internet sau contactați operatorul"</string>
+    <string name="oem_unlock_enable_disabled_summary_sim_locked_device" msgid="5634005787486307657">"Nu este disponibilă pe dispozitivele blocate de operator"</string>
+    <string name="oem_lock_info_message" msgid="2165887409937351689">"Reporniți dispozitivul pentru a activa funcția de protecție a dispozitivului."</string>
+    <string name="automatic_storage_manager_freed_bytes" msgid="1654574152815129396">"Un spațiu total disponibil de <xliff:g id="SIZE">%1$s</xliff:g>\n\nData ultimei rulări: <xliff:g id="DATE">%2$s</xliff:g>"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"ID echipament"</string>
     <string name="baseband_version" msgid="5618116741093274294">"Versiunea benzii de bază"</string>
     <string name="kernel_version" msgid="7265509054070001542">"Versiune nucleu"</string>
@@ -306,6 +313,8 @@
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Afișați mai puține"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Rețele disponibile"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Adăugați o rețea nouă"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Conectare rapidă"</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Conectarea rapidă vă ajută să vă conectați repede la Wi-Fi scanând codul QR de pe telefonul dvs."</string>
     <string name="security_type" msgid="2297615092250075696">"Tip de securitate"</string>
     <string name="other_network" msgid="5299289104661858596">"Altă rețea…"</string>
     <string name="skip_network" msgid="3095529090560000692">"Omiteți"</string>
@@ -333,6 +342,7 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Setările proxy nu sunt valide"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Setările IP nu sunt valide"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> este o rețea salvată"</string>
+    <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Scanați codul QR pentru a participa"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Încercați din nou"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Afișați rețelele disponibile"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"Se conectează la <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -340,6 +350,9 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Conectați-vă"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Eliminați rețeaua"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Vor fi șterse informațiile utilizate pentru conectarea la această rețea, inclusiv parolele salvate"</string>
+    <!-- no translation found for wifi_scan_qr_code_description (6620444691131671132) -->
+    <skip />
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Apăsați butonul Înapoi pentru a anula"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Continuați"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Schimbați rețeaua"</string>
