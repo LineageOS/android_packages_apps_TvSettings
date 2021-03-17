@@ -18,6 +18,7 @@ package com.android.tv.settings.connectivity.setup;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.net.wifi.EasyConnectStatusCallback;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
@@ -114,7 +115,7 @@ public class EasyConnectQRState implements State {
 
             mWifiManager.startEasyConnectAsEnrolleeResponder(
                     getSanitizedDeviceName(),
-                    WifiManager.EASY_CONNECT_CRYPTOGRAPHY_CURVE_DEFAULT,
+                    WifiManager.EASY_CONNECT_CRYPTOGRAPHY_CURVE_PRIME256V1,
                     getActivity().getApplication().getMainExecutor(),
                     new EasyConnectDelegateCallback());
         }
@@ -129,7 +130,8 @@ public class EasyConnectQRState implements State {
         /*
          * Allowed Range of ASCII characters in deviceInfo - %x20-7E.
          * semicolon and space are not allowed.
-         * Length is limited to {@link #WifiManager.EASY_CONNECT_DEVICE_INFO_MAXIMUM_LENGTH}
+         * Length is limited to
+         * {@link #WifiManager.getEasyConnectMaxAllowedResponderDeviceInfoLength()}
          * characters.
          */
         private String getSanitizedDeviceName() {
@@ -144,7 +146,8 @@ public class EasyConnectQRState implements State {
                 if (c >= 0x20 && c <= 0x7E && c != ' ' && c != ';') {
                     sb.append(c);
                 }
-                if (sb.length() >= WifiManager.EASY_CONNECT_DEVICE_INFO_MAXIMUM_LENGTH) {
+                if (sb.length()
+                        >= WifiManager.getEasyConnectMaxAllowedResponderDeviceInfoLength()) {
                     return sb.toString();
                 }
             }
@@ -177,11 +180,11 @@ public class EasyConnectQRState implements State {
             }
 
             @Override
-            public void onBootstrapUriGenerated(@NonNull String uri) {
-                if (DEBUG) Log.d(TAG, "onBootstrapUriGenerated: uri = " + uri);
+            public void onBootstrapUriGenerated(@NonNull Uri dppUri) {
+                if (DEBUG) Log.d(TAG, "onBootstrapUriGenerated: uri = " + dppUri.toString());
 
                 try {
-                    final Bitmap bmp = QrCodeGenerator.encodeQrCode(uri, 512);
+                    final Bitmap bmp = QrCodeGenerator.encodeQrCode(dppUri.toString(), 512);
                     mQrCodeView.setImageBitmap(bmp);
 
                     // TODO: Fade animations here?
