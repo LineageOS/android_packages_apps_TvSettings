@@ -35,6 +35,9 @@ import androidx.annotation.NonNull;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
+import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
@@ -48,7 +51,7 @@ public class AccessoriesFragment extends SettingsPreferenceFragment {
     private static final String TAG = "AccessoriesFragment";
     private static final String KEY_ADD_ACCESSORY = "add_accessory";
 
-    private BluetoothAdapter mBtAdapter;
+    private LocalBluetoothManager mLocalBtManager;
     private Preference mAddAccessory;
     private final BroadcastReceiver mBCMReceiver = new BroadcastReceiver() {
         @Override
@@ -69,12 +72,13 @@ public class AccessoriesFragment extends SettingsPreferenceFragment {
             return;
         }
 
-        if (mBtAdapter == null) {
+        LocalBluetoothAdapter btAdapter = mLocalBtManager.getBluetoothAdapter();
+        if (btAdapter == null) {
             preferenceScreen.removeAll();
             return;
         }
 
-        final Set<BluetoothDevice> bondedDevices = mBtAdapter.getBondedDevices();
+        final Set<BluetoothDevice> bondedDevices = btAdapter.getBondedDevices();
         if (bondedDevices == null) {
             preferenceScreen.removeAll();
             return;
@@ -151,7 +155,7 @@ public class AccessoriesFragment extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        mBtAdapter = BluetoothAdapter.getDefaultAdapter();
+        mLocalBtManager = AccessoryUtils.getLocalBluetoothManager(getContext());
         super.onCreate(savedInstanceState);
     }
 
