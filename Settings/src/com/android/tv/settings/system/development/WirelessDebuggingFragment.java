@@ -29,6 +29,7 @@ import android.debug.AdbManager;
 import android.debug.IAdbManager;
 import android.debug.PairDevice;
 import android.net.ConnectivityManager;
+import android.net.LinkAddress;
 import android.net.LinkProperties;
 import android.net.wifi.WifiManager;
 import android.os.Build;
@@ -271,11 +272,6 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
         }
     }
 
-    @Override
-    public int getMetricsCategory() {
-        return SettingsEnums.SETTINGS_ADB_WIRELESS;
-    }
-
     private void createDialog(int dialogId) {
         Dialog d = AdbWirelessDialog.createModal(getActivity(),
                 dialogId == AdbWirelessDialogUiBase.MODE_PAIRING
@@ -494,7 +490,7 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
             return null;
         }
 
-        Iterator<InetAddress> iter = prop.getAllAddresses().iterator();
+        Iterator<LinkAddress> iter = prop.getAllLinkAddresses().iterator();
         // If there are no entries, return null
         if (!iter.hasNext()) {
             return null;
@@ -503,7 +499,7 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
         // Concatenate all available addresses, newline separated
         StringBuilder addresses = new StringBuilder();
         while (iter.hasNext()) {
-            InetAddress addr = iter.next();
+            InetAddress addr = iter.next().getAddress();
             if (addr instanceof Inet4Address) {
                 // adb only supports ipv4 at the moment
                 addresses.append(addr.getHostAddress());
