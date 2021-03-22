@@ -20,14 +20,15 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 
-import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
+
+import com.android.settingslib.RestrictedPreference;
 
 /**
  * Preference that allows external classes to set its view's content description for accessibility
  * purposes.
  */
-public class CustomContentDescriptionPreference extends Preference implements
+public class CustomContentDescriptionPreference extends RestrictedPreference implements
         HasCustomContentDescription {
 
     private String mContentDescription;

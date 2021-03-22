@@ -16,6 +16,7 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:settings="http://schemas.android.com/apk/res-auto"
                   android:title="@string/development_settings_title">
     <SwitchPreference
         android:key="development_settings_enable"
@@ -56,11 +57,13 @@
         android:entries="@array/bt_hci_snoop_log_entries"
         android:entryValues="@array/bt_hci_snoop_log_values" />
 
-    <SwitchPreference
+    <com.android.settingslib.RestrictedSwitchPreference
         android:key="oem_unlock_enable"
         android:title="@string/oem_unlock_enable"
         android:summary="@string/oem_unlock_enable_summary"
-        android:fragment="com.android.tv.settings.system.development.OemUnlockDialog" />
+        android:fragment="com.android.tv.settings.system.development.OemUnlockDialog"
+        settings:userRestriction="no_factory_reset"
+        settings:useAdminDisabledSummary="true" />
 
     <PreferenceScreen
         android:key="running_apps"

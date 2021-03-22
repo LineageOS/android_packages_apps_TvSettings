@@ -34,12 +34,12 @@ import android.os.PersistableBundle;
 import android.os.SELinux;
 import android.os.SystemClock;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.sysprop.TelephonyProperties;
 import android.telephony.CarrierConfigManager;
 import android.text.TextUtils;
 import android.util.Log;
-import android.util.Pair;
 import android.widget.Toast;
 
 import androidx.annotation.Keep;
@@ -49,6 +49,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settingslib.DeviceInfoUtils;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.Utils;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.MainFragment;
@@ -88,6 +89,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
     private static final String KEY_DEVICE_NAME = "device_name";
     private static final String KEY_TUTORIALS = "tutorials";
     private static final String KEY_RESET = "reset";
+    private static final String KEY_RESET_OPTIONS = "reset_options";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -205,6 +207,14 @@ public class AboutFragment extends SettingsPreferenceFragment {
         if (resetPreference instanceof CustomContentDescriptionPreference) {
             ((CustomContentDescriptionPreference) resetPreference).setContentDescription(
                     getResources().getString(R.string.factory_reset_content_description));
+        }
+
+        // Don't show the reset options if factory reset is restricted
+        final Preference resetOptionsPreference = findPreference(KEY_RESET_OPTIONS);
+        if (resetOptionsPreference != null
+                && RestrictedLockUtilsInternal.checkIfRestrictionEnforced(getContext(),
+                UserManager.DISALLOW_FACTORY_RESET, UserHandle.myUserId()) != null) {
+            resetOptionsPreference.setFragment(null);
         }
 
         final Preference updateSettingsPref = findPreference(KEY_SYSTEM_UPDATE_SETTINGS);

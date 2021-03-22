@@ -19,10 +19,17 @@ package com.android.tv.settings.oemlink;
 import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.util.Log;
 
+import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtilsInternal;
+import com.android.tv.settings.ActionDisabledByAdminDialogHelper;
 import com.android.tv.settings.overlay.FlavorUtils;
 
 /**
@@ -41,7 +48,22 @@ public class FactoryResetActivity extends Activity {
         if ((FlavorUtils.getFlavor(this) & X_EXPERIENCE_FLAVORS_MASK) == 0) {
             Log.w(TAG, "OEM factory reset activity is not available in this flavor.");
             finish();
+            return;
         }
+
+        RestrictedLockUtils.EnforcedAdmin admin =
+                RestrictedLockUtilsInternal.checkIfRestrictionEnforced(this,
+                        UserManager.DISALLOW_FACTORY_RESET, UserHandle.myUserId());
+        if (admin != null) {
+            AlertDialog mActionDisabledDialog = new ActionDisabledByAdminDialogHelper(this)
+                    .prepareDialogBuilder(UserManager.DISALLOW_FACTORY_RESET, admin)
+                    .setOnDismissListener(__ -> finish())
+                    .show();
+            mActionDisabledDialog.getButton(DialogInterface.BUTTON_POSITIVE).requestFocus();
+            Log.w(TAG, "Factory reset is restricted by admin");
+            return;
+        }
+
         if (!FlavorUtils.getFeatureFactory(this)
                 .getStartupVerificationFeatureProvider()
                 .startStartupVerificationActivityForResult(
