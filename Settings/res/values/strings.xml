@@ -2042,6 +2042,19 @@
 
     <string name="default_admin_support_msg">If you have questions, contact your IT admin</string>
 
+    <!-- Title of dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the IT administrator. -->
+    <string name="share_remote_bugreport_dialog_title">Share bug report?</string>
+    <!-- Message of a dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the IT administrator. -->
+    <string name="share_remote_bugreport_dialog_message_finished">Your IT admin requested a bug report to help troubleshoot this device. Apps and data may be shared.</string>
+    <!-- Message of a dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the IT administrator and it's still being taken. -->
+    <string name="share_remote_bugreport_dialog_message">Your IT admin requested a bug report to help troubleshoot this device. Apps and data may be shared, and your device may temporarily slow down.</string>
+    <!-- Message of a dialog shown to inform that the remote bugreport that was requested remotely by the IT administrator is still being taken and will be shared when finished. -->
+    <string name="sharing_remote_bugreport_dialog_message">This bug report is being shared with your IT admin. Contact them for more details.</string>
+    <!-- Acceptance label of dialog shown to ask for user consent for sharing the remote bugreport. -->
+    <string name="share_remote_bugreport_action">Share</string>
+    <!-- Decline label of dialog shown to ask for user consent for sharing the remote bugreport. -->
+    <string name="decline_remote_bugreport_action">Decline</string>
+
     <!-- Title for Network connection request Dialog [CHAR LIMIT=60] -->
     <string name="network_connection_request_dialog_title">Device to use with <xliff:g id="appName" example="ThirdPartyAppName">%1$s</xliff:g></string>
     <!-- Message for Network connection timeout Dialog [CHAR LIMIT=NONE] -->
