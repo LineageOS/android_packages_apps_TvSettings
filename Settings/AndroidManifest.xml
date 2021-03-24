@@ -1142,6 +1142,16 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".RemoteBugreportActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP"
+            android:theme="@style/TvSettingsActivityTheme">
+            <intent-filter>
+                <action android:name="android.settings.SHOW_REMOTE_BUGREPORT_DIALOG" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
     </application>
 
