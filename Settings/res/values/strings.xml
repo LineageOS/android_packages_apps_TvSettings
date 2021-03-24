@@ -274,8 +274,10 @@
     <string name="surround_sound_auto_info">Note: The Automatic option may not work if your device
         does not report its supported formats correctly.</string>
     <!-- Title for a radio button that if selected will cause the device to automatically select
-        an appropriate surround sound format. [CHAR LIMIT=65] -->
-    <string name="surround_sound_auto_title">Automatic: Use device reported formats</string>
+        an appropriate surround sound format. [CHAR LIMIT=165] -->
+    <string name="surround_sound_auto_title">Automatic: Enable only the formats that are supported
+        by your audio output device
+        "</string>
     <!-- Summary for a radio button that if selected will cause the device to automatically select
         an appropriate surround sound format. [CHAR LIMIT=300] -->
     <string name="surround_sound_auto_summary">When selected, the system will allow apps to select
@@ -285,9 +287,10 @@
        sound format. [CHAR LIMIT=50] -->
     <string name="surround_sound_none_title">None: Never use surround sound</string>
     <!-- Title for a radio button that if selected will allow the user to manually select surround
-        sound formats. [CHAR LIMIT=87] -->
-    <string name="surround_sound_manual_title">Manual: Choose formats manually from available
-        formats</string>
+        sound formats. [CHAR LIMIT=187] -->
+    <string name="surround_sound_manual_title">Manual: Selectively enable or disable each format
+        supported by this device, regardless of what is supported by your audio output
+        device.</string>
     <!-- Summary for a radio button that if selected will allow the user to manually select surround
         sound formats. [CHAR LIMIT=300] -->
     <string name="surround_sound_manual_summary">When selected, you can manually disable sound
@@ -365,6 +368,41 @@
     <string name="match_content_frame_rate_never_summary">Even if the app requests it, your device
         will never try to match its output to the original frame rate of the content you’re
         watching.</string>
+
+    <!-- Title for preference for HDR format selection. [CHAR LIMIT=50] -->
+    <string name="hdr_format_selection_title">Format selection</string>
+    <!-- Title for Automatic preference for HDR format selection. [CHAR LIMIT=50] -->
+    <string name="hdr_format_selection_auto_title">Automatic</string>
+    <!-- Title for Manual preference for HDR format selection. [CHAR LIMIT=50] -->
+    <string name="hdr_format_selection_manual_title">Manual</string>
+    <!-- Desc for Automatic preference for HDR format selection. [CHAR LIMIT=100] -->
+    <string name="hdr_format_selection_auto_desc">Use device reported formats</string>
+    <!-- Desc for Manual preference for HDR format selection. [CHAR LIMIT=100] -->
+    <string name="hdr_format_selection_manual_desc">Choose formats manually from available
+        formats</string>
+    <!-- Title for supported HDR format section [CHAR LIMIT=50]-->
+    <string name="hdr_format_supported_title">SUPPORTED FORMATS</string>
+    <!-- Title for unsupported HDR format [CHAR LIMIT=50]-->
+    <string name="hdr_format_unsupported_title">UNSUPPORTED FORMATS</string>
+    <!-- Title for HDR format type HDR10 [CHAR LIMIT=50]-->
+    <string name="hdr_format_hdr10">HDR10</string>
+    <!-- Title for HDR format type HLG [CHAR LIMIT=50]-->
+    <string name="hdr_format_hlg">HLG</string>
+    <!-- Title for HDR format type HDR10+ [CHAR LIMIT=50]-->
+    <string name="hdr_format_hdr10plus">HDR10+</string>
+    <!-- Title for HDR format type Dolby Vision [CHAR LIMIT=50]-->
+    <string name="hdr_format_dolby_vision">Dolby Vision</string>
+    <!-- Summary for a radio button that if selected will cause the device to automatically select
+            appropriate HDR formats. [CHAR LIMIT=300] -->
+    <string name="hdr_format_selection_auto_summary">When selected, the system will allow apps to
+        select any HDR format that is supported by your device chain. Apps may choose a format that
+        is not the highest-quality format.</string>
+    <!-- Summary for a radio button that if selected will allow the user to manually select HDR
+            formats. [CHAR LIMIT=300] -->
+    <string name="hdr_format_selection_manual_summary">When selected, you can manually disable HDR
+        formats that are supported by your device chain that cause problems with playback. HDR
+        formats not supported by your device chain cannot be forcibly enabled. Apps may choose a
+        format that is not the highest-quality format.</string>
 
     <!-- Title of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
     <string name="device_storage_clear_cache_title">Clear cached data?</string>
