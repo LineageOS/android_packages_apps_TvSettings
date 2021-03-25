@@ -26,8 +26,8 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
 
-import android.content.Context;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.provider.Settings;
@@ -38,11 +38,14 @@ import androidx.preference.SwitchPreference;
 
 import com.android.tv.settings.R;
 
-import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableMap;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
+import org.mockito.MockitoAnnotations;
+import org.mockito.Spy;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.shadows.androidx.fragment.FragmentController;
 
@@ -57,6 +60,13 @@ import java.util.stream.IntStream;
 @RunWith(RobolectricTestRunner.class)
 public class AdvancedVolumeFragmentTest {
 
+    @Spy private AudioManager mAudioManager;
+
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+    }
+
     @Test
     public void testOnPreferenceChange_withAuto_storesAutoInSettings() {
         AdvancedVolumeFragment fragment = createDefaultAdvancedVolumeFragment();
@@ -64,8 +74,9 @@ public class AdvancedVolumeFragmentTest {
 
         fragment.onPreferenceTreeClick(preference);
 
-        assertThat(getSettingsInt(fragment.getContext(), Settings.Global.ENCODED_SURROUND_OUTPUT))
-                .isEqualTo(Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO);
+        ArgumentCaptor<Integer> mode = ArgumentCaptor.forClass(Integer.class);
+        verify(mAudioManager).setEncodedSurroundMode(mode.capture());
+        assertThat(mode.getValue()).isEqualTo(Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO);
     }
 
     @Test
@@ -75,8 +86,9 @@ public class AdvancedVolumeFragmentTest {
 
         fragment.onPreferenceTreeClick(preference);
 
-        assertThat(getSettingsInt(fragment.getContext(), Settings.Global.ENCODED_SURROUND_OUTPUT))
-                .isEqualTo(Settings.Global.ENCODED_SURROUND_OUTPUT_MANUAL);
+        ArgumentCaptor<Integer> mode = ArgumentCaptor.forClass(Integer.class);
+        verify(mAudioManager).setEncodedSurroundMode(mode.capture());
+        assertThat(mode.getValue()).isEqualTo(Settings.Global.ENCODED_SURROUND_OUTPUT_MANUAL);
     }
 
     @Test
@@ -86,12 +98,13 @@ public class AdvancedVolumeFragmentTest {
 
         fragment.onPreferenceTreeClick(preference);
 
-        assertThat(getSettingsInt(fragment.getContext(), Settings.Global.ENCODED_SURROUND_OUTPUT))
-                .isEqualTo(Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER);
+        ArgumentCaptor<Integer> mode = ArgumentCaptor.forClass(Integer.class);
+        verify(mAudioManager).setEncodedSurroundMode(mode.capture());
+        assertThat(mode.getValue()).isEqualTo(Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER);
     }
 
     @Test
-    public void testOnPreferenceTreeClick_appendsFormatInSettings() {
+    public void testOnPreferenceTreeClick_withFormatDisabled_disablesFormatInAudioManager() {
         Map<Integer, Boolean> formats = ImmutableMap.of(
                 AudioFormat.ENCODING_DTS, true,
                 AudioFormat.ENCODING_DOLBY_MAT, true,
@@ -105,28 +118,21 @@ public class AdvancedVolumeFragmentTest {
         Preference preference = fragment.findPreference(KEY_SURROUND_SOUND_MANUAL);
         fragment.onPreferenceTreeClick(preference);
 
-        setSettingsStr(
-                fragment.getContext(),
-                Settings.Global.ENCODED_SURROUND_OUTPUT_ENABLED_FORMATS,
-                Joiner.on(",").join(
-                        AudioFormat.ENCODING_DOLBY_TRUEHD, AudioFormat.ENCODING_DOLBY_MAT));
         SwitchPreference pref = (SwitchPreference) fragment.findPreference(
                 KEY_SURROUND_SOUND_FORMAT_PREFIX + AudioFormat.ENCODING_DTS);
         pref.setChecked(true);
         fragment.onPreferenceTreeClick(pref);
 
-        assertThat(
-                getSettingsStr(
-                        fragment.getContext(),
-                        Settings.Global.ENCODED_SURROUND_OUTPUT_ENABLED_FORMATS))
-                .isEqualTo(Joiner.on(",").join(
-                        AudioFormat.ENCODING_DOLBY_MAT,
-                        AudioFormat.ENCODING_DTS,
-                        AudioFormat.ENCODING_DOLBY_TRUEHD));
+        ArgumentCaptor<Integer> audioFormat = ArgumentCaptor.forClass(Integer.class);
+        ArgumentCaptor<Boolean> formatEnabled = ArgumentCaptor.forClass(Boolean.class);
+        verify(mAudioManager).setSurroundFormatEnabled(
+                audioFormat.capture(), formatEnabled.capture());
+        assertThat(audioFormat.getValue()).isEqualTo(AudioFormat.ENCODING_DTS);
+        assertThat(formatEnabled.getValue()).isTrue();
     }
 
     @Test
-    public void testOnPreferenceTreeClick_removesFormatFromSettings() {
+    public void testOnPreferenceTreeClick_withFormatEnabled_enablesFormatInAudioManager() {
         Map<Integer, Boolean> formats = ImmutableMap.of(
                 AudioFormat.ENCODING_DTS, true,
                 AudioFormat.ENCODING_DOLBY_MAT, true,
@@ -140,24 +146,17 @@ public class AdvancedVolumeFragmentTest {
         Preference preference = fragment.findPreference(KEY_SURROUND_SOUND_MANUAL);
         fragment.onPreferenceTreeClick(preference);
 
-        setSettingsStr(
-                fragment.getContext(),
-                Settings.Global.ENCODED_SURROUND_OUTPUT_ENABLED_FORMATS,
-                Joiner.on(",").join(
-                        AudioFormat.ENCODING_DOLBY_MAT,
-                        AudioFormat.ENCODING_DTS,
-                        AudioFormat.ENCODING_DOLBY_TRUEHD));
         SwitchPreference pref = (SwitchPreference) fragment.findPreference(
                 KEY_SURROUND_SOUND_FORMAT_PREFIX + AudioFormat.ENCODING_DTS);
         pref.setChecked(false);
         fragment.onPreferenceTreeClick(pref);
 
-        assertThat(
-                getSettingsStr(
-                        fragment.getContext(),
-                        Settings.Global.ENCODED_SURROUND_OUTPUT_ENABLED_FORMATS))
-                .isEqualTo(Joiner.on(",").join(
-                        AudioFormat.ENCODING_DOLBY_MAT, AudioFormat.ENCODING_DOLBY_TRUEHD));
+        ArgumentCaptor<Integer> audioFormat = ArgumentCaptor.forClass(Integer.class);
+        ArgumentCaptor<Boolean> formatEnabled = ArgumentCaptor.forClass(Boolean.class);
+        verify(mAudioManager).setSurroundFormatEnabled(
+                audioFormat.capture(), formatEnabled.capture());
+        assertThat(audioFormat.getValue()).isEqualTo(AudioFormat.ENCODING_DTS);
+        assertThat(formatEnabled.getValue()).isFalse();
     }
 
     @Test
@@ -257,23 +256,6 @@ public class AdvancedVolumeFragmentTest {
                 .collect(Collectors.toList());
     }
 
-    private String getSettingsStr(Context context, String key) {
-        return Settings.Global.getString(context.getContentResolver(), key);
-    }
-
-    private void setSettingsStr(Context context, String key, String val) {
-        Settings.Global.putString(context.getContentResolver(), key, val);
-    }
-
-    private int getSettingsInt(Context context, String key) {
-        try {
-            return Settings.Global.getInt(
-                    context.getContentResolver(), key);
-        } catch (Settings.SettingNotFoundException e) {
-            throw new IllegalStateException("Unable to locate [" + key + "] setting.");
-        }
-    }
-
     private AdvancedVolumeFragment createDefaultAdvancedVolumeFragment() {
         return createAdvancedVolumeFragmentWithAudioManagerReturning(
                 Collections.EMPTY_MAP, new ArrayList<>());
@@ -281,12 +263,11 @@ public class AdvancedVolumeFragmentTest {
 
     private AdvancedVolumeFragment createAdvancedVolumeFragmentWithAudioManagerReturning(
             Map<Integer, Boolean> formats, List<Integer> reportedFormats) {
-        AudioManager audioManager = spy(AudioManager.class);
-        doReturn(formats).when(audioManager).getSurroundFormats();
-        doReturn(new ArrayList(reportedFormats)).when(audioManager).getReportedSurroundFormats();
+        doReturn(formats).when(mAudioManager).getSurroundFormats();
+        doReturn(new ArrayList(reportedFormats)).when(mAudioManager).getReportedSurroundFormats();
 
         AdvancedVolumeFragment fragment = spy(AdvancedVolumeFragment.class);
-        doReturn(audioManager).when(fragment).getAudioManager();
+        doReturn(mAudioManager).when(fragment).getAudioManager();
 
         return FragmentController.of(fragment)
                 .create()
