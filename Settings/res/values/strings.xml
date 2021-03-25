@@ -526,6 +526,8 @@
     <string name="bluetooth_connected_status">Connected</string>
     <!-- Subtitle showing disconnected connection status of Bluetooth device. [CHAR LIMIT=40] -->
     <string name="bluetooth_disconnected_status">Disconnected</string>
+    <!-- Bluetooth Settings. text displayed when user has restriction DISALLOW_CONFIG_BLUETOOTH [CHAR LIMIT=NONE]-->
+    <string name="bluetooth_empty_list_user_restricted">You don\u2019t have permission to change Bluetooth settings.</string>
 
     <!-- Help and feedback preferences -->
     <skip />
@@ -542,6 +544,8 @@
     <string name="system_date_time">Date &amp; Time</string>
     <!-- Preference which manages language settings. [CHAR LIMIT=50] -->
     <string name="system_language">Language</string>
+    <!-- Text displayed when user has restriction DISALLOW_CONFIG_LOCALE [CHAR LIMIT=NONE]-->
+    <string name="language_empty_list_user_restricted">You don\u2019t have permission to change the device language.</string>
     <!-- Preference which manages input method settings (without autofill), see also system_keyboard_autofill [CHAR LIMIT=50] -->
     <string name="system_keyboard">Keyboard</string>
     <!-- Preference which manages both input method settings and autofill settings. [CHAR LIMIT=50] -->
@@ -574,6 +578,155 @@
     <string name="system_diagnostic">Usage &amp; diagnostics</string>
     <string name="cast_settings_title" translatable="false" />
     <string name="cast_settings_slice_uri" translatable="false" />
+
+    <!-- Message when there are no available device admin apps to display -->
+    <string name="no_device_admins">No device admin apps available</string>
+
+    <!-- Summary for settings checkbox to disable widgets when the setting has been disabled by an installed device admin [CHAR LIMIT=50] -->
+    <string name="security_enable_widgets_disabled_summary">Disabled by admin</string>
+
+    <!-- Summary for settings preference disabled by administrator [CHAR LIMIT=50] -->
+    <string name="disabled_by_administrator_summary">Not available</string>
+
+    <!-- Title of preference to manage device admin apps, which are used by IT admins to manage devices -->
+    <string name="manage_device_admin">Device admin apps</string>
+
+    <!-- Summary of preference to manage device admin apps, informing the user that currently no device admin apps are installed and active -->
+    <string name="number_of_device_admins_none">No active apps</string>
+
+    <!-- Summary of preference to manage device admin apps, informing the user how many device admin apps are installed and active -->
+    <plurals name="number_of_device_admins">
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> active app</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> active apps</item>
+    </plurals>
+
+    <!-- Summary for preference that has been disabled by because of the DevicePolicyAdmin, or because device encryption is enabled, or because there are credentials in the credential storage [CHAR LIMIT=50] -->
+    <string name="unlock_set_unlock_disabled_summary">Disabled by admin, encryption policy, or
+        credential storage</string>
+
+    <!-- Enterprise Privacy --> <skip />
+
+    <!-- Title of setting on security settings screen. This will take the user to a screen with information about admin powers and their impact on the user's privacy on a managed device. Shown on enterprise-managed devices only. Note: "Device" is singular and refers to the device (e.g. phone or tablet) that the user is holding in their hand. -->
+    <string name="enterprise_privacy_settings">Managed device info</string>
+    <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
+    <string name="enterprise_privacy_settings_summary_generic">Changes &amp; settings managed by your organization</string>
+    <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
+    <string name="enterprise_privacy_settings_summary_with_name">Changes &amp; settings managed by <xliff:g id="organization_name" example="Foo, Inc.">%s</xliff:g></string>
+    <!-- Enterprise Privacy settings activity header, summarizing the powers that the admin has. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_header">To provide access to your work data, your organization may change settings and install software on your device.\n\nFor more details, contact your organization\'s admin.</string>
+    <!-- Title for the 'Types of information your organization can see' preference category. [CHAR LIMIT=60] -->
+    <string name="enterprise_privacy_exposure_category">Types of information your organization can see</string>
+    <!-- Title for the 'Changes made by your organization’s admin' preference category. [CHAR LIMIT=60] -->
+    <string name="enterprise_privacy_exposure_changes_category">Changes made by your organization\'s admin</string>
+    <!-- Title for the 'Your access to this device' preference category. [CHAR LIMIT=60] -->
+    <string name="enterprise_privacy_device_access_category">Your access to this device</string>
+    <!-- Label explaining that the admin can see data associated with their work account. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_enterprise_data">Data associated with your work account, such as email and calendar</string>
+    <!-- Label explaining that the admin can see apps installed on the device. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_installed_packages">List of apps on your device</string>
+    <!-- Label explaining that the admin can see app usage statistics. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_usage_stats">Amount of time and data spent in each app</string>
+    <!-- Label explaining that the admin can retrieve network logs on the device. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_network_logs">Most recent network traffic log</string>
+    <!-- Label explaining that the admin can request bug reports on the device. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_bug_reports">Most recent bug report</string>
+    <!-- Label explaining that the admin can retrieve security on from the device. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_security_logs">Most recent security log</string>
+    <!-- Label indicating that the admin never took a given action so far (e.g. did not retrieve security logs or request bug reports). -->
+    <string name="enterprise_privacy_none">None</string>
+    <!-- Label indicating that the admin installed one or more apps on the device. -->
+    <string name="enterprise_privacy_enterprise_installed_packages">Apps installed</string>
+    <!-- Label explaining that the number of apps is an estimation. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_apps_count_estimation_info">Number of apps is estimated. It may not include apps installed outside of the Play Store.</string>
+    <!-- Summary indicating the number of apps that a label (e.g. installed apps or apps granted a particular permission) refers to. The number shown is a minimum as there may be additional apps we do not know about. [CHAR LIMIT=NONE] -->
+    <plurals name="enterprise_privacy_number_packages_lower_bound">
+        <item quantity="one">Minimum <xliff:g id="count">%d</xliff:g> app</item>
+        <item quantity="other">Minimum <xliff:g id="count">%d</xliff:g> apps</item>
+    </plurals>
+    <!-- Label indicating that the admin granted one or more apps access to the device's location. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_location_access">Location permissions</string>
+    <!-- Label indicating that the admin granted one or more apps access to the microphone. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_microphone_access">Microphone permissions</string>
+    <!-- Label indicating that the admin granted one or more apps access to the camera. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_camera_access">Camera permissions</string>
+    <!-- Label indicating that the admin set one or more apps as defaults for common actions (e.g. open browser, send e-mail). [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_enterprise_set_default_apps">Default apps</string>
+    <!-- Summary indicating the number of apps that a label (e.g. installed apps or apps granted a particular permission) refers to. [CHAR LIMIT=NONE] -->
+    <plurals name="enterprise_privacy_number_packages">
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> app</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> apps</item>
+    </plurals>
+    <!-- Label explaining that the current input method was set by the admin. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_input_method">Default keyboard</string>
+    <!-- Summary indicating the input method set by the admin. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_input_method_name">Set to <xliff:g id="app_label" example="Example Keyboard">%s</xliff:g></string>
+    <!-- Label explaining that an always-on VPN was set by the admin for the entire device. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_always_on_vpn_device">Always-on VPN turned on</string>
+    <!-- Label explaining that an always-on VPN was set by the admin in the personal profile. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_always_on_vpn_personal">Always-on VPN turned on in your personal profile</string>
+    <!-- Label explaining that an always-on VPN was set by the admin in the work profile. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_always_on_vpn_work">Always-on VPN turned on in your work profile</string>
+    <!-- Label explaining that a global HTTP proxy was set by the admin. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_global_http_proxy">Global HTTP proxy set</string>
+    <!-- Label explaining that the admin installed trusted CA certificates for the entire device. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_ca_certs_device">Trusted credentials</string>
+    <!-- Label explaining that the admin installed trusted CA certificates in personal profile. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_ca_certs_personal">Trusted credentials in your personal profile</string>
+    <!-- Label explaining that the admin installed trusted CA certificates in work profile. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_ca_certs_work">Trusted credentials in your work profile</string>
+    <!-- Summary indicating the number of trusted CA certificates installed by the admin. The number shown is a minimum as there may be additional CA certificates we do not know about. [CHAR LIMIT=NONE] -->
+    <plurals name="enterprise_privacy_number_ca_certs">
+        <item quantity="one">Minimum <xliff:g id="count">%d</xliff:g> CA certificate</item>
+        <item quantity="other">Minimum <xliff:g id="count">%d</xliff:g> CA certificates</item>
+    </plurals>
+    <!-- Label explaining that the admin can lock the device and change the user's password. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_lock_device">Admin can lock the device and reset password</string>
+    <!-- Label explaining that the admin can wipe the device remotely. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_wipe_device">Admin can delete all device data</string>
+    <!-- Label explaining that the admin configured the device to wipe itself when the password is mistyped too many times. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_failed_password_wipe_device">Failed password attempts before deleting all device data</string>
+    <!-- Label explaining that the admin configured the work profile to wipe itself when the password is mistyped too many times. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_failed_password_wipe_work">Failed password attempts before deleting work profile data</string>
+    <!-- Summary indicating the number of mistyped passwords after which the device or work profile wipes itself. [CHAR LIMIT=NONE] -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe">
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> attempt</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> attempts</item>
+    </plurals>
+    <!-- Message indicating that the device is enterprise-managed by a Device Owner [CHAR LIMIT=NONE] -->
+    <string name="do_disclosure_generic">This device is managed by your organization.</string>
+    <!-- Message indicating that the device is enterprise-managed by a Device Owner [CHAR LIMIT=NONE] -->
+    <string name="do_disclosure_with_name">This device is managed by <xliff:g id="organization_name" example="Foo, Inc.">%s</xliff:g>.</string>
+    <!-- Message indicating that the device is enterprise-managed: Space that separates the main text and the "learn more" link that follows it. [CHAR LIMIT=NONE] -->
+    <string name="do_disclosure_learn_more_separator">" "</string>
+    <!-- Button label to allow the user to view additional information [CHAR LIMIT=NONE BACKUP_MESSAGE_ID=2416766240581561009] -->
+    <string name="learn_more">Learn more</string>
+
+    <!-- Strings for displaying which applications were set as default for specific actions. -->
+    <!-- Title for the apps that have been set as default handlers of camera-related intents. [CHAR LIMIT=30] -->
+    <plurals name="default_camera_app_title">
+        <item quantity="one">Camera app</item>
+        <item quantity="other">Camera apps</item>
+    </plurals>
+    <!-- Title for the app that has been set as default handler of calendar-related intents. [CHAR LIMIT=30] -->
+    <string name="default_calendar_app_title">Calendar app</string>
+    <!-- Title for the app that has been set as default handler of contacts-related intents. [CHAR LIMIT=30] -->
+    <string name="default_contacts_app_title">Contacts app</string>
+    <!-- Title for the apps that have been set as default handlers of new email intents. [CHAR LIMIT=30] -->
+    <plurals name="default_email_app_title">
+        <item quantity="one">Email client app</item>
+        <item quantity="other">Email client apps</item>
+    </plurals>
+    <!-- Title for the app that has been set as default handler of geo-related intents. [CHAR LIMIT=30] -->
+    <string name="default_map_app_title">Map app</string>
+    <!-- Title for the apps that have been set as default handlers of call-related intents. [CHAR LIMIT=30] -->
+    <plurals name="default_phone_app_title">
+        <item quantity="one">Phone app</item>
+        <item quantity="other">Phone apps</item>
+    </plurals>
+    <!-- Template for concatenating two app names -->
+    <string name="app_names_concatenation_template_2"><xliff:g id="first_app_name">%1$s</xliff:g>, <xliff:g id="second_app_name">%2$s</xliff:g></string>
+    <!-- Template for concatenating three app names -->
+    <string name="app_names_concatenation_template_3"><xliff:g id="first_app_name">%1$s</xliff:g>, <xliff:g id="second_app_name">%2$s</xliff:g>, <xliff:g id="third_app_name">%3$s</xliff:g></string>
 
     <!-- About -->
     <skip />
@@ -644,6 +797,36 @@
         from their cell phone carrier. The use of the string is similar to the string
         "system_update_settings_list_item_title" in this project. [CHAR LIMIT=50] -->
     <string name="additional_system_update_settings_list_item_title">Additional system updates</string>
+
+    <!-- Notification of installed CA Certs --> <skip/>
+
+    <!-- Shows up when there is a user SSL CA Cert installed on the
+         device.  Indicates to the user that SSL traffic can be intercepted.  [CHAR LIMIT=NONE] -->
+    <string name="ssl_ca_cert_warning">Network may be monitored</string>
+    <!-- Button to close the SSL CA cert warning dialog box, meaning the user is done reading.  [CHAR LIMIT=NONE] -->
+    <string name="done_button">Done</string>
+    <!-- Title of Dialog warning users of SSL monitoring. [CHAR LIMIT=NONE] -->
+    <plurals name="ssl_ca_cert_dialog_title">
+        <item quantity="one">Trust or remove certificate</item>
+        <item quantity="other">Trust or remove certificates</item>
+    </plurals>
+    <!-- Text of message to show to device owner user whose administrator has installed a SSL CA Cert.  [CHAR LIMIT=NONE] -->
+    <plurals name="ssl_ca_cert_info_message_device_owner">
+        <item quantity="one"><xliff:g id="managing_domain">%s</xliff:g> has installed a certificate authority on your device, which may allow them to monitor your device network activity, including emails, apps, and secure websites.\n\nFor more information about this certificate, contact your admin.</item>
+        <item quantity="other"><xliff:g id="managing_domain">%s</xliff:g> has installed certificate authorities on your device, which may allow them to monitor your device network activity, including emails, apps, and secure websites.\n\nFor more information about these certificates, contact your admin.</item>
+    </plurals>
+    <!-- Text of message to show to work profile users whose administrator has installed a SSL CA Cert.  [CHAR LIMIT=NONE] -->
+    <plurals name="ssl_ca_cert_info_message">
+        <item quantity="one"><xliff:g id="managing_domain">%s</xliff:g> has installed a certificate authority for your work profile, which may allow them to monitor work network activity, including emails, apps, and secure websites.\n\nFor more information about this certificate, contact your admin.</item>
+        <item quantity="other"><xliff:g id="managing_domain">%s</xliff:g> has installed certificate authorities for your work profile, which may allow them to monitor work network activity, including emails, apps, and secure websites.\n\nFor more information about these certificates, contact your admin.</item>
+    </plurals>
+    <!-- Text of warning to show to users that have a SSL CA Cert installed.  [CHAR LIMIT=NONE] -->
+    <string name="ssl_ca_cert_warning_message">A third party is capable of monitoring your network activity, including emails, apps, and secure websites.\n\nA trusted credential installed on your device is making this possible.</string>
+    <!-- Label on button that will take the user to the Trusted Credentials settings page.  [CHAR LIMIT=NONE]-->
+    <plurals name="ssl_ca_cert_settings_button">
+        <item quantity="one">Check certificate</item>
+        <item quantity="other">Check certificates</item>
+    </plurals>
 
     <!-- About screen, title of the item to go into the device status screen -->
     <string name="device_status">Status</string>
@@ -936,6 +1119,8 @@
     <string name="wifi_summary_description_connected_to_wifi_network">Already connected to <xliff:g id="ssid">%1$s</xliff:g>. Connect to a different network?</string>
     <!-- Name to use when we don't know the name of the wifi network the device is connected to [CHAR LIMIT=20] -->
     <string name="wifi_summary_unknown_network">an unknown network</string>
+    <!-- Wifi Settings. text displayed when user has restriction DISALLOW_CONFIG_WIFI [CHAR LIMIT=NONE]-->
+    <string name="wifi_empty_list_user_restricted">You don\u2019t have permission to change the Wi\u2011Fi network.</string>
 
     <!-- Strings for Ethernet under Connectivity Setting -->
     <!-- Title for OK [CHAR LIMIT=50] -->
@@ -2077,6 +2262,54 @@
     <string name="disabled_by_policy_title_suspend_packages">Can’t open this app</string>
 
     <string name="default_admin_support_msg">If you have questions, contact your IT admin</string>
+    <!-- Shown in dialog to allow user to see more information about the device admin [CHAR LIMIT=30] -->
+    <string name="admin_support_more_info">More details</string>
+    <!-- Shown in admin details page to warn user about policies the admin can set in a work profile. [CHAR LIMIT=NONE] -->
+    <string name="admin_profile_owner_message">Your admin can monitor and manage apps and data
+        associated with your work profile, including settings, permissions, corporate access,
+        network activity, and the device\'s location information.</string>
+    <!-- Shown in admin details page to warn user about policies the admin can set on a user. [CHAR LIMIT=NONE] -->
+    <string name="admin_profile_owner_user_message">Your admin can monitor and manage apps and data
+        associated with this user, including settings, permissions, corporate access,
+        network activity, and the device\'s location information.</string>
+    <!-- Shown in admin details page to warn user about policies the admin can set on a device. [CHAR LIMIT=NONE] -->
+    <string name="admin_device_owner_message">Your admin can monitor and manage apps and data
+        associated with this device, including settings, permissions, corporate access,
+        network activity, and the device\'s location information.</string>
+
+    <!-- Button label to remove the work profile [CHAR LIMIT=35] -->
+    <string name="remove_managed_profile_label">Remove work profile</string>
+    <!-- Label for screen showing the active device admin apps -->
+    <string name="active_device_admin_msg">Device admin app</string>
+    <!-- Label for button to remove the active device admin app [CHAR LIMIT=80] -->
+    <string name="remove_device_admin">Deactivate this device admin app</string>
+    <!-- Label for button to uninstall the device admin app [CHAR LIMIT=80] -->
+    <string name="uninstall_device_admin">Uninstall app</string>
+    <!-- Label for button to deactivate and uninstall the device admin app [CHAR_LIMIT=50]-->
+    <string name="remove_and_uninstall_device_admin">Deactivate &amp; uninstall</string>
+    <!-- Label for screen showing to select device admin apps -->
+    <string name="select_device_admin_msg">Device admin apps</string>
+    <!-- Title for screen to add a device admin app [CHAR LIMIT=40] -->
+    <string name="add_device_admin_msg">Activate device admin app?</string>
+    <!-- Label for button to set the active device admin [CHAR_LIMIT=80] -->
+    <string name="add_device_admin">Activate this device admin app</string>
+    <!-- Device admin warning message about policies an admin can use -->
+    <string name="device_admin_warning">Activating this admin app will allow
+        the app <xliff:g id="app_name">%1$s</xliff:g> to perform the
+        following operations:</string>
+    <!-- Simplified device admin warning message [CHAR LIMIT=NONE]-->
+    <string name="device_admin_warning_simplified">This device will be managed and monitored by
+        <xliff:g id="app_name" example="Example Supervisor">%1$s</xliff:g>.</string>
+    <!-- Device admin warning message about policies an admin can use -->
+    <string name="device_admin_status">This admin app is active and allows
+        the app <xliff:g id="app_name">%1$s</xliff:g> to perform the
+        following operations:</string>
+    <!-- Warning when trying to add a profile owner admin after setup has completed. [CHAR LIMIT=none] -->
+    <string name="adding_profile_owner_warning">By proceeding, your user will be managed by your
+        admin which may also be able to store associated data, in addition to your personal
+        data.\n\nYour admin has the ability to monitor and manage settings, access, apps,
+        and data associated with this user, including network activity and your device\'s location
+        information.</string>
 
     <!-- Title of dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the IT administrator. -->
     <string name="share_remote_bugreport_dialog_title">Share bug report?</string>
