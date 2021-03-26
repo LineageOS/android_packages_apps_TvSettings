@@ -72,6 +72,7 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
 
     private Map<Integer, Boolean> mFormats;
     private List<Integer> mReportedFormats;
+    private AudioManager mAudioManager;
     private List<AbstractPreferenceController> mPreferenceControllers;
     private PreferenceCategory mSupportedFormatsPreferenceCategory;
     private PreferenceCategory mUnsupportedFormatsPreferenceCategory;
@@ -81,9 +82,9 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
 
     @Override
     public void onAttach(Context context) {
-        AudioManager audioManager = getAudioManager();
-        mFormats = audioManager.getSurroundFormats();
-        mReportedFormats = audioManager.getReportedSurroundFormats();
+        mAudioManager = getAudioManager();
+        mFormats = mAudioManager.getSurroundFormats();
+        mReportedFormats = mAudioManager.getReportedSurroundFormats();
         super.onAttach(context);
     }
 
@@ -118,7 +119,7 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
         mPreferenceControllers = new ArrayList<>(mFormats.size());
         for (Map.Entry<Integer, Boolean> format : mFormats.entrySet()) {
             mPreferenceControllers.add(new SoundFormatPreferenceController(context,
-                    format.getKey() /*formatId*/, mFormats, mReportedFormats));
+                    format.getKey() /*formatId*/, mAudioManager, mFormats, mReportedFormats));
         }
         return mPreferenceControllers;
     }
@@ -137,21 +138,24 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
                 case KEY_SURROUND_SOUND_AUTO: {
                     logEntrySelected(
                             TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_SELECT_FORMATS_AUTO);
-                    setSurroundPassthroughSetting(Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO);
+                    mAudioManager.setEncodedSurroundMode(
+                            Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO);
                     hideFormatPreferences();
                     break;
                 }
                 case KEY_SURROUND_SOUND_NONE: {
                     logEntrySelected(
                             TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_SELECT_FORMATS_NONE);
-                    setSurroundPassthroughSetting(Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER);
+                    mAudioManager.setEncodedSurroundMode(
+                            Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER);
                     hideFormatPreferences();
                     break;
                 }
                 case KEY_SURROUND_SOUND_MANUAL: {
                     logEntrySelected(
                             TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_SELECT_FORMATS_MANUAL);
-                    setSurroundPassthroughSetting(Settings.Global.ENCODED_SURROUND_OUTPUT_MANUAL);
+                    mAudioManager.setEncodedSurroundMode(
+                            Settings.Global.ENCODED_SURROUND_OUTPUT_MANUAL);
                     showFormatPreferences();
                     break;
                 }
@@ -362,11 +366,6 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
                 controller.updateState(preference);
             }
         }
-    }
-
-    private void setSurroundPassthroughSetting(int newVal) {
-        Settings.Global.putInt(getContext().getContentResolver(),
-                Settings.Global.ENCODED_SURROUND_OUTPUT, newVal);
     }
 
     static String getSurroundPassthroughSetting(Context context) {
