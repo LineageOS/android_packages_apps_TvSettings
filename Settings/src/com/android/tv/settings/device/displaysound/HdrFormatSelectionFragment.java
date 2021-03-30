@@ -30,6 +30,7 @@ import android.content.Context;
 import android.hardware.display.DisplayManager;
 import android.os.Bundle;
 import android.view.Display;
+import android.widget.Toast;
 
 import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
@@ -64,6 +65,11 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
     static final String KEY_HDR_FORMAT_SELECTION_AUTO = "hdr_format_selection_auto";
     static final String KEY_HDR_FORMAT_SELECTION_MANUAL = "hdr_format_selection_manual";
     static final String KEY_HDR_FORMAT_PREFIX = "hdr_format_";
+    static final String KEY_HDR_FORMAT_INFO_PREFIX = "hdr_format_info_";
+    static final String KEY_FORMAT_INFO = "hdr_format_info";
+    static final String KEY_SHOW_HIDE_FORMAT_INFO = "hdr_show_hide_format_info";
+    static final String KEY_ENABLED_FORMATS = "enabled_formats";
+    static final String KEY_DISABLED_FORMATS = "disabled_formats";
 
     static final int[] HDR_FORMATS_DISPLAY_ORDER = {
         HDR_TYPE_DOLBY_VISION, HDR_TYPE_HDR10, HDR_TYPE_HDR10_PLUS, HDR_TYPE_HLG
@@ -71,6 +77,9 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
 
     private PreferenceCategory mSupportedFormatsPreferenceCategory;
     private PreferenceCategory mUnsupportedFormatsPreferenceCategory;
+    private PreferenceCategory mFormatsInfoPreferenceCategory;
+    private PreferenceCategory mEnabledFormatsPreferenceCategory;
+    private PreferenceCategory mDisabledFormatsPreferenceCategory;
 
     private List<AbstractPreferenceController> mPreferenceControllers;
 
@@ -106,6 +115,7 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.hdr_format_selection, null);
 
+        createFormatInfoPreferences();
         createFormatPreferences();
 
         String currentPreferenceKey;
@@ -139,7 +149,12 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         String key = preference.getKey();
-        if (key != null && preference instanceof RadioPreference) {
+
+        if (key == null) {
+            return super.onPreferenceTreeClick(preference);
+        }
+
+        if (preference instanceof RadioPreference) {
             selectRadioPreference(preference);
 
             switch (key) {
@@ -160,6 +175,23 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
                 default:
                     throw new IllegalArgumentException("Unknown hdr type selection pref value"
                             + ": " + key);
+            }
+        }
+
+        if (key.equals(KEY_SHOW_HIDE_FORMAT_INFO)) {
+            if (preference.getTitle().equals(
+                    getContext().getString(R.string.hdr_hide_formats))) {
+                hideFormatInfoPreferences();
+                preference.setTitle(R.string.hdr_show_formats);
+            } else {
+                showFormatInfoPreferences();
+                preference.setTitle(R.string.hdr_hide_formats);
+            }
+        }
+
+        if (key.contains(KEY_HDR_FORMAT_INFO_PREFIX)) {
+            if (preference.getParent() == mEnabledFormatsPreferenceCategory) {
+                showToast(R.string.hdr_enabled_format_info_clicked);
             }
         }
         return super.onPreferenceTreeClick(preference);
@@ -213,6 +245,43 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
         }
     }
 
+    /** Creates titles and preferences for each hdr format. */
+    private void createFormatInfoPreferences() {
+        mFormatsInfoPreferenceCategory = createPreferenceCategory(
+                R.string.hdr_format_info, KEY_FORMAT_INFO);
+        getPreferenceScreen().addPreference(mFormatsInfoPreferenceCategory);
+
+        Preference pref = createPreference(
+                R.string.hdr_show_formats, KEY_SHOW_HIDE_FORMAT_INFO);
+        mFormatsInfoPreferenceCategory.addPreference(pref);
+
+        mEnabledFormatsPreferenceCategory = createPreferenceCategory(
+                R.string.hdr_enabled_formats, KEY_ENABLED_FORMATS);
+        mFormatsInfoPreferenceCategory.addPreference(mEnabledFormatsPreferenceCategory);
+
+        mDisabledFormatsPreferenceCategory = createPreferenceCategory(
+                R.string.hdr_disabled_formats, KEY_DISABLED_FORMATS);
+        mFormatsInfoPreferenceCategory.addPreference(mDisabledFormatsPreferenceCategory);
+
+        for (int hdrType : HDR_FORMATS_DISPLAY_ORDER) {
+            if (mDeviceHdrTypes.contains(hdrType)) {
+                int titleId = getFormatPreferenceTitleId(hdrType);
+                if (titleId == -1) {
+                    continue;
+                }
+
+                pref = createPreference(titleId, KEY_HDR_FORMAT_INFO_PREFIX + hdrType);
+                if (mDisplayReportedHdrTypes.contains(hdrType)) {
+                    mEnabledFormatsPreferenceCategory.addPreference(pref);
+                } else {
+                    mDisabledFormatsPreferenceCategory.addPreference(pref);
+                }
+            }
+        }
+        hideFormatInfoPreferences();
+    }
+
+
     /** Returns a switch preference for each supported HDR format. */
     private Preference createSupportedFormatPreference(int titleId, int hdrType, boolean enabled) {
         final SwitchPreference pref = new SwitchPreference(getContext()) {
@@ -247,12 +316,31 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
         getPreferenceScreen().addPreference(mSupportedFormatsPreferenceCategory);
         getPreferenceScreen().addPreference(mUnsupportedFormatsPreferenceCategory);
         updateFormatPreferencesStates();
+        // hide the formats info section.
+        getPreferenceScreen().removePreference(mFormatsInfoPreferenceCategory);
     }
 
     private void hideFormatPreferences() {
         getPreferenceScreen().removePreference(mSupportedFormatsPreferenceCategory);
         getPreferenceScreen().removePreference(mUnsupportedFormatsPreferenceCategory);
         updateFormatPreferencesStates();
+        // show the formats info section.
+        getPreferenceScreen().addPreference(mFormatsInfoPreferenceCategory);
+    }
+
+    private void showFormatInfoPreferences() {
+        mFormatsInfoPreferenceCategory.addPreference(mEnabledFormatsPreferenceCategory);
+        mFormatsInfoPreferenceCategory.addPreference(mDisabledFormatsPreferenceCategory);
+    }
+
+    private void hideFormatInfoPreferences() {
+        mFormatsInfoPreferenceCategory.removePreference(mEnabledFormatsPreferenceCategory);
+        mFormatsInfoPreferenceCategory.removePreference(mDisabledFormatsPreferenceCategory);
+    }
+
+    private void showToast(int resId) {
+        Toast.makeText(getContext(), getContext().getString(resId), Toast.LENGTH_SHORT)
+                .show();
     }
 
     private PreferenceCategory createPreferenceCategory(int titleResourceId, String key) {
@@ -260,6 +348,13 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
         preferenceCategory.setTitle(titleResourceId);
         preferenceCategory.setKey(key);
         return preferenceCategory;
+    }
+
+    private Preference createPreference(int titleResourceId, String key) {
+        Preference preference = new Preference(getContext());
+        preference.setTitle(titleResourceId);
+        preference.setKey(key);
+        return preference;
     }
 
     private void updateFormatPreferencesStates() {
