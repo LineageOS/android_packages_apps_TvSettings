@@ -18,9 +18,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:custom="http://schemas.android.com/apk/res-auto"
                   android:title="@string/connectivity_network_category_title">
-    <PreferenceCategory
+    <Preference
         android:key="data_saver_info"
-        android:title="@string/data_saver_header_info"/>
+        android:title="@string/data_saver_header_info"
+        android:enabled="false"/>
+
     <SwitchPreference
         android:key="wifi_enable"
         android:persistent="true"

@@ -24,6 +24,7 @@ import static android.view.Display.HdrCapabilities.HDR_TYPE_HLG;
 import static com.android.tv.settings.device.displaysound.HdrFormatSelectionFragment.KEY_HDR_FORMAT_PREFIX;
 import static com.android.tv.settings.device.displaysound.HdrFormatSelectionFragment.KEY_HDR_FORMAT_SELECTION_AUTO;
 import static com.android.tv.settings.device.displaysound.HdrFormatSelectionFragment.KEY_HDR_FORMAT_SELECTION_MANUAL;
+import static com.android.tv.settings.device.displaysound.HdrFormatSelectionFragment.KEY_SHOW_HIDE_FORMAT_INFO;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -70,8 +71,7 @@ public class HdrFormatSelectionFragmentTest {
     @Test
     public void testOnPreferenceTreeClick_withAuto_allowsUserDisabledHdrTypes() {
         HdrFormatSelectionFragment fragment = createDefaultHdrFormatSelectionFragment();
-        RadioPreference preference = new RadioPreference(fragment.getContext());
-        preference.setKey(KEY_HDR_FORMAT_SELECTION_AUTO);
+        RadioPreference preference = fragment.findPreference(KEY_HDR_FORMAT_SELECTION_AUTO);
 
         fragment.onPreferenceTreeClick(preference);
 
@@ -81,8 +81,7 @@ public class HdrFormatSelectionFragmentTest {
     @Test
     public void testOnPreferenceTreeClick_withManual_disallowsUserDisabledHdrTypes() {
         HdrFormatSelectionFragment fragment = createDefaultHdrFormatSelectionFragment();
-        RadioPreference preference = new RadioPreference(fragment.getContext());
-        preference.setKey(KEY_HDR_FORMAT_SELECTION_MANUAL);
+        RadioPreference preference = fragment.findPreference(KEY_HDR_FORMAT_SELECTION_MANUAL);
 
         fragment.onPreferenceTreeClick(preference);
 
@@ -100,12 +99,11 @@ public class HdrFormatSelectionFragmentTest {
                 createHdrFormatSelectionFragmentWithDisplayManagerReturning(
                         deviceHdrTypes, displayReportedHdrTypes, userDisabledHdrTypes);
 
-        RadioPreference preference = new RadioPreference(fragment.getContext());
-        preference.setKey(KEY_HDR_FORMAT_SELECTION_MANUAL);
+        RadioPreference preference = fragment.findPreference(KEY_HDR_FORMAT_SELECTION_MANUAL);
         fragment.onPreferenceTreeClick(preference);
 
-        SwitchPreference pref = new SwitchPreference(fragment.getContext());
-        pref.setKey(KEY_HDR_FORMAT_PREFIX + HDR_TYPE_HDR10);
+        SwitchPreference pref = (SwitchPreference) fragment.findPreference(
+                KEY_HDR_FORMAT_PREFIX + HDR_TYPE_HDR10);
         pref.setChecked(false);
         fragment.onPreferenceTreeClick(pref);
 
@@ -128,12 +126,11 @@ public class HdrFormatSelectionFragmentTest {
                 createHdrFormatSelectionFragmentWithDisplayManagerReturning(
                         deviceHdrTypes, displayReportedHdrTypes, userDisabledTypes);
 
-        RadioPreference preference = new RadioPreference(fragment.getContext());
-        preference.setKey(KEY_HDR_FORMAT_SELECTION_MANUAL);
+        RadioPreference preference = fragment.findPreference(KEY_HDR_FORMAT_SELECTION_MANUAL);
         fragment.onPreferenceTreeClick(preference);
 
-        SwitchPreference pref = new SwitchPreference(fragment.getContext());
-        pref.setKey(KEY_HDR_FORMAT_PREFIX + HDR_TYPE_HDR10);
+        SwitchPreference pref = (SwitchPreference) fragment.findPreference(
+                KEY_HDR_FORMAT_PREFIX + HDR_TYPE_HDR10);
         pref.setChecked(true);
         fragment.onPreferenceTreeClick(pref);
 
@@ -155,8 +152,7 @@ public class HdrFormatSelectionFragmentTest {
         HdrFormatSelectionFragment fragment =
                 createHdrFormatSelectionFragmentWithDisplayManagerReturning(
                         deviceHdrTypes, displayReportedHdrTypes, userDisabledTypes);
-        RadioPreference preference = new RadioPreference(fragment.getContext());
-        preference.setKey(KEY_HDR_FORMAT_SELECTION_MANUAL);
+        RadioPreference preference = fragment.findPreference(KEY_HDR_FORMAT_SELECTION_MANUAL);
         fragment.onPreferenceTreeClick(preference);
 
         assertThat(fragment.getPreferenceScreen().getPreferenceCount()).isEqualTo(3);
@@ -186,8 +182,7 @@ public class HdrFormatSelectionFragmentTest {
         HdrFormatSelectionFragment fragment =
                 createHdrFormatSelectionFragmentWithDisplayManagerReturning(
                         deviceHdrTypes, displayReportedHdrTypes, userDisabledTypes);
-        RadioPreference preference = new RadioPreference(fragment.getContext());
-        preference.setKey(KEY_HDR_FORMAT_SELECTION_MANUAL);
+        RadioPreference preference = fragment.findPreference(KEY_HDR_FORMAT_SELECTION_MANUAL);
         fragment.onPreferenceTreeClick(preference);
 
         PreferenceCategory supportedFormatPreference =
@@ -213,11 +208,72 @@ public class HdrFormatSelectionFragmentTest {
         HdrFormatSelectionFragment fragment =
                 createHdrFormatSelectionFragmentWithDisplayManagerReturning(
                         deviceHdrTypes, displayReportedHdrTypes, userDisabledTypes);
-        RadioPreference preference = new RadioPreference(fragment.getContext());
-        preference.setKey(KEY_HDR_FORMAT_SELECTION_AUTO);
+        RadioPreference preference = fragment.findPreference(KEY_HDR_FORMAT_SELECTION_AUTO);
         fragment.onPreferenceTreeClick(preference);
 
-        assertThat(fragment.getPreferenceScreen().getPreferenceCount()).isEqualTo(1);
+        assertThat(fragment.getPreferenceScreen().getPreferenceCount()).isEqualTo(2);
+    }
+
+    @Test
+    public void testGetPreferenceScreen_whenAuto_showsFormatInfoPreference() {
+        int[] deviceHdrTypes = { HDR_TYPE_DOLBY_VISION, HDR_TYPE_HDR10, HDR_TYPE_HLG };
+        int[] displayReportedHdrTypes = { HDR_TYPE_DOLBY_VISION, HDR_TYPE_HLG };
+        int[] userDisabledTypes = { HDR_TYPE_HLG };
+
+        HdrFormatSelectionFragment fragment =
+                createHdrFormatSelectionFragmentWithDisplayManagerReturning(
+                        deviceHdrTypes, displayReportedHdrTypes, userDisabledTypes);
+
+        Preference preference = fragment.findPreference(KEY_HDR_FORMAT_SELECTION_AUTO);
+        fragment.onPreferenceTreeClick(preference);
+
+        assertThat(fragment.getPreferenceScreen().getPreferenceCount()).isEqualTo(2);
+
+        PreferenceCategory formatInfoPreferenceCategory =
+                (PreferenceCategory) fragment.getPreferenceScreen().getPreference(1);
+        assertThat(formatInfoPreferenceCategory.getTitle()).isEqualTo(
+                fragment.getContext().getString(R.string.hdr_format_info));
+        assertThat(formatInfoPreferenceCategory.getPreferenceCount()).isEqualTo(1);
+        Preference showFormatPreference = formatInfoPreferenceCategory.getPreference(0);
+        assertThat(showFormatPreference.getTitle()).isEqualTo(
+                fragment.getContext().getString(R.string.hdr_show_formats));
+    }
+
+    @Test
+    public void testGetPreferenceScreen_whenAuto_returnsFormatsInCorrectPreferenceGroup() {
+        int[] deviceHdrTypes = { HDR_TYPE_DOLBY_VISION, HDR_TYPE_HDR10 };
+        int[] displayReportedHdrTypes = { HDR_TYPE_DOLBY_VISION };
+        int[] userDisabledTypes = { HDR_TYPE_DOLBY_VISION };
+
+        HdrFormatSelectionFragment fragment =
+                createHdrFormatSelectionFragmentWithDisplayManagerReturning(
+                        deviceHdrTypes, displayReportedHdrTypes, userDisabledTypes);
+
+        Preference preference = fragment.findPreference(KEY_HDR_FORMAT_SELECTION_AUTO);
+        fragment.onPreferenceTreeClick(preference);
+
+        preference = fragment.findPreference(KEY_SHOW_HIDE_FORMAT_INFO);
+        fragment.onPreferenceTreeClick(preference);
+
+        PreferenceCategory formatInfoPreferenceCategory =
+                (PreferenceCategory) fragment.getPreferenceScreen().getPreference(1);
+        assertThat(formatInfoPreferenceCategory.getPreferenceCount()).isEqualTo(3);
+
+        Preference hideFormatPreference = formatInfoPreferenceCategory.getPreference(0);
+        assertThat(hideFormatPreference.getTitle()).isEqualTo(
+                fragment.getContext().getString(R.string.hdr_hide_formats));
+
+        Preference enabledFormatsCategory = formatInfoPreferenceCategory.getPreference(1);
+        assertThat(enabledFormatsCategory.getTitle()).isEqualTo(
+                fragment.getContext().getString(R.string.hdr_enabled_formats));
+        assertThat(getChildrenTitles(enabledFormatsCategory)).containsExactly(
+                fragment.getContext().getString(R.string.hdr_format_dolby_vision));
+
+        Preference disabledFormatsCategory = formatInfoPreferenceCategory.getPreference(2);
+        assertThat(disabledFormatsCategory.getTitle()).isEqualTo(
+                fragment.getContext().getString(R.string.hdr_disabled_formats));
+        assertThat(getChildrenTitles(disabledFormatsCategory)).containsExactly(
+                fragment.getContext().getString(R.string.hdr_format_hdr10));
     }
 
     private List<String> getChildrenTitles(Preference preference) {
