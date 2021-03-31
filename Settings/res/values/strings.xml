@@ -404,6 +404,21 @@
         formats not supported by your device chain cannot be forcibly enabled. Apps may choose a
         format that is not the highest-quality format.</string>
 
+    <!-- Title for HDR format info section [CHAR LIMIT=50]-->
+    <string name="hdr_format_info">FORMAT INFO</string>
+    <!-- Title for HDR show format section [CHAR LIMIT=50]-->
+    <string name="hdr_show_formats">Show formats</string>
+    <!-- Title for HDR hide format section [CHAR LIMIT=50]-->
+    <string name="hdr_hide_formats">Hide formats</string>
+    <!-- Title for HDR enabled format section [CHAR LIMIT=50]-->
+    <string name="hdr_enabled_formats">ENABLED FORMATS</string>
+    <!-- Title for HDR disabled format section [CHAR LIMIT=50]-->
+    <string name="hdr_disabled_formats">DISABLED FORMATS</string>
+    <!-- Summary for toast shown on clicking the enabled format preference in Automatic mode
+        [CHAR LIMIT=250]-->
+    <string name="hdr_enabled_format_info_clicked">To disable, change the
+        format selection to Manual.</string>
+
     <!-- Title of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
     <string name="device_storage_clear_cache_title">Clear cached data?</string>
     <!-- Message of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
