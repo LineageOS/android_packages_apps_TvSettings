@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos dengan Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Catatan: Opsi Otomatis tidak berfungsi jika perangkat tidak melaporkan format yang didukung dengan benar."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Otomatis: Gunakan format yang dilaporkan perangkat"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Otomatis: Hanya mengaktifkan format yang didukung oleh perangkat output audio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Jika dipilih, sistem akan mengizinkan aplikasi memilih format suara mana saja yang didukung oleh rangkaian perangkat Anda. Format yang dipilih aplikasi mungkin bukan yang berkualitas tertinggi."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Tidak Ada: Jangan gunakan suara surround"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manual: Pilih format secara manual dari format yang tersedia"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: Mengaktifkan atau menonaktifkan secara selektif setiap format yang didukung oleh perangkat ini, apa pun format yang didukung oleh perangkat output audio."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Jika dipilih, Anda dapat secara manual menonaktifkan format suara yang didukung oleh rangkaian perangkat yang menyebabkan masalah pemutaran. Format suara yang tidak didukung oleh rangkaian perangkat dapat diaktifkan. Terkadang, format yang dipilih aplikasi mungkin bukan yang berkualitas tertinggi."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Mengaktifkan format suara yang tidak didukung?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Perangkat audio yang terhubung tidak melaporkan dukungan untuk format ini. Ini dapat menyebabkan perilaku tidak terduga, seperti derau bising atau bunyi nyaring yang tiba-tiba muncul dari perangkat Anda."</string>
@@ -156,6 +156,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Jika aplikasi memintanya, perangkat akan mencocokkan outputnya ke kecepatan frame asli konten yang sedang Anda tonton. Hal ini dapat menyebabkan layar kosong sebentar saat keluar dari atau masuk ke pemutaran video."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Jangan pernah"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Meskipun aplikasi memintanya, perangkat tidak akan mencoba mencocokkan outputnya ke kecepatan frame asli konten yang sedang Anda tonton."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Pilihan format"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Otomatis"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Menggunakan format yang dilaporkan perangkat"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Memilih format secara manual dari format yang tersedia"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"FORMAT YANG DIDUKUNG"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"FORMAT YANG TIDAK DIDUKUNG"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Jika dipilih, sistem akan mengizinkan aplikasi memilih format HDR mana saja yang didukung oleh rangkaian perangkat Anda. Format yang dipilih aplikasi mungkin bukan yang berkualitas tertinggi."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Jika dipilih, Anda dapat secara manual menonaktifkan format HDR yang didukung rangkaian perangkat yang menyebabkan masalah pemutaran. Format HDR yang tidak didukung oleh rangkaian perangkat tidak dapat diaktifkan secara paksa. Format yang dipilih aplikasi mungkin bukan yang berkualitas tertinggi."</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Hapus data dalam cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Ini akan menghapus data cache untuk semua apl."</string>
     <string name="accessories_add" msgid="413764175035531452">"Tambahkan aksesori"</string>
@@ -206,11 +231,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Alamat Bluetooth"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Terhubung"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Terputus"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Anda tidak memiliki izin untuk mengubah setelan Bluetooth."</string>
     <string name="send_feedback" msgid="936698637869795473">"Kirim masukan"</string>
     <string name="launch_help" msgid="2607478763131952469">"Pusat Bantuan"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Tanggal &amp; Waktu"</string>
     <string name="system_language" msgid="5516099388471974346">"Bahasa"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Anda tidak memiliki izin untuk mengubah bahasa perangkat."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Keyboard"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Keyboard &amp; IsiOtomatis"</string>
     <string name="system_autofill" msgid="6983989261108020046">"IsiOtomatis"</string>
@@ -226,6 +253,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Opsi developer"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Tidak ada"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Penggunaan &amp; diagnostik"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Tidak ada aplikasi admin yang tersedia"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Dinonaktifkan oleh admin"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Tidak tersedia"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Aplikasi admin perangkat"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Tidak ada aplikasi aktif"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikasi aktif</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikasi aktif</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Dinonaktifkan oleh admin, kebijakan enkripsi, atau penyimpanan kredensial"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Info perangkat yang dikelola"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Perubahan &amp; setelan yang dikelola oleh organisasi"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Perubahan &amp; setelan yang dikelola oleh <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Untuk menyediakan akses ke data kerja, organisasi mungkin mengubah setelan dan menginstal software di perangkat.\n\nUntuk info selengkapnya, hubungi admin organisasi."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Jenis informasi yang dapat dilihat organisasi"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Perubahan dibuat oleh admin organisasi"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Akses Anda ke perangkat ini"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Data yang terkait dengan akun kerja, seperti email dan kalender"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Daftar aplikasi di perangkat"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Jumlah waktu dan data yang dihabiskan di setiap aplikasi"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Log traffic jaringan terbaru"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Laporan bug terbaru"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Log keamanan terbaru"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Tidak ada"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Aplikasi diinstal"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Jumlah aplikasi merupakan hasil perkiraan. Hal ini tidak termasuk aplikasi yang diinstal selain dari Play Store."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> aplikasi</item>
+      <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> aplikasi</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Izin akses lokasi"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Izin akses mikrofon"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Izin akses kamera"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Aplikasi default"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikasi</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikasi</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Keyboard default"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Setel ke <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"VPN yang selalu aktif telah diaktifkan"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"VPN yang selalu aktif telah diaktifkan di profil pribadi"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"VPN yang selalu aktif telah diaktifkan di profil kerja"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Proxy HTTP global disetel"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Kredensial tepercaya"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Kredensial tepercaya di profil pribadi Anda"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Kredensial tepercaya di profil kerja Anda"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> sertifikat CA</item>
+      <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> sertifikat CA</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Admin dapat mengunci perangkat dan menyetel ulang sandi"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Admin dapat menghapus semua data perangkat"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Gagal memasukkan sandi sebelum menghapus semua data perangkat"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Gagal memasukkan sandi sebelum menghapus data profil kerja"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> kesempatan</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> kesempatan</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Perangkat ini dikelola oleh organisasi."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Perangkat ini dikelola oleh <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> ."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Pelajari lebih lanjut"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">Aplikasi kamera</item>
+      <item quantity="one">Aplikasi kamera</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"aplikasi Kalender"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Aplikasi kontak"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">Aplikasi program email</item>
+      <item quantity="one">Aplikasi program email</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Aplikasi peta"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">Aplikasi telepon</item>
+      <item quantity="one">Aplikasi telepon</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Tutorial"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Update sistem"</string>
     <string name="system_update_description" msgid="998883510488461766">"Tindakan ini akan mengupdate software sistem ke versi terbaru. Perangkat Anda akan dimulai ulang."</string>
@@ -256,6 +363,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Tidak Wajib"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Wajib"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Pembaruan sistem tambahan"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Jaringan mungkin dipantau"</string>
+    <string name="done_button" msgid="616159688526431451">"Selesai"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">Percayai atau hapus sertifikat</item>
+      <item quantity="one">Percayai atau hapus sertifikat</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> telah menginstal certificate authority di perangkat Anda, yang dapat memungkinkan mereka memantau aktivitas jaringan perangkat, termasuk email, aplikasi, dan situs aman.\n\nUntuk informasi selengkapnya tentang sertifikat ini, hubungi admin.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> telah menginstal certificate authority di perangkat Anda, yang dapat memungkinkan mereka memantau aktivitas jaringan perangkat, termasuk email, aplikasi, dan situs aman.\n\nUntuk informasi selengkapnya tentang sertifikat ini, hubungi admin.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> telah menginstal certificate authority untuk profil kerja Anda, yang dapat memungkinkan mereka memantau aktivitas jaringan kerja, termasuk email, aplikasi, dan situs aman.\n\nUntuk informasi selengkapnya tentang sertifikat ini, hubungi admin.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> telah menginstal certificate authority untuk profil kerja Anda, yang dapat memungkinkan mereka memantau aktivitas jaringan kerja, termasuk email, aplikasi, dan situs aman.\n\nUntuk informasi selengkapnya tentang sertifikat ini, hubungi admin.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Pihak ketiga dapat memantau aktivitas jaringan Anda, termasuk email, aplikasi, dan situs web aman.\n\nKredensial terpercaya yang dipasang pada perangkat Anda memungkinkan hal ini."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">Periksa sertifikat</item>
+      <item quantity="one">Periksa sertifikat</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Status"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Jaringan, nomor seri, dan informasi lainnya"</string>
     <string name="manual" msgid="5683935624321864999">"Manual"</string>
@@ -388,6 +514,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Jaringan tidak tersambung"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Sudah tersambung ke <xliff:g id="SSID">%1$s</xliff:g>. Sambungkan ke jaringan lain?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"jaringan tak dikenal"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Anda tidak memiliki izin untuk mengubah jaringan Wi‑Fi."</string>
     <string name="title_ok" msgid="6500452958848127145">"Oke"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Batal"</string>
     <string name="storage_title" msgid="6637715914885228193">"Penyimpanan"</string>
@@ -875,6 +1002,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Screenshot tidak diizinkan"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Aplikasi ini tidak dapat dibuka"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Jika ada pertanyaan, hubungi admin IT"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Detail selengkapnya"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Admin dapat memantau serta mengelola aplikasi dan data yang terkait dengan profil kerja, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi perangkat."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Admin dapat memantau serta mengelola aplikasi dan data yang terkait dengan pengguna ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi perangkat."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Admin dapat memantau serta mengelola aplikasi dan data yang terkait dengan perangkat ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi perangkat."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Hapus profil kerja"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Aplikasi admin perangkat"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Nonaktifkan aplikasi admin perangkat ini"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Uninstal aplikasi"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Nonaktifkan &amp; uninstal"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Aplikasi admin perangkat"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Aktifkan aplikasi admin perangkat?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Aktifkan aplikasi admin perangkat ini"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Mengaktifkan aplikasi admin ini akan mengizinkan aplikasi <xliff:g id="APP_NAME">%1$s</xliff:g> menjalankan operasi berikut:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Perangkat ini akan dikelola dan dipantau oleh <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Aplikasi admin ini aktif dan mengizinkan aplikasi <xliff:g id="APP_NAME">%1$s</xliff:g> menjalankan operasi berikut:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Dengan melanjutkan, pengguna Anda akan dikelola oleh admin yang juga dapat menyimpan data terkait, selain data pribadi Anda.\n\nAdmin dapat memantau serta mengelola setelan, akses, aplikasi, dan data terkait pengguna, termasuk aktivitas jaringan dan informasi lokasi perangkat."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Bagikan laporan bug?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Admin IT meminta laporan bug untuk membantu memecahkan masalah perangkat ini. Aplikasi dan data mungkin dibagikan."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Admin IT meminta laporan bug untuk membantu memecahkan masalah perangkat ini. Aplikasi dan data mungkin dibagikan, dan untuk sementara perangkat mungkin menjadi lambat."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Laporan bug ini sedang dibagikan kepada admin IT. Hubungi mereka untuk detail selengkapnya."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Bagikan"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Tolak"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Perangkat yang digunakan dengan <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Perangkat tidak ditemukan. Pastikan perangkat diaktifkan dan dapat tersambung ke jaringan."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Coba lagi"</string>

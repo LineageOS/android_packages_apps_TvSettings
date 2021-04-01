@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos med Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Bemærk! Automatisk fungerer muligvis kun, hvis enheden rapporterer sine understøttede formater korrekt."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automatisk: Brug formater, som enheden rapporterer"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatisk: Aktivér kun formater, som understøttes af din outputenhed til lyd "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Når du har valgt dette, tillader systemet, at apps kan vælge ethvert lydformat, der understøttes af din enhedskæde. Apps kan vælge et format, der ikke er af højeste kvalitet."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Ingen: Brug aldrig surroundsound"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manuelt: Vælg manuelt formater blandt de tilgængelige formater"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manuelt: Aktivér eller deaktiver hvert format, som understøttes af denne enhed, uanset hvilke formater din outputenhed til lyd understøtter."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Når du har valgt dette, kan du manuelt deaktivere lydformater, der understøttes af din enhedskæde, som forårsager afspilningsproblemer. Lydformater, der ikke understøttes af din enhed, kan aktiveres. I visse tilfælde kan apps vælge et format, der ikke er af højeste kvalitet."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Vil du tillade lydformatet, selvom det ikke er understøttet?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Din tilsluttede lydenhed rapporterer ikke understøttelse af dette format. Dette kan medføre høje lyde fra enheden eller anden uventet adfærd."</string>
@@ -156,6 +156,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Hvis appen anmoder om det, justerer din enhed outputtet efter den oprindelige billedfrekvens for det indhold, du ser. Dette kan medføre, at din skærm bliver sort i et sekunds tid, når du afslutter eller starter en videoafspilning."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Aldrig"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Selvom appen anmoder om det, forsøger din enhed aldrig at justere outputtet efter den oprindelige billedfrekvens for det indhold, du ser."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Valg af format"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatisk"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuelt"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Brug formater, som enheden rapporterer"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Vælg formater manuelt blandt de tilgængelige formater"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"UNDERSTØTTEDE FORMATER"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"IKKE-UNDERSTØTTEDE FORMATER"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Når du har valgt dette, tillader systemet, at apps kan vælge ethvert HDR-format, der understøttes af din enhedskæde. Apps kan vælge et format, der ikke er af højeste kvalitet."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Når du har valgt dette, kan du manuelt deaktivere HDR-formater, der understøttes af din enhedskæde, som forårsager afspilningsproblemer. De HDR-formater, der ikke understøttes af din enhedskæde, kan ikke aktiveres manuelt. Apps kan vælge et format, der ikke er af højeste kvalitet."</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vil du rydde cachelagrede data?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Dette vil rydde cachelagrede data for alle apps."</string>
     <string name="accessories_add" msgid="413764175035531452">"Tilføj tilbehør"</string>
@@ -206,11 +231,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth-adresse"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Forbundet"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Afbrudt"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Du har ikke tilladelse til at ændre Bluetooth-indstillinger."</string>
     <string name="send_feedback" msgid="936698637869795473">"Giv feedback"</string>
     <string name="launch_help" msgid="2607478763131952469">"Hjælp"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Dato og klokkeslæt"</string>
     <string name="system_language" msgid="5516099388471974346">"Sprog"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Du har ikke tilladelse til at ændre enhedens sprog."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Tastatur"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Tastatur og Autofyld"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Autofyld"</string>
@@ -226,6 +253,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Valgmuligheder for udviklere"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Ingen"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Brug og diagnostik"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Der er ikke nogen tilgængelige apps til enhedsadministration"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Deaktiveret af administratoren"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Ikke tilgængelig"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Apps til enhedsadministration"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Ingen aktive apps"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aktiv app</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktive apps</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Deaktiveret af administrator, krypteringspolitik eller Lager for loginoplysninger"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Oplysninger om administrerede enheder"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Ændringer og indstillinger, der administreres af din organisation"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Ændringer og indstillinger, der administreres af <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Din organisation kan ændre indstillingerne og installere software på din enhed for at give adgang til dine arbejdsdata. \n\nDu kan få flere oplysninger ved at kontakte din organisations administrator."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Typer oplysninger, din organisation kan se"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Ændringer, der er foretaget af organisationens administrator"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Din adgang til denne enhed"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Data, der er tilknyttet din arbejdskonto, f.eks. mail og kalender"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Liste over apps på din enhed"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Tid og data, der er brugt i hver app"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Seneste historik for netværkstrafik"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Den seneste fejlrapport"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Den seneste sikkerhedslogfil"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Ingen"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Installerede apps"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Antallet af apps er et skøn. Apps, der er blevet installeret uden for Play Butik, er muligvis ikke medregnet."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="one">Mindst <xliff:g id="COUNT_1">%d</xliff:g> app</item>
+      <item quantity="other">Mindst <xliff:g id="COUNT_1">%d</xliff:g> apps</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Adgangstilladelser til placering"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Adgangstilladelser til mikrofon"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Adgangstilladelser til kamera"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Standardapps"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> app</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apps</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Standardtastatur"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Indstillet til <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"\"Konstant VPN\" er aktiveret"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"\"Konstant VPN\" er aktiveret på din personlige profil"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"\"Konstant VPN\" er aktiveret på din arbejdsprofil"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Global HTTP-proxy er konfigureret"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Pålidelige loginoplysninger"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Pålidelige loginoplysninger på din personlige profil"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Pålidelige loginoplysninger på din arbejdsprofil"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="one">Mindst <xliff:g id="COUNT_1">%d</xliff:g> CA-certifikat</item>
+      <item quantity="other">Mindst <xliff:g id="COUNT_1">%d</xliff:g> CA-certifikater</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Administratoren kan låse enheden og nulstille adgangskoden"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Administratoren kan slette alle data på enheden"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Det maksimale antal mislykkede adgangskodeforsøg, inden alle data på enheden slettes"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Det maksimale antal mislykkede adgangskodeforsøg, inden data på arbejdsprofilen slettes"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> forsøg</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> forsøg</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Denne enhed administreres af din organisation."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Denne enhed administreres af <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Få flere oplysninger"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="one">Kameraapp</item>
+      <item quantity="other">Kameraapps</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Kalenderapp"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"App til kontakter"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="one">Mailklientapp</item>
+      <item quantity="other">Mailklientapps</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Kortapp"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="one">Opkaldsapp</item>
+      <item quantity="other">Opkaldsapps</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Selvstudier"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Systemopdatering"</string>
     <string name="system_update_description" msgid="998883510488461766">"Dette opdaterer systemsoftwaren til den nyeste version. Enheden genstarter."</string>
@@ -256,6 +363,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Eftergivende"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Håndhæver"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Flere systemopdateringer"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Netværket kan være overvåget"</string>
+    <string name="done_button" msgid="616159688526431451">"Luk"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="one">Tillad eller fjern certifikat</item>
+      <item quantity="other">Tillad eller fjern certifikater</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> har installeret en certifikatautoritet på din enhed, hvilket giver domænet mulighed for at overvåge netværksaktivitet på din enhed, herunder mails, apps og sikre websites.\n\nKontakt din administrator for at få flere oplysninger om dette certifikat.</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> har installeret certifikatautoriteter på din enhed, hvilket giver domænet mulighed for at overvåge netværksaktivitet på din enhed, herunder mails, apps og sikre websites.\n\nKontakt din administrator for at få flere oplysninger om disse certifikater.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> har installeret en certifikatautoritet for din arbejdsprofil, hvilket giver domænet mulighed for at overvåge aktivitet på dit arbejdsnetværk, herunder mails, apps og sikre websites.\n\nKontakt din administrator for at få flere oplysninger om dette certifikat.</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> har installeret certifikatautoriteter for din arbejdsprofil, hvilket giver domænet mulighed for at overvåge aktivitet på dit arbejdsnetværk, herunder mails, apps og sikre websites\n\nKontakt din administrator for at få flere oplysninger om disse certifikater.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"En tredjepart kan overvåge din netværksaktivitet, herunder e-mails, apps og sikre websites.\n\nPålidelige loginoplysninger, der er installeret på din enhed, gør dette muligt."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="one">Tjek certifikatet</item>
+      <item quantity="other">Tjek certifikaterne</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Status"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Netværk, serienumre og andre oplysninger"</string>
     <string name="manual" msgid="5683935624321864999">"Brugervejledning"</string>
@@ -388,6 +514,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Netværket er ikke tilsluttet"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Der er allerede forbindelse til <xliff:g id="SSID">%1$s</xliff:g>. Vil du oprette forbindelse til et andet netværk?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"et ukendt netværk"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Du har ikke tilladelse til at ændre Wi-Fi-netværket."</string>
     <string name="title_ok" msgid="6500452958848127145">"OK"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Annuller"</string>
     <string name="storage_title" msgid="6637715914885228193">"Lagerplads"</string>
@@ -876,6 +1003,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Screenshots er ikke tilladt"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Denne app kan ikke åbnes"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Kontakt din it-administrator, hvis du har spørgsmål"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Mere info"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Din administrator kan overvåge og administrere apps og data, der er knyttet til din arbejdsprofil, herunder indstillinger, tilladelser, virksomhedsadgang, netværksaktivitet og enhedens placeringsoplysninger."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Din administrator kan overvåge og administrere apps og data, der er knyttet til denne bruger, herunder indstillinger, tilladelser, virksomhedsadgang, netværksaktivitet og enhedens placeringsoplysninger."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Din administrator kan overvåge og administrere apps og data, der er knyttet til denne enhed, herunder indstillinger, tilladelser, virksomhedsadgang, netværksaktivitet og enhedens placeringsoplysninger."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Fjern arbejdsprofil"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"App til enhedsadministration"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Deaktiver denne app til enhedsadministration"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Afinstaller appen"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Deaktiver og afinstaller"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Apps til enhedsadministration"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Aktiver appen til enhedsadministration?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Aktivér denne app til enhedsadministration"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Hvis denne administratorapp aktiveres, får appen <xliff:g id="APP_NAME">%1$s</xliff:g> tilladelse til at foretage følgende handlinger:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Denne enhed administreres og overvåges af <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Denne administratorapp er aktiv og giver appen <xliff:g id="APP_NAME">%1$s</xliff:g> tilladelse til at udføre følgende handlinger:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Hvis du fortsætter, administreres din bruger af din administrator, som også kan gemme tilknyttede data ud over dine personlige data.\n\nDin administrator kan overvåge og administrere indstillinger, adgang, apps og data, der er knyttet til denne bruger, herunder netværksaktivitet og din enheds placeringsoplysninger."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Vil du dele fejlrapporten?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Din it-administrator har anmodet om en fejlrapport for bedre at kunne finde og rette fejlen på enheden. Apps og data deles muligvis."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Din it-administrator har anmodet om en fejlrapport for bedre at kunne finde og rette fejlen på enheden. Apps og data deles muligvis, og din enhed kan midlertidigt blive langsommere."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Denne fejlrapport deles med din it-administrator. Kontakt vedkommende for at få flere oplysninger."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Del"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Afvis"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Enhed, der skal bruges sammen med <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Der blev ikke fundet nogen enheder. Sørg for, at enhederne er tændt, og at der kan oprettes forbindelse til dem."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Prøv igen"</string>

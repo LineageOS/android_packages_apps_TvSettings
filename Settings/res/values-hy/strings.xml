@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos և Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"«Ավտոմատ» տարբերակը կարող է չաշխատել, եթե ձեր սարքը պատշաճ կերպով չի նշում աջակցվող ձևաչափերը։"</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Ավտոմատ․ օգտագործել սարքում աջակցվող ձևաչափերը"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Ավտոմատ․ միացվում են միայն այն ձևաչափերը, որոնք աջակցվում են ձեր աուդիո արտածման սարքի կողմից "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Երբ այս կարգավորումը միացված է, հավելվածները կարող են ավտոմատ ընտրել ձեր սարքերում աջակցվող ձայնի ցանկացած ձևաչափերից մեկը։ Ընդ որում, ընտրված ձևաչափի որակը կարող է լինել ոչ ամենաբարձրը։"</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Ոչ մեկը․ երբեք չօգտագործել ծավալային ձայն"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Ձեռքով․ ընտրել ձևաչափեր հասանելի տարբերակներից"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Ձեռքով․ դուք կարող եք ինքնուրույն միացնել կամ անջատել ցանկացած ձևաչափ, որն աջակցվում է այս սարքի կողմից՝ անկախ ձեր աուդիո արտածման սարքում աջակցվող ձևաչափերից։"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Երբ այս կարգավորումը միացված է, դուք կարող եք ձեռքով անջատել ձեր սարքերում աջակցվող ձայնի ձևաչափերը, որոնք նվագարկման խնդիրներ են առաջացնում։ Ձեր սարքերում չաջակցվող ձայնի ձևաչափերը հնարավոր է միացնել։ Որոշ դեպքերում հավելվածների կողմից ավտոմատ ընտրված ձևաչափի որակը կարող է լինել ոչ ամենաբարձրը։"</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Միացնե՞լ ձայնի չաջակցվող ձևաչափը"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Ձեր միացրած աուդիո սարքը չի աջակցում այս ձևաչափը, ինչի հետևանքով սարքում կարող է անսպասելի աղմուկ կամ ձայնի բարձրացում նկատվել։"</string>
@@ -156,6 +156,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Երբ հավելվածը պահանջում է, սարքը կհամապատասխանեցնի իր հաճախականությունը նվագարկվող տեսանյութի կադրերի հաճախականությանը։ Տեսանյութի նվագարկման սկզբում և վերջում էկրանը մի պահ կարող է սպիտակել։"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Երբեք"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Նույնիսկ երբ հավելվածը պահանջում է, սարքը չի համապատասխանեցնի իր հաճախականությունը նվագարկվող տեսանյութի կադրերի հաճախականությանը։"</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Ձևաչափի ընտրություն"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Ավտոմատ"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Ձեռքով"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Օգտագործել սարքում աջակցվող ձևաչափերը"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Ձեռքով ընտրեք ձևաչափեր հասանելի տարբերակներից"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"ԱՋԱԿՑՎՈՂ ՁԵՎԱՉԱՓԵՐ"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"ՉԱՋԱԿՑՎՈՂ ՁԵՎԱՉԱՓԵՐ"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Երբ այս կարգավորումը միացված է, հավելվածները կարող են ավտոմատ ընտրել ձեր սարքերում աջակցվող ցանկացած HDR ձևաչափերից մեկը։ Ընդ որում, ընտրված ձևաչափի որակը կարող է լինել ոչ ամենաբարձրը։"</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Երբ այս կարգավորումը միացված է, դուք կարող եք ձեռքով անջատել ձեր սարքերում աջակցվող HDR ձևաչափերը, որոնք նվագարկման խնդիրներ են առաջացնում։ Ձեր սարքերում չաջակցվող HDR ձևաչափերը հնարավոր չէ միացնել։ Ընդ որում, ընտրված ձևաչափի որակը կարող է լինել ոչ ամենաբարձրը։"</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Ջնջե՞լ քեշավորված տվյալները:"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Սա կմաքրի բոլոր ծրագրերի քեշավորված տվյալները:"</string>
     <string name="accessories_add" msgid="413764175035531452">"Ավելացնել լրասարք"</string>
@@ -206,11 +231,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth-ի հասցե"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Միացված է"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Անջատված է"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Դուք թույլտվություն չունեք փոխելու Bluetooth կարգավորումները:"</string>
     <string name="send_feedback" msgid="936698637869795473">"Կարծիք հայտնել"</string>
     <string name="launch_help" msgid="2607478763131952469">"Օգնության կենտրոն"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Ամսաթիվ և ժամ"</string>
     <string name="system_language" msgid="5516099388471974346">"Լեզու"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Դուք չունեք սարքի լեզուն փոխելու թույլտվություն։"</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Ստեղնաշար"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Ստեղնաշար և ինքնալրացում"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Ինքնալրացում"</string>
@@ -226,6 +253,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Ծրագրավորողի ընտրանքներ"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Չկա"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Օգտագործում և ախտորոշում"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Սարքի ադմինիստրատորի հավելվածներ չկան"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Անջատվել է ադմինիստրատորի կողմից"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Հասանելի չէ"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Սարքի ադմինիստրատորի հավելվածներ"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Ակտիվ հավելվածներ չկան"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ակտիվ հավելված</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ակտիվ հավելված</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Անջատված է ադմինիստրատորի, գաղտնագրման քաղաքականության կամ հավատարմագրային պահոցի կողմից"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Կառավարվող սարքի տվյալները"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Ձեր կազմակերպության կողմից կառավարվող փոփոխություններ և կարգավորումներ"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> կազմակերպության կողմից կառավարվող փոփոխություններ և կարգավորումներ"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Ձեր աշխատանքային տվյալներից օգտվելու հնարավորություն ընձեռելու նպատակով ձեր կազմակերպությունը կարող է փոխել կարգավորումները և ձեր սարքում տեղադրել ծրագրեր։\n\nԼրացուցիչ տեղեկություններ ստանալու համար դիմեք ձեր կազմակերպության ադմինիստրատորին:"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Ձեր կազմակերպությանը տեսանելի տեղեկատվության տեսակները"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Ձեր կազմակերպության ադմինիստրատորի կատարած փոփոխությունները"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Այս սարքն օգտագործելու ձեր իրավունքները"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Ձեր աշխատանքային հաշվի հետ կապված տվյալները, օրինակ՝ էլ․ հասցեն և օրացույցի միջոցառումները"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Ձեր սարքում տեղադրված հավելվածների ցուցակը"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Յուրաքանչյուր հավելվածում ծախսած ժամանակը և օգտագործված տվյալների ծավալը"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Ցանցային թրաֆիկի ամենավերջին մատյանը"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Ամենավերջի վրիպակի զեկույցը"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Ամենավերջին անվտանգության մատյանը"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Չկա"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Տեղադրված հավելվածներ"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Հավելվածների թիվը մոտավոր է։ Հնարավոր է, որ այն չի ներառում կողմնակի աղբյուրներից տեղադրված հավելվածները։"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="one">Նվազագույնը <xliff:g id="COUNT_1">%d</xliff:g> հավելված</item>
+      <item quantity="other">Նվազագույնը <xliff:g id="COUNT_1">%d</xliff:g> հավելված</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Տեղորոշման թույլտվությունները"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Խոսափողի թույլտվությունները"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Տեսախցիկի թույլտվությունները"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Կանխադրված հավելվածները"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> հավելված</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> հավելված</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Կանխադրված ստեղնաշար"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"<xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"«Միշտ միացված VPN» կարգավորումը միացված է"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"«Միշտ միացված VPN» կարգավորումը միացված է ձեր անձնական պրոֆիլում"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"«Միշտ միացված VPN» կարգավորումը միացված է ձեր աշխատանքային պրոֆիլում"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Ընդհանուր HTTP պրոքսին կարգավորված է"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Վստահելի ՀԿ հավաստագրեր"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Վստահելի ՀԿ հավաստագրեր ձեր անձնական պրոֆիլում"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Վստահելի ՀԿ հավաստագրեր ձեր աշխատանքային պրոֆիլում"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="one">Նվազագույնը <xliff:g id="COUNT_1">%d</xliff:g> CA հավաստագիր</item>
+      <item quantity="other">Նվազագույնը <xliff:g id="COUNT_1">%d</xliff:g> CA հավաստագիր</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Ադմինիստրատորը կարող է կողպել սարքը և վերակայել գաղտնաբառը"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Ադմինիստրատորը կարող է ջնջել սարքի բոլոր տվյալները"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Գաղտնաբառ մուտքագրելու անհաջող փորձերի քանակը, որից հետո սարքի բոլոր տվյալները կջնջվեն"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Գաղտնաբառ մուտքագրելու անհաջող փորձերի քանակը, որից հետո աշխատանքային պրոֆիլի տվյալները կջնջվեն"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> փորձ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> փորձ</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Այս սարքի կառավարիչը ձեր կազմակերպությունն է։"</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Այս սարքի կառավարիչն է <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> կազմակերպությունը։"</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Մանրամասն"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="one">Տեսախցիկի հավելվածներ</item>
+      <item quantity="other">Տեսախցիկի հավելվածներ</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Օրացույցի հավելված"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Կոնտակտների հավելված"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="one">Փոստային հավելվածներ</item>
+      <item quantity="other">Փոստային հավելվածներ</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Քարտեզի հավելված"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="one">Հեռախոսի հավելվածներ</item>
+      <item quantity="other">Հեռախոսի հավելվածներ</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Ուղեցույցներ"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Համակարգի թարմացում"</string>
     <string name="system_update_description" msgid="998883510488461766">"Համակարգի ծրագրակազմը կթարմացվի վերջին տարբերակով։ Սարքը կվերագործարկվի։"</string>
@@ -256,12 +363,31 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Թույլատրելի"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Պարտադրում"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Հավելյալ թարմացումներ"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Ցանցը կարող է վերահսկվել"</string>
+    <string name="done_button" msgid="616159688526431451">"Պատրաստ է"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="one">Հաստատեք կամ հեռացրեք հավաստագրերը</item>
+      <item quantity="other">Հաստատեք կամ հեռացրեք հավաստագրերը</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> տիրույթի ադմինիստրատորը ձեր սարքում տեղադրել է CA հավաստագրեր։ Դա նրան թույլ է տալիս վերահսկել ձեր գործողությունները ցանցում, այդ թվում՝ էլփոստի և հավելվածների օգտագործումը, ինչպես նաև պաշտպանված կայքերի դիտումը։\n\nԼրացուցիչ տեղեկությունների համար դիմեք ձեր ադմինիստրատորին։</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> տիրույթի ադմինիստրատորը ձեր սարքում տեղադրել է CA հավաստագրեր։ Դա նրան թույլ է տալիս վերահսկել ձեր գործողությունները ցանցում, այդ թվում՝ էլփոստի և հավելվածների օգտագործումը, ինչպես նաև պաշտպանված կայքերի դիտումը։\n\nԼրացուցիչ տեղեկությունների համար դիմեք ձեր ադմինիստրատորին։</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> տիրույթի ադմինիստրատորը ձեր աշխատանքային պրոֆիլի համար տեղադրել է CA հավաստագրեր։ Դա նրան թույլ է տալիս վերահսկել ձեր գործողությունները աշխատանքային ցանցում, այդ թվում՝ էլփոստի և հավելվածների օգտագործումը, ինչպես նաև պաշտպանված կայքերի դիտումը։\n\nԼրացուցիչ տեղեկությունների համար դիմեք ձեր ադմինիստրատորին։</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> տիրույթի ադմինիստրատորը ձեր աշխատանքային պրոֆիլի համար տեղադրել է CA հավաստագրեր։ Դա նրան թույլ է տալիս վերահսկել ձեր գործողությունները աշխատանքային ցանցում, այդ թվում՝ էլփոստի և հավելվածների օգտագործումը, ինչպես նաև պաշտպանված կայքերի դիտումը։\n\nԼրացուցիչ տեղեկությունների համար դիմեք ձեր ադմինիստրատորին։</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Երրորդ կողմն ի վիճակի է վերահսկել ձեր ցանցային գործունեությունը, այդ թվում՝ նամակները, ծրագրերը և անվտանգ կայքերը:\n\nՁեր սարքում տեղադրված վստահելի հավատարմագիրն է դա հնարավոր դարձնում:"</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="one">Ստուգել հավաստագրերը</item>
+      <item quantity="other">Ստուգել հավաստագրերը</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Կարգավիճակ"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Ցանցի կարգավիճակ, հերթական համարներ և այլ տվյալներ"</string>
     <string name="manual" msgid="5683935624321864999">"Ձեռքով"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"Նորմատիվ տեղեկատվություն"</string>
     <string name="device_feedback" msgid="4871903271442960465">"Կարծիք հայտնել սարքի մասին"</string>
-    <string name="oem_unlock_enable_disabled_summary_bootloader_unlocked" msgid="4641790432171693921">"Համակարգի բեռնիչն արդեն ապակողպված է"</string>
+    <string name="oem_unlock_enable_disabled_summary_bootloader_unlocked" msgid="4641790432171693921">"Օպերացիոն համակարգի բեռնիչն արդեն ապակողպված է"</string>
     <string name="oem_unlock_enable_disabled_summary_connectivity" msgid="2979556699380115576">"Նախ միացեք համացանցին"</string>
     <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="1946089732305102622">"Միացեք համացանցին կամ դիմեք օպերատորին"</string>
     <string name="oem_unlock_enable_disabled_summary_sim_locked_device" msgid="5634005787486307657">"Անհասանելի է օպերատորի կողմից կողպված սարքերում"</string>
@@ -388,6 +514,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Ցանցը միացված չէ"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Արդեն միացած է <xliff:g id="SSID">%1$s</xliff:g>-ին: Միանա՞լ մեկ այլ ցանցի:"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"անհայտ ցանց"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Դուք թույլտվություն չունեք փոխելու Wi‑Fi-ի ցանցը:"</string>
     <string name="title_ok" msgid="6500452958848127145">"Լավ"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Չեղարկել"</string>
     <string name="storage_title" msgid="6637715914885228193">"Պահեստ"</string>
@@ -875,6 +1002,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Էկրանի պատկերի պահպանումը արգելված է"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Հնարավոր չէ բացել հավելվածը"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Եթե հարցեր ունեք, դիմեք ձեր ՏՏ ադմինիստրատորին"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Մանրամասն"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Ձեր ադմինիստրատորը կարող է վերահսկել և կառավարել ձեր աշխատանքային պրոֆիլի հետ առնչվող հավելվածները և տվյալները, ներառյալ կարգավորումները, թույլտվությունները, կորպորատիվ մուտքը, ցանցային գործունեությունը և սարքի տեղադրության տվյալները:"</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Ձեր ադմինիստրատորը կարող է վերահսկել և կառավարել այս օգտատիրոջ հետ առնչվող հավելվածները և տվյալները, ներառյալ կարգավորումները, թույլտվությունները, կորպորատիվ մուտքը, ցանցային գործունեությունը և սարքի տեղադրության տվյալները:"</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Ձեր ադմինիստրատորը կարող է վերահսկել և կառավարել այս սարքի հետ առնչվող հավելվածները և տվյալները, ներառյալ կարգավորումները, թույլտվությունները, կորպորատիվ մուտքը, ցանցային գործունեությունը և սարքի տեղադրության տվյալները:"</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Հեռացնել աշխատանքային պրոֆիլը"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Սարքի ադմինիստրատորի հավելվածը"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Անջատել այս սարքի ադմինիստրատորի հավելվածը"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Հեռացնել հավելվածը"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Անջատել և ապատեղադրել"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Սարքի ադմինիստրատորի հավելվածներ"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Ակտիվացնե՞լ սարքի ադմինիստրատորի հավելվածը:"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Ակտիվացնել այս սարքի ադմինիստրատորի հավելվածը"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Ադմինիստրատորի այս հավելվածի ակտիվացումը <xliff:g id="APP_NAME">%1$s</xliff:g> հավելվածին թույլ կտա կատարել հետևյալ գործողությունները`"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> հավելվածը կկառավարի և կվերահսկի այս սարքը։"</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Ադմինիստրատորի այս հավելվածը ակտիվ է և թույլ է տալիս <xliff:g id="APP_NAME">%1$s</xliff:g>-ին կատարել հետևյալ գործողությունները`"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Շարունակելու դեպքում օգտատերը կկառավարվի ձեր ադմինիստրատորի կողմից, որը, ձեր անձնական տվյալներից բացի, կկարողանա պահել նաև դրա հետ առնչվող տվյալները:\n\nՁեր ադմինիստրատորը կարող է վերահսկել և կառավարել կարգավորումները, մուտքը, հավելվածները և այս օգտատիրոջ հետ առնչվող տվյալները, ներառյալ ցանցային գործունեությունը և ձեր սարքի տեղադրության տվյալները:"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Տրամադրե՞լ վրիպակի զեկույցը:"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ՏՏ ադմինիստրատորին անհրաժեշտ է վրիպակի զեկույց: Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ:"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ՏՏ ադմինիստրատորին անհրաժեշտ է վրիպակի զեկույց: Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ, իսկ սարքի աշխատանքը կարող է ժամանակավորապես դանդաղել:"</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Այս վրիպակի զեկույցը տրամադրվում է ձեր ՏՏ ադմինիստրատորին: Կապվեք նրա հետ՝ լրացուցիչ տեղեկություններ ստանալու համար:"</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Տրամադրել"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Մերժել"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Սարք <xliff:g id="APPNAME">%1$s</xliff:g> հավելվածի հետ օգտագործելու համար"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Սարքեր չեն գտնվել։ Համոզվեք, որ դրանք անջատված չեն և հասանելի են` ցանցին միանալու համար։"</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Նորից փորձել"</string>

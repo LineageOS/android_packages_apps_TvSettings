@@ -134,10 +134,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos مع Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"ملاحظة: قد لا يعمل الخيار \"تلقائي\" إذا لم يعلن جهازك بشكل صحيح عن التنسيقات المتوافقة معه."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"\"تلقائي\": استخدام الصيغ التي اختارها الجهاز"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"\"تلقائي\": يؤدي اختيار هذا الزر إلى تفعيل الصيغ المتوافقة فقط مع جهاز إخراج الصوت "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"عند الاختيار، سيسمح النظام للتطبيقات باختيار أي صيغة صوت توفّرها سلسلة جهازك. قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"\"بدون صيغ\": عدم استخدام الصوت المحيطي"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"\"يدوي\": اختيار الصيغ يدويًا من الصيغ المتوفرة"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"\"يدوي\": يؤدي اختيار هذا الزر إلى تفعيل أو إيقاف يدوي لكل صيغة متوافقة مع هذا الجهاز، بغض النظر عن الصيغ المتوافقة مع جهاز إخراج الصوت"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"عند الاختيار، يمكنك يدويًا إيقاف صيغ الصوت التي توفّرها سلسلة جهازك وتسبب مشاكل في التشغيل. ويمكنك تفعيل صيغ الصوت التي لا توفّرها سلسلة جهازك. في بعض الأحيان، قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"هل تريد تفعيل تنسيق الصوت غير المتوافق؟"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"لا يعلن جهازك السماعي المتصل عن توافق هذا التنسيق معه. قد يتسبب هذا في عمل جهازك بطريقة غير متوقعة، كصدور أصوات مزعجة ومرتفعة أو صوت فرقعة من جهازك."</string>
@@ -164,6 +164,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ستتطابق مخرجات جهازك مع العدد الأصلي للقطات في الثانية الذي يظهر به ما تشاهده من محتوى إذا طلب التطبيق ذلك. وقد يؤدي ذلك إلى ظهور شاشة فارغة لفترة قصيرة عند الدخول إلى وضع تشغيل فيديو أو الخروج منه."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"أبدًا"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"لن تتطابق مخرجات جهازك أبدًا مع العدد الأصلي للقطات في الثانية الذي يظهر به ما تشاهده من محتوى حتى إذا طلب التطبيق ذلك."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"اختيار الصيغة"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"تلقائي"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"يدوي"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"استخدام الصيغ التي أعلن عنها الجهاز"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"الاختيار يدويًا من الصيغ المتاحة"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"الصيغ المتوافقة"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"الصيغ غير المتوافقة"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+‎"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"عند اختيار الزر، سيسمح النظام للتطبيقات باختيار أي صيغة من صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع شاشة العرض. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"عند اختيار الزر، يمكنك يدويًا إيقاف صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع شاشة العرض والتي تسبّب مشاكل في التشغيل. لا يمكن يدويًا تفعيل صيغ \"النطاق العالي الديناميكية\" (HDR) غير المتوافقة مع شاشة العرض. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"هل تريد محو البيانات المؤقتة؟"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"يؤدي ذلك إلى محو البيانات المؤقتة لكل التطبيقات."</string>
     <string name="accessories_add" msgid="413764175035531452">"إضافة ملحق"</string>
@@ -214,11 +239,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"عنوان البلوتوث"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"متّصل"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"غير متّصل"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"ليست لديك أذونات لتغيير إعدادات بلوتوث."</string>
     <string name="send_feedback" msgid="936698637869795473">"إرسال تعليق"</string>
     <string name="launch_help" msgid="2607478763131952469">"مركز المساعدة"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"التاريخ والوقت"</string>
     <string name="system_language" msgid="5516099388471974346">"اللغة"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"ليس لديك إذن بتغيير لغة الجهاز."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"لوحة المفاتيح"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"لوحة المفاتيح والملء التلقائي"</string>
     <string name="system_autofill" msgid="6983989261108020046">"الملء التلقائي"</string>
@@ -234,6 +261,66 @@
     <string name="system_developer_options" msgid="8480844257066475479">"خيارات مطور البرامج"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"غير متوفر"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"الاستخدام وبيانات التشخيص"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"لا تتوفر تطبيقات لمشرف الجهاز"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"تم إيقاف الإعداد بواسطة المشرف"</string>
+    <!-- no translation found for disabled_by_administrator_summary (3420979957115426764) -->
+    <skip />
+    <string name="manage_device_admin" msgid="5714217234035017983">"تطبيقات مشرف الجهاز"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"لا تتوفر تطبيقات نشطة"</string>
+    <!-- no translation found for number_of_device_admins (5825543996501454373) -->
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"تم إيقافه بواسطة المشرف، أو سياسة التشفير، أو وحدة تخزين بيانات الاعتماد"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"معلومات الجهاز المُدار"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"تتولى مؤسستك إدارة التغييرات والإعدادات."</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"تتولى <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> إدارة التغييرات والإعدادات."</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"لتوفير إمكانية الوصول إلى بيانات العمل، يمكن لمؤسستك تغيير الإعدادات وتثبيت برنامج على جهازك.\n\nلمعرفة مزيد من التفاصيل، يمكنك الاتصال بمشرف المؤسسة."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"أنواع المعلومات التي يمكن لمؤسستك الاطّلاع عليها"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"التغييرات التي يجريها مشرف المؤسسة"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"إمكانية وصولك إلى هذا الجهاز"</string>
+    <!-- no translation found for enterprise_privacy_enterprise_data (8135491104894522008) -->
+    <skip />
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"قائمة التطبيقات على جهازك"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"مقدار الوقت المنقضي والبيانات المستخدمة في كل تطبيق"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"أحدث سجل لحركة بيانات الشبكة"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"تقرير الأخطاء الأحدث"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"أحدث سجلّ أمان"</string>
+    <!-- no translation found for enterprise_privacy_none (6660670916934417519) -->
+    <skip />
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"التطبيقات المثبّتة"</string>
+    <!-- no translation found for enterprise_privacy_apps_count_estimation_info (3875568975752197381) -->
+    <skip />
+    <!-- no translation found for enterprise_privacy_number_packages_lower_bound (3891649682522079620) -->
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"أذونات تحديد الموقع"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"أذونات الميكروفون"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"أذونات الكاميرا"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"التطبيقات التلقائية"</string>
+    <!-- no translation found for enterprise_privacy_number_packages (1652060324792116347) -->
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"لوحة المفاتيح التلقائية"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"ضبط على <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"تم تفعيل إعداد \"شبكة افتراضية خاصة (VPN) دائمة التفعيل\""</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"تم تفعيل إعداد \"شبكة افتراضية خاصة (VPN) دائمة التفعيل\" في الملف الشخصي"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"تم تفعيل \"شبكة افتراضية خاصة (VPN) دائمة التفعيل\" في الملف الشخصي للعمل"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"تم ضبط الخادم الوكيل HTTP العام"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"بيانات الاعتماد الموثوقة"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"بيانات اعتماد موثوقة في ملفك الشخصي"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"بيانات اعتماد موثوقة في ملفك الشخصي للعمل"</string>
+    <!-- no translation found for enterprise_privacy_number_ca_certs (4861211387981268796) -->
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"يمكن للمشرف قفل الجهاز وإعادة ضبط كلمة المرور"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"يمكن للمشرف حذف جميع بيانات الجهاز"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"محاولات كلمة المرور الخاطئة قبل حذف جميع بيانات الجهاز"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"محاولات كلمة المرور الخاطئة قبل حذف بيانات الملف الشخصي للعمل"</string>
+    <!-- no translation found for enterprise_privacy_number_failed_password_wipe (8317320334895448341) -->
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"تتولى مؤسستك إدارة هذا الجهاز."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"تتم إدارة هذا الجهاز بواسطة <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"مزيد من المعلومات"</string>
+    <!-- no translation found for default_camera_app_title (3870902175441923391) -->
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"تطبيق التقويم"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"تطبيق جهات الاتصال"</string>
+    <!-- no translation found for default_email_app_title (5601238555065668402) -->
+    <string name="default_map_app_title" msgid="9051013257374474801">"تطبيق الخريطة"</string>
+    <!-- no translation found for default_phone_app_title (1573981201056870719) -->
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>، <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"برامج تعليمية"</string>
     <string name="about_system_update" msgid="7421264399111367755">"تحديث النظام"</string>
     <string name="system_update_description" msgid="998883510488461766">"سيؤدي هذا الإجراء إلى تحديث برامج النظام إلى أحدث إصدار. وستتم إعادة تشغيل جهازك."</string>
@@ -268,6 +355,13 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"متساهل"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"فرض"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"تحديثات إضافية للنظام"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"قد تكون الشبكة خاضعة للمراقبة"</string>
+    <string name="done_button" msgid="616159688526431451">"تم"</string>
+    <!-- no translation found for ssl_ca_cert_dialog_title (8222753634330561111) -->
+    <!-- no translation found for ssl_ca_cert_info_message_device_owner (6128536570911468907) -->
+    <!-- no translation found for ssl_ca_cert_info_message (5828471957724016946) -->
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"يُمكن لأي جهة خارجية مراقبة نشاط الشبكة، بما في ذلك الرسائل الإلكترونية والتطبيقات ومواقع الويب الآمنة.\n\nويُمكن لبيانات اعتماد موثوقة ومثبتة على جهاز الكمبيوتر إتاحة إجراء ذلك."</string>
+    <!-- no translation found for ssl_ca_cert_settings_button (196409967946912560) -->
     <string name="device_status" msgid="8266002761193692207">"الحالة"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"الشبكة والأرقام التسلسلية ومعلومات أخرى"</string>
     <string name="manual" msgid="5683935624321864999">"يدوي"</string>
@@ -400,6 +494,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"الشبكة غير متصلة"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"أنت متصل من قبل بـ <xliff:g id="SSID">%1$s</xliff:g>. هل تريد الاتصال بشبكة أخرى؟"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"شبكة غير معروفة"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"ليس لديك إذن لتغيير شبكة Wi‑Fi."</string>
     <string name="title_ok" msgid="6500452958848127145">"موافقة"</string>
     <string name="title_cancel" msgid="2337143367016419016">"إلغاء"</string>
     <string name="storage_title" msgid="6637715914885228193">"وحدة التخزين"</string>
@@ -903,6 +998,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"غير مسموح بالتقاط لقطة شاشة"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"يتعذّر فتح هذا التطبيق."</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"إذا كان لديك أسئلة، يُرجى التواصل مع مشرف تكنولوجيا المعلومات."</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"مزيد من التفاصيل"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"يمكن للمشرف مراقبة التطبيقات والبيانات المرتبطة بالملفات الشخصية للعمل وإدارتها، بما في ذلك الإعدادات والأذونات والدخول إلى المؤسسة ونشاط الشبكة ومعلومات موقع الجهاز."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"يمكن للمشرف مراقبة التطبيقات والبيانات المرتبطة بهذا المستخدم وإدارتها، بما في ذلك الإعدادات والأذونات والدخول إلى المؤسسة ونشاط الشبكة ومعلومات موقع الجهاز."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"يمكن للمشرف مراقبة التطبيقات والبيانات المرتبطة بهذا الجهاز وإدارتها، بما في ذلك الإعدادات والأذونات والدخول إلى المؤسسة ونشاط الشبكة ومعلومات موقع الجهاز."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"إزالة الملف الشخصي للعمل"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"تطبيق مشرف الجهاز"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"إيقاف تطبيق مشرف الجهاز"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"إلغاء تثبيت التطبيق"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"إيقاف وإلغاء التثبيت"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"تطبيقات مشرف الجهاز"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"هل تريد تفعيل تطبيق مشرف الجهاز؟"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"تفعيل تطبيق مشرف الجهاز هذا"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"سيؤدي تفعيل تطبيق المشرف إلى السماح لـ \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" بتنفيذ العمليات التالية:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"سيدير التطبيق <xliff:g id="APP_NAME">%1$s</xliff:g> هذا الجهاز ويراقبه."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"تطبيق المشرف نشط ويسمح لـ \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" بتنفيذ العمليات التالية:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"من خلال المتابعة، ستتم إدارة بيانات المستخدم من خلال المشرف الذي يمكنه أيضًا تخزين البيانات المرتبطة بالإضافة إلى بياناتك الشخصية.\n\nويمكن للمشرف مراقبة الإعدادات وإمكانيات الوصول والتطبيقات والبيانات المرتبطة بهذا المستخدم وإدارتها، بما في ذلك نشاط الشبكة ومعلومات موقع جهازك."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"هل تريد مشاركة تقرير الخطأ؟"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"طلب مشرف تكنولوجيا المعلومات الحصول على تقرير خطأ للمساعدة في تحديد مشكلة هذا الجهاز وحلّها؛ ويمكن أن تتم مشاركة التطبيقات والبيانات."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"طلب مشرف تكنولوجيا المعلومات الحصول على تقرير خطأ للمساعدة في تحديد مشكلة هذا الجهاز وحلّها؛ ويمكن أن تتم مشاركة التطبيقات والبيانات، كما يمكن أن تبطَأ سرعة تشغيل جهازك مؤقتًا."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"تتم مشاركة تقرير الخطأ هذا مع مشرف تكنولوجيا المعلومات. اتصل به للحصول على المزيد من التفاصيل."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"مشاركة"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"رفض"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"الجهاز المُستخدَم مع <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"لم يتم العثور على أيّ أجهزة. تأكَّد من تشغيل الأجهزة وتوفّرها للاتصال."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"إعادة المحاولة"</string>
