@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus ilə Dolby Atmos"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Qeyd: Cihaz dəstəklənən formatları düzgün bildirmirsə, Avtomatik seçim işləməyə bilər."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Avtomatik: Cihazın bildirdiyi formatları istifadə edin"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Avtomatik: Yalnız səs çıxış cihazınız tərəfindən dəstəklənən formatları aktivləşdirin "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Seçildiyi zaman sistem tətbiqlərin cihaz şəbəkəniz tərəfindən dəstəklənən hər hansı səs formatını seçməsinə imkan verəcək. Tətbiqlər ən yüksək keyfiyyətdə olmayan formatı seçə bilər."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Heç vaxt: Əhatəli səs heç vaxt işlədilməsin"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manual: Əlçatan formatlardan manual olaraq formatları seçin"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: Səs çıxış cihazınızın dəstəklədiyindən asılı olmayaraq bu cihaz tərəfindən dəstəklənən hər bir formatı seçici olaraq aktiv və ya deaktiv edin."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Seçildiyi zaman oxutma ilə bağlı problemə səbəb olan, cihaz şəbəkəniz tərəfindən dəstəklənən səs formatlarını manual olaraq deaktiv edə bilərsiniz. Cihaz şəbəkəniz tərəfindən dəstəklənməyən səs formatları aktiv edilə bilər. Bəzi hallarda tətbiqlər ən yüksək keyfiyyətdə olmayan formatı seçə bilər."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Dəstəklənməyən səs formatı aktiv edilsin?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Qoşulmuş audio cihazınız bu formatın dəstəklənməsini bildirmir. Cihazda yüksək səs və ya qarışıqlıq kimi gözlənilməz əlamətlər yarana bilər."</string>
@@ -156,6 +156,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Tətbiq tələb etsə, cihazınız təmin etdiyi nəticəni izlədiyiniz məzmunun orijinal kadr sürətinə uyğunlaşdıracaq. Bu, video oxutmadan çıxarkən və ya daxil olarkən ekranınızda bir saniyə görüntü olmamasına səbəb ola bilər."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Heç vaxt"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Tətbiq tələb etsə də, cihazınız heç vaxt təmin etdiyi nəticəni izlədiyiniz məzmunun orijinal kadr sürətinə uyğunlaşdırmağa çalışmayacaq."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Format seçimi"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Avtomatik"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Cihazın bildirdiyi formatları istifadə edin"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Əlçatan formatlardan manual olaraq formatları seçin"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"DƏSTƏKLƏNƏN FORMATLAR"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"DƏSTƏKLƏNMƏYƏN FORMATLAR"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Seçildiyi zaman sistem tətbiqlərin cihaz şəbəkəniz tərəfindən dəstəklənən hər hansı HDR formatını seçməsinə imkan verəcək. Tətbiqlər ən yüksək keyfiyyətdə olmayan formatı seçə bilər."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Seçildiyi zaman oxutma ilə bağlı problemə səbəb olan, cihaz şəbəkəniz tərəfindən dəstəklənən HDR formatlarını manual olaraq deaktiv edə bilərsiniz. Cihaz şəbəkəniz tərəfindən dəstəklənməyən HDR formatları məcburi qaydada aktiv edilə bilməz. Tətbiqlər ən yüksək keyfiyyətdə olmayan formatı seçə bilər."</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Keşlənmiş data silinsin?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Bu, bütün tətbiqlər üçün keşlənmiş verilənləri siləcək."</string>
     <string name="accessories_add" msgid="413764175035531452">"Aksessuar əlavə edin"</string>
@@ -206,11 +231,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth ünvanı"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Qoşulub"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Ayrılıb"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Bluetooth ayarlarını dəyişməyə icazəniz yoxdur."</string>
     <string name="send_feedback" msgid="936698637869795473">"Rəy göndərin"</string>
     <string name="launch_help" msgid="2607478763131952469">"Yardım Mərkəzi"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Tarix və Vaxt"</string>
     <string name="system_language" msgid="5516099388471974346">"Dil"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Cihaz dilini dəyişmək icazəniz yoxdur."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Klaviatura"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Klaviatura &amp; avtomatik daxiletmə"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Avtomatik daxiletmə"</string>
@@ -226,6 +253,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Gəlişdirici seçimləri"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Heç bir"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"İstifadə &amp; diaqnostika"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Əlçatan cihaz admin tətbiqi yoxdur"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Admin tərəfindən deaktiv edildi"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Əlçatmazdır"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Cihaz admin tətbiqləri"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Aktiv tətbiq yoxdur"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktiv tətbiq</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aktiv tətbiq</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Admin, siyasət və ya yaddaş deaktiv etdi"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"İdarə edilən cihaz məlumatı"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Dəyişiklik və ayarlar təşkilat tərəfindən idarə olunur"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Dəyişiklik və ayarlar <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> tərəfindən idarə olunur"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"İş datasına girişi təmin etmək üçün təşkilat ayarları dəyişə və cihaza proqram təminatını quraşdıra bilər.\n\nƏtraflı məlumat üçün təşkilatın admini ilə əlaqə saxlayın."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Təşkilatın görə biləcəyi məlumat növləri"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Təşkilatın admini tərəfindən edilən dəyişikliklər"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Bu cihaza girişiniz"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"E-poçt və təqvim kimi iş hesabınız ilə əlaqələndirilmiş data"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Cihazdakı tətbiqlərin siyahısı"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Hər bir tətbiqdə istifadə edilən vaxt və data həcmi"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Ən son şəbəkə ötürülməsi qeydi"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Ən son baq hesabatı"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Ən son təhlükəsizlik qeydiyyatı"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Heç bir"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Tətbiqlər quraşdırıldı"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Tətbiq sayı hesablanır. Siyahıya Play Mağazadan quraşdırılmayan tətbiqlər də daxil ola bilər."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> tətbiq</item>
+      <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> tətbiq</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Məkan icazələri"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Mikrofon icazələri"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Kamera icazələri"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Defolt tətbiqlər"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> tətbiq</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> tətbiq</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Defolt klaviatura"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"<xliff:g id="APP_LABEL">%s</xliff:g> kimi ayarlandı"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Həmişə aktiv VPN yandırıldı"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Həmişə aktiv VPN şəxsi profilinizdə yandırıldı"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Həmişə aktiv VPN iş profilinizdə yandırıldı"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Qlobal HTTP proksi ayarlandı"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Etibarlı kredensiallar"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Şəxsi profilinizdəki etibarlı kredensiallar"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"İş profilinizdəki etibarlı kredensiallar"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> CA sertifikatı</item>
+      <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> CA sertifikatı</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Admin cihazı kilidləyə və parolu sıfırlaya bilər"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Admin cihazın bütün datalarını silə bilər"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Cihazın bütün datasını silməzdən əvvəl parol cəhdləri alınmadı"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"İş profil datasını silməzdən əvvəl parol cəhdləri alınmadı"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> cəhd</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> cəhd</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Bu cihaz təşkilatınız tərəfindən idarə olunur."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Bu cihaz <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> tərəfindən idarə olunur."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Ətraflı məlumat"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">Kamera tətbiqləri</item>
+      <item quantity="one">Kamera tətbiqi</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Təqvim tətbiqi"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Kontakt tətbiqi"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">E-poçt klient tətbiqləri</item>
+      <item quantity="one">E-poçt klient tətbiqi</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Xəritə tətbiqi"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">Telefon tətbiqləri</item>
+      <item quantity="one">Telefon tətbiqi</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Təlimatlar"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Sistem güncəlləşdirməsi"</string>
     <string name="system_update_description" msgid="998883510488461766">"Bu, sistem proqramınızı ən son versiyaya güncəlləyəcək. Cihazınız yenidən başladılacaq."</string>
@@ -256,6 +363,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Icazəli"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Tətbiq edilir"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Əlavə sistem güncəlləmələri"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Şəbəkə nəzərdən keçirilə bilər"</string>
+    <string name="done_button" msgid="616159688526431451">"Hazırdır"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">Sertifikatlara güvənin və ya silin</item>
+      <item quantity="one">Sertifikata güvənin və ya silin</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> cihazınızda e-poçt, tətbiq və təhlükəsiz veb saytları daxil olmaqla cihaz şəbəkə fəaliyyətinizi izləməyə icazə verəcək sertifikat səlahiyyətlərini quraşdırdı.\n\nBu sertifikatlar haqqında daha çox məlumat üçün administratorunuzla əlaqə saxlayın.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> cihazınızda e-poçt, tətbiq və təhlükəsiz veb saytları daxil olmaqla cihaz şəbəkə fəaliyyətinizi izləməyə icazə verəcək sertifikat səlahiyyətini quraşdırdı.\n\nBu sertifikat haqqında daha çox məlumat üçün administratorunuzla əlaqə saxlayın.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> iş profiliniz üçün e-poçt, tətbiq və təhlükəsiz veb saytları daxil olmaqla iş şəbəkə fəaliyyətinizi izləməyə icazə verəcək sertifikat səlahiyyətlərini quraşdırdı.\n\nBu sertifikatlar haqqında daha çox məlumat üçün administratorunuzla əlaqə saxlayın.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> iş profiliniz üçün e-poçt, tətbiq və təhlükəsiz veb saytları daxil olmaqla iş şəbəkə fəaliyyətinizi izləməyə icazə verəcək sertifikat səlahiyyətini quraşdırdı.\n\nBu sertifikat haqqında daha çox məlumat üçün administratorunuzla əlaqə saxlayın.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Üçüncü tərəf e-məktublar, tətbiqlər və təhlükəsiz saytlar kimi şəbəkə fəaliyyətinizi izləmək imkanına malikdir.\n\nCihazınıza quraşdırılmış etibarlı etimad bunu mümkün edir."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">Sertifikatları yoxlayın</item>
+      <item quantity="one">Sertifikatı yoxlayın</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Vəziyyət"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Şəbəkə, seriya nömrələri və digər məlumat"</string>
     <string name="manual" msgid="5683935624321864999">"Təlimat"</string>
@@ -388,6 +514,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Şəbəkə qoşulu deyil"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Artıq <xliff:g id="SSID">%1$s</xliff:g> şəbəkəsinə qoşuludur. Başqa şəbəkəyə qoşulsun?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"naməlum şəbəkə"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Sizin Wi‑Fi şəbəkəsini dəyişməyə icazəniz yoxdur."</string>
     <string name="title_ok" msgid="6500452958848127145">"OK"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Ləğv et"</string>
     <string name="storage_title" msgid="6637715914885228193">"Yaddaş"</string>
@@ -875,6 +1002,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Skrinşota icazə verilmir"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Bu tətbiqi açmaq mümkün deyil"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Sualınız varsa, İT admini ilə əlaqə saxlayın"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Daha ətraflı"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Admin ayarlar, icazələr, korporativ giriş, şəbəkə fəaliyyəti və cihazın məkan məlumatı da daxil olmaqla bu iş profili ilə əlaqəli tətbiq və dataya nəzarət edə və idarə edə bilər."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Admin ayarlar, icazələr, korporativ giriş, şəbəkə fəaliyyəti və cihazın məkan məlumatı da daxil olmaqla bu istifadəçi ilə əlaqəli tətbiq və dataya nəzarət edə və idarə edə bilər."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Admin ayarlar, icazələr, korporativ giriş, şəbəkə fəaliyyəti və cihazın məkan məlumatı da daxil olmaqla bu cihazla əlaqəli tətbiq və dataya nəzarət edə və idarə edə bilər."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"İş profilini silin"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Cihaz admin tətbiqi"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Bu cihaz admin tətbiqini deaktiv edin"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Tətbiqi sistemdən sil"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Deaktiv edin və silin"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Cihaz admin tətbiqləri"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Cihaz admin tətbiqi aktiv edilsin?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Bu cihazın admin tətbiqini aktiv edin"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Bu admin tətbiqini aktiv etməklə <xliff:g id="APP_NAME">%1$s</xliff:g> tətbiqinə aşağı əməliyyatları etmək icazəsi verilir:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Bu cihazı <xliff:g id="APP_NAME">%1$s</xliff:g> idarə edəcək."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Bu admin tətbiqi aktivdir və <xliff:g id="APP_NAME">%1$s</xliff:g> tətbiqinə aşağıdakı əməliyyatları etməyə icazə verir:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Davam etməklə istifadəçiniz admin tərəfindən idarə ediləcək ki, şəxsi dataya əlavə olaraq, əlaqəli datanı saxlaya bilsin.\n\nAdmin ayarlar, giriş, tətbiq və bu istifadəçi ilə əlaqəli ayarlar, giriş, tətbiq və dataya nəzarət etmək və idarə etmək iqtidarındadır, bura şəbəkə fəaliyyəti və cihazın məkan məlumatı da daxildir."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Baq hesabatı paylaşılsın?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"İT admininiz bu cihazda nasazlıqların aşkarlanması üçün baq hesabatı sorğusu göndərdi. Tətbiqlər və data paylaşıla bilər."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"İT admininiz bu cihazda nasazlıqların aşkarlanması üçün baq hesabatı sorğusu göndərdi. Tətbiqlər və data paylaşıla və cihazınızın surəti müvəqqəti azala bilər."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Bu baq hesabatı İT admininiz ilə paylaşıldı. Daha ətraflı məlumat üçün onlarla əlaqə saxlayın."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Paylaşın"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"İmtina edin"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> ilə istifadə ediləcək cihaz"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Cihaz tapılmadı. Cihazların aktiv olması və qoşulmaq üçün əlçatan olmasından əmin olun."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Təkrar sınayın"</string>

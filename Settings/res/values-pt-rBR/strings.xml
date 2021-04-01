@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos com Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Obs: \"Automático\" pode não funcionar se o dispositivo não informar os formatos compatíveis corretos."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automático: usar os formatos informados pelo dispositivo"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automático: ativar apenas os formatos compatíveis com o dispositivo de saída de áudio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Quando selecionado, o sistema permitirá que apps escolham qualquer formato de som compatível com sua cadeia de dispositivos. Os apps podem escolher um formato que não seja o de maior qualidade."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Nenhum: nunca usar o som surround"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manual: escolher manualmente dentre os formatos disponíveis"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: ativar ou desativar seletivamente cada formato compatível com este dispositivo, independependentemente do que é compatível com o dispositivo de saída de áudio"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Quando selecionado, você poderá desativar manualmente formatos de som compatíveis com sua cadeia de dispositivos que estão causando problemas de reprodução. Os formatos não compatíveis podem ser ativados. Em alguns casos, os apps poderão escolher um formato que não seja o de maior qualidade."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Ativar formato de som não compatível?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"O dispositivo de áudio conectado não informou ser compatível com o formato. Isso pode causar comportamentos inesperados, como ruídos altos ou estalos."</string>
@@ -156,6 +156,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Se o app solicitar, o dispositivo usará um frame rate igual ao original do conteúdo que você está assistindo. Isso pode fazer com que a tela fique em branco por um segundo ao sair ou entrar em uma reprodução de vídeo."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nunca"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Mesmo se o app solicitar, o dispositivo nunca tentará usar um frame rate igual ao original do conteúdo que você está assistindo."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Seleção de formato"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automático"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Usar os formatos informados pelo dispositivo"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Escolher manualmente dentre os formatos disponíveis"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"FORMATOS COMPATÍVEIS"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"FORMATOS NÃO COMPATÍVEIS"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Quando selecionado, o sistema permitirá que os apps escolham qualquer formato HDR compatível com sua cadeia de dispositivos. Os apps podem escolher um formato que não seja o de maior qualidade."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Quando selecionado, você poderá desativar manualmente formatos HDR compatíveis com sua cadeia de dispositivos que estejam causando problemas de reprodução. Os formatos não compatíveis com sua cadeia não podem ser ativados à força. Os apps podem escolher um formato que não seja o de maior qualidade."</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Limpar os dados em cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Esta ação limpa dados em cache de todos os apps."</string>
     <string name="accessories_add" msgid="413764175035531452">"Adicionar acessório"</string>
@@ -206,11 +231,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Endereço Bluetooth"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Conectado"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Desconectado"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Você não tem permissão para alterar as configurações de Bluetooth."</string>
     <string name="send_feedback" msgid="936698637869795473">"Enviar feedback"</string>
     <string name="launch_help" msgid="2607478763131952469">"Central de Ajuda"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Data e hora"</string>
     <string name="system_language" msgid="5516099388471974346">"Idioma"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Você não tem permissão para alterar o idioma do dispositivo."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Teclado"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Teclado e preenchimento automático"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Preenchimento automático"</string>
@@ -226,6 +253,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Opções do desenvolvedor"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Nenhum"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Uso e diagnósticos"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Nenhum app de administrador do dispositivo disponível"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Desativada pelo administrador"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Indisponível"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Apps do administrador do dispositivo"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Nenhum app ativo"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> app ativo</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apps ativos</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Desativada pelo admin, política de criptografia ou armazenamento de credenciais"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Informações do dispositivo gerenciado"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Alterações e configurações gerenciadas pela sua organização"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Alterações e configurações gerenciadas por <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Para fornecer acesso aos seus dados de trabalho, sua organização pode alterar configurações e instalar softwares no seu dispositivo.\n\nPara saber mais detalhes, entre em contato com o administrador da sua organização."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Tipos de informação que sua organização pode ver"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Alterações feitas pelo administrador da sua organização"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Seu acesso a este dispositivo"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Dados associados à sua conta de trabalho, como e-mail e agenda"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Lista de apps no seu dispositivo"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Quantidade de tempo gasto e dados usados em cada app"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Registro de tráfego de rede mais recente"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Relatório de bug mais recente"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Registro de segurança mais recente"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Nenhuma"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Apps instalados"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"O número de apps é aproximado e pode não incluir apps instalados fora da Play Store."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="one">No mínimo, <xliff:g id="COUNT_1">%d</xliff:g> app</item>
+      <item quantity="other">No mínimo, <xliff:g id="COUNT_1">%d</xliff:g> apps</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Permissões de localização"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Permissões do microfone"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Permissões da câmera"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Apps padrão"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> app</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apps</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Teclado padrão"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Definir como <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"\"VPN sempre ativa\" ativada"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"\"VPN sempre ativa\" ativada no seu perfil pessoal"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"\"VPN sempre ativa\" ativada no seu perfil de trabalho"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Proxy HTTP geral definido"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Credenciais confiáveis"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Credenciais confiáveis no seu perfil pessoal"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Credenciais confiáveis no seu perfil de trabalho"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="one">No mínimo, <xliff:g id="COUNT_1">%d</xliff:g> certificado de CA</item>
+      <item quantity="other">No mínimo, <xliff:g id="COUNT_1">%d</xliff:g> certificados de CA</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"O administrador pode bloquear o dispositivo e redefinir a senha"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"O administrador pode excluir todos os dados do dispositivo"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Tentativas de senha falhas antes de excluir todos os dados do dispositivo"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Tentativas de senha falhas antes de excluir os dados do perfil de trabalho"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> tentativa</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> tentativas</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Este dispositivo é gerenciado pela sua organização."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Este dispositivo é gerenciado por <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Saiba mais"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="one">App de câmera</item>
+      <item quantity="other">Apps de câmera</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"App Calendário"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"App Contatos"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="one">App de cliente de e-mail</item>
+      <item quantity="other">Apps de cliente de e-mail</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"App Mapa"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="one">App de telefone</item>
+      <item quantity="other">Apps de telefone</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Tutoriais"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Atualização do sistema"</string>
     <string name="system_update_description" msgid="998883510488461766">"Essa ação atualizará o software do sistema para a versão mais recente. O dispositivo será reiniciado."</string>
@@ -256,6 +363,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Permissivo"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Impondo"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Mais atualiz. do sistema"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"A rede pode ser monitorada"</string>
+    <string name="done_button" msgid="616159688526431451">"Concluído"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="one">Confiar no certificado ou removê-lo</item>
+      <item quantity="other">Confiar nos certificados ou removê-los</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> instalou uma autoridade de certificação no seu dispositivo, o que pode permitir que essa pessoa monitore a atividade na rede dele, incluindo e-mails, apps e sites seguros.\n\nPara ver mais informações sobre esse certificado, entre em contato com o administrador.</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> instalou autoridades de certificação no seu dispositivo, o que pode permitir que essa pessoa monitore a atividade na rede dele, incluindo e-mails, apps e sites seguros.\n\nPara ver mais informações sobre esses certificados, entre em contato com o administrador.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> instalou uma autoridade de certificação para seu perfil de trabalho, o que pode permitir que essa pessoa monitore sua atividade profissional na rede, incluindo e-mails, apps e sites seguros.\n\nPara ver mais informações sobre o certificado, entre em contato com o administrador.</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> instalou autoridades de certificação para seu perfil de trabalho, o que pode permitir que essa pessoa monitore sua atividade profissional na rede, incluindo e-mails, apps e sites seguros.\n\nPara ver mais informações sobre os certificados, entre em contato com o administrador.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Sua atividade na rede, incluindo e-mails, apps e websites seguros, pode ser monitorada por terceiros.\n\nUma credencial confiável instalada no dispositivo permite isso."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="one">Verificar certificado</item>
+      <item quantity="other">Verificar certificados</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Status"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Rede, números de série e outras informações"</string>
     <string name="manual" msgid="5683935624321864999">"Manual"</string>
@@ -388,6 +514,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"A rede não está conectada"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Já conectado a <xliff:g id="SSID">%1$s</xliff:g>. Conectar a uma rede diferente?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"rede desconhecida"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Você não tem permissão para alterar a rede Wi-Fi."</string>
     <string name="title_ok" msgid="6500452958848127145">"OK"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Cancelar"</string>
     <string name="storage_title" msgid="6637715914885228193">"Armazenamento"</string>
@@ -875,6 +1002,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Captura de tela não permitida"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Não é possível abrir este app"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Se tiver alguma dúvida, entre em contato com o administrador de TI"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Mais detalhes"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Seu administrador pode monitorar e gerenciar apps e dados associados ao seu perfil de trabalho, incluindo configurações, permissões, acesso corporativo, atividade de rede e informações de local do dispositivo."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Seu administrador pode monitorar e gerenciar apps e dados associados a este usuário, incluindo configurações, permissões, acesso corporativo, atividade de rede e informações de local do dispositivo."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"O administrador pode monitorar e gerenciar apps e dados associados a este dispositivo, incluindo configurações, permissões, acesso corporativo, atividade de rede e informações de local do dispositivo."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Remover perfil de trabalho"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"App de administrador do dispositivo"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Desativar este app de administrador do dispositivo"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Desinstalar app"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Desativar e desinstalar"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Apps do administrador do dispositivo"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Ativar app de admin. do dispositivo?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Ativar o app de administrador deste dispositivo"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"A ativação deste administrador permitirá que o app <xliff:g id="APP_NAME">%1$s</xliff:g> execute as seguintes operações:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Este dispositivo será gerenciado e monitorado por <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Este app de administrador está ativado e permite que o <xliff:g id="APP_NAME">%1$s</xliff:g> execute as seguintes operações:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Ao prosseguir, o usuário será gerenciado pelo seu administrador, que também poderá armazenar dados associados, bem como dados pessoais.\n\nSeu administrador pode monitorar e gerenciar configurações, acesso, apps e dados associados a esse usuário, incluindo informações de atividade de rede e local do dispositivo."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Compartilhar relatório de bug?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Seu administrador de TI solicitou um relatório de bug para ajudar a resolver problemas deste dispositivo. É possível que apps e dados sejam compartilhados."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Seu administrador de TI solicitou um relatório de bug para ajudar a resolver problemas deste dispositivo. É possível que apps e dados sejam compartilhados, o que pode deixar seu dispositivo temporariamente mais lento."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Este relatório de bug está sendo compartilhado com seu administrador de TI. Entre em contato com ele para saber mais detalhes."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Compartilhar"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Recusar"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Dispositivo para usar com <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Nenhum dispositivo encontrado. Os dispositivos precisam estar ligados e disponíveis para conexão."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Tentar novamente"</string>
