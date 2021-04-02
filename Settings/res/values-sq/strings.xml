@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos me Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Shënim. Opsioni \"Automatik\" mund të mos funksionojë nëse pajisja nuk i raporton saktë formatet e mbështetura."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automatik: Përdor formatet e raportuara të pajisjes"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatike: Aktivizo vetëm formatet që mbështeten nga pajisja jote e daljes së audios "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Kur përzgjidhet, sistemi do të lejojë që aplikacionet të zgjedhin çdo format tingulli që mbështetet nga zinxhiri i pajisjeve të tua. Aplikacionet mund të zgjedhin një format që nuk është formati i cilësisë më të lartë."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Asnjë: Asnjëherë mos përdor tingull rrethues"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manual: Zgjidh formatet në mënyrë manuale nga formatet e ofruara"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manuale: Aktivizo ose çaktivizo me përzgjedhje çdo format të mbështetur nga kjo pajisje, pavarësisht se çfarë mbështetet nga pajisja jote e daljes së audios."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Kur zgjidhet, mund të çaktivizosh manualisht formatet e tingujve që mbështeten nga zinxhiri i pajisjeve të tua që shkaktojnë probleme me luajtjen. Formatet e tingujve që nuk mbështeten nga zinxhiri i pajisjeve të tua mund të aktivizohen. Në disa raste, aplikacionet mund të zgjedhin një format që nuk është formati i cilësisë më të lartë."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Po aktivizon një format të pambështetur të tingullit?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Pajisja audio e lidhur nuk raporton mbështetjen për këtë format. Kjo mund të shkaktojë sjellje të papritura si p.sh. zhurma të larta ose kërcitje nga pajisja jote."</string>
@@ -156,6 +156,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Nëse aplikacioni e kërkon, pajisja jote do ta përshtatë daljen e saj me shpejtësinë origjinale të kuadrove që shikon. Kjo mund të bëjë që ekrani të jetë bosh për një sekondë kur del ose hyn në luajtjen e një videoje."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Asnjëherë"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Edhe nëse aplikacioni e kërkon, pajisja jote asnjëherë nuk do të përpiqet ta përshtatë daljen e saj me shpejtësinë origjinale të kuadrove që shikon."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Zgjedhja e formatit"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatik"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuale"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Përdor formatet e raportuara të pajisjes"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Zgjidh formatet në mënyrë manuale nga formatet e ofruara"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"FORMATET E MBËSHTETURA"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"FORMATET E PAMBËSHTETURA"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Kur zgjidhet, sistemi do të lejojë që aplikacionet të zgjedhin çdo format HDR që mbështetet nga zinxhiri yt i pajisjeve. Aplikacionet mund të zgjedhin një format që nuk është formati i cilësisë më të lartë."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Kur zgjidhet, mund të çaktivizosh manualisht formatet HDR që mbështeten nga zinxhiri i pajisjeve të tua që shkaktojnë probleme me luajtjen. Formatet HDR që nuk mbështeten nga zinxhiri i pajisjeve të tua nuk mund të aktivizohen me detyrim. Aplikacionet mund të zgjedhin një format që nuk është formati i cilësisë më të lartë."</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Të pastrohen të dhënat e memories specifike?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Kjo do të pastrojë të dhënat e memories specifike për të gjitha aplikacionet."</string>
     <string name="accessories_add" msgid="413764175035531452">"Shto një aksesor"</string>
@@ -206,11 +231,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Adresa e Bluetooth-it"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Lidhur"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Shkëputur"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Nuk ke leje për të ndryshuar cilësimet e \"Bluetooth-it\"."</string>
     <string name="send_feedback" msgid="936698637869795473">"Dërgo koment"</string>
     <string name="launch_help" msgid="2607478763131952469">"Qendra e ndihmës"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Data dhe ora"</string>
     <string name="system_language" msgid="5516099388471974346">"Gjuha"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Nuk ke leje të ndryshosh gjuhën e pajisjes."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Tastiera"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Tastiera dhe plotësimi automatik"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Plotësim automatik"</string>
@@ -226,6 +253,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Opsionet e zhvilluesit"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Asnjë"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Përdorimi dhe diagnostikimi"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Nuk ka asnjë aplikacion administrimi të pajisjes në dispozicion"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Çaktivizuar nga administratori"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Nuk ofrohet"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Apl. e admin. të pajisjes"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Asnjë aplikacion aktiv"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikacione aktive</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikacion aktiv</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Çaktivizuar nga administratori, politika e enkriptimit ose hapësira ruajtëse e kredencialeve"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Informacioni i pajisjes së menaxhuar"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Ndryshimet dhe cilësimet menaxhohen nga organizata jote"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Ndryshimet dhe cilësimet menaxhohen nga <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Për të ofruar qasjen në të dhënat e tua të punës, organizata jote mund të ndryshojë cilësimet dhe të instalojë softuerë në pajisjen tënde.\n\nKontakto me administratorin e organizatës për më shumë detaje."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Llojet e informacionit që mund të shikojë organizata jote"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Ndryshimet e kryera nga administratori i organizatës tënde"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Qasja jote në këtë pajisje"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Të dhënat e lidhura me llogarinë tënde të punës, si email-i dhe kalendari"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Lista e aplikacioneve në pajisjen tënde"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Sasia e kohës dhe të dhënat e harxhuara në çdo aplikacion"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Regjistri më i fundit i trafikut të rrjetit"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Raporti më i fundit i defekteve në kod"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Regjistri yt më i fundit i sigurisë"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Asnjë"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Aplikacione të instaluara"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Numri i aplikacioneve është i përafërt. Ai mund të mos përfshijë aplikacionet e instaluara jashtë \"Dyqanit të Play\"."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">Minimumi <xliff:g id="COUNT_1">%d</xliff:g> aplikacione</item>
+      <item quantity="one">Minimumi <xliff:g id="COUNT_0">%d</xliff:g> aplikacion</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Lejet e vendndodhjes"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Lejet e mikrofonit"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Lejet e kamerës"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Apl. e parazgjedhura"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikacione</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikacion</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Tastiera e parazgjedhur"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Caktuar në <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Rrjeti VPN gjithmonë aktiv i aktivizuar"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Rrjeti VPN gjithmonë aktiv i aktivizuar në profilin tënd personal"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Rrjeti VPN gjithmonë aktiv i aktivizuar në profilin tënd të punës"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Përfaqësuesi global HTTP i caktuar"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Kredencialet e besuara"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Kredencialet e besuara në profilin tënd personal"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Kredencialet e besuara në profilin tënd të punës"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">Minimumi <xliff:g id="COUNT_1">%d</xliff:g> certifikata CA</item>
+      <item quantity="one">Minimumi <xliff:g id="COUNT_0">%d</xliff:g> certifikatë CA</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Administratori mund ta kyçë pajisjen dhe rivendosë fjalëkalimin"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Administratori mund të fshijë të gjitha të dhënat e pajisjes"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Përpjekje të dështuara për fjalëkalimin përpara se të fshihen të gjitha të dhënat e pajisjes"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Përpjekje të dështuara për fjalëkalimin përpara se të fshihen të dhënat e profilit të punës"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> përpjekje</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> përpjekje</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Kjo pajisje menaxhohet nga organizata jote."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Kjo pajisje menaxhohet nga <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Mëso më shumë"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">Aplikacionet e kamerës</item>
+      <item quantity="one">Aplikacioni i kamerës</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Aplikacioni i kalendarit"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Aplikacioni i kontakteve"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">Aplikacionet e klientit të email-it</item>
+      <item quantity="one">Aplikacioni i klientit të email-it</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Aplikacioni i hartës"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">Aplikacionet e telefonatave</item>
+      <item quantity="one">Aplikacioni i telefonatave</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Udhëzime"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Përditësimi i sistemit"</string>
     <string name="system_update_description" msgid="998883510488461766">"Kjo do ta rivendosë softuerin e sistemit tënd në versionin më të fundit. Pajisja jote do të riniset."</string>
@@ -256,6 +363,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Tolerant"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Detyrues"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Përditësime shtesë të sistemit"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Rrjeti mund të jetë i monitoruar"</string>
+    <string name="done_button" msgid="616159688526431451">"U krye"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">Besoji ose hiqi certifikatat</item>
+      <item quantity="one">Besoje ose hiqe certifikatën</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ka instaluar autoritete certifikatash në pajisjen tënde, të cilat mund ta lejojë atë të monitorojë aktivitetin e rrjetit të pajisjes, duke përfshirë email-et, aplikacionet dhe sajtet e sigurta të uebit.\n\nPër më shumë informacione rreth këtyre certifikatave, kontakto me administratorin.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> ka instaluar një autoritet certifikate në pajisjen tënde, i cili mund ta lejojë atë të monitorojë aktivitetin e rrjetit të pajisjes, duke përfshirë email-et, aplikacionet dhe sajtet e sigurta të uebit.\n\nPër më shumë informacione rreth kësaj certifikate, kontakto me administratorin.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ka instaluar autoritete certifikate për profilin tënd të punës që mund ta lejojnë atë të monitorojë aktivitetin tënd të rrjetit të punës, duke përfshirë email-et, aplikacionet dhe sajtet e sigurta të uebit.\n\nPër më shumë informacione rreth këtyre certifikatave, kontakto me administratorin.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> ka instaluar një autoritet certifikate për profilin tënd të punës që mund ta lejojë atë të monitorojë aktivitetin tënd të rrjetit të punës, duke përfshirë email-et, aplikacionet dhe sajtet e sigurta të uebit.\n\nPër më shumë informacione rreth kësaj certifikate, kontakto me administratorin.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Një palë e tretë është në gjendje të monitorojë aktivitetin e rrjetit, përfshirë mail-in, aplikacionet dhe faqet e sigurta të internetit.\n\nKëtë po e bën këtë të mundur një kredencial i besuar i instaluar në pajisjen tënde."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">Kontrollo certifikatat</item>
+      <item quantity="one">Kontrollo certifikatën</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Statusi"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Rrjeti, numrat e serisë dhe informacione të tjera"</string>
     <string name="manual" msgid="5683935624321864999">"Manuale"</string>
@@ -388,6 +514,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Rrjeti nuk është lidhur"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Është lidhur tashmë me <xliff:g id="SSID">%1$s</xliff:g>. Të lidhet me një rrjet tjetër?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"një rrjet i panjohur"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Nuk ke leje të ndryshosh rrjetin Wi-Fi."</string>
     <string name="title_ok" msgid="6500452958848127145">"Në rregull"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Anulo"</string>
     <string name="storage_title" msgid="6637715914885228193">"Hapësira ruajtëse"</string>
@@ -875,6 +1002,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Pamja e ekranit nuk lejohet"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Ky aplikacion nuk mund të hapet"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Nëse ke pyetje, kontakto me administratorin e teknologjisë së informacionit"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Më shumë detaje"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Administratori yt mund të monitorojë dhe të menaxhojë aplikacionet dhe të dhënat e lidhura me profilin tënd të punës, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin e rrjetit dhe informacionet e vendndodhjes së pajisjes."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Administratori yt mund të monitorojë dhe të menaxhojë aplikacionet dhe të dhënat e lidhura me këtë përdorues, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin e rrjetit dhe informacionet e vendndodhjes së pajisjes."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Administratori yt mund të monitorojë dhe menaxhojë aplikacionet dhe të dhënat e lidhura me këtë pajisje, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin e rrjetit dhe informacionet e vendndodhjes së pajisjes."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Hiq profilin e punës"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Apl. administrimi i pajisjes"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Çaktivizo këtë aplikacion të administratorit të pajisjes"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Çinstalo aplikacionin"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Çaktivizo dhe çinstalo"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Apl. e admin. të pajisjes"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Të aktivizohet aplikacioni i administratorit të pajisjes?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Aktivizo këtë aplikacion të administratorit të pajisjes"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Aktivizimi i këtij aplikacioni të administratorit do të lejojë që aplikacioni <xliff:g id="APP_NAME">%1$s</xliff:g> të kryejë veprimet e mëposhtme:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Kjo pajisje do të menaxhohet dhe do të monitorohet nga <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Ky aplikacion administratori është aktiv dhe lejon apl. <xliff:g id="APP_NAME">%1$s</xliff:g> të kryejë veprimet e mëposhtme:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Duke vazhduar, profili yt si \"përdorues\" do të menaxhohet nga administratori yt, i cili mund të ruajë të dhënat e lidhura, përveç të dhënave të tua personale.\n\nAdministratori yt ka aftësinë që të monitorojë dhe të menaxhojë cilësimet, qasjen, aplikacionet dhe të dhënat e lidhura me këtë përdorues, duke përfshirë aktivitetin e rrjetit dhe informacionet e vendndodhjes së pajisjes tënde."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Të ndahet raporti i defektit në kod?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Administratori i teknologjisë së informacionit kërkoi një raport të defekteve në kod për të ndihmuar me zgjidhjen e problemeve. Aplikacioni dhe të dhënat mund të ndahen."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Administratori i teknologjisë së informacionit kërkoi një raport të defekteve në kod për të ndihmuar me zgjidhjen e problemeve. Aplikacioni dhe të dhënat mund të ndahen dhe kjo mund të ngadalësojë përkohësisht pajisjen tënde."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Ky raport i defektit në kod po ndahet me administratorin tënd të IT-së. Kontaktoje atë për më shumë detaje."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Shpërndaj"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Refuzo"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Pajisja që do të përdoret me <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Nuk u gjet asnjë pajisje. Sigurohu që pajisjet të jenë të ndezura dhe të gatshme për t\'u lidhur."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Provo sërish"</string>
