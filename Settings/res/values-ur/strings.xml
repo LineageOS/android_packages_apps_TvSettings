@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus کے ساتھ Dolby Atmos"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"نوٹ: آلے کے اپنے تعاون یافتہ فارمیٹس کے صحیح اطلاع نہ دینے پر ممکن ہے خود کار اختیار کام نہ کرے۔"</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"خود کار: آلے سے اطلاع کردہ فارمیٹس استعمال کریں"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"خودکار: صرف ان فارمیٹس کو فعال کریں جو آپ کے آڈیو آؤٹ پٹ آلے سے تعاون یافتہ ہیں "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"منتخب کیے جانے پر سسٹم ایپس کو ساؤنڈ کے کسی بھی اس فارمیٹ کو منتخب کرنے کی اجازت دے گا جو آپ کے آلے کی چین کے ذریعے تعاون یافتہ ہے۔ ایپس ایک ایسے فارمیٹ کا انتخاب کر سکتی ہیں جو اعلی معیار کا فارمیٹ نہ ہو۔"</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"کوئی نہیں: سراؤنڈ ساؤنڈ کبھی استعمال نہ کریں"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"دستی: دستیاب فارمیٹس سے دستی طور پر فارمیٹس منتخب کریں"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"دستی: منتخب طور پر اس آلے سے تعاون یافتہ ہر فارمیٹ کو فعال یا غیر فعال کریں اس سے قطع نظر کہ آپ کے آڈیو آؤٹ پٹ آلے سے کون سا تعاون یافتہ ہے۔"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"منتخب کیے جانے پر آپ پلے بیک کے ساتھ مسائل کا سبب بننے والے ان ساؤنڈ فارمیٹس کو دستی طور پر غیر فعال کر سکتے ہیں جو آپ کے آلے کی چین کے ذریعے تعاون یافتہ ہیں۔ آپ کے آلے کی چین کے ذریعے غیر تعاون یافتہ ساؤنڈ فارمیٹس کو فعال کیا جا سکتا ہے۔ کچھ کیسیز میں ایپس ایک ایسے فارمیٹ کا انتخاب کر سکتی ہیں جو اعلی معیار کا فارمیٹ نہ ہو۔"</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"غیر تعاون یافتہ آواز کے فارمیٹ کو فعال کرنا ہے؟"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"آپ کا منسلک کردہ آڈیو آلہ اس فارمیٹ کے لیے سپورٹ کی رپورٹ نہیں دیتا ہے۔ یہ آپ کے آلے سے تیز شور یا پاپس جیسے غیر متوقع رویوں کا سبب بن سکتا ہے۔"</string>
@@ -156,6 +156,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"اگر ایپ اس کی درخواست کرتی ہے تو آپ کا آلہ اس کے آؤٹ پٹ کو اس مواد کے اصل فریم ریٹ سے مماثل کرے گا جس کو آپ دیکھ رہے ہیں۔ ویڈیو پلے بیک سے باہر نکلنے یا داخل ہونے کے دوران ہو سکتا ہے ایک سیکنڈ کے لیے آپ کی اسکرین خالی ہو جائے۔"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"کبھی نہیں"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"اگر ایپ اس کی درخواست کرتی ہے تو بھی آپ کا آلہ کبھی اس کے آؤٹ پٹ کو اس مواد کے اصل فریم ریٹ سے مماثل کرنے کی کوشش نہیں کرے گا جس کو آپ دیکھ رہے ہیں۔"</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"فارمیٹ کا انتخاب"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"خودکار"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"دستی"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"آلے سے اطلاع کردہ فارمیٹس استعمال کریں"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"دستیاب فارمیٹس سے دستی طور پر فارمیٹس منتخب کریں"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"تعاون یافتہ فارمیٹس"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"غیر تعاون یافتہ فارمیٹس"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"+HDR10"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby ویژن"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"منتخب کیے جانے پر سسٹم ایپس کو کسی بھی اس HDR فارمیٹ کو منتخب کرنے کی اجازت دے گا جو آپ کے آلے کی چین سے تعاون یافتہ ہے۔ ایپس ایک ایسے فارمیٹ کا انتخاب کر سکتی ہیں جو اعلی معیار کا فارمیٹ نہ ہو۔"</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"منتخب کیے جانے پر آپ اپنے آلے کی چین سے تعاون یافتہ پلے بیک کے ساتھ مسائل کا سبب بننے والے HDR فارمیٹس کو دستی طور پر غیر فعال کر سکتے ہیں۔ آپ کے آلے کی چین سے غیر تعاون یافتہ HDR فارمیٹس کو زبردستی فعال نہیں کیا جا سکتا۔ ایپس ایک ایسے فارمیٹ کا انتخاب کر سکتی ہیں جو اعلی معیار کا فارمیٹ نہ ہو۔"</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"کیش کیا ہوا ڈیٹا صاف کریں؟"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"یہ سبھی ایپس کیلئے کیش کیے ہوئے ڈیٹا کو صاف کر دے گا۔"</string>
     <string name="accessories_add" msgid="413764175035531452">"امدادی سامان شامل کریں"</string>
@@ -206,11 +231,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"بلوٹوتھ پتہ"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"منسلک ہے"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"غیر منسلک ہے"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"آپ کو بلوٹوتھ ترتیبات میں تبدیلی کرنے کی اجازت نہیں ہے۔"</string>
     <string name="send_feedback" msgid="936698637869795473">"تاثرات بھیجیں"</string>
     <string name="launch_help" msgid="2607478763131952469">"مرکز امداد"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"تاریخ اور وقت"</string>
     <string name="system_language" msgid="5516099388471974346">"زبان"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"آپ کو آلہ کی زبان تبدیل کرنے کی اجازت نہیں ہے۔"</string>
     <string name="system_keyboard" msgid="1514460705385401872">"کی بورڈ"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"کی بورڈ اور آٹو فل"</string>
     <string name="system_autofill" msgid="6983989261108020046">"آٹو فل"</string>
@@ -226,6 +253,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"ڈویلپر کے اختیارات"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"کوئی نہیں"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"استعمال اور تشخیصات"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"آلہ کے منتظم کی کوئی ایپ دستیاب نہیں ہے"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"منتظم کی طرف سے غیر فعال کردہ"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"دستیاب نہیں ہے"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"آلہ کے نظم و نسق کی ایپس"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"کوئی فعال ایپ نہیں"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> فعال ایپس</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> فعال ایپ</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"منتظم، مرموز کاری کی پالیسی یا اسناد اسٹوریج کے ذریعے غیر فعال کردہ"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"نظم کردہ آلے کی معلومات"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"آپ کی تنظیم کے ذریعے نظم کردہ ترتیبات اور تبدیلیاں"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> کے ذریعے نظم کردہ ترتیبات اور تبدیلیاں"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"آپ کے دفتری ڈیٹا تک رسائی فراہم کرنے کیلئے، آپ کی تنظیم ترتیبات تبدیل کر کے آپ کے آلے پر سافٹ ویئر انسٹال کر سکتی ہے۔\n\nمزید تفصیلات کیلئے، اپنی تنظیم کے منتظم سے رابطہ کریں۔"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"معلومات کی وہ قسمیں جنہیں آپ کی تنظیم دیکھ سکتی ہے"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"آپ کی تنظیم کے منتظم کے ذریعے کی گئی تبدیلیاں"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"اس آلے تک آپ کی رسائی"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"آپ کے دفتری اکاؤنٹ سے وابستہ ڈیٹا، جیسے کہ ای میل اور کیلنڈر"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"آپ کے آلے پر موجود ایپس کی فہرست"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"ہر ایپ میں صَرف کئے گئے وقت اور ڈیٹا کی مقدار"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"حالیہ ترین نیٹ ورک ٹریفک لاگ"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"حالیہ ترین بگ رپورٹ"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"حالیہ ترین سیکیورٹی لاگ"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"کوئی نہیں"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"ایپس انسٹال ہو گئیں"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"ایپس کی تعداد تخمینی ہے۔ ہو سکتا ہے Play اسٹور سے باہر انسٹال کردہ ایپس اس میں شامل نہ ہوں۔"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">کم از کم <xliff:g id="COUNT_1">%d</xliff:g> ایپس</item>
+      <item quantity="one">کم از کم <xliff:g id="COUNT_0">%d</xliff:g> ایپ</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"مقام کی اجازتیں"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"مائیکروفون کی اجازتیں"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"کیمرے کی اجازتیں"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"ڈیفالٹ ایپس"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ایپس</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ایپ</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"ڈیفالٹ کی بورڈ"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"<xliff:g id="APP_LABEL">%s</xliff:g> پر سیٹ"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"ہمیشہ آن VPN آن ہو گیا"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"ہمیشہ آن VPN آپ کی ذاتی پروفائل میں آن ہو گيا"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"ہمیشہ آن VPN آپ کی دفتری پروفائل میں آن ہو گيا"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"عالمی HTTP پراکسی سیٹ ہے"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"بھروسہ مند اسناد"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"آپ کے ذاتی پروفائل میں بھروسہ مند اسناد"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"آپ کے دفتری پروفائل میں بھروسہ مند اسناد"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">کم از کم <xliff:g id="COUNT_1">%d</xliff:g> CA سرٹیفکیٹس</item>
+      <item quantity="one">کم از کم <xliff:g id="COUNT_0">%d</xliff:g> CA سرٹیفکیٹ</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"منتظم آلے کو مقفل کر کے دوبارہ پاس ورڈ ترتیب دے سکتا ہے"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"ایڈمن آلہ کے تمام ڈیٹا کو حذف کرسکتا ہے"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"آلے کے تمام ڈیٹا کو حذف کرنے سے قبل پاس ورڈ درج کرنے کی ناکام کوششیں"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"دفتری پروفائل کے ڈیٹا کو حذف کرنے سے قبل پاس ورڈ درج کرنے کی ناکام کوششیں"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> کوششیں</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> کوشش</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"یہ آلہ آپ کی تنظیم کے زیر انتظام ہے۔"</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"یہ آلہ <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> کے زیر انتظام ہے۔"</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"مزید جانیں"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">کیمرا ایپس</item>
+      <item quantity="one">کیمرا ایپ</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"کیلنڈر ایپ"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"رابطہ ایپ"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">ای میل کلائنٹ ایپس</item>
+      <item quantity="one">ای میل کلائنٹ ایپ</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"نقشہ ایپ"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">فون ایپس</item>
+      <item quantity="one">فون ایپ</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>، <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"ٹیوٹوریلز"</string>
     <string name="about_system_update" msgid="7421264399111367755">"سسٹم اپ ڈیٹ"</string>
     <string name="system_update_description" msgid="998883510488461766">"اس سے آپ کا سسٹم سافٹ ویئر تازہ ترین ورژن میں اپ ڈیٹ ہو جائے گا۔ آپ کا آلہ ری سٹارٹ ہو گا۔"</string>
@@ -256,6 +363,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"اجازت دینے والا"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"نافذ کر رہا ہے"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"سسٹم کے اضافی اپ ڈیٹس"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"نیٹ ورک کو مانیٹر کیا جا سکتا ہے"</string>
+    <string name="done_button" msgid="616159688526431451">"ہو گیا"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">سرٹیفیکیٹس پر اعتماد کریں یا ہٹائیں</item>
+      <item quantity="one">سرٹیفکیٹ پر اعتماد کریں یا ہٹائیں</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> نے آپ کے آلے پر سرٹیفیکیٹ اتھارٹیز انسٹال کی ہیں جو انہیں ای میلز، ایپس اور محفوظ ویب سائٹس سمیت آپ کے آلے کے نیٹ ورک کی سرگرمی مانیٹر کرنے کی اجازت دے سکتی ہیں۔\n\nان سرٹیفیکیٹس سے متعلق مزید معلومات کے لیے اپنے منتظم سے رابطہ کریں۔</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> نے آپ کے آلے پر سرٹیفیکیٹ اتھارٹی انسٹال کی ہے جو انہیں ای میلز، ایپس اور محفوظ ویب سائٹس سمیت آپ کے آلے کے نیٹ ورک کی سرگرمی مانیٹر کرنے کی اجازت دے سکتی ہے۔\n\nاس سرٹیفیکیٹ سے متعلق مزید معلومات کے لیے اپنے منتظم سے رابطہ کریں۔</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> نے آپ کی دفتری پروفائل کے لیے سرٹیفیکیٹ اتھارٹیز انسٹال کی ہیں جو انہیں ای میلز، ایپس اور محفوظ ویب سائٹس سمیت دفتری نیٹ ورک کی سرگرمی مانیٹر کرنے کی اجازت دے سکتی ہیں۔\n\nان سرٹیفیکیٹس سے متعلق مزید معلومات کے لیے اپنے منتظم سے رابطہ کریں۔</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> نے آپ کی دفتری پروفائل کے لیے ایک سرٹیفیکیٹ اتھارٹی انسٹال کی ہے جو انہیں ای میلز، ایپس اور محفوظ ویب سائٹس سمیت دفتری نیٹ ورک کی سرگرمی مانیٹر کرنے کی اجازت دے سکتی ہے۔\n\nاس سرٹیفیکیٹ سے متعلق مزید معلومات کے لیے اپنے منتظم سے رابطہ کریں۔</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"ایک تیسرا فریق آپ کے نیٹ ورک کی سرگرمی، بشمول ای میلز، ایپس اور محفوظ ویب سائٹوں پر نگاہ رکھنے پر قادر ہے۔\n\nآپ کے آلے پر انسٹال شدہ ایک بھروسہ مند استناد کی وجہ سے یہ ممکن ہے۔"</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">سرٹیفکیٹس چیک کریں</item>
+      <item quantity="one">سرٹیفیکیٹ چیک کریں</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"اسٹیٹس"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"نیٹ ورک، سیریل نمبرز اور دیگر معلومات"</string>
     <string name="manual" msgid="5683935624321864999">"مینوئل"</string>
@@ -388,6 +514,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"نیٹ ورک مربوط نہیں ہے"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"پہلے سے ہی <xliff:g id="SSID">%1$s</xliff:g> سے مربوط ہے۔ ایک مختلف نیٹ ورک سے مربوط کریں؟"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"ایک نامعلوم نیٹ ورک"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"آپ کے پاس Wi‑Fi نیٹ ورک تبدیل کرنے کی اجازت نہیں ہے۔"</string>
     <string name="title_ok" msgid="6500452958848127145">"ٹھیک ہے"</string>
     <string name="title_cancel" msgid="2337143367016419016">"منسوخ کریں"</string>
     <string name="storage_title" msgid="6637715914885228193">"اسٹوریج"</string>
@@ -875,6 +1002,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"اسکرین شاٹ کی اجازت نہیں ہے"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"اس ایپ کو نہیں کھولا جا سکتا"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"اگر آپ کے پاس سوالات ہیں، تو اپنے IT منتظم سے رابطہ کریں"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"مزید تفصیلات"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"آپ کا منتظم آپ کے دفتری پروفائل سے وابستہ ایپس اور ڈیٹا، بشمول ترتیبات، اجازتیں، کارپوریٹ رسائی، نیٹ ورک کی سرگرمی اور آلہ کے مقام کی معلومات مانیٹر اور منظم کر سکتا ہے۔"</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"آپ کا منتظم اس صارف سے وابستہ ایپس اور ڈیٹا، بشمول ترتیبات، اجازتیں، کارپوریٹ رسائی، نیٹ ورک کی سرگرمی اور آلہ کے مقام کی معلومات مانیٹر اور منظم کر سکتا ہے۔"</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"آپ کا منتظم اس آلہ سے وابستہ ایپس اور ڈیٹا، بشمول ترتیبات، اجازتیں، کارپوریٹ رسائی، نیٹ ورک کی سرگرمی اور آلہ کے مقام کی معلومات مانیٹر اور منظم کر سکتا ہے۔"</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"دفتری پروفائل ہٹائیں"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"آلہ کے منتظم کی ایپ"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"آلہ کے منتظم کی یہ ایپ غیر فعال کریں"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"ایپ کو اَن انسٹال کریں"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"غیر فعال اور اَن انسٹال کریں"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"آلہ کے نظم و نسق کی ایپس"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"آلہ کے منتظم کی ایپ فعال کریں؟"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"اس آلہ کے منتظم کی ایپ فعال کریں"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"اس منتظم کی ایپ فعال کرنے سے <xliff:g id="APP_NAME">%1$s</xliff:g> ایپ کو مندرجہ ذيل اعمال انجام دینے کی اجازت مل جائے گی:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"یہ آلہ <xliff:g id="APP_NAME">%1$s</xliff:g> کے ذریعے نظم اور نگرانی کیا جائے گا۔"</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"منتظم کی یہ ایپ فعال ہے اور <xliff:g id="APP_NAME">%1$s</xliff:g> ایپ کو مندرجہ ذیل اعمال انجام دینے کی اجازت دیتی ہے:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"جاری رکھنے سے، آپ کا منتظم آپ کے صارف کا نظم کر‌ے گا جو آپ کے ذاتی ڈیٹا کے علاوہ وابستہ ڈیٹا کو بھی اسٹور کر سکتا ہے۔\n\nآپ کے منتظم کے پاس نیٹ ورک کی سرگرمی اور آپ کے آلہ کے مقام کی معلومات سمیت ترتیبات، رسائی، ایپس اور اس صارف کے ساتھ وابستہ ڈیٹا کو مانیٹر کرنے اور ان کا نظم کرنے کی اہلیت ہے۔"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"بگ رپورٹ کا اشتراک کریں؟"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"آپ کے IT منتظم نے اس آلہ کا مسئلہ حل کرنے میں مدد کیلئے ایک بگ رپورٹ کی درخواست کی ہے۔ ایپس اور ڈیٹا کا اشتراک ہو سکتا ہے۔"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"آپ کے IT منتظم نے اس آلہ کا مسئلہ حل کرنے میں مدد کیلئے ایک بگ رپورٹ کی درخواست کی ہے۔ ایپس اور ڈیٹا کا اشتراک ہو سکتا ہے اور آپ کا آلہ عارضی طور پر سست ہو سکتا ہے۔"</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"اس بگ رپورٹ کا آپ کے IT منتظم کے ساتھ اشتراک کیا جا رہا ہے۔ مزید تفصل کیلئے ان سے رابطہ کریں۔"</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"اشتراک کریں"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"مسترد کریں"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> کے ساتھ استعمال کیا جانے والا آلہ"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"کوئی آلہ نہیں ملا۔ یقینی بنائیں کہ آلات آن ہیں اور منسلک کرنے کے لیے دستیاب ہیں۔"</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"پھر آزمائیں"</string>

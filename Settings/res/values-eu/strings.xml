@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos, Dolby Digital Plus-ekin"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Oharra: baliteke Automatikoa aukerak ez funtzionatzea gailuak ez badu behar bezala jakinarazten zein formatu onartzen dituen."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automatikoa: erabili gailuak jakinarazitako formatuak"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatikoa: gaitu audioaren irteera-gailuak onartzen dituen formatuak soilik. "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Hautatuz gero, gailu-kateak onartutako edozein soinu-formatu hautatzeko aukera emango die sistemak aplikazioei. Baliteke aplikazioek kalitate handienekoa ez den formatu bat aukeratzea."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Bat ere ez: ez erabili inoiz soinu inguratzailea"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Eskuzkoa: hautatu formatuak eskuz erabilgarri daudenen artean"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Eskuzkoa: nahieran gaitu edo desgaitu gailuak onartzen duen formatu bakoitza, audioaren irteera-gailuak zer formatu onartzen dituen kontuan hartu gabe."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Hautatuz gero, eskuz desgaitu ahalko dituzu gailu-kateak onartutako soinu-formatuak, erreprodukzio-arazoak sortzen dituztenean. Gailu-kateak onartzen ez dituen soinu-formatuak gai daitezke. Kasu batzuetan, baliteke aplikazioek kalitate handienekoa ez den formatu bat aukeratzea."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Onartzen ez den soinu-formatua gaitu nahi duzu?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Konektatutako audio-gailuak ez du onartzen formatu hori; beraz, baliteke gailuak ustekabeko portaerak edukitzea (adib., soinu ozenak edo pop-soinuak)."</string>
@@ -156,6 +156,25 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Aplikazioak eskatzen badu, ikusten ari zaren edukiaren jatorrizko irudi-abiadurarekin bat-etorraraziko du gailuak bere irteera. Ondorioz, baliteke segundo batez pantailan ezer ez agertzea bideoa erreproduzitzen duzunean edo erreproduzitzeari uzten diozunean."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Inoiz ez"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Aplikazioak eskatu arren, gailuak ez du bat-etorraraziko bere irteera ikusten ari zaren edukiaren jatorrizko irudi-abiadurarekin."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Formatu-hautapena"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatikoa"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Eskuzkoa"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Erabili gailuak jakinarazitako formatuak"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Hautatu formatuak eskuz, erabilgarri daudenen artean"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"ONARTZEN DIREN FORMATUAK"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"ONARTZEN EZ DIREN FORMATUAK"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Hautatuz gero, gailu-kateak onartutako edozein HDR formatu hautatzeko aukera emango die sistemak aplikazioei. Baliteke aplikazioek kalitate handienekoa ez den formatu bat aukeratzea."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Hautatuz gero, eskuz desgaitu ahalko dituzu gailu-kateak onartutako HDR formatuak, erreprodukzio-arazoak sortzen dituztenean. Gailu-kateak onartzen ez dituen HDR formatuak ezin dira indarrez gaitu. Baliteke aplikazioek kalitate handienekoa ez den formatu bat aukeratzea."</string>
+    <string name="hdr_format_info" msgid="5652559220799426076">"FORMATUEI BURUZKO INFORMAZIOA"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"Erakutsi formatuak"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Ezkutatu formatuak"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"FORMATU GAITUAK"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"FORMATU DESGAITUAK"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Desgaitzeko, ezarri formatu-hautapena \"Eskuzkoa\" gisa."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Cacheko datuak garbitu nahi dituzu?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Aplikazio guztien cacheko datuak garbituko dira."</string>
     <string name="accessories_add" msgid="413764175035531452">"Gehitu osagarria"</string>
@@ -206,11 +225,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth bidez konektatzeko helbidea"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Konektatuta"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Deskonektatuta"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Ez daukazu Bluetooth-aren ezarpenak aldatzeko baimenik."</string>
     <string name="send_feedback" msgid="936698637869795473">"Bidali oharrak"</string>
     <string name="launch_help" msgid="2607478763131952469">"Laguntza-zentroa"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Data eta ordua"</string>
     <string name="system_language" msgid="5516099388471974346">"Hizkuntza"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Ez daukazu gailuaren hizkuntza aldatzeko baimenik."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Teklatua"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Teklatua eta betetze automatikoa"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Betetze automatikoa"</string>
@@ -226,6 +247,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Garatzaileentzako aukerak"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Bat ere ez"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Erabilera eta diagnostikoak"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Ez dago gailua administratzeko aplikaziorik"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Administratzaileak desgaitu du"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Ez dago erabilgarri"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Gailua administratzeko aplikazioak"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Ez dago aplikaziorik aktibo"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikazio aktibo</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikazio aktibo</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Administratzaileak, enkriptatze-gidalerroek edo kredentzialen biltegiak desgaituta"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Gailu kudeatuaren informazioa"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Erakundeak kudeatzen dituen aldaketak eta ezarpenak"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> erakundeak kudeatzen dituen aldaketak eta ezarpenak"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Laneko datuetarako sarbidea emateko, erakundeak ezarpenak alda ditzake eta softwarea instala dezake gailuan. \n\nInformazio gehiago lortzeko, jarri harremanetan erakundeko administratzailearekin."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Erakundeak ikus dezakeen informazioa"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Erakundeko administratzaileak egindako aldaketak"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Gailurako duzun sarbidea"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Laneko kontuarekin erlazionatutako datuak; adibidez, posta elektronikoa eta egutegia"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Gailuan dituzun aplikazioen zerrenda"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Aplikazio bakoitzean emandako denbora eta erabilitako datuak"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Sareko trafikoari buruzko azken erregistroa"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Azken akatsen txostena"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Azken segurtasun-erregistroa"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Bat ere ez"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Instalatutako aplikazioak"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Gutxi gorabeherakoa da aplikazio kopurua. Baliteke Play Store-tik instalatu ez diren aplikazioak kontuan ez izatea."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">Gutxienez <xliff:g id="COUNT_1">%d</xliff:g> aplikazio</item>
+      <item quantity="one">Gutxienez <xliff:g id="COUNT_0">%d</xliff:g> aplikazio</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Kokapena hautemateko baimenak"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Mikrofonoa erabiltzeko baimenak"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Kamera erabiltzeko baimenak"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Aplikazio lehenetsiak"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikazio</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikazio</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Teklatu lehenetsia"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Ezarri <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Beti aktibatuta egongo den VPN konexioa aktibatu da"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Beti aktibatuta egongo den VPN konexioa aktibatu da zure profil pertsonalean"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Beti aktibatuta egongo den VPN konexioa aktibatu da zure laneko profilean"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"HTTP proxy orokorra ezarri da"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Kredentzial fidagarriak"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Profil pertsonaleko kredentzial fidagarriak"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Laneko profileko kredentzial fidagarriak"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">Gutxienez <xliff:g id="COUNT_1">%d</xliff:g> CA ziurtagiri</item>
+      <item quantity="one">Gutxienez <xliff:g id="COUNT_0">%d</xliff:g> CA ziurtagiri</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Administratzaileak gailua blokea eta pasahitza berrezar dezake"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Administratzaileak gailuko datu guztiak ezaba ditzake"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Pasahitza idazteko egin daitezkeen saiakerak gailuko datu guztiak ezabatu aurretik"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Pasahitza idazteko egin daitezkeen saiakerak laneko profileko datuak ezabatu aurretik"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> saiakera</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> saiakera</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Zure erakundeak kudeatzen du gailua."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> erakundeak kudeatzen du gailu hau."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Lortu informazio gehiago"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">Kamera-aplikazioak</item>
+      <item quantity="one">Kamera-aplikazioa</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Egutegi-aplikazioa"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Kontaktu-aplikazioa"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">Posta-bezeroaren aplikazioak</item>
+      <item quantity="one">Posta-bezeroaren aplikazioa</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Mapa-aplikazioa"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">Telefono-aplikazioak</item>
+      <item quantity="one">Telefono-aplikazioa</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Tutorialak"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Sistemaren eguneratzea"</string>
     <string name="system_update_description" msgid="998883510488461766">"Horrela, bertsio berrienera eguneratuko da sistemaren softwarea. Gailua berrabiarazi egingo da."</string>
@@ -256,6 +357,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Permisiboa"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Betearazlea"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Eguneratze gehiago"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Baliteke sarea kontrolatuta egotea"</string>
+    <string name="done_button" msgid="616159688526431451">"Eginda"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">Jo fidagarritzat edo kendu ziurtagiriak</item>
+      <item quantity="one">Jo fidagarritzat edo kendu ziurtagiria</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> domeinuak ziurtagiri-emaileak instalatu dizkizu gailuan. Hortaz, baliteke domeinuak gailuko sarean egiten duzuna gainbegiratu ahal izatea; besteak beste, posta elektronikoan, aplikazioetan eta webgune seguruetan egiten duzuna.\n\nZiurtagiri horiei buruzko informazio gehiago lortzeko, jarri harremanetan administratzailearekin.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> domeinuak ziurtagiri-emaile bat instalatu dizu gailuan. Hortaz, baliteke domeinuak gailuko sarean egiten duzuna gainbegiratu ahal izatea; besteak beste, posta elektronikoan, aplikazioetan eta webgune seguruetan egiten duzuna.\n\nZiurtagiri horri buruzko informazio gehiago lortzeko, jarri harremanetan administratzailearekin.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> domeinuak ziurtagiri-emaileak instalatu dizkizu laneko profilean. Hortaz, baliteke domeinuak laneko sarean egiten duzuna gainbegiratu ahal izatea; besteak beste, posta elektronikoan, aplikazioetan eta webgune seguruetan egiten duzuna.\n\nZiurtagiri horiei buruzko informazio gehiago lortzeko, jarri harremanetan administratzailearekin.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> domeinuak ziurtagiri-emaile bat instalatu dizu laneko profilean. Hortaz, baliteke domeinuak laneko sarean egiten duzuna gainbegiratu ahal izatea; besteak beste, posta elektronikoan, aplikazioetan eta webgune seguruetan egiten duzuna.\n\nZiurtagiri horri buruzko informazio gehiago lortzeko, jarri harremanetan administratzailearekin.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Hirugarren alderdi bat sarean bideratzen dituzun jarduerak kontrola ditzake, mezu elektronikoak, aplikazioak eta webgune seguruak barne.\n\nGailuan instalatu duzun kredentzial fidagarri batek egiten du hori posible."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">Ikusi ziurtagiriak</item>
+      <item quantity="one">Ikusi ziurtagiria</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Egoera"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Sarea, serie-zenbakiak eta bestelako informazioa"</string>
     <string name="manual" msgid="5683935624321864999">"Eskuliburua"</string>
@@ -388,6 +508,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Ez zaude sarera konektatuta"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"<xliff:g id="SSID">%1$s</xliff:g> sarera konektatuta zaude. Beste sare batera konektatu nahi duzu?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"sare ezezaguna"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Ez duzu wifi-sarea aldatzeko baimenik."</string>
     <string name="title_ok" msgid="6500452958848127145">"Ados"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Utzi"</string>
     <string name="storage_title" msgid="6637715914885228193">"Memoria"</string>
@@ -875,6 +996,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Ez da onartzen pantaila-argazkiak ateratzea"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Ezin da ireki aplikazioa"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Galderarik baduzu, jarri IKT saileko administratzailearekin harremanetan"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Xehetasun gehiago"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Administratzaileak gainbegiratu eta kudeatu egin ditzake laneko profilarekin erlazionatutako aplikazioak eta datuak, besteak beste, ezarpenak, baimenak, enpresaren sarbide-baimenak, sareko jarduerak eta gailuaren kokapen-informazioa."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Administratzaileak gainbegiratu eta kudeatu egin ditzake erabiltzailearekin erlazionatutako aplikazioak eta datuak, besteak beste, ezarpenak, baimenak, enpresaren sarbide-baimenak, sareko jarduerak eta gailuaren kokapen-informazioa."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Administratzaileak gainbegiratu eta kudeatu egin ditzake gailuarekin erlazionatutako aplikazioak eta datuak, besteak beste, ezarpenak, baimenak, enpresaren sarbide-baimenak, sareko jarduerak eta gailuaren kokapen-informazioa."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Kendu laneko profila"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Gailua administratzeko aplikazioa"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Desaktibatu gailua administratzeko aplikazioa"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Desinstalatu aplikazioa"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Desaktibatu eta desinstalatu"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Gailua administratzeko aplikazioak"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Gailua administratzeko aplikazioa aktibatu?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Aktibatu gailua administratzeko aplikazioa"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Gailua administratzeko aplikazio hau aktibatzen baduzu, <xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak eragiketa hauek egiteko baimena izango du:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> arduratuko da gailua kudeatu eta kontrolatzeaz."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Gailua administratzeko aplikazio hau aktibo dago eta eragiketa hauek egiteko baimena ematen dio <xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioari:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Aurrera eginez gero, administratzaileak kudeatuko dizu erabiltzaile-kontua, eta erlazionatutako datuak gorde ahal izango ditu zure datu pertsonalez gain.\n\nEra berean, erabiltzaile-kontu honekin erlazionatutako ezarpenak, sarbidea, aplikazioak eta datuak gainbegiratu eta kudeatu ahal izango ditu (esaterako, sareko jarduerak), baita gailuaren kokapen-informazioa ere."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Akatsen txostena partekatu nahi duzu?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"IKT saileko administratzaileak akatsen txostena eskatu du gailuko arazoa konpontzeko. Baliteke aplikazioak eta datuak partekatzea."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"IKT saileko administratzaileak akatsen txostena eskatu du gailuko arazoa konpontzeko. Baliteke aplikazioak eta datuak partekatzea, eta agian motelago ibiliko da gailua aldi batez."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"IKT saileko administratzailearekin partekatu dugu akatsen txostena. Xehetasun gehiago lortzeko, jarri harekin harremanetan."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Partekatu"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Baztertu"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> aplikazioarekin erabili behar den gailua"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Ez da aurkitu gailurik. Ziurtatu gailuak piztuta daudela eta konekta daitezkeela."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Saiatu berriro"</string>

@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos amb Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: l\'opció Automàtic pot no funcionar si el dispositiu no indica correctament els formats admesos."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automàtic: utilitza formats indicats pel dispositiu"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automàtic: activa només els formats que siguin compatibles amb el teu dispositiu de sortida d\'àudio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Quan aquesta opció estigui seleccionada, el sistema permetrà a les aplicacions seleccionar qualsevol format de so que sigui compatible amb la cadena del dispositiu. És possible que les aplicacions no seleccionin el format amb la qualitat més alta."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Cap: no utilitzis mai so envoltant"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manual: tria els formats manualment d\'entre els disponibles"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: activa o desactiva de manera selectiva cada format compatible amb aquest dispositiu, independentment que sigui compatible amb el teu dispositiu de sortida d\'àudio."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Si selecciones aquesta opció, podràs desactivar manualment els formats de so compatibles amb la cadena del dispositiu que causin problemes de reproducció. No podràs activar els formats de so incompatibles amb la cadena del dispositiu. Pot ser que les apps no seleccionin el format de qualitat més alta."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Vols activar un format de so no admès?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"El dispositiu d\'àudio connectat no admet aquest format i es poden produir comportaments inesperats, com ara sorolls forts o finestres emergents."</string>
@@ -156,6 +156,25 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si l\'aplicació ho sol·licita, el dispositiu mostrarà el contingut que estàs mirant amb els fotogrames per segon del vídeo original. Això pot provocar que la pantalla es quedi en blanc un segon en entrar a la reproducció d\'un vídeo o sortir-ne."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Mai"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Encara que l\'aplicació ho sol·liciti, el dispositiu mai no provarà de mostrar el contingut que estàs mirant amb els fotogrames per segon del vídeo original."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Selecció del format"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automàtic"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Utilitza formats indicats pel dispositiu"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Tria els formats manualment d\'entre els disponibles"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"FORMATS COMPATIBLES"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"FORMATS NO COMPATIBLES"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Quan aquesta opció estigui seleccionada, el sistema permetrà a les aplicacions seleccionar qualsevol format HDR que sigui compatible amb la cadena del dispositiu. És possible que les aplicacions no seleccionin el format amb la qualitat més alta."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Quan aquesta opció estigui seleccionada, podràs desactivar manualment els formats HDR compatibles amb la cadena del dispositiu i que causin problemes amb la reproducció. No podràs forçar l\'activació dels formats HDR no compatibles. Pot ser que les apps no seleccionin el format amb la qualitat més alta."</string>
+    <string name="hdr_format_info" msgid="5652559220799426076">"INFORMACIÓ DEL FORMAT"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"Mostra els formats"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Amaga els formats"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"FORMATS ACTIVATS"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"FORMATS DESACTIVATS"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Per desactivar-lo, canvia la selecció de format a Manual."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vols esborrar dades emmagatzem. a memòria cau?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"S\'esborraran dades aplicacions a la memòria cau."</string>
     <string name="accessories_add" msgid="413764175035531452">"Afegeix un accessori"</string>
@@ -206,11 +225,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Adreça Bluetooth"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Connectat"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Desconnectat"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"No tens permís per canviar la configuració del Bluetooth."</string>
     <string name="send_feedback" msgid="936698637869795473">"Envia suggeriments"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centre d’ajuda"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Data i hora"</string>
     <string name="system_language" msgid="5516099388471974346">"Idioma"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"No tens permisos per canviar l\'idioma del dispositiu."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Teclat"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Teclat i emplenament automàtic"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Emplenament automàtic"</string>
@@ -226,6 +247,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Opcions per a desenvolupadors"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Cap"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Ús i diagnòstic"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"No hi ha cap aplicació d\'administració disponible"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Desactivada per l\'administrador"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"No disponible"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Aplicacions d\'administració del dispositiu"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"No hi ha aplicacions actives"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplicacions actives</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplicació activa</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Desact. per l\'admin., política d\'encrip. o emmagat. creden."</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Informació del dispositiu gestionat"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"La teva organització gestiona els canvis i la configuració"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> gestiona els canvis i la configuració"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"La teva organització pot instal·lar programari al dispositiu i canviar-ne la configuració per donar accés a les teves dades professionals.\n\nPer obtenir més informació, contacta amb l\'administrador de la teva organització."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Tipus d\'informació que la teva organització pot veure"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Canvis fets per l\'administrador de la teva organització"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"El teu accés a aquest dispositiu"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Dades associades al teu compte de la feina, com ara el correu electrònic i el calendari"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Llista de les aplicacions que hi ha al dispositiu"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Temps dedicat i dades utilitzades en cada aplicació"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Registre del trànsit de xarxa més recent"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Informe d\'errors més recent"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Registre de seguretat més recent"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Cap"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Aplicacions instal·lades"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"El nombre d\'aplicacions és aproximat. És possible que no inclogui les aplicacions instal·lades que no provenen de Play Store."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplicacions com a mínim</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplicació com a mínim</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Permisos d\'ubicació"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Permisos d\'accés al micròfon"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Permisos d\'accés a la càmera"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Aplicacions predeterminades"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplicacions</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplicació</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Teclat predeterminat"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Mètode definit: <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"S\'ha activat l\'opció VPN sempre activada"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"S\'ha activat l\'opció VPN sempre activada al teu perfil personal"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"S\'ha activat l\'opció VPN sempre activada al teu perfil de treball"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"S\'ha definit el servidor intermediari HTTP global"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Certificats de confiança"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Certificats de confiança al teu perfil personal"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Certificats de confiança al teu perfil de treball"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> certificats de CA com a mínim</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> certificat de CA com a mínim</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"L\'administrador pot bloquejar el dispositiu i restablir-ne la contrasenya"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"L\'administrador pot suprimir totes les dades del dispositiu"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Intents fallits d\'introduir la contrasenya abans que se suprimeixin totes les dades del dispositiu"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Intents fallits d\'introduir la contrasenya abans que se suprimeixin les dades del perfil de treball"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> intents</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> intent</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"La teva organització gestiona aquest dispositiu."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> gestiona aquest dispositiu."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Més informació"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">Aplicacions de càmera</item>
+      <item quantity="one">Aplicació de càmera</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Aplicació de calendari"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Aplicació de contactes"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">Apps client de correu electrònic</item>
+      <item quantity="one">App client de correu electrònic</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Aplicació de mapes"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">Aplicacions de telèfon</item>
+      <item quantity="one">Aplicació de telèfon</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Tutorials"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Actualització del sistema"</string>
     <string name="system_update_description" msgid="998883510488461766">"El programari del teu sistema s\'actualitzarà a la versió més recent. El dispositiu es reiniciarà."</string>
@@ -256,6 +357,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Permissiu"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"En aplicació"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Actualitzac. addicionals"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"És possible que la xarxa estigui supervisada"</string>
+    <string name="done_button" msgid="616159688526431451">"Fet"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">Confia en els certificats o suprimeix-los</item>
+      <item quantity="one">Confia en el certificat o suprimeix-lo</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ha instal·lat unes autoritats de certificació al teu dispositiu, de manera que podran supervisar l\'activitat a la xarxa del teu dispositiu, com ara els correus electrònics, les aplicacions i els llocs web segurs.\n\nPer obtenir més informació sobre aquests certificats, contacta amb el teu administrador.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> ha instal·lat una autoritat de certificació al teu dispositiu, de manera que podrà supervisar l\'activitat a la xarxa del teu dispositiu, com ara els correus electrònics, les aplicacions i els llocs web segurs.\n\nPer obtenir més informació sobre aquest certificat, contacta amb el teu administrador.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ha instal·lat unes autoritats de certificació per al teu perfil de treball, de manera que podran supervisar la teva activitat a la xarxa del perfil de treball, com ara els correus electrònics, les aplicacions i els llocs web segurs.\n\nPer obtenir més informació sobre aquests certificats, contacta amb el teu administrador.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> ha instal·lat una autoritat de certificació per al teu perfil de treball, de manera que podrà supervisar la teva activitat a la xarxa del perfil de treball, com ara els correus electrònics, les aplicacions i els llocs web segurs.\n\nPer obtenir més informació sobre aquest certificat, contacta amb el teu administrador.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Un tercer pot supervisar la teva activitat de xarxa, inclosos els correus electrònics, les aplicacions i els llocs web segurs.\n\nHi ha una credencial de confiança instal·lada al teu dispositiu que ho fa possible."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">Comprova els certificats</item>
+      <item quantity="one">Comprova el certificat</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Estat"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Xarxa, números de sèrie i altres dades"</string>
     <string name="manual" msgid="5683935624321864999">"Manual"</string>
@@ -388,6 +508,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Xarxa no connectada"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Ja tens una connexió activa a <xliff:g id="SSID">%1$s</xliff:g>. Vols connectar-te a una altra xarxa?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"un error desconegut"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"No tens permís per canviar la xarxa Wi‑Fi."</string>
     <string name="title_ok" msgid="6500452958848127145">"D\'acord"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Cancel·la"</string>
     <string name="storage_title" msgid="6637715914885228193">"Emmagatzematge"</string>
@@ -875,6 +996,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"No està permès fer captures de pantalla"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"No es pot obrir aquesta aplicació"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Si tens cap dubte, contacta amb l\'administrador de TI"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Més detalls"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"L\'administrador pot supervisar i gestionar les aplicacions i les dades associades al teu perfil de treball, com ara la configuració, els permisos, l\'accés corporatiu, l\'activitat de xarxa i la informació d\'ubicació del dispositiu."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"L\'administrador pot supervisar i gestionar les aplicacions i les dades associades a aquest usuari, com ara la configuració, els permisos, l\'accés corporatiu, l\'activitat de xarxa i la informació d\'ubicació del dispositiu."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"L\'administrador pot supervisar i gestionar les aplicacions i les dades associades a aquest dispositiu, com ara la configuració, els permisos, l\'accés corporatiu, l\'activitat de xarxa i la informació d\'ubicació del dispositiu."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Suprimeix el perfil de treball"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Aplicació d\'administració del dispositiu"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Desactiva l\'aplicació d\'administració d\'aquest dispositiu"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Desinstal·la l\'aplicació"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Desactiva i desinstal·la"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Aplicacions d\'administració del dispositiu"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Activar l\'app d\'admin. del dispositiu?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Activa l\'aplicació d\'administració d\'aquest dispositiu"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"En activar aquesta aplicació d\'administració, l\'aplicació <xliff:g id="APP_NAME">%1$s</xliff:g> podrà dur a terme les operacions següents:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> gestionarà i supervisarà aquest dispositiu."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Aquesta aplicació d\'administració està activa i permet a l\'aplicació <xliff:g id="APP_NAME">%1$s</xliff:g> dur a terme les operacions següents:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"En continuar, l\'administrador gestionarà el teu usuari i és possible que també pugui desar dades associades, a més de les teves dades personals.\n\nL\'administrador pot supervisar i gestionar la configuració, l\'accés, les aplicacions i les dades associades a aquest usuari, com ara l\'activitat de xarxa i la informació sobre la ubicació del dispositiu."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Vols compartir l\'informe d\'errors?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"L\'administrador de TI ha sol·licitat un informe d\'errors per resoldre els problemes d\'aquest dispositiu. És possible que es comparteixin aplicacions i dades."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"L\'administrador de TI ha sol·licitat un informe d\'errors per resoldre els problemes d\'aquest dispositiu. És possible que es comparteixin aplicacions i dades, i que el dispositiu funcioni més a poc a poc durant una estona."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Aquest informe d\'errors s\'està compartint amb l\'administrador de TI. Contacta-hi per obtenir-ne més informació."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Comparteix"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Rebutja"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Dispositiu per fer servir amb <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"No s\'ha trobat cap dispositiu. Comprova que els dispositius estiguin activats i disponibles per connectar-s\'hi."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Torna-ho a provar"</string>
