@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos به‌همراه Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"توجه: اگر دستگاه قالب‌هایی را که پشتیبانی می‌کند به‌درستی گزارش نکند، شاید گزینه «خودکار» عمل نکند."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"خودکار: استفاده از قالب‌های گزارش‌شده دستگاه"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"خودکار: فقط قالب‌هایی که دستگاه خروجی صدا از آن‌ها پشتیبانی می‌کند فعال شود "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"وقتی انتخاب شده باشد، سیستم به برنامه‌ها اجازه می‌دهد هر قالب صدایی را که در زنجیره دستگاه‌هایتان پشتیبانی می‌شود انتخاب کنند. برنامه‌ها ممکن است قالبی را انتخاب کنند که بالاترین کیفیت را نداشته باشد."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"هیچ‌کدام: هرگز از صدای فراگیر استفاده نکنید"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"دستی: انتخاب قالب‌ها به‌صورت دستی ازبین قالب‌های موجود"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"دستی: قالب‌هایی که این دستگاه از آن‌ها پشتیبانی می‌کند به‌صورت انتخابی فعال یا غیرفعال شود، بدون درنظر گرفتن اینکه دستگاه خروجی صدا از چه قالبی پشتیبانی می‌کند."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"وقتی انتخاب شده باشد، می‌توانید قالب‌های صدایی را که در زنجیره دستگاهتان پشتیبانی می‌شود، اما باعث بروز مشکلات بازپخش می‌شود، دستی غیرفعال کنید. می‌توانید قالب‌های صدایی را که در زنجیره دستگاهتان پشتیبانی نمی‌شود فعال کنید. در برخی موارد، ممکن است برنامه‌ها قالبی را انتخاب کنند که باکیفیت‌ترین قالب نباشد."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"قالب صدای پشتیبانی‌نشده فعال شود؟"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"دستگاه صوتی متصل شما برای این قالب پشتیبانی گزارش نمی‌کند. این کار ممکن است باعث عملکردهای غیرمنتظره (مثل صداهای بلند یا نمایان شدن بالاپر) در دستگاه شود."</string>
@@ -156,6 +156,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"اگر برنامه درخواست کند، دستگاهتان خروجی‌اش را با نرخ فریم اصلی محتوایی که تماشا می‌کنید هماهنگ خواهد کرد. در چنین شرایطی، وقتی از بازپخش ویدیو خارج می‌شوید یا به آن وارد می‌شود، ممکن است صفحه‌تان لحظه‌ای خالی شود."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"هرگز"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"حتی اگر برنامه درخواست کند، دستگاهتان هیچ‌گاه خروجی‌اش را با نرخ فریم اصلی محتوایی که تماشا می‌کنید هماهنگ نخواهد کرد."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"انتخاب قالب‌بندی"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"خودکار"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"دستی"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"استفاده از قالب‌های گزارش‌شده دستگاه"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"قالب‌ها را به‌صورت دستی از قالب‌های دردسترس انتخاب کنید"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"قالب‌های پشتیبانی‌شده"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"قالب‌های پشتیبانی‌نشده"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+‎"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"وقتی انتخاب شده باشد، سیستم به برنامه‌ها اجازه می‌دهد هر قالب HDR را که زنجیره دستگاه‌هایتان پشتیبانی می‌کند انتخاب کنند. برنامه‌ها ممکن است قالبی را انتخاب کنند که بالاترین کیفیت را نداشته باشد."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"وقتی انتخاب شده باشد، می‌توانید قالب‌های HDR را که زنجیره دستگاه‌هایتان پشتیبانی می‌کند، اما باعث بروز مشکلات بازپخش می‌شود به‌صورت دستی غیرفعال کنید. نمی‌توانید قالب‌های HDR را که در زنجیره دستگاه‌هایتان پشتیبانی نمی‌شود به‌اجبار فعال کنید. برنامه‌ها ممکن است قالبی را انتخاب کنند که بالاترین کیفیت را نداشته باشد."</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"اطلاعات در حافظه پنهان پاک شود؟"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"اطلاعات در حافظه پنهان همه برنامه‌ها پاک می‌شود."</string>
     <string name="accessories_add" msgid="413764175035531452">"افزودن وسیله جانبی"</string>
@@ -206,11 +231,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"نشانی بلوتوث"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"متصل"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"قطع اتصال"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"اجازه ندارید تنظیمات بلوتوث را تغییر دهید."</string>
     <string name="send_feedback" msgid="936698637869795473">"ارسال بازخورد"</string>
     <string name="launch_help" msgid="2607478763131952469">"مرکز راهنمایی"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"تاریخ و زمان"</string>
     <string name="system_language" msgid="5516099388471974346">"زبان"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"اجازه ندارید زبان دستگاه را تغییر دهید."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"صفحه‌کلید"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"صفحه‌کلید و تکمیل خودکار"</string>
     <string name="system_autofill" msgid="6983989261108020046">"تکمیل خودکار"</string>
@@ -226,6 +253,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"گزینه‌های برنامه‌نویسان"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"خالی"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"میزان استفاده و عیب‌یابی"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"هیچ‌یک از برنامه‌‌های سرپرست دستگاه در دسترس نیستند"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"توسط سرپرست غیرفعال شده"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"دردسترس نیست"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"برنامه‌های سرپرست دستگاه"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"برنامه فعالی موجود نیست"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> برنامه فعال</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> برنامه فعال</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"توسط سرپرست غیرفعال شده، طبق خط‌مشی رمزگذاری یا حافظه اطلاعات کاربردی"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"اطلاعات دستگاه مدیریت‌شده"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"تغییرات و تنظیماتی که توسط سازمان شما مدیریت می‌شوند"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"تغییرات و تنظیماتی که توسط <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> مدیریت می‌شوند"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"برای تامین دسترسی به داده‌های کاری، ممکن است سازمانتان تنظیمات دستگاه شما را تغییر دهد و در آن نرم‌افزار نصب کند.\n\nبرای جزئیات بیشتر، با سرپرست سازمانتان تماس بگیرید."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"انواع اطلاعاتی که سازمانتان می‌تواند ببیند"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"تغییراتی که سرپرست سازمانتان اعمال کرده است"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"دسترسی شما به این دستگاه"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"داده‌های مرتبط با حساب کاری‌تان، مثل رایانه و تقویم"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"فهرست برنامه‌های دستگاه شما"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"مصرف زمان و داده هر برنامه"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"جدیدترین گزارش ترافیک شبکه"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"جدیدترین گزارش اشکال"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"جدیدترین گزارش امنیتی"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"هیچ‌کدام"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"برنامه‌ها نصب‌‌ شدند"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"تعداد برنامه‌ها تخمینی است و ممکن است شامل برنامه‌های نصب‌شده از خارج از «فروشگاه Play» نباشد."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="one">حداقل <xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
+      <item quantity="other">حداقل <xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"مجوزهای دسترسی به موقعیت مکانی"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"مجوزهای دسترسی به میکروفون"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"مجوزهای دسترسی به دوربین"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"برنامه‌های پیش‌فرض"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"صفحه‌کلید پیش‌فرض"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"تنظیم روی <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"«VPN همیشه روشن» روشن شد"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"«VPN همیشه روشن» در نمایه شخصی شما روشن شد"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"«VPN همیشه روشن» در نمایه کاری شما روشن شد"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"تنظیم پروکسی HTTP جهانی"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"اطلاعات کاربری مطمئن"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"اطلاعات کاربری مطمئن در نمایه شخصی شما"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"اطلاعات کاربری مطمئن در نمایه کاری شما"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="one">حداقل <xliff:g id="COUNT_1">%d</xliff:g> گواهینامه مرکز صدور گواهی</item>
+      <item quantity="other">حداقل <xliff:g id="COUNT_1">%d</xliff:g> گواهینامه مرکز صدور گواهی</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"سرپرست می‌تواند دستگاه را قفل و گذرواژه را بازنشانی کند"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"سرپرست می‌تواند همه داده‌های دستگاه را پاک کند"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"ورود گذرواژه ناموفق، پیش از حذف همه اطلاعات دستگاه"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"ورود گذرواژه ناموفق، پیش از حذف داده‌های نمایه کاری"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> تلاش</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تلاش</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"این دستگاه را سازمانتان مدیریت می‌کند."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"این دستگاه توسط <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> مدیریت می‌شود."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"بیشتر بدانید"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="one">برنامه دوربین</item>
+      <item quantity="other">برنامه‌های دوربین</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"برنامه تقویم"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"برنامه مخاطبین"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="one">برنامه کارخواه ایمیل</item>
+      <item quantity="other">برنامه‌های کارخواه ایمیل</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"برنامه نقشه"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="one">برنامه تلفن</item>
+      <item quantity="other">برنامه‌های تلفن</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>، <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"آموزش‌های گام‌به‌گام"</string>
     <string name="about_system_update" msgid="7421264399111367755">"به‌روزرسانی سیستم"</string>
     <string name="system_update_description" msgid="998883510488461766">"با این کار، نرم‌افزار سیستم به جدیدترین نسخه به‌روزرسانی خواهد شد. دستگاهتان بازراه‌اندازی خواهد شد."</string>
@@ -256,6 +363,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"مجاز"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"در حال اعمال"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"به‌روزرسانی‌های دیگر سیستم"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"ممکن است شبکه پایش شود"</string>
+    <string name="done_button" msgid="616159688526431451">"تمام"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="one">به گواهینامه اعتماد کنید یا آن را بردارید</item>
+      <item quantity="other">به گواهینامه‌ها اعتماد کنید یا آن‌ها را بردارید</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> مرجع صدور گواهینامه‌ای در دستگاهتان نصب کرده است که ممکن است به او اجازه دهد فعالیت‌های شبکه دستگاهتان، ازجمله ایمیل‌ها، برنامه‌ها، و وب‌سایت‌های ایمن را کنترل کند.\n\nبرای اطلاعات بیشتر درباره این گواهینامه، با سرپرست تماس بگیرید.</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> چند مرجع صدور گواهینامه در دستگاهتان نصب کرده است که ممکن است به او اجازه دهند فعالیت‌های شبکه دستگاهتان، ازجمله ایمیل‌ها، برنامه‌ها، و وب‌سایت‌های ایمن را کنترل کند.\n\nبرای اطلاعات بیشتر درباره این گواهینامه‌ها، با سرپرست تماس بگیرید.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> مرجع صدور گواهینامه‌ای برای نمایه کاری شما نصب کرده است که ممکن است به او اجازه دهد فعالیت‌های شبکه کاری، ازجمله ایمیل‌ها، برنامه‌ها، و وب‌سایت‌های ایمن را کنترل کند.\n\nبرای اطلاعات بیشتر درباره این گواهینامه، با سرپرست تماس بگیرید.</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> چند مرجع صدور گواهینامه برای نمایه کاری شما نصب کرده است که ممکن است به او اجازه دهند فعالیت‌های شبکه کاری، ازجمله ایمیل‌ها، برنامه‌ها، و وب‌سایت‌های ایمن را کنترل کند.\n\nبرای اطلاعات بیشتر درباره این گواهینامه‌ها، با سرپرست تماس بگیرید.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"شخص ثالتی می‌تواند روی فعالیت‌های شبکه شما ازجمله ایمیل‌ها، برنامه‌ها و وب‌سایت‌های ایمن نظارت داشته باشد.\n\nاعتبارنامه مطمئن نصب‌شده در دستگاهتان این کار را شدنی می‌کند."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="one">بررسی گواهینامه</item>
+      <item quantity="other">بررسی گواهینامه‌ها</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"وضعیت"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"شبکه، شماره سریال و اطلاعات دیگر"</string>
     <string name="manual" msgid="5683935624321864999">"دفترچه راهنما"</string>
@@ -388,6 +514,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"شبکه متصل نیست"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"در حال حاضر به <xliff:g id="SSID">%1$s</xliff:g> متصل است. به شبکه دیگری متصل شود؟"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"شبکه ناشناس"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"‫اجازه ندارید شبکه Wi‑Fi را تغییر دهید."</string>
     <string name="title_ok" msgid="6500452958848127145">"تأیید"</string>
     <string name="title_cancel" msgid="2337143367016419016">"لغو"</string>
     <string name="storage_title" msgid="6637715914885228193">"فضای ذخیره‌سازی"</string>
@@ -875,6 +1002,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"گرفتن عکس از صفحه‌نمایش مجاز نیست"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"نمی‌توان این برنامه را باز کرد"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"اگر سؤالی دارید، با سرپرست IT تماس بگیرید"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"جزئیات بیشتر"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این نمایه کاری (ازجمله تنظیمات، مجوزها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این کاربر (ازجمله تنظیمات، مجوزها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این دستگاه (ازجمله تنظیمات، مجوزها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"حذف نمایه کار"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"برنامه سرپرست دستگاه"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"غیرفعال کردن این برنامه سرپرست دستگاه"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"حذف نصب برنامه"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"غیرفعال‌ کردن و حذف نصب"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"برنامه‌های سرپرست دستگاه"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"برنامه سرپرست دستگاه فعال شود؟"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"فعال کردن این برنامه سرپرست دستگاه"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"فعال‌سازی این برنامه سرپرست به برنامه <xliff:g id="APP_NAME">%1$s</xliff:g> اجازه می‌دهد عملیات زیر را اجرا کند:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> بر این دستگاه نظارت می‌کند و آن را مدیریت می‌کند."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"این برنامه سرپرست فعال است و به برنامه <xliff:g id="APP_NAME">%1$s</xliff:g> اجازه می‌دهد عملیات زیر را اجرا کند:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"با ادامه دادن، کاربرتان توسط سرپرست مدیریت می‌شود، که همچنین ممکن است بتواند داده‌های کاربر و نیز داده‌های شخصی شما را ذخیره کند.\n\nسرپرستتان می‌تواند بر تنظیمات، دسترسی‌ها، برنامه‌ها و داده‌ها مربوط به این کاربر (ازجمله فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کند."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"گزارش اشکال به اشتراک گذاشته شود؟"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"سرپرست فناوری اطلاعات شما برای کمک به عیب‌یابی این دستگاه، گزارش اشکال درخواست کرده است. ممکن است برنامه‌ها و داده‌ها به اشتراک گذاشته شوند."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"سرپرست فناوری اطلاعات شما برای کمک به عیب‌یابی این دستگاه، درخواست گزارش اشکال کرده است. ممکن است برنامه‌ها و داده‌ها به اشتراک گذاشته شوند و سرعت دستگاهتان به‌طور موقت کاهش یابد."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"این گزارش اشکال به سرپرست فناوری شما به اشتراک گذاشته می‌شود. برای جزئیات بیشتر با او تماس بگیرید."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"اشتراک‌گذاری"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"نپذیرفتن"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"دستگاه مورداستفاده با <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"دستگاهی پیدا نشد. مطمئن شوید دستگاه‌ها روشن و برای اتصال دردسترس هستند."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"تلاش مجدد"</string>

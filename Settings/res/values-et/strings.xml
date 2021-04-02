@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos koos Dolby Digital Plusiga"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Märkus. Valik Automaatne ei pruugi töötada, kui teie seade ei teavita toetatud vormingutest õigesti."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automaatne: kasuta seadme teavitatud vorminguid"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automaatne: lubatakse ainult vormingud, mida heli väljundseade toetab "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Kui see on valitud, lubab süsteem rakendustel valida mis tahes helivormingu, mida teie seadmeahel toetab. Rakendused võivad valida vormingu, mis pole kõige kõrgema kvaliteediga."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Puudub: ruumilist heli ei kasutata kunagi"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Käsitsi: valige vormingud käsitsi saadaolevate vormingute hulgast"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Käsitsi: valikuliselt lubatakse või keelatakse iga selle seadme toetatav vorming, olenemata sellest, mida heli väljundseade toetab."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Kui see on valitud, saate käsitsi keelata teie seadmeahela toetatavad helivormingud, mis põhjustavad taasesitusel probleeme. Helivormingud, mida teie seadmeahel ei toeta, saab lubada. Mõnel juhul võivad rakendused valida vormingu, mis pole kõige kõrgema kvaliteediga."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Kas lubada toetamata helivorming?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Teie ühendatud heliseade ei ole selle vormingu toest teada andnud. See võib põhjustada ootamatut käitumist, nagu seadmest kostuv vali müra või ragin."</string>
@@ -156,6 +156,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Kui rakendus seda taotleb, vastendab teie seade väljundi vaadatava sisu algse kaadrisagedusega. Seetõttu võib ekraanikuva video taasesitusest väljumisel või sellele lülitumisel hetkeks tühi olla."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Mitte kunagi"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Isegi kui rakendus seda taotleb, ei ürita teie seade mitte kunagi väljundit vaadatava sisu algse kaadrisagedusega vastendada."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Vormingu valimine"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automaatne"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Käsitsi"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Kasuta seadme teavitatud vorminguid"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Valige vormingud käsitsi saadaolevate vormingute hulgast"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"TOETATAVAD VORMINGUD"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"TOETAMATA VORMINGUD"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Kui see on valitud, lubab süsteem rakendustel valida mis tahes HDR-vormingu, mida teie seadmeahel toetab. Rakendused võivad valida vormingu, mis pole kõige kõrgema kvaliteediga."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Kui see on valitud, saate käsitsi keelata teie seadmeahela toetatavad HDR-vormingud, mis põhjustavad taasesitusel probleeme. HDR-vorminguid, mida teie seadmeahel ei toeta, ei saa sundlubada. Rakendused võivad valida vormingu, mis pole kõige kõrgema kvaliteediga."</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Kas soovite vahemälus olevad andmed kustutada?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Kustutab rakenduste vahemälus olevad andmed."</string>
     <string name="accessories_add" msgid="413764175035531452">"Tarviku lisamine"</string>
@@ -206,11 +231,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetoothi aadress"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Ühendatud"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Pole ühendatud"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Teil ei ole luba Bluetoothi seadete muutmiseks."</string>
     <string name="send_feedback" msgid="936698637869795473">"Tagasiside saatmine"</string>
     <string name="launch_help" msgid="2607478763131952469">"Abikeskus"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Kuupäev ja kellaaeg"</string>
     <string name="system_language" msgid="5516099388471974346">"Keel"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Teil pole luba seadme keele muutmiseks."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Klaviatuur"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Klaviatuur ja automaattäide"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Automaatne täitmine"</string>
@@ -226,6 +253,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Arendaja valikud"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Puudub"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Kasutus ja diagnostika"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Saadaval ei ole ühtki seadme administraatori rakendust"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Administraatori keelatud"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Pole saadaval"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Seadme admin. rakendused"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Aktiivseid rakendusi ei ole"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktiivset rakendust</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aktiivne rakendus</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Administraator, krüpteerimiseeskirjad või mandaatide salvestusruum on selle keelanud"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Hallatava seadme teave"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Teie organisatsiooni hallatavad muudatused ja seaded"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Organisatsiooni <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> hallatavad muudatused ja seaded"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Teie tööandmetele juurdepääsu andmiseks võib teie organisatsioon muuta seadeid ja installida seadmesse tarkvara. \n\nLisateabe saamiseks võtke ühendust organisatsiooni administraatoriga."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Teie organisatsiooni nähtava teabe tüübid"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Teie organisatsiooni administraatori tehtud muudatused"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Teie juurdepääs sellele seadmele"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Teie töökontoga seotud andmed, nt e-post ja kalender"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Teie seadmes olevate rakenduste loend"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Iga rakenduse kasutamise aeg ja kasutatud andmemaht"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Uusim võrguliikluse logi"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Kõige viimane veaaruanne"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Kõige viimane turvalogi"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Pole"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Installitud rakendused"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Rakenduste arv on hinnanguline. See ei pruugi hõlmata muudest allikatest kui Play poest installitud rakendusi."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">Vähemalt <xliff:g id="COUNT_1">%d</xliff:g> rakendust</item>
+      <item quantity="one">Vähemalt <xliff:g id="COUNT_0">%d</xliff:g> rakendus</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Asukohale juurdepääsu load"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Mikrofoni load"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Kaamera load"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Vaikerakendused"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> rakendust</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> rakendus</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Vaikeklaviatuur"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Määratud valikule <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Alati sees VPN on sisse lülitatud"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Alati sees VPN on teie isiklikul profiilil sisse lülitatud"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Alati sees VPN on teie tööprofiilil sisse lülitatud"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Üldine HTTP-puhverserver on seadistatud"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Usaldusväärsed mandaadid"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Usaldusväärsed mandaadid teie isiklikul profiilil"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Usaldusväärsed mandaadid teie tööprofiilil"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">Vähemalt <xliff:g id="COUNT_1">%d</xliff:g> CA-sertifikaati</item>
+      <item quantity="one">Vähemalt <xliff:g id="COUNT_0">%d</xliff:g> CA-sertifikaat</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Administraator saab seadme lukustada ja parooli lähtestada"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Administraator saab kustutada kõik seadme andmed"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Parooli sisestamise ebaõnnestunud katsete arv enne seadmes olevate kõigi andmete kustutamist"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Parooli sisestamise ebaõnnestunud katsete arv enne tööprofiilil olevate andmete kustutamist"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> katset</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> katse</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Seda seadet haldab teie organisatsioon."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Seda seadet haldab <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Lisateave"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">Kaamerarakendused</item>
+      <item quantity="one">Kaamerarakendus</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Kalendrirakendus"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Rakendus Kontaktid"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">E-postikliendirakendus</item>
+      <item quantity="one">E-postikliendirakendus</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Kaardirakendus"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">Telefonirakendused</item>
+      <item quantity="one">Telefonirakendus</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Õpetused"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Süsteemivärskendus"</string>
     <string name="system_update_description" msgid="998883510488461766">"See värskendab teie süsteemi tarkvara uusimale versioonile. Teie seade taaskäivitub."</string>
@@ -256,6 +363,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Lubav"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Jõustamine"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Süsteemi lisavärskendused"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Võrku võidakse jälgida"</string>
+    <string name="done_button" msgid="616159688526431451">"Valmis"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">Sertifikaatide usaldamine või eemaldamine</item>
+      <item quantity="one">Sertifikaadi usaldamine või eemaldamine</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> installis teie seadmesse sertifikaadi volitused, mis võivad lubada sellel jälgida tegevusi teie seadme võrgus (sh meilid, rakendused ja turvalised veebisaidid).\n\nNende sertifikaatide kohta lisateabe saamiseks võtke ühendust administraatoriga.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> installis teie seadmesse sertifikaadi volituse, mis võib lubada sellel jälgida tegevusi teie seadme võrgus (sh meilid, rakendused ja turvalised veebisaidid).\n\nSelle sertifikaadi kohta lisateabe saamiseks võtke ühendust administraatoriga.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> installis teie tööprofiilile sertifikaadi volitused, mis võivad lubada sellel jälgida tegevusi töökoha võrgus (sh meilid, rakendused ja turvalised veebisaidid).\n\nNende sertifikaatide kohta lisateabe saamiseks võtke ühendust administraatoriga.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> installis teie tööprofiilile sertifikaadi volituse, mis võib lubada sellel jälgida tegevusi töökoha võrgus (sh meilid, rakendused ja turvalised veebisaidid).\n\nSelle sertifikaadi kohta lisateabe saamiseks võtke ühendust administraatoriga.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Kolmas osapool saab jälgida teie tegevust võrgus, sh meile, rakendusi ja turvalisi veebisaite.\n\nSeda võimaldab teie seadmesse installitud usaldusväärne mandaat."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">Kontrollige sertifikaate</item>
+      <item quantity="one">Kontrollige sertifikaati</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Olek"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Võrk, seerianumbrid ja muu teave"</string>
     <string name="manual" msgid="5683935624321864999">"Juhend"</string>
@@ -388,6 +514,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Võrk ei ole ühendatud"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Juba ühendatud võrguga <xliff:g id="SSID">%1$s</xliff:g>. Kas ühendada teise võrguga?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"tundmatu võrk"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Teil pole WiFi-võrgu muutmiseks luba."</string>
     <string name="title_ok" msgid="6500452958848127145">"OK"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Tühista"</string>
     <string name="storage_title" msgid="6637715914885228193">"Salvestusruum"</string>
@@ -875,6 +1002,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Ekraanipildi tegemine ei ole lubatud"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Seda rakendust ei saa avada"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Küsimuste korral võtke ühendust IT-administraatoriga"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Rohkem üksikasju"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Teie administraator saab jälgida ja hallata teie tööprofiiliga seotud rakendusi ning andmeid, sh seadeid, lube, ettevõtte juurdepääsu, võrgutegevusi ja seadme asukohateavet."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Teie administraator saab jälgida ja hallata selle kasutajaga seotud rakendusi ning andmeid, sh seadeid, lube, ettevõtte juurdepääsu, võrgutegevusi ja seadme asukohateavet."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Teie administraator saab jälgida ja hallata selle seadmega seotud rakendusi ning andmeid, sh seadeid, lube, ettevõtte juurdepääsu, võrgutegevusi ja seadme asukohateavet."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Eemalda tööprofiil"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Seadme administraatori rakendus"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Inaktiveeri seadme administraatori rakendus"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Desinstalli rakendus"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Inaktiveeri ja desinstalli"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Seadme admin. rakendused"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Kas aktiveerida admin. rakendus?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Aktiveeri seadme administraatori rakendus"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Selle administraatori rakenduse aktiveerimisel lubatakse rakendusel <xliff:g id="APP_NAME">%1$s</xliff:g> teha järgmisi toiminguid."</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Seda seadet haldab ja jälgib rakendus <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"See administraatori rakendus on aktiivne ja lubab rakendusel <xliff:g id="APP_NAME">%1$s</xliff:g> teha järgmisi toiminguid."</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Kui jätkate, haldab teie kasutajat edaspidi administraator, kes saab võib-olla talletada peale teie isiklike andmete ka seotud andmeid.\n\nTeie administraator saab jälgida ja hallata selle kasutajaga seotud seadeid, juurdepääsu, rakendusi ja andmeid, sealhulgas veebitegevusi ja seadme asukohateavet."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Kas jagada veaaruannet?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"IT-administraator taotles veaaruannet, mis aitaks seadmes vigu otsida. Rakendusi ja andmeid võidakse jagada."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"IT-administraator taotles veaaruannet, mis aitaks seadmes vigu otsida. Rakendusi ja andmeid võidakse jagada ning see võib ajutiselt teie seadet aeglustada."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Seda veaaruannet jagatakse IT-administraatoriga. Lisateabe saamiseks võtke temaga ühendust."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Jaga"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Keeldu"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Seade, mida rakendusega <xliff:g id="APPNAME">%1$s</xliff:g> kasutada"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Seadmeid ei leitud. Veenduge, et seadmed oleksid sisse lülitatud ja ühendamiseks saadaval."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Proovi uuesti"</string>

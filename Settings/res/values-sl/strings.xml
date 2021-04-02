@@ -130,10 +130,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos s tehnologijo Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Opomba: nastavitev »Samodejno« morda ne deluje, če naprava neustrezno sporoča podprte oblike zvoka."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Samodejno: Uporaba oblik, ki jih sporoča naprava"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Samodejno: Omogoči samo oblike, ki jih podpira izhodna naprava za zvok "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Če je izbrano, sistem aplikacijam omogoči izbiro oblike zvoka, ki jo podpira veriga naprav. Aplikacije morda izberejo obliko, ki ni največje kakovosti."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Brez: Prostorski zvok se nikoli ne uporabi"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Ročno: Izbira oblik na seznamu razpoložljivih oblik"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Ročno: Selektivno omogoči ali onemogoči posamezne oblike, ki jih podpira ta naprava, ne glede na to, kaj podpira izhodna naprava za zvok"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Če je izbrano, lahko ročno onemogočite oblike zvoka, ki jih podpira veriga naprav, ki povzročajo težave s predvajanjem. Oblik zvoka, ki jih ne podpira veriga naprav, ni mogoče omogočiti. Aplikacije v nekaterih primerih morda izberejo obliko, ki ni največje kakovosti."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Želite omogočiti nepodprto obliko zvoka?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Povezana zvočna naprava ne sporoča podpore za to obliko. Zaradi tega lahko v napravi pride do nepričakovanega delovanja, kot so glasni zvoki ali poki."</string>
@@ -160,6 +160,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Če to zahteva aplikacija, bo naprava svoj izhod uskladila z izvirnim številom sličic v sekundi vsebine, ki jo gledate. Zaradi tega bo med začetkom ali ustavitvijo predvajanja videoposnetka zaslon za nekaj sekund morda prazen."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nikoli"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Tudi če to zahteva aplikacija, naprava svojega izhoda ne bo nikoli poskušala uskladiti z izvirnim številom sličic v sekundi vsebine, ki jo gledate."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Izbor oblike"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Samodejno"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Ročno"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Uporaba oblik, ki jih sporoča naprava"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Ročna izbira oblik na seznamu razpoložljivih oblik"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"PODPRTE OBLIKE"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"NEPODPRTE OBLIKE"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Če je izbrano, sistem aplikacijam omogoči izbiro oblike HDR, ki jo podpira veriga naprav. Aplikacije morda izberejo obliko, ki ni največje kakovosti."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Če je izbrano, lahko ročno onemogočite oblike HDR, ki jih podpira veriga naprav, ki povzročajo težave s predvajanjem. Oblik HDR, ki jih ne podpira veriga naprav, ni mogoče na silo omogočiti. Aplikacije morda izberejo obliko, ki ni največje kakovosti."</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Želite izbrisati predpomnjene podatke?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Izbrisali boste predpomn. pod. vseh aplikacij."</string>
     <string name="accessories_add" msgid="413764175035531452">"Dodaj pripomoček"</string>
@@ -210,11 +235,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Naslov vmesnika Bluetooth"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Povezava je vzpostavljena"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Povezava je prekinjena"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Nimate dovoljenja za spreminjanje nastavitev za Bluetooth."</string>
     <string name="send_feedback" msgid="936698637869795473">"Pošiljanje povratnih informacij"</string>
     <string name="launch_help" msgid="2607478763131952469">"Center za pomoč"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Datum in čas"</string>
     <string name="system_language" msgid="5516099388471974346">"Jezik"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Nimate dovoljenja za spreminjanje jezika naprave."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Tipkovnica"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Tipkovnica in samodejno izpolnjevanje"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Samodejno izpolnjevanje"</string>
@@ -230,6 +257,102 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Možnosti za razvijalce"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Brez"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Uporaba in diagnostika"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Na voljo ni nobena skrbniška aplikacija naprave"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Onemogočil skrbnik"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Ni na voljo"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Skrbniške aplikacije naprave"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Ni aktivnih aplikacij"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aktivna aplikacija</item>
+      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> aktivni aplikaciji</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aktivne aplikacije</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktivnih aplikacij</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Onemogočil skrbnik, pravilnik za šifriranje ali shramba poverilnic"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Podatki o upravljani napravi"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Spremembe in nastavitve, ki jih upravlja vaša organizacija"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Spremembe in nastavitve, ki jih upravlja <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Vaša organizacija lahko spremeni nastavitve in v napravo namesti programsko opremo, da bi zagotovila dostop do delovnih podatkov. \n\nZa več informacij se obrnite na skrbnika organizacije."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Vrste podatkov, ki jih vidi vaša organizacija"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Spremembe, ki jih je izvedel skrbnik vaše organizacije"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Vaš dostop do vsebin te naprave"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Podatke, povezane z delovnim računom, npr. e-pošto in koledar"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Seznam aplikacij v napravi"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Trajanje uporabe in količina prenesenih podatkov za vsako od aplikacij"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Najnovejši dnevnik omrežnega prometa"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Najnovejše poročilo o napakah"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Najnovejši varnostni dnevnik"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Brez"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Nameščene aplikacije"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"To je ocena števila aplikacij. Morda ne vključuje aplikacij, nameščenih zunaj Trgovine Play."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="one">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> aplikacija</item>
+      <item quantity="two">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> aplikaciji</item>
+      <item quantity="few">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> aplikacije</item>
+      <item quantity="other">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> aplikacij</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Dovoljenja za lokacijo"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Dovoljenja za mikrofon"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Dovoljenja za fotoaparat"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Privzete aplikacije"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aplikacija</item>
+      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> aplikaciji</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aplikacije</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikacij</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Privzeta tipkovnica"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Nastavljeno na <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Stalno vklopljen VPN je vklopljen"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Stalno vklopljen VPN je vklopljen v vašem osebnem profilu"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Stalno vklopljen VPN je vklopljen v vašem delovnem profilu"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Globalni strežnik proxy za HTTP je nastavljen"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Zaupanja vredne poverilnice"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Zaupanja vredne poverilnice v vašem osebnem profilu"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Zaupanja vredne poverilnice v vašem delovnem profilu"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="one">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> potrdilo overitelja potrdil</item>
+      <item quantity="two">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> potrdili overitelja potrdil</item>
+      <item quantity="few">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> potrdila overitelja potrdil</item>
+      <item quantity="other">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> potrdil overitelja potrdil</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Skrbnik lahko zaklene napravo in ponastavi geslo"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Skrbnik lahko izbriše vse podatke v napravi"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Število neuspešnih poskusov vpisa gesla, preden se izbrišejo vsi podatki v napravi"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Število neuspešnih poskusov vpisa gesla, preden se izbrišejo podatki delovnega profila"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> poskus</item>
+      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> poskusa</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> poskusi</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> poskusov</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"To napravo upravlja vaša organizacija."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"To napravo upravlja <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Več o tem"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="one">Fotografske aplikacije</item>
+      <item quantity="two">Fotografske aplikacije</item>
+      <item quantity="few">Fotografske aplikacije</item>
+      <item quantity="other">Fotografske aplikacije</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Aplikacija za koledar"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Aplikacija za stike"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="one">E-poštni odjemalci</item>
+      <item quantity="two">E-poštni odjemalci</item>
+      <item quantity="few">E-poštni odjemalci</item>
+      <item quantity="other">E-poštni odjemalci</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Aplikacija za zemljevide"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="one">Aplikacije za klicanje</item>
+      <item quantity="two">Aplikacije za klicanje</item>
+      <item quantity="few">Aplikacije za klicanje</item>
+      <item quantity="other">Aplikacije za klicanje</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Vadnice"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Sistemska posodobitev"</string>
     <string name="system_update_description" msgid="998883510488461766">"S tem bo programska oprema sistema posodobljena na najnovejšo različico. Naprava se bo znova zagnala."</string>
@@ -262,6 +385,33 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Dopustno"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Uveljavljanje"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Dodatne posodobitve sist."</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Omrežje je lahko nadzorovano"</string>
+    <string name="done_button" msgid="616159688526431451">"Končano"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="one">Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil</item>
+      <item quantity="two">Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil</item>
+      <item quantity="few">Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil</item>
+      <item quantity="other">Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="one">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil v vaši napravi, s čimer morda lahko spremlja omrežno dejavnost naprave, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o tem potrdilih, se obrnite na skrbnika.</item>
+      <item quantity="two">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil v vaši napravi, s čimer morda lahko spremlja omrežno dejavnost naprave, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o tem potrdilih, se obrnite na skrbnika.</item>
+      <item quantity="few">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil v vaši napravi, s čimer morda lahko spremlja omrežno dejavnost naprave, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o tem potrdilih, se obrnite na skrbnika.</item>
+      <item quantity="other">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil v vaši napravi, s čimer morda lahko spremlja omrežno dejavnost naprave, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o tem potrdilih, se obrnite na skrbnika.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="one">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil za vaš delovni profil, s čimer morda lahko spremlja dejavnost v službenem omrežju, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o teh potrdilih, se obrnite na skrbnika.</item>
+      <item quantity="two">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil za vaš delovni profil, s čimer morda lahko spremlja dejavnost v službenem omrežju, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o teh potrdilih, se obrnite na skrbnika.</item>
+      <item quantity="few">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil za vaš delovni profil, s čimer morda lahko spremlja dejavnost v službenem omrežju, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o teh potrdilih, se obrnite na skrbnika.</item>
+      <item quantity="other">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil za vaš delovni profil, s čimer morda lahko spremlja dejavnost v službenem omrežju, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o teh potrdilih, se obrnite na skrbnika.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Tretja oseba lahko nadzira vašo omrežno dejavnost, vključno z e-poštnimi sporočili, aplikacijami in varnimi spletnimi mesti.\n\nTo ji omogoča zaupanja vredna poverilnica, ki je nameščena v vaši napravi."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="one">Preveri potrdila</item>
+      <item quantity="two">Preveri potrdila</item>
+      <item quantity="few">Preveri potrdila</item>
+      <item quantity="other">Preveri potrdila</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Stanje"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Omrežje, serijske številke in drugi podatki"</string>
     <string name="manual" msgid="5683935624321864999">"Priročnik"</string>
@@ -394,6 +544,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Povezava z omrežjem ni vzpostavljena"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"V omrežje <xliff:g id="SSID">%1$s</xliff:g> ste že povezani. Se želite povezati v drugo omrežje?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"neznano omrežje"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Nimate dovoljenja za spreminjanje omrežja Wi‑Fi."</string>
     <string name="title_ok" msgid="6500452958848127145">"V redu"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Prekliči"</string>
     <string name="storage_title" msgid="6637715914885228193">"Shramba"</string>
@@ -889,6 +1040,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Ustvarjanje posnetka zaslona ni omogočeno"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Te aplikacije ni mogoče odpreti"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Če imate vprašanja, se obrnite na skrbnika za IT"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Več podrobnosti"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Skrbnik lahko nadzira in upravlja aplikacije ter podatke, povezane s tem delovnim profilom, vključno z nastavitvami, dovoljenji, dostopom za podjetje, omrežno dejavnostjo in podatki o lokaciji naprave."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Skrbnik lahko nadzira in upravlja aplikacije ter podatke, povezane s tem uporabnikom, vključno z nastavitvami, dovoljenji, dostopom za podjetje, omrežno dejavnostjo in podatki o lokaciji naprave."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Skrbnik lahko nadzira in upravlja aplikacije ter podatke, povezane s to napravo, vključno z nastavitvami, dovoljenji, dostopom za podjetje, omrežno dejavnostjo in podatki o lokaciji naprave."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Odstrani delovni profil"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Skrbniška aplikacija naprave"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Deaktiviraj to skrbniško aplikacijo naprave"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Odstrani aplikacijo"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Deaktiviraj in odstrani"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Skrbniške aplikacije naprave"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Aktivacija skrbniške aplikacije naprave?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Aktiviraj to skrbniško aplikacijo naprave"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Če aktivirate to skrbniško aplikacijo, boste aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> omogočili izvajanje teh postopkov:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"To napravo bo upravljala in nadzirala aplikacija <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Ta skrbniška aplikacija je aktivna in aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> omogoča izvajanje teh postopkov:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Če nadaljujete, bo uporabnika upravljal skrbnik, ki lahko poleg osebnih podatkov shranjuje tudi povezane podatke.\n\nSkrbnik lahko nadzira in upravlja nastavitve, dostop, aplikacije ter podatke, povezane s tem uporabnikom, vključno z omrežno dejavnostjo in podatki o lokaciji naprave."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Želite poročilo o napakah dati v skupno rabo?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Skrbnik za IT je zahteval poročilo o napakah za pomoč pri odpravljanju napak v tej napravi. Aplikacije in podatki bodo morda dani v skupno rabo."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Skrbnik za IT je zahteval poročilo o napakah za pomoč pri odpravljanju napak v tej napravi. Aplikacije in podatki bodo morda dani v skupno rabo in delovanje naprave bo morda začasno upočasnjeno."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"To poročilo o napakah je v skupni rabi s skrbnikom za IT. Če želite več podrobnosti, se obrnite nanj."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Skupna raba"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Zavrnitev"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Naprava, ki bo uporabljena skupaj z aplikacijo <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Ni naprav. Preverite, ali so naprave vklopljene in na voljo za vzpostavitev povezave."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Poskusi znova"</string>

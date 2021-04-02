@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos с Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Забележка: Опцията „Авт.“ може да не работи, ако у-вото ви не отчита правилно поддържаните формати."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Автоматично: Използване на отчитаните от устройството формати"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Автоматично: Активиране само на форматите, които се поддържат от изходното ви устройство за звук "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Когато е избрана тази настройка, системата ще разреши на приложенията да избират всички формати за звук, които се поддържат от веригата ви с устройства. Приложенията може да изберат такъв формат, при който качеството не е най-високото."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Без: Никога да не се използва съраунд звук"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Ръчно: Изберете ръчно от наличните формати"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Ръчно: Избирателно активиране или деактивиране на всеки формат, който се поддържа от това устройство, независимо от това какво се поддържа от изходното ви устройство за звук."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Когато е избрана тази настройка, можете ръчно да деакт. форматите за звук, които се поддържат от веригата ви с у-ва и създават проблеми при възпроизв. Тези, които не се поддържат, не могат да бъдат активир. В някои случаи прилож. може да изберат такъв формат, при който качеството не е най-високото."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Да се активира ли неподдържаният звуков формат?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Свързаното ви аудиоустройство не поддържа формата. Това може да доведе до неочаквано поведение, като например силен шум или пукане от устройството ви."</string>
@@ -156,6 +156,31 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ако прилож. поиска това, у-вото ви ще намери съответствие между изхода си и оригиналната скорост на кадрите на съдърж., което гледате. Възможно е екранът ви да остане празен за секунда при приключ./стартиране на възпроизвеждането на видеосъдържание."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Никога"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Дори ако приложението поиска това, устройството ви никога няма да опита да намери съответствие между изхода си и оригиналната скорост на кадрите на съдържанието, което гледате."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Избиране на формат"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Автоматично"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Ръчно"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Използване на отчитаните от устройството формати"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Изберете ръчно от наличните формати"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"ПОДДЪРЖАНИ ФОРМАТИ"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"НЕПОДДЪРЖАНИ ФОРМАТИ"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Когато е избрана тази настройка, системата ще разреши на приложенията да избират всички формати с HDR, които се поддържат от веригата ви с устройства. Приложенията може да изберат такъв формат, при който качеството не е най-високото."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Когато е избрана тази настройка, можете ръчно да деакт. форматите с HDR, които се поддържат от веригата ви с у-ва и създават проблеми при възпроизвежд. Тези, които не се поддържат, не могат да бъдат активирани принудително. Прил. може да изберат такъв формат, при който качеството не е най-високото."</string>
+    <!-- no translation found for hdr_format_info (5652559220799426076) -->
+    <skip />
+    <!-- no translation found for hdr_show_formats (171065892975445851) -->
+    <skip />
+    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
+    <skip />
+    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
+    <skip />
+    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Да се изчистят ли кешираните данни?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Това ще изчисти кешираните данни за всички прил."</string>
     <string name="accessories_add" msgid="413764175035531452">"Добавяне на аксесоар"</string>
@@ -206,11 +231,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Адрес на Bluetooth"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Установена е връзка"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Връзката е прекратена"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Нямате разрешение да променяте настройките за Bluetooth."</string>
     <string name="send_feedback" msgid="936698637869795473">"Изпращане на отзиви"</string>
     <string name="launch_help" msgid="2607478763131952469">"Помощен център"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Дата и час"</string>
     <string name="system_language" msgid="5516099388471974346">"Език"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Нямате разрешение за промяна на езика на устройството."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Клавиатура"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Клавиатура и автоматично попълване"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Автоматично попълване"</string>
@@ -226,6 +253,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Опции на програмиста"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Няма"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Употреба и диагностика"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Няма приложения за администриране на устройството"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Деактивирано от администратора"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Не е налице"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Администраторски приложения на устройството"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Няма активни приложения"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> активни приложения</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> активно приложение</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Деакт. от админ., правила за шифроване или хранил. за идент. данни"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Информация за управляваното устройство"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Промени и настройки, управлявани от организацията ви"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Промени и настройки, управлявани от <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"За да предостави достъп до служебните ви данни, организацията ви може да промени настройките и да инсталира софтуер на устройството ви.\n\nЗа повече подробности се свържете с администратора на организацията си."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Типове информация, която организацията ви може да вижда"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Промени, извършени от администратора на организацията ви"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Вашият достъп до това устройство"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Данни, свързани със служебния ви профил, като например имейли и календар"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Списък с приложенията на устройството ви"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Прекараното време и количеството изразходвани данни във всяко приложение"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Най-скорошният регистрационен файл за трафика в мрежата"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Най-скорошният сигнал за програмна грешка"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Най-скорошният регистрационен файл за сигурността"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Няма"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Инсталирани са приложения"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Броят на приложенията е приблизителен и може да не включва тези, които не са инсталирани от Google Play Магазин."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">Поне <xliff:g id="COUNT_1">%d</xliff:g> приложения</item>
+      <item quantity="one">Поне <xliff:g id="COUNT_0">%d</xliff:g> приложение</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Разрешения за местоположението"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Разрешения за микрофона"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Разрешения за камерата"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Приложения по подразбиране"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> приложения</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> приложение</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Клавиатура по подразбиране"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Зададено: <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Режимът за винаги включена виртуална частна мрежа (VPN) е активиран"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Режимът за винаги включена виртуална частна мрежа (VPN) е активиран в личния ви потребителски профил"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Режимът за винаги включена виртуална частна мрежа (VPN) е активиран в служебния ви потребителски профил"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Зададен е общ HTTP прокси сървър"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Надеждни идентификационни данни"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Надеждни идентификационни данни в личния ви потребителски профил"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Надеждни идентификационни данни в служебния ви потребителски профил"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">Поне <xliff:g id="COUNT_1">%d</xliff:g> сертификата от сертифициращ орган</item>
+      <item quantity="one">Поне <xliff:g id="COUNT_0">%d</xliff:g> сертификат от сертифициращ орган</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Администраторът може да заключва устройството и да променя паролата"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Администраторът може да изтрие всички данни на устройството"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Неуспешни опити за въвеждане на паролата, преди всички данни на устройството да бъдат изтрити"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Неуспешни опити за въвеждане на паролата, преди данните в служебния потребителски профил да бъдат изтрити"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> опита</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> опит</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Това устройство се управлява от организацията ви."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Това устройство се управлява от <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Научете повече"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">Приложения за камера</item>
+      <item quantity="one">Приложение за камера</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Приложение за календар"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Приложение за контакти"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">Приложения за електронна поща</item>
+      <item quantity="one">Приложение за електронна поща</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Приложение за карти"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">Приложения за телефон</item>
+      <item quantity="one">Приложение за телефон</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Уроци"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Системна актуализация"</string>
     <string name="system_update_description" msgid="998883510488461766">"Това действие ще актуализира системния ви софтуер до най-новата версия. Устройството ви ще се рестартира."</string>
@@ -256,6 +363,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Разрешаващо"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Наложено"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Други сист. актуализации"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Мрежата може да се наблюдава"</string>
+    <string name="done_button" msgid="616159688526431451">"Готово"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">Доверете се на сертификатите или ги премахнете</item>
+      <item quantity="one">Доверете се на сертификата или го премахнете</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other">Домейнът <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> е инсталирал сертифициращи органи на устройството ви. Това може да му даде възможност да следи мрежовата активност на устройството, включително имейли, приложения и защитени уебсайтове.\n\nЗа повече информация относно тези сертификати се обърнете към администратора си.</item>
+      <item quantity="one">Домейнът <xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> е инсталирал сертифициращ орган на устройството ви. Това може да му даде възможност да следи мрежовата активност на устройството, включително имейли, приложения и защитени уебсайтове.\n\nЗа повече информация относно този сертификат се обърнете към администратора си.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other">Домейнът <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> е инсталирал сертифициращи органи за служебния ви потребителски профил. Това може да му даде възможност да следи служебната мрежова активност, включително имейли, приложения и защитени уебсайтове.\n\nЗа повече информация относно тези сертификати се обърнете към администратора си.</item>
+      <item quantity="one">Домейнът <xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> е инсталирал сертифициращ орган за служебния ви потребителски профил. Това може да му даде възможност да следи служебната мрежова активност, включително имейли, приложения и защитени уебсайтове.\n\nЗа повече информация относно този сертификат се обърнете към администратора си.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Трета страна може да наблюдава активността ви в мрежата, включително имейлите, приложенията и защитените уебсайтове.\n\nТова е възможно благодарение на инсталирани на устройството ви надеждни идентификационни данни."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">Проверка на сертификатите</item>
+      <item quantity="one">Проверка на сертификата</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Състояние"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Мрежа, серийни номера и друга информация"</string>
     <string name="manual" msgid="5683935624321864999">"Ръководство"</string>
@@ -388,6 +514,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Няма връзка с мрежата"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Вече сте свързани към „<xliff:g id="SSID">%1$s</xliff:g>“. Да се установи ли връзка с друга мрежа?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"неизвестна мрежа"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Нямате разрешение да променяте Wi‑Fi мрежата."</string>
     <string name="title_ok" msgid="6500452958848127145">"OK"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Отказ"</string>
     <string name="storage_title" msgid="6637715914885228193">"Хранилище"</string>
@@ -875,6 +1002,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Екранните снимки не са разрешени"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Това приложение не може да бъде отворено"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Ако имате въпроси, свържете се със системния си администратор"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Още подробности"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Администраторът ви може да наблюдава и управлява приложенията и данните, свързани със служебния ви потребителски профил, включително настройките, разрешенията, корпоративния достъп, мрежовата активност и информацията за местоположението на устройството."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Администраторът ви може да наблюдава и управлява приложенията и данните, свързани с този потребител, включително настройките, разрешенията, корпоративния достъп, мрежовата активност и информацията за местоположението на устройството."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Администраторът ви може да наблюдава и управлява приложенията и данните, свързани с това устройство, включително настройките, разрешенията, корпоративния достъп, мрежовата активност и информацията за местоположението на устройството."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Премахв. на служебния потр. профил"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Приложение за администриране на устройството"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Деактивиране на това приложение за администриране на устройството"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Деинсталиране на приложението"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Деактивиране и деинсталиране"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Приложения за администриране на устройството"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Да се активира ли прилож. за администр.?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Активиране на това приложение за администриране на устройството"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Активирането на това приложение за администриране ще разреши на <xliff:g id="APP_NAME">%1$s</xliff:g> да изпълнява следните действия:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Това устройство ще се управлява и наблюдава от <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Това приложение за администриране е активно и разрешава на <xliff:g id="APP_NAME">%1$s</xliff:g> да изпълнява следните действия:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Ако продължите, потребителят ви ще се управлява от администратора ви, който може също да съхранява свързани данни в допълнение към личната ви информация.\n\nАдминистраторът ви има възможност да наблюдава и управлява настройките, достъпа, приложенията и данните, свързани с този потребител, включително мрежовата активност и информацията за местоположението на устройството ви."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Да се сподели ли сигналът за програмна грешка?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Системният ви администратор поиска сигнал за програмна грешка с цел отстраняване на неизправностите на това устройство. Възможно е да бъдат споделени приложения и данни."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Системният ви администратор поиска сигнал за програмна грешка с цел отстраняване на неизправностите на това устройство. Възможно е да бъдат споделени приложения и данни и работата на устройството ви временно да се забави."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Този сигнал за програмна грешка се споделя със системния ви администратор. Свържете се с него за повече подробности."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Споделяне"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Отхвърляне"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Устройство, което да се използва с(ъс) <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Няма намерени устройства. Уверете се, че устройствата са включени и налице за свързване."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Нов опит"</string>
