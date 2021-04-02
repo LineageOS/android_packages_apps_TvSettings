@@ -169,18 +169,12 @@
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
     <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Bei dieser Option können Apps jedes HDR-Format wählen, das von deiner Gerätekette unterstützt wird. Möglicherweise wählen Apps ein Format, das nicht der höchsten Qualität entspricht."</string>
     <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Du kannst von deiner Gerätekette unterstützte HDR-Formate, die Probleme bei der Wiedergabe verursachen, manuell deaktivieren. Das Aktivieren von nicht unterstützten HDR-Formaten kann nicht erzwungen werden. Möglicherweise wählen Apps ein Format, das nicht der höchsten Qualität entspricht."</string>
-    <!-- no translation found for hdr_format_info (5652559220799426076) -->
-    <skip />
-    <!-- no translation found for hdr_show_formats (171065892975445851) -->
-    <skip />
-    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
-    <skip />
-    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
-    <skip />
-    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
-    <skip />
-    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
-    <skip />
+    <string name="hdr_format_info" msgid="5652559220799426076">"FORMATINFORMATIONEN"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"Formate anzeigen"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Formate ausblenden"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"AKTIVIERTE FORMATE"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"DEAKTIVIERTE FORMATE"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Ändere zum Deaktivieren die Formatauswahl in „Manuell“."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Daten im Cache löschen?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Daten im Cache werden für alle Apps gelöscht."</string>
     <string name="accessories_add" msgid="413764175035531452">"Zubehör hinzufügen"</string>
@@ -255,11 +249,13 @@
     <string name="system_diagnostic" msgid="1654842813331919958">"Nutzung &amp; Diagnose"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"Keine App zur Geräteverwaltung verfügbar"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Vom Administrator deaktiviert"</string>
-    <!-- no translation found for disabled_by_administrator_summary (3420979957115426764) -->
-    <skip />
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Nicht verfügbar"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Apps zur Geräteverwaltung"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Keine aktiven Apps"</string>
-    <!-- no translation found for number_of_device_admins (5825543996501454373) -->
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktive Apps</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aktive App</item>
+    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Durch Administrator, Richtlinie oder Anmeldedatenspeicher deaktiviert"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Info zu verwalteten Geräten"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Änderungen und Einstellungen, die von deiner Organisation verwaltet werden"</string>
@@ -268,24 +264,27 @@
     <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Art von Informationen, die deine Organisation sehen kann"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Änderungen des Administrators deiner Organisation"</string>
     <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Mein Zugriff auf dieses Gerät"</string>
-    <!-- no translation found for enterprise_privacy_enterprise_data (8135491104894522008) -->
-    <skip />
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Daten zum Arbeitskonto, etwa die E-Mail-Adresse und Kalender"</string>
     <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Liste der Apps auf dem Gerät"</string>
     <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Nutzungsdauer und genutzte Datenmenge für jede App"</string>
     <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Neuestes Protokoll zum Netzwerkverkehr"</string>
     <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Neuester Fehlerbericht"</string>
     <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Neuestes Sicherheitsprotokoll"</string>
-    <!-- no translation found for enterprise_privacy_none (6660670916934417519) -->
-    <skip />
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Keine"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Installierte Apps"</string>
-    <!-- no translation found for enterprise_privacy_apps_count_estimation_info (3875568975752197381) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_number_packages_lower_bound (3891649682522079620) -->
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Die Anzahl der Apps ist eine Schätzung. Installierte Apps, die nicht aus dem Play Store stammen, werden möglicherweise nicht berücksichtigt."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">Mindestens <xliff:g id="COUNT_1">%d</xliff:g> Apps</item>
+      <item quantity="one">Mindestens <xliff:g id="COUNT_0">%d</xliff:g> App</item>
+    </plurals>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Standortberechtigungen"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Mikrofonberechtigungen"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Kameraberechtigungen"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Standard-Apps"</string>
-    <!-- no translation found for enterprise_privacy_number_packages (1652060324792116347) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> Apps</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> App</item>
+    </plurals>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Standardtastatur"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Auf <xliff:g id="APP_LABEL">%s</xliff:g> eingestellt"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Durchgehend aktives VPN wurde aktiviert"</string>
@@ -295,22 +294,37 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Vertrauenswürdige Anmeldedaten"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Vertrauenswürdige Anmeldedaten in deinem privaten Profil"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Vertrauenswürdige Anmeldedaten in deinem Arbeitsprofil"</string>
-    <!-- no translation found for enterprise_privacy_number_ca_certs (4861211387981268796) -->
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">Mindestens <xliff:g id="COUNT_1">%d</xliff:g> CA-Zertifikate</item>
+      <item quantity="one">Mindestens <xliff:g id="COUNT_0">%d</xliff:g> CA-Zertifikat</item>
+    </plurals>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Der Administrator kann das Gerät sperren und das Passwort zurücksetzen"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Der Administrator kann alle Gerätedaten löschen"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Anzahl falscher Passworteingaben, bevor alle Gerätedaten gelöscht werden"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Anzahl falscher Passworteingaben, bevor die Arbeitsprofildaten gelöscht werden"</string>
-    <!-- no translation found for enterprise_privacy_number_failed_password_wipe (8317320334895448341) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> Versuche</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> Versuch</item>
+    </plurals>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Dieses Gerät wird von deiner Organisation verwaltet."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Dieses Gerät wird von <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> verwaltet."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Weitere Informationen"</string>
-    <!-- no translation found for default_camera_app_title (3870902175441923391) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">Kamera-Apps</item>
+      <item quantity="one">Kamera-App</item>
+    </plurals>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Kalender-App"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Kontakte App"</string>
-    <!-- no translation found for default_email_app_title (5601238555065668402) -->
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">E-Mail-Client-Apps</item>
+      <item quantity="one">E-Mail-Client-App</item>
+    </plurals>
     <string name="default_map_app_title" msgid="9051013257374474801">"Karten-App"</string>
-    <!-- no translation found for default_phone_app_title (1573981201056870719) -->
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">Telefon-Apps</item>
+      <item quantity="one">Telefon-App</item>
+    </plurals>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g> und <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g> und <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Anleitungen"</string>
@@ -345,11 +359,23 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Zusätzliche Systemupdates"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Das Netzwerk wird eventuell überwacht."</string>
     <string name="done_button" msgid="616159688526431451">"Fertig"</string>
-    <!-- no translation found for ssl_ca_cert_dialog_title (8222753634330561111) -->
-    <!-- no translation found for ssl_ca_cert_info_message_device_owner (6128536570911468907) -->
-    <!-- no translation found for ssl_ca_cert_info_message (5828471957724016946) -->
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">Zertifikaten vertrauen oder sie entfernen</item>
+      <item quantity="one">Zertifikat vertrauen oder es entfernen</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> hat Zertifizierungsstellen auf deinem Gerät installiert. Damit können die Netzwerkaktivitäten deines Geräts wie E-Mails, Apps und sichere Websites überwacht werden.\n\nWeitere Informationen zu diesen Zertifikaten erhältst du von deinem Administrator.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> hat eine Zertifizierungsstelle auf deinem Gerät installiert. Damit können die Netzwerkaktivitäten deines Geräts wie E-Mails, Apps und sichere Websites überwacht werden.\n\nWeitere Informationen zu diesem Zertifikat erhältst du von deinem Administrator.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> hat Zertifizierungsstellen für dein Arbeitsprofil installiert. Damit können deine geschäftlichen Netzwerkaktivitäten überwacht werden, einschließlich E-Mails, Apps und sicherer Websites.\n\nWeitere Informationen zu diesen Zertifikaten erhältst du von deinem Administrator.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> hat eine Zertifizierungsstelle für dein Arbeitsprofil installiert. Damit können deine geschäftlichen Netzwerkaktivitäten überwacht werden, einschließlich E-Mails, Apps und sicherer Websites.\n\nWeitere Informationen zu diesem Zertifikat erhältst du von deinem Administrator.</item>
+    </plurals>
     <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Dritte können deine Netzwerkaktivitäten überwachen, einschließlich E-Mails, Apps und sicherer Websites.\n\nDies wird durch vertrauenswürdige Anmeldedaten ermöglicht, die auf deinem Gerät installiert sind."</string>
-    <!-- no translation found for ssl_ca_cert_settings_button (196409967946912560) -->
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">Zertifikate prüfen</item>
+      <item quantity="one">Zertifikat prüfen</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Status"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Netzwerk, Seriennummern und weitere Informationen"</string>
     <string name="manual" msgid="5683935624321864999">"Handbuch"</string>
