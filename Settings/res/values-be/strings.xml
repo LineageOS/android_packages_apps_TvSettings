@@ -130,10 +130,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos з Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Заўвага. Параметр \"Аўта\" можа не працаваць, калі няма даных аб фарматах, якія падтрымліваюцца."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Аўтаматычна: выкарыстоўваць заяўленыя фарматы прылады"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Аўтаматычна: уключаць толькі фарматы, якія падтрымліваюцца прыладай вываду аўдыя "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Пры выбары гэтага параметра сістэма дазволіць выбіраць любы аўдыяфармат, які падтрымліваецца ланцугом вашых прылад. Праграмы могуць выбіраць фармат не самай высокай якасці."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Не: ніколі не выкарыстоўваць аб\'ёмны гук"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Уручную: выбраць фарматы ўручную са спіса даступных"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Уручную: выбарачна ўключаць або выключаць усе фарматы, якія падтрымліваюцца гэтай прыладай, незалежна ад таго, ці падтрымлівае іх прылада вываду аўдыя."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Пры выбары гэтага параметра вы можаце ўручную адключаць аўдыяфарматы, якія падтрымліваюцца ланцугом вашых прылад і выклікаюць праблемы з прайграваннем. Аўдыяфарматы, якія не падтрымліваюцца ланцугом вашых прылад, не могуць быць уключаны. Часам праграмы могуць выбіраць фармат не самай высокай якасці."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Дазволіць аўдыяфармат, які не падтрымліваецца?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Падключаная аўдыяпрылада не падтрымлівае гэты фармат. У выніку могуць узнікаць такія непаладкі, як моцны шум або трэск."</string>
@@ -160,6 +160,25 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Калі праграма адправіць адпаведны запыт, прылада будзе суадносіць выходны сігнал з зыходнай частатой кадраў змесціва, якое вы праглядаеце. У выніку экран можа на секунду пагаснуць, калі вы будзеце ўключаць ці выключаць прайграванне відэа."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Ніколі"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Нават калі праграма адправіць адпаведны запыт, прылада ніколі не будзе імкнуцца суадносіць выходны сігнал з зыходнай частатой кадраў змесціва, якое вы праглядаеце."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Фармаціраваць вылучанае"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Аўтаматычна"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Уручную"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Выкарыстоўваць заяўленыя фарматы прылады"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Уручную выбраць фарматы са спіса даступных"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"ФАРМАТЫ, ЯКІЯ ПАДТРЫМЛІВАЮЦЦА"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"ФАРМАТЫ, ЯКІЯ НЕ ПАДТРЫМЛІВАЮЦЦА"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Пры выбары гэтага параметра сістэма дазволіць выбіраць любы фармат HDR, які падтрымліваецца ланцугом вашых прылад. Праграмы могуць выбіраць фармат не самай высокай якасці."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Пры выбары гэтага параметра вы можаце ўручную адключаць фарматы HDR, якія падтрымліваюцца ланцугом вашых прылад і выклікаюць праблемы з прайграваннем. Фарматы HDR, якія не падтрымліваюцца ланцугом вашых прылад, нельга ўключыць прымусова. Праграмы могуць выбіраць фармат не самай высокай якасці."</string>
+    <string name="hdr_format_info" msgid="5652559220799426076">"ІНФАРМАЦЫЯ ПРА ФАРМАТ"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"Паказаць фарматы"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Схаваць фарматы"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"УКЛЮЧАНЫЯ ФАРМАТЫ"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"ВЫКЛЮЧАНЫЯ ФАРМАТЫ"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Каб выключыць, змяніце выбар фармату на ручны."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Ачысціць кэшаваныя даныя?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Гэта ачысціць кэшаваныя даныя для ўсіх праграм."</string>
     <string name="accessories_add" msgid="413764175035531452">"Дадаць аксэсуар"</string>
@@ -210,11 +229,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Адрас Bluetooth"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Падключана"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Адключана"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"У вас няма дазволу на змяненне налад Bluetooth."</string>
     <string name="send_feedback" msgid="936698637869795473">"Адправіць водгук"</string>
     <string name="launch_help" msgid="2607478763131952469">"Даведачны цэнтр"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Дата і час"</string>
     <string name="system_language" msgid="5516099388471974346">"Мова"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"У вас няма дазволу на змяненне мовы прылады."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Клавіятура"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Клавіятура і аўтазапаўненне"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Аўтазапаўненне"</string>
@@ -230,6 +251,102 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Параметры распрацоўшчыка"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Няма"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Выкарыстанне і дыягностыка"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Няма даступных праграм адміністратара прылады"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Адключана адміністратарам"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Недаступна"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Праграмы адміністратара прылады"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Няма актыўных праграм"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> актыўная праграма</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> актыўныя праграмы</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> актыўных праграм</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> актыўнай праграмы</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Адключана адміністратарам, палітыкай шыфравання ці сховішчам уліковых даных"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Інфармацыя пра прыладу пад кіраваннем"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Змяненні і налады знаходзяцца пад кіраваннем вашай арганізацыі"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Змяненні і налады знаходзяцца пад кіраваннем <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Для забеспячэння доступу да вашых працоўных даных ваша арганізацыя можа змяніць налады і ўсталяваць пэўнае праграмнае забеспячэнне на вашу прыладу.\n\nДля атрымання дадатковай інфармацыі звярніцеся да адміністратара сваёй арганізацыі."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Тыпы інфармацыі, якія можа бачыць ваша арганізацыя"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Змяненні, зробленыя адміністратарам вашай арганізацыі"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Ваш доступ да гэтай прылады"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Даныя, звязаныя з вашым працоўным уліковым запісам, такія як электронная пошта і каляндар"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Спіс праграм на вашай прыладзе"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Час і трафік, патрачаныя ў кожнай праграме"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Самы апошні журнал сеткавага трафіка"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Апошняя справаздача пра памылку"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Апошні журнал бяспекі"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Няма"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Усталяваныя праграмы"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Колькасць праграм – прыблізная. Сюды могуць не ўваходзіць праграмы, усталяваныя не з Крамы Play."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="one">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграма</item>
+      <item quantity="few">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграмы</item>
+      <item quantity="many">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграм</item>
+      <item quantity="other">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграмы</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Доступ да геаданых"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Дазволы мікрафона"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Дазволы камеры"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Стандартныя праграмы"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> праграма</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> праграмы</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> праграм</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> праграмы</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Стандартная клавіятура"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Усталявана на <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Заўсёды ўключаны VPN уключаны"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Заўсёды ўключаны VPN уключаны ў вашым асабістым профілі"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Заўсёды ўключаны VPN уключаны ў вашым працоўным профілі"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Глабальны HTTP-проксі зададзены"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Давераныя ўліковыя даныя"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Давераныя ўліковыя даныя ў вашым асабістым профілі"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Давераныя ўліковыя даныя ў вашым працоўным профілі"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="one">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> сертыфікат ЦС</item>
+      <item quantity="few">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> сертыфікаты ЦС</item>
+      <item quantity="many">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> сертыфікатаў ЦС</item>
+      <item quantity="other">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> сертыфіката ЦС</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Адміністратар можа блакіраваць прыладу і скідваць пароль"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Адміністратар можа выдаляць усе даныя прылады"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Няўдалыя спробы ўводу пароля перад выдаленнем усіх даных прылады"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Няўдалыя спробы ўводу пароля перад выдаленнем даных працоўнага профілю"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> спроба</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> спробы</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> спроб</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> спробы</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Гэта прылада знаходзіцца пад кіраваннем вашай арганізацыі."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Гэта прылада знаходзіцца пад кіраваннем <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Даведацца больш"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="one">Праграмы \"Камера\"</item>
+      <item quantity="few">Праграмы \"Камера\"</item>
+      <item quantity="many">Праграмы \"Камера\"</item>
+      <item quantity="other">Праграмы \"Камера\"</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Праграма \"Каляндар\""</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Праграма \"Кантакты\""</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="one">Праграмы \"Паштовы кліент\"</item>
+      <item quantity="few">Праграмы \"Паштовы кліент\"</item>
+      <item quantity="many">Праграмы \"Паштовы кліент\"</item>
+      <item quantity="other">Праграмы \"Паштовы кліент\"</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Праграма \"Карта\""</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="one">Праграмы \"Тэлефон\"</item>
+      <item quantity="few">Праграмы \"Тэлефон\"</item>
+      <item quantity="many">Праграмы \"Тэлефон\"</item>
+      <item quantity="other">Праграмы \"Тэлефон\"</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Кіраўніцтвы"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Абнаўленні сістэмы"</string>
     <string name="system_update_description" msgid="998883510488461766">"У выніку праграмнае забеспячэнне сістэмы будзе абноўлена да апошняй версіі. Ваша прылада будзе перазапушчана."</string>
@@ -262,6 +379,33 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Дазволена"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Прымусовае выкананне"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Дадатковыя абнаўленні сістэмы"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"За сеткай можа назіраць"</string>
+    <string name="done_button" msgid="616159688526431451">"Гатова"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="one">Давяраць сертыфікатам або выдаліць іх</item>
+      <item quantity="few">Давяраць сертыфікатам або выдаліць іх</item>
+      <item quantity="many">Давяраць сертыфікатам або выдаліць іх</item>
+      <item quantity="other">Давяраць сертыфікатам або выдаліць іх</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="one">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў на вашай прыладзе сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
+      <item quantity="few">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў на вашай прыладзе сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
+      <item quantity="many">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў на вашай прыладзе сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
+      <item quantity="other">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў на вашай прыладзе сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="one">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў для вашага працоўнага профілю сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
+      <item quantity="few">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў для вашага працоўнага профілю сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
+      <item quantity="many">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў для вашага працоўнага профілю сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
+      <item quantity="other">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў для вашага працоўнага профілю сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Трэцяя асоба мае магчымасць маніторынгу вашай сеткавай актыўнасці, у тым ліку электроннай пошты, дадаткаў і абароненых вэб-сайтаў.\n\nГэта магчыма з-за даверанага сертыфіката, усталяванага на вашай прыладзе."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="one">Праверыць сертыфікаты</item>
+      <item quantity="few">Праверыць сертыфікаты</item>
+      <item quantity="many">Праверыць сертыфікаты</item>
+      <item quantity="other">Праверыць сертыфікаты</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Стан"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Сетка, серыйныя нумары і іншая інфармацыя"</string>
     <string name="manual" msgid="5683935624321864999">"Уручную"</string>
@@ -394,6 +538,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Сетка не падключана"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Ужо падключана да <xliff:g id="SSID">%1$s</xliff:g>. Падключыцца да іншай сеткі?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"невядомая сетка"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"У вас няма дазволу на змяненне сеткі Wi-Fi."</string>
     <string name="title_ok" msgid="6500452958848127145">"OК"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Адмена"</string>
     <string name="storage_title" msgid="6637715914885228193">"Захоўванне"</string>
@@ -889,6 +1034,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Здымкі экрана забаронены"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Не ўдалося адкрыць праграму"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Калі ў вас ёсць пытанні, звярніцеся да ІТ-адміністратара"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Дадатковая інфармацыя"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"У вашага адміністратара ёсць магчымасць маніторынгу і адміністравання праграм і даных, звязаных з вашым працоўным профілем, у тым ліку налад, дазволаў, карпаратыўнага доступу, сеткавай актыўнасці і геаданых."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"У вашага адміністратара ёсць магчымасць маніторынгу і адміністравання праграм і даных, звязаных з гэтым карыстальнікам, у тым ліку налад, дазволаў, карпаратыўнага доступу, сеткавай актыўнасці і геаданых."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"У вашага адміністратара ёсць магчымасць маніторынгу і адміністравання праграм і даных, звязаных з гэтай прыладай, у тым ліку налад, дазволаў, карпаратыўнага доступу, сеткавай актыўнасці і геаданых."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Выдаліць рабочы профіль"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Праграма адміністратара прылады"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Дэактываваць гэту праграму адміністратара прылады"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Выдалiць праграму"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Дэактываваць і выдаліць"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Праграмы адміністратара"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Актываваць праграму адміністратара?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Актываваць гэту праграму адміністратара прылады"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Актывацыя гэтай праграмы адміністратара дазволіць праграме <xliff:g id="APP_NAME">%1$s</xliff:g> выконваць наступныя дзеянні:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> будзе адсочваць гэту прыладу і кіраваць ёй."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Гэта праграма адміністратара актыўная і дазваляе праграме <xliff:g id="APP_NAME">%1$s</xliff:g> выконваць наступныя дзеянні:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Калі вы працягнеце, ваш карыстальнік будзе знаходзіцца пад кіраваннем вашага адміністратара, які, акрамя вашых асабістых даных, зможа захоўваць таксама звязаныя даныя.\n\nУ вашага адміністратара ёсць магчымасць маніторынгу і адміністравання налад, доступу, праграм і даных, звязаных з гэтым карыстальнікам, у тым ліку інфармацыі пра сеткавую актыўнасць і геаданых."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Абагуліць справаздачу пра памылку?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"ІТ-адміністратар запытаў справаздачу пра памылку для яе ліквідацыі на гэтай прыладзе. Можа адбыцца абагуленне праграм і даных."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"ІТ-адміністратар запытаў справаздачу пра памылку для яе ліквідацыі на гэтай прыладзе. Можа адбыцца абагуленне праграм і даных, і праца вашай прылады можа часова запаволіцца."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Гэта справаздача пра памылку зараз абагуляецца з ІТ-адміністратарам. Звяжыцеся з ім для атрымання больш падрабязнай інфармацыі."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Абагуліць"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Адхіліць"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Прылада для выкарыстання з праграмай \"<xliff:g id="APPNAME">%1$s</xliff:g>\""</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Прылады не знойдзены. Пераканайцеся, што прылады ўключаны і даступныя для падключэння."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Паўтарыць спробу"</string>

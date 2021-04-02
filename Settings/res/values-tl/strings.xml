@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos na may Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Tandaan: Hindi gagana ang Awtomatiko kung hindi iuulat nang tama ng device ang suportadong format."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Awtomatiko: Gamitin ang format na inulat ng device"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Awtomatiko: I-enable lang ang mga format na sinusuportahan ng iyong output device sa audio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Kapag pinili, papayagan ng system ang mga app na pumili ng anumang format ng tunog na sinusuportahan ng iyong device chain. Posibleng pumili ang mga app ng format na hindi pinakamataas ang kalidad."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Wala: Huwag kailanman gumamit ng surround sound"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manual: Manual na pumili ng mga format mula sa mga available na format"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: Piliing i-enable o i-disable ang bawawt format na sinususportahan ng device, anupaman ang sinusuportahan ng iyong output device sa audio."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Kapag pinili, manual mong madi-disable ang mga sound format na suportado ng device chain mo na nagdudulot ng problema sa pag-playback. Hindi mae-enable ang mga sound format na hindi suportado ng device chain mo. Sa ilang sitwasyon, puwedeng pumili ang app ng format na hindi pinakamataas ang kalidad."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"I-enable ang hindi sinusuportahang format ng tunog?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Walang iniuulat na suporta sa format na ito ang nakakonektang device. Baka magdulot ito ng mga gawing gaya ng malalakas na tunog o pag-pop mula sa device."</string>
@@ -156,6 +156,25 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Kung hihingin ito ng app, itutugma ng iyong device ang output nito sa orihinal na frame rate ng content na pinapanood mo. Posibleng maging sanhi nito ng pagblangko ng iyong screen nang isang segundo kapag lumalabas o pumapasok sa video na playback."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Hindi Kailanman"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Kahit na hingin ito ng app, hindi kailanman susubukan ng iyong device na itugma ang output nito sa orihinal na frame rate ng content na pinapanood mo."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Pagpipilian ng format"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Awtomatiko"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Gumamit ng mga format na inulat ng device"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Manual na pumili ng mga format mula sa mga available na format"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"MGA SINUSUPORTAHANG FORMAT"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"MGA HINDI SINUSUPORTAHANG FORMAT"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Kapag pinili, papayagan ng system ang mga app na pumili ng anumang HDR format na sinusuportahan ng iyong device chain. Posibleng pumili ang mga app ng format na hindi pinakamataas ang kalidad."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Kapag pinili, manual mong madi-disable ang mga HDR format na sinusuportahan ng iyong device chain na nagdudulot ng mga problema sa playback. Hindi sapilitang mae-enable ang mga HDR format na hindi sinusuportahan ng device chain mo. Baka pumili ang mga app ng format na hindi highest-quality format."</string>
+    <string name="hdr_format_info" msgid="5652559220799426076">"IMPORMASYON NG FORMAT"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"Ipakita ang mga format"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Itago ang mga format"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"MGA NAKA-ENABLE NA FORMAT"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"MGA NAKA-DISABLE NA FORMAT"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Para i-disable, gawing Manual ang pagpili ng format."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"I-clear ang naka-cache na data?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"I-clear nito ang naka-cache na data para sa app."</string>
     <string name="accessories_add" msgid="413764175035531452">"Magdagdag ng accessory"</string>
@@ -206,11 +225,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Address ng Bluetooth"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Nakakonekta"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Nadiskonekta"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Wala kang pahintulot na palitan ang mga setting ng Bluetooth."</string>
     <string name="send_feedback" msgid="936698637869795473">"Magpadala ng feedback"</string>
     <string name="launch_help" msgid="2607478763131952469">"Help Center"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Petsa at Oras"</string>
     <string name="system_language" msgid="5516099388471974346">"Wika"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Wala kang pahintulot na palitan ang wika ng device."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Keyboard"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Keyboard at autofill"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Autofill"</string>
@@ -226,6 +247,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Mga pagpipilian ng developer"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Wala"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Paggamit at mga diagnostic"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Walang available na app ng admin ng device"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Na-disable ng admin"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Hindi available"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Mga app ng admin ng device"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Walang aktibong app"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aktibong app</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> na aktibong app</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Na-disable ng admin, patakaran sa pag-encrypt, o storage ng kredensyal"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Impormasyon ng pinamamahalaang device"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Mga pagbabago at setting na pinamamahalaan ng iyong organisasyon"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Mga pagbabago at setting na pinamamahalaan ng <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Upang makapagbigay ng access sa iyong data sa trabaho, maaaring magbago ng mga setting ang iyong organisasyon at mag-install ng software sa device mo.\n\nPara sa higit pang detalye, makipag-ugnayan sa admin ng iyong organisasyon."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Mga uri ng impormasyon na makikita ng iyong organisasyon"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Mga pagbabagong ginawa ng admin ng iyong organisasyon"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Ang iyong access sa device na ito"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Data na nauugnay sa iyong account sa trabaho, gaya ng email at kalendaryo"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Listahan ng mga app sa iyong device"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Dami ng oras at data na ginagamit sa bawat app"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Pinakabagong log ng trapiko ng network"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Pinakakamakailang ulat ng bug"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Pinakakamakailang log ng seguridad"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Wala"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Mga naka-install na app"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Pagtatantya ang bilang ng mga app. Posibleng hindi kasama rito ang mga app na na-install sa labas ng Play Store."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="one">Minimum na <xliff:g id="COUNT_1">%d</xliff:g> app</item>
+      <item quantity="other">Minimum na <xliff:g id="COUNT_1">%d</xliff:g> na app</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Mga pahintulot ng lokasyon"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Mga pahintulot ng mikropono"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Mga pahintulot ng camera"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Mga default na app"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> app</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> na app</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Default na keyboard"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Itakda sa <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Naka-on ang palaging naka-on na VPN"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Naka-on ang palaging naka-on na VPN sa iyong personal na profile"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Naka-on ang palaging naka-on na VPN sa iyong profile sa trabaho"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Naitakda na ang pangkalahatang HTTP proxy"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Mga pinagkakatiwalaang kredensyal"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Mga pinagkakatiwalaang kredensyal sa iyong personal na profile"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Mga pinagkakatiwalaang kredensyal sa iyong profile sa trabaho"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="one">Minimum na <xliff:g id="COUNT_1">%d</xliff:g> CA certificate</item>
+      <item quantity="other">Minimum na <xliff:g id="COUNT_1">%d</xliff:g> na CA certificate</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Maaaring i-lock ng admin ang device at i-reset ang password"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Maaaring i-delete ng admin ang lahat ng data ng device"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Mga nabigong pagsubok sa paglalagay ng password bago i-delete ang lahat ng data ng device"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Mga nabigong pagsubok sa paglalagay ng password bago i-delete ang data ng profile sa trabaho"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> pagsubok</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> na pagsubok</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Ang device na ito ay pinamamahalaan ng iyong organisasyon."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Pinamamahalaan ng <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> ang device na ito."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Matuto pa"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="one">Mga Camera app</item>
+      <item quantity="other">Mga Camera app</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"App na Kalendaryo"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"App na Mga Contact"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="one">Mga Email client app</item>
+      <item quantity="other">Mga Email client app</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"App na Mapa"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="one">Mga app na Telepono</item>
+      <item quantity="other">Mga app na Telepono</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Mga Tutorial"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Pag-update ng system"</string>
     <string name="system_update_description" msgid="998883510488461766">"Ia-update nito ang software ng iyong system sa pinakabagong bersyon. Magre-restart ang iyong device."</string>
@@ -256,6 +357,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Nagpapahintulot"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Nagpapatupad"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Karagdagang update ng system"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Maaaring sinusubaybayan ang network"</string>
+    <string name="done_button" msgid="616159688526431451">"Tapos na"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="one">Pagkatiwalaan o alisin ang mga certificate</item>
+      <item quantity="other">Pagkatiwalaan o alisin ang mga certificate</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="one">Nag-install ang <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ng mga awtoridad sa certificate sa iyong device, na puwedeng magbigay-daan ditong subaybayan ang aktibidad sa network ng device mo, kabilang ang mga email, app, at secure na website.\n\nPara sa higit pang impormasyon tungkol sa mga certificate na ito, makipag-ugnayan sa iyong admin.</item>
+      <item quantity="other">Nag-install ang <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ng mga awtoridad sa certificate sa iyong device, na puwedeng magbigay-daan ditong subaybayan ang aktibidad sa network ng device mo, kabilang ang mga email, app, at secure na website.\n\nPara sa higit pang impormasyon tungkol sa mga certificate na ito, makipag-ugnayan sa iyong admin.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="one">Nag-install ang <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ng mga awtoridad sa certificate para sa iyong profile sa trabaho, na puwedeng magbigay-daan ditong subaybayan ang aktibidad sa network ng trabaho, kabilang ang mga email, app, at secure na website.\n\nPara sa higit pang impormasyon tungkol sa mga certificate na ito, makipag-ugnayan sa iyong admin.</item>
+      <item quantity="other">Nag-install ang <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ng mga awtoridad sa certificate para sa iyong profile sa trabaho, na puwedeng magbigay-daan ditong subaybayan ang aktibidad sa network ng trabaho, kabilang ang mga email, app, at secure na website.\n\nPara sa higit pang impormasyon tungkol sa mga certificate na ito, makipag-ugnayan sa iyong admin.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"May kakayahan ang isang third party na subaybayan ang aktibidad ng iyong network, kabilang ang mga email, apps, at mga secure website.\n\nGinagawa itong posible ng isang pinagkakatiwalaang credential na naka-install sa iyong device."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="one">Suriin ang mga certificate</item>
+      <item quantity="other">Suriin ang mga certificate</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Status"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Network, mga serial number, at iba pang impormasyon"</string>
     <string name="manual" msgid="5683935624321864999">"Manu-mano"</string>
@@ -388,6 +508,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Hindi nakakonekta sa network"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Nakakonekta na sa <xliff:g id="SSID">%1$s</xliff:g>. Kumonekta sa ibang network?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"di kilalang network"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Wala kang pahintulot na baguhin ang Wi‑Fi network."</string>
     <string name="title_ok" msgid="6500452958848127145">"OK"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Kanselahin"</string>
     <string name="storage_title" msgid="6637715914885228193">"Storage"</string>
@@ -875,6 +996,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Hindi pinapayagan ang pag-screenshot"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Hindi mabubuksan ang app na ito"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Kung mayroon kang mga tanong, makipag-ugnayan sa iyong IT admin"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Higit pang mga detalye"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Masusubaybayan at mapamamahalaan ng iyong admin ang mga app at data na nauugnay sa iyong profile sa trabaho, kabilang ang mga setting, pahintulot, access ng kumpanya, aktibidad ng network, at impormasyon ng lokasyon ng device."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Masusubaybayan at mapamamahalaan ng iyong admin ang mga app at data na nauugnay sa user na ito, kabilang ang mga setting, pahintulot, access ng kumpanya, aktibidad ng network, at impormasyon ng lokasyon ng device."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Masusubaybayan at mapamamahalaan ng iyong admin ang mga app at data na nauugnay sa device na ito, kabilang ang mga setting, pahintulot, access ng kumpanya, aktibidad ng network, at impormasyon ng lokasyon ng device."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Alisin ang profile sa trabaho"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"App ng admin ng device"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"I-deactivate ang device na ito sa app ng admin"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"I-uninstall ang app"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"I-deactivate at i-uninstall"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Mga app ng admin ng device"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"I-activate ang app ng admin ng device?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"I-activate ang app ng admin ng device na ito"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Bibigyang-daan ng pag-activate ng app ng admin na ito na isagawa ng app na <xliff:g id="APP_NAME">%1$s</xliff:g> ang mga sumusunod na pagpapatakbo:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Pamamahalaan at susubaybayan ng <xliff:g id="APP_NAME">%1$s</xliff:g> ang device na ito."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Ang app ng admin na ito ay aktibo at nagpapahintulot sa app na <xliff:g id="APP_NAME">%1$s</xliff:g> na isagawa ang mga sumusunod na pagpapatakbo:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Sa pamamagitan ng pagpapatuloy, ang iyong user ay pamamahalaan ng admin mo, na maaari ding mag-store ng nauugnay na data, bukod pa sa iyong personal na data.\n\nMay kakayahan ang admin mo na subaybayan at pamahalaan ang mga setting, access, app, at data na nauugnay sa user na ito, kabilang ang aktibidad ng network at ang impormasyon ng lokasyon ng iyong device."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Gusto mo bang ibahagi ang ulat ng bug?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Humiling ang iyong IT admin ng isang ulat ng bug upang makatulong sa pag-troubleshoot sa device na ito. Maaaring ibahagi ang mga app at data."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Humiling ang iyong IT admin ng isang ulat ng bug upang makatulong sa pag-troubleshoot sa device na ito. Maaaring ibahagi ang mga app at data, at maaaring pansamantalang bumagal ang iyong device."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Ibinabahagi ang ulat ng bug na ito sa iyong IT admin. Makipag-ugnayan sa kanila para sa higit pang mga detalye."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Ibahagi"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Tanggihan"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Device na gagamitin sa <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Walang nahanap na device. Tiyaking naka-on at available na kumonekta ang mga device."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Subukan ulit"</string>

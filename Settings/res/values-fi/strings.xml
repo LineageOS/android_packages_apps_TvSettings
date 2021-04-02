@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos ja Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Huom. Automaattinen asetus ei välttämättä toimi, jos laite ei ilmoita tuettuja muotoja oikein."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Automaattinen: Käytä laitteen ilmoittamia muotoja"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automaattinen: Salli vain muodot, joita äänentoistolaitteesi tukee "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Kun tämä on valittu, järjestelmä antaa sovellusten valita minkä tahansa laiteketjusi tukeman äänimuodon. Sovellukset saattavat valita muodon, joka ei ole kaikista korkealaatuisin."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Ei mitään: Älä koskaan käytä surround-ääntä"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Manuaalinen: Valitse manuaalisesti saatavilla olevista muodoista"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manuaalinen: Salli tai estä tämän laitteen tukemia muotoja riippumatta siitä, tukeeko äänentoistolaitteesi niitä"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Kun tämä on valittu, voit manuaalisesti poistaa käytöstä laiteketjusi tukemat äänimuodot, jotka aiheuttavat toisto-ongelmia. Myös sellaisia äänimuotoja, joita laiteketjusi ei tue, voidaan ottaa käyttöön. Joissakin tapauksissa sovellukset saattavat valita muodon, joka ei ole kaikista korkealaatuisin."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Otetaanko käyttöön äänimuoto, jota ei tueta?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Yhdistetty äänilaitteesi ei tue tätä muotoa. Tämä voi aiheuttaa epätavallista toimintaa, kuten voimakkaita ääniä tai poksahduksia laitteestasi."</string>
@@ -156,6 +156,25 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Jos sovellus pyytää sitä, laite täsmää äänen katsomasi sisällön alkuperäiseen kuvanopeuteen. Tämä voi saada näytön pimenemään hetkeksi avattaessa ja suljettaessa videon toistoa."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Ei koskaan"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Vaikka sovellus pyytäisi sitä, laitteesi ei koskaan yritä täsmätä ääntä katsomasi sisällön alkuperäiseen kuvanopeuteen."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Muodon valinta"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automaattinen"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuaalinen"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Käytä laitteen ilmoittamia muotoja"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Valitse muodot manuaalisesti käytettävissä olevista vaihtoehdoista"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"TUETUT MUODOT"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"MUODOT, JOITA EI TUETA"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Kun tämä on valittu, järjestelmä antaa sovellusten valita minkä tahansa laiteketjusi tukeman HDR-muodon. Sovellukset saattavat valita muodon, joka ei ole kaikista korkealaatuisin."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Kun tämä on valittu, voit manuaalisesti poistaa käytöstä laiteketjusi tukemat HDR-muodot, jotka aiheuttavat toisto-ongelmia. Sellaisten HDR-muotojen, joita laiteketjusi ei tue, käyttöönottoa ei voida pakottaa. Sovellukset saattavat valita muodon, joka ei ole kaikista korkealaatuisin."</string>
+    <string name="hdr_format_info" msgid="5652559220799426076">"MUOTOTIEDOT"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"Näytä muodot"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Piilota muodot"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"KÄYTÖSSÄ OLEVAT MUODOT"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"KÄYTÖSTÄ POISTETUT MUODOT"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Vaihda muodon valinta manuaaliseksi, jotta voit poistaa tämän käytöstä."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Tyhjennetäänkö välimuistitiedot?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Sovellusten välimuistit tyhjennetään."</string>
     <string name="accessories_add" msgid="413764175035531452">"Lisää lisälaite"</string>
@@ -206,11 +225,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth-osoite"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Yhdistetty"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Yhteys katkaistu"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Sinulla ei ole lupaa muuttaa Bluetooth-asetuksia."</string>
     <string name="send_feedback" msgid="936698637869795473">"Lähetä palautetta"</string>
     <string name="launch_help" msgid="2607478763131952469">"Ohjekeskus"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Päivä ja aika"</string>
     <string name="system_language" msgid="5516099388471974346">"Kieli"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Käyttöoikeutesi ei riitä laitteen kielen vaihtamiseen."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Näppäimistö"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Näppäimistö ja automaattinen täyttö"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Automaattinen täyttö"</string>
@@ -226,6 +247,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Kehittäjäasetukset"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Ei mitään"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Käyttö- ja diagnostiikkatiedot"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Laitteenhallintasovelluksia ei ole saatavilla."</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Järjestelmänvalvojan estämä"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Ei käytössä"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Laitteenhallintasovellukset"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Ei aktiivisia sovelluksia"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktiivista sovellusta</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aktiivinen sovellus</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Järj.valvojan, salauskäyt. tai tunnuksien tall.tilan estämä"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Hallinnoidun laitteen tiedot"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Organisaatiosi hallitsemat valinnat ja asetukset"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Valinnat ja asetukset, joita hallitsee <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Jotta organisaatiosi voi antaa sinulle työtietojesi käyttöoikeuden, sen on ehkä muutettava asetuksia ja asennettava ohjelmia laitteellesi. \n\nSaat lisätietoja organisaatiosi järjestelmänvalvojalta."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Minkä tyyppisiä tietoja organisaatiosi voi nähdä"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Organisaatiosi järjestelmänvalvojan tekemät muutokset"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Oikeutesi tämän laitteen käyttöön"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Työtiliin liittyvä data, esimerkiksi sähköpostit ja kalenteri"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Luettelo laitteellasi olevista sovelluksista"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Kussakin sovelluksessa vietetty aika ja niissä käytetyn datan määrä"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Viimeisin verkkoliikenneloki"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Viimeisin virheraportti"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Viimeisin tietoturvaloki"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"–"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Asennetut sovellukset"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Sovellusten lukumäärä on arvio. Luku ei välttämättä sisällä sovelluksia, jotka on asennettu muualta kuin Play Kaupasta."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">Vähintään <xliff:g id="COUNT_1">%d</xliff:g> sovellusta</item>
+      <item quantity="one">Vähintään <xliff:g id="COUNT_0">%d</xliff:g> sovellus</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Sijainnin käyttöoikeudet"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Mikrofonin käyttöoikeudet"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Kameran käyttöoikeudet"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Oletussovellukset"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> sovellusta</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> sovellus</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Oletusnäppäimistö"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Asetettu: <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Aina käytössä oleva VPN päällä"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Aina käytössä oleva VPN päällä henkilökohtaisessa profiilissa"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Aina käytössä oleva VPN päällä työprofiilissa"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Yleinen HTTP-välityspalvelin asetettu"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Luotetut kirjautumistiedot"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Henkilökohtaisen profiilin luotetut kirjautumistiedot"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Työprofiilin luotetut kirjautumistiedot"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">Vähintään <xliff:g id="COUNT_1">%d</xliff:g> CA-varmennetta</item>
+      <item quantity="one">Vähintään <xliff:g id="COUNT_0">%d</xliff:g> CA-varmenne</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Järjestelmänvalvoja voi lukita laitteen ja vaihtaa salasanan"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Järjestelmänvalvoja voi poistaa kaikki laitteen tiedot."</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Epäonnistuneet salasanan kirjoitusyritykset ennen kaikkien laitteen tietojen poistamista"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Epäonnistuneet salasanan kirjoitusyritykset ennen kaikkien työprofiilin tietojen poistamista"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> yritystä</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> yritys</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Organisaatiosi hallinnoi tätä laitetta."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Tätä laitetta hallitsee <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Lue lisää"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">Kamera-sovellukset</item>
+      <item quantity="one">Kamera-sovellus</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Kalenterisovellus"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Yhteystietosovellus"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">Sähköpostisovellukset</item>
+      <item quantity="one">Sähköpostisovellus</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Karttasovellus"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">Puhelin-sovellukset</item>
+      <item quantity="one">Puhelin-sovellus</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Opasvideot"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Järjestelmäpäivitys"</string>
     <string name="system_update_description" msgid="998883510488461766">"Tämä päivittää järjestelmäohjelmiston uusimpaan versioon. Laite käynnistyy uudelleen."</string>
@@ -256,6 +357,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Salliva"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Täytäntöönpano"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Järjestelmän lisäpäivitykset"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Verkkoa saatetaan valvoa"</string>
+    <string name="done_button" msgid="616159688526431451">"Valmis"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">Luota varmenteisiin tai poista niitä</item>
+      <item quantity="one">Luota varmenteeseen tai poista se</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> on asentanut laitteellesi varmenteen myöntäjiä, mikä mahdollistaa laitteen verkkotoiminnan (esim. sähköpostin, sovellusten ja suojattujen verkkosivustojen käytön) seuraamisen.\n\nSaat lisätietoja varmenteista järjestelmänvalvojaltasi.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> on asentanut laitteellesi varmenteen myöntäjän, mikä mahdollistaa laitteen verkkotoiminnan (esim. sähköpostin, sovellusten ja suojattujen verkkosivustojen käytön) seuraamisen.\n\nSaat lisätietoja varmenteesta järjestelmänvalvojaltasi.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> on asentanut työprofiiliisi varmenteen myöntäjiä, mikä mahdollistaa toimintasi (esim. sähköpostin, sovellusten ja suojattujen verkkosivustojen käytön) seuraamisen työverkossa.\n\nSaat lisätietoja varmenteista järjestelmänvalvojaltasi.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> on asentanut työprofiiliisi varmenteen myöntäjän, mikä mahdollistaa toimintasi (esim. sähköpostin, sovellusten ja suojattujen verkkosivustojen käytön) seuraamisen työverkossa.\n\nSaat lisätietoja varmenteesta järjestelmänvalvojaltasi.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Kolmas osapuoli pystyy seuraamaan toimiasi verkossa, esimerkiksi sähköpostiviestien, sovellusten ja turvallisten verkkosivustojen käyttöä.\n\nLaitteeseesi asennettu luotettu varmenne tekee tämän mahdolliseksi."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">Tarkista varmenteet</item>
+      <item quantity="one">Tarkista varmenne</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Tila"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Verkko, sarjanumerot ja muut tiedot"</string>
     <string name="manual" msgid="5683935624321864999">"Käyttöopas"</string>
@@ -388,6 +508,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Ei yhdistetty verkkoon"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Yhteys on jo muodostettu verkkoon <xliff:g id="SSID">%1$s</xliff:g>. Yhdistetäänkö toiseen verkkoon?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"tuntematon verkko"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Käyttöoikeutesi eivät riitä Wi-Fi-verkon muuttamiseen."</string>
     <string name="title_ok" msgid="6500452958848127145">"OK"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Peruuta"</string>
     <string name="storage_title" msgid="6637715914885228193">"Tallentaminen"</string>
@@ -875,6 +996,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Kuvakaappauksia ei sallita"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Sovellusta ei voi avata"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Jos sinulla on kysyttävää, ota yhteyttä järjestelmänvalvojaan."</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Lisätietoja"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Järjestelmänvalvoja voi valvoa ja hallita työprofiiliisi liittyviä sovelluksia ja tietoja, mukaan lukien asetuksia, käyttöoikeuksia, yrityskäyttöä, verkkotoimintaa ja laitteen sijaintitietoja."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Järjestelmänvalvoja voi hallita tähän käyttäjäprofiiliin liittyviä sovelluksia ja tietoja, mukaan lukien asetuksia, käyttöoikeuksia, yrityskäyttöä, verkkotoimintaa ja laitteen sijaintitietoja."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Järjestelmänvalvoja voi valvoa ja hallita laitteeseen liittyviä sovelluksia ja tietoja, mukaan lukien asetuksia, käyttöoikeuksia, yrityskäyttöä, verkkotoimintaa ja laitteen sijaintitietoja."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Poista työprofiili"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Laitteenhallintasovellus"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Poista laitteenhallintasovellus käytöstä"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Poista sovellus"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Poista käytöstä ja kokonaan laitteelta"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Laitteenhallintasovellukset"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Aktivoidaanko laitteenhallintasovellus?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Aktivoi laitteenhallintasovellus"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Jos tämä hallintasovellus aktivoidaan, <xliff:g id="APP_NAME">%1$s</xliff:g> saa oikeuden suorittaa seuraavat toiminnot:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> ylläpitää ja valvoo tätä laitetta."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Tämä hallintasovellus on aktiivinen, ja se on antanut sovellukselle <xliff:g id="APP_NAME">%1$s</xliff:g> oikeuden suorittaa seuraavat toiminnot:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Jos jatkat, käyttäjäprofiiliasi hallitsee järjestelmänvalvoja, joka voi ehkä tallentaa siihen liittyviä tietoja henkilötietojesi lisäksi.\n\nJärjestelmänvalvoja voi valvoa tähän käyttäjäprofiiliin liittyviä asetuksia, käyttötietoja, sovelluksia ja tietoja, mukaan lukien verkkotoimintaa ja laitteen sijaintitietoja."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Jaetaanko virheraportti?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Järjestelmänvalvoja pyysi virheraporttia voidakseen auttaa laitteen vianetsinnässä. Sovelluksia ja tietoja voidaan jakaa."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Järjestelmänvalvoja pyysi virheraporttia voidakseen auttaa laitteen vianetsinnässä. Sovelluksia ja tietoja voidaan jakaa, ja laitteen toiminta voi hidastua väliaikaisesti."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Tämä virheraportti jaetaan järjestelmänvalvojan kanssa. Ota häneen yhteyttä, jos tarvitset lisätietoja."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Jaa"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Hylkää"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Käytettävä laite: <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Laitteita ei löytynyt. Varmista, että laitteet ovat päällä ja voivat muodostaa yhteyden."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Yritä uudelleen"</string>

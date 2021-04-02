@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos met Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Let wel: Die outomatiese opsie sal dalk nie werk as jou toestel nie sy gesteunde formate reg aandui nie."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Outomaties: Gebruik formate wat deur toestel aangedui is"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Outomaties: Aktiveer net die formate wat deur jou oudio-uitvoertoestel gesteun word "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Indien die opsie gekies is, sal die stelsel programme toelaat om enige klankformaat te kies wat deur jou toestelketting gesteun word. Programme kan dalk \'n formaat kies wat nie die formaat van hoogste gehalte is nie."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Geen: Moet nooit omringklank gebruik nie"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Handmatig: Kies self formate uit beskikbare formate"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Handmatig: Keuse om elke formaat wat deur hierdie toestel gesteun word, te aktiveer of te deaktiveer, ongeag wat deur jou oudio-uitvoertoestel gesteun word."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Indien gekies, kan jy klankformate wat deur jou toestelketting gesteun word maar wat probleme met terugspeel veroorsaak, self deaktiveer. Klankformate wat nie deur jou toestelketting gesteun word nie, kan geaktiveer word. Soms kan programme dalk \'n formaat kies wat nie van die hoogste gehalte is nie."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Aktiveer ongesteunde klankformaat?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Jou gekoppelde oudiotoestel dui nie aan dat dit dié formaat steun nie. Dit kan onvoorsiene gedrag soos harde of plofklanke op jou toestel veroorsaak."</string>
@@ -156,6 +156,25 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"As die program dit versoek, sal jou toestel sy uitset laat pas by die oorspronklike raamtempo van die inhoud wat jy kyk. Dit kan veroorsaak dat jou skerm vir \'n oomblik donker raak wanneer dit by \'n videoterugspeel uit- of ingaan."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nooit"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Selfs wanneer die program dit versoek, sal jou toestel nooit probeer om sy uitset te laat pas by die oorspronklike raamtempo van die inhoud wat jy kyk nie."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Formaatkeuse"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Outomaties"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Handmatig"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Gebruik formate wat deur toestel aangedui is"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Kies self formate uit beskikbare formate"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"GESTEUNDE FORMATE"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"ONGESTEUNDE FORMATE"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Indien die opsie gekies is, sal die stelsel programme toelaat om enige HDR-formaat te kies wat deur jou toestelketting gesteun word. Programme kan dalk \'n formaat kies wat nie die formaat van hoogste gehalte is nie."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"As die opsie gekies is, kan jy HDR-formate wat deur jou toestelketting gesteun word maar terugspeelprobleme veroorsaak, self deaktiveer. HDR-formate wat jou toestelketting nie steun nie, kan nie verpligtend geaktiveer word nie. Programme kan dalk \'n formaat kies wat nie die hoogste gehalte is nie."</string>
+    <string name="hdr_format_info" msgid="5652559220799426076">"FORMAATINLIGTING"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"Wys formate"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Versteek formate"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"GEAKTIVEERDE FORMATE"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"GEDEAKTIVEERDE FORMATE"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Verander die formaatkeuse na Handmatig om dit te deaktiveer."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Moet gekaste data uitgevee word?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Sal gekaste data vir alle programme uitvee."</string>
     <string name="accessories_add" msgid="413764175035531452">"Voeg by: bykomstigheid"</string>
@@ -206,11 +225,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth-adres"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Gekoppel"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Ontkoppel"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Jy het nie toestemming om Bluetooth-instellings te verander nie."</string>
     <string name="send_feedback" msgid="936698637869795473">"Stuur terugvoer"</string>
     <string name="launch_help" msgid="2607478763131952469">"Hulpsentrum"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Datum en tyd"</string>
     <string name="system_language" msgid="5516099388471974346">"Taal"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Jy het nie toestemming om die toesteltaal te verander nie."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Sleutelbord"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Sleutelbord en outovul"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Outovul"</string>
@@ -226,6 +247,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Ontwikkelaaropsies"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Geen"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Gebruik en diagnostiese inligting"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Geen toesteladministrateurprogramme beskikbaar nie"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Gedeaktiveer deur administrateur"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Nie beskikbaar nie"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Toesteladministrasieprogramme"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Geen aktiewe programme nie"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktiewe programme</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aktiewe program</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Gedeaktiveer deur administrateur, enkripsiebeleid of eiebewysberging"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Inligting oor bestuurde toestel"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Veranderinge en instellings wat deur jou organisasie bestuur word"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Veranderinge en instellings wat deur <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> bestuur word"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Om toegang tot jou werkdata te verskaf, sal jou organisasie dalk instellings verander en sagteware op jou toestel installeer.\n\nKontak jou organisasie se administrateur vir meer besonderhede."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Soort inligting wat jou organisasie kan sien"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Veranderinge wat deur jou organisasie se administrateur gemaak is"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Jou toegang tot hierdie toestel"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Data wat met jou werkrekening geassosieer word, soos e-pos en kalender"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Lys programme op jou toestel"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Hoeveelheid tyd en data wat in elke program bestee is"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Mees onlangse netwerkverkeer-loglêer"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Mees onlangse foutverslag"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Mees onlangse sekuriteitloglêer"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Geen"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Programme is geïnstalleer"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Aantal programme is geskat. Dit sluit dalk nie programme in wat buite die Play Winkel geïnstalleer is nie."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">Minstens <xliff:g id="COUNT_1">%d</xliff:g> programme</item>
+      <item quantity="one">Minstens <xliff:g id="COUNT_0">%d</xliff:g> program</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Liggingtoestemmings"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Mikrofoontoestemmings"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Kameratoestemmings"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Verstekprogramme"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> programme</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> program</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Versteksleutelbord"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Gestel na <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Altyd-aan-VPN is aangeskakel"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Altyd-aan-VPN is in jou persoonlike profiel aangeskakel"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Altyd-aan-VPN is in jou werkprofiel aangeskakel"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Globale HTTP-instaanbediener is gestel"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Vertroude eiebewyse"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Vertroude eiebewyse in jou persoonlike profiel"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Vertroude eiebewyse in jou werkprofiel"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">Minstens <xliff:g id="COUNT_1">%d</xliff:g> CA-sertifikate</item>
+      <item quantity="one">Minstens <xliff:g id="COUNT_0">%d</xliff:g> CA-sertifikaat</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Die administrateur kan die toestel sluit en die wagwoord terugstel"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Die administrateur kan alle toesteldata uitvee"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Mislukte wagwoordpogings voordat alle toesteldata uitgevee word"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Mislukte wagwoordpogings voordat alle werkprofieldata uitgevee word"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> pogings</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> poging</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Hierdie toestel word deur jou organisasie bestuur."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Hierdie toestel word deur <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> bestuur."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Kom meer te wete"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">Kameraprogramme</item>
+      <item quantity="one">Kameraprogram</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Kalenderprogram"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Kontakteprogram"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">E-poskliëntprogramme</item>
+      <item quantity="one">E-poskliëntprogram</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Kaartprogram"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">Foonprogramme</item>
+      <item quantity="one">Foonprogram</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Tutoriale"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Stelselopdatering"</string>
     <string name="system_update_description" msgid="998883510488461766">"Dit sal jou stelselsagteware na die mees onlangse weergawe opdateer. Jou toestel sal herbegin."</string>
@@ -256,6 +357,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Toestemmend"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Pas toe"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Bykomende stelselopdaterings"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Netwerk kan dalk gemonitor word"</string>
+    <string name="done_button" msgid="616159688526431451">"Klaar"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">Vertrou of verwyder sertifikate</item>
+      <item quantity="one">Vertrou of verwyder sertifikaat</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> het sertifikaatinstansies op jou toestel geïnstalleer wat dit vir hulle moontlik kan maak om jou toestelnetwerkaktiwiteit, insluitend e-posse, programme en beveiligde webwerwe, te monitor.\n\nKontak jou admin vir meer inligting oor hierdie sertifikate.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> het \'n sertifikaatinstansie op jou toestel geïnstalleer wat dit vir hulle moontlik kan maak om jou toestelnetwerkaktiwiteit, insluitend e-posse, programme en beveiligde webwerwe, te monitor.\n\nKontak jou admin vir meer inligting oor hierdie sertifikaat.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> het sertifikaatinstansies vir jou werkprofiel geïnstalleer wat dit vir hulle moontlik kan maak om werknetwerkaktiwiteit, insluitend e-posse, programme en beveiligde webwerwe, te monitor.\n\nKontak jou admin vir meer inligting oor hierdie sertifikate.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> het \'n sertifikaatinstansie vir jou werkprofiel geïnstalleer wat dit vir hulle moontlik kan maak om werknetwerkaktiwiteit, insluitend e-posse, programme en beveiligde webwerwe, te monitor.\n\nKontak jou admin vir meer inligting oor hierdie sertifikaat.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"\'n Derde party kan jou netwerkaktiwiteit monitor, insluitend e-posse, programme en veilige webwerwe.\n\n\'n Vertroude eiebewys wat op jou toestel geïnstalleer is, maak dit moontlik."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">Gaan sertifikate na</item>
+      <item quantity="one">Gaan sertifikaat na</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Status"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Netwerk, reeksnommers en ander inligting"</string>
     <string name="manual" msgid="5683935624321864999">"Handmatig"</string>
@@ -388,6 +508,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Netwerk is nie gekoppel nie"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Reeds aan <xliff:g id="SSID">%1$s</xliff:g> gekoppel. Koppel aan \'n ander netwerk?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"\'n onbekende netwerk"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Jy het nie toestemming om die Wi-Fi-netwerk te verander nie."</string>
     <string name="title_ok" msgid="6500452958848127145">"OK"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Kanselleer"</string>
     <string name="storage_title" msgid="6637715914885228193">"Berging"</string>
@@ -875,6 +996,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Skermkiekie word nie toegelaat nie"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Kan nie hierdie program oopmaak nie"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Kontak jou IT-administrateur as jy vrae het"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Meer besonderhede"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Jou administrateur kan programme en data wat met jou werkprofiel geassosieer word, insluitend instellings, toestemmings, korporatiewe toegang, netwerkaktiwiteit en die toestel se ligginginligting, monitor en bestuur."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Jou administrateur kan programme en data wat met hierdie gebruiker geassosieer word, insluitend instellings, toestemmings, korporatiewe toegang, netwerkaktiwiteit en die toestel se ligginginligting, monitor en bestuur."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Jou administrateur kan programme en data wat met hierdie toestel geassosieer word, insluitend instellings, toestemmings, korporatiewe toegang, netwerkaktiwiteit en die toestel se ligginginligting, monitor en bestuur."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Verwyder werkprofiel"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Toesteladministrasieprogram"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Deaktiveer hierdie toesteladministrasieprogram"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Deïnstalleer program"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Deaktiveer en deïnstalleer"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Toesteladministrateurprogramme"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Aktiveer toesteladministrasieprogram?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Aktiveer toesteladministrasieprogram"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"As hierdie toesteladministrasieprogram geaktiveer word, sal die program <xliff:g id="APP_NAME">%1$s</xliff:g> toegelaat word om die volgende bewerkings uit te voer."</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Hierdie toestel sal deur <xliff:g id="APP_NAME">%1$s</xliff:g> bestuur en gemonitor word."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Hierdie administrasieprogram is aktief en laat die program <xliff:g id="APP_NAME">%1$s</xliff:g> toe om die volgende bewerkings uit te voer:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Deur voort te gaan, sal jou gebruiker deur jou administrateur bestuur word, wat moontlik in staat sal wees om benewens jou persoonlike data ook geassosieerde data te berg.\n\nJou administrateur het die vermoë om instellings, toegang, programme en data wat met hierdie gebruiker geassosieer word, insluitend netwerkaktiwiteit en jou toestel se ligginginligting, te monitor en te bestuur."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Deel foutverslag?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Jou IT-administrateur het \'n foutverslag versoek om met die foutsporing van hierdie toestel te help. Programme en data sal dalk gedeel word."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Jou IT-administrateur het \'n foutverslag versoek om met die foutsporing van hierdie toestel te help. Programme en data sal dalk gedeel word en jou toestel sal dalk tydelik stadiger wees."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Hierdie foutverslag word tans met jou IT-administrateur gedeel. Kontak jou IT-administrateur vir meer besonderhede."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Deel"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Weier"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Toestel om saam met <xliff:g id="APPNAME">%1$s</xliff:g> te gebruik"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Geen toestelle gekry nie. Maak seker dat toestelle aangeskakel is en beskikbaar is om te koppel."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Probeer weer"</string>
