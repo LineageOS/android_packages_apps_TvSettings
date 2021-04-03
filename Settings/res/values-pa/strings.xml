@@ -255,11 +255,13 @@
     <string name="system_diagnostic" msgid="1654842813331919958">"ਵਰਤੋਂ ਅਤੇ ਤਸ਼ਖੀਸ"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"ਕੋਈ ਵੀ ਡੀਵਾਈਸ ਪ੍ਰਸ਼ਾਸਕ ਐਪਾਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"ਪ੍ਰਸ਼ਾਸਕ ਦੁਆਰਾ ਅਯੋਗ ਬਣਾਇਆ ਗਿਆ"</string>
-    <!-- no translation found for disabled_by_administrator_summary (3420979957115426764) -->
-    <skip />
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"ਉਪਲਬਧ ਨਹੀਂ"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"ਡੀਵਾਈਸ ਪ੍ਰਸ਼ਾਸਕ ਐਪਾਂ"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"ਕੋਈ ਕਿਰਿਆਸ਼ੀਲ ਐਪਾਂ ਨਹੀਂ"</string>
-    <!-- no translation found for number_of_device_admins (5825543996501454373) -->
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ਕਿਰਿਆਸ਼ੀਲ ਐਪ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ਕਿਰਿਆਸ਼ੀਲ ਐਪਾਂ</item>
+    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"ਪ੍ਰਸ਼ਾਸਕ, ਇਨਕ੍ਰਿਪਸ਼ਨ ਨੀਤੀ ਜਾਂ ਕ੍ਰੀਡੈਂਸ਼ੀਅਲ ਸਟੋਰੇਜ ਵੱਲੋਂ ਅਯੋਗ ਬਣਾਇਆ ਗਿਆ"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"ਪ੍ਰਬੰਧਿਤ ਕੀਤੇ ਡੀਵਾਈਸ ਬਾਰੇ ਜਾਣਕਾਰੀ"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"ਤਬਦੀਲੀਆਂ ਅਤੇ ਸੈਟਿੰਗਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਤੁਹਾਡੇ ਸੰਗਠਨ ਵੱਲੋਂ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"</string>
@@ -268,24 +270,27 @@
     <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"ਜਾਣਕਾਰੀ ਦੀਆਂ ਉਹ ਕਿਸਮਾਂ ਜੋ ਤੁਹਾਡਾ ਸੰਗਠਨ  ਦੇਖ  ਸਕਦਾ ਹੈ"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"ਤੁਹਾਡੇ ਸੰਗਠਨ ਦੇ ਪ੍ਰਸ਼ਾਸਕ ਵੱਲੋਂ ਕੀਤੀਆਂ ਗਈਆਂ ਤਬਦੀਲੀਆਂ"</string>
     <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"ਇਸ ਡੀਵਾਈਸ \'ਤੇ ਤੁਹਾਡੀ ਪਹੁੰਚ"</string>
-    <!-- no translation found for enterprise_privacy_enterprise_data (8135491104894522008) -->
-    <skip />
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"ਤੁਹਾਡੇ ਕਾਰਜ ਖਾਤੇ, ਜਿਵੇਂ ਕਿ ਈਮੇਲ ਅਤੇ ਕੈਲੰਡਰ, ਨਾਲ ਸਬੰਧਿਤ ਡਾਟਾ"</string>
     <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"ਤੁਹਾਡੇ ਡੀਵਾਈਸ \'ਤੇ ਸਥਾਪਤ ਕੀਤੀਆਂ ਐਪਾਂ ਦੀ ਸੂਚੀ"</string>
     <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"ਹਰੇਕ ਐਪ ਵਿੱਚ ਲਗਾਇਆ ਸਮਾਂ ਅਤੇ ਵਰਤਿਆ ਗਿਆ  ਡਾਟਾ"</string>
     <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"ਸਭ ਤੋਂ ਹਾਲੀਆ ਨੈੱਟਵਰਕ ਟਰੈਫਿਕ ਲੌਗ"</string>
     <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"ਸਭ ਤੋਂ ਹਾਲੀਆ ਬੱਗ ਰਿਪੋਰਟ"</string>
     <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"ਸਭ ਤੋਂ ਹਾਲੀਆ ਸੁਰੱਖਿਆ ਲੌਗ"</string>
-    <!-- no translation found for enterprise_privacy_none (6660670916934417519) -->
-    <skip />
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"ਕੋਈ ਨਹੀਂ"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"ਐਪਾਂ ਸਥਾਪਤ ਕੀਤੀਆਂ ਗਈਆਂ"</string>
-    <!-- no translation found for enterprise_privacy_apps_count_estimation_info (3875568975752197381) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_number_packages_lower_bound (3891649682522079620) -->
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"ਐਪਾਂ ਦੀ ਗਿਣਤੀ ਅਨੁਮਾਨਿਤ ਹੈ। ਹੋ ਸਕਦਾ ਹੈ ਇਸ ਵਿੱਚ Play ਸਟੋਰ ਤੋਂ ਬਾਹਰੋਂ ਸਥਾਪਤ ਕੀਤੀਆਂ ਐਪਾਂ ਸ਼ਾਮਲ ਨਾ ਹੋਣ।"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT_1">%d</xliff:g> ਐਪ</item>
+      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT_1">%d</xliff:g> ਐਪਾਂ</item>
+    </plurals>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"ਟਿਕਾਣਾ ਇਜਾਜ਼ਤਾਂ"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਇਜਾਜ਼ਤਾਂ"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"ਕੈਮਰਾ ਇਜਾਜ਼ਤਾਂ"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਐਪਾਂ"</string>
-    <!-- no translation found for enterprise_privacy_number_packages (1652060324792116347) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ਐਪ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ਐਪਾਂ</item>
+    </plurals>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਕੀ-ਬੋਰਡ"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"<xliff:g id="APP_LABEL">%s</xliff:g> \'ਤੇ ਸੈੱਟ ਹੈ"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"\'ਹਮੇਸ਼ਾ-ਚਾਲੂ VPN\' ਵਿਕਲਪ ਨੂੰ ਚਾਲੂ ਕੀਤਾ ਹੋਇਆ ਹੈ"</string>
@@ -295,22 +300,37 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"ਭਰੋਸੇਯੋਗ ਕ੍ਰੀਡੈਂਸ਼ੀਅਲ"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"ਤੁਹਾਡੇ ਨਿੱਜੀ ਪ੍ਰੋਫਾਈਲ ਵਿੱਚ ਭਰੋਸੇਯੋਗ ਕ੍ਰੀਡੈਂਸ਼ੀਅਲ"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"ਤੁਹਾਡੇ ਕਾਰਜ-ਸਥਾਨ ਪ੍ਰੋਫਾਈਲ ਵਿੱਚ ਭਰੋਸੇਯੋਗ ਕ੍ਰੀਡੈਂਸ਼ੀਅਲ"</string>
-    <!-- no translation found for enterprise_privacy_number_ca_certs (4861211387981268796) -->
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT_1">%d</xliff:g> CA ਪ੍ਰਮਾਣ-ਪੱਤਰ</item>
+      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT_1">%d</xliff:g> CA ਪ੍ਰਮਾਣ-ਪੱਤਰ</item>
+    </plurals>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"ਪ੍ਰਸ਼ਾਸਕ ਡੀਵਾਈਸ ਨੂੰ ਲਾਕ ਅਤੇ ਪਾਸਵਰਡ ਨੂੰ ਰੀਸੈੱਟ ਕਰ ਸਕਦਾ ਹੈ"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"ਪ੍ਰਸ਼ਾਸਕ ਡੀਵਾਈਸ ਦਾ ਸਾਰਾ ਡਾਟਾ ਮਿਟਾ ਸਕਦਾ ਹੈ"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"ਸਾਰਾ ਡੀਵਾਈਸ ਡਾਟਾ ਮਿਟਾਏ ਜਾਣ ਤੋਂ ਪਹਿਲਾਂ ਪਾਸਵਰਡ ਦਾਖਲ ਕਰਨ ਦੀਆਂ ਅਸਫਲ ਕੋਸ਼ਿਸ਼ਾਂ ਦੀ ਗਿਣਤੀ"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਡਾਟਾ ਮਿਟਾਏ ਜਾਣ ਤੋਂ ਪਹਿਲਾਂ ਪਾਸਵਰਡ ਦਾਖਲ ਕਰਨ ਦੀਆਂ ਅਸਫਲ ਕੋਸ਼ਿਸ਼ਾਂ ਦੀ ਗਿਣਤੀ"</string>
-    <!-- no translation found for enterprise_privacy_number_failed_password_wipe (8317320334895448341) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ਕੋਸ਼ਿਸ਼</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ਕੋਸ਼ਿਸ਼ਾਂ</item>
+    </plurals>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"ਇਸ ਡੀਵਾਈਸ ਦਾ ਪ੍ਰਬੰਧਨ ਤੁਹਾਡੇ ਸੰਗਠਨ ਵੱਲੋਂ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।"</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"ਇਸ ਡੀਵਾਈਸ ਦਾ ਪ੍ਰਬੰਧਨ <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> ਵੱਲੋਂ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"ਹੋਰ ਜਾਣੋ"</string>
-    <!-- no translation found for default_camera_app_title (3870902175441923391) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="one">ਕੈਮਰਾ ਐਪ</item>
+      <item quantity="other">ਕੈਮਰਾ ਐਪਾਂ</item>
+    </plurals>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"ਕੈਲੰਡਰ ਐਪ"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"ਸੰਪਰਕ ਐਪ"</string>
-    <!-- no translation found for default_email_app_title (5601238555065668402) -->
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="one">ਈਮੇਲ ਕਲਾਇੰਟ ਐਪ</item>
+      <item quantity="other">ਈਮੇਲ ਕਲਾਇੰਟ ਐਪਾਂ</item>
+    </plurals>
     <string name="default_map_app_title" msgid="9051013257374474801">"ਨਕਸ਼ਾ ਐਪ"</string>
-    <!-- no translation found for default_phone_app_title (1573981201056870719) -->
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="one">ਫ਼ੋਨ ਐਪ</item>
+      <item quantity="other">ਫ਼ੋਨ ਐਪਾਂ</item>
+    </plurals>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"ਟਿਊਟੋਰੀਅਲ"</string>
@@ -345,11 +365,23 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"ਵਾਧੂ ਸਿਸਟਮ ਅੱਪਡੇਟ"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"ਨੈੱਟਵਰਕ ਦਾ ਨਿਰੀਖਣ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ"</string>
     <string name="done_button" msgid="616159688526431451">"ਹੋ ਗਿਆ"</string>
-    <!-- no translation found for ssl_ca_cert_dialog_title (8222753634330561111) -->
-    <!-- no translation found for ssl_ca_cert_info_message_device_owner (6128536570911468907) -->
-    <!-- no translation found for ssl_ca_cert_info_message (5828471957724016946) -->
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="one">ਪ੍ਰਮਾਣ-ਪੱਤਰ \'ਤੇ ਭਰੋਸਾ ਕਰੋ ਜਾਂ ਇਸ ਨੂੰ ਹਟਾਓ</item>
+      <item quantity="other">ਪ੍ਰਮਾਣ-ਪੱਤਰਾਂ \'ਤੇ ਭਰੋਸਾ ਕਰੋ ਜਾਂ ਇਹਨਾਂ ਨੂੰ ਹਟਾਓ</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ਨੇ ਤੁਹਾਡੇ ਡੀਵਾਈਸ \'ਤੇ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਅਥਾਰਿਟੀ ਨੂੰ ਸਥਾਪਤ ਕੀਤਾ ਹੈ, ਜਿਸ ਨਾਲ ਉਹਨਾਂ ਨੂੰ ਈਮੇਲਾਂ, ਐਪਾਂ ਅਤੇ ਸੁਰੱਖਿਅਤ ਵੈੱਬਸਾਈਟਾਂ ਸਮੇਤ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਦੀ ਨੈੱਟਵਰਕ ਸਰਗਰਮੀ ਦੀ ਨਿਗਰਾਨੀ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਮਿਲ ਸਕਦੀ ਹੈ।\n\nਇਸ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ, ਆਪਣੇ ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਸੰਪਰਕ ਕਰੋ।</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ਨੇ ਤੁਹਾਡੇ ਡੀਵਾਈਸ \'ਤੇ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਅਥਾਰਿਟੀਆਂ ਨੂੰ ਸਥਾਪਤ ਕੀਤਾ ਹੈ, ਜਿਸ ਨਾਲ ਉਹਨਾਂ ਨੂੰ ਈਮੇਲਾਂ, ਐਪਾਂ ਅਤੇ ਸੁਰੱਖਿਅਤ ਵੈੱਬਸਾਈਟਾਂ ਸਮੇਤ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਦੀ ਨੈੱਟਵਰਕ ਸਰਗਰਮੀ ਦੀ ਨਿਗਰਾਨੀ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਮਿਲ ਸਕਦੀ ਹੈ।\n\nਇਸ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ, ਆਪਣੇ ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਸੰਪਰਕ ਕਰੋ।</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ਨੇ ਤੁਹਾਡੇ ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਲਈ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਅਥਾਰਿਟੀ ਨੂੰ ਸਥਾਪਤ ਕੀਤਾ ਹੈ, ਜਿਸ ਨਾਲ ਉਹਨਾਂ ਨੂੰ ਈਮੇਲਾਂ, ਐਪਾਂ ਅਤੇ ਸੁਰੱਖਿਅਤ ਵੈੱਬਸਾਈਟਾਂ ਸਮੇਤ ਕਾਰਜ ਨੈੱਟਵਰਕ ਸਰਗਰਮੀ ਦੀ ਨਿਗਰਾਨੀ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਮਿਲ ਸਕਦੀ ਹੈ।\n\nਇਹਨਾਂ ਪ੍ਰਮਾਣ-ਪੱਤਰਾਂ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ, ਆਪਣੇ ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਸੰਪਰਕ ਕਰੋ।</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ਨੇ ਤੁਹਾਡੇ ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਲਈ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਅਥਾਰਿਟੀਆਂ ਨੂੰ ਸਥਾਪਤ ਕੀਤਾ ਹੈ, ਜਿਸ ਨਾਲ ਉਹਨਾਂ ਨੂੰ ਈਮੇਲਾਂ, ਐਪਾਂ ਅਤੇ ਸੁਰੱਖਿਅਤ ਵੈੱਬਸਾਈਟਾਂ ਸਮੇਤ ਕਾਰਜ ਨੈੱਟਵਰਕ ਸਰਗਰਮੀ ਦੀ ਨਿਗਰਾਨੀ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਮਿਲ ਸਕਦੀ ਹੈ।\n\nਇਹਨਾਂ ਪ੍ਰਮਾਣ-ਪੱਤਰਾਂ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ, ਆਪਣੇ ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਸੰਪਰਕ ਕਰੋ।</item>
+    </plurals>
     <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"ਇੱਕ ਤੀਜੀ ਪਾਰਟੀ ਤੁਹਾਡੀ ਨੈੱਟਵਰਕ ਗਤੀਵਿਧੀ ਦਾ ਨਿਰੀਖਣ ਕਰਨ ਵਿੱਚ ਸਮਰੱਥ ਹੈ, ਈਮੇਲਾਂ, ਐਪਾਂ ਅਤੇ ਸੁਰੱਖਿਅਤ ਵੈੱਬਸਾਈਟਾਂ ਸਮੇਤ।\n\nਤੁਹਾਡੇ ਡੀਵਾਈਸ ਤੇ ਸਥਾਪਤ ਕੀਤਾ ਇੱਕ ਭਰੋਸੇਯੋਗ ਕ੍ਰੀਡੈਂਸ਼ੀਅਲ ਇਸਨੂੰ ਸੰਭਵ ਬਣਾ ਰਿਹਾ ਹੈ।"</string>
-    <!-- no translation found for ssl_ca_cert_settings_button (196409967946912560) -->
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="one">ਪ੍ਰਮਾਣ-ਪੱਤਰ ਦੀ ਜਾਂਚ ਕਰੋ</item>
+      <item quantity="other">ਪ੍ਰਮਾਣ-ਪੱਤਰਾਂ ਦੀ ਜਾਂਚ ਕਰੋ</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"ਸਥਿਤੀ"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"ਨੈੱਟਵਰਕ, ਸੀਰੀਅਲ ਨੰਬਰ ਅਤੇ ਹੋਰ ਜਾਣਕਾਰੀ"</string>
     <string name="manual" msgid="5683935624321864999">"ਹੱਥੀਂ"</string>
