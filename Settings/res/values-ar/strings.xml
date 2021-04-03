@@ -177,18 +177,12 @@
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
     <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"عند اختيار الزر، سيسمح النظام للتطبيقات باختيار أي صيغة من صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع شاشة العرض. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
     <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"عند اختيار الزر، يمكنك يدويًا إيقاف صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع شاشة العرض والتي تسبّب مشاكل في التشغيل. لا يمكن يدويًا تفعيل صيغ \"النطاق العالي الديناميكية\" (HDR) غير المتوافقة مع شاشة العرض. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
-    <!-- no translation found for hdr_format_info (5652559220799426076) -->
-    <skip />
-    <!-- no translation found for hdr_show_formats (171065892975445851) -->
-    <skip />
-    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
-    <skip />
-    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
-    <skip />
-    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
-    <skip />
-    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
-    <skip />
+    <string name="hdr_format_info" msgid="5652559220799426076">"معلومات الصيغة"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"عرض الصيغ"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"إخفاء الصيغ"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"الصيغ المفعَّلة"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"الصيغ المتوقّفة"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"لإيقاف صيغة، غيِّر إعدادات اختيار الصيغ إلى \"يدوي\"."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"هل تريد محو البيانات المؤقتة؟"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"يؤدي ذلك إلى محو البيانات المؤقتة لكل التطبيقات."</string>
     <string name="accessories_add" msgid="413764175035531452">"إضافة ملحق"</string>
@@ -263,11 +257,17 @@
     <string name="system_diagnostic" msgid="1654842813331919958">"الاستخدام وبيانات التشخيص"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"لا تتوفر تطبيقات لمشرف الجهاز"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"تم إيقاف الإعداد بواسطة المشرف"</string>
-    <!-- no translation found for disabled_by_administrator_summary (3420979957115426764) -->
-    <skip />
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"غير متاح"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"تطبيقات مشرف الجهاز"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"لا تتوفر تطبيقات نشطة"</string>
-    <!-- no translation found for number_of_device_admins (5825543996501454373) -->
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق نشط</item>
+      <item quantity="two">تطبيقان نشطان (<xliff:g id="COUNT_1">%d</xliff:g>)</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقات نشطة</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقًا نشطًا</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق نشط</item>
+      <item quantity="one">تطبيق نشط واحد (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
+    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"تم إيقافه بواسطة المشرف، أو سياسة التشفير، أو وحدة تخزين بيانات الاعتماد"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"معلومات الجهاز المُدار"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"تتولى مؤسستك إدارة التغييرات والإعدادات."</string>
@@ -276,24 +276,35 @@
     <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"أنواع المعلومات التي يمكن لمؤسستك الاطّلاع عليها"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"التغييرات التي يجريها مشرف المؤسسة"</string>
     <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"إمكانية وصولك إلى هذا الجهاز"</string>
-    <!-- no translation found for enterprise_privacy_enterprise_data (8135491104894522008) -->
-    <skip />
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"البيانات المرتبطة بحساب العمل، مثل البريد الإلكتروني والتقويم"</string>
     <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"قائمة التطبيقات على جهازك"</string>
     <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"مقدار الوقت المنقضي والبيانات المستخدمة في كل تطبيق"</string>
     <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"أحدث سجل لحركة بيانات الشبكة"</string>
     <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"تقرير الأخطاء الأحدث"</string>
     <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"أحدث سجلّ أمان"</string>
-    <!-- no translation found for enterprise_privacy_none (6660670916934417519) -->
-    <skip />
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"لم يتم اتخاذ أي إجراء."</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"التطبيقات المثبّتة"</string>
-    <!-- no translation found for enterprise_privacy_apps_count_estimation_info (3875568975752197381) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_number_packages_lower_bound (3891649682522079620) -->
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"عدد التطبيقات تقديري. وقد لا يشمل التطبيقات المُثبَّتة خارج \"متجر Play\"."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق كحد أدنى</item>
+      <item quantity="two">تطبيقان (<xliff:g id="COUNT_1">%d</xliff:g>) كحد أدنى</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقات كحد أدنى</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقًا كحد أدنى</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق كحد أدنى</item>
+      <item quantity="one">تطبيق واحد (<xliff:g id="COUNT_0">%d</xliff:g>) كحد أدنى</item>
+    </plurals>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"أذونات تحديد الموقع"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"أذونات الميكروفون"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"أذونات الكاميرا"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"التطبيقات التلقائية"</string>
-    <!-- no translation found for enterprise_privacy_number_packages (1652060324792116347) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق</item>
+      <item quantity="two">تطبيقان (<xliff:g id="COUNT_1">%d</xliff:g>)</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقات</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقًا</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق</item>
+      <item quantity="one">تطبيق واحد (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
+    </plurals>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"لوحة المفاتيح التلقائية"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"ضبط على <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"تم تفعيل إعداد \"شبكة افتراضية خاصة (VPN) دائمة التفعيل\""</string>
@@ -303,22 +314,57 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"بيانات الاعتماد الموثوقة"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"بيانات اعتماد موثوقة في ملفك الشخصي"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"بيانات اعتماد موثوقة في ملفك الشخصي للعمل"</string>
-    <!-- no translation found for enterprise_privacy_number_ca_certs (4861211387981268796) -->
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> شهادة CA كحد أدنى</item>
+      <item quantity="two">شهادتا CA (<xliff:g id="COUNT_1">%d</xliff:g>) كحد أدنى</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> شهادات CA كحد أدنى</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> شهادة CA كحد أدنى</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> شهادة CA كحد أدنى</item>
+      <item quantity="one">شهادة CA واحدة (<xliff:g id="COUNT_0">%d</xliff:g>) كحد أدنى</item>
+    </plurals>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"يمكن للمشرف قفل الجهاز وإعادة ضبط كلمة المرور"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"يمكن للمشرف حذف جميع بيانات الجهاز"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"محاولات كلمة المرور الخاطئة قبل حذف جميع بيانات الجهاز"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"محاولات كلمة المرور الخاطئة قبل حذف بيانات الملف الشخصي للعمل"</string>
-    <!-- no translation found for enterprise_privacy_number_failed_password_wipe (8317320334895448341) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="zero">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولة.</item>
+      <item quantity="two">لديك محاولتان (<xliff:g id="COUNT_1">%d</xliff:g>).</item>
+      <item quantity="few">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولات.</item>
+      <item quantity="many">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولةً.</item>
+      <item quantity="other">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولة.</item>
+      <item quantity="one">لديك محاولة واحدة (<xliff:g id="COUNT_0">%d</xliff:g>).</item>
+    </plurals>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"تتولى مؤسستك إدارة هذا الجهاز."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"تتم إدارة هذا الجهاز بواسطة <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"مزيد من المعلومات"</string>
-    <!-- no translation found for default_camera_app_title (3870902175441923391) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="zero">تطبيقات الكاميرا</item>
+      <item quantity="two">تطبيقا الكاميرا</item>
+      <item quantity="few">تطبيقات الكاميرا</item>
+      <item quantity="many">تطبيقات الكاميرا</item>
+      <item quantity="other">تطبيقات الكاميرا</item>
+      <item quantity="one">تطبيق الكاميرا</item>
+    </plurals>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"تطبيق التقويم"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"تطبيق جهات الاتصال"</string>
-    <!-- no translation found for default_email_app_title (5601238555065668402) -->
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="zero">تطبيقات البريد الإلكتروني</item>
+      <item quantity="two">تطبيقا البريد الإلكتروني</item>
+      <item quantity="few">تطبيقات البريد الإلكتروني</item>
+      <item quantity="many">تطبيقات البريد الإلكتروني</item>
+      <item quantity="other">تطبيقات البريد الإلكتروني</item>
+      <item quantity="one">تطبيق البريد الإلكتروني</item>
+    </plurals>
     <string name="default_map_app_title" msgid="9051013257374474801">"تطبيق الخريطة"</string>
-    <!-- no translation found for default_phone_app_title (1573981201056870719) -->
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="zero">تطبيقات الهاتف</item>
+      <item quantity="two">تطبيقا الهاتف</item>
+      <item quantity="few">تطبيقات الهاتف</item>
+      <item quantity="many">تطبيقات الهاتف</item>
+      <item quantity="other">تطبيقات الهاتف</item>
+      <item quantity="one">تطبيق الهاتف</item>
+    </plurals>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>، <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"برامج تعليمية"</string>
@@ -357,11 +403,39 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"تحديثات إضافية للنظام"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"قد تكون الشبكة خاضعة للمراقبة"</string>
     <string name="done_button" msgid="616159688526431451">"تم"</string>
-    <!-- no translation found for ssl_ca_cert_dialog_title (8222753634330561111) -->
-    <!-- no translation found for ssl_ca_cert_info_message_device_owner (6128536570911468907) -->
-    <!-- no translation found for ssl_ca_cert_info_message (5828471957724016946) -->
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="zero">إضافة شهادات أو إزالتها</item>
+      <item quantity="two">إضافة شهادتَين أو إزالتهما</item>
+      <item quantity="few">إضافة شهادات أو إزالتها</item>
+      <item quantity="many">إضافة شهادات أو إزالتها</item>
+      <item quantity="other">إضافة شهادات أو إزالتها</item>
+      <item quantity="one">إضافة شهادة أو إزالتها</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="zero">تم تثبيت شهادات CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" على جهازك، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة الشبكة على جهازك، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هذه الشهادات، يُرجى التواصل مع المشرف.</item>
+      <item quantity="two">تم تثبيت شهادتَي CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" على جهازك، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة الشبكة على جهازك، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هاتين الشهادتَين، يُرجى التواصل مع المشرف.</item>
+      <item quantity="few">تم تثبيت شهادات CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" على جهازك، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة الشبكة على جهازك، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هذه الشهادات، يُرجى التواصل مع المشرف.</item>
+      <item quantity="many">تم تثبيت شهادات CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" على جهازك، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة الشبكة على جهازك، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هذه الشهادات، يُرجى التواصل مع المشرف.</item>
+      <item quantity="other">تم تثبيت شهادات CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" على جهازك، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة الشبكة على جهازك، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هذه الشهادات، يُرجى التواصل مع المشرف.</item>
+      <item quantity="one">تم تثبيت شهادة CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g>\" على جهازك، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة الشبكة على جهازك، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هذه الشهادة، يُرجى التواصل مع المشرف.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="zero">تم تثبيت شهادات CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" لملفك الشخصي للعمل، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة شبكة العمل، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هذه الشهادات، يُرجى التواصل مع المشرف.</item>
+      <item quantity="two">تم تثبيت شهادتَي CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" لملفك الشخصي للعمل، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة شبكة العمل، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هاتين الشهادتَين، يُرجى التواصل مع المشرف.</item>
+      <item quantity="few">تم تثبيت شهادات CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" لملفك الشخصي للعمل، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة شبكة العمل، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هذه الشهادات، يُرجى التواصل مع المشرف.</item>
+      <item quantity="many">تم تثبيت شهادات CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" لملفك الشخصي للعمل، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة شبكة العمل، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هذه الشهادات، يُرجى التواصل مع المشرف.</item>
+      <item quantity="other">تم تثبيت شهادات CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" لملفك الشخصي للعمل، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة شبكة العمل، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هذه الشهادات، يُرجى التواصل مع المشرف.</item>
+      <item quantity="one">تم تثبيت شهادة CA من قِبل \"<xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g>\" لملفك الشخصي للعمل، وهذا قد يسمح لمن أجرى التثبيت برصد أنشطة شبكة العمل، بما في ذلك الرسائل الإلكترونية والتطبيقات والمواقع الإلكترونية الآمنة.\n\nللحصول على مزيد من المعلومات حول هذه الشهادة، يُرجى التواصل مع المشرف.</item>
+    </plurals>
     <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"يُمكن لأي جهة خارجية مراقبة نشاط الشبكة، بما في ذلك الرسائل الإلكترونية والتطبيقات ومواقع الويب الآمنة.\n\nويُمكن لبيانات اعتماد موثوقة ومثبتة على جهاز الكمبيوتر إتاحة إجراء ذلك."</string>
-    <!-- no translation found for ssl_ca_cert_settings_button (196409967946912560) -->
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="zero">الاطّلاع على الشهادات</item>
+      <item quantity="two">الاطّلاع على الشهادتَين</item>
+      <item quantity="few">الاطّلاع على الشهادات</item>
+      <item quantity="many">الاطّلاع على الشهادات</item>
+      <item quantity="other">الاطّلاع على الشهادات</item>
+      <item quantity="one">الاطّلاع على الشهادة</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"الحالة"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"الشبكة والأرقام التسلسلية ومعلومات أخرى"</string>
     <string name="manual" msgid="5683935624321864999">"يدوي"</string>

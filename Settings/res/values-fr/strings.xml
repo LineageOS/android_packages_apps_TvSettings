@@ -169,18 +169,12 @@
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
     <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Lorsque cette option est sélectionnée, le système autorise les applis à choisir un format HDR compatible avec votre chaîne d\'appareils. Les applis peuvent opter pour un format qui ne garantit pas la meilleure qualité."</string>
     <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Si l\'option est sélectionnée, vous pouvez désactiver manuellement formats HDR compatibles avec chaîne d\'appareils qui provoquent problèmes de lecture. Vous ne pouvez pas forcer l\'activation des formats HDR incompatibles. Les applis peuvent opter pour un format qui ne garantit pas la meilleure qualité."</string>
-    <!-- no translation found for hdr_format_info (5652559220799426076) -->
-    <skip />
-    <!-- no translation found for hdr_show_formats (171065892975445851) -->
-    <skip />
-    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
-    <skip />
-    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
-    <skip />
-    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
-    <skip />
-    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
-    <skip />
+    <string name="hdr_format_info" msgid="5652559220799426076">"INFOS SUR LE FORMAT"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"Afficher les formats"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Masquer les formats"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"FORMATS ACTIVÉS"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"FORMATS DÉSACTIVÉS"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Pour désactiver ce format, définissez l\'option sur \"Sélection manuelle\"."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Effacer les données mises en cache ?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Les données en cache des applis seront effacées."</string>
     <string name="accessories_add" msgid="413764175035531452">"Ajouter un accessoire"</string>
@@ -255,12 +249,12 @@
     <string name="system_diagnostic" msgid="1654842813331919958">"Utilisation et diagnostics"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"Aucune application d\'administration de l\'appareil n\'est disponible"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Désactivé par l\'administrateur"</string>
-    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Indisponible"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Non disponible"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Applis d\'administration"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Aucune application active"</string>
     <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> application active</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> applications actives</item>
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> appli active</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> applis actives</item>
     </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Désactivé par l\'admin, règles chiffrement, stockage ID"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Infos sur l\'appareil géré"</string>
@@ -270,26 +264,26 @@
     <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Types d\'informations que votre organisation peut voir"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Modifications effectuées par administrateur organisation"</string>
     <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Votre accès à cet appareil"</string>
-    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Informations associées à votre compte professionnel, telles que les e-mails et les données de l\'agenda"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Données associées à votre compte professionnel (e-mail, agenda, etc.)"</string>
     <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Liste des applications installées sur votre appareil"</string>
     <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Durée et consommation des données dans chaque application"</string>
     <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Dernier journal du trafic réseau"</string>
     <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Dernier rapport de bug"</string>
     <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Dernier journal de sécurité"</string>
-    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Aucun"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Aucune"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Applications installées"</string>
-    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Le nombre d\'applications est une estimation. Il est possible qu\'il n\'inclue pas les applications installées sans passer par le Play Store."</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Le nombre d\'applis est une estimation. Il est possible qu\'il n\'inclue pas celles installées sans passer par le Play Store."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="one">Au moins <xliff:g id="COUNT_1">%d</xliff:g> application</item>
-      <item quantity="other">Au moins <xliff:g id="COUNT_1">%d</xliff:g> applications</item>
+      <item quantity="one">Au moins <xliff:g id="COUNT_1">%d</xliff:g> appli</item>
+      <item quantity="other">Au moins <xliff:g id="COUNT_1">%d</xliff:g> applis</item>
     </plurals>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Autorisations d\'accéder à la position"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Autorisations d\'accès au micro"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Autorisations d\'accès à l\'appareil photo"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Applications par défaut"</string>
     <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> application</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> applications</item>
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> appli</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> applis</item>
     </plurals>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Clavier par défaut"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Défini sur \"<xliff:g id="APP_LABEL">%s</xliff:g>\""</string>
@@ -317,19 +311,19 @@
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"En savoir plus"</string>
     <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="one">Application d\'appareil photo</item>
-      <item quantity="other">Applications d\'appareil photo</item>
+      <item quantity="one">Appli d\'appareil photo</item>
+      <item quantity="other">Applis d\'appareil photo</item>
     </plurals>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Agenda"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Contacts"</string>
     <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="one">Client de messagerie</item>
-      <item quantity="other">Clients de messagerie</item>
+      <item quantity="one">Appli de client de messagerie</item>
+      <item quantity="other">Applis de client de messagerie</item>
     </plurals>
     <string name="default_map_app_title" msgid="9051013257374474801">"Cartes"</string>
     <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="one">Application de téléphone</item>
-      <item quantity="other">Applications de téléphone</item>
+      <item quantity="one">Appli de téléphone</item>
+      <item quantity="other">Applis de téléphone</item>
     </plurals>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -366,16 +360,16 @@
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Il est possible que le réseau soit surveillé."</string>
     <string name="done_button" msgid="616159688526431451">"OK"</string>
     <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="one">Considérer le certificat comme fiable ou le supprimer</item>
-      <item quantity="other">Considérer les certificats comme fiables ou les supprimer</item>
+      <item quantity="one">Faire confiance au certificat ou le supprimer</item>
+      <item quantity="other">Faire confiance aux certificats ou les supprimer</item>
     </plurals>
     <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> a installé un certificat CA sur votre appareil afin de contrôler l\'activité sur le réseau, y compris les e-mails, les applications et les sites Web sécurisés.\n\nPour en savoir plus sur ce certificat, contactez votre administrateur.</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> a installé des certificats CA sur votre appareil afin de contrôler l\'activité sur le réseau, y compris les e-mails, les applications et les sites Web sécurisés.\n\nPour en savoir plus sur ces certificats, contactez votre administrateur.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> a installé un certificat CA sur votre appareil afin de contrôler l\'activité sur le réseau, y compris les e-mails, les applis et les sites Web sécurisés.\n\nPour en savoir plus sur ce certificat, contactez votre administrateur.</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> a installé des certificats CA sur votre appareil afin de contrôler l\'activité sur le réseau, y compris les e-mails, les applis et les sites Web sécurisés.\n\nPour en savoir plus sur ces certificats, contactez votre administrateur.</item>
     </plurals>
     <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> a installé un certificat CA pour votre profil professionnel afin de contrôler l\'activité sur le réseau, y compris les e-mails, les applications et les sites Web sécurisés.\n\nPour en savoir plus sur ce certificat, contactez votre administrateur.</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> a installé des certificats CA pour votre profil professionnel afin de contrôler l\'activité sur le réseau, y compris les e-mails, les applications et les sites Web sécurisés.\n\nPour en savoir plus sur ces certificats, contactez votre administrateur.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> a installé un certificat CA pour votre profil professionnel afin de contrôler l\'activité sur le réseau, y compris les e-mails, les applis et les sites Web sécurisés.\n\nPour en savoir plus sur ce certificat, contactez votre administrateur.</item>
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> a installé des certificats CA pour votre profil professionnel afin de contrôler l\'activité sur le réseau, y compris les e-mails, les applis et les sites Web sécurisés.\n\nPour en savoir plus sur ces certificats, contactez votre administrateur.</item>
     </plurals>
     <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Des tiers ont la possibilité de surveiller votre activité sur le réseau, y compris en ce qui concerne les e-mails, les applications et les sites Web sécurisés.\n\nUn certificat de confiance installé sur votre appareil rend cela possible."</string>
     <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
