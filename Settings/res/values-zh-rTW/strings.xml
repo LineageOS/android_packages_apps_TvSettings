@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"使用 Dolby Atmos 搭配 Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"注意：如果裝置未正確回報支援的格式，「自動」選項可能會無法運作。"</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"自動：使用裝置回報的格式"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"自動：僅啟用音訊輸出裝置支援的格式 "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"如果選取這個選項，系統將允許應用程式選取裝置鏈支援的任何音效格式。應用程式不一定會選擇最高音質的格式。"</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"無：一律不使用環場音效"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"手動：手動選擇可用的格式"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"手動：選擇性啟用或停用這部裝置支援的各種格式，無論音訊輸出裝置支援的格式為何。"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"如果選取這個選項，當裝置鏈支援的音效格式造成播放問題時，你可以手動停用。你也可以啟用裝置鏈不支援的音效格式。在某些情況下，應用程式不一定會選擇最高音質的格式。"</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"要啟用不支援的音效格式嗎？"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"連線的音訊裝置並未回報支援這個格式，裝置可能會因此無法正常運作，例如聲音不連貫或發出大聲的噪音。"</string>
@@ -156,6 +156,25 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"如果應用程式提出要求，你的裝置就會嘗試將輸出的影格速率調整為觀看內容的原始影格速率。這樣一來，當影片開始播放或結束播放時，螢幕可能會短暫出現空白畫面。"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"一律不採用"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"即使應用程式提出要求，你的裝置也一律不會將輸出的影格速率調整為觀看內容的原始影格速率。"</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"選取格式"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"自動"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"手動"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"使用裝置回報的格式"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"手動選擇可用的格式"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"支援的格式"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"不支援的格式"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"如果你選取這個選項，系統將允許應用程式選取裝置鏈支援的任何 HDR 格式。應用程式不一定會選擇最高畫質的格式。"</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"如果你選取這個選項，當裝置鏈支援的 HDR 格式造成播放問題時，你就可以手動停用。不過，如果是裝置鏈不支援的 HDR 格式，就無法強制停用。應用程式不一定會選擇最高畫質的格式。"</string>
+    <string name="hdr_format_info" msgid="5652559220799426076">"格式資訊"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"顯示格式"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"隱藏格式"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"已啟用的格式"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"已停用的格式"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"如要停用，請將格式選取設定變更為 [手動]。"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"清除快取資料？"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"這項操作會清除所有應用程式的快取資料。"</string>
     <string name="accessories_add" msgid="413764175035531452">"新增配件"</string>
@@ -206,11 +225,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"藍牙位址"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"已連線"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"連線已中斷"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"你沒有變更藍牙設定的權限。"</string>
     <string name="send_feedback" msgid="936698637869795473">"提供意見"</string>
     <string name="launch_help" msgid="2607478763131952469">"說明中心"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"日期和時間"</string>
     <string name="system_language" msgid="5516099388471974346">"語言"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"你沒有變更裝置語言的權限。"</string>
     <string name="system_keyboard" msgid="1514460705385401872">"鍵盤"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"鍵盤與自動填入"</string>
     <string name="system_autofill" msgid="6983989261108020046">"自動填入"</string>
@@ -226,6 +247,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"開發人員選項"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"無"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"使用情形與診斷"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"沒有可用的裝置管理員應用程式"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"已由管理員停用"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"不適用"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"裝置管理員應用程式"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"沒有使用中的應用程式"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 個使用中的應用程式</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 個使用中的應用程式</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"已由管理員、加密政策或認證儲存空間停用"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"受管理的裝置資訊"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"由貴機構所管理的變更內容和設定"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"由 <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> 所管理的變更內容和設定"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"為提供你的工作資料存取權，貴機構可能會在你的裝置上變更設定及安裝軟體。\n\n請與貴機構的管理員聯絡以瞭解詳情。"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"貴機構可查看的資訊類型"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"貴機構管理員進行的變更"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"你對這個裝置的存取權"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"與公司帳戶相關聯的資料，例如電子郵件和日曆"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"裝置上的應用程式清單"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"每個應用程式的使用時間和數據用量"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"最新的網路流量記錄"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"最新錯誤報告"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"最新安全性記錄"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"無"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"已安裝的應用程式"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"應用程式數量是估計值。這個數字可能不包括從 Play 商店以外來源安裝的應用程式。"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">至少有 <xliff:g id="COUNT_1">%d</xliff:g> 個應用程式</item>
+      <item quantity="one">至少有 <xliff:g id="COUNT_0">%d</xliff:g> 個應用程式</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"位置資訊權限"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"麥克風權限"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"相機權限"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"預設應用程式"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 個應用程式</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 個應用程式</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"預設鍵盤"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"已設為「<xliff:g id="APP_LABEL">%s</xliff:g>」"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"已開啟「永久連線的 VPN」"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"已開啟你個人設定檔中的「永久連線的 VPN」"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"已開啟你工作資料夾中的「永久連線的 VPN」"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"已設定全域 HTTP Proxy"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"信任的憑證"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"你的個人設定檔中安裝的信任的憑證"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"你的工作資料夾中安裝的信任的憑證"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">至少有 <xliff:g id="COUNT_1">%d</xliff:g> 個 CA 憑證</item>
+      <item quantity="one">至少有 <xliff:g id="COUNT_0">%d</xliff:g> 個 CA 憑證</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"管理員可以鎖定裝置及重設密碼"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"管理員可以刪除所有裝置資料"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"輸入錯誤密碼的次數上限，超過後系統將自動刪除所有裝置資料"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"輸入錯誤密碼的次數上限，超過後系統將自動刪除工作資料夾資料"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other">已嘗試 <xliff:g id="COUNT_1">%d</xliff:g> 次</item>
+      <item quantity="one">已嘗試 <xliff:g id="COUNT_0">%d</xliff:g> 次</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"這個裝置是由貴機構所管理。"</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"這個裝置是由 <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> 所管理。"</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"瞭解詳情"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">相機應用程式</item>
+      <item quantity="one">相機應用程式</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"日曆應用程式"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"聯絡人應用程式"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">電子郵件用戶端應用程式</item>
+      <item quantity="one">電子郵件用戶端應用程式</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"地圖應用程式"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">電話應用程式</item>
+      <item quantity="one">電話應用程式</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>、<xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>、<xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>、<xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"教學課程"</string>
     <string name="about_system_update" msgid="7421264399111367755">"系統更新"</string>
     <string name="system_update_description" msgid="998883510488461766">"這項操作會將系統軟體更新到最新版本，裝置之後將重新啟動。"</string>
@@ -256,6 +357,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"選擇性啟用"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"啟用"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"其他系統更新"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"網路可能會受到監控"</string>
+    <string name="done_button" msgid="616159688526431451">"完成"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">設為信任的憑證或移除憑證</item>
+      <item quantity="one">設為信任的憑證或移除憑證</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> 已在你的裝置上安裝憑證授權單位憑證，藉此監控裝置的網路活動，包括電子郵件、應用程式和安全的網站。\n\n如要進一步瞭解這些憑證，請與你的管理員聯絡。</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> 已在你的裝置上安裝憑證授權單位憑證，藉此監控裝置的網路活動，包括電子郵件、應用程式和安全的網站。\n\n如要進一步瞭解這個憑證，請與你的管理員聯絡。</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> 已在你的工作資料夾中安裝憑證授權單位憑證，藉此監控工作網路活動，包括電子郵件、應用程式和安全的網站。\n\n如要進一步瞭解這些憑證，請與你的管理員聯絡。</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> 已在你的工作資料夾中安裝憑證授權單位憑證，藉此監控工作網路活動，包括電子郵件、應用程式和安全的網站。\n\n如要進一步瞭解這個憑證，請與你的管理員聯絡。</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"第三方可以監控你的網路活動，包括你使用電子郵件、應用程式和加密網站的情況。\n\n這是因為你的裝置上安裝了信任的憑證。"</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">查看憑證</item>
+      <item quantity="one">查看憑證</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"狀態"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"網路、序號和其他資訊"</string>
     <string name="manual" msgid="5683935624321864999">"使用者手冊"</string>
@@ -388,6 +508,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"未連上網路"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"已連上 <xliff:g id="SSID">%1$s</xliff:g>。要連線至其他網路嗎？"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"未知的網路"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"你沒有變更 Wi-Fi 網路的權限。"</string>
     <string name="title_ok" msgid="6500452958848127145">"確定"</string>
     <string name="title_cancel" msgid="2337143367016419016">"取消"</string>
     <string name="storage_title" msgid="6637715914885228193">"儲存空間"</string>
@@ -875,6 +996,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"不允許使用螢幕畫面擷取功能"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"無法開啟這個應用程式"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"如有任何問題，請與你的 IT 管理員聯絡"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"其他詳細資訊"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"你的管理員可以監控及管理與你的工作資料夾相關聯的應用程式和資料，包括設定、權限、公司系統權限、網路活動，以及裝置的位置資訊。"</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"你的管理員可以監控及管理與這位使用者相關聯的應用程式和資料，包括設定、權限、公司系統權限、網路活動，以及裝置的位置資訊。"</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"你的管理員可以監控及管理與這個裝置相關聯的應用程式和資料，包括設定、權限、公司系統權限、網路活動，以及裝置的位置資訊。"</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"移除工作設定檔"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"裝置管理員應用程式"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"停用這個裝置管理員應用程式"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"解除安裝應用程式"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"停用並解除安裝"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"裝置管理員應用程式"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"要啟用裝置管理員應用程式嗎？"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"啟用這個裝置管理員應用程式"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"啟用這個管理員應用程式，將允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」應用程式執行以下作業："</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"這個裝置將由「<xliff:g id="APP_NAME">%1$s</xliff:g>」管理及監控。"</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"這個管理員應用程式已啟用，且允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」應用程式執行以下作業："</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"繼續這項動作，你的使用者將由管理員進行管理，該管理員也能儲存相關資料和你的個人資料。\n\n你的管理員可以監控並管理與這個使用者相關聯的設定、存取權、應用程式和資料，包括網路活動和裝置位置資訊。"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"要分享錯誤報告嗎？"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"你的 IT 管理員要求你提供錯誤報告，以便排解這個裝置發生的問題。報告可能會揭露裝置中的應用程式和相關資料。"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"你的 IT 管理員要求你提供錯誤報告，以便排解這個裝置發生的問題。報告可能會揭露裝置中的應用程式和相關資料，裝置運行速度也可能會因此暫時減慢。"</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"正在與你的 IT 管理員分享這份錯誤報告。如要瞭解詳情，請與對方聯絡。"</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"分享"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"拒絕"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"搭配「<xliff:g id="APPNAME">%1$s</xliff:g>」使用的裝置"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"找不到裝置。請確認裝置已經開啟並可連線。"</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"再試一次"</string>

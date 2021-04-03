@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus에서 제공하는 Dolby Atmos"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"참고: 기기가 지원되는 형식을 올바르게 보고하지 않는 경우 자동 옵션이 작동하지 않을 수 있습니다."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"자동: 기기에서 선택한 형식 사용"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"자동: 오디오 출력 장치에서 지원되는 형식만 사용 설정합니다 "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"선택하면 시스템에서 앱이 기기 체인에서 지원되는 모든 사운드 형식을 선택하도록 허용하게 됩니다. 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"사용 안함: 서라운드 사운드를 사용하지 않음"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"직접 선택: 사용 가능한 형식 중 직접 선택"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"수동: 오디오 출력 장치의 지원 여부와 무관하게 이 기기에서 지원되는 각 형식을 선택적으로 사용 또는 사용 중지합니다"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"선택하면 기기 체인에서 지원되며 재생 관련 문제를 일으키는 사운드 형식을 직접 사용 중지할 수 있습니다. 기기 체인에서 지원되지 않는 사운드 형식은 사용 설정됩니다. 경우에 따라 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"지원되지 않는 사운드 형식을 사용 설정할까요?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"연결된 오디오 기기가 이 형식을 지원하지 않습니다. 이로 인해 기기에서 큰 잡음과 같은 예기치 않은 동작이 발생할 수 있습니다."</string>
@@ -156,6 +156,25 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"앱에서 요청할 경우 기기에서 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞춥니다. 이로 인해 동영상 재생을 실행하거나 중지할 때 잠시 화면에 아무 내용도 나타나지 않을 수 있습니다."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"사용 안함"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"앱에서 요청하더라도 기기에서는 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞추려고 하지 않습니다."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"형식 선택"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"자동"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"수동"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"기기에서 보고한 형식 사용"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"사용 가능한 형식 중에 직접 선택"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"지원되는 형식"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"지원되지 않는 형식"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"이 옵션을 선택하면 시스템에서 앱이 기기 체인에서 지원되는 모든 HDR 형식을 선택하도록 허용하게 됩니다. 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"이 옵션을 선택하면 기기 체인에서 지원되며 재생 관련 문제를 일으키는 HDR 형식을 수동으로 사용 중지할 수 있습니다. 기기 체인에서 지원되지 않는 HDR 형식은 강제로 사용 설정할 수 없습니다. 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
+    <string name="hdr_format_info" msgid="5652559220799426076">"형식 정보"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"형식 표시"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"형식 숨기기"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"사용 설정된 형식"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"사용 중지된 형식"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"사용 중지하려면 형식 선택을 수동 모드로 변경하세요."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"캐시된 데이터를 지우시겠습니까?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"모든 앱의 캐시된 데이터가 지워집니다."</string>
     <string name="accessories_add" msgid="413764175035531452">"액세서리 추가"</string>
@@ -206,11 +225,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"블루투스 주소"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"연결됨"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"연결 끊김"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"블루투스 설정을 변경할 권한이 없습니다."</string>
     <string name="send_feedback" msgid="936698637869795473">"의견 보내기"</string>
     <string name="launch_help" msgid="2607478763131952469">"고객센터"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"날짜 및 시간"</string>
     <string name="system_language" msgid="5516099388471974346">"언어"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"기기 언어를 변경할 수 있는 권한이 없습니다."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"키보드"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"키보드 및 자동 완성"</string>
     <string name="system_autofill" msgid="6983989261108020046">"자동 완성"</string>
@@ -226,6 +247,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"개발자 옵션"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"없음"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"사용 및 진단"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"사용할 수 있는 기기 관리자 앱이 없습니다."</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"관리자가 사용 중지함"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"사용 불가"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"기기 관리자 앱"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"활성 앱 없음"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other">활성 상태의 앱 <xliff:g id="COUNT_1">%d</xliff:g>개</item>
+      <item quantity="one">활성 상태의 앱 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"관리자, 암호화 정책 또는 사용자 인증 정보 저장소에 의해 사용 중지됨"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"관리 기기 정보"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"조직에서 관리하는 변경사항 및 설정"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g>에서 관리하는 변경사항 및 설정"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"직장 데이터 액세스 권한을 제공하려면 조직에서 설정을 변경하고 기기에 소프트웨어를 설치해야 합니다.\n\n자세한 내용은 조직의 관리자에게 문의하세요."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"조직에서 확인할 수 있는 정보 유형"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"조직 관리자 변경사항"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"이 기기에 대한 액세스 권한"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"이메일, 캘린더와 같이 직장 계정과 연결된 데이터"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"기기의 앱 목록"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"각 앱에서 사용된 시간 및 데이터"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"최신 네트워크 트래픽 로그"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"최근 버그 신고"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"최근 보안 로그"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"없음"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"설치된 앱"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"앱의 수는 추정치입니다. Play 스토어 이외의 출처에서 설치된 앱은 포함되지 않을 수도 있습니다."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">앱 최소 <xliff:g id="COUNT_1">%d</xliff:g>개</item>
+      <item quantity="one">앱 최소 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"위치 정보 액세스 권한"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"마이크 사용 권한"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"카메라 사용 권한"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"기본 앱"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other">앱 <xliff:g id="COUNT_1">%d</xliff:g>개</item>
+      <item quantity="one">앱 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"기본 키보드"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"<xliff:g id="APP_LABEL">%s</xliff:g>(으)로 설정"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"연결 유지 VPN 사용 설정됨"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"개인 프로필에 연결 유지 VPN 사용 설정됨"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"직장 프로필에 연결 유지 VPN 사용 설정됨"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"전체 HTTP 프록시 설정됨"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"신뢰할 수 있는 사용자 인증 정보"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"개인 프로필에서 신뢰할 수 있는 사용자 인증 정보"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"직장 프로필에서 신뢰할 수 있는 사용자 인증 정보"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">CA 인증서 최소 <xliff:g id="COUNT_1">%d</xliff:g>개</item>
+      <item quantity="one">CA 인증서 최소 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"관리자는 기기를 잠그고 비밀번호를 재설정할 수 있음"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"관리자는 모든 기기 데이터를 삭제할 수 있습니다."</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"기기의 데이터가 모두 삭제되는 비밀번호 입력 시도 실패 횟수"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"직장 프로필 데이터가 삭제되는 비밀번호 입력 시도 실패 횟수"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>회 시도</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>회 시도</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"조직에서 관리하는 기기입니다."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g>에서 관리하는 기기입니다."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"자세히 알아보기"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">카메라 앱</item>
+      <item quantity="one">카메라 앱</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"캘린더 앱"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"연락처 앱"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">이메일 클라이언트 앱</item>
+      <item quantity="one">이메일 클라이언트 앱</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"지도 앱"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">전화 앱</item>
+      <item quantity="one">전화 앱</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"가이드"</string>
     <string name="about_system_update" msgid="7421264399111367755">"시스템 업데이트"</string>
     <string name="system_update_description" msgid="998883510488461766">"시스템 소프트웨어가 최신 버전으로 업데이트됩니다. 기기가 다시 시작됩니다."</string>
@@ -256,6 +357,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"허가"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"시행"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"추가 시스템 업데이트"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"네트워크가 모니터링될 수 있음"</string>
+    <string name="done_button" msgid="616159688526431451">"완료"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">인증서 신뢰 또는 삭제</item>
+      <item quantity="one">인증서 신뢰 또는 삭제</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>에서 기기에 CA 인증서를 설치했으며, 인증서를 통해 관리자가 이메일, 앱, 보안 웹사이트를 포함한 내 기기의 네트워크 활동을 모니터링할 수 있습니다.\n\n이 인증서에 관해 자세히 알아보려면 관리자에게 문의하세요.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g>에서 내 기기에 CA 인증서를 설치했으며, 인증서를 통해 관리자가 이메일, 앱, 보안 웹사이트를 포함한 내 기기의 네트워크 활동을 모니터링할 수 있습니다.\n\n이 인증서에 관해 자세히 알아보려면 관리자에게 문의하세요.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>에서 내 직장 프로필에 CA 인증서를 설치했으며, 인증서를 통해 관리자가 이메일, 앱, 보안 웹사이트를 포함한 내 직장 프로필의 네트워크 활동을 모니터링할 수 있습니다.\n\n이 인증서에 관해 자세히 알아보려면 관리자에게 문의하세요.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g>에서 내 직장 프로필에 CA 인증서를 설치했으며, 인증서를 통해 관리자가 이메일, 앱, 보안 웹사이트를 포함한 내 직장 프로필의 네트워크 활동을 모니터링할 수 있습니다.\n\n이 인증서에 관해 자세히 알아보려면 관리자에게 문의하세요.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"기기에 신뢰할 수 있는 자격증명이 설치되어 있기 때문에\n제3자가 이메일, 앱, 보안 웹사이트를 포함한 네트워크 활동을 모니터링 할 수 있습니다.\n"</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">인증서 확인</item>
+      <item quantity="one">인증서 확인</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"상태"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"네트워크, 일련번호 및 기타 정보"</string>
     <string name="manual" msgid="5683935624321864999">"수동"</string>
@@ -388,6 +508,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"네트워크에 연결되지 않음"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"이미 <xliff:g id="SSID">%1$s</xliff:g>에 연결되어 있습니다. 다른 네트워크에 연결하시겠습니까?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"알 수 없는 네트워크"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Wi‑Fi 네트워크를 변경할 권한이 없습니다."</string>
     <string name="title_ok" msgid="6500452958848127145">"확인"</string>
     <string name="title_cancel" msgid="2337143367016419016">"취소"</string>
     <string name="storage_title" msgid="6637715914885228193">"저장소"</string>
@@ -875,6 +996,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"스크린샷을 사용할 수 없음"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"열 수 없는 앱"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"궁금한 점이 있으면 IT 관리자에게 문의하세요."</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"세부정보 더보기"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"관리자는 설정, 권한, 기업 액세스, 네트워크 활동, 기기의 위치 정보 등 직장 프로필과 연결된 데이터와 앱을 모니터링하고 관리할 수 있습니다."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"관리자는 설정, 권한, 기업 액세스, 네트워크 활동, 기기의 위치 정보 등 사용자와 연결된 데이터와 앱을 모니터링하고 관리할 수 있습니다."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"관리자는 설정, 권한, 기업 액세스, 네트워크 활동, 기기의 위치 정보 등 기기와 연결된 데이터와 앱을 모니터링하고 관리할 수 있습니다."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"직장 프로필 삭제"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"기기 관리자 앱"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"이 기기 관리자 앱 비활성화"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"애플리케이션 제거"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"비활성화 및 제거"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"기기 관리자 앱"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"기기 관리자 앱을 활성화하시겠습니까?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"이 기기 관리자 앱 활성화"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"이 관리자 앱을 활성화하면 <xliff:g id="APP_NAME">%1$s</xliff:g> 앱에서 다음 작업을 처리할 수 있습니다."</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"이 기기는 <xliff:g id="APP_NAME">%1$s</xliff:g>에서 관리하고 모니터링합니다."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"이 관리자 앱은 활성 상태로, <xliff:g id="APP_NAME">%1$s</xliff:g> 앱에서 다음 작업을 처리할 수 있도록 합니다."</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"계속하면 관리자가 내 사용자를 관리하게 되며, 관리자가 내 개인 데이터뿐만 아니라 연결된 데이터까지 저장할 수 있게 됩니다.\n\n관리자는 설정, 액세스 권한, 앱뿐만 아니라 네트워크 활동과 기기의 위치 정보 등 사용자와 연결된 데이터까지 모니터링하고 관리할 수 있습니다."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"버그 보고서를 공유하시겠습니까?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"IT 관리자가 이 기기의 문제해결을 위해 버그 보고서를 요청했습니다. 앱과 데이터가 공유될 수 있습니다."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"IT 관리자가 이 기기의 문제해결을 위해 버그 보고서를 요청했습니다. 앱과 데이터가 공유될 수 있으며 기기 속도가 일시적으로 느려질 수 있습니다."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"이 버그 보고서는 IT 관리자와 공유됩니다. 자세한 내용은 IT 관리자에게 문의하세요."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"공유"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"거부"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g>에서 사용할 기기"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"기기가 없습니다. 기기가 켜져 있으며 연결 가능한지 확인하세요."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"다시 시도"</string>

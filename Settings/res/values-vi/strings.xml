@@ -53,7 +53,7 @@
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Mạng và Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Âm thanh"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Ứng dụng"</string>
-    <string name="device_pref_category_title" msgid="8292572846154873762">"Tùy chọn thiết bị"</string>
+    <string name="device_pref_category_title" msgid="8292572846154873762">"Lựa chọn ưu tiên về thiết bị"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Điều khiển từ xa và phụ kiện"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Chưa kết nối với thiết bị Bluetooth nào"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
@@ -126,10 +126,10 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Sử dụng Dolby Atmos với Dolby Digital Plus"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Lưu ý: Tùy chọn Tự động có thể không hoạt động nếu thiết bị không báo cáo chính xác các định dạng được hỗ trợ."</string>
-    <string name="surround_sound_auto_title" msgid="3549230030132727609">"Tự động: Sử dụng các định dạng do thiết bị báo cáo"</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Tự động: Chỉ bật những định dạng mà thiết bị đầu ra âm thanh của bạn hỗ trợ "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Khi bạn chọn nút này, hệ thống sẽ cho phép các ứng dụng chọn định dạng âm thanh bất kỳ được màn hình đầu ra của bạn hỗ trợ. Các ứng dụng có thể chọn một định dạng không phải là định dạng có chất lượng cao nhất."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Không: Không bao giờ sử dụng âm thanh vòm"</string>
-    <string name="surround_sound_manual_title" msgid="589702982544517671">"Thủ công: Chọn thủ công các định dạng trong số những định dạng có sẵn"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Thủ công: Bật hoặc tắt có chọn lọc từng định dạng mà thiết bị này hỗ trợ, bất kể thiết bị đầu ra âm thanh của bạn hỗ trợ định dạng nào."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Khi chọn nút này, bạn có thể tự tắt những định dạng âm thanh được màn hình đầu ra của bạn hỗ trợ. Đây là những định dạng gây ra sự cố khi phát. Có thể bật những định dạng âm thanh không được màn hình đầu ra của bạn hỗ trợ. Trong một số trường hợp, các ứng dụng có thể chọn một định dạng không phải là định dạng có chất lượng cao nhất."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Cho phép định dạng âm thanh không được hỗ trợ?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Thiết bị âm thanh đã kết nối của bạn không hỗ trợ định dạng này. Điều này có thể gây ra vấn đề ngoài ý muốn như thiết bị phát ra tiếng ồn lớn hay tiếng bốp."</string>
@@ -156,6 +156,25 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Nếu ứng dụng yêu cầu, thiết bị của bạn sẽ khớp đầu ra của màn hình với tốc độ khung hình gốc của nội dung bạn đang xem. Việc này có thể khiến màn hình không hiển thị nội dung trong giây lát khi bạn thoát hoặc vào chế độ phát video."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Không bao giờ"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Ngay cả khi ứng dụng yêu cầu, thiết bị của bạn sẽ không bao giờ tìm cách khớp đầu ra của màn hình với tốc độ khung hình gốc của nội dung bạn đang xem."</string>
+    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Lựa chọn định dạng"</string>
+    <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Tự động"</string>
+    <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Thủ công"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Sử dụng các định dạng do thiết bị báo cáo"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Chọn thủ công các định dạng trong số những định dạng có sẵn"</string>
+    <string name="hdr_format_supported_title" msgid="1458594819224612431">"ĐỊNH DẠNG ĐƯỢC HỖ TRỢ"</string>
+    <string name="hdr_format_unsupported_title" msgid="715318408107924941">"ĐỊNH DẠNG KHÔNG ĐƯỢC HỖ TRỢ"</string>
+    <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
+    <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
+    <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
+    <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Khi được chọn, hệ thống sẽ cho phép các ứng dụng chọn định dạng HDR bất kỳ được màn hình đầu ra của bạn hỗ trợ. Các ứng dụng có thể chọn một định dạng không phải là định dạng có chất lượng cao nhất."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Khi được chọn, bạn có thể tự tắt những định dạng HDR được màn hình đầu ra của mình hỗ trợ. Đây là những định dạng gây ra sự cố khi phát. Không thể buộc bật những định dạng HDR không được màn hình đầu ra của bạn hỗ trợ. Các ứng dụng có thể chọn một định dạng không phải là định dạng có chất lượng cao nhất."</string>
+    <string name="hdr_format_info" msgid="5652559220799426076">"THÔNG TIN ĐỊNH DẠNG"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"Hiện định dạng"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Ẩn định dạng"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"ĐỊNH DẠNG ĐÃ BẬT"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"ĐỊNH DẠNG BỊ TẮT"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Để tắt định dạng, hãy thay đổi chế độ lựa chọn định dạng thành Thủ công."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Xóa dữ liệu đã lưu trong bộ nhớ đệm?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Xóa dữ liệu lưu trong cache cho tất cả ứng dụng."</string>
     <string name="accessories_add" msgid="413764175035531452">"Thêm phụ kiên"</string>
@@ -206,11 +225,13 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Địa chỉ Bluetooth"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Đã kết nối"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Đã ngắt kết nối"</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Bạn không có quyền thay đổi cài đặt Bluetooth."</string>
     <string name="send_feedback" msgid="936698637869795473">"Gửi phản hồi"</string>
     <string name="launch_help" msgid="2607478763131952469">"Trung tâm trợ giúp"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"Ngày và giờ"</string>
     <string name="system_language" msgid="5516099388471974346">"Ngôn ngữ"</string>
+    <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Bạn không có quyền thay đổi ngôn ngữ trên thiết bị."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Bàn phím"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"Bàn phím và tự động điền"</string>
     <string name="system_autofill" msgid="6983989261108020046">"Tự động điền"</string>
@@ -226,6 +247,86 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Tùy chọn nhà phát triển"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Không có"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Sử dụng và chẩn đoán"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Không có ứng dụng quản trị thiết bị nào"</string>
+    <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Đã bị quản trị viên vô hiệu hóa"</string>
+    <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Không có"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Ứng dụng quản trị thiết bị"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Không có ứng dụng nào đang hoạt động"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ứng dụng hoạt động</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ứng dụng hoạt động</item>
+    </plurals>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Do quản trị viên tắt, c.sách mã hóa hay vùng l.trữ t.tin xác thực"</string>
+    <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Thông tin thiết bị được quản lý"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Thay đổi và cài đặt do tổ chức của bạn quản lý"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Thay đổi và cài đặt do <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> quản lý"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Để cung cấp quyền truy cập vào dữ liệu công việc, tổ chức của bạn có thể thay đổi cài đặt và cài đặt phần mềm trên thiết bị.\n\nĐể biết thêm chi tiết, hãy liên hệ với quản trị viên tổ chức của bạn."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Loại thông tin mà tổ chức của bạn có thể xem"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Những thay đổi do quản trị viên của tổ chức bạn thực hiện"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Quyền truy cập của bạn vào thiết bị này"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Dữ liệu liên kết với tài khoản công việc của bạn, chẳng hạn như email và lịch"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Danh sách ứng dụng trên thiết bị của bạn"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Thời gian và dữ liệu được sử dụng trong mỗi ứng dụng"</string>
+    <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Nhật ký lưu lượng truy cập mạng gần đây nhất"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Báo cáo lỗi gần đây nhất"</string>
+    <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Nhật ký bảo mật gần đây nhất"</string>
+    <string name="enterprise_privacy_none" msgid="6660670916934417519">"Không có"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Ứng dụng đã cài đặt"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Số lượng ứng dụng là con số ước tính, có thể không bao gồm các ứng dụng được cài đặt bên ngoài Cửa hàng Play."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="other">Tối thiểu <xliff:g id="COUNT_1">%d</xliff:g> ứng dụng</item>
+      <item quantity="one">Tối thiểu <xliff:g id="COUNT_0">%d</xliff:g> ứng dụng</item>
+    </plurals>
+    <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Quyền truy cập vị trí"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Quyền truy cập micrô"</string>
+    <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Quyền truy cập máy ảnh"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Ứng dụng mặc định"</string>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ứng dụng</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ứng dụng</item>
+    </plurals>
+    <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Bàn phím mặc định"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Đặt thành <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Đã bật tùy chọn luôn bật VPN"</string>
+    <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Đã bật tùy chọn luôn bật VPN trong hồ sơ cá nhân của bạn"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Đã bật tùy chọn luôn bật VPN trong hồ sơ công việc của bạn"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Đặt proxy HTTP chung"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Thông tin xác thực tin cậy"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Thông tin xác thực đáng tin cậy trong hồ sơ cá nhân của bạn"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Thông tin xác thực đáng tin cậy trong hồ sơ công việc của bạn"</string>
+    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="other">Tối thiểu <xliff:g id="COUNT_1">%d</xliff:g> chứng chỉ CA</item>
+      <item quantity="one">Tối thiểu <xliff:g id="COUNT_0">%d</xliff:g> chứng chỉ CA</item>
+    </plurals>
+    <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Quản trị viên có thể khóa thiết bị và đặt lại mật khẩu"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Quản trị viên có thể xóa tất cả dữ liệu thiết bị"</string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Những lần nhập mật khẩu không thành công trước khi xóa tất cả dữ liệu thiết bị"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Những lần nhập mật khẩu không thành công trước khi xóa dữ liệu hồ sơ công việc"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> lần thử</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> lần thử</item>
+    </plurals>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"Thiết bị này do tổ chức của bạn quản lý."</string>
+    <string name="do_disclosure_with_name" msgid="4755509039938948975">"Thiết bị này được <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> quản lý."</string>
+    <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="learn_more" msgid="820336467414665686">"Tìm hiểu thêm"</string>
+    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
+      <item quantity="other">Các ứng dụng máy ảnh</item>
+      <item quantity="one">Ứng dụng máy ảnh</item>
+    </plurals>
+    <string name="default_calendar_app_title" msgid="1533912443930743532">"Ứng dụng Lịch"</string>
+    <string name="default_contacts_app_title" msgid="7792041146751261191">"Ứng dụng Danh bạ"</string>
+    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
+      <item quantity="other">Các ứng dụng email</item>
+      <item quantity="one">Ứng dụng email</item>
+    </plurals>
+    <string name="default_map_app_title" msgid="9051013257374474801">"Ứng dụng Bản đồ"</string>
+    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
+      <item quantity="other">Các ứng dụng điện thoại</item>
+      <item quantity="one">Ứng dụng điện thoại</item>
+    </plurals>
+    <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Hướng dẫn"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Bản cập nhật hệ thống"</string>
     <string name="system_update_description" msgid="998883510488461766">"Thao tác này sẽ cập nhật phần mềm hệ thống lên phiên bản mới nhất. Thiết bị của bạn sẽ khởi động lại."</string>
@@ -256,6 +357,25 @@
     <string name="selinux_status_permissive" msgid="8694617578567517527">"Cho phép"</string>
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Thực thi"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Cập nhật hệ thống bổ sung"</string>
+    <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Mạng có thể được giám sát"</string>
+    <string name="done_button" msgid="616159688526431451">"Xong"</string>
+    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
+      <item quantity="other">Tin tưởng hoặc xóa các chứng chỉ</item>
+      <item quantity="one">Tin tưởng hoặc xóa chứng chỉ</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> đã cài đặt các chứng chỉ CA trên thiết bị của bạn. Nhờ vậy, tổ chức này có thể giám sát hoạt động trên mạng của thiết bị, bao gồm email, ứng dụng và trang web bảo mật.\n\nĐể biết thêm thông tin về các chứng chỉ này, hãy liên hệ với quản trị viên của bạn.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> đã cài đặt một chứng chỉ CA trên thiết bị của bạn. Nhờ vậy, tổ chức này có thể giám sát hoạt động trên mạng của thiết bị, bao gồm email, ứng dụng và trang web bảo mật.\n\nĐể biết thêm thông tin về chứng chỉ này, hãy liên hệ với quản trị viên của bạn.</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> đã cài đặt các chứng chỉ CA cho hồ sơ công việc của bạn. Nhờ vậy, tổ chức này có thể cho phép các tổ chức này giám sát hoạt động trên mạng công việc, bao gồm email, ứng dụng và trang web bảo mật.\n\nĐể biết thêm thông tin về các chứng chỉ này, hãy liên hệ với quản trị viên của bạn.</item>
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> đã cài đặt một chứng chỉ CA cho hồ sơ công việc của bạn. Nhờ vậy, tổ chức này có thể giám sát hoạt động trên mạng công việc, bao gồm email, ứng dụng và trang web bảo mật.\n\nĐể biết thêm thông tin về chứng chỉ này, hãy liên hệ với quản trị viên của bạn.</item>
+    </plurals>
+    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Một bên thứ ba có thể đang theo dõi hoạt động mạng của bạn, bao gồm email, ứng dụng và các trang web bảo mật.\n\nĐiều này có thể xảy ra do một chứng chỉ xác thực đáng tin cậy được cài đặt trên thiết bị của bạn."</string>
+    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
+      <item quantity="other">Kiểm tra các chứng chỉ</item>
+      <item quantity="one">Kiểm tra chứng chỉ</item>
+    </plurals>
     <string name="device_status" msgid="8266002761193692207">"Trạng thái"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Mạng, số sê-ri và thông tin khác"</string>
     <string name="manual" msgid="5683935624321864999">"Thủ công"</string>
@@ -388,6 +508,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Mạng chưa được kết nối"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Đã kết nối với <xliff:g id="SSID">%1$s</xliff:g>. Kết nối với một mạng khác?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"mạng không xác định"</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Bạn không có quyền thay đổi mạng Wi‑Fi."</string>
     <string name="title_ok" msgid="6500452958848127145">"OK"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Hủy"</string>
     <string name="storage_title" msgid="6637715914885228193">"Bộ nhớ"</string>
@@ -875,6 +996,28 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Không cho phép ảnh chụp màn hình"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Không thể mở ứng dụng này"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Nếu bạn có câu hỏi, hãy liên hệ với quản trị viên CNTT của bạn"</string>
+    <string name="admin_support_more_info" msgid="9053232166115098434">"Thông tin chi tiết khác"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"Quản trị viên của bạn có thể giám sát và quản lý các ứng dụng cũng như dữ liệu được liên kết với hồ sơ công việc của bạn, bao gồm cài đặt, quyền, quyền truy cập vào dữ liệu công ty, hoạt động mạng và thông tin vị trí của thiết bị."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Quản trị viên của bạn có thể giám sát và quản lý các ứng dụng cũng như dữ liệu được liên kết với người dùng này, bao gồm cài đặt, quyền, quyền truy cập vào dữ liệu công ty, hoạt động mạng và thông tin vị trí của thiết bị."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"Quản trị viên của bạn có thể giám sát và quản lý các ứng dụng cũng như dữ liệu được liên kết với thiết bị này, bao gồm cài đặt, quyền, quyền truy cập vào dữ liệu công ty, hoạt động mạng và thông tin vị trí của thiết bị."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Xóa hồ sơ công việc"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Ứng dụng quản trị thiết bị"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Hủy kích hoạt ứng dụng quản trị thiết bị này"</string>
+    <string name="uninstall_device_admin" msgid="6301368408620948266">"Gỡ cài đặt ứng dụng"</string>
+    <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Hủy kích hoạt và gỡ cài đặt"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Ứng dụng quản trị thiết bị"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Kích hoạt ứng dụng quản trị thiết bị?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Kích hoạt ứng dụng quản trị thiết bị này"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Kích hoạt ứng dụng quản trị này sẽ cho phép ứng dụng <xliff:g id="APP_NAME">%1$s</xliff:g> thực hiện các thao tác sau:"</string>
+    <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> sẽ quản lý và giám sát thiết bị này."</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Ứng dụng quản trị này đang hoạt động và cho phép ứng dụng <xliff:g id="APP_NAME">%1$s</xliff:g> thực hiện các thao tác sau:"</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Bằng cách tiếp tục, người dùng sẽ được quản lý bởi quản trị viên của bạn, người này cũng có thể lưu trữ dữ liệu được liên kết, ngoài thông tin cá nhân của bạn. \n\nQuản trị viên của bạn có thể giám sát và quản lý cài đặt, quyền truy cập, ứng dụng và dữ liệu được liên kết với người dùng này, bao gồm cả hoạt động mạng và thông tin vị trí của thiết bị."</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Chia sẻ báo cáo lỗi?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Quản trị viên CNTT của bạn đã yêu cầu báo cáo lỗi để giúp khắc phục sự cố thiết bị này. Bạn có thể chia sẻ ứng dụng và dữ liệu."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Quản trị viên CNTT của bạn đã yêu cầu báo cáo lỗi để giúp khắc phục sự cố thiết bị này. Bạn có thể chia sẻ ứng dụng và dữ liệu, đồng thời thiết bị của bạn tạm thời có thể bị chậm."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Báo cáo lỗi này đã được chia sẻ với quản trị viên CNTT của bạn. Hãy liên hệ với họ để biết thêm chi tiết."</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Chia sẻ"</string>
+    <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Từ chối"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Thiết bị sẽ sử dụng với <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Không tìm thấy thiết bị nào. Đảm bảo rằng các thiết bị đang bật và sẵn sàng kết nối."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Thử lại"</string>
