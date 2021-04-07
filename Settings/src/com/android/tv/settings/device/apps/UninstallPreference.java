@@ -18,20 +18,31 @@ package com.android.tv.settings.device.apps;
 
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 
+import android.app.admin.DevicePolicyManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
+import android.os.UserHandle;
+import android.os.UserManager;
 
+import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
+import com.android.tv.settings.deviceadmin.DeviceAdminAdd;
 
 public class UninstallPreference extends AppActionPreference {
+
+    private final DevicePolicyManager mDpm;
+    private final Context mAppContext;
 
     public UninstallPreference(Context context,
             ApplicationsState.AppEntry entry) {
         super(context, entry);
+        mAppContext = context;
+        mDpm = context.getSystemService(DevicePolicyManager.class);
         refresh();
     }
 
@@ -70,12 +81,61 @@ public class UninstallPreference extends AppActionPreference {
         return (mEntry.info.flags & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP) != 0;
     }
 
+    private boolean isUninstallRestricted() {
+        final String packageName = mEntry.info.packageName;
+        final int userId = UserHandle.myUserId();
+
+        final boolean appsControlDisallowedBySystem =
+                RestrictedLockUtilsInternal.hasBaseUserRestriction(
+                        mAppContext, UserManager.DISALLOW_APPS_CONTROL, userId);
+        RestrictedLockUtils.EnforcedAdmin admin =
+                RestrictedLockUtilsInternal.checkIfUninstallBlocked(mAppContext, packageName,
+                        userId);
+        boolean uninstallBlockedBySystem =
+                appsControlDisallowedBySystem || RestrictedLockUtilsInternal.hasBaseUserRestriction(
+                        mAppContext, packageName, userId);
+        if (admin != null && !uninstallBlockedBySystem) {
+            RestrictedLockUtils.sendShowAdminSupportDetailsIntent(mAppContext, admin);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     @Override
     public Intent getIntent() {
+        if (!isUninstallRestricted()) {
+            if (isActiveDeviceAdmin()) {
+                return getUninstallDeviceAdminIntent();
+            } else {
+                // regular package uninstall
+                return getUninstallIntent();
+            }
+        } else {
+            return null;
+        }
+    }
+
+    private boolean isActiveDeviceAdmin() {
+        return (mDpm != null && mDpm.packageHasActiveAdmins(mEntry.info.packageName));
+    }
+
+    private Intent getUninstallIntent() {
         final Uri packageURI = Uri.parse("package:" + mEntry.info.packageName);
         final Intent uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageURI);
         uninstallIntent.putExtra(Intent.EXTRA_UNINSTALL_ALL_USERS, true);
         uninstallIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
         return uninstallIntent;
+    }
+
+    private Intent getUninstallDeviceAdminIntent() {
+        final String packageName = mEntry.info.packageName;
+        if (mDpm.packageHasActiveAdmins(packageName)) {
+            Intent uninstallDaIntent = new Intent(mAppContext, DeviceAdminAdd.class);
+            uninstallDaIntent.putExtra(DeviceAdminAdd.EXTRA_DEVICE_ADMIN_PACKAGE_NAME,
+                    packageName);
+            return uninstallDaIntent;
+        }
+        return null;
     }
 }
