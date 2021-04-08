@@ -123,14 +123,14 @@ public class InputsFragment extends SettingsPreferenceFragment {
 
             switch (state) {
                 case TvInputManager.INPUT_STATE_CONNECTED:
-                    mConnectedGroup.addPreference(inputPref);
                     mStandbyGroup.removePreference(inputPref);
                     mDisconnectedGroup.removePreference(inputPref);
+                    mConnectedGroup.addPreference(inputPref);
                     break;
                 case TvInputManager.INPUT_STATE_CONNECTED_STANDBY:
                     mConnectedGroup.removePreference(inputPref);
-                    mStandbyGroup.addPreference(inputPref);
                     mDisconnectedGroup.removePreference(inputPref);
+                    mStandbyGroup.addPreference(inputPref);
                     break;
                 case TvInputManager.INPUT_STATE_DISCONNECTED:
                     mConnectedGroup.removePreference(inputPref);
