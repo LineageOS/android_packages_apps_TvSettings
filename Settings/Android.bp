@@ -36,3 +36,8 @@ prebuilt_etc {
     src: "com.android.tv.settings.xml",
     filename_from_src: true,
 }
+
+java_library {
+    name: "tvsettings-logtags",
+    srcs: ["src/**/*.logtags"],
+}
