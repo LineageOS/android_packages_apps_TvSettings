@@ -981,7 +981,7 @@
             android:exported="true"
             android:launchMode="singleTop"
             android:taskAffinity="com.android.tv.settings"
-            android:theme="@style/TvSettingsActivityTheme">
+            android:theme="@style/ActionDisabledDialogTheme">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.SHOW_ADMIN_SUPPORT_DETAILS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -1070,7 +1070,7 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/TvSettingsActivityTheme">
+            android:theme="@style/ActionDisabledDialogTheme">
             <intent-filter android:priority="1" >
                 <action android:name="android.settings.FACTORY_RESET_TV_OEM_LINK" />
                 <category android:name="android.intent.category.DEFAULT" />
