@@ -169,18 +169,12 @@
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
     <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Kur zgjidhet, sistemi do të lejojë që aplikacionet të zgjedhin çdo format HDR që mbështetet nga zinxhiri yt i pajisjeve. Aplikacionet mund të zgjedhin një format që nuk është formati i cilësisë më të lartë."</string>
     <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Kur zgjidhet, mund të çaktivizosh manualisht formatet HDR që mbështeten nga zinxhiri i pajisjeve të tua që shkaktojnë probleme me luajtjen. Formatet HDR që nuk mbështeten nga zinxhiri i pajisjeve të tua nuk mund të aktivizohen me detyrim. Aplikacionet mund të zgjedhin një format që nuk është formati i cilësisë më të lartë."</string>
-    <!-- no translation found for hdr_format_info (5652559220799426076) -->
-    <skip />
-    <!-- no translation found for hdr_show_formats (171065892975445851) -->
-    <skip />
-    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
-    <skip />
-    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
-    <skip />
-    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
-    <skip />
-    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
-    <skip />
+    <string name="hdr_format_info" msgid="5652559220799426076">"INFORMACIONI I FORMATIT"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"Shfaq formatet"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Fshih formatet"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"FORMATET E AKTIVIZUARA"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"FORMATET E ÇAKTIVIZUARA"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Për ta çaktivizuar, ndryshoje përzgjedhjen e formatit në \"Manuale\"."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Të pastrohen të dhënat e memories specifike?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Kjo do të pastrojë të dhënat e memories specifike për të gjitha aplikacionet."</string>
     <string name="accessories_add" msgid="413764175035531452">"Shto një aksesor"</string>
@@ -253,7 +247,7 @@
     <string name="system_developer_options" msgid="8480844257066475479">"Opsionet e zhvilluesit"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Asnjë"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Përdorimi dhe diagnostikimi"</string>
-    <string name="no_device_admins" msgid="4628974717150185625">"Nuk ka asnjë aplikacion administrimi të pajisjes në dispozicion"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"Nuk ka asnjë aplikacion të administrimit të pajisjes në dispozicion"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Çaktivizuar nga administratori"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Nuk ofrohet"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Apl. e admin. të pajisjes"</string>
@@ -745,7 +739,7 @@
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Burime të panjohura"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Lejo instalimin e aplikacioneve nga burime të ndryshme nga \"Dyqani i Play\""</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Lejo burimet e panjohura"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Pajisja dhe të dhënat e tua personale janë më të cenueshme për t\'u sulmuar nga aplikacione nga burime të panjohura. Ti pranon se je plotësisht përgjegjës për çdo dëm ndaj pajisjes ose çdo humbje të dhënash që mund të rezultojë nga përdorimi i këtyre aplikacioneve."</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Pajisja dhe të dhënat e tua personale janë më të cenueshme nga sulmet nga aplikacione nga burime të panjohura. Ti pranon se je përgjegjës për çdo dëm ndaj pajisjes ose çdo humbje të të dhënave që mund të rezultojë nga përdorimi i këtyre aplikacioneve."</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Asnjëherë"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"Për përmbajtjen DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Gjithmonë"</string>
@@ -949,8 +943,8 @@
     <string name="manage_keyboards" msgid="7983890675377321912">"Menaxho tastierat"</string>
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"Lejohet"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"Nuk lejohet"</string>
-    <string name="usage_access" msgid="8402350645248312782">"Qasja në përdorim"</string>
-    <string name="usage_access_description" msgid="3276026988575551587">"Qasja në përdorim lejon që një aplikacion të gjurmojë se çfarë përdorin aplikacionet e tjera dhe sa shpesh e përdorin, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
+    <string name="usage_access" msgid="8402350645248312782">"Qasja te përdorimi"</string>
+    <string name="usage_access_description" msgid="3276026988575551587">"Qasja te përdorimi lejon që një aplikacion të gjurmojë se çfarë përdorin aplikacionet e tjera dhe sa shpesh e përdorin, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"Optimizimi i energjisë"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"Optimizo përdorimin e energjisë nga aplikacionet"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"Asnjë aplikacion nuk ka nevojë për optimizim"</string>
@@ -1007,16 +1001,16 @@
     <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Administratori yt mund të monitorojë dhe të menaxhojë aplikacionet dhe të dhënat e lidhura me këtë përdorues, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin e rrjetit dhe informacionet e vendndodhjes së pajisjes."</string>
     <string name="admin_device_owner_message" msgid="1935507216776040907">"Administratori yt mund të monitorojë dhe menaxhojë aplikacionet dhe të dhënat e lidhura me këtë pajisje, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin e rrjetit dhe informacionet e vendndodhjes së pajisjes."</string>
     <string name="remove_managed_profile_label" msgid="8950011141359605612">"Hiq profilin e punës"</string>
-    <string name="active_device_admin_msg" msgid="185537304726228624">"Apl. administrimi i pajisjes"</string>
-    <string name="remove_device_admin" msgid="2623866073546295104">"Çaktivizo këtë aplikacion të administratorit të pajisjes"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"Apl. i administrimit të pajisjes"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Çaktivizo këtë aplikacion të administrimit të pajisjes"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Çinstalo aplikacionin"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Çaktivizo dhe çinstalo"</string>
     <string name="select_device_admin_msg" msgid="8475934459999710332">"Apl. e admin. të pajisjes"</string>
-    <string name="add_device_admin_msg" msgid="5390773166682603421">"Të aktivizohet aplikacioni i administratorit të pajisjes?"</string>
-    <string name="add_device_admin" msgid="5078281377915844544">"Aktivizo këtë aplikacion të administratorit të pajisjes"</string>
-    <string name="device_admin_warning" msgid="7399916080685200660">"Aktivizimi i këtij aplikacioni të administratorit do të lejojë që aplikacioni <xliff:g id="APP_NAME">%1$s</xliff:g> të kryejë veprimet e mëposhtme:"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Të aktivizohet apl. i admin. të pajisjes?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Aktivizo këtë aplikacion të administrimit të pajisjes"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Aktivizimi i këtij aplikacioni të administrimit do të lejojë që aplikacioni <xliff:g id="APP_NAME">%1$s</xliff:g> të kryejë veprimet e mëposhtme:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Kjo pajisje do të menaxhohet dhe do të monitorohet nga <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="device_admin_status" msgid="5467001937240455367">"Ky aplikacion administratori është aktiv dhe lejon apl. <xliff:g id="APP_NAME">%1$s</xliff:g> të kryejë veprimet e mëposhtme:"</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Ky aplikacion administrimi është aktiv dhe lejon apl. <xliff:g id="APP_NAME">%1$s</xliff:g> të kryejë veprimet e mëposhtme:"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Duke vazhduar, profili yt si \"përdorues\" do të menaxhohet nga administratori yt, i cili mund të ruajë të dhënat e lidhura, përveç të dhënave të tua personale.\n\nAdministratori yt ka aftësinë që të monitorojë dhe të menaxhojë cilësimet, qasjen, aplikacionet dhe të dhënat e lidhura me këtë përdorues, duke përfshirë aktivitetin e rrjetit dhe informacionet e vendndodhjes së pajisjes tënde."</string>
     <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Të ndahet raporti i defektit në kod?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Administratori i teknologjisë së informacionit kërkoi një raport të defekteve në kod për të ndihmuar me zgjidhjen e problemeve. Aplikacioni dhe të dhënat mund të ndahen."</string>
