@@ -169,18 +169,12 @@
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
     <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"निवडल्यावर, सिस्टम तुमच्या डिव्हाइस चेनद्वारे सपोर्ट असलेला कोणताही HDR फॉरमॅट निवडण्याची अनुमती ॲप्सना देईल. ॲप्स कदाचित सर्वोच्च गुणवत्ता नसलेला फॉरमॅट निवडू शकतात."</string>
     <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"निवडल्यावर, प्लेबॅकमध्ये समस्या आणणाऱ्या तुमच्या डिव्हाइस चेनद्वारे सपोर्ट असलेले HDR फॉरमॅट तुम्ही मॅन्युअली बंद करू शकता. तुमच्या डिव्हाइस चेनद्वारे सपोर्ट नसलेले HDR फॉरमॅट सक्तीने सुरू केले जाऊ शकत नाहीत. ॲप्स कदाचित सर्वोच्च गुणवत्ता नसलेला फॉरमॅट निवडू शकतात."</string>
-    <!-- no translation found for hdr_format_info (5652559220799426076) -->
-    <skip />
-    <!-- no translation found for hdr_show_formats (171065892975445851) -->
-    <skip />
-    <!-- no translation found for hdr_hide_formats (8561568998525727230) -->
-    <skip />
-    <!-- no translation found for hdr_enabled_formats (8527870623949982774) -->
-    <skip />
-    <!-- no translation found for hdr_disabled_formats (4758522849421497896) -->
-    <skip />
-    <!-- no translation found for hdr_enabled_format_info_clicked (1466675962665861040) -->
-    <skip />
+    <string name="hdr_format_info" msgid="5652559220799426076">"फॉरमॅटची माहिती"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"फॉरमॅट दाखवा"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"फॉरमॅट लपवा"</string>
+    <string name="hdr_enabled_formats" msgid="8527870623949982774">"सुरू केलेले फॉरमॅट"</string>
+    <string name="hdr_disabled_formats" msgid="4758522849421497896">"बंद केलेले फॉरमॅट"</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"बंद करण्यासाठी, फॉरमॅट निवड हे मॅन्युअल वर बदला."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"कॅशे    केलेला डेटा साफ करायचा?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"हे सर्व ॲप्ससाठी कॅशे    केलेला डेटा साफ करेल."</string>
     <string name="accessories_add" msgid="413764175035531452">"उपसाधन जोडा"</string>
@@ -1007,14 +1001,14 @@
     <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"तुमचा प्रशासक सेटिंग्ज, परवानग्या, कॉर्पोरेट ॲक्सेस, नेटवर्क ॲक्टिव्हिटी आणि डीव्हाइसची स्थान माहिती यांसह तुमच्या कार्य प्रोफाइलशी संबधित ॲप्सचे आणि डेटाचे परीक्षण व व्यवस्थापन करू शकतो."</string>
     <string name="admin_device_owner_message" msgid="1935507216776040907">"तुमच्या प्रशासकाकडे तुमच्या नेटवर्क ॲक्टिव्हिटी तसेच या डीव्हाइसशी संबधित सेटिंग्ज, कॉर्पोरेट ॲक्सेस, परवानग्या यांसह अ‍ॅप्स आणि डेटा यांचे परीक्षण आणि व्यवस्थापन करण्याची क्षमता आहे."</string>
     <string name="remove_managed_profile_label" msgid="8950011141359605612">"कार्य प्रोफाईल काढा"</string>
-    <string name="active_device_admin_msg" msgid="185537304726228624">"डिव्हाइस प्रशासक अ‍ॅप"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"डिव्हाइस अ‍ॅडमिन अ‍ॅप"</string>
     <string name="remove_device_admin" msgid="2623866073546295104">"हे डिव्हाइस अ‍ॅडमिन अ‍ॅप बंद करा"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"अ‍ॅप अनइंस्टॉल करा"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"निष्क्रिय करा आणि अनइंस्टॉल करा"</string>
     <string name="select_device_admin_msg" msgid="8475934459999710332">"डिव्हाइस प्रशासक अ‍ॅप्स"</string>
-    <string name="add_device_admin_msg" msgid="5390773166682603421">"डिव्हाइस प्रशासक अ‍ॅप ॲक्टिव्हेट करायचे?"</string>
-    <string name="add_device_admin" msgid="5078281377915844544">"हे डिव्हाइस प्रशासक अ‍ॅप ॲक्टिव्हेट करा"</string>
-    <string name="device_admin_warning" msgid="7399916080685200660">"हे प्रशासक अ‍ॅप सक्रिय केल्याने ते <xliff:g id="APP_NAME">%1$s</xliff:g> अ‍ॅपला पुढील ऑपरेशन करण्याची अनुमती देईल:"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"डिव्हाइस अ‍ॅडमिन अ‍ॅप अ‍ॅक्टिव्हेट करायचे?"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"हे डिव्हाइस अ‍ॅडमिन अ‍ॅप अ‍ॅक्टिव्हेट करा"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"हे अ‍ॅडमिन अ‍ॅप सक्रिय केल्याने ते <xliff:g id="APP_NAME">%1$s</xliff:g> अ‍ॅपला पुढील ऑपरेशन करण्याची अनुमती देईल:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"या डिव्हाइसचे व्यवस्थापन आणि नियंत्रिण <xliff:g id="APP_NAME">%1$s</xliff:g> कडून केले जाईल."</string>
     <string name="device_admin_status" msgid="5467001937240455367">"हे अ‍ॅडमिन अ‍ॅप सक्रिय आहे आणि ते <xliff:g id="APP_NAME">%1$s</xliff:g> अ‍ॅपला पुढील ऑपरेशन करण्याची अनुमती देते:"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"पुढे सुरू ठेवून, तुमच्या वापरकर्त्याचे व्यवस्थापन तुमच्या प्रशासकाद्वारे केले जाईल. हा प्रशासक तुमच्या वैयक्तिक डेटाव्यतिरिक्त संबंधित डेटा स्टोअर करण्यासही सक्षम असेल.\n\nतुमच्या प्रशासकाकडे तुमच्या नेटवर्क ॲक्टिव्हिटी तसेच वापरकर्त्याशी संबधित सेटिंग्ज, ॲक्सेस, अ‍ॅप्स आणि डेटा यांचे परीक्षण आणि व्यवस्थापन करण्याची क्षमता आहे."</string>

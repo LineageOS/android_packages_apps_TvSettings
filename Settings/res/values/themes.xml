@@ -96,4 +96,10 @@
     <style name="BluetoothActionGuidedStepTheme" parent="Theme.Leanback.GuidedStep">
         <item name="guidanceTitleStyle">@style/BluetoothActionTitleStyle</item>
     </style>
+
+    <style name="ActionDisabledDialogTheme" parent="TvSettingsActivityTheme">
+        <item name="android:alertDialogTheme">@android:style/Theme.DeviceDefault.Dialog.Alert</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
 </resources>
