@@ -16,6 +16,7 @@
 
 package com.android.tv.settings;
 
+import android.app.AlertDialog;
 import android.app.admin.DevicePolicyManager;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -39,9 +40,10 @@ public class ActionDisabledByAdminDialog extends FragmentActivity
                 getAdminDetailsFromIntent(getIntent());
         final String restriction = getRestrictionFromIntent(getIntent());
         mDialogHelper = new ActionDisabledByAdminDialogHelper(this);
-        mDialogHelper.prepareDialogBuilder(restriction, enforcedAdmin)
+        AlertDialog dialog = mDialogHelper.prepareDialogBuilder(restriction, enforcedAdmin)
                 .setOnDismissListener(this)
                 .show();
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).requestFocus();
     }
 
     @Override
