@@ -38,6 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> 个帐号</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> 个帐号</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"媒体服务、Google 助理、付款功能"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"网络和互联网"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"声音"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"应用"</string>
@@ -48,7 +49,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> 个配件</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> 个配件</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"帮助和反馈"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"画质和音效"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"帮助和反馈"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"隐私设置"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"设备设置"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"应用设置"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"位置信息、使用情况和诊断信息、广告"</string>
     <string name="add_account" msgid="7386223854837017129">"添加帐号"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"移除帐号"</string>
     <string name="account_sync" msgid="4315295293211313989">"选择要同步的应用"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"已停用的应用"</string>
     <string name="device_daydream" msgid="2631191946958113220">"屏保"</string>
     <string name="device_display" msgid="244634591698925025">"显示"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"显示和声音"</string>
     <string name="device_sound" msgid="8616320533559404963">"声音"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"环绕声"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"系统声音"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"自动：使用设备报告的支持格式（建议）"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"无：一律不使用环绕声"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"手动：选择要使用的格式"</string>
+    <string name="display_category_title" msgid="247804007525046312">"显示"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"高级显示设置"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"高级声音设置"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"允许游戏模式"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"要清除缓存的数据吗？"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"此操作会清除所有应用的缓存数据。"</string>
     <string name="accessories_add" msgid="413764175035531452">"添加配件"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"通常为0000或1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"配对"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"取消"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"生成错误报告"</string>
+    <string name="send_feedback" msgid="936698637869795473">"发送反馈"</string>
     <string name="launch_help" msgid="2607478763131952469">"帮助中心"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"日期和时间"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"强"</item>
     <item msgid="6005053494500517261">"极强"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC 地址"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"设备 MAC 地址"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"随机 MAC 地址"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"信号强度"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"隐私设置"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"使用随机 MAC（默认）"</item>
+    <item msgid="2490415280467390067">"使用设备 MAC"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"不可用"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"随机 MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP 地址"</string>
     <string name="title_ssid" msgid="255328048344188682">"输入 WLAN 网络名称"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"互联网连接"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"自动还原"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"重置设备"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"此操作将会从您的设备的内部存储空间中清除所有数据，包括您的 Google 帐号、系统数据、应用数据、相关设置，以及已下载的应用"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"要清除所有个人信息和已下载的应用吗？请注意，此操作无法撤消！"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"要清除此设备上的所有个人信息和已下载的应用吗？此操作无法撤消！"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"全部清除"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"为您的 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 选择名称"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"为您的设备命名，以便在通过其他设备向其投射内容或与其建立连接时能够识别该设备。"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"流量节省程序"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"自动调整视频画质以减少移动数据流量消耗"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"流量消耗和提醒"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"不允许执行此操作"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"无法调节音量"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"不允许使用通话功能"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"不允许使用短信功能"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"不允许使用相机"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"不允许使用屏幕截图功能"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"无法打开此应用"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"如有任何问题，请与您的 IT 管理员联系"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"要与<xliff:g id="APPNAME">%1$s</xliff:g>搭配使用的设备"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"找不到设备。请确保设备已开启并可连接到网络。"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"重试"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"出了点问题。该应用已取消选择设备的请求。"</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"连接成功"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"全部显示"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"正在搜索"</string>
 </resources>

@@ -42,6 +42,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> حساب</item>
       <item quantity="one">حساب واحد (<xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g>)</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"خدمات الوسائط و\"مساعد Google\" والدفعات"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"الشبكة والإنترنت"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"الصوت"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"التطبيقات"</string>
@@ -56,7 +57,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> مُلحَق</item>
       <item quantity="one">مُلحَق واحد (<xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g>)</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"المساعدة والتعليقات"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"العرض والصوت"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"المساعدة والتعليقات"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"الخصوصية"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"إعدادات الجهاز"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"إعدادات التطبيق"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"الموقع الجغرافي والاستخدام وبيانات التشخيص والإعلانات"</string>
     <string name="add_account" msgid="7386223854837017129">"إضافة حساب"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"إزالة الحساب"</string>
     <string name="account_sync" msgid="4315295293211313989">"اختر التطبيقات المتزامنة"</string>
@@ -91,6 +97,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"التطبيقات التي تم إيقافها"</string>
     <string name="device_daydream" msgid="2631191946958113220">"شاشة التوقف"</string>
     <string name="device_display" msgid="244634591698925025">"العرض"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"العرض والصوت"</string>
     <string name="device_sound" msgid="8616320533559404963">"الصوت"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"الصوت المحيطي"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"أصوات النظام"</string>
@@ -112,6 +119,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"تلقائي: استخدام الصيغ التي يُبلغ جهازك عن توافقها معه (إجراء مقترَح)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"بدون صيغ: عدم استخدام الصوت المحيطي"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"يدوي: اختيار الصيغ التي تريد استخدامها"</string>
+    <string name="display_category_title" msgid="247804007525046312">"العرض"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"إعدادات العرض المتقدمة"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"إعدادات الصوت المتقدمة"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"السماح بوضع الألعاب"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"هل تريد محو البيانات المؤقتة؟"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"يؤدي ذلك إلى محو البيانات المؤقتة لكل التطبيقات."</string>
     <string name="accessories_add" msgid="413764175035531452">"إضافة ملحق"</string>
@@ -140,7 +151,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"0000 أو 1234 عادة"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"إقران"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"إلغاء"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"إنشاء تقرير الخطأ"</string>
+    <string name="send_feedback" msgid="936698637869795473">"إرسال تعليق"</string>
     <string name="launch_help" msgid="2607478763131952469">"مركز المساعدة"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"التاريخ والوقت"</string>
@@ -156,12 +167,12 @@
     <string name="system_inputs" msgid="5552840337357572096">"أجهزة الإدخال"</string>
     <string name="system_inputs_devices" msgid="8423782334271632810">"منافذ الإدخال والأجهزة"</string>
     <string name="system_home_theater_control" msgid="6228949628173590310">"التحكم في نظام المسرح المنزلي"</string>
-    <string name="system_accessibility" msgid="3081009195560501010">"سهولة الاستخدام"</string>
+    <string name="system_accessibility" msgid="3081009195560501010">"تسهيل الاستخدام"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"خيارات مطور البرامج"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"غير متوفر"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"الاستخدام وبيانات التشخيص"</string>
     <string name="tutorials" msgid="7880770425872110455">"برامج تعليمية"</string>
-    <string name="about_system_update" msgid="7421264399111367755">"إعادة تحميل النظام"</string>
+    <string name="about_system_update" msgid="7421264399111367755">"تحديث النظام"</string>
     <string name="about_preference" msgid="9112690446998150670">"لمحة"</string>
     <string name="device_name" msgid="566626587332817733">"اسم الجهاز"</string>
     <string name="restart_button_label" msgid="2124590135040611899">"إعادة التشغيل"</string>
@@ -194,7 +205,7 @@
     <string name="device_status_summary" msgid="3270932829412434985">"الشبكة والأرقام التسلسلية ومعلومات أخرى"</string>
     <string name="manual" msgid="5683935624321864999">"يدوي"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"المعلومات التنظيمية"</string>
-    <string name="device_feedback" msgid="4871903271442960465">"إرسال تعليقات حول هذا الجهاز"</string>
+    <string name="device_feedback" msgid="4871903271442960465">"إرسال ملاحظات حول هذا الجهاز"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"معرّف الجهاز"</string>
     <string name="baseband_version" msgid="5618116741093274294">"إصدار النطاق الأساسي"</string>
     <string name="kernel_version" msgid="7265509054070001542">"إصدار النواة"</string>
@@ -217,8 +228,16 @@
     <item msgid="2713050260700175954">"جيدة"</item>
     <item msgid="6005053494500517261">"ممتازة"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"عنوان Mac"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"عنوان MAC للجهاز"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"عنوان MAC العشوائي"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"قوة الإشارة"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"الخصوصية"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"استخدام عنوان MAC العشوائي (الإعداد التلقائي)"</item>
+    <item msgid="2490415280467390067">"استخدام عنوان MAC للجهاز"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"غير متاح"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"عنوان MAC العشوائي"</string>
     <string name="title_ip_address" msgid="705842159484772807">"عنوان IP"</string>
     <string name="title_ssid" msgid="255328048344188682">"يُرجى إدخال اسم شبكة Wi-Fi"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"اتصال الإنترنت"</string>
@@ -237,12 +256,12 @@
     <string name="wifi_security_type_wpa" msgid="9205358644485448199">"WPA/WPA2 PSK"</string>
     <string name="wifi_security_type_eap" msgid="3948280751219829163">"802.1x EAP"</string>
     <string name="title_wifi_no_networks_available" msgid="3696700321170616981">"جارٍ البحث..."</string>
-    <string name="title_wifi_could_not_save" msgid="7549912968719395764">"تعذر حفظ تهيئة <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_could_not_save" msgid="7549912968719395764">"تعذر حفظ إعداد <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect" msgid="6654031057635481872">"تعذر الاتصال بـ <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"تعذر العثور على <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"كلمة مرور Wi-Fi غير صالحة"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"لم تقبل شبكة Wi-Fi الاتصال"</string>
-    <string name="title_wifi_advanced_options" msgid="371185991282743258">"هل تريد تهيئة الخادم الوكيل <xliff:g id="SSID">%1$s</xliff:g> وإعدادات IP؟"</string>
+    <string name="title_wifi_advanced_options" msgid="371185991282743258">"هل تريد إعداد الخادم الوكيل <xliff:g id="SSID">%1$s</xliff:g> وإعدادات IP؟"</string>
     <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"إعدادات الخادم الوكيل"</string>
     <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"اسم المضيف للخادم الوكيل:"</string>
     <string name="title_wifi_proxy_port" msgid="566244407030390328">"منفذ الخادم الوكيل:"</string>
@@ -259,7 +278,7 @@
     <string name="wifi_action_try_again" msgid="8920677153891141148">"إعادة المحاولة"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"عرض الشبكات المتاحة"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"جارٍ الاتصال بـ <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="wifi_saving" msgid="320653339670641708">"جارٍ حفظ تهيئة <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="wifi_saving" msgid="320653339670641708">"جارٍ حفظ إعداد <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_connect" msgid="2206086690065242121">"الاتصال"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"حذف الشبكة"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"يؤدي هذا إلى محو المعلومات المستخدمة للاتصال بهذه الشبكة، بما في ذلك كلمات المرور المحفوظة"</string>
@@ -290,7 +309,7 @@
     <string name="proxy_error_empty_port" msgid="692020249267351015">"لا يُمكن ترك حقل المنفذ فارغًا"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"إذا كان الحقل المضيف فارغًا، فاترك حقل المنفذ فارغًا"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"منفذ غير صالح"</string>
-    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"يستخدم المتصفّح خادم HTTP الوكيل، ومع ذلك قد لا يكون مستخدمًا بواسطة تطبيقات أخرى"</string>
+    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"يتم استخدام الخادم الوكيل HTTP على المتصفّح، ولكن قد لا تستخدمه التطبيقات الأخرى."</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"أدخل منفذًا صالحًا.\nمثال: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"أدخل قائمة مفصولة بفواصل للنطاقات المستثناة أو اترك الحقل خاليًا.\nمثال: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"أدخل اسم مضيف صالحًا.\nمثال: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -317,12 +336,12 @@
     <string name="storage_media_cache_usage" msgid="6397941751551207630">"البيانات المؤقتة"</string>
     <string name="storage_eject" msgid="3268870873944951902">"إخراج"</string>
     <string name="storage_format" msgid="1068977713279648756">"محو البيانات والتنسيق"</string>
-    <string name="storage_format_as_private" msgid="77945551149326052">"محو البيانات والتهيئة كسعة تخزين داخل الجهاز"</string>
-    <string name="storage_format_as_public" msgid="6745112917895223463">"محو البيانات والتهيئة كوحدة تخزين قابلة للنقل"</string>
+    <string name="storage_format_as_private" msgid="77945551149326052">"محو البيانات والإعداد كسعة تخزين داخل الجهاز"</string>
+    <string name="storage_format_as_public" msgid="6745112917895223463">"محو البيانات والإعداد كوحدة تخزين قابلة للنقل"</string>
     <string name="storage_format_for_private" msgid="5380138334184923252">"التنسيق كوحدة تخزين على الجهاز"</string>
     <string name="storage_not_connected" msgid="4327902652748552794">"غير متصل"</string>
-    <string name="storage_migrate" msgid="9137556600192167701">"ترحيل البيانات إلى مساحة التخزين هذه"</string>
-    <string name="storage_migrate_away" msgid="7880100961434638430">"ترحيل البيانات إلى مساحة تخزين مختلفة"</string>
+    <string name="storage_migrate" msgid="9137556600192167701">"نقل البيانات إلى مساحة التخزين هذه"</string>
+    <string name="storage_migrate_away" msgid="7880100961434638430">"نقل البيانات إلى مساحة تخزين مختلفة"</string>
     <string name="storage_no_apps" msgid="95566375753627272">"ليس هناك تطبيقات للاحتفاظ بنسخ احتياطية منها."</string>
     <string name="storage_forget" msgid="4671975563260507003">"تجاهل مساحة تخزين الجهاز هذه"</string>
     <string name="storage_forget_wall_of_text" msgid="230454348256179142">"لاستخدام التطبيقات أو البيانات التي يتضمنها محرك الأقراص هذا، عليك إعادة توصيله بالجهاز. ويمكنك بدلاً من ذلك حذف وحدة التخزين هذه إذا لم يكن محرك الأقراص متاحًا.\n\nإذا اخترت \"حذف\"، فسيتم فقد كل البيانات التي يتضمنها محرك الأقراص للأبد.\n\nيمكنك إعادة تثبيت التطبيقات لاحقًا، ولكن سيتم فقد البيانات المخزنة على محرك الأقراص هذا."</string>
@@ -343,13 +362,13 @@
     <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"بعد التهيئة، يمكنك استخدام محرك أقراص USB هذا على أجهزة أخرى. سيتم محو جميع البيانات. جرِّب الاحتفاظ بنسخة احتياطية أولاً من خلال نقل التطبيقات إلى مساحة تخزين أخرى على الجهاز."</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"جارٍ تهيئة محرك أقراص USB…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"قد يستغرق هذا دقيقة. يُرجى عدم إزالة محرك الأقراص."</string>
-    <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"اختيار مساحة تخزين لترحيل البيانات إليها"</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"اختيار مساحة تخزين لنقل البيانات إليها"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="5086390005970210697">"نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"يمكنك نقل الصور والملفات وبيانات التطبيقات إلى <xliff:g id="NAME">%1$s</xliff:g>، قد يستغرق هذا بضع دقائق علمًا بأن بعض التطبيقات لن تعمل بشكل صحيح أثناء النقل."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="7512917600174814567">"النقل الآن"</string>
     <string name="storage_wizard_migrate_confirm_action_move_later" msgid="6379986754827551474">"النقل لاحقًا"</string>
-    <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"تم ترحيل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="8580347235983040966">"تعذر ترحيل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"تم نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="8580347235983040966">"تعذر نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_progress_title" msgid="2623480667090826800">"جارٍ نقل البيانات إلى <xliff:g id="NAME">%1$s</xliff:g>..."</string>
     <string name="storage_wizard_migrate_progress_description" msgid="4023358325977284145">"قد يستغرق هذا وقتًا قصيرًا، يرجى عدم إزالة محرك الأقراص.\nعلمًا بأن بعض التطبيقات لن تعمل بشكل صحيح أثناء النقل."</string>
     <string name="storage_wizard_format_slow_title" msgid="7640229918512394316">"يبدو أن محرك الأقراص هذا بطيء."</string>
@@ -360,7 +379,7 @@
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="7763611380573099978">"التطبيقات والبيانات المخزَّنة في <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="5741521038349239359">"<xliff:g id="SIZE">%1$s</xliff:g> متاحة"</string>
     <string name="storage_wizard_eject_private_title" msgid="1336088625197134497">"إخراج مساحة تخزين الجهاز"</string>
-    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"سيتوقف عمل التطبيقات على مساحة تخزين هذا الجهاز عند إخراجها. تمت تهيئة محرك أقراص USB هذا بحيث يعمل على هذا الجهاز فقط، ولن يعمل على أي جهاز آخر."</string>
+    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"سيتوقف عمل التطبيقات على مساحة تخزين هذا الجهاز عند إخراجها. تم إعداد محرك أقراص USB هذا بحيث يعمل على هذا الجهاز فقط، ولن يعمل على أي جهاز آخر."</string>
     <string name="storage_wizard_eject_progress_title" msgid="6025569356827683446">"جارٍ إخراج <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="6504922588346440942">"مساحة التخزين المستخدمة"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7058465372227392453">"جارٍ نقل <xliff:g id="NAME">%1$s</xliff:g>…"</string>
@@ -417,7 +436,7 @@
     <string name="location_reporting" msgid="3552501333650895634">"الإبلاغ عن الموقع"</string>
     <string name="location_history" msgid="4055660203090513120">"سجلّ المواقع"</string>
     <string name="location_reporting_desc" msgid="1580018652781674608">"تستخدم Google هذه الميزة في منتجات مثل Google Now وخرائط Google. ويؤدي تفعيل ميزة الإبلاغ عن الموقع إلى السماح لأي من منتجات Google التي تستخدم هذه الميزة بتخزين واستخدام أحدث بيانات الموقع بجهازك التي ترتبط بحسابك في Google."</string>
-    <string name="location_history_desc" msgid="926674012916014270">"عند تشغيل سجلّ المواقع لهذا الحساب، يمكن أن تخزن Google بيانات موقع جهازك لتستخدمها تطبيقاتك.\n\nعلى سبيل المثال، يمكن لتطبيق خرائط Google إمدادك بالاتجاهات كما يمكن لتطبيق Google Now إبلاغك بحركة المرور لتنقلاتك.\n\nويمكنك إيقاف سجل المواقع في أي وقت ولكن لا يؤدي هذا إلى حذفه. ولعرض سجل المواقع وإدارته، انتقل إلى maps.google.com/locationhistory."</string>
+    <string name="location_history_desc" msgid="926674012916014270">"عند تفعيل سجلّ المواقع لهذا الحساب، يمكن أن تخزن Google بيانات موقع جهازك لتستخدمها تطبيقاتك.\n\nعلى سبيل المثال، يمكن لتطبيق خرائط Google إمدادك بالاتجاهات كما يمكن لتطبيق Google Now إبلاغك بحركة المرور لتنقلاتك.\n\nويمكنك إيقاف سجل المواقع في أي وقت ولكن لا يؤدي هذا إلى حذفه. ولعرض سجل المواقع وإدارته، انتقل إلى maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"حذف سجل المواقع"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"سيؤدي هذا إلى حذف كل بيانات سجل المواقع المخزنة من هذا الجهاز لحساب Google هذا. ولا يمكنك التراجع عن هذا الحذف. وبعض التطبيقات، ومن بينها Google Now، ستتوقف عن العمل."</string>
     <string name="system_services" msgid="5754310941186053151">"الخدمات"</string>
@@ -433,7 +452,7 @@
     <string name="captions_display_on" msgid="480438033345455728">"مفعّلة"</string>
     <string name="captions_display_off" msgid="87881163874948539">"إيقاف"</string>
     <string name="display_options" msgid="2645282080948371603">"خيارات العرض"</string>
-    <string name="captions_configure" msgid="711991018642931958">"تهيئة"</string>
+    <string name="captions_configure" msgid="711991018642931958">"إعداد"</string>
     <string name="captions_language" msgid="5905918439449912646">"اللغة"</string>
     <string name="captions_language_default" msgid="3894192926725192528">"التلقائية"</string>
     <string name="captions_textsize" msgid="7161136610669343510">"حجم النص"</string>
@@ -471,7 +490,7 @@
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"هل تريد إيقاف خدمة <xliff:g id="SERVICE">%1$s</xliff:g>؟"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"يؤدي النقر على \"حسنًا\" إلى إيقاف <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"تحويل النص إلى الكلام"</string>
-    <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"تهيئة المحرك"</string>
+    <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"إعداد المحرك"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"قول كلمات المرور"</string>
     <string name="system_preferred_engine" msgid="3545505072652708443">"المحرّك المفضّل"</string>
     <string name="system_speech_rate" msgid="6553204071403872669">"معدل الكلام"</string>
@@ -495,7 +514,7 @@
     <string name="system_email_address" msgid="3725494874473757217">"عنوان البريد الإلكتروني"</string>
     <string name="system_usb_debugging" msgid="2158285492172755923">"تصحيح أخطاء USB"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"السماح بمواقع وهمية"</string>
-    <string name="system_select_debug_app" msgid="6200987902307533721">"تحديد التطبيق لتصحيحه"</string>
+    <string name="system_select_debug_app" msgid="6200987902307533721">"اختيار التطبيق لتصحيحه"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"انتظار برنامج التصحيح"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"التحقق من التطبيقات عبر USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"التحقق من التطبيقات المثبتة عبر ADB/ADT لكشف السلوك الضار"</string>
@@ -574,14 +593,14 @@
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"سريع للغاية"</string>
     <string name="title_settings" msgid="780933693363320088">"إعدادات <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="title_current_keyboard" msgid="891238509164879851">"لوحة المفاتيح الحالية"</string>
-    <string name="title_configure" msgid="846802387014612210">"تهيئة"</string>
+    <string name="title_configure" msgid="846802387014612210">"إعداد"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"خيارات لوحة المفاتيح"</string>
     <string name="title_current_autofill_service" msgid="9029001041887283153">"خدمة الملء التلقائي الحالية"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"اختيار خدمة \"الملء التلقائي\""</string>
     <string name="autofill_none" msgid="1615056985649424207">"بدون خدمة"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;تأكد من أنك تثق بهذا التطبيق&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Password service&gt;%1$s&lt;/xliff:g&gt; يستخدم البيانات المعروضة على الشاشة لتحديد ما يمكن ملؤه تلقائيًا."</string>
     <string name="computing_size" msgid="8623916230485437579">"جارٍ الحساب..."</string>
-    <string name="title_select_wifi_network" msgid="935820896444071617">"تحديد شبكة Wi-Fi"</string>
+    <string name="title_select_wifi_network" msgid="935820896444071617">"اختيار شبكة Wi-Fi"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"إعادة تسمية"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"العرض باتصال Wi-Fi"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"يلزم رقم التعريف الشخصي"</string>
@@ -607,7 +626,7 @@
     <string name="inputs_hdmi_control" msgid="650355636965841054">"التحكم في HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="306769914209526682">"السماح لجهاز التلفزيون بالتحكم في أجهزة HDMI"</string>
     <string name="inputs_device_auto_off" msgid="2659766884754402352">"إيقاف الجهاز تلقائيًا"</string>
-    <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"إيقاف تفعيل أجهزة HDMI باستخدام التلفزيون"</string>
+    <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"إيقاف أجهزة HDMI باستخدام التلفزيون"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"تشغيل التلفزيون تلقائيًا"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"تشغيل التلفزيون باستخدام جهاز HDMI"</string>
     <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
@@ -641,9 +660,9 @@
     <string name="app_sees_restricted_accounts" msgid="174038126799649152">"يمكن لهذا التطبيق الدخول إلى حساباتك"</string>
     <string name="restriction_location_enable_title" msgid="2552780806199464266">"الموقع الجغرافي"</string>
     <string name="restriction_location_enable_summary" msgid="3719330231217994482">"السماح للتطبيقات باستخدام معلومات موقعك"</string>
-    <string name="restricted_profile_switch_to" msgid="6193201935877168764">"الدخول إلى الملف الشخصي المقيّد"</string>
-    <string name="restricted_profile_switch_out" msgid="3589381233390753413">"الخروج من الملف الشخصي المقيّد"</string>
-    <string name="restricted_profile_delete_title" msgid="7153982195273379506">"حذف الملف الشخصي المقيّد"</string>
+    <string name="restricted_profile_switch_to" msgid="6193201935877168764">"الدخول إلى الملف الشخصي ذات الصلاحيات المحدودة"</string>
+    <string name="restricted_profile_switch_out" msgid="3589381233390753413">"الخروج من الملف الشخصي ذات الصلاحيات المحدودة"</string>
+    <string name="restricted_profile_delete_title" msgid="7153982195273379506">"حذف الملف الشخصي ذات الصلاحيات المحدودة"</string>
     <string name="restricted_profile_create_title" msgid="700322590579894058">"إنشاء ملف شخصي مُقيَّد"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"الإعدادات"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"التطبيقات المسموح بها"</string>
@@ -691,7 +710,7 @@
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"سيتم حذف جميع بيانات هذا التطبيق نهائيًا.\nويتضمن ذلك جميع الملفات والإعدادات والحسابات وقواعد البيانات، وما إلى ذلك."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"محو الإعدادات التلقائية"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"تعيين تشغيل هذا التطبيق لبعض الإجراءات"</string>
-    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"لم يتم تعيين إعدادات تلقائية"</string>
+    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"لم يتم ضبط إعدادات تلقائية"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"محو ذاكرة التخزين المؤقت"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"الإشعارات"</string>
     <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"تراخيص البرامج المفتوحة المصدر"</string>
@@ -705,9 +724,9 @@
     <string name="device_daydreams_select" msgid="7203264446482623438">"شاشة التوقف"</string>
     <string name="device_daydreams_test" msgid="7828275397550076567">"البدء الآن"</string>
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"وقت البدء"</string>
-    <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"يبدأ عرض شاشة التوقف بعد مرور هذه الفترة من عدم النشاط. فإذا لم يتم اختيار أي شاشة توقف، يتم إيقاف تفعيل شاشة الجهاز."</string>
+    <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"يبدأ عرض شاشة التوقف بعد مرور هذه الفترة من عدم النشاط. فإذا لم يتم اختيار أي شاشة توقف، يتم إيقاف شاشة الجهاز."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"بعد <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> من عدم النشاط"</string>
-    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"إيقاف تفعيل الشاشة"</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"إيقاف الشاشة"</string>
     <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"بعد <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"لإيقاف تشغيل شاشة العرض بعد"</string>
     <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"السماح بإيقاف تشغيل الشاشة"</string>
@@ -720,7 +739,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"الاستعادة التلقائية"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"إعادة ضبط الجهاز"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"سيؤدي هذا الإجراء إلى محو جميع البيانات من وحدة التخزين الداخلية بجهازك، بما في ذلك حساب Google، وبيانات وإعدادات النظام والتطبيقات، والتطبيقات التي تم تنزيلها"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"هل تريد محو جميع المعلومات الشخصية والتطبيقات التي تم تنزيلها؟ لا يمكنك التراجع عن هذا الإجراء!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"هل تريد محو كل معلوماتك الشخصية والتطبيقات التي نزّلتها على هذا الجهاز؟ لن تستطيع التراجع عن هذا الإجراء."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"محو كل شيء"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"اختيار اسم لجهاز <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"اختَر اسمًا لجهازك للمساعدة في التعرّف عليه عند الإرسال إليه أو الاتصال به من أجهزة أخرى."</string>
@@ -794,4 +813,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"توفير البيانات"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"ضبط جودة الفيديو تلقائيًا لتقليل استخدام بيانات الجوّال"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"التنبيهات واستخدام البيانات"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"غير مسموح بهذا الإجراء"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"يتعذّر تغيير مستوى الصوت."</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"غير مسموح بإجراء مكالمات"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"غير مسموح بالرسائل القصيرة SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"غير مسموح باستخدام الكاميرا"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"غير مسموح بالتقاط لقطة شاشة"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"يتعذّر فتح هذا التطبيق."</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"إذا كان لديك أسئلة، يُرجى التواصل مع مشرف تكنولوجيا المعلومات."</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"الجهاز المُستخدَم مع <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"لم يتم العثور على أيّ أجهزة. تأكَّد من تشغيل الأجهزة وتوفّرها للاتصال."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"إعادة المحاولة"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"حدث خطأ. ألغى التطبيق طلب اختيار أحد الأجهزة."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"تم الاتصال."</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"عرض الكل"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"البحث"</string>
 </resources>

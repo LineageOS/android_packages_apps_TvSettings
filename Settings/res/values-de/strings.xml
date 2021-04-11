@@ -38,6 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> Konten</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> Konto</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Mediendienste, Assistant, Zahlungen"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Netzwerk &amp; Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Ton"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Apps"</string>
@@ -48,7 +49,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> Zubehörteile</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> Zubehörteil</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Hilfe und Feedback"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Display &amp; Ton"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Hilfe und Feedback"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Datenschutz"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Geräteeinstellungen"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"App-Einstellungen"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Standort, Nutzung &amp; Diagnose, Werbung"</string>
     <string name="add_account" msgid="7386223854837017129">"Konto hinzufügen"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Konto entfernen"</string>
     <string name="account_sync" msgid="4315295293211313989">"Synchronisierte Apps auswählen"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Deaktivierte Apps"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Bildschirmschoner"</string>
     <string name="device_display" msgid="244634591698925025">"Display"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Display &amp; Ton"</string>
     <string name="device_sound" msgid="8616320533559404963">"Ton"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Surround-Sound"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Systemtöne"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automatisch: Die Formate verwenden, die von deinem Gerät als unterstützt gemeldet werden (empfohlen)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Keine: Nie Surround-Sound verwenden"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuell: Zu verwendende Formate auswählen"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Display"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Erweiterte Displayeinstellungen"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Erweiterte Toneinstellungen"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Spielmodus zulassen"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Daten im Cache löschen?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Daten im Cache werden für alle Apps gelöscht."</string>
     <string name="accessories_add" msgid="413764175035531452">"Zubehör hinzufügen"</string>
@@ -132,14 +143,14 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"In der Regel 0000 oder 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Koppeln"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Abbrechen"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Fehlerbericht abrufen"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Feedback geben"</string>
     <string name="launch_help" msgid="2607478763131952469">"Hilfe"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Datum &amp; Uhrzeit"</string>
     <string name="system_language" msgid="5516099388471974346">"Sprache"</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Tastatur"</string>
-    <string name="system_keyboard_autofill" msgid="8530944165814838255">"Tastatur &amp; AutoFill"</string>
-    <string name="system_autofill" msgid="6983989261108020046">"AutoFill"</string>
+    <string name="system_keyboard_autofill" msgid="8530944165814838255">"Tastatur &amp; Automatisches Ausfüllen"</string>
+    <string name="system_autofill" msgid="6983989261108020046">"Automatisches Ausfüllen"</string>
     <string name="system_home" msgid="2149349845791104094">"Startbildschirm"</string>
     <string name="system_search" msgid="3170169128257586925">"Suche"</string>
     <string name="system_google" msgid="945985164023885276">"Google"</string>
@@ -181,7 +192,7 @@
     <string name="device_status" msgid="8266002761193692207">"Status"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Netzwerk, Seriennummern und weitere Informationen"</string>
     <string name="manual" msgid="5683935624321864999">"Handbuch"</string>
-    <string name="regulatory_information" msgid="9107675969694713391">"Regulierungsinformationen"</string>
+    <string name="regulatory_information" msgid="9107675969694713391">"Rechtliche Hinweise"</string>
     <string name="device_feedback" msgid="4871903271442960465">"Feedback zu diesem Gerät senden"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"Geräte-ID"</string>
     <string name="baseband_version" msgid="5618116741093274294">"Baseband-Version"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"Gut"</item>
     <item msgid="6005053494500517261">"Ausgezeichnet"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC-Adresse"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"MAC-Adresse des Geräts"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Zufällige MAC-Adresse"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Signalstärke"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Datenschutz"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Zufällig festgelegte MAC-Adresse verwenden (Standard)"</item>
+    <item msgid="2490415280467390067">"MAC-Adresse des Geräts verwenden"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Nicht verfügbar"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Zufällig festgelegte MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP-Adresse"</string>
     <string name="title_ssid" msgid="255328048344188682">"Name des WLAN-Netzwerks"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Internetverbindung"</string>
@@ -411,10 +430,10 @@
     <string name="system_services" msgid="5754310941186053151">"Dienste"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Diensteinstellungen"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Text mit hohem Kontrast"</string>
-    <string name="accessibility_shortcut" msgid="5856158637840030531">"Bedienungshilfe-Tastenkombination"</string>
+    <string name="accessibility_shortcut" msgid="5856158637840030531">"Bedienungshilfe-Kurzbefehl"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Bedienungshilfe-Tastenkombination aktivieren"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Verknüpfter Dienst"</string>
-    <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Wenn die Tastenkombination aktiviert ist, kannst du die Bedienungshilfe starten, indem du die Zurück-Taste und die Taste \"Leiser\" drei Sekunden lang gedrückt hältst."</string>
+    <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Wenn die Tastenkombination aktiviert ist, kannst du die Bedienungshilfe starten, indem du die Zurück-Taste und die Taste „Leiser“ drei Sekunden lang gedrückt hältst."</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Untertitel"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Einstellungen für Untertitel-Overlays in einem Video"</string>
     <string name="captions_display" msgid="2598662495450633375">"Anzeigen"</string>
@@ -433,7 +452,7 @@
     <string name="captions_edgecolor" msgid="2779925179084237336">"Rahmenfarbe"</string>
     <string name="captions_backgroundshow" msgid="1080183686470477645">"Hintergrund anzeigen"</string>
     <string name="captions_backgroundcolor" msgid="2056944109914399253">"Hintergrundfarbe"</string>
-    <string name="captions_backgroundopacity" msgid="1850126438162000027">"Hintergrundtransparenz"</string>
+    <string name="captions_backgroundopacity" msgid="1850126438162000027">"Hintergrund­­­transparenz"</string>
     <string name="captioning_preview_text" msgid="3034147586392743237">"Untertitel sehen so aus."</string>
     <string name="captions_textopacity" msgid="6055602491649526307">"Textdeckkraft"</string>
     <string name="captions_windowshow" msgid="6002072054703167886">"Fenster anzeigen"</string>
@@ -457,12 +476,12 @@
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"<xliff:g id="SERVICE">%1$s</xliff:g> verwenden?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> kann den gesamten eingegebenen Text erfassen, einschließlich personenbezogener Daten wie Kreditkartennummern, jedoch keine Passwörter."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"<xliff:g id="SERVICE">%1$s</xliff:g> beenden?"</string>
-    <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Durch Auswählen von \"Ok\" wird <xliff:g id="SERVICE">%1$s</xliff:g> beendet."</string>
+    <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Durch Auswählen von „OK“ wird <xliff:g id="SERVICE">%1$s</xliff:g> beendet."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Sprachausgabe"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"Modulkonfiguration"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"Passwörter aussprechen"</string>
     <string name="system_preferred_engine" msgid="3545505072652708443">"Bevorzugtes Modul"</string>
-    <string name="system_speech_rate" msgid="6553204071403872669">"Sprechgeschwindigkeit"</string>
+    <string name="system_speech_rate" msgid="6553204071403872669">"Sprechgeschwindig¬keit"</string>
     <string name="system_play_sample" msgid="3934369914309865584">"Beispiel abspielen"</string>
     <string name="system_install_voice_data" msgid="8016395777968958673">"Sprachdaten installieren"</string>
     <string name="system_general" msgid="687760148454147771">"Allgemein"</string>
@@ -558,16 +577,16 @@
     <string name="tts_rate_very_slow" msgid="1927454053669655117">"Sehr langsam"</string>
     <string name="tts_rate_slow" msgid="7668484707347561166">"Langsam"</string>
     <string name="tts_rate_normal" msgid="3631458247079252628">"Normal"</string>
-    <string name="tts_rate_fast" msgid="5723868816257531421">"Schnell"</string>
-    <string name="tts_rate_very_fast" msgid="7756663146626103952">"Sehr schnell"</string>
+    <string name="tts_rate_fast" msgid="5723868816257531421">"Rasch"</string>
+    <string name="tts_rate_very_fast" msgid="7756663146626103952">"Sehr rasch"</string>
     <string name="title_settings" msgid="780933693363320088">"Einstellungen für <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="title_current_keyboard" msgid="891238509164879851">"Aktuelle Tastatur"</string>
     <string name="title_configure" msgid="846802387014612210">"Konfigurieren"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Tastaturoptionen"</string>
-    <string name="title_current_autofill_service" msgid="9029001041887283153">"Aktueller AutoFill-Dienst"</string>
-    <string name="title_select_autofill_service" msgid="696559582725756848">"AutoFill-Dienst auswählen"</string>
-    <string name="autofill_none" msgid="1615056985649424207">"Keinen AutoFill-Dienst"</string>
-    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Nur für vertrauenswürdige Apps&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Passwortdienst&gt;%1$s&lt;/xliff:g&gt; greift auf die Displayanzeige zu, um zu bestimmen, welche Felder automatisch ausgefüllt werden können. AutoFill sollte daher nur für vertrauenswürdige Apps zugelassen werden."</string>
+    <string name="title_current_autofill_service" msgid="9029001041887283153">"Aktueller Dienst für automatisches Ausfüllen"</string>
+    <string name="title_select_autofill_service" msgid="696559582725756848">"Dienst für automatisches Ausfüllen auswählen"</string>
+    <string name="autofill_none" msgid="1615056985649424207">"Keinen Dienst für automatisches Ausfüllen"</string>
+    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Nur für vertrauenswürdige Apps&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Passwortdienst&gt;%1$s&lt;/xliff:g&gt; greift auf die Displayanzeige zu, um zu bestimmen, welche Felder automatisch ausgefüllt werden können. Automatisches Ausfüllen sollte daher nur für vertrauenswürdige Apps zugelassen werden."</string>
     <string name="computing_size" msgid="8623916230485437579">"Berechnung..."</string>
     <string name="title_select_wifi_network" msgid="935820896444071617">"WLAN auswählen"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Umbenennen"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Automatische Wiederherstellung"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Gerät zurücksetzen"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Hiermit werden alle Daten, einschließlich deines Google-Kontos, deiner System- und App-Daten und -Einstellungen sowie deiner heruntergeladenen Apps aus dem internen Speicher deines Geräts gelöscht."</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Alle personenbezogenen Daten und heruntergeladenen Apps löschen? Dieser Vorgang kann nicht rückgängig gemacht werden."</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Alle personenbezogenen Daten und heruntergeladenen Apps auf diesem Gerät löschen? Dieser Vorgang kann nicht rückgängig gemacht werden."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Alles löschen"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Name für <xliff:g id="DEVICEMODEL">%1$s</xliff:g> auswählen"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Gib deinem Gerät einen Namen, damit du es identifizieren kannst, wenn du von anderen Geräten darauf streamen oder eine Verbindung damit herstellen möchtest."</string>
@@ -702,9 +721,9 @@
     <item msgid="6448060889026244632">"Fernseher im Gemeinschaftsraum"</item>
     <item msgid="3336274213215419228">"Fernseher im Schlafzimmer"</item>
   </string-array>
-    <string name="custom_room" msgid="6798144004583173563">"Benutzerdefinierten Namen eingeben…"</string>
+    <string name="custom_room" msgid="6798144004583173563">"Namen eingeben…"</string>
     <string name="device_rename_title" msgid="9070021379000499270">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> umbenennen"</string>
-    <string name="device_rename_description" msgid="1973894029492915135">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> heißt momentan \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\"."</string>
+    <string name="device_rename_description" msgid="1973894029492915135">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> heißt momentan „<xliff:g id="DEVICENAME">%2$s</xliff:g>“."</string>
     <string name="device_name_suggestion_title" msgid="3986220212759193742">"Gerätename festlegen"</string>
     <string name="device_name_suggestion_summary" msgid="4582691399302362938">"Diesen Namen beim Streamen von Fotos, Videos und anderen Medien vom Smartphone verwenden"</string>
     <string name="change_setting" msgid="7211706374208138343">"Ändern"</string>
@@ -732,7 +751,7 @@
     <string name="high_power_on" msgid="3120162683093360951">"Energieverbrauch wird nicht optimiert"</string>
     <string name="high_power_off" msgid="3588854600942236231">"Energieverbrauch wird optimiert"</string>
     <string name="high_power_system" msgid="6263052626979462255">"\"Optimierter Energieverbrauch\" nicht verfügbar"</string>
-    <string name="manage_notification_access_title" msgid="8659254371564990084">"Benachrichtigungszugriff"</string>
+    <string name="manage_notification_access_title" msgid="8659254371564990084">"Benachrichtigungs­zugriff"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"Keine installierte App hat Benachrichtigungszugriff angefordert."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Bei Aktivierung können diese Apps alle Benachrichtigungen lesen, also auch persönliche Informationen wie Kontaktnamen und eingehende Nachrichten, sowie Benachrichtigungen schließen oder in ihnen enthaltene Aktionen auslösen."</string>
     <string name="directory_access" msgid="7338555825237012006">"Verzeichniszugriff"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Datensparmodus"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Videoqualität automatisch anpassen, um weniger mobile Daten zu verwenden"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Datennutzung und Warnmeldungen"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Aktion nicht zulässig"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Lautstärke nicht änderbar"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Anrufe nicht zulässig"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS nicht zulässig"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Kameranutzung nicht zulässig"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Screenshots nicht zulässig"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"App kann nicht geöffnet werden"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Wende dich bei Fragen an deinen IT-Administrator"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Gerät zur Nutzung mit <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Keine Geräte gefunden. Achte darauf, dass die Geräte eingeschaltet und zur Verbindung bereit sind."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Wiederholen"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Ein Fehler ist aufgetreten. Die Anwendung hat die Anfrage zur Auswahl eines Geräts abgebrochen."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Verbindung hergestellt"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Alle anzeigen"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Wird gesucht"</string>
 </resources>

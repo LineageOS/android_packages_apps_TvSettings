@@ -38,6 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> اکاؤنٹس</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> اکاؤنٹ</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"میڈیا سروسز، اسسٹنٹ، ادائيگیاں"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"نیٹ ورک اور انٹرنیٹ"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"آواز"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ایپس"</string>
@@ -48,7 +49,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> لوازمات</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> لوازم</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"مدد اور تاثرات"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"ڈسپلے اور آواز"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"مدد اور تاثرات"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"رازداری"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"آلے کی ترتیبات"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"ایپ کی ترتیبات"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"مقام، استعمال اور تشخیصات، اشتہارات"</string>
     <string name="add_account" msgid="7386223854837017129">"اکاؤنٹ شامل کریں"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"اکاؤنٹ ہٹائیں"</string>
     <string name="account_sync" msgid="4315295293211313989">"مطابقت پذیر ایپس منتخب کریں"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"غیر فعال کردہ ایپس"</string>
     <string name="device_daydream" msgid="2631191946958113220">"اسکرین سیور"</string>
     <string name="device_display" msgid="244634591698925025">"ڈسپلے"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"ڈسپلے اور آواز"</string>
     <string name="device_sound" msgid="8616320533559404963">"آواز"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"گردوپیش آواز"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"سسٹم کی آوازیں"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"خودکار: وہ فارمیٹس استعمال کریں جن کی آپ کا آلہ سپورٹ کرنے والے کے بطور اطلاع دیتا ہے (تجویز کردہ)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"کوئی نہیں: محیط آواز کبھی استعمال نہ کریں"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"دستی: منتخب کریں کہ کون سا فارمیٹس استعمال کرنا ہے"</string>
+    <string name="display_category_title" msgid="247804007525046312">"ڈسپلے"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"جدید ترین ڈسپلے کی ترتیبات"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"جدید ترین صوتی ترتیبات"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"گیم وضع کی اجازت"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"کیش کیا ہوا ڈیٹا صاف کریں؟"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"یہ سبھی ایپس کیلئے کیش کیے ہوئے ڈیٹا کو صاف کر دے گا۔"</string>
     <string name="accessories_add" msgid="413764175035531452">"امدادی سامان شامل کریں"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"عام طور پر 0000 یا 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"جوڑا بنائیں"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"منسوخ کریں"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"بگ رپورٹ لیں"</string>
+    <string name="send_feedback" msgid="936698637869795473">"تاثرات بھیجیں"</string>
     <string name="launch_help" msgid="2607478763131952469">"مرکز امداد"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"تاریخ اور وقت"</string>
@@ -149,7 +160,7 @@
     <string name="system_inputs_devices" msgid="8423782334271632810">"ان پٹس اور آلات"</string>
     <string name="system_home_theater_control" msgid="6228949628173590310">"ہوم تھیئٹر کنٹرول"</string>
     <string name="system_accessibility" msgid="3081009195560501010">"ایکسیسبیلٹی"</string>
-    <string name="system_developer_options" msgid="8480844257066475479">"ڈیولپر کے اختیارات"</string>
+    <string name="system_developer_options" msgid="8480844257066475479">"ڈویلپر کے اختیارات"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"کوئی نہیں"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"استعمال اور تشخیصات"</string>
     <string name="tutorials" msgid="7880770425872110455">"ٹیوٹوریلز"</string>
@@ -170,8 +181,8 @@
       <item quantity="one">اب آپ ایک ڈویلپر بننے سے <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> قدم دور ہیں</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"اشتہارات"</string>
-    <string name="show_dev_on" msgid="612741433124106067">"اب آپ ایک ڈیولپر ہیں!"</string>
-    <string name="show_dev_already" msgid="1522591284776449818">"کوئی ضرورت نہیں ہے، آپ پہلے سے ہی ایک ڈیولپر ہیں"</string>
+    <string name="show_dev_on" msgid="612741433124106067">"اب آپ ایک ڈویلپر ہیں!"</string>
+    <string name="show_dev_already" msgid="1522591284776449818">"کوئی ضرورت نہیں ہے، آپ پہلے سے ہی ایک ڈویلپر ہیں"</string>
     <string name="device_info_default" msgid="2374506935205518448">"نامعلوم"</string>
     <string name="selinux_status" msgid="1146662734953021410">"SELinux کا اسٹیٹس"</string>
     <string name="selinux_status_disabled" msgid="4027105362332795142">"غیر فعال"</string>
@@ -193,7 +204,7 @@
     <string name="sim_status_title" msgid="1704273079796640946">"SIM کا اسٹیٹس"</string>
     <string name="imei_information_title" msgid="3790368306353698724">"IMEI کی معلومات"</string>
     <string name="status_bt_address" msgid="7190052214963950844">"بلوٹوتھ پتہ"</string>
-    <string name="status_up_time" msgid="1758102680983108313">"چلنے کا وقت"</string>
+    <string name="status_up_time" msgid="1758102680983108313">"آلہ اتنی دیر سے چل رہا ہے"</string>
     <string name="legal_information" msgid="1087445528481370874">"قانونی معلومات"</string>
     <string name="copyright_title" msgid="5879660711078649518">"کاپی رائٹ"</string>
     <string name="license_title" msgid="4032466200355435641">"لائسنس"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"اچھی"</item>
     <item msgid="6005053494500517261">"عمدہ ترین"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC پتہ"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"آلہ کا MAC پتہ"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"بے ترتیب MAC پتہ"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"سگنل کی مضبوطی"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"رازداری"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"بے ترتیب MAC کا استعمال کریں (ڈیفالٹ)"</item>
+    <item msgid="2490415280467390067">"آلہ کا MAC استعمال کریں"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"دستیاب نہیں ہے"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"بے ترتیب MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP پتہ"</string>
     <string name="title_ssid" msgid="255328048344188682">"‫Wi-Fi نیٹ ورک کا نام درج کریں"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"انٹرنیٹ کنکشن"</string>
@@ -636,7 +655,7 @@
     <string name="app_sees_restricted_accounts_and_controlled_by" msgid="1261056180558324892">"یہ ایپ آپ کے اکاؤنٹ تک رسائی حاصل کر سکتی ہے۔ <xliff:g id="APP">%1$s</xliff:g> کے ذریعے کنٹرول کردہ"</string>
     <string name="pin_enter_unlock_channel" msgid="243855138978654080">"یہ چینل دیکھنے کیلئے PIN درج کریں"</string>
     <string name="pin_enter_unlock_program" msgid="275489015420025531">"یہ پروگرام دیکھنے کیلئے PIN درج کریں"</string>
-    <string name="pin_enter_pin" msgid="5020029261153234751">"PIN درج کریں"</string>
+    <string name="pin_enter_pin" msgid="5020029261153234751">"‫PIN درج کریں"</string>
     <string name="pin_enter_new_pin" msgid="1930944619313642621">"ایک نیا PIN سیٹ کریں"</string>
     <string name="pin_enter_again" msgid="7615050143778858658">"نیا PIN دوبارہ درج کریں"</string>
     <string name="pin_enter_old_pin" msgid="5665265735227617942">"پرانا PIN درج کریں"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"خود کار طور بحال کریں"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"آلہ کو دوبارہ ترتیب دیں"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"اس سے آپ کے Google اکاؤنٹ، سسٹم اور ایپ ڈیٹا اور سیٹنگز اور ڈاؤن لوڈ کردہ ایپس سمیت، آپ کے آلہ کے داخلی اسٹوریج سے سبھی ڈیٹا مٹ جائے گا۔"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"اپنی سبھی ذاتی معلومات اور ڈاؤن لوڈ کردہ ایپس کو مٹائیں؟ آپ اس عمل کو لوٹا نہیں سکتے ہیں!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"اس آلہ پر اپنی سبھی ذاتی معلومات اور ڈاؤن لوڈ کردہ ایپس مٹائیں؟ آپ اس عمل کو لوٹا نہیں سکتے ہیں!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"ہر چیز مٹا دیں"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"اپنے <xliff:g id="DEVICEMODEL">%1$s</xliff:g> کیلئے کوئی نام منتخب کریں"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"دوسرے آلات سے کاسٹ یا منسلک کرتے وقت اس کی شناخت کیلئے اپنے آلے کو ایک نام دیں۔"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"ڈیٹا سیور"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"کم موبائل ڈیٹا استعمال کرنے کے ليے ویڈیو کے معیار کو خودکار طور پر ایڈجسٹ کریں"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"ڈیٹا کا استعمال اور الرٹس"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"کارروائی کی اجازت نہیں ہے"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"والیوم تبدیل نہیں کر سکتے"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"کال کرنے کی اجازت نہیں ہے"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS کی اجازت نہیں ہے"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"کیمرے کی اجازت نہیں ہے"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"اسکرین شاٹ کی اجازت نہیں ہے"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"اس ایپ کو نہیں کھولا جا سکتا"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"اگر آپ کے پاس سوالات ہیں، تو اپنے IT منتظم سے رابطہ کریں"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> کے ساتھ استعمال کیا جانے والا آلہ"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"کوئی آلہ نہیں ملا۔ یقینی بنائیں کہ آلات آن ہیں اور منسلک کرنے کے لیے دستیاب ہیں۔"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"پھر آزمائیں"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"کچھ غلط ہو گیا۔ ایپلیکیشن نے آلہ کو منتخب کرنے کی درخواست کو منسوخ کر دیا ہے۔"</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"کنکشن کامیاب"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"سبھی دکھائیں"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"تلاش کر رہا ہے"</string>
 </resources>

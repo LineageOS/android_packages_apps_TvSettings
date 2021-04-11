@@ -39,6 +39,7 @@
       <item quantity="few"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> računa</item>
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> računa</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Medijske usluge, Asistent, Plaćanja"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Mreža i internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Zvuk"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplikacije"</string>
@@ -50,7 +51,12 @@
       <item quantity="few"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> periferna uređaja</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> perifernih uređaja</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Pomoć i povratne informacije"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Ekran i zvuk"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Pomoć i povratne informacije"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Privatnost"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Postavke uređaja"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Postavke aplikacije"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Lokacija, Korištenje i dijagnostika, Oglasi"</string>
     <string name="add_account" msgid="7386223854837017129">"Dodaj račun"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Ukloni račun"</string>
     <string name="account_sync" msgid="4315295293211313989">"Odaberite sinhronizirane aplikacije"</string>
@@ -85,6 +91,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Onemogućene aplikacije"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Čuvar ekrana"</string>
     <string name="device_display" msgid="244634591698925025">"Prikaz"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Ekran i zvuk"</string>
     <string name="device_sound" msgid="8616320533559404963">"Zvuk"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Okružujući zvuk"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Sistemski zvukovi"</string>
@@ -106,6 +113,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automatski: koriste se podržani formati (preporučeno)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Nijedno: nikada se ne koristi okružujući zvuk"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Ručno: odabir koji formati će se koristiti"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Ekran"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Napredne postavke ekrana"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Napredne postavke zvuka"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Dozvolite način rada za igre"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Želite li obrisati keširane podatke?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Ovim će se obrisati keširani podaci za sve aplikacije."</string>
     <string name="accessories_add" msgid="413764175035531452">"Dodaj periferni uređaj"</string>
@@ -134,7 +145,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Obično 0000 ili 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Upari"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Otkaži"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Kreiraj izvještaj o greškama"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Slanje povratnih informacija"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centar za pomoć"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Datum i vrijeme"</string>
@@ -184,7 +195,7 @@
     <string name="device_status" msgid="8266002761193692207">"Status"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Mreža, serijski brojevi i druge informacije"</string>
     <string name="manual" msgid="5683935624321864999">"Priručnik"</string>
-    <string name="regulatory_information" msgid="9107675969694713391">"Regulatorne informacije"</string>
+    <string name="regulatory_information" msgid="9107675969694713391">"Informacije o propisima"</string>
     <string name="device_feedback" msgid="4871903271442960465">"Slanje informacija o uređaju"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"ID opreme"</string>
     <string name="baseband_version" msgid="5618116741093274294">"Verzija nemoduliranog signala"</string>
@@ -208,8 +219,16 @@
     <item msgid="2713050260700175954">"Dobar"</item>
     <item msgid="6005053494500517261">"Odličan"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC adresa"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"MAC adresa uređaja"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Nasumično odabrana MAC adresa"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Jačina signala"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Privatnost"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Koristi nasumično odabranu MAC adresu (zadano)"</item>
+    <item msgid="2490415280467390067">"Koristi MAC adresu uređaja"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Nije dostupno"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Nasumično odabrani MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP adresa"</string>
     <string name="title_ssid" msgid="255328048344188682">"Unesite naziv WiFi mreže"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Internetska veza"</string>
@@ -331,7 +350,7 @@
     <string name="storage_wizard_format_as_private_title" msgid="7985715762649933211">"Formatiranje kao uređaj za pohranu"</string>
     <string name="storage_wizard_format_as_private_description" msgid="6143406934742456154">"Radi sigurnosti, za ovo je potrebno formatirati USB disk. Nakon sigurnog formatiranja disk će raditi samo s ovim uređajem. Formatiranjem potpuno brišete sve podatke koji su trenutno pohranjeni na njemu. Da izbjegnete gubitak podataka, predlažemo izradu sigurnosne kopije."</string>
     <string name="storage_wizard_format_as_public_title" msgid="3546915348149438389">"Brisanje i formatiranje"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"Nakon formatiranja, ovaj USB disk možete koristiti na drugim uređajima. Svi podaci će se potpuno izbrisati. Predlažemo da prvo napravite sigurnosnu kopiju premještanjem aplikacija na pohranu drugog uređaja."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"Nakon formatiranja, ovaj USB disk možete koristiti na drugim uređajima. Svi podaci će se potpuno izbrisati. Predlažemo da prvo napravite sigurnosnu kopiju premještanjem aplikacija u drugu pohranu uređaja."</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"Formatiranje USB diska…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"Ovo će kratko potrajati. Nemojte uklanjati disk."</string>
     <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"Odaberite pohranu na koju ćete migrirati podatke"</string>
@@ -351,7 +370,7 @@
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="7763611380573099978">"Aplikacije i podaci pohranjeni na uređaju <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="5741521038349239359">"Dostupno je <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_private_title" msgid="1336088625197134497">"Izbacivanje pohrane uređaja"</string>
-    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"Aplikacije na pohrani ovog uređaja prestat će raditi kada ga izbacite. Ovaj USB uređaj je formatiran za rad samo na ovom uređaju i neće raditi na drugim uređajima."</string>
+    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"Aplikacije u pohrani ovog uređaja prestat će raditi kada ga izbacite. Ovaj USB disk je formatiran za rad samo na ovom uređaju i neće raditi na drugim uređajima."</string>
     <string name="storage_wizard_eject_progress_title" msgid="6025569356827683446">"Izbacivanje uređaja <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="6504922588346440942">"Iskorištena memorija"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7058465372227392453">"Premještanje aplikacije <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -484,7 +503,7 @@
     <string name="system_always_check" msgid="384870282800221580">"Uvijek provjeri"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Bluetooth HCI zapisivanje"</string>
     <string name="system_email_address" msgid="3725494874473757217">"Adresa e-pošte"</string>
-    <string name="system_usb_debugging" msgid="2158285492172755923">"Otklanjanje grešaka putem uređaja spojenog na USB"</string>
+    <string name="system_usb_debugging" msgid="2158285492172755923">"Otklanjanje grešaka putem USB-a"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Dozvoli lažne lokacije"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Odabir aplikacije za otklanjanje grešaka"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Čekanje na program za otklanjanje grešaka"</string>
@@ -576,7 +595,7 @@
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Promijeni naziv"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"WiFi ekran"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"Potreban je PIN"</string>
-    <string name="whichApplication" msgid="4510042089342879264">"Završavanje radnje pomoću"</string>
+    <string name="whichApplication" msgid="4510042089342879264">"Završite radnju pomoću aplikacije"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"Želite li uvijek koristiti ovu opciju za ovu radnju?"</string>
     <string name="alwaysUseOption" msgid="8799609235198714441">"Uvijek koristi"</string>
     <string name="justOnceOption" msgid="6714005843102804865">"Samo ovaj put"</string>
@@ -698,8 +717,8 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"Napravi sigurnosnu kopiju računa"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Automatsko vraćanje"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Vrati uređaj na zadano"</string>
-    <string name="factory_reset_description" msgid="4448783644897046471">"Ovim će se potpuno izbrisati svi podaci iz unutrašnje memorije uređaja, uključujući: vaš Google račun, podatke i postavke sistema i aplikacija i preuzete aplikacije."</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Želite li izbrisati sve lične podatke i preuzete aplikacije? Ovu radnju ne možete opozvati!"</string>
+    <string name="factory_reset_description" msgid="4448783644897046471">"Ovim će se potpuno izbrisati svi podaci iz unutrašnje pohrane uređaja, uključujući: vaš Google račun, podatke i postavke sistema i aplikacija i preuzete aplikacije."</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Izbrisati sve vaše lične informacije i preuzete aplikacije s ovog uređaja? Ovu radnju ne možete opozvati!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Izbriši sve"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Odaberite naziv za uređaj <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Dajte svom uređaju naziv radi lakše identifikacije prilikom emitiranja ili povezivanja s drugih uređaja."</string>
@@ -773,4 +792,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Ušteda podataka"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Automatski podesite kvalitet videozapisa radi uštede mobilnih podataka"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Prijenos podataka i obavještenja"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Radnja nije dozvoljena"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Nije moguće promijeniti jačinu zvuka"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Pozivanje nije dozvoljeno"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS poruka nije dozvoljena"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Kamera nije dozvoljena"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Snimak ekrana nije dozvoljen"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Nije moguće otvoriti aplikaciju"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Ako imate pitanja, obratite se IT administratoru"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Korištenje uređaja s aplikacijom <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Nije pronađen nijedan uređaj. Provjerite jesu li uređaji uključeni i dostupni za povezivanje."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Pokušaj ponovo"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Nešto se dogodilo. Ova aplikacija je otkazala zahtjev za odabir uređaja."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Povezivanje je uspjelo"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Prikaži sve"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Pretraživanje"</string>
 </resources>

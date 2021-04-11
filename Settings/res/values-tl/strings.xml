@@ -38,6 +38,7 @@
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> account</item>
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> na account</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Mga serbisyo ng media, Assistant, Payments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Network at Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Tunog"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Mga App"</string>
@@ -48,7 +49,12 @@
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> accessory</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> na accessory</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Tulong at feedback"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Display at Tunog"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Tulong at Feedback"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Privacy"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Mga Setting ng Device"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Mga Setting ng App"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Lokasyon, Paggamit at Diagnostics, Mga Ad"</string>
     <string name="add_account" msgid="7386223854837017129">"Magdagdag ng account"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Alisin ang account"</string>
     <string name="account_sync" msgid="4315295293211313989">"Pumili ng naka-sync na apps"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Mga naka-disable na app"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Screen saver"</string>
     <string name="device_display" msgid="244634591698925025">"Display"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Display at Tunog"</string>
     <string name="device_sound" msgid="8616320533559404963">"Tunog"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Surround sound"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Mga tunog ng system"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Auto: Gamitin ang format na suportado ayon sa device (inirerekomenda)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Wala: Huwag kailanman gumamit ng surround sound"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manual: Piliin ang mga gagamiting format"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Display"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Advanced na mga setting ng display"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Advanced na mga setting ng tunog"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Payagan ang game mode"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"I-clear ang naka-cache na data?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"I-clear nito ang naka-cache na data para sa app."</string>
     <string name="accessories_add" msgid="413764175035531452">"Magdagdag ng accessory"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Karaniwang 0000 o 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Makipagpares"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Kanselahin"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Kunin ang ulat ng bug"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Magpadala ng feedback"</string>
     <string name="launch_help" msgid="2607478763131952469">"Help Center"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Petsa at oras"</string>
@@ -193,7 +204,7 @@
     <string name="sim_status_title" msgid="1704273079796640946">"Status ng SIM"</string>
     <string name="imei_information_title" msgid="3790368306353698724">"Impormasyon ng IMEI"</string>
     <string name="status_bt_address" msgid="7190052214963950844">"Address ng bluetooth"</string>
-    <string name="status_up_time" msgid="1758102680983108313">"Oras na naka-up"</string>
+    <string name="status_up_time" msgid="1758102680983108313">"Up time"</string>
     <string name="legal_information" msgid="1087445528481370874">"Legal na impormasyon"</string>
     <string name="copyright_title" msgid="5879660711078649518">"Copyright"</string>
     <string name="license_title" msgid="4032466200355435641">"Lisensya"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"Mahusay"</item>
     <item msgid="6005053494500517261">"Napakahusay"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC address"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"MAC address ng device"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Naka-randomize na MAC address"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Lakas ng signal"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Privacy"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Gamitin ang na-randomize na MAC (default)"</item>
+    <item msgid="2490415280467390067">"Gamitin ang MAC ng device"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Hindi available"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Na-randomize na MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP address"</string>
     <string name="title_ssid" msgid="255328048344188682">"Ilagay ang pangalan ng Wi-Fi network"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Koneksyon sa internet"</string>
@@ -368,7 +387,7 @@
     <string name="invalid_location" msgid="5571789982293787489">"Hindi wasto ang lokasyon ng pag-install."</string>
     <string name="system_package" msgid="8276098460517049146">"Hindi ma-install ang mga pag-update sa system sa external media."</string>
     <string name="move_error_device_admin" msgid="4144472536756635173">"Hindi ma-install ang Administrator ng Device sa external na media."</string>
-    <string name="learn_more_action" msgid="7972102006620925604">"Matuto nang higit pa"</string>
+    <string name="learn_more_action" msgid="7972102006620925604">"Matuto pa"</string>
     <string name="system_date" msgid="2503462662633178207">"Petsa"</string>
     <string name="system_time" msgid="8434726081412227535">"Oras"</string>
     <string name="system_set_date" msgid="5815123588301469720">"Itakda ang petsa"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Awtomatikong pagre-restore"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"I-reset ang device"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Buburahin nito ang lahat ng data sa internal storage ng iyong device, kasama ang: iyong Google account, data at mga setting ng system at app, at mga na-download na app"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Burahin ang lahat ng iyong personal na impormasyon at na-download na app? Hindi mo mababawi ang pagkilos na ito!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Burahin ang lahat ng iyong personal na impormasyon at mga na-download na app sa device na ito? Hindi mo mababawi ang pagkilos na ito!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Burahin lahat"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Pumili ng pangalan para sa iyong <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Pangalanan ang iyong device para makatulong na makilala ito kapag nagka-cast o kumokonekta rito mula sa iba pang device."</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Data Saver"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Awtomatikong isaayos ang kalidad ng video para sa mas kaunting mobile data"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Paggamit ng data at mga alerto"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Hindi pinapayagan ang pagkilos"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Hindi mababago ang volume"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Hindi pinapayagan ang pagtawag"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"Hindi pinapayagan ang SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Hindi pinapayagan ang camera"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Hindi pinapayagan ang pag-screenshot"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Hindi mabubuksan ang app na ito"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Kung mayroon kang mga tanong, makipag-ugnayan sa iyong IT admin"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Device na gagamitin sa <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Walang nahanap na device. Tiyaking naka-on at available na kumonekta ang mga device."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Subukan ulit"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Nagkaproblema. Kinansela ng application ang kahilingang pumili ng device."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Nakakonekta na"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Ipakita lahat"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Naghahanap"</string>
 </resources>

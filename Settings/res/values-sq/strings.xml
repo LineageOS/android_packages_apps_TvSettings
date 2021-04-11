@@ -38,6 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> llogari</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> llogari</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Shërbimet e medias, \"Asistenti\", pagesat"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Rrjeti dhe interneti"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Tingulli"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplikacionet"</string>
@@ -48,7 +49,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> aksesorë</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> aksesor</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Ndihma dhe komentet"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Ekrani dhe tingulli"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Ndihmë dhe komente"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Privatësia"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Cilësimet e pajisjes"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Cilësimet e aplikacionit"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Vendndodhja, përdorimi dhe diagnostikimi, reklamat"</string>
     <string name="add_account" msgid="7386223854837017129">"Shto një llogari"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Hiq llogarinë"</string>
     <string name="account_sync" msgid="4315295293211313989">"Zgjidh aplikacionet e sinkronizuara"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Aplikacionet e çaktivizuara"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Mbrojtësi i ekranit"</string>
     <string name="device_display" msgid="244634591698925025">"Ekrani"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Ekrani dhe tingulli"</string>
     <string name="device_sound" msgid="8616320533559404963">"Tingulli"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Tingulli rrethues"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Tingujt e sistemit"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automatike: Përdor formatet që pajisja jote raporton se mbështet (rekomandohet)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Asnjë: Asnjëherë mos përdor tingull rrethues"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuale: Zgjidh se cilat formate do të përdorësh"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Ekrani"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Cilësimet e përparuara të ekranit"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Cilësimet e përparuara të tingullit"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Lejo modalitetin e lojës"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Të pastrohen të dhënat e memories specifike?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Kjo do të pastrojë të dhënat e memories specifike për të gjitha aplikacionet."</string>
     <string name="accessories_add" msgid="413764175035531452">"Shto një aksesor"</string>
@@ -113,7 +124,7 @@
     <string name="accessory_state_canceled" msgid="4794837663402063770">"U anulua"</string>
     <string name="accessory_state_paired" msgid="3296695242499532000">"I çiftuar"</string>
     <string name="accessory_options" msgid="774592782382321681">"Aksesori"</string>
-    <string name="accessory_unpair" msgid="2473411128146068804">"Hiq nga çiftimi"</string>
+    <string name="accessory_unpair" msgid="2473411128146068804">"Anulo çiftimin"</string>
     <string name="accessory_battery" msgid="2283700366184703548">"Bateria <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
     <string name="accessory_unpairing" msgid="2529195578082286563">"Çiftimi i pajisjes po anulohet…"</string>
     <string name="accessory_connected" msgid="5229574480869175180">"U lidh"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Zakonisht 0000 ose 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Çifto"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Anulo"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Merr raportin e defekteve në kod"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Dërgo koment"</string>
     <string name="launch_help" msgid="2607478763131952469">"Qendra e ndihmës"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Data dhe ora"</string>
@@ -166,8 +177,8 @@
     <string name="about_serial" msgid="3432319328808745459">"Numri i serisë"</string>
     <string name="about_build" msgid="1139171613038225768">"Ndërtimi"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other">Tani të duhen edhe <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> hapa që të bëhesh zhvillues</item>
-      <item quantity="one">Tani të duhet edhe <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> hap që të bëhesh zhvillues</item>
+      <item quantity="other">Tani të duhen edhe <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> hapa për t\'u bërë zhvillues</item>
+      <item quantity="one">Tani të duhet edhe <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> hap për t\'u bërë zhvillues</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Reklamat"</string>
     <string name="show_dev_on" msgid="612741433124106067">"Tani je zhvillues!"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"I mirë"</item>
     <item msgid="6005053494500517261">"I shkëlqyer"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"Adresa MAC"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Adresa MAC e pajisjes"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Adresa MAC e rastësishme"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Fuqia e sinjalit"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Privatësia"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Përdor adresë MAC të rastësishme (parazgjedhje)"</item>
+    <item msgid="2490415280467390067">"Përdor adresën MAC të pajisjes"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Nuk ofrohet"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Adresa MAC e rastësishme"</string>
     <string name="title_ip_address" msgid="705842159484772807">"Adresa e IP-së"</string>
     <string name="title_ssid" msgid="255328048344188682">"Fut emrin e rrjetit Wi-Fi"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Lidhje me internetin"</string>
@@ -230,18 +249,18 @@
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"<xliff:g id="SSID">%1$s</xliff:g> nuk mund të gjendej"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Fjalëkalimi i Wi-Fi nuk është i vlefshëm"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Rrjeti Wi-Fi nuk e pranoi lidhjen"</string>
-    <string name="title_wifi_advanced_options" msgid="371185991282743258">"Të konfigurohen përfaqësuesi <xliff:g id="SSID">%1$s</xliff:g> dhe cilësimet e IP-së?"</string>
-    <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Cilësimet e përfaqësuesit"</string>
-    <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Emri i strehuesit të përfaqësuesit:"</string>
-    <string name="title_wifi_proxy_port" msgid="566244407030390328">"Porta e përfaqësuesit:"</string>
-    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"Anashkalo përfaqësuesin për:"</string>
+    <string name="title_wifi_advanced_options" msgid="371185991282743258">"Të konfigurohen proxy <xliff:g id="SSID">%1$s</xliff:g> dhe cilësimet e IP-së?"</string>
+    <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Cilësimet e proxy-it"</string>
+    <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Emri pritës i proxy-it:"</string>
+    <string name="title_wifi_proxy_port" msgid="566244407030390328">"Porta e proxy-it:"</string>
+    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"Anashkalo proxy-in për:"</string>
     <string name="title_wifi_ip_settings" msgid="296029383749112888">"Cilësimet e IP-së"</string>
     <string name="title_wifi_ip_address" msgid="5505806431042689276">"Adresa IP:"</string>
     <string name="title_wifi_gateway" msgid="4496416267930824360">"Porta e kalimit:"</string>
     <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"Gjatësia e prefiksit të rrjetit:"</string>
     <string name="title_wifi_dns1" msgid="1585965227665007553">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="4563319371301555072">"DNS 2:"</string>
-    <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Cilësimet e përfaqësuesit nuk janë të vlefshme"</string>
+    <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Cilësimet e proxy-it nuk janë të vlefshme"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Cilësimet e IP-së nuk janë të vlefshme"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> është një rrjet i ruajtur"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Provo përsëri"</string>
@@ -278,7 +297,7 @@
     <string name="proxy_error_empty_port" msgid="692020249267351015">"Fusha e portës nuk mund të jetë bosh"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"Nëse fusha e strehuesit është bosh, lëre bosh fushën e portës"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Porta nuk është e vlefshme"</string>
-    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Përfaqësuesi HTTP përdoret nga shfletuesi, por nuk mund të përdoret nga aplikacionet e tjera"</string>
+    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Proxy i HTTP-së përdoret nga shfletuesi, por nuk mund të përdoret nga aplikacionet e tjera"</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"Fut një portë të vlefshme.\nShembull: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Fut një listë të ndarë me presje për domenet e përjashtuara ose lëre bosh.\nShembull: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"Fut një emër të vlefshëm të strehuesit.\nShembull: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -400,7 +419,7 @@
     <string name="location_services" msgid="551503779736382878">"Shërbimet e vendndodhjes"</string>
     <string name="on" msgid="4899322147062342542">"Aktive"</string>
     <string name="off" msgid="3127416478888499352">"Joaktive"</string>
-    <string name="google_location_services_title" msgid="6304196603522909239">"Shërbimet e vendndodhjes së Google"</string>
+    <string name="google_location_services_title" msgid="6304196603522909239">"Shërbimet e vendndodhjes të Google"</string>
     <string name="third_party_location_services_title" msgid="2826218400381676508">"Shërbimet e vendndodhjes së palës së tretë"</string>
     <string name="location_reporting" msgid="3552501333650895634">"Raportimi i vendndodhjes"</string>
     <string name="location_history" msgid="4055660203090513120">"Historiku i vendndodhjeve"</string>
@@ -481,7 +500,7 @@
     <string name="system_always_check" msgid="384870282800221580">"Kontrollo gjithmonë"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Regjistrimi i Bluetooth HCI"</string>
     <string name="system_email_address" msgid="3725494874473757217">"Adresa e email-it"</string>
-    <string name="system_usb_debugging" msgid="2158285492172755923">"Korrigjimi i USB-së"</string>
+    <string name="system_usb_debugging" msgid="2158285492172755923">"Korrigjimi përmes USB-së"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Lejo vendndodhje të simuluara"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Zgjidh aplikacionin e korrigjimit"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Prit për korrigjuesin"</string>
@@ -527,7 +546,7 @@
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Burime të panjohura"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Lejo instalimin e aplikacioneve nga burime të ndryshme nga \"Dyqani i Play\""</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Lejo burimet e panjohura"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Pajisja dhe të dhënat e tua personale janë më të cenueshme për t\'u sulmuar nga aplikacione nga burime të panjohura. Ti pranon se je plotësisht përgjegjës për çdo dëm ndaj pajisjes ose çdo humbje të dhënash që mund të rezultojë nga përdorimi i këtyre aplikacioneve."</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Pajisja dhe të dhënat e tua personale janë më të cenueshme nga sulmet nga aplikacione nga burime të panjohura. Ti pranon se je përgjegjës për çdo dëm ndaj pajisjes ose çdo humbje të të dhënave që mund të rezultojë nga përdorimi i këtyre aplikacioneve."</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Asnjëherë"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"Për përmbajtjen DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Gjithmonë"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Restaurimi automatik"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Rivendos pajisjen"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Kjo do të spastrojë të gjitha të dhënat nga hapësira ruajtëse e brendshme e pajisjes, duke përfshirë: llogarinë tënde të Google, të dhënat dhe cilësimet e sistemit dhe të aplikacioneve, si dhe aplikacionet e shkarkuara"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Të spastrohen të gjitha informacionet personale dhe aplikacionet e shkarkuara? Nuk mund ta kthesh prapa këtë veprim!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Do t\'i spastrosh të gjitha informacionet personale dhe aplikacionet e shkarkuara në këtë pajisje? Këtë veprim nuk mund ta kthesh mbrapsht!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Spastroji të gjitha"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Zgjidh një emër për pajisjen tënde <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Jepi një emër pajisjes sate për të ndihmuar ta identifikosh atë kur transmeton ose kur lidhesh me të nga pajisjet e tjera."</string>
@@ -724,8 +743,8 @@
     <string name="manage_keyboards" msgid="7983890675377321912">"Menaxho tastierat"</string>
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"Lejohet"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"Nuk lejohet"</string>
-    <string name="usage_access" msgid="8402350645248312782">"Qasja në përdorim"</string>
-    <string name="usage_access_description" msgid="3276026988575551587">"Qasja në përdorim lejon që një aplikacion të gjurmojë se çfarë përdorin aplikacionet e tjera dhe sa shpesh e përdorin, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
+    <string name="usage_access" msgid="8402350645248312782">"Qasja te përdorimi"</string>
+    <string name="usage_access_description" msgid="3276026988575551587">"Qasja te përdorimi lejon që një aplikacion të gjurmojë se çfarë përdorin aplikacionet e tjera dhe sa shpesh e përdorin, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"Optimizimi i energjisë"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"Optimizo përdorimin e energjisë nga aplikacionet"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"Asnjë aplikacion nuk ka nevojë për optimizim"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Kursyesi i të dhënave"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Rregullo automatikisht cilësinë e videos për të përdorur më pak të dhëna celulare"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Përdorimi i të dhënave dhe sinjalizimet"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Veprimi nuk lejohet"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Volumi nuk mund të ndryshohet"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Telefonata nuk lejohet"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"Mesazhi SMS nuk lejohet"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Kamera nuk lejohet"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Pamja e ekranit nuk lejohet"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Ky aplikacion nuk mund të hapet"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Nëse ke pyetje, kontakto me administratorin e teknologjisë së informacionit"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Pajisja që do të përdoret me <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Nuk u gjet asnjë pajisje. Sigurohu që pajisjet të jenë të ndezura dhe të gatshme për t\'u lidhur."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Provo sërish"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Ndodhi diçka. Aplikacioni ka anuluar kërkesën për të zgjedhur një pajisje."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Lidhja ishte e suksesshme"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Shfaq të gjitha"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Po kërkon"</string>
 </resources>
