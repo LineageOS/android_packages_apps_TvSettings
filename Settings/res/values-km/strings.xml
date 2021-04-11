@@ -38,6 +38,7 @@
       <item quantity="other">គណនី <xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g></item>
       <item quantity="one">គណនី <xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g></item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"សេវាកម្ម​មេឌៀ ជំនួយការ ការបង់ប្រាក់"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"បណ្តាញ និងអ៊ីនធឺណិត"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"សំឡេង"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"កម្មវិធី"</string>
@@ -48,7 +49,12 @@
       <item quantity="other">ឧបករណ៍​បន្ទាប់​បន្សំ <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g></item>
       <item quantity="one">ឧបករណ៍​បន្ទាប់​បន្សំ <xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g></item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"ជំនួយ និង​មតិកែលម្អ"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"ផ្ទាំងអេក្រង់ និង​សំឡេង"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"ជំនួយ និងមតិកែលម្អ"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"ឯកជនភាព"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"ការកំណត់​ឧបករណ៍"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"ការ​កំណត់​កម្មវិធី​"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"ទីតាំង ការប្រើប្រាស់ និង​ការវិភាគ ការផ្សាយ​ពាណិជ្ជកម្ម"</string>
     <string name="add_account" msgid="7386223854837017129">"បន្ថែម​គណនី"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"លុប​គណនី​​​ចេញ"</string>
     <string name="account_sync" msgid="4315295293211313989">"ជ្រើស​រើស​កម្មវិធី​​​ដែល​បាន​ធ្វើ​សម​កាល​កម្ម"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"កម្មវិធី​ដែល​បាន​បិទ"</string>
     <string name="device_daydream" msgid="2631191946958113220">"ធាតុរក្សាអេក្រង់"</string>
     <string name="device_display" msgid="244634591698925025">"បង្ហាញ"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"ផ្ទាំងអេក្រង់ និង​សំឡេង"</string>
     <string name="device_sound" msgid="8616320533559404963">"សំឡេង"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"សំឡេងជុំវិញ"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"សំឡេង​​ប្រព័ន្ធ"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"ស្វ័យប្រវត្តិ៖ ប្រើ​ទម្រង់​ដែល​ឧបករណ៍​របស់អ្នក​រាយការណ៍ថាអាចប្រើ​បាន​ (បាន​ណែនាំ)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"គ្មាន៖ កុំ​ប្រើ​សំឡេងរងំ"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"ដោយខ្លួន​ឯង៖ ជ្រើសរើស​ទម្រង់​ដែលត្រូវ​ប្រើ"</string>
+    <string name="display_category_title" msgid="247804007525046312">"ផ្ទាំងអេក្រង់"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"ការកំណត់​ផ្ទាំងអេក្រង់​កម្រិតខ្ពស់"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"ការកំណត់​សំឡេង​កម្រិតខ្ពស់"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"អនុញ្ញាត​មុខងារ​ហ្គេម"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"ជម្រះទិន្នន័យក្នុងឃ្លាំងសម្ងាត់?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"វានឹងជម្រះទិន្នន័យឃ្លាំងសម្រាប់កម្មវិធីទាំងអស់។"</string>
     <string name="accessories_add" msgid="413764175035531452">"បន្ថែម​គ្រឿង​បន្ទាប់​បន្សំ"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"តាម​ធម្មតា 0000 ឬ 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ផ្គូផ្គង"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"បោះបង់"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"យក​របាយការណ៍​អំពីបញ្ហា"</string>
+    <string name="send_feedback" msgid="936698637869795473">"ផ្ញើមតិកែលម្អ"</string>
     <string name="launch_help" msgid="2607478763131952469">"មជ្ឈមណ្ឌលជំនួយ"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"កាលបរិច្ឆេទ &amp; ពេលវេលា"</string>
@@ -182,7 +193,7 @@
     <string name="device_status_summary" msgid="3270932829412434985">"បណ្តាញ លេខស៊េរី និងព័ត៌មានផ្សេងទៀត"</string>
     <string name="manual" msgid="5683935624321864999">"ឯកសារណែនាំ"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"ព័ត៌មានបទប្បញ្ញត្តិ"</string>
-    <string name="device_feedback" msgid="4871903271442960465">"ផ្ដល់មតិអំពីឧបករណ៍នេះ"</string>
+    <string name="device_feedback" msgid="4871903271442960465">"ផ្ដល់​មតិ​កែលម្អ​អំពី​ឧបករណ៍​នេះ"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"លេខសម្គាល់បរិក្ខារ"</string>
     <string name="baseband_version" msgid="5618116741093274294">"កំណែមូលដ្ឋាន៖"</string>
     <string name="kernel_version" msgid="7265509054070001542">"កំណែខឺណែល"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"ល្អ"</item>
     <item msgid="6005053494500517261">"ល្អ​ណាស់"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"អាសយដ្ឋាន MAC"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"អាសយដ្ឋាន MAC ឧបករណ៍"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"អាសយដ្ឋាន MAC ចៃដន្យ"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"កម្លាំង​សញ្ញា"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"ឯកជនភាព"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"ប្រើ MAC ចៃដន្យ (លំនាំដើម)"</item>
+    <item msgid="2490415280467390067">"ប្រើ MAC ឧបករណ៍"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"មិនមានទេ"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"​MAC ចៃដន្យ"</string>
     <string name="title_ip_address" msgid="705842159484772807">"អាសយដ្ឋាន IP"</string>
     <string name="title_ssid" msgid="255328048344188682">"បញ្ចូល​ឈ្មោះ​បណ្ដាញ Wi-Fi"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"ការ​តភ្ជាប់​អ៊ីនធឺណិត"</string>
@@ -567,7 +586,7 @@
     <string name="title_current_autofill_service" msgid="9029001041887283153">"សេវាកម្មបំពេញដោយស្វ័យប្រវត្តិបច្ចុប្បន្ន"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"ជ្រើសរើស​សេវាកម្ម​បំពេញ​ដោយ​ស្វ័យប្រវត្តិ"</string>
     <string name="autofill_none" msgid="1615056985649424207">"គ្មាន"</string>
-    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;ត្រូវ​ប្រាកដថា​អ្នក​ជឿជាក់​លើ​កម្មវិធី​នេះ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=សេវាកម្ម​ពាក្យសម្ងាត់&gt;%1$s&lt;/xliff:g&gt; ប្រើប្រាស់​អ្វី​ដែល​មាននៅ​លើ​អេក្រង់​របស់អ្នក ដើម្បី​កំណត់​អ្វីដែល​អាចបំពេញ​ដោយ​ស្វ័យប្រវត្តិ។"</string>
+    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;ត្រូវ​ប្រាកដថា​អ្នក​ទុកចិត្ត​កម្មវិធី​នេះ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=សេវាកម្ម​ពាក្យសម្ងាត់&gt;%1$s&lt;/xliff:g&gt; ប្រើប្រាស់​អ្វី​ដែល​មាននៅ​លើ​អេក្រង់​របស់អ្នក ដើម្បី​កំណត់​អ្វីដែល​អាចបំពេញ​ដោយ​ស្វ័យប្រវត្តិ។"</string>
     <string name="computing_size" msgid="8623916230485437579">"កំពុង​គណនា..."</string>
     <string name="title_select_wifi_network" msgid="935820896444071617">"ជ្រើស​បណ្ដាញ​វ៉ាយហ្វាយ​របស់​អ្នក"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"ប្ដូរ​ឈ្មោះ"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"ស្តារដោយស្វ័យប្រវត្តិ"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"កំណត់​ឧបករណ៍​ឡើងវិញ"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"ការធ្វើបែបនេះនឹងលុបទិន្នន័យទាំងអស់ពីឧបករណ៍ផ្ទុកខាងក្នុងនៃឧបករណ៍របស់អ្នក រួមទាំងគណនី Google, ការកំណត់ និងទិន្នន័យកម្មវិធី និង​ប្រព័ន្ធ ក៏ដូចជាកម្មវិធីដែលបានទាញយករបស់អ្នក​ផងដែរ។"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"លុប​ព័ត៌មាន​ផ្ទាល់ខ្លួន និង​កម្មវិធី​ដែល​បាន​​ទាញ​យកទាំងអស់របស់អ្នកមែនទេ? អ្នក​មិន​អាច​​ត្រឡប់​សកម្មភាព​នេះ​វិញ​បាន​ទេ!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"លុប​ព័ត៌មាន​ផ្ទាល់ខ្លួន និង​កម្មវិធី​ដែលបាន​ទាញយក​ទាំងអស់​របស់អ្នក​នៅលើ​ឧបករណ៍នេះ​ឬ? អ្នក​មិនអាច​ត្រឡប់​សកម្មភាព​នេះវិញ​បានទេ!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"លុប​​​ទាំងអស់"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"ជ្រើសរើសឈ្មោះសម្រាប់ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> របស់អ្នក"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"ដាក់​ឈ្មោះ​ឱ្យ​ឧបករណ៍​របស់​អ្នក ដើម្បី​ជួយ​កំណត់​អត្តសញ្ញាណ​វា​នៅពេល​ធ្វើ​ការ​បញ្ជូន ឬ​ភ្ជាប់វា​ពី​ឧបករណ៍​ផ្សេង​ទៀត​។"</string>
@@ -724,7 +743,7 @@
     <string name="manage_keyboards" msgid="7983890675377321912">"គ្រប់គ្រងក្តារចុច"</string>
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"បានអនុញ្ញាត"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"មិន​បាន​អនុញ្ញាត"</string>
-    <string name="usage_access" msgid="8402350645248312782">"ការចូលទៅកាន់ការប្រើប្រាស់"</string>
+    <string name="usage_access" msgid="8402350645248312782">"ចូលប្រើប្រាស់"</string>
     <string name="usage_access_description" msgid="3276026988575551587">"ការចូលទៅកាន់ការប្រើប្រាស់អនុញ្ញាតឲ្យកម្មវិធីតាមដានថាតើអ្នកកំពុងប្រើកម្មវិធីដទៃទៀតណាខ្លះ និងប្រើញឹកញាប់កម្រិតណា ហើយវាក៏តាមដានក្រុមហ៊ុនបម្រើសេវាទូរសព្ទ ការកំណត់ភាសា និងព័ត៌មានលម្អិតផ្សេងទៀតរបស់អ្នកផងដែរ។"</string>
     <string name="high_power_apps" msgid="5841073958519976562">"ការ​បង្កើន​ប្រសិទ្ធភាព​ថាមពល"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"បង្កើន​ប្រសិទ្ធភាព​នៃ​ការ​ប្រើ​ប្រាស់ថាមពល​របស់កម្មវិធី"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"កម្មវិធី​សន្សំសំចៃ​ទិន្នន័យ"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"កែតម្រូវ​គុណភាពវីដេអូ​ដោយស្វ័យប្រវត្តិ ដើម្បីប្រើទិន្នន័យ​ទូរសព្ទចល័ត​តិចជាងមុន"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"ការប្រើប្រាស់​ទិន្នន័យ និងការជូនដំណឹង"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"សកម្មភាពមិនអនុញ្ញាត"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"មិនអាចផ្លាស់ប្ដូរកម្រិតសំឡេងបានទេ"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"មិន​អនុញ្ញាតឲ្យហៅទូរសព្ទទេ"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"មិនអនុញ្ញាតសារ SMS ទេ"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"មិនអនុញ្ញាតឲ្យប្រើកាមេរ៉ាទេ"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"មិនអនុញ្ញាតឲ្យប្រើមុខងារថតអេក្រង់ទេ"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"មិន​អាច​បើកកម្មវិធី​នេះបាន​ទេ"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"ប្រសិនបើ​អ្នកមាន​សំណួរ សូម​ទាក់ទង​ទៅ​អ្នកគ្រប់គ្រង​ផ្នែកព័ត៌មានវិទ្យា​របស់អ្នក"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"ឧបករណ៍​សម្រាប់ប្រើ​ជាមួយ <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"រកមិន​ឃើញ​ឧបករណ៍ទេ។ សូម​ប្រាកដថា​ឧបករណ៍​បានបើក និងអាច​ភ្ជាប់បាន។"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"ព្យាយាមម្ដងទៀត"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"មាន​បញ្ហា​អ្វីមួយ។ កម្មវិធី​បាន​បោះបង់សំណើ​ក្នុងការ​ជ្រើសរើស​ឧបករណ៍។"</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"ការតភ្ជាប់​ទទួលបាន​ជោគជ័យ​ហើយ"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"បង្ហាញ​ទាំងអស់"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"កំពុង​ស្វែងរក"</string>
 </resources>

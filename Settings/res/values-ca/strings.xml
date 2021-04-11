@@ -38,6 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> comptes</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> compte</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Serveis multimèdia, Assistent, Pagaments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Xarxa i Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"So"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplicacions"</string>
@@ -48,7 +49,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> accessoris</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> accessori</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Ajuda i suggeriments"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Imatge i so"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Ajuda i suggeriments"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Privadesa"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Configuració del dispositiu"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Configuració de l\'aplicació"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Ubicació, Ús i diagnòstic, Anuncis"</string>
     <string name="add_account" msgid="7386223854837017129">"Afegeix un compte"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Suprimeix el compte"</string>
     <string name="account_sync" msgid="4315295293211313989">"Tria aplicacions sincronitzades"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Aplicacions desactivades"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Estalvi de pantalla"</string>
     <string name="device_display" msgid="244634591698925025">"Pantalla"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Pantalla i so"</string>
     <string name="device_sound" msgid="8616320533559404963">"So"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"So envoltant"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Sons del sistema"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Auto: utilitza formats que el dispositiu indica que admet (recomanat)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Cap: no utilitzis mai so envoltant"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manual: selecciona quins formats cal fer servir"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Pantalla"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Configuració avançada de la pantalla"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Configuració avançada del so"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Permet el mode de joc"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vols esborrar dades emmagatzem. a memòria cau?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"S\'esborraran dades aplicacions a la memòria cau."</string>
     <string name="accessories_add" msgid="413764175035531452">"Afegeix un accessori"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"En general, 0000 o 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Sincronitza"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancel·la"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Crea un informe d\'errors"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Envia suggeriments"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centre d’ajuda"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Data i hora"</string>
@@ -185,7 +196,7 @@
     <string name="device_feedback" msgid="4871903271442960465">"Envia suggeriments sobre dispositiu"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"Identificador de l\'equip"</string>
     <string name="baseband_version" msgid="5618116741093274294">"Versió de banda base"</string>
-    <string name="kernel_version" msgid="7265509054070001542">"Versió del kernel"</string>
+    <string name="kernel_version" msgid="7265509054070001542">"Versió de kernel"</string>
     <string name="status_unavailable" msgid="2033933928980193334">"No disponible"</string>
     <string name="device_status_title" msgid="9051569510258883673">"Estat"</string>
     <string name="battery_status_title" msgid="8850166742025222210">"Estat de la bateria"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"Bona"</item>
     <item msgid="6005053494500517261">"Excel·lent"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"Adreça MAC"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Adreça MAC del dispositiu"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Adreça MAC aleatòria"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Intensitat del senyal"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Privadesa"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Utilitza una adreça MAC aleatòria (predeterminat)"</item>
+    <item msgid="2490415280467390067">"Utilitza una adreça MAC del dispositiu"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"No disponible"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Adreça MAC aleatòria"</string>
     <string name="title_ip_address" msgid="705842159484772807">"Adreça IP"</string>
     <string name="title_ssid" msgid="255328048344188682">"Escriu el nom de la xarxa Wi-Fi"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Connexió a Internet"</string>
@@ -507,7 +526,7 @@
     <string name="system_show_all_anrs" msgid="5353216640638263217">"Mostra totes les ANR"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"Desactiva el repòs"</string>
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"Utilitza només per al contingut DRM"</string>
-    <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"Optimitza la pantalla per obtenir la millor resolució o el millor percentatge de fotogrames per segon. Això només afecta les pantalles Ultra HD. Si canvies aquesta opció, el dispositiu es reiniciarà."</string>
+    <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"Optimitza la pantalla per obtenir la màxima resolució o la màxima freqüència d\'imatge. Això només afecta les pantalles Ultra HD. Si canvies aquesta opció, el dispositiu es reiniciarà."</string>
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Activa el registre de cerca HCI de Bluetooth"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Mode de depuració quan l\'USB està connectat"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"L\'aplicació depurada espera que es connecti el depurador abans d\'executar-se"</string>
@@ -692,14 +711,14 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Restauració automàtica"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Restableix el dispositiu"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Aquesta acció esborrarà totes les dades de l\'emmagatzematge intern del dispositiu, com ara el Compte de Google, les dades i la configuració del sistema i de les aplicacions, i les aplicacions baixades"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Vols esborrar tota la informació personal i les aplicacions baixades? Aquesta acció no es pot desfer."</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Vols esborrar tota la informació personal i les aplicacions baixades d\'aquest dispositiu? Aquesta acció no es pot desfer."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Esborra-ho tot"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Tria un nom per al teu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Assigna un nom al teu dispositiu per ajudar-te a identificar-lo quan estigui emetent contingut o t\'hi connectis des d\'altres dispositius."</string>
   <string-array name="rooms">
     <item msgid="6590829789532602097">"Android TV"</item>
     <item msgid="1140506340411482365">"Televisor del menjador"</item>
-    <item msgid="6448060889026244632">"Televisor de la sala d\'estar"</item>
+    <item msgid="6448060889026244632">"Televisor de la saleta"</item>
     <item msgid="3336274213215419228">"Televisor del dormitori"</item>
   </string-array>
     <string name="custom_room" msgid="6798144004583173563">"Introdueix un nom personalitzat…"</string>
@@ -748,7 +767,7 @@
     <string name="write_settings_off" msgid="6730113471695092167">"No"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Pantalla en pantalla"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Permet Pantalla en pantalla"</string>
-    <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Cap de les aplicacions instal·lades no admet la funció de pantalla en pantalla"</string>
+    <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Cap de les aplicacions instal·lades no admet pantalla en pantalla"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Permet que les aplicacions creïn una finestra de pantalla en pantalla mentre estan obertes o després de sortir-ne (per exemple, per seguir veient un vídeo). Aquesta finestra es mostra sobre altres aplicacions que estàs utilitzant."</string>
     <string name="special_access" msgid="21806055758289916">"Accés especial d\'aplicacions"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Economitzador de dades"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Ajusta la qualitat del vídeo automàticament per utilitzar menys dades mòbils"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Alertes i ús de dades"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Acció no permesa"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"No es pot canviar el volum"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"No està permès fer trucades"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"No està permès enviar SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"No està permès utilitzar la càmera"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"No està permès fer captures de pantalla"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"No es pot obrir aquesta aplicació"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Si tens cap dubte, contacta amb l\'administrador de TI"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Dispositiu per fer servir amb <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"No s\'ha trobat cap dispositiu. Comprova que els dispositius estiguin activats i disponibles per connectar-s\'hi."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Torna-ho a provar"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"S\'ha produït un error. L\'aplicació ha cancel·lat la sol·licitud per seleccionar un dispositiu."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"S\'ha connectat correctament"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Mostra-ho tot"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"S\'està cercant"</string>
 </resources>

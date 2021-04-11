@@ -38,6 +38,7 @@
       <item quantity="other">အကောင့် <xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> ခု</item>
       <item quantity="one">အကောင့် <xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> ခု</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"မီဒီယာဝန်ဆောင်မှုများ၊ Assistant၊ ပေးချေမှုများ"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"ကွန်ရက်နှင့် အင်တာနက်"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"အသံ"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"အက်ပ်များ"</string>
@@ -48,7 +49,12 @@
       <item quantity="other">ဆက်စပ်ပစ္စည်း <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ခု</item>
       <item quantity="one">ဆက်စပ်ပစ္စည်း <xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ခု</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"အကူအညီနှင့် အကြံပြုချက်"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"ဖန်သားပြင်ပြသမှုနှင့် အသံ"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"အကူအညီနှင့် အကြံပြုချက်"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"ကိုယ်ရေးကိုယ်တာ"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"စက်ဆက်တင်များ"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"အက်ပ်ဆက်တင်များ"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"တည်နေရာ၊ အသုံးပြုမှု၊ အမှားရှာဖွေခြင်းနှင့် ကြော်ငြာများ"</string>
     <string name="add_account" msgid="7386223854837017129">"အကောင့်ထည့်ရန်"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"အကောင့်ကို ဖယ်ရှားရန်"</string>
     <string name="account_sync" msgid="4315295293211313989">"စင့်ခ်လုပ်ထားသည့် အက်ပ်များ ရွေးရန်"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"ပိတ်ထားသော အက်ပ်များ"</string>
     <string name="device_daydream" msgid="2631191946958113220">"ဖန်သားပြင်အသုံးပြုမှု ချွေတာမှုစနစ်"</string>
     <string name="device_display" msgid="244634591698925025">"မြင်ကွင်း"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"ဖန်သားပြင်ပြသမှုနှင့် အသံ"</string>
     <string name="device_sound" msgid="8616320533559404963">"အသံ"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"ပတ်ပတ်လည်အသံစနစ်"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"စနစ်၏ အသံများ"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"အလိုအလျောက်- သင့်စက်က ပံ့ပိုးသည်ဟု အသိပေးထားသော ပုံစံများကို အသုံးပြုပါ (အကြံပြုထားသည်)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"တစ်ခုမျှမဟုတ်- ပတ်လည် အသံစနစ် ဘယ်တော့မှ မသုံးရန်"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"မည်သည့်ပုံစံ အသုံးပြုမည်ကို ကိုယ်တိုင် ရွေးချယ်ရန်"</string>
+    <string name="display_category_title" msgid="247804007525046312">"ဖန်သားပြင်ပြသမှု"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"အဆင့်မြင့် ဖန်သားပြင်ပြသမှု ဆက်တင်များ"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"အဆင့်မြင့် အသံ ဆက်တင်များ"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"ဂိမ်းမုဒ် ခွင့်ပြုခြင်း"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"ကရှ်ဒေတာများကို ရှင်းမည်လား?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"apps အားလုံးအတွက် ကရှ်ဒေတာများကို ရှင်းမည်။"</string>
     <string name="accessories_add" msgid="413764175035531452">"အသုံးအဆောင်များ ထည့်ရန်"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"ပုံမှန်အားဖြင့် ၀၀၀၀ သို့မဟုတ် ၁၂၃၄"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ချိတ်တွဲရန်"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"မလုပ်တော့"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"ချွတ်ယွင်းမှု အစီရင်ခံစာ ယူရန်"</string>
+    <string name="send_feedback" msgid="936698637869795473">"အကြံပြုချက် ပို့ရန်"</string>
     <string name="launch_help" msgid="2607478763131952469">"ကူညီရေးဌာန"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"နေ့စွဲနှင့် အချိန်"</string>
@@ -170,7 +181,7 @@
       <item quantity="one">သင်သည် ယခု ပြုစုသူ တစ်ဦး ဖြစ်လာရန် ခြေလှမ်း <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> သာလိုပါတော့သည်</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"ကြော်ငြာများ"</string>
-    <string name="show_dev_on" msgid="612741433124106067">"သင်သည် ယခု ပြုစုသူတစ်ဦး ဖြစ်လာပြီ!"</string>
+    <string name="show_dev_on" msgid="612741433124106067">"သင်သည် ယခု ဆော့ဖ်ဝဲအင်ဂျင်နီယာ တစ်ဦး ဖြစ်နေပါပြီ။"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"မလိုတော့ပါ၊ သင်သည် ပြုစုသူ တစ်ယောက် ဖြစ်နေပါပြီ။"</string>
     <string name="device_info_default" msgid="2374506935205518448">"အမည်မသိ"</string>
     <string name="selinux_status" msgid="1146662734953021410">"SELinux အခြေအနေ"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"ကောင်း"</item>
     <item msgid="6005053494500517261">"အလွန်ကောင်း"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC လိပ်စာ"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"စက်ပစ္စည်း MAC လိပ်စာ"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"ကျပန်းလုပ်ထားသည့် MAC လိပ်စာ"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"ထုတ်လွင့်မှု အား"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"ပုဂ္ဂိုလ်ရေး"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"ကျပန်းပြုလုပ်ထားသည့် MAC ကို အသုံးပြုရန် (မူရင်း)"</item>
+    <item msgid="2490415280467390067">"စက်၏ MAC သုံးရန်"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"မရနိုင်ပါ"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"ကျပန်းပြုလုပ်ထားသည့် MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP လိပ်စာ"</string>
     <string name="title_ssid" msgid="255328048344188682">"Wi-Fi ကွန်ရက် ထည့်သွင်းရန်"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"အင်တာနက် ချိတ်ဆက်မှု"</string>
@@ -663,7 +682,7 @@
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"ဤအပ်ဖ်၏ ဒေတာများအားလုံး ထာဝရဖျက်ပစ်ပါမည်။ \n၎င်းတွင် ဖိုင်များအားလုံး၊ ဆက်တင်များ၊ အကောင့်များ၊ ဒေတာဘေ့စ်များ၊ စသည်တို့ပါဝင်သည်။"</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"ပုံသေများကို ဖယ်ရှားရန်"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"အချို့သော လုပ်ဆောင်မှုများအတွက် ဤ အက်ပ်ကိုဖွင့်ရန်သတ်မှတ်ပါ"</string>
-    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"ပုံသေများ သတ်မှတ် မထား"</string>
+    <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"မူရင်း သတ်မှတ်မထားပါ။"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"ကက်ရှကို ဖယ်ရှားရန်"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"အကြောင်းကြားချက်များ"</string>
     <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"အခမဲ့ရင်းမြစ် လိုင်စင်များ"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"အလိုအလျောက် ပြန်လည်ဖေါ်ထုတ်ရန်"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"ကိရိယာကို ပြန်ညှိပါ"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"ဤလုပ်ရပ်က အောက်ပါတို့ အပါအဝင် သင့်ကိရိယာတွင်းရှိ ဒေတာအားလုံးကို ဖျက်ပါမည်- သင်၏ Google အကောင့်၊ စနစ်၊ အက်ပ်ဒေတာနှင့် ဆက်တင်များ၊ ဒေါင်းလုဒ်လုပ်ပြီး အက်ပ်များ"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"သင့်ကိုယ်ပိုင် အချက်အလက်နှင့် ဒေါင်းလုဒ်လုပ်ထားသည့် အက်ပ်များ အားလုံးကို ဖျက်မလား။ ဤ လုပ်ဆောင်ချက်ကို ပြန်ပြင်၍ မရနိုင်ပါ။"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"ဤစက်ပစ္စည်းတွင် ဒေါင်းလုဒ်လုပ်ထားသော အက်ပ်များနှင့် သင့်ကိုယ်ရေးကိုယ်တာအချက်လက်အားလုံးကို ဖျက်မလား။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြောင်း၍ မရနိုင်ပါ။"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"အရာတိုင်းကို ဖျက်ရန်"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"သင့်<xliff:g id="DEVICEMODEL">%1$s</xliff:g>အတွက် အမည်ရွေးပါ"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"သင့်စက်ကို အခြားစက်များမှ ကာစ်လုပ်သောအခါဖြစ်စေ ချိတ်ဆက်သောအခါဖြစ်စေ ၎င်းကိုသိရှိစေရန် သင့်စက်ကို အမည်ပေးပါ။"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"ဒေတာချွေတာမှု"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"မိုဘိုင်းဒေတာ လျှော့သုံးရန် ဗီဒီယို အရည်အသွေးကို အလိုအလျောက် ချိန်ညှိပေးသည်"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"ဒေတာအသုံးပြုမှုနှင့် သတိပေးချက်များ"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"လုပ်ဆောင်ချက်ကို ခွင့်မပြုပါ"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"အသံအတိုးအကျယ်ကို ပြောင်း၍မရပါ"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"ဖုန်းခေါ်ဆိုခွင့် မရှိပါ"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS ပို့ခွင့်မပြုပါ"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"ကင်မရာ အသုံးပြုခွင့်မရှိပါ"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"ဖန်သားပြင်ဓာတ်ပုံ ရိုက်ခွင့်မပြုပါ"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"ဤအက်ပ်ကို ဖွင့်၍မရပါ"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"မေးစရာရှိပါက သင်၏ IT စီမံခန့်ခွဲသူကို ဆက်သွယ်ပါ"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> နှင့် အသုံးပြုရန် ကိရိယာ"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"မည်သည့်စက်မျှ မတွေ့ပါ။ စက်များဖွင့်ထားပြီး ချိတ်ဆက်နိုင်ခြင်း ရှိမရှိ စစ်ဆေးပါ။"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"ထပ်စမ်းကြည့်ရန်"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"တစ်ခုခု ဖြစ်သွားသည်။ အပလီကေးရှင်းက ကိရိယာရွေးရန် တောင်းဆိုချက်ကို ပယ်ဖျက်လိုက်သည်။"</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"ချိတ်ဆက်ပြီးပါပြီ"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"အားလုံးပြရန်"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"ရှာဖွေနေသည်"</string>
 </resources>
