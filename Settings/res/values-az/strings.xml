@@ -202,7 +202,7 @@
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt; ilə qoşalaşdırmaq üçün, &lt;br&gt;cihazın tələb olunan PIN kodunu daxil edin:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Bu cihaz ilə qoşalaşdırmaq üçün: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Cihazın tələb olunan kodunu daxil edin:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Adətən 0000 və ya 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Qoşalaşdırın"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Qoşulsun"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Ləğv edin"</string>
     <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s qoşulub"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s ayrılıb"</string>
@@ -250,7 +250,7 @@
     <string name="no_device_admins" msgid="4628974717150185625">"Əlçatan cihaz admin tətbiqi yoxdur"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Admin tərəfindən deaktiv edildi"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Əlçatmazdır"</string>
-    <string name="manage_device_admin" msgid="5714217234035017983">"Cihaz admin tətbiqləri"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Administrator tətbiqləri"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Aktiv tətbiq yoxdur"</string>
     <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktiv tətbiq</item>
@@ -394,8 +394,6 @@
     <string name="device_status_title" msgid="9051569510258883673">"Vəziyyət"</string>
     <string name="battery_status_title" msgid="8850166742025222210">"Batareya statusu"</string>
     <string name="battery_level_title" msgid="2672804570916248736">"Batareya səviyyəsi"</string>
-    <string name="sim_status_title" msgid="1704273079796640946">"SIM statusu"</string>
-    <string name="imei_information_title" msgid="3790368306353698724">"IMEI məlumat"</string>
     <string name="status_bt_address" msgid="7190052214963950844">"Bluetooth ünvanı"</string>
     <string name="status_up_time" msgid="1758102680983108313">"Müddəti"</string>
     <string name="legal_information" msgid="1087445528481370874">"Hüquqi məlumat"</string>
@@ -415,7 +413,7 @@
     <string name="title_random_mac_settings" msgid="6685812569356353378">"Məxfilik"</string>
   <string-array name="random_mac_settings_entries">
     <item msgid="3457228452595715533">"Təsadüfi MAC (defolt) istifadə edin"</item>
-    <item msgid="2490415280467390067">"MAC cihazından istifadə edin"</item>
+    <item msgid="2490415280467390067">"Cihazın MAC-ünvanını istifadə edin"</item>
   </string-array>
     <string name="mac_address_not_available" msgid="2992935344891853369">"Əlçatan deyil"</string>
     <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Təsadüfi MAC"</string>
@@ -944,7 +942,7 @@
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"İcazəli"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"İcazə verilmir"</string>
     <string name="usage_access" msgid="8402350645248312782">"İstifadə girişi"</string>
-    <string name="usage_access_description" msgid="3276026988575551587">"İstifadə girişi istifadə etdiyiniz digər tətbiqləri və istifadə tezliyini, həmçinin, operator, dil ayarları və digər detalları izləməyə imkan verir."</string>
+    <string name="usage_access_description" msgid="3276026988575551587">"İstifadə girişi işlədilən tətbiqləri və müntəzəmliyi izləyir, operatoru, dili və digər parametrləri müəyyən edir."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"Enerji optimallaşdırılması"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"Tətbiqlərin enerji istifadəsini optimallaşdırın"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"Optimallaşdırılacaq tətbiq yoxdur"</string>
@@ -983,7 +981,7 @@
     <string name="empty_audio_duration_title" msgid="9024377320171450683">"Boş audionun müddəti"</string>
     <string name="show_audio_recording_start_failed" msgid="9131762831381326605">"Audio yazmanı başlatmaq alınmadı."</string>
     <string name="show_audio_recording_failed" msgid="8128216664039868681">"Audio yazma alınmadı."</string>
-    <string name="title_data_saver" msgid="7500278996154002792">"Data Qənaəti"</string>
+    <string name="title_data_saver" msgid="7500278996154002792">"Trafikə qənaət"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Daha az mobil data istifadə etmək üçün video keyfiyyətini avtomatik tənzimləyin"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Data istifadəsi və siqnalları"</string>
     <string name="data_saver_header_info" msgid="239820871940156510">"İnternetə Wi-Fi, Ethernet və ya telefonun hotspotu ilə qoşula bilərsiniz. Əlavə yardım üçün "<b>"g.co/network"</b>" ünvanına daxil olun."</string>
@@ -1005,7 +1003,7 @@
     <string name="remove_device_admin" msgid="2623866073546295104">"Bu cihaz admin tətbiqini deaktiv edin"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Tətbiqi sistemdən sil"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Deaktiv edin və silin"</string>
-    <string name="select_device_admin_msg" msgid="8475934459999710332">"Cihaz admin tətbiqləri"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Administrator tətbiqləri"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"Cihaz admin tətbiqi aktiv edilsin?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Bu cihazın admin tətbiqini aktiv edin"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"Bu admin tətbiqini aktiv etməklə <xliff:g id="APP_NAME">%1$s</xliff:g> tətbiqinə aşağı əməliyyatları etmək icazəsi verilir:"</string>
