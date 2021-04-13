@@ -290,7 +290,7 @@
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Rrjeti VPN gjithmonë aktiv i aktivizuar"</string>
     <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Rrjeti VPN gjithmonë aktiv i aktivizuar në profilin tënd personal"</string>
     <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Rrjeti VPN gjithmonë aktiv i aktivizuar në profilin tënd të punës"</string>
-    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Përfaqësuesi global HTTP i caktuar"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Proxy global HTTP i caktuar"</string>
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Kredencialet e besuara"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Kredencialet e besuara në profilin tënd personal"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Kredencialet e besuara në profilin tënd të punës"</string>
@@ -394,8 +394,6 @@
     <string name="device_status_title" msgid="9051569510258883673">"Statusi"</string>
     <string name="battery_status_title" msgid="8850166742025222210">"Statusi i baterisë"</string>
     <string name="battery_level_title" msgid="2672804570916248736">"Niveli i baterisë"</string>
-    <string name="sim_status_title" msgid="1704273079796640946">"Statusi i kartës SIM"</string>
-    <string name="imei_information_title" msgid="3790368306353698724">"Informacioni i kodit IMEI"</string>
     <string name="status_bt_address" msgid="7190052214963950844">"Adresa e Bluetooth-it"</string>
     <string name="status_up_time" msgid="1758102680983108313">"Koha aktive"</string>
     <string name="legal_information" msgid="1087445528481370874">"Informacioni ligjor"</string>
@@ -444,18 +442,18 @@
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"<xliff:g id="SSID">%1$s</xliff:g> nuk mund të gjendej"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Fjalëkalimi i Wi-Fi nuk është i vlefshëm"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Rrjeti Wi-Fi nuk e pranoi lidhjen"</string>
-    <string name="title_wifi_advanced_options" msgid="371185991282743258">"Të konfigurohen përfaqësuesi <xliff:g id="SSID">%1$s</xliff:g> dhe cilësimet e IP-së?"</string>
-    <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Cilësimet e përfaqësuesit"</string>
-    <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Emri i strehuesit të përfaqësuesit:"</string>
-    <string name="title_wifi_proxy_port" msgid="566244407030390328">"Porta e përfaqësuesit:"</string>
-    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"Anashkalo përfaqësuesin për:"</string>
+    <string name="title_wifi_advanced_options" msgid="371185991282743258">"Të konfigurohen proxy <xliff:g id="SSID">%1$s</xliff:g> dhe cilësimet e IP-së?"</string>
+    <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Cilësimet e proxy-it"</string>
+    <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Emri pritës i proxy-it:"</string>
+    <string name="title_wifi_proxy_port" msgid="566244407030390328">"Porta e proxy-it:"</string>
+    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"Anashkalo proxy-in për:"</string>
     <string name="title_wifi_ip_settings" msgid="296029383749112888">"Cilësimet e IP-së"</string>
     <string name="title_wifi_ip_address" msgid="5505806431042689276">"Adresa IP:"</string>
     <string name="title_wifi_gateway" msgid="4496416267930824360">"Porta e kalimit:"</string>
     <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"Gjatësia e prefiksit të rrjetit:"</string>
     <string name="title_wifi_dns1" msgid="1585965227665007553">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="4563319371301555072">"DNS 2:"</string>
-    <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Cilësimet e përfaqësuesit nuk janë të vlefshme"</string>
+    <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Cilësimet e proxy-it nuk janë të vlefshme"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Cilësimet e IP-së nuk janë të vlefshme"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> është një rrjet i ruajtur"</string>
     <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"Skano kodin QR për t\'u bashkuar"</string>
@@ -495,7 +493,7 @@
     <string name="proxy_error_empty_port" msgid="692020249267351015">"Fusha e portës nuk mund të jetë bosh"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"Nëse fusha e strehuesit është bosh, lëre bosh fushën e portës"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Porta nuk është e vlefshme"</string>
-    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Përfaqësuesi HTTP përdoret nga shfletuesi, por nuk mund të përdoret nga aplikacionet e tjera"</string>
+    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Proxy i HTTP-së përdoret nga shfletuesi, por nuk mund të përdoret nga aplikacionet e tjera"</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"Fut një portë të vlefshme.\nShembull: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Fut një listë të ndarë me presje për domenet e përjashtuara ose lëre bosh.\nShembull: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"Fut një emër të vlefshëm të strehuesit.\nShembull: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
