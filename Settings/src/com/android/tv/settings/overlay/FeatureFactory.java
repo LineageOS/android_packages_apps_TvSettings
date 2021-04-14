@@ -16,10 +16,13 @@
 
 package com.android.tv.settings.overlay;
 
+import android.content.Context;
+
 import androidx.annotation.Keep;
 
 import com.android.tv.settings.SettingsFragmentProvider;
 import com.android.tv.settings.basic.BasicModeFeatureProvider;
+import com.android.tv.settings.enterprise.EnterprisePrivacyFeatureProvider;
 import com.android.tv.settings.help.SupportFeatureProvider;
 import com.android.tv.settings.startup.StartupVerificationFeatureProvider;
 
@@ -39,4 +42,6 @@ public interface FeatureFactory {
     /** Supplies a provider for startup verification feature. */
     StartupVerificationFeatureProvider getStartupVerificationFeatureProvider();
 
+    /** Supplies a provider for enterprise privacy feature */
+    EnterprisePrivacyFeatureProvider getEnterprisePrivacyFeatureProvider(Context context);
 }
