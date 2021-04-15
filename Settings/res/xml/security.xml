@@ -46,4 +46,12 @@
             android:title="@string/restricted_profile_delete_title" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="security_settings_device_admin_category">
+        <Preference
+            android:key="manage_device_admin"
+            android:title="@string/manage_device_admin"
+            android:fragment="com.android.tv.settings.deviceadmin.DeviceAdminSettings" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
