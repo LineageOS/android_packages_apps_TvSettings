@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 4.1.0" client="cli" variant="all" version="4.1.0">
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.content.Context#getSystemService`"
+        errorLine1="            ctx.getSystemService(SliceManager.class).grantPermissionFromUser("
+        errorLine2="                ~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/ContextSingleton.java"
+            line="69"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.content.Context#getSystemService`"
+        errorLine1="            ctx.getSystemService(SliceManager.class).grantPermissionFromUser("
+        errorLine2="                ~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/ContextSingleton.java"
+            line="69"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Class requires API level 28 (current min is 21): `android.app.slice.SliceManager`"
+        errorLine1="            ctx.getSystemService(SliceManager.class).grantPermissionFromUser("
+        errorLine2="                                 ~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/ContextSingleton.java"
+            line="69"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Class requires API level 28 (current min is 21): `android.app.slice.SliceManager`"
+        errorLine1="            ctx.getSystemService(SliceManager.class).grantPermissionFromUser("
+        errorLine2="                                 ~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/ContextSingleton.java"
+            line="69"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.graphics.drawable.LayerDrawable#setLayerGravity`"
+        errorLine1="        compoundDrawable.setLayerGravity(0, Gravity.CENTER);"
+        errorLine2="                         ~~~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/IconUtil.java"
+            line="54"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.graphics.drawable.LayerDrawable#setLayerGravity`"
+        errorLine1="        compoundDrawable.setLayerGravity(0, Gravity.CENTER);"
+        errorLine2="                         ~~~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/IconUtil.java"
+            line="54"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.graphics.drawable.LayerDrawable#setLayerGravity`"
+        errorLine1="        compoundDrawable.setLayerGravity(1, Gravity.CENTER);"
+        errorLine2="                         ~~~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/IconUtil.java"
+            line="55"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.graphics.drawable.LayerDrawable#setLayerGravity`"
+        errorLine1="        compoundDrawable.setLayerGravity(1, Gravity.CENTER);"
+        errorLine2="                         ~~~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/IconUtil.java"
+            line="55"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="                    .setImageDrawable(image.loadDrawable(getContext()));"
+        errorLine2="                                                         ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/InfoFragment.java"
+            line="44"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="                    .setImageDrawable(image.loadDrawable(getContext()));"
+        errorLine2="                                                         ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/InfoFragment.java"
+            line="44"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.graphics.drawable.Icon#loadDrawable`"
+        errorLine1="                    .setImageDrawable(image.loadDrawable(getContext()));"
+        errorLine2="                                            ~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/InfoFragment.java"
+            line="44"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.graphics.drawable.Icon#loadDrawable`"
+        errorLine1="                    .setImageDrawable(image.loadDrawable(getContext()));"
+        errorLine2="                                            ~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/InfoFragment.java"
+            line="44"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26 (current min is 21): `setTtl`"
+        errorLine1="        mImpl.setTtl(ttl);"
+        errorLine2="              ~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/builders/PreferenceSliceBuilder.java"
+            line="111"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 26 (current min is 21): `setTtl`"
+        errorLine1="        mImpl.setTtl(ttl);"
+        errorLine2="              ~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/builders/PreferenceSliceBuilder.java"
+            line="111"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="        ContextSingleton.getInstance().grantFullAccess(getContext(), Uri.parse(mUriString));"
+        errorLine2="                                                       ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="112"
+            column="56"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="        ContextSingleton.getInstance().grantFullAccess(getContext(), Uri.parse(mUriString));"
+        errorLine2="                                                       ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="112"
+            column="56"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="        getContext().getContentResolver().registerContentObserver("
+        errorLine2="        ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="129"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="        getContext().getContentResolver().registerContentObserver("
+        errorLine2="        ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="129"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="                mPreferenceFollowupIntent.send(getContext(),"
+        errorLine2="                                               ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="164"
+            column="48"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="                mPreferenceFollowupIntent.send(getContext(),"
+        errorLine2="                                               ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="164"
+            column="48"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="        getContext().getContentResolver().unregisterContentObserver(mContentObserver);"
+        errorLine2="        ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="177"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="        getContext().getContentResolver().unregisterContentObserver(mContentObserver);"
+        errorLine2="        ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="177"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="                .createPreferenceScreen(getContext());"
+        errorLine2="                                        ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="184"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="                .createPreferenceScreen(getContext());"
+        errorLine2="                                        ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="184"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 24 (current min is 21): `android.app.Fragment#startIntentSenderForResult`"
+        errorLine1="        startIntentSenderForResult("
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="429"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 24 (current min is 21): `android.app.Fragment#startIntentSenderForResult`"
+        errorLine1="        startIntentSenderForResult("
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="429"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Cast from `Icon` to `Parcelable` requires API level 23 (current min is 21)"
+        errorLine1="        outState.putParcelable(KEY_SCREEN_ICON, mScreenIcon);"
+        errorLine2="                                                ~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="454"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Cast from `Icon` to `Parcelable` requires API level 23 (current min is 21)"
+        errorLine1="        outState.putParcelable(KEY_SCREEN_ICON, mScreenIcon);"
+        errorLine2="                                                ~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="454"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.graphics.drawable.Icon#loadDrawable`"
+        errorLine1="            decorIcon.setImageDrawable(icon.loadDrawable(mContextThemeWrapper));"
+        errorLine2="                                            ~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="534"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.graphics.drawable.Icon#loadDrawable`"
+        errorLine1="            decorIcon.setImageDrawable(icon.loadDrawable(mContextThemeWrapper));"
+        errorLine2="                                            ~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="534"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="            Toast.makeText(getContext(), errorMessage, Toast.LENGTH_SHORT).show();"
+        errorLine2="                           ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="581"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="            Toast.makeText(getContext(), errorMessage, Toast.LENGTH_SHORT).show();"
+        errorLine2="                           ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SliceFragment.java"
+            line="581"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.graphics.drawable.Icon#loadDrawable`"
+        errorLine1="                Drawable iconDrawable = icon.loadDrawable(contextThemeWrapper);"
+        errorLine2="                                             ~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SlicePreferencesUtil.java"
+            line="167"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.graphics.drawable.Icon#loadDrawable`"
+        errorLine1="                Drawable iconDrawable = icon.loadDrawable(contextThemeWrapper);"
+        errorLine2="                                             ~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SlicePreferencesUtil.java"
+            line="167"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `toIcon`"
+        errorLine1="                b.putParcelable(EXTRA_PREFERENCE_INFO_IMAGE, infoImage.toIcon());"
+        errorLine2="                                                                       ~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SlicePreferencesUtil.java"
+            line="196"
+            column="72"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `toIcon`"
+        errorLine1="                b.putParcelable(EXTRA_PREFERENCE_INFO_IMAGE, infoImage.toIcon());"
+        errorLine2="                                                                       ~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SlicePreferencesUtil.java"
+            line="196"
+            column="72"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Cast from `Icon` to `Parcelable` requires API level 23 (current min is 21)"
+        errorLine1="                b.putParcelable(EXTRA_PREFERENCE_INFO_IMAGE, infoImage.toIcon());"
+        errorLine2="                                                             ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SlicePreferencesUtil.java"
+            line="196"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Cast from `Icon` to `Parcelable` requires API level 23 (current min is 21)"
+        errorLine1="                b.putParcelable(EXTRA_PREFERENCE_INFO_IMAGE, infoImage.toIcon());"
+        errorLine2="                                                             ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SlicePreferencesUtil.java"
+            line="196"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `toIcon`"
+        errorLine1="                return icon.toIcon();"
+        errorLine2="                            ~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SlicePreferencesUtil.java"
+            line="405"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `toIcon`"
+        errorLine1="                return icon.toIcon();"
+        errorLine2="                            ~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/slices/SlicePreferencesUtil.java"
+            line="405"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 24 (current min is 21): `android.app.FragmentTransaction#commitNow`"
+        errorLine1="        transaction.commitNow();"
+        errorLine2="                    ~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/TwoPanelSettingsFragment.java"
+            line="257"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 24 (current min is 21): `android.app.FragmentTransaction#commitNow`"
+        errorLine1="        transaction.commitNow();"
+        errorLine2="                    ~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/TwoPanelSettingsFragment.java"
+            line="257"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="                getContext().getContentResolver().acquireContentProviderClient(Uri.parse(uri));"
+        errorLine2="                ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/TwoPanelSettingsFragment.java"
+            line="827"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 23 (current min is 21): `android.app.Fragment#getContext`"
+        errorLine1="                getContext().getContentResolver().acquireContentProviderClient(Uri.parse(uri));"
+        errorLine2="                ~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/src/com/android/tv/twopanelsettings/TwoPanelSettingsFragment.java"
+            line="827"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="`android:trackTint` requires API level 23 (current min is 21)"
+        errorLine1="        &lt;item name=&quot;android:trackTint&quot;>@drawable/switch_track&lt;/item>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/TvSettings/TwoPanelSettingsLib/res/values/themes.xml"
+            line="30"
+            column="15"/>
+    </issue>
+
+</issues>
