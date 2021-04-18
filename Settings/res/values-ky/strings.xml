@@ -193,7 +193,7 @@
     <string name="device_status_summary" msgid="3270932829412434985">"Тармак, серия номери жана башка маалымат"</string>
     <string name="manual" msgid="5683935624321864999">"Кол менен"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"Башкаруучу маалыматтар"</string>
-    <string name="device_feedback" msgid="4871903271442960465">"Бул түзмөк жөнүндө пикир жөнөтүү"</string>
+    <string name="device_feedback" msgid="4871903271442960465">"Түзмөк тууралуу пикир билдирүү"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"Жабдуунун ID\'си"</string>
     <string name="baseband_version" msgid="5618116741093274294">"Радиомодуль версиясы"</string>
     <string name="kernel_version" msgid="7265509054070001542">"Өзөктүн версиясы"</string>
@@ -204,7 +204,7 @@
     <string name="sim_status_title" msgid="1704273079796640946">"SIM абалы"</string>
     <string name="imei_information_title" msgid="3790368306353698724">"IMEI маалыматы"</string>
     <string name="status_bt_address" msgid="7190052214963950844">"Bluetooth дареги"</string>
-    <string name="status_up_time" msgid="1758102680983108313">"Иштеген убакыты"</string>
+    <string name="status_up_time" msgid="1758102680983108313">"Түзмөк күйгүзүлгөндөн берки убакыт"</string>
     <string name="legal_information" msgid="1087445528481370874">"Юридикалык маалымат"</string>
     <string name="copyright_title" msgid="5879660711078649518">"Автордук укук"</string>
     <string name="license_title" msgid="4032466200355435641">"Уруксаттама"</string>
@@ -332,7 +332,7 @@
     <string name="storage_migrate_away" msgid="7880100961434638430">"Дайындарды башка сактагычка көчүрүү"</string>
     <string name="storage_no_apps" msgid="95566375753627272">"Камдык көчүрмөсүн сактай турган колдонмолор жок"</string>
     <string name="storage_forget" msgid="4671975563260507003">"Бул түзмөктүн сактагычы унутулсун"</string>
-    <string name="storage_forget_wall_of_text" msgid="230454348256179142">"Бул дискте камтылган колдонмолор же дайындарды колдонуу үчүн, аны кайра сайыңыз. Же түзмөк жеткиликтүү эмес болсо, бул сактагычты унутууну тандасаңыз болот.\n\nЭгер Унутууну тандасаңыз, дискте камтылган бардык дайындар биротоло жоголот.\n\nКолдонмолорду кийинчерээк кайра орнотсоңуз болот, бирок бул дискте сакталган дайындар жоголот."</string>
+    <string name="storage_forget_wall_of_text" msgid="230454348256179142">"Бул дискте камтылган колдонмолор же дайындарды колдонуу үчүн аны кайра сайыңыз. Же түзмөк жеткиликтүү эмес болсо, бул сактагычты унутууну тандасаңыз болот.\n\nЭгер Унутууну тандасаңыз, дискте камтылган бардык дайындар биротоло жоголот.\n\nКолдонмолорду кийинчерээк кайра орнотсоңуз болот, бирок бул дискте сакталган дайындар жоголот."</string>
     <string name="storage_device_storage_section" msgid="22958375769694027">"Түзмөктүн сактагычы"</string>
     <string name="storage_removable_storage_section" msgid="280332107650735088">"Ташыма сактагыч"</string>
     <string name="storage_reset_section" msgid="3896575204828589494">"Кайра коюу"</string>
@@ -474,7 +474,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Иштетүү"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Конфигурация"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"<xliff:g id="SERVICE">%1$s</xliff:g> колдоносузбу?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> сырсөздөрдөн башка, бардык терилген тексттерди сактап турат. Тактап айтканда, насыя карталарынын номерлери сыяктуу жеке дайын-даректерди."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> сырсөздөрдөн башка, бардык терилген тексттерди сактап турат. Тактап айтканда, насыя карталарынын номерлери сыяктуу жеке маалыматтарды."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"<xliff:g id="SERVICE">%1$s</xliff:g> токтотулсунбу?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"OK\'ди тандасаңыз, <xliff:g id="SERVICE">%1$s</xliff:g> токтойт."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Текстти-оозекилөө"</string>
@@ -679,7 +679,7 @@
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"Колдонулган эстутум"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="VOLUME">%2$s</xliff:g> ичинен <xliff:g id="SIZE">%1$s</xliff:g> колдонулат"</string>
     <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Дайын-даректерди өчүрүү"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Бул колдонмонун файлдар, жөндөөлөр, каттоо эсептери, дайындар базасы \nсыяктуу бардык дайындары биротоло жок болот."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Бул колдонмонун файлдар, жөндөөлөр, каттоо эсептери, дайындар базасы \nсыяктуу бардык маалыматтары биротоло жок болот."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"Демейки жөндөөлөрдү тазалап салуу"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"Бул колдонмо айрым аракеттер үчүн ишке киргизилет деп коюлган"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Демейки жөндөөлөр коюлган жок"</string>
@@ -732,7 +732,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Колдонмо уруксаттары"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_1">%2$d</xliff:g> ичинен <xliff:g id="COUNT_0">%1$d</xliff:g> колдонмого уруксат бар"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth\'ду күйгүзүүнү өтүнүү"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Коопсуздук системасы качан жаңырган"</string>
+    <string name="security_patch" msgid="5468261708915367254">"Коопсуздук тутуму качан жаңырган"</string>
     <string name="choose_application" msgid="2375936782103669988">"Колдонмо тандаңыз"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Сынамык)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Кайра жандырып, коопсуз режимге өтүү"</string>
@@ -748,7 +748,7 @@
     <string name="high_power_apps" msgid="5841073958519976562">"Батареяны үнөмдөө"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"Колдонмолорго керектелген батареянын кубатын үнөмдөө"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"Бир да колдонмону жөндөөнүн кереги жок"</string>
-    <string name="high_power_on" msgid="3120162683093360951">"Батареяны үнөмдөшпөйт"</string>
+    <string name="high_power_on" msgid="3120162683093360951">"Батарея үнөмдөлбөйт"</string>
     <string name="high_power_off" msgid="3588854600942236231">"Батареяны үнөмдөө"</string>
     <string name="high_power_system" msgid="6263052626979462255">"Батареяны үнөмдөө мүмкүн эмес"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Эскертмелерге уруксат"</string>
@@ -784,7 +784,7 @@
     <string name="show_audio_recording_failed" msgid="8128216664039868681">"Аудио жаздырылган жок."</string>
     <string name="title_data_saver" msgid="7500278996154002792">"Трафикти үнөмдөө"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Мобилдик трафикти үнөмдөө үчүн видеонун сапатын автоматтык түрдө тууралоо"</string>
-    <string name="title_data_alert" msgid="8262081890052682475">"Дайын-даректердин колдонулушу жана эскертүүлөр"</string>
+    <string name="title_data_alert" msgid="8262081890052682475">"Маалыматтардын колдонулушу жана эскертүүлөр"</string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Аракетке тыюу салынган"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Үнү өзгөртүлбөйт"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Чалууга тыюу салынган"</string>
