@@ -249,18 +249,18 @@
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"<xliff:g id="SSID">%1$s</xliff:g> nuk mund të gjendej"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Fjalëkalimi i Wi-Fi nuk është i vlefshëm"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Rrjeti Wi-Fi nuk e pranoi lidhjen"</string>
-    <string name="title_wifi_advanced_options" msgid="371185991282743258">"Të konfigurohen përfaqësuesi <xliff:g id="SSID">%1$s</xliff:g> dhe cilësimet e IP-së?"</string>
-    <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Cilësimet e përfaqësuesit"</string>
-    <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Emri i strehuesit të përfaqësuesit:"</string>
-    <string name="title_wifi_proxy_port" msgid="566244407030390328">"Porta e përfaqësuesit:"</string>
-    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"Anashkalo përfaqësuesin për:"</string>
+    <string name="title_wifi_advanced_options" msgid="371185991282743258">"Të konfigurohen proxy <xliff:g id="SSID">%1$s</xliff:g> dhe cilësimet e IP-së?"</string>
+    <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Cilësimet e proxy-it"</string>
+    <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Emri pritës i proxy-it:"</string>
+    <string name="title_wifi_proxy_port" msgid="566244407030390328">"Porta e proxy-it:"</string>
+    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"Anashkalo proxy-in për:"</string>
     <string name="title_wifi_ip_settings" msgid="296029383749112888">"Cilësimet e IP-së"</string>
     <string name="title_wifi_ip_address" msgid="5505806431042689276">"Adresa IP:"</string>
     <string name="title_wifi_gateway" msgid="4496416267930824360">"Porta e kalimit:"</string>
     <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"Gjatësia e prefiksit të rrjetit:"</string>
     <string name="title_wifi_dns1" msgid="1585965227665007553">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="4563319371301555072">"DNS 2:"</string>
-    <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Cilësimet e përfaqësuesit nuk janë të vlefshme"</string>
+    <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Cilësimet e proxy-it nuk janë të vlefshme"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"Cilësimet e IP-së nuk janë të vlefshme"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> është një rrjet i ruajtur"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Provo përsëri"</string>
@@ -297,7 +297,7 @@
     <string name="proxy_error_empty_port" msgid="692020249267351015">"Fusha e portës nuk mund të jetë bosh"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"Nëse fusha e strehuesit është bosh, lëre bosh fushën e portës"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Porta nuk është e vlefshme"</string>
-    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Përfaqësuesi HTTP përdoret nga shfletuesi, por nuk mund të përdoret nga aplikacionet e tjera"</string>
+    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Proxy i HTTP-së përdoret nga shfletuesi, por nuk mund të përdoret nga aplikacionet e tjera"</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"Fut një portë të vlefshme.\nShembull: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Fut një listë të ndarë me presje për domenet e përjashtuara ose lëre bosh.\nShembull: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"Fut një emër të vlefshëm të strehuesit.\nShembull: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -546,7 +546,7 @@
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Burime të panjohura"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Lejo instalimin e aplikacioneve nga burime të ndryshme nga \"Dyqani i Play\""</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"Lejo burimet e panjohura"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Pajisja dhe të dhënat e tua personale janë më të cenueshme për t\'u sulmuar nga aplikacione nga burime të panjohura. Ti pranon se je plotësisht përgjegjës për çdo dëm ndaj pajisjes ose çdo humbje të dhënash që mund të rezultojë nga përdorimi i këtyre aplikacioneve."</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"Pajisja dhe të dhënat e tua personale janë më të cenueshme nga sulmet nga aplikacione nga burime të panjohura. Ti pranon se je përgjegjës për çdo dëm ndaj pajisjes ose çdo humbje të të dhënave që mund të rezultojë nga përdorimi i këtyre aplikacioneve."</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"Asnjëherë"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"Për përmbajtjen DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"Gjithmonë"</string>
@@ -743,8 +743,8 @@
     <string name="manage_keyboards" msgid="7983890675377321912">"Menaxho tastierat"</string>
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"Lejohet"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"Nuk lejohet"</string>
-    <string name="usage_access" msgid="8402350645248312782">"Qasja në përdorim"</string>
-    <string name="usage_access_description" msgid="3276026988575551587">"Qasja në përdorim lejon që një aplikacion të gjurmojë se çfarë përdorin aplikacionet e tjera dhe sa shpesh e përdorin, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
+    <string name="usage_access" msgid="8402350645248312782">"Qasja te përdorimi"</string>
+    <string name="usage_access_description" msgid="3276026988575551587">"Qasja te përdorimi lejon që një aplikacion të gjurmojë se çfarë përdorin aplikacionet e tjera dhe sa shpesh e përdorin, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"Optimizimi i energjisë"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"Optimizo përdorimin e energjisë nga aplikacionet"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"Asnjë aplikacion nuk ka nevojë për optimizim"</string>

@@ -54,7 +54,7 @@
     <string name="privacy_category_title" msgid="8552430590908463601">"Құпиялылық"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Құрылғы параметрлері"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Қолданба параметрлері"</string>
-    <string name="privacy_category_summary" msgid="3534434883380511043">"Геодерек, пайдалану дерегі және диагностика, жарнамалар"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Локация, пайдалану дерегі және диагностика, жарнамалар"</string>
     <string name="add_account" msgid="7386223854837017129">"Есептік жазба қосу"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Есептік жазбаны жою"</string>
     <string name="account_sync" msgid="4315295293211313989">"Синхрондалған қолданбаларды таңдау"</string>
@@ -161,7 +161,7 @@
     <string name="system_home_theater_control" msgid="6228949628173590310">"Үй театрын басқару"</string>
     <string name="system_accessibility" msgid="3081009195560501010">"Арнайы мүмкіндіктер"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"Әзірлеуші опциялары"</string>
-    <string name="accessibility_none" msgid="6355646833528306702">"Ешқандай"</string>
+    <string name="accessibility_none" msgid="6355646833528306702">"Жоқ"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Пайдалану және диагностикалау"</string>
     <string name="tutorials" msgid="7880770425872110455">"Оқулықтар"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Жүйе жаңартуы"</string>
@@ -239,7 +239,7 @@
     <string name="security_type" msgid="2297615092250075696">"Қауіпсіздік түрі"</string>
     <string name="other_network" msgid="5299289104661858596">"Басқа желі…"</string>
     <string name="skip_network" msgid="3095529090560000692">"Өткізіп жіберу"</string>
-    <string name="wifi_security_type_none" msgid="7001835819813531253">"Ешқандай"</string>
+    <string name="wifi_security_type_none" msgid="7001835819813531253">"Жоқ"</string>
     <string name="wifi_security_type_wep" msgid="6407712450924151962">"WEP"</string>
     <string name="wifi_security_type_wpa" msgid="9205358644485448199">"WPA/WPA2 PSK"</string>
     <string name="wifi_security_type_eap" msgid="3948280751219829163">"802.1x EAP"</string>
@@ -277,7 +277,7 @@
     <string name="wifi_action_dont_change_network" msgid="2685585142299769847">"Өзгертпеу"</string>
     <string name="wifi_action_advanced_yes" msgid="6192652088198093438">"Жарайды"</string>
     <string name="wifi_action_advanced_no" msgid="6152107256122343959">"Жоқ (ұсынылады)"</string>
-    <string name="wifi_action_proxy_none" msgid="4009573120495700922">"Ешқандай"</string>
+    <string name="wifi_action_proxy_none" msgid="4009573120495700922">"Жоқ"</string>
     <string name="wifi_action_proxy_manual" msgid="7667686394955896293">"Қолмен"</string>
     <string name="wifi_action_dhcp" msgid="6172127495589802964">"DHCP"</string>
     <string name="wifi_action_static" msgid="8139559358727790887">"Тұрақты"</string>
@@ -406,7 +406,7 @@
     <item msgid="5645263357181875427">"Ағын үшін берілген уақытты пайдалану"</item>
     <item msgid="5501503537181350884">"Өшірулі"</item>
   </string-array>
-    <string name="system_location" msgid="4057295363709016511">"Орналасу"</string>
+    <string name="system_location" msgid="4057295363709016511">"Локация"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Рұқсат сұраған қолданбаларға орныңыз туралы ақпаратты пайдалануға рұқсат ету"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Орынды анықтауға келісім"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Режим"</string>
@@ -416,13 +416,13 @@
     <string name="location_low_battery_use" msgid="728585923412018253">"Төмен деңгейде батарея пайдалану"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"Орналасқан жерді анықтау үшін Wi‑Fi желісін пайдалану"</string>
     <string name="location_status" msgid="3037321737386011224">"Орналасу күйі"</string>
-    <string name="location_services" msgid="551503779736382878">"Орынды анықтау қызметтері"</string>
+    <string name="location_services" msgid="551503779736382878">"Локация қызметтері"</string>
     <string name="on" msgid="4899322147062342542">"Қосулы"</string>
     <string name="off" msgid="3127416478888499352">"Өшірулі"</string>
-    <string name="google_location_services_title" msgid="6304196603522909239">"Google орынды анықтау қызметтері"</string>
-    <string name="third_party_location_services_title" msgid="2826218400381676508">"3-тараптың орынды анықтау қызметтері"</string>
+    <string name="google_location_services_title" msgid="6304196603522909239">"Google Локация қызметтері"</string>
+    <string name="third_party_location_services_title" msgid="2826218400381676508">"3-тараптың Локация қызметтері"</string>
     <string name="location_reporting" msgid="3552501333650895634">"Орындар туралы есептер"</string>
-    <string name="location_history" msgid="4055660203090513120">"Орналасу тарихы"</string>
+    <string name="location_history" msgid="4055660203090513120">"Локация тарихы"</string>
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google бұл мүмкіндікті Google Now және Google Карталар сияқты өнімдерде пайдаланады. Орындар туралы есептерді қосу осы мүмкіндікті пайдаланатын кез келген Google өніміне құрылғының Google есептік жазбасымен байланысты ең соңғы орын деректерін сақтауға және пайдалануға мүмкіндік береді."</string>
     <string name="location_history_desc" msgid="926674012916014270">"Осы есептік жазба үшін орындар тарихы қосулы болса, Google құрылғының орын деректерін қолданбалар пайдалануы үшін сақтай алады.\n\nМысалы, Google Карталар сізге бағыттар бере алады және  give Google Now жұмысқа бару жолындағы жол қозғалысы туралы хабарлай алады.\n\nОрналасу тарихын кез келген уақытта өшіруге болады, бірақ бұлай істеу оны жоймайды. Орналасу тарихын көру және басқару үшін maps.google.com/locationhistory бетіне кіріңіз."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Орындар тарихын жою"</string>
@@ -458,7 +458,7 @@
     <string name="captions_windowshow" msgid="6002072054703167886">"Терезені көрсету"</string>
     <string name="captions_windowcolor" msgid="7460430328878876648">"Терезе түсі"</string>
     <string name="captions_windowopacity" msgid="8645082670322789314">"Терезе күңгірттігі"</string>
-    <string name="captions_style_0" msgid="169414884289770256">"Қара түсте ақпен"</string>
+    <string name="captions_style_0" msgid="169414884289770256">"Қарада ақ"</string>
     <string name="captions_style_1" msgid="8236052739817535538">"Ақ түсте қарамен"</string>
     <string name="captions_style_2" msgid="456353889540431910">"Қара түсте сарымен"</string>
     <string name="captions_style_3" msgid="3860050153620761166">"Көк түсте сарымен"</string>
@@ -556,7 +556,7 @@
     <string name="system_hw_overdraw_areas" msgid="6442009722913530348">"Артық сызу аумақтарын көрсету"</string>
     <string name="system_hw_overdraw_counter" msgid="9132113146364838852">"Артық сызу есептегішін көрсету"</string>
     <string name="no_application" msgid="1904437693440706534">"Ешнәрсе"</string>
-    <string name="enable_opengl_traces_none" msgid="4718084947494592040">"Ешқандай"</string>
+    <string name="enable_opengl_traces_none" msgid="4718084947494592040">"Жоқ"</string>
   <string-array name="animation_scale_entries">
     <item msgid="5408992662476056082">"Aнимация өшірілген"</item>
     <item msgid="6818290063799857019">"Aнимация масштабы 0,5x"</item>
@@ -634,7 +634,7 @@
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"<xliff:g id="APP">%1$s</xliff:g> басқарады"</string>
     <string name="app_not_supported_in_limited" msgid="4046604594925826955">"Бұл қолданбаға шектелген профильдерде қолдау көрсетілмейді"</string>
     <string name="app_sees_restricted_accounts" msgid="174038126799649152">"Бұл қолданба есептік жазбаларыңызға қатынаса алады"</string>
-    <string name="restriction_location_enable_title" msgid="2552780806199464266">"Орналасу"</string>
+    <string name="restriction_location_enable_title" msgid="2552780806199464266">"Локация"</string>
     <string name="restriction_location_enable_summary" msgid="3719330231217994482">"Қолданбаларға орныңыз туралы ақпаратты пайдалануға рұқсат беру"</string>
     <string name="restricted_profile_switch_to" msgid="6193201935877168764">"Шектелген профильге кіру"</string>
     <string name="restricted_profile_switch_out" msgid="3589381233390753413">"Шектелген профильден шығу"</string>
