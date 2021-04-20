@@ -21,7 +21,8 @@
     <Preference
         android:key="data_saver_info"
         android:title="@string/data_saver_header_info"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:selectable="false"/>
 
     <SwitchPreference
         android:key="wifi_enable"
