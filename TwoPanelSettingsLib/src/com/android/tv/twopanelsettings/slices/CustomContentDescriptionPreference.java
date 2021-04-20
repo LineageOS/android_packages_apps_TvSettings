@@ -19,6 +19,7 @@ package com.android.tv.twopanelsettings.slices;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.view.View;
 
 import androidx.preference.PreferenceViewHolder;
 
@@ -45,6 +46,7 @@ public class CustomContentDescriptionPreference extends RestrictedPreference imp
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
         if (!TextUtils.isEmpty(mContentDescription)) {
+            holder.itemView.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);
             holder.itemView.setContentDescription(mContentDescription);
         }
     }
