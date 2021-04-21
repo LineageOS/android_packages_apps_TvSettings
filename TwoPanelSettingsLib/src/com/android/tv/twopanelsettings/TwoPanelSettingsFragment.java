@@ -63,10 +63,13 @@ import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference;
+import com.android.tv.twopanelsettings.slices.HasCustomContentDescription;
 import com.android.tv.twopanelsettings.slices.HasSliceUri;
 import com.android.tv.twopanelsettings.slices.InfoFragment;
 import com.android.tv.twopanelsettings.slices.SliceFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
+import com.android.tv.twopanelsettings.slices.SliceSwitchPreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
 
 import java.util.Set;
@@ -1029,12 +1032,48 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
         Preference preference = getChosenPreference(prefFragment);
         preference.setFragment(InfoFragment.class.getCanonicalName());
+
+        if (isA11yOn()) {
+            appendErrorToContentDescription(prefFragment, errorMessage);
+        }
+
         Bundle b = preference.getExtras();
         b.putParcelable(EXTRA_PREFERENCE_INFO_TITLE_ICON,
                 Icon.createWithResource(getContext(), R.drawable.slice_error_icon));
         b.putCharSequence(EXTRA_PREFERENCE_INFO_TEXT, getString(R.string.status_unavailable));
         b.putCharSequence(EXTRA_PREFERENCE_INFO_SUMMARY, errorMessage);
         onPreferenceFocused(preference);
+    }
+
+    private void appendErrorToContentDescription(Fragment fragment, String errorMessage) {
+        Preference preference = getChosenPreference(fragment);
+
+        String errorMessageContentDescription = "";
+        if (preference.getTitle() != null) {
+            errorMessageContentDescription += preference.getTitle().toString();
+        }
+
+        errorMessageContentDescription +=
+                HasCustomContentDescription.CONTENT_DESCRIPTION_SEPARATOR
+                        + getString(R.string.status_unavailable)
+                        + HasCustomContentDescription.CONTENT_DESCRIPTION_SEPARATOR + errorMessage;
+
+        if (preference instanceof SlicePreference) {
+            ((SlicePreference) preference).setContentDescription(errorMessageContentDescription);
+        } else if (preference instanceof SliceSwitchPreference) {
+            ((SliceSwitchPreference) preference)
+                    .setContentDescription(errorMessageContentDescription);
+        } else if (preference instanceof CustomContentDescriptionPreference) {
+            ((CustomContentDescriptionPreference) preference)
+                    .setContentDescription(errorMessageContentDescription);
+        }
+
+        LeanbackPreferenceFragmentCompat leanbackPreferenceFragment =
+                (LeanbackPreferenceFragmentCompat) fragment;
+        if (leanbackPreferenceFragment.getListView() != null
+                && leanbackPreferenceFragment.getListView().getAdapter() != null) {
+            leanbackPreferenceFragment.getListView().getAdapter().notifyDataSetChanged();
+        }
     }
 
     private void updateInfoFragmentStatus(Fragment fragment) {
