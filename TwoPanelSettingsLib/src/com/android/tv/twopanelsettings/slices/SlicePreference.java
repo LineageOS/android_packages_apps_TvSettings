@@ -19,6 +19,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.preference.Preference;
@@ -56,6 +57,7 @@ public class SlicePreference extends Preference implements HasSliceAction, HasSl
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
         if (!TextUtils.isEmpty(mContentDescription)) {
+            holder.itemView.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);
             holder.itemView.setContentDescription(mContentDescription);
         }
     }
