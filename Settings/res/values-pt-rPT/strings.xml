@@ -28,7 +28,7 @@
     <string name="hotwording_summary" msgid="2170375928302175449">"Fale com o Assistente Google quando quiser."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Dispositivo"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Preferências"</string>
-    <string name="header_category_accessories" msgid="8310540329290988415">"Controlo remoto e acessórios"</string>
+    <string name="header_category_accessories" msgid="8310540329290988415">"Comando e acessórios"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"Pessoal"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"Ligar à rede"</string>
     <string name="add_an_account" msgid="2601275122685226096">"Adicionar uma conta"</string>
@@ -38,9 +38,10 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> contas</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> conta</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Serviços multimédia, Assistente, Pagamentos"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Rede e Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Som"</string>
-    <string name="applications_category_title" msgid="7112019490898586223">"Aplicações"</string>
+    <string name="applications_category_title" msgid="7112019490898586223">"Apps"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Preferências do dispositivo"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Controlos remotos e acessórios"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Sem dispositivos Bluetooth ligados."</string>
@@ -48,7 +49,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> acessórios</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> acessório</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Ajuda e comentários"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Ecrã e som"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Ajuda e comentários"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Privacidade"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Definições do dispositivo"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Definições da app"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Localização, Utilização e diagnósticos, Anúncios"</string>
     <string name="add_account" msgid="7386223854837017129">"Adicionar conta"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Remover conta"</string>
     <string name="account_sync" msgid="4315295293211313989">"Escolher apps sincronizadas"</string>
@@ -73,20 +79,21 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Permitir que o serviço de localização da Google e outras aplicações procurem redes, mesmo quando a ligação Wi-Fi está desativada"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Ligue-se à rede."</string>
-    <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Aplicações abertas recentemente"</string>
+    <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Apps abertas recentemente"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Ver todas as apps"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Autorizações"</string>
-    <string name="all_apps_title" msgid="3717294436135280133">"Todas as aplicações"</string>
+    <string name="all_apps_title" msgid="3717294436135280133">"Todas as apps"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Mostrar aplicações do sistema"</string>
-    <string name="all_apps_installed" msgid="8217778476185598971">"Aplicações instaladas"</string>
-    <string name="all_apps_other" msgid="4420174882983813158">"Aplicações do sistema"</string>
-    <string name="all_apps_disabled" msgid="2776041242863791053">"Aplicações desativadas"</string>
+    <string name="all_apps_installed" msgid="8217778476185598971">"Apps instaladas"</string>
+    <string name="all_apps_other" msgid="4420174882983813158">"Apps do sistema"</string>
+    <string name="all_apps_disabled" msgid="2776041242863791053">"Apps desativadas"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Proteção de ecrã"</string>
     <string name="device_display" msgid="244634591698925025">"Visualização"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Ecrã e som"</string>
     <string name="device_sound" msgid="8616320533559404963">"Som"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Som surround"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Sons do sistema"</string>
-    <string name="device_apps" msgid="2134756632245008919">"Aplicações"</string>
+    <string name="device_apps" msgid="2134756632245008919">"Apps"</string>
     <string name="device_storage" msgid="8540243547121791073">"Armazenamento"</string>
     <string name="device_reset" msgid="6115282675800077867">"Reposição de dados de fábrica"</string>
     <string name="device_backup_restore" msgid="4552158624969018687">"Cópia de segurança e restauro"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automático: usar formatos que dispositivo indica suportar (recomendado)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Nenhum: nunca utilizar o som surround"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manual: selecionar os formatos a utilizar"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Ecrã"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Definições de visualização avançadas"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Definições de som avançadas"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Permitir modo de jogo"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Pretende limpar os dados em cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Isto limpa os dados em cache de todas as app"</string>
     <string name="accessories_add" msgid="413764175035531452">"Adicionar acessório"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Geralmente, 0000 ou 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Sincronizar"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancelar"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Criar relatório de erro"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Enviar feedback"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centro de Ajuda"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Data e hora"</string>
@@ -159,7 +170,7 @@
     <string name="restart_button_label" msgid="2124590135040611899">"Reiniciar"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Informações legais"</string>
     <string name="about_legal_license" msgid="4801707286720681261">"Licenças de código aberto"</string>
-    <string name="about_terms_of_service" msgid="8514826341101557623">"Google jurídico"</string>
+    <string name="about_terms_of_service" msgid="8514826341101557623">"Informações legais da Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Dados da licença indisponíveis"</string>
     <string name="about_model" msgid="9164284529291439296">"Modelo"</string>
     <string name="about_version" msgid="7800676128792880991">"Versão"</string>
@@ -182,7 +193,7 @@
     <string name="device_status_summary" msgid="3270932829412434985">"Rede, números de série e outras informações"</string>
     <string name="manual" msgid="5683935624321864999">"Manual"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"Informações regulamentares"</string>
-    <string name="device_feedback" msgid="4871903271442960465">"Enviar comentários do dispositivo"</string>
+    <string name="device_feedback" msgid="4871903271442960465">"Enviar feedback do dispositivo"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"ID do equipamento"</string>
     <string name="baseband_version" msgid="5618116741093274294">"Versão da banda de base"</string>
     <string name="kernel_version" msgid="7265509054070001542">"Versão do kernel"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"Boa"</item>
     <item msgid="6005053494500517261">"Excelente"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"Endereço MAC"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Endereço MAC do dispositivo"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Endereço MAC aleatório"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Intensidade do sinal"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Privacidade"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Utilizar MAC aleatório (predefinição)"</item>
+    <item msgid="2490415280467390067">"Utilizar MAC do dispositivo"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Não disponível"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"MAC aleatório"</string>
     <string name="title_ip_address" msgid="705842159484772807">"Endereço IP"</string>
     <string name="title_ssid" msgid="255328048344188682">"Introduza o nome da rede Wi-Fi"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Ligação à Internet"</string>
@@ -297,7 +316,7 @@
     <string name="storage_available" msgid="8860901789290434209">"Disponível"</string>
     <string name="storage_size" msgid="5517261387579171381">"Espaço total: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
     <string name="storage_calculating_size" msgid="5716281278843281044">"A calcular..."</string>
-    <string name="storage_apps_usage" msgid="8659915575274468924">"Aplicações"</string>
+    <string name="storage_apps_usage" msgid="8659915575274468924">"Apps"</string>
     <string name="storage_downloads_usage" msgid="8429196848359517158">"Transferências"</string>
     <string name="storage_dcim_usage" msgid="337290403400541958">"Fotos e vídeos"</string>
     <string name="storage_music_usage" msgid="5362871290115089474">"Áudio"</string>
@@ -311,7 +330,7 @@
     <string name="storage_not_connected" msgid="4327902652748552794">"Sem ligação"</string>
     <string name="storage_migrate" msgid="9137556600192167701">"Migrar dados para este armazenamento"</string>
     <string name="storage_migrate_away" msgid="7880100961434638430">"Migrar dados para um armazenamento diferente"</string>
-    <string name="storage_no_apps" msgid="95566375753627272">"Sem aplicações para fazer uma cópia de segurança"</string>
+    <string name="storage_no_apps" msgid="95566375753627272">"Sem apps para fazer uma cópia de segurança"</string>
     <string name="storage_forget" msgid="4671975563260507003">"Esquecer o armazenamento deste dispositivo"</string>
     <string name="storage_forget_wall_of_text" msgid="230454348256179142">"Para utilizar as aplicações ou os dados contidos nesta unidade, insira-a novamente. Em alternativa, pode optar por esquecer este armazenamento se a unidade não estiver disponível\n\nSe optar por Esquecer, todos os dados contidos na unidade são eliminados permanentemente.\n\nPode reinstalar as aplicações posteriormente, mas os dados armazenados nesta unidade serão eliminados."</string>
     <string name="storage_device_storage_section" msgid="22958375769694027">"Armazenamento do dispositivo"</string>
@@ -344,8 +363,8 @@
     <string name="storage_wizard_format_slow_summary" msgid="3674023258060474037">"Pode continuar, mas as aplicações movidas para esta localização podem falhar e as transferências de dados podem demorar muito tempo. Para obter um melhor desempenho, considere utilizar uma unidade mais rápida."</string>
     <string name="storage_wizard_format_action" msgid="3275676687226857170">"Formatar"</string>
     <string name="storage_wizard_backup_apps_action" msgid="1402199004931596519">"Fazer uma cópia de segurança de aplicações"</string>
-    <string name="storage_wizard_back_up_apps_title" msgid="6225663573896846937">"Aplicações armazenadas no <xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_back_up_apps_and_data_title" msgid="7763611380573099978">"Aplicações e dados armazenados no <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_title" msgid="6225663573896846937">"Apps armazenadas no <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_wizard_back_up_apps_and_data_title" msgid="7763611380573099978">"Apps e dados armazenados no <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="5741521038349239359">"<xliff:g id="SIZE">%1$s</xliff:g> disponível(eis)"</string>
     <string name="storage_wizard_eject_private_title" msgid="1336088625197134497">"Ejetar armazenamento do dispositivo"</string>
     <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"As aplicações no armazenamento deste dispositivo deixarão de funcionar quando ejetar a unidade. Esta unidade USB está formatada para funcionar apenas neste dispositivo. Não funciona em mais nenhum."</string>
@@ -470,7 +489,7 @@
     <string name="system_input" msgid="4457152980514604873">"Entrada"</string>
     <string name="system_drawing" msgid="5802739024643871942">"Desenho"</string>
     <string name="system_monitoring" msgid="7997260748312620855">"Monitorizar"</string>
-    <string name="system_apps" msgid="8481888654606868074">"Aplicações"</string>
+    <string name="system_apps" msgid="8481888654606868074">"Apps"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Manter ativo"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"Verificação HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"Otimização HDMI"</string>
@@ -567,7 +586,7 @@
     <string name="title_current_autofill_service" msgid="9029001041887283153">"Serviço de preenchimento automático atual"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"Selecionar o serviço de preenchimento automático"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Nenhum"</string>
-    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Certifique-se de que confia nesta aplicação&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=O serviço de palavras-passe&gt;%1$s&lt;/xliff:g&gt; utiliza o que está no ecrã para determinar o que pode ser preenchido automaticamente."</string>
+    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Certifique-se de que confia nesta app&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=O serviço de palavras-passe&gt;%1$s&lt;/xliff:g&gt; utiliza o que está no ecrã para determinar o que pode ser preenchido automaticamente."</string>
     <string name="computing_size" msgid="8623916230485437579">"A calcular..."</string>
     <string name="title_select_wifi_network" msgid="935820896444071617">"Selecionar rede Wi-Fi"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Mudar o nome"</string>
@@ -610,7 +629,7 @@
       <item quantity="other">Entradas não ligadas</item>
       <item quantity="one">Entrada não ligada</item>
     </plurals>
-    <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Restringir o acesso a aplicações e a outro conteúdo na sua conta"</string>
+    <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Restringir o acesso a apps e a outro conteúdo na sua conta"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Perfil restrito"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Controlado por <xliff:g id="APP">%1$s</xliff:g>"</string>
     <string name="app_not_supported_in_limited" msgid="4046604594925826955">"Esta aplicação não é suportada nos perfis restritos"</string>
@@ -622,7 +641,7 @@
     <string name="restricted_profile_delete_title" msgid="7153982195273379506">"Eliminar o perfil restrito"</string>
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Criar perfil restrito"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Definições"</string>
-    <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Aplicações autorizadas"</string>
+    <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Apps autorizadas"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
       <item quantity="other">%d aplicações permitidas</item>
       <item quantity="one">1 aplicação permitida</item>
@@ -686,13 +705,13 @@
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Durante a reprodução de multimédia"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"De momento, não há nenhuma conta a armazenar dados de cópia de segurança"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
-    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Deixar de fazer uma cópia de segurança de palavras-passe de Wi-Fi, marcadores, outras definições e dados de aplicações, e apagar todas as cópias nos servidores da Google?"</string>
+    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Deixar de fazer uma cópia de segurança de palavras-passe de Wi-Fi, marcadores, outras definições e dados de apps, e apagar todas as cópias nos servidores da Google?"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"Fazer uma cópia de segur. dos meus dados"</string>
     <string name="privacy_backup_account" msgid="4527813051841860610">"Conta de segurança"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Restauro automático"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Repor dispositivo"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Esta ação apaga todos os dados da memória de armazenamento interno do dispositivo, incluindo a sua Conta Google, os dados e as definições do sistema e das aplicações, e as aplicações transferidas."</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Pretende apagar todas as informações pessoais e aplicações transferidas? Não é possível reverter esta ação!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Pretende apagar todas as informações pessoais e apps transferidas neste dispositivo? Não é possível reverter esta ação."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Apagar tudo"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Escolha um nome para o seu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Atribua um nome ao seu dispositivo para ser mais fácil identificá-lo aquando da transmissão ou ligação ao mesmo a partir de outros dispositivos."</string>
@@ -711,7 +730,7 @@
     <string name="keep_settings" msgid="703474489210093961">"Não alterar"</string>
     <string name="apps_permissions" msgid="7876407267050498394">"Autorizações"</string>
     <string name="device_apps_permissions" msgid="8421323706003063878">"Autoriz. da app"</string>
-    <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_0">%1$d</xliff:g> de <xliff:g id="COUNT_1">%2$d</xliff:g> aplicações autorizadas"</string>
+    <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_0">%1$d</xliff:g> de <xliff:g id="COUNT_1">%2$d</xliff:g> apps autorizadas"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Pedido de autorização de Bluetooth"</string>
     <string name="security_patch" msgid="5468261708915367254">"Nível do patch de segurança do Android"</string>
     <string name="choose_application" msgid="2375936782103669988">"Escolher aplicação"</string>
@@ -728,12 +747,12 @@
     <string name="usage_access_description" msgid="3276026988575551587">"O acesso de utilização permite a uma aplicação monitorizar que outras aplicações está a utilizar e com que frequência, bem como o operador e as definições de idioma, entre outros detalhes."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"Otimização de energia"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"Otimizar a utilização de energia de aplicações"</string>
-    <string name="high_power_apps_empty" msgid="3084512758421482051">"Sem aplicações a otimizar"</string>
+    <string name="high_power_apps_empty" msgid="3084512758421482051">"Sem apps a otimizar"</string>
     <string name="high_power_on" msgid="3120162683093360951">"Não otimizada"</string>
     <string name="high_power_off" msgid="3588854600942236231">"Com otimização da utilização de energia"</string>
     <string name="high_power_system" msgid="6263052626979462255">"Otimização de energia não disponível"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Acesso a notificações"</string>
-    <string name="no_notification_listeners" msgid="5119406452675724448">"Nenhuma aplicação instalada solicitou acesso a notificações."</string>
+    <string name="no_notification_listeners" msgid="5119406452675724448">"Nenhuma app instalada solicitou acesso a notificações."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Estas aplicações poderão ler todas as notificações, incluindo informações pessoais como nomes de contactos e o texto de mensagens recebidas. Também poderão ignorar notificações ou acionar botões de ação incluídos nas mesmas."</string>
     <string name="directory_access" msgid="7338555825237012006">"Acesso ao diretório"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Estas aplicações têm autorização de acesso a certos diretórios."</string>
@@ -748,7 +767,7 @@
     <string name="write_settings_off" msgid="6730113471695092167">"Não"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Ecrã no ecrã"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Permitir ecrã no ecrã"</string>
-    <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Nenhuma aplicação instalada é compatível com Ecrã no ecrã."</string>
+    <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Nenhuma app instalada é compatível com Ecrã no ecrã."</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Permitir que as aplicações criem uma janela de ecrã no ecrã enquanto as aplicações estão abertas ou depois de sair das mesmas (por exemplo, para continuar a ver um vídeo). Esta janela é apresentada sobre as outras aplicações que estiver a utilizar."</string>
     <string name="special_access" msgid="21806055758289916">"Acesso especial a aplicações"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Poupança de dados"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Ajuste automaticamente a qualidade do vídeo para utilizar menos dados móveis."</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Utilização de dados e alertas"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Ação não permitida"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Impossível alterar o volume"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"As chamadas não são permitidas"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"Os SMS não são permitidos"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"A câmara não é permitida"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"A captura de ecrã não é permitida"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Impossível abrir esta aplicação"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Se tiver dúvidas, contacte o seu administrador de TI."</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Dispositivo a utilizar com a app <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Nenhum dispositivo encontrado. Certifique-se de que os dispositivos estão ativados e disponíveis para ligação."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Tentar novamente"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Ocorreu um erro. A aplicação cancelou o pedido de escolha de um dispositivo."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Ligação estabelecida com êxito"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Mostrar tudo"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"A pesquisar…"</string>
 </resources>

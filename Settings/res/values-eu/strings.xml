@@ -38,18 +38,24 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> kontu</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> kontu</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Multimedia-zerbitzuak, Laguntzailea, ordainketak"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Sareak eta Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Soinua"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplikazioak"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Gailuaren hobespenak"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Urruneko kontrolagailuak eta osagarriak"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Ez dago konektatuta Bluetooth gailurik"</string>
+    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Ez dago konektatuta Bluetooth bidezko gailurik"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> osagarri</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> osagarri</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Laguntza eta iritzia"</string>
-    <string name="add_account" msgid="7386223854837017129">"Gehitu kontua"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Pantaila eta soinua"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Laguntza eta iritziak"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Pribatutasuna"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Gailuaren ezarpenak"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Aplikazioaren ezarpenak"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Kokapena, erabilera eta diagnosikoak, iragarkiak"</string>
+    <string name="add_account" msgid="7386223854837017129">"Gehitu kontu bat"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Kendu kontua"</string>
     <string name="account_sync" msgid="4315295293211313989">"Aukeratu sinkronizatutako aplikazioak"</string>
     <string name="sync_now" msgid="4335217984374620551">"Sinkronizatu"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Desgaitutako aplikazioak"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Pantaila-babeslea"</string>
     <string name="device_display" msgid="244634591698925025">"Bistaratzea"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Pantaila eta soinua"</string>
     <string name="device_sound" msgid="8616320533559404963">"Soinua"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Soinu inguratzailea"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Sistemaren soinuak"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automatikoa: erabili gailuak onartzen dituen formatuak (gomendatua)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Bat ere ez: ez erabili inoiz soinu inguratzailea"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Eskuzkoa: hautatu erabili beharreko formatuak"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Pantaila"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Pantailaren ezarpen aurreratuak"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Soinuaren ezarpen aurreratuak"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Eman jokatzeko modua erabiltzeko baimena"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Cacheko datuak garbitu nahi dituzu?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Aplikazio guztien cacheko datuak garbituko dira."</string>
     <string name="accessories_add" msgid="413764175035531452">"Gehitu osagarria"</string>
@@ -120,7 +131,7 @@
     <string name="accessory_change_name" msgid="6493717176878500683">"Aldatu izena"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Ezarri beste izen bat osagarriari"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Osagarriak bilatzen…"</string>
-    <string name="accessories_add_bluetooth_inst" msgid="5109947637581187896">"Bluetooth gailuak parekatu aurretik, ziurtatu parekatze moduan daudela"</string>
+    <string name="accessories_add_bluetooth_inst" msgid="5109947637581187896">"Bluetooth bidezko gailuak parekatu aurretik, ziurtatu parekatze moduan daudela"</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Gailu bat aurkitu da eta automatikoki parekatuko da <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundo igarotakoan"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Ez da onartzen ekintza hori"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Bluetooth bidez parekatzeko eskaera"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"0000 edo 1234 izan ohi da"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Parekatu"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Utzi"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Sortu akatsen txostena"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Bidali oharrak"</string>
     <string name="launch_help" msgid="2607478763131952469">"Laguntza-zentroa"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Data eta ordua"</string>
@@ -192,7 +203,7 @@
     <string name="battery_level_title" msgid="2672804570916248736">"Bateria-maila"</string>
     <string name="sim_status_title" msgid="1704273079796640946">"SIM txartelaren egoera"</string>
     <string name="imei_information_title" msgid="3790368306353698724">"IMEIari buruzko informazioa"</string>
-    <string name="status_bt_address" msgid="7190052214963950844">"Bluetooth helbidea"</string>
+    <string name="status_bt_address" msgid="7190052214963950844">"Bluetooth bidez konektatzeko helbidea"</string>
     <string name="status_up_time" msgid="1758102680983108313">"Jardun-denbora"</string>
     <string name="legal_information" msgid="1087445528481370874">"Lege-informazioa"</string>
     <string name="copyright_title" msgid="5879660711078649518">"Copyrighta"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"Ona"</item>
     <item msgid="6005053494500517261">"Bikaina"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC helbidea"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Gailuaren MAC helbidea"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Ausaz antolatutako MAC helbidea"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Seinalearen indarra"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Pribatutasuna"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Erabili ausaz aukeratutako MAC helbidea (lehenetsia)"</item>
+    <item msgid="2490415280467390067">"Erabili gailuaren MAC helbidea"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Ez dago erabilgarri"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Ausaz aukeratutako MAC helbidea"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP helbidea"</string>
     <string name="title_ssid" msgid="255328048344188682">"Idatzi wifi-sarearen izena"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Interneteko konexioa"</string>
@@ -228,21 +247,21 @@
     <string name="title_wifi_could_not_save" msgid="7549912968719395764">"Ezin izan da <xliff:g id="SSID">%1$s</xliff:g> sarearen konfigurazioa gorde"</string>
     <string name="title_wifi_could_not_connect" msgid="6654031057635481872">"Ezin izan da <xliff:g id="SSID">%1$s</xliff:g> sarera konektatu"</string>
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"Ezin izan da <xliff:g id="SSID">%1$s</xliff:g> sarea aurkitu"</string>
-    <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Wifi-sarearen pasahitzak ez du balio"</string>
+    <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Wifi-sareko pasahitzak ez du balio"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Wi-Fi sareak ez du onartu konexioa"</string>
-    <string name="title_wifi_advanced_options" msgid="371185991282743258">"<xliff:g id="SSID">%1$s</xliff:g> proxya eta IP ezarpenak konfiguratu nahi dituzu?"</string>
+    <string name="title_wifi_advanced_options" msgid="371185991282743258">"<xliff:g id="SSID">%1$s</xliff:g> proxya eta IParen ezarpenak konfiguratu nahi dituzu?"</string>
     <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Proxy-ezarpenak"</string>
     <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Proxyaren ostalariaren izena:"</string>
     <string name="title_wifi_proxy_port" msgid="566244407030390328">"Proxyaren ataka:"</string>
-    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"Saihestu honen proxya:"</string>
-    <string name="title_wifi_ip_settings" msgid="296029383749112888">"IP ezarpenak"</string>
+    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"Egin ez ikusi proxyari kasu hauetan:"</string>
+    <string name="title_wifi_ip_settings" msgid="296029383749112888">"IParen ezarpenak"</string>
     <string name="title_wifi_ip_address" msgid="5505806431042689276">"IP helbidea:"</string>
     <string name="title_wifi_gateway" msgid="4496416267930824360">"Atebidea:"</string>
     <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"Sare-aurrizkiaren luzera:"</string>
     <string name="title_wifi_dns1" msgid="1585965227665007553">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="4563319371301555072">"DNS 2:"</string>
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"Proxy-ezarpenak ez dira baliozkoak"</string>
-    <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP ezarpenak ez dira baliozkoak"</string>
+    <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IParen ezarpenak ez dira baliozkoak"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> gordetako sareetan dago"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"Saiatu berriro"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"Ikusi sare erabilgarriak"</string>
@@ -274,13 +293,13 @@
     <string name="wifi_gateway_description" msgid="8902481147103929271">"Idatzi balio duen IP helbide bat edo utzi hutsik.\nAdibidez: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
     <string name="wifi_network_prefix_length_description" msgid="2670994968279018896">"Idatzi balio duen karaktere kopuruko sare-aurrizkia.\nAdibidez: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="5629893736174170157">"Ostalari-izenak ez du balio"</string>
-    <string name="proxy_error_invalid_exclusion_list" msgid="1762079966901078116">"Salbuespen-zerrendak ez du balio. Idatzi salbuetsitako domeinuen zerrenda, komaz bereizita."</string>
+    <string name="proxy_error_invalid_exclusion_list" msgid="1762079966901078116">"Salbuespen-zerrendak ez du balio. Idatzi kanpo utzitako domeinuen zerrenda, komaz bereizita."</string>
     <string name="proxy_error_empty_port" msgid="692020249267351015">"Ataka eremuak ezin du hutsik egon"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"Ostalaria eremua hutsik badago, utzi Ataka eremua hutsik"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Atakak ez du balio"</string>
     <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Arakatzaileak HTTP proxya erabiltzen du, baina agian beste aplikazioek ez dute erabiliko."</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"Idatzi balio duen ataka bat.\nAdibidez: <xliff:g id="ID_1">8080</xliff:g>"</string>
-    <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Idatzi salbuetsitako domeinuen zerrenda bat komaz bereizita, edo utzi hutsik.\nAdibidez: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Idatzi kanpo utzitako domeinuen zerrenda bat komaz bereizita, edo utzi hutsik.\nAdibidez: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"Idatzi balio duen ostalari-izen bat.\nAdibidez: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="title_wifi_eap_method" msgid="4351752615786996226">"Aukeratu <xliff:g id="SSID">%1$s</xliff:g> sarearen EAP metodoa"</string>
     <string name="title_wifi_phase2_authentication" msgid="1167205033305931574">"Aukeratu <xliff:g id="SSID">%1$s</xliff:g> sarearen 2. faseko autentifikazioa"</string>
@@ -333,7 +352,7 @@
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"Unetxo bat beharko dugu. Ez kendu unitatea."</string>
     <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"Datuak migratzeko memoria-unitatea"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="5086390005970210697">"Eraman datuak <xliff:g id="NAME">%1$s</xliff:g> unitatera"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"Eraman argazkiak, fitxategiak eta aplikazioetako datuak <xliff:g id="NAME">%1$s</xliff:g> unitatera. Minutu batzuk beharko dira. Eraman bitartean, aplikazio batzuek ez dute behar bezala funtzionatuko."</string>
+    <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"Eraman argazkiak, fitxategiak eta aplikazioetako datuak <xliff:g id="NAME">%1$s</xliff:g> unitatera. Agian minutu batzuk beharko dira. Eraman bitartean, aplikazio batzuek ez dute behar bezala funtzionatuko."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="7512917600174814567">"Mugitu orain"</string>
     <string name="storage_wizard_migrate_confirm_action_move_later" msgid="6379986754827551474">"Mugitu geroago"</string>
     <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"Migratu dira datuak <xliff:g id="NAME">%1$s</xliff:g> unitatera"</string>
@@ -404,7 +423,7 @@
     <string name="third_party_location_services_title" msgid="2826218400381676508">"Hirugarrenen kokapen-zerbitzuak"</string>
     <string name="location_reporting" msgid="3552501333650895634">"Kokapenaren berri-ematea"</string>
     <string name="location_history" msgid="4055660203090513120">"Kokapen-historia"</string>
-    <string name="location_reporting_desc" msgid="1580018652781674608">"Google-k Google Now, Google Maps eta beste produktu batzuetan erabiltzen du eginbide hau. Kokapenaren berri-ematea aktibatuz gero, eginbide hau darabilen Google-ren edozein produktuk Google-ko kontuarekin konektatuta duzun gailuaren azken kokapen-datuak gorde eta erabil ditzake."</string>
+    <string name="location_reporting_desc" msgid="1580018652781674608">"Google-k Google Now, Google Maps eta beste produktu batzuetan erabiltzen du eginbide hau. Kokapenaren berri-ematea aktibatuz gero, eginbide hau darabilen Google-ren edozein produktuk Google-ko kontuarekin konektatuta daukazun gailuaren azken kokapen-datuak gorde eta erabil ditzake."</string>
     <string name="location_history_desc" msgid="926674012916014270">"Kontu honen Kokapen-historia aktibatuta dagoenean, Google-k gailuaren kokapen-datuak gorde ditzake aplikazioek erabil ditzaten.\n\nAdibidez, Google Maps-ek jarraibideak eman diezazkizuke eta Google Now aplikazioak, berriz, eguneroko joan-etorrietan aurki dezakezun trafikoaren berri eman diezazuke.\n\nEdonoiz desaktiba dezakezu Kokapen-historia, baina horrek ez du ezabatuko. Kokapen-historia ikusteko eta kudeatzeko, joan maps.google.com/locationhistory helbidera."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Ezabatu kokapen-historia"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Honekin, Kokapen-historiak kontu honetarako gorde duen gailuko guztia ezabatuko da. Ezin duzu ezabatzea desegin. Zenbait aplikaziok (besteak beste, Google Now aplikazioak) funtzionatzeari utziko diote."</string>
@@ -427,7 +446,7 @@
     <string name="captions_textsize" msgid="7161136610669343510">"Testuaren tamaina"</string>
     <string name="captions_captionstyle" msgid="6650139717545516071">"Azpitituluen estiloa"</string>
     <string name="captions_customoptions" msgid="7691004663572161126">"Aukera pertsonalizatuak"</string>
-    <string name="captions_fontfamily" msgid="1026632786438880997">"Letra-tipoaren familia"</string>
+    <string name="captions_fontfamily" msgid="1026632786438880997">"Letra-familia"</string>
     <string name="captions_textcolor" msgid="1566679779609140317">"Testuaren kolorea"</string>
     <string name="captions_edgetype" msgid="4875636291904824401">"Ertz mota"</string>
     <string name="captions_edgecolor" msgid="2779925179084237336">"Ertzaren kolorea"</string>
@@ -498,7 +517,7 @@
     <string name="system_show_surface_updates" msgid="7680759813613585278">"Erakutsi azaleko eguneratzeak"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"Leihoen animazio-eskala"</string>
     <string name="system_transition_animation_scale" msgid="7266380208347453619">"Trantsizioen animazio-eskala"</string>
-    <string name="system_animator_duration_scale" msgid="3829445237130423625">"Animatzailearen iraupena"</string>
+    <string name="system_animator_duration_scale" msgid="3829445237130423625">"Animatzailearen iraupen-eskala"</string>
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"Modu zorrotza gaituta"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"Egin GPU errendatze-profila"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"Gaitu aztarnak"</string>
@@ -512,10 +531,10 @@
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Aktibatu arazketa modua USBa konektatzean"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Araztutako aplikazioa araztailea erantsi arte itxaroten ari da exekutatu aurretik"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Erakutsi bideo zatiaren mugak, marjinak, etab."</string>
-    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Nabarmendu leiho barruko ikuspegiak GPUz marraztean"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Eguneratu bitartean, nabarmendu hardware-geruzak berdez"</string>
+    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Distirarazi leiho barruko ikuspegiak GPUz marraztean"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Distirarazi hardware-geruzak berdez haiek eguneratzean"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Onenetik txarrenera: urdina, berdea, gorri argia, gorria"</string>
-    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Nabarmendu leiho osoen azalak eguneratzen direnean"</string>
+    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Distirarazi leiho osoen azalak haiek eguneratzean"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Nabarmendu pantaila hari nagusian eragiketa luzeak egitean"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Neurtu errendatze-denbora ADB shell dumpsys gfxinfo aginduan"</string>
     <string name="action_on_title" msgid="1074972820237738324">"Aktibatuta"</string>
@@ -561,15 +580,15 @@
     <string name="tts_rate_fast" msgid="5723868816257531421">"Bizkorra"</string>
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"Oso bizkorra"</string>
     <string name="title_settings" msgid="780933693363320088">"<xliff:g id="NAME">%1$s</xliff:g> teklatuaren ezarpenak"</string>
-    <string name="title_current_keyboard" msgid="891238509164879851">"Uneko teklatua"</string>
+    <string name="title_current_keyboard" msgid="891238509164879851">"Oraingo teklatua"</string>
     <string name="title_configure" msgid="846802387014612210">"Konfiguratu"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Teklatuaren aukerak"</string>
-    <string name="title_current_autofill_service" msgid="9029001041887283153">"Betetze automatikoaren uneko zerbitzua"</string>
+    <string name="title_current_autofill_service" msgid="9029001041887283153">"Betetze automatikoaren oraingo zerbitzua"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"Hautatu betetze automatikoaren zerbitzua"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Bat ere ez"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Ziurtatu aplikazioa fidagarria dela&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Pasahitzen zerbitzuak&gt;%1$s&lt;/xliff:g&gt; pantailan dagoena erabiltzen du automatikoki bete daitekeena zehazteko."</string>
     <string name="computing_size" msgid="8623916230485437579">"Kalkulatzen…"</string>
-    <string name="title_select_wifi_network" msgid="935820896444071617">"Hautatu Wi-Fi sarea"</string>
+    <string name="title_select_wifi_network" msgid="935820896444071617">"Hautatu wifi-sarea"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Aldatu izena"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"Wi-Fi bidezko pantaila"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"PINa behar da"</string>
@@ -686,13 +705,13 @@
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Multimedia-edukia erreproduzitzean"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Ez dago babeskopiak gordetzen dituen aplikaziorik"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
-    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wifi-sareen pasahitzen, laster-marken, bestelako ezarpenen eta aplikazioetako datuen babeskopia egiteari utzi eta Google-ren zerbitzarietako kopia guztiak ezabatu nahi dituzu?"</string>
+    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wifi-sareetako pasahitzen, laster-marken, bestelako ezarpenen eta aplikazioetako datuen babeskopia egiteari utzi eta Google-ren zerbitzarietako kopia guztiak ezabatu nahi dituzu?"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"Egin nire datuen babeskopia"</string>
     <string name="privacy_backup_account" msgid="4527813051841860610">"Babeskopiak gordetzeko kontua"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Leheneratze automatikoa"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Berrezarri jatorrizko egoera"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Gailuaren barneko memoriako datu guztiak ezabatuko dira, baita Google-ko kontuak, sistemaren eta aplikazioetako datuak eta ezarpenak, eta deskargatutako aplikazioak ere."</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Informazio pertsonal guztia eta deskargatutako aplikazioak ezabatu nahi dituzu? Ezin izango duzu ekintza hori desegin."</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Gailu honetako informazio pertsonal guztia eta deskargatutako aplikazioak ezabatu nahi dituzu? Ezin izango duzu desegin ekintza hori."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Ezabatu guztia"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Aukeratu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> gailuaren izena"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Eman izena gailuari, edukia igortzeko edo beste gailu batzuetatik hartara konektatzeko garaian identifikatu ahal izateko."</string>
@@ -739,14 +758,14 @@
     <string name="directory_access_description" msgid="3630855858552422012">"Aplikazio hauek direktorio batzuetarako sarbidea dute."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Bistaratu beste aplikazioen gainean"</string>
-    <string name="permit_draw_overlay" msgid="5312730681030266735">"Baimendu beste aplikazioen gainean bistaratzea"</string>
-    <string name="allow_overlay_description" msgid="5152329837278240259">"Baimendu aplikazioari erabiltzen ari zaren aplikazioen gainean agertzea. Eginbide honek abian diren aplikazioen erabilera oztopa dezake, edo haien itxura edo portaera aldatu."</string>
+    <string name="permit_draw_overlay" msgid="5312730681030266735">"Eman beste aplik. gainean bistaratzeko baimena"</string>
+    <string name="allow_overlay_description" msgid="5152329837278240259">"Eman aplikazioari erabiltzen ari zaren aplikazioen gainean agertzeko baimena. Eginbide honek abian diren aplikazioen erabilera oztopa dezake, edo haien itxura edo portaera aldatu."</string>
     <string name="write_system_settings" msgid="4284654265954461890">"Aldatu sistemaren ezarpenak"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"Sistemaren ezarpenak alda ditzaketenak"</string>
     <string name="write_settings_description" msgid="7382397926674265937">"Baimen honekin, sistemaren ezarpenak alda ditzakete aplikazioek."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Bai"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Ez"</string>
-    <string name="picture_in_picture_title" msgid="2636935591386702348">"Pantaila txikia"</string>
+    <string name="picture_in_picture_title" msgid="2636935591386702348">"Pantaila txiki gainjarria"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Eman pantaila txiki gainjarria erabiltzeko baimena"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Ez dago instalatuta pantaila txiki gainjarriarekin bateragarria den aplikaziorik"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Eman pantaila txiki gainjarri bat sortzeko baimena aplikazioei, aplikazioa irekita dagoenean nahiz hartatik irtetean (adibidez, bideoak ikusten jarraitzeko). Erabiltzen ari zaren beste aplikazioen gaienean erakutsiko da leiho hori."</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Datu-aurrezlea"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Doitu automatikoki bideoen kalitatea datu-konexioa gutxiago erabiltzeko"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Datu-konexioaren erabilera eta alertak"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Ezin da hori egin"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Ezin da aldatu bolumena"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Ez da onartzen deiak egitea"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"Ez da onartzen SMS mezuak bidaltzea"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Ez da onartzen kamera erabiltzea"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Ez da onartzen pantaila-argazkiak ateratzea"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Ezin da ireki aplikazioa"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Galderarik baduzu, jarri IKT saileko administratzailearekin harremanetan"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> aplikazioarekin erabili behar den gailua"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Ez da aurkitu gailurik. Ziurtatu gailuak piztuta daudela eta konekta daitezkeela."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Saiatu berriro"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Arazoren bat izan da. Aplikazioak bertan behera utzi du gailu bat aukeratzeko eskaera."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Konektatu da"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Erakutsi guztiak"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Bilatzen"</string>
 </resources>

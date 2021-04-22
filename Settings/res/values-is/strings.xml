@@ -38,6 +38,7 @@
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> reikningur</item>
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> reikningar</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Spilunarþjónusta, hjálpari, greiðslur"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Netkerfi og internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Hljóð"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Forrit"</string>
@@ -48,7 +49,12 @@
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> fylgihlutur</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> fylgihlutir</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Hjálp og ábendingar"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Skjár og hljóð"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Hjálp og ábendingar"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Persónuvernd"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Stillingar tækis"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Forritsstillingar"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Staðsetning, notkun og greining, auglýsingar"</string>
     <string name="add_account" msgid="7386223854837017129">"Bæta reikningi við"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Fjarlægja reikning"</string>
     <string name="account_sync" msgid="4315295293211313989">"Velja samstillt forrit"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Óvirk forrit"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Skjávari"</string>
     <string name="device_display" msgid="244634591698925025">"Skjár"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Skjár og hljóð"</string>
     <string name="device_sound" msgid="8616320533559404963">"Hljóð"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Víðóma hljóð"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Kerfishljóð"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Sjálfvirkt: Nota sniðin sem tækið segist styðja (ráðlagt)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Ekkert: Nota aldrei víðóma hljóð"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Handvirkt: Velja hvaða snið á að nota"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Skjár"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Ítarlegar skjástillingar"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Ítarlegar hljóðstillingar"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Leyfa leikjastillingu"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Hreinsa gögn í skyndiminni?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Þetta eyðir gögnum allra forrita úr skyndiminni."</string>
     <string name="accessories_add" msgid="413764175035531452">"Bæta aukabúnaði við"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Yfirleitt 0000 eða 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Para"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Hætta við"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Útbúa villutilkynningu"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Senda ábendingu"</string>
     <string name="launch_help" msgid="2607478763131952469">"Hjálparmiðstöð"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Dagsetning og tími"</string>
@@ -202,11 +213,19 @@
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Lélegt"</item>
     <item msgid="2098818614362343532">"Sæmilegt"</item>
-    <item msgid="2713050260700175954">"Gott"</item>
+    <item msgid="2713050260700175954">"Góður"</item>
     <item msgid="6005053494500517261">"Frábært"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC-vistfang"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"MAC-vistfang tækis"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"MAC-vistfang af handahófi"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Sendistyrkur"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Persónuvernd"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Nota MAC-vistfang af handahófi (sjálfgefið)"</item>
+    <item msgid="2490415280467390067">"Nota MAC-vistfang tækis"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Ekki í boði"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"MAC-vistfang af handahófi"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP-tala"</string>
     <string name="title_ssid" msgid="255328048344188682">"Sláðu inn heiti Wi-Fi nets"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Internettenging"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Sjálfvirk endurheimt"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Endurstilla tæki"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Þetta eyðir öllum gögnum úr innbyggðri geymslu tækisins, þar á meðal Google reikningnum þínum, gögnum og stillingum kerfis og forrita og sóttum forritum"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Eyða öllum persónulegum upplýsingum og sóttum forritum? Þú getur ekki afturkallað þessa aðgerð!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Viltu eyða öllum persónulegum upplýsingum og sóttum forritum í þessu tæki? Þú getur ekki afturkallað þessa aðgerð!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Eyða öllu"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Veldu heiti fyrir <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Gefðu tækinu heiti til að þekkja það þegar þú sendir út í það eða tengist því með öðrum tækjum."</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Gagnasparnaður"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Stilla myndgæði sjálfkrafa til að nota minna af farsímagögnum"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Gagnanotkun og tilkynningar"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Aðgerð ekki leyfileg"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Ekki er hægt að breyta hljóðstyrk"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Símtöl ekki leyfð"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS-skilaboð ekki leyfð"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Myndavél ekki leyfð"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Skjámyndir ekki leyfðar"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Ekki er hægt að opna þetta forrit"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Hafðu samband við kerfisstjórann þinn ef spurningar vakna"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Tæki sem á að nota með <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Engin tæki fundust. Gakktu úr skugga um að kveikt sé á tækjunum og að hægt sé að tengjast við þau."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Reyna aftur"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Eitthvað kom upp. Forritið hætti við beiðnina til að velja tæki."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Tenging tókst"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Sýna öll"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Leitar"</string>
 </resources>

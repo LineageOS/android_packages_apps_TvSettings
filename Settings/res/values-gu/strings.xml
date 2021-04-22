@@ -38,6 +38,7 @@
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> એકાઉન્ટ</item>
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> એકાઉન્ટ</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"મીડિયા સેવાઓ, Assistant, Payments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"નેટવર્ક અને ઇન્ટરનેટ"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"સાઉન્ડ"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ઍપ"</string>
@@ -48,7 +49,12 @@
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ઍક્સેસરી</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ઍક્સેસરી</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"સહાય અને પ્રતિસાદ"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"ડિસ્પ્લે અને સાઉન્ડ"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"સહાય અને પ્રતિસાદ"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"પ્રાઇવસી"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"ડિવાઇસના સેટિંગ"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"ઍપના સેટિંગ"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"સ્થાન, વપરાશ અને નિદાન, જાહેરાતો"</string>
     <string name="add_account" msgid="7386223854837017129">"એકાઉન્ટ ઉમેરો"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"એકાઉન્ટ દૂર કરો"</string>
     <string name="account_sync" msgid="4315295293211313989">"સમન્વયિત ઍપ્લિકેનોને પસંદ કરો"</string>
@@ -83,7 +89,8 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"બંધ કરેલી ઍપ"</string>
     <string name="device_daydream" msgid="2631191946958113220">"સ્ક્રીન સેવર"</string>
     <string name="device_display" msgid="244634591698925025">"પ્રદર્શન"</string>
-    <string name="device_sound" msgid="8616320533559404963">"ધ્વનિ"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"ડિસ્પ્લે અને સાઉન્ડ"</string>
+    <string name="device_sound" msgid="8616320533559404963">"સાઉન્ડ"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"સરાઉન્ડ સાઉન્ડ"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"સિસ્ટમ સાઉન્ડ"</string>
     <string name="device_apps" msgid="2134756632245008919">"ઍપ"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"ઑટો: તમારું ડિવાઇસ જે સમર્થિત ફૉર્મેટની જાણ કરે તેનો ઉપયોગ કરો (સુઝાવ આપેલ)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"કોઈ નહીં: સરાઉન્ડ સાઉન્ડનો ક્યારેય ઉપયોગ કરશો નહીં"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"મેન્યુઅલ: ક્યા ફૉર્મેટનો ઉપયોગ કરવો તે પસંદ કરો"</string>
+    <string name="display_category_title" msgid="247804007525046312">"ડિસ્પ્લે"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"વિગતવાર ડિસ્પ્લે સેટિંગ"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"વિગતવાર સાઉન્ડ સેટિંગ"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"ગેમ મોડની મંજૂરી આપો"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"કૅશ કરેલ ડેટા સાફ કરીએ?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"આ તમામ ઍપ્લિકેશનોનો કેશ્ડ ડેટા સાફ કરશે."</string>
     <string name="accessories_add" msgid="413764175035531452">"ઍક્સેસરી ઉમેરો"</string>
@@ -121,7 +132,7 @@
     <string name="accessory_change_name_title" msgid="451188562035392238">"આ ઍક્સેસરી માટે એક નવું નામ દાખલ કરો"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"ઍક્સેસરી શોધી રહ્યું છે…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="5109947637581187896">"તમારા Bluetooth ઉપકરણોની જોડી કરતાં પહેલાં, તે જોડી કરવાના મોડમાં હોવાની ખાતરી કરો"</string>
-    <string name="accessories_autopair_msg" msgid="2501824457418285019">"ઉપકરણ મળ્યું હતું અને તે <xliff:g id="COUNTDOWN">%1$s</xliff:g> સેકન્ડમાં આપમેળે જોડી કરશે"</string>
+    <string name="accessories_autopair_msg" msgid="2501824457418285019">"ડિવાઇસ મળ્યું હતું અને તે <xliff:g id="COUNTDOWN">%1$s</xliff:g> સેકન્ડમાં ઑટોમૅટિક રીતે જોડી કરશે"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"આ ક્રિયા સમર્થિત નથી"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Bluetooth જોડી કરવાની વિનંતી"</string>
     <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"આની સાથે જોડી કરવા માટે: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, ખાતરી કરો કે તે આ પાસકી બતાવી રહ્યું છે: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"સામાન્ય રીતે 0000 અથવા 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"જોડી કરો"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"રદ કરો"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"ખામીની જાણકારી લો"</string>
+    <string name="send_feedback" msgid="936698637869795473">"પ્રતિસાદ મોકલો"</string>
     <string name="launch_help" msgid="2607478763131952469">"સહાયતા કેન્દ્ર"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"તારીખ અને સમય"</string>
@@ -161,7 +172,7 @@
     <string name="about_legal_license" msgid="4801707286720681261">"ખુલ્લા સ્રોત લાઇસન્સ"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google કાનૂની"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"લાઇસન્સ ડેટા અનુપલબ્ધ છે"</string>
-    <string name="about_model" msgid="9164284529291439296">"મોડલ"</string>
+    <string name="about_model" msgid="9164284529291439296">"મૉડલ"</string>
     <string name="about_version" msgid="7800676128792880991">"વર્ઝન"</string>
     <string name="about_serial" msgid="3432319328808745459">"અનુક્રમ ક્રમાંક"</string>
     <string name="about_build" msgid="1139171613038225768">"બિલ્ડ"</string>
@@ -170,8 +181,8 @@
       <item quantity="other">તમે હવે એક વિકાસકર્તા બનવાથી <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> પગલાં દૂર છો</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"જાહેરાતો"</string>
-    <string name="show_dev_on" msgid="612741433124106067">"તમે હવે એક વિકાસકર્તા છો!"</string>
-    <string name="show_dev_already" msgid="1522591284776449818">"કોઈ જરૂર નથી, તમે પહેલાંથી જ વિકાસકર્તા છો"</string>
+    <string name="show_dev_on" msgid="612741433124106067">"તમે હવે ડેવલપર છો!"</string>
+    <string name="show_dev_already" msgid="1522591284776449818">"કોઈ જરૂર નથી, તમે પહેલાંથી જ ડેવલપર છો"</string>
     <string name="device_info_default" msgid="2374506935205518448">"અજાણ"</string>
     <string name="selinux_status" msgid="1146662734953021410">"SELinux સ્થિતિ"</string>
     <string name="selinux_status_disabled" msgid="4027105362332795142">"બંધ છે"</string>
@@ -182,7 +193,7 @@
     <string name="device_status_summary" msgid="3270932829412434985">"નેટવર્ક, અનુક્રમ નંબર અને અન્ય માહિતી"</string>
     <string name="manual" msgid="5683935624321864999">"મેન્યુઅલ"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"નિયમનકારી માહિતી"</string>
-    <string name="device_feedback" msgid="4871903271442960465">"આ ઉપકરણ વિશે પ્રતિસાદ મોકલો"</string>
+    <string name="device_feedback" msgid="4871903271442960465">"આ ડિવાઇસ વિશે પ્રતિસાદ મોકલો"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"સાધન ID"</string>
     <string name="baseband_version" msgid="5618116741093274294">"બેઝબેન્ડ સંસ્કરણ"</string>
     <string name="kernel_version" msgid="7265509054070001542">"કર્નલ વર્ઝન"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"સારી"</item>
     <item msgid="6005053494500517261">"ઉત્તમ"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC ઍડ્રેસ"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"ડિવાઇસનું MAC ઍડ્રેસ"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"રેન્ડમ કરેલું MAC ઍડ્રેસ"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"સિગ્નલ પ્રબળતા"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"પ્રાઇવસી"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"રેન્ડમ કરેલા MAC ઍડ્રેસનો ઉપયોગ કરો (ડિફૉલ્ટ)"</item>
+    <item msgid="2490415280467390067">"ડિવાઇસના MACનો ઉપયોગ કરો"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"ઉપલબ્ધ નથી"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"રેન્ડમ કરેલું MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP સરનામું"</string>
     <string name="title_ssid" msgid="255328048344188682">"Wi-Fi નેટવર્કનું નામ દાખલ કરો"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"ઇન્ટરનેટ કનેક્શન"</string>
@@ -564,10 +583,10 @@
     <string name="title_current_keyboard" msgid="891238509164879851">"વર્તમાન કીબોર્ડ"</string>
     <string name="title_configure" msgid="846802387014612210">"ગોઠવો"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"કીબોર્ડ વિકલ્પો"</string>
-    <string name="title_current_autofill_service" msgid="9029001041887283153">"વર્તમાનની આપમેળે ભરવાની સેવા"</string>
-    <string name="title_select_autofill_service" msgid="696559582725756848">"આપમેળે ભરવું સેવા પસંદ કરો"</string>
+    <string name="title_current_autofill_service" msgid="9029001041887283153">"વર્તમાનની ઑટોમૅટિક રીતે ભરવાની સુવિધા"</string>
+    <string name="title_select_autofill_service" msgid="696559582725756848">"ઑટોમૅટિક રીતે ભરવાની સુવિધા પસંદ કરો"</string>
     <string name="autofill_none" msgid="1615056985649424207">"કંઈ નહીં"</string>
-    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;ખાતરી કરો કે તમે આ ઍપનો વિશ્વાસ કરો છો&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=પાસવર્ડ સેવા&gt;%1$s&lt;/xliff:g&gt; શું આપમેળે ભરી શકાય તે નક્કી કરવા માટે તમારી સ્ક્રીન પરની વસ્તુઓનો ઉપયોગ કરે છે."</string>
+    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;ખાતરી કરો કે તમે આ ઍપનો વિશ્વાસ કરો છો&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=પાસવર્ડ સેવા&gt;%1$s&lt;/xliff:g&gt; શું ઑટોમૅટિક રીતે ભરી શકાય તે નક્કી કરવા માટે તમારી સ્ક્રીન પરની વસ્તુઓનો ઉપયોગ કરે છે."</string>
     <string name="computing_size" msgid="8623916230485437579">"ગણતરી કરી રહ્યું છે…"</string>
     <string name="title_select_wifi_network" msgid="935820896444071617">"તમારું Wi-Fi નેટવર્ક પસંદ કરો"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"નામ બદલો"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"સ્વયંચાલિત પુનઃસ્થાપના"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"ઉપકરણ રીસેટ કરો"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"આ તમારા ઉપકરણના આંતરિક સ્ટોરેજમાંથી આ સહિત તમામ ડેટા કાઢી નાખશે: તમારું Google એકાઉન્ટ, સિસ્ટમ અને ઍપ્લિકેશન ડેટા તથા સેટિંગ્સ અને ડાઉનલોડ કરેલ ઍપ્લિકેશનો"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"તમારી બધી વ્યક્તિગત માહિતી અને ડાઉનલોડ કરેલી ઍપ્લિકેશનોને કાઢી નાખીએ? તમે આ ક્રિયાને ઉલ્ટાવી શકતા નથી!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"આ ડિવાઇસ પરની તમારી બધી વ્યક્તિગત માહિતી અને ડાઉનલોડ કરેલી ઍપ કાઢી નાખીએ? તમે આ ક્રિયાને પાછી નથી વાળી શકતાં!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"દરેક વસ્તુ કાઢી નાખો"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"તમારા <xliff:g id="DEVICEMODEL">%1$s</xliff:g> માટે નામ પસંદ કરો"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"અન્ય ડિવાઇસ પરથી કાસ્ટ અથવા કનેક્ટ કરતી વખતે ઓળખવામાં સરળતા રહે તે માટે તમારા ડિવાઇસને નામ આપો."</string>
@@ -726,12 +745,12 @@
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"મંજૂરી નથી"</string>
     <string name="usage_access" msgid="8402350645248312782">"વપરાશ ઍક્સેસ"</string>
     <string name="usage_access_description" msgid="3276026988575551587">"વપરાશ ઍક્સેસ કોઈ એપ્લિકેશનને તમે કઈ અન્ય એપ્લિકેશન્સનો અને કેટલીવાર ઉપયોગ કરી રહ્યાં છો તેમજ તમારા કેરીઅર, ભાષા સેટિંગ્સ અને અન્ય વિગતોને ટ્રેક કરવાની મંજૂરી આપે છે."</string>
-    <string name="high_power_apps" msgid="5841073958519976562">"ઉર્જા ઑપ્ટિમાઇઝેશન"</string>
-    <string name="high_power_apps_description" msgid="8651692364795060525">"ઍપની ઉર્જા વપરાશને ઑપ્ટિમાઇઝ કરો"</string>
+    <string name="high_power_apps" msgid="5841073958519976562">"ઊર્જા ઑપ્ટિમાઇઝેશન"</string>
+    <string name="high_power_apps_description" msgid="8651692364795060525">"ઍપની ઊર્જા વપરાશને ઑપ્ટિમાઇઝ કરો"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"કોઈપણ ઍપને ઑપ્ટિમાઇઝ કરવાની જરૂર નથી"</string>
     <string name="high_power_on" msgid="3120162683093360951">"ઑપ્ટિમાઇઝ કરેલ નથી"</string>
     <string name="high_power_off" msgid="3588854600942236231">"ઉર્જાના વપરાશને ઑપ્ટિમાઇઝ કરી રહ્યાં છીએ"</string>
-    <string name="high_power_system" msgid="6263052626979462255">"ઉર્જા ઑપ્ટિમાઇઝેશન ઉપલબ્ધ નથી"</string>
+    <string name="high_power_system" msgid="6263052626979462255">"ઊર્જા ઑપ્ટિમાઇઝેશન ઉપલબ્ધ નથી"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"નોટિફિકેશન ઍક્સેસ"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"કોઈ ઇન્સ્ટૉલ કરેલ ઍપએ નોટિફિકેશન ઍક્સેસની વિનંતી કરી નથી."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"સંપર્ક નામ અને તમને મળતા સંદેશાના ટેક્સ્ટ જેવી વ્યક્તિગત માહિતી સહિતની બધી નોટિફિકેશન વાંચવામાં આ બધી ઍપ સમર્થ રહેશે. તે આ નોટિફિકેશનને છોડી દેવા અથવા તેમાં રહેલા ક્રિયા બટનોને ટ્રિગર કરવામાં પણ સમર્થ રહેશે."</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"ડેટા સેવર"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"મોબાઇલ ડેટાનો ઓછો ઉપયોગ કરવા માટે વીડિયો ક્વૉલિટી ઑટોમૅટિક રીતે ગોઠવો"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"ડેટા વપરાશ અને અલર્ટ"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"ક્રિયાને મંજૂરી નથી"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"વૉલ્યૂમ બદલી શકાતું નથી"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"કૉલ કરવાની મંજૂરી નથી"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMSની મંજૂરી નથી"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"કૅમેરાની મંજૂરી નથી"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"સ્ક્રીનશૉટની મંજૂરી નથી"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"આ ઍપ ખોલી શકાતી નથી"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"જો તમને કોઈ પ્રશ્નો હોય, તો તમારા IT વ્યવસ્થાપકનો સંપર્ક કરો"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> સાથે ઉપયોગમાં લેવાતું ડિવાઇસ"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"કોઈ ડિવાઇસ મળ્યું નથી. ખાતરી કરો કે ડિવાઇસ ચાલુ છે અને કનેક્ટ કરવા માટે ઉપલબ્ધ છે."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"ફરી પ્રયાસ કરો"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"કંઈક ભૂલ આવી. ઍપ્લિકેશને ડિવાઇસ પસંદ કરવાની વિનંતી રદ કરી છે."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"કનેક્શન સફળ થયું"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"બધા બતાવો"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"શોધી રહ્યાં છીએ"</string>
 </resources>

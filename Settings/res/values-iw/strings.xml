@@ -40,6 +40,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> חשבונות</item>
       <item quantity="one">חשבון אחד (<xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g>)</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"שירותי מדיה, Assistant,‏ Payments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"רשת ואינטרנט"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"צליל"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"אפליקציות"</string>
@@ -52,7 +53,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> אביזרים</item>
       <item quantity="one">אביזר אחד (<xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g>)</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"עזרה ומשוב"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"תצוגה וצליל"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"עזרה ומשוב"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"פרטיות"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"הגדרות מכשיר"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"הגדרות האפליקציה"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"מיקום, אופן השימוש בנתונים וניתוח הביצועים, מודעות"</string>
     <string name="add_account" msgid="7386223854837017129">"הוספת חשבון"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"הסרת חשבון"</string>
     <string name="account_sync" msgid="4315295293211313989">"בחירת אפליקציות מסונכרנות"</string>
@@ -87,6 +93,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"אפליקציות מושבתות"</string>
     <string name="device_daydream" msgid="2631191946958113220">"שומר מסך"</string>
     <string name="device_display" msgid="244634591698925025">"תצוגה"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"תצוגה וצליל"</string>
     <string name="device_sound" msgid="8616320533559404963">"צליל"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"צליל סראונד"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"צלילי מערכת"</string>
@@ -108,6 +115,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"אוטומטי: שימוש בפורמטים המדווחים כנתמכים על ידי המכשיר (מומלץ)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"ללא: אל תשתמש אף פעם בצליל סראונד"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"ידני: בחירה בפורמטים שבהם ייעשה שימוש"</string>
+    <string name="display_category_title" msgid="247804007525046312">"מסך"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"הגדרות תצוגה מתקדמות"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"הגדרות צליל מתקדמות"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"הרשאה למצב משחק"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"האם לנקות נתונים בקובץ שמור?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"פעולה זו תנקה נתונים בקובץ שמור, לכל האפליקציות."</string>
     <string name="accessories_add" msgid="413764175035531452">"הוספת ציוד היקפי"</string>
@@ -136,7 +147,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"בדרך כלל 0000 או 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"התאם"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"ביטול"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"יצירת דוח על באג"</string>
+    <string name="send_feedback" msgid="936698637869795473">"שליחת משוב"</string>
     <string name="launch_help" msgid="2607478763131952469">"מרכז עזרה"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"תאריך ושעה"</string>
@@ -209,10 +220,18 @@
     <item msgid="4475363344103354364">"חלש"</item>
     <item msgid="2098818614362343532">"סביר"</item>
     <item msgid="2713050260700175954">"טוב"</item>
-    <item msgid="6005053494500517261">"מצוין"</item>
+    <item msgid="6005053494500517261">"מצוינת"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"כתובת MAC"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"כתובת MAC של המכשיר"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"כתובת MAC אקראית"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"עוצמת אות"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"פרטיות"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"שימוש בכתובת MAC אקראית (ברירת מחדל)"</item>
+    <item msgid="2490415280467390067">"שימוש בכתובת MAC של המכשיר"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"לא זמין"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"כתובת MAC אקראית"</string>
     <string name="title_ip_address" msgid="705842159484772807">"כתובת IP"</string>
     <string name="title_ssid" msgid="255328048344188682">"הזנת שם של רשת Wi-Fi"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"חיבור לאינטרנט"</string>
@@ -225,7 +244,7 @@
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"הוספת רשת חדשה"</string>
     <string name="security_type" msgid="2297615092250075696">"סוג אבטחה"</string>
     <string name="other_network" msgid="5299289104661858596">"רשת אחרת..."</string>
-    <string name="skip_network" msgid="3095529090560000692">"דלג"</string>
+    <string name="skip_network" msgid="3095529090560000692">"דילוג"</string>
     <string name="wifi_security_type_none" msgid="7001835819813531253">"ללא"</string>
     <string name="wifi_security_type_wep" msgid="6407712450924151962">"WEP"</string>
     <string name="wifi_security_type_wpa" msgid="9205358644485448199">"WPA/WPA2 PSK"</string>
@@ -250,8 +269,8 @@
     <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"הגדרות ה-Proxy אינן חוקיות"</string>
     <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"הגדרות ה-IP אינן חוקיות"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g> היא רשת שמורה"</string>
-    <string name="wifi_action_try_again" msgid="8920677153891141148">"נסה שוב"</string>
-    <string name="wifi_action_view_available_networks" msgid="609561604257828342">"הצג רשתות זמינות"</string>
+    <string name="wifi_action_try_again" msgid="8920677153891141148">"יש לנסות שוב"</string>
+    <string name="wifi_action_view_available_networks" msgid="609561604257828342">"הצגת הרשתות הזמינות"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"מתחבר אל <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_saving" msgid="320653339670641708">"שומר תצורה עבור <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_connect" msgid="2206086690065242121">"התחבר"</string>
@@ -335,7 +354,7 @@
     <string name="storage_wizard_format_as_private_description" msgid="6143406934742456154">"יש לפרמט את כונן ה-USB כדי להשתמש בו בבטחה כאחסון פנימי. לאחר הפרמוט המאובטח, הכונן הזה יפעל רק עם המכשיר הזה. פרמוט מוחק את כל הנתונים המאוחסנים בכונן. יש לגבות את הנתונים כדי לא לאבד אותם."</string>
     <string name="storage_wizard_format_as_public_title" msgid="3546915348149438389">"מחיקה ופרמוט"</string>
     <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"לאחר הפרמוט, תוכל להשתמש בכונן ה-USB הזה במכשירים אחרים. כל הנתונים יימחקו. מומלץ לבצע תחילה גיבוי על ידי העברת אפליקציות אל אחסון אחר במכשיר."</string>
-    <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"מפרמט כונן USB…"</string>
+    <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"פרמוט כונן USB מתבצע…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"הפעולה עשויה לארוך כמה רגעים. אל תסיר את הכונן."</string>
     <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"בחירת האחסון שאליו יועברו הנתונים"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="5086390005970210697">"העברת נתונים אל <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -458,7 +477,7 @@
     <string name="color_cyan" msgid="3172130225116530998">"ציאן"</string>
     <string name="color_yellow" msgid="3519470952904560404">"צהוב"</string>
     <string name="color_magenta" msgid="2377854703399624607">"מגנטה"</string>
-    <string name="system_accessibility_status" msgid="8504842254080682515">"הפעל"</string>
+    <string name="system_accessibility_status" msgid="8504842254080682515">"הפעלה"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"תצורה"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"האם להשתמש ב-<xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> יכול לאסוף את כל הטקסט שאתה מקליד, מלבד סיסמאות. נכללים בכך נתונים אישיים כמו מספרי כרטיס אשראי."</string>
@@ -669,7 +688,7 @@
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="4508586498292236706">"כל העדכונים לאפליקציית מערכת Android הזו יוסרו."</string>
     <string name="device_apps_app_management_disable" msgid="819003297535493633">"השבת"</string>
     <string name="device_apps_app_management_disable_desc" msgid="9143166267511427607">"האם ברצונך להשבית את האפליקציה הזו?"</string>
-    <string name="device_apps_app_management_enable" msgid="9173340340253029114">"הפעל"</string>
+    <string name="device_apps_app_management_enable" msgid="9173340340253029114">"הפעלה"</string>
     <string name="device_apps_app_management_enable_desc" msgid="8686291003061136476">"האם ברצונך להפעיל את האפליקציה הזו?"</string>
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"שטח אחסון בשימוש"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="SIZE">%1$s</xliff:g> בשימוש ב-<xliff:g id="VOLUME">%2$s</xliff:g>"</string>
@@ -706,7 +725,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"שחזור אוטומטי"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"אפס את המכשיר"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"הפעולה הזו תמחק את כל הנתונים מהאחסון הפנימי במכשיר שלך, כולל: חשבון Google שלך, אפליקציות שהורדת, נתונים והגדרות של המערכת ושל אפליקציות."</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"האם למחוק את כל המידע האישי שלך ואת האפליקציות שהורדת? לא ניתן לבטל את הפעולה!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"למחוק את כל המידע האישי והאפליקציות שהורדו במכשיר זה? אי אפשר לבטל את הפעולה הזו!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"מחיקת הכול"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"בחירת שם עבור ה-<xliff:g id="DEVICEMODEL">%1$s</xliff:g> שלך"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"כדאי לתת למכשיר שם שיעזור לזהות אותו כשמעבירים אליו תוכן או מתחברים אליו ממכשירים אחרים."</string>
@@ -780,4 +799,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"חוסך הנתונים (Data Saver)"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"התאמה אוטומטית של איכות וידאו לשימוש מופחת בחבילת גלישה"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"שימוש בחבילת הגלישה והתראות"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"הפעולה אינה מותרת"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"לא ניתן לשנות את הנפח"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"לא ניתן להוציא שיחות"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"לא ניתן לשלוח הודעות SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"לא ניתן להשתמש במצלמה"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"לא ניתן לצלם צילומי מסך"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"לא ניתן לפתוח את האפליקציה הזו"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"יש לך שאלות נוספות? עליך ליצור קשר עם מנהל ה-IT"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"מכשיר לשימוש עם <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"לא נמצאו מכשירים. יש לוודא שהמכשירים פועלים וזמינים לחיבור."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"ניסיון חוזר"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"משהו קרה. הבקשה לבחירת מכשיר בוטלה על ידי האפליקציה."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"החיבור הצליח"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"הצגת הכול"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"בתהליך חיפוש…"</string>
 </resources>

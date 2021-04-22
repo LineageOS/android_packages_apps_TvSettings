@@ -38,6 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> kontoer</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> konto</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Medietjenester, assistent, betalinger"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Nettverk og internett"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Lyd"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Apper"</string>
@@ -48,7 +49,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> tilbehør</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> tilbehør</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Hjelp og tilbakemelding"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Skjerm og lyd"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Hjelp og tilbakemelding"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Personvern"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Enhetsinnstillinger"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Appinnstillinger"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Posisjon, bruk og diagnostikk, annonser"</string>
     <string name="add_account" msgid="7386223854837017129">"Legg til konto"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Fjern konto"</string>
     <string name="account_sync" msgid="4315295293211313989">"Velg synkroniserte apper"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Deaktiverte apper"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Skjermsparer"</string>
     <string name="device_display" msgid="244634591698925025">"Skjerm"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Skjerm og lyd"</string>
     <string name="device_sound" msgid="8616320533559404963">"Lyd"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Surround-lyd"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Systemlyder"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Auto: Bruk formatene som enheten rapporterer at den støtter (anbefalt)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Ingen: Bruk aldri surround-lyd"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuelt: Velg hvilke formater som skal brukes"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Skjerm"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Avanserte skjerminnstillinger"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Avanserte lydinnstillinger"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Tillat spillmodus"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vil du slette bufrede data?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Dette sletter bufrede data for alle apper."</string>
     <string name="accessories_add" msgid="413764175035531452">"Legg til tilbehør"</string>
@@ -130,9 +141,9 @@
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Sånn kobler du til:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;&lt;br&gt;Skriv inn enhetens obligatoriske PIN-kode:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Sånn kobler du til: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Skriv inn enhetens obligatoriske passord:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Vanligvis 0000 eller 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Par"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Koble til"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Avbryt"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Kjør feilrapport"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Send tilbakemelding"</string>
     <string name="launch_help" msgid="2607478763131952469">"Brukerstøtte"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Dato og klokkeslett"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"God"</item>
     <item msgid="6005053494500517261">"Strålende"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC-adresse"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Enhetens MAC-adresse"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Tilfeldig valgt MAC-adresse"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Signalstyrke"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Personvern"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Bruk tilfeldig valgt MAC-adresse (standard)"</item>
+    <item msgid="2490415280467390067">"Bruk enhetens MAC-adresse"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Ikke tilgjengelig"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Tilfeldig valgt MAC-adresse"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP-adresse"</string>
     <string name="title_ssid" msgid="255328048344188682">"Skriv inn navnet på Wi-Fi-nettverket"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Internett-forbindelse"</string>
@@ -411,7 +430,7 @@
     <string name="system_services" msgid="5754310941186053151">"Tjenester"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Tjenesteinnstillinger"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Tekst med høy kontrast"</string>
-    <string name="accessibility_shortcut" msgid="5856158637840030531">"Tilgjengelighetssnarvei"</string>
+    <string name="accessibility_shortcut" msgid="5856158637840030531">"Tilgjengelighets-snarvei"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Slå på tilgjengelighetssnarveien"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Snarveitjeneste"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Når snarveien er på, kan du trykke på både tilbake- og ned-knappen i tre sekunder for å starte en tilgjengelighetsfunksjon."</string>
@@ -420,7 +439,7 @@
     <string name="captions_display" msgid="2598662495450633375">"Visning"</string>
     <string name="captions_display_on" msgid="480438033345455728">"På"</string>
     <string name="captions_display_off" msgid="87881163874948539">"Av"</string>
-    <string name="display_options" msgid="2645282080948371603">"Vis grupper"</string>
+    <string name="display_options" msgid="2645282080948371603">"Visningsalternativer"</string>
     <string name="captions_configure" msgid="711991018642931958">"Konfigurer"</string>
     <string name="captions_language" msgid="5905918439449912646">"Språk"</string>
     <string name="captions_language_default" msgid="3894192926725192528">"Standard"</string>
@@ -439,8 +458,8 @@
     <string name="captions_windowshow" msgid="6002072054703167886">"Vis vindu"</string>
     <string name="captions_windowcolor" msgid="7460430328878876648">"Vindusfarge"</string>
     <string name="captions_windowopacity" msgid="8645082670322789314">"Vindusopasitet"</string>
-    <string name="captions_style_0" msgid="169414884289770256">"Hvitt på svart"</string>
-    <string name="captions_style_1" msgid="8236052739817535538">"Svart på hvitt"</string>
+    <string name="captions_style_0" msgid="169414884289770256">"Hvit på svart"</string>
+    <string name="captions_style_1" msgid="8236052739817535538">"Svart på hvit"</string>
     <string name="captions_style_2" msgid="456353889540431910">"Gult på svart"</string>
     <string name="captions_style_3" msgid="3860050153620761166">"Gult på blått"</string>
     <string name="captions_style_custom" msgid="9062905566459387931">"Spesialtilpasset"</string>
@@ -567,7 +586,7 @@
     <string name="title_current_autofill_service" msgid="9029001041887283153">"Nåværende autofylltjeneste"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"Velg autofylltjeneste"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Ingen"</string>
-    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Sørg for at du appen er pålitelig&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Passordtjeneste&gt;%1$s&lt;/xliff:g&gt; bruker det som er på skjermen til å fastslå hva som kan fylles ut automatisk."</string>
+    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Stoler du på dennne appen?&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Passordtjeneste&gt;%1$s&lt;/xliff:g&gt; bruker det som er på skjermen, til å fastslå hva som kan fylles ut automatisk."</string>
     <string name="computing_size" msgid="8623916230485437579">"Beregner ..."</string>
     <string name="title_select_wifi_network" msgid="935820896444071617">"Velg Wi-Fi-nettverk"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Gi nytt navn"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Automatisk gjenoppretting"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Tilbakestill enheten"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Dette sletter alle dataene dine fra den interne lagringen på enheten, blant annet: Google-kontoen din, system- og appdatainnstillinger samt nedlastede apper"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Vil du slette alle personlige opplysninger og nedlastede apper? Denne handlingen kan ikke angres!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Vil du slette alle personlige opplysninger og nedlastede apper? Denne handlingen kan ikke angres."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Slett alt"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Velg et navn for <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Gi enheten din et navn, sånn at du lettere kan identifisere den når du caster eller kobler til den fra andre enheter."</string>
@@ -711,7 +730,7 @@
     <string name="keep_settings" msgid="703474489210093961">"Ikke endre"</string>
     <string name="apps_permissions" msgid="7876407267050498394">"Tillatelser"</string>
     <string name="device_apps_permissions" msgid="8421323706003063878">"Apptillatelser"</string>
-    <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_0">%1$d</xliff:g> av <xliff:g id="COUNT_1">%2$d</xliff:g> apper er tillatt"</string>
+    <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_0">%1$d</xliff:g> av <xliff:g id="COUNT_1">%2$d</xliff:g> apper har denne tillatelsen"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Forespørsel om Bluetooth-tillatelse"</string>
     <string name="security_patch" msgid="5468261708915367254">"Nivå av sikkerhetsoppdatering i Android"</string>
     <string name="choose_application" msgid="2375936782103669988">"Velg app"</string>
@@ -739,7 +758,7 @@
     <string name="directory_access_description" msgid="3630855858552422012">"Disse appene har tilgang til visse kataloger."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Vis over andre apper"</string>
-    <string name="permit_draw_overlay" msgid="5312730681030266735">"Tillat visning over andre apper"</string>
+    <string name="permit_draw_overlay" msgid="5312730681030266735">"Kan vises over andre apper"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Tillat at en app vises over andre apper du bruker. Den kan virke forstyrrende for andre apper eller endre måten de vises eller fungerer på."</string>
     <string name="write_system_settings" msgid="4284654265954461890">"Endre systeminnstillingene"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"Kan endre systeminnstillingene"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Datasparing"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Juster videokvalitet automatisk for å bruke mindre mobildata"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Databruk og -varsler"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Handlingen er ikke tillatt"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Kan ikke endre volumet"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Ringing er ikke tillatt"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS er ikke tillatt"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Kameraet er ikke tillatt"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Skjermdump er ikke tillatt"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Kan ikke åpne denne appen"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Hvis du lurer på noe, kan du kontakte IT-administratoren din"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Enhet som skal brukes med <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Fant ingen enheter. Sørg for at enhetene er slått på og tilgjengelige for tilkobling."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Prøv igjen"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Noe dukket opp. Appen har kansellert forespørselen om å velge en enhet."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Tilkoblingen var vellykket"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Vis alle"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Søker"</string>
 </resources>

@@ -38,6 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> ଆକାଉଣ୍ଟ</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> ଆକାଉଣ୍ଟ</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"ମିଡିଆ ସେବାଗୁଡ଼ିକ, Assistant, Payments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"ନେଟ୍‌ୱର୍କ ଓ ଇଣ୍ଟର୍ନେଟ୍‌"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"ସାଉଣ୍ଡ"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ଆପ୍"</string>
@@ -48,7 +49,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ଆସେସୋରୀଗୁଡିକ</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ଆସେରୋରୀ</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"ସହାୟତା ଓ ମତାମତ"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"ଡିସପ୍ଲେ ଓ ସାଉଣ୍ଡ"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"ସହାୟତା ଓ ମତାମତ"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"ଗୋପନୀୟତା"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"ଡିଭାଇସ୍ ସେଟିଂସ୍"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"ଆପ୍ ସେଟିଂସ୍"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"ଲୋକେସନ୍, ବ୍ୟବହାର ଓ ଡାଏଗ୍ନୋଷ୍ଟିକ୍ସ, ବିଜ୍ଞାପନଗୁଡ଼ିକ"</string>
     <string name="add_account" msgid="7386223854837017129">"ଆକାଉଣ୍ଟ ଯୋଡ଼ନ୍ତୁ"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"ଆକାଉଣ୍ଟ କାଢ଼ିଦିଅନ୍ତୁ"</string>
     <string name="account_sync" msgid="4315295293211313989">"ସିଙ୍କ୍‌ ହୋଇଥିବା ଆପ୍‌ ବାଛନ୍ତୁ"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"ଅକ୍ଷମ ହୋଇଥିବା ଆପ୍‌ଗୁଡ଼ିକ"</string>
     <string name="device_daydream" msgid="2631191946958113220">"ସ୍କ୍ରିନ୍‌ ସେଭର୍‌"</string>
     <string name="device_display" msgid="244634591698925025">"ଡିସ୍‌ପ୍ଲେ"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"ଡିସପ୍ଲେ ଓ ସାଉଣ୍ଡ"</string>
     <string name="device_sound" msgid="8616320533559404963">"ସାଉଣ୍ଡ"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"ପରିପାର୍ଶ୍ଵର ଶଦ୍ଦ"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"ସିଷ୍ଟମ୍ ‌ସାଉଣ୍ଡ୍‌"</string>
@@ -104,13 +111,17 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"ଅଟୋ: ଆପଣଙ୍କ ଡିଭାଇସ୍‌ ସମର୍ଥନ କରୁଥିବା ଫର୍ମାଟ୍‌ଗୁଡ଼ିକୁ ବ୍ୟବହାର କରନ୍ତୁ (ସୁପାରିଶ କରାଯାଇଛି)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"କିଛି ନୁହେଁ: କେବେବି ଆଖପାଖ ସାଉଣ୍ଡ୍‍ ବ୍ୟବହାର କର ନାହିଁ"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"ମାନୁଆଲ: କେଉଁ ଫର୍ମାଟ ବ୍ୟବହାର କରିବେ ବାଛନ୍ତୁ"</string>
+    <string name="display_category_title" msgid="247804007525046312">"ଡିସପ୍ଲେ"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"ଉନ୍ନତ ଡିସପ୍ଲେ ସେଟିଂସ୍"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"ଉନ୍ନତ ସାଉଣ୍ଡ ସେଟିଂସ୍"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"ଗେମ୍ ମୋଡକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"କ୍ୟାଶ୍‌ ହୋଇଥିବା ଡାଟା ଖାଲି କରିବେ?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"ଏହା, ସମସ୍ତ ଡାଟା ପାଇଁ କ୍ୟାଶ୍ ହୋଇଥିବା ଡାଟାକୁ ଖାଲି କରିଦେବ"</string>
     <string name="accessories_add" msgid="413764175035531452">"ଆସେସୋରୀ ଯୋଡନ୍ତୁ"</string>
     <string name="accessory_state_pairing" msgid="15908899628218319">"ପେୟାର୍‌ କରୁଛି…"</string>
     <string name="accessory_state_connecting" msgid="6560241025917621212">"ସଂଯୋଗ କରୁଛି…"</string>
     <string name="accessory_state_error" msgid="8353621828816824428">"ପେୟାର୍‌ ହୋଇପାରିଲା ନାହିଁ"</string>
-    <string name="accessory_state_canceled" msgid="4794837663402063770">"କ୍ୟାନ୍ସଲ୍ କରାଯାଇଛି"</string>
+    <string name="accessory_state_canceled" msgid="4794837663402063770">"ବାତିଲ୍ କରାଯାଇଛି"</string>
     <string name="accessory_state_paired" msgid="3296695242499532000">"ପେୟାର୍‌ ହୋଇଛି"</string>
     <string name="accessory_options" msgid="774592782382321681">"ଆସେସୋରୀ"</string>
     <string name="accessory_unpair" msgid="2473411128146068804">"ଅନପେୟାର୍‌ କରନ୍ତୁ"</string>
@@ -131,17 +142,17 @@
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"ଏହା ସହିତ ପେୟାର୍‌ କରିବାକୁ: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;ଡିଭାଇସ୍‌ ଆବଶ୍ୟକ କରୁଥିବା ପାସକୀ ଟାଇପ୍‌ କରନ୍ତୁ:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"ସାଧାରଣତଃ 0000 କିମ୍ବା 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"ପେୟାର୍‌"</string>
-    <string name="bluetooth_cancel" msgid="4415185529332987034">"କ୍ୟାନ୍ସଲ୍‍ କରନ୍ତୁ"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"ବଗ୍ ରିପୋର୍ଟ ନିଅନ୍ତୁ"</string>
+    <string name="bluetooth_cancel" msgid="4415185529332987034">"ବାତିଲ୍‍ କରନ୍ତୁ"</string>
+    <string name="send_feedback" msgid="936698637869795473">"ମତାମତ ପଠାନ୍ତୁ"</string>
     <string name="launch_help" msgid="2607478763131952469">"ସହାୟତା କେନ୍ଦ୍ର"</string>
-    <string name="system_cast" msgid="6081391679828510058">"Google କାଷ୍ଟ"</string>
+    <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"ତାରିଖ ଓ ସମୟ"</string>
     <string name="system_language" msgid="5516099388471974346">"ଭାଷା"</string>
     <string name="system_keyboard" msgid="1514460705385401872">"କୀବୋର୍ଡ"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"କୀ’ବୋର୍ଡ ଓ ସ୍ବତଃପୂରଣ"</string>
     <string name="system_autofill" msgid="6983989261108020046">"ଅଟୋଫିଲ୍‌"</string>
     <string name="system_home" msgid="2149349845791104094">"ହୋମ୍‍ ସ୍କ୍ରିନ୍‍"</string>
-    <string name="system_search" msgid="3170169128257586925">"ସର୍ଚ୍ଚ କରନ୍ତୁ"</string>
+    <string name="system_search" msgid="3170169128257586925">"Search"</string>
     <string name="system_google" msgid="945985164023885276">"Google"</string>
     <string name="system_security" msgid="5053021134921182612">"ସୁରକ୍ଷା ଏବଂ ପ୍ରତିବନ୍ଧଗୁଡିକ"</string>
     <string name="system_speech" msgid="8779582280374089518">"ସ୍ପିଚ୍"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"ଭଲ"</item>
     <item msgid="6005053494500517261">"ସର୍ବୋତ୍ତମ"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC ଠିକଣା"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"ଡିଭାଇସର MAC ଠିକଣା"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"ରେଣ୍ଡମାଇଜ୍ ହୋଇଥିବା MAC ଠିକଣା"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"ସିଗନାଲ୍‌ ଦକ୍ଷତା"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"ଗୋପନୀୟତା"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"ରେଣ୍ଡମାଇଜ୍ ହୋଇଥିବା MAC ବ୍ୟବହାର କରନ୍ତୁ (ଡିଫଲ୍ଟ)"</item>
+    <item msgid="2490415280467390067">"ଡିଭାଇସ୍ MAC ବ୍ୟବହାର କରନ୍ତୁ"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"ଉପଲବ୍ଧ ନାହିଁ"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"ରେଣ୍ଡମାଇଜ୍ ହୋଇଥିବା MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP ଠିକଣା"</string>
     <string name="title_ssid" msgid="255328048344188682">"ୱାଇ-ଫାଇ ନେଟ୍‌ୱର୍କର ନାମ ଦିଅନ୍ତୁ"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"ଇଣ୍ଟର୍ନେଟ୍‌ ସଂଯୋଗ"</string>
@@ -216,7 +235,7 @@
     <string name="wifi_setting_see_all" msgid="5048103047976316675">"ସମସ୍ତ ଦେଖନ୍ତୁ"</string>
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"କିଛି ଦେଖନ୍ତୁ"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"ଉପଲବ୍ଧ ଥିବା ନେଟ୍‌ୱର୍କ"</string>
-    <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"ନୂଆ ନେଟ୍‌ୱର୍କ ଯୋଡ଼ନ୍ତୁ"</string>
+    <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"ନୂଆ ନେଟ୍‌ୱାର୍କ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="security_type" msgid="2297615092250075696">"ସୁରକ୍ଷାର ପ୍ରକାର"</string>
     <string name="other_network" msgid="5299289104661858596">"ଅନ୍ୟାନ୍ୟ ନେଟ୍‌ୱର୍କ…"</string>
     <string name="skip_network" msgid="3095529090560000692">"ଛାଡ଼ି ଦିଅନ୍ତୁ"</string>
@@ -292,7 +311,7 @@
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"ପୂର୍ବରୁ <xliff:g id="SSID">%1$s</xliff:g>କୁ କନେକ୍ଟ ହୋଇଛି। ଏକ ଭିନ୍ନ ନେଟ୍‍ୱର୍କକ୍‍ କନେକ୍ଟ କରିବେ?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"ଏକ ଅଜଣା ନେଟୱାର୍କ୍"</string>
     <string name="title_ok" msgid="6500452958848127145">"ଓକେ"</string>
-    <string name="title_cancel" msgid="2337143367016419016">"କ୍ୟାନ୍ସଲ୍‍ କରନ୍ତୁ"</string>
+    <string name="title_cancel" msgid="2337143367016419016">"ବାତିଲ୍‍ କରନ୍ତୁ"</string>
     <string name="storage_title" msgid="6637715914885228193">"ଷ୍ଟୋରେଜ୍"</string>
     <string name="storage_available" msgid="8860901789290434209">"ଉପଲବ୍ଧ ଅଛି"</string>
     <string name="storage_size" msgid="5517261387579171381">"ମୋଟ ସ୍ଥାନ: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
@@ -355,7 +374,7 @@
     <string name="storage_wizard_move_app_progress_description" msgid="7673347796805764888">"ଘୁଞ୍ଚିବା ବେଳେ ଡ୍ରାଇଭର୍‌ ରିମୁଭ୍‌ କରନ୍ତୁ ନାହିଁ।\nନଘୁଞ୍ଚିବା ପର୍ଯ୍ୟନ୍ତ ଏହି ଡିଭାଇସ୍‌ରେ <xliff:g id="APPNAME">%1$s</xliff:g> ଆପ୍‌ ଉପଲବ୍ଧ ହେବ ନାହିଁ।"</string>
     <string name="storage_wizard_forget_confirm_title" msgid="3709482471888830896">"ଡିଭାଇସ୍‌ ଷ୍ଟୋରେଜ୍‌ ଭୁଲିଗଲେ କି?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="5896860042525566767">"\'ଭୁଲିଗଲେ\' ସହିତ ଏହି ଡ୍ରାଇଭ୍‌ରେ ଷ୍ଟୋର୍‌ ହୋଇଥିବା ସମସ୍ତ ଡାଟା ସର୍ବଦା ପାଇଁ ହରାଇବେ। ଆପଣ ଆଗକୁ ବଢିବାକୁ ଚାହୁଁଛନ୍ତି କି?"</string>
-    <string name="storage_wizard_forget_action" msgid="5609631662522950596">"ଭୁଲିଗଲେ"</string>
+    <string name="storage_wizard_forget_action" msgid="5609631662522950596">"ଭୁଲିଯାଆନ୍ତୁ"</string>
     <string name="storage_new_title" msgid="4768955281180255038">"USB ଡ୍ରାଇଭ୍‌ କନେକ୍ଟ୍‌ ହୋଇଛି"</string>
     <string name="storage_new_action_browse" msgid="3355241742574072658">"ବ୍ରାଉଜ୍ କରନ୍ତୁ"</string>
     <string name="storage_new_action_adopt" msgid="6809707961170895964">"ଡିଭାଇସ୍‌ ଷ୍ଟୋରେଜ୍‌ଭାବରେ ସେଟ୍‌ ଅପ୍‌ କରନ୍ତୁ"</string>
@@ -471,7 +490,7 @@
     <string name="system_drawing" msgid="5802739024643871942">"ଅଙ୍କନ"</string>
     <string name="system_monitoring" msgid="7997260748312620855">"ତଦାରଖ କରିବା"</string>
     <string name="system_apps" msgid="8481888654606868074">"ଆପ୍‌"</string>
-    <string name="system_stay_awake" msgid="5935117574414511413">"ଜାଗ୍ରତ ରଖନ୍ତୁ"</string>
+    <string name="system_stay_awake" msgid="5935117574414511413">"ସତର୍କ ରୁହନ୍ତୁ"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP ଯାଞ୍ଚ କରୁଛି"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI ଅନୁକୂଳତା"</string>
     <string name="system_reboot_confirm" msgid="8346913287126400728">"ବର୍ତ୍ତମାନ ରିବୁଟ୍ କରିବେ?"</string>
@@ -627,7 +646,7 @@
       <item quantity="other">%d ଆପ୍‌ ଅନୁମୋଦିତ ଅଟେ</item>
       <item quantity="one">1 ଆପ୍‌ ଅନୁମୋଦିତ ଅଟେ</item>
     </plurals>
-    <string name="restricted_profile_allowed" msgid="970921490464867884">"ଅନୁମୋଦିତ"</string>
+    <string name="restricted_profile_allowed" msgid="970921490464867884">"ଅନୁମତି ଦିଆଯାଇଛି"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"ଅନୁମତି ଦିଆଯାଇନାହିଁ"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"ପ୍ରତିବନ୍ଧଗୁଡିକୁ କଷ୍ଟୋମାଇଜ୍‌ କରନ୍ତୁ"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="3293508876131962699">"ଟିକେ ରୁହନ୍ତୁ…"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"ସ୍ୱଚାଳିତ ଭାବେ ରିଷ୍ଟୋର୍‍ କରନ୍ତୁ"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"ଡିଭାଇସ୍‌ ରିସେଟ୍‍ କରନ୍ତୁ"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"ଏହା ଆପଣଙ୍କ ଡିଭାଇସ୍‌ର ଇଣ୍ଟର୍ନଲ୍ ଷ୍ଟୋରେଜ୍‌ ଖାଲି କରିବ, ଅନ୍ତର୍ଭୁକ୍ତ ଅଟେ: ଆପଣଙ୍କ Google ଆକାଉଣ୍ଟ, ସିଷ୍ଟମ୍‌ ଏବଂ ଆପ୍‌ ଦାତ ଏବଂ ସେଟିଂସ, ଏବଂ ଡାଉନଲୋଡ୍‌ ହୋଇଥିବା ଆପ୍‌ଗୁଡିକ"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"ନିଜର ସମସ୍ତ ବ୍ୟକ୍ତିଗତ ସୂଚନା ଏବଂ ଡାଉନ୍‌ଲୋଡ୍‌ କରିଥିବା ଆପ୍‌ଗୁଡ଼ିକୁ ଲିଭାଇଦେବେ? ଏହି କାମକୁ ଆପଣ ପୂର୍ବାବସ୍ଥାକୁ ଫେରାଇ ଆଣିପାରିବେ ନାହିଁ!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"ଏହି ଡିଭାଇସରେ ଆପଣଙ୍କ ସମସ୍ତ ବ୍ୟକ୍ତିଗତ ସୂଚନା ଏବଂ ଡାଉନଲୋଡ୍ କରାଯାଇଥିବା ଆପଗୁଡ଼ିକ ଲିଭାଇ ଦେବେ କି? ଆପଣ ଏହି କାର୍ଯ୍ୟକୁ ପୂର୍ବାବସ୍ଥାକୁ ଆଣିପାରିବେ ନାହିଁ!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"ସବୁକିଛି ଖାଲି କରିଦିଅନ୍ତୁ"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"ଆପଣଙ୍କ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ପାଇଁ ଏକ ନାମ ବାଛନ୍ତୁ"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"ଅନ୍ୟ ଡିଭାଇସ୍‌ଗୁଡ଼ିକରୁ ଏହାକୁ ସଂଯୋଗ କରିବା ବେଳେ ବା କାଷ୍ଟ୍‌ କରିବା ବେଳେ ଏହାକୁ ଚିହ୍ନଟ କରିବାରେ ସାହାଯ୍ୟ କରିବାକୁ ଆପଣଙ୍କ ଡିଭାଇସ୍‌ର ଏକ ନାମ ଦିଅନ୍ତୁ।"</string>
@@ -722,14 +741,14 @@
     <string name="capturing_bugreport" msgid="832512801903486821">"ବଗ୍‌ ରିପୋର୍ଟ୍‌ କ୍ୟାପଚର୍‌ କରୁଛି"</string>
     <string name="available_virtual_keyboard_category" msgid="7445262027711560629">"ଉପଲବ୍ଧ ଭାର୍ଚୁଆଲ କୀବୋର୍ଡଗୁଡ଼ିକ"</string>
     <string name="manage_keyboards" msgid="7983890675377321912">"କୀବୋର୍ଡଗୁଡ଼ିକ ପରିଚାଳନା କରନ୍ତୁ"</string>
-    <string name="app_permission_summary_allowed" msgid="5359622119044147500">"ଅନୁମୋଦିତ"</string>
+    <string name="app_permission_summary_allowed" msgid="5359622119044147500">"ଅନୁମତି ଦିଆଯାଇଛି"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"ଅନୁମତି ଦିଆଯାଇନାହିଁ"</string>
     <string name="usage_access" msgid="8402350645248312782">"ବ୍ୟବହାର ଆକସେସ୍‌"</string>
     <string name="usage_access_description" msgid="3276026988575551587">"ଅନ୍ୟ ଆପ୍‌ଗୁଡ଼ିକ କଣ ଓ କେତେଥର ବ୍ୟବହାର କରୁଛନ୍ତି, ତଥା ଆପଣଙ୍କ କେରିଅର୍‌, ଭାଷା ସେଟିଂ, ଓ ଅନ୍ୟାନ୍ୟ ବିବରଣୀ ଟ୍ରାକ୍‌ କରିବା ପାଇଁ ଏକ ଆପ୍‌କୁ ବ୍ୟବହାର ଆକସେସ୍‌ ଅନୁମତି ଦେଇଥାଏ।"</string>
     <string name="high_power_apps" msgid="5841073958519976562">"ଏନାର୍ଜି ଅପଟିମାଇଜେସନ୍"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"ଆପ୍‌ର ବ୍ୟବହାର ପାଇଁ ଏନାର୍ଜି ଅପଟିମାଇଜ୍ କରନ୍ତୁ"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"କୌଣସି ଆପ୍‌ ଅନୁକୂଳିତ କରିବା ଆବଶ୍ୟକ କରେ ନାହିଁ"</string>
-    <string name="high_power_on" msgid="3120162683093360951">"ଅନୁକୂଳିତ ନୁହେଁ"</string>
+    <string name="high_power_on" msgid="3120162683093360951">"ଅପ୍ଟିମାଇଜ୍ ହୋଇନାହିଁ"</string>
     <string name="high_power_off" msgid="3588854600942236231">"ଏନାର୍ଜି ବ୍ୟବହାର ଅପଟିମାଇଜ୍ କରୁଛି"</string>
     <string name="high_power_system" msgid="6263052626979462255">"ଏନାର୍ଜି ଅପଟିମାଇଜେସନ୍ ଉପଲବ୍ଧ ନାହିଁ"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"ବିଜ୍ଞପ୍ତି ଆକସେସ୍"</string>
@@ -738,15 +757,15 @@
     <string name="directory_access" msgid="7338555825237012006">"ଡିରେକ୍ଟୋରୀ ଆକ୍ସେସ୍"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"ନିର୍ଦ୍ଧିଷ୍ଟ ଡିରେକ୍ଟୋରୀଗୁଡିକୁ ଆକ୍ସେସ କରିବାକୁ ଏହି ଆପ୍‍ରେ ଅନୁମତି ରହିଛି।"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
-    <string name="system_alert_window_settings" msgid="5790572489650085051">"ଅନ୍ୟ ଆପ୍‌ଗୁଡ଼ିକରେ ଦେଖାନ୍ତୁ"</string>
-    <string name="permit_draw_overlay" msgid="5312730681030266735">"ଅନ୍ୟ ଆପ୍‌ଗୁଡ଼ିକ ଉପରେ ପ୍ରଦର୍ଶନ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="system_alert_window_settings" msgid="5790572489650085051">"ଅନ୍ୟ ଆପ୍‌ଗୁଡ଼ିକ ଉପରେ ଦେଖାନ୍ତୁ"</string>
+    <string name="permit_draw_overlay" msgid="5312730681030266735">"ଅନ୍ୟ ଆପ୍‌ଗୁଡ଼ିକ ଉପରେ ଦେଖାଇବାକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"ଆପଣ ବ୍ୟବହାର କରୁଥିବା ଅନ୍ୟ ଆପ୍‌ଗୁଡ଼ିକ ଉପରେ ଏକ ଆପ୍‌କୁ ରହିବାକୁ ଦିଅନ୍ତୁ। ସେହି ଆପ୍‌ଗୁଡ଼ିକର ବ୍ୟବହାରରେ ଏହା ବାଧା ସୃଷ୍ଟି କରିପାରେ କିମ୍ୱା ସେଗୂଡ଼ିକର କାମ କରିବା ଶୈଳୀକୁ ବଦଳାଇଦେଇପାରେ।"</string>
-    <string name="write_system_settings" msgid="4284654265954461890">"ସିଷ୍ଟମ୍‌ ସେଟିଂ ବଦଳାନ୍ତୁ"</string>
+    <string name="write_system_settings" msgid="4284654265954461890">"ସିଷ୍ଟମ୍‌ ସେଟିଂସ ବଦଳାନ୍ତୁ"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"ସିଷ୍ଟମ୍‌ ସେଟିଂସ୍‍ ପରିବର୍ତ୍ତନ କରିପାରିବ"</string>
     <string name="write_settings_description" msgid="7382397926674265937">"ଏହି ଅନୁମତି ଦ୍ୱାରା ଗୋଟିଏ ଆପ୍‌, ସିଷ୍ଟମ ସେଟିଂସ୍‍ରେ ସଂଶୋଧନ କରିଥାଏ।"</string>
     <string name="write_settings_on" msgid="71675710746513956">"ହଁ"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"ନାହିଁ"</string>
-    <string name="picture_in_picture_title" msgid="2636935591386702348">"ଛବି-ଭିତରେ-ଛବି"</string>
+    <string name="picture_in_picture_title" msgid="2636935591386702348">"ପିକଚର୍-ଇନ୍-ପିକଚର୍"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"ପିକଚର୍-ଇନ୍-ପିକଚରର ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"ଛବି-ଭିତରେ-ଛବିକୁ ଇନ୍‌ଷ୍ଟଲ୍‌ ହୋଇଥିବା କୌଣସି ଆପ୍‌ ସପୋର୍ଟ କରୁନାହିଁ"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"ଆପ୍‌ ଖୋଲା ଥିବାବେଳେ କିମ୍ୱା ଏହାକୁ ଆପଣ ଛାଡ଼ିବା ପରେ (ଉଦାହରଣସ୍ୱରୂପ, ଏକ ଭିଡିଓ ଦେଖିବା ଜାରି ରଖିବାକୁ) ଏକ ପିକଚର୍-ଇନ-ପିକଚର୍ ୱିଣ୍ଡୋ ତିଆରି କରିବା ପାଇଁ ଏହି ଆ‌ପ୍‌କୁ ଅନୁମତି ଦିଅନ୍ତୁ। ଏହି ୱିଣ୍ଡୋ, ଆପଣ ବ୍ୟବହାର କରୁଥିବା ଅନ୍ୟ ଆପ୍‌ଗୁଡ଼ିକ ଉପରେ ଦେଖାଦେବ।"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"ଡାଟା ସେଭର୍"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"ମୋବାଇଲ୍ ଡାଟା କମ୍ ବ୍ୟବହାର କରିବାକୁ ଭିଡିଓ ଗୁଣବତ୍ତାକୁ ସ୍ୱଚାଳିତ ଭାବେ ଆଡ୍‌ଜଷ୍ଟ କରନ୍ତୁ"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"ଡାଟା ବ୍ୟବହାର ଏବଂ ଆଲର୍ଟଗୁଡ଼ିକ"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"କାର୍ଯ୍ୟଟି ଅନୁମୋଦିତ ନୁହେଁ"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"ଭଲ୍ୟୁମ୍‌କୁ ବଦଳାଇହେବ ନାହିଁ"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"କଲ୍‌ କରିବାର ଅନୁମତି ନାହିଁ"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS ପଠାଇବାର ଅନୁମତି ନାହିଁ"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"କ୍ୟାମେରା ଅନୁମୋଦିତ ନୁହେଁ"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"ସ୍କ୍ରୀନ୍‌ଶଟ୍‌‌ ପାଇଁ ଅନୁମତି ଦିଆଯାଇ ନାହିଁ"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"ଏହି ଆପ୍‌କୁ ଖୋଲିହେବ ନାହିଁ"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"ଯଦି ଆପଣଙ୍କର କିଛି ପ୍ରଶ୍ନ ଅଛି, ତେବେ ଆପଣଙ୍କ IT ଆଡମିନଙ୍କ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> ସହ ବ୍ୟବହାର କରିବାକୁ ଡିଭାଇସ୍"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"କୌଣସି ଡିଭାଇସ୍ ମିଳିଲା ନାହିଁ। ସୁନିଶ୍ଚିତ କରନ୍ତୁ ଯେ ଡିଭାଇସଗୁଡ଼ିକ ଚାଲୁ ଅଛି ଏବଂ ସଂଯୋଗ କରିବାକୁ ଉପଲବ୍ଧ ଅଛି।"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"କିଛି ତ୍ରୁଟି ହୋଇଛି। ଗୋଟିଏ ଡିଭାଇସ୍ ବାଛିବାର ଅନୁରୋଧକୁ ଆପ୍ଲିକେସନ୍ ବାତିଲ୍ କରିଛି।"</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"ସଫଳତାର ସହ ସଂଯୋଗ ହୋଇଛି"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"ସବୁ ଦେଖାନ୍ତୁ"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"ସନ୍ଧାନ କରୁଛି"</string>
 </resources>

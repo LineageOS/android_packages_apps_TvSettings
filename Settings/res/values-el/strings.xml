@@ -38,6 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> λογαριασμοί</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> λογαριασμός</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"Υπηρεσίες μέσων, Βοηθός, πληρωμές"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Δίκτυο και διαδίκτυο"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Ήχος"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Εφαρμογές"</string>
@@ -48,7 +49,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> αξεσουάρ</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> αξεσουάρ</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"Βοήθεια και σχόλια"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Οθόνη και ήχος"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Βοήθεια και σχόλια"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"Απόρρητο"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Ρυθμίσεις συσκευής"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Ρυθμίσεις εφαρμογής"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Τοποθεσία, χρήση και διαγνωστικά στοιχεία, διαφημίσεις"</string>
     <string name="add_account" msgid="7386223854837017129">"Προσθήκη λογαριασμού"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Κατάργηση λογαριασμού"</string>
     <string name="account_sync" msgid="4315295293211313989">"Επιλέξτε εφαρμογές"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Απενεργοποιημένες εφαρμογές"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Προφύλαξη οθόνης"</string>
     <string name="device_display" msgid="244634591698925025">"Προβολή"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Οθόνη και ήχος"</string>
     <string name="device_sound" msgid="8616320533559404963">"Ήχος"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Περιφερειακός ήχος"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Ήχοι συστήματος"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Αυτόματο: Χρήση υποστηριζόμενων μορφών από συσκευή (συνιστάται)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Κανένα: Να μην χρησιμοποιείται ποτέ περιφ. ήχος"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Μη αυτόματα: Επιλέξτε τις μορφές που θα χρησιμοποιούνται"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Οθόνη"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Σύνθετες ρυθμίσεις οθόνης"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Σύνθετες ρυθμίσεις ήχου"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Να επιτρέπεται η λειτουργία παιχνιδιού"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Να διαγραφούν τα δεδομένα κρυφής μνήμης;"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Διαγραφή κρυφής μνήμης όλων των εφαρμογών."</string>
     <string name="accessories_add" msgid="413764175035531452">"Προσθήκη αξεσουάρ"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Συνήθως, 0000 ή 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Σύζευξη"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Ακύρωση"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"Λήψη αναφοράς σφάλματος"</string>
+    <string name="send_feedback" msgid="936698637869795473">"Αποστολή σχολίων"</string>
     <string name="launch_help" msgid="2607478763131952469">"Κέντρο βοήθειας"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"Ημερομηνία και ώρα"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"Καλή"</item>
     <item msgid="6005053494500517261">"Άριστη"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"Διεύθυνση MAC"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Διεύθυνση MAC συσκευής"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Τυχαιοποιημένη διεύθυνση MAC"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Ισχύς σήματος"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Απόρρητο"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Χρήση τυχαίου MAC (προεπιλογή)"</item>
+    <item msgid="2490415280467390067">"Χρήση MAC συσκευής"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Μη διαθέσιμη"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Τυχαίο MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"Διεύθυνση IP"</string>
     <string name="title_ssid" msgid="255328048344188682">"Πληκτρολογήστε το όνομα του δικτύου Wi-Fi"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Σύνδεση στο διαδίκτυο"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Αυτόματη επαναφορά"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Επαναφορά συσκευής"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"Με τον τρόπο αυτό θα διαγραφούν όλα τα δεδομένα από τον εσωτερικό χώρο αποθήκευσης της συσκευής σας, συμπεριλαμβανομένου του λογαριασμού σας Google, του συστήματος και των δεδομένων εφαρμογών και ρυθμίσεων, καθώς επίσης και των ληφθέντων εφαρμογών"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"Να διαγραφούν όλα τα προσωπικά σας στοιχεία και οι ληφθείσες εφαρμογές; Δεν είναι δυνατή η αναίρεση αυτής της ενέργειας!"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Να διαγραφούν όλα τα προσωπικά σας στοιχεία και οι ληφθείσες εφαρμογές σε αυτήν τη συσκευή; Δεν είναι δυνατή η αναίρεση αυτής της ενέργειας!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Διαγραφή όλων"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Επιλέξτε ένα όνομα για τη συσκευή <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Δώστε στη συσκευή ένα όνομα, για να είναι εύκολη η αναγνώρισή της κατά τη μετάδοση ή τη σύνδεση σε αυτήν από άλλες συσκευές."</string>
@@ -750,7 +769,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Να επιτρέπεται η λειτουργία picture-in-picture"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Καμία από τις εγκατεστημένες εφαρμογές δεν υποστηρίζει τη λειτουργία picture-in-picture"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Να επιτρέπεται στις εφαρμογές να δημιουργούν ένα παράθυρο picture-in-picture ενώ η εφαρμογή είναι ανοικτή ή αφού αποχωρήσετε από αυτήν (για παράδειγμα, για να συνεχίσετε να παρακολουθείτε κάποιο βίντεο). Αυτό το παράθυρο εμφανίζεται στην κορυφή άλλων εφαρμογών που χρησιμοποιείτε."</string>
-    <string name="special_access" msgid="21806055758289916">"Ειδική πρόσβαση στην εφαρμογή"</string>
+    <string name="special_access" msgid="21806055758289916">"Ειδική πρόσβαση εφαρμογής"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Ήχος"</string>
     <string name="record_audio" msgid="5035689290259575229">"Ηχογράφηση"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Εξοικονόμηση δεδομένων"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Αυτόματη προσαρμογή ποιότητας βίντεο για οικονομία δεδομένων κινητής τηλεφωνίας"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Χρήση δεδομένων και ειδοποιήσεις"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Δεν επιτρέπεται η ενέργεια"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Δεν είναι δυνατή η αλλαγή της έντασης του ήχου"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Δεν επιτρέπεται η πραγματοποίηση κλήσεων"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"Δεν επιτρέπεται η αποστολή SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Δεν επιτρέπεται η χρήση της κάμερας"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Δεν επιτρέπεται η λήψη στιγμιότυπων οθόνης"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Δεν είναι δυνατό το άνοιγμα αυτής της εφαρμογής"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"Εάν έχετε απορίες, επικοινωνήστε με τον διαχειριστή IT"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Συσκευή για χρήση με την εφαρμογή <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Δεν βρέθηκαν συσκευές. Βεβαιωθείτε ότι οι συσκευές είναι ενεργοποιημένες και διαθέσιμες για σύνδεση."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Επανάληψη"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Παρουσιάστηκε κάποιο πρόβλημα. Η εφαρμογή ακύρωσε το αίτημα για επιλογή συσκευής."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Η σύνδεση είναι επιτυχής"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Εμφάνιση όλων"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Αναζήτηση"</string>
 </resources>

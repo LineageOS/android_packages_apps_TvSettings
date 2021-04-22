@@ -38,6 +38,7 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> 個帳戶</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> 個帳戶</item>
     </plurals>
+    <string name="accounts_slice_summary" msgid="1571012157154521119">"媒體服務、Google 助理、付款功能"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"網路與網際網路"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"音效"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"應用程式"</string>
@@ -48,7 +49,12 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> 個配件</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> 個配件</item>
     </plurals>
-    <string name="help_and_feedback_category_title" msgid="6922908437959528460">"說明與意見回饋"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"螢幕和音效偏好設定"</string>
+    <string name="help_and_feedback_category_title" msgid="7036505833991003031">"說明和意見回饋"</string>
+    <string name="privacy_category_title" msgid="8552430590908463601">"隱私權"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"裝置設定"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"應用程式設定"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"位置、使用狀況與診斷、廣告"</string>
     <string name="add_account" msgid="7386223854837017129">"新增帳戶"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"移除帳戶"</string>
     <string name="account_sync" msgid="4315295293211313989">"選擇同步完成的應用程式"</string>
@@ -83,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"已停用的應用程式"</string>
     <string name="device_daydream" msgid="2631191946958113220">"螢幕保護程式"</string>
     <string name="device_display" msgid="244634591698925025">"螢幕"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"顯示和音效"</string>
     <string name="device_sound" msgid="8616320533559404963">"音效"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"環繞音效"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"系統音效"</string>
@@ -104,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"自動：使用裝置回報的支援格式 (建議)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"無：一律不使用環繞音效"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"手動：選取要使用的格式"</string>
+    <string name="display_category_title" msgid="247804007525046312">"顯示"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"進階顯示設定"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"進階音效設定"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"允許遊戲模式"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"清除快取資料？"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"這項操作會清除所有應用程式的快取資料。"</string>
     <string name="accessories_add" msgid="413764175035531452">"新增配件"</string>
@@ -132,7 +143,7 @@
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"通常為 0000 或 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"配對"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"取消"</string>
-    <string name="send_feedback" msgid="6802193099319924746">"取得錯誤報告"</string>
+    <string name="send_feedback" msgid="936698637869795473">"提供意見"</string>
     <string name="launch_help" msgid="2607478763131952469">"說明中心"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="6938588387002473344">"日期和時間"</string>
@@ -166,11 +177,11 @@
     <string name="about_serial" msgid="3432319328808745459">"序號"</string>
     <string name="about_build" msgid="1139171613038225768">"版次"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other">只要完成剩下的 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 個步驟，您就能成為開發人員</item>
-      <item quantity="one">只要完成剩下的 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 個步驟，您就能成為開發人員</item>
+      <item quantity="other">只要再 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 個步驟即可啟用開發人員設定</item>
+      <item quantity="one">只要再 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 個步驟即可啟用開發人員設定</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"廣告"</string>
-    <string name="show_dev_on" msgid="612741433124106067">"您現在已成為開發人員！"</string>
+    <string name="show_dev_on" msgid="612741433124106067">"開發人員設定已啟用！"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"不需要了，您已經是開發人員"</string>
     <string name="device_info_default" msgid="2374506935205518448">"不明"</string>
     <string name="selinux_status" msgid="1146662734953021410">"SELinux 狀態"</string>
@@ -205,8 +216,16 @@
     <item msgid="2713050260700175954">"佳"</item>
     <item msgid="6005053494500517261">"極優"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC 位址"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"裝置的 MAC 位址"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"隨機化 MAC 位址"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"訊號強度"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"隱私權"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"使用隨機化 MAC (預設)"</item>
+    <item msgid="2490415280467390067">"使用裝置 MAC"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"無法取得"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"隨機化 MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP 位址"</string>
     <string name="title_ssid" msgid="255328048344188682">"輸入 Wi-Fi 網路名稱"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"網際網路連線"</string>
@@ -567,7 +586,7 @@
     <string name="title_current_autofill_service" msgid="9029001041887283153">"目前的自動填入服務"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"選取自動填入服務"</string>
     <string name="autofill_none" msgid="1615056985649424207">"無"</string>
-    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;請確定這是你信任的應用程式&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Password service&gt;%1$s&lt;/xliff:g&gt;應用程式會根據你的畫面內容判斷要自動填入的內容。"</string>
+    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;請確定這是你信任的應用程式&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Password service&gt;%1$s&lt;/xliff:g&gt; 會根據畫面上顯示的內容判斷要自動填入哪些資訊。"</string>
     <string name="computing_size" msgid="8623916230485437579">"計算中…"</string>
     <string name="title_select_wifi_network" msgid="935820896444071617">"選取 Wi-Fi 網路"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"重新命名"</string>
@@ -692,7 +711,7 @@
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"自動還原"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"重設裝置"</string>
     <string name="factory_reset_description" msgid="4448783644897046471">"這會將所有資料從裝置的內部儲存空間中清除，您的 Google 帳戶、系統和應用程式資料與設定，以及已下載的應用程式，都將被移除"</string>
-    <string name="confirm_factory_reset_description" msgid="8521672637100742529">"確定要清除所有個人資訊和已下載的應用程式嗎？這項操作執行後將無法復原！"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"要清除這部裝置上的所有個人資訊和已下載的應用程式嗎？這個動作無法復原！"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"全部清除"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"選擇 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 的名稱"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"請為裝置命名，這樣在透過其他裝置投放內容或連線時就能識別此裝置。"</string>
@@ -766,4 +785,19 @@
     <string name="title_data_saver" msgid="7500278996154002792">"數據節省模式"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"自動調整影片畫質，藉此降低行動數據用量"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"數據用量和快訊"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"不允許此操作"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"無法變更音量"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"不允許使用通話功能"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"不允許使用簡訊功能"</string>
+    <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"不允許使用相機功能"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"不允許使用螢幕畫面擷取功能"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"無法開啟這個應用程式"</string>
+    <string name="default_admin_support_msg" msgid="7913455019068370350">"如有任何問題，請與你的 IT 管理員聯絡"</string>
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"搭配「<xliff:g id="APPNAME">%1$s</xliff:g>」使用的裝置"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"找不到裝置。請確認裝置已經開啟並可連線。"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"再試一次"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"網路連線發生錯誤，因此應用程式已取消選擇裝置的要求。"</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"連線成功"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"全部顯示"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"搜尋中"</string>
 </resources>
