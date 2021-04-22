@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.accessories;
 
+import android.app.admin.DevicePolicyManager;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.hardware.hdmi.HdmiControlManager;
@@ -25,6 +26,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
+import android.os.UserHandle;
+import android.os.UserManager;
+import android.provider.Settings;
 import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -36,6 +40,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
+import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.tv.settings.R;
 
 import java.lang.ref.WeakReference;
@@ -188,6 +194,18 @@ public class AddAccessoryActivity extends FragmentActivity
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        RestrictedLockUtils.EnforcedAdmin admin =
+                RestrictedLockUtilsInternal.checkIfRestrictionEnforced(this,
+                        UserManager.DISALLOW_CONFIG_BLUETOOTH, UserHandle.myUserId());
+        if (admin != null) {
+            Intent intent = new Intent(Settings.ACTION_SHOW_ADMIN_SUPPORT_DETAILS);
+            intent.putExtra(DevicePolicyManager.EXTRA_RESTRICTION,
+                    UserManager.DISALLOW_CONFIG_BLUETOOTH);
+            startActivity(intent);
+            finish();
+            return;
+        }
 
         // Normally, we set contentDescription for View elements in resource files for Talkback to
         // announce when the element is being focused. However, this Activity is special as users

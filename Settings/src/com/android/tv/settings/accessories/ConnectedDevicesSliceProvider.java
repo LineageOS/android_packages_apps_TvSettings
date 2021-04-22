@@ -23,6 +23,7 @@ import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcast
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_SLICE_URI;
 
 import android.app.PendingIntent;
+import android.app.admin.DevicePolicyManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.bluetooth.BluetoothDevice;
 import android.content.ComponentName;
@@ -34,6 +35,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.ArrayMap;
@@ -44,6 +47,8 @@ import androidx.core.graphics.drawable.IconCompat;
 import androidx.slice.Slice;
 import androidx.slice.SliceProvider;
 
+import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.tv.settings.R;
 import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder;
@@ -375,10 +380,22 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
     }
 
     private void updatePairingButton(PreferenceSliceBuilder psb) {
+        RestrictedLockUtils.EnforcedAdmin admin =
+                RestrictedLockUtilsInternal.checkIfRestrictionEnforced(getContext(),
+                        UserManager.DISALLOW_CONFIG_BLUETOOTH, UserHandle.myUserId());
         if (AccessoryUtils.isBluetoothEnabled()) {
-            Intent i = new Intent(ACTION_CONNECT_INPUT).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            PendingIntent pendingIntent = PendingIntent
-                    .getActivity(getContext(), 3, i, PendingIntent.FLAG_MUTABLE);
+            PendingIntent pendingIntent;
+            if (admin == null) {
+                Intent i = new Intent(ACTION_CONNECT_INPUT).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                pendingIntent = PendingIntent
+                        .getActivity(getContext(), 3, i, PendingIntent.FLAG_MUTABLE);
+            } else {
+                Intent intent = new Intent(Settings.ACTION_SHOW_ADMIN_SUPPORT_DETAILS);
+                intent.putExtra(DevicePolicyManager.EXTRA_RESTRICTION,
+                        UserManager.DISALLOW_CONFIG_BLUETOOTH);
+                pendingIntent = PendingIntent.getActivity(getContext(), 0, intent,
+                        PendingIntent.FLAG_IMMUTABLE);
+            }
             psb.addPreference(new RowBuilder()
                     .setKey(KEY_PAIR_REMOTE)
                     .setTitle(getString(R.string.bluetooth_pair_accessory))
@@ -489,9 +506,21 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
         pref.setIcon(IconCompat.createWithResource(
                 context, AccessoriesFragment.getImageIdForDevice(device, true)));
         pref.setIconNeedsToBeProcessed(true);
-        Uri targetSliceUri = ConnectedDevicesSliceUtils
-                .getDeviceUri(device.getAddress(), device.getAlias());
-        pref.setTargetSliceUri(targetSliceUri.toString());
+
+        RestrictedLockUtils.EnforcedAdmin admin =
+                RestrictedLockUtilsInternal.checkIfRestrictionEnforced(getContext(),
+                        UserManager.DISALLOW_CONFIG_BLUETOOTH, UserHandle.myUserId());
+        if (admin == null) {
+            Uri targetSliceUri = ConnectedDevicesSliceUtils
+                    .getDeviceUri(device.getAddress(), device.getAlias());
+            pref.setTargetSliceUri(targetSliceUri.toString());
+        } else {
+            Intent intent = new Intent(Settings.ACTION_SHOW_ADMIN_SUPPORT_DETAILS);
+            intent.putExtra(DevicePolicyManager.EXTRA_RESTRICTION,
+                    UserManager.DISALLOW_CONFIG_BLUETOOTH);
+            pref.setPendingIntent(PendingIntent.getActivity(getContext(), 0, intent,
+                    PendingIntent.FLAG_IMMUTABLE));
+        }
         return pref;
     }
 
