@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.accessories;
 
+import android.app.admin.DevicePolicyManager;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
@@ -25,6 +26,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.ArraySet;
 import android.util.Log;
@@ -35,7 +39,8 @@ import androidx.annotation.NonNull;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto;
+import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import com.android.tv.settings.R;
@@ -112,7 +117,19 @@ public class AccessoriesFragment extends SettingsPreferenceFragment {
             preference.setSummary(desc);
             final int deviceImgId = getImageIdForDevice(device, false);
             preference.setIcon(deviceImgId);
-            preference.setFragment(BluetoothAccessoryFragment.class.getName());
+
+            RestrictedLockUtils.EnforcedAdmin admin =
+                    RestrictedLockUtilsInternal.checkIfRestrictionEnforced(preference.getContext(),
+                            UserManager.DISALLOW_CONFIG_BLUETOOTH, UserHandle.myUserId());
+            if (admin == null) {
+                preference.setFragment(BluetoothAccessoryFragment.class.getName());
+            } else {
+                Intent intent = new Intent(Settings.ACTION_SHOW_ADMIN_SUPPORT_DETAILS);
+                intent.putExtra(DevicePolicyManager.EXTRA_RESTRICTION,
+                        UserManager.DISALLOW_CONFIG_BLUETOOTH);
+                preference.setIntent(intent);
+            }
+
             BluetoothAccessoryFragment.prepareArgs(
                     preference.getExtras(),
                     deviceAddress,
