@@ -68,9 +68,10 @@
         android:key="specialAccess"
         android:title="@string/special_access"
         android:fragment="com.android.tv.settings.device.apps.specialaccess.SpecialAppAccess" />
-    <Preference
-        android:key="security"
-        android:title="@string/system_security"
-        android:fragment="com.android.tv.settings.system.SecurityFragment" />
+    <com.android.tv.twopanelsettings.slices.SlicePreference
+        android:key="appsSecurity"
+        android:title="@string/apps_security"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:uri="@string/play_protect_settings_slice_uri"/>
 
 </PreferenceScreen>

@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.privacy;
 
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
@@ -51,12 +50,18 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
 
     private int getPreferenceScreenResId() {
         switch (FlavorUtils.getFlavor(getContext())) {
-            case FLAVOR_CLASSIC:
             case FLAVOR_TWO_PANEL:
-                return R.xml.privacy;
             case FLAVOR_X:
-            case FLAVOR_VENDOR:
-                return R.xml.privacy_x;
+            case FLAVOR_VENDOR: {
+                if (SliceUtils.isSliceEnabled(
+                        getContext(),
+                        getContext().getString(R.string.play_protect_settings_slice_uri)
+                )) {
+                    return R.xml.privacy_x;
+                } else {
+                    return R.xml.privacy;
+                }
+            }
             default:
                 return R.xml.privacy;
         }

@@ -31,6 +31,8 @@ import androidx.preference.Preference;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.tv.settings.PreferenceControllerFragment;
 import com.android.tv.settings.R;
+import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.util.SliceUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +75,22 @@ public class AppsFragment extends PreferenceControllerFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.apps;
+        switch (FlavorUtils.getFlavor(getContext())) {
+            case FlavorUtils.FLAVOR_TWO_PANEL:
+            case FlavorUtils.FLAVOR_X:
+            case FlavorUtils.FLAVOR_VENDOR: {
+                if (SliceUtils.isSliceEnabled(
+                        getContext(),
+                        getContext().getString(R.string.play_protect_settings_slice_uri)
+                )) {
+                    return R.xml.apps_x;
+                } else {
+                    return R.xml.apps;
+                }
+            }
+            default:
+                return R.xml.apps;
+        }
     }
 
     @Override
