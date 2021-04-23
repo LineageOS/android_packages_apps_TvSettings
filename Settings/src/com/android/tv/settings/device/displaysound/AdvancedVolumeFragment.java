@@ -67,7 +67,8 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
     static final int[] SURROUND_SOUND_DISPLAY_ORDER = {
             AudioFormat.ENCODING_AC3, AudioFormat.ENCODING_E_AC3, AudioFormat.ENCODING_DOLBY_TRUEHD,
             AudioFormat.ENCODING_E_AC3_JOC, AudioFormat.ENCODING_DOLBY_MAT,
-            AudioFormat.ENCODING_DTS, AudioFormat.ENCODING_DTS_HD
+            AudioFormat.ENCODING_DTS, AudioFormat.ENCODING_DTS_HD, AudioFormat.ENCODING_DTS_UHD,
+            AudioFormat.ENCODING_DRA
     };
 
     private Map<Integer, Boolean> mFormats;
@@ -347,12 +348,16 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
                 return R.string.surround_sound_format_dts;
             case AudioFormat.ENCODING_DTS_HD:
                 return R.string.surround_sound_format_dts_hd;
+            case AudioFormat.ENCODING_DTS_UHD:
+                return R.string.surround_sound_format_dts_uhd;
             case AudioFormat.ENCODING_DOLBY_TRUEHD:
                 return R.string.surround_sound_format_dolby_truehd;
             case AudioFormat.ENCODING_E_AC3_JOC:
                 return R.string.surround_sound_format_e_ac3_joc;
             case AudioFormat.ENCODING_DOLBY_MAT:
                 return R.string.surround_sound_format_dolby_mat;
+            case AudioFormat.ENCODING_DRA:
+                return R.string.surround_sound_format_dra;
             default:
                 return -1;
         }
@@ -398,10 +403,14 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
                 return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DTS;
             case AudioFormat.ENCODING_DTS_HD:
                 return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DTSHD;
+            case AudioFormat.ENCODING_DTS_UHD:
+                return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DTSUHD;
             case AudioFormat.ENCODING_AAC_LC:
                 return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_AAC;
             case AudioFormat.ENCODING_DOLBY_TRUEHD:
                 return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DTHD;
+            case AudioFormat.ENCODING_DRA:
+                return TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_DRA;
             default:
                 return -1;
         }
