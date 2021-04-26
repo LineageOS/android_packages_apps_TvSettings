@@ -24,6 +24,7 @@ import android.media.AudioManager
 import android.media.tv.TvInputManager
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.os.SystemProperties
 import android.os.UserHandle
 import android.os.UserManager
 import android.provider.Settings
@@ -100,6 +101,9 @@ open class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreferenc
             }
         }
         mAudioManager = requireContext().getSystemService(AudioManager::class.java) as AudioManager
+        if (SystemProperties.getInt("ro.hdmi.device_type", 0) == 4) {
+            mInputSettingNeeded = true
+        }
         mUm = UserManager.get(getActivity())
         super.onCreate(savedInstanceState)
     }
