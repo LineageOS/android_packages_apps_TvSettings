@@ -48,6 +48,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
     private static final String KEY_HDMI_CONTROL = "hdmi_control";
     private static final String KEY_DEVICE_AUTO_OFF = "device_auto_off";
     private static final String KEY_TV_AUTO_ON = "tv_auto_on";
+    private static final String KEY_CEC_VOLUME = "volume_control_enabled";
 
     private PreferenceGroup mConnectedGroup;
     private PreferenceGroup mStandbyGroup;
@@ -56,6 +57,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
     private TwoStatePreference mHdmiControlPref;
     private TwoStatePreference mDeviceAutoOffPref;
     private TwoStatePreference mTvAutoOnPref;
+    private TwoStatePreference mCecVolumePref;
 
     private TvInputManager mTvInputManager;
     private Map<String, String> mCustomLabels;
@@ -93,6 +95,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
         mHdmiControlPref = (TwoStatePreference) findPreference(KEY_HDMI_CONTROL);
         mDeviceAutoOffPref = (TwoStatePreference) findPreference(KEY_DEVICE_AUTO_OFF);
         mTvAutoOnPref = (TwoStatePreference) findPreference(KEY_TV_AUTO_ON);
+        mCecVolumePref = (TwoStatePreference) findPreference(KEY_CEC_VOLUME);
     }
 
     private void refresh() {
@@ -100,6 +103,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
         mDeviceAutoOffPref.setChecked(readCecOption(
                 Settings.Global.HDMI_CONTROL_AUTO_DEVICE_OFF_ENABLED));
         mTvAutoOnPref.setChecked(readCecOption(Settings.Global.HDMI_CONTROL_AUTO_WAKEUP_ENABLED));
+        mCecVolumePref.setChecked(readCecOption(Settings.Global.HDMI_CONTROL_VOLUME_CONTROL_ENABLED));
 
         for (TvInputInfo info : mTvInputManager.getTvInputList()) {
             if (info.getType() == TvInputInfo.TYPE_TUNER
@@ -176,6 +180,10 @@ public class InputsFragment extends SettingsPreferenceFragment {
             case KEY_TV_AUTO_ON:
                 writeCecOption(Settings.Global.HDMI_CONTROL_AUTO_WAKEUP_ENABLED,
                         mTvAutoOnPref.isChecked());
+                return true;
+            case KEY_CEC_VOLUME:
+                writeCecOption(Settings.Global.HDMI_CONTROL_VOLUME_CONTROL_ENABLED,
+                        mCecVolumePref.isChecked());
                 return true;
         }
         return super.onPreferenceTreeClick(preference);
