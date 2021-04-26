@@ -33,6 +33,7 @@ import android.media.AudioManager;
 import android.media.tv.TvInputInfo;
 import android.media.tv.TvInputManager;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -178,6 +179,9 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
             }
         }
         mAudioManager = getContext().getSystemService(AudioManager.class);
+        if (SystemProperties.getInt("ro.hdmi.device_type", 0) == 4) {
+            mInputSettingNeeded = true;
+        }
         super.onCreate(savedInstanceState);
     }
 
