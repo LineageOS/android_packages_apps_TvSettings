@@ -50,6 +50,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
     private static final String KEY_HDMI_CONTROL = "hdmi_control";
     private static final String KEY_DEVICE_AUTO_OFF = "device_auto_off";
     private static final String KEY_TV_AUTO_ON = "tv_auto_on";
+    private static final String KEY_CEC_VOLUME = "volume_control_enabled";
     private static final String ICU_PLURAL_COUNT = "count";
 
     private PreferenceGroup mConnectedGroup;
@@ -59,6 +60,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
     private TwoStatePreference mHdmiControlPref;
     private TwoStatePreference mDeviceAutoOffPref;
     private TwoStatePreference mTvAutoOnPref;
+    private TwoStatePreference mCecVolumePref;
 
     private TvInputManager mTvInputManager;
     private HdmiControlManager mHdmiControlManager;
@@ -98,6 +100,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
         mHdmiControlPref = (TwoStatePreference) findPreference(KEY_HDMI_CONTROL);
         mDeviceAutoOffPref = (TwoStatePreference) findPreference(KEY_DEVICE_AUTO_OFF);
         mTvAutoOnPref = (TwoStatePreference) findPreference(KEY_TV_AUTO_ON);
+        mCecVolumePref = (TwoStatePreference) findPreference(KEY_CEC_VOLUME);
     }
 
     private void refresh() {
@@ -107,6 +110,8 @@ public class InputsFragment extends SettingsPreferenceFragment {
                 == HdmiControlManager.TV_SEND_STANDBY_ON_SLEEP_ENABLED);
         mTvAutoOnPref.setChecked(mHdmiControlManager.getTvWakeOnOneTouchPlay()
                 == HdmiControlManager.TV_WAKE_ON_ONE_TOUCH_PLAY_ENABLED);
+        mTvAutoOnPref.setChecked(mHdmiControlManager.getHdmiCecVolumeControlEnabled()
+                == HdmiControlManager.VOLUME_CONTROL_ENABLED);
 
         for (TvInputInfo info : mTvInputManager.getTvInputList()) {
             if (info.getType() == TvInputInfo.TYPE_TUNER
@@ -197,6 +202,11 @@ public class InputsFragment extends SettingsPreferenceFragment {
                 mHdmiControlManager.setTvWakeOnOneTouchPlay(mTvAutoOnPref.isChecked()
                         ? HdmiControlManager.TV_WAKE_ON_ONE_TOUCH_PLAY_ENABLED
                         : HdmiControlManager.TV_WAKE_ON_ONE_TOUCH_PLAY_DISABLED);
+                return true;
+            case KEY_CEC_VOLUME:
+                mHdmiControlManager.setHdmiCecVolumeControlEnabled(mCecVolumePref.isChecked()
+                        ? HdmiControlManager.VOLUME_CONTROL_ENABLED
+                        : HdmiControlManager.VOLUME_CONTROL_DISABLED);
                 return true;
         }
         return super.onPreferenceTreeClick(preference);
