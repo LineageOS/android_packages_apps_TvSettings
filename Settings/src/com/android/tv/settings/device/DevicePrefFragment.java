@@ -28,6 +28,7 @@ import android.content.res.Resources;
 import android.media.tv.TvInputInfo;
 import android.media.tv.TvInputManager;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -108,6 +109,9 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
                     mInputSettingNeeded = true;
                 }
             }
+        }
+        if (SystemProperties.getInt("ro.hdmi.device_type", 0) == 4) {
+            mInputSettingNeeded = true;
         }
         super.onCreate(savedInstanceState);
     }
