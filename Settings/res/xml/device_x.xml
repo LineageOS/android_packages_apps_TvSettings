@@ -65,6 +65,11 @@
         android:key="keyboard"
         android:title="@string/system_keyboard"/>
     <Preference
+        android:fragment="com.android.tv.settings.system.InputsFragment"
+        android:icon="@drawable/ic_input"
+        android:key="inputs"
+        android:title="@string/system_inputs" />
+    <Preference
         android:fragment="com.android.tv.settings.device.StorageSummaryFragmentX"
         android:icon="@drawable/ic_storage"
         android:key="storage"
