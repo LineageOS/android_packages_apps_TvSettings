@@ -51,5 +51,10 @@
             android:persistent="true"
             android:title="@string/inputs_tv_auto_on"
             android:summary="@string/inputs_tv_auto_on_desc" />
+        <SwitchPreference
+            android:key="volume_control_enabled"
+            android:persistent="true"
+            android:title="@string/inputs_volume_control_enabled"
+            android:summary="@string/inputs_volume_control_enabled_desc" />
     </PreferenceCategory>
 </PreferenceScreen>
