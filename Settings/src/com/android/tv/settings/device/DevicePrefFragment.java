@@ -95,7 +95,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment {
                 }
             }
         }
-        if (SystemProperties.getInt("ro.hdmi.device_type") == 4) {
+        if (SystemProperties.getInt("ro.hdmi.device_type", 0) == 4) {
             mInputSettingNeeded = true;
         }
         super.onCreate(savedInstanceState);
