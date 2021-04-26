@@ -75,6 +75,11 @@
         android:icon="@drawable/ic_developer_mode"
         android:key="developer"
         android:title="@string/system_developer_options"/>
+    <Preference
+        android:fragment="com.android.tv.settings.system.InputsFragment"
+        android:icon="@drawable/ic_input"
+        android:key="inputs"
+        android:title="@string/system_inputs" />
     <com.android.tv.twopanelsettings.slices.SlicePreference
         android:icon="@drawable/ic_internal_settings"
         android:key="overlay_internal"
