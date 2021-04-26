@@ -73,6 +73,11 @@
         android:icon="@drawable/ic_accessibility_new"
         android:key="accessibility"
         android:title="@string/system_accessibility"/>
+    <Preference
+        android:fragment="com.android.tv.settings.system.InputsFragment"
+        android:icon="@drawable/ic_input"
+        android:key="inputs"
+        android:title="@string/system_inputs" />
     <com.android.tv.settings.LongClickPreference
         android:icon="@drawable/ic_restart_alt"
         android:key="reboot"
