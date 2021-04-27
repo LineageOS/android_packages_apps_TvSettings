@@ -1027,22 +1027,42 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     }
 
     /** Show error message in preview panel **/
-    public void showErrorMessage(String errorMessage) {
+    public void showErrorMessage(String errorMessage, Fragment fragment) {
         Fragment prefFragment =
                 getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
-        Preference preference = getChosenPreference(prefFragment);
-        preference.setFragment(InfoFragment.class.getCanonicalName());
-
-        if (isA11yOn()) {
-            appendErrorToContentDescription(prefFragment, errorMessage);
+        if (fragment == prefFragment) {
+            // If user has already navigated to the preview screen, main panel screen should be
+            // updated to new InFoFragment. Create a fake preference to work around this case.
+            Preference preference = new Preference(getContext());
+            updatePreferenceWithErrorMessage(preference, errorMessage, getContext());
+            Fragment newPrefFragment = onCreatePreviewFragment(null, preference);
+            final FragmentTransaction transaction =
+                    getChildFragmentManager().beginTransaction();
+            transaction.setCustomAnimations(android.R.animator.fade_in,
+                    android.R.animator.fade_out);
+            transaction.replace(frameResIds[mPrefPanelIdx], newPrefFragment);
+            transaction.commit();
+        } else {
+            Preference preference = getChosenPreference(prefFragment);
+            if (preference != null) {
+                if (isA11yOn()) {
+                    appendErrorToContentDescription(prefFragment, errorMessage);
+                }
+                updatePreferenceWithErrorMessage(preference, errorMessage, getContext());
+                onPreferenceFocused(preference);
+            }
         }
+    }
 
+    private static void updatePreferenceWithErrorMessage(
+            Preference preference, String errorMessage, Context context) {
+        preference.setFragment(InfoFragment.class.getCanonicalName());
         Bundle b = preference.getExtras();
         b.putParcelable(EXTRA_PREFERENCE_INFO_TITLE_ICON,
-                Icon.createWithResource(getContext(), R.drawable.slice_error_icon));
-        b.putCharSequence(EXTRA_PREFERENCE_INFO_TEXT, getString(R.string.status_unavailable));
+                Icon.createWithResource(context, R.drawable.slice_error_icon));
+        b.putCharSequence(EXTRA_PREFERENCE_INFO_TEXT,
+                context.getString(R.string.status_unavailable));
         b.putCharSequence(EXTRA_PREFERENCE_INFO_SUMMARY, errorMessage);
-        onPreferenceFocused(preference);
     }
 
     private void appendErrorToContentDescription(Fragment fragment, String errorMessage) {
