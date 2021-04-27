@@ -659,7 +659,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
 
     private void showErrorMessage(String errorMessage) {
         if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
-            ((TwoPanelSettingsFragment) getCallbackFragment()).showErrorMessage(errorMessage);
+            ((TwoPanelSettingsFragment) getCallbackFragment()).showErrorMessage(errorMessage, this);
         }
     }
 
