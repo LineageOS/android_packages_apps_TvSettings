@@ -554,7 +554,8 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     }
 
     private void showProgressBar() {
-        View progressBar = getView().findViewById(R.id.progress_bar);
+        View view = this.getView();
+        View progressBar = view == null ? null : getView().findViewById(R.id.progress_bar);
         if (progressBar != null) {
             progressBar.bringToFront();
             progressBar.setVisibility(View.VISIBLE);
@@ -562,7 +563,8 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     }
 
     private void hideProgressBar() {
-        View progressBar = getView().findViewById(R.id.progress_bar);
+        View view = this.getView();
+        View progressBar = view == null ? null : getView().findViewById(R.id.progress_bar);
         if (progressBar != null) {
             progressBar.setVisibility(View.GONE);
         }
@@ -598,7 +600,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             decorTitle.setMaxWidth(getResources().getDimensionPixelSize(R.dimen.decor_title_width));
             decorIcon.setImageDrawable(icon.loadDrawable(mContextThemeWrapper));
             decorIcon.setVisibility(View.VISIBLE);
-        } else {
+        } else if (decorIcon != null) {
             decorIcon.setVisibility(View.GONE);
         }
         mScreenIcon = icon;
