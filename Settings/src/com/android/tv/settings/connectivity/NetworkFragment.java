@@ -270,7 +270,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
 
     private boolean isConnected() {
         NetworkInfo activeNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected()
+                && ConnectivityManager.TYPE_ETHERNET != activeNetworkInfo.getType();
     }
 
     private void updateConnectivity() {
