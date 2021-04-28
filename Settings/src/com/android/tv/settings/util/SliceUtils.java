@@ -16,14 +16,9 @@
 
 package com.android.tv.settings.util;
 
-import android.content.ContentProvider;
 import android.content.ContentProviderClient;
 import android.content.Context;
 import android.net.Uri;
-
-import androidx.slice.SliceProvider;
-
-import java.util.Optional;
 
 /** Utility class for slice **/
 public final class SliceUtils {
@@ -42,37 +37,6 @@ public final class SliceUtils {
             client.close();
             return true;
         } else {
-            return false;
-        }
-    }
-
-    /**
-     * Check if {@link androidx.slice.SliceProvider SliceProvider} exists and is not gated
-     * by an experiment.
-     */
-    public static boolean isSliceEnabled(Context context, String uri) {
-        if (uri == null) {
-            return false;
-        }
-        final Optional<ContentProvider> contentProviderOptional = Optional.ofNullable(
-                context.getContentResolver().acquireContentProviderClient(Uri.parse(uri)))
-                .map(ContentProviderClient::getLocalContentProvider);
-        /*
-        ContentProviderClient::getLocalContentProvider always returns null. Currently there
-        is no way to determine for sure if the slice is enabled for the current device or not.
-        Thus this method will always return false. For now including the code to render the
-        UI for the SlicePreference but it will not show.
-        TODO: Add logic for determining if the slice is actually enabled.
-         */
-        if (!contentProviderOptional.isPresent()
-                || !(contentProviderOptional.get() instanceof SliceProvider)) {
-            return false;
-        }
-        final SliceProvider sliceProvider = (SliceProvider) contentProviderOptional.get();
-        try {
-            sliceProvider.onSlicePinned(Uri.parse(uri));
-            return true;
-        } catch (IllegalStateException illegalStateException) {
             return false;
         }
     }
