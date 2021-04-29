@@ -55,6 +55,9 @@ public class OemUnlockPreferenceController implements OemUnlockDialog.Callback {
     }
 
     public boolean onPreferenceClick() {
+        if (mOemLockManager == null) {
+            return false;
+        }
         final boolean allowed = mPreference.isChecked();
         if (allowed) {
             // Signal to caller to start the confirm dialog.
@@ -109,21 +112,22 @@ public class OemUnlockPreferenceController implements OemUnlockDialog.Callback {
      * Returns {@code true} if the bootloader has been unlocked.
      */
     private boolean isBootloaderUnlocked() {
-        return mOemLockManager.isDeviceOemUnlocked();
+        return mOemLockManager != null && mOemLockManager.isDeviceOemUnlocked();
     }
 
     /**
      * Returns whether OEM unlock is allowed by the user and carrier.
      */
     private boolean isOemUnlockAllowedByUserAndCarrier() {
-        return mOemLockManager.isOemUnlockAllowedByCarrier()
+        return mOemLockManager != null
+                && mOemLockManager.isOemUnlockAllowedByCarrier()
                 && !mUserManager.hasBaseUserRestriction(
                         UserManager.DISALLOW_FACTORY_RESET,
                         Process.myUserHandle());
     }
 
     private boolean isOemUnlockedAllowed() {
-        return mOemLockManager.isOemUnlockAllowed();
+        return mOemLockManager != null && mOemLockManager.isOemUnlockAllowed();
     }
 
 }
