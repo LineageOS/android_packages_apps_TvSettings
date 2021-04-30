@@ -70,14 +70,14 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="2998289556481804047">"Det gick inte att synkronisera"</string>
     <string name="sync_active" msgid="1621239982176888680">"Synkronisering är aktiverad"</string>
-    <string name="connectivity_wifi" msgid="1138689464484009184">"Wi-Fi"</string>
+    <string name="connectivity_wifi" msgid="1138689464484009184">"wifi"</string>
     <string name="connectivity_ethernet" msgid="4270588618633681766">"Ethernet"</string>
     <string name="connectivity_summary_ethernet_connected" msgid="2612843587731520061">"Ethernet har anslutits"</string>
     <string name="connectivity_summary_no_network_connected" msgid="6111160695454212460">"Inget nätverk har anslutits"</string>
-    <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi är inaktiverat"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"wifi är inaktiverat"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Nätverkssökning alltid tillgänglig"</string>
-    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Tillåt att Googles platstjänst och andra appar söker efter nätverk, även när Wi-Fi inte har aktiverats"</string>
-    <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
+    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Tillåt att Googles platstjänst och andra appar söker efter nätverk, även när wifi inte har aktiverats"</string>
+    <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"wifi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Anslut till ett nätverk"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Senast öppnade apparna"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Visa alla appar"</string>
@@ -227,7 +227,7 @@
     <string name="mac_address_not_available" msgid="2992935344891853369">"Inte tillgängligt"</string>
     <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Slumpgenererad MAC-adress"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP-adress"</string>
-    <string name="title_ssid" msgid="255328048344188682">"Ange namnet på Wi-Fi-nätverket"</string>
+    <string name="title_ssid" msgid="255328048344188682">"Ange namnet på wifi-nätverket"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Internetanslutning"</string>
     <string name="connected" msgid="4981532275162345997">"Ansluten"</string>
     <string name="not_connected" msgid="475810896484271663">"Inte ansluten"</string>
@@ -247,8 +247,8 @@
     <string name="title_wifi_could_not_save" msgid="7549912968719395764">"Det gick inte att spara konfigurationen för <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect" msgid="6654031057635481872">"Det gick inte att ansluta till <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"Det gick inte att hitta <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Wi-Fi-lösenordet är inte giltigt"</string>
-    <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Anslutningen godkändes inte av Wi-Fi-nätverket"</string>
+    <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"wifi-lösenordet är inte giltigt"</string>
+    <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Anslutningen godkändes inte av wifi-nätverket"</string>
     <string name="title_wifi_advanced_options" msgid="371185991282743258">"Vill du konfigurera proxy och IP-inställningar för <xliff:g id="SSID">%1$s</xliff:g>?"</string>
     <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Proxy-inställningar"</string>
     <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Proxyserverns värdnamn:"</string>
@@ -414,7 +414,7 @@
     <string name="location_no_recent_apps" msgid="7033474075806435793">"Inga appar har begärt uppgifter om plats nyligen"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Hög batterianvändning"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Låg batterianvändning"</string>
-    <string name="location_mode_wifi_description" msgid="84697248707903061">"Använd Wi-Fi för att uppskatta plats"</string>
+    <string name="location_mode_wifi_description" msgid="84697248707903061">"Använd wifi för att uppskatta plats"</string>
     <string name="location_status" msgid="3037321737386011224">"Platsstatus"</string>
     <string name="location_services" msgid="551503779736382878">"Platstjänster"</string>
     <string name="on" msgid="4899322147062342542">"På"</string>
@@ -506,8 +506,8 @@
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Vänta på felsökningen"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Verifiera appar via USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Kontrollera om appar som installeras via ADB/ADT kan vara skadliga"</string>
-    <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Utförlig loggning för Wi-Fi"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Aktivera utförlig loggning för Wi-Fi"</string>
+    <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Utförlig loggning för wifi"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Aktivera utförlig loggning för wifi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Visa tryck"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"Pekarens plats"</string>
     <string name="system_show_layout_bounds" msgid="8803080672553699649">"Visa layoutgränser"</string>
@@ -588,9 +588,9 @@
     <string name="autofill_none" msgid="1615056985649424207">"Inga"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Kontrollera att du litar på den här appen.&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Password service&gt;%1$s&lt;/xliff:g&gt; identifierar vad som kan fyllas i automatiskt utifrån vad som visas på skärmen."</string>
     <string name="computing_size" msgid="8623916230485437579">"Beräknar …"</string>
-    <string name="title_select_wifi_network" msgid="935820896444071617">"Välj ditt Wi-Fi-nätverk"</string>
+    <string name="title_select_wifi_network" msgid="935820896444071617">"Välj ditt wifi-nätverk"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Byt namn"</string>
-    <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"Wi-Fi-skärm"</string>
+    <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"wifi-skärm"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"En PIN-kod måste anges"</string>
     <string name="whichApplication" msgid="4510042089342879264">"Slutför åtgärd genom att använda"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"Vill du alltid använda det här alternativet?"</string>
@@ -705,7 +705,7 @@
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Under medieuppspelning"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Säkerhetskopierade uppgifter lagras för tillfället inte i något konto"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
-    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Vill du sluta säkerhetskopiera Wi-Fi-lösenord, bokmärken, andra inställningar och appdata samt ta bort alla kopior på Googles servrar?"</string>
+    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Vill du sluta säkerhetskopiera wifi-lösenord, bokmärken, andra inställningar och appdata samt ta bort alla kopior på Googles servrar?"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"Säkerhetskopiera mina data"</string>
     <string name="privacy_backup_account" msgid="4527813051841860610">"Konto för säkerhetskopiering"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Automatisk återställning"</string>
