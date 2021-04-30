@@ -26,6 +26,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
+import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
@@ -47,21 +48,15 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
     private static final String KEY_ADS = "ads";
     private static final String KEY_ASSISTANT = "assistant";
     private static final String KEY_PURCHASES = "purchases";
+    private static final String KEY_SECURITY = "security";
+    private static final String KEY_PLAY_PROTECT = "play_protect";
 
     private int getPreferenceScreenResId() {
         switch (FlavorUtils.getFlavor(getContext())) {
             case FLAVOR_TWO_PANEL:
             case FLAVOR_X:
-            case FLAVOR_VENDOR: {
-                if (SliceUtils.isSliceEnabled(
-                        getContext(),
-                        getContext().getString(R.string.play_protect_settings_slice_uri)
-                )) {
-                    return R.xml.privacy_x;
-                } else {
-                    return R.xml.privacy;
-                }
-            }
+            case FLAVOR_VENDOR:
+                return R.xml.privacy_x;
             default:
                 return R.xml.privacy;
         }
@@ -74,6 +69,8 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
         Preference assistantSlicePreference = findPreference(KEY_ASSISTANT);
         Preference purchasesSlicePreference = findPreference(KEY_PURCHASES);
         Preference adsPreference = findPreference(KEY_ADS);
+        final Preference securityPreference = findPreference(KEY_SECURITY);
+        final Preference playProtectPreference = findPreference(KEY_PLAY_PROTECT);
 
         if (FlavorUtils.getFeatureFactory(getContext()).getBasicModeFeatureProvider()
                 .isBasicMode(getContext())) {
@@ -81,6 +78,14 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
             assistantSlicePreference.setVisible(false);
             purchasesSlicePreference.setVisible(false);
             adsPreference.setVisible(false);
+            // playProtectPreference can be present only in two panel settings
+            if (playProtectPreference != null) {
+                playProtectPreference.setVisible(false);
+            }
+            if (isPlayProtectPreferenceEnabled(playProtectPreference)) {
+                // By default show securityPreference unless playProtectPreference is enabled
+                securityPreference.setVisible(false);
+            }
             return;
         }
         if (assistantSlicePreference instanceof SlicePreference
@@ -104,6 +109,35 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
         if (adsPreference instanceof CustomContentDescriptionPreference) {
             ((CustomContentDescriptionPreference) adsPreference).setContentDescription(
                     getResources().getString(R.string.ads_content_description));
+        }
+        if (isPlayProtectPreferenceEnabled(playProtectPreference)) {
+            showPlayProtectPreference(playProtectPreference, securityPreference);
+        } else {
+            showSecurityPreference(securityPreference, playProtectPreference);
+        }
+    }
+
+    private boolean isPlayProtectPreferenceEnabled(@Nullable Preference playProtectPreference) {
+        return playProtectPreference instanceof SlicePreference
+                && SliceUtils.isSliceProviderValid(
+                        getContext(), ((SlicePreference) playProtectPreference).getUri());
+    }
+
+    private void showPlayProtectPreference(
+            @Nullable Preference playProtectPreference,
+            Preference securityPreference) {
+        if (playProtectPreference != null) {
+            playProtectPreference.setVisible(true);
+        }
+        securityPreference.setVisible(false);
+    }
+
+    private void showSecurityPreference(
+            Preference securityPreference,
+            @Nullable Preference playProtectPreference) {
+        securityPreference.setVisible(true);
+        if (playProtectPreference != null) {
+            playProtectPreference.setVisible(false);
         }
     }
 
