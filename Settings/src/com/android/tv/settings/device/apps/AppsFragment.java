@@ -26,6 +26,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 
 import androidx.annotation.Keep;
+import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 
 import com.android.settingslib.core.AbstractPreferenceController;
@@ -33,6 +34,7 @@ import com.android.tv.settings.PreferenceControllerFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +46,8 @@ import java.util.List;
 public class AppsFragment extends PreferenceControllerFragment {
 
     private static final String KEY_PERMISSIONS = "Permissions";
+    private static final String KEY_SECURITY = "security";
+    private static final String KEY_PLAY_PROTECT = "play_protect";
 
     public static void prepareArgs(Bundle b, String volumeUuid, String volumeName) {
         b.putString(AppsActivity.EXTRA_VOLUME_UUID, volumeUuid);
@@ -71,6 +75,49 @@ public class AppsFragment extends PreferenceControllerFragment {
                     return false;
                 }
         );
+        final Preference securityPreference = findPreference(KEY_SECURITY);
+        final Preference playProtectPreference = findPreference(KEY_PLAY_PROTECT);
+        if (FlavorUtils.getFeatureFactory(getContext()).getBasicModeFeatureProvider()
+                .isBasicMode(getContext())) {
+            // playProtectPreference can be present only in two panel settings
+            if (playProtectPreference != null) {
+                playProtectPreference.setVisible(false);
+            }
+            if (isPlayProtectPreferenceEnabled(playProtectPreference)) {
+                // By default show securityPreference unless playProtectPreference is enabled
+                securityPreference.setVisible(false);
+            }
+        } else {
+            if (isPlayProtectPreferenceEnabled(playProtectPreference)) {
+                showPlayProtectPreference(playProtectPreference, securityPreference);
+            } else {
+                showSecurityPreference(securityPreference, playProtectPreference);
+            }
+        }
+    }
+
+    private boolean isPlayProtectPreferenceEnabled(@Nullable Preference playProtectPreference) {
+        return playProtectPreference instanceof SlicePreference
+                && SliceUtils.isSliceProviderValid(
+                        getContext(), ((SlicePreference) playProtectPreference).getUri());
+    }
+
+    private void showPlayProtectPreference(
+            @Nullable Preference playProtectPreference,
+            Preference securityPreference) {
+        if (playProtectPreference != null) {
+            playProtectPreference.setVisible(true);
+        }
+        securityPreference.setVisible(false);
+    }
+
+    private void showSecurityPreference(
+            Preference securityPreference,
+            @Nullable Preference playProtectPreference) {
+        securityPreference.setVisible(true);
+        if (playProtectPreference != null) {
+            playProtectPreference.setVisible(false);
+        }
     }
 
     @Override
@@ -78,16 +125,8 @@ public class AppsFragment extends PreferenceControllerFragment {
         switch (FlavorUtils.getFlavor(getContext())) {
             case FlavorUtils.FLAVOR_TWO_PANEL:
             case FlavorUtils.FLAVOR_X:
-            case FlavorUtils.FLAVOR_VENDOR: {
-                if (SliceUtils.isSliceEnabled(
-                        getContext(),
-                        getContext().getString(R.string.play_protect_settings_slice_uri)
-                )) {
-                    return R.xml.apps_x;
-                } else {
-                    return R.xml.apps;
-                }
-            }
+            case FlavorUtils.FLAVOR_VENDOR:
+                return R.xml.apps_x;
             default:
                 return R.xml.apps;
         }
