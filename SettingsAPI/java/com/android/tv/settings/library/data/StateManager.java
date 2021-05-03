@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.library.data;
 
+import static com.android.tv.settings.library.ManagerUtil.STATE_ALL_APPS;
+import static com.android.tv.settings.library.ManagerUtil.STATE_APPS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK_MAIN;
 import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
 
@@ -23,6 +25,8 @@ import android.content.Context;
 import android.util.Pair;
 
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.device.apps.AllAppsState;
+import com.android.tv.settings.library.device.apps.AppsState;
 import com.android.tv.settings.library.network.NetworkMainState;
 import com.android.tv.settings.library.network.WifiDetailsState;
 
@@ -43,6 +47,12 @@ public class StateManager {
                 break;
             case STATE_WIFI_DETAILS:
                 state = new WifiDetailsState(context, uiUpdateCallback);
+                break;
+            case STATE_ALL_APPS:
+                state = new AllAppsState(context, uiUpdateCallback);
+                break;
+            case STATE_APPS:
+                state = new AppsState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op
