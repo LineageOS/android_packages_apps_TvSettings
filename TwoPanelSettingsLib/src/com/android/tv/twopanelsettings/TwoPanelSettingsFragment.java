@@ -134,14 +134,16 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 @Override
                 public void onChildViewHolderSelected(RecyclerView parent,
                         RecyclerView.ViewHolder child, int position, int subposition) {
-                    if (child == null) {
+                    if (parent == null || child == null) {
                         return;
                     }
                     int adapterPosition = child.getAdapterPosition();
                     PreferenceGroupAdapter preferenceGroupAdapter =
                             (PreferenceGroupAdapter) parent.getAdapter();
-                    Preference preference = preferenceGroupAdapter.getItem(adapterPosition);
-                    onPreferenceFocused(preference);
+                    if (preferenceGroupAdapter != null) {
+                        Preference preference = preferenceGroupAdapter.getItem(adapterPosition);
+                        onPreferenceFocused(preference);
+                    }
                 }
 
                 @Override
@@ -153,8 +155,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private final OnGlobalLayoutListener mOnGlobalLayoutListener = new OnGlobalLayoutListener() {
         @Override
         public void onGlobalLayout() {
-            getView().getViewTreeObserver().removeOnGlobalLayoutListener(mOnGlobalLayoutListener);
-            moveToPanel(mPrefPanelIdx, false);
+            if (getView() != null && getView().getViewTreeObserver() != null) {
+                getView().getViewTreeObserver().removeOnGlobalLayoutListener(
+                        mOnGlobalLayoutListener);
+                moveToPanel(mPrefPanelIdx, false);
+            }
         }
     };
 
@@ -219,6 +224,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
     @Override
     public boolean onPreferenceStartFragment(PreferenceFragmentCompat caller, Preference pref) {
+        if (pref == null) {
+            return false;
+        }
         if (DEBUG) {
             Log.d(TAG, "onPreferenceStartFragment " + pref.getTitle());
         }
@@ -329,13 +337,16 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             // Set both window title and pane title to avoid messy announcements when coming from
             // other activities. (window title is announced on activity change)
             getActivity().getWindow().setTitle(newA11yTitle);
-            getView().findViewById(R.id.two_panel_fragment_container)
-                    .setAccessibilityPaneTitle(newA11yTitle);
+            if (getView() != null
+                    && getView().findViewById(R.id.two_panel_fragment_container) != null) {
+                getView().findViewById(R.id.two_panel_fragment_container)
+                        .setAccessibilityPaneTitle(newA11yTitle);
+            }
         }
     }
 
     private void addOrRemovePreferenceFocusedListener(Fragment fragment, boolean isAddingListener) {
-        if (fragment == null || !(fragment instanceof LeanbackPreferenceFragmentCompat)) {
+        if (!(fragment instanceof LeanbackPreferenceFragmentCompat)) {
             return;
         }
         LeanbackPreferenceFragmentCompat leanbackPreferenceFragment =
@@ -378,6 +389,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     @Override
     public boolean onPreferenceDisplayDialog(
             @NonNull PreferenceFragmentCompat caller, Preference pref) {
+        if (pref == null) {
+            return false;
+        }
         if (DEBUG) {
             Log.d(TAG, "PreferenceDisplayDialog");
         }
@@ -434,11 +448,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         void onPreferenceFocused(Preference preference);
     }
 
-    protected boolean onPreferenceFocused(Preference pref) {
-        return onPreferenceFocusedImpl(pref, false);
+    protected void onPreferenceFocused(Preference pref) {
+        onPreferenceFocusedImpl(pref, false);
     }
 
-    private boolean onPreferenceFocusedImpl(Preference pref, boolean forceRefresh) {
+    private void onPreferenceFocusedImpl(Preference pref, boolean forceRefresh) {
+        if (pref == null) {
+            return;
+        }
         if (DEBUG) {
             Log.d(TAG, "onPreferenceFocused " + pref.getTitle());
         }
@@ -457,7 +474,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         } else {
             handleFragmentTransactionWhenFocused(pref, forceRefresh);
         }
-        return true;
     }
 
     private final class PostShowPreviewRunnable implements Runnable {
@@ -503,7 +519,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 && existingPreviewFragment.getClass().equals(previewFragment.getClass())
                 && equalArguments(existingPreviewFragment.getArguments(),
                 previewFragment.getArguments())) {
-            if (isRTL() && mScrollView.getScrollX() == 0 && mPrefPanelIdx == 0) {
+            if (isRTL() && mScrollView.getScrollX() == 0 && mPrefPanelIdx == 0
+                    && getView() != null && getView().getViewTreeObserver() != null) {
                 // For RTL we need to reclaim focus to the correct scroll position if a pref
                 // launches a new activity because the horizontal scroll goes back to 0.
                 getView().getViewTreeObserver().addOnGlobalLayoutListener(
@@ -531,8 +548,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         transaction.commit();
 
         // Some fragments may steal focus on creation. Reclaim focus on main fragment.
-        getView().getViewTreeObserver().addOnGlobalLayoutListener(
-                mOnGlobalLayoutListener);
+        if (getView()  != null && getView().getViewTreeObserver() != null) {
+            getView().getViewTreeObserver().addOnGlobalLayoutListener(
+                    mOnGlobalLayoutListener);
+        }
     }
 
     private boolean isRTL() {
@@ -826,6 +845,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     R.dimen.tp_settings_preference_pane_width);
             View scrollToPanel = getView().findViewById(frameResIds[index]);
             View previewPanel = getView().findViewById(frameResIds[index + 1]);
+            if (scrollToPanel == null || previewPanel == null) {
+                return;
+            }
             View scrollToPanelHead = scrollToPanel.findViewById(R.id.decor_title_container);
             View previewPanelHead = previewPanel.findViewById(R.id.decor_title_container);
             boolean scrollsToPreview =
@@ -851,7 +873,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        if (isA11yOn() && fragmentToBecomeMainPanel.getView() != null) {
+                        if (isA11yOn() && fragmentToBecomeMainPanel != null
+                                && fragmentToBecomeMainPanel.getView() != null) {
                             fragmentToBecomeMainPanel.getView().requestFocus();
                         }
                     }
@@ -973,6 +996,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         int position = listView.getSelectedPosition();
         PreferenceGroupAdapter adapter =
                 (PreferenceGroupAdapter) (leanbackPreferenceFragment.getListView().getAdapter());
+        if (adapter == null) {
+            return null;
+        }
         Preference chosenPreference = adapter.getItem(position);
         // Find the first focusable preference if cannot find the selected preference
         if (chosenPreference == null || (listView.findViewHolderForPosition(position) != null
@@ -1123,12 +1149,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         int position = listView.getSelectedPosition();
         PreferenceGroupAdapter adapter =
                 (PreferenceGroupAdapter) (leanbackPreferenceFragment.getListView().getAdapter());
-        Preference chosenPreference = adapter.getItem(position);
-        return chosenPreference;
+        return adapter != null ? adapter.getItem(position) : null;
     }
 
     /** Creates preview preference fragment. */
     public Fragment onCreatePreviewFragment(Fragment caller, Preference preference) {
+        if (preference == null) {
+            return null;
+        }
         if (preference.getFragment() != null) {
             if (!isInfoFragment(preference.getFragment())
                     && !isPreferenceFragment(preference.getFragment())) {
