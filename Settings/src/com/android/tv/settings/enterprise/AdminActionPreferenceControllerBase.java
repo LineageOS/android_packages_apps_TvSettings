@@ -27,6 +27,10 @@ import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.Date;
 
+/**
+ * Forked from:
+ * Settings/src/com/android/settings/enterprise/AdminActionPreferenceControllerBase.java
+ */
 public abstract class AdminActionPreferenceControllerBase extends AbstractPreferenceController {
 
     protected final EnterprisePrivacyFeatureProvider mFeatureProvider;

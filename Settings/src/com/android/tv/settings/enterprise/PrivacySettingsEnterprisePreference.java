@@ -26,7 +26,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/** Privacy Settings preferences for an Enterprise device. */
+/** Privacy Settings preferences for an Enterprise device.
+ *
+ * Forked from:
+ * Settings/src/com/android/settings/enterprise/PrivacySettingsEnterprisePreference.java
+ */
 public class PrivacySettingsEnterprisePreference implements PrivacySettingsPreference {
     private static final String KEY_EXPOSURE_CHANGES_CATEGORY = "exposure_changes_category";
 
@@ -66,6 +70,16 @@ public class PrivacySettingsEnterprisePreference implements PrivacySettingsPrefe
         controllers.add(new SecurityLogsPreferenceController(mContext));
         final List<AbstractPreferenceController> exposureChangesCategoryControllers =
                 new ArrayList<>();
+        exposureChangesCategoryControllers.add(new EnterpriseInstalledPackagesPreferenceController(
+                mContext, async));
+        exposureChangesCategoryControllers.add(
+                new AdminGrantedLocationPermissionsPreferenceController(mContext, async));
+        exposureChangesCategoryControllers.add(
+                new AdminGrantedMicrophonePermissionPreferenceController(mContext, async));
+        exposureChangesCategoryControllers.add(new AdminGrantedCameraPermissionPreferenceController(
+                mContext, async));
+        exposureChangesCategoryControllers.add(new EnterpriseSetDefaultAppsPreferenceController(
+                mContext));
         exposureChangesCategoryControllers.add(new AlwaysOnVpnCurrentUserPreferenceController(
                 mContext));
         exposureChangesCategoryControllers.add(new AlwaysOnVpnManagedProfilePreferenceController(

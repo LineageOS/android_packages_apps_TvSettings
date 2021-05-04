@@ -37,6 +37,8 @@ import com.android.tv.settings.basic.BasicModeFeatureProvider;
 import com.android.tv.settings.basic.BasicModeFeatureProviderImpl;
 import com.android.tv.settings.enterprise.EnterprisePrivacyFeatureProvider;
 import com.android.tv.settings.enterprise.EnterprisePrivacyFeatureProviderImpl;
+import com.android.tv.settings.enterprise.apps.ApplicationFeatureProvider;
+import com.android.tv.settings.enterprise.apps.ApplicationFeatureProviderImpl;
 import com.android.tv.settings.help.SupportFeatureProvider;
 import com.android.tv.settings.help.SupportFeatureProviderImpl;
 import com.android.tv.settings.startup.StartupVerificationFeatureProvider;
@@ -52,6 +54,7 @@ public class FeatureFactoryImplTwoPanel implements FeatureFactory {
     protected static final String TAG = "FeatureFactoryImplTwoP";
 
     private EnterprisePrivacyFeatureProvider mEnterprisePrivacyFeatureProvider;
+    private ApplicationFeatureProvider mApplicationFeatureProvider;
 
     @Override
     public SettingsFragmentProvider getSettingsFragmentProvider() {
@@ -86,6 +89,18 @@ public class FeatureFactoryImplTwoPanel implements FeatureFactory {
                     appContext.getResources());
         }
         return mEnterprisePrivacyFeatureProvider;
+    }
+
+    @Override
+    public ApplicationFeatureProvider getApplicationFeatureProvider(Context context) {
+        if (mApplicationFeatureProvider == null) {
+            final Context appContext = context.getApplicationContext();
+            mApplicationFeatureProvider = new ApplicationFeatureProviderImpl(appContext,
+                    appContext.getPackageManager(),
+                    AppGlobals.getPackageManager(),
+                    appContext.getSystemService(DevicePolicyManager.class));
+        }
+        return mApplicationFeatureProvider;
     }
 
     /**
