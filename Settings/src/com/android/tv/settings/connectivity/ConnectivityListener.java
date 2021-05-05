@@ -21,6 +21,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.EthernetManager;
 import android.net.LinkAddress;
@@ -281,7 +282,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
      * Return whether Ethernet port is available.
      */
     public boolean isEthernetAvailable() {
-        return mConnectivityManager.isNetworkSupported(ConnectivityManager.TYPE_ETHERNET)
+        return mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_ETHERNET)
                 && mEthernetManager.getAvailableInterfaces().length > 0;
     }
 
