@@ -363,7 +363,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         while (index < screen.getPreferenceCount()) {
             boolean needToRemoveCurrentPref = true;
             Preference oldPref = screen.getPreference(index);
-            if (oldPref.getKey() != null) {
+            if (oldPref != null && oldPref.getKey() != null) {
                 for (Preference newPref : newPrefs) {
                     if (newPref.getKey() != null && newPref.getKey().equals(oldPref.getKey())) {
                         needToRemoveCurrentPref = false;
@@ -493,7 +493,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         return super.onPreferenceTreeClick(preference);
     }
 
-    private boolean firePendingIntent(HasSliceAction preference, Intent fillInIntent) {
+    private boolean firePendingIntent(@NonNull HasSliceAction preference, Intent fillInIntent) {
         if (preference.getSliceAction() == null) {
             return false;
         }
@@ -597,7 +597,10 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         ImageView decorIcon = view == null ? null : (ImageView) view.findViewById(R.id.decor_icon);
         if (decorIcon != null && icon != null) {
             TextView decorTitle = view.findViewById(R.id.decor_title);
-            decorTitle.setMaxWidth(getResources().getDimensionPixelSize(R.dimen.decor_title_width));
+            if (decorTitle != null) {
+                decorTitle.setMaxWidth(
+                        getResources().getDimensionPixelSize(R.dimen.decor_title_width));
+            }
             decorIcon.setImageDrawable(icon.loadDrawable(mContextThemeWrapper));
             decorIcon.setVisibility(View.VISIBLE);
         } else if (decorIcon != null) {
@@ -617,12 +620,16 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         view.removeView(view.findViewById(R.id.decor_title_container));
         view.addView(newTitleContainer, 0);
 
-        newTitleContainer.setOutlineProvider(null);
-        newTitleContainer.setBackgroundResource(R.color.tp_preference_panel_background_color);
+        if (newTitleContainer != null) {
+            newTitleContainer.setOutlineProvider(null);
+            newTitleContainer.setBackgroundResource(R.color.tp_preference_panel_background_color);
+        }
 
         final View newContainer =
                 themedInflater.inflate(R.layout.slice_progress_bar, container, false);
-        ((ViewGroup) newContainer).addView(view);
+        if (newContainer != null) {
+            ((ViewGroup) newContainer).addView(view);
+        }
         return newContainer;
     }
 
