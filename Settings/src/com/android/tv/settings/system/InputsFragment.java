@@ -17,11 +17,11 @@
 package com.android.tv.settings.system;
 
 import android.content.Context;
+import android.hardware.hdmi.HdmiControlManager;
 import android.media.tv.TvInputInfo;
 import android.media.tv.TvInputManager;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.provider.Settings;
 import android.text.TextUtils;
 
 import androidx.annotation.Keep;
@@ -57,6 +57,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
     private TwoStatePreference mTvAutoOnPref;
 
     private TvInputManager mTvInputManager;
+    private HdmiControlManager mHdmiControlManager;
     private Map<String, String> mCustomLabels;
     private Set<String> mHiddenIds;
 
@@ -68,6 +69,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mTvInputManager = (TvInputManager) getContext().getSystemService(Context.TV_INPUT_SERVICE);
+        mHdmiControlManager = getContext().getSystemService(HdmiControlManager.class);
     }
 
     @Override
@@ -95,10 +97,12 @@ public class InputsFragment extends SettingsPreferenceFragment {
     }
 
     private void refresh() {
-        mHdmiControlPref.setChecked(readCecOption(Settings.Global.HDMI_CONTROL_ENABLED));
-        mDeviceAutoOffPref.setChecked(readCecOption(
-                Settings.Global.HDMI_CONTROL_AUTO_DEVICE_OFF_ENABLED));
-        mTvAutoOnPref.setChecked(readCecOption(Settings.Global.HDMI_CONTROL_AUTO_WAKEUP_ENABLED));
+        mHdmiControlPref.setChecked(mHdmiControlManager.getHdmiCecEnabled()
+                == HdmiControlManager.HDMI_CEC_CONTROL_ENABLED);
+        mDeviceAutoOffPref.setChecked(mHdmiControlManager.getTvSendStandbyOnSleep()
+                == HdmiControlManager.TV_SEND_STANDBY_ON_SLEEP_ENABLED);
+        mTvAutoOnPref.setChecked(mHdmiControlManager.getTvWakeOnOneTouchPlay()
+                == HdmiControlManager.TV_WAKE_ON_ONE_TOUCH_PLAY_ENABLED);
 
         for (TvInputInfo info : mTvInputManager.getTvInputList()) {
             if (info.getType() == TvInputInfo.TYPE_TUNER
@@ -166,26 +170,22 @@ public class InputsFragment extends SettingsPreferenceFragment {
         }
         switch (key) {
             case KEY_HDMI_CONTROL:
-                writeCecOption(Settings.Global.HDMI_CONTROL_ENABLED, mHdmiControlPref.isChecked());
+                mHdmiControlManager.setHdmiCecEnabled(mHdmiControlPref.isChecked()
+                        ? HdmiControlManager.HDMI_CEC_CONTROL_ENABLED
+                        : HdmiControlManager.HDMI_CEC_CONTROL_DISABLED);
                 return true;
             case KEY_DEVICE_AUTO_OFF:
-                writeCecOption(Settings.Global.HDMI_CONTROL_AUTO_DEVICE_OFF_ENABLED,
-                        mDeviceAutoOffPref.isChecked());
+                mHdmiControlManager.setTvSendStandbyOnSleep(mDeviceAutoOffPref.isChecked()
+                        ? HdmiControlManager.TV_SEND_STANDBY_ON_SLEEP_ENABLED
+                        : HdmiControlManager.TV_SEND_STANDBY_ON_SLEEP_DISABLED);
                 return true;
             case KEY_TV_AUTO_ON:
-                writeCecOption(Settings.Global.HDMI_CONTROL_AUTO_WAKEUP_ENABLED,
-                        mTvAutoOnPref.isChecked());
+                mHdmiControlManager.setTvWakeOnOneTouchPlay(mTvAutoOnPref.isChecked()
+                        ? HdmiControlManager.TV_WAKE_ON_ONE_TOUCH_PLAY_ENABLED
+                        : HdmiControlManager.TV_WAKE_ON_ONE_TOUCH_PLAY_DISABLED);
                 return true;
         }
         return super.onPreferenceTreeClick(preference);
-    }
-
-    private boolean readCecOption(String key) {
-        return Settings.Global.getInt(getContext().getContentResolver(), key, 1) == 1;
-    }
-
-    private void writeCecOption(String key, boolean value) {
-        Settings.Global.putInt(getContext().getContentResolver(), key, value ? 1 : 0);
     }
 
     private class InputPreference extends Preference {
