@@ -1,0 +1,85 @@
+// Signature format: 2.0
+package com.android.tv.settings.library {
+
+  public final class ManagerUtil {
+    method public static boolean isChecked(com.android.tv.settings.library.PreferenceCompat);
+    method public static boolean isVisible(com.android.tv.settings.library.PreferenceCompat);
+    field public static final String INFO_COLLAPSE = "collapse";
+    field public static final String INFO_INTENT = "intent";
+    field public static final String INFO_NEXT_STATE = "next_state";
+    field public static final String INFO_WIFI_SIGNAL_LEVEL = "wifi_signal_level";
+    field public static final int STATE_ALL_APPS = 4; // 0x4
+    field public static final int STATE_APPS = 3; // 0x3
+    field public static final int STATE_APP_MANAGEMENT = 5; // 0x5
+    field public static final int STATE_DEVICE_MAIN = 2; // 0x2
+    field public static final int STATE_NETWORK_MAIN = 0; // 0x0
+    field public static final int STATE_WIFI_DETAILS = 1; // 0x1
+  }
+
+  public class PreferenceCompat {
+    ctor public PreferenceCompat(String);
+    ctor public PreferenceCompat(String[]);
+    ctor public PreferenceCompat(String[], String);
+    ctor public PreferenceCompat(String[], String, String);
+    method public void addChildPrefCompat(com.android.tv.settings.library.PreferenceCompat);
+    method public void addInfo(String, String);
+    method public void clearChildPrefCompats();
+    method public com.android.tv.settings.library.PreferenceCompat findChildPreferenceCompat(String[]);
+    method public byte getChecked();
+    method public java.util.List<com.android.tv.settings.library.PreferenceCompat> getChildPrefCompats();
+    method public int getChildPrefsCount();
+    method public String getContentDescription();
+    method public android.os.Bundle getExtras();
+    method public android.graphics.drawable.Drawable getIcon();
+    method public String getInfo(String);
+    method public java.util.Map<java.lang.String,java.lang.String> getInfoMap();
+    method public android.content.Intent getIntent();
+    method public String[] getKey();
+    method public String getSummary();
+    method public String getTitle();
+    method public int getType();
+    method public byte getVisible();
+    method public com.android.tv.settings.library.PreferenceCompat immutableCopy();
+    method public void initChildPreferences();
+    method public void setChecked(byte);
+    method public void setChecked(boolean);
+    method public void setChildPrefCompats(java.util.List<com.android.tv.settings.library.PreferenceCompat>);
+    method public void setContentDescription(String);
+    method public void setExtras(android.os.Bundle);
+    method public void setIcon(android.graphics.drawable.Drawable);
+    method public void setInfoMap(java.util.Map<java.lang.String,java.lang.String>);
+    method public void setIntent(android.content.Intent);
+    method public void setSummary(String);
+    method public void setTitle(String);
+    method public void setType(byte);
+    method public void setVisible(boolean);
+    method public void setVisible(byte);
+    field public static final byte TYPE_PREFERENCE_ACCESS_POINT = 2; // 0x2
+    field public static final byte TYPE_PREFERENCE_CATEGORY = 1; // 0x1
+    field public static final byte TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY = 3; // 0x3
+    field public static final byte TYPE_RPEFERENCE = 0; // 0x0
+  }
+
+  public final class SettingsManager {
+    ctor public SettingsManager(android.content.Context);
+    method public com.android.tv.settings.library.PreferenceCompat getPreference(int, String);
+    method public java.util.List<com.android.tv.settings.library.PreferenceCompat> getPreferences(int);
+    method public void onCreate(int, android.os.Bundle);
+    method public void onDestroy(int);
+    method public void onPause(int);
+    method public void onPreferenceClick(int, String, boolean);
+    method public void onResume(int);
+    method public void onStart(int);
+    method public void onStop(int);
+    method public void registerListener(com.android.tv.settings.library.UIUpdateCallback);
+    method public void unRegisterListener(com.android.tv.settings.library.UIUpdateCallback);
+  }
+
+  public interface UIUpdateCallback {
+    method public void notifyUpdate(int, com.android.tv.settings.library.PreferenceCompat);
+    method public void notifyUpdateAll(int, java.util.List<com.android.tv.settings.library.PreferenceCompat>);
+    method public void notifyUpdateScreenTitle(int, String);
+  }
+
+}
+
