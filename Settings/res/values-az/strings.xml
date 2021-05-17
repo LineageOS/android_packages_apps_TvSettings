@@ -98,6 +98,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Ən son istifadə edilən tətbiqlər"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Bütün tətbiqlərə baxın"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"İcazələr"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"Güvənlik"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Bütün tətbiqlər"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Sistem tətbiqlərini göstərin"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Quraşdırılmış tətbiqlər"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD ilə Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus ilə Dolby Atmos"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Qeyd: Cihaz dəstəklənən formatları düzgün bildirmirsə, Avtomatik seçim işləməyə bilər."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Avtomatik: Yalnız səs çıxış cihazınız tərəfindən dəstəklənən formatları aktivləşdirin "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Seçildiyi zaman sistem tətbiqlərin cihaz şəbəkəniz tərəfindən dəstəklənən hər hansı səs formatını seçməsinə imkan verəcək. Tətbiqlər ən yüksək keyfiyyətdə olmayan formatı seçə bilər."</string>
@@ -291,7 +294,7 @@
     <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"Həmişə aktiv VPN şəxsi profilinizdə yandırıldı"</string>
     <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"Həmişə aktiv VPN iş profilinizdə yandırıldı"</string>
     <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"Qlobal HTTP proksi ayarlandı"</string>
-    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Etibarlı kredensiallar"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Güvənli kimlik bilgiləri"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Şəxsi profilinizdəki etibarlı kredensiallar"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"İş profilinizdəki etibarlı kredensiallar"</string>
     <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
@@ -777,7 +780,7 @@
     <string name="title_current_autofill_service" msgid="9029001041887283153">"Cari Avtomatik Daxiletmə Xidməti"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"Avtomatik Daxiletmə Xidmətini seçin"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Yoxdur"</string>
-    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Bu tətbiqə etibar etdiyinizə əmin olun&lt;b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=tətbiq_adı nümunə=Parol xidməti &gt;%%1$s&lt;/xliff:g&gt; nəyin avtomatik daxil edilə biləcəyini müəyyən etmək üçün ekrandakılardan istifadə edir."</string>
+    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Bu tətbiqə inana biləcəyinizi dəqiqləşdirin&lt;b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=tətbiq_adı nümunə=Parol xidməti &gt;%%1$s&lt;/xliff:g&gt; ekranı analiz edərək avtomatik doldurula bilən sahələri tapır."</string>
     <string name="computing_size" msgid="8623916230485437579">"Hesablanır..."</string>
     <string name="title_select_wifi_network" msgid="935820896444071617">"Wi-Fi şəbəkənizi seçin"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Adlandırın"</string>
@@ -860,7 +863,7 @@
     <string name="wifi_setup_save_success" msgid="6862510218032734919">"Uğurla saxlanıldı"</string>
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"<xliff:g id="APP_VERSION">%1$s</xliff:g> versiyası"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Açın"</string>
-    <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Dayandırmağı gücləndir"</string>
+    <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Dayandırılsın"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Əgər proqramın dayandırılmasını gücləndirsəniz, o düzgün işləməyə bilər."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Poz"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Güncəlləmələri sistemdən silin"</string>
@@ -871,7 +874,7 @@
     <string name="device_apps_app_management_enable_desc" msgid="8686291003061136476">"Bu proqramı aktivləşdirmək istəyirsiniz?"</string>
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"İşlənmiş yaddaş"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="VOLUME">%2$s</xliff:g> üzrə <xliff:g id="SIZE">%1$s</xliff:g> istifadə olunub"</string>
-    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Datanı təmizlə"</string>
+    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Datanı silin"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Bu tətbiq datası həmişəlik silinəcək. \nBura bütün fayllar, ayarlar, hesablar, verilənlər bazası və sairləri aiddir."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"Defoltları təmizləyin"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"Bəzi fəaliyyətlər üçün bu proqramı işə salmağı təyin edin"</string>
@@ -1004,9 +1007,9 @@
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Tətbiqi sistemdən sil"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Deaktiv edin və silin"</string>
     <string name="select_device_admin_msg" msgid="8475934459999710332">"Administrator tətbiqləri"</string>
-    <string name="add_device_admin_msg" msgid="5390773166682603421">"Cihaz admin tətbiqi aktiv edilsin?"</string>
-    <string name="add_device_admin" msgid="5078281377915844544">"Bu cihazın admin tətbiqini aktiv edin"</string>
-    <string name="device_admin_warning" msgid="7399916080685200660">"Bu admin tətbiqini aktiv etməklə <xliff:g id="APP_NAME">%1$s</xliff:g> tətbiqinə aşağı əməliyyatları etmək icazəsi verilir:"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Cihaz administratoru tətbiqi"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Administrator tətbiqi aktiv edilsin"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Aktivasiyadan sonra <xliff:g id="APP_NAME">%1$s</xliff:g> tətbiqinə aşağı əməliyyatları etmək icazəsi verilir:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Bu cihazı <xliff:g id="APP_NAME">%1$s</xliff:g> idarə edəcək."</string>
     <string name="device_admin_status" msgid="5467001937240455367">"Bu admin tətbiqi aktivdir və <xliff:g id="APP_NAME">%1$s</xliff:g> tətbiqinə aşağıdakı əməliyyatları etməyə icazə verir:"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Davam etməklə istifadəçiniz admin tərəfindən idarə ediləcək ki, şəxsi dataya əlavə olaraq, əlaqəli datanı saxlaya bilsin.\n\nAdmin ayarlar, giriş, tətbiq və bu istifadəçi ilə əlaqəli ayarlar, giriş, tətbiq və dataya nəzarət etmək və idarə etmək iqtidarındadır, bura şəbəkə fəaliyyəti və cihazın məkan məlumatı da daxildir."</string>

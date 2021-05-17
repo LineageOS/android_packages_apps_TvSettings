@@ -68,7 +68,7 @@
     <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Төлем және сатып алу транзакциялары"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Қолданба параметрлері"</string>
-    <string name="privacy_category_summary" msgid="3534434883380511043">"Геодерек, пайдалану дерегі және диагностика, жарнамалар"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Локация, пайдалану дерегі және диагностика, жарнамалар"</string>
     <string name="add_account" msgid="7386223854837017129">"Есептік жазба қосу"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Есептік жазбаны жою"</string>
     <string name="account_sync" msgid="4315295293211313989">"Синхрондалған қолданбаларды таңдау"</string>
@@ -98,12 +98,13 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Жақында ашылған қолданбалар"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Барлық қолданбаны көру"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Рұқсаттар"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"Қауіпсіздік"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Барлық қолданбалар"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Жүйелік қолданбаларды көрсету"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Орнатылған қолданбалар"</string>
     <string name="all_apps_other" msgid="4420174882983813158">"Жүйелік қолданбалар"</string>
     <string name="all_apps_disabled" msgid="2776041242863791053">"Өшірілген қолданбалар"</string>
-    <string name="device_daydream" msgid="2631191946958113220">"Экран қорғағыш"</string>
+    <string name="device_daydream" msgid="2631191946958113220">"Скринсейвер"</string>
     <string name="device_display" msgid="244634591698925025">"Дисплей"</string>
     <string name="device_display_sound" msgid="7399153506435649193">"Дисплей және дыбыс"</string>
     <string name="device_sound" msgid="8616320533559404963">"Дыбыс"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos with Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos with Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Ескертпе: құрылғы қолдауға ие форматтар туралы дұрыс хабарламаса, \"Автоматты\" опциясы жұмыс істемеуі мүмкін."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Автоматты: Тек аудио шығару құрылғыңыз қолдайтын форматтарды қосыңыз "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Таңдалған кезде, жүйе қолданбаларға құрылғылар тізбегіңізде қолдау көрсетілетін кез келген дыбыстық форматты таңдауға мүмкіндік береді. Қолданбалар сапасы ең жоғары емес форматты таңдауы мүмкін."</string>
@@ -618,9 +621,9 @@
     <string name="off" msgid="3127416478888499352">"Өшірулі"</string>
     <string name="google_location_services_title" msgid="6304196603522909239">"Google Локация қызметтері"</string>
     <string name="third_party_location_services_title" msgid="2826218400381676508">"3-тараптың Локация қызметтері"</string>
-    <string name="location_reporting" msgid="3552501333650895634">"Орындар туралы есептер"</string>
-    <string name="location_history" msgid="4055660203090513120">"Орналасу тарихы"</string>
-    <string name="location_reporting_desc" msgid="1580018652781674608">"Google бұл мүмкіндікті Google Now және Google Карталар сияқты өнімдерде пайдаланады. Орындар туралы есептерді қосу осы мүмкіндікті пайдаланатын кез келген Google өніміне құрылғының Google есептік жазбасымен байланысты ең соңғы орын деректерін сақтауға және пайдалануға мүмкіндік береді."</string>
+    <string name="location_reporting" msgid="3552501333650895634">"Геодерек жіберу"</string>
+    <string name="location_history" msgid="4055660203090513120">"Локация тарихы"</string>
+    <string name="location_reporting_desc" msgid="1580018652781674608">"Google бұл мүмкіндікті Google Now және Google Карталар сияқты өнімдерде пайдаланады. Геодерек жіберу функциясын қосу осы мүмкіндікті пайдаланатын кез келген Google өніміне құрылғының Google есептік жазбасымен байланысты ең соңғы орын деректерін сақтауға және пайдалануға мүмкіндік береді."</string>
     <string name="location_history_desc" msgid="926674012916014270">"Осы есептік жазба үшін орындар тарихы қосулы болса, Google құрылғының орын деректерін қолданбалар пайдалануы үшін сақтай алады.\n\nМысалы, Google Карталар сізге бағыттар бере алады және  give Google Now жұмысқа бару жолындағы жол қозғалысы туралы хабарлай алады.\n\nОрналасу тарихын кез келген уақытта өшіруге болады, бірақ бұлай істеу оны жоймайды. Орналасу тарихын көру және басқару үшін maps.google.com/locationhistory бетіне кіріңіз."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Орындар тарихын жою"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Бұл осы құрылғыдан осы Google есептік жазбасы үшін сақталған бүкіл орындар тарихын жояды. Бұл жоюды болдырмау мүмкін емес. Кейбір қолданбалар, соның ішінде, Google Now, жұмысын тоқтатады."</string>
@@ -655,7 +658,7 @@
     <string name="captions_windowshow" msgid="6002072054703167886">"Терезені көрсету"</string>
     <string name="captions_windowcolor" msgid="7460430328878876648">"Терезе түсі"</string>
     <string name="captions_windowopacity" msgid="8645082670322789314">"Терезе күңгірттігі"</string>
-    <string name="captions_style_0" msgid="169414884289770256">"Қара түсте ақпен"</string>
+    <string name="captions_style_0" msgid="169414884289770256">"Қарада ақ"</string>
     <string name="captions_style_1" msgid="8236052739817535538">"Ақ түсте қарамен"</string>
     <string name="captions_style_2" msgid="456353889540431910">"Қара түсте сарымен"</string>
     <string name="captions_style_3" msgid="3860050153620761166">"Көк түсте сарымен"</string>
@@ -728,7 +731,7 @@
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"USB қосылғанда күйін келтіру режимі"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Орындау алдында бекіту үшін күйі келтірілетін қолданба күйін келтірушіні күтеді."</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Қию шегін, шеттерді, т.б. көрсету"</string>
-    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Графикалық процессор сызғанда терезелер ішіндегі көріністердің жыпылықтауы"</string>
+    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Терезелерде GPU-мен сызылған аумақтарды жыпылықтату"</string>
     <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Жаңартылғанда жабдық қабаттарын жасыл түспен жыпылықтату"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Ең жақсыдан ең жаманға қарай: көк, жасыл, ашық қызыл, қызыл"</string>
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Бедері жаңарғанда, терезені түгелдей жыпылықтату"</string>
@@ -887,10 +890,10 @@
     <string name="settings_on" msgid="7734010120323404333">"Қосулы"</string>
     <string name="settings_off" msgid="4060451657850476369">"Өшірулі"</string>
     <string name="device_daydreams_none" msgid="3405655350757277348">"Экранды өшіру"</string>
-    <string name="device_daydreams_select" msgid="7203264446482623438">"Экран қорғағыш"</string>
+    <string name="device_daydreams_select" msgid="7203264446482623438">"Скринсейвер"</string>
     <string name="device_daydreams_test" msgid="7828275397550076567">"Қазір бастау"</string>
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Іске қосылатын кезі"</string>
-    <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Экран қорғағыш режимі көрсетілген уақыт бойы еш әрекет жасалмаған жағдайда қосылады. Егер экран қорғағыш таңдалмаса, дисплей өшіп қалады."</string>
+    <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Көрсетілген уақыт бойы еш әрекет жасалмаған жағдайда, скринсейвер қосылады. Скринсейвер таңдалмаса, дисплей өшіп қалады."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> әрекетсіздіктен кейін"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Дисплейді өшіру"</string>
     <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> кейін"</string>

@@ -98,6 +98,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"ഈയടുത്ത് തുറന്ന ആപ്പുകൾ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"എല്ലാ ആപ്പുകളും കാണുക"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"അനുമതികൾ"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"സുരക്ഷ"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"എല്ലാ ആപ്പുകളും"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"സിസ്റ്റം ആപ്പുകൾ കാണിക്കുക"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"ഇൻസ്‌റ്റാൾ ചെയ്‌ത ആപ്പുകൾ"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"ഡോൾബി ഡിജിറ്റൽ പ്ലസ്"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD ഉപയോഗിച്ചുള്ള Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus ഉപയോഗിച്ചുള്ള Dolby Atmos"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"ശ്രദ്ധിക്കുക: ഉപകരണത്തിന്റെ പിന്തുണയ്ക്കുന്ന ഫോർമാറ്റ് ശരിയായി റിപ്പോർട്ടുചെയ്തില്ലെങ്കിൽ, സ്വയമേവ ഓപ്ഷൻ പ്രവർത്തിക്കണമെന്നില്ല."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"സ്വയമേവയുള്ള: നിങ്ങളുടെ ഓഡിയോ ഔട്ട്പുട്ട് ഉപകരണം പിന്തുണയ്‌ക്കുന്ന ഫോർമാറ്റുകൾ മാത്രം പ്രവർത്തനക്ഷമമാക്കുക "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"തിരഞ്ഞെടുത്ത് കഴിഞ്ഞാൽ, നിങ്ങളുടെ ഉപകരണ ശൃംഖല പിന്തുണയ്‌ക്കുന്ന ഏത് ശബ്‌ദ ഫോർമാറ്റ് തിരഞ്ഞെടുക്കാനും ആപ്പുകളെ സിസ്റ്റം അനുവദിക്കും. ഏറ്റവും ഉയർന്ന നിലവാരത്തിലുള്ളതല്ലാത്ത ഫോർമാറ്റ്, ആപ്പുകൾ തിരഞ്ഞെടുത്തേക്കാം."</string>
@@ -713,7 +716,7 @@
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"GPU ഓവർഡ്രോ കാണിക്കുക"</string>
     <string name="system_show_surface_updates" msgid="7680759813613585278">"സർഫേസ് അപ്‌ഡേറ്റുകൾ ദൃശ്യമാക്കുക"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"വിൻഡോ ആനിമേഷൻ സ്‌കെയിൽ"</string>
-    <string name="system_transition_animation_scale" msgid="7266380208347453619">"സംക്രമണ ആനിമേഷൻ സ്‌കെയിൽ"</string>
+    <string name="system_transition_animation_scale" msgid="7266380208347453619">"ട്രാൻസിഷൻ ആനിമേഷൻ സ്‌കെയിൽ"</string>
     <string name="system_animator_duration_scale" msgid="3829445237130423625">"ആനിമേറ്റർ ദൈർഘ്യ സ്‌കെയിൽ"</string>
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"ഫോഴ്സ്‌മോഡ് സജീവമാക്കി"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"പ്രൊഫൈൽ GPU റെൻഡർചെയ്യൽ"</string>
@@ -732,7 +735,7 @@
     <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"ഹാർഡ്‌വെയർ ലേയറുകളുടെ അപ്‌ഡേറ്റുകൾ പൂർത്തിയാകുമ്പോൾ അവ പച്ച നിറത്തിൽ ഫ്ലാഷുചെയ്യുക"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"മികച്ചതിൽ നിന്നും മോശമായതിലേയ്‌ക്ക്: നീല, പച്ച, ഇളം ചുവപ്പ്, ചുവപ്പ്"</string>
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"മുഴുവൻ വിൻഡോ സർഫേസുകളും അപ്‌ഡേറ്റുചെയ്‌തുകഴിയുമ്പോൾ അവ ഫ്ലാഷുചെയ്യുക"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"പ്രധാന ത്രെഡിൽ അപ്ലിക്കേഷനുകൾ ദൈർഘ്യമേറിയ പ്രവർത്തനങ്ങൾ നടത്തുമ്പോൾ സ്‌ക്രീൻ ഫ്ലാഷ് ചെയ്യുക"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"പ്രധാന ത്രെഡിൽ ആപ്പുകൾ ദൈർഘ്യമേറിയ പ്രവർത്തനങ്ങൾ നടത്തുമ്പോൾ സ്‌ക്രീൻ ഫ്ലാഷ് ചെയ്യുക"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"adb ഷെൽ dumpsys gfxinfo-ലെ റെൻഡർ ചെയ്യുന്ന സമയം അളക്കുക"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"അജ്ഞാത ഉറവിടങ്ങൾ"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Store-ന് പുറമെയുള്ള ഉറവിടങ്ങളിൽ നിന്നും ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ അനുവദിക്കുക."</string>

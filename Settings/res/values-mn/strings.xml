@@ -98,6 +98,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Саяхан нээсэн апп"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Бүх аппыг харах"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Зөвшөөрөл"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"Аюулгүй байдал"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Бүх апп"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Системийн аппыг харуулах"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Суулгасан апп"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD-тай Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus-тай Dolby Atmos"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Санамж: Таны төхөөрөмж дэмждэг форматаа зөв мэдээлэхгүй бол Автомат сонголт ажиллахгүй байж болно."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Автомат: Зөвхөн таны аудио гаралтын төхөөрөмжийн дэмждэг форматуудыг идэвхжүүлнэ "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Сонгосон үед систем нь аппуудад таны төхөөрөмжийн сүлжээний дэмждэг дурын дууны форматыг сонгохыг зөвшөөрнө. Аппууд өндөр чанартай биш форматыг сонгож болзошгүй."</string>
@@ -199,7 +202,7 @@
     <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;-тай хослуулахын тулд дараах түлхүүрийг харуулж байгаа эсэхийг шалгана уу: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"Хаанаас: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Энэ төхөөрөмжтэй хослуулах уу?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;-тай хослуулахын тулд &lt;br&gt;Дээр нь дараахыг бичээд : &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, Return буюу Enter товч дарна уу."</string>
-    <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&amp;lt-тай хослуулахын тулд;/b&gt;, &lt;br&gt;Төхөөрөмжийн шаардлагатай PIN-г оруулна уу:"</string>
+    <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&amp;lt-тай хослуулахын тулд;/b&gt;, &lt;br&gt;Төхөөрөмжийн шаардлагатай ПИН-г оруулна уу:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"&lt;b&gt;: <xliff:g id="DEVICE_NAME">%1$s</xliff:g> &lt;/b&gt; төхөөрөмжийг хослуулахийг тулд &lt;/br&gt; Төхөөрөмжийн нэвтрэх нууц үгийг оруул:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Гол төлөв 0000 эсвэл 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Хослуулах"</string>
@@ -782,7 +785,7 @@
     <string name="title_select_wifi_network" msgid="935820896444071617">"Wi-Fi сүлжээ сонгох"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Нэр солих"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"Wi-Fi Дэлгэц"</string>
-    <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"PIN шаардлагатай"</string>
+    <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"ПИН шаардлагатай"</string>
     <string name="whichApplication" msgid="4510042089342879264">"Үйлдлийг дуусгах"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"Энэ үйлдэлд энэ сонголтыг байнга ашиглах уу?"</string>
     <string name="alwaysUseOption" msgid="8799609235198714441">"Үргэлж ашиглах"</string>
@@ -841,18 +844,18 @@
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Зөвшөөрөгдөөгүй"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Хязгаарлалтуудыг тааруулах"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="3293508876131962699">"Түр хүлээнэ үү…"</string>
-    <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"PIN өөрчлөх"</string>
+    <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"ПИН өөрчлөх"</string>
     <string name="restriction_description" msgid="2053112392083722259">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
     <string name="app_sees_restricted_accounts_and_controlled_by" msgid="1261056180558324892">"Энэ апп таны бүртгэлд хандах боломжтой. <xliff:g id="APP">%1$s</xliff:g>-с удирддаг"</string>
-    <string name="pin_enter_unlock_channel" msgid="243855138978654080">"Энэ сувгийг үзэхийн тулд PIN оруулна уу"</string>
-    <string name="pin_enter_unlock_program" msgid="275489015420025531">"Энэ хөтөлбөрийг үзэхийн тулд PIN оруулна уу"</string>
-    <string name="pin_enter_pin" msgid="5020029261153234751">"PIN оруулна уу"</string>
-    <string name="pin_enter_new_pin" msgid="1930944619313642621">"Шинэ PIN тохируулах"</string>
-    <string name="pin_enter_again" msgid="7615050143778858658">"Шинэ PIN дахин оруулна уу"</string>
-    <string name="pin_enter_old_pin" msgid="5665265735227617942">"Хуучин PIN оруулна уу"</string>
+    <string name="pin_enter_unlock_channel" msgid="243855138978654080">"Энэ сувгийг үзэхийн тулд ПИН оруулна уу"</string>
+    <string name="pin_enter_unlock_program" msgid="275489015420025531">"Энэ хөтөлбөрийг үзэхийн тулд ПИН оруулна уу"</string>
+    <string name="pin_enter_pin" msgid="5020029261153234751">"ПИН оруулна уу"</string>
+    <string name="pin_enter_new_pin" msgid="1930944619313642621">"Шинэ ПИН тохируулах"</string>
+    <string name="pin_enter_again" msgid="7615050143778858658">"Шинэ ПИН дахин оруулна уу"</string>
+    <string name="pin_enter_old_pin" msgid="5665265735227617942">"Хуучин ПИН оруулна уу"</string>
     <string name="pin_enter_wrong_seconds" msgid="3014013615537066237">"Ta ПИН-ээ 5 удаа буруу орууллаа.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> секундын дараа дахин оролдоно уу."</string>
-    <string name="pin_toast_wrong" msgid="4297542365877164402">"Буруу PIN, дахин оролдоно уу"</string>
-    <string name="pin_toast_not_match" msgid="2439298696342975155">"Дахин оролдоно уу, PIN таарахгүй байна"</string>
+    <string name="pin_toast_wrong" msgid="4297542365877164402">"Буруу ПИН, дахин оролдоно уу"</string>
+    <string name="pin_toast_not_match" msgid="2439298696342975155">"Дахин оролдоно уу, ПИН таарахгүй байна"</string>
     <string name="wifi_setup_input_password" msgid="8510003548463241234">"<xliff:g id="SSID">%1$s</xliff:g>-д нууц үгийг оруулна уу"</string>
     <string name="wifi_setup_description" msgid="6843574399437584520">"Үргэлжлүүлэхийн тулд <xliff:g id="WIFI_SUBMIT_ICON">%1$s</xliff:g>-г сонгоно уу."</string>
     <string name="label_done_key" msgid="8576286462300373440">"Болсон"</string>

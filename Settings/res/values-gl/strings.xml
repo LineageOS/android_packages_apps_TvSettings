@@ -98,6 +98,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Aplicacións abertas recentemente"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Ver todas as aplicacións"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Permisos"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"Seguranza"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Todas as aplicacións"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Mostrar aplicacións do sistema"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Aplicacións instaladas"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos con Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos con Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: Quizais a opción Automático non funcione se o dispositivo non indica ben que formatos admite."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automático: activa só os formatos compatibles co dispositivo de saída de audio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Cando esta opción estea seleccionada, o sistema permitirá que as aplicacións seleccionen calquera formato de son compatible coa cadea de dispositivos. As aplicacións poden escoller un formato que non sexa da máxima calidade."</string>
@@ -196,11 +199,11 @@
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Atopouse un dispositivo e sincronizarase automaticamente dentro de <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundos"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Esta acción non se admite"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Solicitude de sincronización por Bluetooth"</string>
-    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para sincronizar con: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, asegúrate de que mostre este contrasinal: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
+    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para sincronizar con: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, asegúrate de que mostre esta clave de acceso: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"De: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Sincronizar con este dispositivo?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Para realizar a sincronización con: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Escribe: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, e, a continuación, preme Intro."</string>
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Para realizar a sincronización con: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Escribe o PIN obrigatorio do dispositivo:"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para sincronizar con: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Escribe o contrasinal obrigatorio do dispositivo:"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para sincronizar con: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Escribe a clave de acceso obrigatorio do dispositivo:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Normalmente 0000 ou 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Sincronizar"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancelar"</string>
@@ -250,7 +253,7 @@
     <string name="no_device_admins" msgid="4628974717150185625">"Non hai ningunha aplicación de administración de dispositivos dispoñible"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Desactivado polo administrador"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Non dispoñible"</string>
-    <string name="manage_device_admin" msgid="5714217234035017983">"Apps de administración"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Aplicacións de administración de dispositivos"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Non hai aplicacións activas"</string>
     <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplicacións activas</item>
@@ -1003,7 +1006,7 @@
     <string name="remove_device_admin" msgid="2623866073546295104">"Desactivar esta aplicación de administración de dispositivos"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Desinstalar aplicación"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Desactivar e desinstalar"</string>
-    <string name="select_device_admin_msg" msgid="8475934459999710332">"Apps de administración"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Aplicacións de administración de dispositivos"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"Activar aplicación de administración?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Activar esta aplicación de administración de dispositivos"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"A activación desta aplicación de administración permitirá á aplicación <xliff:g id="APP_NAME">%1$s</xliff:g> levar a cabo as seguintes operacións:"</string>
