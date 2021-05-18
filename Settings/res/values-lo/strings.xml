@@ -98,6 +98,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"ແອັບທີ່ຫາກໍເປີດຫຼ້າສຸດ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"ເບິ່ງແອັບທັງໝົດ"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"ການອະນຸຍາດ"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"ຄວາມປອດໄພ"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"ແອັບທັງໝົດ"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"ສະ​ແດງ​ແອັບ​ລະ​ບົບ"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"ແອັບທີ່ຕິດຕັ້ງແລ້ວ"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos ພ້ອມກັບ Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos ພ້ອມກັບ Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"ໝາຍເຫດ: ຕົວເລືອກອັດຕະໂນມັດອາດບໍ່ສາມາດໃຊ້ໄດ້ຫາກອຸປະກອນຂອງທ່ານບໍ່ລາຍງານຮູບແບບທີ່ຮອງຮັບຢ່າງຖືກຕ້ອງ."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"ອັດຕະໂນມັດ: ເປີດການນຳໃຊ້ສະເພາະຮູບແບບທີ່ອຸປະກອນເອົ້າພຸດສຽງຂອງທ່ານຮອງຮັບເທົ່ານັ້ນ "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"ເມື່ອເລືອກແລ້ວ, ລະບົບຈະອະນຸຍາດໃຫ້ແອັບເລືອກຮູບແບບສຽງໃດກໍໄດ້ທີ່ຮອງຮັບໂດຍຕ່ອງໂສ້ອຸປະກອນຂອງທ່ານ. ແອັບອາດເລືອກຮູບແບບໃດໜຶ່ງທີ່ບໍ່ແມ່ນຮູບແບບຄຸນນະພາບສູງທີ່ສຸດ."</string>
@@ -626,7 +629,7 @@
     <string name="delete_location_history_desc" msgid="4035229731487113147">"​ນີ້​ຈະ​ເປັນ​ການ​ລຶບ​ປະ​ຫວັດ​ສະ​ຖານ​ທີ່​ທີ່​ຖືກ​ບັນ​ທຶກ​ໄວ້​ໃນ​ອຸ​ປະ​ກອນ​ນີ້​ຂອງ​ບັນ​ຊີ​ Google ນີ້​ອອກ. ທ່ານ​ຈະ​ບໍ່​ສາ​ມາດ​ຍົກ​ເລີກ​ການ​ລຶບ​ນີ້​ໄດ້. ບາງ​ແອັບຯ, ຮວມ​ເຖິງ Google Now ຈະ​ບໍ່​ສາ​ມາດ​ເຮັດ​ວຽກ​ໄດ້."</string>
     <string name="system_services" msgid="5754310941186053151">"ບໍລິການ"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"​ການ​ຕັ້ງ​ຄ່າ​ບໍ​ລິ​ການ"</string>
-    <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ຂໍ້ຄວາມທີ່ມີຄວາມຄົມຊັດສູງ"</string>
+    <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ຕົວອັກສອນຄອນທຣາສສູງ"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"ປຸ່ມລັດ​ສຳລັບ​ການ​ເຂົ້າ​ເຖິງ"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"ເປີດໃຊ້ປຸ່ມລັດການຊ່ວຍເຂົ້າເຖິງ"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"ບໍລິການປຸ່ມທາງລັດ"</string>
@@ -715,7 +718,7 @@
     <string name="system_window_animation_scale" msgid="685477540250939659">"ຂະໜາດໜ້າ​ຈໍ​ຂອງອະນິເມຊັນ"</string>
     <string name="system_transition_animation_scale" msgid="7266380208347453619">"ອັດ​ຕາ​ການ​ສະຫຼັບ​ພາບ​ຂອ​ງ​ອາ​ນິ​ເມ​ຊັນ"</string>
     <string name="system_animator_duration_scale" msgid="3829445237130423625">"ໄລຍະ​ເວລາ​ອະນິເມຊັນ"</string>
-    <string name="system_strict_mode_enabled" msgid="7392183793064579588">"ເປີດໃຊ້ໂໝດເຂັ່ງຂັດ"</string>
+    <string name="system_strict_mode_enabled" msgid="7392183793064579588">"ເປີດໃຊ້ໂໝດເຄັ່ງຄັດ"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"ສະແດງຜົນ GPU ຕາມ​ໂປຣ​ໄຟລ໌"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"ເປີດການ​ໃຊ້​ຮ່ອງຮອຍ"</string>
     <string name="system_dont_keep_activities" msgid="4641165963339846161">"ບໍ່ຕ້ອງ​ຮັກສາ​ການ​ເຮັດວຽກ"</string>
@@ -732,7 +735,7 @@
     <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"ກະພິບ​ເລເຢີ​ຂອງ​ຮາດແວ​ໃຫ້​ເປັນ​ສີຂຽວ​ເມື່ອ​ມີ​ການ​ອັບເດດ"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"ຈາກດີສຸດຫາຂີ້ລ້າຍສຸດ: ຟ້າ, ຂຽວ, ແດງອ່ອນ, ແດງ"</string>
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"ກະພິບ​ໜ້າ​ຈໍ​ທັງ​ໜ້າ​ເມື່ອ​ມີ​ການ​ອັບເດດ"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"ກະພິບ​ໜ້າ​ຈໍ​ເມື່ອ​ມີ​ແອັບຯ ເຮັດ​ວຽກ​ດົນ​ເກີນ​ໄປ​ໃນ​ເທຣດ​ຫຼັກ"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"ກະພິບ​ໜ້າ​ຈໍ​ເມື່ອ​ມີ​ແອັບ ເຮັດ​ວຽກ​ດົນ​ເກີນ​ໄປ​ໃນ​ເທຣດ​ຫຼັກ"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"ວັດແທກ​ໄລຍະ​ເວລາ​ສະແດງ​ຜົນ​ໃນ adb shell"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"ແຫຼ່ງ​ຂໍ້ມູນ​ທີ່​ບໍ່ຮູ້ຈັກ"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"ອະນຸຍາດ​ການຕິດຕັ້ງ​ແອັບຯ ຈາກ​ແຫລ່ງ​ຂໍ້ມູນ​ທີ່​ນອກເໜືອ​ໄປ​ຈາກ Play Store"</string>

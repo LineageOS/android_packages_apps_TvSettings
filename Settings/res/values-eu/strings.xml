@@ -98,6 +98,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Azkenaldian irekitako aplikazioak"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Ikusi aplikazio guztiak"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Baimenak"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"Segurtasuna"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Aplikazio guztiak"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Erakutsi sistemaren aplikazioak"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Instalatutako aplikazioak"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos, Dolby TrueHD-rekin"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos, Dolby Digital Plus-ekin"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Oharra: baliteke Automatikoa aukerak ez funtzionatzea gailuak ez badu behar bezala jakinarazten zein formatu onartzen dituen."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatikoa: gaitu audioaren irteera-gailuak onartzen dituen formatuak soilik. "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Hautatuz gero, gailu-kateak onartutako edozein soinu-formatu hautatzeko aukera emango die sistemak aplikazioei. Baliteke aplikazioek kalitate handienekoa ez den formatu bat aukeratzea."</string>
@@ -714,7 +717,7 @@
     <string name="system_show_surface_updates" msgid="7680759813613585278">"Erakutsi azaleko eguneratzeak"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"Leihoen animazio-eskala"</string>
     <string name="system_transition_animation_scale" msgid="7266380208347453619">"Trantsizioen animazio-eskala"</string>
-    <string name="system_animator_duration_scale" msgid="3829445237130423625">"Animatzailearen iraupena"</string>
+    <string name="system_animator_duration_scale" msgid="3829445237130423625">"Animatzailearen iraupen-eskala"</string>
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"Modu zorrotza gaituta"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"Egin GPU errendatze-profila"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"Gaitu aztarnak"</string>
@@ -728,10 +731,10 @@
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Aktibatu arazketa modua USBa konektatzean"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Araztutako aplikazioa araztailea erantsi arte itxaroten ari da exekutatu aurretik"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Erakutsi bideo zatiaren mugak, marjinak, etab."</string>
-    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Nabarmendu leiho barruko ikuspegiak GPUz marraztean"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Eguneratu bitartean, nabarmendu hardware-geruzak berdez"</string>
+    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Distirarazi leiho barruko ikuspegiak GPUz marraztean"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Distirarazi hardware-geruzak berdez haiek eguneratzean"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Onenetik txarrenera: urdina, berdea, gorri argia, gorria"</string>
-    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Nabarmendu leiho osoen azalak eguneratzen direnean"</string>
+    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Distirarazi leiho osoen azalak haiek eguneratzean"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Nabarmendu pantaila hari nagusian eragiketa luzeak egitean"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Neurtu errendatze-denbora ADB shell dumpsys gfxinfo aginduan"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Iturburu ezezagunak"</string>
@@ -771,10 +774,10 @@
     <string name="tts_rate_fast" msgid="5723868816257531421">"Bizkorra"</string>
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"Oso bizkorra"</string>
     <string name="title_settings" msgid="780933693363320088">"<xliff:g id="NAME">%1$s</xliff:g> teklatuaren ezarpenak"</string>
-    <string name="title_current_keyboard" msgid="891238509164879851">"Uneko teklatua"</string>
+    <string name="title_current_keyboard" msgid="891238509164879851">"Oraingo teklatua"</string>
     <string name="title_configure" msgid="846802387014612210">"Konfiguratu"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Teklatuaren aukerak"</string>
-    <string name="title_current_autofill_service" msgid="9029001041887283153">"Betetze automatikoaren uneko zerbitzua"</string>
+    <string name="title_current_autofill_service" msgid="9029001041887283153">"Betetze automatikoaren oraingo zerbitzua"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"Hautatu betetze automatikoaren zerbitzua"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Bat ere ez"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Ziurtatu aplikazioa fidagarria dela&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Pasahitzen zerbitzuak&gt;%1$s&lt;/xliff:g&gt; pantailan dagoena erabiltzen du automatikoki bete daitekeena zehazteko."</string>

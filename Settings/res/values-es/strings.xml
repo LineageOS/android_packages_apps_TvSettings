@@ -98,6 +98,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Aplicaciones abiertas recientemente"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Ver todas las aplicaciones"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Permisos"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"Seguridad"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Todas las aplicaciones"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Mostrar aplicaciones del sistema"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Aplicaciones instaladas"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos con Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos con Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: La opción Automático quizá no funcione si tu dispositivo no indica bien qué formatos admite."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automático: habilitar únicamente los formatos compatibles con el dispositivo de salida de audio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Si se selecciona, el sistema permitirá que las aplicaciones elijan cualquier formato de sonido compatible con tu cadena de dispositivos. Es posible que las aplicaciones no elijan el formato de la máxima calidad."</string>
@@ -180,11 +183,11 @@
     <string name="accessories_add" msgid="413764175035531452">"Añadir accesorio"</string>
     <string name="accessory_state_pairing" msgid="15908899628218319">"Vinculando…"</string>
     <string name="accessory_state_connecting" msgid="6560241025917621212">"Estableciendo conexión..."</string>
-    <string name="accessory_state_error" msgid="8353621828816824428">"Error al vincular"</string>
+    <string name="accessory_state_error" msgid="8353621828816824428">"Error al emparejar"</string>
     <string name="accessory_state_canceled" msgid="4794837663402063770">"Cancelada"</string>
     <string name="accessory_state_paired" msgid="3296695242499532000">"Sincronizado"</string>
     <string name="accessory_options" msgid="774592782382321681">"Accesorio"</string>
-    <string name="accessory_unpair" msgid="2473411128146068804">"Desvincular"</string>
+    <string name="accessory_unpair" msgid="2473411128146068804">"Desemparejar"</string>
     <string name="accessory_battery" msgid="2283700366184703548">"Batería: <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
     <string name="accessory_unpairing" msgid="2529195578082286563">"Desincronizando dispositivo…"</string>
     <string name="accessory_connected" msgid="5229574480869175180">"Conectado"</string>
@@ -193,16 +196,16 @@
     <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Vinculación por Bluetooth."</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Buscando accesorios..."</string>
     <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Antes de vincular tus dispositivos Bluetooth, comprueba que estén en modo de vinculación."</string>
-    <string name="accessories_autopair_msg" msgid="2501824457418285019">"Se ha encontrado un dispositivo y se vinculará automáticamente en <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundos"</string>
+    <string name="accessories_autopair_msg" msgid="2501824457418285019">"Se ha encontrado un dispositivo y se emparejará automáticamente en <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundos"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"No se admite esta acción"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Solicitud de vinculación de Bluetooth"</string>
-    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para vincular el dispositivo con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, comprueba que aparece esta clave de acceso: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
-    <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"De: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;¿Vincular con este dispositivo?"</string>
-    <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Para realizar la vinculación con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;, escribe &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, y, a continuación, pulsa la tecla volver o Intro."</string>
-    <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Para realizar la vinculación con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escribe el PIN obligatorio del dispositivo:"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para realizar la vinculación con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escribe la clave de acceso obligatoria del dispositivo:"</string>
+    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para emparejar con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, comprueba que aparece esta clave de acceso: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
+    <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"De: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;¿Emparejar con este dispositivo?"</string>
+    <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Para emparejar con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;, escribe &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, y, a continuación, pulsa la tecla volver o Intro."</string>
+    <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Para emparejar con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escribe el PIN obligatorio del dispositivo:"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para emparejar con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escribe la clave de acceso obligatoria del dispositivo:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Normalmente, 0000 o 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Vincular"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Emparejar"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancelar"</string>
     <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s conectado"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s desconectado"</string>
@@ -210,7 +213,7 @@
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Desactivar Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Con el Bluetooth desactivado, no podrás acceder al Asistente de Google con el mando."</string>
-    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Vincular accesorio"</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Emparejar accesorio"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Accesorios"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Mando"</string>
     <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"Configuración del mando"</string>
@@ -358,7 +361,7 @@
     <string name="selinux_status_enforcing" msgid="4140979635669643342">"Obligatorio"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Otras actualizac. sistem."</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Puede que la red esté supervisada"</string>
-    <string name="done_button" msgid="616159688526431451">"Listo"</string>
+    <string name="done_button" msgid="616159688526431451">"Hecho"</string>
     <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
       <item quantity="other">Confía en los certificados o quítalos</item>
       <item quantity="one">Confía en un certificado o quítalo</item>
@@ -546,7 +549,7 @@
     <string name="storage_wizard_format_as_public_title" msgid="3546915348149438389">"Borrar y formatear"</string>
     <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"Una vez que hayas formateado esta unidad USB, podrás utilizarla en otros dispositivos. Se borrarán todos los datos, por lo que te recomendamos que guardes una copia de seguridad de las aplicaciones en otro almacenamiento del dispositivo."</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"Formateando unidad USB…"</string>
-    <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"Este proceso puede tardar unos minutos. No extraigas la unidad."</string>
+    <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"Esto puede tardar unos minutos. No extraigas la unidad."</string>
     <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"Elige almacenamiento para migrar datos"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="5086390005970210697">"Mover datos a <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"Mueve tus fotos, tus archivos y los datos de tus aplicaciones a <xliff:g id="NAME">%1$s</xliff:g>. Esta operación puede tardar unos minutos. Algunas aplicaciones no funcionarán correctamente hasta que finalice el proceso."</string>
@@ -674,7 +677,7 @@
     <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> puede recoger todo el texto que escribes (excepto las contraseñas), incluidos datos personales, como números de tarjetas de crédito."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"¿Detener <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Si seleccionas Aceptar, se detendrá <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
-    <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Síntesis de voz"</string>
+    <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Conversión de texto a voz"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"Configuración del motor"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"Decir contraseñas"</string>
     <string name="system_preferred_engine" msgid="3545505072652708443">"Motor preferido"</string>
@@ -702,7 +705,7 @@
     <string name="system_select_debug_app" msgid="6200987902307533721">"Aplicación para depurar"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Esperar al depurador"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Verificar aplicaciones por USB"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Comprobar las aplicaciones instaladas mediante ADB/ADT para detectar comportamientos dañinos"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Comprueba las aplicaciones instaladas por ADB/ADT para detectar comportamientos dañinos"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Registro Wi-Fi detallado"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Habilitar registro Wi-Fi detallado"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Mostrar pulsaciones"</string>
@@ -727,7 +730,7 @@
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Habilitar registro de Bluetooth HCI"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Activar modo de depuración al conectar USB"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"La aplicación que se va a depurar espera a que el depurador esté listo antes de ejecutarse."</string>
-    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Mostrar límites de vídeo, márgenes, etc."</string>
+    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Muestra límites de vídeo, márgenes, etc."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Actualizar vistas de las ventanas creadas con GPU"</string>
     <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Iluminar capas de hardware en verde al actualizarse"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"De mejor a peor: azul, verde, rojo claro, rojo"</string>
@@ -855,7 +858,7 @@
     <string name="pin_toast_not_match" msgid="2439298696342975155">"Vuelve a intentarlo, el PIN no coincide"</string>
     <string name="wifi_setup_input_password" msgid="8510003548463241234">"Introduce la contraseña de <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_description" msgid="6843574399437584520">"Para continuar, selecciona <xliff:g id="WIFI_SUBMIT_ICON">%1$s</xliff:g>."</string>
-    <string name="label_done_key" msgid="8576286462300373440">"Listo"</string>
+    <string name="label_done_key" msgid="8576286462300373440">"Hecho"</string>
     <string name="wifi_setup_connection_success" msgid="3301901673876973474">"Conectado correctamente"</string>
     <string name="wifi_setup_save_success" msgid="6862510218032734919">"Guardada correctamente"</string>
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Versión <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>

@@ -24,11 +24,11 @@
     <string name="general_action_no" msgid="674735073031386948">"Ei"</string>
     <string name="action_on_title" msgid="1074972820237738324">"Ota käyttöön"</string>
     <string name="action_off_title" msgid="3598665702863436597">"Poista käytöstä"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"Käytössä"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"Päällä"</string>
     <string name="action_off_description" msgid="1368039592272701910">"Pois päältä"</string>
     <string name="agree" msgid="8155497436593889753">"Hyväksyn"</string>
     <string name="disagree" msgid="7402998517682194430">"En hyväksy"</string>
-    <string name="enabled" msgid="5127188665060746381">"Käytössä"</string>
+    <string name="enabled" msgid="5127188665060746381">"Päällä"</string>
     <string name="disabled" msgid="4589065923272201387">"Ei käytössä"</string>
     <string name="unavailable" msgid="1610732303812180196">"Ei saatavilla"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"Ehdotukset"</string>
@@ -97,7 +97,8 @@
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Verkon diagnostiikka"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Viimeksi avatut sovellukset"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Näytä kaikki sovellukset"</string>
-    <string name="apps_permissions_category_title" msgid="8099660060701465267">"Käyttöluvat"</string>
+    <string name="apps_permissions_category_title" msgid="8099660060701465267">"Luvat"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"Turvallisuus"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Kaikki sovellukset"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Näytä järjestelmäsovellukset"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Asennetut sovellukset"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos ja Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos ja Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Huom. Automaattinen asetus ei välttämättä toimi, jos laite ei ilmoita tuettuja muotoja oikein."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automaattinen: Salli vain muodot, joita äänentoistolaitteesi tukee "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Kun tämä on valittu, järjestelmä antaa sovellusten valita minkä tahansa laiteketjusi tukeman äänimuodon. Sovellukset saattavat valita muodon, joka ei ole kaikista korkealaatuisin."</string>
@@ -634,7 +637,7 @@
     <string name="accessibility_captions" msgid="3411554568812306549">"Tekstitykset"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Videon päällä näytettävän tekstityksen asetukset"</string>
     <string name="captions_display" msgid="2598662495450633375">"Näyttö"</string>
-    <string name="captions_display_on" msgid="480438033345455728">"Käytössä"</string>
+    <string name="captions_display_on" msgid="480438033345455728">"Päällä"</string>
     <string name="captions_display_off" msgid="87881163874948539">"Ei päällä"</string>
     <string name="display_options" msgid="2645282080948371603">"Näyttövalinnat"</string>
     <string name="captions_configure" msgid="711991018642931958">"Asetukset"</string>
@@ -702,7 +705,7 @@
     <string name="system_select_debug_app" msgid="6200987902307533721">"Valitse vianetsintäsovellus"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Odota vianetsintää"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Tarkista USB:n kautta asennetut"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Tarkista ADB:n/ADT:n kautta asennetut sovellukset haitallisen toiminnan varalta."</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Tarkista ADB:n/ADT:n kautta asennetut sovellukset haitallisen toiminnan varalta"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Wi-Fin laajennettu lokikirjaus"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Käytä Wi-Fin laajennettua lokikirjausta"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Näytä kosketukset"</string>
@@ -879,12 +882,12 @@
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Tyhjennä välimuisti"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Ilmoitukset"</string>
     <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Avoimen lähdekoodin käyttöluvat"</string>
-    <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Käyttöluvat"</string>
+    <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Luvat"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Sovellus ei käytettävissä"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
     <string name="settings_confirm" msgid="4489126458677153411">"Vahvista"</string>
     <string name="settings_cancel" msgid="576094334743686152">"Peru"</string>
-    <string name="settings_on" msgid="7734010120323404333">"Käytössä"</string>
+    <string name="settings_on" msgid="7734010120323404333">"Päällä"</string>
     <string name="settings_off" msgid="4060451657850476369">"Ei päällä"</string>
     <string name="device_daydreams_none" msgid="3405655350757277348">"Sammuta näyttö"</string>
     <string name="device_daydreams_select" msgid="7203264446482623438">"Näytönsäästäjä"</string>
@@ -906,9 +909,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"Varmuuskopioitava tili"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Automaattinen palauttaminen"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Palauta laitteen tehdasasetukset"</string>
-    <string name="factory_reset_description" msgid="6697396335158766785">"Tämä palauttaa laitteesi oletusasetukset sekä pyyhkii kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
-    <string name="factory_reset_info_description" msgid="5098454670833183487">"Tämä palauttaa laitteesi oletusasetukset sekä pyyhkii kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
-    <string name="factory_reset_content_description" msgid="1677022688420116803">"Tehdasasetusten palautus. Tämä palauttaa laitteesi oletusasetukset sekä pyyhkii kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"Tämä palauttaa laitteesi oletusasetukset sekä tyhjentää kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
+    <string name="factory_reset_info_description" msgid="5098454670833183487">"Tämä palauttaa laitteesi oletusasetukset sekä tyhjentää kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"Tehdasasetusten palautus. Tämä palauttaa laitteesi oletusasetukset sekä tyhjentää kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Poistetaanko kaikki henkilökohtaiset tietosi ja lataamasi sovellukset tältä laitteelta? Tätä toimintoa ei voi peruuttaa."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Poista kaikki"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Nimeä <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
@@ -927,7 +930,7 @@
     <string name="change_setting" msgid="7211706374208138343">"Vaihda"</string>
     <string name="keep_settings" msgid="703474489210093961">"Älä vaihda"</string>
     <string name="apps_permissions" msgid="7876407267050498394">"Luvat"</string>
-    <string name="device_apps_permissions" msgid="8421323706003063878">"Sovelluksen käyttöoikeudet"</string>
+    <string name="device_apps_permissions" msgid="8421323706003063878">"Sovellusluvat"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"Lupa on <xliff:g id="COUNT_0">%1$d</xliff:g>/<xliff:g id="COUNT_1">%2$d</xliff:g> sovelluksella."</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth-käyttöoikeuspyyntö"</string>
     <string name="security_patch" msgid="8924741264829495392">"Android TV ‑käyttöjärjestelmän tietoturvakorjaustaso"</string>

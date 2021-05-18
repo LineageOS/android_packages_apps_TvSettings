@@ -98,6 +98,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"แอปที่เปิดล่าสุด"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"ดูแอปทั้งหมด"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"สิทธิ์"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"ความปลอดภัย"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"แอปทั้งหมด"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"แสดงแอประบบ"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"แอปที่ติดตั้ง"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos พร้อม Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos พร้อม Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"หมายเหตุ: ตัวเลือกอัตโนมัติอาจใช้ไม่ได้หากอุปกรณ์ที่คุณใช้รายงานรูปแบบที่รองรับไม่ถูกต้อง"</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"อัตโนมัติ: เปิดใช้เฉพาะรูปแบบที่อุปกรณ์เอาต์พุตเสียงรองรับ "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"เมื่อเลือกไว้ ระบบจะอนุญาตให้แอปเลือกรูปแบบเสียงใดก็ได้ที่เชนอุปกรณ์รองรับ แอปอาจเลือกรูปแบบที่ไม่ได้มีคุณภาพสูงสุด"</string>
@@ -497,7 +500,7 @@
     <string name="proxy_port_description" msgid="6486205863098427787">"ป้อนพอร์ตที่ถูกต้อง\nตัวอย่างเช่น <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"ป้อนรายการโดเมนที่ยกเว้นซึ่งคั่นค่าด้วยเครื่องหมายจุลภาค หรือปล่อยว่างไว้\nตัวอย่างเช่น <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"ป้อนชื่อโฮสต์ที่ถูกต้อง\nตัวอย่างเช่น <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
-    <string name="title_wifi_eap_method" msgid="4351752615786996226">"เลือกเมธอด EAP สำหรับ <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="4351752615786996226">"เลือกวิธีการ EAP สำหรับ <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_phase2_authentication" msgid="1167205033305931574">"เลือกการตรวจสอบสิทธิ์ขั้นที่ 2 สำหรับ <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_identity" msgid="6273917200971028259">"ป้อนข้อมูลประจำตัวสำหรับ <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_anonymous_identity" msgid="5965175781722004334">"ป้อนข้อมูลประจำตัวที่ไม่ระบุตัวตนสำหรับ <xliff:g id="SSID">%1$s</xliff:g>"</string>
@@ -719,7 +722,7 @@
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"การแสดงผล GPU ตามโปรไฟล์"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"เปิดใช้งานร่องรอย"</string>
     <string name="system_dont_keep_activities" msgid="4641165963339846161">"ไม่เก็บกิจกรรม"</string>
-    <string name="system_background_process_limit" msgid="1985373407150771045">"ขีดจำกัดกระบวนการพื้นหลัง"</string>
+    <string name="system_background_process_limit" msgid="1985373407150771045">"ขีดจำกัดกระบวนการเบื้องหลัง"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"แสดง ANR ทั้งหมด"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"ปิดใช้โหมดสลีป"</string>
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"ใช้สำหรับเนื้อหา DRM เท่านั้น"</string>

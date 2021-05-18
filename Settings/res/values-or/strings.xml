@@ -98,6 +98,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"ନିକଟରେ ଖୋଲାଯାଇଥିବା ଆପ୍‌ଗୁଡ଼ିକ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"ସମସ୍ତ ଆପ୍‌କୁ ଦେଖନ୍ତୁ"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"ଅନୁମତିଗୁଡ଼ିକ"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"ସୁରକ୍ଷା"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"ସମସ୍ତ ଆପସ୍‌"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"ସିଷ୍ଟମ୍‍ ଆପ୍‍ ଦେଖାନ୍ତୁ"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"ଇନ୍‌ଷ୍ଟଲ୍‌ ହୋଇଥିବା ଆପ୍‌ଗୁଡ଼ିକ"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"ଡଲ୍‌ବି ଡିଜିଟାଲ୍‍ ପ୍ଲସ୍‌"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD ସହିତ Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus ସହିତ Dolby Atmos"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"ଧ୍ୟାନ ଦିଅ: ଆପଣଙ୍କ ଡିଭାଇସ୍ ଏହାର ସମର୍ଥିତ ଫର୍ମାଟକୁ ସଠିକଭାବେ ରିପୋର୍ଟ ନକଲେ ସ୍ୱଚାଳିତ ବିକଳ୍ପ କାମ କରିନପାରେ।"</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"ସ୍ୱଚାଳିତ: ଆପଣଙ୍କ ଅଡିଓ ଆଉଟପୁଟ୍ ଡିଭାଇସ୍ ଦ୍ୱାରା ସମର୍ଥିତ ଫର୍ମାଟଗୁଡ଼ିକୁ କେବଳ ସକ୍ଷମ କରନ୍ତୁ "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"ଏହାକୁ ଚୟନ କଲେ, ଏହି ସିଷ୍ଟମ୍ ଆପଣଙ୍କ ଡିଭାଇସ୍ ଚେନ୍ ଦ୍ୱାରା ସମର୍ଥିତ ଯେ କୌଣସି ସାଉଣ୍ଡ ଫର୍ମାଟକୁ ଚୟନ କରିବା ପାଇଁ ଆପଗୁଡ଼ିକୁ ଅନୁମତି ଦେବ। ଆପଗୁଡ଼ିକ ସର୍ବୋଚ୍ଚ-ଗୁଣବତ୍ତା ନଥିବା ଏକ ଫର୍ମାଟ୍ ବାଛିପାରେ।"</string>
@@ -687,7 +690,7 @@
     <string name="system_drawing" msgid="5802739024643871942">"ଅଙ୍କନ"</string>
     <string name="system_monitoring" msgid="7997260748312620855">"ତଦାରଖ କରିବା"</string>
     <string name="system_apps" msgid="8481888654606868074">"ଆପ୍‌"</string>
-    <string name="system_stay_awake" msgid="5935117574414511413">"ଜାଗ୍ରତ ରଖନ୍ତୁ"</string>
+    <string name="system_stay_awake" msgid="5935117574414511413">"ସତର୍କ ରୁହନ୍ତୁ"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP ଯାଞ୍ଚ କରୁଛି"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI ଅନୁକୂଳତା"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"ଏବେ ରିଷ୍ଟାର୍ଟ କରିବେ?"</string>
@@ -737,7 +740,7 @@
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"ଅଜଣା ଉତ୍ସ"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Store ବ୍ୟତୀତ ଅନ୍ୟ ଉତ୍ସରୁ ଆସିଥିବା ଆପ୍‌ର ଇନଷ୍ଟଲେସନ୍‌ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"ଅଜଣା ଉତ୍ସ ଅନୁମତି କରନ୍ତୁ"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"ଅଜଣା ଆପ୍‌ ଦ୍ୱାରା ଆପଣଙ୍କ ଡିଭାଇସ୍‌ ଏବଂ ବ୍ୟକ୍ତିଗତ ଡାଟାକୁ ନଷ୍ଟ କରାଯାଇ ପାରିବାର ସମ୍ଭାବନା ବହୁତ ଅଧିକ। ଆପଣଙ୍କ ଡିଭାଇସ୍‌ରେ ଘଟିବା କୌଣସି ପ୍ରକାର କ୍ଷତି କିମ୍ବା ସେଗୁଡ଼ିକର ବ୍ୟବହାରରୁ ହେବା କୌଣସି ପ୍ରକାର ଡାଟାର ହାନୀ ପାଇଁ ଆପଣ ଦାୟୀ ରହିବାକୁ ରାଜି ହୁଅନ୍ତି।"</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"ଅଜଣା ଆପ୍‌ ଦ୍ୱାରା ଆପଣଙ୍କ ଡିଭାଇସ୍‌ ଏବଂ ବ୍ୟକ୍ତିଗତ ଡାଟାକୁ ନଷ୍ଟ କରାଯାଇ ପାରିବାର ସମ୍ଭାବନା ବହୁତ ଅଧିକ। ଆପଣଙ୍କ ଡିଭାଇସରେ ହେଉଥିବା କୌଣସି ପ୍ରକାର କ୍ଷତି କିମ୍ବା ସେଗୁଡ଼ିକର ବ୍ୟବହାରରୁ ହେଉଥିବା କୌଣସି ପ୍ରକାର ଡାଟାର କ୍ଷତି ପାଇଁ ଆପଣ ଦାୟୀ ରହିବାକୁ ରାଜି ହୁଅନ୍ତି।"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"ଆଦୌ ନୁହେଁ"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM ବିଷୟବସ୍ତୁ ପାଇଁ"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"ସଦାବେଳେ"</string>

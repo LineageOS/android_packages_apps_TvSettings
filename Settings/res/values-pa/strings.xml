@@ -98,6 +98,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"ਹਾਲ ਹੀ ਵਿੱਚ ਖੋਲ੍ਹੀਆਂ ਐਪਾਂ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"ਸਭ ਐਪਾਂ ਦੇਖੋ"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"ਇਜਾਜ਼ਤਾਂ"</string>
+    <string name="play_protect_security" msgid="1476818421152898821">"ਸੁਰੱਖਿਆ"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"ਸਭ ਐਪਾਂ"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"ਸਿਸਟਮ ਐਪਾਂ ਦਿਖਾਓ"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"ਸਥਾਪਤ ਕੀਤੀਆਂ ਐਪਾਂ"</string>
@@ -122,9 +123,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD ਦੇ ਨਾਲ Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus ਦੇ ਨਾਲ Dolby Atmos"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"ਨੋਟ ਕਰੋ: ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਵੱਲੋਂ ਇਸ \'ਤੇ ਸਮਰਥਿਤ ਫਾਰਮੈਟਾਂ ਦੀ ਸਹੀ ਢੰਗ ਨਾਲ ਰਿਪੋਰਟ ਨਾ ਕਰਨ \'ਤੇ ਸ਼ਾਇਦ ਸਵੈਚਲਿਤ ਵਿਕਲਪ ਕੰਮ ਨਾ ਕਰੇ।"</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"ਸਵੈਚਲਿਤ: ਸਿਰਫ਼ ਉਹਨਾਂ ਫਾਰਮੈਟਾਂ ਨੂੰ ਚਾਲੂ ਕਰੋ ਜੋ ਤੁਹਾਡੇ ਆਊਟਪੁੱਟ ਡੀਵਾਈਸ ਵੱਲੋਂ ਸਮਰਥਿਤ ਹਨ "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"ਚੁਣੇ ਜਾਣ \'ਤੇ, ਸਿਸਟਮ ਐਪਾਂ ਨੂੰ ਕਿਸੇ ਧੁਨੀ ਫਾਰਮੈਟ ਦੀ ਚੋਣ ਕਰਨ ਦੇਵੇਗਾ ਜੋ ਤੁਹਾਡੀ ਡੀਵਾਈਸ ਲੜੀ ਵੱਲੋਂ ਸਮਰਥਿਤ ਹੈ। ਐਪਾਂ ਅਜਿਹੇ ਫਾਰਮੈਟ ਦੀ ਚੋਣ ਕਰ ਸਕਦੀਆਂ ਹਨ ਜੋ ਬਿਹਤਰੀਨ ਕੁਆਲਿਟੀ ਵਾਲਾ ਫਾਰਮੈਟ ਨਹੀਂ ਹੈ।"</string>
@@ -626,7 +629,7 @@
     <string name="delete_location_history_desc" msgid="4035229731487113147">"ਇਸ ਨਾਲ ਇਸ ਡੀਵਾਈਸ ਤੋਂ ਇਸ Google ਖਾਤੇ ਦਾ ਸਟੋਰ ਕੀਤਾ ਟਿਕਾਣਾ ਇਤਿਹਾਸ ਮਿਟ ਜਾਵੇਗਾ। Google Now ਸਮੇਤ ਕੁਝ ਐਪਾਂ ਕੰਮ ਕਰਨਾ ਬੰਦ ਕਰ ਦੇਣਗੀਆਂ।"</string>
     <string name="system_services" msgid="5754310941186053151">"ਸੇਵਾਵਾਂ"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"ਸੇਵਾ ਸੈਟਿੰਗਾਂ"</string>
-    <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ਉੱਚ ਵਖਰੇਵਾਂ ਲਿਖਤ"</string>
+    <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ਉੱਚ ਕੰਟ੍ਰਾਸਟ ਲਿਖਤ"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"ਪਹੁੰਚਯੋਗਤਾ ਸ਼ਾਰਟਕੱਟ"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"ਪਹੁੰਚਯੋਗਤਾ ਸ਼ਾਰਟਕੱਟ ਨੂੰ ਯੋਗ ਬਣਾਓ"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"ਸ਼ਾਰਟਕੱਟ ਸੇਵਾ"</string>
