@@ -16,9 +16,6 @@
 
 package com.android.tv.settings.library.network;
 
-//import static com.android.tv.settings.manager.util.InstrumentationUtils.logEntrySelected;
-
-//import android.app.tvsettings.TvSettingsEnums;
 
 import android.content.Context;
 import android.net.IpConfiguration;
@@ -58,7 +55,6 @@ public class WifiDetailsState implements State,
     private static final String VALUE_MAC_RANDOM = "random";
     private static final String VALUE_MAC_DEVICE = "device";
 
-
     private PreferenceCompat mConnectionStatusPref;
     private PreferenceCompat mIpAddressPref;
     private PreferenceCompat mMacAddressPref;
@@ -66,6 +62,7 @@ public class WifiDetailsState implements State,
     private PreferenceCompat mProxySettingsPref;
     private PreferenceCompat mIpSettingsPref;
     private PreferenceCompat mForgetNetworkPref;
+    private PreferenceCompat mRandomMacPref;
 
     public WifiDetailsState(Context context, UIUpdateCallback uiUpdateCallback) {
         mUIUpdateCallback = uiUpdateCallback;
@@ -93,6 +90,8 @@ public class WifiDetailsState implements State,
         mIpSettingsPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_IP_SETTINGS);
         mForgetNetworkPref = mPreferenceCompatManager.getOrCreatePrefCompat(
                 KEY_FORGET_NETWORK);
+        mRandomMacPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_RANDOM_MAC);
+        mRandomMacPref.setType(PreferenceCompat.TYPE_LIST);
     }
 
     @Override
@@ -126,6 +125,13 @@ public class WifiDetailsState implements State,
     @Override
     public void onPreferenceTreeClick(String key, boolean status) {
         // no-op
+    }
+
+    @Override
+    public void onPreferenceChange(String key, Object newValue) {
+        mNetworkModule.getConnectivityListener().applyMacRandomizationSetting(
+                mAccessPoint,
+                VALUE_MAC_RANDOM.equals(newValue));
     }
 
     @Override
@@ -185,8 +191,10 @@ public class WifiDetailsState implements State,
         if (active && !TextUtils.isEmpty(macAddress)) {
             mMacAddressPref.setVisible(true);
             updateMacAddressPref(macAddress);
+            updateRandomMacPref();
         } else {
             mMacAddressPref.setVisible(false);
+            mRandomMacPref.setVisible(false);
         }
 
         WifiConfiguration wifiConfiguration = mAccessPoint.getConfig();
@@ -238,6 +246,25 @@ public class WifiDetailsState implements State,
                         : ResourcesUtil.getString(mContext, "title_mac_address"));
     }
 
+    private void updateRandomMacPref() {
+        ConnectivityListener connectivityListener = mNetworkModule.getConnectivityListener();
+        mRandomMacPref.setVisible(connectivityListener.isMacAddressRandomizationSupported());
+        boolean isMacRandomized =
+                (connectivityListener.getWifiMacRandomizationSetting(mAccessPoint)
+                        == WifiConfiguration.RANDOMIZATION_PERSISTENT);
+        mRandomMacPref.setValue(isMacRandomized ? VALUE_MAC_RANDOM : VALUE_MAC_DEVICE);
+        if (mAccessPoint.isEphemeral() || mAccessPoint.isPasspoint()
+                || mAccessPoint.isPasspointConfig()) {
+            mRandomMacPref.setSelectable(PreferenceCompat.STATUS_OFF);
+            mRandomMacPref.setSummary(ResourcesUtil.getString(
+                    mContext, "mac_address_ephemeral_summary"));
+        } else {
+            mRandomMacPref.setSelectable(PreferenceCompat.STATUS_ON);
+            String[] entries = ResourcesUtil.getStringArray(
+                    mContext, "random_mac_settings_entries");
+            mRandomMacPref.setSummary(entries[isMacRandomized ? 0 : 1]);
+        }
+    }
 
     private String getSignalStrength() {
         String[] signalLevels = ResourcesUtil
