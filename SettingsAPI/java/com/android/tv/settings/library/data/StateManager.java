@@ -16,10 +16,15 @@
 
 package com.android.tv.settings.library.data;
 
+import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK_MAIN;
+import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
+
 import android.content.Context;
 import android.util.Pair;
 
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.network.NetworkMainState;
+import com.android.tv.settings.library.network.WifiDetailsState;
 
 import java.util.Map;
 
@@ -33,6 +38,12 @@ public class StateManager {
             Map<Integer, Pair<State, Integer>> stateMap) {
         State state = null;
         switch (stateIdentifier) {
+            case STATE_NETWORK_MAIN:
+                state = new NetworkMainState(context, uiUpdateCallback);
+                break;
+            case STATE_WIFI_DETAILS:
+                state = new WifiDetailsState(context, uiUpdateCallback);
+                break;
             default:
                 // no-op
         }
