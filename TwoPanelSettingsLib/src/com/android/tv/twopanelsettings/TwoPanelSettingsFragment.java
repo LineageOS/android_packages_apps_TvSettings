@@ -31,6 +31,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Icon;
+import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -112,6 +113,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private boolean mCheckVerticalGridViewScrollState;
     private Preference mFocusedPreference;
     private boolean mIsWaitingForUpdatingPreview = false;
+    private AudioManager mAudioManager;
 
     private static final String DELAY_MS = "delay_ms";
     private static final String CHECK_SCROLL_STATE = "check_scroll_state";
@@ -170,6 +172,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 .getBoolean(R.bool.config_check_scroll_state);
         mPreviewPanelCreationDelay = getContext().getResources()
                 .getInteger(R.integer.config_preview_panel_create_delay);
+        mAudioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
     }
 
     @Override
@@ -693,6 +696,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                             .findFragmentById(frameResIds[mPrefPanelIdx + 1]);
                     if (!(previewFragment instanceof InfoFragment)
                             && !mIsWaitingForUpdatingPreview) {
+                        mAudioManager.playSoundEffect(AudioManager.FX_FOCUS_NAVIGATION_RIGHT);
+
                         navigateToPreviewFragment();
                     }
                 }
@@ -779,6 +784,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         mPrefPanelIdx--;
 
         mHandler.postDelayed(() -> {
+            if (isKeyBackPressed) {
+                mAudioManager.playSoundEffect(AudioManager.FX_BACK);
+            } else {
+                mAudioManager.playSoundEffect(AudioManager.FX_FOCUS_NAVIGATION_LEFT);
+            }
             moveToPanel(mPrefPanelIdx, true);
         }, PANEL_ANIMATION_DELAY_MS);
 
