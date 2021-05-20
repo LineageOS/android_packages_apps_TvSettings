@@ -48,6 +48,7 @@ public class AppsFragment extends PreferenceControllerFragment {
     private static final String KEY_PERMISSIONS = "Permissions";
     private static final String KEY_SECURITY = "security";
     private static final String KEY_PLAY_PROTECT = "play_protect";
+    private static final String KEY_PLAY_AUTO_UPDATE = "play_auto_update";
 
     public static void prepareArgs(Bundle b, String volumeUuid, String volumeName) {
         b.putString(AppsActivity.EXTRA_VOLUME_UUID, volumeUuid);
@@ -77,6 +78,7 @@ public class AppsFragment extends PreferenceControllerFragment {
         );
         final Preference securityPreference = findPreference(KEY_SECURITY);
         final Preference playProtectPreference = findPreference(KEY_PLAY_PROTECT);
+        final Preference playAutoUpdatePreference = findPreference(KEY_PLAY_AUTO_UPDATE);
         if (FlavorUtils.getFeatureFactory(getContext()).getBasicModeFeatureProvider()
                 .isBasicMode(getContext())) {
             // playProtectPreference can be present only in two panel settings
@@ -92,6 +94,10 @@ public class AppsFragment extends PreferenceControllerFragment {
                 showPlayProtectPreference(playProtectPreference, securityPreference);
             } else {
                 showSecurityPreference(securityPreference, playProtectPreference);
+            }
+
+            if (isPlayAutoUpdatePreferenceEnabled(playAutoUpdatePreference)) {
+                playAutoUpdatePreference.setVisible(true);
             }
         }
     }
@@ -118,6 +124,13 @@ public class AppsFragment extends PreferenceControllerFragment {
         if (playProtectPreference != null) {
             playProtectPreference.setVisible(false);
         }
+    }
+
+    private boolean isPlayAutoUpdatePreferenceEnabled(
+            @Nullable Preference playAutoUpdatePreference) {
+        return playAutoUpdatePreference instanceof SlicePreference
+                && SliceUtils.isPlayTvSettingsSliceEnabled(
+                        getContext(), ((SlicePreference) playAutoUpdatePreference).getUri());
     }
 
     @Override
