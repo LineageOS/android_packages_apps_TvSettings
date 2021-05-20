@@ -125,7 +125,7 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
 
     private boolean isPlayProtectPreferenceEnabled(@Nullable Preference playProtectPreference) {
         return playProtectPreference instanceof SlicePreference
-                && SliceUtils.isSliceProviderValid(
+                && SliceUtils.isPlayTvSettingsSliceEnabled(
                         getContext(), ((SlicePreference) playProtectPreference).getUri());
     }
 
