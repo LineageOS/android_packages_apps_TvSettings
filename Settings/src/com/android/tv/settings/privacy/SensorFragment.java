@@ -188,7 +188,8 @@ public class SensorFragment extends SettingsPreferenceFragment {
 
     @Override
     public void onDestroy() {
-        mSensorPrivacyManager.removeSensorPrivacyListener(mPrivacyChangedListener);
+        mSensorPrivacyManager.removeSensorPrivacyListener(mToggle.getSensor(),
+                mPrivacyChangedListener);
         super.onDestroy();
     }
 
