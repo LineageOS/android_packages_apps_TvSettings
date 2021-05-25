@@ -94,7 +94,8 @@ public class SensorToggleInfoFragment extends InfoFragment {
 
     @Override
     public void onDestroyView() {
-        mSensorPrivacyManager.removeSensorPrivacyListener(mPrivacyChangedListener);
+        mSensorPrivacyManager.removeSensorPrivacyListener(mToggle.getSensor(),
+                mPrivacyChangedListener);
         super.onDestroyView();
     }
 }
