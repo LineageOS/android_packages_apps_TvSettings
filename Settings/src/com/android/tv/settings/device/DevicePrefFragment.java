@@ -59,6 +59,8 @@ import com.android.tv.settings.about.RebootConfirmFragment;
 import com.android.tv.settings.autofill.AutofillHelper;
 import com.android.tv.settings.inputmethod.InputMethodHelper;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.privacy.PrivacyToggle;
+import com.android.tv.settings.privacy.SensorFragment;
 import com.android.tv.settings.system.SecurityFragment;
 import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
@@ -87,6 +89,8 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     private static final String KEY_GOOGLE_SETTINGS = "google_settings";
     private static final String KEY_HOME_SETTINGS = "home";
     private static final String KEY_REBOOT = "reboot";
+    private static final String KEY_MIC = "microphone";
+    private static final String KEY_CAMERA = "camera";
 
     private Preference mSoundsPref;
     private TwoStatePreference mSoundsSwitchPref;
@@ -129,6 +133,11 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
         if (restartPref != null) {
             restartPref.setLongClickListener(this);
         }
+
+        PrivacyToggle.MIC_TOGGLE.preparePreferenceWithSensorFragment(getContext(),
+                findPreference(KEY_MIC), SensorFragment.TOGGLE_EXTRA);
+        PrivacyToggle.CAMERA_TOGGLE.preparePreferenceWithSensorFragment(getContext(),
+                findPreference(KEY_CAMERA), SensorFragment.TOGGLE_EXTRA);
     }
 
     @Override

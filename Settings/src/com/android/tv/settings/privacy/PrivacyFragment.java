@@ -42,7 +42,6 @@ import com.android.tv.twopanelsettings.slices.SlicePreference;
  */
 @Keep
 public class PrivacyFragment extends SettingsPreferenceFragment {
-
     private static final String KEY_ACCOUNT_SETTINGS_CATEGORY = "accountSettings";
     private static final String KEY_USAGE = "usageAndDiag";
     private static final String KEY_ADS = "ads";
@@ -50,6 +49,8 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
     private static final String KEY_PURCHASES = "purchases";
     private static final String KEY_SECURITY = "security";
     private static final String KEY_PLAY_PROTECT = "play_protect";
+    private static final String KEY_MIC = "microphone";
+    private static final String KEY_CAMERA = "camera";
 
     private int getPreferenceScreenResId() {
         switch (FlavorUtils.getFlavor(getContext())) {
@@ -71,6 +72,11 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
         Preference adsPreference = findPreference(KEY_ADS);
         final Preference securityPreference = findPreference(KEY_SECURITY);
         final Preference playProtectPreference = findPreference(KEY_PLAY_PROTECT);
+
+        PrivacyToggle.MIC_TOGGLE.preparePreferenceWithSensorFragment(getContext(),
+                findPreference(KEY_MIC), SensorFragment.TOGGLE_EXTRA);
+        PrivacyToggle.CAMERA_TOGGLE.preparePreferenceWithSensorFragment(getContext(),
+                findPreference(KEY_CAMERA), SensorFragment.TOGGLE_EXTRA);
 
         if (FlavorUtils.getFeatureFactory(getContext()).getBasicModeFeatureProvider()
                 .isBasicMode(getContext())) {

@@ -21,6 +21,7 @@ android_app {
     name: "TvSettings",
     manifest: "Settings/AndroidManifest.xml",
     srcs: [
+        "Settings/src/**/*.kt",
         "Settings/src/**/*.java",
         "Settings/src/**/I*.aidl",
     ],
@@ -36,6 +37,7 @@ android_app {
     optimize: {
         proguard_flags_files: ["Settings/proguard.cfg"],
     },
+    kotlincflags: ["-Xjvm-default=enable"],
     privileged: true,
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -60,6 +62,7 @@ android_app {
     name: "TvSettingsTwoPanel",
     manifest: "Settings/AndroidManifest.xml",
     srcs: [
+        "Settings/src/**/*.kt",
         "Settings/src/**/*.java",
         "Settings/src/**/I*.aidl",
     ],
@@ -80,6 +83,7 @@ android_app {
     optimize: {
         proguard_flags_files: ["Settings/proguard.cfg"],
     },
+    kotlincflags: ["-Xjvm-default=enable"],
     privileged: true,
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
