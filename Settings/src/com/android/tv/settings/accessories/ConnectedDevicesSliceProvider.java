@@ -390,7 +390,8 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                 pendingIntent = PendingIntent
                         .getActivity(getContext(), 3, i, PendingIntent.FLAG_MUTABLE);
             } else {
-                Intent intent = new Intent(Settings.ACTION_SHOW_ADMIN_SUPPORT_DETAILS);
+                Intent intent = RestrictedLockUtils.getShowAdminSupportDetailsIntent(getContext(),
+                        admin);
                 intent.putExtra(DevicePolicyManager.EXTRA_RESTRICTION,
                         UserManager.DISALLOW_CONFIG_BLUETOOTH);
                 pendingIntent = PendingIntent.getActivity(getContext(), 0, intent,
@@ -515,7 +516,8 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                     .getDeviceUri(device.getAddress(), device.getAlias());
             pref.setTargetSliceUri(targetSliceUri.toString());
         } else {
-            Intent intent = new Intent(Settings.ACTION_SHOW_ADMIN_SUPPORT_DETAILS);
+            Intent intent = RestrictedLockUtils.getShowAdminSupportDetailsIntent(getContext(),
+                    admin);
             intent.putExtra(DevicePolicyManager.EXTRA_RESTRICTION,
                     UserManager.DISALLOW_CONFIG_BLUETOOTH);
             pref.setPendingIntent(PendingIntent.getActivity(getContext(), 0, intent,
