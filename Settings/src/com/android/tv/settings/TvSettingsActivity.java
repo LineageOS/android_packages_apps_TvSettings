@@ -32,10 +32,17 @@ import android.view.ViewTreeObserver;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 
+import com.android.tv.settings.compat.PreferenceControllerFragmentCompat;
+import com.android.tv.settings.library.PreferenceCompat;
+import com.android.tv.settings.library.SettingsManager;
+import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.overlay.FlavorUtils;
 
-public abstract class TvSettingsActivity extends FragmentActivity {
+import java.util.List;
+
+public abstract class TvSettingsActivity extends FragmentActivity implements HasSettingsManager {
     private static final String TAG = "TvSettingsActivity";
 
     private static final String SETTINGS_FRAGMENT_TAG =
@@ -43,9 +50,81 @@ public abstract class TvSettingsActivity extends FragmentActivity {
 
     private static final int REQUEST_CODE_STARTUP_VERIFICATION = 1;
 
+    public SettingsManager mSettingsManager;
+
+    private final UIUpdateCallback mUIUpdateCallback =
+            new UIUpdateCallback() {
+                @Override
+                public void notifyUpdate(
+                        int state, com.android.tv.settings.library.PreferenceCompat preference) {
+                    getVisibleFragment().getChildFragmentManager().getFragments().stream()
+                            .filter(
+                                    fragment ->
+                                            fragment instanceof PreferenceControllerFragmentCompat
+                                                    &&
+                                                    ((PreferenceControllerFragmentCompat) fragment)
+                                                            .getState() == state)
+                            .forEach(
+                                    fragment ->
+                                            ((PreferenceControllerFragmentCompat) fragment)
+                                                    .updatePref(preference));
+                }
+
+                @Override
+                public void notifyUpdateAll(
+                        int state, List<PreferenceCompat> preferences) {
+                    getVisibleFragment().getChildFragmentManager().getFragments().stream()
+                            .filter(
+                                    fragment ->
+                                            fragment instanceof PreferenceControllerFragmentCompat
+                                                    &&
+                                                    ((PreferenceControllerFragmentCompat) fragment)
+                                                            .getState() == state)
+                            .forEach(
+                                    fragment ->
+                                            ((PreferenceControllerFragmentCompat) fragment)
+                                                    .updateAllPref(preferences));
+                }
+
+                @Override
+                public void notifyUpdateScreenTitle(int state, String title) {
+                    getVisibleFragment().getChildFragmentManager().getFragments().stream()
+                            .filter(
+                                    fragment ->
+                                            fragment instanceof PreferenceControllerFragmentCompat
+                                                    &&
+                                                    ((PreferenceControllerFragmentCompat) fragment)
+                                                            .getState() == state)
+                            .forEach(
+                                    fragment ->
+                                            ((PreferenceControllerFragmentCompat) fragment)
+                                                    .updateScreenTitle(title));
+                }
+            };
+
+    public Fragment getVisibleFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        List<Fragment> fragments = fragmentManager.getFragments();
+        if (fragments != null) {
+            for (Fragment fragment : fragments) {
+                if (fragment != null && fragment.isVisible()) {
+                    return fragment;
+                }
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public SettingsManager getSettingsManager() {
+        return mSettingsManager;
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mSettingsManager = new SettingsManager(this);
+        mSettingsManager.registerListener(mUIUpdateCallback);
         if ((FlavorUtils.getFlavor(this) & getAvailableFlavors()) == 0) {
             Log.w(TAG, "Activity is not supported in current flavor");
             finish();
@@ -106,8 +185,15 @@ public abstract class TvSettingsActivity extends FragmentActivity {
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mSettingsManager.unRegisterListener(mUIUpdateCallback);
+    }
+
+    @Override
     public void finish() {
-        final Fragment fragment = getSupportFragmentManager().findFragmentByTag(SETTINGS_FRAGMENT_TAG);
+        final Fragment fragment = getSupportFragmentManager().findFragmentByTag(
+                SETTINGS_FRAGMENT_TAG);
         if (FlavorUtils.isTwoPanel(this)) {
             super.finish();
             return;
