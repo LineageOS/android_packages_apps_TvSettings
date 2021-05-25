@@ -44,4 +44,27 @@ java_sdk_library {
     no_dist: true,
 }
 
+android_library {
+
+    name: "TvSettingsAPI",
+    srcs: [
+        "java/**/*.java",
+    ],
+
+     static_libs: [
+            "androidx-constraintlayout_constraintlayout",
+            "androidx.recyclerview_recyclerview",
+            "androidx.preference_preference",
+            "androidx.appcompat_appcompat",
+            "androidx.legacy_legacy-preference-v14",
+            "androidx.leanback_leanback-preference",
+            "androidx.leanback_leanback",
+            "androidx.lifecycle_lifecycle-extensions",
+            "androidx.lifecycle_lifecycle-common-java8",
+            "androidx.annotation_annotation",
+            "zxing-core-1.7",
+        ],
+
+    min_sdk_version: "29",
+}
 
