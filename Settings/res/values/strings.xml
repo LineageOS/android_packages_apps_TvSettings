@@ -744,6 +744,8 @@
         <item quantity="one">Phone app</item>
         <item quantity="other">Phone apps</item>
     </plurals>
+    <!-- Title for Default Browser settings [CHAR LIMIT=30] -->
+    <string name="default_browser_title">Browser app</string>
     <!-- Template for concatenating two app names -->
     <string name="app_names_concatenation_template_2"><xliff:g id="first_app_name">%1$s</xliff:g>, <xliff:g id="second_app_name">%2$s</xliff:g></string>
     <!-- Template for concatenating three app names -->
@@ -1362,6 +1364,55 @@
         <item>transport_stream</item>
         <item>off</item>
     </string-array>
+
+    <!-- Subtitle for the camera/microphone toggle [CHAR LIMIT=50] -->
+    <string name="sensor_toggle_description">For all apps and services</string>
+    <!-- Settings group name that is followed by a list of apps that have recently accessed the sensor [CHAR LIMIT=50] -->
+    <string name="recently_accessed_by_category">Recently Accessed By</string>
+    <!-- Placeholder that shows when no apps have recently accessed the camera/microphone [CHAR LIMIT=50] -->
+    <string name="no_recent_sensor_accesses">No recent accesses</string>
+    <!-- Element on which to click when there are more apps in the list that we want to show initially.
+    The rest of the apps will be shown when the element is clicked [CHAR LIMIT=50]-->
+    <string name="recently_accessed_show_all">See all</string>
+
+    <!-- Title for Microphone settings [CHAR LIMIT=30] -->
+    <string name="microphone">Microphone</string>
+    <!-- Title of the toggle that enables / disables microphone access for all apps [CHAR LIMIT=30] -->
+    <string name="mic_toggle_title">Microphone access</string>
+    <!-- Title for setting that opens the microphone permissions overview for all apps [CHAR LIMIT=50]-->
+    <string name="open_mic_permissions">App access to microphone</string>
+
+    <!-- Title for Camera settings [CHAR LIMIT=30] -->
+    <string name="camera">Camera</string>
+    <!-- Title of the toggle that enables / disables camera access for all apps [CHAR LIMIT=30] -->
+    <string name="camera_toggle_title">Camera access</string>
+    <!-- Title for setting that opens the camera permissions overview for all apps [CHAR LIMIT=50]-->
+    <string name="open_camera_permissions">App access to camera</string>
+
+    <!-- Title of the info panel that is shown on the side when the microphone toggle is selected.
+    The sensor_state is one of the following strings: sensor_toggle_info_on or sensor_toggle_info_off [CHAR LIMIT=30]-->
+    <string name="mic_toggle_info_title">Microphone Access:
+        <xliff:g id="sensor_state" example="On">%s</xliff:g></string>
+    <!-- Message shown in an info panel on the side when the microphone toggle is selected. [CHAR LIMIT=NONE] -->
+    <string name="mic_toggle_info_content">When turned on, all apps and services with permission can
+        access any microphone on this device.\n\nAudio peripherals such as plug-in mic devices with
+        a custom protocol will not be affected by this setting.
+    </string>
+
+    <!-- Title of the info panel that is shown on the side when the camera toggle is selected.
+    The camera_state is one of the following strings: sensor_toggle_info_on or sensor_toggle_info_off [CHAR LIMIT=30]-->
+    <string name="camera_toggle_info_title">Camera Access:
+        <xliff:g id="sensor_state" example="On">%s</xliff:g></string>
+    <!-- Message shown in an info panel on the side when the camera toggle is selected. [CHAR LIMIT=NONE] -->
+    <string name="camera_toggle_info_content">When turned on, all apps and services with permission
+        can access any camera on this device.\n\nCamera peripherals such as plug-in webcams with a
+        custom protocol will not be affected by this setting.
+    </string>
+
+    <!-- Camera/Microphone state within mic_toggle_info_title and camera_toggle_info_title [CHAR LIMIT=20] -->
+    <string name="sensor_toggle_info_on">On</string>
+    <!-- Camera/Microphone state within mic_toggle_info_title and camera_toggle_info_title [CHAR LIMIT=20] -->
+    <string name="sensor_toggle_info_off">Off</string>
 
     <!-- Title for Location in System Settings [CHAR LIMIT=50] -->
     <string name="system_location">Location</string>
