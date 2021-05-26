@@ -18,7 +18,6 @@ package com.android.tv.settings.library.network;
 
 import static com.android.tv.settings.library.ManagerUtil.INFO_COLLAPSE;
 
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.NetworkCapabilities;
@@ -28,8 +27,8 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.ManagerUtil;
+import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.data.State;
@@ -72,7 +71,7 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     private PreferenceCompatManager mPreferenceCompatManager;
     private NetworkModule mNetworkModule;
     private final Context mContext;
-    private UIUpdateCallback mUIUpdateCallback;
+    private final UIUpdateCallback mUIUpdateCallback;
     private final Handler mHandler = new Handler();
     private long mNoWifiUpdateBeforeMillis;
     private final Runnable mInitialUpdateWifiListRunnable = new Runnable() {
@@ -219,6 +218,11 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
             mUIUpdateCallback.notifyUpdate(getStateIdentifier(),
                     mPreferenceCompatManager.getOrCreatePrefCompat(key));
         }
+    }
+
+    @Override
+    public void onPreferenceChange(String key, Object newValue) {
+        // no-op
     }
 
 

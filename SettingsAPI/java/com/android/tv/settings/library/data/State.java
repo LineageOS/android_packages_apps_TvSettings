@@ -34,5 +34,7 @@ public interface State {
 
     void onPreferenceTreeClick(String key, boolean status);
 
+    void onPreferenceChange(String key, Object newValue);
+
     int getStateIdentifier();
 }

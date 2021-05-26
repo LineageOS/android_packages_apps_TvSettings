@@ -42,7 +42,6 @@ public class NetworkModule implements Module, ConnectivityListener.Listener {
     private List<PreferenceCompat> mAccessPoints;
     ArraySet<State> states = new ArraySet<>();
 
-
     public static NetworkModule getInstance(Context context) {
         if (instance == null) {
             instance = new NetworkModule(context.getApplicationContext());

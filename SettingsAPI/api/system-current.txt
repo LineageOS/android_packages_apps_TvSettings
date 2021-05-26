@@ -35,6 +35,7 @@ package com.android.tv.settings.library {
     method public java.util.Map<java.lang.String,java.lang.String> getInfoMap();
     method public android.content.Intent getIntent();
     method public String[] getKey();
+    method public byte getSelectable();
     method public String getSummary();
     method public String getTitle();
     method public int getType();
@@ -49,11 +50,16 @@ package com.android.tv.settings.library {
     method public void setIcon(android.graphics.drawable.Drawable);
     method public void setInfoMap(java.util.Map<java.lang.String,java.lang.String>);
     method public void setIntent(android.content.Intent);
+    method public void setSelectable(byte);
     method public void setSummary(String);
     method public void setTitle(String);
     method public void setType(byte);
     method public void setVisible(boolean);
     method public void setVisible(byte);
+    field public static final byte STATUS_OFF = 1; // 0x1
+    field public static final byte STATUS_ON = 2; // 0x2
+    field public static final byte STATUS_UNASSIGNED = 0; // 0x0
+    field public static final byte TYPE_LIST = 4; // 0x4
     field public static final byte TYPE_PREFERENCE_ACCESS_POINT = 2; // 0x2
     field public static final byte TYPE_PREFERENCE_CATEGORY = 1; // 0x1
     field public static final byte TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY = 3; // 0x3
@@ -67,6 +73,7 @@ package com.android.tv.settings.library {
     method public void onCreate(int, android.os.Bundle);
     method public void onDestroy(int);
     method public void onPause(int);
+    method public void onPreferenceChange(int, String, Object);
     method public void onPreferenceClick(int, String, boolean);
     method public void onResume(int);
     method public void onStart(int);

@@ -39,6 +39,10 @@ public class PreferenceCompat {
     public static final byte TYPE_PREFERENCE_CATEGORY = 1;
     public static final byte TYPE_PREFERENCE_ACCESS_POINT = 2;
     public static final byte TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY = 3;
+    public static final byte TYPE_LIST = 4;
+    public static final byte STATUS_UNASSIGNED = 0;
+    public static final byte STATUS_OFF = 1;
+    public static final byte STATUS_ON = 2;
 
     private final String[] mKey;
     private String mTitle;
@@ -47,6 +51,8 @@ public class PreferenceCompat {
     private Bundle mExtras;
     private Intent mIntent;
     private Drawable mIcon;
+
+    private String mValue;
 
     // 0 : preference, 1 : preferenceCategory, 2 : AccessPointPreference
     private byte mType;
@@ -57,8 +63,11 @@ public class PreferenceCompat {
     // 0 : not updated, 1 : unchecked, 2 : checked
     private byte mChecked;
 
-    // 0 : not updated, 1 : ininvisble, 2: visible
+    // 0 : not updated, 1 : invisible, 2: visible
     private byte mVisible;
+
+    // 0: not updated, 1 :not selectable, 2: selectable
+    private byte mSelectable;
     private List<PreferenceCompat> mChildPrefCompats;
 
     /** @hide */
@@ -196,6 +205,16 @@ public class PreferenceCompat {
     }
 
     /** @hide */
+    public String getValue() {
+        return mValue;
+    }
+
+    /** @hide */
+    public void setValue(String value) {
+        mValue = value;
+    }
+
+    /** @hide */
     @SystemApi
     public Map<String, String> getInfoMap() {
         if (mInfoMap == null) {
@@ -268,6 +287,18 @@ public class PreferenceCompat {
     @SystemApi
     public void setVisible(byte visible) {
         this.mVisible = visible;
+    }
+
+    /** @hide */
+    @SystemApi
+    public byte getSelectable() {
+        return mSelectable;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setSelectable(byte selectable) {
+        this.mSelectable = selectable;
     }
 
     /** @hide */
