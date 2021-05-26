@@ -76,12 +76,12 @@ public class SensorToggleInfoFragment extends InfoFragment {
         icon.setImageResource(R.drawable.ic_info_outline_base);
         icon.setVisibility(View.VISIBLE);
 
-        ((TextView) view.findViewById(R.id.info_summary)).setText(mToggle.getToggleInfoText());
+        ((TextView) view.findViewById(R.id.info_summary)).setText(mToggle.toggleInfoText);
 
         mTitleView = view.findViewById(R.id.info_title);
         mTitleView.setVisibility(View.VISIBLE);
-        updateTitle(!mSensorPrivacyManager.isSensorPrivacyEnabled(mToggle.getSensor()));
-        mSensorPrivacyManager.addSensorPrivacyListener(mToggle.getSensor(),
+        updateTitle(!mSensorPrivacyManager.isSensorPrivacyEnabled(mToggle.sensor));
+        mSensorPrivacyManager.addSensorPrivacyListener(mToggle.sensor,
                 mPrivacyChangedListener);
         return view;
     }
@@ -89,13 +89,12 @@ public class SensorToggleInfoFragment extends InfoFragment {
     private void updateTitle(boolean enabled) {
         String toggleState = getString(
                 enabled ? R.string.sensor_toggle_info_on : R.string.sensor_toggle_info_off);
-        mTitleView.setText(getString(mToggle.getToggleInfoTitle(), toggleState));
+        mTitleView.setText(getString(mToggle.toggleInfoTitle, toggleState));
     }
 
     @Override
     public void onDestroyView() {
-        mSensorPrivacyManager.removeSensorPrivacyListener(mToggle.getSensor(),
-                mPrivacyChangedListener);
+        mSensorPrivacyManager.removeSensorPrivacyListener(mToggle.sensor, mPrivacyChangedListener);
         super.onDestroyView();
     }
 }
