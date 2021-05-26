@@ -16,12 +16,9 @@
 
 package com.android.tv.settings.accessories;
 
-import android.app.admin.DevicePolicyManager;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.provider.Settings;
 
 import androidx.fragment.app.Fragment;
 
@@ -44,10 +41,7 @@ public class BluetoothAccessoryActivity extends TvSettingsActivity {
                 RestrictedLockUtilsInternal.checkIfRestrictionEnforced(this,
                         UserManager.DISALLOW_CONFIG_BLUETOOTH, UserHandle.myUserId());
         if (admin != null) {
-            Intent intent = new Intent(Settings.ACTION_SHOW_ADMIN_SUPPORT_DETAILS);
-            intent.putExtra(DevicePolicyManager.EXTRA_RESTRICTION,
-                    UserManager.DISALLOW_CONFIG_BLUETOOTH);
-            startActivity(intent);
+            RestrictedLockUtils.sendShowAdminSupportDetailsIntent(this, admin);
             finish();
             return null;
         }
