@@ -83,7 +83,7 @@ public class SensorFragment extends SettingsPreferenceFragment {
         Context themedContext = getPreferenceManager().getContext();
         PreferenceScreen screen = getPreferenceManager().createPreferenceScreen(themedContext);
 
-        screen.setTitle(mToggle.getScreenTitle());
+        screen.setTitle(mToggle.screenTitle);
 
         addSensorToggleWithInfo(screen, themedContext);
         addRecentAppsGroup(screen, themedContext);
@@ -100,22 +100,22 @@ public class SensorFragment extends SettingsPreferenceFragment {
         mSensorToggle = new SwitchPreference(themedContext);
         screen.addPreference(mSensorToggle);
         mSensorToggle.setKey(SENSOR_TOGGLE_KEY);
-        mSensorToggle.setTitle(mToggle.getToggleTitle());
+        mSensorToggle.setTitle(mToggle.toggleTitle);
         mSensorToggle.setSummary(R.string.sensor_toggle_description);
         mSensorToggle.setFragment(SensorToggleInfoFragment.class.getName());
         mSensorToggle.getExtras().putObject(SensorToggleInfoFragment.TOGGLE_EXTRA, mToggle);
 
         // If privacy is enabled, the sensor access is turned off
         mSensorToggle.setChecked(
-                !mSensorPrivacyManager.isSensorPrivacyEnabled(mToggle.getSensor()));
-        mSensorPrivacyManager.addSensorPrivacyListener(mToggle.getSensor(),
+                !mSensorPrivacyManager.isSensorPrivacyEnabled(mToggle.sensor));
+        mSensorPrivacyManager.addSensorPrivacyListener(mToggle.sensor,
                 mPrivacyChangedListener);
 
         if (!FlavorUtils.isTwoPanel(themedContext)) {
             // Show the toggle info text beneath instead.
             Preference toggleInfo = new Preference(themedContext);
             toggleInfo.setLayoutResource(R.xml.sensor_toggle_info);
-            toggleInfo.setSummary(mToggle.getToggleInfoText());
+            toggleInfo.setSummary(mToggle.toggleInfoText);
             toggleInfo.setSelectable(false);
             screen.addPreference(toggleInfo);
         }
@@ -132,7 +132,7 @@ public class SensorFragment extends SettingsPreferenceFragment {
 
         // Get recent accesses.
         List<RecentlyAccessedByUtils.App> recentApps = RecentlyAccessedByUtils.getAppList(
-                themedContext, mToggle.getAppOps());
+                themedContext, mToggle.appOps);
         if (DEBUG) Log.v(TAG, "recently accessed by " + recentApps.size() + " apps");
 
         // Create a preference for each access.
@@ -178,26 +178,24 @@ public class SensorFragment extends SettingsPreferenceFragment {
      */
     private void addPermissionControllerPreference(PreferenceScreen screen, Context themedContext) {
         Preference openPermissionController = new Preference(themedContext);
-        openPermissionController.setTitle(mToggle.getAppPermissionsTitle());
+        openPermissionController.setTitle(mToggle.appPermissionsTitle);
         Intent showSensorPermissions = new Intent(Intent.ACTION_MANAGE_PERMISSION_APPS);
         showSensorPermissions.putExtra(Intent.EXTRA_PERMISSION_NAME,
-                mToggle.getPermissionsGroupName());
+                mToggle.permissionsGroupName);
         openPermissionController.setIntent(showSensorPermissions);
         screen.addPreference(openPermissionController);
     }
 
     @Override
     public void onDestroy() {
-        mSensorPrivacyManager.removeSensorPrivacyListener(mToggle.getSensor(),
-                mPrivacyChangedListener);
+        mSensorPrivacyManager.removeSensorPrivacyListener(mToggle.sensor, mPrivacyChangedListener);
         super.onDestroy();
     }
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (SENSOR_TOGGLE_KEY.equals(preference.getKey())) {
-            mSensorPrivacyManager.setSensorPrivacy(
-                    mToggle.getSensor(), !mSensorToggle.isChecked());
+            mSensorPrivacyManager.setSensorPrivacy(mToggle.sensor, !mSensorToggle.isChecked());
             return true;
         }
         return super.onPreferenceTreeClick(preference);
