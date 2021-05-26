@@ -52,6 +52,11 @@
             android:key="manage_device_admin"
             android:title="@string/manage_device_admin"
             android:fragment="com.android.tv.settings.deviceadmin.DeviceAdminSettings" />
+
+        <Preference
+            android:fragment="com.android.tv.settings.enterprise.EnterprisePrivacySettingsFragment"
+            android:key="enterprise_privacy"
+            android:title="@string/enterprise_privacy_settings" />
     </PreferenceCategory>
 
 </PreferenceScreen>
