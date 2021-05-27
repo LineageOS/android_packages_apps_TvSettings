@@ -44,6 +44,7 @@ public class TsCollapsibleCategory extends TsPreferenceCategory {
 
     public TsCollapsibleCategory(Context context, String[] keys) {
         super(context);
+        setKeys(keys);
     }
 
     @Override
