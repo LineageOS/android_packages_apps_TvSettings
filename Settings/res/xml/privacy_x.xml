@@ -68,6 +68,13 @@
 
     <PreferenceCategory android:title="@string/privacy_app_settings_category" />
 
+    <com.android.tv.twopanelsettings.slices.SlicePreference
+        android:key="play_auto_update"
+        android:title="@string/manage_updates"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false"
+        custom:uri="@string/play_auto_update_settings_slice_uri"/>
+
     <Preference
         android:key="permissions"
         android:title="@string/device_apps_permissions">

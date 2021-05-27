@@ -203,6 +203,8 @@
     <string name="apps_permissions_category_title">Permissions</string>
     <!-- An item title on the apps screen. If clicked, the user is taken to screen listing Play Protect options. [CHAR_LIMIT=50]-->
     <string name="play_protect_security">Security</string>
+    <!-- An item title on the apps screen. If clicked, the user is taken to screen list Auto Update options. [CHAR_LIMIT=50]-->
+    <string name="manage_updates">Manage Updates</string>
 
     <!-- All application preferences -->
     <skip />
@@ -2316,6 +2318,9 @@
 
     <!-- Top level uri for Play settings slices -->
     <string name="play_settings_slice_uri" translatable="false"/>
+
+    <!-- Slice uri for Auto Update settings -->
+    <string name="play_auto_update_settings_slice_uri" translatable="false"/>
 
     <!-- Slice uri for Play Protect settings -->
     <string name="play_protect_settings_slice_uri" translatable="false"/>
