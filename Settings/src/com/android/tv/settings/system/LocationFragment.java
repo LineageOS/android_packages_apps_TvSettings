@@ -28,6 +28,7 @@ import android.location.LocationManager;
 import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.Process;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -40,6 +41,9 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
+import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtilsInternal;
+import com.android.settingslib.RestrictedPreference;
 import com.android.settingslib.location.RecentLocationApps;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -72,6 +76,7 @@ public class LocationFragment extends SettingsPreferenceFragment implements
     private static final String NEW_MODE_KEY = "NEW_MODE";
 
     private SummaryListPreference mLocationMode;
+    private RestrictedPreference mRestrictedLocationMode;
     private SwitchPreference mAlwaysScan;
 
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -95,34 +100,42 @@ public class LocationFragment extends SettingsPreferenceFragment implements
                 themedContext);
         screen.setTitle(R.string.system_location);
 
-        mLocationMode = new SummaryListPreference(themedContext);
-        screen.addPreference(mLocationMode);
-        mLocationMode.setKey(KEY_LOCATION_MODE);
-        mLocationMode.setPersistent(false);
-        mLocationMode.setTitle(R.string.location_status);
-        mLocationMode.setDialogTitle(R.string.location_status);
-        mLocationMode.setSummary("%s");
-        mLocationMode.setEntries(new CharSequence[] {
-                getString(R.string.location_mode_wifi_description),
-                getString(R.string.off)
-        });
-        mLocationMode.setEntryValues(new CharSequence[] {
-                LOCATION_MODE_WIFI,
-                LOCATION_MODE_OFF
-        });
-        mLocationMode.setSummaries(new CharSequence[] {
-                getString(R.string.system_location_summary),
-                null
-        });
-        mLocationMode.setOnPreferenceChangeListener(this);
-        mLocationMode.setOnPreferenceClickListener(
-                preference -> {
-                    logEntrySelected(TvSettingsEnums.PRIVACY_LOCATION_STATUS);
-                    return false;
-                });
+        final RestrictedLockUtils.EnforcedAdmin admin = checkIfUserRestrictionEnforcedByAdmin();
+        if (admin == null) {
+            mLocationMode = new SummaryListPreference(themedContext);
+            screen.addPreference(mLocationMode);
+            mLocationMode.setKey(KEY_LOCATION_MODE);
+            mLocationMode.setPersistent(false);
+            mLocationMode.setTitle(R.string.location_status);
+            mLocationMode.setDialogTitle(R.string.location_status);
+            mLocationMode.setSummary("%s");
+            mLocationMode.setEntries(new CharSequence[] {
+                    getString(R.string.location_mode_wifi_description),
+                    getString(R.string.off)
+            });
+            mLocationMode.setEntryValues(new CharSequence[] {
+                    LOCATION_MODE_WIFI,
+                    LOCATION_MODE_OFF
+            });
+            mLocationMode.setSummaries(new CharSequence[] {
+                    getString(R.string.system_location_summary),
+                    null
+            });
+            mLocationMode.setOnPreferenceChangeListener(this);
+            mLocationMode.setOnPreferenceClickListener(
+                    preference -> {
+                        logEntrySelected(TvSettingsEnums.PRIVACY_LOCATION_STATUS);
+                        return false;
+                    });
 
-        final UserManager um = UserManager.get(getContext());
-        mLocationMode.setEnabled(!um.hasUserRestriction(UserManager.DISALLOW_SHARE_LOCATION));
+            mLocationMode.setEnabled(!hasUserRestriction());
+        } else {
+            mRestrictedLocationMode = new RestrictedPreference(themedContext);
+            screen.addPreference(mRestrictedLocationMode);
+            mRestrictedLocationMode.setPersistent(false);
+            mRestrictedLocationMode.setTitle(R.string.location_status);
+            mRestrictedLocationMode.setDisabledByAdmin(admin);
+        }
 
         if (FlavorUtils.isTwoPanel(getContext())) {
             mAlwaysScan = new SwitchPreference(themedContext);
@@ -177,6 +190,25 @@ public class LocationFragment extends SettingsPreferenceFragment implements
         // TODO: are location services relevant on TV?
 
         setPreferenceScreen(screen);
+    }
+
+    private boolean hasUserRestriction() {
+        final UserManager um = UserManager.get(getContext());
+        return um.hasUserRestriction(UserManager.DISALLOW_SHARE_LOCATION)
+                || um.hasUserRestriction(UserManager.DISALLOW_CONFIG_LOCATION);
+    }
+
+    private RestrictedLockUtils.EnforcedAdmin checkIfUserRestrictionEnforcedByAdmin() {
+        final RestrictedLockUtils.EnforcedAdmin admin = RestrictedLockUtilsInternal
+                .checkIfRestrictionEnforced(getContext(),
+                        UserManager.DISALLOW_SHARE_LOCATION, UserHandle.myUserId());
+
+        if (admin != null) {
+            return admin;
+        }
+
+        return RestrictedLockUtilsInternal.checkIfRestrictionEnforced(getContext(),
+                UserManager.DISALLOW_CONFIG_LOCATION, UserHandle.myUserId());
     }
 
     // When selecting the location preference, LeanbackPreferenceFragment
@@ -258,13 +290,22 @@ public class LocationFragment extends SettingsPreferenceFragment implements
     }
 
     private void refreshLocationMode() {
-        if (mLocationMode == null) {
-            return;
+        boolean locationEnabled = getActivity().getSystemService(LocationManager.class)
+                .isLocationEnabled();
+        if (mLocationMode != null) {
+            if (locationEnabled) {
+                mLocationMode.setValue(LOCATION_MODE_WIFI);
+            } else {
+                mLocationMode.setValue(LOCATION_MODE_OFF);
+            }
         }
-        if (getActivity().getSystemService(LocationManager.class).isLocationEnabled()) {
-            mLocationMode.setValue(LOCATION_MODE_WIFI);
-        } else {
-            mLocationMode.setValue(LOCATION_MODE_OFF);
+        if (mRestrictedLocationMode != null) {
+            if (locationEnabled) {
+                mRestrictedLocationMode
+                        .setSummary(getString(R.string.location_mode_wifi_description));
+            } else {
+                mRestrictedLocationMode.setSummary(getString(R.string.off));
+            }
         }
     }
 
