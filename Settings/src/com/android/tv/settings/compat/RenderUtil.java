@@ -17,6 +17,7 @@
 package com.android.tv.settings.compat;
 
 import static com.android.tv.settings.compat.TsCollapsibleCategory.COLLAPSE;
+import static com.android.tv.settings.library.PreferenceCompat.TYPE_LIST;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_ACCESS_POINT;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_CATEGORY;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY;
@@ -119,6 +120,12 @@ public final class RenderUtil {
                 ((TsCollapsibleCategory) hasKeysPreference)
                         .setCollapsed(getInfoBoolean(COLLAPSE, preferenceCompat));
                 break;
+            case TYPE_LIST:
+                if (hasKeysPreference instanceof TsListPreference) {
+                    TsListPreference pref = (TsListPreference) hasKeysPreference;
+                    pref.setValue(preferenceCompat.getValue());
+
+                }
             default:
                 // no-op
         }
@@ -144,6 +151,7 @@ public final class RenderUtil {
             preference.setFragment(getNextFragment(nextState));
         }
         setVisible(preference, preferenceCompat);
+        setSelectable(preference, preferenceCompat);
         if (preference instanceof TwoStatePreference) {
             setChecked((TwoStatePreference) preference, preferenceCompat);
         }
@@ -160,6 +168,8 @@ public final class RenderUtil {
                 return new TsPreferenceCategory(context, preferenceCompat.getKey());
             case TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY:
                 return new TsCollapsibleCategory(context, preferenceCompat.getKey());
+            case TYPE_LIST:
+                return new TsListPreference(context, preferenceCompat.getKey());
             case TYPE_RPEFERENCE:
             default:
                 return new TsPreference(context, preferenceCompat.getKey());
@@ -182,17 +192,25 @@ public final class RenderUtil {
 
     public static void setChecked(
             TwoStatePreference preference, PreferenceCompat preferenceParcelable) {
-        if (preferenceParcelable.getChecked() == 2) {
+        if (preferenceParcelable.getChecked() == PreferenceCompat.STATUS_ON) {
             preference.setChecked(true);
-        } else if (preferenceParcelable.getChecked() == 1) {
+        } else if (preferenceParcelable.getChecked() == PreferenceCompat.STATUS_OFF) {
             preference.setChecked(false);
         }
     }
 
-    public static void setVisible(Preference preference, PreferenceCompat preferenceParcelable) {
-        if (preferenceParcelable.getVisible() == 2) {
+    public static void setSelectable(Preference preference, PreferenceCompat preferenceParcelable) {
+        if (preferenceParcelable.getSelectable() == PreferenceCompat.STATUS_ON) {
             preference.setVisible(true);
-        } else if (preferenceParcelable.getVisible() == 1) {
+        } else if (preferenceParcelable.getVisible() == PreferenceCompat.STATUS_OFF) {
+            preference.setVisible(false);
+        }
+    }
+
+    public static void setVisible(Preference preference, PreferenceCompat preferenceParcelable) {
+        if (preferenceParcelable.getVisible() == PreferenceCompat.STATUS_ON) {
+            preference.setVisible(true);
+        } else if (preferenceParcelable.getVisible() == PreferenceCompat.STATUS_OFF) {
             preference.setVisible(false);
         }
     }

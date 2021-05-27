@@ -96,6 +96,11 @@ public abstract class PreferenceControllerState implements State {
     }
 
     @Override
+    public void onPreferenceChange(String key, Object newValue) {
+        // no-op
+    }
+
+    @Override
     public abstract int getStateIdentifier();
 
     private void refreshAllPreferences() {

@@ -114,4 +114,10 @@ public final class SettingsManager {
     public void onPreferenceClick(int state, String key, boolean status) {
         StateManager.getState(state, mStateMap).onPreferenceTreeClick(key, status);
     }
+
+    /** @hide */
+    @SystemApi
+    public void onPreferenceChange(int state, String key, Object newValue) {
+        StateManager.getState(state, mStateMap).onPreferenceChange(key, newValue);
+    }
 }
