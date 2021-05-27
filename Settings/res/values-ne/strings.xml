@@ -41,7 +41,7 @@
     <string name="header_category_preferences" msgid="3738388885555798797">"प्राथमिकताहरू"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"रिमोट र एसेसोरिज"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"व्यक्तिगत"</string>
-    <string name="connect_to_network" msgid="4133686359319492392">"नेटवर्कमा जडान गर्नुहोस्"</string>
+    <string name="connect_to_network" msgid="4133686359319492392">"नेटवर्कमा कनेक्ट गर्नुहोस्"</string>
     <string name="add_an_account" msgid="2601275122685226096">"खाता थप्नुहोस्"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"खाता र साइन इनका गर्ने कार्यहरू"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"कुन पनि खाता छैन"</string>
@@ -93,7 +93,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Wi-Fi अफ हुँदा पनि Google को स्थान सेवा र अन्य एपहरूलाई नेटवर्क खोज्न दिनुहोस्"</string>
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"नेटवर्क खोज्ने सुविधा सधैँ उपलब्ध हुन्छ, Google को स्थानसम्बन्धी सेवा र अन्य एपहरूलाई Wi-Fi नेटवर्क खोज्न दिनुहोस्। ती सेवाले Wi-Fi अफ भएका बेलामा पनि नेटवर्क खोज्न सक्छन्"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
-    <string name="connectivity_hint_message" msgid="5638304246522516583">"नेटवर्कमा जडान गर्नुहोस्"</string>
+    <string name="connectivity_hint_message" msgid="5638304246522516583">"नेटवर्कमा कनेक्ट गर्नुहोस्"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"नेटवर्कका निदानहरू"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"हालै खोलिएका एपहरू"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"सबै एपहरू हेर्नुहोस्"</string>
@@ -328,6 +328,8 @@
       <item quantity="other">फोन एपहरू</item>
       <item quantity="one">फोन एप</item>
     </plurals>
+    <!-- no translation found for default_browser_title (3612813200586492159) -->
+    <skip />
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"ट्यूटोरियलहरू"</string>
@@ -385,8 +387,8 @@
     <string name="regulatory_information" msgid="9107675969694713391">"नियामक जानकारी"</string>
     <string name="device_feedback" msgid="4871903271442960465">"यन्त्र बारेमा प्रतिक्रिया पठाउनुहोस्"</string>
     <string name="oem_unlock_enable_disabled_summary_bootloader_unlocked" msgid="4641790432171693921">"बुटलोडर अनलक गरिसकिएको छ"</string>
-    <string name="oem_unlock_enable_disabled_summary_connectivity" msgid="2979556699380115576">"पहिले इन्टरनेटमा जडान गर्नुहोस्"</string>
-    <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="1946089732305102622">"इन्टरनेटमा जडान गर्नुहोस् वा आफ्नो सेवा प्रदायकलाई सम्पर्क गर्नु"</string>
+    <string name="oem_unlock_enable_disabled_summary_connectivity" msgid="2979556699380115576">"पहिले इन्टरनेटमा कनेक्ट गर्नुहोस्"</string>
+    <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="1946089732305102622">"इन्टरनेटमा कनेक्ट गर्नुहोस् वा आफ्नो सेवा प्रदायकलाई सम्पर्क गर्नु"</string>
     <string name="oem_unlock_enable_disabled_summary_sim_locked_device" msgid="5634005787486307657">"वाहकद्वारा लक गरिएका यन्त्रहरूमा उपलब्ध छैन"</string>
     <string name="oem_lock_info_message" msgid="2165887409937351689">"यन्त्रको सुरक्षासम्बन्धी सुविधा सक्षम पार्न कृपया यन्त्र पुनः सुरु गर्नुहोस्।"</string>
     <string name="automatic_storage_manager_freed_bytes" msgid="1654574152815129396">"कुल उपलब्ध गराइएको <xliff:g id="SIZE">%1$s</xliff:g>\n\nपछिल्लो पटक <xliff:g id="DATE">%2$s</xliff:g> मा सञ्चालन गरिएको"</string>
@@ -416,7 +418,7 @@
     <string name="title_random_mac_settings" msgid="6685812569356353378">"गोपनीयता"</string>
   <string-array name="random_mac_settings_entries">
     <item msgid="3457228452595715533">"क्रमरहित MAC प्रयोग गरियोस् (डिफल्ट)"</item>
-    <item msgid="2490415280467390067">"डिभाइसको MAC प्रयोग गर्नुहोस्"</item>
+    <item msgid="2490415280467390067">"डिभाइसको MAC प्रयोग गरियोस्"</item>
   </string-array>
     <string name="mac_address_not_available" msgid="2992935344891853369">"उपलब्ध छैन"</string>
     <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"क्रमरहित MAC"</string>
@@ -464,7 +466,7 @@
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"उपलब्ध नेटवर्कहरू अवलोकन गर्नुहोस्"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g> सँग जडान गर्दै"</string>
     <string name="wifi_saving" msgid="320653339670641708">"<xliff:g id="SSID">%1$s</xliff:g> को लागि कन्फिगरेसन सुरक्षित गर्दै"</string>
-    <string name="wifi_connect" msgid="2206086690065242121">"जडान गर्नुहोस्"</string>
+    <string name="wifi_connect" msgid="2206086690065242121">"कनेक्ट गर्नुहोस्"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"सञ्जाल बिर्सनुहोस्"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"यसले यो नेटवर्कमा सुरक्षित भएका पासवर्ड सहित जडान गर्न प्रयोग हुने जानकरीलाई क्लियर गर्दछ।"</string>
     <string name="wifi_scan_qr_code_description" msgid="2375814285190385839">"आफ्नो मोबाइल फोनमार्फत QR कोड स्क्यान गरेर आफ्नो फोन Wi-Fi मा कनेक्ट गर्नुहोस् अनि दिइएको निर्देशन पालना गर्नुहोस्।"</string>
@@ -606,6 +608,38 @@
     <item msgid="5645263357181875427">"ट्रान्सपोर्ट स्ट्रिमद्वारा उपलब्ध गराइएको समय प्रयोग गर्नुहोस्"</item>
     <item msgid="5501503537181350884">"निष्क्रिय"</item>
   </string-array>
+    <!-- no translation found for sensor_toggle_description (7415801459994303159) -->
+    <skip />
+    <!-- no translation found for recently_accessed_by_category (6841705864715653428) -->
+    <skip />
+    <!-- no translation found for no_recent_sensor_accesses (3498112970658050800) -->
+    <skip />
+    <!-- no translation found for recently_accessed_show_all (5234849189704717855) -->
+    <skip />
+    <!-- no translation found for microphone (7893752847683941214) -->
+    <skip />
+    <!-- no translation found for mic_toggle_title (7193417007060235665) -->
+    <skip />
+    <!-- no translation found for open_mic_permissions (8121871594807641073) -->
+    <skip />
+    <!-- no translation found for camera (1226671478936288283) -->
+    <skip />
+    <!-- no translation found for camera_toggle_title (5566469574224956142) -->
+    <skip />
+    <!-- no translation found for open_camera_permissions (301360297337141591) -->
+    <skip />
+    <!-- no translation found for mic_toggle_info_title (1086545614315873599) -->
+    <skip />
+    <!-- no translation found for mic_toggle_info_content (4436219037877456256) -->
+    <skip />
+    <!-- no translation found for camera_toggle_info_title (3871317082313736088) -->
+    <skip />
+    <!-- no translation found for camera_toggle_info_content (7045001373813906859) -->
+    <skip />
+    <!-- no translation found for sensor_toggle_info_on (4568111889147132257) -->
+    <skip />
+    <!-- no translation found for sensor_toggle_info_off (7546772458177469821) -->
+    <skip />
     <string name="system_location" msgid="4057295363709016511">"स्थान"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"तपाईंको अनुमतिबाट एपहरूलाई तपाईंको स्थान जानकारीको उपयोग गर्न दिनुहोस्।"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"स्थान सहमति"</string>
@@ -1007,7 +1041,7 @@
     <string name="uninstall_device_admin" msgid="6301368408620948266">"एपको स्थापना रद्द गर्नुहोस्"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"निष्क्रिय पार्नुहोस् तथा स्थापना रद्द गर्नुहोस्"</string>
     <string name="select_device_admin_msg" msgid="8475934459999710332">"डिभाइसका एडमिन एपहरू"</string>
-    <string name="add_device_admin_msg" msgid="5390773166682603421">"डिभाइसको एडमिन एपलाई सक्रिय गर्ने हो?"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"डिभाइसको एडमिन एप एक्टिभेट गर्ने हो?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"यो डिभाइसको एडमिन एप एक्टिभेट गर्नुहोस्"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"तपाईंले यो एडमिन एप एक्टिभेट गर्नुभयो भने <xliff:g id="APP_NAME">%1$s</xliff:g> ले निम्न कार्य गर्ने अनुमति पाउने छ:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> ले यस डिभाइसको व्यवस्थापन तथा अनुगमन गर्ने छ।"</string>
