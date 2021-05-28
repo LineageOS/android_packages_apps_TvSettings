@@ -328,6 +328,7 @@
       <item quantity="other">Telefonappar</item>
       <item quantity="one">Telefonapp</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"Webbläsarapp"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Självstudier"</string>
@@ -415,7 +416,7 @@
     <string name="title_signal_strength" msgid="5047116893338315998">"Signalstyrka"</string>
     <string name="title_random_mac_settings" msgid="6685812569356353378">"Integritet"</string>
   <string-array name="random_mac_settings_entries">
-    <item msgid="3457228452595715533">"Använd slumpgenererad MAC-adress (standard)"</item>
+    <item msgid="3457228452595715533">"Slumpgenererad MAC-adress (standard)"</item>
     <item msgid="2490415280467390067">"Använd enhetens MAC-adress"</item>
   </string-array>
     <string name="mac_address_not_available" msgid="2992935344891853369">"Inte tillgängligt"</string>
@@ -606,6 +607,22 @@
     <item msgid="5645263357181875427">"Använd tid från transportström"</item>
     <item msgid="5501503537181350884">"Av"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"För alla appar och tjänster"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Har nyligen fått åtkomst:"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Ingen åtkomst nyligen"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Visa alla"</string>
+    <string name="microphone" msgid="7893752847683941214">"Mikrofon"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Mikrofonåtkomst"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Appåtkomst till mikrofonen"</string>
+    <string name="camera" msgid="1226671478936288283">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Kameraåtkomst"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Appåtkomst till kameran"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofonåtkomst: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4436219037877456256">"När funktionen är aktiverad får alla appar och tjänster med behörighet åtkomst till mikrofonerna på den här enheten.\n\nExterna ljudenheter som inkopplade mikrofoner med anpassat protokoll påverkas inte av inställningen."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kameraåtkomst: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="7045001373813906859">"När funktionen är aktiverad får alla appar och tjänster med behörighet åtkomst till kamerorna på den här enheten.\n\nExterna kameraenheter som inkopplade webbkameror med anpassat protokoll påverkas inte av inställningen."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"På"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Av"</string>
     <string name="system_location" msgid="4057295363709016511">"Plats"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Ge appar som har bett om tillstånd möjlighet att använda din platsinformation"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Platsmedgivande"</string>

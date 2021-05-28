@@ -338,6 +338,7 @@
       <item quantity="few">Aplikacije telefona</item>
       <item quantity="other">Aplikacije telefona</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"Aplikacija preglednika"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Vodiči"</string>
@@ -430,8 +431,8 @@
     <string name="title_signal_strength" msgid="5047116893338315998">"Jakost signala"</string>
     <string name="title_random_mac_settings" msgid="6685812569356353378">"Privatnost"</string>
   <string-array name="random_mac_settings_entries">
-    <item msgid="3457228452595715533">"Koristi nasumično određen MAC (zadano)"</item>
-    <item msgid="2490415280467390067">"Upotrijebi MAC adresu uređaja"</item>
+    <item msgid="3457228452595715533">"Koristi nasumičnu MAC adresu (zadano)"</item>
+    <item msgid="2490415280467390067">"Koristi MAC adresu uređaja"</item>
   </string-array>
     <string name="mac_address_not_available" msgid="2992935344891853369">"Nedostupna"</string>
     <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Nasumično određen MAC"</string>
@@ -621,6 +622,22 @@
     <item msgid="5645263357181875427">"Upotrijebi vrijeme prijenosnog toka podataka"</item>
     <item msgid="5501503537181350884">"Isključeno"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Za sve aplikacije i usluge"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Nedavno su pristupile aplikacije"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Nema nedavnih pristupa"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Prikaži sve"</string>
+    <string name="microphone" msgid="7893752847683941214">"Mikrofon"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Pristup mikrofonu"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Pristup aplikacije mikrofonu"</string>
+    <string name="camera" msgid="1226671478936288283">"Fotoaparat"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Pristup fotoaparatu"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Pristup aplikacije fotoaparatu"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Pristup mikrofonu: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4436219037877456256">"Kad je uključeno, sve aplikacije i usluge s dopuštenjem mogu pristupiti bilo kojem mikrofonu na ovom uređaju.\n\nNa periferne audiouređaje, kao što su uređaji mikrofona s priključivanjem neće utjecati ova postavka."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Pristup fotoaparatu: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="7045001373813906859">"Kad je uključeno, sve aplikacije i usluge s dopuštenjem mogu pristupiti bilo kojem fotoaparatu na ovom uređaju.\n\nNa periferne uređaje fotoaparata, kao što su žičane web-kamere s prilagođenim protokolom neće utjecati ova postavka."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Uključeno"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Isključeno"</string>
     <string name="system_location" msgid="4057295363709016511">"Lokacija"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Omogućite da aplikacije koje su tražile vaše dopuštenje upotrebljavaju informacije o vašoj lokaciji"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Odobrenje lokacije"</string>

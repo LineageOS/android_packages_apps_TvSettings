@@ -328,6 +328,7 @@
       <item quantity="other">Apps de telefone</item>
       <item quantity="one">App de telefone</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"App do navegador"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Tutoriais"</string>
@@ -606,6 +607,22 @@
     <item msgid="5645263357181875427">"Utilizar hora fornecida pelo fluxo contínuo de transporte"</item>
     <item msgid="5501503537181350884">"Desativado"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Para todas as apps e serviços"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Acedido recentemente por"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Sem acessos recentes"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Ver tudo"</string>
+    <string name="microphone" msgid="7893752847683941214">"Microfone"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Acesso ao microfone"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Acesso da app ao microfone"</string>
+    <string name="camera" msgid="1226671478936288283">"Câmara"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Acesso à câmara"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Acesso da app à câmara"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Acesso ao microfone: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4436219037877456256">"Quando a opção está ativada, todas as apps e os serviços com autorização podem aceder a qualquer microfone neste dispositivo.\n\nOs periféricos de áudio, como microfones de ligação instantânea com um protocolo personalizado, não são afetados por esta definição."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Acesso à câmara: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="7045001373813906859">"Quando a opção está ativada, todas as apps e os serviços com autorização podem aceder a qualquer câmara neste dispositivo.\n\nOs periféricos das câmaras, como câmaras Web de ligação instantânea com um protocolo personalizado, não são afetados por esta definição."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Ligado"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Desligado"</string>
     <string name="system_location" msgid="4057295363709016511">"Localização"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Permitir que as aplicações que lhe tenham solicitado autorização utilizem informações sobre a sua localização"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Consentimento de localização"</string>
@@ -1003,7 +1020,7 @@
     <string name="admin_device_owner_message" msgid="1935507216776040907">"O gestor pode monitorizar e gerir as aplicações e os dados associados a este dispositivo, incluindo as definições, as autorizações, o acesso empresarial, a atividade da rede e as informações de localização do dispositivo."</string>
     <string name="remove_managed_profile_label" msgid="8950011141359605612">"Remover perfil de trabalho"</string>
     <string name="active_device_admin_msg" msgid="185537304726228624">"App administração do dispositivo"</string>
-    <string name="remove_device_admin" msgid="2623866073546295104">"Desativar esta aplicação de administração do dispositivo"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Desativar esta app de administração do dispositivo"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Desinstalar aplicação"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Desativar e desinstalar"</string>
     <string name="select_device_admin_msg" msgid="8475934459999710332">"Apps de gestor do dispositivo"</string>
@@ -1011,7 +1028,7 @@
     <string name="add_device_admin" msgid="5078281377915844544">"Ativar a aplicação de administração deste dispositivo"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"A ativação desta aplicação de administração permite que a aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> execute as seguintes operações:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Este dispositivo será gerido e monitorizado pela aplicação <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="device_admin_status" msgid="5467001937240455367">"Esta aplicação de administração está ativa e permite que a aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> execute as seguintes operações:"</string>
+    <string name="device_admin_status" msgid="5467001937240455367">"Esta app de administração está ativa e permite que a app <xliff:g id="APP_NAME">%1$s</xliff:g> execute as seguintes operações:"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Ao continuar, o utilizador será gerido pelo seu gestor, que, para além dos seus dados pessoais, também poderá armazenar dados associados.\n\nO gestor pode monitorizar e gerir as definições, o acesso, as aplicações e os dados associados a este utilizador, incluindo a atividade da rede e as informações de localização do seu dispositivo."</string>
     <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Pretende partilhar o relatório de erro?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"O seu gestor de TI solicitou um relatório de erro para ajudar na resolução de problemas deste dispositivo. As aplicações e os dados podem ser partilhados."</string>
