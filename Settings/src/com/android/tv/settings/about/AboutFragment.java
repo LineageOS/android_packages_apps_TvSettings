@@ -50,6 +50,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settingslib.DeviceInfoUtils;
+import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.Utils;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
@@ -298,6 +299,14 @@ public class AboutFragment extends SettingsPreferenceFragment {
                 mHits[mHits.length - 1] = SystemClock.uptimeMillis();
                 if (mHits[0] >= (SystemClock.uptimeMillis() - 500)) {
                     if (mUm.hasUserRestriction(UserManager.DISALLOW_FUN)) {
+                        final RestrictedLockUtils.EnforcedAdmin admin = RestrictedLockUtilsInternal
+                                .checkIfRestrictionEnforced(getContext(), UserManager.DISALLOW_FUN,
+                                        UserHandle.myUserId());
+                        if (admin != null) {
+                            RestrictedLockUtils.sendShowAdminSupportDetailsIntent(getContext(),
+                                    admin);
+                        }
+
                         Log.d(TAG, "Sorry, no fun for you!");
                         return false;
                     }

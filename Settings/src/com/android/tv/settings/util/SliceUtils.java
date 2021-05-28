@@ -16,12 +16,20 @@
 
 package com.android.tv.settings.util;
 
+import android.app.slice.SliceManager;
 import android.content.ContentProviderClient;
 import android.content.Context;
 import android.net.Uri;
+import android.util.Log;
+
+import com.android.tv.settings.R;
+
+import java.util.Collection;
 
 /** Utility class for slice **/
 public final class SliceUtils {
+    private static final String TAG = "SliceUtils";
+
     public static final String PATH_SLICE_FRAGMENT =
             "com.android.tv.twopanelsettings.slices.SliceFragment";
     /**
@@ -39,5 +47,36 @@ public final class SliceUtils {
         } else {
             return false;
         }
+    }
+
+    /**
+     * Checks if the slice is enabled
+     * @param context Current context of the app
+     * @param uri Play Tv Settings slice uri
+     * @return returns true if slice is enabled, false otherwise
+     */
+    public static boolean isPlayTvSettingsSliceEnabled(Context context, String uri) {
+        if (uri == null) {
+            return false;
+        }
+        final SliceManager sliceManager = context.getSystemService(SliceManager.class);
+        if (sliceManager == null) {
+            return false;
+        }
+        try {
+            final Collection<Uri> enabledSlicesUri = sliceManager.getSliceDescendants(
+                    Uri.parse(context.getString(R.string.play_settings_slice_uri)));
+            if (enabledSlicesUri != null) {
+                for (final Uri sliceUri : enabledSlicesUri) {
+                    Log.i(TAG, "Enabled slice: " + sliceUri);
+                    if (sliceUri.toString().equals(uri)) {
+                        return true;
+                    }
+                }
+            }
+        } catch (NullPointerException nullPointerException) {
+            Log.e(TAG, "Play Store process is not running in background", nullPointerException);
+        }
+        return false;
     }
 }
