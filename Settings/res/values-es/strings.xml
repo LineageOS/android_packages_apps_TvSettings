@@ -328,6 +328,7 @@
       <item quantity="other">Aplicaciones de teléfono</item>
       <item quantity="one">Aplicación de teléfono</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"Aplicación de navegador"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g> y <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g> y <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Tutoriales"</string>
@@ -606,6 +607,22 @@
     <item msgid="5645263357181875427">"Usar hora proporcionada por el flujo de transporte"</item>
     <item msgid="5501503537181350884">"Desactivado"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Para todas las aplicaciones y todos los servicios"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Acceso reciente de"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Sin accesos recientes"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Ver todo"</string>
+    <string name="microphone" msgid="7893752847683941214">"Micrófono"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Acceso al micrófono"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Acceso de las aplicaciones al micrófono"</string>
+    <string name="camera" msgid="1226671478936288283">"Cámara"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Acceso a la cámara"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Acceso de las aplicaciones a la cámara"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Acceso al micrófono: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4436219037877456256">"Cuando se activa, todas las aplicaciones y servicios que tienen permiso pueden acceder a cualquier micrófono de este dispositivo.\n\nEste ajuste no afectará a dispositivos periféricos de audio, como los micrófonos conectados, que tengan un protocolo personalizado."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Acceso a la cámara: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="7045001373813906859">"Cuando se activa, todas las aplicaciones y servicios que tienen permiso pueden acceder a cualquier cámara de este dispositivo.\n\nEste ajuste no afectará a dispositivos periféricos que sean cámaras, como las webcams conectadas, y que tengan un protocolo personalizado."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Activado"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Desactivado"</string>
     <string name="system_location" msgid="4057295363709016511">"Ubicación"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Permitir que las aplicaciones que han pedido permiso usen la información sobre tu ubicación"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Consentimiento de ubicación"</string>
@@ -1007,7 +1024,7 @@
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Desinstalar aplicación"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Desactivar y desinstalar"</string>
     <string name="select_device_admin_msg" msgid="8475934459999710332">"Aplicaciones del administrador de dispositivos"</string>
-    <string name="add_device_admin_msg" msgid="5390773166682603421">"¿Activar administrador de dispositivos?"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"¿Activar aplicación de administrador de dispositivos?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Activar esta aplicación de administrador de dispositivos"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"Al activar esta aplicación de administrador, permites que la aplicación <xliff:g id="APP_NAME">%1$s</xliff:g> realice las siguientes acciones:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> gestionará y supervisará el dispositivo"</string>
