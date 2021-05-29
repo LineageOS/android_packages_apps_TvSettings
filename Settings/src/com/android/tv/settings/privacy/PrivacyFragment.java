@@ -51,6 +51,7 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
     private static final String KEY_PLAY_PROTECT = "play_protect";
     private static final String KEY_MIC = "microphone";
     private static final String KEY_CAMERA = "camera";
+    private static final String KEY_PLAY_AUTO_UPDATE = "play_auto_update";
 
     private int getPreferenceScreenResId() {
         switch (FlavorUtils.getFlavor(getContext())) {
@@ -72,6 +73,7 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
         Preference adsPreference = findPreference(KEY_ADS);
         final Preference securityPreference = findPreference(KEY_SECURITY);
         final Preference playProtectPreference = findPreference(KEY_PLAY_PROTECT);
+        final Preference playAutoUpdatePreference = findPreference(KEY_PLAY_AUTO_UPDATE);
 
         PrivacyToggle.MIC_TOGGLE.preparePreferenceWithSensorFragment(getContext(),
                 findPreference(KEY_MIC), SensorFragment.TOGGLE_EXTRA);
@@ -121,6 +123,9 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
         } else {
             showSecurityPreference(securityPreference, playProtectPreference);
         }
+        if (isPlayAutoUpdatePreferenceEnabled(playAutoUpdatePreference)) {
+            playAutoUpdatePreference.setVisible(true);
+        }
     }
 
     private boolean isPlayProtectPreferenceEnabled(@Nullable Preference playProtectPreference) {
@@ -145,6 +150,13 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
         if (playProtectPreference != null) {
             playProtectPreference.setVisible(false);
         }
+    }
+
+    private boolean isPlayAutoUpdatePreferenceEnabled(
+            @Nullable Preference playAutoUpdatePreference) {
+        return playAutoUpdatePreference instanceof SlicePreference
+                && SliceUtils.isPlayTvSettingsSliceEnabled(
+                        getContext(), ((SlicePreference) playAutoUpdatePreference).getUri());
     }
 
     @Override
