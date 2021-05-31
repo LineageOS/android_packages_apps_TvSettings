@@ -99,6 +99,8 @@
     <string name="apps_see_all_apps" msgid="2002886135933443688">"查看所有应用"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"权限"</string>
     <string name="play_protect_security" msgid="1476818421152898821">"安全"</string>
+    <!-- no translation found for manage_updates (2228839328071887368) -->
+    <skip />
     <string name="all_apps_title" msgid="3717294436135280133">"所有应用"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"显示系统应用"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"已安装的应用"</string>
@@ -328,8 +330,7 @@
       <item quantity="other">电话应用</item>
       <item quantity="one">电话应用</item>
     </plurals>
-    <!-- no translation found for default_browser_title (3612813200586492159) -->
-    <skip />
+    <string name="default_browser_title" msgid="3612813200586492159">"浏览器应用"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>、<xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>、<xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>、<xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"教程"</string>
@@ -608,38 +609,22 @@
     <item msgid="5645263357181875427">"使用传输流提供的时间"</item>
     <item msgid="5501503537181350884">"关闭"</item>
   </string-array>
-    <!-- no translation found for sensor_toggle_description (7415801459994303159) -->
-    <skip />
-    <!-- no translation found for recently_accessed_by_category (6841705864715653428) -->
-    <skip />
-    <!-- no translation found for no_recent_sensor_accesses (3498112970658050800) -->
-    <skip />
-    <!-- no translation found for recently_accessed_show_all (5234849189704717855) -->
-    <skip />
-    <!-- no translation found for microphone (7893752847683941214) -->
-    <skip />
-    <!-- no translation found for mic_toggle_title (7193417007060235665) -->
-    <skip />
-    <!-- no translation found for open_mic_permissions (8121871594807641073) -->
-    <skip />
-    <!-- no translation found for camera (1226671478936288283) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (5566469574224956142) -->
-    <skip />
-    <!-- no translation found for open_camera_permissions (301360297337141591) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_title (1086545614315873599) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_content (4436219037877456256) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_title (3871317082313736088) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_content (7045001373813906859) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_on (4568111889147132257) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_off (7546772458177469821) -->
-    <skip />
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"适用于所有应用和服务"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"最近使用过传感器的应用"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"最近没有使用记录"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"查看全部"</string>
+    <string name="microphone" msgid="7893752847683941214">"麦克风"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"麦克风使用权限"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"应用的麦克风使用权限"</string>
+    <string name="camera" msgid="1226671478936288283">"摄像头"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"摄像头使用权限"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"应用的摄像头使用权限"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"麦克风使用权限：<xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4436219037877456256">"开启后，具有权限的所有应用和服务均可使用此设备上的任何麦克风。\n\n此设置将不会影响音频外围设备，例如采用自定义协议的插入式麦克风设备。"</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"摄像头使用权限：<xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="7045001373813906859">"开启后，具有权限的所有应用和服务均可使用此设备上的任何摄像头。\n\n此设置将不会影响摄像头外围设备，例如采用自定义协议的插入式网络摄像头。"</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"开启"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"关闭"</string>
     <string name="system_location" msgid="4057295363709016511">"位置信息"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"允许获得您许可的应用使用您的位置信息"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"同意记录位置信息"</string>
