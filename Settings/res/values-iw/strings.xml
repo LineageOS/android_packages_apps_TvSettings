@@ -103,6 +103,8 @@
     <string name="apps_see_all_apps" msgid="2002886135933443688">"הצגת כל האפליקציות"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"הרשאות"</string>
     <string name="play_protect_security" msgid="1476818421152898821">"אבטחה"</string>
+    <!-- no translation found for manage_updates (2228839328071887368) -->
+    <skip />
     <string name="all_apps_title" msgid="3717294436135280133">"כל האפליקציות"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"הצגת אפליקציות מערכת"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"אפליקציות מותקנות"</string>
@@ -348,8 +350,7 @@
       <item quantity="other">אפליקציות טלפון</item>
       <item quantity="one">אפליקציית טלפון אחת</item>
     </plurals>
-    <!-- no translation found for default_browser_title (3612813200586492159) -->
-    <skip />
+    <string name="default_browser_title" msgid="3612813200586492159">"אפליקציית דפדפן"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"הדרכות"</string>
@@ -638,38 +639,22 @@
     <item msgid="5645263357181875427">"השתמש בשעה שסופקה על ידי זרם התעבורה"</item>
     <item msgid="5501503537181350884">"כבוי"</item>
   </string-array>
-    <!-- no translation found for sensor_toggle_description (7415801459994303159) -->
-    <skip />
-    <!-- no translation found for recently_accessed_by_category (6841705864715653428) -->
-    <skip />
-    <!-- no translation found for no_recent_sensor_accesses (3498112970658050800) -->
-    <skip />
-    <!-- no translation found for recently_accessed_show_all (5234849189704717855) -->
-    <skip />
-    <!-- no translation found for microphone (7893752847683941214) -->
-    <skip />
-    <!-- no translation found for mic_toggle_title (7193417007060235665) -->
-    <skip />
-    <!-- no translation found for open_mic_permissions (8121871594807641073) -->
-    <skip />
-    <!-- no translation found for camera (1226671478936288283) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (5566469574224956142) -->
-    <skip />
-    <!-- no translation found for open_camera_permissions (301360297337141591) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_title (1086545614315873599) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_content (4436219037877456256) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_title (3871317082313736088) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_content (7045001373813906859) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_on (4568111889147132257) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_off (7546772458177469821) -->
-    <skip />
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"לכל האפליקציות והשירותים"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"ניתנה לאחרונה גישה לאפליקציות הבאות"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"לא התקבלו בקשות גישה לאחרונה"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"הצגת הכול"</string>
+    <string name="microphone" msgid="7893752847683941214">"מיקרופון"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"גישה למיקרופון"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"גישה של אפליקציות למיקרופון"</string>
+    <string name="camera" msgid="1226671478936288283">"מצלמה"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"גישה למצלמה"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"גישה של אפליקציות למצלמה"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"סטטוס הגישה למיקרופון: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4436219037877456256">"כשההגדרה מופעלת, לכל האפליקציות והשירותים בעלי הרשאה יש גישה לכל מיקרופון במכשיר הזה.\n\nציוד אודיו היקפי, כמו מכשירי מיקרופון מחוברים עם פרוטוקול בהתאמה אישית, לא יושפעו מההגדרה הזו"</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"סטטוס הגישה למצלמה: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="7045001373813906859">"כשההגדרה מופעלת, לכל האפליקציות והשירותים בעלי הרשאה יש גישה לכל מצלמה במכשיר הזה.\n\nציוד היקפי של המצלמה, כמו מצלמות רשת מחוברות עם פרוטוקול בהתאמה אישית, לא יושפעו מההגדרה הזו."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"מופעל"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"כבוי"</string>
     <string name="system_location" msgid="4057295363709016511">"מיקום"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"אפשר לאפליקציות שביקשו את אישורך להשתמש בפרטי המיקום שלך"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"הסכמה לאישור מיקום"</string>

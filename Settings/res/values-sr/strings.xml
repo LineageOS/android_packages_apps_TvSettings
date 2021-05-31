@@ -101,6 +101,7 @@
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Прикажи све апликације"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Дозволе"</string>
     <string name="play_protect_security" msgid="1476818421152898821">"Безбедност"</string>
+    <string name="manage_updates" msgid="2228839328071887368">"Управљајте ажурирањима"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Све апликације"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Прикажи системске апликације"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Инсталиране апликације"</string>
@@ -338,8 +339,7 @@
       <item quantity="few">Апликације за телефон</item>
       <item quantity="other">Апликације за телефон</item>
     </plurals>
-    <!-- no translation found for default_browser_title (3612813200586492159) -->
-    <skip />
+    <string name="default_browser_title" msgid="3612813200586492159">"Апликација прегледача"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Водичи"</string>
@@ -623,38 +623,22 @@
     <item msgid="5645263357181875427">"Користи време превозног стрима"</item>
     <item msgid="5501503537181350884">"Искључи"</item>
   </string-array>
-    <!-- no translation found for sensor_toggle_description (7415801459994303159) -->
-    <skip />
-    <!-- no translation found for recently_accessed_by_category (6841705864715653428) -->
-    <skip />
-    <!-- no translation found for no_recent_sensor_accesses (3498112970658050800) -->
-    <skip />
-    <!-- no translation found for recently_accessed_show_all (5234849189704717855) -->
-    <skip />
-    <!-- no translation found for microphone (7893752847683941214) -->
-    <skip />
-    <!-- no translation found for mic_toggle_title (7193417007060235665) -->
-    <skip />
-    <!-- no translation found for open_mic_permissions (8121871594807641073) -->
-    <skip />
-    <!-- no translation found for camera (1226671478936288283) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (5566469574224956142) -->
-    <skip />
-    <!-- no translation found for open_camera_permissions (301360297337141591) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_title (1086545614315873599) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_content (4436219037877456256) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_title (3871317082313736088) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_content (7045001373813906859) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_on (4568111889147132257) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_off (7546772458177469821) -->
-    <skip />
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"За све апликације и услуге"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Недавно су приступале апликације"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Нема недавних приступа"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Прикажи све"</string>
+    <string name="microphone" msgid="7893752847683941214">"Микрофон"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Приступ микрофону"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Приступ апликације микрофону"</string>
+    <string name="camera" msgid="1226671478936288283">"Камера"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Приступ камери"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Приступ апликације камери"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Приступ микрофону: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4436219037877456256">"Када је укључен, све апликације и услуге са дозволом могу да приступају сваком микрофону на овом уређају.\n\nОво подешавање не утиче на периферне аудио уређаје, попут жичаних микрофона са прилагођеним протоколом"</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Приступ камери: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="7045001373813906859">"Када је укључен, све апликације и услуге са дозволом могу да приступају свакој камери на овом уређају.\n\nОво подешавање не утиче на периферне камере, попут жичаних веб-камера са прилагођеним протоколом"</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Укључено"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Искључено"</string>
     <string name="system_location" msgid="4057295363709016511">"Локација"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Нека апликације које су тражиле дозволу користе информације о вашој локацији"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Пристанак за локацију"</string>
