@@ -99,6 +99,8 @@
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Bütün tətbiqlərə baxın"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"İcazələr"</string>
     <string name="play_protect_security" msgid="1476818421152898821">"Güvənlik"</string>
+    <!-- no translation found for manage_updates (2228839328071887368) -->
+    <skip />
     <string name="all_apps_title" msgid="3717294436135280133">"Bütün tətbiqlər"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Sistem tətbiqlərini göstərin"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Quraşdırılmış tətbiqlər"</string>
@@ -328,8 +330,7 @@
       <item quantity="other">Telefon tətbiqləri</item>
       <item quantity="one">Telefon tətbiqi</item>
     </plurals>
-    <!-- no translation found for default_browser_title (3612813200586492159) -->
-    <skip />
+    <string name="default_browser_title" msgid="3612813200586492159">"Brauzer tətbiqi"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Təlimatlar"</string>
@@ -608,38 +609,22 @@
     <item msgid="5645263357181875427">"Transport yayım təminatlı zamandan istifadə edin."</item>
     <item msgid="5501503537181350884">"Deaktiv"</item>
   </string-array>
-    <!-- no translation found for sensor_toggle_description (7415801459994303159) -->
-    <skip />
-    <!-- no translation found for recently_accessed_by_category (6841705864715653428) -->
-    <skip />
-    <!-- no translation found for no_recent_sensor_accesses (3498112970658050800) -->
-    <skip />
-    <!-- no translation found for recently_accessed_show_all (5234849189704717855) -->
-    <skip />
-    <!-- no translation found for microphone (7893752847683941214) -->
-    <skip />
-    <!-- no translation found for mic_toggle_title (7193417007060235665) -->
-    <skip />
-    <!-- no translation found for open_mic_permissions (8121871594807641073) -->
-    <skip />
-    <!-- no translation found for camera (1226671478936288283) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (5566469574224956142) -->
-    <skip />
-    <!-- no translation found for open_camera_permissions (301360297337141591) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_title (1086545614315873599) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_content (4436219037877456256) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_title (3871317082313736088) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_content (7045001373813906859) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_on (4568111889147132257) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_off (7546772458177469821) -->
-    <skip />
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Bütün tətbiqlər və xidmətlər üçün"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Bu yaxınlarda giriş edilib:"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Bu yaxınlarda giriş olmayıb"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Hamısına baxın"</string>
+    <string name="microphone" msgid="7893752847683941214">"Mikrofon"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Mikrofona giriş"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Mikrofona tətbiqin girişi"</string>
+    <string name="camera" msgid="1226671478936288283">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Kameraya giriş"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Kameraya tətbiqin girişi"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofona giriş: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4436219037877456256">"Aktiv edildikdə, icazəsi olan bütün tətbiqlər və xidmətlər bu cihazdakı istənilən mikrofona giriş edə bilər.\n\nFərdi protokolu olan qoşulan mikrofon cihazları kimi audio köməkçi cihazları bu ayardan təsirlənməyəcəkdir."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kameraya giriş: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="7045001373813906859">"Aktiv edildikdə, icazəsi olan bütün tətbiqlər və xidmətlər bu cihazdakı istənilən kameraya giriş edə bilər.\n\nFərdi protokolu olan qoşulan veb kameralar kimi kamera köməkçi cihazları bu ayardan təsirlənməyəcəkdir."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Aktiv"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Deaktiv"</string>
     <string name="system_location" msgid="4057295363709016511">"Məkan"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"İcazə sorğusu göndərən tətbiqlərə yerləşmə məlumatınızı istifadə etməyə icazə verin"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Yer razılığı"</string>

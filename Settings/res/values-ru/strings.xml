@@ -103,6 +103,7 @@
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Все приложения"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Разрешения"</string>
     <string name="play_protect_security" msgid="1476818421152898821">"Безопасность"</string>
+    <string name="manage_updates" msgid="2228839328071887368">"Настроить обновления"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Все приложения"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Показывать системные приложения"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Установленные приложения"</string>
@@ -348,8 +349,7 @@
       <item quantity="many">Приложения для звонков</item>
       <item quantity="other">Приложения для звонков</item>
     </plurals>
-    <!-- no translation found for default_browser_title (3612813200586492159) -->
-    <skip />
+    <string name="default_browser_title" msgid="3612813200586492159">"Браузер"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g> и <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g> и <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Руководства"</string>
@@ -638,38 +638,22 @@
     <item msgid="5645263357181875427">"Использовать время потока"</item>
     <item msgid="5501503537181350884">"Отключено"</item>
   </string-array>
-    <!-- no translation found for sensor_toggle_description (7415801459994303159) -->
-    <skip />
-    <!-- no translation found for recently_accessed_by_category (6841705864715653428) -->
-    <skip />
-    <!-- no translation found for no_recent_sensor_accesses (3498112970658050800) -->
-    <skip />
-    <!-- no translation found for recently_accessed_show_all (5234849189704717855) -->
-    <skip />
-    <!-- no translation found for microphone (7893752847683941214) -->
-    <skip />
-    <!-- no translation found for mic_toggle_title (7193417007060235665) -->
-    <skip />
-    <!-- no translation found for open_mic_permissions (8121871594807641073) -->
-    <skip />
-    <!-- no translation found for camera (1226671478936288283) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (5566469574224956142) -->
-    <skip />
-    <!-- no translation found for open_camera_permissions (301360297337141591) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_title (1086545614315873599) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_content (4436219037877456256) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_title (3871317082313736088) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_content (7045001373813906859) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_on (4568111889147132257) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_off (7546772458177469821) -->
-    <skip />
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Для всех приложений и сервисов"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Недавние использования"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Нет недавних использований"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Показать все"</string>
+    <string name="microphone" msgid="7893752847683941214">"Микрофон"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Доступ к микрофону"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Доступ приложений к микрофону"</string>
+    <string name="camera" msgid="1226671478936288283">"Камера"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Доступ к камере"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Доступ приложений к камере"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Доступ к микрофону: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4436219037877456256">"Если эта настройка включена, все приложения и сервисы, имеющие разрешение, могут использовать микрофон на этом устройстве.\n\nЭта настройка не затрагивает периферийные устройства, например подключаемые микрофоны с персонализированным протоколом."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Доступ к камере: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="7045001373813906859">"Если эта настройка включена, все приложения и сервисы, имеющие разрешение, могут использовать камеру на этом устройстве.\n\nЭта настройка не затрагивает периферийные устройства, например подключаемые веб-камеры с персонализированным протоколом."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Включено"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Выключено"</string>
     <string name="system_location" msgid="4057295363709016511">"Местоположение"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Разрешить приложениям использовать данные о вашем местоположении"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Сбор геоданных"</string>
@@ -1075,13 +1059,13 @@
     <string name="admin_device_owner_message" msgid="1935507216776040907">"Администратор может контролировать настройки, приложения, разрешения и параметры доступа к корпоративным ресурсам на этом устройстве, а также связанные с ним данные, например сведения о местоположении или действиях в сети."</string>
     <string name="remove_managed_profile_label" msgid="8950011141359605612">"Удалить рабочий профиль"</string>
     <string name="active_device_admin_msg" msgid="185537304726228624">"Приложение администратора устройства"</string>
-    <string name="remove_device_admin" msgid="2623866073546295104">"Отключить приложение администратора устройства"</string>
+    <string name="remove_device_admin" msgid="2623866073546295104">"Отключить это приложение администратора"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Удалить приложение"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Отключить и удалить"</string>
     <string name="select_device_admin_msg" msgid="8475934459999710332">"Приложения администратора"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"Приложение администратора устройства"</string>
-    <string name="add_device_admin" msgid="5078281377915844544">"Активировать приложение администратора устройства"</string>
-    <string name="device_admin_warning" msgid="7399916080685200660">"После активации приложения администратора приложение \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" сможет выполнять следующие операции:"</string>
+    <string name="add_device_admin" msgid="5078281377915844544">"Активировать это приложение администратора"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"После того как вы активируете это приложение администратора, приложение \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" сможет выполнять следующие действия:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Приложение \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" будет отслеживать это устройство и управлять им."</string>
     <string name="device_admin_status" msgid="5467001937240455367">"Приложение администратора активно и разрешает приложению \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" выполнять следующие операции:"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Администратор будет управлять этим профилем и сможет сохранять связанные с ним данные, а также вашу личную информацию.\n\nКроме того, администратор сможет контролировать и изменять настройки и параметры доступа, а также управлять приложениями и данными этого пользователя, в том числе получать сведения о действиях в сети и местоположении."</string>
