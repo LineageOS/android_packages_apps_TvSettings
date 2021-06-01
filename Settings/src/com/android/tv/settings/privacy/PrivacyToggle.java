@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.privacy;
 
+import android.annotation.Nullable;
 import android.app.AppOpsManager;
 import android.content.Context;
 import android.hardware.SensorPrivacyManager;
@@ -89,8 +90,11 @@ public enum PrivacyToggle {
      * Hides the preference if the toggle shouldn't be shown and adds the toggle to the extras so
      * the SensorFragment knows which sensor is meant.
      */
-    public void preparePreferenceWithSensorFragment(Context context, Preference preference,
-            String extrasKey) {
+    public void preparePreferenceWithSensorFragment(Context context,
+            @Nullable Preference preference, String extrasKey) {
+        if (preference == null) {
+            return;
+        }
         if (isPresentAndEnabled(context)) {
             preference.getExtras().putObject(extrasKey, this);
         } else {

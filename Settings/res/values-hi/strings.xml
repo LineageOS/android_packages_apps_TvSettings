@@ -99,6 +99,8 @@
     <string name="apps_see_all_apps" msgid="2002886135933443688">"सभी ऐप्लिकेशन देखें"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"अनुमतियां"</string>
     <string name="play_protect_security" msgid="1476818421152898821">"सुरक्षा"</string>
+    <!-- no translation found for manage_updates (2228839328071887368) -->
+    <skip />
     <string name="all_apps_title" msgid="3717294436135280133">"सभी ऐप्लिकेशन"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"सिस्टम ऐप्लिकेशन दिखाएं"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"इंस्‍टॉल किए गए ऐप्लिकेशन"</string>
@@ -328,8 +330,7 @@
       <item quantity="one">फ़ोन ऐप्लिकेशन</item>
       <item quantity="other">फ़ोन ऐप्लिकेशन</item>
     </plurals>
-    <!-- no translation found for default_browser_title (3612813200586492159) -->
-    <skip />
+    <string name="default_browser_title" msgid="3612813200586492159">"ब्राउज़र ऐप्लिकेशन"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"ट्यूटोरियल"</string>
@@ -608,38 +609,22 @@
     <item msgid="5645263357181875427">"परिवहन स्‍ट्रीम-प्रदत्त समय का उपयोग करें"</item>
     <item msgid="5501503537181350884">"बंद करें"</item>
   </string-array>
-    <!-- no translation found for sensor_toggle_description (7415801459994303159) -->
-    <skip />
-    <!-- no translation found for recently_accessed_by_category (6841705864715653428) -->
-    <skip />
-    <!-- no translation found for no_recent_sensor_accesses (3498112970658050800) -->
-    <skip />
-    <!-- no translation found for recently_accessed_show_all (5234849189704717855) -->
-    <skip />
-    <!-- no translation found for microphone (7893752847683941214) -->
-    <skip />
-    <!-- no translation found for mic_toggle_title (7193417007060235665) -->
-    <skip />
-    <!-- no translation found for open_mic_permissions (8121871594807641073) -->
-    <skip />
-    <!-- no translation found for camera (1226671478936288283) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (5566469574224956142) -->
-    <skip />
-    <!-- no translation found for open_camera_permissions (301360297337141591) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_title (1086545614315873599) -->
-    <skip />
-    <!-- no translation found for mic_toggle_info_content (4436219037877456256) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_title (3871317082313736088) -->
-    <skip />
-    <!-- no translation found for camera_toggle_info_content (7045001373813906859) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_on (4568111889147132257) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_off (7546772458177469821) -->
-    <skip />
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"सभी ऐप्लिकेशन और सेवाओं के लिए"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"हाल ही में इन ऐप्लिकेशन ने ऐक्सेस किया है"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"हाल ही में किसी ऐप्लिकेशन ने ऐक्सेस नहीं किया है"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"सभी ऐप्लिकेशन देखें"</string>
+    <string name="microphone" msgid="7893752847683941214">"माइक्रोफ़ोन"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"माइक्रोफ़ोन का ऐक्सेस"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"ऐप्लिकेशन के लिए माइक्रोफ़ोन ऐक्सेस करने की अनुमति"</string>
+    <string name="camera" msgid="1226671478936288283">"कैमरा"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"कैमरे का ऐक्सेस"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"ऐप्लिकेशन के लिए कैमरा ऐक्सेस करने की अनुमति"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"माइक्रोफ़ोन का ऐक्सेस: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4436219037877456256">"माइक्रोफ़ोन ऐक्सेस करने की सेटिंग चालू होने पर, वे सभी ऐप्लिकेशन और सेवाएं इस डिवाइस का कोई भी माइक्रोफ़ोन ऐक्सेस कर पाएंगी जिन्हें आपने ऐसा करने की अनुमति दी है.\n\nहालांकि, इस सेटिंग को चालू करने से, उन सहायक ऑडियो डिवाइसों (जैसे कि प्लग-इन माइक) पर कोई असर नहीं होगा जो कस्टम प्रोटोकॉल का पालन करते हैं."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"कैमरे का ऐक्सेस: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="7045001373813906859">"कैमरा ऐक्सेस करने की सेटिंग चालू होने पर, वे सभी ऐप्लिकेशन और सेवाएं इस डिवाइस का कोई भी कैमरा ऐक्सेस कर पाएंगी जिन्हें आपने ऐसा करने की अनुमति दी है.\n\nहालांकि, इस सेटिंग को चालू करने से, कैमरे के तौर पर काम करने वाले उन सहायक डिवाइसों (जैसे कि प्लग-इन वेबकैम) पर कोई असर नहीं होगा जो कस्टम प्रोटोकॉल का पालन करते हैं."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"चालू है"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"बंद है"</string>
     <string name="system_location" msgid="4057295363709016511">"जगह"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"आप अपनी उन ऐप्स  को स्थान जानकारी का उपयोग करने दें, जिन्होंने आपकी अनुमति मांगी है."</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"स्‍थान सहमति"</string>
