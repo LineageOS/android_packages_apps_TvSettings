@@ -16,9 +16,12 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:settings="http://schemas.android.com/apk/res-auto"
                   android:title="@string/accounts_category_title">
-    <Preference
+    <com.android.settingslib.RestrictedPreference
         android:icon="@drawable/ic_add"
         android:key="add_account"
-        android:title="@string/add_account"/>
+        android:title="@string/add_account"
+        settings:userRestriction="no_modify_accounts"/>
+
 </PreferenceScreen>
