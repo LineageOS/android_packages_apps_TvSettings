@@ -255,6 +255,10 @@
             android:entries="@array/show_non_rect_clip_entries"
             android:entryValues="@array/show_non_rect_clip_values" />
 
+        <SwitchPreference
+            android:key="window_blurs"
+            android:title="@string/window_blurs"/>
+
         <com.android.tv.settings.widget.SwitchWithSoundPreference
             android:key="force_msaa"
             android:title="@string/force_msaa"
