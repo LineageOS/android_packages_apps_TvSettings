@@ -24,7 +24,7 @@
         android:enabled="false"
         android:selectable="false"/>
 
-    <SwitchPreference
+    <com.android.tv.settings.widget.SwitchWithSoundPreference
         android:key="wifi_enable"
         android:persistent="true"
         android:title="@string/wifi_setting_enable_wifi" />
@@ -39,19 +39,21 @@
     <PreferenceCategory
         android:key="wifi_other"
         android:title="@string/wifi_setting_header_other_options">
-        <Preference
+        <com.android.settingslib.RestrictedPreference
             android:key="wifi_add_easyconnect"
             android:title="@string/wifi_setting_other_options_add_network_via_easyconnect"
             android:icon="@drawable/ic_qr_code"
-            android:fragment="com.android.tv.settings.connectivity.WiFiEasyConnectInfoFragment">
-        </Preference>
-        <Preference
+            android:fragment="com.android.tv.settings.connectivity.WiFiEasyConnectInfoFragment"
+            custom:userRestriction="no_config_wifi">
+        </com.android.settingslib.RestrictedPreference>
+        <com.android.settingslib.RestrictedPreference
             android:key="wifi_add"
-            android:title="@string/wifi_setting_other_options_add_network" >
+            android:title="@string/wifi_setting_other_options_add_network"
+            custom:userRestriction="no_config_wifi">
             <intent
                 android:targetClass="com.android.tv.settings.connectivity.AddWifiNetworkActivity"
                 android:targetPackage="com.android.tv.settings" />
-        </Preference>
+        </com.android.settingslib.RestrictedPreference>
         <com.android.tv.twopanelsettings.slices.SlicePreference
             android:key="data_saver_slice"
             android:title="@string/title_data_saver"

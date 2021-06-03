@@ -49,7 +49,7 @@
     <PreferenceCategory
         android:key="sound_category"
         android:title="@string/device_sound" />
-    <SwitchPreference
+    <com.android.tv.settings.widget.SwitchWithSoundPreference
         android:key="sound_effects"
         android:persistent="true"
         android:title="@string/device_sound_effects"/>
