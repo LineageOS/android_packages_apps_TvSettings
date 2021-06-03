@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.system.development;
 
+import static android.view.CrossWindowBlurListeners.CROSS_WINDOW_BLUR_SUPPORTED;
+
 import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
 
 import android.Manifest;
@@ -46,7 +48,6 @@ import android.os.StrictMode;
 import android.os.SystemProperties;
 import android.os.UserManager;
 import android.provider.Settings;
-import android.service.persistentdata.PersistentDataBlockManager;
 import android.sysprop.AdbProperties;
 import android.sysprop.DisplayProperties;
 import android.text.TextUtils;
@@ -131,6 +132,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private static final String DEBUG_HW_OVERDRAW_KEY = "debug_hw_overdraw";
     private static final String DEBUG_LAYOUT_KEY = "debug_layout";
     private static final String FORCE_RTL_LAYOUT_KEY = "force_rtl_layout_all_locales";
+    private static final String WINDOW_BLURS_KEY = "window_blurs";
     private static final String WINDOW_ANIMATION_SCALE_KEY = "window_animation_scale";
     private static final String TRANSITION_ANIMATION_SCALE_KEY = "transition_animation_scale";
     private static final String ANIMATOR_DURATION_SCALE_KEY = "animator_duration_scale";
@@ -217,6 +219,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private SwitchPreference mShowHwLayersUpdates;
     private SwitchPreference mDebugLayout;
     private SwitchPreference mForceRtlLayout;
+    private SwitchPreference mWindowBlurs;
     private ListPreference mDebugHwOverdraw;
     private LogdSizePreferenceController mLogdSizeController;
     private LogpersistPreferenceController mLogpersistController;
@@ -388,6 +391,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mShowHwLayersUpdates = findAndInitSwitchPref(SHOW_HW_LAYERS_UPDATES_KEY);
         mDebugLayout = findAndInitSwitchPref(DEBUG_LAYOUT_KEY);
         mForceRtlLayout = findAndInitSwitchPref(FORCE_RTL_LAYOUT_KEY);
+        mWindowBlurs = findAndInitSwitchPref(WINDOW_BLURS_KEY);
         mDebugHwOverdraw = addListPreference(DEBUG_HW_OVERDRAW_KEY);
         mWifiDisplayCertification = findAndInitSwitchPref(WIFI_DISPLAY_CERTIFICATION_KEY);
         mWifiVerboseLogging = findAndInitSwitchPref(WIFI_VERBOSE_LOGGING_KEY);
@@ -660,6 +664,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         updateVerifyAppsOverUsbOptions();
         updateBugreportOptions();
         updateForceRtlOptions();
+        updateWindowBlursOptions();
         mLogdSizeController.updateLogdSizeValues();
         mLogpersistController.updateLogpersistValues();
         updateWifiDisplayCertificationOptions();
@@ -1293,6 +1298,22 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 getActivity().getResources().getConfiguration().getLocales().get(0));
     }
 
+    private void updateWindowBlursOptions() {
+        if (!CROSS_WINDOW_BLUR_SUPPORTED) {
+            mWindowBlurs.setVisible(false);
+        } else {
+            updateSwitchPreference(mWindowBlurs,
+                    Settings.Global.getInt(mContentResolver,
+                            Settings.Global.DISABLE_WINDOW_BLURS, 0) == 0);
+        }
+    }
+
+    private void writeWindowBlursOptions() {
+        boolean value = mWindowBlurs.isChecked();
+        Settings.Global.putInt(mContentResolver,
+                Settings.Global.DISABLE_WINDOW_BLURS, value ? 0 : 1);
+    }
+
     private void updateWifiDisplayCertificationOptions() {
         updateSwitchPreference(mWifiDisplayCertification, Settings.Global.getInt(
                 mContentResolver, Settings.Global.WIFI_DISPLAY_CERTIFICATION_ON, 0) != 0);
@@ -1620,6 +1641,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             writeDebugLayoutOptions();
         } else if (preference == mForceRtlLayout) {
             writeForceRtlOptions();
+        } else if (preference == mWindowBlurs) {
+            writeWindowBlursOptions();
         } else if (preference == mWifiDisplayCertification) {
             writeWifiDisplayCertificationOptions();
         } else if (preference == mWifiVerboseLogging) {
