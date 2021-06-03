@@ -76,7 +76,7 @@
         android:key="cast_settings"
         android:title="@string/cast_settings_title"
         custom:uri="@string/cast_settings_slice_uri"/>
-    <SwitchPreference
+    <com.android.tv.settings.widget.SwitchWithSoundPreference
         android:key="sound_effects_switch"
         android:icon="@drawable/ic_system_sound"
         android:persistent="true"
