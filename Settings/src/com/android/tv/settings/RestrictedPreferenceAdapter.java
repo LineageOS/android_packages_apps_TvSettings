@@ -154,6 +154,26 @@ public class RestrictedPreferenceAdapter<T extends Preference> {
     }
 
     /**
+     * Returns the preference to be inserted into the preference screen.
+     *
+     * If the preference is unrestricted, this returns the underlying original preference.
+     * If the preference is restricted, this returns the RestrictedPreference that replaces
+     * the original preference.
+     */
+    public Preference getPreference() {
+        if (mRestrictedPreference != null) {
+            return mRestrictedPreference;
+        }
+
+        return mOriginalPreference;
+    }
+
+    /** Returns the original preference. */
+    public Preference getOriginalPreference() {
+        return mOriginalPreference;
+    }
+
+    /**
      * Update the preference.
      * The update function will be called with the adapted preference, changes will be reflected
      * on the restricted preference.
@@ -185,6 +205,7 @@ public class RestrictedPreferenceAdapter<T extends Preference> {
         mRestrictedPreference.setKey(mOriginalPreference.getKey());
         mRestrictedPreference.setTitle(mOriginalPreference.getTitle());
         mRestrictedPreference.setSummary(mOriginalPreference.getSummary());
+        mRestrictedPreference.setIcon(mOriginalPreference.getIcon());
         mRestrictedPreference.setVisible(mOriginalPreference.isVisible());
         mRestrictedPreference.setDisabledByAdmin(isRestrictedByAdmin());
     }

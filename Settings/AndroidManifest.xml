@@ -70,7 +70,9 @@
     <uses-permission android:name="com.google.android.assistant.WRITE_HOTWORD_STATE"/>
     <uses-permission android:name="android.permission.MANAGE_SLICE_PERMISSIONS"/>
 
-    <application android:allowClearUserData="false"
+    <application
+         android:name=".TvSettingsApplication"
+         android:allowClearUserData="false"
          android:banner="@drawable/ic_launcher_banner_settings"
          android:defaultToDeviceProtectedStorage="true"
          android:directBootAware="true"
@@ -1054,6 +1056,7 @@
             android:theme="@style/TvSettingsActivityTheme">
             <intent-filter android:priority="1" >
                 <action android:name="android.settings.ACCESSIBILITY_TV_OEM_LINK" />
+                <action android:name="android.settings.ACCESSIBILITY_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
