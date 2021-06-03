@@ -22,13 +22,13 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidedAction;
-import androidx.preference.Preference;
 
+import com.android.settingslib.RestrictedPreference;
 import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.List;
 
-public abstract class AppActionPreference extends Preference {
+public abstract class AppActionPreference extends RestrictedPreference {
     protected ApplicationsState.AppEntry mEntry;
 
     public AppActionPreference(Context context, ApplicationsState.AppEntry entry) {
