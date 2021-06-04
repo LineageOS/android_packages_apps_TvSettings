@@ -25,10 +25,14 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.annotation.NonNull;
 import androidx.leanback.widget.GuidanceStylist;
 
+import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
@@ -46,6 +50,18 @@ public class EnableDisablePreference extends AppActionPreference {
         super(context, entry);
         mPackageManager = context.getPackageManager();
         refresh();
+
+
+        if (isRestricted()) {
+            final RestrictedLockUtils.EnforcedAdmin admin =
+                    RestrictedLockUtilsInternal.checkIfRestrictionEnforced(context,
+                            UserManager.DISALLOW_APPS_CONTROL, UserHandle.myUserId());
+            if (admin != null) {
+                setDisabledByAdmin(admin);
+            } else {
+                setEnabled(false);
+            }
+        }
     }
 
     public void refresh() {
@@ -121,6 +137,11 @@ public class EnableDisablePreference extends AppActionPreference {
             }
         }
         return false;
+    }
+
+    boolean isRestricted() {
+        UserManager userManager = getContext().getSystemService(UserManager.class);
+        return userManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL);
     }
 
     @Override
