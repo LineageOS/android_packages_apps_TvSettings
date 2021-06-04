@@ -502,6 +502,8 @@ public class MainFragment extends PreferenceControllerFragment implements
     @Override
     public void onStart() {
         super.onStart();
+        updateAccountPref();
+        updateAccessoryPref();
         IntentFilter btChangeFilter = new IntentFilter();
         btChangeFilter.addAction(BluetoothDevice.ACTION_ACL_CONNECTED);
         btChangeFilter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);

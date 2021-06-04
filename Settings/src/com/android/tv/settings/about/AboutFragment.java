@@ -329,6 +329,12 @@ public class AboutFragment extends SettingsPreferenceFragment {
                 }
 
                 if (mUm.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES)) {
+                    final RestrictedLockUtils.EnforcedAdmin admin = RestrictedLockUtilsInternal
+                            .checkIfRestrictionEnforced(getContext(),
+                                    UserManager.DISALLOW_DEBUGGING_FEATURES, UserHandle.myUserId());
+                    if (admin != null) {
+                        RestrictedLockUtils.sendShowAdminSupportDetailsIntent(getContext(), admin);
+                    }
                     return true;
                 }
 
