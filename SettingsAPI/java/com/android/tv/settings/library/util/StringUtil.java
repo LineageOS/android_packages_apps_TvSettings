@@ -133,8 +133,7 @@ public class StringUtil {
         final RelativeDateTimeFormatter.RelativeUnit unit;
         final int value;
         if (withSeconds && seconds < 2 * SECONDS_PER_MINUTE) {
-//            return context.getResources().getString(R.string.time_unit_just_now);
-            return "";
+            return ResourcesUtil.getString(context, "time_unit_just_now");
         } else if (seconds < 2 * SECONDS_PER_HOUR) {
             unit = RelativeDateTimeFormatter.RelativeUnit.MINUTES;
             value = (seconds + SECONDS_PER_MINUTE / 2)

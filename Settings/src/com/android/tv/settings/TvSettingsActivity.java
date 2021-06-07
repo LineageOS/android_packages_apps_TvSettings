@@ -100,6 +100,16 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
                                             ((PreferenceControllerFragmentCompat) fragment)
                                                     .updateScreenTitle(title));
                 }
+
+                @Override
+                public void notifyNavigateBackward(int state) {
+
+                }
+
+                @Override
+                public void notifyNavigateForward(int state) {
+
+                }
             };
 
     public Fragment getVisibleFragment() {

@@ -90,8 +90,10 @@ public abstract class PreferenceControllerState implements State {
         Collection<AbstractPreferenceController> controllers =
                 new ArrayList<>(mPreferenceControllers);
         for (AbstractPreferenceController controller : controllers) {
-            controller.handlePreferenceTreeClick(
-                    mPreferenceCompatManager.getOrCreatePrefCompat(key));
+            if (keyEquals(key, controller.getPreferenceKey())) {
+                controller.handlePreferenceTreeClick(
+                        mPreferenceCompatManager.getOrCreatePrefCompat(key), status);
+            }
         }
     }
 
@@ -141,5 +143,9 @@ public abstract class PreferenceControllerState implements State {
 
     protected Lifecycle getLifecycle() {
         return mLifecycle;
+    }
+
+    private boolean keyEquals(String key1, String[] key2) {
+        return key2 != null && key2.length == 1 && key1 != null && key1.equals(key2[0]);
     }
 }

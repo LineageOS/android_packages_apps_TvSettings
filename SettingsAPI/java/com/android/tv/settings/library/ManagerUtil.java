@@ -16,6 +16,9 @@
 
 package com.android.tv.settings.library;
 
+import static com.android.tv.settings.library.PreferenceCompat.STATUS_OFF;
+import static com.android.tv.settings.library.PreferenceCompat.STATUS_ON;
+
 import android.annotation.SystemApi;
 
 /**
@@ -40,11 +43,19 @@ public final class ManagerUtil {
     }
 
     static byte getChecked(boolean checked) {
-        return checked ? (byte) 2 : (byte) 1;
+        return checked ? STATUS_ON : STATUS_OFF;
+    }
+
+    static byte getSelectable(boolean selectable) {
+        return selectable ? STATUS_ON : STATUS_OFF;
     }
 
     static byte getVisible(boolean visible) {
-        return visible ? (byte) 2 : (byte) 1;
+        return visible ? STATUS_ON : STATUS_OFF;
+    }
+
+    static byte getEnabled(boolean enabled) {
+        return enabled ? STATUS_ON : STATUS_OFF;
     }
 
     /**
@@ -54,7 +65,7 @@ public final class ManagerUtil {
      */
     @SystemApi
     public static boolean isChecked(PreferenceCompat pref) {
-        return pref.getChecked() == 2 ? true : false;
+        return pref.getChecked() == STATUS_ON ? true : false;
     }
 
     /**
@@ -64,6 +75,6 @@ public final class ManagerUtil {
      */
     @SystemApi
     public static boolean isVisible(PreferenceCompat pref) {
-        return pref.getVisible() == 2 ? true : false;
+        return pref.getVisible() == STATUS_OFF ? true : false;
     }
 }

@@ -1867,7 +1867,9 @@ public class ApplicationsState {
                 return true;
             } else if (entry.hasLauncherEntry) {
                 return true;
-            } else return hasFlag(entry.info.flags, ApplicationInfo.FLAG_SYSTEM) && entry.isHomeApp;
+            } else {
+                return hasFlag(entry.info.flags, ApplicationInfo.FLAG_SYSTEM) && entry.isHomeApp;
+            }
         }
     };
 
@@ -1901,7 +1903,9 @@ public class ApplicationsState {
                 ApplicationsState.AppEntry entry) {
             if (hasFlag(entry.info.flags, ApplicationInfo.FLAG_UPDATED_SYSTEM_APP)) {
                 return true;
-            } else return !hasFlag(entry.info.flags, ApplicationInfo.FLAG_SYSTEM);
+            } else {
+                return !hasFlag(entry.info.flags, ApplicationInfo.FLAG_SYSTEM);
+            }
         }
     };
 
@@ -1992,8 +1996,10 @@ public class ApplicationsState {
             if (ArrayUtils.contains(mHidePackageNames, entry.info.packageName)) {
                 if (!entry.info.enabled) {
                     return false;
-                } else return entry.info.enabledSetting
-                        != PackageManager.COMPONENT_ENABLED_STATE_DISABLED_UNTIL_USED;
+                } else {
+                    return entry.info.enabledSetting
+                            != PackageManager.COMPONENT_ENABLED_STATE_DISABLED_UNTIL_USED;
+                }
             }
 
             return true;
