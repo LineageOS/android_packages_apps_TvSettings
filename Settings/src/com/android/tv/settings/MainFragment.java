@@ -16,6 +16,11 @@
 
 package com.android.tv.settings;
 
+import static com.android.tv.settings.accounts.AccountsUtil.ACCOUNTS_BASIC_MODE_FRAGMENT;
+import static com.android.tv.settings.accounts.AccountsUtil.ACCOUNTS_FRAGMENT_DEFAULT;
+import static com.android.tv.settings.accounts.AccountsUtil.ACCOUNTS_FRAGMENT_RESTRICTED;
+import static com.android.tv.settings.accounts.AccountsUtil.ACCOUNTS_SLICE_FRAGMENT;
+import static com.android.tv.settings.accounts.AccountsUtil.ACCOUNTS_SYSTEM_INTENT;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
@@ -55,9 +60,9 @@ import androidx.preference.PreferenceCategory;
 
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.suggestions.SuggestionControllerMixinCompat;
-import com.android.settingslib.utils.IconCache;
 import com.android.tv.settings.HotwordSwitchController.HotwordStateListener;
 import com.android.tv.settings.accounts.AccountsFragment;
+import com.android.tv.settings.accounts.AccountsUtil;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.suggestions.SuggestionPreference;
@@ -422,43 +427,73 @@ public class MainFragment extends PreferenceControllerFragment implements
         Preference accountsBasicMode = findPreference(KEY_ACCOUNTS_AND_SIGN_IN_BASIC_MODE);
         Intent intent = new Intent(ACTION_ACCOUNTS);
 
-        if (FlavorUtils.getFeatureFactory(getContext()).getBasicModeFeatureProvider()
-                .isBasicMode(getContext())) {
-            if (accountsBasicMode != null) {
-                accountsBasicMode.setVisible(true);
+        switch(AccountsUtil.getAccountsFragmentToLaunch(getContext())) {
+            case ACCOUNTS_FRAGMENT_RESTRICTED: {
+                // Use the bundled AccountsFragment if restriction active
+                if (accountsBasicMode != null) {
+                    accountsBasicMode.setVisible(false);
+                }
+                if (accountsSlicePref != null) {
+                    accountsSlicePref.setVisible(false);
+                }
+                if (accountsPref != null) {
+                    accountsPref.setVisible(true);
+                }
+                return;
             }
-            if (accountsPref != null) {
-                accountsPref.setVisible(false);
+            case ACCOUNTS_BASIC_MODE_FRAGMENT: {
+                if (accountsBasicMode != null) {
+                    accountsBasicMode.setVisible(true);
+                }
+                if (accountsPref != null) {
+                    accountsPref.setVisible(false);
+                }
+                if (accountsSlicePref != null) {
+                    accountsSlicePref.setVisible(false);
+                }
+                return;
             }
-            if (accountsSlicePref != null) {
-                accountsSlicePref.setVisible(false);
+            case ACCOUNTS_SYSTEM_INTENT: {
+                if (accountsPref != null) {
+                    accountsPref.setVisible(true);
+                    accountsPref.setFragment(null);
+                    accountsPref.setIntent(intent);
+                }
+                if (accountsSlicePref != null) {
+                    accountsSlicePref.setVisible(false);
+                }
+                if (accountsBasicMode != null) {
+                    accountsBasicMode.setVisible(false);
+                }
+                return;
             }
-            return;
-        } else {
-            if (accountsBasicMode != null) {
-                accountsBasicMode.setVisible(false);
+            case ACCOUNTS_SLICE_FRAGMENT: {
+                // If a slice is available, use it to display the accounts settings, otherwise
+                // fall back to use AccountsFragment.
+                if (accountsPref != null) {
+                    accountsPref.setVisible(false);
+                }
+                if (accountsSlicePref != null) {
+                    accountsSlicePref.setVisible(true);
+                }
+                if (accountsBasicMode != null) {
+                    accountsBasicMode.setVisible(false);
+                }
+                return;
             }
-        }
-
-        // If the intent can be handled, use it.
-        if (systemIntentIsHandled(getContext(), intent) != null) {
-            accountsPref.setVisible(true);
-            accountsPref.setFragment(null);
-            accountsPref.setIntent(intent);
-            accountsSlicePref.setVisible(false);
-            return;
-        }
-
-        // If a slice is available, use it to display the accounts settings, otherwise fall back to
-        // use AccountsFragment.
-        String uri = accountsSlicePref.getUri();
-        if (SliceUtils.isSliceProviderValid(getContext(), uri)) {
-            accountsPref.setVisible(false);
-            accountsSlicePref.setVisible(true);
-        } else {
-            accountsPref.setVisible(true);
-            accountsSlicePref.setVisible(false);
-            updateAccountPrefInfo();
+            case ACCOUNTS_FRAGMENT_DEFAULT:
+            default: {
+                if (accountsPref != null) {
+                    accountsPref.setVisible(true);
+                    updateAccountPrefInfo();
+                }
+                if (accountsSlicePref != null) {
+                    accountsSlicePref.setVisible(false);
+                }
+                if (accountsBasicMode != null) {
+                    accountsBasicMode.setVisible(false);
+                }
+            }
         }
     }
 
@@ -518,7 +553,8 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference.getKey().equals(KEY_ACCOUNTS_AND_SIGN_IN) && !mHasAccounts
+        if ((preference.getKey().equals(KEY_ACCOUNTS_AND_SIGN_IN) && !mHasAccounts
+                && !AccountsUtil.isAdminRestricted(getContext()))
                 || (preference.getKey().equals(KEY_ACCESSORIES) && !mHasBtAccessories)
                 || (preference.getKey().equals(KEY_DISPLAY_AND_SOUND)
                 && preference.getIntent() != null)
