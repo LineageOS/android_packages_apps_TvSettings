@@ -30,6 +30,7 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.os.UserManager;
 import android.text.TextUtils;
 import android.util.ArraySet;
 import android.util.Log;
@@ -144,16 +145,19 @@ public class AccountsFragment extends SettingsPreferenceFragment {
         final Preference addAccountPref = findPreference(KEY_ADD_ACCOUNT);
         if (addAccountPref != null) {
             addAccountPref.setOrder(Integer.MAX_VALUE);
-            if (isRestricted()) {
-                addAccountPref.setVisible(false);
-            } else {
-                setUpAddAccountPrefIntent(addAccountPref, getContext());
+            if (!AccountsUtil.isAdminRestricted(getContext())) {
+                if (isRestricted()) {
+                    addAccountPref.setVisible(false);
+                } else {
+                    setUpAddAccountPrefIntent(addAccountPref, getContext());
+                }
             }
         }
     }
 
     private boolean isRestricted() {
-        return SecurityFragment.isRestrictedProfileInEffect(getContext());
+        return SecurityFragment.isRestrictedProfileInEffect(getContext()) || UserManager.get(
+                getContext()).hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS);
     }
 
     /**
