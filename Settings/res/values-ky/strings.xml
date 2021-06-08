@@ -63,7 +63,7 @@
     <string name="last_synced" msgid="8371967816955123864">"Акыркы жолу качан шайкештирилген: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="6652778349371079140">"Өчүрүлгөн"</string>
     <string name="account_remove" msgid="8456848988853890155">"Аккаунтту өчүрүү"</string>
-    <string name="account_remove_failed" msgid="5654411101098531690">"Каттоо эсеби өчүрүлбөй жатат"</string>
+    <string name="account_remove_failed" msgid="5654411101098531690">"Аккаунт өчүрүлбөй жатат"</string>
     <!-- no translation found for sync_item_title (5884138264243772176) -->
     <skip />
     <string name="sync_one_time_sync" msgid="1665961083810584134">"Азыр шайкештирүү<xliff:g id="LAST_SYNC_TIME">
@@ -164,7 +164,7 @@
     <string name="accessibility_none" msgid="6355646833528306702">"Эч бири"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Колдонуу жана мүчүлүштүктөрдү аныктоо"</string>
     <string name="tutorials" msgid="7880770425872110455">"Үйрөткүчтөр"</string>
-    <string name="about_system_update" msgid="7421264399111367755">"Тутум жаңыртуусу"</string>
+    <string name="about_system_update" msgid="7421264399111367755">"Системанын жаңыртуусу"</string>
     <string name="about_preference" msgid="9112690446998150670">"Түзмөк жөнүндө"</string>
     <string name="device_name" msgid="566626587332817733">"Түзмөктүн аталышы"</string>
     <string name="restart_button_label" msgid="2124590135040611899">"Өчүрүп-күйгүзүү"</string>
@@ -228,7 +228,7 @@
     <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Туш келди түзүлгөн MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP дарек"</string>
     <string name="title_ssid" msgid="255328048344188682">"Wi-Fi тармагынын аталышын киргизүү"</string>
-    <string name="title_internet_connection" msgid="7502414094881828069">"Интернет байланышы"</string>
+    <string name="title_internet_connection" msgid="7502414094881828069">"Интернет"</string>
     <string name="connected" msgid="4981532275162345997">"Туташкан"</string>
     <string name="not_connected" msgid="475810896484271663">"Туташкан жок"</string>
     <string name="wifi_setting_header_other_options" msgid="217382325707026836">"Башка параметрлер"</string>
@@ -508,12 +508,12 @@
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"ADB/ADT аркылуу орнотулган колдонмолордогу зыянкеч аракеттерди издеп көрүү"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Wi‑Fi журналы"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Майда-барат маалыматты Wi‑Fi журналына жазууну иштетүү"</string>
-    <string name="system_show_touches" msgid="8244331695139748286">"Тийүүлөр көрсөтүлсүн"</string>
+    <string name="system_show_touches" msgid="8244331695139748286">"Тийүүлөр көрүнсүн"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"Көрсөткүчтүн жайгашкан жери"</string>
-    <string name="system_show_layout_bounds" msgid="8803080672553699649">"Калыптардын чектери көрсөтүлсүн"</string>
+    <string name="system_show_layout_bounds" msgid="8803080672553699649">"Калыптардын чектери көрүнсүн"</string>
     <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"Экран жаңыртуусун көрсөтүү"</string>
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Жабдык катмарын көрсөтүү"</string>
-    <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"GPU ашыкчалары көрсөтүлсүн"</string>
+    <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"GPU ашыкчалары көрүнсүн"</string>
     <string name="system_show_surface_updates" msgid="7680759813613585278">"Экран жаңырууларын көрсөтүү"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"Window анимациялоо ченөлчөмү"</string>
     <string name="system_transition_animation_scale" msgid="7266380208347453619">"Өтүү анимациясынын ченөлчөмү"</string>
@@ -523,7 +523,7 @@
     <string name="system_enable_traces" msgid="108745519968154528">"Протоколдорду иштетүү"</string>
     <string name="system_dont_keep_activities" msgid="4641165963339846161">"Аракеттер сакталбасын"</string>
     <string name="system_background_process_limit" msgid="1985373407150771045">"Фондогу процесстерди чектөө"</string>
-    <string name="system_show_all_anrs" msgid="5353216640638263217">"Бардык ANR\'лер көрсөтүлсүн"</string>
+    <string name="system_show_all_anrs" msgid="5353216640638263217">"Бардык ANR\'лер көрүнсүн"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"Көшүүнү өчүрүп коюу"</string>
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"DRM мазмуну үчүн гана колдонулсун"</string>
     <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"Дисплейди эң жогорку чечилишке же кадр ылдамдыгына ыңгайлаштырыңыз. Бул Ультра HD дисплейлерге гана таасир этет. Бул жөндөө өзгөртүлсө, түзмөгүңүз өчүп кайра күйөт."</string>
@@ -732,7 +732,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Колдонмо уруксаттары"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_1">%2$d</xliff:g> ичинен <xliff:g id="COUNT_0">%1$d</xliff:g> колдонмого уруксат бар"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth\'ду күйгүзүүнү өтүнүү"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Коопсуздук тутуму качан жаңырган"</string>
+    <string name="security_patch" msgid="5468261708915367254">"Коопсуздук системасы качан жаңырган"</string>
     <string name="choose_application" msgid="2375936782103669988">"Колдонмо тандаңыз"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Сынамык)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Кайра жандырып, коопсуз режимге өтүү"</string>
@@ -760,9 +760,9 @@
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Башка терезелердин үстүнөн көрсөтүү"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Башка терезелердин үстүнөн көрсөтүүгө уруксат"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Колдонмону башка терезелердин үстүнөн көрсөтүүгө уруксат бериңиз. Бирок башка колдонмолорду пайдаланууга тоскоол болуп же алардын интерфейсин бузуп салышы мүмкүн."</string>
-    <string name="write_system_settings" msgid="4284654265954461890">"Тутум жөндөөлөрүн өзгөртүү"</string>
-    <string name="write_settings_title" msgid="2361816483383105754">"Тутум жөндөөлөрүн өзгөртө алат"</string>
-    <string name="write_settings_description" msgid="7382397926674265937">"Колдонмо тутум жөндөөлөрүн өзгөртө алат."</string>
+    <string name="write_system_settings" msgid="4284654265954461890">"Системанын жөндөөлөрүн өзгөртүү"</string>
+    <string name="write_settings_title" msgid="2361816483383105754">"Системанын жөндөөлөрүн өзгөртө алат"</string>
+    <string name="write_settings_description" msgid="7382397926674265937">"Колдонмо системанын жөндөөлөрүн өзгөртө алат."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Ооба"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Жок"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Сүрөт ичиндеги сүрөт"</string>

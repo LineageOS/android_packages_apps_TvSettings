@@ -118,9 +118,9 @@
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"¿Deseas borrar los datos almacenados en caché?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Se borrarán los datos almacenados en caché de todas las aplicaciones."</string>
     <string name="accessories_add" msgid="413764175035531452">"Agregar accesorio"</string>
-    <string name="accessory_state_pairing" msgid="15908899628218319">"Sincronizando…"</string>
+    <string name="accessory_state_pairing" msgid="15908899628218319">"Vinculando…"</string>
     <string name="accessory_state_connecting" msgid="6560241025917621212">"Conectando…"</string>
-    <string name="accessory_state_error" msgid="8353621828816824428">"No se pudo sincronizar."</string>
+    <string name="accessory_state_error" msgid="8353621828816824428">"No se pudo vincular."</string>
     <string name="accessory_state_canceled" msgid="4794837663402063770">"Sincronización cancelada"</string>
     <string name="accessory_state_paired" msgid="3296695242499532000">"Sincronizado"</string>
     <string name="accessory_options" msgid="774592782382321681">"Accesorio"</string>
@@ -134,14 +134,14 @@
     <string name="accessories_add_bluetooth_inst" msgid="5109947637581187896">"Antes de vincular los dispositivos Bluetooth, asegúrate de que el modo de vinculación esté activado"</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Se encontró un dispositivo que se sincronizará de forma automática en <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundos."</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Esta acción no se admite."</string>
-    <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Solicitud de sincronización de Bluetooth"</string>
-    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para sincronizar con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, asegúrate de que se muestre esta clave de acceso: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;."</string>
+    <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Solicitud de vinculación de Bluetooth"</string>
+    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para vincular con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, asegúrate de que se muestre esta clave de acceso: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;."</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"Desde: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;¿Sincronizar con este dispositivo?"</string>
-    <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Para sincronizar con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;, escribe &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt; y luego presiona Volver o Intro."</string>
-    <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Para sincronizar con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escribe el PIN obligatorio del dispositivo:"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para sincronizar con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escribe la clave de acceso obligatoria del dispositivo:"</string>
+    <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Para vincular con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;, escribe &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt; y luego presiona Volver o Intro."</string>
+    <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Para vincular con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escribe el PIN obligatorio del dispositivo:"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para vincular con &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escribe la clave de acceso obligatoria del dispositivo:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Suele ser: 0000 o 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Sincronizar"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Vincular"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancelar"</string>
     <string name="send_feedback" msgid="936698637869795473">"Enviar comentarios"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centro de ayuda"</string>
@@ -662,7 +662,7 @@
     <string name="pin_enter_wrong_seconds" msgid="3014013615537066237">"Ingresaste un PIN incorrecto 5 veces.\nVuelve a intentarlo en <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> segundos."</string>
     <string name="pin_toast_wrong" msgid="4297542365877164402">"El PIN es incorrecto. Vuelve a intentarlo."</string>
     <string name="pin_toast_not_match" msgid="2439298696342975155">"Vuelve a intentarlo, el PIN no coincide."</string>
-    <string name="wifi_setup_input_password" msgid="8510003548463241234">"Ingresar la contraseña de <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="wifi_setup_input_password" msgid="8510003548463241234">"Ingresa la contraseña de <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_connection_success" msgid="3301901673876973474">"Se conectó correctamente"</string>
     <string name="wifi_setup_save_success" msgid="6862510218032734919">"Se guardó correctamente"</string>
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Versión: <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
@@ -768,7 +768,7 @@
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Pantalla en pantalla"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Permitir pantalla en pantalla"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Ninguna de las apps instaladas es compatible con el modo de imagen en imagen"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Permite que las apps creen una ventana de imagen en imagen mientras estén abiertas o después de que hayas salido de ellas (por ejemplo, para seguir viendo un video). Esta ventana se muestra sobre otras apps que estés usando."</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Permite que las apps creen una ventana de pantalla en pantalla mientras estén abiertas o después de que hayas salido de ellas (por ejemplo, para seguir viendo un video). Esta ventana se muestra sobre otras apps que estés usando."</string>
     <string name="special_access" msgid="21806055758289916">"Acceso especial de apps"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Audio"</string>
