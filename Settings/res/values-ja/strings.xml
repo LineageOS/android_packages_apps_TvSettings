@@ -71,7 +71,7 @@
     <string name="sync_failed" msgid="2998289556481804047">"同期失敗"</string>
     <string name="sync_active" msgid="1621239982176888680">"同期有効"</string>
     <string name="connectivity_wifi" msgid="1138689464484009184">"Wi-Fi"</string>
-    <string name="connectivity_ethernet" msgid="4270588618633681766">"イーサネット"</string>
+    <string name="connectivity_ethernet" msgid="4270588618633681766">"有線 LAN"</string>
     <string name="connectivity_summary_ethernet_connected" msgid="2612843587731520061">"イーサネット接続"</string>
     <string name="connectivity_summary_no_network_connected" msgid="6111160695454212460">"ネットワーク接続なし"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi が OFF です"</string>
@@ -430,34 +430,34 @@
     <string name="system_services" msgid="5754310941186053151">"サービス"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"サービスの設定"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"高コントラスト テキスト"</string>
-    <string name="accessibility_shortcut" msgid="5856158637840030531">"ユーザー補助のショートカット"</string>
+    <string name="accessibility_shortcut" msgid="5856158637840030531">"ユーザー補助機能のショートカット"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"ユーザー補助機能のショートカットを有効にする"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"ショートカット サービス"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"ショートカットが ON の場合、戻るボタンと下ボタンの両方を 3 秒間押し続けるとユーザー補助機能が起動します。"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"字幕"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"動画の字幕テキストオーバーレイの設定"</string>
-    <string name="captions_display" msgid="2598662495450633375">"ディスプレイ"</string>
+    <string name="captions_display" msgid="2598662495450633375">"表示"</string>
     <string name="captions_display_on" msgid="480438033345455728">"ON"</string>
     <string name="captions_display_off" msgid="87881163874948539">"OFF"</string>
-    <string name="display_options" msgid="2645282080948371603">"表示オプション"</string>
+    <string name="display_options" msgid="2645282080948371603">"詳細設定"</string>
     <string name="captions_configure" msgid="711991018642931958">"設定"</string>
     <string name="captions_language" msgid="5905918439449912646">"言語"</string>
     <string name="captions_language_default" msgid="3894192926725192528">"デフォルト"</string>
     <string name="captions_textsize" msgid="7161136610669343510">"文字サイズ"</string>
     <string name="captions_captionstyle" msgid="6650139717545516071">"字幕スタイル"</string>
-    <string name="captions_customoptions" msgid="7691004663572161126">"カスタマイズ オプション"</string>
-    <string name="captions_fontfamily" msgid="1026632786438880997">"フォント ファミリー"</string>
+    <string name="captions_customoptions" msgid="7691004663572161126">"カスタム詳細設定"</string>
+    <string name="captions_fontfamily" msgid="1026632786438880997">"書体"</string>
     <string name="captions_textcolor" msgid="1566679779609140317">"テキストの色"</string>
     <string name="captions_edgetype" msgid="4875636291904824401">"エッジの種類"</string>
     <string name="captions_edgecolor" msgid="2779925179084237336">"エッジの色"</string>
     <string name="captions_backgroundshow" msgid="1080183686470477645">"背景の表示"</string>
     <string name="captions_backgroundcolor" msgid="2056944109914399253">"背景色"</string>
-    <string name="captions_backgroundopacity" msgid="1850126438162000027">"背景の透明度"</string>
+    <string name="captions_backgroundopacity" msgid="1850126438162000027">"背景の不透明度"</string>
     <string name="captioning_preview_text" msgid="3034147586392743237">"字幕サンプル"</string>
-    <string name="captions_textopacity" msgid="6055602491649526307">"テキストの透明度"</string>
+    <string name="captions_textopacity" msgid="6055602491649526307">"テキストの不透明度"</string>
     <string name="captions_windowshow" msgid="6002072054703167886">"ウィンドウを表示"</string>
     <string name="captions_windowcolor" msgid="7460430328878876648">"ウィンドウの色"</string>
-    <string name="captions_windowopacity" msgid="8645082670322789314">"ウィンドウの透明度"</string>
+    <string name="captions_windowopacity" msgid="8645082670322789314">"ウィンドウの不透明度"</string>
     <string name="captions_style_0" msgid="169414884289770256">"黒地に白"</string>
     <string name="captions_style_1" msgid="8236052739817535538">"白地に黒"</string>
     <string name="captions_style_2" msgid="456353889540431910">"黒地に黄色"</string>
@@ -753,7 +753,7 @@
     <string name="high_power_system" msgid="6263052626979462255">"電気使用量の最適化を利用できないアプリ"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"通知へのアクセス"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"通知へのアクセスをリクエストしたインストール済みアプリはありません。"</string>
-    <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"このアプリはすべての通知を読み取ることができます。通知には、連絡先名などの個人情報や受信したメッセージの本文も含まれます。また、通知を非表示にしたり、通知内のボタン操作を実行したりすることもできます。"</string>
+    <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"このアプリがすべての通知を読み取れるようになります。通知には、連絡先名などの個人情報や受信したメッセージの本文も含まれます。また、通知を非表示にしたり、通知内の操作ボタンをタップしたりすることも可能になります。"</string>
     <string name="directory_access" msgid="7338555825237012006">"ディレクトリへのアクセス"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"このアプリには、特定のディレクトリへのアクセス権限が付与されています。"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g>（<xliff:g id="DIRECTORY">%2$s</xliff:g>）"</string>
