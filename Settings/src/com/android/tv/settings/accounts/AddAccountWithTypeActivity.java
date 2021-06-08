@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.accounts;
 
+import static com.android.tv.settings.accounts.AccountsUtil.ACCOUNTS_FRAGMENT_DEFAULT;
+
 import android.accounts.AccountManager;
 import android.accounts.AccountManagerCallback;
 import android.accounts.AccountManagerFuture;
@@ -28,6 +30,8 @@ import android.provider.Settings;
 import android.util.Log;
 
 import androidx.fragment.app.FragmentActivity;
+
+import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.io.IOException;
 
@@ -66,16 +70,26 @@ public class AddAccountWithTypeActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String accountType = getIntent().getStringExtra(AccountManager.KEY_ACCOUNT_TYPE);
-        if (accountType != null) {
-            startAddAccount(accountType);
+        // Show AccountsFragment if DO is active and this activity was started through
+        // ADD_ACCOUNT_SETTINGS intent. This ensures that organization info. is displayed and
+        // restrictions are enforced, if present.
+        if (FlavorUtils.getFeatureFactory(this).getEnterprisePrivacyFeatureProvider(
+                this).hasDeviceOwner() && Settings.ACTION_ADD_ACCOUNT.equals(
+                getIntent().getAction())) {
+            startAccountsActivity();
+            setResultAndFinish(Activity.RESULT_CANCELED);
         } else {
-            String[] allowedTypes = getIntent().getStringArrayExtra(
-                    EXTRA_ALLOWABLE_ACCOUNT_TYPES_STRING_ARRAY);
-            if (allowedTypes == null || allowedTypes.length == 0) {
-                allowedTypes = getIntent().getStringArrayExtra(Settings.EXTRA_ACCOUNT_TYPES);
+            String accountType = getIntent().getStringExtra(AccountManager.KEY_ACCOUNT_TYPE);
+            if (accountType != null) {
+                startAddAccount(accountType);
+            } else {
+                String[] allowedTypes = getIntent().getStringArrayExtra(
+                        EXTRA_ALLOWABLE_ACCOUNT_TYPES_STRING_ARRAY);
+                if (allowedTypes == null || allowedTypes.length == 0) {
+                    allowedTypes = getIntent().getStringArrayExtra(Settings.EXTRA_ACCOUNT_TYPES);
+                }
+                startAccountTypePicker(allowedTypes);
             }
-            startAccountTypePicker(allowedTypes);
         }
     }
 
@@ -108,5 +122,11 @@ public class AddAccountWithTypeActivity extends FragmentActivity {
     private void setResultAndFinish(int resultCode) {
         setResult(resultCode);
         finish();
+    }
+
+    private void startAccountsActivity() {
+        Intent intent = new Intent(this, AccountsActivity.class);
+        intent.putExtra(AccountsActivity.EXTRA_FRAGMENT_TYPE, ACCOUNTS_FRAGMENT_DEFAULT);
+        startActivity(intent);
     }
 }
