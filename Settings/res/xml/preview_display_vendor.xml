@@ -17,17 +17,22 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/device_display_sound">
+    <PreferenceCategory
+        android:key="display_category"
+        android:title="@string/display_category_title" />
     <Preference
-        android:key="picture"
-        android:title="@string/picture_settings_title"
-        android:summary="@string/vendor_sample_settings_summary"/>
+        android:fragment="com.android.tv.settings.device.displaysound.MatchContentFrameRateFragment"
+        android:key="match_content_frame_rate"
+        android:title="@string/match_content_frame_rate_title"/>
     <Preference
-        android:key="screen"
-        android:title="@string/screen_settings_title"
-        android:summary="@string/vendor_sample_settings_summary"/>
+        android:key="advanced_display_settings"
+        android:title="@string/advanced_display_settings_title"
+        android:fragment="com.android.tv.settings.device.displaysound.AdvancedDisplayFragment" />
+    <PreferenceCategory
+        android:key="sound_category"
+        android:title="@string/device_sound" />
     <Preference
-        android:key="sound"
-        android:title="@string/sound_settings_title"
-        android:summary="@string/vendor_sample_settings_summary"/>
-
+        android:key="advanced_sound_settings"
+        android:title="@string/advanced_sound_settings_title"
+        android:fragment="com.android.tv.settings.device.displaysound.AdvancedVolumeFragment" />
 </PreferenceScreen>
