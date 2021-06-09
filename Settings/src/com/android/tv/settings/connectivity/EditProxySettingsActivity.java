@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -28,6 +29,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.AdvancedWifiOptionsFlow;
 import com.android.tv.settings.connectivity.util.State;
@@ -74,6 +76,17 @@ public class EditProxySettingsActivity extends InstrumentedActivity implements
             netConfig = new EthernetConfig(this);
             ((EthernetConfig) netConfig).load();
         } else {
+            final UserManager userManager = UserManager.get(this);
+            if (userManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_WIFI)) {
+                EnforcedAdmin admin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
+                        this, UserManager.DISALLOW_CONFIG_WIFI, UserHandle.myUserId());
+                if (admin != null) {
+                    RestrictedLockUtils.sendShowAdminSupportDetailsIntent(this, admin);
+                }
+                finish();
+                return;
+            }
+
             netConfig = new WifiConfig(this);
             ((WifiConfig) netConfig).load(networkId);
             if (((WifiConfig) netConfig).isLockedDown(this)) {
