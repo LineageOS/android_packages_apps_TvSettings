@@ -20,11 +20,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
+import android.os.UserHandle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.AdvancedWifiOptionsFlow;
 import com.android.tv.settings.connectivity.util.State;
@@ -72,6 +75,13 @@ public class EditIpSettingsActivity extends InstrumentedActivity implements
         } else {
             netConfig = new WifiConfig(this);
             ((WifiConfig) netConfig).load(networkId);
+            if (((WifiConfig) netConfig).isLockedDown(this)) {
+                EnforcedAdmin admin = RestrictedLockUtils.getProfileOrDeviceOwner(this,
+                        UserHandle.of(UserHandle.myUserId()));
+                RestrictedLockUtils.sendShowAdminSupportDetailsIntent(this, admin);
+                finish();
+                return;
+            }
         }
         EditSettingsInfo editSettingsInfo =
                     ViewModelProviders.of(this).get(EditSettingsInfo.class);
