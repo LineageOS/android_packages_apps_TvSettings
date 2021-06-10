@@ -52,4 +52,19 @@ public interface UIUpdateCallback {
      */
     @SystemApi
     void notifyUpdateScreenTitle(int state, String title);
+
+    /**
+     * @hide
+     * Notify to navigate backward
+     */
+    @SystemApi
+    void notifyNavigateBackward(int state);
+
+
+    /**
+     * @hide
+     * Notify to navigate forward
+     */
+    @SystemApi
+    void notifyNavigateForward(int state);
 }

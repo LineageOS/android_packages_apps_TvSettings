@@ -35,6 +35,20 @@ public final class ResourcesUtil {
         }
     }
 
+    public static String getString(Context context, String name, Object... formatArgs) {
+        try {
+            Resources resources = context.getPackageManager()
+                    .getResourcesForApplication(SETTINGS_PACKAGE_NAME);
+            int id = resources.getIdentifier(name, "string", SETTINGS_PACKAGE_NAME);
+            if (id != 0) {
+                return resources.getString(id, formatArgs);
+            }
+            return null;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
     public static String[] getStringArray(Context context, String name) {
         try {
             Resources resources = context.getPackageManager()

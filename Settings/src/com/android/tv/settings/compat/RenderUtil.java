@@ -17,6 +17,7 @@
 package com.android.tv.settings.compat;
 
 import static com.android.tv.settings.compat.TsCollapsibleCategory.COLLAPSE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_LIST;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_ACCESS_POINT;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_CATEGORY;
@@ -242,6 +243,8 @@ public final class RenderUtil {
         switch (nextState) {
             case STATE_WIFI_DETAILS:
                 return "com.android.tv.settings.connectivity.WifiDetailsFragmentCompat";
+            case STATE_APP_MANAGEMENT:
+                return "com.android.tv.settings.device.apps.AppManagementFragmentCompat";
             default:
                 return null;
         }

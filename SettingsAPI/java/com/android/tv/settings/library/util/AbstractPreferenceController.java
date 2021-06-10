@@ -82,12 +82,12 @@ public abstract class AbstractPreferenceController {
     public abstract boolean isAvailable();
 
     /**
-     * Handles preference tree click
-     *
-     * @param preference the preference being clicked
-     * @return true if click is handled
+     * Handle preference click.
+     * @param preference preference that is clicked
+     * @param status status of new state
+     * @return whether the click is handled
      */
-    public boolean handlePreferenceTreeClick(PreferenceCompat preference) {
+    public boolean handlePreferenceTreeClick(PreferenceCompat preference, boolean status) {
         return false;
     }
 

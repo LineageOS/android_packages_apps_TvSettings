@@ -34,6 +34,7 @@ import android.os.UserHandle;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +47,7 @@ public class AppUtils {
      * exception when calling the isInstantApp method of the ApplicationInfo class, because
      * robolectric does not yet have an implementation of it.
      */
-    private static InstantAppDataProvider sInstantAppDataProvider = null;
+    private static final InstantAppDataProvider sInstantAppDataProvider = null;
 
     private static final Intent sBrowserIntent;
 
@@ -66,6 +67,20 @@ public class AppUtils {
             Log.e(TAG, "mUsbManager.hasDefaults", e);
         }
         return false;
+    }
+
+    public static CharSequence getLaunchByDefaultSummary(ApplicationsState.AppEntry appEntry,
+            IUsbManager usbManager, PackageManager pm, Context context) {
+        String packageName = appEntry.info.packageName;
+        boolean hasPreferred = hasPreferredActivities(pm, packageName)
+                || hasUsbDefaults(usbManager, packageName);
+        int status = pm.getIntentVerificationStatusAsUser(packageName, UserHandle.myUserId());
+        // consider a visible current link-handling state to be any explicitly designated behavior
+        boolean hasDomainURLsPreference =
+                status != PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_UNDEFINED;
+        return ResourcesUtil.getString(context, hasPreferred || hasDomainURLsPreference
+                ? "launch_defaults_some"
+                : "launch_defaults_none");
     }
 
     public static boolean hasPreferredActivities(PackageManager pm, String packageName) {

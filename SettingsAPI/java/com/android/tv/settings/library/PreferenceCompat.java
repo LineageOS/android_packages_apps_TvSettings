@@ -68,6 +68,10 @@ public class PreferenceCompat {
 
     // 0: not updated, 1 :not selectable, 2: selectable
     private byte mSelectable;
+
+    // 0: not updated, 1 :not selectable, 2: selectable
+    private byte mEnabled;
+
     private List<PreferenceCompat> mChildPrefCompats;
 
     /** @hide */
@@ -299,6 +303,30 @@ public class PreferenceCompat {
     @SystemApi
     public void setSelectable(byte selectable) {
         this.mSelectable = selectable;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setSelectable(boolean selectable) {
+        this.mSelectable = ManagerUtil.getSelectable(selectable);
+    }
+
+    /** @hide */
+    @SystemApi
+    public byte getEnabled() {
+        return mEnabled;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setEnabled(byte enabled) {
+        this.mEnabled = enabled;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setEnabled(boolean enabled) {
+        setEnabled(ManagerUtil.getEnabled(enabled));
     }
 
     /** @hide */

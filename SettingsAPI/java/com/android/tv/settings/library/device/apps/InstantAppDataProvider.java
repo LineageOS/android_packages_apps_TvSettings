@@ -24,6 +24,6 @@ import android.content.pm.ApplicationInfo;
  * if we try to call it directly.
  */
 public interface InstantAppDataProvider {
-    public boolean isInstantApp(ApplicationInfo info);
+    boolean isInstantApp(ApplicationInfo info);
 }
 
