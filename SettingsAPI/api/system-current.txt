@@ -29,6 +29,7 @@ package com.android.tv.settings.library {
     method public java.util.List<com.android.tv.settings.library.PreferenceCompat> getChildPrefCompats();
     method public int getChildPrefsCount();
     method public String getContentDescription();
+    method public byte getEnabled();
     method public android.os.Bundle getExtras();
     method public android.graphics.drawable.Drawable getIcon();
     method public String getInfo(String);
@@ -46,11 +47,14 @@ package com.android.tv.settings.library {
     method public void setChecked(boolean);
     method public void setChildPrefCompats(java.util.List<com.android.tv.settings.library.PreferenceCompat>);
     method public void setContentDescription(String);
+    method public void setEnabled(byte);
+    method public void setEnabled(boolean);
     method public void setExtras(android.os.Bundle);
     method public void setIcon(android.graphics.drawable.Drawable);
     method public void setInfoMap(java.util.Map<java.lang.String,java.lang.String>);
     method public void setIntent(android.content.Intent);
     method public void setSelectable(byte);
+    method public void setSelectable(boolean);
     method public void setSummary(String);
     method public void setTitle(String);
     method public void setType(byte);
@@ -83,6 +87,8 @@ package com.android.tv.settings.library {
   }
 
   public interface UIUpdateCallback {
+    method public void notifyNavigateBackward(int);
+    method public void notifyNavigateForward(int);
     method public void notifyUpdate(int, com.android.tv.settings.library.PreferenceCompat);
     method public void notifyUpdateAll(int, java.util.List<com.android.tv.settings.library.PreferenceCompat>);
     method public void notifyUpdateScreenTitle(int, String);
