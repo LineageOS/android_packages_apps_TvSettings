@@ -29,7 +29,7 @@ import com.android.tv.settings.library.util.ResourcesUtil;
 
 /** Preference controller to handle uninstall preference. */
 public class UninstallPreferenceController extends AppActionPreferenceController {
-    private static final String KEY_UNINSTALL = "uninstall";
+    static final String KEY_UNINSTALL = "uninstall";
     private final DevicePolicyManager mDpm;
     private final Context mAppContext;
     private PreferenceCompat mUninstallPreference;

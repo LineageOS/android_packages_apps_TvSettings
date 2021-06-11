@@ -19,6 +19,7 @@ package com.android.tv.settings.library.device.apps;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.tv.settings.library.ManagerUtil;
@@ -65,11 +66,6 @@ public class AppsState extends PreferenceControllerState {
     }
 
     @Override
-    public void onPreferenceTreeClick(String key, boolean status) {
-        super.onPreferenceTreeClick(key, status);
-    }
-
-    @Override
     public int getStateIdentifier() {
         return ManagerUtil.STATE_APPS;
     }
@@ -82,5 +78,10 @@ public class AppsState extends PreferenceControllerState {
         controllers.add(new RecentAppsPreferenceController(mContext, app, mUIUpdateCallback,
                 getStateIdentifier()));
         return controllers;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // no-op
     }
 }

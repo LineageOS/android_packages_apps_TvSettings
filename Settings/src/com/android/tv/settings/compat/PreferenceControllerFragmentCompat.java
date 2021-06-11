@@ -124,12 +124,14 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
             if (mSettingsManager == null) {
                 return true;
             }
-            mSettingsManager.onPreferenceClick(
+            boolean handled = mSettingsManager.onPreferenceClick(
                     getState(),
                     preference.getKey(),
                     preference instanceof TwoStatePreference
                             && ((TwoStatePreference) preference).isChecked());
-            return super.onPreferenceTreeClick(preference);
+            if (!handled) {
+                return super.onPreferenceTreeClick(preference);
+            }
         }
         return true;
     }
