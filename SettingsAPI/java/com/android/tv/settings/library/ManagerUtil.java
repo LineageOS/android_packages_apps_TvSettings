@@ -27,6 +27,7 @@ import android.annotation.SystemApi;
  */
 @SystemApi
 public final class ManagerUtil {
+    public static final int OFFSET_MULTIPLIER = 10000;
     public static final int STATE_NETWORK_MAIN = 0;
     public static final int STATE_WIFI_DETAILS = 1;
     public static final int STATE_DEVICE_MAIN = 2;
@@ -76,5 +77,42 @@ public final class ManagerUtil {
     @SystemApi
     public static boolean isVisible(PreferenceCompat pref) {
         return pref.getVisible() == STATUS_OFF ? true : false;
+    }
+
+    /**
+     * @hide
+     * Calculate the compound code based on the state identifier and request code.
+     * @param state state identifier
+     * @param requestCode requestCode
+     * @return compound code
+     */
+    @SystemApi
+    public static int calculateCompoundCode(int state, int requestCode) {
+        return OFFSET_MULTIPLIER * (state + 1) + requestCode;
+    }
+
+    /**
+     * @hide
+     * Get the state identifer based on the compound code.
+     * @param code compound code
+     * @return state identifier
+     */
+    @SystemApi
+    public static int getStateIdentifier(int code) {
+        if (code < OFFSET_MULTIPLIER) {
+            return -1;
+        }
+        return code / OFFSET_MULTIPLIER - 1;
+    }
+
+    /**
+     * @hide
+     * Return the request code for a particular state.
+     * @param code compound code
+     * @return request code
+     */
+    @SystemApi
+    public static int getRequestCode(int code) {
+        return code % OFFSET_MULTIPLIER;
     }
 }

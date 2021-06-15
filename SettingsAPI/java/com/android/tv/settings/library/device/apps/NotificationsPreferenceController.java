@@ -77,6 +77,7 @@ public class NotificationsPreferenceController extends AppActionPreferenceContro
             Log.d(TAG, "Remote exception while checking notifications for package "
                     + mAppEntry.info.packageName, e);
         }
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mNotificationsPreference);
     }
 
     @Override

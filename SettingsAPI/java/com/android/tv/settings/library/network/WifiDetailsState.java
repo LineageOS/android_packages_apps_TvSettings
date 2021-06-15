@@ -18,6 +18,7 @@ package com.android.tv.settings.library.network;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.IpConfiguration;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
@@ -123,7 +124,12 @@ public class WifiDetailsState implements State,
     }
 
     @Override
-    public void onPreferenceTreeClick(String key, boolean status) {
+    public boolean onPreferenceTreeClick(String key, boolean status) {
+        return false;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         // no-op
     }
 

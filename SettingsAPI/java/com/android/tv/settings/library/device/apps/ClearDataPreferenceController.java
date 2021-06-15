@@ -17,6 +17,7 @@
 package com.android.tv.settings.library.device.apps;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.format.Formatter;
 
 import com.android.tv.settings.library.PreferenceCompat;
@@ -26,7 +27,7 @@ import com.android.tv.settings.library.util.ResourcesUtil;
 
 /** Preference controller to handle clear data preference. */
 public class ClearDataPreferenceController extends AppActionPreferenceController {
-    private static final String KEY_CLEAR_DATA = "clearData";
+    static final String KEY_CLEAR_DATA = "clearData";
     private boolean mClearingData;
     private PreferenceCompat mClearDataPreference;
 
@@ -58,6 +59,14 @@ public class ClearDataPreferenceController extends AppActionPreferenceController
                 ? ResourcesUtil.getString(mContext, "computing_size")
                 : Formatter.formatFileSize(mContext,
                         mAppEntry.dataSize + mAppEntry.externalDataSize));
+        Intent i = new Intent(INTENT_CONFIRMATION);
+        i.putExtra(EXTRA_GUIDANCE_TITLE, ResourcesUtil.getString(
+                mContext, "device_apps_app_management_clear_data"));
+        i.putExtra(EXTRA_GUIDANCE_SUBTITLE, ResourcesUtil.getString(
+                mContext, "device_apps_app_management_clar_data_desc"));
+        i.putExtra(EXTRA_GUIDANCE_BREADCRUMB, getAppName());
+        mClearDataPreference.setIntent(i);
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mClearDataPreference);
     }
 
     @Override

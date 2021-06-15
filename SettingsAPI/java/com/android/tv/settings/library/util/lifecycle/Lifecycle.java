@@ -18,7 +18,6 @@ package com.android.tv.settings.library.util.lifecycle;
 import android.annotation.UiThread;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.preference.PreferenceScreen;
 
@@ -102,7 +101,6 @@ public class Lifecycle {
         for (int i = 0, size = mObservers.size(); i < size; i++) {
             final LifecycleObserver observer = mObservers.get(i);
             if (observer instanceof OnResume) {
-                Log.v("XXX111", "observer onresume");
                 ((OnResume) observer).onResume();
             }
         }

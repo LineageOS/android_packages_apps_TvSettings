@@ -130,6 +130,7 @@ public class EnableDisablePreferenceController extends AppActionPreferenceContro
         } else {
             mEnableDisablePreference.setVisible(false);
         }
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mEnableDisablePreference);
     }
 
 }
