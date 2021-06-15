@@ -52,10 +52,10 @@ public final class SliceUtils {
     /**
      * Checks if the slice is enabled
      * @param context Current context of the app
-     * @param uri Play Tv Settings slice uri
+     * @param uri Settings slice uri
      * @return returns true if slice is enabled, false otherwise
      */
-    public static boolean isPlayTvSettingsSliceEnabled(Context context, String uri) {
+    public static boolean isSettingsSliceEnabled(Context context, String uri) {
         if (uri == null) {
             return false;
         }
@@ -65,7 +65,7 @@ public final class SliceUtils {
         }
         try {
             final Collection<Uri> enabledSlicesUri = sliceManager.getSliceDescendants(
-                    Uri.parse(context.getString(R.string.play_settings_slice_uri)));
+                    Uri.parse(context.getString(R.string.top_level_settings_slice_uri)));
             if (enabledSlicesUri != null) {
                 for (final Uri sliceUri : enabledSlicesUri) {
                     Log.i(TAG, "Enabled slice: " + sliceUri);
@@ -75,7 +75,7 @@ public final class SliceUtils {
                 }
             }
         } catch (NullPointerException nullPointerException) {
-            Log.e(TAG, "Play Store process is not running in background", nullPointerException);
+            Log.e(TAG, "Unable to get slice descendants", nullPointerException);
         }
         return false;
     }
