@@ -160,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"如果應用程式要求，您的裝置會根據您正觀看內容的原來影格速率輸出內容。這可能會令螢幕在退出或開始影片播放時暫時空白一秒。"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"永不"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"即使應用程式要求，您的裝置也永不會嘗試根據您正觀看內容的原來影格速率輸出內容。"</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"文字比例"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"縮放比例至 <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"範例文字"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"《綠野仙蹤》"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"第 11 章：奧茲國的奇妙翡翠城"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"即使戴著綠色眼鏡保護雙眼，桃樂絲和她的朋友一開始還是被這座奇妙城市的耀眼光芒照得目眩神迷。街道兩旁都是以碧綠大理石砌成的美麗房屋，到處鑲滿閃閃發亮的翡翠。她們走過的路面同樣以碧綠大理石鋪砌而成，石板與石板之間鑲有一排排緊密相連的翡翠，在陽光的照耀下閃閃發亮。房屋的窗戶鑲嵌著翠綠玻璃，城市上空呈現淡綠色，就連陽光也散發著綠色光芒。\n\n路上有很多行人，不論男女老幼都穿著綠色衣服，甚至皮膚也略帶綠色。他們好奇地盯著桃樂絲和她那群外貌奇特的夥伴，所有小孩一看到獅子都拔足而逃，各自躲到母親身後；然而，沒有人開口與他們交談。街道上的商店五花八門，桃樂絲發現店裡每件商品都是綠色的，有綠色的糖果和爆谷，還有綠色的鞋子、帽子和衣服。有位小販在路上售賣綠色檸檬水，當孩子們拿錢購買時，桃樂絲發現錢幣也是綠色的。\n\n城裡似乎沒有馬，也沒有任何動物。居民都是推著綠色小車運載物品。每個人看起來都很開心滿足，一切都安定繁榮。"</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"格式選擇"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"自動"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"手動"</string>
@@ -619,9 +625,9 @@
     <string name="camera_toggle_title" msgid="5566469574224956142">"相機存取權"</string>
     <string name="open_camera_permissions" msgid="301360297337141591">"應用程式的相機存取權"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"麥克風存取權：<xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4436219037877456256">"啟用後，所有獲授權的應用程式和服務均可存取此裝置的任何麥克風。\n\n設有自訂通訊協定的插入式麥克風裝置等周邊音訊裝置將不受此設定影響。"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"啟用後，所有獲授權的應用程式和服務均可存取此裝置的任何麥克風。\n\n設有自訂通訊協定的周邊音訊裝置將不受此設定影響。"</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"相機存取權：<xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="7045001373813906859">"啟用後，所有獲授權的應用程式和服務均可存取此裝置的任何相機。\n\n設有自訂通訊協定的插入式網絡攝錄機等周邊相機將不受此設定影響。"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"啟用後，所有獲授權的應用程式和服務均可存取此裝置的任何相機。\n\n設有自訂通訊協定的周邊相機將不受此設定影響。"</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"已開啟"</string>
     <string name="sensor_toggle_info_off" msgid="7546772458177469821">"已關閉"</string>
     <string name="system_location" msgid="4057295363709016511">"位置"</string>
@@ -962,7 +968,7 @@
     <string name="manage_keyboards" msgid="7983890675377321912">"管理鍵盤"</string>
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"允許"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"不允許"</string>
-    <string name="usage_access" msgid="8402350645248312782">"使用紀錄存取權"</string>
+    <string name="usage_access" msgid="8402350645248312782">"使用記錄存取權"</string>
     <string name="usage_access_description" msgid="3276026988575551587">"使用情況存取權允許應用程式追蹤使用中的其他應用程式、使用頻率、流動服務供應商、語言設定和其他詳細資料。"</string>
     <string name="high_power_apps" msgid="5841073958519976562">"電量優化"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"優化應用程式的耗電量"</string>
