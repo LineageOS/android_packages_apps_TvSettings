@@ -107,7 +107,10 @@ public class RestrictedPreferenceAdapter<T extends Preference> {
         }
     }
 
-    private boolean isRestricted() {
+    /**
+     * Returns {@code true} if a restriction applies to this preference, {@code false} otherwise.
+     */
+    public boolean isRestricted() {
         if (mUserRestrictions == null) {
             return false;
         }
