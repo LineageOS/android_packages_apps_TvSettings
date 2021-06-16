@@ -112,7 +112,7 @@
     <string name="device_surround_sound" msgid="1889436002598316470">"Ծավալային ձայն"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Համակարգի ձայներ"</string>
     <string name="device_apps" msgid="2134756632245008919">"Հավելվածներ"</string>
-    <string name="device_storage" msgid="8540243547121791073">"Պահեստ"</string>
+    <string name="device_storage" msgid="8540243547121791073">"Պահոց"</string>
     <string name="device_reset" msgid="6115282675800077867">"Զրոյացնել"</string>
     <string name="device_backup_restore" msgid="3634531946308269398">"Պահուստավորում և վերականգնում"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Վերակայել բոլոր տվյալները"</string>
@@ -160,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Երբ հավելվածը պահանջում է, սարքը կհամապատասխանեցնի իր հաճախականությունը նվագարկվող տեսանյութի կադրերի հաճախականությանը։ Տեսանյութի նվագարկման սկզբում և վերջում էկրանը մի պահ կարող է սպիտակել։"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Երբեք"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Նույնիսկ երբ հավելվածը պահանջում է, սարքը չի համապատասխանեցնի իր հաճախականությունը նվագարկվող տեսանյութի կադրերի հաճախականությանը։"</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Տեքստի մասշտաբավորում"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Մասշտաբը դարձնել <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Տեքստի նմուշ"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Օզի կախարդը"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Գլուխ 11. Օզի հրաշալի Զմրուխտե քաղաքը"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Նույնիսկ հագնելով կանաչ ապակիներով ակնոցներ՝ Դորոթին և իր ընկերները շլացան այս զարմանահրաշ քաղաքի փայլից։ Փողոցների երկայնքով շարված էին կանաչ մարմարից գեղեցիկ տներ՝ զարդարված փայլուն զմրուխտներով։ Ճամփորդները քայլում էին այդ նույն կանաչ մարմարով պատված մայթերով, որոնց սալիկների արանքները լցված էին արևի շողերի տակ փայլող զմրուխտներով։ Տների պատուհանները կանաչ ապակուց էին։ Զմրուխտե քաղաքում նույնիսկ երկինքն ուներ կանաչ երանգ, իսկ կանաչ արևը պայծառ կանաչ շողեր էր արձակում։ \n\nՇուրջը տղամարդիկ, կանայք և երեխաներ էին քայլում, որոնք բոլորը կրում էին կանաչ հագուստ և ունեին կանաչավուն մաշկ։ Նրանք զարմանքով էին նայում Դորոթիին և նրա տարօրինակ ուղեկիցներին։ Նկատելով Առյուծին՝ երեխաները թաքնվում էին իրենց ծնողների մեջքի ետևում և ոչ-ոք չէր համարձակվում խոսել անծանոթների հետ։ Խանութներում վաճառվում էին կանաչ գույնի ապրանքներ. կանաչ կոնֆետներ և կանաչ ադիբուդի, տարբեր տեսակի կանաչ կոշիկներ, գլխարկներ և զգեստներ։ Վաճառականներից մեկն առաջարկում էր կանաչ լիմոնադ, իսկ նրան շրջապատող երեխաները լիմոնադի համար վճարում էին կանաչ մետաղադրամներով։ \n\nԶմրուխտե քաղաքի փողոցներում ոչ ձիեր, ոչ էլ այլ կենդանիներ կային։ Տղամարդիկ իրենց իրերը կրում էին փոքր կանաչ ձեռնասայլակներով։ Քաղաքի բոլոր բնակիչները ուրախ և անհոգ տեսք ունեին։"</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Ձևաչափի ընտրություն"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Ավտոմատ"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Ձեռքով"</string>
@@ -514,7 +520,7 @@
     <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Դուք թույլտվություն չունեք փոխելու Wi‑Fi-ի ցանցը:"</string>
     <string name="title_ok" msgid="6500452958848127145">"Լավ"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Չեղարկել"</string>
-    <string name="storage_title" msgid="6637715914885228193">"Պահեստ"</string>
+    <string name="storage_title" msgid="6637715914885228193">"Պահոց"</string>
     <string name="storage_available" msgid="8860901789290434209">"Հասանելի է"</string>
     <string name="storage_size" msgid="5517261387579171381">"Ընդհանուր տարածքը՝ <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
     <string name="storage_calculating_size" msgid="5716281278843281044">"Հաշվարկում…"</string>
