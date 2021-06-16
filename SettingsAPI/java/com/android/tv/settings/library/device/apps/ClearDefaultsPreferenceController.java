@@ -60,6 +60,7 @@ public class ClearDefaultsPreferenceController extends AppActionPreferenceContro
                 mContext, "device_apps_app_management_clear_default"));
         mClearDefaultsPreference.setSummary(AppUtils.getLaunchByDefaultSummary(
                 mAppEntry, mUsbManager, mPackageManager, mContext).toString());
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mClearDefaultsPreference);
     }
 
     @Override

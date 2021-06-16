@@ -35,6 +35,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
 import com.android.tv.settings.compat.PreferenceControllerFragmentCompat;
+import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.SettingsManager;
 import com.android.tv.settings.library.UIUpdateCallback;
@@ -270,6 +271,10 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (ManagerUtil.getStateIdentifier(requestCode) != -1) {
+            mSettingsManager.onActivityResult(requestCode, resultCode, data);
+            return;
+        }
         if (requestCode == REQUEST_CODE_STARTUP_VERIFICATION) {
             if (resultCode == RESULT_OK) {
                 Log.v(TAG, "Startup verification succeeded.");

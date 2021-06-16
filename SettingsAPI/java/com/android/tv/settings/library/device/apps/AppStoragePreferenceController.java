@@ -76,6 +76,7 @@ public class AppStoragePreferenceController extends AppActionPreferenceControlle
                     "device_apps_app_management_storage_used_desc",
                     mAppEntry.sizeStr, volumeDesc));
         }
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mAppStoragePreference);
     }
 
     @Override

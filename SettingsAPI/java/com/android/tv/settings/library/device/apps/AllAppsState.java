@@ -21,6 +21,7 @@ import static com.android.tv.settings.library.device.apps.AppsState.EXTRA_VOLUME
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -301,11 +302,18 @@ public class AllAppsState extends PreferenceControllerState {
     }
 
     @Override
-    public void onPreferenceTreeClick(String key, boolean status) {
+    public boolean onPreferenceTreeClick(String key, boolean status) {
         super.onPreferenceTreeClick(key, status);
         if (KEY_SHOW_OTHER_APPS.equals(key)) {
             showOtherApps();
+            return true;
         }
+        return false;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // no-op
     }
 
     private void showOtherApps() {

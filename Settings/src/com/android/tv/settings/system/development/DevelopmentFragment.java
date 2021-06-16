@@ -71,6 +71,7 @@ import com.android.settingslib.core.ConfirmationDialogController;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.settingslib.development.SystemPropPoker;
 import com.android.tv.settings.R;
+import com.android.tv.settings.RestrictedPreferenceAdapter;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.system.development.audio.AudioDebug;
@@ -223,7 +224,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private ListPreference mDebugHwOverdraw;
     private LogdSizePreferenceController mLogdSizeController;
     private LogpersistPreferenceController mLogpersistController;
-    private ListPreference mUsbConfiguration;
+    private RestrictedPreferenceAdapter<ListPreference> mUsbConfiguration;
     private ListPreference mTrackFrameTime;
     private ListPreference mShowNonRectClip;
     private ListPreference mWindowAnimationScale;
@@ -396,7 +397,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mWifiDisplayCertification = findAndInitSwitchPref(WIFI_DISPLAY_CERTIFICATION_KEY);
         mWifiVerboseLogging = findAndInitSwitchPref(WIFI_VERBOSE_LOGGING_KEY);
         mMobileDataAlwaysOn = findAndInitSwitchPref(MOBILE_DATA_ALWAYS_ON);
-        mUsbConfiguration = addListPreference(USB_CONFIGURATION_KEY);
+        mUsbConfiguration = addListRestrictedPreference(USB_CONFIGURATION_KEY,
+                UserManager.DISALLOW_USB_FILE_TRANSFER);
 
         mWindowAnimationScale = addListPreference(WINDOW_ANIMATION_SCALE_KEY);
         mTransitionAnimationScale = addListPreference(TRANSITION_ANIMATION_SCALE_KEY);
@@ -479,6 +481,16 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mAllPrefs.add(pref);
         pref.setOnPreferenceChangeListener(this);
         return pref;
+    }
+
+    private RestrictedPreferenceAdapter<ListPreference> addListRestrictedPreference(String prefKey,
+            String userRestriction) {
+        final ListPreference pref = (ListPreference) findPreference(prefKey);
+        pref.setOnPreferenceChangeListener(this);
+        final RestrictedPreferenceAdapter<ListPreference> restrictedListPref =
+                RestrictedPreferenceAdapter.adapt(pref, userRestriction);
+        mAllPrefs.add(restrictedListPref.getOriginalPreference());
+        return restrictedListPref;
     }
 
     private void disableForUser(Preference pref) {
@@ -1360,9 +1372,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                     break;
                 }
             }
-            mUsbConfiguration.setValue(values[index]);
-            mUsbConfiguration.setSummary(titles[index]);
-            mUsbConfiguration.setOnPreferenceChangeListener(this);
+            final int updateIndex = index;
+            mUsbConfiguration.updatePreference(listPreference -> {
+                listPreference.setValue(values[updateIndex]);
+                listPreference.setSummary(titles[updateIndex]);
+                listPreference.setOnPreferenceChangeListener(this);
+            });
         }
     }
 
@@ -1673,7 +1688,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             updateHdcpValues();
             SystemPropPoker.getInstance().poke();
             return true;
-        } else if (preference == mUsbConfiguration) {
+        } else if (preference == mUsbConfiguration.getOriginalPreference()) {
             writeUsbConfigurationOption(newValue);
             return true;
         } else if (preference == mWindowAnimationScale) {

@@ -184,7 +184,7 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     }
 
     @Override
-    public void onPreferenceTreeClick(String key, boolean status) {
+    public boolean onPreferenceTreeClick(String key, boolean status) {
         switch (key) {
             case KEY_WIFI_ENABLE:
                 mNetworkModule.getConnectivityListener().setWifiEnabled(status);
@@ -218,6 +218,12 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
             mUIUpdateCallback.notifyUpdate(getStateIdentifier(),
                     mPreferenceCompatManager.getOrCreatePrefCompat(key));
         }
+        return true;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // no-op
     }
 
     @Override
@@ -305,7 +311,6 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     public void onWifiListChanged() {
         updateWifiList();
     }
-
 
     @Override
     public int getStateIdentifier() {

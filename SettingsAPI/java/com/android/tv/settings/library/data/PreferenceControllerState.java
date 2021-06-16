@@ -17,6 +17,7 @@
 package com.android.tv.settings.library.data;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.ArraySet;
 import android.util.Log;
@@ -86,7 +87,7 @@ public abstract class PreferenceControllerState implements State {
     }
 
     @Override
-    public void onPreferenceTreeClick(String key, boolean status) {
+    public boolean onPreferenceTreeClick(String key, boolean status) {
         Collection<AbstractPreferenceController> controllers =
                 new ArrayList<>(mPreferenceControllers);
         for (AbstractPreferenceController controller : controllers) {
@@ -95,12 +96,16 @@ public abstract class PreferenceControllerState implements State {
                         mPreferenceCompatManager.getOrCreatePrefCompat(key), status);
             }
         }
+        return true;
     }
 
     @Override
     public void onPreferenceChange(String key, Object newValue) {
         // no-op
     }
+
+    @Override
+    public abstract void onActivityResult(int requestCode, int resultCode, Intent data);
 
     @Override
     public abstract int getStateIdentifier();

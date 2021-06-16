@@ -18,6 +18,7 @@ package com.android.tv.settings.library;
 
 import android.annotation.SystemApi;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.ArrayMap;
@@ -111,10 +112,17 @@ public final class SettingsManager {
 
     /** @hide */
     @SystemApi
-    public void onPreferenceClick(int state, String key, boolean status) {
-        StateManager.getState(state, mStateMap).onPreferenceTreeClick(key, status);
+    public boolean onPreferenceClick(int state, String key, boolean status) {
+        return StateManager.getState(state, mStateMap).onPreferenceTreeClick(key, status);
     }
 
+    /** @hide */
+    @SystemApi
+    public void onActivityResult(int compoundCode, int resultCode, Intent data) {
+        int state = ManagerUtil.getStateIdentifier(compoundCode);
+        int requestCode = ManagerUtil.getRequestCode(compoundCode);
+        StateManager.getState(state, mStateMap).onActivityResult(requestCode, resultCode, data);
+    }
     /** @hide */
     @SystemApi
     public void onPreferenceChange(int state, String key, Object newValue) {

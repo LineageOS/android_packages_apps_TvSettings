@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.device.apps;
 
-
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
@@ -34,6 +33,7 @@ public class AppManagementFragmentCompat extends PreferenceControllerFragmentCom
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.app_management_compat, null);
     }
+
     @Override
     public int getState() {
         return ManagerUtil.STATE_APP_MANAGEMENT;
