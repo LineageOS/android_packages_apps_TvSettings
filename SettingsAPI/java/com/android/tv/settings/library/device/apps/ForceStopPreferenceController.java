@@ -56,6 +56,14 @@ public class ForceStopPreferenceController extends AppActionPreferenceController
         mForceStopPref.setTitle(ResourcesUtil.getString(mContext,
                 "device_apps_app_management_force_stop"));
         DevicePolicyManager dpm = mContext.getSystemService(DevicePolicyManager.class);
+        Intent i = new Intent(INTENT_CONFIRMATION);
+        i.putExtra(EXTRA_GUIDANCE_TITLE, ResourcesUtil.getString(
+                mContext, "device_apps_app_management_force_stop"));
+        i.putExtra(EXTRA_GUIDANCE_SUBTITLE, ResourcesUtil.getString(
+                mContext, "device_apps_app_management_force_stop_desc"));
+        i.putExtra(EXTRA_GUIDANCE_BREADCRUMB, getAppName());
+        mForceStopPref.setIntent(i);
+
         if (dpm.packageHasActiveAdmins(mAppEntry.info.packageName)) {
             // User can't force stop device admin.
             mForceStopPref.setVisible(false);
@@ -77,6 +85,7 @@ public class ForceStopPreferenceController extends AppActionPreferenceController
                 }
             }, null, Activity.RESULT_CANCELED, null, null);
         }
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mForceStopPref);
     }
 
     @Override

@@ -1194,6 +1194,16 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".device.apps.ConfirmationActivity"
+            android:theme="@style/GuidedStepFragmentThemeTwoPanel"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.settings.device.apps.CONFIRM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
