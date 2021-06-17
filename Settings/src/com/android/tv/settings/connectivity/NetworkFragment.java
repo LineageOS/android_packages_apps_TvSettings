@@ -411,6 +411,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                             return false;
                         });
             }
+            pref.setVisible(!restrictedPref.isRestricted() || accessPoint.isSaved());
             pref.setOrder(index++);
             restrictedPref.updatePreference();
 

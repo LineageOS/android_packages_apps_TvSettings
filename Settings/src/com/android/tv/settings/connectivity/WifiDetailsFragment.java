@@ -26,6 +26,7 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
@@ -35,6 +36,9 @@ import androidx.leanback.widget.GuidedAction;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 
+import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
+import com.android.settingslib.RestrictedPreference;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -66,9 +70,9 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
     private Preference mMacAddressPref;
     private Preference mSignalStrengthPref;
     private ListPreference mRandomMacPref;
-    private Preference mProxySettingsPref;
-    private Preference mIpSettingsPref;
-    private Preference mForgetNetworkPref;
+    private RestrictedPreference mProxySettingsPref;
+    private RestrictedPreference mIpSettingsPref;
+    private RestrictedPreference mForgetNetworkPref;
 
     private ConnectivityListener mConnectivityListener;
     private AccessPoint mAccessPoint;
@@ -200,6 +204,24 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
                     logEntrySelected(TvSettingsEnums.NETWORK_AP_INFO_FORGET_NETWORK);
                     return false;
                 });
+
+        boolean canModifyNetwork = !WifiConfigHelper.isNetworkLockedDown(
+                getContext(), wifiConfiguration);
+        if (canModifyNetwork) {
+            mProxySettingsPref.setDisabledByAdmin(null);
+            mIpSettingsPref.setDisabledByAdmin(null);
+            mForgetNetworkPref.setDisabledByAdmin(null);
+
+            mProxySettingsPref.setEnabled(true);
+            mIpSettingsPref.setEnabled(true);
+            mForgetNetworkPref.setEnabled(true);
+        } else {
+            EnforcedAdmin admin = RestrictedLockUtils.getProfileOrDeviceOwner(getContext(),
+                    UserHandle.of(UserHandle.myUserId()));
+            mProxySettingsPref.setDisabledByAdmin(admin);
+            mIpSettingsPref.setDisabledByAdmin(admin);
+            mForgetNetworkPref.setDisabledByAdmin(admin);
+        }
     }
 
     private String getSignalStrength() {
