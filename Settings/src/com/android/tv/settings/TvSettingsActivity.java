@@ -20,6 +20,7 @@ import static com.android.tv.settings.overlay.FlavorUtils.ALL_FLAVORS_MASK;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.transition.Scene;
 import android.transition.Slide;
 import android.transition.Transition;
@@ -40,6 +41,7 @@ import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.SettingsManager;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.twopanelsettings.slices.ContextSingleton;
 
 import java.util.List;
 
@@ -140,8 +142,14 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
             Log.w(TAG, "Activity is not supported in current flavor");
             finish();
         }
+        if (!TextUtils.isEmpty(getString(R.string.account_slice_uri))
+                && !TextUtils.isEmpty(getString(R.string.slice_rendering_app))) {
+            ContextSingleton.getInstance().grantFullAccess(
+                    this,
+                    getString(R.string.account_slice_uri),
+                    getString(R.string.slice_rendering_app));
+        }
         if (savedInstanceState == null) {
-
             final Fragment fragment = createSettingsFragment();
             if (fragment == null) {
                 return;
