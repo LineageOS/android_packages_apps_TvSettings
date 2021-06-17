@@ -352,6 +352,23 @@
         </activity>
 
         <activity
+            android:name=".device.apps.specialaccess.AlarmsAndRemindersActivity"
+            android:theme="@style/TvSettingsActivityTheme"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:exported="true">
+            <intent-filter android:priority="1">
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.settings.REQUEST_SCHEDULE_EXACT_ALARM" />
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.settings.REQUEST_SCHEDULE_EXACT_ALARM" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".device.apps.AppManagementActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
