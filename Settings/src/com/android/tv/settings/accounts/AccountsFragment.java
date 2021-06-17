@@ -42,6 +42,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.system.SecurityFragment;
 
 import java.util.ArrayList;
@@ -54,6 +55,9 @@ import java.util.Set;
 public class AccountsFragment extends SettingsPreferenceFragment {
     private static final String TAG = "AccountsFragment";
     private static final String KEY_ADD_ACCOUNT = "add_account";
+    private static final String KEY_DEVICE_OWNER_FOOTER = "do_org_footer";
+    private static final int ORDER_ADD_ACCOUNT = Integer.MAX_VALUE - 2;
+    private static final int ORDER_FOOTER = Integer.MAX_VALUE - 1;
     private AuthenticatorHelper mAuthenticatorHelper;
 
     @Override
@@ -134,7 +138,8 @@ public class AccountsFragment extends SettingsPreferenceFragment {
         for (int i = 0; i < prefScreen.getPreferenceCount();) {
             final Preference preference = prefScreen.getPreference(i);
             final String key = preference.getKey();
-            if (touchedAccounts.contains(key) || TextUtils.equals(KEY_ADD_ACCOUNT, key)) {
+            if (touchedAccounts.contains(key) || TextUtils.equals(KEY_ADD_ACCOUNT, key)
+                    || TextUtils.equals(KEY_DEVICE_OWNER_FOOTER, key)) {
                 i++;
             } else {
                 prefScreen.removePreference(preference);
@@ -144,7 +149,7 @@ public class AccountsFragment extends SettingsPreferenceFragment {
         // Never allow restricted profile to add accounts.
         final Preference addAccountPref = findPreference(KEY_ADD_ACCOUNT);
         if (addAccountPref != null) {
-            addAccountPref.setOrder(Integer.MAX_VALUE);
+            addAccountPref.setOrder(ORDER_ADD_ACCOUNT);
             if (!AccountsUtil.isAdminRestricted(getContext())) {
                 if (isRestricted()) {
                     addAccountPref.setVisible(false);
@@ -152,6 +157,17 @@ public class AccountsFragment extends SettingsPreferenceFragment {
                     setUpAddAccountPrefIntent(addAccountPref, getContext());
                 }
             }
+        }
+
+        // Show device managed footer information if DO active
+        final Preference footerPref = findPreference(KEY_DEVICE_OWNER_FOOTER);
+        if (footerPref != null) {
+            final CharSequence deviceOwnerDisclosure = FlavorUtils.getFeatureFactory(
+                    getContext()).getEnterprisePrivacyFeatureProvider(
+                    getContext()).getDeviceOwnerDisclosure();
+            footerPref.setTitle(deviceOwnerDisclosure);
+            footerPref.setOrder(ORDER_FOOTER);
+            footerPref.setVisible(deviceOwnerDisclosure != null);
         }
     }
 
