@@ -160,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si l\'aplicació ho sol·licita, el dispositiu mostrarà el contingut que estàs mirant amb els fotogrames per segon del vídeo original. Això pot provocar que la pantalla es quedi en blanc un segon en entrar a la reproducció d\'un vídeo o sortir-ne."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Mai"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Encara que l\'aplicació ho sol·liciti, el dispositiu mai no provarà de mostrar el contingut que estàs mirant amb els fotogrames per segon del vídeo original."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Ajusta la mida del text"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Ajusta al <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Text de mostra"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"El meravellós mag d\'Oz"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Capítol 11: La meravellosa Ciutat Maragda d\'Oz"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Fins i tot amb els ulls protegits per les ulleres verdes, la Dorothy i els seus amics van quedar enlluernats per la brillantor de la meravellosa ciutat. A banda i banda dels carrers es dreçaven cases boniques, totes fetes de marbre verd amb incrustacions de maragdes guspirejants. El terra també era fet del mateix marbre verd, i totes les juntures eren cobertes de rengleres de maragdes, una al costat de l\'altra, que guspirejaven a la llum del sol. Els vidres de les finestres eren verds; i fins i tot el cel, damunt la ciutat, tenia un to verdós, i els raigs del sol eren verds. \n\nPertot es veia molta gent, homes, dones i criatures, vestits tots de verd i amb la pell verdosa. Tothom mirava la Dorothy i els seus companys amb sorpresa i curiositat, i les criatures fugien per amagar-se rere les seves mares quan veien el Lleó; però ningú no els va adreçar la paraula. Pels carrers hi havia moltes botigues i parades, i la Dorothy es fixà que tot el que hi venien era verd: caramels verds, rosetes de blat de moro verdes, sabates verdes, barrets verds i vestits verds de tota mena. En una de les parades, un home venia gasosa verda, i la Dorothy es va adonar que les criatures que en compraven pagaven amb monedes verdes. \n\nSemblava que en tota la ciutat no hi havia cavalls ni animals de cap mena. Els homes transportaven les coses en petits carretons verds, que empenyien davant seu. Tothom semblava feliç, content i pròsper."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Selecció del format"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automàtic"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
@@ -619,9 +625,9 @@
     <string name="camera_toggle_title" msgid="5566469574224956142">"Accés a la càmera"</string>
     <string name="open_camera_permissions" msgid="301360297337141591">"Accés de les aplicacions a la càmera"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Accés al micròfon: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4436219037877456256">"Quan s\'activa, tots els serveis i aplicacions amb permís poden accedir a qualsevol micròfon d\'aquest dispositiu.\n\nAquesta opció de configuració no afectarà els perifèrics d\'àudio, com ara els micròfons connectats, que disposin d\'un protocol personalitzat."</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Quan s\'activa, tots els serveis i aplicacions amb permís poden accedir a qualsevol micròfon d\'aquest dispositiu.\n\nAquesta opció de configuració no afectarà els perifèrics d\'àudio que disposin d\'un protocol personalitzat."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Accés a la càmera: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="7045001373813906859">"Quan s\'activa, tots els serveis i aplicacions amb permís poden accedir a qualsevol càmera d\'aquest dispositiu.\n\nAquesta opció de configuració no afectarà els perifèrics que siguin càmeres, com ara les càmeres web connectades, que disposin d\'un protocol personalitzat."</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Quan s\'activa, tots els serveis i aplicacions amb permís poden accedir a qualsevol càmera d\'aquest dispositiu.\n\nAquesta opció de configuració no afectarà els perifèrics de càmera que disposin d\'un protocol personalitzat."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Activat"</string>
     <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Desactivat"</string>
     <string name="system_location" msgid="4057295363709016511">"Ubicació"</string>
@@ -698,7 +704,7 @@
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Text a parla"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"Configuració del motor"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"Enuncia les contrasenyes"</string>
-    <string name="system_preferred_engine" msgid="3545505072652708443">"Motor preferit"</string>
+    <string name="system_preferred_engine" msgid="3545505072652708443">"Motor preferent"</string>
     <string name="system_speech_rate" msgid="6553204071403872669">"Velocitat de la parla"</string>
     <string name="system_play_sample" msgid="3934369914309865584">"Reprodueix una mostra"</string>
     <string name="system_install_voice_data" msgid="8016395777968958673">"Instal·la les dades de veu"</string>

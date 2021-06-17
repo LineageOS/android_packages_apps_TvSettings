@@ -90,8 +90,8 @@
     <string name="connectivity_summary_no_network_connected" msgid="6111160695454212460">"कुनै पनि नेटवर्क जडान गरिएको छैन"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi निष्क्रिय पारियो"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"स्क्यानिङ सधै उपलब्ध छ"</string>
-    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Wi-Fi अफ हुँदा पनि Google को स्थान सेवा र अन्य एपहरूलाई नेटवर्क खोज्न दिनुहोस्"</string>
-    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"नेटवर्क खोज्ने सुविधा सधैँ उपलब्ध हुन्छ, Google को स्थानसम्बन्धी सेवा र अन्य एपहरूलाई Wi-Fi नेटवर्क खोज्न दिनुहोस्। ती सेवाले Wi-Fi अफ भएका बेलामा पनि नेटवर्क खोज्न सक्छन्"</string>
+    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Wi-Fi अफ हुँदा पनि Google को लोकेसन सर्भिस र अन्य एपहरूलाई नेटवर्क खोज्न दिनुहोस्"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"नेटवर्क खोज्ने सुविधा सधैँ उपलब्ध हुन्छ, Google को लोकेसन सर्भिस र अन्य एपहरूलाई Wi-Fi नेटवर्क खोज्न दिनुहोस्। ती सेवाले Wi-Fi अफ भएका बेलामा पनि नेटवर्क खोज्न सक्छन्"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"नेटवर्कमा कनेक्ट गर्नुहोस्"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"नेटवर्कका निदानहरू"</string>
@@ -160,6 +160,18 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"एपले डिस्प्लेको फ्रेम रेट सामग्रीको फ्रेम रेटका आधारमा निर्धारण गर्ने अनुरोध गरेका खण्डमा तपाईंको यन्त्रले यसको आउटपुट तपाईंले हेरिरहनुभएको सामग्रीको मूल फ्रेम रेटका आधारमा निर्धारण गर्ने छ। यसले गर्दा भिडियो प्ले गर्न थाल्दा वा उक्त भिडियोबाट बाहिरिँदा स्क्रिन खाली देखिन सक्छ।"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"कहिल्यै पनि होइन"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"एपले डिस्प्लेको फ्रेम रेट सामग्रीको फ्रेम रेटका आधारमा निर्धारण गर्न अनुरोध गरेका खण्डमा पनि तपाईंको यन्त्रले कहिल्यै पनि यसको आउटपुट तपाईंले हेरिरहनुभएको सामग्रीको मूल फ्रेम रेटका आधारमा निर्धारण गर्ने प्रयास गर्ने छैन।"</string>
+    <!-- no translation found for font_scale_settings_title (4114019544800225980) -->
+    <skip />
+    <!-- no translation found for font_scale_item_detail (1558315053348778805) -->
+    <skip />
+    <!-- no translation found for font_scale_sample_text_title (5239266611413037261) -->
+    <skip />
+    <!-- no translation found for font_scale_preview_text_title (8056182208511371119) -->
+    <skip />
+    <!-- no translation found for font_scale_preview_text_subtitle (677394182922188048) -->
+    <skip />
+    <!-- no translation found for font_scale_preview_text_body (2040384234251207410) -->
+    <skip />
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"फर्म्याट छनौट"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"स्वचालित"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"म्यानुअल"</string>
@@ -619,9 +631,9 @@
     <string name="camera_toggle_title" msgid="5566469574224956142">"क्यामेरा प्रयोग गर्ने अनुमति"</string>
     <string name="open_camera_permissions" msgid="301360297337141591">"एपलाई क्यामेरा प्रयोग गर्ने अनुमति"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"माइक्रोफोन प्रयोग गर्ने अनुमति: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4436219037877456256">"यो सेटिङ अन गरिएका बेला क्यामेरा प्रयोग गर्ने अनुमति दिइएका सबै एप तथा सेवाहरूले यो डिभाइसमा भएको जुनसुकै माइक्रोफोन प्रयोग गर्न पाउँछन्।\n\nप्रयोगकर्ताको आवश्यकताअनुसारको प्रोटोकोल भएका प्लगइन माइक डिभाइस जस्ता अडियोसम्बन्धी सहायक डिभाइसहरूमा भने यो सेटिङ लागू हुँदैन।"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"यो सेटिङ अन गरिएका बेला क्यामेरा प्रयोग गर्ने अनुमति दिइएका सबै एप तथा सेवाहरूले यो डिभाइसमा भएको जुनसुकै माइक्रोफोन प्रयोग गर्न पाउँछन्।\n\nप्रयोगकर्ताको आवश्यकताअनुसारको प्रोटोकल भएका अडियोसम्बन्धी सहायक डिभाइसहरूमा भने यो सेटिङ लागू हुँदैन।"</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"क्यामेरा प्रयोग गर्ने अनुमति: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="7045001373813906859">"यो सेटिङ अन गरिएका बेला क्यामेरा प्रयोग गर्ने अनुमति दिइएका सबै एप तथा सेवाहरूले यो डिभाइसमा भएको जुनसुकै क्यामेरा प्रयोग गर्न पाउँछन्।\n\nप्रयोगकर्ताको आवश्यकताअनुसारको प्रोटोकोल भएका प्लगइन वेबक्याम जस्ता क्यामेरासम्बन्धी सहायक डिभाइसहरूमा भने यो सेटिङ लागू हुँदैन।"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"यो सेटिङ अन गरिएका बेला क्यामेरा प्रयोग गर्ने अनुमति पाएका सबै एप तथा सेवाहरूले यो डिभाइसका जुनसुकै क्यामेरा प्रयोग गर्न पाउँछन्।\n\nप्रयोगकर्ताको आवश्यकताअनुसारको प्रोटोकल भएका क्यामेरासम्बन्धी सहायक डिभाइसहरूमा भने यो सेटिङ लागू हुँदैन।"</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"अन छ"</string>
     <string name="sensor_toggle_info_off" msgid="7546772458177469821">"अफ छ"</string>
     <string name="system_location" msgid="4057295363709016511">"स्थान"</string>
@@ -629,16 +641,16 @@
     <string name="system_network_location_confirm" msgid="7128162421781085332">"स्थान सहमति"</string>
     <string name="location_mode_title" msgid="728244518174115443">"मोड"</string>
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"हालका स्थान अनुरोधहरू"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"अहिले कुनै पनि एपहरूले स्थानको जानकारी मागेका छैनन्"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"अहिले कुनै पनि एपहरूले लोकेसन मागेका छैनन्"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"उच्च ब्याट्री प्रयोग"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"कम ब्याट्री प्रयोग"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"स्थान अनुमान गर्न Wi‑Fi प्रयोग गर्नुहोस्"</string>
     <string name="location_status" msgid="3037321737386011224">"स्थान अवस्था"</string>
-    <string name="location_services" msgid="551503779736382878">"स्थान सेवाहरू"</string>
+    <string name="location_services" msgid="551503779736382878">"लोकेसन सर्भिसहरू"</string>
     <string name="on" msgid="4899322147062342542">"सक्रिय गर्नुहोस्"</string>
     <string name="off" msgid="3127416478888499352">"बन्द गर्नुहोस्"</string>
-    <string name="google_location_services_title" msgid="6304196603522909239">"Google स्थान सेवाहरू"</string>
-    <string name="third_party_location_services_title" msgid="2826218400381676508">"तेस्रो पक्ष स्थान सेवाहरू"</string>
+    <string name="google_location_services_title" msgid="6304196603522909239">"Google लोकेसन सर्भिसहरू"</string>
+    <string name="third_party_location_services_title" msgid="2826218400381676508">"तेस्रो पक्ष लोकेसन सर्भिसहरू"</string>
     <string name="location_reporting" msgid="3552501333650895634">"स्थान रिपोर्ट गर्दै"</string>
     <string name="location_history" msgid="4055660203090513120">"स्थानसम्बन्धी इतिहास"</string>
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google ले उत्पादनहरूमा यो सुविधा प्रयोग गर्दछ जस्तै Google Now र Google Maps । स्थान रिपोर्टिङ खोल्दै यो सुविधा स्टोर प्रयोग गर्ने तपाईंको  Google  खाता सन्दर्भमा आफ्नो उपकरणको सबै भन्दा भर्खरैको स्थान डेटाको प्रयोग गर्ने कुनै पनि Google उत्पादनले दिन्छ।"</string>
@@ -977,7 +989,7 @@
     <string name="directory_access" msgid="7338555825237012006">"निर्देशिकामाथिको पहुँच"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"यी अनुप्रयोगहरूसँग केही निर्देशिकाहरूमाथि पहुँच राख्ने अनुमति छ।"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
-    <string name="system_alert_window_settings" msgid="5790572489650085051">"अरू एपमाथि देखाउनुहोस्"</string>
+    <string name="system_alert_window_settings" msgid="5790572489650085051">"अरू एपमाथि देखाइयोस्"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"अन्य एपको माथिपट्टि देखिने अनुमति दिनु…"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"कुनै एपलाई आफूले प्रयोग गरिरहेका अन्य एपमाथि देखिन अनुमति दिनुहोस्। यस कार्यले तपाईंले गर्ने ती अनुप्रयोगहरूको प्रयोगमा हस्तक्षेप गर्न वा तिनीहरू देखा पर्ने वा तिनीहरूले काम गर्ने तरिकालाई परिवर्तन गर्न सक्छ।"</string>
     <string name="write_system_settings" msgid="4284654265954461890">"प्रणालीसम्बन्धी सेटिङहरू परिमार्जन गर्नुहोस्"</string>
@@ -986,7 +998,7 @@
     <string name="write_settings_on" msgid="71675710746513956">"छ"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"छैन"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Picture-in-picture"</string>
-    <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Picture-in-picture लाई अनुमति दिनुहोस्"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Picture-in-picture लाई अनुमति दिइयोस्"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"स्थापना गरिएको कुनै पनि अनुप्रयोगले Picture-in-picture मोडलाई समर्थन गर्दैन"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"यो एप खुला रहेको अवस्थामा वा तपाईंले यसलाई छाडेपछि (उदाहरणका लागि, भिडियो हेर्ने कार्य जारी राख्न) यस एपलाई picture-in-picture विन्डो सिर्जना गर्ने अनुमति दिनुहोस्। यो विन्डो तपाईंले प्रयोग गरिरहनुभएका अन्य एपहरूको माथि देखिन्छ।"</string>
     <string name="special_access" msgid="21806055758289916">"एपलाई विशेष पहुँच"</string>

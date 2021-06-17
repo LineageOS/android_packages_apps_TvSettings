@@ -160,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ilova talab qilsa, ijrodagi kontent kadr almashish tezligi formatini qurilmaning oʻzi avtomatik sozlaydi. Bunday holda video ijrosi boshida yoki tomoshadan keyin ekran qisqa vaqt oʻchishi mumkin."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Hech qachon"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Ilova talab qilsa ham, ijrodagi kontent kadr almashish tezligi formatini qurilmaning oʻzi avtomatik sozlaydi."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Matn oʻlchami"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"<xliff:g id="SCALE">%1$d</xliff:g>%% ga miqyosini oʻzgartirish"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Namunaviy matn"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Oz mamlakati sehrgari"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11-bob: Oz mamlakatining zumrad shahri"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Yashil koʻzoynak taqishgan boʻlishiga qaramasdan, bu ajoyib shaharning jilosi Doroti va uning doʻstlarining koʻzlarini qamashtirardi. Koʻchalarda yashil marmardan qurilgan va yorqin zumradlar bilan bezalgan goʻzal uylar tizilib turar edi. Ular yurib borayotgan yashil marmarli yoʻlakdagi zumradlar quyosh nurida jilolanardi. Uylar derazalari ham yashil oynadan qilingan edi. Hattoki shahar osmoni ham yashil tusda boʻlib, quyosh nurlari ham yashil edi. \n\nAtrofda yashil libos kiygan erkaklar, ayollar va bolalar yurishardi, ularning terisining rangi ham yashilsifat edi. Ular bir soʻz demay Doroti va uning gʻalati doʻstlariga hayratlanib boqishardi, bolalar bahaybat sherdan qoʻrqqanlaridan yugurib onalarini ortiga qochishardi. Doroti koʻrdiki, koʻchada koʻp doʻkonlar boʻlib, ulardagi barcha narsalar yashil rangda edi: yashil shirinliklar va bodroq, yashil poyabzal va bosh kiyimlar, yashil liboslar va barcha turdagi paltolar. Bir joydagi sotuvchidan bolalar yashil tangaga yashil limonad sotib olishar edi. \n\nOtlar va boshqa turdagi hayvonlar koʻrinmas edi. Odamlarlar oʻzlari surib yurgan yashil aravachalarida narsalarini olib yurishardi. Zumrad shahar aholisi baxtli va mamnun edi."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Format tanlash"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Avtomatik"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Oddiy usulda"</string>
@@ -619,9 +625,9 @@
     <string name="camera_toggle_title" msgid="5566469574224956142">"Kameraga ruxsat"</string>
     <string name="open_camera_permissions" msgid="301360297337141591">"Kameraga ruxsati bor ilovalar"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofonga ruxsat: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4436219037877456256">"Yoqilsa, barcha ilova va xizmatlar bu qurilmadagi mikrofondan foydalana oladi.\n\nTashqi mikrofon kabi audio jihozlar maxsus protokoldan foydalanadi va bu sozlama tomonidan bezovta qilinmaydi."</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Yoqilsa, barcha ilova va xizmatlar bu qurilmadagi mikrofondan foydalana oladi.\n\nAudio jihozlar maxsus protokoldan foydalanadi va bu sozlama tomonidan bezovta qilinmaydi."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kameraga ruxsat: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="7045001373813906859">"Yoqilsa, barcha ilova va xizmatlar bu qurilmadagi kameradan foydalana oladi.\n\nTashqi vebkamera kabi kamerali jihozlar maxsus protokoldan foydalanadi va bu sozlama tomonidan bezovta qilinmaydi."</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Yoqilsa, barcha ilova va xizmatlar bu qurilmadagi kameradan foydalana oladi.\n\nKamerali jihozlar maxsus protokoldan foydalanadi va bu sozlama tomonidan bezovta qilinmaydi."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Yoniq"</string>
     <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Oʻchiq"</string>
     <string name="system_location" msgid="4057295363709016511">"Mamlakat"</string>
@@ -698,7 +704,7 @@
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Matndan nutqqa"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"Nutq tizimi konfiguratsiyasi"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"Parollarni og‘zaki aytish"</string>
-    <string name="system_preferred_engine" msgid="3545505072652708443">"Tanlama mexaniz"</string>
+    <string name="system_preferred_engine" msgid="3545505072652708443">"Asosiy vosita"</string>
     <string name="system_speech_rate" msgid="6553204071403872669">"Nutq tezligi"</string>
     <string name="system_play_sample" msgid="3934369914309865584">"Namunani o‘ynatish"</string>
     <string name="system_install_voice_data" msgid="8016395777968958673">"Ovoz ma\'lumotlarini o‘rnatish"</string>

@@ -160,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"アプリからリクエストがあった場合、デバイスは、再生しているコンテンツのオリジナルのフレームレートに出力を合わせます。そのため、動画再生の開始時または終了時に画面が一瞬空白になる場合があります。"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"なし"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"アプリからリクエストがあっても、デバイスでは、再生しているコンテンツのオリジナルのフレームレートに出力を合わせることはありません。"</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"テキストの拡大縮小"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"<xliff:g id="SCALE">%1$d</xliff:g>%% に適用"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"サンプル テキスト"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"オズの魔法使い"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"第 11 章: オズの不思議なエメラルド シティ"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"緑のメガネで目を守っていても、ドロシーとその仲間たちは不思議なシティの輝きに最初はくらくらしました。通りには緑色の大理石造りの美しい家々が建ち並び、どの家にもキラキラしたエメラルドがいたるところにはめ込んでありました。足元の敷石も同じ緑色の大理石で、ブロックの継ぎ目にはエメラルドがすきまなく並び、太陽を反射してギラギラしていました。窓のガラスも緑色、空の色も緑色、太陽の光も緑色でした。\n\n男の人、女の人、子どもなど、たくさんの人が歩いていて、だれもかれもが緑色の服を着て、肌の色も緑がかっていました。みんなドロシーとその奇妙な寄せ集めの仲間たちに不思議そうな目を向け、子どもたちはライオンを見るなり、逃げ出してお母さんの後ろに隠れてしまいましたが、誰一人として話しかけてくる人はいませんでした。通りにはお店がたくさんあって、ドロシーはそこで売られている品物も緑色をしていることに気づきました。キャンディーも、ポップコーンも、靴も、帽子も、服もみんな緑色でした。男の人が売っている緑色のレモネードを子どもたちが買うときに出したお金も緑色だったことにドロシーは気づきました。\n\n馬などの動物はいないようでした。荷物は小さな緑色の手押し車で自分たちで運んでいました。みんな幸せで、満たされ、裕福そうな様子でした。"</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"形式の選択"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"自動"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"手動"</string>
@@ -619,9 +625,9 @@
     <string name="camera_toggle_title" msgid="5566469574224956142">"カメラへのアクセス"</string>
     <string name="open_camera_permissions" msgid="301360297337141591">"カメラへのアプリのアクセス"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"マイクへのアクセス: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4436219037877456256">"ON にすると、権限を持つすべてのアプリとサービスがこのデバイスのマイクにアクセスできるようになります。\n\nカスタムのプロトコルが設定されたプラグイン式マイクデバイスなどのオーディオ周辺機器はこの設定の影響を受けません。"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"ON にすると、権限を持つすべてのアプリとサービスがこのデバイスのマイクにアクセスできるようになります。\n\nカスタムのプロトコルが設定されたオーディオ周辺機器はこの設定の影響を受けません。"</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"カメラへのアクセス: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="7045001373813906859">"ON にすると、権限を持つすべてのアプリとサービスがこのデバイスのカメラにアクセスできるようになります。\n\nカスタムのプロトコルが設定されたプラグイン式ウェブカメラなどのカメラ周辺機器はこの設定の影響を受けません。"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"ON にすると、権限を持つすべてのアプリとサービスがこのデバイスのカメラにアクセスできるようになります。\n\nカスタムのプロトコルが設定されたカメラ周辺機器はこの設定の影響を受けません。"</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"ON"</string>
     <string name="sensor_toggle_info_off" msgid="7546772458177469821">"OFF"</string>
     <string name="system_location" msgid="4057295363709016511">"位置情報"</string>
@@ -982,7 +988,7 @@
     <string name="allow_overlay_description" msgid="5152329837278240259">"使用中の他のアプリの上にアプリを重ねて表示できるようになります。他のアプリを使用する際に見えづらくなったり、他のアプリの表示や動作が変わったりする場合があります。"</string>
     <string name="write_system_settings" msgid="4284654265954461890">"システム設定の変更"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"システム設定を変更できるアプリ"</string>
-    <string name="write_settings_description" msgid="7382397926674265937">"この権限により、アプリはシステム設定の変更ができるようになります。"</string>
+    <string name="write_settings_description" msgid="7382397926674265937">"この権限により、アプリはシステム設定を変更できます。"</string>
     <string name="write_settings_on" msgid="71675710746513956">"変更可能"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"変更不可"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"ピクチャー イン ピクチャー"</string>

@@ -162,6 +162,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ako aplikacija to traži, uređaj će usklađivati brzinu kadrova sadržaja koji prikazuje sa originalnom brzinom kadrova sadržaja koji gledate. Zbog toga će ekran možda nakratko biti prazan kada zaustavljate ili počinjete reprodukciju videa."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nikad"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Čak i ako aplikacija to traži, uređaj nikada neće pokušavati da uskladi brzinu kadrova sadržaja koji prikazuje sa originalnom brzinom kadrova sadržaja koji gledate."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Prilagođavanje veličine teksta"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Prilagodi na <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Primer teksta"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Čarobnjak iz Oza"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Poglavlje 11: Čudesni Smaragdni grad Oza"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"I pored toga što su im oči bile zaštićene zelenim naočarima, Doroti i njeni prijatelji su u prvom trenutku bili zaslepljeni sjajem čudesnog grada. Ulice su bile pune prelepih kuća sagrađenih od zelenog mermera i ukrašenih svetlucavim smaragdima. Hodali su pločnikom od istog zelenog mermera, a na mestima na kojima su se ploče spajale nalazili su se gusto poređani smaragdi koji su se presijavali na suncu. Čak je i nebo iznad grada bilo zelene boje, kao i sunčevi zraci. \n\nNa ulicama je bilo mnogo ljudi. Muškarci, žene i deca su šetali, pri čemu su svi nosili zelena odela i imali zelenkastu kožu. Posmatrali su Doroti i njeno neobično društvo sa čuđenjem, a deca su bežala i krila se iza svojih majki kad bi videla Lava. Međutim, niko im se nije obraćao. U ulici je bilo mnogo radnji, a Doroti je primetila da je u njima sve bilo zeleno. Prodavale su se zelene bombone i kokice, zelene cipele, zeleni šeširi i zelena odeća svih vrsta. Na jednom mestu je neki čovek prodavao zelenu limunadu, a Doroti je primetila da su je deca plaćala zelenim novčićima. \n\nČinilo se da nema konja niti bilo kakvih drugih životinja. Ljudi su stvari nosili u malim zelenim kolicima koja su gurali ispred sebe. Svi su izgledali srećno, zadovoljno i uspešno."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Izbor formata"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatski"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Ručno"</string>
@@ -634,9 +640,9 @@
     <string name="camera_toggle_title" msgid="5566469574224956142">"Pristup kameri"</string>
     <string name="open_camera_permissions" msgid="301360297337141591">"Pristup aplikacije kameri"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Pristup mikrofonu: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4436219037877456256">"Kada je uključen, sve aplikacije i usluge sa dozvolom mogu da pristupaju svakom mikrofonu na ovom uređaju.\n\nOvo podešavanje ne utiče na periferne audio uređaje, poput žičanih mikrofona sa prilagođenim protokolom"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Kada je uključeno, sve aplikacije i usluge sa dozvolom mogu da pristupaju svakom mikrofonu na ovom uređaju.\n\nOvo podešavanje ne utiče na periferne audio uređaje sa prilagođenim protokolom."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Pristup kameri: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="7045001373813906859">"Kada je uključen, sve aplikacije i usluge sa dozvolom mogu da pristupaju svakoj kameri na ovom uređaju.\n\nOvo podešavanje ne utiče na periferne kamere, poput žičanih veb-kamera sa prilagođenim protokolom"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Kada je uključeno, sve aplikacije i usluge sa dozvolom mogu da pristupaju svakoj kameri na ovom uređaju.\n\nOvo podešavanje ne utiče na periferne uređaje kamere sa prilagođenim protokolom."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Uključeno"</string>
     <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Isključeno"</string>
     <string name="system_location" msgid="4057295363709016511">"Lokacija"</string>
@@ -1007,7 +1013,7 @@
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Slika u slici"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Dozvoli sliku u slici"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Nijedna instalirana aplikacija ne podržava sliku u slici"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Dozvolite aplikacijama da prave prozor slike u slici dok je aplikacija otvorena ili kada izađete iz nje (na primer, da biste nastavili da gledate neki video). Ovaj prozor se prikazuje preko drugih aplikacija koje koristite."</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Dozvolite aplikacijama da prave prozor slike u slici dok je aplikacija otvorena ili kada izađete iz nje (na primer, da biste nastavili da gledate video). Ovaj prozor se prikazuje preko drugih aplikacija koje koristite."</string>
     <string name="special_access" msgid="21806055758289916">"Poseban pristup aplikaciji"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Zvuk"</string>
