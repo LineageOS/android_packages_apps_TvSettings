@@ -24,4 +24,9 @@
         android:title="@string/add_account"
         settings:userRestriction="no_modify_accounts"/>
 
+    <com.android.settingslib.widget.FooterPreference
+        android:key="do_org_footer"
+        android:selectable="false"
+        android:title="@string/do_disclosure_generic" />
+
 </PreferenceScreen>
