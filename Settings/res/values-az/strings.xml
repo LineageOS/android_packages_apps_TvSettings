@@ -141,7 +141,7 @@
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt; ilə qoşalaşdırmaq üçün, &lt;br&gt;cihazın tələb olunan PIN kodunu daxil edin:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Bu cihaz ilə qoşalaşdırmaq üçün: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Cihazın tələb olunan kodunu daxil edin:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Adətən 0000 və ya 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Qoşulsun"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Qoşalaşdırın"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Ləğv edin"</string>
     <string name="send_feedback" msgid="936698637869795473">"Rəy göndərin"</string>
     <string name="launch_help" msgid="2607478763131952469">"Yardım Mərkəzi"</string>
@@ -586,7 +586,7 @@
     <string name="title_current_autofill_service" msgid="9029001041887283153">"Cari Avtomatik Daxiletmə Xidməti"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"Avtomatik Daxiletmə Xidmətini seçin"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Yoxdur"</string>
-    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Bu tətbiqə inana biləcəyinizi dəqiqləşdirin&lt;b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=tətbiq_adı nümunə=Parol xidməti &gt;%%1$s&lt;/xliff:g&gt; ekranı analiz edərək avtomatik doldurula bilən sahələri tapır."</string>
+    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Bu tətbiqə etibar etdiyinizə əmin olun&lt;b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=tətbiq_adı nümunə=Parol xidməti &gt;%%1$s&lt;/xliff:g&gt; nəyin avtomatik daxil edilə biləcəyini müəyyən etmək üçün ekrandakılardan istifadə edir."</string>
     <string name="computing_size" msgid="8623916230485437579">"Hesablanır..."</string>
     <string name="title_select_wifi_network" msgid="935820896444071617">"Wi-Fi şəbəkənizi seçin"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Adlandırın"</string>
@@ -667,7 +667,7 @@
     <string name="wifi_setup_save_success" msgid="6862510218032734919">"Uğurla saxlanıldı"</string>
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"<xliff:g id="APP_VERSION">%1$s</xliff:g> versiyası"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Açın"</string>
-    <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Dayandırılsın"</string>
+    <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Dayandırmağı gücləndir"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Əgər proqramın dayandırılmasını gücləndirsəniz, o düzgün işləməyə bilər."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Poz"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Güncəlləmələri sistemdən silin"</string>
@@ -678,7 +678,7 @@
     <string name="device_apps_app_management_enable_desc" msgid="8686291003061136476">"Bu proqramı aktivləşdirmək istəyirsiniz?"</string>
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"İşlənmiş yaddaş"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="VOLUME">%2$s</xliff:g> üzrə <xliff:g id="SIZE">%1$s</xliff:g> istifadə olunub"</string>
-    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Datanı silin"</string>
+    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Datanı təmizlə"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Bu tətbiq datası həmişəlik silinəcək. \nBura bütün fayllar, ayarlar, hesablar, verilənlər bazası və sairləri aiddir."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"Defoltları təmizləyin"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"Bəzi fəaliyyətlər üçün bu proqramı işə salmağı təyin edin"</string>
@@ -744,7 +744,7 @@
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"İcazəli"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"İcazə verilmir"</string>
     <string name="usage_access" msgid="8402350645248312782">"İstifadə girişi"</string>
-    <string name="usage_access_description" msgid="3276026988575551587">"İstifadə girişi işlədilən tətbiqləri və müntəzəmliyi izləyir, operatoru, dili və digər parametrləri müəyyən edir."</string>
+    <string name="usage_access_description" msgid="3276026988575551587">"İstifadə girişi istifadə etdiyiniz digər tətbiqləri və istifadə tezliyini, həmçinin, operator, dil ayarları və digər detalları izləməyə imkan verir."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"Enerji optimallaşdırılması"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"Tətbiqlərin enerji istifadəsini optimallaşdırın"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"Optimallaşdırılacaq tətbiq yoxdur"</string>
