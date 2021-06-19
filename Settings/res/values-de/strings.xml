@@ -147,7 +147,7 @@
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"AKTIVIERTE FORMATE"</string>
     <string name="surround_sound_disabled_formats" msgid="2250466936859455802">"DEAKTIVIERTE FORMATE"</string>
     <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Ändere zum Aktivieren die Formatauswahl in „Manuell“."</string>
-    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Ändere zum Deaktivieren die Formatauswahl in „Manuell“."</string>
+    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Zum Deaktivieren muss der Formatauswahlmodus „Manuell“ aktiviert sein."</string>
     <string name="display_category_title" msgid="247804007525046312">"Display"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Erweiterte Displayeinstellungen"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -184,7 +184,7 @@
     <string name="hdr_hide_formats" msgid="8561568998525727230">"Formate ausblenden"</string>
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"AKTIVIERTE FORMATE"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"DEAKTIVIERTE FORMATE"</string>
-    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Ändere zum Deaktivieren die Formatauswahl in „Manuell“."</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Zum Deaktivieren muss der Formatauswahlmodus „Manuell“ aktiviert sein."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Daten im Cache löschen?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Daten im Cache werden für alle Apps gelöscht."</string>
     <string name="accessories_add" msgid="413764175035531452">"Zubehör hinzufügen"</string>
@@ -625,11 +625,9 @@
     <string name="camera_toggle_title" msgid="5566469574224956142">"Kamerazugriff"</string>
     <string name="open_camera_permissions" msgid="301360297337141591">"App-Zugriff auf die Kamera"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofonzugriff: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <!-- no translation found for mic_toggle_info_content (4699624900513326055) -->
-    <skip />
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Wenn diese Funktion aktiviert ist, können alle Apps und Dienste mit entsprechender Berechtigung auf alle Mikrofone dieses Geräts zugreifen.\n\nAuf Audio-Peripheriegeräte mit benutzerdefiniertem Protokoll hat diese Einstellung keine Auswirkung."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kamerazugriff: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <!-- no translation found for camera_toggle_info_content (2999965953853204003) -->
-    <skip />
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Wenn diese Funktion aktiviert ist, können alle Apps und Dienste mit entsprechender Berechtigung auf alle Kameras dieses Geräts zugreifen.\n\nAuf Peripheriegeräte der Kamera mit benutzerdefiniertem Protokoll hat diese Einstellung keine Auswirkung."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"An"</string>
     <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Aus"</string>
     <string name="system_location" msgid="4057295363709016511">"Standort"</string>
