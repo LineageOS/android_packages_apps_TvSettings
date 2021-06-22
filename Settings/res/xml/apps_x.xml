@@ -36,11 +36,10 @@
         android:title="@string/apps_permissions_category_title">
 
         <com.android.tv.twopanelsettings.slices.SlicePreference
-            android:key="play_auto_update"
-            android:title="@string/manage_updates"
+            android:key="update"
+            android:title="@string/update_slice_title"
             android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
-            custom:isPreferenceVisible="false"
-            custom:uri="@string/play_auto_update_settings_slice_uri"/>
+            custom:uri="@string/update_slice_uri"/>
 
         <Preference
             android:key="Permissions"
@@ -59,8 +58,8 @@
         android:title="@string/system_security"/>
 
     <com.android.tv.twopanelsettings.slices.SlicePreference
-        android:key="play_protect"
-        android:title="@string/play_protect_security"
+        android:key="overlay_security"
+        android:title="@string/overlay_security_slice_title"
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
-        custom:uri="@string/play_protect_settings_slice_uri"/>
+        custom:uri="@string/overlay_security_slice_uri"/>
 </PreferenceScreen>
