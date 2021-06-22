@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.privacy;
 
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
@@ -48,14 +47,13 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
     private static final String KEY_ASSISTANT = "assistant";
     private static final String KEY_PURCHASES = "purchases";
     private static final String KEY_SECURITY = "security";
-    private static final String KEY_PLAY_PROTECT = "play_protect";
+    private static final String KEY_OVERLAY_SECURITY = "overlay_security";
     private static final String KEY_MIC = "microphone";
     private static final String KEY_CAMERA = "camera";
-    private static final String KEY_PLAY_AUTO_UPDATE = "play_auto_update";
+    private static final String KEY_UPDATE = "update";
 
     private int getPreferenceScreenResId() {
         switch (FlavorUtils.getFlavor(getContext())) {
-            case FLAVOR_TWO_PANEL:
             case FLAVOR_X:
             case FLAVOR_VENDOR:
                 return R.xml.privacy_x;
@@ -72,8 +70,8 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
         Preference purchasesSlicePreference = findPreference(KEY_PURCHASES);
         Preference adsPreference = findPreference(KEY_ADS);
         final Preference securityPreference = findPreference(KEY_SECURITY);
-        final Preference playProtectPreference = findPreference(KEY_PLAY_PROTECT);
-        final Preference playAutoUpdatePreference = findPreference(KEY_PLAY_AUTO_UPDATE);
+        final Preference overlaySecuritySlicePreference = findPreference(KEY_OVERLAY_SECURITY);
+        final Preference updateSlicePreference = findPreference(KEY_UPDATE);
 
         PrivacyToggle.MIC_TOGGLE.preparePreferenceWithSensorFragment(getContext(),
                 findPreference(KEY_MIC), SensorFragment.TOGGLE_EXTRA);
@@ -86,13 +84,9 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
             assistantSlicePreference.setVisible(false);
             purchasesSlicePreference.setVisible(false);
             adsPreference.setVisible(false);
-            // playProtectPreference can be present only in two panel settings
-            if (playProtectPreference != null) {
-                playProtectPreference.setVisible(false);
-            }
-            if (isPlayProtectPreferenceEnabled(playProtectPreference)) {
-                // By default show securityPreference unless playProtectPreference is enabled
-                securityPreference.setVisible(false);
+            showSecurityPreference(securityPreference, overlaySecuritySlicePreference);
+            if (updateSlicePreference != null) {
+                updateSlicePreference.setVisible(false);
             }
             return;
         }
@@ -118,45 +112,53 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
             ((CustomContentDescriptionPreference) adsPreference).setContentDescription(
                     getResources().getString(R.string.ads_content_description));
         }
-        if (isPlayProtectPreferenceEnabled(playProtectPreference)) {
-            showPlayProtectPreference(playProtectPreference, securityPreference);
+        if (isOverlaySecuritySlicePreferenceEnabled(overlaySecuritySlicePreference)) {
+            showOverlaySecuritySlicePreference(
+                    overlaySecuritySlicePreference, securityPreference);
         } else {
-            showSecurityPreference(securityPreference, playProtectPreference);
+            showSecurityPreference(securityPreference, overlaySecuritySlicePreference);
         }
-        if (isPlayAutoUpdatePreferenceEnabled(playAutoUpdatePreference)) {
-            playAutoUpdatePreference.setVisible(true);
+
+        if (updateSlicePreference != null) {
+            updateSlicePreference.setVisible(
+                    isUpdateSlicePreferenceEnabled(updateSlicePreference));
         }
     }
 
-    private boolean isPlayProtectPreferenceEnabled(@Nullable Preference playProtectPreference) {
-        return playProtectPreference instanceof SlicePreference
-                && SliceUtils.isPlayTvSettingsSliceEnabled(
-                        getContext(), ((SlicePreference) playProtectPreference).getUri());
+    private boolean isOverlaySecuritySlicePreferenceEnabled(
+            @Nullable Preference overlaySecuritySlicePreference) {
+        return overlaySecuritySlicePreference instanceof SlicePreference
+                && SliceUtils.isSettingsSliceEnabled(
+                getContext(), ((SlicePreference) overlaySecuritySlicePreference).getUri());
     }
 
-    private void showPlayProtectPreference(
-            @Nullable Preference playProtectPreference,
-            Preference securityPreference) {
-        if (playProtectPreference != null) {
-            playProtectPreference.setVisible(true);
+    private void showOverlaySecuritySlicePreference(
+            @Nullable Preference overlaySecuritySlicePreference,
+            @Nullable Preference securityPreference) {
+        if (overlaySecuritySlicePreference != null) {
+            overlaySecuritySlicePreference.setVisible(true);
         }
-        securityPreference.setVisible(false);
+        if (securityPreference != null) {
+            securityPreference.setVisible(false);
+        }
     }
 
     private void showSecurityPreference(
-            Preference securityPreference,
-            @Nullable Preference playProtectPreference) {
-        securityPreference.setVisible(true);
-        if (playProtectPreference != null) {
-            playProtectPreference.setVisible(false);
+            @Nullable Preference securityPreference,
+            @Nullable Preference overlaySecuritySlicePreference) {
+        if (securityPreference != null) {
+            securityPreference.setVisible(true);
+        }
+        if (overlaySecuritySlicePreference != null) {
+            overlaySecuritySlicePreference.setVisible(false);
         }
     }
 
-    private boolean isPlayAutoUpdatePreferenceEnabled(
-            @Nullable Preference playAutoUpdatePreference) {
-        return playAutoUpdatePreference instanceof SlicePreference
-                && SliceUtils.isPlayTvSettingsSliceEnabled(
-                        getContext(), ((SlicePreference) playAutoUpdatePreference).getUri());
+    private boolean isUpdateSlicePreferenceEnabled(
+            @Nullable Preference updateSlicePreference) {
+        return updateSlicePreference instanceof SlicePreference
+                && SliceUtils.isSettingsSliceEnabled(
+                getContext(), ((SlicePreference) updateSlicePreference).getUri());
     }
 
     @Override

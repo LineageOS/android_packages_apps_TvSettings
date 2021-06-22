@@ -47,8 +47,8 @@ public class AppsFragment extends PreferenceControllerFragment {
 
     private static final String KEY_PERMISSIONS = "Permissions";
     private static final String KEY_SECURITY = "security";
-    private static final String KEY_PLAY_PROTECT = "play_protect";
-    private static final String KEY_PLAY_AUTO_UPDATE = "play_auto_update";
+    private static final String KEY_OVERLAY_SECURITY = "overlay_security";
+    private static final String KEY_UPDATE = "update";
 
     public static void prepareArgs(Bundle b, String volumeUuid, String volumeName) {
         b.putString(AppsActivity.EXTRA_VOLUME_UUID, volumeUuid);
@@ -77,66 +77,67 @@ public class AppsFragment extends PreferenceControllerFragment {
                 }
         );
         final Preference securityPreference = findPreference(KEY_SECURITY);
-        final Preference playProtectPreference = findPreference(KEY_PLAY_PROTECT);
-        final Preference playAutoUpdatePreference = findPreference(KEY_PLAY_AUTO_UPDATE);
+        final Preference overlaySecuritySlicePreference = findPreference(KEY_OVERLAY_SECURITY);
+        final Preference updateSlicePreference = findPreference(KEY_UPDATE);
         if (FlavorUtils.getFeatureFactory(getContext()).getBasicModeFeatureProvider()
                 .isBasicMode(getContext())) {
-            // playProtectPreference can be present only in two panel settings
-            if (playProtectPreference != null) {
-                playProtectPreference.setVisible(false);
-            }
-            if (isPlayProtectPreferenceEnabled(playProtectPreference)) {
-                // By default show securityPreference unless playProtectPreference is enabled
-                securityPreference.setVisible(false);
+            showSecurityPreference(securityPreference, overlaySecuritySlicePreference);
+            if (updateSlicePreference != null) {
+                updateSlicePreference.setVisible(false);
             }
         } else {
-            if (isPlayProtectPreferenceEnabled(playProtectPreference)) {
-                showPlayProtectPreference(playProtectPreference, securityPreference);
+            if (isOverlaySecuritySlicePreferenceEnabled(overlaySecuritySlicePreference)) {
+                showOverlaySecuritySlicePreference(
+                        overlaySecuritySlicePreference, securityPreference);
             } else {
-                showSecurityPreference(securityPreference, playProtectPreference);
+                showSecurityPreference(securityPreference, overlaySecuritySlicePreference);
             }
-
-            if (isPlayAutoUpdatePreferenceEnabled(playAutoUpdatePreference)) {
-                playAutoUpdatePreference.setVisible(true);
+            if (updateSlicePreference != null) {
+                updateSlicePreference.setVisible(
+                        isUpdateSlicePreferenceEnabled(updateSlicePreference));
             }
         }
     }
 
-    private boolean isPlayProtectPreferenceEnabled(@Nullable Preference playProtectPreference) {
-        return playProtectPreference instanceof SlicePreference
-                && SliceUtils.isPlayTvSettingsSliceEnabled(
-                        getContext(), ((SlicePreference) playProtectPreference).getUri());
+    private boolean isOverlaySecuritySlicePreferenceEnabled(
+            @Nullable Preference overlaySecuritySlicePreference) {
+        return overlaySecuritySlicePreference instanceof SlicePreference
+                && SliceUtils.isSettingsSliceEnabled(
+                        getContext(), ((SlicePreference) overlaySecuritySlicePreference).getUri());
     }
 
-    private void showPlayProtectPreference(
-            @Nullable Preference playProtectPreference,
-            Preference securityPreference) {
-        if (playProtectPreference != null) {
-            playProtectPreference.setVisible(true);
+    private void showOverlaySecuritySlicePreference(
+            @Nullable Preference overlaySecuritySlicePreference,
+            @Nullable Preference securityPreference) {
+        if (overlaySecuritySlicePreference != null) {
+            overlaySecuritySlicePreference.setVisible(true);
         }
-        securityPreference.setVisible(false);
+        if (securityPreference != null) {
+            securityPreference.setVisible(false);
+        }
     }
 
     private void showSecurityPreference(
-            Preference securityPreference,
-            @Nullable Preference playProtectPreference) {
-        securityPreference.setVisible(true);
-        if (playProtectPreference != null) {
-            playProtectPreference.setVisible(false);
+            @Nullable Preference securityPreference,
+            @Nullable Preference overlaySecuritySlicePreference) {
+        if (securityPreference != null) {
+            securityPreference.setVisible(true);
+        }
+        if (overlaySecuritySlicePreference != null) {
+            overlaySecuritySlicePreference.setVisible(false);
         }
     }
 
-    private boolean isPlayAutoUpdatePreferenceEnabled(
-            @Nullable Preference playAutoUpdatePreference) {
-        return playAutoUpdatePreference instanceof SlicePreference
-                && SliceUtils.isPlayTvSettingsSliceEnabled(
-                        getContext(), ((SlicePreference) playAutoUpdatePreference).getUri());
+    private boolean isUpdateSlicePreferenceEnabled(
+            @Nullable Preference updateSlicePreference) {
+        return updateSlicePreference instanceof SlicePreference
+                && SliceUtils.isSettingsSliceEnabled(
+                        getContext(), ((SlicePreference) updateSlicePreference).getUri());
     }
 
     @Override
     protected int getPreferenceScreenResId() {
         switch (FlavorUtils.getFlavor(getContext())) {
-            case FlavorUtils.FLAVOR_TWO_PANEL:
             case FlavorUtils.FLAVOR_X:
             case FlavorUtils.FLAVOR_VENDOR:
                 return R.xml.apps_x;
