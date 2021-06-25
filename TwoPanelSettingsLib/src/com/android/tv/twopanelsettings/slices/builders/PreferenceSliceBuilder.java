@@ -20,6 +20,7 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.BUTTONSTYLE
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.CHECKMARK;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.RADIO;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.SEEKBAR;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -220,6 +221,9 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private CharSequence mKey;
         private boolean mIconNeedsToBeProcessed;
         private @BUTTONSTYLE int mButtonStyle;
+        private int mSeekbarMin;
+        private int mSeekbarMax;
+        private int mSeekbarValue;
         private CharSequence mRadioGroup;
         private boolean mEnabled;
         private boolean mSelectable;
@@ -634,6 +638,16 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
             return addEndItem(switchAction);
         }
 
+        public PreferenceSliceBuilder.RowBuilder addSeekBar(
+                PendingIntent pendingIntent, int min, int max, int value) {
+            SliceAction seekbarAction = new SliceAction(pendingIntent, "", false);
+            mButtonStyle = SEEKBAR;
+            mSeekbarMin = min;
+            mSeekbarMax = max;
+            mSeekbarValue = value;
+            return addEndItem(seekbarAction);
+        }
+
         /**
          * Adds an action to the end items of the row builder. A mixture of icons and actions is not
          * permitted. If an icon has already been added, this will throw {@link
@@ -789,6 +803,27 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
          */
         public int getButtonStyle() {
             return mButtonStyle;
+        }
+
+        /**
+         *
+         */
+        public int getSeekbarMin() {
+            return mSeekbarMin;
+        }
+
+        /**
+         *
+         */
+        public int getSeekbarMax() {
+            return mSeekbarMax;
+        }
+
+        /**
+         *
+         */
+        public int getSeekbarValue() {
+            return mSeekbarValue;
         }
 
         /**

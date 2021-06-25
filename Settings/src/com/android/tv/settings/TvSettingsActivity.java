@@ -136,8 +136,6 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mSettingsManager = new SettingsManager(this);
-        mSettingsManager.registerListener(mUIUpdateCallback);
         if ((FlavorUtils.getFlavor(this) & getAvailableFlavors()) == 0) {
             Log.w(TAG, "Activity is not supported in current flavor");
             finish();
@@ -206,7 +204,6 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mSettingsManager.unRegisterListener(mUIUpdateCallback);
     }
 
     @Override
@@ -279,10 +276,6 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (ManagerUtil.getStateIdentifier(requestCode) != -1) {
-            mSettingsManager.onActivityResult(requestCode, resultCode, data);
-            return;
-        }
         if (requestCode == REQUEST_CODE_STARTUP_VERIFICATION) {
             if (resultCode == RESULT_OK) {
                 Log.v(TAG, "Startup verification succeeded.");
