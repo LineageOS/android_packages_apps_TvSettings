@@ -43,6 +43,9 @@ public final class SlicesConstants {
     public static final String SUBTYPE_IS_ENABLED = "SUBTYPE_IS_ENABLED";
     public static final String SUBTYPE_IS_SELECTABLE = "SUBTYPE_IS_SELECTABLE";
     public static final String SUBTYPE_INFO_PREFERENCE = "SUBTYPE_INFO_PREFERENCE";
+    public static final String SUBTYPE_SEEKBAR_MIN = "SUBTYPE_SEEKBAR_MIN";
+    public static final String SUBTYPE_SEEKBAR_MAX = "SUBTYPE_SEEKBAR_MAX";
+    public static final String SUBTYPE_SEEKBAR_VALUE = "SUBTYPE_SEEKBAR_VALUE";
     public static final String PATH_STATUS = "status";
     public static final String PARAMETER_DIRECTION = "direction";
     public static final String FORWARD = "forward";
@@ -64,8 +67,9 @@ public final class SlicesConstants {
     public static final int SWITCH = 0;
     public static final int CHECKMARK = 1;
     public static final int RADIO = 2;
+    public static final int SEEKBAR = 3;
 
-    @IntDef({SWITCH, CHECKMARK, RADIO})
+    @IntDef({SWITCH, CHECKMARK, RADIO, SEEKBAR})
     @Retention(RetentionPolicy.SOURCE)
     public @interface BUTTONSTYLE {}
 }
