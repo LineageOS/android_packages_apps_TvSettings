@@ -72,6 +72,7 @@ import com.android.tv.twopanelsettings.slices.SliceFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 import com.android.tv.twopanelsettings.slices.SliceSwitchPreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
+import com.android.tv.twopanelsettings.slices.SliceSeekbarPreference;
 
 import java.util.Set;
 
@@ -449,6 +450,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     public interface SliceFragmentCallback {
         /** Triggered when preference is focused **/
         void onPreferenceFocused(Preference preference);
+
+        /** Triggered when Seekbar preference is changed **/
+        void onSeekbarPreferenceChanged(SliceSeekbarPreference preference, int addValue);
     }
 
     protected void onPreferenceFocused(Preference pref) {
@@ -555,6 +559,15 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             getView().getViewTreeObserver().addOnGlobalLayoutListener(
                     mOnGlobalLayoutListener);
         }
+    }
+
+    private boolean onSeekbarPreferenceChanged(SliceSeekbarPreference pref, int addValue) {
+        final Fragment prefFragment =
+                getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
+        if (prefFragment instanceof SliceFragmentCallback) {
+            ((SliceFragmentCallback) prefFragment).onSeekbarPreferenceChanged(pref, addValue);
+        }
+        return true;
     }
 
     private boolean isRTL() {
@@ -669,6 +682,22 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         public boolean onKey(View v, int keyCode, KeyEvent event) {
             Fragment prefFragment =
                     getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
+
+            if (event.getAction() == KeyEvent.ACTION_DOWN
+                    && (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT
+                    || keyCode == KeyEvent.KEYCODE_DPAD_LEFT)) {
+                Preference preference = getChosenPreference(prefFragment);
+                if ((preference instanceof SliceSeekbarPreference)) {
+                    SliceSeekbarPreference sbPref = (SliceSeekbarPreference) preference;
+                    if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
+                        onSeekbarPreferenceChanged(sbPref, 1);
+                    } else {
+                        onSeekbarPreferenceChanged(sbPref, -1);
+                    }
+                    return true;
+                }
+            }
+
             if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_BACK) {
                 return back(true);
             }

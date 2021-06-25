@@ -39,6 +39,7 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFE
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TITLE_ICON;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.RADIO;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.SEEKBAR;
 
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
@@ -117,6 +118,13 @@ public final class SlicePreferencesUtil {
                                     ((SliceRadioPreference) preference).setRadioGroup(
                                             getRadioGroup(item).toString());
                                 }
+                                break;
+                            case SEEKBAR :
+                                int min = SlicePreferencesUtil.getSeekbarMin(item);
+                                int max = SlicePreferencesUtil.getSeekbarMax(item);
+                                int value = SlicePreferencesUtil.getSeekbarValue(item);
+                                preference = new SliceSeekbarPreference(
+                                        contextThemeWrapper, action, min, max, value);
                                 break;
                         }
                         if (preference instanceof HasSliceAction) {
@@ -420,6 +428,39 @@ public final class SlicePreferencesUtil {
         for (SliceItem item : items)  {
             if (item.getSubType() != null
                     && item.getSubType().equals(SlicesConstants.SUBTYPE_BUTTON_STYLE)) {
+                return item.getInt();
+            }
+        }
+        return -1;
+    }
+
+    private static int getSeekbarMin(SliceItem sliceItem) {
+        List<SliceItem> items = sliceItem.getSlice().getItems();
+        for (SliceItem item : items)  {
+            if (item.getSubType() != null
+                    && item.getSubType().equals(SlicesConstants.SUBTYPE_SEEKBAR_MIN)) {
+                return item.getInt();
+            }
+        }
+        return -1;
+    }
+
+    private static int getSeekbarMax(SliceItem sliceItem) {
+        List<SliceItem> items = sliceItem.getSlice().getItems();
+        for (SliceItem item : items)  {
+            if (item.getSubType() != null
+                    && item.getSubType().equals(SlicesConstants.SUBTYPE_SEEKBAR_MAX)) {
+                return item.getInt();
+            }
+        }
+        return -1;
+    }
+
+    private static int getSeekbarValue(SliceItem sliceItem) {
+        List<SliceItem> items = sliceItem.getSlice().getItems();
+        for (SliceItem item : items)  {
+            if (item.getSubType() != null
+                    && item.getSubType().equals(SlicesConstants.SUBTYPE_SEEKBAR_VALUE)) {
                 return item.getInt();
             }
         }
