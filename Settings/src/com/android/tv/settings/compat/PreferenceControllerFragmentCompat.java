@@ -149,18 +149,18 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
         return preference;
     }
 
-    public HasKeys updatePref(PreferenceCompat prefParcelable) {
-        if (prefParcelable == null) {
+    public HasKeys updatePref(PreferenceCompat prefCompat) {
+        if (prefCompat == null) {
             return null;
         }
-        String[] key = prefParcelable.getKey();
+        String[] key = prefCompat.getKey();
         Preference preference = findTargetPreference(key);
         if (preference == null) {
             return null;
         }
 
         RenderUtil.updatePreference(
-                getContext(), (HasKeys) preference, prefParcelable, preference.getOrder());
+                getContext(), (HasKeys) preference, prefCompat, preference.getOrder());
         return (HasKeys) preference;
     }
 
