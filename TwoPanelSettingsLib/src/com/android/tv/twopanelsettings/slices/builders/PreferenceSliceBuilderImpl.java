@@ -92,6 +92,9 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     public static final String SUBTYPE_IS_ENABLED = "SUBTYPE_IS_ENABLED";
     public static final String SUBTYPE_IS_SELECTABLE = "SUBTYPE_IS_SELECTABLE";
     public static final String SUBTYPE_INFO_PREFERENCE = "SUBTYPE_INFO_PREFERENCE";
+    public static final String SUBTYPE_SEEKBAR_MIN = "SUBTYPE_SEEKBAR_MIN";
+    public static final String SUBTYPE_SEEKBAR_MAX = "SUBTYPE_SEEKBAR_MAX";
+    public static final String SUBTYPE_SEEKBAR_VALUE = "SUBTYPE_SEEKBAR_VALUE";
 
     /**
      *
@@ -242,6 +245,9 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         private SliceItem mKeyItem;
         private SliceItem mIconNeedsToBeProcessedItem;
         private SliceItem mButtonStyleItem;
+        private SliceItem mSeekbarMinItem;
+        private SliceItem mSeekbarMaxItem;
+        private SliceItem mSeekbarValueItem;
         private SliceItem mIsEnabledItem;
         private SliceItem mIsSelectableItem;
         private SliceItem mIsAddingInfoStatusItem;
@@ -334,6 +340,9 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
                 setInfoImage(builder.getInfoImage());
             }
             setButtonStyle(builder.getButtonStyle());
+            setSeekbarMin(builder.getSeekbarMin());
+            setSeekbarMax(builder.getSeekbarMax());
+            setSeekbarValue(builder.getSeekbarValue());
             setEnabled(builder.isEnabled());
             setSelectable(builder.isSelectable());
             setAddInfoStatus(builder.addInfoStatus());
@@ -474,6 +483,30 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         public void setButtonStyle(@BUTTONSTYLE int buttonStyle) {
             mButtonStyleItem = new SliceItem(
                     buttonStyle, FORMAT_INT, SUBTYPE_BUTTON_STYLE, new String[]{});
+        }
+
+        /**
+         * Set minimum value of the seekbar.
+         */
+        public void setSeekbarMin(int value) {
+            mSeekbarMinItem = new SliceItem(
+                    value, FORMAT_INT, SUBTYPE_SEEKBAR_MIN, new String[]{});
+        }
+
+        /**
+         * Set maximum value of the seekbar.
+         */
+        public void setSeekbarMax(int value) {
+            mSeekbarMaxItem = new SliceItem(
+                    value, FORMAT_INT, SUBTYPE_SEEKBAR_MAX, new String[]{});
+        }
+
+        /**
+         * Set progress value of the seekbar.
+         */
+        public void setSeekbarValue(int value) {
+            mSeekbarValueItem = new SliceItem(
+                    value, FORMAT_INT, SUBTYPE_SEEKBAR_VALUE, new String[]{});
         }
 
         /**
@@ -657,6 +690,15 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             }
             if (mIsAddingInfoStatusItem != null) {
                 b.addItem(mIsAddingInfoStatusItem);
+            }
+            if (mSeekbarMinItem != null) {
+                b.addItem(mSeekbarMinItem);
+            }
+            if (mSeekbarMaxItem != null) {
+                b.addItem(mSeekbarMaxItem);
+            }
+            if (mSeekbarValueItem != null) {
+                b.addItem(mSeekbarValueItem);
             }
             for (int i = 0; i < mEndItems.size(); i++) {
                 Slice item = mEndItems.get(i);
