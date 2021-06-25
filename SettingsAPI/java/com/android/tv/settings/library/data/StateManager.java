@@ -19,7 +19,9 @@ package com.android.tv.settings.library.data;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ALL_APPS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APPS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
+import static com.android.tv.settings.library.ManagerUtil.STATE_HIGH_POWER;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK_MAIN;
+import static com.android.tv.settings.library.ManagerUtil.STATE_SPECIAL_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
 
 import android.content.Context;
@@ -29,6 +31,8 @@ import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.device.apps.AllAppsState;
 import com.android.tv.settings.library.device.apps.AppManagementState;
 import com.android.tv.settings.library.device.apps.AppsState;
+import com.android.tv.settings.library.device.apps.specialaccess.HighPowerState;
+import com.android.tv.settings.library.device.apps.specialaccess.SpecialAppAccessState;
 import com.android.tv.settings.library.network.NetworkMainState;
 import com.android.tv.settings.library.network.WifiDetailsState;
 
@@ -58,6 +62,12 @@ public class StateManager {
                 break;
             case STATE_APP_MANAGEMENT:
                 state = new AppManagementState(context, uiUpdateCallback);
+                break;
+            case STATE_SPECIAL_ACCESS:
+                state = new SpecialAppAccessState(context, uiUpdateCallback);
+                break;
+            case STATE_HIGH_POWER:
+                state = new HighPowerState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op

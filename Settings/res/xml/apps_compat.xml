@@ -29,7 +29,6 @@
         android:key="see_all_apps"
         android:title="@string/apps_see_all_apps"
         android:fragment="com.android.tv.settings.device.apps.AllAppsFragmentCompat"/>
-
     <com.android.tv.settings.compat.TsPreferenceCategory
         android:key="permissions"
         android:title="@string/apps_permissions_category_title">
@@ -40,4 +39,9 @@
             <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
         </com.android.tv.settings.compat.TsPreference>
     </com.android.tv.settings.compat.TsPreferenceCategory>
+
+    <com.android.tv.settings.compat.TsPreference
+        android:key="special_access"
+        android:title="@string/special_access"
+        android:fragment="com.android.tv.settings.device.apps.specialaccess.SpecialAppAccessCompat"/>
 </PreferenceScreen>
