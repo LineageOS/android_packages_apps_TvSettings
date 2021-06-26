@@ -72,6 +72,8 @@ public class PreferenceCompat {
     // 0: not updated, 1 :not selectable, 2: selectable
     private byte mEnabled;
 
+    private boolean mShouldRemove;
+
     private List<PreferenceCompat> mChildPrefCompats;
 
     /** @hide */
@@ -209,13 +211,27 @@ public class PreferenceCompat {
     }
 
     /** @hide */
+    @SystemApi
     public String getValue() {
         return mValue;
     }
 
     /** @hide */
+    @SystemApi
     public void setValue(String value) {
         mValue = value;
+    }
+
+    /** @hide */
+    @SystemApi
+    public boolean shouldRemove() {
+        return mShouldRemove;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setShouldRemove(boolean shouldRemove) {
+        mShouldRemove = shouldRemove;
     }
 
     /** @hide */

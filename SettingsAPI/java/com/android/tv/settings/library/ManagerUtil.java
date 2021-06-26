@@ -34,6 +34,8 @@ public final class ManagerUtil {
     public static final int STATE_APPS = 3;
     public static final int STATE_ALL_APPS = 4;
     public static final int STATE_APP_MANAGEMENT = 5;
+    public static final int STATE_SPECIAL_ACCESS = 6;
+    public static final int STATE_HIGH_POWER = 7;
 
     public static final String INFO_INTENT = "intent";
     public static final String INFO_NEXT_STATE = "next_state";
