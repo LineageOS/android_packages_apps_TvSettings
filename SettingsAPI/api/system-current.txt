@@ -16,7 +16,9 @@ package com.android.tv.settings.library {
     field public static final int STATE_APPS = 3; // 0x3
     field public static final int STATE_APP_MANAGEMENT = 5; // 0x5
     field public static final int STATE_DEVICE_MAIN = 2; // 0x2
+    field public static final int STATE_HIGH_POWER = 7; // 0x7
     field public static final int STATE_NETWORK_MAIN = 0; // 0x0
+    field public static final int STATE_SPECIAL_ACCESS = 6; // 0x6
     field public static final int STATE_WIFI_DETAILS = 1; // 0x1
   }
 
@@ -44,6 +46,7 @@ package com.android.tv.settings.library {
     method public String getSummary();
     method public String getTitle();
     method public int getType();
+    method public String getValue();
     method public byte getVisible();
     method public com.android.tv.settings.library.PreferenceCompat immutableCopy();
     method public void initChildPreferences();
@@ -59,11 +62,14 @@ package com.android.tv.settings.library {
     method public void setIntent(android.content.Intent);
     method public void setSelectable(byte);
     method public void setSelectable(boolean);
+    method public void setShouldRemove(boolean);
     method public void setSummary(String);
     method public void setTitle(String);
     method public void setType(byte);
+    method public void setValue(String);
     method public void setVisible(boolean);
     method public void setVisible(byte);
+    method public boolean shouldRemove();
     field public static final byte STATUS_OFF = 1; // 0x1
     field public static final byte STATUS_ON = 2; // 0x2
     field public static final byte STATUS_UNASSIGNED = 0; // 0x0
