@@ -98,8 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Жақында ашылған қолданбалар"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Барлық қолданбаны көру"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Рұқсаттар"</string>
-    <string name="play_protect_security" msgid="1476818421152898821">"Қауіпсіздік"</string>
-    <string name="manage_updates" msgid="2228839328071887368">"Жаңартуларды басқару"</string>
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Барлық қолданба"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Жүйелік қолданбаларды көрсету"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Орнатылған қолданбалар"</string>
@@ -198,7 +198,7 @@
     <string name="accessory_battery" msgid="2283700366184703548">"Батарея <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
     <string name="accessory_unpairing" msgid="2529195578082286563">"Құрылғы жұптаудан шығарылуда…"</string>
     <string name="accessory_connected" msgid="5229574480869175180">"Қосылды"</string>
-    <string name="accessory_change_name" msgid="6493717176878500683">"Атауын өзгерту"</string>
+    <string name="accessory_change_name" msgid="6493717176878500683">"Атын өзгерту"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Бұл жабдық үшін жаңа ат енгізіңіз"</string>
     <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Bluetooth жұптауы."</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Қосалқы құралдар ізделуде…"</string>
@@ -346,7 +346,8 @@
     <string name="device_name" msgid="566626587332817733">"Құрылғы атауы"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Өшіріп қосу"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Құқықтық ақпарат"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"Ашық кодты бағдарлама лицензиялары"</string>
+    <!-- no translation found for about_legal_license (4056934178111674054) -->
+    <skip />
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google құқықтық ақпараты"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Лицензия деректері қол жетімді емес"</string>
     <string name="about_model" msgid="9164284529291439296">"Үлгі"</string>
@@ -635,7 +636,7 @@
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Орынды анықтауға келісім"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Режим"</string>
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Соңғы орынды анықтау сұраулары"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"Жуықта ешбір қолданба орынды сұрамаған"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"Жақында ешбір қолданба локацияны сұрамаған."</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Батареяны пайдалану жоғары"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Төмен деңгейде батарея пайдалану"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"Орналасқан жерді анықтау үшін Wi‑Fi желісін пайдалану"</string>
@@ -807,7 +808,7 @@
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Осы қолданбаға сенетініңізге көз жеткізіңіз&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Құпия сөз қызметі&gt;%1$s&lt;/xliff:g&gt; автоматты түрде толтырылатын деректерді анықтау үшін экранда көрсетілетін мазмұнды пайдаланады."</string>
     <string name="computing_size" msgid="8623916230485437579">"Есептелуде…"</string>
     <string name="title_select_wifi_network" msgid="935820896444071617">"Wi-Fi желіңізді таңдау"</string>
-    <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Атауын өзгерту"</string>
+    <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Атын өзгерту"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"Wi-Fi дисплейі"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"PIN қажет"</string>
     <string name="whichApplication" msgid="4510042089342879264">"Әрекетті келесімен аяқтау"</string>
@@ -905,7 +906,8 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Әдепкі параметрлер орнатылмаған"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Кэшті тазалау"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Хабарландырулар"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Бастапқы коды ашық бағдарлама лицензиялары"</string>
+    <!-- no translation found for device_apps_app_management_licenses (4809737266551899869) -->
+    <skip />
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Рұқсаттар"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Қолданба қолжетімді емес"</string>
     <string name="settings_ok" msgid="5950888975075541964">"Жарайды"</string>
@@ -995,6 +997,8 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"\"Суреттегі сурет\" режиміне рұқсат беру"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Орнатылған қолданбалардың ешқайсысы \"суреттегі сурет\" режимін қолдамайды"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Қолданба ашық болғанда не одан шыққанда (мысалы, бейнені әрі қарай көру үшін), қолданбаларға \"суреттегі сурет\" терезесін ашуға мүмкіндік береді. Бұл терезе ашылған басқа қолданбалардың үстінен шығады."</string>
+    <!-- no translation found for alarms_and_reminders_description (4063972350154624500) -->
+    <skip />
     <string name="special_access" msgid="21806055758289916">"Арнайы рұқсат"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Аудио"</string>

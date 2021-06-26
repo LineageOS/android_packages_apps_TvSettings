@@ -16,6 +16,7 @@
 
 package com.android.tv.twopanelsettings.slices;
 
+import static android.app.slice.Slice.EXTRA_SLIDER_VALUE;
 import static android.app.slice.Slice.EXTRA_TOGGLE_STATE;
 import static android.app.slice.Slice.HINT_PARTIAL;
 
@@ -440,6 +441,25 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     @Override
     public void onPreferenceFocused(Preference preference) {
         setLastFocused(preference);
+    }
+
+    @Override
+    public void onSeekbarPreferenceChanged(SliceSeekbarPreference preference, int addValue) {
+        int curValue = preference.getValue();
+        if((addValue > 0 && curValue < preference.getMax()) ||
+           (addValue < 0 && curValue > preference.getMin())) {
+            preference.setValue(curValue + addValue);
+
+            try {
+                Intent fillInIntent =
+                        new Intent()
+                                .putExtra(EXTRA_SLIDER_VALUE, preference.getValue())
+                                .putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
+                firePendingIntent((HasSliceAction) preference, fillInIntent);
+            } catch (Exception e) {
+                Log.e(TAG, "PendingIntent for slice cannot be sent", e);
+            }
+        }
     }
 
     @Override
