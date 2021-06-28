@@ -57,13 +57,6 @@
         android:key="sound_effects"
         android:persistent="true"
         android:title="@string/device_sound_effects"/>
-    <com.android.tv.twopanelsettings.slices.EmbeddedSliceSwitchPreference
-        custom:uri="@string/surround_sound_toggle_slice_uri"
-        custom:isPreferenceVisible="false" />
-    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
-        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
-        custom:uri="@string/advanced_sound_settings_slice_uri"
-        custom:isPreferenceVisible="false"/>
     <Preference
         android:key="advanced_sound_settings"
         android:title="@string/advanced_sound_settings_title"
