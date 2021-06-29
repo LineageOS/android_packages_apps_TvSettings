@@ -147,7 +147,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         this.getPreferenceScreen().removeAll();
 
         showProgressBar();
-        mHandler.post(() -> getSliceLiveData().observeForever(this));
+        getSliceLiveData().observeForever(this);
         if (TextUtils.isEmpty(mScreenTitle)) {
             mScreenTitle = getArguments().getCharSequence(SlicesConstants.TAG_SCREEN_TITLE, "");
         }
