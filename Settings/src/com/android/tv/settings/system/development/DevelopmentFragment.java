@@ -1359,9 +1359,9 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     }
 
     private void updateUsbConfigurationValues() {
-        if (mUsbConfiguration != null) {
-            UsbManager manager = (UsbManager) getActivity().getSystemService(Context.USB_SERVICE);
-
+        final UsbManager manager = (UsbManager) getActivity().getSystemService(Context.USB_SERVICE);
+        mUsbConfiguration.updatePreference(p -> p.setVisible(manager != null));
+        if (manager != null) {
             String[] values = getResources().getStringArray(R.array.usb_configuration_values);
             String[] titles = getResources().getStringArray(R.array.usb_configuration_titles);
             int index = 0;
