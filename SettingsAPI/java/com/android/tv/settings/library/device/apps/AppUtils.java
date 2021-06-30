@@ -122,12 +122,6 @@ public class AppUtils {
         return false;
     }
 
-    /** Returns the label for a given package. */
-    public static CharSequence getApplicationLabel(
-            PackageManager packageManager, String packageName) {
-        return AppUtils.getApplicationLabel(packageManager, packageName);
-    }
-
     /**
      * Returns a boolean indicating whether the given package is a hidden system module
      */
@@ -167,16 +161,6 @@ public class AppUtils {
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
-    }
-
-    /**
-     * Returns a content description of an app name which distinguishes a personal app from a
-     * work app for accessibility purpose.
-     * If the app is in a work profile, then add a "work" prefix to the app name.
-     */
-    public static String getAppContentDescription(Context context, String packageName,
-            int userId) {
-        return AppUtils.getAppContentDescription(context, packageName, userId);
     }
 
     /**
