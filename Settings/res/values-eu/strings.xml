@@ -24,7 +24,7 @@
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Ezarpen bizkorrak"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Ezarpen orokorrak"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Baztertu iradokizuna"</string>
-    <string name="hotwording_title" msgid="2606899304616599026">"\"OK Google\" hautematea"</string>
+    <string name="hotwording_title" msgid="2606899304616599026">"\"Hey Google\" hautematea"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Hitz egin Google-ren Laguntzailea eginbideari edonoiz"</string>
     <string name="header_category_device" msgid="3023893663454705969">"Gailua"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Hobespenak"</string>
@@ -297,7 +297,7 @@
     <string name="proxy_error_empty_port" msgid="692020249267351015">"Ataka eremuak ezin du hutsik egon"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"Ostalaria eremua hutsik badago, utzi Ataka eremua hutsik"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Atakak ez du balio"</string>
-    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Arakatzaileak HTTP proxya erabiltzen du, baina agian beste aplikazioek ez dute erabiliko."</string>
+    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Arakatzaileak HTTP proxya erabiltzen du; beste aplikazioek, ordea, agian ezingo dute erabili."</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"Idatzi balio duen ataka bat.\nAdibidez: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Idatzi kanpo utzitako domeinuen zerrenda bat komaz bereizita, edo utzi hutsik.\nAdibidez: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"Idatzi balio duen ostalari-izen bat.\nAdibidez: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -396,7 +396,7 @@
     <string name="desc_set_time_zone" msgid="4926392006501180047">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="902518158066450918">"Erabili 24 orduko formatua"</string>
     <string name="desc_set_time_format" msgid="8688587526768572230">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
-    <string name="system_auto_date_time" msgid="8458199433555868708">"Data eta ordu automatikoa"</string>
+    <string name="system_auto_date_time" msgid="8458199433555868708">"Data eta ordu automatikoak"</string>
   <string-array name="auto_date_time_entries">
     <item msgid="8119837829162871025">"Erabili sareak emandako ordua"</item>
     <item msgid="369146066143710034">"Desaktibatuta"</item>
@@ -504,7 +504,7 @@
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Baimendu kokapen faltsuak sortzea"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Hautatu arazteko aplikazioa"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Itxaron araztaileari"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Egiaztatu USBko aplikazioak"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Egiaztatu USB bidezko aplikazioak"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Egiaztatu ADB/ADT bidez instalatutako aplikazioak portaera kaltegarriak atzemateko"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Wi-Fi sareetan saioa hasteko modu xehatua"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Gaitu wifi-sareetan saioa hasteko modu xehatua"</string>
@@ -517,7 +517,7 @@
     <string name="system_show_surface_updates" msgid="7680759813613585278">"Erakutsi azaleko eguneratzeak"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"Leihoen animazio-eskala"</string>
     <string name="system_transition_animation_scale" msgid="7266380208347453619">"Trantsizioen animazio-eskala"</string>
-    <string name="system_animator_duration_scale" msgid="3829445237130423625">"Animatzailearen iraupena"</string>
+    <string name="system_animator_duration_scale" msgid="3829445237130423625">"Animatzailearen iraupen-eskala"</string>
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"Modu zorrotza gaituta"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"Egin GPU errendatze-profila"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"Gaitu aztarnak"</string>
@@ -531,10 +531,10 @@
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Aktibatu arazketa modua USBa konektatzean"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Araztutako aplikazioa araztailea erantsi arte itxaroten ari da exekutatu aurretik"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Erakutsi bideo zatiaren mugak, marjinak, etab."</string>
-    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Nabarmendu leiho barruko ikuspegiak GPUz marraztean"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Eguneratu bitartean, nabarmendu hardware-geruzak berdez"</string>
+    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Distirarazi leiho barruko ikuspegiak GPUz marraztean"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Distirarazi hardware-geruzak berdez haiek eguneratzean"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Onenetik txarrenera: urdina, berdea, gorri argia, gorria"</string>
-    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Nabarmendu leiho osoen azalak eguneratzen direnean"</string>
+    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Distirarazi leiho osoen azalak haiek eguneratzean"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Nabarmendu pantaila hari nagusian eragiketa luzeak egitean"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Neurtu errendatze-denbora ADB shell dumpsys gfxinfo aginduan"</string>
     <string name="action_on_title" msgid="1074972820237738324">"Aktibatuta"</string>
@@ -580,10 +580,10 @@
     <string name="tts_rate_fast" msgid="5723868816257531421">"Bizkorra"</string>
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"Oso bizkorra"</string>
     <string name="title_settings" msgid="780933693363320088">"<xliff:g id="NAME">%1$s</xliff:g> teklatuaren ezarpenak"</string>
-    <string name="title_current_keyboard" msgid="891238509164879851">"Uneko teklatua"</string>
+    <string name="title_current_keyboard" msgid="891238509164879851">"Oraingo teklatua"</string>
     <string name="title_configure" msgid="846802387014612210">"Konfiguratu"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Teklatuaren aukerak"</string>
-    <string name="title_current_autofill_service" msgid="9029001041887283153">"Betetze automatikoaren uneko zerbitzua"</string>
+    <string name="title_current_autofill_service" msgid="9029001041887283153">"Betetze automatikoaren oraingo zerbitzua"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"Hautatu betetze automatikoaren zerbitzua"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Bat ere ez"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Ziurtatu aplikazioa fidagarria dela&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Pasahitzen zerbitzuak&gt;%1$s&lt;/xliff:g&gt; pantailan dagoena erabiltzen du automatikoki bete daitekeena zehazteko."</string>
@@ -650,17 +650,17 @@
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Onartezina"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Murrizketa pertsonalizatuak"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="3293508876131962699">"Unetxo bat…"</string>
-    <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"Aldatu PIN kodea"</string>
+    <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"Aldatu PINa"</string>
     <string name="restriction_description" msgid="2053112392083722259">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
     <string name="app_sees_restricted_accounts_and_controlled_by" msgid="1261056180558324892">"Aplikazio honek zure kontuak atzi ditzake. <xliff:g id="APP">%1$s</xliff:g> aplikazioak kontrolatzen du."</string>
-    <string name="pin_enter_unlock_channel" msgid="243855138978654080">"Kanal hau ikusi nahi baduzu, idatzi PIN kodea."</string>
-    <string name="pin_enter_unlock_program" msgid="275489015420025531">"Telesaio hau ikusi nahi baduzu, idatzi PIN kodea."</string>
-    <string name="pin_enter_pin" msgid="5020029261153234751">"Idatzi PIN kodea"</string>
-    <string name="pin_enter_new_pin" msgid="1930944619313642621">"Aldatu PIN kodea"</string>
-    <string name="pin_enter_again" msgid="7615050143778858658">"Idatzi PIN kodea berriro"</string>
-    <string name="pin_enter_old_pin" msgid="5665265735227617942">"Idatzi lehengo PIN kodea"</string>
-    <string name="pin_enter_wrong_seconds" msgid="3014013615537066237">"Bost aldiz idatzi duzu oker PIN kodea.\nSaiatu berriro <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> segundo barru."</string>
-    <string name="pin_toast_wrong" msgid="4297542365877164402">"PIN kodea ez da zuzena. Saiatu berriro."</string>
+    <string name="pin_enter_unlock_channel" msgid="243855138978654080">"Kanal hau ikusi nahi baduzu, idatzi PINa."</string>
+    <string name="pin_enter_unlock_program" msgid="275489015420025531">"Telesaio hau ikusi nahi baduzu, idatzi PINa."</string>
+    <string name="pin_enter_pin" msgid="5020029261153234751">"Idatzi PINa"</string>
+    <string name="pin_enter_new_pin" msgid="1930944619313642621">"Aldatu PINa"</string>
+    <string name="pin_enter_again" msgid="7615050143778858658">"Idatzi PINa berriro"</string>
+    <string name="pin_enter_old_pin" msgid="5665265735227617942">"Idatzi lehengo PINa"</string>
+    <string name="pin_enter_wrong_seconds" msgid="3014013615537066237">"Bost aldiz idatzi duzu oker PINa.\nSaiatu berriro <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> segundo barru."</string>
+    <string name="pin_toast_wrong" msgid="4297542365877164402">"Okerra da PINa. Saiatu berriro."</string>
     <string name="pin_toast_not_match" msgid="2439298696342975155">"PIN kodeak ez datoz bat. Saiatu berriro."</string>
     <string name="wifi_setup_input_password" msgid="8510003548463241234">"Idatzi <xliff:g id="SSID">%1$s</xliff:g> pasahitza"</string>
     <string name="wifi_setup_connection_success" msgid="3301901673876973474">"Konektatu da"</string>

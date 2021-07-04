@@ -135,11 +135,11 @@
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"S\'ha trobat un dispositiu i s\'hi emparellarà automàticament d\'aquí a <xliff:g id="COUNTDOWN">%1$s</xliff:g> segons."</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"No s\'admet aquesta acció."</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Sol·licitud de sincronització Bluetooth"</string>
-    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Per emparellar amb &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, comprova que s\'hi mostra aquesta contrasenya: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;."</string>
-    <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"De: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Vols sincronitzar amb aquest dispositiu?"</string>
-    <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Per sincronitzar amb: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;escriu-hi &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt; i, a continuació, prem Retorn."</string>
-    <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Per sincronitzar amb: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escriu el PIN obligatori del dispositiu:"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Per sincronitzar amb: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escriu la contrasenya obligatòria del dispositiu:"</string>
+    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Per vincular a &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, comprova que es mostra aquesta clau d\'accés: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;."</string>
+    <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"De: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Vols vincular aquest dispositiu?"</string>
+    <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Per vincular a &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;escriu-hi &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt; i, a continuació, prem Retorn."</string>
+    <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Per vincular a &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escriu el PIN obligatori del dispositiu:"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Per vincular a &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;escriu la clau d\'accés obligatòria del dispositiu:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"En general, 0000 o 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Sincronitza"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancel·la"</string>
@@ -286,12 +286,12 @@
     <string name="wifi_ip_settings_invalid_ip_address" msgid="4051342269154914595">"Introdueix una adreça IP vàlida."</string>
     <string name="wifi_ip_settings_invalid_gateway" msgid="4511579679784872130">"Introdueix una adreça de passarel·la vàlida."</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="5111100342560120360">"Introdueix una adreça DNS vàlida."</string>
-    <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="2726889303835927777">"Introdueix un prefix de xarxa entre 0 i 32."</string>
+    <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="2726889303835927777">"Escriu una longitud de prefix de xarxa entre 0 i 32."</string>
     <string name="wifi_ip_address_description" msgid="7109677764979198618">"Introdueix una adreça IP vàlida.\nExemple: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
     <string name="wifi_dns1_description" msgid="2287252520192279195">"Introdueix una adreça IP vàlida o deixa el camp en blanc.\nExemple: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
     <string name="wifi_dns2_description" msgid="6495565714252833784">"Introdueix una adreça IP vàlida o deixa el camp en blanc.\nExemple: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
     <string name="wifi_gateway_description" msgid="8902481147103929271">"Introdueix una adreça IP vàlida o deixa el camp en blanc.\nExemple: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
-    <string name="wifi_network_prefix_length_description" msgid="2670994968279018896">"Introdueix una longitud de prefix de xarxa vàlida.\nExemple: <xliff:g id="ID_1">24</xliff:g>"</string>
+    <string name="wifi_network_prefix_length_description" msgid="2670994968279018896">"Escriu una longitud de prefix de xarxa vàlida.\nExemple: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="5629893736174170157">"El nom d\'amfitrió no és vàlid."</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="1762079966901078116">"La llista d\'exclusions no és vàlida. Introdueix una llista de dominis exclosos separats per comes."</string>
     <string name="proxy_error_empty_port" msgid="692020249267351015">"El camp de port no pot ser buit."</string>
@@ -480,7 +480,7 @@
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Text a parla"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"Configuració del motor"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"Enuncia les contrasenyes"</string>
-    <string name="system_preferred_engine" msgid="3545505072652708443">"Motor preferit"</string>
+    <string name="system_preferred_engine" msgid="3545505072652708443">"Motor preferent"</string>
     <string name="system_speech_rate" msgid="6553204071403872669">"Velocitat de la parla"</string>
     <string name="system_play_sample" msgid="3934369914309865584">"Reprodueix una mostra"</string>
     <string name="system_install_voice_data" msgid="8016395777968958673">"Instal·la les dades de veu"</string>

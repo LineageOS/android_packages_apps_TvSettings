@@ -141,7 +141,7 @@
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt; ilə qoşalaşdırmaq üçün, &lt;br&gt;cihazın tələb olunan PIN kodunu daxil edin:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Bu cihaz ilə qoşalaşdırmaq üçün: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Cihazın tələb olunan kodunu daxil edin:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Adətən 0000 və ya 1234"</string>
-    <string name="bluetooth_pair" msgid="2410285813728786067">"Qoşalaşdırın"</string>
+    <string name="bluetooth_pair" msgid="2410285813728786067">"Qoşulsun"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Ləğv edin"</string>
     <string name="send_feedback" msgid="936698637869795473">"Rəy göndərin"</string>
     <string name="launch_help" msgid="2607478763131952469">"Yardım Mərkəzi"</string>
@@ -444,7 +444,7 @@
     <string name="captions_language" msgid="5905918439449912646">"Dil"</string>
     <string name="captions_language_default" msgid="3894192926725192528">"Defolt"</string>
     <string name="captions_textsize" msgid="7161136610669343510">"Mətn ölçüsü"</string>
-    <string name="captions_captionstyle" msgid="6650139717545516071">"Başlıq üslubu"</string>
+    <string name="captions_captionstyle" msgid="6650139717545516071">"Subtitr üslubu"</string>
     <string name="captions_customoptions" msgid="7691004663572161126">"Fərdi seçimlər"</string>
     <string name="captions_fontfamily" msgid="1026632786438880997">"Şrift ailəsi"</string>
     <string name="captions_textcolor" msgid="1566679779609140317">"Mətn rəngi"</string>
@@ -480,10 +480,10 @@
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Yazıdan nitqə çevirmə"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"Mühərrikin konfiqurasiyası"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"Parolları səsləndirin"</string>
-    <string name="system_preferred_engine" msgid="3545505072652708443">"Tərcih olunmuş mühərrik"</string>
+    <string name="system_preferred_engine" msgid="3545505072652708443">"Defolt nitq sintezatoru"</string>
     <string name="system_speech_rate" msgid="6553204071403872669">"Nitq diapazonu"</string>
     <string name="system_play_sample" msgid="3934369914309865584">"Play nümunəsi"</string>
-    <string name="system_install_voice_data" msgid="8016395777968958673">"Səs datasını quraşdırın"</string>
+    <string name="system_install_voice_data" msgid="8016395777968958673">"Səs datasının quraşdırılması"</string>
     <string name="system_general" msgid="687760148454147771">"Ümumi"</string>
     <string name="system_debugging" msgid="1576324426385458481">"Sazlama"</string>
     <string name="system_input" msgid="4457152980514604873">"Daxiletmə"</string>
@@ -491,7 +491,7 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Monitorinq"</string>
     <string name="system_apps" msgid="8481888654606868074">"Tətbiqlər"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Oyaq qal"</string>
-    <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP yoxlanılır"</string>
+    <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP yoxlanışı"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI optimallaşdırılması"</string>
     <string name="system_reboot_confirm" msgid="8346913287126400728">"İndi yenidən başladılsın?"</string>
     <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"Bu ayarı güncəlləmək üçün cihazı yenidən başlatmaq lazımdır"</string>
@@ -500,42 +500,42 @@
     <string name="system_always_check" msgid="384870282800221580">"Həmişə yoxlayın"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Bluetooth HCI girişi"</string>
     <string name="system_email_address" msgid="3725494874473757217">"E-poçt ünvanı"</string>
-    <string name="system_usb_debugging" msgid="2158285492172755923">"USB debaq prosesi"</string>
+    <string name="system_usb_debugging" msgid="2158285492172755923">"USB ilə sazlama"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Sınaq yerləşmələrinə icazə verin"</string>
-    <string name="system_select_debug_app" msgid="6200987902307533721">"Debaq tətbiqi seçin"</string>
-    <string name="system_wait_for_debugger" msgid="5715878008542589060">"Sazlamanı gözləyin"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"USB üzərindən tətbiqləri yoxlayın"</string>
+    <string name="system_select_debug_app" msgid="6200987902307533721">"Sazlamaq üçün tətbiq seçin"</string>
+    <string name="system_wait_for_debugger" msgid="5715878008542589060">"Sazlayıcının qoşulmasını gözləyin"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Tətbiqlər quraşdırılanda yoxlanılsın"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"ADB/ADT vasitəsi ilə quraşdırılmış tətbiqləri zərərli davranış üzrə yoxlayın."</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Ayrıntılı Wi-Fi qeydiyyatı"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Ayrıntılı Wi-Fi qeydiyyatını aktiv edin"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Tıklamaları göstər"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"Kursor yeri"</string>
-    <string name="system_show_layout_bounds" msgid="8803080672553699649">"Düzən həddini göstər"</string>
-    <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"GPU görünüş güncəlləşməsini göstər"</string>
+    <string name="system_show_layout_bounds" msgid="8803080672553699649">"Element sərhəddi göstərilsin"</string>
+    <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"Ekran yenilənməsi göstərilsin"</string>
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Avadanlıq qatını göstər"</string>
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"GPU aşımını göstər"</string>
-    <string name="system_show_surface_updates" msgid="7680759813613585278">"Səth güncəlləşməsini göstər"</string>
-    <string name="system_window_animation_scale" msgid="685477540250939659">"Pəncərə animasiya miqyası"</string>
-    <string name="system_transition_animation_scale" msgid="7266380208347453619">"Animasiya keçid miqyası"</string>
-    <string name="system_animator_duration_scale" msgid="3829445237130423625">"Animator müddət şkalası"</string>
-    <string name="system_strict_mode_enabled" msgid="7392183793064579588">"Məhdud rejim aktivdir"</string>
+    <string name="system_show_surface_updates" msgid="7680759813613585278">"Səth yenilənməsi göstərilsin"</string>
+    <string name="system_window_animation_scale" msgid="685477540250939659">"Pəncərə animasiyası"</string>
+    <string name="system_transition_animation_scale" msgid="7266380208347453619">"Keçid animasiyası"</string>
+    <string name="system_animator_duration_scale" msgid="3829445237130423625">"Animasiya müddəti"</string>
+    <string name="system_strict_mode_enabled" msgid="7392183793064579588">"Ciddi rejim"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"Profil GPU renderinq"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"İzləri aktiv edin"</string>
-    <string name="system_dont_keep_activities" msgid="4641165963339846161">"Fəaliyyətləri saxlamayın"</string>
+    <string name="system_dont_keep_activities" msgid="4641165963339846161">"Fəaliyyətlər saxlanmasın"</string>
     <string name="system_background_process_limit" msgid="1985373407150771045">"Fon prosesi limiti"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"Bütün ANR\'ları göstər"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"Yuxunu deaktiv edin"</string>
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"Yalnız DRM məzmun üçün istifadə edin"</string>
     <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"Displeyi maksimum ayırdetmə dəqiqliyinə və ya maksimum kadr sayına optimallaşdırın. Bu yalnız Ultra HD displeylərinə təsir edir. Bu ayarı dəyişməklə cihazınız yandırılıb-söndürüləcək."</string>
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Bluetooth HCI izləmə jurnalını aktivləşdirin"</string>
-    <string name="system_desc_usb_debugging" msgid="5672275208185222785">"USB qoşulan zaman sazlama rejimi"</string>
-    <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Sazlanmış tətbiq icradan əvvəl qoşulmaq üçün sazlayıcını gözləyir"</string>
-    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Klip sərhədləri, boşluqları və s. göstər"</string>
-    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"GPU ilə tərtib edildikdə işıq pəncərələr daxilində görüntülənir"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Onlar güncəllənəndən sonra avadanlıq qatlarında işartı olsun"</string>
+    <string name="system_desc_usb_debugging" msgid="5672275208185222785">"USB qoşulanda sazlama"</string>
+    <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Tətbiq sazlayıcının qoşulmasını gözləyir"</string>
+    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Kəsim sərhəddi, sahəsi və digər şeyləri göstərilsin"</string>
+    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"GPU-dan çəkəndə ekran sahələri işılqansın"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Yenilənəndə aparat qatları yaşıl rənglə ayrılsın"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Yaxşıdan pisə qədər: mavi, yaşıl, açıq qırmızı, qırmızı"</string>
-    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Güncəlləşdirmədən sonra bütün ekranda işartı olsun"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Əsas axında tətbiqlərin əlavə əməliyyatlar etməsi zamanı ekran işartısı olsun"</string>
+    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Pəncərə səthi təzələnəndə işıqlansın"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Uzun əməliyyatlar ərzində ekran işıqlandırılsın"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"adb shell dumpsys gfxinfo render vaxtını ölçmə"</string>
     <string name="action_on_title" msgid="1074972820237738324">"Aktiv"</string>
     <string name="action_off_title" msgid="3598665702863436597">"Deaktiv"</string>
@@ -586,7 +586,7 @@
     <string name="title_current_autofill_service" msgid="9029001041887283153">"Cari Avtomatik Daxiletmə Xidməti"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"Avtomatik Daxiletmə Xidmətini seçin"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Yoxdur"</string>
-    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Bu tətbiqə etibar etdiyinizə əmin olun&lt;b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=tətbiq_adı nümunə=Parol xidməti &gt;%%1$s&lt;/xliff:g&gt; nəyin avtomatik daxil edilə biləcəyini müəyyən etmək üçün ekrandakılardan istifadə edir."</string>
+    <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Bu tətbiqə inana biləcəyinizi dəqiqləşdirin&lt;b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=tətbiq_adı nümunə=Parol xidməti &gt;%%1$s&lt;/xliff:g&gt; ekranı analiz edərək avtomatik doldurula bilən sahələri tapır."</string>
     <string name="computing_size" msgid="8623916230485437579">"Hesablanır..."</string>
     <string name="title_select_wifi_network" msgid="935820896444071617">"Wi-Fi şəbəkənizi seçin"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Adlandırın"</string>
@@ -594,7 +594,7 @@
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"PIN tələb olunur"</string>
     <string name="whichApplication" msgid="4510042089342879264">"Əməliyyatı tamamlayın:"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"Bu əməliyyat üçün həmişə bu seçim istifadə olunsun?"</string>
-    <string name="alwaysUseOption" msgid="8799609235198714441">"Həmişə istifadə edin"</string>
+    <string name="alwaysUseOption" msgid="8799609235198714441">"Həmişə istifadə edilsin"</string>
     <string name="justOnceOption" msgid="6714005843102804865">"Sadəcə bir dəfə"</string>
     <string name="noApplications" msgid="7511175717026318399">"Heç bir tətbiq bu əməliyyatı apara bilmir."</string>
     <string name="noAppsGoBack" msgid="2538480554615467065">"Geri"</string>
@@ -667,7 +667,7 @@
     <string name="wifi_setup_save_success" msgid="6862510218032734919">"Uğurla saxlanıldı"</string>
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"<xliff:g id="APP_VERSION">%1$s</xliff:g> versiyası"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Açın"</string>
-    <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Dayandırmağı gücləndir"</string>
+    <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Dayandırılsın"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Əgər proqramın dayandırılmasını gücləndirsəniz, o düzgün işləməyə bilər."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Poz"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Güncəlləmələri sistemdən silin"</string>
@@ -678,7 +678,7 @@
     <string name="device_apps_app_management_enable_desc" msgid="8686291003061136476">"Bu proqramı aktivləşdirmək istəyirsiniz?"</string>
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"İşlənmiş yaddaş"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="VOLUME">%2$s</xliff:g> üzrə <xliff:g id="SIZE">%1$s</xliff:g> istifadə olunub"</string>
-    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Datanı təmizlə"</string>
+    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Datanı silin"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Bu tətbiq datası həmişəlik silinəcək. \nBura bütün fayllar, ayarlar, hesablar, verilənlər bazası və sairləri aiddir."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"Defoltları təmizləyin"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"Bəzi fəaliyyətlər üçün bu proqramı işə salmağı təyin edin"</string>
@@ -744,11 +744,11 @@
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"İcazəli"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"İcazə verilmir"</string>
     <string name="usage_access" msgid="8402350645248312782">"İstifadə girişi"</string>
-    <string name="usage_access_description" msgid="3276026988575551587">"İstifadə girişi istifadə etdiyiniz digər tətbiqləri və istifadə tezliyini, həmçinin, operator, dil ayarları və digər detalları izləməyə imkan verir."</string>
+    <string name="usage_access_description" msgid="3276026988575551587">"İstifadə girişi işlədilən tətbiqləri və müntəzəmliyi izləyir, operatoru, dili və digər parametrləri müəyyən edir."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"Enerji optimallaşdırılması"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"Tətbiqlərin enerji istifadəsini optimallaşdırın"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"Optimallaşdırılacaq tətbiq yoxdur"</string>
-    <string name="high_power_on" msgid="3120162683093360951">"Optimallaşdırılmadı"</string>
+    <string name="high_power_on" msgid="3120162683093360951">"Enerjiyə qənaət etmir"</string>
     <string name="high_power_off" msgid="3588854600942236231">"Enerji istifadəsi optimallaşdırılır"</string>
     <string name="high_power_system" msgid="6263052626979462255">"Enerji optimallaşdırılması əlçatan deyil"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Bildiriş girişi"</string>
@@ -757,10 +757,10 @@
     <string name="directory_access" msgid="7338555825237012006">"Kataloq girişi"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Bu tətbiqlərin müəyyən kataloqlara giriş icazəsi var."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
-    <string name="system_alert_window_settings" msgid="5790572489650085051">"Digər tətbiqlərdən görüntüləmə"</string>
-    <string name="permit_draw_overlay" msgid="5312730681030266735">"Digər tətbiqdən görüntüləmək icazəsi verin"</string>
+    <string name="system_alert_window_settings" msgid="5790572489650085051">"Tətbiqlərin üzərində"</string>
+    <string name="permit_draw_overlay" msgid="5312730681030266735">"Tətbiqlərin üzərində"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Bu tətbiqə istifadə etdiyiniz digər tətbiqlərin üzərində göstərilmək icazəsi verin. Bu tətbiq həmin tətbiqlərin istifadəsinə müdaxilə edə və ya tətbiqlərin görünüş və davranışını dəyişə bilər."</string>
-    <string name="write_system_settings" msgid="4284654265954461890">"Sistem ayarlarında dəyişiklik edin"</string>
+    <string name="write_system_settings" msgid="4284654265954461890">"Sistem ayarlarını dəyişin"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"Sistem ayarlarını dəyişə bilər"</string>
     <string name="write_settings_description" msgid="7382397926674265937">"Bu icazə tətbiqə sistem ayarlarını dəyişdirməyə imkan verir."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Bəli"</string>
@@ -768,7 +768,7 @@
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Şəkil içində şəkil"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Şəkil içində şəklə icazə verin"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Quraşdırılmış tətbiqlərdən heç biri Şəkil-içində-şəkil funksiyasını dəstəkləmir"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Tətbiq açıq olanda və ya tətbiqdən çıxdıqdan sonra (məsələn, videoya baxmağa davam etmək üçün) bu tətbiqə şəkil içində şəkil pəncərəsi yaratmağa icazə verin. Bu pəncərə istifadə etdiyiniz digər tətbiqlərin üstündə görüntülənəcək."</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Tətbiq açıq olanda və ya tətbiqdən çıxdıqdan sonra (məsələn, videoya baxmağa davam etmək üçün) bu tətbiqə şəkil içində şəkil pəncərəsi yaratmağa icazə versəniz, bu pəncərə digər tətbiqlərin üzərində görünəcək."</string>
     <string name="special_access" msgid="21806055758289916">"Xüsusi tətbiq girişi"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Audio"</string>
