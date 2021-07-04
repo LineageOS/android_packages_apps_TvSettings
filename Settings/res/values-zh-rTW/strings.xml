@@ -133,10 +133,10 @@
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"自動：僅啟用音訊輸出裝置支援的格式 "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"如果選取這個選項，系統將允許應用程式選取裝置鏈支援的任何音效格式。應用程式不一定會選擇最高音質的格式。"</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"無：一律不使用環場音效"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"手動：選擇性啟用或停用這部裝置支援的各種格式，無論音訊輸出裝置支援的格式為何。"</string>
-    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"如果選取這個選項，當裝置鏈支援的音效格式造成播放問題時，你可以手動停用。你也可以啟用裝置鏈不支援的音效格式。在某些情況下，應用程式不一定會選擇最高音質的格式。"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"手動：選擇啟用或停用這部裝置支援的各種格式，而不考慮音訊輸出裝置是否支援相關格式。"</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"如果選取這個選項，當裝置系統支援的音效格式造成播放問題時，你就可以手動停用該格式。你也可以啟用裝置系統不支援的音效格式。在某些情況下，應用程式不一定會選擇最高音質的格式。"</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"要啟用不支援的音效格式嗎？"</string>
-    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"連線的音訊裝置並未回報支援這個格式，裝置可能會因此無法正常運作，例如聲音不連貫或發出大聲的噪音。"</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"連線的音訊裝置並未回報支援此格式，裝置可能會因此無法正常運作，例如發出大聲的噪音或爆音。"</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"取消"</string>
     <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"仍要變更"</string>
     <string name="surround_sound_supported_title" msgid="4873195851187547020">"支援的格式"</string>
@@ -155,11 +155,11 @@
     <string name="game_mode_title" msgid="7280816243531315755">"允許遊戲模式"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"採用內容影格速率"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"流暢轉換"</string>
-    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"如果應用程式提出要求，你的裝置就會嘗試將輸出的影格速率調整為觀看內容的原始影格速率，前提是你的電視必須支援流暢轉換。"</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"如果應用程式要求，而且你的電視支援流暢轉換，你的裝置就會依據所觀看內容的原始影格速率輸出畫面。"</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"非流暢轉換"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"如果應用程式提出要求，你的裝置就會嘗試將輸出的影格速率調整為觀看內容的原始影格速率。這樣一來，當影片開始播放或結束播放時，螢幕可能會短暫出現空白畫面。"</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"如果應用程式要求，你的裝置會依據所觀看內容的原始影格速率輸出畫面。這可能會讓螢幕在影片開始或結束播放時，短暫出現空白畫面。"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"一律不採用"</string>
-    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"即使應用程式提出要求，你的裝置也一律不會將輸出的影格速率調整為觀看內容的原始影格速率。"</string>
+    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"即使應用程式要求，你的裝置也絕不會依據所觀看內容的原始影格速率輸出畫面。"</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"文字比例"</string>
     <string name="font_scale_item_detail" msgid="1558315053348778805">"調整為 <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"範例文字"</string>
@@ -177,8 +177,8 @@
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
-    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"如果你選取這個選項，系統將允許應用程式選取裝置鏈支援的任何 HDR 格式。應用程式不一定會選擇最高畫質的格式。"</string>
-    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"如果你選取這個選項，當裝置鏈支援的 HDR 格式造成播放問題時，你就可以手動停用。不過，如果是裝置鏈不支援的 HDR 格式，就無法強制停用。應用程式不一定會選擇最高畫質的格式。"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"如果選取這個選項，系統將允許應用程式選取裝置系統支援的任何 HDR 格式。應用程式不一定會選擇最高畫質的格式。"</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"如果選取這個選項，當裝置系統支援的 HDR 格式造成播放問題時，你就可以手動停用該格式。不過，你無法強制啟用裝置系統不支援的 HDR 格式。應用程式不一定會選擇最高畫質的格式。"</string>
     <string name="hdr_format_info" msgid="5652559220799426076">"格式資訊"</string>
     <string name="hdr_show_formats" msgid="171065892975445851">"顯示格式"</string>
     <string name="hdr_hide_formats" msgid="8561568998525727230">"隱藏格式"</string>
