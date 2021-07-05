@@ -21,6 +21,7 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_APPS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
 import static com.android.tv.settings.library.ManagerUtil.STATE_HIGH_POWER;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK_MAIN;
+import static com.android.tv.settings.library.ManagerUtil.STATE_NOTIFICATION_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_SPECIAL_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
 
@@ -32,6 +33,7 @@ import com.android.tv.settings.library.device.apps.AllAppsState;
 import com.android.tv.settings.library.device.apps.AppManagementState;
 import com.android.tv.settings.library.device.apps.AppsState;
 import com.android.tv.settings.library.device.apps.specialaccess.HighPowerState;
+import com.android.tv.settings.library.device.apps.specialaccess.NotificationAccessState;
 import com.android.tv.settings.library.device.apps.specialaccess.SpecialAppAccessState;
 import com.android.tv.settings.library.network.NetworkMainState;
 import com.android.tv.settings.library.network.WifiDetailsState;
@@ -68,6 +70,9 @@ public class StateManager {
                 break;
             case STATE_HIGH_POWER:
                 state = new HighPowerState(context, uiUpdateCallback);
+                break;
+            case STATE_NOTIFICATION_ACCESS:
+                state = new NotificationAccessState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op

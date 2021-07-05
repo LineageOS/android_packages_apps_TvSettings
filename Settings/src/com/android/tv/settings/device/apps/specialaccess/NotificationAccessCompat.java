@@ -31,12 +31,9 @@ import com.android.tv.settings.library.PreferenceCompat;
 
 import java.util.List;
 
-/**
- * Fragment compat for managing power save allowlist
- */
+/** Fragment compat for managing notification access. */
 @Keep
-public class HighPowerCompat extends PreferenceControllerFragmentCompat {
-
+public class NotificationAccessCompat extends PreferenceControllerFragmentCompat {
     @Override
     public void updateAllPref(List<PreferenceCompat> preferenceCompatList) {
         if (preferenceCompatList == null) {
@@ -48,7 +45,7 @@ public class HighPowerCompat extends PreferenceControllerFragmentCompat {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.manage_high_power_compat, null);
+        setPreferencesFromResource(R.xml.notification_access_compat, null);
     }
 
     @Override
@@ -69,6 +66,6 @@ public class HighPowerCompat extends PreferenceControllerFragmentCompat {
 
     @Override
     public int getState() {
-        return ManagerUtil.STATE_HIGH_POWER;
+        return ManagerUtil.STATE_NOTIFICATION_ACCESS;
     }
 }
