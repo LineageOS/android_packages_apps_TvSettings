@@ -37,6 +37,12 @@ public final class ManagerUtil {
     public static final int STATE_SPECIAL_ACCESS = 6;
     public static final int STATE_HIGH_POWER = 7;
     public static final int STATE_NOTIFICATION_ACCESS = 8;
+    public static final int STATE_APP_USAGE_ACCESS = 9;
+    public static final int STATE_SYSTEM_ALERT_WINDOW = 10;
+    public static final int STATE_WRITE_SETTINGS = 11;
+    public static final int STATE_PICTURE_IN_PICTURE = 12;
+    public static final int STATE_ALARMS_AND_REMINDERS = 13;
+
     public static final String INFO_INTENT = "intent";
     public static final String INFO_NEXT_STATE = "next_state";
     public static final String INFO_WIFI_SIGNAL_LEVEL = "wifi_signal_level";

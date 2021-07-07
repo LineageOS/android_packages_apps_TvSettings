@@ -23,19 +23,19 @@ import androidx.annotation.Keep;
 import com.android.tv.settings.R;
 import com.android.tv.settings.library.ManagerUtil;
 
+
 /**
- * Fragment compat for managing power save allowlist
+ * Fragment compat for managing which apps are granted PIP access
  */
 @Keep
-public class HighPowerCompat extends SpecialAccessControllerFragmentCompat {
+public class PictureInPictureCompat extends SpecialAccessControllerFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.manage_high_power_compat, null);
+        setPreferencesFromResource(R.xml.picture_in_picture_compat, null);
     }
-
 
     @Override
     public int getState() {
-        return ManagerUtil.STATE_HIGH_POWER;
+        return ManagerUtil.STATE_PICTURE_IN_PICTURE;
     }
 }
