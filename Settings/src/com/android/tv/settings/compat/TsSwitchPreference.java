@@ -43,6 +43,11 @@ public class TsSwitchPreference extends SwitchPreference implements HasKeys {
         super(context);
     }
 
+    public TsSwitchPreference(Context context, String[] keys) {
+        super(context);
+        setKeys(keys);
+    }
+
     @Override
     public void setKeys(String[] keys) {
         this.mKeys = Arrays.copyOf(keys, keys.length);

@@ -16,13 +16,10 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/special_access" >
+    android:title="@string/manage_notification_access_title">
     <com.android.tv.settings.compat.TsPreference
-        android:key="high_power_apps"
-        android:title="@string/high_power_apps"
-        android:fragment="com.android.tv.settings.device.apps.specialaccess.HighPowerCompat" />
-    <com.android.tv.settings.compat.TsPreference
-        android:key="AppUsage"
-        android:title="@string/usage_access"
-        android:fragment="com.android.tv.settings.device.apps.specialaccess.NotificationAccessCompat" />
+        android:key="header"
+        android:title="@string/notification_listener_security_warning_summary"
+        android:singleLineTitle="false"
+        android:selectable="false" />
 </PreferenceScreen>
