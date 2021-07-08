@@ -17,7 +17,6 @@
 package com.android.tv.settings.library.device.apps.specialaccess;
 
 import android.Manifest;
-import android.annotation.NonNull;
 import android.app.AppOpsManager;
 import android.content.Context;
 import android.os.Bundle;
@@ -30,13 +29,12 @@ import com.android.tv.settings.library.device.apps.ApplicationsState;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /**
- * State for controlling if apps can monitor app usage
+ * Settings state for managing "Alarms & Reminders" permission
  */
-public class AppUsageAccessState extends ManageAppOpState {
+public class AlarmsAndRemindersState extends ManageAppOpState {
     private AppOpsManager mAppOpsManager;
     private final ArrayMap<String, ApplicationsState.AppEntry> mAppEntryByKey = new ArrayMap<>();
-
-    public AppUsageAccessState(Context context,
+    public AlarmsAndRemindersState(Context context,
             UIUpdateCallback callback) {
         super(context, callback);
     }
@@ -49,18 +47,21 @@ public class AppUsageAccessState extends ManageAppOpState {
 
     @Override
     public int getAppOpsOpCode() {
-        return AppOpsManager.OP_GET_USAGE_STATS;
+        return AppOpsManager.OP_SCHEDULE_EXACT_ALARM;
     }
 
     @Override
     public String getPermission() {
-        return Manifest.permission.PACKAGE_USAGE_STATS;
+        return Manifest.permission.SCHEDULE_EXACT_ALARM;
     }
 
-    @NonNull
     @Override
-    public PreferenceCompat createAppPreference(
-            com.android.tv.settings.library.device.apps.ApplicationsState.AppEntry entry) {
+    public int getStateIdentifier() {
+        return ManagerUtil.STATE_ALARMS_AND_REMINDERS;
+    }
+
+    @Override
+    public PreferenceCompat createAppPreference(ApplicationsState.AppEntry entry) {
         final PreferenceCompat appPref = mPreferenceCompatManager
                 .getOrCreatePrefCompat(entry.info.packageName);
         appPref.setTitle(entry.label);
@@ -72,23 +73,10 @@ public class AppUsageAccessState extends ManageAppOpState {
         return appPref;
     }
 
-    @Override
-    public void onPreferenceChange(String key, Object newValue) {
-        ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
-        if (appEntry != null) {
-            setAppUsageAccess(appEntry, (Boolean) newValue);
-        }
-    }
-
-    @Override
-    public int getStateIdentifier() {
-        return ManagerUtil.STATE_APP_USAGE_ACCESS;
-    }
-
-    private void setAppUsageAccess(ApplicationsState.AppEntry entry, boolean grant) {
-        mAppOpsManager.setMode(AppOpsManager.OP_GET_USAGE_STATS,
+    private void setAlarmsAndRemindersAccess(ApplicationsState.AppEntry entry, boolean grant) {
+        mAppOpsManager.setMode(getAppOpsOpCode(),
                 entry.info.uid, entry.info.packageName,
-                grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_IGNORED);
+                grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
         updateAppList();
     }
 
@@ -99,6 +87,14 @@ public class AppUsageAccessState extends ManageAppOpState {
                     : ResourcesUtil.getString(mContext, "app_permission_summary_not_allowed");
         } else {
             return null;
+        }
+    }
+
+    @Override
+    public void onPreferenceChange(String key, Object newValue) {
+        ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
+        if (appEntry != null) {
+            setAlarmsAndRemindersAccess(appEntry, (Boolean) newValue);
         }
     }
 }
