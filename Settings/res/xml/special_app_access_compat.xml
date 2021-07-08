@@ -24,5 +24,13 @@
     <com.android.tv.settings.compat.TsPreference
         android:key="AppUsage"
         android:title="@string/usage_access"
+        android:fragment="com.android.tv.settings.device.apps.specialaccess.AppUsageAccessCompat" />
+    <com.android.tv.settings.compat.TsPreference
+        android:key="notification_access"
+        android:title="@string/manage_notification_access_title"
         android:fragment="com.android.tv.settings.device.apps.specialaccess.NotificationAccessCompat" />
+    <com.android.tv.settings.compat.TsPreference
+        android:key="picture_in_picture"
+        android:title="@string/picture_in_picture_title"
+        android:fragment="com.android.tv.settings.device.apps.specialaccess.PictureInPictureCompat" />
 </PreferenceScreen>

@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.library.device.apps.specialaccess;
 
+import android.app.ActivityThread;
 import android.app.AppOpsManager;
 import android.content.Context;
 import android.content.Intent;
@@ -59,6 +60,8 @@ public abstract class ManageAppOpState extends PreferenceControllerState impleme
     @Override
     public void onCreate(Bundle extras) {
         super.onCreate(extras);
+        mIPackageManager = ActivityThread.getPackageManager();
+        mAppOpsManager = mContext.getSystemService(AppOpsManager.class);
         mManageApplicationsController = new ManageApplicationsController(mContext,
                 getStateIdentifier(), getLifecycle(), getAppFilter(), getAppComparator(), this,
                 mUIUpdateCallback);
@@ -67,11 +70,6 @@ public abstract class ManageAppOpState extends PreferenceControllerState impleme
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-    }
-
-    @Override
-    public int getStateIdentifier() {
-        return 0;
     }
 
     @Override
@@ -218,6 +216,13 @@ public abstract class ManageAppOpState extends PreferenceControllerState impleme
                     + ", appOpMode: " + appOpMode
                     + "]";
         }
+    }
+
+    /**
+     * Call to trigger the app list to update
+     */
+    public void updateAppList() {
+        mManageApplicationsController.updateAppList();
     }
 
     @NonNull
