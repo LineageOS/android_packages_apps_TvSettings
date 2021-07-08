@@ -139,17 +139,17 @@
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"ملاحظة: قد لا يعمل الخيار \"تلقائي\" إذا لم يعلن جهازك بشكل صحيح عن التنسيقات المتوافقة معه."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"\"تلقائي\": يؤدي اختيار هذا الزر إلى تفعيل الصيغ المتوافقة فقط مع جهاز إخراج الصوت "</string>
-    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"عند الاختيار، سيسمح النظام للتطبيقات باختيار أي صيغة صوت توفّرها سلسلة جهازك. قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"عند الاختيار، سيسمح النظام للتطبيقات باختيار أي صيغة صوت متوافقة مع سلسلة جهازك. قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"\"بدون صيغ\": عدم استخدام الصوت المحيطي"</string>
     <string name="surround_sound_manual_title" msgid="4935447605070985537">"\"يدوي\": يؤدي اختيار هذا الزر إلى تفعيل أو إيقاف يدوي لكل صيغة متوافقة مع هذا الجهاز، بغض النظر عن الصيغ المتوافقة مع جهاز إخراج الصوت"</string>
-    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"عند الاختيار، يمكنك يدويًا إيقاف صيغ الصوت التي توفّرها سلسلة جهازك وتسبب مشاكل في التشغيل. ويمكنك تفعيل صيغ الصوت التي لا توفّرها سلسلة جهازك. في بعض الأحيان، قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"عند الاختيار، يمكنك يدويًا إيقاف صيغ الصوت المتوافقة مع سلسلة جهازك وتسبب مشاكل في التشغيل. ويمكنك تفعيل صيغ الصوت غير المتوافقة مع سلسلة جهازك. في بعض الأحيان، قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"هل تريد تفعيل تنسيق الصوت غير المتوافق؟"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"لا يعلن جهازك السماعي المتصل عن توافق هذا التنسيق معه. قد يتسبب هذا في عمل جهازك بطريقة غير متوقعة، كصدور أصوات مزعجة ومرتفعة أو صوت فرقعة من جهازك."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"إلغاء"</string>
     <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"التغيير على أي حال"</string>
-    <string name="surround_sound_supported_title" msgid="4873195851187547020">"التنسيقات المتوافقة"</string>
-    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"التنسيقات غير المتوافقة"</string>
-    <string name="surround_sound_format_info" msgid="5671866505653542934">"معلومات الصيغة"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"الصيغ المتوافقة"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"الصيغ غير المتوافقة"</string>
+    <string name="surround_sound_format_info" msgid="5671866505653542934">"معلومات الصيغ"</string>
     <string name="surround_sound_show_formats" msgid="1929849219042916469">"عرض الصيغ"</string>
     <string name="surround_sound_hide_formats" msgid="7770931097236868238">"إخفاء الصيغ"</string>
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"الصيغ المفعَّلة"</string>
@@ -185,9 +185,9 @@
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+‎"</string>
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
-    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"عند اختيار الزر، سيسمح النظام للتطبيقات باختيار أي صيغة من صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع شاشة العرض. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
-    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"عند اختيار الزر، يمكنك يدويًا إيقاف صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع شاشة العرض والتي تسبّب مشاكل في التشغيل. لا يمكن يدويًا تفعيل صيغ \"النطاق العالي الديناميكية\" (HDR) غير المتوافقة مع شاشة العرض. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
-    <string name="hdr_format_info" msgid="5652559220799426076">"معلومات الصيغة"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"عند اختيار الزر، سيسمح النظام للتطبيقات باختيار أي صيغة من صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع سلسلة جهازك. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"عند اختيار الزر، يمكنك يدويًا إيقاف صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع سلسلة جهازك والتي تسبّب مشاكل في التشغيل. لا يمكن يدويًا تفعيل صيغ \"النطاق العالي الديناميكية\" (HDR) غير المتوافقة مع سلسلة جهازك. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
+    <string name="hdr_format_info" msgid="5652559220799426076">"معلومات الصيغ"</string>
     <string name="hdr_show_formats" msgid="171065892975445851">"عرض الصيغ"</string>
     <string name="hdr_hide_formats" msgid="8561568998525727230">"إخفاء الصيغ"</string>
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"الصيغ المفعَّلة"</string>
