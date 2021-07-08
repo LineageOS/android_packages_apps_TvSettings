@@ -17,7 +17,6 @@
 package com.android.tv.settings.library.device.apps.specialaccess;
 
 import android.Manifest;
-import android.annotation.NonNull;
 import android.app.AppOpsManager;
 import android.content.Context;
 import android.os.Bundle;
@@ -30,37 +29,40 @@ import com.android.tv.settings.library.device.apps.ApplicationsState;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /**
- * State for controlling if apps can monitor app usage
+ * Settings state for managing apps which can write system settings
  */
-public class AppUsageAccessState extends ManageAppOpState {
+public class WriteSettingsState extends ManageAppOpState {
     private AppOpsManager mAppOpsManager;
     private final ArrayMap<String, ApplicationsState.AppEntry> mAppEntryByKey = new ArrayMap<>();
 
-    public AppUsageAccessState(Context context,
+    public WriteSettingsState(Context context,
             UIUpdateCallback callback) {
         super(context, callback);
     }
 
     @Override
-    public void onCreate(Bundle extras) {
-        super.onCreate(extras);
+    public void onCreate(Bundle savedInstanceState) {
         mAppOpsManager = mContext.getSystemService(AppOpsManager.class);
+        super.onCreate(savedInstanceState);
     }
 
     @Override
     public int getAppOpsOpCode() {
-        return AppOpsManager.OP_GET_USAGE_STATS;
+        return AppOpsManager.OP_WRITE_SETTINGS;
     }
 
     @Override
     public String getPermission() {
-        return Manifest.permission.PACKAGE_USAGE_STATS;
+        return Manifest.permission.WRITE_SETTINGS;
     }
 
-    @NonNull
     @Override
-    public PreferenceCompat createAppPreference(
-            com.android.tv.settings.library.device.apps.ApplicationsState.AppEntry entry) {
+    public int getStateIdentifier() {
+        return ManagerUtil.STATE_WRITE_SETTINGS;
+    }
+
+    @Override
+    public PreferenceCompat createAppPreference(ApplicationsState.AppEntry entry) {
         final PreferenceCompat appPref = mPreferenceCompatManager
                 .getOrCreatePrefCompat(entry.info.packageName);
         appPref.setTitle(entry.label);
@@ -72,33 +74,29 @@ public class AppUsageAccessState extends ManageAppOpState {
         return appPref;
     }
 
+    private CharSequence getPreferenceSummary(ApplicationsState.AppEntry entry) {
+        if (entry.extraInfo instanceof ManageAppOpState.PermissionState) {
+            return ((ManageAppOpState.PermissionState) entry.extraInfo).isAllowed()
+                    ? ResourcesUtil.getString(mContext, "write_settings_on")
+                    : ResourcesUtil.getString(mContext, "write_settings_off");
+        } else {
+            return null;
+        }
+    }
+
     @Override
     public void onPreferenceChange(String key, Object newValue) {
         ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
         if (appEntry != null) {
-            setAppUsageAccess(appEntry, (Boolean) newValue);
+            setWriteSettingsAccess(appEntry, (Boolean) newValue);
         }
     }
 
-    @Override
-    public int getStateIdentifier() {
-        return ManagerUtil.STATE_APP_USAGE_ACCESS;
-    }
 
-    private void setAppUsageAccess(ApplicationsState.AppEntry entry, boolean grant) {
-        mAppOpsManager.setMode(AppOpsManager.OP_GET_USAGE_STATS,
+    private void setWriteSettingsAccess(ApplicationsState.AppEntry entry, Boolean grant) {
+        mAppOpsManager.setMode(AppOpsManager.OP_WRITE_SETTINGS,
                 entry.info.uid, entry.info.packageName,
-                grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_IGNORED);
+                grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
         updateAppList();
-    }
-
-    private CharSequence getPreferenceSummary(ApplicationsState.AppEntry entry) {
-        if (entry.extraInfo instanceof ManageAppOpState.PermissionState) {
-            return ((ManageAppOpState.PermissionState) entry.extraInfo).isAllowed()
-                    ? ResourcesUtil.getString(mContext, "app_permission_summary_allowed")
-                    : ResourcesUtil.getString(mContext, "app_permission_summary_not_allowed");
-        } else {
-            return null;
-        }
     }
 }

@@ -30,69 +30,62 @@ import com.android.tv.settings.library.device.apps.ApplicationsState;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /**
- * State for controlling if apps can monitor app usage
+ * Settings state for managing "Display over other apps" permission
  */
-public class AppUsageAccessState extends ManageAppOpState {
+public class SystemAlertWindowState extends ManageAppOpState {
     private AppOpsManager mAppOpsManager;
     private final ArrayMap<String, ApplicationsState.AppEntry> mAppEntryByKey = new ArrayMap<>();
 
-    public AppUsageAccessState(Context context,
+    public SystemAlertWindowState(Context context,
             UIUpdateCallback callback) {
         super(context, callback);
     }
 
     @Override
-    public void onCreate(Bundle extras) {
-        super.onCreate(extras);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         mAppOpsManager = mContext.getSystemService(AppOpsManager.class);
     }
 
     @Override
     public int getAppOpsOpCode() {
-        return AppOpsManager.OP_GET_USAGE_STATS;
+        return AppOpsManager.OP_SYSTEM_ALERT_WINDOW;
     }
 
     @Override
     public String getPermission() {
-        return Manifest.permission.PACKAGE_USAGE_STATS;
+        return Manifest.permission.SYSTEM_ALERT_WINDOW;
+    }
+
+    @Override
+    public void onPreferenceChange(String key, Object value) {
+        ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
+        if (appEntry != null) {
+            setSystemAlertWindowAccess(appEntry, (Boolean) value);
+        }
     }
 
     @NonNull
     @Override
-    public PreferenceCompat createAppPreference(
-            com.android.tv.settings.library.device.apps.ApplicationsState.AppEntry entry) {
+    public PreferenceCompat createAppPreference(ApplicationsState.AppEntry entry) {
         final PreferenceCompat appPref = mPreferenceCompatManager
                 .getOrCreatePrefCompat(entry.info.packageName);
         appPref.setTitle(entry.label);
         appPref.setIcon(entry.icon);
-
-        appPref.setSummary(getPreferenceSummary(entry).toString());
+        appPref.setSummary(getPreferenceSummary(entry));
         appPref.setChecked(((ManageAppOpState.PermissionState) entry.extraInfo).isAllowed());
         mAppEntryByKey.put(appPref.getKey()[0], entry);
         return appPref;
     }
 
-    @Override
-    public void onPreferenceChange(String key, Object newValue) {
-        ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
-        if (appEntry != null) {
-            setAppUsageAccess(appEntry, (Boolean) newValue);
-        }
-    }
-
-    @Override
-    public int getStateIdentifier() {
-        return ManagerUtil.STATE_APP_USAGE_ACCESS;
-    }
-
-    private void setAppUsageAccess(ApplicationsState.AppEntry entry, boolean grant) {
-        mAppOpsManager.setMode(AppOpsManager.OP_GET_USAGE_STATS,
+    private void setSystemAlertWindowAccess(ApplicationsState.AppEntry entry, boolean grant) {
+        mAppOpsManager.setMode(AppOpsManager.OP_SYSTEM_ALERT_WINDOW,
                 entry.info.uid, entry.info.packageName,
-                grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_IGNORED);
+                grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
         updateAppList();
     }
 
-    private CharSequence getPreferenceSummary(ApplicationsState.AppEntry entry) {
+    private String getPreferenceSummary(ApplicationsState.AppEntry entry) {
         if (entry.extraInfo instanceof ManageAppOpState.PermissionState) {
             return ((ManageAppOpState.PermissionState) entry.extraInfo).isAllowed()
                     ? ResourcesUtil.getString(mContext, "app_permission_summary_allowed")
@@ -100,5 +93,10 @@ public class AppUsageAccessState extends ManageAppOpState {
         } else {
             return null;
         }
+    }
+
+    @Override
+    public int getStateIdentifier() {
+        return ManagerUtil.STATE_SYSTEM_ALERT_WINDOW;
     }
 }

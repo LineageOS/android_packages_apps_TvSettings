@@ -42,6 +42,7 @@ public final class ManagerUtil {
     public static final int STATE_WRITE_SETTINGS = 11;
     public static final int STATE_PICTURE_IN_PICTURE = 12;
     public static final int STATE_ALARMS_AND_REMINDERS = 13;
+    public static final int STATE_EXTERNAL_SOURCES = 14;
 
     public static final String INFO_INTENT = "intent";
     public static final String INFO_NEXT_STATE = "next_state";
