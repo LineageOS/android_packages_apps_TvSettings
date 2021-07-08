@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.privacy;
 
+import static android.hardware.SensorPrivacyManager.Sources.SETTINGS;
+
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.SensorPrivacyManager;
@@ -195,7 +197,8 @@ public class SensorFragment extends SettingsPreferenceFragment {
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (SENSOR_TOGGLE_KEY.equals(preference.getKey())) {
-            mSensorPrivacyManager.setSensorPrivacy(mToggle.sensor, !mSensorToggle.isChecked());
+            mSensorPrivacyManager.setSensorPrivacy(SETTINGS, mToggle.sensor,
+                    !mSensorToggle.isChecked());
             return true;
         }
         return super.onPreferenceTreeClick(preference);
