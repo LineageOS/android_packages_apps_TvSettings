@@ -63,6 +63,11 @@ public class FontScalePreferenceFragment extends SettingsPreferenceFragment impl
             preference.setSummaryOff(summary);
             preference.setSummaryOn(summary);
             preference.setTitle(mapScaleIndexToTitle(i));
+            preference.setFragment(FontScalePreviewFragment.class.getName());
+            Bundle extras = preference.getExtras();
+            extras.putString(FontScalePreviewFragment.PREVIEW_FONT_SCALE_VALUE, entryValues[i]);
+            extras.putFloat(
+                    FontScalePreviewFragment.CURRENT_FONT_SCALE_VALUE, mCurrentFontScaleValue);
 
             if (entryValues[i].equals(String.valueOf(mCurrentFontScaleValue))) {
                 preference.setChecked(true);
@@ -95,6 +100,9 @@ public class FontScalePreferenceFragment extends SettingsPreferenceFragment impl
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         RadioPreference radioPreference = (RadioPreference) preference;
+        if (radioPreference.isChecked()) {
+            return false;
+        }
         PreferenceGroup fontScaleGroup = (PreferenceGroup) findPreference(FONT_SCALE_GROUP);
         radioPreference.clearOtherRadioPreferences(fontScaleGroup);
         mCurrentFontScaleValue = Float.parseFloat(preference.getKey());
