@@ -18,6 +18,7 @@ package com.android.tv.settings.about;
 
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 
+import android.app.AlertDialog;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
@@ -84,5 +85,19 @@ public class LegalFragment extends SettingsPreferenceFragment {
     @Override
     protected int getPageId() {
         return TvSettingsEnums.SYSTEM_ABOUT_LEGAL_INFO;
+    }
+
+    @Override
+    public void onDisplayPreferenceDialog(Preference preference) {
+        if (preference instanceof ConsumerInformationDialogPreference) {
+            new AlertDialog.Builder(getContext())
+                    .setMessage(((ConsumerInformationDialogPreference) preference)
+                            .getDialogMessage())
+                    .setPositiveButton(((ConsumerInformationDialogPreference) preference)
+                            .getPositiveButtonText(), (dialog, which) -> {})
+                    .show();
+        } else {
+            super.onDisplayPreferenceDialog(preference);
+        }
     }
 }
