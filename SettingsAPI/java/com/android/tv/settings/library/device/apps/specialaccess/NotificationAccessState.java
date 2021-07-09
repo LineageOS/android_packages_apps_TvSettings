@@ -58,7 +58,7 @@ public class NotificationAccessState extends PreferenceControllerState {
     private PackageManager mPackageManager;
     private ServiceListing mServiceListing;
     private IconDrawableFactory mIconDrawableFactory;
-    ArrayMap<String, ComponentName> componentNameByKey = new ArrayMap<>();
+    private ArrayMap<String, ComponentName> mComponentNameByKey = new ArrayMap<>();
 
     public NotificationAccessState(Context context,
             UIUpdateCallback callback) {
@@ -122,7 +122,7 @@ public class NotificationAccessState extends PreferenceControllerState {
                                 "default_notification_access_package_summary"));
             }
             prefCompats.add(pref);
-            componentNameByKey.put(pref.getKey()[0], cn);
+            mComponentNameByKey.put(pref.getKey()[0], cn);
         }
         if (services.isEmpty()) {
             final PreferenceCompat preference = new PreferenceCompat(KEY_NO_SERVICES);
@@ -134,7 +134,7 @@ public class NotificationAccessState extends PreferenceControllerState {
 
     @Override
     public void onPreferenceChange(String key, Object newValue) {
-        final ComponentName cn = componentNameByKey.get(key);
+        final ComponentName cn = mComponentNameByKey.get(key);
         if (cn != null) {
             mNotificationManager.setNotificationListenerAccessGranted(cn, (boolean) newValue);
         }

@@ -24,18 +24,17 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.library.ManagerUtil;
 
 /**
- * Fragment compat for managing power save allowlist
+ * Settings screen for managing "Display over other apps" permission
  */
 @Keep
-public class HighPowerCompat extends SpecialAccessControllerFragmentCompat {
+public class SystemAlertWindowCompat extends SpecialAccessControllerFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.manage_high_power_compat, null);
+        setPreferencesFromResource(R.xml.system_alert_window_compat, null);
     }
-
 
     @Override
     public int getState() {
-        return ManagerUtil.STATE_HIGH_POWER;
+        return ManagerUtil.STATE_SYSTEM_ALERT_WINDOW;
     }
 }
