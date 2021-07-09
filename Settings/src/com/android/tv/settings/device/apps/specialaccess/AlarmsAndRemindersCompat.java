@@ -18,24 +18,20 @@ package com.android.tv.settings.device.apps.specialaccess;
 
 import android.os.Bundle;
 
-import androidx.annotation.Keep;
-
 import com.android.tv.settings.R;
 import com.android.tv.settings.library.ManagerUtil;
 
 /**
- * Fragment compat for managing power save allowlist
+ * Settings fragment compat for managing "Alarms & Reminders" permission
  */
-@Keep
-public class HighPowerCompat extends SpecialAccessControllerFragmentCompat {
+public class AlarmsAndRemindersCompat extends SpecialAccessControllerFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.manage_high_power_compat, null);
+        setPreferencesFromResource(R.xml.alarms_and_reminders_compat, null);
     }
-
 
     @Override
     public int getState() {
-        return ManagerUtil.STATE_HIGH_POWER;
+        return ManagerUtil.STATE_ALARMS_AND_REMINDERS;
     }
 }
