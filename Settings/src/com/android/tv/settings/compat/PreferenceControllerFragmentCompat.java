@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.compat;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -31,6 +32,7 @@ import com.android.tv.settings.HasSettingsManager;
 import com.android.tv.settings.R;
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.SettingsManager;
+import com.android.tv.settings.library.State;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
@@ -40,26 +42,32 @@ import java.util.List;
 public abstract class PreferenceControllerFragmentCompat extends LeanbackPreferenceFragmentCompat {
     private SettingsManager mSettingsManager;
     private String mTitle;
+    private State mState;
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (getActivity() instanceof HasSettingsManager) {
+            mSettingsManager = ((HasSettingsManager) getActivity()).getSettingsManager();
+            mState = mSettingsManager.createState(getState());
+            if (mState != null) {
+                mState.onAttach();
+            }
+        }
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getActivity() instanceof HasSettingsManager) {
-            mSettingsManager = ((HasSettingsManager) getActivity()).getSettingsManager();
-            if (mSettingsManager != null) {
-                mSettingsManager.onCreate(getState(), getArguments());
-            }
+        if (mState != null) {
+            mState.onCreate(getArguments());
         }
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        if (getActivity() instanceof HasSettingsManager) {
-            mSettingsManager = ((HasSettingsManager) getActivity()).getSettingsManager();
-            if (mSettingsManager != null) {
-                mSettingsManager.onStart(getState());
-            }
+        if (mState != null) {
+            mState.onStart();
         }
     }
 
@@ -71,11 +79,8 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
                     (TwoPanelSettingsFragment) getCallbackFragment();
             parentFragment.addListenerForFragment(this);
         }
-        if (getActivity() instanceof HasSettingsManager) {
-            mSettingsManager = ((HasSettingsManager) getActivity()).getSettingsManager();
-            if (mSettingsManager != null) {
-                mSettingsManager.onResume(getState());
-            }
+        if (mState != null) {
+            mState.onResume();
         }
     }
 
@@ -87,45 +92,43 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
                     (TwoPanelSettingsFragment) getCallbackFragment();
             parentFragment.removeListenerForFragment(this);
         }
-        if (getActivity() instanceof HasSettingsManager) {
-            mSettingsManager = ((HasSettingsManager) getActivity()).getSettingsManager();
-            if (mSettingsManager != null) {
-                mSettingsManager.onPause(getState());
-            }
+        if (mState != null) {
+            mState.onPause();
         }
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        if (getActivity() instanceof HasSettingsManager) {
-            mSettingsManager = ((HasSettingsManager) getActivity()).getSettingsManager();
-            if (mSettingsManager != null) {
-                mSettingsManager.onStop(getState());
-            }
+        if (mState != null) {
+            mState.onStop();
         }
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (getActivity() instanceof HasSettingsManager) {
-            mSettingsManager = ((HasSettingsManager) getActivity()).getSettingsManager();
-            if (mSettingsManager != null) {
-                mSettingsManager.onDestroy(getState());
-            }
+        if (mState != null) {
+            mState.onDestroy();
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        if (mState != null) {
+            mState.onDetach();
         }
     }
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (getActivity() instanceof HasSettingsManager) {
-            mSettingsManager = ((HasSettingsManager) getActivity()).getSettingsManager();
-            if (mSettingsManager == null) {
-                return true;
+            if (mState == null) {
+                return super.onPreferenceTreeClick(preference);
             }
             boolean handled = mSettingsManager.onPreferenceClick(
-                    getState(),
+                    mState,
                     preference.getKey(),
                     preference instanceof TwoStatePreference
                             && ((TwoStatePreference) preference).isChecked());

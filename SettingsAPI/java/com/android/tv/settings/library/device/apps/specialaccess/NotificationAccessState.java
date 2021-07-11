@@ -66,11 +66,16 @@ public class NotificationAccessState extends PreferenceControllerState {
     }
 
     @Override
-    public void onCreate(Bundle extras) {
-        super.onCreate(extras);
+    public void onAttach() {
+        super.onAttach();
         mPackageManager = mContext.getPackageManager();
         mNotificationManager = mContext.getSystemService(NotificationManager.class);
         mIconDrawableFactory = IconDrawableFactory.newInstance(mContext);
+    }
+
+    @Override
+    public void onCreate(Bundle extras) {
+        super.onCreate(extras);
         mServiceListing = new ServiceListing.Builder(mContext)
                 .setTag(TAG)
                 .setSetting(Settings.Secure.ENABLED_NOTIFICATION_LISTENERS)

@@ -89,17 +89,19 @@ package com.android.tv.settings.library {
 
   public final class SettingsManager {
     ctor public SettingsManager(android.content.Context);
+    method public com.android.tv.settings.library.State createState(int);
     method public com.android.tv.settings.library.PreferenceCompat getPreference(int, String);
     method public java.util.List<com.android.tv.settings.library.PreferenceCompat> getPreferences(int);
     method public void onActivityResult(int, int, android.content.Intent);
-    method public void onCreate(int, android.os.Bundle);
-    method public void onDestroy(int);
-    method public void onPause(int);
-    method public void onPreferenceChange(int, String, Object);
-    method public boolean onPreferenceClick(int, String, boolean);
-    method public void onResume(int);
-    method public void onStart(int);
-    method public void onStop(int);
+    method public void onAttach(com.android.tv.settings.library.State);
+    method public void onCreate(com.android.tv.settings.library.State, android.os.Bundle);
+    method public void onDestroy(com.android.tv.settings.library.State);
+    method public void onPause(com.android.tv.settings.library.State);
+    method public void onPreferenceChange(com.android.tv.settings.library.State, String, Object);
+    method public boolean onPreferenceClick(com.android.tv.settings.library.State, String, boolean);
+    method public void onResume(com.android.tv.settings.library.State);
+    method public void onStart(com.android.tv.settings.library.State);
+    method public void onStop(com.android.tv.settings.library.State);
     method public void registerListener(com.android.tv.settings.library.UIUpdateCallback);
     method public void unRegisterListener(com.android.tv.settings.library.UIUpdateCallback);
   }

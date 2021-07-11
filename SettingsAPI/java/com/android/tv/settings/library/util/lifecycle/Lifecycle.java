@@ -16,7 +16,6 @@
 package com.android.tv.settings.library.util.lifecycle;
 
 import android.annotation.UiThread;
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.preference.PreferenceScreen;
@@ -61,7 +60,7 @@ public class Lifecycle {
     /**
      * Pass all onAttach event to {@link LifecycleObserver}.
      */
-    public void onAttach(Context context) {
+    public void onAttach() {
         for (int i = 0, size = mObservers.size(); i < size; i++) {
             final LifecycleObserver observer = mObservers.get(i);
             if (observer instanceof OnAttach) {

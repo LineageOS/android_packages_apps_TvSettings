@@ -1,1 +1,20 @@
 // Signature format: 2.0
+package com.android.tv.settings.library {
+
+  public interface State {
+    method public int getStateIdentifier();
+    method public void onActivityResult(int, int, android.content.Intent);
+    method public void onAttach();
+    method public void onCreate(android.os.Bundle);
+    method public void onDestroy();
+    method public void onDetach();
+    method public void onPause();
+    method public void onPreferenceChange(String, Object);
+    method public boolean onPreferenceTreeClick(String, boolean);
+    method public void onResume();
+    method public void onStart();
+    method public void onStop();
+  }
+
+}
+

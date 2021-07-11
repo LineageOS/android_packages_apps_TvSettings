@@ -20,11 +20,7 @@ import android.annotation.SystemApi;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.ArrayMap;
-import android.util.Pair;
 
-import com.android.tv.settings.library.data.State;
 import com.android.tv.settings.library.data.StateManager;
 
 import java.util.List;
@@ -36,9 +32,6 @@ import java.util.List;
 @SystemApi
 public final class SettingsManager {
     private static final String TAG = "TvSettingsManager";
-    private static final boolean DEBUG = true;
-    private final Handler mHandler = new Handler();
-    private final ArrayMap<Integer, Pair<State, Integer>> mStateMap = new ArrayMap<>();
     private com.android.tv.settings.library.UIUpdateCallback mUIUpdateCallback;
     private Context mContext;
 
@@ -72,60 +65,70 @@ public final class SettingsManager {
         mUIUpdateCallback = null;
     }
 
+
     /** @hide */
     @SystemApi
-    public void onCreate(int state, Bundle extras) {
-        StateManager.createState(
-                mContext, state, mUIUpdateCallback, mStateMap).onCreate(extras);
+    public State createState(int stateIdentifier) {
+        return StateManager.createState(mContext, stateIdentifier, mUIUpdateCallback);
     }
 
     /** @hide */
     @SystemApi
-    public void onStart(int state) {
-        StateManager.getState(state, mStateMap).onStart();
+    public void onAttach(State state) {
+        state.onAttach();
     }
 
     /** @hide */
     @SystemApi
-    public void onResume(int state) {
-        StateManager.getState(state, mStateMap).onResume();
+    public void onCreate(State state, Bundle extras) {
+        state.onCreate(extras);
     }
 
     /** @hide */
     @SystemApi
-    public void onPause(int state) {
-        StateManager.getState(state, mStateMap).onPause();
+    public void onStart(State state) {
+        state.onStart();
     }
 
     /** @hide */
     @SystemApi
-    public void onStop(int state) {
-        StateManager.getState(state, mStateMap).onStop();
+    public void onResume(State state) {
+        state.onResume();
     }
 
     /** @hide */
     @SystemApi
-    public void onDestroy(int state) {
-        StateManager.getState(state, mStateMap).onDestroy();
-        StateManager.removeState(state, mStateMap);
+    public void onPause(State state) {
+        state.onPause();
     }
 
     /** @hide */
     @SystemApi
-    public boolean onPreferenceClick(int state, String key, boolean status) {
-        return StateManager.getState(state, mStateMap).onPreferenceTreeClick(key, status);
+    public void onStop(State state) {
+        state.onStop();
+    }
+
+    /** @hide */
+    @SystemApi
+    public void onDestroy(State state) {
+        state.onDestroy();
+    }
+
+    /** @hide */
+    @SystemApi
+    public boolean onPreferenceClick(State state, String key, boolean status) {
+        return state.onPreferenceTreeClick(key, status);
     }
 
     /** @hide */
     @SystemApi
     public void onActivityResult(int compoundCode, int resultCode, Intent data) {
-        int state = ManagerUtil.getStateIdentifier(compoundCode);
-        int requestCode = ManagerUtil.getRequestCode(compoundCode);
-        StateManager.getState(state, mStateMap).onActivityResult(requestCode, resultCode, data);
+        // no-op
     }
+
     /** @hide */
     @SystemApi
-    public void onPreferenceChange(int state, String key, Object newValue) {
-        StateManager.getState(state, mStateMap).onPreferenceChange(key, newValue);
+    public void onPreferenceChange(State state, String key, Object newValue) {
+        state.onPreferenceChange(key, newValue);
     }
 }
