@@ -58,7 +58,6 @@ import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.util.UserIcons;
 
-
 import java.text.NumberFormat;
 
 public class LibUtils {

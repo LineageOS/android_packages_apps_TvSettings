@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.library.data;
 
+import com.android.tv.settings.library.State;
+
 /** Implement this to provide back-end data for multiple states. */
 public interface Module {
     void addState(State state);

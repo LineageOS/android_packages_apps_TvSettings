@@ -19,7 +19,6 @@ package com.android.tv.settings.library.device.apps.specialaccess;
 import android.annotation.NonNull;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
@@ -56,8 +55,8 @@ public class HighPowerState extends PreferenceControllerState
                     });
 
     @Override
-    public void onCreate(Bundle extras) {
-        super.onCreate(extras);
+    public void onAttach() {
+        super.onAttach();
         mPowerAllowlistBackend = PowerAllowlistBackend.getInstance(mContext);
         mManageApplicationsController = new ManageApplicationsController(mContext,
                 getStateIdentifier(),

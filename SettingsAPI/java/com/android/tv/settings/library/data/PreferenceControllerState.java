@@ -23,6 +23,7 @@ import android.util.ArraySet;
 import android.util.Log;
 
 import com.android.tv.settings.library.PreferenceCompat;
+import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
 import com.android.tv.settings.library.util.lifecycle.Lifecycle;
@@ -50,8 +51,14 @@ public abstract class PreferenceControllerState implements State {
     private Lifecycle mLifecycle;
 
     @Override
-    public void onCreate(Bundle extras) {
+    public void onAttach() {
         mLifecycle = new Lifecycle();
+        mLifecycle.onAttach();
+    }
+
+    @Override
+    public void onCreate(Bundle extras) {
+        mLifecycle.onCreate(extras);
         List<AbstractPreferenceController> controllers = onCreatePreferenceControllers(mContext);
         if (controllers == null) {
             controllers = new ArrayList<>();
@@ -84,6 +91,11 @@ public abstract class PreferenceControllerState implements State {
     @Override
     public void onDestroy() {
         mLifecycle.onDestroy();
+    }
+
+    @Override
+    public void onDetach() {
+        // no-op
     }
 
     @Override
