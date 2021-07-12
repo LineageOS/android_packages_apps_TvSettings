@@ -27,7 +27,7 @@
         android:id="@+id/decor_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:includeFontPadding="false"
+        android:includeFontPadding="true"
         android:singleLine="false"
         android:maxLines="4"
         android:ellipsize="end"
@@ -40,7 +40,7 @@
         android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
         android:layout_marginTop="@dimen/decor_subtitle_margin_top"
         android:layout_below="@id/decor_title"
-        android:includeFontPadding="false"
+        android:includeFontPadding="true"
         style="@style/TextAppearance.TwoPanelPreference.Subtitle"/>
     <ImageView
         android:id="@+id/decor_icon"
