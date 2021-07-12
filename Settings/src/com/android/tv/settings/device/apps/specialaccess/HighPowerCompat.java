@@ -35,7 +35,7 @@ public class HighPowerCompat extends SpecialAccessControllerFragmentCompat {
 
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return ManagerUtil.STATE_HIGH_POWER;
     }
 }

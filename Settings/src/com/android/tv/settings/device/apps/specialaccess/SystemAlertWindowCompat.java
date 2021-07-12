@@ -34,7 +34,7 @@ public class SystemAlertWindowCompat extends SpecialAccessControllerFragmentComp
     }
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return ManagerUtil.STATE_SYSTEM_ALERT_WINDOW;
     }
 }

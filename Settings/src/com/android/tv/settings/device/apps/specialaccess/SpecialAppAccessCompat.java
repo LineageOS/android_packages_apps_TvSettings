@@ -35,7 +35,7 @@ public class SpecialAppAccessCompat extends PreferenceControllerFragmentCompat {
     }
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return ManagerUtil.STATE_SPECIAL_ACCESS;
     }
 }
