@@ -138,8 +138,8 @@ public class NotificationAccessState extends PreferenceControllerState {
     }
 
     @Override
-    public void onPreferenceChange(String key, Object newValue) {
-        final ComponentName cn = mComponentNameByKey.get(key);
+    public void onPreferenceChange(String[] key, Object newValue) {
+        final ComponentName cn = mComponentNameByKey.get(key[0]);
         if (cn != null) {
             mNotificationManager.setNotificationListenerAccessGranted(cn, (boolean) newValue);
         }

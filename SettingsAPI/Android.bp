@@ -40,6 +40,10 @@ java_sdk_library {
         "zxing-core-1.7",
     ],
 
+    errorprone: {
+        javacflags: ["-XepDisableAllChecks"],
+    },
+
     system_ext_specific: true,
     no_dist: true,
 }
@@ -51,7 +55,7 @@ android_library {
         "java/**/*.java",
     ],
 
-     static_libs: [
+    static_libs: [
             "androidx-constraintlayout_constraintlayout",
             "androidx.recyclerview_recyclerview",
             "androidx.preference_preference",
@@ -64,6 +68,10 @@ android_library {
             "androidx.annotation_annotation",
             "zxing-core-1.7",
         ],
+
+    errorprone: {
+        javacflags: ["-XepDisableAllChecks"],
+    },
 
     min_sdk_version: "29",
 }

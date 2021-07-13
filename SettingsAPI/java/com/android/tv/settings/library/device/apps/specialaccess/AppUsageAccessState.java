@@ -73,8 +73,8 @@ public class AppUsageAccessState extends ManageAppOpState {
     }
 
     @Override
-    public void onPreferenceChange(String key, Object newValue) {
-        ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
+    public void onPreferenceChange(String[] key, Object newValue) {
+        ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key[0]);
         if (appEntry != null) {
             setAppUsageAccess(appEntry, (Boolean) newValue);
         }

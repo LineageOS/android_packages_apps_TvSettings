@@ -124,12 +124,12 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (getActivity() instanceof HasSettingsManager) {
-            if (mState == null) {
+            if (mState == null || (!(preference instanceof HasKeys))) {
                 return super.onPreferenceTreeClick(preference);
             }
             boolean handled = mSettingsManager.onPreferenceClick(
                     mState,
-                    preference.getKey(),
+                    ((HasKeys) preference).getKeys(),
                     preference instanceof TwoStatePreference
                             && ((TwoStatePreference) preference).isChecked());
             if (!handled) {

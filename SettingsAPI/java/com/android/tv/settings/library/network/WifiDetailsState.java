@@ -134,7 +134,7 @@ public class WifiDetailsState implements State,
     }
 
     @Override
-    public boolean onPreferenceTreeClick(String key, boolean status) {
+    public boolean onPreferenceTreeClick(String[] key, boolean status) {
         return false;
     }
 
@@ -144,7 +144,7 @@ public class WifiDetailsState implements State,
     }
 
     @Override
-    public void onPreferenceChange(String key, Object newValue) {
+    public void onPreferenceChange(String[] key, Object newValue) {
         mNetworkModule.getConnectivityListener().applyMacRandomizationSetting(
                 mAccessPoint,
                 VALUE_MAC_RANDOM.equals(newValue));

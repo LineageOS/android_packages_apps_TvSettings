@@ -85,7 +85,7 @@ public class WriteSettingsState extends ManageAppOpState {
     }
 
     @Override
-    public void onPreferenceChange(String key, Object newValue) {
+    public void onPreferenceChange(String[] key, Object newValue) {
         ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
         if (appEntry != null) {
             setWriteSettingsAccess(appEntry, (Boolean) newValue);

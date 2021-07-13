@@ -91,8 +91,8 @@ public class AlarmsAndRemindersState extends ManageAppOpState {
     }
 
     @Override
-    public void onPreferenceChange(String key, Object newValue) {
-        ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
+    public void onPreferenceChange(String[] key, Object newValue) {
+        ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key[0]);
         if (appEntry != null) {
             setAlarmsAndRemindersAccess(appEntry, (Boolean) newValue);
         }

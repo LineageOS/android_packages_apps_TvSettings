@@ -160,7 +160,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/Theme.SettingsConnectivity" />
+            android:theme="@style/Theme.SettingsConnectivity" >
+            <intent-filter>
+                <action android:name="com.android.settings.wifi.action.WIFI_CONNECTION_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".connectivity.EditProxySettingsActivity"
