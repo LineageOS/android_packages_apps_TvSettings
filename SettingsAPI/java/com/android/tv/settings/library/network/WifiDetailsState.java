@@ -27,9 +27,9 @@ import android.text.TextUtils;
 
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
+import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
-import com.android.tv.settings.library.data.State;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.ArrayList;
@@ -69,6 +69,11 @@ public class WifiDetailsState implements State,
         mUIUpdateCallback = uiUpdateCallback;
         mContext = context;
         mNetworkModule = NetworkModule.getInstance(mContext);
+    }
+
+    @Override
+    public void onAttach() {
+        // no-op
     }
 
     @Override
@@ -120,6 +125,11 @@ public class WifiDetailsState implements State,
 
     @Override
     public void onDestroy() {
+        // no-op
+    }
+
+    @Override
+    public void onDetach() {
         // no-op
     }
 
