@@ -51,7 +51,7 @@ public class ShutdownConfirmFragment extends GuidedStepFragment {
         return new GuidanceStylist.Guidance(
                 getString(R.string.system_shutdown_confirm),
                 null,
-                getString(R.string.about_preference),
+                null,
                 getActivity().getDrawable(R.drawable.ic_warning_132dp)
         );
     }
