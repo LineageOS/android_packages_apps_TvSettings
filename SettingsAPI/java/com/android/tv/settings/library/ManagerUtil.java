@@ -45,6 +45,7 @@ public final class ManagerUtil {
     public static final int STATE_ALARMS_AND_REMINDERS = 13;
     public static final int STATE_EXTERNAL_SOURCES = 14;
     public static final int STATE_SYSTEM_DATE_TIME = 15;
+    public static final int STATE_SYSTEM_ABOUT = 16;
 
     public static final String INFO_INTENT = "intent";
     public static final String INFO_WIFI_SIGNAL_LEVEL = "wifi_signal_level";
