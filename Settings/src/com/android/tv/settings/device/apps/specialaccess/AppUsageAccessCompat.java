@@ -35,7 +35,7 @@ public class AppUsageAccessCompat extends SpecialAccessControllerFragmentCompat 
 
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return ManagerUtil.STATE_APP_USAGE_ACCESS;
     }
 }

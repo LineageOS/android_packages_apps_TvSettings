@@ -73,10 +73,10 @@ import com.android.settingslib.development.SystemPropPoker;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RestrictedPreferenceAdapter;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.library.system.development.audio.AudioDebug;
+import com.android.tv.settings.library.system.development.audio.AudioMetrics;
+import com.android.tv.settings.library.system.development.audio.AudioReaderException;
 import com.android.tv.settings.overlay.FlavorUtils;
-import com.android.tv.settings.system.development.audio.AudioDebug;
-import com.android.tv.settings.system.development.audio.AudioMetrics;
-import com.android.tv.settings.system.development.audio.AudioReaderException;
 
 import java.util.ArrayList;
 import java.util.HashSet;

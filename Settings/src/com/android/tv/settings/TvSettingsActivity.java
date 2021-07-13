@@ -39,6 +39,7 @@ import com.android.tv.settings.compat.PreferenceControllerFragmentCompat;
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.SettingsManager;
+import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.slices.ContextSingleton;
@@ -66,7 +67,8 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
                                             fragment instanceof PreferenceControllerFragmentCompat
                                                     &&
                                                     ((PreferenceControllerFragmentCompat) fragment)
-                                                            .getState() == state)
+                                                            .getStateIdentifier() == state)
+
                             .forEach(
                                     fragment ->
                                             ((PreferenceControllerFragmentCompat) fragment)
@@ -82,7 +84,7 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
                                             fragment instanceof PreferenceControllerFragmentCompat
                                                     &&
                                                     ((PreferenceControllerFragmentCompat) fragment)
-                                                            .getState() == state)
+                                                            .getStateIdentifier() == state)
                             .forEach(
                                     fragment ->
                                             ((PreferenceControllerFragmentCompat) fragment)
@@ -97,7 +99,7 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
                                             fragment instanceof PreferenceControllerFragmentCompat
                                                     &&
                                                     ((PreferenceControllerFragmentCompat) fragment)
-                                                            .getState() == state)
+                                                            .getStateIdentifier() == state)
                             .forEach(
                                     fragment ->
                                             ((PreferenceControllerFragmentCompat) fragment)
@@ -202,11 +204,6 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
     public void finish() {
         final Fragment fragment = getSupportFragmentManager().findFragmentByTag(
                 SETTINGS_FRAGMENT_TAG);
@@ -276,7 +273,20 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_STARTUP_VERIFICATION) {
+        if (mSettingsManager != null && ManagerUtil.getStateIdentifier(requestCode) != -1) {
+            int stateIdentifier = ManagerUtil.getStateIdentifier(requestCode);
+            getVisibleFragment().getChildFragmentManager().getFragments().stream().filter(
+                    fragment ->
+                            fragment instanceof PreferenceControllerFragmentCompat
+                                    && ((PreferenceControllerFragmentCompat) fragment)
+                                        .getStateIdentifier() == stateIdentifier)
+                    .findAny().ifPresent(fragment -> {
+                        State state = ((PreferenceControllerFragmentCompat) fragment).getState();
+                        if (state != null) {
+                            mSettingsManager.onActivityResult(state, requestCode, resultCode, data);
+                        }
+                    });
+        } else if (requestCode == REQUEST_CODE_STARTUP_VERIFICATION) {
             if (resultCode == RESULT_OK) {
                 Log.v(TAG, "Startup verification succeeded.");
                 if (FlavorUtils.getFlavor(this) == FlavorUtils.FLAVOR_X

@@ -122,8 +122,8 @@ public final class SettingsManager {
 
     /** @hide */
     @SystemApi
-    public void onActivityResult(int compoundCode, int resultCode, Intent data) {
-        // no-op
+    public void onActivityResult(State state, int code, int resultCode, Intent data) {
+        state.onActivityResult(ManagerUtil.getRequestCode(code), resultCode, data);
     }
 
     /** @hide */
