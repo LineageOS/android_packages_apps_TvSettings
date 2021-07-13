@@ -150,8 +150,8 @@
     <string name="surround_sound_hide_formats" msgid="7770931097236868238">"Ukryj formaty"</string>
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"WŁĄCZONE FORMATY"</string>
     <string name="surround_sound_disabled_formats" msgid="2250466936859455802">"WYŁĄCZONE FORMATY"</string>
-    <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Aby włączyć tę opcję, zmień wybór formatu na Ręczny."</string>
-    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Aby wyłączyć tę opcję, zmień wybór formatu na Ręczny."</string>
+    <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Aby włączyć tę opcję, zmień wybór formatu na Ręcznie."</string>
+    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Aby wyłączyć tę opcję, zmień wybór formatu na Ręcznie."</string>
     <string name="display_category_title" msgid="247804007525046312">"Wyświetlacz"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Zaawansowane ustawienia wyświetlacza"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -190,7 +190,7 @@
     <string name="hdr_hide_formats" msgid="8561568998525727230">"Ukryj formaty"</string>
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"WŁĄCZONE FORMATY"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"WYŁĄCZONE FORMATY"</string>
-    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Aby wyłączyć tę opcję, zmień wybór formatu na Ręczny."</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Aby wyłączyć tę opcję, zmień wybór formatu na Ręcznie."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Wyczyścić dane z pamięci podręcznej?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Usuwasz dane z pamięci podr. wszystkich aplikacji."</string>
     <string name="accessories_add" msgid="413764175035531452">"Dodaj akcesoria"</string>
@@ -421,7 +421,7 @@
     </plurals>
     <string name="device_status" msgid="8266002761193692207">"Stan"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Sieć, numery seryjne i inne informacje"</string>
-    <string name="manual" msgid="5683935624321864999">"Instrukcja"</string>
+    <string name="manual" msgid="5683935624321864999">"Ręcznie"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"Informacje prawne"</string>
     <string name="device_feedback" msgid="4871903271442960465">"Prześlij opinię o tym urządzeniu"</string>
     <string name="oem_unlock_enable_disabled_summary_bootloader_unlocked" msgid="4641790432171693921">"Program rozruchowy jest już odblokowany"</string>
@@ -444,6 +444,12 @@
     <string name="license_title" msgid="4032466200355435641">"Licencja"</string>
     <string name="terms_title" msgid="192888187310800678">"Warunki korzystania z usługi"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Systemowa licencja na WebView"</string>
+    <!-- no translation found for consumer_information_title (7729729568416672733) -->
+    <skip />
+    <!-- no translation found for consumer_information_message (205236637689468764) -->
+    <skip />
+    <!-- no translation found for consumer_information_button_ok (6979480064600038080) -->
+    <skip />
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Słaba"</item>
     <item msgid="2098818614362343532">"Dostateczna"</item>
@@ -760,17 +766,17 @@
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Pozorowanie lokalizacji"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Wybierz aplikację do debugowania"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Poczekaj na debugera"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Zweryfikuj aplikacje przez USB"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Sprawdź, czy aplikacje zainstalowane przez ADB/ADT nie zachowują się w szkodliwy sposób"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Weryfikuj aplikacje przez USB"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Sprawdzaj, czy aplikacje zainstalowane przez ADB/ADT nie zachowują się w szkodliwy sposób"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Szczegółówe rejestrowanie Wi-Fi"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Włącz szczegółowy zapis danych o Wi-Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Pokaż dotknięcia"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"Lokalizacja wskaźnika"</string>
-    <string name="system_show_layout_bounds" msgid="8803080672553699649">"Pokaż granice układu"</string>
+    <string name="system_show_layout_bounds" msgid="8803080672553699649">"Pokazuj granice układu"</string>
     <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"Pokaż zmiany widoku z GPU"</string>
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Pokaż warstwę sprzętową"</string>
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"Pokaż przerysowywanie GPU"</string>
-    <string name="system_show_surface_updates" msgid="7680759813613585278">"Pokaż zmiany powierzchni"</string>
+    <string name="system_show_surface_updates" msgid="7680759813613585278">"Pokazuj zmiany powierzchni"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"Skala animacji okna"</string>
     <string name="system_transition_animation_scale" msgid="7266380208347453619">"Skala animacji przejścia"</string>
     <string name="system_animator_duration_scale" msgid="3829445237130423625">"Skala długości animacji"</string>
@@ -786,7 +792,7 @@
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Włącz zapisywanie w dzienniku snoopingu interfejsu HCI Bluetooth"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Tryb debugowania, gdy podłączone jest USB"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Debugowana aplikacja czeka na przyłączenie debugera."</string>
-    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Pokaż granice przycięcia, marginesy itd."</string>
+    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Pokazuj granice przycięcia, marginesy itd."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Podświetlaj elementy w oknach, jeśli są rysowane przez GPU"</string>
     <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Podświetlaj aktualizowane warstwy sprzętowe na zielono"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Najlepszy-najg.: nieb., ziel., jasnoczerw., czerw."</string>
