@@ -31,7 +31,7 @@ public class AlarmsAndRemindersCompat extends SpecialAccessControllerFragmentCom
     }
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return ManagerUtil.STATE_ALARMS_AND_REMINDERS;
     }
 }

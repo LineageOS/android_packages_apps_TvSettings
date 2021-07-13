@@ -49,7 +49,7 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
         super.onAttach(context);
         if (getActivity() instanceof HasSettingsManager) {
             mSettingsManager = ((HasSettingsManager) getActivity()).getSettingsManager();
-            mState = mSettingsManager.createState(getState());
+            mState = mSettingsManager.createState(getStateIdentifier());
             if (mState != null) {
                 mState.onAttach();
             }
@@ -184,7 +184,15 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
     public void onCreatePreferences(Bundle bundle, String s) {
     }
 
-    public abstract int getState();
+    /**
+     * Return the state identifier to be matched with SettingsAPI for the fragment.
+     * @return state identifier
+     */
+    public abstract int getStateIdentifier();
+
+    public State getState() {
+        return mState;
+    }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {

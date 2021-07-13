@@ -35,7 +35,7 @@ public class WriteSettingsCompat extends SpecialAccessControllerFragmentCompat {
     }
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return ManagerUtil.STATE_WRITE_SETTINGS;
     }
 }
